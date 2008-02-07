@@ -1,0 +1,86 @@
+\subsection{Using the Decorations Plugins}
+
+The ``Decoration'' plugins include the following:
+
+\begin{itemize}
+\item Copyright Label Plugin
+\item North Arrow Plugin
+\item Scale Bar Plugin
+\end{itemize}
+ 
+These ``decorate'' the map by adding cartographic elements. 
+
+\subsubsection{Copyright Label Plugin}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Copyright Plugin}\label{fig:copyright}\smallskip
+   \includegraphics[clip=true, width=8cm]{copyright}
+\end{center}  
+\end{figure}
+
+The title of this plugin is a bit misleading - you can add any random text to the map.
+
+\begin{enumerate}
+\item Make sure the plugin is loaded
+\item Click on the \textsl{Copyright Label} tool on the Plugins toolbar
+\item Enter the text you want to place on the map. You can use HTML as
+  shown in the example
+\item Choose the placement of the label from the drop-down box
+\item Make sure the ``Enable Copyright Label'' checkbox is checked
+\item Click \textsl{OK} 
+\end{enumerate}
+
+In the example above, the first line is in bold, the second (created using
+\textless br\textgreater) contains a copyright symbol, followed by our company name in
+italics.
+
+\subsubsection{North Arrow Plugin}
+
+The North Arrow plugin places a simple north arrow on the map canvas. At
+present there is only one style available. You can adjust the angle of the
+arrow or let QGIS set the direction automatically. If you choose to let
+QGIS determine the direction, it makes its best guess as to how the arrow
+should be oriented.
+
+For placement of the arrow you have four options, corresponding to the four 
+corners of the map canvas.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{North Arrow Plugin}\label{fig:north_arrow}\smallskip
+   \includegraphics[clip=true, width=8cm]{north_arrow}
+\end{center}  
+\end{figure}
+
+\subsubsection{Scale Bar Plugin}
+The Scale Bar plugin adds a simple scale bar to the map canvas. You
+control the style and placement, as well as the labeling of the bar. 
+
+QGIS only supports displaying the scale in the same units as your map frame. So
+if the units of your layers are in meters, you can't create a scale bar in
+feet. Likewise if you are using decimal degrees, you can't create a scale
+bar to display distance in meters.
+
+To add a scale bar:
+
+\begin{enumerate}
+\item Open the plugin dialog by clicking on the \textsl{Scale Bar} tool
+  on the Plugins toolbar
+\item Choose the placement from the drop-down list
+\item Choose the style
+\item Select the color for the bar, or use the default black color
+\item Set the size of the bar and its label
+\item Make sure the ``Enable scale bar'' checkbox is checked
+\item Optionally choose to automatically snap to a round number when the
+  canvas is resized
+\item Click \textsl{OK} 
+\end{enumerate} 
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Scale Bar Plugin}\label{fig:scale_bar}\smallskip
+   \includegraphics[clip=true, width=8cm]{scale_bar}
+\end{center}  
+\end{figure}
+

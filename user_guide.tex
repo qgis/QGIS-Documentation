@@ -1,0 +1,54 @@
+%
+%
+\documentclass[a4paper,dvips,onecolumn,11pt,titlepage]{scrartcl}
+% \documentclass[a4paper,dvips,onecolumn,11pt,titlepage]{scrreprt}
+\usepackage{qgis_style}
+
+
+\begin{document}
+
+\include{title}
+\include{preamble}
+\include{toc}
+\include{forward}
+\include{introduction}
+\include{getting_started}
+\include{working_with_vector}
+\include{working_with_raster}
+\include{working_with_ogc}
+\include{working_with_projections}
+\include{grass_integration}
+\include{mapserver_export}
+\include{map_composer}
+%first the general intro to plugins
+%then each individual plugin can have a section
+%in the plugins chapter
+\include{plugins}
+\include{plugins_decorations}
+\include{plugins_gps}
+\include{plugins_delimited_text}
+\include{plugins_graticule_creator}
+\include{plugins_georeferencer}
+\include{plugins_python}
+%end of plugin docs
+\include{creating_applications}
+\include{help_and_support}
+
+\appendix
+
+\include{appendices/supported_data_formats}
+%install guide is a special case because we are extracting it
+%out of the INSTALL.t2t document of in the QGIS sources
+%when we tag a new document release
+\include{install}
+\include{appendices/gpl}
+\include{appendices/qgis_qt_gpl_exception}
+\include{literature}
+\include{index}
+
+\begin{htmlonly}
+        \input{qgis_style.tex}
+\end{htmlonly}
+\end{document}
+
+
