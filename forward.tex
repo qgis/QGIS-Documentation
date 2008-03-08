@@ -36,31 +36,81 @@ http://qgis.org/docs/userguide.pdf
 
 \subsection{Features}\label{label_majfeat}
 
-QGIS has many common GIS features and functions. The major features
-are listed below, devided into Core Features and Plugins. \\
+QGIS offers a variety of common functionality provided by core features and
+plugins.
 
-\textbf{Core Features}
+\minisec{View data}
+
+View and overlay vector and raster data in different formats and
+projections without conversion to an internal or common format. Supported
+formats include:
 
 \begin{itemize}
-\item Raster and vector support by the OGR library
-\item Support for spatially enabled PostgreSQL tables using PostGIS
-\item GRASS integration, including view, edit, and analysis
-\item Digitizing GRASS and OGR/Shapefile
-\item Map Composer
-\item OGC support
-\item Overview panel
-\item Spatial bookmarks
-\item Identify/Select features
-\item Edit/View/Search attributes
-\item Feature labeling
-\item On the fly projection
-\item Save and restore projects
-\item Export to Mapserver map file
-\item Change vector and raster symbology 
-\item Extensible plugin architecture
+\item spatially-enabled PostgreSQL tables using PostGIS, \textbf{most} vector
+formats\footnote{OGR-supported formats are not yet supported in QGIS.}
+supported by the OGR library, including ESRI shapefiles, MapInfo,
+SDTS and GML.
+\item all raster formats supported by the GDAL library, such as digital
+elevation models, aerial photography or landsat imagery,
+\item GRASS mapsets, 
+\item Online spatial data served as OGC-compliant WMS or WFS.
 \end{itemize}
 
-\textbf{Plugins}
+\minisec{Explore data and compose maps} 
+
+Create maps and interactively explore spatial data with a friendly graphical
+user interface. The many helpful tools available in the GUI include:
+
+\begin{itemize}
+\item on the fly projection
+\item map composer
+\item overview panel
+\item spatial bookmarks
+\item identify/select features
+\item edit/view/search attributes
+\item feature labeling
+\item change vector and raster symbology
+\item add a graticule layer
+\item decorate your map with a north arrow scale bar and copyright label
+\item save and restore projects
+\end{itemize}
+
+\minisec{Create, edit and export data}
+
+\begin{itemize}
+\item digitizing tools for and shapefile formats and GRASS
+\item the georeferencer plugin
+\item GPS tools to import and export GPX format, convert other GPS formats to
+GPX or down/upload directly to a GPS unit
+\end{itemize}
+
+\minisec{Analyse data} 
+
+You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
+supported formats using the geoprocessing plugin. it currently offers buffer,
+intersection union, dissolve, difference and convex hull. Or you use the 
+integrated GRASS tools, including the complete GRASS functionality, e.g:
+
+\begin{itemize}
+\item Image processing (image fusion, classification, filtering, enhancement)
+\item Raster analysis (map algebra, terrain analysis, hydrologic modeling
+\item Topological vektor analysis (digitizing, union, intersection, buffer)
+\item Network analysis (shortest path, travelling salesman)
+\end{itemize}
+
+\minisec{Publish maps on the internet}
+
+QGIS can be used to export data to a mapfile and to visualize them in the
+internet using a webserver with UMN MapServer installed. QGIS can also
+serve as a WMS and WFS server 
+
+\minisec{Extend QGIS functionality through plugins} 
+
+Quantum GIS can be adapted to your special needs through the extensible
+plugin architecture, providing libraries that can be used to create plugins
+of even new applications with C++ or Python.     
+
+\textbf{Core Plugins}
 
 \begin{itemize}
 \item Add WFS Layer
@@ -68,35 +118,25 @@ are listed below, devided into Core Features and Plugins. \\
 \item Decorations (Copyright Label, North Arrow and Scale bar)
 \item Georeferencer
 \item GPS Tools
-\item GRASS
+\item GRASS integration
 \item Graticule Creator
-\item PostgreSQL Geoprocessing functions
 \item SPIT Shapefile to PostgreSQL/PostGIS Import Tool
 \item Python Console
-\item openModeller
+\item Python Plugin Installer
 \end{itemize}
 
-\subsection{Whats New in 0.9}\label{label_whatsnew}
+\textbf{Python Plugins}
 
-Version 0.9.0 brought some very interesting new features to you.
+QGIS offers to include a growing number of python plugins, provided by the
+community. These plugins can be browsed and installed from the official
+PyQGIS repository using the python plugin installer.
 
-\begin{itemize}
-\item Python language bindings to write plugins in Python and to create GIS 
-enabled applications in Python that use the QGIS libraries
-\item Removed automake build system - QGIS now needs CMake for compilation
-\item Many new GRASS modules added to the GRASS toolbox
-\item Map Composer updates
-\item Fix for 2.5D shapefiles
-\item Improvements to the Georeferencer
-\item Localization support extended to 26 languages    
-\end{itemize}
 
-QGIS \CURRENT concentrates on stabilization and feature enhancement.
 
-\begin{itemize}
-\item 66 bugfixes and feature improvements 
-\item New window arrangement feature for the Georeferencer
-\item New locale tab in the options dialog
-\item Download progress information for WMS and WFS data
-\item More GRASS modules added to the GRASS toolbox
-\end{itemize}
+
+
+
+
+
+
+
