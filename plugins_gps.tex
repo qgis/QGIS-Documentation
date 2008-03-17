@@ -5,12 +5,12 @@
 GPS, the Global Positioning System, is a satellite-based system that
 allows anyone with a GPS receiver to find their exact position anywhere
 in the world. It is used as an aid in navigation, for example in airplanes,
-in boats, and by hikers. The GPS receiver uses the signals from the
+in boats and by hikers. The GPS receiver uses the signals from the
 satellites to calculate its latitude, longitude and (sometimes) elevation.
 Most receivers also have the capability to store locations (known
 as \emph{waypoints}), sequences of locations that make up a planned
-\emph{route}, and a tracklog or \emph{track} of the receivers movement
-over time. Waypoints, routes, and tracks are the three basic feature
+\emph{route} and a tracklog or \emph{track} of the receivers movement
+over time. Waypoints, routes and tracks are the three basic feature
 types in GPS data. QGIS displays waypoints in point layers while routes
 and tracks are displayed in linestring layers.
 
@@ -19,7 +19,7 @@ and tracks are displayed in linestring layers.
 There are dozens of different file formats for storing GPS data. The
 format that QGIS uses is called GPX (GPS eXchange format), which is
 a standard interchange format that can contain any number of waypoints,
-routes, and tracks in the same file.
+routes and tracks in the same file.
 
 \includegraphics[width=0.7cm]{icon} To load a GPX file you need to use the
 \emph{GPS
@@ -35,7 +35,7 @@ figure \ref{figure GPX loader}).
 \end{center}
 \end{figure}
 
-Use the browse button {[}...{]} to select the GPX file, then use the
+Use the browse button {[}Browse...{]} to select the GPX file, then use the
 checkboxes to select the feature types you want to load from that
 GPX file. Each feature type will be loaded in a separate layer when
 you click OK.
@@ -59,7 +59,7 @@ To import GPS data from a file that is not a GPX file, you use the
 tool \emph{Import other file} in the \emph{GPS Tools} dialog. Here
 you select the file that you want to import, which feature type you
 want to import from it, where you want to store the converted GPX
-file, and what the name of the new layer should be.
+file and what the name of the new layer should be.
 
 When you select the file to import you must also select the format
 of that file by using the menu in the file selection dialog (see figure
@@ -93,7 +93,7 @@ and the name of the new layer.
 
 
 The device type you select in the GPS device menu determines how GPSBabel
-tries to communicate with the device. If none of the device types
+tries to communicate with the device. If none of the types
 works with your GPS device you can create a new type (see section
 \ref{sec:Defining-new-device}).
 
@@ -110,12 +110,12 @@ appear as a layer in QGIS.
 You can also upload data directly from a vector layer in QGIS to a
 GPS device, using the tool \emph{Upload to GPS}. The layer must be
 a GPX layer. To do this you simply select the layer that you want
-to upload, the type of your GPS device, and the port that it's connected
+to upload, the type of your GPS device and the port that it's connected
 to. Just as with the download tool you can specify new device types
 if your device isn't in the list.
 
 This tool is very useful together with the vector editing capabilities
-of QGIS. You can load a map, create some waypoints and routes, and
+of QGIS. You can load a map, create some waypoints and routes and
 then upload them and use them in your GPS device.
 
 \subsubsection{\label{sec:Defining-new-device}Defining new device types}
@@ -128,9 +128,9 @@ device editor}, which you start by clicking the \emph{Edit devices}
 button in the download or the upload window.
 
 To define a new device you simply click the \emph{New device} button,
-enter a name, a download command, and an upload command for your device,
+enter a name, a download command and an upload command for your device,
 and click the \emph{Update device} button. The name will be listed in the
-device menus in the upload and download windows, and can be any string. 
+device menus in the upload and download windows, and can be any string.
 
 The download command is the command that is used to download data
 from the device to a GPX file. This will probably be a GPSBabel command,
@@ -139,12 +139,12 @@ file. QGIS will replace the keywords \emph{\%type}, \emph{\%in}, and
 \emph{\%out} when it runs the command.
 
 \emph{\%type} will be replaced by {}``-w'' if you are downloading
-waypoints, {}``-r'' if you are downloading routes, and {}``-t''
+waypoints, {}``-r'' if you are downloading routes and {}``-t''
 if you are downloading tracks. These are command line options that
-tell GPSBabel which feature type to download. 
+tell GPSBabel which feature type to download.
 
 \emph{\%in} will be replaced by the port name that you choose in the
-download window, and \emph{\%out} will be replaced by the name you
+download window and \emph{\%out} will be replaced by the name you
 choose for the GPX file that the downloaded data should be stored
 in. So if you create a device type with the download command {}``gpsbabel
 \%type -i garmin -o gpx \%in \%out'' (this is actually the download
