@@ -11,8 +11,8 @@
 # JPG=qgis_icon_new_verylarge.eps\
 	nextfile.eps
 
-PNG=map_composer_blank08.eps\
-	map_composer08.eps\
+PNG=map_composer_blank09.eps\
+	map_composer09.eps\
 	composer_add_legend08.eps\
 	composer_add_map08.eps\
 	composer_add_image.eps\
