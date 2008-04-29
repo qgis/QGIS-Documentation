@@ -40,7 +40,7 @@ PROJCS["NAD_1927_Albers",
 \end{verbatim}
 
 For use with GRASS, a sample GRASS database (e.g. Spearfish) can be obtained 
-from the official GRASS GIS-website \url{http://grass.itc.it/download/data.php}. 
+from the official GRASS GIS-website \url{http://grass.osgeo.org/download/data.php}. 
 The projection of the Spearfish dataset is UTM Zone 13, Northern Hemisphere: 
 
 \begin{verbatim}
@@ -121,7 +121,10 @@ Currently it generates a PNG-file with 800x600 pixels. A filename can be added a
 
 \minisec{Command line option \texttt{---lang}}
 Based on your locale QGIS, selects the correct localization. If you like to 
-change your language, you can provide another language with this option.
+change your language, you can provide another language code. E.g.: ---lang=it
+starts QGIS in italian localization. A list of currently supported
+languages with language code is provided at
+\url{http://wiki.qgis.org/qgiswiki/TranslatorsCorner} 
 
 \minisec{Command line option \texttt{---project}}
 Starting QGIS with an existing project file is also possible. Just
@@ -542,7 +545,7 @@ optmize your options are:
 \minisec{General Tab}
 
 \begin{itemize}
-\item ask to save project changes when required
+\item Ask to save project changes when required
 \end{itemize}
 
 \minisec{Appearance Tab}
