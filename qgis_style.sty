@@ -8,7 +8,6 @@
 \usepackage{makeidx}
 \makeindex
 
-
 % QGIS Tips
 % define tip float
 % doesn't work if written in qgis_style.sty
@@ -21,9 +20,23 @@
 \renewcommand{\topfraction}{0.85}
 \renewcommand{\textfraction}{0.1}
 \renewcommand{\floatpagefraction}{0.75}
+
+% internal macros for style consitency from Gary's foss4g 07 workbook
+\newcommand{\button}[1]{\cornersize{0.1}\ovalbox{\textsf{\scriptsize#1}}}
+\newcommand{\classname}[1]{\textsf{\textbf{#1}}}
+\newcommand{\fieldname}[1]{\textsl{#1}}
+\newcommand{\filename}[1]{\texttt{#1}}
+\newcommand{\keystroke}[1]{\fbox{\textsf{\scriptsize#1}}}
+\newcommand{\menuopt}[1]{\textsf{#1}}
+\newcommand{\method}[1]{\textsf{\textit{#1}}}
+\newcommand{\server}[1]{\textit{#1}}
+\newcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
+\newcommand{\toolbtn}[1]{\cornersize{7mm}\Ovalbox{\textsf{\scriptsize#1}}}
+\newcommand{\usertext}[1]{\texttt{#1}}
+
 % important for nice acroread-visualization as pdf.
 \usepackage[latin1]{inputenc}
-\usepackage[T1]{fontenc} 
+\usepackage[T1]{fontenc}
 
 % To make all GRASS commands appear smooth
 % found here: http://www.open4me.de/pdfprobleme.html
