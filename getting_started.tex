@@ -64,17 +64,18 @@ screenshots in this document.
 
 \subsection{Starting QGIS}\label{label_startinqgis}
 
-Assuming that QGIS is installed in the PATH, you can start QGIS by typing:
-\textbf{qgis}  at a command prompt or by double clicking on the QGIS
-application link (or shortcut) on the desktop. Under MS Windows, start QGIS
-using the Start menu shortcut, and under Mac OS X, double click the icon in
-your Applications folder. 
+\begin{itemize}
+\item \nix{assuming that QGIS is installed in the PATH, you can start QGIS by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
+application link (or shortcut) on the desktop.} 
+\item \win{start QGIS using the Start menu or desktop shortcut.}
+\item \osx{double click the icon in your Applications folder.}
+\end{itemize} 
 
 \subsubsection{Command Line Options}\index{command line options}
 \label{label_commandline}
 
 QGIS supports a number of options when started from the command line. To
-get a list of the options, enter \texttt{qgis ---help} on the command line.
+get a list of the options, enter \usertext{qgis ---help} on the command line.
 The usage statement for QGIS is:
 
 \small
@@ -107,31 +108,32 @@ Usage: qgis [options] [FILES]
 on the command line. For example, assuming you are in your data directory,
 you could start QGIS with two shapefiles and a raster file set to
 load on startup using the following command: 
-\ttfamily{qgis ak\_shade.tif alaska.shp majrivers.shp}
+\usertext{qgis ak\_shade.tif alaska.shp majrivers.shp}
 }
 \end{Tip}
 
-\minisec{Command line option \texttt{---snapshot}}
+\minisec{Command line option \usertext{---snapshot}}
 This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have a lot of projects and want to 
 generate snapshots from your data.
 
 Currently it generates a PNG-file with 800x600 pixels. A filename can be added after
-\texttt{---snapshot}.
+\usertext{---snapshot}.
 
-\minisec{Command line option \texttt{---lang}}
+\minisec{Command line option \usertext{---lang}}
 Based on your locale QGIS, selects the correct localization. If you like to 
-change your language, you can provide another language code. E.g.: ---lang=it
+change your language, you can provide another language code. E.g.: 
+\usertext{---lang=it}
 starts QGIS in italian localization. A list of currently supported
 languages with language code is provided at
 \url{http://wiki.qgis.org/qgiswiki/TranslatorsCorner} 
 
-\minisec{Command line option \texttt{---project}}
+\minisec{Command line option \usertext{---project}}
 Starting QGIS with an existing project file is also possible. Just
-add the command line option \texttt{--project} followed by your project name
+add the command line option usertext{--project} followed by your project name
 and QGIS will open with all layers loaded described in the given file.
 
-\minisec{Command line option \texttt{---extent}}
+\minisec{Command line option \usertext{---extent}}
 To start with a specific map extent use this option. You need to add the bounding
 box of your extent in the following order separated by a comma:
 \begin{verbatim}
@@ -176,66 +178,66 @@ functions provided are:
 
 \begin{itemize}
 
-\item \textbf{File}
+\item \menuopt{File}
 \begin{itemize}
-\item \textbf{New Project}          - see Section \ref{sec:projects}
-\item \textbf{Open Project}         - see Section \ref{sec:projects}
-\item \textbf{Open Recent Projects} - see Section \ref{sec:projects}
-\item \textbf{Save Project}         - see Section \ref{sec:projects}
-\item \textbf{Save Project As}      - see Section \ref{sec:projects}
-\item Save as Image
-\item Export to MapServer Map       - see Section \ref{sec:mapserver_export}
-\item Print                         - see Section \ref{label_mapcomposer}
-\item Exit
+\item \menuopt{New Project}          - see Section \ref{sec:projects}
+\item \menuopt{Open Project}         - see Section \ref{sec:projects}
+\item \menuopt{Open Recent Projects} - see Section \ref{sec:projects}
+\item \menuopt{Save Project}         - see Section \ref{sec:projects}
+\item \menuopt{Save Project As}      - see Section \ref{sec:projects}
+\item \menuopt{Save as Image}
+\item \menuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
+\item \menuopt{Print}                         - see Section \ref{label_mapcomposer}
+\item \menuopt{Exit}
 \end{itemize}
 
 \item \textbf{View}
 \begin{itemize}
-\item Zoom Full
-\item Zoom To Selection
-\item Zoom To Layer
-\item Zoom Last
-\item Refresh
-\item Show Bookmarks
-\item New Bookmark
-\item Show most toolbars
-\item Hide most toolbars 
-\item Toolbar Visibility 
+\item \menuopt{Zoom Full}
+\item \menuopt{Zoom To Selection}
+\item \menuopt{Zoom To Layer}
+\item \menuopt{Zoom Last}
+\item \menuopt{Refresh}
+\item \menuopt{Show Bookmarks}
+\item \menuopt{New Bookmark}
+\item \menuopt{Show most toolbars}
+\item \menuopt{Hide most toolbars}
+\item \menuopt{Toolbar Visibility} 
 \end{itemize}
 
 \item \textbf{Layer}
 \begin{itemize}
-\item \textbf{Add a Vector Layer}       - see Section \ref{label_workingvector}
-\item \textbf{Add a Raster Layer}       - see Section \ref{label_raster}
-\item \textbf{Add a PostGIS Layer}      - see Section \ref{label_postgis}
-\item \textbf{Add a WMS Layer}          - see Section \ref{sec:ogc-wms}
-\item Remove Layer
-\item New Vector Layer          	- see Section \ref{sec:create shape}
-\item In Overview
-\item Add All To Overview
-\item Remove All From Overview
-\item Hide All Layers
-\item Show All Layers
+\item \menuopt{Add a Vector Layer}       - see Section \ref{label_workingvector}
+\item \menuopt{Add a Raster Layer}       - see Section \ref{label_raster}
+\item \menuopt{Add a PostGIS Layer}      - see Section \ref{label_postgis}
+\item \menuopt{Add a WMS Layer}          - see Section \ref{sec:ogc-wms}
+\item \menuopt{Remove Layer}
+\item \menuopt{New Vector Layer}          	- see Section \ref{sec:create shape}
+\item \menuopt{In Overview}
+\item \menuopt{Add All To Overview}
+\item \menuopt{Remove All From Overview}
+\item \menuopt{Hide All Layers}
+\item \menuopt{Show All Layers}
 \end{itemize}
 
 \item \textbf{Settings}
 \begin{itemize}
-\item \textbf{Project Properties}  - see Section \ref{sec:projects}
-\item \textbf{Custom Projection}   - see Section \ref{sec:customprojections}
-\item \textbf{Options}             - see Section \ref{subsec:gui_options}
+\item \menuopt{Project Properties}  - see Section \ref{sec:projects}
+\item \menuopt{Custom Projection}   - see Section \ref{sec:customprojections}
+\item \menuopt{Options}             - see Section \ref{subsec:gui_options}
 \end{itemize}
 
 \item \textbf{Plugins} - (Futher menu items are added by plugins as they are loaded.)
 \begin{itemize}
-\item Plugin Manager          	   - see Section \ref{sec:managing_plugins}
+\item \menuopt{Plugin Manager}          	   - see Section \ref{sec:managing_plugins}
 \end{itemize}          	
 
 \item \textbf{Help}
 \begin{itemize}
-\item Help Contents
-\item QGIS Homepage
-\item Check QGIS Version
-\item About
+\item \menuopt{Help Contents}
+\item \menuopt{QGIS Homepage}
+\item \menuopt{Check QGIS Version}
+\item \menuopt{About}
 \end{itemize}
 
 \end{itemize}
@@ -257,7 +259,7 @@ the mouse over the toolbars.
 \begin{Tip}
 \caption{\textsc{Reappearing toolbars}} \index{layout!toolbars}
 \qgistip{If you have accidentally hidden all your toolbars, you can get them back by
-choosing \texttt{Show most toolbars} from the View|Toolbars menu.}
+choosing \menuopt{Show most toolbars} from the \menuopt{View} menu.}
 \end{Tip}
 
 \subsubsection{Map Legend}\label{label_legend}
@@ -271,57 +273,57 @@ over layers listed lower down in the legend. The checkbox in each legend
 entry can be used to show or hide the layer.\index{layer!visibility}
 
 Layers can be grouped in the legend window by adding a layer group and dragging layers 
-into the group. To do so, go with the mouse to the legend window, right click, choose 'Add group'. 
+into the group. To do so, go with the mouse to the legend window, right click, choose \menuopt{Add group}. 
 A new folder appears. Now drag the layers to the folder symbol. It is then possible to toggle the 
 visibility of all the layers in the group with one click. To bring layers out of a group, go with 
-the mouse to the layer symbol, right click, choose 'Make to toplevel item'. To give the folder a 
-new name, choose 'Rename' in the right click menu of the group.
+the mouse to the layer symbol, right click, choose \menuopt{Make to toplevel item}. To give the folder a 
+new name, choose \menuopt{Rename} in the right click menu of the group.
 
 The content of the right mouse button context menu depends on if the loaded legend item you hold your 
-mouse over is a raster or a vector layer. For GRASS vector layers the 'toggle editing' is not 
+mouse over is a raster or a vector layer. For GRASS vector layers the \menuopt{toggle editing} is not 
 available. See section \ref{grass_digitising} for infos on editing GRASS vector layers. 
 
 \begin{itemize}
 
 \item \textbf{Right mouse button menu for raster layers}
 \begin{itemize}
-\item Zoom to layer extent
-\item Zoom to best scale (100\%)
-\item Show in overview
-\item Remove
-\item Properties
-\item Rename
-\item Add Group
-\item Expand all
-\item Collapse all
-\item Show file groups
+\item \menuopt{Zoom to layer extent}
+\item \menuopt{Zoom to best scale (100\%)}
+\item \menuopt{Show in overview}
+\item \menuopt{Remove}
+\item \menuopt{Properties}
+\item \menuopt{Rename}
+\item \menuopt{Add Group}
+\item \menuopt{Expand all}
+\item \menuopt{Collapse all}
+\item \menuopt{Show file groups}
 \end{itemize}
 
 \item \textbf{Right mouse button menu for vector layers}
 \begin{itemize}
-\item Zoom to layer extent
-\item Show in overview
-\item Remove
-\item Open attribute table
-\item Toggle editing (not available for GRASS layers)
-\item Save as shapefile
-\item Save selection as shapefile
-\item Properties
-\item Rename
-\item Add Group
-\item Expand all
-\item Collapse all
-\item Show file groups
+\item \menuopt{Zoom to layer extent}
+\item \menuopt{Show in overview}
+\item \menuopt{Remove}
+\item \menuopt{Open attribute table}
+\item \menuopt{Toggle editing (not available for GRASS layers)}
+\item \menuopt{Save as shapefile}
+\item \menuopt{Save selection as shapefile}
+\item \menuopt{Properties}
+\item \menuopt{Rename}
+\item \menuopt{Add Group}
+\item \menuopt{Expand all}
+\item \menuopt{Collapse all}
+\item \menuopt{Show file groups}
 \end{itemize}
 
 \item \textbf{Right mouse button menu for layer groups} 
 \begin{itemize}
-\item Remove
-\item Rename
-\item Add Group
-\item Expand all
-\item Collapse all
-\item Show file groups
+\item \menuopt{Remove}
+\item \menuopt{Rename}
+\item \menuopt{Add Group}
+\item \menuopt{Expand all}
+\item \menuopt{Collapse all}
+\item \menuopt{Show file groups}
 \end{itemize}
 
 \end{itemize}
@@ -329,7 +331,7 @@ available. See section \ref{grass_digitising} for infos on editing GRASS vector 
 If several vector data sources have the same vector type and the same attributes, their 
 symbolisations may be grouped. This means that if the symbolisation of one data source is 
 changed, the others automatically have the new symbolisation as well. To group symbologies, open 
-the right click menu in the legend window and choose 'Show file groups'. The file groups of the 
+the right click menu in the legend window and choose \menuopt{Show file groups}. The file groups of the 
 layers appear. It is now possible to drag a file from one file group into another one. If this is done, 
 the symbologies are grouped. Note that QGIS only permits the drag if the two layers are able to share 
 symbology (same vector type and same attributes).  
@@ -365,7 +367,7 @@ Wheel}}\index{zoom!mouse wheel}
 the mouse cursor inside the map area and roll it forward (away from you) to
 zoom in and backwards (towards you) to zoom out. The mouse cursor is the 
 center where the zoom occurs. You can customize the behavior of the mouse
-wheel zoom using the \texttt{Map tools} tab under the Settings|Options menu.  }
+wheel zoom using the \tab{Map tools} tab under the \menuopt{Settings} ->\menuopt{Options} menu.  }
 \end{Tip}
 
 \subsubsection{Map Overview}\label{label_mapoverview}
@@ -377,8 +379,7 @@ you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
 map overview have been set up for labeling. 
 You can add a single layer to the
-overview by right-clicking on it in the legend and choosing \textit{Add
-to overview}. You can also add or remove all layers to the overview using the
+overview by right-clicking on it in the legend and choosing \menuopt{Show in overview}. You can also add or remove all layers to the overview using the
 Overview tools on the toolbar.
 
 You can also grab the red rectangle showing your current extent and pan around; the
@@ -418,8 +419,8 @@ QGIS allows you to control the rendering process in a number of ways.
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
 open the properties dialog by double-clicking on the layer in the legend. On
-the \textit{General} tab, set the minimum and maximum scale values and then
-click on the \textit{Use scale dependent rendering} checkbox.
+the \tab{General} tab, set the minimum and maximum scale values and then
+click on the \checkbox{Use scale dependent rendering} checkbox.
 
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.\index{scale}
@@ -431,8 +432,8 @@ Map rendering can be controlled in the following ways:
 \minisec{Suspending Rendering}\index{rendering!suspending}
 \label{label_suspendrender}
 
-To suspend rendering, click the \textit{Render} checkbox in the lower right
-corner of the statusbar. When the \textit{Render} box is not checked, QGIS
+To suspend rendering, click the \checkbox{Render} checkbox in the lower right
+corner of the statusbar. When the \checkbox{Render} box is not checked, QGIS
 does not redraw the canvas in response to any of the events described in
 Section \ref{subsec:redraw_events}. Examples of when you might want to suspend
 rendering include:
@@ -445,7 +446,7 @@ drawing
 \item Any combination of the above
 \end{itemize}
 
-Checking the \textit{Render} box enables rendering and causes and immediate
+Checking the \checkbox{Render} box enables rendering and causes and immediate
 refresh of the map canvas.
 
 \minisec{Setting Layer Add Option}\label{label_settinglayer}
@@ -454,8 +455,9 @@ refresh of the map canvas.
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
-\textit{Options} from the \textit{Settings} menu and click on the
-\textit{Rendering} tab. Check the \textit{New layers added to the map are not
+\menuopt{Options} from the \menuopt{Settings} menu and click on the
+\tab{Rendering} tab. Uncheck the \checkbox{By default new layers added to the map 
+should be
 displayed} checkbox. Any layer added to the map will be off (invisible) by
 default.
 
@@ -475,8 +477,8 @@ default.
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
-datastore, choose \textit{Options} from the \textit{Settings} menu and
-click on the \textit{Rendering} tab. Set the feature count to an
+datastore, choose \menuopt{Options} from the \menuopt{Settings} menu and
+click on the \tab{Rendering} tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -491,8 +493,8 @@ incorrect. To fix this you need to set an appropriate map coordinate system.
 
 \subsubsection{Measure length}\index{measure:line length}
 \includegraphics[width=0.7cm]{measureline} QGIS is also able to measure real distances between given 
-points according to a defined ellipsoid. Therefore choose \textit{Options} from the \textit{Settings} menu, 
-click on the \textit{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
+points according to a defined ellipsoid. Therefore choose \menuopt{Options} from the \menuopt{Settings} menu, 
+click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
 click points on the map. Each segment-length shows up in the measure-window and additionaly the total 
 length is printed. To stop measuring click your right mouse button. 
 
@@ -516,7 +518,7 @@ as being per-project, or as a default for new projects (see
 Section \ref{subsec:gui_options}).
 
 QGIS can save the state of your workspace into a project file using
-the menu option \textit{File}->\textit{Save Project}.
+the menu option \menuopt{File} -> \menuopt{Save Project}.
 
 Loading saved projects is a similar process.
 
@@ -538,8 +540,8 @@ from older QGIS versions may not work properly anymore.
 \subsection{GUI Options}
 \label{subsec:gui_options}
 \includegraphics[width=0.7cm,clip=true]{options} Some basic options for QGIS
-can be selected using the Options dialog. Select the \textsl{Settings} entry
-from the menu and choose \textsl{Options} (Alt-O). The tabs where you can 
+can be selected using the Options dialog. Select the \menuopt{Settings} entry
+from the menu and choose \menuopt{Options} or press \keystroke{Alt-O}. The tabs where you can 
 optmize your options are:
 
 \minisec{General Tab}
@@ -633,23 +635,23 @@ Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to 
 To create a bookmark:
 \begin{enumerate}
 \item Zoom or pan to the area of interest.
-\item Select the menu option \textit{View}->\textit{New Bookmark} or type Ctrl-B.
+\item Select the menu option \menuopt{View} -> \menuopt{New Bookmark} or press \keystroke{Ctrl-B}.
 \item Enter a descriptive name for the bookmark (up to 255 characters).
-\item Click \textit{OK} to add the bookmark or \textit{Cancel} to exit without adding the bookmark.
+\item Click \button{OK} to add the bookmark or \button{Cancel} to exit without adding the bookmark.
 \end{enumerate}
 
 Note that you can have multiple bookmarks with the same name.
 
 \subsubsection{Working with Bookmarks}
-To use or manage bookmarks, select the menu option \textit{View}->\textit{Show Bookmarks}.
+To use or manage bookmarks, select the menu option \menuopt{View} -> \menuopt{Show Bookmarks}.
 The bookmarks dialog allows you to zoom to or delete a bookmark.
 You can not edit the bookmark name or coordinates.
 
 \subsubsection{Zooming to a Bookmark}
 From the Bookmarks dialog, select the desired bookmark by clicking on it, 
-then click the \textit{Zoom To} button.
+then click the \button{Zoom To} button.
 You can also zoom to a bookmark by double-clicking on it.
 
 \subsubsection{Deleting a Bookmark}
-To delete a bookmark from the Bookmarks dialog, click on it then click the \textit{Delete} button.
-Confirm your choice by clicking \textit{Yes} or cancel the delete by clicking \textit{No}.
+To delete a bookmark from the Bookmarks dialog, click on it then click the \button{Delete} button.
+Confirm your choice by clicking \button{Yes} or cancel the delete by clicking \button{No}.
