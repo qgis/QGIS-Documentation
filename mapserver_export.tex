@@ -30,16 +30,16 @@ using the tool, you need to specify a QGIS project file as input.
 
 \subsection{Creating the Map File}
 
-The exporter tool (\textsl{msexport}) is installed in your QGIS binary directory and can be
+The exporter tool (\filename{msexport}) is installed in your QGIS binary directory and can be
 used independently of QGIS. 
 
-From QGIS you can start the exporter by choosing \textsl{Export to MapServer
-  Map...} from the \textsl{File} menu.
+From QGIS you can start the exporter by choosing \menuopt{Export to MapServer
+Map...} from the \menuopt{File} menu. 
 
-  Here is a summary of the input fields:
-  \begin{description}
+Here is a summary of the input fields:
 
-    \item [Map file] \mbox{}\\
+\begin{description}
+\item [Map file] \mbox{}\\
 Enter the name for the map file to be created. You can use the button at the right to browse for the directory where you want the map file created. 
 
 \item [Qgis project file] \mbox{}\\
@@ -69,19 +69,19 @@ on your intended use. Although QGIS is good at creating a map file from
 your project file, it may require some tweaking to get the results you
 want - but it's still way better than writing a map file from scratch.  
 
-\textbf{Creating a Map File}
+\minisec{Creating a Map File}
 
-Let's create a map file using the shape files \textsl{alaska}, \textsl{lakes} 
-and \textsl{rivers} layers from the qgis\_sample\_data:
+Let's create a map file using the shape files \filename{alaska}, \filename{lakes} 
+and \filename{rivers} layers from the qgis\_sample\_data:
 
 \begin{enumerate}
-  \item Load the \textsl{alaska}, \textsl{rivers} and \textsl{lakes} 
+  \item Load the \filename{alaska}, \filename{rivers} and \filename{lakes} 
   layers into QGIS
   \item Change the colors and symbolize the data as you like
-  \item Save the project using \textsl{Save Project} from the
-    \textsl{File} menu
-  \item Open the exporter by clicking on \textsl{Export to MapServer
-    Map...} in the \textsl{File} menu
+  \item Save the project using \menuopt{Save Project} from the
+    \menuopt{File} menu
+  \item Open the exporter by clicking on \menuopt{Export to MapServer
+    Map...} in the \menuopt{File} menu
   \item Enter a name for your new map file
   \item Browse and find the project file you just saved
   \item Enter a name for the map
@@ -89,7 +89,7 @@ and \textsl{rivers} layers from the qgis\_sample\_data:
   \item Our layers are in decimal degrees so we don't need to change the
     units
   \item Choose ``png'' for the image type
-  \item Click \textsl{OK} to generate the map file
+  \item Click \button{OK} to generate the map file
 \end{enumerate}
 
 
@@ -109,8 +109,8 @@ to enable our map file for WMS.
 
 \subsection{Testing the Map File}
 
-Let's test our work by using the \textsl{shp2img} command to create an image
-from the map file. The  \textsl{shp2img} utility is part of MapServer,
+Let's test our work by using the \filename{shp2img} command to create an image
+from the map file. The  \filename{shp2img} utility is part of MapServer,
 but is also distributed with FWTools. To create an image from our map:
 
 \begin{itemize}
@@ -121,8 +121,8 @@ but is also distributed with FWTools. To create an image from our map:
 \item View the created image 
 \end{itemize}
  
-Assuming our map file was named \textsl{mapserver\_test.map}, the
-shp2img command is:
+Assuming our map file was named \filename{mapserver\_test.map}, the
+\filename{shp2img} command is:
 
 \begin{verbatim}
 shp2img -m mapserver_test.map -o mapserver_test.png

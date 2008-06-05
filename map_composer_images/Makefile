@@ -21,7 +21,8 @@ PNG=map_composer_blank09.eps\
 	composer_export_image.eps\
 	composer_export_svg.eps\
 	composer_open_template.eps\
-	composer_save_template.eps
+	composer_save_template.eps\
+	mActionFilePrint.eps\
 	
 	
 ##### TARGETS #####

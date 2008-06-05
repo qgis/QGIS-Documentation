@@ -25,6 +25,7 @@ PNG=grassedit.eps\
 	grass_refresh.eps\
 	grass_add_map.eps\
 	grass_rename_map.eps\
+	grass_region.eps\
 	grass_set_region.eps\
 	vbuffer.eps\
 	grass_delete_vertex.eps\
@@ -44,7 +45,10 @@ PNG=grassedit.eps\
 	grass_new_vector_layer.eps\
 	grass_open_mapset.eps\
 	grass_location.eps\
-		
+	grass_module_error.eps\
+	grass_module_warning.eps\
+	grass_browser_raster_layer.eps\
+	grass_browser_vector_layer.eps\
 	
 ##### TARGETS #####
 
