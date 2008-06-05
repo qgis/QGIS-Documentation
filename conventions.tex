@@ -3,47 +3,178 @@
 % options for boxes provided by fancybox package are:
 % \fbox, \shadowbox, \doublebox, \ovalbox and \Ovalbox
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\shadowsize}{2pt}%
 \newcommand{\nix}[1]{Under GNU/Linix, #1}
 \newcommand{\win}[1]{Under MS Windows, #1}
 \newcommand{\osx}[1]{Under Mac OS X, #1}
-\renewcommand{\button}[1]{\cornersize{0.1}\shadowbox{\textsf{\scriptsize#1}}}
+% button
+\renewcommand{\button}[1]{%
+\lower4pt\hbox{%
+\shadowbox{\textsf{#1}}
+}}
+% mainmenuopt
+\newcommand{\mainmenuopt}[1]{%
+\mbox{}%
+\lower6pt\hbox{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[gray]{0.9}[gray]{0.9}%
+{\textsf{#1}}%
+}}}
+% dropmenuopt
+\newcommand{\dropmenuopt}[1]{%
+\mbox{}%
+\lower6pt\hbox{%
+{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
+{ \textsf{#1}}}%
+}}}
+% dropmenuopttwo
+\newcommand{\dropmenuopttwo}[2]{%
+\mbox{}%
+\lower6pt\hbox{%
+{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
+{\includegraphics[width=3mm]{#1} \textsf{#2}}}%
+}}}
+% tooltip
+\newcommand{\tooltip}[1]{%
+\mbox{}%
+\raise2pt\hbox{%
+\fcolorbox{black}[rgb]{1,1,0.8}{\textsf{#1}}%
+}}
+% toolbtntwo
+\newcommand{\toolbtntwo}[2]{%
+\mbox{}%
+\lower6pt\hbox{%
+\shadowbox{\includegraphics[width=7mm]{#1}}} %
+\tooltip{#2}%
+}
+% toolboxtwo
+\newcommand{\toolboxtwo}[2]{%
+\mbox{}%
+\lower6pt\hbox{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1} #2%
+}}%
+}
+% toolboxthree
+\newcommand{\toolboxthree}[3]{%
+\mbox{}%
+\lower6pt\hbox{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1}%
+\includegraphics[width=5mm]{#2}%
+ #3%
+}}%
+}
+% toolboxfour
+\newcommand{\toolboxfour}[4]{%
+\mbox{}%
+\lower6pt\hbox{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1}%
+\includegraphics[width=5mm]{#2}%
+\includegraphics[width=5mm]{#3}%
+ #4%
+}}%
+}
+%for backward compatibility!
+\newcommand{\toolbox}[2]{%
+\toolboxtwo{#1}{#2}%
+}
+% tab
+\newcommand{\tab}[1]{%
+\lower4pt\hbox{%
+\shadowbox{\textsf{#1}}
+}}
+% checkbox
+\newcommand{\checkbox}[1]{%
+%\mbox{}%
+\raise2pt\hbox{%
+\fbox{%
+\mbox{}%
+\lower4pt\hbox{%
+\shadowbox{x}} %
+\textsf{#1}}%
+}}
+
+\renewcommand{\usertext}[1]{\texttt{#1}}
 \renewcommand{\classname}[1]{\textsf{\textbf{#1}}}
 \renewcommand{\fieldname}[1]{\textsl{#1}}
 \renewcommand{\filename}[1]{\texttt{#1}}
-\renewcommand{\keystroke}[1]{\fbox{\textsf{\scriptsize#1}}}
-\renewcommand{\menuopt}[1]{\cornersize{7mm}\Ovalbox{\textsf{#1}}}
+\renewcommand{\keystroke}[1]{\cornersize{.6}\ovalbox{\textsf{#1}}}
 \renewcommand{\method}[1]{\textsf{\textit{#1}}}
-\renewcommand{\server}[1]{\doublebox{{\textit{#1}}}}
-\renewcommand{\sqltable}[1]{\doublebox{\textsf{\textbf{#1}}}}
-\renewcommand{\toolbtn}[1]{\cornersize{7mm}\shadowbox{\textsf{\scriptsize#1}}}
-\renewcommand{\usertext}[1]{\texttt{#1}}
-\newcommand{\toolbox}[2]{\includegraphics[width=0.7cm]{#1} #2}
-\newcommand{\tab}[1]{\shadowbox{\textsf{\scriptsize#1}}}
-\newcommand{\checkbox}[1]{\fbox{\fbox{x} \textsf{\scriptsize#1}}}
+\renewcommand{\server}[1]{\textit{#1}}
+\renewcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
+
 
 \subsection{Conventions}\label{label_conventions}
 
 The conventions used in this manual are as follows. 
 
-
+\minisec{GUI Conventions}
 \begin{itemize}
+%
+%Use \mainmenuopt for main menu items that have no icon only text
+%Main Menu includes: File, View, Layer, Settings, Plugins, Help
+\item Menu Option: \mainmenuopt{Layer} > %
+%
+%Use \dropmenuopttwo for a drop-down menu item with an icon
+%Use \dropmenuoptone for a drop-down menu item with no icon 
+\dropmenuopttwo{addraster}{Add a Raster Layer}
+%
+%Use \toolbtntwo for the toolbar items, including those that open dialogs
+%These have an icon, and display a tooltip on hover
+%Its really important to get the icon in there because that's what a user
+%has to search for. The tooltip adds confirmation
+\item Tool: \toolbtntwo{addraster}{Add a Raster Layer}
+%
+%Use \button for a clickable button which has no icon, just text
+%Save As Default is a button that appears in the Layer Properties dialog.
 \item Button: \button{Save as Default}
-\item Tool Button: \toolbtn{Add Vector Layer}
-\item Tab Item: \tab{General}
+%
+%Use \tab for clickable tabs which have no icons, just text
+%General is a tab that appears in the Layer Properties dialog.
+%At the moment, it looks just like \button, but that may change.
+\item Tab: \tab{General}
+%
+%Use \toolboxtwo, \toolboxthree or \toolboxfour
+% for GRASS toolbox (not toolbar) items
+%These are what you see in the menu after you click Open GRASS Tools
+%The one you need depends on how many icons are required
+%The number part of the name is the total number of arguments (N)
+%The number of icons is (N-1)
+\item Toolbox Item: \toolboxtwo{add_grass_vector}{nviz - Open 3D-View in NVIZ}
+%
+%Use checkbox for a checkbox item in a dialog popup
+\item Checkbox: \checkbox{Render}
+\end{itemize}
+A shadow indicates a clickable GUI component.
+
+\minisec{Text or Keyboard Conventions}
+\begin{itemize}
+%
+%Use for all urls. Otherwise, it is not clickable in the document.
+\item Hyperlinks: \url{http://qgis.org}
+%
 \item Single Keystroke: press \keystroke{p}
 \item Keystroke Combinations: press \keystroke{Ctrl-B}, meaning press and
 hold the Ctrl key and then press the B key.
+\item Name of a File: \filename{lakes.shp}
+\item Name of a Field: \fieldname{NAMES}
 \item Name of a Class: \classname{NewLayer}
 \item Method: \method{classFactory}
-\item Name of a Field: \fieldname{NAMES}
-\item Name of a File: \filename{lakes.shp}
-\item Menu Option: \menuopt{File} -> \menuopt{Save Project}
 \item Server: \server{example needed here}
 \item SQL Table: \sqltable{example needed here}    
+%
+%Use usertext for all other text that the user must enter from the keyboard
+%that is not covered by any of the above cases
 \item User Text: \usertext{qgis ---help}
-\item Toolbox Item: \toolbox{add_grass_vector}{Add Grass Vector Layer}
-\item Checkbox: \checkbox{Render}
-\item Hyperlink: \url{http://qgis.org}
 \end{itemize}
 
 Code is indicated by a fixed-width font:
