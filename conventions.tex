@@ -2,107 +2,8 @@
 
 % options for boxes provided by fancybox package are:
 % \fbox, \shadowbox, \doublebox, \ovalbox and \Ovalbox
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\shadowsize}{2pt}%
-\newcommand{\nix}[1]{Under GNU/Linix, #1}
-\newcommand{\win}[1]{Under MS Windows, #1}
-\newcommand{\osx}[1]{Under Mac OS X, #1}
-% button
-\renewcommand{\button}[1]{%
-\lower4pt\hbox{%
-\shadowbox{\textsf{#1}}
-}}
-% mainmenuopt
-\newcommand{\mainmenuopt}[1]{%
-\mbox{}%
-\lower6pt\hbox{%
-\setlength{\fboxsep}{0pt}%
-\shadowbox{\setlength{\fboxsep}{2pt}%
-\fcolorbox[gray]{0.9}[gray]{0.9}%
-{\textsf{#1}}%
-}}}
-% dropmenuopt
-\newcommand{\dropmenuopt}[1]{%
-\mbox{}%
-\lower6pt\hbox{%
-{%
-\setlength{\fboxsep}{0pt}%
-\shadowbox{\setlength{\fboxsep}{2pt}%
-\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
-{ \textsf{#1}}}%
-}}}
-% dropmenuopttwo
-\newcommand{\dropmenuopttwo}[2]{%
-\mbox{}%
-\lower6pt\hbox{%
-{%
-\setlength{\fboxsep}{0pt}%
-\shadowbox{\setlength{\fboxsep}{2pt}%
-\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
-{\includegraphics[width=3mm]{#1} \textsf{#2}}}%
-}}}
-% tooltip
-\newcommand{\tooltip}[1]{%
-\mbox{}%
-\raise2pt\hbox{%
-\fcolorbox{black}[rgb]{1,1,0.8}{\textsf{#1}}%
-}}
-% toolbtntwo
-\newcommand{\toolbtntwo}[2]{%
-\mbox{}%
-\lower6pt\hbox{%
-\shadowbox{\includegraphics[width=7mm]{#1}}} %
-\tooltip{#2}%
-}
-% toolboxtwo
-\newcommand{\toolboxtwo}[2]{%
-\mbox{}%
-\lower6pt\hbox{%
-\shadowbox{%
-\includegraphics[width=5mm]{#1} #2%
-}}%
-}
-% toolboxthree
-\newcommand{\toolboxthree}[3]{%
-\mbox{}%
-\lower6pt\hbox{%
-\shadowbox{%
-\includegraphics[width=5mm]{#1}%
-\includegraphics[width=5mm]{#2}%
- #3%
-}}%
-}
-% toolboxfour
-\newcommand{\toolboxfour}[4]{%
-\mbox{}%
-\lower6pt\hbox{%
-\shadowbox{%
-\includegraphics[width=5mm]{#1}%
-\includegraphics[width=5mm]{#2}%
-\includegraphics[width=5mm]{#3}%
- #4%
-}}%
-}
-%for backward compatibility!
-\newcommand{\toolbox}[2]{%
-\toolboxtwo{#1}{#2}%
-}
-% tab
-\newcommand{\tab}[1]{%
-\lower4pt\hbox{%
-\shadowbox{\textsf{#1}}
-}}
-% checkbox
-\newcommand{\checkbox}[1]{%
-%\mbox{}%
-\raise2pt\hbox{%
-\fbox{%
-\mbox{}%
-\lower4pt\hbox{%
-\shadowbox{x}} %
-\textsf{#1}}%
-}}
-
+%%%%%%%%%%%%%%%%8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 \renewcommand{\usertext}[1]{\texttt{#1}}
 \renewcommand{\classname}[1]{\textsf{\textbf{#1}}}
 \renewcommand{\fieldname}[1]{\textsl{#1}}
@@ -111,8 +12,171 @@
 \renewcommand{\method}[1]{\textsf{\textit{#1}}}
 \renewcommand{\server}[1]{\textit{#1}}
 \renewcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
-
-
+\newcommand{\guilabel}[1]{\textsf{#1}}
+%
+\setlength{\shadowsize}{2pt}%
+\newcommand{\nix}[1]{Under GNU/Linix, #1}
+\newcommand{\win}[1]{Under MS Windows, #1}
+\newcommand{\osx}[1]{Under Mac OS X, #1}
+% button
+\renewcommand{\button}[1]{%
+\raisebox{-6pt}{%
+\shadowbox{\guilabel{#1}}
+}}
+% mainmenuopt
+\newcommand{\mainmenuopt}[1]{%
+\raisebox{-6pt}{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[gray]{0.9}[gray]{0.9}%
+{\guilabel{#1}}%
+}}}
+% dropmenuopt
+\newcommand{\dropmenuopt}[1]{%
+\raisebox{-6pt}{{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
+{ \guilabel{#1}}}%
+}}}
+% dropmenucheck
+\newcommand{\dropmenucheck}[1]{%
+\raisebox{-6pt}{{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
+{ $\boxtimes$ \guilabel{#1}}}%
+}}}
+% dropmenuopttwo
+\newcommand{\dropmenuopttwo}[2]{%
+\raisebox{-6pt}{%
+{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox[rgb]{.95,.95,0.8}[rgb]{.95,.95,0.8}%
+{\includegraphics[width=3mm]{#1} \guilabel{#2}}}%
+}}}
+% tooltip
+\newcommand{\tooltip}[1]{%
+\raisebox{-2pt}{%
+\fcolorbox{black}[rgb]{1,1,0.8}{\guilabel{#1}}%
+}}
+% toolbtntwo
+\newcommand{\toolbtntwo}[2]{%
+\raisebox{-6pt}{%
+\shadowbox{\includegraphics[width=7mm]{#1}}} %
+\tooltip{#2}%
+}
+% toolboxtwo
+\newcommand{\toolboxtwo}[2]{%
+\raisebox{-6pt}{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1} \guilabel{#2}%
+}}}
+% toolboxthree
+\newcommand{\toolboxthree}[3]{%
+\raisebox{-6pt}{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1}%
+\includegraphics[width=5mm]{#2}%
+ \guilabel{#3}%
+}}}
+% toolboxfour
+\newcommand{\toolboxfour}[4]{%
+\raisebox{-6pt}{%
+\shadowbox{%
+\includegraphics[width=5mm]{#1}%
+\includegraphics[width=5mm]{#2}%
+\includegraphics[width=5mm]{#3}%
+ \guilabel{#4}%
+}}}
+%for backward compatibility!
+\newcommand{\toolbox}[2]{%
+\toolboxtwo{#1}{#2}%
+}
+% tab
+\newcommand{\tab}[1]{%
+\raisebox{-6pt}{%
+\shadowbox{\guilabel{#1}}
+}}
+% checkbox
+\newcommand{\checkbox}[1]{%
+\raisebox{2pt}{%
+\fbox{%
+\raisebox{-4pt}{%
+\shadowbox{x}} %
+\guilabel{#1}}%
+}}
+% radiobuttonoff
+\newcommand{\radiobuttonoff}[1]{%
+\raisebox{-4pt}{%
+\setlength{\fboxsep}{1pt}%
+\shadowbox{%
+$\bigcirc$%
+}} %
+\guilabel{#1}%
+}
+% radiobuttonon
+\newcommand{\radiobuttonon}[1]{%
+$\odot$ %
+\guilabel{#1}%
+}
+% selectnumber
+\newcommand{\selectnumber}[2]{%
+\fbox{%
+{#1} \fbox{{#2} %
+\raisebox{-6pt}{%
+\setlength{\fboxsep}{1pt}%
+\shadowbox{%
+${\blacktriangle}\atop{\blacktriangledown}$%
+}}}}}
+%
+% selectstring
+\newcommand{\selectstring}[2]{%
+\fbox{%
+\guilabel{#1} \fbox{\guilabel{#2} %
+\raisebox{-2pt}{%
+\setlength{\fboxsep}{1pt}%
+\shadowbox{%
+$\blacktriangledown$%
+}}}}}
+%
+% browsebutton
+\newcommand{\browsebutton}{%
+\raisebox{-6pt}{%
+\shadowbox{\rule[-1mm]{0mm}{4mm}{$\ldots$}}
+}}
+%
+% selectcolor
+\newcommand{\selectcolor}[2]{%
+\fbox{\guilabel{#1} %
+\raisebox{-6pt}{%
+\setlength{\fboxsep}{0pt}%
+\shadowbox{\setlength{\fboxsep}{2pt}%
+\fcolorbox{#2}{#2}{\rule{0mm}{5mm}\rule{35mm}{0mm}%
+}}}}}
+%
+% slider
+\newcommand{\slider}[3]{%
+\fbox{%
+\guilabel{#1} \guilabel{#2}\% %
+\raisebox{-2pt}{%
+\setlength{\fboxsep}{1pt}%
+\shadowbox{%
+$\triangledown$%
+}}%
+\negthinspace\rule[1mm]{20mm}{1mm}
+}}
+%
+% input text
+\newcommand{\inputtext}[2]{%
+\fbox{%
+\guilabel{#1} %
+\raisebox{-6pt}{%
+\shadowbox{\usertext{#2}}%
+}}}
+%
+%
 \subsection{Conventions}\label{label_conventions}
 
 The conventions used in this manual are as follows. 
@@ -122,11 +186,16 @@ The conventions used in this manual are as follows.
 %
 %Use \mainmenuopt for main menu items that have no icon only text
 %Main Menu includes: File, View, Layer, Settings, Plugins, Help
-\item Menu Option: \mainmenuopt{Layer} > %
+\item Menu Options: \mainmenuopt{Layer} > %
 %
 %Use \dropmenuopttwo for a drop-down menu item with an icon
 %Use \dropmenuoptone for a drop-down menu item with no icon 
-\dropmenuopttwo{addraster}{Add a Raster Layer}
+\dropmenuopttwo{addraster}{Add a Raster Layer} 
+
+or
+
+\mainmenuopt{View} > %
+\dropmenuopt{Toolbar Visibility} > \dropmenucheck{Digitizing}
 %
 %Use \toolbtntwo for the toolbar items, including those that open dialogs
 %These have an icon, and display a tooltip on hover
@@ -149,10 +218,33 @@ The conventions used in this manual are as follows.
 %The one you need depends on how many icons are required
 %The number part of the name is the total number of arguments (N)
 %The number of icons is (N-1)
-\item Toolbox Item: \toolboxtwo{add_grass_vector}{nviz - Open 3D-View in NVIZ}
+\item Toolbox Item: \toolboxtwo{nviz.1}{nviz - Open 3D-View in NVIZ}
 %
-%Use checkbox for a checkbox item in a dialog popup
+%Use \checkbox for a checkbox item in a dialog popup
 \item Checkbox: \checkbox{Render}
+%
+%Use \radiobuttonoff for a radio button item in a dialog popup
+\item Radio Button:  \radiobuttonon{Postgis SRID} \radiobuttonoff{EPSG ID}
+%
+% Use \selectnumber for a selection box with up and down arrows
+% and a numerical value
+\item Select a Number: \selectnumber{Hue}{60}
+%
+% Use \selectstring for a selection box with down arrows
+% and a string value
+\item Select a String: \selectstring{Outline style}{---Solid Line}
+%
+%
+% Use \browsebutton for a button that opens a file browser popup
+\item Browse for a File: \browsebutton 
+%
+% Use \selectcolor for a button which opens a color selector popup
+\item Select a Color: \selectcolor{Outline color}{yellow}
+%
+\item Slider: \slider{Transparency}{0}{20mm}
+%
+% Use \inputtext for a labelled field for user input of text 
+\item Input Text: \inputtext{Display Name}{lakes.shp}
 \end{itemize}
 A shadow indicates a clickable GUI component.
 
