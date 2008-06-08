@@ -71,7 +71,8 @@
 \newcommand{\toolboxtwo}[2]{%
 \raisebox{-6pt}{%
 \shadowbox{%
-\includegraphics[width=5mm]{#1} \guilabel{#2}%
+\raisebox{-2pt}{\includegraphics[width=5mm]{#1}}%
+\guilabel{ #2}%
 }}}
 % toolboxthree
 \newcommand{\toolboxthree}[3]{%
@@ -218,7 +219,7 @@ or
 %The one you need depends on how many icons are required
 %The number part of the name is the total number of arguments (N)
 %The number of icons is (N-1)
-\item Toolbox Item: \toolboxtwo{nviz.1}{nviz - Open 3D-View in NVIZ}
+\item Toolbox Item: \toolboxtwo{nviz.1.eps}{nviz - Open 3D-View in NVIZ}
 %
 %Use \checkbox for a checkbox item in a dialog popup
 \item Checkbox: \checkbox{Render}
