@@ -9,16 +9,16 @@ it to work with GRASS data. The following features are provided with the GRASS
 plugin:
  
 \begin{itemize}
-\item \toolbox{add_grass_vector}{Add GRASS vector layer}
-\item \toolbox{add_grass_raster}{Add GRASS raster layer}
-\item \toolbox{grass_tools}{Open GRASS tools}
-\item \toolbox{grass_region}{Display current GRASS region} 
-\item \toolbox{grass_region_edit}{Edit current GRASS region}
-\item \toolbox{grass_edit}{Edit GRASS vector layer}
-\item \toolbox{grass_open_mapset}{Open mapset}
-\item \toolbox{grass_new_mapset}{New mapset}
-\item \toolbox{grass_new_vector_layer}{Create new GRASS vector}
-\item \toolbox{grass_close_mapset}{Close mapset}
+\item \toolbtntwo{add_grass_vector}{Add GRASS vector layer}
+\item \toolbtntwo{add_grass_raster}{Add GRASS raster layer}
+\item \toolbtntwo{grass_tools}{Open GRASS tools}
+\item \toolbtntwo{grass_region}{Display current GRASS region} 
+\item \toolbtntwo{grass_region_edit}{Edit current GRASS region}
+\item \toolbtntwo{grass_edit}{Edit GRASS vector layer}
+\item \toolbtntwo{grass_open_mapset}{Open mapset}
+\item \toolbtntwo{grass_new_mapset}{New mapset}
+\item \toolbtntwo{grass_new_vector_layer}{Create new GRASS vector}
+\item \toolbtntwo{grass_close_mapset}{Close mapset}
 \end{itemize}
 
 \subsection{Starting QGIS with GRASS}\label{sec:starting_grass}
@@ -44,7 +44,7 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   \item Download the spearfish\_grass60data-0.3.zip file
   \item Create a new folder \filename{grassdata} and unzip the spearfish\_grass60data-0.3.zip into it. 
   \item Start QGIS
-  \item In the GRASS toolbar, click on the \toolbox{grass_open_mapset}{Open
+  \item In the GRASS toolbar, click on the \toolbtntwo{grass_open_mapset}{Open
   mapset} icon to bring up the mapset wizard.
   \item For \filename{Gisdbase} browse and enter the path to the newly
   created folder \filename{grassdata}.
@@ -52,9 +52,9 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   and the mapset \filename{PERMANENT} or \filename{user1}. 
   \item Click \button{OK}. Notice that some of the tools in the GRASS toolbar
   that were disabled are now enabled.
-  \item Click on \toolbox{add_grass_raster}{Add GRASS raster layer}, choose
+  \item Click on \toolbtntwo{add_grass_raster}{Add GRASS raster layer}, choose
   the \filename{map name} geology and click \button{OK}. The geology map will be visualized. 
-  \item Click on \toolbox{add_grass_vector}{Add GRASS vector layer}, choose
+  \item Click on \toolbtntwo{add_grass_vector}{Add GRASS vector layer}, choose
   the \filename{map name} roads and click \button{OK}. Now the roads map will
   be overlayed on top of the geology.  
 \end{enumerate}
@@ -90,7 +90,7 @@ projection with unit meter for the QGIS sample data (see Section \ref{label_samp
   \item Start QGIS
   \item Make sure the GRASS plugin is loaded
   \item Load the \filename{alaska.shp} shapefile (see Section \ref{sec:load_shapefile}).
-  \item In the GRASS toolbar, click on the \toolbox{grass_open_mapset}{Open
+  \item In the GRASS toolbar, click on the \toolbtntwo{grass_open_mapset}{Open
     mapset} icon to bring up the mapset wizard.
   \item Each location is stored in a directory. Select an existing data 
   directory or create a new one for storing the location
@@ -123,7 +123,7 @@ projection with unit meter for the QGIS sample data (see Section \ref{label_samp
 
 If that seemed like a lot of steps, it's really not all that bad and a very 
 quick way to create a location. Our location is now ready for use. To view 
-the default region, zoom out. Clicking the \toolbox{grass_region}{Display
+the default region, zoom out. Clicking the \toolbtntwo{grass_region}{Display
 current GRASS region} icon toggles the display region on and off. 
 
 \subsection{Vector Data Model}\label{label_vectmodel}\index{GRASS!vector data
@@ -176,11 +176,11 @@ information, books and tutorials in several languages.
 \label{grass_digitising}
 
 The digitizing tools for GRASS vector layers are accessed using the
-\toolbox{grass_edit}{Edit GRASS vector layer} icon on the toolbar. Make sure
+\toolbtntwo{grass_edit}{Edit GRASS vector layer} icon on the toolbar. Make sure
 you have loaded a GRASS vector and it is the selected layer in the legend before
 clicking on the edit tool. If you would like to create a new GRASS vector, 
-you need to use the toolbar-entry \menuopt{Plugins} -> \menuopt{GRASS} ->
-\menuopt{Create new GRASS vector}.
+you need to use the toolbar-entry \mainmenuopt{Plugins} >
+\dropmenuopt{GRASS} > \dropmenuopttwo{grass_new_vector_layer}{Create new GRASS vector}.
 
 Figure \ref{fig:grass_edit} shows the GRASS Edit dialog that is displayed
 when you click on the edit tool. 
@@ -284,9 +284,9 @@ north, south, east, west, number of columns, number of rows,
 horizontal and vertical spatial resolution.
 
 It is possible to switch on/off the GRASS region in the QGIS canvas
-using the \toolbox{grass_region}{Display current GRASS region} button. \index{GRASS!region!display}
+using the \toolbtntwo{grass_region}{Display current GRASS region} button. \index{GRASS!region!display}
 
-With the \toolbox{grass_region_edit}{Edit current GRASS region} you can open a tool 
+With the \toolbtntwo{grass_region_edit}{Edit current GRASS region} you can open a tool 
 in which you can change the current region and symbology
 of the GRASS region rectangle on the QGIS canvas. When the tool is running,
 it is also possible to select a new region interactively with your mouse
@@ -300,8 +300,8 @@ on the QGIS canvas.\index{GRASS!region!editing}
 
 \subsection{GRASS Toolbox}\index{GRASS!toolbox}
 
-\includegraphics[width=0.7cm]{grass_tools} The GRASS toolbox provides 
-analytic functions from GRASS within QGIS. To
+The \toolbtntwo{grass_tools}{Open GRASS Tools} box provides analytic
+functions from GRASS within QGIS. To
 use the GRASS toolbox you need to have opened a mapset where you have
 write-permission. This is needed because QGIS will most probably create
 new datasets which need to be written to a valid mapset.
@@ -375,14 +375,14 @@ location.
 The right side of the browser window shows some meta information for the selected dataset, e.g. resolution,
 bounding box, data source, attribute table for vector data\dots
 
-The toolbar inside the browser tab gives you the following tools for the selected dataset:
+The toolbar inside the \tab{browser} tab gives you the following tools for the selected dataset:
 \begin{itemize}
-\item \toolbox{grass_add_map}{Add selected map to canvas}
-\item \toolbox{grass_copy_map}{Copy selected map}
-\item \toolbox{grass_rename_map}{Rename selected map}
-\item \toolbox{grass_delete_map}{Delete selected map}
-\item \toolbox{grass_set_region}{Set current region to selected map}
-\item \toolbox{grass_refresh}{Refresh browser window}
+\item \toolboxtwo{grass_add_map}{Add selected map to canvas}
+\item \toolboxtwo{grass_copy_map}{Copy selected map}
+\item \toolboxtwo{grass_rename_map}{Rename selected map}
+\item \toolboxtwo{grass_delete_map}{Delete selected map}
+\item \toolboxtwo{grass_set_region}{Set current region to selected map}
+\item \toolboxtwo{grass_refresh}{Refresh browser window}
 \end{itemize}
 
 The 'Rename' and 'Delete' buttons are only available in your current mapset. All other tools also work on
@@ -433,8 +433,8 @@ the module:
 With this version of QGIS it is also possible to create new vectors from within GRASS very
 easily.
 
-Just select \menuopt{Plugins} -> \menuopt{GRASS} -> \menuopt{Create new GRASS
-layer} from the toolbar, give a new name in the text box and start digitizing.
+Just select \mainmenuopt{Plugins} > \dropmenuopt{GRASS} > 
+\dropmenuopttwo{grass_new_vector_layer}{Create new GRASS layer} from the toolbar, give a new name in the text box and start digitizing.
 If you encounter a greyed-out button, make sure you have a working mapset enabled. If you forgot
 how to enable a mapset have a look at Section \ref{sec:load_grassdata}.
 

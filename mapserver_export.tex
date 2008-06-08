@@ -30,11 +30,9 @@ using the tool, you need to specify a QGIS project file as input.
 
 \subsection{Creating the Map File}
 
-The exporter tool (\filename{msexport}) is installed in your QGIS binary directory and can be
-used independently of QGIS. 
+The exporter tool (\filename{msexport}) is installed in your QGIS binary directory and can be used independently of QGIS. 
 
-From QGIS you can start the exporter by choosing \menuopt{Export to MapServer
-Map...} from the \menuopt{File} menu. 
+From QGIS you can start the exporter by choosing \mainmenuopt{File} > \dropmenuopt{Export to MapServer Map...}. 
 
 Here is a summary of the input fields:
 
@@ -78,10 +76,10 @@ and \filename{rivers} layers from the qgis\_sample\_data:
   \item Load the \filename{alaska}, \filename{rivers} and \filename{lakes} 
   layers into QGIS
   \item Change the colors and symbolize the data as you like
-  \item Save the project using \menuopt{Save Project} from the
-    \menuopt{File} menu
-  \item Open the exporter by clicking on \menuopt{Export to MapServer
-    Map...} in the \menuopt{File} menu
+  \item Save the project using \mainmenuopt{File} >
+  \dropmenuopttwo{mActionFileSave}{Save Project}.
+  \item Open the exporter by clicking mainmenuopt{File} > \dropmenuopt{Export
+  to MapServer Map...}.
   \item Enter a name for your new map file
   \item Browse and find the project file you just saved
   \item Enter a name for the map
@@ -117,7 +115,7 @@ but is also distributed with FWTools. To create an image from our map:
 \item Open a terminal window
 \item If you didn't save your map file in your home directory, change to
   the directory where you saved it
-\item Run shp2img 
+\item Run \filename{shp2img} 
 \item View the created image 
 \end{itemize}
  

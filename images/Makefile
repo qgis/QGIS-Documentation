@@ -56,6 +56,7 @@ PNG=addshapefile.eps\
 	wfs_dmsolutions.eps \
 	wfs-icon.eps \
 	identify_action.eps\
+	mActionFileSave.eps\
 	
 		
 ##### TARGETS #####
