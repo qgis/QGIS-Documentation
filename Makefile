@@ -75,6 +75,7 @@ pics:
 	(cd ./plugins_decorations_images && make)	
 	(cd ./plugins_graticule_creator_images && make)
 	(cd ./plugins_georeferencer_images && make)
+	(cd ./plugins_grass_module_images && make)
 	
 # make html
 # requires: latex2html oder tex4ht
@@ -109,3 +110,4 @@ cleanpics:
 	(cd ./plugins_decorations_images && make clean)	
 	(cd ./plugins_graticule_creator_images && make clean)
 	(cd ./plugins_georeferencer_images && make clean)
+	(cd ./plugins_grass_module_images && make clean)
