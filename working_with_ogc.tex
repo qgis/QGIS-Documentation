@@ -35,7 +35,6 @@ data provider, see Section \ref{label_postgis}); WFS and WMS as a client.
 
 \subsubsection{Overview of WMS Support}\label{sec:ogc-wms-about}\index{WMS!client!about}
 
-\includegraphics[width=0.7cm]{wmssupport}
 QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1 and 1.3
 servers.  It has particularly been tested against publicly accessible servers
 such as DEMIS and JPL OnEarth.
@@ -60,14 +59,15 @@ server understands HTTP as the data transport mechanism.
 \subsubsection{Selecting WMS Servers}\label{sec:ogc-wms-servers}\index{WMS!remote server!selection}
 
 The first time you use the WMS feature, there are no servers defined. You 
-can begin by clicking the \textsl{Add WMS layer} button inside the toolbar, 
-or through the Layer menu.
+can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button inside the toolbar, 
+or through the \mainmenuopt{Layer}>\dropmenuopttwo{mActionAddWmsLayer}{Add
+WMS Layer...} menu.
 
 The dialog for adding layers from the WMS server pops up. Fortunately you can 
-add some servers to play with by clicking the \textsl{Add default servers} 
+add some servers to play with by clicking the \button{Add default servers} 
 button. This will add at least three WMS servers for you to use, including the NASA (JPL) 
-WMS server. To define a new WMS server in the \textsl{Server Connections} section, 
-select \textsl{New}. Then enter in the parameters to connect to your desired
+WMS server. To define a new WMS server in the \tab{Server Connections} section, 
+select \button{New}. Then enter in the parameters to connect to your desired
 WMS server, as listed in table \ref{tab:wms_connection_parms}:
 
 \begin{table}[h]\index{WMS!client!connection parameters}
@@ -89,7 +89,8 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \end{tabular}
 \end{table}
 
-At least \textsl{Name} and \textsl{URL} are required entries; the proxy entries 
+At least \fieldname{Name} and \fieldname{URL} are required entries; the
+\fieldname{proxy} entries 
 can be left blank if you have a clear path to your WMS server.
 
 Once the new WMS Server has been created, it will be preserved across future 
@@ -98,7 +99,7 @@ QGIS sessions.
 \begin{Tip}[h]\caption{\textsc{On WMS Server URLs}}
 \qgistip{Be sure, when entering in the WMS server URL, that you have
 the base URL.  For example, you shouldn't have fragments such as
-\texttt{request=GetCapabilities} or \texttt{version=1.0.0}
+\usertext{request=GetCapabilities} or \usertext{version=1.0.0}
 in your URL.\index{WMS!remote server!URL}
 }
 \end{Tip}
@@ -126,7 +127,8 @@ An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 
 \subsubsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
 
-Once you have successfully filled in your parameters you can select the \textsl{Connect}
+Once you have successfully filled in your parameters you can select the
+\button{Connect}
 button to retrieve the capabilities of the selected server.  This includes the Image encoding,
 Layers, Layer Styles, and Projections.  Since this
 is a network operation, the speed of the response depends on the quality of your network
@@ -146,7 +148,7 @@ response provided by the NASA JPL OnEarth WMS server.
 
 \minisec{Image Encoding}
 
-The \textsl{Image encoding} section now lists the formats that are supported by both
+The \tab{Image encoding} section now lists the formats that are supported by both
 the client and server.  Choose one depending on your image accuracy requirements.
 
 \begin{Tip}[h]\caption{\textsc{Image Encoding}}
@@ -166,7 +168,7 @@ the increased data transfer requirements.
 
 \minisec{Layers}
 
-The \textsl{Layers} section lists the layers available from the selected
+The \tab{Layers} section lists the layers available from the selected
 WMS server.  You may notice that some layers are expandible, this means
 that the layer can be displayed in a choice of image styles.
 
@@ -178,7 +180,7 @@ and transmitted to QGIS in one go.
 \qgistip{In this version of QGIS, WMS layers rendered by a server are overlaid
 in the order listed in the Layers section, from top to bottom of the list.
 If you want to overlay layers in the opposite order, then you can 
-select \textsl{Add WMS layer} a second time, choose the same server again,
+select \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} a second time, choose the same server again,
 and select the second group of layers that you want to overlay the first group.
 \index{WMS!remote server!layer ordering}
 }
@@ -209,14 +211,14 @@ whilst JPEG leaves it unsupported.
 \index{Projections!CRS}\index{Projections!coordinate reference system}
 \index{CRS}\index{coordinate reference system}
 
-A Coordinate Reference System is the OGC terminology for a QGIS Projection.
+A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
 Each WMS Layer can be presented in multiple CRSs, depending
 on the capability of the WMS server.  You may notice that the \textsl{x} changes in
 the \textsl{Coordinate Reference System (x available)} header as you
-select and deselect layers from the \textsl{Layers} section.
+select and deselect layers from the \tab{Layers} section.
 
-To choose a CRS, select \textsl{Change...} and a screen similar to
+To choose a CRS, select \button{Change...} and a screen similar to
 Figure \ref{fig:projections} in Section \ref{label_projstart} will appear.
 The main difference with the WMS version of the screen is that only
 those CRSs supported by the WMS Server will be shown.
@@ -242,7 +244,7 @@ results can occur.
 
 Once you have added a WMS server, 
 and if any layer from a WMS server is queryable, you can then use
-the \textsl{Identify} tool to select a pixel on the map canvas.
+the \toolbtntwo{mActionIdentify}{Identify} tool to select a pixel on the map canvas.
 A query is made to the WMS server for each selection made.
 
 The results of the query are returned in plain text.
@@ -255,7 +257,7 @@ WMS server used.
 
 Once you have added a WMS server, you can view its properties
 by right-clicking on it in the legend, and selecting
-\textsl{Properties}.
+\button{Properties}.
 
 
 \minisec{Metadata Tab}\label{sec:ogc-wms-properties-metadata}
@@ -263,7 +265,7 @@ by right-clicking on it in the legend, and selecting
 \index{WMS!metadata}
 \index{WMS!capabilites}
 
-The Metadata tab displays a wealth of information about the WMS server,
+The \tab{Metadata} tab displays a wealth of information about the WMS server,
 generally collected from the Capabilities statement returned from
 that server.
 
@@ -355,7 +357,7 @@ Some of the more notable exceptions follow:
 \minisec{Editing WMS Layer Settings}
 \index{WMS!layer settings!editing}
 
-Once you've completed the \textsl{Add WMS layer}
+Once you've completed the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer}
 procedure, there is no ability to change the settings.
 
 A workaround is to delete the layer completely and start again.
@@ -387,16 +389,16 @@ wfs&REQUEST=GetCapabilities
 
 \begin{enumerate}
   \item Make sure the WFS plugin is loaded; if not, open the Plugin Manager and load it
-  \item Click on the \textsl{Add WFS Layer} tool on the plugins toolbar
-  \item Click on \textsl{New} 
-  \item Enter ``DM Solutions'' as the name
+  \item Click on the \toolbtntwo{wfs-icon}{Add WFS Layer} tool on the plugins toolbar
+  \item Click on \button{New} 
+  \item Enter \fieldname{DM Solutions} as the name
   \item Enter the URL (see previous page)
-  \item Click \textsl{OK} 
-  \item Choose ``DM Solutions'' from the drop-down box
-  \item Click \textsl{Connect} 
+  \item Click \button{OK} 
+  \item Choose \fieldname{DM Solutions} from the drop-down box
+  \item Click \button{Connect} 
   \item Wait for the list of layers to be populated
-  \item Click on the ``Canadian Land'' layer
-  \item Click \textsl{Add} to add the layer to the map
+  \item Click on the \fieldname{Canadian Land} layer
+  \item Click \button{Add} to add the layer to the map
   \item Wait patiently for the features to appear
 \end{enumerate}
 
@@ -411,6 +413,7 @@ You'll notice the download progress is visualized in the left bottom of the QGIS
 Once the layer is loaded, you can identify and select a province or two and view the 
 attribute table.
 
+% FIXME: Is this still true? SH: I think it is stable though.
 Remember this plugin is still experimental. You might also experience random behavior 
 and crashes. You can look forward to improvements in a future version of the plugin.
 

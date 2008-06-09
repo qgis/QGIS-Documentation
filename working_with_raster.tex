@@ -44,17 +44,18 @@ details.\index{raster layers!GDAL implementation}
 	
 \subsection{Loading raster data in QGIS}\label{label_loadraster}
 
-\includegraphics[width=0.7cm]{addraster} Raster layers
-are loaded either by clicking on the \textsl{Load Raster} icon or by
-selecting the \textsl{View~->~Add Raster Layer} menu option. More than one 
-layer can be loaded at the same time by holding down the Control or Shift key
+Raster layers are loaded either by clicking on the 
+\toolbtntwo{mActionAddRasterLayer}{Load Raster} icon or by
+selecting the \mainmenuopt{View}>\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer} menu option. More than one 
+layer can be loaded at the same time by holding down the
+\keystroke{Control} or \keystroke{Shift} key
 and clicking on multiple items in the file dialog.\index{raster layers!loading}
 
 Please refer to section \ref{sec:load_grassdata} if you intend to load GRASS rasterdata.
 	
 \subsection{Raster Properties Dialog}\label{label_rasterprop}
 
-To view and set the properties for a raster layer, right click on the layer
+To view and set the \dropmenuopt{properties} for a raster layer, right click on the layer
 name. This displays the raster layer context menu that includes a number of
 items that allow you to:\index{raster layers!context menu}
 
@@ -66,23 +67,24 @@ items that allow you to:\index{raster layers!context menu}
 \end{figure}
 
 \begin{itemize}
-\item Zoom to the full extent of the raster
+\item \toolbtntwo{mActionZoomFullExtent}{Zoom to the full extent} of the raster
 \item Zoom to the best scale of the raster
 \item Show the raster in the map overview window
-\item Remove the layer from the map
+\item \toolbtntwo{mActionRemoveLayer}{Remove layer} from the map
 \item Open the raster layers properties
 \item Rename the layer
 \item Add a layer group
-\item Expand legend tree view
-\item Collapse legend tree view
+\item \toolbtntwo{mActionExpandTree}{Expand legend tree view}
+\item \toolbtntwo{mActionCollapseTree}{Collapse legend tree view}
 \item Show file groups
 \end{itemize}
 
-Choose \textsl{Properties} from the context menu to open the raster properties
+Choose \dropmenuopt{Properties} from the context menu to open the \button{raster
+properties}
 dialog for the layer.\index{raster layers!properties}
 
 Figure \ref{fig:raster_properties} shows the properties dialog. There are five
-tabs on the dialog: \textsl{Symbology}, \textsl{General}, \textsl{Metadata}, \textsl{Pyramids} and \textsl{Histogram}.
+tabs on the dialog: \tab{Symbology}, \tab{General}, \tab{Metadata}, \tab{Pyramids} and \tab{Histogram}.
 
 \begin{figure}[h]
    \begin{center}
@@ -122,7 +124,7 @@ pseudocolor)
 \smallskip
 
 QGIS can invert the colors in a given layer so that light colors become dark
-(and dark colors become light). Use the \textsl{Invert Color Map} checkbox to
+(and dark colors become light). Use the \checkbox{Invert Color Map} checkbox to
 enable / disable this behavior.\index{raster layers!icolor map inversion}
 
 QGIS has the ability to display each raster layer at varying transparency
@@ -147,7 +149,7 @@ set the image type to grayscale, then select Red as the band to use for Gray.
 
 \subsubsection{General Tab}\label{label_generaltab}
 
-The General tab displays basic information about the selected raster,
+The \tab{General} tab displays basic information about the selected raster,
 including the layer source and  display name in the legend (which can be
 modified). This tab also shows a thumbnail of the layer, its legend symbol,
 and the palette.\index{raster layers!properties}
@@ -156,12 +158,12 @@ Additionally scale-dependent visability can be set in this tab. You need to
 check the checkbox and set an appropriate scale where your data will be
 displayed in the map canvas.
 
-Also the spatal reference system is printed here as a PROJ.4-string. 
-This can be modified by hitting the \textsl{Change} button.
+Also the spatial reference system is printed here as a PROJ.4-string. 
+This can be modified by hitting the \button{Change} button.
 
 \subsubsection{Metadata Tab}\label{label_metatab}
 
-The Metadata tab displays a wealth of information about the raster layer,
+The \tab{Metadata} tab displays a wealth of information about the raster layer,
 including statistics about each band in the current raster layer. Statistics
 are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.\index{raster layers!metadata}
@@ -169,7 +171,7 @@ statistics have not yet been collected.\index{raster layers!metadata}
 
 \begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
 \qgistip{To gather statistics for a layer, select pseudocolor rendering and
-click the \textsl{Apply} button. Gathering statistics for a layer can be time
+click the \button{Apply} button. Gathering statistics for a layer can be time
 consuming. Please be patient while QGIS examines your
 data!\index{raster layers!statistics}
 }
@@ -201,7 +203,7 @@ version of your raster, make a backup copy prior to building pyramids.
 
 The histogram tab allows you to view the distribution\index{raster layers!histogram} 
 of the bands or colors in your raster. You must first generate the raster statistics 
-by clicking the \textsl{Refresh} button. You can choose which bands to display by 
+by clicking the \button{Refresh} button. You can choose which bands to display by 
 selecting them in the list box at the bottom right of the dialog. Two different
 chart types are allowed: Barcharts and Linegraphs.
 

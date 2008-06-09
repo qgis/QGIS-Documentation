@@ -12,8 +12,6 @@ JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
 PNG=addshapefile.eps\
-	addpostgis.eps\
-	addraster.eps\
 	digitising_attributes09.eps\
 	inoverview.eps\
 	map_composer_blank.eps\
@@ -37,10 +35,7 @@ PNG=addshapefile.eps\
 	spiticon.eps\
 	startup09.eps\
 	vectorLayerSymbology09.eps\
-	wmssupport.eps \
 	options.eps \
-	StartEditing.eps \
-	StopEditing.eps \
 	buffer.eps \
 	georeferencer.eps \
 	copyright.eps \
@@ -56,8 +51,42 @@ PNG=addshapefile.eps\
 	wfs_dmsolutions.eps \
 	wfs-icon.eps \
 	identify_action.eps\
+	mActionOpenTable.eps\
+	mActionToggleEditing.eps\
+	mActionAddRing.eps\
+	mActionAddIsland.eps\
+	mActionAddVertex.eps\
+	mActionAddLayer.eps\
+	mActionAddRasterLayer.eps\
+	mActionAddWmsLayer.eps\
+	mActionCaptureLine.eps\
+	mActionCapturePoint.eps\
+	mActionCapturePolygon.eps\
+	mActionCollapseTree.eps\
+	mActionDeleteSelected.eps\
+	mActionDeleteVertex.eps\
+	mActionDeleteSelected.eps\
+	mActionEditPaste.eps\
+	mActionEditCopy.eps\
+	mActionEditCut.eps\
+	mActionExpandTree.eps\
+	mActionIdentify.eps\
+	mActionOptions.eps\
+	mActionPan.eps\
+	mActionMoveFeature.eps\
+	mActionMoveVertex.eps\
+	mActionNewVectorLayer.eps\
+	mActionRemoveLayer.eps\
+	mActionSplitFeatures.eps\
+	mActionSelect.eps\
+	mActionZoomFullExtent.eps\
+	mActionZoomLast.eps\
+	mActionZoomToLayer.eps\
+	mActionZoomIn.eps\
+	mActionZoomOut.eps\
+	mActionZoomToSelected.eps\
+	mIconProjectionEnabled.eps\
 	mActionFileSave.eps\
-	
 		
 ##### TARGETS #####
 

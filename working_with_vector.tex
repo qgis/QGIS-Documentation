@@ -44,12 +44,12 @@ A shapefile actually consists of a minimum of three
 files:\index{shapefile!format}
 
 \begin{itemize}
-\item .shp file containing the feature geometries.
-\item .dbf file containing the attributes in dBase format.
-\item .shx index file.
+\item \filename{.shp} file containing the feature geometries.
+\item \filename{.dbf} file containing the attributes in dBase format.
+\item \filename{.shx} index file.
 \end{itemize}
 
-Ideally it comes with another file with a .prj suffix, that contains
+Ideally it comes with another file with a \filename{.prj} suffix, that contains
 the projection information for the shapefile.
 
 There can be more files belonging to a shapefile dataset.
@@ -58,14 +58,14 @@ that can be found at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile
 
 \subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
 {\includegraphics[width=0.7cm]{addshapefile}} To load a shapefile, start
-QGIS and click on the \textit{Add a vector layer}
-toolbar button\index{shapefile!loading} or simply type V. This same tool can be used to
+QGIS and click on the \toolbtntwo{addshapefile}{Add a vector layer}
+toolbar button\index{shapefile!loading} or simply type \keystroke{V}. This same tool can be used to
 load any of the formats supported by the OGR library.
 
 Clicking on the tool brings up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
 a shapefile or other supported data source. 
-The selection box \textsl{File of type} allows you to preselect some OGR supported file formats.
+The selection box \button{File of type} allows you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
@@ -76,8 +76,8 @@ You can also select the Encoding type for the shapefile if desired.
 \end{center} 
 \end{figure}
 
-Selecting a shapefile from the list and clicking Open loads it into QGIS. Figure
-\ref{fig:loadedshapefile} shows QGIS after loading the alaska.shp file.
+Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
+\ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
 
 \begin{figure}[ht]
    \begin{center}
@@ -92,9 +92,9 @@ adding more than one layer at a time, different colors are assigned to each. }
 \end{Tip}
 
 Once loaded, you can zoom around the shapefile using the map navigation tools.
-To change the symbology of a layer, open the layer properties dialog by double
+To change the symbology of a layer, open the \button{layer properties} dialog by double
 clicking on the layer name or by right-clicking on the name in the legend and
-choosing \textsl{Properties} from the popup menu. See
+choosing \button{Properties} from the popup menu. See
 Section \ref{sec:symbology} for more information on setting symbology of
 vector layers.
   
@@ -103,39 +103,41 @@ vector layers.
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A \index{spatial index!shapefiles} spatial index will improve the 
 speed of both zooming and panning. Spatial indexes used by QGIS have a 
-\textsl{.qix} extension.
+\filename{.qix} extension.
 
 Use these steps to create the index:
 
 \begin{itemize}
 \item Load a shapefile.
-\item Open the \textit{Layer Properties} dialog by double-clicking on the
+\item Open the \button{Layer Properties} dialog by double-clicking on the
 shapefile name in the legend or by right-clicking and choosing
-\textit{Properties} from the popup menu.
-\item In the tab \textit{General} click the \textit{Create} button on the \textit{Spatial Index} panel.
+\button{Properties} from the popup menu.
+\item In the tab \tab{General} click the \button{Create} button on the Spatial
+Index section.
 \end{itemize}
 
 \subsubsection{Loading a MapInfo Layer}
 \index{vector layers!MapInfo}
 
-To load a MapInfo layer, click on the \textit{Add a vector layer}
-toolbar bar button or type V, change the file type filter to \textit{MapInfo (*.mif
+To load a MapInfo layer, click on the \toolbtntwo{addshapefile}{Add a vector layer}
+toolbar bar button or type \keystroke{V}, change the file type filter to
+\fieldname{MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
 
 \subsubsection{Loading an ArcInfo Coverage}
 \index{vector layers!ArcInfo Coverage}
 
 Loading an ArcInfo coverage is done using the same method as with a
-shapefiles and MapInfo layers. Click on the \textit{Add a vector layer}
-toolbar button or type V to open the layer dialog and change the file type filter to
-\textit{All files (*.*)}. Navigate to the coverage directory and select one
+shapefiles and MapInfo layers. Click on the \toolbtntwo{addshapefile}{Add a vector layer}
+toolbar button or type \keystroke{V} to open the layer dialog and change the file type filter to
+\fieldname{All files (*.*)}. Navigate to the coverage directory and select one
 of the following files (if present in your coverage):
 
 \begin{itemize}
-\item .lab - to load a label layer (polygon labels or standing points).
-\item .cnt - to load a polygon centroid layer 
-\item .arc - to load an arc (line) layer.
-\item .pal - to load a polygon layer.
+\item \filename{.lab} - to load a label layer (polygon labels or standing points).
+\item \filename{.cnt} - to load a polygon centroid layer 
+\item \filename{.arc} - to load an arc (line) layer.
+\item \filename{.pal} - to load a polygon layer.
 \end{itemize}
 
 \subsection{PostGIS Layers}
@@ -155,7 +157,7 @@ To use PostGIS layers you must:\index{PostgreSQL!loading layers}
 not already defined).\index{PostgreSQL!connection}
 \item Connect to the database.
 \item Select the layer to add to the map.
-\item Optionally provide a SQL \textit{where} clause to define which features
+\item Optionally provide a SQL \sqltable{where} clause to define which features
 to load from the layer.
 \item Load the layer.
 \end{itemize}
@@ -163,15 +165,18 @@ to load from the layer.
 \subsubsection{Creating a stored
 Connection}\index{PostgreSQL!connection}\label{sec:postgis_stored}
 
-\includegraphics[width=0.7cm]{addpostgis} The first time
+\includegraphics[width=0.7cm]{mActionAddLayer} The first time
 you use a PostGIS data source, you must create a connection to the PostgreSQL
-database that contains the data. Begin by clicking on the \textit{Add a
-PostGIS Layer} toolbar button, selecting the \textit{Add a
-PostGIS Layer...} option from the \textit{Layer} menu o typing D. The \textsl{Add PostGIS Table(s)} dialog will
+database that contains the data. Begin by clicking on the
+\toolbtntwo{mActionAddLayer}{Add a PostGIS Layer} toolbar button, selecting the
+\dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer...} option from the \mainmenuopt{Layer} menu or typing
+\keystroke{D}. 
+%FIXME: dialog macro here?
+The \toolbtn{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
-manager}, click on the \textsl{New} button to display the \textsl{Create a New
+manager}, click on the \button{New} button to display the \toolbtn{Create a New
 PostGIS Connection} dialog. The parameters required for a connection are shown
-in Table \ref{tab:postgis_connection_parms}.
+in table \ref{tab:postgis_connection_parms}.
 
 \begin{table}[h]\index{PostgreSQL!connection parameters}
 \centering
@@ -195,15 +200,15 @@ database. \\
 \end{table}
 
 Once the parameters have been filled in, you can test the connection by
-clicking on the \textsl{Test
+clicking on the \button{Test
 Connection} button\index{PostgreSQL!connection!testing}. To save the password
-with the connection information, check the \textsl{Save Password} option.
+with the connection information, check the \checkbox{Save Password} option.
 
 \begin{Tip}\caption{\textsc{QGIS User Settings and
 Security}}\index{settings}\index{security}
 \qgistip{Your customized settings for QGIS are stored based on the operating
-system. On Linux/Unix, the settings are stored in your home directory in
-.qt/qgisrc. On Windows, the settings are stored in the registry. Depending on
+system. \nix, the settings are stored in your home directory in
+\filename{.qt/qgisrc}. \win, the settings are stored in the registry. Depending on
 your computing environment, storing passwords in your QGIS settings may be a
 security risk.
 }
@@ -211,7 +216,7 @@ security risk.
 
 \subsubsection{Loading a PostGIS Layer}\index{PostgreSQL!loading layers}
 
-\includegraphics[width=0.7cm]{addpostgis} Once you have one or more
+\includegraphics[width=0.7cm]{mActionAddLayer} Once you have one or more
 connections defined, you can load layers from the PostgreSQL database. Of
 course this requires having data in PostgreSQL. See Section
 \ref{sec:loading_postgis_data} for a discussion on importing data into the
@@ -221,18 +226,19 @@ To load a layer from PostGIS, perform the following steps:
 
 \begin{itemize}
 \item If the PostGIS layer dialog is not already open, click on the
-\textit{Add a PostGIS Layer} toolbar button.
-\item Choose the connection from the drop-down list and click \textsl{Connect}.
+\toolbtntwo{mActionAddLayer}{Add a PostGIS Layer} toolbar button.
+\item Choose the connection from the drop-down list and click \button{Connect}.
 \item Find the layer you wish to add in the list of available layers.
 \item Select it by clicking on it. You can select multiple layers by holding
-down the shift key while clicking. See Section \ref{sec:query_builder} for
+down the \keystroke{shift} key while clicking. See Section \ref{sec:query_builder} for
 information on using the PostgreSQL Query Builder to further define the layer.
-\item Click on the \textsl{Add} button to add the layer to the map.
+\item Click on the \button{Add} button to add the layer to the map.
 \end{itemize}
 
 \begin{Tip}\caption{\textsc{PostGIS Layers}}
 \qgistip{Normally a PostGIS layer is defined by an entry in the
-geometry\_columns table. From version \OLD on, QGIS can load layers that do not have
+geometry\_columns table. From version \OLD % should be 0.9.0 
+on, QGIS can load layers that do not have
 an entry in the geometry\_columns table. This includes both tables and views.
 Defining a spatial view provides a powerful means to visualize your data. Refer
 to your PostgreSQL manual for information on creating views.}
@@ -271,22 +277,24 @@ and either a primary key or with a unique constraint, preferably indexed).
 
 \minisec{shp2pgsql}
 Data can be imported into PostgreSQL using a number of methods. PostGIS
-includes a utility called \textsl{shp2pgsql} that can be used to import shapefiles into
-a PostGIS enabled database. For example, to import a shapefile named lakes 
-into a PostgreSQL database named gis\_data, use the following command:
+includes a utility called \filename{shp2pgsql} that can be used to import shapefiles into
+a PostGIS enabled database. For example, to import a shapefile named
+\filename{lakes.shp}
+into a PostgreSQL database named \usertext{gis\_data}, use the following command:
 
 \begin{verbatim} 
   shp2pgsql -s 2964 lakes.shp lakes_new | psql gis_data
 \end{verbatim}
 
-This creates a new layer named lakes\_new in the the gis\_data database. The
+This creates a new layer named \usertext{lakes\_new} in the
+\usertext{gis\_data} database. The
 new layer will have a spatial reference identifier (SRID) of 2964. See Section 
 \ref{label_projections} for more information on spatial reference systems and
 projections.
 \begin{Tip}
 \caption{\textsc{Exporting datasets from PostGIS}\index{PostGIS!Exporting}}
-\qgistip{Like the import-tool \textsl{shp2pgsql} there is also a tool to export
-PostGIS-datasets into shapefiles: \textsl{pgsql2shp}. This is shipped within your
+\qgistip{Like the import-tool \filename{shp2pgsql} there is also a tool to export
+PostGIS-datasets into shapefiles: \filename{pgsql2shp}. This is shipped within your
 PostGIS distribution.} 
 \end{Tip}
 
@@ -295,13 +303,14 @@ PostGIS distribution.}
 plugin named 
 SPIT (Shapefile to PostGIS Import Tool)\index{PostGIS!SPIT}.
 SPIT can be used to load multiple shapefiles at one time and includes support
-for schemas. To use SPIT, open the Plugin Manager from the \textit{Plugins} menu, check the box next to the SPIT plugin and click Ok. The SPIT
+for schemas. To use SPIT, open the Plugin Manager from the \mainmenuopt{Plugins}
+menu, check the box next to the \checkbox{SPIT plugin} and click \button{OK}. The SPIT
 icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}. 
 
-To import a shapefile, click on the SPIT tool in the toolbar to open the
+To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the toolbar to open the
 dialog.
-You can add one or more files to the queue by clicking on the \textsl{Add}
-button. To process the files, click on the \textsl{Import} button. The progress of the
+You can add one or more files to the queue by clicking on the \button{Add}
+button. To process the files, click on the \button{Import} button. The progress of the
 import as well as any errors/warnings will be displayed as each shapefile is
 processed.  
 
@@ -317,19 +326,20 @@ import a shapefile with reserved words as field names will likely fail.}
 \end{Tip} 
 
 \minisec{ogr2ogr}
-Beside \textit{shp2pgsql} and \textit{SPIT} there is another tool for feeding
-geodata in PostGIS: \textit{ogr2ogr}. This is part of your GDAL installation.
+Beside \filename{shp2pgsql} and \filename{SPIT} there is another tool for feeding
+geodata in PostGIS: \filename{ogr2ogr}. This is part of your GDAL installation.
 To import a shapefile into PostGIS, do the following:
 \begin{verbatim}
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres \
   password=topsecret" alaska.shp
 \end{verbatim}
 
-This will import the shapefile alaska.shp into the PostGIS-database \textit{postgis}
-using the user \textit{postgres} with the password \textit{topsecret} on host
-\textit{myhost.de}.
+This will import the shapefile \filename{alaska.shp} into the PostGIS-database
+\usertext{postgis}
+using the user \usertext{postgres} with the password \usertext{topsecret} on host
+\server{myhost.de}.
 
-Note that OGR must be built against PostgreSQL to support PostGIS.
+Note that OGR must be built with PostgreSQL to support PostGIS.
 You can see this by typing
 \begin{verbatim}
 ogrinfo --formats | grep -i post
@@ -346,7 +356,7 @@ exists on each layer in the database. PostGIS supports creation of a
 (Generalized Search Tree) index to speed up spatial searches of the data.
 
 The syntax for creating a GiST\footnote{GiST index information is taken from the PostGIS
-documentation available at http://postgis.refractions.net}
+documentation available at \url{http://postgis.refractions.net}}
 index is:
 
 \begin{verbatim}
@@ -355,7 +365,7 @@ index is:
 \end{verbatim}
 
 Note that for large tables, creating the index can take a long time. Once the
-index is created, you should perform a \textit{VACUUM ANALYZE}. See the
+index is created, you should perform a \usertext{VACUUM ANALYZE}. See the
 PostGIS documentation \cite{PostGISweb} for more information.
 
 The following is an example of creating a GiST index:
@@ -381,13 +391,14 @@ gsherman@madison:~/current$
 \subsection{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
 
-The vector properties dialog provides information about a layer, symbology
+The \button{vector properties} dialog provides information about a layer, symbology
 settings and labeling options. If your vector layer has been loaded from a
 PostgreSQL / PostGIS datastore, you can also alter the underlying SQL for the
-layer - either by hand editing the SQL on the \textit{General} tab or by
-invoking the query builder dialog on the \textit{General} tab. To access the
-\textit{Layer properties} dialog, double-click on a layer in the legend or right-click on the
-layer and select \textit{Properties} from the popup menu.
+layer - either by hand editing the SQL on the \tab{General} tab or by
+% FIXME: dialog-macro here?
+invoking the \toolbtn{query builder} dialog on the \tab{General} tab. To access the
+\button{Layer properties} dialog, double-click on a layer in the legend or right-click on the
+layer and select \button{Properties} from the popup menu.
 
 \subsubsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
@@ -423,7 +434,7 @@ Dialog}\label{fig:vector_symbology}\smallskip
 \end{center}  
 \end{figure}
 
-\textbf{New in v0.9} is a function to use image files stored on your computer 
+Since \usertext{version v0.9} there is a function to use image files stored on your computer 
 as fill pattern for vector layers.
 
 \minisec{Vector transparency} \label{sec:vect_transparency} \index{vector layers!transparency}
@@ -432,86 +443,88 @@ the slider right below the legend type (see fig. \ref{fig:vector_symbology}).
 This is very useful for overlaying several vector layers.
 
 \subsubsection{General Tab}
-The General tab is essentially like that of the raster dialog. It allows you
+The \tab{General} tab is essentially like that of the raster dialog. It allows you
 to change the display name, set scale dependent rendering options, create a spatial 
 index of the vector file (only for OGR supported formats and PostGIS) and view or
 change the projection.
 
-The \textsl{Query Builder} button allows you to create a subset of the features 
+The \button{Query Builder} button allows you to create a subset of the features 
 in the layer - but this button currently only is available when you open the 
-attribute table and select the \textsl{Advanced ...} button.
+attribute table and select the \button{Advanced ...} button.
 
 \subsubsection{Metadata Tab}
 
-The Metadata tab contains information about the layer, including specifics
+The \tab{Metadata} tab contains information about the layer, including specifics
 about the type and location, number of features, feature type, and the editing
-capabilities. The projection and attribute fields and their data type are displayed 
+capabilities. The \fieldname{projection} and \fieldname{attribute} fields and 
+their data type are displayed 
 on this tab. This is a quick way to get information about the layer.
 
 \subsubsection{Labels Tab}
 
-The Labels tab allows you to enable labeling features and control a number of
+The \tab{Labels} tab allows you to enable labeling features and control a number of
 options related to placement, style and buffering.
 
-We will illustrate this by labelling the lakes shapefile of the qgis\_example\_dataset:
+We will illustrate this by labelling the lakes shapefile of the
+\filename{qgis\_example\_dataset}:
 
 \begin{enumerate}
-\item Load the shapefiles alaska.shp and lakes.shp in QGIS.
+\item Load the shapefiles \filename{alaska.shp} and \filename{lakes.shp} in QGIS.
 \item Zoom in a bit to your favorite area with some lake.
-\item Make the \textsl{lakes} layer active.
+\item Make the \filename{lakes} layer active.
 \item Open the properties dialog.
-\item Click on the ``Labels'' tab.
-\item Check the ``Display labels'' checkbox to enable labeling.
-\item Choose the field to label with. We'll use \textsl{NAMES}.
+\item Click on the \tab{Labels} tab.
+\item Check the \checkbox{Display labels} checkbox to enable labeling.
+\item Choose the field to label with. We'll use \fieldname{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
-  used each time QGIS encounters a lake with no value in the \textsl{NAMES} field.
-\item Click \textsl{Apply}.
+  used each time QGIS encounters a lake with no value in the \fieldname{NAMES} field.
+\item Click \button{Apply}.
 \end{enumerate} 
 
 Now we have labels. How do they look? They are probably too big and poorly
 placed in relation to the marker symbol for the lakes.
 
-Click on the ``Font Style'' tab and use the \textsl{Font} and \textsl{Colour}
+Click on the \tab{Font Style} tab and use the \button{Font} and \button{Color}
 buttons to set the font and color.
 
 To change the position of the font relative to the feature:
 
 \begin{enumerate} 
-\item Click on the ``Font Alignment'' tab.
+\item Click on the \tab{Font Alignment} tab.
 \item Change the placement by selecting one of the radio buttons
-in the ``Placement'' group. To fix our labels, choose the ``Right'' radio
-button.
-\item Click \textsl{Apply} to see your changes without closing the dialog.
+in the \classname{Placement} group. To fix our labels, choose the
+\button{Right} radio button.
+\item Click \button{Apply} to see your changes without closing the dialog.
 \end{enumerate} 
 
 Things are looking better, but the labels are still too close to the marker. To
-fix this we can use the options on the ``Position'' tab. Here we can add
+fix this we can use the options on the \tab{Position} tab. Here we can add
 offsets for the X and Y directions. Adding an X offset of 5 will move our
 labels off the marker and make them more readable. Of course if your marker
 symbol or font is larger, more of an offset will be required.
 
-The last adjustment we'll make is to ``buffer'' the labels. This just means
+The last adjustment we'll make is to \tab{buffer} the labels. This just means
 putting a backdrop around them to make them stand out better. To buffer the
 lakes labels:
 
 \begin{enumerate}
-\item Click the ``Buffer'' tab.
-\item Click the ``Buffer Labels?'' checkbox to enable buffering.
+\item Click the \tab{Buffer} tab.
+\item Click the \checkbox{Buffer Labels?} checkbox to enable buffering.
 \item Choose a size for the buffer using the spin box.
-\item Choose a color by clicking on \textsl{Colour} and choosing your
+\item Choose a color by clicking on \button{Colour} and choosing your
   favorite from the color selector.
-\item Click \textsl{Apply} to see if you like the changes.
+\item Click \button{Apply} to see if you like the changes.
 \end{enumerate} 
 
 If you aren't happy with the results, tweak the settings and then test again
-by clicking \textsl{Apply}.
+by clicking \button{Apply}.
 
 A buffer of 2 points seems to give a good result.
 Notice you can also specify the buffer size in map units if that works out
 better for you.
 
-The remaining tabs on the ``Label'' tab allow you control the appearance of the
-labels using attributes stored in the layer. The ``Data'' tabs allow you to
+The remaining tabs on the \tab{Label} tab allow you control the appearance of the
+labels using attributes stored in the layer. The \tab{Data} tabs allow you to
 set all the parameters for the labels using fields in the layer.
 
 \subsubsection{Actions Tab}\index{actions}\label{label_actions}
@@ -530,7 +543,7 @@ the following discussion.
 
 Attribute actions are defined from the vector layer properties dialog. To
 define an action, open the vector layer properties dialog and click on the
-\textit{Actions} tab. Provide a descriptive name for the action. The action
+\tab{Actions} tab. Provide a descriptive name for the action. The action
 itself must contain the name of the application that will be executed when the
 action is invoked. You can add one or more attribute field values as arguments
 to the application. When the action is invoked any set of characters that
@@ -544,16 +557,16 @@ ignored if preceded by a backslash.
 Two example actions are shown below:\index{actions!examples}
 
 \begin{itemize}
-  \item \texttt{konqueror http://www.google.com/search?q=\%nam}
-  \item \texttt{konqueror http://www.google.com/search?q=\%\%}
+  \item \usertext{konqueror http://www.google.com/search?q=\%nam}
+  \item \usertext{konqueror http://www.google.com/search?q=\%\%}
 \end{itemize}
 
 
 In the first example, the web browser konqueror is invoked and passed a URL to
-open. The URL performs a Google search on the value of the \textit{nam} field
+open. The URL performs a Google search on the value of the \fieldname{nam} field
 from our vector layer. Note that the application or script called by the
 action must be in the path or you must provided the full path. To be sure, we could
-rewrite the first example as: \texttt{/opt/kde3/bin/konqueror
+rewrite the first example as: \usertext{/opt/kde3/bin/konqueror
 http://www.google.com/search?q=\%nam}. This will ensure that the konqueror
 application will be executed when the action is invoked.
 
@@ -562,21 +575,23 @@ field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
 
 \minisec{Using Actions}\index{actions!using}\label{label_usingactions}
-
-Actions can be invoked from either the \textit{Identify Results} dialog or the
-\textit{Attribute table} dialog. To invoke an action, right click on the
+% FIXME: dialog-macro here?
+Actions can be invoked from either the \button{Identify Results} dialog or the
+\toolbtntwo{mActionOpenTable}{Attribute table} dialog. To invoke an action, right click on the
 record and choose the action from the popup menu. Actions are listed in the popup
 menu by the name you assigned when defining the actions. Click on the action you
 wish to invoke.
 
 If you are invoking an action that uses the \%\% notation, right-click on the
-field value in the \textit{Identify Results} dialog or the
-\textit{Attribute table} that you wish to pass to the application or script.
+% FIXME: dialog-macro here?
+field value in the \button{Identify Results} dialog or the
+\toolbtntwo{mActionOpenTable}{Attribute table} that you wish to pass to the application or script.
 
 Here is another example that pulls data out of a vector layer and inserts them
-into a file using bash and the `echo' command (so it will only work on
-GNU/Linux and perhaps Mac OS X). The layer in question has fields for a species name
-(taxon\_name), latitude (lat) and longitude (long). I would like to be able to
+into a file using bash and the \usertext{echo} command (so it will only work
+\nix or perhaps \osx). The layer in question has fields for a species name
+\fieldname{taxon\_name}, latitude \fieldname{lat} and longitude
+\fieldname{long}. I would like to be able to
 make a spatial selection of a localities and export these field values to a
 text file for the selected record (shown in yellow in the QGIS map area). Here is
 the action to achieve this:
@@ -596,44 +611,44 @@ the output file will show something like this:
 \end{verbatim} 
 
 As an exercise we create an action that does a Google search on the 
-\textsl{lakes} layer. First we need to determine the URL needed to perform a search on a
+\filename{lakes} layer. First we need to determine the URL needed to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
 little effort we see that the format is: \url{http://google.com/search?q=qgis},
-where \textit{qgis} is the search term. Armed with this information, we can
+where \fieldname{qgis} is the search term. Armed with this information, we can
 proceed:
 
 \begin{itemize}
-\item Make sure the \textsl{lakes} layer is loaded.
+\item Make sure the \filename{lakes} layer is loaded.
 \item Open the properties dialog by double-clicking on the layer in the
-  legend or right-click and choose \textsl{Properties} from the popup menu.
-\item Click on the ``Actions'' tab.
-\item Enter a name for the action, for example ``Google Search''.
+  legend or right-click and choose \button{Properties} from the popup menu.
+\item Click on the \tab{Actions} tab.
+\item Enter a name for the action, for example \usertext{Google Search}.
 \item For the action, we need to provide the name of the external program to
   run. In this case, we can use Firefox. If the program is not in
   your path, you need to provide the full path.
 \item Following the name of the external application, add the URL used for
   doing a Google search, up to but not included the search term:
   \url{http://google.com/search?q=}
-\item The text in the ``Action'' field should now look like this:\\
-  \texttt{firefox http://google.com/search?q=}
+\item The text in the \fieldname{Action} field should now look like this:\\
+  \usertext{firefox \url{http://google.com/search?q=}}
 \item Click on the drop-down box containing the field names for the
-  \textsl{lakes} layer. It's located just to the right of the
-  \textsl{Insert Field} button.
-\item From the drop-down box, select \textsl{NAMES} and click \textsl{Insert Field}.
-\item Your action text now looks like this:\\ \texttt{firefox
-  http://google.com/search?q=\%NAMES}
+  \fieldname{lakes} layer. It's located just to the right of the
+  \button{Insert Field} button.
+\item From the drop-down box, select \fieldname{NAMES} and click \button{Insert Field}.
+\item Your action text now looks like this:\\ \usertext{firefox
+  \url{http://google.com/search?q=\%NAMES}}
 \end{itemize}
  
 This completes the action and it is ready to use. The final text of the action
 should look like this:
 
 \begin{center}
-\texttt{firefox http://google.com/search?q=\%NAMES}
+\usertext{firefox \url{http://google.com/search?q=\%NAMES}}
 \end{center}
 
 We can now use the action. Close the properties dialog and zoom in to an area
-of interest. Make sure the \textsl{lakes} layer is active and identify a
+of interest. Make sure the \filename{lakes} layer is active and identify a
 lake. In the result box you'll now see that our action is visible:
 
 \begin{figure}[H]
@@ -646,11 +661,12 @@ lake. In the result box you'll now see that our action is visible:
 When we click on the action, it brings up Firefox and navigates to the URL
 \url{http://www.google.com/search?q=Tustumena}. It is also possible to add further 
 attribute fields to the action. Therefore you can add a ``+'' to the end of the action 
-text, select another field and click on \textsl{Insert Field}. In this example there 
+text, select another field and click on \button{Insert Field}. In this example there 
 is just no other field available that would make sense to search for.
 
 You can define multiple actions for a layer and each will show up in the
-Identify Results dialog. You can also invoke actions from the attribute table
+%FIXME: dialog macro here?
+\button{Identify Results} dialog. You can also invoke actions from the attribute table
 by selecting a row and right-clicking, then choosing the action from the popup
 menu.
 
@@ -673,7 +689,7 @@ Section \ref{grass_digitising} for details.
 \subsubsection{Setting the Snap Tolerance}
 
 Before we can edit vertices, we need to set the snapping tolerance. This is the 
-distance QGIS uses to ``search'' for the polygon and vertex you are trying to
+distance QGIS uses to \usertext{search} for the polygon and vertex you are trying to
 edit when you click on the map. If you aren't within the snap tolerance,
 QGIS won't find and select the vertex for editing. Tolerance is set in map
 units so you may find you need to experiment to get it set right. If you
@@ -682,8 +698,8 @@ especially if you are dealing with a large number of vertices in close
 proximity. Set it too small and it won't find anything and it will pop up an
 annoying warning to that effect. 
 
-To set the snap tolerance, choose \textsl{Project Properties} from the
-\textsl{Settings} menu and click on the ``General'' tab.  Remember the
+To set the snap tolerance, choose \dropmenuopttwo{mActionOptions}{Project Properties} from the
+\mainmenuopt{Settings} menu and click on the \tab{General} tab.  Remember the
 tolerance is in map units. For our little digitizing project, the units
 are in decimal degrees.  Your results may vary, but something on the order
 of 0.05 to 0.1 should be fine. 
@@ -709,22 +725,21 @@ situations.
 \end{Tip}
 
 \index{Allow Editing}
-All editing sessions start by choosing the \textit{Allow editing} option.
+All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Allow editing} option.
 This can be found in the context menu after right clicking on the legend
 entry for that layer.
-Alternately, you can use the \index{Toggle Editing} \includegraphics[width=0.4cm, clip=true]{StartEditing} 
-\textit{Toggle editing} button from the toolbar to start of stop the editing mode.\index{editing!icons}
+Alternately, you can use the \index{Toggle Editing}
+\toolbtntwo{mActionToggleEditing}{Toggle editing} button from the toolbar to start or stop the editing mode.\index{editing!icons}
 
 \begin{Tip}[h]\caption{\textsc{Editing a Map is Different to Editing an Attribute Table}}
-\qgistip{In this version of QGIS, the \textit{Start editing}/\textit{Stop editing}
-couplet on the map view acts separately to the \textit{Start Editing}/\textit{Stop Editing}
+\qgistip{In this version of QGIS, the \button{Start editing}/\button{Stop editing}
+couplet on the map view acts separately to the \button{Start Editing}/\button{Stop Editing}
 couplet on the attribute table.
 }
 \end{Tip}
 
 \begin{Tip}[h]\caption{\textsc{Save Regularly}}
-\qgistip{Remember to toggle \textit{Allow editing} off or select the \textit{Stop editing}
-button regularly.  This allows you to save your changes thus far,
+\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Allow editing} off regularly.  This allows you to save your changes thus far,
 and also confirms that your data source can accept all
 your changes.
 }
@@ -754,28 +769,31 @@ avoids waiting while all the vertex markers are rendered across the entire layer
 You can perform the following editing functions:
 
 \begin{itemize}
-\item Add Features (point, line and polygone).
-\item Move Selected Features.
-\item Split Selected Feature.
-\item Delete Selected Features.
-\item Add Vertex of a Feature.
-\item Delete Vertex of a Feature.
-\item Move Vertex of a Feature.
-\item Add Ring.
-\item Add Island.
-\item Cut Selected Features.
-\item Copy Selected Features.
-\item Paste Selected Features.
+\item Add Features: \toolbtntwo{mActionCapturePoint}{point},
+  \toolbtntwo{mActionCaptureLine}{line} and
+  \toolbtntwo{mActionCapturePolygon}{polygone}
+\item \toolbtntwo{mActionMoveFeature}{Move Selected Features}
+\item \toolbtntwo{mActionSplitFeatures}{Split Selected Features}
+\item \toolbtntwo{mActionDeleteSelected}{Delete Selected Features}
+\item \toolbtntwo{mActionAddVertex}{Add Vertex of a Feature}
+\item \toolbtntwo{mActionDeleteVertex}{Delete Vertex of a Feature}
+\item \toolbtntwo{mActionMoveVertex}{Move Vertex of a Feature}
+\item \toolbtntwo{mActionAddRing}{Add Ring}
+\item \toolbtntwo{mActionAddIsland}{Add Island}
+\item \toolbtntwo{mActionEditCut}{Cut Selected Features}
+\item \toolbtntwo{mActionEditCopy}{Copy Selected Features}
+\item \toolbtntwo{mActionEditPaste}{Paste Selected Features}
 \end{itemize}
 
 \minisec{Adding Features}
 \index{vector layers!adding!feature}
 
-Before you start adding features, use the pan
-and zoom tools to first navigate to the area of interest.
+Before you start adding features, use the \toolbtntwo{mActionPan}{pan}
+and \toolbtntwo{mActionZoomIn}{zoom-in}/\toolbtntwo{mActionZoomOut}{zoom-out} tools to first navigate to the area of interest.
 
-Then you can use the \textit{Capture Point}, \textit{Capture Line} 
-or \textit{Capture Polygon} icons on the toolbar to put the QGIS cursor
+Then you can use the \toolbtntwo{mActionCapturePoint}{Capture point},
+\toolbtntwo{mActionCaptureLine}{Capture line} or
+\toolbtntwo{mActionCapturePolygon}{Capture polygone} icons on the toolbar to put the QGIS cursor
 into digitizing mode.
 
 For each feature, you first digitize the geometry, then enter its attributes.
@@ -803,7 +821,7 @@ Dialog}\label{fig:vector_digitising}\smallskip
 \begin{Tip}[h]\caption{\textsc{Attribute Value Types}}
 \qgistip{In the current version of QGIS, the attributes
 dialog box does not check that the data entered matches the type expected (e.g. numeric 
-vs. text). Make sure of this before pressing \textit{Ok}, otherwise you may find the error
+vs. text). Make sure of this before pressing \button{OK}, otherwise you may find the error
 will be caught later when you try to save your changes.
 }
 \end{Tip}
@@ -826,7 +844,7 @@ will be caught later when you try to save your changes.
 
 For both PostgreSQL/PostGIS and shapefile-based layers, the vertices of features can be edited. 
 
-vertices can be directly edited, that is, you don't
+Vertices can be directly edited, that is, you don't
 have to choose which feature to edit before you can change
 its geometry.
 In some cases, several features may share the same vertex
@@ -849,14 +867,16 @@ down near map features:
 \end{itemize}
 
 You will need to set the property
-\textit{Settings}->\textit{Project Properties}->\textit{General}->\textit{Snapping Tolerance}
+\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Project
+Properties}>\dropmenuopt{General}>\dropmenuopt{Snapping Tolerance}
 to a number greater than zero.  Otherwise QGIS will not be able to tell which feature is being edited.
 
 
 \minisec{Adding Vertices of a Feature}
 \index{vector layers!adding!vertex}
 
-You can add new vertices to a feature by using the \textit{Add Vertex} icon
+You can add new vertices to a feature by using the
+\toolbtntwo{mActionAddVertex}{Add Vertex} icon
 on the toolbar.
 
 Note, it doesn't make sense to add more vertices to a Point feature!
@@ -869,13 +889,13 @@ the terminus used to be.
 \minisec{Moving Vertices of a Feature}
 \index{vector layers!moving!vertex}
 
-You can move vertices using the \textit{Move Vertex} icon
+You can move vertices using the \toolbtntwo{mActionMoveVertex}{Move Vertex} icon
 on the toolbar.
 
 \minisec{Deleting Vertices of a Feature}
 \index{vector layers!deleting!vertex}
 
-You can delete vertices by using the \textit{Delete Vertex} icon
+You can delete vertices by using the \toolbtntwo{mActionDeleteVertex}{Delete Vertex} icon
 on the toolbar.
 
 Note, it doesn't make sense to delete the vertex of a Point feature!
@@ -893,18 +913,20 @@ Editing off and then discard your changes.
 
 \minisec{Add Ring}
 \index{vector layers!add!ring}
-\textbf{New in v0.9}
+\textbf{New since v0.9}
 
-You can create ring polygons in QGIS. This means inside an existing area it is
+You can create ring polygons using the \toolbtntwo{mActionAddRing}{Add Ring}
+icon in the toolbar. This means inside an existing area it is
 possible to digitize further polygons, that will occur as a 'whole', so only 
 the area in between the boundaries of the outer and inner polygons remain as 
 a ring polygon. 
 
 \minisec{Add Island}
 \index{vector layers!add!island}
-\textbf{New in v0.9}
+\textbf{New since v0.9}
 
-You can add island polygons to a selected multipolygon. The new island polygone 
+You can \toolbtntwo{mActionAddIsland}{add island} polygons to a selected multipolygon. 
+The new island polygone 
 has to be digitized outside the selected multipolygon. 
 
 % FIXME: In versions > 0.9.0 tries to convert a selected normal polygone to a
@@ -921,7 +943,7 @@ has to be digitized outside the selected multipolygon.
 
 Selected features can be cut, copied and pasted between layers in the
 same QGIS project, as long as destination layers are set to 
-\textit{Allow editing} beforehand.
+\toolbtntwo{mActionToggleEditing}{Toggle editing} beforehand.
 
 Features can also be pasted to external applications as text:  That is,
 the features are represented in CSV format with the geometry data appearing 
@@ -933,7 +955,7 @@ be pasted to a layer within QGIS.
 When would the copy and paste function come in handy? Well, it turns out that 
 you can edit more than one layer at a time and copy/paste features between 
 layers. Why would we want to do this?  Say we need to do some work on a new 
-layer but only need one or two lakes, not the 5,000 on our \textsl{big\_lakes} 
+layer but only need one or two lakes, not the 5,000 on our \filename{big\_lakes} 
 layer. We can create a new layer and use copy/paste to plop the needed lakes 
 into it. 
 
@@ -944,10 +966,10 @@ As an example we are copying some lakes to a new layer:
 \item Load or create the layer you want to copy to (target layer) 
 \item Start editing for both layers 
 \item Make the source layer active by clicking on it in the legend 
-\item Use the select tool to select the feature(s) on the source layer
-\item Click on the \textsl{Copy Features} tool
+\item Use the \toolbtntwo{mActionSelect}{Select} tool to select the feature(s) on the source layer
+\item Click on the \toolbtntwo{mActionEditCopy}{Copy Features} tool
 \item Make the destination layer active by clicking on it in the legend 
-\item Click on the \textsl{Paste Features} tool 
+\item Click on the \toolbtntwo{mActionEditPaste}{Paste Features} tool 
 \item Stop editing and save the changes
 \end{enumerate}
 
@@ -973,16 +995,16 @@ involved when converting between projections.
 \index{vector layers!deleting!feature}
 
 If we want to delete an entire polygon, we can do that by first selecting 
-the polygon using the regular \textsl{Select Features} tool. You can select 
+the polygon using the regular \toolbtntwo{mActionSelect}{Select Features} tool. You can select 
 multiple features for deletion. Once you have the selection set, use the 
-\textsl{Delete Selected} tool to delete the features. There is no undo function, 
+\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool to delete the features. There is no undo function, 
 but remember your layer isn't really changed until you stop editing and choose 
 to save your changes. So if you make a mistake, you can always cancel the save.
 
-The \textsl{Cut Features} tool on the digitizing toolbar can
+The \toolbtntwo{mActionEditCut}{Cut Features} tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
 also places it on a ``spatial clipboard". So we cut the feature to delete. 
-We could then use the paste tool to put it back, giving us a one-level undo 
+We could then use the \toolbtntwo{mActionEditPaste}{paste tool} to put it back, giving us a one-level undo 
 capability. Cut, copy, and paste work on the currently selected features, 
 meaning we can operate on more than one at a time.
 
@@ -998,7 +1020,8 @@ using GDAL 1.3.2 or higher.
 \index{editing!snap}
 QGIS allows digitized vertices to be snapped to other vertices of the same layer. To 
 set the snapping tolerance, go to
-\textit{Settings}->\textit{Project Properties}->\textit{General}->\textit{Snapping Tolerance}.
+\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Project
+Properties}->\dropmenuopt{General}->\dropmenuopt{Snapping Tolerance}.
 Note that the snapping tolerance is in map units.
 
 \minisec{Saving Edited Layers}
@@ -1016,8 +1039,10 @@ allows you to adjust your edits and try again.
 
 \subsubsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
 
-To create a new layer for editing, choose \textit{New Vector Layer} from the
-\textit{Layer} menu. The \textit{New Vector Layer} dialog will be displayed as
+To create a new layer for editing, choose \toolbtntwo{mActionNewVectorLayer}{New Vector Layer} from the
+\mainmenuopt{Layer} menu. 
+% FIXME: dialog macro here?
+The \button{New Vector Layer} dialog will be displayed as
 shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
 line or polygon).
 
@@ -1038,10 +1063,10 @@ Creation of GRASS-layers is supported within the GRASS-plugin. Please refer to s
 layers.
 
 To complete the creation of the new layer, add the desired attributes by
-clicking on the \textit{Add} button and specifying a name and type for the
-attribute. Only real, integer, and string attributes are supported. Once you
-are happy with the attributes, click Ok and provide a name for the shapefile.
-QGIS will automatically add a .shp extension to the name you specify.  Once
+clicking on the \button{Add} button and specifying a name and type for the
+attribute. Only \fieldname{real}, \fieldname{integer}, and \fieldname{string} attributes are supported. Once you
+are happy with the attributes, click \button{OK} and provide a name for the shapefile.
+QGIS will automatically add a \filename{.shp} extension to the name you specify.  Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
 
@@ -1050,9 +1075,9 @@ the same way as described in Section \ref{sec:edit_existing_layer} above.
 
 The Query Builder allows you to define a subset of a table and display
 it as a layer in QGIS. It can be used for all OGR supported formats, GRASS 
-files and PostGIS layers. For example, if you have a towns layer with a
-population field you could select only larger towns by entering
-\textsl{population > 100000} in the SQL box of the query builder. Figure
+files and PostGIS layers. For example, if you have a \filename{towns} layer with a
+\fieldname{population} field you could select only larger towns by entering
+\sqltable{population > 100000} in the SQL box of the query builder. Figure
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL. 
 
@@ -1065,27 +1090,26 @@ data from a PostGIS layer with attributes stored in PostgreSQL.
 
 The query builder\index{Query Builder} lists the layer's database
 fields in the list box on the left. You can get a sample of the data
-contained in the highlighted field by clicking on the \textit{Sample} button\index{Query
+contained in the highlighted field by clicking on the \button{Sample} button\index{Query
 Builder!generating sample list}. This retrieves the first 25 distinct values
 for the field from the database. To get a list of all possible values for a
-field, click on the \textit{All} button\index{Query Builder!getting all
+field, click on the \button{All} button\index{Query Builder!getting all
 values}. To add a selected field or value to the query, double-click on
 it\index{Query Builder!adding fields}. You can use the various buttons to
 construct the query or you can just type it into the SQL box.
 
-To test a query, click on the \textit{Test} button\index{Query Builder!testing
+To test a query, click on the \button{Test} button\index{Query Builder!testing
 queries}. This will return a count of the number of records that will be
-included in the layer. When satisfied with the query, click \textit{Ok}. The
+included in the layer. When satisfied with the query, click \button{OK}. The
 SQL for the where clause will be shown in the SQL column of the layer list.
 
 \begin{Tip}\caption{\textsc{Changing the Layer Definition}}\index{Query
 Builder!changing layer definitions}
 \qgistip{You can change the layer definition after it is loaded by altering
-the
-SQL query used to define the layer. To do this, open the vector layer
-properties
-dialog by double-clicking on the layer in the legend and click on the
-\textit{Query Builder} button on the \textit{General} tab. See Section
+the SQL query used to define the layer. To do this, open the 
+%FIXME: dialog macro here?
+\button{vector layer properties} dialog by double-clicking on the layer in the legend and click on the
+\button{Query Builder} button on the \tab{General} tab. See Section
 \ref{sec:vectorprops} for more information.}
 \end{Tip}
 
@@ -1096,15 +1120,15 @@ dialog by double-clicking on the layer in the legend and click on the
 \index{query builder!PostGIS}
 
 To query a loaded PostGIS layer there are two options. The first is to click on the 
-button \textit{Open Table} to open the attribute table of the PostGIS layer. Then 
-click the \textit{Advanced...} button at the bottom. This starts the Query Builder 
+button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of the PostGIS layer. Then 
+click the \button{Advanced...} button at the bottom. This starts the Query Builder 
 that allows to define a subset of a table and display it as described in Section 
 \ref{sec:query_builder}.
 
-The second option to query a PostGIS layer, is to open the \textit{Layer Properties} 
+The second option to query a PostGIS layer, is to open the \toolbtn{Layer Properties} 
 dialog by double-clicking on the PostGIS layer name in the legend or 
-by right-clicking and choosing \textit{Properties} from the popup menu. In the tab 
-\textit{General} click the \textit{Query Builder} button at the bottom.
+by right-clicking and choosing \dropmenuopt{Properties} from the popup menu. In the tab 
+\tab{General} click the \button{Query Builder} button at the bottom.
 
 \subsubsection{Query OGR formats and GRASS files}\label{sec:query_builder_ogrgrass}
 \index{OGR!query builder}
@@ -1113,8 +1137,8 @@ by right-clicking and choosing \textit{Properties} from the popup menu. In the t
 \index{query builder!GRASS}
 
 To query a loaded GRASS file or OGR supported format you currently need to click on the 
-button \textit{Open Table} to open the corresponding attribute table and click the 
-\textit{Advanced...} button. This starts the Query Builder and allows to define a 
+button \toolbtntwo{mActionOpenTable}{Open Table} to open the corresponding attribute table and click the 
+\button{Advanced...} button. This starts the Query Builder and allows to define a 
 subset of a table and display it as described in Section \ref{sec:query_builder}. 
 
 The second option to start the Query Builder as decribed in Section 
