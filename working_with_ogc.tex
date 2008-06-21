@@ -70,7 +70,7 @@ WMS server. To define a new WMS server in the \tab{Server Connections} section,
 select \button{New}. Then enter in the parameters to connect to your desired
 WMS server, as listed in table \ref{tab:wms_connection_parms}:
 
-\begin{table}[h]\index{WMS!client!connection parameters}
+\begin{table}[ht]\index{WMS!client!connection parameters}
 \centering
 \caption{WMS Connection Parameters}\label{tab:wms_connection_parms}\medskip
  \begin{tabular}{|l|p{5in}|}
@@ -96,7 +96,7 @@ can be left blank if you have a clear path to your WMS server.
 Once the new WMS Server has been created, it will be preserved across future 
 QGIS sessions.
 
-\begin{Tip}[h]\caption{\textsc{On WMS Server URLs}}
+\begin{Tip}[ht]\caption{\textsc{On WMS Server URLs}}
 \qgistip{Be sure, when entering in the WMS server URL, that you have
 the base URL.  For example, you shouldn't have fragments such as
 \usertext{request=GetCapabilities} or \usertext{version=1.0.0}
@@ -109,7 +109,7 @@ These links were last checked in December 2006, but could change at any time:
 
 %FIXME:  WMS URLs should be checked again and maybe extended in QGIS 
 
-\begin{table}[h]\index{WMS!remote server!URL!examples}
+\begin{table}[ht]\index{WMS!remote server!URL!examples}
 \centering
 \caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
  \begin{tabular}{|l|l|}
@@ -139,7 +139,7 @@ Your screen should now look a bit like Figure \ref{fig:connection_wms}, which sh
 response provided by the NASA JPL OnEarth WMS server.
 
 % \begin{figure}[ht]
-\begin{figure}[h]
+\begin{figure}[ht]
   \begin{center}
   	\caption{Dialog for adding a WMS server, showing its available layers}\label{fig:connection_wms}
 	\includegraphics[clip=true,width=0.6\textwidth]{connection_wms}
@@ -151,7 +151,7 @@ response provided by the NASA JPL OnEarth WMS server.
 The \tab{Image encoding} section now lists the formats that are supported by both
 the client and server.  Choose one depending on your image accuracy requirements.
 
-\begin{Tip}[h]\caption{\textsc{Image Encoding}}
+\begin{Tip}[ht]\caption{\textsc{Image Encoding}}
 \qgistip{You will typically find that a WMS server offers you the choice
 of JPEG or PNG image encoding.  JPEG is a lossy compression format,
 whereas PNG faithfully reproduces the raw raster data.
@@ -176,7 +176,7 @@ You can select several layers at once, but only one image style per layer.
 When several layers are selected, they will be combined at the WMS Server
 and transmitted to QGIS in one go.
 
-\begin{Tip}[h]\caption{\textsc{WMS Layer Ordering}}
+\begin{Tip}[ht]\caption{\textsc{WMS Layer Ordering}}
 \qgistip{In this version of QGIS, WMS layers rendered by a server are overlaid
 in the order listed in the Layers section, from top to bottom of the list.
 If you want to overlay layers in the opposite order, then you can 
@@ -196,7 +196,7 @@ on-screen.
 This, in theory, allows you to overlay WMS layers on other layers (raster,
 vector or WMS) and still see through to those lower layers.
 
-\begin{Tip}[h]\caption{\textsc{WMS Layer Transparency}}
+\begin{Tip}[ht]\caption{\textsc{WMS Layer Transparency}}
 \qgistip{The availability of WMS image transparency depends on
 the image encoding used:  PNG and GIF support transparency,
 whilst JPEG leaves it unsupported.
@@ -224,7 +224,7 @@ The main difference with the WMS version of the screen is that only
 those CRSs supported by the WMS Server will be shown.
 
 
-\begin{Tip}[h]\caption{\textsc{WMS Projections}}
+\begin{Tip}[ht]\caption{\textsc{WMS Projections}}
 \qgistip{For best results, make the WMS layer the first layer
 you add in the project.  This allows the project
 projection to inherit the CRS you used to render the WMS layer.
@@ -417,7 +417,7 @@ attribute table.
 Remember this plugin is still experimental. You might also experience random behavior 
 and crashes. You can look forward to improvements in a future version of the plugin.
 
-\begin{Tip}[h]\caption{\textsc{Finding WMS and WFS Servers}}
+\begin{Tip}[ht]\caption{\textsc{Finding WMS and WFS Servers}}
 \qgistip{You can find additional WMS and WFS servers by using Google or your
 favorite search engine. There are a number of lists, some of them
 maintained and some not, that list public servers you can use.
