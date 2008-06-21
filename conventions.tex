@@ -15,6 +15,9 @@
 \renewcommand{\server}[1]{\textit{#1}}
 \renewcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
 \newcommand{\guilabel}[1]{\textsf{#1}}
+\newcommand{\dialog}[1]{
+\fcolorbox[rgb]{0.2,0.2,0.95}[rgb]{0.2,0.2,0.95}{%
+\textbf{\textcolor{white}{#1}}}}
 %
 \setlength{\shadowsize}{2pt}%
 \newcommand{\nix}[1]{Under GNU/Linix, #1}
@@ -209,6 +212,12 @@ or
 %Use \button for a clickable button which has no icon, just text
 %Save As Default is a button that appears in the Layer Properties dialog.
 \item Button: \button{Save as Default}
+%
+%
+%Use \dialog for the title of a dialog box
+%such as the Layer Properties dialog.
+%Please use the exact title as it appears in the GUI.
+\item Dialog Box Title: \dialog{Layer Properties}
 %
 %Use \tab for clickable tabs which have no icons, just text
 %General is a tab that appears in the Layer Properties dialog.
