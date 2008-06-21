@@ -65,11 +65,11 @@ load any of the formats supported by the OGR library.
 Clicking on the tool brings up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
 a shapefile or other supported data source. 
-The selection box \button{File of type} allows you to preselect some OGR supported file formats.
+The selection box \selectstring{File of type}{\ldots} allows you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
-\begin{figure}[h]
+\begin{figure}[ht]
    \begin{center}
    \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
    \includegraphics[clip=true, width=14cm]{shapefileopendialog}
@@ -92,9 +92,9 @@ adding more than one layer at a time, different colors are assigned to each. }
 \end{Tip}
 
 Once loaded, you can zoom around the shapefile using the map navigation tools.
-To change the symbology of a layer, open the \button{layer properties} dialog by double
+To change the symbology of a layer, open the \dialog{Layer Properties} dialog by double
 clicking on the layer name or by right-clicking on the name in the legend and
-choosing \button{Properties} from the popup menu. See
+choosing \dropmenuopt{Properties} from the popup menu. See
 Section \ref{sec:symbology} for more information on setting symbology of
 vector layers.
   
@@ -109,9 +109,9 @@ Use these steps to create the index:
 
 \begin{itemize}
 \item Load a shapefile.
-\item Open the \button{Layer Properties} dialog by double-clicking on the
+\item Open the \dialog{Layer Properties} dialog by double-clicking on the
 shapefile name in the legend or by right-clicking and choosing
-\button{Properties} from the popup menu.
+\dropmenuopt{Properties} from the popup menu.
 \item In the tab \tab{General} click the \button{Create} button on the Spatial
 Index section.
 \end{itemize}
@@ -129,7 +129,9 @@ toolbar bar button or type \keystroke{V}, change the file type filter to
 
 Loading an ArcInfo coverage is done using the same method as with a
 shapefiles and MapInfo layers. Click on the \toolbtntwo{addshapefile}{Add a vector layer}
-toolbar button or type \keystroke{V} to open the layer dialog and change the file type filter to
+toolbar button or type \keystroke{V} to open the 
+\dialog{Open on OGR Supported Vector Layer} 
+dialog and change the file type filter to
 \fieldname{All files (*.*)}. Navigate to the coverage directory and select one
 of the following files (if present in your coverage):
 
@@ -172,13 +174,13 @@ database that contains the data. Begin by clicking on the
 \dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer...} option from the \mainmenuopt{Layer} menu or typing
 \keystroke{D}. 
 %FIXME: dialog macro here?
-The \toolbtn{Add PostGIS Table(s)} dialog will
+The \dialog{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
-manager}, click on the \button{New} button to display the \toolbtn{Create a New
+manager}, click on the \button{New} button to display the \dialog{Create a New
 PostGIS Connection} dialog. The parameters required for a connection are shown
 in table \ref{tab:postgis_connection_parms}.
 
-\begin{table}[h]\index{PostgreSQL!connection parameters}
+\begin{table}[ht]\index{PostgreSQL!connection parameters}
 \centering
 \caption{PostGIS Connection
 Parameters}\label{tab:postgis_connection_parms}\medskip
@@ -225,7 +227,7 @@ database.
 To load a layer from PostGIS, perform the following steps:
 
 \begin{itemize}
-\item If the PostGIS layer dialog is not already open, click on the
+\item If the \dialog{Add PostGIS Table(s)} dialog is not already open, click on the
 \toolbtntwo{mActionAddLayer}{Add a PostGIS Layer} toolbar button.
 \item Choose the connection from the drop-down list and click \button{Connect}.
 \item Find the layer you wish to add in the list of available layers.
@@ -307,8 +309,9 @@ for schemas. To use SPIT, open the Plugin Manager from the \mainmenuopt{Plugins}
 menu, check the box next to the \checkbox{SPIT plugin} and click \button{OK}. The SPIT
 icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}. 
 
-To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the toolbar to open the
-dialog.
+To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the 
+toolbar to open the 
+\dialog{SPIT - Shapefile to PostGIS Import Tool} dialog.
 You can add one or more files to the queue by clicking on the \button{Add}
 button. To process the files, click on the \button{Import} button. The progress of the
 import as well as any errors/warnings will be displayed as each shapefile is
@@ -391,14 +394,16 @@ gsherman@madison:~/current$
 \subsection{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
 
-The \button{vector properties} dialog provides information about a layer, symbology
+The \dialog{Layer Properties} dialog for a vector layer 
+provides information about the layer, symbology
 settings and labeling options. If your vector layer has been loaded from a
 PostgreSQL / PostGIS datastore, you can also alter the underlying SQL for the
 layer - either by hand editing the SQL on the \tab{General} tab or by
 % FIXME: dialog-macro here?
-invoking the \toolbtn{query builder} dialog on the \tab{General} tab. To access the
-\button{Layer properties} dialog, double-click on a layer in the legend or right-click on the
-layer and select \button{Properties} from the popup menu.
+invoking the \dialog{Query Builder} dialog on the \tab{General} tab. 
+To access the
+\dialog{Layer Properties} dialog, double-click on a layer in the legend or right-click on the
+layer and select \dropmenuopt{Properties} from the popup menu.
 
 \subsubsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
@@ -423,7 +428,7 @@ color}
 \end{description}
 
 To change the symbology for a layer, simply double click on its legend 
-entry and the vector layer properties dialog will be 
+entry and the vector \dialog{Layer Properties} dialog will be 
 shown.\index{symbology!changing}.
 
 \begin{figure}[H]
@@ -434,8 +439,8 @@ Dialog}\label{fig:vector_symbology}\smallskip
 \end{center}  
 \end{figure}
 
-Since \usertext{version v0.9} there is a function to use image files stored on your computer 
-as fill pattern for vector layers.
+Since \usertext{version v0.9} there is a function to use image files stored on 
+your computer as fill pattern for vector layers.
 
 \minisec{Vector transparency} \label{sec:vect_transparency} \index{vector layers!transparency}
 QGIS \CURRENT allows to set a transparency for every vector layer. This can be done with
@@ -472,7 +477,7 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Load the shapefiles \filename{alaska.shp} and \filename{lakes.shp} in QGIS.
 \item Zoom in a bit to your favorite area with some lake.
 \item Make the \filename{lakes} layer active.
-\item Open the properties dialog.
+\item Open the \dialog{Layer Properties} dialog.
 \item Click on the \tab{Labels} tab.
 \item Check the \checkbox{Display labels} checkbox to enable labeling.
 \item Choose the field to label with. We'll use \fieldname{NAMES}.
@@ -493,7 +498,7 @@ To change the position of the font relative to the feature:
 \item Click on the \tab{Font Alignment} tab.
 \item Change the placement by selecting one of the radio buttons
 in the \classname{Placement} group. To fix our labels, choose the
-\button{Right} radio button.
+\radiobuttonon{Right} radio button.
 \item Click \button{Apply} to see your changes without closing the dialog.
 \end{enumerate} 
 
@@ -541,8 +546,8 @@ the following discussion.
 
 \minisec{Defining Actions}\index{actions!defining}
 
-Attribute actions are defined from the vector layer properties dialog. To
-define an action, open the vector layer properties dialog and click on the
+Attribute actions are defined from the vector \dialog{Layer Properties} dialog. To
+define an action, open the vector \dialog{Layer Properties} dialog and click on the
 \tab{Actions} tab. Provide a descriptive name for the action. The action
 itself must contain the name of the application that will be executed when the
 action is invoked. You can add one or more attribute field values as arguments
@@ -576,15 +581,16 @@ the value of the selected field in the identify results or attribute table.
 
 \minisec{Using Actions}\index{actions!using}\label{label_usingactions}
 % FIXME: dialog-macro here?
-Actions can be invoked from either the \button{Identify Results} dialog or the
-\toolbtntwo{mActionOpenTable}{Attribute table} dialog. To invoke an action, right click on the
+Actions can be invoked from either the \dialog{Identify Results} dialog or the
+\toolbtntwo{mActionOpenTable}{Attribute table} dialog. To invoke an action, 
+right click on the
 record and choose the action from the popup menu. Actions are listed in the popup
 menu by the name you assigned when defining the actions. Click on the action you
 wish to invoke.
 
 If you are invoking an action that uses the \%\% notation, right-click on the
 % FIXME: dialog-macro here?
-field value in the \button{Identify Results} dialog or the
+field value in the \dialog{Identify Results} dialog or the
 \toolbtntwo{mActionOpenTable}{Attribute table} that you wish to pass to the application or script.
 
 Here is another example that pulls data out of a vector layer and inserts them
@@ -620,8 +626,8 @@ proceed:
 
 \begin{itemize}
 \item Make sure the \filename{lakes} layer is loaded.
-\item Open the properties dialog by double-clicking on the layer in the
-  legend or right-click and choose \button{Properties} from the popup menu.
+\item Open the \dialog{Layer Properties} dialog by double-clicking on the layer in the
+  legend or right-click and choose \dropmenuopt{Properties} from the popup menu.
 \item Click on the \tab{Actions} tab.
 \item Enter a name for the action, for example \usertext{Google Search}.
 \item For the action, we need to provide the name of the external program to
@@ -647,7 +653,7 @@ should look like this:
 \usertext{firefox \url{http://google.com/search?q=\%NAMES}}
 \end{center}
 
-We can now use the action. Close the properties dialog and zoom in to an area
+We can now use the action. Close the \dialog{Layer Properties} dialog and zoom in to an area
 of interest. Make sure the \filename{lakes} layer is active and identify a
 lake. In the result box you'll now see that our action is visible:
 
@@ -666,7 +672,7 @@ is just no other field available that would make sense to search for.
 
 You can define multiple actions for a layer and each will show up in the
 %FIXME: dialog macro here?
-\button{Identify Results} dialog. You can also invoke actions from the attribute table
+\dialog{Identify Results} dialog. You can also invoke actions from the attribute table
 by selecting a row and right-clicking, then choosing the action from the popup
 menu.
 
@@ -716,7 +722,7 @@ and the underlying data source is writable (i.e. its files are not read-only).
 
 Layer editing is most versatile when used on PostgreSQL/PostGIS data sources. 
 
-\begin{Tip}[h]\caption{\textsc{Data Integrity}}
+\begin{Tip}[ht]\caption{\textsc{Data Integrity}}
 \qgistip{Please consider backing up your data source
 before you start editing, and also at regular intervals during editing. QGIS is 
 still at a pre-version 1.0 stage, and so may not be able to protect your data in all 
@@ -731,21 +737,21 @@ entry for that layer.
 Alternately, you can use the \index{Toggle Editing}
 \toolbtntwo{mActionToggleEditing}{Toggle editing} button from the toolbar to start or stop the editing mode.\index{editing!icons}
 
-\begin{Tip}[h]\caption{\textsc{Editing a Map is Different to Editing an Attribute Table}}
+\begin{Tip}[ht]\caption{\textsc{Editing a Map is Different to Editing an Attribute Table}}
 \qgistip{In this version of QGIS, the \button{Start editing}/\button{Stop editing}
 couplet on the map view acts separately to the \button{Start Editing}/\button{Stop Editing}
 couplet on the attribute table.
 }
 \end{Tip}
 
-\begin{Tip}[h]\caption{\textsc{Save Regularly}}
+\begin{Tip}[ht]\caption{\textsc{Save Regularly}}
 \qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Allow editing} off regularly.  This allows you to save your changes thus far,
 and also confirms that your data source can accept all
 your changes.
 }
 \end{Tip}
 
-\begin{Tip}[h]\caption{\textsc{Concurrent Edits}}
+\begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
 \qgistip{This version of QGIS does not track if somebody else is editing a feature at the same time
 as you.  The last writer wins.
 }
@@ -754,14 +760,14 @@ as you.  The last writer wins.
 Once the layer is in edit mode, markers will appear at the
 vertices.
 
-\begin{Tip}[h]\caption{\textsc{Zoom in Before Editing}}
+\begin{Tip}[ht]\caption{\textsc{Zoom in Before Editing}}
 \qgistip{Before editing a layer, you should
 zoom in to your area of interest. This 
 avoids waiting while all the vertex markers are rendered across the entire layer.
 }
 \end{Tip}
 
-\begin{Tip}[h]\caption{\textsc{Vertex Markers}}
+\begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
 \qgistip{This version of QGIS does not allow you to change the vertex markers used.
 }
 \end{Tip}
@@ -818,7 +824,7 @@ Dialog}\label{fig:vector_digitising}\smallskip
 \end{center}  
 \end{figure}
 
-\begin{Tip}[h]\caption{\textsc{Attribute Value Types}}
+\begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
 \qgistip{In the current version of QGIS, the attributes
 dialog box does not check that the data entered matches the type expected (e.g. numeric 
 vs. text). Make sure of this before pressing \button{OK}, otherwise you may find the error
@@ -980,7 +986,7 @@ being copied to the target layer, it doesn't matter how you design the
 fields and data types. If you want to make sure everything - feature and its
 attributes - gets copied, make sure the schemas match.
 
-\begin{Tip}[h]\caption{\textsc{Congruency of Pasted Features}}
+\begin{Tip}[ht]\caption{\textsc{Congruency of Pasted Features}}
 \qgistip{If your source and destination layers use the
 same projection, then the pasted features will have
 geometry identical to the source layer.
@@ -1008,7 +1014,7 @@ We could then use the \toolbtntwo{mActionEditPaste}{paste tool} to put it back, 
 capability. Cut, copy, and paste work on the currently selected features, 
 meaning we can operate on more than one at a time.
 
-\begin{Tip}[h]\caption{\textsc{Feature Deletion Support}}
+\begin{Tip}[ht]\caption{\textsc{Feature Deletion Support}}
 \qgistip{When editing ESRI shapefiles, the deletion
 of features only works if QGIS is linked to a GDAL version 1.3.2 or greater. 
 The OS X and Windows versions of QGIS available from the download site are built 
@@ -1042,7 +1048,7 @@ allows you to adjust your edits and try again.
 To create a new layer for editing, choose \toolbtntwo{mActionNewVectorLayer}{New Vector Layer} from the
 \mainmenuopt{Layer} menu. 
 % FIXME: dialog macro here?
-The \button{New Vector Layer} dialog will be displayed as
+The \dialog{New Vector Layer} dialog will be displayed as
 shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
 line or polygon).
 
@@ -1108,7 +1114,7 @@ Builder!changing layer definitions}
 \qgistip{You can change the layer definition after it is loaded by altering
 the SQL query used to define the layer. To do this, open the 
 %FIXME: dialog macro here?
-\button{vector layer properties} dialog by double-clicking on the layer in the legend and click on the
+vecotr \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
 \button{Query Builder} button on the \tab{General} tab. See Section
 \ref{sec:vectorprops} for more information.}
 \end{Tip}
@@ -1125,7 +1131,7 @@ click the \button{Advanced...} button at the bottom. This starts the Query Build
 that allows to define a subset of a table and display it as described in Section 
 \ref{sec:query_builder}.
 
-The second option to query a PostGIS layer, is to open the \toolbtn{Layer Properties} 
+The second option to query a PostGIS layer, is to open the \dialog{Layer Properties} 
 dialog by double-clicking on the PostGIS layer name in the legend or 
 by right-clicking and choosing \dropmenuopt{Properties} from the popup menu. In the tab 
 \tab{General} click the \button{Query Builder} button at the bottom.
