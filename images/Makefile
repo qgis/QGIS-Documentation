@@ -87,6 +87,9 @@ PNG=addshapefile.eps\
 	mActionZoomToSelected.eps\
 	mIconProjectionEnabled.eps\
 	mActionFileSave.eps\
+	nix.eps\
+	win.eps\
+	osx.eps\
 		
 ##### TARGETS #####
 
