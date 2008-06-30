@@ -1,7 +1,4 @@
 % vim: set textwidth=78 autoindent:
-
-% testing testing
-% testing svn commit
 % options for boxes provided by fancybox package are:
 % \fbox, \shadowbox, \doublebox, \ovalbox and \Ovalbox
 %%%%%%%%%%%%%%%%8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -20,9 +17,15 @@
 \textbf{\textcolor{white}{#1}}}}
 %
 \setlength{\shadowsize}{2pt}%
-\newcommand{\nix}[1]{Under GNU/Linix, #1}
-\newcommand{\win}[1]{Under MS Windows, #1}
-\newcommand{\osx}[1]{Under Mac OS X, #1}
+% nix, win and osx for platform-specific documentation
+% old versions
+%\newcommand{\nix}[1]{Under GNU/Linix, #1}
+%\newcommand{\win}[1]{Under MS Windows, #1}
+%\newcommand{\osx}[1]{Under Mac OS X, #1}
+% new versions
+\newcommand{\nix}[1]{\includegraphics[height=5mm]{nix.eps} #1}
+\newcommand{\win}[1]{\includegraphics[height=5mm]{win.eps} #1}
+\newcommand{\osx}[1]{\includegraphics[height=5mm]{osx.eps} #1}
 % button
 \renewcommand{\button}[1]{%
 \raisebox{-6pt}{%
@@ -288,12 +291,59 @@ PROJCS["NAD_1927_Albers",
 \end{verbatim}
 
 Platform-specific instructions are indicated as follow.
-\begin{itemize}
-\item \nix{do this.} 
-\item \win{do that.} 
-\item \osx{do something else.}
-\end{itemize} 
+GUI sequences and small amounts of text can be formatted inline: %
+Click \{\nix{}\win{File} \osx{QGIS}\} > Quit to % 
+close QGIS. This indicates that on Linux, Unix and Windows platforms, %
+click the File menu option first, then Quit from the dropdown menu, while on %
+Macintosh OSX platforms, click the QGIS menu option first, then Quit from the %
+dropdown menu.
 
+Larger amounts of text may be formatted as a list:
+%A moderate amount of text may be formatted as a list:
+\begin{itemize}
+\item \nix{do this;} 
+\item \win{do that;} 
+\item \osx{do something else.}
+\end{itemize}
+or as paragraphs.
+%Larger amounts of text should be formatted as paragraphs:
+
+\nix{}Do this and this and this. Then do this
+and this and this
+and this and this
+and this and this
+and this and this.
+
+\win{}Do that. Then do that
+and that and that
+and that and that
+and that and that
+and that and that
+and that and that
+and that and that
+and that and that.
+
+\osx{}Do something else. 
+Then do something else and 
+something else and
+something else and
+something else and
+something else and
+something else and
+something else and
+something else and
+something else and
+something else and
+something else altogether.
+%Note: on OSX the following commands differ from *NIX and Windows
+%- options dialog is called preferences and is found under
+% QGIS->Preferences and the shortcut will always be Command , (command
+comma)
+%- What is usually the Help->about dialog will always be QGIS->About qgis
+%- File->Quit will always be QGIS->Quit qgis and the keyboard
+shortcut should always be Command Q
+%- Colour, font and file dialogs will have differences between platforms
+%- if other differences are discovered, please add here
 
 
 
