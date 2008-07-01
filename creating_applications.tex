@@ -35,18 +35,20 @@ MainWindow:
 \begin{enumerate}
 \item Create a directory for developing the application and change to it
 \item Run Qt Designer
-\item The "New Form" dialog should appear. If it doesn't, choose
-\textsl{New Form...} from the \textsl{File} menu.
-\item Choose "Main Window" from the templates/forms list
-\item Click \textsl{Create} 
+\item The \qtdialog{New Form} dialog should appear. If it doesn't, choose
+\qtdropmenuopt{New Form...} from the \qtmainmenuopt{File} menu.
+\item Choose \qtdropmenuopt{Main Window} from 
+the \qtdropmenuopt{templates/forms} list
+\item Click \qtdropmenuopt{Create} 
 \item Resize the new window to something manageable
-\item Find the Frame widget in the list (under Containers) and drag it to
+\item Find the \qtdropmenuopt{Frame} widget in the list 
+(under \qtdropmenuopt{Containers}) and drag it to
 the main window you just created
 \item Click outside the frame to select the main window area 
-\item Click on the \textsl{Lay Out in a Grid} tool. When you do, the frame
+\item Click on the \qtdropmenuopt{Lay Out in a Grid} tool. When you do, the frame
 will expand to fill your entire main window
-\item Save the form as \textsl{mainwindow.ui} 
-\item Exit Qt Designer
+\item Save the form as \usertext{mainwindow.ui} 
+\item \qtdropmenuopt{Exit} Qt Designer
 \end{enumerate} 
 
 Now compile the form using the PyQt interface compiler:
@@ -60,7 +62,7 @@ the application code to fill the blank slate with some tools we can use.
 
 \subsection{Creating the MainWindow}
 
-Now we are ready to write the \textbf{MainWindow} class that will do the real work.
+Now we are ready to write the \classname{MainWindow} class that will do the real work.
 Since it takes up quite a few lines, we'll look at it in chunks, starting
 with the import section and environment setup:
 
@@ -89,14 +91,14 @@ with the import section and environment setup:
 
 Some of this should look familiar from our plugin, especially the PyQt4 and
 QGIS imports. Some specific things to note are the import of our GUI in line
-14 and the import of our resources file on line 16.
+14 and the import of our \filename{resources} file on line 16.
 
 Our application needs to know where to find the QGIS installation. Because
-of this, we set the QGISHOME environment variable to point to the install
-directory of QGIS 0.9. In line 20 we store this value from
+of this, we set the \usertext{QGISHOME} environment variable to point to the 
+install directory of QGIS 0.9. In line 20 we store this value from
 the environment for later use.
 
-Next we need to create our \textbf{MainWindow} class which will contain
+Next we need to create our \classname{MainWindow} class which will contain
 all the logic of our application.
 \begin{verbatim}
 21 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -159,11 +161,11 @@ all the logic of our application.
 \end{verbatim}
 
 Lines 21 through 27 are the basic declaration and initialization of the 
-\textbf{MainWindow} and the set up of the user interface using the 
-\textsl{setupUi} method. This is required for all applications.
+\classname{MainWindow} and the set up of the user interface using the 
+\method{setupUi} method. This is required for all applications.
 
 Next we set the title for the application so it says something more
-interesting than 'MainWindow' (line 30). Once that is
+interesting than \usertext{MainWindow} (line 30). Once that is
 complete, we are ready to complete the user interface. When we created it in
 Designer, we left it very sparse---just a main window and a frame. You could
 have added a menu and the toolbar using Designer, however we'll do it with
@@ -171,16 +173,17 @@ Python.
 
 In lines 33 through 38 we set up the map
 canvas, set the background color to a light blue, and enable antialiasing.
-We also tell it not to use a QImage for rendering (trust me on this one) and
-then set the canvas to visible by calling the \textsl{show} method.
+We also tell it not to use a \classname{QImage} for rendering (trust me on this one) 
+and then set the canvas to visible by calling the \method{show} method.
 
-Next we set the layer to use a vertical box layout within the frame and add the map
-canvas to it in line 43.
+Next we set the layer to use a vertical box layout within the frame and add the 
+map canvas to it in line 43.
 
 Lines 48 to 63 set up the actions and connections for the tools in our 
 toolbar. For each tool, we create a
-\textbf{QAction} using the icon we defined in our resources file. Then we
-connect up the \textsl{activated} signal from the tool to the method in our
+\classname{QAction} using the icon we defined in our \filename{resources} file. 
+Then we
+connect up the \usertext{activated} signal from the tool to the method in our
 class that will handle the action. This is similar to how we set things up
 in the plugin example.
 
@@ -219,11 +222,12 @@ toolbar, the corresponding method is called that ``tells'' the map canvas it
 is the active tool. The active tool governs what happens when the mouse is
 clicked on the canvas.
 
-The zoom to full extent tool isn't a map tool---it does its job without
+The \usertext{zoom to full extent} tool isn't a map tool---it does its job without
 requiring a click on the map. When it is activated, we call the
-\textsl{zoomFullExtent} method of the map canvas (line 92).
-This completes the implementation of all our tools except one---the add
-layer tool. Let's look at it next:
+\method{zoomFullExtent} method of the map canvas (line 92).
+This completes the implementation of all our tools except one---the 
+\usertext{Add Layer} tool. %FIXME 
+Let's look at it next:
 
 \begin{verbatim}
 93   # Add an OGR layer to the map
@@ -255,35 +259,46 @@ layer tool. Let's look at it next:
 119    self.canvas.setLayerSet(layers)
 \end{verbatim}
 
-In the \textsl{addLayer} method we use a \textbf{QFileDialog} to get the
+In the \method{addLayer} method we use a \classname{QFileDialog} to get the
 name of the shapefile to load. This is done in line 96.
 Notice that we specify a ``filter'' so the dialog will only show files of
-type \textsl{.shp}.
+type \filename{.shp}.
 
-Next in line 97 we create a \textbf{QFileInfo} object from the shapefile path. Now the layer is
-ready to be created in line 100. Using the \textbf{QFileInfo} object to get the file name
-from the path we specify it for the name of the layer when it is created. To make sure that the layer is valid and won't
-cause any problems when loading, we check it in line 102. If it's bad, we bail out and don't add it to
+Next in line 97 we create a \classname{QFileInfo} object from the shapefile path. 
+Now the layer is
+ready to be created in line 100. Using the \classname{QFileInfo} object to get the 
+file name
+from the path we specify it for the name of the layer when it is created. 
+To make sure that the layer is valid and won't
+cause any problems when loading, we check it in line 102. If it's bad, we bail 
+out and don't add it to
 the map canvas.
 
-Normally layers are added with a random color. Here we want to tweak the colors for the layer to make a more pleasing
-display. Plus we know we are going to add the \textsl{world\_borders} layer to the map and this will make it look nice
-on our blue background. To change the color, we need to get the symbol used for rendering and use it to set a new fill color. This is done in lines
+Normally layers are added with a random color. Here we want to tweak the colors 
+for the layer to make a more pleasing
+display. Plus we know we are going to add the \filename{world\_borders} layer 
+to the map and this will make it look nice
+on our blue background. To change the color, we need to get the symbol used for 
+rendering and use it to set a new fill color. This is done in lines
 106 through 108. 
 
-All that's left is to actually add the layer to the registry and a few other housekeeping items (lines
+All that's left is to actually add the layer to the registry and a few other 
+housekeeping items (lines
 111 through 119). This stuff is standard for adding a layer and the
-end result is the world borders on a light blue background. The only thing you may not want to do is set the extent to
+end result is the world borders on a light blue background. The only thing you 
+may not want to do is set the extent to
 the layer, if you are going to be adding more than one layer in your application.
 
-That's the heart of the application and completes the \textbf{MainWindow} class. 
+That's the heart of the application and completes the \classname{MainWindow} class. 
 
 \subsection{Finishing Up}
 
 The remainder of the code shown below 
-creates the \textbf{QgsApplication} object, sets the path to the QGIS install, sets
-up the \textsl{main} method and then starts the application. The only other thing to note is that we move the
-application window to the upper left of the display. We could get fancy and use the Qt API to center it on the screen.
+creates the \object{QgsApplication} object, sets the path to the QGIS install, 
+sets up the \method{main} method and then starts the application. The only other 
+thing to note is that we move the
+application window to the upper left of the display. We could get fancy and 
+use the Qt API to center it on the screen.
 
 \begin{verbatim}
 120 def main(argv):
@@ -314,26 +329,32 @@ application window to the upper left of the display. We could get fancy and use 
 
 \subsection{Running the Application}
 
-Now we can run the application and see what happens. Of course if you are like most developers, you've been testing it
-out as you went along. 
+Now we can run the application and see what happens. Of course if you are like 
+most developers, you've been testing it out as you went along. 
 
-Before we can run the application, we need to set some environment variables. On Linux or OS X:
+Before we can run the application, we need to set some environment variables. 
 
+\nix{}\osx{}
 \begin{verbatim}
-export LD_LIBRARY_PATH=$HOME/qgis_09/lib
+export LD_LIBRARY_PATH=$HOME/qgis_09/lib%$
 export PYTHONPATH=$HOME/qgis_09/share/qgis/python
-export QGISHOME=$HOME/qgis_09
+export QGISHOME=$HOME/qgis_09%$
 \end{verbatim}
 
-For Windows:
+\win{}
 \begin{verbatim}
 set PATH=C:\qgis;%PATH%
 set PYTHONPATH=C:\qgis\python
 set QGISHOME=C:\qgis
 \end{verbatim}
 
-In the case of Linux or OS X, we assume that QGIS is installed in your home directory in 
-\textsl{qgis\_09}. For Windows, QGIS is installed in \textsl{C:\textbackslash qgis}.
+We assume
+\begin{itemize}
+\item\nix{}\osx{}QGIS is installed in 
+your home directory in 
+\filename{qgis\_09}. 
+\item\win{}QGIS is installed in \filename{C:\textbackslash qgis}.
+\end{itemize}
 
 When the application starts up, it looks like this:
 
@@ -344,8 +365,10 @@ When the application starts up, it looks like this:
 \end{center}
 \end{figure}
 
-To add the \textsl{world\_borders} layer, click on the \textsl{Add Layer} tool and navigate to the data directory.
-Select the shapefile and click \textsl{Open} to add it to the map. Our custom fill color is applied and the result is:
+To add the \filename{world\_borders} layer, click on the 
+\usertext{Add Layer} tool and navigate to the data directory.
+Select the shapefile and click \button{Open} to add it to the map. 
+Our custom fill color is applied and the result is:
 
 \begin{figure}[ht]
 \begin{center}
@@ -354,16 +377,22 @@ Select the shapefile and click \textsl{Open} to add it to the map. Our custom fi
 \end{center}
 \end{figure}
 
-Creating a PyQGIS application is really pretty simple. In less than 150 lines of code we have an application that can
-load a shapefile and navigate the map. If you play around with the map, you'll notice that some of the built-in features
-of the canvas also work, including mouse wheel scrolling and panning by holding down the \textsl{Space} bar and
+Creating a PyQGIS application is really pretty simple. 
+In less than 150 lines of code we have an application that can
+load a shapefile and navigate the map. If you play around with the map, 
+you'll notice that some of the built-in features
+of the canvas also work, including mouse wheel scrolling and panning by 
+holding down the \keystroke{Space} bar and
 moving the mouse.
 
-Some sophisticated applications have been created with PyQGIS and more are in the works. This is pretty impressive,
-considering that this development has taken place even before the official release of QGIS 0.9.
+Some sophisticated applications have been created with PyQGIS and more are in 
+the works. This is pretty impressive,
+considering that this development has taken place even before the official 
+release of QGIS 0.9.
 
 \begin{Tip}\caption{\textsc{Documentation For PyQGIS}}
-\qgistip{Whether you are writing a plugin or a PyQGIS application, you are going to
+\qgistip{Whether you are writing a plugin or a PyQGIS application, 
+you are going to
 need to refer to both the QGIS API documentation (\url{http://qgis.org}) and
 the PyQt Python Bindings Reference Guide
 (\url{http://www.riverbankcomputing.com/Docs/PyQt4/pyqt4ref.html}). These
