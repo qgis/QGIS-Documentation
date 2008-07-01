@@ -1,4 +1,4 @@
-\section{Installation Guide}
+\section{Installation Guide}\label{label_install}
 
 The following chapters provide build and installation information for QGIS 
 Version \CURRENT. This document corresponds almost to a \LaTeX~ conversion of 
@@ -255,7 +255,7 @@ tree. Read the READMEfile there and follow the instructions. Next right click
 on qgis.nsi and choose the option 'Compile NSIS Script'. 
 
 
-\section{Building on Mac OSX using frameworks and cmake (QGIS $>$ 0.8)}\label{sec:install_macosx}
+\section{Building on Mac OSX using frameworks and cmake (QGIS > 0.8)}\label{sec:install_macosx}
 In this approach I will try to avoid as much as possible building dependencies
 from source and rather use frameworks wherever possible.
 
@@ -466,7 +466,7 @@ sudo vim /etc/bashrc
 And add this line to the bottom before saving and quiting:
 
 \begin{verbatim}
-export PATH=/usr/local/bin:$PATH:/usr/local/pgsql/bin 
+export PATH=/usr/local/bin:$PATH:/usr/local/pgsql/bin%$ 
 \end{verbatim}
 
 /usr/local/bin needs to be first in the path so that the newer bison (that will
@@ -732,7 +732,7 @@ you can use the binary packages of QGIS on your system along side with your
 development version. I suggest you do something similar:
 
 \begin{verbatim}
-mkdir -p ${HOME}/apps 
+mkdir -p ${HOME}/apps%$ 
 \end{verbatim}
 
 Now we create a build directory and run ccmake:
