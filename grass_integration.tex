@@ -46,7 +46,7 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   \item Start QGIS
   \item In the GRASS toolbar, click on the \toolbtntwo{grass_open_mapset}{Open
   mapset} icon to bring up the mapset wizard.
-  \item For \filename{Gisdbase} browse and enter the path to the newly
+  \item For \filename{Gisdbase} browse and select or enter the path to the newly
   created folder \filename{grassdata}.
   \item You should now be able to select the location \filename{spearfish60}
   and the mapset \filename{PERMANENT} or \filename{user1}. 
@@ -56,7 +56,7 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   the \filename{map name} geology and click \button{OK}. The geology map will be visualized. 
   \item Click on \toolbtntwo{add_grass_vector}{Add GRASS vector layer}, choose
   the \filename{map name} roads and click \button{OK}. Now the roads map will
-  be overlayed on top of the geology.  
+  be overlayed on top of the geology map.  
 \end{enumerate}
 
 As you see, it is very simple to load GRASS raster and vector layers in QGIS. See following sections 
@@ -73,8 +73,9 @@ check to make sure you have loaded the GRASS plugin properly as described in Sec
 
 GRASS stores data in a ``location'' which represents a specific area with a 
 specific coordinate system. In order to use GRASS data, we must import it 
-into a \filename{location}.\footnote{This is not strictly true - you can 
-view external data sets without importing them}
+into a \filename{location}.\footnote{This is not strictly true - with the
+GRASS module v.external you can view external data sets in GRASS without 
+importing them, but this is currently an exception}
 
 \begin{figure}[ht]
    \begin{center}
@@ -92,8 +93,9 @@ projection with unit meter for the QGIS sample data (see Section \ref{label_samp
   \item Load the \filename{alaska.shp} shapefile (see Section \ref{sec:load_shapefile}).
   \item In the GRASS toolbar, click on the \toolbtntwo{grass_open_mapset}{Open
     mapset} icon to bring up the mapset wizard.
-  \item Each location is stored in a directory. Select an existing data 
-  directory or create a new one for storing the location
+  \item Each location is stored in a directory usually named
+  \filename{grassdata}. Select an existing data directory or create a new one
+  for storing the location
   \item Click \button{Next} 
   \item We can use this wizard to create a new mapset within an existing 
   location or create a new location altogether. Click ``Create new location'' 
@@ -104,8 +106,7 @@ projection with unit meter for the QGIS sample data (see Section \ref{label_samp
   to enable the projection list
   \item We are using Albers Equal Area Alaska (meters) projection. Since we happen to know that 
   its PostGIS SRID is 5000, we enter it in the search box. (If you want to repeat this process 
-  for another layer and haven't memorized the PostGIS SRID, click on the projector icon in the 
-  lower right-hand corner of the statusbar (see Section \ref{label_projstart}).)
+  for another layer and haven't memorized the PostGIS SRID, click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the lower right-hand corner of the statusbar (see Section \ref{label_projstart}).)
   \item Click \button{Find} to select the projection
   \item Click \button{Next} 
   \item To define the default region, we have to enter the bounds in the north, south, 
@@ -155,8 +156,8 @@ dataset, e.g. if the geometry is forest or lake.
 For now, it can be only a number, in the future GRASS will also support  
 names as fields in the user interface.
 
-Attributes can be stored in external database tables, for example
-DBF, PostgreSQL, MySQL, SQLITE3, etc.\index{GRASS!attribute storage}
+Attributes can be stored inside the location as DBase or SQLITE3 or in
+external database tables, for example PostgreSQL, MySQL, Oracle, etc.\index{GRASS!attribute storage}
 
 Attributes in database tables are linked to geometry elements using
 'category'.\index{GRASS!attribute linkage} 'Category' (key, ID) is an
