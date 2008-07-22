@@ -45,7 +45,7 @@ file named \filename{lakes.prj}.
 At startup, QGIS does not have OTF projection enabled. To use OTF
 projection, you must open the \dropmenuopttwo{mActionOptions}{Project Properties} dialog, select a
 projection for the map and enable OTF projections. There are two ways to open
-the \button{Project Properties} dialog:
+the \dialog{Project Properties} dialog:
 
 \begin{enumerate}
 \item Select \dropmenuopt{mActionOptions}{Project Properties} from the \mainmenuopt{Settings} menu.
@@ -56,7 +56,7 @@ statusbar.
 \begin{Tip}
  \caption{\textsc{Project Properties Dialog}}
 \qgistip{
-If you open the \dropmenuopttwo{mActionOptions}{Project Properties} dialog from the \mainmenuopt{Settings} menu, you
+If you open the \dialog{Project Properties} dialog from the \mainmenuopt{Settings} menu, you
 must
 click on the \tab{Projection} tab to view the projection settings. Opening
 the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring the
@@ -64,7 +64,7 @@ the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will aut
 }
 \end{Tip}
 
-The Projection dialog contains four important components as numbered in Figure
+The Projection tab of the \dialog{Project Properties} dialog contains four important components as numbered in Figure
 \ref{fig:projections} and described below.
 
 \begin{figure}[ht]
@@ -99,12 +99,12 @@ identifier and click on \button{Find}.
 QGIS automatically sets the map projection to the coordinate system of the
 first layer loaded. One way to specify the map projection is to first load a
 layer with the projection you want for the entire map. Then open the
-\dropmenuopt{Project Properties} dialog and click on the \checkbox{Enable on the fly
-projection} checkbox. You can now close the \dropmenuopt{Project Properties} dialog
+\dialog{Project Properties} dialog and click on the \checkbox{Enable on the fly
+projection} checkbox. You can now close the \dialog{Project Properties} dialog
 and add additional layers to the map. 
 
 If you have already added layers and want to enable OTF projection, open the 
-\dropmenuopt{Project Properties} dialog and find the projection or geographic
+\tab{Projection} tab of the \dialog{Project Properties} dialog and find the projection or geographic
 coordinate system you want to use in the list of projections. Alternatively
 you can use the search feature as described in the previous section.
 
@@ -134,7 +134,7 @@ This manual describes the use of the \usertext{proj.4} and related command line
 utilities. The cartographic parameters used with \usertext{proj.4} and described
 in the user manual are the same as those used by QGIS. 
 
-The \dropmenuopt{Custom Projections} dialog requires only two parameters to define a user
+The \dialog{Custom Projection Definition} dialog requires only two parameters to define a user
 projection: 
 \begin{enumerate}
 \item a descriptive name, and

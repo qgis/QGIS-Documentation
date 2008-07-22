@@ -63,7 +63,6 @@ PNG=addshapefile.eps\
 	mActionCapturePoint.eps\
 	mActionCapturePolygon.eps\
 	mActionCollapseTree.eps\
-	mActionDeleteSelected.eps\
 	mActionDeleteVertex.eps\
 	mActionDeleteSelected.eps\
 	mActionEditPaste.eps\

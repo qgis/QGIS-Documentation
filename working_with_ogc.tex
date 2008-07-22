@@ -63,7 +63,7 @@ can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button 
 or through the \mainmenuopt{Layer}>\dropmenuopttwo{mActionAddWmsLayer}{Add
 WMS Layer...} menu.
 
-The dialog for adding layers from the WMS server pops up. Fortunately you can 
+The dialog \dialog{Add Layer(s) from a Server} for adding layers from the WMS server pops up. Fortunately you can 
 add some servers to play with by clicking the \button{Add default servers} 
 button. This will add at least three WMS servers for you to use, including the NASA (JPL) 
 WMS server. To define a new WMS server in the \tab{Server Connections} section, 
@@ -133,7 +133,7 @@ button to retrieve the capabilities of the selected server.  This includes the I
 Layers, Layer Styles, and Projections.  Since this
 is a network operation, the speed of the response depends on the quality of your network
 connection to the WMS server. While downloading data from the WMS server, the download progress 
-is visualized in the left bottom of the WMS Plugin dialog 
+is visualized in the left bottom of the WMS Plugin dialog. 
 
 Your screen should now look a bit like Figure \ref{fig:connection_wms}, which shows the 
 response provided by the NASA JPL OnEarth WMS server.
@@ -413,8 +413,8 @@ You'll notice the download progress is visualized in the left bottom of the QGIS
 Once the layer is loaded, you can identify and select a province or two and view the 
 attribute table.
 
-% FIXME: Is this still true? SH: I think it is stable though.
-Remember this plugin is still experimental. You might also experience random behavior 
+Remember this plugin works best with UMN MapServer WFS servers. It still
+could be, that you might experience random behavior 
 and crashes. You can look forward to improvements in a future version of the plugin.
 
 \begin{Tip}[ht]\caption{\textsc{Finding WMS and WFS Servers}}

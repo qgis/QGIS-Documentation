@@ -49,7 +49,8 @@ Raster layers are loaded either by clicking on the
 selecting the \mainmenuopt{View}>\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer} menu option. More than one 
 layer can be loaded at the same time by holding down the
 \keystroke{Control} or \keystroke{Shift} key
-and clicking on multiple items in the file dialog.\index{raster layers!loading}
+and clicking on multiple items in the dialog \dialog{Open a GDAL Supported
+Raster Data Source}.\index{raster layers!loading}
 
 Please refer to section \ref{sec:load_grassdata} if you intend to load GRASS rasterdata.
 	
@@ -79,11 +80,12 @@ items that allow you to:\index{raster layers!context menu}
 \item Show file groups
 \end{itemize}
 
-Choose \dropmenuopt{Properties} from the context menu to open the \button{raster
-properties}
+Choose \dropmenuopt{Properties} from the context menu to open the
+\button{Raster Layer Properties}
 dialog for the layer.\index{raster layers!properties}
 
-Figure \ref{fig:raster_properties} shows the properties dialog. There are five
+Figure \ref{fig:raster_properties} shows the \dialog{Raster Layer
+Properties} dialog. There are five
 tabs on the dialog: \tab{Symbology}, \tab{General}, \tab{Metadata}, \tab{Pyramids} and \tab{Histogram}.
 
 \begin{figure}[h]
@@ -204,7 +206,7 @@ version of your raster, make a backup copy prior to building pyramids.
 The histogram tab allows you to view the distribution\index{raster layers!histogram} 
 of the bands or colors in your raster. You must first generate the raster statistics 
 by clicking the \button{Refresh} button. You can choose which bands to display by 
-selecting them in the list box at the bottom right of the dialog. Two different
+selecting them in the list box at the bottom right of the tab. Two different
 chart types are allowed: Barcharts and Linegraphs.
 
 Once you view the histogram, you'll notice that the band statistics have been
