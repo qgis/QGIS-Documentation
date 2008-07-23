@@ -11,82 +11,108 @@
 JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=addshapefile.eps\
-	digitising_attributes09.eps\
-	inoverview.eps\
-	map_composer_blank.eps\
-	map_composer.eps\
-	newpostgisconnectiondialog.eps\
-	newvectorlayer.eps\
-	no_pyramid.eps\
-	pluginmanager_50pct.eps\
-	pluginmanager_80pct.eps\
-	pluginmanager.eps\
-	pluginmanager1.eps\
-	pluginmanager2.eps\
-	plugintoolbar08.eps\
-	pyramid.eps \
-	qgis-icon-16x16.eps\
-	querybuilder.eps\
-	rastercontextmenu.eps\
-	raster_properties.eps\
-	shapefileloaded09.eps\
-	shapefileopendialog.eps\
-	spiticon.eps\
-	startup09.eps\
-	vectorLayerSymbology09.eps\
-	options.eps \
-	buffer.eps \
-	georeferencer.eps \
-	copyright.eps \
-	scalebar.eps \
-	delim_text.eps \
-	gridmaker.eps \
-	northarrow.eps \
-	gps.eps \
-	measureline.eps \
-	measure_line.eps \
-	measurearea.eps \
-	measure_area.eps \
-	wfs_dmsolutions.eps \
-	wfs-icon.eps \
-	identify_action.eps\
-	mActionOpenTable.eps\
-	mActionToggleEditing.eps\
-	mActionAddRing.eps\
-	mActionAddIsland.eps\
-	mActionAddVertex.eps\
-	mActionAddLayer.eps\
-	mActionAddRasterLayer.eps\
-	mActionAddWmsLayer.eps\
-	mActionCaptureLine.eps\
-	mActionCapturePoint.eps\
-	mActionCapturePolygon.eps\
-	mActionCollapseTree.eps\
-	mActionDeleteVertex.eps\
-	mActionDeleteSelected.eps\
-	mActionEditPaste.eps\
-	mActionEditCopy.eps\
-	mActionEditCut.eps\
-	mActionExpandTree.eps\
-	mActionIdentify.eps\
-	mActionOptions.eps\
-	mActionPan.eps\
-	mActionMoveFeature.eps\
-	mActionMoveVertex.eps\
-	mActionNewVectorLayer.eps\
-	mActionRemoveLayer.eps\
-	mActionSplitFeatures.eps\
-	mActionSelect.eps\
-	mActionZoomFullExtent.eps\
-	mActionZoomLast.eps\
-	mActionZoomToLayer.eps\
-	mActionZoomIn.eps\
-	mActionZoomOut.eps\
-	mActionZoomToSelected.eps\
-	mIconProjectionEnabled.eps\
-	mActionFileSave.eps\
-	mActionShowPluginManager.eps\
+PNG=\
+  clearInput.eps\
+  mAction.eps\
+  mActionAddAllToOverview.eps\
+  mActionAddIsland.eps\
+  mActionAddLayer.eps\
+  mActionAddLegend.eps\
+  mActionAddNonDbLayer.eps\
+  mActionAddOgrLayer.eps\
+  mActionAddRasterLayer.eps\
+  mActionAddRing.eps\
+  mActionAddVertex.eps\
+  mActionAddWmsLayer.eps\
+  mActionCaptureLine.eps\
+  mActionCapturePoint.eps\
+  mActionCapturePolygon.eps\
+  mActionCheckQgisVersion.eps\
+  mActionCollapseTree.eps\
+  mActionContextHelp.eps\
+  mActionCopySelected.eps\
+  mActionCustomProjection.eps\
+  mActionDeleteAttribute.eps\
+  mActionDeleteSelected.eps\
+  mActionDeleteVertex.eps\
+  mActionDraw.eps\
+  mActionEditCopy.eps\
+  mActionEditCut.eps\
+  mActionEditPaste.eps\
+  mActionExpandTree.eps\
+  mActionExportMapServer.eps\
+  mActionFileExit.eps\
+  mActionFileNew.eps\
+  mActionFileOpen.eps\
+  mActionFilePrint.eps\
+  mActionFileSave.eps\
+  mActionFileSaveAs.eps\
+  mActionFileSmall.eps\
+  mActionFolder.eps\
+  mActionHelpAbout.eps\
+  mActionHelpContents.eps\
+  mActionHideAllLayers.eps\
+  mActionIdentify.eps\
+  mActionInOverview.eps\
+  mActionInvertSelection.eps\
+  mActionLabel.eps\
+  mActionMapTips.eps\
+  mActionMeasure.eps\
+  mActionMeasureArea.eps\
+  mActionMoveFeature.eps\
+  mActionMoveVertex.eps\
+  mActionNewAttribute.eps\
+  mActionNewBookmark.eps\
+  mActionNewFolder.eps\
+  mActionNewVectorLayer.eps\
+  mActionOpenTable.eps\
+  mActionOptions.eps\
+  mActionPan.eps\
+  mActionProjectProperties.eps\
+  mActionPropertyItem.eps\
+  mActionQgisHomePage.eps\
+  mActionRemove.eps\
+  mActionRemoveAllFromOverview.eps\
+  mActionRemoveLayer.eps\
+  mActionSaveAsSVG.eps\
+  mActionSaveMapAsImage.eps\
+  mActionScaleBar.eps\
+  mActionSelect.eps\
+  mActionSelectedToTop.eps\
+  mActionShowAllLayers.eps\
+  mActionShowBookmarks.eps\
+  mActionShowPluginManager.eps\
+  mActionSplitFeatures.eps\
+  mActionToggleEditing.eps\
+  mActionUnselectAttributes.eps\
+  mActionZoomFullExtent.eps\
+  mActionZoomIn.eps\
+  mActionZoomLast.eps\
+  mActionZoomOut.eps\
+  mActionZoomToLayer.eps\
+  mActionZoomToSelected.eps\
+  mIconDelete.eps\
+  mIconEditable.eps\
+  mIconFirst.eps\
+  mIconGeometryLayer.eps\
+  mIconLast.eps\
+  mIconLayer.eps\
+  mIconLineLayer.eps\
+  mIconNew.eps\
+  mIconNext.eps\
+  mIconNoPyramid.eps\
+  mIconPointLayer.eps\
+  mIconPolygonLayer.eps\
+  mIconPrevious.eps\
+  mIconProjectionDisabled.eps\
+  mIconProjectionEnabled.eps\
+  mIconProjectionProblem.eps\
+  mIconProperties.eps\
+  mIconPyramid.eps\
+  mIconSymbology.eps\
+  mIconUnknownLayerType.eps\
+  mIconWaitingForLayerType.eps\
+  mMapserverExport.eps\
 	nix.eps\
 	win.eps\
 	osx.eps\
