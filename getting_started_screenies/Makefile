@@ -10,9 +10,7 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-PNG=startup09.eps\
-measure_area.eps\
-measure_line.eps\
+#PNG=startup09.eps\
 	
 	
 ##### TARGETS #####
