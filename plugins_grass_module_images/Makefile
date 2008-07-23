@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=nviz.1.eps\
+PNG=nviz.1.eps\
 
 	
 ##### TARGETS #####
