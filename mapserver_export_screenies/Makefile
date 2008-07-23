@@ -9,9 +9,9 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=mapserver_export.eps\
+#PNG=mapserver_export.eps\
 			
 ##### TARGETS #####
 

@@ -9,13 +9,13 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=download.eps\
-	icon.eps\
-	importdialog.eps\
-	importmenu.eps\
-	loadgpx.eps	
+#PNG=download.eps\
+#	icon.eps\
+#	importdialog.eps\
+#	importmenu.eps\
+#	loadgpx.eps	
 	
 	
 ##### TARGETS #####

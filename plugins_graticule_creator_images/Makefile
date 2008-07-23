@@ -9,9 +9,9 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=graticule.eps\
+#PNG=graticule.eps\
 	
 ##### TARGETS #####
 

@@ -9,12 +9,12 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=getdsn.eps\
-	getfieldname.eps\
-	gettablename.eps\
-	plugin_results.eps\
+#PNG=getdsn.eps\
+#	getfieldname.eps\
+#	gettablename.eps\
+#	plugin_results.eps\
 		
 	
 ##### TARGETS #####

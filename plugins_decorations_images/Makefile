@@ -9,11 +9,11 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=copyright.eps\
-	north_arrow.eps\
-	scale_bar.eps\
+#PNG=copyright.eps\
+#	north_arrow.eps\
+#	scale_bar.eps\
 	
 ##### TARGETS #####
 

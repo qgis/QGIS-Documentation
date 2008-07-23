@@ -9,16 +9,16 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=dialog.eps\
-	ellipsis.eps\
-	file_selected.eps\
-	file_selected1.eps\
-	file_selected2.eps\
-	file_selected3.eps\
-	plugin_manager.eps\
-	toolbar_icon.eps
+#PNG=dialog.eps\
+#	ellipsis.eps\
+#	file_selected.eps\
+#	file_selected1.eps\
+#	file_selected2.eps\
+#	file_selected3.eps\
+#	plugin_manager.eps\
+#	toolbar_icon.eps
 	
 	
 ##### TARGETS #####

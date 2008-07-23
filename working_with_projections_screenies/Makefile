@@ -9,10 +9,10 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
-PNG=customprojection.eps\
-	projectiondialog08.eps
+#PNG=customprojection.eps\
+#	projectiondialog08.eps
 	
 	
 ##### TARGETS #####
