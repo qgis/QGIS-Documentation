@@ -9,10 +9,10 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
+#	nextfile.eps
 
 #PNG=grassedit.eps\
-	grasstoolbar.eps
+#	grasstoolbar.eps
 	
 	
 ##### TARGETS #####
