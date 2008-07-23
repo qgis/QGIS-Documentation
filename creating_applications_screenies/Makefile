@@ -9,9 +9,8 @@
 
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
-	nextfile.eps
 
-PNG=getdsn.eps\
+#PNG=getdsn.eps\
 	
 	
 ##### TARGETS #####
