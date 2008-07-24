@@ -27,10 +27,18 @@
 %\newcommand{\nix}[1]{Under GNU/Linix, #1}
 %\newcommand{\win}[1]{Under MS Windows, #1}
 %\newcommand{\osx}[1]{Under Mac OS X, #1}
+
+% add operation system icons to figure \caption
+% usage \caption{Text \wincaption}
+\newcommand{\nixcaption}{\protect\includegraphics[height=4mm]{nix.eps}}
+\newcommand{\wincaption}{\protect\includegraphics[height=4mm]{win.eps}}
+\newcommand{\osxcaption}{\protect\includegraphics[height=4mm]{osx.eps}}
+
 % new versions
 \newcommand{\nix}[1]{\includegraphics[height=5mm]{nix.eps} #1}
 \newcommand{\win}[1]{\includegraphics[height=5mm]{win.eps} #1}
 \newcommand{\osx}[1]{\includegraphics[height=5mm]{osx.eps} #1}
+
 % button
 \renewcommand{\button}[1]{%
 \raisebox{-6pt}{%

@@ -98,12 +98,13 @@ html:
 	<a href=http://www.qgis.org>QGIS Project</a> \
 	<br>Last modified: `/bin/date +%d-%m-%Y`" $(FILE)
 
-clean: cleanpics
+clean:
 	rm -f *.log *.aux $(FILE).dvi *.bbl *.tip *.lox *.blg *.ind \
 	*.ilg *.toc *.tof *.lof *.lot *.pdf *.ps *.idx *.brf *.out *~
 	rm -rf $(FILE)
 	rm -rf ./finalpix
 	(cd ./appendices && rm -f *.aux)
+	make cleanpics
 
 cleanpics:
 	(cd ./images && make clean)

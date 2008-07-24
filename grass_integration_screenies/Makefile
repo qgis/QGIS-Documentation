@@ -11,7 +11,8 @@
 # JPG=qgis_icon_new_verylarge.eps\
 	nextfile.eps
 
-#PNG=grassedit.eps\
+PNG=create_grass_location.eps\
+#	grassedit.eps\
 #	grasstoolbar.eps\
 #	grassbrowser.eps\
 #	grassshell.eps\
@@ -44,7 +45,7 @@
 #	grass_new_mapset.eps\
 #	grass_new_vector_layer.eps\
 #	grass_open_mapset.eps\
-#	grass_location.eps\
+#	create_grass_location.eps\
 #	grass_module_error.eps\
 #	grass_module_warning.eps\
 #	grass_browser_raster_layer.eps\
