@@ -127,7 +127,7 @@ cleanpics:
 	(cd ./working_with_projections_screenies && make clean)
 	(cd ./grass_integration_screenies && make clean)
 	(cd ./map_composer_screenies && make clean)
-	(cd ./map_server_export_screenies && make clean)
+	(cd ./mapserver_export_screenies && make clean)
 	(cd ./creating_applications_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./plugins_screenies && make clean)
