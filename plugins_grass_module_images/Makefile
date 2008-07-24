@@ -12,7 +12,16 @@
 #	nextfile.eps
 
 PNG=nviz.1.eps\
-
+	add_vector.eps\
+	add_raster.eps\
+	grass_tools.eps\
+	grass_region.eps\
+	grass_region_edit.eps\
+	grass_edit.eps\
+	grass_open_mapset.eps\
+	grass_new_mapset.eps\
+	grass_new_vector_layer.eps\
+	grass_close_mapset.eps\
 	
 ##### TARGETS #####
 
