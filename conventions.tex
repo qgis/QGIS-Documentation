@@ -3,19 +3,28 @@
 % \fbox, \shadowbox, \doublebox, \ovalbox and \Ovalbox
 %%%%%%%%%%%%%%%%8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+% general styles for text that the user should type in from the keyboard
 \renewcommand{\usertext}[1]{\texttt{#1}}
-\renewcommand{\classname}[1]{\textsf{\textbf{#1}}}
-\renewcommand{\fieldname}[1]{\textsl{#1}}
 \renewcommand{\filename}[1]{\texttt{#1}}
+% style for user input by individual keystrokes
 \renewcommand{\keystroke}[1]{\cornersize{.6}\ovalbox{\textsf{#1}}}
-\renewcommand{\method}[1]{\textsf{\textit{#1}}}
-\renewcommand{\server}[1]{\textit{#1}}
-\renewcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
+% generic style for text that appears in the GUI
 \newcommand{\guilabel}[1]{\textsf{#1}}
+\newcommand{\guiheading}[1]{\textsf{#1}}
+% some styles for use only when discussing Python coding
+\renewcommand{\classname}[1]{\textsf{\textbf{#1}}}
+\renewcommand{\method}[1]{\textsf{\textit{#1}}}
+%\renewcommand{\fieldname}[1]{\textsl{#1}}
 \newcommand{\object}[1]{\textsf{\textit{#1}}}
+% some styles for the Qt GUI
 \newcommand{\qtmainmenuopt}[1]{\textsf{#1}}
 \newcommand{\qtdropmenuopt}[1]{\textsf{#1}}
 \newcommand{\qtdialog}[1]{\textsf{#1}}
+% ??? these styles are from Gary
+\renewcommand{\server}[1]{\textit{#1}}
+\renewcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
+
+
 %
 \newcommand{\dialog}[1]{
 \fcolorbox[rgb]{0.2,0.2,0.95}[rgb]{0.2,0.2,0.95}{%
@@ -112,10 +121,10 @@
 \includegraphics[width=5mm]{#3}%
  \guilabel{#4}%
 }}}
-%for backward compatibility!
-\newcommand{\toolbox}[2]{%
-\toolboxtwo{#1}{#2}%
-}
+%not to be used anymore
+%\newcommand{\toolbox}[2]{%
+%\toolboxtwo{#1}{#2}%
+%}
 % tab
 \newcommand{\tab}[1]{%
 \raisebox{-6pt}{%
@@ -286,7 +295,7 @@ A shadow indicates a clickable GUI component.
 \item Keystroke Combinations: press \keystroke{Ctrl-B}, meaning press and
 hold the Ctrl key and then press the B key.
 \item Name of a File: \filename{lakes.shp}
-\item Name of a Field: \fieldname{NAMES}
+%\item Name of a Field: \fieldname{NAMES}
 \item Name of a Class: \classname{NewLayer}
 \item Method: \method{classFactory}
 \item Server: \server{example needed here}
