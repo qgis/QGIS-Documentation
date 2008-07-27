@@ -10,7 +10,7 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=wfs_dmsolutions.eps \
+PNG=mIconAddWfsLayer.eps \
 	
 ##### TARGETS #####
 
