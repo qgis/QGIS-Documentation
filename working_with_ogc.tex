@@ -89,8 +89,8 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \end{tabular}
 \end{table}
 
-At least \fieldname{Name} and \fieldname{URL} are required entries; the
-\fieldname{proxy} entries 
+At least \guilabel{Name} and \guilabel{URL} are required entries; the
+\guilabel{proxy} entries 
 can be left blank if you have a clear path to your WMS server.
 
 Once the new WMS Server has been created, it will be preserved across future 
@@ -391,13 +391,13 @@ wfs&REQUEST=GetCapabilities
   \item Make sure the WFS plugin is loaded; if not, open the Plugin Manager and load it
   \item Click on the \toolbtntwo{wfs-icon}{Add WFS Layer} tool on the plugins toolbar
   \item Click on \button{New} 
-  \item Enter \fieldname{DM Solutions} as the name
+  \item Enter \inputtext{Name}{DM Solutions} as the name
   \item Enter the URL (see previous page)
   \item Click \button{OK} 
-  \item Choose \fieldname{DM Solutions} from the drop-down box
+  \item Choose \selectstring{Server Connections}{DM Solutions} from the drop-down box
   \item Click \button{Connect} 
   \item Wait for the list of layers to be populated
-  \item Click on the \fieldname{Canadian Land} layer
+  \item Click on the \clicklistitem{Canadian Land} layer
   \item Click \button{Add} to add the layer to the map
   \item Wait patiently for the features to appear
 \end{enumerate}
