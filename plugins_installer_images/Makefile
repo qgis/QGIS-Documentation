@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=graticule.eps\
+PNG=plugin.eps\
 	
 ##### TARGETS #####
 
