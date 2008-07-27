@@ -23,18 +23,18 @@
 
 % internal macros for style consitency from Gary's foss4g 07 workbook
 % package fancybox is used for \button and \toolbtn
-\usepackage{fancybox}
-\newcommand{\button}[1]{\cornersize{0.1}\ovalbox{\textsf{\scriptsize#1}}}
-\newcommand{\classname}[1]{\textsf{\textbf{#1}}}
-\newcommand{\fieldname}[1]{\textsl{#1}}
-\newcommand{\filename}[1]{\texttt{#1}}
-\newcommand{\keystroke}[1]{\fbox{\textsf{\scriptsize#1}}}
-\newcommand{\menuopt}[1]{\textsf{#1}}
-\newcommand{\method}[1]{\textsf{\textit{#1}}}
-\newcommand{\server}[1]{\textit{#1}}
-\newcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
-\newcommand{\toolbtn}[1]{\cornersize{7mm}\Ovalbox{\textsf{\scriptsize#1}}}
-\newcommand{\usertext}[1]{\texttt{#1}}
+% moved to conventions.tex
+%\newcommand{\button}[1]{\cornersize{0.1}\ovalbox{\textsf{\scriptsize#1}}}
+%\newcommand{\classname}[1]{\textsf{\textbf{#1}}}
+%\newcommand{\fieldname}[1]{\textsl{#1}}
+%\newcommand{\filename}[1]{\texttt{#1}}
+%\newcommand{\keystroke}[1]{\fbox{\textsf{\scriptsize#1}}}
+%\newcommand{\menuopt}[1]{\textsf{#1}}
+%\newcommand{\method}[1]{\textsf{\textit{#1}}}
+%\newcommand{\server}[1]{\textit{#1}}
+%\newcommand{\sqltable}[1]{\textsf{\textbf{#1}}}
+%\newcommand{\toolbtn}[1]{\cornersize{7mm}\Ovalbox{\textsf{\scriptsize#1}}}
+%\newcommand{\usertext}[1]{\texttt{#1}}
 
 % important for nice acroread-visualization as pdf.
 \usepackage[latin1]{inputenc}
@@ -210,15 +210,19 @@
 % if colorlinks=false then add pdfborder={0 0 0} (no link boxes)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% using fancybox: for macros defined in conventions.tex
+% options for boxes provided by fancybox package are:
+% \fbox, \shadowbox, \doublebox, \ovalbox and \Ovalbox
+\usepackage{fancybox}
 
-% using xcolor
+% using xcolor: for macros defined in conventions.tex
 \usepackage{xcolor}
 
-% using amsmath
+% using amsmath: for macros defined in conventions.tex
 \usepackage{amsmath}
 
-% using amssymb
+% using amssymb: for macros defined in conventions.tex
 \usepackage{amssymb}
 
-% using stmaryrd
+% using stmaryrd: for macros defined in conventions.tex
 \usepackage{stmaryrd}
