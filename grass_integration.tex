@@ -52,9 +52,13 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   and the mapset \filename{PERMANENT} or \filename{user1}. 
   \item Click \button{OK}. Notice that some of the tools in the GRASS toolbar
   that were disabled are now enabled.
-  \item Click on \toolbtntwo{add_grass_raster}{Add GRASS raster layer}, choose
+  \item Click on 
+  %FIXME \toolbtntwo{add_grass_raster}{Add GRASS raster layer}
+  , choose
   the \filename{map name} geology and click \button{OK}. The geology map will be visualized. 
-  \item Click on \toolbtntwo{add_grass_vector}{Add GRASS vector layer}, choose
+  \item Click on 
+  %FIXME \toolbtntwo{add_grass_vector}{Add GRASS vector layer}
+  , choose
   the \filename{map name} roads and click \button{OK}. Now the roads map will
   be overlayed on top of the geology map.  
 \end{enumerate}
@@ -77,12 +81,12 @@ into a \filename{location}.\footnote{This is not strictly true - with the
 GRASS module v.external you can view external data sets in GRASS without 
 importing them, but this is currently an exception}
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{Creating a GRASS location in QGIS \nixcaption}\label{fig:grass_location}\smallskip
-   \includegraphics[clip=true]{create_grass_location}
-\end{center}  
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{Creating a GRASS location in QGIS \nixcaption}\label{fig:grass_location}\smallskip
+%   \includegraphics[clip=true]{create_grass_location}
+%\end{center}  
+%\end{figure}
 
 Here is an example how to create a GRASS location in Albers Equal Area 
 projection with unit meter for the QGIS sample data (see Section \ref{label_sampledata}). 
@@ -186,12 +190,12 @@ you need to use the toolbar-entry \mainmenuopt{Plugins} >
 Figure \ref{fig:grass_edit} shows the GRASS Edit dialog that is displayed
 when you click on the edit tool. 
 
-\begin{figure}[h]
-   \begin{center}
-   \caption{GRASS Edit Dialog}\label{fig:grass_edit}\smallskip
-   \includegraphics[clip=true, width=13cm]{grassedit}
-\end{center}  
-\end{figure}
+%\begin{figure}[h]
+%   \begin{center}
+%   \caption{GRASS Edit Dialog}\label{fig:grass_edit}\smallskip
+%   \includegraphics[clip=true, width=13cm]{grassedit}
+%\end{center}  
+%\end{figure}
 
 The tools and settings are discussed in the following sections.
 
@@ -390,12 +394,12 @@ The 'Rename' and 'Delete' buttons are only available in your current mapset. All
 maps from other mapsets as well.
 
 % Picture from the GRASS-Browser here:
-\begin{figure}[h]
-\centering
-	\caption{GRASS toolbox}
-   \subfigure[GRASS browser inside the toolbox]{\label{subfig:grass_browser}\includegraphics[clip=true, width=0.4\textwidth]{grassbrowser}}\goodgap
-   \subfigure[GRASS shell inside the toolbox]{\label{subfig:grass_shell}\includegraphics[clip=true, width=0.4\textwidth]{grassshell}}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%	\caption{GRASS toolbox}
+%  \subfigure[GRASS browser inside the toolbox]{\label{subfig:grass_browser}\includegraphics[clip=true, width=0.4\textwidth]{grassbrowser}}\goodgap
+%   \subfigure[GRASS shell inside the toolbox]{\label{subfig:grass_shell}\includegraphics[clip=true, width=0.4\textwidth]{grassshell}}
+%\end{figure}
 
 \subsubsection{Customizing the modules section} \index{GRASS!toolbox!customize}
 \label{sec:toolbox-customizing}
@@ -419,11 +423,11 @@ A sample XML file for generating the module \usertext{v.buffer} (v.buffer.qgm) l
 </qgisgrassmodule>
 \end{verbatim}
 
-\begin{figure}[ht]
-\centering
-\caption{Module generated through parsing the XML-file}\label{fig:buffer-module}
-\includegraphics[clip=true, width=0.45\textwidth]{vbuffer}
-\end{figure}
+%\begin{figure}[ht]
+%\centering
+%\caption{Module generated through parsing the XML-file}\label{fig:buffer-module}
+%\includegraphics[clip=true, width=0.45\textwidth]{vbuffer}
+%\end{figure}
 
 The parser reads this definition and creates a new tab inside the toolbox when you select 
 the module:

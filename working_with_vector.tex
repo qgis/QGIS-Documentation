@@ -57,8 +57,10 @@ To have a closer look at this we recommend the technical specification for the s
 that can be found at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf}\index{shapefile!specification}.
 
 \subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
-{\includegraphics[width=0.7cm]{addshapefile}} To load a shapefile, start
-QGIS and click on the \toolbtntwo{addshapefile}{Add a vector layer}
+%FIXME {\includegraphics[width=0.7cm]{addshapefile}} 
+To load a shapefile, start
+QGIS and click on the 
+%FIXME \toolbtntwo{addshapefile}{Add a vector layer}
 toolbar button\index{shapefile!loading} or simply type \keystroke{V}. This same tool can be used to
 load any of the formats supported by the OGR library.
 
@@ -69,22 +71,22 @@ The selection box \selectstring{Files of type}{\ldots} allows you to preselect s
 
 You can also select the Encoding type for the shapefile if desired.
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
-   \includegraphics[clip=true, width=14cm]{shapefileopendialog}
-\end{center} 
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
+%   \includegraphics[clip=true, width=14cm]{shapefileopendialog}
+%\end{center} 
+%\end{figure}
 
 Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
 \ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{QGIS with Shapefile of Alaska loaded}\label{fig:loadedshapefile}\smallskip
-   \includegraphics[clip=true, width=17cm]{shapefileloaded09}
-\end{center} 
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{QGIS with Shapefile of Alaska loaded}\label{fig:loadedshapefile}\smallskip
+%   \includegraphics[clip=true, width=17cm]{shapefileloaded09}
+%\end{center} 
+%\end{figure}
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
 \qgistip{When you add a layer to the map, it is assigned a random color. When
@@ -119,7 +121,8 @@ Index section.
 \subsubsection{Loading a MapInfo Layer}
 \index{vector layers!MapInfo}
 
-To load a MapInfo layer, click on the \toolbtntwo{addshapefile}{Add a vector layer}
+To load a MapInfo layer, click on the 
+%FIXME \toolbtntwo{addshapefile}{Add a vector layer}
 toolbar bar button or type \keystroke{V}, change the file type filter to
 \selectstring{Files of Type}{[OGR] MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
@@ -128,7 +131,8 @@ toolbar bar button or type \keystroke{V}, change the file type filter to
 \index{vector layers!ArcInfo Coverage}
 
 Loading an ArcInfo coverage is done using the same method as with a
-shapefiles and MapInfo layers. Click on the \toolbtntwo{addshapefile}{Add a vector layer}
+shapefiles and MapInfo layers. Click on the 
+%FIXME \toolbtntwo{addshapefile}{Add a vector layer}
 toolbar button or type \keystroke{V} to open the 
 \dialog{Open on OGR Supported Vector Layer} 
 dialog and change the file type filter to
@@ -430,13 +434,13 @@ To change the symbology for a layer, simply double click on its legend
 entry and the vector \dialog{Layer Properties} dialog will be 
 shown.\index{symbology!changing}.
 
-\begin{figure}[H]
-   \begin{center}
-   \caption{Vector Layer Properties
-Dialog}\label{fig:vector_symbology}\smallskip
-   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology09} 
-\end{center}  
-\end{figure}
+%\begin{figure}[H]
+%   \begin{center}
+%   \caption{Vector Layer Properties
+%Dialog}\label{fig:vector_symbology}\smallskip
+%   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology09} 
+%\end{center}  
+%\end{figure}
 
 Since \usertext{version v0.9} there is a function to use image files stored on 
 your computer as fill pattern for vector layers.
@@ -660,12 +664,12 @@ We can now use the action. Close the \dialog{Layer Properties} dialog and zoom i
 of interest. Make sure the \filename{lakes} layer is active and identify a
 lake. In the result box you'll now see that our action is visible:
 
-\begin{figure}[H]
-   \begin{center}
-   \caption{Select feature and choose action}\label{fig:identify_action}\smallskip
-   \includegraphics[clip=true, width=8cm]{identify_action} 
-\end{center}  
-\end{figure}
+%\begin{figure}[H]
+%   \begin{center}
+%   \caption{Select feature and choose action}\label{fig:identify_action}\smallskip
+%   \includegraphics[clip=true, width=8cm]{identify_action} 
+%\end{center}  
+%\end{figure}
 
 When we click on the action, it brings up Firefox and navigates to the URL
 \url{http://www.google.com/search?q=Tustumena}. It is also possible to add further 
@@ -818,13 +822,13 @@ The attribute window will appear, allowing you to enter the information for the 
 Figure \ref{fig:vector_digitising} shows setting attributes for a fictitious
 new river in Alaska.
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{Vector Digitizing Attributes Capture
-Dialog}\label{fig:vector_digitising}\smallskip
-   \includegraphics[clip=true, width=16cm]{digitising_attributes09}
-\end{center}  
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{Vector Digitizing Attributes Capture
+%Dialog}\label{fig:vector_digitising}\smallskip
+%   \includegraphics[clip=true, width=16cm]{digitising_attributes09}
+%\end{center}  
+%\end{figure}
 
 \begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
 \qgistip{In the current version of QGIS, the attributes
@@ -1053,12 +1057,12 @@ The \dialog{New Vector Layer} dialog will be displayed as
 shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
 line or polygon).
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{Creating a New Vector Dialog}\label{fig:newvectorlayer}\smallskip
-   \includegraphics[clip=true, width=7cm]{newvectorlayer}
-\end{center} 
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{Creating a New Vector Dialog}\label{fig:newvectorlayer}\smallskip
+%   \includegraphics[clip=true, width=7cm]{newvectorlayer}
+%\end{center} 
+%\end{figure}
 
 Note that QGIS does not yet support creation of 2.5D
 features (i.e. features with X,Y,Z coordinates) or measure features. At this
@@ -1088,12 +1092,12 @@ files and PostGIS layers. For example, if you have a \filename{towns} layer with
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL. 
 
-\begin{figure}[ht]
-  \begin{center}
-    \caption{Query Builder}\label{fig:query_builder}\smallskip
-    \includegraphics[clip=true, width=14cm]{querybuilder}
-  \end{center}  
-\end{figure}
+%\begin{figure}[ht]
+%  \begin{center}
+%    \caption{Query Builder}\label{fig:query_builder}\smallskip
+%    \includegraphics[clip=true, width=14cm]{querybuilder}
+%  \end{center}  
+%\end{figure}
 
 The query builder\index{Query Builder} lists the layer's database
 fields in the list box on the left. You can get a sample of the data

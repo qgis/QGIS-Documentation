@@ -239,12 +239,12 @@ It's all contained in the \textsl{run} method.
 The first thing we need to do is use the \textbf{QInputDialog} to get the 
 name of the table to create. This is done in line 32 where we prompt for it.
 
-\begin{figure}[ht]
-\begin{center}
-  \caption{Enter new PostGIS table name}\label{fig:gettablename}\smallskip
-  \includegraphics[scale=0.8]{gettablename}
-\end{center}
-\end{figure}
+%\begin{figure}[ht]
+%\begin{center}
+%  \caption{Enter new PostGIS table name}\label{fig:gettablename}\smallskip
+%  \includegraphics[scale=0.8]{gettablename}
+%\end{center}
+%\end{figure}
 
 In line 34 we check to see if the user actually entered anything before 
 proceeding.
@@ -255,12 +255,12 @@ characters in it. If we really want to make this plugin useful, we would need
 to provide a way for the user to specify the type. In line 36 we 
 prompt the user to enter a comma delimited list of field names. 
 
-\begin{figure}[ht]
-\begin{center}
-  \caption{Enter field names for new PostGIS table}\label{fig:getfieldname}\smallskip
-  \includegraphics[scale=0.8]{getfieldname}
-\end{center}
-\end{figure}
+%\begin{figure}[ht]
+%\begin{center}
+%  \caption{Enter field names for new PostGIS table}\label{fig:getfieldname}\smallskip
+%  \includegraphics[scale=0.8]{getfieldname}
+%\end{center}
+%\end{figure}
 
 We then split this list into its components for use in constructing the SQL 
 statement (line 38). 
@@ -287,12 +287,12 @@ password. In this case, the DSN will look something like this:
 
 To get the DSN, we prompt the user with a \textbf{QInputDialog} in line 47.
 
-\begin{figure}[ht]
-\begin{center}
-  \caption{Enter DSN for connection to PostGIS database}\label{fig:getdsn}\smallskip
-  \includegraphics[scale=0.8]{getdsn}
-\end{center}
-\end{figure}
+%\begin{figure}[ht]
+%\begin{center}
+%  \caption{Enter DSN for connection to PostGIS database}\label{fig:getdsn}\smallskip
+%  \includegraphics[scale=0.8]{getdsn}
+%\end{center}
+%\end{figure}
 
 If the user enters a DSN then we can proceed with the connection to the 
 database in line 50. We get a cursor from the connection in 
@@ -354,12 +354,12 @@ QMessageBox.information(None, "Results", "Table " + str(table_name[0]) + \
 
 When the table is created, the user sees this:
 
-\begin{figure}[ht]
-\begin{center}
-  \caption{Message Box with Plugin results}\label{fig:plugin_results}\smallskip
-  \includegraphics[scale=0.8]{plugin_results}
-\end{center}
-\end{figure}
+%\begin{figure}[ht]
+%\begin{center}
+%  \caption{Message Box with Plugin results}\label{fig:plugin_results}\smallskip
+%  \includegraphics[scale=0.8]{plugin_results}
+%\end{center}
+%\end{figure}
 
 \subsubsection{Summary}
 Writing a QGIS plugin in Python is pretty easy. Some plugins won't require a

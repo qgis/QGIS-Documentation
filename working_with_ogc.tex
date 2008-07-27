@@ -139,12 +139,12 @@ Your screen should now look a bit like Figure \ref{fig:connection_wms}, which sh
 response provided by the NASA JPL OnEarth WMS server.
 
 % \begin{figure}[ht]
-\begin{figure}[ht]
-  \begin{center}
-  	\caption{Dialog for adding a WMS server, showing its available layers}\label{fig:connection_wms}
-	\includegraphics[clip=true,width=0.6\textwidth]{connection_wms}
-  \end{center}
-\end{figure}
+%\begin{figure}[ht]
+%  \begin{center}
+%  	\caption{Dialog for adding a WMS server, showing its available layers}\label{fig:connection_wms}
+%	\includegraphics[clip=true,width=0.6\textwidth]{connection_wms}
+% \end{center}
+%\end{figure}
 
 \minisec{Image Encoding}
 
@@ -389,7 +389,9 @@ wfs&REQUEST=GetCapabilities
 
 \begin{enumerate}
   \item Make sure the WFS plugin is loaded; if not, open the Plugin Manager and load it
-  \item Click on the \toolbtntwo{wfs-icon}{Add WFS Layer} tool on the plugins toolbar
+  \item Click on the 
+  %FIXME \toolbtntwo{wfs-icon}{Add WFS Layer} 
+  tool on the plugins toolbar
   \item Click on \button{New} 
   \item Enter \inputtext{Name}{DM Solutions} as the name
   \item Enter the URL (see previous page)
@@ -402,12 +404,12 @@ wfs&REQUEST=GetCapabilities
   \item Wait patiently for the features to appear
 \end{enumerate}
 
-\begin{figure}[ht]
- \begin{center}
-  \caption{Adding a WFS layer}\label{fig:wfs_dmsolutions}
-  \includegraphics[clip=true,width=\textwidth]{wfs_dmsolutions}
- \end{center}
-\end{figure}
+%\begin{figure}[ht]
+% \begin{center}
+%  \caption{Adding a WFS layer}\label{fig:wfs_dmsolutions}
+%  \includegraphics[clip=true,width=\textwidth]{wfs_dmsolutions}
+% \end{center}
+%\end{figure}
 
 You'll notice the download progress is visualized in the left bottom of the QGIS main window. 
 Once the layer is loaded, you can identify and select a province or two and view the 

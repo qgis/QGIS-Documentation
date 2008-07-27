@@ -17,12 +17,12 @@ To use the map composer, first add the layers you
 want to print to QGIS. The layers should be rendered and symbolized to your
 liking prior to composing the map. 
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{Map Composer}\label{fig:map_composer_blank}\smallskip
-   \includegraphics[clip=true, width=14cm]{map_composer_blank09}
-\end{center}  
-\end{figure}
+%\begin{figure}[ht]
+%   \begin{center}
+%   \caption{Map Composer}\label{fig:map_composer_blank}\smallskip
+%   \includegraphics[clip=true, width=14cm]{map_composer_blank09}
+%\end{center}  
+%\end{figure}
 
 Opening the map composer provides you with a blank canvas to which you can add
 the current map view, legend, scalebar, and text. Figure
@@ -42,7 +42,8 @@ properties and in the case of the map, its own extent.
 \subsubsection{Adding a Map to the Composer}
 
 To add the QGIS map canvas to the map composer, click on the
-\toolbtntwo{composer_add_image}{Add a new map} button in toolbar. Drag a rectangle on the composer canvas to add the
+%FIXME \toolbtntwo{composer_add_image}{Add a new map} 
+button in toolbar. Drag a rectangle on the composer canvas to add the
 map. You can resize the map later by clicking on the \button{Select/move item}
 button, clicking on the map, and dragging one of the handles in the corner of
 the map. With the map selected, you can also resize the map by specifying the
@@ -64,37 +65,43 @@ view to a specific scale:
  
 Already existing QGIS templates can be used to easily load and adapt map
 layouts. To open an existing template, click on the
-\toolbtntwo{composer_open_template}{Open Template} button. Choose a template and
+%FIXME \toolbtntwo{composer_open_template}{Open Template} 
+button. Choose a template and
 customize its appearance. 
 
 To add a logo, north arrow or any  kind of image to the composer, click on
-the \toolbtntwo{composer_add_image}{Add Image} button. The image will 
+the 
+%FIXME \toolbtntwo{composer_add_image}{Add Image} 
+button. The image will 
 be placed on the composer canvas and you can move it where you like. 
 
 A legend can be added to the composer canvas and customized to show only the
 desired layers. To add a legend, click on the
-\toolbtntwo{composer_add_legend08}{Add Vector Legend} button. The legend will be
+%FIXME \toolbtntwo{composer_add_legend08}{Add Vector Legend} 
+button. The legend will be
 placed on the composer canvas and you can move it where you like. Click on
 the \tab{Items} tab to customize the appearance of the legend, including
 which layers are shown.
 
 To add a scalebar to the composer, click on the
-\toolbtntwo{composer_add_scalebar08}{Add Scalebar} button. Use the \tab{Item}
+%FIXME \toolbtntwo{composer_add_scalebar08}{Add Scalebar} 
+button. Use the \tab{Item}
 tab to customize the segment size, number of segments, scalebar units, size,
 and font for the scalebar.
 
 You can add text labels to the composer by clicking on the
-\toolbtntwo{composer_add_label}{Add New Label} button. Use the \tab{Item} tab
+%FIXME \toolbtntwo{composer_add_label}{Add New Label} 
+button. Use the \tab{Item} tab
 while the text is selected to customize the settings or change the default text.
 
 Figure \ref{fig:map_composer_complete} shows the map composer after adding
 each type of map element.
-\begin{figure}[h]
-   \begin{center}
-   \caption{Map Composer with map view, legend, scalebar, and text added}\label{fig:map_composer_complete}\smallskip
-   \includegraphics[clip=true, width=14cm]{map_composer09}
-\end{center}  
-\end{figure}
+%\begin{figure}[h]
+%   \begin{center}
+%   \caption{Map Composer with map view, legend, scalebar, and text added}\label{fig:map_composer_complete}\smallskip
+%   \includegraphics[clip=true, width=14cm]{map_composer09}
+%\end{center}  
+%\end{figure}
 
 \subsubsection{Other Features}
 
@@ -112,14 +119,18 @@ The map composer allows you to print the map to a printer, export to a PNG or
 export to SVG. Each of these functions is available from the composer toolbar.
 
 To save the composer canvas as a templates, click on the
-\toolbtntwo{composer_save_template}{Save Template As} button. Browse to the directory 
+%\toolbtntwo{composer_save_template}{Save Template As} 
+button. Browse to the directory 
 you like and save a template to use it again for another map canvas.
 
 It is possible to export the result as an image by clicking on the
-\toolbtntwo{composer_export_image}{Export as image} button. 
+%FIXME \toolbtntwo{composer_export_image}{Export as image} 
+button. 
 
 To export the composer canvas as an  SVG (Scalable Vector Graphic), click on
-the \toolbtntwo{composer_export_svg}{Export as SVG} button. \textbf{Note:}
+the 
+%FIXME \toolbtntwo{composer_export_svg}{Export as SVG} 
+button. \textbf{Note:}
 Currently the SVG output is very basic. This is not a QGIS problem, but a
 problem of the underlaying Qt library. This will be sorted out in future versions.
  
