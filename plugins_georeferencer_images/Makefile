@@ -10,10 +10,8 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=choose_points.eps\
-#	select_image.eps\
-#	georeferencer.eps\
-#	result_map.eps\
+PNG=icon.eps\
+	pencil.eps\
 			
 ##### TARGETS #####
 

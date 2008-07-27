@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=dialog.eps\
+PNG=icon.eps\
 #	ellipsis.eps\
 #	file_selected.eps\
 #	file_selected1.eps\

@@ -11,11 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=download.eps\
-#	icon.eps\
-#	importdialog.eps\
-#	importmenu.eps\
-#	loadgpx.eps	
+PNG=icon.eps\
 	
 	
 ##### TARGETS #####

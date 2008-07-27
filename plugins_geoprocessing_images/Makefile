@@ -10,7 +10,7 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=dialog.eps\
+PNG=icon_buffer.eps\
 	
 	
 ##### TARGETS #####
