@@ -65,7 +65,7 @@ load any of the formats supported by the OGR library.
 Clicking on the tool brings up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
 a shapefile or other supported data source. 
-The selection box \selectstring{File of type}{\ldots} allows you to preselect some OGR supported file formats.
+The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
@@ -121,7 +121,7 @@ Index section.
 
 To load a MapInfo layer, click on the \toolbtntwo{addshapefile}{Add a vector layer}
 toolbar bar button or type \keystroke{V}, change the file type filter to
-\selectstring{File Type}{MapInfo (*.mif
+\selectstring{Files of Type}{[OGR] MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
 
 \subsubsection{Loading an ArcInfo Coverage}
@@ -132,7 +132,7 @@ shapefiles and MapInfo layers. Click on the \toolbtntwo{addshapefile}{Add a vect
 toolbar button or type \keystroke{V} to open the 
 \dialog{Open on OGR Supported Vector Layer} 
 dialog and change the file type filter to
-\selectstring{File Type}{All files (*.*)}. Navigate to the coverage directory and select one
+\selectstring{Files of Type}{All files (*.*)}. Navigate to the coverage directory and select one
 of the following files (if present in your coverage):
 
 \begin{itemize}
@@ -580,8 +580,13 @@ field for its value. When the action is invoked, the \%\% will be replaced by
 the value of the selected field in the identify results or attribute table.
 
 \minisec{Using Actions}\index{actions!using}\label{label_usingactions}
-Actions can be invoked from either the \dialog{Identify Results} dialog or the
-\toolbtntwo{mActionOpenTable}{Attribute table} dialog. To invoke an action, 
+Actions can be invoked from either the \dialog{Identify Results} dialog or an
+ \dialog{Attribute Table} dialog. 
+(Recall that these dialogs can be opened by clicking
+\toolbtntwo{mActionOpenTable}{Identify Features}
+or
+\toolbtntwo{mActionOpenTable}{Open Table}.)
+To invoke an action, 
 right click on the
 record and choose the action from the popup menu. Actions are listed in the popup
 menu by the name you assigned when defining the actions. Click on the action you
@@ -589,7 +594,7 @@ wish to invoke.
 
 If you are invoking an action that uses the \%\% notation, right-click on the
 field value in the \dialog{Identify Results} dialog or the
-\toolbtntwo{mActionOpenTable}{Attribute table} that you wish to pass to the application or script.
+\dialog{Attribute Table} dialog that you wish to pass to the application or script.
 
 Here is another example that pulls data out of a vector layer and inserts them
 into a file using bash and the \usertext{echo} command (so it will only work
