@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=quickpring.eps\
+PNG=quickprint.eps\
 	
 ##### TARGETS #####
 
