@@ -121,7 +121,7 @@ Index section.
 
 To load a MapInfo layer, click on the \toolbtntwo{addshapefile}{Add a vector layer}
 toolbar bar button or type \keystroke{V}, change the file type filter to
-\fieldname{MapInfo (*.mif
+\selectstring{File Type}{MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
 
 \subsubsection{Loading an ArcInfo Coverage}
@@ -132,7 +132,7 @@ shapefiles and MapInfo layers. Click on the \toolbtntwo{addshapefile}{Add a vect
 toolbar button or type \keystroke{V} to open the 
 \dialog{Open on OGR Supported Vector Layer} 
 dialog and change the file type filter to
-\fieldname{All files (*.*)}. Navigate to the coverage directory and select one
+\selectstring{File Type}{All files (*.*)}. Navigate to the coverage directory and select one
 of the following files (if present in your coverage):
 
 \begin{itemize}
@@ -159,7 +159,8 @@ To use PostGIS layers you must:\index{PostgreSQL!loading layers}
 not already defined).\index{PostgreSQL!connection}
 \item Connect to the database.
 \item Select the layer to add to the map.
-\item Optionally provide a SQL \sqltable{where} clause to define which features
+\item Optionally provide a SQL \usertext{where}
+clause to define which features
 to load from the layer.
 \item Load the layer.
 \end{itemize}
@@ -459,8 +460,8 @@ attribute table and select the \button{Advanced ...} button.
 
 The \tab{Metadata} tab contains information about the layer, including specifics
 about the type and location, number of features, feature type, and the editing
-capabilities. The \fieldname{projection} and \fieldname{attribute} fields and 
-their data type are displayed 
+capabilities. The \guiheading{Layer Spatial Reference System} section, providing projection information, and the \guiheading{Attribute field info} section,
+listing fields and their data types, are displayed 
 on this tab. This is a quick way to get information about the layer.
 
 \subsubsection{Labels Tab}
@@ -478,9 +479,10 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Open the \dialog{Layer Properties} dialog.
 \item Click on the \tab{Labels} tab.
 \item Check the \checkbox{Display labels} checkbox to enable labeling.
-\item Choose the field to label with. We'll use \fieldname{NAMES}.
+\item Choose the field to label with. 
+  We'll use \selectstring{Field containing labels}{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
-  used each time QGIS encounters a lake with no value in the \fieldname{NAMES} field.
+  used each time QGIS encounters a lake with no value in the \guilabel{NAMES} field.
 \item Click \button{Apply}.
 \end{enumerate} 
 
@@ -566,7 +568,7 @@ Two example actions are shown below:\index{actions!examples}
 
 
 In the first example, the web browser konqueror is invoked and passed a URL to
-open. The URL performs a Google search on the value of the \fieldname{nam} field
+open. The URL performs a Google search on the value of the \usertext{nam} field
 from our vector layer. Note that the application or script called by the
 action must be in the path or you must provided the full path. To be sure, we could
 rewrite the first example as: \usertext{/opt/kde3/bin/konqueror
@@ -592,8 +594,8 @@ field value in the \dialog{Identify Results} dialog or the
 Here is another example that pulls data out of a vector layer and inserts them
 into a file using bash and the \usertext{echo} command (so it will only work
 \nix or perhaps \osx). The layer in question has fields for a species name
-\fieldname{taxon\_name}, latitude \fieldname{lat} and longitude
-\fieldname{long}. I would like to be able to
+\usertext{taxon\_name}, latitude \usertext{lat} and longitude
+\usertext{long}. I would like to be able to
 make a spatial selection of a localities and export these field values to a
 text file for the selected record (shown in yellow in the QGIS map area). Here is
 the action to achieve this:
@@ -617,7 +619,7 @@ As an exercise we create an action that does a Google search on the
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
 little effort we see that the format is: \url{http://google.com/search?q=qgis},
-where \fieldname{qgis} is the search term. Armed with this information, we can
+where \usertext{qgis} is the search term. Armed with this information, we can
 proceed:
 
 \begin{itemize}
@@ -632,12 +634,12 @@ proceed:
 \item Following the name of the external application, add the URL used for
   doing a Google search, up to but not included the search term:
   \url{http://google.com/search?q=}
-\item The text in the \fieldname{Action} field should now look like this:\\
+\item The text in the \guilabel{Action} field should now look like this:\\
   \usertext{firefox \url{http://google.com/search?q=}}
 \item Click on the drop-down box containing the field names for the
-  \fieldname{lakes} layer. It's located just to the right of the
+  \usertext{lakes} layer. It's located just to the right of the
   \button{Insert Field} button.
-\item From the drop-down box, select \fieldname{NAMES} and click \button{Insert Field}.
+\item From the drop-down box, select \selectstring{}{NAMES} and click \button{Insert Field}.
 \item Your action text now looks like this:\\ \usertext{firefox
   \url{http://google.com/search?q=\%NAMES}}
 \end{itemize}
@@ -1064,7 +1066,7 @@ layers.
 
 To complete the creation of the new layer, add the desired attributes by
 clicking on the \button{Add} button and specifying a name and type for the
-attribute. Only \fieldname{real}, \fieldname{integer}, and \fieldname{string} attributes are supported. Once you
+attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and \selectstring{Type}{string} attributes are supported. Once you
 are happy with the attributes, click \button{OK} and provide a name for the shapefile.
 QGIS will automatically add a \filename{.shp} extension to the name you specify.  Once
 the layer has been created, it will be added to the map and you can edit it in
@@ -1076,8 +1078,8 @@ the same way as described in Section \ref{sec:edit_existing_layer} above.
 The Query Builder allows you to define a subset of a table and display
 it as a layer in QGIS. It can be used for all OGR supported formats, GRASS 
 files and PostGIS layers. For example, if you have a \filename{towns} layer with a
-\fieldname{population} field you could select only larger towns by entering
-\sqltable{population > 100000} in the SQL box of the query builder. Figure
+\usertext{population} field you could select only larger towns by entering
+\usertext{population > 100000} in the SQL box of the query builder. Figure
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL. 
 
