@@ -1,19 +1,23 @@
 #convenient Makefile
 #
 #targets:
-#  make           - builds the text and images
-#  make text	  - builds the text only
-#  make refcheck  - check \label{} and \ref{} and friends for consistency
-#                   Result is in "latex_refs.log"
-#  make clean     - removed Latex' auxiliary files and finalpix
-#  make cleanpics - remove created pics from subdirs
-#  make pics	  - create pics
-#  make ps        - create PS file
-#  make pdf       - create PDF file
-#  make html      - create HTML file
-#  make changelog - creates ChangeLog
+#  make            - builds the text and images
+#  make text	   - builds the text only
+#  make refcheck   - check \label{} and \ref{} and friends for consistency
+#                    Result is in "latex_refs.log"
+#  make clean      - removed Latex' auxiliary files and finalpix
+#  make cleanpics  - remove created pics from subdirs
+#  make pics	   - create pics
+#  make ps         - create PS file
+#  make pdf        - create PDF file
+#  make html       - create HTML file
+#  make updateicon - update png icons from QGIS source
+#  make changelog  - creates ChangeLog
 
+# Name of latex main file to compile
 FILE=user_guide
+# Path to QGIS source plugin folder for 'make updateicon'
+QGISPLUGINSOURCE=/software/qgis_head/src/plugins
 
 all: 
 	make pics
@@ -133,3 +137,22 @@ cleanpics:
 	(cd ./creating_applications_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./plugins_screenies && make clean)
+
+# Update icons from qgis source if necessary
+updateicon:
+	(cd ./images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/../../images/themes/default/*.png .)
+	(cd ./plugins_add_wfs_layer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/wfs/*.png .)	
+	(cd ./plugins_delimited_text_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/delimited_text/*.png .)
+	(cd ./plugins_decorations_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/north_arrow/*.png . \
+	&& cp $(QGISPLUGINSOURCE)/copyright_label/*.png . && cp $(QGISPLUGINSOURCE)/scale_bar/*.png .)
+#	(cd ./plugins_geoprocessing_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
+	(cd ./plugins_georeferencer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/georeferencer/*.png .)
+	(cd ./plugins_gps_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/gps_importer/*.png .)
+	(cd ./plugins_grass_module_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/grass/themes/default/*.png .)
+	(cd ./plugins_graticule_creator_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/grid_maker/*.png .)
+#	(cd ./plugins_installer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
+#	(cd ./plugins_mapserver_export_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
+	(cd ./plugins_quick_print_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/quick_print/*.png .)
+	(cd ./plugins_spit_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/spit/*.png .)
+#	(cd ./plugins_python_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
+
