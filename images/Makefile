@@ -112,11 +112,8 @@ PNG=\
   mIconSymbology.eps\
   mIconUnknownLayerType.eps\
   mIconWaitingForLayerType.eps\
-  mMapserverExport.eps\
-	nix.eps\
-	win.eps\
-	osx.eps\
-		
+  mMapserverExport.eps
+  		
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)

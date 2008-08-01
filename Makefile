@@ -74,7 +74,7 @@ pics:
 	(cd ./plugins_gps_images && make)
 	(cd ./plugins_grass_module_images && make)
 	(cd ./plugins_graticule_creator_images && make)
-#	(cd ./plugins_installer_images && make)
+	(cd ./plugins_installer_images && make)
 	(cd ./plugins_maplayer_images && make)
 #	(cd ./plugins_mapserver_export_images && make)
 	(cd ./plugins_quick_print_images && make)
