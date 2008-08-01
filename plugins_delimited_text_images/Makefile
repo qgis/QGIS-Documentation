@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=icon.eps\
+PNG=delimited_text.eps\
 #	ellipsis.eps\
 #	file_selected.eps\
 #	file_selected1.eps\
@@ -27,7 +27,7 @@ all: $(PNG) $(JPG)
 	if [ ! -d ../finalpix/ ]; then mkdir ../finalpix; fi
 	#please don't use move:
 	cp *.eps ../finalpix/
-
+	
 #$(EPS):	%.eps: %.fig
 #	fig2dev -L eps $< > $@
 

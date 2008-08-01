@@ -11,9 +11,9 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=copyrighticon.eps\
-	northarrowicon.eps\
-	scalebaricon.eps\
+PNG=copyright_label.eps\
+	north_arrow.eps\
+	scale_bar.eps\
 	
 ##### TARGETS #####
 
