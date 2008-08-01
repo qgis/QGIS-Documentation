@@ -38,5 +38,5 @@
 	#convert -geometry 300x -depth 1 $< $@
 #	convert $< $@
 
-#clean:
-#	rm -f *.bak *~ *.pdf $(PNG) $(JPG)
+clean:
+	rm -f *.bak *~ *.pdf $(PNG) $(JPG)

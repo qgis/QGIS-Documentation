@@ -71,6 +71,7 @@ The selection box \selectstring{Files of type}{\ldots} allows you to preselect s
 
 You can also select the Encoding type for the shapefile if desired.
 
+% FIXME: new screenie here
 %\begin{figure}[ht]
 %   \begin{center}
 %   \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
@@ -81,6 +82,7 @@ You can also select the Encoding type for the shapefile if desired.
 Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
 \ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
 
+% FIXME: new screenie here
 %\begin{figure}[ht]
 %   \begin{center}
 %   \caption{QGIS with Shapefile of Alaska loaded}\label{fig:loadedshapefile}\smallskip
@@ -352,7 +354,19 @@ You can see this by typing
 ogrinfo --formats | grep -i post
 \end{verbatim}
 
-\subsubsection{Improving Performance}\label{label_improve}
+If you like to use PostgreSQLs \filename{COPY}-command instead of the default
+\filename{INSERT INTO} method you can export the following
+environment-variable (at least available on \nix and \osx):
+\begin{verbatim}
+  export PG_USE_COPY=YES
+\end{verbatim}
+
+\filename{ogr2ogr} does not create spatial indexes like \filename{shp2pgsl}
+does. You need to create them manually using the normal SQL-command
+\filename{CREATE INDEX} afterwards as an extra step (as described in the next
+section \ref{label_improve}).
+
+\subsubsection{Improving Performance} \label{label_improve}
 
 Retrieving features from a PostgreSQL database can be time consuming,
 especially over a network. You can improve the drawing performance of
@@ -415,7 +429,7 @@ QGIS supports a number of symbology renderers to control how
 vector features are displayed. Currently the following renderers
 are available:
 
-\begin{description}
+\begin{description} 
     \item[Single symbol] - a single style is applied to every
     object in the layer.\index{vector layers!renderers!single symbol}
     \item[Graduated symbol] - objects within the layer are
@@ -432,8 +446,9 @@ color}
 
 To change the symbology for a layer, simply double click on its legend 
 entry and the vector \dialog{Layer Properties} dialog will be 
-shown.\index{symbology!changing}.
+shown.\index{symbology!changing}
 
+% FIXME: new screenie here
 %\begin{figure}[H]
 %   \begin{center}
 %   \caption{Vector Layer Properties
@@ -442,19 +457,42 @@ shown.\index{symbology!changing}.
 %\end{center}  
 %\end{figure}
 
-Since \usertext{version v0.9} there is a function to use image files stored on 
-your computer as fill pattern for vector layers.
+% FIXME: outdated
+% Since \usertext{version v0.9} there is a function to use image files stored on 
+% your computer as fill pattern for vector layers.
+
+\minisec{Style Options} \label{sec:style_options} \index{vector layers!styles}
+Within this dialog you can style your vector layer. Depending on the selected
+rendering option you have the possibility to also classify your mapfeatures.
+
+At least the following styling options apply for nearly all renderes:
+\begin{description}
+ \item[Outline style] - pen-style for your outline of your feature. you can
+ also set this to 'no pen'.
+ \item[Outline color] - color of the ouline of your feature
+ \item[Outline width] - width of your features
+ \item[Fill color] - fill-color of your features.
+ \item[Fill style] - Style for filling. Beside the given brushes you can
+ select \selectstring{Fill style}{? texture} and click the \browsebutton
+ button for selecting your own fill-style. Currently the fileformats
+ \filename{*.jpeg, *.xpm, and *.png} are supported.
+\end{description}
+
+Once you have styled your layer you also could save your layer-style to a
+separate file (with \filename{*.qml}-ending).
+Therefor use the button \button{Save Style \ldots}. No need to say that
+\button{Load Style \ldots} loads your saved layer-style-file.
 
 \minisec{Vector transparency} \label{sec:vect_transparency} \index{vector layers!transparency}
 QGIS \CURRENT allows to set a transparency for every vector layer. This can be done with
-the slider right below the legend type (see fig. \ref{fig:vector_symbology}).
+the slider \slider{Transparency}{0}{20mm} inside the tab \tab{symbology} (see fig. \ref{fig:vector_symbology}).
 This is very useful for overlaying several vector layers.
 
 \subsubsection{General Tab}
 The \tab{General} tab is essentially like that of the raster dialog. It allows you
 to change the display name, set scale dependent rendering options, create a spatial 
 index of the vector file (only for OGR supported formats and PostGIS) and view or
-change the projection.
+change the projection of the specific vetor layer.
 
 The \button{Query Builder} button allows you to create a subset of the features 
 in the layer - but this button currently only is available when you open the 
@@ -471,7 +509,7 @@ on this tab. This is a quick way to get information about the layer.
 \subsubsection{Labels Tab}
 
 The \tab{Labels} tab allows you to enable labeling features and control a number of
-options related to placement, style and buffering.
+options related to fonts, placement, style, alignment and buffering.
 
 We will illustrate this by labelling the lakes shapefile of the
 \filename{qgis\_example\_dataset}:
@@ -484,7 +522,7 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Click on the \tab{Labels} tab.
 \item Check the \checkbox{Display labels} checkbox to enable labeling.
 \item Choose the field to label with. 
-  We'll use \selectstring{Field containing labels}{NAMES}.
+  We'll use \selectstring{Field containing label}{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
   used each time QGIS encounters a lake with no value in the \guilabel{NAMES} field.
 \item Click \button{Apply}.
@@ -493,21 +531,24 @@ We will illustrate this by labelling the lakes shapefile of the
 Now we have labels. How do they look? They are probably too big and poorly
 placed in relation to the marker symbol for the lakes.
 
-Click on the \tab{Font Style} tab and use the \button{Font} and \button{Color}
-buttons to set the font and color.
+Select the \tab{Font} entry and use the \button{Font} and \button{Color}
+buttons to set the font and color. You can also change the angle and the
+placement of the text-label.
 
 To change the position of the font relative to the feature:
 
 \begin{enumerate} 
-\item Click on the \tab{Font Alignment} tab.
+\item Click on the \tab{Font} entry.
 \item Change the placement by selecting one of the radio buttons
 in the \classname{Placement} group. To fix our labels, choose the
 \radiobuttonon{Right} radio button.
+\item the \classname{Font size units} allows you to select between
+\radiobuttonon{Points} or \radiobuttonon{Map units}.
 \item Click \button{Apply} to see your changes without closing the dialog.
 \end{enumerate} 
 
 Things are looking better, but the labels are still too close to the marker. To
-fix this we can use the options on the \tab{Position} tab. Here we can add
+fix this we can use the options on the \tab{Position} entry. Here we can add
 offsets for the X and Y directions. Adding an X offset of 5 will move our
 labels off the marker and make them more readable. Of course if your marker
 symbol or font is larger, more of an offset will be required.
@@ -520,21 +561,25 @@ lakes labels:
 \item Click the \tab{Buffer} tab.
 \item Click the \checkbox{Buffer Labels?} checkbox to enable buffering.
 \item Choose a size for the buffer using the spin box.
-\item Choose a color by clicking on \button{Colour} and choosing your
-  favorite from the color selector.
+\item Choose a color by clicking on \button{Color} and choosing your
+  favorite from the color selector. You can also set some transparency for the
+  buffer if you prefer.
 \item Click \button{Apply} to see if you like the changes.
 \end{enumerate} 
 
 If you aren't happy with the results, tweak the settings and then test again
 by clicking \button{Apply}.
 
-A buffer of 2 points seems to give a good result.
+A buffer of 1 points seems to give a good result.
 Notice you can also specify the buffer size in map units if that works out
 better for you.
 
-The remaining tabs on the \tab{Label} tab allow you control the appearance of the
-labels using attributes stored in the layer. The \tab{Data} tabs allow you to
+The remaining entries inside the \tab{Label} tab allow you control the appearance of the
+labels using attributes stored in the layer. The entries beginning with \tab{Data defined} allow you to
 set all the parameters for the labels using fields in the layer.
+
+Not that the \tab{Label} tab provides a \classname{preview-box} where your
+selected label is shown.
 
 \subsubsection{Actions Tab}\index{actions}\label{label_actions}
 
@@ -569,7 +614,6 @@ Two example actions are shown below:\index{actions!examples}
   \item \usertext{konqueror http://www.google.com/search?q=\%nam}
   \item \usertext{konqueror http://www.google.com/search?q=\%\%}
 \end{itemize}
-
 
 In the first example, the web browser konqueror is invoked and passed a URL to
 open. The URL performs a Google search on the value of the \usertext{nam} field
@@ -631,7 +675,7 @@ little effort we see that the format is: \url{http://google.com/search?q=qgis},
 where \usertext{qgis} is the search term. Armed with this information, we can
 proceed:
 
-\begin{itemize}
+\begin{enumerate}
 \item Make sure the \filename{lakes} layer is loaded.
 \item Open the \dialog{Layer Properties} dialog by double-clicking on the layer in the
   legend or right-click and choose \dropmenuopt{Properties} from the popup menu.
@@ -646,12 +690,12 @@ proceed:
 \item The text in the \guilabel{Action} field should now look like this:\\
   \usertext{firefox \url{http://google.com/search?q=}}
 \item Click on the drop-down box containing the field names for the
-  \usertext{lakes} layer. It's located just to the right of the
+  \usertext{lakes} layer. It's located just to the left of the
   \button{Insert Field} button.
 \item From the drop-down box, select \selectstring{}{NAMES} and click \button{Insert Field}.
 \item Your action text now looks like this:\\ \usertext{firefox
   \url{http://google.com/search?q=\%NAMES}}
-\end{itemize}
+\end{enumerate}
  
 This completes the action and it is ready to use. The final text of the action
 should look like this:
@@ -664,6 +708,7 @@ We can now use the action. Close the \dialog{Layer Properties} dialog and zoom i
 of interest. Make sure the \filename{lakes} layer is active and identify a
 lake. In the result box you'll now see that our action is visible:
 
+% FIXME: needs to be replaced
 %\begin{figure}[H]
 %   \begin{center}
 %   \caption{Select feature and choose action}\label{fig:identify_action}\smallskip
@@ -688,6 +733,7 @@ create an action to launch a viewer to display the image. You could also use
 actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
 
+% FIXME: Note for SH: please continue editing this file here (SH:20080801)
 \subsection{Editing}\index{editing}
 
 QGIS supports basic capabilities for editing spatial data.  Before reading any
