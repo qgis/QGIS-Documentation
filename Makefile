@@ -91,7 +91,7 @@ pics:
 #	(cd ./creating_applications_screenies && make)
 #	(cd ./help_and_support_screenies && make)
 #	(cd ./plugins_screenies && make)
-	(cd ./operation_system_icons && make)
+	(cd ./operating_system_icons && make)
 
 # make html
 # requires: latex2html oder tex4ht
