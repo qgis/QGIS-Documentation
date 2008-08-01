@@ -139,6 +139,7 @@ cleanpics:
 	(cd ./creating_applications_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./plugins_screenies && make clean)
+        (cd ./operating_system_icons && make clean)
 
 # Update icons from qgis source if necessary
 updateicon:
