@@ -66,7 +66,7 @@ They are not managed by the Plugin Manager but are used behind the scenes when a
 
 \subsubsection{Core Plugins}\label{sec:core_plugins}\index{plugins!core}
 
-QGIS currently contains 9 core plugins that can be loaded using the Plugin Manager.
+QGIS currently contains 12 core plugins that can be loaded using the Plugin Manager.
 Table \ref{tab:core_plugins} lists each of the core plugins along with a description of their purpose and the toolbar-icon.
 Note the GRASS plugin is not included below because it installs its own toolbar (see section \ref{sec:grass} for a discussion of available features in the GRASS plugin).
 
@@ -80,36 +80,42 @@ Note the GRASS plugin is not included below because it installs its own toolbar 
  \begin{tabular}{|l|l|p{4in}|}
 \hline \textbf{Icon} & \textbf{Plugin} & \textbf{Description} \\
 \hline 
-%FIXME \includegraphics[width=0.7cm]{copyright_label}
- & Copyright Label \index{plugins!copyright}& Display a copyright label on the map canvas\\
-\hline 
-%FIXME \includegraphics[width=0.7cm]{delimited_text}
+% WHICH ICON TO CHOOSE HERE?
+\includegraphics[width=0.7cm]{plugins_delimited_text_images/delimited_text}
  & Delimited Text \index{plugins!delimited text}& Load a delimited text file containing x,y coordinates as a point layer \\
 \hline 
-%FIXME \includegraphics[width=0.7cm]{gps_importer}
+\includegraphics[width=0.7cm]{plugins_decorations_images/copyright_label}
+ & Copyright Label \index{plugins!copyright}& Display a copyright label on the map canvas\\
+\hline 
+\includegraphics[width=0.7cm]{plugins_gps_images/gps_importer}
  & GPS Tools \index{plugins!gps}& Load and display GPS data \\
-\hline 
-%FIXME \includegraphics[width=0.7cm]{grid_maker}
+\hline
+% WHICH ICON TO CHOOSE HERE?
+\includegraphics[width=0.7cm]{plugins_grass_module_images/grasslogo}
+ & GRASS Toolbox \index{plugins!grass}& The most important GRASS functionality \\
+\hline
+\includegraphics[width=0.7cm]{plugins_georeferencer_images/georeferencer}
+ & Georeferencer \index{plugin!georeferencer} & Georeferencing rasterlayers \\
+\hline
+\includegraphics[width=0.7cm]{plugins_graticule_creator_images/grid_maker}
  & Graticule Creator \index{plugins!graticule}& Create a latitude/longitude grid and save as a shapefile\\
-\hline 
-%FIXME \includegraphics[width=0.7cm]{scale_bar}
+\hline
+\includegraphics[width=0.7cm]{plugins_decorations_images/north_arrow}
+& North Arrow \index{plugins!north arrow}& Add a north arrow to the map canvas\\
+\hline
+\includegraphics[width=0.7cm]{plugins_geoprocessing_images/icon_buffer}
+ & PostgreSQL Geoprocessing \index{plugins!geoprocessing}& Buffer a PostGIS layer \\
+\hline
+\includegraphics[width=0.7cm]{plugins_quick_print_images/quick_print}
+ & Quick Print \index{plugins!quickprint}& Quickly print a map \\
+\hline
+\includegraphics[width=0.7cm]{plugins_spit_images/spit}
+ & SPIT \index{plugins!spit}& Shapefile to PostGIS Import Tool - import shapefiles into PostgreSQL\\
+\hline
+\includegraphics[width=0.7cm]{plugins_decorations_images/scale_bar}
  & Scalebar \index{plugins!scalebar}& Add a scalebar to the map canvas\\
 \hline 
-%FIXME \includegraphics[width=0.7cm]{north_arrow}
-& North Arrow \index{plugins!north arrow}& Add a north arrow to the map canvas\\
-\hline 
-%FIXME \includegraphics[width=0.7cm]{buffer}
- & PostgreSQL Geoprocessing \index{plugins!geoprocessing}& Buffer a PostGIS layer \\
-\hline 
-FIXME \includegraphics[width=0.7cm]{spit} & SPIT \index{plugins!SPIT}& Shapefile to PostGIS Import Tool - import shapefiles into PostgreSQL\\
-\hline
-%FIXME \includegraphics[width=0.7cm]{georeferencer}
- & Georeferencer\footnote{The
-georeferencer-plugin is only available if you have installed the
-gsl-libraries and headers during compile-time. Please check the
-installation-chapter \ref{label_install} for details.} \index{plugin!Georeferencer} & Georeferencing rasterlayers \\
-\hline
-%FIXME \includegraphics[width=0.7cm]{mIconAddWfsLayer}
+\includegraphics[width=0.7cm]{plugins_add_wfs_layer_images/mIconAddWfsLayer}
  & WFS & Load and display WFS layer \\
 \hline
 \end{tabular}
