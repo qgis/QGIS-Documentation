@@ -91,7 +91,8 @@ pics:
 #	(cd ./creating_applications_screenies && make)
 #	(cd ./help_and_support_screenies && make)
 #	(cd ./plugins_screenies && make)
-	
+	(cd ./operation_system_icons && make)
+
 # make html
 # requires: latex2html oder tex4ht
 # http://www.cse.ohio-state.edu/~gurari/TeX4ht/mn.html
@@ -148,7 +149,7 @@ updateicon:
 #	(cd ./plugins_geoprocessing_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
 	(cd ./plugins_georeferencer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/georeferencer/*.png .)
 	(cd ./plugins_gps_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/gps_importer/*.png .)
-	(cd ./plugins_grass_module_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/grass/themes/default/*.png .)
+	(cd ./plugins_grass_module_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/grass/themes/default/*.png $(QGISPLUGINSOURCE)/grass/modules/*.png .)
 	(cd ./plugins_graticule_creator_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/grid_maker/*.png .)
 #	(cd ./plugins_installer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
 #	(cd ./plugins_mapserver_export_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
