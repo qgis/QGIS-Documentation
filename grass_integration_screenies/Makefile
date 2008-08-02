@@ -12,6 +12,7 @@
 	nextfile.eps
 
 PNG=create_grass_location.eps\
+	grasslogo.eps\
 #	grassedit.eps\
 #	grasstoolbar.eps\
 #	grassbrowser.eps\

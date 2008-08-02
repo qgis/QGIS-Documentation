@@ -12,7 +12,6 @@
 #	nextfile.eps
 
 PNG=nviz.1.eps\
-grasslogo.eps\
 grass_add_map.eps\
 grass_add_raster.eps\
 grass_add_vector.eps\
