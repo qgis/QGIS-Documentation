@@ -1,21 +1,15 @@
-% vim: set textwidth=78 autoindent:
-    
 \subsection{Using the Delimited Text Plugin}\label{label_dltext}    
 
-The Delimited Text plugin allows you to load a delimited text file as a layer
-in QGIS. 
+The Delimited Text plugin allows you to load a delimited text file as a layer in QGIS. 
     
 \subsubsection{Requirements}
 
 To view a delimited text file as layer, the text file must contain:
 
 \begin{enumerate}      
-\item A delimited header row of field names. This must be the first line in
-the text file.
-\item The header row must contain an X and Y field. These fields can have any
-name.
-\item The x and y coordinates must be specified as a number. The coordinate
-system is not important.
+\item A delimited header row of field names. This must be the first line in the text file.
+\item The header row must contain an X and Y field. These fields can have any name.
+\item The x and y coordinates must be specified as a number. The coordinate system is not important.
 \end{enumerate}
 
 An example of a valid text file might look like this:
@@ -37,30 +31,26 @@ aats bay|55.905|-134.24639|craig d-7|
 Some items of note about the text file are:
 
 \begin{enumerate}        
-\item  The example text file uses \mbox{$|$} as delimiter. Any character can
-be used to delimit the fields.
-\item The first row is the header row. It contains the fields name, latdec,
-longdec and cell.
+\item  The example text file uses \mbox{$|$} as delimiter. Any character can be used to delimit the fields.
+\item The first row is the header row. It contains the fields name, latdec, longdec and cell.
 \item No quotes ({\tt{}"{}}) are used to delimit text fields.
 \item The x coordinates are contained in the {\em longdec} field.
 \item The y coordinates are contained in the {\em latdec} field.
 \end{enumerate}
 
 \subsubsection{Using the Plugin}
-To use the plugin you must have QGIS running and use the Plugin Manager to
-load the plugin:
+To use the plugin you must have QGIS running and use the Plugin Manager to load the plugin:
 
-Start QGIS, then open the Plugin Manager by choosing the {\em
-Plugins\mbox{$|$}Plugin Manager} menu. The Plugin Manager displays a list of
-available plugins. Those that are already loaded have a check mark to the
-left of their name. Click on the checkbox to the left of the {\em Add
-Delimited Text Layer} plugin and click Ok to load it as described in Section
-\ref{sec:managing_plugins}.
+Start QGIS, then open the Plugin Manager by choosing \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
+\index{plugins!manager}
+The Plugin Manager displays a list of available plugins.
+Those that are already loaded have a check mark to the left of their name.
+Click on the checkbox to the left of the \checkbox{Add Delimited Text Layer} plugin and click Ok to load it as described in Section \ref{sec:managing_plugins}.
 
 
 A new toolbar icon is now present:
-%FIXME \includegraphics[width=0.7cm]{toolbar_icon}
-Click on the icon to open the Delimited Text dialog as shown in Figure
+\includegraphics[width=0.7cm]{delimited_text}
+Click on the icon \toolbtntwo{delimited_text}{Add Delimited Text Layer} to open the Delimited Text dialog as shown in Figure
 \ref{fig:delim_text_plugin_dialog}.
 
 %\begin{figure}[ht]
@@ -71,11 +61,9 @@ Click on the icon to open the Delimited Text dialog as shown in Figure
 %   \end{center}  
 %\end{figure}
 
-First select the file to import by clicking on the \textit{Browse...} button.
+First select the file to import by clicking on the \browsebutton .
 Select the desired text file from the file dialog.
-Once the file is selected, the plugin attempts to parse the file using the
-last used delimiter, in this case \mbox{$|$} (see Figure
-\ref{fig:delim_text_file_selected}).
+Once the file is selected, the plugin attempts to parse the file using the last used delimiter, in this case \mbox{$|$} (see Figure \ref{fig:delim_text_file_selected}).
 
 %\begin{figure}[ht]
 %   \begin{center}
@@ -84,9 +72,9 @@ last used delimiter, in this case \mbox{$|$} (see Figure
 %   \end{center}  
 %\end{figure}
   
-In this case the delimiter \mbox{$|$} is not correct for the file. The file is
-actually tab delimited. Note that the X and Y field drop down boxes do not
-contain valid field names.
+In this case the delimiter \mbox{$|$} is not correct for the file.
+The file is actually tab delimited.
+Note that the X and Y field drop down boxes do not contain valid field names.
 
 %\begin{figure}[ht]
 %   \begin{center}
@@ -96,9 +84,8 @@ contain valid field names.
 %   \end{center}  
 %\end{figure}
 
-To properly parse the file, change the delimiter to
-tab using \mbox{$\backslash$}t (this is a regular expression for the tab
-character). After changing the delimiter, click {\em Parse}.
+To properly parse the file, change the delimiter to tab using \mbox{$\backslash$}t (this is a regular expression for the tab character).
+After changing the delimiter, click \button{Parse}.
 The drop down boxes now contain the fields properly parsed as shown in Figure
 \ref{fig:delim_text_file_selected2}.
 
@@ -110,10 +97,5 @@ The drop down boxes now contain the fields properly parsed as shown in Figure
 %   \end{center}  
 %\end{figure}
 
-Choose the X and Y fields from the drop
-down boxes and enter a Layer name as shown in Figure
-\ref{fig:delim_text_file_selected3}. To add the layer to the
-map, click {\em Add Layer}. The delimited text file now behaves as any other
-map layer in QGIS.
-
-% html: End of file: `index.html'
+Choose the X and Y fields from the drop down boxes and enter a Layer name as shown in Figure \ref{fig:delim_text_file_selected3}.
+To add the layer to the map, click {\em Add Layer}. The delimited text file now behaves as any other map layer in QGIS.

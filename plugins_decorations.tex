@@ -14,7 +14,7 @@ These ``decorate'' the map by adding cartographic elements.
 
 %\begin{figure}[ht]
 %   \begin{center}
-%   \caption{Copyright Plugin}\label{fig:copyright}\smallskip
+%   \caption{Copyright Label Plugin}\label{fig:copyright}\smallskip
 %   \includegraphics[clip=true, width=8cm]{copyright}
 %\end{center}  
 %\end{figure}
@@ -23,11 +23,11 @@ The title of this plugin is a bit misleading - you can add any random text to th
 
 \begin{enumerate}
 \item Make sure the plugin is loaded
-\item Click on the \textsl{Copyright Label} tool on the Plugins toolbar
+\item Click on \mainmenuopt{Plugins} > \dropmenuopt{Decorations} > \dropmenuopttwo{copyright_label}{Copyright Label} or use the \toolbtntwo{copyright_label}{Copyright Label} button from the Toolbar.
 \item Enter the text you want to place on the map. You can use HTML as
   shown in the example
-\item Choose the placement of the label from the drop-down box
-\item Make sure the ``Enable Copyright Label'' checkbox is checked
+\item Choose the placement of the label from the \selectstring{Placement}{Bottom Right} drop-down box
+\item Make sure the \checkbox{Enable Copyright Label} checkbox is checked
 \item Click \textsl{OK} 
 \end{enumerate}
 
@@ -65,15 +65,14 @@ bar to display distance in meters.
 To add a scale bar:
 
 \begin{enumerate}
-\item Open the plugin dialog by clicking on the \textsl{Scale Bar} tool
-  on the Plugins toolbar
-\item Choose the placement from the drop-down list
-\item Choose the style
-\item Select the color for the bar, or use the default black color
-\item Set the size of the bar and its label
-\item Make sure the ``Enable scale bar'' checkbox is checked
+\item Click on \mainmenuopt{Plugins} > \dropmenuopt{Decorations} > \dropmenuopttwo{scale_bar}{Scale Bar} or use the \toolbtntwo{scale_bar}{Scale Bar} button from the Toolbar.
+\item Choose the placement from the \selectstring{Placement}{Bottom Left} drop-down list
+\item Choose the style from the \selectstring{Scale bar style}{Tick Down} list
+\item Select the color for the bar \selectcolor{Color of bar}{black} or use the default black color
+\item Set the size of the bar and its label \selectnumber{Size of bar}{30 degrees}
+\item Make sure the \checkbox{Enable scale bar} checkbox is checked
 \item Optionally choose to automatically snap to a round number when the
-  canvas is resized
+  canvas is resized \checkbox{Automatically snap to round number on resize}
 \item Click \textsl{OK} 
 \end{enumerate} 
 
@@ -83,4 +82,3 @@ To add a scale bar:
 %   \includegraphics[clip=true, width=8cm]{scale_bar}
 %\end{center}  
 %\end{figure}
-
