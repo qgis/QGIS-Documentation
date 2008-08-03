@@ -422,6 +422,15 @@ To access the
 \dialog{Layer Properties} dialog, double-click on a layer in the legend or right-click on the
 layer and select \dropmenuopt{Properties} from the popup menu.
 
+% FIXME: new screenie here
+%\begin{figure}[H]
+%   \begin{center}
+%   \caption{Vector Layer Properties
+%Dialog}\label{fig:vector_symbology}\smallskip
+%   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology09} 
+%\end{center}  
+%\end{figure}
+
 \subsubsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
 
@@ -435,7 +444,7 @@ are available:
     \item[Graduated symbol] - objects within the layer are
     displayed with different symbols classified by the values of a
     particular field.\index{vector layers!renderers!graduated symbol}
-    \item[Continuous colour] - objects within the layer are
+    \item[Continuous color] - objects within the layer are
     displayed with a spread of colours classified by the numerical
     values within a specified field.\index{vector layers!renderers!continuous
 color}
@@ -448,14 +457,14 @@ To change the symbology for a layer, simply double click on its legend
 entry and the vector \dialog{Layer Properties} dialog will be 
 shown.\index{symbology!changing}
 
-% FIXME: new screenie here
-%\begin{figure}[H]
-%   \begin{center}
-%   \caption{Vector Layer Properties
-%Dialog}\label{fig:vector_symbology}\smallskip
-%   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology09} 
-%\end{center}  
-%\end{figure}
+\begin{figure}[h]
+\centering
+   \subfigure[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\goodgap
+   \subfigure[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\\
+   \subfigure[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\goodgap
+   \subfigure[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}
+\caption{Symbolizing-options}
+\end{figure}
 
 % FIXME: outdated
 % Since \usertext{version v0.9} there is a function to use image files stored on 
