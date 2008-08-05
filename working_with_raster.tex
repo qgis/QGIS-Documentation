@@ -85,8 +85,17 @@ Choose \dropmenuopt{Properties} from the context menu to open the
 dialog for the layer.\index{raster layers!properties}
 
 Figure \ref{fig:raster_properties} shows the \dialog{Raster Layer
-Properties} dialog. There are five
-tabs on the dialog: \tab{Symbology}, \tab{General}, \tab{Metadata}, \tab{Pyramids} and \tab{Histogram}.
+Properties} dialog. There are several
+tabs on the dialog: 
+\begin{itemize}
+ \item \tab{Symbology}, 
+ \item \tab{Transparency},
+ \item \tab{Colormap},
+ \item \tab{General}, 
+ \item \tab{Metadata}, 
+ \item \tab{Pyramids} 
+ \item and \tab{Histogram}.
+\end{itemize}
 
 % FIXME
 %\begin{figure}[h]
@@ -150,6 +159,53 @@ set the image type to grayscale, then select Red as the band to use for Gray.
 }
 \end{Tip} 
 
+\subsubsection{Transparency Tab} \label{rastertab:transparency}
+
+This tab adjusts the transparency of a rastermap. This is very usefull, if
+you like to overlay more than one rasterlayer, e.g. a shaded relief-map
+overlayed by a classified rastermap. This will make the look of the map
+more plastique.
+
+Additionally you can enter a rastervalue, which should be treated as
+{\em NODATA}.
+
+An even more flexible way to customize the transparency can be done in the
+\guiheading{Custom transparency options} section.
+The transparency of every pixel set in this block.
+
+As an example we want to set the water of our example rasterfile
+\filename{landcover.tif} to a transparency of 20\%. The following steps
+are neccessary:
+\begin{enumerate}
+ \item  Load the rasterfile \filename{landcover}
+ \item Open the \dialog{properties} dialog by double-clicking on the
+ rasterfile-name in the legend or by right-clicking and choosing
+ \dropmenuopt{Properties} from the popup meun.
+ \item select the \tab{Transparency} tab
+ % FIXME: the correct icon is missing!!
+ \item \label{enum:add} Click the \toolbtntwo{mActionAddRasterLayer}{Add values manually}
+ button. A new row will appear in the pixel-list.
+ \item \label{enum:transp} enter the the raster-value (we use 0 here) and adjust the
+ transparency to 20\%
+ \item press the \button{Apply} button and have a look at the map
+\end{enumerate}
+
+You can repeat the steps \ref{enum:add} and \ref{enum:transp} to adjust
+more values with custom transparency.
+
+As you can see this is quite easy set custom transparency, but it can be
+quite a lot of work. Therefor you can use the button
+% FIXME: the correct icon is missing!!
+\toolbtntwo{mActionAddRasterLayer}{Export to file} to save your
+transparency-list to a file. The button
+\toolbtntwo{mActionAddRasterLayer}{Import from file} loads your
+transparency-settings and applies them to the current rasterlayer.
+
+\subsubsection{Colormap}
+% FIXME: Write me
+
+The \tab{Colormap} tab is only available, when ... WRITE ME!
+
 \subsubsection{General Tab}\label{label_generaltab}
 
 The \tab{General} tab displays basic information about the selected raster,
@@ -211,5 +267,5 @@ selecting them in the list box at the bottom right of the tab. Two different
 chart types are allowed: Barcharts and Linegraphs.
 
 Once you view the histogram, you'll notice that the band statistics have been
-populated on the metadata tab.\index{raster layers!metadata)}
+populated on the \tab{metadata} tab.\index{raster layers!metadata)}
 
