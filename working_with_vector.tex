@@ -617,6 +617,15 @@ Using Actions below).  Double quote marks can be used to group text into a
 single argument to the program, script or command. Double quotes will be
 ignored if preceded by a backslash.
 
+If you have field names that are substrings of other field names (e.g., \usertext{col1}
+and \usertext{col10}) you should
+indicate so, by surrounding the field name (and the \% character) with square
+brackets (e.g., \usertext{[\%col10]}). This will prevent the \usertext{\%col10} field
+name being mistaken for the \usertext{\%col1} field name with a \usertext{0}
+on the end. The brackets will be removed by QGIS when it substitutes in the
+value of the field. If you want the substituted field to be surrounded by square
+brackets, use a second set like this: \usertext{[[\%col10]]}.
+
 Two example actions are shown below:\index{actions!examples}
 
 \begin{itemize}
