@@ -760,7 +760,6 @@ create an action to launch a viewer to display the image. You could also use
 actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
 
-% FIXME: Note for SH: please continue editing this file here (SH:20080801)
 \subsection{Editing}\index{editing}
 
 QGIS supports basic capabilities for editing spatial data.  Before reading any
@@ -783,11 +782,29 @@ especially if you are dealing with a large number of vertices in close
 proximity. Set it too small and it won't find anything and it will pop up an
 annoying warning to that effect. 
 
-To set the snap tolerance, choose \dropmenuopttwo{mActionOptions}{Project Properties} from the
-\mainmenuopt{Settings} menu and click on the \tab{General} tab.  Remember the
+To set the snap tolerance, choose \dropmenuopttwo{mActionOptions}{Options} from the
+\mainmenuopt{Settings} menu and click on the \tab{Digitizing} tab.  Remember the
 tolerance is in map units. For our little digitizing project, the units
 are in decimal degrees.  Your results may vary, but something on the order
 of 0.05 to 0.1 should be fine. 
+
+Additionally QGIS supports {\em special} snapping options for every project.
+Therefor you can select \dropmenuopttwo{mActionOptions}{Project
+Properties\dots} from the \mainmenuopt{Settings} menu. The \tab{General} tab
+provides a section \classname{Digitize} where you can \checkbox{Enable
+topological editing} or activate the option \checkbox{Avoid intersections of
+new polygons}. \\
+The button \button{Snapping options\dots} provides the dialog \dialog{Snapping
+options\dots} (see fig. \ref{fig:snappingoptions}) where you can enable and
+adjust the snapping-mode and the tolerance on a layer basis.
+
+% FIXME: needs to be replaced
+%\begin{figure}[H]
+%   \begin{center}
+%   \caption{Edit snapping options on a layer basis}\label{fig:snappingoptions}\smallskip
+%   \includegraphics[clip=true, width=8cm]{} 
+%\end{center}  
+%\end{figure}
 
 \subsubsection{Editing an Existing Layer}
 \index{vector layers!editing}
@@ -810,7 +827,7 @@ situations.
 \end{Tip}
 
 \index{Allow Editing}
-All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Allow editing} option.
+All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Toggle editing} option.
 This can be found in the context menu after right clicking on the legend
 entry for that layer.
 Alternately, you can use the \index{Toggle Editing}
@@ -824,7 +841,7 @@ couplet on the attribute table.
 \end{Tip}
 
 \begin{Tip}[ht]\caption{\textsc{Save Regularly}}
-\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Allow editing} off regularly.  This allows you to save your changes thus far,
+\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing} off regularly.  This allows you to save your changes thus far,
 and also confirms that your data source can accept all
 your changes.
 }
@@ -847,7 +864,13 @@ avoids waiting while all the vertex markers are rendered across the entire layer
 \end{Tip}
 
 \begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
-\qgistip{This version of QGIS does not allow you to change the vertex markers used.
+\qgistip{
+The current version of QGIS supports several vertex-markers. Currently
+a semi-transparent circle or a
+cross is supported. To change the markers, choose
+\dropmenuopttwo{mActionOptions}{Options} from the
+\mainmenuopt{Settings} menu and click on the \tab{Digitizing} tab and select
+the appropriate entry.
 }
 \end{Tip}
 
@@ -895,6 +918,7 @@ The attribute window will appear, allowing you to enter the information for the 
 Figure \ref{fig:vector_digitising} shows setting attributes for a fictitious
 new river in Alaska.
 
+% FIXME: new screenie here
 %\begin{figure}[ht]
 %   \begin{center}
 %   \caption{Vector Digitizing Attributes Capture
@@ -904,25 +928,28 @@ new river in Alaska.
 %\end{figure}
 
 \begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
-\qgistip{In the current version of QGIS, the attributes
-dialog box does not check that the data entered matches the type expected (e.g. numeric 
-vs. text). Make sure of this before pressing \button{OK}, otherwise you may find the error
-will be caught later when you try to save your changes.
+\qgistip{
+At least for shapefile editing the attribue types are validated during the
+entry. Therefor it is not possible to enter a number into the text-column in
+the dialog \dialog{Enter Attribute Values} or vis versa. If you need to do so,
+you should edit the attributes in a second step within the \dialog{Attribute
+table} dialog.
 }
 \end{Tip}
 
-% These features will be added later
-%
-%\minisec{Move Selected Feature}
-%\index{vector layers!move!feature}
-%
-%%% INPUT IS MISSING
-%
-%\minisec{Split Selected Feature}
-%\index{vector layers!split!feature}
-%
+% FIXME: Write me
+\minisec{Move Selected Feature}
+\index{vector layers!move!feature}
+
+%% INPUT IS MISSING
+write me
+
+% FIXME: Write me
+\minisec{Split Selected Feature}
+\index{vector layers!split!feature}
+
 %%%% INPUT IS MISSING
-%
+write me
 
 \minisec{Editing Vertices of a Feature}
 \index{vector layers!editing!vertex}
@@ -952,8 +979,7 @@ down near map features:
 \end{itemize}
 
 You will need to set the property
-\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Project
-Properties}>\dropmenuopt{General}>\dropmenuopt{Snapping Tolerance}
+\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Options}>\tab{Digitizing}
 to a number greater than zero.  Otherwise QGIS will not be able to tell which feature is being edited.
 
 
@@ -1105,8 +1131,7 @@ using GDAL 1.3.2 or higher.
 \index{editing!snap}
 QGIS allows digitized vertices to be snapped to other vertices of the same layer. To 
 set the snapping tolerance, go to
-\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Project
-Properties}->\dropmenuopt{General}->\dropmenuopt{Snapping Tolerance}.
+\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Options}->\tab{Digitizing}.
 Note that the snapping tolerance is in map units.
 
 \minisec{Saving Edited Layers}
@@ -1130,6 +1155,7 @@ The \dialog{New Vector Layer} dialog will be displayed as
 shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
 line or polygon).
 
+% FIXME: new screenie here
 %\begin{figure}[ht]
 %   \begin{center}
 %   \caption{Creating a New Vector Dialog}\label{fig:newvectorlayer}\smallskip
@@ -1165,6 +1191,7 @@ files and PostGIS layers. For example, if you have a \filename{towns} layer with
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL. 
 
+% FIXME: new screenie here
 %\begin{figure}[ht]
 %  \begin{center}
 %    \caption{Query Builder}\label{fig:query_builder}\smallskip
@@ -1191,7 +1218,7 @@ SQL for the where clause will be shown in the SQL column of the layer list.
 Builder!changing layer definitions}
 \qgistip{You can change the layer definition after it is loaded by altering
 the SQL query used to define the layer. To do this, open the 
-vecotr \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
+vector \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
 \button{Query Builder} button on the \tab{General} tab. See Section
 \ref{sec:vectorprops} for more information.}
 \end{Tip}
