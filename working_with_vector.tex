@@ -626,6 +626,15 @@ on the end. The brackets will be removed by QGIS when it substitutes in the
 value of the field. If you want the substituted field to be surrounded by square
 brackets, use a second set like this: \usertext{[[\%col10]]}.
 
+The \dialog{Identify Results} dialog box includes a {\em (Derived)} item that
+contains information relevant to the layer type. The
+values in this item can be accessed in a similar way to the other fields
+by using preceeding the derived field name by \usertext{(Derived).}. For
+example, a point layer has an \usertext{X} and \usertext{Y} field and the
+value of these can be used in the action with \usertext{\%(Derived).X} and
+\usertext{\%(Derived).Y}. The derived attributes are only available from the
+\dialog{Identify Results} dialog box, not the \dialog{Attribute Table} dialog box.
+
 Two example actions are shown below:\index{actions!examples}
 
 \begin{itemize}
