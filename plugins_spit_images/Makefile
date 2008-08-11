@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=spit.eps\
+PNG=spiticon.eps\
 	
 ##### TARGETS #####
 

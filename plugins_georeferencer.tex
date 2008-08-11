@@ -16,7 +16,7 @@ tar xvzf spearfish_toposheet.tar.gz
 cd spearfish_toposheet
 \end{verbatim}
 
-The next step is to start QGIS, load the georeferencer plugin and select the file spearfish\_topo24.tif.
+The next step is to start QGIS, load the georeferencer plugin and select the file \filename{spearfish\_topo24.tif}.
 
 %\begin{figure}[ht]
 %\begin{center}
@@ -50,14 +50,18 @@ For the procedure you have two options:
 %\end{center}
 %\end{figure}
 
-For this example we use the second option and enter the coordinates for the selected points with the help of the \textsl{roads} map provided with the  \textsl{spearfish60} location from: \url{http://grass.osgeo.org/sampledata/spearfish\_grass60data-0.3.tar.gz}
+For this example we use the second option and enter the coordinates for the selected points with the help of the \filename{roads} map provided with the  \filename{spearfish60} location from: \url{http://grass.osgeo.org/sampledata/spearfish\_grass60data-0.3.tar.gz}
 
-If you don't know how to integrate the spearfish60 location with the GRASS plugin, information are provided in Section \ref{sec:grass}.
+If you don't know how to integrate the \filename{spearfish60} location with the GRASS plugin, information are provided in Section \ref{sec:grass}.
 
 As you can see in Figure \ref{fig:choose_points}, the georeferencer provides buttons to zoom, pan, add and delete points in the image.
 
 After you added enough points to the image you need to select the transformation type for the georeferencing process and save the resulting world file together with the Tiff.
-In our example we choose linear transformation although a Helmert transformation might be sufficient as well.
+In our example we choose 
+\selectstring{Transform type}{linear transformation} 
+although a 
+\selectstring{Transform type}{Helmert transformation}
+might be sufficient as well.
 
 
 \begin{Tip}\caption{\textsc{Choosing the transformation type}}
@@ -66,9 +70,9 @@ With the Helmert transformation you simply add coordinate information to the ima
 If your image is contorted you will need to use software that provides 2nd or 3rd order polynomial transformation, e.g. GRASS GIS.}
 \end{Tip} 
 
-The points we added to the map will be stored in a \textsl{spearfish\_topo24.tif.points} file together with the raster image.
+The points we added to the map will be stored in a \filename{spearfish\_topo24.tif.points} file together with the raster image.
 This allows us to reopen the georeferencer plugin and to add new points or delete existing ones to optimize the result.
-The \textsl{spearfish\_topo24.tif.points} file of this example shows the points:
+The \filename{spearfish\_topo24.tif.points} file of this example shows the points:
 
 \begin{verbatim}
 mapX    		mapY    		pixelX  pixelY
@@ -81,7 +85,7 @@ mapX    		mapY    		pixelX  pixelY
 
 We used 5 coordinate points to georeference the raster image.
 To get correct results it is important to disperse the points regulary in the image.
-Finally we check the result and load the new georeferenced map \textsl{spearfish\_topo24.tif} and overlay it with the map \textsl{roads} of the spearfish60 location.
+Finally we check the result and load the new georeferenced map \filename{spearfish\_topo24.tif} and overlay it with the map \filename{roads} of the \filename{spearfish60} location.
 
 %\begin{figure}[ht]
 %\begin{center}

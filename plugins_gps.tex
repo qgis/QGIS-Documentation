@@ -99,16 +99,16 @@ To define a new device you simply click the \button{New device} button, enter a 
 The name will be listed in the device menus in the upload and download windows, and can be any string.
 The download command is the command that is used to download data from the device to a GPX file.
 This will probably be a GPSBabel command, but you can use any other command line program that can create a GPX file.
-QGIS will replace the keywords \emph{\%type}, \emph{\%in}, and \emph{\%out} when it runs the command.
+QGIS will replace the keywords \usertext{\%type}, \usertext{\%in}, and \usertext{\%out} when it runs the command.
 
-\emph{\%type} will be replaced by {}``-w'' if you are downloading waypoints, {}``-r'' if you are downloading routes and {}``-t'' if you are downloading tracks.
+\usertext{\%type} will be replaced by {}``\usertext{-w}'' if you are downloading waypoints, {}``\usertext{-r}'' if you are downloading routes and {}``\usertext{-t}'' if you are downloading tracks.
 These are command line options that tell GPSBabel which feature type to download.
 
-\emph{\%in} will be replaced by the port name that you choose in the download window and \emph{\%out} will be replaced by the name you choose for the GPX file that the downloaded data should be stored in.
-So if you create a device type with the download command {}``gpsbabel \%type -i garmin -o gpx \%in \%out'' (this is actually the download command for the predefined device type {}``Garmin serial'') and then use it to download waypoints from port {}``/dev/ttyS0'' to the file {}``output.gpx'', QGIS will replace the keywords and run the command {}``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx''.
+\usertext{\%in} will be replaced by the port name that you choose in the download window and \usertext{\%out} will be replaced by the name you choose for the GPX file that the downloaded data should be stored in.
+So if you create a device type with the download command {}``\usertext{gpsbabel \%type -i garmin -o gpx \%in \%out}'' (this is actually the download command for the predefined device type \selectstring{GPS device:}{Garmin serial})and then use it to download waypoints from port {}``\usertext{/dev/ttyS0}'' to the file {}``\usertext{output.gpx}'', QGIS will replace the keywords and run the command {}``\usertext{gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx}''.
 
 The upload command is the command that is used to upload data to the device.
-The same keywords are used, but \emph{\%in} is now replaced by the name of the GPX file for the layer that is being uploaded, and \emph{\%out} is replaced by the port name.
+The same keywords are used, but \usertext{\%in} is now replaced by the name of the GPX file for the layer that is being uploaded, and \usertext{\%out} is replaced by the port name.
 
 You can learn more about GPSBabel and it's available command line options at \url{http://www.gpsbabel.org}
 

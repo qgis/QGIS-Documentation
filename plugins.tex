@@ -48,7 +48,7 @@ You can tell QGIS to load plugins from another location by specifying a differen
 You can stop all plugins from loading by editing your stored settings file (see \ref{subsec:gui_options} for location).
 Locate the plugins settings and change all the plugin values to false to prevent them from loading.
 \nix {For example, to prevent the Delimited text plugin from loading, the entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux 
-should look like this:\ttfamily{Add Delimited Text Layer=false}.}
+should look like this:\usertext{Add Delimited Text Layer=false}.}
 \normalfont 
 Do this for each plugin in the [Plugins] section.
 You can then start QGIS and add the plugins one at a time from the Plugin Manger to determine which is causing the problem.
@@ -105,7 +105,7 @@ Note the GRASS plugin is not included below because it installs its own toolbar 
 \includegraphics[width=0.7cm]{quick_print}
  & Quick Print \index{plugins!quickprint}& Quickly print a map \\
 \hline
-\includegraphics[width=0.7cm]{spit}
+\includegraphics[width=0.7cm]{spiticon}
  & SPIT \index{plugins!spit}& Shapefile to PostGIS Import Tool - import shapefiles into PostgreSQL\\
 \hline
 \includegraphics[width=0.7cm]{scale_bar}
@@ -142,7 +142,7 @@ To check out all available external plugins do the following:
 svn co https://svn.osgeo.org/qgis/trunk/external_plugins external_qgis_plugins
 \end{verbatim}
 
-This will create a folder \texttt{external\_qgis\_plugins} in your current folder.
+This will create a folder \usertext{external\_qgis\_plugins} in your current folder.
 Each subdirectory has its own compile and install instructions.
 Read them carefully in order to build the plugin.
 
@@ -152,7 +152,7 @@ Read them carefully in order to build the plugin.
 \subsubsection{Plugin templates}\label{sec:plugin_template}\index{plugins!template}
 
 If you like to develop your own QGIS-plugin the main sources include a nice script which guides you through the process of creating your own template-directory-structure within the QGIS-source-tree.
-The script lives in \texttt{QGIS/src/plugins/plugin\_builder.pl}.
+The script lives in \usertext{QGIS/src/plugins/plugin\_builder.pl}.
 
 The only thing to do is coding your functions into the plugin (and of course contribute your plugin to the QGIS-development-team).
 

@@ -16,7 +16,7 @@ QGIS looks in the following locations under the installation directory:
 \end{itemize}
 
 Each Python plugin is contained in its own directory.
-When QGIS starts up it will scan each subdirectory in \textsl{share/qgis/python/plugins} and initialize any plugins it finds.
+When QGIS starts up it will scan each subdirectory in \filename{share/qgis/python/plugins} and initialize any plugins it finds.
 Once that's done, the plugin will show up in the \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
 
 Let's create a plugin to fill a gap in the QGIS interface.
@@ -26,14 +26,14 @@ It will be a simple plugin and pretty rough, but it illustrates how to get start
 \subsubsection{Setting up the Structure}
 The first thing we need to do is set up the structure for our plugin.
 In this example we'll be developing our plugin on \nix{Linux} but the method is the same, just adapt some of the file system commands as appropriate for your platform.
-QGIS is installed in a directory named \textsl{qgis} in our home directory.
+QGIS is installed in a directory named \filename{qgis} in our home directory.
 Let's create the directory for the plugin.
 
 \begin{verbatim}
 mkdir ~/qgis/share/qgis/python/plugins/new_layer
 \end{verbatim}
 
-To get started, we need to create the following files in the \textsl{new\_layer} directory (we'll need some additional files in a bit):
+To get started, we need to create the following files in the \filename{new\_layer} directory (we'll need some additional files in a bit):
 
 \begin{verbatim}
 __init__.py 
@@ -44,8 +44,8 @@ newlayer.py
 
 \subsubsection{Making the Plugin Recognizable}
 
-Initializing the plugin is done in the \textsl{\_\_init\_\_.py} script.
-For our \textsl{NewLayer} plugin the script contains:
+Initializing the plugin is done in the \filename{\_\_init\_\_.py} script.
+For our \filename{NewLayer} plugin the script contains:
 
 \begin{verbatim}
 1 # load NewLayer class from file newlayer.py
@@ -62,12 +62,12 @@ For our \textsl{NewLayer} plugin the script contains:
 
 The mandatory things a plugin must return are a name, description, and version, all of which are implemented in our script above.
 Each method simply returns a string with the appropriate information.
-The other requirement is the \textsl{classFactory} method that must return a reference to the plugin itself (line 10), after receiving the \textbf{iface} object as an argument.
+The other requirement is the \method{classFactory} method that must return a reference to the plugin itself (line 10), after receiving the \object{iface} object as an argument.
 With this simple code, QGIS will recognize our script as a plugin.
 
 \subsubsection{Resources}
 
-In order to have a nice icon for our plugin, we need a resources file which we'll name \textsl{resources.qrc}.
+In order to have a nice icon for our plugin, we need a resources file which we'll name \filename{resources.qrc}.
 This is just a simple XML file that defines the icon resource:
 
 \begin{verbatim}
@@ -79,7 +79,7 @@ This is just a simple XML file that defines the icon resource:
 \end{verbatim} 
 
 The resource file uses a prefix to prevent naming clashes with other plugins - using the name of the plugin is usually sufficient.
-The \textsl{icon.png} file is is just a PNG image that will be used in the toolbar when the plugin is activated.
+The \filename{icon.png} file is is just a PNG image that will be used in the toolbar when the plugin is activated.
 You can use any image, as long as it's 22x22 pixels (so it fits on the toolbar).
 
 To turn the resource file into something the plugin can use, it must be compiled using the PyQt resource compiler:
@@ -88,7 +88,7 @@ To turn the resource file into something the plugin can use, it must be compiled
   pyrcc4 -o resources.py resources.qrc
 \end{verbatim}
 
-The \textsl{-o} switch is used to specify the output file.
+The \filename{-o} switch is used to specify the output file.
 Now that we have resources, we need a way to collect the information needed for creating a new layer.
 
 \subsubsection{Creating the GUI}
@@ -100,7 +100,7 @@ To design our NewLayer plugin we could get quite fancy and include widgets for f
 However, since our time is limited, we'll use another means to collect the information we need to create the table.
 This will illustrate the concepts and then you can venture further using the tutorials on the QGIS blog.
 
-To collect the user input, we'll use the \textsl{QInputDialog} class from the Qt library.
+To collect the user input, we'll use the \classname{QInputDialog} class from the Qt library.
 This prompts the user for a single line of input.
 While it will make our plugin a little crude, it serves to illustrate the concepts.
 
@@ -109,7 +109,7 @@ All we need to write now is the Python code to collect the input and create the 
 \subsubsection{Creating the Plugin}
 
 Now that we have the preliminaries out of the way, we can get down to writing the code that does the actual work.
-Let's start by looking at the things we need to import and the initialization of the plugin in \textsl{newlayer.py}.
+Let's start by looking at the things we need to import and the initialization of the plugin in \filename{newlayer.py}.
 
 \begin{verbatim}
 1 # Import the PyQt and QGIS libraries
@@ -147,27 +147,27 @@ In lines 2 through 7 we import the libraries needed for the plugin.
 This includes the PyQt libraries, the QGIS core library, and the Python PostgreSQL library psycopg.
 Every Python script that uses the QGIS libraries and PyQt needs to import the QtCore and QtGui libraries, as well as the QGIS core library.
 This gives us access to the PyQt wrappers for our Qt objects (like our input dialog) and the QGIS core libraries.
-We also need to import the \textsl{resources.py} file we created with the icon definition.
+We also need to import the \filename{resources.py} file we created with the icon definition.
 
-In line 10 we declare the class \textbf{NewLayer}.
-In the \textsl{\_\_init\_\_} method (lines 12 through 14) our class is initialized and passed the \textbf{iface} object from QGIS via the \textsl{classFactory} method in line 10 of \_\_init\_\_.py.
-We store \textbf{iface} as a member variable so we can use it later.
+In line 10 we declare the class \classname{NewLayer}.
+In the \method{\_\_init\_\_} method (lines 12 through 14) our class is initialized and passed the \object{iface} object from QGIS via the \method{classFactory} method in line 10 of \filename{\_\_init\_\_.py}.
+We store \object{iface} as a member variable so we can use it later.
 In lines 16 through 24 we initialize the GUI elements for the plugin.
-In Qt, a \textbf{QAction} is used to create a user interface action that can be used to create both a menu and toolbar item.
+In Qt, a \classname{QAction} is used to create a user interface action that can be used to create both a menu and toolbar item.
 In our plugin, we use it for both.
-In line 18 we create the action using our icon resource (note the prefix we specified in \textsl{resources.qrc}).
+In line 18 we create the action using our icon resource (note the prefix we specified in \filename{resources.qrc}).
 We also provide some text that will appear when it is used in a menu or during a mouseover, and lastly we need to specify the ``parent''.
 In a plugin, the parent is the main window of QGIS.
-The \textbf{iface} object that we stored during initialization allows us to get the reference to the main window in line 19.
+The \object{iface} object that we stored during initialization allows us to get the reference to the main window in line 19.
 
-Once the action is created, we can add it to both the toolbar and the \textsl{Plugins} menu (lines 23 and 24).
+Once the action is created, we can add it to both the toolbar and the \mainmenuopt{Plugins} menu (lines 23 and 24).
 That takes care of initializing the GUI for the plugin.
 The other thing we need to do is clean up after ourself when the plugin is unloaded.
-The \textsl{unload} method takes care of this by removing the menu item and the tool from the toolbar (lines 28 and 29).
+The \method{unload} method takes care of this by removing the menu item and the tool from the toolbar (lines 28 and 29).
 
 This takes care of the initialization stuff and getting our plugin to load and unload nicely.
 Now let's look at the code that does the actual work.
-It's all contained in the \textsl{run} method.
+It's all contained in the \method{run} method.
 
 \begin{verbatim}
 30 def run(self): 
@@ -204,7 +204,7 @@ It's all contained in the \textsl{run} method.
 61        con.commit()
 \end{verbatim}
 
-The first thing we need to do is use the \textbf{QInputDialog} to get the name of the table to create.
+The first thing we need to do is use the \classname{QInputDialog} to get the name of the table to create.
 This is done in line 32 where we prompt for it.
 
 %\begin{figure}[ht]
@@ -248,7 +248,7 @@ In this case, the DSN will look something like this:
   \textsl{dbname=gis\_data user=gsherman}
 \end{center}
 
-To get the DSN, we prompt the user with a \textbf{QInputDialog} in line 47.
+To get the DSN, we prompt the user with a \classname{QInputDialog} in line 47.
 
 %\begin{figure}[ht]
 %\begin{center}
@@ -320,7 +320,7 @@ When the table is created, the user sees this:
 Writing a QGIS plugin in Python is pretty easy.
 Some plugins won't require a GUI at all.
 For example, you might write a plugin that returns the map coordinates for the point you click on the map.
-Such a plugin wouldn't require any user input and could use a standard Qt \textbf{QMessageBox} to display the result.
+Such a plugin wouldn't require any user input and could use a standard Qt \classname{QMessageBox} to display the result.
 
 You can also write plugins for QGIS in C++, but that's another story.
 You can find tutorials on writing QGIS plugins in both C++ and Python on the QGIS blog at:
