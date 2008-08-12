@@ -13,7 +13,7 @@
 
 PNG=create_grass_location.eps\
 	grasslogo.eps\
-#	grassedit.eps\
+	grass_digitizing.eps\
 #	grasstoolbar.eps\
 #	grassbrowser.eps\
 #	grassshell.eps\

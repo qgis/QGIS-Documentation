@@ -16,6 +16,7 @@ grass_add_map.eps\
 grass_add_raster.eps\
 grass_add_vector.eps\
 grass_add_vertex.eps\
+grass_shell.eps\
 grass_browser_raster_layer.eps\
 grass_browser_vector_layer.eps\
 grass_close_edit.eps\

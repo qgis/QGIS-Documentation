@@ -12,6 +12,7 @@ plugin:
 \item \toolbtntwo{grass_add_vector}{Add GRASS vector layer}
 \item \toolbtntwo{grass_add_raster}{Add GRASS raster layer}
 \item \toolbtntwo{grass_tools}{Open GRASS tools}
+\item \toolbtntwo{grass_shell}{Open GRASS Shell}
 \item \toolbtntwo{grass_region}{Display current GRASS region} 
 \item \toolbtntwo{grass_region_edit}{Edit current GRASS region}
 \item \toolbtntwo{grass_edit}{Edit GRASS vector layer}
@@ -24,26 +25,28 @@ plugin:
 \subsection{Starting QGIS with GRASS}\label{sec:starting_grass}
 \index{GRASS!starting QGIS}
 
-To use GRASS features from within QGIS, you must load the 
-GRASS plugin with the plugin manager (see Section \ref{sec:managing_plugins}) just 
-like all QGIS plugins. After you load it, a new toolbar will appear on the user 
-interface.
+To use GRASS features from within QGIS, you must load the GRASS plugin with
+the plugin manager clicking on \mainmenuopt{Plugins} > \dropmenuopt{GRASS}.
+A new toolbar with 11 buttons will appear on the user interface and you can
+immediately start loading layers of an existing GRASS dataset
+\filename{(location)} using the appropriate toolbar buttons for vector and
+raster data (see Section \ref{sec:load_grassdata}). Or you can create a new
+GRASS \filename{location} with QGIS (see Section \ref{sec:create_loc}).
 
-After loading the plugin, you can immediately load an existing GRASS dataset 
-using the appropriate toolbar buttons for vector and raster data (see Section 
-\ref{sec:load_grassdata}), or you can create a new GRASS location with QGIS (see Section 
-\ref{sec:create_loc}).
+\subsection{Loading GRASS Data}\label{sec:load_grassdata}\index{GRASS!loading
+data}
 
-\subsection{Loading GRASS Data}\label{sec:load_grassdata}\index{GRASS!loading data}
-
-With the GRASS plugin, you can load vector or raster layer using the appropriate button 
-on the toolbar. As an example we use the spearfish sample location in UTM projection 
-(see Section \ref{label_sampledata}).
+With the GRASS plugin, you can load vector or raster layer using the
+appropriate button on the toolbar. As an example we use the spearfish
+sample location in UTM projection (see Section \ref{label_sampledata}).
 
 \begin{enumerate}
-  \item Download the spearfish\_grass60data-0.3.zip file
-  \item Create a new folder \filename{grassdata} and unzip the spearfish\_grass60data-0.3.zip into it. 
+  \item Download the \filename{spearfish\_grass60data-0.3.zip} location file
+  \item Create a new folder \filename{grassdata} and unzip the
+  \filename{spearfish\_grass60data-0.3.zip} into it. 
   \item Start QGIS
+  \item Load the GRASS plugin with the plugin manager clicking on
+  \mainmenuopt{Plugins} > \dropmenuopt{GRASS}.
   \item In the GRASS toolbar, click on the \toolbtntwo{grass_open_mapset}{Open
   mapset} icon to bring up the mapset wizard.
   \item For \filename{Gisdbase} browse and select or enter the path to the newly
@@ -52,41 +55,38 @@ on the toolbar. As an example we use the spearfish sample location in UTM projec
   and the mapset \filename{PERMANENT} or \filename{user1}. 
   \item Click \button{OK}. Notice that some of the tools in the GRASS toolbar
   that were disabled are now enabled.
-  \item Click on 
-  %FIXME \toolbtntwo{add_grass_raster}{Add GRASS raster layer}
-  , choose
-  the \filename{map name} geology and click \button{OK}. The geology map will be visualized. 
-  \item Click on 
-  %FIXME \toolbtntwo{add_grass_vector}{Add GRASS vector layer}
-  , choose
-  the \filename{map name} roads and click \button{OK}. Now the roads map will
-  be overlayed on top of the geology map.  
+  \item Click on \toolbtntwo{grass_add_raster}{Add GRASS raster layer},
+  choose the map name \filename{geology} and click \button{OK}. The geology
+  raster layer will be visualized. 
+  \item Click on \toolbtntwo{grass_add_vector}{Add GRASS vector layer},
+  choose the map name \filename{roads} and click \button{OK}. Now the roads
+  vector layer will be overlayed on top of the geology map.  
 \end{enumerate}
 
-As you see, it is very simple to load GRASS raster and vector layers in QGIS. See following sections 
-for editing GRASS data and creating new locations.
+As you see, it is very simple to load GRASS raster and vector layers in QGIS.
+See following sections for editing GRASS data and creating new locations.
 
 \begin{Tip}\caption{\textsc{GRASS Data Loading}}
 \qgistip{If you have problems loading data or QGIS terminates abnormally,
-check to make sure you have loaded the GRASS plugin properly as described in Section
-\ref{sec:starting_grass}.
+check to make sure you have loaded the GRASS plugin properly as described in
+Section \ref{sec:starting_grass}.
 }
 \end{Tip} 
 
-\subsection{Creating a Location}\label{sec:create_loc}
+\subsection{Creating a GRASS location}\label{sec:create_loc}
 
-GRASS stores data in a ``location'' which represents a specific area with a 
-specific coordinate system. In order to use GRASS data, we must import it 
-into a \filename{location}.\footnote{This is not strictly true - with the
-GRASS module v.external you can view external data sets in GRASS without 
-importing them, but this is currently an exception}
+GRASS stores data in a \filename{location} which represents a specific area
+with a specific coordinate system. In order to use GRASS data, we must import
+it into a \filename{location}.\footnote{This is not strictly true - with the
+GRASS module \filename{v.external} you can view external data sets in GRASS
+without importing them, but this is currently an exception}
 
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{Creating a GRASS location in QGIS \nixcaption}\label{fig:grass_location}\smallskip
-%   \includegraphics[clip=true]{create_grass_location}
-%\end{center}  
-%\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\caption{Creating a GRASS location in QGIS \nixcaption}\label{fig:grass_location}\smallskip
+\includegraphics[clip=true]{create_grass_location}
+\end{center}  
+\end{figure}
 
 Here is an example how to create a GRASS location in Albers Equal Area 
 projection with unit meter for the QGIS sample data (see Section \ref{label_sampledata}). 
@@ -102,26 +102,31 @@ projection with unit meter for the QGIS sample data (see Section \ref{label_samp
   for storing the location
   \item Click \button{Next} 
   \item We can use this wizard to create a new mapset within an existing 
-  location or create a new location altogether. Click ``Create new location'' 
-  radio button
+  location or create a new location altogether. Click on the radio button
+  \radiobuttonon{Create new location} (see Figure \ref{fig:grass_location}).
   \item Enter a name for the location - we'll use Alaska
   \item Click \button{Next} 
-  \item Define the projection by clicking on the ``Projection'' radio button 
-  to enable the projection list
-  \item We are using Albers Equal Area Alaska (meters) projection. Since we happen to know that 
-  its PostGIS SRID is 5000, we enter it in the search box. (If you want to repeat this process 
-  for another layer and haven't memorized the PostGIS SRID, click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the lower right-hand corner of the statusbar (see Section \ref{label_projstart}).)
+  \item Define the projection by clicking on the radio button
+  \radiobuttonon{Projection} to enable the projection list 
+  \item We are using Albers Equal Area Alaska (meters) projection. Since we
+  happen to know that its EPSG ID is 5000, we enter it in the search box. (If
+  you want to repeat this process for another layer and haven't memorized the
+  EPSG ID, click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon
+  in the lower right-hand corner of the status bar (see Section
+  \ref{label_projstart}).)
   \item Click \button{Find} to select the projection
   \item Click \button{Next} 
-  \item To define the default region, we have to enter the bounds in the north, south, 
-  east, and west direction. Here we simply click on the button \button{Set current QGIS extent}.
+  \item To define the default region, we have to enter the bounds in the
+  north, south, east, and west direction. Here we simply click on the button
+  \button{Set current QGIS extent}, to apply the extend of the loaded layers
+  as the GRASS default region extend.
   \item Click \button{Next} 
   \item We need to define a mapset within our new location. Name it whatever 
   you like - your username is a good choice
   \item Check out the summary to make sure it's correct
   \item Click \button{Finish} 
-  \item The mapset and location are created and opened as the current 
-  working set
+  \item The new location \filename{Alaska} and a mapset are created and
+  opened as the current working set
   \item Notice that some of the tools in the GRASS toolbar that were 
   disabled are now enabled for us to use
 \end{enumerate}
@@ -160,18 +165,19 @@ dataset, e.g. if the geometry is forest or lake.
 For now, it can be only a number, in the future GRASS will also support  
 names as fields in the user interface.
 
-Attributes can be stored inside the location as DBase or SQLITE3 or in
-external database tables, for example PostgreSQL, MySQL, Oracle, etc.\index{GRASS!attribute storage}
+Attributes can be stored inside the GRASS location as DBase or SQLITE3 or in
+external database tables, for example PostgreSQL, MySQL, Oracle,
+etc.\index{GRASS!attribute storage}
 
 Attributes in database tables are linked to geometry elements using
-'category'.\index{GRASS!attribute linkage} 'Category' (key, ID) is an
+a 'category' value.\index{GRASS!attribute linkage} 'Category' (key, ID) is an
 integer attached to geometry primitives, and it is used as the link to one
 column in the database table.
 
 \begin{Tip}\caption{\textsc{Learning the GRASS Vector Model}}
 \qgistip{
 The best way to learn the GRASS vector model and its capabilities is to 
-download one of the many GRASS Tutorials where the vector model is described
+download one of the many GRASS tutorials where the vector model is described
 more deeply. See \url{http://grass.osgeo.org/gdp/manuals.php} for more
 information, books and tutorials in several languages.
 }
@@ -185,19 +191,17 @@ The digitizing tools for GRASS vector layers are accessed using the
 you have loaded a GRASS vector and it is the selected layer in the legend before
 clicking on the edit tool. If you would like to create a new GRASS vector, 
 you need to use the toolbar-entry \mainmenuopt{Plugins} >
-\dropmenuopt{GRASS} > \dropmenuopttwo{grass_new_vector_layer}{Create new GRASS vector}.
+\dropmenuopt{GRASS} > \dropmenuopttwo{grass_new_vector_layer}{Create new
+GRASS vector}. Figure \ref{fig:grass_digitizing} shows the GRASS edit dialog
+that is displayed when you click on the edit tool. The tools and settings are
+discussed in the following sections.
 
-Figure \ref{fig:grass_edit} shows the GRASS Edit dialog that is displayed
-when you click on the edit tool. 
-
-%\begin{figure}[h]
-%   \begin{center}
-%   \caption{GRASS Edit Dialog}\label{fig:grass_edit}\smallskip
-%   \includegraphics[clip=true, width=13cm]{grassedit}
-%\end{center}  
-%\end{figure}
-
-The tools and settings are discussed in the following sections.
+\begin{figure}[h]
+   \begin{center}
+   \caption{GRASS Edit Dialog}\label{fig:grass_digitizing}\smallskip
+   \includegraphics[clip=true,width=9.5cm]{grass_digitizing}
+\end{center}  
+\end{figure}
 
 \subsubsection{Toolbar}\label{label_grasstoolbar}
 
