@@ -54,7 +54,7 @@ mapcalc_open.eps\
 mapcalc_save.eps\
 mapcalc_save_as.eps\
 mapcalc_select.eps\
-
+r_in_gdal_1.eps\
 	
 ##### TARGETS #####
 

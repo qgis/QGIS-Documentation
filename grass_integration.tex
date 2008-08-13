@@ -331,9 +331,30 @@ current location and the mapsets it contains.
 
 \subsubsection{Modules inside the toolbox} \index{GRASS!toolbox!modules}
 
-The GRASS toolbox provide a collection of GRASS modules which can be used
+The GRASS toolbox provides a collection of GRASS modules which can be used
 from within QGIS. They are grouped in thematic blocks which can be defined 
 by the user (see Section \ref{sec:toolbox-customizing}). 
+
+%% FIXME Include a list of available GRASS Modules as started below and
+%% as structured in QGIS Version 1.0. I would propose not to import module
+%% images, but the module names and their description 
+%% Below is just an example
+
+\begin{table}[h]
+\centering
+\caption{List of available GRASS Toolbox Modules}\label{tab:grass_modules}\medskip
+ \begin{tabular}{|l|p{5.3in}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Data import modules}} \\ 
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline r.in.gdal &  Import GDAL supported raster file into a GRASS binary raster map layer \\
+  \hline r.in.gdal.loc &  Import GDAL supported raster file into a GRASS
+  binary raster map layer and create a fitted location \\
+  \hline r.in.ascii & Converts an ASCII raster file to a GRASS binary raster map layer \\
+  \hline ... & ... \\
+\hline
+\end{tabular}
+\end{table}
+
 
 When clicking on a module a new tab will be added to your toolbox which
 provides three new sub-tabs:
