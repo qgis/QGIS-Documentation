@@ -80,18 +80,28 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \hline URL \index{WMS!URL} & URL of the server providing the data.
  This must be a resolvable host name; the same format as you would use 
  to open a telnet connection or ping a host. \\
-\hline Proxy Host & Network address or host name of the proxy server
- you would use to access this WMS server, or leave blank if no proxy is needed. \\
-\hline Proxy Port & Port number of the proxy server. \\
-\hline Proxy User & User name used to login to the proxy server. \\
-\hline Proxy Password & Password used to login to the proxy server. \\
+% Not needed any more, since it is now available under the global
+% properties of the QGIS-project. (SH, 20080811)
+% 
+%%% \hline Proxy Host & Network address or host name of the proxy server
+%%%  you would use to access this WMS server, or leave blank if no proxy is needed. \\
+%%% \hline Proxy Port & Port number of the proxy server. \\
+%%% \hline Proxy User & User name used to login to the proxy server. \\
+%%% \hline Proxy Password & Password used to login to the proxy server. \\
 \hline
 \end{tabular}
 \end{table}
 
-At least \guilabel{Name} and \guilabel{URL} are required entries; the
-\guilabel{proxy} entries 
-can be left blank if you have a clear path to your WMS server.
+%%% At least \guilabel{Name} and \guilabel{URL} are required entries; the
+%%% \guilabel{proxy} entries 
+%%% can be left blank if you have a clear path to your WMS server.
+
+If you need to set up a proxy-server to be able to receive WMS-services
+from the internet, you can add your proxy-server in the options.
+Choose \dropmenuopttwo{mActionOptions}{Options} from the
+\mainmenuopt{Settings} menu and click on the \tab{Proxy} tab. There you
+can add your proxy-settings and enable them by setting the 
+\checkbox{Use proxy for web access}.
 
 Once the new WMS Server has been created, it will be preserved across future 
 QGIS sessions.
@@ -189,7 +199,7 @@ and select the second group of layers that you want to overlay the first group.
 
 \minisec{Transparency}
 % BM: doesn't seem to work?
-% \label{ogc-wms-transparency}
+\label{ogc-wms-transparency}
 In this version of QGIS, the transparency setting is hard-coded to 
 be always on, where available.  Therefore no option for it exists
 on-screen.
@@ -242,6 +252,7 @@ results can occur.
 \subsubsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
 \index{WMS!identify}
 \index{identify!WMS}
+\index{WMS!GetFeatureInfo}
 
 Once you have added a WMS server, 
 and if any layer from a WMS server is queryable, you can then use
@@ -370,6 +381,16 @@ Only public WMS servers are accessible.
 There is no ability to apply a user name and password combination
 as an authentication to the WMS server.
 
+\begin{Tip}[ht]\caption{\textsc{Accessing secured OGC-layers}}
+\qgistip{If you need to access secured layers, you could use InteProxy as
+a transparent proxy, which does supports several authentification methods.
+More information can be found at the InteProxy-manual found on the website
+\url{http://inteproxy.wald.intevation.org}.
+\index{WMS!secured layers!}
+}
+\end{Tip}
+
+
 \subsection{WFS Client}
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You 
@@ -391,7 +412,7 @@ wfs&REQUEST=GetCapabilities
 \begin{enumerate}
   \item Make sure the WFS plugin is loaded; if not, open the Plugin Manager and load it
   \item Click on the 
-  %FIXME \toolbtntwo{wfs-icon}{Add WFS Layer} 
+  \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer} 
   tool on the plugins toolbar
   \item Click on \button{New} 
   \item Enter \inputtext{Name}{DM Solutions} as the name
@@ -428,3 +449,4 @@ maintained and some not, that list public servers you can use.
 \index{WFS!remote server!}
 }
 \end{Tip} 
+
