@@ -71,24 +71,22 @@ The selection box \selectstring{Files of type}{\ldots} allows you to preselect s
 
 You can also select the Encoding type for the shapefile if desired.
 
-% FIXME: new screenie here
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
-%   \includegraphics[clip=true, width=14cm]{shapefileopendialog}
-%\end{center} 
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Open an OGR Supported Vector Layer Dialog}\label{fig:openshapefile}\smallskip
+   \includegraphics[clip=true, width=14cm]{shapefileopendialog}
+\end{center} 
+\end{figure}
 
 Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
 \ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
 
-% FIXME: new screenie here
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{QGIS with Shapefile of Alaska loaded}\label{fig:loadedshapefile}\smallskip
-%   \includegraphics[clip=true, width=17cm]{shapefileloaded09}
-%\end{center} 
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{QGIS with Shapefile of Alaska loaded}\label{fig:loadedshapefile}\smallskip
+   \includegraphics[clip=true, width=17cm]{shapefileloaded}
+\end{center} 
+\end{figure}
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
 \qgistip{When you add a layer to the map, it is assigned a random color. When
@@ -423,13 +421,22 @@ To access the
 layer and select \dropmenuopt{Properties} from the popup menu.
 
 % FIXME: new screenie here
-%\begin{figure}[H]
-%   \begin{center}
-%   \caption{Vector Layer Properties
-%Dialog}\label{fig:vector_symbology}\smallskip
-%   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology09} 
-%\end{center}  
-%\end{figure}
+\begin{figure}[H]
+   \begin{center}
+   \caption{Vector Layer Properties Dialog}\label{fig:vector_symbology}\smallskip
+   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology} 
+\end{center}  
+\end{figure}
+
+\subsubsection{General Tab}
+The \tab{General} tab is essentially like that of the raster dialog. It allows you
+to change the display name, set scale dependent rendering options, create a spatial 
+index of the vector file (only for OGR supported formats and PostGIS) and view or
+change the projection of the specific vetor layer.
+
+The \button{Query Builder} button allows you to create a subset of the features 
+in the layer - but this button currently only is available when you open the 
+attribute table and select the \button{Advanced ...} button.
 
 \subsubsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
@@ -459,11 +466,11 @@ shown.\index{symbology!changing}
 
 \begin{figure}[h]
 \centering
-   \subfigure[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\goodgap
-   \subfigure[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\\
-   \subfigure[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}\goodgap
-   \subfigure[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{qgis_icon_new_verylarge}}
 \caption{Symbolizing-options}
+   \subfigure[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}\goodgap
+   \subfigure[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}\\
+   \subfigure[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}\goodgap
+   \subfigure[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyUnique}}
 \end{figure}
 
 % FIXME: outdated
@@ -496,16 +503,6 @@ Therefor use the button \button{Save Style \ldots}. No need to say that
 QGIS \CURRENT allows to set a transparency for every vector layer. This can be done with
 the slider \slider{Transparency}{0}{20mm} inside the tab \tab{symbology} (see fig. \ref{fig:vector_symbology}).
 This is very useful for overlaying several vector layers.
-
-\subsubsection{General Tab}
-The \tab{General} tab is essentially like that of the raster dialog. It allows you
-to change the display name, set scale dependent rendering options, create a spatial 
-index of the vector file (only for OGR supported formats and PostGIS) and view or
-change the projection of the specific vetor layer.
-
-The \button{Query Builder} button allows you to create a subset of the features 
-in the layer - but this button currently only is available when you open the 
-attribute table and select the \button{Advanced ...} button.
 
 \subsubsection{Metadata Tab}
 
@@ -759,6 +756,23 @@ containing locations of images or photos along with a file name, you could
 create an action to launch a viewer to display the image. You could also use
 actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
+
+\subsubsection{Attributes Tab}\index{attributes}\label{label_attributes}
+Within the \tab{attributes} tab the attributes of the selected dataset can be
+manipulated. The buttons \button{New Column} and \button{Delete Column} can be
+used when the dataset is in editing mode.
+
+The button \button{Toggle Editing} toggles this mode.
+
+\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
+\qgistip{Currently on PostGIS-layers are supported to add or drop attribute
+columns withing this dialog. In further versions of QGIS also other
+datasources will be supported.
+}
+\end{Tip}
+
+%FIXME: More to come here, since I do not know exactly what the edit-widget is
+%for.
 
 \subsection{Editing}\index{editing}
 

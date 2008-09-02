@@ -10,13 +10,17 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=digitising_attributes09.eps\
+PNG=shapefileloaded.eps \
+    shapefileopendialog.eps \
+    vectorLayerSymbology.eps \
+    vectorClassifySingle.eps \
+    vectorClassifyGraduated.eps \
+    vectorClassifyContinous.eps \
+    vectorClassifyUnique.eps \
+
+# digitising_attributes09.eps\
 #	newvectorlayer.eps\
 #	querybuilder.eps\
-#	shapefileloaded08.eps\
-#	shapefileloaded09.eps\
-#	shapefileopendialog.eps\
-#	vectorLayerSymbology09.eps\
 	
 	
 ##### TARGETS #####
