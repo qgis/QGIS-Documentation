@@ -82,7 +82,7 @@ pics:
 #	(cd ./plugins_python_images && make)
 #	(cd ./getting_started_screenies && make)
 	(cd ./working_with_vector_screenies && make)
-#	(cd ./working_with_raster_screenies && make)
+	(cd ./working_with_raster_screenies && make)
 #	(cd ./working_with_ogc_screenies && make)
 #	(cd ./working_with_projections_screenies && make)
 	(cd ./grass_integration_screenies && make)

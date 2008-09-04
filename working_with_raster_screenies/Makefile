@@ -10,9 +10,8 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=raster_properties.eps\
-#	rastercontextmenu.eps
-	
+PNG=rasterPropertiesDialog.eps \
+    rasterContext.eps \
 	
 ##### TARGETS #####
 

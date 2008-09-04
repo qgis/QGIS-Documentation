@@ -17,6 +17,11 @@ PNG=shapefileloaded.eps \
     vectorClassifyGraduated.eps \
     vectorClassifyContinous.eps \
     vectorClassifyUnique.eps \
+    action_identifyaction.eps \
+    editProjectSnapping.eps \
+    editDigitizing.eps \
+    editNewVector.eps \
+    queryBuilder.eps \
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\
