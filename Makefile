@@ -84,7 +84,7 @@ pics:
 	(cd ./working_with_vector_screenies && make)
 	(cd ./working_with_raster_screenies && make)
 #	(cd ./working_with_ogc_screenies && make)
-#	(cd ./working_with_projections_screenies && make)
+	(cd ./working_with_projections_screenies && make)
 	(cd ./grass_integration_screenies && make)
 #	(cd ./map_composer_screenies && make)
 #	(cd ./map_server_export_screenies && make)

@@ -13,6 +13,7 @@ JPG=qgis_icon_new_verylarge.eps\
 
 PNG=\
   clearInput.eps\
+  splash.eps\
   mAction.eps\
   mActionAddAllToOverview.eps\
   mActionAddIsland.eps\
@@ -112,7 +113,14 @@ PNG=\
   mIconSymbology.eps\
   mIconUnknownLayerType.eps\
   mIconWaitingForLayerType.eps\
-  mMapserverExport.eps
+  mMapserverExport.eps \
+  mActionLowerItems.eps \
+  mActionMoveItemContent.eps \
+  mActionGroupItems.eps \
+  mActionUngroupItems.eps \
+  mActionMoveItemsToTop.eps \
+  mActionRaiseItems.eps \
+  mActionMoveItemsToBottom.eps \
   		
 ##### TARGETS #####
 

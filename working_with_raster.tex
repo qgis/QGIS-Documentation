@@ -106,41 +106,35 @@ tabs on the dialog:
 
 \subsubsection{Symbology Tab}\label{label_sombology}
 
-QGIS supports three forms of raster layers:\index{raster layers!supported channels}
+QGIS can render two different types of rasterlayers:\index{raster layers!supported channels}
 
 \begin{itemize}
-\item Single Band Grayscale Rasters
-\item Palette Based RGB Rasters
-\item Multiband RGB Rasters
+\item Single band gray
+\item Three band color
 \end{itemize}
 
-From these three basic layer types, eight forms of symbolised raster display
-can be used:\index{raster layers!rendering interpretation}
+Within both rendertypes you can invert the color using the checkbox
+\checkbox{Invert color map}.
 
+\minisec{Single band gray}
+
+This selection offers you two possibilites to choose. At first you can
+select which band you like to use for rendering. The second option offers
+a selection of available colortables for rendering.
+
+The following settings are available through the dropdownbox
+\selectstring{color map}{Grayscale}, where grayscale is the default
+setting.
+Also available are
 \begin{itemize}
-\item Single Band Grayscale
-\item Single Band Pseudocolor
-\item Paletted Grayscale (where only the red, green or blue component of the
-image is displayed)
-\item Paletted Pseudocolor (where only the red, green or blue component of the
-image is displayed, but using a pseudocolor algorithm)
-\item Paletted RGB
-\item Multiband Grayscale (using only one of the bands to display the image)
-\item Multiband Pseudocolor (using only one of the bands shown in
-pseudocolor)
-\item Multiband RGB (using any combination of three bands)
+\item Pseudocolor
+\item Freak Out
+\item Colormap
 \end{itemize}
 
-\smallskip
-
-QGIS can invert the colors in a given layer so that light colors become dark
-(and dark colors become light). Use the \checkbox{Invert Color Map} checkbox to
-enable / disable this behavior.\index{raster layers!icolor map inversion}
-
-QGIS has the ability to display each raster layer at varying transparency
-levels.\index{raster layers!transparency} Use the transparency slider to indicate to
-what extent the underlying layers (if any) should be visible though the
-current raster layer. 
+When selecting the entry \selectstring{color map}{Colormap}, the tab
+\tab{Colormap} becomes available. See more on that at chapter
+\ref{label_colormaptab}.
 
 QGIS can restrict the data displayed to only show cells whose values are
 within a given number of standard deviations of the mean for the
@@ -148,6 +142,49 @@ layer.\index{raster layers!standard deviation} This is useful when you have one 
 two cells with abnormally high values in a raster grid that are having a
 negative impact on the rendering of the raster. This option is only available
 for pseudocolor images.
+
+
+\minisec{Three band color}
+
+This selection offers you a wide range of options to modify the appereance
+of your rasterlayer. For example you could switch color-bands from the
+standard RGB-order to something else.
+
+Also scaling of colors are available.
+Note that the scaling of you custom min and max values for each band is
+only available if your dataset has three bands to do so.
+
+% SH: Not applyable anymore
+%%%QGIS supports three forms of raster layers:\index{raster layers!supported channels}
+%%%
+%%%\begin{itemize}
+%%%\item Single Band Grayscale Rasters
+%%%\item Palette Based RGB Rasters
+%%%\item Multiband RGB Rasters
+%%%\end{itemize}
+%%%
+%%%From these three basic layer types, eight forms of symbolised raster display
+%%%can be used:\index{raster layers!rendering interpretation}
+%%%
+%%%\begin{itemize}
+%%%\item Single Band Grayscale
+%%%\item Single Band Pseudocolor
+%%%\item Paletted Grayscale (where only the red, green or blue component of the
+%%%image is displayed)
+%%%\item Paletted Pseudocolor (where only the red, green or blue component of the
+%%%image is displayed, but using a pseudocolor algorithm)
+%%%\item Paletted RGB
+%%%\item Multiband Grayscale (using only one of the bands to display the image)
+%%%\item Multiband Pseudocolor (using only one of the bands shown in
+%%%pseudocolor)
+%%%\item Multiband RGB (using any combination of three bands)
+%%%\end{itemize}
+
+\smallskip
+
+QGIS can invert the colors in a given layer so that light colors become dark
+(and dark colors become light). Use the \checkbox{Invert Color Map} checkbox to
+enable / disable this behavior.\index{raster layers!icolor map inversion}
 
 \begin{Tip}\caption{\textsc{Viewing a Single Band of a Multiband Raster}}
 \qgistip{If you want to view a single band (for example Red) of a multiband
@@ -159,7 +196,11 @@ set the image type to grayscale, then select Red as the band to use for Gray.
 
 \subsubsection{Transparency Tab} \label{rastertab:transparency}
 
-This tab adjusts the transparency of a rastermap. This is very usefull, if
+QGIS has the ability to display each raster layer at varying transparency
+levels.\index{raster layers!transparency} Use the transparency slider to indicate to
+what extent the underlying layers (if any) should be visible though the
+current raster layer. 
+This is very usefull, if
 you like to overlay more than one rasterlayer, e.g. a shaded relief-map
 overlayed by a classified rastermap. This will make the look of the map
 more plastique.
@@ -169,7 +210,7 @@ Additionally you can enter a rastervalue, which should be treated as
 
 An even more flexible way to customize the transparency can be done in the
 \guiheading{Custom transparency options} section.
-The transparency of every pixel set in this block.
+The transparency of every pixel can be set in this block.
 
 As an example we want to set the water of our example rasterfile
 \filename{landcover.tif} to a transparency of 20\%. The following steps
@@ -199,10 +240,34 @@ transparency-list to a file. The button
 \toolbtntwo{mActionAddRasterLayer}{Import from file} loads your
 transparency-settings and applies them to the current rasterlayer.
 
-\subsubsection{Colormap}
+\subsubsection{Colormap} \label{label_colormaptab}
 % FIXME: Write me
 
-The \tab{Colormap} tab is only available, when ... WRITE ME!
+The \tab{Colormap} tab is only available, when you have selected a
+single-band-rendering within the tab \tab{Symbology} (see chapt. \ref{label_sombology}).
+
+Three ways of color interpolation are available:
+\begin{itemize}
+\item Discrete
+\item Linear 
+\item Exact
+\end{itemize}
+
+The button \button{Add Entry} adds a color to the individual color-table.
+Double-Clicking on the value-column lets you inserting a specific value.
+Double clicking on the color-column opens the dialog \dialog{Select
+color} where you can select a color to apply on that value.
+
+Alternativly you can click on the button
+% FIXME: images is missing\toolbtntwo{}{Load colormap from Band}
+, which tries to
+load the table from the band (if it has any).
+
+The block \guiheading{Generate new color map} allows you to create newly
+categorized colormaps. You only need to select the \selectnumber{number of
+classes}{15} you need and press the button \button{Classify}. Currently
+only one \selectstring{Classification mode}{Equal Interval} is
+supported\index{raster layer!classify}.
 
 \subsubsection{General Tab}\label{label_generaltab}
 
@@ -225,14 +290,10 @@ including statistics about each band in the current raster layer. Statistics
 are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.\index{raster layers!metadata}
 
-
-\begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
-\qgistip{To gather statistics for a layer, select pseudocolor rendering and
-click the \button{Apply} button. Gathering statistics for a layer can be time
-consuming. Please be patient while QGIS examines your
-data!\index{raster layers!statistics}
-}
-\end{Tip}
+This tab is mainly for information. You cannot change any values printed
+inside this tab. To update the statistics you need to change to tab
+\tab{Histogram} and press the button \button{Refresh} on the bottom right,
+see ch. \ref{label_histogram}.
 
 \subsubsection{Pyramids Tab}\label{raster_pyramids}
 
@@ -249,21 +310,35 @@ Several resampling methods can be used to calculate the pyramides:
 \begin{itemize}
 \item Average
 \item Nearest Neighbour
-\item Average Magphase
 \end{itemize}
+
+When checking the checkbox \checkbox{Build pyramids internally if
+possible} QGIS tries to build pyramids internally.
 
 Please note that building pyramids may alter the original data file and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
 
-\subsubsection{Histogram Tab}\label{raster_histogram}
+\subsubsection{Histogram Tab}\label{label_histogram}
 
 The histogram tab allows you to view the distribution\index{raster layers!histogram} 
 of the bands or colors in your raster. You must first generate the raster statistics 
 by clicking the \button{Refresh} button. You can choose which bands to display by 
-selecting them in the list box at the bottom right of the tab. Two different
-chart types are allowed: Barcharts and Linegraphs.
+selecting them in the list box at the bottom left of the tab. Two different
+chart types are allowed: 
+\begin{itemize}
+\item Barcharts and 
+\item Linegraphs.
+\end{itemize}
 
 Once you view the histogram, you'll notice that the band statistics have been
 populated on the \tab{metadata} tab.\index{raster layers!metadata)}
+
+\begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
+\qgistip{To gather statistics for a layer, select pseudocolor rendering and
+click the \button{Apply} button. Gathering statistics for a layer can be time
+consuming. Please be patient while QGIS examines your
+data!\index{raster layers!statistics}
+}
+\end{Tip}
 

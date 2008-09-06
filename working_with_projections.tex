@@ -10,7 +10,7 @@ properly.
 \subsection{Overview of Projection Support}\label{label_projoverview}
 
 QGIS has support for approximately 2,700 known projections. 
-Projections are stored in a Sqlite database that is installed with QGIS.
+Projections are stored in a SQLite database that is installed with QGIS.
 %Appendix \ref{app:datamodel}  contains information about the database and the
 % schema. 
 Normally you do not need to manipulate the database directly. In fact,
@@ -48,7 +48,7 @@ projection for the map and enable OTF projections. There are two ways to open
 the \dialog{Project Properties} dialog:
 
 \begin{enumerate}
-\item Select \dropmenuopt{mActionOptions}{Project Properties} from the \mainmenuopt{Settings} menu.
+\item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the \mainmenuopt{Settings} menu.
 \item Click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the lower right-hand corner of the
 statusbar.
 \end{enumerate}
@@ -67,13 +67,12 @@ the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will aut
 The Projection tab of the \dialog{Project Properties} dialog contains four important components as numbered in Figure
 \ref{fig:projections} and described below.
 
-% FIXME
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{Projection Dialog (GNU/Linux)}\label{fig:projections}\smallskip
-%   \includegraphics[clip=true, width=14cm]{projectiondialog08}
-%\end{center}  
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Projection Dialog}\label{fig:projections}\smallskip
+   \includegraphics[clip=true, width=14cm]{projectionDialog}
+\end{center}  
+\end{figure}
 
 \begin{enumerate}
 \item \textbf{Enable on the fly projection}\index{Projections!enabling} - this checkbox is used
@@ -113,22 +112,20 @@ you can use the search feature as described in the previous section.
 \index{Projections!custom}
 
 If QGIS doesn't have the projection you need, you can define a custom
-projection. To define a projection, select \dropmenuopt{Custom Projections} from
+projection. To define a projection, select \dropmenuopttwo{mIconNew}{Custom CRS} from
 the \mainmenuopt{Settings} menu. Custom projections are stored in your QGIS user
 database. In addition to your projections, this database contains your spatial
 bookmarks and other custom data. 
 
-% FIXME
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{Custom Projection Dialog (OS
-%X)}\label{fig:customprojections}\smallskip
-%   \includegraphics[clip=true, width=14cm]{customprojection}
-%\end{center}  
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Custom Projection Dialog}\label{fig:customprojections}\smallskip
+   \includegraphics[clip=true, width=14cm]{customProjectionDialog}
+\end{center}  
+\end{figure}
 
 At version \CURRENT of QGIS, defining a custom projection requires a good
-understanding of the Proj.4 projection library. To begin, refer to
+understanding of the Proj.4 projection library. To begin, refer to the
 Cartographic Projection Procedures for the UNIX Environment - A User's Manual
 by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990
 (available at \url{ftp://ftp.remotesensing.org/proj/OF90-284.pdf}).
@@ -136,21 +133,30 @@ This manual describes the use of the \usertext{proj.4} and related command line
 utilities. The cartographic parameters used with \usertext{proj.4} and described
 in the user manual are the same as those used by QGIS. 
 
-The \dialog{Custom Projection Definition} dialog requires only two parameters to define a user
-projection: 
+The \dialog{Custom Coordinate Reference System Definition} dialog requires
+only two parameters to define a user projection: 
 \begin{enumerate}
-\item a descriptive name, and
-\item the cartographic parameters. 
+\item a descriptive name and
+\item the cartographic parameters in PROJ.4 format.
 \end{enumerate}
-To create a new projection, click the \button{New} button and enter a descriptive
-name and the projection parameters. Figure \ref{fig:customprojections} shows
+To create a new projection, click the 
+\toolbtntwo{mIconNew}{New} button and enter a descriptive
+name and the projection parameters. 
+After that you can save your projektion by clicking the button
+\toolbtntwo{mActionFileSave}{Save}.
+
+Note that the \guilabel{Parameters} must begin with a \usertext{+proj=}-block,
+to represent the new projection.
+
+Figure \ref{fig:customprojections} shows
 the dialog with an example projection. The parameters shown were entered based
 on a knowledge of the projection and the information found in OF90-284.
 
 You can test your projection parameters to see if they give sane results by
-clicking on the \tab{Test} tab and pasting your projection parameters into
+clicking on the \button{Calculate} button inside the \guiheading{Test} block 
+and pasting your projection parameters into
 the \guilabel{Parameters} field. Then enter known WGS 84 latitude and longitude
-values in North and East fields respectively. Click on \button{Calculate} and
-compare the results with the known values in your projected coordinate
+values in \guilabel{North} and \guilabel{East} fields respectively. 
+Click on \button{Calculate} and compare the results with the known values in your projected coordinate
 system. 
 

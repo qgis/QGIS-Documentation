@@ -80,21 +80,9 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \hline URL \index{WMS!URL} & URL of the server providing the data.
  This must be a resolvable host name; the same format as you would use 
  to open a telnet connection or ping a host. \\
-% Not needed any more, since it is now available under the global
-% properties of the QGIS-project. (SH, 20080811)
-% 
-%%% \hline Proxy Host & Network address or host name of the proxy server
-%%%  you would use to access this WMS server, or leave blank if no proxy is needed. \\
-%%% \hline Proxy Port & Port number of the proxy server. \\
-%%% \hline Proxy User & User name used to login to the proxy server. \\
-%%% \hline Proxy Password & Password used to login to the proxy server. \\
 \hline
 \end{tabular}
 \end{table}
-
-%%% At least \guilabel{Name} and \guilabel{URL} are required entries; the
-%%% \guilabel{proxy} entries 
-%%% can be left blank if you have a clear path to your WMS server.
 
 If you need to set up a proxy-server to be able to receive WMS-services
 from the internet, you can add your proxy-server in the options.
@@ -221,6 +209,7 @@ whilst JPEG leaves it unsupported.
 \index{Projections!WMS}
 \index{Projections!CRS}\index{Projections!coordinate reference system}
 \index{CRS}\index{coordinate reference system}
+\index{SRS}\index{Projections!SRS}
 
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
@@ -263,6 +252,7 @@ The results of the query are returned in plain text.
 The formatting of this text is dependent on the particular
 WMS server used.
 
+% FIXME: GetFeatureInfo-Requests are done here?
 
 \subsubsection{Viewing Properties}\label{sec:ogc-wms-properties}\index{WMS!properties}
 \index{rasters!properties}
@@ -386,7 +376,7 @@ as an authentication to the WMS server.
 a transparent proxy, which does supports several authentification methods.
 More information can be found at the InteProxy-manual found on the website
 \url{http://inteproxy.wald.intevation.org}.
-\index{WMS!secured layers!}
+\index{WMS!secured layers!}\index{OGC!Authentication}
 }
 \end{Tip}
 

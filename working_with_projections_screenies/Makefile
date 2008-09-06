@@ -11,8 +11,8 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=customprojection.eps\
-#	projectiondialog08.eps
+PNG=customProjectionDialog.eps \
+    projectionDialog.eps
 	
 	
 ##### TARGETS #####
