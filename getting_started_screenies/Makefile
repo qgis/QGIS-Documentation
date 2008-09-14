@@ -10,7 +10,7 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-#PNG=startup09.eps\
+PNG=startup1_0_0.eps\
 	
 	
 ##### TARGETS #####

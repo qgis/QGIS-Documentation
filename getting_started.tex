@@ -10,8 +10,8 @@ This chapter gives a quick overview of running QGIS with data available on the Q
 \subsection{Installation}\label{label_installation}
 \index{installation}
 
-Building QGIS from source is documented in Appendix \ref{sec:install_windows} for windows, 
-Appendix \ref{sec:install_macosx} for Mac OSX and Appendix \ref{sec:install_linux} for GNU/Linux. 
+Building QGIS from source is documented in \win Appendix \ref{sec:install_windows} for windows,
+\osx Appendix \ref{sec:install_macosx} for Mac OSX and \nix Appendix \ref{sec:install_linux} for GNU/Linux. 
 The Installation instructions are distributed with the QGIS source code and also available 
 at \url{http://qgis.org}. 
 
@@ -22,9 +22,24 @@ on binary packages at the QGIS website at \url{http://download.qgis.org}.
 \subsection{Sample Data}\label{label_sampledata}
 \index{data!sample} 
 
-If you do not have any GIS data handy, you can obtain an Alaska
-dataset from the QGIS web site at \url{http://qgis.org}. The projection 
-for the data is Alaska Albers Equal Area with unit meter:
+The user guide contains examples based on the QGIS sample dataset. 
+
+\win The Windows installer has an option to download the QGIS sample dataset.
+If checked, the data will be downloaded to your "My Documents" folder and placed
+in a folder called "GIS Database". 
+You may use Windows Explorer to move this folder to any convenient location.
+If you did not select the checkbox to install the sample dataset
+during the initial QGIS installation, you can either
+\begin{itemize}
+\item{use GIS data that you already have;}
+\item{download the sample data from the QGIS website
+ \url{http://qgis.org} on the Downloads page; or}
+\item{uninstall QGIS and reinstall with the data download option checked.}
+\end{itemize}
+%FIXME- what about Mac and *nix?
+
+The projection 
+for the QGIS sample dataset is Alaska Albers Equal Area with unit meter:
 
 \begin{verbatim}
 PROJCS["NAD_1927_Albers",
@@ -42,34 +57,35 @@ PROJCS["NAD_1927_Albers",
     PARAMETER ["Latitude_Of_Origin",50.0],
     UNIT["Meter",1.0]]
 \end{verbatim}
+The Alaska dataset includes all GIS data that are used as examples and 
+screenshots in the user guide, and includes a GRASS database.
 
-For use with GRASS, a sample GRASS database (e.g. Spearfish) can be obtained 
-from the official GRASS GIS-website \url{http://grass.osgeo.org/download/data.php}. 
-The projection of the Spearfish dataset is UTM Zone 13, Northern Hemisphere: 
-
-\begin{verbatim}
-PROJCS["UTM Zone 13, Northern Hemisphere",
-    GEOGCS["clark66",
-        DATUM["North_American_Datum_1927",
-            SPHEROID["clark66",6378206.4,294.9786982]],
-        PRIMEM["Greenwich",0],
-        UNIT["degree",0.0174532925199433]],
-    PROJECTION["Transverse_Mercator"],
-    PARAMETER["latitude_of_origin",0],
-    PARAMETER["central_meridian",-105],
-    PARAMETER["scale_factor",0.9996],
-    PARAMETER["false_easting",500000],
-    PARAMETER["false_northing",0],
-    UNIT["meter",1]]
-\end{verbatim}
-
-These data sets will be used as a basis for many of the examples and 
-screenshots in this document.
+%Additional GRASS data sets (e.g. Spearfish, South Dakota) can be obtained 
+%from the official GRASS GIS-website \url{http://grass.osgeo.org/download/data.php}. 
+%The Spearfish data set is used in GRASS tutorials
+%The projection of the Spearfish dataset is UTM Zone 13, Northern Hemisphere: 
+%
+%\begin{verbatim}
+%PROJCS["UTM Zone 13, Northern Hemisphere",
+%    GEOGCS["clark66",
+%        DATUM["North_American_Datum_1927",
+%            SPHEROID["clark66",6378206.4,294.9786982]],
+%        PRIMEM["Greenwich",0],
+%        UNIT["degree",0.0174532925199433]],
+%    PROJECTION["Transverse_Mercator"],
+%    PARAMETER["latitude_of_origin",0],
+%    PARAMETER["central_meridian",-105],
+%    PARAMETER["scale_factor",0.9996],
+%    PARAMETER["false_easting",500000],
+%    PARAMETER["false_northing",0],
+%    UNIT["meter",1]]
+%\end{verbatim}
 
 \subsection{Starting QGIS}\label{label_startinqgis}
 
 \begin{itemize}
-\item \nix{assuming that QGIS is installed in the PATH, you can start QGIS by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
+\item \nix{assuming that QGIS is installed in the PATH, you can start QGIS 
+by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
 application link (or shortcut) on the desktop.} 
 \item \win{start QGIS using the Start menu or desktop shortcut.}
 \item \osx{double click the icon in your Applications folder.}
@@ -78,14 +94,14 @@ application link (or shortcut) on the desktop.}
 \subsubsection{Command Line Options}\index{command line options}
 \label{label_commandline}
 
-QGIS supports a number of options when started from the command line. To
+\nix QGIS supports a number of options when started from the command line. To
 get a list of the options, enter \usertext{qgis ---help} on the command line.
 The usage statement for QGIS is:
 
 \small
 \begin{verbatim}
 qgis --help
-Quantum GIS - 0.9.0 'Ganymede'
+Quantum GIS - 1.0.0 'Kore'
 Quantum GIS (QGIS) is a viewer for spatial data sets, including
 raster and vector data.
 Usage: qgis [options] [FILES]
@@ -152,12 +168,13 @@ When QGIS starts, you are presented with the GUI as shown below
 (the numbers 1 through 6 in blue ovals refer to the six major areas of the
 interface as discussed below):
 
-%\begin{figure}[ht]
-%   \begin{center}
-%   \caption{Main window with alaska sample data (GNU/Linux with KDE)}\label{fig:startup}
-%   \includegraphics[clip=true, width=17cm]{startup09}
-%\end{center} 
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{QGIS GUI with Alaska sample data \wincaption}
+	 \label{fig:startup}
+   \includegraphics[clip=true, width=17cm]{startup1_0_0}
+\end{center} 
+\end{figure}
 
 \textbf{Note:} Your window decorations (title bar, etc.) may appear
 different depending on your operating system and window manager.
@@ -189,23 +206,48 @@ functions provided are:
 \item \dropmenuopt{Save Project}         - see Section \ref{sec:projects}
 \item \dropmenuopt{Save Project As}      - see Section \ref{sec:projects}
 \item \dropmenuopt{Save as Image}
-\item \dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
-\item \dropmenuopt{Print}                         - see Section \ref{label_mapcomposer}
+%\item \dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
+\item \dropmenuopt{Print Composer}                         - see Section \ref{label_mapcomposer}
 \item \dropmenuopt{Exit}
 \end{itemize}
 
+\item \mainmenuopt{Edit}  -see Section \ref{sec:edit_existing_layer}
+\begin{itemize}
+\item Cut Features  
+\item Copy Features 
+\item Paste Features 
+\item Capture Point
+\item Capture Line
+\item Capture Polygon
+\item Move Feature
+\item Split Features
+\item Delete Selected
+\item Add Vertex
+\item Move Vertex
+\item Delete Vertex
+\item Add Ring
+\item Add Island
+\end{itemize}
+
+
 \item \mainmenuopt{View}
 \begin{itemize}
+\item \dropmenuopt{Pan Map}
+\item \dropmenuopt{Zoom In}
+\item \dropmenuopt{Zoom Out}
+\item \dropmenuopt{Select Features}
+\item \dropmenuopt{Identify Features}
+\item \dropmenuopt{Measure Line}
+\item \dropmenuopt{Measure Area}
 \item \dropmenuopt{Zoom Full}
-\item \dropmenuopt{Zoom To Selection}
 \item \dropmenuopt{Zoom To Layer}
+\item \dropmenuopt{Zoom To Selection}
 \item \dropmenuopt{Zoom Last}
-\item \dropmenuopt{Refresh}
-\item \dropmenuopt{Show Bookmarks}
+\item \dropmenuopt{Zoom Actual Size}
+\item \dropmenuopt{Map Tips}
 \item \dropmenuopt{New Bookmark}
-\item \dropmenuopt{Show most toolbars}
-\item \dropmenuopt{Hide most toolbars}
-\item \dropmenuopt{Toolbar Visibility} 
+\item \dropmenuopt{Show Bookmarks}
+\item \dropmenuopt{Refresh}
 \end{itemize}
 
 \item \mainmenuopt{Layer}

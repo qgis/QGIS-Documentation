@@ -80,7 +80,7 @@ pics:
 	(cd ./plugins_quick_print_images && make)
 	(cd ./plugins_spit_images && make)
 #	(cd ./plugins_python_images && make)
-#	(cd ./getting_started_screenies && make)
+	(cd ./getting_started_screenies && make)
 	(cd ./working_with_vector_screenies && make)
 	(cd ./working_with_raster_screenies && make)
 #	(cd ./working_with_ogc_screenies && make)
