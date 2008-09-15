@@ -87,7 +87,8 @@ screenshots in the user guide, and includes a GRASS database.
 \item \nix{assuming that QGIS is installed in the PATH, you can start QGIS 
 by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
 application link (or shortcut) on the desktop.} 
-\item \win{start QGIS using the Start menu or desktop shortcut.}
+\item \win{start QGIS using the Start menu or desktop shortcut, 
+or double click on a QGIS project file.}
 \item \osx{double click the icon in your Applications folder.}
 \end{itemize} 
 
@@ -195,20 +196,39 @@ the following sections.
 
 The menu bar provides access to various QGIS features using a standard 
 hierarchical menu. The top-level menus and a summary of some of the
-functions provided are:
+functions provided are listed below. 
+Many menu entries have an icon associated with them, indicating the icon
+of the corresponding tool as it appears on a toolbar.
+Although most menu options have a corresponding tool and vice-versa,
+the menus are not organized quite like the toolbars. 
+The toolbar containing the tool is listed after each menu entry as a checkbox
+entry. For more information about tools and toolbars, see Section \ref{label_toolbars}.
+
 
 \begin{itemize}
 \item \mainmenuopt{File}
 \begin{itemize}
-\item \dropmenuopt{New Project}          - see Section \ref{sec:projects}
-\item \dropmenuopt{Open Project}         - see Section \ref{sec:projects}
-\item \dropmenuopt{Open Recent Projects} - see Section \ref{sec:projects}
-\item \dropmenuopt{Save Project}         - see Section \ref{sec:projects}
-\item \dropmenuopt{Save Project As}      - see Section \ref{sec:projects}
-\item \dropmenuopt{Save as Image}
+\item \dropmenuopttwo{mActionFileNew}{New Project}
+	\dropmenucheck{File}
+	- see Section \ref{sec:projects}
+\item \dropmenuopttwo{mActionFileOpen}{Open Project}
+	\dropmenucheck{File}
+	- see Section \ref{sec:projects}
+\item \dropmenuopt{Open Recent Projects}
+	- see Section \ref{sec:projects}
+\item \dropmenuopttwo{mActionFileSave}{Save Project}
+	\dropmenucheck{File}
+	- see Section \ref{sec:projects}
+\item \dropmenuopttwo{mActionFileSaveAs}{Save Project As}
+	\dropmenucheck{File}
+  - see Section \ref{sec:projects}
+\item \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
+	- see Section \ref{sec:output}
 %\item \dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
-\item \dropmenuopt{Print Composer}                         - see Section \ref{label_mapcomposer}
-\item \dropmenuopt{Exit}
+\item \dropmenuopttwo{mActionFilePrint}{Print Composer}
+	\dropmenucheck{File}
+	- see Section \ref{label_mapcomposer}
+\item \dropmenuopttwo{mActionFileExit}{Exit}
 \end{itemize}
 
 \item \mainmenuopt{Edit}  -see Section \ref{sec:edit_existing_layer}
@@ -570,9 +590,17 @@ as being per-project, or as a default for new projects (see
 Section \ref{subsec:gui_options}).
 
 QGIS can save the state of your workspace into a project file using
-the menu option \mainmenuopt{File} > \dropmenuopt{Save Project}.
+the menu options 
+\mainmenuopt{File} > \dropmenuopttwo{mActionFileSave}{Save Project}
+or \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As}.
 
-Loading saved projects is a similar process.
+Load saved projects into a QGIS session using 
+\mainmenuopt{File} > \dropmenuopttwo{mActionFileOpen}{Open Project}
+or \mainmenuopt{File} > \dropmenuopt{Open Recent Project}.
+If you wish to clear your session and start fresh, choose
+\mainmenuopt{File} > \dropmenuopttwo{mActionFileNew}{New Project}.
+Either of these menu options will prompt you to save the existing project
+if changes have been made since it was opened or last saved.
 
 The kinds of information saved in a project file include:
 
@@ -588,6 +616,16 @@ the file outside QGIS if you know what you are doing.
 
 The file format was updated several times compared to earlier QGIS versions. Project files 
 from older QGIS versions may not work properly anymore.
+
+\subsection{Output}\label{sec:output}\index{output!save as image!print composer!quick print}
+There are several ways to generate output from your QGIS session.
+We have discussed one already in Section \ref{projects}---
+saving as a project file. Here is a sampling of other ways to produce output files:
+\begin{itemize}
+\item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens a
+file dialog where you select the name, path and type of image (PNG or JPG format).
+\end{itemize}
+
 
 \subsection{GUI Options}
 \label{subsec:gui_options}
