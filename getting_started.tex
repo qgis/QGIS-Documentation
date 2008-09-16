@@ -81,8 +81,9 @@ screenshots in the user guide, and includes a GRASS database.
 %    UNIT["meter",1]]
 %\end{verbatim}
 
-\subsection{Starting QGIS}\label{label_startinqgis}
+\subsection{Starting and Stopping QGIS}\label{label_startinqgis}
 
+To start QGIS:
 \begin{itemize}
 \item \nix{assuming that QGIS is installed in the PATH, you can start QGIS 
 by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
@@ -90,6 +91,16 @@ application link (or shortcut) on the desktop.}
 \item \win{start QGIS using the Start menu or desktop shortcut, 
 or double click on a QGIS project file.}
 \item \osx{double click the icon in your Applications folder.}
+\end{itemize} 
+
+To stop QGIS, click the menu options \{\nix{}\win{File} \osx{QGIS}\} > Quit,
+or use the shortcut \keystroke{Ctrl+Q}.
+Other ways to exist QGIS include:
+\begin{itemize}
+\item \nix{type exit in the command window, or 
+click on the "x" button  on the upper left corner of the frame.} 
+\item \win{click on the red "x" button on the upper left corner of the frame.}
+%\item \osx{.}
 \end{itemize} 
 
 \subsubsection{Command Line Options}\index{command line options}
@@ -196,119 +207,269 @@ the following sections.
 
 The menu bar provides access to various QGIS features using a standard 
 hierarchical menu. The top-level menus and a summary of some of the
-functions provided are listed below. 
-Many menu entries have an icon associated with them, indicating the icon
-of the corresponding tool as it appears on a toolbar.
+menu options are listed below, together with the icons of the corresponding 
+tools as they appear on the toolbar, as well as keyboard shortcuts.
 Although most menu options have a corresponding tool and vice-versa,
 the menus are not organized quite like the toolbars. 
-The toolbar containing the tool is listed after each menu entry as a checkbox
+The toolbar containing the tool is listed after each menu option as a checkbox
 entry. For more information about tools and toolbars, see Section \ref{label_toolbars}.
 
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\hspace{1cm} Menu Option \> Shortcut \> Reference \> Toolbar\\
+\end{tabbing}
 
 \begin{itemize}
 \item \mainmenuopt{File}
-\begin{itemize}
-\item \dropmenuopttwo{mActionFileNew}{New Project}
-	\dropmenucheck{File}
-	- see Section \ref{sec:projects}
-\item \dropmenuopttwo{mActionFileOpen}{Open Project}
-	\dropmenucheck{File}
-	- see Section \ref{sec:projects}
-\item \dropmenuopt{Open Recent Projects}
-	- see Section \ref{sec:projects}
-\item \dropmenuopttwo{mActionFileSave}{Save Project}
-	\dropmenucheck{File}
-	- see Section \ref{sec:projects}
-\item \dropmenuopttwo{mActionFileSaveAs}{Save Project As}
-	\dropmenucheck{File}
-  - see Section \ref{sec:projects}
-\item \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
-	- see Section \ref{sec:output}
-%\item \dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
-\item \dropmenuopttwo{mActionFilePrint}{Print Composer}
-	\dropmenucheck{File}
-	- see Section \ref{label_mapcomposer}
-\item \dropmenuopttwo{mActionFileExit}{Exit}
-\end{itemize}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionFileNew}{New Project}
+	\> \keystroke{Ctrl+N}
+	\> see Section \ref{sec:projects}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionFileOpen}{Open Project}
+	\> \keystroke{Ctrl+O}
+	\> see Section \ref{sec:projects}
+	\> \dropmenucheck{File} \\
+\dropmenuopt{Open Recent Projects}
+	\>
+	\> see Section \ref{sec:projects} \\
+\dropmenuopttwo{mActionFileSave}{Save Project}
+	\> \keystroke{Ctrl+S}
+	\> see Section \ref{sec:projects}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionFileSaveAs}{Save Project As}
+	\> \keystroke{Ctrl+Shift+S}
+  \> see Section \ref{sec:projects}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
+	\>
+	\> see Section \ref{sec:output} \\
+%\dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
+\dropmenuopttwo{mActionFilePrint}{Print Composer}
+	\> \keystroke{Ctrl+P}
+	\> see Section \ref{label_mapcomposer}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionFileExit}{Exit} 
+	\> \keystroke{Ctrl+Q} \\
+\end{tabbing}
 
-\item \mainmenuopt{Edit}  -see Section \ref{sec:edit_existing_layer}
-\begin{itemize}
-\item \dropmenuopt{Cut Features}
-\item \dropmenuopt{Copy Features}
-\item \dropmenuopt{Paste Features} 
-\item \dropmenuopt{Capture Point}
-\item \dropmenuopt{Capture Line}
-\item \dropmenuopt{Capture Polygon}
-\item \dropmenuopt{Move Feature}
-\item \dropmenuopt{Split Features}
-\item \dropmenuopt{Delete Selected}
-\item \dropmenuopt{Add Vertex}
-\item \dropmenuopt{Move Vertex}
-\item \dropmenuopt{Delete Vertex}
-\item \dropmenuopt{Add Ring} - \textbf{New since v0.9}
-\item \dropmenuopt{Add Island} - \textbf{New since v0.9}
-\end{itemize}
+\item \mainmenuopt{Edit}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionEditCut}{Cut Features} 
+	\> \keystroke{Ctrl+X}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionEditCopy}{Copy Features}
+	\> \keystroke{Ctrl+C}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionEditPaste}{Paste Features} 
+	\> \keystroke{Ctrl+V}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionCapturePoint}{Capture Point}
+	\> \keystroke{.}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionCaptureLine}{Capture Line}
+	\> \keystroke{/}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionCapturePolygon}{Capture Polygon}
+	\> \keystroke{Ctrl+/}
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+And Other Edit Menu Items
+	\>
+	\> see Section \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitizing} \\
+%\dropmenuopt{Move Feature}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Split Features}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Delete Selected}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Add Vertex}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Move Vertex}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Delete Vertex}
+%	\> \> \dropmenucheck{Edit} \\
+%\dropmenuopt{Add Ring}\footnote{New since v0.9} 
+%	\>
+%	\> \dropmenucheck{Edit} \\
+%\dropmenuopt{Add Island} \footnotemark[\value{footnote}] 
+%	\>
+%	\> \dropmenucheck{Edit} \\
+\end{tabbing}
 
 
 \item \mainmenuopt{View}
-\begin{itemize}
-\item \dropmenuopt{Pan Map}
-\item \dropmenuopt{Zoom In}
-\item \dropmenuopt{Zoom Out}
-\item \dropmenuopt{Select Features}
-\item \dropmenuopt{Identify Features}
-\item \dropmenuopt{Measure Line}
-\item \dropmenuopt{Measure Area}
-\item \dropmenuopt{Zoom Full}
-\item \dropmenuopt{Zoom To Layer}
-\item \dropmenuopt{Zoom To Selection}
-\item \dropmenuopt{Zoom Last}
-\item \dropmenuopt{Zoom Actual Size}
-\item \dropmenuopt{Map Tips}
-\item \dropmenuopt{New Bookmark}
-\item \dropmenuopt{Show Bookmarks}
-\item \dropmenuopt{Refresh}
-\end{itemize}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionPan}{Pan Map}
+	\>
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionZoomIn}{Zoom In}
+	\> \keystroke{Ctrl++}
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionZoomOut}{Zoom Out}
+	\> \keystroke{Ctrl+-}
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionSelect}{Select Features}
+	\>
+	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionIdentify}{Identify Features}
+	\> \keystroke{I}
+	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionMeasure}{Measure Line}
+	\> \keystroke{M}
+	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionMeasureArea}{Measure Area}
+	\> \keystroke{J}
+	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionOpenTable}{Zoom Full}
+	\> \keystroke{F}
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionZoomToLayer}{Zoom To Layer}
+	\>
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionZoomToSelected}{Zoom To Selection}
+	\> \keystroke{Ctrl+J}
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopttwo{mActionZoomLast}{Zoom Last}
+	\>
+	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopt{Zoom Actual Size}
+	\>
+	\> \>  \\
+\dropmenuopttwo{mActionMapTips}{Map Tips}
+	\>
+	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionNewBookmark}{New Bookmark}
+	\> \keystroke{Ctrl+B}
+	\> see Section \ref{bookmarks} 
+\> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionShowBookmarks}{Show Bookmarks}
+	\> \keystroke{B}
+	\> see Section \ref{bookmarks} 
+	\> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionDraw}{Refresh}
+	\> \keystroke{Ctrl+R}
+	\> \> \dropmenucheck{Map Navigation} \\
+\end{tabbing}
 
 \item \mainmenuopt{Layer}
-\begin{itemize}
-\item \dropmenuopt{New Vector Layer}          	- see Section \ref{sec:create shape}
-\item \dropmenuopt{Add a Vector Layer}       - see Section \ref{label_workingvector}
-\item \dropmenuopt{Add a Raster Layer}       - see Section \ref{label_raster}
-\item \dropmenuopt{Add a PostGIS Layer}      - see Section \ref{label_postgis}
-\item \dropmenuopt{Add a WMS Layer}          - see Section \ref{sec:ogc-wms}
-\item \dropmenuopt{Open Attribute Table}
-\item \dropmenuopt{Toggle Editting}
-\item \dropmenuopt{Save As Shapefile}
-\item \dropmenuopt{Save Selection As Shapefile}
-\item \dropmenuopt{Remove Layer}
-\item \dropmenuopt{Properties}
-\item \dropmenuopt{Add to Overview}
-\item \dropmenuopt{Add All To Overview}
-\item \dropmenuopt{Remove All From Overview}
-\item \dropmenuopt{Hide All Layers}
-\item \dropmenuopt{Show All Layers}
-\end{itemize}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionNewVectorLayer}{New Vector Layer}
+	\> \keystroke{N}
+	\>          	
+	see Section \ref{sec:create shape}
+	\> \dropmenucheck{Manage Layers} \\
+\dropmenuopttwo{mActionAddNonDbLayer}{Add a Vector Layer}       
+	\> \keystroke{V}
+	\>          	
+	see Section \ref{label_workingvector}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionAddRasterLayer}{Add a Raster Layer}       
+	\> \keystroke{R}
+	\>          	
+	see Section \ref{label_raster}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer}      
+	\> \keystroke{D}
+	\>          	
+	see Section \ref{label_postgis}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionAddWmsLayer}{Add a WMS Layer}          
+	\> \keystroke{W}
+	\>          	
+	see Section \ref{sec:ogc-wms}
+	\> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
+	\> \>
+	\> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionToggleEditing}{Toggle editing}
+	\> \>
+	\> \dropmenucheck{Digitizing} \\
+\dropmenuopt{Save As Shapefile}
+	\\
+\dropmenuopt{Save Selection As Shapefile}
+	\\
+\dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
+	\> \keystroke{Ctrl+D}
+	\>          	
+	\> \dropmenucheck{Manage Layers} \\
+\dropmenuopt{Properties}
+	\\
+\dropmenuopttwo{mActionInOverview}{Add to Overview}
+	\> \keystroke{O}
+	\>          	
+	\> \dropmenucheck{Manage Layers} \\
+\dropmenuopttwo{mActionAddAllToOverview}{Add All To Overview}
+	\> \keystroke{+}
+	\>          	
+	\\
+\dropmenuopttwo{mActionRemoveAllFromOverview}{Remove All From Overview}
+	\> \hspace{1cm}\keystroke{-}
+	\>          	
+	\\
+\dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
+	\> \keystroke{H}
+	\>          	
+	\> \dropmenucheck{Manage Layers} \\
+\dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
+	\> \keystroke{S}
+	\>          	
+	\> \dropmenucheck{Manage Layers} \\
+\end{tabbing}
 
 \item \mainmenuopt{Settings}
-\begin{itemize}
-\item \dropmenuopt{Project Properties}  - see Section \ref{sec:projects}
-\item \dropmenuopt{Custom CRS}   - see Section \ref{sec:customprojections}
-\item \dropmenuopt{Options}             - see Section \ref{subsec:gui_options}
-\end{itemize}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionProjectProperties}{Project Properties}  
+	\> \keystroke{P}
+	\>          	
+	see Section \ref{sec:projects}
+	\\
+\dropmenuopttwo{mActionCustomProjection}{Custom CRS}   
+\> \>          	
+see Section \ref{sec:customprojections}
+	\\
+\dropmenuopttwo{mActionOptions}{Options}             
+\> \>          	
+see Section \ref{subsec:gui_options}
+	\\
+\end{tabbing}
 
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
-\begin{itemize}
-\item \dropmenuopt{Plugin Manager}          	   - see Section \ref{sec:managing_plugins}
-\end{itemize}          	
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionShowPluginManager}{Plugin Manager}          	   
+\> \>          	
+see Section \ref{sec:managing_plugins}
+	\dropmenucheck{Plugins}\\
+\end{tabbing}          	
 
 \item \mainmenuopt{Help}
-\begin{itemize}
-\item \dropmenuopt{Help Contents}
-\item \dropmenuopt{QGIS Homepage}
-\item \dropmenuopt{Check QGIS Version}
-\item \dropmenuopt{About}
-\end{itemize}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionHelpContents}{Help Contents}
+	\> \keystroke{F1}
+	\>           	
+	\> \dropmenucheck{Help}\\
+\dropmenuopttwo{mActionQgisHomePage}{QGIS Homepage}
+	\> \keystroke{Ctrl+H}
+	\>          	
+	\\
+\dropmenuopttwo{mActionCheckQgisVersion}{Check QGIS Version}
+	\\
+\dropmenuopttwo{mActionHelpAbout}{About}
+	\\
+\end{tabbing}
 
 \end{itemize}
 
@@ -738,6 +899,8 @@ To create a bookmark:
 Note that you can have multiple bookmarks with the same name.
 
 \subsubsection{Working with Bookmarks}
+\label{sec:bookmarks}
+\index{bookmarks}
 To use or manage bookmarks, select the menu 
 option \mainmenuopt{View} > \dropmenuopt{Show Bookmarks}.
 The \dialog{Geospatial Bookmarks} dialog allows you to zoom to or delete a bookmark.
