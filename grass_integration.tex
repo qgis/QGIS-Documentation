@@ -390,50 +390,13 @@ on the QGIS canvas.\index{GRASS!region!editing}
 \subsection{GRASS Toolbox}\index{GRASS!toolbox}
 
 The \toolbtntwo{grass_tools}{Open GRASS Tools} box provides analytic
-functions from GRASS within QGIS. To
-use the GRASS toolbox you need to have opened a mapset where you have
-write-permission. This is needed because QGIS will most probably create
-new datasets which need to be written to a valid mapset.
+functions from GRASS within QGIS. To use the GRASS toolbox you need to have
+opened a mapset where you have write-permission. This is needed because QGIS
+will most probably create new datasets which need to be written to a valid mapset.
 
-Therefore you need to start QGIS from within a GRASS session. Then your 
-current mapset will be opened for writing.
+All GRASS Toolbox modules are grouped in thematic blocks. It is pretty simple
+to customize the GRASS Toolbox content as described in Section \ref{sec:toolbox-customizing}.
 
-Another option for opening a mapset for writing is provided through the 
-GRASS plugin entry. Use Plugins->GRASS->Open mapset.
- 
-If you have a greyed out GRASS toolbox button, make sure you open a valid
-mapset for writing, since the GRASS plugin needs a mapset to store its
-results.
-
-The toolbox also provides a very useful data browser for browsing through your
-current location and the mapsets it contains.
-
-
-\subsubsection{Modules inside the toolbox} \index{GRASS!toolbox!modules}
-
-The GRASS toolbox provides a collection of GRASS modules which can be used
-from within QGIS. They are grouped in thematic blocks which can be defined 
-by the user (see Section \ref{sec:toolbox-customizing}). 
-
-%% FIXME Include a list of available GRASS Modules as started below and
-%% as structured in QGIS Version 1.0. I would propose not to import module
-%% images, but the module names and their description 
-%% Below is just an example
-
-\begin{table}[h]
-\centering
-\caption{List of available GRASS Toolbox Modules}\label{tab:grass_modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Data import modules}} \\ 
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.in.gdal &  Import GDAL supported raster file into a GRASS binary raster map layer \\
-  \hline r.in.gdal.loc &  Import GDAL supported raster file into a GRASS
-  binary raster map layer and create a fitted location \\
-  \hline r.in.ascii & Converts an ASCII raster file to a GRASS binary raster map layer \\
-  \hline ... & ... \\
-\hline
-\end{tabular}
-\end{table}
 
 
 When clicking on a module a new tab will be added to your toolbox which
