@@ -2,17 +2,22 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+% \updatedisclaimer
 
-\subsubsection{Data import and export modules}\index{GRASS!toolbox!modules}
+The GRASS Shell inside the GRASS Toolbox provides access to almost all (more 
+than 300) GRASS modules in command line modus. To offer a more user
+friendly working environment, about 200 of the available GRASS modules and 
+functionalities are also provided by graphical dialogs.
 
-In the GRASS Toolbox you find many modules to import and export data into
-the binary GRASS raster and vector format.   
+\subsubsection{GRASS Toolbox data import and export modules}\index{GRASS!toolbox!modules}
+
+This Section lists all graphical dialogs in the GRASS Toolbox to import and
+export data into a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox data import modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Data import modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Data import modules in the GRASS
   Toolbox}} \\ 
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -32,30 +37,27 @@ the binary GRASS raster and vector format.
   \hline r.in.poly  &  Create raster maps from ascii polygon/line data files
   in the current directory \\
   \hline r.in.srtm  & Import SRTM HGT files into GRASS \\
-  \hline v.in.db & Import vector points from a database table containing
-  coordinates \\
-  \hline v.in.dxf.multiple & Import only same layers of a DXF vector \\
+  \hline i.in.spotvgt & Import of SPOT VGT NDVI file into a raster map \\
   \hline v.in.dxf & Import DXF vector layer \\
   \hline v.in.e00 & Import ESRI E00 file in a vector map \\
   \hline v.in.garmin & Import vector from gps using gpstrans \\
   \hline v.in.gpsbabel & Import vector from gps using gpsbabel \\
   \hline v.in.mapgen & Import MapGen or MatLab vectors in GRASS \\
-  \hline v.in.ogr.all.loc & Import all the OGR/PostGIS vector layers in a
-  given data source and create a fitted location \\
-  \hline v.in.ogr.all & Import all the OGR/PostGIS vector layers in a given
-  data source \\
+  \hline v.in.ogr & Import OGR/PostGIS vector layers \\
   \hline v.in.ogr.loc & Import OGR/PostGIS vector layers and create a fitted
   location\\
-  \hline v.in.ogr & Import OGR/PostGIS vector layers \\
-  \hline v.in.region & Create new vector area map with current region extent \\
+  \hline v.in.ogr.all & Import all the OGR/PostGIS vector layers in a given
+  data source \\
+  \hline v.in.ogr.all.loc & Import all the OGR/PostGIS vector layers in a
+  given data source and create a fitted location \\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox data export modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Data export modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Data export modules in the GRASS
   Toolbox}} \\ 
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -77,10 +79,7 @@ the binary GRASS raster and vector format.
   at the pixel resolution of the currently defined region\\
   \hline r.out.vrml &  Export a raster map to the Virtual Reality Modeling
   Language (VRML)\\
-  \hline r.out.xyz & Export a raster map to a text file as x,y,z values based
-  on cell centers\\
   \hline v.out.ogr & Export vector layer to various formats (OGR library) \\
-  \hline v.out.ogr.shape & Export vector layer to Shape \\
   \hline v.out.ogr.gml & Export vector layer to GML \\
   \hline v.out.ogr.postgis & Export vector layer to various formats (OGR
   library) \\
@@ -92,47 +91,52 @@ the binary GRASS raster and vector format.
 \end{tabular}
 \end{table}
 
-\subsubsection{Data type conversion modules}
+\subsubsection{GRASS Toolbox data type conversion modules}
+
+This Section lists all graphical dialogs in the GRASS Toolbox to convert
+raster to vector or vector to raster data in a currently selected GRASS location 
+and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox data type conversion modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Data type conversion modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Data type conversion modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.to.vect.point & Convert a raster to vector points \\
   \hline r.to.vect.line & Convert a raster to vector lines \\
   \hline r.to.vect.area & Convert a raster to vector areas \\
-  \hline r.to.null & Transform cells with value in null cells \\
   \hline v.to.rast.constant & Convert a vector to raster using constant \\
   \hline v.to.rast.attr & Convert a vector to raster using attribute values \\
-  \hline v.to.points & Create points along input lines \\
 \hline
 \end{tabular}
 \end{table}
 
-\subsubsection{Region and projection configuration modules}
+\subsubsection{GRASS Toolbox region and projection configuration modules}
 
-GRASS GIS region and projection configuration modules.
+This Section lists all graphical dialogs in the GRASS Toolbox to manage and
+change the current mapset region and to configure your projection.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox region and projection configuration modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Region and projection configuration modules in the GRASS
-  Toolbox}} \\
+\caption{GRASS Toolbox: Region and projection configuration modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Region and projection configuration
+  modules in the GRASS Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline g.region.save & Save the current region as a named region \\
+  \hline g.region.zoom & Shrink the current region until it meets non-NULL
+   data from a given raster map \\
   \hline g.region.multiple.raster & Set the region to match multiple raster
   maps \\
   \hline g.region.multiple.vector & Set the region to match multiple vector
   maps \\
-  \hline g.region.save & Save the current region as a named region \\
-  \hline g.region.zoom & Shrink the current region until it meets non-NULL
-  data from a given raster map \\
   \hline g.proj.print & Print projection information of the current location\\
   \hline g.proj.geo & Print projection information from a georeferenced file
   (raster, vector or image)\\
+  \hline g.proj.ascii.new & Print projection information from a
+  georeferenced ASCII file containing a WKT projection description\\
   \hline g.proj.proj & Print projection information from a PROJ.4 projection
   description file\\
   \hline g.proj.ascii.new & Print projection information from a georeferenced
@@ -149,14 +153,17 @@ GRASS GIS region and projection configuration modules.
 \end{tabular}
 \end{table}
 
-\subsubsection{Raster data modules}
+\clearpage
 
-Raster data analysis in GRASS GIS
+\subsubsection{GRASS Toolbox raster data modules}
+
+This Section lists all graphical dialogs in the GRASS Toolbox to work with
+and analyse raster data in a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox develop raster map modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Develop raster map modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Develop raster map modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -168,7 +175,7 @@ Raster data analysis in GRASS GIS
   \hline r.region.vector & Sets the boundary definitions from existent vector map \\
   \hline r.region.edge & Sets the boundary definitions by edge (n-s-e-w) \\
   \hline r.region.alignTo & Sets region to align to a raster map\\
-  \hline r.null.null & Transform cells with value in null cells\\
+  \hline r.null.val & Transform cells with value in null cells\\
   \hline r.null.to & Transform null cells in value cells\\
   \hline r.quant & This routine produces the quantization file for a
   floating-point map \\
@@ -189,13 +196,14 @@ Raster data analysis in GRASS GIS
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox raster color management modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Raster color management modules in the GRASS
-  Toolbox}} \\
+\caption{GRASS Toolbox: Raster color management modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Raster color management modules in the
+  GRASS Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.colors.table & Set raster color table from setted tables \\
   \hline r.colors.rules & Set raster color table from setted rules \\
+  \hline r.colors.rast & Set raster color table from existing raster \\
   \hline r.blend & Blend color components for two raster maps by given ratio \\
   \hline r.composite & Blend red, green, raster layers to obtain one color
   raster \\
@@ -208,10 +216,10 @@ Raster data analysis in GRASS GIS
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox spatial raster analysis modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Spatial raster analysis modules in the GRASS
-  Toolbox}} \\
+\caption{GRASS Toolbox: Spatial raster analysis modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Spatial raster analysis modules in the
+  GRASS Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.buffer & Raster buffer \\
   \hline r.mask & Create a MASK for limiting raster operation \\
@@ -219,6 +227,11 @@ Raster data analysis in GRASS GIS
   \hline r.mapcalculator & Simple map algebra \\
   \hline r.neighbors & Raster neighbors analyses \\
   \hline v.neighbors & Count of neighbouring points \\
+  \hline r.cross & Create a cross product of the category value from multiple
+  raster map layers \\
+  \hline r.series & Makes each output cell a function of the values assigned
+  to the corresponding cells in the output raster map layers\\
+  \hline r.patch & Create a new raster map by combining other raster maps \\
   \hline r.statistics & Category or object oriented statistics \\
   \hline r.cost & Outputs a raster map layer showing the cumulative cost of
   moving between different geographic locations on an input raster map layer
@@ -246,48 +259,8 @@ Raster data analysis in GRASS GIS
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox hydrologic modelling modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Hydrologic modelling modules in the GRASS
-  Toolbox}} \\
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.carve & Takes vector stream data, transforms it to raster, and
-  subtracts depth from the output DEM \\
-  \hline r.fill.dir & Filters and generates a depressionless elevation map
-  and a flow direction map from a given elevation layer \\
-  \hline r.lake.xy & Fills lake from seed point at given level \\
-  \hline r.lake.seed & Fills lake from seed at given level \\
-  \hline r.topidx & Creates a 3D volume map based on 2D elevation and value
-  raster maps \\
-  \hline r.basins.fill & Generates a raster map layer showing watershed
-  subbasins \\
-  \hline r.water.outlet & Watershed basin creation program \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{GRASS Toolbox change raster category values and labels modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Raster category and label modules in the GRASS Toolbox}} \\
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.reclass.area.greater & Reclasses a raster map greater than user
-  specified area size (in hectares) \\
-  \hline r.reclass.area.lesser & Reclasses a raster map less than user
-  specified area size (in hectares) \\
-  \hline r.reclass & Reclass a raster using a reclassification rules file \\
-  \hline r.recode & Recode raster maps\\
-  \hline r.rescale & Rescales the range of category values in a raster map
-  layer \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{GRASS Toolbox surface management modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Surface management modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Surface management modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -322,10 +295,49 @@ Raster data analysis in GRASS GIS
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox statistic analysis modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Statistic analysis modules in the GRASS
+\caption{GRASS Toolbox: Change raster category values and labels modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Raster category and label modules in the GRASS Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline r.reclass.area.greater & Reclasses a raster map greater than user
+  specified area size (in hectares) \\
+  \hline r.reclass.area.lesser & Reclasses a raster map less than user
+  specified area size (in hectares) \\
+  \hline r.reclass & Reclass a raster using a reclassification rules file \\
+  \hline r.recode & Recode raster maps\\
+  \hline r.rescale & Rescales the range of category values in a raster map
+  layer \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Hydrologic modelling modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Hydrologic modelling modules in the GRASS
   Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline r.carve & Takes vector stream data, transforms it to raster, and
+  subtracts depth from the output DEM \\
+  \hline r.fill.dir & Filters and generates a depressionless elevation map
+  and a flow direction map from a given elevation layer \\
+  \hline r.lake.xy & Fills lake from seed point at given level \\
+  \hline r.lake.seed & Fills lake from seed at given level \\
+  \hline r.topidx & Creates a 3D volume map based on 2D elevation and value
+  raster maps \\
+  \hline r.basins.fill & Generates a raster map layer showing watershed
+  subbasins \\
+  \hline r.water.outlet & Watershed basin creation program \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Reports and statistic analysis modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Reports and statistic analysis modules in the GRASS Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.category & Prints category values and labels associated with
   user-specified raster map layers \\
@@ -341,6 +353,8 @@ Raster data analysis in GRASS GIS
   \hline r.volume & Calculates the volume of data clumps, and produces a
   GRASS vector points map containing the calculated centroids of these clumps \\
   \hline r.surf.area & Surface area estimation for rasters \\
+  \hline r.univar & Calculates univariate statistics from the non-null cells
+  of a raster map \\
   \hline r.covar & Outputs a covariance/correlation matrix for user-specified
   raster map layer(s)\\
   \hline r.regression.line & Calculates linear regression from two raster
@@ -351,14 +365,17 @@ Raster data analysis in GRASS GIS
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \subsubsection{GRASS Toolbox vector data modules}
 
-GRASS vector data analysis ...
+This Section lists all graphical dialogs in the GRASS Toolbox to work with
+and analyse vector data in a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox develop vector map modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Develop vector map modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Develop vector map modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -370,19 +387,18 @@ GRASS vector data analysis ...
   dangle to line \\
   \hline v.clean.rmbridge & Remove bridges connecting area and island or 2
   islands \\
+  \hline v.clean.chbridge & Change the type of bridges connecting area and
+  island or 2 islands \\
   \hline v.clean.rmdupl & Remove duplicate lines (pay attention to
   categories!) \\
   \hline v.clean.rmdac & Remove duplicate area centroids \\
-  \hline v.clean.bpol & Break (topologically clean) polygons (imported from
-  non topological format, like ShapeFile). Boundaries are broken on each
+  \hline v.clean.bpol & Break polygons. Boundaries are broken on each
   point shared between 2 and more polygons where angles of segments are
   different \\
   \hline v.clean.prune & Remove vertices in threshold from lines and
-  boundaries, boundary is pruned only if topology is not damaged (new
-  intersection, changed attachement of centroid), first and last segment of
-  the boundary is never changed \\
-  \hline v.clean.rmarea & Remove small areas, the longest boundary with
-  adjacent area is removed \\
+  boundaries \\
+  \hline v.clean.rmarea & Remove small areas (removes longest boundary with
+  adjacent area) \\
   \hline v.clean.rmline & Remove all lines or boundaries of zero length \\
   \hline v.clean.rmsa & Remove small angles between lines at nodes \\
   \hline v.type.lb & Convert lines to boundaries \\
@@ -395,21 +411,21 @@ GRASS vector data analysis ...
   positions \\
   \hline v.to.points & Create points along input lines \\
   \hline v.parallel & Create parallel line to input lines \\
-  \hline v.dissolve & Dissolves boundaries between adjacent areas sharing a
-  common category number or attribute \\
+  \hline v.dissolve & Dissolves boundaries between adjacent areas \\
   \hline v.drape & Convert 2D vector to 3D vector by sampling of elevation
-  raster. Default sampling by nearest neighbor \\
-  \hline v.transform & Performs an affine transformation (shift, scale and
-  rotate, or GPCs) on vector map \\
+  raster\\
+  \hline v.transform & Performs an affine transformation on a vector map \\
   \hline v.proj & Allows projection conversion of vector files \\
+  \hline v.support & Updates vector map metadata \\
+  \hline generalize & Vector based generalization \\
 \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox database connection modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Database connection modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Database connection modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -422,42 +438,11 @@ GRASS vector data analysis ...
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox spatial and network analysis modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Spatial and network analysis modules in the GRASS
-  Toolbox}} \\
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline v.extract.where & Select features by attributes \\
-  \hline v.extract.list & Extract selected features \\
-  \hline v.select.overlap & Select features overlapped by features in another
-  map\\
-  \hline v.buffer & Vector buffer \\
-  \hline v.distance & Find the nearest element in vector 'to' for elements in
-  vector 'from'. Various information about this relation may be uploaded to
-  the attribute table of input vector 'from'\\
-  \hline v.net.nodes & Create nodes on network \\
-  \hline v.net.alloc & Allocate network\\
-  \hline v.net.iso & Cut network by cost isolines \\
-  \hline v.net.salesman & Connect nodes by shortest route (traveling
-  salesman) \\
-  \hline v.net.steiner & Connect selected nodes by shortest tree (Steiner
-  tree) \\
-  \hline v.overlay.or & Vector union \\
-  \hline v.overlay.and & Vector intersection \\
-  \hline v.overlay.not & Vector subtraction \\
-  \hline v.overlay.xor & Vector non-intersection \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{GRASS Toolbox change field modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Change vector field modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Change vector field modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline v.category.change & Change layer number \\
   \hline v.category.add & Add elements to layer (ALL elements of the selected
   layer type!)\\
   \hline v.category.del & Delete category values \\
@@ -471,14 +456,17 @@ GRASS vector data analysis ...
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox working with vector points modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Working with vector points modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Working with vector points modules in the GRASS Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline v.in.region & Create new vector area map with current region extent \\
   \hline v.mkgrid.region & Create grid in current region \\
   \hline v.in.db & Import vector points from a database table containing
   coordinates \\
+  \hline v.random & Randomly generate a 2D/3D GRASS vector point map \\
+  \hline v.kcv & Randomly partition points into test/train sets \\
+  \hline v.outlier & Romove outliers from vector point data \\
   \hline v.hull & Create a convex hull \\
   \hline v.delaunay.line & Delaunay triangulation (lines) \\
   \hline v.delaunay.area & Delaunay triangulation (areas) \\
@@ -490,8 +478,38 @@ GRASS vector data analysis ...
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox vector update by other maps modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Spatial vector and network analysis modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Spatial vector and network analysis modules in the GRASS
+  Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline v.extract.where & Select features by attributes \\
+  \hline v.extract.list & Extract selected features \\
+  \hline v.select.overlap & Select features overlapped by features in another
+  map\\
+  \hline v.buffer & Vector buffer \\
+  \hline v.distance & Find the nearest element in vector 'to' for elements in
+  vector 'from'. \\
+  \hline v.net.nodes & Create nodes on network \\
+  \hline v.net.alloc & Allocate network\\
+  \hline v.net.iso & Cut network by cost isolines \\
+  \hline v.net.salesman & Connect nodes by shortest route (traveling
+  salesman) \\
+  \hline v.net.steiner & Connect selected nodes by shortest tree (Steiner
+  tree) \\
+  \hline v.patch & Create a new vector map by combining other vector maps \\
+  \hline v.overlay.or & Vector union \\
+  \hline v.overlay.and & Vector intersection \\
+  \hline v.overlay.not & Vector subtraction \\
+  \hline v.overlay.xor & Vector non-intersection \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Vector update by other maps modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Vector update by other maps modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -507,8 +525,8 @@ GRASS vector data analysis ...
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox report and statistic modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Vector report and statistic modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Vector report and statistic modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -521,14 +539,17 @@ GRASS vector data analysis ...
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \subsubsection{GRASS Toolbox imagery data modules}
 
-Imagery Modules in GRASS GIS
+This Section lists all graphical dialogs in the GRASS Toolbox to work with
+and analyse imagery data in a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox imagery analysis modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Imagery analysis modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Imagery analysis modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
@@ -549,7 +570,7 @@ Imagery Modules in GRASS GIS
   LANDSAT-TM 5 data \\
   \hline i.tasscap7 & Tasseled Cap (Kauth Thomas) transformation for
   LANDSAT-TM 7 data \\
-  \hline i.fft & Fast fourier transform for image processing \\
+  \hline i.fft & Fast fourier transform (FFT) for image processing \\
   \hline i.ifft & Inverse fast fourier transform for image processing \\
   \hline r.describe & Prints terse list of category values found in a raster
   map layer \\
@@ -561,19 +582,24 @@ Imagery Modules in GRASS GIS
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \subsubsection{GRASS Toolbox database modules}
 
-Database Modules
+This Section lists all graphical dialogs in the GRASS Toolbox to manage, 
+connect and work with internal and external databases. Working with spatial 
+external databases is enabled via OGR and not covered by these modules.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox database modules}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Database modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Database management and analysis modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline db.connect & Sets general DB connection mapset \\
   \hline db.connect.schema & Sets general DB connection mapset with a schema \\
+  \hline v.db.reconnect.all & Reconnect vector to a new database \\
   \hline db.login & Set user/password for driver/database \\
   \hline db.in.ogr & Imports attribute tables in various formats \\
   \hline v.db.addtable & Create and add a new table to a vector \\
@@ -592,6 +618,9 @@ Database Modules
   \hline v.db.update\_op\_query & Allows to assign a new value to a column,
   result of operation on column(s), only if the result of a query is TRUE \\
   \hline db.execute & Execute any SQL statement \\
+  \hline db.select & Prints results of selection from database based on SQL \\
+  \hline v.db.select & Prints vector map attributes \\
+  \hline v.db.select.where & Prints vector map attributes with SQL \\
   \hline v.db.join & Allows to join a table to a vector map table \\
   \hline v.db.univar & Calculates univariate statistics on selected table
   column for a GRASS vector map \\
@@ -599,36 +628,44 @@ Database Modules
 \end{tabular}
 \end{table}
 
+\clearpage
+
 \subsubsection{GRASS Toolbox 3D modules}
 
-3D Visualization and analysis
+This Section lists all graphical dialogs in the GRASS Toolbox to work with 3D 
+data. GRASS provides more modules, but they are currently only available using 
+the GRASS Shell.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox 3D Visualization}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: 3D Visualization}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{3D visualization and analysis modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline nviz & 3D visualization tool\\
+  \hline nviz & Open 3D-View in nviz\\
 \hline
 \end{tabular}
 \end{table}
 
 \subsubsection{GRASS Toolbox help modules}
 
-GRASS GIS Help 
+The GRASS GIS Reference Manual offers a complete overview of the available 
+GRASS modules, not limited to the modules and their often reduced functionalities 
+implemented in the GRASS Toolbox. 
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox Reference Manual}\medskip
- \begin{tabular}{|l|p{5.3in}|}
+\caption{GRASS Toolbox: Reference Manual}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Reference Manual modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline g.manual & Open local reference manual for all GRASS modules \\
+  \hline g.manual & Display the HTML manual pages of GRASS \\
 \hline
 \end{tabular}
 \end{table}
 
-\clearpage
+
+
+
