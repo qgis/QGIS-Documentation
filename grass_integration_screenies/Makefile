@@ -18,6 +18,11 @@ PNG=create_grass_location.eps\
 	grass_digitizing_settings.eps\
 	grass_digitizing_symbology.eps\
 	grass_digitizing_table.eps\
+	grass_toolbox_moduletree.eps\
+	grass_toolbox_modulelist.eps\
+	grass_module_manual.eps\
+	grass_module_option.eps\
+	grass_module_output.eps\
 #	grasstoolbar.eps\
 #	grassbrowser.eps\
 #	grassshell.eps\

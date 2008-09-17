@@ -229,7 +229,7 @@ vector} icon. Figure \ref{fig:grass_digitizing} shows the GRASS edit dialog
 that is displayed when you click on the edit tool. The tools and settings are
 discussed in the following sections.
 
-\subsubsection{Toolbar}\label{label_grasstoolbar}
+\minisec{Toolbar}\label{label_grasstoolbar}
 
 In Figure \ref{fig:grass_digitizing_toolbar} you see the GRASS digitizing
 toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
@@ -277,7 +277,7 @@ digitizing session and save current status (rebuilds topology afterwards)\\
 \end{tabular}
 \end{table}
 
-\subsubsection{Category Tab}\index{GRASS!category settings}
+\minisec{Category Tab}\index{GRASS!category settings}
 
 The \tab{Category} tab allows you to set the way in which the category will
 be assigned to each new feature and/or assign a category to a feature.
@@ -314,7 +314,7 @@ you can create your new table connected to your new layer.
 }
 \end{Tip}
 
-\subsubsection{Settings Tab}\label{label_settingtab}\index{GRASS!snapping
+\minisec{Settings Tab}\label{label_settingtab}\index{GRASS!snapping
 tolerance}
 
 The \tab{Settings} tab allows you to set the snapping in screen pixels. The
@@ -329,7 +329,7 @@ default is set to 10 pixels.
  \end{center}
 \end{figure}
 
-\subsubsection{Symbology Tab}\index{GRASS!symbology settings}
+\minisec{Symbology Tab}\index{GRASS!symbology settings}
 
 The \tab{Symbology} tab allows you to view and set symbology and color
 settings for various geometry types and their topological status (e.g. closed
@@ -342,7 +342,7 @@ settings for various geometry types and their topological status (e.g. closed
  \end{center}
 \end{figure}
 
-\subsubsection{Table Tab} \index{GRASS!table editing}
+\minisec{Table Tab} \index{GRASS!table editing}
 
 The \tab{Table} tab provides information about the database table for
 a given 'layer'. Here you can add new colums to an existing attribute table,
@@ -365,70 +365,88 @@ write permissions.
 
 \subsection{Region Tool}\index{GRASS!region}
 
-The current region (window) in GRASS is very important for all 
-raster modules. All newly-created rasters have the extension and resolution
-of the current region, regardless of their original region. The region is
-stored in \filename{\$LOCATION/\$MAPSET/WIND} file, and it defines
-north, south, east, west, number of columns, number of rows, 
-horizontal and vertical spatial resolution.
+The region definition (setting a spatial working window) in GRASS is only,
+but very important for all raster analysis. Vector analysis are not limited
+to any defined region definitions. All newly-created rasters will have the
+spatial extension and resolution of the currently defined GRASS region,
+regardless of their original extension and resolution. The current GRASS
+region is stored in \filename{\$LOCATION/\$MAPSET/WIND} file, and it defines
+north, south, east, west, number of columns, number of rows, horizontal and
+vertical spatial resolution.
 
-It is possible to switch on/off the GRASS region in the QGIS canvas
-using the \toolbtntwo{grass_region}{Display current GRASS region} button. \index{GRASS!region!display}
+It is possible to switch on/off the visualization of the GRASS region in the
+QGIS canvas using the \toolbtntwo{grass_region}{Display current GRASS region}
+button. \index{GRASS!region!display}.
 
-With the \toolbtntwo{grass_region_edit}{Edit current GRASS region} you can open a tool 
-in which you can change the current region and symbology
-of the GRASS region rectangle on the QGIS canvas. When the tool is running,
-it is also possible to select a new region interactively with your mouse
-on the QGIS canvas.\index{GRASS!region!editing}
-
-% Both tools are available only if QGIS has the GRASS-plugin enabled. 
-% was started from a GRASS 
-% shell or if the GISRC environment variable pointing to a
-% valid GISRC file was set (i.e. only if you are running 
-% GRASS within your mapset).
+With the \toolbtntwo{grass_region_edit}{Edit current GRASS region} icon you 
+can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and 
+resolution and click \button{OK}. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click \button{OK}. 
+\index{GRASS!region!editing}
 
 \subsection{GRASS Toolbox}\index{GRASS!toolbox}
 
-The \toolbtntwo{grass_tools}{Open GRASS Tools} box provides analytic
-functions from GRASS within QGIS. To use the GRASS toolbox you need to have
-opened a mapset where you have write-permission. This is needed because QGIS
-will most probably create new datasets which need to be written to a valid mapset.
+The \toolbtntwo{grass_tools}{Open GRASS Tools} box provides GRASS 
+module functionalities to work with data inside a selected GRASS location 
+and mapset. To use the GRASS toolbox you need to open a location and mapset where 
+you have write-permission (usually granted, if you created the mapset). This is 
+necessary, because new raster or vector layers created during analysis need to 
+be written to the currently selected location mapset.
 
-All GRASS Toolbox modules are grouped in thematic blocks. It is pretty simple
-to customize the GRASS Toolbox content as described in Section \ref{sec:toolbox-customizing}.
+\subsubsection{Working with GRASS modules}\index{GRASS!toolbox}
+
+\begin{figure}[h]
+\centering
+\caption{GRASS Toolbox and searchable Modules List \nixcaption}\label{fig:grass_modules}
+   \subfigure[Modules Tree] {\label{subfig:grass_module_tree}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_moduletree}}\goodgap
+   \subfigure[Searchable Modules List] {\label{subfig:grass_module_list}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_modulelist}}
+\end{figure}
+
+The GRASS Shell inside the GRASS Toolbox provides access to almost all (more 
+than 300) GRASS modules in command line modus. To offer a more user
+friendly working environment, about 200 of the available GRASS modules and 
+functionalities are also provided by graphical dialogs. These dialogs are 
+grouped in thematic blocks and searchable. You find a complete list of modules 
+available in QGIS version \CURRENT in appendix \ref{appdx_grass_toolbox_modules}. 
+It is also possible to customize the GRASS Toolbox content. It is described in 
+Section \ref{sec:toolbox-customizing}.
+
+As shown in Figure \ref{fig:grass_modules}, you can look for the appropriate GRASS module 
+using the thematically grouped \tab{Modules Tree} or the searchable \tab{Modules List} tab. 
+
+Clicking on a grapical module icon a new tab will be added to the toolbox dialog 
+providing three new sub-tabs \tab{Options}, \tab{Output} and \tab{Manual}.
 
 
-
-When clicking on a module a new tab will be added to your toolbox which
-provides three new sub-tabs:
-\begin{enumerate}
-\item Options
-\item Output 
-\item Manual
-\end{enumerate}
+\begin{figure}[h]
+\centering
+\caption{GRASS Toolbox Module Dialogs \nixcaption}\label{fig:grass_module_dialog}
+   \subfigure[Module Options] {\label{subfig:grass_module_option}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}\goodgap
+   \subfigure[Modules Output] {\label{subfig:grass_module_output}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}\goodgap
+   \subfigure[Module Manual] {\label{subfig:grass_module_manual}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}
+\end{figure}
 
 \minisec{Options}
 
-The \tab{Options} tab provides you with a very simplified entry field where you need to 
-select the needed maps and enter parameters to run the selected module.
-Note, that these options are kept as simple as possible in order to keep
-the structure clear. If you need more of the module's options, feel free to 
-use the GRASS shell to run the module.
+The \tab{Options} tab provides a simplified module dialog where you need to 
+select necessary map visualized in the QGIS canvas and enter parameters to run 
+the module. The provided module parameters are often not complete to keep the dialog 
+clear. If you want to use further module parameters and flags, you need to start the 
+GRASS Shell and run the module in the command line.
 
 \minisec{Output}
 
-The \tab{Output} tab provides you with the output generated from the running module. After you hit the 
-'run' button, the module switches to the Output-tab and you will see information about 
-the process. If all goes well, you will see \usertext{Successfully finished} at the end.
+The \tab{Output} tab provides information about the output status of the module. After 
+you click the \button{Run} button, the module switches to the Output-tab and you see 
+information about the analysis process. If all goes well, you will finally see a 
+\usertext{Successfully finished} message at the end.
 
 \minisec{Manual}
 
-The \tab{Manual} tab shows the help page of each GRASS module. You can have a look at the manual-page
-if you want to get a deeper knowledge about the purpose of the module.
-You may have recognized that some modules have more options and parameters than given in
-the 'Options' tab. This is correct and done by design. To keep the GUI simple as possible
-only the needed options and parameters are put in the Options tab. But you can always 
-use the GRASS shell to run the module with all its parameters.
+The \tab{Manual} tab shows the HTML help page of the GRASS module. You can use it to 
+check further module parameters and flags or to get a deeper knowledge about the 
+purpose of the module. At the end of each module manual page you see further links to 
+the \filename{Main index}, a \filename{Thematic index} and a \filename{Full index}. 
+These links provide the same information as if you use the module \filename{g.manual} 
 
 \begin{Tip}\caption{\textsc{Display results immediately}}\index{GRASS!display results}
 \qgistip{If you want to display your calculation results immediately in your map canvas,
@@ -437,7 +455,7 @@ you can use the 'View Output' button at the bottom of the module tab.
 \end{Tip} 
 
 
-\subsubsection{GRASS Browser} \index{GRASS!toolbox!Browser}
+\subsubsection{Working with the GRASS Browser} \index{GRASS!toolbox!Browser}
 
 Another useful feature is the GRASS browser. In Figure~\ref{subfig:grass_browser}
 you can see the current location with its mapsets. 
@@ -469,7 +487,7 @@ maps from other mapsets as well.
 %   \subfigure[GRASS shell inside the toolbox]{\label{subfig:grass_shell}\includegraphics[clip=true, width=0.4\textwidth]{grassshell}}
 %\end{figure}
 
-\subsubsection{Customizing the modules section} \index{GRASS!toolbox!customize}
+\subsubsection{Customizing the GRASS Toolbox} \index{GRASS!toolbox!customize}
 \label{sec:toolbox-customizing}
 
 Nearly all GRASS modules can be adopted to the GRASS toolbox. A XML interface is provided to parse
