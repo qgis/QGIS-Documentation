@@ -1,16 +1,13 @@
-\section{GRASS Integration}\label{sec:grass}\index{GRASS}
+\section{GRASS GIS Integration}\label{sec:grass}\index{GRASS}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
-The GRASS~\cite{GRASSweb} plugin provides access to GRASS from within QGIS. 
-This includes the ability to view, edit, and create data, as well as perform 
-analysis using the GRASS geoprocessing modules.
+The GRASS plugin provides access to GRASS GIS~\cite{GRASSweb} databases and functionalities. This includes visualization of GRASS raster and vector layers, digitizing vector layers, editing vector attributes, creating new vector layers and analysing GRASS 2D and 3D data with more than 300 GRASS modules.
 
-In this chapter we'll introduce the plugin and some of the ways you can use 
-it to work with GRASS data. The following features are provided with the GRASS 
-plugin:
+In this Section we'll introduce the plugin functionalities and give some 
+examples on managing and working with GRASS data. Following main features are provided with the toolbar menu, when you start the GRASS plugin, as described in Section~\ref{starting_grass}:
  
 \begin{itemize}
 \item \toolbtntwo{grass_open_mapset}{Open mapset}
@@ -26,20 +23,14 @@ plugin:
 \item \toolbtntwo{grass_region_edit}{Edit current GRASS region}
 \end{itemize}
 
-\subsection{Starting QGIS with GRASS}\label{sec:starting_grass}
+\subsection{Starting the GRASS plugin}\label{sec:starting_grass}
 \index{GRASS!starting QGIS}
 
-To use GRASS features from within QGIS, you must select and load the GRASS
-plugin with the Plugin Manager clicking on \mainmenuopt{Plugins} >
-\mainmenuopt{Manage Plugins}. Inside the QGIS Plugin Manager you need to
-select \dropmenuopt{GRASS} and click \button{OK}. A new toolbar with the 10
-buttons described above will appear on the user interface and you can
-immediately start loading layers of an existing GRASS dataset (location)
-using the appropriate toolbar buttons for vector and raster data (see Section
-\ref{sec:load_grassdata}). Or you can create a new GRASS \filename{location}
-with QGIS (see Section \ref{sec:create_loc}).
+To use GRASS functionalities and/or visualize GRASS vector and raster layers in QGIS, you must select and load the GRASS plugin with the Plugin Manager. Therefore click the menu \mainmenuopt{Plugins} > \mainmenuopt{Manage Plugins}, select \dropmenuopt{GRASS} and click \button{OK}. 
 
-\subsection{Loading GRASS Data}\label{sec:load_grassdata}\index{GRASS!loading
+You can now start loading raster and vector layers from an existing GRASS location (see Section \ref{sec:load_grassdata}). Or you create a new GRASS \filename{location} with QGIS (see Section \ref{sec:create_loc}) and import some raster and vector data (see Section \ref{sec:import_loc_data}) for further analysis with the GRASS Toolbox (see Section \ref{subsec:grass_toolbox}).
+
+\subsection{Loading GRASS raster and vector layers}\label{sec:load_grassdata}\index{GRASS!loading
 data}
 
 With the GRASS plugin, you can load vector or raster layers using the
@@ -70,7 +61,7 @@ raster elevation map (see Section \ref{label_sampledata}).
   layer will be visualized. 
   \item Click on \toolbtntwo{grass_add_vector}{Add GRASS vector layer},
   choose the map name \filename{alaska} and click \button{OK}. Now the alaska
-  boundary vector layer will be overlayed on top of the geology map. You can
+  boundary vector layer will be overlayed on top of the gtopo30 map. You can
   now adapt the layer properties as described in chapter \ref{sec:vectorprops},
   e.g. change opacity, fill and outline color.
   \item Also load the other two vector layers \filename{rivers} and
@@ -89,24 +80,21 @@ Section \ref{sec:starting_grass}.
 }
 \end{Tip} 
 
-\subsection{Creating a GRASS location}\label{sec:create_loc}
+\subsection{Creating a GRASS location and new mapsets}\label{sec:create_loc}
 
 In order to analyse your vector and raster layers with GRASS modules, you
-must import your data into a GRASS database, calles \filename{location}. A
+must import your data into a GRASS database, called \filename{location}.\footnote{This is not strictly true - with the GRASS modules \filename{r.external} and \filename{v.external} you can create read-only links to external GDAL/OGR-supported data sets without importing them. Because this is not the usual way for beginners to work with GRASS, we will not describe this functionality here.} A
 location represents a specific area with a specific coordinate
-system.\footnote{This is not strictly true - with the GRASS modules
-\filename{v.external} and \filename{r.external} you can create read-only
-links to external OGR-supported data sets without importing them. But this is
-not the standard way to work with GRASS.}
+system.
 
 \begin{figure}[ht]
 \begin{center}
-\caption{Creating a new GRASS location in QGIS \nixcaption}\label{fig:grass_location}\smallskip
+\caption{Creating a new GRASS location or a new mapset in QGIS \nixcaption}\label{fig:grass_location}\smallskip
 \includegraphics[clip=true]{create_grass_location}
 \end{center}  
 \end{figure}
 
-As an an example you find below the instructions how the sample GRASS
+As an an example you find the instructions how the sample GRASS
 location \filename{alaska}, which is projected in Albers Equal Area
 projection with unit meter was created for the QGIS sample dataset. This
 sample GRASS location \filename{alaska} will be used for all examples and
@@ -158,14 +146,32 @@ download and install the dataset on your computer \ref{label_sampledata}).
 \end{enumerate}
 
 If that seemed like a lot of steps, it's really not all that bad and a very 
-quick way to create a location. The location \filename{alaska} would now be
-ready for data import. But as you know, we already did these steps for you and
-also imported some data into the sample GRASS location \filename{alaska}
-included in the QGIS alaska dataset. So you can move on to the following
-chapters and learn how to digitize and edit GRASS vector layer and how to
-work with the GRASS Toolbox. 
+quick way to create a location. The location \filename{alaska} is now ready for data import (see Section \ref{sec:import_loc_data}).
+Or you can use the already existing vector and raster data in the sample 
+GRASS location \filename{alaska} included in the QGIS alaska dataset \ref{label_sampledata} and move on to Section \ref{label_vectmodel}.
 
-\subsection{Vector Data Model}\label{label_vectmodel}\index{GRASS!vector data
+\subsection{Importing data into a GRASS location}\label{sec:import_loc_data}
+
+This Section gives an example how to import raster and vector data into the \filename{alaska} GRASS location provided by the QGIS alaska dataset. Therefore we use a landcover raster map \filename{landcover.tif} and a vector polygone Shape \filename{lakes.shp} from the QGIS alaska dataset \ref{label_sampledata}.
+
+\begin{enumerate}
+  \item Start QGIS and make sure the GRASS plugin is loaded.
+  \item In the GRASS toolbar, click the \toolbtntwo{grass_open_mapset}{Open
+    mapset} icon to bring up the mapset wizard.
+  \item Select as GRASS database the folder \filename{grassdata} in the QGIS alaska dataset, as location \filename{alaska}, as mapset \filename{demo} and click \button{OK}.
+  \item Now click the \toolbtntwo{grass_tools}{Open GRASS tools} icon. The GRASS Toolbox (see Section \ref{subsec:grass_toolbox}) dialog appears.
+  \item To import the raster map \filename{landcover.tif}, click the module \filename{r.in.gdal} in the \tab{Modules Tree} tab. This GRASS module allows to import GDAL supported raster files into a GRASS location. The module dialog for \filename{r.in.gdal} appears.
+  \item Browse to the folder \filename{raster} in the QGIS alaska dataset and select the file \filename{landcover.tif}.
+  \item As raster output name define \filename{landcover\_grass} and click \button{Run}. In the \tab{Output} tab you see the currently running GRASS command \filename{r.in.gdal -o input=/path/to/landcover.tif output=landcover\_grass}.
+  \item When it says \textbf{Succesfully finished} click \button{View output}. The \filename{landcover\_grass} raster layer is now imported into GRASS and will be visualized in the QGIS canvas.
+  \item To import the vector shape \filename{lakes.shp}, click the module \filename{v.in.ogr} in the \tab{Modules Tree} tab. This GRASS module allows to import OGR supported vector files into a GRASS location. The module dialog for \filename{v.in.ogr} appears.
+  \item Browse to the folder \filename{vmap0\_shapefiles} in the QGIS alaska dataset and select the file \filename{lakes.shp} as OGR file.
+  \item As vector output name define \filename{lakes\_grass} and click \button{Run}. You don't have to care about the other options in this example. In the \tab{Output} tab you see the currently running GRASS command \filename{v.in.ogr -o dsn=/path/to/lakes.shp output=lakes\_grass}.
+  \item When it says \textbf{Succesfully finished} click \button{View output}. The \filename{lakes\_grass} vector layer is now imported into GRASS and will be visualized in the QGIS canvas. 
+\end{enumerate}
+
+
+\subsection{The GRASS vector data model}\label{label_vectmodel}\index{GRASS!vector data
 model}
 
 It is important to understand the GRASS vector data model prior to
@@ -173,8 +179,7 @@ digitizing.\index{GRASS!digitizing} In general, GRASS uses a topological
 vector model.\index{GRASS!topology} This means that areas are not represented
 as closed polygons, but by one or more boundaries. A boundary between two
 adjacent areas is digitized only once, and it is shared by both areas.
-Boundaries must be connected without gaps. An area is identified (labeled) by
-the centroid of the area.
+Boundaries must be connected without gaps. An area is identified (labeled) by the centroid of the area.
 
 Besides boundaries and centroids, a vector map can also contain
 points and lines. All these geometry elements can be mixed
@@ -217,17 +222,30 @@ information, books and tutorials in several languages.
 }
 \end{Tip} 
 
-\subsection{Digitizing and Editing Tools}\index{GRASS!digitizing tools}
-\label{grass_digitising}
+\subsection{Creating a new GRASS vector layer}\label{sec:creating_new_grass_vectors}\index{GRASS!Creating new vectors|see{editing!creating a new layer}}
+
+To create a new GRASS vector layer with the GRASS plugin click the \toolbtntwo{grass_new_vector_layer}{Create new GRASS vector} toolbar icon. Enter a name in the text box and you can start digitizing point, line or polygone geometries, following the procedure described in Section \ref{grass_digitising}. 
+
+In GRASS it is possible to organize all sort of geometry types (point, line and area) in one layer, because GRASS uses a topological vector model, so you don't need to select the geometry type when creating a new GRASS vector. This only applies to Shapefile creation with QGIS, because Shapefiles use the Simple Feature vector model (see Section \ref{sec:create shape}).
+
+\begin{Tip}\caption{\textsc{Creating an attribute table for a new GRASS vector layer}}
+\qgistip{
+If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure \ref{fig:grass_digitizing_table}).
+}
+\end{Tip} 
+
+If you encounter a greyed-out button, make sure you have a working mapset enabled. If you forgot how to enable a mapset have a look at Section \ref{sec:load_grassdata}.
+
+\subsection{Digitizing and editing a GRASS vector layer}\index{GRASS!digitizing tools}\label{grass_digitising}
 
 The digitizing tools for GRASS vector layers are accessed using the
-\toolbtntwo{grass_edit}{Edit GRASS vector layer} icon on the toolbar. Make sure
-you have loaded a GRASS vector and it is the selected layer in the legend before
-clicking on the edit tool. If you want to create a new GRASS vector layer, 
-you need to click on the \toolbtntwo{grass_new_vector_layer}{Create new GRASS
-vector} icon. Figure \ref{fig:grass_digitizing} shows the GRASS edit dialog
-that is displayed when you click on the edit tool. The tools and settings are
-discussed in the following sections.
+\toolbtntwo{grass_edit}{Edit GRASS vector layer} icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure \ref{fig:grass_digitizing_category} shows the GRASS edit dialog that is displayed when you click on the edit tool. The tools and settings are discussed in the following sections.
+
+\begin{Tip}\caption{\textsc{Digitizing polygones in GRASS}}
+\qgistip{
+If you want to create a polygone in GRASS, you first digitize the boundary of the polygone, setting the mode to \usertext{No category}. Then you add a centroid (label point) into the closed boundary, setting the mode to \usertext{Next not used}. The reason is, that a topological vector model links attribute information of a polygon always to the centroid and not to the boundary.
+}
+\end{Tip} 
 
 \minisec{Toolbar}\label{label_grasstoolbar}
 
@@ -363,7 +381,7 @@ write permissions.
 }
 \end{Tip} 
 
-\subsection{Region Tool}\index{GRASS!region}
+\subsection{The GRASS region tool}\index{GRASS!region}
 
 The region definition (setting a spatial working window) in GRASS is only,
 but very important for all raster analysis. Vector analysis are not limited
@@ -383,7 +401,7 @@ can open a dialog to change the current region and the symbology of the GRASS re
 resolution and click \button{OK}. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click \button{OK}. 
 \index{GRASS!region!editing}
 
-\subsection{GRASS Toolbox}\index{GRASS!toolbox}
+\subsection{The GRASS toolbox}\label{subsec:grass_toolbox}\index{GRASS!toolbox}
 
 The \toolbtntwo{grass_tools}{Open GRASS Tools} box provides GRASS 
 module functionalities to work with data inside a selected GRASS location 
@@ -449,24 +467,27 @@ the \filename{Main index}, a \filename{Thematic index} and a \filename{Full inde
 These links provide the same information as if you use the module \filename{g.manual} 
 
 \begin{Tip}\caption{\textsc{Display results immediately}}\index{GRASS!display results}
-\qgistip{If you want to display your calculation results immediately in your map canvas,
-you can use the 'View Output' button at the bottom of the module tab.
+\qgistip{If you want to display your calculation results immediately in your map canvas, you can use the 'View Output' button at the bottom of the 
+module tab.
 }
 \end{Tip} 
 
+\subsubsection{Working with the GRASS location browser} \index{GRASS!toolbox!Browser}
 
-\subsubsection{Working with the GRASS Browser} \index{GRASS!toolbox!Browser}
+Another useful feature inside the GRASS Toolbox is the GRASS location browser. In Figure~\ref{fig:grass_mapset_browser} you can see the current working location with its mapsets. 
 
-Another useful feature is the GRASS browser. In Figure~\ref{subfig:grass_browser}
-you can see the current location with its mapsets. 
+In the left browser windows you can browse through all your mapsets inside your location. The right browser window shows some meta information for the selected raster or vector layer, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
 
-The browser on the left allows you to browse through all your mapsets inside your selected
-location. 
+\begin{figure}[h]
+ \begin{center}
+ \caption{GRASS location browser \nixcaption}\label{fig:grass_mapset_browser}
+ \includegraphics[clip=true,width=12cm]{grass_mapset_browser}
+ \end{center}
+\end{figure}
 
-The right side of the browser window shows some meta information for the selected dataset, e.g. resolution,
-bounding box, data source, attribute table for vector data\dots
 
-The toolbar inside the \tab{browser} tab gives you the following tools for the selected dataset:
+The toolbar inside the \tab{Browser} tab gives you the following tools for the selected location:
+
 \begin{itemize}
 \item \toolboxtwo{grass_add_map}{Add selected map to canvas}
 \item \toolboxtwo{grass_copy_map}{Copy selected map}
@@ -476,26 +497,13 @@ The toolbar inside the \tab{browser} tab gives you the following tools for the s
 \item \toolboxtwo{grass_refresh}{Refresh browser window}
 \end{itemize}
 
-The 'Rename' and 'Delete' buttons are only available in your current mapset. All other tools also work on
-maps from other mapsets as well.
-
-% Picture from the GRASS-Browser here:
-%\begin{figure}[h]
-%\centering
-%	\caption{GRASS toolbox}
-%  \subfigure[GRASS browser inside the toolbox]{\label{subfig:grass_browser}\includegraphics[clip=true, width=0.4\textwidth]{grassbrowser}}\goodgap
-%   \subfigure[GRASS shell inside the toolbox]{\label{subfig:grass_shell}\includegraphics[clip=true, width=0.4\textwidth]{grassshell}}
-%\end{figure}
+The \toolboxtwo{grass_rename_map}{Rename selected map} and \toolboxtwo{grass_delete_map}{Delete selected map} only work with maps inside your currently selected mapset. All other tools also work with raster and vector layers in other mapsets.
 
 \subsubsection{Customizing the GRASS Toolbox} \index{GRASS!toolbox!customize}
 \label{sec:toolbox-customizing}
 
-Nearly all GRASS modules can be adopted to the GRASS toolbox. A XML interface is provided to parse
-the very simple XML files which configure the modules inside the toolbox.
-
-% TODO: migrating the content of this wiki-page into the manual?
-A brief description of adding new modules, changing the modules group, etc. can be found on the QGIS wiki
-at \url{http://wiki.qgis.org/qgiswiki/Adding\_New\_Tools\_to\_the\_GRASS\_Toolbox}.
+Nearly all GRASS modules can be added to the GRASS toolbox. A XML 
+interface is provided to parse the very simple XML files which configures the modules appearance and parameters inside the toolbox.
 
 A sample XML file for generating the module \usertext{v.buffer} (v.buffer.qgm) looks like this:
 \begin{verbatim}
@@ -509,42 +517,5 @@ A sample XML file for generating the module \usertext{v.buffer} (v.buffer.qgm) l
 </qgisgrassmodule>
 \end{verbatim}
 
-%\begin{figure}[ht]
-%\centering
-%\caption{Module generated through parsing the XML-file}\label{fig:buffer-module}
-%\includegraphics[clip=true, width=0.45\textwidth]{vbuffer}
-%\end{figure}
+The parser reads this definition and creates a new tab inside the toolbox when you select the module. A more detailed description for adding new modules, changing the modules group, etc. can be found on the QGIS wiki at \\ \url{http://wiki.qgis.org/qgiswiki/Adding\_New\_Tools\_to\_the\_GRASS\_Toolbox}.
 
-The parser reads this definition and creates a new tab inside the toolbox when you select 
-the module:
-
-
-\subsection{Creating a new GRASS layer}\label{sec:creating_new_grass_vectors}\index{GRASS!Creating new vectors|see{editing!creating a new layer}}
-
-With this version of QGIS it is also possible to create new vectors from within GRASS very
-easily.
-
-Just select \mainmenuopt{Plugins} > \dropmenuopt{GRASS} > 
-\dropmenuopttwo{grass_new_vector_layer}{Create new GRASS layer} from the toolbar, give a new name in the text box and start digitizing.
-If you encounter a greyed-out button, make sure you have a working mapset enabled. If you forgot
-how to enable a mapset have a look at Section \ref{sec:load_grassdata}.
-
-Since GRASS is able to organize all sort of geometries in one layer, there is no need to select
-the geometry. This only applies to shapefile creation (see sec. \ref{sec:create shape}).
-
-Some hints to make your digitizing more useful:
-\begin{itemize}
-\item Make sure to create an attribute table with its needed columns before you start digitizing
-if you would like to assign attributes to your digitized object. 
-Go to the table tab inside the digitize window.
-\item If you plan to create a polygon layer, consider setting the mode to \usertext{No category}. 
-Then start digitizing the boundaries which actually do not need an entry in the attribute table. 
-If you have done this, change back to \usertext{Next not used} and start digitizing the centroids, which 
-hold the attribute information of a polygon.
-
-\end{itemize}
-
-%\section{The GRASS Toolbar}
-%The GRASS toolbar is displayed when the GRASS plugin is loaded using the
-% Plugin Manager (see Section \ref{sec:managing_plugins}, \textsl{Managing
-% Plugins}). Figure  shows the toolbar with each function annotated.

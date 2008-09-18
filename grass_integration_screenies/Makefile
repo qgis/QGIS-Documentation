@@ -23,6 +23,7 @@ PNG=create_grass_location.eps\
 	grass_module_manual.eps\
 	grass_module_option.eps\
 	grass_module_output.eps\
+	grass_mapset_browser.eps\
 #	grasstoolbar.eps\
 #	grassbrowser.eps\
 #	grassshell.eps\
