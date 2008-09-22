@@ -1,34 +1,28 @@
-\section{Using Plugins}\index{plugins}
+\section{QGIS Plugins}\index{plugins}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
 \updatedisclaimer
 
-%% FIXME: here we need to include new python plugin section and updates
+QGIS has been designed with a plugin architecture. This allows new 
+features/functions to be added to the application. Many of the features in 
+QGIS are actually implemented as core or external plugins.\index{plugins!types} 
 
-\subsection{An Introduction to Using Plugins}\label{label_introplugin}
+A QGIS core plugin is maintained by the QGIS Development Team 
+and is part of every QGIS distribution (see Section \ref{sec:core_plugins}).
 
-QGIS has been designed with a plugin architecture.
-This allows new features/functions to be added to the application.
-Many of the features in QGIS are actually implemented as plugins.
+An external plugin is stored in an external svn repository and maintained 
+by the individual author. It can be added to QGIS with the Plugin installer. 
+You find more information about external plugins in Section 
+\ref{sec:external_plugins}.
 
-There are two types of plugins in QGIS: core and user-contributed.
-\index{plugins!types} A core plugin is maintained by the QGIS development team and is part of every QGIS distribution.
-A user-contributed plugin is an external plugin that is maintained by the individual author.
-The QGIS SVN website (\url{http://svn.qgis.org}) serves some user contributed plugins.
-
-\subsubsection{Finding and Installing a Plugin}
+\subsection{Finding and Installing a Plugin}
 When you install QGIS, all of the core plugins are included (see chapter \ref{sec:core_plugins}). \index{plugins!installing}
-% Additional user-contributed
-% plugins may be available on the QGIS Community site. To see what
-% user-contributed plugins are available, see the plugins page on the Community
-% site (\url{http://community.qgis.org/plugins}).\index{plugins!user
-% contributed}
 
 Typically user-contributed plugins are distributed in source form and require compiling.
 For instructions on building and installing a user-contributed plugin, see the documentation included with the plugin.
 
-\subsubsection{Managing Plugins}\label{sec:managing_plugins}
+\subsection{Managing Plugins}\label{sec:managing_plugins}
 \index{plugins!managing} Managing plugins consists of loading or unloading them from QGIS.
 Loaded plugins are "remembered" when you exit the application and restored the next time you run QGIS.
 
@@ -59,7 +53,7 @@ You can then start QGIS and add the plugins one at a time from the Plugin Manger
 }
 \end{Tip} 
 
-\subsubsection{Data Providers}\index{data providers}
+\subsection{Data Providers}\index{data providers}
 
 Data Providers are "special" plugins that provides access to a data store.
 By default, QGIS supports PostGIS layers and disk-based data stores supported by the GDAL/OGR library (Appendix \ref{appdx_ogr}).
@@ -68,97 +62,3 @@ A Data Provider plugin extends the ability of QGIS to use other data sources.
 Data Provider plugins are registered automatically by QGIS at startup.
 They are not managed by the Plugin Manager but are used behind the scenes when a corresponding data type is added as a layer in QGIS.
 
-\subsubsection{Core Plugins}\label{sec:core_plugins}\index{plugins!core}
-
-QGIS currently contains 11 core plugins that can be loaded using the Plugin Manager.
-Table \ref{tab:core_plugins} lists each of the core plugins along with a description of their purpose and the toolbar-icon.
-Note the GRASS plugin is not included below because it installs its own toolbar (see section \ref{sec:grass} for a discussion of available features in the GRASS plugin).
-
-% minipage is needed to appear the footnote under the table
-% SH
-\begin{minipage}{\textwidth}
-\begin{table}[H]
-\centering
-\caption{QGIS Core Plugins}\label{tab:core_plugins}\medskip
-\small
- \begin{tabular}{|l|l|p{4in}|}
-\hline \textbf{Icon} & \textbf{Plugin} & \textbf{Description} \\
-\hline 
-% WHICH ICON TO CHOOSE HERE?
-\includegraphics[width=0.7cm]{delimited_text}
- & Delimited Text \index{plugins!delimited text}& Load a delimited text file containing x,y coordinates as a point layer \\
-\hline 
-\includegraphics[width=0.7cm]{copyright_label}
- & Copyright Label \index{plugins!copyright}& Display a copyright label on the map canvas\\
-\hline 
-\includegraphics[width=0.7cm]{gps_importer}
- & GPS Tools \index{plugins!gps}& Load and display GPS data \\
-\hline
-\includegraphics[width=0.7cm]{georeferencer}
- & Georeferencer \index{plugin!georeferencer} & Georeferencing rasterlayers \\
-\hline
-\includegraphics[width=0.7cm]{grid_maker}
- & Graticule Creator \index{plugins!graticule}& Create a latitude/longitude grid and save as a shapefile\\
-\hline
-\includegraphics[width=0.7cm]{north_arrow}
-& North Arrow \index{plugins!north arrow}& Add a north arrow to the map canvas\\
-\hline
-\includegraphics[width=0.7cm]{icon_buffer}
- & PostgreSQL Geoprocessing \index{plugins!geoprocessing}& Buffer a PostGIS layer \\
-\hline
-\includegraphics[width=0.7cm]{quick_print}
- & Quick Print \index{plugins!quickprint}& Quickly print a map \\
-\hline
-\includegraphics[width=0.7cm]{spiticon}
- & SPIT \index{plugins!spit}& Shapefile to PostGIS Import Tool - import shapefiles into PostgreSQL\\
-\hline
-\includegraphics[width=0.7cm]{scale_bar}
- & Scalebar \index{plugins!scalebar}& Add a scalebar to the map canvas\\
-\hline 
-\includegraphics[width=0.7cm]{mIconAddWfsLayer}
- & WFS & Load and display WFS layer \\
-\hline
-\end{tabular}
-\end{table}
-\end{minipage}
-
-\normalsize
-
-
-\begin{Tip}\caption{\textsc{Plugins Settings Saved to Project}}\index{plugins
-settings}
-\qgistip{When you save a .qgs project, any changes you have made to NorthArrow, ScaleBar and Copyright plugins will be saved in the project and restored next time you load the project.
-}
-\end{Tip}
-
-%
-% External Plugins
-%
-\subsubsection{External Plugins}\label{sec:external_plugins}\index{plugins!external}
-
-QGIS also comes with some externally developed plugins.
-They are not shipped with the default distribution.
-However, they can be compiled and used within QGIS.
-
-Currently the external plugins are only available directly from SVN.
-To check out all available external plugins do the following:
-\begin{verbatim}
-svn co https://svn.osgeo.org/qgis/trunk/external_plugins external_qgis_plugins
-\end{verbatim}
-
-This will create a folder \usertext{external\_qgis\_plugins} in your current folder.
-Each subdirectory has its own compile and install instructions.
-Read them carefully in order to build the plugin.
-
-%
-% Plugin template
-%
-\subsubsection{Plugin templates}\label{sec:plugin_template}\index{plugins!template}
-
-If you like to develop your own QGIS-plugin the main sources include a nice script which guides you through the process of creating your own template-directory-structure within the QGIS-source-tree.
-The script lives in \usertext{QGIS/src/plugins/plugin\_builder.pl}.
-
-The only thing to do is coding your functions into the plugin (and of course contribute your plugin to the QGIS-development-team).
-
-Beside that the QGIS-wiki (\url{http://wiki.qgis.org}) and the QGIS-blog (\url{http://blog.qgis.org}) provide useful articles about writing your own plugin as well.
-Check the websites for details!

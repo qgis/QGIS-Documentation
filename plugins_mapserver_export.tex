@@ -1,4 +1,4 @@
-\section{Making MapServer Map Files}\label{sec:mapserver_export}
+\subsection{Making MapServer Map Files}\label{sec:mapserver_export}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
@@ -6,12 +6,10 @@
 
 QGIS can be used to create map files for MapServer. You use QGIS to
 ``compose'' your map by adding and arranging layers, symbolizing them, and
-customizing the colors.
-
-In order to use the MapServer exporter, you must have Python on your
+customizing the colors. In order to use the MapServer exporter, you must have Python on your
 system and QGIS must have been compiled with support for it.
 
-\subsection{Creating the Project File}
+\subsubsection{Creating the Project File}
 
 To create a MapServer map file:
 
@@ -32,7 +30,7 @@ using the tool, you need to specify a QGIS project file as input.
 }
 \end{Tip} 
 
-\subsection{Creating the Map File}
+\subsubsection{Creating the Map File}
 
 The exporter tool (\filename{msexport}) is installed in your QGIS binary directory and can be used independently of QGIS. 
 
@@ -109,7 +107,7 @@ You can view the map file in an text editor or visualizer. If you
 take a look, you'll notice that the export tool adds the metadata needed
 to enable our map file for WMS. 
 
-\subsection{Testing the Map File}
+\subsubsection{Testing the Map File}
 
 Let's test our work by using the \filename{shp2img} command to create an image
 from the map file. The  \filename{shp2img} utility is part of MapServer,
