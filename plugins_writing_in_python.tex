@@ -1,4 +1,4 @@
-\subsection{Writing a QGIS Plugin in Python}
+\section{Writing a QGIS Plugin in Python}
 
 Writing plugins in Python is much simpler than using C++.
 To create a PyQGIS plugin, you need QGIS 0.9, Python, PyQt, and the Qt developer tools \cite{sherman07}.
@@ -23,7 +23,7 @@ Let's create a plugin to fill a gap in the QGIS interface.
 This plugin will allow us to create a new PostGIS layer for us to digitize.
 It will be a simple plugin and pretty rough, but it illustrates how to get started writing your own PyQGIS plugins.
 
-\subsubsection{Setting up the Structure}
+\subsection{Setting up the Structure}
 The first thing we need to do is set up the structure for our plugin.
 In this example we'll be developing our plugin on \nix{Linux} but the method is the same, just adapt some of the file system commands as appropriate for your platform.
 QGIS is installed in a directory named \filename{qgis} in our home directory.
@@ -42,7 +42,7 @@ resources.qrc
 newlayer.py
 \end{verbatim} 
 
-\subsubsection{Making the Plugin Recognizable}
+\subsection{Making the Plugin Recognizable}
 
 Initializing the plugin is done in the \filename{\_\_init\_\_.py} script.
 For our \filename{NewLayer} plugin the script contains:
@@ -65,7 +65,7 @@ Each method simply returns a string with the appropriate information.
 The other requirement is the \method{classFactory} method that must return a reference to the plugin itself (line 10), after receiving the \object{iface} object as an argument.
 With this simple code, QGIS will recognize our script as a plugin.
 
-\subsubsection{Resources}
+\subsection{Resources}
 
 In order to have a nice icon for our plugin, we need a resources file which we'll name \filename{resources.qrc}.
 This is just a simple XML file that defines the icon resource:
@@ -91,7 +91,7 @@ To turn the resource file into something the plugin can use, it must be compiled
 The \filename{-o} switch is used to specify the output file.
 Now that we have resources, we need a way to collect the information needed for creating a new layer.
 
-\subsubsection{Creating the GUI}
+\subsection{Creating the GUI}
 
 Normally we would use the same tool that C++ developers use to create a GUI: Qt Designer.
 This is a visual design tool that allows you to create dialog and main windows by dragging and dropping widgets and defining their properties.
@@ -106,7 +106,7 @@ While it will make our plugin a little crude, it serves to illustrate the concep
 
 All we need to write now is the Python code to collect the input and create the table.
 
-\subsubsection{Creating the Plugin}
+\subsection{Creating the Plugin}
 
 Now that we have the preliminaries out of the way, we can get down to writing the code that does the actual work.
 Let's start by looking at the things we need to import and the initialization of the plugin in \filename{newlayer.py}.
@@ -276,7 +276,7 @@ create index sidx_park_land on park_land
    USING GIST(the_geom GIST_GEOMETRY_OPS);
 \end{verbatim}
 
-\subsubsection{Issues and Problems}
+\subsection{Issues and Problems}
 
 Our plugin is now complete.
 Now lets look at some of the things that are wrong with it or where we could improve it:
@@ -294,7 +294,7 @@ Now lets look at some of the things that are wrong with it or where we could imp
 
 With all the issues, it still serves as a primordial plugin that illustrates the process and helps get you started with your own plugin development.
 
-\subsubsection{Adding Feedback}
+\subsection{Adding Feedback}
 
 Let's fix one of the small problems by adding some feedback at the end of the process.
 We'll just add a message box to tell the user that everything is done and to check the database to make sure the table was created.
@@ -316,7 +316,7 @@ When the table is created, the user sees this:
 %\end{center}
 %\end{figure}
 
-\subsubsection{Summary}
+\subsection{Summary}
 Writing a QGIS plugin in Python is pretty easy.
 Some plugins won't require a GUI at all.
 For example, you might write a plugin that returns the map coordinates for the point you click on the map.

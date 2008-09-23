@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=plugin_installer.eps\
+PNG=coordinate_capture.eps\
 	
 ##### TARGETS #####
 

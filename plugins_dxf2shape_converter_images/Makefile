@@ -11,7 +11,7 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=matrix1.eps\
+PNG=dxf2shp_converter.eps\
 	
 ##### TARGETS #####
 
