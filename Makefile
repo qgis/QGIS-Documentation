@@ -76,9 +76,9 @@ pics:
 	(cd ./plugins_graticule_creator_images && make)
 	(cd ./plugins_installer_images && make)
 	(cd ./plugins_maplayer_images && make)
-#	(cd ./plugins_mapserver_export_images && make)
 	(cd ./plugins_quick_print_images && make)
 	(cd ./plugins_spit_images && make)
+	(cd ./plugins_screenies && make)
 #	(cd ./plugins_python_images && make)
 	(cd ./getting_started_screenies && make)
 	(cd ./working_with_vector_screenies && make)
@@ -90,7 +90,6 @@ pics:
 #	(cd ./map_server_export_screenies && make)
 #	(cd ./creating_applications_screenies && make)
 #	(cd ./help_and_support_screenies && make)
-#	(cd ./plugins_screenies && make)
 	(cd ./operating_system_icons && make)
 
 # make html
@@ -128,6 +127,7 @@ cleanpics:
 	(cd ./plugins_spit_images && make clean)
 	(cd ./plugins_python_images && make clean)
 	(cd ./plugins_maplayer_images/ && make clean)
+	(cd ./plugins_screenies && make clean)
 	(cd ./getting_started_screenies && make clean)
 	(cd ./working_with_vector_screenies && make clean)
 	(cd ./working_with_raster_screenies && make clean)
@@ -135,10 +135,8 @@ cleanpics:
 	(cd ./working_with_projections_screenies && make clean)
 	(cd ./grass_integration_screenies && make clean)
 	(cd ./map_composer_screenies && make clean)
-	(cd ./mapserver_export_screenies && make clean)
 	(cd ./creating_applications_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
-	(cd ./plugins_screenies && make clean)
 	(cd ./operating_system_icons && make clean)
 
 # Update icons from qgis source if necessary
