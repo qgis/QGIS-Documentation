@@ -13,7 +13,10 @@
 
 PNG=pluginmanager.eps\
 	plugininstaller.eps\
-	
+	mapserver_export_qgs.eps\
+	mapserver_export_dialog.eps\
+	mapserver_export_test.eps\
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
