@@ -11,20 +11,9 @@
 # JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-#PNG=map_composer_blank09.eps\
-#	map_composer09.eps\
-#	composer_add_legend08.eps\
-#	composer_add_map08.eps\
-#	composer_add_image.eps\
-#	composer_add_label.eps\
-#	composer_add_scalebar08.eps\
-#	composer_export_image.eps\
-#	composer_export_svg.eps\
-#	composer_open_template.eps\
-#	composer_save_template.eps\
-#	mActionFilePrint.eps\
-	
-	
+PNG=print_composer_blank.eps\
+	print_composer_complete.eps\
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
