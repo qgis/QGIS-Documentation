@@ -80,6 +80,7 @@ PNG=\
   mActionScaleBar.eps\
   mActionSelect.eps\
   mActionSelectedToTop.eps\
+  mActionSelectPan.eps\
   mActionShowAllLayers.eps\
   mActionShowBookmarks.eps\
   mActionShowPluginManager.eps\

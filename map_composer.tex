@@ -6,17 +6,68 @@
 % comment out the following line:
 \updatedisclaimer
 
-The map composer is a feature that provides limited layout and printing
-capabilities. The composer allows you to add elements such as the QGIS map
-canvas, legend, scalebar, images, and text. You can size and position each item and
-adjust the properties to create your layout. The result can be printed,
-exported as an image, or exported to SVG.
+The map composer provides growing layout and printing
+capabilities. It allows you to add elements such as the QGIS map canvas, 
+legend, scalebar, images, and text labels. You can size, group 
+and position each element and adjust the properties to create your layout. 
+The result can be printed (also to Postscript and PDF), exported as an image, 
+or exported to SVG.\footnote{Export to SVG is currently not supported, 
+because this functionality is not working with recent QT4 versions.} See a
+list of all buttons below:
+
+\begin{table}[h]\index{Map composer!tools}
+\centering
+\caption{Map Composer Tools}\label{tab:mapcomposer_tools}\medskip
+ \begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
+ \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} &
+ \textbf{Purpose} \\
+
+ \hline \includegraphics[width=0.7cm]{mActionExportMapServer}
+ & Export map composition to an image & 
+ \includegraphics[width=0.7cm]{mActionSaveAsSVG} & Export map composition 
+ to SVG \\
+ \hline \includegraphics[width=0.7cm]{mActionFilePrint} & Print or 
+ export as PDF or Postscript &
+ \includegraphics[width=0.7cm]{mActionZoomFullExtent} & Zoom to
+ full extend \\
+ \hline \includegraphics[width=0.7cm]{mActionZoomIn} & Zoom in &
+ \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out \\
+ \hline \includegraphics[width=0.7cm]{mActionDraw} & Refresh 
+ view &
+ \includegraphics[width=0.7cm]{mActionAddRasterLayer} & Add 
+ new map from QGIS map canvas \\
+ \hline \includegraphics[width=0.7cm]{mActionSaveMapAsImage} & Add Image to 
+ map composition &
+ \includegraphics[width=0.7cm]{mActionLabel} & Add label to map composition \\
+ \hline \includegraphics[width=0.7cm]{mActionAddLegend} & Add new legend to 
+ map composition & 
+ \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar to map
+ composition\\
+ \hline \includegraphics[width=0.7cm]{mActionSelectPan} & Select/Move item in 
+ map composition &
+ \includegraphics[width=0.7cm]{mActionMoveItemContent} & Move content within
+ an item \\
+ \hline \includegraphics[width=0.7cm]{mActionGroupItems} & Group items of 
+ map composition & 
+ \includegraphics[width=0.7cm]{mActionUngroupItems} & Ungroup items of map 
+ composition \\
+ \hline \includegraphics[width=0.7cm]{mActionRaiseItems} & Raise selected
+ items in map composition &
+ \includegraphics[width=0.7cm]{mActionLowerItems} & Lower selected items 
+ in map composition \\
+ \hline \includegraphics[width=0.7cm]{mActionMoveItemsToTop} & Move selected
+ items to top & 
+ \includegraphics[width=0.7cm]{mActionMoveItemsToBottom} & Move selected
+ items to bottom \\
+\hline
+\end{tabular}
+\end{table}
 
 To access the map composer, click on the \toolbtntwo{mActionFilePrint}{Print}
 button in the toolbar or choose \mainmenuopt{File} > \dropmenuopttwo{mActionFilePrint}{Print}.
 
 \subsection{Using Map Composer}\label{label_usemapcomposer} 
-
+ies
 To use the map composer, first add the layers you
 want to print to QGIS. The layers should be rendered and symbolized to your
 liking prior to composing the map. 
