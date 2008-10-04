@@ -13,6 +13,12 @@
 
 PNG=print_composer_blank.eps\
 	print_composer_complete.eps\
+	print_composer_image_item.eps\
+	print_composer_label_item.eps\
+	print_composer_legend_item.eps\
+	print_composer_map_item1.eps\
+	print_composer_map_item2.eps\
+	print_composer_scalebar_item.eps\
 
 ##### TARGETS #####
 
