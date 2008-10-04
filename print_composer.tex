@@ -4,13 +4,14 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 The print composer provides growing layout and printing
 capabilities. It allows you to add elements such as the QGIS map canvas, 
 legend, scalebar, images, and text labels. You can size, group 
 and position each element and adjust the properties to create your layout. 
-The result can be printed (also to Postscript and PDF), exported to image formats or to SVG.\footnote{Export to SVG supported, but it is not working 
+The result can be printed (also to Postscript and PDF), exported to image 
+formats or to SVG.\footnote{Export to SVG supported, but it is not working 
 properly with some recent QT4 versions. You should try and check individual 
 on your system} See a list of tools in table~\ref{tab:printcomposer_tools}:
 
@@ -69,7 +70,8 @@ button in the toolbar or choose \mainmenuopt{File} > \dropmenuopttwo{mActionFile
 
 Before you start to work with the print composer, you need to load some 
 raster and vector layers in the QGIS map canvas and adapt their properties 
-to suite your own convinience. After everything is rendered and symbolized to your liking you click the \toolbtntwo{mActionFilePrint}{Print} icon.
+to suite your own convinience. After everything is rendered and symbolized to 
+your liking you click the \toolbtntwo{mActionFilePrint}{Print} icon.
 
 \begin{figure}[ht]
    \begin{center}
@@ -80,11 +82,14 @@ to suite your own convinience. After everything is rendered and symbolized to yo
 
 Opening the print composer provides you with a blank canvas to which you can 
 add the current QGIS map canvas, legend, scalebar, images and text. Figure
-\ref{fig:print_composer_blank} shows the initial view of the print composer before any elements are added. The print composer provides two tabs:
+\ref{fig:print_composer_blank} shows the initial view of the print composer 
+before any elements are added. The print composer provides two tabs:
 
 \begin{itemize}
-\item The \tab{\textbf{General}} tab allows you to set paper size, orientation, and the print quality for the output file in dpi.
-\item The \tab{\textbf{Item}} tab displays the properties for the selected map element. Click the \toolbtntwo{mActionSelectPan}{Select/Move item} 
+\item The \tab{General} tab allows you to set paper size, orientation, and the 
+print quality for the output file in dpi.
+\item The \tab{Item} tab displays the properties for the selected map element. 
+Click the \toolbtntwo{mActionSelectPan}{Select/Move item} 
 icon to select an element (e.g. legend, scalebar or label) on the canvas. 
 Then click the Item tab and customize the settings for the selected 
 element.
@@ -97,68 +102,93 @@ extent.
 
 \subsubsection{Adding a current QGIS map canvas to the Print Composer}
 
-To add the QGIS map canvas, click on the \toolbtntwo{mActionAddRasterLayer}{Add new map from QGIS map canvas} button in the print composer toolbar and drag a 
+To add the QGIS map canvas, click on the \toolbtntwo{mActionAddRasterLayer}{Add new map 
+from QGIS map canvas} button in the print composer toolbar and drag a 
 rectangle on the composer canvas with the left mouse button to add the map. 
 You will see an empty box with a \textit{"Map will be printed here"} message.
 To display the current map, choose \selectstring{Preview}{Cache} in the map \tab{Item} tab.
 
-You can resize the map later by clicking on the \toolbtntwo{mActionSelectPan}{Select/Move item} button, selecting the element, and dragging one of the blue handles in the corner of the map. With the 
-map selected, you can now adapt more properties in the map \tab{Item} tab:
+\begin{figure}[ht]
+\centering
+\caption{Print Composer map item tab content \nixcaption}\label{fig:print_composer_map_item}
+   \subfigure[Width, height and extend dialog] {\label{subfig:print_composer_map_item1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map_item1}}\goodgap
+   \subfigure[Properties dialog] {\label{subfig:print_composer_map_item2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map_item2}}
+\end{figure}
 
-\begin{itemize}
-\item Resize the map item specifying the width and height or the scale.
-\item Define the map extend using Y and X min/max values or clicking the 
-\button{set to map canvas extend} button.
-\item Update the map preview and select, whether to see a preview from cache 
-or an empty rectangle with a \textit{"Map will be printed here"} message. 
-\item Define colors and outline width for the element frame, set a background color and opacity for the map canvas. You can also select or unselect to display an element frame with the \checkbox{frame} checkbox.
-\end{itemize}
+You can resize the map later by clicking on the \toolbtntwo{mActionSelectPan}{Select/Move item} 
+button, selecting the element, and dragging one of the blue handles in the corner of the map. With the 
+map selected, you can now adapt more properties in the map \tab{Item} tab. Resize the map 
+item specifying the width and height or the scale. Define the map extend using Y and 
+X min/max values or clicking the \button{set to map canvas extend} button. Update the 
+map preview and select, whether to see a preview from cache or an empty rectangle with 
+a \textit{"Map will be printed here"} message. Define colors and outline width for the 
+element frame, set a background color and opacity for the map canvas. And you can also 
+select or unselect to display an element frame with the \checkbox{frame} checkbox 
+(see Figure~\ref{fig:print_composer_map_item}). If you change the view on the QGIS 
+map canvas by zooming or panning or changing vector or raster properties, you can 
+update the print composer view selecting the map element in the print composer and clicking 
+the \button{Update Preview} button in the map \tab{Item} tab 
+(see Figure~\ref{fig:print_composer_map_item}). 
 
-
-The map is now linked to the QGIS map canvas. If you change the view on the 
-QGIS map canvas by zooming or panning or changing vector or raster properties, 
-you can update the print composer view selecting the map element in the print composer and clicking the \button{Update Preview} button in the map 
-\tab{Item} tab.
-
-To move layers within the map element click on the map element in the 
-canvas, click the \toolbtntwo{mActionMoveItemContent}{Move item content} icon 
-and use the left mouse button to move the layers within the map element frame.
+To move layers within the map element select the map element, click 
+the \toolbtntwo{mActionMoveItemContent}{Move item content} icon 
+and move the layers within the map element frame with the left mouse button.
 
 \begin{Tip}\caption{\textsc{Saving a print composer layout}}
-\qgistip{If you want to save the current state of a print composer session, click on \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As} to save the state of your workspace including the state of the current 
-print composer session. It is planned but currently not possible to save print composer templates itself.
+\qgistip{If you want to save the current state of a print composer session, click 
+on \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As} to save 
+the state of your workspace including the state of the current print composer session. 
+It is planned but currently not possible to save print composer templates itself.
 }
 \end{Tip} 
 
 \subsubsection{Adding other elements to the Print Composer} 
 
-Beside adding a current QGIS map canvas it is also possible to add and customize legend, 
-scalebar, images and label elements.
+Besides adding a current QGIS map canvas to the Print Composer, it is also possible 
+to add, move and customize legend, scalebar, images and label elements.
 
-\minisec{Adding a legend}
+\minisec{Label and images}
 
-To add a map legend, click the \toolbtntwo{mActionAddLegend}{Add new legend} icon and place 
-the element with the left mouse button on the print composer canvas.
-
-\minisec{Adding a scalebar}
-
-To add a scalebar, click the \toolbtntwo{mActionScaleBar}{Add new scalebar} icon and place 
-the element with the left mouse button on the print composer canvas.
-
-\minisec{Adding a label}
-
-To add a label, click the \toolbtntwo{mActionLabel}{Add label} icon and place the element 
-with the left mouse button on the print composer canvas.
-
-\minisec{Adding an image file}
-
-To add any kind of image (e.g. logo or north arrow), click the 
+To add a label or an image, click the \toolbtntwo{mActionLabel}{Add label} or 
 \toolbtntwo{mActionSaveMapAsImage}{Add image} icon and place the element 
 with the left mouse button on the print composer canvas.
 
+\begin{figure}[ht]
+\centering
+\caption{Customize print composer label and images \nixcaption}\label{fig:print_composer_tab2}
+   \subfigure[label item tab] {\label{subfig:print_composer_label_item}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_label_item}}\goodgap
+   \subfigure[image item tab] {\label{subfig:print_composer_image_item}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_image_item}}
+\end{figure}
 
-Figure \ref{fig:print_composer_complete} shows the print composer after adding
-each type of map element.
+\minisec{Legend and scalebar}
+
+To add a map legend or a scalebar, click the \toolbtntwo{mActionAddLegend}{Add new legend} or 
+\toolbtntwo{mActionScaleBar}{Add new scalebar} icon and place the element with the left 
+mouse button on the print composer canvas.
+
+\begin{figure}[ht]
+\centering
+\caption{Customize print composer legend and scalebar \nixcaption}\label{fig:print_composer_tab1}
+   \subfigure[legend item tab] {\label{subfig:print_composer_legend_item}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_legend_item}}\goodgap
+   \subfigure[scalebar item tab] {\label{subfig:print_composer_scalebar_item}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_scalebar_item}}
+\end{figure}
+
+\subsubsection{Navigation tools}
+
+For map navigation the print composer provides 4 general tools:
+
+\begin{itemize}
+\item \toolbtntwo{mActionZoomOut}{Zoom in},
+\item \toolbtntwo{mActionZoomOut}{Zoom out},
+\item \toolbtntwo{mActionZoomFullExtent}{Zoom to full extend} and
+\item \toolbtntwo{mActionDraw}{Refresh the view}, if you find the view in an inconsistent state. 
+\end{itemize}
+
+\subsubsection{Creating Output}
+
+Figure \ref{fig:print_composer_complete} shows the print composer with an example 
+print layout including each type of map element described in the sections above.
+
 \begin{figure}[h]
    \begin{center}
    \caption{Print Composer with map view, legend, scalebar, and text added}
@@ -167,34 +197,18 @@ each type of map element.
 \end{center}  
 \end{figure}
 
-\subsubsection{Other Features}
+The print composer allows you to create several output formats and it is possible to 
+define the resolution (print quality) and paper size:
 
-The print composer has navigation tools to zoom in and out. To zoom in, click
-the \button{Zoom in} tool. The print composer canvas will be scaled by a factor to 2. Use
-the scrollbars to adjust the view to the area of interest. Zooming out works
-in a similar fashion.
+\begin{itemize}
+\item The \toolbtntwo{mActionFilePrint}{Print} icon allows to print the layout 
+to a connected printer or as PDF or Postscript file depending on installed printer 
+drivers.
+\item The \toolbtntwo{mActionExportMapServer}{Export as image} icon exports the 
+composer canvas in several image formats such as PNG, BPM, TIF, JPG, \dots
+\item The \toolbtntwo{mActionSaveAsSVG}{Export as SVG} icon saves the print 
+composer canvas as a SVG (Scalable Vector Graphic). \textbf{Note:} Currently the 
+SVG output is very basic. This is not a QGIS problem, but a problem of the underlaying 
+Qt library. This will hopefully be sorted out in future versions.
+\end{itemize}
 
-If you find the view in an inconsistent state, you can use the \button{Refresh} button
-to redraw the print composer canvas.
-
-\subsubsection{Creating Output}
-
-The print composer allows you to print the layout to a printer, export to a PNG or
-export to SVG. Each of these functions is available from the composer toolbar.
-
-To save the composer canvas as a templates, click on the
-%\toolbtntwo{composer_save_template}{Save Template As} 
-button. Browse to the directory 
-you like and save a template to use it again for another map canvas.
-
-It is possible to export the result as an image by clicking on the
-%FIXME \toolbtntwo{composer_export_image}{Export as image} 
-button. 
-
-To export the composer canvas as an  SVG (Scalable Vector Graphic), click on
-the 
-%FIXME \toolbtntwo{composer_export_svg}{Export as SVG} 
-button. \textbf{Note:}
-Currently the SVG output is very basic. This is not a QGIS problem, but a
-problem of the underlaying Qt library. This will be sorted out in future versions.
- 
