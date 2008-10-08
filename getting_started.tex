@@ -38,25 +38,32 @@ during the initial QGIS installation, you can either
 \end{itemize}
 %FIXME- what about Mac and *nix?
 
-The projection 
-for the QGIS sample dataset is Alaska Albers Equal Area with unit meter:
+The projection for the QGIS sample dataset is Alaska Albers Equal Area with unit 
+feet (EPSG 2964):
 
 \begin{verbatim}
-PROJCS["NAD_1927_Albers",
-    GEOGCS["GCS_North_American_1927",
-	DATUM ["D_North_American_1927",
-	     SPHEROID["Clarke_1866", 6378206.4,294.9786982]],
-	     PRIMEM["Greenwich",0.0],
-	     UNIT["Degree", 0.0174532925199433]],
-    PROJECTION["Albers"],
-    PARAMETER["False_Easting", 0.0],
-    PARAMETER["False_Northing",0.0],
-    PARAMETER["Central_Meridian",-154.0],
-    PARAMETER["Standard_Parallel_1", 55.0],
-    PARAMETER["Standard_Parallel_2",65.0],
-    PARAMETER ["Latitude_Of_Origin",50.0],
-    UNIT["Meter",1.0]]
+PROJCS["Albers Equal Area",
+    GEOGCS["NAD27",
+        DATUM["North_American_Datum_1927",
+            SPHEROID["Clarke 1866",6378206.4,294.978698213898,
+                AUTHORITY["EPSG","7008"]],
+            TOWGS84[-3,142,183,0,0,0,0],
+            AUTHORITY["EPSG","6267"]],
+        PRIMEM["Greenwich",0,
+            AUTHORITY["EPSG","8901"]],
+        UNIT["degree",0.0174532925199433,
+            AUTHORITY["EPSG","9108"]],
+        AUTHORITY["EPSG","4267"]],
+    PROJECTION["Albers_Conic_Equal_Area"],
+    PARAMETER["standard_parallel_1",55],
+    PARAMETER["standard_parallel_2",65],
+    PARAMETER["latitude_of_center",50],
+    PARAMETER["longitude_of_center",-154],
+    PARAMETER["false_easting",0],
+    PARAMETER["false_northing",0],
+    UNIT["us_survey_feet",0.3048006096012192]]
 \end{verbatim}
+
 The Alaska dataset includes all GIS data that are used as examples and 
 screenshots in the user guide, and includes a GRASS database.
 
