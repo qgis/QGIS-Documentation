@@ -12,7 +12,8 @@
 #	nextfile.eps
 
 PNG=dxf2shp_converter.eps\
-	
+	dxf2shape_dialog.eps\
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
