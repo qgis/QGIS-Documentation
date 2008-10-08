@@ -12,7 +12,10 @@
 #	nextfile.eps
 
 PNG=coordinate_capture.eps\
-	
+	geographic.eps\
+	tracking.eps\
+	transformed.eps\
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
