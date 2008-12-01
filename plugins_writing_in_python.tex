@@ -1,330 +1,236 @@
 \section{Writing a QGIS Plugin in Python}
 
-Writing plugins in Python is much simpler than using C++.
-To create a PyQGIS plugin, you need QGIS 0.9, Python, PyQt, and the Qt developer tools \cite{sherman07}.
+% when the revision of a section has been finalized,
+% comment out the following line:
+\updatedisclaimer
 
-When QGIS starts up it scans certain directories looking for both C++ and Python plugins.
-For a file (shared library, DLL, or python script) to be recognized as a plugin it has to have a specific signature.
-For Python scripts it's pretty simple.
+In this section you find a beginner's tutorial for writing a QGIS Python
+plugins. It is based on the workshop "Extending the Functionality of QGIS
+with Python Plugins" held at FOSS4G 2008 by Dr. Marco Hugentobler, Dr. Horst
+D\"uster and Tim Sutton. 
 
-QGIS looks in the following locations under the installation directory:
+Apart from writing a QGIS Python plugin, it is also possible to use PyQGIS
+from a python command line console which is mainly interesting for debugging
+or to write standalone applications in Python with their own user interfaces
+using the functionality of the QGIS core library.
+
+\subsection{Why Python and what about licensing}
+
+Python is a scripting language which was designed with the goal of being easy
+to program. It has a mechanism that automatically releases memory that is no
+longer used (garbagge collector). A further advantage is that many programs
+that are written in C++ or Java offer the possibility to write extensions in
+Python, e.g. OpenOffice or Gimp. Therefore it is a good investment of time to
+learn the Python language.
+
+PyQGIS plugins use functionality of libqgis\_core.so and libqgis\_gui.so. As
+both are licensed under GNU GPL, QGIS Python plugins must be licenced under the
+GPL, too. This means you may use your plugins for any purpose and you are not
+forced to publish them. If you do publish them however, they must be
+published under the conditions of the GPL license. With Python programs, this
+restriction is not as important as for compiled programs, because the source
+code is visible anyway.
+
+\subsection{What needs to be installed to get started}
+
+On the lab computers, everything for the workshop is already installed. If
+you program Python plugins at home, you will need the following libraries and
+programs:
 
 \begin{itemize}
-\item \nix{Linux and other Unix}: ./share/qgis/python/plugins
-\item \osx{Mac OS X}: ./Contents/MacOS/share/qgis/python/plugins
-\item \win{Windows}: .\textbackslash share\textbackslash QGIS\textbackslash python\textbackslash plugins
+\item QGIS
+\item Python
+\item Qt
+\item PyQT
+\item PyQt development tools
 \end{itemize}
 
-Each Python plugin is contained in its own directory.
-When QGIS starts up it will scan each subdirectory in \filename{share/qgis/python/plugins} and initialize any plugins it finds.
-Once that's done, the plugin will show up in the \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
+If you use Linux, there are binary packages for all major distributions. For
+Windows, the PyQt installer already contains Qt, PyQt and the PyQt
+development tools.
 
-Let's create a plugin to fill a gap in the QGIS interface.
-This plugin will allow us to create a new PostGIS layer for us to digitize.
-It will be a simple plugin and pretty rough, but it illustrates how to get started writing your own PyQGIS plugins.
+\subsection{Programming a simple PyQGIS Plugin in four steps}
 
-\subsection{Setting up the Structure}
-The first thing we need to do is set up the structure for our plugin.
-In this example we'll be developing our plugin on \nix{Linux} but the method is the same, just adapt some of the file system commands as appropriate for your platform.
-QGIS is installed in a directory named \filename{qgis} in our home directory.
-Let's create the directory for the plugin.
+The example plugin is intentionally kept simple. It adds a button to the menu
+bar of QGIS. If the button is clicked, a file dialog appears where the user
+may load a shape file.
 
-\begin{verbatim}
-mkdir ~/qgis/share/qgis/python/plugins/new_layer
-\end{verbatim}
+For each python plugin, a dedicated folder that contains the plugin files
+needs to be created. By default, QGIS looks for plugins in
+\$QGIS\_DIR/share/qgis/python/plugins (in our workshop
+/usr/share/qgis/python/plugins). On Linux, there is also the possibility to
+have plugins in \$HOME/.qgis/python/plugins such that it is only visible for
+one user.
 
-To get started, we need to create the following files in the \filename{new\_layer} directory (we'll need some additional files in a bit):
+\minisec{Step 1: Make the plugin manager recognise the plugin}
 
-\begin{verbatim}
-__init__.py 
-resources.py
-resources.qrc
-newlayer.py
-\end{verbatim} 
-
-\subsection{Making the Plugin Recognizable}
-
-Initializing the plugin is done in the \filename{\_\_init\_\_.py} script.
-For our \filename{NewLayer} plugin the script contains:
-
-\begin{verbatim}
-1 # load NewLayer class from file newlayer.py
-2 from newlayer import NewLayer
-3 def name():
-4   return "New PostGIS layer"
-5 def description():
-6   return "Creates a new empty Postgis layer"
-7 def version():
-8   return "Version 0.1"
-9 def classFactory(iface):
-10   return NewLayer(iface)
-\end{verbatim} 
-
-The mandatory things a plugin must return are a name, description, and version, all of which are implemented in our script above.
-Each method simply returns a string with the appropriate information.
-The other requirement is the \method{classFactory} method that must return a reference to the plugin itself (line 10), after receiving the \object{iface} object as an argument.
-With this simple code, QGIS will recognize our script as a plugin.
-
-\subsection{Resources}
-
-In order to have a nice icon for our plugin, we need a resources file which we'll name \filename{resources.qrc}.
-This is just a simple XML file that defines the icon resource:
-
-\begin{verbatim}
- <RCC>
-    <qresource prefix="/plugins/newlayer">
-        <file>icon.png</file>
-    </qresource>
-</RCC> 
-\end{verbatim} 
-
-The resource file uses a prefix to prevent naming clashes with other plugins - using the name of the plugin is usually sufficient.
-The \filename{icon.png} file is is just a PNG image that will be used in the toolbar when the plugin is activated.
-You can use any image, as long as it's 22x22 pixels (so it fits on the toolbar).
-
-To turn the resource file into something the plugin can use, it must be compiled using the PyQt resource compiler:
-
-\begin{verbatim}
-  pyrcc4 -o resources.py resources.qrc
-\end{verbatim}
-
-The \filename{-o} switch is used to specify the output file.
-Now that we have resources, we need a way to collect the information needed for creating a new layer.
-
-\subsection{Creating the GUI}
-
-Normally we would use the same tool that C++ developers use to create a GUI: Qt Designer.
-This is a visual design tool that allows you to create dialog and main windows by dragging and dropping widgets and defining their properties.
-
-To design our NewLayer plugin we could get quite fancy and include widgets for field types and other options.
-However, since our time is limited, we'll use another means to collect the information we need to create the table.
-This will illustrate the concepts and then you can venture further using the tutorials on the QGIS blog.
-
-To collect the user input, we'll use the \classname{QInputDialog} class from the Qt library.
-This prompts the user for a single line of input.
-While it will make our plugin a little crude, it serves to illustrate the concepts.
-
-All we need to write now is the Python code to collect the input and create the table.
-
-\subsection{Creating the Plugin}
-
-Now that we have the preliminaries out of the way, we can get down to writing the code that does the actual work.
-Let's start by looking at the things we need to import and the initialization of the plugin in \filename{newlayer.py}.
-
-\begin{verbatim}
-1 # Import the PyQt and QGIS libraries
-2 from PyQt4.QtCore import *
-3 from PyQt4.QtGui import *
-4 from qgis.core import *
-5 import psycopg
-6 # Initialize Qt resources from file resources.py
-7 import resources
-8
-9 # Our main class for the plugin
-10 class NewLayer:
-11
-12  def __init__(self, iface):
-13    # Save reference to the QGIS interface
-14    self.iface = iface
-15
-16  def initGui(self):
-17    # Create action that will start plugin configuration
-18    self.action = QAction(QIcon(":/plugins/newlayer/icon.png"),\
-19      "New PosGIS Layer", self.iface.getMainWindow())
-20    QObject.connect(self.action, SIGNAL("activated()"), self.run)
-21
-22    # Add toolbar button and menu item
-23    self.iface.addToolBarIcon(self.action)
-24    self.iface.addPluginMenu("&New PostGIS Layer...", self.action)
-25
-26  def unload(self):
-27    # Remove the plugin menu item and icon
-28    self.iface.removePluginMenu("&New PostGIS Layer...",self.action)
-29    self.iface.removeToolBarIcon(self.action)
-\end{verbatim}
-
-In lines 2 through 7 we import the libraries needed for the plugin.
-This includes the PyQt libraries, the QGIS core library, and the Python PostgreSQL library psycopg.
-Every Python script that uses the QGIS libraries and PyQt needs to import the QtCore and QtGui libraries, as well as the QGIS core library.
-This gives us access to the PyQt wrappers for our Qt objects (like our input dialog) and the QGIS core libraries.
-We also need to import the \filename{resources.py} file we created with the icon definition.
-
-In line 10 we declare the class \classname{NewLayer}.
-In the \method{\_\_init\_\_} method (lines 12 through 14) our class is initialized and passed the \object{iface} object from QGIS via the \method{classFactory} method in line 10 of \filename{\_\_init\_\_.py}.
-We store \object{iface} as a member variable so we can use it later.
-In lines 16 through 24 we initialize the GUI elements for the plugin.
-In Qt, a \classname{QAction} is used to create a user interface action that can be used to create both a menu and toolbar item.
-In our plugin, we use it for both.
-In line 18 we create the action using our icon resource (note the prefix we specified in \filename{resources.qrc}).
-We also provide some text that will appear when it is used in a menu or during a mouseover, and lastly we need to specify the ``parent''.
-In a plugin, the parent is the main window of QGIS.
-The \object{iface} object that we stored during initialization allows us to get the reference to the main window in line 19.
-
-Once the action is created, we can add it to both the toolbar and the \mainmenuopt{Plugins} menu (lines 23 and 24).
-That takes care of initializing the GUI for the plugin.
-The other thing we need to do is clean up after ourself when the plugin is unloaded.
-The \method{unload} method takes care of this by removing the menu item and the tool from the toolbar (lines 28 and 29).
-
-This takes care of the initialization stuff and getting our plugin to load and unload nicely.
-Now let's look at the code that does the actual work.
-It's all contained in the \method{run} method.
-
-\begin{verbatim}
-30 def run(self): 
-31   # Get the user input, starting with the table name
-32   table_name = QInputDialog.getText(None, "Table Name?", \
-33     "Name for new PostGIS layer")
-34   if table_name[0].length() > 0:
-35     # Get the field names and types
-36     fields = QInputDialog.getText(None, "Field Names", \
-37      "Fields (separate with a comma)")
-38     parts = fields[0].split(',')
-39     # Create the SQL statement
-40     sql = "create table " + table_name[0] + " (id int4 primary key, "
-41     for fld in parts:
-42      sql += fld + " varchar(10), "
-43     sql = sql[0:-2]
-44     sql += ")"
-45     # Connect to the database
-46     # First get the DSN
-47     dsn = QInputDialog.getText(None, "Database DSN", \
-48      "Enter the DSN for connecting to the database (dbname=db user=user)")
-49     if dsn[0].length() > 0:
-50      con = psycopg.connect(str(dsn[0]))
-51      curs = con.cursor()
-52      curs.execute(str(sql))
-53      con.commit()
-54      # add the geometry column
-55      curs.execute("select AddGeometryColumn('" + str(table_name[0]) + \
-56        "', 'the_geom', 4326, 'POLYGON', 2)")
-57      con.commit()
-58      # create the GIST index
-59      curs.execute("create index sidx_" + str(table_name[0]) + " on " + \
-60        str(table_name[0]) + " USING GIST(the_geom GIST_GEOMETRY_OPS)")
-61        con.commit()
-\end{verbatim}
-
-The first thing we need to do is use the \classname{QInputDialog} to get the name of the table to create.
-This is done in line 32 where we prompt for it.
-
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Enter new PostGIS table name}\label{fig:gettablename}\smallskip
-%  \includegraphics[scale=0.8]{gettablename}
-%\end{center}
-%\end{figure}
-
-In line 34 we check to see if the user actually entered anything before proceeding.
-
-Next we need to get the field names.
-For this example we are keeping it very simple.
-Every field will be a varchar(10), meaning we can store up to 10 characters in it.
-If we really want to make this plugin useful, we would need to provide a way for the user to specify the type.
-In line 36 we prompt the user to enter a comma delimited list of field names.
-
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Enter field names for new PostGIS table}\label{fig:getfieldname}\smallskip
-%  \includegraphics[scale=0.8]{getfieldname}
-%\end{center}
-%\end{figure}
-
-We then split this list into its components for use in constructing the SQL statement (line 38).
-
-Line 40 contains the first part of the SQL statement.
-Note we are creating the table with an integer id field that will be the primary key.
-We then iterate through the field list, appending the appropriate code to the SQL statement (line 41).
-
-Once we have all the fields added to the SQL statement, we chop off the trailing characters we don't want (line43) and then add the closing parenthesis to complete the statement (line 44).
-
-Now we are ready to connect to the database and create the table.
-To access the database, we are using psycopg (\url{http://www.initd.org}).
-In order to connect we need to specify the data source name (DSN) with the name of the database, the user, and a password if necessary.
-If we are running both QGIS and PostgreSQL on the same machine we usually don't need to specify a password.
-
-In this case, the DSN will look something like this:
-
-\begin{center}
-  \textsl{dbname=gis\_data user=gsherman}
-\end{center}
-
-To get the DSN, we prompt the user with a \classname{QInputDialog} in line 47.
-
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Enter DSN for connection to PostGIS database}\label{fig:getdsn}\smallskip
-%  \includegraphics[scale=0.8]{getdsn}
-%\end{center}
-%\end{figure}
-
-If the user enters a DSN then we can proceed with the connection to the database in line 50.
-We get a cursor from the connection in line 51 and then execute the SQL statement to create the table and commit the change in lines 52 through 53.
-
-This creates the table, but for it to be a valid layer and ready for us touse it needs a couple more things.
-
-First it needs a geometry column.
-We purposely didn't include one when we created the table so we could use the \textsl{AddGeometryColumn} function to create it. This function adds a geometry column to the table and then puts an entry in the \textsl{geometry\_columns} table for us.
-In line 55 we specify the table name, the name we want for the geometry column, the SRID, feature type, and the dimension of the feature.
-
-The last thing to do is create a spatial index on the table so we get optimum performance when doing spatial searches and displaying the data in QGIS.
-In line 59 we have cobbled together the SQL to create the index.
-
-The actual statement looks like this:
-
-\begin{verbatim}
-create index sidx_park_land on park_land 
-   USING GIST(the_geom GIST_GEOMETRY_OPS);
-\end{verbatim}
-
-\subsection{Issues and Problems}
-
-Our plugin is now complete.
-Now lets look at some of the things that are wrong with it or where we could improve it:
+Each Python plugin is contained in its own directory. When QGIS starts up it
+will scan each OS specific subdirectory and initialize any plugins it finds. 
 
 \begin{itemize}
-\item We could use an improved GUI, one that lets the user enter all the needed information on one dialog
-\item The user can't specify field types
-\item There is limited error checking in the dialog
-  \begin{itemize}
-    \item If you don't enter any fields, the plugin fails
-    \item There is no error checking on any of the database operations
-  \end{itemize} 
-\item There is no feedback from the plugin once it completes
-\end{itemize} 
+\item \nix{Linux and other unices}: ./share/qgis/python/plugins
+\item \osx{Mac OS X}: ./Contents/MacOS/share/qgis/python/plugins
+\item \win{Windows}: .\textbackslash share\textbackslash QGIS\textbackslash
+python\textbackslash plugins
+\end{itemize}
 
-With all the issues, it still serves as a primordial plugin that illustrates the process and helps get you started with your own plugin development.
+Once that's done, the plugin will show up in the
+\dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
 
-\subsection{Adding Feedback}
+\begin{Tip}\caption{\textsc{QGIS Python Plugin folder in \$HOME/.qgis}}
+\qgistip{For Linux and other unices, there is also the possibility to have
+your python plugins in \$HOME/.qgis/python/plugins. In that case, they are
+only visible for one user.
+}
+\end{Tip}
 
-Let's fix one of the small problems by adding some feedback at the end of the process.
-We'll just add a message box to tell the user that everything is done and to check the database to make sure the table was created.
+To provide the neccessary information for QGIS, the plugin needs to implement
+the methods \method{name()}, \method{description()} and \method{version()}
+which return descriptive strings. A plugin also needs a method
+\method{classFactory(QgisInterface)} which is called by the plugin manager to create
+an instance of the plugin. The argument of type QGisInterface is used by the
+plugin to access functions of the QGIS instance. We are going to work with
+this object in step 2.  
 
-To do this, we just add the following code after line 61:
+Note that, in contrast to other programing languages, indention is very
+important. The Python interpreter throws an error if it is not correct.
+
+For our plugin we create the plugin folder 'foss4g\_plugin' in
+\filename{./qgis/python/plugins}. Then we add two new textfiles into this
+folder, \filename{foss4gplugin.py} and \filename{\_\_init\_\_.py}.
+
+The file \filename{foss4gplugin.py} contains the plugin class:
 
 \begin{verbatim}
-# show the user what happened
-QMessageBox.information(None, "Results", "Table " + str(table_name[0]) + \
-" has been created. Check your database to confirm.")
+# -*- coding: utf-8 -*-
+# Import the PyQt and QGIS libraries
+from PyQt4.QtCore import *
+from PyQt4.QtGui import *
+from qgis.core import *
+# Initialize Qt resources from file resources.py
+import resources
+
+class FOSS4GPlugin:
+
+def __init__(self, iface):
+# Save reference to the QGIS interface
+  self.iface = iface
+
+def initGui(self):
+  print 'Initialising GUI'
+
+def unload(self):
+  print 'Unloading plugin'
 \end{verbatim}
 
-When the table is created, the user sees this:
+The file \filename{\_\_init\_\_.py} contains the methods \method{name()},
+\method{description()} and \method{version()} and \method{classFactory}. As
+we are creating a new instance of the plugin class, we need to import the
+code of this class:
 
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Message Box with Plugin results}\label{fig:plugin_results}\smallskip
-%  \includegraphics[scale=0.8]{plugin_results}
-%\end{center}
-%\end{figure}
+\begin{verbatim}
+# -*- coding: utf-8 -*-
+from foss4gplugin import FOSS4GPlugin
+def name():
+  return "FOSS4G example"
+def description():
+  return "A simple example plugin to load shapefiles"
+def version():
+  return "Version 0.1"
+def classFactory(iface):
+  return FOSS4GPlugin(iface)
+\end{verbatim}
 
-\subsection{Summary}
-Writing a QGIS plugin in Python is pretty easy.
-Some plugins won't require a GUI at all.
-For example, you might write a plugin that returns the map coordinates for the point you click on the map.
-Such a plugin wouldn't require any user input and could use a standard Qt \classname{QMessageBox} to display the result.
+At this point the plugin already the neccessary infrastructure to appear in
+the QGIS \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...} to be
+loaded or unloaded. 
 
-You can also write plugins for QGIS in C++, but that's another story.
-You can find tutorials on writing QGIS plugins in both C++ and Python on the QGIS blog at:
+\minisec{Step 2: Create an Icon for the plugin}
 
-\begin{center}
-  \url{http://blog.qgis.org} 
-\end{center}
+To make the icon graphic available for our program, we need a so-called
+resource file. In the resource file, the graphic is contained in hexadecimal
+notation. Fortunately, we don't need to care about its representation because
+we use the pyrcc compiler, a tool that reads the file
+\filename{resources.qrc} and creates a resource file. 
+
+The file \filename{foss4g.png} and the \filename{resources.qrc} we use in
+this little workshop can be downloaded from
+\url{http://karlinapp.ethz.ch/python\_foss4g}. Move these 2 files into the
+directory of the example plugin
+\filename{./qgis/python/plugins/foss4g\_plugin} and enter: <path\_to\_QGIS\_folder>/pyrcc4 -o
+resources.py resources.qrc.
+
+\minisec{Step 3: Add a button and a menu}
+
+In this section, we implement the content of the methods \method{initGui()} and
+\method{unload()}. We need an instance of the class \classname{QAction} that executes the
+\method{run()} method of the plugin. With the action object, we are then able to
+generate the menu entry and the button:
+
+\begin{verbatim}
+import resources
+
+  def initGui(self):
+    # Create action that will start plugin configuration
+    self.action = QAction(QIcon(":/plugins/foss4g_plugin/foss4g.png"), "FOSS4G plugin",
+self.iface.getMainWindow())
+    # connect the action to the run method
+    QObject.connect(self.action, SIGNAL("activated()"), self.run)
+
+    # Add toolbar button and menu item
+    self.iface.addToolBarIcon(self.action)
+    self.iface.addPluginMenu("FOSS-GIS plugin...", self.action)
+
+    def unload(self):
+    # Remove the plugin menu item and icon
+    self.iface.removePluginMenu("FOSSGIS Plugin...", self.action)
+    self.iface.removeToolBarIcon(self.action)
+\end{verbatim}
+
+\minisec{Step 4: Load a layer from a shape file}
+
+In this step we implement the real functionality of the plugin in the
+\method{run()} method. The Qt4 method \method{QFileDialog::getOpenFileName}
+opens a file dialog and returns the path to the chosen file. If the user
+cancels the dialog, the path is a null object, which we test for. We then
+call the method \method{addVectorLayer} of the interface object which loads
+the layer. The method only needs three arguments: the file path, the name of
+the layer that will be shown in the legend and the data provider name. For
+shapefiles, this is 'ogr' because QGIS internally uses the OGR library to
+access shapefiles:
+
+\begin{verbatim}
+    def run(self):
+    fileName = QFileDialog.getOpenFileName(None,QString.fromLocal8Bit("Select a file:"),
+ "", "*.shp *.gml")
+    if fileName.isNull():
+      QMessageBox.information(None, "Cancel", "File selection canceled")
+      else:
+      vlayer = self.iface.addVectorLayer(fileName, "myLayer", "ogr")
+\end{verbatim}
+
+\subsection{Further information}
+
+As you can see, you need information from different sources to write PyQGIS
+plugins. Plugin writers need to know Python and the QGIS plugin interface as
+well as the Qt4 classes and tools. At the beginning it is best to learn from
+examples and copy the mechanism of existing plugins. Using the QGIS plugin
+installer, which itself is a Python plugin, it is possible to download a lot
+of existing Python plugins and to study their behaviour.
+
+There is a a collection of online documentation that may be usefull for
+PyQGIS programers:
+ 
+\begin{itemize}
+\item QGIS wiki: \url{http://wiki.qgis.org/qgiswiki/PythonBindings}
+\item QGIS API documentation: \url{http://doc.qgis.org/index.html}
+\item Qt documentation: \url{http://doc.trolltech.com/4.3/index.html}
+\item PyQt: \url{http://www.riverbankcomputing.co.uk/pyqt/}
+\item Python tutorial: \url{http://docs.python.org/}
+\item A book about desktop GIS and QGIS. It contains a chapter about PyQGIS
+plugin programing: \url{http://www.pragprog.com/titles/gsdgis/desktop-gis} 
+\end{itemize}
+
+You can also write plugins for QGIS in C++. See Section \ref{cpp_plugin} for
+more information about that.
+
