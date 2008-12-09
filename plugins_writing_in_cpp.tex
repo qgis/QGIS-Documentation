@@ -2,23 +2,10 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 In this section we provide a beginner's tutorial for writing a simple QGIS
 C++ plugin. It is based on a workshop held by Dr. Marco Hugentobler. 
-
-\subsection{Why C++ and what about licensing}
-
-QGIS is written in C++ (noch ein bisschem mehr...). 
-
-
-QGIS C++ plugins use functionalities of libqgis*.so libraries. As they are
-licensed under GNU GPL, QGIS C++ plugins must be licenced under the GPL, too.
-This means you may use your plugins for any purpose and you are not forced to
-publish them. If you do publish them however, they must be published under
-the conditions of the GPL license. 
-
-\subsection{What are C++ plugins and how do they technically work}
 
 QGIS C++ plugins are dynamically linked libraries (.so or .dll). They are
 linked to QGIS at runtime when requested in the plugin manager and extend the
@@ -36,6 +23,19 @@ removed using the class destructor. To list the plugins, each plugin must
 have a few external 'C' functions for description and of course the
 \method{classFactory} method.
 
+\subsection{Why C++ and what about licensing}
+
+QGIS itself is written in C++, so it also makes sense to write plugins in C++
+as well. It is an object-oriented programming (OOP) language that is viewed
+by many developers as a prefered language for creating large-scale
+applications.
+
+QGIS C++ plugins use functionalities of libqgis*.so libraries. As they are
+licensed under GNU GPL, QGIS C++ plugins must be licenced under the GPL, too.
+This means you may use your plugins for any purpose and you are not forced to
+publish them. If you do publish them however, they must be published under
+the conditions of the GPL license. 
+
 \subsection{Programming a QGIS C++ Plugin in four steps}
 
 The example plugin is a point converter plugin and intentionally kept simple. 
@@ -50,12 +50,13 @@ be loaded into QGIS using the delimited text plugin (see Section
 As a first step we create the \filename{QgsPointConverter.h} and
 \filename{QgsPointConverter.cpp} files. Then we add virtual methods inherited
 from QgisPlugin (but leave them empty for now), create necessary external 'C'
-methods and .pro file, which is a Qt mechanism to easily create Makefiles.
+methods and a .pro file, which is a Qt mechanism to easily create Makefiles.
 Then we compile the sources, move the compiled library into the plugin folder
-and load the new plugin in the QGIS plugin manager.
+and load it in the QGIS plugin manager.
+
+\textbf{a) Create new pointconverter.pro file and add}:
 
 \begin{verbatim}
-pointconverter.pro:
 #base directory of the qgis installation
 QGIS_DIR = /home/marco/src/qgis
 
@@ -63,14 +64,17 @@ TEMPLATE = lib
 CONFIG = qt
 QT += xml qt3support
 unix:LIBS += -L/$$QGIS_DIR/lib -lqgis_core -lqgis_gui
-INCLUDEPATH += $$QGIS_DIR/src/ui $$QGIS_DIR/src/plugins  $$QGIS_DIR/src/gui $$QGIS_DIR/src/raster $$QGIS_DIR/src/core $$QGIS_DIR 
+INCLUDEPATH += $$QGIS_DIR/src/ui $$QGIS_DIR/src/plugins  $$QGIS_DIR/src/gui \
+	       $$QGIS_DIR/src/raster $$QGIS_DIR/src/core $$QGIS_DIR 
 SOURCES = qgspointconverterplugin.cpp
 HEADERS = qgspointconverterplugin.h
 DEST = pointconverterplugin.so
 DEFINES += GUI_EXPORT= CORE_EXPORT=
+\end{verbatim}
 
-qgspointconverterplugin.h:
+\textbf{b) Create new qgspointconverterplugin.h file and add}:
 
+\begin{verbatim}
 #ifndef QGSPOINTCONVERTERPLUGIN_H
 #define QGSPOINTCONVERTERPLUGIN_H
 
@@ -90,9 +94,11 @@ class QgsPointConverterPlugin: public QgisPlugin
   QgisInterface* mIface;
 };
 #endif
+\end{verbatim}
 
-qgspointconverterplugin.cpp:
+\textbf{c) Create new qgspointconverterplugin.cpp file and add}:
 
+\begin{verbatim}
 #include "qgspointconverterplugin.h"
 
 #ifdef WIN32
@@ -148,7 +154,6 @@ QGISEXTERN void unload(QgisPlugin* theQgsPointConverterPluginPointer)
 {
   delete theQgsPointConverterPluginPointer;
 }
-
 \end{verbatim}
 
 \minisec{Step 2: Create an icon, a button and a menu for the plugin}
@@ -156,11 +161,11 @@ QGISEXTERN void unload(QgisPlugin* theQgsPointConverterPluginPointer)
 This step includes adding a pointer to the QgisInterface object in the plugin
 class. Then we create a QAction and a callback function (slot), add it to the
 QGIS GUI using QgisIface::addToolBarIcon() and QgisIface::addPluginToMenu()
-and finally remove the QAction in the unload() method.
+and finally remove the QAction in the \method{unload()} method.
+
+\textbf{d) Open qgspointconverterplugin.h again and extend existing content to}:
 
 \begin{verbatim}
-pointconverterplugin.h:
-
 #ifndef QGSPOINTCONVERTERPLUGIN_H
 #define QGSPOINTCONVERTERPLUGIN_H
 
@@ -190,9 +195,11 @@ class QgsPointConverterPlugin: public QObject, public QgisPlugin
 };
 
 #endif
+\end{verbatim}
 
-pointconverterplugin.cpp:
+\textbf{e) Open qgspointconverterplugin.cpp again and extend existing content to}:
 
+\begin{verbatim}
 #include "qgspointconverterplugin.h"
 #include "qgisinterface.h"
 #include <QAction>
@@ -203,7 +210,8 @@ pointconverterplugin.cpp:
 #define QGISEXTERN extern "C"
 #endif
 
-QgsPointConverterPlugin::QgsPointConverterPlugin(QgisInterface* iface): mIface(iface), mAction(0)
+QgsPointConverterPlugin::QgsPointConverterPlugin(QgisInterface* iface): \
+    mIface(iface), mAction(0)
 {
 
 }
@@ -264,40 +272,42 @@ QGISEXTERN void unload(QgisPlugin* theQgsPointConverterPluginPointer)
 {
   delete theQgsPointConverterPluginPointer;
 }
-
 \end{verbatim}
 
 
 \minisec{Step 3: Read point features from the active layer and write to text file}
 
 To read the point features from the active layer we need to query the current
-layer and the location for the new text file. Then we iterate through all the
-features of the current layer, convert their geometries (vertices) to points,
-open a new text file and use QTextStream to write the x- and y-coordinates
+layer and the location for the new text file. Then we iterate through all
+features of the current layer, convert the geometries (vertices) to points,
+open a new file and use QTextStream to write the x- and y-coordinates
 into it.
 
+\textbf{f) Open qgspointconverterplugin.h again and extend existing content to}
+
 \begin{verbatim}
-
-pointconverterplugin.h:
-
-additionally to the previous steps:
-
 class QgsGeometry;
 class QTextStream;
 
 private:
 
-void convertPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
-void convertMultiPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
-void convertLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
-void convertMultiLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
-void convertPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
-void convertMultiPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const;
+void convertPoint(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+void convertMultiPoint(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+void convertLineString(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+void convertMultiLineString(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+void convertPolygon(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+void convertMultiPolygon(QgsGeometry* geom, const QString& attributeString, \
+		  QTextStream& stream) const;
+\end{verbatim}
 
-pointconverterplugin.cpp:
+\textbf{g) Open qgspointconverterplugin.cpp again and extend existing content to}:
 
-additionally to the previous steps:
-
+\begin{verbatim}
 #include "qgsgeometry.h"
 #include "qgsvectordataprovider.h"
 #include "qgsvectorlayer.h"
@@ -311,13 +321,17 @@ void QgsPointConverterPlugin::convertToPoint()
   QgsMapLayer* theMapLayer = mIface->activeLayer();
   if(!theMapLayer)
     {
-      QMessageBox::information(0, tr("no active layer"), tr("this plugin needs an active point vector layer to make conversions to points"), QMessageBox::Ok);
+      QMessageBox::information(0, tr("no active layer"), \
+      tr("this plugin needs an active point vector layer to make conversions \ 
+          to points"), QMessageBox::Ok);
       return;
     }
   QgsVectorLayer* theVectorLayer = dynamic_cast<QgsVectorLayer*>(theMapLayer);
   if(!theVectorLayer)
     {
-      QMessageBox::information(0, tr("no vector layer"), tr("this plugin needs an active point vector layer to make conversions to points"), QMessageBox::Ok);
+      QMessageBox::information(0, tr("no vector layer"), \
+      tr("this plugin needs an active point vector layer to make conversions \
+          to points"), QMessageBox::Ok);
       return;
     }
   
@@ -343,7 +357,8 @@ void QgsPointConverterPlugin::convertToPoint()
           return;
       }
 
-      theVectorLayer->select(provider->attributeIndexes(), theVectorLayer->extent(), true, false);
+      theVectorLayer->select(provider->attributeIndexes(), \
+      theVectorLayer->extent(), true, false);
 
       //write header
       theTextStream << "x,y";
@@ -363,32 +378,38 @@ void QgsPointConverterPlugin::convertToPoint()
         {
             case QGis::WKBPoint:
             case QGis::WKBPoint25D:
-                convertPoint(currentGeometry, featureAttributesString, theTextStream);
+                convertPoint(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiPoint:
             case QGis::WKBMultiPoint25D:
-                convertMultiPoint(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiPoint(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBLineString:
             case QGis::WKBLineString25D:
-                convertLineString(currentGeometry, featureAttributesString, theTextStream);
+                convertLineString(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiLineString:
             case QGis::WKBMultiLineString25D:
-                convertMultiLineString(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiLineString(currentGeometry, featureAttributesString \
+		theTextStream);
                 break;
 
             case QGis::WKBPolygon:
             case QGis::WKBPolygon25D:
-                convertPolygon(currentGeometry, featureAttributesString, theTextStream);
+                convertPolygon(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiPolygon:
             case QGis::WKBMultiPolygon25D:
-                convertMultiPolygon(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiPolygon(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
         }
       }
@@ -396,14 +417,16 @@ void QgsPointConverterPlugin::convertToPoint()
 }
 
 //geometry converter functions
-void QgsPointConverterPlugin::convertPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertPoint(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPoint p = geom->asPoint();
     stream << p.x() << "," << p.y();
     stream << endl;
 }
 
-void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPoint mp = geom->asMultiPoint();
     QgsMultiPoint::const_iterator it = mp.constBegin();
@@ -414,7 +437,8 @@ void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString
     }
 }
 
-void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPolyline line = geom->asPolyline();
     QgsPolyline::const_iterator it = line.constBegin();
@@ -425,7 +449,8 @@ void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString
     }
 }
 
-void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPolyline ml = geom->asMultiPolyline();
     QgsMultiPolyline::const_iterator lineIt = ml.constBegin();
@@ -441,7 +466,8 @@ void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QS
     }
 }
 
-void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPolygon polygon = geom->asPolygon();
     QgsPolygon::const_iterator it = polygon.constBegin();
@@ -457,7 +483,8 @@ void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& a
     }
 }
 
-void QgsPointConverterPlugin::convertMultiPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiPolygon(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPolygon mp = geom->asMultiPolygon();
     QgsMultiPolygon::const_iterator polyIt = mp.constBegin();
@@ -477,24 +504,20 @@ void QgsPointConverterPlugin::convertMultiPolygon(QgsGeometry* geom, const QStri
         }
     }
 }
-
 \end{verbatim}
-
-
-
 
 \minisec{Step 4: Copy the feature attributes to the text file}
 
 At the end we extract the attributes from the active layer using
 QgsVectorDataProvider::fieldNameMap(). For each feature we extract the field
 values using QgsFeature::attributeMap() and add the contents comma separated
-behind the x- and y-coordinates for each new point feature.
+behind the x- and y-coordinates for each new point feature. For this step
+there is no need for any furter change in \filename{qgspointconverterplugin.h} 
 
-\begin{verbatim}
-no change for qgspointconverterplugin.h:
+\textbf{h) Open qgspointconverterplugin.cpp again and extend existing content
+to}:
 
-source for qgspointconverterplugin.cpp:
-
+\begin{verbatim} 
 #include "qgspointconverterplugin.h"
 #include "qgisinterface.h"
 #include "qgsgeometry.h"
@@ -511,7 +534,8 @@ source for qgspointconverterplugin.cpp:
 #define QGISEXTERN extern "C"
 #endif
 
-QgsPointConverterPlugin::QgsPointConverterPlugin(QgisInterface* iface): mIface(iface), mAction(0)
+QgsPointConverterPlugin::QgsPointConverterPlugin(QgisInterface* iface): \
+mIface(iface), mAction(0)
 {
 
 }
@@ -542,13 +566,17 @@ void QgsPointConverterPlugin::convertToPoint()
   QgsMapLayer* theMapLayer = mIface->activeLayer();
   if(!theMapLayer)
     {
-      QMessageBox::information(0, tr("no active layer"), tr("this plugin needs an active point vector layer to make conversions to points"), QMessageBox::Ok);
+      QMessageBox::information(0, tr("no active layer"), \
+      tr("this plugin needs an active point vector layer to make conversions \
+          to points"), QMessageBox::Ok);
       return;
     }
   QgsVectorLayer* theVectorLayer = dynamic_cast<QgsVectorLayer*>(theMapLayer);
   if(!theVectorLayer)
     {
-      QMessageBox::information(0, tr("no vector layer"), tr("this plugin needs an active point vector layer to make conversions to points"), QMessageBox::Ok);
+      QMessageBox::information(0, tr("no vector layer"), \
+      tr("this plugin needs an active point vector layer to make conversions \
+          to points"), QMessageBox::Ok);
       return;
     }
   
@@ -574,7 +602,8 @@ void QgsPointConverterPlugin::convertToPoint()
           return;
       }
 
-      theVectorLayer->select(provider->attributeIndexes(), theVectorLayer->extent(), true, false);
+      theVectorLayer->select(provider->attributeIndexes(), \
+      theVectorLayer->extent(), true, false);
 
       //write header
       theTextStream << "x,y";
@@ -618,32 +647,38 @@ void QgsPointConverterPlugin::convertToPoint()
         {
             case QGis::WKBPoint:
             case QGis::WKBPoint25D:
-                convertPoint(currentGeometry, featureAttributesString, theTextStream);
+                convertPoint(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiPoint:
             case QGis::WKBMultiPoint25D:
-                convertMultiPoint(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiPoint(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBLineString:
             case QGis::WKBLineString25D:
-                convertLineString(currentGeometry, featureAttributesString, theTextStream);
+                convertLineString(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiLineString:
             case QGis::WKBMultiLineString25D:
-                convertMultiLineString(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiLineString(currentGeometry, featureAttributesString \
+		theTextStream);
                 break;
 
             case QGis::WKBPolygon:
             case QGis::WKBPolygon25D:
-                convertPolygon(currentGeometry, featureAttributesString, theTextStream);
+                convertPolygon(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
 
             case QGis::WKBMultiPolygon:
             case QGis::WKBMultiPolygon25D:
-                convertMultiPolygon(currentGeometry, featureAttributesString, theTextStream);
+                convertMultiPolygon(currentGeometry, featureAttributesString, \
+		theTextStream);
                 break;
         }
       }
@@ -651,7 +686,8 @@ void QgsPointConverterPlugin::convertToPoint()
 }
 
 //geometry converter functions
-void QgsPointConverterPlugin::convertPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertPoint(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPoint p = geom->asPoint();
     stream << p.x() << "," << p.y();
@@ -659,7 +695,8 @@ void QgsPointConverterPlugin::convertPoint(QgsGeometry* geom, const QString& att
     stream << endl;
 }
 
-void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPoint mp = geom->asMultiPoint();
     QgsMultiPoint::const_iterator it = mp.constBegin();
@@ -671,7 +708,8 @@ void QgsPointConverterPlugin::convertMultiPoint(QgsGeometry* geom, const QString
     }
 }
 
-void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPolyline line = geom->asPolyline();
     QgsPolyline::const_iterator it = line.constBegin();
@@ -683,7 +721,8 @@ void QgsPointConverterPlugin::convertLineString(QgsGeometry* geom, const QString
     }
 }
 
-void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPolyline ml = geom->asMultiPolyline();
     QgsMultiPolyline::const_iterator lineIt = ml.constBegin();
@@ -700,7 +739,8 @@ void QgsPointConverterPlugin::convertMultiLineString(QgsGeometry* geom, const QS
     }
 }
 
-void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsPolygon polygon = geom->asPolygon();
     QgsPolygon::const_iterator it = polygon.constBegin();
@@ -717,7 +757,8 @@ void QgsPointConverterPlugin::convertPolygon(QgsGeometry* geom, const QString& a
     }
 }
 
-void QgsPointConverterPlugin::convertMultiPolygon(QgsGeometry* geom, const QString& attributeString, QTextStream& stream) const
+void QgsPointConverterPlugin::convertMultiPolygon(QgsGeometry* geom, const QString& \
+attributeString, QTextStream& stream) const
 {
     QgsMultiPolygon mp = geom->asMultiPolygon();
     QgsMultiPolygon::const_iterator polyIt = mp.constBegin();
