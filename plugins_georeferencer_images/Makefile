@@ -13,7 +13,11 @@
 PNG=georef.eps\
 	georeferencer.eps\
 	pencil.eps\
-			
+	select_image.eps\
+	choose_points.eps\
+	georefplugin.eps\
+	result_map.eps   		
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)

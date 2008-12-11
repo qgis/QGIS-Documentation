@@ -22,21 +22,23 @@ cd spearfish_toposheet
 
 The next step is to start QGIS, load the georeferencer plugin and select the file \filename{spearfish\_topo24.tif}.
 
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Select an image to georeference}\label{fig:select_image}\smallskip
-%  \includegraphics[clip=true]{select_image}
-%\end{center}
-%\end{figure}
+\begin{figure}[ht]
+\begin{center}
+\caption{Select an image to georeference \nixcaption}\label{fig:select_image}\smallskip
+  \includegraphics[clip=true, width=10cm]{select_image}
+\end{center}
+\end{figure}
 
-Now click on the button \button{Arrange plugin window} to open the image in the georeferencer and to arrange it with the reference map in the qgis map canvas on your desktop.
+Now click on the button \button{Arrange plugin window} to open the image in
+the georeferencer and to arrange it with the reference map in the qgis map
+canvas on your desktop (see Figure \ref{fig:georefplugin}).
 
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Arrange plugin window with the qgis map canvas}\label{fig:georeferencer}\smallskip
-%  \includegraphics[clip=true,width=\textwidth]{georeferencer}
-%\end{center}
-%\end{figure}
+\begin{figure}[ht]
+\begin{center}
+  \caption{Arrange plugin window with the qgis map canvas \nixcaption}\label{fig:georefplugin}\smallskip
+  \includegraphics[clip=true,width=\textwidth]{georefplugin}
+\end{center}
+\end{figure}
 
 With the button \button{Add Point} you can start to add points on the raster image and enter their coordinates, and the plugin will compute the world file parameters (see Figure \ref{fig:choose_points}).
 The more coordinates you provide the better the result will be.
@@ -47,18 +49,18 @@ For the procedure you have two options:
 \item You click on a point in the raster map and choose the button \button{from map canvas} to add the X and Y coordinates with the help of a georeferenced map already loaded in QGIS.
 \end{enumerate}
 
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Add points to the raster image}\label{fig:choose_points}\smallskip
-%  \includegraphics[clip=true,width=0.8\textwidth]{choose_points}
-%\end{center}
-%\end{figure}
+\begin{figure}[ht]
+\begin{center}
+  \caption{Add points to the raster image \nixcaption}\label{fig:choose_points}\smallskip
+  \includegraphics[clip=true,width=0.8\textwidth]{choose_points}
+\end{center}
+\end{figure}
 
 For this example we use the second option and enter the coordinates for the selected points with the help of the \filename{roads} map provided with the  \filename{spearfish60} location from: \url{http://grass.osgeo.org/sampledata/spearfish\_grass60data-0.3.tar.gz}
 
-If you don't know how to integrate the \filename{spearfish60} location with the GRASS plugin, information are provided in Section \ref{sec:grass}.
-
-As you can see in Figure \ref{fig:choose_points}, the georeferencer provides buttons to zoom, pan, add and delete points in the image.
+If you don't know how to integrate the \filename{spearfish60} location with
+the GRASS plugin, information are provided in Section \ref{sec:grass}. As you
+can see in Figure \ref{fig:choose_points}, the georeferencer provides buttons to zoom, pan, add and delete points in the image.
 
 After you added enough points to the image you need to select the transformation type for the georeferencing process and save the resulting world file together with the Tiff.
 In our example we choose 
@@ -91,9 +93,10 @@ We used 5 coordinate points to georeference the raster image.
 To get correct results it is important to disperse the points regulary in the image.
 Finally we check the result and load the new georeferenced map \filename{spearfish\_topo24.tif} and overlay it with the map \filename{roads} of the \filename{spearfish60} location.
 
-%\begin{figure}[ht]
-%\begin{center}
-%  \caption{Georeferenced map with overlayed roads from spearfish60 location}\label{fig:result_map}\smallskip
-%  \includegraphics[clip=true,width=0.8\textwidth]{result_map}
-%\end{center}
-%\end{figure}
+\begin{figure}[ht]
+\begin{center}
+  \caption{Georeferenced map with overlayed roads from spearfish60 location
+  \nixcaption}\label{fig:result_map}\smallskip
+  \includegraphics[clip=true,width=\textwidth]{result_map}
+\end{center}
+\end{figure}
