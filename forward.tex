@@ -32,10 +32,9 @@ received a full copy of the license with your copy of QGIS, and you also can
 find it as Appendix \ref{gpl_appendix}.  
 
 \begin{Tip}\caption{\textsc{Up-to-date Documentation}}\index{documentation}
-\qgistip{The latest version of this document in PDF format can always be found at \newline
-\url{http://download.osgeo.org/qgis/doc/manual/}  
-or on the QGIS website at
-\url{http://qgis.osgeo.org/http://qgis.osgeo.org/documentation/manuals.html}
+\qgistip{The latest version of this document can always be found at 
+\url{http://download.osgeo.org/qgis/doc/manual/}  or in the documentation
+area of the QGIS website at \url{http://qgis.osgeo.org/documentation/}
 }
 \end{Tip}
 
@@ -44,7 +43,7 @@ or on the QGIS website at
 QGIS offers many common GIS functionalities provided by core features and
 plugins. As a short summary they are presented in six categories to gain a
 first insight.
-%% FIXME (check these features against the capabilities of Kore 1.0.0)
+
 \minisec{View data}
 
 You can view and overlay vector and raster data in different formats and
@@ -52,13 +51,13 @@ projections without conversion to an internal or common format. Supported
 formats include:
 
 \begin{itemize}
-\item spatially-enabled PostgreSQL tables using PostGIS, \textbf{most} vector
-formats\footnote{OGR-supported database formats are not yet supported in QGIS.}
-supported by the OGR library, including ESRI shapefiles, MapInfo,
+\item spatially-enabled PostgreSQL tables using PostGIS, vector formats
+\footnote{OGR-supported database formats are not yet supported in QGIS.}
+supported by the installed OGR library, including ESRI shapefiles, MapInfo,
 SDTS and GML.
-\item all raster formats supported by the GDAL library, such as digital
-elevation models, aerial photography or landsat imagery,
-\item GRASS mapsets, 
+\item Raster and imagery formats supported by the installed GDAL library, such 
+as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG,
+\item GRASS raster and vector data from a GRASS database (location/mapsets), 
 \item Online spatial data served as OGC-compliant WMS or WFS.
 \end{itemize}
 
@@ -99,22 +98,17 @@ formats to GPX or down/upload directly to a GPS unit
 \minisec{Analyse data} 
 
 You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
-supported formats using the geoprocessing plugin. It currently offers buffer,
-intersection, union, dissolve, difference and convex hull. Or you use the 
-integrated GRASS tools, including the complete GRASS functionality, e.g:
-
-\begin{itemize}
-\item Image processing (image fusion, classification, filtering, enhancement)
-\item Raster analysis (map algebra, terrain analysis, hydrologic modeling
-\item Vector analysis (digitizing, union, intersection, buffer)
-\item Network analysis (shortest path, travelling salesman)
-\end{itemize}
+supported formats using the ftools python plugin. It currently offers
+vector analysis, sampling, geoprocessing, geometry and database management
+tool (See Section \ref{sec:ftools}). Or you use the integrated GRASS tools,
+including the complete GRASS functionality with more than 300 modules (See
+Section \ref{sec:grass}).
 
 \minisec{Publish maps on the internet}
 
 QGIS can be used to export data to a mapfile and to visualize them in the
 internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS and WFS client and WMS server. 
+be used as a WMS,  WFS client and as WMS server. 
 
 \minisec{Extend QGIS functionality through plugins} 
 
@@ -126,12 +120,18 @@ or even new applications with C++ or Python.
 \item \textbf{Core Plugins}
 \\ \\ Add WFS Layer
 \\ Add Delimited Text Layer
+\\ Coordinate Capture
 \\ Decorations (Copyright Label, North Arrow and Scale bar)
 \\ Georeferencer
+\\ Dxf2Shp Converter
 \\ GPS Tools
 \\ GRASS integration
 \\ Graticules Creator
+\\ Interpolation Plugin
+\\ OGR Layer Converter
+\\ Quick Print
 \\ SPIT Shapefile to PostgreSQL/PostGIS Import Tool
+\\ Mapserver Export
 \\ Python Console
 \\ Python Plugin Installer
 \\ \item \textbf{Python Plugins}
@@ -139,12 +139,4 @@ or even new applications with C++ or Python.
 community. These plugins can be browsed and installed from the official
 PyQGIS repository using the python plugin installer.
 \end{itemize}
-
-
-%% FIXME (maybe the whats new part should be added again?)
-
-
-
-
-
 
