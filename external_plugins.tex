@@ -4,10 +4,49 @@
 % comment out the following line:
 \updatedisclaimer
 
-External QGIS plugins are currently all written in python. They are stored 
-in external svn repositories and maintained by the individual author. They 
-can be added to the QGIS \filename{Plugin Manager} with the 
-\filename{Plugin installer} plugin, described in Section 
-\ref{sec:external_plugins}.
+External QGIS plugins are all written in python. They are stored in 
+an official, moderated svn repository and maintained by the individual 
+author. Table \ref{tab:external_plugins} shows a list of plugins 
+currently available. All these plugins are descibed in this manual.
+
+\begin{table}[H]
+\centering
+\caption{QGIS moderated external Plugins}\label{tab:external_plugins}\medskip
+\small
+ \begin{tabular}{|l|l|p{4in}|}
+\hline \textbf{Icon} & \textbf{external Plugin} & \textbf{Description}\\
+\hline
+\includegraphics[width=0.7cm]{ftoolslogo}
+ & fTools \index{plugins!fTools} & Vector analysis and data management tools\\
+\hline
+\includegraphics[width=0.7cm]{tableManagerIcon}
+ & Table Manager \index{plugins!Table Manager}& Manage attribute tables \\
+\hline
+\includegraphics[width=0.7cm]{ftoolslogo}
+ & Raster Algebra \index{plugins!Raster Algebra}& Basic raster algebra 
+for GDAL supported raster layer\\
+\hline
+\end{tabular}
+\end{table}
+
+A detailed install description for external python plugins can be found in 
+Section \ref{sec:load_external_plugin}.
+
+\minisec{Unofficial Python Plugin repository}
+
+Apart from the moderated external plugins there exist another unofficial 
+Python Plugin repository. It contains of plugins that are not yet stable 
+enough... 
+
+ADD MORE INFO HERE 
+
+\begin{Tip} \caption{\textsc{Add more external Plugins}}
+\qgistip{Apart from the official QGIS plugin repository you can add 
+more external repositories. Therefore select the Repositories tab in 
+the Python Plugins Installer
+}
+\end{Tip}
+
+
 
 
