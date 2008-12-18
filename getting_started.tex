@@ -6,7 +6,9 @@
 % comment out the following line:
 % \updatedisclaimer
 
-This chapter gives a quick overview of running QGIS with data available on the QGIS web page.
+This chapter gives a quick overview of installing QGIS, some sample 
+data from the QGIS web page and running a first and simple session 
+visualizing raster and vector layers.
 
 \subsection{Installation}\label{label_installation}
 \index{installation}
@@ -97,29 +99,31 @@ or double click on a QGIS project file.}
 \item \osx{double click the icon in your Applications folder.}
 \end{itemize} 
 
-\minisec{Load a raster layer from the sample dataset}
+\minisec{Load raster and vector layers from the sample dataset}
 
-Raster layers are loaded either by clicking on the 
-\toolbtntwo{mActionAddRasterLayer}{Load Raster} icon or by selecting the \mainmenuopt{View}>\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer} 
-menu option. More than one layer can be loaded at the same time by holding 
-down the \keystroke{Control} or \keystroke{Shift} key and clicking on 
-multiple items in the dialog \dialog{Open a GDAL Supported Raster Data Source}.
-
-
-\minisec{Load a vector layer from the sample dataset}
-
-\begin{enumerate} 
-\item Load the shapefile \filename{lakes.shp}.
-\item Zoom in a bit to your favorite area with some lake.
-\item Make the \filename{lakes} layer active.
-\item Open the \dialog{Layer Properties} dialog.
-\item Click on the \tab{Labels} tab.
-\item Check the \checkbox{Display labels} checkbox to enable labeling.
-\item Choose the field to label with. We'll use \selectstring{Field containing label}{NAMES}.
-\item Enter a default for lakes that have no name. The default label will be
-  used each time QGIS encounters a lake with no value in the \guilabel{NAMES} field.
+\begin{enumerate}
+\item Click on the \toolbtntwo{mActionAddRasterLayer}{Load Raster} icon.
+\item Browse to the folder \filename{qgis\_sample\_data/raster/}, select 
+the ERDAS Img file \filename{landcover.img} and click \button{Open}.
+\item Now click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon.
+\item browse to the folder \filename{qgis\_sample\_data/gml/}, select 
+the GML file \filename{lakes.gml} and click \button{Open}.
+\item Zoom in a bit to your favorite area with some lakes.
+\item Double click the \filename{lakes} layer in the map legend to open the 
+\dialog{Layer Properties} dialog.
+\item Click on the \tab{Symbology} tab and select a blue as fill color.
+\item Click on the \tab{Labels} tab and check the \checkbox{Display labels} 
+checkbox to enable labeling.
 \item Click \button{Apply}.
 \end{enumerate} 
 
+\begin{figure}[ht]
+   \begin{center}
+   \caption{A Simple QGIS Session}\label{fig:simple_session}\smallskip
+   \includegraphics[clip=true, width=14cm]{simple_session}
+\end{center}  
+\end{figure}
 
-
+You see how easy it is to visualize raster and vector layers in 
+QGIS. Move on to the next sections to learn more about the available 
+functionalities, features and settings and how to use them.
