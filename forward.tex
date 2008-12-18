@@ -6,7 +6,7 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+% \updatedisclaimer
 
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
 Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
@@ -52,13 +52,14 @@ formats include:
 
 \begin{itemize}
 \item spatially-enabled PostgreSQL tables using PostGIS, vector formats
-\footnote{OGR-supported database formats are not yet supported in QGIS.}
-supported by the installed OGR library, including ESRI shapefiles, MapInfo,
-SDTS and GML.
+\footnote{OGR-supported database formats such as Oracle or mySQL are not yet
+supported in QGIS.} supported by the installed OGR library, including ESRI
+shapefiles, MapInfo, SDTS and GML.
 \item Raster and imagery formats supported by the installed GDAL library, such 
 as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG,
-\item GRASS raster and vector data from a GRASS database (location/mapsets), 
-\item Online spatial data served as OGC-compliant WMS or WFS.
+\item GRASS raster and vector data from GRASS databases (location/mapset), 
+\item Online spatial data served as OGC-compliant Web Map Service (WMS) or
+Web Feature Service (WFS).
 \end{itemize}
 
 \minisec{Explore data and compose maps} 
@@ -80,19 +81,20 @@ graphical user interface. The many helpful tools available in the GUI include:
 \item save and restore projects
 \end{itemize}
 
-\minisec{Create, edit and export data}
+\minisec{Create, edit, manage and export data}
 
 You can create, edit and export vector maps in several formats. Raster data
 have to be imported into GRASS to be able to edit and export them into other
 formats.  
 
 \begin{itemize}
-\item digitizing tools for OGR formats and GRASS vector
-\item creating and editing shapefiles
+\item digitizing tools for OGR supported formats and GRASS vector layer
+\item creating and editing shapefiles and GRASS vector layer
 \item geocode images with the georeferencer plugin
 \item using the GPS tools to import and export GPX format, convert other GPS
 formats to GPX or down/upload directly to a GPS unit
-\item creating PostGIS layers from shapefiles with the SPIT plugin 
+\item creating PostGIS layers from shapefiles with the SPIT plugin
+\item manage vector attribute tables with the table manager plugin  
 \end{itemize}
 
 \minisec{Analyse data} 
@@ -108,7 +110,7 @@ Section \ref{sec:grass}).
 
 QGIS can be used to export data to a mapfile and to visualize them in the
 internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS,  WFS client and as WMS server. 
+be used as a WMS, WFS client and as WMS server. 
 
 \minisec{Extend QGIS functionality through plugins} 
 
@@ -135,8 +137,9 @@ or even new applications with C++ or Python.
 \\ Python Console
 \\ Python Plugin Installer
 \\ \item \textbf{Python Plugins}
-\\ \\ QGIS offers a growing number of python plugins, provided by the
+\\ \\ QGIS offers a growing number of external python plugins, provided by the
 community. These plugins can be browsed and installed from the official
-PyQGIS repository using the python plugin installer.
+PyQGIS repository using the python plugin installer (See Section
+\ref{sec:plugins}).
 \end{itemize}
 

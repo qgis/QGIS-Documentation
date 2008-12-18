@@ -48,8 +48,8 @@
 % dialog
 % usage: \dialog{Layer Properties}
 \newcommand{\dialog}[1]{
-\fcolorbox[rgb]{0.2,0.2,0.95}[rgb]{0.2,0.2,0.95}{%
-\textbf{\textcolor{white}{#1}}}}
+\fcolorbox{gray}[rgb]{.95,.95,0.8}{%
+\textbf{\textcolor{black}{#1}}}}
 %
 % Here are some styles for use only when discussing Python coding
 % classname
@@ -348,9 +348,16 @@ $\triangledown$%
 %
 \subsection{Conventions}\label{label_conventions}
 
-The conventions used in this manual are as follows. 
+This section describes a collection of uniform styles throughout the manual.
+The conventions used in this manual are as follows:
 
 \minisec{GUI Conventions}
+
+The GUI convention styles are intended to mimic the appearance of the GUI. In
+general, the objective is to use the non-hover appearance, so a user can
+visually scan the GUI to find something that looks like the instruction
+in the manual.
+
 \begin{itemize}
 %
 %Use \mainmenuopt for main menu items that have no icon only text
@@ -424,6 +431,11 @@ or
 A shadow indicates a clickable GUI component.
 
 \minisec{Text or Keyboard Conventions}
+
+The manual also includes styles related to text, keyboard commands and coding
+to indicate different entities, such as classes, or methods. They don't
+correspond to any actual appearance.
+
 \begin{itemize}
 %
 %Use for all urls. Otherwise, it is not clickable in the document.
@@ -450,62 +462,32 @@ PROJCS["NAD_1927_Albers",
   GEOGCS["GCS_North_American_1927",
 \end{verbatim}
 
-Platform-specific instructions are indicated as follow.
-GUI sequences and small amounts of text can be formatted inline: %
-Click \{\nix{}\win{File} \osx{QGIS}\} > Quit to % 
-close QGIS. This indicates that on Linux, Unix and Windows platforms, %
-click the File menu option first, then Quit from the dropdown menu, while on %
-Macintosh OSX platforms, click the QGIS menu option first, then Quit from the %
-dropdown menu.
+\minisec{Platform-specific instructions}
 
-Larger amounts of text may be formatted as a list:
-%A moderate amount of text may be formatted as a list:
+GUI sequences and small amounts of text can be formatted inline: Click
+\{\nix{}\win{File} \osx{QGIS}\} > Quit to close QGIS. This indicates that on
+Linux, Unix and Windows platforms, click the File menu option first, then
+Quit from the dropdown menu, while on Macintosh OSX platforms, click the QGIS
+menu option first, then Quit from the dropdown menu. Larger amounts of text
+may be formatted as a list:
+
 \begin{itemize}
 \item \nix{do this;} 
 \item \win{do that;} 
 \item \osx{do something else.}
 \end{itemize}
+
 or as paragraphs.
-%Larger amounts of text should be formatted as paragraphs:
 
-\nix{}Do this and this and this. Then do this
-and this and this
-and this and this
-and this and this
-and this and this.
+\nix{} \osx{} Do this and this and this. Then do this and this and this
+and this and this and this and this and this and this.
 
-\win{}Do that. Then do that
-and that and that
-and that and that
-and that and that
-and that and that
-and that and that
-and that and that
-and that and that.
-
-\osx{}Do something else. 
-Then do something else and 
-something else and
-something else and
-something else and
-something else and
-something else and
-something else and
-something else and
-something else and
-something else and
-something else altogether.
+\win{}Do that. Then do that and that and that and that and that and that and
+that and that and that and that and that and that and that and that and that.
 
 Screenshots that appear throughout the user guide have been created on
-different platforms; the platform is indicated by an icon at the end of the
-caption as follows:
+different platforms; the platform is indicated by the platform-specific icons
+at the end of the figure caption.
 
-\begin{figure}[ht]
-   \begin{center}
-   \caption{QGIS GUI with Alaska sample data \wincaption}
-	 \label{fig:startupconventions}
-   \includegraphics[clip=true, width=17cm]{startup1_0_0}
-\end{center} 
-\end{figure}
 
 
