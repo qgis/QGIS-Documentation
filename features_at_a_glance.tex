@@ -6,14 +6,16 @@
 % comment out the following line:
 \updatedisclaimer
 
-After a first and easy sample session in section \ref{label_getstarted} we now 
+After a first and simple sample session in Section \ref{label_getstarted} we now 
 want to give you a more detailed overview of the existing QGIS functionalities. 
-Most features presented in this section will be explained and described in 
+Most features presented in the following chapters will be explained and described in 
 own sections later in the manual.
 
 \subsection{Starting and Stopping QGIS}\label{label_startinqgis}
 
-To start QGIS:
+In Section \ref{samplesession} you already learned how to start QGIS. We will 
+repeat this here and you will see that QGIS also provides further command line options. 
+
 \begin{itemize}
 \item \nix{assuming that QGIS is installed in the PATH, you can start QGIS 
 by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
@@ -25,13 +27,6 @@ or double click on a QGIS project file.}
 
 To stop QGIS, click the menu options \{\nix{}\win{File} \osx{QGIS}\} > Quit,
 or use the shortcut \keystroke{Ctrl+Q}.
-Other ways to exist QGIS include:
-\begin{itemize}
-\item \nix{type exit in the command window, or 
-click on the "x" button  on the upper left corner of the frame.} 
-\item \win{click on the red "x" button on the upper left corner of the frame.}
-%\item \osx{.}
-\end{itemize} 
 
 \subsubsection{Command Line Options}\index{command line options}
 \label{label_commandline}
@@ -175,10 +170,9 @@ entry. For more information about tools and toolbars, see Section \ref{label_too
 \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
 	\>
 	\> see Section \ref{sec:output} \\
-%\dropmenuopt{Export to MapServer Map}       - see Section \ref{sec:mapserver_export}
 \dropmenuopttwo{mActionFilePrint}{Print Composer}
 	\> \keystroke{Ctrl+P}
-	\> see Section \ref{label_mapcomposer}
+	\> see Section \ref{label_printcomposer}
 	\> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionFileExit}{Exit} 
 	\> \keystroke{Ctrl+Q} \\
@@ -360,6 +354,18 @@ And Other Edit Menu Items
 \item \mainmenuopt{Settings}
 \begin{tabbing}
 \hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopt{Panels}  
+	\>           
+	\>          	
+	\\
+\dropmenuopt{Toolbars}  
+	\>           
+	\>          	
+	\\
+\dropmenuopt{Toggle Fullscreen Mode}  
+	\>
+	\>          	
+	\\
 \dropmenuopttwo{mActionProjectProperties}{Project Properties}  
 	\> \keystroke{P}
 	\>          	
@@ -391,7 +397,7 @@ see Section \ref{sec:managing_plugins}
 	\> \keystroke{F1}
 	\>           	
 	\> \dropmenucheck{Help}\\
-\dropmenuopttwo{mActionQgisHomePage}{QGIS Homepage}
+\dropmenuopttwo{mActionQgisHomePage}{QGIS Home Page}
 	\> \keystroke{Ctrl+H}
 	\>          	
 	\\
@@ -426,8 +432,6 @@ choosing menu option \mainmenuopt{View} > \dropmenuopt{Show most toolbars}.}
 \subsubsection{Map Legend}\label{label_legend}
 \index{legend}
 
-% TODO The new legend features need to be described here briefly.
-% Marco, would you make a start what is new in the legend?!
 The map legend area is used to set the visibility and z-ordering of layers.
 Z-ordering means that layers listed nearer the top of the legend are drawn
 over layers listed lower down in the legend. The checkbox in each legend
@@ -470,6 +474,7 @@ available. See section \ref{grass_digitising} for infos on editing GRASS vector 
 \item \dropmenuopt{Save as shapefile}
 \item \dropmenuopt{Save selection as shapefile}
 \item \dropmenuopt{Properties}
+\item \dropmenuopt{Make to toplevel item}
 \item \dropmenuopt{Rename}
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
@@ -531,6 +536,14 @@ center where the zoom occurs. You can customize the behavior of the mouse
 wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >\dropmenuopt{Options} menu.  }
 \end{Tip}
 
+\begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys}}\index{pan!arrow keys}
+\qgistip{You can use the arrow keys to pan in and out on the map. Place
+the mouse cursor inside the map area and click on the right arrow key to
+pan east, left arrow key to pan west, up arrow key to pan north and down arrow 
+key to pan south.
+}
+\end{Tip}
+
 \subsubsection{Map Overview}\label{label_mapoverview}
 \index{map!overview}
 
@@ -554,11 +567,22 @@ The status bar also shows the view extents of the map view as you pan and
 zoom in and out. A progress bar in the status bar shows progress of rendering
 as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
-status of lengthy operations. On the right side of the status bar is a small
+status of lengthy operations. Also, if external python plugins are available, 
+you will see a message in the status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section \ref{subsec:redraw_events} below). At the far right of
 the status bar is a projector icon. Clicking on this opens the projection
 properties for the current project.
+
+\begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}\index{scale!calculate}
+\qgistip{When you start QGIS, degrees is the default unit, and it tells QGIS 
+that any coordinate in your layer is in degrees. To get correct scale values, 
+you can either change this to meter manually in the option dialog or you can 
+select a project Coordinate Reference System (CRS) under Settings > Project 
+Properties. In the last case, the unit is set to what the project projection
+says, e.g. '+units=m'.
+}
+\end{Tip}
 
 \subsection{Rendering}\label{subsec:redraw_events}\index{rendering}
 
@@ -581,7 +605,7 @@ Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
 open the \dialog{Properties} dialog by double-clicking on the layer in the legend. On
 the \tab{General} tab, set the minimum and maximum scale values and then
-click on the \checkbox{Use scale dependent rendering} checkbox.
+click on the \checkbox{Scale dependent visibility} checkbox.
 
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.\index{scale}
@@ -590,7 +614,7 @@ to use and noting the scale value in the QGIS status bar.\index{scale}
 
 Map rendering can be controlled in the following ways:
 
-\minisec{Suspending Rendering}\index{rendering!suspending}
+\minisec{a) Suspending Rendering}\index{rendering!suspending}
 \label{label_suspendrender}
 
 To suspend rendering, click the \checkbox{Render} checkbox in the lower right
@@ -602,15 +626,14 @@ rendering include:
 \begin{itemize}
 \item Add many layers and symbolize them prior to drawing
 \item Add one or more large layers and set scale dependency before drawing
-\item Add one or more large layers and zoom to a specific view before
-drawing
+\item Add one or more large layers and zoom to a specific view before drawing
 \item Any combination of the above
 \end{itemize}
 
 Checking the \checkbox{Render} box enables rendering and causes and immediate
 refresh of the map canvas.
 
-\minisec{Setting Layer Add Option}\label{label_settinglayer}
+\minisec{b) Setting Layer Add Option}\label{label_settinglayer}
 \index{rendering!options}\index{layers!initial visibility}
 
 You can set an option to always load new layers without drawing them. This
@@ -632,7 +655,7 @@ default.
 %\textbf{NOTE}: It is currently not possible to stop rendering - this was disabled 
 %in qt4 port because of User Interface (UI) problems and crashes.
 
-\minisec{Updating the Map Display During Rendering}
+\minisec{c) Updating the Map Display During Rendering}
 \label{label_updatemap}\index{rendering!update during drawing}
 
 You can set an option to update the map display as features are drawn. By
@@ -645,6 +668,20 @@ disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
 during the reading of the features. A suggested value to start with is 500. 
 
+\minisec{d) Influence Rendering Quality}
+\label{label_renderquality}\index{rendering!quality}
+
+To influence the rendering quality of the map you have 3 options. Choose menu 
+option \mainmenuopt{Settings} > \dropmenuopt{Options} click on the 
+\tab{Rendering} tab and select or deselect following checkboxes.
+
+\begin{itemize}
+\item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
+\item \checkbox{Fix problems with incorrectly filled polygons}
+\item \checkbox{Continuously the map when dragging the legend/map divider}
+\end{itemize}
+
+
 \subsection{Measuring}\label{sec:measure}\index{measure}
 
 Measuring works within projected coordinate systems only (e.g., UTM). If 
@@ -652,20 +689,15 @@ the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be 
 incorrect. To fix this you need to set an appropriate map coordinate system.
 
-\subsubsection{Measure length}\index{measure:line length}
+\subsubsection{Measure length and areas}\index{measure:line length}\index{measure:areas}
 \includegraphics[width=0.7cm]{mActionMeasure} 
 QGIS is also able to measure real distances between given 
 points according to a defined ellipsoid. Therefore choose menu option \mainmenuopt{Settings} > \dropmenuopt{Options}, 
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
 click points on the map. Each segment-length shows up in the measure-window and additionaly the total 
-length is printed. To stop measuring click your right mouse button. 
+length is printed. To stop measuring click your right mouse button.\\ 
+\includegraphics[width=0.7cm]{mActionMeasureArea} Also areas can be measured. The window only shows the accumulated area-size in the measure window 
 
-\subsubsection{Measure areas}\index{measure:areas}
-\includegraphics[width=0.7cm]{mActionMeasureArea} 
-Also areas can be measured. The window only shows the
-accumulated area-size in the measure window 
-
-% measure-tools side by side
 \begin{figure}[h]
 \caption{Measure tools in action} \label{fig:measure}
 \centering
@@ -703,15 +735,14 @@ The kinds of information saved in a project file include:
 \end{itemize}
 
 The project file is saved in XML format, so it is possible to edit
-the file outside QGIS if you know what you are doing.  
-
-The file format was updated several times compared to earlier QGIS versions. Project files 
+the file outside QGIS if you know what you are doing. The file format 
+was updated several times compared to earlier QGIS versions. Project files 
 from older QGIS versions may not work properly anymore.
 
 \subsection{Output}\label{sec:output}\index{output!save as image!print composer!quick print}
 There are several ways to generate output from your QGIS session.
-We have discussed one already in Section \ref{sec:projects}---
-saving as a project file. Here is a sampling of other ways to produce output files:
+We have discussed one already in Section \ref{sec:projects}: saving as a project file. 
+Here is a sampling of other ways to produce output files:
 \begin{itemize}
 \item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens a
 file dialog where you select the name, path and type of image (PNG or JPG format).
@@ -731,22 +762,22 @@ optmize your options are:
 
 \begin{itemize}
 \item Ask to save project changes when required
-\end{itemize}
-
-\minisec{Appearance Tab}
-
-\begin{itemize}
-\item Hide or show splash screen at startup
-\item Change the icon theme 
+\item Warn when opening a project file saved with an older version of QGIS
 \item Change Selection and backgroud Color
-\item Make layer names appear with Capitals
+\item Change the icon theme (choose between default, classic, gis and nkids)
+\item Capitalise layer names in legend
+\item Display classification attribute names in legend
+\item Hide splash screen at startup
+\item Open attribute table in a doc window
+\item Define attribute table behavior (choose between show all features, show 
+selected features and show features in current canvas)
 \end{itemize}
 
 \minisec{Rendering Tab}
 
 \begin{itemize}
-\item Update features during drawing or not until all features have been read.
 \item Set new layer visible or unvisible when loaded 
+\item Define number of features to draw before updating the display.
 \item Make lines appear less jagged at the expense of some drawing performance
 \item Fix problems with incorrectly filled polygons
 \item Continously redraw when dragging the legend/map divider 
@@ -758,19 +789,27 @@ optmize your options are:
 \item Define Search Radius as a percentage of the map width
 \item Define Ellipsoid for distance calculations
 \item Set Rubberband Color for Measure Tool
-\item Define Mouse wheel action (Zoom, Zoom and recenter, Nothing)
+\item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse cursor, Nothing)
 \item Set Zoom factor for wheel mouse
 \end{itemize}
 
-\minisec{Projection Tab}
+\minisec{Digitizing Tab}
 
 \begin{itemize}
-\item Define what to do, when a layer is loaded without projection information
-\begin{itemize}
-\item Prompt for projection
-\item Project wide default projection will be used
-\item Global default projection displayed below will be used
+\item Set Rubberband Color and line width for Digitizing
+\item Define default snap mode (to vertex, to segment, to vertex and segment)
+\item Define default snapping tolerance in layer units
+\item Define search radius for vertex edits in layer units
+\item Define vertex marker style (Cross or semi transparent circle)
 \end{itemize}
+
+\minisec{CRS Tab}
+
+\begin{itemize}
+\item Prompt for Coordinate Reference System (CRS)
+\item Project wide default Coordinate Reference System (CRS) will be used
+\item Global default Coordinate Reference System (CRS) displayed below will be used
+\item Select global default Coordinate Reference System (CRS)
 \end{itemize}
 
 \minisec{Locale Tab}
@@ -780,12 +819,11 @@ optmize your options are:
 \item Information about active system locale
 \end{itemize}
 
-\minisec{Help Browser Tab}
+\minisec{Proxy Tab}
 
 \begin{itemize}
-\item Define Browser to display help documents
+\item Use proxy for web access and define host, port, user, and password.
 \end{itemize}
-
 
 You can modify the options according to your needs. Some of the changes may 
 require a restart of QGIS before they will be effective.
