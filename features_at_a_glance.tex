@@ -4,7 +4,7 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 After a first and simple sample session in Section \ref{label_getstarted} we now 
 want to give you a more detailed overview of the existing QGIS functionalities. 
@@ -62,10 +62,10 @@ Usage: qgis [options] [FILES]
 
 \begin{Tip} \caption{\textsc{Example Using command line arguments}}
 \qgistip{You can start QGIS by specifying one or more data files
-on the command line. For example, assuming you are in your data directory,
-you could start QGIS with two shapefiles and a raster file set to
-load on startup using the following command: 
-\usertext{qgis ak\_shade.tif alaska.shp majrivers.shp}
+on the command line. For example, assuming you are in the 
+qgis\_sample\_data directory, you could start QGIS with a vector layer 
+and a raster file set to load on startup using the following command: 
+\usertext{qgis ./raster/landcover.img ./gml/lakes.gml}
 }
 \end{Tip}
 
@@ -102,7 +102,7 @@ box of your extent in the following order separated by a comma:
 \label{label_qgismainwindow}
 
 When QGIS starts, you are presented with the GUI as shown below
-(the numbers 1 through 6 in blue ovals refer to the six major areas of the
+(the numbers 1 through 6 in yellow ovals refer to the six major areas of the
 interface as discussed below):
 
 \begin{figure}[ht]
@@ -552,8 +552,8 @@ Within the view is a rectangle showing the current map extent. This allows
 you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
 map overview have been set up for labeling. 
-You can add a single layer to the
-overview by right-clicking on it in the legend and choosing \dropmenuopt{Show in overview}. You can also add or remove all layers to the overview using the
+You can add a single layer to the overview by right-clicking on it in the legend 
+and select \checkbox{Show in overview}. You can also add or remove all layers to the overview using the
 Overview tools on the toolbar.
 
 You can also grab the red rectangle showing your current extent and pan around; the
@@ -577,10 +577,11 @@ properties for the current project.
 \begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}\index{scale!calculate}
 \qgistip{When you start QGIS, degrees is the default unit, and it tells QGIS 
 that any coordinate in your layer is in degrees. To get correct scale values, 
-you can either change this to meter manually in the option dialog or you can 
-select a project Coordinate Reference System (CRS) under Settings > Project 
-Properties. In the last case, the unit is set to what the project projection
-says, e.g. '+units=m'.
+you can either change this to meter manually in the \tab{General} tab under 
+\mainmenuopt{Settings} >\dropmenuopt{Project Properties} or you can select a project 
+Coordinate Reference System (CRS) clicking on the \toolbtntwo{mIconProjectionEnabled}{projector} 
+icon in the lower right-hand corner of the statusbar. In the last case, the unit is set to what 
+the project projection says, e.g. '+units=m'.
 }
 \end{Tip}
 
@@ -687,7 +688,8 @@ option \mainmenuopt{Settings} > \dropmenuopt{Options} click on the
 Measuring works within projected coordinate systems only (e.g., UTM). If 
 the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be 
-incorrect. To fix this you need to set an appropriate map coordinate system.
+incorrect. To fix this you need to set an appropriate map coordinate system 
+(See Section~\ref{label_projections}).
 
 \subsubsection{Measure length and areas}\index{measure:line length}\index{measure:areas}
 \includegraphics[width=0.7cm]{mActionMeasure} 
@@ -695,14 +697,14 @@ QGIS is also able to measure real distances between given
 points according to a defined ellipsoid. Therefore choose menu option \mainmenuopt{Settings} > \dropmenuopt{Options}, 
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
 click points on the map. Each segment-length shows up in the measure-window and additionaly the total 
-length is printed. To stop measuring click your right mouse button.\\ 
-\includegraphics[width=0.7cm]{mActionMeasureArea} Also areas can be measured. The window only shows the accumulated area-size in the measure window 
+length is printed. To stop measuring click your right mouse button. \\
+\includegraphics[width=0.7cm]{mActionMeasureArea} Also areas can be measured. The window shows the accumulated area-size in the measure window 
 
 \begin{figure}[h]
 \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \centering
-   \subfigure[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.4\textwidth]{measure_line}}\goodgap
-   \subfigure[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.4\textwidth]{measure_area}}
+   \subfigure[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}\goodgap
+   \subfigure[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}
 \end{figure}
 
 \subsection{Projects}\label{sec:projects}\index{projects}
@@ -710,10 +712,8 @@ length is printed. To stop measuring click your right mouse button.\\
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
-Section \ref{subsec:gui_options}).
-
-QGIS can save the state of your workspace into a project file using
-the menu options 
+Section \ref{subsec:gui_options}). QGIS can save the state of your 
+workspace into a project file using the menu options 
 \mainmenuopt{File} > \dropmenuopttwo{mActionFileSave}{Save Project}
 or \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As}.
 
@@ -737,7 +737,10 @@ The kinds of information saved in a project file include:
 The project file is saved in XML format, so it is possible to edit
 the file outside QGIS if you know what you are doing. The file format 
 was updated several times compared to earlier QGIS versions. Project files 
-from older QGIS versions may not work properly anymore.
+from older QGIS versions may not work properly anymore. To get aware of this, 
+in the \tab{General} tab under \mainmenuopt{Settings} > \dropmenuopt{Options} 
+you can select \checkbox{Warn when opening a project file saved with an older 
+version of QGIS}.
 
 \subsection{Output}\label{sec:output}\index{output!save as image!print composer!quick print}
 There are several ways to generate output from your QGIS session.
@@ -746,6 +749,8 @@ Here is a sampling of other ways to produce output files:
 \begin{itemize}
 \item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens a
 file dialog where you select the name, path and type of image (PNG or JPG format).
+\item Menu option \dropmenuopttwo{mActionFilePrint}{Print Composer} opens a dialog 
+where you can layout and print the current map canvas (see Section~\ref{label_printcomposer}).
 \end{itemize}
 
 
@@ -761,14 +766,14 @@ optmize your options are:
 \minisec{General Tab}
 
 \begin{itemize}
-\item Ask to save project changes when required
-\item Warn when opening a project file saved with an older version of QGIS
-\item Change Selection and backgroud Color
+\item \checkbox{Ask to save project changes when required}
+\item \checkbox{Warn when opening a project file saved with an older version of QGIS}
+\item \checkbox{Change Selection and backgroud Color}
 \item Change the icon theme (choose between default, classic, gis and nkids)
-\item Capitalise layer names in legend
-\item Display classification attribute names in legend
-\item Hide splash screen at startup
-\item Open attribute table in a doc window
+\item \checkbox{Capitalise layer names in legend}
+\item \checkbox{Display classification attribute names in legend}
+\item \checkbox{Hide splash screen at startup}
+\item \checkbox{Open attribute table in a doc window}
 \item Define attribute table behavior (choose between show all features, show 
 selected features and show features in current canvas)
 \end{itemize}
@@ -776,11 +781,11 @@ selected features and show features in current canvas)
 \minisec{Rendering Tab}
 
 \begin{itemize}
-\item Set new layer visible or unvisible when loaded 
+\item \checkbox{By deafult new layers added to the map should be displayed}
 \item Define number of features to draw before updating the display.
-\item Make lines appear less jagged at the expense of some drawing performance
-\item Fix problems with incorrectly filled polygons
-\item Continously redraw when dragging the legend/map divider 
+\item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
+\item \checkbox{Fix problems with incorrectly filled polygons}
+\item \checkbox{Continously redraw when dragging the legend/map divider} 
 \end{itemize}
 
 \minisec{Map tools Tab}
@@ -788,15 +793,15 @@ selected features and show features in current canvas)
 \begin{itemize}
 \item Define Search Radius as a percentage of the map width
 \item Define Ellipsoid for distance calculations
-\item Set Rubberband Color for Measure Tool
+\item Define Rubberband Color for Measure Tools
 \item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse cursor, Nothing)
-\item Set Zoom factor for wheel mouse
+\item Define Zoom factor for wheel mouse
 \end{itemize}
 
 \minisec{Digitizing Tab}
 
 \begin{itemize}
-\item Set Rubberband Color and line width for Digitizing
+\item Define Rubberband Color and line width for Digitizing
 \item Define default snap mode (to vertex, to segment, to vertex and segment)
 \item Define default snapping tolerance in layer units
 \item Define search radius for vertex edits in layer units
@@ -806,44 +811,34 @@ selected features and show features in current canvas)
 \minisec{CRS Tab}
 
 \begin{itemize}
-\item Prompt for Coordinate Reference System (CRS)
-\item Project wide default Coordinate Reference System (CRS) will be used
-\item Global default Coordinate Reference System (CRS) displayed below will be used
+\item \checkbox{Prompt for Coordinate Reference System (CRS)}
+\item \checkbox{Project wide default Coordinate Reference System (CRS) will be used}
+\item \checkbox{Global default Coordinate Reference System (CRS) displayed below will be used}
 \item Select global default Coordinate Reference System (CRS)
 \end{itemize}
 
 \minisec{Locale Tab}
 
 \begin{itemize}
-\item Overwrite system locale and use defined locale instead
+\item \checkbox{Overwrite system locale and use defined locale instead}
 \item Information about active system locale
 \end{itemize}
 
 \minisec{Proxy Tab}
 
 \begin{itemize}
-\item Use proxy for web access and define host, port, user, and password.
+\item \checkbox{Use proxy for web access} and define host, port, user, and password.
 \end{itemize}
 
 You can modify the options according to your needs. Some of the changes may 
 require a restart of QGIS before they will be effective.
 
 \begin{itemize}
-\item \nix{everything is saved in:}
-\begin{verbatim}
-$HOME/.config/QuantumGIS/qgis.conf
-\end{verbatim}
-This is a normal text file consisting of blocks, where QGIS saves its current
-display options, PostGIS and WMS connections, and other settings.
-
+\item \nix{settings are saved in a texfile: \$HOME/.config/QuantumGIS/qgis.conf}
+\item \osx{you can find your settings in: \$HOME/Library/Preferences/org.qgis.qgis.plist}
 \item \win{settings are stored in the registry under:}
 \begin{verbatim}
-\\HKEY_CURRENT_USER\Software\QuantumGIS\qgis
-\end{verbatim}
-
-\item \osx{you can find your settings in:}
-\begin{verbatim}
-$HOME/Library/Preferences/org.qgis.qgis.plist
+\\HKEY\CURRENT\USER\Software\QuantumGIS\qgis
 \end{verbatim}
 \end{itemize}
 
