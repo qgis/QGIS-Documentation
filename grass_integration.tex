@@ -4,7 +4,7 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 The GRASS plugin provides access to GRASS GIS~\cite{GRASSweb} databases and 
 functionalities. This includes visualization of GRASS raster and vector 
@@ -55,7 +55,7 @@ GRASS \filename{LOCATION} with 3 vector layers and 1 raster elevation map.
 
 \begin{enumerate}
   \item Create a new folder \filename{grassdata}, download the QGIS alaska
-  dataset \filename{qgis\_data\_2008\_09\_15.zip} from
+  dataset \filename{qgis\_sample\_data.zip} from
   \url{http://download.osgeo.org/qgis/data/} and unzip the file into
   \filename{grassdata}. 
   \item Start QGIS.
@@ -174,8 +174,8 @@ download and install the dataset on your computer \ref{label_sampledata}).
   \footnote{When creating a new \filename{LOCATION}, GRASS automatically 
   creates a special \filename{MAPSET} called \filename{PERMANENT} designed to 
   store the core data for the project, its default spatial extend and 
-  coordinate system definitions (Neteler \& Mitasova 2007 
-  \cite{neteler_mitasova07}).}
+  coordinate system definitions (Neteler \& Mitasova 2008 
+  \cite{neteler_mitasova08}).}
   \item Check out the summary to make sure it's correct and click
   \button{Finish} 
   \item The new \filename{LOCATION alaska} and two \filename{MAPSETs demo}
@@ -199,8 +199,8 @@ means, besides access to his own \filename{MAPSET}, each user can also read
 maps in other user's \filename{MAPSETs}, but he can modify or remove only 
 the maps in his own \filename{MAPSET}. All \filename{MAPSETs} include a 
 \filename{WIND} file that stores the current boundary coordinate values and 
-the currently selected raster resolution (Neteler \& Mitasova 2007 
-\cite{neteler_mitasova07}, see Section \ref{sec:grass_region}). 
+the currently selected raster resolution (Neteler \& Mitasova 2008 
+\cite{neteler_mitasova08}, see Section \ref{sec:grass_region}). 
 
 \begin{enumerate}
   \item Start QGIS and make sure the GRASS plugin is loaded

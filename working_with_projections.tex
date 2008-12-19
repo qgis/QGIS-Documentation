@@ -5,7 +5,7 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 QGIS supports on-the-fly (OTF) projection of vector layers. This feature allows you
 to display layers with different coordinate systems and have them overlay
@@ -23,11 +23,8 @@ stored in a user database. See Section \ref{sec:customprojections} for
 information on managing your custom projections.
 
 The projections available in QGIS are based on those defined by
-EPSG\index{EPSG} and are
-largely abstracted from the spatial\_references table in
-PostGIS\index{PostGIS} version 1.x.
-Note that the identifiers used in QGIS do not correspond to the EPSG or
-PostGIS spatial reference identifiers. The EPSG and PostGIS identifiers are
+EPSG\index{EPSG} and are largely abstracted from the spatial\_references 
+table in PostGIS\index{PostGIS} version 1.x. The EPSG identifiers are
 present in the database and can be used to specify a projection in QGIS.
 
 In order to use OTF projection, your data must contain information about its
@@ -38,8 +35,8 @@ the coordinate system. In the case of shapefiles, this means a file containing
 the Well Known Text (WKT)\index{WKT} specification of the coordinate
 system. The
 projection file has the same base name as the shapefile and a prj extension.
-For example, a shapefile named \filename{lakes.shp} would have a corresponding projection
-file named \filename{lakes.prj}.
+For example, a shapefile named \filename{alaska.shp} would have a 
+corresponding projection file named \filename{alaska.prj}.
 
 %\section{Requirements}
 %QGIS uses the Proj4 to provide projection support. 
@@ -56,17 +53,6 @@ the \dialog{Project Properties} dialog:
 \item Click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the lower right-hand corner of the
 statusbar.
 \end{enumerate}
-
-\begin{Tip}
- \caption{\textsc{Project Properties Dialog}}
-\qgistip{
-If you open the \dialog{Project Properties} dialog from the \mainmenuopt{Settings} menu, you
-must
-click on the \tab{Projection} tab to view the projection settings. Opening
-the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring the
-\tab{Projection} tab to the front.
-}
-\end{Tip}
 
 The Projection tab of the \dialog{Project Properties} dialog contains four important components as numbered in Figure
 \ref{fig:projections} and described below.
@@ -91,10 +77,21 @@ coordinate system, select it from the list by expanding the appropriate node
 and selecting the projection. The active projection is pre-selected.
 \item \textbf{Proj4 text} - this is the projection string used by the Proj4 projection
 engine. This text is read-only and provided for informational purposes.
-\item \textbf{Search} - if you know the PostGIS, EPSG, QGIS SRSID identifier or the name 
+\item \textbf{Search} - if you know the EPSG identifier or the name 
 for a projection, you can use the search feature to find it. Enter the 
 identifier and click on \button{Find}.
 \end{enumerate}
+
+\begin{Tip}
+ \caption{\textsc{Project Properties Dialog}}
+\qgistip{
+If you open the \dialog{Project Properties} dialog from the \mainmenuopt{Settings} menu, you
+must
+click on the \tab{Projection} tab to view the projection settings. Opening
+the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring the
+\tab{Projection} tab to the front.
+}
+\end{Tip}
 
 \subsubsection{Specifying a Projection}
 \index{Projections!specifying}
