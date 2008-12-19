@@ -1,7 +1,23 @@
 % vim: set textwidth=78 autoindent:
 
+% QGIS Tips
+% define tip float
+% doesn't work if written in qgis_style.sty
+% please keep the style definitions here and 
+% and load float package in qgis_style.sty
+\floatstyle{ruled}
+\newfloat{Tip}{ht}{lox}
+\floatname{Tip}{Tip}
+\newcommand\qgistip[1]{\raggedright\small{#1}}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
 \thispagestyle{empty}
 \addcontentsline{toc}{section}{Preamble}
+
+%%%%%%%%%%% nothing to change above %%%%%%%%%%
+
 \section*{Preamble}
 
 % when the revision of a section has been finalized, 
