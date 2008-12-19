@@ -10,22 +10,15 @@
 
 QGIS supports vector data in a number of formats, including those
 supported by the OGR library data provider plugin, such as ESRI shapefiles,
-\index{shapefiles}
-\index{ESRI!shapefiles}
-\index{SHP files}
-MapInfo MIF (interchange format)
-\index{MIF files}
-\index{MapInfo!MIF files}
-and MapInfo TAB (native format).
-\index{TAB files}
-\index{MapInfo!TAB files}
-QGIS also supports PostGIS
-\index{PostGIS}
-\index{PostgreSQL!PostGIS}
-layers in a PostgreSQL database using the PostgreSQL data provider plugin.
-Support for
-additional data types (eg. delimited text) is provided by additional data provider plugins.
-\index{delimited text}
+\index{shapefiles}\index{ESRI!shapefiles}\index{SHP files}
+MapInfo MIF (interchange format)\index{MIF files}\index{MapInfo!MIF files}
+and MapInfo TAB (native format).\index{TAB files}\index{MapInfo!TAB files}
+A list of OGR supported formats in Appendix~\ref{appdx_ogr}.
+
+QGIS also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers 
+in a PostgreSQL database using the PostgreSQL data provider plugin.
+Support for additional data types (eg. delimited text) is provided by 
+additional data provider plugins.\index{delimited text}
 
 This section describes how to work with two common formats:
 ESRI shapefiles and PostGIS layers. Many of the
@@ -41,12 +34,10 @@ Working with GRASS vector data is described in Section \ref{sec:grass}.
 \index{ESRI!shapefiles}
 \index{SHP files}
 
-ESRI Shapefile support is provided by a library of functions known as 
-the OGR Simple Feature Library (\url{http://www.gdal.org/ogr})\index{OGR}. See Appendix
-\ref{appdx_ogr} for a list of all supported formats in OGR.
-
-A shapefile actually consists of a minimum of three
-files:\index{shapefile!format}
+The standard vector file format used in QGIS is the ESRI Shapefile. It's support 
+is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
+\index{OGR}. A shapefile actually consists of a minimum of three files:
+\index{shapefile!format}
 
 \begin{itemize}
 \item \filename{.shp} file containing the feature geometries.
@@ -55,11 +46,10 @@ files:\index{shapefile!format}
 \end{itemize}
 
 Ideally it comes with another file with a \filename{.prj} suffix, that contains
-the projection information for the shapefile.
-
-There can be more files belonging to a shapefile dataset.
-To have a closer look at this we recommend the technical specification for the shapefile format,
-that can be found at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf}\index{shapefile!specification}.
+the projection information for the shapefile. There can be more files belonging 
+to a shapefile dataset. To have a closer look at this we recommend the technical 
+specification for the shapefile format, that can be found at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf}.
+\index{shapefile!specification}.
 
 \subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} 
@@ -88,7 +78,7 @@ Selecting a shapefile from the list and clicking \button{Open} loads it into QGI
 \begin{figure}[ht]
    \begin{center}
    \caption{QGIS with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}\smallskip
-   \includegraphics[clip=true, width=17cm]{shapefileloaded}
+   \includegraphics[clip=true, width=16cm]{shapefileloaded}
 \end{center} 
 \end{figure}
 
@@ -118,8 +108,7 @@ Use these steps to create the index:
 \item Open the \dialog{Layer Properties} dialog by double-clicking on the
 shapefile name in the legend or by right-clicking and choosing
 \dropmenuopt{Properties} from the popup menu.
-\item In the tab \tab{General} click the \button{Create} button on the Spatial
-Index section.
+\item In the tab \tab{General} click the \button{Create Spatial Index} button.
 \end{itemize}
 
 \subsubsection{Loading a MapInfo Layer}
@@ -209,10 +198,16 @@ database. \\
 \end{tabular}
 \end{table}
 
-Once the parameters have been filled in, you can test the connection by
-clicking on the \button{Test
-Connection} button\index{PostgreSQL!connection!testing}. To save the password
-with the connection information, check the \checkbox{Save Password} option.
+Optional you can activate follwing checkboxes:
+
+\begin{itemize}
+\item \checkbox{Save Password}
+\item \checkbox{Only look in the geometry\_columns table}
+\item \checkbox{Only look in the 'public' schema}
+\end{itemize}
+
+Once all parameters and options are set, you can test the connection by
+clicking on the \button{Test Connect} button\index{PostgreSQL!connection!testing}.
 
 \begin{Tip}\caption{\textsc{QGIS User Settings and
 Security}}\index{settings}\index{security}
@@ -309,7 +304,7 @@ PostGIS distribution.}
 \end{Tip}
 
 \minisec{SPIT Plugin}
-\includegraphics[width=0.7cm]{spit} QGIS comes with a
+\includegraphics[width=0.7cm]{spiticon} QGIS comes with a
 plugin named 
 SPIT (Shapefile to PostGIS Import Tool)\index{PostGIS!SPIT}.
 SPIT can be used to load multiple shapefiles at one time and includes support
@@ -317,13 +312,13 @@ for schemas. To use SPIT, open the Plugin Manager from the \mainmenuopt{Plugins}
 menu, check the box next to the \checkbox{SPIT plugin} and click \button{OK}. The SPIT
 icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}. 
 
-To import a shapefile, click on the \toolbtntwo{spit}{SPIT} tool in the 
+To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the 
 toolbar to open the 
-\dialog{SPIT - Shapefile to PostGIS Import Tool} dialog.
-You can add one or more files to the queue by clicking on the \button{Add}
-button. To process the files, click on the \button{Import} button. The progress of the
-import as well as any errors/warnings will be displayed as each shapefile is
-processed.  
+\dialog{SPIT - Shapefile to PostGIS Import Tool} dialog. Select the PostGIS database 
+you want to connect to and click on \button{Connect}. Now you can add one or more 
+files to the queue by clicking on the \button{Add} button. To process the files, 
+click on the \button{OK} button. The progress of the import as well as any 
+errors/warnings will be displayed as each shapefile is processed.
 
 \begin{Tip}\caption{\textsc{Importing Shapefiles Containing
 PostgreSQL Reserved Words}}\index{PostGIS!SPIT!reserved words}
@@ -524,7 +519,7 @@ We will illustrate this by labelling the lakes shapefile of the
 \filename{qgis\_example\_dataset}:
 
 \begin{enumerate}
-\item Load the shapefiles \filename{alaska.shp} and \filename{lakes.shp} in QGIS.
+\item Load the Shapefile \filename{alaska.shp} and GML file \filename{lakes.gml} in QGIS.
 \item Zoom in a bit to your favorite area with some lake.
 \item Make the \filename{lakes} layer active.
 \item Open the \dialog{Layer Properties} dialog.
@@ -761,21 +756,37 @@ actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
 
 \subsubsection{Attributes Tab}\index{attributes}\label{label_attributes}
-Within the \tab{attributes} tab the attributes of the selected dataset can be
+Within the \tab{Attributes} tab the attributes of the selected dataset can be
 manipulated. The buttons \button{New Column} and \button{Delete Column} can be
-used when the dataset is in editing mode.
+used, when the dataset is in editing mode. At the moment only columns from 
+PostGIS layers can be edited, because this feature was not supported by 
+the OGR library so far. 
 
-The button \button{Toggle Editing} toggles this mode.
+The button \button{Toggle editing mode} toggles this mode.
 
-\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
-\qgistip{Currently on PostGIS-layers are supported to add or drop attribute
-columns withing this dialog. In further versions of QGIS also other
-datasources will be supported.
-}
-\end{Tip}
+\minisec{edit widget}
 
-%FIXME: More to come here, since I do not know exactly what the edit-widget is
-%for.
+Within the \tab{Attributes} tab you also find an \texttt{edit widget} and a 
+\texttt{value} column. These two columns can be used to define values or a range 
+of values that are allowed to be added to the specific attribute table columns. 
+Possible edit definitions are:
+
+%% IMPORTANT
+%% FIXME this must be extended also with an example. I asked Juergen for some explanations
+\begin{itemize}
+\item line edit: 
+\item unique value: Only one value (INT/REAL/STRING) is allowed to insert.
+\item unique value (editable): One value (INT,REAL,STRING) is suggested but can be changed.
+\item value map:
+\item classification: Several values (INT/REAL/STRING) are allowed to insert.
+\item range (editable): A range between two values (INT/REAL) are suggested but can be changed.
+\item range (slider): Only a range between two values (INT/REAL) are allowed to insert.
+\item file name:
+\end{itemize}
+
+As an example we will load the Point Shapefile \filename{popp.shp} (populated places) 
+and define for column type, that only values 'CABIN' or 'BARACK' can be used for the 
+attribute table columns 'TYPE', when we add a new points 
 
 \subsection{Editing}\index{editing}
 
@@ -860,12 +871,12 @@ situations.
 }
 \end{Tip}
 
-\index{Allow Editing}
-All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Toggle editing} option.
-This can be found in the context menu after right clicking on the legend
-entry for that layer.
-Alternately, you can use the \index{Toggle Editing}
-\toolbtntwo{mActionToggleEditing}{Toggle editing} button from the toolbar to start or stop the editing mode.\index{editing!icons}
+\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
+\qgistip{Currently only PostGIS layers are supported to add or drop attribute
+columns withing this dialog. In further versions of QGIS also other datasources 
+will be supported, because this feature was recently implemented in GDAL > 1.6.0
+}
+\end{Tip}
 
 \begin{Tip}[ht]\caption{\textsc{Editing a Map is Different to Editing an Attribute Table}}
 \qgistip{In this version of QGIS, the \button{Start editing}/\button{Stop editing}
@@ -887,9 +898,6 @@ as you.  The last writer wins.
 }
 \end{Tip}
 
-Once the layer is in edit mode, markers will appear at the
-vertices.
-
 \begin{Tip}[ht]\caption{\textsc{Zoom in Before Editing}}
 \qgistip{Before editing a layer, you should
 zoom in to your area of interest. This 
@@ -908,23 +916,46 @@ the appropriate entry.
 }
 \end{Tip}
 
+All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Toggle editing} option.
+This can be found in the context menu after right clicking on the legend
+entry for that layer.\index{Allow Editing}
+Alternately, you can use the \index{Toggle Editing}
+\toolbtntwo{mActionToggleEditing}{Toggle editing} button from the toolbar to start or stop the editing mode.\index{editing!icons} Once the layer is in edit mode, markers will appear at the
+vertices.
+
+\minisec{Zooming with the mouse wheel}
+
+While digitizing you can use the mouse wheel to zoom in and out on the map 
+Place the mouse cursor inside the map area and roll it forward (away from you) 
+to zoom in and backwards (towards you) to zoom out. The mouse cursor is the 
+center where the zoom occurs. You can customize the behavior of the mouse wheel 
+zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} 
+>\dropmenuopt{Options} menu.
+
+\minisec{Panning with the arrow keys}
+
+Panning the Map during digitizing is possible with the arrow keys. Place
+the mouse cursor inside the map area and click on the right arrow key to
+pan east, left arrow key to pan west, up arrow key to pan north and down arrow 
+key to pan south.
+
 You can perform the following editing functions:
 
 \begin{itemize}
-\item Add Features: \toolbtntwo{mActionCapturePoint}{point},
-  \toolbtntwo{mActionCaptureLine}{line} and
-  \toolbtntwo{mActionCapturePolygon}{polygone}
-\item \toolbtntwo{mActionMoveFeature}{Move Selected Features}
-\item \toolbtntwo{mActionSplitFeatures}{Split Selected Features}
-\item \toolbtntwo{mActionDeleteSelected}{Delete Selected Features}
-\item \toolbtntwo{mActionAddVertex}{Add Vertex of a Feature}
-\item \toolbtntwo{mActionDeleteVertex}{Delete Vertex of a Feature}
-\item \toolbtntwo{mActionMoveVertex}{Move Vertex of a Feature}
+\item Add Features: \toolbtntwo{mActionCapturePoint}{Capture Point},
+  \toolbtntwo{mActionCaptureLine}{Capture Line} and
+  \toolbtntwo{mActionCapturePolygon}{Capture Polygon}
 \item \toolbtntwo{mActionAddRing}{Add Ring}
 \item \toolbtntwo{mActionAddIsland}{Add Island}
-\item \toolbtntwo{mActionEditCut}{Cut Selected Features}
-\item \toolbtntwo{mActionEditCopy}{Copy Selected Features}
-\item \toolbtntwo{mActionEditPaste}{Paste Selected Features}
+\item \toolbtntwo{mActionSplitFeatures}{Split Features}
+\item \toolbtntwo{mActionMoveFeature}{Move Features}
+\item \toolbtntwo{mActionMoveVertex}{Move Vertex}
+\item \toolbtntwo{mActionAddVertex}{Add Vertex}
+\item \toolbtntwo{mActionDeleteVertex}{Delete Vertex}
+\item \toolbtntwo{mActionDeleteSelected}{Delete Selected}
+\item \toolbtntwo{mActionEditCut}{Cut Features}
+\item \toolbtntwo{mActionEditCopy}{Copy Features}
+\item \toolbtntwo{mActionEditPaste}{Paste Features}
 \end{itemize}
 
 \minisec{Adding Features}
@@ -970,19 +1001,17 @@ table} dialog.
 }
 \end{Tip}
 
-% FIXME: Write me
-\minisec{Move Selected Feature}
+\minisec{Move Feature}
 \index{vector layers!move!feature}
 
-%% INPUT IS MISSING
-write me
+You can move features using the \toolbtntwo{mActionMoveFeature}{Move Feature} icon
+on the toolbar.
 
-% FIXME: Write me
-\minisec{Split Selected Feature}
+\minisec{Split Feature}
 \index{vector layers!split!feature}
 
-%%%% INPUT IS MISSING
-write me
+You can split features using the \toolbtntwo{mActionSplitFeatures}{Split Features} icon
+on the toolbar.
 
 \minisec{Editing Vertices of a Feature}
 \index{vector layers!editing!vertex}
@@ -1088,14 +1117,12 @@ the features are represented in CSV format with the geometry data appearing
 in the OGC Well-Known Text (WKT) format.
 
 However in this version of QGIS, text features from outside QGIS cannot 
-be pasted to a layer within QGIS.
-
-When would the copy and paste function come in handy? Well, it turns out that 
-you can edit more than one layer at a time and copy/paste features between 
-layers. Why would we want to do this?  Say we need to do some work on a new 
-layer but only need one or two lakes, not the 5,000 on our \filename{big\_lakes} 
-layer. We can create a new layer and use copy/paste to plop the needed lakes 
-into it. 
+be pasted to a layer within QGIS. When would the copy and paste function 
+come in handy? Well, it turns out that you can edit more than one layer 
+at a time and copy/paste features between layers. Why would we want to do 
+this?  Say we need to do some work on a new layer but only need one or 
+two lakes, not the 5,000 on our \filename{big\_lakes} layer. We can create 
+a new layer and use copy/paste to plop the needed lakes into it. 
 
 As an example we are copying some lakes to a new layer:
 
