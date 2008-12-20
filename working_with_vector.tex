@@ -769,24 +769,36 @@ The button \button{Toggle editing mode} toggles this mode.
 Within the \tab{Attributes} tab you also find an \texttt{edit widget} and a 
 \texttt{value} column. These two columns can be used to define values or a range 
 of values that are allowed to be added to the specific attribute table columns. 
-Possible edit definitions are:
+They are used to produce different edit widgets in the attribute dialog. These 
+widgets are:
 
-%% IMPORTANT
-%% FIXME this must be extended also with an example. I asked Juergen for some explanations
 \begin{itemize}
-\item line edit: 
-\item unique value: Only one value (INT/REAL/STRING) is allowed to insert.
-\item unique value (editable): One value (INT,REAL,STRING) is suggested but can be changed.
-\item value map:
-\item classification: Several values (INT/REAL/STRING) are allowed to insert.
-\item range (editable): A range between two values (INT/REAL) are suggested but can be changed.
-\item range (slider): Only a range between two values (INT/REAL) are allowed to insert.
-\item file name:
+\item line edit: a edit field which allows to enter simple text (or restrict to 
+numbers for numeric attributes).
+\item unique value: a list of unique attribute values of all preexisting features
+is produced and presented in a combobox for selection.
+\item  unique value (editable): a combination of `line edit' and `unique value'.
+The edit field completed entered values to the unique value, but also allows
+to enter new values.
+\item value map: a combobox to select from a set of values specified in the
+\texttt{value} column the \tab{Attributes} tab.  The possible values a
+delimited by a semicolon (e.g. \verb|high;medium;low|).  It's also possible
+to prepend a label to each value, which is delimited with an equal sign (e.g.
+\verb|high=1;medium=2;low=3|). The label is shown in the combobox instead of
+the value.
+\item classification: if a unique value renderer is selected for the layer, the
+values used for the classes are presented for selection in a combobox.
+\item range (editable): A edit field that allows to restrict numeric values to a
+given range.  That range is specified by entering minium and maximum value
+delimited by a semicolon (e.g. \verb|0;360|) in the \texttt{value} column of
+the \tab{Attributes} tab.
+\item range (slider): A slider widget is presented that allows selection of a value
+in a given range and precision.  The range is specifed by minimum, maximum
+value and a step width (e.g. \verb|0;360;10|) in the \texttt{value} column of
+the \tab{Attributes} tab.
+\item file name: the line edit widget is accompanied by a push button. When pressed
+it allows to select a filename using the standard file dialog.
 \end{itemize}
-
-As an example we will load the Point Shapefile \filename{popp.shp} (populated places) 
-and define for column type, that only values 'CABIN' or 'BARACK' can be used for the 
-attribute table columns 'TYPE', when we add a new points 
 
 \subsection{Editing}\index{editing}
 
