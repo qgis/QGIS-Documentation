@@ -49,7 +49,7 @@ If you use Linux, there are binary packages for all major distributions. For
 Windows, the PyQt installer already contains Qt, PyQt and the PyQt
 development tools.
 
-\subsection{Programming a simple PyQGIS Plugin in four steps}
+\subsection{Programming a simple PyQGIS Plugin in four steps}\label{subsec:pyfoursteps}
 
 The example plugin is intentionally kept simple. It adds a button to the menu
 bar of QGIS. If the button is clicked, a file dialog appears where the user
@@ -57,10 +57,8 @@ may load a shape file.
 
 For each python plugin, a dedicated folder that contains the plugin files
 needs to be created. By default, QGIS looks for plugins in
-\$QGIS\_DIR/share/qgis/python/plugins (in our workshop
-/usr/share/qgis/python/plugins). On Linux, there is also the possibility to
-have plugins in \$HOME/.qgis/python/plugins such that it is only visible for
-one user.
+two locations: \$QGIS\_DIR/share/qgis/python/plugins and \$HOME/.qgis/python/plugins.
+Note that plugins installed in the latter location are only visible for one user.
 
 \minisec{Step 1: Make the plugin manager recognise the plugin}
 
@@ -68,25 +66,31 @@ Each Python plugin is contained in its own directory. When QGIS starts up it
 will scan each OS specific subdirectory and initialize any plugins it finds. 
 
 \begin{itemize}
-\item \nix{Linux and other unices}: ./share/qgis/python/plugins
-\item \osx{Mac OS X}: ./Contents/MacOS/share/qgis/python/plugins
-\item \win{Windows}: .\textbackslash share\textbackslash QGIS\textbackslash
-python\textbackslash plugins
+\item \nix{Linux and other unices}:\\
+./share/qgis/python/plugins \\
+/home/\$USERNAME/.qgis/python/plugins
+\item \osx{Mac OS X}:\\
+./Contents/MacOS/share/qgis/python/plugins \\
+/Users/\$USERNAME/.qgis/python/plugins
+\item \win{Windows}:\\
+C:\textbackslash Program Files\textbackslash QGIS\textbackslash python\textbackslash plugins \\
+C:\textbackslash Documents and Settings\textbackslash\$USERNAME\textbackslash .qgis\textbackslash python\textbackslash plugins
+
 \end{itemize}
 
 Once that's done, the plugin will show up in the
 \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
 
-\begin{Tip}\caption{\textsc{QGIS Python Plugin folder in \$HOME/.qgis}}
-\qgistip{For Linux and other unices, there is also the possibility to have
-your python plugins in \$HOME/.qgis/python/plugins. In that case, they are
-only visible for one user.
+\begin{Tip}\caption{\textsc{Two QGIS Python Plugin folders}}
+\qgistip{There are two directories containing the python plugins. \$QGIS\_DIR/share/qgis/python/plugins
+is designed mainly for the core plugins while \$HOME/.qgis/python/plugins for easy installation of the external plugins. Plugins in the home location are only visible for one user but also mask the core plugins with the same name, what can be used to provide main plugin updates
 }
 \end{Tip}
 
 To provide the neccessary information for QGIS, the plugin needs to implement
-the methods \method{name()}, \method{description()} and \method{version()}
-which return descriptive strings. A plugin also needs a method
+the methods \method{name()}, \method{description()}, \method{version()},
+\method{qgisMinimumVersion()} and \method{authorName()} which return descriptive strings.
+The \method{qgisMinimumVersion()} should return a simple form, for example ``1.0``. A plugin also needs a method
 \method{classFactory(QgisInterface)} which is called by the plugin manager to create
 an instance of the plugin. The argument of type QGisInterface is used by the
 plugin to access functions of the QGIS instance. We are going to work with
@@ -96,7 +100,7 @@ Note that, in contrast to other programing languages, indention is very
 important. The Python interpreter throws an error if it is not correct.
 
 For our plugin we create the plugin folder 'foss4g\_plugin' in
-\filename{./qgis/python/plugins}. Then we add two new textfiles into this
+\filename{\$HOME/.qgis/python/plugins}. Then we add two new textfiles into this
 folder, \filename{foss4gplugin.py} and \filename{\_\_init\_\_.py}.
 
 The file \filename{foss4gplugin.py} contains the plugin class:
@@ -124,7 +128,8 @@ def unload(self):
 \end{verbatim}
 
 The file \filename{\_\_init\_\_.py} contains the methods \method{name()},
-\method{description()} and \method{version()} and \method{classFactory}. As
+\method{description()}, \method{version()}, \method{qgisMinimumVersion()}
+and \method{authorName()} and \method{classFactory}. As
 we are creating a new instance of the plugin class, we need to import the
 code of this class:
 
@@ -136,7 +141,11 @@ def name():
 def description():
   return "A simple example plugin to load shapefiles"
 def version():
-  return "Version 0.1"
+  return "0.1"
+def qgisMinimumVersion():
+  return "1.0"
+def authorName():
+  return "John Developer"
 def classFactory(iface):
   return FOSS4GPlugin(iface)
 \end{verbatim}
@@ -157,7 +166,7 @@ The file \filename{foss4g.png} and the \filename{resources.qrc} we use in
 this little workshop can be downloaded from
 \url{http://karlinapp.ethz.ch/python\_foss4g}. Move these 2 files into the
 directory of the example plugin
-\filename{./qgis/python/plugins/foss4g\_plugin} and enter: <path\_to\_QGIS\_folder>/pyrcc4 -o
+\filename{\$HOME/.qgis/python/plugins/foss4g\_plugin} and enter there: pyrcc4 -o
 resources.py resources.qrc.
 
 \minisec{Step 3: Add a button and a menu}
@@ -208,6 +217,24 @@ access shapefiles:
       else:
       vlayer = self.iface.addVectorLayer(fileName, "myLayer", "ogr")
 \end{verbatim}
+
+
+\subsection{Committing the plugin to repository}
+
+If you have written a plugin you consider to be useful and you want to share with
+other users you're welcome to upload it to the QGIS User-Contributed Repository.
+\begin{itemize}
+\item Prepare a plugin directory containing only necessary files (ensure that there
+is no compiled .pyc files, Subversion .svn directories etc).
+\item Make a zip archive of it, including the directory. Be sure the zip file
+name is exactly the same as the directory inside (except the .zip extension of course).
+In other case the Plugin Installer won't be able to relate the available plugin with its
+locally installed instance.
+\item Upload it to the repository: \url{http://pyqgis.org/admin/contributed} (you
+will need to register at first time). Please pay attention when filling the form.
+Especially the Version Number field is often filled wrongly what confuses the Plugin
+Installer and causes false notifications of available updates.
+\end{itemize}
 
 \subsection{Further information}
 

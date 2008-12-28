@@ -7,9 +7,10 @@
 \updatedisclaimer
 
 External QGIS plugins are all written in python. They are stored in 
-an official, moderated svn repository and maintained by the individual 
+an official, moderated repository and maintained by the individual 
 author. Table \ref{tab:external_plugins} shows a list of plugins 
 currently available. All these plugins are descibed in this manual.
+Also updates of core plugins may be available in this repository as external overlays.
 
 \begin{table}[H]
 \centering
@@ -34,13 +35,19 @@ for GDAL supported raster layer\\
 A detailed install description for external python plugins can be found in 
 Section \ref{sec:load_external_plugin}.
 
-\minisec{Unofficial Python Plugin repository}
+\minisec{User-Contributed Python Plugin Repository and author repositories}
 
-Apart from the moderated external plugins there exist another unofficial 
-Python Plugin repository. It contains of plugins that are not yet stable 
-enough... 
+Apart from the moderated external plugins there exists another unofficial
+Python Plugin repository. It contains plugins that are not yet mature
+enough to include them to the Official repository, however some of them
+can be quite useful. Furthermore a few of our contributors maintain
+their own repositories.
 
-ADD MORE INFO HERE 
+To add the unofficial repository and the author repositories open the 
+Plugin Installer (\mainmenuopt{Plugins} > \dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}),
+go to the \tab{Repositories} tab and click the \button{Add 3rd party repositories}
+button. If you don't want one or more of the added repositories, disable it with the
+\button{Edit...} button or completely remove with the \button{Delete} button.
 
 \begin{Tip} \caption{\textsc{Add more external Plugins}}
 \qgistip{Apart from the official QGIS plugin repository you can add 
