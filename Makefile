@@ -106,7 +106,7 @@ html:
 	if [ ! -d $(FILE) ]; then mkdir $(FILE); fi
 	latex2html -init_file l2h.conf  -split=+2 -dir $(FILE) -address "\
 	&copy; 2005, 2006, 2007 \
-	<a href=http://www.qgis.org>QGIS Project</a> \
+	<a href=http://qgis.osgeo.org>QGIS Project</a> \
 	<br>Last modified: `/bin/date +%d-%m-%Y`" $(FILE)
 
 clean:
