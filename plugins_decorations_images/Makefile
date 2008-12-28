@@ -14,6 +14,10 @@
 PNG=copyright_label.eps\
 	north_arrow.eps\
 	scale_bar.eps\
+	copyright.eps\
+	north_arrow_dialog.eps\
+	scale_bar_dialog.eps\
+
 	
 ##### TARGETS #####
 

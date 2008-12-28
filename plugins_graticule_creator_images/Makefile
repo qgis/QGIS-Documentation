@@ -12,6 +12,7 @@
 #	nextfile.eps
 
 PNG=grid_maker.eps\
+    grid_maker_dialog.eps\
 	
 ##### TARGETS #####
 

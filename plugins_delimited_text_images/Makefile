@@ -12,13 +12,7 @@
 #	nextfile.eps
 
 PNG=delimited_text.eps\
-#	ellipsis.eps\
-#	file_selected.eps\
-#	file_selected1.eps\
-#	file_selected2.eps\
-#	file_selected3.eps\
-#	plugin_manager.eps\
-#	toolbar_icon.eps
+    delimited_text_dialog.eps\
 	
 	
 ##### TARGETS #####
