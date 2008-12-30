@@ -7,7 +7,7 @@
 %\updatedisclaimer
 
 After a first and simple sample session in Section \ref{label_getstarted} we now 
-want to give you a more detailed overview of the existing QGIS functionalities. 
+want to give you a more detailed overview of the features of QGIS. 
 Most features presented in the following chapters will be explained and described in 
 own sections later in the manual.
 
@@ -78,8 +78,8 @@ Currently it generates a PNG-file with 800x600 pixels. A filename can be added a
 \usertext{---snapshot}.
 
 \minisec{Command line option \usertext{---lang}}
-Based on your locale QGIS, selects the correct localization. If you like to 
-change your language, you can provide another language code. E.g.: 
+Based on your locale QGIS, selects the correct localization. If you would like 
+to change your language, you can specify a language code. For example: 
 \usertext{---lang=it}
 starts QGIS in italian localization. A list of currently supported
 languages with language code is provided at
@@ -87,7 +87,7 @@ languages with language code is provided at
 
 \minisec{Command line option \usertext{---project}}
 Starting QGIS with an existing project file is also possible. Just
-add the command line option usertext{--project} followed by your project name
+add the command line option \usertext{--project} followed by your project name
 and QGIS will open with all layers loaded described in the given file.
 
 \minisec{Command line option \usertext{---extent}}
@@ -424,7 +424,7 @@ menubar can be switched off using your right mouse button context menu holding
 the mouse over the toolbars.
 
 \begin{Tip}
-\caption{\textsc{Reappearing toolbars}} \index{layout!toolbars}
+\caption{\textsc{Restoring toolbars}} \index{layout!toolbars}
 \qgistip{If you have accidentally hidden all your toolbars, you can get them back by
 choosing menu option \mainmenuopt{View} > \dropmenuopt{Show most toolbars}.}
 \end{Tip}
@@ -438,15 +438,15 @@ over layers listed lower down in the legend. The checkbox in each legend
 entry can be used to show or hide the layer.\index{layer!visibility}
 
 Layers can be grouped in the legend window by adding a layer group and dragging layers 
-into the group. To do so, go with the mouse to the legend window, right click, choose \dropmenuopt{Add group}. 
-A new folder appears. Now drag the layers to the folder symbol. It is then possible to toggle the 
-visibility of all the layers in the group with one click. To bring layers out of a group, go with 
-the mouse to the layer symbol, right click, choose \dropmenuopt{Make to toplevel item}. To give the folder a 
+into the group. To do so, move the mouse pointer to the legend window, right click, choose \dropmenuopt{Add group}. 
+A new folder appears. Now drag the layers onto to the folder symbol. It is then possible to toggle the 
+visibility of all the layers in the group with one click. To bring layers out of a group, move 
+the mouse pointer to the layer symbol, right click, and choose \dropmenuopt{Make to toplevel item}. To give the folder a 
 new name, choose \dropmenuopt{Rename} in the right click menu of the group.
 
-The content of the right mouse button context menu depends on if the loaded legend item you hold your 
+The content of the right mouse button context menu depends on whether the loaded legend item you hold your 
 mouse over is a raster or a vector layer. For GRASS vector layers the \dropmenuopt{toggle editing} is not 
-available. See section \ref{grass_digitising} for infos on editing GRASS vector layers. 
+available. See section \ref{grass_digitising} for information on editing GRASS vector layers. 
 
 \begin{itemize}
 
@@ -500,7 +500,7 @@ changed, the others automatically have the new symbolisation as well. To group s
 the right click menu in the legend window and choose \dropmenuopt{Show file groups}. The file groups of the 
 layers appear. It is now possible to drag a file from one file group into another one. If this is done, 
 the symbologies are grouped. Note that QGIS only permits the drag if the two layers are able to share 
-symbology (same vector type and same attributes).  
+symbology (same vector geometry type and same attributes).  
 
 %% isn't included in Titan anymore, except for an "toggle overview"
 %Each legend entry can show the following mini icons:
@@ -530,8 +530,8 @@ changes you make in the legend area.
 \begin{Tip}\caption{\textsc{Zooming the Map with the Mouse
 Wheel}}\index{zoom!mouse wheel}
 \qgistip{You can use the mouse wheel to zoom in and out on the map. Place
-the mouse cursor inside the map area and roll it forward (away from you) to
-zoom in and backwards (towards you) to zoom out. The mouse cursor is the 
+the mouse cursor inside the map area and roll the wheel forward (away from you) to
+zoom in and backwards (towards you) to zoom out. The mouse cursor position is the 
 center where the zoom occurs. You can customize the behavior of the mouse
 wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >\dropmenuopt{Options} menu.  }
 \end{Tip}
@@ -552,22 +552,27 @@ you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
 map overview have been set up for labeling. 
 You can add a single layer to the overview by right-clicking on it in the legend 
-and select \checkbox{Show in overview}. You can also add or remove all layers to the overview using the
-Overview tools on the toolbar.
+and select \checkbox{Show in overview}. You can also add layers to, or remove 
+all layers from the overview using the Overview tools on the toolbar.
 
-You can also grab the red rectangle showing your current extent and pan around; the
-map view will update accordingly.
+If you click and drag the red rectangle in the overview that shows your 
+current extent, the main map view will update accordingly.
 
 \subsubsection{Status Bar}\label{label_statusbar}
 
 The status bar shows you your current position in map coordinates (e.g.
 meters or decimal degrees) as the mouse pointer is moved across the map view.
-The status bar also shows the view extents of the map view as you pan and
-zoom in and out. A progress bar in the status bar shows progress of rendering
+To the left of the coordinate display in the status bar is a small button that 
+will toggle between showing coordinate position or the view extents of the 
+map view as you pan and zoom in and out. 
+
+A progress bar in the status bar shows progress of rendering
 as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
-status of lengthy operations. Also, if a new plugin or a plugin update is available,
-you will see a message in the status bar. On the right side of the status bar is a small
+status of lengthy operations. 
+
+If a new plugin or a plugin update is available, you will see a message in the 
+status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section \ref{subsec:redraw_events} below). At the far right of
 the status bar is a projector icon. Clicking on this opens the projection
@@ -579,8 +584,8 @@ that any coordinate in your layer is in degrees. To get correct scale values,
 you can either change this to meter manually in the \tab{General} tab under 
 \mainmenuopt{Settings} >\dropmenuopt{Project Properties} or you can select a project 
 Coordinate Reference System (CRS) clicking on the \toolbtntwo{mIconProjectionEnabled}{projector} 
-icon in the lower right-hand corner of the statusbar. In the last case, the unit is set to what 
-the project projection says, e.g. '+units=m'.
+icon in the lower right-hand corner of the statusbar. In the last case, the 
+units are set to what the project projection specifies, e.g. '+units=m'.
 }
 \end{Tip}
 
@@ -603,8 +608,8 @@ QGIS allows you to control the rendering process in a number of ways.
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
-open the \dialog{Properties} dialog by double-clicking on the layer in the legend. On
-the \tab{General} tab, set the minimum and maximum scale values and then
+open the \dialog{Properties} dialog by double-clicking on the layer in the 
+legend. On the \tab{General} tab, set the minimum and maximum scale values and then
 click on the \checkbox{Scale dependent visibility} checkbox.
 
 You can determine the scale values by first zooming to the level you want
@@ -693,11 +698,13 @@ incorrect. To fix this you need to set an appropriate map coordinate system
 \subsubsection{Measure length and areas}\index{measure:line length}\index{measure:areas}
 \includegraphics[width=0.7cm]{mActionMeasure} 
 QGIS is also able to measure real distances between given 
-points according to a defined ellipsoid. Therefore choose menu option \mainmenuopt{Settings} > \dropmenuopt{Options}, 
+points according to a defined ellipsoid. To configure this, choose menu option 
+\mainmenuopt{Settings} > \dropmenuopt{Options}, 
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
-click points on the map. Each segment-length shows up in the measure-window and additionaly the total 
+click points on the map. Each segment-length shows up in the measure-window and additionally the total 
 length is printed. To stop measuring click your right mouse button. \\
-\includegraphics[width=0.7cm]{mActionMeasureArea} Also areas can be measured. The window shows the accumulated area-size in the measure window 
+\includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
+The window shows the accumulated area-size in the measure window 
 
 \begin{figure}[h]
 \caption{Measure tools in action \nixcaption} \label{fig:measure}
@@ -736,7 +743,7 @@ The kinds of information saved in a project file include:
 The project file is saved in XML format, so it is possible to edit
 the file outside QGIS if you know what you are doing. The file format 
 was updated several times compared to earlier QGIS versions. Project files 
-from older QGIS versions may not work properly anymore. To get aware of this, 
+from older QGIS versions may not work properly anymore. To be made aware of this, 
 in the \tab{General} tab under \mainmenuopt{Settings} > \dropmenuopt{Options} 
 you can select \checkbox{Warn when opening a project file saved with an older 
 version of QGIS}.
@@ -772,7 +779,7 @@ optmize your options are:
 \item \checkbox{Capitalise layer names in legend}
 \item \checkbox{Display classification attribute names in legend}
 \item \checkbox{Hide splash screen at startup}
-\item \checkbox{Open attribute table in a doc window}
+\item \checkbox{Open attribute table in a dock window}
 \item Define attribute table behavior (choose between show all features, show 
 selected features and show features in current canvas)
 \end{itemize}
