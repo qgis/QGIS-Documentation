@@ -12,6 +12,8 @@
 #	nextfile.eps
 
 PNG=quick_print.eps\
+    quick_print_dialog.eps\
+    quick_print_result.eps\
 	
 ##### TARGETS #####
 

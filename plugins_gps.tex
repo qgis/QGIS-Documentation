@@ -4,7 +4,7 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
+% \updatedisclaimer
 
 \subsubsection{What is GPS?}\label{whatsgps}
 
@@ -21,20 +21,31 @@ There are dozens of different file formats for storing GPS data.
 The format that QGIS uses is called GPX (GPS eXchange format), which is a standard interchange format that can contain any number of waypoints, routes and tracks in the same file.
 
 To load a GPX file you first need to load the plugin.
-\mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...} > \checkbox{GPS Tools}
+\mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin
+Manager...} > \checkbox{GPS Tools}. When this plugin is loaded a button with a 
+small handheld GPS device will show up in the toolbar. An example GPX file is 
+available in the QGIS sample dataset:
+\filename{/qgis\_sample\_data/gps/national\_monuments.gpx}. See
+Section~\ref{label_sampledata} for more information about the sample data.
 
-When this plugin is loaded a button with a small handheld GPS device will show up in the toolbar.
-Clicking on this button \toolbtntwo{gps_importer}{GPS Tools} will open the GPS Tools dialog (see figure \ref{gpxloader}).
+\begin{enumerate}
+\item Click on the \toolbtntwo{gps_importer}{GPS Tools} icon and open the
+\tab{Load GPX file} tab.
+\item \button{Browse} to the folder \filename{qgis\_sample\_data/gps/},
+select the GPX file \filename{national\_monuments.gpx} and click \button{Open}.
+\end{enumerate}
 
-%\begin{figure}[ht]
-%   \begin{center}
-%\caption{\label{gpxloader}The \emph{GPS Tools} dialog window}
-%\includegraphics[clip=true, width=12cm]{loadgpx}
-%\end{center}
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{gpxloader}The \emph{GPS Tools} dialog window \nixcaption}
+\includegraphics[clip=true, width=12cm]{loadgpx}
+\end{center}
+\end{figure}
 
-Use the browse button \browsebutton to select the GPX file, then use the checkboxes to select the feature types you want to load from that GPX file.
+Use the browse button \browsebutton to select the GPX file, then use the
+checkboxes to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer when you click \button{OK}.
+The file \filename{national\_monuments.gpx} only includes waypoints.
 
 \subsubsection{GPSBabel}
 
@@ -52,16 +63,16 @@ any problems.
 To import GPS data from a file that is not a GPX file, you use the tool \tab{Import other file} in the GPS Tools dialog.
 Here you select the file that you want to import, which feature type you want to import from it, where you want to store the converted GPX file and what the name of the new layer should be.
 
-When you select the file to import you must also select the format of that file by using the menu in the file selection dialog (see figure \ref{figure importdialog}).
-All formats do not support all three feature types, so for many formats you will only be able to choose between one or two types.
+When you select the file to import you must also select the format of that file by using the menu in the file selection dialog (see figure \ref{figure importdialog}). All formats do not support all three feature types, so for many formats 
+you will only be able to choose between one or two types. 
 
-%\begin{figure}[ht]
-%   \begin{center}
-%\caption{\label{figure importdialog}File selection dialog for the import
-%tool}
-%\includegraphics[clip=true, width=12cm]{importdialog}
-%   \end{center}
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{figure importdialog}File selection dialog for the import
+tool \nixcaption}
+\includegraphics[clip=true, width=12cm]{importdialog}
+   \end{center}
+\end{figure}
 
 \subsubsection{Downloading GPS data from a device}
 
@@ -69,12 +80,12 @@ QGIS can use GPSBabel to download data from a GPS device directly into vector la
 For this you use the tool \tab{Download from GPS} (see Figure \ref{figure_download}), where you select your type
 of GPS device, the port that it is connected to, the feature type that you want to download, the GPX file where the data should be stored, and the name of the new layer.
 
-%\begin{figure}[ht]
-%   \begin{center}
-%\caption{\label{figure_download}The download tool}
-%\includegraphics[clip=true, width=12cm]{download}
-%   \end{center}
-%\end{figure}
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{figure_download}The download tool \nixcaption}
+\includegraphics[clip=true, width=12cm]{download}
+   \end{center}
+\end{figure}
 
 
 The device type you select in the GPS device menu determines how GPSBabel tries to communicate with the device.

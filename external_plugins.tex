@@ -6,12 +6,22 @@
 % comment out the following line:
 \updatedisclaimer
 
-External QGIS plugins are all written in python. They are stored in 
+External QGIS plugins are written in python. They are stored in 
 an official, moderated repository and maintained by the individual 
 author. Table \ref{tab:external_plugins} shows a list of plugins 
-currently available. All these plugins are descibed in this manual.
-Also updates of core plugins may be available in this repository as 
-external overlays.
+currently available with a short description.\footnote{Also updates of 
+core plugins may be available in this repository as external overlays.} 
+\footnote{The Python Plugin Installer is also an external Python Plugin, but 
+it is part of the QGIS sources and automatically loaded and selectable inside
+the QGIS Plugin Manager (see Section~\ref{sec:load_external_plugin}).}
+An up-to-date list of moderated external plugins is available in the 
+QGIS Official Repository of the
+\dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}) and at 
+\url{http://qgis.osgeo.org/download/plugins.html}. 
+
+A detailed documentation about the usage, the author and other important
+information are provided with the external plugin itself and not part of this
+manual. 
 
 \begin{table}[H]
 \centering
@@ -20,16 +30,11 @@ external overlays.
  \begin{tabular}{|l|l|p{4in}|}
 \hline \textbf{Icon} & \textbf{external Plugin} & \textbf{Description}\\
 \hline
-\includegraphics[width=0.7cm]{ftoolslogo}
- & fTools \index{plugins!fTools} & Vector analysis and data management tools\\
+\includegraphics[width=0.7cm]{zoom2point_icon}
+ & Zoom To Point \index{plugins!Zoom To Point} & Zooms to a coordinate 
+  specified in the input dialog. You can specify the zoom level as well to 
+  control the view extent.\\
 \hline
-%\includegraphics[width=0.7cm]{tableManagerIcon}
-% & Table Manager \index{plugins!Table Manager}& Manage attribute tables \\
-%\hline
-%\includegraphics[width=0.7cm]{ftoolslogo}
-% & Raster Algebra \index{plugins!Raster Algebra}& Basic raster algebra 
-%for GDAL supported raster layer\\
-%\hline
 \end{tabular}
 \end{table}
 
@@ -56,7 +61,4 @@ more external repositories. Therefore select the Repositories tab in
 the Python Plugins Installer
 }
 \end{Tip}
-
-
-
 

@@ -122,7 +122,8 @@ PNG=\
   mActionMoveItemsToTop.eps \
   mActionRaiseItems.eps \
   mActionMoveItemsToBottom.eps \
-  		
+  zoom2point_icon.eps\
+ 		
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
