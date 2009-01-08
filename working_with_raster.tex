@@ -23,8 +23,9 @@ include:\index{raster layers!data formats}
 \end{itemize}
 
 Because the raster implementation in QGIS is based on the GDAL library, other
-raster formats implemented in GDAL are also likely to work, but have not yet
-been tested. You find more details in Appendix \ref{appdx_gdal}
+raster formats implemented in GDAL are also likely to work - if in doubt try 
+to open a sample and see if it is supported. You find more details about GDAL 
+supported formats in Appendix \ref{appdx_gdal}
 \index{raster layers!GDAL implementation} or at 
 \url{http://www.gdal.org/formats_list.html}. If you want to load GRASS raster 
 data, please refer to Section~\ref{sec:load_grassdata}.
@@ -40,7 +41,7 @@ aerial photography or satellite imagery and modelled data such as an elevation
 matrix.
 
 Unlike vector data, raster data typically do not have an associated database
-record for each cell. They are geocoded by it's pixel resolution and the x/y 
+record for each cell. They are geocoded by its pixel resolution and the x/y 
 coordinate of a corner pixel of the raster layer. This allows QGIS to position 
 the cata correctly in the map canvas. 
 
@@ -56,7 +57,7 @@ menu option. More than one layer can be loaded at the same time by holding down 
 \keystroke{Control} or \keystroke{Shift} key and clicking on multiple items 
 in the dialog \dialog{Open a GDAL Supported Raster Data Source}.\index{raster layers!loading}
 
-Once a raster layer is loaded in the map legend you can click on the name with the 
+Once a raster layer is loaded in the map legend you can click on the layer name with the 
 right mouse button to select and activate layer specific features or to open 
 a dialog to set raster properties for the layer.
 
@@ -102,20 +103,24 @@ There are several tabs on the dialog:
 
 \subsubsection{Symbology Tab}\label{label_sombology}
 
-QGIS can render two different types of rasterlayers:\index{raster layers!supported channels}
+QGIS can render raster layers in two different ways :\index{raster layers!supported channels}
 
 \begin{itemize}
-\item Single band gray
-\item Three band color
+\item Single band - one band of the image will be rendered as gray or in 
+pseudocolors.
+\item Three band color - three bands from the image will be rendered, each 
+band representing the red, green or blue component that will be used to create 
+a color image.
 \end{itemize}
 
-Within both rendertypes you can invert the color using the checkbox
-\checkbox{Invert color map}.
+Within both rendertypes you can invert the color output using the 
+\checkbox{Invert color map} checkbox.
 
-\minisec{Single band gray}
+\minisec{Single Band Rendering}
 
 This selection offers you two possibilites to choose. At first you can
-select which band you like to use for rendering. 
+select which band you like to use for rendering (if the dataset has more than 
+one band). 
 
 The second option offers a selection of available colortables for rendering.
 
@@ -147,8 +152,7 @@ of your rasterlayer. For example you could switch color-bands from the
 standard RGB-order to something else.
 
 Also scaling of colors are available.
-Note that customizing min and max values for each band is only available 
-if your dataset has three bands or more.
+
 
 \begin{Tip}\caption{\textsc{Viewing a Single Band of a Multiband Raster}}
 \qgistip{If you want to view a single band (for example Red) of a multiband
@@ -164,17 +168,17 @@ QGIS has the ability to display each raster layer at varying transparency
 levels.\index{raster layers!transparency} Use the transparency slider to indicate to
 what extent the underlying layers (if any) should be visible though the
 current raster layer. 
-This is very usefull, if
+This is very useful, if
 you like to overlay more than one rasterlayer, e.g. a shaded relief-map
 overlayed by a classified rastermap. This will make the look of the map
-more plastique.
+more three dimensional.
 
 Additionally you can enter a rastervalue, which should be treated as
 {\em NODATA}.
 
 An even more flexible way to customize the transparency can be done in the
 \guiheading{Custom transparency options} section.
-The transparency of every pixel can be set in this block.
+The transparency of every pixel can be set in this tab.
 
 As an example we want to set the water of our example rasterfile
 \filename{landcover.tif} to a transparency of 20\%. The following steps
