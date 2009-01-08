@@ -8,15 +8,17 @@
 
 One of the goals of QGIS is to provide not only an application, but a set of
 libraries that can be used to create new applications. This goal has been
-realized with the refactoring of libraries that took place after the release of
-0.8. With the release of 0.9, development of standalone
-applications using either C++ or Python is possible.
+realized with the refactoring of libraries that took place after the release
+of 0.8. Since the release of 0.9, development of standalone applications using
+either C++ or Python is possible. We recommend you use QGIS 1.0.0 or greater
+as the basis for your pythong applications because since this version we now
+provide a stable consistent API.
 
-In this chapter we'll take a brief look at the process for creating a standalone
-Python application. The QGIS blog has several examples of creating
+In this chapter we'll take a brief look at the process for creating a
+standalone Python application. The QGIS blog has several examples of creating
 PyQGIS\footnote{An application created using Python and the QGIS bindings}
-applications. We'll use one of them as a starting point to get a look at how to
-create an application.
+applications. We'll use one of them as a starting point to get a look at how
+to create an application.
 
 The features we want in the application are:
 
@@ -87,21 +89,19 @@ with the import section and environment setup:
 12 import os
 13 # Import our GUI
 14 from mainwindow_ui import Ui_MainWindow
-15 # Import our resources (icons)
-16 import resources
-17 
-18 # Environment variable QGISHOME must be set to the 0.9 install directory
-19 # before running this application
-20 qgis_prefix = os.getenv("QGISHOME")
+15 
+16 # Environment variable QGISHOME must be set to the 1.0 install directory
+17 # before running this application
+18 qgis_prefix = os.getenv("QGISHOME")
 \end{verbatim}
 
 Some of this should look familiar from our plugin, especially the PyQt4 and
 QGIS imports. Some specific things to note are the import of our GUI in line
-14 and the import of our \filename{resources} file on line 16.
+14 and the import of our CORE library on line 9.
 
 Our application needs to know where to find the QGIS installation. Because
 of this, we set the \usertext{QGISHOME} environment variable to point to the 
-install directory of QGIS 0.9. In line 20 we store this value from
+install directory of QGIS 1.x In line 20 we store this value from
 the environment for later use.
 
 Next we need to create our \classname{MainWindow} class which will contain
@@ -116,7 +116,7 @@ all the logic of our application.
 27     self.setupUi(self)
 28 
 29     # Set the title for the app
-30     self.setWindowTitle("FOSS4G2007 Demo App")
+30     self.setWindowTitle("QGIS Demo App")
 31 
 32     # Create the map canvas
 33     self.canvas = QgsMapCanvas()
@@ -133,20 +133,20 @@ all the logic of our application.
 44 
 45     # Create the actions for our tools and connect each to the appropriate
 46     # method
-47     self.actionAddLayer = QAction(QIcon(":/foss4g2007/mActionAddLayer.png"),
+47     self.actionAddLayer = QAction(QIcon("(qgis_prefix + "/share/qgis/themes/classic/mActionAddLayer.png"),
 48     \
 49         "Add Layer", self.frame)
 50     self.connect(self.actionAddLayer, SIGNAL("activated()"), self.addLayer)
-51     self.actionZoomIn = QAction(QIcon(":/foss4g2007/mActionZoomIn.png"), \
+51     self.actionZoomIn = QAction(QIcon("(qgis_prefix + "/share/qgis/themes/classic/mActionZoomIn.png"), \
 52         "Zoom In", self.frame)
 53     self.connect(self.actionZoomIn, SIGNAL("activated()"), self.zoomIn)
-54     self.actionZoomOut = QAction(QIcon(":/foss4g2007/mActionZoomOut.png"), \
+54     self.actionZoomOut = QAction(QIcon("(qgis_prefix + "/share/qgis/themes/classic/mActionZoomOut.png"), \
 55         "Zoom Out", self.frame)
 56     self.connect(self.actionZoomOut, SIGNAL("activated()"), self.zoomOut)
-57     self.actionPan = QAction(QIcon(":/foss4g2007/mActionPan.png"), \
+57     self.actionPan = QAction(QIcon("(qgis_prefix + "/share/qgis/themes/classic/mActionPan.png"), \
 58         "Pan", self.frame)
 59     self.connect(self.actionPan, SIGNAL("activated()"), self.pan)
-60     self.actionZoomFull = QAction(QIcon(":/foss4g2007/mActionZoomFullExtent.png"), \
+60     self.actionZoomFull = QAction(QIcon("(qgis_prefix + "/share/qgis/themes/classic/mActionZoomFullExtent.png"), \
 61         "Zoom Full Extent", self.frame)
 62     self.connect(self.actionZoomFull, SIGNAL("activated()"),
 63     self.zoomFull)
@@ -177,30 +177,27 @@ Designer, we left it very sparse---just a main window and a frame. You could
 have added a menu and the toolbar using Designer, however we'll do it with
 Python.
 
-In lines 33 through 38 we set up the map
-canvas, set the background color to a light blue, and enable antialiasing.
-We also tell it not to use a \classname{QImage} for rendering (trust me on this one) 
-and then set the canvas to visible by calling the \method{show} method.
+In lines 33 through 38 we set up the map canvas, set the background color to a
+light blue, and enable antialiasing.  We also tell it not to use a
+\classname{QImage} for rendering (trust me on this one) and then set the
+canvas to visible by calling the \method{show} method.
 
-Next we set the layer to use a vertical box layout within the frame and add the 
-map canvas to it in line 43.
+Next we set the layer to use a vertical box layout within the frame and add
+the map canvas to it in line 43.
 
-Lines 48 to 63 set up the actions and connections for the tools in our 
-toolbar. For each tool, we create a
-\classname{QAction} using the icon we defined in our \filename{resources} file. 
-Then we
-connect up the \usertext{activated} signal from the tool to the method in our
-class that will handle the action. This is similar to how we set things up
-in the plugin example.
+Lines 48 to 63 set up the actions and connections for the tools in our
+toolbar. For each tool, we create a \classname{QAction} using the icon we
+defined in the QGIS classic theme.  Then we connect up the
+\usertext{activated} signal from the tool to the method in our class that will
+handle the action. This is similar to how we set things up in the plugin
+example.
 
-Once we have the actions and connections, we need to add them to the
-toolbar. In lines 66 through 72 we create the
-toolbar and add each tool to it.
+Once we have the actions and connections, we need to add them to the toolbar.
+In lines 66 through 72 we create the toolbar and add each tool to it.
 
-Lastly we create the three map tools for the application (lines
-75 through 77). We'll use the map tools in a
-moment when we define the methods to make our application functional. Let's
-look at the methods for the map tools.
+Lastly we create the three map tools for the application (lines 75 through
+77). We'll use the map tools in a moment when we define the methods to make
+our application functional. Let's look at the methods for the map tools.
 
 \begin{verbatim}
 78   # Set the map tool to zoom in
@@ -220,19 +217,18 @@ look at the methods for the map tools.
 92     self.canvas.zoomFullExtent()
 \end{verbatim}
 
-For each map tool, we need a method that corresponds to the connection we
-made for each action. In lines 79 through 88 we set up a method for each 
-of the three tools that
-interact with the map. When a tool is activated by clicking on it in the
-toolbar, the corresponding method is called that ``tells'' the map canvas it
-is the active tool. The active tool governs what happens when the mouse is
-clicked on the canvas.
+For each map tool, we need a method that corresponds to the connection we made
+for each action. In lines 79 through 88 we set up a method for each of the
+  three tools that interact with the map. When a tool is activated by clicking
+  on it in the toolbar, the corresponding method is called that ``tells'' the
+  map canvas it is the active tool. The active tool governs what happens when
+  the mouse is clicked on the canvas.
 
-The \usertext{zoom to full extent} tool isn't a map tool---it does its job without
-requiring a click on the map. When it is activated, we call the
-\method{zoomFullExtent} method of the map canvas (line 92).
-This completes the implementation of all our tools except one---the 
-\usertext{Add Layer} tool. %FIXME 
+The \usertext{zoom to full extent} tool isn't a map tool---it does its job
+without requiring a click on the map. When it is activated, we call the
+\method{zoomFullExtent} method of the map canvas (line 92).  This completes
+the implementation of all our tools except one---the \usertext{Add Layer}
+tool. %FIXME 
 Let's look at it next:
 
 \begin{verbatim}
@@ -270,41 +266,35 @@ name of the shapefile to load. This is done in line 96.
 Notice that we specify a ``filter'' so the dialog will only show files of
 type \filename{.shp}.
 
-Next in line 97 we create a \classname{QFileInfo} object from the shapefile path. 
-Now the layer is
-ready to be created in line 100. Using the \classname{QFileInfo} object to get the 
-file name
-from the path we specify it for the name of the layer when it is created. 
-To make sure that the layer is valid and won't
-cause any problems when loading, we check it in line 102. If it's bad, we bail 
-out and don't add it to
-the map canvas.
+Next in line 97 we create a \classname{QFileInfo} object from the shapefile
+path.  Now the layer is ready to be created in line 100. Using the
+\classname{QFileInfo} object to get the file name from the path we specify it 
+for the name of the layer when it is created.  To make sure that the layer is 
+valid and won't cause any problems when loading, we check it in line 102. If
+it's bad, we bail out and don't add it to the map canvas.
 
-Normally layers are added with a random color. Here we want to tweak the colors 
-for the layer to make a more pleasing
-display. Plus we know we are going to add the \filename{world\_borders} layer 
-to the map and this will make it look nice
-on our blue background. To change the color, we need to get the symbol used for 
-rendering and use it to set a new fill color. This is done in lines
-106 through 108. 
+Normally layers are added with a random color. Here we want to tweak the
+colors for the layer to make a more pleasing display. Plus we know we are
+going to add the \filename{world\_borders} layer to the map and this will make
+it look nice on our blue background. To change the color, we need to get the
+symbol used for rendering and use it to set a new fill color. This is done in
+lines 106 through 108. 
 
-All that's left is to actually add the layer to the registry and a few other 
-housekeeping items (lines
-111 through 119). This stuff is standard for adding a layer and the
-end result is the world borders on a light blue background. The only thing you 
-may not want to do is set the extent to
-the layer, if you are going to be adding more than one layer in your application.
+All that's left is to actually add the layer to the registry and a few other
+housekeeping items (lines 111 through 119). This stuff is standard for adding
+a layer and the end result is the world borders on a light blue background.
+The only thing you may not want to do is set the extent to the layer, if you
+are going to be adding more than one layer in your application.
 
 That's the heart of the application and completes the \classname{MainWindow} class. 
 
 \subsection{Finishing Up}
 
-The remainder of the code shown below 
-creates the \object{QgsApplication} object, sets the path to the QGIS install, 
-sets up the \method{main} method and then starts the application. The only other 
-thing to note is that we move the
-application window to the upper left of the display. We could get fancy and 
-use the Qt API to center it on the screen.
+The remainder of the code shown below creates the \object{QgsApplication}
+object, sets the path to the QGIS install, sets up the \method{main} method
+and then starts the application. The only other thing to note is that we move
+the application window to the upper left of the display. We could get fancy
+and use the Qt API to center it on the screen.
 
 \begin{verbatim}
 120 def main(argv):
@@ -342,9 +332,9 @@ Before we can run the application, we need to set some environment variables.
 
 \nix{}\osx{}
 \begin{verbatim}
-export LD_LIBRARY_PATH=$HOME/qgis_09/lib%$
-export PYTHONPATH=$HOME/qgis_09/share/qgis/python
-export QGISHOME=$HOME/qgis_09%$
+export LD_LIBRARY_PATH=$HOME/qgis/lib%$
+export PYTHONPATH=$HOME/qgis/share/qgis/python
+export QGISHOME=$HOME/qgis%$
 \end{verbatim}
 
 \win{}
@@ -358,7 +348,7 @@ We assume
 \begin{itemize}
 \item\nix{}\osx{}QGIS is installed in 
 your home directory in 
-\filename{qgis\_09}. 
+\filename{qgis}. 
 \item\win{}QGIS is installed in \filename{C:\textbackslash qgis}.
 \end{itemize}
 
@@ -383,26 +373,22 @@ Our custom fill color is applied and the result is:
 %\end{center}
 %\end{figure}
 
-Creating a PyQGIS application is really pretty simple. 
-In less than 150 lines of code we have an application that can
-load a shapefile and navigate the map. If you play around with the map, 
-you'll notice that some of the built-in features
-of the canvas also work, including mouse wheel scrolling and panning by 
-holding down the \keystroke{Space} bar and
-moving the mouse.
+Creating a PyQGIS application is really pretty simple.  In less than 150 lines
+of code we have an application that can load a shapefile and navigate the map.
+If you play around with the map, you'll notice that some of the built-in
+features of the canvas also work, including mouse wheel scrolling and panning
+by holding down the \keystroke{Space} bar and moving the mouse.
 
 Some sophisticated applications have been created with PyQGIS and more are in 
-the works. This is pretty impressive,
-considering that this development has taken place even before the official 
-release of QGIS 0.9.
+the works. This is pretty impressive, considering that this development has 
+taken place even before the official release of QGIS 1.0.
 
 \begin{Tip}\caption{\textsc{Documentation For PyQGIS}}
-\qgistip{Whether you are writing a plugin or a PyQGIS application, 
-you are going to
-need to refer to both the QGIS API documentation (\url{http://qgis.org}) and
-the PyQt Python Bindings Reference Guide
+\qgistip{Whether you are writing a plugin or a PyQGIS application, you are
+going to need to refer to both the QGIS API documentation
+(\url{http://doc.qgis.org}) and the PyQt Python Bindings Reference Guide
 (\url{http://www.riverbankcomputing.com/Docs/PyQt4/pyqt4ref.html}). These
-documents provide information about the classes and methods you'll
-use to bring your Python creation to life.
+documents provide information about the classes and methods you'll use to
+bring your Python creation to life.
 }
 \end{Tip} 
