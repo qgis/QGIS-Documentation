@@ -94,7 +94,7 @@ pics:
 	(cd ./working_with_projections_screenies && make)
 	(cd ./grass_integration_screenies && make)
 	(cd ./print_composer_screenies && make)
-#	(cd ./creating_applications_screenies && make)
+	(cd ./creating_applications_screenies && make)
 #	(cd ./help_and_support_screenies && make)
 	(cd ./operating_system_icons && make)
 
