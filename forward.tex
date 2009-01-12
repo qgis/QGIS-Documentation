@@ -11,29 +11,30 @@
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
 Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
 was born in May of 2002 and was established as a project on SourceForge in June
-of the same year. We've worked hard to make GIS software (which is traditionaly
+of the same year. We've worked hard to make GIS software (which is traditionally
 expensive proprietary software) a viable prospect for anyone with basic access
 to a Personal Computer. QGIS currently runs on most Unix platforms, Windows, and
 OS X. QGIS is developed using the Qt toolkit (\url{http://www.trolltech.com})
-and C++. This means that QGIS feels snappy to use and has a pleasing, easy to
-use graphical user interface. 
+and C++. This means that QGIS feels snappy to use and has a pleasing, easy-to-
+use graphical user interface (GUI). 
 
 QGIS aims to be an easy-to-use GIS, providing common functions and features.
-The initial goal was to provide a GIS data viewer. QGIS has reached that point
-in its evolution and is being used by many for their daily GIS data viewing
+The initial goal was to provide a GIS data viewer. QGIS has reached the point
+in its evolution where it is being used by many for their daily GIS data viewing
 needs. QGIS supports a number of raster and vector data formats, with new
-support easily added using the plugin architecture (see Appendix
+format support easily added using the plugin architecture (see Appendix
 \ref{appdx_data_formats} for a full list of currently supported data formats).
+
 QGIS is released under the GNU General Public License (GPL). Developing QGIS 
 under this license means that you can inspect and modify the source code,
 and guarantees that you, our happy user, will always have access to a GIS
 program that is free of cost and can be freely modified. You should have
 received a full copy of the license with your copy of QGIS, and you also can
-find it as Appendix \ref{gpl_appendix}.  
+find it in Appendix \ref{gpl_appendix}.  
 
 \begin{Tip}\caption{\textsc{Up-to-date Documentation}}\index{documentation}
 \qgistip{The latest version of this document can always be found at 
-\url{http://download.osgeo.org/qgis/doc/manual/}  or in the documentation
+\url{http://download.osgeo.org/qgis/doc/manual/}, or in the documentation
 area of the QGIS website at \url{http://qgis.osgeo.org/documentation/}
 }
 \end{Tip}
@@ -55,7 +56,8 @@ formats include:
 \footnote{OGR-supported database formats such as Oracle or mySQL are not yet
 supported in QGIS.} supported by the installed OGR library, including ESRI
 shapefiles, MapInfo, SDTS and GML.
-\item Raster and imagery formats supported by the installed GDAL library, such 
+\item Raster and imagery formats supported by the installed GDAL (Geospatial
+Data Abstraction Library) library, such 
 as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG,
 \item GRASS raster and vector data from GRASS databases (location/mapset), 
 \item Online spatial data served as OGC-compliant Web Map Service (WMS) or
@@ -65,7 +67,7 @@ Web Feature Service (WFS).
 \minisec{Explore data and compose maps} 
 
 You can compose maps and interactively explore spatial data with a friendly
-graphical user interface. The many helpful tools available in the GUI include:
+GUI. The many helpful tools available in the GUI include:
 
 \begin{itemize}
 \item on the fly projection
@@ -83,39 +85,40 @@ graphical user interface. The many helpful tools available in the GUI include:
 
 \minisec{Create, edit, manage and export data}
 
-You can create, edit and export vector maps in several formats. Raster data
+You can create, edit, manage and export vector maps in several formats. Raster data
 have to be imported into GRASS to be able to edit and export them into other
-formats.  
+formats. QGIS offers the following: 
 
 \begin{itemize}
 \item digitizing tools for OGR supported formats and GRASS vector layer
-\item creating and editing shapefiles and GRASS vector layer
+\item create and edit shapefiles and GRASS vector layer
 \item geocode images with the georeferencer plugin
-\item using the GPS tools to import and export GPX format, convert other GPS
+\item GPS tools to import and export GPX format, and convert other GPS
 formats to GPX or down/upload directly to a GPS unit
-\item creating PostGIS layers from shapefiles with the SPIT plugin
+\item create PostGIS layers from shapefiles with the SPIT plugin
 \item manage vector attribute tables with the table manager plugin  
 \end{itemize}
 
 \minisec{Analyse data} 
 
 You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
-supported formats using the ftools python plugin. It currently offers
+supported formats using the ftools python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
-tool. Or you use the integrated GRASS tools, including the complete GRASS
-functionality with more than 300 modules (See Section \ref{sec:grass}).
+tools. You can also use the integrated GRASS tools, which 
+include the complete GRASS functionality of more than 300 modules (See
+Section \ref{sec:grass}).
 
 \minisec{Publish maps on the internet}
 
-QGIS can be used to export data to a mapfile and to visualize them in the
+QGIS can be used to export data to a mapfile and to publish them on the
 internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS, WFS client and as WMS server. 
+be used as a WMS or WFS client, and as WMS server. 
 
 \minisec{Extend QGIS functionality through plugins} 
 
-Quantum GIS can be adapted to your special needs with the extensible
-plugin architecture, providing libraries that can be used to create plugins
-or even new applications with C++ or Python.     
+QGIS can be adapted to your special needs with the extensible
+plugin architecture. QGIS provides libraries that can be used to create
+plugins.  You can even create new applications with C++ or Python!
 
 \begin{itemize}
 \item \textbf{Core Plugins}
@@ -136,9 +139,10 @@ or even new applications with C++ or Python.
 \\ Python Console
 \\ Python Plugin Installer
 \\ \item \textbf{Python Plugins}
-\\ \\ QGIS offers a growing number of external python plugins, provided by the
-community. These plugins can be browsed and installed from the official
-PyQGIS repository using the python plugin installer (See Section
-\ref{sec:plugins}).
+\\ \\ QGIS offers a growing number of external python plugins that are 
+provided by the
+community. These plugins reside in the the official
+PyQGIS repository, and can be easily installed using the python plugin 
+installer (See Section \ref{sec:plugins}).
 \end{itemize}
 
