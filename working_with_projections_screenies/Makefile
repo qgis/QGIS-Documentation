@@ -12,8 +12,8 @@
 #	nextfile.eps
 
 PNG=customProjectionDialog.eps \
-    projectionDialog.eps
-	
+    projectionDialog.eps\
+    crsdialog.eps\
 	
 ##### TARGETS #####
 

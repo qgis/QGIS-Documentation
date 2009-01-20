@@ -7,16 +7,16 @@
 % comment out the following line:
 %\updatedisclaimer
 
-QGIS supports on-the-fly (OTF) projection of vector layers. This feature allows you
-to display layers with different coordinate systems and have them overlay
-properly.
+QGIS allows to define a global and project wide projection for layers without
+CRS (Coordinate Reference System). It also allows the definition of custom
+projections and supports on-the-fly (OTF) projection of vector layers. All
+these features allow you to display layers with different coordinate systems
+and have them overlay properly.
 
 \subsection{Overview of Projection Support}\label{label_projoverview}
 
 QGIS has support for approximately 2,700 known projections. 
-Projections are stored in a SQLite database that is installed with QGIS.
-%Appendix \ref{app:datamodel}  contains information about the database and the
-% schema. 
+Projections are stored in a SQLite database that is installed with QGIS. 
 Normally you do not need to manipulate the database directly. In fact,
 doing so may cause projection support to fail. Custom projections are
 stored in a user database. See Section \ref{sec:customprojections} for
@@ -28,39 +28,80 @@ table in PostGIS\index{PostGIS} version 1.x. The EPSG identifiers are
 present in the database and can be used to specify a projection in QGIS.
 
 In order to use OTF projection, your data must contain information about its
-coordinate system. For PostGIS layers QGIS uses the spatial reference
-identifier that was specified when the layer was created. For data supported
-by OGR, QGIS relies on the presence of a format specific means of specifying
-the coordinate system. In the case of shapefiles, this means a file containing
-the Well Known Text (WKT)\index{WKT} specification of the coordinate
-system. The
-projection file has the same base name as the shapefile and a prj extension.
-For example, a shapefile named \filename{alaska.shp} would have a 
-corresponding projection file named \filename{alaska.prj}.
+coordinate system or you have to define a global, layer or project wide CRS.
+For PostGIS layers QGIS uses the spatial reference identifier that was specified
+when the layer was created. For data supported by OGR, QGIS relies on the
+presence of a format specific means of specifying the coordinate system. In
+the case of shapefiles, this means a file containing the Well Known Text
+(WKT)\index{WKT} specification of the coordinate system. The projection file
+has the same base name as the shapefile and a prj extension. For example, a
+shapefile named \filename{alaska.shp} would have a corresponding projection
+file named \filename{alaska.prj}.
 
-%\section{Requirements}
-%QGIS uses the Proj4 to provide projection support. 
+\subsection{Specifying a Projection}
+\index{Projections!specifying}
+\label{sec:projection-specifying}
 
-\subsection{Getting Started}\label{label_projstart}
+QGIS does not anymore set the map projection to the coordinate system of the
+first layer loaded. When you start a QGIS session with layers that do not
+have a coordinate reference system (CRS), you need to control and define
+projection definition for these layers. This can be done global or project
+wide in the \tab{CRS} tab under \mainmenuopt{Settings} >
+\dropmenuopttwo{mActionOptions}{Options} (See Figure~\ref{fig:crsdialog}). 
 
-At startup, QGIS does not have OTF projection enabled. To use OTF
-projection, you must open the \dropmenuopttwo{mActionOptions}{Project Properties} dialog, select a
-projection for the map and enable OTF projections. There are two ways to open
-the \dialog{Project Properties} dialog:
+\begin{itemize}
+\item \checkbox{Prompt for CRS} 
+\item \checkbox{Project wide default CRS will be used}
+\item \checkbox{Global default CRS displayed below will be used}
+\end{itemize}
+
+As global default CRS \texttt{proj=longlat +ellps=WGS84 +datum=WGS84
++no\_defs} is predefined but can be changed, of course. The definitions will
+be saved for following QGIS sessions.    
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{CRS tab in the QGIS Options Dialog \nixcaption}\label{fig:crsdialog}\smallskip
+   \includegraphics[clip=true, width=12cm]{crsdialog}
+\end{center}
+\end{figure}
+
+If you want to define a projection for a certain layer that does not have a
+coordinate reference system (CRS), you can also do that in the \tab{General}
+tab of the raster properties (\ref{label_generaltab}) and vector properties
+(\ref{vectorgeneraltab}) dialog. If your layer already has a CRS, it will be
+displayed as shown in Figure~\ref{fig:vector_symbology}.
+
+\subsection{Define On The Fly (OTF) Projection}\label{label_projstart}
+
+QGIS does not have OTF projection enabled per default and it is currently
+only supported for vector layers. To use OTF projection, you must open the
+\dropmenuopttwo{mActionOptions}{Project Properties} dialog, select a
+projection and activate the \checkbox{Enable on the fly projection} checkbox.
+There are two ways to open the dialog:
 
 \begin{enumerate}
-\item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the \mainmenuopt{Settings} menu.
-\item Click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the lower right-hand corner of the
+\item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the
+\mainmenuopt{Settings} menu.
+\item Click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the
+lower right-hand corner of the
 statusbar.
 \end{enumerate}
 
-The Projection tab of the \dialog{Project Properties} dialog contains four important components as numbered in Figure
-\ref{fig:projections} and described below.
+If you have already loaded a layer and want to enable OTF projection, you
+have to open the \tab{Projection} tab of the \dialog{Project Properties}
+dialog and find the CRS of the already loaded layer in the list of
+projections and activate the \checkbox{Enable on the fly projection}
+checkbox.. All vector layers loaded afterwards will then be OTF projected to
+the defined CRS.
+
+The Projection tab of the \dialog{Project Properties} dialog contains four
+important components as numbered in Figure \ref{fig:projections} and described below.
 
 \begin{figure}[ht]
    \begin{center}
    \caption{Projection Dialog \nixcaption}\label{fig:projections}\smallskip
-   \includegraphics[clip=true, width=14cm]{projectionDialog}
+   \includegraphics[clip=true, width=12cm]{projectionDialog}
 \end{center}  
 \end{figure}
 
@@ -71,10 +112,11 @@ projection. When off, no projection takes place and each layer
 is drawn using the coordinates as read from the data source. When on, the
 coordinates in each layer are projected to the coordinate system of the map
 canvas.
-\item \textbf{Projections} - this is a list of all projection supported by QGIS,
-including Geographic, Projected and Custom coordinate systems. To use a
-coordinate system, select it from the list by expanding the appropriate node
-and selecting the projection. The active projection is pre-selected.
+\item \textbf{Coordinate Reference System} - this is a list of all projection
+supported by QGIS, including Geographic, Projected and Custom coordinate
+systems. To use a coordinate system, select it from the list by expanding the
+appropriate node and selecting the projection. The active projection is
+preselected.
 \item \textbf{Proj4 text} - this is the projection string used by the Proj4 projection
 engine. This text is read-only and provided for informational purposes.
 \item \textbf{Search} - if you know the EPSG identifier or the name 
@@ -93,40 +135,24 @@ the dialog from the \toolbtntwo{mIconProjectionEnabled}{projector} icon will aut
 }
 \end{Tip}
 
-\subsubsection{Specifying a Projection}
-\index{Projections!specifying}
-\label{sec:projection-specifying}
-
-QGIS automatically sets the map projection to the coordinate system of the
-first layer loaded. One way to specify the map projection is to first load a
-layer with the projection you want for the entire map. Then open the
-\dialog{Project Properties} dialog and click on the \checkbox{Enable on the fly
-projection} checkbox. You can now close the \dialog{Project Properties} dialog
-and add additional layers to the map. 
-
-If you have already added layers and want to enable OTF projection, open the 
-\tab{Projection} tab of the \dialog{Project Properties} dialog and find the projection or geographic
-coordinate system you want to use in the list of projections. Alternatively
-you can use the search feature as described in the previous section.
-
 \subsection{Custom Projections}\label{sec:customprojections}
 \index{Projections!custom}
 
-If QGIS doesn't have the projection you need, you can define a custom
-projection. To define a projection, select \dropmenuopttwo{mIconNew}{Custom CRS} from
-the \mainmenuopt{Settings} menu. Custom projections are stored in your QGIS user
-database. In addition to your projections, this database contains your spatial
-bookmarks and other custom data. 
+If QGIS does not provide the Coordinate Reference System (CRS) you need, you
+can define a custom projection. To define a projection, select
+\dropmenuopttwo{mIconNew}{Custom CRS} from the \mainmenuopt{Settings} menu.
+Custom projections are stored in your QGIS user database. In addition to your
+projections, this database contains your spatial bookmarks and other custom data. 
 
 \begin{figure}[ht]
    \begin{center}
    \caption{Custom Projection Dialog \nixcaption}\label{fig:customprojections}\smallskip
-   \includegraphics[clip=true, width=14cm]{customProjectionDialog}
+   \includegraphics[clip=true, width=12cm]{customProjectionDialog}
 \end{center}  
 \end{figure}
 
-At version \CURRENT of QGIS, defining a custom projection requires a good
-understanding of the Proj.4 projection library. To begin, refer to the
+Defining a custom projection in QGIS requires a good understanding of the
+Proj.4 projection library. To begin, refer to the
 Cartographic Projection Procedures for the UNIX Environment - A User's Manual
 by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990
 (available at \url{ftp://ftp.remotesensing.org/proj/OF90-284.pdf}).
