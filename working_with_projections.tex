@@ -55,9 +55,9 @@ Figure~\ref{fig:crsdialog}).
 \item \checkbox{Global default CRS displayed below will be used}
 \end{itemize}
 
-As global default CRS \texttt{proj=longlat +ellps=WGS84 +datum=WGS84
-+no\_defs} is predefined but can be changed, of course. The definitions will
-be saved for following QGIS sessions.    
+The global default CRS \texttt{proj=longlat +ellps=WGS84 +datum=WGS84
++no\_defs} comes predefined in QGIS but can of course be changed, and the new
+definition will be saved for subsequent QGIS sessions.    
 
 \begin{figure}[ht]
    \begin{center}
@@ -66,17 +66,17 @@ be saved for following QGIS sessions.
 \end{center}
 \end{figure}
 
-If you want to define a coordinate reference system for a certain layer that
-does not provide projection information, you can also do that in the
-\tab{General} tab of the raster properties (\ref{label_generaltab}) and
-vector properties (\ref{vectorgeneraltab}) dialog. If your layer already has
-a CRS, it will be displayed as shown in Figure~\ref{fig:vector_symbology}.
+If you want to define the coordinate reference system for a certain layer
+without CRS information, you can also do that in the \tab{General} tab of the
+raster properties (\ref{label_generaltab}) and vector properties
+(\ref{vectorgeneraltab}) dialog. If your layer already has a CRS defined, it
+will be displayed as shown in Figure~\ref{fig:vector_symbology}.
 
 \subsection{Define On The Fly (OTF) Projection}\label{label_projstart}
 
-QGIS does not have OTF projection enabled per default and it is currently
-only supported for vector layers. To use OTF projection, you must open the
-\dropmenuopttwo{mActionOptions}{Project Properties} dialog, select a
+QGIS does not have OTF projection enabled by default, and this function is
+currently only supported for vector layers. To use OTF projection, you must
+open the \dropmenuopttwo{mActionOptions}{Project Properties} dialog, select a
 CRS and activate the \checkbox{Enable on the fly projection} checkbox.
 There are two ways to open the dialog:
 
@@ -87,11 +87,12 @@ There are two ways to open the dialog:
 lower right-hand corner of the statusbar.
 \end{enumerate}
 
-If you have already loaded a layer and want to enable OTF projection, you
-have to open the \tab{Coordinate Reference System} tab of the \dialog{Project
-Properties} dialog and find the CRS of the already loaded layer in the list
-of CRS and activate the \checkbox{Enable on the fly projection} checkbox. All
-vector layers loaded afterwards will then be OTF projected to the defined CRS.
+If you have already loaded a layer, and want to enable OTF projection, the
+best practice is to open the \tab{Coordinate Reference System} tab of the
+\dialog{Project Properties} dialog and find the CRS of the currently loaded
+layer in the list of CRS, and activate the \checkbox{Enable on the fly
+projection} checkbox. All subsequently loaded vector layers will then be OTF
+projected to the defined CRS.
 
 The \tab{Coordinate Reference System} tab of the \dialog{Project Properties}
 dialog contains four important components as numbered in Figure
@@ -106,10 +107,10 @@ dialog contains four important components as numbered in Figure
 
 \begin{enumerate}
 \item \textbf{Enable on the fly projection}\index{Projections!enabling} -
-this checkbox is used to enable or disable OTF projection. When off, no
-projection takes place and each layer is drawn using the coordinates as read
-from the data source. When on, the coordinates in each layer are projected to
-the coordinate reference system defined for the map canvas.
+this checkbox is used to enable or disable OTF projection. When off, each
+layer is drawn using the coordinates as read from the data source. When on,
+the coordinates in each layer are projected to the coordinate reference
+system defined for the map canvas.
 \item \textbf{Coordinate Reference System} - this is a list of all CRS
 supported by QGIS, including Geographic, Projected and Custom coordinate
 reference systems. To use a CRS, select it from the list by expanding
@@ -154,8 +155,8 @@ projection library. To begin, refer to the Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S.
 Geological Survey Open-File Report 90-284, 1990 (available at \url{ftp://ftp.remotesensing.org/proj/OF90-284.pdf}).
 This manual describes the use of the \usertext{proj.4} and related command line
-utilities. The cartographic parameters used with \usertext{proj.4} and described
-in the user manual are the same as those used by QGIS. 
+utilities. The cartographic parameters used with \usertext{proj.4} are
+described in the user manual, and are the same as those used by QGIS. 
 
 The \dialog{Custom Coordinate Reference System Definition} dialog requires
 only two parameters to define a user CRS: 
@@ -169,10 +170,6 @@ clicking the button \toolbtntwo{mActionFileSave}{Save}.
 
 Note that the \guilabel{Parameters} must begin with a \usertext{+proj=}-block,
 to represent the new coordinate reference system.
-
-Figure \ref{fig:customprojections} shows the dialog with an example CRS. The
-parameters shown were entered based on a knowledge of the CRS and the
-information found in OF90-284.
 
 You can test your CRS parameters to see if they give sane results by
 clicking on the \button{Calculate} button inside the \guiheading{Test} block 
