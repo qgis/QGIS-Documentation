@@ -83,17 +83,18 @@ There are two ways to open the dialog:
 \begin{enumerate}
 \item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the
 \mainmenuopt{Settings} menu.
-\item Click on the \toolbtntwo{mIconProjectionEnabled}{projector} icon in the
+\item Click on the \toolbtntwo{mIconProjectionDisabled}{projector} icon in the
 lower right-hand corner of the statusbar.
 \end{enumerate}
 
 If you have already loaded a layer, and want to enable OTF projection, the
 best practice is to open the \tab{Coordinate Reference System} tab of the
-\dialog{Project Properties} dialog and find the CRS of the currently loaded
-layer in the list of CRS, and activate the \checkbox{Enable on the fly
-projection} checkbox. All subsequently loaded vector layers will then be OTF
-projected to the defined CRS.
-
+\dialog{Project Properties} dialog, select the CRS of the currently loaded
+layer, and activate the \checkbox{Enable on the fly projection} checkbox. The
+\toolbtntwo{mIconProjectionEnabled}{projector} icon will show a green hook
+and all subsequently loaded vector layers will be OTF projected to the
+defined CRS.
+ 
 The \tab{Coordinate Reference System} tab of the \dialog{Project Properties}
 dialog contains four important components as numbered in Figure
 \ref{fig:projections} and described below.
