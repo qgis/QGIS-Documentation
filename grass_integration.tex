@@ -225,8 +225,8 @@ the currently selected raster resolution (Neteler \& Mitasova 2008
 
 This Section gives an example how to import raster and vector data into the 
 \filename{alaska} GRASS \filename{LOCATION} provided by the QGIS alaska 
-dataset. Therefore we use a landcover raster map \filename{landcover.tif} 
-and a vector polygone Shape \filename{lakes.shp} from the QGIS alaska 
+dataset. Therefore we use a landcover raster map \filename{landcover.img} 
+and a vector GML File \filename{lakes.gml} from the QGIS alaska 
 dataset \ref{label_sampledata}.
 
 \begin{enumerate}
@@ -238,29 +238,29 @@ dataset \ref{label_sampledata}.
   \filename{demo} and click \button{OK}.
   \item Now click the \toolbtntwo{grass_tools}{Open GRASS tools} icon. The 
   GRASS Toolbox (see Section \ref{subsec:grass_toolbox}) dialog appears.
-  \item To import the raster map \filename{landcover.tif}, click the module 
+  \item To import the raster map \filename{landcover.img}, click the module 
   \filename{r.in.gdal} in the \tab{Modules Tree} tab. This GRASS module 
   allows to import GDAL supported raster files into a GRASS 
   \filename{LOCATION}. The module dialog for \filename{r.in.gdal} appears.
   \item Browse to the folder \filename{raster} in the QGIS alaska dataset 
-  and select the file \filename{landcover.tif}.
+  and select the file \filename{landcover.img}.
   \item As raster output name define \filename{landcover\_grass} and click 
   \button{Run}. In the \tab{Output} tab you see the currently running GRASS 
-  command \filename{r.in.gdal -o input=/path/to/landcover.tif 
+  command \filename{r.in.gdal -o input=/path/to/landcover.img 
   output=landcover\_grass}.
   \item When it says \textbf{Succesfully finished} click \button{View output}. 
   The \filename{landcover\_grass} raster layer is now imported into GRASS and 
   will be visualized in the QGIS canvas.
-  \item To import the vector shape \filename{lakes.shp}, click the module 
+  \item To import the vector GML file \filename{lakes.gml}, click the module 
   \filename{v.in.ogr} in the \tab{Modules Tree} tab. This GRASS module allows 
   to import OGR supported vector files into a GRASS \filename{LOCATION}. The 
   module dialog for \filename{v.in.ogr} appears.
-  \item Browse to the folder \filename{vmap0\_shapefiles} in the QGIS alaska 
-  dataset and select the file \filename{lakes.shp} as OGR file.
+  \item Browse to the folder \filename{gml} in the QGIS alaska 
+  dataset and select the file \filename{lakes.gml} as OGR file.
   \item As vector output name define \filename{lakes\_grass} and click 
   \button{Run}. You don't have to care about the other options in this 
   example. In the \tab{Output} tab you see the currently running GRASS 
-  command \filename{v.in.ogr -o dsn=/path/to/lakes.shp output=lakes\_grass}.
+  command \filename{v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass}.
   \item When it says \textbf{Succesfully finished} click \button{View output}. 
   The \filename{lakes\_grass} vector layer is now imported into GRASS and will 
   be visualized in the QGIS canvas. 
