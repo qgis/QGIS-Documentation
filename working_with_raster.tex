@@ -43,7 +43,7 @@ matrix.
 Unlike vector data, raster data typically do not have an associated database
 record for each cell. They are geocoded by its pixel resolution and the x/y 
 coordinate of a corner pixel of the raster layer. This allows QGIS to position 
-the cata correctly in the map canvas. 
+the data correctly in the map canvas. 
 
 QGIS makes use of georeference information inside the raster layer (e.g. GeoTiff) 
 or in an appropriate world file to properly display the data.\index{raster layers!georeferenced}
@@ -113,7 +113,7 @@ band representing the red, green or blue component that will be used to create
 a color image.
 \end{itemize}
 
-Within both rendertypes you can invert the color output using the 
+Within both render types you can invert the color output using the 
 \checkbox{Invert color map} checkbox.
 
 \minisec{Single Band Rendering}
@@ -191,7 +191,7 @@ are neccessary:
  \item select the \tab{Transparency} tab
  \item \label{enum:add} Click the \toolbtntwo{mActionNewAttribute}{Add values manually}
  button. A new row will appear in the pixel-list.
- \item \label{enum:transp} enter the the raster-value (we use 0 here) and adjust the
+ \item \label{enum:transp} enter the raster-value (we use 0 here) and adjust the
  transparency to 20\%
  \item press the \button{Apply} button and have a look at the map
 \end{enumerate}
@@ -199,7 +199,7 @@ are neccessary:
 You can repeat the steps \ref{enum:add} and \ref{enum:transp} to adjust
 more values with custom transparency.
 
-As you can see this is quite easy set custom transparency, but it can be
+As you can see this is quite easy to set custom transparency, but it can be
 quite a lot of work. Therefor you can use the button
 \toolbtntwo{mActionFileSave}{Export to file} to save your
 transparency-list to a file. The button
@@ -298,7 +298,7 @@ chart types are allowed:
 \item Line graph
 \end{itemize}
 
-You can define the number of chart columns to use and decide wether you want 
+You can define the number of chart columns to use and decide whether you want 
 to \checkbox{Allow approximation} or display \checkbox{out of range} values 
 Once you view the histogram, you'll notice that the band statistics have been
 populated on the \tab{metadata} tab.\index{raster layers!metadata)}
