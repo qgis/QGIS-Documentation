@@ -86,7 +86,23 @@ The \filename{Plugin Installer} window will appear (figure \ref{fig:plugininstal
 
 \minisec{Plugins tab}
 
-To install a plugin, select it from the list and click the \button{Install plugin} button. The plugin is installed in its own directory, e.g. for \nix under \filename{\$HOME/.qgis/python/plugins} and is only visible for the user who has installed it. See a list of other OS specific subdirectory used for plugins in Section~\ref{subsec:pyfoursteps}. If the installation is successful, a confirmation message will appear. Then you need go to the \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Manage Plugins...} and load the installed plugin. 
+To install a plugin, select it from the list and click the \button{Install plugin} button. The plugin is installed in its own directory. 
+
+\begin{itemize}
+\item \nix{Linux and other unices}:\\
+./share/qgis/python/plugins \\
+/home/\$USERNAME/.qgis/python/plugins
+\item \osx{Mac OS X}:\\
+./Contents/MacOS/share/qgis/python/plugins \\
+/Users/\$USERNAME/.qgis/python/plugins
+\item \win{Windows}:\\
+C:\textbackslash Program Files\textbackslash QGIS\textbackslash
+python\textbackslash plugins \\
+C:\textbackslash Documents and Settings\textbackslash\$USERNAME\textbackslash
+.qgis\textbackslash python\textbackslash plugins
+\end{itemize}
+
+If the installation is successful, a confirmation message will appear. Then you need go to the \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Manage Plugins...} and load the installed plugin. 
 
 If the installation fails, the reason is displayed. The most often troubles are related to connection errors and missing Python modules. In the former case you'll probably need to wait some minutes or hours, in the latter one you need to install the missing modules in your operating system prior to using the plugin. \nix{For Linux, most required modules should be available in a package manager}. \win{For install instructions in Windows visit the module home page}. If you use a proxy, you may need to configure it under the menu \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options} on the \tab{Proxy} tab.
 
