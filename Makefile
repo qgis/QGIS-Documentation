@@ -94,7 +94,6 @@ pics:
 	(cd ./working_with_projections_screenies && make)
 	(cd ./grass_integration_screenies && make)
 	(cd ./print_composer_screenies && make)
-	(cd ./creating_applications_screenies && make)
 #	(cd ./help_and_support_screenies && make)
 	(cd ./operating_system_icons && make)
 
@@ -147,7 +146,6 @@ cleanpics:
 	(cd ./working_with_projections_screenies && make clean)
 	(cd ./grass_integration_screenies && make clean)
 	(cd ./print_composer_screenies && make clean)
-	(cd ./creating_applications_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./operating_system_icons && make clean)
 
