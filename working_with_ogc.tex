@@ -34,7 +34,7 @@ Important OGC specifications are:
 OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores.  QGIS can now deal with three of the
 above specifications, being SFS (though support of the PostgreSQL / PostGIS
-data provider, see Section \ref{label_postgis}); WFS and WMS as a client.
+data provider, see Section \ref{label_postgis}), WFS and WMS as a client.
 
 \subsection{WMS Client}\label{sec:ogc-wms}\index{WMS!client}\index{OGC!WMS!client}\index{rasters!WMS}
 
@@ -72,7 +72,7 @@ The dialog \dialog{Add Layer(s) from a Server} for adding layers from the WMS se
 add some servers to play with by clicking the \button{Add default servers} 
 button. This will add at least three WMS servers for you to use, including the NASA (JPL) 
 WMS server. To define a new WMS server in the \tab{Server Connections} section, 
-select \button{New}. Then enter in the parameters to connect to your desired
+select \button{New}. Then enter the parameters to connect to your desired
 WMS server, as listed in table \ref{tab:wms_connection_parms}:
 
 \begin{table}[ht]\index{WMS!client!connection parameters}
@@ -94,6 +94,8 @@ from the internet, you can add your proxy-server in the options.
 Choose menu \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options}
 and click on the \tab{Proxy} tab. There you can add your proxy-settings 
 and enable them by setting the \checkbox{Use proxy for web access}.
+Make sure that you select the correct proxy-type from the
+\dropmenuopt{Proxy type} dropdown menu.
 
 Once the new WMS Server connection has been created, it will be 
 preserved for future QGIS sessions.
@@ -107,10 +109,9 @@ in your URL.\index{WMS!remote server!URL}
 \end{Tip}
 
 Table \ref{tab:wms_example_urls} shows some example WMS URLs to get you started.
-These links were last checked in December 2006, but could change at any time:
+These links were last checked in April 2009, but could change at any time:
 
 %FIXME:  WMS URLs should be checked again and maybe extended in QGIS 
-
 \begin{table}[ht]\index{WMS!remote server!URL!examples}
 \centering
 \caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
@@ -118,9 +119,10 @@ These links were last checked in December 2006, but could change at any time:
 \hline \textbf{Name}        & \textbf{URL} \\
 \hline Atlas of Canada      & http://atlas.gc.ca/cgi-bin/atlaswms\_en? \\
 \hline DEMIS                & http://www2.demis.nl/wms/wms.asp?wms=WorldMap\& \\
-\hline Geoscience Australia & http://www.ga.gov.au/bin/getmap.pl?dataset=national \\
+\hline Geoscience Australia & http://www.ga.gov.au/wms/getmap?dataset=national\& \\
 \hline NASA JPL OnEarth     & http://wms.jpl.nasa.gov/wms.cgi? \\
-\hline QGIS Users           & http://qgis.org/cgi-bin/mapserv?map=/var/www/maps/main.map\& \\
+% \hline QGIS Users           & http://qgis.org/cgi-bin/mapserv?map=/var/www/maps/main.map\& \\
+\hline QGIS Users           & http://linfiniti.com:8080/geoserver/wms? \\
 \hline
 \end{tabular}
 \end{table}
@@ -132,7 +134,7 @@ An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 Once you have successfully filled in your parameters you can select the
 \button{Connect}
 button to retrieve the capabilities of the selected server.  This includes the Image encoding,
-Layers, Layer Styles, and Projections.  Since this
+Layers, Layer Styles and Projections.  Since this
 is a network operation, the speed of the response depends on the quality of your network
 connection to the WMS server. While downloading data from the WMS server, the download progress 
 is visualized in the left bottom of the WMS Plugin dialog. 
@@ -167,7 +169,7 @@ the increased data transfer requirements.
 }
 \end{Tip}
 
-\minisec{Layers}
+\minisec{Layers} \label{ogc-wms-layers}
 
 The \tab{Layers} section lists the layers available from the selected
 WMS server.  You may notice that some layers are expandible, this means
@@ -201,12 +203,17 @@ whilst JPEG leaves it unsupported.
 \end{Tip}
 
 \minisec{Coordinate Reference System}
-\index{WMS!CRS}\index{WMS!coordinate reference system}
-\index{OGC!CRS}\index{OGC!coordinate reference system}
+\index{WMS!CRS}
+\index{WMS!coordinate reference system}
+\index{OGC!CRS}
+\index{OGC!coordinate reference system}
 \index{Projections!WMS}
-\index{Projections!CRS}\index{Projections!coordinate reference system}
-\index{CRS}\index{coordinate reference system}
-\index{SRS}\index{Projections!SRS}
+\index{Projections!CRS}
+\index{Projections!coordinate reference system}
+\index{CRS}
+\index{coordinate reference system}
+\index{SRS}
+\index{Projections!SRS}
 
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
@@ -223,7 +230,7 @@ those CRSs supported by the WMS Server will be shown.
 
 \begin{Tip}[ht]\caption{\textsc{WMS Projections}}
 \qgistip{For best results, make the WMS layer the first layer
-you add in the project.  This allows the project
+you add to your project.  This allows the project
 projection to inherit the CRS you used to render the WMS layer.
 On-the-fly projection (see Section \ref{sec:projection-specifying})
 can then be used to fit any subsequent
@@ -234,6 +241,9 @@ results can occur.
 }
 \end{Tip}
 
+% FIXME:
+% Adding a new section to the server-search tab.
+%
 
 \subsubsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
 \index{WMS!identify}
@@ -248,8 +258,6 @@ A query is made to the WMS server for each selection made.
 The results of the query are returned in plain text.
 The formatting of this text is dependent on the particular
 WMS server used.
-
-% FIXME: GetFeatureInfo-Requests are done here?
 
 \subsubsection{Viewing Properties}\label{sec:ogc-wms-properties}\index{WMS!properties}
 \index{rasters!properties}
@@ -430,6 +438,12 @@ attribute table.
 Remember this plugin works best with UMN MapServer WFS servers. It still
 could be, that you might experience random behavior 
 and crashes. You can look forward to improvements in a future version of the plugin.
+
+This means that only WFS 1.0.0 is supported. At this point there have not
+been many test against over WFS versions implemented in other WFS-servers.
+If you encounter problems with any other WFS-server, please do not
+hesitate to contacting the development team. Please refer to Section 
+l\ref{abel_helpsupport} for further information about the mailinglists.
 
 \begin{Tip}[ht]\caption{\textsc{Finding WMS and WFS Servers}}
 \qgistip{You can find additional WMS and WFS servers by using Google or your
