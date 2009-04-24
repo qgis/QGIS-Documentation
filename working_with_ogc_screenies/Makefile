@@ -13,6 +13,7 @@
 
 PNG=connection_wms.eps\
     connection_wfs.eps\
+    wms_server-search.eps\
 	
 	
 ##### TARGETS #####

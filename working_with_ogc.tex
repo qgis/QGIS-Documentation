@@ -108,26 +108,27 @@ in your URL.\index{WMS!remote server!URL}
 }
 \end{Tip}
 
-Table \ref{tab:wms_example_urls} shows some example WMS URLs to get you started.
-These links were last checked in April 2009, but could change at any time:
-
-%FIXME:  WMS URLs should be checked again and maybe extended in QGIS 
-\begin{table}[ht]\index{WMS!remote server!URL!examples}
-\centering
-\caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
- \begin{tabular}{|l|l|}
-\hline \textbf{Name}        & \textbf{URL} \\
-\hline Atlas of Canada      & http://atlas.gc.ca/cgi-bin/atlaswms\_en? \\
-\hline DEMIS                & http://www2.demis.nl/wms/wms.asp?wms=WorldMap\& \\
-\hline Geoscience Australia & http://www.ga.gov.au/wms/getmap?dataset=national\& \\
-\hline NASA JPL OnEarth     & http://wms.jpl.nasa.gov/wms.cgi? \\
-% \hline QGIS Users           & http://qgis.org/cgi-bin/mapserv?map=/var/www/maps/main.map\& \\
-\hline QGIS Users           & http://linfiniti.com:8080/geoserver/wms? \\
-\hline
-\end{tabular}
-\end{table}
-
-An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
+% in QGIS 1.1.x not needed anymore since there is a search-interface 
+%%% Table \ref{tab:wms_example_urls} shows some example WMS URLs to get you started.
+%%% These links were last checked in April 2009, but could change at any time:
+%%% 
+%%% %FIXME:  WMS URLs should be checked again and maybe extended in QGIS 
+%%% \begin{table}[ht]\index{WMS!remote server!URL!examples}
+%%% \centering
+%%% \caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
+%%%  \begin{tabular}{|l|l|}
+%%% \hline \textbf{Name}        & \textbf{URL} \\
+%%% \hline Atlas of Canada      & http://atlas.gc.ca/cgi-bin/atlaswms\_en? \\
+%%% \hline DEMIS                & http://www2.demis.nl/wms/wms.asp?wms=WorldMap\& \\
+%%% \hline Geoscience Australia & http://www.ga.gov.au/wms/getmap?dataset=national\& \\
+%%% \hline NASA JPL OnEarth     & http://wms.jpl.nasa.gov/wms.cgi? \\
+%%% % \hline QGIS Users           & http://qgis.org/cgi-bin/mapserv?map=/var/www/maps/main.map\& \\
+%%% \hline QGIS Users           & http://linfiniti.com:8080/geoserver/wms? \\
+%%% \hline
+%%% \end{tabular}
+%%% \end{table}
+%%% 
+%%% An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 
 \subsubsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
 
@@ -241,9 +242,47 @@ results can occur.
 }
 \end{Tip}
 
-% FIXME:
-% Adding a new section to the server-search tab.
+% 
+% server-search tab.
 %
+\subsubsection{Server-Search}
+\label{sec:serversearch}
+\index{WMS!serversearch}
+\index{WMS!search}
+\index{OGC!search}
+
+Within QGIS 1.1.X you can search for WMS-servers. 
+Figure \ref{fig:searchtab} shows the newly created \tab{search}-tab with
+the \dialog{Add Layer(s) from a Server}-dialog.
+
+\begin{figure}[ht]
+  \begin{center}
+  	\caption{Dialog for searching WMS servers after some keywords \nixcaption}\label{fig:searchtab}
+	\includegraphics[clip=true,width=0.6\textwidth]{wms_server-search}
+  \end{center}
+\end{figure}
+
+As you can see it is possible to enter a search-string in the textfield an
+hit the \button{Search} button.
+
+After a short while the search result will be populated into the tab below
+the textfield. 
+
+Browse the result list and inspect your searchresults within the table. To
+visualize the results, select an table entry, press the \button{Add
+selected row to WMS-list} button and change back to the \tab{server} tab.
+
+QGIS automatically has updated your server list and the selected
+searchresult is already enabled in the list of saved WMS-servers.
+
+You only need to request the list of layers by clicking the
+\button{Connect} button.
+
+This option is quite handy when you want to search maps by specific
+keywords.
+
+Basically this option is a frontend to the API of
+\url{http://geopole.org}.
 
 \subsubsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
 \index{WMS!identify}
@@ -443,7 +482,7 @@ This means that only WFS 1.0.0 is supported. At this point there have not
 been many test against over WFS versions implemented in other WFS-servers.
 If you encounter problems with any other WFS-server, please do not
 hesitate to contacting the development team. Please refer to Section 
-l\ref{abel_helpsupport} for further information about the mailinglists.
+\ref{label_helpsupport} for further information about the mailinglists.
 
 \begin{Tip}[ht]\caption{\textsc{Finding WMS and WFS Servers}}
 \qgistip{You can find additional WMS and WFS servers by using Google or your
