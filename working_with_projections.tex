@@ -46,7 +46,7 @@ QGIS no longer sets the map CRS to the coordinate reference system of the
 first layer loaded. When you start a QGIS session with layers that do not
 have a CRS, you need to control and define the CRS definition for these
 layers. This can be done globally or project-wide in the \tab{CRS} tab under
-\mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options} (See
+\mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options} (See
 Figure~\ref{fig:crsdialog}). 
 
 \begin{itemize}
@@ -68,8 +68,8 @@ definition will be saved for subsequent QGIS sessions.
 
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the \tab{General} tab of the
-raster properties (\ref{label_generaltab}) and vector properties
-(\ref{vectorgeneraltab}) dialog. If your layer already has a CRS defined, it
+raster (\ref{label_generaltab}) and vector (\ref{vectorgeneraltab}) properties 
+dialog. If your layer already has a CRS defined, it
 will be displayed as shown in Figure~\ref{fig:vector_symbology}.
 
 \subsection{Define On The Fly (OTF) Projection}\label{label_projstart}
@@ -82,7 +82,7 @@ There are two ways to open the dialog:
 
 \begin{enumerate}
 \item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the
-\mainmenuopt{Settings} menu.
+\mainmenuopt{Edit} menu.
 \item Click on the \toolbtntwo{mIconProjectionDisabled}{projector} icon in the
 lower right-hand corner of the statusbar.
 \end{enumerate}
@@ -96,7 +96,7 @@ and all subsequently loaded vector layers will be OTF projected to the
 defined CRS.
  
 The \tab{Coordinate Reference System} tab of the \dialog{Project Properties}
-dialog contains four important components as numbered in Figure
+dialog contains four important components as shown in Figure
 \ref{fig:projections} and described below.
 
 \begin{figure}[ht]
@@ -122,13 +122,17 @@ purposes.
 \item \textbf{Search} - if you know the EPSG identifier or the name 
 for a Coordinate Reference System, you can use the search feature to find it.
 Enter the identifier and click on \button{Find}.
+\item \textbf{Recently used CRS} - if you have certain CRS that you frequently 
+use in your everyday GIS work, these will be displayed as 'quick access' buttons 
+at the bottom of the Projection Dialog. Click on one of these buttons to select 
+the associated CRS.
 \end{enumerate}
 
 \begin{Tip}
  \caption{\textsc{Project Properties Dialog}}
 \qgistip{
 If you open the \dialog{Project Properties} dialog from the
-\mainmenuopt{Settings} menu, you must click on the \tab{Coordinate Reference
+\mainmenuopt{Edit} menu, you must click on the \tab{Coordinate Reference
 System} tab to view the CRS settings. Opening the dialog from the
 \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring
 the \tab{Coordinate Reference System} tab to the front.
@@ -140,7 +144,7 @@ the \tab{Coordinate Reference System} tab to the front.
 
 If QGIS does not provide the coordinate reference system you need, you
 can define a custom CRS. To define a CRS, select
-\dropmenuopttwo{mIconNew}{Custom CRS} from the \mainmenuopt{Settings} menu.
+\dropmenuopttwo{mIconNew}{Custom CRS} from the \mainmenuopt{Edit} menu.
 Custom CRS are stored in your QGIS user database. In addition to your custom
 CRS, this database also contains your spatial bookmarks and other custom data. 
 
