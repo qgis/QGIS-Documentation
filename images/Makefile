@@ -123,6 +123,7 @@ PNG=\
   mActionRaiseItems.eps \
   mActionMoveItemsToBottom.eps \
   zoom2point_icon.eps\
+  plugin_installer.eps\
  		
 ##### TARGETS #####
 
