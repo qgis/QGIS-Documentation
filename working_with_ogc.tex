@@ -85,6 +85,10 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \hline URL \index{WMS!URL} & URL of the server providing the data.
  This must be a resolvable host name; the same format as you would use 
  to open a telnet connection or ping a host. \\
+\hline Username \index{WMS!authentification} & Username to access a
+secured WMS-server. This parameter is optional \\
+\hline Password & Password for a basic authentificated WMS-server. This
+parameter is optional.\\
 \hline
 \end{tabular}
 \end{table}
@@ -410,13 +414,16 @@ A workaround is to delete the layer completely and start again.
 
 \minisec{WMS Servers Requiring Authentication}
 \index{WMS!remote server!authentication}
+\index{WMS!remote server!basic authentification}
 
-Only public WMS servers are accessible.
-There is no ability to apply a user name and password combination
-as an authentication to the WMS server.
+Currently public accessible and secured WMS-services are supported.
+The secured WMS-servers can be accessed by public authentification. You
+can add the (optional) credentials when you add a WMS-server. See section
+\ref{sec:ogc-wms-servers} for details.
 
 \begin{Tip}[ht]\caption{\textsc{Accessing secured OGC-layers}}
-\qgistip{If you need to access secured layers, you could use InteProxy as
+\qgistip{If you need to access secured layers with other secured methods
+than basic authentification, you could use InteProxy as
 a transparent proxy, which does supports several authentification methods.
 More information can be found at the InteProxy-manual found on the website
 \url{http://inteproxy.wald.intevation.org}.
