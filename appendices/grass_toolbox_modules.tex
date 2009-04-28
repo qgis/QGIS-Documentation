@@ -16,9 +16,9 @@ export data into a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox: Data import modules}\medskip
+\caption{GRASS Toolbox: Raster and Image data import modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Data import modules in the GRASS
+  \hline \multicolumn{2}{|c|}{\textbf{Raster and Image data import modules in the GRASS
   Toolbox}} \\ 
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.in.arc & Convert an ESRI ARC/INFO ascii raster file (GRID) into a
@@ -31,6 +31,10 @@ export data into a currently selected GRASS location and mapset.
   raster map layer \\
   \hline r.in.gdal.loc &  Import GDAL supported raster file into a GRASS
   binary raster map layer and create a fitted location \\
+  \hline r.in.gdal.qgis & Import loaded raster into a GRASS binary raster map
+  layer \\
+  \hline r.in.gdal.qgis.loc &  Import loaded raster file into a GRASS binary
+  raster map layer and create a fitted location \\
   \hline r.in.gridatb & Imports GRIDATB.FOR map file (TOPMODEL) into GRASS
   raster map \\
   \hline r.in.mat  & Import a binary MAT-File(v4) to a GRASS raster  \\
@@ -38,28 +42,19 @@ export data into a currently selected GRASS location and mapset.
   in the current directory \\
   \hline r.in.srtm  & Import SRTM HGT files into GRASS \\
   \hline i.in.spotvgt & Import of SPOT VGT NDVI file into a raster map \\
-  \hline v.in.dxf & Import DXF vector layer \\
-  \hline v.in.e00 & Import ESRI E00 file in a vector map \\
-  \hline v.in.garmin & Import vector from gps using gpstrans \\
-  \hline v.in.gpsbabel & Import vector from gps using gpsbabel \\
-  \hline v.in.mapgen & Import MapGen or MatLab vectors in GRASS \\
-  \hline v.in.ogr & Import OGR/PostGIS vector layers \\
-  \hline v.in.ogr.loc & Import OGR/PostGIS vector layers and create a fitted
-  location\\
-  \hline v.in.ogr.all & Import all the OGR/PostGIS vector layers in a given
-  data source \\
-  \hline v.in.ogr.all.loc & Import all the OGR/PostGIS vector layers in a
-  given data source and create a fitted location \\
 \hline
 \end{tabular}
 \end{table}
 
+\newpage
+
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox: Data export modules}\medskip
+\caption{GRASS Toolbox: Raster and Image data export modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Data export modules in the GRASS
-  Toolbox}} \\ 
+  \hline \multicolumn{2}{|c|}{\textbf{Raster and Image data export modules in
+the GRASS
+  Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline r.out.gdal.gtiff & Export raster layer to Geo TIFF \\
   \hline r.out.arc & Converts a raster map layer into an ESRI ARCGRID file \\
@@ -79,6 +74,46 @@ export data into a currently selected GRASS location and mapset.
   at the pixel resolution of the currently defined region\\
   \hline r.out.vrml &  Export a raster map to the Virtual Reality Modeling
   Language (VRML)\\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Vector data import modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Vector data import modules in the GRASS
+Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline v.in.dxf & Import DXF vector layer \\
+  \hline v.in.e00 & Import ESRI E00 file in a vector map \\
+  \hline v.in.garmin & Import vector from gps using gpstrans \\
+  \hline v.in.gpsbabel & Import vector from gps using gpsbabel \\
+  \hline v.in.mapgen & Import MapGen or MatLab vectors in GRASS \\
+  \hline v.in.ogr & Import OGR/PostGIS vector layers \\
+  \hline v.in.ogr.qgis & Import loaded vector layers into GRASS binary
+  vector map \\
+  \hline v.in.ogr.loc & Import OGR/PostGIS vector layers and create a fitted
+  location \\
+  \hline v.in.ogr.qgis.loc & Import loaded vector layers into GRASS binary
+  vector map and create a fitted location \\
+  \hline v.in.ogr.all & Import all the OGR/PostGIS vector layers in a given
+  data source \\
+  \hline v.in.ogr.all.loc & Import all the OGR/PostGIS vector layers in a
+  given data source and create a fitted location \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Vector data export modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Vector data export modules in the GRASS
+Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline v.out.ogr & Export vector layer to various formats (OGR library) \\
   \hline v.out.ogr.gml & Export vector layer to GML \\
   \hline v.out.ogr.postgis & Export vector layer to various formats (OGR
@@ -90,6 +125,8 @@ export data into a currently selected GRASS location and mapset.
 \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{GRASS Toolbox data type conversion modules}
 
@@ -112,6 +149,8 @@ and mapset.
 \hline
 \end{tabular}
 \end{table}
+
+\newpage
 
 \subsection{GRASS Toolbox region and projection configuration modules}
 
