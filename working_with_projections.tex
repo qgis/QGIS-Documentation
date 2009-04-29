@@ -46,8 +46,9 @@ QGIS no longer sets the map CRS to the coordinate reference system of the
 first layer loaded. When you start a QGIS session with layers that do not
 have a CRS, you need to control and define the CRS definition for these
 layers. This can be done globally or project-wide in the \tab{CRS} tab under
-\mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options} (See
-Figure~\ref{fig:crsdialog}). 
+\mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options} (Gnome, OSX) 
+or \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options} (KDE, Windows). 
+See Figure~\ref{fig:crsdialog}. 
 
 \begin{itemize}
 \item \checkbox{Prompt for CRS} 
@@ -82,7 +83,7 @@ There are two ways to open the dialog:
 
 \begin{enumerate}
 \item Select \dropmenuopttwo{mActionOptions}{Project Properties} from the
-\mainmenuopt{Edit} menu.
+\mainmenuopt{Edit} (Gnome, OSX) or \mainmenuopt{Settings} (KDE, Windows) menu.
 \item Click on the \toolbtntwo{mIconProjectionDisabled}{projector} icon in the
 lower right-hand corner of the statusbar.
 \end{enumerate}
@@ -129,10 +130,11 @@ the associated CRS.
 \end{enumerate}
 
 \begin{Tip}
- \caption{\textsc{Project Properties Dialog}}
+\caption{\textsc{Project Properties Dialog}}
 \qgistip{
 If you open the \dialog{Project Properties} dialog from the
-\mainmenuopt{Edit} menu, you must click on the \tab{Coordinate Reference
+\mainmenuopt{Edit} (Gnome, OSX) or \mainmenuopt{Settings} 
+(KDE, Windows) menu, you must click on the \tab{Coordinate Reference
 System} tab to view the CRS settings. Opening the dialog from the
 \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring
 the \tab{Coordinate Reference System} tab to the front.
@@ -144,7 +146,8 @@ the \tab{Coordinate Reference System} tab to the front.
 
 If QGIS does not provide the coordinate reference system you need, you
 can define a custom CRS. To define a CRS, select
-\dropmenuopttwo{mIconNew}{Custom CRS} from the \mainmenuopt{Edit} menu.
+\dropmenuopttwo{mIconNew}{Custom CRS} from the \mainmenuopt{Edit} 
+(Gnome, OSX) or \mainmenuopt{Settings} (KDE, Windows) menu.
 Custom CRS are stored in your QGIS user database. In addition to your custom
 CRS, this database also contains your spatial bookmarks and other custom data. 
 
