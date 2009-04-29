@@ -6,12 +6,9 @@
 % comment out the following line:
 %\updatedisclaimer
 
-QGIS currently contains 17 core plugins that can be loaded using the Plugin Manager.
+QGIS currently contains 19 core plugins that can be loaded using the Plugin Manager.
 Table \ref{tab:core_plugins} lists each of the core plugins along with a
-description of their purpose and the toolbar-icon.\footnote{The MapServer
-Export Plugin and the Plugin Installer Plugin are external Python Plugins,
-but they are part of the QGIS sources and automatically loaded and selectable 
-inside the QGIS Plugin Manager.}
+description of their purpose and the toolbar-icon.
 
 % minipage is needed to appear the footnote under the table
 % SH
@@ -31,9 +28,15 @@ inside the QGIS Plugin Manager.}
 \hline 
 \includegraphics[width=0.6cm]{copyright_label}
  & Copyright Label \index{plugins!copyright}& Draws a copyright label with information\\
-\hline 
+\hline
+\includegraphics[width=0.6cm]{diagram_overlay}
+ & Diagram Overlay \index{plugins!diagram}& Place charts (pie or bar) or proportional symbols over vector layers\\
+\hline
 \includegraphics[width=0.6cm]{dxf2shp_converter}
  & DXF2Shape Converter \index{plugins!DXF2Shape}& Converts from DXF to SHP file format\\
+\hline
+\includegraphics[width=0.6cm, height=0.6cm]{ftoolslogo}
+ & fTools \index{plugins!ftools}& A suite of analysis, geometry, geoprocessing, and research tools\\
 \hline
 \includegraphics[width=0.6cm]{gps_importer}
  & GPS Tools \index{plugins!gps}& Tools for loading and importing GPS data\\
@@ -43,9 +46,6 @@ inside the QGIS Plugin Manager.}
 \hline
 \includegraphics[width=0.6cm]{georeferencer}
  & Georeferencer \index{plugin!georeferencer} & Adding projection info to Rasterfiles\\
-\hline
-\includegraphics[width=0.6cm]{grid_maker}
- & Graticule Creator \index{plugins!graticule}& Create a latitude/longitude grid and save as a shapefile\\
 \hline
 \includegraphics[width=0.6cm]{interpolation}
 & Interpolation plugin \index{plugins!Interpolation}& Interpolation on base of vertices of a vector layer\\
@@ -59,6 +59,9 @@ inside the QGIS Plugin Manager.}
 \includegraphics[width=0.6cm]{ogr_converter}
  & OGR Layer Converter \index{plugins!OGR converter} & Translate vector
 layers between OGR suported formats\\
+\hline
+\includegraphics[width=0.6cm]{oracle_raster}
+ & Oracle Georaster \index{plugins!georaster}& Access Oracle Spatial GeoRasters\\
 \hline
 \includegraphics[width=0.6cm]{plugin_installer}
  & Plugin Installer \index{plugins!Plugin Installer} & Downloads and installs QGIS python plugins\\

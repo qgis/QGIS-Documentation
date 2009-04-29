@@ -15,6 +15,7 @@ PNG=coordinate_capture.eps\
 	geographic.eps\
 	tracking.eps\
 	transformed.eps\
+	coordinate_capture_dialog.eps\
 
 ##### TARGETS #####
 
