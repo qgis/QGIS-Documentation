@@ -69,7 +69,7 @@ pics:
 	(cd ./plugins_add_wfs_layer_images && make)
 	(cd ./plugins_coordinate_capture_images && make)
 	(cd ./plugins_decorations_images && make)
-	(cd ./plugins_diagram_overlay && make)
+	(cd ./plugins_diagram_overlay_images && make)
 	(cd ./plugins_delimited_text_images && make)
 	(cd ./plugins_dxf2shape_converter_images && make)
 	(cd ./plugins_geoprocessing_images && make)
@@ -87,7 +87,7 @@ pics:
 	(cd ./plugins_table_manager_images && make)
 	(cd ./plugins_raster_algebra_images && make)
 	(cd ./plugins_python_images && make)
-	(cd ./plugins_oracle_raster && make)
+	(cd ./plugins_oracle_raster_images && make)
 	(cd ./getting_started_screenies && make)
 	(cd ./features_at_a_glance_screenies && make)
 	(cd ./working_with_vector_screenies && make)
@@ -150,8 +150,8 @@ cleanpics:
 	(cd ./print_composer_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./operating_system_icons && make clean)
-	(cd ./plugins_diagram_overlay && make clean)
-	(cd ./plugins_oracle_raster && make clean)
+	(cd ./plugins_diagram_overlay_images && make clean)
+	(cd ./plugins_oracle_raster_images && make clean)
 
 # Update icons from qgis source if necessary
 updateicon:
