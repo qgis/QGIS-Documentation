@@ -150,6 +150,8 @@ cleanpics:
 	(cd ./print_composer_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./operating_system_icons && make clean)
+	(cd ./plugins_diagram_overlay && make clean)
+	(cd ./plugins_oracle_raster && make clean)
 
 # Update icons from qgis source if necessary
 updateicon:
