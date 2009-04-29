@@ -16,7 +16,6 @@ PNG=pluginmanager.eps\
 	mapserver_export_qgs.eps\
 	mapserver_export_dialog.eps\
 	mapserver_export_test.eps\
-	coordinate_capture_dialog.eps\
 	ogrconverter_dialog.eps\
 	interpolate_dialog.eps\
 	interpolate_idw.eps\
