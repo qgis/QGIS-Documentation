@@ -12,6 +12,8 @@
 #	nextfile.eps
 
 PNG=diagram_overlay.eps\
+    climate_diagram.eps\
+    diagram_tab.eps\
 
 	
 ##### TARGETS #####

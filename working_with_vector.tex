@@ -833,15 +833,54 @@ it allows to select a filename using the standard file dialog.
 \subsubsection{Diagram Tab}\label{sec:diagram}
 \index{vector layers!diagram}
 
-Needs to be finished.
-
 The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer.
-To activate this feature, open the plugin manager and select the 'Diagram Overlay' 
-plugin. After this, there is a new tab in the vector layer properties dialog 
-where the settings for diagrams may be entered.
+To activate this feature, open the Plugin Manager and select the Diagram Overlay' 
+plugin. After this, there is a new tab in the vector \dialog{Layer
+Properties} dialog where the settings for diagrams may be entered (see
+figure~\ref{fig:diagramtab}).
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}\smallskip
+   \includegraphics[clip=true, width=13cm]{diagram_tab}
+\end{center}
+\end{figure}
+
 The current implementation of diagrams provides support for pie- and barcharts
 and for linear scaling of the diagram size according to a classification
-attribute.
+attribute. We will demonstrate an example and overlay the alaska boundary
+layer a barchart diagramm showing some temperature data from a climate vector
+layer. Both vector layers are part of the QGIS sample dataset (see
+Section~\ref{label_sampledata}.
+
+\begin{enumerate}
+\item First click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon,
+browse to the QGIS sample dataset folder and load the two vector shape layers
+\filename{alaska.shp} and \filename{climate.shp}.
+\item Double click the \filename{climate} layer in the map legend to open the
+\dialog{Layer Properties} dialog.
+\item Click on the \tab{Diagram Overlay} and select \button{Bar chart} as
+Diagram type.
+\item In the diagram we want to display the values of the three columns
+\filename{T\_F\_JAN, T\_F\_JAN} and \filename{T\_F\_MEAN}. First select
+\filename{T\_F\_JAN} as Attributes and click \button{Add attribute}, then
+\filename{T\_F\_JUL} and finally \filename{T\_F\_MEAN}.  
+\item For linear scaling of the diagram size we define \filename{T\_F\_JUL}
+as classification attribute.
+\item Now click on \button{find maximum value}, choose a size value and unit
+and click \button{Apply} to display the diagram in the QGIS main window.
+\item You can now adapt the chart size, or change the attribute colors double
+clicking on the color values in the attribute field.
+Figure~\ref{fig:climatediagram} gives an impression.
+\item Finally click \button{Ok}. 
+\end{enumerate}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}\smallskip
+   \includegraphics[clip=true, width=13cm]{climate_diagram}
+\end{center}
+\end{figure}
 
 \subsection{Editing}\index{editing}
 
