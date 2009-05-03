@@ -54,9 +54,16 @@ the projection information. While it is very useful to have a projection file, i
 To load a shapefile, start
 QGIS and click on the \toolbtntwo{mActionAddNonDbLayer}{Add a vector layer}
 toolbar button\index{shapefile!loading} or simply type \keystroke{V}. 
+This will bring up a new window (see Figure\ref{fig:addvectorlayer}).  
 
-This will bring up a new window (see Figure -- NEEDS TO BE ADDED). From the available options check the File box. 
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}\smallskip
+   \includegraphics[clip=true, width=12cm]{addvectorlayerdialog}
+\end{center} 
+\end{figure}
 
+From the available options check \checkbox{File}. Click on \button{Browse}. 
 That will bring up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
 a shapefile or other supported data source. 
@@ -119,24 +126,17 @@ toolbar bar button or type \keystroke{V}, change the file type filter to
 \selectstring{Files of Type}{[OGR] MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
 
-\subsubsection{Loading an ArcInfo Coverage}
-\index{vector layers!ArcInfo Coverage}
+\subsubsection{Loading an ArcInfo Binary Coverage}
+\index{vector layers!ArcInfo Binary Coverage}
 
-Loading an ArcInfo coverage is done using the same method as with a
-shapefiles and MapInfo layers. Click on the 
+To load an ArcInfo binary coverage click on the 
 \toolbtntwo{mActionAddNonDbLayer}{Add a vector layer}
 toolbar button or type \keystroke{V} to open the 
-\dialog{Open on OGR Supported Vector Layer} 
-dialog and change the file type filter to
-\selectstring{Files of Type}{All files (*.*)}. Navigate to the coverage directory and select one
-of the following files (if present in your coverage):
+\dialog{Add Vector Layer} dialog.  Select \checkbox{Directory}. Change to \selectstring {Type}{Arc/Ingo Binary Coverage}. 
+Navigate to the directory that contains the coverage files and select it.
 
-\begin{itemize}
-\item \filename{.lab} - to load a label layer (polygon labels or standing points).
-\item \filename{.cnt} - to load a polygon centroid layer 
-\item \filename{.arc} - to load an arc (line) layer.
-\item \filename{.pal} - to load a polygon layer.
-\end{itemize}
+Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the 
+raw TIGER Format of the US Census Bureau.
 
 \subsection{PostGIS Layers}
 \index{vector layers!PostGIS|see{PostGIS}}
@@ -169,7 +169,8 @@ you use a PostGIS data source, you must create a connection to the PostgreSQL
 database that contains the data. Begin by clicking on the
 \toolbtntwo{mActionAddLayer}{Add a PostGIS Layer} toolbar button, selecting the
 \dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer...} option from the \mainmenuopt{Layer} menu or typing
-\keystroke{D}. 
+\keystroke{D}. You can also open the open the 
+\dialog{Add Vector Layer} dialog and select \checkbox{Database}.
 The \dialog{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
 manager}, click on the \button{New} button to display the \dialog{Create a New
@@ -458,7 +459,7 @@ change the projection of the specific vetor layer.
 
 The \button{Query Builder} button allows you to create a subset of the features 
 in the layer - but this button currently only is available when you open the 
-attribute table and select the \button{Advanced ...} button.
+attribute table and select the \button{...} button next to Advanced search.
 
 \subsubsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
@@ -1357,8 +1358,33 @@ the same way as described in Section \ref{sec:edit_existing_layer} above.
 
 \subsubsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
 
-Needs to be written.
+To open the attribute table for a vector layer, make the layer active by clicking on it in the Map legend area. 
+Then use \mainmenuopt{Layer} Layer from the main menu and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
+from the menu. It is also possible to rightlick on the layer and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
+from the dropdown menu. This will open a new window which displays the attributes for every feature in the layer 
+(figure \ref{fig:attributetable}).
 
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Attribute Table for Alaska layer \nixcaption}\label{fig:attributetable}\smallskip
+   \includegraphics[clip=true, width=12cm]{vectorAttributeTable}
+\end{center} 
+\end{figure}
+
+Each column can be sorted by clicking on its header. A small arrow indicates the sort 
+order (downward pointing means descending values from the top row down, upward pointing means 
+ascending values from the top rown down). 
+For a simple selection by attributes on one column only the \button{Look for} field 
+can be used. Select the field (column) from which the search should be performed from 
+the dropdown menu and hit the \button{Search} button. For more complex searches use the
+Advanced search \button{...}, which will lauch the Search Query Builder described in 
+Section \ref{sec:select_by_query}. 
+
+To show selected records only, use teh checkbox \checkbox{Show selected records only}.
+Using the buttons at the bottom left of the window, selected fields can be removed, 
+moved to the top of the table, or the selection can be inverted. Selected features can 
+also be copied to the clipboard, which can also be done with \keystroke{Ctrl-C}. You can also zoom 
+into the selected features on the map. Toggle editing allows to edit single values of attributes. 
 
 \subsection{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
