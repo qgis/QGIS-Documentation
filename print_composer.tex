@@ -9,11 +9,13 @@
 The print composer provides growing layout and printing
 capabilities. It allows you to add elements such as the QGIS map canvas, 
 legend, scalebar, images, and text labels. You can size, group 
-and position each element and adjust the properties to create your layout. 
-The result can be printed (also to Postscript and PDF), exported to image 
-formats or to SVG.\footnote{Export to SVG supported, but it is not working 
-properly with some recent QT4 versions. You should try and check individual 
-on your system} See a list of tools in table~\ref{tab:printcomposer_tools}:
+align and position each element and adjust the properties to create your
+layout. The layout can be printed (also to Postscript and PDF), exported to
+image formats or to SVG \footnote{Export to SVG supported, but it
+is not working properly with some recent QT4 versions. You should try and
+check individual on your system} and you can save the layout as template and
+load it again in another session. See a list of tools in
+table~\ref{tab:printcomposer_tools}:
 
 \begin{table}[h]\index{Print composer!tools}
 \centering
@@ -21,7 +23,9 @@ on your system} See a list of tools in table~\ref{tab:printcomposer_tools}:
  \begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
  \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} &
  \textbf{Purpose} \\
-
+ \hline \includegraphics[width=0.7cm]{mActionFolder}
+ & Load from template &
+ \includegraphics[width=0.7cm]{mActionFileSaveAs} & Save as template \\
  \hline \includegraphics[width=0.7cm]{mActionExportMapServer}
  & Export to an image format & 
  \includegraphics[width=0.7cm]{mActionSaveAsSVG} & Export print composition 
@@ -52,13 +56,24 @@ on your system} See a list of tools in table~\ref{tab:printcomposer_tools}:
  \includegraphics[width=0.7cm]{mActionUngroupItems} & Ungroup items of print 
  composition \\
  \hline \includegraphics[width=0.7cm]{mActionRaiseItems} & Raise selected
- items in print composition &
- \includegraphics[width=0.7cm]{mActionLowerItems} & Lower selected items 
- in print composition \\
+ items  &
+ \includegraphics[width=0.7cm]{mActionLowerItems} & Lower selected items \\
  \hline \includegraphics[width=0.7cm]{mActionMoveItemsToTop} & Move selected
  items to top & 
  \includegraphics[width=0.7cm]{mActionMoveItemsToBottom} & Move selected
  items to bottom \\
+ \hline \includegraphics[width=0.7cm]{mActionAlignLeft} & Align selected 
+ items left &
+ \includegraphics[width=0.7cm]{mActionAlignRight} & Align selected items 
+ right \\
+ \hline \includegraphics[width=0.7cm]{mActionAlignHCenter} & Align selected 
+ items center &
+ \includegraphics[width=0.7cm]{mActionAlignVCenter} & Align selected items
+ center vertical \\
+ \hline \includegraphics[width=0.7cm]{mActionAlignTop} & Align selected
+ items top &
+ \includegraphics[width=0.7cm]{mActionAlignBottom} & Align selected
+ items bottom \\
 \hline
 \end{tabular}
 \end{table}

@@ -25,6 +25,12 @@ PNG=\
   mActionAddRing.eps\
   mActionAddVertex.eps\
   mActionAddWmsLayer.eps\
+  mActionAlignBottom.eps\
+  mActionAlignHCenter.eps\
+  mActionAlignLeft.eps\
+  mActionAlignRight.eps\
+  mActionAlignTop.eps\
+  mActionAlignVCenter.eps\
   mActionCaptureLine.eps\
   mActionCapturePoint.eps\
   mActionCapturePolygon.eps\
