@@ -124,6 +124,7 @@ PNG=\
   mActionMoveItemsToBottom.eps \
   zoom2point_icon.eps\
   plugin_installer.eps\
+  mActionAddSpatiaLiteLayer.eps\
  		
 ##### TARGETS #####
 

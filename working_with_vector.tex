@@ -429,7 +429,15 @@ gsherman@madison:~/current$
 \index{SpatiaLite!layers}
 \label{label_spatialite} 
 
-Needs to be written...
+\includegraphics[width=0.7cm]{mActionAddSpatiaLiteLayer}
+The first time you load data from a Spatialite database, begin by clicking on the 
+\toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the 
+\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...} 
+option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}. 
+This will bring up a window, which will allow you to either connect to a Spatialite database already known to QGIS, which 
+you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection, 
+click on \button{New} and use the file browsser to point to your SpatiaLite database, 
+which is a file with a \filename{.sqlite } extension.
 
 \subsection{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
@@ -1374,13 +1382,13 @@ from the dropdown menu. This will open a new window which displays the attribute
 Each column can be sorted by clicking on its header. A small arrow indicates the sort 
 order (downward pointing means descending values from the top row down, upward pointing means 
 ascending values from the top rown down). 
-For a simple selection by attributes on one column only the \button{Look for} field 
+For a simple selection by attributes on only one column the \button{Look for} field 
 can be used. Select the field (column) from which the search should be performed from 
 the dropdown menu and hit the \button{Search} button. For more complex searches use the
 Advanced search \button{...}, which will lauch the Search Query Builder described in 
 Section \ref{sec:select_by_query}. 
 
-To show selected records only, use teh checkbox \checkbox{Show selected records only}.
+To show selected records only, use the checkbox \checkbox{Show selected records only}.
 Using the buttons at the bottom left of the window, selected fields can be removed, 
 moved to the top of the table, or the selection can be inverted. Selected features can 
 also be copied to the clipboard, which can also be done with \keystroke{Ctrl-C}. You can also zoom 
