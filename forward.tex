@@ -58,7 +58,8 @@ supported in QGIS.} supported by the installed OGR library, including ESRI
 shapefiles, MapInfo, SDTS and GML.
 \item Raster and imagery formats supported by the installed GDAL (Geospatial
 Data Abstraction Library) library, such 
-as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG,
+as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG.
+\item SpatiaLite databases (see Section \ref{label_spatialite}) 
 \item GRASS raster and vector data from GRASS databases (location/mapset), 
 \item Online spatial data served as OGC-compliant Web Map Service (WMS) or
 Web Feature Service (WFS).
@@ -91,13 +92,15 @@ formats. QGIS offers the following:
 
 \begin{itemize}
 \item digitizing tools for OGR supported formats and GRASS vector layer
-\item create and edit shapefiles and GRASS vector layer
-\item geocode images with the georeferencer plugin
+\item create and edit shapefiles and GRASS vector layers
+\item geocode images with the Georeferencer plugin
 \item GPS tools to import and export GPX format, and convert other GPS
-formats to GPX or down/upload directly to a GPS unit
-\item create PostGIS layers from shapefiles with the SPIT plugin
+formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added 
+to list of GPS devices)
+\item create PostGIS layers from shapefiles with the SPIT plugin 
 \item improved handling of PostGIS tables
-\item manage vector attribute tables with the table manager plugin
+\item manage vector attribute tables with the new Attribute table (see Section 
+\ref{sec:attribute table}) or Table Manager plugin
 \item save screenshots as georeferenced images
 \end{itemize}
 
