@@ -470,6 +470,9 @@ wfs&REQUEST=GetCapabilities
   \item Wait patiently for the features to appear
 \end{enumerate}
 
+Note that the WFS-plugin also recognizes the proxy-settings you have set
+in your preferences.
+
 \begin{figure}[ht]
   \begin{center}
   	\caption{Adding a WFS layer \nixcaption}\label{fig:wfs_dmsolutions}
@@ -491,11 +494,24 @@ If you encounter problems with any other WFS-server, please do not
 hesitate to contacting the development team. Please refer to Section 
 \ref{label_helpsupport} for further information about the mailinglists.
 
-\begin{Tip}[ht]\caption{\textsc{Finding WMS and WFS Servers}}
-\qgistip{You can find additional WMS and WFS servers by using Google or your
+\begin{Tip}[ht]\caption{\textsc{Finding WFS Servers}}
+\qgistip{You can find additional WFS servers by using Google or your
 favorite search engine. There are a number of lists with public URLs, some 
 of them maintained and some not.
 \index{WFS!remote server!}
+}
+\end{Tip} 
+
+\begin{Tip}[ht]\caption{\textsc{Accessing secure WFS Servers}}
+\qgistip{
+Within the dialog \dialog{Create a new WFS-connection} accidentily
+described QGIS does not support authenficated WFS-connections yet. Within
+one of the next releases we expect to also support authenticated
+WFS-servers. Meanwhile you could use InteProxy
+(\url{http://inteproxy.wald.intevation.org}) for accessing authenticated
+WFS-servers.
+\index{WFS!authenticate remote server!}
+\index{WFS!secured WFS server!}
 }
 \end{Tip} 
 
