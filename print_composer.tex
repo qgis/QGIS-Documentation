@@ -98,11 +98,16 @@ your liking you click the \toolbtntwo{mActionFilePrint}{Print Composer} icon.
 Opening the print composer provides you with a blank canvas to which you can 
 add the current QGIS map canvas, legend, scalebar, images and text. Figure
 \ref{fig:print_composer_blank} shows the initial view of the print composer 
-before any elements are added. The print composer provides two tabs:
+with an activated \checkbox{Snap to grid} modus but before any elements are
+added. The print composer provides two tabs:
 
 \begin{itemize}
-\item The \tab{General} tab allows you to set paper size, orientation, and the 
-print quality for the output file in dpi.
+\item The \tab{General} tab allows you to set paper size, orientation, the
+print quality for the output file in dpi and to activate snapping to a grid
+of a defined resolution. Please note, the \checkbox{Snap to grid} feature
+only works, if you define a grid resolution > 0. Furthermore you can also
+activate the \checkbox{Print as raster} checkbox. This means all elements
+will be rastered before printing or saving as Postscript of PDF.
 \item The \tab{Item} tab displays the properties for the selected map element. 
 Click the \toolbtntwo{mActionSelectPan}{Select/Move item} 
 icon to select an element (e.g. legend, scalebar or label) on the canvas. 
@@ -149,24 +154,30 @@ To move layers within the map element select the map element, click
 the \toolbtntwo{mActionMoveItemContent}{Move item content} icon 
 and move the layers within the map element frame with the left mouse button.
 
-\begin{Tip}\caption{\textsc{Saving a print composer layout}}
-\qgistip{If you want to save the current state of a print composer session, click 
-on \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As} to save 
-the state of your workspace including the state of the current print composer session. 
-It is planned but currently not possible to save print composer templates itself.
-}
-\end{Tip} 
+\subsubsection{Navigation tools}
+
+For map navigation the print composer provides 4 general tools:
+
+\begin{itemize}
+\item \toolbtntwo{mActionZoomOut}{Zoom in},
+\item \toolbtntwo{mActionZoomOut}{Zoom out},
+\item \toolbtntwo{mActionZoomFullExtent}{Zoom to full extend} and
+\item \toolbtntwo{mActionDraw}{Refresh the view}, if you find the view in an
+inconsistent state.
+\end{itemize}
+
 
 \subsubsection{Adding other elements to the Print Composer} 
 
 Besides adding a current QGIS map canvas to the Print Composer, it is also possible 
-to add, move and customize legend, scalebar, images and label elements.
+to add, position, move and customize legend, scalebar, images and label elements.
 
 \minisec{Label and images}
 
 To add a label or an image, click the \toolbtntwo{mActionLabel}{Add label} or 
-\toolbtntwo{mActionSaveMapAsImage}{Add image} icon and place the element 
-with the left mouse button on the print composer canvas.
+\toolbtntwo{mActionSaveMapAsImage}{Add image} icon, place the element with
+the left mouse button on the print composer canvas and position and customize
+their appearance in the \tab{Item} tab. 
 
 \begin{figure}[ht]
 \centering
@@ -178,8 +189,8 @@ with the left mouse button on the print composer canvas.
 \minisec{Legend and scalebar}
 
 To add a map legend or a scalebar, click the \toolbtntwo{mActionAddLegend}{Add new legend} or 
-\toolbtntwo{mActionScaleBar}{Add new scalebar} icon and place the element with the left 
-mouse button on the print composer canvas.
+\toolbtntwo{mActionScaleBar}{Add new scalebar} icon, place the element with the left 
+mouse button on the print composer canvas and position and customize their appearance in the \tab{Item} tab.
 
 \begin{figure}[ht]
 \centering
@@ -188,16 +199,19 @@ mouse button on the print composer canvas.
    \subfigure[scalebar item tab] {\label{subfig:print_composer_scalebar_item}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_scalebar_item}}
 \end{figure}
 
-\subsubsection{Navigation tools}
+\subsubsection{Raise, lower and align elements}
 
-For map navigation the print composer provides 4 general tools:
+Raise or lower functionalities for elements are inside the
+\toolbtntwo{mActionRaiseItems}{Raise selected items} pulldown menu. Choose an
+element on the print composer canvas and select the matching functionality to
+raise or lower the selected element compared to the other elements (see
+table~\ref{tab:printcomposer_tools}). 
 
-\begin{itemize}
-\item \toolbtntwo{mActionZoomOut}{Zoom in},
-\item \toolbtntwo{mActionZoomOut}{Zoom out},
-\item \toolbtntwo{mActionZoomFullExtent}{Zoom to full extend} and
-\item \toolbtntwo{mActionDraw}{Refresh the view}, if you find the view in an inconsistent state. 
-\end{itemize}
+There are several alignment functionalities available within the
+\toolbtntwo{mActionAlignLeft}{Align selected items} pulldown menu (see
+table~\ref{tab:printcomposer_tools}). To use an alignment functionality , you
+first select some elements and then click on the matching alignment icon. All
+selected will then be aligned within to their common bounding box.       
 
 \subsubsection{Creating Output}
 
@@ -226,4 +240,11 @@ composer canvas as a SVG (Scalable Vector Graphic). \textbf{Note:} Currently the
 SVG output is very basic. This is not a QGIS problem, but a problem of the underlaying 
 Qt library. This will hopefully be sorted out in future versions.
 \end{itemize}
+
+\subsubsection{Saving and loading a print composer layout}
+
+With the \toolbtntwo{mActionFileSaveAs}{Save as template} and
+\toolbtntwo{mActionFolder}{Load from template} icons you can save the current
+state of a print composer session as a  *.qpt template and load the template
+again in another session.
 
