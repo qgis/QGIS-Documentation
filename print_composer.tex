@@ -126,7 +126,19 @@ To add the QGIS map canvas, click on the \toolbtntwo{mActionAddRasterLayer}{Add 
 from QGIS map canvas} button in the print composer toolbar and drag a 
 rectangle on the composer canvas with the left mouse button to add the map. 
 You will see an empty box with a \textit{"Map will be printed here"} message.
-To display the current map, choose \selectstring{Preview}{Cache} in the map \tab{Item} tab.
+To display the current map, you can choose between three different modes in
+the map \tab{Item} tab:
+
+\begin{itemize}
+\item \selectstring{Preview}{Rectangle} is the default setting. It only
+displays an empty box with a message \textit{"Map will be printed here"}. 
+\item \selectstring{Preview}{Cache} renders the map in the current screen
+resolution. If case you zoom in or out the composer window, the map is not
+rendered again but the image will be scaled.
+\item \selectstring{Preview}{Render} means, that if you zoom in or out the
+composer window, the map will be rendered again, but for space reasons, only
+up to a maximum resolution.
+\end{itemize}
 
 \begin{figure}[ht]
 \centering
