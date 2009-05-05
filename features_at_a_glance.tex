@@ -838,7 +838,39 @@ selected features and show features in current canvas)
 
 \begin{itemize}
 \item \checkbox{Use proxy for web access} and define host, port, user, and password.
+\item Set the \dropmenuopt{Proxy type} according to your needs
+ \begin{itemize}
+  \item \dropmenuopt{Default Proxy}: Proxy is determined based on the application proxy set using
+  \item \dropmenuopt{Socks5Proxy}: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.
+  \item \dropmenuopt{HttpProxy}: Implemented using the "CONNECT" command, supports only outgoing TCP connections; supports authentication.
+  \item \dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
+  \item \dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests
+ \end{itemize}
 \end{itemize}
+
+Excluding some URLs can be added to the textbox below the proxy-settings (see
+fig. \ref{fig:proxy-settings}) by pressing the \button{Add}-button. After that
+double-click into the just created URL-field and enter the URL you would like
+to exclude from using the proxy. Obviously he button \button{Remove} removes the selected
+entry.
+
+If you need more detailed information about the different proxy-settings,
+please refer to the manual of the unterlaying QT-library-documentation at
+\url{http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum}.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Proxy-settings in QGIS \nixcaption}
+   \includegraphics[clip=true, width=10cm]{proxy-settings}
+   \label{fig:proxy-settings}
+\end{center} 
+\end{figure}
+
+\begin{Tip} \caption{\textsc{Using Proxies}}
+\qgistip{Using proxies can sometimes be tricky. It is useful to 'trial and
+error' the above proxy types and check if they succeed in your case.
+}
+\end{Tip}
 
 You can modify the options according to your needs. Some of the changes may 
 require a restart of QGIS before they will be effective.
