@@ -10,7 +10,7 @@
 # with .eps extension:
 # JPG=qgis_icon_new_verylarge.eps\
 
-PNG=startup1_0_0.eps\
+PNG=startup.eps\
     measure_area.eps\
     measure_line.eps\
 	
