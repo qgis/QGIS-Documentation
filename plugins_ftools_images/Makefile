@@ -12,49 +12,49 @@
 #	nextfile.eps
 
 PNG=analysis.eps\
-    calcgeom.eps\
-    centroids.eps\
-    checkgeometry.eps\
-    clip.eps\
-    conversion.eps\
-    datamanagement.eps\
-    define.eps\
-    dissolve.eps\
-    dynamicbuffer.eps\
-    erase.eps\
-    extractnodes.eps\
-    fieldstats.eps\
-    ftoolslogo2.eps\
-    ftoolslogo.eps\
-    geoprocessing.eps\
-    help.eps\
-    intersectlines.eps\
-    intersect.eps\
-    joinattr.eps\
-    listunique.eps\
-    meancoords.eps\
-    multiconvex.eps\
-    multitosingle.eps\
-    nearestneigh.eps\
-    pointdistance.eps\
-    pointpoly.eps\
-    polystolines.eps\
-    project.eps\
-    random.eps\
-    randompoints.eps\
-    regularpoints.eps\
-    remove.eps\
-    sampling.eps\
-    selectlocation.eps\
-    selectsubset.eps\
-    simplify.eps\
-    singletomulti.eps\
-    spatialjoin.eps\
-    sumlines.eps\
-    symdiff.eps\
-    union.eps\
-    vectorgrid.eps\
-    vectorsplit.eps\
+basic_statistics.eps\
+buffer.eps\
+centroids.eps\
+check_geometry.eps\
+clip.eps\
+convex_hull.eps\
+define_projection.eps\
+delaunay.eps\
+difference.eps\
+dissolve.eps\
+export_geometry.eps\
+export_projection.eps\
+extract_nodes.eps\
+ftools_logo.eps\
+geometry.eps\
+geoprocessing.eps\
+help.eps\
+intersections.eps\
+intersect.eps\
+join_attributes.eps\
+join_location.eps\
+layer_extent.eps\
+management.eps\
+matrix.eps\
+mean.eps\
+multi_to_single.eps\
+neighbour.eps\
+random_points.eps\
+random_selection.eps\
+regular_points.eps\
+sampling.eps\
+select_location.eps\
+simplify.eps\
+single_to_multi.eps\
+split_layer.eps\
+sub_selection.eps\
+sum_lines.eps\
+sum_points.eps\
+sym_difference.eps\
+to_lines.eps\
+union.eps\
+unique.eps\
+vector_grid.eps\
     	
 ##### TARGETS #####
 
