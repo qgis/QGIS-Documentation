@@ -4,29 +4,34 @@
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
-\updatedisclaimer
 
 The goal of the fTools python plugin is to provide a one-stop resource for
 many common vector-based GIS tasks, without the need for additional software, 
 libraries, or complex workarounds. It provides a growing suite of spatial 
-data management and analysis functions that are both quick and functional. 
+data management and analysis functions that are both fast and functional. 
 
-\minisec{Install the fTools Plugin}
+fTools is now automatically installed and enabled in new versions of QGIS, and as with all plugins, it can 
+be disabled and enabled using the Plugin Manager (See Section \ref{sec:managing_plugins}).
+When enabled, the fTools plugin adds a \mainmenuopt{Tools} menu to QGIS, providing functions in the following 
+five categories:
 
-To use the functionalities in QGIS, you must install the fTool python plugin
-with the \mainmenuopt{Fetch Python Plugins} Installer (see 
-Section \ref{sec:load_external_plugin}). Then select and load it 
-with the Plugin Manager. Therefore click the menu \mainmenuopt{Plugins} > 
-\mainmenuopt{Manage Plugins}, select \dropmenuopt{fTools} and click 
-\button{OK}. A new menu \mainmenuopt{Tools} occurs in the menu bar with 
-following features:
+\begin{enumerate}
+\item Analysis Tools
+\item Research Tools
+\item Geometry Tools
+\item Geoprocessing Tools
+\item Data Management Tools
+\end{enumerate}
 
-\minisec{Analysis tools}
+\minisec{fTools functions}\label{ftool_functions}
+
+Tables \ref{tab:ftool_analysis} through \ref{tab:fTool_data_management} list the functions available via the fTools plugin, along with a brief description of each function. For further information on an individual fTools function, please click the \menuopt{fTools Information} menu item in the \mainmenuopt{Tools} menu.
 
 \begin{table}[ht]\index{Analysis tools}
 \centering
-\caption{fTool analysis tools}\label{tab:ftool_analysis}\medskip
+\caption{fTools Analysis tools}\label{tab:ftool_analysis}\medskip
  \begin{tabular}{|p{0.3in}|p{1.2in}|p{4.7in}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Analysis tools available via the fTools plugin}} \\
  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{pointdistance} & Distance Matrix &
 Measure distances between two point layers, and output results as a) Square
@@ -55,12 +60,11 @@ with length > 0. \\
 \end{tabular}
 \end{table}
 
-\minisec{Sampling tools}
-
-\begin{table}[ht]\index{Sampling tools}
+\begin{table}[ht]\index{Research tools}
 \centering
-\caption{fTool sampling tools}\label{tab:ftool_sampling}\medskip
+\caption{fTools Research tools}\label{tab:ftool_research}\medskip
  \begin{tabular}{|p{0.3in}|p{1.3in}|p{4.6in}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Research tools available via the fTools plugin}} \\
  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{random} & Random selection & Randomly 
 select n number of features, or n percentage of features \\
@@ -79,12 +83,11 @@ new selection, or add or subtract from the current selection. \\
 \end{tabular}
 \end{table}
 
-\minisec{Geoprocessing tools}
-
 \begin{table}[ht]\index{Geoprocessing tools}
 \centering
-\caption{fTool geoprocessing tools}\label{tab:ftool_geoprocessing}\medskip
+\caption{fTools Geoprocessing tools}\label{tab:ftool_geoprocessing}\medskip
  \begin{tabular}{|p{0.3in}|p{0.8in}|p{5.1in}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Geoprocessing tools available via the fTools plugin}} \\
  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{multiconvex} & Convex hull & Create 
 minimum convex hull(s) for an input layer, or based on an ID field. \\
@@ -108,14 +111,11 @@ to form one single feature. \\
 \end{tabular}
 \end{table}
 
-\newpage
-
-\minisec{Geometry tools}
-
 \begin{table}[ht]\index{Geometry tools}
 \centering
-\caption{fTool geometry tools}\label{tab:ftool_geometry}\medskip
+\caption{fTools Geometry tools}\label{tab:ftool_geometry}\medskip
  \begin{tabular}{|p{0.3in}|p{1.2in}|p{4.8in}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Geometry tools available via the fTools plugin}} \\
  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{checkgeometry} & Check geometry & 
 Check polygons for intersections, closed-holes, and fix node ordering. \\
@@ -140,12 +140,11 @@ Extract nodes from line and polygon layers and output them as points. \\
 \end{tabular}
 \end{table}
 
-\minisec{Data management tools}
-
 \begin{table}[ht]\index{Data management tools}
 \centering
-\caption{fTool data management tools}\label{tab:fTool_data_management}\medskip
+\caption{fTools Data management tools}\label{tab:fTool_data_management}\medskip
  \begin{tabular}{|p{0.3in}|p{1.3in}|p{4.6in}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Data management tools available via the fTools plugin}} \\
  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{project} & Export to projection & 
 Project features to new CRS and export as new shapefile. \\

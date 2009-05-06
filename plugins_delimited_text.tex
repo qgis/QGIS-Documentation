@@ -40,16 +40,9 @@ Some items of note about the text file are:
 \end{enumerate}
 
 \minisec{Using the Plugin}
-To use the plugin you must have QGIS running and use the Plugin Manager to load the plugin:
+To use the plugin you must first enable it as described in Section \ref{sec:managing_plugins}.
 
-Start QGIS, then open the Plugin Manager by choosing \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}
-\index{plugins!manager}
-The Plugin Manager displays a list of available plugins.
-Those that are already loaded have a check mark to the left of their name.
-Click on the checkbox to the left of the \checkbox{Add Delimited Text Layer} plugin and click \button{OK} to load it as described in Section \ref{sec:managing_plugins}.
-
-Click the new toolbar icon \toolbtntwo{delimited_text}{Add Delimited Text Layer} to open the Delimited Text dialog as shown in Figure
-\ref{fig:delim_text_plugin_dialog}.
+Click the new toolbar icon \toolbtntwo{delimited_text}{Add Delimited Text Layer} to open the Delimited Text dialog as shown in Figure \ref{fig:delim_text_plugin_dialog}.
 
 \begin{figure}[ht]
    \begin{center}
@@ -58,13 +51,14 @@ Click the new toolbar icon \toolbtntwo{delimited_text}{Add Delimited Text Layer}
    \end{center}  
 \end{figure}
 
-First select the file \filename{qgis\_sample\_data/csv/elevp.csv} to import by clicking 
+First select the file (e.g., \filename{qgis\_sample\_data/csv/elevp.csv}) to import by clicking 
 on the \button{Browse} button. Once the file is selected, the plugin attempts to parse the file 
-using the last used delimiter, in this case \mbox{$;$}. To properly parse the file, it 
+using the last used delimiter, in this case a semi-colon (\mbox{$;$}). To properly parse the file, it 
 is important to select the correct delimiter. To change the delimiter to tab use 
 \mbox{$\backslash$}t (this is a regular expression for the tab character).
 After changing the delimiter, click \button{Parse}.
 
-Choose the X and Y fields from the drop down boxes and enter a Layer name \filename{elevp} 
-as shown in Figure \ref{fig:delim_text_plugin_dialog}. To add the layer to the map, click 
+Once you have parsed the file, choose the X and Y fields from the drop down lists and 
+enter a Layer name (e.g., \filename{elevp} ) as shown in Figure 
+\ref{fig:delim_text_plugin_dialog}. To add the layer to the map, click 
 \button{Add Layer}. The delimited text file now behaves as any other map layer in QGIS.

@@ -13,7 +13,6 @@
 
 PNG=gps_importer.eps\
     download.eps\
-    importdialog.eps\
     loadgpx.eps\
 	
 ##### TARGETS #####
