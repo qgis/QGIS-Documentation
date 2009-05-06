@@ -12,6 +12,7 @@
 #	nextfile.eps
 
 PNG=ogr_converter.eps\
+ogr_converter_dialog.eps\
 	
 ##### TARGETS #####
 

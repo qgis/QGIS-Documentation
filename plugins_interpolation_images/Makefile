@@ -12,6 +12,8 @@
 #	nextfile.eps
 
 PNG=interpolation.eps\
+interpolate_dialog.eps\
+interpolate_idw.eps\
 	
 ##### TARGETS #####
 

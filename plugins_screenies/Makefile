@@ -13,12 +13,6 @@
 
 PNG=pluginmanager.eps\
 	plugininstaller.eps\
-	mapserver_export_qgs.eps\
-	mapserver_export_dialog.eps\
-	mapserver_export_test.eps\
-	ogrconverter_dialog.eps\
-	interpolate_dialog.eps\
-	interpolate_idw.eps\
 
 ##### TARGETS #####
 
