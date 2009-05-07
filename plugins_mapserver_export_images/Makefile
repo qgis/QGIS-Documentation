@@ -11,9 +11,9 @@
 # JPG=qgis_icon_new_verylarge.eps\
 
 PNG=mapserver_export.eps\
-mapserver_export_qgis.eps\
-mapserver_export_test.eps\
-mapserver_export_dialog.eps\
+	mapserver_export_qgis.eps\
+	mapserver_export_test.eps\
+	mapserver_export_dialog.eps\
 			
 ##### TARGETS #####
 

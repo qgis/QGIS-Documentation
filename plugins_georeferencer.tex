@@ -19,27 +19,19 @@ In this case you can enter the coordinates manually.
 The usual procedure for georeferencing an image involves selecting multiple points on the raster, 
 specifying their coordinates, and choosing a relevant transformation type. Based on the input parameters and data, the plugin will compute the world file parameters. The more coordinates you provide, the better the result will be.
 
-For this example, we will generate a world file for a topo sheet of South Dakota from SDGS.
-It can later be visualized together with the data from the GRASS spearfish60 location.
-You can download the topo sheet here: \url{http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz}
-
-As a first step we download the file and untar it.
-
-\begin{verbatim}
-wget http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz
-tar xvzf spearfish_toposheet.tar.gz
-cd spearfish_toposheet
-\end{verbatim}
-
-The next step is to start QGIS and load the Georeferencer Plugin (see Section 
-  \ref{sec:load_core_plugin}) and click on the \toolbtntwo{georeferencer}{Georeferencer} 
-  icon which appears in the QGIS toolbar menu. The Georeferencer Plugin dialog appears as 
-  shown in Figure \ref{fig:georefplugin}.
+The first step is to start QGIS and load the Georeferencer Plugin (see Section 
+\ref{sec:load_core_plugin}) and click on the \toolbtntwo{georeferencer}{Georeferencer} 
+icon which appears in the QGIS toolbar menu. The Georeferencer Plugin dialog appears as 
+shown in Figure \ref{fig:georefplugin}.
+  
+For this example, we are using a topo sheet of South Dakota from SDGS. It can later be visualized 
+together with the data from the GRASS spearfish60 location. You can download the topo sheet here: 
+\url{http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz}
 
 \begin{figure}[ht]
 \begin{center}
   \caption{Georeferencer Plugin Dialog \nixcaption}\label{fig:georefplugin}\smallskip
-  \includegraphics[clip=true,width=\textwidth]{georefplugin}
+  \includegraphics[clip=true, width=12cm]{georefplugin}
 \end{center}
 \end{figure}
 
@@ -60,7 +52,7 @@ The next step is to start QGIS and load the Georeferencer Plugin (see Section
 \begin{figure}[ht]
 \begin{center}
   \caption{Add points to the raster image \nixcaption}\label{fig:choose_points}\smallskip
-  \includegraphics[clip=true,width=0.9\textwidth]{choose_points}
+  \includegraphics[clip=true,width=9cm]{choose_points}
 \end{center}
 \end{figure}
 
