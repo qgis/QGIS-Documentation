@@ -12,6 +12,8 @@
 #	nextfile.eps
 
 PNG=oracle_raster.eps\
+    oracle_select_dialog.eps\
+    oracle_create_dialog.eps\
 
 ##### TARGETS #####
 
