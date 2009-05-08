@@ -150,6 +150,7 @@ cleanpics:
 	(cd ./operating_system_icons && make clean)
 	(cd ./plugins_diagram_overlay_images && make clean)
 	(cd ./plugins_oracle_raster_images && make clean)
+	for i in `find . -name *.eps` ; do rm -f $i ; done
 
 # Update icons from qgis source if necessary
 updateicon:
