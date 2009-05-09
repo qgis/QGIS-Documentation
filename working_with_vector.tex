@@ -50,11 +50,6 @@ the projection information. While it is very useful to have a projection file, i
 \index{shapefile!specification}.
 
 \subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
-\includegraphics[width=0.7cm]{mActionAddNonDbLayer} 
-To load a shapefile, start
-QGIS and click on the \toolbtntwo{mActionAddNonDbLayer}{Add a vector layer}
-toolbar button\index{shapefile!loading} or simply type \keystroke{V}. 
-This will bring up a new window (see Figure\ref{fig:addvectorlayer}).  
 
 \begin{figure}[ht]
    \begin{center}
@@ -63,14 +58,6 @@ This will bring up a new window (see Figure\ref{fig:addvectorlayer}).
 \end{center} 
 \end{figure}
 
-From the available options check \checkbox{File}. Click on \button{Browse}. 
-That will bring up a standard open file dialog (see Figure
-\ref{fig:openshapefile}) which allows you to navigate the file system and load
-a shapefile or other supported data source. 
-The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR supported file formats.
-
-You can also select the Encoding type for the shapefile if desired.
-
 \begin{figure}[ht]
    \begin{center}
    \caption{Open an OGR Supported Vector Layer Dialog \nixcaption}\label{fig:openshapefile}\smallskip
@@ -78,15 +65,29 @@ You can also select the Encoding type for the shapefile if desired.
 \end{center} 
 \end{figure}
 
-Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
-\ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
-
 \begin{figure}[ht]
    \begin{center}
    \caption{QGIS with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}\smallskip
    \includegraphics[clip=true, width=16cm]{shapefileloaded}
 \end{center} 
 \end{figure}
+
+\includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a shapefile, start
+QGIS and click on the \toolbtntwo{mActionAddNonDbLayer}{Add a vector layer}
+toolbar button\index{shapefile!loading} or simply type \keystroke{V}. 
+This will bring up a new window (see Figure\ref{fig:addvectorlayer}).  
+
+From the available options check \radiobuttonon{File}. Click on \button{Browse}. 
+That will bring up a standard open file dialog (see Figure
+\ref{fig:openshapefile}) which allows you to navigate the file system and load
+a shapefile or other supported data source. 
+The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR supported file formats.
+
+You can also select the Encoding type for the shapefile if desired.
+
+Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
+\ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
+
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
 \qgistip{When you add a layer to the map, it is assigned a random color. When
@@ -132,7 +133,7 @@ toolbar bar button or type \keystroke{V}, change the file type filter to
 To load an ArcInfo binary coverage click on the 
 \toolbtntwo{mActionAddNonDbLayer}{Add a vector layer}
 toolbar button or type \keystroke{V} to open the 
-\dialog{Add Vector Layer} dialog.  Select \checkbox{Directory}. Change to \selectstring {Type}{Arc/Ingo Binary Coverage}. 
+\dialog{Add Vector Layer} dialog.  Select \radiobuttonon{Directory}. Change to \selectstring {Type}{Arc/Ingo Binary Coverage}. 
 Navigate to the directory that contains the coverage files and select it.
 
 Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the 
@@ -170,7 +171,7 @@ database that contains the data. Begin by clicking on the
 \toolbtntwo{mActionAddLayer}{Add a PostGIS Layer} toolbar button, selecting the
 \dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer...} option from the \mainmenuopt{Layer} menu or typing
 \keystroke{D}. You can also open the open the 
-\dialog{Add Vector Layer} dialog and select \checkbox{Database}.
+\dialog{Add Vector Layer} dialog and select \radiobuttonon{Database}.
 The \dialog{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
 manager}, click on the \button{New} button to display the \dialog{Create a New
@@ -436,7 +437,7 @@ The first time you load data from a Spatialite database, begin by clicking on th
 option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}. 
 This will bring up a window, which will allow you to either connect to a Spatialite database already known to QGIS, which 
 you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection, 
-click on \button{New} and use the file browsser to point to your SpatiaLite database, 
+click on \button{New} and use the file browser to point to your SpatiaLite database, 
 which is a file with a \filename{.sqlite } extension.
 
 \subsection{The Vector Properties Dialog}\label{sec:vectorprops}
@@ -568,6 +569,10 @@ We will illustrate this by labelling the lakes shapefile of the
   We'll use \selectstring{Field containing label}{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
   used each time QGIS encounters a lake with no value in the \guilabel{NAMES} field.
+\item If have labels extending over several lines, check \checkbox{Multiline labels?}. 
+QGIS will check for a true line return in your label field and insert the line breaks accordingly.
+A true line return is a \textbf{single} character \textbackslash n, 
+(not two separate characters, like a backlash \textbackslash ~followed by the character n).
 \item Click \button{Apply}.
 \end{enumerate} 
 
