@@ -96,6 +96,7 @@ PNG=\
   mActionZoomFullExtent.eps\
   mActionZoomIn.eps\
   mActionZoomLast.eps\
+  mActionZoomNext.eps\
   mActionZoomOut.eps\
   mActionZoomToLayer.eps\
   mActionZoomToSelected.eps\
