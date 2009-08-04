@@ -424,6 +424,56 @@ gis_data=# \q
 gsherman@madison:~/current$
 \end{verbatim}
 
+\subsubsection{Vector layers crossing 180$^\circ$ longitude}
+\index{vector layers!crossing}
+
+Many GIS packages don't wrap vector maps, with a geographic reference system
+(lat/lon), crossing the \degrees{180} longitude line. As result, if
+we open such map in QGIS, we will see two far, distinct locations, that
+should show near each other. In Figure \ref{fig:vector_not_wrapping} the tiny
+point on the far left of the map canvas (Chatham Islands), should be within
+the grid, right of New Zealand main islands.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Map in lat/lon crossing the \degrees{180} longitude line
+   \nixcaption}
+   \label{fig:vector_not_wrapping}\smallskip
+   \includegraphics[clip=true, width=\textwidth]{vectorNotWrapping}
+\end{center}
+\end{figure}
+
+A workaround is to transform the longitude values using PostGIS and the
+\textbf{ST\textunderscore Shift\textunderscore Longitude}
+\footnote{\url{http://postgis.refractions.net/documentation/manual-1.4/ST_Shift_Longitude.html}}
+function. This function reads every point/vertex in every component of every
+feature in a geometry, and if the longitude coordinate is < \degrees{0} adds
+\degrees{360} to it. The result would be a \degrees{0} - \degrees{360} version of
+the data to be plotted in a \degrees{180} centric map.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Map crossing the \degrees{180} longitude line
+after applying the \textbf{ST\textunderscore Shift\textunderscore Longitude}
+function}
+\label{fig:vector_wrapping}\smallskip
+   \includegraphics[clip=true, width=9cm]{vectorWrapping}
+\end{center}
+\end{figure}
+
+\minisec{Usage}
+
+\begin{itemize}
+\item Import data to PostGIS (\ref{sec:loading_postgis_data}) using for
+example the PostGIS Manager plugin or the SPIT plugin
+\item Use the PostGIS command line interface to issue the following command
+(this is an example where "TABLE" is the actual name of your PostGIS table) \\ 
+\texttt{gis\_data=\# update TABLE set the\_geom=ST\_shift\_longitude(the\_geom);} 
+\item If everything went right you should receive a confirmation about the
+number of features that were updated, then you'll be able to load the map and
+see the difference (Figure \ref{fig:vector_wrapping})
+\end{itemize}
+
 \subsection{SpatiaLite Layers} 
 \index{SpatiaLite layers!properties dialog}
 \index{vector layers!SpatlaLIte|see{SpatiaLite}}

@@ -24,6 +24,8 @@ PNG=shapefileloaded.eps \
     queryBuilder.eps \
     addvectorlayerdialog.eps\
     vectorAttributeTable.eps\
+    vectorNotWrapping.eps\
+    vectorWrapping.eps\
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\
