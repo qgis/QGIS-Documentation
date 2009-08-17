@@ -25,6 +25,12 @@ PNG=create_grass_location.eps\
 	grass_module_output.eps\
 	grass_mapset_browser.eps\
 	grass_location.eps\
+	grass_toolbox_rcontour2.eps\
+	grass_toolbox_rcontour.eps\
+	grass_toolbox_shadedrelief.eps\
+	grass_toolbox_shell.eps\
+	grass_toolbox_vgeneralize.eps\
+
 	
 ##### TARGETS #####
 
