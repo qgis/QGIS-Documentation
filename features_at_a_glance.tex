@@ -783,7 +783,7 @@ We have discussed one already in Section \ref{sec:projects}: saving as a project
 Here is a sampling of other ways to produce output files:
 \begin{itemize}
 \item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens a
-file dialog where you select the name, path and type of image (PNG or JPG format). From this
+file dialog where you select the name, path and type of image (PNG or JPG format). From 1.1.0
 release, a world file with extension PNGW or JPGW saved in the same folder georeferences the image.
 \item Menu option \dropmenuopttwo{mActionFilePrint}{Print Composer} opens a dialog 
 where you can layout and print the current map canvas (see Section~\ref{label_printcomposer}).
@@ -810,8 +810,9 @@ optmize your options are:
 \item \checkbox{Display classification attribute names in legend}
 \item \checkbox{Hide splash screen at startup}
 \item \checkbox{Open attribute table in a dock window}
-\item Define attribute table behavior (choose between show all features, show 
-selected features and show features in current canvas)
+\item \checkbox{Add PostGIS layers with double click and select in extended mode}
+% \item Define attribute table behavior (choose between show all features, show
+% selected features and show features in current canvas)
 \end{itemize}
 
 \minisec{Rendering Tab}
@@ -821,7 +822,7 @@ selected features and show features in current canvas)
 \item Define number of features to draw before updating the display.
 \item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
-\item \checkbox{Continously redraw when dragging the legend/map divider} 
+% \item \checkbox{Continously redraw when dragging the legend/map divider} 
 \end{itemize}
 
 \minisec{Map tools Tab}
@@ -848,6 +849,7 @@ selected features and show features in current canvas)
 \item Define default snap mode (to vertex, to segment, to vertex and segment)
 \item Define default snapping tolerance in layer units
 \item Define search radius for vertex edits in layer units
+\item \checkbox{Show markers only for selected features}
 \item Define vertex marker style (Cross, semi transparent circle or none)
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
