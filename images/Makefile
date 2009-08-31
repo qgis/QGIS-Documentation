@@ -132,6 +132,9 @@ PNG=\
   zoom2point_icon.eps\
   plugin_installer.eps\
   mActionAddSpatiaLiteLayer.eps\
+  mActionAddMap.eps\
+  mActionSaveAsPDF.eps\
+  mIconLock.eps\
  		
 ##### TARGETS #####
 
