@@ -965,6 +965,12 @@ to edit.
 \textbf{Note} - the procedure for editing GRASS layers is different - see
 Section \ref{grass_digitising} for details.
 
+\begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
+\qgistip{This version of QGIS does not track if somebody else is editing a
+feature at the same time as you. The last person to save their edits wins.
+}
+\end{Tip}
+
 \subsubsection{Setting the Snapping Tolerance and Search Radius}
 
 Before we can edit vertices, it is very important to set the snapping
@@ -1021,6 +1027,40 @@ The search radius for vertex edits in layer units can be defined in the
 \dropmenuopttwo{mActionOptions}{Options}. The same place where you define the
 general, project wide snapping tolerance.
 
+\subsubsection{Zooming and Panning}
+
+Before editing a layer, you should zoom in to your area of interest. This
+avoids waiting while all the vertex markers are rendered across the entire
+layer.
+
+Apart from using the \toolbtntwo{mActionPan}{pan} and
+\toolbtntwo{mActionZoomIn}{zoom-in}/\toolbtntwo{mActionZoomOut}{zoom-out}
+icons on the toolbar with the mouse, navigating can also be done with the
+mouse wheel, spacebar and the arrow keys.
+
+\minisec{Zooming and panning with the mouse wheel}
+
+While digitizing you can press the mouse wheel to pan inside of the main
+window and you can roll the mouse wheel to zoom in and out on the map. For
+zooming place the mouse cursor inside the map area and roll it forward (away
+from you)
+to zoom in and backwards (towards you) to zoom out. The mouse cursor position
+will
+be the center of the zoomed area of interest. You can customize the behavior
+of the mouse wheel zoom using the \tab{Map tools} tab under the
+\mainmenuopt{Settings} >\dropmenuopt{Options} menu.
+
+\minisec{Panning with the arrow keys}
+
+Panning the Map during digitizing is possible with the arrow keys. Place
+the mouse cursor inside the map area and click on the right arrow key to
+pan east, left arrow key to pan west, up arrow key to pan north and down
+arrow key to pan south.
+
+You can also use the spacebar to temporarily cause mouse movements to pan
+then map. The PgUp and PgDown keys on your keyboard will cause the map
+display to zoom in or out without interrupting your digitising session.
+
 \subsubsection{Topological editing}
 
 Besides layer based snapping options the \tab{General} tab in menu 
@@ -1044,139 +1084,96 @@ If you already have one polygon, it is possible with this option to digitise the
 one such that both intersect and qgis then cuts the second polygon to the common boundary. 
 The advantage is that users don't have to digitize all vertices of the common boundary.
 
-\subsubsection{Editing an Existing Layer}
-\index{vector layers!editing}
-\index{editing!an existing layer}
+\subsubsection{Digitizing an existing layer}
+\index{vector layers!digitizing}
+\index{digitizing!an existing layer}
 \label{sec:edit_existing_layer}
 
 By default, QGIS loads layers read-only: This is a safeguard
 to avoid accidentally editing a layer if there is a slip of the mouse.
-However, you can choose to edit any layer as long as the data provider supports it,
-and the underlying data source is writable (i.e. its files are not read-only).
+However, you can choose to edit any layer as long as the data provider
+supports it, and the underlying data source is writable (i.e. its files are
+not read-only). Layer editing is most versatile when used on
+PostgreSQL/PostGIS data sources.
 
-Layer editing is most versatile when used on PostgreSQL/PostGIS data sources. 
+In general, editing vector layers is divided into a digitizing and an advanced
+digitizing toolbar, described in Section \ref{sec:advanced_edit}. You can
+select and unselect both under \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.
+Using the basic digitizing tools you can perform the following functions:
 
-\begin{Tip}[ht]\caption{\textsc{Data Integrity}}
-\qgistip{It is always a good idea to back up your data source before you start 
-editing. While the authors of QGIS have made every effort to preserve the 
-integrity of your data, we offer no warranty in this regard.
-}
-\end{Tip}
+\begin{table}[h]\index{vector layers!basic editing tools}
+\centering
+\caption{Vector layer basic editing toolbar}\label{tab:vector_editing}\medskip
+\small
+\begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
+\hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} & \textbf{Purpose} \\
+\hline \includegraphics[width=0.7cm]{mActionToggleEditing}
+   & Toggle editing
+   & \includegraphics[width=0.7cm]{mActionCapturePoint}
+   & Adding Features: Capture Point \\
+\hline \includegraphics[width=0.7cm]{mActionCaptureLine}
+   & Adding Features: Capture Line
+   & \includegraphics[width=0.7cm]{mActionCapturePolygon}
+   & Adding Features: Capture Polygon \\
+\hline \includegraphics[width=0.7cm]{mActionMoveFeature}
+   & Move Features
+   & \includegraphics[width=0.7cm]{mActionMoveVertex}
+   & Move Vertex \\
+\hline \includegraphics[width=0.7cm]{mActionAddVertex}
+   & Add Vertex
+   & \includegraphics[width=0.7cm]{mActionDeleteVertex}
+   & Delete Vertex \\
+\hline \includegraphics[width=0.7cm]{mActionDeleteSelected}
+   & Delete Selected
+   & \includegraphics[width=0.7cm]{mActionEditCut}
+   & Cut Features \\
+\hline \includegraphics[width=0.7cm]{mActionEditCopy}
+   & Copy Features
+   & \includegraphics[width=0.7cm]{mActionEditPaste} 
+   & Paste Features \\
+\hline
+\end{tabular}
+\end{table}
 
-\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
-\qgistip{Currently only PostGIS layers are supported for adding or dropping attribute
-columns within this dialog. In future versions of QGIS, other datasources 
-will be supported, because this feature was recently implemented in GDAL/OGR > 1.6.0
-}
-\end{Tip}
-
-
-
-\begin{Tip}[ht]\caption{\textsc{Save Regularly}}
-\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing} off regularly.  
-This allows you to save your recent changes,
-and also confirms that your data source can accept all
-your changes.
-}
-\end{Tip}
-
-\begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
-\qgistip{This version of QGIS does not track if somebody else is editing a feature at the same time
-as you.  The last person to save their edits wins.
-}
-\end{Tip}
-
-\begin{Tip}[ht]\caption{\textsc{Zoom in Before Editing}}
-\qgistip{Before editing a layer, you should
-zoom in to your area of interest. This 
-avoids waiting while all the vertex markers are rendered across the entire layer.
-}
-\end{Tip}
-
-\begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
-\qgistip{
-The current version of QGIS supports two kinds of vertex-markers -
-a semi-transparent circle or a cross. To change the marker style, choose
-\dropmenuopttwo{mActionOptions}{Options} from the
-\mainmenuopt{Settings} menu and click on the \tab{Digitizing} tab and select
-the appropriate entry.
-}
-\end{Tip}
-
-All editing sessions start by choosing the \dropmenuopttwo{mActionToggleEditing}{Toggle editing} option.
+All editing sessions start by choosing the
+\dropmenuopttwo{mActionToggleEditing}{Toggle editing} option.
 This can be found in the context menu after right clicking on the legend
 entry for that layer.\index{Allow Editing}
+
 Alternately, you can use the \index{Toggle Editing}
-\toolbtntwo{mActionToggleEditing}{Toggle editing} button from the toolbar to start 
-or stop the editing mode.\index{editing!icons} Once the layer is in edit mode, 
-markers will appear at the vertices, and additional tool buttons on the editing 
-toolbar will become available.
+\toolbtntwo{mActionToggleEditing}{Toggle editing} button from the digitizing
+toolbar to start or stop the editing mode.\index{editing!icons} Once the
+layer is in edit mode, markers will appear at the vertices, and additional
+tool buttons on the editing toolbar will become available.
 
-\minisec{Zooming and panning with the mouse wheel}
+\begin{Tip}[ht]\caption{\textsc{Save Regularly}}
+\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing}
+off regularly. This allows you to save your recent changes, and also confirms
+that your data source can accept all your changes.
+}
+\end{Tip}
 
-While digitizing you can press the mouse wheel to pan inside of the main
-window and you can roll the mouse wheel to zoom in and out on the map. For
-zooming place the mouse cursor inside the map area and roll it forward (away from you) 
-to zoom in and backwards (towards you) to zoom out. The mouse cursor position will 
-be the center of the zoomed area of interest. You can customize the behavior 
-of the mouse wheel zoom using the \tab{Map tools} tab under the
-\mainmenuopt{Settings} >\dropmenuopt{Options} menu.  
-
-\minisec{Panning with the arrow keys}
-
-Panning the Map during digitizing is possible with the arrow keys. Place
-the mouse cursor inside the map area and click on the right arrow key to
-pan east, left arrow key to pan west, up arrow key to pan north and down arrow 
-key to pan south.
-
-You can also use the spacebar to temporarily cause mouse movements to pan 
-then map. The PgUp and PgDown keys on your keyboard will cause the map 
-display to zoom in or out without interrupting your digitising session.
-
-You can perform the following editing functions:
-
-\begin{itemize}
-\item Add Features: \toolbtntwo{mActionCapturePoint}{Capture Point},
-  \toolbtntwo{mActionCaptureLine}{Capture Line} and
-  \toolbtntwo{mActionCapturePolygon}{Capture Polygon}
-\item \toolbtntwo{mActionAddRing}{Add Ring}
-\item \toolbtntwo{mActionAddIsland}{Add Island}
-\item \toolbtntwo{mActionSplitFeatures}{Split Features}
-\item \toolbtntwo{mActionMoveFeature}{Move Features}
-\item \toolbtntwo{mActionMoveVertex}{Move Vertex}
-\item \toolbtntwo{mActionAddVertex}{Add Vertex}
-\item \toolbtntwo{mActionDeleteVertex}{Delete Vertex}
-\item \toolbtntwo{mActionDeleteSelected}{Delete Selected}
-\item \toolbtntwo{mActionEditCut}{Cut Features}
-\item \toolbtntwo{mActionEditCopy}{Copy Features}
-\item \toolbtntwo{mActionEditPaste}{Paste Features}
-\end{itemize}
-
-\minisec{Adding Features}
+\minisec{Adding and Moving Features}
 \index{vector layers!adding!feature}
+\index{vector layers!move!feature}
 
-Before you start adding features, use the \toolbtntwo{mActionPan}{pan}
-and \toolbtntwo{mActionZoomIn}{zoom-in}/\toolbtntwo{mActionZoomOut}{zoom-out} 
-tools to first navigate to the area of interest.
-
-Then you can use the \toolbtntwo{mActionCapturePoint}{Capture point},
+You can use the \toolbtntwo{mActionCapturePoint}{Capture point},
 \toolbtntwo{mActionCaptureLine}{Capture line} or
-\toolbtntwo{mActionCapturePolygon}{Capture polygon} icons on the toolbar to put the QGIS cursor
-into digitizing mode.
+\toolbtntwo{mActionCapturePolygon}{Capture polygon} icons on the toolbar to
+put the QGIS cursor into digitizing mode.  
 
 For each feature, you first digitize the geometry, then enter its attributes.
-
-To digitize the geometry, left-click on the map area to create the
-first point of your new feature.
+To digitize the geometry, left-click on the map area to create the first
+point of your new feature.
 
 For lines and polygons, keep on left-clicking for each additional
 point you wish to capture.  When you have finished adding points,
 right-click anywhere on the map area to confirm you have finished entering
 the geometry of that feature.
 
-The attribute window will appear, allowing you to enter the information for the new feature.
-Figure \ref{fig:vector_digitising} shows setting attributes for a fictitious
-new river in Alaska.
+The attribute window will appear, allowing you to enter the information for
+the new feature. Figure \ref{fig:vector_digitising} shows setting attributes
+for a fictitious new river in Alaska.
 
 \begin{figure}[ht]
    \begin{center}
@@ -1185,6 +1182,9 @@ new river in Alaska.
    \includegraphics[clip=true, width=8cm]{editDigitizing}
 \end{center}  
 \end{figure}
+
+With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
+you can move existing features.
 
 \begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
 \qgistip{
@@ -1196,26 +1196,14 @@ table} dialog.
 }
 \end{Tip}
 
-\minisec{Move Feature}
-\index{vector layers!move!feature}
-
-You can move features using the \toolbtntwo{mActionMoveFeature}{Move Feature} icon
-on the toolbar.
-
-\minisec{Split Feature}
-\index{vector layers!split!feature}
-
-You can split features using the \toolbtntwo{mActionSplitFeatures}{Split Features} icon
-on the toolbar.
-
-\minisec{Editing Vertices of a Feature}
+\minisec{Adding, Moving and Deleting Vertices of a Feature}
 \index{vector layers!editing!vertex}
 
-For both PostgreSQL/PostGIS and shapefile-based layers, the vertices of features can be edited. 
+For both PostgreSQL/PostGIS and shapefile-based layers, the vertices of
+features can be edited. 
 
-Vertices can be directly edited, that is, you don't
-have to choose which feature to edit before you can change
-its geometry.
+Vertices can be directly edited, that is, you don't have to choose which
+feature to edit before you can change its geometry.
 In some cases, several features may share the same vertex
 and so the following rules apply when the mouse is pressed
 down near map features:
@@ -1235,64 +1223,43 @@ down near map features:
                           on that polygon is the editing target.
 \end{itemize}
 
-You will need to set the property
-\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Options}>\tab{Digitizing}>\selectnumber{Search Radius}{10}
-to a number greater than zero.  Otherwise QGIS will not be able to tell which feature is being edited.
+You will need to set the property \mainmenuopt{Settings} >
+\dropmenuopttwo{mActionOptions}{Options} >
+\tab{Digitizing}>\selectnumber{Search Radius}{10} to a number greater than
+zero. Otherwise QGIS will not be able to tell which feature is being edited.
 
+With the \toolbtntwo{mActionAddVertex}{Add Vertex} icon you can add new
+vertices to a feature.\index{vector layers!adding!vertex} Please note, it
+doesn't make sense to add more vertices to a Point feature!
 
-\minisec{Adding Vertices of a Feature}
-\index{vector layers!adding!vertex}
+\begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
+\qgistip{The current version of QGIS supports two kinds of vertex-markers -
+a semi-transparent circle or a cross. To change the marker style, choose
+\dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu
+and click on the \tab{Digitizing} tab and select the appropriate entry.
+}
+\end{Tip}
 
-You can add new vertices to a feature by using the
-\toolbtntwo{mActionAddVertex}{Add Vertex} icon
-on the toolbar.
-
-Note, it doesn't make sense to add more vertices to a Point feature!
-
-In this version of QGIS, vertices can only be added to an \textit{existing} line
-segment of a line feature.  If you want to extend a line beyond its end,
+In this version of QGIS, vertices can only be added to an \textit{existing}
+line segment of a line feature. If you want to extend a line beyond its end,
 you will need to move the terminating vertex first, then add a new vertex where
 the terminus used to be.
 
-\minisec{Moving Vertices of a Feature}
-\index{vector layers!moving!vertex}
+With the \toolbtntwo{mActionMoveVertex}{Move Vertex} icon on the toolbar you
+can move vertices.\index{vector layers!moving!vertex}
 
-You can move vertices using the \toolbtntwo{mActionMoveVertex}{Move Vertex} icon
-on the toolbar.
+With the \toolbtntwo{mActionDeleteVertex}{Delete Vertex} icon on the toolbar
+you can delete vertices.\index{vector layers!deleting!vertex} Please note, it
+doesn't make sense to delete the vertex of a Point feature! Delete the whole
+feature instead.
 
-\minisec{Deleting Vertices of a Feature}
-\index{vector layers!deleting!vertex}
+Similarly, a one-vertex line or a two-vertex polygon is also fairly useless
+and will lead to unpredictable results elsewhere in QGIS, so don't do that.
 
-You can delete vertices by using the \toolbtntwo{mActionDeleteVertex}{Delete Vertex} icon
-on the toolbar.
-
-Note, it doesn't make sense to delete the vertex of a Point feature!
-Delete the whole feature instead.
-
-Similarly, a one-vertex line or a two-vertex polygon is also
-fairly useless and will lead to unpredictable results elsewhere
-in QGIS, so don't do that.
-
-\textbf{Warning:} A vertex is identified for deletion as
-soon as you click the mouse near an eligible
-feature.  To undo, you will need to toggle
-Editing off and then discard your changes.
-(Of course this will mean that other unsaved changes will be lost, too.)
-
-\minisec{Add Ring}
-\index{vector layers!add!ring}
-
-You can create ring polygons using the \toolbtntwo{mActionAddRing}{Add Ring}
-icon in the toolbar. This means inside an existing area it is
-possible to digitize further polygons, that will occur as a 'whole', so only 
-the area in between the boundaries of the outer and inner polygons remain as 
-a ring polygon. 
-
-\minisec{Add Island}
-\index{vector layers!add!island}
-
-You can \toolbtntwo{mActionAddIsland}{add island} polygons to a selected multipolygon. 
-The new island polygon has to be digitized outside the selected multipolygon. 
+\textbf{Warning:} A vertex is identified for deletion as soon as you click
+the mouse near an eligible feature.  To undo, you will need to toggle Editing
+off and then discard your changes. (Of course this will mean that other
+unsaved changes will be lost, too.)
 
 \minisec{Cutting, Copying and Pasting Features}
 \index{vector layers!cut!feature}
@@ -1309,7 +1276,6 @@ same QGIS project, as long as destination layers are set to
 Features can also be pasted to external applications as text:  That is,
 the features are represented in CSV format with the geometry data appearing 
 in the OGC Well-Known Text (WKT) format.
-
 
 However in this version of QGIS, text features from outside QGIS cannot 
 be pasted to a layer within QGIS. When would the copy and paste function 
@@ -1376,14 +1342,6 @@ using GDAL 1.3.2 or higher.
 }
 \end{Tip}
 
-\minisec{Snap Mode}
-\index{editing!snap}
-QGIS allows digitized vertices to be snapped to other vertices of the same layer. To 
-set the snapping tolerance, go to
-\mainmenuopt{Settings}>\dropmenuopttwo{mActionOptions}{Options}->\tab{Digitizing}.
-(On Mac: go to  \mainmenuopt{QGIS} > Preferences, on Linux: \mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options}.)
-Note that the snapping tolerance is in map units or pixels.
-
 \minisec{Saving Edited Layers}
 \index{editing!saving changes}
 
@@ -1396,6 +1354,99 @@ changes or discard them.
 If the changes cannot be saved (e.g. disk full, or the attributes have
 values that are out of range), the QGIS in-memory state is preserved.  This
 allows you to adjust your edits and try again.
+
+\begin{Tip}[ht]\caption{\textsc{Data Integrity}}
+\qgistip{It is always a good idea to back up your data source before you
+start
+editing. While the authors of QGIS have made every effort to preserve the
+integrity of your data, we offer no warranty in this regard.
+}
+\end{Tip}
+
+\subsubsection{Advanced digitizing}
+\index{vector layers!advanced digitizing}
+\index{advanced digitizing!an existing layer}
+\label{sec:advanced_edit}
+
+\begin{table}[h]\index{vector layers!advanced editing tools}
+\centering
+\caption{Vector layer advanced editing toolbar}\label{tab:advanced_editing}\medskip
+\small
+\begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
+\hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} & \textbf{Purpose} \\
+\hline \includegraphics[width=0.7cm]{mActionUndo}
+   & Undo 
+   & \includegraphics[width=0.7cm]{mActionRedo}
+   & Redo \\
+\hline \includegraphics[width=0.7cm]{mActionSimplify}
+   & Simplify Feature
+   & \includegraphics[width=0.7cm]{mActionAddRing}
+   & Add Ring \\
+\hline \includegraphics[width=0.7cm]{mActionAddIsland}
+   & Add Island
+   & \includegraphics[width=0.7cm]{mActionDeleteRing}
+   & Delete Ring \\
+\hline \includegraphics[width=0.7cm]{mActionDeletePart}
+   & Delete Part
+   & \includegraphics[width=0.7cm]{mActionSplitFeatures}
+   & Split Features \\
+\hline \includegraphics[width=0.7cm]{mActionMergeFeatures}
+   & Merge Selected Features
+   & \includegraphics[width=0.7cm]{mActionNodeTool}
+   & Node Tool \\
+\hline
+\end{tabular}
+\end{table}
+
+\minisec{Undo}
+\index{vector layers!undo}
+
+\minisec{Redo}
+\index{vector layers!redo}
+
+\minisec{Simplify Feature}
+\index{vector layers!simplify}
+
+Fixed for simplify tool, show a message if the feature can't be simplified.
+
+\minisec{Add Ring}
+\index{vector layers!add!ring}
+
+You can create ring polygons using the \toolbtntwo{mActionAddRing}{Add Ring}
+icon in the toolbar. This means inside an existing area it is
+possible to digitize further polygons, that will occur as a 'whole', so only
+the area in between the boundaries of the outer and inner polygons remain as
+a ring polygon.
+
+\minisec{Add Island}
+\index{vector layers!add!island}
+
+You can \toolbtntwo{mActionAddIsland}{add island} polygons to a selected
+multipolygon.
+The new island polygon has to be digitized outside the selected multipolygon.
+
+\minisec{Delete Ring}
+\index{vector layers!delete!ring}
+
+\minisec{Delete Part}
+\index{vector layers!delete!part}
+
+\minisec{Split Features}
+\index{vector layers!split!feature}
+
+You can split features using the \toolbtntwo{mActionSplitFeatures}{Split
+Features} icon
+on the toolbar
+
+\minisec{Merge selected features}
+\index{vector layers!merge!features}
+
+\minisec{Node Tool}
+\index{vector layers!node!tool}
+
+Node tool now works also with on the fly projections turned on.
+Added support for topology editing in node toolAdded support for topology
+editing in node tool..
 
 \subsubsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
 
@@ -1423,9 +1474,12 @@ layers.
 
 To complete the creation of the new layer, add the desired attributes by
 clicking on the \button{Add} button and specifying a name and type for the
-attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and \selectstring{Type}{string} attributes are supported. Once you
-are happy with the attributes, click \button{OK} and provide a name for the shapefile.
-QGIS will automatically add a \filename{.shp} extension to the name you specify.  Once
+attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
+\selectstring{Type}{string} attributes are supported. Additionally and
+according to the attribute type you can also define the width and precision
+of the new attribute column. Once you are happy with the attributes, click
+\button{OK} and provide a name for the shapefile. QGIS will automatically add
+a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
 
@@ -1458,6 +1512,15 @@ Using the buttons at the bottom left of the window, selected fields can be remov
 moved to the top of the table, or the selection can be inverted. Selected features can 
 also be copied to the clipboard, which can also be done with \keystroke{Ctrl-C}. You can also zoom 
 into the selected features on the map. Toggle editing allows to edit single values of attributes. 
+
+\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
+\qgistip{Currently only PostGIS layers are supported for adding or dropping
+attribute columns within this dialog. In future versions of QGIS, other
+datasources will be supported, because this feature was recently implemented
+in GDAL/OGR > 1.6.0
+}
+\end{Tip}
+
 
 \subsection{Query Builder}\label{sec:query_builder}
 \index{Query Builder}

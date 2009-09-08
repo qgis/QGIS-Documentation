@@ -135,6 +135,13 @@ PNG=\
   mActionAddMap.eps\
   mActionSaveAsPDF.eps\
   mIconLock.eps\
+  mActionNodeTool.eps\
+  mActionDeleteRing.eps\
+  mActionDeletePart.eps\
+  mActionMergeFeatures.eps\
+  mActionSimplify.eps\
+  mActionUndo.eps\
+  mActionRedo.eps\
  		
 ##### TARGETS #####
 
