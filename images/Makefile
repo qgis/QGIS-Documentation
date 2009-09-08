@@ -8,7 +8,7 @@
 # $< (source postfix, here .fig) and $@ (target postfix, here .eps)
 
 # with .eps extension:
-JPG=qgis_icon_new_verylarge.eps\
+#JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
 PNG=\
@@ -142,6 +142,7 @@ PNG=\
   mActionSimplify.eps\
   mActionUndo.eps\
   mActionRedo.eps\
+  qgislogo.eps\
  		
 ##### TARGETS #####
 
