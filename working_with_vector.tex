@@ -1398,16 +1398,27 @@ integrity of your data, we offer no warranty in this regard.
 \end{tabular}
 \end{table}
 
-\minisec{Undo}
+\minisec{Undo and Redo}
 \index{vector layers!undo}
-
-\minisec{Redo}
 \index{vector layers!redo}
+
+The \toolbtntwo{mActionUndo}{Undo} and \toolbtntwo{mActionRedo}{Redo} tools
+allow the user to undo or redo the last or a certain step within the
+digitizing process.  
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Redo and Undo digitizing steps \nixcaption}\label{fig:vector_redoundo}\smallskip
+   \includegraphics[clip=true, width=14cm]{redo_undo}
+\end{center}
+\end{figure}
 
 \minisec{Simplify Feature}
 \index{vector layers!simplify}
 
-Fixed for simplify tool, show a message if the feature can't be simplified.
+The \toolbtntwo{mActionSimplify}{Simplify Feature} tool allows to reduce the
+number of vertices of a feature, as long as the geometry doesn't change. If a
+feature cannot be simplified, a message shows up.
 
 \minisec{Add Ring}
 \index{vector layers!add!ring}
@@ -1422,27 +1433,36 @@ a ring polygon.
 \index{vector layers!add!island}
 
 You can \toolbtntwo{mActionAddIsland}{add island} polygons to a selected
+multipolygon. The new island polygon has to be digitized outside the selected
 multipolygon.
-The new island polygon has to be digitized outside the selected multipolygon.
 
 \minisec{Delete Ring}
 \index{vector layers!delete!ring}
 
+The \toolbtntwo{mActionDeleteRing}{Delete Ring} tool allows to delete ring
+polygons inside an existing area.
+
 \minisec{Delete Part}
 \index{vector layers!delete!part}
+
+The \toolbtntwo{mActionDeletePart}{Delete Part} tool 
 
 \minisec{Split Features}
 \index{vector layers!split!feature}
 
 You can split features using the \toolbtntwo{mActionSplitFeatures}{Split
-Features} icon
-on the toolbar
+Features} icon on the toolbar
 
 \minisec{Merge selected features}
 \index{vector layers!merge!features}
 
+The \toolbtntwo{mActionMergeFeatures}{Merge Selected Features} tool allows to
+merge features that have common boundaries and the same attributes.  
+
 \minisec{Node Tool}
 \index{vector layers!node!tool}
+
+The \toolbtntwo{mActionNodeTool}{Node Tool} allows to
 
 Node tool now works also with on the fly projections turned on.
 Added support for topology editing in node toolAdded support for topology

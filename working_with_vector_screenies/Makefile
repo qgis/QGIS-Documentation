@@ -26,6 +26,7 @@ PNG=shapefileloaded.eps \
     vectorAttributeTable.eps\
     vectorNotWrapping.eps\
     vectorWrapping.eps\
+    redo_undo.eps\
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\
