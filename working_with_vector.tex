@@ -1257,9 +1257,7 @@ Similarly, a one-vertex line or a two-vertex polygon is also fairly useless
 and will lead to unpredictable results elsewhere in QGIS, so don't do that.
 
 \textbf{Warning:} A vertex is identified for deletion as soon as you click
-the mouse near an eligible feature.  To undo, you will need to toggle Editing
-off and then discard your changes. (Of course this will mean that other
-unsaved changes will be lost, too.)
+the mouse near an eligible feature.  
 
 \minisec{Cutting, Copying and Pasting Features}
 \index{vector layers!cut!feature}
@@ -1323,9 +1321,7 @@ involved when converting between projections.
 If we want to delete an entire polygon, we can do that by first selecting 
 the polygon using the regular \toolbtntwo{mActionSelect}{Select Features} tool. You can select 
 multiple features for deletion. Once you have the selection set, use the 
-\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool to delete the features. There is no undo function, 
-but remember your layer isn't really changed until you stop editing and choose 
-to save your changes. So if you make a mistake, you can always cancel the save.
+\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool to delete the features. 
 
 The \toolbtntwo{mActionEditCut}{Cut Features} tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
@@ -1445,7 +1441,8 @@ polygons inside an existing area.
 \minisec{Delete Part}
 \index{vector layers!delete!part}
 
-The \toolbtntwo{mActionDeletePart}{Delete Part} tool 
+The \toolbtntwo{mActionDeletePart}{Delete Part} tool allows to delete parts
+from multifeatures (e.g. to delete polygons from a multipolygon feature).
 
 \minisec{Split Features}
 \index{vector layers!split!feature}
@@ -1462,11 +1459,20 @@ merge features that have common boundaries and the same attributes.
 \minisec{Node Tool}
 \index{vector layers!node!tool}
 
-The \toolbtntwo{mActionNodeTool}{Node Tool} allows to
+The \toolbtntwo{mActionNodeTool}{Node Tool} provides manipulation capabilites
+of feature vertices similar to CAD programs. It is possible to select
+multiple vertices at once and to move  or delete them alltogether. The node
+tool also works with 'on the fly' projection turned on and supports
+the topological editing feature.
 
-Node tool now works also with on the fly projections turned on.
-Added support for topology editing in node toolAdded support for topology
-editing in node tool..
+%%FIXME (not yet implemented in QGIS 1.2)
+%
+%\minisec{Reshape Tool}
+%\index{vector layers!reshape!tool}
+%
+%The reshape tool replaces parts of linear or polygonal features. The part 
+%between the first and last intersection of the reshape line and the feature 
+%will be replaced.
 
 \subsubsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
 
