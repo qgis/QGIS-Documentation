@@ -45,7 +45,6 @@ application to allow eVis to display documents other than images.
 
 To see the Display window click on the \tab{Display} tab in the Generic Event Browser
 window. The Display window is used to view geocoded photographs and their associated attribute data.
-The components of this window are noted in Table \ref{tab:evis_components}.
 
 \begin{figure}[ht]
    \begin{center}
@@ -152,8 +151,7 @@ eVis\_Data\textbackslash groundphotos\textbackslash DSC\_0168.JPG} & 275\\
  \hline 780819 & 1784015 &
 \filename{http://biodiversityinformatics.amnh.org/evis\_test\_data/DSC\_0170.JPG} & 10\\
  \hline 780596 & 1784017 & \filename{pdf:http://www.testsite.com/attachments.php?attachment\_id-12}
-&
-76\\
+& 76\\
  \hline
 \end{tabular}
 \end{table}
@@ -353,7 +351,7 @@ Click on the \button{Run Query} button in the \tab{SQL Query} tab to execute the
 query is successful a Database File Selection window will be displayed. If the query is not
 successful an error message will appear in the Output Console window.
 
-\begin{figure}
+\begin{figure}[htp]
    \begin{center}
 \caption{\label{evispredefined}The \emph{eVis} Perdefined queries tab \nixcaption}
 \includegraphics[clip=true, width=12cm]{evispredefined}
@@ -375,7 +373,7 @@ displayed.
 
 \minisec{XML format for eVis predefined queries}\label{evis_xml_format}
 
-\begin{table}\index{plugins!evis}
+\begin{table}[htp]\index{plugins!evis}
 \centering
 \caption{The XML tags read by eVis}\label{tab:evis_xml_tags}\medskip
  \begin{tabular}{|p{1.2in}|p{4.7in}|}

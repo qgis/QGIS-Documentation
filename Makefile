@@ -131,7 +131,7 @@ cleanpics:
 	(cd ./plugins_gps_images && make clean)
 	(cd ./plugins_grass_module_images && make clean)
 	(cd ./plugins_interpolation_images && make clean)
-	(cd ./plugins_raster_terrain_images && make)
+	(cd ./plugins_raster_terrain_images && make clean)
 	(cd ./plugins_mapserver_export_images && make clean)
 	(cd ./plugins_ogr_converter_images && make clean)
 	(cd ./plugins_quick_print_images && make clean)
