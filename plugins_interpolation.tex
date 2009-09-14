@@ -12,7 +12,11 @@ user interface for creating interpolated raster layers (See Figure \ref{fig:inte
 The plugin requires the following parameters to be specified before running:
 
 \begin{itemize}
-\item \textbf{Input vector layer}: Specify the input point vector layer from a list of loaded point layers.
+\item \textbf{Input vector layer}: Specify the input point vector layer(s) from a list of loaded
+point layers. If several layers are specified, then data from all layers is used for
+interpolation. Note: It is possible to insert lines or polygons as constraints for the
+triangulation, by specifying either ``structure lines'' or ``break lines'' in the
+\dropmenuopt{Type} dropdown menu.
 \item \textbf{Interpolation attribute}: Select attribute column to be used for interpolation or 
 enable the \checkbox{Use Z-Coordinate} checkbox to use the layers stored Z values.
 \item \textbf{Interpolation Method}: Select interpolation method. This can be either \selectstring{Triangulated Irregular 
