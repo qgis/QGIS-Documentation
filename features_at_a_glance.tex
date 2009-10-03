@@ -722,7 +722,7 @@ Measuring works within projected coordinate systems only (e.g., UTM). If
 the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be 
 incorrect. To fix this you need to set an appropriate map coordinate system 
-(See Section~\ref{label_projections}).
+(See Section~\ref{label_projections}). 
 
 \subsubsection{Measure length and areas}\index{measure:line length}\index{measure:areas}
 \includegraphics[width=0.7cm]{mActionMeasure} 
@@ -734,6 +734,7 @@ click points on the map. Each segment-length shows up in the measure-window and 
 length is printed. To stop measuring click your right mouse button. \\
 \includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
 The window shows the accumulated area-size in the measure window 
+In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. 
 
 \begin{figure}[h]
 \caption{Measure tools in action \nixcaption} \label{fig:measure}
