@@ -730,10 +730,9 @@ QGIS is also able to measure real distances between given
 points according to a defined ellipsoid. To configure this, choose menu option 
 \mainmenuopt{Settings} > \dropmenuopt{Options}, 
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
-click points on the map. Each segment-length shows up in the measure-window and additionally the total 
-length is printed. To stop measuring click your right mouse button. \\
+click points on the map. Each segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
 \includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
-The window shows the accumulated area-size in the measure window 
+In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. 
 
 \begin{figure}[h]
@@ -778,6 +777,15 @@ in the \tab{General} tab under \mainmenuopt{Settings} > \dropmenuopt{Options}
 you can select \checkbox{Warn when opening a project file saved with an older 
 version of QGIS}.
 
+
+\minisec{Project Properties}
+In the properties window for the project (under \nix{\mainmenuopt{File} > \dropmenuopt{Project Properties}} or  \win{\mainmenuopt{Settings} > \dropmenuopt{Project Properties} } you set project specific options. These include:
+\begin{itemize}
+ \item In the \tab{General} tab the Project title, units, and the option to save relative paths to layers. In addition the topological editing, and snapping options are set here.
+\item The \tab{CRS} Coordinate Reference System tab enables you to choose the CRS for this project, and to enable on-the-fly reprojection of vector layers when displaying layers from a different CRS.
+\item With the third \tab{Identifiable layers} tab you set (or disable) which layers will respond to the identify tool. (See the Map tools paragraph from the  \ref{subsec:gui_options} section to enable identifying of multiple layers.)
+\end{itemize}
+ 
 \subsection{Output}\label{sec:output}\index{output!save as image!print composer!quick print}
 There are several ways to generate output from your QGIS session.
 We have discussed one already in Section \ref{sec:projects}: saving as a project file. 
@@ -791,8 +799,7 @@ where you can layout and print the current map canvas (see Section~\ref{label_pr
 \end{itemize}
 
 
-\subsection{GUI Options}
-\label{subsec:gui_options}
+\subsection{GUI Options}\label{subsec:gui_options}
 \includegraphics[width=0.7cm,clip=true]{mActionOptions} 
 Some basic options for QGIS
 can be selected using the \dialog{Options} dialog. Select the 
@@ -829,6 +836,7 @@ optmize your options are:
 \minisec{Map tools Tab}
 
 \begin{itemize}
+\item The Mode setting determines which layers will be shown by the Identify tool. By switching to \usertext{Top down} instead of \usertext{Current layer} then attributes for all identifiable layers (See the Project properties section under: \ref{sec:projects} to set which layers are identifiable) will be show with the Identify tool.
 \item Define Search Radius as a percentage of the map width
 \item Define Ellipsoid for distance calculations
 \item Define Rubberband Color for Measure Tools
