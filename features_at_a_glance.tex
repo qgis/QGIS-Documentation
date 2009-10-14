@@ -38,16 +38,19 @@ The usage statement for QGIS is:
 \small
 \begin{verbatim}
 qgis --help
-Quantum GIS - 1.1.0-Pan (Unstable) 'Pan (Unstable)'
+Quantum GIS - 1.3.0-Mimas 'Mimas' (exported)
 Quantum GIS (QGIS) is a viewer for spatial data sets, including
 raster and vector data.
 Usage: qgis [options] [FILES]
   options:
-        [--snapshot filename]   emit snapshot of loaded datasets to given file
-        [--lang language]       use language for interface text
-        [--project projectfile] load the given QGIS project
+        [--snapshot filename]           emit snapshot of loaded datasets to given file
+        [--width width]                 width of snapshot to emit
+        [--height height]               height of snapshot to emit
+        [--lang language]               use language for interface text
+        [--project projectfile]         load the given QGIS project
         [--extent xmin,ymin,xmax,ymax]  set initial map extent
-        [--help]                this text
+        [--nologo]                      hide splash screen
+        [--help]                        this text
 
   FILES:
     Files specified on the command line can include rasters,
@@ -74,8 +77,9 @@ This option allows you to create a snapshot in PNG format from the current view.
 This comes in handy when you have a lot of projects and want to 
 generate snapshots from your data.
 
-Currently it generates a PNG-file with 800x600 pixels. A filename can be added after
-\usertext{---snapshot}.
+Currently it generates a PNG-file with 800x600 pixels. This can be adapted
+using the \usertext{---width} and \usertext{---height} command line
+arguments. A filename can be added after \usertext{---snapshot}.
 
 \minisec{Command line option \usertext{---lang}}
 Based on your locale QGIS, selects the correct localization. If you would like 
@@ -91,12 +95,13 @@ add the command line option \usertext{---project} followed by your project
 name and QGIS will open with all layers loaded described in the given file.
 
 \minisec{Command line option \usertext{---extent}}
-To start with a specific map extent use this option. You need to add the bounding
-box of your extent in the following order separated by a comma:
+To start with a specific map extent use this option. You need to add the bounding box of your extent in the following order separated by a comma:
 \begin{verbatim}
 --extent xmin,ymin,xmax,ymax
 \end{verbatim}
 
+\minisec{Command line option \usertext{---nologo}}
+This command line argument hides the splash screen when you start QGIS.
 
 \subsection{QGIS GUI}\index{main window}
 \label{label_qgismainwindow}
@@ -181,6 +186,14 @@ entry. For more information about tools and toolbars, see Section \ref{label_too
 \item \mainmenuopt{Edit}
 \begin{tabbing}
 \hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionUndo}{Undo}
+        \> \keystroke{Ctrl+Z}
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionRedo}{Redo}
+        \> \keystroke{Ctrl+Shift+Z}
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionEditCut}{Cut Features} 
 	\> \keystroke{Ctrl+X}
 	\> see Section \ref{sec:edit_existing_layer} 
@@ -265,7 +278,7 @@ And Other Edit Menu Items
 	\> \> \dropmenucheck{Map Navigation} \\
 \dropmenuopttwo{mActionZoomLast}{Zoom Last}
 	\>
-		\> \> \dropmenucheck{Map Navigation} \\
+	\> \> \dropmenucheck{Map Navigation} \\
 \dropmenuopttwo{mActionZoomNext}{Zoom Next}
 	\>
 	\> \> \dropmenucheck{Map Navigation} \\
@@ -290,7 +303,7 @@ And Other Edit Menu Items
 
 \item \mainmenuopt{Layer}
 \begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionNewVectorLayer}{New Vector Layer}
 	\> \keystroke{N}
 	\>          	
@@ -312,7 +325,7 @@ And Other Edit Menu Items
 	see Section \ref{label_postgis}
         \> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add a SpatiaLite Layer}
-        \> 
+        \> \keystroke{L}
         \>
         see Section \ref{label_spatialite}
 	\> \dropmenucheck{File} \\
@@ -376,13 +389,15 @@ And Other Edit Menu Items
 	\\
 \dropmenuopttwo{mActionProjectProperties}{Project Properties}  
 	\> \keystroke{P}
-	\>          	
-	see Section \ref{sec:projects}
+	\> see Section \ref{sec:projects}
 	\\
 \dropmenuopttwo{mActionCustomProjection}{Custom CRS}   
-\> \>          	
-see Section \ref{sec:customprojections}
+	\> \> see Section \ref{sec:customprojections}
 	\\
+\dropmenuopttwo{mActionOptions}{Configure shortcuts}
+        \>
+        \>
+        \\
 \dropmenuopttwo{mActionOptions}{Options}             
 \> \>          	
 see Section \ref{subsec:gui_options}
@@ -392,10 +407,12 @@ see Section \ref{subsec:gui_options}
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
 \begin{tabbing}
 \hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionShowPluginManager}{Plugin Manager}          	   
-\> \>          	
-see Section \ref{sec:managing_plugins}
-	\dropmenucheck{Plugins}\\
+\dropmenuopttwo{mActionShowPluginManager}{Manage Plugins}          	   
+	\> \> see Section \ref{sec:managing_plugins} \dropmenucheck{Plugins}
+	\\
+	\dropmenuopt{Python Console}
+        \> \>
+        \\
 \end{tabbing}          	
 
 \item \mainmenuopt{Help}
@@ -500,7 +517,7 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 \item \dropmenuopt{Save as shapefile}
 \item \dropmenuopt{Save selection as shapefile}
 \item \dropmenuopt{Properties}
-\item \dropmenuopt{Make to toplevel item}
+%% \item \dropmenuopt{Make to toplevel item}
 \item \dropmenuopt{Rename}
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
@@ -574,14 +591,16 @@ holding down space bar.
 \subsubsection{Map Overview}\label{label_mapoverview}
 \index{map!overview}
 
-The map overview area provides a full extent view of layers added to it.
+The map overview panel provides a full extent view of layers added to it. It
+can be selected under the menu \mainmenuopt{Settings} >\dropmenuopt{Panels}.
 Within the view is a rectangle showing the current map extent. This allows
 you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
 map overview have been set up for labeling. 
-You can add a single layer to the overview by right-clicking on it in the legend 
-and select \checkbox{Show in overview}. You can also add layers to, or remove 
-all layers from the overview using the Overview tools on the toolbar.
+
+You can add a single layer to the overview by right-clicking on it in the
+legend and select \checkbox{Show in overview}. You can also add layers to,
+or remove all layers from the overview using the Overview tools on the toolbar.
 
 If you click and drag the red rectangle in the overview that shows your 
 current extent, the main map view will update accordingly.
@@ -639,7 +658,7 @@ Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
 open the \dialog{Properties} dialog by double-clicking on the layer in the 
 legend. On the \tab{General} tab, set the minimum and maximum scale values and then
-click on the \checkbox{Scale dependent visibility} checkbox.
+click on the \checkbox{Use scale dependent rendering} checkbox.
 
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.\index{scale}
@@ -712,7 +731,7 @@ option \mainmenuopt{Settings} > \dropmenuopt{Options} click on the
 \begin{itemize}
 \item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
-\item \checkbox{Continuously redraw the map when dragging the legend/map divider}
+%%\item \checkbox{Continuously redraw the map when dragging the legend/map divider}
 \end{itemize}
 
 
@@ -729,8 +748,10 @@ incorrect. To fix this you need to set an appropriate map coordinate system
 QGIS is also able to measure real distances between given 
 points according to a defined ellipsoid. To configure this, choose menu option 
 \mainmenuopt{Settings} > \dropmenuopt{Options}, 
-click on the \tab{Map tools} tab and choose the appropriate ellipsoid. The tool then allows you to 
-click points on the map. Each segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
+click on the \tab{Map tools} tab and choose the appropriate ellipsoid. There
+you can also define a rubberband color and your preferred measurement units
+(meters or feet). The tool then allows you to click points on the map. Each
+segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
 \includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
 In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. 
@@ -810,13 +831,15 @@ optmize your options are:
 \minisec{General Tab}
 
 \begin{itemize}
-\item \checkbox{Ask to save project changes when required}
+\item \checkbox{Promt to save project changes when required}
 \item \checkbox{Warn when opening a project file saved with an older version of QGIS}
-\item \checkbox{Change Selection and backgroud Color}
+\item Change Selection and backgroud Color
 \item Change the icon theme (choose between default, classic, gis and nkids)
 \item \checkbox{Capitalise layer names in legend}
 \item \checkbox{Display classification attribute names in legend}
 \item \checkbox{Hide splash screen at startup}
+\item \checkbox{Open identify results in a dock window (QGIS restart
+required)}
 \item \checkbox{Open attribute table in a dock window}
 \item \checkbox{Add PostGIS layers with double click and select in extended mode}
 % \item Define attribute table behavior (choose between show all features, show
@@ -840,6 +863,7 @@ optmize your options are:
 \item Define Search Radius as a percentage of the map width
 \item Define Ellipsoid for distance calculations
 \item Define Rubberband Color for Measure Tools
+\item Define preferred measurement units (meter or feet)
 \item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse cursor, Nothing)
 \item Define Zoom factor for wheel mouse
 \end{itemize}
@@ -859,7 +883,8 @@ optmize your options are:
 \item Define default snapping tolerance in layer units
 \item Define search radius for vertex edits in layer units
 \item \checkbox{Show markers only for selected features}
-\item Define vertex marker style (Cross, semi transparent circle or none)
+\item Define vertex marker style (Cross, semi transparent circle or none) and
+size
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
 
