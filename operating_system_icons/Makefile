@@ -11,10 +11,9 @@
 #JPG=qgis_icon_new_verylarge.eps\
 #	nextfile.eps
 
-PNG=\
-	nix.eps\
-	win.eps\
-	osx.eps\
+PNG=nix.eps\
+    win.eps\
+    osx.eps\
 		
 ##### TARGETS #####
 
