@@ -107,8 +107,10 @@ the ERDAS Img file \filename{landcover.img} and click \button{Open}.
 \item If the file is not listed, check if the Filetype combobox at the
 bottom of the dialog is set on the right type, in this case "Erdas Imagine
 Images (*.img, *.IMG)"
-\item Now click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon.
-\item In the new Add Vector Layer dialog click \button{Browse}.
+\item Now click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon. 
+\item \radiobuttonon{'File'} should be selected as Source Type in the new
+\dialog{Add Vector Layer} dialog. Now click \button{Browse} to select the
+vector layer.
 \item Browse to the folder \filename{qgis\_sample\_data/gml/}, select "GML"
 from the filetype combobox, then select the GML file \filename{lakes.gml} 
 and click \button{Open}, then in Add Vector dialog click \button{OK}.
@@ -120,7 +122,7 @@ and click \button{Open}, then in Add Vector dialog click \button{OK}.
 checkbox to enable labeling. Choose NAMES field as Field containing label.
 \item To improve readability of labels, you can add a white buffer around them,
 by clicking ``Buffer'' in the list on the left, checking \checkbox{Buffer
-around labels?} and choosing 3 as buffer dimension.
+labels?} and choosing 3 as buffer size.
 \item Click \button{Apply}, check if the result looks good and finally
 click \button{OK}.
 \end{enumerate} 
