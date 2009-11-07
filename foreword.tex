@@ -52,17 +52,20 @@ projections without conversion to an internal or common format. Supported
 formats include:
 
 \begin{itemize}
-\item spatially-enabled PostgreSQL tables using PostGIS, vector formats
-\footnote{OGR-supported database formats such as Oracle or mySQL are not yet
-supported in QGIS.} supported by the installed OGR library, including ESRI
-shapefiles, MapInfo, SDTS and GML.
+\item spatially-enabled PostgreSQL tables using PostGIS, vector 
+formats
+%\footnote{OGR-supported database formats such as Oracle or 
+%mySQL are not yet supported in QGIS.}
+ supported by the installed OGR library, including ESRI shapefiles, MapInfo, 
+SDTS and GML (see Appendix \ref{appdx_ogr} for the complete list) .
 \item Raster and imagery formats supported by the installed GDAL (Geospatial
-Data Abstraction Library) library, such 
-as GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG, PNG.
+Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii 
+Grid, JPEG, PNG (see Appendix \ref{appdx_gdal} for the complete list).
 \item SpatiaLite databases (see Section \ref{label_spatialite}) 
 \item GRASS raster and vector data from GRASS databases (location/mapset), 
 \item Online spatial data served as OGC-compliant Web Map Service (WMS) or
-Web Feature Service (WFS).
+Web Feature Service (WFS),
+%%\item OSM
 \end{itemize}
 
 \minisec{Explore data and compose maps} 
@@ -97,6 +100,7 @@ formats. QGIS offers the following:
 \item GPS tools to import and export GPX format, and convert other GPS
 formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added 
 to list of GPS devices)
+%%\item OSM!
 \item create PostGIS layers from shapefiles with the SPIT plugin 
 \item improved handling of PostGIS tables
 \item manage vector attribute tables with the new Attribute table (see Section 
@@ -149,7 +153,7 @@ plugins.  You can even create new applications with C++ or Python!
 \\ \\ QGIS offers a growing number of external python plugins that are 
 provided by the
 community. These plugins reside in the the official
-PyQGIS repository, and can be easily installed using the python plugin 
-installer (See Section \ref{sec:plugins}).
+PyQGIS repository, and can be easily installed using the Python Plugin 
+Installer (See Section \ref{sec:plugins}).
 \end{itemize}
 
