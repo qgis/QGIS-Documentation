@@ -1512,11 +1512,17 @@ the same way as described in Section \ref{sec:edit_existing_layer} above.
 
 \subsubsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
 
-To open the attribute table for a vector layer, make the layer active by clicking on it in the Map legend area. 
-Then use \mainmenuopt{Layer} Layer from the main menu and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
-from the menu. It is also possible to rightlick on the layer and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
-from the dropdown menu. This will open a new window which displays the attributes for every feature in the layer 
-(figure \ref{fig:attributetable}).
+The attribute table displays features of a selected layer. Each row in the table 
+represents one map feature with its attributes shown in several columns. The 
+features in the table can be searched, selected, moved or even edited.
+
+To open the attribute table for a vector layer, make the layer active by clicking 
+on it in the map legend area. Then use \mainmenuopt{Layer} from the main menu 
+and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
+from the menu. It is also possible to rightlick on the layer and 
+choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the 
+dropdown menu. This will open a new window which displays the attributes for 
+every feature in the layer (figure \ref{fig:attributetable}).
 
 \begin{figure}[ht]
    \begin{center}
@@ -1525,20 +1531,42 @@ from the dropdown menu. This will open a new window which displays the attribute
 \end{center} 
 \end{figure}
 
-Each column can be sorted by clicking on its header. A small arrow indicates the sort 
-order (downward pointing means descending values from the top row down, upward pointing means 
-ascending values from the top rown down). 
-For a simple selection by attributes on only one column the \button{Look for} field 
-can be used. Select the field (column) from which the search should be performed from 
-the dropdown menu and hit the \button{Search} button. For more complex searches use the
-Advanced search \button{...}, which will lauch the Search Query Builder described in 
-Section \ref{sec:select_by_query}. 
+\minisec{Selecting features in an attribute table}
 
-To show selected records only, use the checkbox \checkbox{Show selected records only}.
-Using the buttons at the bottom left of the window, selected fields can be removed, 
-moved to the top of the table, or the selection can be inverted. Selected features can 
-also be copied to the clipboard, which can also be done with \keystroke{Ctrl-C}. You can also zoom 
-into the selected features on the map. Toggle editing allows to edit single values of attributes. 
+\textbf{A selected row} in the attribute table represents all attributes of a 
+selected feature in the layer. The attribute table reflects any changes 
+in the layer selection in the main window and vice versa. A changed selection 
+in the attribute table also causes a change in the selected feature set in the 
+main window and different layer feature selection means different rows are to be 
+selected.
+
+Rows can be selected by clicking on the row number on the left side of the 
+row. Selecting a row doesn't change the current cursor position. \textbf{Multiple 
+rows} can be marked by holding the \keystroke{Ctrl} key. A \textbf{continuous 
+selection} can be made by holding the \keystroke{Shift} key and clicking on several 
+row headers on the left side of the rows. All rows between the current cursor 
+position and the clicked row are selected.
+
+Each column can be sorted by clicking on its column header. A small arrow 
+indicates the sort order (downward pointing means descending values from the top 
+row down, upward pointing means ascending values from the top rown down).
+ 
+For a \textbf{simple search by attributes} on only one column the \button{Look for} 
+field can be used. Select the field (column) from which the search should be 
+performed from the dropdown menu and hit the \button{Search} button. For more 
+complex searches use the Advanced search \button{...}, which will lauch the 
+Search Query Builder described in Section \ref{sec:select_by_query}. 
+
+To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality: 
+
+\begin{itemize}
+\item \toolbtntwo{mActionOpenTable}{Remove selection}
+\item \toolbtntwo{mActionSelectedToTop}{Move selected to top}
+\item \toolbtntwo{mActionInvertSelection}{Invert selection}
+\item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also with \keystroke{Ctrl-C}
+\item \toolbtntwo{mActionZoomToSelected}{Zoom map to selected rows} also with \keystroke{Ctrl-J}
+\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values of attribute table.
+\end{itemize}
 
 \begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
 \qgistip{Currently only PostGIS layers are supported for adding or dropping
