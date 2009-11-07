@@ -1580,13 +1580,17 @@ in GDAL/OGR > 1.6.0
 \subsection{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
 
-The Query Builder allows you to define a subset of a table and display
-it as a layer in QGIS. It can currently only be used with PostGIS layers. 
-For example, if you have a \filename{towns} layer with a
-\usertext{population} field you could select only larger towns by entering
+The \button{Advanced search\dots} button opens the Query Builder and allows you to 
+define a subset of a table using a SQL-like WHERE clause, display the result in the 
+main window and save it as a Shapefile. For example, if you have a 
+\filename{towns} layer 
+with a \usertext{population} field you could select only larger towns by entering
 \usertext{population > 100000} in the SQL box of the query builder. Figure
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL. 
+The Fields, Values and Operators sections help the user to construct the SQL-like
+WHERE clause easily in the text field SQL where clause window.
+
 
 \begin{figure}[ht]
   \begin{center}
@@ -1595,20 +1599,30 @@ data from a PostGIS layer with attributes stored in PostgreSQL.
   \end{center}  
 \end{figure}
 
-The query builder\index{Query Builder} lists the layer's database
-fields in the list box on the left. You can get a sample of the data
-contained in the highlighted field by clicking on the \button{Sample} button\index{Query
-Builder!generating sample list}. This retrieves the first 25 distinct values
-for the field from the database. To get a list of all possible values for a
-field, click on the \button{All} button\index{Query Builder!getting all
-values}. To add a selected field or value to the query, double-click on
-it\index{Query Builder!adding fields}. You can use the various buttons to
-construct the query or you can just type it into the SQL box.
+The \textbf{Fields list} contains all attributes of the attribute table to be 
+searched. To add an attribute to the SQL where clause field, double click its 
+name in the Fields list. Generally you can use the various fields, values and 
+operators to construct the query or you can just type it into the SQL box. 
 
-To test a query, click on the \button{Test} button\index{Query Builder!testing
-queries}. This will return a count of the number of records that will be
-included in the layer. When satisfied with the query, click \button{OK}. The
-SQL for the where clause will be shown in the SQL column of the layer list.
+The \textbf{Values list} lists the values of an attribute. To list all possible 
+values of an attribute, select the attribute in the Fields list and click the 
+\button{All} button\index{Query Builder!getting all values}. To list all values 
+of an attribute that are present in the sample table, select the attribute in 
+the Fields list and click the \button{Sample} 
+button\index{Query Builder!generating sample list}. To add a value to the SQL 
+where clause field, double click its name in the Values list.   
+
+The \textbf{Operators section} contains all usable operators. To add an operator 
+to the SQL where clause field, click the appropriate button. Relational operators 
+( = , > , \dots), string comparison operator ( LIKE ), logical operators ( AND , OR 
+, \dots) are available. 
+
+The \button{Clear} button clears the text in the SQL where clause text field. The 
+\button{Test} button shows a message box with the number of features satisfying 
+the current query, which is usable in the process of query construction. The 
+\button{OK} button closes the window and selects the features satisfying the 
+query. The \button{Cancel} button closes the window without changing the current 
+selection. 
 
 \begin{Tip}\caption{\textsc{Changing the Layer Definition}}\index{Query
 Builder!changing layer definitions}
