@@ -1400,8 +1400,22 @@ integrity of your data, we offer no warranty in this regard.
 \index{vector layers!redo}
 
 The \toolbtntwo{mActionUndo}{Undo} and \toolbtntwo{mActionRedo}{Redo} tools
-allow the user to undo or redo the last or a certain step within the
-digitizing process.  
+allow the user to undo or redo the last or a certain step within the vector editing 
+operations. Basic view of Undo/Redo operations is a widget, where all operations 
+are shown (see Figure~\ref{fig:vector_redoundo}). This widget is not displayed by 
+default. Widget can be displayed by right clicking on toolbar and activating the 
+Undo/Redo check box. Undo/Redo is however active, even if the widget is not 
+displayed. 
+
+When Undo is hit, the state of all features and attributes are reverted to the 
+state before the reverted operation happened. Changes which are done elsewhere 
+(for example from some plugin), can show unspecific behavior for some operations 
+which appears in this box. The operations can be reverted or they stay the same. 
+
+An action can be triggered by clicking on Undo or Redo buttons or by clicking 
+directly on the item to which you want to return to. Another possibility to 
+trigger an undo operation is to click on the \button{undo/redo} buttons in 
+the advanced digitizing tool bar.
 
 \begin{figure}[ht]
    \begin{center}
@@ -1461,10 +1475,45 @@ merge features that have common boundaries and the same attributes.
 \index{vector layers!node!tool}
 
 The \toolbtntwo{mActionNodeTool}{Node Tool} provides manipulation capabilites
-of feature vertices similar to CAD programs. It is possible to select
-multiple vertices at once and to move  or delete them alltogether. The node
+of feature vertices similar to CAD programs. It is possible to simply select
+multiple vertices at once and to move, add or delete them alltogether. The node
 tool also works with 'on the fly' projection turned on and supports
-the topological editing feature.
+the topological editing feature. This tool is, unlike other tools in Quantum GIS, 
+persistent, so when some operation is done, selection stays active for this 
+feature and tool.
+
+\minisec{Basic operations}\index{vector layers!Node Tool}
+
+Start by activating the \toolbtntwo{mActionNodeTool}{Node Tool} and selecting 
+some features by clicking on it. Red boxes appear at each vertex of this feature. 
+This is basic select of the feature. Functionalities are:
+
+\begin{itemize}
+\item \textbf{Selecting vertex}: Selecting is easy just click on vertex and 
+color of this vertex will change to blue. When selecting more vertices 
+\keystroke{Shift} key can be used to select more vertices. Or also the 
+\keystroke{Ctrl} key can be used to invert selection of vertices (if selected then 
+it will be unselected and when not selected vertex will be selected). Also more 
+vertices can be selected at once when clicking somewhere outside feature and opening a rectangle where all vertices inside will be selected. Or just click on an edge and 
+both adjacent vertices should be selected.
+\item \textbf{Adding vertex}: Adding vertex is simple, too. Just double click near 
+some edge and a new vertex will appear on the edge near to the cursor. Note that 
+vertex will appear on edge not on cursor position, there it has to be moved if 
+necessary.
+\item \textbf{Deleting vertex}: After selecting vertices for deletion, click the 
+\keystroke{Delete} key and vertices will be deleted. Note that according to 
+standard Quantum GIS behavior, it will leave a necessary number of vertices for 
+the feature type you are working on. To delete a complete feature, another tool 
+has to be used.
+\item \textbf{Moving vertex}: Select all vertices you want to move. All selected 
+vertices are moving in the same direction as the cursor. If snapping is enabled, 
+the whole selection can jump to the nearest vertex or line.
+\end{itemize}
+
+The \button{Release} button stores all changes and a new entry appears in the undo 
+dialog. Remember that all operations support topological editing when turned on. On 
+the fly projections are also supported.
+
 
 %%FIXME (not yet implemented in QGIS 1.2)
 %
