@@ -860,19 +860,21 @@ fields, specifying them in the same way we did in our Google search example.
 
 \subsubsection{Attributes Tab}\index{attributes}\label{label_attributes}
 Within the \tab{Attributes} tab the attributes of the selected dataset can be
-manipulated. The buttons \button{New Column} and \button{Delete Column} can be
-used, when the dataset is in editing mode. At the moment only columns from 
-PostGIS layers can be edited, because this feature is not yet supported by 
-the OGR library. 
+manipulated. The buttons \toolbtntwo{mActionNewAttribute}{New Column} and 
+\toolbtntwo{mActionDeleteAttribute}{Delete Column} can be
+used, when the dataset is \toolbtntwo{mActionToggleEditing}{editing mode}. 
+%%% FIXME is this still true? Which GDAL version is needed?
+At the moment only columns from PostGIS layers can be edited, because 
+this feature is not yet supported by the OGR library. 
 
 The \button{Toggle editing mode} button toggles this mode.
 
 \minisec{edit widget}
 
-Within the \tab{Attributes} tab you also find an \texttt{edit widget} and a 
-\texttt{value} column. These two columns can be used to define values or a range 
-of values that are allowed to be added to the specific attribute table columns. 
-They are used to produce different edit widgets in the attribute dialog. These 
+Within the \tab{Attributes} tab you also find an \texttt{edit widget}. This 
+column can be used to define values or a range of values that are allowed 
+to be added to the specific attribute table columns. They are used to 
+produce different edit widgets in the attribute dialog. These 
 widgets are:
 
 \begin{itemize}
@@ -984,6 +986,7 @@ closest vertex and/or segment you are trying to
 connect when you set a new vertex or move an existing vertex. If you aren't
 within the snap tolerance, QGIS will leave the vertex where you release the
 mouse button, instead of snapping it to an existing vertex and/or segment. 
+The snapping tolerance setting affects all tools which work with tolerance. 
 
 \begin{enumerate}
 \item A general, project wide snapping tolerance can be defined choosing
@@ -991,11 +994,13 @@ mouse button, instead of snapping it to an existing vertex and/or segment.
 (On Mac: go to  \mainmenuopt{QGIS} > Preferences, on Linux: \mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options}.)
 In the \tab{Digitizing} tab you can select between to vertex, to segment or
 to vertex and segment as default snap mode. You can also define a default
-snapping tolerance and a search radius for vertex edits. The tolerance an be set either in map units or in pixels. 
-In our digitizing project (working with the
-Alaska dataset), the units are in feet. Your results may vary, but something
-on the order of 300ft should be fine at a scale of 1:10 000 should be a
-reasonable setting.
+snapping tolerance and a search radius for vertex edits. The tolerance an be 
+set either in map units or in pixels. The advantage of choosing pixels, is 
+that the snapping tolerance doesn't have to be changed after zoom operations. 
+In our small digitizing project (working with the Alaska dataset), we define 
+the snapping units in feet. Your results may vary, but something on the order 
+of 300ft should be fine at a scale of 1:10 000 should be a reasonable 
+setting.
 \item A layer based snapping tolerance can be defined by choosing
 \mainmenuopt{Settings} (or \mainmenuopt{File}) > \dropmenuopttwo{mActionOptions}{Project
 Properties\dots}. In the \tab{General} tab, section \classname{Digitize} you
