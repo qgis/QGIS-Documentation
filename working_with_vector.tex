@@ -863,12 +863,11 @@ Within the \tab{Attributes} tab the attributes of the selected dataset can be
 manipulated. The buttons \toolbtntwo{mActionNewAttribute}{New Column} and 
 \toolbtntwo{mActionDeleteAttribute}{Delete Column} can be
 used, when the dataset is \toolbtntwo{mActionToggleEditing}{editing mode}. 
-%%% FIXME is this still true? Which GDAL version is needed?
-At the moment only columns from PostGIS layers can be edited, because 
-this feature is not yet supported by the OGR library. 
+At the moment only columns from PostGIS layers can be removed and added. The 
+OGR library supports to add new columns, but not to remove them, if you have 
+a GDAL version >= 1.6 installed. 
 
-The \button{Toggle editing mode} button toggles this mode.
-
+%% FIXME: I don't understand how to use it, need an example (OD)
 \minisec{edit widget}
 
 Within the \tab{Attributes} tab you also find an \texttt{edit widget}. This 
@@ -1433,8 +1432,11 @@ the advanced digitizing tool bar.
 \index{vector layers!simplify}
 
 The \toolbtntwo{mActionSimplify}{Simplify Feature} tool allows to reduce the
-number of vertices of a feature, as long as the geometry doesn't change. If a
-feature cannot be simplified, a message shows up.
+number of vertices of a feature, as long as the geometry doesn't change. You 
+need to select one or several features, they will be highlighted by a red 
+rubber band and a slider appears. Moving the slider, the red rubber band is 
+changing its shape to show how the feature is being simplified. Clicking \button{OK} the new, simplified geometry will be stored. If a feature cannot be 
+simplified, a message shows up.
 
 \minisec{Add Ring}
 \index{vector layers!add!ring}
@@ -1456,13 +1458,16 @@ multipolygon.
 \index{vector layers!delete!ring}
 
 The \toolbtntwo{mActionDeleteRing}{Delete Ring} tool allows to delete ring
-polygons inside an existing area.
+polygons inside an existing area. This tool only works with polygon layers. 
+It doesn't change anything when it is used on the outer ring of the polygon. 
+This tool can be used on polygon and mutli-polygon features.
 
 \minisec{Delete Part}
 \index{vector layers!delete!part}
 
 The \toolbtntwo{mActionDeletePart}{Delete Part} tool allows to delete parts
-from multifeatures (e.g. to delete polygons from a multipolygon feature).
+from multifeatures (e.g. to delete polygons from a multipolygon feature). It 
+won't delete the last part of the feature, this last part will stay untouched. This tool works with all multi-part geometries point, line and polygon.
 
 \minisec{Split Features}
 \index{vector layers!split!feature}
