@@ -1389,15 +1389,20 @@ integrity of your data, we offer no warranty in this regard.
    & Delete Ring \\
 \hline \includegraphics[width=0.7cm]{mActionDeletePart}
    & Delete Part
-   & \includegraphics[width=0.7cm]{mActionSplitFeatures}
-   & Split Features \\
-\hline \includegraphics[width=0.7cm]{mActionMergeFeatures}
-   & Merge Selected Features
-   & \includegraphics[width=0.7cm]{mActionNodeTool}
-   & Node Tool \\
+   & \includegraphics[width=0.7cm]{mActionReshape}
+   & Reshape Features \\
+\hline \includegraphics[width=0.7cm]{mActionSplitFeatures}
+   & Split Features
+   & \includegraphics[width=0.7cm]{mActionMergeFeatures}
+   & Merge Selected Features \\
+\hline \includegraphics[width=0.7cm]{mActionNodeTool}
+   & Node Tool
+   &
+   & \\
 \hline
 \end{tabular}
 \end{table}
+
 
 \minisec{Undo and Redo}
 \index{vector layers!undo}
@@ -1468,6 +1473,12 @@ This tool can be used on polygon and mutli-polygon features.
 The \toolbtntwo{mActionDeletePart}{Delete Part} tool allows to delete parts
 from multifeatures (e.g. to delete polygons from a multipolygon feature). It 
 won't delete the last part of the feature, this last part will stay untouched. This tool works with all multi-part geometries point, line and polygon.
+
+\minisec{Reshape Features}
+\index{vector layers!reshape!feature}
+
+You can reshape features using the \toolbtntwo{mActionReshape}{Reshape Features} 
+icon on the toolbar.
 
 \minisec{Split Features}
 \index{vector layers!split!feature}

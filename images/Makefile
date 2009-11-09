@@ -79,6 +79,7 @@ PNG=\
   mActionPropertyItem.eps\
   mActionQgisHomePage.eps\
   mActionRemove.eps\
+  mActionReshape.eps\
   mActionRemoveAllFromOverview.eps\
   mActionRemoveLayer.eps\
   mActionSaveAsSVG.eps\
