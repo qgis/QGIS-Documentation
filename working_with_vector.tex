@@ -867,41 +867,31 @@ At the moment only columns from PostGIS layers can be removed and added. The
 OGR library supports to add new columns, but not to remove them, if you have 
 a GDAL version >= 1.6 installed. 
 
-%% FIXME: I don't understand how to use it, need an example (OD)
 \minisec{edit widget}
 
-Within the \tab{Attributes} tab you also find an \texttt{edit widget}. This 
-column can be used to define values or a range of values that are allowed 
-to be added to the specific attribute table columns. They are used to 
-produce different edit widgets in the attribute dialog. These 
-widgets are:
+\begin{figure}[H]
+   \begin{center}
+   \caption{Dialog to select an edit widget for an attribute column \nixcaption}\label{fig:editwidget}\smallskip
+   \includegraphics[clip=true, width=14cm]{editwidgetsdialog}
+\end{center}
+\end{figure}
+
+Within the \tab{Attributes} tab you also find an \texttt{edit widget} column. 
+This column can be used to define values or a range of values that are allowed 
+to be added to the specific attribute table column. If you click on the 
+\button{edit widget} button, a dialog opens, where you can define different 
+widgets. These widgets are:
 
 \begin{itemize}
-\item line edit: an edit field which allows to enter simple text (or restrict to 
+\item Line edit: an edit field which allows to enter simple text (or restrict to 
 numbers for numeric attributes).
-\item unique value: a list of unique attribute values of all pre-existing features
-is produced and presented in a combo box for selection.
-\item  unique value (editable): a combination of `line edit' and `unique value'.
-The edit field completes entered values to the unique value, but also allows
-to enter new values.
-\item value map: a combobox to select from a set of values specified in the
-\texttt{value} column the \tab{Attributes} tab.  The possible values are 
-delimited by a semicolon (e.g. \verb|high;medium;low|).  It is also possible
-to prepend a label to each value, which is delimited with an equal sign (e.g.
-\verb|high=1;medium=2;low=3|). The label is shown in the combobox instead of
-the value.
-\item classification: if a unique value renderer is selected for the layer, the
-values used for the classes are presented for selection in a combobox.
-\item range (editable): A edit field that allows to restrict numeric values to a
-given range.  That range is specified by entering minium and maximum value
-delimited by a semicolon (e.g. \verb|0;360|) in the \texttt{value} column of
-the \tab{Attributes} tab.
-\item range (slider): A slider widget is presented that allows selection of a value
-in a given range and precision.  The range is specifed by minimum, maximum
-value and a step width (e.g. \verb|0;360;10|) in the \texttt{value} column of
-the \tab{Attributes} tab.
-\item file name: the line edit widget is accompanied by a push button. When pressed
-it allows to select a filename using the standard file dialog.
+\item Classification: Displays a combo box with the values used for classification, if you have chosen 'unique value' as legend type in the symbology tab of the properties dialog.
+\item Range: Allows to set numeric values from a specific range. The edit widget can be either a slider or a spin box.
+\item Unique value: The user can select one of the values already used in the attribute table. If editable is activated, a line edit is shown with autocompletion support, otherwise a combo box is used. 
+\item File name: Simplifies the selection by adding a file chooser dialog.
+\item Value map: a combo box with predefined items. The value is stored in the attribute, the description is shown in the comboo box. You can define values manually or load them from a layer or a csv file. 
+\item Enumeration: Opens a combo box with values that can be used within the columns type. This is currently only supported by the postgres provider.
+\item Immutable: The immutable attribute column is read-only. The user is not able to modify the content. 
 \end{itemize}
 
 \subsubsection{Diagram Tab}\label{sec:diagram}

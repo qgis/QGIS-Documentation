@@ -25,6 +25,7 @@ PNG=shapefileloaded.eps \
     addvectorlayerdialog.eps\
     vectorAttributeTable.eps\
     vectorNotWrapping.eps\
+    editwidgetsdialog.eps\
     vectorWrapping.eps\
     redo_undo.eps\
 
