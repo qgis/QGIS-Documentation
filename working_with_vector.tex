@@ -1467,8 +1467,18 @@ won't delete the last part of the feature, this last part will stay untouched. T
 \minisec{Reshape Features}
 \index{vector layers!reshape!feature}
 
-You can reshape features using the \toolbtntwo{mActionReshape}{Reshape Features} 
-icon on the toolbar.
+You can reshape line and polygon features using the 
+\toolbtntwo{mActionReshape}{Reshape Features} icon on the toolbar. It
+replaces the line or polygon part from the first to the last intersection 
+with the original line. With polygons this can sometime lead to unintended 
+results. It is mainly useful to replace smaller parts of a polygon, not major 
+overhauls and the reshapeline is not allowed to cross several polygon rings
+as this would generate an invalide polygon.
+
+\textbf{Note}: The reshape tool may alter the starting position of a polygon
+ring or a closed line. So the point that is represented 'twice' will not be
+the same any more. This may not be a problem for most applications, but it is
+something to consider.
 
 \minisec{Split Features}
 \index{vector layers!split!feature}
