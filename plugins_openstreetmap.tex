@@ -71,7 +71,7 @@ payload is used for the communication with the OSM server as well.
 For more information visit the project website at:
 \url{http://www.openstreetmap.org}.
 
-\subsubsection{QGIS - OSM Connection}\label{qgis-osm-connection}
+\minisec{QGIS - OSM Connection}\label{qgis-osm-connection}
 
 The first part of this subsection describes the way how OSM data primitives 
 are displayed in QGIS vector layers.
@@ -126,63 +126,58 @@ editing tools, changes in QuantumGIS core code would be necessary.
 
 \subsubsection{Installation}
 
-The OpenStreetMap plugin is a core plugin inside the QGIS environment. To 
-use it, some steps have to be followed beforehand:
-
-\begin{enumerate}
-\item You have to have python support enabled in QuantumGIS
-\item Download the plugin package and unpack it to ~/.qgis/python/plugins.
-You should have the plugin inside the directory now. 
-\item cd ~/.qgis/python/plugins/osmplugin 
-\item make 
-\end{enumerate}
-
-Now you should be able to use the plugin by starting QGIS and enabling the 
-'OpenStreetMap plugin' in the Plugin Manager as described in section 
-\ref{sec:load_core_plugin}). 
+The OpenStreetMap plugin is a core plugin inside the QGIS environment. If 
+you have python support enabled, the 'OpenStreetMap' plugin can be selected 
+in the Plugin Manager as described in section \ref{sec:load_core_plugin}). 
 
 \subsubsection{Basic user interface}
 
-The first time OSM plugin is started (and after the first data are loaded),
-something like the following should show up:
+The first time the OSM plugin is started (and after the first data are 
+loaded), several new OSM plugin icons appear in the QGIS toolbar menu 
+together with new graphical components as shown in Figure 
+\ref{fig:osmwidget}:
 
-As you can see plugin consists of few graphic components.
+\begin{figure}[ht]
+   \begin{center}
+   \caption{OSM plugin user interface \nixcaption}\label{fig:osmwidget}\smallskip
+   \includegraphics[clip=true, width=\textwidth]{osm_widgets}
+\end{center}
+\end{figure}
 
-Here is brief information on them:
+\minisec{OSM Features widget}
 
-\textbf{OSM Features}
-
-Dockable widget that helps QGIS user with OSM feature identification. It
+This widget helps to identify OSM features. It
 shows basic information on features type and identifier as well as info on
 who and when changed feature lately. OSM Feature widget holds all editing
 tools also (in the top part of it). More information on those tools can be
 found in section focused on editing. Widget is initially disabled. It
 activates itself after successfull loading of some OSM data.
 
-\textbf{OSM Undo / Redo}
+\minisec{OSM Undo/Redo widget}
 
-Dockable widget intended to help user with reverting edit actions. It
-consists not only of clasical Undo button and Redo button, it shows even list
-of brief description of edit actions that were done. OSM Undo / Redo widget
+This widget is used to undo and redo edit actions. It consists not only 
+of clasical Undo button and Redo button, it shows a list with brief 
+description of edit actions that were done. The OSM Undo/Redo widget
 is initially closed. You can show it using special button on OSM Feature
 widget.
 
-\textbf{Tool buttons}
+\minisec{Toolbar menu icons}
 
 \begin{description}
-\item Load OSM from file: used to show dialog for loading data from special
-OpenStreetMap XML file
-\item Show/Hide OSM Feature Manager: to show or hide OSM Feature widget; OSM
-Feature widget is panel that helps with OSM feature identification and with
-OSM data editing
-\item Download OSM data: used to show dialog purpose of which is to help user
-to download data from the OpenStreetMap server
-\item Upload OSM data: to show dialog for uploading changes (on current data) 
-Import data from a layer: to show dialog for importing data from a vector
-layer; at least one vector layer must be loaded and current OSM data must be
-selected
-\item Save OSM to file: to show dialog purpose of which is to help user with
-saving OSM data back to XML file
+\item \toolbtntwo{osm_load}{Load OSM from file}: is used to load data from a 
+special OpenStreetMap XML file.
+\item \toolbtntwo{osm_featureManager}{Show/Hide OSM Feature Manager} is 
+used to show or hide the OSM Feature widget. The OSM Feature widget is a 
+panel that helps with OSM feature identification and with OSM data editing.
+\item \toolbtntwo{osm_download}{Download OSM data} is used to download data 
+from the OpenStreetMap server.
+\item \toolbtntwo{osm_upload}{Upload OSM data} is used to upload changes 
+(on current data). 
+\item \toolbtntwo{osm_import}{Import data from a layer} is used to import 
+data from a vector layer. At least one vector layer must be loaded and 
+current OSM data must be selected.
+\item \toolbtntwo{osm_save}{Save OSM to file} is used to save OSM data 
+back to an XML file.
 \end{description}
 
 More detailed information on all the widgets, buttons and dialogs can be

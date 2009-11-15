@@ -12,8 +12,35 @@
 #	nextfile.eps
 
 PNG=osmweb.eps\
-	
-	
+	osm_addRelation.eps\
+	osm_clearUndoRedo.eps\
+	osm_createLine.eps\
+	osm_createPoint.eps\
+	osm_createPolygon.eps\
+	osm_createRelation.eps\
+	osm_download.eps\
+	osm_editRelation.eps\
+	osm_editRelation.eps\
+	osm_featureManager.eps\
+	osm_generateTags.eps\
+	osm_identify.eps\
+	osm_import.eps\
+	osm_load.eps\
+	osm_move.eps\
+	osm_questionMark.eps\
+	osm_redo.eps\
+	osm_removeFeat.eps\
+	osm_removeMember.eps\
+	osm_remove.eps\
+	osm_removeRelation.eps\
+	osm_removeTag.eps\
+	osm_save.eps\
+	osm_star.eps\
+	osm_undo.eps\
+	osm_upload.eps\
+	osm_urDetails.eps\
+	osm_widgets.eps\
+
 ##### TARGETS #####
 
 all: $(PNG) $(JPG)
