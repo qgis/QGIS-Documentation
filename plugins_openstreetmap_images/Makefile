@@ -40,6 +40,14 @@ PNG=osmweb.eps\
 	osm_upload.eps\
 	osm_urDetails.eps\
 	osm_widgets.eps\
+	osmloaddialog.eps\
+	osm_changefeaturetag.eps\
+	osm_pointcreation.eps\
+	osm_downloaddialog.eps\
+	osm_uploaddialog.eps\
+	osm_savedialog.eps\
+	osm_importtoosmdialog.eps\
+	osm_importdialog.eps\
 
 ##### TARGETS #####
 
