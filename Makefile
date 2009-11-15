@@ -97,6 +97,7 @@ pics:
 	(cd ./working_with_projections_screenies && make)
 	(cd ./grass_integration_screenies && make)
 	(cd ./print_composer_screenies && make)
+	(cd ./plugins_openstreetmap_images && make)
 #	(cd ./help_and_support_screenies && make)
 	(cd ./operating_system_icons && make)
 
@@ -152,11 +153,12 @@ cleanpics:
 	(cd ./print_composer_screenies && make clean)
 	(cd ./help_and_support_screenies && make clean)
 	(cd ./operating_system_icons && make clean)
+	(cd ./plugins_openstreetmap_images && make clean)
 	(cd ./plugins_diagram_overlay_images && make clean)
 	(cd ./plugins_oracle_raster_images && make clean)
 	for i in `find . -name *.eps` ; do rm -f $i ; done
 
-# Update icons from qgis source if necessary
+# Update icons from qgis source if necessary (needs an update 11/09 OD)
 updateicon:
 	(cd ./images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/../../images/themes/default/*.png .)
 	(cd ./plugins_add_wfs_layer_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/wfs/*.png .)	
@@ -171,4 +173,5 @@ updateicon:
 	(cd ./plugins_quick_print_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/quick_print/*.png .)
 	(cd ./plugins_spit_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/spit/*.png .)
 	(cd ./plugins_python_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
+	(cd ./plugins_openstreetmap_images && rm -f *.png *.eps && cp $(QGISPLUGINSOURCE)/*.png .)
 
