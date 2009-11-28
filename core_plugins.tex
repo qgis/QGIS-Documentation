@@ -6,9 +6,8 @@
 % comment out the following line:
 %\updatedisclaimer
 
-QGIS currently contains 19 core plugins that can be loaded using the Plugin Manager.
-Table \ref{tab:core_plugins} lists each of the core plugins along with a
-description of their purpose and the toolbar-icon.
+QGIS \CURRENT contains 22 core plugins that can be loaded using the Plugin 
+Manager (see Table \ref{tab:core_plugins}).
 
 % minipage is needed to appear the footnote under the table
 % SH
@@ -34,6 +33,9 @@ description of their purpose and the toolbar-icon.
 \hline
 \includegraphics[width=0.6cm]{dxf2shp_converter}
  & DXF2Shape Converter \index{plugins!DXF2Shape}& Converts from DXF to SHP file format\\
+\hline
+\includegraphics[width=0.6cm]{evis_icon}
+ & eVis & Event Visualization Tool \\
 \hline
 \includegraphics[width=0.6cm, height=0.6cm]{ftoolslogo}
  & fTools \index{plugins!ftools}& A suite of analysis, geometry, geoprocessing, and research tools\\
@@ -64,6 +66,9 @@ ruggedness and total curvature of DEMs\\
  & OGR Layer Converter \index{plugins!OGR converter} & Translate vector
 layers between OGR suported formats\\
 \hline
+\includegraphics[width=0.6cm]{osm_icon}
+ & OpenStreetMap & Visualize and edit OpenStreetMap data \\
+\hline
 \includegraphics[width=0.6cm]{oracle_raster}
  & Oracle Georaster \index{plugins!georaster}& Access Oracle Spatial GeoRasters\\
 \hline
@@ -83,15 +88,8 @@ effort \\
 \includegraphics[width=0.6cm]{mIconAddWfsLayer}
  & WFS & Load and display WFS layer \\
 \hline
-\includegraphics[width=0.6cm]{evis_icon}
- & eVis & Event Visualization Tool \\
-\hline
 \end{tabular}
 \end{table}
 \end{minipage}
 
 \normalsize
-
-\begin{Tip}\caption{\textsc{Plugins Settings Saved to Project}}\index{plugins settings}
-\qgistip{When you save a .qgs project, any changes you have made to NorthArrow, ScaleBar and Copyright plugins will be saved in the project and restored next time you load the project.}
-\end{Tip}

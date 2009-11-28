@@ -48,6 +48,7 @@ PNG=osmweb.eps\
 	osm_savedialog.eps\
 	osm_importtoosmdialog.eps\
 	osm_importdialog.eps\
+	osm_icon.eps\
 
 ##### TARGETS #####
 
