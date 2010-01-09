@@ -1455,14 +1455,17 @@ multipolygon.
 The \toolbtntwo{mActionDeleteRing}{Delete Ring} tool allows to delete ring
 polygons inside an existing area. This tool only works with polygon layers. 
 It doesn't change anything when it is used on the outer ring of the polygon. 
-This tool can be used on polygon and mutli-polygon features.
+This tool can be used on polygon and mutli-polygon features. Before
+you select the vertices of a ring, adjust the vertex edit tolerance.
 
 \minisec{Delete Part}
 \index{vector layers!delete!part}
 
 The \toolbtntwo{mActionDeletePart}{Delete Part} tool allows to delete parts
 from multifeatures (e.g. to delete polygons from a multipolygon feature). It 
-won't delete the last part of the feature, this last part will stay untouched. This tool works with all multi-part geometries point, line and polygon.
+won't delete the last part of the feature, this last part will stay untouched. 
+This tool works with all multi-part geometries point, line and polygon. Before 
+you select the vertices of a part, adjust the vertex edit tolerance. 
 
 \minisec{Reshape Features}
 \index{vector layers!reshape!feature}
