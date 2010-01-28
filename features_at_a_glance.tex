@@ -39,7 +39,7 @@ The usage statement for QGIS is:
 \small
 \begin{verbatim}
 qgis --help
-Quantum GIS - 1.3.0-Mimas 'Mimas' (exported)
+Quantum GIS - 1.4.0-Enceladus 'Enceladus' (exported)
 Quantum GIS (QGIS) is a viewer for spatial data sets, including
 raster and vector data.
 Usage: qgis [options] [FILES]
@@ -87,8 +87,8 @@ Based on your locale QGIS, selects the correct localization. If you would like
 to change your language, you can specify a language code. For example: 
 \usertext{---lang=it}
 starts QGIS in italian localization. A list of currently supported
-languages with language code is provided at
-\url{http://wiki.qgis.org/qgiswiki/TranslatorsCorner} 
+languages with language code and status is provided at
+\url{http://www.qgis.org/wiki/GUI_Translation_Progress} 
 
 \minisec{Command line option \usertext{---project}}
 Starting QGIS with an existing project file is also possible. Just
@@ -138,14 +138,16 @@ the following sections.
 
 The menu bar provides access to various QGIS features using a standard 
 hierarchical menu. The top-level menus and a summary of some of the
-menu options are listed below, together with the icons of the corresponding 
-tools as they appear on the toolbar, as well as keyboard shortcuts.\footnote{Keyboard shortcuts can 
-now be configured manually (shortcuts presented in this section are the defaults), using the Configure 
+menu options are listed below, together with the icons of the corresponding
+tools as they appear on the toolbar, as well as keyboard
+shortcuts.\footnote{Keyboard shortcuts can now be configured manually
+(shortcuts presented in this section are the defaults), using the Configure 
 Shortcuts tool under Settings Menu.}
 Although most menu options have a corresponding tool and vice-versa,
 the menus are not organized quite like the toolbars. 
 The toolbar containing the tool is listed after each menu option as a checkbox
-entry. For more information about tools and toolbars, see Section \ref{label_toolbars}.
+entry. For more information about tools and toolbars, see Section
+\ref{label_toolbars}.
 
 \begin{tabbing}
 \hspace{5.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
@@ -178,10 +180,17 @@ entry. For more information about tools and toolbars, see Section \ref{label_too
 \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
 	\>
 	\> see Section \ref{sec:output} \\
-\dropmenuopttwo{mActionFilePrint}{Print Composer}
-	\> \keystroke{Ctrl+P}
+\dropmenuopttwo{mActionNewComposer}{New Print Composer}
+        \> \keystroke{Ctrl+P}
+        \> see Section \ref{label_printcomposer}
+        \> \dropmenucheck{File} \\
+\dropmenuopttwo{mActionComposerManager}{Composer manager}
+	\> 
 	\> see Section \ref{label_printcomposer}
 	\> \dropmenucheck{File} \\
+\dropmenuopt{Print Composers}
+	\>
+	\> see Section \ref{label_printcomposer} \\
 \dropmenuopttwo{mActionFileExit}{Exit} 
 	\> \keystroke{Ctrl+Q} \\
 \end{tabbing}
@@ -191,12 +200,12 @@ entry. For more information about tools and toolbars, see Section \ref{label_too
 \hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionUndo}{Undo}
         \> \keystroke{Ctrl+Z}
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
 \dropmenuopttwo{mActionRedo}{Redo}
         \> \keystroke{Ctrl+Shift+Z}
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
 \dropmenuopttwo{mActionEditCut}{Cut Features} 
 	\> \keystroke{Ctrl+X}
 	\> see Section \ref{sec:edit_existing_layer} 
@@ -209,40 +218,75 @@ entry. For more information about tools and toolbars, see Section \ref{label_too
 	\> \keystroke{Ctrl+V}
 	\> see Section \ref{sec:edit_existing_layer} 
 	\> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionEditPaste}{Move Feature}
+        \> 
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionDeleteSelected}{Delete Selected}
+        \> 
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionSimplify}{Simplify Feature}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionAddRing}{Add Ring}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionAddIsland}{Add Part}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionDeleteRing}{Delete Ring}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionDeletePart}{Delete Part}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionReshape}{Reshape Features}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionSplitFeatures}{Split Features}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionMergeFeatures}{Merge selected Features}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionNodeTool}{Node Tool}
+        \>
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
+\dropmenuopttwo{mActionRotatePointSymbols}{Rotate Point Symbols}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
+\end{tabbing}
+
+After activating the \toolbtntwo{mActionToggleEditing}{toogle editing} mode
+for a layer, you will find another capture feature icon in the
+\mainmenuopt{Edit} menu depending on the layer type (point, line or
+polygon). \\
+
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionCapturePoint}{Capture Point}
-	\> \keystroke{.}
-	\> see Section \ref{sec:edit_existing_layer} 
-	\> \dropmenucheck{Digitizing} \\
+        \>
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionCaptureLine}{Capture Line}
-	\> \keystroke{/}
-	\> see Section \ref{sec:edit_existing_layer} 
-	\> \dropmenucheck{Digitizing} \\
+        \>
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionCapturePolygon}{Capture Polygon}
-	\> \keystroke{Ctrl+/}
-	\> see Section \ref{sec:edit_existing_layer} 
-	\> \dropmenucheck{Digitizing} \\
-And Other Edit Menu Items
-	\>
-	\> see Section \ref{sec:edit_existing_layer} 
-	\> \dropmenucheck{Digitizing} \\
-%\dropmenuopt{Move Feature}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Split Features}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Delete Selected}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Add Vertex}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Move Vertex}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Delete Vertex}
-%	\> \> \dropmenucheck{Edit} \\
-%\dropmenuopt{Add Ring}\footnote{New since v0.9} 
-%	\>
-%	\> \dropmenucheck{Edit} \\
-%\dropmenuopt{Add Island} \footnotemark[\value{footnote}] 
-%	\>
-%	\> \dropmenucheck{Edit} \\
+        \>
+        \> see Section \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitizing} \\
 \end{tabbing}
 
 
@@ -261,6 +305,9 @@ And Other Edit Menu Items
 \dropmenuopttwo{mActionSelect}{Select Features}
 	\>
 	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionDeselectAll}{Deselect Features}
+        \>
+        \> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionIdentify}{Identify Features}
 	\> \keystroke{I}
 	\> \> \dropmenucheck{Attributes} \\
@@ -312,27 +359,27 @@ And Other Edit Menu Items
 	\>          	
 	see Section \ref{sec:create shape}
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddNonDbLayer}{Add a Vector Layer}       
+\dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}       
 	\> \keystroke{V}
 	\>          	
 	see Section \ref{label_workingvector}
 	\> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionAddRasterLayer}{Add a Raster Layer}       
+\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}       
 	\> \keystroke{R}
 	\>          	
 	see Section \ref{label_raster}
 	\> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionAddLayer}{Add a PostGIS Layer}      
+\dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}      
 	\> \keystroke{D}
 	\>          	
 	see Section \ref{label_postgis}
         \> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add a SpatiaLite Layer}
+\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer}
         \> \keystroke{L}
         \>
         see Section \ref{label_spatialite}
 	\> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionAddWmsLayer}{Add a WMS Layer}          
+\dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}          
 	\> \keystroke{W}
 	\>          	
 	see Section \ref{sec:ogc-wms}
@@ -397,6 +444,10 @@ And Other Edit Menu Items
 \dropmenuopttwo{mActionCustomProjection}{Custom CRS}   
 	\> \> see Section \ref{sec:customprojections}
 	\\
+\dropmenuopt{Style Manager}
+        \>
+        \>
+        \\
 \dropmenuopttwo{mActionOptions}{Configure shortcuts}
         \>
         \>

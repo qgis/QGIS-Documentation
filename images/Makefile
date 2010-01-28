@@ -37,11 +37,13 @@ PNG=\
   mActionCheckQgisVersion.eps\
   mActionCollapseTree.eps\
   mActionContextHelp.eps\
+  mActionComposerManager.eps\
   mActionCopySelected.eps\
   mActionCustomProjection.eps\
   mActionDeleteAttribute.eps\
   mActionDeleteSelected.eps\
   mActionDeleteVertex.eps\
+  mActionDeselectAll.eps\
   mActionDraw.eps\
   mActionEditCopy.eps\
   mActionEditCut.eps\
@@ -69,6 +71,7 @@ PNG=\
   mActionMoveFeature.eps\
   mActionMoveVertex.eps\
   mActionNewAttribute.eps\
+  mActionNewComposer.eps\
   mActionNewBookmark.eps\
   mActionNewFolder.eps\
   mActionNewVectorLayer.eps\
@@ -82,6 +85,7 @@ PNG=\
   mActionReshape.eps\
   mActionRemoveAllFromOverview.eps\
   mActionRemoveLayer.eps\
+  mActionRotatePointSymbols.eps\
   mActionSaveAsSVG.eps\
   mActionSaveMapAsImage.eps\
   mActionScaleBar.eps\
