@@ -99,10 +99,10 @@ formats. QGIS offers the following:
 \item geocode images with the Georeferencer plugin
 \item GPS tools to import and export GPX format, and convert other GPS
 formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added to list of GPS devices)
-\item visualize and edit OpenStreet data
+\item visualize and edit OpenStreetMap data
 \item create PostGIS layers from shapefiles with the SPIT plugin 
 \item improved handling of PostGIS tables
-\item manage vector attribute tables with the new Attribute table (see Section 
+\item manage vector attribute tables with the new attribute table (see Section 
 \ref{sec:attribute table}) or Table Manager plugin
 \item save screenshots as georeferenced images
 \end{itemize}
@@ -128,34 +128,41 @@ QGIS can be adapted to your special needs with the extensible
 plugin architecture. QGIS provides libraries that can be used to create
 plugins.  You can even create new applications with C++ or Python!
 
-\begin{itemize}
-\item \textbf{Core Plugins}
-\\ \\ Add WFS Layer
-\\ Add Delimited Text Layer
-\\ Coordinate Capture
-\\ Decorations (Copyright Label, North Arrow and Scale bar)
-\\ Diagram Overlay
-\\ Dxf2Shp Converter
-\\ GDAL-Georeferencer
-\\ fTools
-\\ GPS Tools
-\\ GRASS integration
-\\ Interpolation Plugin
-\\ OGR Layer Converter
-\\ Access Oracle-Spatial-GeoRaster
-\\ Quick Print
-\\ Raster Terrain Analysis Plugin
-\\ SPIT Shapefile to PostgreSQL/PostGIS Import Tool
-\\ Mapserver Export
-\\ eVIS - Event Visualization Tool
-\\ Python Console
-\\ Python Plugin Installer
-\\ \item \textbf{External Python Plugins}
-\\ \\ QGIS offers a growing number of external python plugins that are 
-provided by the community. These plugins reside in the official
-PyQGIS repository, and can be easily installed using the Python Plugin 
-Installer (See Section \ref{sec:plugins}).
-\end{itemize}
+\minisec{Core Plugins}
+
+\begin{enumerate}
+\item Add Delimited Text Layer (Loads and displays delimited text files
+containing x,y coordinates)
+\item Coordinate Capture (Capture mouse coordinates in different CRS)
+\item Decorations (Copyright Label, North Arrow and Scale bar)
+\item Diagram Overlay (Placing diagrams on vector layer)
+\item Dxf2Shp Converter (Convert DXF to Shape)
+\item GPS Tools (Loading and importing GPS data)
+\item GRASS (GRASS GIS integration)
+\item Georeferencer GDAL (Adding projection information to raster using GDAL)
+\item Interpolation plugin (interpolate based on vertices of a vector layer)
+\item Labeling (Smart labeling for vector layers)
+\item Mapserver Export (Export QGIS project file to a MapServer map file)
+\item OGR Layer Converter (Translate vector layer between formats)
+\item OpenStreetMap plugin (Viewer and editor for openstreetmap data)
+\item Oracle Spatial GeoRaster support
+\item Python Plugin Installer (Download and install QGIS python plugins)
+\item Quick Print (Print a map with minimal effort)
+\item Raster terrain analysis (Raster based terrain analysis)
+\item SPIT (Import Shapefile to PostgreSQL/PostGIS)
+\item WFS Plugin (Add WFS layers to QGIS canvas)
+\item eVIS (Event Visualization Tool)
+\item fTools (Tools for vector data analysis and management)
+\item Python Console (Access QGIS environment)
+\item Python Plugin Installer
+\end{enumerate}
+
+\minisec{External Python Plugins}
+
+QGIS offers a growing number of external python plugins that are provided by
+the community. These plugins reside in the official PyQGIS repository, and
+can be easily installed using the Python Plugin Installer (See Section
+\ref{sec:plugins}).
 
 \subsubsection{What's new in version \CURRENT} 
 
