@@ -1,3 +1,4 @@
+%\item \checkbox{Continuously redraw the map when dragging the legend/map divider}
 % vim:autoindent:set textwidth=78:
 
 \section{Features at a Glance}\label{feature_glance}
@@ -268,10 +269,9 @@ entry. For more information about tools and toolbars, see Section
         \> \dropmenucheck{Advanced Digitizing} \\
 \end{tabbing}
 
-After activating the \toolbtntwo{mActionToggleEditing}{toogle editing} mode
-for a layer, you will find another capture feature icon in the
-\mainmenuopt{Edit} menu depending on the layer type (point, line or
-polygon). \\
+After activating \toolbtntwo{mActionToggleEditing}{toogle editing} mode
+for a layer, you will find a capture feature icon in the \mainmenuopt{Edit}
+menu depending on the layer type (point, line or polygon). \\
 
 \begin{tabbing}
 \hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
@@ -355,32 +355,32 @@ polygon). \\
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionNewVectorLayer}{New Vector Layer}
-	\> \keystroke{N}
+	\> \keystroke{Ctrl+Shift+N}
 	\>          	
 	see Section \ref{sec:create shape}
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}       
-	\> \keystroke{V}
+	\> \keystroke{Ctrl+Shift+V}
 	\>          	
 	see Section \ref{label_workingvector}
 	\> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}       
-	\> \keystroke{R}
+	\> \keystroke{Ctrl+Shift+R}
 	\>          	
 	see Section \ref{label_raster}
 	\> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}      
-	\> \keystroke{D}
+	\> \keystroke{Ctrl+Shift+D}
 	\>          	
 	see Section \ref{label_postgis}
         \> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer}
-        \> \keystroke{L}
+        \> \keystroke{Ctrl+Shift+L}
         \>
         see Section \ref{label_spatialite}
 	\> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}          
-	\> \keystroke{W}
+	\> \keystroke{Ctrl+Shift+W}
 	\>          	
 	see Section \ref{sec:ogc-wms}
 	\> \dropmenucheck{File} \\
@@ -397,34 +397,34 @@ polygon). \\
 \dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
 	\> \keystroke{Ctrl+D}
 	\>          	
-	\> \dropmenucheck{Manage Layers} \\
+	\> \dropmenucheck{Properties} \\
 \dropmenuopt{Properties}
 	\\
 \dropmenuopttwo{mActionInOverview}{Add to Overview}
-	\> \keystroke{O}
+	\> \keystroke{Ctrl+Shift+O}
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddAllToOverview}{Add All To Overview}
-	\> \keystroke{+}
+	\> 
 	\>          	
 	\\
 \dropmenuopttwo{mActionRemoveAllFromOverview}{Remove All From Overview}
-	\> \hspace{1cm}\keystroke{-}
+	\> 
 	\>          	
 	\\
 \dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
-	\> \keystroke{H}
+	\> \keystroke{Ctrl+Shift+H}
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
-	\> \keystroke{S}
+	\> \keystroke{Ctrl+Shift+S}
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
 \end{tabbing}
 
 \item \mainmenuopt{Settings}
 \begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopt{Panels}  
 	\>           
 	\>          	
@@ -453,14 +453,13 @@ polygon). \\
         \>
         \\
 \dropmenuopttwo{mActionOptions}{Options}             
-\> \>          	
-see Section \ref{subsec:gui_options}
+	\> \> see Section \ref{subsec:gui_options}
 	\\
 \end{tabbing}
 
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
 \begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionShowPluginManager}{Manage Plugins}          	   
 	\> \> see Section \ref{sec:managing_plugins} \dropmenucheck{Plugins}
 	\\
@@ -471,7 +470,7 @@ see Section \ref{subsec:gui_options}
 
 \item \mainmenuopt{Help}
 \begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionHelpContents}{Help Contents}
 	\> \keystroke{F1}
 	\>           	
@@ -558,7 +557,7 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
 \item \dropmenuopt{Collapse all}
-\item \dropmenuopt{Show file groups}
+%%\item \dropmenuopt{Show file groups}
 \end{itemize}
 
 \item \textbf{Right mouse button menu for vector layers}
@@ -576,7 +575,7 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
 \item \dropmenuopt{Collapse all}
-\item \dropmenuopt{Show file groups}
+%%\item \dropmenuopt{Show file groups}
 \end{itemize}
 
 \item \textbf{Right mouse button menu for layer groups} 
@@ -586,17 +585,19 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
 \item \dropmenuopt{Collapse all}
-\item \dropmenuopt{Show file groups}
+%%\item \dropmenuopt{Show file groups}
 \end{itemize}
 
 \end{itemize}
 
-If several vector data sources have the same vector type and the same attributes, their 
-symbolisations may be grouped. This means that if the symbolisation of one data source is 
-changed, the others automatically have the new symbolisation as well. To group symbologies, open 
-the right click menu in the legend window and choose \dropmenuopt{Show file groups}. The file groups of the 
-layers appear. It is now possible to drag a file from one file group into another one. If this is done, 
-the symbologies are grouped. Note that QGIS only permits the drag if the two layers are able to share 
+If several vector data sources have the same vector type and the same
+attributes, their symbolisations may be grouped. This means that if the
+symbolisation of one data source is changed, the others automatically have
+the new symbolisation as well. To group symbologies, open the right click
+menu in the legend window and choose \dropmenuopt{Show file groups}. The file
+groups of the layers appear. It is now possible to drag a file from one file
+group into another one. If this is done, the symbologies are grouped. Note
+that QGIS only permits the drag if the two layers are able to share 
 symbology (same vector geometry type and same attributes).  
 
 %% isn't included in Titan anymore, except for an "toggle overview"
@@ -630,10 +631,13 @@ Wheel}}\index{zoom!mouse wheel}
 the mouse cursor inside the map area and roll the wheel forward (away from you) to
 zoom in and backwards (towards you) to zoom out. The mouse cursor position is the 
 center where the zoom occurs. You can customize the behavior of the mouse
-wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >\dropmenuopt{Options} menu.  }
+wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >
+\dropmenuopt{Options} menu.
+}
 \end{Tip}
 
-\begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space Bar}}\index{pan!arrow keys}
+\begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space
+Bar}}\index{pan!arrow keys}
 \qgistip{You can use the arrow keys to pan in the map. Place the mouse cursor 
 inside the map area and click on the right arrow key to pan East, left arrow 
 key to pan West, up arrow key to pan North and down arrow key to pan South. 
@@ -747,10 +751,9 @@ You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
 menu option \mainmenuopt{Settings} > \dropmenuopt{Options} and click on the
-\tab{Rendering} tab. Uncheck the \checkbox{By default new layers added to the map 
-should be
-displayed} checkbox. Any layer added to the map will be off (invisible) by
-default.
+\tab{Rendering \& SVG} tab. Uncheck the \checkbox{By default new layers added
+to the map should be displayed} checkbox. Any layer added to the map will be
+off (invisible) by default.
 
 %\minisec{Stopping Rendering}\index{rendering!halting}
 %\label{label_stoprender}
@@ -769,7 +772,7 @@ You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
 datastore, choose menu option \mainmenuopt{Settings} > \dropmenuopt{Options}
-click on the \tab{Rendering} tab. Set the feature count to an
+click on the \tab{Rendering \& SVG} tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -780,14 +783,13 @@ during the reading of the features. A suggested value to start with is 500.
 
 To influence the rendering quality of the map you have 3 options. Choose menu 
 option \mainmenuopt{Settings} > \dropmenuopt{Options} click on the 
-\tab{Rendering} tab and select or deselect following checkboxes.
+\tab{Rendering \& SVG} tab and select or deselect following checkboxes.
 
 \begin{itemize}
-\item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
+\item \checkbox{Make lines appear less jagged at the expense of some drawing
+performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
-%%\item \checkbox{Continuously redraw the map when dragging the legend/map divider}
 \end{itemize}
-
 
 \subsection{Measuring}\label{sec:measure}\index{measure}
 
@@ -797,7 +799,10 @@ the loaded map is defined with a geographic coordinate system
 incorrect. To fix this you need to set an appropriate map coordinate system 
 (See Section~\ref{label_projections}). 
 
-\subsubsection{Measure length and areas}\index{measure:line length}\index{measure:areas}
+\subsubsection{Measure length and areas}
+\index{measure:line length}
+\index{measure:areas}
+
 \includegraphics[width=0.7cm]{mActionMeasure} 
 QGIS is also able to measure real distances between given 
 points according to a defined ellipsoid. To configure this, choose menu option 
@@ -849,30 +854,49 @@ the file outside QGIS if you know what you are doing. The file format
 was updated several times compared to earlier QGIS versions. Project files 
 from older QGIS versions may not work properly anymore. To be made aware of this, 
 in the \tab{General} tab under \mainmenuopt{Settings} > \dropmenuopt{Options} 
-you can select \checkbox{Warn when opening a project file saved with an older 
-version of QGIS}.
+you can select 
 
+\checkbox{Promt to save project changes when required} \\
+\checkbox{Warn when opening a project file saved with an older version of
+QGIS}.
 
 \minisec{Project Properties}
-In the properties window for the project (under \nix{\mainmenuopt{File} > \dropmenuopt{Project Properties}} or  \win{\mainmenuopt{Settings} > \dropmenuopt{Project Properties} } you set project specific options. These include:
+In the properties window for the project under \nix{\mainmenuopt{File} >
+\dropmenuopt{Project Properties}} or \win{\mainmenuopt{Settings} >
+\dropmenuopt{Project Properties}} you set project specific options. These
+include:
+
 \begin{itemize}
- \item In the \tab{General} tab the Project title, units, and the option to save relative paths to layers. In addition the topological editing, and snapping options are set here.
-\item The \tab{CRS} Coordinate Reference System tab enables you to choose the CRS for this project, and to enable on-the-fly reprojection of vector layers when displaying layers from a different CRS.
-\item With the third \tab{Identifiable layers} tab you set (or disable) which layers will respond to the identify tool. (See the Map tools paragraph from the  \ref{subsec:gui_options} section to enable identifying of multiple layers.)
+\item In the \tab{General} tab the project title, selection and background
+color, layer units, precision, and the option to save relative paths to
+layers can be defined. In addition the topological editing, and layerwise 
+snapping options are set here.
+\item The \tab{CRS} Coordinate Reference System tab enables you to choose the
+CRS for this project, and to enable on-the-fly reprojection of vector layers
+when displaying layers from a different CRS.
+\item With the third \tab{Identifiable layers} tab you set (or disable) which
+layers will respond to the identify tool. (See the Map tools paragraph from
+the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
 \end{itemize}
  
-\subsection{Output}\label{sec:output}\index{output!save as image!print composer!quick print}
-There are several ways to generate output from your QGIS session.
-We have discussed one already in Section \ref{sec:projects}: saving as a project file. 
-Here is a sampling of other ways to produce output files:
-\begin{itemize}
-\item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens a
-file dialog where you select the name, path and type of image (PNG or JPG format). From 1.1.0
-release, a world file with extension PNGW or JPGW saved in the same folder georeferences the image.
-\item Menu option \dropmenuopttwo{mActionFilePrint}{Print Composer} opens a dialog 
-where you can layout and print the current map canvas (see Section~\ref{label_printcomposer}).
-\end{itemize}
+\subsection{Output}\label{sec:output}
+\index{output!save as image!print composer!quick print}
 
+There are several ways to generate output from your QGIS session. We have
+discussed one already in Section \ref{sec:projects}: saving as a project file. 
+Here is a sampling of other ways to produce output files:
+
+\begin{itemize}
+\item Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens
+a file dialog where you select the name, path and type of image (PNG or JPG
+format). A world file with extension PNGW or JPGW saved in the same folder
+georeferences the image.
+\item Menu option \dropmenuopttwo{mActionFilePrint}{Print Composer} opens a
+dialog where you can layout and print the current map canvas (see
+Section~\ref{label_printcomposer}).
+\item The \toolbtntwo{quick_print}{Quick Print} plugin allows
+to print a simple map with minimal effort (see Section \ref{quickprint}).
+\end{itemize}
 
 \subsection{GUI Options}\label{subsec:gui_options}
 \includegraphics[width=0.7cm,clip=true]{mActionOptions} 
@@ -900,25 +924,35 @@ required)}
 % selected features and show features in current canvas)
 \end{itemize}
 
-\minisec{Rendering Tab}
+\minisec{Rendering \& SVG Tab}
 
 \begin{itemize}
 \item \checkbox{By deafult new layers added to the map should be displayed}
 \item Define number of features to draw before updating the display.
-\item \checkbox{Make lines appear less jagged at the expense of some drawing performance}
+\item \checkbox{Use render caching where possible to speed up redraws}
+\item \checkbox{Make lines appear less jagged at the expense of some drawing
+performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
-% \item \checkbox{Continously redraw when dragging the legend/map divider} 
+\item \checkbox{Use new generation symbology for rendering}
+\item Add and remove path(s) to search for Scalable Vector Graphics (SVG)
+symbols
 \end{itemize}
 
 \minisec{Map tools Tab}
 
 \begin{itemize}
-\item The Mode setting determines which layers will be shown by the Identify tool. By switching to \usertext{Top down} instead of \usertext{Current layer} then attributes for all identifiable layers (See the Project properties section under: \ref{sec:projects} to set which layers are identifiable) will be show with the Identify tool.
-\item Define Search Radius as a percentage of the map width
-\item Define Ellipsoid for distance calculations
-\item Define Rubberband Color for Measure Tools
-\item Define preferred measurement units (meter or feet)
-\item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse cursor, Nothing)
+\item The Mode setting determines which layers will be shown by the Identify
+tool. By switching to \usertext{Top down} or \usertext{Top down, stop at
+first} instead of \usertext{Current layer} attributes for all identifiable
+layers (see the Project properties section under: \ref{sec:projects} to set
+which layers are identifiable) will be shown with the Identify tool.
+\item \checkbox{Open feature form, if a single feature is identified}
+\item Define search radius as a percentage of the map width
+\item Define ellipsoid for distance calculations
+\item Define rubberband color for measure tools
+\item Define preferred measurement units (meters or feet)
+\item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
+cursor, Nothing)
 \item Define Zoom factor for wheel mouse
 \end{itemize}
 
@@ -934,8 +968,8 @@ required)}
 \begin{itemize}
 \item Define Rubberband Color and line width for Digitizing
 \item Define default snap mode (to vertex, to segment, to vertex and segment)
-\item Define default snapping tolerance in layer units
-\item Define search radius for vertex edits in layer units
+\item Define default snapping tolerance in map units or pixel
+\item Define search radius for vertex edits in map units or pixel
 \item \checkbox{Show markers only for selected features}
 \item Define vertex marker style (Cross, semi transparent circle or none) and
 size
@@ -961,6 +995,7 @@ size
 \minisec{Proxy Tab}
 
 \begin{itemize}
+\item \checkbox{Define timeout for network requests in ms}
 \item \checkbox{Use proxy for web access} and define host, port, user, and password.
 \item Set the \dropmenuopt{Proxy type} according to your needs
  \begin{itemize}
