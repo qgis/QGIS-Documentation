@@ -14,6 +14,7 @@ PNG=startup.eps\
     measure_area.eps\
     measure_line.eps\
     proxy-settings.eps\
+    shortcuts.eps\
 	
 ##### TARGETS #####
 
