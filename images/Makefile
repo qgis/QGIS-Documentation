@@ -16,6 +16,8 @@ PNG=\
   splash.eps\
   mAction.eps\
   mActionAddAllToOverview.eps\
+  mActionAddBasicShape.eps\
+  mActionAddArrow.eps\
   mActionAddIsland.eps\
   mActionAddLayer.eps\
   mActionAddLegend.eps\

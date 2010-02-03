@@ -8,8 +8,8 @@
 
 The print composer provides growing layout and printing
 capabilities. It allows you to add elements such as the QGIS map canvas, 
-legend, scalebar, images, and text labels. You can size, group 
-align and position each element and adjust the properties to create your
+legend, scalebar, images, basic shapes, arrows and text labels. You can
+size, group align and position each element and adjust the properties to create your
 layout. The layout can be printed or exported to image formats, Postscript,
 PDF or to SVG \footnote{Export to SVG supported, but it is not working
 properly with some recent QT4 versions. You should try and
@@ -48,6 +48,10 @@ table~\ref{tab:printcomposer_tools}:
  print composition & 
  \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar to print
  composition\\
+ \hline \includegraphics[width=0.7cm]{mActionAddBasicShape} & Add basic shape to
+ print composition &
+ \includegraphics[width=0.7cm]{mActionAddArrow} & Add arrow to print
+ composition\\
  \hline \includegraphics[width=0.7cm]{mActionSelectPan} & Select/Move item in 
  print composition &
  \includegraphics[width=0.7cm]{mActionMoveItemContent} & Move content within
@@ -79,15 +83,16 @@ table~\ref{tab:printcomposer_tools}:
 \end{tabular}
 \end{table}
 
-To access the print composer, click on the \toolbtntwo{mActionFilePrint}{Print}
-button in the toolbar or choose \mainmenuopt{File} > \dropmenuopttwo{mActionFilePrint}{Print Composer}.
+\subsection{Open a new Print Composer Template}\label{composertemplates}
+
+Before you start to work with the print composer, you need to load some
+raster and vector layers in the QGIS map canvas and adapt their properties
+to suite your own convinience. After everything is rendered and symbolized to
+your liking you click the \toolbtntwo{mActionNewComposer}{New Print Composer}
+icon in the toolbar or choose \mainmenuopt{File} >
+\dropmenuopttwo{mActionNewComposer}{New Print Composer}.
 
 \subsection{Using Print Composer}\label{label_useprintcomposer} 
-
-Before you start to work with the print composer, you need to load some 
-raster and vector layers in the QGIS map canvas and adapt their properties 
-to suite your own convinience. After everything is rendered and symbolized to 
-your liking you click the \toolbtntwo{mActionFilePrint}{Print Composer} icon.
 
 \begin{figure}[ht]
    \begin{center}
@@ -268,4 +273,11 @@ With the \toolbtntwo{mActionFileSaveAs}{Save as template} and
 \toolbtntwo{mActionFolder}{Load from template} icons you can save the current
 state of a print composer session as a  *.qpt template and load the template
 again in another session.
+
+QGIS also provides a \toolbtntwo{mActionComposerManager}{Composer Manager}
+button in the toolbar and in \mainmenuopt{File} >
+\dropmenuopttwo{mActionComposerManager}{Composer Manager}. It allows you to
+\button{Open}, \button{Remove}, \button{Rename} and \button{Add} new or
+already existing Print Composer templates. 
+
 
