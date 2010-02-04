@@ -13,6 +13,10 @@
 
 PNG=print_composer_blank.eps\
     print_composer_complete.eps\
+    print_composer_map1.eps\
+    print_composer_map2.eps\
+    print_composer_map3.eps\
+    print_composer_map4.eps\
     print_composer_label1.eps\
     print_composer_label2.eps\
     print_composer_image1.eps\
