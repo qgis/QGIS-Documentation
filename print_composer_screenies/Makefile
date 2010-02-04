@@ -12,13 +12,19 @@
 #	nextfile.eps
 
 PNG=print_composer_blank.eps\
-	print_composer_complete.eps\
-	print_composer_image_item.eps\
-	print_composer_label_item.eps\
-	print_composer_legend_item.eps\
-	print_composer_map_item1.eps\
-	print_composer_map_item2.eps\
-	print_composer_scalebar_item.eps\
+    print_composer_complete.eps\
+    print_composer_label1.eps\
+    print_composer_label2.eps\
+    print_composer_image1.eps\
+    print_composer_image2.eps\
+    print_composer_legend1.eps\
+    print_composer_legend2.eps\
+    print_composer_legend3.eps\
+    print_composer_scalebar1.eps\
+    print_composer_scalebar2.eps\
+    print_composer_shape.eps\
+    print_composer_arrow.eps\
+    print_composer_manager.eps\
 
 ##### TARGETS #####
 
