@@ -27,6 +27,7 @@ export data into a currently selected GRASS location and mapset.
   raster map layer \\
   \hline r.in.aster & Georeferencing, rectification, and import of
   Terra-ASTER imagery and relative DEM's using gdalwarp \\
+  \hline r.in.bin & Import binary raster \\
   \hline r.in.gdal &  Import GDAL supported raster file into a GRASS binary
   raster map layer \\
   \hline r.in.gdal.loc &  Import GDAL supported raster file into a GRASS
@@ -42,43 +43,13 @@ export data into a currently selected GRASS location and mapset.
   in the current directory \\
   \hline r.in.srtm  & Import SRTM HGT files into GRASS \\
   \hline i.in.spotvgt & Import of SPOT VGT NDVI file into a raster map \\
-\hline
+  \hline r.in.wms & Download and import data from WMS server \\
+  \hline r.external & Link GDAL supported raster to binary raster \\
+  \hline r.external.qgis & Link GDAL supported raster to binary raster map layer \\
+  \hline r.external & Link all GDAL supported rasters in a directory to binary rasters  \\
+  \hline
 \end{tabular}
 \end{table}
-
-\newpage
-
-\begin{table}[ht]
-\centering
-\caption{GRASS Toolbox: Raster and Image data export modules}\medskip
- \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Raster and Image data export modules in
-the GRASS
-  Toolbox}} \\
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.out.gdal.gtiff & Export raster layer to Geo TIFF \\
-  \hline r.out.arc & Converts a raster map layer into an ESRI ARCGRID file \\
-  \hline r.gridatb & Exports GRASS raster map to GRIDATB.FOR map file
-  (TOPMODEL) \\
-  \hline r.out.mat & Exports a GRASS raster to a binary MAT-File \\
-  \hline r.out.bin & Exports a GRASS raster to a binary array \\
-  \hline r.out.png & Export GRASS raster as non-georeferenced PNG image
-  format \\
-  \hline r.out.ppm & Converts a GRASS raster map to a PPM image file at the
-  pixel resolution of the CURRENTLY DEFINED REGION \\
-  \hline r.out.ppm3 & Converts 3 GRASS raster layers (R,G,B) to a PPM image
-  file at the pixel resolution of the CURRENTLY DEFINED REGION \\
-  \hline r.out.pov & Converts a raster map layer into a height-field file for
-  POVRAY\\
-  \hline r.out.tiff & Exports a GRASS raster map to a 8/24bit TIFF image file
-  at the pixel resolution of the currently defined region\\
-  \hline r.out.vrml &  Export a raster map to the Virtual Reality Modeling
-  Language (VRML)\\
-\hline
-\end{tabular}
-\end{table}
-
-\newpage
 
 \begin{table}[ht]
 \centering
@@ -87,10 +58,13 @@ the GRASS
   \hline \multicolumn{2}{|c|}{\textbf{Vector data import modules in the GRASS
 Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline v.in.db & Import vector points from database containing coordinates \\
   \hline v.in.dxf & Import DXF vector layer \\
   \hline v.in.e00 & Import ESRI E00 file in a vector map \\
   \hline v.in.garmin & Import vector from gps using gpstrans \\
   \hline v.in.gpsbabel & Import vector from gps using gpsbabel \\
+  \hline v.in.geonames & Import geonames.org country files \\
+  \hline v.in.gns & Import USNGS Geonet Names Server (GNS) country file  \\
   \hline v.in.mapgen & Import MapGen or MatLab vectors in GRASS \\
   \hline v.in.ogr & Import OGR/PostGIS vector layers \\
   \hline v.in.ogr.qgis & Import loaded vector layers into GRASS binary
@@ -109,6 +83,58 @@ Toolbox}} \\
 
 \begin{table}[ht]
 \centering
+\caption{GRASS Toolbox: Database import modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Database import modules in the GRASS
+Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline db.in.ogr & Import attribute tables in various formats \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+\begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Raster and Image data export modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Raster and Image data export modules in
+the GRASS
+  Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline r.out.gdal & Export raster to various formats (GDAL library) \\
+  \hline r.out.gdal.gtiff & Export raster layer to Geo TIFF \\
+  \hline r.out.ascii & Export raster to ASCII text file \\
+  \hline r.out.arc & Converts a raster map layer into an ESRI ARCGRID file \\
+  \hline r.out.xyz & Export raster to text file as x,y,z values based on cell centers \\
+  \hline r.gridatb & Exports GRASS raster map to GRIDATB.FOR map file
+  (TOPMODEL) \\
+  \hline r.out.mat & Exports a GRASS raster to a binary MAT-File \\
+  \hline r.out.bin & Exports a GRASS raster to a binary array \\
+  \hline r.out.mpeg & Export raster series to MPEG movie \\
+  \hline r.out.png & Export GRASS raster as non-georeferenced PNG image
+  format \\
+  \hline r.out.ppm & Converts a GRASS raster map to a PPM image file at the
+  pixel resolution of the CURRENTLY DEFINED REGION \\
+  \hline r.out.ppm3 & Converts 3 GRASS raster layers (R,G,B) to a PPM image
+  file at the pixel resolution of the CURRENTLY DEFINED REGION \\
+  \hline r.out.pov & Converts a raster map layer into a height-field file for
+  POVRAY\\
+  \hline r.out.tiff & Exports a GRASS raster map to a 8/24bit TIFF image file
+  at the pixel resolution of the currently defined region\\
+  \hline r.out.vrml &  Export a raster map to the Virtual Reality Modeling
+  Language (VRML)\\
+  \hline r.out.vtk & Export raster layer to VTK-ASCII \\
+\hline
+\end{tabular}
+\end{table}
+
+\newpage
+
+
+\begin{table}[ht]
+\centering
 \caption{GRASS Toolbox: Vector data export modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Vector data export modules in the GRASS
@@ -116,16 +142,29 @@ Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline v.out.ogr & Export vector layer to various formats (OGR library) \\
   \hline v.out.ogr.gml & Export vector layer to GML \\
-  \hline v.out.ogr.postgis & Export vector layer to various formats (OGR
-  library) \\
+  \hline v.out.ogr.pg & Export vector layer to PostGIS database table \\
   \hline v.out.ogr.mapinfo & Mapinfo export of vector layer \\
   \hline v.out.ascii & Convert a GRASS binary vector map to a GRASS ASCII
   vector map  \\
   \hline v.out.dxf & converts a GRASS vector map to DXF  \\
+  \hline v.out.pov & Export vector layer to POV-Ray \\
+  \hline v.out.svg & Export vector layer to SVG \\
+  \hline v.out.vtk & Export vector layer to VTK-ASCII \\
 \hline
 \end{tabular}
 \end{table}
 
+begin{table}[ht]
+\centering
+\caption{GRASS Toolbox: Vector data table}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Vector table export modules in the GRASS
+Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline dbout.ogr & Export attribute table to various formats  \\
+\hline
+\end{tabular}
+\end{table}
 \newpage
 
 \subsection{GRASS Toolbox data type conversion modules}
@@ -243,6 +282,7 @@ and analyse raster data in a currently selected GRASS location and mapset.
   \hline r.colors.table & Set raster color table from setted tables \\
   \hline r.colors.rules & Set raster color table from setted rules \\
   \hline r.colors.rast & Set raster color table from existing raster \\
+  \hline r.colors.stddev & Set color rules based on standard deviation frommap's mean value \\
   \hline r.blend & Blend color components for two raster maps by given ratio \\
   \hline r.composite & Blend red, green, raster layers to obtain one color
   raster \\
@@ -272,6 +312,8 @@ and analyse raster data in a currently selected GRASS location and mapset.
   to the corresponding cells in the output raster map layers\\
   \hline r.patch & Create a new raster map by combining other raster maps \\
   \hline r.statistics & Category or object oriented statistics \\
+  \hline r.sunmask.position & Calculate shadow maps from exact sun position \\
+  \hline r.sunmask.date.time & Calculate shadow maps from sun position determined by date/time\\
   \hline r.cost & Outputs a raster map layer showing the cumulative cost of
   moving between different geographic locations on an input raster map layer
   whose cell category values represent cost\\
@@ -288,6 +330,7 @@ and analyse raster data in a currently selected GRASS location and mapset.
   \hline r.texture.bis & Generate images with textural features from a raster
   map (second serie of indices)\\
   \hline r.los & Line-of-sigth raster analysis \\
+  \hline r.grow.distance & Create raster of distance to features in input layer \\
   \hline r.clump & Recategorizes into unique categories contiguous cells \\
   \hline r.grow & Generates a raster map layer with contiguous areas grown by
   one cell\\
@@ -298,36 +341,23 @@ and analyse raster data in a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox: Surface management modules}\medskip
+\caption{GRASS Toolbox: Hydrologic modelling modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Surface management modules in the GRASS
+  \hline \multicolumn{2}{|c|}{\textbf{Hydrologic modelling modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.random & Creates a random vector point map contained in a raster \\
-  \hline r.random.cells & Generates random cell values with spatial
-  dependence \\
-  \hline v.kernel & Gaussian kernel density \\
-  \hline r.contour & Produces a contours vector map with specified step from
-  a raster map\\
-  \hline r.contour2 & Produces a contours vector map of specified contours
-  from a raster map \\
-  \hline r.surf.fractal & Creates a fractal surface of a given fractal
-  dimension\\
-  \hline r.surf.gauss & GRASS module to produce a raster map layer of
-  gaussian deviates whose mean and standard deviation can be expressed by the
-  user \\
-  \hline r.surf.random & Produces a raster map layer of uniform random
-  deviates whose range can be expressed by the user \\
-  \hline r.bilinear & Bilinear interpolation utility for raster map layers \\
-  \hline v.surf.bispline & Bicubic or bilinear spline interpolation with
-  Tykhonov regularization\\
-  \hline r.surf.idw & Surface interpolation utility for raster map layers\\
-  \hline r.surf.idw2 & Surface generation program\\
-  \hline r.surf.contour & Surface generation program from rasterized contours \\
-  \hline v.surf.idw & Interpolate attribute values (IDW) \\
-  \hline v.surf.rst & Interpolate attribute values (RST) \\
-  \hline r.fillnulls & Fills no-data areas in raster maps using v.surf.rst
-  splines interpolation \\
+  \hline r.watershed & Watershed Analysis \\
+  \hline r.carve & Takes vector stream data, transforms it to raster, and
+  subtracts depth from the output DEM \\
+  \hline r.fill.dir & Filters and generates a depressionless elevation map
+  and a flow direction map from a given elevation layer \\
+  \hline r.lake.xy & Fills lake from seed point at given level \\
+  \hline r.lake.seed & Fills lake from seed at given level \\
+  \hline r.topidx & Creates a 3D volume map based on 2D elevation and value
+  raster maps \\
+  \hline r.basins.fill & Generates a raster map layer showing watershed
+  subbasins \\
+  \hline r.water.outlet & Watershed basin creation program \\
 \hline
 \end{tabular}
 \end{table}
@@ -350,27 +380,48 @@ and analyse raster data in a currently selected GRASS location and mapset.
 \end{tabular}
 \end{table}
 
+
 \begin{table}[ht]
 \centering
-\caption{GRASS Toolbox: Hydrologic modelling modules}\medskip
+\caption{GRASS Toolbox: Surface management modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Hydrologic modelling modules in the GRASS
+  \hline \multicolumn{2}{|c|}{\textbf{Surface management modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline r.carve & Takes vector stream data, transforms it to raster, and
-  subtracts depth from the output DEM \\
-  \hline r.fill.dir & Filters and generates a depressionless elevation map
-  and a flow direction map from a given elevation layer \\
-  \hline r.lake.xy & Fills lake from seed point at given level \\
-  \hline r.lake.seed & Fills lake from seed at given level \\
-  \hline r.topidx & Creates a 3D volume map based on 2D elevation and value
-  raster maps \\
-  \hline r.basins.fill & Generates a raster map layer showing watershed
-  subbasins \\
-  \hline r.water.outlet & Watershed basin creation program \\
+  \hline r.circle & Create a map containing concentric circles \\
+  \hline r.random & Creates a random vector point map contained in a raster \\
+  \hline r.random.cells & Generates random cell values with spatial
+  dependence \\
+  \hline v.kernel & Gaussian kernel density \\
+  \hline r.contour & Produces a contours vector map with specified step from
+  a raster map\\
+  \hline r.contour2 & Produces a contours vector map of specified contours
+  from a raster map \\
+  \hline r.surf.fractal & Creates a fractal surface of a given fractal
+  dimension\\
+  \hline r.surf.gauss & GRASS module to produce a raster map layer of
+  gaussian deviates whose mean and standard deviation can be expressed by the
+  user \\
+  \hline r.surf.random & Produces a raster map layer of uniform random
+  deviates whose range can be expressed by the user \\
+  \hline r.plane & Create a raster plane \\
+  \hline r.bilinear & Bilinear interpolation utility for raster map layers \\
+  \hline v.surf.bispline & Bicubic or bilinear spline interpolation with
+  Tykhonov regularization\\
+  \hline r.surf.idw & Surface interpolation utility for raster map layers\\
+  \hline r.surf.idw2 & Surface generation program\\
+  \hline r.surf.contour & Surface generation program from rasterized contours \\
+  \hline v.surf.idw & Interpolate attribute values (IDW) \\
+  \hline v.surf.rst & Interpolate attribute values (RST) \\
+  \hline r.fillnulls & Fills no-data areas in raster maps using v.surf.rst
+  splines interpolation \\
 \hline
 \end{tabular}
 \end{table}
+
+
+
+
 
 \begin{table}[ht]
 \centering
@@ -477,6 +528,38 @@ and analyse vector data in a currently selected GRASS location and mapset.
 
 \begin{table}[ht]
 \centering
+\caption{GRASS Toolbox: Spatial vector and network analysis modules}\medskip
+ \begin{tabular}{|p{4cm}|p{12cm}|}
+  \hline \multicolumn{2}{|c|}{\textbf{Spatial vector and network analysis modules in the GRASS
+  Toolbox}} \\
+  \hline \textbf{Module name} & \textbf{Purpose} \\
+  \hline v.extract.where & Select features by attributes \\
+  \hline v.extract.list & Extract selected features \\
+  \hline v.select.overlap & Select features overlapped by features in another
+  map\\
+  \hline v.buffer & Vector buffer \\
+  \hline v.distance & Find the nearest element in vector 'to' for elements in
+  vector 'from'. \\
+  \hline v.net & Network maintenance \\
+  \hline v.net.nodes & Create nodes on network \\
+  \hline v.net.alloc & Allocate network\\
+  \hline v.net.iso & Cut network by cost isolines \\
+  \hline v.net.salesman & Connect nodes by shortest route (traveling
+  salesman) \\
+  \hline v.net.steiner & Connect selected nodes by shortest tree (Steiner
+  tree) \\
+  \hline v.patch & Create a new vector map by combining other vector maps \\
+  \hline v.overlay.or & Vector union \\
+  \hline v.overlay.and & Vector intersection \\
+  \hline v.overlay.not & Vector subtraction \\
+  \hline v.overlay.xor & Vector non-intersection \\
+\hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[ht]
+\centering
 \caption{GRASS Toolbox: Change vector field modules}\medskip
  \begin{tabular}{|p{4cm}|p{12cm}|}
   \hline \multicolumn{2}{|c|}{\textbf{Change vector field modules in the GRASS
@@ -493,6 +576,7 @@ and analyse vector data in a currently selected GRASS location and mapset.
 \end{tabular}
 \end{table}
 
+
 \begin{table}[ht]
 \centering
 \caption{GRASS Toolbox: Working with vector points modules}\medskip
@@ -504,6 +588,7 @@ and analyse vector data in a currently selected GRASS location and mapset.
   \hline v.in.db & Import vector points from a database table containing
   coordinates \\
   \hline v.random & Randomly generate a 2D/3D GRASS vector point map \\
+  \hline v.perturb & Random location of perturbation of vector points \\ 
   \hline v.kcv & Randomly partition points into test/train sets \\
   \hline v.outlier & Romove outliers from vector point data \\
   \hline v.hull & Create a convex hull \\
@@ -511,36 +596,6 @@ and analyse vector data in a currently selected GRASS location and mapset.
   \hline v.delaunay.area & Delaunay triangulation (areas) \\
   \hline v.voronoi.line & Voronoi diagram (lines) \\
   \hline v.voronoi.area & Voronoi diagram (areas) \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[ht]
-\centering
-\caption{GRASS Toolbox: Spatial vector and network analysis modules}\medskip
- \begin{tabular}{|p{4cm}|p{12cm}|}
-  \hline \multicolumn{2}{|c|}{\textbf{Spatial vector and network analysis modules in the GRASS
-  Toolbox}} \\
-  \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline v.extract.where & Select features by attributes \\
-  \hline v.extract.list & Extract selected features \\
-  \hline v.select.overlap & Select features overlapped by features in another
-  map\\
-  \hline v.buffer & Vector buffer \\
-  \hline v.distance & Find the nearest element in vector 'to' for elements in
-  vector 'from'. \\
-  \hline v.net.nodes & Create nodes on network \\
-  \hline v.net.alloc & Allocate network\\
-  \hline v.net.iso & Cut network by cost isolines \\
-  \hline v.net.salesman & Connect nodes by shortest route (traveling
-  salesman) \\
-  \hline v.net.steiner & Connect selected nodes by shortest tree (Steiner
-  tree) \\
-  \hline v.patch & Create a new vector map by combining other vector maps \\
-  \hline v.overlay.or & Vector union \\
-  \hline v.overlay.and & Vector intersection \\
-  \hline v.overlay.not & Vector subtraction \\
-  \hline v.overlay.xor & Vector non-intersection \\
 \hline
 \end{tabular}
 \end{table}
@@ -592,7 +647,7 @@ and analyse imagery data in a currently selected GRASS location and mapset.
   \hline \multicolumn{2}{|c|}{\textbf{Imagery analysis modules in the GRASS
   Toolbox}} \\
   \hline \textbf{Module name} & \textbf{Purpose} \\
-  \hline i.image.mosaik & Mosaic up to 4 images \\
+  \hline i.image.mosaic & Mosaic up to 4 images \\
   \hline i.rgb.his & Red Green Blue (RGB) to Hue Intensity Saturation (HIS)
   raster map color transformation function \\
   \hline i.his.rgb & Hue Intensity Saturation (HIS) to Red Green Blue (RGB)
@@ -602,7 +657,7 @@ and analyse imagery data in a currently selected GRASS location and mapset.
   high-res pancromatic channels \\
   \hline i.zc & Zero-crossing edge detection raster function for image
   processing \\
-  \hline i.mfilter &  \\
+  \hline r.mfilter &  Raster file matrix filter\\
   \hline i.tasscap4 & Tasseled Cap (Kauth Thomas) transformation for
   LANDSAT-TM 4 data \\
   \hline i.tasscap5 & Tasseled Cap (Kauth Thomas) transformation for
@@ -638,10 +693,11 @@ external databases is enabled via OGR and not covered by these modules.
   \hline \textbf{Module name} & \textbf{Purpose} \\
   \hline db.connect & Sets general DB connection mapset \\
   \hline db.connect.schema & Sets general DB connection mapset with a schema \\
+  \hline db.connect-login.pg & Set Postgresql DB connection \\
   \hline v.db.reconnect.all & Reconnect vector to a new database \\
   \hline db.login & Set user/password for driver/database \\
-  \hline db.in.ogr & Imports attribute tables in various formats \\
   \hline v.db.addtable & Create and add a new table to a vector \\
+  \hline v.db.droptable & Remove existing attribute table of a vector \\
   \hline v.db.addcol & Adds one or more columns to the attribute table
   connected to a given vector map \\
   \hline v.db.dropcol & Drops a column from the attribute table connected to
