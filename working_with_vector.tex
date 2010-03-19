@@ -1136,13 +1136,9 @@ Using the basic digitizing tools you can perform the following functions:
    & \includegraphics[width=0.7cm]{mActionCapturePolygon}
    & Adding Features: Capture Polygon \\
 \hline \includegraphics[width=0.7cm]{mActionMoveFeature}
-   & Move Features
-   & \includegraphics[width=0.7cm]{mActionMoveVertex}
-   & Move Vertex \\
-\hline \includegraphics[width=0.7cm]{mActionAddVertex}
-   & Add Vertex
-   & \includegraphics[width=0.7cm]{mActionDeleteVertex}
-   & Delete Vertex \\
+   & Move Feature
+   & \includegraphics[width=0.7cm]{mActionNodeTool}
+   & Node Tool \\ 
 \hline \includegraphics[width=0.7cm]{mActionDeleteSelected}
    & Delete Selected
    & \includegraphics[width=0.7cm]{mActionEditCut}
@@ -1173,7 +1169,7 @@ that your data source can accept all your changes.
 }
 \end{Tip}
 
-\minisec{Adding and Moving Features}
+\minisec{Adding Features}
 \index{vector layers!adding!feature}
 \index{vector layers!move!feature}
 
@@ -1216,68 +1212,62 @@ table} dialog.
 }
 \end{Tip}
 
-\minisec{Adding, Moving and Deleting Vertices of a Feature}
-\index{vector layers!editing!vertex}
+\minisec{Node Tool}
+\index{vector layers!node!tool}
 
-For both PostgreSQL/PostGIS and shapefile-based layers, the vertices of
-features can be edited. 
+For both PostgreSQL/PostGIS and shapefile-based layers, the 
+\toolbtntwo{mActionNodeTool}{Node Tool} provides manipulation capabilites
+of feature vertices similar to CAD programs. It is possible to simply select
+multiple vertices at once and to move, add or delete them alltogether. The node
+tool also works with 'on the fly' projection turned on and supports
+the topological editing feature. This tool is, unlike other tools in Quantum GIS,
+persistent, so when some operation is done, selection stays active for this
+feature and tool.
 
-Vertices can be directly edited, that is, you don't have to choose which
-feature to edit before you can change its geometry.
-In some cases, several features may share the same vertex
-and so the following rules apply when the mouse is pressed
-down near map features:
-
-\begin{itemize}
-\item \textbf{Lines}    - The nearest line to the mouse position
-                          is used as the target feature.
-                          Then (for moving and deleting a vertex)
-                          the nearest vertex
-                          on that line is the editing target.
-
-\item \textbf{Polygons} - If the mouse is inside a polygon, then it is
-                          the target feature; otherwise the nearest polygon
-                          is used.
-                          Then (for moving and deleting a vertex)
-                          the nearest vertex
-                          on that polygon is the editing target.
-\end{itemize}
-
-You will need to set the property \mainmenuopt{Settings} >
+Important is to set the property \mainmenuopt{Settings} >
 \dropmenuopttwo{mActionOptions}{Options} >
 \tab{Digitizing}>\selectnumber{Search Radius}{10} to a number greater than
-zero. Otherwise QGIS will not be able to tell which feature is being edited.
-
-With the \toolbtntwo{mActionAddVertex}{Add Vertex} icon you can add new
-vertices to a feature.\index{vector layers!adding!vertex} Please note, it
-doesn't make sense to add more vertices to a Point feature!
+zero. Otherwise QGIS will not be able to tell which vertex is being edited.
 
 \begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
-\qgistip{The current version of QGIS supports two kinds of vertex-markers -
-a semi-transparent circle or a cross. To change the marker style, choose
+\qgistip{The current version of QGIS supports three kinds of vertex-markers -
+Semi transparent circle, Cross and None. To change the marker style, choose
 \dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu
 and click on the \tab{Digitizing} tab and select the appropriate entry.
 }
 \end{Tip}
 
-In this version of QGIS, vertices can only be added to an \textit{existing}
-line segment of a line feature. If you want to extend a line beyond its end,
-you will need to move the terminating vertex first, then add a new vertex where
-the terminus used to be.
+\minisec{Basic operations}\index{vector layers!Node Tool}
 
-With the \toolbtntwo{mActionMoveVertex}{Move Vertex} icon on the toolbar you
-can move vertices.\index{vector layers!moving!vertex}
+Start by activating the \toolbtntwo{mActionNodeTool}{Node Tool} and selecting
+some features by clicking on it. Red boxes appear at each vertex of this feature.
+This is basic select of the feature. Functionalities are:
 
-With the \toolbtntwo{mActionDeleteVertex}{Delete Vertex} icon on the toolbar
-you can delete vertices.\index{vector layers!deleting!vertex} Please note, it
-doesn't make sense to delete the vertex of a Point feature! Delete the whole
-feature instead.
+\begin{itemize}
+\item \textbf{Selecting vertex}: Selecting is easy just click on vertex and
+color of this vertex will change to blue. When selecting more vertices
+\keystroke{Shift} key can be used to select more vertices. Or also the
+\keystroke{Ctrl} key can be used to invert selection of vertices (if selected then
+it will be unselected and when not selected vertex will be selected). Also more
+vertices can be selected at once when clicking somewhere outside feature and opening a rectangle where all vertices inside will be selected. Or just click on an edge and
+both adjacent vertices should be selected.
+\item \textbf{Adding vertex}: Adding vertex is simple, too. Just double click near
+some edge and a new vertex will appear on the edge near to the cursor. Note that
+vertex will appear on edge not on cursor position, there it has to be moved if
+necessary.
+\item \textbf{Deleting vertex}: After selecting vertices for deletion, click the
+\keystroke{Delete} key and vertices will be deleted. Note that according to
+standard Quantum GIS behavior, it will leave a necessary number of vertices for
+the feature type you are working on. To delete a complete feature, another tool
+has to be used.
+\item \textbf{Moving vertex}: Select all vertices you want to move. All selected
+vertices are moving in the same direction as the cursor. If snapping is enabled,
+the whole selection can jump to the nearest vertex or line.
+\end{itemize}
 
-Similarly, a one-vertex line or a two-vertex polygon is also fairly useless
-and will lead to unpredictable results elsewhere in QGIS, so don't do that.
-
-\textbf{Warning:} A vertex is identified for deletion as soon as you click
-the mouse near an eligible feature.  
+The \button{Release} button stores all changes and a new entry appears in the undo
+dialog. Remember that all operations support topological editing when turned on. On
+the fly projection is also supported.
 
 \minisec{Cutting, Copying and Pasting Features}
 \index{vector layers!cut!feature}
@@ -1399,7 +1389,7 @@ integrity of your data, we offer no warranty in this regard.
    & \includegraphics[width=0.7cm]{mActionAddRing}
    & Add Ring \\
 \hline \includegraphics[width=0.7cm]{mActionAddIsland}
-   & Add Island
+   & Add Part
    & \includegraphics[width=0.7cm]{mActionDeleteRing}
    & Delete Ring \\
 \hline \includegraphics[width=0.7cm]{mActionDeletePart}
@@ -1410,14 +1400,13 @@ integrity of your data, we offer no warranty in this regard.
    & Split Features
    & \includegraphics[width=0.7cm]{mActionMergeFeatures}
    & Merge Selected Features \\
-\hline \includegraphics[width=0.7cm]{mActionNodeTool}
-   & Node Tool
+\hline \includegraphics[width=0.7cm]{mActionRotatePointSymbols}
+   & Rotate Point Symbols
    &
    & \\
 \hline
 \end{tabular}
 \end{table}
-
 
 \minisec{Undo and Redo}
 \index{vector layers!undo}
@@ -1467,12 +1456,11 @@ possible to digitize further polygons, that will occur as a 'hole', so only
 the area in between the boundaries of the outer and inner polygons remain as
 a ring polygon.
 
-\minisec{Add Island}
-\index{vector layers!add!island}
+\minisec{Add Part}
+\index{vector layers!add!part}
 
-You can \toolbtntwo{mActionAddIsland}{add island} polygons to a selected
-multipolygon. The new island polygon has to be digitized outside the selected
-multipolygon.
+You can \toolbtntwo{mActionAddIsland}{add part} polygons to a selected multipolygon. 
+The new part polygon has to be digitized outside the selected multipolygon.
 
 \minisec{Delete Ring}
 \index{vector layers!delete!ring}
@@ -1512,7 +1500,8 @@ something to consider.
 \index{vector layers!split!feature}
 
 You can split features using the \toolbtntwo{mActionSplitFeatures}{Split
-Features} icon on the toolbar
+Features} icon on the toolbar. Just draw a line across the feature you 
+want to split.
 
 \minisec{Merge selected features}
 \index{vector layers!merge!features}
@@ -1520,58 +1509,29 @@ Features} icon on the toolbar
 The \toolbtntwo{mActionMergeFeatures}{Merge Selected Features} tool allows to
 merge features that have common boundaries and the same attributes.  
 
-\minisec{Node Tool}
-\index{vector layers!node!tool}
+\minisec{Rotate Point Symbols}
+\index{vector layers!rotate!symbol}
 
-The \toolbtntwo{mActionNodeTool}{Node Tool} provides manipulation capabilites
-of feature vertices similar to CAD programs. It is possible to simply select
-multiple vertices at once and to move, add or delete them alltogether. The node
-tool also works with 'on the fly' projection turned on and supports
-the topological editing feature. This tool is, unlike other tools in Quantum GIS, 
-persistent, so when some operation is done, selection stays active for this 
-feature and tool.
+The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool 
+allows to change the rotation of point symbols in the map canvas, if 
+you have defined a rotation column from the attribute table of the point 
+layer in the \tab{Symbology} tab of the \dialog{Layer Properties}. 
+Otherwise the tool is inactive.
 
-\minisec{Basic operations}\index{vector layers!Node Tool}
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}\smallskip
+   \includegraphics[clip=true, width=6cm]{rotatepointsymbol}
+\end{center}
+\end{figure}
 
-Start by activating the \toolbtntwo{mActionNodeTool}{Node Tool} and selecting 
-some features by clicking on it. Red boxes appear at each vertex of this feature. 
-This is basic select of the feature. Functionalities are:
+To change the rotation, select a point feature in the map canvas and rotate 
+it holding the left mouse button pressed. A red arrow with the rotation value 
+will be visualized (see Figure~\ref{fig:rotatepoint}). When you release the 
+left mouse button again, the value will be updated in the attribute table. 
 
-\begin{itemize}
-\item \textbf{Selecting vertex}: Selecting is easy just click on vertex and 
-color of this vertex will change to blue. When selecting more vertices 
-\keystroke{Shift} key can be used to select more vertices. Or also the 
-\keystroke{Ctrl} key can be used to invert selection of vertices (if selected then 
-it will be unselected and when not selected vertex will be selected). Also more 
-vertices can be selected at once when clicking somewhere outside feature and opening a rectangle where all vertices inside will be selected. Or just click on an edge and 
-both adjacent vertices should be selected.
-\item \textbf{Adding vertex}: Adding vertex is simple, too. Just double click near 
-some edge and a new vertex will appear on the edge near to the cursor. Note that 
-vertex will appear on edge not on cursor position, there it has to be moved if 
-necessary.
-\item \textbf{Deleting vertex}: After selecting vertices for deletion, click the 
-\keystroke{Delete} key and vertices will be deleted. Note that according to 
-standard Quantum GIS behavior, it will leave a necessary number of vertices for 
-the feature type you are working on. To delete a complete feature, another tool 
-has to be used.
-\item \textbf{Moving vertex}: Select all vertices you want to move. All selected 
-vertices are moving in the same direction as the cursor. If snapping is enabled, 
-the whole selection can jump to the nearest vertex or line.
-\end{itemize}
-
-The \button{Release} button stores all changes and a new entry appears in the undo 
-dialog. Remember that all operations support topological editing when turned on. On 
-the fly projections are also supported.
-
-
-%%FIXME (not yet implemented in QGIS 1.2)
-%
-%\minisec{Reshape Tool}
-%\index{vector layers!reshape!tool}
-%
-%The reshape tool replaces parts of linear or polygonal features. The part 
-%between the first and last intersection of the reshape line and the feature 
-%will be replaced.
+\textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done 
+in 15 degree steps.
 
 \subsubsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
 

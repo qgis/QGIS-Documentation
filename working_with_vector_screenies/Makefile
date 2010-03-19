@@ -28,6 +28,7 @@ PNG=shapefileloaded.eps \
     editwidgetsdialog.eps\
     vectorWrapping.eps\
     redo_undo.eps\
+    rotatepointsymbol.eps\
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\
