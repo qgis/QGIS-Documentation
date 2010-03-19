@@ -29,6 +29,10 @@ PNG=shapefileloaded.eps \
     vectorWrapping.eps\
     redo_undo.eps\
     rotatepointsymbol.eps\
+    mActionNewAttribute.eps\
+    mActionDeleteAttribute.eps\
+    mActionCalculateField.eps\
+    fieldcalculator.eps\
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\

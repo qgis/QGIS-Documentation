@@ -1626,7 +1626,12 @@ To show selected records only, use the checkbox \checkbox{Show selected records 
 \item \toolbtntwo{mActionInvertSelection}{Invert selection}
 \item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also with \keystroke{Ctrl-C}
 \item \toolbtntwo{mActionZoomToSelected}{Zoom map to selected rows} also with \keystroke{Ctrl-J}
-\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values of attribute table.
+\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values 
+of attribute table and to enable functionalities described below.
+\item \toolbtntwo{mActionDeleteSelected}{Delete Selected Features}
+\item \toolbtntwo{mActionNewAttribute}{New Column} for PostGIS layers and for OGR layers with GDAL version >= 1.6.
+\item \toolbtntwo{mActionDeleteAttribute}{Delete Column} only for PostGIS layers yet.
+\item \toolbtntwo{mActionCalculateField}{Open field calcultor} 
 \end{itemize}
 
 \begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
@@ -1636,7 +1641,6 @@ datasources will be supported, because this feature was recently implemented
 in GDAL/OGR > 1.6.0
 }
 \end{Tip}
-
 
 \subsection{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
@@ -1694,11 +1698,7 @@ vector \dialog{Layer Properties} dialog by double-clicking on the layer in the l
 \ref{sec:vectorprops} for more information.}
 \end{Tip}
 
-\subsection{Select by query}\label{sec:select_by_query}
-\index{PostgreSQL!query builder}
-\index{PostGIS!query builder}
-\index{query builder!PostgreSQL}
-\index{query builder!PostGIS}
+\minisec{Select by query}\label{sec:select_by_query}
 
 With QGIS it is possible also to select features using a similar query builder 
 interface to that used in \ref{sec:query_builder}. In the above section 
@@ -1713,5 +1713,74 @@ click the \button{Advanced...} button at the bottom. This starts the Query Build
 that allows to define a subset of a table and display it as described in Section 
 \ref{sec:query_builder}.
 
+\subsection{Field Calculator}\label{sec:field_calculator}
+\index{PostgreSQL!field calculator}
+\index{PostGIS!field calculator}
+\index{OGR!field calculator}
+\index{field calculator!PostgreSQL}
+\index{field calculator!PostGIS}
+\index{field calculator!OGR}
+
+The \toolbtntwo{mActionCalculateField}{Field Calculator} button in the 
+attribute table allows to perform calculations on basis of existing 
+attribute values or defined functions, e.g to calculate length or area 
+of geometry features. The results can be written to a new attribute column 
+or it can be used to update values in an already existing column. 
+
+You have to bring the vector layer in editing mode, before you can click on 
+the field calculator icon to open the dialog (see Figure 
+\ref{fig:field_calculator}). In the dialog you first have to select, whether 
+you want to update an existing field, only update selected features or 
+create a new attribute field, where the results of the calculation will be added. 
+
+\begin{figure}[ht]
+  \begin{center}
+    \caption{Field Calculator \nixcaption}\label{fig:field_calculator}\smallskip
+    \includegraphics[clip=true, width=11.5cm]{fieldcalculator}
+  \end{center}
+\end{figure}
+
+If you choose to add a new field, you need to enter a field name, a field type 
+(integer, real or string), the total field width, and the field precision. 
+For example, if you choose a field width of 10 and a field precision of 3 it 
+means you have 6 signs before the dot, then the dot and another 3 signs for the 
+precision.   
+
+The \textbf{Fields list} contains all attributes of the attribute table to be
+searched. To add an attribute to the Field calculator expression field, double 
+click its name in the Fields list. Generally you can use the various fields, 
+values and operators to construct the calculation expression or you can just 
+type it into the box.
+
+The \textbf{Values list} lists the values of an attribute field. To list all 
+possible values, select the attribute field in the Fields list and click the
+\button{All} button\index{Field Calculator!getting all values}. To list all 
+values of an attribute field that are present in the sample table, select the 
+attribute in the Fields list and click the \button{Sample} button\index{Field 
+Calcultor!generating sample list}. The procedure is the same as for the Query 
+Builder. To add a value to the Field calculator expression box, double click its 
+name in the Values list.
+
+The \textbf{Operators section} contains all usable operators. To add an operator
+to the Field calculator expression box, click the appropriate button. Mathematical 
+calculations ( + , - , * \dots), trigonometric functions ( sin, cos, tan, \dots), 
+extract geometric information ( length and area ) are available and will be 
+extended in future versions.
+
+A short example illustrates how the field calculator works. We want to calculate 
+the length of the 'railroads' layer from the \filename{qgis\_example\_dataset}:
+
+\begin{enumerate}
+\item Load the Shapefile \filename{railroads.shp} in QGIS and open 
+the \dialog{Attribute Table} dialog. 
+\item Click on \toolbtntwo{mActionToggleEditing}{Toggle editing mode} and 
+open the \toolbtntwo{mActionCalculateField}{Field Calculator} dialog.
+\item Unselect the \checkbox{Update existing field} checkbox to enable the 
+new field box.
+\item Add 'length' as output field name, 'real' as output field type and define 
+output field width 10 and a precision of 3.
+\item Now double click on Operator 'length' to add it as \$length into the 
+field calculator expression box and click \button{Ok}.
+\end{enumerate}
 
 \index{vector layers|)}
