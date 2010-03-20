@@ -42,23 +42,19 @@ Network (TIN)}{\ldots} or \selectstring{Inverse Distance Weighted (IDW)}{\ldots}
   shown in Figure \ref{fig:interpolation_dialog}.
   \item Select an input layer (e.g., \selectstring{elevp}{\ldots}) and column (e.g. \filename{ELEV}) for 
   interpolation.
-  \item Select an interpolation method (e.g. \selectstring{Triangular interpolation}{\ldots}), and specify 
-  the number of rows and columns (e.g. 3663 cols and 1964 rows (this is equivalent to a 1000 meter pixel resolution))
-  as well as the raster output filename (e.g., \filename{elevation\_tin}).
+  \item Select an interpolation method (e.g. \selectstring{Triangular interpolation}{\ldots}), and specify a cellsize of 5000 as well as the raster output filename (e.g., \filename{elevation\_tin}).
   \item Click \button{Ok}.
   \item For the current example, double click \filename{elevation\_tin} in the layer list to open the Raster Layer Properties 
   dialog and select \selectstring{Pseudocolor}{\ldots} as Color Map in the \tab{Symbology} tab. Or you 
   can define a new color table as described in Section \ref{label_rasterprop}.
 \end{enumerate}
 
-In Figure \ref{fig:interpolation_idw} you see the IDW interpolation result with a 366 cols x 196 rows (10 km) 
-resolution for the \filename{elevp.csv} data visualized using the Pseudocolor color table. The processing 
-only takes a few minutes, and covers the northern part of Alaska.
+In Figure \ref{fig:interpolation_idw} you see the TIN interpolation result with a 998 cols x 812 rows (5 km) resolution for the \filename{elevp.csv} data visualized using the Pseudocolor color table. The processing only takes a few minutes, and covers the northern part of Alaska.
 
 \begin{figure}[ht]
    \begin{center}
-   \caption{Interpolation of elevp data using IDW method \nixcaption}\label{fig:interpolation_idw}\smallskip
-   \includegraphics[clip=true, width=10cm]{interpolate_idw}
+   \caption{Interpolation of elevp data using TIN method \nixcaption}\label{fig:interpolation_idw}\smallskip
+   \includegraphics[clip=true, width=14cm]{interpolate_tin}
 \end{center}  
 \end{figure}
 
