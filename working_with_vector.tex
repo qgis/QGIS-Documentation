@@ -47,6 +47,22 @@ is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
 
 Shapefiles also can include a file with a \filename{.prj} suffix, which contains
 the projection information. While it is very useful to have a projection file, it is not mandatory. A shapefile dataset can contain additional files. For further details see the ESRI technical specification at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf}.
+
+\minisec{Problem loading a shape .prj file}
+
+If you load a shapefile with \filename{.prj} file and QGIS is not 
+able to read the coordinate reference system from that file, you have to define the 
+proper projection manually within the \tab{General} tab of the \dialog{Layer 
+Properties} dialog. This is due to the fact, that \filename{.prj} files often  
+do not provide the complete projection parameters, as used in QGIS and listed in 
+the \dialog{CRS} dialog. 
+
+For that reason, if you create a new shapefile with QGIS, two different projection 
+files are created. A \filename{.prj} file with limited projection parameters, 
+compatible with ESRI software, and a \filename{.qpj} file, providing the complete 
+parameters of the used CRS. Whenever QGIS finds a \filename{.qpj} file, it will be 
+used instead of the \filename{.prj}.   
+
 \index{shapefile!specification}.
 
 \subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
