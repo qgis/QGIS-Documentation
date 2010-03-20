@@ -13,7 +13,7 @@
 
 PNG=interpolation.eps\
 interpolate_dialog.eps\
-interpolate_idw.eps\
+interpolate_tin.eps\
 	
 ##### TARGETS #####
 
