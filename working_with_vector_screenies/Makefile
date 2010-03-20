@@ -33,10 +33,20 @@ PNG=shapefileloaded.eps \
     mActionDeleteAttribute.eps\
     mActionCalculateField.eps\
     fieldcalculator.eps\
+    stylemanager.eps\
+    singlesymbol_ng_point.eps\
+    singlesymbol_ng_line.eps\
+    singlesymbol_ng_area.eps\
+    categorysymbol_ng_line.eps\
+    graduatesymbol_ng_line.eps\
+    symbolproperties1.eps\
+    symbolproperties2.eps\
+    symbolproperties3.eps\
 
 # digitising_attributes09.eps\
 #	newvectorlayer.eps\
 #	querybuilder.eps\
+
 	
 	
 ##### TARGETS #####

@@ -560,7 +560,7 @@ shown.\index{symbology!changing}
 
 \begin{figure}[h]
 \centering
-\caption{Symbolizing-options \nixcaption}
+\caption{Symbolizing Options \nixcaption}
    \subfigure[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}\goodgap
    \subfigure[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}\\
    \subfigure[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}\goodgap
@@ -594,8 +594,6 @@ At least the following styling options apply for nearly all renderers:
 \end{description}
 \end{description}
 
-%%FIXME Add new symbology minisec
-
 Once you have styled your layer you also could save your layer-style to a
 separate file (with \filename{*.qml}-ending).
 To do this, use the button \button{Save Style \ldots}. No need to say that
@@ -611,6 +609,202 @@ QGIS allows to set a transparency for every vector layer. This can be done with
 the slider \slider{Transparency}{0}{20mm} inside the \tab{symbology} tab (see
 fig. \ref{fig:vector_symbology}). This is very useful for overlaying several
 vector layers.
+
+\subsubsection{New Generation Symbology}
+
+In QGIS \CURRENT a new symbology was integrated in parallel with the symbology 
+described above. This new generation symbology provides a variety of improvements and 
+new features and will replace the current symbology in one of the upcoming releases. 
+To switch to the new symbolgy you currently have to click on the \button{new symbology} button in the \tab{General} tab of the \dialog{Layer Properties} dialog.  
+
+\minisec{Understanding the new generation symbology}
+
+There are three types of symbols: marker symbols (for points), line symbols and 
+fill symbols (for polygons). Symbols can consist of one or more symbol layers. It 
+is possible to define the color of a symbol and this color is then defined for all 
+symbol layers. Some layers may have the color locked - for those the color can not 
+be altered. This is useful when you define the color of a multilayer symbol. 
+Similarly, it is possible to define the width for line symbols, as well as size and 
+angle for marker symbols.
+
+\minisec{Available symbol layer types} 
+
+\begin{itemize}
+\item \textbf{Simple marker}: Rendering with one of hardcoded markers.
+\item \textbf{Simple line}: Usual rendering of a line (with specified 
+width, color and pen style) 
+\item \textbf{Simple fill}: Usual rendering of a polygon (with defined 
+fill color, fill pattern and outline) 
+\item \textbf{SVG marker}: Rendering with a SVG picture 
+\item \textbf{Marker line}: A line rendered by repeating a marker symbol 
+\end{itemize}
+
+\minisec{Color ramps}
+
+Color ramps are used to define a range of colors that can be used during 
+the creation of renderers. The symbol's color will be set from the color ramp. 
+There are two types of color ramps:
+ 
+\begin{itemize}
+\item \textbf{Gradient}: Linear gradient from one color to some other.
+\item \textbf{random}: Randomly generated colors from a specified area of 
+color space 
+\end{itemize}
+
+\minisec{Styles}
+
+A style groups a set of various symbols and color ramps. You can define your 
+prefered or frequently used symbols, and can use it  without having to recreate 
+it everytime. Style items (symbols and color ramps) have always a name by which 
+they can be queried from the style. There is one default style in QGIS (modifiable) 
+and the user can add further styles.
+
+\minisec{Renderers}
+
+The renderer is responsible for drawing a feature together with the correct 
+symbol. There are three types of renderers: single symbol, categorized (called 
+unique color in the old symbology), and graduated. There is no continuous color 
+renderer, because it is in fact only a special case of the graduated renderer. 
+The categorized and graduated renderer can be created by specifying a symbol 
+and a color ramp - they will set the colors for symbols appropriately. 
+
+\subsubsection{Working with the New Generation Symbology}
+
+First you have to enable the new generation symbology clicking on the 
+\button{new symbology} button in the \tab{General} tab of the 
+\dialog{Layer Properties} dialog. The new dialog allows to choose one of the 
+three renderers: single symbol, categorized and graduated. Depending on the 
+chosen renderer, the symbology tab provides different settings and options, that 
+will be described in the following sections.
+
+\minisec{Single Symbol Renderer}
+
+The Single Symbol Renderer is used to render all features of the layer using a 
+single user-defined symbol. The properties, that can be adjusted in the 
+Symbology tab, depend partially on the type of the layer, but all types share 
+the following structure. In the top left part of the tab, there is a preview of 
+the current symbol to be rendered. In the bottom part of the tab, there is a 
+list of symbols already defined for the current style, prepared to be used via 
+selecting them from the list. The current symbol can be modified using the 
+\button{Properties} button, which opens a \dialog{Symbol Properties} dialog, or 
+the \button{Set Color} button, which opens an ordinary \dialog{Color} dialog.
+After having done any needed changes, the symbol can be added to the list of 
+current style symbols (using the \button{Add to style} button) and then easily 
+be used in the future.
+ 
+\begin{figure}[h]
+\centering
+\caption{New Single Symbolizing options \nixcaption}
+   \subfigure[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}\goodgap
+   \subfigure[Single symbol line properties] {\label{subfig:singleNG2}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_line}}\goodgap
+   \subfigure[Single symbol area properties] {\label{subfig:singleNG3}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_area}}
+\end{figure}
+
+\minisec{Categorized Renderer}
+
+The Categorized Renderer is used to render all features from a layer, using a 
+single user-defined symbol, which color reflects the value of a selected 
+feature's attribute. The Symbology tab allows you to select:
+
+\begin{itemize}
+\item The attribute (using the Column listbox)
+\item The symbol (using the Symbol Properties dialog)
+\item The colors (using the Color Ramp listbox)  
+\end{itemize}
+
+For convenience, the list in the bottom part of the tab lists the values of 
+all currently selected attributes together, including the symbols that will 
+be rendered.
+
+The example in figure \ref{fig:catsymNG} shows the category rendering dialog 
+used for the rivers layer of the qgis sample dataset.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{New Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}\smallskip
+   \includegraphics[clip=true, width=10cm]{categorysymbol_ng_line}
+\end{center}
+\end{figure}
+
+\minisec{Graduated rendering}
+
+The Graduated Renderer is used to render all the features from a layer, using 
+a single user-defined symbol, whose color reflects the classification of a selected 
+feature's attribute to a class.
+
+Analogue to the categorized rendered, the symbology tab allows you to select:
+
+\begin{itemize}
+\item The attribute (using the Column listbox)
+\item The symbol (using the Symbol Properties button)
+\item The colors (using the Color Ramp list)
+\end{itemize}
+
+Additionally, you can specify the number of classes and also the mode how to 
+classify features inside the classes (using the Mode list). The listbox in the 
+bottom part of the symbology tab lists the classes together with their ranges, 
+labels and symbols that will be rendered.
+
+The example in figure \ref{fig:gradsymNG} shows the category rendering dialog 
+for the rivers layer of the qgis sample dataset.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}\smallskip
+   \includegraphics[clip=true, width=10cm]{graduatesymbol_ng_line}
+\end{center}
+\end{figure}
+
+\minisec{Symbol Properties}
+
+The symbol properties dialog allows the user to specify different properties of 
+the symbol to be rendered. In the top left part of the dialog, you find a preview 
+of the current symbol as it will be displayed in the map canvas. Below the preview 
+is the list of symbol layers. To start the symbol properties dialog, click the 
+\dropmenuopttwo{mActionOptions}{Properties} button in the \tab{General} tab of the
+\dialog{Layer Properties} dialog. 
+
+The control panels allow adding or removing layers, changing the position of layers, 
+or locking layers for color changes. In the right part of the dialog, there are 
+shown the settings applicable to the single symbol layer selected in the symbol 
+layer list. The most important is the 'Symbol Layer Type' combo box, which allows 
+you to choose the layer type. The available options are \filename{SimpleLine}, 
+\filename{SvgMarker} and \filename{SimpleFill}. 
+
+Depending on the chosen value, these settings are available in the right part 
+of the dialog:
+
+\begin{itemize}
+\item \textbf{SimpleLine}: Color, Pen width, Pen style, Offset, Join style and Cap style; 
+\item \textbf{SvgMarker}: Size, Angle, Offset X, Offset Y and SVG Image
+\item \textbf{SimpleFill}: Color, Border color, Fill style. 
+\end{itemize}
+
+Example: A picture showing a line symbol composed from three simple lines with different pen widths. 
+Example: Symbol properties for a point layer
+Example: Symbol properties filling pattern for a polygon layer
+
+\begin{figure}[h]
+\centering
+\caption{Defining symbol properties \nixcaption}
+   \subfigure[Line composed from three simple lines] {\label{subfig:symprops1}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties1}}\goodgap
+   \subfigure[Symbol properties for point layer] {\label{subfig:symprops2}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties2}}\goodgap
+   \subfigure[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
+\end{figure}
+
+\subsubsection{Style Manager to manage symbols and color ramps}
+
+The Style Manger is a small helper application, that lists symbols and color 
+ramps available in a style. It also allows you to add and/or remove items. To 
+launch the Style Manager, click on \mainmenuopt{Settings} > \dropmenuopt{Style 
+Manager} in the mai menu.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}\smallskip
+   \includegraphics[clip=true, width=7cm]{stylemanager}
+\end{center}
+\end{figure}
 
 \subsubsection{Labels Tab}
 
