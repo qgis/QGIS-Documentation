@@ -12,6 +12,10 @@
 #	nextfile.eps
 
 PNG=labeling.eps\
+	label_area.eps\
+	label_engine.eps\
+	label_line.eps\
+	label_points.eps\
 
 ##### TARGETS #####
 
