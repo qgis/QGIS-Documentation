@@ -643,13 +643,20 @@ fill color, fill pattern and outline)
 
 Color ramps are used to define a range of colors that can be used during 
 the creation of renderers. The symbol's color will be set from the color ramp. 
-There are two types of color ramps:
- 
+
+There are three types of color ramps:
+
 \begin{itemize}
 \item \textbf{Gradient}: Linear gradient from one color to some other.
 \item \textbf{random}: Randomly generated colors from a specified area of 
 color space 
+\item \textbf{Colorbrewer}: Create color area from a color shema and a defined 
+number of color classes.
 \end{itemize}
+
+Color ramps can be defined in the Style Manager (see Section 
+\ref{subsec:stylemanager}) by clicking on Add Element, selecting color ramp 
+as style element type and then choosing a color ramp type.
 
 \minisec{Styles}
 
@@ -671,7 +678,7 @@ and a color ramp - they will set the colors for symbols appropriately.
 \subsubsection{Working with the New Generation Symbology}
 
 First you have to enable the new generation symbology clicking on the 
-\button{new symbology} button in the \tab{General} tab of the 
+\button{new symbology} button in the \tab{Symbology} tab of the 
 \dialog{Layer Properties} dialog. The new dialog allows to choose one of the 
 three renderers: single symbol, categorized and graduated. Depending on the 
 chosen renderer, the symbology tab provides different settings and options, that 
@@ -745,7 +752,7 @@ classify features inside the classes (using the Mode list). The listbox in the
 bottom part of the symbology tab lists the classes together with their ranges, 
 labels and symbols that will be rendered.
 
-The example in figure \ref{fig:gradsymNG} shows the category rendering dialog 
+The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog 
 for the rivers layer of the qgis sample dataset.
 
 \begin{figure}[ht]
@@ -761,24 +768,34 @@ The symbol properties dialog allows the user to specify different properties of
 the symbol to be rendered. In the top left part of the dialog, you find a preview 
 of the current symbol as it will be displayed in the map canvas. Below the preview 
 is the list of symbol layers. To start the symbol properties dialog, click the 
-\dropmenuopttwo{mActionOptions}{Properties} button in the \tab{General} tab of the
+\dropmenuopttwo{mActionOptions}{Properties} button in the \tab{Symbology} tab of the
 \dialog{Layer Properties} dialog. 
 
 The control panels allow adding or removing layers, changing the position of layers, 
 or locking layers for color changes. In the right part of the dialog, there are 
 shown the settings applicable to the single symbol layer selected in the symbol 
 layer list. The most important is the 'Symbol Layer Type' combo box, which allows 
-you to choose the layer type. The available options are \filename{SimpleLine}, 
-\filename{SvgMarker} and \filename{SimpleFill}. 
+you to choose the layer type. The available options depend on the layer type 
+(Point, Line, Polygon). 
 
-Depending on the chosen value, these settings are available in the right part 
-of the dialog:
-
+\begin{description}
+\item Symbol layer type options for point layers.
 \begin{itemize}
-\item \textbf{SimpleLine}: Color, Pen width, Pen style, Offset, Join style and Cap style; 
-\item \textbf{SvgMarker}: Size, Angle, Offset X, Offset Y and SVG Image
-\item \textbf{SimpleFill}: Color, Border color, Fill style. 
+\item \textbf{SimpleMarker}: Border color, Fill color, Size, Angle, Offset X,Y
+\item \textbf{SvgMarker}: Size, Angle, Offset X,Y, SVG Image
 \end{itemize}
+\item Symbol layer type options for line layers.
+\begin{itemize}
+\item \textbf{LineDecoration}: Color
+\item \textbf{MarkerLine}: Marker, Marker Interval, Rotate marker, Line offset
+\item \textbf{SimpleLine}: Color, Pen width, pen style, Offset, Join style and Cap style;
+\end{itemize}
+\item Symbol layer type options for polygon layers
+\begin{itemize}
+\item \textbf{SimpleFill}: Color, Fill style, Border color, Border style, Border width 
+\end{itemize}
+\end{description}
+
 
 \begin{figure}[h]
 \centering
@@ -788,7 +805,7 @@ of the dialog:
    \subfigure[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
 \end{figure}
 
-\subsubsection{Style Manager to manage symbols and color ramps}
+\subsubsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
 
 The Style Manger is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. To 
@@ -1987,7 +2004,7 @@ open the \toolbtntwo{mActionCalculateField}{Field Calculator} dialog.
 new field box.
 \item Add 'length' as output field name, 'real' as output field type and define 
 output field width 10 and a precision of 3.
-\item Now double click on Operator 'length' to add it as \$length into the 
+\item Now click on Operator 'length' to add it as \$length into the 
 field calculator expression box and click \button{Ok}.
 \end{enumerate}
 
