@@ -247,7 +247,7 @@ clicking on the \button{Test Connect} button\index{PostgreSQL!connection!testing
 Security}}\index{settings}\index{security}
 \qgistip{Your customized settings for QGIS are stored based on the operating
 system. \nix, the settings are stored in your home directory in
-\filename{.qt/qgisrc}. \win, the settings are stored in the registry. Depending on
+\filename{.qgis/}. \win, the settings are stored in the registry. Depending on
 your computing environment, storing passwords in your QGIS settings may be a
 security risk.
 }
@@ -318,7 +318,7 @@ column (a type of int4 and either a primary key or with a unique constraint,
 preferably indexed).
 
 %%FIXME: Add missing information
-When dealing with views, QGIS parses the view definition and
+%% When dealing with views, QGIS parses the view definition and
 
 \subsubsection{Importing Data into PostgreSQL}\label{sec:loading_postgis_data}
 \index{PostGIS!SPIT!importing data}
@@ -1159,7 +1159,7 @@ figure~\ref{fig:diagramtab}).
 The current implementation of diagrams provides support for piecharts, barcharts, 
 proportional SVG symbols, and for linear scaling of the diagram size according 
 to a classification attribute. We will demonstrate an example and overlay the 
-alaska boundary layer a barchart diagramm showing some temperature data from 
+alaska boundary layer a barchart diagram showing some temperature data from 
 a climate vector layer. Both vector layers are part of the QGIS sample dataset (see
 Section~\ref{label_sampledata}.
 
@@ -1194,13 +1194,9 @@ Figure~\ref{fig:climatediagram} gives an impression.
 
 \subsection{Editing}\index{editing}
 
-QGIS supports basic capabilities for editing vector geometries.  Before reading any
-further you should note that at this stage editing support is still preliminary.
-Before performing any edits, always make a backup of the dataset you are about
-to edit. 
-
-\textbf{Note} - the procedure for editing GRASS layers is different - see
-Section \ref{grass_digitising} for details.
+QGIS supports various capabilities for editing OGR, PostGIS and Spatialite 
+vector layers. \textbf{Note} - the procedure for editing GRASS layers is 
+different - see Section \ref{grass_digitising} for details.
 
 \begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
 \qgistip{This version of QGIS does not track if somebody else is editing a
