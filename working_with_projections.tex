@@ -1,6 +1,6 @@
-% vim:autoindent:set textwidth=78:
+%  !TeX  root  =  user_guide.tex
 
-\section{Working with Projections}\label{label_projections}
+\chapter{Working with Projections}\label{label_projections}
 \index{Projections!working with}
 
 % when the revision of a section has been finalized, 
@@ -13,7 +13,7 @@ user to define custom coordinate reference systems and supports on-the-fly
 (OTF) projection of vector layers. All these features allow the user to
 display layers with different CRS and have them overlay properly.
 
-\subsection{Overview of Projection Support}\label{label_projoverview}
+\section{Overview of Projection Support}\label{label_projoverview}
 
 QGIS has support for approximately 2,700 known CRS. Definitions for 
 each of these CRS are stored in a SQLite database that is installed with
@@ -38,7 +38,7 @@ has the same base name as the shapefile and a prj extension. For example, a
 shapefile named \filename{alaska.shp} would have a corresponding projection
 file named \filename{alaska.prj}.
 
-\subsection{Specifying a Projection}
+\section{Specifying a Projection}
 \index{Projections!specifying}
 \label{sec:projection-specifying}
 
@@ -73,7 +73,7 @@ raster (\ref{label_generaltab}) and vector (\ref{vectorgeneraltab}) properties
 dialog. If your layer already has a CRS defined, it
 will be displayed as shown in Figure~\ref{fig:vector_symbology}.
 
-\subsection{Define On The Fly (OTF) Projection}\label{label_projstart}
+\section{Define On The Fly (OTF) Projection}\label{label_projstart}
 
 QGIS does not have OTF projection enabled by default, and this function is
 currently only supported for vector layers. To use OTF projection, you must
@@ -131,7 +131,7 @@ the associated CRS.
 
 \begin{Tip}
 \caption{\textsc{Project Properties Dialog}}
-\qgistip{
+\{
 If you open the \dialog{Project Properties} dialog from the
 \mainmenuopt{Edit} (Gnome, OSX) or \mainmenuopt{Settings} 
 (KDE, Windows) menu, you must click on the \tab{Coordinate Reference
@@ -141,7 +141,7 @@ the \tab{Coordinate Reference System} tab to the front.
 }
 \end{Tip}
 
-\subsection{Custom Coordinate Reference System}\label{sec:customprojections}
+\section{Custom Coordinate Reference System}\label{sec:customprojections}
 \index{Projections!custom}
 
 If QGIS does not provide the coordinate reference system you need, you

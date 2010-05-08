@@ -1,6 +1,6 @@
-% vim: set textwidth=78 autoindent:
+%  !TeX  root  =  user_guide.tex 
 
-\subsection{eVis Plugin}\label{sec:evis}
+\section{eVis Plugin}\label{sec:evis}
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's (AMNH) Center 
 for Biodiversity and Conservation (CBC) \footnote{This section is derived from Horning, N., K.
@@ -20,7 +20,7 @@ The eVis plugin is made up of three modules: the Database Connection tool, Event
 the Event Browser. These work together to allow viewing of geocoded photographs and other documents 
 that are linked to features stored in vector files, databases, or spreadsheets.
 
-\subsubsection{Event Browser}\label{evis_browser}
+\subsection{Event Browser}\label{evis_browser}
 
 The Event Browser module provides the functionality to display geocoded photographs that are linked
 to vector features displayed in the QGIS map window. Point data, for example, can be from a vector
@@ -195,7 +195,7 @@ be centered over the point that is associated with the photograph or other docum
 
 To close the Generic Event Browser window click on the Close button from the Display window.
 
-\subsubsection{Event ID Tool}\label{evis_id_tool}
+\subsection{Event ID Tool}\label{evis_id_tool}
 
 The Event ID module allows you to display a photograph by clicking on a feature displayed in the
 QGIS map window. The vector feature must have attribute information associated with it to describe
@@ -217,7 +217,7 @@ locality are available for display in the browser. If more than one photograph i
 cycle through the different features using the Previous and Next buttons. The other controls are
 described in the Event Browser section of this guide.
 
-\subsubsection{Database connection}\label{evis_database}
+\subsection{Database connection}\label{evis_database}
 
 The Database Connection module provides tools to connect to and query a database or other ODDBC
 resource, such as a spreadsheet.
@@ -322,7 +322,7 @@ accessed by right clicking on the layer name in the QGIS map legend and then sel
 shapefile.''
 
 \begin{Tip}\caption{\textsc{Creating a vector layer from a Microsoft Excel Worksheet}}
-\qgistip{When creating a vector layer from a Microsoft Excel Worksheet you might see that unwanted
+\{When creating a vector layer from a Microsoft Excel Worksheet you might see that unwanted
 zeros (``0'') have been inserted in the attribute table rows beneath valid data.This can be caused
 by deleting the values for these cells in Excel using the ``backspace'' key. To correct this problem
 you need to open the Excel file (you'll need to close QGIS if there if you are connected to the file

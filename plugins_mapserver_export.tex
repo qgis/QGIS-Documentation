@@ -1,6 +1,6 @@
-% vim: set textwidth=78 autoindent:
+%  !TeX  root  =  user_guide.tex
 
-\subsection{MapServer Export Plugin}\label{sec:mapserver_export}
+\section{MapServer Export Plugin}\label{sec:mapserver_export}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
@@ -10,7 +10,7 @@ You can use QGIS to ``compose'' your map by adding and arranging layers,
 symbolizing them, customizing the colors and then creating a map file 
 for MapServer.
 
-\subsubsection{Creating the Project File}
+\subsection{Creating the Project File}
 
 The MapServer Export Plugin operates on a saved QGIS project file and 
 \textbf{not} on the current contents of the map canvas and legend. This 
@@ -43,7 +43,7 @@ Figure~\ref{fig:mapserver_export_qgis})
 \mainmenuopt{File} > \dropmenuopttwo{mActionFileSave}{Save Project}.
 \end{enumerate} 
 
-\subsubsection{Creating the Map File}
+\subsection{Creating the Map File}
 
 The tool \filename{msexport} to export a QGIS project file to a MapServer map 
 file is installed in your QGIS binary directory and can be used independently of QGIS. 
@@ -109,7 +109,7 @@ You can view the map file in any text editor or visualizer. If you
 take a look, you'll notice that the export tool adds the metadata needed
 to enable our map file for WMS. 
 
-\subsubsection{Testing the Map File}
+\subsection{Testing the Map File}
 
 We can now test our work using the \filename{shp2img} tool to create an image
 from the map file. The \filename{shp2img} utility is part of MapServer and FWTools. 

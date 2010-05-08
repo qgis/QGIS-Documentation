@@ -1,7 +1,6 @@
-%\item \checkbox{Continuously redraw the map when dragging the legend/map divider}
-% vim:autoindent:set textwidth=78:
+%  !TeX  root  =  user_guide.tex 
 
-\section{Features at a Glance}\label{feature_glance}
+\chapter{Features at a Glance}\label{feature_glance}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
@@ -12,7 +11,7 @@ want to give you a more detailed overview of the features of QGIS.
 Most features presented in the following chapters will be explained and described in 
 own sections later in the manual.
 
-\subsection{Starting and Stopping QGIS}\label{label_startinqgis}
+\section{Starting and Stopping QGIS}\label{label_startinqgis}
 
 In Section \ref{samplesession} you already learned how to start QGIS. We will 
 repeat this here and you will see that QGIS also provides further command line options. 
@@ -30,7 +29,7 @@ in a shell, run /path-to-installation-executable/Contents/MacOS/Qgis.}
 To stop QGIS, click the menu options \{\nix{}\win{File} \osx{QGIS}\} > Quit,
 or use the shortcut \keystroke{Ctrl+Q}.
 
-\subsubsection{Command Line Options}\index{command line options}
+\subsection{Command Line Options}\index{command line options}
 \label{label_commandline}
 
 \nix QGIS supports a number of options when started from the command line. To
@@ -66,12 +65,11 @@ Usage: qgis [options] [FILES]
 \normalsize
 
 \begin{Tip} \caption{\textsc{Example Using command line arguments}}
-\qgistip{You can start QGIS by specifying one or more data files
+You can start QGIS by specifying one or more data files
 on the command line. For example, assuming you are in the 
 qgis\_sample\_data directory, you could start QGIS with a vector layer 
 and a raster file set to load on startup using the following command: 
 \usertext{qgis ./raster/landcover.img ./gml/lakes.gml}
-}
 \end{Tip}
 
 \minisec{Command line option \usertext{---snapshot}}
@@ -105,7 +103,7 @@ To start with a specific map extent use this option. You need to add the boundin
 \minisec{Command line option \usertext{---nologo}}
 This command line argument hides the splash screen when you start QGIS.
 
-\subsection{QGIS GUI}\index{main window}
+\section{QGIS GUI}\index{main window}
 \label{label_qgismainwindow}
 
 When QGIS starts, you are presented with the GUI as shown below
@@ -134,7 +132,7 @@ The QGIS GUI is divided into six areas:
 These six components of the QGIS interface are described in more detail in
 the following sections.
 
-\subsubsection{Keyboard shortcuts}\label{shortcuts}
+\subsection{Keyboard shortcuts}\label{shortcuts}
 \index{Keyboard shortcuts}
 
 QGIS provides default keyboard shortcuts for many features. You find them in
@@ -155,7 +153,7 @@ on \button{Change}, \button{Set none} or \button{Set default}. Once you have
 found your configuration, you can save it as XML file and load it to another
 QGIS installation. 
 
-\subsubsection{Menu Bar}\label{label_menubar}
+\subsection{Menu Bar}\label{label_menubar}
 \index{menus}
 
 The menu bar provides access to various QGIS features using a standard 
@@ -528,7 +526,7 @@ there:
 
 %See Appendix \ref{app_menu} for complete descriptions of the menu items.
 
-\subsubsection{Toolbars}\label{label_toolbars}
+\subsection{Toolbars}\label{label_toolbars}
 \index{toolbars}
 
 The toolbars provide access to most of the same functions as the menus,
@@ -542,11 +540,11 @@ the mouse over the toolbars.
 
 \begin{Tip}
 \caption{\textsc{Restoring toolbars}} \index{layout!toolbars}
-\qgistip{If you have accidentally hidden all your toolbars, you can get them
-back by choosing menu option \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.}
+If you have accidentally hidden all your toolbars, you can get them
+back by choosing menu option \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.
 \end{Tip}
 
-\subsubsection{Map Legend}\label{label_legend}
+\subsection{Map Legend}\label{label_legend}
 \index{legend}
 
 The map legend area is used to set the visibility and z-ordering of layers.
@@ -634,7 +632,7 @@ symbology (same vector geometry type and same attributes).
 %\includegraphics[width=0.7cm]{editable} This is a vector
 %layer that is currently enabled for editing.\\
 
-\subsubsection{Map View}\label{label_mapview}
+\subsection{Map View}\label{label_mapview}
 \index{map!view}
 
 This is the 'business end' of QGIS - maps are displayed in this area! The
@@ -648,26 +646,24 @@ changes you make in the legend area.
 
 \begin{Tip}\caption{\textsc{Zooming the Map with the Mouse
 Wheel}}\index{zoom!mouse wheel}
-\qgistip{You can use the mouse wheel to zoom in and out on the map. Place
+You can use the mouse wheel to zoom in and out on the map. Place
 the mouse cursor inside the map area and roll the wheel forward (away from you) to
 zoom in and backwards (towards you) to zoom out. The mouse cursor position is the 
 center where the zoom occurs. You can customize the behavior of the mouse
 wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >
 \dropmenuopt{Options} menu.
-}
 \end{Tip}
 
 \begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space
 Bar}}\index{pan!arrow keys}
-\qgistip{You can use the arrow keys to pan in the map. Place the mouse cursor 
+You can use the arrow keys to pan in the map. Place the mouse cursor 
 inside the map area and click on the right arrow key to pan East, left arrow 
 key to pan West, up arrow key to pan North and down arrow key to pan South. 
 You can also pan the map using the space bar: just move the mouse while
 holding down space bar.
-}
 \end{Tip}
 
-\subsubsection{Map Overview}\label{label_mapoverview}
+\subsection{Map Overview}\label{label_mapoverview}
 \index{map!overview}
 
 The map overview panel provides a full extent view of layers added to it. It
@@ -684,7 +680,7 @@ or remove all layers from the overview using the Overview tools on the toolbar.
 If you click and drag the red rectangle in the overview that shows your 
 current extent, the main map view will update accordingly.
 
-\subsubsection{Status Bar}\label{label_statusbar}
+\subsection{Status Bar}\label{label_statusbar}
 
 The status bar shows you your current position in map coordinates (e.g.
 meters or decimal degrees) as the mouse pointer is moved across the map view.
@@ -705,7 +701,7 @@ the status bar is a projector icon. Clicking on this opens the projection
 properties for the current project.
 
 \begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}\index{scale!calculate}
-\qgistip{When you start QGIS, degrees is the default unit, and it tells QGIS 
+When you start QGIS, degrees is the default unit, and it tells QGIS 
 that any coordinate in your layer is in degrees. To get correct scale values, 
 you can either change this to meter manually in the \tab{General} tab under 
 \mainmenuopt{Settings} >\dropmenuopt{Project Properties} or you can select a project 
@@ -713,10 +709,9 @@ Coordinate Reference System (CRS) clicking on the
 \toolbtntwo{mIconProjectionDisabled}{projector} 
 icon in the lower right-hand corner of the statusbar. In the last case, the 
 units are set to what the project projection specifies, e.g. '+units=m'.
-}
 \end{Tip}
 
-\subsection{Rendering}\label{subsec:redraw_events}\index{rendering}
+\section{Rendering}\label{subsec:redraw_events}\index{rendering}
 
 By default, QGIS renders all visible layers whenever the map canvas must be
 refreshed. The events that trigger a refresh of the map canvas include:
@@ -730,7 +725,7 @@ refreshed. The events that trigger a refresh of the map canvas include:
 
 QGIS allows you to control the rendering process in a number of ways.
 
-\subsubsection{Scale Dependent Rendering}\index{rendering!scale dependent}
+\subsection{Scale Dependent Rendering}\index{rendering!scale dependent}
 \label{label_scaledepend}
 
 Scale dependent rendering allows you to specify the minimum and maximum
@@ -742,7 +737,7 @@ click on the \checkbox{Use scale dependent rendering} checkbox.
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.\index{scale}
 
-\subsubsection{Controlling Map Rendering}\label{label_controlmap}
+\subsection{Controlling Map Rendering}\label{label_controlmap}
 
 Map rendering can be controlled in the following ways:
 
@@ -812,7 +807,7 @@ performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
 \end{itemize}
 
-\subsection{Measuring}\label{sec:measure}\index{measure}
+\section{Measuring}\label{sec:measure}\index{measure}
 
 Measuring works within projected coordinate systems only (e.g., UTM). If 
 the loaded map is defined with a geographic coordinate system
@@ -822,7 +817,7 @@ incorrect. To fix this you need to set an appropriate map coordinate system
 snapping settings from the digitizing module. This is useful, if you want to 
 measure along lines or areas in vector layers.  
 
-\subsubsection{Measure length and areas}
+\subsection{Measure length and areas}
 \index{measure:line length}
 \index{measure:areas}
 
@@ -841,11 +836,12 @@ In addition, the measuring tool will snap to the currently selected layer, provi
 \begin{figure}[h]
 \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \centering
-   \subfigure[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}\goodgap
-   \subfigure[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}
+   \subfloat[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}
+     \hspace{1cm}
+   \subfloat[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}
 \end{figure}
 
-\subsection{Projects}\label{sec:projects}\index{projects}
+\section{Projects}\label{sec:projects}\index{projects}
 
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
@@ -902,7 +898,7 @@ layers will respond to the identify tool. (See the Map tools paragraph from
 the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
 \end{itemize}
  
-\subsection{Output}\label{sec:output}
+\section{Output}\label{sec:output}
 \index{output!save as image!print composer!quick print}
 
 There are several ways to generate output from your QGIS session. We have
@@ -921,7 +917,7 @@ Section~\ref{label_printcomposer}).
 to print a simple map with minimal effort (see Section \ref{quickprint}).
 \end{itemize}
 
-\subsection{GUI Options}\label{subsec:gui_options}
+\section{GUI Options}\label{subsec:gui_options}
 
 \includegraphics[width=0.7cm,clip=true]{mActionOptions} Some basic options
 for QGIS can be selected using the \dialog{Options} dialog. Select the 
@@ -1049,9 +1045,8 @@ please refer to the manual of the unterlaying QT-library-documentation at
 \end{figure}
 
 \begin{Tip} \caption{\textsc{Using Proxies}}
-\qgistip{Using proxies can sometimes be tricky. It is useful to 'trial and
+Using proxies can sometimes be tricky. It is useful to 'trial and
 error' the above proxy types and check if they succeed in your case.
-}
 \end{Tip}
 
 You can modify the options according to your needs. Some of the changes may 
@@ -1067,13 +1062,13 @@ require a restart of QGIS before they will be effective.
 \end{itemize}
 
 
-\subsection{Spatial Bookmarks}\label{sec:bookmarks}
+\section{Spatial Bookmarks}\label{sec:bookmarks}
 \index{bookmarks}
 \index{spatial bookmarks|\see{bookmarks}}
 
 Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to it later.
 
-\subsubsection{Creating a Bookmark}
+\subsection{Creating a Bookmark}
 To create a bookmark:
 \begin{enumerate}
 \item Zoom or pan to the area of interest.
@@ -1084,18 +1079,18 @@ To create a bookmark:
 
 Note that you can have multiple bookmarks with the same name.
 
-\subsubsection{Working with Bookmarks}
+\subsection{Working with Bookmarks}
 To use or manage bookmarks, select the menu 
 option \mainmenuopt{View} > \dropmenuopt{Show Bookmarks}.
 The \dialog{Geospatial Bookmarks} dialog allows you to zoom to or delete a bookmark.
 You can not edit the bookmark name or coordinates.
 
-\subsubsection{Zooming to a Bookmark}
+\subsection{Zooming to a Bookmark}
 From the \dialog{Geospatial Bookmarks} dialog, select the desired bookmark by clicking on it, 
 then click \button{Zoom To}.
 You can also zoom to a bookmark by double-clicking on it.
 
-\subsubsection{Deleting a Bookmark}
+\subsection{Deleting a Bookmark}
 To delete a bookmark from the \dialog{Geospatial Bookmarks} dialog, click on it then click
  \button{Delete}.
 Confirm your choice by clicking \button{Yes} or cancel the delete by clicking \button{No}.

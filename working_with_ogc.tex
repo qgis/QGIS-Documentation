@@ -1,6 +1,5 @@
-% vim: set textwidth=78 autoindent:
-
-\section{Working with OGC Data}
+%  !TeX  root  =  user_guide.tex
+\chapter{Working with OGC Data}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
@@ -9,7 +8,7 @@
 QGIS supports WMS and WFS as data sources. The support is native; WFS is
 implemented as a plugin.
 
-\subsection{What is OGC Data}\index{OGC!introduction}
+\section{What is OGC Data}\index{OGC!introduction}
 
 The Open Geospatial Consortium (OGC), is an international organization with more than 300 
 commercial, governmental, nonprofit and research organisations worldwide. Its members 
@@ -36,9 +35,9 @@ different GIS implementations and data stores.  QGIS can now deal with three of 
 above specifications, being SFS (though support of the PostgreSQL / PostGIS
 data provider, see Section \ref{label_postgis}), WFS and WMS as a client.
 
-\subsection{WMS Client}\label{sec:ogc-wms}\index{WMS!client}\index{OGC!WMS!client}\index{rasters!WMS}
+\section{WMS Client}\label{sec:ogc-wms}\index{WMS!client}\index{OGC!WMS!client}\index{rasters!WMS}
 
-\subsubsection{Overview of WMS Support}\label{sec:ogc-wms-about}\index{WMS!client!about}
+\subsection{Overview of WMS Support}\label{sec:ogc-wms-about}\index{WMS!client!about}
 
 QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1 and 1.3
 servers.  It has particularly been tested against publicly accessible servers
@@ -61,7 +60,7 @@ WMS layers can be added quite simply, as long as you know the URL to access
 the WMS server, you have a serviceable connection to that server, and the
 server understands HTTP as the data transport mechanism.
 
-\subsubsection{Selecting WMS Servers}\label{sec:ogc-wms-servers}\index{WMS!remote server!selection}
+\subsection{Selecting WMS Servers}\label{sec:ogc-wms-servers}\index{WMS!remote server!selection}
 
 The first time you use the WMS feature, there are no servers defined. You 
 can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button inside the toolbar, 
@@ -105,7 +104,7 @@ Once the new WMS Server connection has been created, it will be
 preserved for future QGIS sessions.
 
 \begin{Tip}[ht]\caption{\textsc{On WMS Server URLs}}
-\qgistip{Be sure, when entering in the WMS server URL, that you have
+\{Be sure, when entering in the WMS server URL, that you have
 the base URL.  For example, you shouldn't have fragments such as
 \usertext{request=GetCapabilities} or \usertext{version=1.0.0}
 in your URL.\index{WMS!remote server!URL}
@@ -134,7 +133,7 @@ in your URL.\index{WMS!remote server!URL}
 %%% 
 %%% An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 
-\subsubsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
+\subsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
 
 Once you have successfully filled in your parameters you can select the
 \button{Connect}
@@ -160,7 +159,7 @@ The \tab{Image encoding} section now lists the formats that are supported by bot
 the client and server.  Choose one depending on your image accuracy requirements.
 
 \begin{Tip}[ht]\caption{\textsc{Image Encoding}}
-\qgistip{You will typically find that a WMS server offers you the choice
+\{You will typically find that a WMS server offers you the choice
 of JPEG or PNG image encoding.  JPEG is a lossy compression format,
 whereas PNG faithfully reproduces the raw raster data.
 
@@ -185,7 +184,7 @@ When several layers are selected, they will be combined at the WMS Server
 and transmitted to QGIS in one go.
 
 \begin{Tip}[ht]\caption{\textsc{WMS Layer Ordering}}
-\qgistip{In this version of QGIS, WMS layers rendered by a server are overlaid
+\{In this version of QGIS, WMS layers rendered by a server are overlaid
 in the order listed in the Layers section, from top to bottom of the list.
 If you want to change the overlay order, you can use the \tab{Layer Order} tab. 
 \index{WMS!remote server!layer ordering}
@@ -198,7 +197,7 @@ In this version of QGIS, the transparency setting is hard-coded to
 be always on, where available.
 
 \begin{Tip}[ht]\caption{\textsc{WMS Layer Transparency}}
-\qgistip{The availability of WMS image transparency depends on
+\{The availability of WMS image transparency depends on
 the image encoding used:  PNG and GIF support transparency,
 whilst JPEG leaves it unsupported.
 \index{WMS!layer transparency}
@@ -232,7 +231,7 @@ those CRSs supported by the WMS Server will be shown.
 
 
 \begin{Tip}[ht]\caption{\textsc{WMS Projections}}
-\qgistip{For best results, make the WMS layer the first layer
+\{For best results, make the WMS layer the first layer
 you add to your project.  This allows the project
 projection to inherit the CRS you used to render the WMS layer.
 On-the-fly projection (see Section \ref{sec:projection-specifying})
@@ -247,7 +246,7 @@ results can occur.
 % 
 % server-search tab.
 %
-\subsubsection{Server-Search}
+\subsection{Server-Search}
 \label{sec:serversearch}
 \index{WMS!serversearch}
 \index{WMS!search}
@@ -286,7 +285,7 @@ keywords.
 Basically this option is a frontend to the API of
 \url{http://geopole.org}.
 
-\subsubsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
+\subsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
 \index{WMS!identify}
 \index{identify!WMS}
 \index{WMS!GetFeatureInfo}
@@ -397,7 +396,7 @@ here are a few handy definitions:
 \end{itemize}
 
 
-\subsubsection{WMS Client Limitations}\label{sec:ogc-wms-limits}\index{WMS!client!limits}
+\subsection{WMS Client Limitations}\label{sec:ogc-wms-limits}\index{WMS!client!limits}
 
 Not all possible WMS Client functionality had been included in this version of QGIS.
 Some of the more notable exceptions follow:
@@ -420,7 +419,7 @@ can add the (optional) credentials when you add a WMS-server. See section
 \ref{sec:ogc-wms-servers} for details.
 
 \begin{Tip}[ht]\caption{\textsc{Accessing secured OGC-layers}}
-\qgistip{If you need to access secured layers with other secured methods
+\{If you need to access secured layers with other secured methods
 than basic authentification, you could use InteProxy as
 a transparent proxy, which does supports several authentification methods.
 More information can be found at the InteProxy-manual found on the website
@@ -430,7 +429,7 @@ More information can be found at the InteProxy-manual found on the website
 \end{Tip}
 
 
-\subsection{WFS Client}\label{sec:ogc-wfs}
+\section{WFS Client}\label{sec:ogc-wfs}
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You 
 can identify and select features and view the attribute table. An exception 
@@ -493,7 +492,7 @@ hesitate to contacting the development team. Please refer to Section
 \ref{label_helpsupport} for further information about the mailinglists.
 
 \begin{Tip}[ht]\caption{\textsc{Finding WFS Servers}}
-\qgistip{You can find additional WFS servers by using Google or your
+\{You can find additional WFS servers by using Google or your
 favorite search engine. There are a number of lists with public URLs, some 
 of them maintained and some not.
 \index{WFS!remote server!}
@@ -501,7 +500,7 @@ of them maintained and some not.
 \end{Tip} 
 
 \begin{Tip}[ht]\caption{\textsc{Accessing secure WFS Servers}}
-\qgistip{
+\{
 Within the dialog \dialog{Create a new WFS-connection} QGIS does not support 
 authenficated WFS-connections yet. Within one of the next releases we expect 
 to also support authenticated WFS-servers. Meanwhile you could use InteProxy
@@ -510,5 +509,4 @@ WFS-servers.
 \index{WFS!authenticate remote server!}
 \index{WFS!secured WFS server!}
 }
-\end{Tip} 
-
+\end{Tip}

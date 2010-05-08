@@ -1,69 +1,74 @@
-%
-%
-\documentclass[a4paper,pagesize=dvips,onecolumn,11pt,titlepage,twoside]{scrartcl}
-% \documentclass[a4paper,dvips,onecolumn,11pt,titlepage]{scrreprt}
-\usepackage{qgis_style}
+% !TEX encoding = utf8
+% !TEX TS-program = pdflatex
 
+% document type selection
+% use of koma-script book class
+% \documentclass[10pt,draft]{scrbook} % wihtout fig and with print markers (great when playing with the layout)
+% \documentclass[10pt,DIV=8]{scrbook}
+% 
+% settings for the geometry package and Crown Quarto (18,89 x 24,58 cm)
+\documentclass[10pt]{scrbook}%
+
+\usepackage[paperwidth=18.89cm,paperheight=24.58cm,twoside,bindingoffset=9mm,outer=2.2cm,inner=1cm,top=2.6cm,bottom=4.5cm]{geometry}
+
+% load the syle file
+\usepackage{qgis_style} 
 
 \begin{document}
-
-\include{title}
-\include{preamble}
-\include{toc}
-\include{foreword}
-\include{conventions}
-\include{introduction}
-\include{getting_started}
-\include{features_at_a_glance}
-\include{working_with_vector}
-\include{working_with_raster}
-\include{working_with_ogc}
-\include{working_with_projections}
-\include{grass_integration}
-\include{print_composer}
+\pagestyle{scrheadings}
+\input{title}
+\input{preamble}
+\input{toc}
+\input{foreword}
+\input{conventions}
+\input{introduction}
+\input{getting_started}
+\input{features_at_a_glance}
+\input{working_with_vector}
+\input{working_with_raster}
+\input{working_with_ogc}
+\input{working_with_projections}
+\input{grass_integration}
+\input{print_composer}
 %first the general intro to plugins
 %then each individual plugin can have a section
 %in the plugins chapter
-\include{plugins}
-\include{core_plugins}
-\include{plugins_coordinate_capture}
-\include{plugins_decorations}
-\include{plugins_delimited_text}
-\include{plugins_dxf2shape_converter}
-\include{plugins_evis}
-\include{plugins_ftools}
-\include{plugins_georeferencer}
-\include{plugins_gps}
-\include{plugins_interpolation}
-\include{plugins_labeling}
-\include{plugins_mapserver_export}
-\include{plugins_ogr_converter}
-\include{plugins_oracle_raster}
-\include{plugins_openstreetmap}
-\include{plugins_raster_terrain}
-\include{plugins_quick_print}
-\include{other_core_plugins}
-\include{external_plugins}
-%\include{plugins_ftools}
-%\include{plugins_table_manager}
-%\include{plugins_raster_algebra}
+\input{plugins}
+\input{core_plugins}
+\input{plugins_coordinate_capture}
+\input{plugins_decorations}
+\input{plugins_delimited_text}
+\input{plugins_dxf2shape_converter}
+\input{plugins_evis}
+\input{plugins_ftools}
+\input{plugins_georeferencer}
+\input{plugins_gps}
+\input{plugins_interpolation}
+\input{plugins_labeling}
+\input{plugins_mapserver_export}
+\input{plugins_ogr_converter}
+\input{plugins_oracle_raster}
+\input{plugins_openstreetmap}
+\input{plugins_raster_terrain}
+\input{plugins_quick_print}
+\input{other_core_plugins}
+\input{external_plugins}
+\input{plugins_ftools}
+\input{plugins_table_manager}
+\input{plugins_raster_algebra}
 %end of plugin docs
-\include{help_and_support}
+\input{help_and_support}
 \appendix
-\include{appendices/supported_data_formats}
-\include{appendices/grass_toolbox_modules}
+\input{appendices/supported_data_formats}
+\input{appendices/grass_toolbox_modules}
 %install guide is a special case because we are extracting it
 %out of the INSTALL.t2t document of in the QGIS sources
 %when we tag a new document release
-\include{appendices/gpl}
-\include{appendices/qgis_qt_gpl_exception}
-\include{appendices/fdl_1.3}
-\include{literature}
-\include{index}
+\input{appendices/gpl}
+\input{appendices/qgis_qt_gpl_exception}
+\input{appendices/fdl_1.3}
+\input{literature}
+%\input{index} untested, remind me to check it when the 1.5 release is flagged
 
-\begin{htmlonly}
-        \input{qgis_style.tex}
-\end{htmlonly}
+\printbibliography
 \end{document}
-
-

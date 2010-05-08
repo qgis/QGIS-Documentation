@@ -1,6 +1,6 @@
-% vim: set textwidth=78 autoindent:
+%  !TeX  root  =  user_guide.tex
 
-\section{Working with Raster Data}\label{label_raster}
+\chapter{Working with Raster Data}\label{label_raster}
 \index{raster layers|(}
 
 % when the revision of a section has been finalized, 
@@ -30,7 +30,7 @@ supported formats in Appendix \ref{appdx_gdal}
 \url{http://www.gdal.org/formats_list.html}. If you want to load GRASS raster 
 data, please refer to Section~\ref{sec:load_grassdata}.
 
-\subsection{What is raster data?}\label{label_whatsraster}
+\section{What is raster data?}\label{label_whatsraster}
 \index{raster layers!definition}
 
 Raster data in GIS are matrices of discrete cells that represent features on,
@@ -48,7 +48,7 @@ the data correctly in the map canvas.
 QGIS makes use of georeference information inside the raster layer (e.g. GeoTiff) 
 or in an appropriate world file to properly display the data.\index{raster layers!georeferenced}
 	
-\subsection{Loading raster data in QGIS}\label{label_loadraster}
+\section{Loading raster data in QGIS}\label{label_loadraster}
 
 Raster layers are loaded either by clicking on the 
 \toolbtntwo{mActionAddRasterLayer}{Load Raster} icon or by
@@ -76,7 +76,7 @@ a dialog to set raster properties for the layer.
 \item \dropmenuopt{Show file groups}
 \end{itemize}
 	
-\subsection{Raster Properties Dialog}\label{label_rasterprop}
+\section{Raster Properties Dialog}\label{label_rasterprop}
 
 To view and set the properties for a raster layer, double click 
 on the layer name in the map legend or right click on the layer name and choose 
@@ -101,7 +101,7 @@ There are several tabs on the dialog:
 \end{center}  
 \end{figure}
 
-\subsubsection{Symbology Tab}\label{label_sombology}
+\subsection{Symbology Tab}\label{label_sombology}
 
 QGIS can render raster layers in two different ways :\index{raster layers!supported channels}
 
@@ -155,14 +155,14 @@ Also scaling of colors are available.
 
 
 \begin{Tip}\caption{\textsc{Viewing a Single Band of a Multiband Raster}}
-\qgistip{If you want to view a single band (for example Red) of a multiband
+\{If you want to view a single band (for example Red) of a multiband
 image, you might think you would set the Green and Blue bands to ``Not
 Set''. But this is not the correct way. To display the Red band, 
 set the image type to grayscale, then select Red as the band to use for Gray.
 }
 \end{Tip} 
 
-\subsubsection{Transparency Tab} \label{rastertab:transparency}
+\subsection{Transparency Tab} \label{rastertab:transparency}
 
 QGIS has the ability to display each raster layer at varying transparency
 levels.\index{raster layers!transparency} Use the transparency slider to indicate to
@@ -206,7 +206,7 @@ transparency-list to a file. The button
 \toolbtntwo{mActionAddRasterLayer}{Import from file} loads your
 transparency-settings and applies them to the current rasterlayer.
 
-\subsubsection{Colormap} \label{label_colormaptab}
+\subsection{Colormap} \label{label_colormaptab}
 % FIXME: Write me
 
 The \tab{Colormap} tab is only available, when you have selected a
@@ -235,7 +235,7 @@ classes}{15} you need and press the button \button{Classify}. Currently
 only one \selectstring{Classification mode}{Equal Interval} is
 supported\index{raster layer!classify}.
 
-\subsubsection{General Tab}\label{label_generaltab}
+\subsection{General Tab}\label{label_generaltab}
 
 The \tab{General} tab displays basic information about the selected raster,
 including the layer source and  display name in the legend (which can be
@@ -249,7 +249,7 @@ displayed in the map canvas.
 Also the spatial reference system is printed here as a PROJ.4-string. 
 This can be modified by hitting the \button{Change} button.
 
-\subsubsection{Metadata Tab}\label{label_metatab}
+\subsection{Metadata Tab}\label{label_metatab}
 
 The \tab{Metadata} tab displays a wealth of information about the raster layer,
 including statistics about each band in the current raster layer. Statistics
@@ -261,7 +261,7 @@ inside this tab. To update the statistics you need to change to tab
 \tab{Histogram} and press the button \button{Refresh} on the bottom right,
 see ch. \ref{label_histogram}.
 
-\subsubsection{Pyramids Tab}\label{raster_pyramids}
+\subsection{Pyramids Tab}\label{raster_pyramids}
 
 Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
@@ -285,7 +285,7 @@ Please note that building pyramids may alter the original data file and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
 
-\subsubsection{Histogram Tab}\label{label_histogram}
+\subsection{Histogram Tab}\label{label_histogram}
 
 The \tab{Histogram} tab allows you to view the distribution\index{raster layers!histogram} 
 of the bands or colors in your raster. You must first generate the raster statistics 
@@ -304,10 +304,9 @@ Once you view the histogram, you'll notice that the band statistics have been
 populated on the \tab{metadata} tab.\index{raster layers!metadata)}
 
 \begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
-\qgistip{To gather statistics for a layer, select pseudocolor rendering and
+\{To gather statistics for a layer, select pseudocolor rendering and
 click the \button{Apply} button. Gathering statistics for a layer can be time
 consuming. Please be patient while QGIS examines your
 data!\index{raster layers!statistics}
 }
 \end{Tip}
-

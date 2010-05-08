@@ -1,6 +1,6 @@
-% vim: set textwidth=78 autoindent:
+%  !TeX  root  =  user_guide.tex
 
-\subsection{OpenStreetMap Plugin}
+\section{OpenStreetMap Plugin}
 
 % when the revision of a section has been finalized, 
 % comment out the following line:
@@ -20,7 +20,7 @@ plugin an inspiration was taken from existing OSM data editors. The
 purpose was to combine their functionalities to get the best
 possible result.
 
-The following subsection gives a brief introduction to principles of the OSM 
+The following section gives a brief introduction to principles of the OSM 
 project. If you are not interested in information on OSM just skip the next 
 section. Parts of the following paragraphs are copied from the 
 OpenStreetMap web site at \url{http://www.openstreetmap.org}.
@@ -70,7 +70,7 @@ payload is used for the communication with the OSM server as well.
 
 \minisec{QGIS - OSM Connection}\label{qgis-osm-connection}
 
-The first part of this subsection describes how OSM data primitives 
+The first part of this section describes how OSM data primitives 
 are displayed in QGIS vector layers. As written above, OSM data consist of 
 Nodes, Ways and Relations. In QGIS they are displayed in three diffrent 
 layer types: Point layer, Line layer and Polygon layer. It's not possible 
@@ -120,13 +120,13 @@ Relation creation, deletion and moving.
 \textbf{Note:} To create a connection between the OSM plugin and standard 
 editing tools, changes in QuantumGIS core code would be necessary.
 
-\subsubsection{Installation}
+\subsection{Installation}
 
 The OpenStreetMap plugin is a core plugin inside QGIS. If you have python 
 support enabled, the 'OpenStreetMap' plugin can be selected in the Plugin 
 Manager as described in section \ref{sec:load_core_plugin}). 
 
-\subsubsection{Basic user interface}
+\subsection{Basic user interface}
 
 The first time the OSM plugin is started (and after the first data are 
 loaded), several new OSM plugin icons appear in the QGIS toolbar menu 
@@ -180,7 +180,7 @@ More detailed information on all the widgets, buttons and dialogs can be
 found in appropriate sections of this plugin section according to their 
 functionality (editing, identification, etc.).
 
-\subsubsection{Loading OSM data}
+\subsection{Loading OSM data}
 
 The first action that should be done after starting the OSM Plugin is 
 opening data from an OSM file. OSM data can be import as shapefile or 
@@ -227,7 +227,7 @@ Click \button{Ok} to load your data. If this is the first time OSM
 file is loaded, the plugin must first parse the database. This may take few 
 seconds or minutes - it depends on the amount of loaded data.
 
-\subsubsection{Viewing OSM data}
+\subsection{Viewing OSM data}
 
 After OSM data are loaded, you can identify map features using the
 appropriate tool. Use the \toolbtntwo{osm_identify}{Identify feature} 
@@ -253,7 +253,7 @@ features is identified (and marked with the rubberband) but the plugin
 remembers all of them. Then (still in the pause mode) you can change 
 identified features cyclical with right-clicking.
 
-\subsubsection{Editing basic OSM data}
+\subsection{Editing basic OSM data}
 
 In the title of this section 'basic data' means non-relation OSM features -
 nodes and ways. If you prefer reading information on relation editing, just
@@ -389,7 +389,7 @@ If the parent feature was a line with two vertexes, its new geometry has
 only one vertex. And because there cannot exist a line with only one vertex, 
 the feature type is automatically changed to Point.
 
-\subsubsection{Editing relations}\label{editing_osm_relation}
+\subsection{Editing relations}\label{editing_osm_relation}
 
 Thanks to existency of OSM relations we can join OSM features into groups and
 give them common properties - in such way we can model any possible map
@@ -447,7 +447,7 @@ on the OSM Feature widget. A new dialog appears, nearly the same as for the
 given relations. You can change relation tags, members or even its type. 
 After submiting the dialog your changes will be commited.
 
-\subsubsection{Downloading OSM data}  
+\subsection{Downloading OSM data}  
 
 To download data from OpenStreetMap server click on the 
 \toolbtntwo{osm_download}{Download OSM data} button. If there is no 
@@ -500,7 +500,7 @@ already downloaded. When an error occures during the download process, a
 dialog tells you why. When action finishes succesfully both the progress dialog
 and download dialog will close themselves.
 
-\subsubsection{Uploading OSM data}  
+\subsection{Uploading OSM data}  
 
 Note that the upload is always done on current OSM data. Before opening the 
 OSM Upload dialog, please be sure that you really have the right active 
@@ -533,7 +533,7 @@ you don't have an account on the OSM server, it's the best time to create
 one at \url{http://www.openstreetmap.org}. Finally use \button{Upload} to 
 start an upload operation.
 
-\subsubsection{Saving OSM data}  
+\subsection{Saving OSM data}  
 
 To save data from a current map extent to an XML file click on the
 \toolbtntwo{osm_save}{Save OSM to file} button. If there is no such button, 
@@ -561,7 +561,7 @@ file the whole polygons and lines are saved even if only a small part of them
 is visible in the current extent. For each saved line/polygon all its member 
 nodes are saved too.
 
-\subsubsection{Import OSM data}  
+\subsection{Import OSM data}  
 
 To import OSM data from an opened non-OSM vector layer follow this 
 instructions: Choose current OSM data by clicking on one of their layers. 

@@ -1,6 +1,6 @@
-% vim:autoindent:set textwidth=78:
+%  !TeX  root  =  user_guide.tex
 
-\section{Working with Vector Data}\label{label_workingvector}
+\chapter{Working with Vector Data}\label{label_workingvector}
 \index{vector layers|(}
 
 % when the revision of a section has been finalized,
@@ -28,7 +28,7 @@ functions.
 
 Working with GRASS vector data is described in Section \ref{sec:grass}.
 
-\subsection{ESRI Shapefiles}
+\section{ESRI Shapefiles}
 \index{vector layers!ESRI shapefiles}
 \index{shapefiles}
 \index{ESRI!shapefiles}
@@ -65,7 +65,7 @@ used instead of the \filename{.prj}.
 
 \index{shapefile!specification}.
 
-\subsubsection{Loading a Shapefile}\label{sec:load_shapefile}
+\subsection{Loading a Shapefile}\label{sec:load_shapefile}
 
 \begin{figure}[ht]
    \begin{center}
@@ -106,8 +106,8 @@ Selecting a shapefile from the list and clicking \button{Open} loads it into QGI
 
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
-\qgistip{When you add a layer to the map, it is assigned a random color. When
-adding more than one layer at a time, different colors are assigned to each layer. }
+When you add a layer to the map, it is assigned a random color. When
+adding more than one layer at a time, different colors are assigned to each layer.
 \end{Tip}
 
 Once loaded, you can zoom around the shapefile using the map navigation tools.
@@ -119,14 +119,14 @@ vector layers.
  
 \begin{Tip}\caption{\textsc{Load layer and project from mounted external
 drives on OS X}}
-\qgistip{On OS X, portable drives that are mounted besides the primary hard
+On OS X, portable drives that are mounted besides the primary hard
 drive do not show up under File -> Open Project as expected. We are working
 on a more OSX-native open/save dialog to fix this. As a workaround you can
 type '/Volumes' in the File name box and press return. Then you can navigate
-to external drives and network mounts.}
+to external drives and network mounts.
 \end{Tip}
  
-\subsubsection{Improving Performance}
+\subsection{Improving Performance}
 
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A \index{spatial index!shapefiles} spatial index will improve the 
@@ -143,7 +143,7 @@ shapefile name in the legend or by right-clicking and choosing
 \item In the tab \tab{General} click the \button{Create Spatial Index} button.
 \end{itemize}
 
-\subsubsection{Loading a MapInfo Layer}
+\subsection{Loading a MapInfo Layer}
 \index{vector layers!MapInfo}
 
 To load a MapInfo layer, click on the \toolbtntwo{mActionAddNonDbLayer}{Add
@@ -151,7 +151,7 @@ Vector Layer} toolbar bar button or type \keystroke{Ctrl-Shift-V}, change the
 file type filter to \selectstring{Files of Type}{[OGR] MapInfo (*.mif
 *.tab *.MIF *.TAB)} and select the layer you want to load.
 
-\subsubsection{Loading an ArcInfo Binary Coverage}
+\subsection{Loading an ArcInfo Binary Coverage}
 \index{vector layers!ArcInfo Binary Coverage}
 
 To load an ArcInfo binary coverage click on the
@@ -163,7 +163,7 @@ Navigate to the directory that contains the coverage files and select it.
 Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the 
 raw TIGER Format of the US Census Bureau.
 
-\subsection{PostGIS Layers}
+\section{PostGIS Layers}
 \index{vector layers!PostGIS|see{PostGIS}}
 \index{PostGIS!layers}
 \label{label_postgis} 
@@ -186,7 +186,7 @@ to load from the layer.
 \item Load the layer.
 \end{itemize}
 
-\subsubsection{Creating a stored
+\subsection{Creating a stored
 Connection}\index{PostgreSQL!connection}\label{sec:postgis_stored}
 
 \includegraphics[width=0.7cm]{mActionAddLayer} The first time
@@ -245,15 +245,14 @@ clicking on the \button{Test Connect} button\index{PostgreSQL!connection!testing
 
 \begin{Tip}\caption{\textsc{QGIS User Settings and
 Security}}\index{settings}\index{security}
-\qgistip{Your customized settings for QGIS are stored based on the operating
+Your customized settings for QGIS are stored based on the operating
 system. \nix, the settings are stored in your home directory in
 \filename{.qgis/}. \win, the settings are stored in the registry. Depending on
 your computing environment, storing passwords in your QGIS settings may be a
 security risk.
-}
 \end{Tip}
 
-\subsubsection{Loading a PostGIS Layer}\index{PostgreSQL!loading layers}
+\subsection{Loading a PostGIS Layer}\index{PostgreSQL!loading layers}
 
 \includegraphics[width=0.7cm]{mActionAddLayer} Once you have one or more
 connections defined, you can load layers from the PostgreSQL database. Of
@@ -275,15 +274,15 @@ information on using the PostgreSQL Query Builder to further define the layer.
 \end{itemize}
 
 \begin{Tip}\caption{\textsc{PostGIS Layers}}
-\qgistip{Normally a PostGIS layer is defined by an entry in the
+Normally a PostGIS layer is defined by an entry in the
 geometry\_columns table. From version \OLD % should be 0.9.0 
 on, QGIS can load layers that do not have
 an entry in the geometry\_columns table. This includes both tables and views.
 Defining a spatial view provides a powerful means to visualize your data. Refer
-to your PostgreSQL manual for information on creating views.}
+to your PostgreSQL manual for information on creating views.
 \end{Tip}
 
-\subsubsection{Some details about PostgreSQL
+\subsection{Some details about PostgreSQL
 layers}\label{sec:postgis_details}
 \index{PostgreSQL!layer details}
 
@@ -320,7 +319,7 @@ preferably indexed).
 %%FIXME: Add missing information
 %% When dealing with views, QGIS parses the view definition and
 
-\subsubsection{Importing Data into PostgreSQL}\label{sec:loading_postgis_data}
+\subsection{Importing Data into PostgreSQL}\label{sec:loading_postgis_data}
 \index{PostGIS!SPIT!importing data}
 
 \minisec{shp2pgsql}
@@ -341,9 +340,9 @@ new layer will have a spatial reference identifier (SRID) of 2964. See Section
 projections.
 \begin{Tip}
 \caption{\textsc{Exporting datasets from PostGIS}\index{PostGIS!Exporting}}
-\qgistip{Like the import-tool \filename{shp2pgsql} there is also a tool to export
+Like the import-tool \filename{shp2pgsql} there is also a tool to export
 PostGIS-datasets as shapefiles: \filename{pgsql2shp}. This is shipped within your
-PostGIS distribution.} 
+PostGIS distribution.
 \end{Tip}
 
 \minisec{SPIT Plugin}
@@ -365,13 +364,13 @@ errors/warnings will be displayed as each shapefile is processed.
 
 \begin{Tip}\caption{\textsc{Importing Shapefiles Containing
 PostgreSQL Reserved Words}}\index{PostGIS!SPIT!reserved words}
-\qgistip{If a shapefile is added to the queue containing fields that are
+If a shapefile is added to the queue containing fields that are
 reserved words in the PostgreSQL database a dialog will popup showing the
 status
 of each field. You can edit the field names\index{PostGIS!SPIT!editing field names}
 prior to import and change any that are reserved words (or change any other
 field names as desired). Attempting to
-import a shapefile with reserved words as field names will likely fail.}
+import a shapefile with reserved words as field names will likely fail.
 \end{Tip} 
 
 \minisec{ogr2ogr}
@@ -406,7 +405,7 @@ does. You need to create them manually using the normal SQL-command
 \filename{CREATE INDEX} afterwards as an extra step (as described in the next
 section \ref{label_improve}).
 
-\subsubsection{Improving Performance} \label{label_improve}
+\subsection{Improving Performance} \label{label_improve}
 
 Retrieving features from a PostgreSQL database can be time consuming,
 especially over a network. You can improve the drawing performance of
@@ -449,7 +448,7 @@ gis_data=# \q
 gsherman@madison:~/current$
 \end{verbatim}
 
-\subsubsection{Vector layers crossing 180$^\circ$ longitude}
+\subsection{Vector layers crossing 180$^\circ$ longitude}
 \index{vector layers!crossing}
 
 Many GIS packages don't wrap vector maps, with a geographic reference system
@@ -497,7 +496,7 @@ number of features that were updated, then you'll be able to load the map and
 see the difference (Figure \ref{fig:vector_wrapping})
 \end{itemize}
 
-\subsection{SpatiaLite Layers} 
+\section{SpatiaLite Layers} 
 \index{SpatiaLite layers!properties dialog}
 \index{vector layers!SpatlaLIte|see{SpatiaLite}}
 \index{SpatiaLite!layers}
@@ -513,7 +512,7 @@ you can choose from the dropdown menu or to define a new connection to a new dat
 click on \button{New} and use the file browser to point to your SpatiaLite database, 
 which is a file with a \filename{.sqlite } extension.
 
-\subsection{The Vector Properties Dialog}\label{sec:vectorprops}
+\section{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
 
 The \dialog{Layer Properties} dialog for a vector layer provides information
@@ -532,7 +531,7 @@ from the popup menu.
 \end{center}  
 \end{figure}
 
-\subsubsection{Symbology Tab}\label{sec:symbology}
+\subsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
 
 QGIS supports a number of symbology renderers to control how
@@ -610,7 +609,7 @@ the slider \slider{Transparency}{0}{20mm} inside the \tab{symbology} tab (see
 fig. \ref{fig:vector_symbology}). This is very useful for overlaying several
 vector layers.
 
-\subsubsection{New Generation Symbology}
+\subsection{New Generation Symbology}
 
 In QGIS \CURRENT a new symbology was integrated in parallel with the symbology 
 described above. This new generation symbology provides a variety of improvements and 
@@ -675,7 +674,7 @@ renderer, because it is in fact only a special case of the graduated renderer.
 The categorized and graduated renderer can be created by specifying a symbol 
 and a color ramp - they will set the colors for symbols appropriately. 
 
-\subsubsection{Working with the New Generation Symbology}
+\subsection{Working with the New Generation Symbology}
 
 First you have to enable the new generation symbology clicking on the 
 \button{new symbology} button in the \tab{Symbology} tab of the 
@@ -805,7 +804,7 @@ you to choose the layer type. The available options depend on the layer type
    \subfigure[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
 \end{figure}
 
-\subsubsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
+\subsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
 
 The Style Manger is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. To 
@@ -819,7 +818,7 @@ Manager} in the mai menu.
 \end{center}
 \end{figure}
 
-\subsubsection{Labels Tab}
+\subsection{Labels Tab}
 
 The \tab{Labels} tab allows you to enable labeling features and control a number of
 options related to fonts, placement, style, alignment and buffering.
@@ -900,7 +899,7 @@ set all the parameters for the labels using fields in the layer.
 Not that the \tab{Label} tab provides a \classname{preview-box} where your
 selected label is shown.
 
-\subsubsection{Attributes Tab}\index{Attributes}\label{label_attributes}
+\subsection{Attributes Tab}\index{Attributes}\label{label_attributes}
 
 Within the \tab{Attributes} tab the attributes of the selected dataset can be
 manipulated. The buttons \toolbtntwo{mActionNewAttribute}{New Column} and
@@ -949,7 +948,7 @@ columns type. This is currently only supported by the postgres provider.
 able to modify the content.
 \end{itemize}
 
-\subsubsection{General Tab}\label{vectorgeneraltab}
+\subsection{General Tab}\label{vectorgeneraltab}
 
 The \tab{General} tab is essentially like that of the raster dialog. It
 allows you to change the display name, set scale dependent rendering options,
@@ -961,7 +960,7 @@ features in the layer - but this button currently only is available when you
 open the attribute table and select the \button{...} button next to Advanced
 search.
 
-\subsubsection{Metadata Tab}\index{Metadata}
+\subsection{Metadata Tab}\index{Metadata}
 
 The \tab{Metadata} tab contains general information about the layer,
 including specifics about the type and location, number of features, feature
@@ -971,7 +970,7 @@ layer extent information, and the \guiheading{Layer Spatial Reference System}
 section, providing information about the CRS of the layer. This is a quick
 way to get information about the layer, but is not yet editable.
 
-\subsubsection{Actions Tab}\index{Actions}\label{label_actions}
+\subsection{Actions Tab}\index{Actions}\label{label_actions}
 
 QGIS provides the ability to perform an action based on the attributes of a
 feature. This can be used to perform any number of actions, for example,
@@ -1140,7 +1139,7 @@ create an action to launch a viewer to display the image. You could also use
 actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
 
-\subsubsection{Diagram Tab}\label{sec:diagram}
+\subsection{Diagram Tab}\label{sec:diagram}
 \index{vector layers!diagram}
 
 The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer.
@@ -1192,19 +1191,18 @@ Figure~\ref{fig:climatediagram} gives an impression.
 \end{center}
 \end{figure}
 
-\subsection{Editing}\index{editing}
+\section{Editing}\index{editing}
 
 QGIS supports various capabilities for editing OGR, PostGIS and Spatialite 
 vector layers. \textbf{Note} - the procedure for editing GRASS layers is 
 different - see Section \ref{grass_digitising} for details.
 
 \begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
-\qgistip{This version of QGIS does not track if somebody else is editing a
+This version of QGIS does not track if somebody else is editing a
 feature at the same time as you. The last person to save their edits wins.
-}
 \end{Tip}
 
-\subsubsection{Setting the Snapping Tolerance and Search Radius}\label{snapping_tolerance}
+\subsection{Setting the Snapping Tolerance and Search Radius}\label{snapping_tolerance}
 
 Before we can edit vertices, we must set the snapping
 tolerance and search radius to a value that allows us an optimal editing of
@@ -1264,7 +1262,7 @@ The search radius for vertex edits in layer units can be defined in the
 \dropmenuopttwo{mActionOptions}{Options}. The same place where you define the
 general, project wide snapping tolerance.
 
-\subsubsection{Zooming and Panning}
+\subsection{Zooming and Panning}
 
 Before editing a layer, you should zoom in to your area of interest. This
 avoids waiting while all the vertex markers are rendered across the entire
@@ -1321,7 +1319,7 @@ If you already have one polygon, it is possible with this option to digitise the
 one such that both intersect and qgis then cuts the second polygon to the common boundary. 
 The advantage is that users don't have to digitize all vertices of the common boundary.
 
-\subsubsection{Digitizing an existing layer}
+\subsection{Digitizing an existing layer}
 \index{vector layers!digitizing}
 \index{digitizing!an existing layer}
 \label{sec:edit_existing_layer}
@@ -1380,10 +1378,9 @@ layer is in edit mode, markers will appear at the vertices, and additional
 tool buttons on the editing toolbar will become available.
 
 \begin{Tip}[ht]\caption{\textsc{Save Regularly}}
-\qgistip{Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing}
+Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing}
 off regularly. This allows you to save your recent changes, and also confirms
 that your data source can accept all your changes.
-}
 \end{Tip}
 
 \minisec{Adding Features}
@@ -1422,13 +1419,11 @@ With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
 you can move existing features.
 
 \begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
-\qgistip{
 At least for shapefile editing the attribue types are validated during the
 entry. Because of this, it is not possible to enter a number into the text-column in
 the dialog \dialog{Enter Attribute Values} or vica versa. If you need to do so,
 you should edit the attributes in a second step within the \dialog{Attribute
 table} dialog.
-}
 \end{Tip}
 
 \minisec{Node Tool}
@@ -1449,11 +1444,10 @@ Important is to set the property \mainmenuopt{Settings} >
 zero. Otherwise QGIS will not be able to tell which vertex is being edited.
 
 \begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
-\qgistip{The current version of QGIS supports three kinds of vertex-markers -
+The current version of QGIS supports three kinds of vertex-markers -
 Semi transparent circle, Cross and None. To change the marker style, choose
 \dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu
 and click on the \tab{Digitizing} tab and select the appropriate entry.
-}
 \end{Tip}
 
 \minisec{Basic operations}\index{vector layers!Node Tool}
@@ -1534,14 +1528,13 @@ fields and data types. If you want to make sure everything - feature and its
 attributes - gets copied, make sure the schemas match.
 
 \begin{Tip}[ht]\caption{\textsc{Congruency of Pasted Features}}
-\qgistip{If your source and destination layers use the
+If your source and destination layers use the
 same projection, then the pasted features will have
 geometry identical to the source layer.
 However if the destination layer is a different projection
 then QGIS cannot guarantee the geometry is identical.
 This is simply because there are small rounding-off errors
 involved when converting between projections.
-}
 \end{Tip}
 
 \minisec{Deleting Selected Features}
@@ -1560,11 +1553,10 @@ capability. Cut, copy, and paste work on the currently selected features,
 meaning we can operate on more than one at a time.
 
 \begin{Tip}[ht]\caption{\textsc{Feature Deletion Support}}
-\qgistip{When editing ESRI shapefiles, the deletion
+When editing ESRI shapefiles, the deletion
 of features only works if QGIS is linked to a GDAL version 1.3.2 or greater. 
 The OS X and Windows versions of QGIS available from the download site are built 
 using GDAL 1.3.2 or higher.
-}
 \end{Tip}
 
 \minisec{Saving Edited Layers}
@@ -1581,14 +1573,13 @@ values that are out of range), the QGIS in-memory state is preserved.  This
 allows you to adjust your edits and try again.
 
 \begin{Tip}[ht]\caption{\textsc{Data Integrity}}
-\qgistip{It is always a good idea to back up your data source before you
+It is always a good idea to back up your data source before you
 start
 editing. While the authors of QGIS have made every effort to preserve the
 integrity of your data, we offer no warranty in this regard.
-}
 \end{Tip}
 
-\subsubsection{Advanced digitizing}
+\subsection{Advanced digitizing}
 \index{vector layers!advanced digitizing}
 \index{advanced digitizing!an existing layer}
 \label{sec:advanced_edit}
@@ -1753,7 +1744,7 @@ left mouse button again, the value will be updated in the attribute table.
 \textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done 
 in 15 degree steps.
 
-\subsubsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
+\subsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
 
 To create a new layer for editing, choose \toolbtntwo{mActionNewVectorLayer}{New Vector Layer} from the
 \mainmenuopt{Layer} menu. 
@@ -1788,7 +1779,7 @@ a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
 
-\subsubsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
+\subsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
 
 The attribute table displays features of a selected layer. Each row in the table 
 represents one map feature with its attributes shown in several columns. The 
@@ -1853,14 +1844,13 @@ of attribute table and to enable functionalities described below.
 \end{itemize}
 
 \begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
-\qgistip{Currently only PostGIS layers are supported for adding or dropping
+Currently only PostGIS layers are supported for adding or dropping
 attribute columns within this dialog. In future versions of QGIS, other
 datasources will be supported, because this feature was recently implemented
 in GDAL/OGR > 1.6.0
-}
 \end{Tip}
 
-\subsection{Query Builder}\label{sec:query_builder}
+\section{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
 
 The \button{Advanced search\dots} button opens the Query Builder and allows you to 
@@ -1909,11 +1899,11 @@ selection.
 
 \begin{Tip}\caption{\textsc{Changing the Layer Definition}}\index{Query
 Builder!changing layer definitions}
-\qgistip{You can change the layer definition after it is loaded by altering
+You can change the layer definition after it is loaded by altering
 the SQL query used to define the layer. To do this, open the 
 vector \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
 \button{Query Builder} button on the \tab{General} tab. See Section
-\ref{sec:vectorprops} for more information.}
+\ref{sec:vectorprops} for more information.
 \end{Tip}
 
 \minisec{Select by query}\label{sec:select_by_query}
@@ -1931,7 +1921,7 @@ click the \button{Advanced...} button at the bottom. This starts the Query Build
 that allows to define a subset of a table and display it as described in Section 
 \ref{sec:query_builder}.
 
-\subsection{Field Calculator}\label{sec:field_calculator}
+\section{Field Calculator}\label{sec:field_calculator}
 \index{PostgreSQL!field calculator}
 \index{PostGIS!field calculator}
 \index{OGR!field calculator}
