@@ -11,7 +11,7 @@ This Section describes how to visualize and set raster layer properties.
 QGIS supports a number of different raster formats. Currently tested formats
 include:\index{raster layers!data formats}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Arc/Info Binary Grid
 \item Arc/Info ASCII Grid
 \item GRASS Raster
@@ -63,7 +63,7 @@ a dialog to set raster properties for the layer.
 
 \minisec{Right mouse button menu for raster layers}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \dropmenuopt{Zoom to layer extent}
 \item \dropmenuopt{Zoom to best scale (100\%)}
 \item \dropmenuopt{Show in overview}
@@ -84,7 +84,7 @@ on the layer name in the map legend or right click on the layer name and choose
 Figure \ref{fig:raster_properties} shows the \dialog{Raster Layer Properties} dialog. 
 There are several tabs on the dialog: 
 
-\begin{itemize}
+\begin{itemize}[label=--]
  \item \tab{Symbology}
  \item \tab{Transparency}
  \item \tab{Colormap}
@@ -95,17 +95,16 @@ There are several tabs on the dialog:
 \end{itemize}
 
 \begin{figure}[h]
-  \begin{center}
+  \centering
    \caption{Raster Layers Properties Dialog \nixcaption}\label{fig:raster_properties}\smallskip
    \includegraphics[clip=true, width=14cm]{rasterPropertiesDialog}
-\end{center}  
 \end{figure}
 
 \subsection{Symbology Tab}\label{label_sombology}
 
 QGIS can render raster layers in two different ways :\index{raster layers!supported channels}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Single band - one band of the image will be rendered as gray or in 
 pseudocolors.
 \item Three band color - three bands from the image will be rendered, each 
@@ -128,7 +127,7 @@ The following settings are available through the dropdownbox
 \selectstring{color map}{Grayscale}, where grayscale is the default
 setting.
 Also available are
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Pseudocolor
 \item Freak Out
 \item Colormap
@@ -155,11 +154,10 @@ Also scaling of colors are available.
 
 
 \begin{Tip}\caption{\textsc{Viewing a Single Band of a Multiband Raster}}
-\{If you want to view a single band (for example Red) of a multiband
+If you want to view a single band (for example Red) of a multiband
 image, you might think you would set the Green and Blue bands to ``Not
 Set''. But this is not the correct way. To display the Red band, 
 set the image type to grayscale, then select Red as the band to use for Gray.
-}
 \end{Tip} 
 
 \subsection{Transparency Tab} \label{rastertab:transparency}
@@ -213,7 +211,7 @@ The \tab{Colormap} tab is only available, when you have selected a
 single-band-rendering within the tab \tab{Symbology} (see chapt. \ref{label_sombology}).
 
 Three ways of color interpolation are available:
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Discrete
 \item Linear 
 \item Exact
@@ -273,7 +271,7 @@ level of zoom.
 You must have write access in the directory where the original data is stored
 to build pyramids. \\
 Several resampling methods can be used to calculate the pyramides:
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Average
 \item Nearest Neighbour
 \end{itemize}
@@ -293,7 +291,7 @@ by clicking the \button{Refresh} button. You can choose which bands to display b
 selecting them in the list box at the bottom left of the tab. Two different
 chart types are allowed: 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Bar chart
 \item Line graph
 \end{itemize}
@@ -304,9 +302,8 @@ Once you view the histogram, you'll notice that the band statistics have been
 populated on the \tab{metadata} tab.\index{raster layers!metadata)}
 
 \begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
-\{To gather statistics for a layer, select pseudocolor rendering and
+To gather statistics for a layer, select pseudocolor rendering and
 click the \button{Apply} button. Gathering statistics for a layer can be time
 consuming. Please be patient while QGIS examines your
 data!\index{raster layers!statistics}
-}
 \end{Tip}

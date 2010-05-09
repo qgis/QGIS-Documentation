@@ -7,7 +7,6 @@
 % comment out the following line:
 %\updatedisclaimer
 
-
 QGIS supports vector data in a number of formats, including those
 supported by the OGR library data provider plugin, such as ESRI shapefiles,
 \index{shapefiles}\index{ESRI!shapefiles}\index{SHP files}
@@ -39,14 +38,14 @@ is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
 \index{OGR}. A shapefile actually consists of several files. The following three are required:
 \index{shapefile!format}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \filename{.shp} file containing the feature geometries.
 \item \filename{.dbf} file containing the attributes in dBase format.
 \item \filename{.shx} index file.
 \end{itemize}
 
 Shapefiles also can include a file with a \filename{.prj} suffix, which contains
-the projection information. While it is very useful to have a projection file, it is not mandatory. A shapefile dataset can contain additional files. For further details see the ESRI technical specification at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf}.
+the projection information. While it is very useful to have a projection file, it is not mandatory. A shapefile dataset can contain additional files. For further details see the ESRI technical specification at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf} \index{shapefile!specification}.
 
 \minisec{Problem loading a shape .prj file}
 
@@ -61,31 +60,26 @@ For that reason, if you create a new shapefile with QGIS, two different projecti
 files are created. A \filename{.prj} file with limited projection parameters, 
 compatible with ESRI software, and a \filename{.qpj} file, providing the complete 
 parameters of the used CRS. Whenever QGIS finds a \filename{.qpj} file, it will be 
-used instead of the \filename{.prj}.   
-
-\index{shapefile!specification}.
+used instead of the \filename{.prj}.
 
 \subsection{Loading a Shapefile}\label{sec:load_shapefile}
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}\smallskip
+   \centering
+   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}
    \includegraphics[clip=true, width=12cm]{addvectorlayerdialog}
-\end{center} 
 \end{figure}
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Open an OGR Supported Vector Layer Dialog \nixcaption}\label{fig:openshapefile}\smallskip
-   \includegraphics[clip=true, width=14cm]{shapefileopendialog}
-\end{center} 
+   \centering
+   \caption{Open an OGR Supported Vector Layer Dialog \nixcaption}\label{fig:openshapefile}
+   \includegraphics[clip=true, width=12cm]{shapefileopendialog}
 \end{figure}
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{QGIS with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}\smallskip
-   \includegraphics[clip=true, width=16cm]{shapefileloaded}
-\end{center} 
+   \centering
+   \caption{QGIS with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}
+   \includegraphics[clip=true, width=12cm]{shapefileloaded}
 \end{figure}
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a shapefile, start
@@ -135,7 +129,7 @@ speed of both zooming and panning. Spatial indexes used by QGIS have a
 
 Use these steps to create the index:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Load a shapefile.
 \item Open the \dialog{Layer Properties} dialog by double-clicking on the
 shapefile name in the legend or by right-clicking and choosing
@@ -175,7 +169,7 @@ OGR layers in QGIS.
 
 To use PostGIS layers you must:\index{PostgreSQL!loading layers}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Create a stored connection in QGIS to the PostgreSQL database (if one is
 not already defined).\index{PostgreSQL!connection}
 \item Connect to the database.
@@ -234,7 +228,7 @@ Note that massive speedups in PostGIS layer rendering can be achieved by disabli
 
 Optional you can activate follwing checkboxes:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \checkbox{Save Password}
 \item \checkbox{Only look in the geometry\_columns table}
 \item \checkbox{Only look in the 'public' schema}
@@ -262,7 +256,7 @@ database.
 
 To load a layer from PostGIS, perform the following steps:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item If the \dialog{Add PostGIS Table(s)} dialog is not already open, click on the
 \toolbtntwo{mActionAddLayer}{Add PostGIS Layer} toolbar button.
 \item Choose the connection from the drop-down list and click \button{Connect}.
@@ -459,12 +453,11 @@ point on the far left of the map canvas (Chatham Islands), should be within
 the grid, right of New Zealand main islands.
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Map in lat/lon crossing the \degrees{180} longitude line
    \nixcaption}
-   \label{fig:vector_not_wrapping}\smallskip
+   \label{fig:vector_not_wrapping}
    \includegraphics[clip=true, width=\textwidth]{vectorNotWrapping}
-\end{center}
 \end{figure}
 
 A workaround is to transform the longitude values using PostGIS and the
@@ -476,16 +469,15 @@ feature in a geometry, and if the longitude coordinate is < \degrees{0} adds
 the data to be plotted in a \degrees{180} centric map.
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore Shift\textunderscore Longitude function \nixcaption}
-\label{fig:vector_wrapping}\smallskip
+\label{fig:vector_wrapping}
    \includegraphics[clip=true, width=9cm]{vectorWrapping}
-\end{center}
 \end{figure}
 
 \minisec{Usage}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Import data to PostGIS (\ref{sec:loading_postgis_data}) using for
 example the PostGIS Manager plugin or the SPIT plugin
 \item Use the PostGIS command line interface to issue the following command
@@ -524,12 +516,11 @@ To access the \dialog{Layer Properties} dialog, double-click on a layer in
 the legend or right-click on the layer and select \dropmenuopt{Properties}
 from the popup menu.
 
-\begin{figure}[H]
-   \begin{center}
-   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}\smallskip
+\begin{figure}[ht]
+   \centering
+   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}
    \includegraphics[clip=true, width=12cm]{vectorLayerSymbology} 
-\end{center}  
-\end{figure}
+ \end{figure}
 
 \subsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
@@ -557,13 +548,16 @@ To change the symbology for a layer, simply double click on its legend
 entry and the vector \dialog{Layer Properties} dialog will be 
 shown.\index{symbology!changing}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \caption{Symbolizing Options \nixcaption}
-   \subfigure[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}\goodgap
-   \subfigure[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}\\
-   \subfigure[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}\goodgap
-   \subfigure[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyUnique}}
+   \subfloat[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}
+   \hspace{1cm}
+   \subfloat[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}
+   \hspace{1cm}
+   \subfloat[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}
+   \hspace{1cm}
+   \subfloat[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyUnique}}
 \end{figure}
 
 % FIXME: outdated
@@ -579,7 +573,7 @@ At least the following styling options apply for nearly all renderers:
 \item[Fill options]
 \begin{description}
  \item[Fill style] - Style for filling. Beside the given brushes you can
- select \selectstring{}{? Texture} and click the \browsebutton
+ select \selectstring{Fill style}{? Texture} and click the \browsebutton
  button for selecting your own texture file. Currently the fileformats
  \filename{*.jpeg, *.xpm, and *.png} are supported.
  \item[Fill color] - fill-color of your features.
@@ -628,7 +622,7 @@ angle for marker symbols.
 
 \minisec{Available symbol layer types} 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Simple marker}: Rendering with one of hardcoded markers.
 \item \textbf{Simple line}: Usual rendering of a line (with specified 
 width, color and pen style) 
@@ -645,7 +639,7 @@ the creation of renderers. The symbol's color will be set from the color ramp.
 
 There are three types of color ramps:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Gradient}: Linear gradient from one color to some other.
 \item \textbf{random}: Randomly generated colors from a specified area of 
 color space 
@@ -698,12 +692,14 @@ After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the \button{Add to style} button) and then easily 
 be used in the future.
  
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \caption{New Single Symbolizing options \nixcaption}
-   \subfigure[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}\goodgap
-   \subfigure[Single symbol line properties] {\label{subfig:singleNG2}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_line}}\goodgap
-   \subfigure[Single symbol area properties] {\label{subfig:singleNG3}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_area}}
+   \subfloat[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}
+   \hspace{1cm}
+   \subfloat[Single symbol line properties] {\label{subfig:singleNG2}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_line}}
+   \hspace{1cm}
+   \subfloat[Single symbol area properties] {\label{subfig:singleNG3}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_area}}
 \end{figure}
 
 \minisec{Categorized Renderer}
@@ -712,7 +708,7 @@ The Categorized Renderer is used to render all features from a layer, using a
 single user-defined symbol, which color reflects the value of a selected 
 feature's attribute. The Symbology tab allows you to select:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
 \item The symbol (using the Symbol Properties dialog)
 \item The colors (using the Color Ramp listbox)  
@@ -726,10 +722,9 @@ The example in figure \ref{fig:catsymNG} shows the category rendering dialog
 used for the rivers layer of the qgis sample dataset.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{New Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}\smallskip
+   \centering
+   \caption{New Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}
    \includegraphics[clip=true, width=10cm]{categorysymbol_ng_line}
-\end{center}
 \end{figure}
 
 \minisec{Graduated rendering}
@@ -740,7 +735,7 @@ feature's attribute to a class.
 
 Analogue to the categorized rendered, the symbology tab allows you to select:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
 \item The symbol (using the Symbol Properties button)
 \item The colors (using the Color Ramp list)
@@ -755,10 +750,9 @@ The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog
 for the rivers layer of the qgis sample dataset.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}\smallskip
+   \centering
+   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
    \includegraphics[clip=true, width=10cm]{graduatesymbol_ng_line}
-\end{center}
 \end{figure}
 
 \minisec{Symbol Properties}
@@ -779,29 +773,31 @@ you to choose the layer type. The available options depend on the layer type
 
 \begin{description}
 \item Symbol layer type options for point layers.
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{SimpleMarker}: Border color, Fill color, Size, Angle, Offset X,Y
 \item \textbf{SvgMarker}: Size, Angle, Offset X,Y, SVG Image
 \end{itemize}
 \item Symbol layer type options for line layers.
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{LineDecoration}: Color
 \item \textbf{MarkerLine}: Marker, Marker Interval, Rotate marker, Line offset
 \item \textbf{SimpleLine}: Color, Pen width, pen style, Offset, Join style and Cap style;
 \end{itemize}
 \item Symbol layer type options for polygon layers
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{SimpleFill}: Color, Fill style, Border color, Border style, Border width 
 \end{itemize}
 \end{description}
 
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
 \caption{Defining symbol properties \nixcaption}
-   \subfigure[Line composed from three simple lines] {\label{subfig:symprops1}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties1}}\goodgap
-   \subfigure[Symbol properties for point layer] {\label{subfig:symprops2}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties2}}\goodgap
-   \subfigure[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
+   \subfloat[Line composed from three simple lines] {\label{subfig:symprops1}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties1}}
+   \hspace{1cm}
+   \subfloat[Symbol properties for point layer] {\label{subfig:symprops2}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties2}}
+   \hspace{1cm}
+   \subfloat[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
 \end{figure}
 
 \subsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
@@ -812,10 +808,9 @@ launch the Style Manager, click on \mainmenuopt{Settings} > \dropmenuopt{Style
 Manager} in the mai menu.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}\smallskip
+   \centering
+   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}
    \includegraphics[clip=true, width=7cm]{stylemanager}
-\end{center}
 \end{figure}
 
 \subsection{Labels Tab}
@@ -911,12 +906,11 @@ a GDAL version >= 1.6 installed.
 
 \minisec{edit widget}
 
-\begin{figure}[H]
-   \begin{center}
+\begin{figure}[ht]
+   \centering
    \caption{Dialog to select an edit widget for an attribute column
-\nixcaption}\label{fig:editwidget}\smallskip
-   \includegraphics[clip=true, width=14cm]{editwidgetsdialog}
-\end{center}
+\nixcaption}\label{fig:editwidget}
+   \includegraphics[clip=true, width=12cm]{editwidgetsdialog}
 \end{figure}
 
 Within the \tab{Attributes} tab you also find an \texttt{edit widget} column.
@@ -926,7 +920,7 @@ to be added to the specific attribute table column. If you click on the
 \button{edit widget} button, a dialog opens, where you can define different
 widgets. These widgets are:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Line edit: an edit field which allows to enter simple text (or restrict
 to
 numbers for numeric attributes).
@@ -1017,7 +1011,7 @@ value of these can be used in the action with \usertext{\%(Derived).X} and
 
 Two example actions are shown below:\index{actions!examples}
 
-\begin{itemize}
+\begin{itemize}[label=--]
   \item \usertext{konqueror http://www.google.com/search?q=\%nam}
   \item \usertext{konqueror http://www.google.com/search?q=\%\%}
 \end{itemize}
@@ -1096,7 +1090,7 @@ proceed:
 \item Click on the drop-down box containing the field names for the
   \usertext{lakes} layer. It's located just to the left of the
   \button{Insert Field} button.
-\item From the drop-down box, select \selectstring{}{NAMES} and click \button{Insert Field}.
+\item From the drop-down box, select \selectstring{Field containing label}{NAMES} and click \button{Insert Field}.
 \item Your action text now looks like this:\\ \usertext{firefox
   \url{http://google.com/search?q=\%NAMES}}
 \item Fo finalize the action click the \button{Insert action} button.
@@ -1105,20 +1099,17 @@ proceed:
 This completes the action and it is ready to use. The final text of the action
 should look like this:
 
-\begin{center}
 \usertext{firefox \url{http://google.com/search?q=\%NAMES}}
-\end{center}
 
 We can now use the action. Close the \dialog{Layer Properties} dialog and zoom in to an area
 of interest. Make sure the \filename{lakes} layer is active and identify a
 lake. In the result box you'll now see that our action is visible:
 
-\begin{figure}[H]
-   \begin{center}
-   \caption{Select feature and choose action \nixcaption}\label{fig:identify_action}\smallskip
+\begin{figure}[ht]
+   \centering
+   \caption{Select feature and choose action \nixcaption}\label{fig:identify_action}
    \includegraphics[clip=true, width=8cm]{action_identifyaction} 
-\end{center}  
-\end{figure}
+ \end{figure}
 
 When we click on the action, it brings up Firefox and navigates to the URL
 \url{http://www.google.com/search?q=Tustumena}. It is also possible to add further 
@@ -1149,10 +1140,9 @@ Properties} dialog where the settings for diagrams may be entered (see
 figure~\ref{fig:diagramtab}).
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}\smallskip
+   \centering
+   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}
    \includegraphics[clip=true, width=13cm]{diagram_tab}
-\end{center}
 \end{figure}
 
 The current implementation of diagrams provides support for piecharts, barcharts, 
@@ -1185,10 +1175,9 @@ Figure~\ref{fig:climatediagram} gives an impression.
 \end{enumerate}
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}\smallskip
+   \centering
+   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}
    \includegraphics[clip=true, width=13cm]{climate_diagram}
-\end{center}
 \end{figure}
 
 \section{Editing}\index{editing}
@@ -1197,7 +1186,7 @@ QGIS supports various capabilities for editing OGR, PostGIS and Spatialite
 vector layers. \textbf{Note} - the procedure for editing GRASS layers is 
 different - see Section \ref{grass_digitising} for details.
 
-\begin{Tip}[ht]\caption{\textsc{Concurrent Edits}}
+\begin{Tip}\caption{\textsc{Concurrent Edits}}
 This version of QGIS does not track if somebody else is editing a
 feature at the same time as you. The last person to save their edits wins.
 \end{Tip}
@@ -1238,12 +1227,11 @@ mode and tolerance on a layer basis (see Figure~\ref{fig:snappingoptions}).
 \end{enumerate}
 Note that this layer based snapping overrides the global snapping option set in the Digitizing tab. So if you need to edit one layer, and snap its vertices to another layer, then enable snapping only on the \usertext{snap to} layer, then decrease the global snapping tolerance to a smaller value.  Furthermore, snapping will never occur to a layer which is not checked in the snapping options dialog, regardless of the global snapping tolerance. So be sure to mark the checkbox for those layers that you need to snap to.
 
-\begin{figure}[H]
-   \begin{center}
-   \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}\smallskip
-   \includegraphics[clip=true, width=14cm]{editProjectSnapping} 
-\end{center}  
-\end{figure}
+\begin{figure}[ht]
+   \centering
+   \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}
+   \includegraphics[clip=true, width=12cm]{editProjectSnapping} 
+ \end{figure}
 
 \minisec{Search radius}
 
@@ -1377,7 +1365,7 @@ toolbar to start or stop the editing mode.\index{editing!icons} Once the
 layer is in edit mode, markers will appear at the vertices, and additional
 tool buttons on the editing toolbar will become available.
 
-\begin{Tip}[ht]\caption{\textsc{Save Regularly}}
+\begin{Tip}\caption{\textsc{Save Regularly}}
 Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing}
 off regularly. This allows you to save your recent changes, and also confirms
 that your data source can accept all your changes.
@@ -1408,17 +1396,16 @@ for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
 \checkbox{Suppress attributes pop-up windows after each created feature}.
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Enter Attribute Values Dialog after digitizing a new vector
-   feature \nixcaption}\label{fig:vector_digitising}\smallskip
+   feature \nixcaption}\label{fig:vector_digitising}
    \includegraphics[clip=true, width=8cm]{editDigitizing}
-\end{center}  
-\end{figure}
+ \end{figure}
 
 With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
 you can move existing features.
 
-\begin{Tip}[ht]\caption{\textsc{Attribute Value Types}}
+\begin{Tip}\caption{\textsc{Attribute Value Types}}
 At least for shapefile editing the attribue types are validated during the
 entry. Because of this, it is not possible to enter a number into the text-column in
 the dialog \dialog{Enter Attribute Values} or vica versa. If you need to do so,
@@ -1443,7 +1430,7 @@ Important is to set the property \mainmenuopt{Settings} >
 \tab{Digitizing}>\selectnumber{Search Radius}{10} to a number greater than
 zero. Otherwise QGIS will not be able to tell which vertex is being edited.
 
-\begin{Tip}[ht]\caption{\textsc{Vertex Markers}}
+\begin{Tip}\caption{\textsc{Vertex Markers}}
 The current version of QGIS supports three kinds of vertex-markers -
 Semi transparent circle, Cross and None. To change the marker style, choose
 \dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu
@@ -1456,7 +1443,7 @@ Start by activating the \toolbtntwo{mActionNodeTool}{Node Tool} and selecting
 some features by clicking on it. Red boxes appear at each vertex of this feature.
 This is basic select of the feature. Functionalities are:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Selecting vertex}: Selecting is easy just click on vertex and
 color of this vertex will change to blue. When selecting more vertices
 \keystroke{Shift} key can be used to select more vertices. Or also the
@@ -1527,7 +1514,7 @@ being copied to the target layer, it doesn't matter how you design the
 fields and data types. If you want to make sure everything - feature and its
 attributes - gets copied, make sure the schemas match.
 
-\begin{Tip}[ht]\caption{\textsc{Congruency of Pasted Features}}
+\begin{Tip}\caption{\textsc{Congruency of Pasted Features}}
 If your source and destination layers use the
 same projection, then the pasted features will have
 geometry identical to the source layer.
@@ -1552,7 +1539,7 @@ We could then use the \toolbtntwo{mActionEditPaste}{paste tool} to put it back, 
 capability. Cut, copy, and paste work on the currently selected features, 
 meaning we can operate on more than one at a time.
 
-\begin{Tip}[ht]\caption{\textsc{Feature Deletion Support}}
+\begin{Tip}\caption{\textsc{Feature Deletion Support}}
 When editing ESRI shapefiles, the deletion
 of features only works if QGIS is linked to a GDAL version 1.3.2 or greater. 
 The OS X and Windows versions of QGIS available from the download site are built 
@@ -1572,7 +1559,7 @@ If the changes cannot be saved (e.g. disk full, or the attributes have
 values that are out of range), the QGIS in-memory state is preserved.  This
 allows you to adjust your edits and try again.
 
-\begin{Tip}[ht]\caption{\textsc{Data Integrity}}
+\begin{Tip}\caption{\textsc{Data Integrity}}
 It is always a good idea to back up your data source before you
 start
 editing. While the authors of QGIS have made every effort to preserve the
@@ -1641,10 +1628,9 @@ trigger an undo operation is to click on the \button{undo/redo} buttons in
 the advanced digitizing tool bar.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Redo and Undo digitizing steps \nixcaption}\label{fig:vector_redoundo}\smallskip
-   \includegraphics[clip=true, width=14cm]{redo_undo}
-\end{center}
+   \centering
+   \caption{Redo and Undo digitizing steps \nixcaption}\label{fig:vector_redoundo}
+   \includegraphics[clip=true, width=12cm]{redo_undo}
 \end{figure}
 
 \minisec{Simplify Feature}
@@ -1730,10 +1716,9 @@ layer in the \tab{Symbology} tab of the \dialog{Layer Properties}.
 Otherwise the tool is inactive.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}\smallskip
+   \centering
+   \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}
    \includegraphics[clip=true, width=6cm]{rotatepointsymbol}
-\end{center}
 \end{figure}
 
 To change the rotation, select a point feature in the map canvas and rotate 
@@ -1753,10 +1738,9 @@ shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
 line or polygon).
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Creating a New Vector Dialog \nixcaption}\label{fig:newvectorlayer}\smallskip
+   \centering
+   \caption{Creating a New Vector Dialog \nixcaption}\label{fig:newvectorlayer}
    \includegraphics[clip=true, width=10cm]{editNewVector}
-\end{center} 
 \end{figure}
 
 Note that QGIS does not yet support creation of 2.5D
@@ -1794,10 +1778,9 @@ dropdown menu. This will open a new window which displays the attributes for
 every feature in the layer (figure \ref{fig:attributetable}).
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Attribute Table for Alaska layer \nixcaption}\label{fig:attributetable}\smallskip
+   \centering
+   \caption{Attribute Table for Alaska layer \nixcaption}\label{fig:attributetable}
    \includegraphics[clip=true, width=12cm]{vectorAttributeTable}
-\end{center} 
 \end{figure}
 
 \minisec{Selecting features in an attribute table}
@@ -1829,7 +1812,7 @@ described in Section \ref{sec:select_by_query}.
 
 To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality: 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \toolbtntwo{mActionOpenTable}{Remove selection}
 \item \toolbtntwo{mActionSelectedToTop}{Move selected to top}
 \item \toolbtntwo{mActionInvertSelection}{Invert selection}
@@ -1843,7 +1826,7 @@ of attribute table and to enable functionalities described below.
 \item \toolbtntwo{mActionCalculateField}{Open field calcultor} 
 \end{itemize}
 
-\begin{Tip}[ht]\caption{\textsc{Manipulating Attribute data}}
+\begin{Tip}\caption{\textsc{Manipulating Attribute data}}
 Currently only PostGIS layers are supported for adding or dropping
 attribute columns within this dialog. In future versions of QGIS, other
 datasources will be supported, because this feature was recently implemented
@@ -1866,11 +1849,10 @@ WHERE clause easily in the text field SQL where clause window.
 
 
 \begin{figure}[ht]
-  \begin{center}
-    \caption{Query Builder \nixcaption}\label{fig:query_builder}\smallskip
+  \centering
+    \caption{Query Builder \nixcaption}\label{fig:query_builder}
     \includegraphics[clip=true, width=11.5cm]{queryBuilder}
-  \end{center}  
-\end{figure}
+   \end{figure}
 
 The \textbf{Fields list} contains all attributes of the attribute table to be 
 searched. To add an attribute to the SQL where clause field, double click its 
@@ -1944,11 +1926,10 @@ you want to update an existing field, only update selected features or
 create a new attribute field, where the results of the calculation will be added. 
 
 \begin{figure}[ht]
-  \begin{center}
-    \caption{Field Calculator \nixcaption}\label{fig:field_calculator}\smallskip
+  \centering
+    \caption{Field Calculator \nixcaption}\label{fig:field_calculator}
     \includegraphics[clip=true, width=11.5cm]{fieldcalculator}
-  \end{center}
-\end{figure}
+  \end{figure}
 
 If you choose to add a new field, you need to enter a field name, a field type 
 (integer, real or string), the total field width, and the field precision. 

@@ -50,7 +50,7 @@ layers. This can be done globally or project-wide in the \tab{CRS} tab under
 or \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options} (KDE, Windows). 
 See Figure~\ref{fig:crsdialog}. 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \checkbox{Prompt for CRS} 
 \item \checkbox{Project wide default CRS will be used}
 \item \checkbox{Global default CRS displayed below will be used}
@@ -61,11 +61,9 @@ The global default CRS \texttt{proj=longlat +ellps=WGS84 +datum=WGS84
 definition will be saved for subsequent QGIS sessions.    
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{CRS tab in the QGIS Options Dialog \nixcaption}\label{fig:crsdialog}\smallskip
-   \includegraphics[clip=true, width=12cm]{crsdialog}
-\end{center}
-\end{figure}
+   \includegraphics[clip=true, width=12cm]{crsdialog}\end{figure}
 
 If you want to define the coordinate reference system for a certain layer
 without CRS information, you can also do that in the \tab{General} tab of the
@@ -101,10 +99,9 @@ dialog contains four important components as shown in Figure
 \ref{fig:projections} and described below.
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Projection Dialog \nixcaption}\label{fig:projections}\smallskip
    \includegraphics[clip=true, width=12cm]{projectionDialog}
-\end{center}  
 \end{figure}
 
 \begin{enumerate}
@@ -131,14 +128,12 @@ the associated CRS.
 
 \begin{Tip}
 \caption{\textsc{Project Properties Dialog}}
-\{
 If you open the \dialog{Project Properties} dialog from the
 \mainmenuopt{Edit} (Gnome, OSX) or \mainmenuopt{Settings} 
 (KDE, Windows) menu, you must click on the \tab{Coordinate Reference
 System} tab to view the CRS settings. Opening the dialog from the
 \toolbtntwo{mIconProjectionEnabled}{projector} icon will automatically bring
 the \tab{Coordinate Reference System} tab to the front.
-}
 \end{Tip}
 
 \section{Custom Coordinate Reference System}\label{sec:customprojections}
@@ -152,10 +147,9 @@ Custom CRS are stored in your QGIS user database. In addition to your custom
 CRS, this database also contains your spatial bookmarks and other custom data. 
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Custom CRS Dialog \nixcaption}\label{fig:customprojections}\smallskip
    \includegraphics[clip=true, width=12cm]{customProjectionDialog}
-\end{center}  
 \end{figure}
 
 Defining a custom CRS in QGIS requires a good understanding of the Proj.4
@@ -186,4 +180,3 @@ the \guilabel{Parameters} field. Then enter known WGS 84 latitude and longitude
 values in \guilabel{North} and \guilabel{East} fields respectively. 
 Click on \button{Calculate} and compare the results with the known values in
 your coordinate reference system. 
-

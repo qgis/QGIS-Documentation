@@ -29,10 +29,9 @@ together with the data from the GRASS spearfish60 location. You can download the
 \url{http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz}
 
 \begin{figure}[ht]
-\begin{center}
+\centering
   \caption{Georeferencer Plugin Dialog \nixcaption}\label{fig:georefplugin}\smallskip
   \includegraphics[clip=true, width=12cm]{georefplugin}
-\end{center}
 \end{figure}
 
 \minisec{Entering ground control points (GCPs)}\label{georeferencer_entering}
@@ -50,10 +49,9 @@ together with the data from the GRASS spearfish60 location. You can download the
 \end{enumerate}
 
 \begin{figure}[ht]
-\begin{center}
+\centering
   \caption{Add points to the raster image \nixcaption}\label{fig:choose_points}\smallskip
   \includegraphics[clip=true,width=9cm]{choose_points}
-\end{center}
 \end{figure}
 
 The points that are added to the map will be stored in a separate text file ([filename].points) which is stored together with the raster image. This allows us to reopen the Georeferencer plugin at a later date and add new points or delete existing ones to optimize the result. The points file contains values of the form: mapX, mapY, pixelX, pixelY. You can also \button{Load GCPs} and \button{Save GCPs} to different directories if you like.
@@ -73,7 +71,7 @@ Currently, several algorithms are available:
 \item Thin plate spline (TPS)
 \end{enumerate}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The Linear algorithm is used to create a world-file, and is different from the other algorithms, as it does not actually transform the raster. This algorithm likely won't be sufficient if you are dealing with scanned material.
 \item The Helmert transformation performs simple scaling and rotation transformations. 
 \item The Polynomial algorithms are among the most widely used algorithms for georeferencing, and each one differs by the degree of distortion introduced to match source and destination ground control points. The most widely used polynomial algorithm is the second order polynomial transformation, which allows some curvature. First order polynomial transformation (affine) preserves colliniarity and allows scaling, translation and rotation only.
@@ -86,16 +84,14 @@ Currently, several algorithms are available:
 \item When the GCPs have been collected, and the transformation has been chosen, press either \button{Create} to create a new raster or \button{Create and load layer} to automatically add the new raster to the layer list.
 \item A warning message will appear that will inform you that a new raster (in GeoTIFF format) will be created.
 \item After hitting OK, you will also be asked to choose a resampling method. There are three methods available:
+\end{enumerate}
 
 \begin{enumerate}
 \item Nearest neighbour
 \item Linear
 \item Cubic
 \end{enumerate}
-\end{enumerate}
 
 \begin{Tip}\caption{\textsc{Choosing the resampling method}}
-\{The type of resampling you choose will likely depending on your input data and the ultimate objective of the exercise. If you don't want to change statistics of the image, you might want to choose Nearest neighbour, whereas a Cubic resampling will likely provide a more smoothed result.}
+The type of resampling you choose will likely depending on your input data and the ultimate objective of the exercise. If you don't want to change statistics of the image, you might want to choose Nearest neighbour, whereas a Cubic resampling will likely provide a more smoothed result.
 \end{Tip}
-
-

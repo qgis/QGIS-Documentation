@@ -111,11 +111,11 @@ When QGIS starts, you are presented with the GUI as shown below
 interface as discussed below):
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{QGIS GUI with Alaska sample data \nixcaption (KDE)}
 	 \label{fig:startup}
-   \includegraphics[clip=true, width=17cm]{startup}
-\end{center} 
+      \includegraphics[clip=true, width=12cm]{startup}
+ 
 \end{figure}
 
 \textbf{Note:} Your window decorations (title bar, etc.) may appear
@@ -123,11 +123,12 @@ different depending on your operating system and window manager.\\
 
 The QGIS GUI is divided into six areas:
 
-\begin{tabbing}
-1. Menu Bar \hspace{3cm}\= 4. Map View \\
-2. Tool Bar \hspace{3cm}\> 5. Map Overview  \\
-3. Map Legend \hspace{3cm}\> 6. Status Bar   
-\end{tabbing}
+\begin{tabular}{p{5cm} p{5cm}}
+%\centering
+1. Menu Bar & 4. Map View \\
+2. Tool Bar & 5. Map Overview \\
+3. Map Legend & 6. Status Bar \\ 
+\end{tabular}
 
 These six components of the QGIS interface are described in more detail in
 the following sections.
@@ -141,17 +142,19 @@ Section \ref{label_menubar} below. Additionally the menu option \mainmenuopt{Set
 shortcuts and to add new keyboard shortcuts to QGIS features.  
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Define shortcut options \nixcaption (KDE)}
          \label{fig:shortcuts}
    \includegraphics[clip=true, width=8cm]{shortcuts}
-\end{center}
+
 \end{figure}
 
 Configuration is very simple. Just select a feature from the list and click
 on \button{Change}, \button{Set none} or \button{Set default}. Once you have
 found your configuration, you can save it as XML file and load it to another
 QGIS installation. 
+
+\newpage
 
 \subsection{Menu Bar}\label{label_menubar}
 \index{menus}
@@ -833,12 +836,12 @@ segment-length as well as the total shows up in the measure-window. To stop meas
 In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. 
 
-\begin{figure}[h]
-\caption{Measure tools in action \nixcaption} \label{fig:measure}
+\begin{figure}[ht]
 \centering
    \subfloat[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}
      \hspace{1cm}
    \subfloat[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}
+   \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \end{figure}
 
 \section{Projects}\label{sec:projects}\index{projects}
@@ -1037,11 +1040,11 @@ please refer to the manual of the unterlaying QT-library-documentation at
 \url{http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum}.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Proxy-settings in QGIS \nixcaption}
+   \centering
    \includegraphics[clip=true, width=10cm]{proxy-settings}
+   \caption{Proxy-settings in \qg \nixcaption}
    \label{fig:proxy-settings}
-\end{center} 
+ 
 \end{figure}
 
 \begin{Tip} \caption{\textsc{Using Proxies}}

@@ -28,7 +28,7 @@ the \toolbtntwo{oracle_raster}{Select GeoRaster} toolbar button, it will open th
 Spatial GeoRaster dialog window. Click on \button{New} to open the dialog window, and specify 
 the connection parameters (See Figure \ref{fig:oracle_create}):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Name}: Enter a name for the database connection.
 \item \textbf{Database instance}: Enter the name of the database that you will connect to.
 \item \textbf{Username}: Specify your own username that you will use to access the database.
@@ -36,10 +36,9 @@ the connection parameters (See Figure \ref{fig:oracle_create}):
 \end{itemize}
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Create Oracle connection dialog \nixcaption}\label{fig:oracle_create}\smallskip
+   \centering
+   \caption{Create Oracle connection dialog \nixcaption}\label{fig:oracle_create}
    \includegraphics[clip=true, width=9cm]{oracle_create_dialog}
-\end{center}
 \end{figure}
 
 Now, back on the main Oracle Spatial GeoRaster dialog window (See Figure \ref{fig:oracle_select}), use the 
@@ -64,10 +63,9 @@ At anytime the Selection entry can be edited in order to go directly to a known 
 beginning and select another table name.
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Select Oracle GeoRaster dialog \nixcaption}\label{fig:oracle_select}\smallskip
+   \centering
+   \caption{Select Oracle GeoRaster dialog \nixcaption}\label{fig:oracle_select}
    \includegraphics[clip=true, width=9cm]{oracle_select_dialog}
-\end{center}
 \end{figure}
 
 The Selection data entry can also be used to enter a Where clause at the end of the  identification string, e.g., 
@@ -106,4 +104,3 @@ BEGIN
 END;
 /
 \end{verbatim}
-

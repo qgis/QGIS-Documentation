@@ -17,7 +17,7 @@ examples on managing and working with GRASS data. Following main features
 are provided with the toolbar menu, when you start the GRASS plugin, as 
 described in Section~\ref{sec:starting_grass}:
  
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \toolbtntwo{grass_open_mapset}{Open mapset}
 \item \toolbtntwo{grass_new_mapset}{New mapset}
 \item \toolbtntwo{grass_close_mapset}{Close mapset}
@@ -88,10 +88,9 @@ See following Sections for editing GRASS data and creating a new
 the GRASS website at \url{http://grass.osgeo.org/download/data.php}.
 
 \begin{Tip}\caption{\textsc{GRASS Data Loading}}
-\{If you have problems loading data or QGIS terminates abnormally,
+If you have problems loading data or QGIS terminates abnormally,
 check to make sure you have loaded the GRASS plugin properly as described in
 Section \ref{sec:starting_grass}.
-}
 \end{Tip} 
 
 \section{GRASS LOCATION and MAPSET}\label{sec:about_loc}
@@ -114,11 +113,9 @@ this is not the usual way for beginners to work with GRASS, this functionality
 will not be described here.}
 
 \begin{figure}[ht]
-\begin{center}
-\caption{GRASS data in the alaska LOCATION (adapted from Neteler \& Mitasova 2008) \nixcaption}\label{fig:grass_location}\smallskip
+\centering
 \includegraphics[clip=true]{grass_location}
-\end{center}  
-\end{figure}
+\caption{GRASS data in the alaska LOCATION (adapted from Neteler \& Mitasova 2008 \parencite{neteler_mitasova08})}\label{fig:grass_location}\end{figure}
 
 \subsection{Creating a new GRASS LOCATION}\label{sec:create_loc}
 
@@ -130,11 +127,10 @@ exercises in the following GRASS GIS related chapters. It is useful to
 download and install the dataset on your computer \ref{label_sampledata}).
 
 \begin{figure}[ht]
-\begin{center}
-\caption{Creating a new GRASS LOCATION or a new MAPSET in QGIS \nixcaption}
-\label{fig:create_grass_location}\smallskip
+\centering
 \includegraphics[clip=true, width=10cm]{create_grass_location}
-\end{center}  
+\caption{Creating a new \grass LOCATION or a new MAPSET in \qg \nixcaption}
+\label{fig:create_grass_location}
 \end{figure}
 
 \begin{enumerate}
@@ -309,12 +305,10 @@ integer attached to geometry primitives, and it is used as the link to one
 key column in the database table.
 
 \begin{Tip}\caption{\textsc{Learning the GRASS Vector Model}}
-\{
 The best way to learn the GRASS vector model and its capabilities is to 
 download one of the many GRASS tutorials where the vector model is described
 more deeply. See \url{http://grass.osgeo.org/gdp/manuals.php} for more
 information, books and tutorials in several languages.
-}
 \end{Tip} 
 
 \section{Creating a new GRASS vector layer}\label{sec:creating_new_grass_vectors}\index{GRASS!Creating new vectors|see{editing!creating a new layer}}
@@ -332,9 +326,7 @@ is different from Shapefile creation with QGIS, because Shapefiles use the
 Simple Feature vector model (see Section \ref{sec:create shape}).
 
 \begin{Tip}\caption{\textsc{Creating an attribute table for a new GRASS vector layer}}
-\{
 If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure \ref{fig:grass_digitizing_table}).
-}
 \end{Tip} 
 
 \section{Digitizing and editing a GRASS vector layer}\index{GRASS!digitizing tools}\label{grass_digitising}
@@ -347,14 +339,12 @@ shows the GRASS edit dialog that is displayed when you click on the edit tool.
 The tools and settings are discussed in the following sections.
 
 \begin{Tip}\caption{\textsc{Digitizing polygones in GRASS}}
-\{
 If you want to create a polygone in GRASS, you first digitize the boundary of 
 the polygon, setting the mode to \usertext{No category}. Then you add a 
 centroid (label point) into the closed boundary, setting the mode to 
 \usertext{Next not used}. The reason is, that a topological vector model links 
 attribute information of a polygon always to the centroid and not to the 
 boundary.
-}
 \end{Tip} 
 
 \minisec{Toolbar}\label{label_grasstoolbar}
@@ -364,10 +354,9 @@ toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
 explains the available functionalities.
 
 \begin{figure}[h]
-   \begin{center}
+   \centering
    \caption{GRASS Digitizing Toolbar \nixcaption}\label{fig:grass_digitizing_toolbar} 
    \includegraphics[clip=true,width=12cm]{grass_digitizing_toolbar}
-\end{center}  
 \end{figure}
 
 \begin{table}[h]\index{GRASS!digitizing tools}
@@ -411,16 +400,15 @@ The \tab{Category} tab allows you to define the way in which the category
 values will be assigned to a new geometry element.
 
 \begin{figure}[h]
- \begin{center}
+ \centering
   \caption{GRASS Digitizing Category Tab \nixcaption}\label{fig:grass_digitizing_category}
-  \includegraphics[clip=true,width=10cm]{grass_digitizing_category}
- \end{center}
-\end{figure}
+  \includegraphics[clip=true,width=8cm]{grass_digitizing_category}
+ \end{figure}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Mode}: what category value shall be applied to new geometry 
 elements.
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Next not used - apply next not yet used category value to geometry
 element.
 \item Manual entry - manually define the category value for the geometry
@@ -437,10 +425,9 @@ number is 1.
 \end{itemize}
 
 \begin{Tip}\caption{\textsc{Creating an additional GRASS 'layer' with QGIS}}
-\{If you would like to add more layers to your dataset, just add a new
+If you would like to add more layers to your dataset, just add a new
 number in the 'Field (layer)' entry box and press return. In the Table tab
 you can create your new table connected to your new layer.
-}
 \end{Tip}
 
 \minisec{Settings Tab}\label{label_settingtab}\index{GRASS!snapping
@@ -452,11 +439,10 @@ existing nodes. This helps to prevent gaps or dangles between boundaries. The
 default is set to 10 pixels.
 
 \begin{figure}[h]
- \begin{center}
+ \centering
  \caption{GRASS Digitizing Settings Tab \nixcaption}\label{fig:grass_digitizing_settings}
  \includegraphics[clip=true,width=8cm]{grass_digitizing_settings}
- \end{center}
-\end{figure}
+ \end{figure}
 
 \minisec{Symbology Tab}\index{GRASS!symbology settings}
 
@@ -465,11 +451,10 @@ settings for various geometry types and their topological status (e.g. closed
 / opened boundary).
 
 \begin{figure}[h]
- \begin{center}
+ \centering
  \caption{GRASS Digitizing Symbolog Tab \nixcaption}\label{fig:grass_digitizing_symbology}
  \includegraphics[clip=true,width=8cm]{grass_digitizing_symbology}
- \end{center}
-\end{figure}
+ \end{figure}
 
 \minisec{Table Tab} \index{GRASS!table editing}
 
@@ -479,18 +464,16 @@ or create a new database table for a new GRASS vector layer (see Section
 \ref{sec:creating_new_grass_vectors}).
 
 \begin{figure}[h]
- \begin{center}
+ \centering
  \caption{GRASS Digitizing Table Tab \nixcaption}\label{fig:grass_digitizing_table}
  \includegraphics[clip=true,width=10cm]{grass_digitizing_table}
- \end{center}
-\end{figure}
+ \end{figure}
 
 \begin{Tip}\caption{\textsc{GRASS Edit Permissions}}\index{GRASS!edit
 permissions}
-\{You must be the owner of the GRASS \filename{MAPSET} you want to 
+You must be the owner of the GRASS \filename{MAPSET} you want to 
 edit. It is impossible to edit data layers in a \filename{MAPSET} that is not 
 yours, even if you have write permissions.
-}
 \end{Tip} 
 
 \section{The GRASS region tool}\label{sec:grass_region}\index{GRASS!region}
@@ -532,12 +515,12 @@ to the currently selected \filename{LOCATION} and \filename{MAPSET}.
 
 \subsection{Working with GRASS modules}\label{grass_modules}\index{GRASS!toolbox}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\caption{GRASS Toolbox and searchable Modules List \nixcaption}\label{fig:grass_modules}
-   \subfigure[Modules Tree] {\label{subfig:grass_module_tree}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_moduletree}}\goodgap
-   \subfigure[Searchable Modules List] {\label{subfig:grass_module_list}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_modulelist}}
-\end{figure}
+   \subfloat[Modules Tree] {\label{subfig:grass_module_tree}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_moduletree}}
+   \hspace{0.5cm}
+   \subfloat[Searchable Modules List] {\label{subfig:grass_module_list}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_modulelist}}   
+\caption{GRASS Toolbox and searchable Modules List \nixcaption}\label{fig:grass_modules}\end{figure}
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more 
 than 300) GRASS modules in command line modus. To offer a more user
@@ -561,10 +544,9 @@ for the GRASS module \filename{v.buffer}.
 \begin{figure}[h]
 \centering
 \caption{GRASS Toolbox Module Dialogs \nixcaption}\label{fig:grass_module_dialog}
-   \subfigure[Module Options] {\label{subfig:grass_module_option}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}\goodgap
-   \subfigure[Modules Output] {\label{subfig:grass_module_output}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}\goodgap
-   \subfigure[Module Manual] {\label{subfig:grass_module_manual}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}
-\end{figure}
+   \subfloat[Module Options] {\label{subfig:grass_module_option}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}\hspace{1cm}
+   \subfloat[Modules Output] {\label{subfig:grass_module_output}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}\hspace{1cm}
+   \subfloat[Module Manual] {\label{subfig:grass_module_manual}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}\end{figure}
 
 \minisec{Options}
 
@@ -592,10 +574,9 @@ manual page you see further links to the \filename{Main Help index}, the
 the same information as if you use the module \filename{g.manual} 
 
 \begin{Tip}\caption{\textsc{Display results immediately}}\index{GRASS!display results}
-\{If you want to display your calculation results immediately in your 
+If you want to display your calculation results immediately in your 
 map canvas, you can use the 'View Output' button at the bottom of the 
 module tab.
-}
 \end{Tip} 
 
 \subsection{GRASS module examples}\index{GRASS!toolbox}
@@ -607,7 +588,7 @@ The first example creates a vector contour map from an elevation raster
 (DEM). Assuming you have the Alaska \filename{LOCATION} set up as explained
 in Section \ref{sec:import_loc_data}. 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item First open the location by clicking the
 \toolbtntwo{grass_open_mapset}{Open mapset} button and choosing the Alaska
 location. 
@@ -632,12 +613,12 @@ the message \usertext{Successfully finished} appears in the output window.
 Then click \button{View Output} and \button{close}. 
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[ht]
 \centering
-\caption{GRASS Toolbox r.contour module \nixcaption}\label{fig:grass_toolbox_rcontour}
-   \subfigure[r.contour Options] {\label{subfig:grass_toolbox_rcontour}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour}}\goodgap
-   \subfigure[r.contour Output] {\label{subfig:grass_toolbox_rcontour2}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour2}}\goodgap
-\end{figure}
+   \subfloat[r.contour Options] {\label{subfig:grass_toolbox_rcontour}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour}}
+    \hspace{0.5cm}
+   \subfloat[r.contour Output] {\label{subfig:grass_toolbox_rcontour2}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour2}}
+   \caption{\grass Toolbox r.contour module \nixcaption}\label{fig:grass_toolbox_rcontour}\end{figure}
 
 Since this is a large region, it will take a while to display. After it
 finishes rendering, you can open the layer properties window to change the
@@ -655,10 +636,9 @@ detailed vector, but you are creating a very small scale map, so the detail
 is unnecessary. 
 
 \begin{Tip}\caption{\textsc{The simplify tool}}\index{GRASS!display results}
-\{Note that the QGIS fTools plugin has a \dropmenuopt{Simplify
+Note that the QGIS fTools plugin has a \dropmenuopt{Simplify
 geometries} tool that works just like the GRASS \classname{v.generalize}
 Douglas-Peuker algorithm. 
-}
 \end{Tip}  
 
 However, the purpose of this example is different. The contour lines created
@@ -667,7 +647,7 @@ by r.contour have sharp angles that should be smoothed. Among the
 (also Hermite splines). Be aware that these algorithms can \textbf{add}
 additional vertices to the vector, causing it to load even more slowly.
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Open the GRASS toolbox and double click the categories Vector ->
 Develop map -> Generalization, then click on the \classname{v.generalize}
 module to open its options window. 
@@ -687,18 +667,16 @@ while staying faithful to the original overall shape.
 \end{itemize}
 
 \begin{figure}[h]
- \begin{center}
+ \centering
  \caption{GRASS module v.generalize to smooth a vector map \nixcaption}\label{fig:grass_toolbox_vgeneralize}
  \includegraphics[clip=true, width=14cm]{grass_toolbox_vgeneralize}
- \end{center}
-\end{figure}
+ \end{figure}
 
 \begin{Tip}\caption{\textsc{Other uses for r.contour}}\index{GRASS!toolbox}
-\{The procedure described above can be used in other equivalent
+The procedure described above can be used in other equivalent
 situations. If you have a raster map of precipitation data, for example, then
 the same method will be used to create a vector map of isohyetal (constant
 rainfall) lines 
-}
 \end{Tip}  
 
 \minisec{Creating a Hillshade 3D effect}
@@ -712,7 +690,7 @@ sun's position in the sky and giving a reflectance value to each cell. Thus
 you get sun facing slopes lighted and the slopes facing away from the sun (in
 shadow) are darkened.
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Begin this example by loading the \usertext{gtopo30} elevation raster.
 Start the GRASS toolbox and under the Raster category double click to open Spatial
 analysis -> Terrain analysis. 
@@ -748,17 +726,16 @@ additional option in the \classname{r.shaded.relief} module that was shown
 above.
 
 \begin{figure}[ht]
- \begin{center}
+ \centering
  \caption{The GRASS shell, r.shaded.relief module \nixcaption}\label{fig:grass_toolbox_shell}
  \includegraphics[clip=true, width=12cm]{grass_toolbox_shell}
- \end{center}
-\end{figure}
+ \end{figure}
 
 The module \classname{r.shaded.relief} can take a parameter \usertext{zmult}
 which multiplies the elevation values relative to the X-Y coordinate units so
 that the hillshade effect is even more pronounced. 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Load the \usertext{gtopo30} elevation raster as above, then start the
 GRASS toolbox and click on the GRASS shell. In the shell window type the
 command:\linebreak
@@ -766,7 +743,7 @@ command:\linebreak
 zmult=3} \linebreak and press \keystroke{Enter}.
 \end{itemize}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item After the process finishes shift to the \tab{Browse} tab and double click on
 the new \usertext{gtopo30\_shade2} raster to display in QGIS. 
 \item As explained above, shift the shaded relief raster below the gtopo30
@@ -776,19 +753,18 @@ compared to the first shaded relief map.
 \end{itemize}
 
 \begin{figure}[ht]
- \begin{center}
+ \centering
  \caption{Displaying shaded relief created with the GRASS module
 r.shaded.relief \nixcaption}\label{fig:grass_toolbox_shadedrelief}
  \includegraphics[clip=true, width=12cm]{grass_toolbox_shadedrelief}
- \end{center}
-\end{figure}
+ \end{figure}
 
 \minisec{Raster statistics in a vector map}
 
 The next example shows how a GRASS module can aggregate raster data and add
 columns of statistics for each polygon in a vector map. 
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Again using the Alaska data, refer to \ref{sec:import_loc_data} to
 import the trees shapefile from the \usertext{vmap0\_shapefiles} directory
 into GRASS. 
@@ -831,16 +807,15 @@ bounding box, data source, connected attribute table for vector data and a
 command history.
 
 \begin{figure}[h]
- \begin{center}
+ \centering
  \caption{GRASS LOCATION browser \nixcaption}\label{fig:grass_mapset_browser}
  \includegraphics[clip=true,width=10cm]{grass_mapset_browser}
- \end{center}
-\end{figure}
+ \end{figure}
 
 The toolbar inside the \tab{Browser} tab offers following tools to manage 
 the selected \filename{LOCATION}:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \toolboxtwo{grass_add_map}{Add selected map to canvas}
 \item \toolboxtwo{grass_copy_map}{Copy selected map}
 \item \toolboxtwo{grass_rename_map}{Rename selected map}
@@ -878,4 +853,3 @@ The parser reads this definition and creates a new tab inside the toolbox
 when you select the module. A more detailed description for adding new 
 modules, changing the modules group, etc. can be found on the QGIS wiki at \\
 \url{http://wiki.qgis.org/qgiswiki/Adding\_New\_Tools\_to\_the\_GRASS\_Toolbox}.
-

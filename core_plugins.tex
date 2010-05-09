@@ -6,15 +6,17 @@
 % comment out the following line:
 %\updatedisclaimer
 
-% minipage is needed to appear the footnote under the table
-% SH
-\begin{minipage}{\textwidth}
-\begin{table}[H]
-\centering
-\caption{23 QGIS Core Plugins}\label{tab:core_plugins}\medskip
+
+{\setlength{\extrarowheight}{15pt}
 \small
- \begin{tabular}{|l|l|p{4in}|}
-\hline \textbf{Icon} & \textbf{Plugin} & \textbf{Description}\\
+\begin{longtable}{|l|l|p{8cm}|}
+\caption{23 QGIS Core Plugins}\label{tab:core_plugins}
+\hline
+ \textbf{Icon} & \textbf{Plugin} & \textbf{Description}\\
+\endfirsthead
+\hline
+\textbf{Icon} & \textbf{Plugin} & \textbf{Description}\\
+\endhead
 \hline
 \includegraphics[width=0.6cm]{delimited_text}
  & Add Delimited Text Layer \index{plugins!delimited text} & Loads and displays delimited text files containing x,y coordinates\\
@@ -88,8 +90,4 @@ effort \\
 \includegraphics[width=0.6cm]{mIconAddWfsLayer}
  & WFS & Load and display WFS layer \\
 \hline
-\end{tabular}
-\end{table}
-\end{minipage}
-
-\normalsize
+\end{longtable}}

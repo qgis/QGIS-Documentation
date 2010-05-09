@@ -20,11 +20,10 @@ the raster and vector layers you want to use in MapServer and save this
 status in a QGIS project file.
 
 \begin{figure}[ht]
-\begin{center}
+\centering
   \caption{Arrange raster and vector layers for QGIS project file \nixcaption}
-  \label{fig:mapserver_export_qgs}\smallskip
+  \label{fig:mapserver_export_qgs}
   \includegraphics[clip=true, width=12cm]{mapserver_export_qgis}
-\end{center}
 \end{figure}
 
 In this example, we demonstrate the four steps required to create a simple 
@@ -50,11 +49,10 @@ file is installed in your QGIS binary directory and can be used independently of
 To use it from within QGIS, you need to enable the MapServer Export Plugin first using the Plugin Manager (see Section \ref{sec:load_core_plugin}).
 
 \begin{figure}[ht]
-\begin{center}
+\centering
   \caption{Export to MapServer Dialog \nixcaption}
-  \label{fig:mapserver_export_dialog}\smallskip
+  \label{fig:mapserver_export_dialog}
   \includegraphics[clip=true, width=9cm]{mapserver_export_dialog}
-\end{center}
 \end{figure}
 
 \begin{description}
@@ -115,7 +113,7 @@ We can now test our work using the \filename{shp2img} tool to create an image
 from the map file. The \filename{shp2img} utility is part of MapServer and FWTools. 
 To create an image from our map:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Open a terminal window
 \item If you didn't save your map file in your home directory, change to
   the folder where you saved it.
@@ -129,11 +127,10 @@ project. As you can see in Figure~\ref{fig:mapserver_export_test}, all
 information except the airport symbols are included.
 
 \begin{figure}[ht]
-\begin{center}
+\centering
+  \includegraphics[clip=true, width=10cm]{mapserver_export_test}
   \caption{Test PNG created by shp2img with all MapServer Export layers \nixcaption}
-  \label{fig:mapserver_export_test}\smallskip
-  \includegraphics[clip=true, width=12cm]{mapserver_export_test}
-\end{center}
+  \label{fig:mapserver_export_test}
 \end{figure}
 
 If you plan to use the map file to serve WMS requests, you probably don't

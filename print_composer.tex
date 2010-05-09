@@ -18,9 +18,9 @@ load it again in another session. See a list of tools in
 table~\ref{tab:printcomposer_tools}:
 
 \begin{table}[h]\index{Print composer!tools}
-\centering
-\caption{Print Composer Tools}\label{tab:printcomposer_tools}\medskip
- \begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
+\centering\small
+\renewcommand{\arraystretch}{2}
+ \begin{tabular}{|m{1cm}|m{5.4cm}|m{1cm}|m{5.4cm}|}
  \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} &
  \textbf{Purpose} \\
  \hline \includegraphics[width=0.7cm]{mActionFolder}
@@ -81,6 +81,7 @@ table~\ref{tab:printcomposer_tools}:
  items bottom \\
 \hline
 \end{tabular}
+\caption{Print Composer Tools}\label{tab:printcomposer_tools}
 \end{table}
 
 All Print Composer tools are availabe in menus and as icons in a toolbar. The
@@ -99,10 +100,9 @@ icon in the toolbar or choose \mainmenuopt{File} >
 \section{Using Print Composer}\label{label_useprintcomposer} 
 
 \begin{figure}[ht]
-   \begin{center}
-   \caption{Print Composer \nixcaption}\label{fig:print_composer_blank}\smallskip
+   \centering
+   \caption{Print Composer \nixcaption}\label{fig:print_composer_blank}
    \includegraphics[clip=true, width=\textwidth]{print_composer_blank}
-\end{center}  
 \end{figure}
 
 Opening the print composer provides you with a blank canvas to which you can 
@@ -111,7 +111,7 @@ arrows and text. Figure \ref{fig:print_composer_blank} shows the initial view
 of the print composer with an activated \checkbox{Snap to grid} modus but
 before any elements are added. The print composer provides two tabs:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \tab{General} tab allows you to set paper size, orientation, the
 print quality for the output file in dpi and to activate snapping to a grid
 of a defined resolution. Please note, the \checkbox{Snap to grid} feature
@@ -138,7 +138,7 @@ rectangle on the composer canvas with the left mouse button to add the map.
 To display the current map, you can choose between three different modes in
 the map \tab{Item} tab:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \selectstring{Preview}{Rectangle} is the default setting. It only
 displays an empty box with a message \textit{"Map will be printed here"}. 
 \item \selectstring{Preview}{Cache} renders the map in the current screen
@@ -172,16 +172,15 @@ of the Map Item tab.
 \begin{figure}[ht]
 \centering
 \caption{Print Composer map item tab - Map and Extents dialog \nixcaption}\label{fig:mapdialog} 
-\subfigure[Map dialog]{\label{subfig:map_dialog1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map1}}\goodgap
-\subfigure[Extents dialog]{\label{subfig:map_dialog2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map2}}
-\end{figure}
+\subfloat[Map dialog]{\label{subfig:map_dialog1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map1}}\hspace{1cm}
+\subfloat[Extents dialog]{\label{subfig:map_dialog2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map2}}\end{figure}
 
 \minisec{Map dialog}
 
 The \textbf{Map} dialog of the map item tab provides following functionalities
 (see Figure \ref{fig:mapdialog}a)):
  
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \textbf{Preview} area allows to define the preview modes Rectangle,
 Cache and Render, as described above. Click on the \button{Update preview}
 button to apply changes to the map view.
@@ -201,7 +200,7 @@ selecting the map element in the print composer and clicking the
 The \textbf{Extents} dialog of the map item tab provides following functionalities
 (see Figure \ref{fig:mapdialog}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \textbf{Map extent} area allow to specify the map extend using Y
 and X min/max values or clicking the \button{Set to map canvas extend} button.
 \end{itemize}
@@ -217,16 +216,15 @@ Figure~\ref{fig:mapdialog}a)).
 \begin{figure}[ht]
 \centering
 \caption{Print Composer map item tab - Grid and General options dialog \nixcaption}\label{fig:sec_map_dialog}
-   \subfigure[Grid dialog]{\label{subfig:map_dialog3}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map3}}\goodgap
-   \subfigure[General options dialog]{\label{subfig:map_dialog4}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map4}}
-\end{figure}
+   \subfloat[Grid dialog]{\label{subfig:map_dialog3}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map3}}\hspace{1cm}
+   \subfloat[General options dialog]{\label{subfig:map_dialog4}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map4}}\end{figure}
 
 \minisec{Grid dialog}
 
 The \textbf{Grid} dialog of the map item tab provides following functionalities
 (see Figure \ref{fig:sec_map_dialog}a)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \checkbox{Show grid} checkbox allows to overlay a grid to the map
 element. As grid type you can specify to use solid line or cross. Furthermore
 you can define an interval in X and Y direction, an X and Y offset, and the
@@ -244,7 +242,7 @@ precision of the drawn coordinates.
 The \textbf{General options} dialog of the map item tab provides following
 functionalities (see Figure \ref{fig:sec_map_dialog}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can define color and outline width for the element frame, set
 a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
@@ -267,16 +265,15 @@ position and customize their appearance in the label item tab.
 \begin{figure}[ht]
 \centering
 \caption{Print composer label item tab - Label options and General options dialog \nixcaption}\label{fig:label_option}
-   \subfigure[label options dialog]{\label{subfig:labeloptions1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_label1}}\goodgap
-   \subfigure[general options dialog]{\label{subfig:labeloptions2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_label2}}
-\end{figure}
+   \subfloat[label options dialog]{\label{subfig:labeloptions1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_label1}}\hspace{1cm}
+   \subfloat[general options dialog]{\label{subfig:labeloptions2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_label2}}\end{figure}
 
 \minisec{Label dialog}
 
 The \textbf{Label} dialog of the label item tab provides following
 functionalities (see Figure \ref{fig:label_option}a)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \textbf{Label} dialog offers to add text labels to the composer
 canvas. You can select font and fontcolor for the text and it is possible to
 define a text margin im mm.
@@ -287,7 +284,7 @@ define a text margin im mm.
 The \textbf{General options} dialog of the label item tab provides following
 functionalities (see Figure \ref{fig:label_option}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can define color and outline width for the element frame, set
 a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
@@ -306,16 +303,15 @@ canvas and position and customize their appearance in the image item tab.
 \centering
 \caption{Print composer image item tab - Picture options and General options
 \nixcaption}\label{fig:imageoptions}
-   \subfigure[Picture options dialog]{\label{subfig:print_composer_image1}\includegraphics[clip=true, width=0.30\textwidth]{print_composer_image1}}\goodgap
-   \subfigure[General options dialog]{\label{subfig:print_composer_image2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_image2}}
-\end{figure}
+   \subfloat[Picture options dialog]{\label{subfig:print_composer_image1}\includegraphics[clip=true, width=0.30\textwidth]{print_composer_image1}}\hspace{1cm}
+   \subfloat[General options dialog]{\label{subfig:print_composer_image2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_image2}}\end{figure}
 
 \minisec{Picture options dialog}
 
 The \textbf{Picture options} dialog of the image item tab provides following
 functionalities (see Figure \ref{fig:imageoptions}a)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \textbf{Search directories} area allows to add and remove
 directories with images in SVG format to the picture database. 
 \item The \textbf{Preview} field then shows all pictures stored in the
@@ -333,7 +329,7 @@ composer image.
 The \textbf{General options} dialog of the image item tab provides following
 functionalities (see Figure \ref{fig:imageoptions}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can define color and outline width for the element frame, set
 a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
@@ -352,17 +348,16 @@ canvas and position and customize their appearance in the legend item tab.
 \centering
 \caption{Print composer legend item tab - General, Legend items and Item
 option dialog\nixcaption}\label{fig:legendoptions}
-   \subfigure[General dialog]{\label{subfig:print_composer_legend1}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend1}}\goodgap
-   \subfigure[Legend item dialog]{\label{subfig:print_composer_legend2}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend2}}\goodgap
-   \subfigure[Item options dialog]{\label{subfig:print_composer_legend3}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend3}}
-\end{figure}
+   \subfloat[General dialog]{\label{subfig:print_composer_legend1}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend1}}\hspace{1cm}
+   \subfloat[Legend item dialog]{\label{subfig:print_composer_legend2}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend2}}\hspace{1cm}
+   \subfloat[Item options dialog]{\label{subfig:print_composer_legend3}\includegraphics[clip=true, width=0.3\textwidth]{print_composer_legend3}}\end{figure}
 
 \minisec{General dialog}
 
 The \textbf{General} dialog of the legend item tab provides following
 functionalities (see Figure \ref{fig:legendoptions}a)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can adapt the legend title. You can change the font of the
 legend title, layer and item name. You can change width and height of the
 legend symbol and you can add layer, symbol, icon label and box space.
@@ -373,7 +368,7 @@ legend symbol and you can add layer, symbol, icon label and box space.
 The \textbf{Legend items} dialog of the legend item tab provides following
 functionalities (see Figure \ref{fig:legendoptions}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The legend items window lists all legend items and allows to change
 item order, edit layer names, remove and restore items of the list. After
 changing the symbology in the QGIS main window you can click on update to
@@ -385,7 +380,7 @@ adapt the changes in the legend element of the print composer.
 The \textbf{Item options} dialog of the legend item tab provides following
 functionalities (see Figure \ref{fig:legendoptions}c)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can define color and outline width for the element frame, set
 a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
@@ -403,16 +398,15 @@ canvas and position and customize their appearance in the scalebar item tab.
 \begin{figure}[ht]
 \centering
 \caption{Print composer scalebar item tab - Scalebar and General options dialog \nixcaption}\label{fig:scalebaroptions}
-\subfigure[scalebar options dialog]{\label{subfig:scalebaroptions1}\includegraphics[clip=true, width=0.35\textwidth]{print_composer_scalebar1}}\goodgap
-\subfigure[general options dialog]{\label{subfig:scalebaroptions2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_scalebar2}}
-\end{figure}
+\subfloat[scalebar options dialog]{\label{subfig:scalebaroptions1}\includegraphics[clip=true, width=0.35\textwidth]{print_composer_scalebar1}}\hspace{1cm}
+\subfloat[general options dialog]{\label{subfig:scalebaroptions2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_scalebar2}}\end{figure}
 
 \minisec{Scalebar dialog}
 
 The \textbf{Scalebar} dialog of the scalebar item tab provides following
 functionalities (see Figure \ref{fig:scalebaroptions}a)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The scalebar dialog allows to define the segment size of the scalebar
 in map units, the map units used per bar units, and how many left and right
 segments units from 0 should be used.
@@ -427,7 +421,7 @@ the scale bar. Add a unit label and define the scalebar font and color.
 The \textbf{General options} dialog of the scalebar item tab provides following
 features (see Figure \ref{fig:scalebaroptions}b)):
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item Here you can define color and outline width for the element frame, set
 a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
@@ -440,7 +434,7 @@ frame} checkbox.
 
 For map navigation the print composer provides 4 general tools:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \toolbtntwo{mActionZoomOut}{Zoom in},
 \item \toolbtntwo{mActionZoomOut}{Zoom out},
 \item \toolbtntwo{mActionZoomFullExtent}{Zoom to full extend} and
@@ -457,11 +451,10 @@ to the print composer canvas.
 \centering
 \caption{Print composer basic shape and arrow item tab - Shape and Arrow
 options dialog \nixcaption}\label{fig:shapearrow}
-\subfigure[shape dialog]{\label{subfig:shapedialog}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_shape}}\goodgap
-\subfigure[arrow dialog]{\label{subfig:arrowdialog}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_arrow}}
-\end{figure}
+\subfloat[shape dialog]{\label{subfig:shapedialog}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_shape}}\hspace{1cm}
+\subfloat[arrow dialog]{\label{subfig:arrowdialog}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_arrow}}\end{figure}
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \textbf{Shape} dialog allows to draw an ellipse, rectangle, or
 triangle in the print composer canvas. You can define its outline and fill
 color, the outline width and a clockwise rotation.
@@ -492,17 +485,16 @@ Figure \ref{fig:print_composer_complete} shows the print composer with an exampl
 print layout including each type of map element described in the sections above.
 
 \begin{figure}[h]
-   \begin{center}
+   \centering
    \caption{Print Composer with map view, legend, scalebar, coordinates and text added \nixcaption}
-   \label{fig:print_composer_complete}\smallskip
+   \label{fig:print_composer_complete}
    \includegraphics[clip=true, width=\textwidth]{print_composer_complete}
-\end{center}  
 \end{figure}
 
 The print composer allows you to create several output formats and it is possible to 
 define the resolution (print quality) and paper size:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item The \toolbtntwo{mActionFilePrint}{Print} icon allows to print the layout 
 to a connected printer or a Postscript file depending on installed printer 
 drivers.
@@ -529,10 +521,7 @@ toolbar and in \mainmenuopt{File} >
 add new composer template or to manage already existing templates. 
 
 \begin{figure}[h]
-   \begin{center}
+   \centering
    \caption{Composer Manager \nixcaption}
-   \label{fig:print_composer_manager}\smallskip
-   \includegraphics[clip=true, width=8cm]{print_composer_manager}
-\end{center}
-\end{figure}
-
+   \label{fig:print_composer_manager}
+   \includegraphics[clip=true, width=8cm]{print_composer_manager}\end{figure}

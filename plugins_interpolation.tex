@@ -11,7 +11,7 @@ point vector layer. It is very simple to handle and provides an intiuitive graph
 user interface for creating interpolated raster layers (See Figure \ref{fig:interpolation_dialog}).
 The plugin requires the following parameters to be specified before running:
 
-\begin{itemize}
+\begin{itemize}[label=--]
 \item \textbf{Input vector layer}: Specify the input point vector layer(s) from a list of loaded
 point layers. If several layers are specified, then data from all layers is used for
 interpolation. Note: It is possible to insert lines or polygons as constraints for the
@@ -26,10 +26,9 @@ Network (TIN)}{\ldots} or \selectstring{Inverse Distance Weighted (IDW)}{\ldots}
 \end{itemize}
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Interpolation Plugin \nixcaption}\label{fig:interpolation_dialog}\smallskip
    \includegraphics[clip=true, width=14cm]{interpolate_dialog}
-\end{center}  
 \end{figure}
 
 \minisec{Using the plugin}\label{interpolation_usage}
@@ -52,13 +51,7 @@ Network (TIN)}{\ldots} or \selectstring{Inverse Distance Weighted (IDW)}{\ldots}
 In Figure \ref{fig:interpolation_idw} you see the TIN interpolation result with a 998 cols x 812 rows (5 km) resolution for the \filename{elevp.csv} data visualized using the Pseudocolor color table. The processing only takes a few minutes, and covers the northern part of Alaska.
 
 \begin{figure}[ht]
-   \begin{center}
+   \centering
    \caption{Interpolation of elevp data using TIN method \nixcaption}\label{fig:interpolation_idw}\smallskip
    \includegraphics[clip=true, width=10cm]{interpolate_tin}
-\end{center}  
 \end{figure}
-
-\newpage
-
-
-
