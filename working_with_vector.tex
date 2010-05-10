@@ -7,21 +7,21 @@
 % comment out the following line:
 %\updatedisclaimer
 
-QGIS supports vector data in a number of formats, including those
+\qg supports vector data in a number of formats, including those
 supported by the OGR library data provider plugin, such as ESRI shapefiles,
 \index{shapefiles}\index{ESRI!shapefiles}\index{SHP files}
 MapInfo MIF (interchange format)\index{MIF files}\index{MapInfo!MIF files}
 and MapInfo TAB (native format).\index{TAB files}\index{MapInfo!TAB files}
 You find a list of OGR supported vector formats in Appendix~\ref{appdx_ogr}.
 
-QGIS also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers 
+\qg also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers 
 in a PostgreSQL database using the PostgreSQL data provider plugin.
 Support for additional data types (eg. delimited text) is provided by 
 additional data provider plugins.\index{delimited text}
 
 This section describes how to work with several common formats:
 ESRI shapefiles, PostGIS layers, and SpatialLite layers. Many of the
-features available in QGIS work the same, regardless of the vector data source.
+features available in \qg work the same, regardless of the vector data source.
 This is by design and includes the identify, select, labeling and attributes
 functions.
 
@@ -33,7 +33,7 @@ Working with GRASS vector data is described in Section \ref{sec:grass}.
 \index{ESRI!shapefiles}
 \index{SHP files}
 
-The standard vector file format used in QGIS is the ESRI Shapefile. Support 
+The standard vector file format used in \qg is the ESRI Shapefile. Support 
 is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
 \index{OGR}. A shapefile actually consists of several files. The following three are required:
 \index{shapefile!format}
@@ -49,41 +49,41 @@ the projection information. While it is very useful to have a projection file, i
 
 \minisec{Problem loading a shape .prj file}
 
-If you load a shapefile with \filename{.prj} file and QGIS is not 
+If you load a shapefile with \filename{.prj} file and \qg is not 
 able to read the coordinate reference system from that file, you have to define the 
 proper projection manually within the \tab{General} tab of the \dialog{Layer 
 Properties} dialog. This is due to the fact, that \filename{.prj} files often  
-do not provide the complete projection parameters, as used in QGIS and listed in 
+do not provide the complete projection parameters, as used in \qg and listed in 
 the \dialog{CRS} dialog. 
 
-For that reason, if you create a new shapefile with QGIS, two different projection 
+For that reason, if you create a new shapefile with \qg, two different projection 
 files are created. A \filename{.prj} file with limited projection parameters, 
 compatible with ESRI software, and a \filename{.qpj} file, providing the complete 
-parameters of the used CRS. Whenever QGIS finds a \filename{.qpj} file, it will be 
+parameters of the used CRS. Whenever \qg finds a \filename{.qpj} file, it will be 
 used instead of the \filename{.prj}.
 
 \subsection{Loading a Shapefile}\label{sec:load_shapefile}
 
 \begin{figure}[ht]
    \centering
-   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}
    \includegraphics[clip=true, width=12cm]{addvectorlayerdialog}
+   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}   
 \end{figure}
 
 \begin{figure}[ht]
    \centering
-   \caption{Open an OGR Supported Vector Layer Dialog \nixcaption}\label{fig:openshapefile}
    \includegraphics[clip=true, width=12cm]{shapefileopendialog}
+   \caption{Open an OGR Supported Vector Layer Dialog \nixcaption}\label{fig:openshapefile}
 \end{figure}
 
 \begin{figure}[ht]
    \centering
-   \caption{QGIS with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}
    \includegraphics[clip=true, width=12cm]{shapefileloaded}
+   \caption{\qg with Shapefile of Alaska loaded \nixcaption}\label{fig:loadedshapefile}
 \end{figure}
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a shapefile, start
-QGIS and click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer}
+\qg and click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer}
 toolbar button\index{shapefile!loading} or simply type \keystroke{Ctrl-Shift-V}. 
 This will bring up a new window (see Figure\ref{fig:addvectorlayer}).  
 
@@ -95,8 +95,8 @@ The selection box \selectstring{Files of type}{\ldots} allows you to preselect s
 
 You can also select the Encoding type for the shapefile if desired.
 
-Selecting a shapefile from the list and clicking \button{Open} loads it into QGIS. Figure
-\ref{fig:loadedshapefile} shows QGIS after loading the \filename{alaska.shp} file.
+Selecting a shapefile from the list and clicking \button{Open} loads it into \qg. Figure
+\ref{fig:loadedshapefile} shows \qg after loading the \filename{alaska.shp} file.
 
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
@@ -124,7 +124,7 @@ to external drives and network mounts.
 
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A \index{spatial index!shapefiles} spatial index will improve the 
-speed of both zooming and panning. Spatial indexes used by QGIS have a 
+speed of both zooming and panning. Spatial indexes used by \qg have a 
 \filename{.qix} extension.
 
 Use these steps to create the index:
@@ -165,12 +165,12 @@ raw TIGER Format of the US Census Bureau.
 PostGIS layers are stored in a PostgreSQL database. The advantages of PostGIS
 are the spatial indexing, filtering and query capabilities it provides. Using PostGIS,
 vector functions such as select and identify work more accurately than with
-OGR layers in QGIS.
+OGR layers in \qg.
 
 To use PostGIS layers you must:\index{PostgreSQL!loading layers}
 
 \begin{itemize}[label=--]
-\item Create a stored connection in QGIS to the PostgreSQL database (if one is
+\item Create a stored connection in \qg to the PostgreSQL database (if one is
 not already defined).\index{PostgreSQL!connection}
 \item Connect to the database.
 \item Select the layer to add to the map.
@@ -206,7 +206,7 @@ Parameters}\label{tab:postgis_connection_parms}\medskip
 \hline Host \index{PostgreSQL!host}
 & Name of the database host. This must be a resolvable host name the same as
 would be used to open a telnet connection or ping the host. If the database is 
-on the same computer as QGIS, simply enter 'localhost' here. \\
+on the same computer as \qg, simply enter 'localhost' here. \\
 \hline Database \index{PostgreSQL!database} & Name of the database.  \\
 \hline Port \index{PostgreSQL!port}& Port number the PostgreSQL database
 server listens on. The default port is 5432.\\
@@ -237,12 +237,12 @@ Optional you can activate follwing checkboxes:
 Once all parameters and options are set, you can test the connection by
 clicking on the \button{Test Connect} button\index{PostgreSQL!connection!testing}.
 
-\begin{Tip}\caption{\textsc{QGIS User Settings and
+\begin{Tip}\caption{\textsc{\qg User Settings and
 Security}}\index{settings}\index{security}
-Your customized settings for QGIS are stored based on the operating
+Your customized settings for \qg are stored based on the operating
 system. \nix, the settings are stored in your home directory in
-\filename{.qgis/}. \win, the settings are stored in the registry. Depending on
-your computing environment, storing passwords in your QGIS settings may be a
+\filename{.\qg/}. \win, the settings are stored in the registry. Depending on
+your computing environment, storing passwords in your \qg settings may be a
 security risk.
 \end{Tip}
 
@@ -270,7 +270,7 @@ information on using the PostgreSQL Query Builder to further define the layer.
 \begin{Tip}\caption{\textsc{PostGIS Layers}}
 Normally a PostGIS layer is defined by an entry in the
 geometry\_columns table. From version \OLD % should be 0.9.0 
-on, QGIS can load layers that do not have
+on, \qg can load layers that do not have
 an entry in the geometry\_columns table. This includes both tables and views.
 Defining a spatial view provides a powerful means to visualize your data. Refer
 to your PostgreSQL manual for information on creating views.
@@ -280,17 +280,17 @@ to your PostgreSQL manual for information on creating views.
 layers}\label{sec:postgis_details}
 \index{PostgreSQL!layer details}
 
-This section contains some details on how QGIS accesses PostgreSQL
-layers. Most of the time QGIS should simply provide you with a list of
+This section contains some details on how \qg accesses PostgreSQL
+layers. Most of the time \qg should simply provide you with a list of
 database tables that can be loaded, and load them on request. However,
-if you have trouble loading a PostgreSQL table into QGIS, the information
-below may help you understand any QGIS messages and give you direction on
-changing the PostgreSQL table or view definition to allow QGIS to load it.
+if you have trouble loading a PostgreSQL table into \qg, the information
+below may help you understand any \qg messages and give you direction on
+changing the PostgreSQL table or view definition to allow \qg to load it.
 
-QGIS requires that PostgreSQL layers contain a column that can be
+\qg requires that PostgreSQL layers contain a column that can be
 used as a unique key for the layer. For tables this usually means
 that the table needs a primary key, or a column with a unique
-constraint on it. In QGIS, this column needs to be of
+constraint on it. In \qg, this column needs to be of
 type int4 (an integer of size 4 bytes). Alternatively the ctid column can be
 used as primary key. If a table lacks these items,
 the oid column will be used instead. Performance will be improved if the
@@ -299,19 +299,19 @@ PostgreSQL).
 
 If the PostgreSQL layer is a view, the same requirement exists, but
 views don't have primary keys or columns with unique constraints on
-them. In this case QGIS will try to find a column in the view that is
+them. In this case \qg will try to find a column in the view that is
 derived from a suitable table column. It does this by parsing the view
-definition SQL. However there are several aspects of SQL that QGIS ignores
+definition SQL. However there are several aspects of SQL that \qg ignores
 - these include the use of table aliases and columns that are generated by
 SQL functions.
 
-If a suitable column cannot be found, QGIS will not load the layer. If this
+If a suitable column cannot be found, \qg will not load the layer. If this
 occurs, the solution is to alter the view so that it does include a suitable
 column (a type of int4 and either a primary key or with a unique constraint,
 preferably indexed).
 
 %%FIXME: Add missing information
-%% When dealing with views, QGIS parses the view definition and
+%% When dealing with views, \qg parses the view definition and
 
 \subsection{Importing Data into PostgreSQL}\label{sec:loading_postgis_data}
 \index{PostGIS!SPIT!importing data}
@@ -340,7 +340,7 @@ PostGIS distribution.
 \end{Tip}
 
 \minisec{SPIT Plugin}
-\includegraphics[width=0.7cm]{spiticon} QGIS comes with a
+\includegraphics[width=0.7cm]{spiticon} \qg comes with a
 plugin named 
 SPIT (Shapefile to PostGIS Import Tool)\index{PostGIS!SPIT}.
 SPIT can be used to load multiple shapefiles at one time and includes support
@@ -447,17 +447,16 @@ gsherman@madison:~/current$
 
 Many GIS packages don't wrap vector maps, with a geographic reference system
 (lat/lon), crossing the \degrees{180} longitude line. As result, if
-we open such map in QGIS, we will see two far, distinct locations, that
+we open such map in \qg, we will see two far, distinct locations, that
 should show near each other. In Figure \ref{fig:vector_not_wrapping} the tiny
 point on the far left of the map canvas (Chatham Islands), should be within
 the grid, right of New Zealand main islands.
 
 \begin{figure}[ht]
    \centering
-   \caption{Map in lat/lon crossing the \degrees{180} longitude line
-   \nixcaption}
-   \label{fig:vector_not_wrapping}
    \includegraphics[clip=true, width=\textwidth]{vectorNotWrapping}
+      \caption{Map in lat/lon crossing the \degrees{180} longitude line \nixcaption}
+   \label{fig:vector_not_wrapping}
 \end{figure}
 
 A workaround is to transform the longitude values using PostGIS and the
@@ -470,9 +469,9 @@ the data to be plotted in a \degrees{180} centric map.
 
 \begin{figure}[ht]
    \centering
-   \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore Shift\textunderscore Longitude function \nixcaption}
-\label{fig:vector_wrapping}
    \includegraphics[clip=true, width=9cm]{vectorWrapping}
+   \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore Shift\textunderscore Longitude function \nixcaption}
+\label{fig:vector_wrapping}   
 \end{figure}
 
 \minisec{Usage}
@@ -499,7 +498,7 @@ The first time you load data from a Spatialite database, begin by clicking on th
 \toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the 
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...} 
 option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}. 
-This will bring up a window, which will allow you to either connect to a Spatialite database already known to QGIS, which 
+This will bring up a window, which will allow you to either connect to a Spatialite database already known to \qg, which 
 you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection, 
 click on \button{New} and use the file browser to point to your SpatiaLite database, 
 which is a file with a \filename{.sqlite } extension.
@@ -518,14 +517,14 @@ from the popup menu.
 
 \begin{figure}[ht]
    \centering
-   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}
    \includegraphics[clip=true, width=12cm]{vectorLayerSymbology} 
+   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}   
  \end{figure}
 
 \subsection{Symbology Tab}\label{sec:symbology}
 \index{vector layers!symbology}
 
-QGIS supports a number of symbology renderers to control how
+\qg supports a number of symbology renderers to control how
 vector features are displayed. Currently the following renderers
 are available:
 
@@ -598,14 +597,14 @@ if you make changes to the style that you are not happy with, use the \button{Re
 Default Style} button to revert to your default style.
 
 \minisec{Vector transparency} \label{sec:vect_transparency} \index{vector layers!transparency}
-QGIS allows to set a transparency for every vector layer. This can be done with
+\qg allows to set a transparency for every vector layer. This can be done with
 the slider \slider{Transparency}{0}{20mm} inside the \tab{symbology} tab (see
 fig. \ref{fig:vector_symbology}). This is very useful for overlaying several
 vector layers.
 
 \subsection{New Generation Symbology}
 
-In QGIS \CURRENT a new symbology was integrated in parallel with the symbology 
+In \qg \CURRENT a new symbology was integrated in parallel with the symbology 
 described above. This new generation symbology provides a variety of improvements and 
 new features and will replace the current symbology in one of the upcoming releases. 
 To switch to the new symbolgy you currently have to click on the \button{new symbology} button in the \tab{General} tab of the \dialog{Layer Properties} dialog.  
@@ -656,7 +655,7 @@ as style element type and then choosing a color ramp type.
 A style groups a set of various symbols and color ramps. You can define your 
 prefered or frequently used symbols, and can use it  without having to recreate 
 it everytime. Style items (symbols and color ramps) have always a name by which 
-they can be queried from the style. There is one default style in QGIS (modifiable) 
+they can be queried from the style. There is one default style in \qg (modifiable) 
 and the user can add further styles.
 
 \minisec{Renderers}
@@ -694,12 +693,12 @@ be used in the future.
  
 \begin{figure}[ht]
 \centering
-\caption{New Single Symbolizing options \nixcaption}
    \subfloat[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}
    \hspace{1cm}
    \subfloat[Single symbol line properties] {\label{subfig:singleNG2}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_line}}
    \hspace{1cm}
    \subfloat[Single symbol area properties] {\label{subfig:singleNG3}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_area}}
+\caption{New Single Symbolizing options \nixcaption}
 \end{figure}
 
 \minisec{Categorized Renderer}
@@ -719,7 +718,7 @@ all currently selected attributes together, including the symbols that will
 be rendered.
 
 The example in figure \ref{fig:catsymNG} shows the category rendering dialog 
-used for the rivers layer of the qgis sample dataset.
+used for the rivers layer of the \qg sample dataset.
 
 \begin{figure}[ht]
    \centering
@@ -747,12 +746,12 @@ bottom part of the symbology tab lists the classes together with their ranges,
 labels and symbols that will be rendered.
 
 The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog 
-for the rivers layer of the qgis sample dataset.
+for the rivers layer of the \qg sample dataset.
 
 \begin{figure}[ht]
    \centering
-   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
    \includegraphics[clip=true, width=10cm]{graduatesymbol_ng_line}
+   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
 \end{figure}
 
 \minisec{Symbol Properties}
@@ -792,12 +791,12 @@ you to choose the layer type. The available options depend on the layer type
 
 \begin{figure}[ht]
 \centering
-\caption{Defining symbol properties \nixcaption}
    \subfloat[Line composed from three simple lines] {\label{subfig:symprops1}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties1}}
    \hspace{1cm}
    \subfloat[Symbol properties for point layer] {\label{subfig:symprops2}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties2}}
    \hspace{1cm}
    \subfloat[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
+\caption{Defining symbol properties \nixcaption}   
 \end{figure}
 
 \subsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
@@ -809,8 +808,8 @@ Manager} in the mai menu.
 
 \begin{figure}[ht]
    \centering
-   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}
    \includegraphics[clip=true, width=7cm]{stylemanager}
+   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}   
 \end{figure}
 
 \subsection{Labels Tab}
@@ -819,10 +818,10 @@ The \tab{Labels} tab allows you to enable labeling features and control a number
 options related to fonts, placement, style, alignment and buffering.
 
 We will illustrate this by labelling the lakes shapefile of the
-\filename{qgis\_example\_dataset}:
+\filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
-\item Load the Shapefile \filename{alaska.shp} and GML file \filename{lakes.gml} in QGIS.
+\item Load the Shapefile \filename{alaska.shp} and GML file \filename{lakes.gml} in \qg.
 \item Zoom in a bit to your favorite area with some lake.
 \item Make the \filename{lakes} layer active.
 \item Open the \dialog{Layer Properties} dialog.
@@ -831,10 +830,10 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Choose the field to label with. 
   We'll use \selectstring{Field containing label}{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
-  used each time QGIS encounters a lake with no value in the \guilabel{NAMES}
+  used each time \qg encounters a lake with no value in the \guilabel{NAMES}
 field.
 \item If have labels extending over several lines, check \checkbox{Multiline
-labels?}. QGIS will check for a true line return in your label field and
+labels?}. \qg will check for a true line return in your label field and
 insert the line breaks accordingly. A true line return is a \textbf{single}
 character \textbackslash n, (not two separate characters, like a backlash
 \textbackslash ~followed by the character n).
@@ -908,9 +907,9 @@ a GDAL version >= 1.6 installed.
 
 \begin{figure}[ht]
    \centering
-   \caption{Dialog to select an edit widget for an attribute column
-\nixcaption}\label{fig:editwidget}
    \includegraphics[clip=true, width=12cm]{editwidgetsdialog}
+   \caption{Dialog to select an edit widget for an attribute column
+\nixcaption}\label{fig:editwidget}   
 \end{figure}
 
 Within the \tab{Attributes} tab you also find an \texttt{edit widget} column.
@@ -966,7 +965,7 @@ way to get information about the layer, but is not yet editable.
 
 \subsection{Actions Tab}\index{Actions}\label{label_actions}
 
-QGIS provides the ability to perform an action based on the attributes of a
+\qg provides the ability to perform an action based on the attributes of a
 feature. This can be used to perform any number of actions, for example,
 running a program with arguments built from the attributes of a feature or
 passing parameters to a web reporting tool.
@@ -996,7 +995,7 @@ and \usertext{col10}) you should
 indicate so, by surrounding the field name (and the \% character) with square
 brackets (e.g., \usertext{[\%col10]}). This will prevent the \usertext{\%col10} field
 name being mistaken for the \usertext{\%col1} field name with a \usertext{0}
-on the end. The brackets will be removed by QGIS when it substitutes in the
+on the end. The brackets will be removed by \qg when it substitutes in the
 value of the field. If you want the substituted field to be surrounded by square
 brackets, use a second set like this: \usertext{[[\%col10]]}.
 
@@ -1048,7 +1047,7 @@ into a file using bash and the \usertext{echo} command (so it will only work
 \usertext{taxon\_name}, latitude \usertext{lat} and longitude
 \usertext{long}. I would like to be able to
 make a spatial selection of a localities and export these field values to a
-text file for the selected record (shown in yellow in the QGIS map area). Here is
+text file for the selected record (shown in yellow in the \qg map area). Here is
 the action to achieve this:
 
 \begin{verbatim}
@@ -1069,8 +1068,8 @@ As an exercise we create an action that does a Google search on the
 \filename{lakes} layer. First we need to determine the URL needed to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort we see that the format is: \url{http://google.com/search?q=qgis},
-where \usertext{qgis} is the search term. Armed with this information, we can
+little effort we see that the format is: \url{http://google.com/search?q=\qg},
+where \usertext{\qg} is the search term. Armed with this information, we can
 proceed:
 
 \begin{enumerate}
@@ -1107,9 +1106,9 @@ lake. In the result box you'll now see that our action is visible:
 
 \begin{figure}[ht]
    \centering
-   \caption{Select feature and choose action \nixcaption}\label{fig:identify_action}
    \includegraphics[clip=true, width=8cm]{action_identifyaction} 
- \end{figure}
+   \caption{Select feature and choose action \nixcaption}\label{fig:identify_action}
+\end{figure}
 
 When we click on the action, it brings up Firefox and navigates to the URL
 \url{http://www.google.com/search?q=Tustumena}. It is also possible to add further 
@@ -1141,20 +1140,20 @@ figure~\ref{fig:diagramtab}).
 
 \begin{figure}[ht]
    \centering
-   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}
    \includegraphics[clip=true, width=13cm]{diagram_tab}
+   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}
 \end{figure}
 
 The current implementation of diagrams provides support for piecharts, barcharts, 
 proportional SVG symbols, and for linear scaling of the diagram size according 
 to a classification attribute. We will demonstrate an example and overlay the 
 alaska boundary layer a barchart diagram showing some temperature data from 
-a climate vector layer. Both vector layers are part of the QGIS sample dataset (see
+a climate vector layer. Both vector layers are part of the \qg sample dataset (see
 Section~\ref{label_sampledata}.
 
 \begin{enumerate}
 \item First click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon,
-browse to the QGIS sample dataset folder and load the two vector shape layers
+browse to the \qg sample dataset folder and load the two vector shape layers
 \filename{alaska.shp} and \filename{climate.shp}.
 \item Double click the \filename{climate} layer in the map legend to open the
 \dialog{Layer Properties} dialog.
@@ -1167,7 +1166,7 @@ Diagram type.
 \item For linear scaling of the diagram size we define \filename{T\_F\_JUL}
 as classification attribute.
 \item Now click on \button{find maximum value}, choose a size value and unit
-and click \button{Apply} to display the diagram in the QGIS main window.
+and click \button{Apply} to display the diagram in the \qg main window.
 \item You can now adapt the chart size, or change the attribute colors double
 clicking on the color values in the attribute field.
 Figure~\ref{fig:climatediagram} gives an impression.
@@ -1176,18 +1175,18 @@ Figure~\ref{fig:climatediagram} gives an impression.
 
 \begin{figure}[ht]
    \centering
-   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}
    \includegraphics[clip=true, width=13cm]{climate_diagram}
+   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}
 \end{figure}
 
 \section{Editing}\index{editing}
 
-QGIS supports various capabilities for editing OGR, PostGIS and Spatialite 
+\qg supports various capabilities for editing OGR, PostGIS and Spatialite 
 vector layers. \textbf{Note} - the procedure for editing GRASS layers is 
 different - see Section \ref{grass_digitising} for details.
 
 \begin{Tip}\caption{\textsc{Concurrent Edits}}
-This version of QGIS does not track if somebody else is editing a
+This version of \qg does not track if somebody else is editing a
 feature at the same time as you. The last person to save their edits wins.
 \end{Tip}
 
@@ -1199,17 +1198,17 @@ the vector layer geometries.
 
 \minisec{Snapping tolerance}
 
-Snapping tolerance is the distance QGIS uses to \usertext{search} for the
+Snapping tolerance is the distance \qg uses to \usertext{search} for the
 closest vertex and/or segment you are trying to
 connect when you set a new vertex or move an existing vertex. If you aren't
-within the snap tolerance, QGIS will leave the vertex where you release the
+within the snap tolerance, \qg will leave the vertex where you release the
 mouse button, instead of snapping it to an existing vertex and/or segment. 
 The snapping tolerance setting affects all tools which work with tolerance. 
 
 \begin{enumerate}
 \item A general, project wide snapping tolerance can be defined choosing
 \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options}. 
-(On Mac: go to  \mainmenuopt{QGIS} > Preferences, on Linux: \mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options}.)
+(On Mac: go to  \mainmenuopt{\qg} > Preferences, on Linux: \mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options}.)
 In the \tab{Digitizing} tab you can select between to vertex, to segment or
 to vertex and segment as default snap mode. You can also define a default
 snapping tolerance and a search radius for vertex edits. The tolerance an be 
@@ -1229,19 +1228,19 @@ Note that this layer based snapping overrides the global snapping option set in 
 
 \begin{figure}[ht]
    \centering
-   \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}
    \includegraphics[clip=true, width=12cm]{editProjectSnapping} 
- \end{figure}
+   \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}
+\end{figure}
 
 \minisec{Search radius}
 
-Search radius is the distance QGIS uses to \usertext{search} for the closest
+Search radius is the distance \qg uses to \usertext{search} for the closest
 vertex you are trying to move when you click on the
-map. If you aren't within the search radius, QGIS won't find and select
+map. If you aren't within the search radius, \qg won't find and select
 any vertex for editing and it will pop up an annoying warning to that effect.
 Snap tolerance and search radius are set in map units or pixels, so you may find you
 need to experiment to get them set right. If you specify too big of a
-tolerance, QGIS may snap to the wrong vertex, especially if you are dealing
+tolerance, \qg may snap to the wrong vertex, especially if you are dealing
 with a large number of vertices in close proximity. Set search radius too
 small and it won't find anything to move.
 
@@ -1295,8 +1294,8 @@ In the Digitizing option group you can \checkbox{Enable topological editing} and
 \minisec{Enable topological editing}
 
 The option \checkbox{Enable topological editing} is for editing and maintaining 
-common boundaries in polygon mosaics. QGIS "detects" a shared boundary in 
-a polygon mosaic and you only have to move the vertex once and QGIS will take 
+common boundaries in polygon mosaics. \qg "detects" a shared boundary in 
+a polygon mosaic and you only have to move the vertex once and \qg will take 
 care about updating the other boundary.
 
 \minisec{Avoid intersections of new polygons}
@@ -1304,7 +1303,7 @@ care about updating the other boundary.
 The second topological option called \checkbox{Avoid intersections of new polygons} 
 avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons. 
 If you already have one polygon, it is possible with this option to digitise the second 
-one such that both intersect and qgis then cuts the second polygon to the common boundary. 
+one such that both intersect and \qg then cuts the second polygon to the common boundary. 
 The advantage is that users don't have to digitize all vertices of the common boundary.
 
 \subsection{Digitizing an existing layer}
@@ -1312,7 +1311,7 @@ The advantage is that users don't have to digitize all vertices of the common bo
 \index{digitizing!an existing layer}
 \label{sec:edit_existing_layer}
 
-By default, QGIS loads layers read-only: This is a safeguard
+By default, \qg loads layers read-only: This is a safeguard
 to avoid accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
 supports it, and the underlying data source is writable (i.e. its files are
@@ -1324,11 +1323,9 @@ digitizing toolbar, described in Section \ref{sec:advanced_edit}. You can
 select and unselect both under \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.
 Using the basic digitizing tools you can perform the following functions:
 
-\begin{table}[h]\index{vector layers!basic editing tools}
+\begin{table}[ht]\index{vector layers!basic editing tools}
 \centering
-\caption{Vector layer basic editing toolbar}\label{tab:vector_editing}\medskip
-\small
-\begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
+\begin{tabular}{|l|p{5.5cm}|l|p{5.5cm}|}
 \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} & \textbf{Purpose} \\
 \hline \includegraphics[width=0.7cm]{mActionToggleEditing}
    & Toggle editing
@@ -1352,6 +1349,7 @@ Using the basic digitizing tools you can perform the following functions:
    & Paste Features \\
 \hline
 \end{tabular}
+\caption{Vector layer basic editing toolbar}\label{tab:vector_editing}\medskip
 \end{table}
 
 All editing sessions start by choosing the
@@ -1378,7 +1376,7 @@ that your data source can accept all your changes.
 You can use the \toolbtntwo{mActionCapturePoint}{Capture point},
 \toolbtntwo{mActionCaptureLine}{Capture line} or
 \toolbtntwo{mActionCapturePolygon}{Capture polygon} icons on the toolbar to
-put the QGIS cursor into digitizing mode.  
+put the \qg cursor into digitizing mode.  
 
 For each feature, you first digitize the geometry, then enter its attributes.
 To digitize the geometry, left-click on the map area to create the first
@@ -1397,9 +1395,8 @@ for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
 
 \begin{figure}[ht]
    \centering
-   \caption{Enter Attribute Values Dialog after digitizing a new vector
-   feature \nixcaption}\label{fig:vector_digitising}
    \includegraphics[clip=true, width=8cm]{editDigitizing}
+   \caption{Enter Attribute Values Dialog after digitizing a new vector feature \nixcaption}\label{fig:vector_digitising}
  \end{figure}
 
 With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
@@ -1428,10 +1425,10 @@ feature and tool.
 Important is to set the property \mainmenuopt{Settings} >
 \dropmenuopttwo{mActionOptions}{Options} >
 \tab{Digitizing}>\selectnumber{Search Radius}{10} to a number greater than
-zero. Otherwise QGIS will not be able to tell which vertex is being edited.
+zero. Otherwise \qg will not be able to tell which vertex is being edited.
 
 \begin{Tip}\caption{\textsc{Vertex Markers}}
-The current version of QGIS supports three kinds of vertex-markers -
+The current version of \qg supports three kinds of vertex-markers -
 Semi transparent circle, Cross and None. To change the marker style, choose
 \dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu
 and click on the \tab{Digitizing} tab and select the appropriate entry.
@@ -1478,15 +1475,15 @@ the fly projection is also supported.
 \index{editing!pasting features}
 
 Selected features can be cut, copied and pasted between layers in the
-same QGIS project, as long as destination layers are set to 
+same \qg project, as long as destination layers are set to 
 \toolbtntwo{mActionToggleEditing}{Toggle editing} beforehand.
 
 Features can also be pasted to external applications as text:  That is,
 the features are represented in CSV format with the geometry data appearing 
 in the OGC Well-Known Text (WKT) format.
 
-However in this version of QGIS, text features from outside QGIS cannot 
-be pasted to a layer within QGIS. When would the copy and paste function 
+However in this version of \qg, text features from outside \qg cannot 
+be pasted to a layer within \qg. When would the copy and paste function 
 come in handy? Well, it turns out that you can edit more than one layer 
 at a time and copy/paste features between layers. Why would we want to do 
 this?  Say we need to do some work on a new layer but only need one or 
@@ -1508,7 +1505,7 @@ As an example we are copying some lakes to a new layer:
 \end{enumerate}
 
 What happens if the source and target layers have
-different schemas (field names and types are not the same)? QGIS populates
+different schemas (field names and types are not the same)? \qg populates
 what matches and ignores the rest. If you don't care about the attributes
 being copied to the target layer, it doesn't matter how you design the
 fields and data types. If you want to make sure everything - feature and its
@@ -1519,7 +1516,7 @@ If your source and destination layers use the
 same projection, then the pasted features will have
 geometry identical to the source layer.
 However if the destination layer is a different projection
-then QGIS cannot guarantee the geometry is identical.
+then \qg cannot guarantee the geometry is identical.
 This is simply because there are small rounding-off errors
 involved when converting between projections.
 \end{Tip}
@@ -1541,28 +1538,28 @@ meaning we can operate on more than one at a time.
 
 \begin{Tip}\caption{\textsc{Feature Deletion Support}}
 When editing ESRI shapefiles, the deletion
-of features only works if QGIS is linked to a GDAL version 1.3.2 or greater. 
-The OS X and Windows versions of QGIS available from the download site are built 
+of features only works if \qg is linked to a GDAL version 1.3.2 or greater. 
+The OS X and Windows versions of \qg available from the download site are built 
 using GDAL 1.3.2 or higher.
 \end{Tip}
 
 \minisec{Saving Edited Layers}
 \index{editing!saving changes}
 
-When a layer is in editing mode, any changes remain in the memory of QGIS.
+When a layer is in editing mode, any changes remain in the memory of \qg.
 Therefore they are not committed/saved immediately to the data source or disk.
-When you turn editing mode off (or quit QGIS for that matter), 
+When you turn editing mode off (or quit \qg for that matter), 
 you are then asked if you want to save your
 changes or discard them.
 
 If the changes cannot be saved (e.g. disk full, or the attributes have
-values that are out of range), the QGIS in-memory state is preserved.  This
+values that are out of range), the \qg in-memory state is preserved.  This
 allows you to adjust your edits and try again.
 
 \begin{Tip}\caption{\textsc{Data Integrity}}
 It is always a good idea to back up your data source before you
 start
-editing. While the authors of QGIS have made every effort to preserve the
+editing. While the authors of \qg have made every effort to preserve the
 integrity of your data, we offer no warranty in this regard.
 \end{Tip}
 
@@ -1573,7 +1570,6 @@ integrity of your data, we offer no warranty in this regard.
 
 \begin{table}[h]\index{vector layers!advanced editing tools}
 \centering
-\caption{Vector layer advanced editing toolbar}\label{tab:advanced_editing}\medskip
 \small
 \begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
 \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} & \textbf{Purpose} \\
@@ -1603,6 +1599,7 @@ integrity of your data, we offer no warranty in this regard.
    & \\
 \hline
 \end{tabular}
+\caption{Vector layer advanced editing toolbar}\label{tab:advanced_editing}
 \end{table}
 
 \minisec{Undo and Redo}
@@ -1717,8 +1714,8 @@ Otherwise the tool is inactive.
 
 \begin{figure}[ht]
    \centering
-   \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}
    \includegraphics[clip=true, width=6cm]{rotatepointsymbol}
+   \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}
 \end{figure}
 
 To change the rotation, select a point feature in the map canvas and rotate 
@@ -1739,13 +1736,13 @@ line or polygon).
 
 \begin{figure}[ht]
    \centering
-   \caption{Creating a New Vector Dialog \nixcaption}\label{fig:newvectorlayer}
    \includegraphics[clip=true, width=10cm]{editNewVector}
+   \caption{Creating a New Vector Dialog \nixcaption}\label{fig:newvectorlayer}
 \end{figure}
 
-Note that QGIS does not yet support creation of 2.5D
+Note that \qg does not yet support creation of 2.5D
 features (i.e. features with X,Y,Z coordinates) or measure features. At this
-time, only shapefiles can be created. In a future version of QGIS, creation of
+time, only shapefiles can be created. In a future version of \qg, creation of
 any OGR or PostgreSQL layer type will be supported. 
 
 Creation of GRASS-layers is supported within the GRASS-plugin. Please refer to section
@@ -1758,7 +1755,7 @@ attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
 \selectstring{Type}{string} attributes are supported. Additionally and
 according to the attribute type you can also define the width and precision
 of the new attribute column. Once you are happy with the attributes, click
-\button{OK} and provide a name for the shapefile. QGIS will automatically add
+\button{OK} and provide a name for the shapefile. \qg will automatically add
 a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
@@ -1779,8 +1776,8 @@ every feature in the layer (figure \ref{fig:attributetable}).
 
 \begin{figure}[ht]
    \centering
-   \caption{Attribute Table for Alaska layer \nixcaption}\label{fig:attributetable}
    \includegraphics[clip=true, width=12cm]{vectorAttributeTable}
+   \caption{Attribute Table for Alaska layer \nixcaption}\label{fig:attributetable}
 \end{figure}
 
 \minisec{Selecting features in an attribute table}
@@ -1828,7 +1825,7 @@ of attribute table and to enable functionalities described below.
 
 \begin{Tip}\caption{\textsc{Manipulating Attribute data}}
 Currently only PostGIS layers are supported for adding or dropping
-attribute columns within this dialog. In future versions of QGIS, other
+attribute columns within this dialog. In future versions of \qg, other
 datasources will be supported, because this feature was recently implemented
 in GDAL/OGR > 1.6.0
 \end{Tip}
@@ -1850,9 +1847,9 @@ WHERE clause easily in the text field SQL where clause window.
 
 \begin{figure}[ht]
   \centering
-    \caption{Query Builder \nixcaption}\label{fig:query_builder}
     \includegraphics[clip=true, width=11.5cm]{queryBuilder}
-   \end{figure}
+    \caption{Query Builder \nixcaption}\label{fig:query_builder}
+\end{figure}
 
 The \textbf{Fields list} contains all attributes of the attribute table to be 
 searched. To add an attribute to the SQL where clause field, double click its 
@@ -1890,7 +1887,7 @@ vector \dialog{Layer Properties} dialog by double-clicking on the layer in the l
 
 \minisec{Select by query}\label{sec:select_by_query}
 
-With QGIS it is possible also to select features using a similar query builder 
+With \qg it is possible also to select features using a similar query builder 
 interface to that used in \ref{sec:query_builder}. In the above section 
 the purpose of the query builder is to only show features meeting the 
 filter criteria as a 'virtual layer' / subset. The purpose of the select by 
@@ -1927,9 +1924,9 @@ create a new attribute field, where the results of the calculation will be added
 
 \begin{figure}[ht]
   \centering
-    \caption{Field Calculator \nixcaption}\label{fig:field_calculator}
     \includegraphics[clip=true, width=11.5cm]{fieldcalculator}
-  \end{figure}
+    \caption{Field Calculator \nixcaption}\label{fig:field_calculator}
+\end{figure}
 
 If you choose to add a new field, you need to enter a field name, a field type 
 (integer, real or string), the total field width, and the field precision. 
@@ -1959,10 +1956,10 @@ extract geometric information ( length and area ) are available and will be
 extended in future versions.
 
 A short example illustrates how the field calculator works. We want to calculate 
-the length of the 'railroads' layer from the \filename{qgis\_example\_dataset}:
+the length of the 'railroads' layer from the \filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
-\item Load the Shapefile \filename{railroads.shp} in QGIS and open 
+\item Load the Shapefile \filename{railroads.shp} in \qg and open 
 the \dialog{Attribute Table} dialog. 
 \item Click on \toolbtntwo{mActionToggleEditing}{Toggle editing mode} and 
 open the \toolbtntwo{mActionCalculateField}{Field Calculator} dialog.
@@ -1973,5 +1970,3 @@ output field width 10 and a precision of 3.
 \item Now click on Operator 'length' to add it as \$length into the 
 field calculator expression box and click \button{Ok}.
 \end{enumerate}
-
-\index{vector layers|)}
