@@ -21,9 +21,9 @@ status in a QGIS project file.
 
 \begin{figure}[ht]
 \centering
-  \caption{Arrange raster and vector layers for QGIS project file \nixcaption}
-  \label{fig:mapserver_export_qgs}
   \includegraphics[clip=true, width=12cm]{mapserver_export_qgis}
+   \caption{Arrange raster and vector layers for QGIS project file \nixcaption}
+  \label{fig:mapserver_export_qgs}
 \end{figure}
 
 In this example, we demonstrate the four steps required to create a simple 
@@ -50,9 +50,9 @@ To use it from within QGIS, you need to enable the MapServer Export Plugin first
 
 \begin{figure}[ht]
 \centering
+  \includegraphics[clip=true, width=9cm]{mapserver_export_dialog}
   \caption{Export to MapServer Dialog \nixcaption}
   \label{fig:mapserver_export_dialog}
-  \includegraphics[clip=true, width=9cm]{mapserver_export_dialog}
 \end{figure}
 
 \begin{description}
@@ -125,7 +125,7 @@ This creates a PNG with all the layers included in the QGIS project file.
 In addition, the extent of the PNG will be the same as when we saved the 
 project. As you can see in Figure~\ref{fig:mapserver_export_test}, all 
 information except the airport symbols are included.
-\FloatBarrier
+
 \begin{figure}[ht]
 \centering
   \includegraphics[clip=true, width=10cm]{mapserver_export_test}
@@ -139,3 +139,5 @@ custom interface, you may have a bit of manual work to do. To see how easy
 it is to go from QGIS to serving maps on the web, take a look at
 Christopher Schmidt's 5 minute flash video. He used an older version of QGIS (version 0.8), but the demo applies equally well to newer versions.
 \footnote{\url{http://openlayers.org/presentations/mappingyourdata/}}
+
+\FloatBarrier

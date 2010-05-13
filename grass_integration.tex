@@ -128,7 +128,7 @@ download and install the dataset on your computer \ref{label_sampledata}).
 
 \begin{figure}[ht]
 \centering
-\includegraphics[clip=true, width=10cm]{create_grass_location}
+\includegraphics[clip=true, width=8cm]{create_grass_location}
 \caption{Creating a new \grass LOCATION or a new MAPSET in \qg \nixcaption}
 \label{fig:create_grass_location}
 \end{figure}
@@ -355,8 +355,8 @@ explains the available functionalities.
 
 \begin{figure}[h]
    \centering
-   \caption{GRASS Digitizing Toolbar \nixcaption}\label{fig:grass_digitizing_toolbar} 
    \includegraphics[clip=true,width=12cm]{grass_digitizing_toolbar}
+   \caption{GRASS Digitizing Toolbar \nixcaption}\label{fig:grass_digitizing_toolbar} 
 \end{figure}
 
 {\renewcommand{\arraystretch}{2}
@@ -402,8 +402,8 @@ values will be assigned to a new geometry element.
 
 \begin{figure}[h]
  \centering
+  \includegraphics[clip=true,width=8cm]{grass_digitizing_category} 
   \caption{GRASS Digitizing Category Tab \nixcaption}\label{fig:grass_digitizing_category}
-  \includegraphics[clip=true,width=8cm]{grass_digitizing_category}
  \end{figure}
 
 \begin{itemize}[label=--]
@@ -441,9 +441,9 @@ default is set to 10 pixels.
 
 \begin{figure}[h]
  \centering
- \caption{GRASS Digitizing Settings Tab \nixcaption}\label{fig:grass_digitizing_settings}
  \includegraphics[clip=true,width=8cm]{grass_digitizing_settings}
- \end{figure}
+ \caption{GRASS Digitizing Settings Tab \nixcaption}\label{fig:grass_digitizing_settings}
+\end{figure}
 
 \minisec{Symbology Tab}\index{GRASS!symbology settings}
 
@@ -453,9 +453,9 @@ settings for various geometry types and their topological status (e.g. closed
 
 \begin{figure}[h]
  \centering
- \caption{GRASS Digitizing Symbolog Tab \nixcaption}\label{fig:grass_digitizing_symbology}
  \includegraphics[clip=true,width=8cm]{grass_digitizing_symbology}
- \end{figure}
+ \caption{GRASS Digitizing Symbolog Tab \nixcaption}\label{fig:grass_digitizing_symbology}
+\end{figure}
 
 \minisec{Table Tab} \index{GRASS!table editing}
 
@@ -466,8 +466,8 @@ or create a new database table for a new GRASS vector layer (see Section
 
 \begin{figure}[h]
  \centering
- \caption{GRASS Digitizing Table Tab \nixcaption}\label{fig:grass_digitizing_table}
  \includegraphics[clip=true,width=10cm]{grass_digitizing_table}
+ \caption{GRASS Digitizing Table Tab \nixcaption}\label{fig:grass_digitizing_table}
  \end{figure}
 
 \begin{Tip}\caption{\textsc{GRASS Edit Permissions}}\index{GRASS!edit
@@ -521,7 +521,8 @@ to the currently selected \filename{LOCATION} and \filename{MAPSET}.
    \subfloat[Modules Tree] {\label{subfig:grass_module_tree}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_moduletree}}
    \hspace{0.5cm}
    \subfloat[Searchable Modules List] {\label{subfig:grass_module_list}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_modulelist}}   
-\caption{GRASS Toolbox and searchable Modules List \nixcaption}\label{fig:grass_modules}\end{figure}
+\caption{GRASS Toolbox and searchable Modules List \nixcaption}\label{fig:grass_modules}
+\end{figure}
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more 
 than 300) GRASS modules in command line modus. To offer a more user
@@ -544,10 +545,13 @@ for the GRASS module \filename{v.buffer}.
 
 \begin{figure}[h]
 \centering
+   \subfloat[Module Options] {\label{subfig:grass_module_option}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}
+   \hspace{1cm}
+   \subfloat[Modules Output] {\label{subfig:grass_module_output}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}
+   \hspace{1cm}
+   \subfloat[Module Manual] {\label{subfig:grass_module_manual}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}
 \caption{GRASS Toolbox Module Dialogs \nixcaption}\label{fig:grass_module_dialog}
-   \subfloat[Module Options] {\label{subfig:grass_module_option}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}\hspace{1cm}
-   \subfloat[Modules Output] {\label{subfig:grass_module_output}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}\hspace{1cm}
-   \subfloat[Module Manual] {\label{subfig:grass_module_manual}\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}\end{figure}
+\end{figure}
 
 \minisec{Options}
 
@@ -619,7 +623,8 @@ Then click \button{View Output} and \button{close}.
    \subfloat[r.contour Options] {\label{subfig:grass_toolbox_rcontour}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour}}
     \hspace{0.5cm}
    \subfloat[r.contour Output] {\label{subfig:grass_toolbox_rcontour2}\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour2}}
-   \caption{\grass Toolbox r.contour module \nixcaption}\label{fig:grass_toolbox_rcontour}\end{figure}
+   \caption{\grass Toolbox r.contour module \nixcaption}\label{fig:grass_toolbox_rcontour}
+\end{figure}
 
 Since this is a large region, it will take a while to display. After it
 finishes rendering, you can open the layer properties window to change the
@@ -669,9 +674,9 @@ while staying faithful to the original overall shape.
 
 \begin{figure}[h]
  \centering
- \caption{GRASS module v.generalize to smooth a vector map \nixcaption}\label{fig:grass_toolbox_vgeneralize}
  \includegraphics[clip=true, width=14cm]{grass_toolbox_vgeneralize}
- \end{figure}
+ \caption{GRASS module v.generalize to smooth a vector map \nixcaption}\label{fig:grass_toolbox_vgeneralize}
+\end{figure}
 
 \begin{Tip}\caption{\textsc{Other uses for r.contour}}\index{GRASS!toolbox}
 The procedure described above can be used in other equivalent
@@ -728,9 +733,9 @@ above.
 
 \begin{figure}[ht]
  \centering
- \caption{The GRASS shell, r.shaded.relief module \nixcaption}\label{fig:grass_toolbox_shell}
  \includegraphics[clip=true, width=12cm]{grass_toolbox_shell}
- \end{figure}
+ \caption{The GRASS shell, r.shaded.relief module \nixcaption}\label{fig:grass_toolbox_shell}
+\end{figure}
 
 The module \classname{r.shaded.relief} can take a parameter \usertext{zmult}
 which multiplies the elevation values relative to the X-Y coordinate units so
@@ -755,10 +760,10 @@ compared to the first shaded relief map.
 
 \begin{figure}[ht]
  \centering
+ \includegraphics[clip=true, width=12cm]{grass_toolbox_shadedrelief}
  \caption{Displaying shaded relief created with the GRASS module
 r.shaded.relief \nixcaption}\label{fig:grass_toolbox_shadedrelief}
- \includegraphics[clip=true, width=12cm]{grass_toolbox_shadedrelief}
- \end{figure}
+\end{figure}
 
 \minisec{Raster statistics in a vector map}
 
@@ -809,9 +814,9 @@ command history.
 
 \begin{figure}[h]
  \centering
- \caption{GRASS LOCATION browser \nixcaption}\label{fig:grass_mapset_browser}
  \includegraphics[clip=true,width=10cm]{grass_mapset_browser}
- \end{figure}
+ \caption{GRASS LOCATION browser \nixcaption}\label{fig:grass_mapset_browser}
+\end{figure}
 
 The toolbar inside the \tab{Browser} tab offers following tools to manage 
 the selected \filename{LOCATION}:
@@ -854,3 +859,5 @@ The parser reads this definition and creates a new tab inside the toolbox
 when you select the module. A more detailed description for adding new 
 modules, changing the modules group, etc. can be found on the QGIS wiki at \\
 \url{http://wiki.qgis.org/qgiswiki/Adding\_New\_Tools\_to\_the\_GRASS\_Toolbox}.
+
+\FloatBarrier
