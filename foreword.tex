@@ -75,14 +75,14 @@ GUI. The many helpful tools available in the GUI include:
 
 \begin{itemize}[label=--]
 \item on the fly projection
-\item map composer
+\item map composers
 \item overview panel
 \item spatial bookmarks
 \item identify/select features
 \item edit/view/search attributes
 \item feature labeling
 \item change vector and raster symbology
-\item add a graticule layer now via fTools plugin
+\item add a graticule layer - now via fTools plugin
 \item decorate your map with a north arrow scale bar and copyright label
 \item save and restore projects
 \end{itemize}
@@ -98,7 +98,8 @@ formats. QGIS offers the following:
 \item create and edit shapefiles and GRASS vector layers
 \item geocode images with the Georeferencer plugin
 \item GPS tools to import and export GPX format, and convert other GPS
-formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added to list of GPS devices)
+formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added
+to list of GPS devices)
 \item visualize and edit OpenStreetMap data
 \item create PostGIS layers from shapefiles with the SPIT plugin 
 \item improved handling of PostGIS tables
@@ -110,16 +111,16 @@ formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been ad
 \minisec{Analyse data} 
 
 You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
-supported formats using the fTools python plugin. QGIS currently offers
+supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
 tools. You can also use the integrated GRASS tools, which 
 include the complete GRASS functionality of more than 300 modules (See
 Section \ref{sec:grass}).
 
-\minisec{Publish maps on the internet}
+\minisec{Publish maps on the Internet}
 
 QGIS can be used to export data to a mapfile and to publish them on the
-internet using a webserver with UMN MapServer installed. QGIS can also
+Internet using a webserver with UMN MapServer installed. QGIS can also
 be used as a WMS or WFS client, and as WMS server. 
 
 \minisec{Extend QGIS functionality through plugins} 
@@ -168,15 +169,22 @@ can be easily installed using the Python Plugin Installer (See Section
 
 These are the most relevant additions and improvements:
 \begin{itemize}[label=--]
- \item Advanced symbology engine (was Symbology-NG branch) in addition to old engine
- \item Labeling plugin (part of new symbology engine)
- \item User interface cleanups to copyright, delim text and n-arrow plugins, and map composer interface
- \item 'Tools' menu renamed to 'Vector' 
- \item Added 'Configure shortcuts' dialog 
- \item Added 'Export to PDF' feature to map composer menu 
- \item Added support to user-specific SVG path in the map composer 
- \item Added 'newgis' icon theme, a revision of the original 'gis' theme
- \item Possibility to add/remove attributes also in attribute table. Small modification to attribute table such that adding / removing columns is visible
- \item Field Calculator
- \item New analysis tools: Zonal statistics, TIN interpolation and Overlay analyzer
+ \item TODO(anne): rearrange the list on ManualTasks wikipage!
+ \item added context help to dialogs
+ \item show classification attribute above the classes in legend %(new symbology, enable via Options..)
+ \item measure angle tool
+% composer attr tables ?
+ \item GPS tracker widget
+% composer table select display attribs (r12709) ?
+% Added vertical line to simple marker symbol layer ?
+% Added rotation for ellipse, cross and line markers ?
+ \item new Oracle raster connection dialog 
+ \item added scroll area, 'select all' and 'clear' buttons to attribute dialog 
+ \item show labels from labeling plugin also in map composer (though not scaled correctly)
+ \item update georeferencer from gislab SVN, which adds GCP table with errors, new user interface
+ \item Georeferencer: support custom projection strings.
+% Georeferencer: Implement resampling with user-specified target resolution
+ \item BBOX option for WFS 
+ \item Join attributes tool now supports both dbf and csv files.
+ \item show feature count in attribute table title
 \end{itemize}
