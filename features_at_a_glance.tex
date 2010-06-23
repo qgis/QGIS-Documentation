@@ -816,9 +816,10 @@ incorrect. To fix this you need to set an appropriate map coordinate system
 snapping settings from the digitizing module. This is useful, if you want to 
 measure along lines or areas in vector layers.  
 
-\subsection{Measure length and areas}
+\subsection{Measure length, areas and angles}
 \index{measure:line length}
 \index{measure:areas}
+\index{measure:angles}
 
 \includegraphics[width=0.7cm]{mActionMeasure} 
 QGIS is also able to measure real distances between given 
@@ -830,8 +831,12 @@ you can also define a rubberband color and your preferred measurement units
 segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
 \includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
 In the measure window the accumulated area-size appears  \\
-In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. 
-
+In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. \\
+\includegraphics[width=0.7cm]{mActionMeasureAngle}
+You can also measure angles, selecting Measure Angle tool. The cursor becomes 
+cross-shaped. Click to draw the first segment of the angle you wish to
+measure, then move the the cursor to draw the desired angle. The measure
+is displayed in a popup dialog. 
 \begin{figure}[ht]
 \centering
    \subfloat[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}
