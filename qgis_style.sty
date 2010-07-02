@@ -359,6 +359,15 @@
 \end{tikzpicture}
 }
 
+% dropmenuoptone
+%%% 	 sous menu sans icône sans 2ème choix
+%%% 	usage: \dropmenuoptone{Toolbar Visibility}
+\newcommand{\dropmenuoptone}[1]{%
+\begin{tikzpicture}[line width=0.5pt,baseline=-3pt] 
+\draw (0,0) node[draw=black,rectangle,top  color=gray!60,bottom  color=white,drop  shadow]{\guilabel{#1}};
+\end{tikzpicture}
+}
+
 % dropmenuopttwo
 %%% 	usage: \dropmenuopt{Toolbar Visibility}
 % dropmenuopttwo: for dropdown menu items with icons
