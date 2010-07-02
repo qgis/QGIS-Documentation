@@ -317,6 +317,9 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionMeasureArea}{Measure Area}
 	\> \keystroke{J}
 	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionMeasureAngle}{Measure Angle}
+	\>
+	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionOpenTable}{Zoom Full}
 	\> \keystroke{F}
 	\> \> \dropmenucheck{Map Navigation} \\
@@ -349,56 +352,63 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionDraw}{Refresh}
 	\> \keystroke{Ctrl+R}
 	\> \> \dropmenucheck{Map Navigation} \\
+\dropmenuopt{Tile scale slider}
+	\>
+	\> \>  \\
+\dropmenuopt{Live GPS tracking}
+	\>
+	\> \>  \\
 \end{tabbing}
 
 \item \mainmenuopt{Layer}
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionNewVectorLayer}{New Vector Layer}
-	\> \keystroke{Ctrl+Shift+N}
-	\>          	
-	see Section \ref{sec:create shape}
+\dropmenuopt{New}
+	\>
+	\> see Section \ref{sec:create shape}
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}       
 	\> \keystroke{Ctrl+Shift+V}
 	\>          	
 	see Section \ref{label_workingvector}
-	\> \dropmenucheck{File} \\
+	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}       
 	\> \keystroke{Ctrl+Shift+R}
 	\>          	
 	see Section \ref{label_raster}
-	\> \dropmenucheck{File} \\
+	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}      
 	\> \keystroke{Ctrl+Shift+D}
 	\>          	
 	see Section \ref{label_postgis}
-        \> \dropmenucheck{File} \\
+        \> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer}
         \> \keystroke{Ctrl+Shift+L}
         \>
         see Section \ref{label_spatialite}
-	\> \dropmenucheck{File} \\
+	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}          
 	\> \keystroke{Ctrl+Shift+W}
 	\>          	
 	see Section \ref{sec:ogc-wms}
-	\> \dropmenucheck{File} \\
+	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 	\> \>
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionToggleEditing}{Toggle editing}
 	\> \>
 	\> \dropmenucheck{Digitizing} \\
-\dropmenuopt{Save As Shapefile}
+\dropmenuopt{Save as...}
 	\\
-\dropmenuopt{Save Selection As Shapefile}
+\dropmenuopt{Save selection as vector file...}
 	\\
 \dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
 	\> \keystroke{Ctrl+D}
 	\>          	
 	\> \dropmenucheck{Properties} \\
 \dropmenuopt{Properties}
+	\\
+\dropmenuopt{Query...}
 	\\
 \dropmenuopttwo{mActionInOverview}{Add to Overview}
 	\> \keystroke{Ctrl+Shift+O}
@@ -420,6 +430,10 @@ menu depending on the layer type (point, line or polygon). \\
 	\> \keystroke{Ctrl+Shift+S}
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
+\dropmenuopttwo{labeling}{Labeling}
+	\>          	
+	\>
+	\\
 \end{tabbing}
 
 \item \mainmenuopt{Settings}
