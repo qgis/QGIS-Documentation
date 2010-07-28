@@ -1726,18 +1726,18 @@ left mouse button again, the value will be updated in the attribute table.
 \textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done 
 in 15 degree steps.
 
-\subsection{Creating a New Layer}\label{sec:create shape}\index{editing!creating a new layer}
+\subsection{Creating a new Shape layer}\label{sec:create shape}\index{editing!creating a new shape layer}
 
-To create a new layer for editing, choose \toolbtntwo{mActionNewVectorLayer}{New Vector Layer} from the
-\mainmenuopt{Layer} menu. 
-The \dialog{New Vector Layer} dialog will be displayed as
-shown in Figure \ref{fig:newvectorlayer}. Choose the type of layer (point,
-line or polygon).
+To create a new Shape layer for editing, choose \button{new} > 
+\toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the 
+\mainmenuopt{Layer} menu. The \dialog{New Vector Layer} dialog will be 
+displayed as shown in Figure \ref{fig:newvectorlayer}. Choose the type of 
+layer (point, line or polygon).
 
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=8cm]{editNewVector}
-   \caption{Creating a New Vector Dialog \nixcaption}\label{fig:newvectorlayer}
+   \caption{Creating a new Shapefile layer Dialog \nixcaption}\label{fig:newvectorlayer}
 \end{figure}
 
 Note that \qg does not yet support creation of 2.5D
@@ -1745,11 +1745,7 @@ features (i.e. features with X,Y,Z coordinates) or measure features. At this
 time, only shapefiles can be created. In a future version of \qg, creation of
 any OGR or PostgreSQL layer type will be supported. 
 
-Creation of GRASS-layers is supported within the GRASS-plugin. Please refer to section
-\ref{sec:creating_new_grass_vectors} for more information on creating GRASS vector 
-layers.
-
-To complete the creation of the new layer, add the desired attributes by
+To complete the creation of the new Shapefile layer, add the desired attributes by
 clicking on the \button{Add} button and specifying a name and type for the
 attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
 \selectstring{Type}{string} attributes are supported. Additionally and
@@ -1759,6 +1755,36 @@ of the new attribute column. Once you are happy with the attributes, click
 a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
+
+\subsection{Creating a new SpatiaLite layer}\label{sec:create spatialite}\index{editing!creating a new spatialite layer}
+
+To create a new SpatiaLite layer for editing, choose \button{new} >
+\toolbtntwo{mActionNewVectorLayer}{New SpatiaLite Layer} from the
+\mainmenuopt{Layer} menu. The \dialog{New SpatiaLite Layer} dialog will be
+displayed as shown in Figure \ref{fig:newspatialitelayer}.
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=8cm]{editNewSpatialite}
+   \caption{Creating a New Spatialite layer Dialog \nixcaption}\label{fig:newspatialitelayer}
+\end{figure}
+
+First step is to select an existing Spatialite database or to create a new 
+Spatialite database. This can be done with the browse \button{...} button 
+to the right of the database field. Then add a name for the new layer and 
+define the layer type and the EPSG SRID. If desired you can select to 
+\checkbox{create an autoincrementing primary key}. 
+
+To define an attribute table for the new Spatialite layer, add the names 
+of the attribute columns you want to create with the according column type 
+and click on the \button{Add to attribute list} button. Once you are happy 
+with the attributes, click \button{OK}. \qg will automatically add the new 
+layer to the legend and you can edit it in the same way as described in 
+Section \ref{sec:edit_existing_layer} above.
+
+\textbf{Note:} Creation of a new GRASS layer is supported within the GRASS-plugin. 
+Please refer to section \ref{sec:creating_new_grass_vectors} for more 
+information on creating GRASS vector layers.
 
 \subsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
 
@@ -1772,7 +1798,8 @@ and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 from the menu. It is also possible to rightlick on the layer and 
 choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the 
 dropdown menu. This will open a new window which displays the attributes for 
-every feature in the layer (figure \ref{fig:attributetable}).
+every feature in the layer (figure \ref{fig:attributetable}). The number of features 
+are shown in the attribute table title.
 
 \begin{figure}[ht]
    \centering
