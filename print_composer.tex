@@ -163,6 +163,10 @@ position and again to unlock the element. You can lock the map element also
 activating the \checkbox{Lock layers for map item} checkbox in the Map dialog
 of the Map Item tab. 
 
+\textbf{Note:} QGIS \CURRENT is now able to show labels from the new labeling 
+plugin also in the map composer, but it is not yet scaled correctly. So it 
+might be necessary to switch back to the standard labeling in some cases. 
+
 \subsection{Map item tab - Map and Extents dialog}
 
 \begin{figure}[ht]
@@ -377,7 +381,9 @@ functionalities (see Figure \ref{fig:legendoptions}b)):
 \item The legend items window lists all legend items and allows to change
 item order, edit layer names, remove and restore items of the list. After
 changing the symbology in the QGIS main window you can click on update to
-adapt the changes in the legend element of the print composer.
+adapt the changes in the legend element of the print composer. The item oder 
+can be changed using the Up and Down buttons or with Drag and Drop 
+functionality. 
 \end{itemize}
 
 \minisec{Item options dialog}
@@ -475,14 +481,13 @@ computer.
 
 \section{Add attribute table values}
 
-It is possible to add parts of an attribute table of a vector layer to the 
-print composer canvas.
+It is possible to add parts of a vector attribute table to the print composer canvas.
 
 \begin{figure}[ht]
 \centering
-\subfloat[table dialog]{\label{subfig:tabledialog1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_attribute1}}
+\subfloat[table dialog]{\label{subfig:tabledialog1}\includegraphics[clip=true, width=0.38\textwidth]{print_composer_attribute1}}
 \hspace{1cm}
-\subfloat[general options dialog]{\label{subfig:tabledialog2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_attribute2}}
+\subfloat[general options dialog]{\label{subfig:tabledialog2}\includegraphics[clip=true, width=0.38\textwidth]{print_composer_attribute2}}
 \caption{Print composer attribute table item tab - Table and General options dialog \nixcaption}\label{fig:attrcomp}
 \end{figure}
 
@@ -492,7 +497,11 @@ The \textbf{Table} dialog of the attribute table item tab provides following
 functionalities (see Figure \ref{fig:attrcomp}a)):
 
 \begin{itemize}[label=--]
-\item The \textbf{Table} dialog allows to draw an ellipse, rectangle, or
+\item The \textbf{Table} dialog allows to select the vector layer and columns of 
+the attribute table. You can define the maximum number of rows to be displayed 
+and if attributes are only shown for visible features of the current composer 
+canvas. Additionally you can define the grid characteristics of the table and 
+the header and content font. 
 \end{itemize}
 
 \minisec{General options dialog}
