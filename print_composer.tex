@@ -30,28 +30,24 @@ table~\ref{tab:printcomposer_tools}:
  & Export to an image format &
  \includegraphics[width=0.7cm]{mActionSaveAsPDF} & Export as PDF \\
  \hline \includegraphics[width=0.7cm]{mActionSaveAsSVG} & Export print
- composition to SVG & & \\
- \hline \includegraphics[width=0.7cm]{mActionFilePrint} & Print or 
- export as Postscript &
- \includegraphics[width=0.7cm]{mActionZoomFullExtent} & Zoom to
- full extend \\
- \hline \includegraphics[width=0.7cm]{mActionZoomIn} & Zoom in &
- \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out \\
- \hline \includegraphics[width=0.7cm]{mActionDraw} & Refresh 
- view &
- \includegraphics[width=0.7cm]{mActionAddMap} & Add 
- new map from QGIS map canvas \\
- \hline \includegraphics[width=0.7cm]{mActionSaveMapAsImage} & Add Image to 
- print composition &
- \includegraphics[width=0.7cm]{mActionLabel} & Add label to print composition \\
- \hline \includegraphics[width=0.7cm]{mActionAddLegend} & Add new legend to 
- print composition & 
- \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar to print
- composition\\
- \hline \includegraphics[width=0.7cm]{mActionAddBasicShape} & Add basic shape to
- print composition &
- \includegraphics[width=0.7cm]{mActionAddArrow} & Add arrow to print
- composition\\
+ composition to SVG & \includegraphics[width=0.7cm]{mActionFilePrint} 
+ & Print or export as Postscript \\
+ \hline \includegraphics[width=0.7cm]{mActionZoomFullExtent} & Zoom to
+ full extend & \includegraphics[width=0.7cm]{mActionZoomIn} & Zoom in \\
+ \hline \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out & 
+ \includegraphics[width=0.7cm]{mActionDraw} & Refresh view \\
+ \hline \includegraphics[width=0.7cm]{mActionAddMap} & Add new map from 
+ QGIS map canvas & \includegraphics[width=0.7cm]{mActionSaveMapAsImage} 
+ & Add Image to print composition \\
+ \hline \includegraphics[width=0.7cm]{mActionLabel} & Add label to print 
+ composition & \includegraphics[width=0.7cm]{mActionAddLegend} & Add new 
+ legend to print composition \\
+ \hline \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar 
+ to print composition & \includegraphics[width=0.7cm]{mActionAddBasicShape} 
+ & Add basic shape to print composition \\
+ \hline \includegraphics[width=0.7cm]{mActionAddArrow} & Add arrow to print 
+ composition & \includegraphics[width=0.7cm]{mActionOpenTable} & Add attribute 
+ table to print composition \\
  \hline \includegraphics[width=0.7cm]{mActionSelectPan} & Select/Move item in 
  print composition &
  \includegraphics[width=0.7cm]{mActionMoveItemContent} & Move content within
@@ -475,6 +471,42 @@ canvas. You can define color, outline and arrow width and it is possible to
 use a default marker and no marker and a SVG marker. For the SVG marker you
 can additionally add a SVG start and end marker from a directory on your
 computer.
+\end{itemize}
+
+\section{Add attribute table values}
+
+It is possible to add parts of an attribute table of a vector layer to the 
+print composer canvas.
+
+\begin{figure}[ht]
+\centering
+\subfloat[table dialog]{\label{subfig:tabledialog1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_attribute1}}
+\hspace{1cm}
+\subfloat[general options dialog]{\label{subfig:tabledialog2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_attribute2}}
+\caption{Print composer attribute table item tab - Table and General options dialog \nixcaption}\label{fig:attrcomp}
+\end{figure}
+
+\minisec{Table dialog}
+
+The \textbf{Table} dialog of the attribute table item tab provides following
+functionalities (see Figure \ref{fig:attrcomp}a)):
+
+\begin{itemize}[label=--]
+\item The \textbf{Table} dialog allows to draw an ellipse, rectangle, or
+\end{itemize}
+
+\minisec{General options dialog}
+
+The \textbf{General options} dialog of the attribute table item tab 
+provides following functionalities (see Figure \ref{fig:attrcomp}b)):
+
+\begin{itemize}[label=--]
+\item Here you can define color and outline width for the element frame, set
+a background color and opacity for the map canvas. The \button{Position}
+button opens the \dialog{Set items position} dialog and allows to set the map
+canvas position using reference points or coordinates. Furthermore you can
+select or unselect to display the element frame with the \checkbox{Show
+frame} checkbox.
 \end{itemize}
 
 \section{Raise, lower and align elements}
