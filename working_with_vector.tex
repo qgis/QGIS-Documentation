@@ -811,7 +811,7 @@ Manager} in the main menu.
    \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}   
 \end{figure}
 
-\subsection{Labels Tab}
+\subsection{Labels Tab}\label{labeltab}
 
 The \tab{Labels} tab allows you to enable labeling features and control a number of
 options related to fonts, placement, style, alignment and buffering.
@@ -891,6 +891,78 @@ set all the parameters for the labels using fields in the layer.
 
 Not that the \tab{Label} tab provides a \classname{preview-box} where your
 selected label is shown.
+
+\subsection{New Labeling}\index{New labeling}\label{newlabel}
+
+The new \toolbtntwo{labeling}{Labeling} core application provides smart labeling
+for vector point,  line and polygon layers and only requires a few parameters.
+This new application will replace the current QGIS labeling, described in section 
+\ref{labeltab} and also supports on-the-fly transformated layers.
+
+\minisec{Using new labeling}
+
+\begin{enumerate}
+  \item Start QGIS and load a vector point, line or polygon layer.
+  \item Activate the layer in the legend and click on the
+  \toolbtntwo{labeling}{Labeling} icon in the QGIS toolbar menu.
+\end{enumerate}
+
+\minisec{Labeling point layers}
+
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute
+column to use for labeling. After that you can define the label placement and text style,
+labeling priority, scale-based visibility, if every part of multipart feature is to be
+labeled and if features act as obstacles for labels or not (see 
+Figure \ref{fig:pointlabel}).
+
+\begin{figure}[ht]
+\centering
+   \includegraphics[clip=true, width=10cm]{label_points}
+   \caption{Smart labeling of vector point layers \nixcaption}\label{fig:pointlabel}
+\end{figure}
+
+\minisec{Labeling line layers}
+
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute
+column to use for labeling. After that you can define the label placement, orientation,
+distance to feature, text style, labeling priority, scale-based visibility, if every part
+of a multipart line is to be labeled, if lines shall be merged to avoid duplicate labels
+and if features act as obstacles for labels or not (see Figure \ref{fig:linelabel}).
+
+\begin{figure}[ht]
+\centering
+   \includegraphics[clip=true, width=10cm]{label_line}
+   \caption{Smart labeling of vector line layers \nixcaption}\label{fig:linelabel}
+\end{figure}
+
+\minisec{Labeling polygon layers}
+
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute
+column to use for labeling. After that you can define the label placement, distance and text
+style, labeling priority, scale-based visibility, if every part of multipart feature is to be
+labeled and if features act as obstacles for labels or not (see Figure \ref{fig:arealabel}).
+
+\begin{figure}[ht]
+\centering
+   \includegraphics[clip=true, width=10cm]{label_area}
+   \caption{Smart labeling of vector polygon layers \nixcaption}\label{fig:arealabel}
+\end{figure}
+
+\minisec{Change engine settings}
+
+Additionally you can click the \button{Engine settings} button and select the search method,
+used to find the best label placement. Available is Chain, Popmusic Tabu, Popmusic Chain,
+Popmusic Tabu Chain and FALP.
+
+\begin{figure}[ht]
+\centering
+   \includegraphics[clip=true, width=5cm]{label_engine}
+   \caption{Dialog to change label engine settings \nixcaption}\label{fig:labelengine}
+\end{figure}
+
+Furthermore the number of candidates can be defined for point, line and polygon features,
+and you can define whether to show all labels (including colliding labels) and label
+candidates for debugging.
 
 \subsection{Attributes Tab}\index{Attributes}\label{label_attributes}
 
@@ -1726,7 +1798,14 @@ left mouse button again, the value will be updated in the attribute table.
 \textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done 
 in 15 degree steps.
 
-\subsection{Creating a new Shape layer}\label{sec:create shape}\index{editing!creating a new shape layer}
+\subsection{Creating a new Shapefile and Spatialite layer}\label{sec:create shape}\index{editing!creating a new shape layer}
+
+\qg allows to create new Shapefile layers and new Spatialite layers. 
+Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer 
+to section \ref{sec:creating_new_grass_vectors} for more information on 
+creating GRASS vector layers.
+
+\minisec{Creating a new Shape layer}\label{sec:create shape}\index{editing!creating a new shape layer}
 
 To create a new Shape layer for editing, choose \button{new} > 
 \toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the 
@@ -1756,7 +1835,7 @@ a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
 the same way as described in Section \ref{sec:edit_existing_layer} above. 
 
-\subsection{Creating a new SpatiaLite layer}\label{sec:create spatialite}\index{editing!creating a new spatialite layer}
+\minisec{Creating a new SpatiaLite layer}\label{sec:create spatialite}\index{editing!creating a new spatialite layer}
 
 To create a new SpatiaLite layer for editing, choose \button{new} >
 \toolbtntwo{mActionNewVectorLayer}{New SpatiaLite Layer} from the
@@ -1781,10 +1860,6 @@ and click on the \button{Add to attribute list} button. Once you are happy
 with the attributes, click \button{OK}. \qg will automatically add the new 
 layer to the legend and you can edit it in the same way as described in 
 Section \ref{sec:edit_existing_layer} above.
-
-\textbf{Note:} Creation of a new GRASS layer is supported within the GRASS-plugin. 
-Please refer to section \ref{sec:creating_new_grass_vectors} for more 
-information on creating GRASS vector layers.
 
 \subsection{Working with the Attribute Table}\label{sec:attribute table}\index{editing!working with the attribute table}
 
