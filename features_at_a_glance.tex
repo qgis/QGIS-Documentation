@@ -1076,7 +1076,6 @@ please refer to the manual of the unterlaying QT-library-documentation at
    \includegraphics[clip=true, width=10cm]{proxy-settings}
    \caption{Proxy-settings in \qg \nixcaption}
    \label{fig:proxy-settings}
- 
 \end{figure}
 
 \begin{Tip} \caption{\textsc{Using Proxies}}
@@ -1096,6 +1095,48 @@ require a restart of QGIS before they will be effective.
 \end{verbatim}
 \end{itemize}
 
+\section{Annotation Tools}\label{sec:annotations}
+\index{annotations}
+\index{text annotation|\see{annotations}}
+
+The \includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} text 
+annotation tools in the attribute toolbar provides the possibility to 
+place formated text in a balloon on the QGIS map canvas. Use the text 
+annotation tool and click into the map canvas. 
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=10cm]{annotation}
+   \caption{Annotation text dialog \nixcaption}
+   \label{fig:annotation}
+\end{figure}
+
+Double click on the item opens a dialog with various options. There is the 
+text editor to enter the formated text and other item settings. E.g. there 
+is the choice of having the item placed on a map position (displayed by 
+a marker symbol) or to have the item on a screen position (not related 
+to the map). The item can be moved by map position (drag the map marker) 
+or by moving only the balloon.
+
+The \includegraphics[width=0.7cm,clip=true]{mActionAnnotation} move annotation 
+tool allows to move the annotation on the map canvas.  
+
+\minisec{Form annotations}\index{annotations}
+\index{form annotation|\see{annotations}}
+
+Additionally you can also create your own annotation forms. The 
+\includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation 
+tool is useful to display attributes of a vector layer in a customised qt 
+designer form (see Figure \ref{fig:custom-annotations}). It is similar to the 
+designer forms for the identify tool, but displayed in an annotation item. 
+Also see QGIS blog \url{http://blog.qgis.org/node/143} for more information.
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=10cm]{custom_annotation}
+   \caption{Customized qt designer annotation form \nixcaption}
+   \label{fig:custom-annotations}
+\end{figure}
 
 \section{Spatial Bookmarks}\label{sec:bookmarks}
 \index{bookmarks}
