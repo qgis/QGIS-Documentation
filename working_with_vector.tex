@@ -1419,6 +1419,9 @@ Using the basic digitizing tools you can perform the following functions:
    & Copy Features
    & \includegraphics[width=0.7cm]{mActionEditPaste} 
    & Paste Features \\
+\hline \includegraphics[width=0.7cm]{mActionFileSave}
+   & Save edits and continue 
+   &  &  \\
 \hline
 \end{tabular}
 \caption{Vector layer basic editing toolbar}\label{tab:vector_editing}\medskip
@@ -1621,9 +1624,12 @@ using GDAL 1.3.2 or higher.
 
 When a layer is in editing mode, any changes remain in the memory of \qg.
 Therefore they are not committed/saved immediately to the data source or disk.
-When you turn editing mode off (or quit \qg for that matter), 
-you are then asked if you want to save your
-changes or discard them.
+If you want to save edits to the current layer but want to continue editing 
+without leaving the editing mode, you can click the 
+\toolbtntwo{mActionFileSave}{Save Edits} button. When you turn editing mode 
+off with the \toolbtntwo{mActionToggleEditing}{Toggle editing} (or quit 
+\qg for that matter), you are also asked if you want to save your changes 
+or discard them.
 
 If the changes cannot be saved (e.g. disk full, or the attributes have
 values that are out of range), the \qg in-memory state is preserved.  This
@@ -1631,8 +1637,7 @@ allows you to adjust your edits and try again.
 
 \begin{Tip}\caption{\textsc{Data Integrity}}
 It is always a good idea to back up your data source before you
-start
-editing. While the authors of \qg have made every effort to preserve the
+start editing. While the authors of \qg have made every effort to preserve the
 integrity of your data, we offer no warranty in this regard.
 \end{Tip}
 
@@ -1806,7 +1811,7 @@ Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer
 to section \ref{sec:creating_new_grass_vectors} for more information on 
 creating GRASS vector layers.
 
-\minisec{Creating a new Shape layer}\label{sec:create shape}\index{editing!creating a new shape layer}
+\minisec{Creating a new Shapefile layer}\label{sec:create shape}\index{editing!creating a new shapefile layer}
 
 To create a new Shape layer for editing, choose \button{new} > 
 \toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the 

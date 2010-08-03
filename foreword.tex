@@ -142,7 +142,6 @@ containing x,y coordinates)
 \item GRASS (GRASS GIS integration)
 \item Georeferencer GDAL (Adding projection information to raster using GDAL)
 \item Interpolation plugin (interpolate based on vertices of a vector layer)
-\item Labeling (Smart labeling for vector layers)
 \item Mapserver Export (Export QGIS project file to a MapServer map file)
 \item OGR Layer Converter (Translate vector layer between formats)
 \item OpenStreetMap plugin (Viewer and editor for openstreetmap data)
@@ -167,34 +166,28 @@ can be easily installed using the Python Plugin Installer (See Section
 
 \subsubsection{What's new in version \CURRENT} 
 
-These are the most relevant additions and improvements:
+These are the most relevant additions and improvements for QGIS users:
 \begin{itemize}[label=--]
 %  \item TODO(anne): rearrange the list on ManualTasks wikipage!
- \item added context help to dialogs
- \item measure angle tool
+ \item Added context help to dialogs
+ \item Measure angle tool
  \item GPS tracker widget
- \item Spatial Query plugin
- \item GDAL Tools plugin
- \item Google Earth plugin
- \item moved Labeling-ng plugin to core
- \item added "Drag and drop support" for composer legend model
- \item show labels from labeling plugin also in map composer (though not scaled correctly)
- \item update georeferencer from gislab SVN, which adds GCP table with errors, new user interface
- \item Georeferencer: support custom projection strings.
- \item Georeferencer: Implement resampling with user-specified target resolution (enhancement request \#2447)
+ \item Several new external plugins "Spatial Query, GDAL Tools, Google Earth \dots"
+ \item Add attribute table to the map composer
+ \item Vector layer saving in editing mode 
+ \item Moved new labeling plugin to core and show labels from new labeling in map composer (though not scaled correctly)
+ \item Added "Drag and drop support" for composer legend model
+ \item Extended georeferencer plugin with new user interface
  \item BBOX option for WFS 
- \item join attributes tool now supports both dbf and csv files % table join rulez!
- \item show feature count in attribute table title
+ \item Join attributes tool now supports both dbf and csv files % table join rulez!
+ \item Show feature count in attribute table title
  \item Python console runnable also outside QGIS
  \item New text annotation tool
- \item added more geometry validity checks
- \item removed limitation on maximum no of selectable features
- \item GDAL-GRASS driver no more necessary, new requirement: exceptions support for GRASS
- \item projection search improvements
- \item add GDAL compatible CRSes (without +towgs84 parameters) for Polish epsg: 2172-2180, 3120, 3328-3335 and 4179 as epsg+40000
- \item change map unit in project dialog when user selects a new CRS
- \item new Oracle raster connection dialog 
- \item implementation of the "Add New Spatialite Layer/Database" feature
- \item allow creation of multiple layers in Spatialite creation dialog
+ \item New WMS scale slider
+ \item Projection search improvements (show/hide deprecated projections)
+ \item Add GDAL compatible CRSes (without +towgs84 parameters) for Polish epsg: 2172-2180, 3120, 3328-3335 and 4179 as epsg+40000
+ \item Change map unit in project dialog automatically when user selects a new CRS
+ \item New Oracle raster connection dialog 
+ \item Add New Spatialite Layer/Database and allow creation of multiple spatialite layers
 
 \end{itemize}
