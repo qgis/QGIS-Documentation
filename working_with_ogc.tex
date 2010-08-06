@@ -95,7 +95,7 @@ parameter is optional.\\
 If you need to set up a proxy-server to be able to receive WMS-services
 from the internet, you can add your proxy-server in the options.
 Choose menu \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options}
-and click on the \tab{Proxy} tab. There you can add your proxy-settings 
+and click on the \tab{Network \& Proxy} tab. There you can add your proxy-settings 
 and enable them by setting the \checkbox{Use proxy for web access}.
 Make sure that you select the correct proxy-type from the
 \dropmenuopt{Proxy type} dropdown menu.
@@ -169,6 +169,20 @@ Use PNG if you want precise representations of the original data, and you don't 
 the increased data transfer requirements.
 \index{WMS!image encoding}
 \end{Tip}
+
+\minisec{Options}
+
+The\tab{Options} section provides a text-field where you can add a name
+for the WMS-layer. This name will be presented in the legend after loading
+the layer.
+
+If the OnlineRessource-URL from the GetCapabilities-document is different
+from the given URL inside the connection-parameters, QGIS will ask you
+which URL it should use. Depending on your answer QGIS will check the
+checkboxes for yourself based on your answere. This can also be tweaked with a
+\checkbox{Ignore GetMap URL} checkbox and a
+\checkbox{Ignore GetFeatureInfo URL} checkbox separately, also later on.
+
 
 \minisec{Layers} \label{ogc-wms-layers}
 
@@ -278,6 +292,25 @@ keywords.
 Basically this option is a frontend to the API of
 \url{http://geopole.org}.
 
+%
+% Tilesets
+%
+\subsection{Tilesets}
+\index{WMS!tileset}
+\index{WMS!WMS-C}
+
+When using WMS-C (Cached WMS) Services like
+\url{http://labs.metacarta.com/wms-c/Basic.py} you are able to browse
+through the \tab{tiles}-tab given by the server. Additional information like
+tilesize, formats and supported CRS are listed in this table.
+
+In combination with this feature you can use the tile scale slider from
+the \mainmenuopt{View}>\dropmenuopt{tile scale slider}, which gives you
+the available scales from the tileserver with nice slider docked in.
+
+%
+% Identify
+%
 \subsection{Using the Identify Tool}\label{sec:ogc-wms-identify}
 \index{WMS!identify}
 \index{identify!WMS}
@@ -420,12 +453,16 @@ More information can be found at the InteProxy-manual found on the website
 \index{WMS!secured layers!}\index{OGC!Authentication}
 \end{Tip}
 
-
+%
+% WFS-client
+%
 \section{WFS Client}\label{sec:ogc-wfs}
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You 
 can identify and select features and view the attribute table. An exception 
-is that editing is not supported at this time. To start the WFS plugin you 
+is that editing is not supported at this time (at the time of this writing
+there will be support for WFS-T in the near future as well). 
+To start the WFS plugin you 
 need to open \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}, 
 activate the \checkbox{WFS plugin} checkbox and click \button{OK}. 
 
@@ -467,6 +504,15 @@ in your preferences.
   	\includegraphics[clip=true,width=0.45\textwidth]{connection_wfs}
   	\caption{Adding a WFS layer \nixcaption}\label{fig:wfs_dmsolutions}
 \end{figure}
+
+Without using the checkbox \checkbox{Only request features overlapping the
+current view extent} QGIS fetches all features from the WFS-server. If you
+only want to have a small selection based on your extent, zoom to the area
+of interest, request the WFS-layer again and make sure you have checked
+the checkbox mentioned above. Basically this addes the BBOX-parameter with
+the values from you current extent to the WFS-query. This is extremly
+usefull when you only want to request \textbf{some} features from a huge
+WFS-dataset.
 
 You'll notice the download progress is visualized in the left bottom of the QGIS main window. 
 Once the layer is loaded, you can identify and select a province or two and view the 
