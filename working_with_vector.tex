@@ -598,9 +598,12 @@ use the \button{Save As Default} button to make your style the default. Also,
 if you make changes to the style that you are not happy with, use the \button{Restore 
 Default Style} button to revert to your default style.
 
-\minisec{Vector transparency} \label{sec:vect_transparency} \index{vector layers!transparency}
+\minisec{Vector transparency} \label{sec:vect_transparency}
+\index{vector layers!transparency}
+
 \qg allows to set a transparency for every vector layer. This can be done with
-the slider \slider{Transparency}{0}{20mm} inside the \tab{symbology} tab (see
+the slider \\ 
+\slider{Transparency} inside the \tab{symbology} tab (see
 fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
 vector layers.
 
@@ -650,7 +653,8 @@ number of color classes.
 \end{itemize}
 
 Color ramps can be defined in the \dialog{Style Manager} dialog (see Section 
-\ref{subsec:stylemanager}) by selecting \selectstring{Style item type:}{Color ramp} as style element type from the drop-down list, clicking on \button{Add item} button and then choosing a color ramp type.
+\ref{subsec:stylemanager}) by selecting \\
+\selectstring{Style item type:}{Color ramp} as style element type from the drop-down list, clicking on \button{Add item} button and then choosing a color ramp type.
 
 \minisec{Styles}
 
@@ -754,6 +758,24 @@ for the rivers layer of the \qg sample dataset.
    \centering
    \includegraphics[clip=true, width=10cm]{graduatesymbol_ng_line}
    \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
+\end{figure}
+
+\minisec{Rule-based rendering}
+
+The rule-based renderer is used to render all the features from a layer, using
+rule based symbols, whose color reflects the classification of a selected
+feature's attribute to a class.
+
+%%FIXME
+Add more text here
+
+The example in figure \ref{fig:rulesymNG} shows the rule-based rendering dialog
+for the rivers layer of the \qg sample dataset.
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=10cm]{rulesymbol_ng_line}
+   \caption{New Rule-rBased Symbolizing options \nixcaption}\label{fig:rulesymNG}
 \end{figure}
 
 \minisec{Symbol Properties}
