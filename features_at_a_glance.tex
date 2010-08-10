@@ -305,23 +305,23 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionSelect}{Select Features}
 	\>
 	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionDeselectAll}{Deselect Features}
+\dropmenuopttwo{mActionDeselectAll}{Deselect Features from all layers}
         \>
         \> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionIdentify}{Identify Features}
-	\> \keystroke{I}
+	\> \keystroke{Ctrl-Alt-I}
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionMeasure}{Measure Line}
-	\> \keystroke{M}
+	\> \keystroke{Ctrl-Alt-M}
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionMeasureArea}{Measure Area}
-	\> \keystroke{J}
+	\> \keystroke{Ctrl-Alt-J}
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionMeasureAngle}{Measure Angle}
 	\>
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionOpenTable}{Zoom Full}
-	\> \keystroke{F}
+	\> \keystroke{Ctrl-Alt-F}
 	\> \> \dropmenucheck{Map Navigation} \\
 \dropmenuopttwo{mActionZoomToLayer}{Zoom To Layer}
 	\>
@@ -346,7 +346,7 @@ menu depending on the layer type (point, line or polygon). \\
 	\> see Section \ref{sec:bookmarks} 
 \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionShowBookmarks}{Show Bookmarks}
-	\> \keystroke{B}
+	\> \keystroke{Ctrl-Alt-B}
 	\> see Section \ref{sec:bookmarks} 
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionDraw}{Refresh}
@@ -395,6 +395,9 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 	\> \>
 	\> \dropmenucheck{Attributes} \\
+\dropmenuopttwo{mActionFileSave}{Save edits}
+        \> \>
+        \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionToggleEditing}{Toggle editing}
 	\> \>
 	\> \dropmenucheck{Digitizing} \\
@@ -427,7 +430,7 @@ menu depending on the layer type (point, line or polygon). \\
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
-	\> \keystroke{Ctrl+Shift+S}
+	\> \keystroke{Ctrl+Shift+U}
 	\>          	
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{labeling}{Labeling}
@@ -448,27 +451,20 @@ menu depending on the layer type (point, line or polygon). \\
 	\>          	
 	\\
 \mainmenuopt{Toggle Full Screen Mode}  
-	\>
+	\>\keystroke{Ctrl-F}
 	\>          	
 	\\
 \dropmenuopttwo{mActionProjectProperties}{Project Properties}  
-	\> \keystroke{P}
-	\> see Section \ref{sec:projects}
-	\\
-\dropmenuopttwo{mActionOptions}{Options}             
-	\> \> see Section \ref{subsec:gui_options}
-	\\
-\dropmenuopttwo{mActionOptions}{Configure shortcuts}
-        \>
-        \>
-        \\
+	\> \keystroke{Ctrl-Alt-P}
+	\> see Section \ref{sec:projects} \\
+\dropmenuopttwo{mActionCustomProjection}{Custom CRS}
+        \> \> see Section \ref{sec:customprojections} \\
 \mainmenuopt{Style Manager}
-        \>
-        \>
-        \\
-\dropmenuopttwo{mActionCustomProjection}{Custom CRS}   
-	\> \> see Section \ref{sec:customprojections}
-	\\
+        \> \> \\
+\dropmenuopttwo{mActionOptions}{Configure shortcuts}
+        \> \> \\
+\dropmenuopttwo{mActionOptions}{Options}
+        \> \> see Section \ref{subsec:gui_options} \\
 \end{tabbing}
 
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
@@ -868,13 +864,17 @@ You can also measure angles, selecting Measure Angle tool. The cursor becomes
 cross-shaped. Click to draw the first segment of the angle you wish to
 measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog. 
+
 \begin{figure}[ht]
 \centering
    \subfloat[Measure lines] {\label{subfig:measure_line}\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}
-     \hspace{1cm}
+     \hspace{0.33cm}
    \subfloat[Measure areas]{\label{subfig:measure_area}\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}
+     \hspace{0.33cm}
+   \subfloat[Measure angles]{\label{subfig:measure_angle}\includegraphics[clip=true, width=0.3\textwidth]{measure_angle}}
    \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \end{figure}
+
 
 \section{Projects}\label{sec:projects}\index{projects}
 
@@ -966,16 +966,18 @@ optmize your options are:
 \item \checkbox{Promt to save project changes when required}
 \item \checkbox{Warn when opening a project file saved with an older version of QGIS}
 \item Change Selection and backgroud Color
-\item Change the icon theme (choose between default, classic, gis and nkids)
+\item Change the icon theme (choose between default, classic, gis and newgis)
 \item \checkbox{Capitalise layer names in legend}
 \item \checkbox{Display classification attribute names in legend}
+\item \checkbox{Create raster icons in legend}
 \item \checkbox{Hide splash screen at startup}
 \item \checkbox{Open identify results in a dock window (QGIS restart
 required)}
 \item \checkbox{Open attribute table in a dock window}
 \item \checkbox{Add PostGIS layers with double click and select in extended mode}
-% \item Define attribute table behavior (choose between show all features, show
-% selected features and show features in current canvas)
+\item \checkbox{Add new layers to selected group}
+\item Attribute table behavior (choose between Show all features (default), Show selected features, 
+show features in current canvas)
 \end{itemize}
 
 \minisec{Rendering \& SVG Tab}
@@ -988,8 +990,7 @@ required)}
 performance}
 \item \checkbox{Fix problems with incorrectly filled polygons}
 \item \checkbox{Use new generation symbology for rendering}
-\item Add and remove path(s) to search for Scalable Vector Graphics (SVG)
-symbols
+\item Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
 \end{itemize}
 
 Additionally you can define wether to save the path for svg textures 
@@ -1006,10 +1007,12 @@ first} instead of \usertext{Current layer} attributes for all identifiable
 layers (see the Project properties section under: \ref{sec:projects} to set
 which layers are identifiable) will be shown with the Identify tool.
 \item \checkbox{Open feature form, if a single feature is identified}
-\item Define search radius as a percentage of the map width
+\item Define search radius for identifying and displaying map tips as a 
+percentage of the map width
 \item Define ellipsoid for distance calculations
 \item Define rubberband color for measure tools
-\item Define preferred measurement units (meters or feet)
+\item \radiobuttonon{Define preferred measurement units (meters or feet)}
+\item \radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}
 \item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
 cursor, Nothing)
 \item Define Zoom factor for wheel mouse
@@ -1025,22 +1028,22 @@ cursor, Nothing)
 \minisec{Digitizing Tab}
 
 \begin{itemize}
-\item Define Rubberband Color and line width for Digitizing
+\item Define Rubberband line color and line width
 \item Define default snap mode (to vertex, to segment, to vertex and segment)
 \item Define default snapping tolerance in map units or pixel
 \item Define search radius for vertex edits in map units or pixel
 \item \checkbox{Show markers only for selected features}
 \item Define vertex marker style (cross (default), semi transparent circle or 
-none) and size
+none) and vertex marker size
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
 
 \minisec{CRS Tab}
 
 \begin{itemize}
-\item \checkbox{Prompt for Coordinate Reference System (CRS)}
-\item \checkbox{Project wide default Coordinate Reference System (CRS) will be used}
-\item \checkbox{Global default Coordinate Reference System (CRS) displayed below will be used}
+\item \radiobuttonoff{Prompt for Coordinate Reference System (CRS)}
+\item \radiobuttonoff{Project wide default Coordinate Reference System (CRS) will be used}
+\item \radiobuttonon{Global default Coordinate Reference System (CRS) displayed below will be used}
 \item Select global default Coordinate Reference System (CRS)
 \end{itemize}
 
