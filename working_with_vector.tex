@@ -463,7 +463,7 @@ the grid, right of New Zealand main islands.
 
 A workaround is to transform the longitude values using PostGIS and the
 \textbf{ST\textunderscore Shift\textunderscore Longitude}
-\footnote{\url{http://postgis.refractions.net/documentation/manual-1.4/ST_Shift_Longitude.html}}
+\footnote{\url{http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html}}
 function. This function reads every point/vertex in every component of every
 feature in a geometry, and if the longitude coordinate is < \degrees{0} adds
 \degrees{360} to it. The result would be a \degrees{0} - \degrees{360} version of
@@ -1142,7 +1142,7 @@ As an exercise we create an action that does a Google search on the
 \filename{lakes} layer. First we need to determine the URL needed to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
-little effort we see that the format is: \url{http://google.com/search?q=\qg},
+little effort we see that the format is: \url{http://google.com/search?q=qgis},
 where \usertext{\qg} is the search term. Armed with this information, we can
 proceed:
 
