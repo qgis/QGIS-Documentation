@@ -11,11 +11,11 @@ The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial 
 \subsection{The GDAL Library}\label{gdal_lib}
 The GDAL library consists of a set of command line programs, each with a large list of options. Users comfortable with running commands from a terminal may prefer the command line, with access to the full set of options. The GDALTools plugin offers an easy interface to the tools, exposing only the most popular options. 
 
-\begin{table}[ht]\index{gdaltools_list}
-\centering
-\caption{List of GDALTools}\medskip
- \begin{tabular}{|l|p{4in}|}
-\hline Build Virtual Raster & This program builds a VRT (Virtual Dataset) that is a mosaic of the list of input gdal datasets. \\
+{\setlength{\extrarowheight}{15pt}
+\begin{longtable}{|p{3cm}|p{13cm}|}
+\caption{List of GDAL tools}\label{tab:gdaltools} \\
+\hline
+Build Virtual Raster & This program builds a VRT (Virtual Dataset) that is a mosaic of the list of input gdal datasets. \\
 \hline Contour & This program generates a vector contour file from the input raster elevation model (DEM).\\
 \hline Rasterize &  This program burns vector geometries (points, lines and polygons) into the raster band(s) of a raster image. Vectors are read from OGR supported vector formats. Note that the vector data must in the same coordinate system as the raster data; on the fly reprojection is not provided.\\
 \hline Polygonize & This utility creates vector polygons for all connected regions of pixels in the raster sharing a common pixel value. Each polygon is created with an attribute indicating the pixel value of that polygon. A raster mask may also be provided to determine which pixels are eligible for processing.
@@ -39,9 +39,8 @@ target spatial reference set. The coordinate systems that can be passed are anyt
 The extents of the output file. If not specified the aggregate extents of all input files will be used. \\
 \hline RGB to PCT &  This utility will compute an optimal pseudo-color table for a given RGB image using a median cut algorithm on a downsampled RGB histogram. Then it converts the image into a pseudo-colored image using the color table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize output image visual quality. \\
 \hline PCT to RGB &  This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.\\
-
-\end{tabular}
-\end{table}
+\hline
+\end{longtable}
 
 \begin{figure}[ht]
    \centering
