@@ -710,8 +710,8 @@ analysis -> Terrain analysis.
 \item Then click \classname{r.shaded.relief} to open
 the module. 
 \item Change the \inputtext{azimuth angle}{270} to 315. Enter
-\usertext{gtopo30\_shade} for the \inputtext{Output shaded relief
-map}{gtopo30\_shade} new hillshade raster, and click \button{run}. 
+\usertext{gtopo30\_shade} for the new hillshade raster, and click 
+\button{run}. 
 \item When the process completes, add the hillshade raster to the map. You
 should see it displayed in grayscale. 
 \item To view both the hill shading and the colors of the
@@ -790,15 +790,14 @@ module \classname{v.centroids}.
 and run the module. 
 \item Now load the \usertext{forest\_areas} vector and display the types of
 forests - deciduous, evergreen, mixed - in different colors: In the layer
-\dropmenuopt{Properties} window, \tab{symbology} tab, choose
+\dropmenuopt{Properties} window, \tab{symbology} tab, choose \\
 \selectstring{Legend type}{Unique value} and set the
 \inputtext{Classification field}{VEGDESC} to VEGDESC. (Refer to the
 explanation of the symbology tab \ref{sec:symbology} in the vector section).
 \item Next reopen the GRASS toolbox and open Vector -> Vector update by other
 maps.
-\item Click on the \classname{v.rast.stats} module. Enter \inputtext{Name of
-raster}{\usertext{gtopo30}}, and \inputtext{Name of vector
-polygon}{\usertext{forest\_areas}}. 
+\item Click on the \classname{v.rast.stats} module. Enter \usertext{gtopo30}, 
+and \usertext{forest\_areas}. 
 \item Only one additional parameter is needed: Enter \inputtext{column
 prefix}{\usertext{elev}}, and click \button{run}. This is a computationally
 heavy operation which will run for a long time (probably up to two hours).
