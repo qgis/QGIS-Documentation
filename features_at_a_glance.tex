@@ -1082,7 +1082,7 @@ please refer to the manual of the unterlaying QT-library-documentation at
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[clip=true, width=10cm]{proxy-settings}
+   \includegraphics[clip=true, width=14cm]{proxy-settings}
    \caption{Proxy-settings in \qg \nixcaption}
    \label{fig:proxy-settings}
 \end{figure}
@@ -1115,7 +1115,7 @@ annotation tool and click into the map canvas.
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[clip=true, width=10cm]{annotation}
+   \includegraphics[clip=true, width=12cm]{annotation}
    \caption{Annotation text dialog \nixcaption}
    \label{fig:annotation}
 \end{figure}
@@ -1147,6 +1147,8 @@ Also see QGIS blog \url{http://blog.qgis.org/node/143} for more information.
    \label{fig:custom-annotations}
 \end{figure}
 
+\newpage
+
 \section{Spatial Bookmarks}\label{sec:bookmarks}
 \index{bookmarks}
 \index{spatial bookmarks|\see{bookmarks}}
@@ -1176,68 +1178,93 @@ then click \button{Zoom To}.
 You can also zoom to a bookmark by double-clicking on it.
 
 \subsection{Deleting a Bookmark}
-To delete a bookmark from the \dialog{Geospatial Bookmarks} dialog, click on it then click
- \button{Delete}.
-Confirm your choice by clicking \button{Yes} or cancel the delete by clicking \button{No}.
+To delete a bookmark from the \dialog{Geospatial Bookmarks} 
+dialog, click on it then click \button{Delete}.
+Confirm your choice by clicking \button{Yes} or cancel the 
+delete by clicking \button{No}.
 
 \section{Live GPS tracking}\label{sec:gpstracking}
-To activate Live GPS tracking you have select \mainmenuopt{View} > \mainmenuopt{Live GPS tracking}. You will get a new docked Window on the left side.
 
-You have 4 possible screens in this GPS tracking Window (see Figure \ref{fig:gpstrack_live}).
+To activate Live GPS tracking in QGIS you need to select 
+\mainmenuopt{View} > \dropmenuopt{Live GPS tracking}. You will get a new 
+docked Window on the left side of the canvas.
+
+There are 4 possible screens in this GPS tracking window 
+(see Figure \ref{fig:gpstrack_live}).
 
 \begin{description}
- \item[(a)] \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} GPS Position Coordinates and for manually entering Vertices and Features
- \item[(b)] \includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} GPS Signal Strength of Satellite connections 
- \item[(c)] \includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} GPS Polar Screen showing number and polar position of Satellites 
- \item[Figure \ref{fig:gpstrack_options}] \includegraphics[width=0.5cm,clip=true]{mActionOptions} GPS Options screen
+ \item[(a)] \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} 
+GPS position coordinates and for manually entering Vertices and Features
+ \item[(b)] \includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} 
+GPS signal strength of satellite connections 
+ \item[(c)] \includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} 
+GPS polar screen showing number and polar position of satellites 
+ \item[(d)] \includegraphics[width=0.5cm,clip=true]{mActionOptions} 
+GPS options screen (see figure \ref{fig:gpstrack_options}).
 \end{description}
 
-With a plugged in GPS-Reciever (has to be supported by your Operating System) a simple click on \button{Connect} connects the GPS to QGIS.
-A second click (now \button{Disconnect} disconnects the GPS-Reciever from you Computer.
+With a plugged in GPS receiver (has to be supported by your operating system) 
+a simple click on \button{Connect} connects the GPS to QGIS. A second click 
+(now \button{Disconnect} disconnects the GPS-Reciever from you Computer.
  
-IMPORTANT: If you want to record your Position to a Canvas you have to create a new Vector Layer first and switch it to editable state to be able to record your track.
+[ IMPORTANT ]: If you want to record your position to the canvas you have to 
+create a new vector layer first and switch it to editable status to be able 
+to record your track.
 
 \begin{figure}[ht]
 \centering
-   \subfloat[Position Coordinates] {\label{subfig:gpstrack_main}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_main}}
+   \subfloat[Position coordinates] {\label{subfig:gpstrack_main}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_main}}
      \hspace{0.33cm}
-   \subfloat[GPS Signal Strenght]{\label{subfig:gpstrack_stren}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_stren}}
+   \subfloat[GPS signal strenght]{\label{subfig:gpstrack_stren}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_stren}}
      \hspace{0.33cm}
-   \subfloat[GPS Polar Window]{\label{subfig:gpstrack_polar}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_polar}}
-%   \hspace{0.33cm}
-%   \subfloat[GPS tracking Options Window]{\label{subfig:gpstrack_options}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_options}}
-   \caption{Live GPS tracking Windows \nixcaption} \label{fig:gpstrack_live}
+   \subfloat[GPS polar window]{\label{subfig:gpstrack_polar}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_polar}} \\
 \end{figure}
 
+\subsection{Position coordinates}
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is 
+recieving signals from satellites you will see your position in latitude, 
+longitude and elevation as you can see in Figure \ref{subfig:gpstrack_main}
+
+\subsection{GPS signal strength}
+\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see 
+the signal strenght of the satellites you are revieving signals from 
+(Figure \ref{subfig:gpstrack_stren}).
+
+\subsection{GPS polar window}
+\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want 
+to know where in the sky all the connected satellites are, you have to 
+switch to the polar screen (Figure \ref{subfig:gpstrack_polar}).
+You can also see the ID numbers of the satellites you are recieving signals from.
+
+\subsection{GPS options}
+\includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection 
+problems you can switch from \radiobuttonon{Autodetect} to \radiobuttonon{Use 
+path/port below} and select the path/port your GPS receiver is connected to. 
+A click on \button{Connect} again initiates the connection to the GPS 
+receiver.
+
+With the slider \slider{GPS Cursor Size} you can shrink and grow the position 
+cursor on the canvas. Activating \radiobuttonon{Auto-add vertices} within GPS 
+digitizing your track will automatically be recorded in the active vector layer 
+(of course the layer has to be in edit mode).
+
+With GPS map recenter you can decide in which way the canvas will be 
+updated if your recorded coordinates start either to move out of canvas 
+or there is any change at all.
+
+Track color and width sets the color of and the width of your drawn track.
+
+If you want to set a feature manually you have to go back to 
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates'' 
+and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices`` 
+and want to record vertices manually you have to go back there and 
+click \button{Add vertex}
+
 \begin{figure}[ht]
-\centering
-   \includegraphics[clip=true]{gpstrack_options}
-   \caption{GPS Options \nixcaption}
+   \centering
+   \includegraphics[clip=true, width=5cm]{gpstrack_options}
+   \caption{GPS tracking options window \nixcaption}
    \label{fig:gpstrack_options}
 \end{figure}
-
-\subsection{Position Coordinates}
-\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is recieving Signals from Satellites you will see your Position in Latitude, Longitude and Elevation as you can see in Figure \ref{subfig:gpstrack_main}
-
-\subsection{GPS Signal Strength}
-\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see the Signalstrenght of the Satellites you are revieving signals from (Figure \ref{subfig:gpstrack_stren}).
-
-\subsection{GPS Polar Window}
-\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want to know where in the sky all the connected Satellites are, you have to switch to the Polar screen (Figure \ref{subfig:gpstrack_polar}).
-You can also see the ID-numbers of the Satellites you are recieving signals from.
-
-\subsection{GPS Options}
-\includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection problems you can switch from ``autodetect`` to ``Use path/port below`` and select the path/port your GPS-Reciever is connected to.
-A click on \button{Connect} again initiates the connection to the GPS-Reciever.
-
-With the Slider ``GPS Cursor Size'' you can shrink and grow the Position Cursor on the Canvas.
-
-Activating ``Auto-add vertices`` within GPS digitizing your track will automatically be recorded in the active vector layer (of course the layer has to be in edit mode).
-
-With GPS map recenter you can decide in which way the Canvas will be updated if your recorded coordinates start either to move out of canvas or there is any change at all.
-
-Track Color and width sets the color of and the width of your drawn track.
-
-If you want to set a feature manually you have to go back to \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates'' and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices`` and want to record vertices manually you have to go back there and click \button{Add vertex}
 
 \FloatBarrier
