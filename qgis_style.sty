@@ -2,11 +2,12 @@
 % % !TEX encoding = utf8
 % !TEX TS-program = pdflatex
 
+%%% Start with roman page numbers and change in section foreword
+\pagenumbering{roman}
 
 %%% encoding, utf8 should work for any localization
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
-
 
 %%% font settings
 \usepackage{helvet}
@@ -14,7 +15,12 @@
 \renewcommand*{\familydefault}{\sfdefault} 
 \usepackage{numprint}
 
-% hypertext links   
+%%% spacing and paragraph style
+\renewcommand{\baselinestretch}{1.1}
+\parskip1.5ex
+\parindent 0pt
+
+%%% hypertext links   
 \usepackage[bookmarks=true, pdftitle={QGIS User Guide}, pdfauthor={QGIS Project}, pdfsubject={QGIS User Guide}, breaklinks=true, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
 
 %%%   images              
