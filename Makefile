@@ -68,13 +68,13 @@ all: $(INCLUDES) $(APPENDIX)
 	dvips -R0 -o $*.ps $*.dvi 
 
 %.pdf:	%.tex $(INCLUDES) $(APPENDIX)
-	$(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf
+	$(PDFLATEX) $*.tex $*.pdf && makeindex -cl -o user_guide.ind user_guide.idx && $(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf
 
 %.tif:	%.pdf
 	gs -sDEVICE=tiffg3 -sPapersize=a4 -dNOPAUSE -q -sOutputFile=$*.tif $*.pdf -c quit
 
 clean:
-	rm -f *.log *.lof *.toa *.lot *.toc *.aux *.out *.bbl *.blg *.ps WARNINGS
+	rm -f *.log *.lox *.lof *.toa *.lot *.toc *.aux *.out *.bbl *.blg *.ps WARNINGS
 
 cleanall: 
-	rm -f *.log *.lof *.toa *.lot *.toc *.aux *.out *.bbl *.blg *.ps *.dvi *.pdf WARNINGS
+	rm -f *.log *.ilg *.idx *.ind *.lox *.lof *.toa *.lot *.toc *.aux *.out *.bbl *.blg *.ps *.dvi *.pdf WARNINGS
