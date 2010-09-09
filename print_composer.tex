@@ -2,12 +2,12 @@
 
 \chapter{Print Composer}\label{label_printcomposer}
 
-% when the revision of a section has been finalized, 
+% when the revision of a section has been finalized,
 % comment out the following line:
 % \updatedisclaimer
 
 The print composer provides growing layout and printing
-capabilities. It allows you to add elements such as the QGIS map canvas, 
+capabilities. It allows you to add elements such as the QGIS map canvas,
 legend, scalebar, images, basic shapes, arrows and text labels. You can
 size, group, align and position each element and adjust the properties to
 create your layout. The layout can be printed or exported to image formats,
@@ -30,44 +30,44 @@ table~\ref{tab:printcomposer_tools}:
  & Export to an image format &
  \includegraphics[width=0.7cm]{mActionSaveAsPDF} & Export as PDF \\
  \hline \includegraphics[width=0.7cm]{mActionSaveAsSVG} & Export print
- composition to SVG & \includegraphics[width=0.7cm]{mActionFilePrint} 
+ composition to SVG & \includegraphics[width=0.7cm]{mActionFilePrint}
  & Print or export as Postscript \\
  \hline \includegraphics[width=0.7cm]{mActionZoomFullExtent} & Zoom to
  full extend & \includegraphics[width=0.7cm]{mActionZoomIn} & Zoom in \\
- \hline \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out & 
+ \hline \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out &
  \includegraphics[width=0.7cm]{mActionDraw} & Refresh view \\
- \hline \includegraphics[width=0.7cm]{mActionAddMap} & Add new map from 
- QGIS map canvas & \includegraphics[width=0.7cm]{mActionSaveMapAsImage} 
+ \hline \includegraphics[width=0.7cm]{mActionAddMap} & Add new map from
+ QGIS map canvas & \includegraphics[width=0.7cm]{mActionSaveMapAsImage}
  & Add Image to print composition \\
- \hline \includegraphics[width=0.7cm]{mActionLabel} & Add label to print 
- composition & \includegraphics[width=0.7cm]{mActionAddLegend} & Add new 
+ \hline \includegraphics[width=0.7cm]{mActionLabel} & Add label to print
+ composition & \includegraphics[width=0.7cm]{mActionAddLegend} & Add new
  legend to print composition \\
- \hline \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar 
- to print composition & \includegraphics[width=0.7cm]{mActionAddBasicShape} 
+ \hline \includegraphics[width=0.7cm]{mActionScaleBar} & Add new scalebar
+ to print composition & \includegraphics[width=0.7cm]{mActionAddBasicShape}
  & Add basic shape to print composition \\
- \hline \includegraphics[width=0.7cm]{mActionAddArrow} & Add arrow to print 
- composition & \includegraphics[width=0.7cm]{mActionOpenTable} & Add attribute 
+ \hline \includegraphics[width=0.7cm]{mActionAddArrow} & Add arrow to print
+ composition & \includegraphics[width=0.7cm]{mActionOpenTable} & Add attribute
  table to print composition \\
- \hline \includegraphics[width=0.7cm]{mActionSelectPan} & Select/Move item in 
+ \hline \includegraphics[width=0.7cm]{mActionSelectPan} & Select/Move item in
  print composition &
  \includegraphics[width=0.7cm]{mActionMoveItemContent} & Move content within
  an item \\
- \hline \includegraphics[width=0.7cm]{mActionGroupItems} & Group items of 
- print composition & 
- \includegraphics[width=0.7cm]{mActionUngroupItems} & Ungroup items of print 
+ \hline \includegraphics[width=0.7cm]{mActionGroupItems} & Group items of
+ print composition &
+ \includegraphics[width=0.7cm]{mActionUngroupItems} & Ungroup items of print
  composition \\
  \hline \includegraphics[width=0.7cm]{mActionRaiseItems} & Raise selected
  items  &
  \includegraphics[width=0.7cm]{mActionLowerItems} & Lower selected items \\
  \hline \includegraphics[width=0.7cm]{mActionMoveItemsToTop} & Move selected
- items to top & 
+ items to top &
  \includegraphics[width=0.7cm]{mActionMoveItemsToBottom} & Move selected
  items to bottom \\
- \hline \includegraphics[width=0.7cm]{mActionAlignLeft} & Align selected 
+ \hline \includegraphics[width=0.7cm]{mActionAlignLeft} & Align selected
  items left &
- \includegraphics[width=0.7cm]{mActionAlignRight} & Align selected items 
+ \includegraphics[width=0.7cm]{mActionAlignRight} & Align selected items
  right \\
- \hline \includegraphics[width=0.7cm]{mActionAlignHCenter} & Align selected 
+ \hline \includegraphics[width=0.7cm]{mActionAlignHCenter} & Align selected
  items center &
  \includegraphics[width=0.7cm]{mActionAlignVCenter} & Align selected items
  center vertical \\
@@ -90,10 +90,10 @@ Before you start to work with the print composer, you need to load some
 raster and vector layers in the QGIS map canvas and adapt their properties
 to suite your own convinience. After everything is rendered and symbolized to
 your liking you click the \toolbtntwo{mActionNewComposer}{New Print Composer}
-icon in the toolbar or choose \mainmenuopt{File} >
+icon in the toolbar or choose \mainmenuopt{File} \arrow
 \dropmenuopttwo{mActionNewComposer}{New Print Composer}.
 
-\section{Using Print Composer}\label{label_useprintcomposer} 
+\section{Using Print Composer}\label{label_useprintcomposer}
 
 \begin{figure}[ht]
    \centering
@@ -101,7 +101,7 @@ icon in the toolbar or choose \mainmenuopt{File} >
    \caption{Print Composer \nixcaption}\label{fig:print_composer_blank}
 \end{figure}
 
-Opening the print composer provides you with a blank canvas to which you can 
+Opening the print composer provides you with a blank canvas to which you can
 add the current QGIS map canvas, legend, scalebar, images, basic shapes,
 arrows and text. Figure \ref{fig:print_composer_blank} shows the initial view
 of the print composer with an activated \checkbox{Snap to grid} modus but
@@ -114,29 +114,29 @@ of a defined resolution. Please note, the \checkbox{Snap to grid} feature
 only works, if you define a grid resolution > 0. Furthermore you can also
 activate the \checkbox{Print as raster} checkbox. This means all elements
 will be rastered before printing or saving as Postscript of PDF.
-\item The \tab{Item} tab displays the properties for the selected map element. 
-Click the \toolbtntwo{mActionSelectPan}{Select/Move item} 
-icon to select an element (e.g. legend, scalebar or label) on the canvas. 
-Then click the Item tab and customize the settings for the selected 
+\item The \tab{Item} tab displays the properties for the selected map element.
+Click the \toolbtntwo{mActionSelectPan}{Select/Move item}
+icon to select an element (e.g. legend, scalebar or label) on the canvas.
+Then click the Item tab and customize the settings for the selected
 element.
 \end{itemize}
 
-You can add multiple elements to the composer. It is also possible to have 
-more than one map view or legend or scalebar in the print composer canvas. 
-Each element has its own properties and in the case of the map, its own 
+You can add multiple elements to the composer. It is also possible to have
+more than one map view or legend or scalebar in the print composer canvas.
+Each element has its own properties and in the case of the map, its own
 extent.
 
 \section{Adding a current QGIS map canvas to the Print Composer}
 
-To add the QGIS map canvas, click on the \toolbtntwo{mActionAddMap}{Add new map 
-from QGIS map canvas} button in the print composer toolbar and drag a 
-rectangle on the composer canvas with the left mouse button to add the map. 
+To add the QGIS map canvas, click on the \toolbtntwo{mActionAddMap}{Add new map
+from QGIS map canvas} button in the print composer toolbar and drag a
+rectangle on the composer canvas with the left mouse button to add the map.
 To display the current map, you can choose between three different modes in
 the map \tab{Item} tab:
 
 \begin{itemize}[label=--]
 \item \selectstring{Preview}{Rectangle} is the default setting. It only
-displays an empty box with a message \textit{"Map will be printed here"}. 
+displays an empty box with a message \textit{"Map will be printed here"}.
 \item \selectstring{Preview}{Cache} renders the map in the current screen
 resolution. If case you zoom in or out the composer window, the map is not
 rendered again but the image will be scaled.
@@ -161,11 +161,11 @@ position within the print composer canvas. Select the map element and click
 on the right mouse button to \toolbtntwo{mIconLock}{lock} the element
 position and again to unlock the element. You can lock the map element also
 activating the \checkbox{Lock layers for map item} checkbox in the Map dialog
-of the Map Item tab. 
+of the Map Item tab.
 
-\textbf{Note:} QGIS \CURRENT is now able to show labels from the new labeling 
-plugin also in the map composer, but it is not yet scaled correctly. So it 
-might be necessary to switch back to the standard labeling in some cases. 
+\textbf{Note:} QGIS \CURRENT is now able to show labels from the new labeling
+plugin also in the map composer, but it is not yet scaled correctly. So it
+might be necessary to switch back to the standard labeling in some cases.
 
 \subsection{Map item tab - Map and Extents dialog}
 
@@ -174,14 +174,14 @@ might be necessary to switch back to the standard labeling in some cases.
   \subfloat[Map dialog]{\label{subfig:map_dialog1}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map1}}
     \hspace{1cm}
   \subfloat[Extents dialog]{\label{subfig:map_dialog2}\includegraphics[clip=true, width=0.4\textwidth]{print_composer_map2}}
-  \caption{Print Composer map item tab - Map and Extents dialog \nixcaption}\label{fig:mapdialog} 
+  \caption{Print Composer map item tab - Map and Extents dialog \nixcaption}\label{fig:mapdialog}
 \end{figure}
 
 \minisec{Map dialog}
 
 The \textbf{Map} dialog of the map item tab provides following functionalities
 (see Figure \ref{fig:mapdialog}a)):
- 
+
 \begin{itemize}[label=--]
 \item The \textbf{Preview} area allows to define the preview modes Rectangle,
 Cache and Render, as described above. Click on the \button{Update preview}
@@ -189,7 +189,7 @@ button to apply changes to the map view.
 \item The \textbf{Map} area allows to resize the map element specifying the
 width and height or the scale. The \selectstring{Rotation}{0} field allows to
 rotate the map element content clockwise in degrees. Note, a coordinate frame
-can only be added with the default value 0.  
+can only be added with the default value 0.
 \end{itemize}
 
 If you change the view on the QGIS map canvas by zooming or panning or
@@ -238,7 +238,7 @@ the map frame. The annotation can be drawn inside or outside the map frame.
 As annotatiion direction can be defined horizontal, vertical, horizontal and
 vertical or boundary direction. And finally you can define the grid color,
 the annotation font, the annotation distance from the map frame and the
-precision of the drawn coordinates.  
+precision of the drawn coordinates.
 \end{itemize}
 
 \minisec{General options dialog}
@@ -252,19 +252,19 @@ a background color and opacity for the map canvas. The \button{Position}
 button opens the \dialog{Set items position} dialog and allows to set the map
 canvas position using reference points or coordinates. Furthermore you can
 select or unselect to display the element frame with the \checkbox{Show
-frame} checkbox. 
+frame} checkbox.
 \end{itemize}
 
-\section{Adding other elements to the Print Composer} 
+\section{Adding other elements to the Print Composer}
 
-Besides adding a current QGIS map canvas to the Print Composer, it is also possible 
+Besides adding a current QGIS map canvas to the Print Composer, it is also possible
 to add, position, move and customize legend, scalebar, images and label elements.
 
 \subsection{Label item tab - Label and General options dialog}
 
 To add a label, click the \toolbtntwo{mActionLabel}{Add label} icon, place
 the element with the left mouse button on the print composer canvas and
-position and customize their appearance in the label item tab. 
+position and customize their appearance in the label item tab.
 
 \begin{figure}[ht]
 \centering
@@ -320,11 +320,11 @@ functionalities (see Figure \ref{fig:imageoptions}a)):
 
 \begin{itemize}[label=--]
 \item The \textbf{Search directories} area allows to add and remove
-directories with images in SVG format to the picture database. 
+directories with images in SVG format to the picture database.
 \item The \textbf{Preview} field then shows all pictures stored in the
 selected directories.
 \item The \textbf{Options} area shows the current selected picture and allows
-to define width, height and clockwise rotation of the picture. It is also possible 
+to define width, height and clockwise rotation of the picture. It is also possible
 to add a user specific SVG path. Activating the
 \checkbox{Sync from map} checkbox synchronizes the rotation of a picture in
 the qgis map canvas (i.e. a rotated north arrow) with the appropriate print
@@ -381,9 +381,9 @@ functionalities (see Figure \ref{fig:legendoptions}b)):
 \item The legend items window lists all legend items and allows to change
 item order, edit layer names, remove and restore items of the list. After
 changing the symbology in the QGIS main window you can click on \button{Update} to
-adapt the changes in the legend element of the print composer. The item oder 
-can be changed using the \button{Up} and \button{Down} buttons or with Drag and Drop 
-functionality. 
+adapt the changes in the legend element of the print composer. The item oder
+can be changed using the \button{Up} and \button{Down} buttons or with Drag and Drop
+functionality.
 \end{itemize}
 
 \minisec{Item options dialog}
@@ -458,7 +458,7 @@ inconsistent state.
 \section{Add Basic shape and Arrow}
 
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
-to the print composer canvas. 
+to the print composer canvas.
 
 \begin{figure}[ht]
 \centering
@@ -497,16 +497,16 @@ The \textbf{Table} dialog of the attribute table item tab provides following
 functionalities (see Figure \ref{fig:attrcomp}a)):
 
 \begin{itemize}[label=--]
-\item The \textbf{Table} dialog allows to select the vector layer and columns of 
-the attribute table. You can define the maximum number of rows to be displayed 
-and if attributes are only shown for visible features of the current composer 
-canvas. Additionally you can define the grid characteristics of the table and 
-the header and content font. 
+\item The \textbf{Table} dialog allows to select the vector layer and columns of
+the attribute table. You can define the maximum number of rows to be displayed
+and if attributes are only shown for visible features of the current composer
+canvas. Additionally you can define the grid characteristics of the table and
+the header and content font.
 \end{itemize}
 
 \minisec{General options dialog}
 
-The \textbf{General options} dialog of the attribute table item tab 
+The \textbf{General options} dialog of the attribute table item tab
 provides following functionalities (see Figure \ref{fig:attrcomp}b)):
 
 \begin{itemize}[label=--]
@@ -524,17 +524,17 @@ Raise or lower functionalities for elements are inside the
 \toolbtntwo{mActionRaiseItems}{Raise selected items} pulldown menu. Choose an
 element on the print composer canvas and select the matching functionality to
 raise or lower the selected element compared to the other elements (see
-table~\ref{tab:printcomposer_tools}). 
+table~\ref{tab:printcomposer_tools}).
 
 There are several alignment functionalities available within the
 \toolbtntwo{mActionAlignLeft}{Align selected items} pulldown menu (see
 table~\ref{tab:printcomposer_tools}). To use an alignment functionality , you
 first select some elements and then click on the matching alignment icon. All
-selected will then be aligned within to their common bounding box.       
+selected will then be aligned within to their common bounding box.
 
 \section{Creating Output}
 
-Figure \ref{fig:print_composer_complete} shows the print composer with an example 
+Figure \ref{fig:print_composer_complete} shows the print composer with an example
 print layout including each type of map element described in the sections above.
 
 \begin{figure}[h]
@@ -543,20 +543,20 @@ print layout including each type of map element described in the sections above.
    \caption{Print Composer with map view, legend, scalebar, coordinates and text added \nixcaption} \label{fig:print_composer_complete}
 \end{figure}
 
-The print composer allows you to create several output formats and it is possible to 
+The print composer allows you to create several output formats and it is possible to
 define the resolution (print quality) and paper size:
 
 \begin{itemize}[label=--]
-\item The \toolbtntwo{mActionFilePrint}{Print} icon allows to print the layout 
-to a connected printer or a Postscript file depending on installed printer 
+\item The \toolbtntwo{mActionFilePrint}{Print} icon allows to print the layout
+to a connected printer or a Postscript file depending on installed printer
 drivers.
-\item The \toolbtntwo{mActionExportMapServer}{Export as image} icon exports the 
+\item The \toolbtntwo{mActionExportMapServer}{Export as image} icon exports the
 composer canvas in several image formats such as PNG, BPM, TIF, JPG, \dots
 \item The \toolbtntwo{mActionSaveAsPDF}{Export as PDF} saves the defined
 print composer canvas directly as a PDF.
-\item The \toolbtntwo{mActionSaveAsSVG}{Export as SVG} icon saves the print 
-composer canvas as a SVG (Scalable Vector Graphic). \textbf{Note:} Currently the 
-SVG output is very basic. This is not a QGIS problem, but a problem of the underlaying 
+\item The \toolbtntwo{mActionSaveAsSVG}{Export as SVG} icon saves the print
+composer canvas as a SVG (Scalable Vector Graphic). \textbf{Note:} Currently the
+SVG output is very basic. This is not a QGIS problem, but a problem of the underlaying
 Qt library. This will hopefully be sorted out in future versions.
 \end{itemize}
 
@@ -568,15 +568,15 @@ state of a print composer session as a  *.qpt template and load the template
 again in another session.
 
 The  \toolbtntwo{mActionComposerManager}{Composer Manager} button in the
-toolbar and in \mainmenuopt{File} >
+toolbar and in \mainmenuopt{File} \arrow
 \dropmenuopttwo{mActionComposerManager}{Composer Manager} allows to manage
-add new composer template or to manage already existing templates. 
+add new composer template or to manage already existing templates.
 
 \begin{figure}[h]
    \centering
-   \includegraphics[clip=true, width=8cm]{print_composer_manager}   
+   \includegraphics[clip=true, width=8cm]{print_composer_manager}
    \caption{Composer Manager \nixcaption}
    \label{fig:print_composer_manager}
 \end{figure}
-   
+
 \FloatBarrier

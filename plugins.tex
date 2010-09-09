@@ -1,18 +1,18 @@
-%  !TeX  root  =  user_guide.tex 
+%  !TeX  root  =  user_guide.tex
 
 \chapter{QGIS Plugins}\label{sec:plugins}\index{plugins}
 
-% when the revision of a section has been finalized, 
+% when the revision of a section has been finalized,
 % comment out the following line:
 %\updatedisclaimer
 
 QGIS has been designed with a plugin architecture.
 This allows new features/functions to be easily added to the application.
-Many of the features in QGIS are actually implemented as either \textbf{core} 
-or \textbf{external} plugins.\index{plugins!types} 
+Many of the features in QGIS are actually implemented as either \textbf{core}
+or \textbf{external} plugins.\index{plugins!types}
 
 \begin{itemize}[label=--]
-\item \textbf{Core Plugins} are maintained by the QGIS Development 
+\item \textbf{Core Plugins} are maintained by the QGIS Development
 Team and are automatically part of every QGIS distribution.
 They are written in one of two languages: C++ or Python.
 More information about core plugins are provided in Section \ref{sec:core_plugins}.
@@ -23,18 +23,18 @@ More information about external plugins are provided in Section \ref{sec:externa
 \end{itemize}
 
 \section{Managing Plugins}\label{sec:managing_plugins}
-\index{plugins!managing} 
+\index{plugins!managing}
 
-Managing plugins in general means loading or unloading them using 
-the \filename{Plugin Manager}. External plugins can be installed and 
-directly activated or uninstalled using the \filename{Python Plugin 
-Installer}. To deactivate and reactivate external plugins, the 
+Managing plugins in general means loading or unloading them using
+the \filename{Plugin Manager}. External plugins can be installed and
+directly activated or uninstalled using the \filename{Python Plugin
+Installer}. To deactivate and reactivate external plugins, the
 \filename{Plugin Manager} is used again.
 
-\subsection{Loading a QGIS Core Plugin}\label{sec:load_core_plugin} 
+\subsection{Loading a QGIS Core Plugin}\label{sec:load_core_plugin}
 
-Loading a QGIS Core Plugin is done from the main menu \mainmenuopt{Plugins} 
-> \dropmenuopttwo{mActionShowPluginManager}{Manage Plugins...}.\index{plugins!manager}
+Loading a QGIS Core Plugin is done from the main menu \mainmenuopt{Plugins}
+\arrow \dropmenuopttwo{mActionShowPluginManager}{Manage Plugins...}.\index{plugins!manager}
 
 \begin{figure}[ht]
    \centering
@@ -42,40 +42,40 @@ Loading a QGIS Core Plugin is done from the main menu \mainmenuopt{Plugins}
    \caption{Plugin Manager \nixcaption}\label{fig:pluginmanager}\smallskip
 \end{figure}
 
-The \filename{Plugin Manager} lists all the available plugins and their 
-status (loaded or unloaded), including all core plugins and all external 
-plugins that have been installed and automatically activated using the 
-\filename{Python Plugin Installer} (see Section \ref{sec:external_plugins}). 
-Those plugins that are already loaded have a check mark to the left of 
+The \filename{Plugin Manager} lists all the available plugins and their
+status (loaded or unloaded), including all core plugins and all external
+plugins that have been installed and automatically activated using the
+\filename{Python Plugin Installer} (see Section \ref{sec:external_plugins}).
+Those plugins that are already loaded have a check mark to the left of
 their name. Figure \ref{fig:pluginmanager} shows the Plugin Manager dialog.
 
-To enable a particular plugin, click on the checkbox to the left of the 
-plugin name, and click \button{OK}. When you exit the application, a list 
-of loaded plugins is retained, and the next time you run QGIS these 
+To enable a particular plugin, click on the checkbox to the left of the
+plugin name, and click \button{OK}. When you exit the application, a list
+of loaded plugins is retained, and the next time you run QGIS these
 plugins are automatically loaded.
 
 \begin{Tip}\caption{\textsc{Crashing Plugins}}\index{crashes}
 If you find that QGIS crashes on startup, a plugin may be at fault.
-You can stop all plugins from loading by editing your stored settings file 
-(see \ref{subsec:gui_options} for location). Locate the plugins settings and 
+You can stop all plugins from loading by editing your stored settings file
+(see \ref{subsec:gui_options} for location). Locate the plugins settings and
 change all the plugin values to false to prevent them from loading.
-\nix {For example, to prevent the Delimited text plugin from loading, the 
-entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this: 
+\nix {For example, to prevent the Delimited text plugin from loading, the
+entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this:
 \usertext{Add Delimited Text Layer=false}.}
-\normalfont 
-Do this for each plugin in the [Plugins] section. You can then start QGIS 
-and add the plugins one at a time from the \filename{Plugin Manager} to 
+\normalfont
+Do this for each plugin in the [Plugins] section. You can then start QGIS
+and add the plugins one at a time from the \filename{Plugin Manager} to
 determine which plugin is causing the problem.
-\end{Tip} 
+\end{Tip}
 
-\subsection{Loading an external QGIS Plugin}\label{sec:load_external_plugin} 
+\subsection{Loading an external QGIS Plugin}\label{sec:load_external_plugin}
 
-There is only one step required to integrate external plugins into QGIS: 
+There is only one step required to integrate external plugins into QGIS:
 
 \begin{itemize}[label=--]
-\item Download an external plugin from a repository using the 
+\item Download an external plugin from a repository using the
 \filename{Python Plugin Installer} (Section \ref{sec:python_plugin_installer}).
-The new external plugin will be added to the list of available plugins in 
+The new external plugin will be added to the list of available plugins in
 the \filename{Plugin Manager} and is automatically loaded.
 \end{itemize}
 
@@ -88,11 +88,11 @@ the \filename{Plugin Manager} and is automatically loaded.
    \caption{Installing external python plugins \nixcaption}\label{fig:plugininstaller}\smallskip
 \end{figure}
 
-In order to download and install an external Python plugin, click the 
-menu \mainmenuopt{Plugins} > \dropmenuopttwo{plugin_installer}{Fetch 
-Python Plugins...}. The \filename{Plugin Installer} window will appear 
-(figure \ref{fig:plugininstaller}) with the tab \tab{Plugins}, containing 
-a list of all locally installed Python plugins, as well as plugins 
+In order to download and install an external Python plugin, click the
+menu \mainmenuopt{Plugins} \arrow \dropmenuopttwo{plugin_installer}{Fetch
+Python Plugins...}. The \filename{Plugin Installer} window will appear
+(figure \ref{fig:plugininstaller}) with the tab \tab{Plugins}, containing
+a list of all locally installed Python plugins, as well as plugins
 available in remote repositories. Each plugin can be either:
 \begin{itemize}[label=--]
 \item \textbf{not installed} - this means the plugin is available in the repository, but is not installed yet. In order to install it, select the plugin from the list and click the \button{Install plugin} button.
@@ -104,8 +104,8 @@ available in remote repositories. Each plugin can be either:
 
 \minisec{Plugins tab}
 
-To install a plugin, select it from the list and click the \button{Install plugin} 
-button. The plugin is then activated and installed in its own directory. 
+To install a plugin, select it from the list and click the \button{Install plugin}
+button. The plugin is then activated and installed in its own directory.
 
 \begin{itemize}[label=--]
 \item \nix{Linux and other unices}:\\
@@ -123,16 +123,16 @@ C:\textbackslash Documents and Settings\textbackslash\$USERNAME\textbackslash
 
 If the installation is successful, a confirmation message will appear.
 
-If the installation fails, the reason for the failure will be displayed 
-in a warning dialog. Most often, errors are the result of connection problems 
-and/or missing Python modules. In the former case you will likely need to 
-wait before trying the install again, in the latter case, you should install 
-the missing modules relevant to your operating system prior to using the 
-plugin. \nix{For Linux, most required modules should be available via a 
-package manager}. \win{For install instructions in Windows visit the module 
-home page}. If you are using a proxy, you may need to configure it under 
-\mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options} (Gnome, OSX) 
-or \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options} (KDE, Windows) 
+If the installation fails, the reason for the failure will be displayed
+in a warning dialog. Most often, errors are the result of connection problems
+and/or missing Python modules. In the former case you will likely need to
+wait before trying the install again, in the latter case, you should install
+the missing modules relevant to your operating system prior to using the
+plugin. \nix{For Linux, most required modules should be available via a
+package manager}. \win{For install instructions in Windows visit the module
+home page}. If you are using a proxy, you may need to configure it under
+\mainmenuopt{Edit} \arrow \dropmenuopttwo{mActionOptions}{Options} (Gnome, OSX)
+or \mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Options} (KDE, Windows)
 on the \tab{Proxy} tab.
 
 The \button{Uninstall plugin} button is enabled only if the selected plugin is installed and is not a core plugin. Note that if you have installed an update to a core plugin, you can uninstall this update with the \button{Uninstall plugin} and revert to the version shipped with Quantum GIS. This default version however, cannot be uninstalled.
@@ -145,10 +145,10 @@ The second tab \tab{Repositories}, contains a list of plugin repositories availa
 
 The \tab{Options} tab is where you can configure the settings of the \filename{Plugin Installer}. The \checkbox{Check for updates on startup} checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the \tab{Repositories} tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the \filename{Plugin Installer} is manually launched from the menu.
 
-Although the plugin installer update can handle ports different from 80, some internet 
-connections will cause problems when attempting to automatically check for updates. 
-In these cases, a \textit{Looking for new plugins...} indicator will 
-remain visible in the Status Bar during your entire QGIS session, and may cause a 
+Although the plugin installer update can handle ports different from 80, some internet
+connections will cause problems when attempting to automatically check for updates.
+In these cases, a \textit{Looking for new plugins...} indicator will
+remain visible in the Status Bar during your entire QGIS session, and may cause a
 program crash when exiting. In this case please disable the checkbox.
 
 In addition, you may specify the type of plugins that are displayed by the \filename{Plugin Installer}. Under \textit{Allowed plugins}, you can specify whether you would like to:
@@ -161,7 +161,7 @@ In addition, you may specify the type of plugins that are displayed by the \file
 
 \begin{Tip}
  \caption{\textsc{Using experimental plugins}}
-Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for 
+Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for
 \end{Tip}
 
 \section{Data Providers}\index{data providers}

@@ -1,23 +1,23 @@
-%  !TeX  root  =  user_guide.tex 
+%  !TeX  root  =  user_guide.tex
 
 \section{eVis Plugin}\label{sec:evis}
 
-The Biodiversity Informatics Facility at the American Museum of Natural History's (AMNH) Center 
+The Biodiversity Informatics Facility at the American Museum of Natural History's (AMNH) Center
 for Biodiversity and Conservation (CBC) \footnote{This section is derived from Horning, N., K.
 Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American Museum of
 Natural History, Center for Biodiversity and Conservation. Available from
 \url{http://biodiversityinformatics.amnh.org/}, and released under the GNU FDL.} has developed the
-Event Visualization Tool (eVis), 
-another software tool to add to the suite of conservation monitoring and decision support tools 
-for guiding protected area and landscape planning. This plugin enables users to easily link 
-geocoded (i.e., referenced with latitude and longitude or X and Y coordinates) photographs, 
+Event Visualization Tool (eVis),
+another software tool to add to the suite of conservation monitoring and decision support tools
+for guiding protected area and landscape planning. This plugin enables users to easily link
+geocoded (i.e., referenced with latitude and longitude or X and Y coordinates) photographs,
 and other supporting documents, to vector data in QGIS.
 
-eVis is now automatically installed and enabled in new versions of QGIS, and as with all plugins, 
+eVis is now automatically installed and enabled in new versions of QGIS, and as with all plugins,
 it can be disabled and enabled using the Plugin Manager (See Section \ref{sec:managing_plugins}).
 
-The eVis plugin is made up of three modules: the Database Connection tool, Event ID tool, and 
-the Event Browser. These work together to allow viewing of geocoded photographs and other documents 
+The eVis plugin is made up of three modules: the Database Connection tool, Event ID tool, and
+the Event Browser. These work together to allow viewing of geocoded photographs and other documents
 that are linked to features stored in vector files, databases, or spreadsheets.
 
 \subsection{Event Browser}\label{evis_browser}
@@ -32,7 +32,7 @@ the image was acquired. Your vector layer must be loaded into QGIS before runnin
 \minisec{Launch the Event Browser module}\label{evis_launch_browser}
 
 To launch the Event browser module either click on the \toolbtntwo{event_browser}{Event Browser}
-icon or click on \mainmenuopt{Plugins} > \dropmenuopt{eVis} >
+icon or click on \mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
 \dropmenuopt{eVis Event Browser}. This will open the Generic Event Browser window.
 
 The Generic Event Browser window has three tabs displayed at the top of the window. The Display tab
@@ -57,7 +57,7 @@ window. The Display window is used to view geocoded photographs and their associ
 \item \textbf{Increase zoom button}: Zoom in to see more detail. If the entire image cannot be
 displayed in the display window, scroll bars will appear on the left and bottom sides of the window
 to allow you to pan around the image.
-\item \textbf{Reduce zoom button}: Zoom out to see more area. 
+\item \textbf{Reduce zoom button}: Zoom out to see more area.
 \item \textbf{Zoom to full extent button}: Displays the full extent of the photograph.
 \item \textbf{Attribute information window}: All of the attribute information for the point
 associated with the photograph being viewed is displayed here. If the file type being referenced in
@@ -203,7 +203,7 @@ the Event ID tool.
 \minisec{Launch the Event ID module}\label{evis_launch_id}
 
 To launch the Event ID module either click on the \toolbtntwo{event_id}{Event ID}
-icon or click on \mainmenuopt{Plugins} > \dropmenuopt{eVis} >
+icon or click on \mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
 \dropmenuopt{Event ID Tool}. This will cause the cursor to change to an arrow with an``i'' on top of
 it signifying that the ID tool is active.
 
@@ -226,7 +226,7 @@ spreadsheet) it is necessary to configure your ODBC driver for the operating sys
 \minisec{Launch the Database Connection module}\label{evis_launch_database}
 
 To launch the Database Connection module either click on the appropriate icon
-\toolbtntwo{evis_connect}{} or click on \mainmenuopt{Plugins} > \dropmenuopt{eVis} >
+\toolbtntwo{evis_connect}{} or click on \mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
 \dropmenuopt{Database Connection}. This will launch the Database Connection window. The window has
 three tabs: \tab{Predefined Queries}, \tab{Database Connection}, and \tab{SQL Query}. The Output
 Console window at the bottom of the window displays the status of actions initiated by the different
@@ -321,8 +321,8 @@ When creating a vector layer from a Microsoft Excel Worksheet you might see that
 zeros (``0'') have been inserted in the attribute table rows beneath valid data.This can be caused
 by deleting the values for these cells in Excel using the ``backspace'' key. To correct this problem
 you need to open the Excel file (you'll need to close QGIS if there if you are connected to the file
-to allow you to edit the file) and then use Edit > Delete to remove the blank rows from the file. To
-avoid this problem you can simply delete several rows in the Excel Worksheet using Edit > Delete
+to allow you to edit the file) and then use Edit \arrow Delete to remove the blank rows from the file. To
+avoid this problem you can simply delete several rows in the Excel Worksheet using Edit \arrow Delete
 before saving the file.
 \end{Tip}
 
@@ -410,13 +410,13 @@ A complete sample XML file with three queries is displayed below:
 eVis\_Data\textbackslash PhotoPoints.db</databasename>
    <databaseusername />
    <databasepassword />
-   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN
       Points ON Points.rec_id=Attributes.point_ID</sqlstatement>
    <autoconnect>false</autoconnect>
  </query>
   <query>
    <shortdescription>Import photograph points "looking across Valley"</shortdescription>
-   <description>This command will import only points that have photographs "looking across 
+   <description>This command will import only points that have photographs "looking across
       a valley" to QGIS</description>
    <databasetype>SQLITE</databasetype>
    <databasehost />
@@ -424,14 +424,14 @@ eVis\_Data\textbackslash PhotoPoints.db</databasename>
    <databasename>C:\Workshop\eVis_Data\PhotoPoints.db</databasename>
    <databaseusername />
    <databasepassword />
-   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
-      Points ON Points.rec_id=Attributes.point_ID where COMMENTS='Looking across 
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN
+      Points ON Points.rec_id=Attributes.point_ID where COMMENTS='Looking across
       valley'</sqlstatement>
    <autoconnect>false</autoconnect>
  </query>
  <query>
    <shortdescription>Import photograph points that mention "limestone"</shortdescription>
-   <description>This command will import only points that have photographs that mention 
+   <description>This command will import only points that have photographs that mention
       "limestone" to QGIS</description>
    <databasetype>SQLITE</databasetype>
    <databasehost />
@@ -439,7 +439,7 @@ eVis\_Data\textbackslash PhotoPoints.db</databasename>
    <databasename>C:\Workshop\eVis_Data\PhotoPoints.db</databasename>
    <databaseusername />
    <databasepassword />
-   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN
       Points ON Points.rec_id=Attributes.point_ID where COMMENTS like '%limestone%'
       </sqlstatement>
    <autoconnect>false</autoconnect>

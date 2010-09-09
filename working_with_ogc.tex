@@ -1,7 +1,7 @@
 %  !TeX  root  =  user_guide.tex
 \chapter{Working with OGC Data}\label{working_with_ogc}
 
-% when the revision of a section has been finalized, 
+% when the revision of a section has been finalized,
 % comment out the following line:
 %\updatedisclaimer
 
@@ -10,13 +10,13 @@ implemented as a plugin.
 
 \section{What is OGC Data}\index{OGC!introduction}
 
-The Open Geospatial Consortium (OGC), is an international organization with more than 300 
-commercial, governmental, nonprofit and research organisations worldwide. Its members 
-develop and implement standards for geospatial content and services, GIS data processing 
+The Open Geospatial Consortium (OGC), is an international organization with more than 300
+commercial, governmental, nonprofit and research organisations worldwide. Its members
+develop and implement standards for geospatial content and services, GIS data processing
 and exchange.
 
-Describing a basic data model for geographic features an increasing number of specifications 
-are developed to serve specific needs for interoperable location and geospatial technology, 
+Describing a basic data model for geographic features an increasing number of specifications
+are developed to serve specific needs for interoperable location and geospatial technology,
 including GIS. Further information can be found under \url{http://www.opengeospatial.org/}.
 
 Important OGC specifications are:
@@ -32,7 +32,7 @@ Important OGC specifications are:
 
 OGC services are increasingly being used to exchange geospatial data between
 different GIS implementations and data stores.  QGIS can now deal with three of the
-above specifications, being SFS (though support of the PostgreSQL / PostGIS
+above specifications, being SFS (through support of the PostgreSQL / PostGIS
 data provider, see Section \ref{label_postgis}), WFS and WMS as a client.
 
 \section{WMS Client}\label{sec:ogc-wms}\index{WMS!client}\index{OGC!WMS!client}\index{rasters!WMS}
@@ -62,15 +62,15 @@ server understands HTTP as the data transport mechanism.
 
 \subsection{Selecting WMS Servers}\label{sec:ogc-wms-servers}\index{WMS!remote server!selection}
 
-The first time you use the WMS feature, there are no servers defined. You 
-can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button inside the toolbar, 
-or through the \mainmenuopt{Layer}>\dropmenuopttwo{mActionAddWmsLayer}{Add
+The first time you use the WMS feature, there are no servers defined. You
+can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button inside the toolbar,
+or through the \mainmenuopt{Layer} \arrow \dropmenuopttwo{mActionAddWmsLayer}{Add
 WMS Layer...} menu.
 
-The dialog \dialog{Add Layer(s) from a Server} for adding layers from the WMS server pops up. Fortunately you can 
-add some servers to play with by clicking the \button{Add default servers} 
-button. This will add at least three WMS servers for you to use, including the NASA (JPL) 
-WMS server. To define a new WMS server in the \tab{Server Connections} section, 
+The dialog \dialog{Add Layer(s) from a Server} for adding layers from the WMS server pops up. Fortunately you can
+add some servers to play with by clicking the \button{Add default servers}
+button. This will add at least three WMS servers for you to use, including the NASA (JPL)
+WMS server. To define a new WMS server in the \tab{Layers},
 select \button{New}. Then enter the parameters to connect to your desired
 WMS server, as listed in table \ref{tab:wms_connection_parms}:
 
@@ -81,7 +81,7 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
  Server Connections drop-down box so that you can distinguish it from
  other WMS Servers. \\
 \hline URL \index{WMS!URL} & URL of the server providing the data.
- This must be a resolvable host name; the same format as you would use 
+ This must be a resolvable host name; the same format as you would use
  to open a telnet connection or ping a host. \\
 \hline Username \index{WMS!authentification} & Username to access a
 secured WMS-server. This parameter is optional \\
@@ -94,13 +94,13 @@ parameter is optional.\\
 
 If you need to set up a proxy-server to be able to receive WMS-services
 from the internet, you can add your proxy-server in the options.
-Choose menu \mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options}
-and click on the \tab{Network \& Proxy} tab. There you can add your proxy-settings 
+Choose menu \mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Options}
+and click on the \tab{Network \& Proxy} tab. There you can add your proxy-settings
 and enable them by setting the \checkbox{Use proxy for web access}.
 Make sure that you select the correct proxy-type from the
 \dropmenuopt{Proxy type} dropdown menu.
 
-Once the new WMS Server connection has been created, it will be 
+Once the new WMS Server connection has been created, it will be
 preserved for future QGIS sessions.
 
 \begin{Tip}[ht]\caption{\textsc{On WMS Server URLs}}
@@ -110,11 +110,11 @@ the base URL.  For example, you shouldn't have fragments such as
 in your URL.\index{WMS!remote server!URL}
 \end{Tip}
 
-% in QGIS 1.1.x not needed anymore since there is a search-interface 
+% in QGIS 1.1.x not needed anymore since there is a search-interface
 %%% Table \ref{tab:wms_example_urls} shows some example WMS URLs to get you started.
 %%% These links were last checked in April 2009, but could change at any time:
-%%% 
-%%% %FIXME:  WMS URLs should be checked again and maybe extended in QGIS 
+%%%
+%%% %FIXME:  WMS URLs should be checked again and maybe extended in QGIS
 %%% \begin{table}[ht]\index{WMS!remote server!URL!examples}
 %%% \centering
 %%% \caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
@@ -129,7 +129,7 @@ in your URL.\index{WMS!remote server!URL}
 %%% \hline
 %%% \end{tabular}
 %%% \end{table}
-%%% 
+%%%
 %%% An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 
 \subsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
@@ -139,15 +139,15 @@ Once you have successfully filled in your parameters you can select the
 button to retrieve the capabilities of the selected server.  This includes the Image encoding,
 Layers, Layer Styles and Projections.  Since this
 is a network operation, the speed of the response depends on the quality of your network
-connection to the WMS server. While downloading data from the WMS server, the download progress 
-is visualized in the left bottom of the WMS Plugin dialog. 
+connection to the WMS server. While downloading data from the WMS server, the download progress
+is visualized in the left bottom of the WMS Plugin dialog.
 
-Your screen should now look a bit like Figure \ref{fig:connection_wms}, which shows the 
+Your screen should now look a bit like Figure \ref{fig:connection_wms}, which shows the
 response provided by the NASA JPL OnEarth WMS server.
 
 \begin{figure}[ht]
   \centering
-  \includegraphics[clip=true,width=0.6\textwidth]{connection_wms}  
+  \includegraphics[clip=true,width=0.6\textwidth]{connection_wms}
   \caption{Dialog for adding a WMS server, showing its available layers \nixcaption}\label{fig:connection_wms}
 \end{figure}
 
@@ -197,13 +197,13 @@ and transmitted to QGIS in one go.
 \begin{Tip}[ht]\caption{\textsc{WMS Layer Ordering}}
 In this version of QGIS, WMS layers rendered by a server are overlaid
 in the order listed in the Layers section, from top to bottom of the list.
-If you want to change the overlay order, you can use the \tab{Layer Order} tab. 
+If you want to change the overlay order, you can use the \tab{Layer Order} tab.
 \index{WMS!remote server!layer ordering}
 \end{Tip}
 
 \minisec{Transparency}\label{ogc-wms-transparency}
 
-In this version of QGIS, the transparency setting is hard-coded to 
+In this version of QGIS, the transparency setting is hard-coded to
 be always on, where available.
 
 \begin{Tip}[ht]\caption{\textsc{WMS Layer Transparency}}
@@ -251,7 +251,7 @@ CRS to the current project projection, unpredictable
 results can occur.
 \end{Tip}
 
-% 
+%
 % server-search tab.
 %
 \subsection{Server-Search}
@@ -260,8 +260,8 @@ results can occur.
 \index{WMS!search}
 \index{OGC!search}
 
-Within QGIS you can search for WMS-servers. Figure \ref{fig:searchtab} shows 
-the newly created \tab{search}-tab with the \dialog{Add Layer(s) from a 
+Within QGIS you can search for WMS-servers. Figure \ref{fig:searchtab} shows
+the newly created \tab{search}-tab with the \dialog{Add Layer(s) from a
 Server}-dialog.
 
 \begin{figure}[ht]
@@ -274,7 +274,7 @@ As you can see it is possible to enter a search-string in the textfield an
 hit the \button{Search} button.
 
 After a short while the search result will be populated into the tab below
-the textfield. 
+the textfield.
 
 Browse the result list and inspect your searchresults within the table. To
 visualize the results, select an table entry, press the \button{Add
@@ -305,7 +305,7 @@ through the \tab{tiles}-tab given by the server. Additional information like
 tilesize, formats and supported CRS are listed in this table.
 
 In combination with this feature you can use the tile scale slider from
-the \mainmenuopt{View}>\dropmenuopt{tile scale slider}, which gives you
+the \mainmenuopt{View} \arrow \dropmenuopt{tile scale slider}, which gives you
 the available scales from the tileserver with nice slider docked in.
 
 %
@@ -316,7 +316,7 @@ the available scales from the tileserver with nice slider docked in.
 \index{identify!WMS}
 \index{WMS!GetFeatureInfo}
 
-Once you have added a WMS server, 
+Once you have added a WMS server,
 and if any layer from a WMS server is queryable, you can then use
 the \toolbtntwo{mActionIdentify}{Identify} tool to select a pixel on the map canvas.
 A query is made to the WMS server for each selection made.
@@ -355,7 +355,7 @@ here are a few handy definitions:
 \item \textbf{Image Formats}    - The list of MIME-types the server can respond with when
                                   drawing the map.  QGIS supports whatever formats
                                   the underlying Qt libraries were built with, which
-                                  is typically at least \texttt{image/png} 
+                                  is typically at least \texttt{image/png}
                                   and \texttt{image/jpeg}.
 
 \item \textbf{Identity Formats} - The list of MIME-types the server can respond with when
@@ -376,7 +376,7 @@ here are a few handy definitions:
                                   when the Identify tool is used on it.
 
 \item \textbf{Can be Transparent} - Whether or not this layer can be rendered with transparency.
-                                    This version of 
+                                    This version of
                                     QGIS will always use transparency if this is \textsl{Yes}
                                     and the image encoding supports transparency
 % BM: doesn't seem to work?
@@ -458,17 +458,17 @@ More information can be found at the InteProxy-manual found on the website
 %
 \section{WFS Client}\label{sec:ogc-wfs}
 
-In QGIS, a WFS layer behaves pretty much like any other vector layer. You 
-can identify and select features and view the attribute table. An exception 
+In QGIS, a WFS layer behaves pretty much like any other vector layer. You
+can identify and select features and view the attribute table. An exception
 is that editing is not supported at this time (at the time of this writing
-there will be support for WFS-T in the near future as well). 
-To start the WFS plugin you 
-need to open \mainmenuopt{Plugins} > \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}, 
-activate the \checkbox{WFS plugin} checkbox and click \button{OK}. 
+there will be support for WFS-T in the near future as well).
+To start the WFS plugin you
+need to open \mainmenuopt{Plugins} \arrow \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...},
+activate the \checkbox{WFS plugin} checkbox and click \button{OK}.
 
-A new \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer} icon appears next 
-to the WMS icon. Click on it to open the dialog. In General adding a WFS 
-layer is very similar to the procedure used with WMS. The difference is 
+A new \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer} icon appears next
+to the WMS icon. Click on it to open the dialog. In General adding a WFS
+layer is very similar to the procedure used with WMS. The difference is
 there are no default servers defined, so we have to add our own.
 
 \subsubsection{Loading a WFS Layer}
@@ -480,15 +480,15 @@ http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 
 \begin{enumerate}
   \item Make sure the WFS plugin is loaded; if not, open the Plugin Manager and load it
-  \item Click on the 
-  \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer} 
+  \item Click on the
+  \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer}
   tool on the plugins toolbar
-  \item Click on \button{New} 
+  \item Click on \button{New}
   \item Enter \inputtext{Name}{DM Solutions} as the name
   \item Enter the URL (see previous page)
-  \item Click \button{OK} 
+  \item Click \button{OK}
   \item Choose \selectstring{Server Connections}{DM Solutions} from the drop-down box
-  \item Click \button{Connect} 
+  \item Click \button{Connect}
   \item Wait for the list of layers to be populated
   \item Click on the \clicklistitem{Parks} layer
   \item Click \button{Add} to add the layer to the map
@@ -513,30 +513,30 @@ the values from you current extent to the WFS-query. This is extremly
 usefull when you only want to request \textbf{some} features from a huge
 WFS-dataset.
 
-You'll notice the download progress is visualized in the left bottom of the QGIS main window. 
-Once the layer is loaded, you can identify and select a province or two and view the 
+You'll notice the download progress is visualized in the left bottom of the QGIS main window.
+Once the layer is loaded, you can identify and select a province or two and view the
 attribute table.
 
 Remember this plugin works best with UMN MapServer WFS servers. It still
-could be, that you might experience random behavior 
+could be, that you might experience random behavior
 and crashes. You can look forward to improvements in a future version of the plugin.
 
 This means that only WFS 1.0.0 is supported. At this point there have not
 been many test against WFS versions implemented in other WFS-servers.
 If you encounter problems with any other WFS-server, please do not
-hesitate to contacting the development team. Please refer to Section 
+hesitate to contacting the development team. Please refer to Section
 \ref{label_helpsupport} for further information about the mailinglists.
 
 \begin{Tip}[htb]\caption{\textsc{Finding WFS Servers}}
 You can find additional WFS servers by using Google or your
-favorite search engine. There are a number of lists with public URLs, some 
+favorite search engine. There are a number of lists with public URLs, some
 of them maintained and some not.
 \index{WFS!remote server!}
-\end{Tip} 
+\end{Tip}
 
 \begin{Tip}[htb]\caption{\textsc{Accessing secure WFS Servers}}
-Within the dialog \dialog{Create a new WFS-connection} QGIS does not support 
-authenficated WFS-connections yet. Within one of the next releases we expect 
+Within the dialog \dialog{Create a new WFS-connection} QGIS does not support
+authenficated WFS-connections yet. Within one of the next releases we expect
 to also support authenticated WFS-servers. Meanwhile you could use InteProxy
 (\url{http://inteproxy.wald.intevation.org}) for accessing authenticated
 WFS-servers.

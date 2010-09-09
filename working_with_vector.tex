@@ -14,9 +14,9 @@ MapInfo MIF (interchange format)\index{MIF files}\index{MapInfo!MIF files}
 and MapInfo TAB (native format).\index{TAB files}\index{MapInfo!TAB files}
 You find a list of OGR supported vector formats in Appendix~\ref{appdx_ogr}.
 
-\qg also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers 
+\qg also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers
 in a PostgreSQL database using the PostgreSQL data provider plugin.
-Support for additional data types (eg. delimited text) is provided by 
+Support for additional data types (eg. delimited text) is provided by
 additional data provider plugins.\index{delimited text}
 
 This section describes how to work with several common formats:
@@ -33,7 +33,7 @@ Working with GRASS vector data is described in Section \ref{sec:grass}.
 \index{ESRI!shapefiles}
 \index{SHP files}
 
-The standard vector file format used in \qg is the ESRI Shapefile. Support 
+The standard vector file format used in \qg is the ESRI Shapefile. Support
 is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
 \index{OGR}. A shapefile actually consists of several files. The following three are required:
 \index{shapefile!format}
@@ -49,17 +49,17 @@ the projection information. While it is very useful to have a projection file, i
 
 \minisec{Problem loading a shape .prj file}
 
-If you load a shapefile with \filename{.prj} file and \qg is not 
-able to read the coordinate reference system from that file, you have to define the 
-proper projection manually within the \tab{General} tab of the \dialog{Layer 
-Properties} dialog. This is due to the fact, that \filename{.prj} files often  
-do not provide the complete projection parameters, as used in \qg and listed in 
-the \dialog{CRS} dialog. 
+If you load a shapefile with \filename{.prj} file and \qg is not
+able to read the coordinate reference system from that file, you have to define the
+proper projection manually within the \tab{General} tab of the \dialog{Layer
+Properties} dialog. This is due to the fact, that \filename{.prj} files often
+do not provide the complete projection parameters, as used in \qg and listed in
+the \dialog{CRS} dialog.
 
-For that reason, if you create a new shapefile with \qg, two different projection 
-files are created. A \filename{.prj} file with limited projection parameters, 
-compatible with ESRI software, and a \filename{.qpj} file, providing the complete 
-parameters of the used CRS. Whenever \qg finds a \filename{.qpj} file, it will be 
+For that reason, if you create a new shapefile with \qg, two different projection
+files are created. A \filename{.prj} file with limited projection parameters,
+compatible with ESRI software, and a \filename{.qpj} file, providing the complete
+parameters of the used CRS. Whenever \qg finds a \filename{.qpj} file, it will be
 used instead of the \filename{.prj}.
 
 \subsection{Loading a Shapefile}\label{sec:load_shapefile}
@@ -67,7 +67,7 @@ used instead of the \filename{.prj}.
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=12cm]{addvectorlayerdialog}
-   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}   
+   \caption{Add Vector Layer Dialog \nixcaption}\label{fig:addvectorlayer}
 \end{figure}
 
 \begin{figure}[ht]
@@ -84,13 +84,13 @@ used instead of the \filename{.prj}.
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a shapefile, start
 \qg and click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer}
-toolbar button\index{shapefile!loading} or simply type \keystroke{Ctrl-Shift-V}. 
-This will bring up a new window (see Figure \ref{fig:addvectorlayer}).  
+toolbar button\index{shapefile!loading} or simply type \keystroke{Ctrl-Shift-V}.
+This will bring up a new window (see Figure \ref{fig:addvectorlayer}).
 
-From the available options check \radiobuttonon{File}. Click on \button{Browse}. 
+From the available options check \radiobuttonon{File}. Click on \button{Browse}.
 That will bring up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
-a shapefile or other supported data source. 
+a shapefile or other supported data source.
 The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
@@ -110,21 +110,21 @@ clicking on the layer name or by right-clicking on the name in the legend and
 choosing \dropmenuopt{Properties} from the popup menu. See
 Section \ref{sec:symbology} for more information on setting symbology of
 vector layers.
- 
+
 \begin{Tip}\caption{\textsc{Load layer and project from mounted external
 drives on OS X}}
 On OS X, portable drives that are mounted besides the primary hard
-drive do not show up under File -> Open Project as expected. We are working
+drive do not show up under File \arrow Open Project as expected. We are working
 on a more OSX-native open/save dialog to fix this. As a workaround you can
 type '/Volumes' in the File name box and press return. Then you can navigate
 to external drives and network mounts.
 \end{Tip}
- 
+
 \subsection{Improving Performance}
 
 To improve the performance of drawing a shapefile, you can create a spatial
-index. A \index{spatial index!shapefiles} spatial index will improve the 
-speed of both zooming and panning. Spatial indexes used by \qg have a 
+index. A \index{spatial index!shapefiles} spatial index will improve the
+speed of both zooming and panning. Spatial indexes used by \qg have a
 \filename{.qix} extension.
 
 Use these steps to create the index:
@@ -151,16 +151,16 @@ file type filter to \selectstring{Files of Type}{[OGR] MapInfo (*.mif
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load an ArcInfo binary coverage, click on the
 \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar button or type
 \keystroke{Ctrl-Shift-V} to open the \dialog{Add Vector Layer} dialog. Select
-\radiobuttonon{Directory}. Change to \selectstring {Type}{Arc/Info Binary Coverage}. 
+\radiobuttonon{Directory}. Change to \selectstring {Type}{Arc/Info Binary Coverage}.
 Navigate to the directory that contains the coverage files and select it.
 
-Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the 
+Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the
 raw TIGER Format of the US Census Bureau.
 
 \section{PostGIS Layers}
 \index{vector layers!PostGIS|see{PostGIS}}
 \index{PostGIS!layers}
-\label{label_postgis} 
+\label{label_postgis}
 
 PostGIS layers are stored in a PostgreSQL database. The advantages of PostGIS
 are the spatial indexing, filtering and query capabilities it provides. Using PostGIS,
@@ -192,8 +192,8 @@ database that contains the data. Begin by clicking on the
 open the \dialog{Add Vector Layer} dialog and select \radiobuttonon{Database}.
 The \dialog{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
-manager}, click on the \button{New} button to display the \\ 
-\dialog{Create a New PostGIS Connection} dialog. The parameters required for 
+manager}, click on the \button{New} button to display the \\
+\dialog{Create a New PostGIS Connection} dialog. The parameters required for
 a connection are shown in table \ref{tab:postgis_connection_parms}.
 
 \begin{table}[ht]\index{PostgreSQL!connection parameters}
@@ -205,12 +205,12 @@ Parameters}\label{tab:postgis_connection_parms}\medskip
 \\
 \hline Host \index{PostgreSQL!host}
 & Name of the database host. This must be a resolvable host name the same as
-would be used to open a telnet connection or ping the host. If the database is 
+would be used to open a telnet connection or ping the host. If the database is
 on the same computer as \qg, simply enter 'localhost' here. \\
 \hline Database \index{PostgreSQL!database} & Name of the database.  \\
 \hline Port \index{PostgreSQL!port}& Port number the PostgreSQL database
 server listens on. The default port is 5432.\\
-\hline SSL mode \index{PostgreSQL!sslmode}& How the SSL connection will be negotiated with the server. These are the options: 
+\hline SSL mode \index{PostgreSQL!sslmode}& How the SSL connection will be negotiated with the server. These are the options:
 \begin {itemize}
 \item disable: only try an unencrypted SSL connection;
 \item allow: try a non-SSL connection, if that fails, try an SSL connection;
@@ -254,7 +254,7 @@ security risk.
 connections defined, you can load layers from the PostgreSQL database. Of
 course this requires having data in PostgreSQL. See Section
 \ref{sec:loading_postgis_data} for a discussion on importing data into the
-database. 
+database.
 
 To load a layer from PostGIS, perform the following steps:
 
@@ -271,7 +271,7 @@ information on using the PostgreSQL Query Builder to further define the layer.
 
 \begin{Tip}\caption{\textsc{PostGIS Layers}}
 Normally a PostGIS layer is defined by an entry in the
-geometry\_columns table. From version \OLD % should be 0.9.0 
+geometry\_columns table. From version \OLD % should be 0.9.0
 on, \qg can load layers that do not have
 an entry in the geometry\_columns table. This includes both tables and views.
 Defining a spatial view provides a powerful means to visualize your data. Refer
@@ -297,7 +297,7 @@ type int4 (an integer of size 4 bytes). Alternatively the ctid column can be
 used as primary key. If a table lacks these items,
 the oid column will be used instead. Performance will be improved if the
 column is indexed (note that primary keys are automatically indexed in
-PostgreSQL). 
+PostgreSQL).
 
 If the PostgreSQL layer is a view, the same requirement exists, but
 views don't have primary keys or columns with unique constraints on
@@ -325,13 +325,13 @@ a PostGIS enabled database. For example, to import a shapefile named
 \filename{lakes.shp}
 into a PostgreSQL database named \usertext{gis\_data}, use the following command:
 
-\begin{verbatim} 
+\begin{verbatim}
   shp2pgsql -s 2964 lakes.shp lakes_new | psql gis_data
 \end{verbatim}
 
 This creates a new layer named \usertext{lakes\_new} in the
 \usertext{gis\_data} database. The
-new layer will have a spatial reference identifier (SRID) of 2964. See Section 
+new layer will have a spatial reference identifier (SRID) of 2964. See Section
 \ref{label_projections} for more information on spatial reference systems and
 projections.
 \begin{Tip}
@@ -343,19 +343,19 @@ PostGIS distribution.
 
 \minisec{SPIT Plugin}
 \includegraphics[width=0.7cm]{spiticon} \qg comes with a
-plugin named 
+plugin named
 SPIT (Shapefile to PostGIS Import Tool)\index{PostGIS!SPIT}.
 SPIT can be used to load multiple shapefiles at one time and includes support
 for schemas. To use SPIT, open the Plugin Manager from the \mainmenuopt{Plugins}
 menu, check the box next to the \checkbox{SPIT plugin} and click \button{OK}. The SPIT
-icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}. 
+icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}.
 
-To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the 
+To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the
 toolbar to open the \\
-\dialog{SPIT - Shapefile to PostGIS Import Tool} dialog. Select the PostGIS database 
-you want to connect to and click on \button{Connect}. Now you can add one or more 
-files to the queue by clicking on the \button{Add} button. To process the files, 
-click on the \button{OK} button. The progress of the import as well as any 
+\dialog{SPIT - Shapefile to PostGIS Import Tool} dialog. Select the PostGIS database
+you want to connect to and click on \button{Connect}. Now you can add one or more
+files to the queue by clicking on the \button{Add} button. To process the files,
+click on the \button{OK} button. The progress of the import as well as any
 errors/warnings will be displayed as each shapefile is processed.
 
 \begin{Tip}\caption{\textsc{Importing Shapefiles Containing
@@ -367,7 +367,7 @@ of each field. You can edit the field names\index{PostGIS!SPIT!editing field nam
 prior to import and change any that are reserved words (or change any other
 field names as desired). Attempting to
 import a shapefile with reserved words as field names will likely fail.
-\end{Tip} 
+\end{Tip}
 
 \minisec{ogr2ogr}
 Beside \filename{shp2pgsql} and \filename{SPIT} there is another tool for feeding
@@ -416,7 +416,7 @@ documentation available at \url{http://postgis.refractions.net}}
 index is:
 
 \begin{verbatim}
-    CREATE INDEX [indexname] ON [tablename] 
+    CREATE INDEX [indexname] ON [tablename]
       USING GIST ( [geometryfield] GIST_GEOMETRY_OPS );
 \end{verbatim}
 
@@ -473,7 +473,7 @@ the data to be plotted in a \degrees{180} centric map.
    \centering
    \includegraphics[clip=true, width=9cm]{vectorWrapping}
    \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore Shift\textunderscore Longitude function \nixcaption}
-\label{fig:vector_wrapping}   
+\label{fig:vector_wrapping}
 \end{figure}
 
 \minisec{Usage}
@@ -482,27 +482,27 @@ the data to be plotted in a \degrees{180} centric map.
 \item Import data to PostGIS (\ref{sec:loading_postgis_data}) using for
 example the PostGIS Manager plugin or the SPIT plugin
 \item Use the PostGIS command line interface to issue the following command
-(this is an example where "TABLE" is the actual name of your PostGIS table) \\ 
-\texttt{gis\_data=\# update TABLE set the\_geom=ST\_shift\_longitude(the\_geom);} 
+(this is an example where "TABLE" is the actual name of your PostGIS table) \\
+\texttt{gis\_data=\# update TABLE set the\_geom=ST\_shift\_longitude(the\_geom);}
 \item If everything went right you should receive a confirmation about the
 number of features that were updated, then you'll be able to load the map and
 see the difference (Figure \ref{fig:vector_wrapping})
 \end{itemize}
 
-\section{SpatiaLite Layers} 
+\section{SpatiaLite Layers}
 \index{SpatiaLite layers!properties dialog}
 \index{vector layers!SpatlaLIte|see{SpatiaLite}}
 \index{SpatiaLite!layers}
-\label{label_spatialite} 
+\label{label_spatialite}
 
 \includegraphics[width=0.7cm]{mActionAddSpatiaLiteLayer}
-The first time you load data from a SpatiaLite database, begin by clicking on the 
-\toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the 
-\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...} 
-option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}. 
-This will bring up a window, which will allow you to either connect to a SpatiaLite database already known to \qg, which 
-you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection, 
-click on \button{New} and use the file browser to point to your SpatiaLite database, 
+The first time you load data from a SpatiaLite database, begin by clicking on the
+\toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the
+\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...}
+option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}.
+This will bring up a window, which will allow you to either connect to a SpatiaLite database already known to \qg, which
+you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection,
+click on \button{New} and use the file browser to point to your SpatiaLite database,
 which is a file with a \filename{.sqlite } extension.
 
 \section{The Vector Properties Dialog}\label{sec:vectorprops}
@@ -512,15 +512,15 @@ The \dialog{Layer Properties} dialog for a vector layer provides information
 about the layer, symbology settings and labeling options. If your vector
 layer has been loaded from a PostgreSQL/PostGIS datastore, you can also alter
 the underlying SQL for the layer by invoking the \dialog{Query Builder}
-dialog on the \tab{General} tab. 
+dialog on the \tab{General} tab.
 To access the \dialog{Layer Properties} dialog, double-click on a layer in
 the legend or right-click on the layer and select \dropmenuopt{Properties}
 from the popup menu.
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology} 
-   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}   
+   \includegraphics[clip=true, width=12cm]{vectorLayerSymbology}
+   \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}
  \end{figure}
 
 \subsection{Symbology Tab}\label{sec:symbology}
@@ -530,7 +530,7 @@ from the popup menu.
 vector features are displayed. Currently the following renderers
 are available:
 
-\begin{description} 
+\begin{description}
     \item[Single symbol] - a single style is applied to every
     object in the layer.\index{vector layers!renderers!single symbol}
     \item[Graduated symbol] - objects within the layer are
@@ -545,8 +545,8 @@ color}
     different symbol.\index{vector layers!renderers!unique value}
 \end{description}
 
-To change the symbology for a layer, simply double click on its legend 
-entry and the vector \dialog{Layer Properties} dialog will be 
+To change the symbology for a layer, simply double click on its legend
+entry and the vector \dialog{Layer Properties} dialog will be
 shown.\index{symbology!changing}
 
 \begin{figure}[ht]
@@ -562,7 +562,7 @@ shown.\index{symbology!changing}
 \end{figure}
 
 % FIXME: outdated
-% Since \usertext{version v0.9} there is a function to use image files stored on 
+% Since \usertext{version v0.9} there is a function to use image files stored on
 % your computer as fill pattern for vector layers.
 
 \minisec{Style Options} \label{sec:style_options} \index{vector layers!styles}
@@ -593,110 +593,110 @@ separate file (with \filename{*.qml}-ending).
 To do this, use the button \button{Save Style \ldots}. No need to say that
 \button{Load Style \ldots} loads your saved layer-style-file.
 
-If you wish to always use a particular style whenever the layer is loaded, 
-use the \button{Save As Default} button to make your style the default. Also, 
-if you make changes to the style that you are not happy with, use the \button{Restore 
+If you wish to always use a particular style whenever the layer is loaded,
+use the \button{Save As Default} button to make your style the default. Also,
+if you make changes to the style that you are not happy with, use the \button{Restore
 Default Style} button to revert to your default style.
 
 \minisec{Vector transparency} \label{sec:vect_transparency}
 \index{vector layers!transparency}
 
 \qg allows to set a transparency for every vector layer. This can be done with
-the slider \\ 
+the slider \\
 \slider{Transparency} inside the \tab{symbology} tab (see
 fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
 vector layers.
 
 \subsection{New Generation Symbology}
 
-Since \qg 1.4.0  a new symbology was integrated in parallel with the symbology 
-described above. This new generation symbology provides a variety of improvements and 
-new features and will replace the current symbology in one of the upcoming releases. 
-To switch to the new symbolgy you currently have to click on the \button{New symbology} button in the \tab{General} tab of the \dialog{Layer Properties} dialog. You can 
-also make the New symobolgy the default, activating \checkbox{Use new generation symbology for rendering} in the \tab{Rendering \& SVG} tab under the \mainmenuopt{Settings} > \dropmenuopt{Options} menu. 
+Since \qg 1.4.0  a new symbology was integrated in parallel with the symbology
+described above. This new generation symbology provides a variety of improvements and
+new features and will replace the current symbology in one of the upcoming releases.
+To switch to the new symbolgy you currently have to click on the \button{New symbology} button in the \tab{General} tab of the \dialog{Layer Properties} dialog. You can
+also make the New symobolgy the default, activating \checkbox{Use new generation symbology for rendering} in the \tab{Rendering \& SVG} tab under the \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu.
 
 \minisec{Understanding the new generation symbology}
 
-There are three types of symbols: marker symbols (for points), line symbols and 
-fill symbols (for polygons). Symbols can consist of one or more symbol layers. It 
-is possible to define the color of a symbol and this color is then defined for all 
-symbol layers. Some layers may have the color locked - for those the color can not 
-be altered. This is useful when you define the color of a multilayer symbol. 
-Similarly, it is possible to define the width for line symbols, as well as size and 
+There are three types of symbols: marker symbols (for points), line symbols and
+fill symbols (for polygons). Symbols can consist of one or more symbol layers. It
+is possible to define the color of a symbol and this color is then defined for all
+symbol layers. Some layers may have the color locked - for those the color can not
+be altered. This is useful when you define the color of a multilayer symbol.
+Similarly, it is possible to define the width for line symbols, as well as size and
 angle for marker symbols.
 
-\minisec{Available symbol layer types} 
+\minisec{Available symbol layer types}
 
 \begin{itemize}[label=--]
 \item \textbf{Simple marker}: Rendering with one of hardcoded markers.
-\item \textbf{Simple line}: Usual rendering of a line (with specified 
-width, color and pen style). 
-\item \textbf{Simple fill}: Usual rendering of a polygon (with defined 
-fill color, fill pattern and outline). 
-\item \textbf{SVG marker}: Rendering with a SVG picture. 
-\item \textbf{Marker line}: A line rendered by repeating a marker symbol. 
+\item \textbf{Simple line}: Usual rendering of a line (with specified
+width, color and pen style).
+\item \textbf{Simple fill}: Usual rendering of a polygon (with defined
+fill color, fill pattern and outline).
+\item \textbf{SVG marker}: Rendering with a SVG picture.
+\item \textbf{Marker line}: A line rendered by repeating a marker symbol.
 \end{itemize}
 
 \minisec{Color ramps}
 
-Color ramps are used to define a range of colors that can be used during 
-the creation of renderers. The symbol's color will be set from the color ramp. 
+Color ramps are used to define a range of colors that can be used during
+the creation of renderers. The symbol's color will be set from the color ramp.
 
 There are three types of color ramps:
 
 \begin{itemize}[label=--]
 \item \textbf{Gradient}: Linear gradient from one color to some other.
-\item \textbf{Random}: Randomly generated colors from a specified area of 
+\item \textbf{Random}: Randomly generated colors from a specified area of
 color space.
-\item \textbf{ColorBrewer}: Create color area from a color shema and a defined 
+\item \textbf{ColorBrewer}: Create color area from a color shema and a defined
 number of color classes.
 \end{itemize}
 
-Color ramps can be defined in the \dialog{Style Manager} dialog (see Section 
+Color ramps can be defined in the \dialog{Style Manager} dialog (see Section
 \ref{subsec:stylemanager}) by selecting \\
 \selectstring{Style item type:}{Color ramp} as style element type from the drop-down list, clicking on \button{Add item} button and then choosing a color ramp type.
 
 \minisec{Styles}
 
-A style groups a set of various symbols and color ramps. You can define your 
-prefered or frequently used symbols, and can use it  without having to recreate 
-it everytime. Style items (symbols and color ramps) have always a name by which 
-they can be queried from the style. There is one default style in \qg (modifiable) 
+A style groups a set of various symbols and color ramps. You can define your
+prefered or frequently used symbols, and can use it  without having to recreate
+it everytime. Style items (symbols and color ramps) have always a name by which
+they can be queried from the style. There is one default style in \qg (modifiable)
 and the user can add further styles.
 
 \minisec{Renderers}
 
-The renderer is responsible for drawing a feature together with the correct 
-symbol. There are three types of renderers: single symbol, categorized (called 
-unique color in the old symbology), and graduated. There is no continuous color 
-renderer, because it is in fact only a special case of the graduated renderer. 
-The categorized and graduated renderer can be created by specifying a symbol 
-and a color ramp - they will set the colors for symbols appropriately. 
+The renderer is responsible for drawing a feature together with the correct
+symbol. There are three types of renderers: single symbol, categorized (called
+unique color in the old symbology), and graduated. There is no continuous color
+renderer, because it is in fact only a special case of the graduated renderer.
+The categorized and graduated renderer can be created by specifying a symbol
+and a color ramp - they will set the colors for symbols appropriately.
 
 \subsection{Working with the New Generation Symbology}
 
-First you have to enable the new generation symbology clicking on the 
-\button{New symbology} button in the \tab{Symbology} tab of the 
-\dialog{Layer Properties} dialog. The new dialog allows to choose one of the 
-three renderers: single symbol, categorized and graduated. Depending on the 
-chosen renderer, the symbology tab provides different settings and options, that 
+First you have to enable the new generation symbology clicking on the
+\button{New symbology} button in the \tab{Symbology} tab of the
+\dialog{Layer Properties} dialog. The new dialog allows to choose one of the
+three renderers: single symbol, categorized and graduated. Depending on the
+chosen renderer, the symbology tab provides different settings and options, that
 will be described in the following sections.
 
 \minisec{Single Symbol Renderer}
 
-The Single Symbol Renderer is used to render all features of the layer using a 
-single user-defined symbol. The properties, that can be adjusted in the 
-Symbology tab, depend partially on the type of the layer, but all types share 
-the following structure. In the top left part of the tab, there is a preview of 
-the current symbol to be rendered. In the bottom part of the tab, there is a 
-list of symbols already defined for the current style, prepared to be used via 
-selecting them from the list. The current symbol can be modified using the 
-\button{Properties} button, which opens a \dialog{Symbol Properties} dialog, or 
+The Single Symbol Renderer is used to render all features of the layer using a
+single user-defined symbol. The properties, that can be adjusted in the
+Symbology tab, depend partially on the type of the layer, but all types share
+the following structure. In the top left part of the tab, there is a preview of
+the current symbol to be rendered. In the bottom part of the tab, there is a
+list of symbols already defined for the current style, prepared to be used via
+selecting them from the list. The current symbol can be modified using the
+\button{Properties} button, which opens a \dialog{Symbol Properties} dialog, or
 the \button{Set Color} button, which opens an ordinary \dialog{Color} dialog.
-After having done any needed changes, the symbol can be added to the list of 
-current style symbols (using the \button{Add to style} button) and then easily 
+After having done any needed changes, the symbol can be added to the list of
+current style symbols (using the \button{Add to style} button) and then easily
 be used in the future.
- 
+
 \begin{figure}[ht]
 \centering
    \subfloat[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}
@@ -709,21 +709,21 @@ be used in the future.
 
 \minisec{Categorized Renderer}
 
-The Categorized Renderer is used to render all features from a layer, using a 
-single user-defined symbol, which color reflects the value of a selected 
+The Categorized Renderer is used to render all features from a layer, using a
+single user-defined symbol, which color reflects the value of a selected
 feature's attribute. The Symbology tab allows you to select:
 
 \begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
 \item The symbol (using the Symbol Properties dialog)
-\item The colors (using the Color Ramp listbox)  
+\item The colors (using the Color Ramp listbox)
 \end{itemize}
 
-For convenience, the list in the bottom part of the tab lists the values of 
-all currently selected attributes together, including the symbols that will 
+For convenience, the list in the bottom part of the tab lists the values of
+all currently selected attributes together, including the symbols that will
 be rendered.
 
-The example in figure \ref{fig:catsymNG} shows the category rendering dialog 
+The example in figure \ref{fig:catsymNG} shows the category rendering dialog
 used for the rivers layer of the \qg sample dataset.
 
 \begin{figure}[ht]
@@ -734,8 +734,8 @@ used for the rivers layer of the \qg sample dataset.
 
 \minisec{Graduated rendering}
 
-The Graduated Renderer is used to render all the features from a layer, using 
-a single user-defined symbol, whose color reflects the classification of a selected 
+The Graduated Renderer is used to render all the features from a layer, using
+a single user-defined symbol, whose color reflects the classification of a selected
 feature's attribute to a class.
 
 Analogue to the categorized rendered, the symbology tab allows you to select:
@@ -746,12 +746,12 @@ Analogue to the categorized rendered, the symbology tab allows you to select:
 \item The colors (using the Color Ramp list)
 \end{itemize}
 
-Additionally, you can specify the number of classes and also the mode how to 
-classify features inside the classes (using the Mode list). The listbox in the 
-bottom part of the symbology tab lists the classes together with their ranges, 
+Additionally, you can specify the number of classes and also the mode how to
+classify features inside the classes (using the Mode list). The listbox in the
+bottom part of the symbology tab lists the classes together with their ranges,
 labels and symbols that will be rendered.
 
-The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog 
+The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog
 for the rivers layer of the \qg sample dataset.
 
 \begin{figure}[ht]
@@ -777,9 +777,9 @@ for the rivers layer of the \qg sample dataset.
 
 \minisec{Point displacement}
 
-The point displacement renderer offers to visualize all features of a point 
-layer, even if they have the same location. To do this, the symbols of the 
-points are placed on a displacement circle around a center symbol. 
+The point displacement renderer offers to visualize all features of a point
+layer, even if they have the same location. To do this, the symbols of the
+points are placed on a displacement circle around a center symbol.
 
 \begin{figure}[ht]
    \centering
@@ -789,19 +789,19 @@ points are placed on a displacement circle around a center symbol.
 
 \minisec{Symbol Properties}
 
-The symbol properties dialog allows the user to specify different properties of 
-the symbol to be rendered. In the top left part of the dialog, you find a preview 
-of the current symbol as it will be displayed in the map canvas. Below the preview 
-is the list of symbol layers. To start the symbol properties dialog, click the 
+The symbol properties dialog allows the user to specify different properties of
+the symbol to be rendered. In the top left part of the dialog, you find a preview
+of the current symbol as it will be displayed in the map canvas. Below the preview
+is the list of symbol layers. To start the symbol properties dialog, click the
 \dropmenuopttwo{mActionOptions}{Properties} button in the \tab{Symbology} tab of the
-\dialog{Layer Properties} dialog. 
+\dialog{Layer Properties} dialog.
 
-The control panels allow adding or removing layers, changing the position of layers, 
-or locking layers for color changes. In the right part of the dialog, there are 
-shown the settings applicable to the single symbol layer selected in the symbol 
-layer list. The most important is the 'Symbol Layer Type' combo box, which allows 
-you to choose the layer type. The available options depend on the layer type 
-(Point, Line, Polygon). 
+The control panels allow adding or removing layers, changing the position of layers,
+or locking layers for color changes. In the right part of the dialog, there are
+shown the settings applicable to the single symbol layer selected in the symbol
+layer list. The most important is the 'Symbol Layer Type' combo box, which allows
+you to choose the layer type. The available options depend on the layer type
+(Point, Line, Polygon).
 
 \begin{description}
 \item Symbol layer type options for point layers
@@ -817,7 +817,7 @@ you to choose the layer type. The available options depend on the layer type
 \end{itemize}
 \item Symbol layer type options for polygon layers
 \begin{itemize}[label=--]
-\item \textbf{SimpleFill}: Color, Fill style, Border color, Border style, Border width 
+\item \textbf{SimpleFill}: Color, Fill style, Border color, Border style, Border width
 \end{itemize}
 \end{description}
 
@@ -829,20 +829,20 @@ you to choose the layer type. The available options depend on the layer type
    \subfloat[Symbol properties for point layer] {\label{subfig:symprops2}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties2}}
    \hspace{1cm}
    \subfloat[Filling pattern for a polygon] {\label{subfig:symprops3}\includegraphics[clip=true, width=0.3\textwidth]{symbolproperties3}}
-\caption{Defining symbol properties \nixcaption}   
+\caption{Defining symbol properties \nixcaption}
 \end{figure}
 
 \subsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
 
-The Style Manger is a small helper application, that lists symbols and color 
-ramps available in a style. It also allows you to add and/or remove items. To 
-launch the Style Manager, click on \mainmenuopt{Settings} > \dropmenuopt{Style 
+The Style Manger is a small helper application, that lists symbols and color
+ramps available in a style. It also allows you to add and/or remove items. To
+launch the Style Manager, click on \mainmenuopt{Settings} \arrow \dropmenuopt{Style
 Manager} in the main menu.
 
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=7cm]{stylemanager}
-   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}   
+   \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}
 \end{figure}
 
 \subsection{Labels Tab}\label{labeltab}
@@ -860,7 +860,7 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Open the \dialog{Layer Properties} dialog.
 \item Click on the \tab{Labels} tab.
 \item Check the \checkbox{Display labels} checkbox to enable labeling.
-\item Choose the field to label with. 
+\item Choose the field to label with.
   We'll use \selectstring{Field containing label}{NAMES}.
 \item Enter a default for lakes that have no name. The default label will be
   used each time \qg encounters a lake with no value in the \guilabel{NAMES}
@@ -871,7 +871,7 @@ insert the line breaks accordingly. A true line return is a \textbf{single}
 character \textbackslash n, (not two separate characters, like a backlash
 \textbackslash ~followed by the character n).
 \item Click \button{Apply}.
-\end{enumerate} 
+\end{enumerate}
 
 Now we have labels. How do they look? They are probably too big and poorly
 placed in relation to the marker symbol for the lakes.
@@ -882,7 +882,7 @@ placement of the text-label.
 
 To change the position of the text relative to the feature:
 
-\begin{enumerate} 
+\begin{enumerate}
 \item Click on the \tab{Font} entry.
 \item Change the placement by selecting one of the radio buttons
 in the \classname{Placement} group. To fix our labels, choose the
@@ -890,7 +890,7 @@ in the \classname{Placement} group. To fix our labels, choose the
 \item the \classname{Font size units} allows you to select between
 \radiobuttonon{Points} or \radiobuttonon{Map units}.
 \item Click \button{Apply} to see your changes without closing the dialog.
-\end{enumerate} 
+\end{enumerate}
 
 Things are looking better, but the labels are still too close to the marker. To
 fix this we can use the options on the \tab{Position} entry. Here we can add
@@ -910,7 +910,7 @@ lakes labels:
   favorite from the color selector. You can also set some transparency for the
   buffer if you prefer.
 \item Click \button{Apply} to see if you like the changes.
-\end{enumerate} 
+\end{enumerate}
 
 If you aren't happy with the results, tweak the settings and then test again
 by clicking \button{Apply}.
@@ -930,7 +930,7 @@ selected label is shown.
 
 The new \toolbtntwo{labeling}{Labeling} core application provides smart labeling
 for vector point,  line and polygon layers and only requires a few parameters.
-This new application will replace the current QGIS labeling, described in section 
+This new application will replace the current QGIS labeling, described in section
 \ref{labeltab} and also supports on-the-fly transformated layers.
 
 \minisec{Using new labeling}
@@ -946,7 +946,7 @@ This new application will replace the current QGIS labeling, described in sectio
 First step is to activate the \checkbox{Label this layer} checkbox and select an attribute
 column to use for labeling. After that you can define the label placement and text style,
 labeling priority, scale-based visibility, if every part of multipart feature is to be
-labeled and if features act as obstacles for labels or not (see 
+labeled and if features act as obstacles for labels or not (see
 Figure \ref{fig:pointlabel}).
 
 \begin{figure}[ht]
@@ -1014,7 +1014,7 @@ a GDAL version >= 1.6 installed.
    \centering
    \includegraphics[clip=true, width=12cm]{editwidgetsdialog}
    \caption{Dialog to select an edit widget for an attribute column
-\nixcaption}\label{fig:editwidget}   
+\nixcaption}\label{fig:editwidget}
 \end{figure}
 
 Within the \tab{Attributes} tab you also find an \texttt{edit widget} column.
@@ -1077,7 +1077,7 @@ passing parameters to a web reporting tool.
 
 Actions are useful when you frequently want to run an external application or
 view a web page based on one or more values in your vector layer. An example
-is performing a search based on an attribute value. This concept is used in 
+is performing a search based on an attribute value. This concept is used in
 the following discussion.
 
 \minisec{Defining Actions}\index{actions!defining}
@@ -1157,7 +1157,7 @@ the action to achieve this:
 
 \begin{verbatim}
   bash -c "echo \"%taxon_name %lat %long\" >> /tmp/species_localities.txt"
-\end{verbatim} 
+\end{verbatim}
 
 After selecting a few localities and running the action on each one, opening
 the output file will show something like this:
@@ -1167,9 +1167,9 @@ the output file will show something like this:
   Acacia mearnsii -34.9000000000 150.1200000000
   Acacia mearnsii -35.2200000000 149.9300000000
   Acacia mearnsii -32.2700000000 150.4100000000
-\end{verbatim} 
+\end{verbatim}
 
-As an exercise we create an action that does a Google search on the 
+As an exercise we create an action that does a Google search on the
 \filename{lakes} layer. First we need to determine the URL needed to perform a search on a
 keyword. This is easily done by just going to Google and doing a simple
 search, then grabbing the URL from the address bar in your browser. From this
@@ -1199,7 +1199,7 @@ proceed:
   \url{http://google.com/search?q=\%NAMES}}
 \item Fo finalize the action click the \button{Insert action} button.
 \end{enumerate}
- 
+
 This completes the action and it is ready to use. The final text of the action
 should look like this:
 
@@ -1211,18 +1211,18 @@ lake. In the result box you'll now see that our action is visible:
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[clip=true, width=7cm]{action_identifyaction} 
+   \includegraphics[clip=true, width=7cm]{action_identifyaction}
    \caption{Select feature and choose action \nixcaption}\label{fig:identify_action}
 \end{figure}
 
 When we click on the action, it brings up Firefox and navigates to the URL
-\url{http://www.google.com/search?q=Tustumena}. It is also possible to add further 
-attribute fields to the action. Therefore you can add a ``+'' to the end of the action 
-text, select another field and click on \button{Insert Field}. In this example there 
+\url{http://www.google.com/search?q=Tustumena}. It is also possible to add further
+attribute fields to the action. Therefore you can add a ``+'' to the end of the action
+text, select another field and click on \button{Insert Field}. In this example there
 is just no other field available that would make sense to search for.
 
 You can define multiple actions for a layer and each will show up in the
-\dialog{Identify Results} dialog. 
+\dialog{Identify Results} dialog.
 %% FIXME No longer valid??
 %%You can also invoke actions from the attribute table
 %%by selecting a row and right-clicking, then choosing the action from the popup
@@ -1238,7 +1238,7 @@ fields, specifying them in the same way we did in our Google search example.
 \index{vector layers!diagram}
 
 The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer.
-To activate this feature, open the Plugin Manager and select the Diagram Overlay' 
+To activate this feature, open the Plugin Manager and select the Diagram Overlay'
 plugin. After this, there is a new tab in the vector \dialog{Layer
 Properties} dialog where the settings for diagrams may be entered (see
 figure~\ref{fig:diagramtab}).
@@ -1249,10 +1249,10 @@ figure~\ref{fig:diagramtab}).
    \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}
 \end{figure}
 
-The current implementation of diagrams provides support for piecharts, barcharts, 
-proportional SVG symbols, and for linear scaling of the diagram size according 
-to a classification attribute. We will demonstrate an example and overlay the 
-alaska boundary layer a barchart diagram showing some temperature data from 
+The current implementation of diagrams provides support for piecharts, barcharts,
+proportional SVG symbols, and for linear scaling of the diagram size according
+to a classification attribute. We will demonstrate an example and overlay the
+alaska boundary layer a barchart diagram showing some temperature data from
 a climate vector layer. Both vector layers are part of the \qg sample dataset (see
 Section~\ref{label_sampledata}.
 
@@ -1267,7 +1267,7 @@ Diagram type.
 \item In the diagram we want to display the values of the three columns
 \filename{T\_F\_JAN, T\_F\_JUL} and \filename{T\_F\_MEAN}. First select
 \filename{T\_F\_JAN} as Attributes and click \button{Add attribute}, then
-\filename{T\_F\_JUL} and finally \filename{T\_F\_MEAN}.  
+\filename{T\_F\_JUL} and finally \filename{T\_F\_MEAN}.
 \item For linear scaling of the diagram size we define \filename{T\_F\_JUL}
 as classification attribute.
 \item Now click on \button{find maximum value}, choose a size value and unit
@@ -1275,7 +1275,7 @@ and click \button{Apply} to display the diagram in the \qg main window.
 \item You can now adapt the chart size, or change the attribute colors double
 clicking on the color values in the attribute field.
 Figure~\ref{fig:climatediagram} gives an impression.
-\item Finally click \button{Ok}. 
+\item Finally click \button{Ok}.
 \end{enumerate}
 
 \begin{figure}[ht]
@@ -1286,8 +1286,8 @@ Figure~\ref{fig:climatediagram} gives an impression.
 
 \section{Editing}\index{editing}
 
-\qg supports various capabilities for editing OGR, PostGIS and Spatialite 
-vector layers. \textbf{Note} - the procedure for editing GRASS layers is 
+\qg supports various capabilities for editing OGR, PostGIS and Spatialite
+vector layers. \textbf{Note} - the procedure for editing GRASS layers is
 different - see Section \ref{grass_digitising} for details.
 
 \begin{Tip}\caption{\textsc{Concurrent Edits}}
@@ -1299,7 +1299,7 @@ feature at the same time as you. The last person to save their edits wins.
 
 Before we can edit vertices, we must set the snapping
 tolerance and search radius to a value that allows us an optimal editing of
-the vector layer geometries. 
+the vector layer geometries.
 
 \minisec{Snapping tolerance}
 
@@ -1307,24 +1307,24 @@ Snapping tolerance is the distance \qg uses to \usertext{search} for the
 closest vertex and/or segment you are trying to
 connect when you set a new vertex or move an existing vertex. If you aren't
 within the snap tolerance, \qg will leave the vertex where you release the
-mouse button, instead of snapping it to an existing vertex and/or segment. 
-The snapping tolerance setting affects all tools which work with tolerance. 
+mouse button, instead of snapping it to an existing vertex and/or segment.
+The snapping tolerance setting affects all tools which work with tolerance.
 
 \begin{enumerate}
 \item A general, project wide snapping tolerance can be defined choosing
-\mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Options}. 
-(On Mac: go to  \mainmenuopt{\qg} > Preferences, on Linux: \mainmenuopt{Edit} > \dropmenuopttwo{mActionOptions}{Options}.)
+\mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Options}.
+(On Mac: go to  \mainmenuopt{\qg} \arrow Preferences, on Linux: \mainmenuopt{Edit} \arrow \dropmenuopttwo{mActionOptions}{Options}.)
 In the \tab{Digitizing} tab you can select between to vertex, to segment or
 to vertex and segment as default snap mode. You can also define a default
-snapping tolerance and a search radius for vertex edits. The tolerance an be 
-set either in map units or in pixels. The advantage of choosing pixels, is 
-that the snapping tolerance doesn't have to be changed after zoom operations. 
-In our small digitizing project (working with the Alaska dataset), we define 
-the snapping units in feet. Your results may vary, but something on the order 
-of 300ft should be fine at a scale of 1:10 000 should be a reasonable 
+snapping tolerance and a search radius for vertex edits. The tolerance an be
+set either in map units or in pixels. The advantage of choosing pixels, is
+that the snapping tolerance doesn't have to be changed after zoom operations.
+In our small digitizing project (working with the Alaska dataset), we define
+the snapping units in feet. Your results may vary, but something on the order
+of 300ft should be fine at a scale of 1:10 000 should be a reasonable
 setting.
 \item A layer based snapping tolerance can be defined by choosing
-\mainmenuopt{Settings} (or \mainmenuopt{File}) > \dropmenuopttwo{mActionOptions}{Project
+\mainmenuopt{Settings} (or \mainmenuopt{File}) \arrow \dropmenuopttwo{mActionOptions}{Project
 Properties\dots}. In the \tab{General} tab, section \classname{Digitize} you
 can click on \button{Snapping options\dots} to enable and adjust snapping
 mode and tolerance on a layer basis (see Figure~\ref{fig:snappingoptions}).
@@ -1333,7 +1333,7 @@ Note that this layer based snapping overrides the global snapping option set in 
 
 \begin{figure}[ht]
    \centering
-   \includegraphics[clip=true, width=12cm]{editProjectSnapping} 
+   \includegraphics[clip=true, width=12cm]{editProjectSnapping}
    \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}
 \end{figure}
 
@@ -1350,7 +1350,7 @@ with a large number of vertices in close proximity. Set search radius too
 small and it won't find anything to move.
 
 The search radius for vertex edits in layer units can be defined in the
-\tab{Digitizing} tab under \mainmenuopt{Settings} >
+\tab{Digitizing} tab under \mainmenuopt{Settings} \arrow
 \dropmenuopttwo{mActionOptions}{Options}. The same place where you define the
 general, project wide snapping tolerance.
 
@@ -1375,7 +1375,7 @@ to zoom in and backwards (towards you) to zoom out. The mouse cursor position
 will
 be the center of the zoomed area of interest. You can customize the behavior
 of the mouse wheel zoom using the \tab{Map tools} tab under the
-\mainmenuopt{Settings} >\dropmenuopt{Options} menu.
+\mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu.
 
 \minisec{Panning with the arrow keys}
 
@@ -1390,25 +1390,25 @@ display to zoom in or out without interrupting your digitising session.
 
 \subsubsection{Topological editing}
 
-Besides layer based snapping options the \tab{General} tab in menu 
-\mainmenuopt{Settings} -> \dropmenuopttwo{mActionOptions}{Project Properties\dots} 
-also provides some topological functionalities. 
-In the Digitizing option group you can \checkbox{Enable topological editing} and/or activate 
+Besides layer based snapping options the \tab{General} tab in menu
+\mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Project Properties\dots}
+also provides some topological functionalities.
+In the Digitizing option group you can \checkbox{Enable topological editing} and/or activate
 \checkbox{Avoid intersections of new polygons}.
 
 \minisec{Enable topological editing}
 
-The option \checkbox{Enable topological editing} is for editing and maintaining 
-common boundaries in polygon mosaics. \qg "detects" a shared boundary in 
-a polygon mosaic and you only have to move the vertex once and \qg will take 
+The option \checkbox{Enable topological editing} is for editing and maintaining
+common boundaries in polygon mosaics. \qg "detects" a shared boundary in
+a polygon mosaic and you only have to move the vertex once and \qg will take
 care about updating the other boundary.
 
 \minisec{Avoid intersections of new polygons}
 
-The second topological option called \checkbox{Avoid intersections of new polygons} 
-avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons. 
-If you already have one polygon, it is possible with this option to digitise the second 
-one such that both intersect and \qg then cuts the second polygon to the common boundary. 
+The second topological option called \checkbox{Avoid intersections of new polygons}
+avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons.
+If you already have one polygon, it is possible with this option to digitise the second
+one such that both intersect and \qg then cuts the second polygon to the common boundary.
 The advantage is that users don't have to digitize all vertices of the common boundary.
 
 \subsection{Digitizing an existing layer}
@@ -1425,7 +1425,7 @@ PostgreSQL/PostGIS data sources.
 
 In general, editing vector layers is divided into a digitizing and an advanced
 digitizing toolbar, described in Section \ref{sec:advanced_edit}. You can
-select and unselect both under \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.
+select and unselect both under \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
 Using the basic digitizing tools you can perform the following functions:
 
 \begin{table}[ht]\index{vector layers!basic editing tools}
@@ -1443,17 +1443,17 @@ Using the basic digitizing tools you can perform the following functions:
 \hline \includegraphics[width=0.7cm]{mActionMoveFeature}
    & Move Feature
    & \includegraphics[width=0.7cm]{mActionNodeTool}
-   & Node Tool \\ 
+   & Node Tool \\
 \hline \includegraphics[width=0.7cm]{mActionDeleteSelected}
    & Delete Selected
    & \includegraphics[width=0.7cm]{mActionEditCut}
    & Cut Features \\
 \hline \includegraphics[width=0.7cm]{mActionEditCopy}
    & Copy Features
-   & \includegraphics[width=0.7cm]{mActionEditPaste} 
+   & \includegraphics[width=0.7cm]{mActionEditPaste}
    & Paste Features \\
 \hline \includegraphics[width=0.7cm]{mActionFileSave}
-   & Save edits and continue 
+   & Save edits and continue
    &  &  \\
 \hline
 \end{tabular}
@@ -1484,7 +1484,7 @@ that your data source can accept all your changes.
 You can use the \toolbtntwo{mActionCapturePoint}{Capture point},
 \toolbtntwo{mActionCaptureLine}{Capture line} or
 \toolbtntwo{mActionCapturePolygon}{Capture polygon} icons on the toolbar to
-put the \qg cursor into digitizing mode.  
+put the \qg cursor into digitizing mode.
 
 For each feature, you first digitize the geometry, then enter its attributes.
 To digitize the geometry, left-click on the map area to create the first
@@ -1498,8 +1498,8 @@ the geometry of that feature.
 The attribute window will appear, allowing you to enter the information for
 the new feature. Figure \ref{fig:vector_digitising} shows setting attributes
 for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
-\mainmenuopt{Settings} >\dropmenuopt{Options} menu, you can also activate the 
-\\ 
+\mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu, you can also activate the
+\\
 \checkbox{Suppress attributes pop-up windows after each created feature}.
 
 \begin{figure}[ht]
@@ -1522,19 +1522,19 @@ table} dialog.
 \minisec{Node Tool}
 \index{vector layers!node!tool}
 
-For both PostgreSQL/PostGIS and shapefile-based layers, the 
+For both PostgreSQL/PostGIS and shapefile-based layers, the
 \toolbtntwo{mActionNodeTool}{Node Tool} provides manipulation capabilites
 of feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them alltogether. The node
 tool also works with 'on the fly' projection turned on and supports
 the topological editing feature. This tool is, unlike other tools in Quantum GIS,
 persistent, so when some operation is done, selection stays active for this
-feature and tool. If the node tool couldn't find any features, a warning will be 
+feature and tool. If the node tool couldn't find any features, a warning will be
 displayed.
 
-Important is to set the property \mainmenuopt{Settings} >
-\dropmenuopttwo{mActionOptions}{Options} >
-\tab{Digitizing}>\selectnumber{Search Radius}{10} to a number greater than
+Important is to set the property \mainmenuopt{Settings} \arrow
+\dropmenuopttwo{mActionOptions}{Options} \arrow
+\tab{Digitizing} \arrow \selectnumber{Search Radius}{10} to a number greater than
 zero. Otherwise \qg will not be able to tell which vertex is being edited.
 
 \begin{Tip}\caption{\textsc{Vertex Markers}}
@@ -1585,32 +1585,32 @@ the fly projection is also supported.
 \index{editing!pasting features}
 
 Selected features can be cut, copied and pasted between layers in the
-same \qg project, as long as destination layers are set to 
+same \qg project, as long as destination layers are set to
 \toolbtntwo{mActionToggleEditing}{Toggle editing} beforehand.
 
 Features can also be pasted to external applications as text:  That is,
-the features are represented in CSV format with the geometry data appearing 
+the features are represented in CSV format with the geometry data appearing
 in the OGC Well-Known Text (WKT) format.
 
-However in this version of \qg, text features from outside \qg cannot 
-be pasted to a layer within \qg. When would the copy and paste function 
-come in handy? Well, it turns out that you can edit more than one layer 
-at a time and copy/paste features between layers. Why would we want to do 
-this?  Say we need to do some work on a new layer but only need one or 
-two lakes, not the 5,000 on our \filename{big\_lakes} layer. We can create 
-a new layer and use copy/paste to plop the needed lakes into it. 
+However in this version of \qg, text features from outside \qg cannot
+be pasted to a layer within \qg. When would the copy and paste function
+come in handy? Well, it turns out that you can edit more than one layer
+at a time and copy/paste features between layers. Why would we want to do
+this?  Say we need to do some work on a new layer but only need one or
+two lakes, not the 5,000 on our \filename{big\_lakes} layer. We can create
+a new layer and use copy/paste to plop the needed lakes into it.
 
 As an example we are copying some lakes to a new layer:
 
 \begin{enumerate}
 \item Load the layer you want to copy from (source layer)
-\item Load or create the layer you want to copy to (target layer) 
+\item Load or create the layer you want to copy to (target layer)
 \item Start editing for target layer
-\item Make the source layer active by clicking on it in the legend 
+\item Make the source layer active by clicking on it in the legend
 \item Use the \toolbtntwo{mActionSelect}{Select} tool to select the feature(s) on the source layer
 \item Click on the \toolbtntwo{mActionEditCopy}{Copy Features} tool
-\item Make the destination layer active by clicking on it in the legend 
-\item Click on the \toolbtntwo{mActionEditPaste}{Paste Features} tool 
+\item Make the destination layer active by clicking on it in the legend
+\item Click on the \toolbtntwo{mActionEditPaste}{Paste Features} tool
 \item Stop editing and save the changes
 \end{enumerate}
 
@@ -1634,22 +1634,22 @@ involved when converting between projections.
 \minisec{Deleting Selected Features}
 \index{vector layers!deleting!feature}
 
-If we want to delete an entire polygon, we can do that by first selecting 
-the polygon using the regular \toolbtntwo{mActionSelect}{Select Features} tool. You can select 
-multiple features for deletion. Once you have the selection set, use the 
-\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool to delete the features. 
+If we want to delete an entire polygon, we can do that by first selecting
+the polygon using the regular \toolbtntwo{mActionSelect}{Select Features} tool. You can select
+multiple features for deletion. Once you have the selection set, use the
+\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool to delete the features.
 
 The \toolbtntwo{mActionEditCut}{Cut Features} tool on the digitizing toolbar can
 also be used to delete features. This effectively deletes the feature but
-also places it on a ``spatial clipboard". So we cut the feature to delete. 
-We could then use the \toolbtntwo{mActionEditPaste}{paste tool} to put it back, giving us a one-level undo 
-capability. Cut, copy, and paste work on the currently selected features, 
+also places it on a ``spatial clipboard". So we cut the feature to delete.
+We could then use the \toolbtntwo{mActionEditPaste}{paste tool} to put it back, giving us a one-level undo
+capability. Cut, copy, and paste work on the currently selected features,
 meaning we can operate on more than one at a time.
 
 \begin{Tip}\caption{\textsc{Feature Deletion Support}}
 When editing ESRI shapefiles, the deletion
-of features only works if \qg is linked to a GDAL version 1.3.2 or greater. 
-The OS X and Windows versions of \qg available from the download site are built 
+of features only works if \qg is linked to a GDAL version 1.3.2 or greater.
+The OS X and Windows versions of \qg available from the download site are built
 using GDAL 1.3.2 or higher.
 \end{Tip}
 
@@ -1658,11 +1658,11 @@ using GDAL 1.3.2 or higher.
 
 When a layer is in editing mode, any changes remain in the memory of \qg.
 Therefore they are not committed/saved immediately to the data source or disk.
-If you want to save edits to the current layer but want to continue editing 
-without leaving the editing mode, you can click the 
-\toolbtntwo{mActionFileSave}{Save Edits} button. When you turn editing mode 
-off with the \toolbtntwo{mActionToggleEditing}{Toggle editing} (or quit 
-\qg for that matter), you are also asked if you want to save your changes 
+If you want to save edits to the current layer but want to continue editing
+without leaving the editing mode, you can click the
+\toolbtntwo{mActionFileSave}{Save Edits} button. When you turn editing mode
+off with the \toolbtntwo{mActionToggleEditing}{Toggle editing} (or quit
+\qg for that matter), you are also asked if you want to save your changes
 or discard them.
 
 If the changes cannot be saved (e.g. disk full, or the attributes have
@@ -1686,7 +1686,7 @@ integrity of your data, we offer no warranty in this regard.
 \begin{tabular}{|l|p{6.9cm}|l|p{6.9cm}|}
 \hline \textbf{Icon} & \textbf{Purpose} & \textbf{Icon} & \textbf{Purpose} \\
 \hline \includegraphics[width=0.7cm]{mActionUndo}
-   & Undo 
+   & Undo
    & \includegraphics[width=0.7cm]{mActionRedo}
    & Redo \\
 \hline \includegraphics[width=0.7cm]{mActionSimplify}
@@ -1719,21 +1719,21 @@ integrity of your data, we offer no warranty in this regard.
 \index{vector layers!redo}
 
 The \toolbtntwo{mActionUndo}{Undo} and \toolbtntwo{mActionRedo}{Redo} tools
-allow the user to undo or redo the last or a certain step within the vector editing 
-operations. Basic view of Undo/Redo operations is a widget, where all operations 
-are shown (see Figure~\ref{fig:vector_redoundo}). This widget is not displayed by 
-default. Widget can be displayed by right clicking on toolbar and activating the 
-Undo/Redo check box. Undo/Redo is however active, even if the widget is not 
-displayed. 
+allow the user to undo or redo the last or a certain step within the vector editing
+operations. Basic view of Undo/Redo operations is a widget, where all operations
+are shown (see Figure~\ref{fig:vector_redoundo}). This widget is not displayed by
+default. Widget can be displayed by right clicking on toolbar and activating the
+Undo/Redo check box. Undo/Redo is however active, even if the widget is not
+displayed.
 
-When Undo is hit, the state of all features and attributes are reverted to the 
-state before the reverted operation happened. Changes which are done elsewhere 
-(for example from some plugin), can show unspecific behavior for some operations 
-which appears in this box. The operations can be reverted or they stay the same. 
+When Undo is hit, the state of all features and attributes are reverted to the
+state before the reverted operation happened. Changes which are done elsewhere
+(for example from some plugin), can show unspecific behavior for some operations
+which appears in this box. The operations can be reverted or they stay the same.
 
-An action can be triggered by clicking on Undo or Redo buttons or by clicking 
-directly on the item to which you want to return to. Another possibility to 
-trigger an undo operation is to click on the \button{undo/redo} buttons in 
+An action can be triggered by clicking on Undo or Redo buttons or by clicking
+directly on the item to which you want to return to. Another possibility to
+trigger an undo operation is to click on the \button{undo/redo} buttons in
 the advanced digitizing tool bar.
 
 \begin{figure}[ht]
@@ -1746,11 +1746,11 @@ the advanced digitizing tool bar.
 \index{vector layers!simplify}
 
 The \toolbtntwo{mActionSimplify}{Simplify Feature} tool allows to reduce the
-number of vertices of a feature, as long as the geometry doesn't change. You 
-need to select a feature, it will be highlighted by a red rubber band and a 
-slider appears. Moving the slider, the red rubber band is changing its shape 
-to show how the feature is being simplified. Clicking \button{OK} the new, 
-simplified geometry will be stored. If a feature cannot be simplified (e.g. 
+number of vertices of a feature, as long as the geometry doesn't change. You
+need to select a feature, it will be highlighted by a red rubber band and a
+slider appears. Moving the slider, the red rubber band is changing its shape
+to show how the feature is being simplified. Clicking \button{OK} the new,
+simplified geometry will be stored. If a feature cannot be simplified (e.g.
 MultiPolygons), a message shows up.
 
 \minisec{Add Ring}
@@ -1765,15 +1765,15 @@ a ring polygon.
 \minisec{Add Part}
 \index{vector layers!add!part}
 
-You can \toolbtntwo{mActionAddIsland}{add part} polygons to a selected multipolygon. 
+You can \toolbtntwo{mActionAddIsland}{add part} polygons to a selected multipolygon.
 The new part polygon has to be digitized outside the selected multipolygon.
 
 \minisec{Delete Ring}
 \index{vector layers!delete!ring}
 
 The \toolbtntwo{mActionDeleteRing}{Delete Ring} tool allows to delete ring
-polygons inside an existing area. This tool only works with polygon layers. 
-It doesn't change anything when it is used on the outer ring of the polygon. 
+polygons inside an existing area. This tool only works with polygon layers.
+It doesn't change anything when it is used on the outer ring of the polygon.
 This tool can be used on polygon and mutli-polygon features. Before
 you select the vertices of a ring, adjust the vertex edit tolerance.
 
@@ -1781,19 +1781,19 @@ you select the vertices of a ring, adjust the vertex edit tolerance.
 \index{vector layers!delete!part}
 
 The \toolbtntwo{mActionDeletePart}{Delete Part} tool allows to delete parts
-from multifeatures (e.g. to delete polygons from a multipolygon feature). It 
-won't delete the last part of the feature, this last part will stay untouched. 
-This tool works with all multi-part geometries point, line and polygon. Before 
-you select the vertices of a part, adjust the vertex edit tolerance. 
+from multifeatures (e.g. to delete polygons from a multipolygon feature). It
+won't delete the last part of the feature, this last part will stay untouched.
+This tool works with all multi-part geometries point, line and polygon. Before
+you select the vertices of a part, adjust the vertex edit tolerance.
 
 \minisec{Reshape Features}
 \index{vector layers!reshape!feature}
 
-You can reshape line and polygon features using the 
+You can reshape line and polygon features using the
 \toolbtntwo{mActionReshape}{Reshape Features} icon on the toolbar. It
-replaces the line or polygon part from the first to the last intersection 
-with the original line. With polygons this can sometime lead to unintended 
-results. It is mainly useful to replace smaller parts of a polygon, not major 
+replaces the line or polygon part from the first to the last intersection
+with the original line. With polygons this can sometime lead to unintended
+results. It is mainly useful to replace smaller parts of a polygon, not major
 overhauls and the reshapeline is not allowed to cross several polygon rings
 as this would generate an invalide polygon.
 
@@ -1806,22 +1806,22 @@ something to consider.
 \index{vector layers!split!feature}
 
 You can split features using the \toolbtntwo{mActionSplitFeatures}{Split
-Features} icon on the toolbar. Just draw a line across the feature you 
+Features} icon on the toolbar. Just draw a line across the feature you
 want to split.
 
 \minisec{Merge selected features}
 \index{vector layers!merge!features}
 
 The \toolbtntwo{mActionMergeFeatures}{Merge Selected Features} tool allows to
-merge features that have common boundaries and the same attributes.  
+merge features that have common boundaries and the same attributes.
 
 \minisec{Rotate Point Symbols}
 \index{vector layers!rotate!symbol}
 
-The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool 
-allows to change the rotation of point symbols in the map canvas, if 
-you have defined a rotation column from the attribute table of the point 
-layer in the \tab{Symbology} tab of the \dialog{Layer Properties}. 
+The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool
+allows to change the rotation of point symbols in the map canvas, if
+you have defined a rotation column from the attribute table of the point
+layer in the \tab{Symbology} tab of the \dialog{Layer Properties}.
 Otherwise the tool is inactive.
 
 \begin{figure}[ht]
@@ -1830,27 +1830,27 @@ Otherwise the tool is inactive.
    \caption{Rotate Point Symbols \nixcaption}\label{fig:rotatepoint}
 \end{figure}
 
-To change the rotation, select a point feature in the map canvas and rotate 
-it holding the left mouse button pressed. A red arrow with the rotation value 
-will be visualized (see Figure~\ref{fig:rotatepoint}). When you release the 
-left mouse button again, the value will be updated in the attribute table. 
+To change the rotation, select a point feature in the map canvas and rotate
+it holding the left mouse button pressed. A red arrow with the rotation value
+will be visualized (see Figure~\ref{fig:rotatepoint}). When you release the
+left mouse button again, the value will be updated in the attribute table.
 
-\textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done 
+\textbf{Note}: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done
 in 15 degree steps.
 
 \subsection{Creating a new Shapefile and Spatialite layer}\label{sec:create shape}\index{editing!creating a new shape layer}
 
-\qg allows to create new Shapefile layers and new Spatialite layers. 
-Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer 
-to section \ref{sec:creating_new_grass_vectors} for more information on 
+\qg allows to create new Shapefile layers and new Spatialite layers.
+Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer
+to section \ref{sec:creating_new_grass_vectors} for more information on
 creating GRASS vector layers.
 
 \minisec{Creating a new Shapefile layer}\label{sec:create shape}\index{editing!creating a new shapefile layer}
 
-To create a new Shape layer for editing, choose \button{new} > 
-\toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the 
-\mainmenuopt{Layer} menu. The \dialog{New Vector Layer} dialog will be 
-displayed as shown in Figure \ref{fig:newvectorlayer}. Choose the type of 
+To create a new Shape layer for editing, choose \button{new} \arrow
+\toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the
+\mainmenuopt{Layer} menu. The \dialog{New Vector Layer} dialog will be
+displayed as shown in Figure \ref{fig:newvectorlayer}. Choose the type of
 layer (point, line or polygon).
 
 \begin{figure}[ht]
@@ -1862,7 +1862,7 @@ layer (point, line or polygon).
 Note that \qg does not yet support creation of 2.5D
 features (i.e. features with X,Y,Z coordinates) or measure features. At this
 time, only shapefiles can be created. In a future version of \qg, creation of
-any OGR or PostgreSQL layer type will be supported. 
+any OGR or PostgreSQL layer type will be supported.
 
 To complete the creation of the new Shapefile layer, add the desired attributes by
 clicking on the \button{Add} button and specifying a name and type for the
@@ -1873,11 +1873,11 @@ of the new attribute column. Once you are happy with the attributes, click
 \button{OK} and provide a name for the shapefile. \qg will automatically add
 a \filename{.shp} extension to the name you specify. Once
 the layer has been created, it will be added to the map and you can edit it in
-the same way as described in Section \ref{sec:edit_existing_layer} above. 
+the same way as described in Section \ref{sec:edit_existing_layer} above.
 
 \minisec{Creating a new SpatiaLite layer}\label{sec:create spatialite}\index{editing!creating a new spatialite layer}
 
-To create a new SpatiaLite layer for editing, choose \button{new} >
+To create a new SpatiaLite layer for editing, choose \button{new} \arrow
 \toolbtntwo{mActionNewVectorLayer}{New SpatiaLite Layer} from the
 \mainmenuopt{Layer} menu. The \dialog{New SpatiaLite Layer} dialog will be
 displayed as shown in Figure \ref{fig:newspatialitelayer}.
@@ -1888,37 +1888,37 @@ displayed as shown in Figure \ref{fig:newspatialitelayer}.
    \caption{Creating a New Spatialite layer Dialog \nixcaption}\label{fig:newspatialitelayer}
 \end{figure}
 
-First step is to select an existing Spatialite database or to create a new 
-Spatialite database. This can be done with the browse \button{...} button 
-to the right of the database field. Then add a name for the new layer and 
-define the layer type and the EPSG SRID. If desired you can select to 
-\checkbox{create an autoincrementing primary key}. 
+First step is to select an existing Spatialite database or to create a new
+Spatialite database. This can be done with the browse \button{...} button
+to the right of the database field. Then add a name for the new layer and
+define the layer type and the EPSG SRID. If desired you can select to
+\checkbox{create an autoincrementing primary key}.
 
-To define an attribute table for the new Spatialite layer, add the names 
-of the attribute columns you want to create with the according column type 
-and click on the \button{Add to attribute list} button. Once you are happy 
-with the attributes, click \button{OK}. \qg will automatically add the new 
-layer to the legend and you can edit it in the same way as described in 
+To define an attribute table for the new Spatialite layer, add the names
+of the attribute columns you want to create with the according column type
+and click on the \button{Add to attribute list} button. Once you are happy
+with the attributes, click \button{OK}. \qg will automatically add the new
+layer to the legend and you can edit it in the same way as described in
 Section \ref{sec:edit_existing_layer} above.
 
-The spatialite creation dialog allows to create multiple layers without 
-closing the dialog when you click \button{Apply}. 
+The spatialite creation dialog allows to create multiple layers without
+closing the dialog when you click \button{Apply}.
 
 \subsection{Working with the Attribute Table}
 \label{sec:attribute table}
 \index{editing!working with the attribute table}
 
-The attribute table displays features of a selected layer. Each row in the table 
-represents one map feature with its attributes shown in several columns. The 
+The attribute table displays features of a selected layer. Each row in the table
+represents one map feature with its attributes shown in several columns. The
 features in the table can be searched, selected, moved or even edited.
 
-To open the attribute table for a vector layer, make the layer active by clicking 
-on it in the map legend area. Then use \mainmenuopt{Layer} from the main menu 
-and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} 
-from the menu. It is also possible to rightlick on the layer and 
-choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the 
-dropdown menu. This will open a new window which displays the attributes for 
-every feature in the layer (figure \ref{fig:attributetable}). The number of features 
+To open the attribute table for a vector layer, make the layer active by clicking
+on it in the map legend area. Then use \mainmenuopt{Layer} from the main menu
+and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
+from the menu. It is also possible to rightlick on the layer and
+choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the
+dropdown menu. This will open a new window which displays the attributes for
+every feature in the layer (figure \ref{fig:attributetable}). The number of features
 are shown in the attribute table title.
 
 \begin{figure}[ht]
@@ -1929,32 +1929,32 @@ are shown in the attribute table title.
 
 \minisec{Selecting features in an attribute table}
 
-\textbf{A selected row} in the attribute table represents all attributes of a 
-selected feature in the layer. The attribute table reflects any changes 
-in the layer selection in the main window and vice versa. A changed selection 
-in the attribute table also causes a change in the selected feature set in the 
-main window and different layer feature selection means different rows are to be 
+\textbf{A selected row} in the attribute table represents all attributes of a
+selected feature in the layer. The attribute table reflects any changes
+in the layer selection in the main window and vice versa. A changed selection
+in the attribute table also causes a change in the selected feature set in the
+main window and different layer feature selection means different rows are to be
 selected.
 
-Rows can be selected by clicking on the row number on the left side of the 
-row. Selecting a row doesn't change the current cursor position. \textbf{Multiple 
-rows} can be marked by holding the \keystroke{Ctrl} key. A \textbf{continuous 
-selection} can be made by holding the \keystroke{Shift} key and clicking on several 
-row headers on the left side of the rows. All rows between the current cursor 
+Rows can be selected by clicking on the row number on the left side of the
+row. Selecting a row doesn't change the current cursor position. \textbf{Multiple
+rows} can be marked by holding the \keystroke{Ctrl} key. A \textbf{continuous
+selection} can be made by holding the \keystroke{Shift} key and clicking on several
+row headers on the left side of the rows. All rows between the current cursor
 position and the clicked row are selected.
 
-Each column can be sorted by clicking on its column header. A small arrow 
-indicates the sort order (downward pointing means descending values from the top 
+Each column can be sorted by clicking on its column header. A small arrow
+indicates the sort order (downward pointing means descending values from the top
 row down, upward pointing means ascending values from the top rown down).
- 
-For a \textbf{simple search by attributes} on only one column the \button{Look for} 
-field can be used. Select the field (column) from which the search should be 
-performed from the dropdown menu and hit the \button{Search} button. The number of 
-matching rows will appear in the status bar. For more complex searches use 
-the Advanced search \button{...}, which will lauch the Search Query Builder 
-described in Section \ref{sec:select_by_query}.  
 
-To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality: 
+For a \textbf{simple search by attributes} on only one column the \button{Look for}
+field can be used. Select the field (column) from which the search should be
+performed from the dropdown menu and hit the \button{Search} button. The number of
+matching rows will appear in the status bar. For more complex searches use
+the Advanced search \button{...}, which will lauch the Search Query Builder
+described in Section \ref{sec:select_by_query}.
+
+To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality:
 
 \begin{itemize}[label=--]
 \item \toolbtntwo{mActionOpenTable}{Remove selection}
@@ -1962,12 +1962,12 @@ To show selected records only, use the checkbox \checkbox{Show selected records 
 \item \toolbtntwo{mActionInvertSelection}{Invert selection}
 \item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also with \keystroke{Ctrl-C}
 \item \toolbtntwo{mActionZoomToSelected}{Zoom map to selected rows} also with \keystroke{Ctrl-J}
-\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values 
+\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values
 of attribute table and to enable functionalities described below.
 \item \toolbtntwo{mActionDeleteSelected}{Delete Selected Features}
 \item \toolbtntwo{mActionNewAttribute}{New Column} for PostGIS layers and for OGR layers with GDAL version >= 1.6.
 \item \toolbtntwo{mActionDeleteAttribute}{Delete Column} only for PostGIS layers yet.
-\item \toolbtntwo{mActionCalculateField}{Open field calcultor} 
+\item \toolbtntwo{mActionCalculateField}{Open field calcultor}
 \end{itemize}
 
 \begin{Tip}\caption{\textsc{Manipulating Attribute data}}
@@ -1980,14 +1980,14 @@ in GDAL/OGR > 1.6.0
 \section{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
 
-The \button{Advanced search\dots} button opens the Query Builder and allows you to 
-define a subset of a table using a SQL-like WHERE clause, display the result in the 
-main window and save it as a Shapefile. For example, if you have a 
-\filename{towns} layer 
+The \button{Advanced search\dots} button opens the Query Builder and allows you to
+define a subset of a table using a SQL-like WHERE clause, display the result in the
+main window and save it as a Shapefile. For example, if you have a
+\filename{towns} layer
 with a \usertext{population} field you could select only larger towns by entering
 \usertext{population > 100000} in the SQL box of the query builder. Figure
 \ref{fig:query_builder} shows an example of the query builder populated with
-data from a PostGIS layer with attributes stored in PostgreSQL. 
+data from a PostGIS layer with attributes stored in PostgreSQL.
 The Fields, Values and Operators sections help the user to construct the SQL-like
 WHERE clause easily in the text field SQL where clause window.
 
@@ -1998,35 +1998,35 @@ WHERE clause easily in the text field SQL where clause window.
     \caption{Query Builder \nixcaption}\label{fig:query_builder}
 \end{figure}
 
-The \textbf{Fields list} contains all attributes of the attribute table to be 
-searched. To add an attribute to the SQL where clause field, double click its 
-name in the Fields list. Generally you can use the various fields, values and 
-operators to construct the query or you can just type it into the SQL box. 
+The \textbf{Fields list} contains all attributes of the attribute table to be
+searched. To add an attribute to the SQL where clause field, double click its
+name in the Fields list. Generally you can use the various fields, values and
+operators to construct the query or you can just type it into the SQL box.
 
-The \textbf{Values list} lists the values of an attribute. To list all possible 
-values of an attribute, select the attribute in the Fields list and click the 
-\button{All} button\index{Query Builder!getting all values}. To list all values 
-of an attribute that are present in the sample table, select the attribute in 
-the Fields list and click the \button{Sample} 
-button\index{Query Builder!generating sample list}. To add a value to the SQL 
-where clause field, double click its name in the Values list.   
+The \textbf{Values list} lists the values of an attribute. To list all possible
+values of an attribute, select the attribute in the Fields list and click the
+\button{All} button\index{Query Builder!getting all values}. To list all values
+of an attribute that are present in the sample table, select the attribute in
+the Fields list and click the \button{Sample}
+button\index{Query Builder!generating sample list}. To add a value to the SQL
+where clause field, double click its name in the Values list.
 
-The \textbf{Operators section} contains all usable operators. To add an operator 
-to the SQL where clause field, click the appropriate button. Relational operators 
-( = , > , \dots), string comparison operator ( LIKE ), logical operators ( AND , OR 
-, \dots) are available. 
+The \textbf{Operators section} contains all usable operators. To add an operator
+to the SQL where clause field, click the appropriate button. Relational operators
+( = , > , \dots), string comparison operator ( LIKE ), logical operators ( AND , OR
+, \dots) are available.
 
-The \button{Clear} button clears the text in the SQL where clause text field. The 
-\button{Test} button shows a message box with the number of features satisfying 
-the current query, which is usable in the process of query construction. The 
-\button{OK} button closes the window and selects the features satisfying the 
-query. The \button{Cancel} button closes the window without changing the current 
-selection. 
+The \button{Clear} button clears the text in the SQL where clause text field. The
+\button{Test} button shows a message box with the number of features satisfying
+the current query, which is usable in the process of query construction. The
+\button{OK} button closes the window and selects the features satisfying the
+query. The \button{Cancel} button closes the window without changing the current
+selection.
 
 \begin{Tip}\caption{\textsc{Changing the Layer Definition}}\index{Query
 Builder!changing layer definitions}
 You can change the layer definition after it is loaded by altering
-the SQL query used to define the layer. To do this, open the 
+the SQL query used to define the layer. To do this, open the
 vector \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
 \button{Query Builder} button on the \tab{General} tab. See Section
 \ref{sec:vectorprops} for more information.
@@ -2034,17 +2034,17 @@ vector \dialog{Layer Properties} dialog by double-clicking on the layer in the l
 
 \minisec{Select by query}\label{sec:select_by_query}
 
-With \qg it is possible also to select features using a similar query builder 
-interface to that used in \ref{sec:query_builder}. In the above section 
-the purpose of the query builder is to only show features meeting the 
-filter criteria as a 'virtual layer' / subset. The purpose of the select by 
-query function is to highlight all features that meet a particular criteria. 
+With \qg it is possible also to select features using a similar query builder
+interface to that used in \ref{sec:query_builder}. In the above section
+the purpose of the query builder is to only show features meeting the
+filter criteria as a 'virtual layer' / subset. The purpose of the select by
+query function is to highlight all features that meet a particular criteria.
 Select by query can be used with all vector data providers.
 
-To do a `select by query' on a loaded layer, click on the 
-button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of the layer. Then 
-click the \button{Advanced...} button at the bottom. This starts the Query Builder 
-that allows to define a subset of a table and display it as described in Section 
+To do a `select by query' on a loaded layer, click on the
+button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of the layer. Then
+click the \button{Advanced...} button at the bottom. This starts the Query Builder
+that allows to define a subset of a table and display it as described in Section
 \ref{sec:query_builder}.
 
 \section{Field Calculator}\label{sec:field_calculator}
@@ -2055,19 +2055,19 @@ that allows to define a subset of a table and display it as described in Section
 \index{field calculator!PostGIS}
 \index{field calculator!OGR}
 
-The \toolbtntwo{mActionCalculateField}{Field Calculator} button in the 
-attribute table allows to perform calculations on basis of existing 
-attribute values or defined functions, e.g to calculate length or area 
-of geometry features. The results can be written to a new attribute column 
-or it can be used to update values in an already existing column. The creation 
-of new attribute fields is currently only possible in PostGIS and with OGR 
-formats, if GDAL version is >= 1.6.0. 
+The \toolbtntwo{mActionCalculateField}{Field Calculator} button in the
+attribute table allows to perform calculations on basis of existing
+attribute values or defined functions, e.g to calculate length or area
+of geometry features. The results can be written to a new attribute column
+or it can be used to update values in an already existing column. The creation
+of new attribute fields is currently only possible in PostGIS and with OGR
+formats, if GDAL version is >= 1.6.0.
 
-You have to bring the vector layer in editing mode, before you can click on 
-the field calculator icon to open the dialog (see Figure 
-\ref{fig:field_calculator}). In the dialog you first have to select, whether 
-you want to update an existing field, only update selected features or 
-create a new attribute field, where the results of the calculation will be added. 
+You have to bring the vector layer in editing mode, before you can click on
+the field calculator icon to open the dialog (see Figure
+\ref{fig:field_calculator}). In the dialog you first have to select, whether
+you want to update an existing field, only update selected features or
+create a new attribute field, where the results of the calculation will be added.
 
 \begin{figure}[ht]
   \centering
@@ -2075,45 +2075,45 @@ create a new attribute field, where the results of the calculation will be added
     \caption{Field Calculator \nixcaption}\label{fig:field_calculator}
 \end{figure}
 
-If you choose to add a new field, you need to enter a field name, a field type 
-(integer, real or string), the total field width, and the field precision. 
-For example, if you choose a field width of 10 and a field precision of 3 it 
-means you have 6 signs before the dot, then the dot and another 3 signs for the 
-precision.   
+If you choose to add a new field, you need to enter a field name, a field type
+(integer, real or string), the total field width, and the field precision.
+For example, if you choose a field width of 10 and a field precision of 3 it
+means you have 6 signs before the dot, then the dot and another 3 signs for the
+precision.
 
 The \textbf{Fields list} contains all attributes of the attribute table to be
-searched. To add an attribute to the Field calculator expression field, double 
-click its name in the Fields list. Generally you can use the various fields, 
-values and operators to construct the calculation expression or you can just 
+searched. To add an attribute to the Field calculator expression field, double
+click its name in the Fields list. Generally you can use the various fields,
+values and operators to construct the calculation expression or you can just
 type it into the box.
 
-The \textbf{Values list} lists the values of an attribute field. To list all 
+The \textbf{Values list} lists the values of an attribute field. To list all
 possible values, select the attribute field in the Fields list and click the
-\button{All} button\index{Field Calculator!getting all values}. To list all 
-values of an attribute field that are present in the sample table, select the 
-attribute in the Fields list and click the \button{Sample} button\index{Field 
-Calcultor!generating sample list}. The procedure is the same as for the Query 
-Builder. To add a value to the Field calculator expression box, double click its 
+\button{All} button\index{Field Calculator!getting all values}. To list all
+values of an attribute field that are present in the sample table, select the
+attribute in the Fields list and click the \button{Sample} button\index{Field
+Calcultor!generating sample list}. The procedure is the same as for the Query
+Builder. To add a value to the Field calculator expression box, double click its
 name in the Values list.
 
 The \textbf{Operators section} contains all usable operators. To add an operator
-to the Field calculator expression box, click the appropriate button. Mathematical 
-calculations ( + , - , * \dots), trigonometric functions ( sin, cos, tan, \dots), 
-extract geometric information ( length and area ) are available and will be 
+to the Field calculator expression box, click the appropriate button. Mathematical
+calculations ( + , - , * \dots), trigonometric functions ( sin, cos, tan, \dots),
+extract geometric information ( length and area ) are available and will be
 extended in future versions.
 
-A short example illustrates how the field calculator works. We want to calculate 
+A short example illustrates how the field calculator works. We want to calculate
 the length of the 'railroads' layer from the \filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
-\item Load the Shapefile \filename{railroads.shp} in \qg and open 
-the \dialog{Attribute Table} dialog. 
-\item Click on \toolbtntwo{mActionToggleEditing}{Toggle editing mode} and 
+\item Load the Shapefile \filename{railroads.shp} in \qg and open
+the \dialog{Attribute Table} dialog.
+\item Click on \toolbtntwo{mActionToggleEditing}{Toggle editing mode} and
 open the \toolbtntwo{mActionCalculateField}{Field Calculator} dialog.
-\item Unselect the \checkbox{Update existing field} checkbox to enable the 
+\item Unselect the \checkbox{Update existing field} checkbox to enable the
 new field box.
-\item Add 'length' as output field name, 'real' as output field type and define 
+\item Add 'length' as output field name, 'real' as output field type and define
 output field width 10 and a precision of 3.
-\item Now click on Operator 'length' to add it as \$length into the 
+\item Now click on Operator 'length' to add it as \$length into the
 field calculator expression box and click \button{Ok}.
 \end{enumerate}

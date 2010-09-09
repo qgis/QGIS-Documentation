@@ -1,32 +1,32 @@
-%  !TeX  root  =  user_guide.tex 
+%  !TeX  root  =  user_guide.tex
 
 \chapter{Features at a Glance}\label{feature_glance}
 
-% when the revision of a section has been finalized, 
+% when the revision of a section has been finalized,
 % comment out the following line:
 %\updatedisclaimer
 
-After a first and simple sample session in Section \ref{label_getstarted} we now 
-want to give you a more detailed overview of the features of QGIS. 
-Most features presented in the following chapters will be explained and described in 
+After a first and simple sample session in Section \ref{label_getstarted} we now
+want to give you a more detailed overview of the features of QGIS.
+Most features presented in the following chapters will be explained and described in
 own sections later in the manual.
 
 \section{Starting and Stopping QGIS}\label{label_startinqgis}
 
-In Section \ref{samplesession} you already learned how to start QGIS. We will 
-repeat this here and you will see that QGIS also provides further command line options. 
+In Section \ref{samplesession} you already learned how to start QGIS. We will
+repeat this here and you will see that QGIS also provides further command line options.
 
 \begin{itemize}
-\item \nix{Assuming that QGIS is installed in the PATH, you can start QGIS 
+\item \nix{Assuming that QGIS is installed in the PATH, you can start QGIS
 by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
-application link (or shortcut) on the desktop or in the application menu.} 
-\item \win{Start QGIS using the Start menu or desktop shortcut, 
+application link (or shortcut) on the desktop or in the application menu.}
+\item \win{Start QGIS using the Start menu or desktop shortcut,
 or double click on a QGIS project file.}
-\item \osx{Double click the icon in your Applications folder. If you need to start QGIS 
+\item \osx{Double click the icon in your Applications folder. If you need to start QGIS
 in a shell, run /path-to-installation-executable/Contents/MacOS/Qgis.}
-\end{itemize} 
+\end{itemize}
 
-To stop QGIS, click the menu options \{\nix{}\win{File} \osx{QGIS}\} > Quit,
+To stop QGIS, click the menu options \{\nix{}\win{File} \osx{QGIS}\} \arrow Quit,
 or use the shortcut \keystroke{Ctrl+Q}.
 
 \subsection{Command Line Options}\index{command line options}
@@ -66,15 +66,15 @@ Usage: qgis [options] [FILES]
 
 \begin{Tip} \caption{\textsc{Example Using command line arguments}}
 You can start QGIS by specifying one or more data files
-on the command line. For example, assuming you are in the 
-qgis\_sample\_data directory, you could start QGIS with a vector layer 
-and a raster file set to load on startup using the following command: 
+on the command line. For example, assuming you are in the
+qgis\_sample\_data directory, you could start QGIS with a vector layer
+and a raster file set to load on startup using the following command:
 \usertext{qgis ./raster/landcover.img ./gml/lakes.gml}
 \end{Tip}
 
 \minisec{Command line option \usertext{---snapshot}}
 This option allows you to create a snapshot in PNG format from the current view.
-This comes in handy when you have a lot of projects and want to 
+This comes in handy when you have a lot of projects and want to
 generate snapshots from your data.
 
 Currently it generates a PNG-file with 800x600 pixels. This can be adapted
@@ -82,12 +82,12 @@ using the \usertext{---width} and \usertext{---height} command line
 arguments. A filename can be added after \usertext{---snapshot}.
 
 \minisec{Command line option \usertext{---lang}}
-Based on your locale QGIS, selects the correct localization. If you would like 
-to change your language, you can specify a language code. For example: 
+Based on your locale QGIS, selects the correct localization. If you would like
+to change your language, you can specify a language code. For example:
 \usertext{---lang=it}
 starts QGIS in italian localization. A list of currently supported
 languages with language code and status is provided at
-\url{http://www.qgis.org/wiki/GUI_Translation_Progress} 
+\url{http://www.qgis.org/wiki/GUI_Translation_Progress}
 
 \minisec{Command line option \usertext{---project}}
 Starting QGIS with an existing project file is also possible. Just
@@ -113,7 +113,7 @@ interface as discussed below):
 \begin{figure}[ht]
    \centering
     \includegraphics[clip=true, width=12cm]{startup}
-    \caption{QGIS GUI with Alaska sample data \nixcaption (KDE)} \label{fig:startup} 
+    \caption{QGIS GUI with Alaska sample data \nixcaption (KDE)} \label{fig:startup}
 \end{figure}
 
 \textbf{Note:} Your window decorations (title bar, etc.) may appear
@@ -125,11 +125,11 @@ The QGIS GUI is divided into six areas:
 %\centering
 1. Menu Bar & 4. Map View \\
 2. Tool Bar & 5. Map Overview \\
-3. Map Legend & 6. Status Bar \\ 
+3. Map Legend & 6. Status Bar \\
 \end{tabular}
 
 These six components of the QGIS interface are described in more detail in
-the following sections. Two more sections present keyboard shortcuts and 
+the following sections. Two more sections present keyboard shortcuts and
 context help.
 
 % \newpage
@@ -137,15 +137,15 @@ context help.
 \subsection{Menu Bar}\label{label_menubar}
 \index{menus}
 
-The menu bar provides access to various QGIS features using a standard 
+The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
 menu options are listed below, together with the icons of the corresponding
 tools as they appear on the toolbar, as well as keyboard
 shortcuts.\footnote{Keyboard shortcuts can now be configured manually
-(shortcuts presented in this section are the defaults), using the Configure 
+(shortcuts presented in this section are the defaults), using the Configure
 Shortcuts tool under Settings Menu.}
 Although most menu options have a corresponding tool and vice-versa,
-the menus are not organized quite like the toolbars. 
+the menus are not organized quite like the toolbars.
 The toolbar containing the tool is listed after each menu option as a checkbox
 entry. For more information about tools and toolbars, see Section
 \ref{label_toolbars}.
@@ -186,13 +186,13 @@ entry. For more information about tools and toolbars, see Section
         \> see Section \ref{label_printcomposer}
         \> \dropmenucheck{File} \\
 \dropmenuopttwo{mActionComposerManager}{Composer manager}
-	\> 
+	\>
 	\> see Section \ref{label_printcomposer}
 	\> \dropmenucheck{File} \\
 \dropmenuopt{Print Composers}
 	\>
 	\> see Section \ref{label_printcomposer} \\
-\dropmenuopttwo{mActionFileExit}{Exit} 
+\dropmenuopttwo{mActionFileExit}{Exit}
 	\> \keystroke{Ctrl+Q} \\
 \end{tabbing}
 
@@ -207,24 +207,24 @@ entry. For more information about tools and toolbars, see Section
         \> \keystroke{Ctrl+Shift+Z}
         \> see Section \ref{sec:advanced_edit}
         \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionEditCut}{Cut Features} 
+\dropmenuopttwo{mActionEditCut}{Cut Features}
 	\> \keystroke{Ctrl+X}
-	\> see Section \ref{sec:edit_existing_layer} 
+	\> see Section \ref{sec:edit_existing_layer}
 	\> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionEditCopy}{Copy Features}
 	\> \keystroke{Ctrl+C}
-	\> see Section \ref{sec:edit_existing_layer} 
+	\> see Section \ref{sec:edit_existing_layer}
 	\> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionEditPaste}{Paste Features} 
+\dropmenuopttwo{mActionEditPaste}{Paste Features}
 	\> \keystroke{Ctrl+V}
-	\> see Section \ref{sec:edit_existing_layer} 
+	\> see Section \ref{sec:edit_existing_layer}
 	\> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionEditPaste}{Move Feature}
-        \> 
+        \>
         \> see Section \ref{sec:edit_existing_layer}
         \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionDeleteSelected}{Delete Selected}
-        \> 
+        \>
         \> see Section \ref{sec:edit_existing_layer}
         \> \dropmenucheck{Digitizing} \\
 \dropmenuopttwo{mActionSimplify}{Simplify Feature}
@@ -343,22 +343,22 @@ menu depending on the layer type (point, line or polygon). \\
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionNewBookmark}{New Bookmark}
 	\> \keystroke{Ctrl+B}
-	\> see Section \ref{sec:bookmarks} 
+	\> see Section \ref{sec:bookmarks}
 \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionShowBookmarks}{Show Bookmarks}
 	\> \keystroke{Ctrl-Alt-B}
-	\> see Section \ref{sec:bookmarks} 
+	\> see Section \ref{sec:bookmarks}
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionDraw}{Refresh}
 	\> \keystroke{Ctrl+R}
 	\> \> \dropmenucheck{Map Navigation} \\
 \mainmenuopt{Tile scale slider}
 	\>
-	\> see Section \ref{sec:tilesets} 
+	\> see Section \ref{sec:tilesets}
 	\> \dropmenucheck{Tile scale} \\
 \mainmenuopt{Live GPS tracking}
 	\>
-	\> see Section \ref{sec:gpstracking} 
+	\> see Section \ref{sec:gpstracking}
 	\> \dropmenucheck{GPS Information} \\
 \end{tabbing}
 
@@ -369,19 +369,19 @@ menu depending on the layer type (point, line or polygon). \\
 	\>
 	\> see Section \ref{sec:create shape}
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}       
+\dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}
 	\> \keystroke{Ctrl+Shift+V}
-	\>          	
+	\>
 	see Section \ref{label_workingvector}
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}       
+\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}
 	\> \keystroke{Ctrl+Shift+R}
-	\>          	
+	\>
 	see Section \ref{label_raster}
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}      
+\dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}
 	\> \keystroke{Ctrl+Shift+D}
-	\>          	
+	\>
 	see Section \ref{label_postgis}
         \> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer}
@@ -389,9 +389,9 @@ menu depending on the layer type (point, line or polygon). \\
         \>
         see Section \ref{label_spatialite}
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}          
+\dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}
 	\> \keystroke{Ctrl+Shift+W}
-	\>          	
+	\>
 	see Section \ref{sec:ogc-wms}
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
@@ -409,7 +409,7 @@ menu depending on the layer type (point, line or polygon). \\
 	\\
 \dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
 	\> \keystroke{Ctrl+D}
-	\>          	
+	\>
 	\> \dropmenucheck{Properties} \\
 \mainmenuopt{Properties}
 	\\
@@ -417,26 +417,26 @@ menu depending on the layer type (point, line or polygon). \\
 	\\
 \dropmenuopttwo{mActionInOverview}{Add to Overview}
 	\> \keystroke{Ctrl+Shift+O}
-	\>          	
+	\>
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionAddAllToOverview}{Add All To Overview}
-	\> 
-	\>          	
+	\>
+	\>
 	\\
 \dropmenuopttwo{mActionRemoveAllFromOverview}{Remove All From Overview}
-	\> 
-	\>          	
+	\>
+	\>
 	\\
 \dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
 	\> \keystroke{Ctrl+Shift+H}
-	\>          	
+	\>
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
 	\> \keystroke{Ctrl+Shift+U}
-	\>          	
+	\>
 	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{labeling}{Labeling}
-	\>          	
+	\>
 	\>
 	\\
 \end{tabbing}
@@ -444,19 +444,19 @@ menu depending on the layer type (point, line or polygon). \\
 \item \mainmenuopt{Settings}
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopt{Panels}  
-	\>           
-	\>          	
+\dropmenuopt{Panels}
+	\>
+	\>
 	\\
-\dropmenuopt{Toolbars}  
-	\>           
-	\>          	
+\dropmenuopt{Toolbars}
+	\>
+	\>
 	\\
-\mainmenuopt{Toggle Full Screen Mode}  
+\mainmenuopt{Toggle Full Screen Mode}
 	\>\keystroke{Ctrl-F}
-	\>          	
+	\>
 	\\
-\dropmenuopttwo{mActionProjectProperties}{Project Properties}  
+\dropmenuopttwo{mActionProjectProperties}{Project Properties}
 	\> \keystroke{Ctrl-Alt-P}
 	\> see Section \ref{sec:projects} \\
 \dropmenuopttwo{mActionCustomProjection}{Custom CRS}
@@ -472,24 +472,24 @@ menu depending on the layer type (point, line or polygon). \\
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionShowPluginManager}{Manage Plugins}          	   
+\dropmenuopttwo{mActionShowPluginManager}{Manage Plugins}
 	\> \> see Section \ref{sec:managing_plugins} \dropmenucheck{Plugins}
 	\\
 	\mainmenuopt{Python Console}
         \> \>
         \\
-\end{tabbing}          	
+\end{tabbing}
 
 \item \mainmenuopt{Help}
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
 \dropmenuopttwo{mActionHelpContents}{Help Contents}
 	\> \keystroke{F1}
-	\>           	
+	\>
 	\> \dropmenucheck{Help}\\
 \dropmenuopttwo{mActionQgisHomePage}{QGIS Home Page}
 	\> \keystroke{Ctrl+H}
-	\>          	
+	\>
 	\\
 \dropmenuopttwo{mActionCheckQgisVersion}{Check QGIS Version}
 	\\
@@ -533,7 +533,7 @@ there:
 The toolbars provide access to most of the same functions as the menus,
 plus additional tools for interacting with the map. Each toolbar item has
 popup help available. Hold your mouse over the item and a short description of
-the tool's purpose will be displayed. 
+the tool's purpose will be displayed.
 
 Every menubar can be moved around according to your needs. Additionally every
 menubar can be switched off using your right mouse button context menu holding
@@ -542,7 +542,7 @@ the mouse over the toolbars.
 \begin{Tip}
 \caption{\textsc{Restoring toolbars}} \index{layout!toolbars}
 If you have accidentally hidden all your toolbars, you can get them
-back by choosing menu option \mainmenuopt{Settings} > \dropmenuopt{Toolbars}.
+back by choosing menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
 \end{Tip}
 
 \subsection{Map Legend}\label{label_legend}
@@ -553,16 +553,16 @@ Z-ordering means that layers listed nearer the top of the legend are drawn
 over layers listed lower down in the legend. The checkbox in each legend
 entry can be used to show or hide the layer.\index{layer!visibility}
 
-Layers can be grouped in the legend window by adding a layer group and dragging layers 
-into the group. To do so, move the mouse pointer to the legend window, right click, choose \dropmenuopt{Add group}. 
-A new folder appears. Now drag the layers onto to the folder symbol. It is then possible to toggle the 
-visibility of all the layers in the group with one click. To bring layers out of a group, move 
-the mouse pointer to the layer symbol, right click, and choose \dropmenuopt{Make to toplevel item}. To give the folder a 
+Layers can be grouped in the legend window by adding a layer group and dragging layers
+into the group. To do so, move the mouse pointer to the legend window, right click, choose \dropmenuopt{Add group}.
+A new folder appears. Now drag the layers onto to the folder symbol. It is then possible to toggle the
+visibility of all the layers in the group with one click. To bring layers out of a group, move
+the mouse pointer to the layer symbol, right click, and choose \dropmenuopt{Make to toplevel item}. To give the folder a
 new name, choose \dropmenuopt{Rename} in the right click menu of the group.
 
-The content of the right mouse button context menu depends on whether the loaded legend item you hold your 
-mouse over is a raster or a vector layer. For GRASS vector layers the \dropmenuopt{toggle editing} is not 
-available. See section \ref{grass_digitising} for information on editing GRASS vector layers. 
+The content of the right mouse button context menu depends on whether the loaded legend item you hold your
+mouse over is a raster or a vector layer. For GRASS vector layers the \dropmenuopt{toggle editing} is not
+available. See section \ref{grass_digitising} for information on editing GRASS vector layers.
 
 \begin{itemize}
 
@@ -599,7 +599,7 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 %%\item \dropmenuopt{Show file groups}
 \end{itemize}
 
-\item \textbf{Right mouse button menu for layer groups} 
+\item \textbf{Right mouse button menu for layer groups}
 \begin{itemize}
 \item \dropmenuopt{Remove}
 \item \dropmenuopt{Rename}
@@ -618,8 +618,8 @@ the new symbolisation as well. To group symbologies, open the right click
 menu in the legend window and choose \dropmenuopt{Add Group}. The file
 groups of the layers appear. It is now possible to drag a file from one file
 group into another one. If this is done, the symbologies are grouped. Note
-that QGIS only permits the drag if the two layers are able to share 
-symbology (same vector geometry type and same attributes).  
+that QGIS only permits the drag if the two layers are able to share
+symbology (same vector geometry type and same attributes).
 
 %% isn't included in Titan anymore, except for an "toggle overview"
 %Each legend entry can show the following mini icons:
@@ -644,23 +644,23 @@ load layers). The map view can be panned (shifting the focus of the map display
 to another region) and zoomed in and out. Various other operations can be
 performed on the map as described in the toolbar description above.  The map
 view and the legend are tightly bound to each other - the maps in view reflect
-changes you make in the legend area.  
+changes you make in the legend area.
 
 \begin{Tip}\caption{\textsc{Zooming the Map with the Mouse
 Wheel}}\index{zoom!mouse wheel}
 You can use the mouse wheel to zoom in and out on the map. Place
 the mouse cursor inside the map area and roll the wheel forward (away from you) to
-zoom in and backwards (towards you) to zoom out. The mouse cursor position is the 
+zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
 center where the zoom occurs. You can customize the behavior of the mouse
-wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} >
+wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} \arrow
 \dropmenuopt{Options} menu.
 \end{Tip}
 
 \begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space
 Bar}}\index{pan!arrow keys}
-You can use the arrow keys to pan in the map. Place the mouse cursor 
-inside the map area and click on the right arrow key to pan East, left arrow 
-key to pan West, up arrow key to pan North and down arrow key to pan South. 
+You can use the arrow keys to pan in the map. Place the mouse cursor
+inside the map area and click on the right arrow key to pan East, left arrow
+key to pan West, up arrow key to pan North and down arrow key to pan South.
 You can also pan the map using the space bar: just move the mouse while
 holding down space bar.
 \end{Tip}
@@ -669,33 +669,33 @@ holding down space bar.
 \index{map!overview}
 
 The map overview panel provides a full extent view of layers added to it. It
-can be selected under the menu \mainmenuopt{Settings} >\dropmenuopt{Panels}.
+can be selected under the menu \mainmenuopt{Settings} \arrow \dropmenuopt{Panels}.
 Within the view is a rectangle showing the current map extent. This allows
 you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
-map overview have been set up for labeling. 
+map overview have been set up for labeling.
 
 You can add a single layer to the overview by right-clicking on it in the
 legend and select \checkbox{Show in overview}. You can also add layers to,
 or remove all layers from the overview using the Overview tools on the toolbar.
 
-If you click and drag the red rectangle in the overview that shows your 
+If you click and drag the red rectangle in the overview that shows your
 current extent, the main map view will update accordingly.
 
 \subsection{Status Bar}\label{label_statusbar}
 
 The status bar shows you your current position in map coordinates (e.g.
 meters or decimal degrees) as the mouse pointer is moved across the map view.
-To the left of the coordinate display in the status bar is a small button that 
-will toggle between showing coordinate position or the view extents of the 
-map view as you pan and zoom in and out. 
+To the left of the coordinate display in the status bar is a small button that
+will toggle between showing coordinate position or the view extents of the
+map view as you pan and zoom in and out.
 
 A progress bar in the status bar shows progress of rendering
 as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
-status of lengthy operations. 
+status of lengthy operations.
 
-If a new plugin or a plugin update is available, you will see a message in the 
+If a new plugin or a plugin update is available, you will see a message in the
 status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section \ref{subsec:redraw_events} below). At the far right of
@@ -703,13 +703,13 @@ the status bar is a projector icon. Clicking on this opens the projection
 properties for the current project.
 
 \begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}\index{scale!calculate}
-When you start QGIS, degrees is the default unit, and it tells QGIS 
-that any coordinate in your layer is in degrees. To get correct scale values, 
-you can either change this to meter manually in the \tab{General} tab under 
-\mainmenuopt{Settings} >\dropmenuopt{Project Properties} or you can select a project 
+When you start QGIS, degrees is the default unit, and it tells QGIS
+that any coordinate in your layer is in degrees. To get correct scale values,
+you can either change this to meter manually in the \tab{General} tab under
+\mainmenuopt{Settings} \arrow \dropmenuopt{Project Properties} or you can select a project
 Coordinate Reference System (CRS) clicking on the
-\toolbtntwo{mIconProjectionDisabled}{projector} 
-icon in the lower right-hand corner of the statusbar. In the last case, the 
+\toolbtntwo{mIconProjectionDisabled}{projector}
+icon in the lower right-hand corner of the statusbar. In the last case, the
 units are set to what the project projection specifies, e.g. '+units=m'.
 \end{Tip}
 
@@ -717,9 +717,9 @@ units are set to what the project projection specifies, e.g. '+units=m'.
 \index{Keyboard shortcuts}
 
 QGIS provides default keyboard shortcuts for many features. You find them in
-Section \ref{label_menubar} below. Additionally the menu option \mainmenuopt{Settings} >
+Section \ref{label_menubar} below. Additionally the menu option \mainmenuopt{Settings} \arrow
 \dropmenuopt{Configure Shortcuts} allows to change the default keyboard
-shortcuts and to add new keyboard shortcuts to QGIS features.  
+shortcuts and to add new keyboard shortcuts to QGIS features.
 
 \begin{figure}[ht]
    \centering
@@ -730,7 +730,7 @@ shortcuts and to add new keyboard shortcuts to QGIS features.
 Configuration is very simple. Just select a feature from the list and click
 on \button{Change}, \button{Set none} or \button{Set default}. Once you have
 found your configuration, you can save it as XML file and load it to another
-QGIS installation. 
+QGIS installation.
 
 \subsection{Context help}\label{context_help}
 \index{Context help}
@@ -758,7 +758,7 @@ QGIS allows you to control the rendering process in a number of ways.
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
-open the \dialog{Properties} dialog by double-clicking on the layer in the 
+open the \dialog{Properties} dialog by double-clicking on the layer in the
 legend. On the \tab{General} tab, set the minimum and maximum scale values and then
 click on the \checkbox{Use scale dependent rendering} checkbox.
 
@@ -794,9 +794,9 @@ refresh of the map canvas.
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
-menu option \mainmenuopt{Settings} > \dropmenuopt{Options} and click on the
+menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} and click on the
 \tab{Rendering \& SVG} tab. Uncheck the \\
-\checkbox{By default new layers added to the map should be displayed} checkbox. 
+\checkbox{By default new layers added to the map should be displayed} checkbox.
 Any layer added to the map will be off (invisible) by default.
 
 %\minisec{Stopping Rendering}\index{rendering!halting}
@@ -806,7 +806,7 @@ Any layer added to the map will be off (invisible) by default.
 %the map canvas and leave the map partially drawn. It may take a bit of time
 %between pressing ESC and the time the map drawing is halted.
 %
-%\textbf{NOTE}: It is currently not possible to stop rendering - this was disabled 
+%\textbf{NOTE}: It is currently not possible to stop rendering - this was disabled
 %in qt4 port because of User Interface (UI) problems and crashes.
 
 \minisec{c) Updating the Map Display During Rendering}
@@ -815,18 +815,18 @@ Any layer added to the map will be off (invisible) by default.
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
-datastore, choose menu option \mainmenuopt{Settings} > \dropmenuopt{Options}
+datastore, choose menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options}
 click on the \tab{Rendering \& SVG} tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
-during the reading of the features. A suggested value to start with is 500. 
+during the reading of the features. A suggested value to start with is 500.
 
 \minisec{d) Influence Rendering Quality}
 \label{label_renderquality}\index{rendering!quality}
 
-To influence the rendering quality of the map you have 3 options. Choose menu 
-option \mainmenuopt{Settings} > \dropmenuopt{Options} click on the 
+To influence the rendering quality of the map you have 3 options. Choose menu
+option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} click on the
 \tab{Rendering \& SVG} tab and select or deselect following checkboxes.
 
 \begin{itemize}
@@ -837,35 +837,35 @@ performance}
 
 \section{Measuring}\label{sec:measure}\index{measure}
 
-Measuring works within projected coordinate systems only (e.g., UTM). If 
+Measuring works within projected coordinate systems only (e.g., UTM). If
 the loaded map is defined with a geographic coordinate system
-(latitude/longitude), the results from line or area measurements will be 
-incorrect. To fix this you need to set an appropriate map coordinate system 
-(See Section~\ref{label_projections}). Both measuring modules also use the 
-snapping settings from the digitizing module. This is useful, if you want to 
-measure along lines or areas in vector layers.  
+(latitude/longitude), the results from line or area measurements will be
+incorrect. To fix this you need to set an appropriate map coordinate system
+(See Section~\ref{label_projections}). Both measuring modules also use the
+snapping settings from the digitizing module. This is useful, if you want to
+measure along lines or areas in vector layers.
 
 \subsection{Measure length, areas and angles}
 \index{measure:line length}
 \index{measure:areas}
 \index{measure:angles}
 
-\includegraphics[width=0.7cm]{mActionMeasure} 
-QGIS is also able to measure real distances between given 
-points according to a defined ellipsoid. To configure this, choose menu option 
-\mainmenuopt{Settings} > \dropmenuopt{Options}, 
+\includegraphics[width=0.7cm]{mActionMeasure}
+QGIS is also able to measure real distances between given
+points according to a defined ellipsoid. To configure this, choose menu option
+\mainmenuopt{Settings} \arrow \dropmenuopt{Options},
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. There
 you can also define a rubberband color and your preferred measurement units
 (meters or feet). The tool then allows you to click points on the map. Each
 segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
-\includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured. 
+\includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured.
 In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. \\
 \includegraphics[width=0.7cm]{mActionMeasureAngle}
-You can also measure angles, selecting Measure Angle tool. The cursor becomes 
+You can also measure angles, selecting Measure Angle tool. The cursor becomes
 cross-shaped. Click to draw the first segment of the angle you wish to
 measure, then move the the cursor to draw the desired angle. The measure
-is displayed in a popup dialog. 
+is displayed in a popup dialog.
 
 \begin{figure}[ht]
 \centering
@@ -883,18 +883,18 @@ is displayed in a popup dialog.
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
-Section \ref{subsec:gui_options}). QGIS can save the state of your 
-workspace into a project file using the menu options 
-\mainmenuopt{File} > \dropmenuopttwo{mActionFileSave}{Save Project}
-or \mainmenuopt{File} > \dropmenuopttwo{mActionFileSaveAs}{Save Project As}.
+Section \ref{subsec:gui_options}). QGIS can save the state of your
+workspace into a project file using the menu options
+\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileSave}{Save Project}
+or \mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileSaveAs}{Save Project As}.
 
-Load saved projects into a QGIS session using 
-\mainmenuopt{File} > \dropmenuopttwo{mActionFileOpen}{Open Project}
-or \mainmenuopt{File} > \\
+Load saved projects into a QGIS session using
+\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileOpen}{Open Project}
+or \mainmenuopt{File} \arrow \\
 \dropmenuopt{Open Recent Project}.
 
 If you wish to clear your session and start fresh, choose
-\mainmenuopt{File} > \dropmenuopttwo{mActionFileNew}{New Project}.
+\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileNew}{New Project}.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -908,25 +908,25 @@ The kinds of information saved in a project file include:
 \end{itemize}
 
 The project file is saved in XML format, so it is possible to edit
-the file outside QGIS if you know what you are doing. The file format 
-was updated several times compared to earlier QGIS versions. Project files 
-from older QGIS versions may not work properly anymore. To be made aware of this, 
-in the \tab{General} tab under \mainmenuopt{Settings} > \dropmenuopt{Options} 
+the file outside QGIS if you know what you are doing. The file format
+was updated several times compared to earlier QGIS versions. Project files
+from older QGIS versions may not work properly anymore. To be made aware of this,
+in the \tab{General} tab under \mainmenuopt{Settings} \arrow \dropmenuopt{Options}
 you can select: \\
 
 \checkbox{Promt to save project changes when required} \\
 \checkbox{Warn when opening a project file saved with an older version of QGIS}
 
 \minisec{Project Properties}
-In the properties window for the project under \nix{\mainmenuopt{File} >
-\dropmenuopt{Project Properties}} or \win{\mainmenuopt{Settings} >
+In the properties window for the project under \nix{\mainmenuopt{File} \arrow
+\dropmenuopt{Project Properties}} or \win{\mainmenuopt{Settings} \arrow
 \dropmenuopt{Project Properties}} you set project specific options. These
 include:
 
 \begin{itemize}
 \item In the \tab{General} tab the project title, selection and background
 color, layer units, precision, and the option to save relative paths to
-layers can be defined. In addition the topological editing, and layerwise 
+layers can be defined. In addition the topological editing, and layerwise
 snapping options are set here.
 \item The \tab{CRS} Coordinate Reference System tab enables you to choose the
 CRS for this project, and to enable on-the-fly reprojection of vector layers
@@ -935,12 +935,12 @@ when displaying layers from a different CRS.
 layers will respond to the identify tool. (See the Map tools paragraph from
 the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
 \end{itemize}
- 
+
 \section{Output}\label{sec:output}
 \index{output!save as image!print composer!quick print}
 
 There are several ways to generate output from your QGIS session. We have
-discussed one already in Section \ref{sec:projects}: saving as a project file. 
+discussed one already in Section \ref{sec:projects}: saving as a project file.
 Here is a sampling of other ways to produce output files:
 
 \begin{itemize}
@@ -958,9 +958,9 @@ to print a simple map with minimal effort (see Section \ref{quickprint}).
 \section{GUI Options}\label{subsec:gui_options}
 
 \includegraphics[width=0.7cm,clip=true]{mActionOptions} Some basic options
-for QGIS can be selected using the \dialog{Options} dialog. Select the 
-menu option \mainmenuopt{Settings} >
-\dropmenuopttwo{mActionOptions}{Options}. The tabs where you can 
+for QGIS can be selected using the \dialog{Options} dialog. Select the
+menu option \mainmenuopt{Settings} \arrow
+\dropmenuopttwo{mActionOptions}{Options}. The tabs where you can
 optmize your options are:
 
 \minisec{General Tab}
@@ -979,7 +979,7 @@ required)}
 \item \checkbox{Open attribute table in a dock window}
 \item \checkbox{Add PostGIS layers with double click and select in extended mode}
 \item \checkbox{Add new layers to selected group}
-\item Attribute table behavior (choose between Show all features (default), Show selected features, 
+\item Attribute table behavior (choose between Show all features (default), Show selected features,
 show features in current canvas)
 \end{itemize}
 
@@ -996,9 +996,9 @@ performance}
 \item Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
 \end{itemize}
 
-Additionally you can define wether to save the path for svg textures 
-absolute or relative in the \tab{General} tab of the 
-\mainmenuopt{Settings} > \dropmenuopttwo{mActionOptions}{Project Properties} 
+Additionally you can define wether to save the path for svg textures
+absolute or relative in the \tab{General} tab of the
+\mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Project Properties}
 menu.
 
 \minisec{Map tools Tab}
@@ -1010,7 +1010,7 @@ first} instead of \usertext{Current layer} attributes for all identifiable
 layers (see the Project properties section under: \ref{sec:projects} to set
 which layers are identifiable) will be shown with the Identify tool.
 \item \checkbox{Open feature form, if a single feature is identified}
-\item Define search radius for identifying and displaying map tips as a 
+\item Define search radius for identifying and displaying map tips as a
 percentage of the map width
 \item Define ellipsoid for distance calculations
 \item Define rubberband color for measure tools
@@ -1036,7 +1036,7 @@ cursor, Nothing)
 \item Define default snapping tolerance in map units or pixel
 \item Define search radius for vertex edits in map units or pixel
 \item \checkbox{Show markers only for selected features}
-\item Define vertex marker style (cross (default), semi transparent circle or 
+\item Define vertex marker style (cross (default), semi transparent circle or
 none) and vertex marker size
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
@@ -1094,7 +1094,7 @@ Using proxies can sometimes be tricky. It is useful to 'trial and
 error' the above proxy types and check if they succeed in your case.
 \end{Tip}
 
-You can modify the options according to your needs. Some of the changes may 
+You can modify the options according to your needs. Some of the changes may
 require a restart of QGIS before they will be effective.
 
 \begin{itemize}
@@ -1110,10 +1110,10 @@ require a restart of QGIS before they will be effective.
 \index{annotations}
 \index{text annotation|\see{annotations}}
 
-The \includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} text 
-annotation tools in the attribute toolbar provides the possibility to 
-place formated text in a balloon on the QGIS map canvas. Use the text 
-annotation tool and click into the map canvas. 
+The \includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} text
+annotation tools in the attribute toolbar provides the possibility to
+place formated text in a balloon on the QGIS map canvas. Use the text
+annotation tool and click into the map canvas.
 
 \begin{figure}[ht]
    \centering
@@ -1122,24 +1122,24 @@ annotation tool and click into the map canvas.
    \label{fig:annotation}
 \end{figure}
 
-Double click on the item opens a dialog with various options. There is the 
-text editor to enter the formated text and other item settings. E.g. there 
-is the choice of having the item placed on a map position (displayed by 
-a marker symbol) or to have the item on a screen position (not related 
-to the map). The item can be moved by map position (drag the map marker) 
+Double click on the item opens a dialog with various options. There is the
+text editor to enter the formated text and other item settings. E.g. there
+is the choice of having the item placed on a map position (displayed by
+a marker symbol) or to have the item on a screen position (not related
+to the map). The item can be moved by map position (drag the map marker)
 or by moving only the balloon.
 
-The \includegraphics[width=0.7cm,clip=true]{mActionAnnotation} move annotation 
-tool allows to move the annotation on the map canvas.  
+The \includegraphics[width=0.7cm,clip=true]{mActionAnnotation} move annotation
+tool allows to move the annotation on the map canvas.
 
 \minisec{Form annotations}\index{annotations}
 \index{form annotation|\see{annotations}}
 
-Additionally you can also create your own annotation forms. The 
-\includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation 
-tool is useful to display attributes of a vector layer in a customised qt 
-designer form (see Figure \ref{fig:custom-annotations}). It is similar to the 
-designer forms for the identify tool, but displayed in an annotation item. 
+Additionally you can also create your own annotation forms. The
+\includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation
+tool is useful to display attributes of a vector layer in a customised qt
+designer form (see Figure \ref{fig:custom-annotations}). It is similar to the
+designer forms for the identify tool, but displayed in an annotation item.
 Also see QGIS blog \url{http://blog.qgis.org/node/143} for more information.
 
 \begin{figure}[ht]
@@ -1161,7 +1161,7 @@ Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to 
 To create a bookmark:
 \begin{enumerate}
 \item Zoom or pan to the area of interest.
-\item Select the menu option \mainmenuopt{View} > \dropmenuopt{New Bookmark} or press \keystroke{Ctrl-B}.
+\item Select the menu option \mainmenuopt{View} \arrow \dropmenuopt{New Bookmark} or press \keystroke{Ctrl-B}.
 \item Enter a descriptive name for the bookmark (up to 255 characters).
 \item Click \button{OK} to add the bookmark or \button{Cancel} to exit without adding the bookmark.
 \end{enumerate}
@@ -1169,48 +1169,48 @@ To create a bookmark:
 Note that you can have multiple bookmarks with the same name.
 
 \subsection{Working with Bookmarks}
-To use or manage bookmarks, select the menu 
-option \mainmenuopt{View} > \dropmenuopt{Show Bookmarks}. The \\ 
+To use or manage bookmarks, select the menu
+option \mainmenuopt{View} \arrow \dropmenuopt{Show Bookmarks}. The \\
 \dialog{Geospatial Bookmarks} dialog allows you to zoom to or delete a bookmark.
 You can not edit the bookmark name or coordinates.
 
 \subsection{Zooming to a Bookmark}
-From the \dialog{Geospatial Bookmarks} dialog, select the desired bookmark by clicking on it, 
+From the \dialog{Geospatial Bookmarks} dialog, select the desired bookmark by clicking on it,
 then click \button{Zoom To}.
 You can also zoom to a bookmark by double-clicking on it.
 
 \subsection{Deleting a Bookmark}
-To delete a bookmark from the \dialog{Geospatial Bookmarks} 
+To delete a bookmark from the \dialog{Geospatial Bookmarks}
 dialog, click on it then click \button{Delete}.
-Confirm your choice by clicking \button{Yes} or cancel the 
+Confirm your choice by clicking \button{Yes} or cancel the
 delete by clicking \button{No}.
 
 \section{Live GPS tracking}\label{sec:gpstracking}
 
-To activate Live GPS tracking in QGIS you need to select 
-\mainmenuopt{View} > \dropmenuopt{Live GPS tracking}. You will get a new 
+To activate Live GPS tracking in QGIS you need to select
+\mainmenuopt{View} \arrow \dropmenuopt{Live GPS tracking}. You will get a new
 docked Window on the left side of the canvas.
 
-There are 4 possible screens in this GPS tracking window 
+There are 4 possible screens in this GPS tracking window
 (see Figure \ref{fig:gpstrack_live} and Figure \ref{fig:gpstrack_options}).
 
 \begin{description}
- \item[(a)] \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} 
+ \item[(a)] \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing}
 GPS position coordinates and for manually entering Vertices and Features
- \item[(b)] \includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} 
-GPS signal strength of satellite connections 
- \item[(c)] \includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} 
-GPS polar screen showing number and polar position of satellites 
- \item[(d)] \includegraphics[width=0.5cm,clip=true]{mActionOptions} 
+ \item[(b)] \includegraphics[width=0.5cm,clip=true]{gpstrack_barchart}
+GPS signal strength of satellite connections
+ \item[(c)] \includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart}
+GPS polar screen showing number and polar position of satellites
+ \item[(d)] \includegraphics[width=0.5cm,clip=true]{mActionOptions}
 GPS options screen (see Figure \ref{fig:gpstrack_options}).
 \end{description}
 
-With a plugged in GPS receiver (has to be supported by your operating system) 
-a simple click on \button{Connect} connects the GPS to QGIS. A second click 
+With a plugged in GPS receiver (has to be supported by your operating system)
+a simple click on \button{Connect} connects the GPS to QGIS. A second click
 (now \button{Disconnect} disconnects the GPS-Reciever from you Computer.
- 
-[ IMPORTANT ]: If you want to record your position to the canvas you have to 
-create a new vector layer first and switch it to editable status to be able 
+
+[ IMPORTANT ]: If you want to record your position to the canvas you have to
+create a new vector layer first and switch it to editable status to be able
 to record your track.
 
 \begin{figure}[ht]
@@ -1224,43 +1224,43 @@ to record your track.
 \end{figure}
 
 \subsection{Position coordinates}
-\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is 
-recieving signals from satellites you will see your position in latitude, 
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is
+recieving signals from satellites you will see your position in latitude,
 longitude and elevation as you can see in Figure \ref{subfig:gpstrack_main}
 
 \subsection{GPS signal strength}
-\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see 
-the signal strenght of the satellites you are revieving signals from 
+\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see
+the signal strenght of the satellites you are revieving signals from
 (Figure \ref{subfig:gpstrack_stren}).
 
 \subsection{GPS polar window}
-\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want 
-to know where in the sky all the connected satellites are, you have to 
+\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want
+to know where in the sky all the connected satellites are, you have to
 switch to the polar screen (Figure \ref{subfig:gpstrack_polar}).
 You can also see the ID numbers of the satellites you are recieving signals from.
 
 \subsection{GPS options}
-\includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection 
-problems you can switch from \radiobuttonon{Autodetect} to \radiobuttonon{Use 
-path/port below} and select the path/port your GPS receiver is connected to. 
-A click on \button{Connect} again initiates the connection to the GPS 
+\includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection
+problems you can switch from \radiobuttonon{Autodetect} to \radiobuttonon{Use
+path/port below} and select the path/port your GPS receiver is connected to.
+A click on \button{Connect} again initiates the connection to the GPS
 receiver.
 
-With the slider \slider{GPS Cursor Size} you can shrink and grow the position 
-cursor on the canvas. Activating \radiobuttonon{Auto-add vertices} within GPS 
-digitizing your track will automatically be recorded in the active vector layer 
+With the slider \slider{GPS Cursor Size} you can shrink and grow the position
+cursor on the canvas. Activating \radiobuttonon{Auto-add vertices} within GPS
+digitizing your track will automatically be recorded in the active vector layer
 (of course the layer has to be in edit mode).
 
-With GPS map recenter you can decide in which way the canvas will be 
-updated if your recorded coordinates start either to move out of canvas 
+With GPS map recenter you can decide in which way the canvas will be
+updated if your recorded coordinates start either to move out of canvas
 or there is any change at all.
 
 Track color and width sets the color of and the width of your drawn track.
 
-If you want to set a feature manually you have to go back to 
-\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates'' 
-and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices`` 
-and want to record vertices manually you have to go back there and 
+If you want to set a feature manually you have to go back to
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates''
+and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices``
+and want to record vertices manually you have to go back there and
 click \button{Add vertex}
 
 \begin{figure}[ht]
