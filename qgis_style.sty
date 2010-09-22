@@ -115,18 +115,18 @@ Read at your own risk!}}
 \setkomafont{captionlabel}{\sffamily\bfseries} 
 %\KOMAoptions{toc=flat,listof=flat}
 
-%%%   bibliography     
-\usepackage{csquotes}
+%%% Bibliography     
+%\usepackage{csquotes}
 %\usepackage[style=authoryear]{biblatex}
-\bibliography{cited_lit,cited_weblinks}
+\bibliographystyle{acm}
+\bibliography{references}
+\renewcommand\bibname{Literature and Web References} % Change the string to localize it
 
-
-%%%   Tip     
+%%% Tip     
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{Tip}{ht}{toa}
 \floatname{Tip}{QGIS Tip} % Change the second string to localize it
-
 
 % math
 \usepackage{amssymb}

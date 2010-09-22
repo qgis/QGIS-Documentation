@@ -70,6 +70,13 @@ all: $(INCLUDES) $(APPENDIX)
 %.pdf:	%.tex $(INCLUDES) $(APPENDIX)
 	$(PDFLATEX) $*.tex $*.pdf && makeindex -cl -o user_guide.ind user_guide.idx && $(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf
 
+# To add bibliography you need manually run at the moment
+# pdflatex user_guide.tex
+# bibtex user_guide
+# makeindex -cl -o user_guide.ind user_guide.idx
+# pdflatex user_guide.tex
+# pdflatex user_guide.tex
+
 %.tif:	%.pdf
 	gs -sDEVICE=tiffg3 -sPapersize=a4 -dNOPAUSE -q -sOutputFile=$*.tif $*.pdf -c quit
 
