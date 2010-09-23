@@ -49,11 +49,11 @@ INCLUDES = conventions.tex \
 	working_with_raster.tex \
 	working_with_vector.tex 
 
-TARGET = user_guide.pdf
+TARGET = user_guide
 IMAGES    = 
 
 all: $(INCLUDES) $(APPENDIX) 
-	$(MAKE) $(TARGET)
+	$(MAKE) $(TARGET).pdf
 
 %.eps:	%.jpg
 	convert jpg:$*.jpg eps:$*.eps
@@ -68,7 +68,7 @@ all: $(INCLUDES) $(APPENDIX)
 	dvips -R0 -o $*.ps $*.dvi 
 
 %.pdf:	%.tex $(INCLUDES) $(APPENDIX)
-	$(PDFLATEX) $*.tex $*.pdf && makeindex -cl -o user_guide.ind user_guide.idx && $(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf
+	$(PDFLATEX) $*.tex $*.pdf && bibtex $(TARGET) && makeindex -cl -o $(TARGET).ind $(TARGET).idx && $(PDFLATEX) $*.tex $*.pdf && $(PDFLATEX) $*.tex $*.pdf
 
 # To add bibliography you need manually run at the moment
 # pdflatex user_guide.tex
