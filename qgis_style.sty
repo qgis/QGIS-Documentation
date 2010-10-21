@@ -9,11 +9,18 @@
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
 
+%%% prevent overlapping numbers in toc.tex lists
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{0.5em}
+\addtolength{\cftsubsecnumwidth}{0.7em}
+\addtolength{\cftfignumwidth}{0.5em}
+\addtolength{\cfttabnumwidth}{0.5em}
+
 %%% Tip     
-\usepackage{float}
-\floatstyle{ruled}
-\newfloat{Tip}{ht}{toa}
-\floatname{Tip}{QGIS Tip} % Change the second string to localize it
+%\usepackage{float}
+%\floatstyle{ruled}
+%\newfloat{Tip}{ht}{toa}
+%\floatname{Tip}{QGIS Tip} % Change the second string to localize it
 
 %%% build index
 %%% see http://web.image.ufl.edu/help/latex/latex_indexes.shtml
@@ -99,7 +106,6 @@ Read at your own risk!}}
 \usepackage{placeins}
 
 %%%   layout 
-
 \usepackage{enumitem}
 \usepackage{xspace}
 
@@ -126,6 +132,12 @@ Read at your own risk!}}
 %\usepackage[style=authoryear]{biblatex}
 \bibliographystyle{acm}
 \renewcommand*{\bibname}{Literature and Web References} % Change the string to localize it
+
+%%% Tip     
+\usepackage{float}
+\floatstyle{ruled}
+\newfloat{Tip}{ht}{toa}
+\floatname{Tip}{QGIS Tip} % Change the second string to localize it
 
 % math
 \usepackage{amssymb}
