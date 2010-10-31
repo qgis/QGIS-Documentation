@@ -84,10 +84,10 @@ many features are available for display.
 directory path or URL for the photographs or other documents being displayed. If the location is a
 relative path then the checkbox to the right of the dropdown menu must be clicked. The base path for
 a relative path can be entered in the Base Path text box below. Information about the different
-options for specifying the file location are noted in the section 4.5 below.
+options for specifying the file location are noted in the section \ref{evis_specifying} below.
 \item \textbf{Compass bearing display field}: A dropdown list to specify the attribute field
 that contains the compass bearing associated with the photograph being displayed. If compass bearing
-information is available it is necessary to click the radio button to the left of the dropdown menu
+information is available it is necessary to click the checkbox to the left of the dropdown menu
 title.
 \item \textbf{Compass offset setting}: Compass offsets can be used to compensate for
 declination (adjust bearings collected using magnetic bearings to true north bearings). Click the
@@ -260,7 +260,7 @@ were entered above.
 \begin{itemize}[label=--]
 \item \textbf{Database Type}: A dropdown list to specify the type of database that will be used.
 \item \textbf{Database Host}: The name of the database host.
-\item \textbf{Port} The port number if a ``MYSQL'' database type is selected.
+\item \textbf{Port} The port number if a MYSQL or PostgreSQL database type is selected.
 \item \textbf{Database Name} The name of the database.
 \item \textbf{Connect} A button to connect to the database using the parameters defined above.
 \item \textbf{Output Console} The console window where messages related to processing are
@@ -302,9 +302,7 @@ results of the query in the Name of New Layer textbox.
 \item \textbf{Console Window}: The console window where messages related to processing are
 displayed.
 \item \textbf{Help}: Displays the on line help.
-\item \textbf{OK}: If this check-box is checked, only the file name from the A will be appended to
-the Base Path.
-\item \textbf{Apply rule to all documents}: Closes the main ``Database Connection'' window.
+\item \textbf{OK}: Closes the main ``Database Connection'' window.
 \end{itemize}
 
 Use the \dropmenuopt{X Coordinate} and \dropmenuopt{Y Coordinate} dropdown menus to select the field
@@ -312,7 +310,7 @@ from the database that store the ``X'' (or longitude) and ``Y'' (or latitude) co
 on the OK button causes the vector layer created from the SQL query to be displayed in the QGIS map
 window.
 
-To save this vector file for future use, you can use the QGIS ``Save as shapefile'' command that is
+To save this vector file for future use, you can use the QGIS ``Save as...'' command that is
 accessed by right clicking on the layer name in the QGIS map legend and then selecting ``Save as
 shapefile.''
 
