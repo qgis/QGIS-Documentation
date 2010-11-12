@@ -167,28 +167,66 @@ can be easily installed using the Python Plugin Installer (See Section
 
 \subsubsection{What's new in version \CURRENT} 
 
-These are the most relevant additions and improvements for QGIS users:
-\begin{itemize}[label=--]
-%  \item TODO(anne): rearrange the list on ManualTasks wikipage!
- \item Added context help to dialogs
- \item Measure angle tool
- \item GPS tracker widget
- \item Several new external plugins "Spatial Query, GDAL Tools, Google Earth \dots"
- \item Add attribute table to the map composer
- \item Vector layer saving in editing mode 
- \item Moved new labeling plugin to core and show labels from new labeling in map composer (though not scaled correctly)
- \item Added "Drag and drop support" for composer legend model
- \item Extended georeferencer plugin with new user interface
- \item BBOX option for WFS 
- \item Join attributes tool now supports both dbf and csv files % table join rulez!
- \item Show feature count in attribute table title
- \item Python console runnable also outside QGIS
- \item New text annotation tool
- \item New WMS scale slider
- \item Projection search improvements (show/hide deprecated projections)
- \item Add GDAL compatible CRSes (without +towgs84 parameters) for Polish epsg: 2172-2180, 3120, 3328-3335 and 4179 as epsg+40000
- \item Change map unit in project dialog automatically when user selects a new CRS
- \item New Oracle raster connection dialog 
- \item Add New Spatialite Layer/Database and allow creation of multiple spatialite layers
+Please note that this is a release in our 'cutting edge' release series. As such 
+it contains new features and extends the programmatic interface over QGIS 1.0.x 
+and QGIS 1.5.0. We recommend that you use this version over previous releases.
 
+This release includes over 177 bug fixes and many new features and enhancements. 
+
+\textbf{General Improvements}
+
+\begin{itemize}[label=--]
+\item Added gpsd support to live gps tracking.
+\item A new plugin has been included that allows for offline editing.
+\item Field calculator will now insert NULL feature value in case of calculation error instead of stopping and reverting calculation for all features.
+\item Update srs.db to include grid reference.
+\item Added a native (C++) raster calculator implementation which can deal with large rasters efficiently.
+\item Improved interaction with extents widget in statusbar so that the text contents of the widget can be copied and pasted.
+\item Many improvements and new operators to the field calculator including field concatenation, row counter etc.
+\item Added --configpath option that overrides the default path (~/.qgis) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry QGIS installation on a flash drive together with all plugins and settings.
+\item Experimental WFS-T support. Additionally ported wfs to network manager.
+\item Georeferencer has had many tidy ups and improvements.
+\item Support for long int in attribute dialog and editor.
+\item The QGIS Mapserver project has been incorporated into the main SVN repository and packages are being made available. QGIS Mapserver allows you to serve your QGIS project files via the OGC WMS protocol.
+\item Select and measure toolbar flyouts and submenus.
+\item Support has been added for non-spatial tables (currently OGR, delimited text and PostgreSQL providers). These tables can be used for field lookups or just generally browsed and edited using the table view.
+\item Added search string support for feature ids (\$id) and various other search related improvements.
+Added reload method to map layers and provider interface. Like this, caching providers (currently WMS and WFS) can synchronize with changes in the datasource.
 \end{itemize}
+
+\textbf{Table of contents (TOC) improvements}
+
+\begin{itemize}[label=--]
+\item Added a new option to the raster legend menu that will stretch the current layer using the min and max pixel values of the current extent. 
+\item When writing vector files using the table of contents context menu's 'Save as' option, you can now specify OGR creation options. 
+\item In the table of contents, it is now possible to select and remove or move several layers at once.
+\end{itemize}
+
+\textbf{Labelling (New generation only)}
+
+\begin{itemize}[label=--]
+\item Data defined label position. 
+\item Line wrapping, data defined font and buffer settings.
+\end{itemize}
+
+\textbf{Layer properties and symbology}
+
+\begin{itemize}[label=--]
+\item Three new classification modes added to graduated symbol renderer (version 2), including Natural Breaks (Jenks), Standard Deviations, and Pretty Breaks (based on pretty from the R statistical environment). Read More. 
+\item Improved loading speed of the symbol properties dialog. 
+\item Data-defined rotation and size for categorized and graduated renderer (symbology-ng). 
+\item Use size scale also for line symbols to modify line width. 
+\item Replaced raster histogram implementation with one based on Qwt. Added option to save histogram as image file. Show actual pixel values on x axis of raster histogram. 
+\item Added ability to interactively select pixels from the canvas to populate the transparency table in the raster layer properties dialog. 
+\item Allow creation of color ramps in vector color ramp combo box. 
+\item Added 'style manager...' button to symbol selector so that users will find the style manager more easily.
+\end{itemize}
+
+\textbf{Map Composer}
+
+\begin{itemize}[label=--]
+\item add capability to show and manipulate composer item width/ height in item position dialog. 
+\item Composer items can now be deleted with the backspace key. 
+\item Sorting for composer attribute table (several columns and ascending / descending).
+\end{itemize}
+
