@@ -1985,6 +1985,13 @@ of attribute table and to enable functionalities described below.
 \item \toolbtntwo{mActionCalculateField}{Open field calcultor}
 \end{itemize}
 
+\minisec{Save selected features as new layer}
+
+The selected features can be saved as any OGR supported vector format and also
+transformed into another Coordinate Reference System (CRS). Just open the right mouse
+menu of the layer and click on \dropmenuopt{Save selection as} to define the
+name of the output file, its format and CRS (see Section \ref{label_legend}).
+
 \begin{Tip}\caption{\textsc{Manipulating Attribute data}}
 Currently only PostGIS layers are supported for adding or dropping
 attribute columns within this dialog. In future versions of \qg, other
@@ -2005,7 +2012,6 @@ with a \usertext{population} field you could select only larger towns by enterin
 data from a PostGIS layer with attributes stored in PostgreSQL.
 The Fields, Values and Operators sections help the user to construct the SQL-like
 WHERE clause easily in the text field SQL where clause window.
-
 
 \begin{figure}[ht]
   \centering
@@ -2061,6 +2067,14 @@ button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of 
 click the \button{Advanced...} button at the bottom. This starts the Query Builder
 that allows to define a subset of a table and display it as described in Section
 \ref{sec:query_builder}.
+
+\minisec{Save selected features as new layer}
+
+The selected features can be saved as any OGR supported vector format and also
+transformed into another Coordinate Reference System (CRS). Just open the right mouse
+menu of the layer and click on \dropmenuopt{Save selection as} to define the
+name of the output file, its format and CRS (see Section \ref{label_legend}).
+
 
 \section{Field Calculator}\label{sec:field_calculator}
 \index{PostgreSQL!field calculator}
