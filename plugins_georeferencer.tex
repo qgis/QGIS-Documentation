@@ -26,7 +26,7 @@ points on the raster for which you can accurately determine their coordinates.
  \includegraphics[width=0.7cm]{mActionOptions} & Transformation settings \\
  \hline \includegraphics[width=0.7cm]{mActionCapturePoint} & Add Point &
  \includegraphics[width=0.7cm]{mActionDeleteSelected} & Delete Point \\
- \hline \includegraphics[width=0.7cm]{mActionEditPaste} & Move GCP Point &
+ \hline \includegraphics[width=0.7cm]{mActionMoveFeature} & Move GCP Point &
  \includegraphics[width=0.7cm]{mActionPan} & Pan \\
  \hline \includegraphics[width=0.7cm]{mActionZoomIn} & Zoom in &
  \includegraphics[width=0.7cm]{mActionZoomOut} & Zoom out \\
@@ -97,6 +97,8 @@ options:
 \item Click on a point in the raster image and choose the button 
 \toolbtntwo{pencil}{from map canvas} to add the X and Y coordinates with the help 
 of a georeferenced map already loaded in the QGIS map canvas.
+\item With the \includegraphics[width=0.7cm]{mActionMoveFeature} button, you can move 
+the GCPs in both windows, if they are at the wrong place. 
 \end{enumerate}
 \item Continue entering points. You should have at least 4 points, and the 
 more coordinates you can provide, the better the result will be. There are 
@@ -106,7 +108,7 @@ order to locate a relevant set of GCP points.
 
 \begin{figure}[ht]
 \centering
-  \includegraphics[clip=true,width=9cm]{choose_points}
+  \includegraphics[clip=true,width=5cm]{choose_points}
   \caption{Add points to the raster image \nixcaption}\label{fig:choose_points}
 \end{figure}
 
@@ -117,7 +119,8 @@ new points or delete existing ones to optimize the result. The points file
 contains values of the form: mapX, mapY, pixelX, pixelY. You can use the 
 \includegraphics[width=0.7cm]{mActionFileOpen} 'Load GCP Points' and 
 \includegraphics[width=0.7cm]{mActionFileSave} 'Save GCP Points' buttons to 
-manage the files.
+manage the files. Within the GCP table you can click on a column header and 
+therewith enable e.g. numerical sorting. The GCP list is automatically updated.
 
 \minisec{Defining the transformation settings}\label{georeferencer_transformation}
 
@@ -126,7 +129,7 @@ transformation settings for the georeferencing process.
 
 \begin{figure}[ht]
 \centering
-  \includegraphics[clip=true,width=8cm]{transformation_settings}
+  \includegraphics[clip=true,width=5cm]{transformation_settings}
   \caption{Defining the georeferencer transformation settings \nixcaption}\label{fig:georef_transform}
 \end{figure}
 
@@ -178,7 +181,7 @@ It is prossible to choose between five different resampling methods.
 \item Lanczos
 \end{enumerate}
 
-\minisec{Define the Output raster}
+\minisec{Define the transformation settings}
 
 There are several options that need to be defined for the georeferenced output 
 raster. 
@@ -195,9 +198,10 @@ the same folder together with the original raster image.
 \item As a next step you have to define the \textbf{Target SRS} 
 (Spatial Reference System) for the georeferenced raster 
 (see section \ref{label_projections}). 
-\item If you like, you can also \textbf{generate a pdf report}. It includes 
-information about the used transformation parameters. An image of the 
-residuals and a list with all GCPs and their RMS errors.
+\item If you like, you can \textbf{generate a pdf map} and also \textbf{a 
+pdf report}. The report ncludes information about the used transformation 
+parameters. An image of the residuals and a list with all GCPs and their 
+RMS errors.
 \item Furthermore you can activate the \checkbox{Set Target Resolution} 
 checkbox and define pixel resolution of the output raster. Default horizontal 
 and vertical resolution is 1,      
@@ -206,6 +210,21 @@ pixels with the value 0 shall be visualized transparent. In our example
 toposheet all white areas would be transparent.
 \item Finally \checkbox{Load in QGIS when done} loads the output raster 
 automatically into the QGIS map canvas when the transformation is done.
+\end{itemize}
+
+\minisec{Show and adapt raster properties}
+
+Clicking on the \dialog{Raster properties} dialog in the \dropmenuopt{Settings} menu 
+opens the raster properties of the layer that you want to georeference.   
+
+\minisec{Configure the georeferencer}
+
+\begin{itemize}[label=--]
+\item You can define if you want to show GCP coordiniates and/or IDs.
+\item As residual units pixels and map units can be chosen.
+\item For the PDF report a left and right margin can be defined and you can 
+also set the paper size for the PDF map.
+\item Finally you can activate to \checkbox{show georeferencer window docked}. 
 \end{itemize}
 
 \minisec{Running the transformation}\label{georeferencer_running}
