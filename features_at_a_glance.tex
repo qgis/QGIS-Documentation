@@ -51,6 +51,9 @@ Usage: qgis [options] [FILES]
         [--project projectfile]         load the given QGIS project
         [--extent xmin,ymin,xmax,ymax]  set initial map extent
         [--nologo]                      hide splash screen
+        [--noplugins]                   don't restore plugins on startup
+        [--optionspath path]            use the given QSettings path
+        [--configpath path]             use the given path for all user configuration
         [--help]                        this text
 
   FILES:
@@ -102,6 +105,15 @@ To start with a specific map extent use this option. You need to add the boundin
 
 \minisec{Command line option \usertext{---nologo}}
 This command line argument hides the splash screen when you start QGIS.
+
+\minisec{Command line option \usertext{---noplugins}}
+If you have trouble at startup with plugins, you can avoid loading them at startup. They will still be available in Plugins Manager afterwards.
+
+\minisec{Command line option \usertext{---optionspath}}
+You can have multiple configurations and decide which one to use when starting QGIS using this option. See \ref{subsec:gui_options} to check where does the operating system save the settings files. Presently there is no way to specify in which file where to write the settings, therefore you can create a copy of the original settings file and rename it.
+
+\minisec{Command line option \usertext{---configpath}}
+This option is similar to the one above, but furthermore overrides the default path (~/.qgis) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry QGIS installation on a flash drive together with all plugins and settings
 
 \section{QGIS GUI}\index{main window}
 \label{label_qgismainwindow}
