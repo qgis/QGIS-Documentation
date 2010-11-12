@@ -719,6 +719,8 @@ feature's attribute. The Symbology tab allows you to select:
 \item The colors (using the Color Ramp listbox)
 \end{itemize}
 
+The Advanced button in the lower right corner of the dialog allows to set
+th fields containing rotation and size scale information.
 For convenience, the list in the bottom part of the tab lists the values of
 all currently selected attributes together, including the symbols that will
 be rendered.
@@ -732,11 +734,12 @@ used for the rivers layer of the \qg sample dataset.
    \includegraphics[clip=true, width=10cm]{categorysymbol_ng_line}
 \end{figure}
 
-\minisec{Graduated rendering}
+\minisec{Graduated Renderer}
 
 The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol, whose color reflects the classification of a selected
-feature's attribute to a class.
+feature's attribute to a class. Like Categorized Renderer, it allows to define
+rotation and size scale from specified columns.
 
 Analogue to the categorized rendered, the symbology tab allows you to select:
 
@@ -1527,7 +1530,7 @@ With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
 you can move existing features.
 
 \begin{Tip}\caption{\textsc{Attribute Value Types}}
-At least for shapefile editing the attribue types are validated during the
+At least for shapefile editing the attribute types are validated during the
 entry. Because of this, it is not possible to enter a number into the text-column in
 the dialog \dialog{Enter Attribute Values} or vica versa. If you need to do so,
 you should edit the attributes in a second step within the \dialog{Attribute
