@@ -697,6 +697,10 @@ After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the \button{Add to style} button) and then easily
 be used in the future.
 
+\textbf{Note}: To modify line width, besides modifying the symbol itself, you
+can use data-defined Size Scale (available through \button{Advanced} next to 
+\button{Add to Style}).
+
 \begin{figure}[ht]
 \centering
    \subfloat[Single symbol point properties] {\label{subfig:singleNG1}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_point}}
@@ -732,6 +736,18 @@ used for the rivers layer of the \qg sample dataset.
    \centering
    \caption{New Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}
    \includegraphics[clip=true, width=10cm]{categorysymbol_ng_line}
+\end{figure}
+
+You can create a custom color ramp choosing New color ramp... from the Color 
+ramp dropdown menu. A dialog will prompt for the ramp type: Gradient, Random,
+ColorBrewer, then each one has options for number of steps and/or multiple
+stops in the color ramp. See \ref{fig:ccrg} for an example of custom color
+ramp.
+
+\begin{figure}[ht]
+   \centering
+   \caption{Example of custom gradient color ramp with multiple stops \nixcaption}\label{fig:ccrg}
+   \includegraphics[clip=true, width=10cm]{customColorRampGradient.png}
 \end{figure}
 
 \minisec{Graduated Renderer}
