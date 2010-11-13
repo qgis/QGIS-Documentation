@@ -124,7 +124,8 @@ element.
 You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
 Each element has its own properties and in the case of the map, its own
-extent.
+extent. If you want to remove an elements from the composer canvas. you can 
+do that with the \keystroke{delete} or the \keystroke{backspace} key.
 
 \section{Adding a current QGIS map canvas to the Print Composer}
 
@@ -281,8 +282,8 @@ functionalities (see Figure \ref{fig:label_option}a)):
 
 \begin{itemize}[label=--]
 \item The \textbf{Label} dialog offers to add text labels to the composer
-canvas. You can select font and fontcolor for the text and it is possible to
-define a text margin im mm.
+canvas. You can define the horizontal and vertical alignment, select font 
+and fontcolor for the text and it is possible to define a text margin im mm.
 \end{itemize}
 
 \minisec{General options dialog}
@@ -498,9 +499,12 @@ functionalities (see Figure \ref{fig:attrcomp}a)):
 
 \begin{itemize}[label=--]
 \item The \textbf{Table} dialog allows to select the vector layer and columns of
-the attribute table. You can define the maximum number of rows to be displayed
+the attribute table. Attribute columns can be sorted and you can define to show 
+its values ascending or descending. 
+\item You can define the maximum number of rows to be displayed
 and if attributes are only shown for visible features of the current composer
-canvas. Additionally you can define the grid characteristics of the table and
+canvas. 
+\item Additionally you can define the grid characteristics of the table and
 the header and content font.
 \end{itemize}
 
