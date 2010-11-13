@@ -315,8 +315,9 @@ menu depending on the layer type (point, line or polygon). \\
 	\> \keystroke{Ctrl+-}
 	\> \> \dropmenucheck{Map Navigation} \\
 \dropmenuopttwo{mActionSelect}{Select Features}
-	\>
-	\> \> \dropmenucheck{Attributes} \\
+	\> 
+	\> see Section \ref{sec:selection} 
+	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionDeselectAll}{Deselect Features from all layers}
         \>
         \> \> \dropmenucheck{Attributes} \\
@@ -891,6 +892,21 @@ is displayed in a popup dialog.
    \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \end{figure}
 
+\subsection{Select and deselect features}\label{sec:selection}
+
+The QGIS toolbar provides several tools to select features in the map canvas. 
+To select one or several features just click on 
+\includegraphics[width=0.7cm]{mActionSelect} and select the tools:
+
+\begin{description}
+\item \radiobuttonon{Select features}
+\item \radiobuttonoff{Select features by rectangle}
+\item \radiobuttonoff{Select features by polygon}
+\item \radiobuttonoff{Select features by freehand}
+\item \radiobuttonoff{Select features by raduis}
+\end{description} 
+
+To deselect all selected features click on \includegraphics[width=0.7cm]{mActionDeselectAll}.
 
 \section{Projects}\label{sec:projects}\index{projects}
 
