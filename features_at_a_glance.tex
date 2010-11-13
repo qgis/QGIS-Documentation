@@ -1247,7 +1247,7 @@ With a plugged in GPS receiver (has to be supported by your operating system)
 a simple click on \button{Connect} connects the GPS to QGIS. A second click
 (now \button{Disconnect} disconnects the GPS-Reciever from you Computer. For 
 GNU/Linux gpsd support is integrated to support connection to most GPS 
-receivers.
+receivers. Therefore you first have to configure gpsd properly to connect QGIS to it.
 
 [ IMPORTANT ]: If you want to record your position to the canvas you have to
 create a new vector layer first and switch it to editable status to be able
@@ -1259,8 +1259,15 @@ to record your track.
      \hspace{0.33cm}
    \subfloat[GPS signal strenght]{\label{subfig:gpstrack_stren}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_stren}}
      \hspace{0.33cm}
-   \subfloat[GPS polar window]{\label{subfig:gpstrack_polar}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_polar}} \\
+   \subfloat[GPS polar window]{\label{subfig:gpstrack_polar}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_polar}}
 \caption{Live GPS tracking \nixcaption} \label{fig:gpstrack_live}
+\end{figure}
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=4cm]{gpstrack_options}
+   \caption{GPS tracking options window \nixcaption}
+   \label{fig:gpstrack_options}
 \end{figure}
 
 \subsection{Position coordinates}
@@ -1302,12 +1309,5 @@ If you want to set a feature manually you have to go back to
 and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices``
 and want to record vertices manually you have to go back there and
 click \button{Add vertex}
-
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=5cm]{gpstrack_options}
-   \caption{GPS tracking options window \nixcaption}
-   \label{fig:gpstrack_options}
-\end{figure}
 
 \FloatBarrier
