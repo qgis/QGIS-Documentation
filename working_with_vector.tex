@@ -2008,11 +2008,13 @@ of attribute table and to enable functionalities described below.
 \end{itemize}
 
 \minisec{Save selected features as new layer}
+\index{editing!save selection as new layer}
 
 The selected features can be saved as any OGR supported vector format and also
 transformed into another Coordinate Reference System (CRS). Just open the right mouse
 menu of the layer and click on \dropmenuopt{Save selection as} to define the
-name of the output file, its format and CRS (see Section \ref{label_legend}).
+name of the output file, its format and CRS (see Section \ref{label_legend}). It is 
+also possible to specify OGR creation options within the dialog.
 
 \begin{Tip}\caption{\textsc{Manipulating Attribute data}}
 Currently only PostGIS layers are supported for adding or dropping
@@ -2021,11 +2023,25 @@ datasources will be supported, because this feature was recently implemented
 in GDAL/OGR > 1.6.0
 \end{Tip}
 
+\minisec{Working with non spatial attribute tables}
+\index{editing!working with non spatial tables}
+
+QGIS allows also to load non spatial tables. This includes currently tables supported 
+by OGR, delimited text and the PostgreSQL provider. The tables can be used for field 
+lookups or just generally browsed and edited using the table view. When you load the 
+table you will see it in the legend field. It can be opened e.g. with the 
+\dropmenuopttwo{mActionOpenTable}{Open Attribute Table} tool and is then editable 
+like any other layer attribute table. 
+
+As an example you can use columns of the non spatial table to define attribute values or 
+a range of values that are allowed to be added to a specific vector layer during digitizing. 
+Have a closer look at the edit widget in section~\ref{label_attributes} to find out more.
+
 \section{Query Builder}\label{sec:query_builder}
 \index{Query Builder}
 
 The \button{Advanced search\dots} button opens the Query Builder and allows you to
-define a subset of a table using a SQL-like WHERE clause, display the result in the
+define a subset of a table using a SQL-like WHERE clause, display the result in theh
 main window and save it as a Shapefile. For example, if you have a
 \filename{towns} layer
 with a \usertext{population} field you could select only larger towns by entering
@@ -2091,12 +2107,13 @@ that allows to define a subset of a table and display it as described in Section
 \ref{sec:query_builder}.
 
 \minisec{Save selected features as new layer}
+\index{Query Builder!save selection as new layer}
 
 The selected features can be saved as any OGR supported vector format and also
 transformed into another Coordinate Reference System (CRS). Just open the right mouse
 menu of the layer and click on \dropmenuopt{Save selection as} to define the
-name of the output file, its format and CRS (see Section \ref{label_legend}).
-
+name of the output file, its format and CRS (see Section \ref{label_legend}). It is 
+also possible to specify OGR creation options within the dialog.
 
 \section{Field Calculator}\label{sec:field_calculator}
 \index{PostgreSQL!field calculator}
