@@ -5,7 +5,7 @@
 % comment out the following line:
 %\updatedisclaimer
 
-QGIS supports WMS and WFS as data sources. WMS-support is native; WFS is
+QGIS supports WMS and WFS as data sources. WMS-support is native; WFS and WFS-T is
 implemented as a plugin.
 
 \section{What is OGC Data}\index{OGC!introduction}
@@ -63,11 +63,12 @@ server understands HTTP as the data transport mechanism.
 \subsection{Selecting WMS Servers}\label{sec:ogc-wms-servers}\index{WMS!remote server!selection}
 
 The first time you use the WMS feature, there are no servers defined. You
-can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} button inside the toolbar,
-or through the \mainmenuopt{Layer} \arrow \dropmenuopttwo{mActionAddWmsLayer}{Add
-WMS Layer...} menu.
+can begin by clicking the \toolbtntwo{mActionAddWmsLayer}{Add WMS layer} 
+button inside the toolbar, or through the \mainmenuopt{Layer} 
+\arrow \dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer...} menu.
 
-The dialog \dialog{Add Layer(s) from a Server} for adding layers from the WMS server pops up. Fortunately you can
+The dialog \dialog{Add Layer(s) from a Server} for adding layers from the 
+WMS server pops up. Fortunately you can
 add some servers to play with by clicking the \button{Add default servers}
 button. This will add at least three WMS servers for you to use, including the NASA (JPL)
 WMS server. To define a new WMS server in the \tab{Layers},
@@ -109,28 +110,6 @@ the base URL.  For example, you shouldn't have fragments such as
 \usertext{request=GetCapabilities} or \usertext{version=1.0.0}
 in your URL.\index{WMS!remote server!URL}
 \end{Tip}
-
-% in QGIS 1.1.x not needed anymore since there is a search-interface
-%%% Table \ref{tab:wms_example_urls} shows some example WMS URLs to get you started.
-%%% These links were last checked in April 2009, but could change at any time:
-%%%
-%%% %FIXME:  WMS URLs should be checked again and maybe extended in QGIS
-%%% \begin{table}[ht]\index{WMS!remote server!URL!examples}
-%%% \centering
-%%% \caption{Example Public WMS URLs}\label{tab:wms_example_urls}\medskip
-%%%  \begin{tabular}{|l|l|}
-%%% \hline \textbf{Name}        & \textbf{URL} \\
-%%% \hline Atlas of Canada      & http://atlas.gc.ca/cgi-bin/atlaswms\_en? \\
-%%% \hline DEMIS                & http://www2.demis.nl/wms/wms.asp?wms=WorldMap\& \\
-%%% \hline Geoscience Australia & http://www.ga.gov.au/wms/getmap?dataset=national\& \\
-%%% \hline NASA JPL OnEarth     & http://wms.jpl.nasa.gov/wms.cgi? \\
-%%% % \hline QGIS Users           & http://qgis.org/cgi-bin/mapserv?map=/var/www/maps/main.map\& \\
-%%% \hline QGIS Users           & http://linfiniti.com:8080/geoserver/wms? \\
-%%% \hline
-%%% \end{tabular}
-%%% \end{table}
-%%%
-%%% An exhaustive list of WMS servers can be found at \url{http://wms-sites.com}.
 
 \subsection{Loading WMS Layers}\label{sec:ogc-wms-layers}\index{WMS!client!layers}
 
@@ -456,15 +435,16 @@ More information can be found at the InteProxy-manual found on the website
 %
 % WFS-client
 %
-\section{WFS Client}\label{sec:ogc-wfs}
+\section{WFS and WFS-T Client}\label{sec:ogc-wfs}
+\index{WFS!WFS-T}
+\index{WFS!Transactional}
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You
-can identify and select features and view the attribute table. An exception
-is that editing is not supported at this time (at the time of this writing
-there will be support for WFS-T in the near future as well).
-To start the WFS plugin you
-need to open \mainmenuopt{Plugins} \arrow \dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...},
-activate the \checkbox{WFS plugin} checkbox and click \button{OK}.
+can identify and select features and view the attribute table. Since QGIS 1.6 
+editing (WFS-T) is also supported, if the server provides this feature. To start 
+the WFS plugin you need to open \mainmenuopt{Plugins} \arrow 
+\dropmenuopttwo{mActionShowPluginManager}{Plugin Manager...}, activate the 
+\checkbox{WFS plugin} checkbox and click \button{OK}.
 
 A new \toolbtntwo{mIconAddWfsLayer}{Add WFS Layer} icon appears next
 to the WMS icon. Click on it to open the dialog. In general adding a WFS
@@ -513,9 +493,9 @@ the values from you current extent to the WFS-query. This is extremly
 usefull when you only want to request \textbf{some} features from a huge
 WFS-dataset.
 
-You'll notice the download progress is visualized in the left bottom of the QGIS main window.
-Once the layer is loaded, you can identify and select a province or two and view the
-attribute table.
+You'll notice the download progress is visualized in the left bottom of the 
+QGIS main window. Once the layer is loaded, you can identify and select a 
+province or two and view the attribute table.
 
 Remember this plugin works best with MapServer WFS servers. It still
 could be, that you might experience random behavior
