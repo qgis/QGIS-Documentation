@@ -119,7 +119,7 @@ will not be described here.}
 
 \subsection{Creating a new GRASS LOCATION}\label{sec:create_loc}
 
-As an an example you find the instructions how the sample GRASS
+As an example here is how the sample GRASS
 \filename{LOCATION alaska}, which is projected in Albers Equal Area
 projection with unit feet was created for the QGIS sample dataset. This
 sample GRASS \filename{LOCATION alaska} will be used for all examples and
@@ -190,7 +190,7 @@ GRASS \filename{LOCATION alaska} included in the QGIS alaska dataset
 \subsection{Adding a new MAPSET}\label{sec:add_mapset}
 
 A user has only write access to a GRASS \filename{MAPSET} he created. This
-means, besides access to his own \filename{MAPSET}, each user can also read
+means that besides access to his own \filename{MAPSET}, each user can read
 maps in other user's \filename{MAPSETs}, but he can modify or remove only
 the maps in his own \filename{MAPSET}. All \filename{MAPSETs} include a
 \filename{WIND} file that stores the current boundary coordinate values and
@@ -270,8 +270,8 @@ digitizing.\index{GRASS!digitizing} In general, GRASS uses a topological
 vector model.\index{GRASS!topology} This means that areas are not represented
 as closed polygons, but by one or more boundaries. A boundary between two
 adjacent areas is digitized only once, and it is shared by both areas.
-Boundaries must be connected without gaps. An area is identified (labeled)
-by the centroid of the area.
+Boundaries must be connected and closed without gaps. An area is identified (and labeled)
+by the \textbf{centroid} of the area.
 
 Besides boundaries and centroids, a vector map can also contain
 points and lines. All these geometry elements can be mixed
@@ -283,7 +283,7 @@ is possible to mix geometry elements, it is unusual and even in GRASS only
 used in special cases such as vector network analysis. Normally you should
 prefere to store different geometry elements in different layers.}
 
-It is possible to store more 'layers' in one vector dataset. For example,
+It is possible to store several 'layers' in one vector dataset. For example,
 fields, forests and lakes can be stored in one vector. Adjacent
 forest and lake can share the same boundary, but they have separate attribute
 tables. It is also possible to attach attributes to boundaries. For example,
@@ -525,13 +525,15 @@ to the currently selected \filename{LOCATION} and \filename{MAPSET}.
 \end{figure}
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more
-than 300) GRASS modules in command line modus. To offer a more user
+than 300) GRASS modules in a command line interface. To offer a more user
 friendly working environment, about 200 of the available GRASS modules and
 functionalities are also provided by graphical dialogs. These dialogs are
-grouped in categories, but are searchable as well. You find a complete
-list of GRASS modules available in QGIS version \CURRENT
-in appendix \ref{appdx_grass_toolbox_modules}. It is also possible to
-customize the GRASS Toolbox content. It is described in Section
+grouped in categories, but are searchable as well. 
+
+A complete list of GRASS modules available in the graphical Toolbox in QGIS version \CURRENT
+is available in the GRASS wiki ( \url{http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list}. 
+
+It is also possible to customize the GRASS Toolbox content. This procedure is described in Section
 \ref{sec:toolbox-customizing}.
 
 As shown in Figure \ref{fig:grass_modules}, you can look for the appropriate
