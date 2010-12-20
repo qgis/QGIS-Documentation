@@ -500,10 +500,17 @@ The first time you load data from a SpatiaLite database, begin by clicking on th
 \toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the
 \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...}
 option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}.
-This will bring up a window, which will allow you to either connect to a SpatiaLite database already known to \qg, which
-you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection,
-click on \button{New} and use the file browser to point to your SpatiaLite database,
-which is a file with a \filename{.sqlite } extension.
+This will bring up a window, which will allow you to either connect to a SpatiaLite 
+database already known to \qg, which you can choose from the dropdown menu or to define 
+a new connection to a new database. To define a new connection, click on \button{New} and 
+use the file browser to point to your SpatiaLite database, which is a file with 
+a \filename{.sqlite } extension.
+
+If you want to save a vector layer to SpatiaLite format you can do this opening the right 
+mouse menu of the layer. Then click on \dropmenuopt{Save as}, define the name of the output 
+file, sqlite as format and the CRS and then add 'SPATIALITE=YES' in the OGR data source 
+creation option field. This tells OGR to create a SpatiaLite database. See 
+also \url{http://www.gdal.org/ogr/drv_sqlite.html}.
 
 \section{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
@@ -2049,7 +2056,6 @@ with a \usertext{population} field you could select only larger towns by enterin
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL.
 The Fields, Values and Operators sections help the user to construct the SQL-like
-WHERE clause easily in the text field SQL where clause window.
 
 \begin{figure}[ht]
   \centering
