@@ -1836,10 +1836,19 @@ you select the vertices of a part, adjust the vertex edit tolerance.
 You can reshape line and polygon features using the
 \toolbtntwo{mActionReshape}{Reshape Features} icon on the toolbar. It
 replaces the line or polygon part from the first to the last intersection
-with the original line. With polygons this can sometime lead to unintended
+with the original line. With polygons this can sometimes lead to unintended
 results. It is mainly useful to replace smaller parts of a polygon, not major
 overhauls and the reshapeline is not allowed to cross several polygon rings
-as this would generate an invalide polygon.
+as this would generate an invalid polygon.
+
+For example, you can edit the boundary of a polygon with this tool. First,
+click in the inner area of the polygon next to the point where you want to 
+add a new vertex. Then, cross the boundary and add the vertices outside the
+polygon. To finish, right-click in the inner area of the polygon. The tool
+will automatically add a node where the new line crosses the border. It is 
+also possible to remove part of the area from the polygon, starting the new
+line outside the polygon, adding vertices inside, and ending the line outside
+the polygon with a right click.
 
 \textbf{Note}: The reshape tool may alter the starting position of a polygon
 ring or a closed line. So the point that is represented 'twice' will not be
