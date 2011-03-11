@@ -506,8 +506,8 @@ a new connection to a new database. To define a new connection, click on \button
 use the file browser to point to your SpatiaLite database, which is a file with 
 a \filename{.sqlite } extension.
 
-If you want to save a vector layer to SpatiaLite format you can do this opening the right 
-mouse menu of the layer. Then click on \dropmenuopt{Save as}, define the name of the output 
+If you want to save a vector layer to SpatiaLite format you can do this by right clicking
+the layer in the legend. Then click on \dropmenuopt{Save as}, define the name of the output 
 file, sqlite as format and the CRS and then add 'SPATIALITE=YES' in the OGR data source 
 creation option field. This tells OGR to create a SpatiaLite database. See 
 also \url{http://www.gdal.org/ogr/drv_sqlite.html}.
@@ -902,11 +902,12 @@ We will illustrate this by labelling the lakes shapefile of the
 \item Enter a default for lakes that have no name. The default label will be
   used each time \qg encounters a lake with no value in the \guilabel{NAMES}
 field.
-\item If have labels extending over several lines, check \checkbox{Multiline
+\item If you have labels extending over several lines, check \checkbox{Multiline
 labels?}. \qg will check for a true line return in your label field and
 insert the line breaks accordingly. A true line return is a \textbf{single}
 character \textbackslash n, (not two separate characters, like a backlash
-\textbackslash ~followed by the character n).
+\textbackslash ~followed by the character n).  To insert line returns in an
+attribute field configure the edit widget to be text edit (not line edit).
 \item Click \button{Apply}.
 \end{enumerate}
 
@@ -1095,10 +1096,10 @@ used.
 The \tab{General} tab is essentially like that of the raster dialog. It
 allows you to change the display name, set scale dependent rendering options,
 create a spatial index of the vector file (only for OGR supported formats and
-PostGIS) and view or change the projection of the specific vetor layer.
+PostGIS) and view or change the projection of the specific vector layer.
 
 The \button{Query Builder} button allows you to create a subset of the
-features in the layer - but this button currently only is available when you
+features in the layer - but currently this button is only available when you
 open the attribute table and select the \button{...} button next to Advanced
 search.
 
@@ -1516,9 +1517,8 @@ layer is in edit mode, markers will appear at the vertices, and additional
 tool buttons on the editing toolbar will become available.
 
 \begin{Tip}\caption{\textsc{Save Regularly}}
-Remember to toggle \toolbtntwo{mActionToggleEditing}{Toggle editing}
-off regularly. This allows you to save your recent changes, and also confirms
-that your data source can accept all your changes.
+Remember to \toolbtntwo{mActionFileSave}{Save Edits} regularly. This will
+also check that your data source can accept all the changes.
 \end{Tip}
 
 \minisec{Adding Features}
@@ -1591,34 +1591,42 @@ and click on the \tab{Digitizing} tab and select the appropriate entry.
 \minisec{Basic operations}\index{vector layers!Node Tool}
 
 Start by activating the \toolbtntwo{mActionNodeTool}{Node Tool} and selecting
-some features by clicking on it. Red boxes appear at each vertex of this feature.
-This is basic select of the feature. Functionalities are:
+a feature by clicking on it. Red boxes will appear at each vertex of this feature.
+%%Perhaps the error message mentioned below is in fact a bug, in which case the
+%%bug should be fixed rather than including this note
+Note that to select a polygon you must click one of its vertices or edges;
+clicking inside it will produce an error message. Once a feature
+is selected the following functionalities are available:
 
 \begin{itemize}[label=--]
-\item \textbf{Selecting vertex}: Selecting is easy just click on vertex and
-color of this vertex will change to blue. When selecting more vertices
-\keystroke{Shift} key can be used to select more vertices. Or also the
-\keystroke{Ctrl} key can be used to invert selection of vertices (if selected then
-it will be unselected and when not selected vertex will be selected). Also more
-vertices can be selected at once when clicking somewhere outside feature and opening a rectangle where all vertices inside will be selected. Or just click on an edge and
-both adjacent vertices should be selected.
-\item \textbf{Adding vertex}: Adding vertex is simple, too. Just double click near
-some edge and a new vertex will appear on the edge near to the cursor. Note that
-vertex will appear on edge not on cursor position, there it has to be moved if
-necessary.
-\item \textbf{Deleting vertex}: After selecting vertices for deletion, click the
-\keystroke{Delete} key and vertices will be deleted. Note that according to
-standard Quantum GIS behavior, it will leave a necessary number of vertices for
-the feature type you are working on. To delete a complete feature, another tool
-has to be used.
-\item \textbf{Moving vertex}: Select all vertices you want to move. All selected
-vertices are moving in the same direction as the cursor. If snapping is enabled,
+\item \textbf{Selecting vertices}: You can select vertices by clicking on them
+one at a time, by clicking on an edge to select the vertices at both ends, or
+by clicking and dragging a rectangle around some vertices.  When a vertex is
+selected its color changes to blue. To add more vertices to the current selection,
+hold down the \keystroke{Ctrl} key while clicking. Hold down
+\keystroke{Ctrl}\keystroke{Shift} when clicking to toggle the selection state of
+vertices (vertices that are currently unselected will be selected as usual, but
+also vertices that are already selected will become unselected).
+\item \textbf{Adding vertices}: To add a vertex simply double click near
+an edge and a new vertex will appear on the edge near to the cursor. Note that
+the vertex will appear on the edge, not at the cursor position, therefore it has
+to be moved if necessary.
+\item \textbf{Deleting vertices}: After selecting vertices for deletion, click the
+\keystroke{Delete} key. Note that you cannot use the
+\toolbtntwo{mActionNodeTool}{Node Tool} to delete a complete feature; \qg will
+ensure it retains the minimum number of vertices for the feature type you are
+working on. To delete a complete feature use the
+\toolbtntwo{mActionDeleteSelected}{Delete Selected} tool.
+\item \textbf{Moving vertices}: Select all the vertices you want to move. Click
+on a selected vertex or edge and drag in the direction you wish to move. All the
+selected vertices will move together. If snapping is enabled,
 the whole selection can jump to the nearest vertex or line.
 \end{itemize}
 
-The \button{Release} button stores all changes and a new entry appears in the undo
-dialog. Remember that all operations support topological editing when turned on. On
-the fly projection is also supported.
+Each change made with the node tool is stored as a separate entry in the undo dialog.
+Remember that all operations support topological editing when this is turned on.
+On the fly projection is also supported, and the node tool provides tooltips to
+identify a vertex by hovering the pointer over it.
 
 \minisec{Cutting, Copying and Pasting Features}
 \index{vector layers!cut!feature}
@@ -1763,22 +1771,21 @@ integrity of your data, we offer no warranty in this regard.
 \index{vector layers!redo}
 
 The \toolbtntwo{mActionUndo}{Undo} and \toolbtntwo{mActionRedo}{Redo} tools
-allow the user to undo or redo the last or a certain step within the vector editing
-operations. Basic view of Undo/Redo operations is a widget, where all operations
-are shown (see Figure~\ref{fig:vector_redoundo}). This widget is not displayed by
-default. Widget can be displayed by right clicking on toolbar and activating the
+allow the user to undo or redo vector editing operations. There is also a dockable
+widget, which shows all operations in the undo/redo history (see
+Figure \ref{fig:vector_redoundo}). This widget is not displayed by
+default; it can be displayed by right clicking on the toolbar and activating the
 Undo/Redo check box. Undo/Redo is however active, even if the widget is not
 displayed.
 
 When Undo is hit, the state of all features and attributes are reverted to the
-state before the reverted operation happened. Changes which are done elsewhere
-(for example from some plugin), can show unspecific behavior for some operations
-which appears in this box. The operations can be reverted or they stay the same.
+state before the reverted operation happened. Changes other than normal vector
+editing operations (for example changes done by a plugin), may or may not be
+reverted, depending on how the changes were performed.
 
-An action can be triggered by clicking on Undo or Redo buttons or by clicking
-directly on the item to which you want to return to. Another possibility to
-trigger an undo operation is to click on the \button{undo/redo} buttons in
-the advanced digitizing tool bar.
+To use the undo/redo history widget simply click to select an operation in the
+history list; all features will be reverted to the state they were in after
+the selected operation.
 
 \begin{figure}[ht]
    \centering
@@ -1962,15 +1969,19 @@ closing the dialog when you click \button{Apply}.
 \index{editing!working with the attribute table}
 
 The attribute table displays features of a selected layer. Each row in the table
-represents one map feature with its attributes shown in several columns. The
-features in the table can be searched, selected, moved or even edited.
+represents one map feature and each column contains a particular piece of
+information about the feature. Features in the table can be searched, selected,
+moved or even edited.
 
 To open the attribute table for a vector layer, make the layer active by clicking
 on it in the map legend area. Then use \mainmenuopt{Layer} from the main menu
 and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 from the menu. It is also possible to rightlick on the layer and
 choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the
-dropdown menu. This will open a new window which displays the attributes for
+dropdown menu.
+%%FIXME: The following statement is not necessarily correct as there is a setting
+%%which means it might only display the selected features or features in current canvas
+This will open a new window which displays the attributes for
 every feature in the layer (figure \ref{fig:attributetable}). The number of features
 are shown in the attribute table title.
 
@@ -1982,29 +1993,33 @@ are shown in the attribute table title.
 
 \minisec{Selecting features in an attribute table}
 
-\textbf{A selected row} in the attribute table represents all attributes of a
-selected feature in the layer. The attribute table reflects any changes
-in the layer selection in the main window and vice versa. A changed selection
-in the attribute table also causes a change in the selected feature set in the
-main window and different layer feature selection means different rows are to be
-selected.
+\textbf{Each selected row} in the attribute table displays the attributes of a
+selected feature in the layer. If the set of features selected in the main window
+is changed, the selection is also updated in the attribute table.
+Likewise, if the set of rows selected in the attribute table is changed, the
+set of features selected in the main window will be updated.
 
 Rows can be selected by clicking on the row number on the left side of the
-row. Selecting a row doesn't change the current cursor position. \textbf{Multiple
-rows} can be marked by holding the \keystroke{Ctrl} key. A \textbf{continuous
-selection} can be made by holding the \keystroke{Shift} key and clicking on several
-row headers on the left side of the rows. All rows between the current cursor
-position and the clicked row are selected.
+row. \textbf{Multiple rows} can be marked by holding the \keystroke{Ctrl} key. A
+\textbf{continuous selection} can be made by holding the \keystroke{Shift} key and
+clicking on several row headers on the left side of the rows. All rows between the
+current cursor position and the clicked row are selected. Moving the cursor
+position in the attribute table, by clicking a cell in the table, does not change
+the row selection. Changing the selection in the main canvas does not move the
+cursor position in the attribute table.
+%%This previously said that changing the row selection in the attribute table does not move the cursor position. But it does, if it is not meant to, there is a bug!
 
-Each column can be sorted by clicking on its column header. A small arrow
-indicates the sort order (downward pointing means descending values from the top
-row down, upward pointing means ascending values from the top rown down).
+The table can be sorted by any column, by clicking on the column header. A small
+arrow indicates the sort order (downward pointing means descending values from the
+top row down, upward pointing means ascending values from the top row down).
 
 For a \textbf{simple search by attributes} on only one column the \button{Look for}
 field can be used. Select the field (column) from which the search should be
-performed from the dropdown menu and hit the \button{Search} button. The number of
-matching rows will appear in the status bar. For more complex searches use
-the Advanced search \button{...}, which will lauch the Search Query Builder
+performed from the dropdown menu and hit the \button{Search} button. The matching
+rows will be selected and the total number of
+matching rows will appear in the title bar of the attribute table, and in the
+status bar of the main window. For more complex searches use
+the Advanced search \button{...}, which will launch the Search Query Builder
 described in Section \ref{sec:select_by_query}.
 
 To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality:
