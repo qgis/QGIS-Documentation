@@ -567,20 +567,25 @@ back by choosing menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars
 \subsection{Map Legend}\label{label_legend}
 \index{legend}
 
-The map legend area is used to set the visibility and z-ordering of layers.
-Z-ordering means that layers listed nearer the top of the legend are drawn
-over layers listed lower down in the legend. The checkbox in each legend
-entry can be used to show or hide the layer.\index{layer!visibility}
+The map legend area lists all the layers in the project.
+The checkbox in each legend entry can be used to show or hide the layer.\index{layer!visibility}
+A layer can be selected and dragged up or down in the legend to change the
+z-ordering. Z-ordering means that layers listed nearer the top of the legend are
+drawn over layers listed lower down in the legend.
 
-Layers can be grouped in the legend window by adding a layer group and dragging layers
-into the group. To do so, move the mouse pointer to the legend window, right click, choose \dropmenuopt{Add group}.
-A new folder appears. Now drag the layers onto to the folder symbol. It is then possible to toggle the
-visibility of all the layers in the group with one click. To bring layers out of a group, move
-the mouse pointer to the layer symbol, right click, and choose \dropmenuopt{Make to toplevel item}. To give the folder a
-new name, choose \dropmenuopt{Rename} in the right click menu of the group.
+Layers in the legend window can be organised into groups. To do so, right click
+in the legend window and choose \dropmenuopt{Add group}. Type in a name for the
+group and press \keystroke{Enter}. Now click on an existing layer and drag it
+onto the group. Also, if new layers are added to the project while a group is
+selected, they will automatically be placed in the group.
+To bring a layer out of a group you can drag it out, or right click on it and 
+choose \dropmenuopt{Make to toplevel item}.
+Groups can be nested inside other groups.
+The checkbox for a group will show or hide all the layers in the group
+with one click.
 
-The content of the right mouse button context menu depends on whether the loaded legend item you hold your
-mouse over is a raster or a vector layer. For GRASS vector layers the \dropmenuopt{toggle editing} is not
+The content of the right mouse button context menu depends on whether the selected legend item
+is a raster or a vector layer. For GRASS vector layers \dropmenuopt{toggle editing} is not
 available. See section \ref{grass_digitising} for information on editing GRASS vector layers.
 
 \begin{itemize}
@@ -630,17 +635,7 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 
 \end{itemize}
 
-If several vector data sources have the same vector type and the same
-attributes, their symbolisations may be grouped. This means that if the
-symbolisation of one data source is changed, the others automatically have
-the new symbolisation as well. To group symbologies, open the right click
-menu in the legend window and choose \dropmenuopt{Add Group}. The file
-groups of the layers appear. It is now possible to drag a file from one file
-group into another one. If this is done, the symbologies are grouped. Note
-that QGIS only permits the drag if the two layers are able to share
-symbology (same vector geometry type and same attributes).
-
-It is also possible to select more than one Layer or Group at the same time 
+It is possible to select more than one Layer or Group at the same time 
 by holding down the \keystroke{CTRL}-Key while selecting the Layers with the 
 left mouse button. You can than move all selected Layers to a new Group at 
 the same time.
