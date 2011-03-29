@@ -11,6 +11,7 @@ APPENDIX = $(wildcard appendices/*.tex)
 INCLUDES = conventions.tex \
 	core_plugins.tex \
 	external_plugins.tex \
+	qgis_mapserver.tex \
 	features_at_a_glance.tex \
 	foreword.tex \
 	getting_started.tex \
