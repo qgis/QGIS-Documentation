@@ -271,6 +271,10 @@ entry. For more information about tools and toolbars, see Section
         \>
         \> see Section \ref{sec:advanced_edit}
         \> \dropmenucheck{Advanced Digitizing} \\
+\dropmenuopttwo{mActionMergeFeatures}{Merge attributes of selected Features}
+        \>
+        \> see Section \ref{sec:advanced_edit}
+        \> \dropmenucheck{Advanced Digitizing} \\
 \dropmenuopttwo{mActionNodeTool}{Node Tool}
         \>
         \> see Section \ref{sec:edit_existing_layer}
@@ -314,25 +318,17 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionZoomOut}{Zoom Out}
 	\> \keystroke{Ctrl+-}
 	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionSelect}{Select Features}
+\dropmenuopt{Select}
 	\> 
 	\> see Section \ref{sec:selection} 
 	\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionDeselectAll}{Deselect Features from all layers}
-        \>
-        \> \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionIdentify}{Identify Features}
 	\> \keystroke{Ctrl-Alt-I}
 	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionMeasure}{Measure Line}
-	\> \keystroke{Ctrl-Alt-M}
-	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionMeasureArea}{Measure Area}
-	\> \keystroke{Ctrl-Alt-J}
-	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionMeasureAngle}{Measure Angle}
-	\>
-	\> \> \dropmenucheck{Attributes} \\
+\dropmenuopt{Measure}
+	\> 
+	\> see Section \ref{sec:measure}
+	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionOpenTable}{Zoom Full}
 	\> \keystroke{Ctrl-Alt-F}
 	\> \> \dropmenucheck{Map Navigation} \\
@@ -382,10 +378,6 @@ menu depending on the layer type (point, line or polygon). \\
 	\>
 	\> see Section \ref{sec:create shape}
 	\> \dropmenucheck{Manage Layers} \\
-\mainmenuopt{Raster calculator}
-        \>
-        \> see Section \ref{sec:raster_calc}
-        \>  \\
 \dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}
 	\> \keystroke{Ctrl+Shift+V}
 	\>
@@ -429,15 +421,27 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
 	\> \keystroke{Ctrl+D}
 	\>
-	\> \dropmenucheck{Properties} \\
+	\> \\
+\mainmenuopt{Set CRS of Layer(s)}
+	\> \keystroke{Ctrl+Shift+C}
+	\>
+	\> \\
+\mainmenuopt{Set project CRS from Layer}
+	\\
 \mainmenuopt{Properties}
 	\\
 \mainmenuopt{Query...}
 	\\
+\dropmenuopttwo{labeling}{Labeling}
+	\>
+	\>
+	\\
 \dropmenuopttwo{mActionInOverview}{Add to Overview}
 	\> \keystroke{Ctrl+Shift+O}
 	\>
-	\> \dropmenucheck{Manage Layers} \\
+	\> 
+\dropmenucheck{Manage Layers} 
+	\\
 \dropmenuopttwo{mActionAddAllToOverview}{Add All To Overview}
 	\>
 	\>
@@ -446,18 +450,14 @@ menu depending on the layer type (point, line or polygon). \\
 	\>
 	\>
 	\\
-\dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
-	\> \keystroke{Ctrl+Shift+H}
-	\>
-	\> \dropmenucheck{Manage Layers} \\
 \dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
 	\> \keystroke{Ctrl+Shift+U}
 	\>
 	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{labeling}{Labeling}
+\dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
+	\> \keystroke{Ctrl+Shift+H}
 	\>
-	\>
-	\\
+	\> \dropmenucheck{Manage Layers} \\
 \end{tabbing}
 
 \item \mainmenuopt{Settings}
@@ -486,6 +486,10 @@ menu depending on the layer type (point, line or polygon). \\
         \> \> \\
 \dropmenuopttwo{mActionOptions}{Options}
         \> \> see Section \ref{subsec:gui_options} \\
+\dropmenuopt{Snapping Options}
+	\>
+	\>
+	\\
 \end{tabbing}
 
 \item \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
@@ -499,6 +503,15 @@ menu depending on the layer type (point, line or polygon). \\
         \\
 \end{tabbing}
 
+\item \mainmenuopt{Raster}
+\begin{tabbing}
+\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\mainmenuopt{Raster calculator}
+        \>
+        \> see Section \ref{sec:raster_calc}
+        \>  \\
+\end{tabbing}
+
 \item \mainmenuopt{Help}
 \begin{tabbing}
 \hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
@@ -506,6 +519,10 @@ menu depending on the layer type (point, line or polygon). \\
 	\> \keystroke{F1}
 	\>
 	\> \dropmenucheck{Help}\\
+\mainmenuopt{API Documentation}
+        \>
+        \> 
+        \>  \\
 \dropmenuopttwo{mActionQgisHomePage}{QGIS Home Page}
 	\> \keystroke{Ctrl+H}
 	\>
@@ -513,6 +530,8 @@ menu depending on the layer type (point, line or polygon). \\
 \dropmenuopttwo{mActionCheckQgisVersion}{Check QGIS Version}
 	\\
 \dropmenuopttwo{mActionHelpAbout}{About}
+	\\
+\dropmenuopttwo{mActionHelpSponsors}{QGIS Sponsors}
 	\\
 \end{tabbing}
 
