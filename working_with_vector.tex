@@ -1042,9 +1042,14 @@ Within the \tab{Attributes} tab the attributes of the selected dataset can be
 manipulated. The buttons \toolbtntwo{mActionNewAttribute}{New Column} and
 \toolbtntwo{mActionDeleteAttribute}{Delete Column} can be
 used, when the dataset is \toolbtntwo{mActionToggleEditing}{Editing mode}.
+
 At the moment only columns from PostGIS layers can be removed and added. The
 OGR library supports to add new columns, but not to remove them, if you have
-a GDAL version >= 1.6 installed.
+a GDAL version >= 1.6 installed.  In the GDAL/OGR trac there is a ticket with a patch that
+awaits to be committed (\url{http://trac.osgeo.org/gdal/ticket/2671}). Until then QGIS
+(and any other software that uses GDAL/OGR) can only use a workaround to delete
+Shapefile columns. In QGIS this ``workaround'' is a third-party plugin called
+Table Manager.
 
 \minisec{edit widget}
 
