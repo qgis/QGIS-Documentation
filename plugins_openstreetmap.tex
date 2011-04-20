@@ -6,7 +6,7 @@
 % comment out the following line:
 % \updatedisclaimer
 
-In recent years the OpenStreetMap project has gained popularity because in many countries no free geodata such as digital roadmaps are available.
+In recent years, the OpenStreetMap project has gained popularity because in many countries no free geodata such as digital roadmaps are available.
 The objective of the OSM project is to create a free editable map of the world from GPS data, aerial photography or from local knowledge. To
 support this objective, QGIS provides a plugin that enables its users to work with OSM data.
 
@@ -52,16 +52,16 @@ and may also model an abstract object.
 Several different logical features in a common map ('Point Of Interest',
 'Street', 'Tram Line', 'Bus Stop' etc.) are defined by these primitives.
 Map features are well-known in the OSM community and are stored as tags,
-based of a key and a value. OSM is usually distributed in XML format. XML
+based on a key and a value. OSM is usually distributed in XML format. XML
 payload is used for the communication with the OSM server as well.
 
 \minisec{QGIS - OSM Connection}\label{qgis-osm-connection}
 
 The first part of this section describes how OSM data primitives
-are displayed in QGIS vector layers. As written above, OSM data consist of
-Nodes, Ways and Relations. In QGIS they are displayed in three different
-layer types: Point layer, Line layer and Polygon layer. It's not possible
-to remove any of these layers and work with the other ones.
+are displayed in QGIS vector layers. As previously mentioned, OSM data consists of
+Nodes, Ways and Relations. In QGIS, they are displayed in three different
+layer types: Point layer, Line layer and Polygon layer. It is not possible
+to remove any of these layers and work with the other ones. % I'm not sure what this phrase 'work with the other ones' means 
 
 \begin{itemize}[label=--]
 \item A \textbf{Point layer} displays all features of type Node that stands
@@ -74,24 +74,20 @@ same Node.
 Line layer.
 \end{itemize}
 
-OpenStreetMap has one more data primitive except for the three mentioned
-above. This is called \textbf{Relation}. There is purposely no vector layer
-to display Relations. A Relation defines relation between any number of
-data primitives. After Point, Line or Polygon is identified on a map,
-the plugin shows a list of all relations, the identified feature is part of.
+OpenStreetMap has one more data primitive in addition to the three mentioned
+above. This is called \textbf{Relation}. There is purposely no vector layer 
+to display Relations. A Relation defines a connection between any number of
+data primitives. After a Point, Line or Polygon is identified on a map,
+the plugin shows a list of all relations which the identified feature is part of.
 
-Challenging was to design the connection between OSM data and the
+It was challenging to design the connection between OSM data and the
 standard QGIS editing tools. These tools are made to edit a single vector
 layer at a time, no matter of what feature types it displays. This means
 that if OSM data are loaded to QGIS through the plugin, you could
-(theoretically) edit Point layer, Line layer or Polygon layer with these
+(theoretically) edit the Point layer, Line layer or Polygon layer with these
 standard tools separately.
 
-The problem is, that Line layer consists of two different types of OSM
-features - Ways and Nodes. Why? Because in OSM format a Way is composed of
-Nodes. If you start editing a Line layer and change the shape of some line,
-your action must affect not only the OSM Way but also the OSM Nodes that
-are part of it.
+A Line layer consists of two different types of OSM features, Ways and Nodes. In OSM format, a Way is composed of Nodes. If you start editing a Line layer and change the shape of some line, your action affects not only the OSM Way, but also the OSM Nodes that are part of it.
 
 QGIS standard editing tools cannot tell the OSM provider, which members
 of which line has changed and how. It can tell only what's the new geometry
@@ -129,8 +125,8 @@ together with new graphical components as shown in Figure
 \minisec{OSM Features widget}
 
 The OSM Feature widget helps to identify OSM features. It
-shows basic information on feature type and identifier as well as info on
-who has when changed a feature. The OSM Feature widget also provides all
+shows basic information on the feature type and identifier as well as information on
+who has changed a feature, and when. The OSM Feature widget also provides all
 editing tools (in the top part of it). More information on those tools can be
 found in the sections below. The widget is initially disabled. It
 activates itself after successful loading some OSM data.
@@ -138,9 +134,9 @@ activates itself after successful loading some OSM data.
 \minisec{OSM Undo/Redo widget}
 
 This Undo/Redo widget is used to undo and redo edit actions. It consists
-not only of a classical Undo and Redo button, it also shows a list with a
+not only a classic Undo and Redo button, but also shows a list with a
 brief description of the edit actions that were done. The OSM Undo/Redo
-widget is initially closed. You can show it using a button on OSM Feature
+widget is initially closed. You can show it using a button on the OSM Feature
 widget.
 
 \minisec{Toolbar menu icons}
@@ -184,7 +180,7 @@ toolbar in your QGIS installation. You can enable it again selecting
    \caption{Load OSM data dialog \nixcaption}\label{fig:osmload}
 \end{figure}
 
-Purpose of its elements is explained below.
+The purpose of its elements is explained below.
 
 \begin{description}
 \item \textbf{OpenStreetMap file to load}: Click on the button to select
@@ -208,15 +204,15 @@ to see all details and to edit something. If not you can use
 support changing the renderer style dynamically.
 \end{description}
 
-Click \button{Ok} to load your data. If this is the first time OSM
+Click \button{Ok} to load your data. If this is the first time the OSM
 file is loaded, the plugin must first parse the database. This may take few
 seconds or minutes - it depends on the amount of loaded data.
 
 \subsection{Viewing OSM data}
 
-After OSM data are loaded, you can identify map features using the
+After the OSM data are loaded, you can identify map features using the
 appropriate tool. Use the \toolbtntwo{osm_identify}{Identify feature}
-button on the top-left of OSM Feature widget. Using this tool you can
+button on the top-left of the OSM Feature widget. Using this tool you can
 easily explore all map objects. When the mouse cursor is placed over an
 object, you can see all information on it directly in the OSM Feature widget.
 There is also a dynamic rubberband displayed on the map so that the user
@@ -231,24 +227,23 @@ and relations, move the mouse cursor at the same time, try left-clicking
 while you are over the feature. Identification process will stop until next
 left-clicking.
 
-Sometimes there are more than one feature at a point where left-clicking
+Sometimes there is more than one feature at a point where left-clicking
 was performed. This happens especially when clicking on cross-roads or if
-you didn't zoom enough into the map. In this situation only one of such
+you did not zoom enough into the map. In this situation only one of such
 features is identified (and marked with the rubberband) but the plugin
-remembers all of them. Then (still in the pause mode) you can change
-identified features cyclical with right-clicking.
+remembers all of them. Then (still in the pause mode) you can cycle through the
+identified features by right-clicking.
 
 \subsection{Editing basic OSM data}
 
-In the title of this section 'basic data' means non-relation OSM features -
-nodes and ways. If you prefer reading information on relation editing, just
-skip this section and read the next one.
+'Basic data'  in this context means non-relational OSM features -
+nodes and ways. If you prefer to examine how to perform relational editing, 
+skip this section and move on to the next one.
 
-Basic data editing is a key part of OSM Plugin. You can change property,
+Basic data editing is a key part of the OSM Plugin. You can change the property,
 position or shape of any existing basic feature. You can remove features or
-add new ones. All such changes on nodes and ways are remembered for
-comfortable usage of Undo/Redo operations and for easy upload of all changes
-to OpenStreetMap server.
+add new ones. All changes on nodes and ways are remembered by Undo/Redo all 
+changes can be easily uploaded to the OpenStreetMap server.
 
 \minisec{Changing feature tags}
 
@@ -263,24 +258,24 @@ on the OSM Feature widget. Don't forget to identify feature first.
 \end{figure}
 
 If you want to change a tag value, just double-click in the appropriate row of
-column 'Value' and type or select a new value. If you want to remove a tag,
-click in its row, then use button \button{Remove selected tags} on the right
+column 'Value' and type, or select a new value. If you want to remove a tag,
+click in the relevant row, then use the button \button{Remove selected tags} on the right
 bottom under the table.
 
-To add new tags just type its key and value into the last row of the table -
+To add new tags just type the key and value into the last row of the table
 where '<next tag value>' is written. Notice that you cannot change the key of
-an existing tag pair. For comfortable usage, there are some combo boxes of all
+an existing tag pair. Conveniently, there are some combo boxes of all
 existing tag keys and their typical values.
 
 \minisec{Point creation}
 
 For point creation there is a \toolbtntwo{osm_createPoint}{Create point}
-button on the OSM Feature widget. To create some points just click on the
+button on the OSM Feature widget. To create some points, just click on the
 button and start clicking on the map. If your cursor is over some map
 feature, the feature is marked/identified immediately. If you click on
 the map when a line or polygon is marked, a new point is created directly on
-such line or polygon - as its new member. If your cursor is over an existing
-point, new point cannot be created. In such case the OSM plugin will show
+such line or polygon as its new member. If your cursor is over an existing
+point, a new point cannot be created. In such case the OSM plugin will show
 following message:
 
 \begin{figure}[ht]
@@ -296,16 +291,16 @@ line (but not on it) you must disable snapping by holding the
 
 \minisec{Line creation}
 
-For line creation there is a \toolbtntwo{osm_createLine}{Create line} button
+For line creation, there is a \toolbtntwo{osm_createLine}{Create line} button
 on the OSM Feature widget. To create a line just click the button and start
-left-clicking on the map. Each of your left-clicks is remembered as a member
-vertex of the new line. Line creation ends when first right-click is performed.
+left-clicking on the map. Each of your left-clicks is remembered as a 
+vertex of the new line. Line creation ends when the first right-click is performed.
 The new line will immediately appear on the map.
 
 \textbf{Note}: A Line with less than two members cannot be created. In
 such case the operation is ignored.
 
-Snapping is performed to all map vertices - points from Point vector layer
+Snapping is performed to all map vertices - points from the Point vector layer
 and all Line and Polygon members. Snapping can be disabled by holding the
 \keystroke{Ctrl} key.
 
