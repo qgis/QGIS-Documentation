@@ -54,14 +54,14 @@ dataset (see Section \ref{label_sampledata}). It includes a small sample
 GRASS \filename{LOCATION} with 3 vector layers and 1 raster elevation map.
 
 \begin{enumerate}
-  \item Create a new folder \filename{grassdata}, download the QGIS alaska
+ \item Create a new folder \filename{grassdata}, download the QGIS alaska
   dataset \filename{qgis\_sample\_data.zip} from
   \url{http://download.osgeo.org/qgis/data/} and unzip the file into
   \filename{grassdata}.
   \item Start QGIS.
   \item If not already done in a previous QGIS session, load the GRASS plugin
   clicking on \mainmenuopt{Plugins} \arrow \mainmenuopt{Manage Plugins} and
-  selecting \dropmenuopt{GRASS}. The GRASS toolbar appears on the toolbar menu.
+  saelecting \dropmenuopt{GRASS}. The GRASS toolbar appears on the toolbar menu.
   \item In the GRASS toolbar, click the \toolbtntwo{grass_open_mapset}{Open
   mapset} icon to bring up the \filename{MAPSET} wizard.
   \item For \filename{Gisdbase} browse and select or enter the path to the
@@ -186,7 +186,7 @@ now ready for data import (see Section \ref{sec:import_loc_data}).
 You can also use the already existing vector and raster data in the sample
 GRASS \filename{LOCATION alaska} included in the QGIS alaska dataset
 \ref{label_sampledata} and move on to Section \ref{label_vectmodel}.
-
+a
 \subsection{Adding a new MAPSET}\label{sec:add_mapset}
 
 A user has only write access to a GRASS \filename{MAPSET} he created. This
@@ -513,6 +513,16 @@ and \filename{MAPSET}. To use the GRASS toolbox you need to open a
 (usually granted, if you created the \filename{MAPSET}). This is necessary,
 because new raster or vector layers created during analysis need to be written
 to the currently selected \filename{LOCATION} and \filename{MAPSET}.
+
+The GRASS Shell inside the GRASS Toolbox provides access to almost all (more
+than 330) GRASS modules through a command line interface. To offer a more user
+friendly working environment, about 200 of the available GRASS modules and
+functionalities are also provided by graphical dialogs within the GRASS plugin Toolbox.
+
+\subsection{List of graphical GRASS Toolbox modules}\index{GRASS!toolbox!grapical modules}
+
+A complete list of available GRASS modules provided by graphical dialogs from 
+within QGIS is found in the GRASS wiki: \url{http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list}
 
 \subsection{Working with GRASS modules}\label{grass_modules}\index{GRASS!toolbox}
 

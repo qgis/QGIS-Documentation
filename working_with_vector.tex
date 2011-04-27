@@ -7,25 +7,30 @@
 % comment out the following line:
 %\updatedisclaimer
 
-\qg supports vector data in a number of formats, including those
-supported by the OGR library data provider plugin, such as ESRI shapefiles,
-\index{shapefiles}\index{ESRI!shapefiles}\index{SHP files}
-MapInfo MIF (interchange format)\index{MIF files}\index{MapInfo!MIF files}
-and MapInfo TAB (native format).\index{TAB files}\index{MapInfo!TAB files}
-You find a list of OGR supported vector formats in Appendix~\ref{appdx_ogr}.
+\qg uses the OGR library to read and write vector data formats
+\footnote{GRASS vector and PostgreSQL support is supplied by native 
+QGIS data provider plugins.}, including ESRI shapefiles,\index{shapefiles}
+\index{ESRI!shapefiles}\index{SHP files}, MapInfo MIF (interchange 
+format)\index{MIF files}\index{MapInfo!MIF files}, MapInfo TAB 
+(native format)\index{TAB files}\index{MapInfo!TAB files} and many more. 
+At the date of this document, more than 55 vector formats are supported 
+by the OGR library \cite{OGRweb}. The complete list available at 
+\url{http://www.gdal.org/ogr/ogr_formats.html}.
 
-\qg also supports PostGIS\index{PostGIS}\index{PostgreSQL!PostGIS} layers
-in a PostgreSQL database using the PostgreSQL data provider plugin.
-Support for additional data types (eg. delimited text) is provided by
-additional data provider plugins.\index{delimited text}
+\textbf{Note}: Not all of the listed formats may work in QGIS for various 
+reasons. For example, some require external commercial libraries or 
+the GDAL/OGR installation of your OS was not build to support the format you want
+to use. Only those formats that have been well tested will appear in the list
+of file types when loading a vector into QGIS. Other untested formats can 
+be loaded by selecting *.*.
+
+Working with GRASS vector data is described in Section \ref{sec:grass}.
 
 This section describes how to work with several common formats:
 ESRI shapefiles, PostGIS layers and SpatialLite layers. Many of the
 features available in \qg work the same, regardless of the vector data source.
 This is by design and includes the identify, select, labeling and attributes
 functions.
-
-Working with GRASS vector data is described in Section \ref{sec:grass}.
 
 \section{ESRI Shapefiles}
 \index{vector layers!ESRI shapefiles}

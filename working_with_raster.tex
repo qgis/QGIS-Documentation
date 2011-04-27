@@ -8,27 +8,24 @@
 %\updatedisclaimer
 
 This Section describes how to visualize and set raster layer properties.
-QGIS supports a number of different raster formats. Currently tested formats
-include:\index{raster layers!data formats}
+\qg uses the GDAL library to read and write raster data formats
+\footnote{GRASS raster support is supplied by a native QGIS data provider 
+plugin.}, including Arc/Info Binary Grid\index{Arc/Info Binary Grid}, 
+Arc/Info ASCII Grid\index{Arc/Info ASCII Grid},GeoTIFF\index{GeoTIFF},
+Erdas Imagine\index{Erdas Img.} and many more. 
 
-\begin{itemize}[label=--]
-\item Arc/Info Binary Grid
-\item Arc/Info ASCII Grid
-\item GRASS Raster
-\item GeoTIFF
-\item JPEG
-\item Spatial Data Transfer Standard Grids (with some limitations)
-\item USGS ASCII DEM
-\item Erdas Imagine
-\end{itemize}
+At the date of this document, more than 100 raster formats are supported 
+by the GDAL library \cite{GDALweb}. A complete list is available at 
+\url{http://www.gdal.org/formats_list.html}.
 
-Because the raster implementation in QGIS is based on the GDAL library, other
-raster formats implemented in GDAL are also likely to work - if in doubt try
-to open a sample and see if it is supported. You find more details about GDAL
-supported formats in Appendix \ref{appdx_gdal}
-\index{raster layers!GDAL implementation} or at
-\url{http://www.gdal.org/formats_list.html}. If you want to load GRASS raster
-data, please refer to Section~\ref{sec:load_grassdata}.
+\textbf{Note}: Not all of the listed formats may work in QGIS for various 
+reasons. For example, some require external commercial libraries or 
+the GDAL installation of your OS was not build to support the format you want
+to use. Only those formats that have been well tested will appear in the list
+of file types when loading a raster into QGIS. Other untested formats can 
+be loaded by selecting *.*.
+
+Working with GRASS raster data is described in Section \ref{sec:grass}.
 
 \section{What is raster data?}\label{label_whatsraster}
 \index{raster layers!definition}
