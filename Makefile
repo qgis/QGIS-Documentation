@@ -31,7 +31,6 @@ INCLUDES = conventions.tex \
 	plugins_gps.tex \
 	plugins_interpolation.tex \
 	plugins_mapserver_export.tex \
-	plugins_ogr_converter.tex \
 	plugins_openstreetmap.tex \
 	plugins_oracle_raster.tex \
 	plugins_road_graph.tex \
