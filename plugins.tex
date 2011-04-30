@@ -18,8 +18,8 @@ They are written in one of two languages: C++ or Python.
 More information about core plugins are provided in Section \ref{sec:core_plugins}.
 \item \textbf{External Plugins} are currently all written in Python.
 They are stored in external repositories and maintained by the individual authors.
-They can be added to QGIS using the \filename{Plugin Installer}.
-More information about external plugins are provided in Section \ref{sec:external_plugins}.
+They can be added to QGIS using the \filename{Python Plugin Installer}.
+More information about external plugins are provided in Section \ref{sec:load_external_plugin}.
 \end{itemize}
 
 \section{Managing Plugins}\label{sec:managing_plugins}
@@ -69,6 +69,28 @@ determine which plugin is causing the problem.
 \end{Tip}
 
 \subsection{Loading an external QGIS Plugin}\label{sec:load_external_plugin}
+
+External QGIS plugins are written in Python. They are by default stored in either 
+the 'Official' or 'User contributed' QGIS Repositories, or in various other external
+repositories maintained by individual authors. These lists are available 
+automatically from the \filename{Python Plugin installer} via \\
+\dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}.
+
+Detailed documentation about the usage, minimum QGIS version, homepage, authors,
+and other important information are provided with the external plugins themselves
+and is not included in this manual.\footnote{Updates of core plugins may be
+available in this repository as external overlays.}\footnote{fTools, Mapserver 
+Export, and the Plugin Installer are Python plugins, but they are also part of 
+the QGIS sources, and are automatically loaded and enabled inside the QGIS 
+Plugin Manager (see Section~\ref{sec:load_external_plugin}).}
+
+\begin{Tip} \caption{\textsc{Add more repositories}}
+To add the 'User contributed' repository and/or several external author repositories, open the
+Plugin Installer (\mainmenuopt{Plugins} \arrow \dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}),
+go to the \tab{Repositories} tab, and click \button{Add 3rd party repositories}.
+If you do not want one or more of the added repositories, they can be disabled via the
+\button{Edit...} button, or completely removed with the \button{Delete} button.
+\end{Tip}
 
 There is only one step required to integrate external plugins into QGIS:
 
@@ -151,7 +173,7 @@ In these cases, a \textit{Looking for new plugins...} indicator will
 remain visible in the Status Bar during your entire QGIS session, and may cause a
 program crash when exiting. In this case please disable the checkbox.
 
-In addition, you may specify the type of plugins that are displayed by the \filename{Plugin Installer}. Under \textit{Allowed plugins}, you can specify whether you would like to:
+In addition, you may specify the type of plugins that are displayed by the \filename{Python Plugin Installer}. Under \textit{Allowed plugins}, you can specify whether you would like to:
 
 \begin{itemize}[label=--]
 \item Only show plugins from the official repository,
@@ -167,7 +189,7 @@ Experimental plugins are generally unsuitable for production use. These plugins 
 \section{Data Providers}\index{data providers}
 
 Data Providers are "special" plugins that provides access to a data store.
-By default, QGIS supports PostGIS layers and disk-based data stores supported by the GDAL/OGR library (Appendix \ref{appdx_ogr}).
+By default, QGIS supports PostGIS layers and disk-based data stores supported by the GDAL/OGR library.
 A Data Provider plugin extends the ability of QGIS to use other data sources.
 
 Data Provider plugins are registered automatically by QGIS at startup.
