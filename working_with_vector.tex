@@ -2225,3 +2225,55 @@ output field width 10 and a precision of 3.
 \item Now click on Operator 'length' to add it as \$length into the
 field calculator expression box and click \button{Ok}.
 \end{enumerate}
+
+Due to limited space screeen, not all the operators are available through the buttons. They are all listed in the following table.
+
+\begin{center}
+{\setlength{\extrarowheight}{10pt}
+\small
+\begin{longtable}{|p{4cm}|p{10cm}|}
+\hline \multicolumn{2}{|c|}{\textbf{List of operators for the field calculator}}\\
+\hline \textbf{String}&\textbf{Literal string value}\\
+\endfirsthead
+\hline \textbf{String}&\textbf{Literal string value}\\
+\endhead
+\hline \multicolumn{2}{|r|}{{See next page}} \\ \hline
+\endfoot
+\endlastfoot
+\hline \textbf{string} & \textbf{literal string value} \\
+\hline NULL & null value \\
+\hline sqrt(\textit{a}) & square root \\
+\hline sin(\textit{a}) & sinus of \textit{a} \\
+\hline cos(\textit{a}) & cosinus of \textit{b} \\
+\hline tan(\textit{a}) & tangens of \textit{a} \\
+\hline asin(\textit{a}) & arcussinus of \textit{a} \\
+\hline acos(\textit{a}) & arcuscosinus of \textit{a} \\
+\hline atan(\textit{a}) & arcustangens of \textit{a} \\
+\hline to int(\textit{a}) & convert string \textit{a} to integer \\
+\hline to real(\textit{a}) & convert string \textit{a} to real \\
+\hline to string(\textit{a}) & convert number \textit{a} to string \\
+\hline lower(\textit{a}) & convert string \textit{a} to lower case \\
+\hline upper(\textit{a}) & convert string \textit{a} to upper case \\
+\hline length(\textit{a}) & length of string \textit{a} \\
+\hline atan2(y,x) & arcustangens of y/x using the signs of the two arguments to determine the quadrant of the result. \\
+\hline replace(\textit{a}, replacethis, withthat) & replace \textit{replacethis} with \textit{withthat} in string \textit{a} \\
+\hline substr(\textit{a},from,len) & len characters of string \textit{a} starting from from (first character index is 1) \\
+\hline \textit{a} || \textit{b} & concatenate strings \textit{a} and \textit{b} \\
+\hline \$rownum & number current row \\
+\hline \$area & area of polygon \\
+\hline \$perimeter & perimeter of polygon \\
+\hline \$length & area of line \\
+\hline \$id & feature id \\
+\hline \$x & x coordinate of point \\
+\hline \$y & y coordinate of point \\
+\hline \textit{a} $\wedge$ \textit{b} & \textit{a} raised to the power of \textit{b} \\
+\hline \textit{a} * \textit{b} & \textit{a} multiplied by \textit{b} \\
+\hline \textit{a} / \textit{b} & \textit{a} divided by \textit{b} \\
+\hline \textit{a} + \textit{b} & \textit{a} plus \textit{b} \\
+\hline \textit{a} - \textit{b} & \textit{a} minus \textit{b} \\
+\hline + \textit{a} & positive sign \\
+\hline - \textit{a} & negative value of \textit{a} \\
+\hline 
+\caption{List of operators for the field calculator}\\
+\end{longtable}}
+\end{center}
