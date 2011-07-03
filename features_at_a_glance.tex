@@ -323,14 +323,14 @@ menu depending on the layer type (point, line or polygon). \\
 	\> see Section \ref{sec:selection} 
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionIdentify}{Identify Features}
-	\> \keystroke{Ctrl-Alt-I}
+	\> \keystroke{Ctrl-Shift-I}
 	\> \> \dropmenucheck{Attributes} \\
 \dropmenuopt{Measure}
 	\> 
 	\> see Section \ref{sec:measure}
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionOpenTable}{Zoom Full}
-	\> \keystroke{Ctrl-Alt-F}
+	\> \keystroke{Ctrl-Shift-F}
 	\> \> \dropmenucheck{Map Navigation} \\
 \dropmenuopttwo{mActionZoomToLayer}{Zoom To Layer}
 	\>
@@ -355,7 +355,7 @@ menu depending on the layer type (point, line or polygon). \\
 	\> see Section \ref{sec:bookmarks}
 \> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionShowBookmarks}{Show Bookmarks}
-	\> \keystroke{Ctrl-Alt-B}
+	\> \keystroke{Ctrl-Shift-B}
 	\> see Section \ref{sec:bookmarks}
 	\> \dropmenucheck{Attributes} \\
 \dropmenuopttwo{mActionDraw}{Refresh}
@@ -476,7 +476,7 @@ menu depending on the layer type (point, line or polygon). \\
 	\>
 	\\
 \dropmenuopttwo{mActionProjectProperties}{Project Properties}
-	\> \keystroke{Ctrl-Alt-P}
+	\> \keystroke{Ctrl-Shift-P}
 	\> see Section \ref{sec:projects} \\
 \dropmenuopttwo{mActionCustomProjection}{Custom CRS}
         \> \> see Section \ref{sec:customprojections} \\
@@ -644,7 +644,9 @@ available. See section \ref{grass_digitising} for information on editing GRASS v
 
 \item \textbf{Right mouse button menu for layer groups}
 \begin{itemize}
+\item \dropmenuopt{Zoom to group}
 \item \dropmenuopt{Remove}
+\item \dropmenuopt{Set group CRS}
 \item \dropmenuopt{Rename}
 \item \dropmenuopt{Add Group}
 \item \dropmenuopt{Expand all}
@@ -740,9 +742,13 @@ status of lengthy operations.
 If a new plugin or a plugin update is available, you will see a message in the
 status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
-map view (see Section \ref{subsec:redraw_events} below). At the far right of
-the status bar is a projector icon. Clicking on this opens the projection
-properties for the current project.
+map view (see Section \ref{subsec:redraw_events} below). The icon 
+\includegraphics[width=0.4cm]{mIconStopRendering} immediately stops the 
+current map rendering process. 
+
+At the far right of the status bar you find the EPSG code of the current 
+project CRS and a projector icon. Clicking on this opens the projection properties 
+for the current project.
 
 \begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}\index{scale!calculate}
 When you start QGIS, degrees is the default unit, and it tells QGIS
@@ -750,7 +756,7 @@ that any coordinate in your layer is in degrees. To get correct scale values,
 you can either change this to meter manually in the \tab{General} tab under
 \mainmenuopt{Settings} \arrow \dropmenuopt{Project Properties} or you can select a project
 Coordinate Reference System (CRS) clicking on the
-\toolbtntwo{mIconProjectionDisabled}{projector}
+\toolbtntwo{mIconProjectionDisabled}{CRS status}
 icon in the lower right-hand corner of the statusbar. In the last case, the
 units are set to what the project projection specifies, e.g. '+units=m'.
 \end{Tip}
@@ -837,7 +843,7 @@ You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
 menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} and click on the
-\tab{Rendering \& SVG} tab. Uncheck the \\
+\tab{Rendering} tab. Uncheck the \\
 \checkbox{By default new layers added to the map should be displayed} checkbox.
 Any layer added to the map will be off (invisible) by default.
 
@@ -858,7 +864,7 @@ You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
 datastore, choose menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options}
-click on the \tab{Rendering \& SVG} tab. Set the feature count to an
+click on the \tab{Rendering} tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -869,7 +875,7 @@ during the reading of the features. A suggested value to start with is 500.
 
 To influence the rendering quality of the map you have 3 options. Choose menu
 option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} click on the
-\tab{Rendering \& SVG} tab and select or deselect following checkboxes.
+\tab{Rendering} tab and select or deselect following checkboxes.
 
 \begin{itemize}
 \item \checkbox{Make lines appear less jagged at the expense of some drawing
@@ -1028,20 +1034,27 @@ optmize your options are:
 \item \checkbox{Warn when opening a project file saved with an older version of QGIS}
 \item Change Selection and backgroud Color
 \item Change the icon theme (choose between default, classic, gis and newgis)
+\item Change icon size between 16, 24 and 32 pixel.
+\item Define double click action in legend (choose between 'open layer properties' 
+and 'open ') attribute table.
 \item \checkbox{Capitalise layer names in legend}
 \item \checkbox{Display classification attribute names in legend}
 \item \checkbox{Create raster icons in legend}
 \item \checkbox{Hide splash screen at startup}
 \item \checkbox{Open identify results in a dock window (QGIS restart
 required)}
+\item \checkbox{Open snapping options in a dock window (QGIS restart
+required)}
 \item \checkbox{Open attribute table in a dock window}
 \item \checkbox{Add PostGIS layers with double click and select in extended mode}
 \item \checkbox{Add new layers to selected group}
 \item Attribute table behavior (choose between Show all features (default), Show selected features,
 show features in current canvas)
+\item Define representation for NULL values
+\item Add path(s) to search for additional C++ plugin libraries. 
 \end{itemize}
 
-\minisec{Rendering \& SVG Tab}
+\minisec{Rendering Tab}
 
 \begin{itemize}
 \item \checkbox{By default new layers added to the map should be displayed}
@@ -1072,6 +1085,8 @@ which layers are identifiable) will be shown with the Identify tool.
 percentage of the map width
 \item Define ellipsoid for distance calculations
 \item Define rubberband color for measure tools
+\item Define decimal places
+\item \checkbox{Keep base unit}
 \item \radiobuttonon{Define preferred measurement units (meters or feet)}
 \item \radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}
 \item Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
@@ -1095,17 +1110,27 @@ cursor, Nothing)
 \item Define search radius for vertex edits in map units or pixel
 \item \checkbox{Show markers only for selected features}
 \item Define vertex marker style (cross (default), semi transparent circle or
-none) and vertex marker size
+none) and vertex marker size.
+\item Reuse last entered attribute values.
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
 
 \minisec{CRS Tab}
 
+The CRS tab is devided in two areas. The first area allows to define the default 
+CRS for new projects.
+
+\begin{itemize}
+\item Select a CRS and always start new projects with this CRS.
+\item \checkbox{Enable on the fly reprojecion by default}
+\end{itemize}
+
+The second area allows to define the action, when a new layer is created, or when a 
+layer without CRS is loaded.
 \begin{itemize}
 \item \radiobuttonoff{Prompt for Coordinate Reference System (CRS)}
 \item \radiobuttonoff{Project wide default Coordinate Reference System (CRS) will be used}
 \item \radiobuttonon{Global default Coordinate Reference System (CRS) displayed below will be used}
-\item Select global default Coordinate Reference System (CRS)
 \end{itemize}
 
 \minisec{Locale Tab}
@@ -1118,7 +1143,6 @@ none) and vertex marker size
 \minisec{Proxy Tab}
 
 \begin{itemize}
-\item \checkbox{Define timeout for network requests in ms}
 \item \checkbox{Use proxy for web access} and define host, port, user, and password.
 \item Set the \dropmenuopt{Proxy type} according to your needs
  \begin{itemize}
@@ -1128,6 +1152,9 @@ none) and vertex marker size
   \item \dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
   \item \dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests
  \end{itemize}
+\item Define Cache settings (path and size)
+\item Define WMS search adress, default is \url{http://geopole.org/wms/search?search=\%1\&type=rss}
+\item \checkbox{Define timeout for network requests in ms}
 \end{itemize}
 
 Excluding some URLs can be added to the textbox below the proxy-settings (see
