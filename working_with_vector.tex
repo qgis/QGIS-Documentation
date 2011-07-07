@@ -13,7 +13,7 @@ QGIS data provider plugins.}, including ESRI shapefiles,\index{shapefiles}
 \index{ESRI!shapefiles}\index{SHP files}, MapInfo MIF (interchange 
 format)\index{MIF files}\index{MapInfo!MIF files}, MapInfo TAB 
 (native format)\index{TAB files}\index{MapInfo!TAB files} and many more. 
-At the date of this document, more than 55 vector formats are supported 
+At the date of this document, 60 vector formats are supported 
 by the OGR library \cite{OGRweb}. The complete list available at 
 \url{http://www.gdal.org/ogr/ogr_formats.html}.
 
@@ -40,7 +40,8 @@ functions.
 
 The standard vector file format used in \qg is the ESRI Shapefile. Support
 is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
-\index{OGR}. A shapefile actually consists of several files. The following three are required:
+\index{OGR}. A shapefile actually consists of several files. The following three 
+are required:
 \index{shapefile!format}
 
 \begin{itemize}[label=--]
@@ -57,8 +58,8 @@ the projection information. While it is very useful to have a projection file, i
 If you load a shapefile with \filename{.prj} file and \qg is not
 able to read the coordinate reference system from that file, you have to define the
 proper projection manually within the \tab{General} tab of the \dialog{Layer
-Properties} dialog. This is due to the fact, that \filename{.prj} files often
-do not provide the complete projection parameters, as used in \qg and listed in
+Properties} dialog of the layer. This is due to the fact, that \filename{.prj} files 
+often do not provide the complete projection parameters, as used in \qg and listed in
 the \dialog{CRS} dialog.
 
 For that reason, if you create a new shapefile with \qg, two different projection
@@ -110,7 +111,7 @@ adding more than one layer at a time, different colors are assigned to each laye
 \end{Tip}
 
 Once loaded, you can zoom around the shapefile using the map navigation tools.
-To change the symbology of a layer, open the \dialog{Layer Properties} dialog by double
+To change the style of a layer, open the \dialog{Layer Properties} dialog by double
 clicking on the layer name or by right-clicking on the name in the legend and
 choosing \dropmenuopt{Properties} from the popup menu. See
 Section \ref{sec:symbology} for more information on setting symbology of
@@ -148,7 +149,7 @@ shapefile name in the legend or by right-clicking and choosing
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a MapInfo layer, click on the \toolbtntwo{mActionAddNonDbLayer}{Add
 Vector Layer} toolbar bar button or type \keystroke{Ctrl-Shift-V}, change the
 file type filter to \selectstring{Files of Type}{[OGR] MapInfo (*.mif
-*.tab *.MIF *.TAB)} and select the layer you want to load.
+*.tab *.MIF *.TAB)} and select the .TAB or .tab layer you want to load.
 
 \subsection{Loading an ArcInfo Binary Coverage}
 \index{vector layers!ArcInfo Binary Coverage}
@@ -206,15 +207,15 @@ a connection are shown in table \ref{tab:postgis_connection_parms}.
 \caption{PostGIS Connection
 Parameters}\label{tab:postgis_connection_parms}\medskip
  \begin{tabular}{|l|p{5in}|}
-\hline Name & A name for this connection. Can be the same as \textsl{Database}.
-\\
+\hline Name & A name for this connection. Can be the same as \textsl{Database}. \\
+\hline Service & Service parameter to be used alternatively to hostname/port (and potentially database). This can be defined in pg\_service.conf \\
 \hline Host \index{PostgreSQL!host}
 & Name of the database host. This must be a resolvable host name the same as
 would be used to open a telnet connection or ping the host. If the database is
 on the same computer as \qg, simply enter 'localhost' here. \\
-\hline Database \index{PostgreSQL!database} & Name of the database.  \\
 \hline Port \index{PostgreSQL!port}& Port number the PostgreSQL database
 server listens on. The default port is 5432.\\
+\hline Database \index{PostgreSQL!database} & Name of the database.  \\
 \hline SSL mode \index{PostgreSQL!sslmode}& How the SSL connection will be negotiated with the server. These are the options:
 \begin {itemize}
 \item disable: only try an unencrypted SSL connection;
@@ -238,6 +239,7 @@ Optional you can activate follwing checkboxes:
 \item \checkbox{Save Password}
 \item \checkbox{Only look in the geometry\_columns table}
 \item \checkbox{Only look in the 'public' schema}
+\item \checkbox{Also list tables with no geometry}
 \item \checkbox{Use estimated table metadata}
 \end{itemize}
 
@@ -535,7 +537,7 @@ from the popup menu.
    \caption{Vector Layer Properties Dialog \nixcaption}\label{fig:vector_symbology}
  \end{figure}
 
-\subsection{Symbology Tab}\label{sec:symbology}
+\subsection{Style Tab}\label{sec:symbology}
 \index{vector layers!symbology}
 
 \qg supports a number of symbology renderers to control how
@@ -615,17 +617,19 @@ Default Style} button to revert to your default style.
 
 \qg allows to set a transparency for every vector layer. This can be done with
 the slider \\
-\slider{Transparency} inside the \tab{symbology} tab (see
+\slider{Transparency} inside the \tab{Style} tab (see
 fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
 vector layers.
 
 \subsection{New Generation Symbology}
 
-Since \qg 1.4.0  a new symbology was integrated in parallel with the symbology
+Since \qg 1.4.0 a new symbology was integrated in parallel with the symbology
 described above. This new generation symbology provides a variety of improvements and
 new features and will replace the current symbology in one of the upcoming releases.
-To switch to the new symbolgy you currently have to click on the \button{New symbology} button in the \tab{General} tab of the \dialog{Layer Properties} dialog. You can
-also make the New symobolgy the default, activating \checkbox{Use new generation symbology for rendering} in the \tab{Rendering \& SVG} tab under the \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu.
+\qg 1.7.0 uses the new symbolgy as efault. To switch back to the old symbology you 
+have to click on the \button{Old symbology} button in the \tab{General} tab of the 
+\dialog{Layer Properties} dialog. You can
+also make the old symobolgy the default, deactivating \checkbox{Use new generation symbology for rendering} in the \tab{Rendering} tab under the \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu.
 
 \minisec{Understanding the new generation symbology}
 
@@ -688,7 +692,7 @@ and a color ramp - they will set the colors for symbols appropriately.
 \subsection{Working with the New Generation Symbology}\label{new_generation_sym}
 
 First you have to enable the new generation symbology clicking on the
-\button{New symbology} button in the \tab{Symbology} tab of the
+\button{New symbology} button in the \tab{Style} tab of the
 \dialog{Layer Properties} dialog. The new dialog allows to choose one of the
 three renderers: single symbol, categorized and graduated. Depending on the
 chosen renderer, the symbology tab provides different settings and options, that
@@ -701,7 +705,7 @@ edit and remove existing symbols and add new ones.
 
 The Single Symbol Renderer is used to render all features of the layer using a
 single user-defined symbol. The properties, that can be adjusted in the
-Symbology tab, depend partially on the type of the layer, but all types share
+\tab{Style} tab, depend partially on the type of the layer, but all types share
 the following structure. In the top left part of the tab, there is a preview of
 the current symbol to be rendered. In the bottom part of the tab, there is a
 list of symbols already defined for the current style, prepared to be used via
@@ -730,7 +734,7 @@ can use data-defined Size Scale (available through \button{Advanced} next to
 
 The Categorized Renderer is used to render all features from a layer, using a
 single user-defined symbol, which color reflects the value of a selected
-feature's attribute. The Symbology tab allows you to select:
+feature's attribute. The \tab{Style} tab allows you to select:
 
 \begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
@@ -772,7 +776,7 @@ a single user-defined symbol, whose color reflects the classification of a selec
 feature's attribute to a class. Like Categorized Renderer, it allows to define
 rotation and size scale from specified columns.
 
-Analogue to the categorized rendered, the symbology tab allows you to select:
+Analogue to the categorized rendered, the \tab{Style} tab allows you to select:
 
 \begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
@@ -790,7 +794,7 @@ classify features inside the classes (using the Mode list). The available modes 
  \item Pretty Breaks
 \end{itemize}
 
-The listbox in the  bottom part of the symbology tab lists the classes together with their ranges,
+The listbox in the  bottom part of the \tab{Style} tab lists the classes together with their ranges,
 labels and symbols that will be rendered.
 
 The example in figure \ref{fig:gradsymNG} shows the graduated rendering dialog
@@ -835,7 +839,7 @@ The symbol properties dialog allows the user to specify different properties of
 the symbol to be rendered. In the top left part of the dialog, you find a preview
 of the current symbol as it will be displayed in the map canvas. Below the preview
 is the list of symbol layers. To start the symbol properties dialog, click the
-\dropmenuopttwo{mActionOptions}{Properties} button in the \tab{Symbology} tab of the
+\dropmenuopttwo{mActionOptions}{Properties} button in the \tab{Style} tab of the
 \dialog{Layer Properties} dialog.
 
 The control panels allow adding or removing layers, changing the position of layers,
@@ -1091,7 +1095,7 @@ to
 numbers for numeric attributes).
 \item Classification: Displays a combo box with the values used for
 classification, if you have chosen 'unique value' as legend type in the
-symbology tab of the properties dialog.
+\tab{Style} tab of the properties dialog.
 \item Range: Allows to set numeric values from a specific range. The edit
 widget can be either a slider or a spin box.
 \item Unique value: The user can select one of the values already used in the
@@ -1904,7 +1908,7 @@ merge features that have common boundaries and the same attributes.
 The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool
 allows to change the rotation of point symbols in the map canvas, if
 you have defined a rotation column from the attribute table of the point
-layer in the \tab{Symbology} tab of the \dialog{Layer Properties}.
+layer in the \tab{Style} tab of the \dialog{Layer Properties}.
 Otherwise the tool is inactive.
 
 \begin{figure}[ht]
