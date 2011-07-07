@@ -4,7 +4,7 @@
 
 % when the revision of a section has been finalized,
 % comment out the following line:
-\updatedisclaimer
+% \updatedisclaimer
 
 After a first and simple sample session in Section \ref{label_getstarted} we now
 want to give you a more detailed overview of the features of QGIS.
@@ -932,14 +932,14 @@ is displayed in a popup dialog.
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
 To select one or several features just click on 
-\includegraphics[width=0.7cm]{mActionSelect} and select the tools:
+\includegraphics[width=0.7cm]{mActionSelect} and select your tool:
 
 \begin{description}
-\item \radiobuttonon{Select features}
-\item \radiobuttonoff{Select features by rectangle}
-\item \radiobuttonoff{Select features by polygon}
-\item \radiobuttonoff{Select features by freehand}
-\item \radiobuttonoff{Select features by radius}
+\item \includegraphics[width=0.5cm]{mActionSelect} Select features
+\item \includegraphics[width=0.5cm]{mActionSelectRectangle} Select features by rectangle
+\item \includegraphics[width=0.5cm]{mActionSelectPolygon} Select features by polygon
+\item \includegraphics[width=0.5cm]{mActionSelectFreehand} Select features by freehand
+\item \includegraphics[width=0.5cm]{mActionSelectRadius} Select features by radius
 \end{description} 
 
 To deselect all selected features click on \includegraphics[width=0.7cm]{mActionDeselectAll}.
@@ -992,14 +992,18 @@ include:
 \begin{itemize}
 \item In the \tab{General} tab the project title, selection and background
 color, layer units, precision, and the option to save relative paths to
-layers can be defined. In addition the topological editing, and layerwise
-snapping options are set here.
+layers can be defined. You can define the layer units (only used when CRS 
+transformation is disabled) and the precision of decimal places to use.  
 \item The \tab{CRS} Coordinate Reference System tab enables you to choose the
-CRS for this project, and to enable on-the-fly reprojection of vector layers
-when displaying layers from a different CRS.
+CRS for this project, and to enable on-the-fly reprojection of raster and vector 
+layers when displaying layers from a different CRS.
 \item With the third \tab{Identifiable layers} tab you set (or disable) which
 layers will respond to the identify tool. (See the Map tools paragraph from
 the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
+\item The tab \tab{WMS Server} allows to define information about the QGIS 
+mapserver Service Capabilities, the Extend and the CRS Restrictions. Activating 
+the \checkbox{Add WKT geometry to feature info response} will allow to query the 
+WMS layers.
 \end{itemize}
 
 \section{Output}\label{sec:output}
@@ -1094,7 +1098,7 @@ cursor, Nothing)
 \item Define Zoom factor for wheel mouse
 \end{itemize}
 
-\minisec{Overlay}
+\minisec{Overlays Tab}
 
 \begin{itemize}
 \item Define placement algorithm for labels (choose between central point
@@ -1111,7 +1115,7 @@ cursor, Nothing)
 \item \checkbox{Show markers only for selected features}
 \item Define vertex marker style (cross (default), semi transparent circle or
 none) and vertex marker size.
-\item Reuse last entered attribute values.
+\item \checkbox{Reuse last entered attribute values}
 \item \checkbox{Suppress attributes pop-up windows after each created feature}
 \end{itemize}
 
@@ -1358,8 +1362,6 @@ Track color and width sets the color of and the width of your drawn track.
 
 If you want to set a feature manually you have to go back to
 \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates''
-and click on \button{Add feature}. Also when you did not activate ''Auto-add vertices``
-and want to record vertices manually you have to go back there and
-click \button{Add vertex}
+and click on \button{Add feature}.
 
 \FloatBarrier
