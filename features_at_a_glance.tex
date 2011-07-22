@@ -889,7 +889,7 @@ Measuring works within projected coordinate systems only (e.g., UTM). If
 the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be
 incorrect. To fix this you need to set an appropriate map coordinate system
-(See Section~\ref{label_projections}). Both measuring modules also use the
+(See Section~\ref{label_projections}). All measuring modules also use the
 snapping settings from the digitizing module. This is useful, if you want to
 measure along lines or areas in vector layers.
 
@@ -907,8 +907,9 @@ points according to a defined ellipsoid. To configure this, choose menu option
 \mainmenuopt{Settings} \arrow \dropmenuopt{Options},
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. There
 you can also define a rubberband color and your preferred measurement units
-(meters or feet). The tool then allows you to click points on the map. Each
-segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button. \\
+(meters or feet) and angle units (degrees, radians and gon). The tools then 
+allows you to click points on the map. Each segment-length as well as the total 
+shows up in the measure-window. To stop measuring click your right mouse button. \\
 \includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured.
 In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. \\
@@ -1018,7 +1019,7 @@ Here is a sampling of other ways to produce output files:
 a file dialog where you select the name, path and type of image (PNG or JPG
 format). A world file with extension PNGW or JPGW saved in the same folder
 georeferences the image.
-\item Menu option \dropmenuopttwo{mActionFilePrint}{Print Composer} opens a
+\item Menu option \dropmenuopttwo{mActionNewComposer}{New Print Composer} opens a
 dialog where you can layout and print the current map canvas (see
 Section~\ref{label_printcomposer}).
 \end{itemize}
@@ -1036,7 +1037,7 @@ optmize your options are:
 \begin{itemize}
 \item \checkbox{Promt to save project changes when required}
 \item \checkbox{Warn when opening a project file saved with an older version of QGIS}
-\item Change Selection and backgroud Color
+\item Change Selection and background Color
 \item Change the icon theme (choose between default, classic, gis and newgis)
 \item Change icon size between 16, 24 and 32 pixel.
 \item Define double click action in legend (choose between 'open layer properties' 
@@ -1144,7 +1145,14 @@ layer without CRS is loaded.
 \item Information about active system locale
 \end{itemize}
 
-\minisec{Proxy Tab}
+\minisec{Network Tab}
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=14cm]{proxy-settings}
+   \caption{Proxy-settings in \qg \nixcaption}
+   \label{fig:proxy-settings}
+\end{figure}
 
 \begin{itemize}
 \item \checkbox{Use proxy for web access} and define host, port, user, and password.
@@ -1158,7 +1166,7 @@ layer without CRS is loaded.
  \end{itemize}
 \item Define Cache settings (path and size)
 \item Define WMS search adress, default is \url{http://geopole.org/wms/search?search=\%1\&type=rss}
-\item \checkbox{Define timeout for network requests in ms}
+\item Define timeout for network requests in ms - default is 60000
 \end{itemize}
 
 Excluding some URLs can be added to the textbox below the proxy-settings (see
@@ -1170,13 +1178,6 @@ entry.
 If you need more detailed information about the different proxy-settings,
 please refer to the manual of the unterlaying QT-library-documentation at
 \url{http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum}.
-
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=14cm]{proxy-settings}
-   \caption{Proxy-settings in \qg \nixcaption}
-   \label{fig:proxy-settings}
-\end{figure}
 
 \begin{Tip} \caption{\textsc{Using Proxies}}
 Using proxies can sometimes be tricky. It is useful to 'trial and
