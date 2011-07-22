@@ -832,33 +832,6 @@ Manager} in the main menu.
    \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}
 \end{figure}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Old Symbology}\label{sec:oldsymbology}
 \index{vector layers!old symbology}
 
@@ -937,34 +910,29 @@ To do this, use the button \button{Save Style \ldots}. No need to say that
 
 If you wish to always use a particular style whenever the layer is loaded,
 use the \button{Save As Default} button to make your style the default. Also,
-if you make changes to the style that you are not happy with, use the \button{Restore
-Default Style} button to revert to your default style.
+if you make changes to the style that you are not happy with, use the 
+\button{Restore Default Style} button to revert to your default style.
 
 \minisec{Vector transparency} \label{sec:vect_transparency}
 \index{vector layers!transparency}
 
 \qg allows to set a transparency for every vector layer. This can be done with
-the slider \\
-\slider{Transparency} inside the \tab{Style} tab (see
+the slider \slider{Transparency} inside the \tab{Style} tab (see
 fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
 vector layers.
 
-
-
-
-
-
-
-
-
-
-
 \subsection{Labels Tab}\label{labeltab}
 
-The \tab{Labels} tab allows you to enable labeling features and control a number of
-options related to fonts, placement, style, alignment and buffering.
+As for the symbology \qg 1.7.0 currently provides an old and a new labeling 
+engine in parallel. The \tab{Labels} tab still contains the old labeling. The 
+new labeling is implemented as a core application and will replace the features 
+of the old labels tab in one of the next versions.
 
-We will illustrate this by labelling the lakes shapefile of the
+We recommend to switch to the new labeling, described in section \ref{newlabel}.
+
+The labeling in the \tab{Labels} tab allows you to enable labeling features and 
+control a number of options related to fonts, placement, style, alignment and 
+buffering. We will illustrate this by labelling the lakes shapefile of the
 \filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
