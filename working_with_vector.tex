@@ -173,19 +173,6 @@ are the spatial indexing, filtering and query capabilities it provides. Using Po
 vector functions such as select and identify work more accurately than with
 OGR layers in \qg.
 
-To use PostGIS layers you must:\index{PostgreSQL!loading layers}
-
-\begin{itemize}[label=--]
-\item Create a stored connection in \qg to the PostgreSQL database (if one is
-not already defined).\index{PostgreSQL!connection}
-\item Connect to the database.
-\item Select the layer to add to the map.
-\item Optionally provide a SQL \usertext{where}
-clause to define which features
-to load from the layer.
-\item Load the layer.
-\end{itemize}
-
 \subsection{Creating a stored
 Connection}\index{PostgreSQL!connection}\label{sec:postgis_stored}
 
@@ -269,7 +256,11 @@ To load a layer from PostGIS, perform the following steps:
 \item If the \dialog{Add PostGIS Table(s)} dialog is not already open, click on the
 \toolbtntwo{mActionAddLayer}{Add PostGIS Layer} toolbar button.
 \item Choose the connection from the drop-down list and click \button{Connect}.
-\item Find the layer you wish to add in the list of available layers.
+\item Select or unselect \checkbox{Also list tables with no geometry}
+\item Optionally use some \checkbox{Search Options} to define which features
+to load from the layer or use the \button{Build query} icon to start the 
+Query builder dialog.
+\item Find the layer(s) you wish to add in the list of available layers.
 \item Select it by clicking on it. You can select multiple layers by holding
 down the \keystroke{shift} key while clicking. See Section \ref{sec:query_builder} for
 information on using the PostgreSQL Query Builder to further define the layer.
@@ -360,10 +351,11 @@ icon will be added to the plugin toolbar\index{PostGIS!SPIT!loading}.
 To import a shapefile, click on the \toolbtntwo{spiticon}{SPIT} tool in the
 toolbar to open the \\
 \dialog{SPIT - Shapefile to PostGIS Import Tool} dialog. Select the PostGIS database
-you want to connect to and click on \button{Connect}. Now you can add one or more
-files to the queue by clicking on the \button{Add} button. To process the files,
-click on the \button{OK} button. The progress of the import as well as any
-errors/warnings will be displayed as each shapefile is processed.
+you want to connect to and click on \button{Connect}. If you want, you can define or 
+change some import options. Now you can add one or more files to the queue by 
+clicking on the \button{Add} button. To process the files, click on the \button{OK} 
+button. The progress of the import as well as any errors/warnings will be displayed 
+as each shapefile is processed.
 
 \begin{Tip}\caption{\textsc{Importing Shapefiles Containing
 PostgreSQL Reserved Words}}\index{PostGIS!SPIT!reserved words}
@@ -519,6 +511,18 @@ file, sqlite as format and the CRS and then add 'SPATIALITE=YES' in the OGR data
 creation option field. This tells OGR to create a SpatiaLite database. See 
 also \url{http://www.gdal.org/ogr/drv_sqlite.html}.
 
+\minisec{Creating a new SpatiaLite layer}
+
+If you want to create a new SpatiaLite layer, please refer to section \ref{sec:create spatialite}.
+
+\begin{Tip}\caption{\textsc{SpatiaLite data management Plugin}}\index{SpatiaLite!Data management} For SpatiaLite data management you can also use the Python Plugin 
+'QspatiaLite' from the 'QGIS Contributed Repository'. It can be downloaded and 
+integrated with the Python Plugin Installer and provides QGIS integration (import 
+QGIS layers, View Spatial Tables and Queries in QGIS) a SQL editor with syntax 
+highlighting and autocompletion and a SQL Query Builder to build complex queries 
+plus further functionality. 
+\end{Tip}
+
 \section{The Vector Properties Dialog}\label{sec:vectorprops}
 \index{vector layers!properties dialog}
 
@@ -540,117 +544,48 @@ from the popup menu.
 \subsection{Style Tab}\label{sec:symbology}
 \index{vector layers!symbology}
 
-\qg supports a number of symbology renderers to control how
-vector features are displayed. Currently the following renderers
-are available:
+Since \qg 1.4.0 a new symbology was integrated in parallel to improve and 
+finally replace the old symbology. \qg 1.7.0 now uses the new symbolgy as default, 
+which provides a variety of improvements and new features. 
 
-\begin{description}
-    \item[Single symbol] - a single style is applied to every
-    object in the layer.\index{vector layers!renderers!single symbol}
-    \item[Graduated symbol] - objects within the layer are
-    displayed with different symbols classified by the values of a
-    particular field.\index{vector layers!renderers!graduated symbol}
-    \item[Continuous color] - objects within the layer are
-    displayed with a spread of colours classified by the numerical
-    values within a specified field.\index{vector layers!renderers!continuous
-color}
-    \item[Unique value] - objects are classified by the unique
-    values within a specified field with each value having a
-    different symbol.\index{vector layers!renderers!unique value}
-\end{description}
-
-To change the symbology for a layer, simply double click on its legend
-entry and the vector \dialog{Layer Properties} dialog will be
-shown.\index{symbology!changing}
-
-\begin{figure}[ht]
-\centering
-\caption{Symbolizing Options \nixcaption}
-   \subfloat[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}
-   \hspace{1cm}
-   \subfloat[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}
-   \hspace{1cm}
-   \subfloat[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}
-   \hspace{1cm}
-   \subfloat[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyUnique}}
-\end{figure}
-
-% FIXME: outdated
-% Since \usertext{version v0.9} there is a function to use image files stored on
-% your computer as fill pattern for vector layers.
-
-\minisec{Style Options} \label{sec:style_options} \index{vector layers!styles}
-Within this dialog you can style your vector layer. Depending on the selected
-rendering option you have the possibility to also classify your mapfeatures.
-
-At least the following styling options apply for nearly all renderers:
-\begin{description}
-\item[Fill options]
-\begin{description}
- \item[Fill style] - Style for filling. Beside the given brushes you can
- select \selectstring{Fill style}{? Texture} and click the \browsebutton
- button for selecting your own texture file. Currently the fileformats
- \filename{*.jpeg, *.xpm, and *.png} are supported.
- \item[Fill color] - fill-color of your features.
-\end{description}
-\item[Outline options]
-\begin{description}
- \item[Outline style] - pen-style for your outline of your feature. You can
- also set this to 'no pen'.
- \item[Outline color] - color of the ouline of your feature.
- \item[Outline width] - width of your features.
-\end{description}
-\end{description}
-
-Once you have styled your layer you also could save your layer-style to a
-separate file (with \filename{*.qml}-ending).
-To do this, use the button \button{Save Style \ldots}. No need to say that
-\button{Load Style \ldots} loads your saved layer-style-file.
-
-If you wish to always use a particular style whenever the layer is loaded,
-use the \button{Save As Default} button to make your style the default. Also,
-if you make changes to the style that you are not happy with, use the \button{Restore
-Default Style} button to revert to your default style.
-
-\minisec{Vector transparency} \label{sec:vect_transparency}
-\index{vector layers!transparency}
-
-\qg allows to set a transparency for every vector layer. This can be done with
-the slider \\
-\slider{Transparency} inside the \tab{Style} tab (see
-fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
-vector layers.
-
-\subsection{New Generation Symbology}
-
-Since \qg 1.4.0 a new symbology was integrated in parallel with the symbology
-described above. This new generation symbology provides a variety of improvements and
-new features and will replace the current symbology in one of the upcoming releases.
-\qg 1.7.0 uses the new symbolgy as efault. To switch back to the old symbology you 
-have to click on the \button{Old symbology} button in the \tab{General} tab of the 
-\dialog{Layer Properties} dialog. You can
-also make the old symobolgy the default, deactivating \checkbox{Use new generation symbology for rendering} in the \tab{Rendering} tab under the \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu.
+A description of the old symbology is available in section 
+\ref{sec:oldsymbology}.
 
 \minisec{Understanding the new generation symbology}
 
-There are three types of symbols: marker symbols (for points), line symbols and
-fill symbols (for polygons). Symbols can consist of one or more symbol layers. It
-is possible to define the color of a symbol and this color is then defined for all
-symbol layers. Some layers may have the color locked - for those the color can not
-be altered. This is useful when you define the color of a multilayer symbol.
-Similarly, it is possible to define the width for line symbols, as well as size and
-angle for marker symbols.
+There are three types of symbols: marker symbols (for points), line symbols (for 
+lines) and fill and outline symbols (for polygons). Symbols can consist of one or 
+more symbol layers. It is possible to define the color of a symbol and this color 
+is then defined for all symbol layers. Some layers may have the color locked - for 
+those the color can not be altered. This is useful when you define the color of a multilayer symbol. Similarly, it is possible to define the width for line symbols, 
+as well as size and rotation for marker symbols.
 
 \minisec{Available symbol layer types}
 
 \begin{itemize}[label=--]
-\item \textbf{Simple marker}: Rendering with one of hardcoded markers.
-\item \textbf{Simple line}: Usual rendering of a line (with specified
-width, color and pen style).
-\item \textbf{Simple fill}: Usual rendering of a polygon (with defined
-fill color, fill pattern and outline).
+\item Point layers
+\begin{itemize}[label=--]
+\item \textbf{Font marker}: Rendering with a font.
+\item \textbf{Simple marker}: Rendering with a hardcoded marker.
 \item \textbf{SVG marker}: Rendering with a SVG picture.
+\end{itemize}
+\item Line layers
+\begin{itemize}[label=--]
+\item \textbf{Line decoration}: Add a line decoration, e.g an arrow to indicate line direction.
 \item \textbf{Marker line}: A line rendered by repeating a marker symbol.
+\item \textbf{Simple line}: Usual rendering of a line (with specified width, 
+	color and pen style).
+\end{itemize}
+\item Polygon layers
+\begin{itemize}[label=--]
+\item \textbf{Centroid fill}: Fill a polygon centroid with a hardcoded marker.
+\item \textbf{SVG fill}: Fill a polygon with a SVG symbol. 
+\item \textbf{Simple fill}: Usual rendering of a polygon (with defined fill color, 
+	fill pattern and outline).
+\item \textbf{Outline: Line decoration}: Add a line decoration, e.g an arrow to indicate line direction.
+\item \textbf{Outline: Marker line}: Use a hardcoded marker as area outline.
+\item \textbf{Outline: Simple line}: Define width, color and pen style as area outline.
+\end{itemize}
 \end{itemize}
 
 \minisec{Color ramps}
@@ -668,37 +603,34 @@ color space.
 number of color classes.
 \end{itemize}
 
-Color ramps can be defined in the \dialog{Style Manager} dialog (see Section
-\ref{subsec:stylemanager}) by selecting \\
-\selectstring{Style item type:}{Color ramp} as style element type from the drop-down list, clicking on \button{Add item} button and then choosing a color ramp type.
+Color ramps can be defined in the \tab{Color ramp} tab of the \dialog{Style Manager} 
+(see Section \ref{subsec:stylemanager}) by clicking the \button{Add} button and then choosing a color ramp type.
 
 \minisec{Styles}
 
 A style groups a set of various symbols and color ramps. You can define your
 prefered or frequently used symbols, and can use it  without having to recreate
 it everytime. Style items (symbols and color ramps) have always a name by which
-they can be queried from the style. There is one default style in \qg (modifiable)
-and the user can add further styles.
+they can be queried from the style. There is at least one default style in \qg 
+(modifiable) and the user can add further styles.
 
 \minisec{Renderers}
 
 The renderer is responsible for drawing a feature together with the correct
-symbol. There are three types of renderers: single symbol, categorized (called
-unique color in the old symbology), and graduated. There is no continuous color
-renderer, because it is in fact only a special case of the graduated renderer.
+symbol. There are four types of renderers: single symbol, categorized (called
+unique color in the old symbology), graduated and rule-based. There is no continuous 
+color renderer, because it is in fact only a special case of the graduated renderer.
 The categorized and graduated renderer can be created by specifying a symbol
 and a color ramp - they will set the colors for symbols appropriately.
 
 \subsection{Working with the New Generation Symbology}\label{new_generation_sym}
 
-First you have to enable the new generation symbology clicking on the
-\button{New symbology} button in the \tab{Style} tab of the
-\dialog{Layer Properties} dialog. The new dialog allows to choose one of the
-three renderers: single symbol, categorized and graduated. Depending on the
-chosen renderer, the symbology tab provides different settings and options, that
-will be described in the following sections. The new generation symbology dialog 
-also provides a \button{Style Manager} button which gives access to the Style 
-Manager (see section \ref{subsec:stylemanager}). The Style Manager allows you to 
+In the \tab{Style} tab you can choose one of the four renderers: single symbol, 
+categorized, graduated and rule-based. Depending on the chosen renderer, the 
+symbology tab provides different settings and options, that will be described 
+in the following sections. The new generation symbology dialog also provides 
+a \button{Style Manager} button which gives access to the Style Manager 
+(see section \ref{subsec:stylemanager}). The Style Manager allows you to 
 edit and remove existing symbols and add new ones. 
 
 \minisec{Single Symbol Renderer}
@@ -710,15 +642,20 @@ the following structure. In the top left part of the tab, there is a preview of
 the current symbol to be rendered. In the bottom part of the tab, there is a
 list of symbols already defined for the current style, prepared to be used via
 selecting them from the list. The current symbol can be modified using the
-\button{Properties} button, which opens a \dialog{Symbol Properties} dialog, or
-the \button{Set Color} button, which opens an ordinary \dialog{Color} dialog.
-After having done any needed changes, the symbol can be added to the list of
-current style symbols (using the \button{Add to style} button) and then easily
-be used in the future.
+\button{Change} button below the preview, which opens a \dialog{Symbol Properties} 
+dialog, or the \button{Change} button right of the preview, which opens an ordinary 
+\dialog{Color} dialog. 
 
-\textbf{Note}: To modify line width, besides modifying the symbol itself, you
-can use data-defined Size Scale (available through \button{Advanced} next to 
-\button{Add to Style}).
+In the \tab{Style} tab you can apart from a general layer transparency also 
+define to use millimeter or map units for the size scale. And you can use 
+data-defined size scale and rotation (available through \button{Advanced} 
+next to \button{Save as style}). The \button{Symbol levels} button allows to 
+enable and define the order in which the symbol layers are rendered (if the 
+symbol consits of more than one layer).
+
+After having done any needed changes, the symbol can be added to the list 
+of current style symbols (using the \button{Save as style} button) and then 
+easily be used in the future.
 
 \begin{figure}[ht]
 \centering
@@ -727,7 +664,7 @@ can use data-defined Size Scale (available through \button{Advanced} next to
    \subfloat[Single symbol line properties] {\label{subfig:singleNG2}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_line}}
    \hspace{1cm}
    \subfloat[Single symbol area properties] {\label{subfig:singleNG3}\includegraphics[clip=true, width=0.3\textwidth]{singlesymbol_ng_area}}
-\caption{New Single Symbolizing options \nixcaption}
+\caption{Single Symbolizing options \nixcaption}
 \end{figure}
 
 \minisec{Categorized Renderer}
@@ -738,12 +675,12 @@ feature's attribute. The \tab{Style} tab allows you to select:
 
 \begin{itemize}[label=--]
 \item The attribute (using the Column listbox)
-\item The symbol (using the Symbol Properties dialog)
+\item The symbol (using the Symbol dialog)
 \item The colors (using the Color Ramp listbox)
 \end{itemize}
 
-The Advanced button in the lower right corner of the dialog allows to set
-th fields containing rotation and size scale information.
+The \button{Advanced} button in the lower right corner of the dialog allows to set
+the fields containing rotation and size scale information.
 For convenience, the list in the bottom part of the tab lists the values of
 all currently selected attributes together, including the symbols that will
 be rendered.
@@ -753,7 +690,7 @@ used for the rivers layer of the \qg sample dataset.
 
 \begin{figure}[ht]
    \centering
-   \caption{New Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}
+   \caption{Categorized Symbolizing options \nixcaption}\label{fig:catsymNG}
    \includegraphics[clip=true, width=10cm]{categorysymbol_ng_line}
 \end{figure}
 
@@ -766,7 +703,7 @@ ramp.
 \begin{figure}[ht]
    \centering
    \caption{Example of custom gradient color ramp with multiple stops \nixcaption}\label{fig:ccrg}
-   \includegraphics[clip=true, width=10cm]{customColorRampGradient.png}
+   \includegraphics[clip=true, width=6cm]{customColorRampGradient}
 \end{figure}
 
 \minisec{Graduated Renderer}
@@ -803,14 +740,17 @@ for the rivers layer of the \qg sample dataset.
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=10cm]{graduatesymbol_ng_line}
-   \caption{New Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
+   \caption{Graduated Symbolizing options \nixcaption}\label{fig:gradsymNG}
 \end{figure}
 
 \minisec{Rule-based rendering}
 
 The rule-based renderer is used to render all the features from a layer, using
 rule based symbols, whose color reflects the classification of a selected
-feature's attribute to a class.
+feature's attribute to a class. The rules are based on SQL statements. You can 
+also use the Query Builder to create them. The dialog allows rule grouping by 
+filter or scale and you can decide if you want to enable symbol levels or use 
+only first matched rule.
 
 The example in figure \ref{fig:rulesymNG} shows the rule-based rendering dialog
 for the rivers layer of the \qg sample dataset.
@@ -818,12 +758,13 @@ for the rivers layer of the \qg sample dataset.
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=10cm]{rulesymbol_ng_line}
-   \caption{New Rule-based Symbolizing options \nixcaption}\label{fig:rulesymNG}
+   \caption{Rule-based Symbolizing options \nixcaption}\label{fig:rulesymNG}
 \end{figure}
 
 \minisec{Point displacement}
 
-The point displacement renderer offers to visualize all features of a point
+The point displacement renderer is only available, if you load the Displacement 
+plugin in the QGIS Plugin Manager. It offers to visualize all features of a point
 layer, even if they have the same location. To do this, the symbols of the
 points are placed on a displacement circle around a center symbol.
 
@@ -890,6 +831,133 @@ Manager} in the main menu.
    \includegraphics[clip=true, width=7cm]{stylemanager}
    \caption{Style Manager to manage symbols and color ramps \nixcaption}\label{fig:stylemanager}
 \end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Old Symbology}\label{sec:oldsymbology}
+\index{vector layers!old symbology}
+
+\textbf{Note}: \qg 1.7 still supports the usage of the old symbology, although it is 
+recommended to switch to the new symbology, described in section 
+\ref{sec:symbology}, because the old symbology will be removed in one 
+of the next releases.
+
+If you want or need to switch back to the old symbology you can click on the 
+\button{Old symbology} button in the \tab{Style} tab of the \dialog{Layer Properties} dialog. 
+
+You can also make the old symobolgy the default, deactivating \checkbox{Use 
+new generation symbology for rendering} in the \tab{Rendering} tab 
+under \mainmenuopt{Settings} \arrow \dropmenuopt{Options}.
+
+The old \qg symbology supports the following renderers:
+
+\begin{description}
+    \item[Single symbol] - a single style is applied to every
+    object in the layer.\index{vector layers!renderers!single symbol}
+    \item[Graduated symbol] - objects within the layer are
+    displayed with different symbols classified by the values of a
+    particular field.\index{vector layers!renderers!graduated symbol}
+    \item[Continuous color] - objects within the layer are
+    displayed with a spread of colours classified by the numerical
+    values within a specified field.\index{vector layers!renderers!continuous
+color}
+    \item[Unique value] - objects are classified by the unique
+    values within a specified field with each value having a
+    different symbol.\index{vector layers!renderers!unique value}
+\end{description}
+
+To change the symbology for a layer, simply double click on its legend
+entry and the vector \dialog{Layer Properties} dialog will be
+shown.\index{symbology!changing}
+
+\begin{figure}[ht]
+\centering
+\caption{Old Symbolizing Options \nixcaption}
+   \subfloat[Single symbol] {\label{subfig:single_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifySingle}}
+   \hspace{1cm}
+   \subfloat[Graduated symbol] {\label{subfig:graduated_symbol}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyGraduated}}
+   \hspace{1cm}
+   \subfloat[Continous color] {\label{subfig:cont_color}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyContinous}}
+   \hspace{1cm}
+   \subfloat[Unique value] {\label{subfig:unique_val}\includegraphics[clip=true, width=0.4\textwidth]{vectorClassifyUnique}}
+\end{figure}
+
+\minisec{Style Options} \label{sec:style_options} \index{vector layers!styles}
+Within this dialog you can style your vector layer. Depending on the selected
+rendering option you have the possibility to also classify your mapfeatures.
+
+At least the following styling options apply for nearly all renderers:
+\begin{description}
+\item[Fill options]
+\begin{description}
+ \item[Fill style] - Style for filling. Beside the given brushes you can
+ select \selectstring{Fill style}{? Texture} and click the \browsebutton
+ button for selecting your own texture file. Currently the fileformats
+ \filename{*.jpeg, *.xpm, and *.png} are supported.
+ \item[Fill color] - fill-color of your features.
+\end{description}
+\item[Outline options]
+\begin{description}
+ \item[Outline style] - pen-style for your outline of your feature. You can
+ also set this to 'no pen'.
+ \item[Outline color] - color of the ouline of your feature.
+ \item[Outline width] - width of your features.
+\end{description}
+\end{description}
+
+Once you have styled your layer you also could save your layer-style to a
+separate file (with \filename{*.qml}-ending).
+To do this, use the button \button{Save Style \ldots}. No need to say that
+\button{Load Style \ldots} loads your saved layer-style-file.
+
+If you wish to always use a particular style whenever the layer is loaded,
+use the \button{Save As Default} button to make your style the default. Also,
+if you make changes to the style that you are not happy with, use the \button{Restore
+Default Style} button to revert to your default style.
+
+\minisec{Vector transparency} \label{sec:vect_transparency}
+\index{vector layers!transparency}
+
+\qg allows to set a transparency for every vector layer. This can be done with
+the slider \\
+\slider{Transparency} inside the \tab{Style} tab (see
+fig. \ref{subfig:single_symbol}). This is very useful for overlaying several
+vector layers.
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Labels Tab}\label{labeltab}
 
