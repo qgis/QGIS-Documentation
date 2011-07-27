@@ -930,9 +930,9 @@ of the old labels tab in one of the next versions.
 
 We recommend to switch to the new labeling, described in section \ref{newlabel}.
 
-The labeling in the \tab{Labels} tab allows you to enable labeling features and 
-control a number of options related to fonts, placement, style, alignment and 
-buffering. We will illustrate this by labelling the lakes shapefile of the
+The old labeling in the \tab{Labels} tab allows you to enable labeling features 
+and control a number of options related to fonts, placement, style, alignment 
+and buffering. We will illustrate this by labelling the lakes shapefile of the
 \filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
@@ -986,7 +986,6 @@ putting a backdrop around them to make them stand out better. To buffer the
 lakes labels:
 
 \begin{enumerate}
-\item Click the \tab{Buffer} tab.
 \item Click the \checkbox{Buffer Labels?} checkbox to enable buffering.
 \item Choose a size for the buffer using the spin box.
 \item Choose a color by clicking on \button{Color} and choosing your
@@ -1126,32 +1125,32 @@ to be added to the specific attribute table column. If you click on the
 widgets. These widgets are:
 
 \begin{itemize}[label=--]
-\item Line edit: an edit field which allows to enter simple text (or restrict
+\item \textbf{Line edit}: an edit field which allows to enter simple text (or restrict
 to
 numbers for numeric attributes).
-\item Classification: Displays a combo box with the values used for
+\item \textbf{Classification}: Displays a combo box with the values used for
 classification, if you have chosen 'unique value' as legend type in the
 \tab{Style} tab of the properties dialog.
-\item Range: Allows to set numeric values from a specific range. The edit
+\item \textbf{Range}: Allows to set numeric values from a specific range. The edit
 widget can be either a slider or a spin box.
-\item Unique value: The user can select one of the values already used in the
+\item \textbf{Unique values}: The user can select one of the values already used in the
 attribute table. If editable is activated, a line edit is shown with
 autocompletion support, otherwise a combo box is used.
-\item File name: Simplifies the selection by adding a file chooser dialog.
-\item Value map: a combo box with predefined items. The value is stored in
+\item \textbf{File name}: Simplifies the selection by adding a file chooser dialog.
+\item \textbf{Value map}: a combo box with predefined items. The value is stored in
 the attribute, the description is shown in the comboo box. You can define
 values manually or load them from a layer or a CSV file.
-\item Enumeration: Opens a combo box with values that can be used within the
+\item \textbf{Enumeration}: Opens a combo box with values that can be used within the
 columns type. This is currently only supported by the postgres provider.
-\item Immutable: The immutable attribute column is read-only. The user is not
+\item \textbf{Immutable}: The immutable attribute column is read-only. The user is not
 able to modify the content.
-\item Hidden: A hidden attribute column is invisible. The user is not able to 
+\item \textbf{Hidden}: A hidden attribute column is invisible. The user is not able to 
 see its content. 
-\item Checkbox: Displays a checkbox and you can define what attribute is added 
+\item \textbf{Checkbox}: Displays a checkbox and you can define what attribute is added 
 to the column when the checkbox is activated or not.
-\item Text edit: This opens a text edit field that allows multiple lines to be 
+\item \textbf{Text edit}: This opens a text edit field that allows multiple lines to be 
 used. 
-\item Calendar: Opens a calendar widget to enter a date. Column type must be text.
+\item \textbf{Calendar}: Opens a calendar widget to enter a date. Column type must be text.
 \end{itemize}
 
 \subsection{General Tab}\label{vectorgeneraltab}
@@ -1159,7 +1158,10 @@ used.
 The \tab{General} tab is essentially like that of the raster dialog. It
 allows you to change the display name, set scale dependent rendering options,
 create a spatial index of the vector file (only for OGR supported formats and
-PostGIS) and view or change the projection of the specific vector layer.
+PostGIS) and view or change the projection of the specific vector layer. 
+Additionally it is possible to define a certain Edit User Interface for the 
+vector layer written with the Qt Creator IDE and tools at 
+\url{http://qt.nokia.com/products/developer-tools}. 
 
 The \button{Query Builder} button allows you to create a subset of the
 features in the layer - but currently this button is only available when you
@@ -1342,26 +1344,47 @@ create an action to launch a viewer to display the image. You could also use
 actions to launch web-based reports for an attribute field or combination of
 fields, specifying them in the same way we did in our Google search example.
 
+\subsection{Joins Tab}\label{sec:joins}
+\index{vector layers!joins}
+
+The \tab{Joins} tab allows you to join a loaded attribute table to a loaded 
+vector layer. As key columns you have to define a join layer, a join field and 
+a target field. QGIS currently supports to join DBase and CSV tables to an 
+existing vector layer (see figure~\ref{fig:join_attributes}).
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=8cm]{join_attributes}
+   \caption{Join an attribute table to an existing vector layer \nixcaption}
+   \label{fig:join_attributes}
+\end{figure}
+
+Additionally the add vector join dialog allows to: 
+
+\begin{itemize}[label=--]
+\item \checkbox{Cache join layer in virtual memory}
+\item \checkbox{Create attribute index on the join field}
+\end{itemize}
+
 \subsection{Diagram Tab}\label{sec:diagram}
 \index{vector layers!diagram}
 
-The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer.
-To activate this feature, open the Plugin Manager and select the 'Diagram Overlay'
-plugin. After this, there is a new tab in the vector \dialog{Layer
-Properties} dialog where the settings for diagrams may be entered (see
+The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer (see
 figure~\ref{fig:diagramtab}).
 
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=13cm]{diagram_tab}
-   \caption{Vector properties dialog with diagram tab \nixcaption}\label{fig:diagramtab}
+   \caption{Vector properties dialog with diagram tab \nixcaption}
+   \label{fig:diagramtab}
 \end{figure}
 
-The current implementation of diagrams provides support for piecharts, barcharts,
-proportional SVG symbols, and for linear scaling of the diagram size according
-to a classification attribute. We will demonstrate an example and overlay the
-alaska boundary layer a barchart diagram showing some temperature data from
-a climate vector layer. Both vector layers are part of the \qg sample dataset (see
+The current core implementation of diagrams provides support for piecharts and 
+text diagrams, and for linear scaling of the diagram size according to a 
+classification attribute. The placement of the diagrams interacts with the 
+new labeling. We will demonstrate an example and overlay the alaska 
+boundary layer a barchart diagram showing some temperature data from a climate 
+vector layer. Both vector layers are part of the \qg sample dataset (see
 Section~\ref{label_sampledata}.
 
 \begin{enumerate}
@@ -1370,16 +1393,16 @@ browse to the \qg sample dataset folder and load the two vector shape layers
 \filename{alaska.shp} and \filename{climate.shp}.
 \item Double click the \filename{climate} layer in the map legend to open the
 \dialog{Layer Properties} dialog.
-\item Click on the \tab{Diagram Overlay} and select \button{Bar chart} as
+\item Click on the \tab{Diagram Overlay} and select \button{Pie chart} as
 Diagram type.
 \item In the diagram we want to display the values of the three columns
 \filename{T\_F\_JAN, T\_F\_JUL} and \filename{T\_F\_MEAN}. First select
-\filename{T\_F\_JAN} as Attributes and click \button{Add attribute}, then
+\filename{T\_F\_JAN} as Attributes and click the green \button{+} button, then
 \filename{T\_F\_JUL} and finally \filename{T\_F\_MEAN}.
 \item For linear scaling of the diagram size we define \filename{T\_F\_JUL}
 as classification attribute.
-\item Now click on \button{Find maximum value}, choose a size value and unit
-and click \button{Apply} to display the diagram in the \qg main window.
+\item Now click on \button{Find maximum value}, choose 10 as size value and 
+click \button{Apply} to display the diagram in the \qg main window.
 \item You can now adapt the chart size, or change the attribute colors double
 clicking on the color values in the attribute field.
 Figure~\ref{fig:climatediagram} gives an impression.
@@ -1389,7 +1412,8 @@ Figure~\ref{fig:climatediagram} gives an impression.
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=13cm]{climate_diagram}
-   \caption{Diagram from temperature data overlayed on a map \nixcaption}\label{fig:climatediagram}
+   \caption{Diagram from temperature data overlayed on a map \nixcaption}
+   \label{fig:climatediagram}
 \end{figure}
 
 \section{Editing}\index{editing}
@@ -1403,7 +1427,8 @@ This version of \qg does not track if somebody else is editing a
 feature at the same time as you. The last person to save their edits wins.
 \end{Tip}
 
-\subsection{Setting the Snapping Tolerance and Search Radius}\label{snapping_tolerance}
+\subsection{Setting the Snapping Tolerance and Search Radius}
+\label{snapping_tolerance}
 
 Before we can edit vertices, we must set the snapping
 tolerance and search radius to a value that allows us an optimal editing of
@@ -1421,7 +1446,8 @@ The snapping tolerance setting affects all tools which work with tolerance.
 \begin{enumerate}
 \item A general, project wide snapping tolerance can be defined choosing
 \mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Options}.
-(On Mac: go to  \mainmenuopt{\qg} \arrow Preferences, on Linux: \mainmenuopt{Edit} \arrow \dropmenuopttwo{mActionOptions}{Options}.)
+(On Mac: go to  \mainmenuopt{\qg} \arrow Preferences, on Linux: 
+\mainmenuopt{Edit} \arrow \dropmenuopttwo{mActionOptions}{Options}.)
 In the \tab{Digitizing} tab you can select between to vertex, to segment or
 to vertex and segment as default snap mode. You can also define a default
 snapping tolerance and a search radius for vertex edits. The tolerance an be
@@ -1432,17 +1458,17 @@ the snapping units in feet. Your results may vary, but something on the order
 of 300ft should be fine at a scale of 1:10 000 should be a reasonable
 setting.
 \item A layer based snapping tolerance can be defined by choosing
-\mainmenuopt{Settings} (or \mainmenuopt{File}) \arrow \dropmenuopttwo{mActionOptions}{Project
-Properties\dots}. In the \tab{General} tab, section \classname{Digitize} you
-can click on \button{Snapping options\dots} to enable and adjust snapping
-mode and tolerance on a layer basis (see Figure~\ref{fig:snappingoptions}).
+\mainmenuopt{Settings} (or \mainmenuopt{File}) \arrow 
+\button{Snapping options\dots} to enable and adjust snapping mode and tolerance 
+on a layer basis (see Figure~\ref{fig:snappingoptions}).
 \end{enumerate}
 Note that this layer based snapping overrides the global snapping option set in the Digitizing tab. So if you need to edit one layer, and snap its vertices to another layer, then enable snapping only on the \usertext{snap to} layer, then decrease the global snapping tolerance to a smaller value.  Furthermore, snapping will never occur to a layer which is not checked in the snapping options dialog, regardless of the global snapping tolerance. So be sure to mark the checkbox for those layers that you need to snap to.
 
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=12cm]{editProjectSnapping}
-   \caption{Edit snapping options on a layer basis \nixcaption}\label{fig:snappingoptions}
+   \caption{Edit snapping options on a layer basis \nixcaption}
+   \label{fig:snappingoptions}
 \end{figure}
 
 \minisec{Search radius}
@@ -1498,26 +1524,29 @@ display to zoom in or out without interrupting your digitising session.
 
 \subsubsection{Topological editing}
 
-Besides layer based snapping options the \tab{General} tab in menu
-\mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Project Properties\dots}
-also provides some topological functionalities.
-In the Digitizing option group you can \checkbox{Enable topological editing} and/or activate
-\checkbox{Avoid intersections of new polygons}.
+Besides layer based snapping options you can also define some topological 
+functionalities in the \dialog{Snapping options \dots} dialog in the 
+\mainmenuopt{Settings} (or \mainmenuopt{File}) menu. Here you can define 
+\checkbox{Enable topological editing} and/or for polygon layers you can 
+activate the column \checkbox{Avoid Int.} which avoids intersection of new 
+polygons.
 
 \minisec{Enable topological editing}
 
 The option \checkbox{Enable topological editing} is for editing and maintaining
-common boundaries in polygon mosaics. \qg "detects" a shared boundary in
+common boundaries in polygon mosaics. QGIS 'detects' a shared boundary in
 a polygon mosaic and you only have to move the vertex once and \qg will take
 care about updating the other boundary.
 
 \minisec{Avoid intersections of new polygons}
 
-The second topological option called \checkbox{Avoid intersections of new polygons}
-avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons.
-If you already have one polygon, it is possible with this option to digitise the second
-one such that both intersect and \qg then cuts the second polygon to the common boundary.
-The advantage is that users don't have to digitize all vertices of the common boundary.
+The second topological option in the \checkbox{Avoid Int.} column, called 
+'Avoid intersections of new polygons' avoids overlaps in polygon mosaics. It is 
+for quicker digitizing of adjacent polygons. If you already have one polygon, 
+it is possible with this option to digitise the second one such that both 
+intersect and \qg then cuts the second polygon to the common boundary. The 
+advantage is that users don't have to digitize all vertices of the common 
+boundary.
 
 \subsection{Digitizing an existing layer}
 \index{vector layers!digitizing}
@@ -1605,9 +1634,10 @@ the geometry of that feature.
 The attribute window will appear, allowing you to enter the information for
 the new feature. Figure \ref{fig:vector_digitising} shows setting attributes
 for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
-\mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu, you can also activate the
+\mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu, you can also activate 
 \\
-\checkbox{Suppress attributes pop-up windows after each created feature}.
+\checkbox{Suppress attributes pop-up windows after each created feature}
+\checkbox{Reuse last entered attribute values}.
 
 \begin{figure}[ht]
    \centering
@@ -1820,10 +1850,10 @@ integrity of your data, we offer no warranty in this regard.
    & Split Features
    & \includegraphics[width=0.7cm]{mActionMergeFeatures}
    & Merge Selected Features \\
-\hline \includegraphics[width=0.7cm]{mActionRotatePointSymbols}
-   & Rotate Point Symbols
-   &
-   & \\
+\hline \includegraphics[width=0.7cm]{mActionMergeFeatures}
+   & Merge Attributes of Selected Features
+   &\includegraphics[width=0.7cm]{mActionRotatePointSymbols}
+   & Rotate Point Symbols \\
 \hline
 \end{tabular}
 \caption{Vector layer advanced editing toolbar}\label{tab:advanced_editing}
@@ -1937,6 +1967,13 @@ want to split.
 
 The \toolbtntwo{mActionMergeFeatures}{Merge Selected Features} tool allows to
 merge features that have common boundaries and the same attributes.
+
+\minisec{Merge attributes of selected features}
+\index{vector layers!merge!attributes of features}
+
+The \toolbtntwo{mActionMergeFeatures}{Merge Attributes of Selected Features} 
+tool allows to merge attributes of features with common boundaries and 
+attributes without merging their boundaries.
 
 \minisec{Rotate Point Symbols}
 \index{vector layers!rotate!symbol}
