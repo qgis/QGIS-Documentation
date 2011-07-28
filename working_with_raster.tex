@@ -65,6 +65,8 @@ a dialog to set raster properties for the layer.
 \item \dropmenuopt{Zoom to best scale (100\%)}
 \item \dropmenuopt{Show in overview}
 \item \dropmenuopt{Remove}
+\item \dropmenuopt{Set layer CRS}
+\item \dropmenuopt{Set project CRS from layer}
 \item \dropmenuopt{Properties}
 \item \dropmenuopt{Rename}
 \item \dropmenuopt{Add Group}
@@ -81,7 +83,7 @@ Figure \ref{fig:raster_properties} shows the \dialog{Raster Layer Properties} di
 There are several tabs on the dialog:
 
 \begin{itemize}[label=--]
- \item \tab{Symbology}
+ \item \tab{Style}
  \item \tab{Transparency}
  \item \tab{Colormap}
  \item \tab{General}
@@ -96,13 +98,13 @@ There are several tabs on the dialog:
    \caption{Raster Layers Properties Dialog \nixcaption}\label{fig:raster_properties}
 \end{figure}
 
-\subsection{Symbology Tab}\label{label_sombology}
+\subsection{Style Tab}\label{label_sombology}
 
 QGIS can render raster layers in two different ways :\index{raster layers!supported channels}
 
 \begin{itemize}[label=--]
 \item Single band - one band of the image will be rendered as gray or in
-pseudocolors.
+pseudocolor or a freak out.
 \item Three band color - three bands from the image will be rendered, each
 band representing the red, green or blue component that will be used to create
 a color image.
@@ -135,10 +137,10 @@ When selecting the entry \selectstring{color map}{Colormap}, the tab
 
 QGIS can restrict the data displayed to only show cells whose values are
 within a given number of standard deviations of the mean for the
-layer.\index{raster layers!standard deviation} This is useful when you have one or
-two cells with abnormally high values in a raster grid that are having a
-negative impact on the rendering of the raster. This option is only available
-for pseudocolor images.
+layer.\index{raster layers!standard deviation} This is useful when you have 
+one or two cells with abnormally high values in a raster grid that are having 
+a negative impact on the rendering of the raster. This option is only available
+for pseudocolor and freak out images.
 
 \minisec{Three band color}
 
@@ -147,7 +149,6 @@ of your rasterlayer. For example you could switch color-bands from the
 standard RGB-order to something else.
 
 Also scaling of colors are available.
-
 
 \begin{Tip}\caption{\textsc{Viewing a Single Band of a Multiband Raster}}
 If you want to view a single band (for example Red) of a multiband
@@ -159,13 +160,8 @@ set the image type to grayscale, then select Red as the band to use for Gray.
 \subsection{Transparency Tab} \label{rastertab:transparency}
 
 QGIS has the ability to display each raster layer at varying transparency
-levels.\index{raster layers!transparency} Use the transparency slider to indicate to
-what extent the underlying layers (if any) should be visible though the
-current raster layer.
-This is very useful, if
-you like to overlay more than one rasterlayer, e.g. a shaded relief-map
-overlayed by a classified rastermap. This will make the look of the map
-more three dimensional.
+levels.\index{raster layers!transparency} Use the transparency slider to indicate to what extent the underlying layers (if any) should be visible though the current raster layer.
+This is very useful, if you like to overlay more than one rasterlayer, e.g. a shaded relief-map overlayed by a classified rastermap. This will make the look of the map more three dimensional.
 
 Additionally you can enter a rastervalue, which should be treated as
 {\em NODATA}. This can be done manually or with the 
@@ -198,14 +194,13 @@ As you can see this is quite easy to set custom transparency, but it can be
 quite a lot of work. Therefore you can use the button
 \toolbtntwo{mActionFileSave}{Export to file} to save your
 transparency-list to a file. The button
-\toolbtntwo{mActionAddRasterLayer}{Import from file} loads your
+\toolbtntwo{mActionFolder.png}{Import from file} loads your
 transparency-settings and applies them to the current rasterlayer.
 
 \subsection{Colormap} \label{label_colormaptab}
-% FIXME: Write me
 
 The \tab{Colormap} tab is only available, when you have selected a
-single-band-rendering within the tab \tab{Symbology} (see chapt. \ref{label_sombology}).
+single-band-rendering within the \tab{Style} tab (see chapt. \ref{label_sombology}).
 
 Three ways of color interpolation are available:
 \begin{itemize}[label=--]
@@ -214,19 +209,19 @@ Three ways of color interpolation are available:
 \item Exact
 \end{itemize}
 
-The button \button{Add Entry} adds a color to the individual color-table.
-Double-Clicking on the value-column lets you inserting a specific value.
-Double clicking on the color-column opens the dialog \dialog{Select
-color} where you can select a color to apply on that value.
+The button \button{Add Entry} adds a color to the individual color-table. 
+\button{Delete Entry} deletes a color from the individual color-table and the 
+\button{Sort} sorts the color table according to the pixel values in the 
+value column. Double-Clicking on the value-column lets you inserting a 
+specific value. Double clicking on the color-column opens the dialog 
+\dialog{Select color} where you can select a color to apply on that value. Further you can also add labels for each color but this value won't be displayed when you use the identify feature tool.   
 
 Alternatively you can click on the button
-\toolbtntwo{mActionNewAttribute}{Load colormap from Band}
-, which tries to
-load the table from the band (if it has any).
+\toolbtntwo{mActionNewAttribute}{Load colormap from Band}, which tries to load the table from the band (if it has any).
 
 The block \guiheading{Generate new color map} allows you to create newly
 categorized colormaps. You only need to select the \selectnumber{number of
-classes}{15} you need and press the button \button{Classify}. Currently
+classes}{15} and press the button \button{Classify}. Currently
 only one \selectstring{Classification mode}{Equal Interval} is
 supported\index{raster layer!classify}.
 
@@ -241,8 +236,8 @@ Additionally scale-dependent visability can be set in this tab. You need to
 check the checkbox and set an appropriate scale where your data will be
 displayed in the map canvas.
 
-Also the spatial reference system is printed here as a PROJ.4-string.
-This can be modified by hitting the \button{Change} button.
+Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
+This can be modified by hitting the \button{Specify} button.
 
 \subsection{Metadata Tab}\label{label_metatab}
 
@@ -282,21 +277,22 @@ version of your raster, make a backup copy prior to building pyramids.
 
 \subsection{Histogram Tab}\label{label_histogram}
 
-The \tab{Histogram} tab allows you to view the distribution\index{raster layers!histogram}
-of the bands or colors in your raster. You must first generate the raster statistics
-by clicking the \button{Refresh} button. You can choose which bands to display by
-selecting them in the list box at the bottom left of the tab. Two different
-chart types are allowed:
+The \tab{Histogram} tab allows you to view the distribution\index{raster 
+layers!histogram} of the bands or colors in your raster. It is generated 
+automaticaly when you open \tab{Histogram} tab. You can choose which bands to display by selecting them in the list box at the bottom left of the tab. 
 
-\begin{itemize}[label=--]
-\item Bar chart
-\item Line graph
-\end{itemize}
-
-You can define the number of chart columns to use and decide whether you want
-to \checkbox{Allow approximation} or display \checkbox{out of range} values
-Once you view the histogram, you'll notice that the band statistics have been
-populated on the \tab{metadata} tab.\index{raster layers!metadata)}
+%% FIXME not supported at the moment
+%Two different chart types are allowed:
+%
+%\begin{itemize}[label=--]
+%\item Bar chart
+%\item Line graph
+%\end{itemize}
+%
+%You can define the number of chart columns to use and decide whether you want
+%to \checkbox{Allow approximation} or display \checkbox{out of range} values
+%Once you view the histogram, you'll notice that the band statistics have been
+%populated on the \tab{metadata} tab.\index{raster layers!metadata)}
 
 \begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
 To gather statistics for a layer, select pseudocolor rendering and
@@ -337,5 +333,11 @@ are available. Stay tuned for more operators to come!
 
 With the \checkbox{Result to project} checkbox the result layer will automatically 
 added to the legend area and can be visualized. 
+
+\section{Raster Analysis}\label{sec:raster_analysis}
+\index{Raster!raster analysis}
+\index{Raster analysis}
+
+Apart from the raster calculator, additional raster analysis in \qg 1.7 is provided by the GDALTools core plugin. Please refer to section \ref{label_plugingdaltools} for more information.
 
 \FloatBarrier
