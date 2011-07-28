@@ -1349,8 +1349,8 @@ fields, specifying them in the same way we did in our Google search example.
 
 The \tab{Joins} tab allows you to join a loaded attribute table to a loaded 
 vector layer. As key columns you have to define a join layer, a join field and 
-a target field. QGIS currently supports to join DBase and CSV tables to an 
-existing vector layer (see figure~\ref{fig:join_attributes}).
+a target field. QGIS currently supports to join non spatial table formats 
+supported by OGR, delimited text and the PostgreSQL provider (see figure~\ref{fig:join_attributes}).
 
 \begin{figure}[ht]
    \centering
@@ -1978,11 +1978,12 @@ attributes without merging their boundaries.
 \minisec{Rotate Point Symbols}
 \index{vector layers!rotate!symbol}
 
-The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool
-allows to change the rotation of point symbols in the map canvas, if
-you have defined a rotation column from the attribute table of the point
-layer in the \tab{Style} tab of the \dialog{Layer Properties}.
-Otherwise the tool is inactive.
+%% FIXME change, if support in new symbology is available, too
+The \toolbtntwo{mActionRotatePointSymbols}{Rotate Point Symbols} tool is 
+currently only supported by the old symbology engine. It allows to change the 
+rotation of point symbols in the map canvas, if you have defined a rotation 
+column from the attribute table of the point layer in the \tab{Style} tab of 
+the \dialog{Layer Properties}. Otherwise the tool is inactive.
 
 \begin{figure}[ht]
    \centering
@@ -2011,7 +2012,7 @@ To create a new Shape layer for editing, choose \button{new} \arrow
 \toolbtntwo{mActionNewVectorLayer}{New Shapefile Layer} from the
 \mainmenuopt{Layer} menu. The \dialog{New Vector Layer} dialog will be
 displayed as shown in Figure \ref{fig:newvectorlayer}. Choose the type of
-layer (point, line or polygon).
+layer (point, line or polygon) and the CRS (Coordinate Reference System).
 
 \begin{figure}[ht]
    \centering
@@ -2024,9 +2025,10 @@ features (i.e. features with X,Y,Z coordinates) or measure features. At this
 time, only shapefiles can be created. In a future version of \qg, creation of
 any OGR or PostgreSQL layer type will be supported.
 
-To complete the creation of the new Shapefile layer, add the desired attributes by
-clicking on the \button{Add} button and specifying a name and type for the
-attribute. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
+To complete the creation of the new Shapefile layer, add the desired attributes 
+by clicking on the \button{Add} button and specifying a name and type for the
+attribute. A first 'id' column is added as default but can be removed, if not 
+wanted. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
 \selectstring{Type}{string} attributes are supported. Additionally and
 according to the attribute type you can also define the width and precision
 of the new attribute column. Once you are happy with the attributes, click
@@ -2079,11 +2081,10 @@ and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 from the menu. It is also possible to rightlick on the layer and
 choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the
 dropdown menu.
-%%FIXME: The following statement is not necessarily correct as there is a setting
-%%which means it might only display the selected features or features in current canvas
-This will open a new window which displays the attributes for
-every feature in the layer (figure \ref{fig:attributetable}). The number of features
-are shown in the attribute table title.
+
+This will open a new window which displays the feature attributes in the 
+layer (figure \ref{fig:attributetable}). The number of features and the number 
+of selected features are shown in the attribute table title.
 
 \begin{figure}[ht]
    \centering
@@ -2107,7 +2108,6 @@ current cursor position and the clicked row are selected. Moving the cursor
 position in the attribute table, by clicking a cell in the table, does not change
 the row selection. Changing the selection in the main canvas does not move the
 cursor position in the attribute table.
-%%This previously said that changing the row selection in the attribute table does not move the cursor position. But it does, if it is not meant to, there is a bug!
 
 The table can be sorted by any column, by clicking on the column header. A small
 arrow indicates the sort order (downward pointing means descending values from the
@@ -2122,47 +2122,60 @@ status bar of the main window. For more complex searches use
 the Advanced search \button{...}, which will launch the Search Query Builder
 described in Section \ref{sec:select_by_query}.
 
-To show selected records only, use the checkbox \checkbox{Show selected records only}. To search selected records only, use the checkbox \checkbox{Search selected records only}. The other buttons at the bottom left of the attribute table window provide following functionality:
+To show selected records only, use the checkbox \checkbox{Show selected only}. 
+To search selected records only, use the checkbox \checkbox{Search selected 
+only}. The \checkbox{Case sensitive} checkbox allows to select case sensitive. 
+The other buttons at the bottom left of the attribute table window provide 
+following functionality:
 
 \begin{itemize}[label=--]
-\item \toolbtntwo{mActionOpenTable}{Remove selection}
-\item \toolbtntwo{mActionSelectedToTop}{Move selected to top}
-\item \toolbtntwo{mActionInvertSelection}{Invert selection}
-\item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also with \keystroke{Ctrl-C}
-\item \toolbtntwo{mActionZoomToSelected}{Zoom map to selected rows} also with \keystroke{Ctrl-J}
-\item \toolbtntwo{mActionToggleEditing}{toggle editing mode} to edit single values
-of attribute table and to enable functionalities described below.
-\item \toolbtntwo{mActionDeleteSelected}{Delete Selected Features}
-\item \toolbtntwo{mActionNewAttribute}{New Column} for PostGIS layers and for OGR layers with GDAL version >= 1.6.
-\item \toolbtntwo{mActionDeleteAttribute}{Delete Column} only for PostGIS layers yet.
-\item \toolbtntwo{mActionCalculateField}{Open field calcultor}
+\item \toolbtntwo{mActionOpenTable}{Unselect all} also with \keystroke{Ctrl-U}
+\item \toolbtntwo{mActionSelectedToTop}{Move selected to top} also with 
+\keystroke{Ctrl-T}
+\item \toolbtntwo{mActionInvertSelection}{Invert selection} also with 
+\keystroke{Ctrl-S}
+\item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also 
+with \keystroke{Ctrl-C}
+\item \toolbtntwo{mActionZoomToSelected}{Zoom map to the selected rows} also 
+with \keystroke{Ctrl-J}
+\item \toolbtntwo{mActionToggleEditing}{Toggle editing mode} to edit single values
+of attribute table and to enable functionalities described below also with 
+\keystroke{Ctrl-E}
+\item \toolbtntwo{mActionDeleteSelected}{Delete selected features} also with 
+\keystroke{Ctrl-D}
+\item \toolbtntwo{mActionNewAttribute}{New Column} for PostGIS layers and for 
+OGR layers with GDAL version >= 1.6 also with \keystroke{Ctrl-W}
+\item \toolbtntwo{mActionDeleteAttribute}{Delete Column} only for PostGIS layers 
+yet also with \keystroke{Ctrl-L}
+\item \toolbtntwo{mActionCalculateField}{Open field calculator} also with 
+\keystroke{Ctrl-I}
 \end{itemize}
 
 \minisec{Save selected features as new layer}
 \index{editing!save selection as new layer}
 
 The selected features can be saved as any OGR supported vector format and also
-transformed into another Coordinate Reference System (CRS). Just open the right mouse
-menu of the layer and click on \dropmenuopt{Save selection as} to define the
-name of the output file, its format and CRS (see Section \ref{label_legend}). It is 
-also possible to specify OGR creation options within the dialog.
+transformed into another Coordinate Reference System (CRS). Just open the right 
+mouse menu of the layer and click on \dropmenuopt{Save selection as} to define 
+the name of the output file, its format and CRS (see Section \ref{label_legend}). 
+It is also possible to specify OGR creation options within the dialog.
 
 \begin{Tip}\caption{\textsc{Manipulating Attribute data}}
 Currently only PostGIS layers are supported for adding or dropping
 attribute columns within this dialog. In future versions of \qg, other
-datasources will be supported, because this feature was recently implemented
-in GDAL/OGR > 1.6.0
+datasources will be supported, because this feature was implemented in GDAL/OGR 
+> 1.6.0
 \end{Tip}
 
 \minisec{Working with non spatial attribute tables}
 \index{editing!working with non spatial tables}
 
-QGIS allows also to load non spatial tables. This includes currently tables supported 
-by OGR, delimited text and the PostgreSQL provider. The tables can be used for field 
-lookups or just generally browsed and edited using the table view. When you load the 
-table you will see it in the legend field. It can be opened e.g. with the 
-\dropmenuopttwo{mActionOpenTable}{Open Attribute Table} tool and is then editable 
-like any other layer attribute table. 
+QGIS allows also to load non spatial tables. This includes currently tables 
+supported by OGR, delimited text and the PostgreSQL provider. The tables can be 
+used for field lookups or just generally browsed and edited using the table view. 
+When you load the table you will see it in the legend field. It can be opened 
+e.g. with the \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} tool and 
+is then editable like any other layer attribute table. 
 
 As an example you can use columns of the non spatial table to define attribute values or 
 a range of values that are allowed to be added to a specific vector layer during digitizing. 
@@ -2205,18 +2218,19 @@ to the SQL where clause field, click the appropriate button. Relational operator
 ( = , > , \dots), string comparison operator ( LIKE ), logical operators ( AND , OR
 , \dots) are available.
 
-The \button{Clear} button clears the text in the SQL where clause text field. The
-\button{Test} button shows a message box with the number of features satisfying
-the current query, which is usable in the process of query construction. The
-\button{OK} button closes the window and selects the features satisfying the
-query. The \button{Cancel} button closes the window without changing the current
-selection.
+The \button{Test} button shows a message box with the number of features 
+satisfying the current query, which is usable in the process of query 
+construction. The \button{Clear} button clears the text in the SQL where clause 
+text field. The \button{Save} and \button{Load} button allow to save and load 
+SQL queries. The \button{OK} button closes the window and selects the features 
+satisfying the query. The \button{Cancel} button closes the window without 
+changing the current selection.
 
 \begin{Tip}\caption{\textsc{Changing the Layer Definition}}\index{Query
 Builder!changing layer definitions}
-You can change the layer definition after it is loaded by altering
-the SQL query used to define the layer. To do this, open the
-vector \dialog{Layer Properties} dialog by double-clicking on the layer in the legend and click on the
+You can change the layer definition after it is loaded by altering the SQL query 
+used to define the layer. To do this, open the vector \dialog{Layer Properties} 
+dialog by double-clicking on the layer in the legend and click on the 
 \button{Query Builder} button on the \tab{General} tab. See Section
 \ref{sec:vectorprops} for more information.
 \end{Tip}
@@ -2230,8 +2244,7 @@ filter criteria as a 'virtual layer' / subset. The purpose of the select by
 query function is to highlight all features that meet a particular criteria.
 Select by query can be used with all vector data providers.
 
-To do a `select by query' on a loaded layer, click on the
-button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of the layer. Then
+To do a `select by query' on a loaded layer, click on the button \toolbtntwo{mActionOpenTable}{Open Table} to open the attribute table of the layer. Then
 click the \button{Advanced...} button at the bottom. This starts the Query Builder
 that allows to define a subset of a table and display it as described in Section
 \ref{sec:query_builder}.
@@ -2240,10 +2253,10 @@ that allows to define a subset of a table and display it as described in Section
 \index{Query Builder!save selection as new layer}
 
 The selected features can be saved as any OGR supported vector format and also
-transformed into another Coordinate Reference System (CRS). Just open the right mouse
-menu of the layer and click on \dropmenuopt{Save selection as} to define the
-name of the output file, its format and CRS (see Section \ref{label_legend}). It is 
-also possible to specify OGR creation options within the dialog.
+transformed into another Coordinate Reference System (CRS). Just open the right 
+mouse menu of the layer and click on \dropmenuopt{Save selection as} to define 
+the name of the output file, its format and CRS (see Section \ref{label_legend}). 
+It is also possible to specify OGR creation options within the dialog.
 
 \section{Field Calculator}\label{sec:field_calculator}
 \index{PostgreSQL!field calculator}
@@ -2322,7 +2335,7 @@ Due to limited space screeen, not all the operators are available through the bu
 {\setlength{\extrarowheight}{10pt}
 \small
 \begin{longtable}{|p{4cm}|p{10cm}|}
-\hline \multicolumn{2}{|c|}{\textbf{List of operators for the field calculator}}\\
+\hline \multicolumn{2}{|c|}{\textbf{List of operators supported by the field calculator}}\\
 \hline \textbf{String}&\textbf{Literal string value}\\
 \endfirsthead
 \hline \textbf{String}&\textbf{Literal string value}\\
@@ -2330,7 +2343,6 @@ Due to limited space screeen, not all the operators are available through the bu
 \hline \multicolumn{2}{|r|}{{See next page}} \\ \hline
 \endfoot
 \endlastfoot
-\hline \textbf{string} & \textbf{literal string value} \\
 \hline NULL & null value \\
 \hline sqrt(\textit{a}) & square root \\
 \hline sin(\textit{a}) & sinus of \textit{a} \\
