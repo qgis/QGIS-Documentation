@@ -5,7 +5,7 @@
 
 % when the revision of a section has been finalized,
 % comment out the following line:
-\updatedisclaimer
+%\updatedisclaimer
 
 \qg uses the OGR library to read and write vector data formats
 \footnote{GRASS vector and PostgreSQL support is supplied by native 
@@ -51,7 +51,11 @@ are required:
 \end{itemize}
 
 Shapefiles also can include a file with a \filename{.prj} suffix, which contains
-the projection information. While it is very useful to have a projection file, it is not mandatory. A shapefile dataset can contain additional files. For further details see the ESRI technical specification at \url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf} \index{shapefile!specification}.
+the projection information. While it is very useful to have a projection file, 
+it is not mandatory. A shapefile dataset can contain additional files. For 
+further details see the ESRI technical specification at 
+\url{http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf} 
+\index{shapefile!specification}.
 
 \minisec{Problem loading a shape .prj file}
 
@@ -97,12 +101,14 @@ From the available options check \radiobuttonon{File}. Click on \button{Browse}.
 That will bring up a standard open file dialog (see Figure
 \ref{fig:openshapefile}) which allows you to navigate the file system and load
 a shapefile or other supported data source.
-The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR supported file formats.
+The selection box \selectstring{Files of type}{\ldots} allows you to preselect 
+some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
-Selecting a shapefile from the list and clicking \button{Open} loads it into \qg. Figure
-\ref{fig:loadedshapefile} shows \qg after loading the \filename{alaska.shp} file.
+Selecting a shapefile from the list and clicking \button{Open} loads it into 
+\qg. Figure \ref{fig:loadedshapefile} shows \qg after loading the 
+\filename{alaska.shp} file.
 
 
 \begin{Tip}\caption{\textsc{Layer Colors}}
@@ -146,22 +152,24 @@ shapefile name in the legend or by right-clicking and choosing
 \subsection{Loading a MapInfo Layer}
 \index{vector layers!MapInfo}
 
-\includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a MapInfo layer, click on the \toolbtntwo{mActionAddNonDbLayer}{Add
-Vector Layer} toolbar bar button or type \keystroke{Ctrl-Shift-V}, change the
-file type filter to \selectstring{Files of Type}{[OGR] MapInfo (*.mif
-*.tab *.MIF *.TAB)} and select the .TAB or .tab layer you want to load.
+\includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a MapInfo layer, 
+click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar bar 
+button or type \keystroke{Ctrl-Shift-V}, change the file type filter to 
+\selectstring{Files of Type}{[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)} and 
+select the .TAB or .tab layer you want to load.
 
 \subsection{Loading an ArcInfo Binary Coverage}
 \index{vector layers!ArcInfo Binary Coverage}
 
-\includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load an ArcInfo binary coverage, click on the
-\toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar button or type
-\keystroke{Ctrl-Shift-V} to open the \dialog{Add Vector Layer} dialog. Select
-\radiobuttonon{Directory}. Change to \selectstring {Type}{Arc/Info Binary Coverage}.
-Navigate to the directory that contains the coverage files and select it.
+\includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load an ArcInfo binary 
+coverage, click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} 
+toolbar button or type \keystroke{Ctrl-Shift-V} to open the \dialog{Add Vector 
+Layer} dialog. Select \radiobuttonon{Directory}. Change to 
+\selectstring{Type}{Arc/Info Binary Coverage}. Navigate to the directory that 
+contains the coverage files and select it.
 
-Similarly, you can load directory based  vector files in the UK National Transfer Format as well as the
-raw TIGER Format of the US Census Bureau.
+Similarly, you can load directory based  vector files in the UK National 
+Transfer Format as well as the raw TIGER Format of the US Census Bureau.
 
 \section{PostGIS Layers}
 \index{vector layers!PostGIS|see{PostGIS}}
@@ -195,7 +203,8 @@ a connection are shown in table \ref{tab:postgis_connection_parms}.
 Parameters}\label{tab:postgis_connection_parms}\medskip
  \begin{tabular}{|l|p{5in}|}
 \hline Name & A name for this connection. Can be the same as \textsl{Database}. \\
-\hline Service & Service parameter to be used alternatively to hostname/port (and potentially database). This can be defined in pg\_service.conf \\
+\hline Service & Service parameter to be used alternatively to hostname/port 
+(and potentially database). This can be defined in pg\_service.conf \\
 \hline Host \index{PostgreSQL!host}
 & Name of the database host. This must be a resolvable host name the same as
 would be used to open a telnet connection or ping the host. If the database is
@@ -203,14 +212,16 @@ on the same computer as \qg, simply enter 'localhost' here. \\
 \hline Port \index{PostgreSQL!port}& Port number the PostgreSQL database
 server listens on. The default port is 5432.\\
 \hline Database \index{PostgreSQL!database} & Name of the database.  \\
-\hline SSL mode \index{PostgreSQL!sslmode}& How the SSL connection will be negotiated with the server. These are the options:
+\hline SSL mode \index{PostgreSQL!sslmode}& How the SSL connection will be 
+negotiated with the server. These are the options:
 \begin {itemize}
 \item disable: only try an unencrypted SSL connection;
 \item allow: try a non-SSL connection, if that fails, try an SSL connection;
 \item prefer (the default): try an SSL connection, if that fails, try a non-SSL connection;
 \item require: only try an SSL connection.
 \end {itemize}
-Note that massive speedups in PostGIS layer rendering can be achieved by disabling SSL in the connection editor. \\
+Note that massive speedups in PostGIS layer rendering can be achieved by 
+disabling SSL in the connection editor. \\
 \hline Username \index{PostgreSQL!username}& User name used to login to the
 database. \\
 \hline Password \index{PostgreSQL!password}& Password used with
@@ -471,7 +482,8 @@ the data to be plotted in a \degrees{180} centric map.
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=9cm]{vectorWrapping}
-   \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore Shift\textunderscore Longitude function \nixcaption}
+   \caption{Map crossing \degrees{180} longitude applying the ST\textunderscore 
+   Shift\textunderscore Longitude function \nixcaption}
 \label{fig:vector_wrapping}
 \end{figure}
 
@@ -496,8 +508,8 @@ see the difference (Figure \ref{fig:vector_wrapping})
 
 \includegraphics[width=0.7cm]{mActionAddSpatiaLiteLayer}
 The first time you load data from a SpatiaLite database, begin by clicking on the
-\toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or by selecting the
-\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...}
+\toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or 
+by selecting the \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...}
 option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}.
 This will bring up a window, which will allow you to either connect to a SpatiaLite 
 database already known to \qg, which you can choose from the dropdown menu or to define 

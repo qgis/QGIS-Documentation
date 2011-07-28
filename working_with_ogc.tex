@@ -3,7 +3,7 @@
 
 % when the revision of a section has been finalized,
 % comment out the following line:
-\updatedisclaimer
+% \updatedisclaimer
 
 QGIS supports WMS and WFS as data sources. WMS-support is native; WFS and WFS-T is
 implemented as a plugin.
@@ -119,11 +119,11 @@ in your URL.\index{WMS!remote server!URL}
 
 Once you have successfully filled in your parameters you can select the
 \button{Connect}
-button to retrieve the capabilities of the selected server.  This includes the Image encoding,
-Layers, Layer Styles and Projections.  Since this
-is a network operation, the speed of the response depends on the quality of your network
-connection to the WMS server. While downloading data from the WMS server, the download progress
-is visualized in the left bottom of the WMS Plugin dialog.
+button to retrieve the capabilities of the selected server.  This includes the 
+Image encoding, Layers, Layer Styles and Projections. Since this is a network 
+operation, the speed of the response depends on the quality of your network
+connection to the WMS server. While downloading data from the WMS server, the 
+download progress is visualized in the left bottom of the WMS Plugin dialog.
 
 Your screen should now look a bit like Figure \ref{fig:connection_wms}, which shows the
 response provided by the NASA JPL OnEarth WMS server.
@@ -155,23 +155,19 @@ the increased data transfer requirements.
 
 \minisec{Options}
 
-The\tab{Options} section provides a text-field where you can add a name
+The Options field provides a text-field where you can add a layer name
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
-If the OnlineRessource-URL from the GetCapabilities-document is different
-from the given URL inside the connection-parameters, QGIS will ask you
-which URL it should use. Depending on your answer QGIS will check the
-checkboxes for yourself based on your answere. This can also be tweaked with a
-\checkbox{Ignore GetMap URL} checkbox and a
-\checkbox{Ignore GetFeatureInfo URL} checkbox separately, also later on.
+Below the layer name you find the default projection, provided by the mapserver. 
+If the \button{Change\dots} button is active, you can click on it and change the 
+default projection of the WMS to another CRS, provided by the WMS server.
 
+\minisec{Layer Order} \label{ogc-wms-layers}
 
-\minisec{Layers} \label{ogc-wms-layers}
-
-The \tab{Layers} tab lists the layers available from the selected
-WMS server.  You may notice that some layers are expandible, this means
-that the layer can be displayed in a choice of image styles.
+The \tab{Layer Order} tab lists the selected layers available from the current 
+connected WMS server.  You may notice that some layers are expandible, this 
+means that the layer can be displayed in a choice of image styles.
 
 You can select several layers at once, but only one image style per layer.
 When several layers are selected, they will be combined at the WMS Server
@@ -212,15 +208,14 @@ whilst JPEG leaves it unsupported.
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
 Each WMS Layer can be presented in multiple CRSs, depending
-on the capability of the WMS server.  You may notice that the \textsl{x} changes in
-the \textsl{Coordinate Reference System (x available)} header as you
+on the capability of the WMS server.  You may notice that the \textsl{x} 
+changes in the \textsl{Coordinate Reference System (x available)} header as you
 select and deselect layers from the \tab{Layers} section.
 
-To choose a CRS, select \button{Change...} and a screen similar to
+To choose a CRS, select \button{Change\dots} and a dialog similar to
 Figure \ref{fig:projections} in Section \ref{label_projstart} will appear.
 The main difference with the WMS version of the screen is that only
 those CRSs supported by the WMS Server will be shown.
-
 
 \begin{Tip}[ht]\caption{\textsc{WMS Projections}}
 For best results, make the WMS layer the first layer
@@ -540,14 +535,16 @@ of them maintained and some not.
 \index{WFS!remote server!}
 \end{Tip}
 
-\begin{Tip}[htb]\caption{\textsc{Accessing secure WFS Servers}}
-Within the dialog \dialog{Create a new WFS-connection} QGIS does not support
-authenficated WFS-connections yet. Within one of the next releases we expect
-to also support authenticated WFS-servers. Meanwhile you could use InteProxy
-(\url{http://inteproxy.wald.intevation.org}) for accessing authenticated
-WFS-servers.
-\index{WFS!authenticate remote server!}
-\index{WFS!secured WFS server!}
-\end{Tip}
+%% FIXME This is no longer true, I guess (Otto)
+%
+%\begin{Tip}[htb]\caption{\textsc{Accessing secure WFS Servers}}
+%Within the dialog \dialog{Create a new WFS-connection} QGIS does not support
+%authenficated WFS-connections yet. Within one of the next releases we expect
+%to also support authenticated WFS-servers. Meanwhile you could use InteProxy
+%(\url{http://inteproxy.wald.intevation.org}) for accessing authenticated
+% WFS-servers.
+%\index{WFS!authenticate remote server!}
+%\index{WFS!secured WFS server!}
+%\end{Tip}
 
 \FloatBarrier
