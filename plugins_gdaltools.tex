@@ -39,6 +39,8 @@ target spatial reference set. The coordinate systems that can be passed are anyt
 The extents of the output file. If not specified the aggregate extents of all input files will be used. \\
 \hline RGB to PCT &  This utility will compute an optimal pseudo-color table for a given RGB image using a median cut algorithm on a downsampled RGB histogram. Then it converts the image into a pseudo-colored image using the color table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize output image visual quality. \\
 \hline PCT to RGB &  This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.\\
+\hline Tile Index &  This program builds a shapefile with a record for each input raster file, an attribute containing the filename, and a polygon geometry outlining the raster.\\
+\hline DEM terrain models &  Tools to analyze and visualize DEMs. It can create  a shaded relief, a slope, an aspect, a color relief, a Terrain Ruggedness Index, a  Topographic Position Index and a roughness map from any GDAL-supported elevation raster.\\
 \hline
 \end{longtable}
 
@@ -54,7 +56,7 @@ Below are some examples of use of the tools.
 \begin{figure}[ht]
    \centering
    \caption{The \emph{Information} dialog window \nixcaption}\label{gdalinfo}
-   \includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/gdalinfo}
+   \includegraphics[clip=true, width=10cm]{plugins_gdaltools_images/gdalinfo}
 \end{figure}
 
 \subsubsection{Creating contour lines}
