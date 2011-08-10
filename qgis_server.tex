@@ -1,31 +1,30 @@
 %  !TeX  root  =  user_guide.tex
 
-\chapter{QGIS Mapserver}\label{label_qgismapserver}
-\index{WMS!QGISmapserver}
+\chapter{QGIS Server}\label{label_qgisserver}
+\index{WMS!QGIS Server}
 
 % when the revision of a section has been finalized,
 % comment out the following line:
 \updatedisclaimer
 
 % Ripped off working_with_ogc.tex (SH: 20110330)
-QGIS mapserver is an open source WMS 1.3 implementation which, in addition,
+QGIS Server is an open source WMS 1.3 implementation which, in addition,
 implements advanced cartographic features for thematic mapping. The QGIS
-mapserver is a FastCGI/CGI (Common Gateway Interface) application written in
+Server is a FastCGI/CGI (Common Gateway Interface) application written in
 C++ that works together with a webserver (e.g. Apache, Lighttpd). 
-
 
 It uses QGIS as backend for the GIS logic and for map rendering. Furthermore the 
 Qt library is used for graphics and for platform independent 
-C++ programming. In contrast to other WMS software, the QGIS mapserver uses 
+C++ programming. In contrast to other WMS software, the QGIS Server uses 
 cartographic rules in SLD/SE as a configuration language, both for the server 
 configuration and for the user-defined cartographic rules. 
 
-Moreover, the QGIS mapserver project provides the “Publish to Web” plugin, a 
+Moreover, the QGIS Server project provides the “Publish to Web” plugin, a 
 plugin for QGIS desktop which exports the current layers and symbology as a 
-web project for QGIS mapserver (containing cartographic visualisation rules 
+web project for QGIS Server (containing cartographic visualisation rules 
 expressed in SLD).
 
-As QGIS desktop and QGIS mapserver use the same visualization libraries, the
+As QGIS desktop and QGIS Server use the same visualization libraries, the
 maps that are published on the web look the same as in desktop GIS. The 
 Publish to Web plugin currently supports basic symbolization, with more complex 
 cartographic visualisation rules introduced manually. As the configuration is 
@@ -34,7 +33,7 @@ one standardised language to learn, which greatly simplifies the complexity
 of creating maps for the Web.
 
 In one of the following manuals we will provide a sample configuration to 
-set up a QGIS mapserver. But for now we recommend to read one of the following 
+set up a QGIS Server. But for now we recommend to read one of the following 
 URLs to get more information:
 
 \begin{itemize}
