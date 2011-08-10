@@ -10,7 +10,7 @@ MAKE = make
 APPENDIX = $(wildcard appendices/*.tex)
 INCLUDES = conventions.tex \
 	core_plugins.tex \
-	qgis_mapserver.tex \
+	qgis_server.tex \
 	features_at_a_glance.tex \
 	foreword.tex \
 	getting_started.tex \
