@@ -885,8 +885,8 @@ performance}
 
 \section{Measuring}\label{sec:measure}\index{measure}
 
-Measuring works within projected coordinate systems only (e.g., UTM). If
-the loaded map is defined with a geographic coordinate system
+Measuring works within projected coordinate systems (e.g., UTM) and 
+unprojected data. If the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be
 incorrect. To fix this you need to set an appropriate map coordinate system
 (See Section~\ref{label_projections}). All measuring modules also use the
@@ -902,8 +902,8 @@ select the tool you want to use.
 \index{measure:angles}
 
 \includegraphics[width=0.7cm]{mActionMeasure}
-QGIS is able to measure real and unprojected distances between given
-points according to a defined ellipsoid. To configure this, choose menu option
+QGIS is able to measure real distances between given points according to 
+a defined ellipsoid. To configure this, choose menu option
 \mainmenuopt{Settings} \arrow \dropmenuopt{Options},
 click on the \tab{Map tools} tab and choose the appropriate ellipsoid. There
 you can also define a rubberband color and your preferred measurement units
