@@ -1,0 +1,215 @@
+--- /home/jrm/Documents/QGIS/english/user_guide_1.6/working_with_raster.tex	2010-11-29 21:39:56.911084856 +0100
++++ /home/jrm/Documents/QGIS/english/trunk/user_guide/working_with_raster.tex	2011-07-28 18:32:41.199587174 +0200
+@@ -8,27 +8,24 @@
+ %\updatedisclaimer
+ 
+ This Section describes how to visualize and set raster layer properties.
+-QGIS supports a number of different raster formats. Currently tested formats
+-include:\index{raster layers!data formats}
++\qg uses the GDAL library to read and write raster data formats
++\footnote{GRASS raster support is supplied by a native QGIS data provider 
++plugin.}, including Arc/Info Binary Grid\index{Arc/Info Binary Grid}, 
++Arc/Info ASCII Grid\index{Arc/Info ASCII Grid},GeoTIFF\index{GeoTIFF},
++Erdas Imagine\index{Erdas Img.} and many more. 
++
++At the date of this document, more than 100 raster formats are supported 
++by the GDAL library \cite{GDALweb}. A complete list is available at 
++\url{http://www.gdal.org/formats_list.html}.
++
++\textbf{Note}: Not all of the listed formats may work in QGIS for various 
++reasons. For example, some require external commercial libraries or 
++the GDAL installation of your OS was not build to support the format you want
++to use. Only those formats that have been well tested will appear in the list
++of file types when loading a raster into QGIS. Other untested formats can 
++be loaded by selecting *.*.
+ 
+-\begin{itemize}[label=--]
+-\item Arc/Info Binary Grid
+-\item Arc/Info ASCII Grid
+-\item GRASS Raster
+-\item GeoTIFF
+-\item JPEG
+-\item Spatial Data Transfer Standard Grids (with some limitations)
+-\item USGS ASCII DEM
+-\item Erdas Imagine
+-\end{itemize}
+-
+-Because the raster implementation in QGIS is based on the GDAL library, other
+-raster formats implemented in GDAL are also likely to work - if in doubt try
+-to open a sample and see if it is supported. You find more details about GDAL
+-supported formats in Appendix \ref{appdx_gdal}
+-\index{raster layers!GDAL implementation} or at
+-\url{http://www.gdal.org/formats_list.html}. If you want to load GRASS raster
+-data, please refer to Section~\ref{sec:load_grassdata}.
++Working with GRASS raster data is described in Section \ref{sec:grass}.
+ 
+ \section{What is raster data?}\label{label_whatsraster}
+ \index{raster layers!definition}
+@@ -68,6 +65,8 @@
+ \item \dropmenuopt{Zoom to best scale (100\%)}
+ \item \dropmenuopt{Show in overview}
+ \item \dropmenuopt{Remove}
++\item \dropmenuopt{Set layer CRS}
++\item \dropmenuopt{Set project CRS from layer}
+ \item \dropmenuopt{Properties}
+ \item \dropmenuopt{Rename}
+ \item \dropmenuopt{Add Group}
+@@ -84,7 +83,7 @@
+ There are several tabs on the dialog:
+ 
+ \begin{itemize}[label=--]
+- \item \tab{Symbology}
++ \item \tab{Style}
+  \item \tab{Transparency}
+  \item \tab{Colormap}
+  \item \tab{General}
+@@ -99,13 +98,13 @@
+    \caption{Raster Layers Properties Dialog \nixcaption}\label{fig:raster_properties}
+ \end{figure}
+ 
+-\subsection{Symbology Tab}\label{label_sombology}
++\subsection{Style Tab}\label{label_sombology}
+ 
+ QGIS can render raster layers in two different ways :\index{raster layers!supported channels}
+ 
+ \begin{itemize}[label=--]
+ \item Single band - one band of the image will be rendered as gray or in
+-pseudocolors.
++pseudocolor or a freak out.
+ \item Three band color - three bands from the image will be rendered, each
+ band representing the red, green or blue component that will be used to create
+ a color image.
+@@ -138,10 +137,10 @@
+ 
+ QGIS can restrict the data displayed to only show cells whose values are
+ within a given number of standard deviations of the mean for the
+-layer.\index{raster layers!standard deviation} This is useful when you have one or
+-two cells with abnormally high values in a raster grid that are having a
+-negative impact on the rendering of the raster. This option is only available
+-for pseudocolor images.
++layer.\index{raster layers!standard deviation} This is useful when you have 
++one or two cells with abnormally high values in a raster grid that are having 
++a negative impact on the rendering of the raster. This option is only available
++for pseudocolor and freak out images.
+ 
+ \minisec{Three band color}
+ 
+@@ -162,13 +160,8 @@
+ \subsection{Transparency Tab} \label{rastertab:transparency}
+ 
+ QGIS has the ability to display each raster layer at varying transparency
+-levels.\index{raster layers!transparency} Use the transparency slider to indicate to
+-what extent the underlying layers (if any) should be visible though the
+-current raster layer.
+-This is very useful, if
+-you like to overlay more than one rasterlayer, e.g. a shaded relief-map
+-overlayed by a classified rastermap. This will make the look of the map
+-more three dimensional.
++levels.\index{raster layers!transparency} Use the transparency slider to indicate to what extent the underlying layers (if any) should be visible though the current raster layer.
++This is very useful, if you like to overlay more than one rasterlayer, e.g. a shaded relief-map overlayed by a classified rastermap. This will make the look of the map more three dimensional.
+ 
+ Additionally you can enter a rastervalue, which should be treated as
+ {\em NODATA}. This can be done manually or with the 
+@@ -201,14 +194,13 @@
+ quite a lot of work. Therefore you can use the button
+ \toolbtntwo{mActionFileSave}{Export to file} to save your
+ transparency-list to a file. The button
+-\toolbtntwo{mActionAddRasterLayer}{Import from file} loads your
++\toolbtntwo{mActionFolder.png}{Import from file} loads your
+ transparency-settings and applies them to the current rasterlayer.
+ 
+ \subsection{Colormap} \label{label_colormaptab}
+-% FIXME: Write me
+ 
+ The \tab{Colormap} tab is only available, when you have selected a
+-single-band-rendering within the tab \tab{Symbology} (see chapt. \ref{label_sombology}).
++single-band-rendering within the \tab{Style} tab (see chapt. \ref{label_sombology}).
+ 
+ Three ways of color interpolation are available:
+ \begin{itemize}[label=--]
+@@ -218,18 +210,18 @@
+ \end{itemize}
+ 
+ The button \button{Add Entry} adds a color to the individual color-table.
+-Double-Clicking on the value-column lets you inserting a specific value.
+-Double clicking on the color-column opens the dialog \dialog{Select
+-color} where you can select a color to apply on that value.
++\button{Delete Entry} deletes a color from the individual color-table and the 
++\button{Sort} sorts the color table according to the pixel values in the 
++value column. Double-Clicking on the value-column lets you inserting a 
++specific value. Double clicking on the color-column opens the dialog 
++\dialog{Select color} where you can select a color to apply on that value. Further you can also add labels for each color but this value won't be displayed when you use the identify feature tool.   
+ 
+ Alternatively you can click on the button
+-\toolbtntwo{mActionNewAttribute}{Load colormap from Band}
+-, which tries to
+-load the table from the band (if it has any).
++\toolbtntwo{mActionNewAttribute}{Load colormap from Band}, which tries to load the table from the band (if it has any).
+ 
+ The block \guiheading{Generate new color map} allows you to create newly
+ categorized colormaps. You only need to select the \selectnumber{number of
+-classes}{15} you need and press the button \button{Classify}. Currently
++classes}{15} and press the button \button{Classify}. Currently
+ only one \selectstring{Classification mode}{Equal Interval} is
+ supported\index{raster layer!classify}.
+ 
+@@ -244,8 +236,8 @@
+ check the checkbox and set an appropriate scale where your data will be
+ displayed in the map canvas.
+ 
+-Also the spatial reference system is printed here as a PROJ.4-string.
+-This can be modified by hitting the \button{Change} button.
++Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
++This can be modified by hitting the \button{Specify} button.
+ 
+ \subsection{Metadata Tab}\label{label_metatab}
+ 
+@@ -285,21 +277,22 @@
+ 
+ \subsection{Histogram Tab}\label{label_histogram}
+ 
+-The \tab{Histogram} tab allows you to view the distribution\index{raster layers!histogram}
+-of the bands or colors in your raster. You must first generate the raster statistics
+-by clicking the \button{Refresh} button. You can choose which bands to display by
+-selecting them in the list box at the bottom left of the tab. Two different
+-chart types are allowed:
+-
+-\begin{itemize}[label=--]
+-\item Bar chart
+-\item Line graph
+-\end{itemize}
+-
+-You can define the number of chart columns to use and decide whether you want
+-to \checkbox{Allow approximation} or display \checkbox{out of range} values
+-Once you view the histogram, you'll notice that the band statistics have been
+-populated on the \tab{metadata} tab.\index{raster layers!metadata)}
++The \tab{Histogram} tab allows you to view the distribution\index{raster 
++layers!histogram} of the bands or colors in your raster. It is generated 
++automaticaly when you open \tab{Histogram} tab. You can choose which bands to display by selecting them in the list box at the bottom left of the tab. 
++
++%% FIXME not supported at the moment
++%Two different chart types are allowed:
++%
++%\begin{itemize}[label=--]
++%\item Bar chart
++%\item Line graph
++%\end{itemize}
++%
++%You can define the number of chart columns to use and decide whether you want
++%to \checkbox{Allow approximation} or display \checkbox{out of range} values
++%Once you view the histogram, you'll notice that the band statistics have been
++%populated on the \tab{metadata} tab.\index{raster layers!metadata)}
+ 
+ \begin{Tip}\caption{\textsc{Gathering Raster Statistics}}
+ To gather statistics for a layer, select pseudocolor rendering and
+@@ -341,4 +334,10 @@
+ With the \checkbox{Result to project} checkbox the result layer will automatically 
+ added to the legend area and can be visualized. 
+ 
++\section{Raster Analysis}\label{sec:raster_analysis}
++\index{Raster!raster analysis}
++\index{Raster analysis}
++
++Apart from the raster calculator, additional raster analysis in \qg 1.7 is provided by the GDALTools core plugin. Please refer to section \ref{label_plugingdaltools} for more information.
++
+ \FloatBarrier

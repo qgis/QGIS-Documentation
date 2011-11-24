@@ -1,0 +1,87 @@
+%  !TeX  root  =  user_guide.tex  
+\addchap{Conventions}\label{label_conventions}
+
+Cette section décrit les symboles qui ponctuent ce manuel, les conventions graphiques sont les suivantes
+
+\addsec{Conventions pour l'interface}
+
+Les styles de conventions de l'interface (GUI) dans le texte ressemblent autant que possible à l'apparence du logiciel, l'objectif étant de permettre à l'utilisateur de repérer plus facilement les éléments mentionnés dans les instructions.
+
+\begin{itemize}[label=--,itemsep=5pt]
+\item Options du menu: \mainmenuopt{Couches} \arrow
+\dropmenuopttwo{mActionAddRasterLayer.png}{Ajouter une couche raster}
+
+ou
+
+\mainmenuopt{Préférences} \arrow
+\dropmenuopt{Barre d'outils} \arrow \dropmenucheck{Numérisation}
+\item Outil : \toolbtntwo{mActionAddRasterLayer.png}{Ajouter une couche raster}
+\item Bouton : \button{Sauvegarder par défaut}
+\item Titre de boîte de dialogue : \dialog{Propriétés de la couche}
+\item Panneau : \tab{Général}
+
+% \item Toolbox Item: \toolboxtwo{nviz.1.eps}{nviz - Open 3D-View in NVIZ}
+% 
+% 
+% je n'ai pas l'image nviz.png donc j'ai mis un tux
+% 
+% 
+% 
+\item Objet de boîte d'outils : \toolboxtwo{nix}{nviz - Open 3D-View in NVIZ} 
+\item Case à cocher : \checkbox{Rendu}
+\item Bouton radio :  \radiobuttonon{Postgis SRID} \radiobuttonoff{EPSG ID}
+\item Sélection d'un chiffre : \selectnumber{Halo}{60}
+\item Sélection d'une ligne : \selectstring{Style de bordure externe }{--- Ligne solide}
+\item Parcourir un fichier : \browsebutton 
+\item Sélection d'une couleur : \selectcolor{Couleur de bordure externe}{yellow}
+\item Barre coulissante : \slider{Transparence}
+\item Zone de saisie de texte : \inputtext{Nom affiché}{lakes.shp}
+\end{itemize}
+Une ombre indique un élément de l'interface qui peut être cliqué.
+
+\addsec{Conventions de texte ou de clavier}
+
+Le manuel se réfère aussi à des conventions pour le texte, les commandes du clavier et l'encodage pour définir les entités, les classes et les méthodes. Elles ne correspondent pas à l'apparence réelle.
+
+\begin{itemize}[label=--]
+\item Hyperliens : \url{http://qgis.org}
+\item Simple touche : appuyez sur \keystroke{p}
+\item Combinaisons de touches : appuyez sur \keystroke{Ctrl+B}, signifie qu'il faut rester en appui sur la touche Contrôle (Ctrl) tout en pressant la touche B.
+\item Nom d'un fichier : \filename{lakes.shp}
+%\item Name of a Field: \fieldname{NAMES}
+% \item Name of a Class: \classname{NewLayer}
+% \item Method: \method{classFactory}
+% \item Server: \server{myhost.de}
+\item Nom d'une classe : \classname{NewLayer}
+\item Méthode : \method{classFactory}
+\item Serveur : \server{myhost.de}
+%\item SQL Table: \sqltable{example needed here}    
+\item Texte pour l'utilisateur : \usertext{qgis ---help}
+\end{itemize}
+
+Les codifications sont indiquées par une police à taille fixe :
+\begin{verbatim}
+PROJCS["NAD_1927_Albers",
+  GEOGCS["GCS_North_American_1927",
+\end{verbatim}
+
+\addsec{Instructions spécifiques à une plateforme}
+
+%GUI sequences and small amounts of text can be formatted inline: 
+Une séquence d'interface peut être exprimée dans une phrase : Cliquez sur \{\nix{}\win{Fichier} \osx{QGIS}\} > Quitter pour fermer QGIS. 
+
+Cela indique que sous Windows, Linux et les plateformes Unix il faudra d'abord cliquer sur Fichier puis dans la liste déroulante sur Quitter, alors que sous Mac il faudra cliquer sur le menu \qg. De grandes portions de textes peuvent être présentées en liste:
+
+\begin{itemize}[label=--]
+\item \nix{faites ceci ;}
+\item \win{faites cela ;}
+\item \osx{faites autre chose.}
+\end{itemize}
+ou comme des paragraphes:
+\vspace{0.5cm}
+\nix{} \osx{} Faites ceci et cela.
+\par
+\vspace{0.5cm}
+\win{} Puis cela et ceci pour obtenir ça, etc. 
+\par\vspace{0.5cm}
+Les aperçus d'écrans ont été pris sous différentes plateformes, un icône à la fin de la légende de la figure indique le système en question.

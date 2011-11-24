@@ -1,0 +1,72 @@
+% !TEX encoding = utf8
+% !TEX TS-program = pdflatex
+
+% document type selection
+% use of koma-script book class
+% \documentclass[10pt,draft]{scrbook} % wihtout fig and with print markers (great when playing with the layout)
+% \documentclass[10pt,DIV=8]{scrbook}
+% 
+% settings for the geometry package and Crown Quarto (18,89 x 24,58 cm)
+%\documentclass[10pt]{scrbook}%
+%\usepackage[paperwidth=18.89cm,paperheight=24.58cm,twoside,bindingoffset=9mm,outer=2.2cm,inner=1cm,top=2.6cm,bottom=4.5cm]{geometry}
+
+% settings for the geometry package and A4 (21 x 29,7 cm)
+\documentclass[10pt]{scrbook}%
+\usepackage[paperwidth=21.0cm,paperheight=29.7cm,twoside,bindingoffset=9mm,outer=2.2cm,inner=1cm,top=2.6cm,bottom=2.5cm]{geometry}
+
+% load the style file
+\usepackage{qgis_style} 
+
+\begin{document}
+\pagestyle{scrheadings}
+\input{title}
+\input{preamble}
+\input{toc}
+\input{foreword}
+\input{conventions}
+\input{introduction}
+\input{getting_started}
+\input{features_at_a_glance}
+\input{working_with_vector}
+\input{working_with_raster}
+\input{working_with_ogc}
+\input{qgis_server}
+\input{working_with_projections}
+\input{grass_integration}
+\input{print_composer}
+%first the general intro to plugins
+%then each individual plugin can have a section
+%in the plugins chapter
+\input{plugins}
+\input{core_plugins}
+\input{plugins_coordinate_capture}
+\input{plugins_decorations}
+\input{plugins_delimited_text}
+\input{plugins_dxf2shape_converter}
+\input{plugins_evis}
+\input{plugins_ftools}
+\input{plugins_gdaltools}
+\input{plugins_georeferencer}
+\input{plugins_gps}
+\input{plugins_interpolation}
+\input{plugins_mapserver_export}
+\input{plugins_offline_editing}
+\input{plugins_oracle_raster}
+\input{plugins_openstreetmap}
+\input{plugins_raster_terrain}
+\input{plugins_road_graph}
+\input{plugins_spatial_query}
+\input{plugins_sql_anywhere}
+%\input{plugins_table_manager}
+%\input{plugins_raster_algebra}
+%end of plugin docs
+\input{help_and_support}
+\begin{appendix}
+\input{appendices/gpl}
+\input{appendices/qgis_qt_gpl_exception}
+\input{appendices/fdl_1.3}
+\end{appendix}
+\input{index}
+\input{literature}
+
+\end{document}

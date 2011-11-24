@@ -1,0 +1,36 @@
+--- /home/jrm/Documents/QGIS/english/user_guide_1.6/plugins_gdaltools.tex	2010-11-29 21:39:56.898084749 +0100
++++ /home/jrm/Documents/QGIS/english/trunk/user_guide/plugins_gdaltools.tex	2011-08-15 11:40:12.825063232 +0200
+@@ -23,7 +23,7 @@
+ \hline Merge &  This utility will automatically mosaic a set of images. All the images must be in the same coordinate system and have a matching number of bands, but they may be overlapping, and at different resolutions. In areas of overlap, the last image will be copied over earlier ones. \\
+ \hline Sieve & The gdal\_sieve.py script removes raster polygons smaller than a provided threshold size (in pixels) and replaces replaces them with the pixel value of the largest neighbour polygon. The result can be written back to the existing raster band, or copied into a new file.\\
+ \hline Proximity & The gdal\_proximity.py script generates a raster proximity map indicating the distance from the center of each pixel to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which the raster pixel value is in the set of target pixel values.\\
+-\hline Near Black & This utility will scan an image and try to set all pixels that are nearly black (or nearly white) around the collar to exactly black (or white). This is often used to "fix up" lossy compressed airphotos so that color pixels can be treated as transparent when mosaicing.\\
++\hline Near Black & This utility will scan an image and try to set all pixels that are nearly black (or nearly white) around the edge to exactly black (or white). This is often used to "fix up" lossy compressed aerial photos so that color pixels can be treated as transparent when mosaicing.\\
+ \hline Warp & The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is "raw" with control information. \\
+ \hline Grid & This program creates regular grid (raster) from the scattered data read from the OGR datasource. Input data will be interpolated to fill grid nodes with values, you can choose from various interpolation methods.\\
+ \hline Translate & The gdal\_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.\\
+@@ -33,12 +33,14 @@
+ source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text. 
+ -t\_srs srs\_def:
+ target spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text. \\
+-\hline Build Overviews &  The gdaladdo utility can be used to build or rebuild overview images for most supported file formats with one over several downsampling algorithms.\\
++\hline Build Overviews &  The gdaladdo utility can be used to build or rebuild overview images for most supported file formats with one of several downsampling algorithms.\\
+ \hline Clipper & This utility will automatically mosaic a set of images. All the images must be in the same coordinate system and have a matching number of bands, but they may be overlapping, and at different resolutions. In areas of overlap, the last image will be copied over earlier ones. 
+ -ul\_lr ulx uly lrx lry:
+ The extents of the output file. If not specified the aggregate extents of all input files will be used. \\
+ \hline RGB to PCT &  This utility will compute an optimal pseudo-color table for a given RGB image using a median cut algorithm on a downsampled RGB histogram. Then it converts the image into a pseudo-colored image using the color table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize output image visual quality. \\
+ \hline PCT to RGB &  This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.\\
++\hline Tile Index &  This program builds a shapefile with a record for each input raster file, an attribute containing the filename, and a polygon geometry outlining the raster.\\
++\hline DEM terrain models &  Tools to analyze and visualize DEMs. It can create  a shaded relief, a slope, an aspect, a color relief, a Terrain Ruggedness Index, a  Topographic Position Index and a roughness map from any GDAL-supported elevation raster.\\
+ \hline
+ \end{longtable}
+ 
+@@ -54,7 +56,7 @@
+ \begin{figure}[ht]
+    \centering
+    \caption{The \emph{Information} dialog window \nixcaption}\label{gdalinfo}
+-   \includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/gdalinfo}
++   \includegraphics[clip=true, width=10cm]{plugins_gdaltools_images/gdalinfo}
+ \end{figure}
+ 
+ \subsubsection{Creating contour lines}

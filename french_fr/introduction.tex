@@ -1,0 +1,53 @@
+%  !TeX  root  =  user_guide.tex
+\pagestyle{scrheadings}
+\chapter{Introduction au SIG}\label{label_intro} 
+
+Un Système d'Information Géographique (SIG) (\cite{mitchel05}\footnote{Ce chapitre est de Tyler Mitchell (\url{http://www.oreillynet.com/pub/wlg/7053}) et est utilisé sous une licence Creative Commons. Tyler est l'auteur de \textit{Web Mapping Illustrated}, publié par O'Reilly, 2005.}) est une collection de logiciels qui vous permettent de créer, visualiser, rechercher et analyser des données géospatiales. Ces données se réfèrent à des informations concernant l'emplacement géographique d'une entité. Ceci implique souvent l'utilisation de coordonnées géographiques, tel qu'une valeur de latitude ou de longitude. Le terme donnée spatiale est également employé couramment, ainsi que : donnée géographique, donnée SIG, donnée cartographique, donnée de localisation, donnée de géométrie spatiale\dots
+
+Les applications utilisant des données géospatiales réalisent une grande variété de fonctions. La création de carte est celle-là plus admise, les logiciels cartographiques prennent les données géospatiales et les restituent sous une forme visuelle, sur un écran d'ordinateur ou sur une page imprimée.
+Ces applications peuvent présenter des cartes statiques (une seule image) ou des cartes dynamiques qui peuvent être personnalisées par la personne regardant la carte via un logiciel bureautique ou une page internet.
+
+Beaucoup de gens présument à tort que les applications géospatiales se limitent à la production de cartes alors que l'analyse des données est une autre importante fonction de ces logiciels. Quelques exemples d'analyses incluant les calculs : 
+
+\begin{enumerate} 
+\item de la distance entre deux points géographiques  ;
+\item de l'aire (p. ex., mètres carrés) d'une zone géographique ;
+\item pour déterminer quelles entités se superposent sur d'autres entités ;
+\item le taux de superposition entre entités ;
+\item le nombre de points se situant à une certaine distance d'un autre ;
+\item et beaucoup d'autres\dots
+\end{enumerate} 
+
+Cela semble peut-être simpliste, mais ils peuvent être appliqués à de nombreuses disciplines. Le résultat de ces analyses peut être affiché sur une carte, mais plus généralement sous une forme tabulaire dans des rapports pour appuyer des décisions.
+
+Le phénomène récent de services basés sur la localisation va introduire toutes sortes de nouvelles fonctionnalités dont beaucoup seront issues de la conjugaison de cartes et d'analyses. Par exemple, supposons que vous ayez un téléphone portable qui affiche votre position. Si vous avez le bon type de logiciel, votre téléphone pourra vous signaler les restaurants se trouvant à une courte distance de marche. Bien que ce soit une nouvelle application des technologies géospatiales, il s'agit pour l'essentiel d'analyser des données géospatiales et de vous en livrer les résultats.
+
+\section{Pourquoi tout cela est-il si récent ?}\label{label_whynew}
+Et bien ça ne l'est pas. Il y a beaucoup de nouveaux appareils qui autorisent l'utilisation mobile de services géospatiaux. Beaucoup d'applications open source sont aussi disponibles, mais l'existence de matériels et logiciels dédiés à la géospatialisation n'est pas quelque chose de nouveau. Les récepteurs GPS (Global Positioning System) sont devenus courants, mais sont utilisés dans certaines industries depuis plus d'une décennie. De la même manière, la cartographie bureautique et les outils d'analyse ont depuis longtemps représenté un important secteur commercial, consacré à l'origine à des secteurs comme la gestion de ressources naturelles.
+
+Ce qui est nouveau est la façon dont les appareils et applications sont utilisés et par qui. Les utilisateurs traditionnels étaient des géomaticiens hautement qualifiés ou des techniciens habitués à travailler avec des outils de CAO. Aujourd'hui les capacités de calculs des ordinateurs domestiques et des logiciels open source ont permis à une foule de passionnés, de professionnels, de développeurs internet, etc. d'interagir avec des données géospatiales. La courbe d'apprentissage a diminué, les coûts ont diminué tandis que la diffusion des technologies spatiales a augmenté.
+
+Comment sont stockées ces informations ? Pour faire simple, il existe deux sortes de données géospatiales dont l'utilisation est très répandue de nos jours, ce à quoi s'ajoutent les données tabulaires qui continuent à être utilisées couramment par les applications géospatiales.
+
+\subsection{Les Données Raster}\label{label_rasterdata}
+
+L'un des types de données géospatiales est qualifié de donnée raster/matricielle, ou plus communément un raster. Les formes les plus facilement reconnaissables de donnée raster sont les images satellites numériques ou les photos aériennes. Les ombrages de pentes ou les modèles numériques de terrain sont également représentés en raster. Tout type de données cartographiques peut être représenté comme une donnée raster, mais il y a des limitations.
+
+Un raster est une grille régulière qui se compose de cellules ou, dans le cas de l'imagerie, de pixels. Il y a un nombre déterminé de lignes et de colonnes. Chaque cellule a une valeur numérique et une certaine taille géographique (par exemple 30 x 30 mètres de surface).
+
+De multiples rasters sont superposés pour afficher des images qui utilisent plus d'une valeur de couleur (c.-à-d. un raster pour chaque bande de valeurs de rouge, vert et bleu sont combinés pour créer une image couleur). L'imagerie satellite représente les données avec plusieurs bandes. Chacune de ces bandes est un raster distinct qui se superpose spatialement aux autres rasters, une bande détient des valeurs correspondant à certaines longueurs d'onde de la lumière. Comme vous pouvez l'imaginer, un gros raster prend plus d'espace-disque. Un raster avec de plus petites cellules fournira plus de détails, mais prendra plus de place. L'astuce est de trouver le juste équilibre entre la taille des cellules pour le stockage et la taille des cellules pour l'analyse ou la cartographie.
+
+\subsection{Les données vectorielles}\label{label_vectordata}
+
+Les données vectorielles sont également utilisées dans les applications géospatiales. Si vous êtes resté éveillé durant vos cours de trigonométrie et de géométrie, vous serez déjà familier avec quelques-unes des particularités des données vectorielles. Les vecteurs sont une façon de décrire un emplacement en utilisant une série de coordonnées, chaque coordonnée se référant à une localisation géographique utilisant un système de valeurs en x et en y.
+
+On peut faire la comparaison avec un plan cartésien, vous savez, le diagramme de l'école qui présentait des axes x et y. Vous y avez sans doute eu recours pour des graphiques montrant la chute de votre épargne-retraite ou l'augmentation de votre taxe d'habitation, le concept est ici similaire et essentiel pour l'analyse et la représentation géospatiale.
+
+Il y a différentes manières de représenter ces coordonnées qui dépendent de votre objectif, c'est un tout autre chapitre à étudier : celui des projections cartographiques.
+Les données vectorielles prennent trois formes, chacune progressivement plus complexe et s'appuyant sur la précédente.  
+
+\begin{enumerate} 
+\item les Points -- une simple coordonnée (x y) qui représente un emplacement géographique ponctuel ;
+\item les Lignes -- plusieurs coordonnées (x1 y1, x2 y2, x3 y4\dots xn yn) reliées ensemble selon un ordre précis, tel que pour dessiner une ligne du point (x1 y1) au point (x2 y2) et ainsi de suite. Les parties qui se situent entre les points sont considérées comme des segments de ligne. Ils ont une longueur et la ligne peut avoir une direction suivant l'ordre des points. Techniquement, une ligne est une simple paire de points reliés ensemble tandis qu'une ficelle de ligne se compose multiples lignes qui sont connectées ;
+\item les Polygones -- quand les lignes sont reliées par plus de deux points, avec le dernier point situé au même endroit que le premier, nous appelons le résultat un polygone. Un triangle, un cercle, un rectangle, etc. sont tous des polygones. La propriété clé des polygones est qu'ils ont une surface interne fixe.
+\end{enumerate}
