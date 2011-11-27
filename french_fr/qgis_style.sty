@@ -18,9 +18,9 @@
 
 %%% Tip     
 \usepackage{float}
-%\floatstyle{ruled}
-%\newfloat{Tip}{ht}{toa}
-%\floatname{Tip}{QGIS Tip} % Change the second string to localize it
+\floatstyle{ruled}
+\newfloat{Tip}{ht}{toa}
+\floatname{Tip}{Astuce QGIS} % Change the second string to localize it
 
 %%% build index
 %%% see http://web.image.ufl.edu/help/latex/latex_indexes.shtml
@@ -33,7 +33,7 @@
 %%% comment out the following line:
 %%% \updatedisclaimer
 \newcommand{\updatedisclaimer}{\textcolor{red}{DISCLAIMER: This section of 
-the user guide has not yet been updated for consistency with Quantum GIS v\CURRENT. 
+the user guide has not yet been updated for consistency with Quantum GIS \CURRENT. 
 Read at your own risk!}}
 
 %%% syllable division for better line breaks within commands
@@ -51,7 +51,7 @@ Read at your own risk!}}
 \parindent 0pt
 
 %%% hypertext links   
-\usepackage[bookmarks=true, pdftitle={QGIS User Guide}, pdfauthor={QGIS Project}, pdfsubject={QGIS User Guide}, breaklinks=true, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
+\usepackage[unicode, bookmarks=true, pdftitle={Manuel Utilisateur de QGIS 1.6}, pdfauthor={QGIS}, pdfsubject={Manuel Utilisateur de QGIS}, breaklinks=true, colorlinks=true, linkcolor=blue, urlcolor=red]{hyperref}
 
 %%%   images              
 \usepackage{subfig}
@@ -103,7 +103,7 @@ Read at your own risk!}}
 }
 
 % set the type of images to use without having to change it in the text, it's written by order of priority (latex will use a .jpg only if there is no .png)
-\DeclareGraphicsExtensions{.png,.jpg,.pdf}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
 %deals with the float flood
 \usepackage{placeins}
@@ -119,7 +119,7 @@ Read at your own risk!}}
 \ihead[]{}
 \chead[]{}
 \ohead{\headmark}
-\ifoot[]{\vspace{-10pt} \qg \CURRENT User Guide} % Change the string to localize it
+\ifoot[]{\vspace{-10pt} \qg \CURRENT Manuel Utilisateur} % Change the string to localize it
 \cfoot[]{}
 \ofoot[\pagemark]{\vspace{-10pt}\pagemark}
 \setheadsepline{1pt}
@@ -140,7 +140,7 @@ Read at your own risk!}}
 \usepackage{float}
 \floatstyle{ruled}
 \newfloat{Tip}{ht}{toa}
-\floatname{Tip}{QGIS Tip} % Change the second string to localize it
+\floatname{Tip}{Astuce QGIS} % Change the second string to localize it
 
 % math
 \usepackage{amssymb}
@@ -156,15 +156,15 @@ Read at your own risk!}}
 
 %%% Localization, if you're not making the en_US' manual then you have to change this part to get a better visual product
 
-%\usepackage[frenchb]{babel} 
+\usepackage[frenchb]{babel} 
 % used to get better list in french
-%\frenchbsetup{StandardLists=true}
+\frenchbsetup{StandardLists=true}
 
 
 %%% Macros QGIS Versions  
 
 \def\CURRENT{1.7.2\xspace}
-\def\OLD{1.6.0\xspace}
+\def\OLD{1.5.0\xspace}
 \def\VERYOLD{1.0\xspace}
 
 %%% Shortcuts (don't use it within \url strings)
@@ -255,7 +255,7 @@ Read at your own risk!}}
 % usage: \selectstring{Outline style}{---Solid Line}
 \newcommand{\selectstring}[2]{%
 \begin{tikzpicture}[line width=1pt,baseline=-3pt] 
-\draw (0,0) node[rectangle,fill=gray!20,inner ysep=2pt,inner xsep=3pt]{\guilabel#1\hspace{.5cm}
+\draw (0,0) node[rectangle,fill=gray!20,inner ysep=2pt,inner xsep=3pt]{\guilabel#1\hspace{.2cm}
 \begin{tikzpicture}[line width=0.5pt,baseline=-3pt,rounded corners=2pt] 
 \draw (0,0) node[draw=gray,rectangle,top  color=gray!60,bottom  color=white,drop  shadow]{#2
 \begin{tikzpicture}[line width=1pt,baseline=4pt] 
@@ -287,9 +287,9 @@ Read at your own risk!}}
 % usage: \selectcolor{Outline color}{yellow}
 \newcommand{\selectcolor}[2]{%
 \begin{tikzpicture}[line width=1pt,baseline=-3pt] 
-\draw (0,0) node[rectangle,fill=gray!20,inner ysep=2pt,inner xsep=3pt,baseline=3pt]{\guilabel#1\hspace{.5cm}
+\draw (0,0) node[rectangle,fill=gray!20,inner ysep=2pt,inner xsep=3pt,baseline=3pt]{\guilabel#1\hspace{.2cm}
 \begin{tikzpicture}[line width=0.5pt,rounded corners=2pt] 
-\draw[draw=gray,rectangle,fill=#2,drop  shadow] (0,0) rectangle (3,0.5);
+\draw[draw=gray,rectangle,fill=#2,drop  shadow] (0,0) rectangle (1,0.5);
 \end{tikzpicture}
 };
 \end{tikzpicture}
@@ -380,7 +380,7 @@ Read at your own risk!}}
 \begin{tikzpicture}[line width=0.5pt,baseline=-3pt] 
 \draw (0,0) node[fill=gray!20,anchor=west]{#1 10\% %
 \begin{tikzpicture}[baseline=-3pt,inner ysep=1pt,inner xsep=3pt] 
-\draw[gray!50] (0,0) rectangle (3,0.1);
+\draw[gray!50] (0,0) rectangle (2,0.1);
 \draw [draw=gray,fill=gray!50,drop  shadow,rounded corners=0.5pt] (0.5,0.25) -- (0.5,-0.05)--(0.6,-0.15)--(0.7,-0.05)--(0.7,0.25)--cycle;
 \end{tikzpicture}};
 \end{tikzpicture}
@@ -391,7 +391,7 @@ Read at your own risk!}}
 %%% 	usage: \dropmenuopt{Toolbar Visibility}
 \newcommand{\dropmenuopt}[1]{%
 \begin{tikzpicture}[line width=0.5pt,baseline=-3pt] 
-\draw (0,0) node[draw=black,rectangle,top  color=gray!60,bottom  color=white,drop  shadow]{\guilabel{#1}\hspace{1cm}$\blacktriangleright$};
+\draw (0,0) node[draw=black,rectangle,top  color=gray!60,bottom  color=white,drop  shadow]{\guilabel{#1}\hspace{0.2cm}$\blacktriangleright$};
 \end{tikzpicture}
 }
 
