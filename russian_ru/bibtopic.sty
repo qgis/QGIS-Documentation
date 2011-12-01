@@ -1,0 +1,1199 @@
+%%
+%% This is file `bibtopic.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% bibtopic.dtx  (with options: `package')
+%% 
+%% LaTeX package for structured bibliographies
+%% 
+%% Copyright (C) 1998-2000 P. Basso, S. Ulrich
+%% This program is free software; you can redistribute it and/or
+%% modify it under the terms of the GNU General Public License
+%% as published by the Free Software Foundation; either version 2
+%% of the License, or (at your option) any later version.
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%% GNU General Public License for more details.
+%% 
+%% You should have received a copy of the GNU General Public License
+%% along with this program; if not, write to the Free Software
+%% Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+%% 
+\NeedsTeXFormat{LaTeX2e}[1996/12/01]
+\ProvidesPackage{bibtopic}[2000/10/17 v1.0j Sectioned Bibliographies]
+\RequirePackage{ifthen}
+\newcommand\bt@tempa{}
+\newcommand\bt@tempb{}
+\newcommand\bt@tempc{}
+\newcommand\bt@args{}
+\newcommand*\bt@info{\@gobble}
+\newcommand*\bt@infoNoLine{\@gobble}
+\newcommand\bt@gobblethree[3]{}
+\newif\ifbt@natbib
+\newif\ifbt@brf
+\newif\ifbt@after@brf
+\newif\ifbt@elem
+\newif\ifbt@inside@sect
+\newif\ifbt@inside@unit
+\newif\ifbt@found@item
+\newif\ifbt@print@cited
+\newif\ifbt@print@all
+\newif\if@globalbiblio
+\newcommand\bt@stepcnt[1]{%
+     \@tempcnta#1
+     \advance\@tempcnta\@ne
+     \protected@xdef#1{\the\@tempcnta}%
+}
+\newcounter{btauxfile}
+\def\thebtauxfile{\jobname\arabic{btauxfile}}
+\newcommand\bt@unit@cnt{1}
+\newcommand\bt@internal@sect@cnt{0}
+\newcommand\bt@helpctr{0}
+\newcommand\bt@totalctr{0}
+\newread\bt@infilea
+\newread\bt@infileb
+\newwrite\bt@outfile
+
+\newif\ifbt@btunits
+\DeclareOption{btunits}{%
+    \PackageWarningNoLine{bibtopic}{ignoring obsolete `btunits' option}
+}
+\newif\ifbt@fallback@thb
+\DeclareOption{defaultbib}{%
+    \global\bt@fallback@thbtrue
+}
+\DeclareOption{verbose}{%    
+    \def\bt@info#1{%
+        \begingroup
+            \def\MessageBreak{^^J(bibtopic)\@spaces\@spaces\@spaces}%
+            \set@display@protect
+            \immediate\write\@unused{%
+                ^^JPackage bibtopic info: #1\on@line.^^J%
+            }%
+        \endgroup
+    }%
+    \def\bt@infoNoLine#1{%
+        \begingroup
+            \def\MessageBreak{^^J(bibtopic)\@spaces\@spaces\@spaces}%
+            \set@display@protect
+            \immediate\write\@unused{%
+                ^^JPackage bibtopic info: #1.^^J%
+            }%
+        \endgroup
+    }%
+}
+\newif\ifbt@breakcites
+\DeclareOption{breakcites}{%
+    \global\bt@breakcitestrue
+}
+\newif\ifbt@normalwarnings
+\DeclareOption{normalwarnings}{%
+    \global\bt@normalwarningstrue
+}
+\newif\ifbt@printheadings
+\DeclareOption{printheadings}{%
+    \global\bt@printheadingstrue
+}
+\newif\ifbt@part@cont@ctr
+\DeclareOption{unitcntnoreset}{%
+    \global\bt@part@cont@ctrtrue
+}
+\newif\ifbt@sectctr@reset
+\DeclareOption{sectcntreset}{%
+    \global\bt@sectctr@resettrue
+}
+\newif\ifbt@fast
+\bt@fasttrue
+\DeclareOption{slow}{%
+    \global\bt@fastfalse
+}
+\DeclareOption{dot}{%
+   \def\thebtauxfile{\jobname.\arabic{btauxfile}}%
+}
+\newif\ifbt@warn@override
+\bt@warn@overridetrue
+\newif\ifbt@override@numargs
+\bt@override@numargstrue
+\newif\ifbt@overridden@numargs
+\DeclareOption{overridenumbers}{%
+    \bt@warn@overridefalse
+    \bt@override@numargstrue
+}
+\DeclareOption{dontoverridenumbers}{%
+    \bt@warn@overridefalse
+    \bt@override@numargsfalse
+}
+\ProcessOptions*
+
+\newcommand\bt@isnum[1]{%
+    \if!\ifnum9<1#1!\else_\fi
+        \expandafter\@firstoftwo
+    \else
+        \expandafter\@secondoftwo
+    \fi
+}
+
+\newcommand*\bt@sect@ref@list{}
+\newcommand\bt@curr@file{}
+\newcommand\bt@curr@line{}
+\newcommand*\bt@kv@req@list{}
+
+\newcommand*\bt@curr@bib@file{}
+\newcommand*\bt@cited@list{}
+\newcommand*\bt@warn@files{}
+\newcommand*\bt@label{}
+\newcommand*\bt@globalstyle{}%
+\newcommand*\bt@defaultstyle{plain}%
+\newcommand*\@bt@orig@citation{}
+\let\@bt@orig@citation\citation
+\ifthenelse{\boolean{bt@fast}}{%
+   \def\citation#1{%
+      \@for\bt@tempa:=#1\do{%
+        \def\@extra@b@citeb{\bt@unit@cnt}%
+        \global\@namedef{\bt@tempa bt@\@extra@binfo}{}%
+        \@bt@orig@citation{\bt@tempa}%
+      }%
+   }%
+}{%
+   \def\citation#1{%
+      \@for\bt@tempa:=#1\do{%
+        \def\@extra@b@citeb{\bt@unit@cnt}%
+        \bt@add@elem{\bt@tempa}{\bt@cited@list}%
+        \@bt@orig@citation{\bt@tempa}%
+      }%
+   }%
+}
+\newcommand*\bt@citesurround{}%
+
+\def\bt@citesurround#1{%
+    \ifthenelse{\not\boolean{bt@breakcites}}{%
+        \hbox{#1}%
+    }{%
+        #1%
+    }%
+}
+\@ifundefined{citeform}{\let\citeform\relax}{}
+\@ifundefined{citepunct}{\def\citepunct{,\penalty\@m\ }}{}
+\@ifpackageloaded{backref}{%
+    \bt@after@brftrue
+}{%
+    \relax
+}
+\newcommand\bt@citex{}
+\def\bt@citex[#1]#2{%  Add \@extra@b@citeb to \cite
+    \let\@citea\@empty
+    \@cite{%
+        \@for\@citeb:=#2\do{%
+            \@citea\let\@citea\citepunct
+            \edef\@citeb{\expandafter\@firstofone\@citeb}%
+            \if@filesw\immediate\write\@auxout{%
+                \string\citation{\@citeb}}\fi
+            \@ifundefined{b@\@citeb \@extra@b@citeb}{%
+                \mbox{\reset@font\bfseries ?}%
+                \@warning{Citation `\@citeb' on page \thepage\space
+                undefined}\G@refundefinedtrue
+            }{%
+                \bt@citesurround{\citeform{\csname b@\@citeb
+                \@extra@b@citeb\endcsname}}%
+            }%
+        }%
+    }{#1}%
+}
+\newcommand\bt@nocite{}
+\def\bt@nocite#1{%
+    \@bsphack % Add \@extra@b@citeb to \nocite
+    \@for\@citeb:=#1\do{%
+        \edef\@citeb{\expandafter\@firstofone\@citeb}%
+        \if@filesw
+            \immediate\write\@auxout{%
+                \string\citation{\@citeb}%
+            }%
+        \fi
+        \@ifundefined{b@\@citeb\@extra@b@citeb}{%
+            \G@refundefinedtrue
+            \@warning{Citation `\@citeb'  undefined}%
+        }{}%
+    }%
+    \@esphack
+}
+
+\newcommand*\bt@setcites{%
+    \let\@citex\bt@citex
+    \let\nocite\bt@nocite
+}
+
+\newcommand\change@bibcite{%
+    \let\change@bibcite\relax
+    \def\bibcite##1##2{%
+        \global\@namedef{b@##1\@extra@binfo}{##2}%
+    }%
+}
+\gdef\the@ipfilectr{}
+\def\@extra@b@citeb{\the@ipfilectr}
+\gdef\@extra@binfo{}  % in case .aux files are left from old run.
+
+\newcommand\bt@saveitem{}
+\newcommand*\bt@savebib{}
+\newcommand*\bt@endsavebib{}
+\newif\ifbt@harvard@errs
+
+\AtBeginDocument{%
+    \global\let\bt@savebib\thebibliography
+    \global\let\bt@endsavebib\endthebibliography
+    \let\bt@saveitem\bibitem
+    \@ifpackageloaded{natbib}{%
+        \global\bt@natbibtrue
+    }{%
+        \def\harvarditem{\global\bt@harvard@errstrue}%
+        \let\harvardand\relax
+        \let\harvardyearleft\relax
+        \let\harvardyearright\relax
+    }%
+    \@ifpackageloaded{backref}{%
+        \ifthenelse{\not\boolean{bt@after@brf}}{%
+            \PackageError{%
+                bibtopic%
+            }{%
+                Load bibtopic after hyperref when using the `backref'
+                option\MessageBreak of hyperref%
+            }{%
+                Please see the section about `Compatibility with other^^J%
+                packages' in bibtopic.dvi for details.
+            }%
+        }{}%
+        \global\bt@brftrue
+    }{%
+        \relax
+    }%
+}
+
+\AtEndDocument{%
+    \immediate\write\@auxout{%
+        \string\csname\space bt@set@cnt\string\endcsname{\bt@helpctr}}%
+    \def\citation#1{\@bt@orig@citation{#1}}%
+    \let\bt@kv@add\@gobbletwo
+    \bt@files@warnings
+    \ifnum\bt@helpctr=\bt@totalctr\else
+        \PackageWarningNoLine{%
+            bibtopic%
+        }{%
+            Rerun to get indentation of bibitems right%
+        }%
+    \fi
+}
+\newcommand*\bt@savelist{}
+\newcommand*\bt@append@list[2]{%
+    \let\bt@savelist#2
+    \protected@xdef#2{\bt@savelist\@elt{#1}}%
+}
+\newcommand*\bt@add@elem[2]{%
+    \bt@if@elem{#1}{#2}{%
+        \relax
+    }{%
+        \bt@append@list{#1}{#2}%
+    }%
+}
+\newcommand\bt@test@cmd{}
+\newcommand*\bt@if@elem[2]{%
+    \let\bt@test@cmd\@secondoftwo
+    \let\bt@elt\@elt
+    \protected@edef\bt@tempc{#1}%
+    \def\@elt##1{%
+        \protected@edef\bt@tempb{##1}%
+        \ifx\bt@tempc\bt@tempb
+            \let\bt@test@cmd\@firstoftwo
+        \fi
+    }%
+    #2%
+    \let\@elt\bt@elt
+    \bt@test@cmd
+}
+\newcommand\bt@elt{}
+\newcommand*\bt@mk@warning@list[1]{%
+    \@temptokena={}%
+    \let\bt@elt\@elt
+    \def\@elt##1{%
+        \@temptokena=\expandafter{\the\@temptokena ##1\MessageBreak}%
+    }%
+    #1%
+    \let\@elt\bt@elt
+}
+
+\newcommand*\@orig@bibliographystyle{}
+\let\@orig@bibliographystyle\bibliographystyle
+\def\bibliographystyle#1{%
+    \gdef\bt@globalstyle{#1}%
+    \bt@info{Default bibliographystyle is `#1'}%
+    \@orig@bibliographystyle{#1}%
+}
+\def\bibliography{%
+    \PackageInfo{%
+        bibtopic%
+    }{%
+        Obsolete command `\string\bibliography' ignored%
+    }%
+    \@gobble
+}
+
+\newcommand*\@bt@write@auxfile[3]{%
+    \bt@can@overwrite{btaux.aux}%
+    \bt@copy@verbatim{\thebtauxfile.aux}{btaux.aux}%    
+    \immediate\closeout\bt@outfile
+    \immediate\openout\bt@outfile\thebtauxfile.aux
+    \ifthenelse{\boolean{bt@natbib}}{%
+        \immediate\write\bt@outfile{%
+                \@percentchar\@percentchar\space
+                Info from `bibtopic.sty': natbib loaded.^^J%
+                \string\bibstyle{#1}^^J%
+                \string\citation{#2}^^J%
+                \string\bibdata{#3}%
+        }%
+    }{%
+        \immediate\write\bt@outfile{%
+            \string\bibstyle{#1}^^J%
+            \string\citation{#2}^^J%
+            \string\bibdata{#3}%
+        }%
+    }%
+    \immediate\closeout\bt@outfile
+    \bt@if@files@differ{\thebtauxfile.aux}{btaux.aux}{%
+        \bt@if@elem{\thebtauxfile}{\bt@warn@files}{%
+            \relax
+        }{%
+            \ifthenelse{\boolean{bt@normalwarnings}}{%
+                \PackageWarningNoLine{%
+                    bibtopic%
+                }{%
+                    \thebtauxfile.bbl may be outdated%
+                }%
+            }{%
+                \bt@appendtofile{\thebtauxfile.bbl}{%
+                    \string\csname\space
+                    bt@warn@outdated\string\endcsname{\thebtauxfile}%
+                }%
+            }%
+        }%
+    }{}% they don't differ
+}
+
+\newcommand*\bt@appendtofile[2]{%
+    \bt@can@overwrite{btbbl.aux}%
+    \bt@copy@verbatim{#1}{btbbl.aux}%
+    \immediate\closeout\bt@outfile
+    \bt@copy@verbatim{btbbl.aux}{#1}
+    \immediate\write\bt@outfile{\expandafter\string #2}%
+    \immediate\closeout\bt@outfile
+}
+
+\newcommand*\bt@save@list[1]{%
+    \expandafter\protected@xdef\csname bt@sect%
+       #1\endcsname{\bt@cited@list}%
+}
+\newcommand\btBegThbCmd{}
+\newcommand*\bt@beg@thb@hook{%
+    \btBegThbCmd
+    \global\bt@found@itemfalse
+    \bt@item{}%
+}%
+\newcommand\bt@save@cnt{0}
+\newcommand*\bt@end@thb@hook{%
+    \endbt@item
+    \ifthenelse{\boolean{bt@natbib}}{%
+        \protected@xdef\bt@save@cnt{\theNAT@ctr}%
+    }{%
+        \protected@xdef\bt@save@cnt{\@arabic\c@enumiv}%
+    }%
+    \bt@bibitemcheck
+}%
+\newcommand*\bt@change@bibitem{%
+    \expandafter\ifx\btBegThbCmd\empty\else
+            \bt@info{\string\btBegThbCmd nonempty: \meaning\btBegThbCmd}%
+    \fi
+    \ifthenelse{\boolean{bt@natbib}}{%
+        \def\harvarditem{\endbt@item\bt@harvitem}%
+    }{}%
+    \def\bibitem{\endbt@item\bt@item}%
+}
+\newcommand*\bt@adjust@label[1]{%     
+    \bt@isnum{#1}{%
+        \def\bt@label{\bt@totalctr}%
+    }{%
+        \def\bt@label{#1}%
+    }%
+}
+\newcommand*\bt@change@thb{%
+    \long\def\bt@tempa##1##2\endthebibliography{%
+        \def\bt@tempc{##1}%
+    }%
+    \expandafter\bt@tempa\thebibliography{}\endthebibliography
+    \ifthenelse{\boolean{bt@brf}}{%
+        \@ifundefined{BRorg@thebibliography}{%
+            \PackageInfo{bibtopic}{assuming backref.sty <= v1.16}%
+            \let\bt@brf@bbl@cmd\oldbibl
+        }{%
+            \PackageInfo{bibtopic}{assuming backref.sty >= v1.19}%
+            \let\bt@brf@bbl@cmd\BRorg@thebibliography
+        }%
+        \def\bt@tempb{\@starttoc}%
+        \ifx\bt@tempb\bt@tempc
+            \expandafter\bt@tempa\bt@brf@bbl@cmd{}\endthebibliography
+        \fi
+    }{}%
+    \def\bt@tempa{\bibfont}%
+    \ifx\bt@tempa\bt@tempc %
+        \bt@change@nat@thb
+    \else
+        \def\bt@tempa{\bibsection}%
+        \ifx\bt@tempa\bt@tempc
+            \bt@change@nat@thb
+        \else
+            \def\bt@tempa{\bib@heading}%
+            \ifx\bt@tempa\bt@tempc
+                \bt@change@KOMA@thb
+            \else
+                \def\bt@tempa{\chapter}%
+                \ifx\bt@tempa\bt@tempc
+                    \bt@change@standard@thb
+                \else
+                    \def\bt@tempa{\section}%
+                    \ifx\bt@tempa\bt@tempc
+                    \bt@change@standard@thb
+                    \else
+                        \ifthenelse{\boolean{bt@fallback@thb}}{%
+                            \PackageWarning{%
+                                bibtopic%
+                            }{%
+                                `defaultbib' specified; using
+                                built-in\MessageBreak
+                                `thebibliography' environment%
+                            }%
+                            \let\thebibliography\bt@dflt@bthb
+                            \let\endthebibliography\bt@dflt@ethb
+                        }{%
+                            \PackageError{%
+                                bibtopic%
+                            }{%
+                                Found unknown `thebibliography' environment%
+                            }{%
+                                You should either use a package providing
+                                a known bibliography^^J%
+                                environment (such as natbib), or use the
+                                `defaultbib' package^^J%
+                                option as a workaround; please see the section
+                                about `Warnings^^J%
+                                and error messages' in `bibtopic.dvi' for
+                                details.
+                            }%
+                        }%
+                    \fi
+                \fi
+            \fi
+        \fi
+    \fi
+}
+
+\providecommand\@openbib@code{}
+\newcommand\bt@dflt@bthb[1]{%
+    \bt@adjust@label{#1}%
+    \ifthenelse{\boolean{bt@printheadings}}{%
+        \@ifundefined{chapter}{%
+            \@ifundefined{section}{%
+            \@startsection{section}{1}{\z@}%
+                {-3.5ex \@plus -1ex \@minus -.2ex}%
+                {2.3ex \@plus.2ex}%
+                {\normalfont\Large\bfseries}*{\refname}%
+            }{%
+            \section*{\refname\@mkboth{\refname}{\refname}}%
+            }%
+        }{%
+            \chapter*{\bibname\@mkboth{\bibname}{\bibname}}%
+        }%
+    }{}%
+    \list{\@biblabel{\@arabic\c@enumiv}}{%
+        \settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \@openbib@code
+        \ifthenelse{\boolean{bt@sectctr@reset}}{%
+            \usecounter{enumiv}%
+        }{%
+            \@nmbrlisttrue
+            \def\@listctr{enumiv}%
+        }%
+        \let\p@enumiv\@empty
+        \renewcommand*\theenumiv{\@arabic\c@enumiv}%
+    }%
+    \sloppy\clubpenalty4000\widowpenalty4000%
+    \sfcode`\.=\@m
+    \bt@beg@thb@hook
+}%
+
+\newcommand\bt@dflt@ethb{%
+    \bt@end@thb@hook
+    \def\@noitemerr{%
+        \@latex@warning{Empty `thebibliography' environment}%
+    }%
+    \endlist
+}%
+
+\newcommand\bt@change@nat@thb{%
+    \def\thebibliography##1{%
+        \bt@adjust@label{##1}%
+        \ifthenelse{\not\boolean{bt@printheadings}}{%
+            \let\bibsection\relax
+        }{}%
+        \bt@savebib{\bt@label}%    
+        \ifthenelse{\not\boolean{bt@sectctr@reset}}{%
+            \setcounter{NAT@ctr}{\bt@save@cnt}%
+        }{}%
+        \bt@beg@thb@hook
+    }%
+    \def\endthebibliography{%
+       \bt@end@thb@hook
+       %   \bt@endsavebib %% not; define it explicitly instead:
+       \def\@noitemerr{%
+           \PackageWarning{%
+              bibtopic%
+           }{%
+              Empty `thebibliography' environment%
+           }%
+       }%
+       \endlist % \vskip-\lastskip omitted here
+    }%
+}
+
+\newcommand*\bt@change@standard@thb{%
+    \def\thebibliography##1{%
+        \bt@adjust@label{##1}%
+        \ifthenelse{\not\boolean{bt@printheadings}}{%
+            \let\chapter\@gobbletwo
+            \let\section\@gobbletwo
+        }{}%
+        \bt@savebib{\bt@label}%
+        \ifthenelse{\not\boolean{bt@sectctr@reset}}{%
+            \setcounter{enumiv}{\bt@save@cnt}%
+        }{}%
+        \bt@beg@thb@hook
+    }%
+    \def\endthebibliography{%
+        \bt@end@thb@hook
+        \bt@endsavebib
+    }%
+}
+\newcommand*\bt@change@KOMA@thb{%
+    \ifthenelse{\not\boolean{bt@printheadings}}{%
+        \let\bib@heading\relax
+    }{}%
+    \bt@change@standard@thb
+}
+
+\newcommand\bt@harvitem{%
+    \@ifnextchar[{\bt@@harvitem}{\bt@@harvitem[]}%] brace matching
+}
+
+\newcommand*\bt@@harvitem[4][]{%
+    \ifthenelse{\equal{#1}{}}{%
+        \protected@xdef\bt@args{[#2(#3)]}%
+    }{%
+        \bt@warn@brackets{#2}#1[]\end%
+        \protected@xdef\bt@args{[#1(#3)#2]}%
+    }%
+    \bt@call@item{#4}%
+}
+\newenvironment{bt@item}{%
+    \@ifnextchar[{\bt@@item}{\bt@@item[]}%] brace matching
+}{
+    \relax
+}
+\newcommand*\bt@@item[2][]{%
+    \ifthenelse{\equal{#2}{}}{%
+        \def\endbt@item{\relax}%
+    }{%
+        \ifthenelse{\equal{#1}{}}{%
+            \gdef\bt@args{}%
+        }{%
+            \bt@isnum{#1}{%
+                \ifthenelse{\boolean{bt@override@numargs}}{%
+                    \global\bt@overridden@numargstrue
+                    \gdef\bt@args{}%
+                }{%
+                    \bt@warn@brackets{#2}#1[]\end%
+                    \protected@xdef\bt@args{[#1]}%
+                }%
+            }{%
+                \bt@warn@brackets{#2}#1[]\end%
+                \protected@xdef\bt@args{[#1]}%
+            }%
+        }%
+        \bt@call@item{#2}%
+    }%
+}
+\newcommand*\bt@warn@brackets{}
+\def\bt@warn@brackets#1#2[#3]#4\end{%
+    \ifthenelse{\equal{#3}{}}{%
+        \relax
+    }{%
+        \PackageError{%
+            bibtopic%
+        }{%
+            Can't parse brackets in key `#1' properly%
+        }{%
+            You seem to have used brackets `[]' inside that key in^^J%
+            `\bt@curr@bib@file.bib', and bibtopic might have confused these^^J%
+            with the optional argument of the `\string\bibitem' command.^^J%
+            To avoid this, please `hide' such brackets in an extra pair^^J%
+            of braces, like this: `{[]}'.^^J^^J%
+            (Don't forget to rerun BibTeX on `\thebtauxfile' afterwards.)^^J%
+            If you proceed now, your bibliograpy might look somewhat garbled.
+        }%
+    }%
+}
+
+\newcommand*\bt@boxing@hook{%
+    \global\let\@noitemerr\relax
+    \def\cite{%
+        \@ifstar{}{}% just gobble it
+        \@ifnextchar[{% brace matching ]}{
+            \@citex
+        }{%
+            \@citex[]%
+        }%
+    }
+    \def\@citex[##1]{%
+        \@ifnextchar[{%]}{
+            \bt@gobble@citex[##1]%
+        }{%
+            \bt@gobble@citex[##1][]%
+        }%
+    }%
+    \def\bt@gobble@citex[##1][##2]##3{}%
+    \let\citet\cite
+    \let\Citet\cite
+    \let\citep\cite
+    \let\Citep\cite
+    \let\citealt\cite
+    \let\Citealt\cite
+    \let\citealp\cite
+    \let\Citealp\cite
+    \let\citetext\cite
+    \let\citeauthor\cite
+    \let\Citeauthor\cite
+    \let\citeauthoryear\cite
+    \let\citeyearpar\cite
+    \let\citetalias\cite
+    \let\citepalias\cite
+    \let\jbdoitem\relax
+    \let\jbbibargs\bt@gobblethree
+}
+
+\newcommand*\bt@call@item{}
+\ifthenelse{\boolean{bt@fast}}{%
+   \def\bt@call@item#1{%
+       \@ifundefined{#1bt@\@extra@b@citeb}{%
+           \bt@print@all@or@notcited{#1}%
+       }{%
+           \bt@print@all@or@cited{#1}%
+       }%
+   }
+}{%
+   \def\bt@call@item#1{%
+       \def\endbt@item{\relax}%
+       \bt@if@elem{#1}{\csname bt@sect\bt@unit@cnt\endcsname}{%
+           \bt@print@all@or@cited{#1}%
+       }{%
+           \bt@print@all@or@notcited{#1}%
+       }%
+   }%
+}
+
+\newcommand*\bt@print@all@or@cited[1]{%
+    \ifthenelse{\boolean{bt@print@cited}}{%
+        \bt@do@print@item{#1}%
+    }{%
+        \ifthenelse{\boolean{bt@print@all}}{%
+            \bt@do@print@item{#1}%
+        }{%
+            \bt@dont@print@item
+        }%
+    }%
+}
+\newcommand*\bt@print@all@or@notcited[1]{%
+    \ifthenelse{\boolean{bt@print@cited}}{%
+        \bt@dont@print@item
+    }{%
+        \bt@do@print@item{#1}%
+    }%
+}
+\newcommand*\bt@do@print@item[1]{%
+    \global\bt@found@itemtrue
+    \bt@stepcnt\bt@helpctr
+    \bt@if@elem{#1}{\bt@kv@req@list}{%
+        \bt@add@elem{#1}{\bt@sect@ref@list}%    
+    }{}%
+    \def\endbt@item{\relax}%
+    \expandafter\bt@saveitem\bt@args{#1}%
+}
+
+\newbox\bt@tempboxa
+
+\newcommand*\bt@dont@print@item{%
+    \def\endbt@item{%
+        \end{lrbox}%
+    }%
+    \begin{lrbox}{\bt@tempboxa}%
+    \bt@boxing@hook
+}
+\newcommand\bt@copy@verbatim[2]{%
+    \openin\bt@infilea=#1\relax
+    \immediate\openout\bt@outfile=#2\relax
+    \immediate\write\bt@outfile{%
+        \@percentchar%
+        \@percentchar%
+        \@percentchar%
+        \space produced automatically by bibtopic.sty v1.0j%
+    }%
+    \begingroup
+        \let\do\@makeother \dospecials
+        \endlinechar\m@ne
+        \ifeof\bt@infilea
+            \bt@info{Tried to copy #1, but couldn't find it}%
+        \else
+            \loop
+                \read\bt@infilea to\bt@tempa
+                % same trick as with \if!...!
+                \if\ifeof\bt@infilea 0\else 1\fi 1
+                \immediate\write\bt@outfile{\bt@tempa}%
+            \repeat
+        \fi
+    \endgroup
+    \closein\bt@infilea
+}
+\newcommand*\bt@can@overwrite[1]{%
+    \openin\bt@infilea=#1\relax
+    \bgroup
+        \let\do\@makeother \dospecials
+        \endlinechar\m@ne
+        \ifeof\bt@infilea
+            \bt@info{File `#1' doesn't exist}%
+        \else
+            \read\bt@infilea to\@tempa
+            \ifeof\bt@infilea
+                \bt@info{File `#1' is empty}%
+            \else
+            \bt@if@signatureline{\@tempa}{%
+                \relax
+            }{%
+                \PackageError{bibtopic}{%
+                    file `#1' not written by bibtopic%
+                }{%
+                    The file `#1' looks as if it hasn't been written
+                    by bibtopic;^^J%
+                    however, bibtopic would now try to overwrite this file.^^J%
+                    (See section 3 in bibtopic.dvi for more details.)^^J%
+                    If this file contains anything important, please^^J%
+                    copy its contents to a safe place now.^^J^^J%
+                    If you hit RETURN now, this file will be overwritten.^^J%
+                }%
+            }%
+            \fi
+        \fi
+    \egroup
+    \closein\bt@infilea
+}
+
+\newcommand\bt@version{0}
+\newcommand\bt@if@@signatureline{}
+\newcommand\bt@if@signatureline{}
+{
+\catcode`\ =12
+\catcode`\%=12
+\endlinechar\m@ne
+\gdef\bt@if@signatureline#1{
+\expandafter\bt@if@@signatureline
+#1%%% produced automatically by bibtopic.sty v.%%%\end
+}
+\gdef\bt@if@@signatureline
+#1%%% produced automatically by bibtopic.sty v#2.#3%%%#4\end{
+\ifx\\#2\\
+\let\bt@tempc\@secondoftwo
+\else
+\def\bt@version{#2.#3}
+\let\bt@tempc\@firstoftwo
+\fi
+\bt@tempc
+}
+}
+
+\newif\ifbt@cont
+\newif\ifbt@files@diff
+\newcommand\bt@line@cnt{}
+\newcommand*\bt@if@files@differ[4]{%    
+    \bt@files@difffalse
+    \def\bt@line@cnt{0}%
+    \bgroup
+        \let\do\@makeother
+        \dospecials
+        \endlinechar-1
+        \openin\bt@infilea=#1
+        \openin\bt@infileb=#2
+        \bt@conttrue
+        \loop
+        \ifeof\bt@infilea
+            \bt@contfalse
+            \ifeof\bt@infileb
+            \else
+                \global\bt@files@difftrue
+            \fi
+        \else
+            \ifeof\bt@infileb
+                \bt@contfalse
+                \global\bt@files@difftrue
+            \fi
+        \fi
+        \ifbt@cont
+            \read\bt@infilea to\bt@tempa
+            \read\bt@infileb to\bt@tempb
+            \bt@stepcnt{\bt@line@cnt}%
+            \ifnum\bt@line@cnt=1
+                \bt@if@signatureline{\bt@tempb}{%
+                    \read\bt@infileb to\bt@tempb
+                }{}%
+            \fi
+            \ifx\bt@tempa\bt@tempb
+            \else
+                \bt@contfalse
+                \global\bt@files@difftrue
+            \fi
+        \repeat
+        \closein\bt@infilea
+        \closein\bt@infileb
+    \egroup
+    \ifthenelse{\boolean{bt@files@diff}}{%
+        #3%
+    }{%
+        #4%
+    }%
+}
+
+\newcommand*\bt@set@cnt[1]{%
+    \gdef\bt@totalctr{#1}%
+}
+
+\newcommand*\bt@keyval@list{}
+
+\newcommand*\bt@kv@add[2]{%
+    \protected@edef\bt@tempa{\bt@keyval@list}%
+    \protected@xdef\bt@keyval@list{\noexpand\@elt{#1}{#2}\bt@tempa}%
+}
+
+\DeclareRobustCommand*\btCiteSect[1]{%
+    \btGetVal{#1}%
+    \cite{#1} (section\nobreakspace{}\ref{\btretval})%
+}
+
+\DeclareRobustCommand*\btRef[2]{%
+    % get section label of #1 from \bt@keyval@list
+    % reference type is #2
+    \ifx\bt@keyval@list\@undefined
+        {\bfseries{???}}%
+    \else
+        \bt@get@keyval{#1}{\bt@keyval@list}%
+        #2{\btretval}%
+    \fi
+}
+
+\DeclareRobustCommand*\btGetVal[1]{%
+    \bt@get@keyval{#1}{\bt@keyval@list}%
+}
+\newcommand*\bt@print@keyvals[2]{%
+    \let\bt@elt\@elt%
+    \def\@elt##1{%
+        \protected@write\@auxout{}{%
+            \string\bt@kv@add{##1}{#2}%
+        }%
+    }#1%
+    \let\@elt\bt@elt
+}
+\newcommand*\bt@get@keyval[2]{%
+    \gdef\btretval{???}%
+    \bt@add@elem{#1}{\bt@kv@req@list}%
+    %% get value of key #1 from list #2
+    \protected@edef\bt@tempa{#1}%
+    \bt@elemfalse
+    \let\bt@elt\@elt%
+    \def\@elt##1##2{\def\bt@tempb{##1}%
+        \ifx\bt@tempa\bt@tempb  %##2
+            \gdef\btretval{##2}%
+        \fi
+    }%
+    #2%
+    \let\@elt\bt@elt
+    \ifthenelse{\equal{\btretval}{???}}{%
+        \PackageWarning{bibtopic}{%
+            Key `#1' not found\MessageBreak in list of cited works%
+        }%
+    }{}%
+}
+
+\newcommand*\bt@get@label[2]{%
+    \protected@edef\bt@tempa{#1}%
+    \let\bt@elt\@elt%
+    \def\@elt##1##2{\def\bt@tempb{##1}%
+        \ifx\bt@tempa\bt@tempb%
+        ##2
+        \fi
+    }%
+    #2%
+    \let\@elt\bt@elt
+}
+
+\newenvironment{btSect}[2][\bt@globalstyle]{%
+    \ifthenelse{\equal{#1}{}}{%
+        \PackageWarning{%
+            bibtopic%
+        }{%
+            No \string\bibliographystyle\space given
+            - \MessageBreak assuming `\bt@defaultstyle'%
+        }%
+        \def\bt@globalstyle{\bt@defaultstyle}%
+    }{}%
+    \expandafter\ifx\csname bt@sect\bt@unit@cnt%
+            \endcsname\relax
+        \expandafter\protected@xdef\csname bt@sect%
+            \bt@unit@cnt\endcsname{\bt@cited@list}%
+    \fi
+    \stepcounter{btauxfile}%
+    \bt@info{bibliographystyle is `#1'\MessageBreak
+            for file `\thebtauxfile .bbl'%
+    }%
+    \bt@inside@secttrue
+    \gdef\bt@curr@bib@file{#2}%
+    \gdef\bt@sect@ref@list{}%    
+    \bt@change@thb%
+    \if@filesw
+        \@bt@write@auxfile{#1}{*}{#2}%
+    \fi
+}{%
+    \relax
+}%
+\newenvironment{btUnit}{%
+    \ifthenelse{\boolean{bt@inside@unit}}{%
+        \PackageError{%
+            bibtopic%
+        }{%
+            The `btUnit' environment cannot be nested%
+        }{%
+            You cannot use a `btUnit' environment inside another^^J%
+            `btUnit' environment.
+        }%
+    }{}%
+    \global\bt@inside@unittrue
+    \immediate\write\@auxout{%
+        \string\csname\space change@bibcite\string\endcsname%
+    }%
+    \ifthenelse{\not\boolean{bt@natbib}}{%
+        \bt@setcites
+    }{}%
+    \ifthenelse{\not\boolean{bt@part@cont@ctr}}{%
+        \ifthenelse{\boolean{bt@natbib}}{%
+            \setcounter{NAT@ctr}{0}%
+        }{%
+            \setcounter{enumiv}{0}% for standard styles
+        }%
+    }{}%
+    \protected@xdef\the@ipfilectr{\bt@unit@cnt}%
+    \immediate\write\@auxout{\string\def\string\bt@cited@list{}^^J%
+                    \string\gdef\string\@extra@binfo{\@extra@b@citeb}}%
+}{%
+    \immediate\write\@auxout{\string\bt@save@list{\bt@unit@cnt}}
+    \bt@stepcnt\bt@unit@cnt
+    \gdef\the@ipfilectr{}%
+    \immediate\write\@auxout{%
+        \string\gdef\string\@extra@binfo{\@extra@b@citeb}}%
+    \global\bt@inside@unitfalse
+}
+\newcommand*\btPrintCited{%
+    \ifthenelse{\boolean{bt@inside@sect}}{%
+        \protected@edef\bt@curr@line{\the\inputlineno}%
+        \def\bt@curr@cmd{\string\btPrintCited}%
+        \bt@stepcnt\bt@internal@sect@cnt%
+        \bt@print@citedtrue\bt@print@allfalse
+        \label{Sec:\bt@internal@sect@cnt}%
+        \bt@change@bibitem
+        \bt@input@or@warn{\thebtauxfile}%
+        \bt@print@keyvals{\bt@sect@ref@list}{%
+            Sec:\bt@internal@sect@cnt
+        }%
+    }{%
+        \bt@sect@err{btSect}{\btPrintCited}%
+    }%
+}
+\newcommand*\btPrintNotCited{%
+    \ifthenelse{\boolean{bt@inside@sect}}{%
+        \protected@edef\bt@curr@line{\the\inputlineno}%
+        \def\bt@curr@cmd{\string\btPrintNotCited}%
+        \bt@stepcnt\bt@internal@sect@cnt
+        \bt@print@citedfalse\bt@print@allfalse
+        \label{Sec:\bt@internal@sect@cnt}%
+        \bt@change@bibitem
+        \bt@input@or@warn{\thebtauxfile}%
+    }{%
+        \bt@sect@err{btSect}{\btPrintNotCited}%
+    }%
+}
+\newcommand*\btPrintAll{%
+    \ifthenelse{\boolean{bt@inside@sect}}{%
+        \protected@edef\bt@curr@line{\the\inputlineno}%
+        \def\bt@curr@cmd{\string\btPrintAll}%
+        \bt@stepcnt\bt@internal@sect@cnt
+        \bt@print@citedfalse\bt@print@alltrue
+        \label{Sec:\bt@internal@sect@cnt}%
+        \bt@change@bibitem
+        \bt@input@or@warn{\thebtauxfile}%
+        \bt@print@keyvals{\bt@sect@ref@list}%
+            {Sec:\bt@internal@sect@cnt}%
+    }{%
+        \bt@sect@err{btSect}{\btPrintAll}%
+    }%
+}
+\newenvironment{bibtopics}[2]{%
+    \begin{btSect}[#1]{#2}%
+    \btPrintAll
+}{%
+    \end{btSect}%
+}
+\newcommand\bt@bibstyle{}
+\newcommand\bt@citation{}
+\newcommand\bt@bibdata{}
+\newenvironment{bibunit}[1][\bt@globalstyle]{%
+    \ifx#1\@empty
+        \PackageWarning{%
+            bibtopic%
+        }{%
+            No \string\bibliographystyle\space given
+            - \MessageBreak assuming `\bt@defaultstyle'%
+        }%
+        \def\bt@globalstyle{\bt@defaultstyle}%
+    \fi
+    \def\bt@bibstyle{#1}%
+    \def\nocite##1{\def\bt@citation{##1}}%
+    \def\cite##1{\def\bt@citation{##1}}%
+    \gdef\putbib[##1]{\gdef\bt@bibdata{##1}}%
+    \stepcounter{btauxfile}%
+}{%
+    \bt@change@thb
+    \if@filesw
+        \@bt@write@auxfile{\bt@bibstyle}{\bt@citation}{\bt@bibdata}%
+    \fi
+        \bt@inside@secttrue
+        \btPrintAll
+}
+\newcommand*\bt@bibitemcheck{%
+    \ifthenelse{\not\boolean{bt@found@item}}{%
+        \PackageWarningNoLine{%
+            bibtopic%
+        }{%
+            No appropriate bibitems found for command\MessageBreak %
+            \bt@curr@cmd\space on line \bt@curr@line%     
+        }%
+    }{}%
+}
+\newcommand*\bt@sect@err[2]{%
+    \PackageError{%
+        bibtopic%
+    }{%
+        You can't use `\string#2' outside of `#1'%
+    }{%
+        See the documentation on the `\string#2' command\MessageBreak
+        in `bibtopic.dvi' for details.
+    }%
+}
+
+\newcommand*\bt@bibtex@warning[1]{%
+    \PackageWarningNoLine{%
+        bibtopic%
+    }{%
+        Please (re)run BibTeX on the file(s):%
+        \expandafter\MessageBreak#1%
+        and after that rerun LaTeX%
+    }%
+}
+
+\newcommand*\bt@files@warnings{%
+    \ifthenelse{\boolean{bt@harvard@errs}}{%
+        \PackageError{%
+            bibtopic%
+        }{%
+            Your command \string\harvarditem\space was ignored%
+        }{%
+            `bibtopic' currently supports the `\string\harvarditem'
+            command^^J
+            only in connection with the `natbib' package. So either^^J%
+            load this package, or change the `\string\citationstyle' command
+            to some^^J%
+            non-harvard style.^^J%
+            If you hit RETURN now, some of your bibliographies will be empty.
+        }%
+    }{}%
+    \ifthenelse{\boolean{bt@overridden@numargs}}{%
+        \ifthenelse{\boolean{bt@warn@override}}{%
+            \PackageWarningNoLine{%
+                bibtopic%
+            }{%
+                The numerical argument in some `\string\bibitem' commands^^J%
+                has been ignored. Using one of the package options^^J%
+                `overridenumbers' or `dontoverridenumbers' will make^^J%
+                this warning go away.^^J%
+                Please see the documentation on these options^^J%
+                in `bibtopic.dvi' for more details.
+            }%
+        }{}%
+    }{}%
+    \ifthenelse{\equal{\bt@warn@files}{}}{%
+        \relax
+    }{%
+        \bt@mk@warning@list{\bt@warn@files}%
+        \bt@bibtex@warning{\the\@temptokena}%
+    }%
+}
+
+\newcommand*\bt@input@or@warn[1]{%
+    \IfFileExists{#1.bbl}%
+    {%
+        \input#1.bbl%
+    }{%
+        \bt@if@elem{#1}{\bt@warn@files}{%
+            \relax
+        }{%
+            \PackageWarningNoLine{%
+                bibtopic%
+            }{%
+                No file #1.bbl%
+            }%
+            \ifbt@normalwarnings
+            \else
+                \bt@append@list{#1}{\bt@warn@files}%
+            \fi
+        }%
+    }%
+}%
+
+\newcommand*\bt@warn@outdated[1]{%
+    \bt@if@elem{#1}{\bt@warn@files}{%
+        \relax
+    }{%
+        \bt@infoNoLine{Marking #1.bbl as outdated}%
+        \bt@append@list{#1}{\bt@warn@files}%
+    }%
+    \ifthenelse{\not\boolean{bt@natbib}}{%
+        \global\let\bt@item\relax
+        \global\let\endbt@item\relax
+    }{}%
+}%
+\endinput
+%%
+%% End of file `bibtopic.sty'.
