@@ -34,9 +34,7 @@ INCLUDES = conventions.tex \
 	plugins_openstreetmap.tex \
 	plugins_oracle_raster.tex \
 	plugins_road_graph.tex \
-	plugins_raster_algebra.tex \
 	plugins_raster_terrain.tex \
-	plugins_table_manager.tex \
 	preamble.tex \
 	print_composer.tex \
 	qgis_style.tex \

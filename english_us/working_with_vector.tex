@@ -94,7 +94,7 @@ used instead of the \filename{.prj}.
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a shapefile, start
 \qg and click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer}
-toolbar button\index{shapefile!loading} or simply type \keystroke{Ctrl-Shift-V}.
+toolbar button\index{shapefile!loading} or simply type \keystroke{Ctrl+Shift+V}.
 This will bring up a new window (see Figure \ref{fig:addvectorlayer}).
 
 From the available options check \radiobuttonon{File}. Click on \button{Browse}.
@@ -154,7 +154,7 @@ shapefile name in the legend or by right-clicking and choosing
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a MapInfo layer, 
 click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar bar 
-button or type \keystroke{Ctrl-Shift-V}, change the file type filter to 
+button or type \keystroke{Ctrl+Shift+V}, change the file type filter to 
 \selectstring{Files of Type}{[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)} and 
 select the .TAB or .tab layer you want to load.
 
@@ -163,7 +163,7 @@ select the .TAB or .tab layer you want to load.
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load an ArcInfo binary 
 coverage, click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} 
-toolbar button or type \keystroke{Ctrl-Shift-V} to open the \dialog{Add Vector 
+toolbar button or type \keystroke{Ctrl+Shift+V} to open the \dialog{Add Vector 
 Layer} dialog. Select \radiobuttonon{Directory}. Change to 
 \selectstring{Type}{Arc/Info Binary Coverage}. Navigate to the directory that 
 contains the coverage files and select it.
@@ -189,7 +189,7 @@ you use a PostGIS data source, you must create a connection to the PostgreSQL
 database that contains the data. Begin by clicking on the
 \toolbtntwo{mActionAddLayer}{Add PostGIS Layer} toolbar button, selecting the
 \dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer...} option from the
-\mainmenuopt{Layer} menu or typing \keystroke{Ctrl-Shift-D}. You can also
+\mainmenuopt{Layer} menu or typing \keystroke{Ctrl+Shift+D}. You can also
 open the \dialog{Add Vector Layer} dialog and select \radiobuttonon{Database}.
 The \dialog{Add PostGIS Table(s)} dialog will
 be displayed. To access the connection manager\index{PostgreSQL!connection
@@ -273,7 +273,7 @@ to load from the layer or use the \button{Build query} icon to start the
 Query builder dialog.
 \item Find the layer(s) you wish to add in the list of available layers.
 \item Select it by clicking on it. You can select multiple layers by holding
-down the \keystroke{shift} key while clicking. See Section \ref{sec:query_builder} for
+down the \keystroke{Shift} key while clicking. See Section \ref{sec:query_builder} for
 information on using the PostgreSQL Query Builder to further define the layer.
 \item Click on the \button{Add} button to add the layer to the map.
 \end{itemize}
@@ -510,7 +510,7 @@ see the difference (Figure \ref{fig:vector_wrapping})
 The first time you load data from a SpatiaLite database, begin by clicking on the
 \toolbtntwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer} toolbar button or 
 by selecting the \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...}
-option from the \mainmenuopt{Layer} menu or by typing \keystroke{L}.
+option from the \mainmenuopt{Layer} menu or by typing \keystroke{Ctrl+Shift+L}.
 This will bring up a window, which will allow you to either connect to a SpatiaLite 
 database already known to \qg, which you can choose from the dropdown menu or to define 
 a new connection to a new database. To define a new connection, click on \button{New} and 
@@ -527,12 +527,10 @@ also \url{http://www.gdal.org/ogr/drv_sqlite.html}.
 
 If you want to create a new SpatiaLite layer, please refer to section \ref{sec:create spatialite}.
 
-\begin{Tip}\caption{\textsc{SpatiaLite data management Plugin}}\index{SpatiaLite!Data management} For SpatiaLite data management you can also use the Python Plugin 
-'QspatiaLite' from the 'QGIS Contributed Repository'. It can be downloaded and 
-integrated with the Python Plugin Installer and provides QGIS integration (import 
-QGIS layers, View Spatial Tables and Queries in QGIS) a SQL editor with syntax 
-highlighting and autocompletion and a SQL Query Builder to build complex queries 
-plus further functionality. 
+\begin{Tip}\caption{\textsc{SpatiaLite data management Plugins}}\index{SpatiaLite!Data management}
+For SpatiaLite data management you can also use several Python plugins:
+QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and 
+installed with the Plugin Installer. 
 \end{Tip}
 
 \section{The Vector Properties Dialog}\label{sec:vectorprops}
@@ -1697,7 +1695,7 @@ one at a time, by clicking on an edge to select the vertices at both ends, or
 by clicking and dragging a rectangle around some vertices.  When a vertex is
 selected its color changes to blue. To add more vertices to the current selection,
 hold down the \keystroke{Ctrl} key while clicking. Hold down
-\keystroke{Ctrl}\keystroke{Shift} when clicking to toggle the selection state of
+\keystroke{Ctrl} or \keystroke{Shift} when clicking to toggle the selection state of
 vertices (vertices that are currently unselected will be selected as usual, but
 also vertices that are already selected will become unselected).
 \item \textbf{Adding vertices}: To add a vertex simply double click near
@@ -2129,26 +2127,26 @@ The other buttons at the bottom left of the attribute table window provide
 following functionality:
 
 \begin{itemize}[label=--]
-\item \toolbtntwo{mActionOpenTable}{Unselect all} also with \keystroke{Ctrl-U}
+\item \toolbtntwo{mActionOpenTable}{Unselect all} also with \keystroke{Ctrl+U}
 \item \toolbtntwo{mActionSelectedToTop}{Move selected to top} also with 
-\keystroke{Ctrl-T}
+\keystroke{Ctrl+T}
 \item \toolbtntwo{mActionInvertSelection}{Invert selection} also with 
-\keystroke{Ctrl-S}
+\keystroke{Ctrl+S}
 \item \toolbtntwo{mActionCopySelected}{Copy selected rows to clipboard} also 
-with \keystroke{Ctrl-C}
+with \keystroke{Ctrl+C}
 \item \toolbtntwo{mActionZoomToSelected}{Zoom map to the selected rows} also 
-with \keystroke{Ctrl-J}
+with \keystroke{Ctrl+J}
 \item \toolbtntwo{mActionToggleEditing}{Toggle editing mode} to edit single values
 of attribute table and to enable functionalities described below also with 
-\keystroke{Ctrl-E}
+\keystroke{Ctrl+E}
 \item \toolbtntwo{mActionDeleteSelected}{Delete selected features} also with 
-\keystroke{Ctrl-D}
+\keystroke{Ctrl+D}
 \item \toolbtntwo{mActionNewAttribute}{New Column} for PostGIS layers and for 
-OGR layers with GDAL version >= 1.6 also with \keystroke{Ctrl-W}
+OGR layers with GDAL version >= 1.6 also with \keystroke{Ctrl+W}
 \item \toolbtntwo{mActionDeleteAttribute}{Delete Column} only for PostGIS layers 
-yet also with \keystroke{Ctrl-L}
+yet also with \keystroke{Ctrl+L}
 \item \toolbtntwo{mActionCalculateField}{Open field calculator} also with 
-\keystroke{Ctrl-I}
+\keystroke{Ctrl+I}
 \end{itemize}
 
 \minisec{Save selected features as new layer}
