@@ -1,0 +1,156 @@
+% vim: set textwidth=78 autoindent:
+% !TeX  root  =  user_guide.tex 
+
+\section{GDAL Werkzeuge}\label{label_plugingdaltools}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+\subsection{Was sind die GDAL Werkzeuge?}\label{whatsgdal}
+
+Die GDAL Werkzeuge stellen eine grafische Benutzeroberfläche bereit, Über die die 
+verschiedenen Werkzeuge der Geospatial Data Abstraction Library (GDAL), 
+\url{http://gdal.osgeo.org} angesprochen werden können. Dabei handelt es sich um Raster 
+Management Tools, z.B. für die Abfrage, Umprojizierung, Transformierung oder Verschneidung 
+von Rasterlayern in unterschiedlichen Formaten. Außerdem stehen Werkzeuge zur Verfügung, 
+um Konturen als Vektorlinien zu extrahieren, eine Schummerungskarte aus Höhendaten zu 
+erzeugen oder ein VRT (Virtual Raster Tile in XML format) aus einer oder mehreren 
+Rasterkarte(n) zu erzeugen. Diese Werkzeuge können benutzt werden, wenn installiert und 
+aktiviert wurde. 
+
+\subsection{Die GDAL Bibliothek}\label{gdal_lib}
+
+Die GDAL Bibliothek besteht aus einer Reihe von Kommandozeilen-Tools, jedes mit zahlreichen 
+Optionen. Anwender, die sich mit der Kommandozeile auskennen, werden diese Art der Anwendung 
+sicher bevorzugen, um so den vollen Funktionsumfang nutzen zu können. Das GDAL Tools Plugin 
+ermöglicht hingegen einen einfachen Zugang zu den Funktionen, und stellt daher auch nur die 
+am häufigsten benutzten Optionen zur Verfügung.   
+
+\begin{longtable}{|p{3cm}|p{13cm}|}
+\caption{Liste der GDAL Werkzeuge}\label{tab:gdaltools} \\
+\hline
+Virtuelle(n) Raster(Katalog) erzeugen & Dieses Werkzeug erstellt ein VRT (Virtueller Datensatz), 
+das ein Mosaik der Eingaberaster darstellt. \\
+\hline Kontur & Dieses Werkzeug erstellt einen Vektorlayer mit den Konturlinien eines 
+Höhenmodells (DGM).\\
+\hline Rastern &  Dieses Werkzeug rasterisiert Vektorgeometrien (Punkte, Linien und Polygone) 
+in einen Rasterlayer (auch mit mehreren Kanälen). Die Vektorgeometrien werden aus von GDAL 
+unterstützten Formaten gelesen. Die Vektor- und Rasterlayer müssen in derselben Projektion 
+vorliegen. On-the-fly Projektion wird nicht unterstützt. \\
+\hline Polygonisieren & Dieses Werkzeug erstellt Vektorpolygone für alle Flächen eines 
+Rasterlayers, in denen die Pixelwerte gleich sind. Jedes Polygon erhält ein Attribut, das den 
+Pixelwert widergibt. Zusätzlich kann eine Maske verwendet werden, um bestimmte Pixelbereiche 
+auszuschließen. \\
+\hline Verschmelzen & Dieses Werkzeug mosaikiert einen Satz von Bilddaten. Alle Layer müssen 
+in derselben Projektion vorliegen und die gleiche Anzahl von Kanälen aufweisen. Sie können aber 
+überlappen und eine unterschiedliche Auflösung aufweisen. Bei Überlappung wird der letzte 
+Layer über die anderen gelegt. \\
+\hline Sieben & Das gdal\_sieve.py Werkzeug löscht Rasterflächen, die kleiner als eine 
+festgelegte Pixelanzahl sind und ersetzt diese Fläche durch Pixelwerte der größten 
+Nachbarfläche. Das Eingangsraster kann dabei überschrieben werden, oder das Ergebnis wird 
+in einen neuen Rasterlayer abgespeichert.\\
+\hline Nachbarschaft & Das gdal\_proximity.py Werkzeug erstellt einen Raster-Abstandslayer, 
+in dem der Abstand vom Zentrum jedes Pixels zum Zentrum eines Nachbarpixels gespeichert wird, 
+das als Zielpixel festgelegt ist. Zielpixel sind jene Pixel im Ausganslayer, bei denen der 
+Pixelwert des Nachbarpixels sich in der angegebenen Liste der Zielpixelwerte befindet. \\
+\hline Fast schwarz & Dieses Werkzeug scanned einen Rasterlayer und versucht alle Pixel, die 
+fast schwarz oder fast weiss entlang von Rändern sind in exakt schwarze bzw. weisse Pixel 
+umzuwandeln. Dies wird oft verwendet, um verlusthaft komprimierte Luftbilder zu 'reparieren', 
+so dass Farbpixel bei der Mosaikierung als transparent behandelt werden können. \\
+\hline Entzerren & Das gdalwarp Werkzeug kann mosaikieren, umprojizieren und konvertieren. Es 
+kann in alle unterstützten Projektionen projizieren und kann dabei sogar mit dem Bild 
+bereitgestellte GCPs (Ground Control Points) nutzen, wenn der Rasterlayer noch im 'Rohzustand' 
+ist. \\
+\hline Gitter & Dieses Werkzeug erstellt ein regelmäßiges Gitter als Raster aus den 
+verstreuten Daten, die aus einer OGR-Vektordatenquelle gelesen werden. Die Eingabedaten 
+werden dabei interpoliert, um die Gitterknoten mit Werten zu füllen. Dabei kann zwischen 
+verschiedenen Interpolationsmethoden gewählt werden. \\
+\hline Konvertieren & Das gdal\_translate Werkzeug kann Rasterlayer zwischen verschiedenen 
+Formaten konvertieren. Dabei können zusätzlich Prozesse wie Ausschnitte bilden, Resampling 
+oder auch Reskalierung angewendet werden. \\
+\hline Information & Das gdalinfo Werkzeug listet Informationen über einen Rasterlayer, dessen 
+Format von GDAL gelesen werden kann. \\
+\hline Projektion zuweisen & Das gdalwarp Werkzeug kann mosaikieren, umprojizieren und 
+konvertieren. Es kann in alle unterstützten Projektion projizieren und kann dabei sogar mit 
+dem Bild bereitgestellte GCPs (Ground Control Points) nutzen, wenn der Rasterlayer noch im 
+'Rohzustand' ist. 
+\textit{-s\_srs srs\_def}: Ausgangsprojektion. Das Koordinatensystem kann jede sein, die durch den
+OGRSpatialReference.SetFromUserInput() Aufruf unterstützt wird und EPSG PCS und GCSs 
+(z.B. EPSG:4296), PROJ.4 Anweisungen oder den Namen einer .prf Datei mit WKT (Well Known Text) 
+Angaben enthält.  
+\textit{-t\_srs srs\_def}: Zielprojektion. Das Koordinatensystem kann jede sein, die durch den
+OGRSpatialReference.SetFromUserInput() Aufruf unterstützt wird und EPSG PCS und GCSs
+(z.B. EPSG:4296), PROJ.4 Anweisungen oder den Namen einer .prf Datei mit WKT (Well Known Text)
+Angaben enthält. \\
+\hline Übersicht erzeugen &  Das gdaladdo Werkzeug wird benutzt, um Übersichten zu erstellen 
+oder zu aktualisieren. Dabei werden 'one over several downsampling' Methoden angewendet. \\
+\hline Clipper & Dieses Werkzeug mosaikiert automatisch einen Satz von Rasterlayern. Alle 
+Layer müssen dieselbe Projektion aufweisen und dieselbe Anzahl Kanäle. Sie können aber
+überlappen und eine unterschiedliche Auflösung aufweisen. Bei Überlappung wird der letzte
+Layer über die anderen gelegt.
+\textit{-ul\_lr ulx uly lrx lry}: Die Ausdehnung der Ausgabedatei. Wenn nicht angegeben, wird die 
+Gesamtausdehnung aller Eingabedateien verwendet. \\
+\hline RGB nach PCT &  Dieses Werkzeug errechnet eine optimale Pseudo-Farbtabelle für einen 
+RGB-Rasterlayer mittels eines 'median cut' Algorithmus, der auf einem downgesampleten 
+RGB-Histogramm basiert. Darauf basierend wird das Bild in ein Pseudo-Farb-Raster konvertiert. 
+Dazu wird Floyd-Steinberg dithering (error diffusion) verwendet, um die Qualität der Ausgabe zu 
+maximieren. \\
+\hline PCT nach RGB &  Dieses Werkzeug konvertiert die Pseudo-Farbtabelle eines Kanals in einen RGB-Rasterlayer eines festgelegten Formats.\\
+\hline Kachelindex & Erstellen eines Shapefiles mit einem Raster Kachelindex.\\
+\hline DHM Geländemodelle & Werkzeuge zum Visualisieren und Analysieren von Digitalen Höhenmodellen. \\
+\hline 
+\end{longtable}
+
+\begin{figure}[ht]
+   \centering
+   \caption{Die Menüliste der GDAL Werkzeuge \nixcaption}\label{gdaltools_menu}
+   \includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/raster_menu}
+\end{figure}
+
+\subsection{Beispiele}\label{gdal_examples}
+
+An dieser Stelle sollen ein paar Beispiele gezeigt werden, wie man die GDAL Werkzeuge 
+verwenden kann.
+
+\minisec{Informationen über einen Rasterlayer abfragen}
+
+Dieses Beispiel zeigt die Abfrage eines Rasterlayers.
+
+\begin{figure}[ht]
+   \centering
+   \caption{Info Dialog \nixcaption}\label{gdalinfo}
+   \includegraphics[clip=true, width=8cm]{plugins_gdaltools_images/gdalinfo}
+\end{figure}
+
+\minisec{Konturlinien erzeugen}
+
+Dieses Beispiel erzeugt Konturlinien auf Basis von SRTM-Höhendaten.
+
+\begin{figure}[ht]
+   \centering
+   \caption{Kontur Dialog \nixcaption}\label{gdal_contour}
+   \includegraphics[clip=true, width=9cm]{plugins_gdaltools_images/gdal_contour}
+\end{figure}
+
+mit folgendem Ergebnis:
+
+\begin{figure}[ht]
+   \centering
+   \caption{Berechnete Konturlinien mit gdal\_contour \nixcaption}\label{res_gdal_contour}
+   \includegraphics[clip=true, width=9cm]{plugins_gdaltools_images/qgis_contours}
+\end{figure}
+
+\minisec{Mit gdalwarp einen Rasterlayer umprojizieren}
+
+Dieser Dialog zeigt das Umprojizieren der Landnutzungskarte aus dem QGIS-Beispieldatensatzes. 
+Sie wird von Albers Equal Area projection nach Lon/Lat WGS84 (EPSG:4326) umprojiziert. 
+
+\begin{figure}[ht]
+   \centering
+   \caption{Entzerren Dialog (gdalwarp) \nixcaption}\label{gdalwarp}
+   \includegraphics[clip=true, width=10cm]{plugins_gdaltools_images/gdalwarp}
+\end{figure}
+
+\FloatBarrier
+

@@ -1,0 +1,68 @@
+%  !TeX  root  =  user_guide.tex
+
+\section{Straßengraph Plugin}
+\label{sec:roadgraph}
+\index{Straßengraph Erweiterung}
+\index{Kürzester Weg}
+
+% when the revision of a section has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+
+Die \toolbtntwo{plugin}{Straßengraph} Erweiterung ist ein C++ plugin, mit dem man 
+die kürzeste Verbindung zwischen zwei Punkten entlang eines Polyline Vektorlayers 
+berechnen kann. Das Ergebnis kann als Shapefile gespeichert werden. 
+
+\textbf{Hauptfunktionen}:
+
+\begin{itemize}
+\item Berechnung der Route, seiner Länge und der Reisezeit
+\item Optimierung durch Länge oder Reisezeit
+\item Export der Route als Vektorlayer
+\item Anzeigen der Vektorrichtungen (diese Funktion ist langsam und wird meist 
+nur zum Testen verwendet)
+\end{itemize}
+
+Als Netzwerk kann jeder Polyline Vektorlayer verwendet werden, der in einem von QGIS 
+unterstützten Format gespeichert ist. Zwei Linien mit einem gemeinsamen Punkt werden 
+dabei als verknüpft angesehen. Wichtig ist, dass das Layer-KBS als Projekt-KBS gesetzt 
+werden muss. Dies ist wichtig, da Neuberechnungen von Koordinaten ansonsten zu Fehlern 
+führen können, selbst eine Fangtolleranz eintgestellt ist.
+
+\textbf{In der Attributtabelle des Layera können folgende Spalten genutzt werden}:
+
+\begin{itemize}
+\item Geschwindigkeit als numerische Spalte;
+\item Richtung in jedem Datentyp, der mit String kompatibel ist. Wenn eine Spalte 
+benutzt wird, bezieht sie sich auf beide Richtungen, ansonsten wird unterschieden.
+\end{itemize}
+
+Wenn einige Zeilen keine Werte haben, werden die Defaultwerte verwendet. Sie können 
+bei Bedarf geändert werden, gemeinsam mit ein paar weiteren Einstellungsmöglichkeiten 
+im Dialog \dialog{Straßengraph-Einstellungen} im Menu \mainmenuopt{Vektor} \arrow 
+\dropmenuopt{Straßengraph}.
+
+\minisec{Verwendung der Erweiterung}
+
+Wenn Sie die Erweiterung laden, erscheint ein neues Fenster 'Kürzester Weg' unten 
+links neben dem Kartenfenster. Legen Sie zu Beginn ein paar Einstellungen fest 
+im Dialog \dialog{Straßengraph-Einstellungen} im Menu \mainmenuopt{Vektor} \arrow 
+\dropmenuopt{Straßengraph}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[clip=true, width=5cm]{roadgraph_settings}
+    \caption{Einstellungen des Straßengraph Plugin vornehmen \nixcaption}\label{fig:roadgraphsettings}
+\end{figure}
+
+Wählen Sie nun einen Start- und einen Stop-Punkt im Vektorlayer auf dem Netzwerk und 
+drücken Sie auf \button{Berechnen}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[clip=true, width=12cm]{roadgraph_sample}
+    \caption{Straßengraph Plugin \nixcaption}\label{fig:roadgraphsample}
+\end{figure}
+
+\FloatBarrier

@@ -1,0 +1,526 @@
+% vim: set textwidth=77 autoindent:
+% !TeX root = user_guide.tex
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+\section{eVis Plugin}\label{sec:evis}
+
+Der Biodiversitäts-Informatik Fachbereich am American Museum of Natural
+History's (AMNH) Center for Biodiversity and Conservation (CBC)
+\footnote{Dieser Abschnitt ist von Horning, N., K. Koy, P. Ersts abgeleitet.
+2009. Evis (v1.1.0) User's Guide. American Museum of Natural History, Center
+for Biodiversity and Conservation. Erhältlich unter
+\url{http://biodiversityinformatics.amnh.org/}, und unter der GNU FDL
+veröffentlicht} hat das Event Visualization Tool (eVis) entwickelt, ein
+weiteres, ergänzendes Werkzeug im Bereich Monitoring und Decision 
+Support Tools für die Analyse geschützter Bereiche und die Landschaftsplanung. 
+Dieses Plugin ermöglicht die einfache Verknüpfung geokodierter Fotos 
+(d.h. referenziert mit Längen-und Breitengrad oder X- und Y-Koordinaten) und 
+anderer Dokumente mit die Vektordaten in QGIS.
+
+Das eVis Plugin wird wie alle Kern-Plugins mit dem Plugin-Manager aktiviert
+und deaktiviert (siehe Abschnitt \ref{sec:managing_plugins}). Es besteht aus
+drei Modulen: der eVis-Datenbankverbindung, dem eVis-Ereignis-ID-Werkzeug und
+dem eVis-Ereignisbrowser. Diese Werkzeuge arbeiten zusammen, damit das
+Darstellen von georeferenzierten Fotos und anderen Dokumenten, die mit
+Vektorobjekten, Datenbanken oder Tabellen verlinkt sind, funktioniert.
+
+\subsection{Ereignisbrowser}\label{evis_browser}
+
+Der Ereignisbrowser verfügt über Funktionen, um georeferenzierte Fotos
+anzuzeigen, die mit Vektorobjekten verknüpft sind, die im Kartenfenster
+dargestellt sind. Die Punktdaten können dabei z.B. ein in QGIS geladener
+Vektorlayer oder das Ergebnis einer Datenbankabfrage sein. Das Vektorobjekt
+muss Attribute mit Informationen zu dem Ort und dem Namen der darzustellenden
+Datei mit dem Foto enthalten und gegebenenfalls auch die Himmelsrichtung,
+in welche die Kamera gerichtet war, als das Bild geschossen wurde. Der
+Vektorlayer muss bereits in QGIS geladen sein, bevor Sie den Ereignisbrowser
+starten können.
+
+\minisec{Den eVis-Ereignisbrowser starten}\label{evis_launch_browser}
+
+Der \toolbtntwo{event_browser}{Ereignisbrowser} kann über das Menü
+\mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
+\dropmenuopt{eVis-Ereignisbrowser} gestartet werden, wenn ein Vektorlayer
+geladen ist. 
+
+Der Ereignisbrowser-Dialog besteht aus drei Reitern am oberen linken Rand.
+Der Reiter \tab{Anzeigen} wird verwendet, um das Foto anzuzeigen und das
+damit verbundene Datenattribut. Der Reiter \tab{Optionen} enthält eine Reihe
+von Einstellungen, die angepasst werden, um das Verhalten des Plugins zu
+verändern. Schließlich gibt es noch den Reiter \tab{Externe Applikationen
+konfigurieren}, um eine Tabelle mit Dateierweiterungen und damit verbundenen
+Anwendungen zu managen, um andere Dokumente als Bilder anzeigen zu können.
+
+\minisec{Der Anzeigen-Reiter}\label{evis_display_window}
+
+Der Reiter \tab{Anzeigen} des Ereignisbrowsers wird verwendet, um
+georeferenzierte Fots und damit verknüpfte Attribute anzuzeigen.
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{evisdisplay}Der Anzeigen-Reiter in eVis \nixcaption}
+\includegraphics[clip=true, width=10cm]{evisdisplay}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{Anzeigefenster}: Ein Fenster, in dem das Foto erscheint.
+\item \textbf{Hineinzoomen}: Zoomen, um Details zu sehen. Wenn das gesamte
+Bild nicht im Anzeigefenster dargestellt werden kann, erscheinen Scrollbars
+auf der linken und unteren Seite des Fensters, um das Foto verschieben zu
+können.
+\item \textbf{Herauszoomen}: Aus dem Bild herauszoomen, um einen Überblick zu
+haben. 
+\item \textbf{Zur vollen Ausdehnung zoomen}: Zeigt die volle Ausdehnung des
+Fotos an.
+\item \textbf{Attributfenster}: Alle Attribute des Vektorpunktes, der mit dem Foto
+verlinkt ist werden hier angezeigt. Wenn der Datentyp, auf den verwiesen wird
+kein Foto ist, sondern ein anderer Datentyp, der im Reiter \tab{Externe
+Applikationen konfigurieren} definiert ist, dann öffnet sich die Anwendung mit dem
+speziellen Datentyp, indem Sie auf das Feld mit dem Pfad doppelkicken. Die
+Anwendung wird dann gestartet und Sie können den Inhalt anschauen oder
+anhören. Wenn die Datenendung erkannt wird, wird sie automatisch in grün
+angezeigt.
+\item \textbf{Navigation}: Verwenden Sie den \button{Vorheriges} und
+\button{Nächstes} Knopf, um weitere Objekte zu laden, falls vorhanden und
+selektiert.
+\item \textbf{Objektindikator}: Diese Information in der Kopfzeile des
+Ereignisbrowsers gibt an, welches Objekt gerade angezeigt wird und wieviele
+insgesamt vorhanden sind.
+\end{itemize}
+
+\minisec{Der Optionen-Reiter}\label{evis_options_window}
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{evisoptions}Der Optionen-Reiter in eVis \nixcaption}
+\includegraphics[clip=true, width=12cm]{evisoptions}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{Dateipfad}: Eine Dropdown-Liste, um das Attributfeld zu
+definieren, welches den Verzeichnispfad oder die URL für die Fotos oder
+anderen Dokumente enthält. Wenn es ein relativer Pfad ist, dann wählen Sie
+das Kontrollkästchen \checkbox{Pfad ist relaitiv}, links neben dem
+Dropdown-Menü. Der Grundpfad für den relativen Pfad kann in dem Textfeld
+'Grundpfad' eingegeben werden. Informationen über die verschiedenen Optionen
+zur Angabe des Speicherortes der Datei werden weiter unten beschrieben.
+\item \textbf{Kompassrichtung}: Eine Dropdown-Liste, um das Attributfeld zu
+definieren, welches die Himmelsrichtung angibt, in der das Foto geschossen
+wurde. Wenn eine Kompassrichtung verfügbar ist, ist es notwendig, zuvor das
+Kontrollkästchen \checkbox{Kompassrichtung anzeigen} auszuwählen, um die
+Spalte mit den Himmelsrichtungen auszuwählen.
+\item \textbf{Kompassversatz}: Der Kompassversatz kann verwendet werden, um
+die magnetische Abweichung zu kompensieren. (Abweichung der magnetischen zur
+wahren Nordrichtung). Klicken Sie dazu auf \radiobuttonon{Manuell}, um
+die Abweichung einzugeben, oder auf \radiobuttonon{Aus Attribut}, um eine
+Attributspalte mit den Abweichungen festzulegen. Für beide Optionen sollten
+östliche Abweichungen als postive Zahlenwerte und westliche Abweichungen als
+negative Zahlenwerte angegeben werden. 
+\item \textbf{Relativer Pfad}: Der Grundpfad, auf den sich die relativen
+Pfade der Fotos und Dokumente beziehen (siehe Abbildung \ref{evisoptions}).
+\item \textbf{Gesamten Pfad ersetzen}: Wenn dieses Kontrollkästchen aktiviert
+ist, wird nur der Dateiname an den Grundpfad angehängt, der als
+Attributspalte im Bereich Dateipfad definiert wurde.
+\item \textbf{Bildpfad auf alle Dokumente anwenden}: Wenn dieses
+Kontrollkästchen aktiviert ist, wird derselbe Grundpfad, der für Fotos
+verwendet wird, auch auf alle anderen Dokumente (Filme, Texte, usw.)
+verwendet. Ansonsten werden die definierten Pfadangaben nur für die Fotos
+verwendet. Alle anderen Dokumente ignorieren den Grundpfad.
+\item \textbf{Dies merken}: Wenn dieses Kontrollkästchen aktiviert ist,
+werden alle damit in Verbindung stehenden Parameter für die nächste Sitzung
+gespeichert. Sie können dazu auch global den Knopf \button{Speichern}
+drücken.
+\item \textbf{Zurücksetzen}: Setzt die Werte der jeweiligen Zeile auf die
+Standardwerte zurück.
+\item \textbf{Voreinstellungen}: Damit werden alle Werte in den Feldern auf
+die Standardwerte zurückgesetzt. Es ist derselbe Effekt, als wenn Sie alle
+Zurücksetzen Knöpfe drücken.
+\item \textbf{Speichern}: Dieser Knopf speichert alle Einstellungen, ohne den
+Dialog zu schließen.
+\end{itemize}
+
+\minisec{Der Externe Applikationen konfigurieren Reiter}\label{evis_external_window}
+
+\begin{figure}[htp]
+   \begin{center}
+\caption{\label{evisexternal} Der Externe Applikationen konfigurieren Reiter
+in eVis \nixcaption}
+\includegraphics[clip=true, width=12cm]{evisexternal}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{Datei Referenztabelle}: Eine Tabelle mit den Datentypen, die
+mit eVis geöffnet werden können. Jeder Datentyp benötigt eine Dateiendung,
+und den Pfad zu einer Anwendung, die den entsprechenden Datentyp anzeigen
+oder ausführen kann. Dies schließt neben Fotos u.a. auch Textdokumente, Filme
+oder Hörspiele mit ein.
+\item \textbf{Neuen Dateityp hinzufügen}: Füge einen neuen Dateityp mit einer
+einzigartigen Dateiendung hinzu, sowie einen Pfad zu der Applikation, mit der
+dieser Datentyp geöffnet werden kann.
+\item \textbf{Aktuelle Zeile löschen}: Löschen Sie den ausgewählten Dateityp
+aus der Referenztabelle.
+\end{itemize}
+
+\minisec{Den Ort und Namen eines Fotos festlegen}\label{evis_specifying}
+
+Der Ort und Name eines Fotos kann über einen absoluten oder relativen Pfad
+festgelegt werden. Wenn das Foto auf einem Webserver liegt, kann auch eine
+URL verwendet werden. Beispiele für die verschiedenen Varianten finden Sie in
+Tabelle \ref{tab:ev_examples}.
+
+\begin{table}[htp]\label{tab:ev_examples}\index{Plugins!eVis}
+\centering
+\caption{eVis Fotos mit absoluten Pfad, relativen Pfad und URL einbinden}\medskip
+ \begin{tabular}{|p{0.55in}|p{0.55in}|p{4.4in}|p{0.7in}|}
+ \hline \textbf{X} & \textbf{Y} & \textbf{Datei} & \textbf{Richtung}\\
+ \hline 780596 & 1784017 & \filename{C:\textbackslash Workshop\textbackslash
+eVis\_Data\textbackslash groundphotos\textbackslash DSC\_0168.JPG} & 275\\
+ \hline 780596 & 1784017 & \filename{/groundphotos/DSC\_0169.JPG} & 80\\
+ \hline 780819 & 1784015 &
+\filename{http://biodiversityinformatics.amnh.org/evis\_test\_data/DSC\_0170.JPG} & 10\\
+ \hline 780596 & 1784017 & \filename{pdf:http://www.testsite.com/attachments.php?attachment\_id-12}
+& 76\\
+ \hline
+\end{tabular}
+\end{table}
+
+\minisec{Den Ort und Namen anderer Dokumente und Dateien festlegen}\label{evis_location}
+
+Belege wie Text-Dokumente, Videos und Sound-Clips können ebenfalls angezeigt
+oder abgespielt werden. Dazu ist es notwendig, einen Eintrag in der
+Referenztabelle zu erstellen, über den die Quelle dann geöffnet
+werden kann. Außerdem ist es notwendig, den Pfad oder eine URL in die
+Attributtabelle des Vektorlayers für das entsprechende Objekt einzutragen.
+Eine weitere Regel, die für URLs verwendet werden kann, die keine
+Dateiendung für das Dokument enthalten, das Sie öffnen möchten, besteht darin,
+die Dateierweiterung vor der URL anzugeben. Das Format ist dann - Dateiendung:URL.
+Vor die URL wird die Dateiendung mit einem Doppelpunkt geschrieben. Dies ist
+besonders nützlich für den Zugriff auf Dokumente in Wikis und anderen
+Webseiten, die eine Datenbank verwenden, um die Webseiten zu verwalten (siehe
+Tabelle \ref{tab:ev_examples}).
+
+\minisec{Arbeiten mit dem Ereignisbrowser}\label{evis_using_browser}
+
+Wenn Sie den Ereignisbrowser starten, öffnet sich ein Foto und wird im
+Display angezeigt, wenn in der Attributtabelle auf das entsprechende Foto
+verwiesen wird, und wenn der Speicherort der Datei im Reiter \tab{Optionen}
+richtig eingestellt ist. Wenn Sie ein Foto erwarten, es aber nicht angezeigt
+wird, kontrollieren Sie die Parameter nochmals.
+
+Wenn auf ein Dokument (oder ein Bild, das nicht über eine eVis bekannte
+Dateierweiterung verfügt) in der Attributtabelle verwiesen wird, wird das
+Feld mit dem Dateipfad grün hervorgehoben dargestellt, wenn die
+Dateierweiterung sich in der definierten Referenztabelle im Reiter
+\tab{Externe Applikationen konfigurieren} befindet. Um das Dokument zu öffnen,
+doppelklicken Sie auf die grün markierte Zeile im Attribut
+Informationsfenster. Wenn auf ein Objekt in der Attributtabelle verwiesen
+wird und der Dateipfad nicht grün markiert ist, dann müssen Sie einen Eintrag
+für die Dateierweiterung entsprechend ergänzen. Wenn der Dateipfad grün
+markiert ist, sich aber nicht bei einem Doppelklick öffnet, müssen Sie die
+Parameter im Reiter \tab{Optionen} einstellen, damit die Datei von eVis
+gefunden und dargestellt werden kann.
+
+Wenn keine Kompassrichtung vorhanden ist, wird im Reiter \tab{Optionen} ein
+rotes Sternchen angezeigt, sofern das Vektorobjekt, das mit dem Foto verlinkt
+ist, angezeigt wird. Wenn eine Kompassrichtung vorhanden ist, erscheint ein Pfeil
+und weist in die Richtung, die durch der Wert in der Anzeige Kompassrichtung
+definiert ist. Der Pfeil wird über dem Vektorpunkt, der mit dem Foto oder
+einem anderen Dokument verknüpft ist, zentriert dargestellt.
+
+Um den Ereignisbrowser zu schließen, klicken Sie auf den Knopf
+\button{Schließen} im Dialogfenster.
+
+\subsection{Ereignis-ID-Werkzeug}\label{evis_id_tool}
+
+Das Ereignis-ID-Werkzeug ermöglicht es Ihnen, ein Foto oder Dokument
+anzuzeigen, indem Sie auf ein Objekt eines aktivierten Vektorlayers im QGIS
+Kartenfenster klicken. Das Vektorobjekt muss auf Attribute verweisen, welche
+Informationen zum Pfad und Namen der Datei und gegebenenfalls der
+Kompassrichtung während der Aufnahme mit einer Kamera enthalten. Der
+Vektorlayer muss vor der Ausführung des Ereignis-ID-Werkzeugs in QGIS geladen
+worden sein.
+
+\minisec{Starten des Ereignis-ID-Werkzeugs}\label{evis_launch_id}
+
+Um das Ereignis-ID-Werkzeug zu starten, klicken Sie auf das Icon
+\toolbtntwo{event_id}{Ereignis-ID-Werkzeug} oder wählen Sie im Menü
+\mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
+\dropmenuopt{Ereignis-ID-Werkzeug} aus. Dadurch wechselt der Mauszeiger zu
+einem Pfeil mit einem ``i'' und zeigt an, dass das Ereignis-ID-Werkzeug
+aktiv ist.
+
+Um die mit den Vektorobjekten verlinkten Fotos in dem aktiven Vektorlayer
+anzuzeigen, bewegen Sie den Ereignis-ID Mauszeiger über das Objekt und
+klicken dann auf die linke Maustaste. Nach einem Klick auf das Objekt,
+wird der Ereignisbrowser geöffnet und die Fotos auf oder in der Nähe des
+angeklickten Ortes werden angezeigt. Wenn mehr als ein Foto zur Verfügung
+steht, können Sie durch die verschiedenen Objekte wandeln, indem Sie auf die
+Schaltflächen \button{Vorgeriges} und \button{Nächstes} drücken. Die anderen
+Steuerelemente sind in Kapitel \ref{evis_browser} beschrieben.
+
+\subsection{Datenbankverbindung}\label{evis_database}
+
+Der Dialog Datenbankverbindung ermöglicht es, sich mit einer Datenbank oder
+anderen ODBC Quelle, z.B. Excel-Tabellen zu verbinden.
+
+Das eVis Plugin kann direkt mit Microsoft Access, PostgreSQL, MySQL und SQLite
+Datenbanken verbunden werden. Außerdem können weitere Datenformate über ODBC
+angesprochen werden. Dabei muss der ODBC-Treiber entsprechend auf ihrem
+Betriebssystem konfiguriert werden.
+
+\minisec{Starten des Dialogs Datenbankverbindung}\label{evis_launch_database}
+
+Um den Dialog Datenbankverbindung zu starten, klicken Sie auf das Icon
+\toolbtntwo{evis_connect}{Datenbankverbindung} oder gehen Sie in das Menü
+\mainmenuopt{Plugins} \arrow \dropmenuopt{eVis} \arrow
+\dropmenuopt{Datenbankverbindung}. Dadurch wird der Dialog
+Datenbankverbindung gestartet und Sie finden die drei Reiter
+\tab{Vordefinierte Abfragen}, \tab{Datenbankverbindung} und
+\tab{SQL-Abfrage}. Im Fenster 'Ausgabekonsole' werden Informationen zu den
+jeweiligen Aktionen angezeigt. 
+
+\minisec{Verbinden mit einer Datenbank}\label{evis_connect_database}
+
+Drücken Sie auf den Reiter \tab{Datenbankverbindung} und definieren Sie dann
+im Dropdown-Menü den \dropmenuopt{Datenbanktyp}, mit dem Sie sich verbinden
+wollen. Wenn ein Passwort oder Benutzername erforderlich ist, können diese
+Informationen in den Feldern Benutzername und Passwort eingegeben werden.
+
+Geben Sie dann den \textbf{Datenbank-Host} an. Diese Option ist nicht
+vorhanden, wenn Sie ``MSAccess'' als Datenbanktyp ausgewählt haben. Wenn die
+Datenbank auf Ihrem Rechner läuft, geben Sie an dieser Stelle ``localhost''
+ein.
+
+Nun geben sie den Namen der Datenbank im Feld \textbf{Datenbankname} ein.
+Wenn Sie hier ``ODBC'' als Datenbanktyp ausgewählt haben, müssen Sie den
+Namen der Datenquelle eingeben.
+
+Nachdem Sie alle Parameter angegeben haben, klicken Sie auf den
+\button{Verbinden} Knopf. Wenn die Verbindung erfolgreich ist, wird dies im
+Ausgabefenster angezeigt. Im anderen Fall müssen Sie die Parameter nochmal
+überprüfen, die Sie eingegeben haben.
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{evisdatabase}Der Dialog Datenbankverbindung in eVIS \nixcaption}
+\includegraphics[clip=true, width=10cm]{evisdatabase}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{Datenbanktyp}: Eine Dropdown-Liste, um den zu verwendenen
+Datenbanktyp festzulegen.
+\item \textbf{Datenbank-Host}: Der Name des Datenbank-Hosts.
+\item \textbf{Port} Die Portnummer,  wenn ``MYSQL'' der ``PostgreSQL''
+benutzt wird.
+\item \textbf{Datenbankname} Der Name der Datenbank.
+\item \textbf{Verbinden} Ein Knopf, um sich mit der definierten Datenbank zu
+verbinden.
+\item \textbf{Ausgabekonsole} Hier werden Informationen zu den Prozessen
+angezeigt.
+\item \textbf{Benutzername}: Benutzername, um sich mit einer
+passwortgeschützten Datenbank zu verbinden.
+\item \textbf{Passwort}: Passwort, wenn die Datenbank passwortgeschützt ist.
+\item \textbf{Vordefinierte Abfragen}: Reiter, um den Dialog ``Vordefinierte
+Abfragen'' zu öffnen.
+\item \textbf{Datenbankverbindung}: Reiter, um den Dialog
+``Datenbankverbindung'' zu öffnen.
+\item \textbf{SQL-Abfrage}: Reiter, um den Dialog ``SQL-Abfrage'' zu öffnen.
+\item \textbf{Hilfe}: Zeigt die Online-Hilfe an.
+\item \textbf{OK}: Schließen des Dialogs ``Datenbankverbindung''.
+\end{itemize}
+
+\minisec{SQL-Abfrage durchführen}\label{evis_running_sql}
+
+SQL-Abfragen werden verwendet, um Informationen aus einer Datenbank oder
+ODBC-Ressource zu extrahieren. In eVis wird die Abfrage als Vektorlayer zum
+QGIS Kartenfenster hinzugefügt. Klicken Sie auf den Reiter \tab{SQL-Abfrage},
+um die SQL-Abfrage-Schnittstelle zu öffnen. Sie können dann SQL-Kommandos in
+dem Textfenster eingeben. Ein hilfreiches Tutorial über SQL-Befehle finden
+Sie unter der \url{http://www.w3schools.com/sql/}. Um z.B. einen Auszug aller
+Daten aus einer Excel-Datei zu erstellen, können Sie eingeben
+\filename{select * from [Blatt1\$]} wobei ``Blatt1'' der Name des
+Arbeitsblattes ist.
+
+Klicken Sie dann auf die Knopf \button{Abfrage ausführen}, um den Befehl
+auszuführen. Wenn die Abfrage erfolgreich ist, wird ein Auswahlfenster
+angezeigt. Wenn die Abfrage nicht erfolgreich ist, erscheint eine
+Fehlermeldung in der Ausgabekonsole.
+
+Im Datenbank Dateiauswahlfenster geben Sie den Namen des Layers an, der aus
+dem Ergebnis der Abfrage erstellt werden soll.
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{evissql_query}Der Reiter SQL-Abfrage in eVis \nixcaption}
+\includegraphics[clip=true, width=10cm]{evissql_query}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{SQL-Abfrage}: Ein Fenster zur Eingabe von SQL-Abfragen.
+\item \textbf{Abfrage ausführen}: Knopf, um die SQL-Abfrage auszuführen.
+\item \textbf{Ausgabekonsole}: Hier werden Informationen zu den Prozessen
+angezeigt. 
+\item \textbf{Hilfe}: Zeigt die Online-Hilfe an.
+\item \textbf{OK}: Schließt das Fenster ``Datenbankverbindung''.  
+\end{itemize}
+
+Verwenden Sie die \dropmenuopt{X Koordinate} und \dropmenuopt{Y Koordinate}
+Dropdown-Menüs, um die Spalten der Datenbank zu selektieren, in denen die
+``X'' (Longitude) und ``Y'' (Latitude) Koordinaten abgelegt sind.
+Wenn Sie nun auf den \button{OK} Knopf drücken, wird ein Vektorlayer
+entsprechend der SQL-Abfrage erstellt und als neuer Layer in QGIS angezeigt.
+
+Sie können den Layer als Shapefile speichern, wenn Sie mit dem Mauspfeil auf
+den Layernamen in der Legende zeigen und dann auf die rechte Maustaste
+klicken. Dort erscheint dann die Option `Als Shapefile speichern''. 
+
+\begin{Tip}\caption{\textsc{Einen Vektorlayer von einem Microsoft Excel
+Arbeitsblatt erstellen}}
+Beim Erstellen eines Vektorlayers aus einem Microsoft
+Excel-Arbeitsblattes entdecken Sie vielleicht, dass unerwünschte Nullwerte
+(`` 0'') gemeinsam mit gültigen Daten in den Tabellenzeilen vorhanden sind.
+Dies kann verursacht werden, wenn Sie die Felder in Excel mit der Backspace
+Taste gelöscht haben. Um dieses Problem zu beheben, müssen Sie die
+Excel-Datei öffnen. (Sie müssen dazu QGIS und die Verbindung zur Excel-Tabelle
+zuerst beenden.) Dann können Sie die Datei in Excel bearbeiten und die leeren
+Zeilen über das Menü Bearbeiten \arrow Löschen entfernen und dann wieder
+abspeichern.
+\end{Tip}
+
+\minisec{Vordefinierte Abfragen starten}\label{evis_predefined}
+
+Über den Reiter \tab{Vordefinierte Abfragen} können Sie zuvor schriftlich
+erstellte SQL-Abfragen, die als Datei im XML-Format gespeichert werden, wieder
+aufrufen. Dies ist besonders hilfreich, wenn Sie nicht vertraut sind mit
+SQL-Befehlen. Klicken Sie auf den Reiter \tab{Vordefinierte Abfragen}, um die
+vordefinierte Abfrage-Schnittstelle zu öffnen.
+
+Um eine Reihe von vordefinierten Abfragen zu laden, klicken Sie auf das
+\toolbtntwo{evis_file}{Datei öffnen} Icon. Dann können Sie die Datei mit den
+abgespeicherten SQL-Befehlen auswählen und laden. Danach erscheinen die
+einzelnen Abfragen im Dropdown-Menü. Eine Beschreibung der SQL-Abfrage wird
+jeweils im Textfenster unterhalb des Dropdown-Menüs angezeigt.
+
+Wählen Sie nun eine Abfrage, die Sie aus dem Dropdown-Menü ausführen möchten und
+klicken Sie auf den Reiter \tab{SQL-Abfrage}, um die Abfrage anzuschauen.
+Wenn Sie eine vordefinierten Abfrage das erste Mal starten, müssen Sie sich
+erst vergewissern, dass die Datenbankverbindung steht.
+
+Klicken Sie auf den Knopf \button{Abfrage ausführen} im Reiter
+\tab{SQL-Abfrage}. Wenn die Abfrage erfolgreich ist, wird ein Auswahlfenster
+angezeigt. Wenn die Abfrage nicht erfolgreich ist, erscheint eine
+Fehlermeldung in der Ausgabekonsole.
+
+\begin{figure}[htp]
+   \begin{center}
+\caption{\label{evispredefined}Der Reiter Vordefinierte Abfrage in eVis \wincaption}
+\includegraphics[clip=true, width=10cm]{evispredefined}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \textbf{Öffne Datei:}: Startet den ``Datei öffnen'' Dialog, um eine
+XML-Datei mit vordefinierten Abfragen zu laden.
+\item \textbf{Vordefinierte Abfragen}: Eine Dropdown-Liste mit allen Abfragen
+der bereits erstellten XML-Datei.
+\item \textbf{Abfragebeschreibung}: Eine Beschreibung der Abfrage. Diese
+Beschreibung ist in der XML-Datei enthalten.
+\item \textbf{Konsolenfenster}: Hier werden Informationen zu den Prozessen
+angezeigt.
+\item \textbf{Hilfe}: Zeigt die Online-Hilfe an.
+\item \textbf{OK}: Schließt das Fenster ``Datenbankverbindung''.
+\end{itemize}
+
+\minisec{XML-Format für vordefinierte Abfragen in eVis}\label{evis_xml_format}
+
+\begin{table}[htp]\index{Plugins!eVis}
+\centering
+\caption{Die von eVis gelesenen XML-Tags}\label{tab:evis_xml_tags}\medskip
+ \begin{tabular}{|p{1.2in}|p{4.7in}|}
+ \hline \textbf{Tag} & \textbf{Beschreibung}\\
+ \hline query & Definiert den Anfang und das Ende einer Abfrage.\\
+ \hline shortdescription & Eine kurze Beschreibung der Abfrage, die im eVis
+Dropdown-Menü erscheint.\\
+ \hline description & Eine detailiertere Beschreibung der Abfrage, die in der
+eVis Abfragebeschreibung angezeigt wird.\\
+ \hline databasetype & Der Datebanktyp, wie er im Dropdown-Menü Datenbanktyp
+festgelegt wurde.\\
+ \hline databaseport & Der definierte Port, über den die Verbindung
+mit der Datenbank stattfindet.\\
+ \hline databasename & Der definierte Datenbankname aus dem Reiter
+Datenbankverbindung.\\
+ \hline databaseusername & Der definierte Benutzername aus dem Reiter
+Datenbankverbindung.\\
+ \hline databasepassword & Das definierte Passwort aus dem Reiter
+Datenbankverbindung.\\
+ \hline sqlstatement & Die SQL-Abfrage.\\
+ \hline autoconnect & Eine Option (``true'' oder ``false''), die festlegt, ob
+automatisch mit der Datenbank verbunden werden soll, ohne die Routine aus dem
+Reiter ``Datenbankverbindung'' zu durchlaufen. \\
+ \hline
+\end{tabular}
+\end{table}
+
+Ein Beispiel einer XML-Datei mit drei Abfragen ist unten dargestellt.
+
+\begin{verbatim}
+<?xml version="1.0"?>
+<doc>
+ <query>
+   <shortdescription>Import all photograph points</shortdescription>
+   <description>This command will import all of the data in the SQLite database to QGIS
+      </description>
+   <databasetype>SQLITE</databasetype>
+   <databasehost />
+   <databaseport />
+   <databasename>C:\textbackslash Workshop/textbackslash
+eVis\_Data\textbackslash PhotoPoints.db</databasename>
+   <databaseusername />
+   <databasepassword />
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
+      Points ON Points.rec_id=Attributes.point_ID</sqlstatement>
+   <autoconnect>false</autoconnect>
+ </query>
+  <query>
+   <shortdescription>Import photograph points "looking across Valley"</shortdescription>
+   <description>This command will import only points that have photographs "looking across 
+      a valley" to QGIS</description>
+   <databasetype>SQLITE</databasetype>
+   <databasehost />
+   <databaseport />
+   <databasename>C:\Workshop\eVis_Data\PhotoPoints.db</databasename>
+   <databaseusername />
+   <databasepassword />
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
+      Points ON Points.rec_id=Attributes.point_ID where COMMENTS='Looking across 
+      valley'</sqlstatement>
+   <autoconnect>false</autoconnect>
+ </query>
+ <query>
+   <shortdescription>Import photograph points that mention "limestone"</shortdescription>
+   <description>This command will import only points that have photographs that mention 
+      "limestone" to QGIS</description>
+   <databasetype>SQLITE</databasetype>
+   <databasehost />
+   <databaseport />
+   <databasename>C:\Workshop\eVis_Data\PhotoPoints.db</databasename>
+   <databaseusername />
+   <databasepassword />
+   <sqlstatement>SELECT Attributes.*, Points.x, Points.y FROM Attributes LEFT JOIN 
+      Points ON Points.rec_id=Attributes.point_ID where COMMENTS like '%limestone%'
+      </sqlstatement>
+   <autoconnect>false</autoconnect>
+ </query>
+</doc>
+\end{verbatim}
+
+\FloatBarrier
+

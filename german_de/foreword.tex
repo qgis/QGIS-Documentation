@@ -1,0 +1,304 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+\mainmatter
+\pagestyle{scrheadings}
+\addchap{Vorwort}\label{label_forward}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Willkommen in der wunderbaren Welt der Geographischen Informationssysteme
+(GIS)! Quantum GIS ist ein Freies (Open Source) GIS. Die Idee zu dem Projekt wurde
+im Mai 2002 geboren und bereits im Juni desselben Jahres bei SourceForge
+etabliert. Wir haben hart daran gearbeitet, traditionell sehr teure GIS Software
+kostenfrei für jeden, der Zugang zu einem PC hat, bereitzustellen.
+QGIS kann unter den meisten Unices, Windows und MacOSX betrieben werden. QGIS
+wurde mit Hilfe des Qt toolkit (\url{http://qt.nokia.com}) und C++
+entwickelt. Dadurch ist QGIS sehr benutzerfreundlich und besitzt eine einfach
+zu bedienende und intuitive grafische Benutzeroberfläche.
+
+QGIS soll ein einfach zu benutzendes GIS sein und grundlegende
+GIS-Funktionalitäten bieten. Das anfängliche Ziel bestand darin, einen
+einfachen Geo-Datenviewer zu entwickeln. Dieses Ziel wurde bereits mehr als
+erreicht, so dass QGIS mittlerweile von vielen Anwendern für ihre tägliche
+Arbeit eingesetzt wird. QGIS unterstützt eine Vielzahl von Raster- und
+Vektorformaten. Mit Hilfe der Plugin-Architektur können weitere
+Funktionalitäten einfach ergänzt werden.
+
+QGIS wird unter der GNU Public License (GPL) herausgegeben. Für die
+Entwicklung des Programms bedeutet dies das Recht, den Quellcode einzusehen
+und entsprechend der Lizens verändern zu dürfen. Für die Anwendung der
+Software ist damit garantiert, dass QGIS kostenfrei aus dem Internet
+heruntergeladen, genutzt und weitergegeben werden kann. Eine vollständige
+Kopie der Lizenz ist dem Programm beigefügt und kann auch im Appendix
+\ref{gpl_appendix} eingesehen werden.
+
+\begin{Tip}\caption{\textsc{Aktuelle Dokumentation finden}}\index{Dokumentation}
+Die aktuellste Version dieses Dokumentes wird unter
+\url{http://download.osgeo.org/qgis/doc/manual/} und im Dokumentationsbereich
+der QGIS Webseite \url{http://www.qgis.org/de/dokumentation/} bereitgestellt.
+\end{Tip}
+
+\addsec{Funktionalitäten}\label{label_majfeat}
+
+Quantum GIS bietet zahlreiche GIS Funktionalitäten, die über Kernmodule und
+Plugins bereitgestellt werden. Die wichtigsten sind hier als Überblick in
+sechs Kategorien unterteilt aufgelistet.
+
+\minisec{Daten visualisieren}
+
+Es ist möglich, Vektor- und Rasterdaten in unterschiedlichen Formaten und aus
+verschiedenen Projektionen anzuschauen und zu überlagern, ohne die Daten
+selbst in irgendeiner Art und Weise konvertieren zu müssen. Zu den
+unterstützten Datenformaten gehören z.B.:
+
+\begin{itemize}[label=--]
+\item PostgreSQL/PostGIS, Vektorformate, welche durch die installierte OGR 
+Bibliothek unterstützt werden. Dazu zählen die Formate ESRI Shape, MapInfo, 
+SDTS oder auch GML;
+\item Raster- und Bilddatenformate, welche durch die installierte GDAL
+Geospatial Data Abstraction Library) Bibliothek unterstützt werden, wie etwa
+GeoTiff, Erdas Img., ArcInfo Ascii Grid, JPEG oder PNG;
+\item SpatiaLite Datenbanken (siehe Kapitel~\ref{label_spatialite})
+\item GRASS Raster- und Vektordaten aus einer GRASS Datenbank
+(Location/Mapset), siehe Kapitel \ref{sec:grass},
+\item Online Geodaten, welche mittels OGC-konforme WMS- (Web Map Service)
+oder WFS-Dienste (Web Feature Service) bereitgestellt werden, siehe Kapitel 
+\ref{work_ogc}
+\item OpenStreetMap Daten, siehe Kapitel \ref{plugins_osm}.
+\end{itemize}
+
+\minisec{Daten erkunden, abfragen und Karten layouten} 
+
+In QGIS können Daten mit Hilfe der einfach zu bedienenden grafischen
+Benutzeroberfläche interaktiv erkundet und abgefragt werden. Darüberhinaus
+ist es möglich, druckfertige Karten zu layouten. Zu den zahlreichen
+Funktionalitäten gehört: 
+
+\begin{itemize}[label=--]
+\item Umprojizieren von Daten "'On The Fly"' (OTF)
+\item Drucklayouts erstellen mit dem Map Composer
+\item Kartenübersichtsfenster
+\item Räumliche Bookmarks
+\item Identifizieren/Selektieren von Objekten
+\item Editieren/Visualisieren/Suchen von Attributdaten
+\item Objekte beschriften
+\item Eigenschaften und Darstellung von Vektor- und Rasterdaten ändern
+\item Überlagerung des Kartenfensters mit einem Gradnetz über das fTool Plugin
+\item Hinzufügen von Nordpfeil, Maßstab und Copyright Informationen
+\item Speichern und Laden von QGIS Projekten
+\end{itemize}
+
+\minisec{Daten erstellen, editieren, verwalten und exportieren}
+
+In QGIS können Vektordaten erstellt, editiert, verwaltet und in
+unterschiedliche Formate exportiert werden. Rasterdaten müssen derzeit noch
+in eine GRASS Datenbank importiert werden, um editiert und in andere Formate
+exportiert werden zu können. QGIS bietet aktuell folgende Funktionalitäten:
+
+\begin{itemize}[label=--]
+\item Digitalisierfunktionen für OGR-unterstützte Vektorformate sowie GRASS
+Vektorlayer
+\item Erstellen und Editieren von ESRI Shapes und GRASS Vektorlayern 
+\item Geocodierung von Bilddaten mit Hilfe des Georeferenzier-Plugins
+\item GPS Werkzeuge zum Import und Export von GPX Daten, zur Konvertierung
+anderer GPS-Datenformate ins GPX-Format sowie das direkte Importieren und
+Exportieren von GPX Daten auf ein GPS-Gerät. Unter GNU/Linux auch über USB.
+\item OpenStreetMap Daten visualisieren und editieren.
+\item Erstellen von PostGIS Layern aus ESRI Shapes mit dem SPIT Plugin mit
+erweiterten Funktionen bei der Arbeit mit PostGIS Tabellen.
+\item Verwaltung von Vektor-Attributen in der neuen Attributtabelle (siehe
+Kapitel~(\ref{sec:attribute table})) oder dem Table Manager Plugin.  
+\end{itemize}
+
+\minisec{Daten analysieren} 
+
+Mit den QGIS fTools können PostgreSQL/PostGIS und OGR-unterstützte
+Vektorformate räumlich analysiert werden. Zu den Funktionalitäten des Plugins
+gehört Geometrie- und Attributdaten Management sowie Module zur Analyse und
+Geoprozessierung von Vektordaten. Mit dem GRASS Plugin können zusätzlich mehr
+als 400 GRASS Module auf Geodaten, die in einer GRASS Datenbank abgelegt
+sind, angewendet werden (siehe Kapitel~\ref{sec:grass}).
+
+\minisec{Karten im Internet veröffentlichen}
+
+QGIS kann auch dazu verwendet werden, um Mapfiles für Daten zu erstellen und
+dann z.B. mit Hilfe eines installierten UMN MapServer über das Internet zur
+Verfügung zu stellen. Darüberhinaus kann QGIS als WMS und WFS Client und als
+WMS Server verwendet werden.
+
+\minisec{Erweiterung der QGIS Funktionalität mittels Plugins} 
+
+QGIS bietet eine erweiterbare Plugin-Architektur und kann dadurch an die
+individuellen Benutzeransprüche angepasst werden. Hierzu stellt QGIS
+Bibliotheken zur Verfügung die verwendet werden können, um eigene Plugins
+oder auch eigenständige Applikationen in C++ oder Python zu schreiben.
+
+\minisec{Kern Plugins}
+
+\begin{enumerate}
+\item Copyright Label hinzufügen
+\item Diagramm Überlagerung
+\item Dxf2Shp Konverter
+\item GDAL-Georeferenzierer
+\item GPS Werkzeuge
+\item GRASS GIS Integration
+\item GdalTools
+\item Interpolationserweiterung
+\item Koordinaten aufnehmen
+\item Mapserver Export
+\item Massstab hinzufügen
+\item Nordpfeil hinzufügen
+\item Offline-Bearbeitung
+\item OpenStreetMap Daten anzeigen und editieren
+\item Auf Oracle-Spatial-GeoRaster zugreifen
+\item Python Plugin Installer
+\item Rastergeländeanalyse
+\item Räumliche Abfrageerweiterung
+\item SPIT (Shapes nach PostgreSQL/PostGIS Import Tool)
+\item SQL-Anywhere Erweiterung
+\item Strassengraph Erweiterung (Kürzeste Wege)
+\item Textdatei als Layer importieren
+\item Verschiebungserweiterung
+\item WFS Layer hinzufügen
+\item eVIS - Event Visualization Tool
+\item fTools für die Analyse von Shapes
+\end{enumerate}
+
+\minisec{Externe Python Plugins}
+
+QGIS stellt eine wachsende Anzahl von externen Python Plugins bereit,
+die von Anwendern erstellt wurden. Diese werden in einem offiziellen sowie
+zahlreichen inoffiziellen PyQGIS Repositories vorgehalten und können mit
+Hilfe des Python Plugin Installers in QGIS integriert werden (siehe
+Kapitel~\ref{sec:plugins}).
+
+\minisec{Was ist neu in Version~\CURRENT}
+
+Bitte beachten Sie dass es sich hier um eine Veröffentlichung der neuesten 
+Entwicklerversionen handelt. Im Vergleich zu der Version QGIS \OLD enthält 
+diese Version über 277 Fehlerkorrekturen und viele neue Funktionen und 
+Erweiterungen. An dieser Stelle wollen wir nur eine Stichpunktliste der 
+wichtigsten neuen Funktionen darstellen.
+
+\minisec{Darstellung, Beschriftungen und Diagramme}
+
+\begin{itemize}[label=--]
+\item Die neue Darstellung ist nun voreingestellt!
+\item Bei der Überlagerung von Diagrammen wird nun auch 'smart labeling' wie für die neue Beschriftung verwendet.
+\item Export und Import von Stilen (neue Darstellung).
+\item Beschriftungen für Regeln in regelbasierter Darstellungen.
+\item Schriftsymbole können einen X/Y-Versatz haben.
+\item Liniendarstellung: 
+\begin{itemize}[label=--]
+\item Möglichkeit, eine Markierung in der Linienmitte darzustellen.
+\item Möglichkeit, eine Markierung auf den ersten/letzten Punkt eine Linie zu setzen.
+\item Markierungen an jedem Stützpunkt einer Linie.
+\end{itemize}
+\item Polygondarstellung:
+\begin{itemize}[label=--]
+\item Drehung von SVG-Füllungen.
+\item 'Zentroidfüllungslayer', der eine Markierung auf den Polygonmittelpunkt setzt.
+\item Ein Liniensymbollayer kann für die Randdarstellung von Polygone definiert werden.
+\end{itemize}
+\item Beschriftung:
+\begin{itemize}[label=--]
+\item Möglichkeit Beschrifungsabstände in Karteneinheiten anzugeben.
+\item Werkzeuge zum interaktiven Verschieben/Rotieren/Ändern von datendefinierten Beschriftungen.
+\end{itemize}
+\item Neue Werkzeuge
+\begin{itemize}[label=--]
+\item Benutzeroberfläche für gdaldem.
+\item Neuen Feldrechnerfunktionen wie \$x, \$y und \$perimeter.
+\item Werkzeug 'Linien in Polygone'' zum Vektormenü hinzugefügt.
+\item Voronoi-Polygon-Werkzeug im Vektormenü.
+\end{itemize}
+\end{itemize}
+
+\minisec{Anderungen der Benutzeroberfläche}
+
+\begin{itemize}[label=--]
+\item Fehlende Layer in eine Liste bearbeiten.
+\item Zoom auf eine Gruppe von Layern.
+\item 'Tipp des Tages' beim Start. Sie können die Tipps in den Optionen an/ausschalten.
+\item Bessere Organisation der Menüs, separates Datenbankmenü hinzugefügt.
+\item Möglichkeit ergänzt die auf Legendenklassen entfallende Objektanzahlen anzuzeigen. Zugänglich über ads Kontextmenü.
+\item Allgemeine Vereinheitlichungen und Bedienungsverbesserungen.
+\end{itemize}
+
+\minisec{KBS Benutzung}
+
+\begin{itemize}[label=--]
+\item Aktives KBS wird in der Statuszeile angezeigt.
+\item Dem Projekt das KBS eines Layer zuweisen (im Legendenkontextmenü).
+\item Vorgabe für KBS neuere Projekte.
+\item Zuweisung eines KBS zu mehreren Layern auf einmal.
+\item Das zuletzt gewählte KBS ist Vorgabe für die Auswahl.
+\end{itemize}
+
+\minisec{Raster}
+
+\begin{itemize}[label=--]
+\item UND und ODER-Operator für den Rasterrechner.
+\item On-the-fly Reprojektion für Raster hinzugefügt!
+\item Saubere Implementierung von Raster providern.
+\item Rasterwerkzeugleiste mit Histogrammstreckungsfunktionen.
+\end{itemize}
+
+\minisec{Providers and Data Handling}
+
+\begin{itemize}[label=--]
+\item Neuer SQLAnywhere-Vektorlieferant.
+\item Tabellenverknüpfungen erstellen
+\item Objektformularaktualisierungen
+\item Die Repräsentation des Nullwerts (NULL) ist konfigurierbar.
+\item Objektaktualisierungen über Formulare aus der Attributtabelle heraus repariert.
+\item Unterstützung für Nullwerte in Wertabbildungen (Comboboxes) ergänzt.
+\item Layernamen statt Layerkennungen in den Auswahllisten für das Laden von Wertabbildungen aus Layern.
+\item Unterstützung für Ausdrucksfelder: Bearbeitungszeilen (Lineedits) in Formularen deren Name mit 'expr\_' beginnt werden ausgewerten. Ihr Wert wird als Feldrechnerausdruck verstanden und durch deren berechneten Wert ersetzt.
+\item Unterstützung für die Suchen nach Nullwerten in der Aattributtabelle.
+\item Attributbearbeitungsverbesserungen
+\item Verbesserung der interaktiven Bearbeitung in der Tabelle (Hinzufügen und löschen von Objekten, Attributänderungen).
+\item Hinzufügen von Geometrielosen Objekten.
+\item Attribute undo/redo korrigiert.
+\item Attributbehandlung verbessert.
+\item Optional kann der zuletzt eingegebene Attributwert für das nächste Objekt verwendet werden.
+\item Möglichkeit Attributwerte mehrerer Objekte zusammenzuführen/zuzuweisen.
+\item OGR-'Speichern als' auch ohne Attribute erlauben (z.B. für DGN/DXF).
+\end{itemize}
+
+\minisec{API- und entwicklerbezogen}
+
+\begin{itemize}[label=--]
+\item Attributdialogaufrufe in der Klasse QgsFeatureAttribute gesammelt.
+\item QgsVectorLayer::featureAdded Signal ergänzt.
+\item Layermenufunktion ergänzt.
+\item Möglichkeit hinzugefügt C++-Erweiterungen aus benutzerdefinierten Verzeichnissen zu laden. Erfordert einen Programmneustart zur Aktivierung.
+\item Komplett neuses Geometrieprüfungswerkzeug für fTools. Bedeutend schneller, sachdienlichere Fehlermeldungen und Möglichkeit zu Fehlern zu zoomen. Siehe neue QgsGeometry.validateGeometry Methode.
+\end{itemize}
+
+\minisec{QGIS Server}
+
+\begin{itemize}[label=--]
+\item WMS-Diensteigenschaften können im Eigenschaftenabschnitt der Projektdatei (statt der Datei wms\_metadata.xml) gespeichert werden.
+\item Unterstützung für WMS-Druck über GetPrint-Anfragen.
+\end{itemize}
+
+\minisec{Erweiterungen}
+
+\begin{itemize}[label=--]
+\item Unterstützung für Erweiterungsicons im Erweiterungsverwaltungsdialog.
+\item Schnelldruck-Erweiterung wurde entfernt - Nutzen Sie die EasyPrint-Erweiterung aus dem Erweiterungsrepository.
+\item OGR-Konvertererweiterung entfernt - benutzen Sie stattdessen 'Speichern als' aus dem Kontextmenü.
+\end{itemize}
+
+\minisec{Drucken}
+
+\begin{itemize}[label=--]
+\item Undo/Redo-Unterstützung für die Druckzusammenstellung
+\end{itemize}
+
+\newpage

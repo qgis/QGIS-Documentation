@@ -1,0 +1,166 @@
+% vim: set textwidth=78 autoindent:
+
+\section{GPS Plugin}\label{label_plugingps}\index{Plugins!GPS Werkzeuge}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+GPS, das 'Global Positioning System', ist ein satellitengestützes System, das
+jeder Person mit einem GPS-Empfänger erlaubt, seine exakte Position anhand
+von Koordinaten irgendwo auf der Welt anzeigen zu lassen. Es wird bei der
+Navigation von Flugzeugen, Booten oder auch von Wanderern als Hilfsmittel
+benutzt. Der GPS-Empfänger benutzt dabei Signale der Satelliten um Längen-
+und Breitengrad und manchmal auch die aktuelle Höhe zu berechnen. Die meisten
+Empfänger können die Positionen auch in Form von \emph{Wegpunkten},
+\emph{Routen} oder \emph{Spuren} speichern. QGIS stellt Wegpunkte als
+Punktdatei und Routen sowie Spuren als Vektorlinien dar.
+
+\subsection{GPS-Daten aus einer Datei laden}\label{label_loadgps}
+
+Es gibt viele verschiedene Datenformate zum Speichern von GPS-Daten. Das von
+QGIS unterstützte Format ist GPX (GPS eXchange format), ein Standardformat,
+welches Wegpunkte, Routen und Spuren in einer Datei enthalten kann.
+
+Um eine GPX-Datei zu laden, müssen Sie das Plugin "'GPS Werkzeuge"' über das
+Menü \mainmenuopt{Plugins} \arrow
+\dropmenuopttwo{mActionShowPluginManager}{Plugins verwalten} aktivieren. Wenn
+das Plugin aktiviert ist, erscheint das \toolbtntwo{gps_importer}{GPS
+Werkzeuge} in der Werkzeugleiste von QGIS. Eine GPX-Datei
+\filename{/qgis\_sample\_data/gps/national\_monuments.gpx} finden Sie im QGIS
+Beispieldatensatz (siehe Kapitel~\ref{label_sampledata}) 
+
+\begin{enumerate}
+\item Klicken Sie auf das Icon \toolbtntwo{gps_importer}{GPS Werkzeuge} und
+wählen Sie den Reiter \tab{GPX-Datei laden}.
+\item \button{Suchen} Sie den Ordner \filename{qgis\_sample\_data/gps/},
+wählen Sie die Datei \filename{national\_monuments.gpx} und wählen Sie den
+Objekttypen \checkbox{Wegpunkte}.
+\item Klicken Sie auf \button{OK}.
+\end{enumerate}
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{gpxloader}Der GPS Werkzeuge Dialog \nixcaption}
+\includegraphics[clip=true, width=12cm]{loadgpx}
+\end{center}
+\end{figure}
+
+Jeder Dateityp (Wegpunkte, Routen und Spuren) wird in einen eigenen Layer
+geladen. Die Datei \filename{national\_monuments.gpx} aus dem Beispiel
+enthält aber nur Wegpunkte.
+
+\subsection{GPSBabel}
+
+Weil QGIS nur das GPX-Format unterstützt, müssen Sie einen Weg finden, um
+andere GPS-Datenformate nach GPX zu konvertieren. Dies können Sie in vielen
+Fällen mit der Freien Software GPSBabel erledigen, erhältlich unter der URL:
+\url{http://www.gpsbabel.org}. Diese Software kann auch GPS-Daten von Ihrem
+PC zu Ihrem GPS-Empfänger transferieren und umgekehrt. QGIS benutzt GPSBabel
+auch dazu, daher ist es ratsam, es zu installieren. Wenn Sie aber lediglich
+GPX-Dateien in QGIS laden möchten, geht dies auch ohne GPSBabel. Version
+1.2.3 funktioniert auf jeden Fall mit QGIS, neuere aber wahrscheinlich auch.
+
+\subsection{GPS-Daten importieren}
+
+Um GPS-Daten aus einer Datei, die nicht im GPX-Format vorliegt zu importieren,
+benutzen Sie den Reiter \tab{Aus anderer Datei importieren}. Wählen Sie dann
+die Datei (und den Dateityp), die importiert werden soll aus, von welchem
+Datenformat Sie importieren möchten und wo die konvertierte GPX-Datei unter
+welchem Namen abgelegt werden soll.
+
+Beachten Sie, dass nicht für alle Datenformate die drei GPS-Datentypen
+Wegpunkte, Routen und Spuren unterstützt werden. Manchmal sind es nur ein
+oder zwei.
+
+\subsection{GPS-Daten von einem Empfänger herunterladen}
+
+QGIS kann mit dem Programm GPSBabel GPS-Daten direkt von einem GPS-Empfänger
+in einen Vektorlayer laden. Dazu können Sie den Reiter \tab{Vom GPS
+herunterladen} verwenden (vgl. Abbildung \ref{figure_download}), indem Sie
+den Typ Ihres GPS-Empfängers angeben, den Verbindungsport, den Namen der
+GPX-Datei, in welche die Daten konvertiert werden sollen und schließlich den
+Namen des neuen Vektorlayers in QGIS.
+
+\begin{figure}[ht]
+   \begin{center}
+\caption{\label{figure_download}Daten vom GPS herunterladen \nixcaption}
+\includegraphics[clip=true, width=12cm]{download}
+   \end{center}
+\end{figure}
+
+Durch die Angabe des Typs Ihres GPS-Empfängers legen Sie fest, wie GPSBabel
+mit dem Gerät kommuniziert. Wenn kein vorhandener Typ mit Ihrem Empfänger
+funktioniert, können Sie einen eigenen, neuen Gerätetyp erstellen (vgl.
+Abschnitt~\ref{sec:Defining-new-device}).
+
+Der Verbindungsport ist ein Dateiname oder ein anderer Name, den Ihr System
+als Referenz für den physischen Port benutzt, über den eine Verbindung zum
+GPS-Empfänger hergestellt wird. Unter \nix ist das etwa wie /dev/ttyS0
+oder /dev/ttyS1 und unter \win ist es COM1 oder COM2. Es kann auch einfach
+USB sein, wenn dies von dem GPS-Gerät unterstützt wird.
+
+Wenn Sie auf \button{OK} klicken, werden die Daten vom GPS-Empfängers
+heruntergeladen und in QGIS als Vektorlayer dargestellt.
+
+\subsection{GPS-Daten auf einen Empfänger hochladen}
+
+Sie können auch einen Vektorlayer aus QGIS auf einen GPS-Empfänger hochladen,
+indem Sie den Reiter \tab{Zum GPS hochladen} verwenden. Der Vektorlayer muss
+dazu ein GPX-layer sein. Sie wählen dazu einen entsprechenden Layer aus, den
+Typ Ihres GPS-Empfängers und den Verbindungsport. Genau wie beim Reiter
+\tab{Vom GPS herunterladen} können Sie bei Bedarf auch einen eigenen, neuen
+Empfänger-Typ erstellen, wenn Ihr Gerät nicht in der Liste auftaucht.
+
+Dieses Werkzeug ist sehr nützlich, besonders im Zusammenspiel mit den
+Vektorfunktionen von QGIS. Sie können eine Karte laden, ein paar Wegpunkte
+oder Routen digitalisieren und es dann auf Ihren GPS-Empfänger hochladen.
+
+\subsection{Neues GPS-Gerät definieren}
+\label{sec:Defining-new-device}
+
+Es gibt eine große Vielfalt an GPS-Empfängern, und die QGIS-Entwickler können
+nicht alle testen. Wenn Sie also ein Gerät haben, das nicht mit einem der bereits
+vorhandenen Gerätetypen funktioniert, können Sie selbst einen erstellen. Dazu
+klicken Sie auf den Knopf \button{Gerät bearbeiten} im Reiter \tab{Zum GPS
+hochladen} oder \tab{Vom GPS herunterladen}.
+
+Um ein neues Gerät zu definieren, klicken Sie auf den Knopf \button{Neues
+Gerät}, geben einen Namen sowie die Kommandos zum hinauf- und herunterladen der
+unterschiedlichen Datentypen (Wegpunkte, Routen und Spuren) ein und klicken
+dann auf \button{Gerät zum Hinaufladen}. Danach steht der Name des Gerätes in den
+Reitern \tab{Zum GPS hochladen} und \tab{Vom GPS herunterladen} zur
+Verfügung.
+
+Das Kommando zum herunterladen der unterschiedlichen Datentypen wird benutzt,
+um die Daten von Ihrem GPS-Empfänger in eine GPX-Datei zu transferieren. Es wird
+wahrscheinlich ein GPSBabel Kommando sein, kann aber auch ein anderes
+Kommandozeilenprogramm sein, das diese Aufgabe erfüllt. QGIS wird die
+Schlüsselwörter \usertext{\%type}, \usertext{\%in} und \usertext{\%out}
+ersetzen, wenn das Kommando ausgeführt wird.
+
+\usertext{\%type} wird ersetzt durch {}``\usertext{-w}'', wenn Sie Wegpunkte
+herunterladen, {}``\usertext{-r}'' wenn es eine Route ist und
+{}``\usertext{-t}'', wenn es sich um Spuren handelt. GPSBabel erfährt
+dadurch, um welchen GPS-Datentyp es sich handelt.
+
+\usertext{\%in} wird ersetzt durch den Namen des Verbindungsports und
+\usertext{\%out} durch den Namen, den Sie für die GPX-Datei gewählt haben.
+Wenn Sie also einen neuen Gerätetyp mit dem Kommando {}``\usertext{gpsbabel
+\%type -i garmin -o gpx \%in \%out}'' (es handelt sich hierbei um das
+Standard Kommando für einen ``\usertext{Garmin Serial}'') definieren und
+diesen benutzen, um Wegpunkte von Port {}``\usertext{/dev/ttyS0}'' in die
+Datei {}``\filename{output.gpx}'' zu schreiben, dann ersetzt QGIS die
+Schlüsselworte und startet das Kommando {}``\usertext{gpsbabel -w -i garmin
+-o gpx /dev/ttyS0 output.gpx}''.
+
+Das Kommando hinaufladen wird benutzt, um verschiedene Datentypen (Wegpunkte,
+Routen und Spuren) auf Ihren GPS-Empfänger zu transferieren. Es werden dazu
+die gleichen Schlüsselworte benutzt, nur dass \usertext{\%in} durch den Namen der
+hochzuladenen GPX-Datei und \usertext{\%out} durch den Namen des Verbindungsports
+ersetzt wird. Sie können mehr über GPSBabel und seine Funktionen unter der
+URL: \url{http://www.gpsbabel.org} erlernen.
+
+Wenn Sie einmal einen eigenen Gerätetypen erstellt haben, wird dieser in der
+Liste der GPS-Geräte dauerhaft angezeigt werden.
+

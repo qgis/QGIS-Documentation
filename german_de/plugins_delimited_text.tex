@@ -1,0 +1,87 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+
+\section{Getrennter Text Plugin}
+\label{label_dltext}
+\index{Plugins!Layer aus Textdatei laden}    
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Mit dem Getrennter Text Plugin können ASCII-Texttabellen, die u.a zwei
+Spalten für X- und Y-Koordinaten enthalten, als ein Layer in QGIS geladen
+werden.
+
+\minisec{Anforderungen}
+
+Um Datenspalten aus einer Textdatei in QGIS zu laden, muss diese Textdatei
+bestimmte Eigenschaften aufweisen:
+
+\begin{enumerate}
+\item Eine Kopfzeile mit den Spaltennamen. Diese Kopfzeile muss die erste
+Zeile der Datei sein
+\item Die Textdatei muss mindestens eine Spalte mit X- und eine mit
+Y-Koordinaten enthalten.
+Die Bezeichnungen in der Kopfzeile für diese Spalten können beliebig sein.
+\item Die X- und Y-Koordinaten müssen als Zahlen angegeben sein. Das
+Koordinatensystem spielt keine Rolle.
+\end{enumerate}
+
+Als Beispiel für einen Textdatei importieren wir die Datei
+\filename{elevp.csv} aus dem QGIS Beispieldatensatz \ref{label_sampledata}:
+
+\begin{verbatim} 
+X;Y;ELEV
+-300120;7689960;13
+-654360;7562040;52
+1640;7512840;3
+[...]
+\end{verbatim}
+
+Einige weitere Anmerkungen zu Textdateien:
+
+\begin{enumerate}
+\item  Die Beispieldatei verwendet \mbox{$;$} als Trennzeichen. Es können
+auch andere Zeichen zum Trennen der Spalten verwendet werden.
+\item Die erste Zeile ist die Kopfzeile. Sie enthält die Spaltennamen name,
+latdec, longdec und cell
+\item Anführungszeichen ({\tt{}"{}}) dürfen nicht als Trennzeichen benutzt
+werden
+\item Die X-Koordinaten sind in der Spalte {\em longdec} enthalten
+\item Die Y-Koordinaten sind in der Spalte {\em latdec} enthalten
+\end{enumerate}
+
+\minisec{Das Plugin verwenden}
+
+Um das Plugin zu verwenden, müssen Sie es zuerst laden, wie in
+Kapitel~\ref{sec:managing_plugins} beschrieben. 
+
+Klicken Sie danach auf das Icon \toolbtntwo{delimited_text}{Getrennter Text} in
+der Werkzeugleiste, um den Dialog zu öffnen (siehe
+Abbildung~\ref{fig:delim_text_plugin_dialog}).
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Plugin Getrennter Text \nixcaption}\label{fig:delim_text_plugin_dialog}\smallskip
+   \includegraphics[clip=true, width=11cm]{delimited_text_dialog}
+   \end{center}  
+\end{figure}
+
+Zuerst müssen Sie ein Trennzeichen für die Textspalten angeben. In diesem
+Beispiel ist es das Trennzeichen ein Semikolon (\mbox{$;$}). Danach wählen
+Sie mit den Knopf \button{Suchen} z.B. die Datei
+\filename{qgis\_sample\_data/csv/elevp.csv} aus dem QGIS Beispieldatensatz. 
+
+Damit die Textdatei richtig analysiert werden kann, ist es wichtig, das
+richtige Trennzeichen zu wählen. Im unteren Feld wird der Inhalt korrekt 
+in die vorkommenden Spalten unterteilt dargestellt. 
+
+Wählen Sie nun die Spalten für die X- und Y-Koordinaten aus, tragen einen
+Namen ein unter dem die Daten in QGIS angezeigt werden sollen und wenn 
+vorhanden auch die WKT-Spalte mit den KBS Informationen. Um die Daten zu 
+sehen, klicken Sie auf \button{Hinzufügen}. Der Layer verhält sich nun wie
+jeder andere Vektorlayer in QGIS.
+
+\FloatBarrier
+
