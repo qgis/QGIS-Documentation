@@ -1,0 +1,145 @@
+% vim: set textwidth=78 autoindent:
+
+\chapter{Einführung in GIS}\label{label_intro}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+%\updatedisclaimer
+
+Ein Geographisches Informationssystem (GIS)\cite{mitchel05}\footnote{Dieses
+Kapitel ist von Tyler Mitchell (\url{http://www.oreillynet.com/pub/wlg/7053})
+und wurde unter der Creative Commons License veröffentlicht. Tyler ist der
+Autor des Buches \textit{Web Mapping Illustrated}, veröffentlicht von
+O'Reilly, 2005.} besteht aus einer Auswahl verschiedener Software, die einem
+ermöglicht, geografische Daten zu erstellen, zu visualisieren, abzufragen und
+zu analysieren. Geografische Daten beziehen sich dabei auf Informationen über
+die geografische Lage von Objekten. Dies bedingt meist eine geografische
+Koordinate oder die Zuweisung eines Längen und Breitengrades. Neben der
+Bezeichnung Geografische Daten ist Räumliche Daten ein ebenfalls häufig
+benutzter Begriff, genau wie GIS-Daten, Kartendaten, Location-Daten,
+Koordinatendaten und räumliche Geometriedaten.
+
+Applikationen, die mit räumlichen Daten arbeiten, leisten eine Vielzahl
+unterschiedlicher Funktionen. Kartenerstellung ist dabei die am einfachsten
+zu begreifende GIS-Applikation. Mit Hilfe von Programmen werden dabei aus
+räumlichen Daten Karten erstellt, die digital auf PCs oder analog auf Papier
+gedruckt werden. Die Daten können dabei statisch (einfaches Bild) oder
+dynamisch (durch den Benutzer veränderbar) bereitgestellt werden.
+
+Viele Menschen nehmen irrtümlicherweise an, dass GIS-Applikationen nur zur
+Kartenerstellung benutzt werden. Räumliche Datenanalyse ist jedoch eine
+weitere wichtige Funktion von Geographischen Informationssystemen. Einige
+typische Analysen sind:
+
+\begin{enumerate}
+\item Messen von Distanzen zwischen geografischen Punkten
+\item Berechnung von Flächengrößen (z.B.: Quadratmeter) innerhalb einer
+Region
+\item Bestimmung der Überlappung unterschiedlicher räumlicher Objekte
+\item Bestimmung der überlappten Flächen innerhalb einer Region
+\item Die Anzahl von Ortschaften entlang einer definierten Distanz
+\item und so weiter...
+\end{enumerate}
+
+Dies mag einfach erscheinen, wird jedoch täglich für viele verschiedene
+Fragestellungen angewendet und benötigt. Die Ergebnisse derartiger Analysen
+können auf Karten visualisiert oder in Form von Tabellen als
+Entscheidungshilfe dienen.
+
+Das aktuelle Phänomen von ortsbasierten Diensten 'location-based services'
+verspricht dabei die räumliche Integration unterschiedlichster Informationen.
+Oft werden diese aus einer Kombination von Karten und darauf basierenden
+Analysen erstellt. Stellen Sie sich vor, Sie besitzen ein
+mobiles Telefon, dass ihre genaue geografische Position ermittelt. Wenn Sie
+die entsprechende Software nutzen, kann Ihnen das Telefon sagen, welche
+Restaurants sich in der Nähe befinden. Während dies eine neuartige
+GIS-Technlogie ist, ist das Analysieren von Geodaten und das Bereitstellen
+daraus gewonnener Informationen als eine Basis dafür zu verstehen.
+
+\section{Warum ist das alles so neu?}\label{label_whynew}
+
+Nun ja, ist es nicht. Es gibt heute viele Geräte auf dem Markt, die mobile
+räumliche Dienste anbieten, darunter auch viele Freie (Open Source)
+GIS-Applikationen. Die Existenz solcher Geräte ist nicht neu. GPS-Geräte
+sind z.B. heute für uns noch recht neu, werden aber von Unternehmen bereits
+seit mehr als 10 Jahren eingesetzt. Datenanalysen oder die digitale Erfassung
+der Umwelt mit dem PC auf Basis von Luftbildern war auch bereits früher ein
+kommerzieller Markt, der sich aber hauptsächlich auf Industrien aus dem
+Umweltsektor konzentriert hat.
+
+Neu an all dem ist, wie die neueste Hard- und Software angewendet wird und
+von wem. Traditionell waren Anwender von GIS-Applikationen hochspezialisierte
+Forscher oder Techniker, die in der Anwendung von CAD-ähnlichen Anwendungen
+geschult waren. Mittlerweile bietet die Leistungsfähigkeit moderner Heim-PCs
+zusammen mit Freier (Open Source) Software einer Armada von Hobbyanwendern,
+Internetentwicklern usw. die Möglichkeit, geografische Daten selber zu nutzen
+und zu erstellen. Die Lernkurve ist dabei immer flacher geworden, während die
+Anzahl der Anwendungsmöglichkeiten stetig gestiegen ist.
+
+Wie werden Geodaten gespeichert? Kurz gesagt gibt es zwei Datenmodelle, die
+heutzutage benutzt werden, ergänzend zu traditionell in tabellarischer Form
+abgelegten Informationen, die weiterhin eine wichtige Rolle bei der
+räumlichen Analyse spielen.
+
+\subsection{Rasterdaten}\label{label_rasterdata}
+
+Das eine Datenmodell wird als Rasterdaten, oder einfach als 'Raster'
+bezeichnet. Ein typisches Beispiel hierfür sind Satelliten- und Luftbilder,
+genauso wie Höhenmodelle. Abgesehen von ein paar Ausnahmen können fast alle
+Daten als Raster dargestellt und gespeichert werden.
+
+Ein Raster ist ein gleichmäßiges Gitter, das aus Zellen besteht, oder im
+Falle eines Bildes aus Pixeln. Ein Raster hat eine definierte Anzahl von
+Zeilen und Spalten. Jede Zelle hat einen numerischen Wert und eine bestimmt
+geografische Größe (z.B.: 30x30 Meter).
+
+Sich mehrfach überlagernde Raster werden benutzt, um Bilder mit mehr als
+einem Farbwert zu repräsentieren. Ein Beispiel hierfür sind die Rot-, Grün-
+und Blaukanäle eines Satellitenbildes. Jeder Kanal eines Satellitenbildes ist
+ein einzelnes, sich mit den anderen Kanälen räumlich überlappendes Raster,
+das jeweils eine bestimmte Wellenlänge des Lichts darstellt. Wie man sich gut
+vorstellen kann, benötigt ein großes Raster mehr Speicherplatz als ein
+kleines, und je kleiner die Zellen eines Rasters sind, desto mehr Details
+können zwar dargestellt werden, aber desto mehr Speicherplatz wird benötigt.
+Die Kunst besteht darin, die Balance zwischen der maximalen Detailschärfe für
+die Analyse und einem möglichst geringen Speichervolumen zu finden.
+
+\subsection{Vektordaten}\label{label_vectordata}
+
+Vektordaten sind das andere Datenmodell und werden ebenso in
+GIS-Applikationen genutzt. Falls Sie in der Schule bei den Themen
+Trigonometrie und Koordinatensysteme wach geblieben sind, sind Sie sicher
+vertraut mit den Qualitäten und Besonderheiten von Vektoren. Einfach gesagt
+beschreiben Vektoren einen Ort durch eine Anzahl von Koordinaten. Jede
+Koordinate bezieht sich auf einen bestimmtem geografischen Punkt mit Hilfe
+von X- und Y-Werten.
+
+Besser vorstellen kann man sich dies anhand einer kartesischen Ebene. Diese
+Diagramme aus der Schule mit einer x- und einer y-Achse. Vielleicht haben Sie
+es benutzt, um die sinkenden Renten oder steigenden Hypotheken darzustellen.
+Das Konzept ist ähnlich zur räumlichen Datenanalyse und Kartenerstellung.
+
+Es gibt verschiedene Wege, um geografische Koordinaten darzustellen, abhängig
+von den Absichten und Zielen. Das Thema Kartenprojektionen ist dabei jedoch
+sehr komplex und wird an dieser Stelle daher nicht weiter erklärt.
+
+Es gibt drei Arten von Vektordaten, die progressiv aufeinander aufbauen und
+dadurch immer komplexere Formen annehmen.
+
+\begin{enumerate}
+\item \textbf{Punkte} - Eine einzelne Koordinate (X Y) repräsentiert ein
+diskretes geografisches Objekt.
+\item \textbf{Linien} - Multiple Koordinaten (x1 y1, x2 y2, x3 y4, ... xn
+yn), die in einer bestimmten Anordnung miteinander verbunden sind. Etwa wie
+eine Linie von Punkt (x1 y1) nach Punkt (x2 y2) und so weiter. Die Strecken
+zwischen den einzelnen Punkten sind Liniensegmente. Sie haben eine Länge und
+eine Richtung entsprechend der Anordnung der Punkte. Technisch gesehen ist
+eine Linie ein Paar von Koordinaten, die miteinander verbunden sind, wobei
+eine Linienkette aus mehreren Linien zusammengesetzt ist.
+\item \textbf{Polygone} - Wenn Linien aus mehr als zwei Punkten bestehen und
+der letzte Punkte der Linie identisch mit dem ersten ist, wird das als
+Polygon bezeichnet. Dreiecke, Kreise, Rechtecke usw. sind Polygone. Die
+Schlüsseleigenschaft eines Polygons besteht darin, dass eine definierte
+Fläche dargestellt wird.
+\end{enumerate}
+

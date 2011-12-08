@@ -1,0 +1,64 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+
+\section{Rastergeländeanalyse Plugin}
+\label{sec:rasterrain}
+\index{Rastergeländeanalyse}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Das Rastergeländeanalyse Plugin ermöglicht es, Hangneigung (Neigung), 
+Exposition (Perspektive), Rauhigkeitsindex und Gesamtkrümmung auf 
+Basis eines Höhenmodells (DGM) zu berechnen. Es ist sehr einfach zu 
+handhaben und bietet eine intuitive grafische Benutzeroberfläche 
+(siehe Abbildung \ref{fig:raster_terrain_dialog}).
+Das Plugin benötigt die folgenden Parameter:
+
+\begin{itemize}[label=--]
+\item \textbf{Analyse}: Hier wählen Sie Neigung, Perspektive, 
+Rauhigkeitsindex oder Gesamtkrümmung.
+\item \textbf{Eingabelayer}: Wählen Sie eine Höhendatei aus den 
+geladenen Rasterlayern aus.
+\item \textbf{Ausgabelayer}: Geben Sie hier den Pfad und Namen der 
+Ausgabedatei an.
+\item \textbf{Ausgabeformat}: Wählen Sie das Ausgabeformat der 
+Ausgabedatei (Standard ist GeoTiff).
+\end{itemize}
+
+Analysefunktionen:
+
+\begin{itemize}[label=--]
+\item \textbf{Neigung}: Berechnet den Hangneigungswinkel für jede Zelle in Grad 
+basierend auf der geschätzten Ableitung erster Ordnung.
+\item \textbf{Perspektive}: Berechnung der Exposition. Beginnend mit 0 für Nord und dann in Grad gegen den Uhrzeigersinn.
+\item \textbf{Rauhigkeitsindex}: Eine quantitative Bestimmung der Heterogenität 
+eines Geländes.
+\item \textbf{Gesamtkrümmung}: Ein krümmungsmaß, das Planar- und Profilkrümmung 
+kombiniert.  
+\end{itemize}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Rastergeländeanalyse Plugin \nixcaption}
+   \label{fig:raster_terrain_dialog}\smallskip
+   \includegraphics[clip=true, width=12cm]{raster_terrain_dialog}
+\end{center}  
+\end{figure}
+
+\minisec{Das Plugin anwenden}\label{raster_terrain_usage}
+
+\begin{enumerate}
+  \item Starten Sie QGIS und laden Sie einen DGM Rasterlayer. 
+  \item Laden Sie das Rastergeländeanalyse Plugin im Plugin Manager 
+  (siehe Abschnitt \ref{sec:load_core_plugin}) und klicken Sie auf das 
+  Icon \toolbtntwo{raster_terrain}{Rasterbasierende Geländeanalyse} 
+  in der Werkzeugleiste. Der Plugin Dialog erscheint nun, wie in Abbildung 
+  \ref{fig:raster_terrain_dialog} zu sehen.
+  \item Wählen Sie eine Analysemethode (z.B.: \dropmenuopt{Neigung}).
+  \item Geben Sie eine Ausgabedatei mit Pfad und Dateiformat an und 
+  klicken Sie dann auf \button{Ok}.
+\end{enumerate}
+
+\FloatBarrier

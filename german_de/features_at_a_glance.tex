@@ -1,0 +1,1419 @@
+% vim:autoindent:set textwidth=78:
+% !TeX  root = user_guide.tex
+
+\chapter{Übersicht der Funktionalitäten}\label{feature_glance}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Nach der einfachen Übung aus Kapitel \ref{label_getstarted} geben wir an
+dieser Stelle eine umfassende Übersicht der QGIS Funktionalitäten. Eine
+detailliertere Beschreibung der einzelnen Funktionalitäten findet dann in den
+folgenden Kapiteln der Dokumentation statt.
+
+\section{QGIS Starten und Beenden}\label{label_startinqgis}
+
+In Kapitel \ref{samplesession} wurde bereits kurz gezeigt, wie QGIS gestarted
+wird. Dies wird hier wiederholt und Sie werden sehen, dass QGIS darüber hinaus
+noch eine Reihe von Kommandozeilenoptionen zur Verfügung stellt.
+
+\begin{itemize}[label=--]
+\item \nix{Wenn QGIS bereits in einem ausführbaren Pfad installiert ist,
+können Sie QGIS in einem Kommandozeilenfenster mit dem Befehl:
+\usertext{qgis} starten, oder durch einen Doppelklick auf das QGIS Icon auf
+dem Desktop oder im Programme Menü.}
+\item \win{Starten Sie QGIS über das Start Menü, das QGIS Desktop Icon oder
+durch Doppelklicken auf eine evtl. bereits vorhandene QGIS Projektdatei.}
+\item \osx{Doppelklicken Sie auf das QGIS Icon in Ihrem Programmordner. Wenn
+Sie QGIS aus der Shell starten wollen, verwenden Sie
+/Pfad-zu-den-ausführbaren-Dateien/Contents/MacOS/Qgis}.
+\end{itemize}
+
+Um QGIS zu beenden, klicken im Menü \{\nix{}\win{Datei} \osx{QGIS}\} \arrow
+Beenden, oder benutzen Sie das Tastenkürzel \keystroke{Strg+Q}.
+
+\subsection{Optionen der Kommandozeile}\index{Kommandozeilenoptionen}
+\label{label_commandline}
+
+\nix Wenn Sie QGIS in der Kommandozeile starten, stehen eine Reihe von
+Optionen zur Verfügung. Eine Liste erhalten Sie, indem Sie \usertext{qgis
+---help} eingeben. Die Ausgabe zeigt folgende Informationen:
+
+\small
+\begin{verbatim}
+qgis --help
+Quantum GIS - 1.7.0-Wroclaw 'Wroclaw' (exported)
+Quantum GIS (QGIS) is a viewer for spatial data sets, including
+raster and vector data.
+Usage: qgis [options] [FILES]
+  options:
+        [--snapshot filename]   emit snapshot of loaded datasets to given file
+        [--lang language]       use language for interface text
+        [--height height]       height of snapshot to emit
+        [--project projectfile] load the given QGIS project
+        [--extent xmin,ymin,xmax,ymax]  set initial map extent
+        [--noplugins]   	don't restore plugins on startup
+        [--optionspath path]    use the given QSettings path
+        [--configpath path]     use the given path for all user configuration
+        [--nologo]      	hide splash screen
+        [--help]                this text
+
+  FILES:
+    Files specified on the command line can include rasters,
+    vectors, and QGIS project files (.qgs):
+     1. Rasters - Supported formats include GeoTiff, DEM
+        and others supported by GDAL
+     2. Vectors - Supported formats include ESRI Shapefiles
+        and others supported by OGR and PostgreSQL layers using
+        the PostGIS extension
+\end{verbatim}
+\normalsize
+
+\begin{Tip} \caption{\textsc{Kommandozeilenoptionen beim Starten nutzen}}
+Sie können einen oder mehrere Kartenlayer in der Kommandozeile
+angeben, wenn Sie QGIS starten. Z.B.: Wenn Sie sich in dem Ordner
+\filename{qgis\_sample\_data} befinden, können Sie durch folgendes Kommando
+QGIS mit einem Vektor- und einen Rasterlayer starten: \usertext{qgis
+./raster/landcover.img ./gml/lakes.gml}
+\end{Tip}
+
+\minisec{Kommandozeilenoption \usertext{---snapshot}}
+Diese Option ermöglicht es, einen PNG-Snapshot des aktuellen Kartenfensters
+zu erstellen. Dies ist z.B. sinnvoll, wenn Sie zahlreiche Projekte angelegt
+haben und Snapshots von den Daten machen wollen.
+
+QGIS erstellt ein PNG-Bild mit 800x600 Pixeln. Dies können Sie mit den
+Parametern \usertext{---width} und \usertext{---height} anpassen und dann
+hinter der Option \usertext{---snapshot} einen Dateinamen angeben.
+
+\minisec{Kommandozeilenoption \usertext{---lang}}
+Auf Basis der Systemsprache Ihres Rechners wird auch die Sprache der
+QGIS-Oberfläche eingestellt. Wenn Sie diese ändern möchten, können Sie das
+mit der Option \texttt{---lang} erreichen. Eine Liste der unterstützten
+Sprachen finden Sie mit dem entsprechenden Länderkürzel unter
+\url{http://www.qgis.org/wiki/GUI_Translation_Progress}. 
+
+\minisec{Kommandozeilenoption \usertext{---project}}
+Es ist auch möglich, beim Starten von QGIS ein Projekt zu laden. Fügen Sie
+dazu die Option \texttt{---project} mit dem Namen ihres Projektes hinzu und
+QGIS lädt alle darin enthaltenen Daten direkt beim Start.
+
+\minisec{Kommandozeilenoption \usertext{---noplugins}}
+Wenn es Probleme mit den Plugins beim Hochfahren gibt, können Sie das Laden der 
+Plugins beim Hochfahren ausschalten. Sie können dann hinterher im Plugin Manager geladen werden.
+
+\minisec{Kommandozeilenoption \usertext{---optionspath}}
+Sie können mehrere Konfigurationen speichern und dann beim Starten entscheiden, 
+welche sie verwenden wollen, wenn Sie diese Option verwenden. Siehe \ref{subsec:gui_options}, um 
+zu sehen, wo ihr Betriebssystem die Einstellungen speichert. Derzeit gibt es keine Möglichkeit einen 
+neuen Dateinamen anzugeben, daher müssen Sie aktuell noch eine Kopie der ursprünglichen 
+Einstellungen unter einem anderen Namen erstellen.
+
+\minisec{Kommandozeilenoption \usertext{---configpath}}
+Diese Option ist ähnlich der obigen, ermöglicht aber darüber hinaus das Überschreiben des 
+Standard-Pfades (z.B. ~/.qgis) für die Benutzerkonfiguration. Dadurch wird QSettings gezwungen, 
+das angegebene Verzeichnis zum Ablegen der konfiguration zu verwenden. Dies ermöglicht z.B. 
+die QGIS-Installation auf einem Flash-Laufwerk samt Plugins und Einstellungen.
+
+\minisec{Kommandozeilenoption \usertext{---extent}}
+Um QGIS in einem bestimmten Ausschnitt Ihrer Daten zu starten, kann diese
+Option genutzt werden. Dazu wird durch die Eingabe von Eckkoordinaten eine
+'Bounding Box' eingestellt. Die Koordinaten müssen durch Komma getrennt
+angegeben werden.
+\begin{verbatim}
+--extent xmin,ymin,xmax,ymax
+\end{verbatim}
+
+\minisec{Kommandozeilenoption \usertext{---nologo}}
+Diese Option verhindert das Anzeigen des Splashscreens beim Starten von QGIS. 
+
+\section{Die grafische Benutzeroberfläche (GUI)}\index{Grafische Benutzeroberfläche}
+\label{label_qgismainwindow}
+
+Beim Starten von QGIS öffnet sich die grafische Benutzeroberfläche (GUI) wie
+in der folgenden Abbildung zu sehen. Die gelben Nummern von 1 bis 6 beziehen
+sich auf die sechs Hauptbereiche des Interfaces und werden im Folgenden
+genauer beschrieben.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{QGIS GUI mit Alaskadaten aus dem Beispieldatensatz \nixcaption}
+	 \label{fig:startup}
+   \includegraphics[clip=true, width=15cm]{startup}
+\end{center} 
+\end{figure}
+
+\textbf{Bemerkung:} Das Aussehen einzelner Bereiche (Menüleiste, etc.) kann
+abweichen in Abhängigkeit vom Betriebssystem und dem Window Manager.
+
+Die QGIS Benutzeroberfläche ist in sechs Bereiche unterteilt:
+
+\begin{tabular}{p{5cm} p{5cm}}
+1. Menüleiste \hspace{3cm} & 4. Kartenfenster \\
+2. Werkzeugleiste \hspace{3cm} & 5. Kartenübersicht  \\
+3. Legende \hspace{3cm} & 6. Statusleiste \\
+\end{tabular}
+
+\subsection{Menüleiste}\label{label_menubar}
+\index{Menüleiste}
+
+Die Menüleiste bietet Zugriff auf verschiedene Anwendungen mit Hilfe eines
+hierarchischen Menüs. Das Hauptmenü mit einer kurzen Beschreibung der
+enthaltenen Funktionen wird hier zusammen mit dem jeweiligen Icon, das auch
+in der Werkzeugleiste zu finden ist und dem Tastenkürzel aufgelistet. Die
+Tastenkürzel stellen dabei die Standardeinstellung dar und können im Menü
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Tastenkürzel festlegen} definiert
+werden. Obwohl fast jede Anwendung der Menüleiste ein entsprechendes Icon in
+der Werkzeugleiste besitzt, ist die Anordnung unterschiedlich. Die
+Werkzeugleiste mit der entsprechenden Anwendung ist hinter jedem Menüeintrag
+als Kontrollkästchen angegeben. Weitere Informationen über die Werkzeuge in
+der Werkzeugleiste finden Sie in Abschnitt \ref{label_toolbars}. 
+
+\begin{tabbing}
+\hspace{7.8cm}\=\hspace{2.8cm}\=\hspace{2.8cm}\= \kill
+\hspace{1cm} Menüleiste \> Tastenkürzel \> Referenz \> Werkzeugleiste\\
+\end{tabbing}
+
+\begin{itemize}[label=--]
+\item \mainmenuopt{Datei}
+\begin{tabbing}
+\hspace{7cm}\=\hspace{2.5cm}\=\hspace{3cm}\= \kill
+\dropmenuopttwo{mActionFileNew}{Neues Projekt}
+	\> \keystroke{Strg+N}
+	\> Kapitel \ref{sec:projects}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionFileOpen}{Projekt öffnen}
+	\> \keystroke{Strg+O}
+	\> Kapitel \ref{sec:projects}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopt{Aktuelle Projekte öffnen}
+	\>
+	\> Kapitel \ref{sec:projects} \\
+\dropmenuopttwo{mActionFileSave}{Projekt speichern}
+	\> \keystroke{Strg+S}
+	\> Kapitel \ref{sec:projects}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionFileSaveAs}{Projekt speichern als}
+	\> \keystroke{Strg+Umschalt+S}
+	\> Kapitel \ref{sec:projects}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionSaveMapAsImage}{Bild speichern als}
+	\>
+	\> Kapitel \ref{sec:output} \\
+\dropmenuopttwo{mActionNewComposer}{Neue Druckzusammenstellung}
+	\> \keystroke{Strg+P}
+	\> Kapitel \ref{label_printcomposer}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionComposerManager}{Druckzusammenstellung verwalten}
+	\> 
+	\> Kapitel \ref{label_printcomposer}
+        \> \dropmenucheck{Datei} \\
+\dropmenuopt{Druckzusammenstellung}
+	\>
+	\> Kapitel \ref{label_printcomposer}
+	\> \dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionFileExit}{Beenden} 
+	\> \keystroke{Strg+Q} \\
+\end{tabbing}
+
+\item \mainmenuopt{Bearbeiten}
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3.5cm}\=\hspace{3cm}\= \kill
+\dropmenuopttwo{mActionUndo}{Rückgängig}
+        \> \keystroke{Strg+Z}
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionRedo}{Wiederholen}
+        \> \keystroke{Strg+Umschalt+Z}
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionEditCut}{Objekte ausschneiden} 
+	\> \keystroke{Strg+X}
+	\> Kapitel \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionEditCopy}{Objekte kopieren}
+	\> \keystroke{Strg+C}
+	\> Kapitel \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionEditPaste}{Objekte einfügen} 
+	\> \keystroke{Strg+V}
+	\> Kapitel \ref{sec:edit_existing_layer} 
+	\> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionEditPaste}{Objekt(e) verschieben}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionDeleteSelected}{Ausgewähltes löschen}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionSimplify}{Objekt vereinfachen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionAddRing}{Ring hinzufügen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionAddIsland}{Teil hinzufügen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionDeleteRing}{Ring löschen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionDeletePart}{Teil löschen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionReshape}{Objekte überarbeiten}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionSplitFeatures}{Objekte trennen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionMergeFeatures}{Gewählte Objekte verschmelzen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionMergeFeatures}{Attribute gewählter Objekte vereinen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\dropmenuopttwo{mActionNodeTool}{Knotenwerkzeug}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionRotatePointSymbols}{Punktsymbole drehen}
+        \>
+        \> Kapitel \ref{sec:advanced_edit}
+        \> \dropmenucheck{Erweiterte Digitalisierung} \\
+\end{tabbing}
+
+Nach dem Sie auf das Icon \toolbtntwo{mActionToggleEditing}{Bearbeitungsmodus 
+umschalten} gedrückt haben, finden Sie zusätzlich ein Digitalisier-Icon im 
+Menü \mainmenuopt{Bearbeiten}, abhängig davon, welcher Layertyp (Punkt, Linie 
+oder Polygon) editiert werden soll. \\
+
+\begin{tabbing}
+\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
+\dropmenuopttwo{mActionCapturePoint}{Punkt digitalisieren}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionCaptureLine}{Linie digitalisieren}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\dropmenuopttwo{mActionCapturePolygon}{Polygon digitalisieren}
+        \>
+        \> Kapitel \ref{sec:edit_existing_layer}
+        \> \dropmenucheck{Digitalisierung} \\
+\end{tabbing}
+
+
+\item \mainmenuopt{Ansicht}
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{4cm}\=\hspace{3cm}\= \kill
+\dropmenuopttwo{mActionPan}{Karte verschieben}
+	\>
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomIn}{Hineinzoomen}
+	\> \keystroke{Strg++}
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomOut}{Hinauszoomen}
+	\> \keystroke{Strg+-}
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopt{Auswahl}
+	\>
+	\> Kapitel \ref{sec:selection}
+	\> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionIdentify}{Objekte abfragen}
+	\> \keystroke{Strg-Umschalt-I}
+	\> \> \dropmenucheck{Attribute} \\
+\dropmenuopt{Messen}
+	\>
+	\> Kapitel \ref{sec:measure}
+	\> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionOpenTable}{Volle Ausdehnung}
+	\> \keystroke{Strg-Umschalt-F}
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomToLayer}{Auf den Layer zoomen}
+	\>
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomToSelected}{Zur Auswahl zoomen}
+	\> \keystroke{Strg+J}
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomLast}{Zoom zurück}
+	\>
+	\> \> \dropmenucheck{Kartennavigation} \\
+\dropmenuopttwo{mActionZoomNext}{Zoom vor}
+	\>
+	\> \> \dropmenucheck{Kartennavigation} \\
+\mainmenuopt{Auf tatsächliche Größe zoomen}
+	\>
+	\> \>  \\
+\dropmenuopttwo{mActionMapTips}{Kartenhinweise}
+	\>
+	\> \> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionNewBookmark}{Neues Lesezeichen}
+	\> \keystroke{Strg-B}
+	\> Kapitel \ref{sec:bookmarks} 
+\> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionShowBookmarks}{Lesezeichen anzeigen}
+	\> \keystroke{Strg-Umschalt-B}
+	\> Kapitel \ref{sec:bookmarks} 
+	\> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionDraw}{Aktualisieren}
+	\> \keystroke{Strg+R}
+	\> \> \dropmenucheck{Kartennavigation} \\
+\mainmenuopt{Kachelmaßstabsauswahl}
+        \>
+        \> Kapitel \ref{sec:tilesets} 
+	\> \dropmenucheck{Kachelmaßstab} \\
+\mainmenuopt{Laufende GPS Verfolgung}
+        \>
+        \> Kapitel \ref{sec:gpstracking}
+        \> \dropmenucheck{GPS-Information} \\
+\end{tabbing}
+
+\item \mainmenuopt{Layer}
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{4cm}\=\hspace{3cm}\= \kill
+\dropmenuopt{Neu}
+	\>
+        \> Kapitel \ref{sec:create_shape}
+	\> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionAddNonDbLayer}{Vektorlayer hinzufügen}       
+	\> \keystroke{Strg-Umschalt-V}
+	\> Kapitel \ref{label_workingvector}
+	\> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionAddRasterLayer}{Rasterlayer hinzufügen}       
+	\> \keystroke{Strg-Umschalt-R}
+	\> Kapitel \ref{label_raster}
+	\> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionAddLayer}{PostGIS-Layer hinzufügen}      
+	\> \keystroke{Strg-Umschalt-D}
+	\> Kapitel \ref{label_postgis}
+	\> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionAddSpatiaLiteLayer}{SpatiaLite Layer hinzufügen}
+        \> \keystroke{Strg-Umschalt-L}
+        \> Kapitel \ref{label_spatialite}
+        \> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionAddWmsLayer}{WMS-Layer hinzufügen}          
+	\> \keystroke{Strg-Umschalt-W}
+	\> Kapitel \ref{sec:ogc-wms}
+	\> \dropmenucheck{Layer koordinieren} \\
+\dropmenuopttwo{mActionOpenTable}{Attributtabelle öffnen}
+	\> \>
+	\> \dropmenucheck{Attribute} \\
+\dropmenuopttwo{mActionFileSave}{Änderungen speichern}
+        \> \>
+        \> \dropmenucheck{Digitalisieren} \\
+\dropmenuopttwo{mActionToggleEditing}{Bearbeitungsstatus umschalten}
+	\> \>
+	\> \dropmenucheck{Digitalisierung} \\
+\dropmenuopt{Speichern als}
+	\\
+\dropmenuopt{Auswahl als Vektordatei speichern}
+	\>
+	\> Kapitel \ref{sec:attribute table}
+	\>\\
+\dropmenuopttwo{mActionRemoveLayer}{Layer löschen}
+	\> \keystroke{Strg+D}
+	\>          	
+	\> \\
+\mainmenuopt{KBS von Layer(n) setzen}
+	\> \keystroke{Strg+Umschalt+C}
+	\>          	
+	\> \\
+\mainmenuopt{Layer-KBS dem Projekt zuweisen}
+	\\
+\dropmenuopt{Eigenschaften}
+	\\
+\dropmenuopt{Abfrage}
+        \\
+\dropmenuopttwo{labeling}{Beschriftung}
+	\> 
+	\>  \\
+\dropmenuopttwo{mActionInOverview}{Zur Übersicht hinzufügen}
+	\> \keystroke{Strg-Umschalt-O}
+	\>          	
+	\> \\
+\dropmenuopttwo{mActionAddAllToOverview}{Alle zur Übersicht hinzufügen}
+	\>
+	\>  \\
+\dropmenuopttwo{mActionRemoveAllFromOverview}{Alle aus Übersicht entfernen}
+	\>
+	\>  \\
+\dropmenuopttwo{mActionShowAllLayers}{Alle Layer anzeigen}
+	\> \keystroke{Strg-Umschalt-U}
+	\>          	
+	\> \\
+\dropmenuopttwo{mActionHideAllLayers}{Alle Layer ausblenden}
+	\> \keystroke{Strg-Umschalt-H}
+	\>          	
+	\>  \\
+\end{tabbing}
+
+\item \mainmenuopt{Einstellungen}
+\begin{tabbing}
+\hspace{6cm}\=\hspace{4.5cm}\=\hspace{3cm}\= \kill
+\dropmenuopt{Bedienfelder}  
+	\>           
+	\>          	
+	\\
+\dropmenuopt{Werkzeugkasten}  
+	\>           
+	\>          	
+	\\
+\dropmenuopt{Auf Vollbildmodus schalten}  
+	\> \keystroke{Strg-F}
+	\>          	
+	\\
+\dropmenuopttwo{mActionProjectProperties}{Projekteinstellungen}  
+	\> \keystroke{Strg-Umschalt-P}
+	\> Kapitel \ref{sec:projects}
+	\\
+\dropmenuopttwo{mActionCustomProjection}{Benutzerkoordinatenbezugssystem}   
+	\> \> Kapitel \ref{sec:customprojections}
+	\\
+\dropmenuopt{Stilmanager}
+        \>
+        \>
+        \\
+\dropmenuopttwo{mActionOptions}{Tastenkürzel festlegen}
+        \> 
+	\> 
+        \\
+\dropmenuopttwo{mActionOptions}{Optionen}             
+	\> 
+	\> Kapitel \ref{subsec:gui_options}
+	\\
+\dropmenuopt{Fangoptionen}             
+	\> 
+	\> 
+	\\
+\end{tabbing}
+
+\item \mainmenuopt{Plugins} - (Weitere Menüeinträge werden hinzugefügt, wenn
+Plugins geladen sind.)
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{4cm}\=\hspace{3cm}\= \kill
+\dropmenuopttwo{mActionShowPluginManager}{Plugins verwalten}          	   
+	\> 
+	\> Kapitel \ref{sec:managing_plugins}
+	\dropmenucheck{Plugins} 
+	\\
+\mainmenuopt{Python Konsole}
+	\> \>
+	\\
+\end{tabbing}          	
+
+\item \mainmenuopt{Raster}
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{4cm}\=\hspace{3.0cm}\= \kill
+\mainmenuopt{Rasterrechner}
+	\> 
+	\> Kapitel \ref{sec:raster_calc}
+	\\
+\end{tabbing} 
+
+\item \mainmenuopt{Hilfe}
+\begin{tabbing}
+\hspace{5.5cm}\=\hspace{4cm}\=\hspace{3cm}\= \kill
+\dropmenuopttwo{mActionHelpContents}{Hilfe-Übersicht}
+	\> \keystroke{F1}
+	\>           	
+	\> \dropmenucheck{Hilfe} \\
+\mainmenuopt{API Dokumentation}
+	\> 
+	\> 
+	\> \\
+\dropmenuopttwo{mActionQgisHomePage}{QGIS-Homepage}
+	\> \keystroke{Strg+H}
+	\>          	
+	\\
+\dropmenuopttwo{mActionCheckQgisVersion}{QGIS Version überprüfen}
+	\\
+\dropmenuopttwo{mActionHelpAbout}{Über}
+	\\
+\dropmenuopttwo{mActionHelpSponsors}{QGIS Sponsoren}
+	\\
+\end{tabbing}
+
+\end{itemize}
+
+\textbf{Bemerkung:} \nix Die Einträge der Menüleiste entsprechen der
+Standardeinstellung des KDE Window Managers. In GNOME fehlt das Menü
+\mainmenuopt{Einstellungen} und die Einträge finden sich hier:
+\begin{tabbing}
+\dropmenuopttwo{mActionProjectProperties}{Projekteinstellungen} \hspace{8cm}\=
+\dropmenucheck{Datei} \\
+\dropmenuopttwo{mActionOptions}{Optionen} \hspace{8cm}\>
+\dropmenucheck{Bearbeiten}\\
+\dropmenuopttwo{mActionOptions}{Tastenkürzel festlegen} \hspace{4cm}\>
+\dropmenucheck{Bearbeiten}\\
+\mainmenuopt{Stilmanager} \hspace{4cm}\>
+\dropmenucheck{Bearbeiten}\\
+\dropmenuopttwo{mActionCustomProjection}{Benutzerkoordinatenbezugssystem}\hspace{9cm}\>
+\dropmenucheck{Bearbeiten} \\
+\dropmenuopt{Bedienfelder} \hspace{9cm}\>
+\dropmenucheck{Ansicht} \\
+\dropmenuopt{Werkzeugkästen}   \hspace{9cm}\>
+\dropmenucheck{Ansicht} \\
+\dropmenuopt{Auf Vollbildmodus umschalten} \hspace{9cm}\>
+\dropmenucheck{Ansicht}\\
+\mainmenuopt{Kachelmaßstabsauswahl} \hspace{5cm}\>
+\dropmenucheck{Ansicht}\\
+\mainmenuopt{Laufende GPS-Verfolgung} \hspace{5cm}\>
+\dropmenucheck{Ansicht}\\
+\end{tabbing}
+
+%See Appendix \ref{app_menu} for complete descriptions of the menu items.
+
+\subsection{Werkzeugleiste}\label{label_toolbars}
+\index{Werkzeugleiste}
+
+Die Werkzeugleiste bietet mit Hilfe von Icons Zugriff auf alle Funktionen aus
+der Menüleiste sowie ein paar zusätzliche Tools, um mit der Karte zu
+interagieren. Jedes Icon der Werkzeugleiste bietet eine kurze Beschreibung
+ihrer Funktion. Indem Sie mit der Maus über das Icon fahren, erscheint es.
+
+Jedes Untermenü der Werkzeugleiste kann nach eigenen Wünschen verschoben
+werden und jedes Untermenü kann auch an bzw. ausgeschaltet werden, indem Sie
+mit der Maus in einen freien Bereich der Werkzeugleiste fahren und auf den
+rechten Mausknopf drücken.
+
+\begin{Tip}
+\caption{\textsc{Werkzeugleiste zurückholen}} \index{Layout!Werkzeugleiste}
+Wenn sie aus Versehen alle Untermenüs der Werkzeugleiste
+ausgeblendet haben, können Sie diese über das Menü 
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Werkzeugkästen} wieder
+zurückholen.
+\end{Tip}
+
+\subsection{Legende}\label{label_legend}
+\index{Legende}
+
+Die Kartenlegende listet alle Layer eines Projektes auf. Mit dem 'Kontrollkästchen' kann ausgewählt werden, ob ein Layer angezeigt werden soll, oder nicht.
+\index{Layer!Sichtbarkeit}. Die Z-Anordnung der Kartenlayer kann mit der 'drag 
+and drop' Funktion der Maus festgelegt werden. Z-Anordnung bedeutet, dass ein 
+weiter oben in der Legende angeordneter Layer über einem weiter unten 
+angeordneten Layer im Kartenfenster angezeigt wird. 
+
+Einzelne Layer können in der Legende zu Gruppen zusammengefasst werden. Gehen
+Sie dazu in den Bereich der Kartenlegende, klicken auf die rechte Maustaste
+und wählen Sie \dropmenuopt{Gruppe hinzufügen}. Ein neuer Ordner erscheint
+und sie können Layer mit der Maus in diesen Ordner per 'drag and drop'
+verschieben. Um Layer wieder zurück in die Hauptebene zu holen, gehen Sie mit 
+der Maus in den Order ihrer Gruppe, wählen Sie einen Layer aus, klicken auf 
+den rechten Mausknopf und wählen \dropmenuopt{In oberste Ebene bringen} aus. 
+Um dem Gruppenordner einen anderen Namen zu geben, wählen Sie mit der Maus 
+einen Ordner aus, klicken auf die rechte Maustaste und wählen 
+\dropmenuopt{Umbenennen}. Innerhalb von Gruppen können weitere Gruppen 
+erzeugt werden. Das 'Kontrollkästchen' einer Gruppe ermöglicht es, alle Layer 
+einer Gruppe zusammen anzuzeigen oder unsichtbar zu machen.
+
+Die angezeigten Elemente der rechten Maustaste-Funktion sind abhängig davon,
+ob es sich um einen Raster- oder Vektorlayer handelt. Für geladene GRASS
+Vektorlayer steht die Funktion \dropmenuopt{Bearbeitungsstatus umschalten}
+nicht zur Verfügung. Vergleichen Sie dazu das Kapitel \ref{grass_digitising}
+für weitere Informationen zum Editieren von GRASS Vektorlayern.
+
+\begin{itemize}[label=--]
+\item \textbf{Rechte-Maustaste Menü für Rasterlayer}
+\begin{itemize}[label=--]
+\item \dropmenuopt{Auf die Layerausdehnung zoomen}
+\item \dropmenuopt{Auf besten Maßstab zoomen (100\%)}
+\item \checkbox{In der Übersicht anzeigen}
+\item \dropmenuopt{Entfernen}
+\item \dropmenuopt{Eigenschaften}
+\item \dropmenuopt{Umbenennen}
+\item \dropmenuopt{Gruppe hinzufügen}
+\item \dropmenuopt{Alles ausklappen}
+\item \dropmenuopt{Alles zusammenfalten}
+\end{itemize}
+
+\item \textbf{Rechte-Maustaste Menü für Vektorlayer}
+\begin{itemize}[label=--]
+\item \dropmenuopt{Auf die Layerausdehnung zoomen}
+\item \checkbox{In der Übersicht anzeigen}
+\item \dropmenuopt{Entfernen}
+\item \dropmenuopt{Attributtabelle öffnen}
+\item \dropmenuopt{Bearbeitungsstatus umschalten} (nicht für GRASS layer)
+\item \dropmenuopt{Speichern als}
+\item \dropmenuopt{Auswahl speichern als}
+\item \dropmenuopt{Abfrage}
+\item \dropmenuopt{Eigenschaften}
+\item \dropmenuopt{Umbenennen}
+\item \dropmenuopt{Gruppe hinzufügen}
+\item \dropmenuopt{Alles ausklappen}
+\item \dropmenuopt{Alles zusammenfalten}
+\end{itemize}
+
+\item \textbf{Rechte Maustasten-Menü für Layergruppen}
+\begin{itemize}[label=--]
+\item \dropmenuopt{Zur Gruppe zoomen}
+\item \dropmenuopt{Entfernen}
+\item \dropmenuopt{Umbenennen}
+\item \dropmenuopt{KBS für Gruppe setzen}
+\item \dropmenuopt{Gruppe hinzufügen}
+\item \dropmenuopt{Alles ausklappen}
+\item \dropmenuopt{Alles zusammenfalten}
+\end{itemize}
+\end{itemize}
+
+Es ist auch möglich, mehr als einen Layer oder eine Gruppe zur gleichen Zeit 
+auszuwählen indem Sie die \keystroke{Strg}-Taste gedrückt halten und dann 
+die Layer mit der linken Maustaste auswählen. Sie können dann alle 
+ausgewählten Layer in eine neue Gruppe verschieben.
+
+Sie können auch mehr als einen Layer oder eine Gruppe auf einmal löschen, indem Sie
+mehrere Layer mit der \keystroke{Strg}-Taste auswählen und dann \keystroke{Strg-D} 
+drücken. So werden alle ausgewählten Ebenen oder Gruppen aus der Layerliste entfernt.
+
+\subsection{Kartenfenster}\label{label_mapview}
+\index{Kartenfenster}
+
+Dies ist der Ergebnisbereich von QGIS - hier werden die Daten visualisiert.
+Die Karten, die hier angezeigt werden, hängen davon ab, welche Raster- und
+Vektorlayer Sie ausgewählt haben (vgl. folgende Abschnitte). Innerhalb des
+Kartenfensters können Sie 'zoomen', verschieben ('pan') und eine Vielzahl
+weiterer Funktionen aus der Werkzeugleiste anwenden. Das Kartenfenster und
+die Legende sind miteinander verknüpft. Layer im Kartenfenster spiegeln
+Veränderungen in der Legende wider.
+
+\begin{Tip}\caption{\textsc{Zoomen im Layer mit dem
+Mausrad}}\index{Zoomen!Mausrad}
+Sie können das Mausrad benutzen, um im Kartenfenster in Layer
+hinein- bzw. hinauszuzoomen. Platzieren Sie dazu den Mauszeiger im
+Kartenfenster und drehen Sie das Mausrad nach vorne (Hinauszoomen) oder nach
+hinten zum Hineinzoomen. Der Mauszeiger bildet dabei das Zentrum. Sie können das
+Verhalten des Mausrades in der Menüleiste \mainmenuopt{Einstellungen} \arrow
+\dropmenuopt{Optionen} unter dem Reiter \texttt{Kartenwerkzeuge} einstellen.
+\end{Tip}
+
+\begin{Tip}\caption{\textsc{Den Layer verschieben mit den Pfeiltasten und der
+Space-Taste}}\index{verschieben!Pfeiltasten}
+Sie können die Pfeiltasten verwenden, um den Layer zu verschieben.
+Platzieren Sie dazu den Mauszeiger im Kartenfenster und drücken Sie auf die
+rechte Pfeiltaste um nach Osten zu verschieben, die linke Pfeiltasten für
+Westen, die Hoch-Pfeiltasten für Norden und die Unten-Pfeiltasten für Süden.
+Sie können einen Layer auch mit der Space-Taste verschieben. Bewegen Sie dazu
+einfach die Maus während Sie die Space-Taste gedrückt halten.
+\end{Tip}
+
+\subsection{Kartenübersicht}\label{label_mapoverview}
+\index{Karte!Übersicht}
+
+Im Kartenübersichtsfenster wird die Gesamtausdehnung eines Gebietes anhand
+eines ausgewählten Layers als Übersicht dargestellt. Sie können die
+Übersicht im Menü \mainmenuopt{Einstellungen} \arrow \dropmenuopt{Bedienfelder}
+auswählen. Dadurch ist es sehr einfach, einen schnellen Überblick über die
+genaue Position des Kartenausschnitts im Kartenfenster zu bekommen.
+Beschriftungen werden nicht in der Kartenübersicht angezeigt.
+
+Sie können einen einzelnen Layer in der Kartenübersicht anzeigen lassen,
+indem Sie diesen mit der Maus auswählen und mit der rechten Maustaste auf
+das Kontrollkästchen \checkbox{Zur Übersicht hinzufügen} klicken.
+Dazu können auch die entsprechenden Icons in der Werkzeugleiste genutzt werden.
+
+Sie können mit der Maus auch das rote Rechteck, welches für den aktuell
+angezeigten Ausschnitt steht, in der Kartenübersicht verschieben. Dadurch
+wird automatisch der Ausschnitt im Kartenfenster angepasst.
+
+\subsection{Statusleiste}\label{label_statusbar}
+
+Die Statusleiste zeigt die aktuelle Position als Koordinate (z.B. in Meter
+oder Dezimalgrad) während der Mauszeiger über dem Kartenfenster verschoben
+wird. Links von der Koordinatenanzeige ist ein kleiner Knopf mit dem Sie
+auswählen können, ob die Koordinaten des Bezugsystems oder der Ausdehnung des
+Kartenfensters angezeigt werden sollen, während der Mauszeiger bewegt wird. 
+
+Ein Fortschrittsbalken in der Statusleiste zeigt den Fortschritt des
+Zeichnens der einzelnen Layer im Kartenfenster. In einigen Fällen, etwa wenn
+statistische Informationen über Rasterlayer errechnet werden, wird der
+Fortschritt dieser Operation angezeigt.
+
+Wenn ein neues externes Plugin oder ein Plugin Update im Internet verfügbar
+ist, wird diese Information auch in der Statusleiste angezeigt. Mit dem 
+Kontrollkästchen auf der rechten Seite der Statusleiste kann
+eingestellt werden, ob Layer angezeigt werden sollen oder nicht (vgl.
+Abschnitt \ref{subsec:redraw_events}). Das Icon 
+\includegraphics[width=0.4cm]{mIconStopRendering} stoppt die Darstellung 
+umgehend. 
+
+Ganz rechts außen befindet sich ein Kamera-Icon. Wenn Sie es anklicken, 
+öffnet sich das Menü für die Projektionseigenschaften des aktuellen Projektes. 
+
+\begin{Tip}\caption{\textsc{Die richtige Ma"seinheit im Kartenfenster
+einstellen}}\index{Maßstab!berechnen}
+Wenn Sie QGIS starten, ist als Maßeinheit Grad voreingestellt und sagt
+QGIS, dass alle Koordinaten des Layers in Grad vorliegen. Um die korrekte
+Maßeinheit anzeigen zu lassen, können Sie es im Reiter \tab{Allgemein} im Menü
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Projekteinstellungen} einstellen
+oder sie wählen das passende Bezugskoordinatensystem (KBS) aus, indem Sie auf
+das Kamera-Icon \toolbtntwo{mIconProjectionDisabled}{KBS Status} in der
+unteren rechten Ecke der Statusleiste klicken. Dann wird die Maßeinheit
+entsprechend der KBS eingestellt, z.B.: '+units=m'.
+\end{Tip}
+
+\subsection{Tastenkürzel}\label{shortcuts}
+\index{Tastenkürzel}
+
+QGIS bietet Standard Tastenkürzel für zahlreiche Funktionen. Sie können im
+Kapitel \ref{label_menubar} nachgelesen werden. Zusätzlich ist es aber auch
+möglich, eigene Tastenkürzel zu definieren und bestehende zu ändern. Öffnen
+Sie dazu das Menü \mainmenuopt{Einstellungen} \arrow \dropmenuopt{Tastenkürzel
+festlegen}.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Tastenkürzel festlegen \nixcaption}
+         \label{fig:shortcuts}
+   \includegraphics[clip=true, width=8cm]{shortcuts}
+\end{center}
+\end{figure}
+
+Die Konfiguration ist sehr einfach. Wählen Sie einfach eine Aktion aus und
+drücken dann auf \button{Ändern}, \button{Keins setzen} oder
+\button{Voreinstellung}. Wenn Sie ihre Einstellung gefunden haben, kann diese
+als XML-Datei abgespeichert und somit auch für eine andere QGIS Installation
+genutzt werden.
+
+\section{Layeranzeige kontrollieren}\label{subsec:redraw_events}\index{Layeranzeige}
+
+Im Normalfall findet eine Wiedergabe der ausgewählten Layer immer dann statt,
+wenn eine 'Erneuerung' notwendig ist. Die Abläufe, die eine 'Erneuerung' der
+Wiedergabe verursachen sind:
+
+\begin{itemize}[label=--]
+\item Einen Layer hinzufügen
+\item Karten verschieben, hinein- oder herauszoomen
+\item Größe des QGIS-Fensters verändern
+\item Layer ein- oder ausblenden
+\end{itemize}
+
+QGIS ermöglicht es, den Wiedergabeprozess auf verschiedene Arten zu
+kontrolliere
+
+\subsection{Maßstabsabhängige Layeranzeige}\index{Layeranzeige!Maßstabsabhängig}
+\label{label_scaledepend}
+
+Die maßstabsabhängige Wiedergabe erlaubt es, einen mini- und maximalen
+Maßstab anzugeben, in dessen Rahmen ein Layer angezeigt wird. Um die
+maßstababhängige Wiedergabe einzustellen, öffnen Sie den
+\dialog{Eigenschaften} Dialog eines Layers, indem Sie diesen in der
+Legende doppelt anklicken, im Reiter \tab{Allgemein} die entsprechenden
+Einstellungen vornehmen und das Kontrollkästchen \checkbox{Benutze
+maßstabsabhängiges Zeichnen} aktivieren.
+
+Sie können es einstellen, in dem Sie erst mit der Maus im Kartenfenster den
+gewünschten Maßstab wählen und dann die Werte aus der Statusleiste
+übernehmen.\index{Maßstab}
+
+\subsection{Layeranzeige kontrollieren}\label{label_controlmap}
+
+Die Kartenwiedergabe kann auf folgende Art kontrolliert werden:
+
+\minisec{a) Wiedergabe unterdrücken}\index{Layeranzeige!unterdrücken}
+\label{label_suspendrender}
+
+Um die Wiedergabe einer Karte zu unterdrücken, klicken Sie auf das
+Kontrollkästchen \checkbox{Zeichnen} auf der rechten Seite der Statusleiste.
+Wenn das Kontrollkästchen nicht aktiv ist, führt QGIS keine Erneuerung der
+Wiedergabe des Kartenfensters durch, wie in Abschnitt
+\ref{subsec:redraw_events} beschrieben. Beispiele, bei denen das Unterdrücken
+der Wiedergabe angewendet wird, sind:
+
+\begin{itemize}[label=--]
+\item Viele Layer hinzufügen und ihre Symbologie vor der Visualisierung
+einstellen
+\item Eine oder mehrere große Layer hinzufügen und erst die maßstabsabhängige
+Wiedergabe einstellen
+\item Eine oder mehrere große Layer hinzufügen und erst in ein bestimmtes
+Gebiet hineinzoomen
+\item Eine Kombination aus den oben genannten Punkten
+\end{itemize}
+
+Wenn Sie die Checkbox \checkbox{Zeichnen} aktivieren, findet automatisch
+eine Erneuerung der Wiedergabe des Kartenfensters statt.
+
+\minisec{b) Option für Layer hinzufügen}\label{label_settinglayer}
+\index{Darstellung!Optionen}\index{Layer!automatische Sichtbarkeit}
+
+Sie können für das Hinzuladen neuer Layer eine Einstellung vornehmen, die
+bewirkt, dass diese beim Laden ersteinmal nicht angezeigt werden. Um diese
+Option zu nutzen, deaktivieren Sie in der Menüleiste unter
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Optionen} im Reiter
+\tab{Darstellung} das Kontrollkästchen \checkbox{Standardmäßig werden alle
+neuen Layer im Kartenfenster angezeigt}. Dadurch werden alle neu geladenen
+Layer erstmal nicht angezeigt (unsichtbar).
+
+\minisec{c) Anpassen des Kartenfensters bei der Wiedergabe}
+\label{label_updatemap}\index{Darstellung!bei Wiedergabe updaten}
+
+Normalerweise werden in QGIS Inhalte von Layern erst visualisiert, wenn
+sämtliche Daten geladen sind. Um zu bewirken, dass die Inhalte von Layern
+direkt beim Lesen angezeigt werden, verändern Sie in der Menüleiste unter
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Optionen} im Reiter
+\tab{Darstellung} die Anzahl von Objekten, nach deren Zeichung die Anzeige
+aktualisiert werden soll. Der Wert 0 (Standard) verhindert die Aktualisierung
+während des Zeichnens. Bei zu niedrigem Wert leidet die Leistung, da ständig ein
+Update der Widergabe stattfindet. Zu Beginn ist oftmals ein Wert von 500
+sinnvoll.
+
+\minisec{d) Die Qualität der Wiedergabe beinflussen}
+\label{label_renderquality}\index{Layeranzeige!Qualität}
+
+Um die Wiedergabequalität der Layer zu beeinflussen gibt es drei
+Möglichkeiten. Öffnen Sie den Reiter \tab{Darstellung} im Menü
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Optionen} und aktivieren bzw.
+deaktivieren Sie folgende Kontrollkästchen:
+
+\begin{itemize}[label=--]
+\item \checkbox{Linien auf Kosten der Zeichengeschwindigkeit weniger gezackt
+zeichnen}
+\item \checkbox{Problem mit falsch gefüllten Polygonen beheben}
+\end{itemize}
+
+\section{Messen}\label{sec:measure}\index{Messen}
+
+Das Messen funktioniert mit Projektionen (z.B. UTM) und auch mit nicht 
+projizierten Daten. Wenn die geladene Karte als
+Geografisches Koordinatensystem abgebildet wird (z.B. Latitude/Longitude),
+sind die Messergebnisse falsch. Sie müssen dann ein passendes
+KBS mit einer Projektion verwenden (Siehe Kapitel~\ref{label_projections}).
+Alle Messwerkzeuge verwenden auch die eingestellte Fangtoleranz der Digitalisierung. 
+Dies ist zum Beispiel dann sinnvoll, wenn Sie entlang von Linien oder Polygongrenzen 
+geladener Vektorlayer messen wollen.   
+
+\subsection{Strecken, Flächen und Winkel messen}
+\index{Messen!Strecken}
+\index{Messen!Flächen}
+\index{Messen!Winkel}
+
+\includegraphics[width=0.7cm]{mActionMeasure} 
+QGIS kann reale Distanzen zwischen Punkten auf Basis eines vorgegebenen
+Ellipsoiden messen. Dazu wählen Sie im Menü \mainmenuopt{Einstellungen} \arrow
+\dropmenuopt{Optionen} im Reiter \tab{Kartenwerkzeuge} einen Ellipsoiden aus.
+Es kann ausserdem die Gummibandfarbe und die bevorzugte Maßeinheit
+eingestellt werden. Das Werkzeug ermöglicht es, Punkte im Kartenfenster
+auszuwählen. Jedes Längensegment wird in einem Popup angezeigt und zusätzlich
+auch die Gesamtlänges aller Längensegmente. Um das Messen von Strecken zu beenden,
+klicken Sie auf die rechte Maustaste. \\
+\includegraphics[width=0.7cm]{mActionMeasureArea} Auch Flächengrößen können
+gemessen werden. Das Popup zeigt dabei die akkumulierte Flächengröße.
+Im Dialogfenster wird die akkumulierte Fläche angezeigt. \\
+\includegraphics[width=0.7cm]{mActionMeasureAngle} Auch Winkel können
+gemessen werden. Der Mauszeiger wird zum Kreuz. Drücken Sie die linke 
+Maustaste und zeichnen Sie das erste Segement des Winkels, klicken nochmals 
+auf die linke Maustaste und messen sie den Winkel, der im Dialogfenster 
+angezeigt wird. \\
+
+Zusätzlich schnappen die Messwerkzeuge auf den gerade ausgewählten Layer, wenn
+für den entsprechenden Layer ein Fangmodus eingestellt wurde. (Siehe
+Kapitel~\ref{snapping_tolerance}). Wenn Sie also exakt entlang einer Linie
+oder Polygonumrandung messen möchten, setzen Sie erst eine Fangtolleranz,
+selektieren dann den Layer und benutzen dann das Messwerkzeug.
+
+\begin{figure}[ht]
+\caption{Messwerkzeuge in Aktion \nixcaption}\label{fig:measure}
+\centering
+\subfloat[Strecken messen] {\label{subfig:measure_line}
+\includegraphics[clip=true, width=0.3\textwidth]{measure_line}}\hspace{0.33cm}
+\subfloat[Flächen messen]{\label{subfig:measure_area}
+\includegraphics[clip=true, width=0.3\textwidth]{measure_area}}\hspace{0.33cm}
+\subfloat[Winkel messen]{\label{subfig:measure_angle}
+\includegraphics[clip=true, width=0.3\textwidth]{measure_angle}}
+\end{figure}
+
+\subsection{Objekte auswählen und Auswahl aufheben}\label{sec:selection}
+
+Die Werkzeugleiste bietet mehrere Werkzeuge, um Objekte im Kartenfenster auszuwählen.
+Um ein oder mehrere Objete auszuwählen, klicken Sie auf \includegraphics[width = 0.7cm]{mActionSelect} und wählen Sie dann das ensprechende Werkzeug:
+
+\begin{description}
+\item \includegraphics[width=0.5cm]{mActionSelect} Objekte wählen
+\item \includegraphics[width=0.5cm]{mActionSelectRectangle} Objekte durch Rechteck wählen
+\item \includegraphics[width=0.5cm]{mActionSelectPolygon} Objekte durch Polygon wählen
+\item \includegraphics[width=0.5cm]{mActionSelectFreehand} Objekte freihändig wählen
+\item \includegraphics[width=0.5cm]{mActionSelectRadius} Objekte durch Radius wählen
+\end{description} 
+
+Um die Auswahl von Objekten wieder aufzuheben, klicken Sie auf den Knopf 
+\includegraphics[width=0.7cm]{mActionDeselectAll}.
+
+\section{QGIS Projekte}\label{sec:projects}\index{Projektdatei}
+
+Der Status einer gerade laufenden QGIS-Sitzung wird als Projekt bezeichnet.
+Sie können in QGIS immer nur an einem Projekt zur Zeit arbeiten.
+Einstellungen beziehen sich daher immer auf ein bestimmtes Projekt oder
+dienen als Standard-Einstellung für ein neues Projekt (vgl. Abschnitt
+\ref{subsec:gui_options}). QGIS kann den aktuellen Status eines Projektes in
+einer Projektdatei speichern. Wählen Sie dazu in der Menüleiste
+\mainmenuopt{Datei} \arrow \dropmenuopttwo{mActionFileSave}{Projekt speichern}
+oder \mainmenuopt{Datei} \arrow \dropmenuopttwo{mActionFileSaveAs}{Projekt
+speichern als}.
+
+Gespeicherte QGIS Projekte können über das Menü \mainmenuopt{Datei} \arrow
+\dropmenuopttwo{mActionFileOpen}{Projekt öffnen} oder \mainmenuopt{Datei} \arrow
+\dropmenuopt{Aktuelle Projekte öffnen} geladen werden. Wenn Sie ihr aktuelles
+QGIS Projekt löschen möchten, um neue Layer zu laden, wählen Sie
+\mainmenuopt{Datei} \arrow \dropmenuopttwo{mActionFileNew}{Neues Projekt}. Jede
+dieser Menüoptionen fragt vor der Durchführung nach, ob Sie das aktuelle
+Projekt speichern möchten, wenn Sie nach dem Öffnen Veränderungen vorgenommen
+haben.
+
+In einer Projektdatei sind folgenden Informationen gespeichert:
+
+\begin{itemize}[label=--]
+\item Hinzugefügte Layer
+\item Einstellungen der Layer, inklusive Symbologie
+\item Projektion für das Kartenfenster
+\item Zuletzt gewählte Ausdehnung im Kartenfenster
+\end{itemize}
+
+Die Projektdatei wird im XML-Format gespeichert. Dadurch können Sie die Datei
+auch außerhalb von QGIS editieren, wenn Sie wissen, was Sie tun.
+Projektdateien aus älteren QGIS-Version funktionieren meist leider nicht. Um
+darauf hingewiesen zu werden, können Sie im Reiter \tab{Allgemein} im Menü
+\mainmenuopt{Einstellungen} \arrow \dropmenuopt{Optionen} das Kontrollkästchen
+
+\checkbox{Bei Bedarf nachfragen, ob geänderte Projekte gespeichert werden sollen} \\
+\checkbox{Warnung ausgeben, wenn QGIS-Projekt einer früheren Version geöffnet
+wird} auswählen.
+
+\minisec{Projekteinstellungen}
+
+Im Dialog Projekteigenschaften im Menü \mainmenuopt{Einstellungen} \arrow
+\dropmenuopt{Projekteinstellungen} können projektspezifische Einstellungen
+vorgenommen werden. Diese sind:
+
+\begin{itemize}[label=--]
+\item Im Reiter \tab{Allgemein} der Projekttitel, die Auswahlfarbe, die
+Hintergrundfarbe sowie die Option absolute oder relative Pfade zu den Layern 
+abzuspeichern.
+Dann können die Layereinheiten (ohne aktivierte On-The-Fly Transformation) 
+und deren Genauigkeit eingestellt werden.
+\item Der Reiter \tab{KBS} ermöglicht es, das Koordinatenbezugssystem für das
+Projekt zu definieren und danach zu suchen. Außerdem kann On-The-Fly 
+KBS-Transformation ausgewählt werden, um Vektorlayer eines anderen KBS 
+on-the-fly auf das KBS des Projektes umzuprojizieren.
+\item Der \tab{Abfragbare Layer} Reiter ermöglicht es, festzulegen, welche
+Layer bei einer Abfrage Werte ausgeben (vgl. Abschnitt Kartenwerkzeuge im
+Kapitel \ref{subsec:gui_options}, um mehrere Layer auszuwählen).
+\item Im \tab{WMS-Server} Reiter können Information zu Diensteigenschaften, 
+angezeigte Ausmasse und Koordinatensystemeinschränkungen für den QGIS Server 
+festgelegt werden. Wenn Sie das Kontrollkästchen \checkbox{WKT-Geometrien in 
+Objektinformationen einschliessen} aktivieren, wird der WMS Dienst abfragbar.
+\end{itemize}
+ 
+\section{Ausgabe}\label{sec:output}
+\index{Ausgabe!Als Bild speichern!Druckzusammenstellung!Schnelles drucken}
+
+Abgesehen von der Möglichkeit, ein geöffnetes QGIS-Projekt in einer
+Projektdatei zu speichern, wie im obigen Kapitel~\ref{sec:projects}
+beschrieben, gibt es noch zwei weitere Ausgabemöglichkeiten im Menü
+\mainmenuopt{Datei}: 
+
+\begin{itemize}[label=--]
+\item Die Menüoption \dropmenuopttwo{mActionSaveMapAsImage}{Bild speichern
+als} öffnet einen Dialog, über den Sie das aktuelle Kartenfenster im PNG-
+oder JPG-Format speichern können. Zusätzlich wird ein Worldfile mit der
+Endung PNGW oder JPGW im selben Ordner erstellt, so dass das Bild
+georeferenziert ist.
+\item Die Menüoption \dropmenuopttwo{mActionNewComposer}{Neue Druckzusammenstellung}
+öffnet den Print Composer Dialog, in dem Sie das aktuelle Kartenfenster
+layouten und drucken können (Siehe Kapitel~\ref{label_printcomposer}).
+\end{itemize}
+
+\section{GUI Optionen}\label{subsec:gui_options}
+
+\includegraphics[width=0.7cm,clip=true]{mActionOptions} Einige grundlegende
+Optionen für QGIS können über die verschiedenen Reiter im Menü
+\mainmenuopt{Einstellungen} \arrow \dropmenuopttwo{mActionOptions}{Optionen}
+eingestellt werden: 
+
+\minisec{Allgemein}
+
+\begin{itemize}[label=--]
+\item \checkbox{Bei Bedarf nachfragen, ob geänderte Projekte gespeichert
+werden sollen}
+\item \checkbox{Warnung ausgeben, wenn QGIS-Projekt einer früheren Version
+geöffnet wird}
+\item Ändere Auswahl- und Hintergrundfarbe
+\item Ändere das Icon-Thema (Wähle zwischen default, classic, gis und newgis)
+\item Ändere die Icon-Größe zwischen 16, 24 und 32 Pixeln.
+\item Definiere Doppelklick-Aktion in Legende (Wähle zwischen Layereigenschaften öffnen und Attributtabelle öffnen)
+\item \checkbox{Layernamen in der Legende groß schreiben}
+\item \checkbox{Klassifikationsattributnamen in der Legende anzeigen}
+\item \checkbox{Rastericons für Legende erzeugen}
+\item \checkbox{Splashscreen beim Start nicht anzeigen}
+\item \checkbox{Abfrageergebnisse in einem Dockfenster (QGIS Neustart
+erforderlich)}
+\item \checkbox{Fangoptionsdialog in einem Dockfenster anzeigen (QGIS Neustart
+erforderlich)}
+\item \checkbox{Attributtabelle gedockt öffnen}
+\item \checkbox{PostGIS Layer per Doppelklick hinzufügen und zur Auswahl den
+erweiterten Modus verwenden}
+\item \checkbox{Neuen layer zur gewählten Gruppe hinzufügen}
+\item Attributtabellenverhalten (wähle zwischen Alle Objekte anzeigen, alle gewählten Objekte anzeigen, alle Objekte des aktuellen Kartenausschnitts anzeigen).
+\item Setze Repräsentation für NULL-Werte.
+\item Setze Pfade für zusätzliche C++ Erweiterungsbibliotheken.
+\end{itemize}
+
+Zusätzlich können Sie festlegen, ob die Pfade für SVG Dateien absolut oder relativ 
+im Reiter \tab{Allgemein} des Menüs \mainmenuopt{Einstellungen} \arrow 
+\dropmenuopt{mActionOptions}{Projekteinstellungen} gespeichert werden sollen.
+
+\minisec{Darstellung}
+
+\begin{itemize}[label=--]
+\item \checkbox{Normalerweise werden alle neuen Layer im Kartenfenster
+angezeigt}
+\item Anzahl von Objekten nach deren Zeichnung die Anzeige aktualisiert
+werden soll.
+\item \checkbox{Wo möglich den Darstellungscache benutzen, um das 
+Neuzeichnen zu beschleunigen}
+\item \checkbox{Linien auf Kosten der Zeichengeschwindigkeit weniger gezackt
+zeichnen}
+\item \checkbox{Problem mit falsch gefüllten Polygonen beheben}
+\item \checkbox{Darstellung der nächsten Generation verwenden}
+\item hinzufügen und entfernen von Suchpfaden für SVG-Symbole.
+\end{itemize}
+
+\minisec{Kartenwerkzeuge}
+
+\begin{itemize}[label=--]
+\item Modus für die Abfrage von Layern einstellen (Aktuelle Layer, von oben
+nach unten beim ersten halten, von oben nach unten)
+\item \checkbox{Objektformular öffnen, wenn ein einzelnes Objekt abgefragt wird}
+\item Suchradius für die Objektidentifikation und zur Maptippanzeige
+einstellen
+\item Definiere Ellipsoid für Abstandsberechnung
+\item Definiere Gummibandfarbe für das Messwerkzeug
+\item Definiere Dezimalstellen für das Messwerkzeug
+\item \checkbox{Basiseinheit beibehalten}
+\item Definiere bevorzugte Maßeinheiten \radiobuttonon{Meter}, \radiobuttonoff{Fuß}
+\item Definiere bevorzugtes Winkelmaß \radiobuttonon{Grad}, \radiobuttonoff{Bodenmaß} 
+oder \radiobuttonoff{Gon}
+\item Definiere Mausradaktion (Zoom, Zoomen und mittig zentrieren, Zur
+Mausposition zoomen, Nichts)
+\item Definiere Zoomfaktor für das Mausrad
+\end{itemize}
+
+\minisec{Überlagern}
+
+\begin{itemize}[label=--]
+\item Einstellung des Plazierungsalgorithmus für Labelanzeige (Wähle zwischen
+Zentrum (Standard), Kette, Popmusik-Tabu-Kette, Popmusik-Tabu und Popmusik-Kette)
+\end{itemize}
+
+\minisec{Digitalsierung}
+
+\begin{itemize}[label=--]
+\item Definiere Linienbreite und -farbe des Gummibandes beim Digitalisieren
+\item Definiere voreingestellten Fangmodus (zum Stützpunkt, zum Segment, zum
+Stützpunkt und Segment)
+\item Definiere voreingestellte Fangtoleranz in Karteneinheit oder Pixel. 
+\item Definiere Suchradius für Stützpunktbearbeitung in Karteneinheit oder Pixel.
+\item \checkbox{Markierungen nur für gewähltes Objekt anzeigen}
+\item Definiere Markierstil von Stützpunkten (Wähle zwischen Kreuz (Standard),
+halbtransparenter Kreis und Keine)
+\item Definieren Markergröße
+\item \checkbox{Letzte Attributwerteingaben wiederverwenden}
+\item \checkbox{Eingabe der Attributwerte bei der Einstellung neuer Objekte
+unterdrücken}
+\end{itemize}
+
+\minisec{KBS (Koordinatenbezugssystem)}
+
+Der KBS-Reiter ist ein zwei Bereiche unterteilt. Der erste Bereich ermöglicht es, 
+ein Standard-KBS für neue Projekte zu definieren.
+
+\begin{itemize}[label=--]
+\item Wähle KBS, um neue Projekte immer in diesem KBS zu beginnen.
+\item \checkbox{On-The-Fly Reprojektion voreinstellen}
+\end{itemize}
+
+Der zweite Bereich ermöglicht es, Voreinstellungen vorzunehmen, wenn ein neuer 
+Layer erzeugt wird oder ein Layer geladen wird, der keine KBS Informationen besitzt.
+
+\begin{itemize}[label=--]
+\item \radiobuttonon{KBS abfragen}
+\item \radiobuttonon{KBS des Projekts benutzen}
+\item \radiobuttonon{Folgendes KBS benutzen}
+\item \button{Wählen\dots}
+\end{itemize}
+
+\minisec{Sprache}
+
+\begin{itemize}[label=--]
+\item \checkbox{System-Locale überschreiben und stattdessen eine andere
+Spracheinstellung benutzen}
+\item Information der derzeit aktiven Spracheinstellung des Systems
+\end{itemize}
+
+\minisec{Netzwerk}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Proxyeinstellungen in QGIS \nixcaption}
+   \includegraphics[clip=true, width=14cm]{proxy-settings}
+   \label{fig:proxy-settings}
+\end{center}
+\end{figure}
+
+\begin{itemize}[label=--]
+\item \checkbox{Proxy für Webzugriff benutzen} und entsprechend Host, Port,
+Benutzer und Passwort definieren.
+\item Definieren Sie den \dropmenuopt{Proxytyp} entsprechend ihrer
+Bedürfnisse:
+ \begin{itemize}[label=--]
+  \item \dropmenuopt{DefaultProxy}: Proxy wird auf Grundlage des Proxy der
+Anwendung festgelegt.
+  \item \dropmenuopt{Socks5Proxy}: Proxy für jede Art von Verbindung.
+Unterstützt TCP, UDP, Bindung an einen Port (eingehende Verbindungen) und
+Authentifizierung.
+  \item \dropmenuopt{HttpProxy}: Umgesetzt mit dem "CONNECT"-Befehl,
+unterstützt nur ausgehende TCP-Verbindungen und Authentifizierung.
+  \item \dropmenuopt{HttpCachingProxy}: Umgesetzt mit normalen HTTP Befehlen,
+ist nur im Rahmen von HTTP-Anfragen sinnvoll.
+  \item \dropmenuopt{FtpCachingProxy}: Umgesetzt mit FTP proxy, ist nur im
+Rahmen von FTP-Anfragen sinnvoll.
+ \end{itemize}
+\item Festlegen von Cache-Einstellungen (Pfad und Größe)
+\item Festlegen von WMS Suchadressen - Standard ist \url{http://geopole.org/wms/search?search=\%1&type=rss}
+\item Definieren der Zeitüberschreitung bei Netzwerkanfragen in (ms) - Standard ist 60000.
+\end{itemize}
+
+Im unteren Fenster des Dialogs können Sie einige URLs hinzufügen, die dann
+von den Proxyeinstellungen ausgenommen werden (siehe
+Abbildung~\ref{fig:proxy-settings}), indem Sie auf den Knopf
+\button{Hinzufügen} klicken. Danach doppelklicken Sie auf das neu erstellte
+URL-Feld und tragen die entsprechende URL ein, die von den Proxyeinstellungen
+ausgenommen werden soll. Mit dem Knopf \button{Löschen} entfernen Sie die
+URL wieder.
+
+Wenn Sie weitere Informationen über die verschiedenen Proxyeinstellungen
+benötigen, schauen Sie bitte im Handbuch der QT-Bibliothek nach unter der
+URL: \\
+\url{http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum}.
+
+\begin{Tip} \caption{\textsc{Proxy richtig anwenden}}
+Das Verwenden von Proxys kann manchmal schwierig sein. Es ist
+sinnvoll die oben angesprochenen Proxytypen auszuprobieren, um zu sehen,
+welcher in dem jeweiligen Fall am besten funktioniert.
+\end{Tip}
+
+Passen Sie die Einstellungen im Dialogfenster \dialog{Optionen} entsprechend
+Ihren Wünschen an. Einige Änderungen können einen Neustart von QGIS notwendig
+machen, bevor sie aktiv werden.
+
+\begin{itemize}[label=--]
+\item \nix{Alle Einstellungen sind im einer Textdatei gespeichert unter:
+\$HOME/.config/QuantumGIS/qgis.conf}
+\item \osx{Alle Einstellungen sind gespeichert in:
+\$HOME/Library/Preferences/org.qgis.qgis.plist}
+\item \win{Einstellungen sind gespeichert in der Registry unter:}
+\begin{verbatim}
+\\HKEY\AKTUELLER_BENUTZER\Software\QuantumGIS\qgis
+\end{verbatim}
+\end{itemize}
+
+\section{Beschriftungs-Tools}\label{sec:annotations}
+\index{Beschriftungstext}
+\index{Text beschriftung|\see{Beschriftungstext}}
+
+Das \includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} 
+Beschriftungstext Werkzeug in der Attribut-Werkzeugleiste bietet die 
+Möglichkeit, formatierten Text in einer Sprechblase im QGIS Kartenfenster 
+zu platzieren. Aktivieren Sie dazu einfach das Beschriftungstext Icon und 
+klicken Sie in das Kartenfenster.
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=12cm]{annotation}
+   \caption{Dialog für den Beschriftungstext \nixcaption}
+   \label{fig:annotation}
+\end{figure}
+
+Ein Doppelklick auf das Element öffnet den Dialog mit verschiedenen Optionen. 
+Im Texteditor können Sie den formatierten Text eingeben und einige Einstellungen 
+vornehmen. Z.B. kann das Objekt an einer bestimmten Stelle positioniert werden, 
+was dann durch ein Marker-Symbol angezeigt wird. Oder das es unabhängig von dem 
+Objekt im Kartenfenster angezeigt wird. Der Text kann im Kartenfenster verschoben 
+werden, entweder die Markierung oder die Sprechblase. 
+
+\textbf{Bemerkung}: Wenn Sie die Tastenkombination Ctrl-T drücken, während ein 
+Beschriftungs-Tool aktiv ist, ändert sich deren Anzeigestatus zwischen an und aus.
+
+\textbf{Bemerkung}: Die Icons sind aktuell Bestandteil des Thema 'GIS' und 
+werden auch in den anderen Themen verwendet.
+
+Das \includegraphics[width=0.7cm,clip=true]{mActionAnnotation} Beschriftung 
+verschieben Tool ermöglicht es, den Beschriftungstext im Kartenfenster mit 
+der Maus zu verschieben.
+
+\subsection{Beschriftungsformular}
+\index{Beschriftung}
+\index{Beschriftungsformular|\see{Beschriftung}}
+
+Zusätzlich können Sie auch eigene Beschriftungsformular erstellen. Das 
+\includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} Beschriftungsformular 
+Tool ist nützlich, um Attribute eines Vektorlayers in einem maßgeschneiderten 
+QT-Designer Beschriftungsformular anzuzeigen (siehe 
+Abbildung~\ref{fig:custom-annotations}). Es ist ähnlich wie die Designer-Formulare 
+für das Identifizierungs-Werkzeug, wird aber als Beschriftungstext angezeigt. 
+Siehe auch den QGIS-Blog Eintrag unter der URL \url{http://blog.qgis.org/node/143} 
+für weitere Informationen.
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=10cm]{custom_annotation}
+   \caption{Angepasstes QT-Designer Beschriftungsformular \nixcaption}
+   \label{fig:custom-annotations}
+\end{figure}
+
+\section{Räumliche Lesezeichen}\label{sec:bookmarks}
+\index{Lesezeichen}
+\index{Räumliche Lesezeichen}
+
+Räumliche Lesezeichen ermöglichen es, geografische Orte zu markieren und als
+Lesezeichen abzuspeichern, um dorthin später zurückzufinden.
+
+\subsection{Ein Lesezeichen erstellen}
+
+Um ein Lesezeichen zu erstellen:
+\begin{enumerate}
+\item Zoomen oder verschieben Sie das Kartenfenster in einen Ausschnitt Ihrer Wahl.
+\item Wählen Sie in der Menüleiste \mainmenuopt{Ansicht} \arrow \dropmenuopt{Neues
+Lesezeichen} oder drücken Sie \keystroke{Strg-B}.
+\item Geben Sie eine Beschreibung für das Lesezeichen ein (bis zu 255
+Zeichen).
+\item Klicken Sie auf \button{OK}, um das Lesezeichen zu speichern oder
+auf \button{Cancel} um kein Lesezeichen zu erstellen.
+\end{enumerate}
+
+Sie können mehrere Lesezeichen mit demselben Namen erstellen.
+
+\subsection{Arbeiten mit Lesezeichen}
+
+Um ein bestehendes Lesezeichen zu editieren, wählen Sie in der Menüleiste
+\mainmenuopt{Ansicht} \arrow \dropmenuopt{Zeige Lesezeichen}. Das Dialogfenster
+erlaubt es, auf ein Lesezeichen zu zoomen oder es zu löschen. Sie können die
+Koordinaten oder den Namen des Lesezeichens nicht verändern.
+
+\subsection{Auf ein Lesezeichen zoomen}
+
+Im Dialogfenster \dialog{Räumliches Lesezeichen} klicken Sie auf das
+gewünschte Lesezeichen und wählen dann den Knopf \button{Zoomen auf}. Sie
+können auch auf ein Lesezeichen zoomen, indem Sie es mit einem Doppelklick
+auswählen.
+
+\subsection{Ein Lesezeichen löschen}
+
+Um ein Lesezeichen aus dem Dialogfenster \dialog{Räumliches Lesezeichen} zu
+löschen, klicken Sie auf das gewünschte Lesezeichen, dann auf den Knopf
+\button{Löschen} und bestätigen Sie es mit \button{Ja} oder \button{Nein}.
+
+\section{Laufende GPS-Verfolgung}\label{sec:gpstracking}
+
+Um die laufende GPS-Verfolgung in QGIS zu aktivieren, müssen Sie es 
+unter \mainmenuopt{Ansicht} \arrow \dropmenuopt{Laufende GPS-Verfolgung} 
+auswählen. Dadurch wird ein Dialog unterhalb der Kartenlegende geöffnet.
+
+Der Dialog kann 4 Fenster zeigen, in denen Einstellungen vorgenommen werden 
+können, siehe Abbildung \ref{fig:gpstrack_live} und \ref{fig:gpstrack_options}.
+
+\begin{description}
+ \item[(a)] \includegraphics[width=0.5cm,clip=true]{mActionToggleEditing}
+GPS Positionskoordinaten und manuelles eintragen von Stützpunkten und Objekten
+ \item[(b)] \includegraphics[width=0.5cm,clip=true]{gpstrack_barchart}
+GPS Signalstärke der Satellitenverbindung
+ \item[(c)] \includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart}
+GPS Polar-Bildschirm zeigt die Anzahl und Position der Satelliten an
+ \item[(d)] \includegraphics[width=0.5cm,clip=true]{mActionOptions}
+GPS Option-Bildschirm (siehe Abbildung \ref{fig:gpstrack_options}).
+\end{description}
+
+Mit einem angeschlossenen GPS-Empfänger (muss auch von Ihrem Betriebssystem 
+unterstützt werden) reicht ein einfacher Klick auf den Knopf \button{Verbinden}. 
+Ein zweiter Klick trennt die Verbindung zu dem GPS-Empfänger wieder. Für 
+GNU/Linux wurde gpsd Support integriert. Dadurch ist eine einfache Verbindung 
+zu den meisten GPS Geräten gewährleistet. Sie müssen gpsd im Vorfeld 
+konfigurieren, damit QGIS sich damit verbinden kann.
+
+[ WICHTIG ]: Wenn Sie Ihre Position im Kartenfenster aufnehmen möchten, müssen 
+Sie erst einen neuen Vektorlayer erstellen und ihn in den Editier-Modus bringen, 
+um die GPS-Positionen aufnehmen zu können.
+
+\begin{figure}[ht]
+\centering
+   \subfloat[Positionskoordinaten] {\label{subfig:gpstrack_main}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_main}}
+     \hspace{0.33cm}
+   \subfloat[GPS Signalstärke]{\label{subfig:gpstrack_stren}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_stren}}
+     \hspace{0.33cm}
+   \subfloat[GPS Polar-Bildschirm]{\label{subfig:gpstrack_polar}\includegraphics[clip=true, width=0.3\textwidth]{gpstrack_polar}} \\
+\caption{Laufende GPS-Verfolgung \nixcaption} \label{fig:gpstrack_live}
+\end{figure}
+
+\begin{figure}[ht]
+   \centering
+   \includegraphics[clip=true, width=7cm]{gpstrack_options}
+   \caption{GPS Positionskoordinaten Fenster \nixcaption}
+   \label{fig:gpstrack_options}
+\end{figure}
+
+\subsection{Positionskoordinaten}
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} Wenn der GPS-Empfänger 
+das Signal eines oder mehrerer Satelliten empfängt, wird Ihre Positionen als 
+Längengrad, Breitengrad und Höheninformation angezeigt, wie in 
+Abbildung~\ref{subfig:gpstrack_main} zu sehen.
+
+\subsection{GPS Signalstärke}
+\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} In diesem Fenster 
+können Sie die Signalstärke der Satelliten sehen (siehe 
+Abbildung~\ref{subfig:gpstrack_stren}).
+
+\subsection{GPS Polar-Bildschirm}
+\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} Wenn Sie wissen 
+wollen, wo sich die Satelliten befinden, mit denen Sie gerade verbunden sind, 
+wechseln Sie zum GPS Polar-Bildschirm, siehe Abbildung~\ref{subfig:gpstrack_polar}.
+Sie können auch die IDs der Satelliten sehen, von denen Sie die Signale empfangen.
+
+\subsection{GPS Optionen}
+\includegraphics[width=0.5cm,clip=true]{mActionOptions} Wenn es Probleme bei der 
+Verbindung zum GPS-Gerät geben sollte, können Sie von 
+\radiobuttonon{Automatisch feststellen} nach \radiobuttonon{Pfad / Port unten 
+benutzen} wechseln und manuell einstellen. Ein klick auf den Knopf 
+\button{Verbinden} stellt die Verbindung zum GPS-Gerät her.
+
+Mit dem Schieberegler \slider{GPS-Cursorgröße} können Sie die Größe 
+des Positions-Cursor festlegen. Indem Sie das kontrollkästchen 
+\checkbox{Stützpunkte automatisch hinzufügen} anklicken, werden de GPS-Stützpunkte 
+automatisch in dem sich im Editiermodus befindlichen Vektorlayers gespeichert.
+
+Im Bereich Karte nach GPS zentrieren können Sie auswählen, auf welche Weise das 
+Kartenfenster aktualisiert wird. Sie Möglichkeiten sind:
+
+\radiobuttonoff{Immer} \\
+\radiobuttonon{Beim Verlassen der Ausdehnung} \\
+\radiobuttonoff{Nie}
+
+Außerdem kann noch die Farbe und Linienbreite der aufgezeichneten GPS-Route 
+festgelegt werden.
+
+Wenn Sie ein Objekt manuell setzen wollen, gehen Sie zum Fenster 
+\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} 
+''Positionskoordinaten'' und klicken auf den Knopf \button{Objekt hinzufügen}. 
+
+\FloatBarrier
+
+

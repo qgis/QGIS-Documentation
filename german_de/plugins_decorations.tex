@@ -1,0 +1,118 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+
+\section{Dekorationen Plugins}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Die Dekorationen Plugins bestehen aus dem Urheberrechtshinweis, dem Nordpfeil
+und dem Maßstab Plugin. Sie werden als katographische Elemente im Kartenfenster
+verwendet. 
+
+\subsection{Urheberrechtshinweis Plugin}
+\label{copyrightlabel}
+\index{Plugins!Copyright}
+
+Der Name dieses Plugins ist ein wenig irreführend, denn Sie können damit
+nicht nur das Copyright Zeichen, sondern auch jeden anderen beliebigen Text
+zu einer Karte hinzufügen.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Copyright Label Plugin \nixcaption}\label{fig:copyright}\smallskip
+   \includegraphics[clip=true, width=6cm]{copyright}
+\end{center}  
+\end{figure}
+
+\begin{enumerate}
+\item Vergewissern Sie sich, dass das Urheberrechtshinweis Plugin geladen ist.
+\item Klicken Sie auf \mainmenuopt{Plugins} \arrow \dropmenuopt{Dekorationen} 
+\arrow \dropmenuopttwo{copyright_label}{Urheberrechtshinweis} oder klicken Sie auf
+das \toolbtntwo{copyright_label}{Urheberrechtshinweis} Icon der
+Werkzeugleiste.
+\item Geben Sie den Text ein, den Sie der Karte hinzufügen möchten. Wie
+im gezeigten Beispiel können Sie hierbei auch HTML Text verwenden.
+\item Wählen Sie aus dem Drop-Down Menü \selectstring{Platzierung}{Unten
+rechts} aus, wo der Urheberrechtshinweis im Kartenfenster zu sehen sein soll.
+\item Vergewissern Sie sich, dass das Kontrollkästchen
+\checkbox{Urheberrechtshinweis aktivieren} ausgewählt ist.
+\item Klicken Sie auf \button{OK} 
+\end{enumerate}
+
+In obigem Beispiel ist wird ein Copyright Symbol, gefolgt von dem Namen QGIS
+und der Jahreszahl 2009 in der unteren rechten Ecke des Kartenfensters angezeigt.
+
+\subsection{Nordpfeil Plugin}
+\label{northarrow}
+\index{Plugins!Nordpfeil}
+
+Das Nordpfeil Plugin platziert im Kartenfenster einen Nordpfeil. Bislang
+steht hierfür lediglich eine Pfeilform zur
+Verfügung. Sie können die Richtung des Nordpfeiles entweder selbst
+anpassen oder dies automatisch von QGIS bewerkstelligen lassen. Wenn Sie es
+QGIS überlassen die Richtung zu bestimmen, entscheidet das Programm, in
+welche Richtung der Nordpfeil idealerweise zeigen sollte.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Nordpfeil Plugin \nixcaption}\label{fig:north_arrow}\smallskip
+   \includegraphics[clip=true, width=6cm]{north_arrow_dialog}
+\end{center}  
+\end{figure}
+
+\subsection{Maßstab Plugin}
+\label{scalebar}
+\index{Plugins!Maßstab}
+
+Das Maßstab Plugin fügt dem Kartenausschnitt einen Maßstabsbalken hinzu.
+Dabei können Sie sowohl das Aussehen, die Platzierung, als auch die
+Beschriftung festlegen.
+
+QGIS unterstützt hierbei jedoch lediglich die Darstellung des Balkens in
+denjenigen Einheiten, die auch in Ihren entsprechenden Karten verwendet
+werden. Dies bedeutet, dass Sie einer Karte deren Layer der Einheit Meter
+entsprechen, keinen Maßstabsbalken in den Einheiten Fuss oder Zoll hinzufügen
+können. Die Einheit des Maßstabsbalkens entspricht also immer derjenigen der
+Karte. Gleiches gilt, wenn Sie Dezimalzahlen (Latitude/Longitude) verwenden, auch
+hier können Sie keinen Maßstabsbalken verwenden, der die Distanzen in der
+Einheit Meter darstellt.
+
+Das Hinzufügen eines Maßstabsbalkens geht folgendermaßen:
+
+
+\begin{enumerate}
+\item Klicken Sie auf \mainmenuopt{Plugins} \arrow \dropmenuopt{Dekorationen} 
+\arrow \dropmenuopttwo{scale_bar}{Maßstab} oder drücken Sie auf das Icon
+\toolbtntwo{scale_bar}{Maßstab} in der Werkzeugleiste.
+\item Wählen Sie aus dem Drop-Down Menü \selectstring{Platzierung}{Oben
+links} aus, wo der Maßstabsbalken im Kartenfenster zu sehen sein soll.
+\item Wählen Sie aus dem Drop-Down Menü \selectstring{Maßstabstil}{Strich
+unten} aus, welchen Stil der Maßstabsbalken haben soll.
+\item Wählen Sie die \selectcolor{Farbe des Maßstab}{black} aus.
+\item Definieren Sie die \selectnumber{Größe des Maßstab}{30Grad}
+\item Vergewissern Sie sich, dass das Kontrollkästchen \checkbox{Maßstab
+aktivieren} aktiv ist. 
+\item Optional können Sie noch auswählen, dass die Maßstabszahl immer als auf
+eine Ganze Zahl gerundet werden soll mit dem Kontrollkästchen
+\checkbox{Automatisch auf runde Zahlen einstellen}
+\item Klicken Sie auf \button{OK} 
+\end{enumerate} 
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Maßstab Plugin \nixcaption}\label{fig:scale_bar}\smallskip
+   \includegraphics[clip=true, width=6cm]{scale_bar_dialog}
+\end{center}  
+\end{figure}
+
+\begin{Tip}\caption{\textsc{Plugin Einstellungen als Projekt
+speichern}}\index{Plugins!Einstellungen speichern}
+Wenn Sie ein .qgs Projekt erstellen, werden alle Einstellungen
+bezüglich des Nordpfeil, Maßstab und Copyright Plugins mitgespeichert und
+beim nächsten Laden des Projektes wieder dargestellt.
+\end{Tip}
+
+\FloatBarrier
+
