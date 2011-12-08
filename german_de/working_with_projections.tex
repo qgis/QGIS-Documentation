@@ -7,15 +7,15 @@
 % comment out the following line:
 % \updatedisclaimer
 
-QGIS ermï¿½glicht es, globale und projektbezogene KBS (Koordinatenbezugssysteme)
-fï¿½r Layer ohne vordefinierte KBS zu definieren. Es kï¿½nnen benutzerdefinierte
-Koordinatenbezugssysteme erstellt werden und fï¿½r Raster- und Vektorlayer wird 
-On-The-Fly (OTF) Projektion unterstï¿½tzt, um Layer gemeinsam und lagegenau 
+QGIS ermöglicht es, globale und projektbezogene KBS (Koordinatenbezugssysteme)
+für Layer ohne vordefinierte KBS zu definieren. Es können benutzerdefinierte
+Koordinatenbezugssysteme erstellt werden und für Raster- und Vektorlayer wird 
+On-The-Fly (OTF) Projektion unterstützt, um Layer gemeinsam und lagegenau 
 darzustellen, auch wenn sie unterschiedliche KBS besitzen. 
 
-\section{ï¿½berblick zur Projektionsunterstï¿½tzung}\label{label_projoverview}
+\section{Überblick zur Projektionsunterstützung}\label{label_projoverview}
 
-QGIS unterstï¿½tzt etwa 2700 bekannte Koordinatenbezugssysteme (KBS). Diese
+QGIS unterstützt etwa 2700 bekannte Koordinatenbezugssysteme (KBS). Diese
 sind in einer SQlite-Datenbank abgelegt, die mit QGIS installiert wird.
 Normalerweise muss diese Datenbank nicht editiert werden, und es kann
 Probleme verursachen, wenn Sie es dennoch versuchen. Selbst definierte KBS
@@ -30,14 +30,14 @@ welche von QGIS benutzt werden, nicht den IDs der spatial\_references Tabelle
 oder den EPSG Codes entsprechen. Die EPSG und PostGIS IDs sind in einer 
 SQlite-Datenbank abgelegt und werden benutzt, um KBS in QGIS zu spezifizieren.
 
-Um OTF Projektion zu verwenden, mï¿½ssen die Daten Informationen ï¿½ber ihr
+Um OTF Projektion zu verwenden, müssen die Daten Informationen über ihr
 Koordinatenbezugssystem enthalten. Bei PostGIS-Layern benutzt QGIS die spatial
 reference ID, die bei der Erstellung des Layers festgelegt wurde. Bei Daten,
-die von der OGR-Bibliothek unterstï¿½tzt werden, bezieht sich QGIS auf das
+die von der OGR-Bibliothek unterstützt werden, bezieht sich QGIS auf das
 Vorhandensein eines KBS bei den Daten. Bei Shapes bedeutet dies, dass eine
 Datei mit der Endung .prj vorhanden sein muss, in der das KBS im Well
-Known Text (WKT)\index{WKT} Format angegeben ist. Fï¿½r ein Shape mit dem Namen
-\filename{lakes.shp} gï¿½be es also eine entsprechende Projektionsdatei
+Known Text (WKT)\index{WKT} Format angegeben ist. Für ein Shape mit dem Namen
+\filename{lakes.shp} gäbe es also eine entsprechende Projektionsdatei
 \filename{lakes.prj}. 
 
 \section{Ein Koordinatenbezugssystem festlegen}
@@ -52,15 +52,15 @@ Known Text (WKT)\index{WKT} Format angegeben ist. Fï¿½r ein Shape mit dem Namen
 \end{figure}
 
 QGIS startet ein neues Projekt mit dem Festlegen eines Standard-KBS. Das ist EPSG:4326 
-- WGS84 \texttt{proj=longlat + ellps=WGS84 +datum=WGS84 +no\_defs} und ist so vordefiniert 
-in QGIS. Sie kï¿½nnen diese Einstellung ï¿½ndern im Reiter \tab{KBS} unter \mainmenuopt{Einstellungen} \arrow \dropmenuopttwo{mActionOptions}{Optionen}, in dem Sie im Bereich 
-'Neue Projekte immer in diesem KBS beginnen' auf den Knopf \button{Wï¿½hlen} klicken 
-und ein anderes KBS auswï¿½hlen (siehe Abbildung~\ref{fig:crsdialog}). Diese 
-Einstellung wird dann fï¿½r alle folgenden neuen Projekte angewendet.
+- WGS84 \texttt{proj=longlat + ellps=WGS84 +datumWGS84 +no\_defs} und ist so vordefiniert 
+in QGIS. Sie können diese Einstellung ändern im Reiter \tab{KBS} unter \mainmenuopt{Einstellungen} \arrow \dropmenuopttwo{mActionOptions}{Optionen}, in dem Sie im Bereich 
+'Neue Projekte immer in diesem KBS beginnen' auf den Knopf \button{Wählen} klicken 
+und ein anderes KBS auswählen (siehe Abbildung~\ref{fig:crsdialog}). Diese 
+Einstellung wird dann für alle folgenden neuen Projekte angewendet.
 
-Wenn Sie einen Layer laden, der keine KBS Informationen enthï¿½lt, mï¿½ssen Sie festlegen, 
+Wenn Sie einen Layer laden, der keine KBS Informationen enthält, müssen Sie festlegen, 
 wie QGIS darauf reagieren soll. Dies kann allgemein oder projektbezogen im Bereich 
-'Koordinatenbezugssystem fï¿½r neue Layer' getan werden. Die Optionen sind: 
+'Koordinatenbezugssystem für neue Layer' getan werden. Die Optionen sind: 
 
 \begin{itemize}[label=--]
 \item \checkbox{KBS abfragen} 
@@ -68,47 +68,47 @@ wie QGIS darauf reagieren soll. Dies kann allgemein oder projektbezogen im Berei
 \item \checkbox{Folgendes KBS benutzen}
 \end{itemize}
 
-Wenn Sie ein Koordinatenbezugssystem fï¿½r einen bestimmten Layer festlegen
-mï¿½chten, kï¿½nnen Sie das im Reiter \tab{Allgemein} der Dialoge fï¿½r 
+Wenn Sie ein Koordinatenbezugssystem für einen bestimmten Layer festlegen
+möchten, können Sie das im Reiter \tab{Allgemein} der Dialoge für 
 Rasterlayereigenschaften (\ref{label_generaltab}) und
 Vektorlayereigenschaften (\ref{vectorgeneraltab}) machen. Falls der geladene
-Layer bereits Informationen zu seinem Koordinatenbezugssystem enthï¿½lt,
+Layer bereits Informationen zu seinem Koordinatenbezugssystem enthält,
 werden diese angezeigt (siehe Abbildung~\ref{fig:vector_symbology}).
 
 \begin{Tip}
-\caption{\textsc{KBS im Kontextmenï¿½ des Layers}}
+\caption{\textsc{KBS im Kontextmenü des Layers}}
 Wenn Sie mit der rechten Maustaste auf den Layernamen im Legendenbereich 
-klicken, ï¿½ffnet sich das Kontextmenï¿½ des Layers. Dort befinden sich zwei 
-Mï¿½glichkeiten zur Einstellung des KBS:
+klicken, öffnet sich das Kontextmenü des Layers. Dort befinden sich zwei 
+Möglichkeiten zur Einstellung des KBS:
 \begin{itemize}
-\item \dropmenuopt{KBS fï¿½r Layer setzen} ï¿½ffnet den KBS Dialog.
-\item \dropmenuopt{Layer-KBS dem Projekt zuweisen} ï¿½berschreibt das 
+\item \dropmenuopt{KBS für Layer setzen} öffnet den KBS Dialog.
+\item \dropmenuopt{Layer-KBS dem Projekt zuweisen} überschreibt das 
 aktuelle Projekt-KBS mit dem KBS des Layers.
 \end{itemize}
 \end{Tip}
 
 \section{On-The-Fly (OTF) Projektion}\label{label_projstart}
 
-QGIS unterstï¿½tzt jetzt die On-The-Fly (OTF) Reprojektion fï¿½r Raster- und 
+QGIS unterstützt jetzt die On-The-Fly (OTF) Reprojektion für Raster- und 
 Vektorlayer. Diese Funktion ist aber nicht als Standard aktiviert. Um sie 
-auszuwï¿½hlen, ï¿½ffnen Sie den Dialog 
+auszuwählen, öffnen Sie den Dialog 
 \dropmenuopttwo{mActionOptions}{Projekteinstellungen}, wechseln in den Reiter
-\tab{KBS} und klicken dort auf das Kontrollkï¿½stchen 
+\tab{KBS} und klicken dort auf das Kontrollkästchen 
 \checkbox{On-The-Fly-KBS-Transformation aktivieren}. 
 
-Um den Dialog \tab{KBS} zu ï¿½ffnen, kï¿½nnen Sie auch auf das Icon 
+Um den Dialog \tab{KBS} zu öffnen, können Sie auch auf das Icon 
 \toolbtntwo{geographic}{KBS-Status} in der unteren rechten Ecke der 
-Statusleiste drï¿½cken.
+Statusleiste drücken.
 
-Wenn Sie bereits einen Layer geladen haben und nun die Unterstï¿½tzung fï¿½r
+Wenn Sie bereits einen Layer geladen haben und nun die Unterstützung für
 On-The-Fly (OTF) Projektion aktivieren wollen ist der beste Weg folgender.
-ï¿½ffnen Sie den Reiter \tab{KBS} im Menï¿½ \dropmenuopttwo{mActionOptions}{Projekteinstellungen}, wï¿½hlen Sie das passende KBS fï¿½r den Layer aus und 
-aktivieren Sie dann das Kontrollkï¿½stchen \checkbox{On-The-Fly-KBS-Transformation 
-aktivieren}. Das Icon \toolbtntwo{geographic}{KBS-Status} zeigt nun einen grï¿½nen
+Öffnen Sie den Reiter \tab{KBS} im Menü \dropmenuopttwo{mActionOptions}{Projekteinstellungen}, wählen Sie das passende KBS für den Layer aus und 
+aktivieren Sie dann das Kontrollkästchen \checkbox{On-The-Fly-KBS-Transformation 
+aktivieren}. Das Icon \toolbtntwo{geographic}{KBS-Status} zeigt nun einen grünen
 Haken, und alle daraufhin geladenen Layer werden On-The-Fly auf das
-ausgewï¿½hlte KBS projiziert. 
+ausgewählte KBS projiziert. 
 
-Der Reiter \tab{KBS} enthï¿½lt vier wichtige Optionen 
+Der Reiter \tab{KBS} enthält vier wichtige Optionen 
 (siehe Abbildung~\ref{fig:projections}). Diese werden im Folgenden beschrieben.
 
 \begin{figure}[ht]
@@ -121,43 +121,43 @@ Der Reiter \tab{KBS} enthï¿½lt vier wichtige Optionen
 \begin{enumerate}
 \item \textbf{On-The-Fly-KBS-Transformation
 aktivieren}\index{Koordinatenbezugssystem!OTF!aktivieren} 
-- ï¿½ber diese Checkbox wird die OTF Projektion aktiviert oder deaktiviert.
+- über diese Checkbox wird die OTF Projektion aktiviert oder deaktiviert.
   Wenn sie deaktiviert ist, wird jeder Layer entsprechend seines KBS
   dargestellt. Wenn es aktiviert ist, wird jeder Layer beim Laden in die
 definierte Koordinatenbezugssystem 'on-the-fly' umgewandelt dargestellt.
 \item \textbf{Koordinatensystem} - dies ist eine Liste mit allen
-Koordinatenbezugssystemen, die von QGIS unterstï¿½tzt werden. Um ein
-KBS zu benutzen, wï¿½hlt man es aus der Liste aus. Die bis dahin aktive
+Koordinatenbezugssystemen, die von QGIS unterstützt werden. Um ein
+KBS zu benutzen, wählt man es aus der Liste aus. Die bis dahin aktive
 Projektion ist vorgegeben als WGS 84.
 \item \textbf{Proj4 Text} - dies ist ein Ausdruck, der von der PROJ-Bibliothek
-genutzt wird. Es dient nur zur Information und kann nicht verï¿½ndert werden.
-\item \textbf{Suchen} - wenn Sie den EPSG Code oder den Namen fï¿½r ein KBS
-kennen, kï¿½nnen Sie diese benutzen, um ihr Koordinatenbezugssystem zu finden.
+genutzt wird. Es dient nur zur Information und kann nicht verändert werden.
+\item \textbf{Suchen} - wenn Sie den EPSG Code oder den Namen für ein KBS
+kennen, können Sie diese benutzen, um ihr Koordinatenbezugssystem zu finden.
 Geben Sie eine ID  der Namen ein und klicken Sie auf \button{Finden}.
 \item \textbf{Zuletzt verwendete KBS} - Wenn Sie bestimmte
-Koordinatenbezugssystem regelmï¿½ï¿½ig fï¿½r ihre tï¿½gliche GIS Arbeit verwenden,
-werden diese fï¿½r den 'schnellen' Zugriff unterhalb des Fensters mit den
-vorhanden KBS angezeigt. Klicken Sie auf einen der Knï¿½pfe, um das
-entsprechende KBS direkt auszuwï¿½hlen.
+Koordinatenbezugssystem regelmäßig für ihre tägliche GIS Arbeit verwenden,
+werden diese für den 'schnellen' Zugriff unterhalb des Fensters mit den
+vorhanden KBS angezeigt. Klicken Sie auf einen der Knöpfe, um das
+entsprechende KBS direkt auszuwählen.
 \end{enumerate}
 
 \begin{Tip}
 \caption{\textsc{Dialog Projekteigenschaften}}
-Wenn Sie den Dialog \dialog{Projekteigenschaften} ï¿½ber die Menï¿½leiste ï¿½ffnen, 
-mï¿½ssen Sie erst auf den Reiter \tab{KBS} drï¿½cken. ï¿½ber das 
+Wenn Sie den Dialog \dialog{Projekteigenschaften} über die Menüleiste öffnen, 
+müssen Sie erst auf den Reiter \tab{KBS} drücken. Über das 
 \toolbtntwo{geographic}{KBS-Status} Icon in der Statusleiste unten rechts 
-wird der Reiter \tab{KBS} direkt in den Vordergrund gerï¿½ckt.
+wird der Reiter \tab{KBS} direkt in den Vordergrund gerückt.
 \end{Tip}
 
 \section{Ein Koordinatenbezugssystem selbst definieren}
 \label{sec:customprojections}
 \index{Koordinatenbezugssystem!anpassen}
 
-Wenn QGIS nicht das KBS bereithï¿½lt, welches Sie brauchen, kï¿½nnen Sie ein
-eigenes KBS erstellen. Dazu wï¿½hlen Sie in der Menï¿½leiste
+Wenn QGIS nicht das KBS bereithält, welches Sie brauchen, können Sie ein
+eigenes KBS erstellen. Dazu wählen Sie in der Menüleiste
 \mainmenuopt{Einstellungen} \arrow
 \dropmenuopttwo{mIconNew}{Benutzerkoordinatenbezugssystem}. Das eigene KBS
-wird in einer Benutzerdatenbank erstellt. Diese enthï¿½lt Ihre rï¿½umlichen
+wird in einer Benutzerdatenbank erstellt. Diese enthält Ihre räumlichen
 Lesezeichen und die selbst erstellten Projektionen.
 
 \begin{figure}[ht]
@@ -168,7 +168,7 @@ Lesezeichen und die selbst erstellten Projektionen.
 \end{center}  
 \end{figure}
 
-In QGIS bedarf es einem grundlegenden Verstï¿½ndnis im Umgang mit der
+In QGIS bedarf es einem grundlegenden Verständnis im Umgang mit der
 PROJ4-Bibliothek. Zu Beginn sollten Sie einen Blick in das Benutzerhandbuch
 von PROJ werfen. Cartographic Projection Procedures for the UNIX Environment
 - A User's Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report
@@ -178,7 +178,7 @@ beschriebenen kartographischen Parameter sind identisch mit denen, die in QGIS
 verwendet werden.
 
 Der Dialog \dialog{Definition eines Benutzerkoordinatenbezugssystem} braucht
-nur zwei Eintrï¿½ge, um eine eigene Projektion zu definieren:
+nur zwei Einträge, um eine eigene Projektion zu definieren:
 
 \begin{enumerate}
 \item Einen Namen
@@ -192,10 +192,10 @@ zeigt den Dialog mit einer Beispielprojektion. Danach speichern Sie das neue
 KBS mit dem Knopf \toolbtntwo{mActionFileSave}{Speichern} ab. 
 
 Denken Sie daran, dass die kartographischen Parameter mit einem
-\usertext{+proj=}-Block beginnen mï¿½ssen, um den Beginn eines neuen KBS
+\usertext{+proj=}-Block beginnen müssen, um den Beginn eines neuen KBS
 anzuzeigen. 
 
-Sie kï¿½nnen das neue KBS testen, um zu sehen, ob bei einer Konvertierung
+Sie können das neue KBS testen, um zu sehen, ob bei einer Konvertierung
 von bekannten WGS84 Lat-Lon Koordinaten in ihre Projektion ein sinnvolles
 Ergebnis herauskommt. Dazu kopieren Sie ihre kartographischen Parameter in
 das Fenster \guilabel{Parameter}, geben ein paar bekannte WGS84 Lat-Lon
