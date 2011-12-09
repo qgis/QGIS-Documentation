@@ -9,7 +9,7 @@
 
 \qg uses the OGR library to read and write vector data formats
 \footnote{GRASS vector and PostgreSQL support is supplied by native 
-QGIS data provider plugins.}, including ESRI shapefiles,\index{shapefiles}
+QGIS data provider plugins.}, including ESRI shapefiles\index{shapefiles}
 \index{ESRI!shapefiles}\index{SHP files}, MapInfo MIF (interchange 
 format)\index{MIF files}\index{MapInfo!MIF files}, MapInfo TAB 
 (native format)\index{TAB files}\index{MapInfo!TAB files} and many more. 
@@ -38,11 +38,10 @@ functions.
 \index{ESRI!shapefiles}
 \index{SHP files}
 
-The standard vector file format used in \qg is the ESRI Shapefile. Support
-is provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})
-\index{OGR}. A shapefile actually consists of several files. The following three 
-are required:
-\index{shapefile!format}
+The standard vector file format used in \qg is the ESRI Shapefile. Support is 
+provided by the OGR Simple Feature Library (\url{http://www.gdal.org/ogr/})\index{OGR}. 
+A shapefile actually consists of several files. The following three 
+are required:\index{shapefile!format}
 
 \begin{itemize}[label=--]
 \item \filename{.shp} file containing the feature geometries.
@@ -153,7 +152,7 @@ shapefile name in the legend or by right-clicking and choosing
 \index{vector layers!MapInfo}
 
 \includegraphics[width=0.7cm]{mActionAddNonDbLayer} To load a MapInfo layer, 
-click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar bar 
+click on the \toolbtntwo{mActionAddNonDbLayer}{Add Vector Layer} toolbar 
 button or type \keystroke{Ctrl+Shift+V}, change the file type filter to 
 \selectstring{Files of Type}{[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)} and 
 select the .TAB or .tab layer you want to load.
@@ -666,7 +665,7 @@ define to use millimeter or map units for the size scale. And you can use
 data-defined size scale and rotation (available through \button{Advanced} 
 next to \button{Save as style}). The \button{Symbol levels} button allows to 
 enable and define the order in which the symbol layers are rendered (if the 
-symbol consits of more than one layer).
+symbol consists of more than one layer).
 
 After having done any needed changes, the symbol can be added to the list 
 of current style symbols (using the \button{Save as style} button) and then 
@@ -819,7 +818,7 @@ you to choose the layer type. The available options depend on the layer type
 
 \subsubsection{Style Manager to manage symbols and color ramps}\label{subsec:stylemanager}
 
-The Style Manger is a small helper application, that lists symbols and color
+The Style Manager is a small helper application, that lists symbols and color
 ramps available in a style. It also allows you to add and/or remove items. To
 launch the Style Manager, click on \mainmenuopt{Settings} \arrow \dropmenuopt{Style
 Manager} in the main menu.
@@ -880,7 +879,7 @@ shown.\index{symbology!changing}
 
 \minisec{Style Options} \label{sec:style_options} \index{vector layers!styles}
 Within this dialog you can style your vector layer. Depending on the selected
-rendering option you have the possibility to also classify your mapfeatures.
+rendering option you have the possibility to also classify your map features.
 
 At least the following styling options apply for nearly all renderers:
 \begin{description}
@@ -894,8 +893,8 @@ At least the following styling options apply for nearly all renderers:
 \end{description}
 \item[Outline options]
 \begin{description}
- \item[Outline style] - pen-style for your outline of your feature. You can
- also set this to 'no pen'.
+ \item[Outline style] - Pen-style for your outline of your feature. You can
+ also set this to 'no Pen'.
  \item[Outline color] - color of the ouline of your feature.
  \item[Outline width] - width of your features.
 \end{description}
@@ -930,7 +929,7 @@ We recommend to switch to the new labeling, described in section \ref{newlabel}.
 
 The old labeling in the \tab{Labels} tab allows you to enable labeling features 
 and control a number of options related to fonts, placement, style, alignment 
-and buffering. We will illustrate this by labelling the lakes shapefile of the
+and buffering. We will illustrate this by labeling the lakes shapefile of the
 \filename{\qg\_example\_dataset}:
 
 \begin{enumerate}
@@ -1080,7 +1079,7 @@ candidates for debugging.
 
 \minisec{Keywords to use in attribute columns for labeling}
 
-There is a list of supported key words, that can be used for the placement of labels in defined attribute colums?
+There is a list of supported key words, that can be used for the placement of labels in defined attribute colums.
 
 \begin{itemize}[label=--]
 \item \textbf{For horizontal alignment}: left, center, right
@@ -1136,7 +1135,7 @@ attribute table. If editable is activated, a line edit is shown with
 autocompletion support, otherwise a combo box is used.
 \item \textbf{File name}: Simplifies the selection by adding a file chooser dialog.
 \item \textbf{Value map}: a combo box with predefined items. The value is stored in
-the attribute, the description is shown in the comboo box. You can define
+the attribute, the description is shown in the combo box. You can define
 values manually or load them from a layer or a CSV file.
 \item \textbf{Enumeration}: Opens a combo box with values that can be used within the
 columns type. This is currently only supported by the postgres provider.
@@ -1231,7 +1230,7 @@ Two example actions are shown below:\index{actions!examples}
 In the first example, the web browser konqueror is invoked and passed a URL to
 open. The URL performs a Google search on the value of the \usertext{nam} field
 from our vector layer. Note that the application or script called by the
-action must be in the path or you must provided the full path. To be sure, we could
+action must be in the path or you must provide the full path. To be sure, we could
 rewrite the first example as: \usertext{/opt/kde3/bin/konqueror
 http://www.google.com/search?q=\%nam}. This will ensure that the konqueror
 application will be executed when the action is invoked.
@@ -1305,7 +1304,7 @@ proceed:
 \item From the drop-down box, select \selectstring{Field containing label}{NAMES} and click \button{Insert Field}.
 \item Your action text now looks like this:\\ \usertext{firefox
   \url{http://google.com/search?q=\%NAMES}}
-\item Fo finalize the action click the \button{Insert action} button.
+\item To finalize the action click the \button{Insert action} button.
 \end{enumerate}
 
 This completes the action and it is ready to use. The final text of the action
@@ -1383,7 +1382,7 @@ classification attribute. The placement of the diagrams interacts with the
 new labeling. We will demonstrate an example and overlay the alaska 
 boundary layer a piechart diagram showing some temperature data from a climate 
 vector layer. Both vector layers are part of the \qg sample dataset (see
-Section~\ref{label_sampledata}.
+Section~\ref{label_sampledata}).
 
 \begin{enumerate}
 \item First click on the \toolbtntwo{mActionAddOgrLayer}{Load Vector} icon,
@@ -1418,7 +1417,7 @@ Figure~\ref{fig:climatediagram} gives an impression.
 
 \qg supports various capabilities for editing OGR, PostGIS and Spatialite
 vector layers. \textbf{Note} - the procedure for editing GRASS layers is
-different - see Section \ref{grass_digitising} for details.
+different - see Section \ref{grass_digitizing} for details.
 
 \begin{Tip}\caption{\textsc{Concurrent Edits}}
 This version of \qg does not track if somebody else is editing a
@@ -1437,7 +1436,7 @@ the vector layer geometries.
 Snapping tolerance is the distance \qg uses to \usertext{search} for the
 closest vertex and/or segment you are trying to
 connect when you set a new vertex or move an existing vertex. If you aren't
-within the snap tolerance, \qg will leave the vertex where you release the
+within the snapping tolerance, \qg will leave the vertex where you release the
 mouse button, instead of snapping it to an existing vertex and/or segment.
 The snapping tolerance setting affects all tools which work with tolerance.
 
@@ -1518,7 +1517,7 @@ arrow key to pan south.
 
 You can also use the spacebar to temporarily cause mouse movements to pan
 then map. The PgUp and PgDown keys on your keyboard will cause the map
-display to zoom in or out without interrupting your digitising session.
+display to zoom in or out without interrupting your digitizing session.
 
 \subsubsection{Topological editing}
 
@@ -1630,8 +1629,8 @@ right-click anywhere on the map area to confirm you have finished entering
 the geometry of that feature.
 
 The attribute window will appear, allowing you to enter the information for
-the new feature. Figure \ref{fig:vector_digitising} shows setting attributes
-for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
+the new feature. Figure \ref{fig:vector_digitizing} shows setting attributes
+for a fictitious new river in Alaska. In the \tab{Digitizing} tab under the
 \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu, you can also activate 
 \\
 \checkbox{Suppress attributes pop-up windows after each created feature}
@@ -1640,7 +1639,7 @@ for a fictitious new river in Alaska. In the \tab{Digitising} tab under the
 \begin{figure}[ht]
    \centering
    \includegraphics[clip=true, width=8cm]{editDigitizing}
-   \caption{Enter Attribute Values Dialog after digitizing a new vector feature \nixcaption}\label{fig:vector_digitising}
+   \caption{Enter Attribute Values Dialog after digitizing a new vector feature \nixcaption}\label{fig:vector_digitizing}
  \end{figure}
 
 With the \toolbtntwo{mActionMoveFeature}{Move Feature} icon on the toolbar
@@ -1649,7 +1648,7 @@ you can move existing features.
 \begin{Tip}\caption{\textsc{Attribute Value Types}}
 At least for shapefile editing the attribute types are validated during the
 entry. Because of this, it is not possible to enter a number into the text-column in
-the dialog \dialog{Enter Attribute Values} or vica versa. If you need to do so,
+the dialog \dialog{Enter Attribute Values} or vice versa. If you need to do so,
 you should edit the attributes in a second step within the \dialog{Attribute
 table} dialog.
 \end{Tip}
@@ -2183,14 +2182,15 @@ Have a closer look at the edit widget in section~\ref{label_attributes} to find 
 \index{Query Builder}
 
 The \button{Advanced search\dots} button opens the Query Builder and allows you to
-define a subset of a table using a SQL-like WHERE clause, display the result in theh
+define a subset of a table using a SQL-like WHERE clause, display the result in the
 main window and save it as a Shapefile. For example, if you have a
 \filename{towns} layer
 with a \usertext{population} field you could select only larger towns by entering
 \usertext{population > 100000} in the SQL box of the query builder. Figure
 \ref{fig:query_builder} shows an example of the query builder populated with
 data from a PostGIS layer with attributes stored in PostgreSQL.
-The Fields, Values and Operators sections help the user to construct the SQL-like
+The Fields, Values and Operators sections help the user to construct the SQL-like 
+query.
 
 \begin{figure}[ht]
   \centering
@@ -2327,7 +2327,7 @@ output field width 10 and a precision of 3.
 field calculator expression box and click \button{Ok}.
 \end{enumerate}
 
-Due to limited space screeen, not all the operators are available through the buttons. They are all listed in the following table.
+Due to limited space screen, not all the operators are available through the buttons. They are all listed in the following table.
 
 \begin{center}
 {\setlength{\extrarowheight}{10pt}

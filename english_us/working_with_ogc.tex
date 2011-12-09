@@ -84,9 +84,9 @@ WMS server, as listed in table \ref{tab:wms_connection_parms}:
 \hline URL \index{WMS!URL} & URL of the server providing the data.
  This must be a resolvable host name; the same format as you would use
  to open a telnet connection or ping a host. \\
-\hline Username \index{WMS!authentification} & Username to access a
+\hline Username \index{WMS!authentication} & Username to access a
 secured WMS-server. This parameter is optional \\
-\hline Password & Password for a basic authentificated WMS-server. This
+\hline Password & Password for a basic authenticated WMS-server. This
 parameter is optional.\\
 \hline Ignore GetMap URI & \checkbox{Ignore GetMap URI reported in
 capabilities}, use given URI from URL-field above\\
@@ -247,14 +247,14 @@ Server}-dialog.
   	\caption{Dialog for searching WMS servers after some keywords \nixcaption}\label{fig:searchtab}
 \end{figure}
 
-As you can see it is possible to enter a search-string in the textfield an
+As you can see it is possible to enter a search-string in the textfield and
 hit the \button{Search} button.
 
 After a short while the search result will be populated into the tab below
 the textfield.
 
 Browse the result list and inspect your searchresults within the table. To
-visualize the results, select an table entry, press the \button{Add
+visualize the results, select a table entry, press the \button{Add
 selected row to WMS-list} button and change back to the \tab{server} tab.
 
 QGIS automatically has updated your server list and the selected
@@ -414,17 +414,17 @@ A workaround is to delete the layer completely and start again.
 
 \minisec{WMS Servers Requiring Authentication}
 \index{WMS!remote server!authentication}
-\index{WMS!remote server!basic authentification}
+\index{WMS!remote server!basic authentication}
 
 Currently public accessible and secured WMS-services are supported.
-The secured WMS-servers can be accessed by public authentification. You
+The secured WMS-servers can be accessed by public authentication. You
 can add the (optional) credentials when you add a WMS-server. See section
 \ref{sec:ogc-wms-servers} for details.
 
 \begin{Tip}[ht]\caption{\textsc{Accessing secured OGC-layers}}
 If you need to access secured layers with other secured methods
-than basic authentification, you could use InteProxy as
-a transparent proxy, which does supports several authentification methods.
+than basic authentication, you could use InteProxy as
+a transparent proxy, which does support several authentication methods.
 More information can be found at the InteProxy-manual found on the website
 \url{http://inteproxy.wald.intevation.org}.
 \index{WMS!secured layers!}\index{OGC!Authentication}
@@ -495,9 +495,9 @@ Without using the checkbox \checkbox{Only request features overlapping the
 current view extent} QGIS fetches all features from the WFS-server. If you
 only want to have a small selection based on your extent, zoom to the area
 of interest, request the WFS-layer again and make sure you have checked
-the checkbox mentioned above. Basically this addes the BBOX-parameter with
-the values from you current extent to the WFS-query. This is extremly
-usefull when you only want to request \textbf{some} features from a huge
+the checkbox mentioned above. Basically this adds the BBOX-parameter with
+the values from your current extent to the WFS-query. This is extremely
+useful when you only want to request \textbf{some} features from a huge
 WFS-dataset.
 
 You'll notice the download progress is visualized in the left bottom of the 
@@ -509,9 +509,9 @@ could be, that you might experience random behavior
 and crashes. You can look forward to improvements in a future version of the plugin.
 
 This means that only WFS 1.0.0 is supported. At this point there have not
-been many test against WFS versions implemented in other WFS-servers.
+been many tests against WFS versions implemented in other WFS-servers.
 If you encounter problems with any other WFS-server, please do not
-hesitate to contacting the development team. Please refer to Section
+hesitate to contact the development team. Please refer to Section
 \ref{label_helpsupport} for further information about the mailinglists.
 
 \begin{Tip}[htb]\caption{\textsc{Finding WFS Servers}}
@@ -525,7 +525,7 @@ of them maintained and some not.
 %
 %\begin{Tip}[htb]\caption{\textsc{Accessing secure WFS Servers}}
 %Within the dialog \dialog{Create a new WFS-connection} QGIS does not support
-%authenficated WFS-connections yet. Within one of the next releases we expect
+%authencated WFS-connections yet. Within one of the next releases we expect
 %to also support authenticated WFS-servers. Meanwhile you could use InteProxy
 %(\url{http://inteproxy.wald.intevation.org}) for accessing authenticated
 % WFS-servers.
