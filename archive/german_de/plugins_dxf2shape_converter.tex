@@ -1,0 +1,51 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+
+\section{Dxf2Shape Konverter Plugin}\index{Plugins!DXF2Shape Konverter}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+%\updatedisclaimer
+
+Das Plugin \toolbtntwo{dxf2shp_converter}{Dxf2Shape Konverter} ermöglicht es,
+Vektorlayer von DXF (Drawing Interchange Format) ins Shape-Format zu
+konvertieren. Dazu müssen Sie folgende Parameter angegeben:
+
+\begin{itemize}[label=--]
+\item \textbf{DXF-Eingabedatei}: Geben Sie hier den Pfad zur DXF-Datei an.
+\item \textbf{Ausgabedatei}: Geben Sie hier einen Namen für das Ausgabe-Shape
+an.
+\item \textbf{Typ der Ausgabedatei}: Geben Sie hier den Geometrietyp an.
+Unterstützt wird momentan Polylinie, Polygon oder Punkt.
+\item \textbf{Beschriftungen exportieren}: Wenn Sie dieses Kontrollkästchen
+aktivieren, wird ein zusätzlicher Shapefile Punktlayer erstellt, und die
+damit verknüpfte dbf-Datei enthält die Beschriftungen und Informationen dazu,
+die sich im "'TEXT"'-Feld der Datei befinden.
+\end{itemize}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Dxf2Shape Konverter Plugin \nixcaption}
+   \label{fig:dxf2shape_dialog}\smallskip
+   \includegraphics[clip=true, width=10cm]{dxf2shape_dialog}
+\end{center}  
+\end{figure}
+
+\minisec{Das Plugin anwenden}
+
+\begin{enumerate}
+  \item Starten Sie QGIS, laden Sie das Dxf2Shape Plugin mit dem Plugin
+Manager (siehe Kapitel~\ref{sec:load_core_plugin}) und klicken Sie auf das
+Icon \toolbtntwo{dxf2shp_converter}{Dxf2Shape Konverter} in der
+Wekrzeugleiste. Der \dialog{DXF-Import} Dialog erscheint wie in
+Abbildung~\ref{fig:dxf2shape_dialog}.
+  \item Geben Sie den DXF-Eingabedatei an, einen Namen für die Ausgabedatei
+und ihren Typ.
+  \item Aktivieren Sie das Kontrollkästchen \checkbox{Beschriftungen
+exportieren}, wenn Sie einen zusätzlichen Shapefile Punktlayer mit den
+Beschriftungen erstellen wollen.
+  \item Klicken Sie \button{Ok}. 
+\end{enumerate}
+
+\FloatBarrier
+

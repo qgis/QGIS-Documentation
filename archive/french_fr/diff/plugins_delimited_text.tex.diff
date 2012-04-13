@@ -1,0 +1,62 @@
+--- /home/jrm/Documents/QGIS/english/user_guide_1.6/plugins_delimited_text.tex	2010-11-29 21:39:56.890084683 +0100
++++ /home/jrm/Documents/QGIS/english/trunk/user_guide/plugins_delimited_text.tex	2011-07-28 18:32:41.190587624 +0200
+@@ -4,7 +4,7 @@
+ 
+ % when the revision of a section has been finalized, 
+ % comment out the following line:
+-%\updatedisclaimer
++% \updatedisclaimer
+ 
+ The Delimited Text plugin allows you to load a delimited text file as a layer in QGIS. 
+ 
+@@ -32,7 +32,8 @@
+ Some items of note about the text file are:
+ 
+ \begin{enumerate}
+-\item The example text file uses \mbox{$;$} as delimiter. Any character can be used to delimit the fields.
++\item The example text file uses \mbox{$;$} as delimiter. Any character can be 
++used to delimit the fields.
+ \item The first row is the header row. It contains the fields X, Y and ELEV.
+ \item No quotes ({\tt{}"{}}) are used to delimit text fields.
+ \item The x coordinates are contained in the {\em X} field.
+@@ -40,9 +41,12 @@
+ \end{enumerate}
+ 
+ \minisec{Using the Plugin}
+-To use the plugin you must first enable it as described in Section \ref{sec:managing_plugins}.
++To use the plugin you must first enable it as described in Section 
++\ref{sec:managing_plugins}.
+ 
+-Click the new toolbar icon \toolbtntwo{delimited_text}{Add Delimited Text Layer} to open the Delimited Text dialog as shown in Figure \ref{fig:delim_text_plugin_dialog}.
++Click the new toolbar icon \toolbtntwo{delimited_text}{Add Delimited Text Layer} 
++to open the Delimited Text dialog as shown in figure 
++\ref{fig:delim_text_plugin_dialog}.
+ 
+ \begin{figure}[ht]
+    \centering
+@@ -50,16 +54,17 @@
+    \caption{Delimited Text Dialog \nixcaption}\label{fig:delim_text_plugin_dialog}
+ \end{figure}
+ 
+-First select the file (e.g., \filename{qgis\_sample\_data/csv/elevp.csv}) to import by clicking 
+-on the \button{Browse} button. Once the file is selected, the plugin attempts to parse the file 
+-using the last used delimiter, in this case a semi-colon (\mbox{$;$}). To properly parse the file, it 
++First select the file (e.g., \filename{qgis\_sample\_data/csv/elevp.csv}) to 
++import by clicking on the \button{Browse} button. Once the file is selected, 
++the plugin attempts to parse the file using the last used delimiter, in this 
++case a semi-colon (\mbox{$;$}). To properly parse the file, it 
+ is important to select the correct delimiter. To change the delimiter to tab use 
+ \mbox{$\backslash$}t (this is a regular expression for the tab character).
+-After changing the delimiter, click \button{Parse}.
+ 
+-Once you have parsed the file, choose the X and Y fields from the drop down lists and 
+-enter a Layer name (e.g., \filename{elevp} ) as shown in Figure 
+-\ref{fig:delim_text_plugin_dialog}. To add the layer to the map, click 
+-\button{Add Layer}. The delimited text file now behaves as any other map layer in QGIS.
++Once the file is parsed, choose the X and Y fields from the drop down lists and 
++if available also the WKT field for the CRS information. Finally enter a Layer 
++name (e.g., \filename{elevp} ) as shown in Figure \ref{fig:delim_text_plugin_dialog}. T
++o add the layer to the map, click \button{OK}. The delimited text file now 
++behaves as any other map layer in QGIS.
+ 
+ \FloatBarrier

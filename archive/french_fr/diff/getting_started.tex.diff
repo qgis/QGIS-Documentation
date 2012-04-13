@@ -1,0 +1,68 @@
+--- /home/jrm/Documents/QGIS/english/user_guide_1.6/getting_started.tex	2010-11-29 21:39:56.903084790 +0100
++++ /home/jrm/Documents/QGIS/english/trunk/user_guide/getting_started.tex	2011-07-28 18:32:41.195587374 +0200
+@@ -1,6 +1,6 @@
+ %  !TeX  root  =  user_guide.tex
+ 
+-\section{Getting Started}\label{label_getstarted}
++\chapter{Getting Started}\label{label_getstarted}
+ 
+ % when the revision of a section has been finalized, 
+ % comment out the following line:
+@@ -17,12 +17,12 @@
+ available for MS Windows and Mac OS X. For many flavors of GNU/Linux binary
+ packages (rpm and deb) or software repositories to add to your installation
+ manager are provided. Get the latest information on binary packages at the
+-\qg website at \url{http://qgis.osgeo.org/download/}.
++\qg website at \url{http://download.qgis.org}.
+ 
+ \minisec{Installation from source}
+ 
+ If you need to build \qg from source, please refer to the coding and
+-compiling guide available at \url{http://qgis.osgeo.org/documentation/}. 
++compiling guide available at \url{http://www.qgis.org/en/documentation/manuals.html}. 
+ The installation instructions are also distributed with the \qg source
+ code.
+ 
+@@ -46,14 +46,14 @@
+ during the initial \qg installation, you can either
+ \begin{itemize}[label=--]
+ \item use GIS data that you already have;
+-\item download the sample data from the qgis website at \url{http://qgis.osgeo.org/download}; or
++\item download the sample data from the qgis website at \url{http://download.qgis.org}; or
+ \item uninstall \qg and reinstall with the data download option checked, only if 
+ the above solutions are unsuccessful.
+ \end{itemize}
+ 
+ \nix \osx For GNU/Linux and Mac OSX there are not yet dataset installation
+ packages available as rpm, deb or dmg. To use the sample dataset download the
+-file \filename{\qg\_sample\_data} as ZIP or TAR archive from
++file \filename{qgis\_sample\_data} as ZIP or TAR archive from
+ \url{http://download.osgeo.org/qgis/data/} and unzip or untar the archive on
+ your system. The Alaska dataset includes all GIS data that are used as
+ examples and screenshots in the user guide, and also includes a small GRASS
+@@ -117,7 +117,7 @@
+ {\setlength{\baselineskip}{1.3\baselineskip}
+ \begin{enumerate}[itemsep=2pt]
+ \item Click on the \toolbtntwo{mActionAddRasterLayer}{Load Raster} icon.
+-\item Browse to the folder \filename{\qg\_sample\_data/raster/}, select 
++\item Browse to the folder \filename{qgis\_sample\_data/raster/}, select 
+ the ERDAS Img file \filename{landcover.img} and click \button{Open}.
+ \item If the file is not listed, check if the Filetype combobox at the
+ bottom of the dialog is set on the right type, in this case "Erdas Imagine
+@@ -126,13 +126,13 @@
+ \item \radiobuttonon{'File'} should be selected as Source Type in the new
+ \dialog{Add Vector Layer} dialog. Now click \button{Browse} to select the
+ vector layer.
+-\item Browse to the folder \filename{\qg\_sample\_data/gml/}, select "GML"
++\item Browse to the folder \filename{qgis\_sample\_data/gml/}, select "GML"
+ from the filetype combobox, then select the GML file \filename{lakes.gml} 
+ and click \button{Open}, then in Add Vector dialog click \button{OK}.
+ \item Zoom in a bit to your favorite area with some lakes.
+ \item Double click the \filename{lakes} layer in the map legend to open the 
+-\dialog{Layer Properties} dialog.
+-\item Click on the \tab{Symbology} tab and select a blue as fill color.
++\dialog{Properties} dialog.
++\item Click on the \tab{Style} tab and select a blue as fill color.
+ \item Click on the \tab{Labels} tab and check the \checkbox{Display labels} 
+ checkbox to enable labeling. Choose NAMES field as Field containing label.
+ \item To improve readability of labels, you can add a white buffer around them,

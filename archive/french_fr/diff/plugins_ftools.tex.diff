@@ -1,0 +1,83 @@
+--- /home/jrm/Documents/QGIS/english/user_guide_1.6/plugins_ftools.tex	2010-11-29 21:39:56.891084692 +0100
++++ /home/jrm/Documents/QGIS/english/trunk/user_guide/plugins_ftools.tex	2011-08-15 11:40:12.822063205 +0200
+@@ -4,6 +4,7 @@
+ 
+ % when the revision of a section has been finalized, 
+ % comment out the following line:
++% \updatedisclaimer
+ 
+ The goal of the fTools python plugin is to provide a one-stop resource for
+ many common vector-based GIS tasks, without the need for additional software, 
+@@ -24,7 +25,7 @@
+ 
+ \begin{table}[ht]\index{Analysis tools}
+ \centering
+- \begin{tabular}{|m{1cm}|m{3cm}|m{9cm}|}
++ \begin{tabular}{|m{1cm}|m{3cm}|m{12cm}|}
+ \hline \multicolumn{3}{|c|}{\textbf{Analysis tools available via the fTools plugin}} \\
+  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
+  \hline \includegraphics[width=0.7cm]{matrix} & Distance Matrix &
+@@ -57,7 +58,7 @@
+ 
+ \begin{table}[ht]\index{Research tools}
+ \centering
+- \begin{tabular}{|m{1cm}|m{3cm}|m{9cm}|}
++ \begin{tabular}{|m{1cm}|m{3cm}|m{12cm}|}
+  \hline \multicolumn{3}{|c|}{\textbf{Research tools available via the fTools plugin}} \\
+  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
+  \hline \includegraphics[width=0.7cm]{random_selection} & Random selection & Randomly 
+@@ -82,7 +83,7 @@
+ 
+ \begin{table}[ht]\index{Geoprocessing tools}
+ \centering
+- \begin{tabular}{|m{1cm}|m{3cm}|m{9cm}|}
++ \begin{tabular}{|m{1cm}|m{3cm}|m{12cm}|}
+  \hline \multicolumn{3}{|c|}{\textbf{Geoprocessing tools available via the fTools plugin}} \\
+  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
+  \hline \includegraphics[width=0.7cm]{convex_hull} & Convex hull(s) & Create 
+@@ -110,7 +111,7 @@
+ 
+ \begin{table}[ht]\index{Geometry tools}
+ \centering
+-\begin{tabular}{|m{1cm}|m{3cm}|m{9cm}|}
++\begin{tabular}{|m{1cm}|m{3cm}|m{12cm}|}
+  \hline \multicolumn{3}{|c|}{\textbf{Geometry tools available via the fTools plugin}} \\
+  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
+  \hline \includegraphics[width=0.7cm]{check_geometry} & Check geometry & 
+@@ -122,6 +123,8 @@
+ Calculate the true centroids for each polygon in an input polygon layer. \\
+  \hline \includegraphics[width=0.7cm]{delaunay} & Delaunay triangulation & 
+ Calculate and output (as polygons) the delaunay triangulation of an input point vector layer. \\
++ \hline  & Voronoi Polygons & 
++Calculate voronoi polygons of an input point vector layer. \\
+  \hline \includegraphics[width=0.7cm]{simplify} & Simplify geometry & 
+ Generalise lines or polygons with a modified Douglas-Peucker algorithm. \\
+  \hline \includegraphics[width=0.7cm]{multi_to_single} & Multipart to 
+@@ -132,6 +135,8 @@
+ on a unique ID field. \\
+  \hline \includegraphics[width=0.7cm]{to_lines} & Polygons to lines 
+ & Convert polygons to lines, multipart polygons to multiple singlepart lines. \\
++ \hline \includegraphics[width=0.7cm]{to_lines} & Lines to polygons 
++& Convert lines to polygons, multipart lines to multiple singlepart polygons. \\
+  \hline \includegraphics[width=0.7cm]{extract_nodes} & Extract nodes & 
+ Extract nodes from line and polygon layers and output them as points. \\
+  \hline
+@@ -141,17 +146,13 @@
+ 
+ \begin{table}[ht]\index{Data management tools}
+ \centering
+-\begin{tabular}{|m{1cm}|m{3cm}|m{9cm}|}
++\begin{tabular}{|m{1cm}|m{3cm}|m{12cm}|}
+  \hline \multicolumn{3}{|c|}{\textbf{Data management tools available via the fTools plugin}} \\
+  \hline \textbf{Icon} & \textbf{Tool} & \textbf{Purpose} \\
+  \hline \includegraphics[width=0.7cm]{export_projection} & Export to projection & 
+ Project features to new CRS and export as new shapefile. \\
+  \hline \includegraphics[width=0.7cm]{define_projection} & Define projection & 
+ Specify the CRS for shapefiles whose CRS has not been defined. \\
+- \hline \includegraphics[width=0.7cm]{join_attributes} & Join attributes & Join 
+-additional attributes to vector layer attribute table based on a dbf or csv file 
+-and output results to a new shapefile. Additional attributes can be from a 
+-vector layer or stand-alone dbf table. \\
+  \hline \includegraphics[width=0.7cm]{join_location} & Join attributes by 
+ location & Join additional attributes to vector layer based on spatial 
+ relationship. Attributes from one vector layer are appended to the attribute 

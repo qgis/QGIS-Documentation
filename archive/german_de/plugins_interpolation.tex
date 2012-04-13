@@ -1,0 +1,82 @@
+% vim: set textwidth=78 autoindent:
+% !TeX root = user_guide.tex
+
+\section{Interpolationsplugin}
+\label{sec:interpol}
+\index{Plugins!Interpolation}
+
+% when the revision of a chapter has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Das Plugin \toolbtntwo{interpolation}{Interpolation} erlaubt es, ein TIN
+(Triangulated Irregular Network) oder eine IDW (Inverse Distance Weighted)
+Interpolation aus Vektorpunkten zu berechnen. Die Anwendung ist sehr einfach
+zu bedienen und bietet ein intuitives Interface, wie in
+Abbildung~\ref{fig:interpolation_dialog} zu sehen. Die folgenden Parameter
+müssen angegeben werden, damit das Plugin funktioniert:
+
+\begin{itemize}[label=--]
+\item \textbf{Eingabevektor}: Wählen Sie einen in QGIS geladenen Vektor
+Punktlayer. Wenn mehrere Layer angegeben werden, werden die Daten aller Layer
+für die Interpolation verwendet. Beachten Sie auch, dass es möglich ist,
+Linien und Polygone als Randbedingungen für die Triangulation zu verwenden,
+indem Sie im Dropdown-Menü ``Typ'' des geladenen Layers entweder
+Strukturlinien oder Bruchkanten auswählen.
+\item \textbf{Interpolationsattribut}: Wählen Sie die Attributspalte mit den
+Werten für die Berechnung oder aktivieren Sie das Kontrollkästchen
+\checkbox{Z-Koordinate für Interpolation verwenden}.
+\item \textbf{Interpolationsmethode}: Wählen Sie als Interpolationsmethode
+\selectstring{Unregelmäßiges Dreiecksnetz (TIN)}{} oder \selectstring{Inverse
+Distanzgewichtung (IDW)}{}.
+\item \textbf{Spalten- und Zeilenanzahl}: Definieren Sie über die Spalten-
+und Zeilenanzahl die Auflösung der Ausgabekarte.
+\item \textbf{Ausgabedatei}: Legen Sie einen Namen für den Ausgabelayer fest.
+\end{itemize}
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Dialog Interpolationsplugin \nixcaption}\label{fig:interpolation_dialog}\smallskip
+   \includegraphics[clip=true, width=14cm]{interpolate_dialog}
+\end{center}  
+\end{figure}
+
+\minisec{Das Plugin anwenden}\label{interpolation_usage}
+
+\begin{enumerate}
+  \item Starten Sie QGIS und laden Sie die CVS Tabelle \filename{elevp.csv}
+mit Höheninformationen aus dem QGIS Beispieldatensatz mit Hilfe des Plugins
+'Getrennter Text' aus Kapitel~\ref{label_dltext}. 
+  \item Laden Sie das Interpolationsplugin mit dem Plugin Manager (siehe
+Kapitel~\ref{sec:load_core_plugin}) und klicken Sie auf das Icon
+\toolbtntwo{interpolation}{Interpolation} in der Werkzeugleiste, um den
+Dialog zu starten.
+  \item Wählen Sie den Layer \selectstring{elevp}{} als Eingabevektorlayer und
+Spalte \filename{ELEV} als Interpolationsattribut.
+  \item Wählen Sie \selectstring{Unregelmäßiges Dreiecksnetz (TIN)}{} als
+Interpolationsmethode, definieren Sie als Spalten- und Zellenzahl 1000. Das 
+entspricht in etwa einer Auflösung in X- und Y-Richtung von 5000 metern. 
+Als Ausgabedatei geben Sie \filename{elevation\_tin} an.
+  \item Klicken Sie \button{Ok}.
+  \item Doppelklicken Sie auf die Ergebniskarte \filename{elevation\_tin} in
+der Legende, um den Dialog \dialog{Rasterlayereigenschaften} zu öffnen und
+wählen Sie im Reiter \tab{Darstellung} die Farbabbildung
+\selectstring{Pseudofarben}{}. Oder Sie definieren eine neue Farbtabelle, wie
+in Kapitel~\ref{label_rasterprop} beschrieben.
+\end{enumerate}
+
+In Abbildung~\ref{fig:interpolation_tin} sehen das Ergebnis einer
+TIN-Interpolation mit einer Pixelauflösung von 5 km und der Farbabbildung
+Pseudofarben. Die Interpolation benötigt einige Zeit, obwohl die Daten nur
+den nördlichen Teil von Alaska abdecken.
+
+\begin{figure}[ht]
+   \begin{center}
+   \caption{Interpolation von Höhenpunkten mit der TIN-Methode \nixcaption}
+   \label{fig:interpolation_tin}\smallskip
+   \includegraphics[clip=true, width=14cm]{interpolate_tin}
+\end{center}  
+\end{figure}
+
+\FloatBarrier
+

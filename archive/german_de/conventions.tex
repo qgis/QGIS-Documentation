@@ -1,0 +1,96 @@
+% vim: set textwidth=78 autoindent:
+%  !TeX  root  =  user_guide.tex
+
+\addchap{Gebrauch der Dokumentation}\label{label_conventions}
+
+In diesem Abschnitt werden unterschiedliche Schreibstile vorgestellt, die
+innerhalb der Dokumentation verwendet werden, um das Lesen intuitiver zu
+machen.
+
+\addsec{GUI Schreibstile}
+
+Die Schreibstile der Grafischen Benutzeroberfläche versuchen, das
+Erscheinungsbild der GUI nachzuahmen. Allgemein soll der Benutzer dadurch
+besser in der Lage sein, Elemente und Icons der GUI schneller mit den
+Inhalten der Dokumentation zu verknüpfen.
+
+\begin{itemize}[label=--,itemsep=5pt]
+\item Menü Optionen: \mainmenuopt{Layer} \arrow
+\dropmenuopttwo{mActionAddRasterLayer}{Rasterlayer hinzufügen}
+
+oder
+
+\mainmenuopt{Einstellungen} \arrow
+\dropmenuopt{Werkzeugkasten} \arrow \dropmenucheck{Digitalisierung}
+\item Werkzeug: \toolbtntwo{mActionAddRasterLayer}{Rasterlayer hinzufügen}
+\item Knopf : \button{Speicher als Standard}
+\item Titel einer Dialogbox: \dialog{Layereigenschaften}
+\item Reiter: \tab{Allgemein}
+
+\item Werkzeugbox : \toolboxtwo{nviz}{nviz - Öffne 3D-Ansicht in NVIZ} 
+\item Kontrollkästchen: \checkbox{Darstellen}
+\item Radioknopf:  \radiobuttonon{Postgis SRID} \radiobuttonoff{EPSG ID}
+\item Wähle eine Zahl: \selectnumber{Sättigung}{60}
+\item Wähle ein Wort: \selectstring{Umrandungsoption}{--- durchgängig}
+\item Suche nach einer Datei: \browsebutton 
+\item Wähle eine Farbe: \selectcolor{Umrandungsfarbe}{yellow}
+\item Schieberegler: \slider{Transparenz}
+\item Eingabetext: \inputtext{Zeige Name}{lakes.shp}
+\end{itemize}
+
+Ein Schatten zeigt, dass dieses GUI Element mit der Maus anwählbar ist.
+
+\addsec{Text oder Tastatur Schreibstile}
+
+Die Dokumentation enthält Schreibstile, um eine bessere visuelle Verknüpfung
+mit bestimmten Textformen, Tastaturkommandos und Programmierelementen zu
+ermöglichen.
+
+\begin{itemize}[label=--]
+%Use for all urls. Otherwise, it is not clickable in the document.
+\item Querverweise: \url{http://qgis.org}
+%\item Single Keystroke: press \keystroke{p}
+\item Tastenkombination: Drücke \keystroke{Strg+B}, bedeutet, drücke und 
+halte die Strg-Taste und drücke auf die B-Taste.
+\item Name einer Datei: \filename{lakes.shp}
+%\item Name of a Field: \fieldname{NAMES}
+\item Name einer Klasse: \classname{NewLayer}
+\item Name einer Methode: \method{classFactory}
+\item Server: \server{myhost.de}
+%\item SQL Table: \sqltable{example needed here}    
+\item User Text: \usertext{qgis ---help}
+\end{itemize}
+
+Programmcode wird durch eine definierte Schrift und Schriftweite angezeigt:
+\begin{verbatim}
+PROJCS["NAD_1927_Albers",
+  GEOGCS["GCS_North_American_1927",
+\end{verbatim}
+
+\addsec{Betriebssystemspezifische Anweisungen}
+
+Einige Text- oder GUI-Anweisungen können sich für verschiedene
+Betriebssysteme unterscheiden: Drücke \{\nix{}\win{Datei} \osx{QGIS}\} \arrow
+\button{Beenden}, um QGIS zu schließen. Dieses Kommando bedeutet: QGIS wird unter
+Linux, Unix und Windows beendet, indem man im Hauptmenü Datei auf Beenden
+drückt, während man unter Macintosh OSX im Hauptmenü QGIS auf Beenden drückt.
+Längere Texte können folgendermaßen formatiert sein:
+
+\begin{itemize}[label=--]
+\item \nix{mache dies;}
+\item \win{klicke hier;}
+\item \osx{drücke etwas anderes.}
+\end{itemize}
+
+oder als Paragraph.
+
+\nix{} \osx{} Mache dies und das. Dann klicke dies und dies und dies und dies
+und dies und dies und dies und dies und dies.
+
+\win{} Mache dies. Dann drücke dies und dies und dies und dies und dies und
+dies und dies und dies und dies und dies
+
+Abbildungen innerhalb der Dokumentation können unter verschiedenen
+Betriebssystemen erstellt worden sein. Das jeweilige Betriebssystem wird
+dabei am Ende der Abbildungsüberschrift mit einem Icon angezeigt.
+
