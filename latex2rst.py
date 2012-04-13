@@ -25,6 +25,14 @@ def repl1(obj):
     eq = eq.replace("\n", " ")
     eq = fill(eq, 100000)
     return "\n.. math::\n\n    %s\n" % eq
+def item(obj):
+    l = obj.group(1)
+    l = l.replace("\item", "* ")
+    return l
+def enum(obj):
+    en = obj.group(1)
+    en = en.replace("\item", "#. ")
+    return en
 def repl6(obj):
     eq = obj.group(1)
     eq = eq.replace("\n", " ")
@@ -91,6 +99,9 @@ def main():
                 r"\\\nix":r"|nix|",
                 r"\\win":r"|win|",
                 r"\\osx":r"|osx|",
+                r"(\\cite)":r"FIXME\1",
+                r"(\\footnote)":r"FIXME\1",
+                r"(\\index)":r"FIXME\1",
             },
         ]
     filename = args[0]
@@ -107,6 +118,8 @@ def main():
     s = re.sub(r"(?ms)(\\begin{eqnarray\*}.+?\\end{eqnarray\*})", repl6, s)
     s = re.sub(r"(?ms)\\begin{equation}(.*?)\\label{(.+?)}(.+?)\\end{equation}",
             repl4, s)
+    s = re.sub(r"(?ms)(\\begin{enumerate}.+?\\end{enumerate})", enum, s)
+    s = re.sub(r"(?ms)(\\begin{itemize}.+?\\end{itemize})", item, s)
 
     # convert titles:
     s = re.sub(r"\\chapter{(.+)}", repl_chapter, s)
