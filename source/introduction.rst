@@ -4,9 +4,9 @@ Introduction To GIS
 -------------------
 
 
-# when the revision of a section has been finalized, 
-# comment out the following line:
-# \updatedisclaimer
+.. when the revision of a section has been finalized, 
+.. comment out the following line:
+.. \updatedisclaimer
 
 A Geographical Information System (GIS) ([mitchel05]_ [#]_)
 is a collection of software that allows you to create, visualize, query and
@@ -34,8 +34,7 @@ geospatial applications. Some typical types of analysis include computing:
 
 
 #.  distances between geographic locations
-#.  the amount of area (e.g., square meters) within a certain geographic
-region
+#.  the amount of area (e.g., square meters) within a certain geographic region
 #.  what geographic features overlap other features
 #.  the amount of overlap between features
 #.  the number of locations within a certain distance of another
@@ -54,7 +53,7 @@ geographic location. If you have the right software, your phone can tell
 you what kind of restaurants are within walking distance. While this is a
 novel application of geospatial technology, it is essentially doing
 geospatial data analysis and listing the results for you.
-`label_whynew`_
+`label_whynew`:
 Why is all this so new?
 =======================
 
@@ -81,7 +80,7 @@ How is geospatial data stored? In a nutshell, there are two types of
 geospatial data in widespread use today. This is in addition to
 traditional tabular data that is also widely used by geospatial
 applications.
-`label_rasterdata`_
+`label_rasterdata`:
 Raster Data}\label
 ******************
 
@@ -106,7 +105,7 @@ wavelengths of light. As you can imagine, a large raster takes up more file
 space. A raster with smaller cells can provide more detail, but takes up
 more file space. The trick is finding the right balance between cell size
 for storage purposes and cell size for analytical or mapping purposes.
-`label_vectordata`_
+`label_vectordata`:
 Vector Data}\label
 ******************
 
@@ -133,18 +132,8 @@ building on the former.
 
 
 
-#.  Points - A single coordinate (x y) represents a discrete geographic
-location
-#.  Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung
-together in a certain order, like drawing a line from Point (x1 y1) to
-Point (x2 y2) and so on. These parts between each point are considered line
-segments. They have a length and the line can be said to have a direction
-based on the order of the points. Technically, a line is a single pair of
-coordinates connected together, whereas a line string is multiple lines
-connected together.  
-#.  Polygons - When lines are strung together by more
-than two points, with the last point being at the same location as the
-first, we call this a polygon. A triangle, circle, rectangle, etc. are all
-polygons. The key feature of polygons is that there is a fixed area within them.  
+#.  Points - A single coordinate (x y) represents a discrete geographic location
+#.  Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung together in a certain order, like drawing a line from Point (x1 y1) to Point (x2 y2) and so on. These parts between each point are considered line segments. They have a length and the line can be said to have a direction based on the order of the points. Technically, a line is a single pair of coordinates connected together, whereas a line string is multiple lines connected together.  
+#.  Polygons - When lines are strung together by more than two points, with the last point being at the same location as the first, we call this a polygon. A triangle, circle, rectangle, etc. are all polygons. The key feature of polygons is that there is a fixed area within them.
 
 
