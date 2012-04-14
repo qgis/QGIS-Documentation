@@ -1,35 +1,16 @@
-# _*_coding:UTF8_*_
 
-=================
-QGIS User Guide
-=================
-
----------
-Niveau 1
----------
-
-Niveau 2
-=========
-
-Niveau 3
-*********
-
-Niveau 4
---------
-
-Niveau 5
-~~~~~~~~~
+=====================
+chapter introduction
+=====================
 
 .. toctree::
 
-    title
     preamble
-..	foreword
-..	conventions
-
-.. \input{introduction}
-.. \input{getting_started}
-.. \input{features_at_a_glance}
+    foreword
+    conventions
+    introduction
+    getting_started
+    features_at_a_glance/features_at_a_glance
 .. \input{working_with_vector}
 .. \input{working_with_raster}
 .. \input{working_with_ogc}

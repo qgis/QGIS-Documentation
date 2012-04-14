@@ -22,7 +22,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['rst2pdf.pdfbuilder']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -65,7 +65,7 @@ release = '1.7.4'
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_trees = []
+exclude_trees = ['buildout', '_build']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -86,6 +86,26 @@ pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
+
+rst_epilog = """
+.. |nix| image:: _static/nix.png
+   :width: 14px
+.. |win| image:: _static/win.png
+   :width: 14px
+.. |osx| image:: _static/osx.png
+   :width: 14px
+.. |QG| replace:: QGIS
+.. |checkbox|  image:: _static/checkbox.png
+.. |radiobuttonon| image:: _static/radiobuttonon.png
+.. |radiobuttonoff| image:: _static/radiobuttonoff.png
+.. |selectnumber| image:: _static/selectnumber.png
+.. |selectstring| image:: _static/selectstring.png
+.. |browsebutton| image:: _static/browsebutton.png
+.. |selectcolor| image:: _static/selectcolor.png
+.. |slider| image:: _static/slider.png
+.. |inputtext| image:: _static/inputtext.png
+.. |tab| image:: _static/tab.png
+"""
 
 
 # -- Options for HTML output ---------------------------------------------------
@@ -174,7 +194,7 @@ htmlhelp_basename = 'QGISUserGuide'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'QGISWorkshop.tex', u'QGIS Workshop Documentation',
+  ('user_guide', 'QGISUserGuide.tex', u'QGIS Workshop Documentation',
    u'Greg Corradini and Aaron Racicot', 'manual'),
 ]
 
@@ -194,3 +214,34 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_use_modindex = True
+
+# -- Options for PDF output ----------------------------------------------------
+ 
+# Grouping the document tree into PDF files. List of tuples
+# (source start file, target name, title, author).
+pdf_documents = [
+    ('user_guide', u'QGISUserGuide', u'QGIS User Guide', u'QGIS Project'),
+]
+
+# A comma-separated list of custom stylesheets. Example:
+pdf_stylesheets = ['sphinx','kerning','a4']
+
+# Create a compressed PDF
+# Use True/False or 1/0
+# Example: compressed=True
+#pdf_compressed=False
+
+# A colon-separated list of folders to search for fonts. Example:
+# pdf_font_path=['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']
+# Language to be used for hyphenation support
+#pdf_language="en_EN"
+
+# If false, no index is generated.
+#pdf_use_index = True
+
+# If false, no modindex is generated.
+#pdf_use_modindex = True
+
+# If false, no coverpage is generated.
+#pdf_use_coverpage = True
+
