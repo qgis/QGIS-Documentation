@@ -61,13 +61,7 @@ identically.
 |Gary E. Sherman   | Tim Sutton         |                     |
 +------------------+--------------------+---------------------+
 
-With thanks to Bertrand Masson for the layout, to Tisham Dhar for preparing the initial msys (MS Windows)
-environment documentation, to Tom Elwertowski and William Kyngesburye for
-help in the MAC OSX Installation Section and to Carlos Dávila, Paolo
-Cavallini and Christian Gunning for revisions. If we have neglected to 
-mention any contributors, please accept our apologies for this oversight.
-
-Copyright (c) 2004 - 2011 |QG| Development Team
+Copyright (c) 2004 - 2012 |QG| Development Team
 
 **Internet :** http://www.qgis.org
 
