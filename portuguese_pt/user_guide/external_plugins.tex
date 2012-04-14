@@ -1,0 +1,58 @@
+%  !TeX  root  =  user_guide.tex
+
+\chapter{Using external QGIS Python Plugins}\label{sec:external_plugins}\index{plugins}
+
+% when the revision of a section has been finalized,
+% comment out the following line:
+% \updatedisclaimer
+
+External QGIS plugins are written in Python. They are stored in either
+the 'Official' or 'User contributed' QGIS Repostories, or in various other external
+repositories maintained by individual authors.
+Table \ref{tab:external_plugins} shows a list of currently available 'Official'
+plugins, with a short description.
+Detailed documentation about the usage, minimum QGIS version, homepage, authors,
+and other important information are provided with the external plugins themselves
+and is not included in this manual.
+\footnote{Updates of core plugins may be
+available in this repository as external overlays.}
+\footnote{fTools, Mapserver Export, and the Plugin Installer are Python plugins,
+but they are also part of the QGIS sources, and are automatically loaded and
+enabled inside the QGIS Plugin Manager (see Section~\ref{sec:load_external_plugin}).}
+
+%%FIXME: URL to Download
+
+You will find an up-to-date list of 'Official' plugins in the Official QGIS
+Repository at \url{http://qgis.osgeo.org/download/plugins.html}. This list is
+also available automatically from the \filename{Plugins installer}
+via \\
+\dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}.
+
+\begin{table}[H]
+\centering
+ \begin{tabular}{|l|l|p{8cm}|}
+\hline \textbf{Icon} & \textbf{External Plugin} & \textbf{Description}\\
+\hline
+\includegraphics[width=0.7cm]{zoom2point_icon}
+ & Zoom To Point \index{plugins!Zoom To Point} & Zooms to a coordinate
+  specified in the input dialog. You can specify the zoom level as well to
+  control the view extent.\\
+\hline
+\includegraphics[width=0.7cm]{plugin_installer}
+ & Plugin Installer \index{plugins!Plugin Installer} & The most recent Python Plugin Installer.\\
+\hline
+\end{tabular}
+\caption{Current moderated external QGIS Plugins}\label{tab:external_plugins}
+\end{table}
+
+A detailed description of the installation procedure for external python
+plugins can be found in Section \ref{sec:load_external_plugin}.
+
+\begin{Tip} \caption{\textsc{Add more repositories}}
+To add the 'User contributed' repository and/or several external author repositories, open the
+Plugin Installer (\mainmenuopt{Plugins} \arrow \dropmenuopttwo{plugin_installer}{Fetch Python Plugins...}),
+go to the \tab{Repositories} tab, and click \button{Add 3rd party repositories}.
+If you do not want one or more of the added repositories, they can be disabled via the
+\button{Edit...} button, or completely removed with the \button{Delete} button.
+\end{Tip}
+\FloatBarrier

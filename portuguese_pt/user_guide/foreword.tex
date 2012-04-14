@@ -1,0 +1,232 @@
+%  !TeX  root  =  user_guide.tex  
+\mainmatter
+\pagestyle{scrheadings}
+\addchap{Foreword}\label{label_forward}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% when the revision of a section has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+Welcome to the wonderful world of Geographical Information Systems (GIS)!
+Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
+was born in May of 2002 and was established as a project on SourceForge in June
+of the same year. We've worked hard to make GIS software (which is traditionally
+expensive proprietary software) a viable prospect for anyone with basic access
+to a Personal Computer. QGIS currently runs on most Unix platforms, Windows, and
+OS X. QGIS is developed using the Qt toolkit (\url{http://qt.nokia.com})
+and C++. This means that QGIS feels snappy to use and has a pleasing, 
+easy-to-use graphical user interface (GUI). 
+
+QGIS aims to be an easy-to-use GIS, providing common functions and features.
+The initial goal was to provide a GIS data viewer. QGIS has reached the point
+in its evolution where it is being used by many for their daily GIS data viewing
+needs. QGIS supports a number of raster and vector data formats, with new
+format support easily added using the plugin architecture (see Appendix
+\ref{appdx_data_formats} for a full list of currently supported data formats).
+
+QGIS is released under the GNU General Public License (GPL). Developing QGIS 
+under this license means that you can inspect and modify the source code,
+and guarantees that you, our happy user, will always have access to a GIS
+program that is free of cost and can be freely modified. You should have
+received a full copy of the license with your copy of QGIS, and you also can
+find it in Appendix \ref{gpl_appendix}.  
+
+\begin{Tip}\caption{\textsc{Up-to-date Documentation}}\index{documentation}
+The latest version of this document can always be found at 
+\url{http://download.osgeo.org/qgis/doc/manual/}, or in the documentation
+area of the QGIS website at \url{http://qgis.osgeo.org/documentation/}
+\end{Tip}
+
+\addsec{Features}\label{label_majfeat}
+
+\qg offers many common GIS functionalities provided by core features and
+plugins. As a short summary they are presented in six categories to gain a
+first insight.
+
+\minisec{View data}
+
+You can view and overlay vector and raster data in different formats and
+projections without conversion to an internal or common format. Supported
+formats include:
+
+\begin{itemize}[label=--]
+\item spatially-enabled PostgreSQL tables using PostGIS, vector 
+formats
+%\footnote{OGR-supported database formats such as Oracle or 
+%mySQL are not yet supported in QGIS.}
+ supported by the installed OGR library, including ESRI shapefiles, MapInfo, 
+SDTS and GML (see Appendix \ref{appdx_ogr} for the complete list) .
+\item Raster and imagery formats supported by the installed GDAL (Geospatial
+Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii 
+Grid, JPEG, PNG (see Appendix \ref{appdx_gdal} for the complete list).
+\item SpatiaLite databases (see Section \ref{label_spatialite}) 
+\item GRASS raster and vector data from GRASS databases (location/mapset),
+see Section \ref{sec:grass}, 
+\item Online spatial data served as OGC-compliant Web Map Service (WMS) or
+Web Feature Service (WFS), see Section \ref{working_with_ogc},
+\item OpenStreetMap data (see Section \ref{plugins_osm}).
+\end{itemize}
+
+\minisec{Explore data and compose maps} 
+
+You can compose maps and interactively explore spatial data with a friendly
+GUI. The many helpful tools available in the GUI include:
+
+\begin{itemize}[label=--]
+\item on the fly projection
+\item map composers
+\item overview panel
+\item spatial bookmarks
+\item identify/select features
+\item edit/view/search attributes
+\item feature labeling
+\item change vector and raster symbology
+\item add a graticule layer - now via fTools plugin
+\item decorate your map with a north arrow scale bar and copyright label
+\item save and restore projects
+\end{itemize}
+
+\minisec{Create, edit, manage and export data}
+
+You can create, edit, manage and export vector maps in several formats. Raster data
+have to be imported into GRASS to be able to edit and export them into other
+formats. QGIS offers the following: 
+
+\begin{itemize}[label=--]
+\item digitizing tools for OGR supported formats and GRASS vector layer
+\item create and edit shapefiles and GRASS vector layers
+\item geocode images with the Georeferencer plugin
+\item GPS tools to import and export GPX format, and convert other GPS
+formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been added
+to list of GPS devices)
+\item visualize and edit OpenStreetMap data
+\item create PostGIS layers from shapefiles with the SPIT plugin 
+\item improved handling of PostGIS tables
+\item manage vector attribute tables with the new attribute table (see Section 
+\ref{sec:attribute table}) or Table Manager plugin
+\item save screenshots as georeferenced images
+\end{itemize}
+
+\minisec{Analyse data} 
+
+You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
+supported formats using the fTools Python plugin. QGIS currently offers
+vector analysis, sampling, geoprocessing, geometry and database management
+tools. You can also use the integrated GRASS tools, which 
+include the complete GRASS functionality of more than 300 modules (See
+Section \ref{sec:grass}).
+
+\minisec{Publish maps on the Internet}
+
+QGIS can be used to export data to a mapfile and to publish them on the
+Internet using a webserver with UMN MapServer installed. QGIS can also
+be used as a WMS or WFS client, and as WMS server. 
+
+\minisec{Extend QGIS functionality through plugins} 
+
+QGIS can be adapted to your special needs with the extensible
+plugin architecture. QGIS provides libraries that can be used to create
+plugins.  You can even create new applications with C++ or Python!
+
+\minisec{Core Plugins}
+
+\begin{enumerate}
+\item Add Delimited Text Layer (Loads and displays delimited text files
+containing x,y coordinates)
+\item Coordinate Capture (Capture mouse coordinates in different CRS)
+\item Decorations (Copyright Label, North Arrow and Scale bar)
+\item Diagram Overlay (Placing diagrams on vector layer)
+\item Dxf2Shp Converter (Convert DXF to Shape)
+\item GPS Tools (Loading and importing GPS data)
+\item GRASS (GRASS GIS integration)
+\item Georeferencer GDAL (Adding projection information to raster using GDAL)
+\item Interpolation plugin (interpolate based on vertices of a vector layer)
+\item Mapserver Export (Export QGIS project file to a MapServer map file)
+\item OGR Layer Converter (Translate vector layer between formats)
+\item OpenStreetMap plugin (Viewer and editor for openstreetmap data)
+\item Oracle Spatial GeoRaster support
+\item Python Plugin Installer (Download and install QGIS python plugins)
+\item Quick Print (Print a map with minimal effort)
+\item Raster terrain analysis (Raster based terrain analysis)
+\item SPIT (Import Shapefile to PostgreSQL/PostGIS)
+\item WFS Plugin (Add WFS layers to QGIS canvas)
+\item eVIS (Event Visualization Tool)
+\item fTools (Tools for vector data analysis and management)
+\item Python Console (Access QGIS environment)
+\item GDAL Tools
+\end{enumerate}
+
+\minisec{External Python Plugins}
+
+QGIS offers a growing number of external python plugins that are provided by
+the community. These plugins reside in the official PyQGIS repository, and
+can be easily installed using the Python Plugin Installer (See Section
+\ref{sec:plugins}).
+
+\subsubsection{What's new in version \CURRENT} 
+
+Please note that this is a release in our 'cutting edge' release series. As such 
+it contains new features and extends the programmatic interface over QGIS 1.0.x 
+and QGIS 1.5.0. We recommend that you use this version over previous releases.
+
+This release includes over 177 bug fixes and many new features and enhancements. 
+
+\textbf{General Improvements}
+
+\begin{itemize}[label=--]
+\item Added gpsd support to live gps tracking.
+\item A new plugin has been included that allows for offline editing.
+\item Field calculator will now insert NULL feature value in case of calculation error instead of stopping and reverting calculation for all features.
+\item Update srs.db to include grid reference.
+\item Added a native (C++) raster calculator implementation which can deal with large rasters efficiently.
+\item Improved interaction with extents widget in statusbar so that the text contents of the widget can be copied and pasted.
+\item Many improvements and new operators to the field calculator including field concatenation, row counter etc.
+\item Added --configpath option that overrides the default path (~/.qgis) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry QGIS installation on a flash drive together with all plugins and settings.
+\item Experimental WFS-T support. Additionally ported wfs to network manager.
+\item Georeferencer has had many tidy ups and improvements.
+\item Support for long int in attribute dialog and editor.
+\item The QGIS Mapserver project has been incorporated into the main SVN repository and packages are being made available. QGIS Mapserver allows you to serve your QGIS project files via the OGC WMS protocol.
+\item Select and measure toolbar flyouts and submenus.
+\item Support has been added for non-spatial tables (currently OGR, delimited text and PostgreSQL providers). These tables can be used for field lookups or just generally browsed and edited using the table view.
+\item Added search string support for feature ids (\$id) and various other search related improvements.
+\item Added reload method to map layers and provider interface. Like this, caching providers (currently WMS and WFS) can synchronize with changes in the datasource.
+\end{itemize}
+
+\textbf{Table of contents (TOC) improvements}
+
+\begin{itemize}[label=--]
+\item Added a new option to the raster legend menu that will stretch the current layer using the min and max pixel values of the current extent. 
+\item When writing vector files using the table of contents context menu's 'Save as' option, you can now specify OGR creation options. 
+\item In the table of contents, it is now possible to select and remove or move several layers at once.
+\end{itemize}
+
+\textbf{Labelling (New generation only)}
+
+\begin{itemize}[label=--]
+\item Data defined label position. 
+\item Line wrapping, data defined font and buffer settings.
+\end{itemize}
+
+\textbf{Layer properties and symbology}
+
+\begin{itemize}[label=--]
+\item Three new classification modes added to graduated symbol renderer (version 2), including Natural Breaks (Jenks), Standard Deviations, and Pretty Breaks (based on pretty from the R statistical environment). 
+\item Improved loading speed of the symbol properties dialog. 
+\item Data-defined rotation and size for categorized and graduated renderer (symbology-ng). 
+\item Use size scale also for line symbols to modify line width. 
+\item Replaced raster histogram implementation with one based on Qwt. Added option to save histogram as image file. Show actual pixel values on x axis of raster histogram. 
+\item Added ability to interactively select pixels from the canvas to populate the transparency table in the raster layer properties dialog. 
+\item Allow creation of color ramps in vector color ramp combo box. 
+\item Added 'style manager...' button to symbol selector so that users will find the style manager more easily.
+\end{itemize}
+
+\textbf{Map Composer}
+
+\begin{itemize}[label=--]
+\item add capability to show and manipulate composer item width/ height in item position dialog. 
+\item Composer items can now be deleted with the backspace key. 
+\item Sorting for composer attribute table (several columns and ascending / descending).
+\end{itemize}
+
