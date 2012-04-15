@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = ./buildout/bin/sphinx-build
-PAPER         =
+PAPER         = A4
 BUILDDIR      = build
 
 # Internal variables.
@@ -12,10 +12,11 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+.PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  readme    to make pdf readme file to help writing QGIS docs."
 	@echo "  html      to make standalone HTML files"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
@@ -29,6 +30,11 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+
+readme:
+	$(SPHINXBUILD) -c readme/ -b pdf -a -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) readme  $(BUILDDIR)/pdf
+	@echo
+	@echo "Build finished. The PDF file is in $(BUILDDIR)/pdf."
 
 html:
 	$(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html

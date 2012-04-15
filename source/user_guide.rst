@@ -1,26 +1,26 @@
 
-=====================
-chapter introduction
-=====================
+=======================
+Welcome to QGIS manual
+=======================
 
 .. toctree::
+    :maxdepth: 2
 
     preamble
     foreword
     conventions
-    introduction/introduction
-    getting_started
-    features_at_a_glance/features_at_a_glance
-..  working_with_vector/working_with_vector
-.. working_with_raster
-.. working_with_ogc
-.. qgis_server
-.. working_with_projections
-.. grass_integration
+    introduction/index
+
+..  working/working_with_projections
+..  working/working_with_vector
+..  working/working_with_raster
+..  working/working_with_ogc
+..  server/index
 .. print_composer
-.. plugins
+.. plugins/index
 .. plugins/core_plugins .. RMR
-.. plugins/plugins_coordinate_capture
+
+.. plugins/coordinate_capture/index
 .. plugins/plugins_decorations
 .. plugins/plugins_delimited_text
 .. plugins/plugins_dxf2shape_converter
@@ -28,6 +28,7 @@ chapter introduction
 .. plugins/plugins_ftools
 .. plugins/plugins_gdaltools
 .. plugins/plugins_georeferencer
+.. plugins/grass_integration
 .. plugins/plugins_gps
 .. plugins/plugins_interpolation
 .. plugins/plugins_mapserver_export

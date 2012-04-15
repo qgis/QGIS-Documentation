@@ -89,11 +89,11 @@ pygments_style = 'sphinx'
 
 rst_epilog = """
 .. |nix| image:: _static/nix.png
-   :width: 14px
+   :width: 1em
 .. |win| image:: _static/win.png
-   :width: 14px
+   :width: 1em
 .. |osx| image:: _static/osx.png
-   :width: 14px
+   :width: 1em
 .. |QG| replace:: QGIS
 .. |checkbox|  image:: _static/checkbox.png
 .. |radiobuttonon| image:: _static/radiobuttonon.png

@@ -20,7 +20,7 @@ general, the objective is to use the non-hover appearance, so a user can
 visually scan the GUI to find something that looks like the instruction in the manual.
 
 .. |mActionAddRasterLayer| image:: _static/mActionAddRasterLayer.png
-   :width: 24px
+   :width: 1em
 
 *  Menu Options: :menuselection:`Layer --> Add a Raster Layer` or 
    :menuselection:`Settings --> Toolbars --> Digitizing`
