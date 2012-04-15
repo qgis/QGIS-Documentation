@@ -10,7 +10,7 @@ Features at a Glance
 .. comment out the following line:
 .. \updatedisclaimer
 
-After a first and simple sample session in Section `label.getstarted`_ we now
+After a first and simple sample session in Section :ref:`label.getstarted` we now
 want to give you a more detailed overview of the features of QGIS.
 Most features presented in the following chapters will be explained and described in
 their own sections later in the manual.
@@ -20,7 +20,7 @@ their own sections later in the manual.
 Starting and Stopping QGIS
 ===========================
 
-In Section `samplesession`_ you already learned how to start QGIS. We will
+In Section :ref:`samplesession` you already learned how to start QGIS. We will
 repeat this here and you will see that QGIS also provides further command line options.
 
 * |nix| Assuming that QGIS is installed in the PATH, you can start QGIS
@@ -131,7 +131,7 @@ Command line option ``---optionspath``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can have multiple configurations and decide which one to use when starting 
-QGIS using this option. See `subsec_gui_options` to check where does the 
+QGIS using this option. See :ref:`subsec_gui_options` to check where does the 
 operating system save the settings files. Presently there is no way to specify 
 in which file where to write the settings, therefore you can create a copy of 
 the original settings file and rename it.
@@ -196,7 +196,7 @@ Although most menu options have a corresponding tool and vice-versa,
 the menus are not organized quite like the toolbars.
 The toolbar containing the tool is listed after each menu option as a checkbox
 entry. For more information about tools and toolbars, see Section
-`label_toolbars`_.
+:ref:`label_toolbars`.
 
 
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
@@ -204,63 +204,63 @@ entry. For more information about tools and toolbars, see Section
 +======================================================================+=====================+========================================+=================================+
 | |mActionFileNew| :guilabel:`File`                                                                                                                                     | 
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`New Project`                                              | :kbd:`Ctrl+N`       | see Section `sec_projects`_            | :guilabel:`File`                |
+| :guilabel:`New Project`                                              | :kbd:`Ctrl+N`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileOpen| :guilabel:`Open Project`                           | :kbd:`Ctrl+O`       | see Section `sec_projects`_            | :guilabel:`File`                |
+| |mActionFileOpen| :guilabel:`Open Project`                           | :kbd:`Ctrl+O`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Open Recent Projects`                                     |                     | see Section `sec_projects`_            |                                 |
+| :guilabel:`Open Recent Projects`                                     |                     | see Section :ref:`sec_projects`        |                                 |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileSave| :guilabel:`Save Project`                           | :kbd`Ctrl+S`        | see Section `sec_projects`_            | :guilabel:`File`                |
+| |mActionFileSave| :guilabel:`Save Project`                           | :kbd:`Ctrl+S`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileSaveAs| :guilabel:`Save Project As`                      | :kbd:`Ctrl+Shift+S` | see Section `sec_projects`_            | :guilabel:`File`                |
+| |mActionFileSaveAs| :guilabel:`Save Project As`                      | :kbd:`Ctrl+Shift+S` | see Section :ref:`sec_projects`        | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSaveMapAsImage| :guilabel:`Save as Image`                    |                     | see Section `sec_output`_              |                                 |
+| |mActionSaveMapAsImage| :guilabel:`Save as Image`                    |                     | see Section :ref:`sec_output`          |                                 |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionNewComposer| :guilabel:`New Print Composer`                  | :kbd:`Ctrl+P`       | see Section `label_printcomposer`_     | :guilabel:`File`                |
+| |mActionNewComposer| :guilabel:`New Print Composer`                  | :kbd:`Ctrl+P`       | see Section :ref:`label_printcomposer` | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionComposerManager| :guilabel:`Composer manager`                |                     | see Section `label_printcomposer`_     | :guilabel:`File`                |
+| |mActionComposerManager| :guilabel:`Composer manager`                |                     | see Section :ref:`label_printcomposer` | :guilabel:`File`                |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Print Composers`                                          |                     | see Section `label_printcomposer`_     |                                 |
+| :guilabel:`Print Composers`                                          |                     | see Section :ref:`label_printcomposer` |                                 |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | |mActionFileExit| :guilabel:`Exit`                                   | :kbd:`Ctrl+Q`       |                                        |                                 |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | :guilabel:`Edit`                                                                                                                                                      |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionUndo| :guilabel:`Undo`                                       | :kbd:`Ctrl+Z`       | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionUndo| :guilabel:`Undo`                                       | :kbd:`Ctrl+Z`       | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionRedo| :guilabel:`Redo`                                       | :kbd:`Ctrl+Shift+Z` | see Section `sec_advanced_edit`        | :guilabel:`Advanced Digitizing` |
+| |mActionRedo| :guilabel:`Redo`                                       | :kbd:`Ctrl+Shift+Z` | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditCut| :guilabel:`Cut Features`                            | :kbd:`Ctrl+X`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionEditCut| :guilabel:`Cut Features`                            | :kbd:`Ctrl+X`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditCopy| :guilabel:`Copy Features`                          | :kbd:`Ctrl+C`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionEditCopy| :guilabel:`Copy Features`                          | :kbd:`Ctrl+C`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditPaste| :guilabel:`Paste Features`                        | :kbd:`Ctrl+V`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionEditPaste| :guilabel:`Paste Features`                        | :kbd:`Ctrl+V`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditPaste| :guilabel:`Move Feature`                          |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionEditPaste| :guilabel:`Move Feature`                          |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeleteSelected| :guolabel:`Delete Selected`                  |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionDeleteSelected| :guolabel:`Delete Selected`                  |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSimplify| :guilabel:`Simplify Feature`                       |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionSimplify| :guilabel:`Simplify Feature`                       |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionAddRing| :guilabel:`Add Ring`                                |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionAddRing| :guilabel:`Add Ring`                                |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionAddIsland| :guilabel:`Add Part`                              |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionAddIsland| :guilabel:`Add Part`                              |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeleteRing| :guilabel:`Delete Ring`                          |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionDeleteRing| :guilabel:`Delete Ring`                          |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeletePart| :guilabel:`Delete Part`                          |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionDeletePart| :guilabel:`Delete Part`                          |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionReshape| :guilabel:`Reshape Features`                        |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionReshape| :guilabel:`Reshape Features`                        |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSplitFeatures| :guilabel:`Split Features`                    |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionSplitFeatures| :guilabel:`Split Features`                    |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionMergeFeat| :guilabel:`Merge selected Features`               |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionMergeFeat| :guilabel:`Merge selected Features`               |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionMergeFeat| :guilabel:`Merge attributes of selected Features` |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionMergeFeat| :guilabel:`Merge attributes of selected Features` |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionNodeTool| :guilabel:`Node Tool`                              |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionNodeTool| :guilabel:`Node Tool`                              |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`         |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
+| |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`         |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
 After activating |mActionToggleEditing| :menuselection:`Toggle editing` mode 
@@ -270,11 +270,11 @@ menu depending on the layer type (point, line or polygon).
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | Menu Option                                                          | Shortcut            | Reference                              | Toolbar                         |
 +======================================================================+=====================+========================================+=================================+
-| |mActionCapturePoint| :guilabel:`Capture Point`                      |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionCapturePoint| :guilabel:`Capture Point`                      |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionCaptureLine| :guilabel:`Capture Line`                        |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionCaptureLine| :guilabel:`Capture Line`                        |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionCapturePolygon| :guilabel:`Capture Polygon`                  |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
+| |mActionCapturePolygon| :guilabel:`Capture Polygon`                  |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
 
@@ -289,11 +289,11 @@ menu depending on the layer type (point, line or polygon).
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | |mActionZoomOut| :guilabel:`Zoom Out`                                | :kbd:`Ctrl+-`       |                                        | :guilabel:`Map Navigation`      |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Select`                                                   |                     | see Section `sec_selection`_           | :guilabel:`Attributes`          |
+| :guilabel:`Select`                                                   |                     | see Section :ref:`sec_selection`       | :guilabel:`Attributes`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | |mActionIdentify| :guilabel:`Identify Features`                      | :kbd:`Ctrl+Shift+I` |                                        | :guilabel:`Attributes`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Measure`                                                  |                     | see Section `sec_measure`_             | :guilabel:`Attributes`          |
+| :guilabel:`Measure`                                                  |                     | see Section :ref:`sec_measure`         | :guilabel:`Attributes`          |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | |mActionZoomFullExtent| :guilabel:`Zoom Full`                        | :kbd:`Ctrl+Shift+F` |                                        | :guilabelb:`Map Navigation`     |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
@@ -302,168 +302,107 @@ menu depending on the layer type (point, line or polygon).
 | |mActionZoomToSelected| :guilabel:`Zoom To Selection`                | :kbd:`Ctrl+J`       |                                        | :guilabel:`Map Navigation`      |
 +----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 | |mActionZoomLast| :guilabel:`Zoom Last`                              |                     |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomNext| :guilabel:`Zoom Next`                              |                     |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Zoom Actual Size`                                         |                     |                                        |                                 |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionMapTips| :guilabel:`Map Tips`                                |                     |                                        | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionNewBookmark| :guilabel:`New Bookmark`                        | :kbd:`Ctrl+B`       | see Section :ref:`sec_bookmarks`       | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionShowBookmarks| :guilabel:`Show Bookmarks`                    | :kbd:`Ctrl+Shift+B` | see Section :ref:`sec_bookmarks`       | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionDraw| :guilabel:`Refresh`                                    | :kbd:`Ctrl+R`       |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Tile scale slider`                                        |                     | see Section :ref:`sec_tilesets`        | :guilabel:`Tile scale`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Live GPS tracking`                                        |                     | see Section :ref:`sec_gpstracking`     | :guilabel:`GPS Information`     |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
-\dropmenuopttwo{mActionZoomNext}{Zoom Next}
-	\>
-	\> \> \dropmenucheck{Map Navigation} \\
-\mainmenuopt{Zoom Actual Size}
-	\>
-	\> \>  \\
-\dropmenuopttwo{mActionMapTips}{Map Tips}
-	\>
-	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionNewBookmark}{New Bookmark}
-	\> \keystroke{Ctrl+B}
-	\> see Section \ref{sec:bookmarks}
-\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionShowBookmarks}{Show Bookmarks}
-	\> \keystroke{Ctrl+Shift+B}
-	\> see Section \ref{sec:bookmarks}
-	\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionDraw}{Refresh}
-	\> \keystroke{Ctrl+R}
-	\> \> \dropmenucheck{Map Navigation} \\
-\mainmenuopt{Tile scale slider}
-	\>
-	\> see Section \ref{sec:tilesets}
-	\> \dropmenucheck{Tile scale} \\
-\mainmenuopt{Live GPS tracking}
-	\>
-	\> see Section \ref{sec:gpstracking}
-	\> \dropmenucheck{GPS Information} \\
-\end{tabbing}
 
-*  \mainmenuopt{Layer}
-\begin{tabbing}
-\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopt{New}
-	\>
-	\> see Section \ref{sec:create shape}
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddNonDbLayer}{Add Vector Layer}
-	\> \keystroke{Ctrl+Shift+V}
-	\>
-	see Section \ref{label_workingvector}
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddRasterLayer}{Add Raster Layer}
-	\> \keystroke{Ctrl+Shift+R}
-	\>
-	see Section \ref{label_raster}
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer}
-	\> \keystroke{Ctrl+Shift+D}
-	\>
-	see Section \ref{label_postgis}
-        \> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer}
-        \> \keystroke{Ctrl+Shift+L}
-        \>
-        see Section \ref{label_spatialite}
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionAddWmsLayer}{Add WMS Layer}
-	\> \keystroke{Ctrl+Shift+W}
-	\>
-	see Section \ref{sec:ogc-wms}
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
-	\> \>
-	\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionFileSave}{Save edits}
-        \> \>
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionToggleEditing}{Toggle editing}
-	\> \>
-	\> \dropmenucheck{Digitizing} \\
-\mainmenuopt{Save as...}
-	\\
-\mainmenuopt{Save selection as vector file...}
-	\> 
-	\> See \ref{sec:attribute table}
-	\> \\
-\dropmenuopttwo{mActionRemoveLayer}{Remove Layer}
-	\> \keystroke{Ctrl+D}
-	\>
-	\> \\
-\mainmenuopt{Set CRS of Layer(s)}
-	\> \keystroke{Ctrl+Shift+C}
-	\>
-	\> \\
-\mainmenuopt{Set project CRS from Layer}
-	\\
-\mainmenuopt{Properties}
-	\\
-\mainmenuopt{Query...}
-	\\
-\dropmenuopttwo{labeling}{Labeling}
-	\>
-	\>
-	\\
-\dropmenuopttwo{mActionInOverview}{Add to Overview}
-	\> \keystroke{Ctrl+Shift+O}
-	\>
-	\> 
-\dropmenucheck{Manage Layers} 
-	\\
-\dropmenuopttwo{mActionAddAllToOverview}{Add All To Overview}
-	\>
-	\>
-	\\
-\dropmenuopttwo{mActionRemoveAllFromOverview}{Remove All From Overview}
-	\>
-	\>
-	\\
-\dropmenuopttwo{mActionShowAllLayers}{Show All Layers}
-	\> \keystroke{Ctrl+Shift+U}
-	\>
-	\> \dropmenucheck{Manage Layers} \\
-\dropmenuopttwo{mActionHideAllLayers}{Hide All Layers}
-	\> \keystroke{Ctrl+Shift+H}
-	\>
-	\> \dropmenucheck{Manage Layers} \\
-\end{tabbing}
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| Menu Option                                                         | Shortcut             | Reference                              | Toolbar                         |
++=====================================================================+======================+========================================+=================================+
+|  :guilabel:`Layer`                                                                                                                                                    |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`New`                                                     |                      | see Section :ref:`sec_create shape`    | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`                 | :kbd:`Ctrl+Shift+V`  | see Section :ref:`label_workingvector` | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddRasterLayer| :guilabel:`Add Raster Layer`                | :kbd:`Ctrl+Shift+R`  | see Section :ref:`label_raster`        | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddLayer| :guilabel:`Add PostGIS Layer`                     | :kbd:`Ctrl+Shift+D`  | see Section :ref:`label_postgis`       | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`        | :kbd:`Ctrl+Shift+L`  | see Section :ref:`label_spatialite`    | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                      | :kbd:`Ctrl+Shift+W`  | see Section :ref:`sec_ogc-wms`         | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionOpenTable| :guilabel:`Open Attribute Table`                 |                      |                                        | :guilabel:`Attributes`          |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionFileSave| :guilabel:`Save edits`                            |                      |                                        | :guilabel:`Digitizing`          |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionToggleEditing| :guilabel:`Toggle editing`                   |                      |                                        | :guilabel:`Digitizing`          |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Save as...`                                                                                                                                                |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Save selection as vector file...`                        |                      | See :ref:`sec_attribute table`         |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionRemoveLayer| :guilabel:`Remove Layer`                       | :kbd:`Ctrl+D`        |                                        |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Set CRS of Layer(s)`                                     | :kbd:`Ctrl+Shift+C`  |                                        |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Set project CRS from Layer`                              |                                                                                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Properties`                                              |                                                                                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Query...`                                                                                                                                                  |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |labeling| :guilabel:`Labeling`                                     |                      |                                        |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionInOverview| :guilabel:`Add to Overview`                     | :kbd:`Ctrl+Shift+O`  |                                        | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionAddAllToOverview| :guilabel:`Add All To Overview`           |                      |                                        |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionRemoveAllFromOverview| :guilabel:`Remove All From Overview` |                      |                                        |                                 |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionShowAllLayers| :guilabel:`Show All Layers`                  | :kbd:`Ctrl+Shift+U`  |                                        | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+| |mActionHideAllLayers| :guilabel:`Hide All Layers`                  | :kbd:`Ctrl+Shift+H`  |                                        | :guilabel:`Manage Layers`       |
++---------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
 
-*  \mainmenuopt{Settings}
-\begin{tabbing}
-\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopt{Panels}
-	\>
-	\>
-	\\
-\dropmenuopt{Toolbars}
-	\>
-	\>
-	\\
-\mainmenuopt{Toggle Full Screen Mode}
-	\>\keystroke{Ctrl-F}
-	\>
-	\\
-\dropmenuopttwo{mActionProjectProperties}{Project Properties}
-	\> \keystroke{Ctrl+Shift+P}
-	\> see Section \ref{sec:projects} \\
-\dropmenuopttwo{mActionCustomProjection}{Custom CRS}
-        \> \> see Section \ref{sec:customprojections} \\
-\mainmenuopt{Style Manager}
-        \> \> \\
-\dropmenuopttwo{mActionOptions}{Configure shortcuts}
-        \> \> \\
-\dropmenuopttwo{mActionOptions}{Options}
-        \> \> see Section \ref{subsec:gui_options} \\
-\dropmenuopt{Snapping Options}
-	\>
-	\>
-	\\
-\end{tabbing}
 
-*  \mainmenuopt{Plugins} - (Futher menu items are added by plugins as they are loaded.)
-\begin{tabbing}
-\hspace{5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionShowPluginManager}{Manage Plugins}
-	\> \> see Section \ref{sec:managing_plugins} \dropmenucheck{Plugins}
-	\\
-	\mainmenuopt{Python Console}
-        \> \>
-        \\
-\end{tabbing}
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| Menu Option                                                       | Shortcut             | Reference                                | Toolbar                         |
++===================================================================+======================+==========================================+=================================+
+| :guilabel:`Settings`                                                                                                                                                  |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| :guilabel:`Panels`                                                |                      |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| :guilabel:`Toolbars`                                              |                      |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| :guilabel:`Toggle Full Screen Mode`                               | :kbd:`Ctrl-F`        |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| |mActionProjectProperties| :guilabel:`Project Properties`         | :kbd:`Ctrl+Shift+P`  | see Section :ref:`sec_projects`          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| |mActionCustomProjection| :guilabel:`Custom CRS`                  |                      | see Section :ref:`sec_customprojections` | :guilabel:`Style Manager`       |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| |mActionOptions| :guilabel:`Configure shortcuts`                  |                      |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| |mActionOptions| :guilabel:`Options`                              |                      | see Section :ref:`subsec_gui_options`    |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| :guilabel:`Snapping Options`                                      |                      |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| Menu Option                                                       | Shortcut             | Reference                                | Toolbar                         |
++===================================================================+======================+==========================================+=================================+
+| :guilabel:`Plugins` - (Futher menu items are added by plugins as they are loaded.)                                                                                    |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| |mActionShowPluginManager| :guilabel:`Manage Plugins`             |                      | see Section :ref:sec_managing_plugins`   | :guilabel:`Plugins`             |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+| :guilabel:`Python Console`                                        |                      |                                          |                                 |
++-------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
 
 *  \mainmenuopt{Raster}
 \begin{tabbing}
@@ -530,7 +469,7 @@ menu depending on the layer type (point, line or polygon).
 
 .. See Appendix \ref{app_menu} for complete descriptions of the menu items.
 
-.. `label_toolbars`:
+.. _`label_toolbars`:
 
 Toolbars
 *********
@@ -553,7 +492,7 @@ the mouse over the toolbars.
 	If you have accidentally hidden all your toolbars, you can get them
 	back by choosing menu option :menuselection:`Settings --> Toolbars`.
 
-.. `label_legend`:
+.. _`label_legend`:
 
 Map Legend
 **********
@@ -582,7 +521,7 @@ with one click.
 
 The content of the right mouse button context menu depends on whether the selected legend item
 is a raster or a vector layer. For GRASS vector layers :guilabel:`toggle editing` is not
-available. See section `grass_digitising`_ for information on editing GRASS vector layers.
+available. See section :ref:`grass_digitising` for information on editing GRASS vector layers.
 
 * **Right mouse button menu for raster layers**
 
@@ -630,10 +569,6 @@ available. See section `grass_digitising`_ for information on editing GRASS vect
 .. *  \dropmenuopt{Show file groups}
 
 
-
-
-
-
 It is possible to select more than one Layer or Group at the same time 
 by holding down the \keystroke{Ctrl}-Key while selecting the Layers with the 
 left mouse button. You can than move all selected Layers to a new Group at 
@@ -643,21 +578,23 @@ You are also able to delete more than one Layer or Group at once by selecting
 several Layers with the \keystroke{Ctrl}-Key and pressing \keystroke{Ctrl+D} afterwards.
 This way all selected Layers or Groups will be removed from the Layerlist.
 
-%% isn't included in Titan anymore, except for an "toggle overview"
-%Each legend entry can show the following mini icons:
-%
-%\includegraphics[width=0.7cm]{pyramid} This is a raster
-%that has pyramids built for it to improve rendering efficiency (see
-%Section \ref{raster_pyramids}).\\
-%\includegraphics[width=0.7cm]{no_pyramid} This is a
-%raster that has no pyramid layers (see Section \ref{raster_pyramids}).\\
-%\includegraphics[width=0.7cm]{inoverview} This layer is
-%shown in the overview map area as well as in the main map window.\\
-%\includegraphics[width=0.7cm]{editable} This is a vector
-%layer that is currently enabled for editing.\\
+.. isn't included in Titan anymore, except for an "toggle overview"
+.. %Each legend entry can show the following mini icons:
+..%
+..%\includegraphics[width=0.7cm]{pyramid} This is a raster
+..%that has pyramids built for it to improve rendering efficiency (see
+..%Section \ref{raster_pyramids}).\\
+..%\includegraphics[width=0.7cm]{no_pyramid} This is a
+..%raster that has no pyramid layers (see Section \ref{raster_pyramids}).\\
+..%\includegraphics[width=0.7cm]{inoverview} This layer is
+..%shown in the overview map area as well as in the main map window.\\
+..%\includegraphics[width=0.7cm]{editable} This is a vector
+..%layer that is currently enabled for editing.\\
 
-Map View}\label{label_mapview
-*****************************
+.. _`label_mapview`:
+
+Map View
+*********
 
 .. index::`map!view`
 
@@ -670,29 +607,31 @@ performed on the map as described in the toolbar description above.  The map
 view and the legend are tightly bound to each other - the maps in view reflect
 changes you make in the legend area.
 
-\begin{Tip}\caption{\textsc{Zooming the Map with the Mouse
-Wheel}}
-.. index::`zoom!mouse wheel`
-You can use the mouse wheel to zoom in and out on the map. Place
-the mouse cursor inside the map area and roll the wheel forward (away from you) to
-zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
-center where the zoom occurs. You can customize the behavior of the mouse
-wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} \arrow
-\dropmenuopt{Options} menu.
-\end{Tip}
+.. note::
+	**Zooming the Map with the Mouse Wheel**
 
-\begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space
-Bar}}
-.. index::`pan!arrow keys`
-You can use the arrow keys to pan in the map. Place the mouse cursor
-inside the map area and click on the right arrow key to pan East, left arrow
-key to pan West, up arrow key to pan North and down arrow key to pan South.
-You can also pan the map using the space bar: just move the mouse while
-holding down space bar.
-\end{Tip}
+    .. index::`zoom!mouse wheel`
+    You can use the mouse wheel to zoom in and out on the map. Place
+    the mouse cursor inside the map area and roll the wheel forward (away from you) to
+    zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
+    center where the zoom occurs. You can customize the behavior of the mouse
+    wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} \arrow
+    \dropmenuopt{Options} menu.
 
-Map Overview}\label{label_mapoverview
-*************************************
+.. note::
+	**Panning the Map with the Arrow Keys and Space Bar**
+
+    .. index::`pan!arrow keys`
+    You can use the arrow keys to pan in the map. Place the mouse cursor
+    inside the map area and click on the right arrow key to pan East, left arrow
+    key to pan West, up arrow key to pan North and down arrow key to pan South.
+    You can also pan the map using the space bar: just move the mouse while
+    holding down space bar.
+
+.. _`label_mapoverview`:
+
+Map Overview 
+*************
 
 .. index::`map!overview`
 
@@ -710,9 +649,10 @@ or remove all layers from the overview using the Overview tools on the toolbar.
 If you click and drag the red rectangle in the overview that shows your
 current extent, the main map view will update accordingly.
 
-Status Bar}\label{label_statusbar
-*********************************
+.. _`label_statusbar`:
 
+Status Bar
+***********
 
 The status bar shows you your current position in map coordinates (e.g.
 meters or decimal degrees) as the mouse pointer is moved across the map view.
@@ -736,20 +676,23 @@ At the far right of the status bar you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection properties 
 for the current project.
 
-\begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}
-.. index::`scale!calculate`
-When you start QGIS, degrees is the default unit, and it tells QGIS
-that any coordinate in your layer is in degrees. To get correct scale values,
-you can either change this to meter manually in the \tab{General} tab under
-\mainmenuopt{Settings} \arrow \dropmenuopt{Project Properties} or you can select a project
-Coordinate Reference System (CRS) clicking on the
-\toolbtntwo{mIconProjectionDisabled}{CRS status}
-icon in the lower right-hand corner of the statusbar. In the last case, the
-units are set to what the project projection specifies, e.g. '+units=m'.
-\end{Tip}
+.. note::
+	**Calculating the correct Scale of your Map Canvas**
 
-Keyboard shortcuts}\label{shortcuts
-***********************************
+    .. index::`scale!calculate`
+    When you start QGIS, degrees is the default unit, and it tells QGIS
+    that any coordinate in your layer is in degrees. To get correct scale values,
+    you can either change this to meter manually in the \tab{General} tab under
+    \mainmenuopt{Settings} \arrow \dropmenuopt{Project Properties} or you can select a project
+    Coordinate Reference System (CRS) clicking on the
+    \toolbtntwo{mIconProjectionDisabled}{CRS status}
+    icon in the lower right-hand corner of the statusbar. In the last case, the
+    units are set to what the project projection specifies, e.g. '+units=m'.
+
+.. _`shorcuts`:
+
+Keyboard shortcuts
+*******************
 
 .. index::`Keyboard shortcuts`
 
@@ -769,8 +712,10 @@ on \button{Change}, \button{Set none} or \button{Set default}. Once you have
 found your configuration, you can save it as XML file and load it to another
 QGIS installation.
 
-Context help}\label{context_help
-********************************
+.. _`context_help`:
+
+Context help
+*************
 
 .. index::`Context help`
 
@@ -778,8 +723,10 @@ When you need help on a specific topic, you can access context help via the \but
 button available in most dialogs - please note that third-party plugins can point to
 dedicated web pages.
 
-Rendering}\label{subsec:redraw_events
-=====================================
+.. _`subsect:redraw_events`:
+
+Rendering
+===========
 .. index::`rendering`
 
 By default, QGIS renders all visible layers whenever the map canvas must be
@@ -792,11 +739,11 @@ refreshed. The events that trigger a refresh of the map canvas include:
 
 QGIS allows you to control the rendering process in a number of ways.
 
+.. `label_scaledepend`:
+
 Scale Dependent Rendering
 *************************
 .. index::`rendering!scale dependent`
-
-.. `label_scaledepend`:
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
@@ -809,16 +756,18 @@ to use and noting the scale value in the QGIS status bar.
 
 .. index::`scale`
 
-Controlling Map Rendering}\label{label_controlmap
-*************************************************
+.. _`label_controlmap`:
 
+Controlling Map Rendering 
+***************************
 
 Map rendering can be controlled in the following ways:
 
+.. _`label_suspendrender`:
+
 a) Suspending Rendering
 ~~~~~~~~~~~~~~~~~~~~~~~
-:index:`rendering!suspending`
-\label{label_suspendrender}
+.. index::`rendering!suspending`
 
 To suspend rendering, click the \checkbox{Render} checkbox in the lower right
 corner of the statusbar. When the \checkbox{Render} box is not checked, QGIS
@@ -826,22 +775,21 @@ does not redraw the canvas in response to any of the events described in
 Section \ref{subsec:redraw_events}. Examples of when you might want to suspend
 rendering include:
 
-
-
-*  Add many layers and symbolize them prior to drawing
-*  Add one or more large layers and set scale dependency before drawing
-*  Add one or more large layers and zoom to a specific view before drawing
-*  Any combination of the above
-
-
+* Add many layers and symbolize them prior to drawing
+* Add one or more large layers and set scale dependency before drawing
+* Add one or more large layers and zoom to a specific view before drawing
+* Any combination of the above
 
 Checking the \checkbox{Render} box enables rendering and causes an immediate
 refresh of the map canvas.
 
-b) Setting Layer Add Option}\label{label_settinglayer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _`label_settinglayer`:
 
-:index:`rendering!options}\index{layers!initial visibility`
+b) Setting Layer Add Option 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. index::`rendering!options`
+.. index::`layers!initial visibility`
 
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
@@ -851,22 +799,25 @@ menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} and click on the
 \checkbox{By default new layers added to the map should be displayed} checkbox.
 Any layer added to the map will be off (invisible) by default.
 
-%Stopping Rendering
-~~~~~~~~~~~~~~~~~~
-:index:`rendering!halting`
-%\label{label_stoprender}
-%
-%To stop the map drawing, press the ESC key. This will halt the refresh of
-%the map canvas and leave the map partially drawn. It may take a bit of time
-%between pressing ESC and the time the map drawing is halted.
-%
-%**NOTE**: It is currently not possible to stop rendering - this was disabled
-%in qt4 port because of User Interface (UI) problems and crashes.
+.. Stopping Rendering
+.. ~~~~~~~~~~~~~~~~~~
+.. index::`rendering!halting`
+
+.. \label{label_stoprender}
+..
+.. To stop the map drawing, press the ESC key. This will halt the refresh of
+.. the map canvas and leave the map partially drawn. It may take a bit of time
+.. between pressing ESC and the time the map drawing is halted.
+.. 
+.. **NOTE**: It is currently not possible to stop rendering - this was disabled
+.. in qt4 port because of User Interface (UI) problems and crashes.
+
+.. _`label_updatemap`:
 
 c) Updating the Map Display During Rendering
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\label{label_updatemap}:index:`rendering!update during drawing`
+.. index::`rendering!update during drawing`
 
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
@@ -878,10 +829,12 @@ disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
 during the reading of the features. A suggested value to start with is 500.
 
+.. _`label_renderquality`:
+
 d) Influence Rendering Quality
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\label{label_renderquality}:index:`rendering!quality`
+.. index::`rendering!quality`
 
 To influence the rendering quality of the map you have 3 options. Choose menu
 option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} click on the
@@ -889,15 +842,15 @@ option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} click on the
 
 
 
-*  \checkbox{Make lines appear less jagged at the expense of some drawing
-performance}
-*  \checkbox{Fix problems with incorrectly filled polygons}
+* \checkbox{Make lines appear less jagged at the expense of some drawing
+  performance}
+* \checkbox{Fix problems with incorrectly filled polygons}
 
+.. _`sec_measure`:
 
-
-Measuring}\label{sec:measure
-============================
-:index:`measure`
+Measuring 
+==========
+.. index::`measure`
 
 Measuring works within projected coordinate systems (e.g., UTM) and 
 unprojected data. If the loaded map is defined with a geographic coordinate system
@@ -913,9 +866,9 @@ select the tool you want to use.
 Measure length, areas and angles
 ********************************
 
-:index:`measure:line length`
-:index:`measure:areas`
-:index:`measure:angles`
+.. index::`measure:line length`
+.. index::`measure:areas`
+.. index::`measure:angles`
 
 \includegraphics[width=0.7cm]{mActionMeasure}
 QGIS is able to measure real distances between given points according to 
@@ -945,27 +898,29 @@ is displayed in a popup dialog.
    \caption{Measure tools in action \nixcaption} \label{fig:measure}
 \end{figure}
 
-Select and deselect features}\label{sec:selection
-*************************************************
+.. _`sec_selection`:
+
+Select and deselect features 
+******************************
 
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
 To select one or several features just click on 
 \includegraphics[width=0.7cm]{mActionSelect} and select your tool:
 
-\begin{description}
-\item \includegraphics[width=0.5cm]{mActionSelect} Select features
-\item \includegraphics[width=0.5cm]{mActionSelectRectangle} Select features by rectangle
-\item \includegraphics[width=0.5cm]{mActionSelectPolygon} Select features by polygon
-\item \includegraphics[width=0.5cm]{mActionSelectFreehand} Select features by freehand
-\item \includegraphics[width=0.5cm]{mActionSelectRadius} Select features by radius
-\end{description} 
+* includegraphics[width=0.5cm]{mActionSelect} Select features
+* \includegraphics[width=0.5cm]{mActionSelectRectangle} Select features by rectangle
+* \includegraphics[width=0.5cm]{mActionSelectPolygon} Select features by polygon
+* \includegraphics[width=0.5cm]{mActionSelectFreehand} Select features by freehand
+* \includegraphics[width=0.5cm]{mActionSelectRadius} Select features by radius
 
 To deselect all selected features click on \includegraphics[width=0.7cm]{mActionDeselectAll}.
 
-Projects}\label{sec:projects
-============================
-:index:`projects`
+.. _`sec_projets`:
+
+Projects
+=========
+.. index::`projects`
 
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
@@ -987,14 +942,10 @@ if changes have been made since it was opened or last saved.
 
 The kinds of information saved in a project file include:
 
-
-
-*  Layers added
-*  Layer properties, including symbolization
-*  Projection for the map view
-*  Last viewed extent
-
-
+* Layers added
+* Layer properties, including symbolization
+* Projection for the map view
+* Last viewed extent
 
 The project file is saved in XML format, so it is possible to edit
 the file outside QGIS if you know what you are doing. The file format
@@ -1015,47 +966,44 @@ In the properties window for the project under |nix| \mainmenuopt{File \arrow
 include:
 
 
+* In the \tab{General} tab the project title, selection and background
+  color, layer units, precision, and the option to save relative paths to
+  layers can be defined. You can define the layer units (only used when CRS 
+  transformation is disabled) and the precision of decimal places to use.  
+* The \tab{CRS} Coordinate Reference System tab enables you to choose the
+  CRS for this project, and to enable on-the-fly reprojection of raster and vector 
+  layers when displaying layers from a different CRS.
+* With the third \tab{Identifiable layers} tab you set (or disable) which
+  layers will respond to the identify tool. (See the Map tools paragraph from
+  the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
+* The tab \tab{WMS Server} allows to define information about the QGIS 
+  mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating 
+  the \checkbox{Add WKT geometry to feature info response} will allow to query the 
+  WMS layers.
 
-*  In the \tab{General} tab the project title, selection and background
-color, layer units, precision, and the option to save relative paths to
-layers can be defined. You can define the layer units (only used when CRS 
-transformation is disabled) and the precision of decimal places to use.  
-*  The \tab{CRS} Coordinate Reference System tab enables you to choose the
-CRS for this project, and to enable on-the-fly reprojection of raster and vector 
-layers when displaying layers from a different CRS.
-*  With the third \tab{Identifiable layers} tab you set (or disable) which
-layers will respond to the identify tool. (See the Map tools paragraph from
-the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
-*  The tab \tab{WMS Server} allows to define information about the QGIS 
-mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating 
-the \checkbox{Add WKT geometry to feature info response} will allow to query the 
-WMS layers.
+.. _`sec_output`:
 
+Output 
+=======
 
-
-Output}\label{sec:output
-========================
-
-:index:`output!save as image!print composer!quick print`
+.. index::`output!save as image!print composer!quick print`
 
 There are several ways to generate output from your QGIS session. We have
 discussed one already in Section \ref{sec:projects}: saving as a project file.
 Here is a sampling of other ways to produce output files:
 
+* Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens
+  a file dialog where you select the name, path and type of image (PNG or JPG
+  format). A world file with extension PNGW or JPGW saved in the same folder
+  georeferences the image.
+* Menu option \dropmenuopttwo{mActionNewComposer}{New Print Composer} opens a
+  dialog where you can layout and print the current map canvas (see
+  Section~\ref{label_printcomposer}).
 
+.. `subsec_gui_options`:
 
-*  Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens
-a file dialog where you select the name, path and type of image (PNG or JPG
-format). A world file with extension PNGW or JPGW saved in the same folder
-georeferences the image.
-*  Menu option \dropmenuopttwo{mActionNewComposer}{New Print Composer} opens a
-dialog where you can layout and print the current map canvas (see
-Section~\ref{label_printcomposer}).
-
-
-
-GUI Options}\label{subsec:gui_options
-=====================================
+GUI Options 
+=============
 
 
 \includegraphics[width=0.7cm,clip=true]{mActionOptions} Some basic options
@@ -1067,49 +1015,40 @@ optmize your options are:
 General Tab
 ~~~~~~~~~~~
 
-
-
-
-*  \checkbox{Promt to save project changes when required}
-*  \checkbox{Warn when opening a project file saved with an older version of QGIS}
-*  Change Selection and background Color
-*  Change the icon theme (choose between default, classic, gis and newgis)
-*  Change icon size between 16, 24 and 32 pixel.
-*  Define double click action in legend (choose between 'open layer properties' 
-and 'open ') attribute table.
-*  \checkbox{Capitalise layer names in legend}
-*  \checkbox{Display classification attribute names in legend}
-*  \checkbox{Create raster icons in legend}
-*  \checkbox{Hide splash screen at startup}
-*  \checkbox{Open identify results in a dock window (QGIS restart
-required)}
-*  \checkbox{Open snapping options in a dock window (QGIS restart
-required)}
-*  \checkbox{Open attribute table in a dock window}
-*  \checkbox{Add PostGIS layers with double click and select in extended mode}
-*  \checkbox{Add new layers to selected group}
-*  Attribute table behavior (choose between Show all features (default), Show selected features,
-show features in current canvas)
-*  Define representation for NULL values
-*  Add path(s) to search for additional C++ plugin libraries. 
-
-
+* \checkbox{Promt to save project changes when required}
+* \checkbox{Warn when opening a project file saved with an older version of QGIS}
+* Change Selection and background Color
+* Change the icon theme (choose between default, classic, gis and newgis)
+* Change icon size between 16, 24 and 32 pixel.
+* Define double click action in legend (choose between 'open layer properties' 
+  and 'open ') attribute table.
+* \checkbox{Capitalise layer names in legend}
+* \checkbox{Display classification attribute names in legend}
+* \checkbox{Create raster icons in legend}
+* \checkbox{Hide splash screen at startup}
+* \checkbox{Open identify results in a dock window (QGIS restart
+  required)}
+* \checkbox{Open snapping options in a dock window (QGIS restart
+  required)}
+* \checkbox{Open attribute table in a dock window}
+* \checkbox{Add PostGIS layers with double click and select in extended mode}
+* \checkbox{Add new layers to selected group}
+* Attribute table behavior (choose between Show all features (default), Show selected features,
+  show features in current canvas)
+* Define representation for NULL values
+* Add path(s) to search for additional C++ plugin libraries. 
 
 Rendering Tab
 ~~~~~~~~~~~~~
 
-
-
-
-*  \checkbox{By default new layers added to the map should be displayed}
-*  Define number of features to draw before updating the display.
-*  \checkbox{Use render caching where possible to speed up redraws}
-*  \checkbox{Make lines appear less jagged at the expense of some drawing
-performance}
-*  \checkbox{Fix problems with incorrectly filled polygons}
-*  \checkbox{Use new generation symbology for rendering}
-*  Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
-
+* \checkbox{By default new layers added to the map should be displayed}
+* Define number of features to draw before updating the display.
+* \checkbox{Use render caching where possible to speed up redraws}
+* \checkbox{Make lines appear less jagged at the expense of some drawing
+  performance}
+* \checkbox{Fix problems with incorrectly filled polygons}
+* \checkbox{Use new generation symbology for rendering}
+* Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
 
 
 Additionally you can define whether to save the path for svg textures
@@ -1121,131 +1060,101 @@ Map tools Tab
 ~~~~~~~~~~~~~
 
 
-
-
-*  The Mode setting determines which layers will be shown by the Identify
-tool. By switching to \usertext{Top down} or \usertext{Top down, stop at
-first} instead of \usertext{Current layer} attributes for all identifiable
-layers (see the Project properties section under: \ref{sec:projects} to set
-which layers are identifiable) will be shown with the Identify tool.
-*  \checkbox{Open feature form, if a single feature is identified}
-*  Define search radius for identifying and displaying map tips as a
-percentage of the map width
-*  Define ellipsoid for distance calculations
-*  Define rubberband color for measure tools
-*  Define decimal places
-*  \checkbox{Keep base unit}
-*  \radiobuttonon{Define preferred measurement units (meters or feet)}
-*  \radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}
-*  Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
-cursor, Nothing)
-*  Define Zoom factor for wheel mouse
-
+* The Mode setting determines which layers will be shown by the Identify
+  tool. By switching to \usertext{Top down} or \usertext{Top down, stop at
+  first} instead of \usertext{Current layer} attributes for all identifiable
+  layers (see the Project properties section under: \ref{sec:projects} to set
+  which layers are identifiable) will be shown with the Identify tool.
+* \checkbox{Open feature form, if a single feature is identified}
+* Define search radius for identifying and displaying map tips as a
+  percentage of the map width
+* Define ellipsoid for distance calculations
+* Define rubberband color for measure tools
+* Define decimal places
+* \checkbox{Keep base unit}
+* \radiobuttonon{Define preferred measurement units (meters or feet)}
+* \radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}
+* Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
+  cursor, Nothing)
+* Define Zoom factor for wheel mouse
 
 
 Overlays Tab
 ~~~~~~~~~~~~
 
-
-
-
-*  Define placement algorithm for labels (choose between central point
-(standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)
-
+* Define placement algorithm for labels (choose between central point
+  (standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)
 
 
 Digitizing Tab
 ~~~~~~~~~~~~~~
 
-
-
-
-*  Define Rubberband line color and line width
-*  Define default snap mode (to vertex, to segment, to vertex and segment)
-*  Define default snapping tolerance in map units or pixel
-*  Define search radius for vertex edits in map units or pixel
-*  \checkbox{Show markers only for selected features}
-*  Define vertex marker style (cross (default), semi transparent circle or
-none) and vertex marker size.
-*  \checkbox{Reuse last entered attribute values}
-*  \checkbox{Suppress attributes pop-up windows after each created feature}
-
+* Define Rubberband line color and line width
+* Define default snap mode (to vertex, to segment, to vertex and segment)
+* Define default snapping tolerance in map units or pixel
+* Define search radius for vertex edits in map units or pixel
+* |checkbox|:guilabel:`Show markers only for selected features`
+* Define vertex marker style (cross (default), semi transparent circle or
+  none) and vertex marker size.
+* |checkbox| :guilabel:`Reuse last entered attribute values`
+* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 
 
 CRS Tab
 ~~~~~~~
 
-
 The CRS tab is devided in two areas. The first area allows to define the default 
 CRS for new projects.
 
 
-
-*  Select a CRS and always start new projects with this CRS.
-*  \checkbox{Enable on the fly reprojecion by default}
-
-
+* Select a CRS and always start new projects with this CRS.
+* |checkbox| :guilabel:`Enable on the fly reprojecion by default`
 
 The second area allows to define the action, when a new layer is created, or when a 
 layer without CRS is loaded.
 
-
-*  \radiobuttonoff{Prompt for Coordinate Reference System (CRS)}
-*  \radiobuttonoff{Project wide default Coordinate Reference System (CRS) will be used}
-*  \radiobuttonon{Global default Coordinate Reference System (CRS) displayed below will be used}
-
-
+* |radiobuttonoff| :guilabel:`Prompt for Coordinate Reference System (CRS)`
+* |radiobuttonoff| :guilabel:`Project wide default Coordinate Reference System (CRS) will be used`
+* |radiobuttonon| :guilabel`Global default Coordinate Reference System (CRS) displayed below will be used`
 
 Locale Tab
 ~~~~~~~~~~
 
-
-
-
-*  \checkbox{Overwrite system locale and use defined locale instead}
-*  Information about active system locale
-
+* |checkbox| :guilabel:`Overwrite system locale and use defined locale instead`
+* Information about active system locale
 
 
 Network Tab
 ~~~~~~~~~~~
 
+.. _`fig_proxy-settings`:
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=14cm]{proxy-settings}
-   \caption{Proxy-settings in |qg| \nixcaption}
-   \label{fig:proxy-settings}
-\end{figure}
+.. figure::img/en/proxy-settings.png
+   
+   Proxy-settings in |qg|
 
+* \checkbox{Use proxy for web access} and define host, port, user, and password.
+* Set the \dropmenuopt{Proxy type} according to your needs
 
-
-*  \checkbox{Use proxy for web access} and define host, port, user, and password.
-*  Set the \dropmenuopt{Proxy type} according to your needs
+  * \dropmenuopt{Default Proxy}: Proxy is determined based on the application proxy set using
+  * \dropmenuopt{Socks5Proxy}: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.
+  * \dropmenuopt{HttpProxy}: Implemented using the "CONNECT" command, supports only outgoing TCP connections; supports authentication.
+  * \dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
+  * \dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests
  
-
-  *  \dropmenuopt{Default Proxy}: Proxy is determined based on the application proxy set using
-  *  \dropmenuopt{Socks5Proxy}: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.
-  *  \dropmenuopt{HttpProxy}: Implemented using the "CONNECT" command, supports only outgoing TCP connections; supports authentication.
-  *  \dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
-  *  \dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests
- 
-
-\item Define Cache settings (path and size)
-\item Define WMS search adress, default is \url{http://geopole.org/wms/search?search=\%1\&type=rss}
-\item Define timeout for network requests in ms - default is 60000
-
-
+* Define Cache settings (path and size)
+* Define WMS search adress, default is \url{http://geopole.org/wms/search?search=\%1\&type=rss}
+* Define timeout for network requests in ms - default is 60000
 
 Excluding some URLs can be added to the textbox below the proxy-settings (see
 fig. \ref{fig:proxy-settings}) by pressing the \button{Add}-button. After that
 double-click into the just created URL-field and enter the URL you would like
-to exclude from using the proxy. Obviously the button \button{Remove} removes the selected
+to exclude from using the proxy. Obviously the button :guilabel:`Remove` removes the selected
 entry.
 
 If you need more detailed information about the different proxy-settings,
 please refer to the manual of the unterlaying QT-library-documentation at
-\url{http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum}.
+http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
 
 \begin{Tip} \caption{\textsc{Using Proxies}}
 Using proxies can sometimes be tricky. It is useful to 'trial and
@@ -1255,21 +1164,18 @@ error' the above proxy types and check if they succeed in your case.
 You can modify the options according to your needs. Some of the changes may
 require a restart of QGIS before they will be effective.
 
-
-
 *  |nix| settings are saved in a texfile: \$HOME/.config/QuantumGIS/qgis.conf
 *  |osx| you can find your settings in: \$HOME/Library/Preferences/org.qgis.qgis.plist
 *  |win| settings are stored in the registry under:
 ::
 
-
-\\HKEY\CURRENT_USER\Software\QuantumGIS|qg|is
-
+	\\HKEY\CURRENT_USER\Software\QuantumGISqgis
 
 
+.. _`sec_annotations`:
 
-Annotation Tools}\label{sec:annotations
-=======================================
+Annotation Tools 
+==================
 
 :index:`annotations`
 :index:`text annotation|\see{annotations}`
@@ -1299,15 +1205,15 @@ tool allows to move the annotation on the map canvas.
 
 Form annotations
 ****************
-:index:`annotations`
-:index:`form annotation|\see{annotations}`
+.. index::`annotations`
+.. index::`form annotation|\see{annotations}`
 
 Additionally you can also create your own annotation forms. The
 \includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation
 tool is useful to display attributes of a vector layer in a customised qt
 designer form (see Figure \ref{fig:custom-annotations}). It is similar to the
 designer forms for the identify tool, but displayed in an annotation item.
-Also see QGIS blog \url{http://blog.qgis.org/node/143} for more information.
+Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 \begin{figure}[ht]
    \centering
@@ -1316,17 +1222,18 @@ Also see QGIS blog \url{http://blog.qgis.org/node/143} for more information.
    \label{fig:custom-annotations}
 \end{figure}
 
-**Note:} If you press \keystroke{Ctrl+T** while an annotation tool is active 
-(move annotation, text annotation, form annotation), the visibility states 
-of the items are inverted.
+.. note::
+	**Note: If you press :kbd:`Ctrl+T`** while an annotation tool is active 
+	(move annotation, text annotation, form annotation), the visibility states 
+	of the items are inverted.
 
-\newpage
+.. _`sec_bookmarks`:
 
-Spatial Bookmarks}\label{sec:bookmarks
-======================================
+Spatial Bookmarks
+==================
 
-:index:`bookmarks`
-:index:`spatial bookmarks|\see{bookmarks}`
+.. index::`bookmarks`
+.. index::`spatial bookmarks|\see{bookmarks}`
 
 Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to it later.
 
@@ -1363,13 +1270,15 @@ You can also zoom to a bookmark by double-clicking on it.
 Deleting a Bookmark
 *******************
 
-To delete a bookmark from the \dialog{Geospatial Bookmarks}
-dialog, click on it then click \button{Delete}.
-Confirm your choice by clicking \button{Yes} or cancel the
-delete by clicking \button{No}.
+To delete a bookmark from the :guilabel:`Geospatial Bookmarks`
+dialog, click on it then click :guilabel:`Delete`.
+Confirm your choice by clicking :guilabel:`Yes` or cancel the
+delete by clicking :guilabel:`No`.
 
-Live GPS tracking}\label{sec:gpstracking
-========================================
+.. _`sec_gpstracking`:
+
+Live GPS tracking
+==================
 
 
 To activate Live GPS tracking in QGIS you need to select
@@ -1396,9 +1305,10 @@ a simple click on \button{Connect} connects the GPS to QGIS. A second click
 GNU/Linux gpsd support is integrated to support connection to most GPS 
 receivers. Therefore you first have to configure gpsd properly to connect QGIS to it.
 
-[ IMPORTANT ]: If you want to record your position to the canvas you have to
-create a new vector layer first and switch it to editable status to be able
-to record your track.
+.. warning::
+	[ IMPORTANT ]: If you want to record your position to the canvas you have to
+	create a new vector layer first and switch it to editable status to be able
+	to record your track.
 
 \begin{figure}[ht]
 \centering
