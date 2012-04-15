@@ -134,7 +134,7 @@ Using the QGIS Python Plugin Installer
 
 .. figure::img/en/plugins/pluginmanager.png
    :align: center
-   :width: 12px
+   :width: 12em
    
    Installing external python plugins |nix|
 
@@ -206,7 +206,7 @@ Options tab
 ~~~~~~~~~~~
 
 
-The \tab{Options tab is where you can configure the settings of the :file:`Plugin Installer`. The \checkbox{Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the \tab{Repositories tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer is manually launched from the menu.
+The \tab{Options tab is where you can configure the settings of the :file:`Plugin Installer`. The |checkbox| Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer is manually launched from the menu.
 
 Although the plugin installer update can handle ports different from 80, some internet
 connections will cause problems when attempting to automatically check for updates.
