@@ -157,7 +157,7 @@ interface as discussed below):
 
 .. `fig_startup`:
 
-.. figure:: _static/startup.png
+.. figure:: img/en/startup.png
    :align: center
 
    QGIS GUI with Alaska sample data (KDE)
@@ -185,7 +185,7 @@ context help.
 Menu Bar
 *********
 
-.. :index:`menus`
+.. index::`menus`
 
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
@@ -199,178 +199,110 @@ entry. For more information about tools and toolbars, see Section
 `label_toolbars`_.
 
 
-+--------------------------------------------+---------------+-----------------------------+------------------+
-| Menu Option                                | Shortcut      | Reference                   | Toolbar          |
-+============================================+===============+=============================+==================+
-| |mActionFileNew| :guilabel:`File`            |               |                             |                  | 
-+--------------------------------------------+---------------+-----------------------------+------------------+
-| :guilabel:`New Project`                    | :kbd:`Ctrl+N` | see Section `sec_projects`_ | :guilabel:`File` |
-+--------------------------------------------+---------------+-----------------------------+------------------+
-| |mActionFileOpen| :guilabel:`Open Project` | :kbd:`Ctrl+O` | see Section `sec_projects`_ | :guilabel:`File` |
-+--------------------------------------------+---------------+-----------------------------+------------------+
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| Menu Option                                                          | Shortcut            | Reference                              | Toolbar                         |
++======================================================================+=====================+========================================+=================================+
+| |mActionFileNew| :guilabel:`File`                                                                                                                                     | 
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`New Project`                                              | :kbd:`Ctrl+N`       | see Section `sec_projects`_            | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionFileOpen| :guilabel:`Open Project`                           | :kbd:`Ctrl+O`       | see Section `sec_projects`_            | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Open Recent Projects`                                     |                     | see Section `sec_projects`_            |                                 |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionFileSave| :guilabel:`Save Project`                           | :kbd`Ctrl+S`        | see Section `sec_projects`_            | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionFileSaveAs| :guilabel:`Save Project As`                      | :kbd:`Ctrl+Shift+S` | see Section `sec_projects`_            | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionSaveMapAsImage| :guilabel:`Save as Image`                    |                     | see Section `sec_output`_              |                                 |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionNewComposer| :guilabel:`New Print Composer`                  | :kbd:`Ctrl+P`       | see Section `label_printcomposer`_     | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionComposerManager| :guilabel:`Composer manager`                |                     | see Section `label_printcomposer`_     | :guilabel:`File`                |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Print Composers`                                          |                     | see Section `label_printcomposer`_     |                                 |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionFileExit| :guilabel:`Exit`                                   | :kbd:`Ctrl+Q`       |                                        |                                 |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Edit`                                                                                                                                                      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionUndo| :guilabel:`Undo`                                       | :kbd:`Ctrl+Z`       | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionRedo| :guilabel:`Redo`                                       | :kbd:`Ctrl+Shift+Z` | see Section `sec_advanced_edit`        | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionEditCut| :guilabel:`Cut Features`                            | :kbd:`Ctrl+X`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionEditCopy| :guilabel:`Copy Features`                          | :kbd:`Ctrl+C`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionEditPaste| :guilabel:`Paste Features`                        | :kbd:`Ctrl+V`       | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionEditPaste| :guilabel:`Move Feature`                          |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionDeleteSelected| :guolabel:`Delete Selected`                  |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionSimplify| :guilabel:`Simplify Feature`                       |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionAddRing| :guilabel:`Add Ring`                                |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionAddIsland| :guilabel:`Add Part`                              |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionDeleteRing| :guilabel:`Delete Ring`                          |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionDeletePart| :guilabel:`Delete Part`                          |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionReshape| :guilabel:`Reshape Features`                        |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionSplitFeatures| :guilabel:`Split Features`                    |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionMergeFeat| :guilabel:`Merge selected Features`               |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionMergeFeat| :guilabel:`Merge attributes of selected Features` |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionNodeTool| :guilabel:`Node Tool`                              |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`         |                     | see Section `sec_advanced_edit`_       | :guilabel:`Advanced Digitizing` |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
-\dropmenuopt{Open Recent Projects}
-	\>
-	\> see Section \ref{sec:projects} \\
-\dropmenuopttwo{mActionFileSave}{Save Project}
-	\> \keystroke{Ctrl+S}
-	\> see Section \ref{sec:projects}
-	\> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionFileSaveAs}{Save Project As}
-	\> \keystroke{Ctrl+Shift+S}
-  \> see Section \ref{sec:projects}
-	\> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionSaveMapAsImage}{Save as Image}
-	\>
-	\> see Section \ref{sec:output} \\
-\dropmenuopttwo{mActionNewComposer}{New Print Composer}
-        \> \keystroke{Ctrl+P}
-        \> see Section \ref{label_printcomposer}
-        \> \dropmenucheck{File} \\
-\dropmenuopttwo{mActionComposerManager}{Composer manager}
-	\>
-	\> see Section \ref{label_printcomposer}
-	\> \dropmenucheck{File} \\
-\dropmenuopt{Print Composers}
-	\>
-	\> see Section \ref{label_printcomposer} \\
-\dropmenuopttwo{mActionFileExit}{Exit}
-	\> \keystroke{Ctrl+Q} \\
-\end{tabbing}
+After activating |mActionToggleEditing| :menuselection:`Toggle editing` mode 
+for a layer, you will find a capture feature icon in the :menuselection:`Edit`
+menu depending on the layer type (point, line or polygon).
 
-*  \mainmenuopt{Edit}
-\begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionUndo}{Undo}
-        \> \keystroke{Ctrl+Z}
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionRedo}{Redo}
-        \> \keystroke{Ctrl+Shift+Z}
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionEditCut}{Cut Features}
-	\> \keystroke{Ctrl+X}
-	\> see Section \ref{sec:edit_existing_layer}
-	\> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionEditCopy}{Copy Features}
-	\> \keystroke{Ctrl+C}
-	\> see Section \ref{sec:edit_existing_layer}
-	\> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionEditPaste}{Paste Features}
-	\> \keystroke{Ctrl+V}
-	\> see Section \ref{sec:edit_existing_layer}
-	\> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionEditPaste}{Move Feature}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionDeleteSelected}{Delete Selected}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionSimplify}{Simplify Feature}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionAddRing}{Add Ring}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionAddIsland}{Add Part}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionDeleteRing}{Delete Ring}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionDeletePart}{Delete Part}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionReshape}{Reshape Features}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionSplitFeatures}{Split Features}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionMergeFeatures}{Merge selected Features}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionMergeFeatures}{Merge attributes of selected Features}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\dropmenuopttwo{mActionNodeTool}{Node Tool}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionRotatePointSymbols}{Rotate Point Symbols}
-        \>
-        \> see Section \ref{sec:advanced_edit}
-        \> \dropmenucheck{Advanced Digitizing} \\
-\end{tabbing}
-
-After activating \toolbtntwo{mActionToggleEditing}{Toggle editing} mode
-for a layer, you will find a capture feature icon in the \mainmenuopt{Edit}
-menu depending on the layer type (point, line or polygon). \\
-
-\begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionCapturePoint}{Capture Point}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionCaptureLine}{Capture Line}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\dropmenuopttwo{mActionCapturePolygon}{Capture Polygon}
-        \>
-        \> see Section \ref{sec:edit_existing_layer}
-        \> \dropmenucheck{Digitizing} \\
-\end{tabbing}
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| Menu Option                                                          | Shortcut            | Reference                              | Toolbar                         |
++======================================================================+=====================+========================================+=================================+
+| |mActionCapturePoint| :guilabel:`Capture Point`                      |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionCaptureLine| :guilabel:`Capture Line`                        |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionCapturePolygon| :guilabel:`Capture Polygon`                  |                     | see Section `sec_edit_existing_layer`_ | :guilabel:`Digitizing`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
 
-*  \mainmenuopt{View}
-\begin{tabbing}
-\hspace{4.5cm}\=\hspace{3cm}\=\hspace{3.5cm}\= \kill
-\dropmenuopttwo{mActionPan}{Pan Map}
-	\>
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionZoomIn}{Zoom In}
-	\> \keystroke{Ctrl++}
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionZoomOut}{Zoom Out}
-	\> \keystroke{Ctrl+-}
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopt{Select}
-	\> 
-	\> see Section \ref{sec:selection} 
-	\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionIdentify}{Identify Features}
-	\> \keystroke{Ctrl+Shift+I}
-	\> \> \dropmenucheck{Attributes} \\
-\dropmenuopt{Measure}
-	\> 
-	\> see Section \ref{sec:measure}
-	\> \dropmenucheck{Attributes} \\
-\dropmenuopttwo{mActionZoomFullExtent}{Zoom Full}
-	\> \keystroke{Ctrl+Shift+F}
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionZoomToLayer}{Zoom To Layer}
-	\>
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionZoomToSelected}{Zoom To Selection}
-	\> \keystroke{Ctrl+J}
-	\> \> \dropmenucheck{Map Navigation} \\
-\dropmenuopttwo{mActionZoomLast}{Zoom Last}
-	\>
-	\> \> \dropmenucheck{Map Navigation} \\
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| Menu Option                                                          | Shortcut            | Reference                              | Toolbar                         |
++======================================================================+=====================+========================================+=================================+
+| :guilabel:`View`                                                                                                                                                      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionPan| :guilabel:`Pan Map`                                     |                     |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomIn| :guilabel:`Zoom In`                                  | :kbd:`Ctrl++`       |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomOut| :guilabel:`Zoom Out`                                | :kbd:`Ctrl+-`       |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Select`                                                   |                     | see Section `sec_selection`_           | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionIdentify| :guilabel:`Identify Features`                      | :kbd:`Ctrl+Shift+I` |                                        | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| :guilabel:`Measure`                                                  |                     | see Section `sec_measure`_             | :guilabel:`Attributes`          |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomFullExtent| :guilabel:`Zoom Full`                        | :kbd:`Ctrl+Shift+F` |                                        | :guilabelb:`Map Navigation`     |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomToLayer| :guilabel:`Zoom To Layer`                       |                     |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomToSelected| :guilabel:`Zoom To Selection`                | :kbd:`Ctrl+J`       |                                        | :guilabel:`Map Navigation`      |
++----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+| |mActionZoomLast| :guilabel:`Zoom Last`                              |                     |                                        | :guilabel:`Map Navigation`      |
+
 \dropmenuopttwo{mActionZoomNext}{Zoom Next}
 	\>
 	\> \> \dropmenucheck{Map Navigation} \\
@@ -568,38 +500,42 @@ menu depending on the layer type (point, line or polygon). \\
 
 
 
-**Note:** \nix The Menu Bar items listed above are the default ones in KDE window
-manager. In GNOME, Settings menu is missing and its items are to be found
-there:
-\begin{tabbing}
-\dropmenuopttwo{mActionProjectProperties}{Project Properties} \hspace{3cm}\=
-\dropmenucheck{File menu} \\
-\dropmenuopttwo{mActionOptions}{Options} \hspace{3cm}\>
-\dropmenucheck{Edit}\\
-\dropmenuopttwo{mActionOptions}{Configure Shortcuts} \hspace{3cm}\>
-\dropmenucheck{Edit}\\
-\mainmenuopt{Style Manager} \hspace{3cm}\>
-\dropmenucheck{Edit}\\
-\dropmenuopttwo{mActionCustomProjection}{Custom CRS}\hspace{3cm}\>
-\dropmenucheck{Edit} \\
-\dropmenuopt{Panels} \hspace{3cm}\>
-\dropmenucheck{View} \\
-\dropmenuopt{Toolbars}   \hspace{3cm}\>
-\dropmenucheck{View} \\
-\mainmenuopt{Toggle Full Screen Mode} \hspace{3cm}\>
-\dropmenucheck{View} \\
-\mainmenuopt{Tile scale slider} \hspace{3cm}\>
-\dropmenucheck{View} \\
-\mainmenuopt{Live GPS tracking} \hspace{3cm}\>
-\dropmenucheck{View} \\
-\end{tabbing}
+.. note::
+	**Note:** |nix| The Menu Bar items listed above are the default ones in KDE window
+	manager. In GNOME, Settings menu is missing and its items are to be found
+	there:
 
-%See Appendix \ref{app_menu} for complete descriptions of the menu items.
++-----------------------------------------------------------+------------------------+
+| |mActionProjectProperties| :guilabel:`Project Properties` | :guilabel:`File menu`  |
++-----------------------------------------------------------+------------------------+
+| |mActionOptions| :guilabel:`Options`                      | :guilabel:`Edit`       |
++-----------------------------------------------------------+------------------------+
+| |mActionOptions| :guilabel:`Configure Shortcuts`          | :guilabel:`Edit`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Style Manager`                                 | :guilabel:`Edit`       |
++-----------------------------------------------------------+------------------------+
+| |mActionCustomProjection| :guilabel:`Custom CRS`          | :guilabel:`Edit`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Panels`                                        | :guilabel:`View`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Toolbars`                                      | :guilabel:`View`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Toggle Full Screen Mode`                       | :guilabel:`View`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Tile scale slider`                             | :guilabel:`View`       |
++-----------------------------------------------------------+------------------------+
+| :guilabel:`Live GPS tracking`	                            | :guilabel:`View`       |
++-----------------------------------------------------------+------------------------+
 
-Toolbars}\label{label_toolbars
-******************************
 
-:index:`toolbars`
+.. See Appendix \ref{app_menu} for complete descriptions of the menu items.
+
+.. `label_toolbars`:
+
+Toolbars
+*********
+
+.. index::`toolbars`
 
 The toolbars provide access to most of the same functions as the menus,
 plus additional tools for interacting with the map. Each toolbar item has
@@ -610,89 +546,88 @@ Every menubar can be moved around according to your needs. Additionally every
 menubar can be switched off using your right mouse button context menu holding
 the mouse over the toolbars.
 
-\begin{Tip}
-\caption{\textsc{Restoring toolbars}} :index:`layout!toolbars`
-If you have accidentally hidden all your toolbars, you can get them
-back by choosing menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
-\end{Tip}
+.. index::`layout!toolbars`
 
-Map Legend}\label{label_legend
-******************************
+.. note::
+	**Restoring toolbars** 
+	If you have accidentally hidden all your toolbars, you can get them
+	back by choosing menu option :menuselection:`Settings --> Toolbars`.
 
-:index:`legend`
+.. `label_legend`:
+
+Map Legend
+**********
+
+.. index::`legend`
 
 The map legend area lists all the layers in the project.
-The checkbox in each legend entry can be used to show or hide the layer.:index:`layer!visibility`
+The checkbox in each legend entry can be used to show or hide the layer 
+.. index::`layer!visibility`
 A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
 
 Layers in the legend window can be organised into groups. To do so, right click
-in the legend window and choose \dropmenuopt{Add group}. Type in a name for the
-group and press \keystroke{Enter}. Now click on an existing layer and drag it
+in the legend window and choose :guilabel:`Add group`. Type in a name for the
+group and press :kbd:`Enter`. Now click on an existing layer and drag it
 onto the group. Also, if new layers are added to the project while a group is
 selected, they will automatically be placed in the group.
+
 To bring a layer out of a group you can drag it out, or right click on it and 
-choose \dropmenuopt{Make to toplevel item}.
+choose :guilabel:`Make to toplevel item`.
 Groups can be nested inside other groups.
+
 The checkbox for a group will show or hide all the layers in the group
 with one click.
 
 The content of the right mouse button context menu depends on whether the selected legend item
-is a raster or a vector layer. For GRASS vector layers \dropmenuopt{toggle editing} is not
-available. See section \ref{grass_digitising} for information on editing GRASS vector layers.
+is a raster or a vector layer. For GRASS vector layers :guilabel:`toggle editing` is not
+available. See section `grass_digitising`_ for information on editing GRASS vector layers.
 
+* **Right mouse button menu for raster layers**
 
+  *  \dropmenuopt{Zoom to layer extent}
+  *  \dropmenuopt{Zoom to best scale (100\%)}
+  *  \dropmenuopt{Show in overview}
+  *  \dropmenuopt{Remove}
+  *  \dropmenuopt{Properties}
+  *  \dropmenuopt{Rename}
+  *  \dropmenuopt{Add Group}
+  *  \dropmenuopt{Expand all}
+  *  \dropmenuopt{Collapse all}
 
+.. *  \dropmenuopt{Show file groups}
 
-*  **Right mouse button menu for raster layers**
+* **Right mouse button menu for vector layers**
 
+  *  \dropmenuopt{Zoom to layer extent}
+  *  \dropmenuopt{Show in overview}
+  *  \dropmenuopt{Remove}
+  *  \dropmenuopt{Open attribute table}
+  *  \dropmenuopt{Toggle editing (not available for GRASS layers)}
+  *  \dropmenuopt{Save as}
+  *  \dropmenuopt{Save selection as}
+  *  \dropmenuopt{Query}
+  *  \dropmenuopt{Properties}
+  *  \dropmenuopt{Rename}
+  *  \dropmenuopt{Add Group}
+  *  \dropmenuopt{Expand all}
+  *  \dropmenuopt{Collapse all}
 
-*  \dropmenuopt{Zoom to layer extent}
-*  \dropmenuopt{Zoom to best scale (100\%)}
-*  \dropmenuopt{Show in overview}
-*  \dropmenuopt{Remove}
-*  \dropmenuopt{Properties}
-*  \dropmenuopt{Rename}
-*  \dropmenuopt{Add Group}
-*  \dropmenuopt{Expand all}
-*  \dropmenuopt{Collapse all}
-%%*  \dropmenuopt{Show file groups}
+.. *  \dropmenuopt{Make to toplevel item}
+.. *  \dropmenuopt{Show file groups}
 
+* **Right mouse button menu for layer groups**
 
+  *  \dropmenuopt{Zoom to group}
+  *  \dropmenuopt{Remove}
+  *  \dropmenuopt{Set group CRS}
+  *  \dropmenuopt{Rename}
+  *  \dropmenuopt{Add Group}
+  *  \dropmenuopt{Expand all}
+  *  \dropmenuopt{Collapse all}
 
-\item **Right mouse button menu for vector layers**
-
-
-*  \dropmenuopt{Zoom to layer extent}
-*  \dropmenuopt{Show in overview}
-*  \dropmenuopt{Remove}
-*  \dropmenuopt{Open attribute table}
-*  \dropmenuopt{Toggle editing (not available for GRASS layers)}
-*  \dropmenuopt{Save as}
-*  \dropmenuopt{Save selection as}
-*  \dropmenuopt{Query}
-*  \dropmenuopt{Properties}
-%% *  \dropmenuopt{Make to toplevel item}
-*  \dropmenuopt{Rename}
-*  \dropmenuopt{Add Group}
-*  \dropmenuopt{Expand all}
-*  \dropmenuopt{Collapse all}
-%%*  \dropmenuopt{Show file groups}
-
-
-
-\item **Right mouse button menu for layer groups**
-
-
-*  \dropmenuopt{Zoom to group}
-*  \dropmenuopt{Remove}
-*  \dropmenuopt{Set group CRS}
-*  \dropmenuopt{Rename}
-*  \dropmenuopt{Add Group}
-*  \dropmenuopt{Expand all}
-*  \dropmenuopt{Collapse all}
-%%*  \dropmenuopt{Show file groups}
+.. *  \dropmenuopt{Show file groups}
 
 
 
@@ -724,7 +659,7 @@ This way all selected Layers or Groups will be removed from the Layerlist.
 Map View}\label{label_mapview
 *****************************
 
-:index:`map!view`
+.. index::`map!view`
 
 This is the 'business end' of QGIS - maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
@@ -736,7 +671,8 @@ view and the legend are tightly bound to each other - the maps in view reflect
 changes you make in the legend area.
 
 \begin{Tip}\caption{\textsc{Zooming the Map with the Mouse
-Wheel}}:index:`zoom!mouse wheel`
+Wheel}}
+.. index::`zoom!mouse wheel`
 You can use the mouse wheel to zoom in and out on the map. Place
 the mouse cursor inside the map area and roll the wheel forward (away from you) to
 zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
@@ -746,7 +682,8 @@ wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} \arrow
 \end{Tip}
 
 \begin{Tip}\caption{\textsc{Panning the Map with the Arrow Keys and Space
-Bar}}:index:`pan!arrow keys`
+Bar}}
+.. index::`pan!arrow keys`
 You can use the arrow keys to pan in the map. Place the mouse cursor
 inside the map area and click on the right arrow key to pan East, left arrow
 key to pan West, up arrow key to pan North and down arrow key to pan South.
@@ -757,7 +694,7 @@ holding down space bar.
 Map Overview}\label{label_mapoverview
 *************************************
 
-:index:`map!overview`
+.. index::`map!overview`
 
 The map overview panel provides a full extent view of layers added to it. It
 can be selected under the menu \mainmenuopt{Settings} \arrow \dropmenuopt{Panels}.
@@ -799,7 +736,8 @@ At the far right of the status bar you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection properties 
 for the current project.
 
-\begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}:index:`scale!calculate`
+\begin{Tip}\caption{\textsc{Calculating the correct Scale of your Map Canvas}}
+.. index::`scale!calculate`
 When you start QGIS, degrees is the default unit, and it tells QGIS
 that any coordinate in your layer is in degrees. To get correct scale values,
 you can either change this to meter manually in the \tab{General} tab under
@@ -813,7 +751,7 @@ units are set to what the project projection specifies, e.g. '+units=m'.
 Keyboard shortcuts}\label{shortcuts
 ***********************************
 
-:index:`Keyboard shortcuts`
+.. index::`Keyboard shortcuts`
 
 QGIS provides default keyboard shortcuts for many features. You find them in
 Section \ref{label_menubar} below. Additionally the menu option \mainmenuopt{Settings} \arrow
@@ -834,7 +772,7 @@ QGIS installation.
 Context help}\label{context_help
 ********************************
 
-:index:`Context help`
+.. index::`Context help`
 
 When you need help on a specific topic, you can access context help via the \button{Help}
 button available in most dialogs - please note that third-party plugins can point to
@@ -842,26 +780,23 @@ dedicated web pages.
 
 Rendering}\label{subsec:redraw_events
 =====================================
-:index:`rendering`
+.. index::`rendering`
 
 By default, QGIS renders all visible layers whenever the map canvas must be
 refreshed. The events that trigger a refresh of the map canvas include:
-
-
 
 *  Adding a layer
 *  Panning or zooming
 *  Resizing the QGIS window
 *  Changing the visibility of a layer or layers
 
-
-
 QGIS allows you to control the rendering process in a number of ways.
 
 Scale Dependent Rendering
 *************************
-:index:`rendering!scale dependent`
-\label{label_scaledepend}
+.. index::`rendering!scale dependent`
+
+.. `label_scaledepend`:
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
@@ -870,7 +805,9 @@ legend. On the \tab{General} tab, set the minimum and maximum scale values and t
 click on the \checkbox{Use scale dependent rendering} checkbox.
 
 You can determine the scale values by first zooming to the level you want
-to use and noting the scale value in the QGIS status bar.:index:`scale`
+to use and noting the scale value in the QGIS status bar.
+
+.. index::`scale`
 
 Controlling Map Rendering}\label{label_controlmap
 *************************************************

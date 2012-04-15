@@ -19,10 +19,10 @@ chapter introduction
 .. \input{grass_integration}
 .. \input{print_composer}
 .. \input{plugins}
-.. \input{core_plugins}
-.. \input{plugins_coordinate_capture}
-.. \input{plugins_decorations}
-.. \input{plugins_delimited_text}
+.. \input{plugins/core_plugins} .. RMR
+.. \input{plugins/plugins_coordinate_capture}
+.. \input{plugins/plugins_decorations}
+.. \input{plugins/plugins_delimited_text}
 .. \input{plugins_dxf2shape_converter}
 .. \input{plugins_evis}
 .. \input{plugins_ftools}
@@ -38,7 +38,7 @@ chapter introduction
 .. \input{plugins_road_graph}
 .. \input{plugins_spatial_query}
 .. \input{plugins_sql_anywhere}
-.. \input{help_and_support}
+.. \input{help_and_support} .. RMR
 .. 
 .. \input{appendices/gpl}
 .. \input{appendices/qgis_qt_gpl_exception}
