@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line.
 SPHINXOPTS    =
-SPHINXBUILD   = sphinx-build
+SPHINXBUILD   = ./buildout/bin/sphinx-build
 PAPER         =
 BUILDDIR      = build
 
@@ -34,6 +34,11 @@ html:
 	$(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+pdf:	
+	$(SPHINXBUILD) -b pdf -a $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
+	@echo
+	@echo "Build finished. The PDf pages are in $(BUILDDIR)/pdf."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
