@@ -37,6 +37,7 @@ readme:
 	@echo "Build finished. The PDF file is in $(BUILDDIR)/pdf."
 
 html:
+    # build html
 	$(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
