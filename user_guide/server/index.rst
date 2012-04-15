@@ -69,12 +69,11 @@ in section \ref{sec:ogc-wms-servers}.
 
 .. _`fig_startup`:
 
-.. figure:: img/en/standard_wms_usa.png
+.. figure:: _img/en/standard_wms_usa.png
    :align: center
    :width: 9 em
 
-   Standard WMS with USA boundaries included in the qgis server \nixcaption
-
+   Standard WMS with USA boundaries included in the qgis server (KDE)
 
 Creating a WMS from a QGIS project
 ==================================
