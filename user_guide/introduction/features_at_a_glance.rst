@@ -1,5 +1,5 @@
 
-.. feature_glance:
+.. _`feature_glance`:
 
 =====================
 Features at a Glance
@@ -10,12 +10,12 @@ Features at a Glance
 .. comment out the following line:
 .. \updatedisclaimer
 
-After a first and simple sample session in Section `label_getstarted`_ we now
+After a first and simple sample session in Section `label.getstarted`_ we now
 want to give you a more detailed overview of the features of QGIS.
 Most features presented in the following chapters will be explained and described in
 their own sections later in the manual.
 
-.. label_startingqgis:
+.. _`label_startingqgis`:
 
 Starting and Stopping QGIS
 ===========================
@@ -35,7 +35,7 @@ repeat this here and you will see that QGIS also provides further command line o
 To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit`,
 or use the shortcut :kbd:`Ctrl+Q`.
 
-.. label_commandline:
+.. _`label_commandline`:
 
 Command Line Options
 ********************

@@ -2,7 +2,7 @@
 .. comment out the following line:
 .. \updatedisclaimer
 
-.. label_getstarted:
+.. _`label.getstarted`:
 
 ================
 Getting Started
@@ -12,7 +12,7 @@ This chapter gives a quick overview of installing |qg|, some sample
 data from the |qg| web page and running a first and simple session 
 visualizing raster and vector layers.
 
-.. label_installation:
+.. _`label_installation`:
 
 Installation
 =============
@@ -40,7 +40,7 @@ QGIS allows to define a ``--configpath`` option that overrides the default path
 this directory, too. This allows users to e.g. carry a QGIS installation on a 
 flash drive together with all plugins and settings. 
 
-.. label_sampledata:
+.. _label_sampledata:
 
 Sample Data
 ============
@@ -97,7 +97,7 @@ If you intend to use |qg| as graphical frontend for GRASS, you can find a
 selection of sample locations (e.g. Spearfish or South Dakota) at the
 official GRASS GIS website http://grass.osgeo.org/download/data.php.
 
-.. samplesession:
+.. _samplesession:
 
 Sample Session
 ===============
@@ -117,7 +117,7 @@ start |qg|
   or double click on a |qg| project file.
 * |osx| Double click the icon in your Applications folder.
 
-.. `fig_simple_session`:
+.. _`fig_simple_session`:
 
 .. figure::_static/simple_session.png
    :align: center
