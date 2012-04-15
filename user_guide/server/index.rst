@@ -71,9 +71,12 @@ in section \ref{sec:ogc-wms-servers}.
 
 .. figure:: img/en/standard_wms_usa.png
    :align: center
-   :width: 15 cm
+   :width: 40 em
 
    Standard WMS with USA boundaries included in the qgis server (KDE)
+
+
+.. _`sec_ogc_wms_servers`:
 
 Creating a WMS from a QGIS project
 ==================================
@@ -83,35 +86,36 @@ data. Here we use the 'regions' and the 'aiport' shapefiles from the
 qgis_sample_dataset. 
 
 First load the shapefiles and define the colors and styles of the layers in 
-QGIS and define the project CRS, if not already done. In a next step open the 
-\tab{WMS Server} tab under \mainmenuopt{Settings} \arrow \mainmenuopt{Project 
-Properties} and define the fields 'Service Capabilities', 'Coordinate System 
-Restrictions' and 'Advertised Extend'. Additionally you can enable the checkbox 
+QGIS and define the project CRS, if not already done. In a next step define the 
+fields 'Service Capabilities', 'Coordinate System Restrictions' and 'Advertised 
+Extend' under :menuselection:`Settings ==> Project Properties ==> WMS Server` 
+and define the fields 'Service Capabilities', 'Coordinate System Restrictions' 
+and 'Advertised Extend'. Additionally you can enable the checkbox 
 \checkbox{Add WKT geometry to feature into response} to make the layers 
-queryable (see figure \ref{fig:wmsdefinition}). Now save the session in a 
+queryable (see figure `fig:wms_server_definition`_). Now save the session in a 
 project file 'alaska\_airports.qgs'. 
 
-\begin{figure}[ht]
-\centering
-\includegraphics[clip=true, width=9cm]{wms_server_definition}
-\caption{Definitions for a qgis project WMS server \nixcaption}
-\label{fig:wmsdefinition}
-\end{figure}
+.. _`fig_wms_server_definition`:
+
+.. figure:: img/en/wms_server_definition.png
+   :align: center
+   :width: 40 em
+
+   Definitions for a qgis project WMS server (KDE)
 
 To provide the project as a WMS, we create a new folder '/usr/lib/cgi-bin/project' 
 with admin privileges and add the project file 'alaska\_airports.qgs' and a copy 
 of the qgis\_mapserv.fcgi file - that's all.
 
 Now we test our project WMS, add the WMS with the URL 
-http://localhost/cgi-bin/project/qgis\_mapserv.fcgi as described in section 
-\ref{sec:ogc-wms-servers} to QGIS and load the WMS, see figure 
-\ref{fig:wmsproject}.
+'http://localhost/cgi-bin/project/qgis_mapserv.fcgi' as described in section 
+`sec_ogc_wms_servers`_ to QGIS and load the WMS, see figure `fig_wmsproject`_
 
-\begin{figure}[ht]
-\centering
-\includegraphics[clip=true, width=\textwidth]{wms_server_project}
-\caption{QGIS WMS Server based on a qgis project \nixcaption}
-\label{fig:wmsproject}
-\end{figure}
+.. _`fig_wmsproject`:
 
-\FloatBarrier
+.. figure:: img/en/wms_server_project.png
+   :align: center
+   :width: 40 em
+
+   QGIS WMS Server based on a qgis project (KDE)
+

@@ -63,6 +63,17 @@ Inline tags
   	
   	``label``
 
+Footnotes
+=========
+
+This is for creating a footnote::
+	
+	blabla [1]_
+	
+Whichi will point to :
+
+	.. [1] Updates of core plugins
+
 
 Label/reference
 ================
