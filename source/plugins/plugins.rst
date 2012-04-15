@@ -23,9 +23,10 @@ More information about external plugins are provided in Section.
 \ref{sec:load_external_plugin
 
 
-Managing Plugins\label{sec:managing_plugins
-============================================
+Managing Plugins
+================
 
+\label{sec:managing_plugins
 :index:`plugins!managing`
 
 Managing plugins in general means loading or unloading them using
@@ -42,20 +43,15 @@ Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --
 
 :index:`plugins!manager`
 
-.. `fig_simple_session`:
-
-.. figure::_static/simple_session.png
+.. figure::_images/en/plugins/pluginmanager.png
    :align: center
-
-   \centering
-   \includegraphics[clip=true, width=12cm]{pluginmanager
-   \caption{Plugin Manager \nixcaption\label{fig:pluginmanager\smallskip
+   :width: 12px
 
 
-The :file:`Plugin Manager lists all the available plugins and their
+The :file:`Plugin Manager` lists all the available plugins and their
 status (loaded or unloaded), including all core plugins and all external
 plugins that have been installed and automatically activated using the
-:file:`Python Plugin Installer (see Section \ref{sec:external_plugins).
+:file:`Python Plugin Installer` (see Section \ref{sec:external_plugins).
 Those plugins that are already loaded have a check mark to the left of
 their name. Figure \ref{fig:pluginmanager shows the Plugin Manager dialog.
 
@@ -64,7 +60,8 @@ plugin name, and click \button{OK. When you exit the application, a list
 of loaded plugins is retained, and the next time you run QGIS these
 plugins are automatically loaded.
 
-\begin{Tip\caption{\textsc{Crashing Plugins:index:`crashes`
+\begin{Tip\caption{\textsc{Crashing Plugins 
+:index:`crashes`
 If you find that QGIS crashes on startup, a plugin may be at fault.
 You can stop all plugins from loading by editing your stored settings file
 (see \ref{subsec:gui_options for location). Locate the plugins settings and
@@ -86,7 +83,7 @@ Loading an external QGIS Plugin
 External QGIS plugins are written in Python. They are by default stored in either 
 the 'Official' or 'User contributed' QGIS Repositories, or in various other external
 repositories maintained by individual authors. These lists are available 
-automatically from the :file:`Python Plugin installer via \\
+automatically from the :file:`Python Plugin installer` via \\
 \dropmenuopttwo{plugin_installer{Fetch Python Plugins....
 
 Detailed documentation about the usage, minimum QGIS version, homepage, authors,
