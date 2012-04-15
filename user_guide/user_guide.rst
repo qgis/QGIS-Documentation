@@ -4,21 +4,22 @@ Welcome to QGIS manual
 =======================
 
 .. toctree::
-    :maxdepth: 2
+	:maxdepth: 2
 
-    preamble
-    foreword
-    conventions
-    introduction/index
-    server/index
+	preamble
+	foreword
+	conventions
+	introduction/index
+	server/index
 
 ..  working/working_with_projections
 ..  working/working_with_vector
 ..  working/working_with_raster
 ..  working/working_with_ogc
 ..  server/index
-.. print_composer
-.. plugins/index
+..  print_composer
+	plugins/index
+	plugins/plugins
 .. plugins/core_plugins .. RMR
 
 .. plugins/coordinate_capture/index

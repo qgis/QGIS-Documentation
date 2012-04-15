@@ -15,6 +15,7 @@ or **external plugins**.
 Team and are automatically part of every QGIS distribution.
 They are written in one of two languages: C++ or Python.
 More information about core plugins are provided in Section :ref:`core_plugins`
+
 *  **External Plugins** are currently all written in Python.
 They are stored in external repositories and maintained by the individual authors.
 They can be added to QGIS using the :file:`Python Plugin Installer`.
@@ -43,7 +44,7 @@ Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --
 
 .. figure::img/en/plugins/pluginmanager.png
    :align: center
-   :width: 12px
+   :width: 12em
 
 
 The :file:`Plugin Manager` lists all the available plugins and their
@@ -58,20 +59,17 @@ plugin name, and click :guilabel:`OK`. When you exit the application, a list
 of loaded plugins is retained, and the next time you run QGIS these
 plugins are automatically loaded.
 
-\begin{Tip\caption{\textsc{Crashing Plugins 
 :index:`crashes`
-If you find that QGIS crashes on startup, a plugin may be at fault.
-You can stop all plugins from loading by editing your stored settings file
-(see \ref{subsec:gui_options for location). Locate the plugins settings and
-change all the plugin values to false to prevent them from loading.
-|nix| {For example, to prevent the Delimited text plugin from loading, the
-entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this:
-\usertext{Add Delimited Text Layer=false.
-\normalfont
-Do this for each plugin in the [Plugins] section. You can then start QGIS
-and add the plugins one at a time from the :file:`Plugin Manager to
-determine which plugin is causing the problem.
-\end{Tip
+
+.. note:: 
+	**Crashing Plugins**
+	
+	If you find that QGIS crashes on startup, a plugin may be at fault.
+	You can stop all plugins from loading by editing your stored settings file (see :ref:`gui_options` for location). Locate the plugins settings and change all the plugin values to false to prevent them from loading.
+	|nix| For example, to prevent the Delimited text plugin from loading, the entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this: ``Add Delimited Text Layer=false``. 
+	
+	Do this for each plugin in the [Plugins] section. You can then start QGIS and add the plugins one at a time from the :file:`Plugin Manager to determine which plugin is causing the problem.
+
 
 Loading an external QGIS Plugin
 *******************************
@@ -86,12 +84,6 @@ automatically from the :file:`Python Plugin installer` via :menuselection:`Fetch
 Detailed documentation about the usage, minimum QGIS version, homepage, authors,
 and other important information are provided with the external plugins themselves
 and is not included in this manual [1]_ [2]_. 
-
-
-.. [1] Updates of core plugins may be available in this repository as external overlays.
-.. [2] fTools, Mapserver Export, and the Plugin Installer are Python plugins, but they are also part of 
-the QGIS sources, and are automatically loaded and enabled inside the QGIS Plugin Manager 
-(see Section :ref:`load_external_plugin`).
 
 Currently (at the time of testing version 1.8 of QGIS) there are over 90 external 
 plugins available from thirteen listed repositories. Some of these plugins offer
@@ -119,7 +111,7 @@ There is only one step required to integrate external plugins into QGIS:
 
 
 *  Download an external plugin from a repository using the
-:file:`Python Plugin Installer (Section `python_plugin_installer`_).
+:file:`Python Plugin Installer (Section `python_plugin_installer`).
 The new external plugin will be added to the list of available plugins in
 the :file:`Plugin Manager` and is automatically loaded.
 
@@ -147,7 +139,7 @@ available in remote repositories. Each plugin can be either:
 
 *  **not installed** - this means the plugin is available in the repository, but is not installed yet. In order to install it, select the plugin from the list and click the button :guilabel:`Install plugin`.
 *  **new** - this means that the plugin is newly available in the repository.
-*  **installed** - this indicates that the plugin is already installed. If it is also available in any repository the :guilabel:`Reinstall plugin` button will be enabled. If the available version is older than the installed version, the :guilabel:`Downgrade plugin ` button will appear instead.
+*  **installed** - this indicates that the plugin is already installed. If it is also available in any repository the :guilabel:`Reinstall plugin` button will be enabled. If the available version is older than the installed version, the :guilabel:`Downgrade plugin` button will appear instead.
 *  **upgradeable** - this means that the plugin is installed, but there is an updated version available. In this case, the :guilabel:`Upgrade plugin` and :guilabel:`Upgrade all` buttons will be enabled.
 *  **invalid** - this means that the plugin is installed, but is unavailable or broken. The reason will be explained in the plugin description field.
 
@@ -156,7 +148,7 @@ Plugins tab
 ~~~~~~~~~~~
 
 
-To install a plugin, select it from the list and click the :guilabel:`Install plugin
+To install a plugin, select it from the list and click the :guilabel:`Install plugin`
 button. The plugin is then activated and installed in its own directory.
 
 
@@ -167,10 +159,8 @@ button. The plugin is then activated and installed in its own directory.
 	./Contents/MacOS/share/qgis/python/plugins
 	/Users/\$USERNAME/.qgis/python/plugins
 *  |win| Windows: ::
-	C:\textbackslash Program Files\textbackslash QGIS\textbackslash
-	python\textbackslash plugins
-	C:\textbackslash Documents and Settings\textbackslash\$USERNAME\textbackslash
-	.qgis\textbackslash python\textbackslash plugins
+	C:\text\Program Files\QGIS\python\plugins
+	C:\text\Documents and Settings\$USERNAME\.qgis\python\plugins
 
 
 If the installation is successful, a confirmation message will appear.
@@ -206,7 +196,7 @@ Options tab
 ~~~~~~~~~~~
 
 
-The \tab{Options tab is where you can configure the settings of the :file:`Plugin Installer`. The |checkbox| Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer is manually launched from the menu.
+The :guilabel:`Options` tab is where you can configure the settings of the :file:`Plugin Installer`. The |checkbox| Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer` is manually launched from the menu.
 
 Although the plugin installer update can handle ports different from 80, some internet
 connections will cause problems when attempting to automatically check for updates.
@@ -214,18 +204,16 @@ In these cases, a *Looking for new plugins...* indicator will
 remain visible in the Status Bar during your entire QGIS session, and may cause a
 program crash when exiting. In this case please disable the checkbox.
 
-In addition, you may specify the type of plugins that are displayed by the :file:`Python Plugin Installer. Under *Allowed plugins*, you can specify whether you would like to:
+In addition, you may specify the type of plugins that are displayed by the :file:`Python Plugin Installer`. Under *Allowed plugins*, you can specify whether you would like to:
 
 
 *  Only show plugins from the official repository,
 *  Show all plugins except those marked as experimental,
 *  or Show all plugins, even those marked as experimental.
 
-
-\begin{Tip
- \caption{\textsc{Using experimental plugins
-Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for
-\end{Tip
+.. note:: 
+	**Using experimental plugins**
+	Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for testing purposes.
 
 Data Providers
 ==============
@@ -237,3 +225,8 @@ A Data Provider plugin extends the ability of QGIS to use other data sources.
 
 Data Provider plugins are registered automatically by QGIS at startup.
 They are not managed by the Plugin Manager but used behind the scenes when a data type is added as a layer in QGIS.
+
+.. [1] Updates of core plugins may be available in this repository as external overlays.
+.. [2] fTools, Mapserver Export, and the Plugin Installer are Python plugins, but they are also part of 
+the QGIS sources, and are automatically loaded and enabled inside the QGIS Plugin Manager 
+(see Section :ref:`load_external_plugin`).
