@@ -20,6 +20,7 @@ import os
 import re
 from optparse import OptionParser
 
+supplement = {"footnote": [], }
 def repl1(obj):
     eq = obj.group(1)
     eq = eq.replace("\n", " ")
@@ -31,7 +32,8 @@ def item(obj):
     return l
 def footnote(obj):
     note = obj.group(1)
-    supplement["footnote"] += [note]
+    note.replace('\n', ' ')
+    supplement["footnote"] += ['.. [#] ' + note]
     return '[#]_'
 def enum(obj):
     en = obj.group(1)
@@ -84,9 +86,22 @@ def main():
     simple_substitutions = [
             # general substitutions:
             {
-                r"\\textit{(.*)}": r"*\1*",
-                r"\\textbf{(.*)}": r"**\1**",
-                r"\\texttt{(.*)}": r"``\1``",
+                r" +\n": r"\n",
+            },
+            {
+                r"([a-zA-Z0-9,;:\)])\n([a-zA-Z0-9\*])": r"\1 \2",
+            },
+            {
+                r"\\textit{(.*?)}": r"*\1*",
+                r"\\textbf{(.*?)}": r"**\1**",
+                r"\\texttt{(.*?)}": r"``\1``",
+                r"\\url{(.*?)}": r"\1",
+                r"\A%": r".. ",
+                r"\n%": r"\n.. ",
+                r"(\\label{.*?):(.*?})": r"\1_\2",
+            },
+            {
+                r"\\label{(.*?)}": r"`\1`:",
             },
 
             # custom substitutions (you might add your own here):
@@ -95,23 +110,25 @@ def main():
                 r"\\def\\ee\{.*\}": r"",
             },
             {
-                r"(?<!\\def)\\be(?=[^\w])": r"\\begin{equation}",
-                r"(?<!\\def)\\ee(?=[^\w])": r"\\end{equation}",
-                r"(?<!\\def)\\ba(?=[^\w])": r"\\begin{array}",
-                r"(?<!\\def)\\ea(?=[^\w])": r"\\end{array}",
-                r"(?ms)\\left\((\\mat{.+?})\\right\)": r"\1",
-                r"\(\\ref{(.+?)}\)": r":eq:`\1`",
+                #r"(?<!\\def)\\be(?=[^\w])": r"\\begin{equation}",
+                #r"(?<!\\def)\\ee(?=[^\w])": r"\\end{equation}",
+                #r"(?<!\\def)\\ba(?=[^\w])": r"\\begin{array}",
+                #r"(?<!\\def)\\ea(?=[^\w])": r"\\end{array}",
+                #r"(?ms)\\left\((\\mat{.+?})\\right\)": r"\1",
+                #r"\(\\ref{(.+?)}\)": r":eq:`\1`",
                 r"\\qg":r"|qg|",
-                r"\\nix{(.*)}":r"|nix| \1",
-                r"\\win{(.*)}":r"|win| \1",
-                r"\\osx{(.*)}":r"|osx| \1",
-                r"(\\cite)":r"FIXME\1",
-                r"\\index{(.*)}":r":index:`\1`",
+                r"\\nix{(.*?)}":r"|nix| \1",
+                r"\\win{(.*?)}":r"|win| \1",
+                r"\\osx{(.*?)}":r"|osx| \1",
+                r"(\\cite{(.*?)})":r"[\2]_",
+                r"\\index{(.*?)}":r":index:`\1`",
+                r"\\keyboard{(.*?)}":r":kbd:`\1`",
+                r"\\dialog{(.*?)}":r":guilabel:`\1`",
+                r"\\toolbtntwo{(.*?)}{(.*?)}":r"|\1| :guilabel:`\2`",
             },
         ]
     filename = args[0]
     s = open(filename).read()
-    supplement = {"footnote": [], }
     # apply the simple substitutions
     for stage in simple_substitutions:
         for pattern in stage:
@@ -130,16 +147,17 @@ def main():
     s = re.sub(r"(\\end{itemize})", "\n", s)
     s = re.sub(r"(\\begin{enumerate})", "\n", s)
     s = re.sub(r"(\\end{enumerate})", "\n", s)
-    s = re.sub(r"\\footnote{(.*)}", footnote, s)
+    s = re.sub(r"(?ms)\\footnote{(.*?)}", footnote, s)
+    s = re.sub(r"(?ms)\\begin{verbatim}(.+?)\\end{verbatim}", verbatim, s)
     # convert titles:
-    s = re.sub(r"\\chapter{(.+)}", repl_chapter, s)
-    s = re.sub(r"\\section\*?{(.+)}", repl_section, s)
-    s = re.sub(r"\\subsection\*?{(.+)}", repl_subsection, s)
-    s = re.sub(r"\\subsubsection\*?{(.+)}", repl_subsubsection, s)
-    s = re.sub(r"\\minisec\*?{(.+)}", repl_minisec, s)
+    s = re.sub(r"\\chapter{(.+?)}", repl_chapter, s)
+    s = re.sub(r"\\section\*?{(.+?)}", repl_section, s)
+    s = re.sub(r"\\subsection\*?{(.+?)}", repl_subsection, s)
+    s = re.sub(r"\\subsubsection\*?{(.+?)}", repl_subsubsection, s)
+    s = re.sub(r"\\minisec\*?{(.+?)}", repl_minisec, s)
 
     # add supplement:
-    s += '\n\n'.join(['\n'.join(supplement[i]) for i in supplement.keys()])
+    s += '\n\n'.join(['\n '.join(supplement[i]) for i in supplement.keys()])
     # either save to a file or dump to stdout:
     if options.save:
         outfile = os.path.splitext(filename)[0] + ".rst"
