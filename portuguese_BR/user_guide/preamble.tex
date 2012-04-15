@@ -1,0 +1,70 @@
+%  !TeX  root  =  user_guide.tex
+\frontmatter
+\pagestyle{scrplain}
+\addchap{Preambulo}
+\vspace{1cm}
+
+% when the revision of a section has been finalized, 
+% comment out the following line:
+%\updatedisclaimer
+
+Este documento é o guia do usuário oficial do Quantum GIS. O software e o hardware descritos neste documento são em muitos casos marcas registradas. Quantum GIS é licenciado pela Licença Pública Geral (GNU). Procure por mais informações na página do Quantum GIS em 
+\url{http://www.qgis.org}.
+\par\bigskip
+Os detalhes, dados, resultados, etc.~apresentados neste documento foram escritos e verificados cuidadosamente pelos autores e editores. No entanto, erros relativos ao conteúdo são possíveis.
+\par\bigskip
+Assim, os dados não são passíveis de quaisquer direitos ou garantias. Os autores e editores não têm qualquer responsabilidade por falhas e suas consequências. Sua opinião é sempre bem-vinda para indicar possíveis erros.
+\par\bigskip
+Este documento foi confeccionado com \LaTeX. Ele está disponível como código fonte \LaTeX~via \href{http://wiki.qgis.org/qgiswiki/DocumentationWritersCorner}{subversion} 
+e online como documento PDF via \href{http://qgisbrasil.wordpress.com/documentacao/}{Comunidade QGISBrasil}. 
+Para mais informações sobre como contribuir com a construção deste e outros documentos, acesse \url{http://www.qgisbrasil.org/}.
+
+\vspace{1cm}
+\noindent
+\textbf{Links neste Documento}
+\par\bigskip
+Este documento contém links internos e externos. Ao clicar em um link interno você irá movimentar-se dentro do documento, ao clicar em um link externo abrirá um endereço de internet via navegador. Links internos em formato PDF são mostrados em azul, enquanto que os links externos são mostrados em vermelho. No formulário HTML, o navegador exibirá e manipulará ambos de forma idêntica.
+
+\newpage
+
+\begin{flushleft}
+\textbf{Editores da versão original deste Guia do usuário, instalação e codificação:}
+  \par\bigskip\noindent
+\begin{tabular}{p{4cm} p{4cm} p{4cm}}
+Tara Athan & Radim Blazek & Godofredo Contreras \\
+Otto Dassau & Martin Dobias & Peter Ersts \\
+Anne Ghisla & Stephan Holl & N. Horning \\
+Magnus Homann & K. Koy & Lars Luthman \\ 
+Werner Macho & Carson J.Q. Farmer & Tyler Mitchell \\
+Claudia A. Engel & Brendan Morely & David Willis \\
+Jürgen E. Fischer & Marco Hugentobler & Gavin Macaulay \\
+Gary E. Sherman & Tim Sutton \\ \
+\end{tabular}
+\end{flushleft}
+
+Um agradecimento a Bertrand Masson pelo leiaute, a Tisham Dhar por preparar o ambiente de documentação msys inicial (MS Windows), a Tom Elwertowski e William Kyngesburye por auxiliar na Seção instalação para MAC OSX e ao Carlos Dávila, Paolo Cavallini e Christian Gunning pelas revisões. Se esquecemos de alguém, por favor, aceitem nossas desculpas por este descuido.
+\par\bigskip\noindent
+
+\begin{flushleft}
+\textbf{Responsáveis pela tradução e conversão da versão original deste guia para o português brasileiro:}
+  \par\bigskip\noindent
+\begin{tabular}{p{4cm} p{4cm} p{4cm}}
+Arthur Nanni & Rodrigo Sperb & Sidney Goveia \\
++++++ & +++++ & +++++ \\ \
+\end{tabular}
+\end{flushleft}
+
+
+\textbf{Copyright \copyright~2004 - 2011 Equipe de desenvolvimento do \QG}
+\par\bigskip\noindent
+\textbf{Internet :}
+\par\bigskip
+Site oficial: \url{http://www.qgis.org}
+\par\bigskip
+Comunidade brasileira: \url{http://www.qgisbrasil.org/}
+
+\addsec{Licença deste documento}
+
+Permissão para copiar, distribuir e/ou modificar este documento sobre os termos da Licença GNU de Documentação Livre, Versão 1.3 ou mais recente publicada pela Free Software Foundation; sem seções invariantes, sem textos de capa frontal e contra-capa. Uma cópia desta licença está inclusa na seção \ref{label_fdl} intitulada "Licença GNU de Documentação Livre".
+
+\newpage

@@ -1,0 +1,121 @@
+%  !TeX  root  =  user_guide.tex 
+\chapter{Supported Data Formats}\label{appdx_data_formats}
+
+% when the revision of a section has been finalized, 
+% comment out the following line:
+% \updatedisclaimer
+
+QGIS uses the GDAL/OGR library to read and write vector and raster data
+formats. Note that not all of the format listed below may work in QGIS for
+various reasons. For example, some require external commercial libraries or
+the GDAL installation of your OS was not build to support the format you want
+to use. Only those formats that have been well tested will appear in the list
+of file types when loading a vector or raster into QGIS. Other untested
+formats can be loaded by selecting *.*. 
+
+\section{OGR Vector Formats}\label{appdx_ogr}
+\index{OGR!supported formats}
+
+At the date of this document, the following formats are supported by the OGR
+library \cite{OGRweb}. A complete is also available at
+\url{http://www.gdal.org/ogr/ogr_formats.html}.
+
+\begin{itemize}
+\item Arc/Info Binary Coverage
+\item Comma Separated Value (.csv) 
+\item DODS/OPeNDAP
+\item ESRI Personal GeoDatabase
+\item ESRI ArcSDE
+\item ESRI Shapefile
+\item FMEObjects Gateway
+\item GeoJSON
+\item Geoconcept Export
+\item GeoRSS
+\item GML
+\item GMT
+\item GPX
+\item GRASS Vector \footnote{GRASS support is supplied by the QGIS
+GRASS data provider plugin}
+\item Informix DataBlade
+\item INTERLIS
+\item IHO S-57 (ENC)
+\item Mapinfo File
+\item Microstation DGN
+\item OGDI Vectors
+\item ODBC
+\item Oracle Spatial
+\item PostgreSQL\footnote{QGIS implements its own PostgreSQL functions. OGR
+should be built without PostgreSQL support}
+\item SDTS
+\item SQLite
+\item UK .NTF
+\item U.S. Census TIGER/Line
+\item VRT - Virtual Datasource
+\item X-Plane/Flighgear aeronautical data
+\end{itemize}
+
+\section{GDAL Raster Formats}\label{appdx_gdal}
+\index{raster layers!supported formats}
+\index{GDAL!supported formats}
+
+At the date of this document, the following formats are supported by the GDAL
+library \cite{GDALweb}. A complete is also available at
+\url{http://www.gdal.org/formats_list.html}.
+ 
+\begin{itemize}
+\item Arc/Info ASCII Grid
+\item ADRG/ARC Digitilized Raster Graphics 
+\item Arc/Info Binary Grid (.adf)
+\item Magellan BLX Topo (.blx, .xlb)
+\item Microsoft Windows Device Independent Bitmap (.bmp)
+\item BSB Nautical Chart Format (.kap)
+\item VTP Binary Terrain Format (.bt)
+\item CEOS (Spot for instance)
+\item First Generation USGS DOQ (.doq)
+\item New Labelled USGS DOQ (.doq)
+\item Military Elevation Data (.dt0, .dt1)
+\item ERMapper Compressed Wavelets (.ecw)
+\item ESRI .hdr Labelled
+\item ENVI .hdr Labelled Raster
+\item Envisat Image Product (.n1)
+\item EOSAT FAST Format
+\item FITS (.fits)
+\item Graphics Interchange Format (.gif)
+\item GMT compatible netCDF
+\item GRASS Rasters \footnote{GRASS support is supplied by the QGIS GRASS data provider plugin} 
+\item Golden Software Binary Grid
+\item TIFF / BigTIFF / GeoTIFF (.tif)
+\item Hierarchical Data Format Release 4 (HDF4)
+\item Hierarchical Data Format Release 5 (HDF5)
+\item ILWIS Raster Map (.mpr,.mpl)
+\item Intergraph Raster
+\item Erdas Imagine (.img)
+\item Atlantis MFF2e
+\item Japanese DEM (.mem)
+\item JPEG JFIF (.jpg)
+\item JPEG2000 (.jp2, .j2k)
+\item NOAA Polar Orbiter Level 1b Data Set (AVHRR)
+\item Erdas 7.x .LAN and .GIS
+\item In Memory Raster
+\item Vexcel MFF
+\item Vexcel MFF2
+\item Atlantis MFF
+\item Multi-resolution Seamless Image Database  MrSID
+\item NITF
+\item NetCDF
+\item OGDI Bridge
+\item Oracle Spatial Georaster
+\item OGC Web Coverage Server
+\item OGC Web Map Server
+\item PCI .aux Labelled
+\item PCI Geomatics Database File
+\item PCRaster 
+\item Portable Network Graphics (.png)
+\item Netpbm (.ppm,.pgm)
+\item USGS SDTS DEM (*CATD.DDF)
+\item SAR CEOS
+\item USGS ASCII DEM (.dem)
+\item X11 Pixmap (.xpm)
+
+\end{itemize}
+\clearpage
