@@ -245,3 +245,6 @@ pdf_stylesheets = ['sphinx','kerning','a4']
 # If false, no coverpage is generated.
 #pdf_use_coverpage = True
 
+locale_dirs = ['translated']
+
+
