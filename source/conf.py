@@ -88,23 +88,23 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 rst_epilog = """
-.. |nix| image:: _static/nix.png
+.. |nix| image:: img/en/nix.png
    :width: 1em
-.. |win| image:: _static/win.png
+.. |win| image:: img/en/win.png
    :width: 1em
-.. |osx| image:: _static/osx.png
+.. |osx| image:: img/en/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |checkbox|  image:: _static/checkbox.png
-.. |radiobuttonon| image:: _static/radiobuttonon.png
-.. |radiobuttonoff| image:: _static/radiobuttonoff.png
-.. |selectnumber| image:: _static/selectnumber.png
-.. |selectstring| image:: _static/selectstring.png
-.. |browsebutton| image:: _static/browsebutton.png
-.. |selectcolor| image:: _static/selectcolor.png
-.. |slider| image:: _static/slider.png
-.. |inputtext| image:: _static/inputtext.png
-.. |tab| image:: _static/tab.png
+.. |checkbox|  image:: img/en/checkbox.png
+.. |radiobuttonon| image:: img/en/radiobuttonon.png
+.. |radiobuttonoff| image:: img/en/radiobuttonoff.png
+.. |selectnumber| image:: img/en/selectnumber.png
+.. |selectstring| image:: img/en/selectstring.png
+.. |browsebutton| image:: img/en/browsebutton.png
+.. |selectcolor| image:: img/en/selectcolor.png
+.. |slider| image:: img/en/slider.png
+.. |inputtext| image:: img/en/inputtext.png
+.. |tab| image:: img/en/tab.png
 """
 
 
@@ -142,7 +142,7 @@ html_theme_path = ['..']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['img']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
