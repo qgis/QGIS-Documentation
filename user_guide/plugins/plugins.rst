@@ -43,7 +43,7 @@ Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --
 
 .. figure::img/en/plugins/pluginmanager.png
    :align: center
-   :width: 12px
+   :width: 12em
 
 
 The :file:`Plugin Manager` lists all the available plugins and their
@@ -58,20 +58,22 @@ plugin name, and click :guilabel:`OK`. When you exit the application, a list
 of loaded plugins is retained, and the next time you run QGIS these
 plugins are automatically loaded.
 
-\begin{Tip\caption{\textsc{Crashing Plugins 
 :index:`crashes`
-If you find that QGIS crashes on startup, a plugin may be at fault.
-You can stop all plugins from loading by editing your stored settings file
-(see \ref{subsec:gui_options for location). Locate the plugins settings and
-change all the plugin values to false to prevent them from loading.
-|nix| {For example, to prevent the Delimited text plugin from loading, the
-entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this:
-\usertext{Add Delimited Text Layer=false.
-\normalfont
-Do this for each plugin in the [Plugins] section. You can then start QGIS
-and add the plugins one at a time from the :file:`Plugin Manager to
-determine which plugin is causing the problem.
-\end{Tip
+.. note:: 
+	**Crashing Plugins 
+	
+	If you find that QGIS crashes on startup, a plugin may be at fault.
+	You can stop all plugins from loading by editing your stored settings file
+	(see :ref:`gui_options` for location). Locate the plugins settings and
+	change all the plugin values to false to prevent them from loading.
+	|nix| For example, to prevent the Delimited text plugin from loading, the
+	entry in \$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this:
+	``Add Delimited Text Layer=false``. 
+	
+	Do this for each plugin in the [Plugins] section. You can then start QGIS
+	and add the plugins one at a time from the :file:`Plugin Manager to
+	determine which plugin is causing the problem.
+
 
 Loading an external QGIS Plugin
 *******************************
@@ -156,7 +158,7 @@ Plugins tab
 ~~~~~~~~~~~
 
 
-To install a plugin, select it from the list and click the :guilabel:`Install plugin
+To install a plugin, select it from the list and click the :guilabel:`Install plugin`
 button. The plugin is then activated and installed in its own directory.
 
 
@@ -206,7 +208,7 @@ Options tab
 ~~~~~~~~~~~
 
 
-The \tab{Options tab is where you can configure the settings of the :file:`Plugin Installer`. The |checkbox| Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer is manually launched from the menu.
+The :guilabel:`Options` tab is where you can configure the settings of the :file:`Plugin Installer`. The |checkbox| Check for updates on startup checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :file:`Plugin Installer` is manually launched from the menu.
 
 Although the plugin installer update can handle ports different from 80, some internet
 connections will cause problems when attempting to automatically check for updates.
@@ -214,18 +216,16 @@ In these cases, a *Looking for new plugins...* indicator will
 remain visible in the Status Bar during your entire QGIS session, and may cause a
 program crash when exiting. In this case please disable the checkbox.
 
-In addition, you may specify the type of plugins that are displayed by the :file:`Python Plugin Installer. Under *Allowed plugins*, you can specify whether you would like to:
+In addition, you may specify the type of plugins that are displayed by the :file:`Python Plugin Installer`. Under *Allowed plugins*, you can specify whether you would like to:
 
 
 *  Only show plugins from the official repository,
 *  Show all plugins except those marked as experimental,
 *  or Show all plugins, even those marked as experimental.
 
-
-\begin{Tip
- \caption{\textsc{Using experimental plugins
-Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for
-\end{Tip
+.. note:: 
+	**Using experimental plugins**
+	Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for testing purposes.
 
 Data Providers
 ==============
