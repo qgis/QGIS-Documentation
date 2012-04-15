@@ -71,9 +71,13 @@ This is for create a reference somewhere::
 	
 	.. _`my_anchor`:
 
-This is call the reference::
+This is call the reference in the **same page**::
 	
 	see section `my_anchor`_ for more information
+
+This is the same thing, but called in another page::
+	
+	see section :ref:`my_anchor` for more information.
 
 .. _`image`:
 
