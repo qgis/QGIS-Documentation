@@ -19,7 +19,7 @@ chapter introduction
 .. grass_integration
 .. print_composer
 .. plugins
-.. plugins/core_plugins
+.. plugins/core_plugins .. RMR
 .. plugins/plugins_coordinate_capture
 .. plugins/plugins_decorations
 .. plugins/plugins_delimited_text
@@ -38,7 +38,7 @@ chapter introduction
 .. plugins/plugins_road_graph
 .. plugins/plugins_spatial_query
 .. plugins/plugins_sql_anywhere
-.. help_and_support
+.. help_and_support .. RMR
 .. 
 .. appendices/gpl
 .. appendices/qgis_qt_gpl_exception
