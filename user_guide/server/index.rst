@@ -69,9 +69,9 @@ in section \ref{sec:ogc-wms-servers}.
 
 .. _`fig_startup`:
 
-.. figure:: _img/en/standard_wms_usa.png
+.. figure:: img/en/standard_wms_usa.png
    :align: center
-   :width: 9 em
+   :width: 15 cm
 
    Standard WMS with USA boundaries included in the qgis server (KDE)
 
