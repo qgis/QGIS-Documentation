@@ -5,7 +5,7 @@ Very basic steps
 --------------------------------------------------------------------------------
 
 * git clone the project
-* add the linfiniti-sphinx-theme git repostiory as a submodule
+* add the linfiniti-sphinx-theme git repository as a submodule
 * build the documentation
 
 Installation
