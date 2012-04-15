@@ -10,6 +10,7 @@ Welcome to QGIS manual
     foreword
     conventions
     introduction/index
+    server/index
 
 ..  working/working_with_projections
 ..  working/working_with_vector
