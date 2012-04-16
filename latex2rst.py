@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 """
+Script based on Fernando Perez's latex2rst.py using the BSD license
+https://github.com/fperez/lacquer/blob/master/lacquer/latex2rst
+
 Convert a latex document to rst.
 
 Usage:
