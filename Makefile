@@ -1,16 +1,21 @@
-# Makefile for Sphinx documentation
-#
+# Makefile for Sphinx QGIS documentation
+# many ideas from the MapServer Makefile script
+# $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/$$lang;
 
 # You can set these variables from the command line.
+BUILDDIR     = build
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         = A4
 BUILDDIR      = build
+TRANSLATIONS  = de fr it
+LANGUAGES     = en $(TRANSLATIONS)
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) user_guide
+#ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) user_guide
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -Dlanguage=$$lang
 
 .PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
 
@@ -37,10 +42,15 @@ readme:
 	@echo "Build finished. The PDF file is in $(BUILDDIR)/pdf."
 
 html:
-    # build html
-	$(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html
+    # original $(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
+		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) user_guide $(BUILDDIR)/html/$$lang";\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) user_guide $(BUILDDIR)/html/$$lang;\
+	done
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";\
 
 pdf:	
 	$(SPHINXBUILD) -b pdf -a $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
