@@ -46,9 +46,15 @@ Then commit the fact that the submodule now tracks a different SHA1::
 Build the documentation
 --------------------------------------------------------------------------------
 
-You can build the html in the following way::
+You can build the html in the following way (this process is for the user 
+guide):
 
-    build html
+* first compile all the messages for getting updated translations in the build::
+
+    make compile_messages SOURCE=user_guide
     
-(TODO)
+* then compile the project::
+    
+    make html
+
 

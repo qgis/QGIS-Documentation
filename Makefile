@@ -1,5 +1,4 @@
 # Makefile for Sphinx QGIS documentation
-# many ideas from the MapServer Makefile script
 # $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/$$lang;
 
 # You can set these variables from the command line.
@@ -10,6 +9,7 @@ PAPER         = A4
 BUILDDIR      = build
 TRANSLATIONS  = de fr it
 LANGUAGES     = en $(TRANSLATIONS)
+SOURCE        = source
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -21,7 +21,7 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOP
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  readme    to make pdf readme file to help writing QGIS docs."
+	@echo "  compile_messages    to compile .po messages in .mo binaries."
 	@echo "  html      to make standalone HTML files"
 	@echo "  dirhtml   to make HTML files named index.html in directories"
 	@echo "  pickle    to make pickle files"
@@ -36,13 +36,19 @@ help:
 clean:
 	-rm -rf $(BUILDDIR)/*
 
-readme:
-	$(SPHINXBUILD) -c readme/ -b pdf -a -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) readme  $(BUILDDIR)/pdf
-	@echo
-	@echo "Build finished. The PDF file is in $(BUILDDIR)/pdf."
+compile_messages:
+	@for lang in $(TRANSLATIONS) ;\
+	do \
+		echo "Compiling messages for $$lang..."; \
+		for f in `find $(SOURCE)/translated/$$lang -name \*.po -printf "%f\n"`; \
+		do \
+			echo "Compiling messages for $$f"; \
+			msgfmt $(SOURCE)/translated/$$lang/$$f -o user_guide/translated/$$lang/LC_MESSAGES/$${f%.*}.mo; \
+		done; \
+	done
+	@echo "Messages compiled. Now you can build updated version for html and pdf.";\
 
 html:
-    # original $(SPHINXBUILD) -b html -a $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@for lang in $(LANGUAGES);\
 	do \
 		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
