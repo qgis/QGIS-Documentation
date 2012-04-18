@@ -51,9 +51,9 @@ compile_messages:
 html:
 	@for lang in $(LANGUAGES);\
 	do \
-		mkdir -p $(BUILDDIR)/html/$$lang $(BUILDDIR)/doctrees/$$lang; \
-		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) user_guide $(BUILDDIR)/html/$$lang";\
-		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) user_guide $(BUILDDIR)/html/$$lang;\
+		mkdir -p $(BUILDDIR)/html/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang; \
+		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$$lang";\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$(SOURCE)/$$lang;\
 	done
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";\
