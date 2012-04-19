@@ -1,12 +1,12 @@
-%  !TeX  root  =  user_guide.tex
+..  !TeX  root  =  user_guide.tex
 
 SQL Anywhere Plugin}\label{sec:sqlanywhere
 ==========================================
 
 
-% when the revision of a section has been finalized, 
-% comment out the following line:
-% \updatedisclaimer
+.. when the revision of a section has been finalized, 
+.. comment out the following line:
+.. \updatedisclaimer
 
 SQL Anywhere is a proprietary relational database management system (RDBMS) 
 from Sybase. SQL Anywhere includes spatial support including OGC, shape files 
