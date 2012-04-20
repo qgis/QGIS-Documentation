@@ -47,6 +47,12 @@ Then commit the fact that the submodule now tracks a different SHA1::
 
    git commit -am "Updates linfiniti theme to latest version"
    
+Now create a virtualenv, source it and install latest version of Sphinx::
+    
+    virtualenv --no-site-packages qgis-doc-env
+    . qgis-doc-env/bin/activate
+    pip install sphinx
+   
 Create the internationalization directory structure
 --------------------------------------------------------------------------------
 
