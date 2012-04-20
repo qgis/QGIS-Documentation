@@ -9,7 +9,7 @@ PAPER         = A4
 BUILDDIR      = build
 TRANSLATIONS  = de fr it
 LANGUAGES     = en $(TRANSLATIONS)
-SOURCE        = user_guide
+SOURCE        = source
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
