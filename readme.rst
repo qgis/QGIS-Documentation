@@ -124,7 +124,12 @@ user guide):
     
 * then compile the project to the desired output. For html::
     
-    make html
+    make html SOURCE=user_guide
+    
+* for pdf::
+    
+    make pdf SOURCE=user_guide
+    
 
 Translators edit workflow
 --------------------------------------------------------------------------------

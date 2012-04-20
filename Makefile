@@ -6,7 +6,6 @@ BUILDDIR     = build
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         = A4
-BUILDDIR      = build
 TRANSLATIONS  = de fr it
 LANGUAGES     = en $(TRANSLATIONS)
 SOURCE        = source
@@ -58,8 +57,13 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";\
 
-pdf:	
-	$(SPHINXBUILD) -b pdf -a $(ALLSPHINXOPTS) $(BUILDDIR)/pdf
+pdf:
+	@for lang in $(LANGUAGES);\
+	do \
+		mkdir -p $(BUILDDIR)/pdf/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang; \
+		echo "$(SPHINXBUILD) -b pdf -a $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/pdf/$(SOURCE)/$$lang";\
+		$(SPHINXBUILD) -b pdf -a $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/pdf/$(SOURCE)/$$lang;\
+	done
 	@echo
 	@echo "Build finished. The PDf pages are in $(BUILDDIR)/pdf."
 
