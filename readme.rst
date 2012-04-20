@@ -70,6 +70,7 @@ is the `ISO language code with 2 digits
 For example, for the Italian version of the User Guide::
 
 	mkdir user_guide/translated/it
+	mkdir user_guide/translated/it/LC_MESSAGES
 	cp user_guide/translated/pot/* user_guide/translated/it/
 	cd user_guide/translated/it/
 	for f in *.pot; do mv $f `basename $f .pot`.po; done;
@@ -132,7 +133,7 @@ Every time a new master document is released, the translators can start
 translating the .po files of competence.
 
 Translators must edit the .po files using the web application, based on Pootle, 
-or an offline editor, with `Virtal 
+or an offline editor, with `Virtaal 
 <http://translate.sourceforge.net/wiki/virtaal/index?redirect=1>`_ being the 
 highly recommended choice.
 

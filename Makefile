@@ -14,7 +14,7 @@ SOURCE        = source
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-#ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) user_guide
+#ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCE)
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -Dlanguage=$$lang
 
 .PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
@@ -43,7 +43,7 @@ compile_messages:
 		for f in `find $(SOURCE)/translated/$$lang -name \*.po -printf "%f\n"`; \
 		do \
 			echo "Compiling messages for $$f"; \
-			msgfmt $(SOURCE)/translated/$$lang/$$f -o user_guide/translated/$$lang/LC_MESSAGES/$${f%.*}.mo; \
+			msgfmt $(SOURCE)/translated/$$lang/$$f -o $(SOURCE)/translated/$$lang/LC_MESSAGES/$${f%.*}.mo; \
 		done; \
 	done
 	@echo "Messages compiled. Now you can build updated version for html and pdf.";\
