@@ -1,0 +1,1593 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Features at a Glance &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" />
+    <link rel="up" title="Introduction" href="index.html" />
+    <link rel="next" title="QGIS Server" href="../server/index.html" />
+    <link rel="prev" title="Getting Started" href="getting_started.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Introduction</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Introduction To GIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Features at a Glance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="getting_started.html"
+                        title="previous chapter">Getting Started</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../server/index.html"
+                        title="next chapter">QGIS Server</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/introduction/features_at_a_glance.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <div class="section" id="features-at-a-glance">
+<span id="feature-glance"></span><h1>Features at a Glance<a class="headerlink" href="#features-at-a-glance" title="Permalink to this headline">¶</a></h1>
+<p>After a first and simple sample session in Section <a class="reference internal" href="getting_started.html#label-getstarted"><em>Getting Started</em></a> we now
+want to give you a more detailed overview of the features of QGIS.
+Most features presented in the following chapters will be explained and described in
+their own sections later in the manual.</p>
+<div class="section" id="starting-and-stopping-qgis">
+<span id="label-startingqgis"></span><h2>Starting and Stopping QGIS<a class="headerlink" href="#starting-and-stopping-qgis" title="Permalink to this headline">¶</a></h2>
+<p>In Section <a class="reference internal" href="getting_started.html#samplesession"><em>Sample Session</em></a> you already learned how to start QGIS. We will
+repeat this here and you will see that QGIS also provides further command line options.</p>
+<ul class="simple">
+<li><img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> Assuming that QGIS is installed in the PATH, you can start QGIS
+by typing: usertext{qgis}  at a command prompt or by double clicking on the QGIS
+application link (or shortcut) on the desktop or in the application menu.</li>
+<li><img alt="win" src="introduction/img/en/win.png" style="width: 1em;" /> Start QGIS using the Start menu or desktop shortcut,
+or double click on a QGIS project file.</li>
+<li><img alt="osx" src="introduction/img/en/osx.png" style="width: 1em;" /> Double click the icon in your Applications folder. If you need to start QGIS
+in a shell, run /path-to-installation-executable/Contents/MacOS/Qgis.</li>
+</ul>
+<p>To stop QGIS, click the menu options <img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> <img alt="win" src="introduction/img/en/win.png" style="width: 1em;" /> <em class="menuselection">File</em> <img alt="osx" src="introduction/img/en/osx.png" style="width: 1em;" /> <em class="menuselection">QGIS ‣ Quit</em>,
+or use the shortcut <tt class="kbd docutils literal"><span class="pre">Ctrl+Q</span></tt>.</p>
+<div class="section" id="command-line-options">
+<span id="label-commandline"></span><h3>Command Line Options<a class="headerlink" href="#command-line-options" title="Permalink to this headline">¶</a></h3>
+<p><span class="target" id="index-0"></span>command line options</p>
+<p><img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> QGIS supports a number of options when started from the command line. To
+get a list of the options, enter <tt class="docutils literal"><span class="pre">qgis</span> <span class="pre">---help</span></tt> on the command line.
+The usage statement for QGIS is:</p>
+<div class="highlight-python"><pre>qgis --help
+Quantum GIS - 1.7.0-Wroclaw 'Wroclaw' (exported)
+Quantum GIS (QGIS) is a viewer for spatial data sets, including
+raster and vector data.
+Usage: qgis [options] [FILES]
+  options:
+        [--snapshot filename]           emit snapshot of loaded datasets to given file
+        [--width width]                 width of snapshot to emit
+        [--height height]               height of snapshot to emit
+        [--lang language]               use language for interface text
+        [--project projectfile]         load the given QGIS project
+        [--extent xmin,ymin,xmax,ymax]  set initial map extent
+        [--nologo]                      hide splash screen
+        [--noplugins]                   don't restore plugins on startup
+        [--optionspath path]            use the given QSettings path
+        [--configpath path]             use the given path for all user configuration
+        [--help]                        this text
+
+  FILES:
+    Files specified on the command line can include rasters,
+    vectors, and QGIS project files (.qgs):
+     1. Rasters - Supported formats include GeoTiff, DEM
+        and others supported by GDAL
+     2. Vectors - Supported formats include ESRI Shapefiles
+        and others supported by OGR and PostgreSQL layers using
+        the PostGIS extension</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Example Using command line arguments</strong>
+You can start QGIS by specifying one or more data files
+on the command line. For example, assuming you are in the
+qgis_sample_data directory, you could start QGIS with a vector layer
+and a raster file set to load on startup using the following command:
+<tt class="docutils literal"><span class="pre">qgis</span> <span class="pre">./raster/landcover.img</span> <span class="pre">./gml/lakes.gml</span></tt></p>
+</div>
+<div class="section" id="command-line-option-snapshot">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---snapshot</span></tt><a class="headerlink" href="#command-line-option-snapshot" title="Permalink to this headline">¶</a></h4>
+<p>This option allows you to create a snapshot in PNG format from the current view.
+This comes in handy when you have a lot of projects and want to
+generate snapshots from your data.</p>
+<p>Currently it generates a PNG-file with 800x600 pixels. This can be adapted
+using the <tt class="docutils literal"><span class="pre">---width</span></tt> and <tt class="docutils literal"><span class="pre">---height</span></tt> command line
+arguments. A filename can be added after <tt class="docutils literal"><span class="pre">---snapshot</span></tt>.</p>
+</div>
+<div class="section" id="command-line-option-lang">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---lang</span></tt><a class="headerlink" href="#command-line-option-lang" title="Permalink to this headline">¶</a></h4>
+<p>Based on your locale QGIS, selects the correct localization. If you would like
+to change your language, you can specify a language code. For example:
+<tt class="docutils literal"><span class="pre">---lang=it</span></tt>
+starts QGIS in italian localization. A list of currently supported
+languages with language code and status is provided at
+<a class="reference external" href="http://www.qgis.org/wiki/GUI_Translation_Progress">http://www.qgis.org/wiki/GUI_Translation_Progress</a></p>
+</div>
+<div class="section" id="command-line-option-project">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---project</span></tt><a class="headerlink" href="#command-line-option-project" title="Permalink to this headline">¶</a></h4>
+<p>Starting QGIS with an existing project file is also possible. Just
+add the command line option <tt class="docutils literal"><span class="pre">---project</span></tt> followed by your project
+name and QGIS will open with all layers loaded described in the given file.</p>
+</div>
+<div class="section" id="command-line-option-extent">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---extent</span></tt><a class="headerlink" href="#command-line-option-extent" title="Permalink to this headline">¶</a></h4>
+<p>To start with a specific map extent use this option. You need to add the bounding box of your extent in the following order separated by a comma:</p>
+<div class="highlight-python"><pre>--extent xmin,ymin,xmax,ymax</pre>
+</div>
+</div>
+<div class="section" id="command-line-option-nologo">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---nologo</span></tt><a class="headerlink" href="#command-line-option-nologo" title="Permalink to this headline">¶</a></h4>
+<p>This command line argument hides the splash screen when you start QGIS.</p>
+</div>
+<div class="section" id="command-line-option-noplugins">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---noplugins</span></tt><a class="headerlink" href="#command-line-option-noplugins" title="Permalink to this headline">¶</a></h4>
+<p>If you have trouble at startup with plugins, you can avoid loading them at startup. They will still be available in Plugins Manager afterwards.</p>
+</div>
+<div class="section" id="command-line-option-optionspath">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---optionspath</span></tt><a class="headerlink" href="#command-line-option-optionspath" title="Permalink to this headline">¶</a></h4>
+<p>You can have multiple configurations and decide which one to use when starting
+QGIS using this option. See <em class="xref std std-ref">subsec_gui_options</em> to check where does the
+operating system save the settings files. Presently there is no way to specify
+in which file where to write the settings, therefore you can create a copy of
+the original settings file and rename it.</p>
+</div>
+<div class="section" id="command-line-option-configpath">
+<h4>Command line option <tt class="docutils literal"><span class="pre">---configpath</span></tt><a class="headerlink" href="#command-line-option-configpath" title="Permalink to this headline">¶</a></h4>
+<p>This option is similar to the one above, but furthermore overrides the default
+path (~/.qgis) for user configuration and forces QSettings to use this directory,
+too. This allows users to e.g. carry QGIS installation on a flash drive together
+with all plugins and settings</p>
+</div>
+</div>
+</div>
+<div class="section" id="qgis-gui">
+<h2>QGIS GUI<a class="headerlink" href="#qgis-gui" title="Permalink to this headline">¶</a></h2>
+<p>When QGIS starts, you are presented with the GUI as shown below
+(the numbers 1 through 6 in yellow ovals refer to the six major areas of the
+interface as discussed below):</p>
+<div class="figure align-center">
+<img alt="../_images/startup.png" src="../_images/startup.png" />
+<p class="caption">QGIS GUI with Alaska sample data (KDE)</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Note:</strong> Your window decorations (title bar, etc.) may appear
+different depending on your operating system and window manager.</p>
+</div>
+<p>The QGIS GUI is divided into six areas:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><ol class="first last arabic simple">
+<li>Menu Bar</li>
+</ol>
+</td>
+<td><ol class="first last arabic simple" start="4">
+<li>Map View</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="first last arabic simple" start="2">
+<li>Tool Bar</li>
+</ol>
+</td>
+<td><ol class="first last arabic simple" start="5">
+<li>Map Overview</li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="first last arabic simple" start="3">
+<li>Map Legend</li>
+</ol>
+</td>
+<td><ol class="first last arabic simple" start="6">
+<li>Status Bar</li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p>These six components of the QGIS interface are described in more detail in
+the following sections. Two more sections present keyboard shortcuts and
+context help.</p>
+<div class="section" id="menu-bar">
+<h3>Menu Bar<a class="headerlink" href="#menu-bar" title="Permalink to this headline">¶</a></h3>
+<p>The menu bar provides access to various QGIS features using a standard
+hierarchical menu. The top-level menus and a summary of some of the
+menu options are listed below, together with the icons of the corresponding
+tools as they appear on the toolbar, as well as keyboard
+shortcuts. <a class="footnote-reference" href="#id9" id="id1">[1]</a>
+Although most menu options have a corresponding tool and vice-versa,
+the menus are not organized quite like the toolbars.
+The toolbar containing the tool is listed after each menu option as a checkbox
+entry. For more information about tools and toolbars, see Section
+<a class="reference internal" href="#label-toolbars"><em>Toolbars</em></a>.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="13%" />
+<col width="24%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="4"><a href="#id10"><span class="problematic" id="id11">|mActionFileNew|</span></a> <em class="guilabel">File</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">New Project</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+N</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id12"><span class="problematic" id="id13">|mActionFileOpen|</span></a> <em class="guilabel">Open Project</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+O</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Open Recent Projects</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id14"><span class="problematic" id="id15">|mActionFileSave|</span></a> <em class="guilabel">Save Project</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+S</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id16"><span class="problematic" id="id17">|mActionFileSaveAs|</span></a> <em class="guilabel">Save Project As</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+S</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id18"><span class="problematic" id="id19">|mActionSaveMapAsImage|</span></a> <em class="guilabel">Save as Image</em></td>
+<td>&nbsp;</td>
+<td>see Section <a class="reference internal" href="#sec-output"><em>Output</em></a></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id20"><span class="problematic" id="id21">|mActionNewComposer|</span></a> <em class="guilabel">New Print Composer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+P</span></tt></td>
+<td>see Section <em class="xref std std-ref">label_printcomposer</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id22"><span class="problematic" id="id23">|mActionComposerManager|</span></a> <em class="guilabel">Composer manager</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">label_printcomposer</em></td>
+<td><em class="guilabel">File</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Print Composers</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">label_printcomposer</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id24"><span class="problematic" id="id25">|mActionFileExit|</span></a> <em class="guilabel">Exit</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Q</span></tt></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td colspan="4"><em class="guilabel">Edit</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id26"><span class="problematic" id="id27">|mActionUndo|</span></a> <em class="guilabel">Undo</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Z</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id28"><span class="problematic" id="id29">|mActionRedo|</span></a> <em class="guilabel">Redo</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+Z</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id30"><span class="problematic" id="id31">|mActionEditCut|</span></a> <em class="guilabel">Cut Features</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+X</span></tt></td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id32"><span class="problematic" id="id33">|mActionEditCopy|</span></a> <em class="guilabel">Copy Features</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+C</span></tt></td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id34"><span class="problematic" id="id35">|mActionEditPaste|</span></a> <em class="guilabel">Paste Features</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+V</span></tt></td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id36"><span class="problematic" id="id37">|mActionEditPaste|</span></a> <em class="guilabel">Move Feature</em></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id38"><span class="problematic" id="id39">|mActionDeleteSelected|</span></a> <a href="#id2"><span class="problematic" id="id3">:guolabel:`Delete Selected`</span></a></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id40"><span class="problematic" id="id41">|mActionSimplify|</span></a> <em class="guilabel">Simplify Feature</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id42"><span class="problematic" id="id43">|mActionAddRing|</span></a> <em class="guilabel">Add Ring</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id44"><span class="problematic" id="id45">|mActionAddIsland|</span></a> <em class="guilabel">Add Part</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id46"><span class="problematic" id="id47">|mActionDeleteRing|</span></a> <em class="guilabel">Delete Ring</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id48"><span class="problematic" id="id49">|mActionDeletePart|</span></a> <em class="guilabel">Delete Part</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id50"><span class="problematic" id="id51">|mActionReshape|</span></a> <em class="guilabel">Reshape Features</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id52"><span class="problematic" id="id53">|mActionSplitFeatures|</span></a> <em class="guilabel">Split Features</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id54"><span class="problematic" id="id55">|mActionMergeFeat|</span></a> <em class="guilabel">Merge selected Features</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id56"><span class="problematic" id="id57">|mActionMergeFeat|</span></a> <em class="guilabel">Merge attributes of selected Features</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id58"><span class="problematic" id="id59">|mActionNodeTool|</span></a> <em class="guilabel">Node Tool</em></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id60"><span class="problematic" id="id61">|mActionRotatePointSymbols|</span></a> <em class="guilabel">Rotate Point Symbols</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_advanced_edit</em></td>
+<td><em class="guilabel">Advanced Digitizing</em></td>
+</tr>
+</tbody>
+</table>
+<p>After activating <a href="#id62"><span class="problematic" id="id63">|mActionToggleEditing|</span></a> <em class="menuselection">Toggle editing</em> mode
+for a layer, you will find a capture feature icon in the <em class="menuselection">Edit</em>
+menu depending on the layer type (point, line or polygon).</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="13%" />
+<col width="24%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a href="#id64"><span class="problematic" id="id65">|mActionCapturePoint|</span></a> <em class="guilabel">Capture Point</em></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id66"><span class="problematic" id="id67">|mActionCaptureLine|</span></a> <em class="guilabel">Capture Line</em></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id68"><span class="problematic" id="id69">|mActionCapturePolygon|</span></a> <em class="guilabel">Capture Polygon</em></td>
+<td>&nbsp;</td>
+<td>see Sec <em class="xref std std-ref">sec_edit_existing_layer</em></td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="43%" />
+<col width="13%" />
+<col width="24%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="4"><em class="guilabel">View</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id70"><span class="problematic" id="id71">|mActionPan|</span></a> <em class="guilabel">Pan Map</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id72"><span class="problematic" id="id73">|mActionZoomIn|</span></a> <em class="guilabel">Zoom In</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl++</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id74"><span class="problematic" id="id75">|mActionZoomOut|</span></a> <em class="guilabel">Zoom Out</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+-</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Select</em></td>
+<td>&nbsp;</td>
+<td>see Section <a class="reference internal" href="#sec-selection"><em>Select and deselect features</em></a></td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id76"><span class="problematic" id="id77">|mActionIdentify|</span></a> <em class="guilabel">Identify Features</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+I</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Measure</em></td>
+<td>&nbsp;</td>
+<td>see Section <a class="reference internal" href="#sec-measure"><em>Measuring</em></a></td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id78"><span class="problematic" id="id79">|mActionZoomFullExtent|</span></a> <em class="guilabel">Zoom Full</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+F</span></tt></td>
+<td>&nbsp;</td>
+<td><a href="#id4"><span class="problematic" id="id5">:guilabelb:`Map Navigation`</span></a></td>
+</tr>
+<tr class="row-even"><td><a href="#id80"><span class="problematic" id="id81">|mActionZoomToLayer|</span></a> <em class="guilabel">Zoom To Layer</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id82"><span class="problematic" id="id83">|mActionZoomToSelected|</span></a> <em class="guilabel">Zoom To Selection</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+J</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id84"><span class="problematic" id="id85">|mActionZoomLast|</span></a> <em class="guilabel">Zoom Last</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id86"><span class="problematic" id="id87">|mActionZoomNext|</span></a> <em class="guilabel">Zoom Next</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Zoom Actual Size</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id88"><span class="problematic" id="id89">|mActionMapTips|</span></a> <em class="guilabel">Map Tips</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id90"><span class="problematic" id="id91">|mActionNewBookmark|</span></a> <em class="guilabel">New Bookmark</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+B</span></tt></td>
+<td>see Section <a class="reference internal" href="#sec-bookmarks"><em>Spatial Bookmarks</em></a></td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id92"><span class="problematic" id="id93">|mActionShowBookmarks|</span></a> <em class="guilabel">Show Bookmarks</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+B</span></tt></td>
+<td>see Section <a class="reference internal" href="#sec-bookmarks"><em>Spatial Bookmarks</em></a></td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id94"><span class="problematic" id="id95">|mActionDraw|</span></a> <em class="guilabel">Refresh</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+R</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Map Navigation</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Tile scale slider</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_tilesets</em></td>
+<td><em class="guilabel">Tile scale</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Live GPS tracking</em></td>
+<td>&nbsp;</td>
+<td>see Section <a class="reference internal" href="#sec-gpstracking"><em>Live GPS tracking</em></a></td>
+<td><em class="guilabel">GPS Information</em></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="42%" />
+<col width="13%" />
+<col width="24%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="4"><em class="guilabel">Layer</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">New</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_create shape</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id96"><span class="problematic" id="id97">|mActionAddNonDbLayer|</span></a> <em class="guilabel">Add Vector Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+V</span></tt></td>
+<td>see Section <em class="xref std std-ref">label_workingvector</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id98"><span class="problematic" id="id99">|mActionAddRasterLayer|</span></a> <em class="guilabel">Add Raster Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+R</span></tt></td>
+<td>see Section <em class="xref std std-ref">label_raster</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id100"><span class="problematic" id="id101">|mActionAddLayer|</span></a> <em class="guilabel">Add PostGIS Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+D</span></tt></td>
+<td>see Section <em class="xref std std-ref">label_postgis</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id102"><span class="problematic" id="id103">|mActionAddSpatiaLiteLayer|</span></a> <em class="guilabel">Add SpatiaLite Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+L</span></tt></td>
+<td>see Section <em class="xref std std-ref">label_spatialite</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id104"><span class="problematic" id="id105">|mActionAddWmsLayer|</span></a> <em class="guilabel">Add WMS Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+W</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_ogc-wms</em></td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id106"><span class="problematic" id="id107">|mActionOpenTable|</span></a> <em class="guilabel">Open Attribute Table</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Attributes</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id108"><span class="problematic" id="id109">|mActionFileSave|</span></a> <em class="guilabel">Save edits</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id110"><span class="problematic" id="id111">|mActionToggleEditing|</span></a> <em class="guilabel">Toggle editing</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Digitizing</em></td>
+</tr>
+<tr class="row-even"><td colspan="4"><em class="guilabel">Save as...</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Save selection as vector file...</em></td>
+<td>&nbsp;</td>
+<td>See <em class="xref std std-ref">sec_attribute table</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id112"><span class="problematic" id="id113">|mActionRemoveLayer|</span></a> <em class="guilabel">Remove Layer</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+D</span></tt></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Set CRS of Layer(s)</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+C</span></tt></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Set project CRS from Layer</em></td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Properties</em></td>
+<td colspan="3">&nbsp;</td>
+</tr>
+<tr class="row-even"><td colspan="4"><em class="guilabel">Query...</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id114"><span class="problematic" id="id115">|labeling|</span></a> <em class="guilabel">Labeling</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id116"><span class="problematic" id="id117">|mActionInOverview|</span></a> <em class="guilabel">Add to Overview</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+O</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id118"><span class="problematic" id="id119">|mActionAddAllToOverview|</span></a> <em class="guilabel">Add All To Overview</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id120"><span class="problematic" id="id121">|mActionRemoveAllFromOverview|</span></a> <em class="guilabel">Remove All From Overview</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id122"><span class="problematic" id="id123">|mActionShowAllLayers|</span></a> <em class="guilabel">Show All Layers</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+U</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id124"><span class="problematic" id="id125">|mActionHideAllLayers|</span></a> <em class="guilabel">Hide All Layers</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+H</span></tt></td>
+<td>&nbsp;</td>
+<td><em class="guilabel">Manage Layers</em></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="13%" />
+<col width="26%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="4"><em class="guilabel">Settings</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Panels</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Toolbars</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Toggle Full Screen Mode</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl-F</span></tt></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><a href="#id126"><span class="problematic" id="id127">|mActionProjectProperties|</span></a> <em class="guilabel">Project Properties</em></td>
+<td><tt class="kbd docutils literal"><span class="pre">Ctrl+Shift+P</span></tt></td>
+<td>see Section <em class="xref std std-ref">sec_projects</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id128"><span class="problematic" id="id129">|mActionCustomProjection|</span></a> <em class="guilabel">Custom CRS</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">sec_customprojections</em></td>
+<td><em class="guilabel">Style Manager</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id130"><span class="problematic" id="id131">|mActionOptions|</span></a> <em class="guilabel">Configure shortcuts</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><a href="#id132"><span class="problematic" id="id133">|mActionOptions|</span></a> <em class="guilabel">Options</em></td>
+<td>&nbsp;</td>
+<td>see Section <em class="xref std std-ref">subsec_gui_options</em></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Snapping Options</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="13%" />
+<col width="26%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Menu Option</th>
+<th class="head">Shortcut</th>
+<th class="head">Reference</th>
+<th class="head">Toolbar</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td colspan="4"><em class="guilabel">Plugins</em> - (Futher menu items are added by plugins as they are loaded.)</td>
+</tr>
+<tr class="row-odd"><td><a href="#id134"><span class="problematic" id="id135">|mActionShowPluginManager|</span></a> <em class="guilabel">Manage Plugins</em></td>
+<td>&nbsp;</td>
+<td>see Section :ref:sec_managing_plugins`</td>
+<td><em class="guilabel">Plugins</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Python Console</em></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>mainmenuopt{Raster}</li>
+</ul>
+<p>begin{tabbing}
+hspace{5cm}=hspace{3cm}=hspace{3.5cm}= kill
+mainmenuopt{Raster calculator}</p>
+<blockquote>
+<div>&gt;
+&gt; see Section ref{sec:raster_calc}
+&gt;  \</div></blockquote>
+<p>end{tabbing}</p>
+<ul class="simple">
+<li>mainmenuopt{Help}</li>
+</ul>
+<p>begin{tabbing}
+hspace{5cm}=hspace{3cm}=hspace{3.5cm}= kill
+dropmenuopttwo{mActionHelpContents}{Help Contents}</p>
+<blockquote>
+<div>&gt; keystroke{F1}
+&gt;
+&gt; dropmenucheck{Help}\</div></blockquote>
+<dl class="docutils">
+<dt>mainmenuopt{API Documentation}</dt>
+<dd>&gt;
+&gt;
+&gt;  \</dd>
+<dt>dropmenuopttwo{mActionQgisHomePage}{QGIS Home Page}</dt>
+<dd>&gt; keystroke{Ctrl+H}
+&gt;
+\</dd>
+<dt>dropmenuopttwo{mActionCheckQgisVersion}{Check QGIS Version}</dt>
+<dd>\</dd>
+<dt>dropmenuopttwo{mActionHelpAbout}{About}</dt>
+<dd>\</dd>
+<dt>dropmenuopttwo{mActionHelpSponsors}{QGIS Sponsors}</dt>
+<dd>\</dd>
+</dl>
+<p>end{tabbing}</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Note:</strong> <img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> The Menu Bar items listed above are the default ones in KDE window
+manager. In GNOME, Settings menu is missing and its items are to be found
+there:</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="71%" />
+<col width="29%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a href="#id136"><span class="problematic" id="id137">|mActionProjectProperties|</span></a> <em class="guilabel">Project Properties</em></td>
+<td><em class="guilabel">File menu</em></td>
+</tr>
+<tr class="row-even"><td><a href="#id138"><span class="problematic" id="id139">|mActionOptions|</span></a> <em class="guilabel">Options</em></td>
+<td><em class="guilabel">Edit</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id140"><span class="problematic" id="id141">|mActionOptions|</span></a> <em class="guilabel">Configure Shortcuts</em></td>
+<td><em class="guilabel">Edit</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Style Manager</em></td>
+<td><em class="guilabel">Edit</em></td>
+</tr>
+<tr class="row-odd"><td><a href="#id142"><span class="problematic" id="id143">|mActionCustomProjection|</span></a> <em class="guilabel">Custom CRS</em></td>
+<td><em class="guilabel">Edit</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Panels</em></td>
+<td><em class="guilabel">View</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Toolbars</em></td>
+<td><em class="guilabel">View</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Toggle Full Screen Mode</em></td>
+<td><em class="guilabel">View</em></td>
+</tr>
+<tr class="row-odd"><td><em class="guilabel">Tile scale slider</em></td>
+<td><em class="guilabel">View</em></td>
+</tr>
+<tr class="row-even"><td><em class="guilabel">Live GPS tracking</em></td>
+<td><em class="guilabel">View</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="toolbars">
+<span id="label-toolbars"></span><h3>Toolbars<a class="headerlink" href="#toolbars" title="Permalink to this headline">¶</a></h3>
+<p>The toolbars provide access to most of the same functions as the menus,
+plus additional tools for interacting with the map. Each toolbar item has
+popup help available. Hold your mouse over the item and a short description of
+the tool&#8217;s purpose will be displayed.</p>
+<p>Every menubar can be moved around according to your needs. Additionally every
+menubar can be switched off using your right mouse button context menu holding
+the mouse over the toolbars.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Restoring toolbars</strong>
+If you have accidentally hidden all your toolbars, you can get them
+back by choosing menu option <em class="menuselection">Settings ‣ Toolbars</em>.</p>
+</div>
+</div>
+<div class="section" id="map-legend">
+<span id="label-legend"></span><h3>Map Legend<a class="headerlink" href="#map-legend" title="Permalink to this headline">¶</a></h3>
+<p>The map legend area lists all the layers in the project.
+The checkbox in each legend entry can be used to show or hide the layer
+.. index::<cite>layer!visibility</cite>
+A layer can be selected and dragged up or down in the legend to change the
+z-ordering. Z-ordering means that layers listed nearer the top of the legend are
+drawn over layers listed lower down in the legend.</p>
+<p>Layers in the legend window can be organised into groups. To do so, right click
+in the legend window and choose <em class="guilabel">Add group</em>. Type in a name for the
+group and press <tt class="kbd docutils literal"><span class="pre">Enter</span></tt>. Now click on an existing layer and drag it
+onto the group. Also, if new layers are added to the project while a group is
+selected, they will automatically be placed in the group.</p>
+<p>To bring a layer out of a group you can drag it out, or right click on it and
+choose <em class="guilabel">Make to toplevel item</em>.
+Groups can be nested inside other groups.</p>
+<p>The checkbox for a group will show or hide all the layers in the group
+with one click.</p>
+<p>The content of the right mouse button context menu depends on whether the selected legend item
+is a raster or a vector layer. For GRASS vector layers <em class="guilabel">toggle editing</em> is not
+available. See section <em class="xref std std-ref">grass_digitising</em> for information on editing GRASS vector layers.</p>
+<ul class="simple">
+<li><strong>Right mouse button menu for raster layers</strong><ul>
+<li>dropmenuopt{Zoom to layer extent}</li>
+<li>dropmenuopt{Zoom to best scale (100%)}</li>
+<li>dropmenuopt{Show in overview}</li>
+<li>dropmenuopt{Remove}</li>
+<li>dropmenuopt{Properties}</li>
+<li>dropmenuopt{Rename}</li>
+<li>dropmenuopt{Add Group}</li>
+<li>dropmenuopt{Expand all}</li>
+<li>dropmenuopt{Collapse all}</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><strong>Right mouse button menu for vector layers</strong><ul>
+<li>dropmenuopt{Zoom to layer extent}</li>
+<li>dropmenuopt{Show in overview}</li>
+<li>dropmenuopt{Remove}</li>
+<li>dropmenuopt{Open attribute table}</li>
+<li>dropmenuopt{Toggle editing (not available for GRASS layers)}</li>
+<li>dropmenuopt{Save as}</li>
+<li>dropmenuopt{Save selection as}</li>
+<li>dropmenuopt{Query}</li>
+<li>dropmenuopt{Properties}</li>
+<li>dropmenuopt{Rename}</li>
+<li>dropmenuopt{Add Group}</li>
+<li>dropmenuopt{Expand all}</li>
+<li>dropmenuopt{Collapse all}</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><strong>Right mouse button menu for layer groups</strong><ul>
+<li>dropmenuopt{Zoom to group}</li>
+<li>dropmenuopt{Remove}</li>
+<li>dropmenuopt{Set group CRS}</li>
+<li>dropmenuopt{Rename}</li>
+<li>dropmenuopt{Add Group}</li>
+<li>dropmenuopt{Expand all}</li>
+<li>dropmenuopt{Collapse all}</li>
+</ul>
+</li>
+</ul>
+<p>It is possible to select more than one Layer or Group at the same time
+by holding down the keystroke{Ctrl}-Key while selecting the Layers with the
+left mouse button. You can than move all selected Layers to a new Group at
+the same time.</p>
+<p>You are also able to delete more than one Layer or Group at once by selecting
+several Layers with the keystroke{Ctrl}-Key and pressing keystroke{Ctrl+D} afterwards.
+This way all selected Layers or Groups will be removed from the Layerlist.</p>
+<p>..%
+..%includegraphics[width=0.7cm]{pyramid} This is a raster
+..%that has pyramids built for it to improve rendering efficiency (see
+..%Section ref{raster_pyramids}).\
+..%includegraphics[width=0.7cm]{no_pyramid} This is a
+..%raster that has no pyramid layers (see Section ref{raster_pyramids}).\
+..%includegraphics[width=0.7cm]{inoverview} This layer is
+..%shown in the overview map area as well as in the main map window.\
+..%includegraphics[width=0.7cm]{editable} This is a vector
+..%layer that is currently enabled for editing.\</p>
+</div>
+<div class="section" id="map-view">
+<span id="label-mapview"></span><h3>Map View<a class="headerlink" href="#map-view" title="Permalink to this headline">¶</a></h3>
+<p>This is the &#8216;business end&#8217; of QGIS - maps are displayed in this area! The
+map displayed in this window will depend on the vector and raster layers you
+have chosen to load (see sections that follow for more information on how to
+load layers). The map view can be panned (shifting the focus of the map display
+to another region) and zoomed in and out. Various other operations can be
+performed on the map as described in the toolbar description above.  The map
+view and the legend are tightly bound to each other - the maps in view reflect
+changes you make in the legend area.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<blockquote>
+<div><strong>Zooming the Map with the Mouse Wheel</strong></div></blockquote>
+<p class="last">You can use the mouse wheel to zoom in and out on the map. Place
+the mouse cursor inside the map area and roll the wheel forward (away from you) to
+zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
+center where the zoom occurs. You can customize the behavior of the mouse
+wheel zoom using the tab{Map tools} tab under the mainmenuopt{Settings} arrow
+dropmenuopt{Options} menu.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<blockquote>
+<div><strong>Panning the Map with the Arrow Keys and Space Bar</strong></div></blockquote>
+<p class="last">You can use the arrow keys to pan in the map. Place the mouse cursor
+inside the map area and click on the right arrow key to pan East, left arrow
+key to pan West, up arrow key to pan North and down arrow key to pan South.
+You can also pan the map using the space bar: just move the mouse while
+holding down space bar.</p>
+</div>
+</div>
+<div class="section" id="map-overview">
+<span id="label-mapoverview"></span><h3>Map Overview<a class="headerlink" href="#map-overview" title="Permalink to this headline">¶</a></h3>
+<p>The map overview panel provides a full extent view of layers added to it. It
+can be selected under the menu mainmenuopt{Settings} arrow dropmenuopt{Panels}.
+Within the view is a rectangle showing the current map extent. This allows
+you to quickly determine which area of the map you are currently viewing. Note
+that labels are not rendered to the map overview even if the layers in the
+map overview have been set up for labeling.</p>
+<p>You can add a single layer to the overview by right-clicking on it in the
+legend and select checkbox{Show in overview}. You can also add layers to,
+or remove all layers from the overview using the Overview tools on the toolbar.</p>
+<p>If you click and drag the red rectangle in the overview that shows your
+current extent, the main map view will update accordingly.</p>
+</div>
+<div class="section" id="status-bar">
+<span id="label-statusbar"></span><h3>Status Bar<a class="headerlink" href="#status-bar" title="Permalink to this headline">¶</a></h3>
+<p>The status bar shows you your current position in map coordinates (e.g.
+meters or decimal degrees) as the mouse pointer is moved across the map view.
+To the left of the coordinate display in the status bar is a small button that
+will toggle between showing coordinate position or the view extents of the
+map view as you pan and zoom in and out.</p>
+<p>A progress bar in the status bar shows progress of rendering
+as each layer is drawn to the map view. In some cases, such as the gathering
+of statistics in raster layers, the progress bar will be used to show the
+status of lengthy operations.</p>
+<p>If a new plugin or a plugin update is available, you will see a message in the
+status bar. On the right side of the status bar is a small
+checkbox which can be used to temporarily prevent layers being rendered to the
+map view (see Section ref{subsec:redraw_events} below). The icon
+includegraphics[width=0.4cm]{mIconStopRendering} immediately stops the
+current map rendering process.</p>
+<p>At the far right of the status bar you find the EPSG code of the current
+project CRS and a projector icon. Clicking on this opens the projection properties
+for the current project.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<blockquote>
+<div><strong>Calculating the correct Scale of your Map Canvas</strong></div></blockquote>
+<p class="last">When you start QGIS, degrees is the default unit, and it tells QGIS
+that any coordinate in your layer is in degrees. To get correct scale values,
+you can either change this to meter manually in the tab{General} tab under
+mainmenuopt{Settings} arrow dropmenuopt{Project Properties} or you can select a project
+Coordinate Reference System (CRS) clicking on the
+toolbtntwo{mIconProjectionDisabled}{CRS status}
+icon in the lower right-hand corner of the statusbar. In the last case, the
+units are set to what the project projection specifies, e.g. &#8216;+units=m&#8217;.</p>
+</div>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<span id="shorcuts"></span><h3>Keyboard shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h3>
+<p>QGIS provides default keyboard shortcuts for many features. You find them in
+Section ref{label_menubar} below. Additionally the menu option mainmenuopt{Settings} arrow
+dropmenuopt{Configure Shortcuts} allows to change the default keyboard
+shortcuts and to add new keyboard shortcuts to QGIS features.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=8cm]{shortcuts}
+caption{Define shortcut options nixcaption (KDE)} label{fig:shortcuts}</dd>
+</dl>
+<p>end{figure}</p>
+<p>Configuration is very simple. Just select a feature from the list and click
+on button{Change}, button{Set none} or button{Set default}. Once you have
+found your configuration, you can save it as XML file and load it to another
+QGIS installation.</p>
+</div>
+<div class="section" id="context-help">
+<span id="id6"></span><h3>Context help<a class="headerlink" href="#context-help" title="Permalink to this headline">¶</a></h3>
+<p>When you need help on a specific topic, you can access context help via the button{Help}
+button available in most dialogs - please note that third-party plugins can point to
+dedicated web pages.</p>
+</div>
+</div>
+<div class="section" id="rendering">
+<span id="subsect-redraw-events"></span><h2>Rendering<a class="headerlink" href="#rendering" title="Permalink to this headline">¶</a></h2>
+<p>By default, QGIS renders all visible layers whenever the map canvas must be
+refreshed. The events that trigger a refresh of the map canvas include:</p>
+<ul class="simple">
+<li>Adding a layer</li>
+<li>Panning or zooming</li>
+<li>Resizing the QGIS window</li>
+<li>Changing the visibility of a layer or layers</li>
+</ul>
+<p>QGIS allows you to control the rendering process in a number of ways.</p>
+<div class="section" id="scale-dependent-rendering">
+<h3>Scale Dependent Rendering<a class="headerlink" href="#scale-dependent-rendering" title="Permalink to this headline">¶</a></h3>
+<p>Scale dependent rendering allows you to specify the minimum and maximum
+scales at which a layer will be visible.  To set scale dependency rendering,
+open the dialog{Properties} dialog by double-clicking on the layer in the
+legend. On the tab{General} tab, set the minimum and maximum scale values and then
+click on the checkbox{Use scale dependent rendering} checkbox.</p>
+<p>You can determine the scale values by first zooming to the level you want
+to use and noting the scale value in the QGIS status bar.</p>
+</div>
+<div class="section" id="controlling-map-rendering">
+<span id="label-controlmap"></span><h3>Controlling Map Rendering<a class="headerlink" href="#controlling-map-rendering" title="Permalink to this headline">¶</a></h3>
+<p>Map rendering can be controlled in the following ways:</p>
+<div class="section" id="a-suspending-rendering">
+<span id="label-suspendrender"></span><h4>a) Suspending Rendering<a class="headerlink" href="#a-suspending-rendering" title="Permalink to this headline">¶</a></h4>
+<p>To suspend rendering, click the checkbox{Render} checkbox in the lower right
+corner of the statusbar. When the checkbox{Render} box is not checked, QGIS
+does not redraw the canvas in response to any of the events described in
+Section ref{subsec:redraw_events}. Examples of when you might want to suspend
+rendering include:</p>
+<ul class="simple">
+<li>Add many layers and symbolize them prior to drawing</li>
+<li>Add one or more large layers and set scale dependency before drawing</li>
+<li>Add one or more large layers and zoom to a specific view before drawing</li>
+<li>Any combination of the above</li>
+</ul>
+<p>Checking the checkbox{Render} box enables rendering and causes an immediate
+refresh of the map canvas.</p>
+</div>
+<div class="section" id="b-setting-layer-add-option">
+<span id="label-settinglayer"></span><h4>b) Setting Layer Add Option<a class="headerlink" href="#b-setting-layer-add-option" title="Permalink to this headline">¶</a></h4>
+<p>You can set an option to always load new layers without drawing them. This
+means the layer will be added to the map, but its visibility checkbox in the
+legend will be unchecked by default. To set this option, choose
+menu option mainmenuopt{Settings} arrow dropmenuopt{Options} and click on the
+tab{Rendering} tab. Uncheck the \
+checkbox{By default new layers added to the map should be displayed} checkbox.
+Any layer added to the map will be off (invisible) by default.</p>
+</div>
+<div class="section" id="c-updating-the-map-display-during-rendering">
+<span id="label-updatemap"></span><h4>c) Updating the Map Display During Rendering<a class="headerlink" href="#c-updating-the-map-display-during-rendering" title="Permalink to this headline">¶</a></h4>
+<p>You can set an option to update the map display as features are drawn. By
+default, QGIS does not display any features for a layer until the entire
+layer has been rendered. To update the display as features are read from the
+datastore, choose menu option mainmenuopt{Settings} arrow dropmenuopt{Options}
+click on the tab{Rendering} tab. Set the feature count to an
+appropriate value to update the display during rendering. Setting a value of 0
+disables update during drawing (this is the default). Setting a value too low
+will result in poor performance as the map canvas is continually updated
+during the reading of the features. A suggested value to start with is 500.</p>
+</div>
+<div class="section" id="d-influence-rendering-quality">
+<span id="label-renderquality"></span><h4>d) Influence Rendering Quality<a class="headerlink" href="#d-influence-rendering-quality" title="Permalink to this headline">¶</a></h4>
+<p>To influence the rendering quality of the map you have 3 options. Choose menu
+option mainmenuopt{Settings} arrow dropmenuopt{Options} click on the
+tab{Rendering} tab and select or deselect following checkboxes.</p>
+<ul class="simple">
+<li>checkbox{Make lines appear less jagged at the expense of some drawing
+performance}</li>
+<li>checkbox{Fix problems with incorrectly filled polygons}</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="measuring">
+<span id="sec-measure"></span><h2>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">¶</a></h2>
+<p>Measuring works within projected coordinate systems (e.g., UTM) and
+unprojected data. If the loaded map is defined with a geographic coordinate system
+(latitude/longitude), the results from line or area measurements will be
+incorrect. To fix this you need to set an appropriate map coordinate system
+(See Section~ref{label_projections}). All measuring modules also use the
+snapping settings from the digitizing module. This is useful, if you want to
+measure along lines or areas in vector layers.</p>
+<p>To select a measure tool click on includegraphics[width=0.7cm]{mActionMeasure} and
+select the tool you want to use.</p>
+<div class="section" id="measure-length-areas-and-angles">
+<h3>Measure length, areas and angles<a class="headerlink" href="#measure-length-areas-and-angles" title="Permalink to this headline">¶</a></h3>
+<p>includegraphics[width=0.7cm]{mActionMeasure}
+QGIS is able to measure real distances between given points according to
+a defined ellipsoid. To configure this, choose menu option
+mainmenuopt{Settings} arrow dropmenuopt{Options},
+click on the tab{Map tools} tab and choose the appropriate ellipsoid. There
+you can also define a rubberband color and your preferred measurement units
+(meters or feet) and angle units (degrees, radians and gon). The tools then
+allows you to click points on the map. Each segment-length as well as the total
+shows up in the measure-window. To stop measuring click your right mouse button. \
+includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured.
+In the measure window the accumulated area-size appears  \
+In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. \
+includegraphics[width=0.7cm]{mActionMeasureAngle}
+You can also measure angles, selecting Measure Angle tool. The cursor becomes
+cross-shaped. Click to draw the first segment of the angle you wish to
+measure, then move the the cursor to draw the desired angle. The measure
+is displayed in a popup dialog.</p>
+<p>begin{figure}[ht]
+centering</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>subfloat[Measure lines] {label{subfig:measure_line}includegraphics[clip=true, width=0.3textwidth]{measure_line}}</dt>
+<dd>hspace{0.33cm}</dd>
+<dt>subfloat[Measure areas]{label{subfig:measure_area}includegraphics[clip=true, width=0.3textwidth]{measure_area}}</dt>
+<dd>hspace{0.33cm}</dd>
+</dl>
+<p>subfloat[Measure angles]{label{subfig:measure_angle}includegraphics[clip=true, width=0.3textwidth]{measure_angle}}
+caption{Measure tools in action nixcaption} label{fig:measure}</p>
+</div></blockquote>
+<p>end{figure}</p>
+</div>
+<div class="section" id="select-and-deselect-features">
+<span id="sec-selection"></span><h3>Select and deselect features<a class="headerlink" href="#select-and-deselect-features" title="Permalink to this headline">¶</a></h3>
+<p>The QGIS toolbar provides several tools to select features in the map canvas.
+To select one or several features just click on
+includegraphics[width=0.7cm]{mActionSelect} and select your tool:</p>
+<ul class="simple">
+<li>includegraphics[width=0.5cm]{mActionSelect} Select features</li>
+<li>includegraphics[width=0.5cm]{mActionSelectRectangle} Select features by rectangle</li>
+<li>includegraphics[width=0.5cm]{mActionSelectPolygon} Select features by polygon</li>
+<li>includegraphics[width=0.5cm]{mActionSelectFreehand} Select features by freehand</li>
+<li>includegraphics[width=0.5cm]{mActionSelectRadius} Select features by radius</li>
+</ul>
+<p>To deselect all selected features click on includegraphics[width=0.7cm]{mActionDeselectAll}.</p>
+</div>
+</div>
+<div class="section" id="projects">
+<span id="sec-projets"></span><h2>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<p>The state of your QGIS session is considered a Project.  QGIS
+works on one project at a time.  Settings are either considered
+as being per-project, or as a default for new projects (see
+Section ref{subsec:gui_options}). QGIS can save the state of your
+workspace into a project file using the menu options
+mainmenuopt{File} arrow dropmenuopttwo{mActionFileSave}{Save Project}
+or mainmenuopt{File} arrow dropmenuopttwo{mActionFileSaveAs}{Save Project As}.</p>
+<p>Load saved projects into a QGIS session using
+mainmenuopt{File} arrow dropmenuopttwo{mActionFileOpen}{Open Project}
+or mainmenuopt{File} arrow \
+dropmenuopt{Open Recent Project}.</p>
+<p>If you wish to clear your session and start fresh, choose
+mainmenuopt{File} arrow dropmenuopttwo{mActionFileNew}{New Project}.
+Either of these menu options will prompt you to save the existing project
+if changes have been made since it was opened or last saved.</p>
+<p>The kinds of information saved in a project file include:</p>
+<ul class="simple">
+<li>Layers added</li>
+<li>Layer properties, including symbolization</li>
+<li>Projection for the map view</li>
+<li>Last viewed extent</li>
+</ul>
+<p>The project file is saved in XML format, so it is possible to edit
+the file outside QGIS if you know what you are doing. The file format
+was updated several times compared to earlier QGIS versions. Project files
+from older QGIS versions may not work properly anymore. To be made aware of this,
+in the tab{General} tab under mainmenuopt{Settings} arrow dropmenuopt{Options}
+you can select: \</p>
+<p>checkbox{Promt to save project changes when required} \
+checkbox{Warn when opening a project file saved with an older version of QGIS}</p>
+<p>In the properties window for the project under <img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> mainmenuopt{File arrow
+dropmenuopt{Project Properties}} or <img alt="win" src="introduction/img/en/win.png" style="width: 1em;" /> mainmenuopt{Settings arrow
+dropmenuopt{Project Properties}} you set project specific options. These
+include:</p>
+<ul class="simple">
+<li>In the tab{General} tab the project title, selection and background
+color, layer units, precision, and the option to save relative paths to
+layers can be defined. You can define the layer units (only used when CRS
+transformation is disabled) and the precision of decimal places to use.</li>
+<li>The tab{CRS} Coordinate Reference System tab enables you to choose the
+CRS for this project, and to enable on-the-fly reprojection of raster and vector
+layers when displaying layers from a different CRS.</li>
+<li>With the third tab{Identifiable layers} tab you set (or disable) which
+layers will respond to the identify tool. (See the Map tools paragraph from
+the ref{subsec:gui_options} section to enable identifying of multiple layers.)</li>
+<li>The tab tab{WMS Server} allows to define information about the QGIS
+mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating
+the checkbox{Add WKT geometry to feature info response} will allow to query the
+WMS layers.</li>
+</ul>
+</div>
+<div class="section" id="output">
+<span id="sec-output"></span><h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways to generate output from your QGIS session. We have
+discussed one already in Section ref{sec:projects}: saving as a project file.
+Here is a sampling of other ways to produce output files:</p>
+<ul class="simple">
+<li>Menu option dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens
+a file dialog where you select the name, path and type of image (PNG or JPG
+format). A world file with extension PNGW or JPGW saved in the same folder
+georeferences the image.</li>
+<li>Menu option dropmenuopttwo{mActionNewComposer}{New Print Composer} opens a
+dialog where you can layout and print the current map canvas (see
+Section~ref{label_printcomposer}).</li>
+</ul>
+</div>
+<div class="section" id="gui-options">
+<h2>GUI Options<a class="headerlink" href="#gui-options" title="Permalink to this headline">¶</a></h2>
+<p>includegraphics[width=0.7cm,clip=true]{mActionOptions} Some basic options
+for QGIS can be selected using the dialog{Options} dialog. Select the
+menu option mainmenuopt{Settings} arrow
+dropmenuopttwo{mActionOptions}{Options}. The tabs where you can
+optmize your options are:</p>
+<ul class="simple">
+<li>checkbox{Promt to save project changes when required}</li>
+<li>checkbox{Warn when opening a project file saved with an older version of QGIS}</li>
+<li>Change Selection and background Color</li>
+<li>Change the icon theme (choose between default, classic, gis and newgis)</li>
+<li>Change icon size between 16, 24 and 32 pixel.</li>
+<li>Define double click action in legend (choose between &#8216;open layer properties&#8217;
+and &#8216;open &#8216;) attribute table.</li>
+<li>checkbox{Capitalise layer names in legend}</li>
+<li>checkbox{Display classification attribute names in legend}</li>
+<li>checkbox{Create raster icons in legend}</li>
+<li>checkbox{Hide splash screen at startup}</li>
+<li>checkbox{Open identify results in a dock window (QGIS restart
+required)}</li>
+<li>checkbox{Open snapping options in a dock window (QGIS restart
+required)}</li>
+<li>checkbox{Open attribute table in a dock window}</li>
+<li>checkbox{Add PostGIS layers with double click and select in extended mode}</li>
+<li>checkbox{Add new layers to selected group}</li>
+<li>Attribute table behavior (choose between Show all features (default), Show selected features,
+show features in current canvas)</li>
+<li>Define representation for NULL values</li>
+<li>Add path(s) to search for additional C++ plugin libraries.</li>
+</ul>
+<ul class="simple">
+<li>checkbox{By default new layers added to the map should be displayed}</li>
+<li>Define number of features to draw before updating the display.</li>
+<li>checkbox{Use render caching where possible to speed up redraws}</li>
+<li>checkbox{Make lines appear less jagged at the expense of some drawing
+performance}</li>
+<li>checkbox{Fix problems with incorrectly filled polygons}</li>
+<li>checkbox{Use new generation symbology for rendering}</li>
+<li>Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols</li>
+</ul>
+<p>Additionally you can define whether to save the path for svg textures
+absolute or relative in the tab{General} tab of the
+mainmenuopt{Settings} arrow dropmenuopttwo{mActionOptions}{Project Properties}
+menu.</p>
+<ul class="simple">
+<li>The Mode setting determines which layers will be shown by the Identify
+tool. By switching to usertext{Top down} or usertext{Top down, stop at
+first} instead of usertext{Current layer} attributes for all identifiable
+layers (see the Project properties section under: ref{sec:projects} to set
+which layers are identifiable) will be shown with the Identify tool.</li>
+<li>checkbox{Open feature form, if a single feature is identified}</li>
+<li>Define search radius for identifying and displaying map tips as a
+percentage of the map width</li>
+<li>Define ellipsoid for distance calculations</li>
+<li>Define rubberband color for measure tools</li>
+<li>Define decimal places</li>
+<li>checkbox{Keep base unit}</li>
+<li>radiobuttonon{Define preferred measurement units (meters or feet)}</li>
+<li>radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}</li>
+<li>Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
+cursor, Nothing)</li>
+<li>Define Zoom factor for wheel mouse</li>
+</ul>
+<ul class="simple">
+<li>Define placement algorithm for labels (choose between central point
+(standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)</li>
+</ul>
+<ul class="simple">
+<li>Define Rubberband line color and line width</li>
+<li>Define default snap mode (to vertex, to segment, to vertex and segment)</li>
+<li>Define default snapping tolerance in map units or pixel</li>
+<li>Define search radius for vertex edits in map units or pixel</li>
+<li><img alt="checkbox" src="introduction/img/en/checkbox.png" /><em class="guilabel">Show markers only for selected features</em></li>
+<li>Define vertex marker style (cross (default), semi transparent circle or
+none) and vertex marker size.</li>
+<li><img alt="checkbox" src="introduction/img/en/checkbox.png" /> <em class="guilabel">Reuse last entered attribute values</em></li>
+<li><img alt="checkbox" src="introduction/img/en/checkbox.png" /> <em class="guilabel">Suppress attributes pop-up windows after each created feature</em></li>
+</ul>
+<p>The CRS tab is devided in two areas. The first area allows to define the default
+CRS for new projects.</p>
+<ul class="simple">
+<li>Select a CRS and always start new projects with this CRS.</li>
+<li><img alt="checkbox" src="introduction/img/en/checkbox.png" /> <em class="guilabel">Enable on the fly reprojecion by default</em></li>
+</ul>
+<p>The second area allows to define the action, when a new layer is created, or when a
+layer without CRS is loaded.</p>
+<ul class="simple">
+<li><img alt="radiobuttonoff" src="introduction/img/en/radiobuttonoff.png" /> <em class="guilabel">Prompt for Coordinate Reference System (CRS)</em></li>
+<li><img alt="radiobuttonoff" src="introduction/img/en/radiobuttonoff.png" /> <em class="guilabel">Project wide default Coordinate Reference System (CRS) will be used</em></li>
+<li><img alt="radiobuttonon" src="introduction/img/en/radiobuttonon.png" /> :guilabel`Global default Coordinate Reference System (CRS) displayed below will be used`</li>
+</ul>
+<ul class="simple">
+<li><img alt="checkbox" src="introduction/img/en/checkbox.png" /> <em class="guilabel">Overwrite system locale and use defined locale instead</em></li>
+<li>Information about active system locale</li>
+</ul>
+<span class="target" id="fig-proxy-settings"></span><ul class="simple">
+<li>checkbox{Use proxy for web access} and define host, port, user, and password.</li>
+<li>Set the dropmenuopt{Proxy type} according to your needs<ul>
+<li>dropmenuopt{Default Proxy}: Proxy is determined based on the application proxy set using</li>
+<li>dropmenuopt{Socks5Proxy}: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.</li>
+<li>dropmenuopt{HttpProxy}: Implemented using the &#8220;CONNECT&#8221; command, supports only outgoing TCP connections; supports authentication.</li>
+<li>dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests</li>
+<li>dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests</li>
+</ul>
+</li>
+<li>Define Cache settings (path and size)</li>
+<li>Define WMS search adress, default is url{<a class="reference external" href="http://geopole.org/wms/search?search=%1&amp;type=rss">http://geopole.org/wms/search?search=%1&amp;type=rss</a>}</li>
+<li>Define timeout for network requests in ms - default is 60000</li>
+</ul>
+<p>Excluding some URLs can be added to the textbox below the proxy-settings (see
+fig. ref{fig:proxy-settings}) by pressing the button{Add}-button. After that
+double-click into the just created URL-field and enter the URL you would like
+to exclude from using the proxy. Obviously the button <em class="guilabel">Remove</em> removes the selected
+entry.</p>
+<p>If you need more detailed information about the different proxy-settings,
+please refer to the manual of the unterlaying QT-library-documentation at
+<a class="reference external" href="http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum">http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum</a>.</p>
+<p>begin{Tip} caption{textsc{Using Proxies}}
+Using proxies can sometimes be tricky. It is useful to &#8216;trial and
+error&#8217; the above proxy types and check if they succeed in your case.
+end{Tip}</p>
+<p>You can modify the options according to your needs. Some of the changes may
+require a restart of QGIS before they will be effective.</p>
+<ul class="simple">
+<li><img alt="nix" src="introduction/img/en/nix.png" style="width: 1em;" /> settings are saved in a texfile: $HOME/.config/QuantumGIS/qgis.conf</li>
+<li><img alt="osx" src="introduction/img/en/osx.png" style="width: 1em;" /> you can find your settings in: $HOME/Library/Preferences/org.qgis.qgis.plist</li>
+<li><img alt="win" src="introduction/img/en/win.png" style="width: 1em;" /> settings are stored in the registry under:</li>
+</ul>
+<div class="highlight-python"><pre>\\HKEY\CURRENT_USER\Software\QuantumGISqgis</pre>
+</div>
+</div>
+<div class="section" id="annotation-tools">
+<span id="sec-annotations"></span><h2>Annotation Tools<a class="headerlink" href="#annotation-tools" title="Permalink to this headline">¶</a></h2>
+<p><span class="target" id="index-1"></span>annotations
+<span class="target" id="index-2"></span>text annotation|see{annotations}</p>
+<p>The includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} text
+annotation tools in the attribute toolbar provides the possibility to
+place formatted text in a balloon on the QGIS map canvas. Use the text
+annotation tool and click into the map canvas.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=12cm]{annotation}
+caption{Annotation text dialog nixcaption}
+label{fig:annotation}</dd>
+</dl>
+<p>end{figure}</p>
+<p>Double click on the item opens a dialog with various options. There is the
+text editor to enter the formated text and other item settings. E.g. there
+is the choice of having the item placed on a map position (displayed by
+a marker symbol) or to have the item on a screen position (not related
+to the map). The item can be moved by map position (drag the map marker)
+or by moving only the balloon. The icons are part of gis theme, and are used
+by default in the other themes too.</p>
+<p>The includegraphics[width=0.7cm,clip=true]{mActionAnnotation} move annotation
+tool allows to move the annotation on the map canvas.</p>
+<div class="section" id="form-annotations">
+<h3>Form annotations<a class="headerlink" href="#form-annotations" title="Permalink to this headline">¶</a></h3>
+<p>Additionally you can also create your own annotation forms. The
+includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation
+tool is useful to display attributes of a vector layer in a customised qt
+designer form (see Figure ref{fig:custom-annotations}). It is similar to the
+designer forms for the identify tool, but displayed in an annotation item.
+Also see QGIS blog http://blog.qgis.org/node/143 for more information.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=10cm]{custom_annotation}
+caption{Customized qt designer annotation form nixcaption}
+label{fig:custom-annotations}</dd>
+</dl>
+<p>end{figure}</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Note: If you press :kbd:`Ctrl+T`</strong> while an annotation tool is active
+(move annotation, text annotation, form annotation), the visibility states
+of the items are inverted.</p>
+</div>
+</div>
+</div>
+<div class="section" id="spatial-bookmarks">
+<span id="sec-bookmarks"></span><h2>Spatial Bookmarks<a class="headerlink" href="#spatial-bookmarks" title="Permalink to this headline">¶</a></h2>
+<p>Spatial Bookmarks allow you to <a href="#id7"><span class="problematic" id="id8">``</span></a>bookmark&#8217;&#8217; a geographic location and return to it later.</p>
+<div class="section" id="creating-a-bookmark">
+<h3>Creating a Bookmark<a class="headerlink" href="#creating-a-bookmark" title="Permalink to this headline">¶</a></h3>
+<p>To create a bookmark:</p>
+<ol class="arabic simple">
+<li>Zoom or pan to the area of interest.</li>
+<li>Select the menu option mainmenuopt{View} arrow dropmenuopt{New Bookmark} or press keystroke{Ctrl-B}.</li>
+<li>Enter a descriptive name for the bookmark (up to 255 characters).</li>
+<li>Click button{OK} to add the bookmark or button{Cancel} to exit without adding the bookmark.</li>
+</ol>
+<p>Note that you can have multiple bookmarks with the same name.</p>
+</div>
+<div class="section" id="working-with-bookmarks">
+<h3>Working with Bookmarks<a class="headerlink" href="#working-with-bookmarks" title="Permalink to this headline">¶</a></h3>
+<p>To use or manage bookmarks, select the menu
+option mainmenuopt{View} arrow dropmenuopt{Show Bookmarks}. The \
+dialog{Geospatial Bookmarks} dialog allows you to zoom to or delete a bookmark.
+You can not edit the bookmark name or coordinates.</p>
+</div>
+<div class="section" id="zooming-to-a-bookmark">
+<h3>Zooming to a Bookmark<a class="headerlink" href="#zooming-to-a-bookmark" title="Permalink to this headline">¶</a></h3>
+<p>From the dialog{Geospatial Bookmarks} dialog, select the desired bookmark by clicking on it,
+then click button{Zoom To}.
+You can also zoom to a bookmark by double-clicking on it.</p>
+</div>
+<div class="section" id="deleting-a-bookmark">
+<h3>Deleting a Bookmark<a class="headerlink" href="#deleting-a-bookmark" title="Permalink to this headline">¶</a></h3>
+<p>To delete a bookmark from the <em class="guilabel">Geospatial Bookmarks</em>
+dialog, click on it then click <em class="guilabel">Delete</em>.
+Confirm your choice by clicking <em class="guilabel">Yes</em> or cancel the
+delete by clicking <em class="guilabel">No</em>.</p>
+</div>
+</div>
+<div class="section" id="live-gps-tracking">
+<span id="sec-gpstracking"></span><h2>Live GPS tracking<a class="headerlink" href="#live-gps-tracking" title="Permalink to this headline">¶</a></h2>
+<p>To activate Live GPS tracking in QGIS you need to select
+mainmenuopt{View} arrow dropmenuopt{Live GPS tracking}. You will get a new
+docked Window on the left side of the canvas.</p>
+<p>There are 4 possible screens in this GPS tracking window
+(see Figure ref{fig:gpstrack_live} and Figure ref{fig:gpstrack_options}).</p>
+<dl class="docutils">
+<dt>begin{description}</dt>
+<dd>item[(a)] includegraphics[width=0.5cm,clip=true]{mActionToggleEditing}</dd>
+<dt>GPS position coordinates and for manually entering Vertices and Features</dt>
+<dd>item[(b)] includegraphics[width=0.5cm,clip=true]{gpstrack_barchart}</dd>
+<dt>GPS signal strength of satellite connections</dt>
+<dd>item[(c)] includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart}</dd>
+<dt>GPS polar screen showing number and polar position of satellites</dt>
+<dd>item[(d)] includegraphics[width=0.5cm,clip=true]{mActionOptions}</dd>
+</dl>
+<p>GPS options screen (see Figure ref{fig:gpstrack_options}).
+end{description}</p>
+<p>With a plugged in GPS receiver (has to be supported by your operating system)
+a simple click on button{Connect} connects the GPS to QGIS. A second click
+(now button{Disconnect}) disconnects the GPS-Reciever from your Computer. For
+GNU/Linux gpsd support is integrated to support connection to most GPS
+receivers. Therefore you first have to configure gpsd properly to connect QGIS to it.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">[ IMPORTANT ]: If you want to record your position to the canvas you have to
+create a new vector layer first and switch it to editable status to be able
+to record your track.</p>
+</div>
+<p>begin{figure}[ht]
+centering</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>subfloat[Position coordinates] {label{subfig:gpstrack_main}includegraphics[clip=true, width=0.3textwidth]{gpstrack_main}}</dt>
+<dd>hspace{0.33cm}</dd>
+<dt>subfloat[GPS signal strenght]{label{subfig:gpstrack_stren}includegraphics[clip=true, width=0.3textwidth]{gpstrack_stren}}</dt>
+<dd>hspace{0.33cm}</dd>
+</dl>
+<p>subfloat[GPS polar window]{label{subfig:gpstrack_polar}includegraphics[clip=true, width=0.3textwidth]{gpstrack_polar}}</p>
+</div></blockquote>
+<p>caption{Live GPS tracking nixcaption} label{fig:gpstrack_live}
+end{figure}</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=4cm]{gpstrack_options}
+caption{GPS tracking options window nixcaption}
+label{fig:gpstrack_options}</dd>
+</dl>
+<p>end{figure}</p>
+<div class="section" id="position-coordinates">
+<h3>Position coordinates<a class="headerlink" href="#position-coordinates" title="Permalink to this headline">¶</a></h3>
+<p>includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is
+recieving signals from satellites you will see your position in latitude,
+longitude and elevation as you can see in Figure ref{subfig:gpstrack_main}</p>
+</div>
+<div class="section" id="gps-signal-strength">
+<h3>GPS signal strength<a class="headerlink" href="#gps-signal-strength" title="Permalink to this headline">¶</a></h3>
+<p>includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see
+the signal strenght of the satellites you are revieving signals from
+(Figure ref{subfig:gpstrack_stren}).</p>
+</div>
+<div class="section" id="gps-polar-window">
+<h3>GPS polar window<a class="headerlink" href="#gps-polar-window" title="Permalink to this headline">¶</a></h3>
+<p>includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want
+to know where in the sky all the connected satellites are, you have to
+switch to the polar screen (Figure ref{subfig:gpstrack_polar}).
+You can also see the ID numbers of the satellites you are recieving signals from.</p>
+</div>
+<div class="section" id="gps-options">
+<h3>GPS options<a class="headerlink" href="#gps-options" title="Permalink to this headline">¶</a></h3>
+<p>includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection
+problems you can switch from radiobuttonon{Autodetect} to radiobuttonon{Use
+path/port below} and select the path/port your GPS receiver is connected to.
+A click on button{Connect} again initiates the connection to the GPS
+receiver.</p>
+<p>With the slider slider{GPS Cursor Size} you can shrink and grow the position
+cursor on the canvas. Activating radiobuttonon{Auto-add vertices} within GPS
+digitizing your track will automatically be recorded in the active vector layer
+(of course the layer has to be in edit mode).</p>
+<p>With GPS map recenter you can decide in which way the canvas will be
+updated if your recorded coordinates start either to move out of canvas
+or there is any change at all.</p>
+<p>Track color and width sets the color of and the width of your drawn track.</p>
+<p>If you want to set a feature manually you have to go back to
+includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} &#8216;&#8217;Position Coordinates&#8217;&#8217;
+and click on button{Add feature}.</p>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Keyboard shortcuts can now be configured manually
+(shortcuts presented in this section are the defaults), using the Configure
+Shortcuts tool under Settings Menu.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dxf2Shp Converter Plugin}label{dxf2shape &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/plugins/plugins_dxf2shape_converter.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <p>%  !TeX  root  =  user_guide.tex</p>
+<div class="section" id="dxf2shp-converter-plugin-label-dxf2shape">
+<h1>Dxf2Shp Converter Plugin}label{dxf2shape<a class="headerlink" href="#dxf2shp-converter-plugin-label-dxf2shape" title="Permalink to this headline">¶</a></h1>
+<p>% when the revision of a section has been finalized,
+% comment out the following line:
+% updatedisclaimer</p>
+<p>The dxf2shape converter plugin can be used to convert vector data from DXF to Shapefile
+format. It requires the following parameters to be specified before running:</p>
+<ul class="simple">
+<li><strong>Input DXF file</strong>: Enter path to the DXF file to be converted</li>
+<li><strong>Output Shp file</strong>: Enter desired name of the Shapefile to be created</li>
+<li><strong>Output file type</strong>: Specify the geometry type of the output Shapefile.</li>
+</ul>
+<p>Currently supported types are polyline, polygon, and point.
+*  <strong>Export text labels</strong>: When this checkbox is enabled, an additional Shapefile point layer will be created, and the associated dbf table will contain information about the &#8220;TEXT&#8221; fields found in the dxf file, and the text strings themselves.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=12cm]{dxf2shape_dialog}
+caption{Dxf2Shape Converter Plugin nixcaption}label{fig:dxf2shape_dialog}</dd>
+</dl>
+<p>end{figure}</p>
+<div class="section" id="using-the-plugin">
+<h2>Using the Plugin<a class="headerlink" href="#using-the-plugin" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>#.  Start QGIS, load the Dxf2Shape plugin in the Plugin Manager (see Section
+ref{sec:load_core_plugin}) and click on the toolbtntwo{dxf2shp_converter}{Dxf2Shape Converter}
+icon which appears in the QGIS toolbar menu. The Dxf2Shape plugin dialog appears as shown in Figure ref{fig:dxf2shape_dialog}.
+#.  Enter input DXF file, a name for the output Shapefile and the Shapefile type.
+#.  Enable the checkbox{Export text labels} checkbox if you want to create an extra point layer with labels.
+#.  Click button{Ok}.</div></blockquote>
+<p>FloatBarrier</p>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

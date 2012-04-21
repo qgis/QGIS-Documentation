@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Working with Projections}label{label_projections &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/working/working_with_projections.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <p>%  !TeX  root  =  user_guide.tex</p>
+<div class="section" id="working-with-projections-label-label-projections">
+<h1>Working with Projections}label{label_projections<a class="headerlink" href="#working-with-projections-label-label-projections" title="Permalink to this headline">¶</a></h1>
+<p><span class="target" id="index-0"></span>Projections!working with</p>
+<p>% when the revision of a section has been finalized,
+% comment out the following line:
+%updatedisclaimer</p>
+<p>QGIS allows users to define a global and project-wide CRS (Coordinate
+Reference System) for layers without a pre-defined CRS. It also allows
+the user to define custom coordinate reference systems and supports
+on-the-fly (OTF) projection of vector and raster layers. All these
+features allow the user to display layers with different CRS and have
+them overlay properly.</p>
+<div class="section" id="overview-of-projection-support-label-label-projoverview">
+<h2>Overview of Projection Support}label{label_projoverview<a class="headerlink" href="#overview-of-projection-support-label-label-projoverview" title="Permalink to this headline">¶</a></h2>
+<p>QGIS has support for approximately 2,700 known CRS. Definitions for
+each of these CRS are stored in a SQLite database that is installed with
+QGIS. Normally you do not need to manipulate the database directly. In fact,
+doing so may cause projection support to fail. Custom CRS are stored in a
+user database. See Section ref{sec:customprojections} for
+information on managing your custom coordinate reference systems.</p>
+<p>The CRS available in QGIS are based on those defined by the European
+Petroleum Group (ESPG):index:<cite>ESPG</cite> and the Institut Geographique
+National of France (IGNF):index:<cite>IGNF</cite> and are largely abstracted
+from the spatial reference tables used in GDAL:index:<cite>GDAL</cite>. EPSG identifiers
+are present in the database and can be used to specify a CRS in QGIS.</p>
+<p>In order to use OTF projection, your data must contain information about its
+coordinate reference system or you have to define a global, layer or
+project-wide CRS. For PostGIS layers QGIS uses the spatial reference
+identifier that was specified when the layer was created. For data supported
+by OGR, QGIS relies on the presence of a recognised means of specifying
+the CRS. In the case of shapefiles, this means a file containing the Well
+Known Text (WKT):index:<cite>WKT</cite> specification of the CRS. This projection file
+has the same base name as the shapefile and a prj extension. For example, a
+shapefile named filename{alaska.shp} would have a corresponding projection
+file named filename{alaska.prj}.</p>
+<p>Whenever you select a new CRS, the used layer units will automatically be
+changed in the tab{General} tab of the
+dropmenuopttwo{mActionOptions}{Project Properties} dialog under the
+mainmenuopt{Edit} (Gnome, OSX) or mainmenuopt{Settings} (KDE, Windows)
+menu.</p>
+</div>
+<div class="section" id="specifying-a-projection">
+<h2>Specifying a Projection<a class="headerlink" href="#specifying-a-projection" title="Permalink to this headline">¶</a></h2>
+<p><span class="target" id="index-1"></span>Projections!specifying
+label{sec:projection-specifying}</p>
+<dl class="docutils">
+<dt>begin{figure}[bt]</dt>
+<dd>centering
+includegraphics[clip=true, width=12cm]{crsdialog}
+caption{CRS tab in the QGIS Options Dialog osxcaption}label{fig:crsdialog}</dd>
+</dl>
+<p>end{figure}</p>
+<p>QGIS starts each new project using the global default projection.The
+global default CRS is EPSG:4326 - WGS 84 (texttt{proj=longlat</p>
+<blockquote>
+<div>+ellps=WGS84 +datum=WGS84 +no_defs}) and comes predefined in</div></blockquote>
+<dl class="docutils">
+<dt>QGIS. This default can be changed using the button{Select Global</dt>
+<dd>Default} button shown in Figure~ref{fig:crsdialog}. This choice</dd>
+</dl>
+<p>will be saved for use in subsequent QGIS sessions.</p>
+<p>When you use layers that do not have a CRS, you need to define how
+QGIS responds to these layers. This can be done globally or
+project-wide in the tab{CRS} tab under mainmenuopt{Edit} arrow
+dropmenuopttwo{mActionOptions}{Options} (Gnome, OSX) or
+mainmenuopt{Settings} arrow dropmenuopttwo{mActionOptions}{Options}
+(KDE, Windows).</p>
+<p>The options shown in Figure~ref{fig:crsdialog} are:</p>
+<p>[label=&#8211;]
+*  checkbox{Prompt for CRS}
+*  checkbox{Project wide default CRS will be used}
+*  checkbox{Global default CRS displayed below will be used}</p>
+<p>If you want to define the coordinate reference system for a certain
+layer without CRS information, you can also do that in the
+tab{General} tab of the raster (Section ref{label_generaltab}) and
+vector (Section ref{vectorgeneraltab}) properties dialog. If your
+layer already has a CRS defined, it will be displayed as shown in
+Figure~ref{fig:vector_symbology}.</p>
+<p>begin{Tip}
+caption{textsc{CRS in the Map Legend}} Right clicking on a layer in
+the Map Legend (Section ref{label_legend}) provides two CRS short cuts.</p>
+<ul class="simple">
+<li>dropmenuopt{Set layer CRS} takes you directly to the Coordinate</li>
+</ul>
+<blockquote>
+<div>Reference System Selector dialog. Which you also get to by the
+button{Select} button on the button{General} tab of the layer
+properties dialog.</div></blockquote>
+<ul class="simple">
+<li>dropmenuopt{Set project CRS from Layer} redefines the project</li>
+</ul>
+<blockquote>
+<div>CRS using the layer&#8217;s CRS</div></blockquote>
+<p>end{Tip}</p>
+</div>
+<div class="section" id="define-on-the-fly-otf-projection-label-label-projstart">
+<h2>Define On The Fly (OTF) Projection}label{label_projstart<a class="headerlink" href="#define-on-the-fly-otf-projection-label-label-projstart" title="Permalink to this headline">¶</a></h2>
+<p>QGIS now supports OTF projection for both raster and vector
+data. However, OTF is not activated by default. To use OTF projection,
+you must activate the checkbox{Enable on the fly projection} checkbox
+in the tab{CRS} tab of the dropmenuopttwo{mActionProjectProperties}{Project</p>
+<blockquote>
+<div>Properties} dialog.</div></blockquote>
+<p>There are three ways to achieve this end:</p>
+<p>#.  Select dropmenuopttwo{mActionOptions}{Project Properties} from the
+mainmenuopt{Edit} (Gnome, OSX) or mainmenuopt{Settings} (KDE, Windows) menu.
+#.  Click on the toolbtntwo{geographic}{CRS status} icon in the
+lower right-hand corner of the statusbar.
+#.  Turn OTF on by default, by selecting the tab{CRS} tab of the</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>dialog{Options} dialog and selecting checkbox{Enable &#8216;on the fly&#8217;</dt>
+<dd>reprojection by default}</dd>
+</dl>
+</div></blockquote>
+<p>If you have already loaded a layer, and want to enable OTF projection, the
+best practice is to open the tab{Coordinate Reference System} tab of the
+dialog{Project Properties} dialog, select the a CRS, and activate the
+checkbox{Enable on the fly projection} checkbox. The
+toolbtntwo{geographic}{CRS status} icon will no longer be greyed-out
+and all layers will be OTF projected to the CRS shown next to the icon.</p>
+<p>The tab{Coordinate Reference System} tab of the dialog{Project Properties}
+dialog contains five important components as shown in Figure
+ref{fig:projections} and described below.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=10cm]{projectionDialog}
+caption{Projection Dialog wincaption}label{fig:projections}</dd>
+</dl>
+<p>end{figure}</p>
+<p>#.  <strong>Enable on the fly projection}index{Projections!enabling</strong> -
+this checkbox is used to enable or disable OTF projection. When off, each
+layer is drawn using the coordinates as read from the data source. When on,
+the coordinates in each layer are projected to the coordinate reference
+system defined for the map canvas.
+#.  <strong>Coordinate Reference System</strong> - this is a list of all CRS
+supported by QGIS, including Geographic, Projected and Custom coordinate
+reference systems. To use a CRS, select it from the list by expanding
+the appropriate node and selecting the CRS. The active CRS is preselected.
+#.  <strong>Proj4 text</strong> - this is the CRS string used by the Proj4
+projection engine. This text is read-only and provided for informational
+purposes.
+#.  <strong>Search</strong> - if you know the EPSG code, the identifier or the name
+for a Coordinate Reference System, you can use the search feature to find it.
+Enter the identifier and click on button{Find}. Use the checkbox{Hide
+deprecated CRSs} checkbox to show only the currently valid projections.
+#.  <strong>Recently used CRS</strong> - if you have certain CRS that you frequently
+use in your everyday GIS work, these will be displayed in the table
+at the bottom of the Projection Dialog. Click on one of these buttons to select
+the associated CRS.</p>
+<p>begin{Tip}
+caption{textsc{Project Properties Dialog}}
+If you open the dialog{Project Properties} dialog from the
+mainmenuopt{Edit} (Gnome, OSX) or mainmenuopt{Settings}
+(KDE, Windows) menu, you must click on the tab{Coordinate Reference
+System} tab to view the CRS settings. Opening the dialog from the
+toolbtntwo{geographic}{CRS status} icon will automatically bring
+the tab{Coordinate Reference System} tab to the front.
+end{Tip}</p>
+</div>
+<div class="section" id="custom-coordinate-reference-system-label-sec-customprojections">
+<h2>Custom Coordinate Reference System}label{sec:customprojections<a class="headerlink" href="#custom-coordinate-reference-system-label-sec-customprojections" title="Permalink to this headline">¶</a></h2>
+<p><span class="target" id="index-2"></span>Projections!custom</p>
+<p>If QGIS does not provide the coordinate reference system you need, you
+can define a custom CRS. To define a CRS, select
+dropmenuopttwo{mIconNew}{Custom CRS} from the mainmenuopt{Edit}
+(Gnome, OSX) or mainmenuopt{Settings} (KDE, Windows) menu.
+Custom CRS are stored in your QGIS user database. In addition to your custom
+CRS, this database also contains your spatial bookmarks and other custom data.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=8cm]{customProjectionDialog}
+caption{Custom CRS Dialog nixcaption}label{fig:customprojections}</dd>
+</dl>
+<p>end{figure}</p>
+<p>Defining a custom CRS in QGIS requires a good understanding of the Proj.4
+projection library. To begin, refer to the Cartographic Projection Procedures
+for the UNIX Environment - A User&#8217;s Manual by Gerald I. Evenden, U.S.
+Geological Survey Open-File Report 90-284, 1990 (available at url{<a class="reference external" href="ftp://ftp.remotesensing.org/proj/OF90-284.pdf">ftp://ftp.remotesensing.org/proj/OF90-284.pdf</a>}).
+This manual describes the use of the usertext{proj.4} and related command line
+utilities. The cartographic parameters used with usertext{proj.4} are
+described in the user manual, and are the same as those used by QGIS.</p>
+<p>The dialog{Custom Coordinate Reference System Definition} dialog requires
+only two parameters to define a user CRS:</p>
+<ol class="arabic simple">
+<li>a descriptive name and</li>
+<li>the cartographic parameters in PROJ.4 format.</li>
+</ol>
+<p>To create a new CRS, click the toolbtntwo{mIconNew}{New} button and enter a
+descriptive name and the CRS parameters. After that you can save your CRS by
+clicking the button toolbtntwo{mActionFileSave}{Save}.</p>
+<p>Note that the guilabel{Parameters} must begin with a usertext{+proj=}-block,
+to represent the new coordinate reference system.</p>
+<p>You can test your CRS parameters to see if they give sane results by
+clicking on the button{Calculate} button inside the guiheading{Test} block
+and pasting your CRS parameters into
+the guilabel{Parameters} field. Then enter known WGS 84 latitude and longitude
+values in guilabel{North} and guilabel{East} fields respectively.
+Click on button{Calculate} and compare the results with the known values in
+your coordinate reference system.</p>
+<p>FloatBarrier</p>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

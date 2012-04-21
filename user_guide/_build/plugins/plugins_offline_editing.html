@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Offline Editing Plugin}label{sec:offlinedit &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/plugins/plugins_offline_editing.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <p>%  !TeX  root  =  user_guide.tex</p>
+<div class="section" id="offline-editing-plugin-label-sec-offlinedit">
+<h1>Offline Editing Plugin}label{sec:offlinedit<a class="headerlink" href="#offline-editing-plugin-label-sec-offlinedit" title="Permalink to this headline">¶</a></h1>
+<p>% when the revision of a section has been finalized,
+% comment out the following line:
+%updatedisclaimer</p>
+<p>For data collection, it is a common situation to work with a laptop or a cell
+phone offline in the field. Upon returning to the network, the changes need to
+be synchronized with the master data source, e.g. a PostGIS database. If several
+persons are working simultaneously on the same datasets, it is difficult to
+merge the edits by hand, even if people don’t change the same features.</p>
+<p>The toolbtntwo{offline_editing_copy}{Offline Editing} Plugin automates the synchronisation by copying the content of a datasource (usually PostGIS or
+WFS-T) to a spatialite database and storing the offline edits to dedicated
+tables. After being connected to the network again, it is possible to apply the offline edits to the master dataset.</p>
+<div class="section" id="using-the-plugin">
+<h2>Using the plugin<a class="headerlink" href="#using-the-plugin" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Open some vector layers, e.g. from a PostGIS or WFS-T datasource</li>
+<li>Save it as a project</li>
+<li>Press the &#8216;Convert to offline project&#8217; button and select the layers to</li>
+</ul>
+<p>save. The content of the layers is saved to spatialite tables.
+*  Edit the layers offline.
+*  After being connected again, upload the changes with the &#8216;Synchronize&#8217;
+button.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=12cm]{create_offline_project}
+caption{Create an offline project from PostGIS or WFS layers nixcaption}
+label{fig:offlineproject}</dd>
+</dl>
+<p>end{figure}</p>
+<p>FloatBarrier</p>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

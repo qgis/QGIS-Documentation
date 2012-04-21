@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>GDAL Tools Plugin}label{label_plugingdaltools &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/plugins/plugins_gdaltools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <p>%  !TeX  root  =  user_guide.tex</p>
+<div class="section" id="gdal-tools-plugin-label-label-plugingdaltools">
+<h1>GDAL Tools Plugin}label{label_plugingdaltools<a class="headerlink" href="#gdal-tools-plugin-label-label-plugingdaltools" title="Permalink to this headline">¶</a></h1>
+<p>% when the revision of a section has been finalized,
+% comment out the following line:
+% updatedisclaimer</p>
+<div class="section" id="what-is-gdaltools-label-whatsgdal">
+<h2>What is GDALTools?}label{whatsgdal<a class="headerlink" href="#what-is-gdaltools-label-whatsgdal" title="Permalink to this headline">¶</a></h2>
+<p>The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial Data Abstraction Library, url{<a class="reference external" href="http://gdal.osgeo.org">http://gdal.osgeo.org</a>}. These are raster management tools to query, re-project, warp, merge a wide variety of raster formats. Also included are tools to create a contour (vector) layer, or a shaded relief from a raster DEM, and to make a vrt (Virtual Raster Tile in XML format) from a collection of one or more raster files. These tools are available when the plugin is installed and activated.
+The GDAL Library}label{gdal_lib
+<strong>****************************</strong></p>
+<p>The GDAL library consists of a set of command line programs, each with a large list of options. Users comfortable with running commands from a terminal may prefer the command line, with access to the full set of options. The GDALTools plugin offers an easy interface to the tools, exposing only the most popular options.</p>
+<p>{setlength{extrarowheight}{15pt}
+begin{longtable}{<a href="#id1"><span class="problematic" id="id2">|p{3cm}|p{13cm}|</span></a>}
+caption{List of GDAL tools}label{tab:gdaltools} \
+hline
+Build Virtual Raster &amp; This program builds a VRT (Virtual Dataset) that is a mosaic of the list of input gdal datasets. \
+hline Contour &amp; This program generates a vector contour file from the input raster elevation model (DEM).\
+hline Rasterize &amp;  This program burns vector geometries (points, lines and polygons) into the raster band(s) of a raster image. Vectors are read from OGR supported vector formats. Note that the vector data must in the same coordinate system as the raster data; on the fly reprojection is not provided.\
+hline Polygonize &amp; This utility creates vector polygons for all connected regions of pixels in the raster sharing a common pixel value. Each polygon is created with an attribute indicating the pixel value of that polygon.
+The utility will create the output vector datasource if it does not already exist, defaulting to ESRI shapefile format.\
+hline Merge &amp;  This utility will automatically mosaic a set of images. All the images must be in the same coordinate system and have a matching number of bands, but they may be overlapping, and at different resolutions. In areas of overlap, the last image will be copied over earlier ones. \
+hline Sieve &amp; The gdal_sieve.py script removes raster polygons smaller than a provided threshold size (in pixels) and replaces replaces them with the pixel value of the largest neighbour polygon. The result can be written back to the existing raster band, or copied into a new file.\
+hline Proximity &amp; The gdal_proximity.py script generates a raster proximity map indicating the distance from the center of each pixel to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which the raster pixel value is in the set of target pixel values.\
+hline Near Black &amp; This utility will scan an image and try to set all pixels that are nearly black (or nearly white) around the edge to exactly black (or white). This is often used to &#8220;fix up&#8221; lossy compressed aerial photos so that color pixels can be treated as transparent when mosaicing.\
+hline Warp &amp; The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is &#8220;raw&#8221; with control information. \
+hline Grid &amp; This program creates regular grid (raster) from the scattered data read from the OGR datasource. Input data will be interpolated to fill grid nodes with values, you can choose from various interpolation methods.\
+hline Translate &amp; The gdal_translate utility can be used to convert raster data between different formats, potentially performing some operations like subsettings, resampling, and rescaling pixels in the process.\
+hline Information &amp; The gdalinfo program lists various information about a GDAL supported raster dataset. \
+hline Assign Projection &amp;  The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection, and can also apply GCPs stored with the image if the image is &#8220;raw&#8221; with control information.
+-s_srs srs def:
+source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.
+-t_srs srs_def:
+target spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text. \
+hline Build Overviews &amp;  The gdaladdo utility can be used to build or rebuild overview images for most supported file formats with one of several downsampling algorithms.\
+hline Clipper &amp; This utility will automatically mosaic a set of images. All the images must be in the same coordinate system and have a matching number of bands, but they may be overlapping, and at different resolutions. In areas of overlap, the last image will be copied over earlier ones.
+-ul_lr ulx uly lrx lry:
+The extents of the output file. If not specified the aggregate extents of all input files will be used. \
+hline RGB to PCT &amp;  This utility will compute an optimal pseudo-color table for a given RGB image using a median cut algorithm on a downsampled RGB histogram. Then it converts the image into a pseudo-colored image using the color table. This conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize output image visual quality. \
+hline PCT to RGB &amp;  This utility will convert a pseudocolor band on the input file into an output RGB file of the desired format.\
+hline Tile Index &amp;  This program builds a shapefile with a record for each input raster file, an attribute containing the filename, and a polygon geometry outlining the raster.\
+hline DEM terrain models &amp;  Tools to analyze and visualize DEMs. It can create  a shaded relief, a slope, an aspect, a color relief, a Terrain Ruggedness Index, a  Topographic Position Index and a roughness map from any GDAL-supported elevation raster.\
+hline
+end{longtable}</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+caption{The emph{GDALTools} menu list nixcaption}label{gdaltools_menu}
+includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/raster_menu}</dd>
+</dl>
+<p>end{figure}</p>
+</div>
+<div class="section" id="examples-label-gdal-examples">
+<h2>Examples}label{gdal_examples<a class="headerlink" href="#examples-label-gdal-examples" title="Permalink to this headline">¶</a></h2>
+<p>Below are some examples of use of the tools.
+Getting information about a raster
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+caption{The emph{Information} dialog window nixcaption}label{gdalinfo}
+includegraphics[clip=true, width=10cm]{plugins_gdaltools_images/gdalinfo}</dd>
+</dl>
+<p>end{figure}</p>
+<div class="section" id="creating-contour-lines">
+<h3>Creating contour lines<a class="headerlink" href="#creating-contour-lines" title="Permalink to this headline">¶</a></h3>
+<p>This example will create contour lines from an SRTM elevation tile.
+begin{figure}[ht]</p>
+<blockquote>
+<div>centering
+caption{The emph{Contours} dialog window nixcaption}label{gdal_contour}
+includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/gdal_contour}</div></blockquote>
+<p>end{figure}
+and the result:
+begin{figure}[ht]</p>
+<blockquote>
+<div>centering
+caption{The resulting contours layer nixcaption}label{gdal_contour}
+includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/qgis_contours}</div></blockquote>
+<p>end{figure}</p>
+</div>
+<div class="section" id="using-gdalwarp-to-reproject-a-raster">
+<h3>Using GDALwarp to reproject a raster<a class="headerlink" href="#using-gdalwarp-to-reproject-a-raster" title="Permalink to this headline">¶</a></h3>
+<p>Here&#8217;s the dialog window for reprojecting a landcover image, originally in the Albers Equal Area projection for Alaska (from the QGIS sample dataset) into Lon/Lat WGS84 (EPSG:4326).
+begin{figure}[ht]</p>
+<blockquote>
+<div>centering
+caption{The emph{GDAL warp} dialog window nixcaption}label{gdalwarp}
+includegraphics[clip=true, width=12cm]{plugins_gdaltools_images/gdalwarp}</div></blockquote>
+<p>end{figure}</p>
+<p>FloatBarrier</p>
+</div>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

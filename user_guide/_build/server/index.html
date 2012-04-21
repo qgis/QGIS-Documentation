@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>QGIS Server &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" />
+    <link rel="prev" title="Features at a Glance" href="../introduction/features_at_a_glance.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">QGIS Server</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sample-installation-on-debian-squeeze">Sample installation on Debian Squeeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-wms-from-a-qgis-project">Creating a WMS from a QGIS project</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../introduction/features_at_a_glance.html"
+                        title="previous chapter">Features at a Glance</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/server/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <div class="section" id="qgis-server">
+<span id="label-qgisserver"></span><h1>QGIS Server<a class="headerlink" href="#qgis-server" title="Permalink to this headline">¶</a></h1>
+<p><span class="target" id="index-0"></span>WMS!QGIS Server</p>
+<p>QGIS Server is an open source WMS 1.3 implementation which, in addition,
+implements advanced cartographic features for thematic mapping. The QGIS
+Server is a FastCGI/CGI (Common Gateway Interface) application written in
+C++ that works together with a webserver (e.g. Apache, Lighttpd). It is
+funded by the EU projects Orchestra, Sany and the city of Uster in Switzerland.</p>
+<p>It uses QGIS as backend for the GIS logic and for map rendering. Furthermore the
+Qt library is used for graphics and for platform independent
+C++ programming. In contrast to other WMS software, the QGIS Server uses
+cartographic rules in SLD/SE as a configuration language, both for the server
+configuration and for the user-defined cartographic rules.</p>
+<p>Moreover, the QGIS Server project provides the &#8216;Publish to Web&#8217; plugin, a
+plugin for QGIS desktop which exports the current layers and symbology as a
+web project for QGIS Server (containing cartographic visualization rules
+expressed in SLD).</p>
+<p>As QGIS desktop and QGIS Server use the same visualization libraries, the
+maps that are published on the web look the same as in desktop GIS. The
+Publish to Web plugin currently supports basic symbolization, with more complex
+cartographic visualization rules introduced manually. As the configuration is
+performed with the SLD standard and its documented extensions, there is only
+one standardised language to learn, which greatly simplifies the complexity
+of creating maps for the Web.</p>
+<p>In one of the following manuals we will provide a sample configuration to
+set up a QGIS Server. But for now we recommend to read one of the following
+URLs to get more information:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://karlinapp.ethz.ch/qgis_wms/">http://karlinapp.ethz.ch/qgis_wms/</a></li>
+<li><a class="reference external" href="http://www.qgis.org/wiki/QGIS_mapserver_tutorial">http://www.qgis.org/wiki/QGIS_mapserver_tutorial</a></li>
+<li><a class="reference external" href="http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/">http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/</a></li>
+</ul>
+<div class="section" id="sample-installation-on-debian-squeeze">
+<h2>Sample installation on Debian Squeeze<a class="headerlink" href="#sample-installation-on-debian-squeeze" title="Permalink to this headline">¶</a></h2>
+<p>At this point we will give a short and simple sample installation howto for
+Debian Squeeze. Many other OS provide packages for QGIS Server, too. If you
+have to build it all from source, please refer to the URLs above.</p>
+<p>Apart from qgis and qgis-mapserver you need a webserver, in our case apache2.
+You can install all packages with aptitude or apt-get install together
+with other necessary dependency packages.</p>
+<p>After installation you should test, if the webserver and qgis server works as
+expected.</p>
+<p>Make sure the apache server is runnung with &#8216;/etc/init.d/apache2 start&#8217;. Open
+a web browser and type URL: <a class="reference external" href="http://localhost">http://localhost</a>. If apache is up, you should see
+the message &#8216;It works!&#8217;.</p>
+<p>Now we test the qgis server installation. The qgis_mapserv.fcgi is available at
+/usr/lib/cgi-bin/qgis_mapserv.fcgi and provides a standard wms that shows the
+state boundaries of the Unites States of America ref{fig:usa_wms}. Add
+the WMS with the URL http://localhost/cgi-bin/qgis_mapserv.fcgi as described
+in section ref{sec:ogc-wms-servers}.</p>
+<div class="figure align-center" id="fig-startup">
+<img alt="../_images/standard_wms_usa.png" src="../_images/standard_wms_usa.png" style="width: 40em;" />
+<p class="caption">Standard WMS with USA boundaries included in the qgis server (KDE)</p>
+</div>
+</div>
+<div class="section" id="creating-a-wms-from-a-qgis-project">
+<span id="sec-ogc-wms-servers"></span><h2>Creating a WMS from a QGIS project<a class="headerlink" href="#creating-a-wms-from-a-qgis-project" title="Permalink to this headline">¶</a></h2>
+<p>To provide a new qgis wms server we have to create a qgis project file with some
+data. Here we use the &#8216;regions&#8217; and the &#8216;aiport&#8217; shapefiles from the
+qgis_sample_dataset.</p>
+<p>First load the shapefiles and define the colors and styles of the layers in
+QGIS and define the project CRS, if not already done. In a next step define the
+fields &#8216;Service Capabilities&#8217;, &#8216;Coordinate System Restrictions&#8217; and &#8216;Advertised
+Extend&#8217; under <em class="menuselection">Settings ==&gt; Project Properties ==&gt; WMS Server</em>
+and define the fields &#8216;Service Capabilities&#8217;, &#8216;Coordinate System Restrictions&#8217;
+and &#8216;Advertised Extend&#8217;. Additionally you can enable the checkbox
+checkbox{Add WKT geometry to feature into response} to make the layers
+queryable (see figure <a href="#id1"><span class="problematic" id="id2">`fig:wms_server_definition`_</span></a>). Now save the session in a
+project file &#8216;alaska_airports.qgs&#8217;.</p>
+<div class="figure align-center" id="fig-wms-server-definition">
+<img alt="../_images/wms_server_definition.png" src="../_images/wms_server_definition.png" style="width: 40em;" />
+<p class="caption">Definitions for a qgis project WMS server (KDE)</p>
+</div>
+<p>To provide the project as a WMS, we create a new folder &#8216;/usr/lib/cgi-bin/project&#8217;
+with admin privileges and add the project file &#8216;alaska_airports.qgs&#8217; and a copy
+of the qgis_mapserv.fcgi file - that&#8217;s all.</p>
+<p>Now we test our project WMS, add the WMS with the URL
+&#8216;<a class="reference external" href="http://localhost/cgi-bin/project/qgis_mapserv.fcgi">http://localhost/cgi-bin/project/qgis_mapserv.fcgi</a>&#8216; as described in section
+<a class="reference internal" href="#sec-ogc-wms-servers">sec_ogc_wms_servers</a> to QGIS and load the WMS, see figure <a class="reference internal" href="#fig-wmsproject">fig_wmsproject</a></p>
+<div class="figure align-center" id="fig-wmsproject">
+<img alt="../_images/wms_server_project.png" src="../_images/wms_server_project.png" style="width: 40em;" />
+<p class="caption">QGIS WMS Server based on a qgis project (KDE)</p>
+</div>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

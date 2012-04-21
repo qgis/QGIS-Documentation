@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Delimited Text Plugin}label{label_dltext &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="../preamble.html">Preamble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/plugins/plugins_delimited_text.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <p>%  !TeX  root  =  user_guide.tex</p>
+<div class="section" id="delimited-text-plugin-label-label-dltext">
+<h1>Delimited Text Plugin}label{label_dltext<a class="headerlink" href="#delimited-text-plugin-label-label-dltext" title="Permalink to this headline">¶</a></h1>
+<p>% when the revision of a section has been finalized,
+% comment out the following line:
+% updatedisclaimer</p>
+<p>The Delimited Text plugin allows you to load a delimited text file as a layer in QGIS.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>To view a delimited text file as layer, the text file must contain:</p>
+<ol class="arabic simple">
+<li>A delimited header row of field names. This must be the first line in the text file.</li>
+<li>The header row must contain an X and Y field. These fields can have any name.</li>
+<li>The x and y coordinates must be specified as a number. The coordinate system is not important.</li>
+</ol>
+<p>As an example of a valid text file we import the elevation point data file
+filename{elevp.csv} coming with the QGIS sample dataset (See Section~ref{label_sampledata}):</p>
+<p>X;Y;ELEV
+-300120;7689960;13
+-654360;7562040;52
+1640;7512840;3
+[...]</p>
+<p>Some items of note about the text file are:</p>
+<p>#.  The example text file uses mbox{$;$} as delimiter. Any character can be
+used to delimit the fields.
+#.  The first row is the header row. It contains the fields X, Y and ELEV.
+#.  No quotes ({tt{}&#8221;{}}) are used to delimit text fields.
+#.  The x coordinates are contained in the {em X} field.
+#.  The y coordinates are contained in the {em Y} field.</p>
+</div>
+<div class="section" id="using-the-plugin">
+<h2>Using the Plugin<a class="headerlink" href="#using-the-plugin" title="Permalink to this headline">¶</a></h2>
+<p>To use the plugin you must first enable it as described in Section
+ref{sec:managing_plugins}.</p>
+<p>Click the new toolbar icon toolbtntwo{delimited_text}{Add Delimited Text Layer}
+to open the Delimited Text dialog as shown in figure
+ref{fig:delim_text_plugin_dialog}.</p>
+<dl class="docutils">
+<dt>begin{figure}[ht]</dt>
+<dd>centering
+includegraphics[clip=true, width=10cm]{delimited_text_dialog}
+caption{Delimited Text Dialog nixcaption}label{fig:delim_text_plugin_dialog}</dd>
+</dl>
+<p>end{figure}</p>
+<p>First select the file (e.g., filename{qgis_sample_data/csv/elevp.csv}) to
+import by clicking on the button{Browse} button. Once the file is selected,
+the plugin attempts to parse the file using the last used delimiter, in this
+case a semi-colon (mbox{$;$}). To properly parse the file, it
+is important to select the correct delimiter. To change the delimiter to tab use
+mbox{$backslash$}t (this is a regular expression for the tab character).</p>
+<p>Once the file is parsed, choose the X and Y fields from the drop down lists and
+if available also the WKT field for the CRS information. Finally enter a Layer
+name (e.g., filename{elevp} ) as shown in Figure ref{fig:delim_text_plugin_dialog}. T
+o add the layer to the map, click button{OK}. The delimited text file now
+behaves as any other map layer in QGIS.</p>
+<p>FloatBarrier</p>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>

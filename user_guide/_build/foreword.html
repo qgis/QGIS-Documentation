@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Foreword &mdash; QGIS User Guide 1.7.4 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/linfiniti.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="QGIS User Guide 1.7.4 documentation" href="index.html" />
+    <link rel="next" title="Conventions" href="conventions.html" />
+    <link rel="prev" title="Preamble" href="preamble.html" /> 
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+      <div class="well sidebar-nav">
+          <a class="brand" href="http://qgis.org">
+          <br />
+          <center>QGIS User Guide</center></a>
+            <h4>Contents</h4>
+            <hr />
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preamble.html">Preamble</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Foreword</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#features">Features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/index.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server/index.html">QGIS Server</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="preamble.html"
+                        title="previous chapter">Preamble</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="conventions.html"
+                        title="next chapter">Conventions</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/foreword.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            
+            
+            
+          <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/"><img
+            alt="Creative Commons License" style="border-width:0"
+            src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a><br
+          /><span xmlns:dct="http://purl.org/dc/terms/"
+            property="dct:title">Linfiniti Sphinx Theme</span> by <a
+            xmlns:cc="http://creativecommons.org/ns#"
+            href="http://linfiniti.com" property="cc:attributionName"
+            rel="cc:attributionURL">Linfiniti Consulting CC.</a> is licensed
+          under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/3.0/">Creative
+            Commons Attribution-ShareAlike 3.0 Unported License</a>.<br />Based
+          on a work at <a xmlns:dct="http://purl.org/dc/terms/"
+            href="https://github.com/timlinux/linfiniti-sphinx-theme"
+            rel="dct:source">github.com</a>.
+      </div>
+        </div><!-- span9 -->
+        <div class="span9">
+              
+  <div class="section" id="foreword">
+<h1>Foreword<a class="headerlink" href="#foreword" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the wonderful world of Geographical Information Systems (GIS)!
+Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
+was born in May of 2002 and was established as a project on SourceForge in June
+of the same year. We&#8217;ve worked hard to make GIS software (which is traditionally
+expensive proprietary software) a viable prospect for anyone with basic access
+to a Personal Computer. QGIS currently runs on most Unix platforms, Windows, and
+OS X. QGIS is developed using the Qt toolkit (<a class="reference external" href="http://qt.nokia.com">http://qt.nokia.com</a>)
+and C++. This means that QGIS feels snappy to use and has a pleasing,
+easy-to-use graphical user interface (GUI).</p>
+<p>QGIS aims to be an easy-to-use GIS, providing common functions and features.
+The initial goal was to provide a GIS data viewer. QGIS has reached the point
+in its evolution where it is being used by many for their daily GIS data viewing
+needs. QGIS supports a number of raster and vector data formats, with new
+format support easily added using the plugin architecture.</p>
+<p>QGIS is released under the GNU General Public License (GPL). Developing QGIS
+under this license means that you can inspect and modify the source code,
+and guarantees that you, our happy user, will always have access to a GIS
+program that is free of cost and can be freely modified. You should have
+received a full copy of the license with your copy of QGIS, and you also can
+find it in Appendix <a href="#id1"><span class="problematic" id="id2">`gpl_appendix`_</span></a>.</p>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p>QGIS offers many common GIS functionalities provided by core features and
+plugins. As a short summary they are presented in six categories to gain a
+first insight.</p>
+<div class="section" id="view-data">
+<h3>View data<a class="headerlink" href="#view-data" title="Permalink to this headline">¶</a></h3>
+<p>You can view and overlay vector and raster data in different formats and
+projections without conversion to an internal or common format. Supported
+formats include:</p>
+<ul class="simple">
+<li>Spatially-enabled tables using PostGIS and SpatiaLite, vector
+formats supported by the installed OGR library, including ESRI shapefiles,
+MapInfo, SDTS, GML and many more.</li>
+<li>Raster and imagery formats supported by the installed GDAL (Geospatial
+Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
+Grid, JPEG, PNG and many more.</li>
+<li>SpatiaLite databases (see Section <a href="#id3"><span class="problematic" id="id4">`label_spatialite`_</span></a>)</li>
+<li>GRASS raster and vector data from GRASS databases (location/mapset),
+see Section <a href="#id5"><span class="problematic" id="id6">`sec_grass`_</span></a>.</li>
+<li>Online spatial data served as OGC-compliant Web Map Service (WMS) or
+Web Feature Service (WFS), see Section <a href="#id7"><span class="problematic" id="id8">`working_with_ogc`_</span></a>.</li>
+<li>OpenStreetMap data (see Section <a href="#id9"><span class="problematic" id="id10">`plugins_osm`_</span></a>).</li>
+</ul>
+</div>
+<div class="section" id="explore-data-and-compose-maps">
+<h3>Explore data and compose maps<a class="headerlink" href="#explore-data-and-compose-maps" title="Permalink to this headline">¶</a></h3>
+<p>You can compose maps and interactively explore spatial data with a friendly
+GUI. The many helpful tools available in the GUI include:</p>
+<ul class="simple">
+<li>on the fly projection</li>
+<li>map composer</li>
+<li>overview panel</li>
+<li>spatial bookmarks</li>
+<li>identify/select features</li>
+<li>edit/view/search attributes</li>
+<li>feature labeling</li>
+<li>change vector and raster symbology</li>
+<li>add a graticule layer - now via fTools plugin</li>
+<li>decorate your map with a north arrow scale bar and copyright label</li>
+<li>save and restore projects</li>
+</ul>
+</div>
+<div class="section" id="create-edit-manage-and-export-data">
+<h3>Create, edit, manage and export data<a class="headerlink" href="#create-edit-manage-and-export-data" title="Permalink to this headline">¶</a></h3>
+<p>You can create, edit, manage and export vector maps in several formats. Raster
+data have to be imported into GRASS to be able to edit and export them into
+other formats. QGIS offers the following:</p>
+<ul class="simple">
+<li>Digitizing tools for OGR supported formats and GRASS vector layer.</li>
+<li>Create and edit shapefiles and GRASS vector layers.</li>
+<li>Geocode images with the Georeferencer plugin.</li>
+<li>GPS tools to import and export GPX format, and convert other GPS
+formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been
+addedto list of GPS devices).</li>
+<li>Visualize and edit OpenStreetMap data.</li>
+<li>Create PostGIS layers from shapefiles with the SPIT plugin.</li>
+<li>Improved handling of PostGIS tables.</li>
+<li>Manage vector attribute tables with the new attribute table (see Section
+<a href="#id11"><span class="problematic" id="id12">`sec_attribute_table`_</span></a>) or Table Manager plugin.</li>
+<li>Save screenshots as georeferenced images.</li>
+</ul>
+</div>
+<div class="section" id="analyse-data">
+<h3>Analyse data<a class="headerlink" href="#analyse-data" title="Permalink to this headline">¶</a></h3>
+<p>You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
+supported formats using the fTools Python plugin. QGIS currently offers
+vector analysis, sampling, geoprocessing, geometry and database management
+tools. You can also use the integrated GRASS tools, which
+include the complete GRASS functionality of more than 400 modules (See Section
+<a href="#id13"><span class="problematic" id="id14">`sec_grass`_</span></a>).</p>
+</div>
+<div class="section" id="publish-maps-on-the-internet">
+<h3>Publish maps on the Internet<a class="headerlink" href="#publish-maps-on-the-internet" title="Permalink to this headline">¶</a></h3>
+<p>QGIS can be used to export data to a mapfile and to publish them on the
+Internet using a webserver with UMN MapServer installed. QGIS can also
+be used as a WMS or WFS client, and as WMS server.</p>
+</div>
+<div class="section" id="extend-qgis-functionality-through-plugins">
+<h3>Extend QGIS functionality through plugins<a class="headerlink" href="#extend-qgis-functionality-through-plugins" title="Permalink to this headline">¶</a></h3>
+<p>QGIS can be adapted to your special needs with the extensible
+plugin architecture. QGIS provides libraries that can be used to create
+plugins.  You can even create new applications with C++ or Python!</p>
+</div>
+<div class="section" id="core-plugins">
+<h3>Core Plugins<a class="headerlink" href="#core-plugins" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Add Delimited Text Layer (Loads and displays delimited text files
+containing x,y coordinates).</li>
+<li>Coordinate Capture (Capture mouse coordinates in different CRS).</li>
+<li>Decorations (Copyright Label, North Arrow and Scale bar).</li>
+<li>Diagram Overlay (Placing diagrams on vector layer).</li>
+<li>Displacement Plugin (Handle point displacement in case points have the same
+position).</li>
+<li>Dxf2Shp Converter (Convert DXF to Shape).</li>
+<li>GPS Tools (Loading and importing GPS data).</li>
+<li>GRASS (GRASS GIS integration).</li>
+<li>GDALTools (Integrate GDAL Tools into QGIS).</li>
+<li>Georeferencer GDAL (Adding projection information to raster using GDAL).</li>
+<li>Interpolation plugin (interpolate based on vertices of a vector layer).</li>
+<li>Mapserver Export (Export QGIS project file to a MapServer map file).</li>
+<li>Offline Editing (Allow offline editing and synchronizing with database).</li>
+<li>OpenStreetMap plugin (Viewer and editor for openstreetmap data).</li>
+<li>Oracle Spatial GeoRaster support.</li>
+<li>Plugin Installer (Download and install QGIS python plugins).</li>
+<li>Raster terrain analysis (Raster based terrain analysis).</li>
+<li>Road graph plugin (Shortest Path network analysis).</li>
+<li>SPIT (Import Shapefile to PostgreSQL/PostGIS).</li>
+<li>SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).</li>
+<li>Spatial Query Plugin (make spatial queries on vector layers).</li>
+<li>WFS Plugin (Add WFS layers to QGIS canvas).</li>
+<li>eVIS (Event Visualization Tool).</li>
+<li>fTools (Tools for vector data analysis and management).</li>
+</ol>
+</div>
+<div class="section" id="external-python-plugins">
+<h3>External Python Plugins<a class="headerlink" href="#external-python-plugins" title="Permalink to this headline">¶</a></h3>
+<p>QGIS offers a growing number of external python plugins that are provided by
+the community. These plugins reside in the official PyQGIS repository, and
+can be easily installed using the Python Plugin Installer (See Section
+<a href="#id15"><span class="problematic" id="id16">`sec_plugins`_</span></a>).</p>
+</div>
+<div class="section" id="what-s-new-in-version-current">
+<h3>What&#8217;s new in version CURRENT<a class="headerlink" href="#what-s-new-in-version-current" title="Permalink to this headline">¶</a></h3>
+<p>Please note that this is a release in our &#8216;cutting edge&#8217; release series. As such
+it contains new features and extends the programmatic interface over QGIS 1.0.x
+and QGIS 1.6.0. We recommend that you use this version over previous releases.</p>
+<p>This release includes over 277 bug fixes and many new features and enhancements.</p>
+</div>
+<div class="section" id="symbology-labels-and-diagrams">
+<h3>Symbology labels and diagrams<a class="headerlink" href="#symbology-labels-and-diagrams" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>New symbology now used by default.</li>
+<li>Diagram system that uses the same smart placement system as labeling-ng.</li>
+<li>Export and import of styles (symbology-ng).</li>
+<li>Labels for rules in rule-based renderers.</li>
+<li>Font marker can have an X,Y offset.</li>
+<li>Line symbology:<ul>
+<li>Option to put marker on the central point of a line.</li>
+<li>Option to put marker only on first/last vertex of a line.</li>
+<li>Allow the marker line symbol layer to draw markers on each vertex.</li>
+</ul>
+</li>
+<li>Polygon symbology:<ul>
+<li>Rotation for svg fills.</li>
+<li>Added &#8216;centroid fill&#8217; symbol layer which draws a marker on polygon&#8217;s centroid.</li>
+<li>Allow the line symbol layers to be used for outline of polygon (fill) symbols.</li>
+</ul>
+</li>
+<li>Labels:<ul>
+<li>Ability to set label distance in map units.</li>
+<li>Move/rotate/change label edit tools to interactively change data defined
+label properties.</li>
+</ul>
+</li>
+<li>New Tools:<ul>
+<li>Added GUI for gdaldem.</li>
+<li>Added field calculator with functions like $x, $y and $perimeter.</li>
+<li>Added &#8216;Lines to polygons&#8217; tool to vector menu.</li>
+<li>Added voronoi polygon tool to Vector menu.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="user-interface-updates">
+<h3>User interface updates<a class="headerlink" href="#user-interface-updates" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Allow managing missing layers in a list.</li>
+<li>Zoom to group of layers.</li>
+<li>&#8216;Tip of the day&#8217; on startup. You can en/disable tips in the options panel.</li>
+<li>Better organisation of menus, separate database menu added.</li>
+<li>Add ability to show number of features in legend classes. Accessible via
+right-click legend menu.</li>
+<li>General clean-ups and usability improvements.</li>
+</ul>
+</div>
+<div class="section" id="crs-handling">
+<h3>CRS Handling<a class="headerlink" href="#crs-handling" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Show active crs in status bar.</li>
+<li>Assign layer CRS to project (in the legend context menu).</li>
+<li>Select default CRS for new projects.</li>
+<li>Allow setting CRS for multiple layers at once.</li>
+<li>Default to last selection when prompting for CRS.</li>
+</ul>
+</div>
+<div class="section" id="rasters">
+<h3>Rasters<a class="headerlink" href="#rasters" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Added AND and OR operator for raster calculator.</li>
+<li>On-the-fly reprojection of rasters added.</li>
+<li>Proper implementation of raster providers.</li>
+<li>Added raster toolbar with histogram stretch functions.</li>
+</ul>
+</div>
+<div class="section" id="providers-and-data-handling">
+<h3>Providers and Data Handling<a class="headerlink" href="#providers-and-data-handling" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>New SQLAnywhere vector provider.</li>
+<li>Table join support.</li>
+<li>Feature form updates.</li>
+<li>Make NULL value string representation configurable.</li>
+<li>Fix feature updates in feature form from attribute table.</li>
+<li>Add support for NULL values in value maps (comboboxes).</li>
+<li>Use layer names instead of ids in drop down list when loading value maps from
+layers.</li>
+<li>Support feature form expression fields: line edits on the form which name
+prefix &#8216;<a href="#id17"><span class="problematic" id="id18">expr_</span></a>&#8216; are evaluated. Their value is interpreted as field calculator
+string and replaced with the calculated value.</li>
+<li>Support searching for NULL in attribute table.</li>
+<li>Attribute editing improvements</li>
+<li>Improved interactive attribute editing in table (adding/deleting features,
+attribute update).</li>
+<li>Allow adding of geometryless features.</li>
+<li>Fixed attribute undo/redo.</li>
+<li>Improved attribute handling.</li>
+<li>Optionally re-use entered attribute values for next digitized feature.</li>
+<li>Allow merging/assigning attribute values to a set of features.</li>
+<li>Allow OGR &#8216;save as&#8217; without attributes (for eg. DGN/DXF).</li>
+</ul>
+</div>
+<div class="section" id="api-and-developer-centric">
+<h3>Api and Developer Centric<a class="headerlink" href="#api-and-developer-centric" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Refactored attribute dialog calls to QgsFeatureAttribute.</li>
+<li>Added QgsVectorLayer::featureAdded signal.</li>
+<li>Layer menu function added.</li>
+<li>Added option to load c++ plugins from user specified directories. Requires
+application restart to activate.</li>
+<li>Completely new geometry checking tool for fTools. Significantly faster, more
+relevant error messages, and now supports zooming to errors. See the new
+QgsGeometry.validateGeometry function.</li>
+</ul>
+</div>
+<div class="section" id="qgis-server">
+<h3>QGIS Server<a class="headerlink" href="#qgis-server" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Ability to specify wms service capabilities in the properties section of the
+project file (instead of wms_metadata.xml file).</li>
+<li>Support for wms printing with GetPrint-Request.</li>
+</ul>
+</div>
+<div class="section" id="plugins">
+<h3>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Support for icons of plugins in the plugin manager dialog.</li>
+<li>Removed quickprint plugin - use easyprint plugin rather from plugin repo.</li>
+<li>Removed ogr convertor plugin - use &#8216;save as&#8217; context menu rather.</li>
+</ul>
+</div>
+<div class="section" id="printing">
+<h3>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Undo/Redo support for the print composer.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+        </div><!-- span9 -->
+      </div><!-- row -->
+    </div> <!-- container -->
+    <div class="alert alert-info">
+          &copy; Copyright 2012, QGIS project.
+    </div>
+  </body>
+</html>
