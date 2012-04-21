@@ -2,7 +2,7 @@
 Print Composer
 --------------
 
-.. _`print_composer`:
+.. _`label_printcomposer`:
 :index:`print composer`
 
 The print composer provides growing layout and printing capabilities. It
