@@ -16,7 +16,7 @@ PAPEROPT_letter = -D latex_paper_size=letter
 #ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCE)
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -Dlanguage=$$lang
 
-.PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest
+.PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex latexpdf changes linkcheck doctest
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
@@ -28,6 +28,7 @@ help:
 	@echo "  htmlhelp  to make HTML files and a HTML help project"
 	@echo "  qthelp    to make HTML files and a qthelp project"
 	@echo "  latex     to make LaTeX files, you can set PAPER=a4 or PAPER=letter"
+        @echo "  latexpdf   to make LaTeX files and run them through pdflatex"
 	@echo "  changes   to make an overview of all changed/added/deprecated items"
 	@echo "  linkcheck to check all external links for integrity"
 	@echo "  doctest   to run all doctests embedded in the documentation (if enabled)"
@@ -103,6 +104,18 @@ latex:
 	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex."
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
 	      "run these through (pdf)latex."
+
+latexpdf:
+        @for lang in $(LANGUAGES);\
+        do \
+                mkdir -p $(BUILDDIR)/latex/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang;\
+                echo "$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/latex/$(SOURCE)/$$lang";\
+                $(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/latex/$(SOURCE)/$$lang;\
+                echo "Running LaTeX files through pdflatex...";\
+                $(MAKE) -C $(BUILDDIR)/latex/$(SOURCE)/$$lang all-pdf;\
+        done
+        @echo
+        @echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/<language>.";\
 
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes
