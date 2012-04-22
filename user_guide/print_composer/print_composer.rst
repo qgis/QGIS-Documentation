@@ -1,9 +1,10 @@
+.. _`label_printcomposer`:
+
+:index:`print composer`
+
 --------------
 Print Composer
 --------------
-
-.. _`label_printcomposer`:
-:index:`print composer`
 
 The print composer provides growing layout and printing capabilities. It
 allows you to add elements such as the QGIS map canvas, legend, scalebar,
@@ -54,75 +55,6 @@ in another session. See a list of tools in table~\ref{tab:printcomposer_tools}:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-
-
-\begin{table}[h]:index:`Print composer!tools`
-\centering\small
-\renewcommand{\arraystretch}{2}
- \begin{tabular}{|m{1cm}|m{5.4cm}|m{1cm}|m{5.4cm}|}
- \hline **Icon} & \textbf{Purpose} & \textbf{Icon** &
- **Purpose** \\
- \hline \includegraphics[width=0.6cm]{mActionFolder}
- & Load from template &
- \includegraphics[width=0.6cm]{mActionFileSaveAs} & Save as template \\
- \hline \includegraphics[width=0.6cm]{mActionExportMapServer}
- & Export to an image format &
- \includegraphics[width=0.6cm]{mActionSaveAsPDF} & Export as PDF \\
- \hline \includegraphics[width=0.6cm]{mActionSaveAsSVG} & Export print
- composition to SVG & \includegraphics[width=0.6cm]{mActionFilePrint}
- & Print or export as Postscript \\
- \hline \includegraphics[width=0.6cm]{mActionZoomFullExtent} & Zoom to
- full extend & \includegraphics[width=0.6cm]{mActionZoomIn} & Zoom in \\
- \hline \includegraphics[width=0.6cm]{mActionZoomOut} & Zoom out &
- \includegraphics[width=0.6cm]{mActionDraw} & Refresh view \\
- \hline \includegraphics[width=0.6cm]{mActionUndo} & Revert last change & \includegraphics[width=0.6cm]{mActionRedo}
- & Restore last change \\
- \hline \includegraphics[width=0.6cm]{mActionAddMap} & Add new map from
- QGIS map canvas & \includegraphics[width=0.6cm]{mActionSaveMapAsImage}
- & Add Image to print composition \\
- \hline \includegraphics[width=0.6cm]{mActionAddMap} & Add new map from
- QGIS map canvas & \includegraphics[width=0.6cm]{mActionSaveMapAsImage}
- & Add Image to print composition \\
- \hline \includegraphics[width=0.6cm]{mActionLabel} & Add label to print
- composition & \includegraphics[width=0.6cm]{mActionAddLegend} & Add new
- legend to print composition \\
- \hline \includegraphics[width=0.6cm]{mActionScaleBar} & Add new scalebar
- to print composition & \includegraphics[width=0.6cm]{mActionAddBasicShape}
- & Add basic shape to print composition \\
- \hline \includegraphics[width=0.6cm]{mActionAddArrow} & Add arrow to print
- composition & \includegraphics[width=0.6cm]{mActionOpenTable} & Add attribute
- table to print composition \\
- \hline \includegraphics[width=0.6cm]{mActionSelectPan} & Select/Move item in
- print composition &
- \includegraphics[width=0.6cm]{mActionMoveItemContent} & Move content within
- an item \\
- \hline \includegraphics[width=0.6cm]{mActionGroupItems} & Group items of
- print composition &
- \includegraphics[width=0.6cm]{mActionUngroupItems} & Ungroup items of print
- composition \\
- \hline \includegraphics[width=0.6cm]{mActionRaiseItems} & Raise selected
- items  &
- \includegraphics[width=0.6cm]{mActionLowerItems} & Lower selected items \\
- \hline \includegraphics[width=0.6cm]{mActionMoveItemsToTop} & Move selected
- items to top &
- \includegraphics[width=0.6cm]{mActionMoveItemsToBottom} & Move selected
- items to bottom \\
- \hline \includegraphics[width=0.6cm]{mActionAlignLeft} & Align selected
- items left &
- \includegraphics[width=0.6cm]{mActionAlignRight} & Align selected items
- right \\
- \hline \includegraphics[width=0.6cm]{mActionAlignHCenter} & Align selected
- items center &
- \includegraphics[width=0.6cm]{mActionAlignVCenter} & Align selected items
- center vertical \\
- \hline \includegraphics[width=0.6cm]{mActionAlignTop} & Align selected
- items top &
- \includegraphics[width=0.6cm]{mActionAlignBottom} & Align selected
- items bottom \\
-\hline
-\end{tabular}
-\caption{Print Composer Tools}\label{tab:printcomposer_tools}
-\end{table}
 
 All Print Composer tools are availabe in menus and as icons in a toolbar.
 The toolbar can be switched off and on using the right mouse button holding
