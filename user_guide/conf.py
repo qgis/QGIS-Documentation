@@ -105,6 +105,8 @@ rst_epilog = """
 .. |slider| image:: img/en/slider.png
 .. |inputtext| image:: img/en/inputtext.png
 .. |tab| image:: img/en/tab.png
+.. |icon_sqlanywhere| image:: img/en/plugins_sql_anywhere/sqlanywhere.png
+   :width: 1.5em
 """
 
 

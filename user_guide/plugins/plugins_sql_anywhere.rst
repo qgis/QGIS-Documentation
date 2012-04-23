@@ -13,10 +13,10 @@ SQL Anywhere is a proprietary relational database management system (RDBMS)
 from Sybase. SQL Anywhere includes spatial support including OGC, shape files 
 etc. and built in functions to export to KML, GML and SVG formats.
 
-The |img/en/plugins_sql_anywhere/sqlanywhere.png| :guilabel:`SQL Anywhere` 
-Plugin provides a native data provider added to QGIS under the GPL v3. The 
-Plugin allows to connect to this SQL Anywhere. The :guilabel:`Add SQL Anywhere 
-layer` dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
+The |icon_sqlanywhere| :guilabel:`SQL Anywhere` Plugin provides a 
+native data provider added to QGIS under the GPL v3. The Plugin allows 
+to connect to this SQL Anywhere. The :guilabel:`Add SQL Anywhere layer` 
+dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
 
 .. _`fig:sqlanywhere`:
 
