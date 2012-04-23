@@ -1,4 +1,3 @@
-
 .. _`feature_glance`:
 
 =====================
@@ -24,7 +23,7 @@ In Section :ref:`samplesession` you already learned how to start QGIS. We will
 repeat this here and you will see that QGIS also provides further command line options.
 
 * |nix| Assuming that QGIS is installed in the PATH, you can start QGIS
-  by typing: \usertext{qgis}  at a command prompt or by double clicking on the QGIS
+  by typing: ``qgis``  at a command prompt or by double clicking on the QGIS
   application link (or shortcut) on the desktop or in the application menu.
 * |win| Start QGIS using the Start menu or desktop shortcut,
   or double click on a QGIS project file.
@@ -467,7 +466,7 @@ menu depending on the layer type (point, line or polygon).
 +-----------------------------------------------------------+------------------------+
 
 
-.. See Appendix \ref{app_menu} for complete descriptions of the menu items.
+.. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
 
 .. _`label_toolbars`:
 
@@ -525,57 +524,57 @@ available. See section :ref:`grass_digitising` for information on editing GRASS 
 
 * **Right mouse button menu for raster layers**
 
-  *  \dropmenuopt{Zoom to layer extent}
-  *  \dropmenuopt{Zoom to best scale (100\%)}
-  *  \dropmenuopt{Show in overview}
-  *  \dropmenuopt{Remove}
-  *  \dropmenuopt{Properties}
-  *  \dropmenuopt{Rename}
-  *  \dropmenuopt{Add Group}
-  *  \dropmenuopt{Expand all}
-  *  \dropmenuopt{Collapse all}
+  *  :menuselection:`Zoom to layer extent`
+  *  :menuselection:`Zoom to best scale (100 %)`
+  *  :menuselection:`Show in overview`
+  *  :menuselection:`Remove}`
+  *  :menuselection:`Properties`
+  *  :menuselection:`Rename`
+  *  :menuselection:`Add Group`
+  *  :menuselection:`Expand all`
+  *  :menuselection:`Collapse all`
 
-.. *  \dropmenuopt{Show file groups}
+.. *  :menuselection:`Show file groups`
 
 * **Right mouse button menu for vector layers**
 
-  *  \dropmenuopt{Zoom to layer extent}
-  *  \dropmenuopt{Show in overview}
-  *  \dropmenuopt{Remove}
-  *  \dropmenuopt{Open attribute table}
-  *  \dropmenuopt{Toggle editing (not available for GRASS layers)}
-  *  \dropmenuopt{Save as}
-  *  \dropmenuopt{Save selection as}
-  *  \dropmenuopt{Query}
-  *  \dropmenuopt{Properties}
-  *  \dropmenuopt{Rename}
-  *  \dropmenuopt{Add Group}
-  *  \dropmenuopt{Expand all}
-  *  \dropmenuopt{Collapse all}
+  *  :menuselection:`Zoom to layer extent`
+  *  :menuselection:`Show in overview`
+  *  :menuselection:`Remove`
+  *  :menuselection:`Open attribute table`
+  *  :menuselection:`Toggle editing (not available for GRASS layers)`
+  *  :menuselection:`Save as`
+  *  :menuselection:`Save selection as`
+  *  :menuselection:`Query`
+  *  :menuselection:`Properties`
+  *  :menuselection:`Rename`
+  *  :menuselection:`Add Group`
+  *  :menuselection:`Expand all`
+  *  :menuselection:`Collapse all`
 
-.. *  \dropmenuopt{Make to toplevel item}
-.. *  \dropmenuopt{Show file groups}
+.. * :menuselection:`Make to toplevel item`
+.. * :menuselection:`Show file groups`
 
 * **Right mouse button menu for layer groups**
 
-  *  \dropmenuopt{Zoom to group}
-  *  \dropmenuopt{Remove}
-  *  \dropmenuopt{Set group CRS}
-  *  \dropmenuopt{Rename}
-  *  \dropmenuopt{Add Group}
-  *  \dropmenuopt{Expand all}
-  *  \dropmenuopt{Collapse all}
+  *  :menuselection:`Zoom to group`
+  *  :menuselection:`Remove`
+  *  :menuselection:`Set group CRS`
+  *  :menuselection:`Rename`
+  *  :menuselection:`Add Group`
+  *  :menuselection:`Expand all`
+  *  :menuselection:`Collapse all`
 
-.. *  \dropmenuopt{Show file groups}
+.. *  :menuselection:`Show file groups`
 
 
 It is possible to select more than one Layer or Group at the same time 
-by holding down the \keystroke{Ctrl}-Key while selecting the Layers with the 
+by holding down the :kbd:`Ctrl`-Key while selecting the Layers with the 
 left mouse button. You can than move all selected Layers to a new Group at 
 the same time.
 
 You are also able to delete more than one Layer or Group at once by selecting 
-several Layers with the \keystroke{Ctrl}-Key and pressing \keystroke{Ctrl+D} afterwards.
+several Layers with the :kbd:`Ctrl`-Key and pressing :kbd:`Ctrl D` afterwards.
 This way all selected Layers or Groups will be removed from the Layerlist.
 
 .. isn't included in Titan anymore, except for an "toggle overview"
@@ -615,8 +614,7 @@ changes you make in the legend area.
     the mouse cursor inside the map area and roll the wheel forward (away from you) to
     zoom in and backwards (towards you) to zoom out. The mouse cursor position is the
     center where the zoom occurs. You can customize the behavior of the mouse
-    wheel zoom using the \tab{Map tools} tab under the \mainmenuopt{Settings} \arrow
-    \dropmenuopt{Options} menu.
+    wheel zoom using the |tab| :menuselection:`Map tools` tab under the :menuselection:`Settings --> Options` menu.
 
 .. note::
 	**Panning the Map with the Arrow Keys and Space Bar**
@@ -636,14 +634,14 @@ Map Overview
 .. index::`map!overview`
 
 The map overview panel provides a full extent view of layers added to it. It
-can be selected under the menu \mainmenuopt{Settings} \arrow \dropmenuopt{Panels}.
+can be selected under the menu :menuselection:`Settings --> Panels`.
 Within the view is a rectangle showing the current map extent. This allows
 you to quickly determine which area of the map you are currently viewing. Note
 that labels are not rendered to the map overview even if the layers in the
 map overview have been set up for labeling.
 
 You can add a single layer to the overview by right-clicking on it in the
-legend and select \checkbox{Show in overview}. You can also add layers to,
+legend and select |checkbox| Show in overview. You can also add layers to,
 or remove all layers from the overview using the Overview tools on the toolbar.
 
 If you click and drag the red rectangle in the overview that shows your
@@ -668,8 +666,7 @@ status of lengthy operations.
 If a new plugin or a plugin update is available, you will see a message in the
 status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
-map view (see Section \ref{subsec:redraw_events} below). The icon 
-\includegraphics[width=0.4cm]{mIconStopRendering} immediately stops the 
+map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering| immediately stops the 
 current map rendering process. 
 
 At the far right of the status bar you find the EPSG code of the current 
@@ -682,10 +679,10 @@ for the current project.
     .. index::`scale!calculate`
     When you start QGIS, degrees is the default unit, and it tells QGIS
     that any coordinate in your layer is in degrees. To get correct scale values,
-    you can either change this to meter manually in the \tab{General} tab under
-    \mainmenuopt{Settings} \arrow \dropmenuopt{Project Properties} or you can select a project
+    you can either change this to meter manually in the |tab| General tab under
+    :menuselection:`Settings` --> :menuselection:`Project Properties` or you can select a project
     Coordinate Reference System (CRS) clicking on the
-    \toolbtntwo{mIconProjectionDisabled}{CRS status}
+    |mIconProjectionDisabled| `CRS status`
     icon in the lower right-hand corner of the statusbar. In the last case, the
     units are set to what the project projection specifies, e.g. '+units=m'.
 
@@ -697,8 +694,8 @@ Keyboard shortcuts
 .. index::`Keyboard shortcuts`
 
 QGIS provides default keyboard shortcuts for many features. You find them in
-Section \ref{label_menubar} below. Additionally the menu option \mainmenuopt{Settings} \arrow
-\dropmenuopt{Configure Shortcuts} allows to change the default keyboard
+Section :ref:`label_menubar` below. Additionally the menu option :menuselection:`Settings` -->
+:menuselection:`Configure Shortcuts` allows to change the default keyboard
 shortcuts and to add new keyboard shortcuts to QGIS features.
 
 \begin{figure}[ht]
@@ -708,7 +705,7 @@ shortcuts and to add new keyboard shortcuts to QGIS features.
 \end{figure}
 
 Configuration is very simple. Just select a feature from the list and click
-on \button{Change}, \button{Set none} or \button{Set default}. Once you have
+on :guilabel:`Change`, :guilabel:`Set none` or :guilabel:`Set default`. Once you have
 found your configuration, you can save it as XML file and load it to another
 QGIS installation.
 
@@ -719,7 +716,7 @@ Context help
 
 .. index::`Context help`
 
-When you need help on a specific topic, you can access context help via the \button{Help}
+When you need help on a specific topic, you can access context help via the :guilabel:`Help`
 button available in most dialogs - please note that third-party plugins can point to
 dedicated web pages.
 
@@ -747,9 +744,9 @@ Scale Dependent Rendering
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
-open the \dialog{Properties} dialog by double-clicking on the layer in the
-legend. On the \tab{General} tab, set the minimum and maximum scale values and then
-click on the \checkbox{Use scale dependent rendering} checkbox.
+open the :guilabel:`Properties` dialog by double-clicking on the layer in the
+legend. On the |tab|`General` tab, set the minimum and maximum scale values and then
+click on the :guilabel`Use scale dependent rendering` checkbox.
 
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.
@@ -769,10 +766,10 @@ a) Suspending Rendering
 ~~~~~~~~~~~~~~~~~~~~~~~
 .. index::`rendering!suspending`
 
-To suspend rendering, click the \checkbox{Render} checkbox in the lower right
-corner of the statusbar. When the \checkbox{Render} box is not checked, QGIS
+To suspend rendering, click the |checkbox| Render checkbox in the lower right
+corner of the statusbar. When the |checkbox| Render box is not checked, QGIS
 does not redraw the canvas in response to any of the events described in
-Section \ref{subsec:redraw_events}. Examples of when you might want to suspend
+Section :ref:`redraw_events`. Examples of when you might want to suspend
 rendering include:
 
 * Add many layers and symbolize them prior to drawing
@@ -780,7 +777,7 @@ rendering include:
 * Add one or more large layers and zoom to a specific view before drawing
 * Any combination of the above
 
-Checking the \checkbox{Render} box enables rendering and causes an immediate
+Checking the |checkbox| Render box enables rendering and causes an immediate
 refresh of the map canvas.
 
 .. _`label_settinglayer`:
@@ -794,9 +791,9 @@ b) Setting Layer Add Option
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
-menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} and click on the
-\tab{Rendering} tab. Uncheck the \\
-\checkbox{By default new layers added to the map should be displayed} checkbox.
+menu option :menuselection:`Settings --> Options` and click on the
+|tab| Rendering tab. Uncheck the \\
+|checkbox| :guilabel:`By default new layers added to the map should be displayed` checkbox.
 Any layer added to the map will be off (invisible) by default.
 
 .. Stopping Rendering
@@ -822,8 +819,8 @@ c) Updating the Map Display During Rendering
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
-datastore, choose menu option \mainmenuopt{Settings} \arrow \dropmenuopt{Options}
-click on the \tab{Rendering} tab. Set the feature count to an
+datastore, choose menu option :menuselection:`Settings --> Options`
+click on the |tab| :menuselection:`Rendering` tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -837,14 +834,12 @@ d) Influence Rendering Quality
 .. index::`rendering!quality`
 
 To influence the rendering quality of the map you have 3 options. Choose menu
-option \mainmenuopt{Settings} \arrow \dropmenuopt{Options} click on the
-\tab{Rendering} tab and select or deselect following checkboxes.
+option :menuselection:`Settings --> Options` click on the
+|tab| :menuselection:`Rendering` tab and select or deselect following checkboxes.
 
 
-
-* \checkbox{Make lines appear less jagged at the expense of some drawing
-  performance}
-* \checkbox{Fix problems with incorrectly filled polygons}
+* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing performance`
+* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 
 .. _`sec_measure`:
 
@@ -856,12 +851,11 @@ Measuring works within projected coordinate systems (e.g., UTM) and
 unprojected data. If the loaded map is defined with a geographic coordinate system
 (latitude/longitude), the results from line or area measurements will be
 incorrect. To fix this you need to set an appropriate map coordinate system
-(See Section~\ref{label_projections}). All measuring modules also use the
+(See Section :ref:`label_projections`). All measuring modules also use the
 snapping settings from the digitizing module. This is useful, if you want to
 measure along lines or areas in vector layers.
 
-To select a measure tool click on \includegraphics[width=0.7cm]{mActionMeasure} and 
-select the tool you want to use.
+To select a measure tool click on |mActionMeasure| and select the tool you want to use.
 
 Measure length, areas and angles
 ********************************
@@ -870,19 +864,20 @@ Measure length, areas and angles
 .. index::`measure:areas`
 .. index::`measure:angles`
 
-\includegraphics[width=0.7cm]{mActionMeasure}
+|mActionMeasure|
+
 QGIS is able to measure real distances between given points according to 
 a defined ellipsoid. To configure this, choose menu option
-\mainmenuopt{Settings} \arrow \dropmenuopt{Options},
-click on the \tab{Map tools} tab and choose the appropriate ellipsoid. There
+:menuselection:`Settings --> Options`,
+click on the |tab| Map tools tab and choose the appropriate ellipsoid. There
 you can also define a rubberband color and your preferred measurement units
 (meters or feet) and angle units (degrees, radians and gon). The tools then 
 allows you to click points on the map. Each segment-length as well as the total 
 shows up in the measure-window. To stop measuring click your right mouse button. \\
-\includegraphics[width=0.7cm]{mActionMeasureArea} Areas can also be measured.
+|mActionMeasureArea| Areas can also be measured.
 In the measure window the accumulated area-size appears  \\
 In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section~\ref{snapping_tolerance}). So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer. \\
-\includegraphics[width=0.7cm]{mActionMeasureAngle}
+|mActionMeasureAngle|
 You can also measure angles, selecting Measure Angle tool. The cursor becomes
 cross-shaped. Click to draw the first segment of the angle you wish to
 measure, then move the the cursor to draw the desired angle. The measure
@@ -906,15 +901,15 @@ Select and deselect features
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
 To select one or several features just click on 
-\includegraphics[width=0.7cm]{mActionSelect} and select your tool:
+|mActionSelect| and select your tool:
 
-* includegraphics[width=0.5cm]{mActionSelect} Select features
-* \includegraphics[width=0.5cm]{mActionSelectRectangle} Select features by rectangle
-* \includegraphics[width=0.5cm]{mActionSelectPolygon} Select features by polygon
-* \includegraphics[width=0.5cm]{mActionSelectFreehand} Select features by freehand
-* \includegraphics[width=0.5cm]{mActionSelectRadius} Select features by radius
+* |mActionSelect| :guilabel:`Select features`
+* |mActionSelectRectangle| :guilabel:`Select features by rectangle`
+* |mActionSelectPolygon| :guilabel:`Select features by polygon`
+* |mActionSelectFreehand| :guilabel:`Select features by freehand`
+* |mActionSelectRadius| :guilabel:`Select features by radius`
 
-To deselect all selected features click on \includegraphics[width=0.7cm]{mActionDeselectAll}.
+To deselect all selected features click on |mActionDeselectAll|.
 
 .. _`sec_projets`:
 
@@ -925,18 +920,17 @@ Projects
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
-Section \ref{subsec:gui_options}). QGIS can save the state of your
+Section :ref:`gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
-\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileSave}{Save Project}
-or \mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileSaveAs}{Save Project As}.
+:menuselection:`File` --> |mActionFileSave| :menuselection:`Save Project`
+or :menuselection:`File` |mActionFileSaveAs| :menuselection:`Save Project As`.
 
 Load saved projects into a QGIS session using
-\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileOpen}{Open Project}
-or \mainmenuopt{File} \arrow \\
-\dropmenuopt{Open Recent Project}.
+:menuselection:`File` --> |mActionFileOpen| :menuselection:`Open Project`
+or :menuselection:`File --> Open Recent Project`.
 
 If you wish to clear your session and start fresh, choose
-\mainmenuopt{File} \arrow \dropmenuopttwo{mActionFileNew}{New Project}.
+:menuselection:`File` --> |mActionFileNew| :menuselection:`New Project`.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -951,34 +945,33 @@ The project file is saved in XML format, so it is possible to edit
 the file outside QGIS if you know what you are doing. The file format
 was updated several times compared to earlier QGIS versions. Project files
 from older QGIS versions may not work properly anymore. To be made aware of this,
-in the \tab{General} tab under \mainmenuopt{Settings} \arrow \dropmenuopt{Options}
+in the |tab| General tab under :menuselection:`Settings --> Options`
 you can select: \\
 
-\checkbox{Promt to save project changes when required} \\
-\checkbox{Warn when opening a project file saved with an older version of QGIS}
+|checkbox| :guilabel:`Prompt to save project changes when required` \\
+|checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 
 Project Properties
 ~~~~~~~~~~~~~~~~~~
 
-In the properties window for the project under |nix| \mainmenuopt{File \arrow
-\dropmenuopt{Project Properties}} or |win| \mainmenuopt{Settings \arrow
-\dropmenuopt{Project Properties}} you set project specific options. These
+In the properties window for the project under |nix| :menuselection:`File -->
+Project Properties` or |win| :menuselection:`Settings -->
+Project Properties` you set project specific options. These
 include:
 
-
-* In the \tab{General} tab the project title, selection and background
+* In the |tab| :guilabel:`General` tab the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
   layers can be defined. You can define the layer units (only used when CRS 
   transformation is disabled) and the precision of decimal places to use.  
-* The \tab{CRS} Coordinate Reference System tab enables you to choose the
+* The |tab| :guilabel:`CRS Coordinate Reference System` tab enables you to choose the
   CRS for this project, and to enable on-the-fly reprojection of raster and vector 
   layers when displaying layers from a different CRS.
-* With the third \tab{Identifiable layers} tab you set (or disable) which
+* With the third |tab| :guilabel:`Identifiable layers` tab you set (or disable) which
   layers will respond to the identify tool. (See the Map tools paragraph from
-  the \ref{subsec:gui_options} section to enable identifying of multiple layers.)
-* The tab \tab{WMS Server} allows to define information about the QGIS 
+  the :ref:`gui_options` section to enable identifying of multiple layers.)
+* The tab |tab| :guilabel:`WMS Server` allows to define information about the QGIS 
   mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating 
-  the \checkbox{Add WKT geometry to feature info response} will allow to query the 
+  the |checkbox| :guilabel:`Add WKT geometry to feature info response` will allow to query the 
   WMS layers.
 
 .. _`sec_output`:
@@ -992,13 +985,13 @@ There are several ways to generate output from your QGIS session. We have
 discussed one already in Section \ref{sec:projects}: saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option \dropmenuopttwo{mActionSaveMapAsImage}{Save as Image} opens
+* Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens
   a file dialog where you select the name, path and type of image (PNG or JPG
   format). A world file with extension PNGW or JPGW saved in the same folder
   georeferences the image.
-* Menu option \dropmenuopttwo{mActionNewComposer}{New Print Composer} opens a
+* Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a
   dialog where you can layout and print the current map canvas (see
-  Section~\ref{label_printcomposer}).
+  Section :ref:`label_printcomposer`).
 
 .. `subsec_gui_options`:
 
@@ -1006,33 +999,32 @@ GUI Options
 =============
 
 
-\includegraphics[width=0.7cm,clip=true]{mActionOptions} Some basic options
-for QGIS can be selected using the \dialog{Options} dialog. Select the
-menu option \mainmenuopt{Settings} \arrow
-\dropmenuopttwo{mActionOptions}{Options}. The tabs where you can
+|mActionOptions| Some basic options
+for QGIS can be selected using the :guilabel:`Options` dialog. Select the
+menu option :menuselection:`Settings` --> |mActionOptions| :menuselection:`Options`. The tabs where you can
 optmize your options are:
 
 General Tab
 ~~~~~~~~~~~
 
-* \checkbox{Promt to save project changes when required}
-* \checkbox{Warn when opening a project file saved with an older version of QGIS}
+* |checkbox| :guilabel:`Prompt to save project changes when required`
+* |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * Change Selection and background Color
 * Change the icon theme (choose between default, classic, gis and newgis)
 * Change icon size between 16, 24 and 32 pixel.
 * Define double click action in legend (choose between 'open layer properties' 
   and 'open ') attribute table.
-* \checkbox{Capitalise layer names in legend}
-* \checkbox{Display classification attribute names in legend}
-* \checkbox{Create raster icons in legend}
-* \checkbox{Hide splash screen at startup}
-* \checkbox{Open identify results in a dock window (QGIS restart
-  required)}
-* \checkbox{Open snapping options in a dock window (QGIS restart
-  required)}
-* \checkbox{Open attribute table in a dock window}
-* \checkbox{Add PostGIS layers with double click and select in extended mode}
-* \checkbox{Add new layers to selected group}
+* |checkbox| :guilabel:`Capitalise layer names in legend`
+* |checkbox| :guilabel:`Display classification attribute names in legend`
+* |checkbox| :guilabel:`Create raster icons in legend`
+* |checkbox| :guilabel:`Hide splash screen at startup`
+* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart
+  required)`
+* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart
+  required)`
+* |checkbox| :guilabel:`Open attribute table in a dock window`
+* |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
+* |checkbox| :guilabel:`Add new layers to selected group`
 * Attribute table behavior (choose between Show all features (default), Show selected features,
   show features in current canvas)
 * Define representation for NULL values
@@ -1041,39 +1033,38 @@ General Tab
 Rendering Tab
 ~~~~~~~~~~~~~
 
-* \checkbox{By default new layers added to the map should be displayed}
+* |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * Define number of features to draw before updating the display.
-* \checkbox{Use render caching where possible to speed up redraws}
-* \checkbox{Make lines appear less jagged at the expense of some drawing
-  performance}
-* \checkbox{Fix problems with incorrectly filled polygons}
-* \checkbox{Use new generation symbology for rendering}
+* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
+* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing
+  performance`
+* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
+* |checkbox| :guilabel:`Use new generation symbology for rendering`
 * Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
 
 
 Additionally you can define whether to save the path for svg textures
-absolute or relative in the \tab{General} tab of the
-\mainmenuopt{Settings} \arrow \dropmenuopttwo{mActionOptions}{Project Properties}
-menu.
+absolute or relative in the |tab| :guilabel:`General` tab of the
+:menuselection:`Settings --> Project Properties` menu.
 
 Map tools Tab
 ~~~~~~~~~~~~~
 
 
 * The Mode setting determines which layers will be shown by the Identify
-  tool. By switching to \usertext{Top down} or \usertext{Top down, stop at
-  first} instead of \usertext{Current layer} attributes for all identifiable
-  layers (see the Project properties section under: \ref{sec:projects} to set
+  tool. By switching to ``Top down`` or ``Top down, stop at
+  first`` instead of ``Current layer`` attributes for all identifiable
+  layers (see the Project properties section under: :ref:`projects` to set
   which layers are identifiable) will be shown with the Identify tool.
-* \checkbox{Open feature form, if a single feature is identified}
+* |checkbox| :guilabel:`Open feature form, if a single feature is identified`
 * Define search radius for identifying and displaying map tips as a
   percentage of the map width
 * Define ellipsoid for distance calculations
 * Define rubberband color for measure tools
 * Define decimal places
-* \checkbox{Keep base unit}
-* \radiobuttonon{Define preferred measurement units (meters or feet)}
-* \radiobuttonon{Define preferred angle units (Degrees, Radians or Gon)}
+* |checkbox| :guilabel:`Keep base unit`
+* |radiobuttonon| :guilabel:`Define preferred measurement units (meters or feet)`
+* |radiobuttonon| :guilabel:`Define preferred angle units (Degrees, Radians or Gon)`
 * Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
   cursor, Nothing)
 * Define Zoom factor for wheel mouse
@@ -1133,17 +1124,17 @@ Network Tab
    
    Proxy-settings in |qg|
 
-* \checkbox{Use proxy for web access} and define host, port, user, and password.
+* |checkbox| :guilabel:`Use proxy for web access` and define host, port, user, and password.
 * Set the \dropmenuopt{Proxy type} according to your needs
 
-  * \dropmenuopt{Default Proxy}: Proxy is determined based on the application proxy set using
-  * \dropmenuopt{Socks5Proxy}: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.
-  * \dropmenuopt{HttpProxy}: Implemented using the "CONNECT" command, supports only outgoing TCP connections; supports authentication.
-  * \dropmenuopt{HttpCachingProxy}: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
-  * \dropmenuopt{FtpCachingProxy}: Implemented using an FTP proxy, it is useful only in the context of FTP requests
+  * :menuselection:`Default Proxy`: Proxy is determined based on the application proxy set using
+  * :menuselection:`Socks5Proxy`: Generic proxy for any kind of connection. Supports TCP, UDP, binding to a port (incoming connections) and authentication.
+  * :menuselection:`HttpProxy`: Implemented using the "CONNECT" command, supports only outgoing TCP connections; supports authentication.
+  * :menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests
+  * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is useful only in the context of FTP requests
  
 * Define Cache settings (path and size)
-* Define WMS search adress, default is \url{http://geopole.org/wms/search?search=\%1\&type=rss}
+* Define WMS search adress, default is ``http://geopole.org/wms/search?search=\%1\&type=rss``
 * Define timeout for network requests in ms - default is 60000
 
 Excluding some URLs can be added to the textbox below the proxy-settings (see
@@ -1156,10 +1147,10 @@ If you need more detailed information about the different proxy-settings,
 please refer to the manual of the unterlaying QT-library-documentation at
 http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
 
-\begin{Tip} \caption{\textsc{Using Proxies}}
-Using proxies can sometimes be tricky. It is useful to 'trial and
-error' the above proxy types and check if they succeed in your case.
-\end{Tip}
+.. tip::
+      **Using Proxies**
+      Using proxies can sometimes be tricky. It is useful to 'trial and
+      error' the above proxy types and check if they succeed in your case.
 
 You can modify the options according to your needs. Some of the changes may
 require a restart of QGIS before they will be effective.
@@ -1180,7 +1171,7 @@ Annotation Tools
 :index:`annotations`
 :index:`text annotation|\see{annotations}`
 
-The \includegraphics[width=0.7cm,clip=true]{mActionTextAnnotation} text
+The |mActionTextAnnotation| text
 annotation tools in the attribute toolbar provides the possibility to
 place formatted text in a balloon on the QGIS map canvas. Use the text
 annotation tool and click into the map canvas.
@@ -1200,7 +1191,7 @@ to the map). The item can be moved by map position (drag the map marker)
 or by moving only the balloon. The icons are part of gis theme, and are used
 by default in the other themes too.
 
-The \includegraphics[width=0.7cm,clip=true]{mActionAnnotation} move annotation
+The |mActionAnnotation| move annotation
 tool allows to move the annotation on the map canvas.
 
 Form annotations
@@ -1209,7 +1200,7 @@ Form annotations
 .. index::`form annotation|\see{annotations}`
 
 Additionally you can also create your own annotation forms. The
-\includegraphics[width=0.7cm,clip=true]{mActionFormAnnotation} form annotation
+|mActionFormAnnotation| form annotation
 tool is useful to display attributes of a vector layer in a customised qt
 designer form (see Figure \ref{fig:custom-annotations}). It is similar to the
 designer forms for the identify tool, but displayed in an annotation item.
@@ -1244,9 +1235,9 @@ To create a bookmark:
 
 
 #.  Zoom or pan to the area of interest.
-#.  Select the menu option \mainmenuopt{View} \arrow \dropmenuopt{New Bookmark} or press \keystroke{Ctrl-B}.
+#.  Select the menu option :menuselection:`View --> New Bookmark` or press :kbd:`Ctrl-B`.
 #.  Enter a descriptive name for the bookmark (up to 255 characters).
-#.  Click \button{OK} to add the bookmark or \button{Cancel} to exit without adding the bookmark.
+#.  Click |button| :menuselection:`OK` to add the bookmark or |button| :menuselection:`Cancel` to exit without adding the bookmark.
 
 
 
@@ -1256,15 +1247,15 @@ Working with Bookmarks
 **********************
 
 To use or manage bookmarks, select the menu
-option \mainmenuopt{View} \arrow \dropmenuopt{Show Bookmarks}. The \\
-\dialog{Geospatial Bookmarks} dialog allows you to zoom to or delete a bookmark.
+option :menuselection:`View --> Show Bookmarks`. The \\
+:menuselection:`Geospatial Bookmarks` dialog allows you to zoom to or delete a bookmark.
 You can not edit the bookmark name or coordinates.
 
 Zooming to a Bookmark
 *********************
 
-From the \dialog{Geospatial Bookmarks} dialog, select the desired bookmark by clicking on it,
-then click \button{Zoom To}.
+From the :menuselection:`Geospatial Bookmarks` dialog, select the desired bookmark by clicking on it,
+then click |button| :menuselection:`Zoom To`.
 You can also zoom to a bookmark by double-clicking on it.
 
 Deleting a Bookmark
@@ -1282,7 +1273,7 @@ Live GPS tracking
 
 
 To activate Live GPS tracking in QGIS you need to select
-\mainmenuopt{View} \arrow \dropmenuopt{Live GPS tracking}. You will get a new
+:menuselection:`View --> Live GPS tracking`. You will get a new
 docked Window on the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
@@ -1300,8 +1291,8 @@ GPS options screen (see Figure \ref{fig:gpstrack_options}).
 \end{description}
 
 With a plugged in GPS receiver (has to be supported by your operating system)
-a simple click on \button{Connect} connects the GPS to QGIS. A second click
-(now \button{Disconnect}) disconnects the GPS-Reciever from your Computer. For 
+a simple click on |button| :menuselection:`Connect`connects the GPS to QGIS. A second click
+(now |button| :menuselection:`Disconnect`) disconnects the GPS-Reciever from your Computer. For 
 GNU/Linux gpsd support is integrated to support connection to most GPS 
 receivers. Therefore you first have to configure gpsd properly to connect QGIS to it.
 
@@ -1330,21 +1321,21 @@ receivers. Therefore you first have to configure gpsd properly to connect QGIS t
 Position coordinates
 ********************
 
-\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} If the GPS is
+|mActionToggleEditing| If the GPS is
 recieving signals from satellites you will see your position in latitude,
 longitude and elevation as you can see in Figure \ref{subfig:gpstrack_main}
 
 GPS signal strength
 *******************
 
-\includegraphics[width=0.5cm,clip=true]{gpstrack_barchart} Here you can see
+|gpstrack_barchart| Here you can see
 the signal strenght of the satellites you are revieving signals from
 (Figure \ref{subfig:gpstrack_stren}).
 
 GPS polar window
 ****************
 
-\includegraphics[width=0.5cm,clip=true]{gpstrack_polarchart} If you want
+|gpstrack_polarchart| If you want
 to know where in the sky all the connected satellites are, you have to
 switch to the polar screen (Figure \ref{subfig:gpstrack_polar}).
 You can also see the ID numbers of the satellites you are recieving signals from.
@@ -1352,14 +1343,14 @@ You can also see the ID numbers of the satellites you are recieving signals from
 GPS options
 ***********
 
-\includegraphics[width=0.5cm,clip=true]{mActionOptions} In case of connection
-problems you can switch from \radiobuttonon{Autodetect} to \radiobuttonon{Use
-path/port below} and select the path/port your GPS receiver is connected to.
-A click on \button{Connect} again initiates the connection to the GPS
+|mActionOptions| In case of connection
+problems you can switch from |radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| :menuselection:`Use
+path/port below` and select the path/port your GPS receiver is connected to.
+A click on |button| :menuselection:`Connect` again initiates the connection to the GPS
 receiver.
 
-With the slider \slider{GPS Cursor Size} you can shrink and grow the position
-cursor on the canvas. Activating \radiobuttonon{Auto-add vertices} within GPS
+With the slider |slider| :menuselection:`GPS Cursor Size` you can shrink and grow the position
+cursor on the canvas. Activating |radiobuttonon| :menuselection:`Auto-add vertices` within GPS
 digitizing your track will automatically be recorded in the active vector layer
 (of course the layer has to be in edit mode).
 
@@ -1370,8 +1361,8 @@ or there is any change at all.
 Track color and width sets the color of and the width of your drawn track.
 
 If you want to set a feature manually you have to go back to
-\includegraphics[width=0.5cm,clip=true]{mActionToggleEditing} ''Position Coordinates''
-and click on \button{Add feature}.
+|mActionToggleEditing| ''Position Coordinates''
+and click on |button| :menuselection:`Add feature`.
 
 .. [1] Keyboard shortcuts can now be configured manually
    (shortcuts presented in this section are the defaults), using the Configure
