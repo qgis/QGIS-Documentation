@@ -1,8 +1,9 @@
 ..  !TeX  root  =  user_guide.tex
 
-SQL Anywhere Plugin}\label{sec:sqlanywhere
-==========================================
+.. _`label_sqlanywhere`:
 
+SQL Anywhere Plugin
+====================
 
 .. when the revision of a section has been finalized, 
 .. comment out the following line:
@@ -24,6 +25,8 @@ to the dialogs for PostGIS and SpatiaLite.
    \label{fig:sqlanywhere}
 \end{figure}
 
+spring doch mal an den `label_sqlanywhere`_ Anfang der Seite.
+
 %% FIXME Needs an example, but the database is proprietary
 
-\FloatBarrier
+
