@@ -1,4 +1,4 @@
-_`feature_glance`:
+..`feature_glance`:
 
 =====================
 Features at a Glance
