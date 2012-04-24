@@ -569,7 +569,7 @@ left mouse button. You can than move all selected Layers to a new Group at
 the same time.
 
 You are also able to delete more than one Layer or Group at once by selecting 
-several Layers with the :kbd:`Ctrl`-Key and pressing :kbd:`Ctrl D` afterwards.
+several Layers with the :kbd:`Ctrl` -Key and pressing :kbd:`Ctrl D` afterwards.
 This way all selected Layers or Groups will be removed from the Layerlist.
 
 .. isn't included in Titan anymore, except for an "toggle overview"
@@ -693,11 +693,11 @@ Section :ref:`label_menubar` below. Additionally the menu option :menuselection:
 :menuselection:`Configure Shortcuts` allows to change the default keyboard
 shortcuts and to add new keyboard shortcuts to QGIS features.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{shortcuts}
-   \caption{Define shortcut options \nixcaption (KDE)} \label{fig:shortcuts}
-\end{figure}
+.. figure:: img/en/shortcuts.png 
+   :align:center
+   :width: 8cm
+
+    Define shortcut options |nix| (KDE)}
 
 Configuration is very simple. Just select a feature from the list and click
 on :guilabel:`Change`, :guilabel:`Set none` or :guilabel:`Set default`. Once you have
