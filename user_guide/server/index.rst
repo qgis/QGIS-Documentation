@@ -76,7 +76,7 @@ in section \ref{sec:ogc-wms-servers}.
    Standard WMS with USA boundaries included in the qgis server (KDE)
 
 
-.. _`sec_ogc_wms_servers`:
+.. _`Creating a WMS from a QGIS project`:
 
 Creating a WMS from a QGIS project
 ==================================
@@ -109,7 +109,7 @@ of the qgis\_mapserv.fcgi file - that's all.
 
 Now we test our project WMS, add the WMS with the URL 
 'http://localhost/cgi-bin/project/qgis_mapserv.fcgi' as described in section 
-`sec_ogc_wms_servers`_ to QGIS and load the WMS, see figure `fig_wmsproject`_
+`Creating a WMS from a QGIS project`_ to QGIS and load the WMS, see figure `fig_wmsproject`_
 
 .. _`fig_wmsproject`:
 
