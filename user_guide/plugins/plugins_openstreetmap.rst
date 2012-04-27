@@ -1,5 +1,6 @@
+.. _`plugins_osm`:
 
-OpenStreetMap Plugin}\label{plugins_osm
+OpenStreetMap Plugin
 =======================================
 
 
@@ -51,7 +52,7 @@ and a full revision history is maintained. Registered users can upload GPS track
 logs and edit the vector data using the given editing tools.
 
 OSM data primitive is an object class that can be stored via the API in the
-server. The three supported types of data are: **Node}, Way** and **Relation**.
+server. The three supported types of data are: **Node, Way** and **Relation**.
 
 .. %[label=--]
 * **A node** is a latitude/longitude pair of coordinates. It is used as 
@@ -69,7 +70,8 @@ Map features are well-known in the OSM community and are stored as tags,
 based on a key and a value. OSM is usually distributed in XML format. XML
 payload is used for the communication with the OSM server as well.
 
-QGIS - OSM Connection}\label{qgis-osm-connection
+.. _`qgis-osm-connection`:
+QGIS - OSM Connection
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The first part of this section describes how OSM data primitives are displayed 
@@ -79,7 +81,7 @@ layer types: Point layer, Line layer and Polygon layer. It is not possible
 to remove any of these layers and work with the other ones. % I'm not sure what 
 this phrase 'work with the other ones' means 
 
-[label=--]
+.. [label=--]
 
 * A **Point layer** displays all features of type Node that stands
   alone. That means that only Nodes that are not included in any Way belongs
@@ -362,7 +364,8 @@ a new position of a moved feature.
 
 Snapping is also supported in this operation, this means:
 
-[label=--]
+.. [label=--]
+
 * When moving a standalone (not part of any line/polygon) point, snapping to 
   all map segments and vertices is performed.
 * When moving a point that is a member of some lines/polygons, snapping to all 
@@ -395,7 +398,8 @@ If the parent feature was a line with two vertexes, its new geometry has
 only one vertex. And because there cannot exist a line with only one vertex,
 the feature type is automatically changed to Point.
 
-Editing relations}\label{editing_osm_relation
+.. _`editing_osm_relation`:
+Editing relations
 *********************************************
 
 Thanks to existence of OSM relations we can join OSM features into groups and
@@ -405,7 +409,8 @@ etc. Each member of a relation has its specific role. There is a pretty good
 support for OSM Relations in our plugin. Let's see how to examine, create,
 update or remove them.
 
-Examining relation}\label{examrelation
+.. _`examrelation`:
+Examining relation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to see relation properties, first identify one of its members.
@@ -520,7 +525,7 @@ your QGIS installation is disabled. You can enable it again in
 ..   \centering
 ..   \includegraphics[clip=true, width=8cm]{osm_uploaddialog}
 ..   \caption{OSM upload dialog \nixcaption}\label{fig:osmupload}
-..\end{figure}
+.. \end{figure}
 
 At the top of the dialog you can check, if you are uploading the correct data.
 There is a short name of a current database. In the table you find information
@@ -556,7 +561,7 @@ XML file, in which OSM data from your current map extent are represented.
 The OSM version of the output file is 0.6. Elements of OSM data
 (<node>, <way>, <relation>) do not contain information on their changesets
 and uids. This information are not compulsory yet, see DTD for
-OSM XML version 0.6. In the output file OSM elements are not ordered.
+OSMy XML version 0.6. In the output file OSM elements are not ordered.
 
 Notice that not only data from the current extent are saved. Into the output
 file the whole polygons and lines are saved even if only a small part of them
