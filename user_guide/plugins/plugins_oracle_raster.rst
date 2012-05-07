@@ -83,8 +83,9 @@ beginning and select another table name.
 Select Oracle GeoRaster dialog
 
 
-The Selection data entry can also be used to enter a Where clause at the end of the  identification string, e.g., 
-``geor:scott/tiger@orcl,gdal\_import,raster,geoid=''. See http://www.gdal.org/frmt_georaster.html for more information.
+The Selection data entry can also be used to enter a Where clause at the end of the  identification string, e.g. 'geor:scott/tiger@orcl,gdal_import,raster,geoid='. 
+
+See http://www.gdal.org/frmt_georaster.html for more information.
 
 Displaying GeoRaster
 ********************
