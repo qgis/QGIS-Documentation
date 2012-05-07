@@ -424,4 +424,4 @@ Apart from the raster calculator, additional raster analysis in |qg| 1.7 is prov
 by the GDALTools core plugin. Please refer to section :ref:`label_plugingdaltools` 
 for more information.
 
-.. [1] GRASS raster suppor t is supplied by a native QGIS data provider plugin. 
+.. [1] GRASS raster support is supplied by a native QGIS data provider plugin. 

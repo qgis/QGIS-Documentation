@@ -41,7 +41,7 @@ In order to use OTF projection, your data must contain information about its
 coordinate reference system or you have to define a global, layer or
 project-wide CRS. For PostGIS layers QGIS uses the spatial reference
 identifier that was specified when the layer was created. For data supported
-by OGR, QGIS relies on the presence of a recognised means of specifying
+by OGR, QGIS relies on the presence of a recognized means of specifying
 the CRS. In the case of shapefiles, this means a file containing the Well
 Known Text (WKT):index:`WKT` specification of the CRS. This projection file
 has the same base name as the shapefile and a prj extension. For example, a
