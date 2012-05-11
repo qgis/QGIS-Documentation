@@ -107,6 +107,45 @@ rst_epilog = """
 .. |tab| image:: img/en/tab.png
 .. |icon_sqlanywhere| image:: img/en/plugins_sql_anywhere/sqlanywhere.png
    :width: 1.5em
+.. |oracle_raster| image:: img/en/plugins_oracle_raster/oracle_raster.png
+   :width: 1.5em
+.. |raster_terrain| image:: img/en/plugins_raster_terrain/raster_terrain.png
+   :width: 1.5em
+.. |osm_load| image:: img/en/plugins_openstreetmap/osm_load.png
+   :width: 1.5em
+.. |osm_featureManager| image:: img/en/plugins_openstreetmap/osm_featureManager.png
+   :width: 1.5em
+.. |osm_download| image::  img/en/plugins_openstreetmap/osm_download.png
+   :width: 1.5em
+.. |osm_upload| image:: img/en/plugins_openstreetmap/osm_upload.png
+   :width: 1.5em
+.. |osm_import| image:: img/en/plugins_openstreetmap/osm_import.png
+   :width: 1.5em
+.. |osm_save| image:: img/en/plugins_openstreetmap/osm_save.png
+   :width: 1.5em
+.. |osm_identify| image:: img/en/plugins_openstreetmap/osm_identify.png
+   :width: 1.5em
+.. |osm_createPoint| image:: img/en/plugins_openstreetmap/osm_createPoint.png
+   :width: 1.5em
+.. |osm_createLine| image:: img/en/plugins_openstreetmap/osm_createLine.png
+   :width: 1.5em
+.. |osm_createPolygon| image:: img/en/plugins_openstreetmap/osm_createPolygon.png
+   :width: 1.5em
+.. |osm_move| image:: img/en/plugins_openstreetmap/osm_move.png
+   :width: 1.5em
+.. |osm_removeFeat| image:: img/en/plugins_openstreetmap/osm_removeFeat.png
+   :width: 1.5em
+.. |osm_createRelation| image:: img/en/plugins_openstreetmap/osm_createRelation.png
+   :width: 1.5em
+.. |osm_addRelation| image:: img/en/plugins_openstreetmap/osm_addRelation.png
+   :width: 1.5em
+.. |osm_generateTags| image:: img/en/plugins_openstreetmap/osm_generateTags.png
+   :width: 1.5em
+.. |osm_identify| image:: img/en/plugins_openstreetmap/osm_identify.png
+   :width: 1.5em
+.. |osm_editRelation| image:: img/en/plugins_openstreetmap/osm_editRelation.png
+   :width: 1.5em
+.. |osm_questionMark| image:: img/en/plugins_openstreetmap/osm_questionMark.png
 """
 
 

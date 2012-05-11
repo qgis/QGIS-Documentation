@@ -35,7 +35,7 @@ To deactivate and reactivate external plugins, the :file:`Plugin Manager` is use
 
 Loading a QGIS Core Plugin
 ***************************
-.. _`load_core_plugin`:
+.. _`plugins/plugins/load_core_plugin`:
 
 
 Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --> Manage Plugins`
