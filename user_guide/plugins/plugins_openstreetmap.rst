@@ -21,7 +21,7 @@ purpose was to combine their functionalities to get the best possible result.
 The following section gives a brief introduction to principles of the OSM project. If you are not interested in information on OSM just skip the next
 section. 
 
-Parts of the following paragraphs are copied from the OpenStreetMap web site at www.openstreetmap.org .
+Parts of the following paragraphs are copied from the OpenStreetMap web site at http://www.openstreetmap.org.
 
 .. delete this piece about skipping?
 
@@ -38,7 +38,7 @@ other free sources or simply from local knowledge. The project was started becau
    :align:  center
    :width:  30em
 
-OpenStreetMap data in the web
+   OpenStreetMap data in the web
 
 
 OpenStreetMap was inspired by sites such as Wikipedia - the map display
@@ -153,7 +153,7 @@ together with new graphical components as shown in Figure `plugins/plugins_opens
    :align: center
    :width: 30em
 
-OSM plugin user interface
+   OSM plugin user interface
 
 
 OSM Features widget
@@ -209,15 +209,15 @@ on the first mentioned method.
 To load data from a file use the |osm_load|:guilabel:`Load OSM from file` 
 icon. If there is no such button, maybe someone disabled OpenStreetMap
 toolbar in your QGIS installation. You can enable it again selecting
-:menuselection:`Settings --> Toolbars --> OpenStreetMap` .
+:menuselection:`Settings --> Toolbars --> OpenStreetMap -->`.
 
 .. _`plugins/plugins_openstreetmap/osmloaddialog`:
 
 .. figure:: img/en/plugins_openstreetmap/osmloaddialog.png
-   :align: centre
+   :align: center
    :width: 30em
 
-Load OSM data dialog
+   Load OSM data dialog
 
 The purpose of its elements is explained below.
 
@@ -283,11 +283,11 @@ on the OSM Feature widget. Don't forget to identify feature first.
 
 .. _`plugins/plugins_openstreetmap/changefeaturetag`:
 
-..  figure:: img/en/plugins_openstreetmap/osm_changefeaturetag.png
-..  :align: center
-..  :width: 20em
+.. figure:: img/en/plugins_openstreetmap/osm_changefeaturetag.png
+.. :align: center
+.. :width: 30em
 
-Changing an OSM feature tag
+   Changing an OSM feature tag
 
 If you want to change a tag value, just double-click in the appropriate row of
 column 'Value' and type, or select a new value. If you want to remove a tag,
@@ -434,10 +434,9 @@ There are 2 ways to create a relation:
 
 
 #. You can use the |osm_createRelation|:guilabel:`Create relation`
-button on OSM Feature widget.
-
+   button on OSM Feature widget.
 #. You can create it from the :guilabel:`Relation` tab of OSM Feature widget
-using the |osm_addRelation|:guilabel:`Add relation` button.
+   using the |osm_addRelation|:guilabel:`Add relation` button.
 
 
 
@@ -471,7 +470,7 @@ Downloading OSM data
 To download data from OpenStreetMap server click on the
 |osm_download|:guilabel:`Download OSM data` \toolbtntwo{osm_download}{Download OSM data} button. If there is no
 such button, the OSM toolbar may be disabled in your QGIS instalation.
-You can enable it again at :menuselection:`Settings --> Toolbars --> OpenStreetMap` . After clicking the
+You can enable it again at :menuselection:`Settings --> Toolbars --> OpenStreetMap -->` . After clicking the
 button a dialog occurs and provides following functionalities:
 
 .. _`plugins/plugins_openstreetmap/osm_downloaddialog`:
@@ -482,35 +481,15 @@ button a dialog occurs and provides following functionalities:
 
 OSM download dialog
 
-| **Extent**: Specifies an area to download data from intervals
-of latitude and longitude degrees. Because there is some restriction of
-OpenStreetMap server on how much data can be downloaded, the intervals
-must not be too wide. More detailed info on extent specification can is
-shown after clicking the |osm_questionMark|:guilabel:`Help` button on
-the right. 
+| **Extent**: Specifies an area to download data from intervals of latitude and longitude degrees. Because there is some restriction of OpenStreetMap server on how much data can be downloaded, the intervals must not be too wide. More detailed info on extent specification can is shown after clicking the |osm_questionMark|:guilabel:`Help` button on the right. 
 
-| **Download to**: Here you are expected to write a path to the
-file where data will be stored. If you can't remember the structure of
-your disk, don't panic. The :guilabel:`Browse` button will help you.
+| **Download to**: Here you are expected to write a path to the file where data will be stored. If you can't remember the structure of your disk, don't panic. The :guilabel:`Browse` button will help you.
 
-| **Open data automatically after download**: Determines, if the
-download process should be followed by loading the data process or not. If you
-prefer not to load data now, you can do it later by using
-the |osm_load|:guilabel:`Load OSM from file` button.
+| **Open data automatically after download**: Determines, if the download process should be followed by loading the data process or not. If you prefer not to load data now, you can do it later by using the |osm_load|:guilabel:`Load OSM from file` button.
 
-| **Replace current data**: This option is active only if \radiobuttonon{Open data automatically after download} is checked.Checking this option means that downloaded data should replace
-current data we are working with now. Layers of the current data will be
-removed and new ones will be loaded. When starting QGIS and downloading
-OSM data for the first time, this option is initially inactive, because
-there is nothing to replace.
+| **Replace current data**: This option is active only if \radiobuttonon{Open data automatically after download} is checked.Checking this option means that downloaded data should replace current data we are working with now. Layers of the current data will be removed and new ones will be loaded. When starting QGIS and downloading OSM data for the first time, this option is initially inactive, because there is nothing to replace.
 
-| **Use custom renderer**: This option is active only if the
-\radiobuttonon{Open data automatically after download} checkbox is checked.
-It determines how many details will be in the map. There are three predefined
-OSM styles for map displaying. Use \button{Small scale} if you want to view
-OSM data at low level, to see all details and to edit something. If not you
-can use \button{Medium scale} or \button{Large scale}. QGIS \CURRENT does
-not support changing the renderer style dynamically.
+| **Use custom renderer**: This option is active only if the \radiobuttonon{Open data automatically after download} checkbox is checked. It determines how many details will be in the map. There are three predefined OSM styles for map displaying. Use :guilabel:`Small scale` if you want to view OSM data at low level, to see all details and to edit something. If not you can use :guilabel:`Medium scale` or :guilabel:`Large scale`. QGIS \CURRENT does not support changing the renderer style dynamically.
 
 Click the :guilabel:`Download` button to start the download process.
 
@@ -522,23 +501,23 @@ and download dialog will close themselves.
 Uploading OSM data
 ******************
 
-
 Note that the upload is always done on current OSM data. Before opening the
 OSM Upload dialog, please be sure that you really have the right active
 layer ~ OSM data.
 
 To upload current data to the OSM server click on the
-\toolbtntwo{osm_upload}{Upload OSM data} button. If there is no such button,
+|osm_upload|:guilabel:`Upload OSM data` button. If there is no such button,
 OSM toolbar in your QGIS installation is disabled. You can enable it
-again in \mainmenuopt{Settings} \arrow \mainmenuopt{Toolbars} \arrow
-\dropmenuopt{OpenStreetMap}. After clicking the \button{upload} button a
+again in :menuselection:`Settings --> Toolbars --> OpenStreetMap -->` . After clicking the :guilabel:`Upload` button a
 new dialog will appear.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{osm_uploaddialog}
-   \caption{OSM upload dialog \nixcaption}\label{fig:osmupload}
-\end{figure}
+.. _`plugins/plugins_openstreetmap/osm_uploaddialog`:
+
+.. figure:: img/en/plugins_openstreetmap/osm_uploaddialog.png
+   :align: center
+   :width: 25em
+
+   OSM upload dialog
 
 At the top of the dialog you can check, if you are uploading the correct data.
 There is a short name of a current database. In the table you find information
@@ -550,7 +529,7 @@ meaning of your upload operation. Just write in brief what data changes
 you've done or let the box empty.
 Fill 'OSM account' arrays so that the server could authenticate you. If
 you don't have an account on the OSM server, it's the best time to create
-one at \url{http://www.openstreetmap.org}. Finally use \button{Upload} to
+one at http://www.openstreetmap.org. Finally use :guilabel:`Upload` to
 start an upload operation.
 
 Saving OSM data
@@ -558,19 +537,20 @@ Saving OSM data
 
 
 To save data from a current map extent to an XML file click on the
-\toolbtntwo{osm_save}{Save OSM to file} button. If there is no such button,
+|osm_save|:guilabel:`Save OSM to file` button. If there is no such button,
 the OSM toolbar in your QuantumGIS installation is probably disabled. You can
-enable it again in \mainmenuopt{Settings} \arrow \mainmenuopt{Toolbars} \arrow
-\dropmenuopt{OpenStreetMap}. After clicking on the button a new dialog appears.
+enable it again in :menuselection:`Settings --> Toolbars --> OpenStreetMap -->`. After clicking on the button a new dialog appears.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{osm_savedialog}
-   \caption{OSM saving dialog \nixcaption}\label{fig:osmsave}
-\end{figure}
+.. _`plugins/plugins_openstreetmap/osm_savedialog`:
+
+.. figure:: img/en/plugins_openstreetmap/osm_savedialog.png
+  :align: center
+  :width: 25em
+
+  OSM saving dialog
 
 Select features you want to save into XML file and the file itself. Use
-the \button{Ok} button to start the operation. The process will create an
+the :guilabel:`Ok` button to start the operation. The process will create an
 XML file, in which OSM data from your current map extent are represented.
 The OSM version of the output file is 0.6. Elements of OSM data
 (<node>, <way>, <relation>) do not contain information on their changesets
@@ -585,34 +565,34 @@ nodes are saved too.
 Import OSM data
 ***************
 
-
 To import OSM data from an opened non-OSM vector layer follow this
 instructions: Choose current OSM data by clicking on one of their layers.
-Click on the \toolbtntwo{osm_import}{Import data from a layer} button. If
-there is no such button, someone has probably disable the OpenStreetMap
-toolbar in your QGIS installation. You can enable it again in
-\mainmenuopt{Settings} \arrow \mainmenuopt{Toolbars} \arrow \dropmenuopt{OpenStreetMap}.
+Click on the |osm_import|:guilabel:`Import data from a layer` button. If
+there is no such button, someone has probably disabled the OpenStreetMap
+toolbar in your QGIS installation. You can enable it again in :menuselection:`Settings --> Toolbars --> OpenStreetMap -->`.
 
 After clicking on the button following message may show up:
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{osm_importdialog}
-   \caption{OSM import message dialog \nixcaption}\label{fig:osmimportmessage}
-\end{figure}
+.. _`plugins/plugins_openstreetmap/osm_importdialog`:
 
-In such case there is no vector layer currently loaded. The import must be d
-one from a loaded layer - please load a vector layer from which you want to
-import data. After a layer is opened, your second try should give you a
+.. figure:: img/en/plugins_openstreetmap/osm_importdialog.png
+   :align: center
+   :width: 25em
+   
+   OSM import message dialog
+
+In such case there is no vector layer currently loaded. The import must be done from a loaded layer - please load a vector layer from which you want to import data. After a layer is osm_importtoosmdialog.pngopened, your second try should give you a
 better result (don't forget to mark the current OSM layer again):
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{osm_importtoosmdialog}
-   \caption{Import data to OSM dialog \nixcaption}\label{fig:osmimporttoosm}
-\end{figure}
+.. _`plugins/plugins_openstreetmap/osm_importtoosmdialog`: 
+
+.. figure:: img/en/plugins_openstreetmap/osm_importtoosmdialog.png
+   :align: center
+   :width: 25em
+
+   Import data to OSM dialog
 
 Use the submit dialog to start the process of OSM data importing.
 Reject it if you are not sure you want to import something.
 
-\FloatBarrier
+.. \FloatBarrier
