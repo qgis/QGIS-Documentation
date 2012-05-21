@@ -1,7 +1,7 @@
 ..   !TeX  root  =  user_guide.tex
 
 .. _`osm`:
-====================
+
 OpenStreetMap Plugin
 ====================
 
@@ -25,8 +25,7 @@ Parts of the following paragraphs are copied from the OpenStreetMap web site at 
 
 .. delete this piece about skipping?
 
-The OpenStreetMap project
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**The OpenStreetMap project**
 
 
 OpenStreetMap is a project to create a free editable map of the world. The maps are created using data from portable GPS devices, aerial photography,
@@ -73,8 +72,8 @@ payload is used for the communication with the OSM server as well.
 
 .. _`qgis-osm-connection`:
 
-QGIS - OSM Connection
-~~~~~~~~~~~~~~~~~~~~~
+**QGIS - OSM Connection**
+
 
 
 The first part of this section describes how OSM data primitives
@@ -132,15 +131,16 @@ Relation creation, deletion and moving.
   editing tools, changes in QuantumGIS core code would be necessary.
 
 Installation
-************
+------------
 
 
 The OpenStreetMap plugin is a core plugin inside QGIS. If you have python
 support enabled, the 'OpenStreetMap' plugin can be selected in the Plugin
 Manager as described in section :ref:`plugins/plugins/load_core_plugin`.
 
+
 Basic user interface
-********************
+--------------------
 
 
 The first time the OSM plugin is started (and after the first data are
@@ -156,8 +156,7 @@ together with new graphical components as shown in Figure `plugins/plugins_opens
    OSM plugin user interface
 
 
-OSM Features widget
-~~~~~~~~~~~~~~~~~~~
+**OSM Features widget**
 
 
 The OSM Feature widget helps to identify OSM features. It
@@ -167,8 +166,7 @@ editing tools (in the top part of it). More information on those tools can be
 found in the sections below. The widget is initially disabled. It
 activates itself after successful loading some OSM data.
 
-OSM Undo/Redo widget
-~~~~~~~~~~~~~~~~~~~~
+**OSM Undo/Redo widget**
 
 
 This Undo/Redo widget is used to undo and redo edit actions. It consists
@@ -177,8 +175,8 @@ brief description of the edit actions that were done. The OSM Undo/Redo
 widget is initially closed. You can show it using a button on the OSM Feature
 widget.
 
-Toolbar menu icons
-~~~~~~~~~~~~~~~~~~
+**Toolbar menu icons**
+
 
 | |osm_load|:guilabel:`Load OSM from file` : is used to load data from a special OpenStreetMap XML file.
 
@@ -197,8 +195,9 @@ More detailed information on all the widgets, buttons and dialogs can be
 found in appropriate sections of this plugin section according to their
 functionality (editing, identification, etc.).
 
+
 Loading OSM data
-****************
+----------------
 
 
 The first action that should be done after starting the OSM Plugin is
@@ -221,8 +220,6 @@ toolbar in your QGIS installation. You can enable it again selecting
 
 The purpose of its elements is explained below.
 
-`plugins/plugins_openstreetmap/osmloaddialog`_
-
 | **OpenStreetMap file to load**: Click on the button to select the .osm file you want to load data from.
 
 | **Add columns for tags**: This option determines a connection between OSM and QGIS data. Each feature of OSM data has some tags (pairs of key and value), that define the feature properties. Each feature of a QGIS vector layer also has its attributes (key and value). With this option you can define which properties of OSM objects should be visible when displaying detailed information about QGIS features.
@@ -234,8 +231,9 @@ The purpose of its elements is explained below.
 
 Click :guilabel:`Ok` to load your data. If this is the first time the OSM file is loaded, the plugin must first parse the database. This may take few seconds or minutes - it depends on the amount of loaded data.
 
+
 Viewing OSM data
-****************
+----------------
 
 
 After the OSM data are loaded, you can identify map features using the
@@ -261,8 +259,9 @@ features is identified (and marked with the rubberband) but the plugin
 remembers all of them. Then (still in the pause mode) you can cycle through the
 identified features by right-clicking.
 
+
 Editing basic OSM data
-**********************
+----------------------
 
 
 'Basic data'  in this context means non-relational OSM features -
@@ -274,8 +273,8 @@ position or shape of any existing basic feature. You can remove features or
 add new ones. All changes on nodes and ways are remembered by Undo/Redo all 
 changes can be easily uploaded to the OpenStreetMap server.
 
-Changing feature tags
-~~~~~~~~~~~~~~~~~~~~~
+**Changing feature tags**
+
 
 Changing the property/tag of an OSM feature can be done directly in
 the table of feature tags. The Tags table of basic features can be found
@@ -299,8 +298,8 @@ where '<next tag value>' is written. Notice that you cannot change the key of
 an existing tag pair. Conveniently, there are some combo boxes of all
 existing tag keys and their typical values.
 
-Point creation
-~~~~~~~~~~~~~~
+**Point creation**
+
 
 For point creation there is a |osm_createPoint|:guilabel:`Create point`
 button on the OSM Feature widget. To create some points, just click on the
@@ -324,8 +323,8 @@ and is enabled by default. If you want to create a point very close to some
 line (but not on it) you must disable snapping by holding the
 :kbd:`Ctrl` key first.
 
-Line creation
-~~~~~~~~~~~~~
+**Line creation**
+
 
 For line creation, there is a |osm_createLine|:guilabel:`Create Line` button
 on the OSM Feature widget. To create a line just click the button and start
@@ -340,8 +339,8 @@ Snapping is performed to all map vertices - points from the Point vector layer
 and all Line and Polygon members. Snapping can be disabled by holding the
 :kbd:`Ctrl` key.
 
-Polygon creation
-~~~~~~~~~~~~~~~~
+**Polygon creation**
+
 
 For polygon creation there is a |osm_createPolygon|:guilabel:`Create polygon`
 button on the OSM Feature widget. To create a polygon just click the button
@@ -353,8 +352,8 @@ operation is ignored. Snapping is performed to all map vertexes - points
 (from Point vector layer) and all Line and Polygon members. Snapping can be
 disabled by holding the :kbd:`Ctrl` key.
 
-Map feature moving
-~~~~~~~~~~~~~~~~~~
+**Map feature moving**
+
 
 If you want to move a feature (no matter what type) please use the
 |osm_move|:guilabel:`Move feature` button from the OSM Feature widget menu.
@@ -380,8 +379,7 @@ Snapping is also supported in this operation, this means:
 
 
 
-Map feature removing
-~~~~~~~~~~~~~~~~~~~~
+**Map feature removing**
 
 If you want to remove a feature, you must identify it first. To remove
 an identified feature, use the |osm_removeFeat|:guilabel:`Remove this
@@ -404,7 +402,7 @@ the feature type is automatically changed to Point.
 
 .. _`editing_osm_relation`:
 Editing relations
-*****************
+-----------------
 
 
 Thanks to existence of OSM relations we can join OSM features into groups and
@@ -415,8 +413,8 @@ support for OSM Relations in our plugin. Let's see how to examine, create,
 update or remove them.
 
 .. _`examrelation`:
-Examining relation
-~~~~~~~~~~~~~~~~~~
+**Examining relation**
+
 
 If you want to see relation properties, first identify one of its members.
 After that open the :guilabel:`Relations` tab on the OSM Feature widget. At the
@@ -427,8 +425,8 @@ properties of the selected relation. In the table called 'Relation members'
 you see brief information on the relation members. If you click on a member,
 the plugin will make a rubberband on it in the map.
 
-Relation creation
-~~~~~~~~~~~~~~~~~
+**Relation creation**
+
 
 There are 2 ways to create a relation:
 
@@ -453,8 +451,7 @@ keys. Choosing relation members can be done either by writing member identifiers
 Finally when type, tags and members are chosen, the dialog can be submitted.
 In such case the plugin creates a new relation for you.
 
-Changing relation
-~~~~~~~~~~~~~~~~~
+**Changing relation**
 
 If you want to change an existing relation, identify it first (follow steps
 written above in Section 'Examining relation'). After that click on the
@@ -465,10 +462,10 @@ given relations. You can change relation tags, members or even its type.
 After submitting the dialog your changes will be committed.
 
 Downloading OSM data
-********************
+--------------------
 
 To download data from OpenStreetMap server click on the
-|osm_download|:guilabel:`Download OSM data` \toolbtntwo{osm_download}{Download OSM data} button. If there is no
+|osm_download|:guilabel:`Download OSM data` button. If there is no
 such button, the OSM toolbar may be disabled in your QGIS instalation.
 You can enable it again at :menuselection:`Settings --> Toolbars --> OpenStreetMap -->` . After clicking the
 button a dialog occurs and provides following functionalities:
@@ -487,9 +484,9 @@ OSM download dialog
 
 | **Open data automatically after download**: Determines, if the download process should be followed by loading the data process or not. If you prefer not to load data now, you can do it later by using the |osm_load|:guilabel:`Load OSM from file` button.
 
-| **Replace current data**: This option is active only if \radiobuttonon{Open data automatically after download} is checked.Checking this option means that downloaded data should replace current data we are working with now. Layers of the current data will be removed and new ones will be loaded. When starting QGIS and downloading OSM data for the first time, this option is initially inactive, because there is nothing to replace.
+| **Replace current data**: This option is active only if |radiobuttonon| 'Open data automatically after download' is checked.Checking this option means that downloaded data should replace current data we are working with now. Layers of the current data will be removed and new ones will be loaded. When starting QGIS and downloading OSM data for the first time, this option is initially inactive, because there is nothing to replace.
 
-| **Use custom renderer**: This option is active only if the \radiobuttonon{Open data automatically after download} checkbox is checked. It determines how many details will be in the map. There are three predefined OSM styles for map displaying. Use :guilabel:`Small scale` if you want to view OSM data at low level, to see all details and to edit something. If not you can use :guilabel:`Medium scale` or :guilabel:`Large scale`. QGIS \CURRENT does not support changing the renderer style dynamically.
+| **Use custom renderer**: This option is active only if the |radiobuttonon| 'Open data automatically after download' checkbox is checked. It determines how many details will be in the map. There are three predefined OSM styles for map displaying. Use :guilabel:`Small scale` if you want to view OSM data at low level, to see all details and to edit something. If not you can use :guilabel:`Medium scale` or :guilabel:`Large scale`. QGIS \CURRENT does not support changing the renderer style dynamically.
 
 Click the :guilabel:`Download` button to start the download process.
 
@@ -499,7 +496,7 @@ dialog tells you why. When action finishes successfully both the progress dialog
 and download dialog will close themselves.
 
 Uploading OSM data
-******************
+------------------
 
 Note that the upload is always done on current OSM data. Before opening the
 OSM Upload dialog, please be sure that you really have the right active
@@ -533,7 +530,7 @@ one at http://www.openstreetmap.org. Finally use :guilabel:`Upload` to
 start an upload operation.
 
 Saving OSM data
-***************
+---------------
 
 
 To save data from a current map extent to an XML file click on the
@@ -563,7 +560,7 @@ is visible in the current extent. For each saved line/polygon all its member
 nodes are saved too.
 
 Import OSM data
-***************
+---------------
 
 To import OSM data from an opened non-OSM vector layer follow this
 instructions: Choose current OSM data by clicking on one of their layers.

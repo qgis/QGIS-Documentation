@@ -95,11 +95,12 @@ rst_epilog = """
 .. |osx| image:: img/en/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |checkbox|  image:: img/en/checkbox.png
+.. |checkbox| image:: img/en/checkbox.png
 .. |radiobuttonon| image:: img/en/radiobuttonon.png
 .. |radiobuttonoff| image:: img/en/radiobuttonoff.png
 .. |selectnumber| image:: img/en/selectnumber.png
 .. |selectstring| image:: img/en/selectstring.png
+.. |selectstring2| image:: img/en/selectstring2.png
 .. |browsebutton| image:: img/en/browsebutton.png
 .. |selectcolor| image:: img/en/selectcolor.png
 .. |slider| image:: img/en/slider.png
@@ -146,6 +147,16 @@ rst_epilog = """
 .. |osm_editRelation| image:: img/en/plugins_openstreetmap/osm_editRelation.png
    :width: 1.5em
 .. |osm_questionMark| image:: img/en/plugins_openstreetmap/osm_questionMark.png
+   :width: 1.5em
+.. |osm_upload| image:: img/en/plugins_openstreetmap/osm_upload.png
+   :width: 1.5em 
+.. |osm_save| image:: img/en/plugins_openstreetmap/osm_save.png
+   :width: 1.5em
+.. |osm_import| image:: img/en/plugins_openstreetmap/osm_import.png
+   :width: 1.5em
+.. |offline_editing_copy| image:: img/en/plugins_offline_editing/offline_editing_copy.png
+   :width: 1.5em
+
 """
 
 

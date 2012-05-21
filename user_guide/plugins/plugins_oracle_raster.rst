@@ -1,7 +1,6 @@
 ..  !TeX  root  =  user_guide.tex
 
-.. _`oracleraster`:
-=======================
+.. _`plugins/plugins_oracleraster/oracleraster`:
 Oracle GeoRaster Plugin
 =======================
 
@@ -26,7 +25,7 @@ $ gdal_translate -of georaster input_file.tif geor:scott/tiger@orcl
 This will load the raster into the default GDAL\_IMPORT table, as a column named RASTER.
 
 Managing connections
-********************
+--------------------
 
 
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager (see Section 
@@ -57,7 +56,7 @@ may also :guilabel:`Edit` the connection by opening the previous dialog and maki
 information, or use the :guilabel:`Delete` button to remove the connection from the drop-down list.
 
 Selecting a GeoRaster
-*********************
+---------------------
 
 
 Once a connection has been established, the sub-datasets window will show the names of all the tables that 
@@ -88,7 +87,7 @@ The Selection data entry can also be used to enter a Where clause at the end of 
 See http://www.gdal.org/frmt_georaster.html for more information.
 
 Displaying GeoRaster
-********************
+--------------------
 
 
 Finally, by selecting a GeoRaster from the list of Raster Data Table and Raster Id's, the raster image will be 
