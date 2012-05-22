@@ -156,6 +156,8 @@ rst_epilog = """
    :width: 1.5em
 .. |offline_editing_copy| image:: img/en/plugins_offline_editing/offline_editing_copy.png
    :width: 1.5em
+.. |interpolation| image:: img/en/plugins_interpolation/interpolation.png
+   :width: 1.5em
 
 """
 
