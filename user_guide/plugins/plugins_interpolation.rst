@@ -36,21 +36,22 @@ The plugin requires the following parameters to be specified before running:
 
 **Using the plugin**
 
-  #.  Start QGIS and load an point vector layer (e.g., :file:`elevp.csv`). 
-  #.  Load the Interpolation plugin in the Plugin Manager (see Section :ref:`plugins/plugins/load_core_plugin`) and click on the               |interpolation|:guilabel:`Interpolation` icon which appears in the QGIS toolbar menu. The Interpolation plugin dialog appears as shown in Figure `plugins/plugins_interpolation/interpolate_dialog`_.
-  #.  Select an input layer (e.g., 'elevp'|selectstring|) and column (e.g. :file:`ELEV`) for interpolation.
-  #.  Select an interpolation method (e.g. 'Triangular interpolation'|selectstring|), and specify a cellsize of 5000 as well as the raster output filename (e.g., :file:`elevation\_tin`).
-  #.  Click :guilabel:`Ok`.
-  #.  For the current example, double click :file:`elevation\_tin` in the layer list to open the Raster Layer Properties dialog and select 'Pseudocolor'|selectstring| as Color Map in the |tab|'Symbology' tab. Or you can define a new color table as described in Section \ref{label_rasterprop}.
+#.  Start QGIS and load an point vector layer (e.g., :file:`elevp.csv`). 
+#.  Load the Interpolation plugin in the Plugin Manager (see Section :ref:`plugins/plugins/load_core_plugin`) and click on the               |interpolation|:guilabel:`Interpolation` icon which appears in the QGIS toolbar menu. The Interpolation plugin dialog appears as shown in Figure `plugins/plugins_interpolation/interpolate_dialog`_.
+#.  Select an input layer (e.g., 'elevp'|selectstring|) and column (e.g., :file:`ELEV`) for interpolation.
+#.  Select an interpolation method (e.g. 'Triangular interpolation'|selectstring|), and specify a cellsize of 5000 as well as the raster output filename (e.g., :file:`elevation\_tin`).
+#.  Click :guilabel:`Ok`.
+#.  For the current example, double click :file:`elevation\_tin` in the layer list to open the Raster Layer Properties dialog and select 'Pseudocolor'|selectstring| as Color Map in the :guilabel:`Symbology` tab. Or you can define a new color table as described in Section \ref{label_rasterprop}.
 
 
+In Figure `plugins/plugins_interpolation/interpolate_tin`_ you see the TIN interpolation result with a 998 cols x 812 rows (5 km) resolution for the :file:`elevp.csv` data visualized using the Pseudocolor color table. The processing only takes a few minutes, and covers the northern part of Alaska.
 
-In Figure \ref{fig:interpolation_idw} you see the TIN interpolation result with a 998 cols x 812 rows (5 km) resolution for the \filename{elevp.csv} data visualized using the Pseudocolor color table. The processing only takes a few minutes, and covers the northern part of Alaska.
+.. _`plugins/plugins_interpolation/interpolate_tin`:
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=10cm]{interpolate_tin}
-   \caption{Interpolation of elevp data using TIN method \nixcaption}\label{fig:interpolation_idw}
-\end{figure}
+.. figure:: img/en/plugins_interpolation/interpolate_tin.png
+   :align: center
+   :width: 30em
+
+   Interpolation of elevp data using TIN method 
 
 .. \FloatBarrier
