@@ -1,0 +1,2898 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS User Guide 1.7.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-25 17:42\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../introduction/features_at_a_glance.rst:5
+# cd75f6721e874a3bb36874b839702fba
+msgid "Features at a Glance"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:12
+# a6931a5d907d4467bf135ae934df97b9
+msgid "After a first and simple sample session in Section :ref:`label.getstarted` we now want to give you a more detailed overview of the features of QGIS.  Most features presented in the following chapters will be explained and described in their own sections later in the manual."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:20
+# 2dcef866700f468f8d4e376d0ddbc2a8
+msgid "Starting and Stopping QGIS"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:22
+# 578d40473ce5494eb93b2176ce429599
+msgid "In Section :ref:`samplesession` you already learned how to start QGIS. We will repeat this here and you will see that QGIS also provides further command line options."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:26
+# ed5ff71612084c9f9e99fc62c929feaa
+msgid "|nix| Assuming that QGIS is installed in the PATH, you can start QGIS by typing: ``qgis``  at a command prompt or by double clicking on the QGIS application link (or shortcut) on the desktop or in the application menu."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:29
+# 3be36a8914aa460dbcdad89dadc70020
+msgid "|win| Start QGIS using the Start menu or desktop shortcut, or double click on a QGIS project file."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:31
+# b7eab31176e04a31a800a2c46f7e4108
+msgid "|osx| Double click the icon in your Applications folder. If you need to start QGIS in a shell, run /path-to-installation-executable/Contents/MacOS/Qgis."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:36
+# af09a499352a4209b63aeb83c61017ce
+msgid "To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:42
+# b0aca24005fb4238bdaeee816222fbf2
+msgid "Command Line Options"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:43
+# 03bca144526a4c0b9c91fae79f72de56
+msgid ":index:`command line options`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:45
+# ccef44c2c25b4398ad47f0142e58c933
+msgid "|nix| QGIS supports a number of options when started from the command line. To get a list of the options, enter ``qgis ---help`` on the command line. The usage statement for QGIS is:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:79
+# 4d162e6e7a2547f1ba39fe764bcdf81c
+msgid "**Example Using command line arguments** You can start QGIS by specifying one or more data files on the command line. For example, assuming you are in the qgis_sample_data directory, you could start QGIS with a vector layer and a raster file set to load on startup using the following command: ``qgis ./raster/landcover.img ./gml/lakes.gml``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:87
+# 7acaefad3b754efe89231e92f8a8ed5b
+msgid "Command line option ``---snapshot``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:89
+# b5763db00d1a4e808e30835b1f3153a5
+msgid "This option allows you to create a snapshot in PNG format from the current view. This comes in handy when you have a lot of projects and want to generate snapshots from your data."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:93
+# 0c4d942c46f1414a9d642a2e65355ef5
+msgid "Currently it generates a PNG-file with 800x600 pixels. This can be adapted using the ``---width`` and ``---height`` command line arguments. A filename can be added after ``---snapshot``."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:98
+# 4b77c6539ced4b3ea08fb197ddd05ef0
+msgid "Command line option ``---lang``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:100
+# 5378d84c38c84adf809a1729393ae015
+msgid "Based on your locale QGIS, selects the correct localization. If you would like to change your language, you can specify a language code. For example: ``---lang=it`` starts QGIS in italian localization. A list of currently supported languages with language code and status is provided at http://www.qgis.org/wiki/GUI_Translation_Progress"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:108
+# f2cbf40bfbd1487c8c7a9ddb8e14a6ca
+msgid "Command line option ``---project``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:110
+# a5b091cc528b4871979c7ccd8c37a574
+msgid "Starting QGIS with an existing project file is also possible. Just add the command line option ``---project`` followed by your project name and QGIS will open with all layers loaded described in the given file."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:115
+# 5f6ad916e49d481ca762ae18beefe060
+msgid "Command line option ``---extent``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:117
+# a188ed7c2931474980ae859eaa1799bd
+msgid "To start with a specific map extent use this option. You need to add the bounding box of your extent in the following order separated by a comma::"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:123
+# 5247ce004af04fedbab2241a31a6d6eb
+msgid "Command line option ``---nologo``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:125
+# d3e2b6fab933434e8505f9e4a697fad7
+msgid "This command line argument hides the splash screen when you start QGIS."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:128
+# cf31a60779fc4533b9cf1a6f94912928
+msgid "Command line option ``---noplugins``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:130
+# dd039bf590374d01a1acd4175fa7c4f2
+msgid "If you have trouble at startup with plugins, you can avoid loading them at startup. They will still be available in Plugins Manager after-wards."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:134
+# 732d9fd49ed74550a9c5919f5471c874
+msgid "Command line option ``---optionspath``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:136
+# dcc8a1ab168c44f8aea0b7e931c93dd9
+msgid "You can have multiple configurations and decide which one to use when starting QGIS using this option. See :ref:`subsec_gui_options` to check where does the operating system save the settings files. Presently there is no way to specify in which file where to write the settings, therefore you can create a copy of the original settings file and rename it."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:143
+# 7a9554add65240628c2b36f5586af2bb
+msgid "Command line option ``---configpath``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:145
+# d91c2b811b5f4871b9049777dc4ae86a
+msgid "This option is similar to the one above, but furthermore overrides the default path (~/.qgis) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry QGIS installation on a flash drive together with all plugins and settings"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:153
+# ada34c5bd7dd4e1ab102f627f578208e
+msgid "QGIS GUI"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:157
+# 611e44c882234be3ae7bc998f896136d
+msgid "When QGIS starts, you are presented with the GUI as shown below (the numbers 1 through 6 in yellow ovals refer to the six major areas of the interface as discussed below):"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:169
+# 86c5e9e4b9284d14b950a699fad38352
+msgid "Your window decorations (title bar, etc.) may appear different depending on your operating system and window manager."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:172
+# 272a3b1a013b47648093dbd4ab1617b0
+msgid "The QGIS GUI is divided into six areas:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:175
+#: ../../introduction/features_at_a_glance.rst:189
+# 524ad6a6f5da44b6b113c8a448332cb7
+# eab9da353cc44c6386eb5396c692392a
+msgid "Menu Bar"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:175
+#: ../../introduction/features_at_a_glance.rst:608
+# 3f71b7acc91b44ee8d802d23d2767e09
+# e312041259f143a0916eee0aec8585fb
+msgid "Map View"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:177
+# b465e1bb612f4cd0b9f3660df76b2b4b
+msgid "Tool Bar"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:177
+#: ../../introduction/features_at_a_glance.rst:645
+# cb9a87f4cda749a68fb6f02eebacbaf9
+# 93c5f2788db94aaaa43d09019935da2b
+msgid "Map Overview"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:179
+#: ../../introduction/features_at_a_glance.rst:496
+# d63a0ca9671342a3962b3de2b4c3188c
+# f228bd4f31734bd792854afd21444bca
+msgid "Map Legend"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:179
+#: ../../introduction/features_at_a_glance.rst:666
+# 87378854d12d4267bbfc2f8141cfaa82
+# 6227d12437ec440c9fda0eb703f55671
+msgid "Status Bar"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:182
+# eccc65ff3f114dc5b78d200185279b2c
+msgid "These six components of the QGIS interface are described in more detail in the following sections. Two more sections present keyboard shortcuts and context help."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:193
+# 7b334506f1ce4465b68247cfba51adbb
+msgid "The menu bar provides access to various QGIS features using a standard hierarchical menu. The top-level menus and a summary of some of the menu options are listed below, together with the icons of the corresponding tools as they appear on the toolbar, as well as keyboard shortcuts. [1]_ Although most menu options have a corresponding tool and vice-versa, the menus are not organized quite like the toolbars. The toolbar containing the tool is listed after each menu option as a checkbox entry. For more information about tools and toolbars, see Section :ref:`label_toolbars`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:206
+#: ../../introduction/features_at_a_glance.rst:274
+#: ../../introduction/features_at_a_glance.rst:285
+#: ../../introduction/features_at_a_glance.rst:328
+#: ../../introduction/features_at_a_glance.rst:379
+#: ../../introduction/features_at_a_glance.rst:401
+#: ../../introduction/features_at_a_glance.rst:411
+#: ../../introduction/features_at_a_glance.rst:419
+# 7b1cab720585431a935b96c2507d9ca0
+# 1499a329a6d648b099eb534dc6384c89
+# 1d754d8eb7554fd9ad3beb61ffc357a9
+# 5ba41c6d2a654fc3a3cf1aba9c695489
+# 1972900edca64d0eafacf807ab0ec2eb
+# 455da10ebde74e4aa2cf92cd52f99ffc
+# 1962f7d06e444b9fab30244c171f6e59
+# 6bf51c815d014f0faa488f79e6aa9b2a
+msgid "Menu Option"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:206
+#: ../../introduction/features_at_a_glance.rst:274
+#: ../../introduction/features_at_a_glance.rst:285
+#: ../../introduction/features_at_a_glance.rst:328
+#: ../../introduction/features_at_a_glance.rst:379
+#: ../../introduction/features_at_a_glance.rst:401
+#: ../../introduction/features_at_a_glance.rst:411
+#: ../../introduction/features_at_a_glance.rst:419
+# 9d6553314d82405181752e293656037b
+# 07cc33e1b7054fe8a17eb66662d2ce34
+# 99340bc4f7164652bbc36dacc4747d96
+# c5a2e66f004441ea8b330c3a1568dc8c
+# 71672ed20ed04405b3ca2c373e9e9934
+# 6e7138054eb04031b120f242c756fe7e
+# 79797a5eb40346e1ae4564cca1145b0c
+# 6410c22c538c451395a5dc9231660713
+msgid "Shortcut"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:206
+#: ../../introduction/features_at_a_glance.rst:274
+#: ../../introduction/features_at_a_glance.rst:285
+#: ../../introduction/features_at_a_glance.rst:328
+#: ../../introduction/features_at_a_glance.rst:379
+#: ../../introduction/features_at_a_glance.rst:401
+#: ../../introduction/features_at_a_glance.rst:411
+#: ../../introduction/features_at_a_glance.rst:419
+# 64705920365b476db8ccf99102ebeafa
+# 75c1cd6a32c641478ec96d0307379342
+# c5ba337e0f494d09a41eb1efc031e22e
+# 72f1c2fcc28c44cf8d2b8e81d4156596
+# 11dce0dc260e47569b48186389868898
+# 6f8dbfc2a7e546b9a5a3af39e26ba13d
+# 9d7eab22b4214ea6b28739537248b9c9
+# 0f0bcec1a76340a4988591f98973c970
+msgid "Reference"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:206
+#: ../../introduction/features_at_a_glance.rst:274
+#: ../../introduction/features_at_a_glance.rst:285
+#: ../../introduction/features_at_a_glance.rst:328
+#: ../../introduction/features_at_a_glance.rst:379
+#: ../../introduction/features_at_a_glance.rst:401
+#: ../../introduction/features_at_a_glance.rst:411
+#: ../../introduction/features_at_a_glance.rst:419
+# d546c564e4e84ab495ed54f745d7b65e
+# c6636266e57742ab80037c93833b9723
+# a9669681db8043bfa9c438266fce2e07
+# c1ce7388cf774ea8a31a19c7dfd924b0
+# 6dad1fda7bdf4027ac58424bee852ba0
+# 8f8b21b60fa8450792c8b99416ea8cdf
+# ca68a4ef1b004c5aa0eea1f55307e6f4
+# 590b4cafda384ee8908883dbdf2f4dc4
+msgid "Toolbar"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:208
+# f7ddd88951de4707967f69665ef35c1e
+msgid "|mActionFileNew| :guilabel:`File`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:210
+# 528c57ad476c4206a2d8b4651cc320c5
+msgid ":guilabel:`New Project`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:210
+# fa974ea55d3844c5931e3f3956aac21c
+msgid ":kbd:`Ctrl+N`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:210
+#: ../../introduction/features_at_a_glance.rst:212
+#: ../../introduction/features_at_a_glance.rst:214
+#: ../../introduction/features_at_a_glance.rst:216
+#: ../../introduction/features_at_a_glance.rst:218
+#: ../../introduction/features_at_a_glance.rst:389
+# 7c52e97dab0643c9b7d18073377b9045
+# 3b5802ffa24f4c85b46e4c2989c1fb7c
+# d3438d07ad094b419de45ab684efce45
+# d01baf3b54484562aac1500ca14e37e6
+# fdbe2e539cbe48929ac304cc1196fbc7
+# d02d77f904214fceb34b6c63aa99048c
+msgid "see Section :ref:`sec_projects`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:210
+#: ../../introduction/features_at_a_glance.rst:212
+#: ../../introduction/features_at_a_glance.rst:216
+#: ../../introduction/features_at_a_glance.rst:218
+#: ../../introduction/features_at_a_glance.rst:222
+#: ../../introduction/features_at_a_glance.rst:224
+# 9d6eb417bed44aeeaa2faf5bbaa710d7
+# 56473847c1414764a80063e58e2b7420
+# c58fd41d96e44817932bc4b3aa0200af
+# 219550dac43e4c60aea9935efef3c050
+# eb3e78a8ab604718b44831e47ae5e832
+# a9740b2a3f27453f9e4ccb075cbf9c54
+msgid ":guilabel:`File`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:212
+# e6f2f599b73f469ba4432a2980cc290f
+msgid "|mActionFileOpen| :guilabel:`Open Project`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:212
+# 5b80fd05d9124a87a2fcc0147bc3deff
+msgid ":kbd:`Ctrl+O`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:214
+# 9c5a5a5c00474c1db46489301d29fea7
+msgid ":guilabel:`Open Recent Projects`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:216
+# e3ad8aaf033446d897a747e8794d90e4
+msgid "|mActionFileSave| :guilabel:`Save Project`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:216
+# 2607f99e819d425aa5f53838121b5325
+msgid ":kbd:`Ctrl+S`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:218
+# d0b074c45c5b400987c1740f6b4ad55f
+msgid "|mActionFileSaveAs| :guilabel:`Save Project As`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:218
+# 5b5b399da9cf4a1884c3d87034f72bcc
+msgid ":kbd:`Ctrl+Shift+S`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:220
+# dd5e5a5b6d7a46baa5c614b5e7ac360a
+msgid "|mActionSaveMapAsImage| :guilabel:`Save as Image`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:220
+# f6e83a1e196f4b6d88c9615aeccffa6d
+msgid "see Section :ref:`sec_output`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:222
+# b8556e7c22254dabb761109290a45c99
+msgid "|mActionNewComposer| :guilabel:`New Print Composer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:222
+# f96df69f5f964fdeb886f392c75e4ec3
+msgid ":kbd:`Ctrl+P`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:222
+#: ../../introduction/features_at_a_glance.rst:224
+#: ../../introduction/features_at_a_glance.rst:226
+# 5a48216fd66043ecbd27ca3652ce01b2
+# 664272e850fc45cbb196563883fc1c1f
+# 5323e4facbaf470bb71135b7fcc55790
+msgid "see Section :ref:`label_printcomposer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:224
+# 20836db84be14b49af4478adc6ce0803
+msgid "|mActionComposerManager| :guilabel:`Composer manager`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:226
+# 98003685920944f9833ae488c6487e64
+msgid ":guilabel:`Print Composers`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:228
+# f86fe48af71040a5becc5044d6cc681b
+msgid "|mActionFileExit| :guilabel:`Exit`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:228
+# c2d2061bded24b959538267700684772
+msgid ":kbd:`Ctrl+Q`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:230
+#: ../../introduction/features_at_a_glance.rst:447
+#: ../../introduction/features_at_a_glance.rst:449
+#: ../../introduction/features_at_a_glance.rst:451
+#: ../../introduction/features_at_a_glance.rst:453
+# 43b3b348c3e7451c91f80328a40b85de
+# 43c06b1827db4a28926f873977e6cbc1
+# b91e94c2bded4b4399fa35885743daad
+# 7cbde80390ac41d999cf93cf5f2bd29f
+# a2524e9d3b9d4af4a57a2b15e1feb85a
+msgid ":guilabel:`Edit`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:232
+# e261d86e9df6458f8b5d0879f23654f2
+msgid "|mActionUndo| :guilabel:`Undo`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:232
+# e0b7604d46ff417f94468c7e2d5f6632
+msgid ":kbd:`Ctrl+Z`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:232
+#: ../../introduction/features_at_a_glance.rst:234
+#: ../../introduction/features_at_a_glance.rst:246
+#: ../../introduction/features_at_a_glance.rst:248
+#: ../../introduction/features_at_a_glance.rst:250
+#: ../../introduction/features_at_a_glance.rst:252
+#: ../../introduction/features_at_a_glance.rst:254
+#: ../../introduction/features_at_a_glance.rst:256
+#: ../../introduction/features_at_a_glance.rst:258
+#: ../../introduction/features_at_a_glance.rst:260
+#: ../../introduction/features_at_a_glance.rst:262
+#: ../../introduction/features_at_a_glance.rst:266
+# c3d885c2f94e4bebb036911a225422c6
+# e530117695a349ba8f69fb19cced4260
+# 9043f096cc354a32adee97cd05b3ce3e
+# 697e4a92c5714d30b5d651aeea116198
+# c22c22123e6e41d8898b82a3b2dde27c
+# 15984f253ee54c8e8dc2dd55f2e6bdb0
+# 088d94599925449080a18c3278399d02
+# df8d8c4dc6054d33be0517f94515761e
+# 7ef0edec86fa49a498c4390a7da670ce
+# 5a41d0bc614f40509d2dbcb4b2795fdb
+# 05f3c5d8654a4e49a1d4fee60fcd3686
+# ad36a6157cdd4b4ba4826bda5beedd40
+msgid "see Section :ref:`sec_advanced_edit`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:232
+#: ../../introduction/features_at_a_glance.rst:234
+#: ../../introduction/features_at_a_glance.rst:246
+#: ../../introduction/features_at_a_glance.rst:248
+#: ../../introduction/features_at_a_glance.rst:250
+#: ../../introduction/features_at_a_glance.rst:252
+#: ../../introduction/features_at_a_glance.rst:254
+#: ../../introduction/features_at_a_glance.rst:256
+#: ../../introduction/features_at_a_glance.rst:258
+#: ../../introduction/features_at_a_glance.rst:260
+#: ../../introduction/features_at_a_glance.rst:262
+#: ../../introduction/features_at_a_glance.rst:266
+# 823f1625299548259f0da64e8fd44c4b
+# 817eb2ebf8fb47a8b7021c182d66e4e7
+# 54a54dea02fa49c08156e153230b7c61
+# c84eb6ab38ba4bc6ac732224fce3a64d
+# 60fa5fcb28ff49d68d7a299af755e3c5
+# efaa4c8462ec462d806bfa62be1a4d34
+# 79c5608d318e4893a15dca24999c75db
+# 7e40167fb5b84a0a99357a7324c0a91a
+# 4f3c6e0d28174a93a3821bdc0b0cdca5
+# 938f0c579d2d41c09411f0d2bab5403d
+# 8c68ea3d963346e788305072597b58f7
+# 8b13adc253114bbbaa62f79f0eb41527
+msgid ":guilabel:`Advanced Digitizing`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:234
+# 6bde88e7ae6941749e18e6bed62a4e85
+msgid "|mActionRedo| :guilabel:`Redo`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:234
+# 7481602ee26f472fa4ee775058faf36e
+msgid ":kbd:`Ctrl+Shift+Z`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:236
+# c4c2fac244c84eb3bd2bce86f4697f00
+msgid "|mActionEditCut| :guilabel:`Cut Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:236
+# bb53bf962cd84c2e89cbd96564dc5b45
+msgid ":kbd:`Ctrl+X`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:236
+#: ../../introduction/features_at_a_glance.rst:238
+#: ../../introduction/features_at_a_glance.rst:240
+#: ../../introduction/features_at_a_glance.rst:242
+#: ../../introduction/features_at_a_glance.rst:244
+#: ../../introduction/features_at_a_glance.rst:264
+#: ../../introduction/features_at_a_glance.rst:276
+#: ../../introduction/features_at_a_glance.rst:278
+#: ../../introduction/features_at_a_glance.rst:280
+# 3eea472d686241df8be6e534cba7ef09
+# c7e7c0666ea348f195927636252b5248
+# 85c516ca9be8429aad6a9c505417f0ed
+# f47ebfeec0814bd0baa68e5e19422375
+# 9bb6ba32066248a5a93233a7815f9022
+# 098b8488a3094f44b24c62b40e9ff97e
+# 96a9072672354603862e668afbf68bcc
+# 4566b6ddb1fa4264a5e6c57ccb7e3cdc
+# 13f967814c654ad49ad95872f1d30f4e
+msgid "see Sec :ref:`sec_edit_existing_layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:236
+#: ../../introduction/features_at_a_glance.rst:238
+#: ../../introduction/features_at_a_glance.rst:240
+#: ../../introduction/features_at_a_glance.rst:242
+#: ../../introduction/features_at_a_glance.rst:244
+#: ../../introduction/features_at_a_glance.rst:264
+#: ../../introduction/features_at_a_glance.rst:276
+#: ../../introduction/features_at_a_glance.rst:278
+#: ../../introduction/features_at_a_glance.rst:280
+#: ../../introduction/features_at_a_glance.rst:346
+#: ../../introduction/features_at_a_glance.rst:348
+# b4d65b4987b1434aacf348fe5852c038
+# da02afde193d4d70b947ff30d1ad93e0
+# ac1475c27cff46beb3004dec6b461a47
+# bc62d047f1b248dbae4060cfc9637196
+# 08d2c2c34d1a4e489d3624c81c1da7ff
+# a0f05baa99f44e0c960abeb874d287a4
+# e476b0c4f41b43a79b2d6ecf85149dbf
+# 66a918faddb14c6180182cca307f5fe2
+# 5870a978a2d74b23b03afc6491f74a85
+# b2d641cdf41f49f5bae7075ab7c6d5bd
+# 249859dce4ab4e0cac1d1f306692913f
+msgid ":guilabel:`Digitizing`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:238
+# 0558d4aa13804975b5e886cc4cbd73cc
+msgid "|mActionEditCopy| :guilabel:`Copy Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:238
+# 8d819d314ef8462a9ff7792825551d22
+msgid ":kbd:`Ctrl+C`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:240
+# 4d018f6ca8fe44ec92d4820c0992aae6
+msgid "|mActionEditPaste| :guilabel:`Paste Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:240
+# c534847c9d154ad08470356aef93e81f
+msgid ":kbd:`Ctrl+V`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:242
+# 89d5910570a34f0894da2b992e6fe739
+msgid "|mActionEditPaste| :guilabel:`Move Feature`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:244
+# fe478f1a32104ecdb6e110c58beef1fb
+msgid "|mActionDeleteSelected| :guilabel:`Delete Selected`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:246
+# 92917264fbaf45b6bfcee5032b754411
+msgid "|mActionSimplify| :guilabel:`Simplify Feature`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:248
+# 2240b5c7ee7f47d49de6e2cf23cefd38
+msgid "|mActionAddRing| :guilabel:`Add Ring`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:250
+# c2bd4ee54721452290a7cb223b057dd5
+msgid "|mActionAddIsland| :guilabel:`Add Part`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:252
+# 3e347b5422b84e95af460e519938e6de
+msgid "|mActionDeleteRing| :guilabel:`Delete Ring`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:254
+# 4108e314f9c948fa8826504ca5df1dd6
+msgid "|mActionDeletePart| :guilabel:`Delete Part`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:256
+# df89aa7b84cc48f98a44b20b1a29bbaa
+msgid "|mActionReshape| :guilabel:`Reshape Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:258
+# 13d68e6ac4ca4233b221022846653606
+msgid "|mActionSplitFeatures| :guilabel:`Split Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:260
+# e872bcbf143244be9c2f26b3b83e9135
+msgid "|mActionMergeFeat| :guilabel:`Merge selected Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:262
+# 952b1653e226497d8ef78ee43c3314bd
+msgid "|mActionMergeFeat| :guilabel:`Merge attributes of selected Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:264
+# a822b582e2b8483f849bcb8883ff52f0
+msgid "|mActionNodeTool| :guilabel:`Node Tool`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:266
+# 71f4f43bd73245e1ac172ee6d5c83ebc
+msgid "|mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:269
+# 021fee31003745239710ed1c03058ee2
+msgid "After activating |mActionToggleEditing| :menuselection:`Toggle editing` mode for a layer, you will find a capture feature icon in the :menuselection:`Edit` menu depending on the layer type (point, line or polygon)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:276
+# 3858560f53f34405a2af1c24167d42b1
+msgid "|mActionCapturePoint| :guilabel:`Capture Point`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:278
+# 4c40967c21124971b8174075300325b6
+msgid "|mActionCaptureLine| :guilabel:`Capture Line`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:280
+# 024d7964914a49e29714b1ed9df7a4f1
+msgid "|mActionCapturePolygon| :guilabel:`Capture Polygon`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:287
+#: ../../introduction/features_at_a_glance.rst:455
+#: ../../introduction/features_at_a_glance.rst:457
+#: ../../introduction/features_at_a_glance.rst:459
+#: ../../introduction/features_at_a_glance.rst:461
+#: ../../introduction/features_at_a_glance.rst:463
+# 4d9056dfa5884a2b8a693ff969b0d548
+# 01ae60c298f54491a1d88822bc778608
+# 767fb6f9734942b9a3eb18ead3dc8fad
+# aba20a419776425dba2398c163f3c986
+# 8956c79519894a9198622b8e52c15a5c
+# 1c61c763a69f43f1888a9191d0ab4237
+msgid ":guilabel:`View`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:289
+# f20fef276da54d969bbcabb1aeaf3261
+msgid "|mActionPan| :guilabel:`Pan Map`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:289
+#: ../../introduction/features_at_a_glance.rst:291
+#: ../../introduction/features_at_a_glance.rst:293
+#: ../../introduction/features_at_a_glance.rst:301
+#: ../../introduction/features_at_a_glance.rst:303
+#: ../../introduction/features_at_a_glance.rst:305
+#: ../../introduction/features_at_a_glance.rst:307
+#: ../../introduction/features_at_a_glance.rst:309
+#: ../../introduction/features_at_a_glance.rst:319
+# a0fdfabd389c4801aa5c8fd9e88aa054
+# a137ac6f11934f1a9a42515404839ab2
+# 1bf16fb97efe4c518aeedb86fba3f967
+# 1a3b031af5334531ab96b3b5c921753c
+# bf257f50526c40da826b61a4323499c1
+# 6a41f8d9f18b4c5fa233d10e917af71f
+# 61e017e9d3f84155b68093a64d835def
+# 65afb6c74ad842d0a63a14c9a5309cf6
+# 71e92b861d4d4dd5b4d9aa687e234b6d
+msgid ":guilabel:`Map Navigation`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:291
+# 9c92a550091b4640b8d5770bb53380c2
+msgid "|mActionZoomIn| :guilabel:`Zoom In`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:291
+# 71b49d18826547e59d640910b0141384
+msgid ":kbd:`Ctrl++`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:293
+# 90c8243de7854ec9b29572d1b7e6a206
+msgid "|mActionZoomOut| :guilabel:`Zoom Out`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:293
+# f14c8504cd20404bb0b5e55958cbe95e
+msgid ":kbd:`Ctrl+-`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:295
+# a4d61969fc8e407e80e28cae726111ee
+msgid ":guilabel:`Select`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:295
+# 638fcb87754c4d988ccabaee53c436ff
+msgid "see Section :ref:`sec_selection`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:295
+#: ../../introduction/features_at_a_glance.rst:297
+#: ../../introduction/features_at_a_glance.rst:299
+#: ../../introduction/features_at_a_glance.rst:313
+#: ../../introduction/features_at_a_glance.rst:315
+#: ../../introduction/features_at_a_glance.rst:317
+#: ../../introduction/features_at_a_glance.rst:344
+# d5e0ae05d20546b9868a718e5c456692
+# 2c318727c7e141feb3f46f00ca240642
+# 20104284047b49bf9f0b691a497eaaa2
+# 14d873450c4749b0a698f0ddda97e99e
+# dc23c0d565c94681b32e5f31eac5a576
+# 5649fa3b290042ed8692234ac92bcb23
+# 1f5dc22d775a451bbe8c9053910a86b0
+msgid ":guilabel:`Attributes`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:297
+# 0242682bb420448baadcc099d5b8bb16
+msgid "|mActionIdentify| :guilabel:`Identify Features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:297
+# fc64420231d548679c54e24213f3811a
+msgid ":kbd:`Ctrl+Shift+I`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:299
+# 2850769320ae4c8a88d52a677969b1e8
+msgid ":guilabel:`Measure`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:299
+# 2af6f1b8c709451a985026ab108189c4
+msgid "see Section :ref:`sec_measure`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:301
+# ecfbd1ce54024975b2ac9432da0942b9
+msgid "|mActionZoomFullExtent| :guilabel:`Zoom Full`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:301
+# 43b25409bbb74bb4b965e7aab2db9fd3
+msgid ":kbd:`Ctrl+Shift+F`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:303
+# 14dbc4ea983a4f2293ad805664511b37
+msgid "|mActionZoomToLayer| :guilabel:`Zoom To Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:305
+# 3888ad30152f41b28160d2c612ec06ff
+msgid "|mActionZoomToSelected| :guilabel:`Zoom To Selection`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:305
+# d1ac7dbbaa68478fb159b112fd139f59
+msgid ":kbd:`Ctrl+J`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:307
+# 75c7ae9da8ed4c20be621412f79e8565
+msgid "|mActionZoomLast| :guilabel:`Zoom Last`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:309
+# 86f6058f171a48db93d23729a14be070
+msgid "|mActionZoomNext| :guilabel:`Zoom Next`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:311
+# a79862fefaab46e481e0264d272b1dec
+msgid ":guilabel:`Zoom Actual Size`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:313
+# 398bb8a330f646aeb8f3020161afac84
+msgid "|mActionMapTips| :guilabel:`Map Tips`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:315
+# e7ebc48e02a54fd1a1957e92f3d6509f
+msgid "|mActionNewBookmark| :guilabel:`New Bookmark`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:315
+# 9c7eb0fdbdd14646b3bca432b5d21bdf
+msgid ":kbd:`Ctrl+B`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:315
+#: ../../introduction/features_at_a_glance.rst:317
+# e479eb8fd42e4a6ebe7bcf1a400cd73f
+# 272c85bc165f45ab9cd9d074f55adc48
+msgid "see Section :ref:`sec_bookmarks`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:317
+# 6463415beb184e9b964548fa91784ced
+msgid "|mActionShowBookmarks| :guilabel:`Show Bookmarks`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:317
+# 938b6ade93b54bee85bea03949119ba0
+msgid ":kbd:`Ctrl+Shift+B`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:319
+# 8888c048619141b189de7194d4053adc
+msgid "|mActionDraw| :guilabel:`Refresh`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:319
+# f23edced23be4f17b347a98c9cb14942
+msgid ":kbd:`Ctrl+R`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:321
+#: ../../introduction/features_at_a_glance.rst:461
+# 6e3ad955fa2847e3a47fb7011d5d1b7c
+# 343e34e75bca4e0c99d16ca1d72a6096
+msgid ":guilabel:`Tile scale slider`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:321
+# feef3ddb968b463da60968bc87a9ec4f
+msgid "see Section :ref:`sec_tilesets`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:321
+# 2e5832cfe73241dcabf5def98eec71a0
+msgid ":guilabel:`Tile scale`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:323
+#: ../../introduction/features_at_a_glance.rst:463
+# 6b045f0626c24dcc96a44d300d0845b2
+# a327b5ca4e0c49d4829f715f18ae7fb9
+msgid ":guilabel:`Live GPS tracking`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:323
+# 6c79112dcd6a46e3b04ca25478326e6a
+msgid "see Section :ref:`sec_gpstracking`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:323
+# e2501f1b4ce04e639a45c69ba5c5ab74
+msgid ":guilabel:`GPS Information`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:330
+# d93353d2dbdf41d998c4fb37c05c9453
+msgid ":guilabel:`Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:332
+# a6a5237e43414939aae42e593ba0cfb3
+msgid ":guilabel:`New`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:332
+# 1c361c771c084ee0afa97efd63672e77
+msgid "see Section :ref:`sec_create shape`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:332
+#: ../../introduction/features_at_a_glance.rst:334
+#: ../../introduction/features_at_a_glance.rst:336
+#: ../../introduction/features_at_a_glance.rst:338
+#: ../../introduction/features_at_a_glance.rst:340
+#: ../../introduction/features_at_a_glance.rst:342
+#: ../../introduction/features_at_a_glance.rst:366
+#: ../../introduction/features_at_a_glance.rst:372
+#: ../../introduction/features_at_a_glance.rst:374
+# 5761e7f6b2cd4e808aa5a333d9d96bef
+# a7b53706fa304dffbb5f80e679af5809
+# b4c5e1f2fd1346dba6f1fbf13db51c9d
+# a2dd892644d8417eb4bbc6586770df35
+# 9a50f0dc0c3f4736957805a4488486ed
+# 8158a7a4761048f095269ca4cb0dc9c5
+# 85c0420238de43cbb9cfea2016d3ff44
+# 85172cefb3cd4b45b83022d7da93fa45
+# 05b36eff756b4934af2d79a1a683367d
+msgid ":guilabel:`Manage Layers`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:334
+# 576697a51f3c45a4bc370871113deab1
+msgid "|mActionAddNonDbLayer| :guilabel:`Add Vector Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:334
+# 9d1c3894319e46549d6fed1a30bfa108
+msgid ":kbd:`Ctrl+Shift+V`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:334
+# 38c9e55b60674b969b0588aae4493141
+msgid "see Section :ref:`label_workingvector`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:336
+# ea6c868d0d3f49088534aa27b324b253
+msgid "|mActionAddRasterLayer| :guilabel:`Add Raster Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:336
+# 41cde2af0aea49feb292425ee6bde94b
+msgid ":kbd:`Ctrl+Shift+R`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:336
+# 231b7ef96aae485e87c241b937bcee5b
+msgid "see Section :ref:`label_raster`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:338
+# fcca9f7a77e843e49c0f26b44ccde0d0
+msgid "|mActionAddLayer| :guilabel:`Add PostGIS Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:338
+# 660a964211a24eaf80f45964cf5d3786
+msgid ":kbd:`Ctrl+Shift+D`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:338
+# 604a8c266b684e4590a2f13551154b5a
+msgid "see Section :ref:`label_postgis`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:340
+# 6637dc1c486b4484bd2a350bc259d1c8
+msgid "|mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:340
+# 7b52b6c803af4e23a837ca8eff723150
+msgid ":kbd:`Ctrl+Shift+L`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:340
+# 1506ed0e75ad4f27baeaba3c09b152cd
+msgid "see Section :ref:`label_spatialite`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:342
+# 777dce8b733646a4bfb8e99efb694be4
+msgid "|mActionAddWmsLayer| :guilabel:`Add WMS Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:342
+# 838ae57947c84803bab671fbe0ce4bbc
+msgid ":kbd:`Ctrl+Shift+W`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:342
+# 24d3463fef2d46c7aecd6687576b0dcc
+msgid "see Section :ref:`sec_ogc-wms`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:344
+# b476aa5cf17849cab14057c785435a51
+msgid "|mActionOpenTable| :guilabel:`Open Attribute Table`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:346
+# a4411959eb7443b9b58b0fc9e39ef962
+msgid "|mActionFileSave| :guilabel:`Save edits`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:348
+# 75df7d2f851847b0ba464ca8a082b166
+msgid "|mActionToggleEditing| :guilabel:`Toggle editing`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:350
+# 772cb21836a74c028cde34b4129e12d6
+msgid ":guilabel:`Save as...`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:352
+# 1f1813f787004e51b49939c13ee3c8b4
+msgid ":guilabel:`Save selection as vector file...`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:352
+# ddf2cc38bc914b85886d6072224229a2
+msgid "See :ref:`sec_attribute table`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:354
+# 82730fbeecf44dd6b031d5cff25fed11
+msgid "|mActionRemoveLayer| :guilabel:`Remove Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:354
+# 59efc4d2376a42fab7e429f8f4507fc9
+msgid ":kbd:`Ctrl+D`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:356
+# 4fabc1fbfc5f4f5085e3e414d7563344
+msgid ":guilabel:`Set CRS of Layer(s)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:356
+# 038a531c650640ae8b0ba256dc0e2c83
+msgid ":kbd:`Ctrl+Shift+C`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:358
+# 3ea7de281cc9426ba557129f15a42f11
+msgid ":guilabel:`Set project CRS from Layer`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:360
+# a80dc83429b64642bfdd6ac98be1f960
+msgid ":guilabel:`Properties`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:362
+# 7a128a51e3244c1b81ffc572e0ed2d2a
+msgid ":guilabel:`Query...`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:364
+# e2c26a81889b4fea8241c0636640fe9b
+msgid "|labeling| :guilabel:`Labeling`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:366
+# 2cf11527711a4f92962b25b2df1f95c8
+msgid "|mActionInOverview| :guilabel:`Add to Overview`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:366
+# 570a7327add340a08ebc03f37417f0ad
+msgid ":kbd:`Ctrl+Shift+O`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:368
+# 6057df3060ca49ffae537600386f9109
+msgid "|mActionAddAllToOverview| :guilabel:`Add All To Overview`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:370
+# d76c7313d9f748d78143cd43b938f70a
+msgid "|mActionRemoveAllFromOverview| :guilabel:`Remove All From Overview`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:372
+# 9a999d0cf2e94f139abc91e2d2bceabf
+msgid "|mActionShowAllLayers| :guilabel:`Show All Layers`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:372
+# 5894a7d7eab14abebd0456d83c4f9fe4
+msgid ":kbd:`Ctrl+Shift+U`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:374
+# dae2fd4b5cf744fe935c77966a345edc
+msgid "|mActionHideAllLayers| :guilabel:`Hide All Layers`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:374
+# c88f8190a76e4b18ad826b28fdb6bb78
+msgid ":kbd:`Ctrl+Shift+H`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:381
+# 5e47036141a547bc820c558df9825e93
+msgid ":guilabel:`Settings`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:383
+#: ../../introduction/features_at_a_glance.rst:455
+# c55d359c1b9346deae16230b900c324f
+# 230ddcc29794457199eb7ccc339c0d48
+msgid ":guilabel:`Panels`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:385
+#: ../../introduction/features_at_a_glance.rst:457
+# ed26d79bcbd54387b24faa353cfe751d
+# 3eed55221b7d48419d3219c091c48a32
+msgid ":guilabel:`Toolbars`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:387
+#: ../../introduction/features_at_a_glance.rst:459
+# 05476b843399459093c4555e36f9cce7
+# 3367d2a0baff403c9d093fb7e7309342
+msgid ":guilabel:`Toggle Full Screen Mode`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:387
+# 7da9c33e0ef4482cb62c9b0160b009ac
+msgid ":kbd:`Ctrl-F`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:389
+#: ../../introduction/features_at_a_glance.rst:445
+# 09e27a192ece4a1ab7ca74702ec0cf2e
+# 04022c3433594280a27e57822b9abd6d
+msgid "|mActionProjectProperties| :guilabel:`Project Properties`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:389
+# 2e62e8e3cef24342b708079ec700e88e
+msgid ":kbd:`Ctrl+Shift+P`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:391
+#: ../../introduction/features_at_a_glance.rst:453
+# 25e9d4ca5b5948dfb5b12dbb8282671d
+# c7a6e16ac1a54bb6b89e6167e52a8e63
+msgid "|mActionCustomProjection| :guilabel:`Custom CRS`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:391
+# 5d6a647c92d44a608c912dd1f11b5e67
+msgid "see Section :ref:`sec_customprojections`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:391
+#: ../../introduction/features_at_a_glance.rst:451
+# c4153ca3b01a4a168f0ca657d8c29d8b
+# ae439355af234511ad0171e5421a7a32
+msgid ":guilabel:`Style Manager`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:393
+# 65cc89a1249046fa82fa23ff2540f9d5
+msgid "|mActionOptions| :guilabel:`Configure shortcuts`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:395
+#: ../../introduction/features_at_a_glance.rst:447
+# 9601fbead3a54060a40b3d269962cd4b
+# 4024b553092a44f2a0f28e6756935c86
+msgid "|mActionOptions| :guilabel:`Options`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:395
+# ea50e46ec13e49ccbb4092d81aa39e5f
+msgid "see Section :ref:`subsec_gui_options`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:397
+# 096be0c7be4a41b3be8d3e5c6c83550c
+msgid ":guilabel:`Snapping Options`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:403
+# 9d26d0e058a9497ab117cb6f24eaea80
+msgid ":guilabel:`Plugins` - (Further menu items are added by plugins as they are loaded.)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:405
+# ee20991a8691401ca5e3a625dd283817
+msgid "|mActionShowPluginManager| :guilabel:`Manage Plugins`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:405
+# 327355454e614e529515657416b83add
+msgid "see Section :ref:`sec_managing_plugins`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:405
+# c63836753b10447383e52a2b6a9cc113
+msgid ":guilabel:`Plugins`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:407
+# 2b6ebf9de7c64ca3b9f974b699032685
+msgid ":guilabel:`Python Console`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:413
+# 295b49faa0594613a9b03a27da7baa68
+msgid ":guilabel:`Raster`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:415
+# 9e5134fed66e453997ef7fd59da7f3da
+msgid ":guilabel:`Raster calculator`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:415
+# bd0bf728a62748b6ad50fedc9f4b1299
+msgid "see Section :ref:`sec_raster_calc`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:421
+# a515773729924dfeb10d89f0fd16c074
+msgid "Help"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:423
+# a9ab039eaa204733a4747eb21c0754ef
+msgid "|mActionHelpContents| :guilabel:`Help Contents`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:423
+# f3cdbd9a30ae4422b44e017a06127363
+msgid ":kbd:`F1`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:423
+# 4568add44a1b4c719c5101f4cf02b3f0
+msgid ":guilabel:`Help`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:425
+# 78f7e6d1ef5c4d3eb64f1563ecf97692
+msgid ":guilabel:`API Documentation`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:427
+# 07544a23270e453c9477c38b4931969c
+msgid "|mActionQgisHomePage| :guilabel:`QGIS Home Page`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:427
+# 57ce76bf574b4aefb13c326e1b7ce1c8
+msgid ":kbd:`Ctrl+H`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:429
+# cfdffe17536a4705931f1fe3f3e922c3
+msgid "|mActionCheckQgisVersion| :guilabel:`Check QGIS Version`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:431
+# 8bc3fcbaf76d49cd9d593d3131facc7e
+msgid "|mActionHelpAbout| :guilabel:`About`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:433
+# 3e0d4bb9d1304c1b90050d2353cc73df
+msgid "|mActionHelpSponsors| :guilabel:`QGIS Sponsors`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:440
+# e109589a338840c6b1703ec0cfea544a
+msgid "|nix| The Menu Bar items listed above are the default ones in KDE window manager. In GNOME, Settings menu is missing and its items are to be found there:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:445
+# 4fcce688ab0543ecb115284597c45493
+msgid ":guilabel:`File menu`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:449
+# 8dd7f76806104733b6c3532914acbeb1
+msgid "|mActionOptions| :guilabel:`Configure Shortcuts`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:472
+# 92bcc4baf27d40a2963255ed85acbdd3
+msgid "Toolbars"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:476
+# f06daa4b052143f7a9af6138cd333036
+msgid "The toolbars provide access to most of the same functions as the menus, plus additional tools for interacting with the map. Each toolbar item has popup help available. Hold your mouse over the item and a short description of the tool's purpose will be displayed."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:481
+# 2b7e0f1345a743b69a869c56bf1c7aa5
+msgid "Every menubar can be moved around according to your needs. Additionally every menubar can be switched off using your right mouse button context menu holding the mouse over the toolbars."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:488
+# 3457e46de64d424380785bfdf23a93b8
+msgid "**Restoring toolbars**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:490
+# 462e450786934e04b92278e650ff0efd
+msgid "If you have accidentally hidden all your toolbars, you can get them back by choosing menu option :menuselection:`Settings --> Toolbars`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:500
+# d9e9cc0ff9c54b6fb4b81f1bc6458129
+msgid "The map legend area lists all the layers in the project. The checkbox in each legend entry can be used to show or hide the layer .. index::`layer!visibility` A layer can be selected and dragged up or down in the legend to change the z-ordering. Z-ordering means that layers listed nearer the top of the legend are drawn over layers listed lower down in the legend."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:507
+# 09d9f6605f5647099b380c2cdcfe3910
+msgid "Layers in the legend window can be organised into groups. To do so, right click in the legend window and choose :guilabel:`Add group`. Type in a name for the group and press :kbd:`Enter`. Now click on an existing layer and drag it onto the group. Also, if new layers are added to the project while a group is selected, they will automatically be placed in the group."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:513
+# 691e1c5533fe4944b11300607afc7a11
+msgid "To bring a layer out of a group you can drag it out, or right click on it and choose :guilabel:`Make to toplevel item`. Groups can be nested inside other groups."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:516
+# 8e2c2296dc9d43918cd5fa087a48d4ea
+msgid "The checkbox for a group will show or hide all the layers in the group with one click."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:519
+# b0e958c05dab403dbc670856adb7bc02
+msgid "The content of the right mouse button context menu depends on whether the selected legend item is a raster or a vector layer. For GRASS vector layers :guilabel:`toggle editing` is not available. See section :ref:`grass_digitising` for information on editing GRASS vector layers."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:524
+# 060b5d855036409ca9c8bb577d14a1b8
+msgid "**Right mouse button menu for raster layers**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:526
+#: ../../introduction/features_at_a_glance.rst:540
+# 6e91e33a97934545b0829f12d1c68d5a
+# fd34150c7fcb48a89293782d4036b72b
+msgid ":menuselection:`Zoom to layer extent`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:527
+# 56d9c2e79875427b94c1a1b3b885d2be
+msgid ":menuselection:`Zoom to best scale (100 %)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:528
+#: ../../introduction/features_at_a_glance.rst:541
+# 5feec286ff5d42a187784382638d6b08
+# 583cfc05e44541baa5af27dd2a7239b4
+msgid ":menuselection:`Show in overview`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:529
+# 58460cdeecf04b2a870994a241a9d3a4
+msgid ":menuselection:`Remove}`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:530
+#: ../../introduction/features_at_a_glance.rst:548
+# 005c2abe13a64763862e1905bad6e40d
+# 2cf5d20ddad840379ae410b67aeb7d95
+msgid ":menuselection:`Properties`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:531
+#: ../../introduction/features_at_a_glance.rst:549
+#: ../../introduction/features_at_a_glance.rst:562
+# 1be9f47fd2f345f8a04c286c356acf47
+# e4240fb5b6194b2d8057ca3cbac2caa1
+# 391772003c1a41439eaad23f7e9b63f5
+msgid ":menuselection:`Rename`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:532
+#: ../../introduction/features_at_a_glance.rst:550
+#: ../../introduction/features_at_a_glance.rst:563
+# 8eb0d311082d430e8869b3f5343fee74
+# a2e4de9f89d644dd97d1d7eb5a8276bd
+# 38c5c8e8509042b5a7e297383f78d304
+msgid ":menuselection:`Add Group`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:533
+#: ../../introduction/features_at_a_glance.rst:551
+#: ../../introduction/features_at_a_glance.rst:564
+# 58b32a0680754b2791aacc6a4cae5f37
+# 4a0ac17a1f2940acbca871cb899d0c38
+# 048cd8baa1284ecc9d463c7716370f33
+msgid ":menuselection:`Expand all`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:534
+#: ../../introduction/features_at_a_glance.rst:552
+#: ../../introduction/features_at_a_glance.rst:565
+# f56584edfb604297a4d7f1b0b3e8360a
+# 0554d830994c4082835269d39870e4fb
+# b76efff436784d8ca354658ffbd153dd
+msgid ":menuselection:`Collapse all`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:538
+# 77d6d3682c214a60b2b75040e9e7770c
+msgid "**Right mouse button menu for vector layers**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:542
+#: ../../introduction/features_at_a_glance.rst:560
+# 67ecfed368674fb0a9550d0ac8947eb7
+# 6c2e5c8f46e142b2bc3011a44a2c5a5a
+msgid ":menuselection:`Remove`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:543
+# 08232f9c83d347ceb5e02771adb8698a
+msgid ":menuselection:`Open attribute table`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:544
+# ec48601fe8b0458287f420e29eca2602
+msgid ":menuselection:`Toggle editing (not available for GRASS layers)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:545
+# a830ad3b3128400bbc07f282f20b4e6a
+msgid ":menuselection:`Save as`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:546
+# 4a25faa88625417788cf6f8c4fa66fa3
+msgid ":menuselection:`Save selection as`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:547
+# b98b18b567d74abd80184f2314951b3b
+msgid ":menuselection:`Query`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:557
+# d36563bdd1dc4ef0bc24c54248baa196
+msgid "**Right mouse button menu for layer groups**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:559
+# f7b5c5bd87104aa0b6be95c642e0d9df
+msgid ":menuselection:`Zoom to group`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:561
+# 5dc4d9cd108a47f09c86dba97603d511
+msgid ":menuselection:`Set group CRS`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:570
+# 2472e16198bb4a1d92756fcaa1d2a42b
+msgid "It is possible to select more than one Layer or Group at the same time by holding down the :kbd:`Ctrl`-Key while selecting the Layers with the left mouse button. You can than move all selected Layers to a new Group at the same time."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:575
+# 0042985174404c0f8d8980c839c0b319
+msgid "You are also able to delete more than one Layer or Group at once by selecting several Layers with the :kbd:`Ctrl` - Key and pressing :kbd:`Ctrl D` afterwards. This way all selected Layers or Groups will be removed from the Layerlist."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:612
+# 02ee5c2d876e4681aac059846611233e
+msgid "This is the 'business end' of QGIS - maps are displayed in this area! The map displayed in this window will depend on the vector and raster layers you have chosen to load (see sections that follow for more information on how to load layers). The map view can be panned (shifting the focus of the map display to another region) and zoomed in and out. Various other operations can be performed on the map as described in the toolbar description above.  The map view and the legend are tightly bound to each other - the maps in view reflect changes you make in the legend area."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:622
+# 7403eab9ee7946e59829803eb6703430
+msgid "**Zooming the Map with the Mouse Wheel**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:625
+# 9d6c4a749bfd4e6c8c54a7102763266d
+msgid "You can use the mouse wheel to zoom in and out on the map. Place the mouse cursor inside the map area and roll the wheel forward (away from you) to zoom in and backwards (towards you) to zoom out. The mouse cursor position is the center where the zoom occurs. You can customize the behavior of the mouse wheel zoom using the |tab| :menuselection:`Map tools` tab under the :menuselection:`Settings --> Options` menu."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:633
+# 877273c9a2b543d9842ce067180ad633
+msgid "**Panning the Map with the Arrow Keys and Space Bar**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:636
+# 0128b313589c4f2ab7257ab184332dd2
+msgid "You can use the arrow keys to pan in the map. Place the mouse cursor inside the map area and click on the right arrow key to pan East, left arrow key to pan West, up arrow key to pan North and down arrow key to pan South. You can also pan the map using the space bar: just move the mouse while holding down space bar."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:649
+# 13fae73dced84aa9b7fb07b197617a98
+msgid "The map overview panel provides a full extent view of layers added to it. It can be selected under the menu :menuselection:`Settings --> Panels`. Within the view is a rectangle showing the current map extent. This allows you to quickly determine which area of the map you are currently viewing. Note that labels are not rendered to the map overview even if the layers in the map overview have been set up for labeling."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:656
+# 2beb4b0d1e1c4876869b194556985e01
+msgid "You can add a single layer to the overview by right-clicking on it in the legend and select |checkbox| Show in overview. You can also add layers to, or remove all layers from the overview using the Overview tools on the toolbar."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:660
+# 05d22c9f17474263bc4e0fb2d8ff64c2
+msgid "If you click and drag the red rectangle in the overview that shows your current extent, the main map view will update accordingly."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:668
+# 10ab112164294890b9bb12fdf0885435
+msgid "The status bar shows you your current position in map coordinates (e.g. meters or decimal degrees) as the mouse pointer is moved across the map view. To the left of the coordinate display in the status bar is a small button that will toggle between showing coordinate position or the view extents of the map view as you pan and zoom in and out."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:674
+# 6354bdcab39c476c840b6f4209555ed4
+msgid "A progress bar in the status bar shows progress of rendering as each layer is drawn to the map view. In some cases, such as the gathering of statistics in raster layers, the progress bar will be used to show the status of lengthy operations."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:679
+# d0b97ed726b3456290438078fe5d9df9
+msgid "If a new plugin or a plugin update is available, you will see a message in the status bar. On the right side of the status bar is a small checkbox which can be used to temporarily prevent layers being rendered to the map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering| immediately stops the current map rendering process."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:685
+# d900f12082454c5ab9a36b6e87288e5b
+msgid "At the far right of the status bar you find the EPSG code of the current project CRS and a projector icon. Clicking on this opens the projection properties for the current project."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:690
+# 2d491c4295f34c1c8e6e3fe2cadf717b
+msgid "**Calculating the correct Scale of your Map Canvas**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:693
+# a3d900e2296b4e67b1ad3170e026a9b3
+msgid "When you start QGIS, degrees is the default unit, and it tells QGIS that any coordinate in your layer is in degrees. To get correct scale values, you can either change this to meter manually in the |tab| General tab under :menuselection:`Settings` --> :menuselection:`Project Properties` or you can select a project Coordinate Reference System (CRS) clicking on the |mIconProjectionDisabled| `CRS status` icon in the lower right-hand corner of the statusbar. In the last case, the units are set to what the project projection specifies, e.g. '+units=m'."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:705
+# 56638c1c62fb4370992cc310f6eecd62
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:709
+# 43866dd096bc45868a36f5e83f60702c
+msgid "QGIS provides default keyboard shortcuts for many features. You find them in Section :ref:`label_menubar` below. Additionally the menu option :menuselection:`Settings` --> :menuselection:`Configure Shortcuts` allows to change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS features."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:721
+# c1bf54a513ed4c9f84fe5750da9095e5
+msgid "Configuration is very simple. Just select a feature from the list and click on :guilabel:`Change`, :guilabel:`Set none` or :guilabel:`Set default`. Once you have found your configuration, you can save it as XML file and load it to another QGIS installation."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:729
+# 42b0885493184199b660aa037c2098d6
+msgid "Context help"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:733
+# deb458bcd33441c7bd4a46c3b2e70b36
+msgid "When you need help on a specific topic, you can access context help via the :guilabel:`Help` button available in most dialogs - please note that third-party plugins can point to dedicated web pages."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:740
+# 11e1cf9f5dd14b358a126824618a820e
+msgid "Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:743
+# 97c6444971f24f208b2e8d3311af8537
+msgid "By default, QGIS renders all visible layers whenever the map canvas must be refreshed. The events that trigger a refresh of the map canvas include:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:746
+# 42c738e8ec1b42b1bf023335365d1b87
+msgid "Adding a layer"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:747
+# c49003e31bba4cd8b99d8398c3d92d74
+msgid "Panning or zooming"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:748
+# 19a3dffeacf24513ace33f9be0b9ce70
+msgid "Resizing the QGIS window"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:749
+# ec8e36e6f4b944b1933b64aabd71273e
+msgid "Changing the visibility of a layer or layers"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:751
+# f92aee366291476fb48e1a457f024bd1
+msgid "QGIS allows you to control the rendering process in a number of ways."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:756
+# c8bdae2e803145b8a537937b4c4e01bb
+msgid "Scale Dependent Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:759
+# f4c23cb9d74b4c1dafed8aa18c5c9c6a
+msgid "Scale dependent rendering allows you to specify the minimum and maximum scales at which a layer will be visible.  To set scale dependency rendering, open the :guilabel:`Properties` dialog by double-clicking on the layer in the legend. On the |tab|`General` tab, set the minimum and maximum scale values and then click on the :guilabel`Use scale dependent rendering` checkbox."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:765
+# eb95859db31f4c8e8a8abdafcd7c2778
+msgid "You can determine the scale values by first zooming to the level you want to use and noting the scale value in the QGIS status bar."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:773
+# 773a9371d7bf4092becc245289aa277d
+msgid "Controlling Map Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:775
+# 1252b2123eec4b61bbaa273a346f158e
+msgid "Map rendering can be controlled in the following ways:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:780
+# 27e0674f15aa4cf8a6547e22410e2f78
+msgid "a) Suspending Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:783
+# b14f9dd45d7a4a27bb2e3c5e6d069987
+msgid "To suspend rendering, click the |checkbox| Render checkbox in the lower right corner of the statusbar. When the |checkbox| Render box is not checked, QGIS does not redraw the canvas in response to any of the events described in Section :ref:`redraw_events`. Examples of when you might want to suspend rendering include:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:789
+# c01f8d01100a481da888843f7983f4da
+msgid "Add many layers and symbolize them prior to drawing"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:790
+# 9b16982962eb492989b4e1391b7ca805
+msgid "Add one or more large layers and set scale dependency before drawing"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:791
+# eb3e8e925e45486a86803e16091e7832
+msgid "Add one or more large layers and zoom to a specific view before drawing"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:792
+# 9af96eee5f5341ff84596f1b5ef3004b
+msgid "Any combination of the above"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:794
+# a65c45492a7f47c6adf8c65fd692bf3e
+msgid "Checking the |checkbox| Render box enables rendering and causes an immediate refresh of the map canvas."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:800
+# 20c00c8a7e404de08e8dda5d028c29bc
+msgid "b) Setting Layer Add Option"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:805
+# 5bfe55a4d4e544088bdd7745bca407d7
+msgid "You can set an option to always load new layers without drawing them. This means the layer will be added to the map, but its visibility checkbox in the legend will be unchecked by default. To set this option, choose menu option :menuselection:`Settings --> Options` and click on the |tab| Rendering tab. Uncheck the |checkbox| :guilabel:`By default new layers added to the map should be displayed` checkbox. Any layer added to the map will be off (invisible) by default."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:814
+# 9620fc0636e24727a285ad8341b14303
+msgid "Stopping Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:819
+# 02fbcebf0d2b4f748fc750ae80c7c049
+msgid "To stop the map drawing, press the ESC key. This will halt the refresh of the map canvas and leave the map partially drawn. It may take a bit of time between pressing ESC and the time the map drawing is halted."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:824
+# cb08318d563942bbb2b29e259eec9aca
+msgid "It is currently not possible to stop rendering - this was disabled in qt4 port because of User Interface (UI) problems and crashes."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:830
+# a7fbf29ce70444a6a10302bb6175aee4
+msgid "c) Updating the Map Display During Rendering"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:834
+# c62070a962ff4d6e9b1a5e1ef925e112
+msgid "You can set an option to update the map display as features are drawn. By default, QGIS does not display any features for a layer until the entire layer has been rendered. To update the display as features are read from the datastore, choose menu option :menuselection:`Settings --> Options` click on the |tab| :menuselection:`Rendering` tab. Set the feature count to an appropriate value to update the display during rendering. Setting a value of 0 disables update during drawing (this is the default). Setting a value too low will result in poor performance as the map canvas is continually updated during the reading of the features. A suggested value to start with is 500."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:847
+# bb02c1377fbc428b85f20de8847940c0
+msgid "d) Influence Rendering Quality"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:851
+# 9ad2fc5af5fe4b7a9e12634c1c0b4577
+msgid "To influence the rendering quality of the map you have 3 options. Choose menu option :menuselection:`Settings --> Options` click on the |tab| :menuselection:`Rendering` tab and select or deselect following checkboxes."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:856
+#: ../../introduction/features_at_a_glance.rst:1067
+# 6c33d07c060a44afb5c058237395e620
+# b741f406d10b4431865c4af2b845b57a
+msgid "|checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing performance`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:858
+#: ../../introduction/features_at_a_glance.rst:1069
+# 5b3423cb459b48098a3603bfe426e570
+# ee146c58e0b84e8c8e496248fccc897e
+msgid "|checkbox| :guilabel:`Fix problems with incorrectly filled polygons`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:863
+# 10355fbffd4e4e02bdbb46683f4d0fc4
+msgid "Measuring"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:866
+# f634bd12988143bd930950778e609f36
+msgid "Measuring works within projected coordinate systems (e.g., UTM) and unprojected data. If the loaded map is defined with a geographic coordinate system (latitude/longitude), the results from line or area measurements will be incorrect. To fix this you need to set an appropriate map coordinate system (See Section :ref:`label_projections`). All measuring modules also use the snapping settings from the digitizing module. This is useful, if you want to measure along lines or areas in vector layers."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:874
+# f935f700bbca4508a8e5773236847bf2
+msgid "To select a measure tool click on |mActionMeasure| and select the tool you want to use."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:878
+# 6d1cc7b3fdec4fae83f4517d28cd33b4
+msgid "Measure length, areas and angles"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:884
+# c967be79ef594b62b5b751d59f1bdb88
+msgid "|mActionMeasure| QGIS is able to measure real distances between given points according to a defined ellipsoid. To configure this, choose menu option :menuselection:`Settings --> Options`, click on the |tab| Map tools tab and choose the appropriate ellipsoid. There you can also define a rubberband color and your preferred measurement units (meters or feet) and angle units (degrees, radians and gon). The tools then allows you to click points on the map. Each segment-length as well as the total shows up in the measure-window. To stop measuring click your right mouse button."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:893
+# d860504d4e6b487e8a3219104ff17bdc
+msgid "|mActionMeasureArea| Areas can also be measured.  In the measure window the accumulated area-size appears. In addition, the measuring tool will snap to the currently selected layer, provided that layer has its snapping tolerance set. (See Section :ref:`snapping_tolerance`).  So if you want to measure exactly along a line feature, or around a polygon feature, first set its snapping tolerance, then select the layer. Now, when using the measuring tools, each mouse click (within the tolerance setting) will snap to that layer."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:901
+# 9572feb8bfa7436eae03356b95bf9979
+msgid "|mActionMeasureAngle| You can also measure angles, selecting Measure Angle tool. The cursor becomes cross-shaped. Click to draw the first segment of the angle you wish to measure, then move the the cursor to draw the desired angle. The measure is displayed in a popup dialog."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:920
+# fad7759c118a4c7d8fed621ce20332cf
+msgid "Measure tools in action"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:925
+# c9cfe464acac4014b2d6b928a5a38774
+msgid "Select and deselect features"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:928
+# 6bd7b02a3dbb4980b756d53d11336fc9
+msgid "The QGIS toolbar provides several tools to select features in the map canvas. To select one or several features just click on |mActionSelect| and select your tool:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:932
+# d2e7f99c86984eedb4dbd3ff60de1bea
+msgid "|mActionSelect| :guilabel:`Select features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:933
+# d81f198972d64b3194141b15e4d988cf
+msgid "|mActionSelectRectangle| :guilabel:`Select features by rectangle`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:934
+# 0db638d3ea8248ccb2e2964d751f89dc
+msgid "|mActionSelectPolygon| :guilabel:`Select features by polygon`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:935
+# f42e35dea64a44fd8a000739dfd25b31
+msgid "|mActionSelectFreehand| :guilabel:`Select features by freehand`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:936
+# eb23156dc15b47f3a4a0ef395333881d
+msgid "|mActionSelectRadius| :guilabel:`Select features by radius`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:938
+# 09c44b4e515c473e97a68c983e1ce247
+msgid "To deselect all selected features click on |mActionDeselectAll|."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:943
+# d32cd03f1ba54a57a22420c3c5c73ee4
+msgid "Projects"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:946
+# f21431c7aa85444d9ad13f159d8d8b4e
+msgid "The state of your QGIS session is considered a Project.  QGIS works on one project at a time.  Settings are either considered as being per-project, or as a default for new projects (see Section :ref:`gui_options`). QGIS can save the state of your workspace into a project file using the menu options :menuselection:`File` --> |mActionFileSave| :menuselection:`Save Project` or :menuselection:`File` |mActionFileSaveAs| :menuselection:`Save Project As`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:954
+# 2ed279bbeeff4b6d9a98f0a4d74814f3
+msgid "Load saved projects into a QGIS session using :menuselection:`File` --> |mActionFileOpen| :menuselection:`Open Project` or :menuselection:`File --> Open Recent Project`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:958
+# 29f1cd1c9b1b40f3b2f7fba566b17170
+msgid "If you wish to clear your session and start fresh, choose :menuselection:`File` --> |mActionFileNew| :menuselection:`New Project`. Either of these menu options will prompt you to save the existing project if changes have been made since it was opened or last saved."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:963
+# d73787c3b4504964b5f048720e8f836e
+msgid "The kinds of information saved in a project file include:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:965
+# 53af90fff3cc4ffd84188a9b3282a219
+msgid "Layers added"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:966
+# 7ce1dd6e9ac64fe1a15dc445b0568af5
+msgid "Layer properties, including symbolization"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:967
+# 61bef58ae4164ac3923187fe2964ffd3
+msgid "Projection for the map view"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:968
+# 2817bc9687a6491d9f0011d5475d5b59
+msgid "Last viewed extent"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:970
+# bfd142c870254737b767b59f4375867d
+msgid "The project file is saved in XML format, so it is possible to edit the file outside QGIS if you know what you are doing. The file format was updated several times compared to earlier QGIS versions. Project files from older QGIS versions may not work properly anymore. To be made aware of this, in the |tab| General tab under :menuselection:`Settings --> Options` you can select:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:977
+# b536bf94625d4e528e4dc75d24739e43
+msgid "|checkbox| :guilabel:`Prompt to save project changes when required` |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:984
+# e3128df726784364ad4ad5603b029a1c
+msgid "In the properties window for the project under |nix| :menuselection:`File --> Project Properties` or |win| :menuselection:`Settings --> Project Properties` you set project specific options. These include:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:989
+# 594e2c6dd76b43558ef75ffbe446fe74
+msgid "In the |tab| :guilabel:`General` tab the project title, selection and background color, layer units, precision, and the option to save relative paths to layers can be defined. You can define the layer units (only used when CRS transformation is disabled) and the precision of decimal places to use."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:993
+# 357628ebdbff4f499333185edee2762f
+msgid "The |tab| :guilabel:`CRS Coordinate Reference System` tab enables you to choose the CRS for this project, and to enable on-the-fly re-projection of raster and vector layers when displaying layers from a different CRS."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:996
+# cb272625616542abab8c3521d4ecdc8d
+msgid "With the third |tab| :guilabel:`Identifiable layers` tab you set (or disable) which layers will respond to the identify tool. (See the Map tools paragraph from the :ref:`gui_options` section to enable identifying of multiple layers.)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:999
+# 9fc2115413144e128cf084ff3569e478
+msgid "The tab |tab| :guilabel:`WMS Server` allows to define information about the QGIS mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating the |checkbox| :guilabel:`Add WKT geometry to feature info response` will allow to query the WMS layers."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1007
+# 3c8deb78b7d7484a89ac80bdbd84f1be
+msgid "Output"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1011
+# ce23bb4ab5b646b68b22c1cbb258796a
+msgid "There are several ways to generate output from your QGIS session. We have discussed one already in Section \\ref{sec:projects}: saving as a project file. Here is a sampling of other ways to produce output files:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1015
+# eaabf6a7ae7f4bf09e46d074a52ce970
+msgid "Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens a file dialog where you select the name, path and type of image (PNG or JPG format). A world file with extension PNGW or JPGW saved in the same folder georeferences the image."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1019
+# 5cefd8f0c0ae40fe8d7f15b1510e1785
+msgid "Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a dialog where you can layout and print the current map canvas (see Section :ref:`label_printcomposer`)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1026
+# 5461b60dc627421a9db8ee18867a692e
+msgid "GUI Options"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1029
+# c3fb2d88e4284a13a605cdfd6090057a
+msgid "|mActionOptions| Some basic options for QGIS can be selected using the : guilabel:`Options` dialog. Select the menu option :menuselection:`Settings` --> |mActionOptions| :menuselection:`Options`. The tabs where you can optimize your options are:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1035
+# 8d48ec455c004cbdb69b577b285494f1
+msgid "General Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1037
+# eb03792770624f468358c45d2ed665bc
+msgid "|checkbox| :guilabel:`Prompt to save project changes when required`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1038
+# 8eb505fea668414c903a508903ddd72a
+msgid "|checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1039
+# 2ba8e6947c90447a9e07b8372752a757
+msgid "Change Selection and background Color"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1040
+# 41b14a88854e4478a81a1992dd5e0d79
+msgid "Change the icon theme (choose between default, classic, gis and newgis)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1041
+# 48220a63c4e742b9ae7e0660aef0156e
+msgid "Change icon size between 16, 24 and 32 pixel."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1042
+# 5f91f576476c48eda9366dbd273d7fd9
+msgid "Define double click action in legend (choose between 'open layer properties' and 'open ') attribute table."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1044
+# 3ea3c323336d43bf940923c48fff1fad
+msgid "|checkbox| :guilabel:`Capitalize layer names in legend`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1045
+# f92f1e95d87f4d56b892d3ccbfb3e431
+msgid "|checkbox| :guilabel:`Display classification attribute names in legend`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1046
+# 596f6130e7fe47d190aaa7082bcda868
+msgid "|checkbox| :guilabel:`Create raster icons in legend`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1047
+# cf97f9fc03704daabb4ae73999415f91
+msgid "|checkbox| :guilabel:`Hide splash screen at startup`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1048
+# 1c9444268f7a4cc1ad1a821cd3b871ae
+msgid "|checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1050
+# 0e4b27fdc35241af90b751f280961e33
+msgid "|checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1052
+# d31fbfa779a846d9b47d2e84e513c72e
+msgid "|checkbox| :guilabel:`Open attribute table in a dock window`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1053
+# cd84767eb1a343b48a5b3c8eb010f26c
+msgid "|checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1054
+# afb36da519f8429e9adb42c625b0cddb
+msgid "|checkbox| :guilabel:`Add new layers to selected group`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1055
+# 78a3c3de6e69409e9139ecd4bdac808b
+msgid "Attribute table behavior (choose between Show all features (default), Show selected features, show features in current canvas)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1058
+# a3c3e5c8f5eb4661b22b150617356ece
+msgid "Define representation for NULL values"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1059
+# 3d8b1e0c7f944d50b5e998cf2cfb16a5
+msgid "Add path(s) to search for additional C++ plugin libraries."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1062
+# 1cf6f6640c304efaa065b186fbaa0f55
+msgid "Rendering Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1064
+# 85541cf9c4e4422a8743e3f18deae73d
+msgid "|checkbox| :guilabel:`By default new layers added to the map should be displayed`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1065
+# 39f11dc398034599a19a8abf0490905a
+msgid "Define number of features to draw before updating the display."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1066
+# b0cac1a942734137b16328a2f5f287be
+msgid "|checkbox| :guilabel:`Use render caching where possible to speed up redraws`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1070
+# 56d4b16038f648a68043629afc9765d7
+msgid "|checkbox| :guilabel:`Use new generation symbology for rendering`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1071
+# 3a9fda1091284c5eb1efc9272a4b1284
+msgid "Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1074
+# dd722795e2474fb2a7c8fc9651a64176
+msgid "Additionally you can define whether to save the path for svg textures absolute or relative in the |tab| :guilabel:`General` tab of the :menuselection:`Settings --> Project Properties` menu."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1079
+# a3d9b3e93409457ab953e2b5d6bc0259
+msgid "Map tools Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1081
+# 84757da51bf84d7a808e9b74c3d2ee3e
+msgid "The Mode setting determines which layers will be shown by the Identify tool. By switching to ``Top down`` or ``Top down, stop at first`` instead of ``Current layer`` attributes for all identifiable layers (see the Project properties section under: :ref:`projects` to set which layers are identifiable) will be shown with the Identify tool."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1086
+# 0dc907ebc9f34d0f9d89b97032825b69
+msgid "|checkbox| :guilabel:`Open feature form, if a single feature is identified`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1087
+# 499ca1a243404d73a612217957675be2
+msgid "Define search radius for identifying and displaying map tips as a percentage of the map width"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1089
+# 8fdd4514615f44828926ef7f7c6c442c
+msgid "Define ellipsoid for distance calculations"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1090
+# ced3bfc5de794dbdac39dd9f36578a11
+msgid "Define rubberband color for measure tools"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1091
+# d725bee0bad04641a138fdbf6a2be0aa
+msgid "Define decimal places"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1092
+# 01d7be0db5994a42a038be58fba15841
+msgid "|checkbox| :guilabel:`Keep base unit`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1093
+# 07d3e0b94a1e4a77846ed666bd08a77c
+msgid "|radiobuttonon| :guilabel:`Define preferred measurement units (meters or feet)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1094
+# bff707822f8343b18ff4f9e4786705b6
+msgid "|radiobuttonon| :guilabel:`Define preferred angle units (Degrees, Radians or Gon)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1095
+# 7974edec4fe14183bc8bf774ba1c5a42
+msgid "Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse cursor, Nothing)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1097
+# a87476ca28a7435d8c283048e2617d29
+msgid "Define Zoom factor for wheel mouse"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1101
+# 8472dc369789455380acca2ac49b860e
+msgid "Overlays Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1103
+# 94cc3ebc9c084c039d765b44bd6a2161
+msgid "Define placement algorithm for labels (choose between central point (standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1108
+# 5d6491481ada4c2a886123727e413995
+msgid "Digitizing Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1110
+# 374a6180f5a64584a95591fea8cb5a7f
+msgid "Define Rubberband line color and line width"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1111
+# cefc94c74cd7463495ccd5165942dbc8
+msgid "Define default snap mode (to vertex, to segment, to vertex and segment)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1112
+# 74c7dd72ab3a475da6713e903ab082d4
+msgid "Define default snapping tolerance in map units or pixel"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1113
+# 796457574d84401c810ea2bc3b3f9d1b
+msgid "Define search radius for vertex edits in map units or pixel"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1114
+# 777c3aecca7e43e78ce9397f4388e94a
+msgid "|checkbox|:guilabel:`Show markers only for selected features`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1115
+# fafa91303fa8431e8c55b6f1c4bc936c
+msgid "Define vertex marker style (cross (default), semi transparent circle or none) and vertex marker size."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1117
+# 1ecb6b6201c44bf5bbf381bcc65eec63
+msgid "|checkbox| :guilabel:`Reuse last entered attribute values`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1118
+# ca28c0538655416490b9d45bc8845ea1
+msgid "|checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1122
+# b128f689056a46ad84c0bab7b7bc3c42
+msgid "CRS Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1124
+# 61178a1c7c534c359903aff5e805939f
+msgid "The CRS tab is divided in two areas. The first area allows to define the default CRS for new projects."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1128
+# 4eaed016a88944749cdc83941c28d10c
+msgid "Select a CRS and always start new projects with this CRS."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1129
+# 6454741e4c904476b95c7474697abb02
+msgid "|checkbox| :guilabel:`Enable on the fly re-projection by default`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1131
+# 3f66ea5b9e8546248096af8ae4cb1d2b
+msgid "The second area allows to define the action, when a new layer is created, or when a layer without CRS is loaded."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1134
+# 6ab3eea5a8854fb0ac414142431e607b
+msgid "|radiobuttonoff| :guilabel:`Prompt for Coordinate Reference System (CRS)`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1135
+# 847a74a0b04541818c0af6b5aef0ef83
+msgid "|radiobuttonoff| :guilabel:`Project wide default Coordinate Reference System (CRS) will be used`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1136
+# c29595cc9cb04eda9add4f24b7cf69c5
+msgid "|radiobuttonon| :guilabel`Global default Coordinate Reference System (CRS) displayed below will be used`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1139
+# fbc7b6a37a1d4b41bb0621f54fec4cfd
+msgid "Locale Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1141
+# b9e87ede7f004767830a8dc5ead3c48a
+msgid "|checkbox| :guilabel:`Overwrite system locale and use defined locale instead`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1142
+# 71c4f17c3e094f47a6da7ec9d0e5fba5
+msgid "Information about active system locale"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1146
+# c30aef3abfb0454796f9e92ee275a47c
+msgid "Network Tab"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1154
+# eb22772bb48f45fe9e58011979b5a088
+msgid "|checkbox| :guilabel:`Use proxy for web access` and define host, port, user, and password."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1156
+# c1d82c33998c46ec9feda190548b4e0d
+msgid "Set the :menuselection:`Proxy type` according to your needs."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1159
+# 328e4ad86eea41ff8de4633a29d5da63
+msgid "proxy set using"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1161
+# 32f1f76995a142d7a0b7db76502df90a
+msgid "Supports TCP, UDP, binding to a port (incoming connections) and authentication."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1163
+# 651a13bb65274cb5b606fe42d459ff2c
+msgid ":menuselection:`HttpProxy`: Implemented using the \"CONNECT\" command, supports only outgoing TCP connections; supports authentication."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1165
+# 9be88e08a197426b986326b63248d891
+msgid ":menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, it is useful only in the context of HTTP requests"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1167
+# 70eeea2fb4fd4391ad3a01ba730146c5
+msgid ":menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is useful only in the context of FTP requests"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1170
+# 811dbbe40a544feba5b12a9da2399fc7
+msgid "Define Cache settings (path and size)"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1171
+# 14e7bdfc04e045368a89a9da89d52ce0
+msgid "Define WMS search address, default is ``http://geopole.org/wms/search?search=\\%1\\&type=rss``"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1173
+# 6fb40b4665ee474cb0c5739c18b4b6cd
+msgid "Define timeout for network requests in ms - default is 60000"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1175
+# e1053fc1e1e0426795ee3f84671d0938
+msgid "Excluding some URLs can be added to the text box below the proxy-settings (see Figure :ref:`fig_proxy-settings`) by pressing the :guilabel:`Add`-button. After that double-click into the just created URL-field and enter the URL you would like to exclude from using the proxy. Obviously the button :guilabel:`Remove` removes the selected entry."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1181
+# 6f56b56f0a534b408a8c9bc120da5576
+msgid "If you need more detailed information about the different proxy-settings, please refer to the manual of the underlying QT-library-documentation at http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1186
+# 31044c1458b740f1ae5d444535b69e50
+msgid "**Using Proxies**"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1188
+# 19f3ed0d04bf41c5af2a958ee558054d
+msgid "Using proxies can sometimes be tricky. It is useful to 'trial and error' the above proxy types and check if they succeed in your case."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1191
+# d8f2979c1e6640028fada85067ca0cf4
+msgid "You can modify the options according to your needs. Some of the changes may require a restart of QGIS before they will be effective."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1194
+# 73a6b53ed5354e83ae966e426d77c797
+msgid "|nix| settings are saved in a texfile: \\$HOME/.config/QuantumGIS/qgis.conf"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1195
+# a937d0a4ff994d20877f4922a963c1c2
+msgid "|osx| you can find your settings in: \\$HOME/Library/Preferences/org.qgis.qgis.plist"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1197
+# 87fe297155e14130bd762102e66add5c
+msgid "|win| settings are stored in the registry under:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1206
+# 8d8bd1ecab5b4472b30c278ed87fbc13
+msgid "Annotation Tools"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1208
+# 6eb4c7603a0f4929a5e5e311d235d545
+msgid ":index:`annotations` :index:`text annotation|see{annotations}`"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1211
+# 61cb6f5f5cdd401486097ff698b1c7db
+msgid "The |mActionTextAnnotation| text annotation tools in the attribute toolbar provides the possibility to place formatted text in a balloon on the QGIS map canvas. Use the text annotation tool and click into the map canvas."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1221
+# c0c2639a5697458a9a89ad9b6a030f9c
+msgid "Double click on the item opens a dialog with various options. There is the text editor to enter the formatted text and other item settings. E.g. there is the choice of having the item placed on a map position (displayed by a marker symbol) or to have the item on a screen position (not related to the map). The item can be moved by map position (drag the map marker) or by moving only the balloon. The icons are part of gis theme, and are used by default in the other themes too."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1229
+# dcb4df83b4a644328863fbb90e31e863
+msgid "The |mActionAnnotation| move annotation tool allows to move the annotation on the map canvas."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1233
+# 03e267b181514dc697f10e0435187f70
+msgid "Form annotations"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1237
+# aa733c51d6ea456594eadf4628e11b3f
+msgid "Additionally you can also create your own annotation forms. The |mActionFormAnnotation| form annotation tool is useful to display attributes of a vector layer in a customized qt designer form (see Figure :ref:`fig:custom-annotations`). It is similar to the designer forms for the identify tool, but displayed in an annotation item. Also see QGIS blog http://blog.qgis.org/node/143 for more information."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1250
+# 517906b7eaaf48838219556dd9a6a184
+msgid "If you press :kbd:`Ctrl+T` while an annotation tool is active (move annotation, text annotation, form annotation), the visibility states of the items are inverted."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1257
+# 6a68db5155944cbab3db40bdf6b24020
+msgid "Spatial Bookmarks"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1262
+# 43a6d6d9c6424d7b9123a259beee54f7
+msgid "Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to it later."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1266
+# 99d7833a605042f7912a0faa25557923
+msgid "Creating a Bookmark"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1268
+# efa7597aafad4166a4dcf2a5819d7a1c
+msgid "To create a bookmark:"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1270
+# 9445279c5b534c3eb686aa389a881736
+msgid "Zoom or pan to the area of interest."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1271
+# 12d3aff82e384c0ea523d82639758844
+msgid "Select the menu option :menuselection:`View --> New Bookmark` or press :kbd:`Ctrl-B`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1272
+# 15429757c3a54c05b90bdd59e9c98a9a
+msgid "Enter a descriptive name for the bookmark (up to 255 characters)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1273
+# 21706f10bc664342a2990e5bec835aa8
+msgid "Click |button| :menuselection:`OK` to add the bookmark or |button| :menuselection:`Cancel` to exit without adding the bookmark."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1278
+# e17835ccae9741258155b6410f4e6d7b
+msgid "Note that you can have multiple bookmarks with the same name."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1281
+# 180c5384434f46ce93987a3e058418b7
+msgid "Working with Bookmarks"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1283
+# 4ea46b259e794f058abab752644d5749
+msgid "To use or manage bookmarks, select the menu option :menuselection:`View --> Show Bookmarks`. The :menuselection:`Geospatial Bookmarks` dialog allows you to zoom to or delete a bookmark. You can not edit the bookmark name or coordinates."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1289
+# 608befa60eb040529f6f1a05fbd0cf75
+msgid "Zooming to a Bookmark"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1291
+# 760ce4f359ef49b3b1d2a0bdddab6cec
+msgid "From the :menuselection:`Geospatial Bookmarks` dialog, select the desired bookmark by clicking on it, then click |button| :menuselection:`Zoom To`. You can also zoom to a bookmark by double-clicking on it."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1296
+# 4e72ae7023f343f685d1c544f2655eed
+msgid "Deleting a Bookmark"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1298
+# 80a25e928bc94393a639cc2a5bc963d6
+msgid "To delete a bookmark from the :guilabel:`Geospatial Bookmarks` dialog, click on it then click :guilabel:`Delete`. Confirm your choice by clicking :guilabel:`Yes` or cancel the delete by clicking :guilabel:`No`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1306
+# ae74b7da9b16401d914682b8fe68d9d0
+msgid "Live GPS tracking"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1309
+# 7eb4ff71d68a499a842f054ed30f8568
+msgid "To activate Live GPS tracking in QGIS you need to select :menuselection:`View --> Live GPS tracking`. You will get a new docked Window on the left side of the canvas."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1313
+# 17e2561578d049c08063ab8dc3195de1
+msgid "There are 4 possible screens in this GPS tracking window (see Figure :ref:`fig:gpstrack_liv`) and Figure :ref:`fig:gpstrack_options`)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1316
+# 5efc4dafc696414086939857cf8da34a
+msgid "|mActionToggleEditing| GPS position coordinates and for manually entering Vertices and Features."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1318
+# 229a467542214a9da30492d119af4281
+msgid "|gpstrack_barchart| GPS signal strength of satellite connections."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1319
+# bc5931799ace4a7bbea08885ffa61d92
+msgid "|gpstrack_polarchart| GPS polar screen showing number and polar position of satellites."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1321
+# f3e568c0bcef493d9f3844261d14367b
+msgid "|mActionOptions| GPS options screen (see Figure :ref:`fig:gpstrack_options`)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1323
+# 197f29ad960644c6b2dd7f5a60a3e1ee
+msgid "With a plugged in GPS receiver (has to be supported by your operating system) a simple click on |button| :menuselection:`Connect` connects the GPS to QGIS. A second click (now |button| :menuselection:`Disconnect`) disconnects the GPS-Receiver from your Computer. For GNU/Linux gpsd support is integrated to support connection to most GPS receivers. Therefore you first have to configure gpsd properly to connect QGIS to it."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1331
+# 3cda75a977674b3b88cf5890e99ba9a6
+msgid "If you want to record your position to the canvas you have to create a new vector layer first and switch it to editable status to be able to record your track."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1353
+# b38d025ee8b74637a5ea452deda7df38
+msgid "Position coordinates"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1355
+# 3da98a95cb534780baf5c0554ea1926f
+msgid "|mActionToggleEditing| If the GPS is receiving signals from satellites you will see your position in latitude, longitude and elevation as you can see in Figure :ref:`subfig:gpstrack_main`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1360
+# 0dda0402ac6347b2aa0759237c11f1c7
+msgid "GPS signal strength"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1362
+# c1176d380e44457caf62e3c25db5b311
+msgid "|gpstrack_barchart| Here you can see the signal strenght of the satellites you are receiving signals from Figure :ref:`subfig:gpstrack_stren`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1367
+# 4841eb5864674b99b30cd8f2bcc2efc9
+msgid "GPS polar window"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1369
+# be6faa12d0bb4391af0f4654643c0f09
+msgid "|gpstrack_polarchart| If you want to know where in the sky all the connected satellites are, you have to switch to the polar screen (Figure :ref:`subfig:gpstrack_polar`). You can also see the ID numbers of the satellites you are receiving signals from."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1375
+# 0e53287d42e24d44ad5f0e62805e8284
+msgid "GPS options"
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1377
+# 23ca2dd5caec49e7ade1917668207c82
+msgid "|mActionOptions| In case of connection problems you can switch from |radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| :menuselection:`Use path/port below` and select the path/port your GPS receiver is connected to.  A click on |button| :menuselection:`Connect` again initiates the connection to the GPS receiver."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1383
+# 2ee3200984814fee8e318a6ca317642d
+msgid "With the slider |slider| :menuselection:`GPS Cursor Size` you can shrink and grow the position cursor on the canvas. Activating |radiobuttonon| :menuselection:`Auto-add vertices` within GPS digitizing your track will automatically be recorded in the active vector layer (of course the layer has to be in edit mode)."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1389
+# d21a63da285f491a8b905d4cc8ab235d
+msgid "With GPS map recenter you can decide in which way the canvas will be updated if your recorded coordinates start either to move out of canvas or there is any change at all."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1393
+# c48e85d3be0b4e7c93f6b3d98f6c1c5f
+msgid "Track color and width sets the color of and the width of your drawn track."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1395
+# 1ecea6c799514e23a688f966d93eb740
+msgid "If you want to set a feature manually you have to go back to |mActionToggleEditing| ''Position Coordinates'' and click on |button| :menuselection:`Add feature`."
+msgstr ""
+
+#: ../../introduction/features_at_a_glance.rst:1399
+# 428bde34045b405492345389c68e6dab
+msgid "Keyboard shortcuts can now be configured manually (shortcuts presented in this section are the defaults), using the Configure Shortcuts tool under Settings Menu."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:9
+# 85fec5f872ec417ca2990f74be58505a
+msgid "Getting Started"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:11
+# c95070daa39043caacd8e67c6541a674
+msgid "This chapter gives a quick overview of installing |qg|, some sample data from the |qg| web page and running a first and simple session visualizing raster and vector layers."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:18
+# ad7675b5e0f642a2b46ce92b648ed564
+msgid "Installation"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:22
+# c0c975af1a65485d931f34c5358d0fdd
+msgid "Installation of |qg| is very simple. Standard installer packages are available for MS Windows and Mac OS X. For many flavors of GNU/Linux binary packages (rpm and deb) or software repositories to add to your installation manager are provided. Get the latest information on binary packages at the |qg| website at http://download.qgis.org."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:29
+# 1c897733be8a4b239e34b6280166c4de
+msgid "Installation from source"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:31
+# 1b3539f8fd854619accc9208fe451f12
+msgid "If you need to build |qg| from source, please refer to the coding and compiling guide available at http://www.qgis.org/en/documentation/manuals.html. The installation instructions are also distributed with the |qg| source code."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:36
+# 62da68f632dd4401b3fee444e520ef5e
+msgid "Installation on external media"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:38
+# 8fd11fbe854047bab002f45bcf6528ed
+msgid "QGIS allows to define a ``--configpath`` option that overrides the default path (e.g. ~/.qgis under Linux) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry a QGIS installation on a flash drive together with all plugins and settings."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:46
+# 99a3807d94c349759d0321b6a51ca83e
+msgid "Sample Data"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:48
+# a509364299c14d729652191cb92aaed3
+msgid ":index:`data!sample`"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:50
+# c94e815c9e09419db77a66b3b509eb26
+msgid "The user guide contains examples based on the |qg| sample dataset."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:52
+# 2fb9e222a6ce4cf9bf4b3a144ca65d5d
+msgid "|win| The Windows installer has an option to download the |qg| sample dataset. If checked, the data will be downloaded to your :file:`My Documents` folder and placed in a folder called :file:`GIS Database`. You may use Windows Explorer to move this folder to any convenient location. If you did not select the checkbox to install the sample dataset during the initial |qg| installation, you can either"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:59
+# 4db30e10fb83429b80a58c868165eb4b
+msgid "use GIS data that you already have;"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:60
+# 50e6c1d83a444d15976b18672a0c1d93
+msgid "download the sample data from the qgis website at http://download.qgis.org; or"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:61
+# d4f5b16fa3894382a0e6af7375f9470e
+msgid "uninstall |qg| and reinstall with the data download option checked, only if the above solutions are unsuccessful."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:64
+# c3c97a7c86f542ceb78b24017fe716b0
+msgid "|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation packages available as rpm, deb or dmg. To use the sample dataset download the file :file:`qgis_sample_data` as ZIP or TAR archive from http://download.osgeo.org/qgis/data/ and unzip or untar the archive on your system. The Alaska dataset includes all GIS data that are used as examples and screenshots in the user guide, and also includes a small GRASS database. The projection for the qgis sample dataset is Alaska Albers Equal Area with unit feet. The EPSG code is 2964."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:96
+# 6612e69322944bae97637a1c079c0353
+msgid "If you intend to use |qg| as graphical frontend for GRASS, you can find a selection of sample locations (e.g. Spearfish or South Dakota) at the official GRASS GIS website http://grass.osgeo.org/download/data.php."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:103
+# afc21554af3146dea0fe1be12bffe63c
+msgid "Sample Session"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:105
+# a02ec8f9ba3a4dc483855cda9cf6ce99
+msgid "Now that you have |qg| installed and a sample dataset available, we would like to demonstrate a short and simple |qg| sample session. We will visualize a raster and a vector layer. We will use the landcover raster layer :file:`qgis_sample_data/raster/landcover.img` and the lakes vector layer :file:`qgis_sample_data/gml/lakes.gml`."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:112
+# de0b0ce969e7433c832b38cb37add430
+msgid "start |qg|"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:114
+# 6bd42f29691345a3831bdb29475e2270
+msgid "|nix| Start |qg| by typing: ``|qg|`` at a command prompt, or if using precompiled binary, using the Applications menu."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:116
+# 0b5053b41e1f403f983697e5f51cf722
+msgid "|win| Start |qg| using the Start menu or desktop shortcut, or double click on a |qg| project file."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:118
+# dcc8a6221c5642939dcd2401a3e5b2fa
+msgid "|osx| Double click the icon in your Applications folder."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:128
+# 05832836aa7b498892587a498248da64
+msgid "Load raster and vector layers from the sample dataset"
+msgstr ""
+
+#: ../../introduction/getting_started.rst:130
+# 0a4eb97a5da84fe5b870fae7dfd70807
+msgid "Click on the |mActionAddRasterLayer| :guilabel:`Load Raster` icon."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:131
+# 4762bb20840c4c4d994739a265e00097
+msgid "Browse to the folder :file:`qgis_sample_data/raster/`, select the ERDAS Img file :file:`landcover.img` and click :guilabel:`Open`."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:133
+# 54baadcda63844658d18c9012ca50298
+msgid "If the file is not listed, check if the Filetype combobox at the bottom of the dialog is set on the right type, in this case \"Erdas Imagine Images (*.img, *.IMG)\"."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:136
+# 22fcfe57da274016b277732afa6b5ad1
+msgid "Now click on the |mActionAddOgrLayer| :guilabel:`Load Vector` icon."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:137
+# 0ba5f54f74ec4928aae199d2fa1cee3f
+msgid "|radiobuttonon| :guilabel:`File` should be selected as Source Type in the new :guilabel:`Add Vector Layer` dialog. Now click :guilabel:`Browse` to select the vector layer."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:140
+# 6334ad1b6fe44c798e418ea583dc2379
+msgid "Browse to the folder :file:`qgis_sample_data/gml/`, select \"GML\" from the filetype combobox, then select the GML file :file:`lakes.gml` and click :guilabel:`Open`, then in Add Vector dialog click :guilabel:`OK`."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:143
+# d4302f45e92b47b28a71b7d9aedf48fa
+msgid "Zoom in a bit to your favorite area with some lakes."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:144
+# 4592a47eff9944f4821517d970037d78
+msgid "Double click the :file:`lakes` layer in the map legend to open the :guilabel:`Properties` dialog."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:146
+# 94ba27fc9ea540e9891ea34c0dcab4c5
+msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:147
+# 379f6ee4d2fa4c9f83d73a74a0bf48d0
+msgid "Click on the :guilabel:`Labels` tab and check the |displaylabel| checkbox to enable labeling. Choose NAMES field as field containing label."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:149
+# a3d21baf9e324c83b182835a155250d6
+msgid "To improve readability of labels, you can add a white buffer around them, by clicking ``Buffer'' in the list on the left, checking |bufferlabels| and choosing 3 as buffer size."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:152
+# 6b7c0751cafd4e3ab3bc8b012813d478
+msgid "Click :guilabel:`Apply`, check if the result looks good and finally click :guilabel:`OK`."
+msgstr ""
+
+#: ../../introduction/getting_started.rst:155
+# dd1a468bac9245688d955bdc82cc5a2b
+msgid "You can see how easy it is to visualize raster and vector layers in |qg|. Let's move on to the sections that follow to learn more about the available functionality, features and settings and how to use them."
+msgstr ""
+
+#: ../../introduction/index.rst:5
+# fe78e0cd033f4ce8b9d55217bdfb56f3
+msgid "Introduction"
+msgstr ""
+
+#: ../../introduction/introduction.rst:5
+# d1e0f81f5e78493b8a245e5be7521179
+msgid "Introduction To GIS"
+msgstr ""
+
+#: ../../introduction/introduction.rst:12
+# a20b5bc72d944f69b38f6a00f8d9ecad
+msgid "A Geographical Information System (GIS) ([#mitchel05]_ [1]_) is a collection of software that allows you to create, visualize, query and analyze geospatial data. Geospatial data refers to information about the geographic location of an entity. This often involves the use of a geographic coordinate, like a latitude or longitude value. Spatial data is another commonly used term, as are: geographic data, GIS data, map data, location data, coordinate data and spatial geometry data."
+msgstr ""
+
+#: ../../introduction/introduction.rst:20
+# 1367e774399e4ea6be354264c42a7b47
+msgid "This chapter is by Tyler Mitchell (http://www.oreillynet.com/pub/wlg/7053) and used under the Creative Commons License. Tyler is the author of *Web Mapping Illustrated}, published by O'Reilly, 2005.*"
+msgstr ""
+
+#: ../../introduction/introduction.rst:22
+# 1bb6487df5a54649801c9d35b3cb697c
+msgid "Applications using geospatial data perform a variety of functions. Map production is the most easily understood function of geospatial applications. Mapping programs take geospatial data and render it in a form that is viewable, usually on a computer screen or printed page. Applications can present static maps (a simple image) or dynamic maps that are customised by the person viewing the map through a desktop program or a web page."
+msgstr ""
+
+#: ../../introduction/introduction.rst:30
+# 97591ff8857643129095f61e4d5a12df
+msgid "Many people mistakenly assume that geospatial applications just produce maps, but geospatial data analysis is another primary function of geospatial applications. Some typical types of analysis include computing:"
+msgstr ""
+
+#: ../../introduction/introduction.rst:35
+# 7f7ffe98f86c4bbf8c380ea3a7d3dd93
+msgid "distances between geographic locations"
+msgstr ""
+
+#: ../../introduction/introduction.rst:36
+# c24873e618e84c66b1751c5276e37126
+msgid "the amount of area (e.g., square meters) within a certain geographic region"
+msgstr ""
+
+#: ../../introduction/introduction.rst:37
+# dfc89667a121420d99911ab77ca883a7
+msgid "what geographic features overlap other features"
+msgstr ""
+
+#: ../../introduction/introduction.rst:38
+# 434663d396bb4d81bba34139a32798db
+msgid "the amount of overlap between features"
+msgstr ""
+
+#: ../../introduction/introduction.rst:39
+# f9d71285c4bf4c8d8da4735710bb77d9
+msgid "the number of locations within a certain distance of another"
+msgstr ""
+
+#: ../../introduction/introduction.rst:40
+# e2b3f0471ced4b14b1ea5bad6919900b
+msgid "and so on..."
+msgstr ""
+
+#: ../../introduction/introduction.rst:42
+# 4045f7ef51624ef7aab2ee1b631c0cce
+msgid "These may seem simplistic, but can be applied in all sorts of ways across many disciplines. The results of analysis may be shown on a map, but are often tabulated into a report to support management decisions."
+msgstr ""
+
+#: ../../introduction/introduction.rst:46
+# 078bf1a6c8a24f9589f9fdb2e5543c13
+msgid "The recent phenomena of location-based services promises to introduce all sorts of other features, but many will be based on a combination of maps and analysis. For example, you have a cell phone that tracks your geographic location. If you have the right software, your phone can tell you what kind of restaurants are within walking distance. While this is a novel application of geospatial technology, it is essentially doing geospatial data analysis and listing the results for you."
+msgstr ""
+
+#: ../../introduction/introduction.rst:57
+# b30bd176d10142ddb079cf001c82957d
+msgid "Why is all this so new?"
+msgstr ""
+
+#: ../../introduction/introduction.rst:59
+# 88cd84d721464f2c90cc913ceb84ece7
+msgid "Well, it's not. There are many new hardware devices that are enabling mobile geospatial services. Many open source geospatial applications are also available, but the existence of geospatially focused hardware and software is nothing new. Global positioning system (GPS) receivers are becoming commonplace, but have been used in various industries for more than a decade. Likewise, desktop mapping and analysis tools have also been a major commercial market, primarily focused on industries such as natural resource management."
+msgstr ""
+
+#: ../../introduction/introduction.rst:68
+# f007faad16784258bf0ee725f57c4b7c
+msgid "What is new is how the latest hardware and software is being applied and who is applying it. Traditional users of mapping and analysis tools were highly trained GIS Analysts or digital mapping technicians trained to use CAD-like tools. Now, the processing capabilities of home PCs and open source software (OSS) packages have enabled an army of hobbyists, professionals, web developers, etc. to interact with geospatial data. The learning curve has come down. The costs have come down. The amount of geospatial technology saturation has increased."
+msgstr ""
+
+#: ../../introduction/introduction.rst:77
+# 37eeccee11cb43b2af1416a17c0b3906
+msgid "How is geospatial data stored? In a nutshell, there are two types of geospatial data in widespread use today. This is in addition to traditional tabular data that is also widely used by geospatial applications."
+msgstr ""
+
+#: ../../introduction/introduction.rst:85
+# 326b791af2ff489e94e374b1a6cdd3f3
+msgid "Raster Data"
+msgstr ""
+
+#: ../../introduction/introduction.rst:88
+# efd275e1e2d84f82a86001cb0f63b359
+msgid "One type of geospatial data is called raster data or simply \"a raster\". The most easily recognised form of raster data is digital satellite imagery or air photos. Elevation shading or digital elevation models are also typically represented as raster data. Any type of map feature can be represented as raster data, but there are limitations."
+msgstr ""
+
+#: ../../introduction/introduction.rst:94
+# 75112294751645f282b7b9489ba2f1d9
+msgid "A raster is a regular grid made up of cells, or in the case of imagery, pixels. They have a fixed number of rows and columns. Each cell has a numeric value and has a certain geographic size (e.g. 30x30 meters in size)."
+msgstr ""
+
+#: ../../introduction/introduction.rst:99
+# 0ea1f559a3cb4c07b2d8bcfbc662a441
+msgid "Multiple overlapping rasters are used to represent images using more than one colour value (i.e. one raster for each set of red, green and blue values is combined to create a colour image). Satellite imagery also represents data in multiple \"bands\". Each band is essentially a separate, spatially overlapping raster, where each band holds values of certain wavelengths of light. As you can imagine, a large raster takes up more file space. A raster with smaller cells can provide more detail, but takes up more file space. The trick is finding the right balance between cell size for storage purposes and cell size for analytical or mapping purposes."
+msgstr ""
+
+#: ../../introduction/introduction.rst:112
+# 73f86f2265494a8b8ae89f4e6a9f5044
+msgid "Vector Data"
+msgstr ""
+
+#: ../../introduction/introduction.rst:114
+# a8832ce78c84494db076af547d3c2426
+msgid "Vector data is also used in geospatial applications. If you stayed awake during trigonometry and coordinate geometry classes, you will already be familiar with some of the qualities of vector data. In its simplest sense, vectors are a way of describing a location by using a set of coordinates. Each coordinate refers to a geographic location using a system of x and y values."
+msgstr ""
+
+#: ../../introduction/introduction.rst:121
+# 747597f74f4a4aac8057f2e175b7169f
+msgid "This can be thought of in reference to a Cartesian plane - you know, the diagrams from school that showed an x and y-axis. You might have used them to chart declining retirement savings or increasing compound mortgage interest, but the concepts are essential to geospatial data analysis and mapping."
+msgstr ""
+
+#: ../../introduction/introduction.rst:127
+# cac9c69b61f94f4e8f615e0afa7ee850
+msgid "There are various ways of representing these geographic coordinates depending on your purpose. This is a whole area of study for another day - map projections."
+msgstr ""
+
+#: ../../introduction/introduction.rst:131
+# 653ce30aecbf41a5a6a1c64375dba77d
+msgid "Vector data takes on three forms, each progressively more complex and building on the former."
+msgstr ""
+
+#: ../../introduction/introduction.rst:134
+# a382d3a5c76e4c07b4bc1edc3a4b5ab3
+msgid "Points - A single coordinate (x y) represents a discrete geographic location"
+msgstr ""
+
+#: ../../introduction/introduction.rst:135
+# 31d48a7f63434083a660ffff8a62fdff
+msgid "Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung together in a certain order, like drawing a line from Point (x1 y1) to Point (x2 y2) and so on. These parts between each point are considered line segments. They have a length and the line can be said to have a direction based on the order of the points. Technically, a line is a single pair of coordinates connected together, whereas a line string is multiple lines connected together."
+msgstr ""
+
+#: ../../introduction/introduction.rst:142
+# 719d363828784d63aee1429f29bed7b5
+msgid "Polygons - When lines are strung together by more than two points, with the last point being at the same location as the first, we call this a polygon. A triangle, circle, rectangle, etc. are all polygons. The key feature of polygons is that there is a fixed area within them."
+msgstr ""
+

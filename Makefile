@@ -2,19 +2,19 @@
 # $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $$lang $(BUILDDIR)/$$lang;
 
 # You can set these variables from the command line.
-BUILDDIR     = build
+BUILDDIR     = _build
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         = A4
 TRANSLATIONS  = de fr it
 LANGUAGES     = en $(TRANSLATIONS)
-SOURCE        = .
+SOURCE        = source
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 #ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCE)
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees/$$lang $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -Dlanguage=$$lang
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -Dlanguage=$$lang $(SOURCE)
 
 .PHONY: help clean html readme dirhtml pickle json htmlhelp qthelp latex latexpdf changes linkcheck doctest
 
@@ -51,9 +51,8 @@ compile_messages:
 html:
 	@for lang in $(LANGUAGES);\
 	do \
-		mkdir -p $(BUILDDIR)/html/$(SOURCE)/$$lang $(BUILDDIR)/doctrees/$(SOURCE)/$$lang; \
 		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$$lang";\
-		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$(SOURCE)/$$lang;\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$$lang;\
 	done
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";\
