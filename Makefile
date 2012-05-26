@@ -8,7 +8,7 @@ SPHINXBUILD   = sphinx-build
 PAPER         = A4
 TRANSLATIONS  = de fr it
 LANGUAGES     = en $(TRANSLATIONS)
-SOURCE        = source
+SOURCE        = user_guide
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4

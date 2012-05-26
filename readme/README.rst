@@ -51,9 +51,10 @@ Inline tags
   	
   (see `image`_ below).
 
-* Dialog title::
+* Dialog and Tab title::
   	
   	\dialog{title}
+	\tab{title}
   
   move to::
   	

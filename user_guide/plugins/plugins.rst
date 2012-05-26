@@ -38,7 +38,7 @@ used again.
 
 Loading a QGIS Core Plugin
 ***************************
-.. _`load_core_plugin`:
+.. _`plugins/plugins/load_core_plugin`:
 
 
 Loading a QGIS Core Plugin is done from the main menu 

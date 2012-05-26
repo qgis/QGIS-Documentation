@@ -12,8 +12,8 @@ Raster Terrain Modelling Plugin
 
 The Raster Terrain Modelling plugin can be used to calculate the slope, aspect, 
 ruggedness, and total curvature for digital elevation models (DEM). It is very 
-simple to handle and provides an intiuitive graphical user interface for 
-creating new raster layers (See Figure \ref{fig:raster_terrain_dialog}).
+simple to handle and provides an intuitive graphical user interface for 
+creating new raster layers (See Figure `plugins/plugins_raster_terrain/RasterTerrainDialog`_).
 The plugin requires the following parameters to be specified before running:
 
 .. FIXME: need to define rst style for [label=--]
@@ -32,30 +32,25 @@ Description of the analysis:
 *  **Ruggedness factor**: A quantitative measurement of terrain heterogeneity.
 *  **Total curvature**: A curvature measure that combines plan- and profile curvature.
 
-.. _ `raster_terrain_dialog`:
+.. _`plugins/plugins_raster_terrain/RasterTerrainDialog`:
+
 .. figure:: img/en/plugins_raster_terrain/raster_terrain_dialog.png
    :align: center
    :width: 40em
 
 Raster Terrain Modelling Plugin
 
-.. Using the plugin}\label{raster_terrain_usage
+.. _`raster_terrain_usage`
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+**Using the plugin**
 
 
-  #.  Start QGIS and load a DEM raster layer. 
-  #.  Load the Raster Terrain Modelling plugin in the Plugin Manager (see Section 
-      \ref{sec:load_core_plugin}) and click on the \toolbtntwo{raster_terrain}{Raster Terrain
-      Modelling} icon which appears in the QGIS toolbar menu. The Raster Terrain Modelling plugin dialog
-      appears as shown in Figure \ref{fig:raster_terrain_dialog}.
-  #.  Select an analysis method (e.g. \dropmenuopt{Slope}).
-  #.  Specify an output file
-      path, and an output file type.
-  #.  Click \button{Ok}.
+#.  Start QGIS and load a DEM raster layer. 
+#.  Load the Raster Terrain Modelling plugin in the Plugin Manager see Section :ref:`plugins/plugins/load_core_plugin` and click on the |raster_terrain|:guilabel:`Raster Terrain Modelling` icon which appears in the QGIS toolbar menu. The Raster Terrain Modelling plugin dialog appears as shown in Figure `plugins/plugins_raster_terrain/RasterTerrainDialog`_ .
+#.  Select an analysis method (e.g. \dropmenuopt{Slope}).
+#.  Specify an output file
+    path, and an output file type.
+#.  Click :guilabel:`Ok`.
 
 
-
-\FloatBarrier
+.. \FloatBarrier
