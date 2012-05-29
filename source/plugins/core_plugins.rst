@@ -28,7 +28,7 @@ Using QGIS Core Plugins
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
 | |grass|                | GRASS 		    | Activates the mighty GRASS Toolbox 				 | Chapter :ref:`grass` 		  |
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
- |raster-info|           | GDAL Tools               | Graphical interface for most commonly used raster functions	 | Chapter :ref:`label_plugingdaltools  ` | 
+| |raster-info|           | GDAL Tools               | Graphical interface for most commonly used raster functions	 | Chapter :ref:`label_plugingdaltools  ` | 
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
 | |georeferencer|        | Georeferencer GDAL	    | Adding projection info to Rasterfiles using GDAL 			 | Chapter :ref:`georef` 		  |
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
