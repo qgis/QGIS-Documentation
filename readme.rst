@@ -55,15 +55,12 @@ Project administrators must generate .pot files (and update them every time the
 master document has been updated). He/she must generate .pot files for each
 directory containing .rst files. For example::
 
-    $ sphinx-build -b gettext source/ source/translated/pot/
-
-$ sphinx-build -b gettext -c source source/others/ source/translated/pot
-$ sphinx-build -b gettext -c source source/introduction/ source/translated/pot
-$ sphinx-build -b gettext -c source source/plugins/ source/translated/pot/
-$ sphinx-build -b gettext -c source source/print_composer/ source/translated/pot/
-$ sphinx-build -b gettext -c source source/server/ source/translated/pot/
-$ sphinx-build -b gettext -c source source/working/ source/translated/pot/
-$ sphinx-build -b gettext -c source source/ source/translated/pot/
+	$ sphinx-build -b gettext -c source source/others/ source/translated/pot
+	$ sphinx-build -b gettext -c source source/introduction/ source/translated/pot
+	$ sphinx-build -b gettext -c source source/plugins/ source/translated/pot/
+	$ sphinx-build -b gettext -c source source/print_composer/ source/translated/pot/
+	$ sphinx-build -b gettext -c source source/server/ source/translated/pot/
+	$ sphinx-build -b gettext -c source source/working/ source/translated/pot/
 
 To add a new language the administrator need to copy the source/translated/pot 
 directory to source/transated/language-code directory, where your-language-code 
