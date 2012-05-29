@@ -1,0 +1,604 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS User Guide 1.7.4\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-25 17:42\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../print_composer/print_composer.rst:3
+# cc39f0fed54e475c9603a97b995ebf69
+msgid ":index:`print composer`"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:7
+# ee84db741a424710be6d6883f8f415f9
+msgid "Print Composer"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:9
+# 106dc999034f4c19a57d8b47ebd173a0
+msgid "The print composer provides growing layout and printing capabilities. It allows you to add elements such as the QGIS map canvas, legend, scalebar, images, basic shapes, arrows and text labels. You can size, group, align and position each element and adjust the properties to create your layout. The layout can be printed or exported to image formats, Postscript, PDF or to SVG [1]_ and you can save the layout as template and load it again in another session. See a list of tools in table~\\ref{tab:printcomposer_tools}:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:19
+# 2fc32b2c0e0b44ca927912a5f9beffdb
+msgid "..index:: Print composer; tools +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | Icon                     | Purpose                               | Icon                       | Purpose                                  | +==========================+=======================================+============================+==========================================+ +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionFolder|          | Load from template                    | |mActionFileSaveAs|        | Save as template                         | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionExportMapServer| | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionFilePrint|         | Print or export as Postscript            | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionZoomFullExtent|  | Zoom to full extent                   | |mActionZoomIn|            | Zoom in                                  | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionZoomOut|         | Zoom out                              | |mActionDraw|              | Refresh view                             | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionUndo|            | Revert last change                    | |mActionRedo|              | Restore last change                      | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionSaveMapAsImage|    | Add image to print composition           | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionLabel|           | Add label to print composition        | |mActionAddLegend|         | Add new legend to print composition      | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionScaleBar|        | Add new scalebar to print composition | |mActionAddBasicShape|     | Add basic shape to print composition     | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionAddArrow|        | Add arrow to print composition        | |mActionOpenTable|         | Add attribute table to print composition | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionSelectPan|       | Select/Move item in print composition | |mActionMoveItemContent|   | Move content within an item              | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionGroupItems|      | Group items of print composition      | |mActionUngroupItems|      | Ungroup items of print composition       | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionRaiseItems|      | Raise selected items                  | |mActionLowerItems|        | Lower selected items                     | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionMoveItemsToTop|  | Move selected items to top            | |mActionMoveItemsToBottom| | Move selected items to bottom            | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionAlignLeft|       | Align selected items left             | |mActionAlignRight|        | Align selected items right               | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionAlignHCenter|    | Align selected items center           | |mActionAlignVCenter|      | Align selected items center vertical     | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+ | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              | +--------------------------+---------------------------------------+----------------------------+------------------------------------------+"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:59
+# 02871041c2894ce2b2ec1537232eb854
+msgid "All Print Composer tools are availabe in menus and as icons in a toolbar. The toolbar can be switched off and on using the right mouse button holding the mouse over the toolbar."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:64
+# 0c3b80abcce642b2b2b17a54f1f8af80
+msgid "Open a new Print Composer Template"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:66
+# 64f871d82e0646eeb882f02c156c4e5f
+msgid "Before you start to work with the print composer, you need to load some raster and vector layers in the QGIS map canvas and adapt their properties to suite your own convenience. After everything is rendered and symbolized to your liking you click the |mActionNewComposer| :guilabel:`New Print Composer` icon in the toolbar or choose :menuselection:`File --> New Print Composer`."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:74
+# 197ffe6210bb45419292bee9a86cff10
+msgid "Using Print Composer"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:84
+# 4e6c7ac488c947a2a300b68ca3ce6b76
+msgid "Opening the print composer provides you with a blank canvas to which you can add the current QGIS map canvas, legend, scalebar, images, basic shapes, arrows and text. Figure `print_composer_blank`_ shows the initial view of the print composer with an activated |checkbox| Snap to grid mode but before any elements are added. The print composer provides three tabs:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:90
+# bbd0b7cf925a4fb498538adb52fc6250
+msgid "The |tab| General tab allows you to set paper size, orientation, the print quality for the output file in dpi and to activate snapping to a grid of a defined resolution. Please note, the |checkbox| Snap to grid feature only works, if you define a grid resolution > 0. Furthermore you can also activate the |checkbox| Print as raster checkbox. This means all elements will be rastered before printing or saving as Postscript of PDF."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:96
+# 4541cf6654aa4721b3e9e8b675d4a400
+msgid "The |tab| Item tab displays the properties for the selected map element. Click the |mActionSelectPan| :guilabel:`Select/Move item` icon to select an element (e.g. legend, scalebar or label) on the canvas. Then click the |tab| Item tab and customize the settings for the selected element."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:100
+# bb4f54ca5d4940de84be28ee1c7ff736
+msgid "The |tab| Command history tab displays a history of all changes applied to the print composer layout. With a mouse click it is possible to undo and redo layout steps back and forth to a certain status."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:104
+# 356e750377b44b9a93da4d252e57b905
+msgid "You can add multiple elements to the composer. It is also possible to have more than one map view or legend or scalebar in the print composer canvas. Each element has its own properties and in the case of the map, its own extent. If you want to remove an elements from the composer canvas. you can do that with the kbd:`Delete` or the kbd:`Backspace` key."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:111
+# 7aa2907c06fb4db1a0fffd94cd50b9dd
+msgid "Adding a current QGIS map canvas to the Print Composer"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:113
+# f36631e081d44f9d854290d70cef4069
+msgid "To add the QGIS map canvas, click on the |mActionAddMap| :guilabel:`Add new map from QGIS map canvas` button in the print composer toolbar and drag a rectangle on the composer canvas with the left mouse button to add the map. To display the current map, you can choose between three different modes in the map |tab| Item tab:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:119
+# 4434297d13144797925e73a8400de013
+msgid "|selectstring| Preview Rectangle is the default setting. It only displays an empty box with a message **Map will be printed here**."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:121
+# db441186365c4d2eb95a539e8d9ee2bb
+msgid "|selectstring| Preview Cache renders the map in the current screen resolution. If case you zoom in or out the composer window, the map is not rendered again but the image will be scaled."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:124
+# b342e695018e4ba3a0064b246023e2e1
+msgid "|selectstring| Preview Render means, that if you zoom in or out the composer window, the map will be rendered again, but for space reasons, only up to a maximum resolution."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:128
+# ffbcfc06f0044102bd3477cf45a7a431
+msgid "**Cache** is default preview mode for newly added print composer maps."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:130
+# 4833175e871e43378209236bc24a1eef
+msgid "You can resize the map element by clicking on the |mActionSelectPan| :guilabel:`Select/Move item` button, selecting the element, and dragging one of the blue handles in the corner of the map. With the map selected, you can now adapt more properties in the map |tab| Item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:136
+# f524ad7b2cb141309a42074d044b90bd
+msgid "To move layers within the map element select the map element, click the |mActionMoveItemContent| :guilabel:`Move item content` icon and move the layers within the map element frame with the left mouse button. After you found the right place for an element, you can lock the element position within the print composer canvas. Select the map element and click on the right mouse button to |mIconLock| :guilabel:`Lock` the element position and again to unlock the element. You can lock the map element also activating the |checkbox| Lock layers for map item checkbox in the Map dialog of the Map Item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:146
+# 0aaae28ec0254639b69c6249e85f80d5
+msgid "**Note:** QGIS \\CURRENT is now able to show labels from the new labeling plugin also in the map composer, but it is not yet scaled correctly. So it might be necessary to switch back to the standard labeling in some cases."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:151
+# b2d3b33e2029424bae309a09f227b2f9
+msgid "Map item tab --- Map and Extents dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:166
+# 48e0420c3f934050ae50834a5ee2ab93
+msgid "Map dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:168
+# a82722db57014a9b93552a28a2795e1a
+msgid "The **Map** dialog of the map item tab provides following functionalities (see Figure `mapdialog`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:171
+# 7c2b6158d69d4099b0d0a43d4810886f
+msgid "The **Preview** area allows to define the preview modes Rectangle, Cache and Render, as described above. Click on the :guilabel:`Update preview` button to apply changes to the map view."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:174
+# 530892edb2174a399a45fe102f9ed9ad
+msgid "The **Map** area allows to resize the map element specifying the width and height or the scale. The |selectstring| Rotation 0 field allows to rotate the map element content clockwise in degrees. Note, a coordinate frame can only be added with the default value 0. Furthermore you can enable the checkboxes |checkbox| Lock layers for map items and |checkbox| Draw map canvas items."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:181
+# e6d9b27137b04bb2a0d5db9400f37cf4
+msgid "If you change the view on the QGIS map canvas by zooming or panning or changing vector or raster properties, you can update the print composer view selecting the map element in the print composer and clicking the :guilabel:`Update preview` button."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:187
+# f081cbf42d2549ba887d876b63c16881
+msgid "Extents dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:189
+# 41f4d52a139e4d63803abe111fa0a6e9
+msgid "The **Extents** dialog of the map item tab provides following functionalities (see Figure `mapdialog`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:192
+# 0a35bf6c9b8f43e6a992d6b545e50941
+msgid "The **Map extent** area allow to specify the map extent using Y and X min/max values or clicking the :guilabel:`Set to map canvas extent` button."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:195
+# 1f87f7b4ae37465a95ead46d6e05b2a1
+msgid "If you change the view on the QGIS map canvas by zooming or panning or changing vector or raster properties, you can update the print composer view selecting the map element in the print composer and clicking the :guilabel:`Update preview` button in the map |tab| Item tab (see Figure `mapdialog`_ a)."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:202
+# e68a342414684dc6998c6ce0d252a709
+msgid "Map item tab --- Grid and General options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:217
+# 7e6885c22660496a887aab3cb6f06db5
+msgid "Grid dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:219
+# 6e8dbbfc69234a4cb2bf998e3bc393d4
+msgid "The **Grid** dialog of the map item tab provides following functionalities (see Figure `sec_map_dialog`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:222
+# 711f3225e49343e48723d81a639c6cbc
+msgid "The |checkbox| Show grid checkbox allows to overlay a grid to the map element. As grid type you can specify to use solid line or cross. Furthermore you can define an interval in X and Y direction, an X and Y offset, and the width used for cross or line grid type."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:226
+# c620fd97ba4749c8b63f13201492a1f3
+msgid "The |checkbox| Draw annotation checkbox allows to add coordinates to the map frame. The annotation can be drawn inside or outside the map frame. The annotation direction can be defined as horizontal, vertical, horizontal and vertical, or boundary direction. And finally you can define the grid color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:234
+#: ../../print_composer/print_composer.rst:283
+#: ../../print_composer/print_composer.rst:332
+#: ../../print_composer/print_composer.rst:437
+# 0eeeb4031674462483765f245bffa2ac
+# ecad78834f20433e88787f9a5ffee848
+# a1789b0bb2d94e7b8136b13637f9685a
+# e2aab1128253408496b9a13aaef4f8f3
+msgid "General options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:236
+# fb69572a771b4c649eacacbcea51cc75
+msgid "The **General options** dialog of the map item tab provides following functionalities (see Figure `sec_map_dialog`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:239
+# 625159d7349c4d64981a6b93a74118e4
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the map canvas. The :guilabel:`Position` button opens the :guilabel:`Set items position` dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:247
+# c31c7a22d73948e2a2ca0dc87261cc3e
+msgid "Adding other elements to the Print Composer"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:249
+# 0180362ac0634f6796d484bb5b05bdb9
+msgid "Besides adding a current QGIS map canvas to the Print Composer, it is also possible to add, position, move and customize legend, scalebar, images and label elements."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:254
+# 2f753b342c724c4a8056a9c54d470957
+msgid "Label item tab --- Label and General options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:256
+# bdbf54921ecd4014af15f5ace601ac03
+msgid "To add a label, click the |mActionLabel| :guilabel:`Add label` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the label item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:273
+# 18a40a5843914713a38ef9303fbd8b9d
+msgid "Label dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:275
+# 995fdce8f6894b539f66c4421aeffa32
+msgid "The **Label** dialog of the label item tab provides following functionalities (see Figure `label_option`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:278
+# bb94a8ac473e4e1ebd86dbdb1a9c362f
+msgid "The **Label** dialog offers to add text labels to the composer canvas. You can define the horizontal and vertical alignment, select font and fontcolor for the text and it is possible to define a text margin im mm."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:285
+# 04771f881bc0489e9024ad5d134b2662
+msgid "The **General options** dialog of the label item tab provides following functionalities (see Figure `label_option`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:288
+# 7124533fbcbe456eb31ea8d140999886
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the label. The :guilabel:`Position` button opens the :guilabel:`Set items position` dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:296
+# 50a6e1200bc4464f93be054478918a17
+msgid "Image item tab --- Picture options and General options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:298
+# 20299815f5054d3ba1d1bb6f41211037
+msgid "To add an image, click the |mActionSaveMapAsImage| :guilabel:`Add image` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the image item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:315
+# 487da256117b4cbaab59568e686b1739
+msgid "Picture options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:317
+# 8dd7d2f1f40847e6a9deded87d795981
+msgid "The **Picture options** dialog of the image item tab provides following functionalities (see Figure `imageoptions`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:320
+# 4fff197e6f35490399d84654d176b298
+msgid "The **Search directories** area allows to add and remove directories with images in SVG format to the picture database."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:322
+# 363b24187ae940f394ad06da18d96896
+msgid "The **Preview** field then shows all pictures stored in the selected directories."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:324
+# b9dc4d79d6c14c1da5139ba3a61667e5
+msgid "The **Options** area shows the current selected picture and allows to define width, height and clockwise rotation of the picture. It is also possible to add a user specific SVG path. Activating the |checkbox| Sync from map checkbox synchronizes the rotation of a picture in the qgis map canvas (i.e. a rotated north arrow) with the appropriate print composer image."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:334
+# d8412525c4494224a2afc8ce93d6c164
+msgid "The **General options** dialog of the image item tab provides following functionalities (see Figure `imageoptions`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:337
+# 300ea796993e443fa3273cb281674364
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the picture. The :guilabel:`Position` button opens the :guilabel:`Set items position` dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:345
+# 50ba91a630f5447a9d36befcc472ff4c
+msgid "Legend item tab --- General, Legend items and Item option dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:347
+# 7744d4a6e91c462c9d5c20c8615d8db9
+msgid "To add a map legend, click the |mActionAddLegend| : guilabel:`Add new legend` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the legend item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:368
+# f38263f8c2174a1c92ae83f81fb25a32
+msgid "General dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:370
+# 3b2e043bf4974015aaed541a3190e8a7
+msgid "The **General** dialog of the legend item tab provides following functionalities (see Figure `legendoptions`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:373
+# b5e844f783064688a38561ae51b8bd45
+msgid "Here you can adapt the legend title. You can change the font of the legend title, layer and item name. You can change width and height of the legend symbol and you can add layer, symbol, icon label and box space."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:378
+# 243fac327d1f46c2bf8470372c7f9dda
+msgid "Legend items dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:380
+# f7007183f6a7468389537efc7f1c0d6a
+msgid "The **Legend items** dialog of the legend item tab provides following functionalities (see Figure `legendoptions`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:383
+# 99c35042f575488397fff6617856596a
+msgid "The legend items window lists all legend items and allows to change item order, edit layer names, remove and restore items of the list. After changing the symbology in the QGIS main window you can click on :guilabel:`Update` to adapt the changes in the legend element of the print composer. The item order can be changed using the :guilabel:`Up` and :guilabel:`Down` buttons or with Drag and Drop functionality."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:391
+# 0f7e3213d51741329332ff0d7c32549b
+msgid "Item options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:393
+# 2854c8c019a54829b081c7713a8b6d4c
+msgid "The **Item options** dialog of the legend item tab provides following functionalities (see Figure `legendoptions`_ c):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:396
+# 2a7e2d3bfe144ac29b2361df34776b84
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the legend. The :guilabel:`Position` button opens the :guilabel:`Set items position` dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:404
+# 5fb1c88b56074df9907ab4e2d8d02d6c
+msgid "Scalebar item tab --- Scalebar and General options dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:406
+# 6de189c89c6d40cb8c983e9d31ca3859
+msgid "To add a scalebar, click the |mActionScaleBar| :guilabel:`Add new scalebar` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the scalebar item tab."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:423
+# 627645ba9862425abb2861ebece5a4c8
+msgid "Scalebar dialog"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:425
+# e8f42bf6aa8348ab8c88ef76f1ef8fec
+msgid "The **Scalebar** dialog of the scalebar item tab provides following functionalities (see Figure `scalebaroptions`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:428
+# 246d887844b64801abbf67861b323e57
+msgid "The scalebar dialog allows to define the segment size of the scalebar in map units, the map units used per bar units, and how many left and right segments units from 0 should be used."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:431
+# 19c26823b44e4e528f27e19038274ad8
+msgid "You can define the scalebar style, available is single and double box, line ticks middle, up and down and a numeric style."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:433
+# 09529148d45f4e36963b4b03de55c1c5
+msgid "Furthermore you can define height, line width, label and box space of the scale bar. Add a unit label and define the scalebar font and color."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:439
+# 619a7f8e2eb84dfc9468e6b3860e4bc7
+msgid "The **General options** dialog of the scalebar item tab provides following features (see Figure `scalebaroptions`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:442
+# e08c947b172d46a38e142a4a60be556a
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the scalebar. The :guilabel:`Position` button opens the \\dialog{Set items position} dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:450
+# d7cf4e8e071e4990a73f7a298ae60372
+msgid "Navigation tools"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:452
+# ecf21fe0d38348f8997397cb8790e25d
+msgid "For map navigation the print composer provides 4 general tools:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:454
+# a0ea48e4e1844da6947ae78ea359cd8c
+msgid "|mActionZoomIn| :guilabel:`Zoom in`,"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:455
+# 27d77dbc40cb43fabd2e8a97f08b1b3f
+msgid "|mActionZoomOut| :guilabel:`Zoom out`,"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:456
+# 8f2b3c3056a54fd78d62679a160e4278
+msgid "|mActionZoomFullExtent| :guilabel:`Zoom to full extend` and"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:457
+# 9d7dd4154f9043fdbdedba5d360c30cf
+msgid "|mActionDraw| :guilabel:`Refresh the view`, if you find the view in an inconsistent state."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:461
+# 8847ea3e974945c3a4694d3e72d6cb23
+msgid "Revert and Restore tools"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:463
+# 9b25f6d68b8243ca9ef68106b3f814e4
+msgid "During the layout process it is possible to revert and restore changes. This can be done with the revert and restore tools:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:466
+# 91765bb304d94c33840580f85900c1b1
+msgid "|mActionUndo| :guilabel:`Revert last changes`,"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:467
+# f60e059978e14609b56c58ab02569fe2
+msgid "|mActionRedo| :guilabel:`Restore last changes`."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:469
+# 772b729b4dbc40f784be5890ca6e0df5
+msgid "or by mouse click within the |tab| Command history tab (see figure `commandhist`_)."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:481
+# 15b5a2c1175d443daa27ef6e5226b692
+msgid "Add Basic shape and Arrow"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:483
+# 0fc0d95f59c24f05bb66c85ae9b170ab
+msgid "It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows to the print composer canvas."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:498
+# e1f1266a869648b98af6a73434e720a8
+msgid "The **Shape** dialog allows to draw an ellipse, rectangle, or triangle in the print composer canvas. You can define its outline and fill color, the outline width and a clockwise rotation."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:501
+# 9e24acdaaf3441d2b86dd7c90d57f998
+msgid "The **Arrow** dialog allows to draw an arrow in the print composer canvas. You can define color, outline and arrow width and it is possible to use a default marker and no marker and a SVG marker. For the SVG marker you can additionally add a SVG start and end marker from a directory on your computer."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:508
+# a2ea6455b5324539b3d432383efe7136
+msgid "Add attribute table values"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:510
+# 59164d648dba483888b05ff9ea8691e5
+msgid "It is possible to add parts of a vector attribute table to the print composer canvas."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:528
+# 1d12170f3f644cbfbf4609e12cb4f5c6
+msgid "The **Table** dialog of the attribute table item tab provides following functionalities (see Figure `attrcomp`_ a):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:531
+# 7941a2b583a44efd986332717ce4d497
+msgid "The **Table** dialog allows to select the vector layer and columns of the attribute table. Attribute columns can be sorted and you can define to show its values ascending or descending."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:534
+# 227bba8ab1dd44ce986e753367889a38
+msgid "You can define the maximum number of rows to be displayed and if attributes are only shown for visible features of the current composer canvas."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:537
+# 404d26222c934d18bb43146dd0d92c21
+msgid "Additionally you can define the grid characteristics of the table and the header and content font."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:543
+# 791a62aa984e4aaba70e22b894e9b50a
+msgid "The **General options** dialog of the attribute table item tab provides following functionalities (see Figure `attrcomp`_ b):"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:546
+# 776931fcb66941f79ae31ff8ad0f7a15
+msgid "Here you can define color and outline width for the element frame, set a background color and opacity for the table. The :guilabel:`Position` button opens the :guilabel:`Set items position` dialog and allows to set the map canvas position using reference points or coordinates. Furthermore you can select or unselect to display the element frame with the |checkbox| Show frame checkbox."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:554
+# 84614d06e78446a096ae0d01d766dac0
+msgid "Raise, lower and align elements"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:556
+# f8513db4446b419bb66d5dc8a894bf25
+msgid "Raise or lower functionalities for elements are inside the |mActionRaiseItems| :guilabel:`Raise selected items` pulldown menu. Choose an element on the print composer canvas and select the matching functionality to raise or lower the selected element compared to the other elements (see table `printcomposer_tools`_)."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:562
+# 112c63ab64a14dc5a2b18e17ed02affa
+msgid "There are several alignment functionalities available within the |mActionAlignLeft| :guilabel:`Align selected items` pulldown menu (see table `printcomposer_tools`_). To use an alignment functionality , you first select some elements and then click on the matching alignment icon. All selected will then be aligned within to their common bounding box."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:569
+# b8dde5088bc147be833788fe30b90e55
+msgid "Creating Output"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:571
+# 8485289b41c440a9a582baac7b8a2c2a
+msgid "Figure `print_composer_complete`_ shows the print composer with an example print layout including each type of map element described in the sections above."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:583
+# 3ae20f6c26cf460d8f61d51ed01eac2e
+msgid "The print composer allows you to create several output formats and it is possible to define the resolution (print quality) and paper size:"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:586
+# 47765c39d06b4510b5804b30439e07c8
+msgid "The |mActionFilePrint| :guilabel:`Print` icon allows to print the layout to a connected printer or a Postscript file depending on installed printer drivers."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:589
+# 6fa3ec4d50b6453e93970359bfd3aed7
+msgid "The |mActionExportMapServer| :guilabel:`Export as image` icon exports the composer canvas in several image formats such as PNG, BPM, TIF, JPG,..."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:591
+# 7d67fdc86b0149b3b47222b70b5ec234
+msgid "The |mActionSaveAsPDF| :guilabel:`Export as PDF` saves the defined print composer canvas directly as a PDF."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:593
+# b016b570612640acbf115ddda4791c2f
+msgid "The |mActionSaveAsSVG| :guilabel:`Export as SVG` icon saves the print composer canvas as a SVG (Scalable Vector Graphic). **Note:** Currently the SVG output is very basic. This is not a QGIS problem, but a problem of the underlaying Qt library. This will hopefully be sorted out in future versions."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:600
+# 3a2bdf19b7ef4bf69976ea1137e82f7f
+msgid "Saving and loading a print composer layout"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:602
+# 07b69f0d9a2544d9b69383fe0f2d165e
+msgid "With the |mActionFileSaveAs| :guilabel:`Save as template` and |mActionFolder| :guilabel:`Load from template` icons you can save the current state of a print composer session as a  *.qpt template and load the template again in another session."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:607
+# e8b4f651590544d5873dbdc054107eab
+msgid "The  |mActionComposerManager| :guilabel:`Composer Manager` button in the toolbar and in :menuselection:`File --> Composer Manager` allows to add a new composer template or to manage already existing templates."
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:619
+# f7a662b7d44846db8bb318d5df0feefa
+msgid "Export to SVG supported, but it is not working properly with some"
+msgstr ""
+
+#: ../../print_composer/print_composer.rst:620
+# 86c0880baad4468dbe5c50eb2963f153
+msgid "recent Qt4 versions. You should try and check individual on your system"
+msgstr ""
+
