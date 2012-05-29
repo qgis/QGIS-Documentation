@@ -15,11 +15,11 @@ Welcome to QGIS manual
 	working/working_with_vector
 	working/working_with_raster
 	working/working_with_ogc
-	server/index
+	server/server
 	working/working_with_projections
 	grass integration
 	print_composer/print_composer
-	plugins/index
+	plugins/plugins_index
 	plugins/plugins
 	plugins/core_plugins
 
