@@ -16,7 +16,7 @@ in another session. See a list of tools in table~\ref{tab:printcomposer_tools}:
 
 .. _`printcomposer_tools`:
 
-..index:: Print composer; tools
+.. index:: `Print composer; tools`
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
 +==========================+=======================================+============================+==========================================+
@@ -56,7 +56,7 @@ in another session. See a list of tools in table~\ref{tab:printcomposer_tools}:
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 
-All Print Composer tools are availabe in menus and as icons in a toolbar.
+All Print Composer tools are available in menus and as icons in a toolbar.
 The toolbar can be switched off and on using the right mouse button holding
 the mouse over the toolbar.
 
@@ -75,7 +75,7 @@ Using Print Composer
 
 .. `print_composer_blank`:
 
-.. figure::img/en/print_composer_blank.png
+.. figure:: img/en/print_composer_blank.png
    :align: center
    :width: 12 em
 
@@ -105,7 +105,7 @@ You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
 Each element has its own properties and in the case of the map, its own
 extent. If you want to remove an elements from the composer canvas. you can
-do that with the kbd:`Delete` or the kbd:`Backspace` key.
+do that with the kbd:`Delete` or the :kbd:`Backspace` key.
 
 Adding a current QGIS map canvas to the Print Composer
 ======================================================
@@ -277,7 +277,7 @@ The **Label** dialog of the label item tab provides following functionalities
 
 * The **Label** dialog offers to add text labels to the composer canvas.
   You can define the horizontal and vertical alignment, select font and
-  fontcolor for the text and it is possible to define a text margin im mm.
+  font color for the text and it is possible to define a text margin in mm.
 
 General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -344,7 +344,7 @@ functionalities (see Figure `imageoptions`_ b):
 Legend item tab --- General, Legend items and Item option dialog
 ****************************************************************
 
-To add a map legend, click the |mActionAddLegend| : guilabel:`Add new legend`
+To add a map legend, click the |mActionAddLegend| :guilabel:`Add new legend`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the legend item tab.
 
