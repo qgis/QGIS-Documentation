@@ -6,9 +6,9 @@ Welcome to QGIS manual
 .. toctree::
 	:maxdepth: 2
 
-	preamble
-	foreword
-	conventions
+	others/preamble
+	others/foreword
+	others/conventions
 	introduction/introduction
 	introduction/getting_started
 	introduction/features_at_a_glance
