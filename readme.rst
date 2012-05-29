@@ -12,11 +12,15 @@ here:
 * French: http://documentation.qgis.org/html/user_guide/fr/
 * Italian: http://documentation.qgis.org/html/user_guide/it/
 
+It is available also the subdomain docs.qgis.org, for example for the German 
+language:
+http://docs.qgis.org/html/user_guide/de/
+
 It is possible to read the HTML English version of the documentation here:
 http://readthedocs.org/docs/qgis/en/latest/
 
-In the qgis.org site the documentation is scheduled to be builded every 30 
-minutes. In the readthedocs.org site it is builded every time something is 
+In the qgis.org site the documentation is scheduled to be built every 30 
+minutes. In the readthedocs.org site it is built every time something is 
 committed at this repository.
 
 Quick Overview
