@@ -6,7 +6,7 @@ BUILDDIR     = _build
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         = A4
-TRANSLATIONS  = de fr it
+TRANSLATIONS  = de fr it ru
 LANGUAGES     = en $(TRANSLATIONS)
 SOURCE        = source
 

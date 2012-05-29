@@ -11,6 +11,7 @@ here:
 * German: http://documentation.qgis.org/html/user_guide/de/
 * French: http://documentation.qgis.org/html/user_guide/fr/
 * Italian: http://documentation.qgis.org/html/user_guide/it/
+* Russian: http://documentation.qgis.org/html/user_guide/ru/
 
 It is available also the subdomain docs.qgis.org, for example for the German 
 language:
