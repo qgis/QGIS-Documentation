@@ -8,17 +8,17 @@ It is possible to read the HTML version of the documentation for many languages
 here:
 
 * English: http://documentation.qgis.org/
-* French: http://documentation.qgis.org/html/fr/user_guide
-* German: http://documentation.qgis.org/html/de/user_guide
-* Italian: http://documentation.qgis.org/html/it/user_guide
-* Japanese: http://documentation.qgis.org/html/ja/user_guide
-* Portuguese: http://documentation.qgis.org/html/pt/user_guide
-* Russian: http://documentation.qgis.org/html/ru/user_guide
-* Spanish: http://documentation.qgis.org/html/es/user_guide
+* French: http://documentation.qgis.org/html/fr/
+* German: http://documentation.qgis.org/html/de/
+* Italian: http://documentation.qgis.org/html/it/
+* Japanese: http://documentation.qgis.org/html/ja/
+* Portuguese: http://documentation.qgis.org/html/pt/
+* Russian: http://documentation.qgis.org/html/ru/
+* Spanish: http://documentation.qgis.org/html/es/
 
 It is available also the subdomain docs.qgis.org, for example for the German 
 language:
-http://docs.qgis.org/html/user_guide/de/
+http://docs.qgis.org/html/de/
 
 It is possible to read the HTML English version of the documentation here:
 http://readthedocs.org/docs/qgis/en/latest/
