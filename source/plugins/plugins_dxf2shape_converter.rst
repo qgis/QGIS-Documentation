@@ -1,12 +1,14 @@
-%  !TeX  root  =  user_guide.tex 
+.. %  !TeX  root  =  user_guide.tex 
 
-Dxf2Shp Converter Plugin}\label{dxf2shape
+.. _`dxf2shape`:
+
+Dxf2Shp Converter Plugin
 =========================================
 
 
-% when the revision of a section has been finalized, 
-% comment out the following line:
-% \updatedisclaimer
+.. % when the revision of a section has been finalized, 
+   % comment out the following line:
+   % \updatedisclaimer
 
 The dxf2shape converter plugin can be used to convert vector data from DXF to Shapefile 
 format. It requires the following parameters to be specified before running:
@@ -30,16 +32,13 @@ Currently supported types are polyline, polygon, and point.
 Using the Plugin
 ~~~~~~~~~~~~~~~~
 
-
-
-
   #.  Start QGIS, load the Dxf2Shape plugin in the Plugin Manager (see Section 
-  \ref{sec:load_core_plugin}) and click on the \toolbtntwo{dxf2shp_converter}{Dxf2Shape Converter} 
+  :ref:`load_core_plugin`) and click on the |dxf2shp_converter| :guilabel:`Dxf2Shape Converter` 
   icon which appears in the QGIS toolbar menu. The Dxf2Shape plugin dialog appears as shown in Figure \ref{fig:dxf2shape_dialog}.
   #.  Enter input DXF file, a name for the output Shapefile and the Shapefile type.
-  #.  Enable the \checkbox{Export text labels} checkbox if you want to create an extra point layer with labels.
-  #.  Click \button{Ok}. 
+  #.  Enable the |checkbox| :guilabel:`Export text labels` checkbox if you want to create an extra point layer with labels.
+  #.  Click :guilabel:`OK`. 
 
 
 
-\FloatBarrier
+
