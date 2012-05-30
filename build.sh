@@ -3,5 +3,6 @@ cd $DIR
 git pull
 . qgis-doc-env/bin/activate
 make clean
+make compile_messages
 make html
 

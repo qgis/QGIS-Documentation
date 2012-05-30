@@ -158,7 +158,8 @@ rst_epilog = """
    :width: 1.5em
 .. |interpolation| image:: img/en/plugins_interpolation/interpolation.png
    :width: 1.5em
-
+.. |mActionAddRasterLayer| image:: /img/en/mActionAddRasterLayer.png
+.. |mActionAddOgrLayer| image:: /img/en/mActionAddOgrLayer.png
 """
 
 
