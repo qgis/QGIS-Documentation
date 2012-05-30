@@ -88,24 +88,24 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 rst_epilog = """
-.. |nix| image:: img/en/nix.png
+.. |nix| image:: /img/en/nix.png
    :width: 1em
-.. |win| image:: img/en/win.png
+.. |win| image:: /img/en/win.png
    :width: 1em
-.. |osx| image:: img/en/osx.png
+.. |osx| image:: /img/en/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |checkbox| image:: img/en/checkbox.png
-.. |radiobuttonon| image:: img/en/radiobuttonon.png
-.. |radiobuttonoff| image:: img/en/radiobuttonoff.png
-.. |selectnumber| image:: img/en/selectnumber.png
-.. |selectstring| image:: img/en/selectstring.png
-.. |selectstring2| image:: img/en/selectstring2.png
-.. |browsebutton| image:: img/en/browsebutton.png
-.. |selectcolor| image:: img/en/selectcolor.png
-.. |slider| image:: img/en/slider.png
-.. |inputtext| image:: img/en/inputtext.png
-.. |tab| image:: img/en/tab.png
+.. |checkbox| image:: /img/en/checkbox.png
+.. |radiobuttonon| image:: /img/en/radiobuttonon.png
+.. |radiobuttonoff| image:: /img/en/radiobuttonoff.png
+.. |selectnumber| image:: /img/en/selectnumber.png
+.. |selectstring| image:: /img/en/selectstring.png
+.. |selectstring2| image:: /img/en/selectstring2.png
+.. |browsebutton| image:: /img/en/browsebutton.png
+.. |selectcolor| image:: /img/en/selectcolor.png
+.. |slider| image:: /img/en/slider.png
+.. |inputtext| image:: /img/en/inputtext.png
+.. |tab| image:: /img/en/tab.png
 .. |icon_sqlanywhere| image:: img/en/plugins_sql_anywhere/sqlanywhere.png
    :width: 1.5em
 .. |oracle_raster| image:: img/en/plugins_oracle_raster/oracle_raster.png
