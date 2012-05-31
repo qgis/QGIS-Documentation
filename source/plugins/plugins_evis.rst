@@ -1,19 +1,23 @@
-%  !TeX  root  =  user_guide.tex
+.. %  !TeX  root  =  user_guide.tex
 
-% when the revision of a section has been finalized, 
-% comment out the following line:
-% \updatedisclaimer
+.. %  when the revision of a section has been finalized, 
+.. % comment out the following line:
+.. % \updatedisclaimer
 
-eVis Plugin}\label{sec:evis
+.. _`evis`:
+
+eVis Plugin
 ===========================
 
 
 The Biodiversity Informatics Facility at the American Museum of Natural History's (AMNH) Center
-for Biodiversity and Conservation (CBC) \footnote{This section is derived from Horning, N., K.
-Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American Museum of
-Natural History, Center for Biodiversity and Conservation. Available from
-\url{http://biodiversityinformatics.amnh.org/}, and released under the GNU FDL.} has developed the
-Event Visualization Tool (eVis),
+for Biodiversity and Conservation (CBC) [1]_
+
+.. [1] This section is derived from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) 
+       User's Guide. American Museum of Natural History, Center for Biodiversity and Conservation. 
+       Available from `<http://biodiversityinformatics.amnh.org/>`_ , and released under the GNU FDL.
+
+has developed the Event Visualization Tool (eVis),
 another software tool to add to the suite of conservation monitoring and decision support tools
 for guiding protected area and landscape planning. This plugin enables users to easily link
 geocoded (i.e., referenced with latitude and longitude or X and Y coordinates) photographs,
@@ -26,7 +30,9 @@ The eVis plugin is made up of three modules: the Database Connection tool, Event
 the Event Browser. These work together to allow viewing of geocoded photographs and other documents
 that are linked to features stored in vector files, databases, or spreadsheets.
 
-Event Browser}\label{evis_browser
+.. _`evis_browser`:
+
+Event Browser
 *********************************
 
 
@@ -37,7 +43,9 @@ feature must have attribute information associated with it to describe the locat
 file containing the photograph and, optionally, the compass direction the camera was pointed when
 the image was acquired. Your vector layer must be loaded into QGIS before running the Event Browser.
 
-Launch the Event Browser module}\label{evis_launch_browser
+.. _`evis_launch_browser`:
+
+Launch the Event Browser module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -51,7 +59,9 @@ of settings that can be adjusted to control the behavior of the eVis plugin. Las
 External Applications tab is used to maintain a table of file extensions and their associated
 application to allow eVis to display documents other than images.
 
-Understanding the Display window}\label{evis_display_window
+.. _`evis_display_window`:
+
+Understanding the Display window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -65,7 +75,6 @@ window. The Display window is used to view geocoded photographs and their associ
 \end{figure}
 
 
-[label=--]
 *  **Display window**: A window where the photograph will appear.
 *  **Increase zoom button**: Zoom in to see more detail. If the entire image cannot be
 displayed in the display window, scroll bars will appear on the left and bottom sides of the window
@@ -84,8 +93,9 @@ feature when more than one feature is selected.
 many features are available for display.
 
 
+.. _`evis_options_window`:
 
-Understanding the Options window}\label{evis_options_window
+Understanding the Options window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -96,7 +106,6 @@ Understanding the Options window}\label{evis_options_window
 \end{figure}
 
 
-[label=--]
 *  **File location**: A dropdown list to specify the attribute field that contains the
 directory path or URL for the photographs or other documents being displayed. If the location is a
 relative path then the checkbox to the right of the dropdown menu must be clicked. The base path for
@@ -128,8 +137,9 @@ It has the same effect as clicking all of the Reset buttons.
 *  **Save**: This will save the settings without closing the Options pane.
 
 
+.. _`evis_external_window`:
 
-Understanding the Configure External Applications window}\label{evis_external_window
+Understanding the Configure External Applications window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -140,7 +150,7 @@ Understanding the Configure External Applications window}\label{evis_external_wi
 \end{figure}
 
 
-[label=--]
+
 *  **File reference table**: A table containing file types that can be opened using eVis.
 Each file type needs a file extension and the path to an application that can open that type of
 file. This provides the capability of opening a broad range of files such as movies, sound
@@ -151,8 +161,9 @@ for the application that can open the file.
 by a file extension and a path to an associated application.
 
 
+.. _`evis_specifying`:
 
-Specifying the location and name of a photograph}\label{evis_specifying
+Specifying the location and name of a photograph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -191,7 +202,9 @@ The URL is preceded by the file extension and a colon, and is particularly usefu
 documents from Wikis and other web sites that use a database to manage the web pages (see Table
 \ref{tab:evis_examples}).
 
-Using the Generic Event Browser}\label{evis_using_browser
+.. _`evis_using_browser`:
+
+Using the Generic Event Browser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -218,7 +231,9 @@ be centered over the point that is associated with the photograph or other docum
 
 To close the Generic Event Browser window click on the Close button from the Display window.
 
-Event ID Tool}\label{evis_id_tool
+.. _`evis_id_tool`:
+
+Event ID Tool
 *********************************
 
 
@@ -228,7 +243,9 @@ the location and name of the file containing the photograph and optionally the c
 camera was pointed when the image was acquired. This layer must be loaded into QGIS before running
 the Event ID tool.
 
-Launch the Event ID module}\label{evis_launch_id
+.. _`evis_launch_id`:
+
+Launch the Event ID module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -244,7 +261,9 @@ locality are available for display in the browser. If more than one photograph i
 cycle through the different features using the Previous and Next buttons. The other controls are
 described in the Event Browser section of this guide.
 
-Database connection}\label{evis_database
+.. _`evis_database`:
+
+Database connection
 ****************************************
 
 
@@ -255,7 +274,9 @@ eVis can directly connect to four types of databases: Microsoft Access, PostgreS
 and can also read from ODBC connections. When reading from an ODBC database (such as an Excel
 spreadsheet) it is necessary to configure your ODBC driver for the operating system you are using.
 
-Launch the Database Connection module}\label{evis_launch_database
+.. _`evis_launch_database`:
+
+Launch the Database Connection module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -266,7 +287,9 @@ three tabs: \tab{Predefined Queries}, \tab{Database Connection}, and \tab{SQL Qu
 Console window at the bottom of the window displays the status of actions initiated by the different
 sections of this module.
 
-Connect to a database}\label{evis_connect_database
+.. _`evis_connect_database`:
+
+Connect to a database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -294,7 +317,7 @@ were entered above.
 \end{figure}
 
 
-[label=--]
+
 *  **Database Type**: A dropdown list to specify the type of database that will be used.
 *  **Database Host**: The name of the database host.
 *  **Port** The port number if a MYSQL or PostgreSQL database type is selected.
@@ -311,15 +334,16 @@ displayed.
 *  **OK**: Close the main ``Database Connection'' window.
 
 
+.. _`evis_running_sql`:
 
-Running SQL queries}\label{evis_running_sql
+Running SQL queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 SQL queries are used to extract information from a database or ODBC resource. In eVis the output
 from these queries is a vector layer added to the QGIS map window. Click on the \tab{SQL Query} tab
 to display the SQL query interface. SQL commands can be entered in this text window. A helpful
-tutorial on SQL commands is available at \url{http://www.w3schools.com/sql/}. For example, to
+tutorial on SQL commands is available at `<http://www.w3schools.com/sql/>`_. For example, to
 extract all of the data from a worksheet in an Excel file, ``select * from [sheet1\$]''
 where``sheet1'' is the name of the worksheet.
 
@@ -337,7 +361,7 @@ results of the query in the Name of New Layer textbox.
 \end{figure}
 
 
-[label=--]
+
 *  **SQL Query Text Window**: A screen to type SQL queries.
 *  **Run Query**: Button to execute the query entered in the SQL Query Window.
 *  **Console Window**: The console window where messages related to processing are
@@ -366,7 +390,9 @@ avoid this problem you can simply delete several rows in the Excel Worksheet usi
 before saving the file.
 \end{Tip}
 
-Running predefined queries}\label{evis_predefined
+.. _`evis_predefined`:
+
+Running predefined queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -395,7 +421,7 @@ successful an error message will appear in the Output Console window.
 \end{figure}
 
 
-[label=--]
+
 *  **Open Query File**: Launches the ``Open File'' file browser to search for the XML file
 holding the predefined queries.
 *  **Predefined Queries**: A dropdown list with all of the queries defined by the
@@ -408,8 +434,9 @@ displayed.
 *  **OK**: Closes the main ``Database Connection'' window.
 
 
+.. _`evis_xml_format`:
 
-XML format for eVis predefined queries}\label{evis_xml_format
+XML format for eVis predefined queries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -494,5 +521,3 @@ eVis\_Data\textbackslash PhotoPoints.db</databasename>
  </query>
 </doc>
 
-
-\FloatBarrier
