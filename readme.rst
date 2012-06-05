@@ -8,13 +8,13 @@ It is possible to read the HTML version of the documentation for many languages
 here:
 
 * English: http://documentation.qgis.org/
-* French: http://documentation.qgis.org/html/fr/user_guide
-* German: http://documentation.qgis.org/html/de/user_guide
-* Italian: http://documentation.qgis.org/html/it/user_guide
-* Japanese: http://documentation.qgis.org/html/ja/user_guide
-* Portuguese: http://documentation.qgis.org/html/pt/user_guide
-* Russian: http://documentation.qgis.org/html/ru/user_guide
-* Spanish: http://documentation.qgis.org/html/es/user_guide
+* French: http://documentation.qgis.org/html/user_guide/fr
+* German: http://documentation.qgis.org/html/user_guide/de
+* Italian: http://documentation.qgis.org/html/user_guide/it
+* Japanese: http://documentation.qgis.org/html/user_guide/ja
+* Portuguese: http://documentation.qgis.org/html/user_guide/pt
+* Russian: http://documentation.qgis.org/html/user_guide/ru
+* Spanish: http://documentation.qgis.org/html/user_guide/es
 
 It is available also the subdomain docs.qgis.org, for example for the German 
 language:
@@ -171,8 +171,8 @@ Every time a new master document is released, the translators can start
 translating the .po files of competence.
 
 Translators must edit the .po files using the web application, based on Pootle, 
-or an offline editor, with `Virtaal 
-<http://translate.sourceforge.net/wiki/virtaal/index?redirect=1>`_ being the 
+or an offline editor, with `QtLinguist 
+<http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
 highly recommended choice.
 
 As soon as they finish editing one or more of the .po files, they should commit 

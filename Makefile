@@ -9,6 +9,7 @@ PAPER         = A4
 TRANSLATIONS  = de fr it ru es pt ja
 LANGUAGES     = en $(TRANSLATIONS)
 SOURCE        = source
+DESTINATION   = user_guide
 
 # Internal variables.
 PAPEROPT_a4     = -D latex_paper_size=a4
@@ -51,11 +52,11 @@ compile_messages:
 html:
 	@for lang in $(LANGUAGES);\
 	do \
-		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/html/$$lang";\
-		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html/$$lang;\
+		echo "$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(SOURCE) $(BUILDDIR)/$(DESTINATION)/html/$$lang";\
+		$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/$(DESTINATION)/html/$$lang;\
 	done
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/<language>.";\
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$$lang/$(DESTINATION).";\
 
 pdf:
 	@for lang in $(LANGUAGES);\
