@@ -7,7 +7,7 @@ Where I can read this documentation
 It is possible to read the HTML version of the documentation for many languages 
 here:
 
-* English: http://documentation.qgis.org/
+* English: http://documentation.qgis.org//html/user_guide/en
 * French: http://documentation.qgis.org/html/user_guide/fr
 * German: http://documentation.qgis.org/html/user_guide/de
 * Italian: http://documentation.qgis.org/html/user_guide/it
