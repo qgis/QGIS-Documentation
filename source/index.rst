@@ -6,9 +6,9 @@ Welcome to QGIS manual
 .. toctree::
 	:maxdepth: 2
 
-	others/preamble
-	others/foreword
-	others/conventions
+	preamble/preamble
+	preamble/foreword
+	preamble/conventions
 	introduction/introduction
 	introduction/getting_started
 	introduction/features_at_a_glance
@@ -22,8 +22,8 @@ Welcome to QGIS manual
 	plugins/plugins_index
 	plugins/plugins
 	plugins/core_plugins
+	preamble/help_and_support
 
-.. help_and_support .. RMR
 .. appendices/gpl
 .. appendices/qgis_qt_gpl_exception
 .. appendices/fdl_1.3
