@@ -1,26 +1,29 @@
-%  !TeX  root  =  user_guide.tex
+..  !TeX  root  =  user_guide.tex
 
-GPS Plugin}\label{label_plugingps
-=================================
+.. _`plugingps`:
 
-
-% when the revision of a section has been finalized,
-% comment out the following line:
-% \updatedisclaimer
-
-What is GPS?}\label{whatsgps
-****************************
+GPS Plugin
+==========
 
 
-GPS, the Global Positioning System, is a satellite-based system that allows anyone with a GPS receiver to find their exact position anywhere in the world.
-It is used as an aid in navigation, for example in airplanes, in boats and by hikers.
+.. when the revision of a section has been finalized,
+.. comment out the following line:
+.. \updatedisclaimer
+
+.. _`whatsgps`:
+
+What is GPS?}
+------------
+
+
+GPS, the Global Positioning System, is a satellite-based system that allows anyone with a GPS receiver to find their exact position anywhere in the world. It is used as an aid in navigation, for example in airplanes, in boats and by hikers.
 The GPS receiver uses the signals from the satellites to calculate its latitude, longitude and (sometimes) elevation.
-Most receivers also have the capability to store locations (known as \emph{waypoints}), sequences of locations that make up a planned \emph{route} and a tracklog or \emph{track} of the receivers movement over time.
-Waypoints, routes and tracks are the three basic feature types in GPS data.
-QGIS displays waypoints in point layers while routes and tracks are displayed in linestring layers.
+Most receivers also have the capability to store locations (known as *waypoints*), sequences of locations that make up a planned *route* and a tracklog or *track* of the receivers movement over time. Waypoints, routes and tracks are the three basic feature types in GPS data. QGIS displays waypoints in point layers while routes and tracks are displayed in linestring layers.
 
-Loading GPS data from a file}\label{label_loadgps
-*************************************************
+.. _`label_loadgps`:
+
+Loading GPS data from a file
+----------------------------
 
 
 There are dozens of different file formats for storing GPS data.
@@ -55,7 +58,7 @@ Each feature type will be loaded in a separate layer when you click \button{OK}.
 The file \filename{national\_monuments.gpx} only includes waypoints.
 
 GPSBabel
-********
+--------
 
 
 Since QGIS uses GPX files you need a way to convert other GPS file formats to GPX.
@@ -67,7 +70,7 @@ Version 1.2.3 of GPSBabel is known to work with QGIS, but you should be able to 
 any problems.
 
 Importing GPS data
-******************
+------------------
 
 
 To import GPS data from a file that is not a GPX file, you use the tool \tab{Import other file} in the GPS Tools dialog.
@@ -76,7 +79,7 @@ data formats will support all three feature types, so for many formats
 you will only be able to choose between one or two types.
 
 Downloading GPS data from a device
-**********************************
+----------------------------------
 
 
 QGIS can use GPSBabel to download data from a GPS device directly as new vector layers.
@@ -98,7 +101,7 @@ The port may be a file name or some other name that your operating system uses a
 When you click \button{OK} the data will be downloaded from the device and appear as a layer in QGIS.
 
 Uploading GPS data to a device
-******************************
+------------------------------
 
 
 You can also upload data directly from a vector layer in QGIS to a GPS device using the \tab{Upload to GPS} tab of the GPS Tools dialog. To do this you simply select the layer that you want to upload (which must be a GPX layer),
@@ -108,7 +111,7 @@ Just as with the download tool you can specify new device types if your device i
 This tool is very useful in combination with the vector editing capabilities of QGIS. It allows you to load a map, create waypoints and routes, and then upload them and use them on your GPS device.
 
 Defining new device types}\label{sec:Defining-new-device
-********************************************************
+--------------------------------------------------------
 
 
 There are lots of different types of GPS devices.
