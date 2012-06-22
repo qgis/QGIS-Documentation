@@ -160,6 +160,9 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddRasterLayer| image:: /img/en/mActionAddRasterLayer.png
 .. |mActionAddOgrLayer| image:: /img/en/mActionAddOgrLayer.png
+.. |mActionShowPluginManager| image:: /img/en/mActionShowPluginManager.png
+.. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
+   :width: 1.5em
 """
 
 

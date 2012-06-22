@@ -32,18 +32,25 @@ interchange format that can contain any number of waypoints, routes and tracks
 in the same file.
 
 To load a GPX file you first need to load the plugin. 
-:menuselection:`Plugins -->` |mActionShowPluginManager| 
-:guilabel:`Plugin Manager...` --> |checkbox| :guilabel:`GPS Tools`. When this 
+:menuselection:`Plugins -->` |mActionShowPluginManager| :guilabel:`Plugin Manager...` --> |checkbox| :guilabel:`GPS Tools`. When this 
 plugin is loaded a button with a small handheld GPS device will show up in the 
 toolbar. An example GPX file is available in the QGIS sample dataset:
 :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 :ref:`label_sampledata` for more information about the sample data.
 
 
-#. Click on the |gps_importer| :guilabel:`GPS Tools` icon and open the |tab| 
-   :guilabel:`Load GPX file` tab (see figure :ref:`fig:gpxloader`).
+#. Click on the |gps_importer|:guilabel:`GPS Tools` icon and open the
+   :guilabel:`Load GPX file` tab (see figure `plugins/plugins_gps/loadgpx`_).
 #. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, select the 
     GPX file :file:`national_monuments.gpx` and click :guilabel:`Open`.
+
+.. _`plugins/plugins_gps/loadgpx`:
+
+.. figure:: img/en/plugins_gps/loadgpx.png
+   :align: center
+   :width: 30em
+
+   The *GPS Tools* dialog window
 
 .. \begin{figure}[ht]
 ..   \centering
