@@ -39,10 +39,9 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
 :ref:`label_sampledata` for more information about the sample data.
 
 
-#. Click on the |gps_importer|:guilabel:`GPS Tools` icon and open the
+1. Click on the |gps_importer|:guilabel:`GPS Tools` icon and open the
    :guilabel:`Load GPX file` tab (see figure `plugins/plugins_gps/loadgpx`_).
-#. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, select the 
-    GPX file :file:`national_monuments.gpx` and click :guilabel:`Open`.
+2. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, select the GPX file :file:`national_monuments.gpx` and click :guilabel:`Open`.
 
 .. _`plugins/plugins_gps/loadgpx`:
 
@@ -51,12 +50,6 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
    :width: 30em
 
    The *GPS Tools* dialog window
-
-.. \begin{figure}[ht]
-..   \centering
-..   \includegraphics[clip=true, width=12cm]{loadgpx}
-..   \caption{The \emph{GPS Tools} dialog window \nixcaption}\label{gpxloader}
-.. \end{figure}
 
 Use the browse button |browsebutton| to select the GPX file, then use the
 checkboxes to select the feature types you want to load from that GPX file.
@@ -78,7 +71,7 @@ any problems.
 Importing GPS data
 ******************
 
-To import GPS data from a file that is not a GPX file, you use the tool |tab|
+To import GPS data from a file that is not a GPX file, you use the tool
 :guilabel:`Import other file` in the GPS Tools dialog. Here you select the file 
 that you want to import (and the file type), which feature type you want to 
 import from it, where you want to store the converted GPX file and what the name 
@@ -90,7 +83,7 @@ Downloading GPS data from a device
 **********************************
 
 QGIS can use GPSBabel to download data from a GPS device directly as new vector 
-layers. For this we use the |tab| :guilable:`Download from GPS` tab of the GPS 
+layers. For this we use the :guilabel:`Download from GPS` tab of the GPS 
 Tools dialog (see Figure :ref:`figure_download`). Here, we select the type of 
 GPS device, the port that it is connected to (or usb if your GPS supports this), 
 the feature type that you want to download, the GPX file where the data should 
