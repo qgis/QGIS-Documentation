@@ -1,7 +1,7 @@
 .. _`plugin_gps`:
 
 GPS Plugin
-=================================
+==========
 
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
@@ -9,7 +9,7 @@ GPS Plugin
 
 .. _`whatsgps`:
 What is GPS?
-****************************
+************
 
 GPS, the Global Positioning System, is a satellite-based system that allows 
 anyone with a GPS receiver to find their exact position anywhere in the world.  
@@ -24,9 +24,9 @@ tracks are displayed in linestring layers.
 
 .. _`label_loadgps`: 
 Loading GPS data from a file
-*************************************************
+****************************
 
-There are dozens of different file formats for storing GPS data.  The format 
+There are dozens of different file formats for storing GPS data. The format 
 that QGIS uses is called GPX (GPS eXchange format), which is a standard 
 interchange format that can contain any number of waypoints, routes and tracks 
 in the same file.
@@ -47,7 +47,7 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
 
 .. figure:: img/en/plugins_gps/loadgpx.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    The *GPS Tools* dialog window
 
@@ -84,21 +84,22 @@ Downloading GPS data from a device
 
 QGIS can use GPSBabel to download data from a GPS device directly as new vector 
 layers. For this we use the :guilabel:`Download from GPS` tab of the GPS 
-Tools dialog (see Figure :ref:`figure_download`). Here, we select the type of 
+Tools dialog (see Figure `plugins/plugins_gps/download`_). Here, we select the type of 
 GPS device, the port that it is connected to (or usb if your GPS supports this), 
 the feature type that you want to download, the GPX file where the data should 
 be stored, and the name of the new layer.
 
-.. \begin{figure}[ht]
-..   \centering
-..   \includegraphics[clip=true, width=12cm]{download}
-..   \caption{The download tool \nixcaption}\label{figure_download}
-.. \end{figure}
+.. _`plugins/plugins_gps/download`:
+
+.. figure::  img/en/plugins_gps/download.png
+   :align: center
+   :width: 40em
+
+   The download tool
 
 The device type you select in the GPS device menu determines how GPSBabel tries 
 to communicate with your GPS device. If none of the available types work with 
-your GPS device you can create a new type (see section 
-:ref:`defining-new-device`).
+your GPS device you can create a new type (see section `defining-new-device`_).
 
 The port may be a file name or some other name that your operating system uses 
 as a reference to the physical port in your computer that the GPS device is 
@@ -113,7 +114,7 @@ Uploading GPS data to a device
 ******************************
 
 You can also upload data directly from a vector layer in QGIS to a GPS device 
-using the |tab| :guilabel:`Upload to GPS` tab of the GPS Tools dialog. To do 
+using the :guilabel:`Upload to GPS` tab of the GPS Tools dialog. To do 
 this you simply select the layer that you want to upload (which must be a GPX 
 layer), your GPS device type, and the port (or usb) that it is connected to.
 Just as with the download tool you can specify new device types if your device 
@@ -125,12 +126,11 @@ them and use them on your GPS device.
 
 .. _`defining-new-device`:
 Defining new device types
-********************************************************
+*************************
 
 There are lots of different types of GPS devices. The QGIS developers can't 
 test all of them, so if you have one that does not work with any of the device 
-types listed in the |tab| :guilabel:`Download from GPS` and |tab| 
-:guilabel:`Upload to GPS` tools you can define your own device type for it.  
+types listed in the :guilabel:`Download from GPS` and :guilabel:`Upload to GPS` tools you can define your own device type for it.  
 You do this by using the GPS device editor, which you start by clicking the 
 :guilabel:`Edit devices` button in the download or the upload tabs.
 
@@ -141,14 +141,14 @@ device menus in the upload and download windows, and can be any string.  The
 download command is the command that is used to download data from the device 
 to a GPX file.  This will probably be a GPSBabel command, but you can use any 
 other command line program that can create a GPX file.  QGIS will replace the 
-keywords ``type``, ``in``, and ``out`` when it runs the command.
+keywords ``%type``, ``%in``, and ``%out`` when it runs the command.
 
-``type`` will be replaced by ``-w`` if you are downloading waypoints, 
+``%type`` will be replaced by ``-w`` if you are downloading waypoints, 
 ``-r`` if you are downloading routes and ``-t`` if you are downloading tracks.
 These are command line options that tell GPSBabel which feature type to download.
 
-``in`` will be replaced by the port name that you choose in the download window 
-and ``out`` will be replaced by the name you choose for the GPX file that the 
+``%in`` will be replaced by the port name that you choose in the download window 
+and ``%out`` will be replaced by the name you choose for the GPX file that the 
 downloaded data should be stored in. So if you create a device type with the 
 download command ``gpsbabel type -i garmin -o gpx in out`` (this is actually 
 the download command for the predefined device type :selectstring: 
