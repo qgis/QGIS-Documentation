@@ -19,8 +19,7 @@ Possible operator are:
 * Touches
 * Within
 
-How to use the plugin
-~~~~~~~~~~~~~~~~~~~~~
+**How to use the plugin**
 
 As an example we want to find regions in the Alaska dataset that contain
 airports. Following steps are necessary:

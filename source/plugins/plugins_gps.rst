@@ -9,7 +9,7 @@ GPS Plugin
 
 .. _`whatsgps`:
 What is GPS?
-************
+------------
 
 GPS, the Global Positioning System, is a satellite-based system that allows 
 anyone with a GPS receiver to find their exact position anywhere in the world.  
@@ -17,14 +17,14 @@ It is used as an aid in navigation, for example in airplanes, in boats and by
 hikers.  The GPS receiver uses the signals from the satellites to calculate its 
 latitude, longitude and (sometimes) elevation.  Most receivers also have the 
 capability to store locations (known as *waypoints*), sequences of locations 
-that make up a planned \emph{route} and a tracklog or *track* of the receivers 
+that make up a planned *route* and a tracklog or *track* of the receivers 
 movement over time.  Waypoints, routes and tracks are the three basic feature 
 types in GPS data.  QGIS displays waypoints in point layers while routes and 
 tracks are displayed in linestring layers.
 
 .. _`label_loadgps`: 
 Loading GPS data from a file
-****************************
+----------------------------
 
 There are dozens of different file formats for storing GPS data. The format 
 that QGIS uses is called GPX (GPS eXchange format), which is a standard 
@@ -57,7 +57,7 @@ Each feature type will be loaded in a separate layer when you click
 :guilabel:`OK`.  The file :file:`national_monuments.gpx` only includes waypoints.
 
 GPSBabel
-********
+--------
 
 Since QGIS uses GPX files you need a way to convert other GPS file formats to 
 GPX. This can be done for many formats using the free program GPSBabel, which is 
@@ -69,7 +69,7 @@ known to work with QGIS, but you should be able to use later versions without
 any problems.
 
 Importing GPS data
-******************
+------------------
 
 To import GPS data from a file that is not a GPX file, you use the tool
 :guilabel:`Import other file` in the GPS Tools dialog. Here you select the file 
@@ -80,7 +80,7 @@ three feature types, so for many formats you will only be able to choose between
 one or two types.
 
 Downloading GPS data from a device
-**********************************
+----------------------------------
 
 QGIS can use GPSBabel to download data from a GPS device directly as new vector 
 layers. For this we use the :guilabel:`Download from GPS` tab of the GPS 
@@ -111,7 +111,7 @@ When you click :guilabel:`OK` the data will be downloaded from the device and
 appear as a layer in QGIS.
 
 Uploading GPS data to a device
-******************************
+------------------------------
 
 You can also upload data directly from a vector layer in QGIS to a GPS device 
 using the :guilabel:`Upload to GPS` tab of the GPS Tools dialog. To do 
@@ -126,7 +126,7 @@ them and use them on your GPS device.
 
 .. _`defining-new-device`:
 Defining new device types
-*************************
+-------------------------
 
 There are lots of different types of GPS devices. The QGIS developers can't 
 test all of them, so if you have one that does not work with any of the device 
@@ -150,9 +150,8 @@ These are command line options that tell GPSBabel which feature type to download
 ``%in`` will be replaced by the port name that you choose in the download window 
 and ``%out`` will be replaced by the name you choose for the GPX file that the 
 downloaded data should be stored in. So if you create a device type with the 
-download command ``gpsbabel type -i garmin -o gpx in out`` (this is actually 
-the download command for the predefined device type :selectstring: 
-:guilabel:`GPS device: Garmin serial`)and then use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``, QGIS will replace the keywords and run the command ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
+download command ``gpsbabel %type -i garmin -o gpx %in %out`` (this is actually 
+the download command for the predefined device type 'GPS device: Garmin serial'|selectstring|)and then use it to download waypoints from port ``/dev/ttyS0`` to the file ``output.gpx``, QGIS will replace the keywords and run the command ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``.
 
 The upload command is the command that is used to upload data to the device.
 The same keywords are used, but ``in`` is now replaced by the name of 
