@@ -1,7 +1,7 @@
 .. _`ftools`: 
 
 fTools Plugin
-===============================
+=============
 
 .. % when the revision of a section has been finalized, 
 .. % comment out the following line:
@@ -14,22 +14,21 @@ data management and analysis functions that are both fast and functional.
 
 fTools is now automatically installed and enabled in new versions of QGIS, and 
 as with all plugins, it can be disabled and enabled using the Plugin Manager 
-(See Section :ref:`sec:managing_plugins`).  When enabled, the fTools plugin 
+(See Section :ref:`plugins/plugins/load_core_plugin`).  When enabled, the fTools plugin 
 adds a :menuselection:`Vector` menu to QGIS, providing functions ranging from 
 Analysis and Research Tools to Geometry and Geoprocessing Tools, as well as 
 several useful Data Management Tools.
 
 .. _`ftools_function`:
-fTools functions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**fTools functions**
 
-Tables :ref:`tab:ftool_analysis` through :ref:`tab:fTool_data_management` list 
+Tables `ftool_analysis`_ through `fTool_data_management`_ list 
 the functions available via the fTools plugin, along with a brief description 
 of each function. For further information on an individual fTools function, 
-click the :menuselection:`fTools Information` menu item in the 
+click the :menuselection:`fTools Information -->` menu item in the 
 :menuselection:`Vector` menu.
 
-:index:`Analysis tools`
+.. index:: `Analysis tools`
 
 +---------------------+-----------------+--------------------------------------+
 | **Analysis tools available via the fTools plugin**                           |
@@ -191,7 +190,7 @@ click the :menuselection:`fTools Information` menu item in the
 |                     | lines           | polygons to multiple singlepart      |
 |                     |                 | lines.                               |
 +---------------------+-----------------+--------------------------------------+
-| |to_lines|          | Lines to        | Convert lines to polygons, multipart |
+| |lines_to|          | Lines to        | Convert lines to polygons, multipart |
 |                     | polygons        | lines to multiple singlepart         |
 |                     |                 | polygons.                            |
 +---------------------+-----------------+--------------------------------------+

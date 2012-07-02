@@ -163,6 +163,83 @@ rst_epilog = """
 .. |mActionShowPluginManager| image:: /img/en/mActionShowPluginManager.png
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
+.. |matrix| image:: img/en/plugins_ftools/matrix.png
+   :width: 3em
+.. |sum_lines| image:: img/en/plugins_ftools/sum_lines.png
+   :width: 3em
+.. |sum_points| image:: img/en/plugins_ftools/sum_points.png
+   :width: 3em
+.. |unique| image:: img/en/plugins_ftools/unique.png
+   :width: 3em
+.. |basic_statistics| image:: img/en/plugins_ftools/basic_statistics.png
+   :width: 3em
+.. |neighbor| image:: img/en/plugins_ftools/neighbour.png
+   :width: 3em
+.. |mean| image:: img/en/plugins_ftools/mean.png
+   :width: 3em
+.. |intersections| image:: img/en/plugins_ftools/intersections.png
+   :width: 3em
+.. |random_selection| image:: img/en/plugins_ftools/random_selection.png
+   :width: 3em
+.. |sub_selection| image:: img/en/plugins_ftools/sub_selection.png
+   :width: 3em
+.. |random_points| image:: img/en/plugins_ftools/random_points.png
+   :width: 3em
+.. |regular_points| image:: img/en/plugins_ftools/regular_points.png
+   :width: 3em
+.. |vector_grid| image:: img/en/plugins_ftools/vector_grid.png
+   :width: 3em
+.. |select_location| image:: img/en/plugins_ftools/select_location.png
+   :width: 3em
+.. |layer_extent| image:: img/en/plugins_ftools/layer_extent.png
+   :width: 3em
+.. |convex_hull| image:: img/en/plugins_ftools/convex_hull.png
+   :width: 3em
+.. |buffer| image:: img/en/plugins_ftools/buffer.png
+   :width: 3em
+.. |intersect| image:: img/en/plugins_ftools/intersect.png
+   :width: 3em
+.. |union| image:: img/en/plugins_ftools/union.png
+   :width: 3em
+.. |sym_difference| image:: img/en/plugins_ftools/sym_difference.png
+   :width: 3em
+.. |clip| image:: img/en/plugins_ftools/clip.png
+   :width: 3em
+.. |difference| image:: img/en/plugins_ftools/difference.png
+   :width: 3em
+.. |dissolve| image:: img/en/plugins_ftools/dissolve.png
+   :width: 3em
+.. |check_geometry| image::  img/en/plugins_ftools/check_geometry.png
+   :width: 3em
+.. |export_geometry| image:: img/en/plugins_ftools/export_geometry.png
+   :width: 3em
+.. |centroids| image:: img/en/plugins_ftools/centroids.png
+   :width: 3em
+.. |delaunay| image:: img/en/plugins_ftools/delaunay.png
+   :width: 3em
+.. |simplify| image:: img/en/plugins_ftools/simplify.png
+   :width: 3em
+.. |multi_to_single| image:: img/en/plugins_ftools/multi_to_single.png
+   :width: 3em
+.. |single_to_multi| image:: img/en/plugins_ftools/single_to_multi.png
+   :width: 3em
+.. |to_lines| image:: img/en/plugins_ftools/to_lines.png
+   :width: 3em
+.. |lines_to|  image:: img/en/plugins_ftools/lines_to.png
+   :width: 3em
+.. |extract_nodes| image:: img/en/plugins_ftools/extract_nodes.png
+   :width: 3em
+.. |export_projection| image:: img/en/plugins_ftools/export_projection.png
+   :width: 3em
+.. |define_projection| image:: img/en/plugins_ftools/define_projection.png
+   :width: 3em
+.. |join_location| image:: img/en/plugins_ftools/join_location.png
+   :width: 3em
+.. |split_layer| image:: img/en/plugins_ftools/split_layer.png
+   :width: 3em
+.. |merge_shapes| image:: img/en/plugins_ftools/merge_shapes.png
+   :width: 3em
+
 """
 
 

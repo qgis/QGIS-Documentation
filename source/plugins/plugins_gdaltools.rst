@@ -30,9 +30,6 @@ plugin offers an easy interface to the tools, exposing only the most popular
 options. 
 
 **List of GDAL tools**
-
-.. label{tab:gdaltools} 
-
 +----------------------+-------------------------------------------------------+
 | Build Virtual Raster | This program builds a VRT (Virtual Dataset) that is a |
 |                      | mosaic of the list of input gdal datasets.            |
