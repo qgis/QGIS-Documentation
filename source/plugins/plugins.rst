@@ -23,11 +23,11 @@ They can be added to QGIS using the :file:`Python Plugin Installer`.
 More information about external plugins are provided in Section 
 :ref:`load_external_plugin`.
 
+.. _plugins/plugins/managing_plugins:
 
 Managing Plugins
 ================
 
-.. _`managing_plugins`:
 :index:`plugins!managing`
 
 Managing plugins in general means loading or unloading them using
@@ -36,9 +36,10 @@ directly activated or uninstalled using the :file:`Python Plugin Installer`.
 To deactivate and reactivate external plugins, the :file:`Plugin Manager` is 
 used again.
 
+.. _plugins/plugins/load_core_plugin:
+
 Loading a QGIS Core Plugin
 ***************************
-.. _`plugins/plugins/load_core_plugin`:
 
 
 Loading a QGIS Core Plugin is done from the main menu 

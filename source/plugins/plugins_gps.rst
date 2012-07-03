@@ -32,7 +32,7 @@ interchange format that can contain any number of waypoints, routes and tracks
 in the same file.
 
 To load a GPX file you first need to load the plugin. 
-:menuselection:`Plugins -->` |mActionShowPluginManager| :guilabel:`Plugin Manager...` --> |checkbox| :guilabel:`GPS Tools`. When this 
+:menuselection:`Plugins -->` |mActionShowPluginManager| :menuselection:`Plugin Manager...-->` |checkbox| :guilabel:`GPS Tools`. When this 
 plugin is loaded a button with a small handheld GPS device will show up in the 
 toolbar. An example GPX file is available in the QGIS sample dataset:
 :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
@@ -125,6 +125,7 @@ QGIS. It allows you to load a map, create waypoints and routes, and then upload
 them and use them on your GPS device.
 
 .. _defining-new-device:
+
 Defining new device types
 -------------------------
 

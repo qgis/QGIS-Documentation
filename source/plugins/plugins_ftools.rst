@@ -190,7 +190,7 @@ click the :menuselection:`fTools Information -->` menu item in the
 |                     | lines           | polygons to multiple singlepart      |
 |                     |                 | lines.                               |
 +---------------------+-----------------+--------------------------------------+
-| |lines_to|          | Lines to        | Convert lines to polygons, multipart |
+| |to_lines|          | Lines to        | Convert lines to polygons, multipart |
 |                     | polygons        | lines to multiple singlepart         |
 |                     |                 | polygons.                            |
 +---------------------+-----------------+--------------------------------------+

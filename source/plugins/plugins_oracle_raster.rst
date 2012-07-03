@@ -29,7 +29,7 @@ Managing connections
 
 
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager (see Section 
-:ref:`load_core_plugin`). The first time you load a GeoRaster in QGIS, you must create a 
+:ref:`plugins/plugins/load_core_plugin`). The first time you load a GeoRaster in QGIS, you must create a 
 connection to the Oracle database that contains the data. To do this, begin by clicking on 
 the |oracle_raster| :guilabel:`Select GeoRaster` toolbar button, it will open the Select Oracle 
 Spatial GeoRaster dialog window. Click on :guilabel:`New` to open the dialog window, and specify 
@@ -100,13 +100,10 @@ from the same context.
 **Note:** GeoRasters that contains pyramids will display much faster but the pyramids need to be generated 
 outside of QGIS using Oracle PL/SQL or gdaladdo.
 
-The following is example using gdaladdo:
+The following is example using gdaladdo: ::
 
-::
-
-
-gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r 
-nearest 2 4 6 8 16 32
+   gdaladdo georaster:scott/tiger@orcl,georaster\_table,georaster,georid=6 -r 
+   nearest 2 4 6 8 16 32
 
 
 This is an example using PL/SQL: 

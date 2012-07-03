@@ -47,7 +47,7 @@ Raster Terrain Modelling Plugin
 
 #.  Start QGIS and load a DEM raster layer. 
 #.  Load the Raster Terrain Modelling plugin in the Plugin Manager see Section :ref:`plugins/plugins/load_core_plugin` and click on the |raster_terrain|:guilabel:`Raster Terrain Modelling` icon which appears in the QGIS toolbar menu. The Raster Terrain Modelling plugin dialog appears as shown in Figure `plugins/plugins_raster_terrain/RasterTerrainDialog`_ .
-#.  Select an analysis method (e.g. \dropmenuopt{Slope}).
+#.  Select an analysis method (e.g. :menuselection:`Slope -->`).
 #.  Specify an output file
     path, and an output file type.
 #.  Click :guilabel:`Ok`.

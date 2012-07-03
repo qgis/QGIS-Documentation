@@ -126,9 +126,8 @@ While they are used, the OSM layers can be changed correctly. The Plugin
 editing tools consists of tools for Point, Line, Polygon and
 Relation creation, deletion and moving.
 
-.. note::
-  To create a connection between the OSM plugin and standard
-  editing tools, changes in QuantumGIS core code would be necessary.
+**Note:** To create a connection between the OSM plugin and standard
+editing tools, changes in QuantumGIS core code would be necessary.
 
 Installation
 ------------

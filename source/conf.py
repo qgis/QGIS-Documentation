@@ -239,6 +239,10 @@ rst_epilog = """
    :width: 3em
 .. |merge_shapes| image:: img/en/plugins_ftools/merge_shapes.png
    :width: 3em
+.. |event_browser| image:: img/en/plugins_evis/event_browser.png
+   :width: 1.5em
+.. |event_id| image:: img/en/plugins_evis/event_id.png
+   :width: 1.5em
 
 """
 
