@@ -1,8 +1,8 @@
 .. `label_intro`:
 
-====================
+********************
 Introduction To GIS
-====================
+********************
 
 
 .. when the revision of a section has been finalized, 
@@ -16,8 +16,6 @@ geographic location of an entity. This often involves the use of a
 geographic coordinate, like a latitude or longitude value. Spatial data is
 another commonly used term, as are: geographic data, GIS data, map data,
 location data, coordinate data and spatial geometry data.
-
-.. [1] This chapter is by Tyler Mitchell (http://www.oreillynet.com/pub/wlg/7053) and used under the Creative Commons License. Tyler is the author of *Web Mapping Illustrated}, published by O'Reilly, 2005.* 
 
 Applications using geospatial data perform a variety of functions. Map
 production is the most easily understood function of geospatial
@@ -82,7 +80,7 @@ applications.
 .. `label_rasterdata`:
 
 Raster Data
-************
+-----------
 
 
 One type of geospatial data is called raster data or simply "a raster". The
@@ -109,7 +107,7 @@ for storage purposes and cell size for analytical or mapping purposes.
 .. `label_vectordata`:
 
 Vector Data
-************
+------------
 
 Vector data is also used in geospatial applications. If you stayed awake
 during trigonometry and coordinate geometry classes, you will already be
@@ -143,5 +141,7 @@ building on the former.
    with the last point being at the same location as the first, we call 
    this a polygon. A triangle, circle, rectangle, etc. are all polygons. 
    The key feature of polygons is that there is a fixed area within them.
+
+.. [1] This chapter is by Tyler Mitchell (http://www.oreillynet.com/pub/wlg/7053) and used under the Creative Commons License. Tyler is the author of     *Web Mapping Illustrated}, published by O'Reilly, 2005.* 
 
 

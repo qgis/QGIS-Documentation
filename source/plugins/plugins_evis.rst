@@ -266,10 +266,10 @@ spreadsheet) it is necessary to configure your ODBC driver for the operating sys
 
 
 To launch the Database Connection module either click on the appropriate icon
-|evis_connect| or click on :menuselection:`Plugins --> eVis --> {Database Connection`. 
+|evis_connect| or click on :menuselection:`Plugins --> eVis --> Database Connection -->`. 
 This will launch the Database Connection window. The window has
-three tabs: |tab| :guilabel:`Predefined Queries`, |tab| :guilabel:`Database Connection`, 
-and |tab| :guilabel:`SQL Query`. 
+three tabs: :guilabel:`Predefined Queries`, :guilabel:`Database Connection`, 
+and :guilabel:`SQL Query`. 
 The Output Console window at the bottom of the window displays the status of actions 
 initiated by the different sections of this module.
 
@@ -278,10 +278,9 @@ initiated by the different sections of this module.
 **Connect to a database**
 
 
-Click on the |tab| :guilabel:`Database Connection` tab to open the database connection interface. 
-Next, click on the :guilabel:`Database Type` dropdown menu to select the type of database that you want to
-connect to. If a password or username is required, that information can be entered in the Username
-and Password textboxes.
+Click on the :guilabel:`Database Connection` tab to open the database connection interface. 
+Next, click on the :menuselection:`Database Type -->` dropdown menu to select the type of database that you want to
+connect to. If a password or username is required, that information can be entered in the Username and Password textboxes.
 
 Enter the database host in the Database Host textbox. This option is not available if you selected
 "MSAccess" as the database type. If the database resides on your desktop you should enter
@@ -295,12 +294,13 @@ successful, a message will be written in the Output Console window stating that 
 established. If a connection was not established you will need to check that the correct parameters
 were entered above.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=12cm]{evisdatabase}
-   \caption{The \emph{eVis} Database connection window \wincaption}\label{evisdatabase}
-\end{figure}
+.. _`plugins/plugins/evisdatabase`:
 
+.. figure:: img/en/plugins_evis/evisdatabase.png
+   :align: center
+   :width: 40em
+
+   The *eVis* Database connection window
 
 
 * **Database Type**: A dropdown list to specify the type of database that will be used.
@@ -324,7 +324,7 @@ were entered above.
 
 
 SQL queries are used to extract information from a database or ODBC resource. In eVis the output
-from these queries is a vector layer added to the QGIS map window. Click on the |tab| :guilabel:`SQL Query` 
+from these queries is a vector layer added to the QGIS map window. Click on the :guilabel:`SQL Query` 
 tab to display the SQL query interface. SQL commands can be entered in this text window. A helpful
 tutorial on SQL commands is available at `<http://www.w3schools.com/sql/>`_. For example, to
 extract all of the data from a worksheet in an Excel file, ``select * from [sheet1$]``
@@ -332,44 +332,41 @@ where``sheet1`` is the name of the worksheet.
 
 Click on the :guilabel:`Run Query` button to execute the command. If the query is successful a Database File
 Selection window will be displayed. If the query is not successful an error message will appear in
-the Output Console widow.
+the Output Console window.
 
 In the Database File Selection window, enter the name of the layer that will be created from the
 results of the query in the Name of New Layer textbox.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=12cm]{evissql_query}
-   \caption{The \emph{eVis} SQL query tab \wincaption}\label{evissql_query}
-\end{figure}
+.. _`plugins/plugins_evis/evissql_query`:
 
-
+.. figure:: img/en/plugins_evis/evissql_query.png
+   :align: center
+   :width: 40em
 
 * **SQL Query Text Window**: A screen to type SQL queries.
 * **Run Query**: Button to execute the query entered in the SQL Query Window.
 * **Console Window**: The console window where messages related to processing are displayed.
 * **Help**: Displays the on line help.
-* **OK**: Closes the main ``Database Connection'' window.
+* **OK**: Closes the main "Database Connection" window.
 
 
-Use the :menuselection:`X Coordinate` and :menuselection:`Y Coordinate` dropdown menus to select the field
+Use the :menuselection:`X Coordinate -->` and :menuselection:`Y Coordinate -->` dropdown menus to select the field
 from the database that store the "X" (or longitude) and "Y" (or latitude) coordinates. Clicking
 on the OK button causes the vector layer created from the SQL query to be displayed in the QGIS map
 window.
 
 To save this vector file for future use, you can use the QGIS "Save as..." command that is
-accessed by right clicking on the layer name in the QGIS map legend and then selecting ``Save as
-shapefile.''
+accessed by right clicking on the layer name in the QGIS map legend and then selecting "Save as
+shapefile."
 
 .. tip::
    **Creating a vector layer from a Microsoft Excel Worksheet**
-   
    When creating a vector layer from a Microsoft Excel Worksheet you might see that unwanted
    zeros ("0") have been inserted in the attribute table rows beneath valid data.This can be caused
    by deleting the values for these cells in Excel using the :kbd:`backspace` key. To correct this problem
    you need to open the Excel file (you'll need to close QGIS if there if you are connected to the file
-   to allow you to edit the file) and then use Edit --> Delete to remove the blank rows from the file. To
-   avoid this problem you can simply delete several rows in the Excel Worksheet using Edit --> Delete
+   to allow you to edit the file) and then use :menuselection:`Edit --> Delete` to remove the blank rows from the file. To
+   avoid this problem you can simply delete several rows in the Excel Worksheet using :menuselection:`Edit --> Delete`
    before saving the file.
 
 
@@ -379,8 +376,7 @@ shapefile.''
 
 
 With predefined queries you can select previously written queries stored in XML format in a file.
-This is particularly helpful if you are not familiar with SQL commands. Click on the |tab| 
-:guilabel:`Predefined Queries` tab to display the predefined query interface.
+This is particularly helpful if you are not familiar with SQL commands. Click on the :guilabel:`Predefined Queries` tab to display the predefined query interface.
 
 To load a set of predefined queries click on the |evis_file| :guilabel:`Open File` icon. This opens
 the Open File window which is used to locate the file containing the SQL queries. When the queries
@@ -392,17 +388,17 @@ Select the query you want to run from the dropdown menu and then click on the SQ
 that the query has been loaded into the query window. If it is the first time you are running a
 predefined query or are switching databases, you need to be sure to connect to the database.
 
-Click on the |button| :guilabel:`Run Query` button in the |tab| :guilabel:`SQL Query` tab to execute the command. If the
+Click on the :guilabel:`Run Query` button in the :guilabel:`SQL Query` tab to execute the command. If the
 query is successful a Database File Selection window will be displayed. If the query is not
 successful an error message will appear in the Output Console window.
 
-\begin{figure}[htp]
-   \centering
-   \includegraphics[clip=true, width=10cm]{evispredefined}
-   \caption{The \emph{eVis} Perdefined queries tab \wincaption}\label{evispredefined}
-\end{figure}
+.. _`plugins/plugins_evis/evispredefined`:
 
+.. figure:: img/en/plugins_evis/evispredefined.png
+   :align: center
+   :width: 40em
 
+   The *eVis* Predefined queries tab
 
 * **Open Query File**: Launches the ``Open File'' file browser to search for the XML file
   holding the predefined queries.
@@ -411,7 +407,7 @@ successful an error message will appear in the Output Console window.
 * **Query description**: A short description of the query. This description is from the
   predefined queries XML file.
 * **Console Window**: The console window where messages related to processing are
- displayed.
+  displayed.
 * **Help**: Displays the on line help.
 * **OK**: Closes the main ``Database Connection'' window.
 
