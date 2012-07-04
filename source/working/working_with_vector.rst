@@ -1,3 +1,50 @@
+.. |mActionAddNonDblayer| image:: ../img/en/mActionAddNonDbLayer.png
+.. |mActionAddLayer| image:: ../img/en/mActionAddLayer.png
+.. |spiticon| image:: ../plugins/img/en/plugins_spit/spiticon.png
+.. |mActionAddSpatiaLiteLayer| image:: ../img/en/mActionAddSpatiaLiteLayer.png
+.. |mActionLabeling| image:: ../img/en/mActionLabeling.png
+.. |mActionNewAttribute| image:: ../img/en/mActionNewAttribute.png
+.. |mActionDeleteAttribute| image:: ../img/en/mActionDeleteAttribute.png
+.. |mActionDeleteVertex| image:: ../img/en/mActionDeleteVertex.png
+.. |mActionDeleteSelected| image:: ../img/en/mActionDeleteSelected.png
+.. |mActionToggleEditing| image:: ../img/en/mActionToggleEditing.png
+.. |mActionIdentify| image:: ../img/en/mActionIdentify.png
+.. |mActionOpenTable| image:: ../img/en/mActionOpenTable.png
+.. |mActionAddOgrLayer| image:: .. /img/en/mActionAddOgrLayer.png
+.. |mActionPan| image:: .. /img/en/mActionPan.png
+.. |mActionZoomIn| image:: .. /img/en/mActionZoomIn.png
+.. |mActionZoomOut| image:: .. /img/en/mActionZoomOut.png
+.. |mActionFileSave| image:: .. /img/en/mActionFileSave.png
+.. |mActionCapturePoint| image:: ../img/en/mActionCapturePoint.png
+.. |mActionCaptureLine| image:: ../img/en/mActionCaptureLine.png
+.. |mActionCapturePolygon| image:: ../img/en/mActionCapturePolygon.png
+.. |mActionMoveFeature| image:: ../img/en/mActionMoveFeature.png
+.. |mActionNodeTool| image:: ../img/en/mActionNodeTool.png
+.. |mActionSelect| image:: ../img/en/mActionSelect.png
+.. |mActionEditCopy| image:: ../img/en/mActionEditCopy.png
+.. |mActionEditPaste| image:: ../img/en/mActionEditPaste.png
+.. |mActionEditCut| image:: ../img/en/mActionEditCut.png
+.. |mActionUndo| image:: ../img/en/mActionUndo.png
+.. |mActionRedo| image:: ../img/en/mActionRedo.png
+.. |mActionSimplify| image:: ../img/en/mActionSimplify.png
+.. |mActionAddRing| image:: ../img/en/mActionAddRing.png
+.. |mActionAddIsland| image:: ../img/en/mActionAddIsland.png
+.. |mActionDeleteRing| image:: ../img/en/mActionDeleteRing.png
+.. |mActionDeletePart| image:: ../img/en/mActionDeletePart.png
+.. |mActionReshape| image:: ../img/en/mActionReshape.png
+.. |mActionSplitFeatures| image:: ../img/en/mActionSplitFeatures.png
+.. |mActionMergeFeatures| image:: ../img/en/mActionMergeFeatures.png
+.. |mActionRotatePointSymbols| image:: ../img/en/mActionRotatePointSymbols.png
+.. |mActionNewVectorLayer| image:: ../img/en/mActionNewVectorLayer.png
+.. |mActionOpenTable| image:: ../img/en/mActionOpenTable.png
+.. |mActionSelectedToTop| image:: ../img/en/mActionSelectedToTop.png
+.. |mActionInvertSelection| image:: ../img/en/mActionInvertSelection.png
+.. |mActionCopySelected| image:: ../img/en/mActionCopySelected.png
+.. |mActionZoomToSelected| image:: ../img/en/mActionZoomToSelected.png
+.. |mActionNewAttribute| image:: ../img/en/mActionNewAttribute.png
+.. |mActionDeleteAttribute| image:: ../img/en/mActionDeleteAttribute.png
+.. |mActionCalculateField| image:: ../img/en/mActionCalculateField.png
+
 .. _vector_working_with:
 
 ==========================
@@ -861,7 +908,7 @@ New Labeling
 ~~~~~~~~~~~~
 :index:`New labeling``newlabel`:
 
-The new |labeling| :guilabel:`Labeling` core application provides smart labeling for vector point,  line and polygon layers and only requires a few parameters.
+The new |mActionLabeling| :guilabel:`Labeling` core application provides smart labeling for vector point,  line and polygon layers and only requires a few parameters.
 This new application will replace the current QGIS labeling, described in section
 \ref{labeltab} and also supports on-the-fly transformated layers.
 
@@ -873,7 +920,7 @@ Using new labeling
 
   #.  Start QGIS and load a vector point, line or polygon layer.
   #.  Activate the layer in the legend and click on the
-  |labeling| :guilabel:`Labeling` icon in the QGIS toolbar menu.
+  |mActionLabeling| :guilabel:`Labeling` icon in the QGIS toolbar menu.
 
 
 
