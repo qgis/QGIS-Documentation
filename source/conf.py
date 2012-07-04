@@ -243,6 +243,12 @@ rst_epilog = """
    :width: 1.5em
 .. |event_id| image:: img/en/plugins_evis/event_id.png
    :width: 1.5em
+.. |evis_connect| image:: img/en/plugins_evis/evis_connect.png
+   :width: 1.5em
+.. |evis_file| image:: img/en/plugins_evis/evis_file.png
+   :width: 1.5em
+.. |dxf2shp_converter| image:: img/en/plugins_dxf2shape_converter/dxf2shp_converter.png
+   :width: 1.5em
 
 """
 
