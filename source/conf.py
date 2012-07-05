@@ -161,6 +161,63 @@ rst_epilog = """
 .. |mActionAddRasterLayer| image:: /img/en/mActionAddRasterLayer.png
 .. |mActionAddOgrLayer| image:: /img/en/mActionAddOgrLayer.png
 .. |mActionShowPluginManager| image:: /img/en/mActionShowPluginManager.png
+.. |mActionFileNew| image:: /img/en/mActionFileNew.png
+.. |mActionFileOpen| image:: /img/en/mActionFileOpen.png
+.. |mActionFileSave| image:: /img/en/mActionFileSave.png
+.. |mActionFileSaveAs| image:: /img/en/mActionFileSaveAs.png
+.. |mActionSaveMapAsImage| image:: /img/en/mActionSaveMapAsImage.png
+.. |mActionNewComposer| image:: /img/en/mActionNewComposer.png
+.. |mActionComposerManager| image:: /img/en/mActionComposerManager.png
+.. |mActionFileExit| image:: /img/en/mActionFileExit.png
+.. |mActionUndo| image:: /img/en/mActionUndo.png
+.. |mActionRedo| image:: /img/en/mActionRedo.png
+.. |mActionEditCut| image:: /img/en/mActionEditCut.png
+.. |mActionEditCopy| image:: /img/en/mActionEditCopy.png
+.. |mActionEditPaste| image:: /img/en/mActionEditPaste.png
+.. |mActionDeleteSelected| image:: /img/en/mActionDeleteSelected.png
+.. |mActionSimplify| image:: /img/en/mActionSimplify.png
+.. |mActionAddRing| image:: /img/en/mActionAddRing.png
+.. |mActionAddIsland| image:: /img/en/mActionAddIsland.png
+.. |mActionDeleteRing| image:: /img/en/mActionDeleteRing.png
+.. |mActionDeletePart| image:: /img/en/mActionDeletePart.png
+.. |mActionReshape| image:: /img/en/mActionReshape.png
+.. |mActionSplitFeatures| image:: /img/en/mActionSplitFeatures.png
+.. |mActionMergeFeat| image:: /img/en/mActionMergeFeatures.png
+.. |mActionNodeTool| image:: /img/en/mActionNodeTool.png
+.. |mActionRotatePointSymbols| image:: /img/en/mActionRotatePointSymbols.png
+.. |mActionToggleEditing| image:: /img/en/mActionToggleEditing.png
+.. |mActionCapturePoint| image:: /img/en/mActionCapturePoint.png
+.. |mActionCaptureLine| image:: /img/en/mActionCaptureLine.png
+.. |mActionCapturePolygon| image:: /img/en/mActionCapturePolygon.png
+.. |mActionPan| image:: /img/en/mActionPan.png
+.. |mActionZoomIn| image:: /img/en/mActionZoomIn.png
+.. |mActionZoomOut| image:: /img/en/mActionZoomOut.png
+.. |mActionIdentify| image:: /img/en/mActionIdentify.png
+.. |mActionZoomFullExtent| image:: /img/en/mActionZoomFullExtent.png
+.. |mActionZoomToLayer| image:: /img/en/mActionZoomToLayer.png
+.. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
+.. |mActionZoomLast| image:: /img/en/mActionZoomLast.png
+.. |mActionZoomNext| image:: /img/en/mActionZoomNext.png
+.. |mActionMapTips| image:: /img/en/mActionMapTips.png
+.. |mActionNewBookmark| image:: /img/en/mActionNewBookmark.png
+.. |mActionShowBookmarks| image:: /img/en/mActionShowBookmarks.png
+.. |mActionDraw| image:: /img/en/mActionDraw.png
+.. |mActionAddNonDbLayer| image:: /img/en/mActionAddNonDbLayer.png
+.. |mActionAddLayer| image:: /img/en/mActionAddLayer.png
+.. |mActionAddSpatialLiteLayer| image:: /img/en/mActionAddSpatialLiteLayer.png
+.. |mActionAddWmsLayer| image:: /img/en/mActionAddWmsLayer.png
+.. |mActionOpenTable| image:: /img/en/mActionOpenTable.png
+.. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
+.. |labeling| image:: /img/en/labeling.png
+.. |mActionInOverview| image:: /img/en/mActionInOverview.png
+.. |mActionAddAllToOverview| image:: /img/en/mActionAddAllToOverview.png
+.. |mActionRemoveAllFromOverview| image:: /img/en/mActionRemoveAllFromOverview.png
+.. |mActionShowAllLayers| image:: /img/en/mActionShowAllLayers.png
+.. |mActionHideAllLayers| image:: /img/en/mActionHideAllLayers.png
+.. |mActionProjectProperties| image:: /img/en/mActionProjectProperties.png
+.. |mActionCustomProjection| image:: /img/en/mActionCustomProjection.png
+.. |mActionOptions| image:: /img/en/mActionOptions.png
+
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
 .. |matrix| image:: img/en/plugins_ftools/matrix.png
@@ -249,6 +306,7 @@ rst_epilog = """
    :width: 1.5em
 .. |dxf2shp_converter| image:: img/en/plugins_dxf2shape_converter/dxf2shp_converter.png
    :width: 1.5em
+.. |
 
 """
 
@@ -258,7 +316,7 @@ rst_epilog = """
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
 #html_theme = 'sphinxdoc'
-html_theme = 'qgis-theme'
+html_theme = 'sphinxdoc'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

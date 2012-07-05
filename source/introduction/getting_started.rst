@@ -25,15 +25,15 @@ packages (rpm and deb) or software repositories to add to your installation
 manager are provided. Get the latest information on binary packages at the
 |qg| website at http://download.qgis.org.
 
-Installation from source
-*************************
+**Installation from source**
+
 
 If you need to build |qg| from source, please refer to the coding and
 compiling guide available at http://www.qgis.org/en/documentation/manuals.html. 
 The installation instructions are also distributed with the |qg| source code.
 
-Installation on external media
-*******************************
+**Installation on external media**
+
 
 QGIS allows to define a ``--configpath`` option that overrides the default path 
 (e.g. ~/.qgis under Linux) for user configuration and forces QSettings to use 
@@ -108,8 +108,7 @@ a raster and a vector layer. We will use the landcover raster
 layer :file:`qgis_sample_data/raster/landcover.img` and the lakes 
 vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 
-start |qg|
-***********
+**start |qg|**
 
 * |nix| Start |qg| by typing: ``|qg|`` at a command prompt, or
   if using precompiled binary, using the Applications menu.
@@ -124,8 +123,7 @@ start |qg|
    
    A Simple |qg| Session
 
-Load raster and vector layers from the sample dataset
-******************************************************
+**Load raster and vector layers from the sample dataset**
 
 #. Click on the |mActionAddRasterLayer| :guilabel:`Load Raster` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select 
@@ -144,10 +142,10 @@ Load raster and vector layers from the sample dataset
 #. Double click the :file:`lakes` layer in the map legend to open the 
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and check the |displaylabel| 
+#. Click on the :guilabel:`Labels` tab and check the |checkbox| 'Display lables'
    checkbox to enable labeling. Choose NAMES field as field containing label.
 #. To improve readability of labels, you can add a white buffer around them,
-   by clicking ``Buffer'' in the list on the left, checking |bufferlabels|
+   by clicking ``Buffer'' in the list on the left, checking |checkbox| 'Buffer labels?'
    and choosing 3 as buffer size.
 #. Click :guilabel:`Apply`, check if the result looks good and finally 
    click :guilabel:`OK`.
