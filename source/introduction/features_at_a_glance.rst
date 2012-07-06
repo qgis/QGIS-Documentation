@@ -436,33 +436,32 @@ menu depending on the layer type (point, line or polygon).
 
 
 
-
 .. note::
    |nix| The Menu Bar items listed above are the default ones in KDE 
    window manager. In GNOME, Settings menu is missing and its items are to be 
    found there:
 
-+-----------------------------------------------------------+------------------------+
-| |mActionProjectProperties| :guilabel:`Project Properties` | :guilabel:`File menu`  |
-+-----------------------------------------------------------+------------------------+
-| |mActionOptions| :guilabel:`Options`                      | :guilabel:`Edit`       |
-+-----------------------------------------------------------+------------------------+
-| |mActionOptions| :guilabel:`Configure Shortcuts`          | :guilabel:`Edit`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Style Manager`                                 | :guilabel:`Edit`       |
-+-----------------------------------------------------------+------------------------+
-| |mActionCustomProjection| :guilabel:`Custom CRS`          | :guilabel:`Edit`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Panels`                                        | :guilabel:`View`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Toolbars`                                      | :guilabel:`View`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Toggle Full Screen Mode`                       | :guilabel:`View`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Tile scale slider`                             | :guilabel:`View`       |
-+-----------------------------------------------------------+------------------------+
-| :guilabel:`Live GPS tracking`	                            | :guilabel:`View`       |
-+-----------------------------------------------------------+------------------------+
++-----------------------------------------------------------------------+------------------------+
+| |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`File menu`  |
++-----------------------------------------------------------------------+------------------------+
+| |mActionOptions| :guilabel:`Options`                                  | :guilabel:`Edit`       |
++-----------------------------------------------------------------------+------------------------+
+| |mActionOptions| :guilabel:`Configure Shortcuts`                      | :guilabel:`Edit`       |
++-----------------------------------------------------------------------+------------------------+
+| :guilabel:`Style Manager`                                             | :guilabel:`Edit`       |
++-----------------------------------------------------------------------+------------------------+
+| |mActionCustomProjection| :guilabel:`Custom CRS`                      | :guilabel:`Edit`       |
++-----------------------------------------------------------------------+------------------------+
+| :menuselection:`Panels -->`                                           | :guilabel:`View`       |
++-----------------------------------------------------------------------+------------------------+
+| :menuselection:`Toolbars -->`                                         | :guilabel:`View`       |
++-----------------------------------------------------------------------+------------------------+
+| :guilabel:`Toggle Full Screen Mode`                                   | :guilabel:`View`       |
++-----------------------------------------------------------------------+------------------------+
+| :guilabel:`Tile scale slider`                                         | :guilabel:`View`       |
++-----------------------------------------------------------------------+------------------------+
+| :guilabel:`Live GPS tracking`	                                        | :guilabel:`View`       |
++-----------------------------------------------------------------------+------------------------+
 
 
 .. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
@@ -470,7 +469,7 @@ menu depending on the layer type (point, line or polygon).
 .. _`label_toolbars`:
 
 Toolbars
-*********
+--------
 
 .. index::`toolbars`
 
@@ -494,7 +493,7 @@ the mouse over the toolbars.
 .. _`label_legend`:
 
 Map Legend
-**********
+-----------
 
 .. index::`legend`
 
@@ -606,7 +605,7 @@ This way all selected Layers or Groups will be removed from the Layerlist.
 .. _`label_mapview`:
 
 Map View
-*********
+--------
 
 .. index::`map view`
 
@@ -627,7 +626,7 @@ changes you make in the legend area.
    the mouse cursor inside the map area and roll the wheel forward (away from 
    you) to zoom in and backwards (towards you) to zoom out. The mouse cursor 
    position is the center where the zoom occurs. You can customize the behavior 
-   of the mouse wheel zoom using the |tab| :menuselection:`Map tools` tab under 
+   of the mouse wheel zoom using the :menuselection:`Map tools` tab under 
    the :menuselection:`Settings --> Options` menu.
 
 .. note::
@@ -643,7 +642,7 @@ changes you make in the legend area.
 .. _`label_mapoverview`:
 
 Map Overview 
-*************
+------------
 
 .. index::`Map overview`
 
@@ -664,7 +663,7 @@ current extent, the main map view will update accordingly.
 .. _`label_statusbar`:
 
 Status Bar
-***********
+----------
 
 The status bar shows you your current position in map coordinates (e.g.
 meters or decimal degrees) as the mouse pointer is moved across the map view.
@@ -693,7 +692,7 @@ for the current project.
    .. index::`Scale calculate`
    When you start QGIS, degrees is the default unit, and it tells QGIS
    that any coordinate in your layer is in degrees. To get correct scale values,
-   you can either change this to meter manually in the |tab| General tab under
+   you can either change this to meter manually in the :guilabel:`General` tab under
    :menuselection:`Settings` --> :menuselection:`Project Properties` or you can 
    select a project Coordinate Reference System (CRS) clicking on the
    |mIconProjectionDisabled| `CRS status` icon in the lower right-hand corner of 
@@ -703,7 +702,7 @@ for the current project.
 .. _`shorcuts`:
 
 Keyboard shortcuts
-*******************
+-------------------
 
 .. index::`Keyboard shortcuts`
 
@@ -727,7 +726,7 @@ QGIS installation.
 .. _`context_help`:
 
 Context help
-*************
+------------
 
 .. index::`Context help`
 
@@ -754,7 +753,7 @@ QGIS allows you to control the rendering process in a number of ways.
 .. `label_scaledepend`:
 
 Scale Dependent Rendering
-*************************
+-------------------------
 .. index::`Rendering scale dependent`
 
 Scale dependent rendering allows you to specify the minimum and maximum
@@ -771,14 +770,14 @@ to use and noting the scale value in the QGIS status bar.
 .. _`label_controlmap`:
 
 Controlling Map Rendering 
-***************************
+-------------------------
 
 Map rendering can be controlled in the following ways:
 
 .. _`label_suspendrender`:
 
-a) Suspending Rendering
-~~~~~~~~~~~~~~~~~~~~~~~
+**a) Suspending Rendering**
+
 .. index::`rendering!suspending`
 
 To suspend rendering, click the |checkbox| Render checkbox in the lower right
@@ -797,8 +796,8 @@ refresh of the map canvas.
 
 .. _`label_settinglayer`:
 
-b) Setting Layer Add Option 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**b) Setting Layer Add Option** 
+
 
 .. index::`rendering!options`
 .. index::`layers!initial visibility`
@@ -807,12 +806,12 @@ You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
 menu option :menuselection:`Settings --> Options` and click on the
-|tab| Rendering tab. Uncheck the |checkbox| :guilabel:`By default new layers 
+:guilabel:`Rendering` tab. Uncheck the |checkbox| :guilabel:`By default new layers 
 added to the map should be displayed` checkbox. Any layer added to the map will 
 be off (invisible) by default.
 
-Stopping Rendering
-~~~~~~~~~~~~~~~~~~
+**Stopping Rendering**
+
 .. index::`Rendering halting`
 
 .. _`label_stoprender`
@@ -827,8 +826,8 @@ between pressing ESC and the time the map drawing is halted.
 
 .. _`label_updatemap`:
 
-c) Updating the Map Display During Rendering
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**c) Updating the Map Display During Rendering**
+
 
 .. index::`rendering!update during drawing`
 
@@ -836,7 +835,7 @@ You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
 datastore, choose menu option :menuselection:`Settings --> Options`
-click on the |tab| :menuselection:`Rendering` tab. Set the feature count to an
+click on the :guilabel:`Rendering` tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -844,14 +843,13 @@ during the reading of the features. A suggested value to start with is 500.
 
 .. _`label_renderquality`:
 
-d) Influence Rendering Quality
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**d) Influence Rendering Quality**
+
 
 .. index::`rendering!quality`
 
 To influence the rendering quality of the map you have 3 options. Choose menu
-option :menuselection:`Settings --> Options` click on the
-|tab| :menuselection:`Rendering` tab and select or deselect following checkboxes.
+option :menuselection:`Settings --> Options` click on the :guilabel:`Rendering` tab and select or deselect following checkboxes.
 
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some 
@@ -876,7 +874,7 @@ To select a measure tool click on |mActionMeasure| and select the tool you want
 to use.
 
 Measure length, areas and angles
-********************************
+---------------------------------
 
 .. index::`measure:line length`
 .. index::`measure:areas`
@@ -884,7 +882,7 @@ Measure length, areas and angles
 
 |mActionMeasure| QGIS is able to measure real distances between given points 
 according to a defined ellipsoid. To configure this, choose menu option
-:menuselection:`Settings --> Options`, click on the |tab| Map tools tab and 
+:menuselection:`Settings --> Options`, click on the :guilabel:`Map tools` tab and 
 choose the appropriate ellipsoid. There you can also define a rubberband color 
 and your preferred measurement units (meters or feet) and angle units (degrees, 
 radians and gon). The tools then allows you to click points on the map. Each 
@@ -923,7 +921,7 @@ Measure tools in action
 .. _`sec_selection`:
 
 Select and deselect features 
-******************************
+-----------------------------
 
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
@@ -972,32 +970,32 @@ The project file is saved in XML format, so it is possible to edit
 the file outside QGIS if you know what you are doing. The file format
 was updated several times compared to earlier QGIS versions. Project files
 from older QGIS versions may not work properly anymore. To be made aware of this,
-in the |tab| General tab under :menuselection:`Settings --> Options`
+in the :guilabel:`General` tab under :menuselection:`Settings --> Options`
 you can select: 
 
  |checkbox| :guilabel:`Prompt to save project changes when required`
  |checkbox| :guilabel:`Warn when opening a project file saved with an older 
  version of QGIS`
 
-Project Properties
-~~~~~~~~~~~~~~~~~~
+**Project Properties**
+
 
 In the properties window for the project under |nix| :menuselection:`File -->
 Project Properties` or |win| :menuselection:`Settings -->
 Project Properties` you set project specific options. These
 include:
 
-* In the |tab| :guilabel:`General` tab the project title, selection and background
+* In the :guilabel:`General` tab the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
   layers can be defined. You can define the layer units (only used when CRS 
   transformation is disabled) and the precision of decimal places to use.  
-* The |tab| :guilabel:`CRS Coordinate Reference System` tab enables you to choose 
+* The :guilabel:`CRS Coordinate Reference System` tab enables you to choose 
   the CRS for this project, and to enable on-the-fly re-projection of raster and 
   vector layers when displaying layers from a different CRS.
-* With the third |tab| :guilabel:`Identifiable layers` tab you set (or disable) 
+* With the third :guilabel:`Identifiable layers` tab you set (or disable) 
   which layers will respond to the identify tool. (See the Map tools paragraph from
   the :ref:`gui_options` section to enable identifying of multiple layers.)
-* The tab |tab| :guilabel:`WMS Server` allows to define information about the QGIS 
+* The tab :guilabel:`WMS Server` allows to define information about the QGIS 
   mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating 
   the |checkbox| :guilabel:`Add WKT geometry to feature info response` will allow 
   to query the WMS layers.
@@ -1032,8 +1030,8 @@ guilabel:`Options` dialog. Select the menu option :menuselection:`Settings` -->
 |mActionOptions| :menuselection:`Options`. The tabs where you can optimize your 
 options are:
 
-General Tab
-************
+**General Tab**
+
 
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
@@ -1059,8 +1057,8 @@ General Tab
 * Define representation for NULL values
 * Add path(s) to search for additional C++ plugin libraries. 
 
-Rendering Tab
-*****************
+**Rendering Tab**
+
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * Define number of features to draw before updating the display.
@@ -1073,11 +1071,11 @@ Rendering Tab
 
 
 Additionally you can define whether to save the path for svg textures
-absolute or relative in the |tab| :guilabel:`General` tab of the
+absolute or relative in the :guilabel:`General` tab of the
 :menuselection:`Settings --> Project Properties` menu.
 
-Map tools Tab
-****************
+**Map tools Tab**
+
 
 * The Mode setting determines which layers will be shown by the Identify
   tool. By switching to ``Top down`` or ``Top down, stop at
@@ -1098,15 +1096,15 @@ Map tools Tab
 * Define Zoom factor for wheel mouse
 
 
-Overlays Tab
-****************
+**Overlays Tab**
+
 
 * Define placement algorithm for labels (choose between central point
   (standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)
 
 
-Digitizing Tab
-********************
+**Digitizing Tab**
+
 
 * Define Rubberband line color and line width
 * Define default snap mode (to vertex, to segment, to vertex and segment)
@@ -1119,8 +1117,8 @@ Digitizing Tab
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 
 
-CRS Tab
-***********
+**CRS Tab**
+
 
 The CRS tab is divided in two areas. The first area allows to define the default 
 CRS for new projects.
@@ -1136,15 +1134,14 @@ a layer without CRS is loaded.
 * |radiobuttonoff| :guilabel:`Project wide default Coordinate Reference System (CRS) will be used`
 * |radiobuttonon| :guilabel`Global default Coordinate Reference System (CRS) displayed below will be used`
 
-Locale Tab
-**************
+**Locale Tab**
 
 * |checkbox| :guilabel:`Overwrite system locale and use defined locale instead`
 * Information about active system locale
 
 
-Network Tab
-****************
+**Network Tab**
+
 
 .. _`fig_proxy-settings`:
 
@@ -1230,8 +1227,8 @@ by default in the other themes too.
 The |mActionAnnotation| move annotation tool allows to move the annotation on the 
 map canvas.
 
-Form annotations
-****************
+**Form annotations**
+
 .. index::`annotations`
 .. index::`form annotation|\see{annotations}`
 
@@ -1264,7 +1261,7 @@ Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to
 it later.
 
 Creating a Bookmark
-*******************
+-------------------
 
 To create a bookmark:
 
@@ -1279,7 +1276,7 @@ To create a bookmark:
 Note that you can have multiple bookmarks with the same name.
 
 Working with Bookmarks
-**********************
+-----------------------
 
 To use or manage bookmarks, select the menu option 
 :menuselection:`View --> Show Bookmarks`. The 
@@ -1287,14 +1284,14 @@ To use or manage bookmarks, select the menu option
 bookmark. You can not edit the bookmark name or coordinates.
 
 Zooming to a Bookmark
-*********************
+----------------------
 
 From the :menuselection:`Geospatial Bookmarks` dialog, select the desired 
 bookmark by clicking on it, then click |button| :menuselection:`Zoom To`.
 You can also zoom to a bookmark by double-clicking on it.
 
 Deleting a Bookmark
-*******************
+-------------------
 
 To delete a bookmark from the :guilabel:`Geospatial Bookmarks`
 dialog, click on it then click :guilabel:`Delete`.
@@ -1351,21 +1348,21 @@ gpsd properly to connect QGIS to it.
    Live GPS Track |nix|
 
 Position coordinates
-********************
+---------------------
 
 |mActionToggleEditing| If the GPS is
 receiving signals from satellites you will see your position in latitude,
 longitude and elevation as you can see in Figure :ref:`subfig:gpstrack_main`.
 
 GPS signal strength
-*******************
+--------------------
 
 |gpstrack_barchart| Here you can see
 the signal strenght of the satellites you are receiving signals from
 Figure :ref:`subfig:gpstrack_stren`.
 
 GPS polar window
-****************
+----------------
 
 |gpstrack_polarchart| If you want
 to know where in the sky all the connected satellites are, you have to
@@ -1373,7 +1370,7 @@ switch to the polar screen (Figure :ref:`subfig:gpstrack_polar`).
 You can also see the ID numbers of the satellites you are receiving signals from.
 
 GPS options
-***********
+------------
 
 |mActionOptions| In case of connection problems you can switch from 
 |radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| 

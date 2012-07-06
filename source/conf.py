@@ -204,7 +204,7 @@ rst_epilog = """
 .. |mActionDraw| image:: /img/en/mActionDraw.png
 .. |mActionAddNonDbLayer| image:: /img/en/mActionAddNonDbLayer.png
 .. |mActionAddLayer| image:: /img/en/mActionAddLayer.png
-.. |mActionAddSpatialLiteLayer| image:: /img/en/mActionAddSpatialLiteLayer.png
+.. |mActionAddSpatiaLiteLayer| image:: /img/en/mActionAddSpatiaLiteLayer.png
 .. |mActionAddWmsLayer| image:: /img/en/mActionAddWmsLayer.png
 .. |mActionOpenTable| image:: /img/en/mActionOpenTable.png
 .. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
@@ -217,6 +217,13 @@ rst_epilog = """
 .. |mActionProjectProperties| image:: /img/en/mActionProjectProperties.png
 .. |mActionCustomProjection| image:: /img/en/mActionCustomProjection.png
 .. |mActionOptions| image:: /img/en/mActionOptions.png
+.. |mActionHelpContents| image:: /img/en/mActionHelpContents.png
+.. |mActionQgisHomePage| image:: /img/en/mActionQgisHomePage.png
+.. |mActionCheckQgisVersion| image:: /img/en/mActionCheckQgisVersion.png
+.. |mActionHelpAbout| image:: /img/en/mActionHelpAbout.png
+.. |mActionHelpSponsors| image:: /img/en/mActionHelpSponsors.png
+.. |mActionTextAnnotation| image:: /img/en/mActionTextAnnotation.png
+.. |mActionAnnotation| image:: /img/en/mActionAnnotation.png
 
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
