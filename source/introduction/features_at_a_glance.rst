@@ -484,7 +484,7 @@ the mouse over the toolbars.
 
 .. index::`layout!toolbars`
 
-.. note::
+.. tip::
    **Restoring toolbars** 
 
    If you have accidentally hidden all your toolbars, you can get them
@@ -499,70 +499,70 @@ Map Legend
 
 The map legend area lists all the layers in the project.
 The checkbox in each legend entry can be used to show or hide the layer 
-.. index::`layer!visibility`
+ .. index::`layer!visibility`
 A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
 
 Layers in the legend window can be organised into groups. To do so, right click
-in the legend window and choose :guilabel:`Add group`. Type in a name for the
+in the legend window and choose :menuselection:`Add group -->`. Type in a name for the
 group and press :kbd:`Enter`. Now click on an existing layer and drag it
 onto the group. Also, if new layers are added to the project while a group is
 selected, they will automatically be placed in the group.
 
 To bring a layer out of a group you can drag it out, or right click on it and 
-choose :guilabel:`Make to toplevel item`. Groups can be nested inside other groups.
+choose :menuselection:`Make to toplevel item -->`. Groups can be nested inside other groups.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
 
 The content of the right mouse button context menu depends on whether the selected 
 legend item is a raster or a vector layer. For GRASS vector layers 
-:guilabel:`toggle editing` is not available. See section 
+:menuselection:`toggle editing -->` is not available. See section 
 :ref:`grass_digitising` for information on editing GRASS vector layers.
 
 * **Right mouse button menu for raster layers**
 
-  * :menuselection:`Zoom to layer extent`
-  * :menuselection:`Zoom to best scale (100 %)`
-  * :menuselection:`Show in overview`
-  * :menuselection:`Remove}`
-  * :menuselection:`Properties`
-  * :menuselection:`Rename`
-  * :menuselection:`Add Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
+  * :menuselection:`Zoom to layer extent -->`
+  * :menuselection:`Zoom to best scale (100 %) -->`
+  * :menuselection:`Show in overview -->`
+  * :menuselection:`Remove -->`
+  * :menuselection:`Properties -->`
+  * :menuselection:`Rename -->`
+  * :menuselection:`Add Group -->`
+  * :menuselection:`Expand all -->`
+  * :menuselection:`Collapse all -->`
 
 .. *  :menuselection:`Show file groups`
 
 * **Right mouse button menu for vector layers**
 
-  * :menuselection:`Zoom to layer extent`
-  * :menuselection:`Show in overview`
-  * :menuselection:`Remove`
-  * :menuselection:`Open attribute table`
-  * :menuselection:`Toggle editing (not available for GRASS layers)`
-  * :menuselection:`Save as`
-  * :menuselection:`Save selection as`
-  * :menuselection:`Query`
-  * :menuselection:`Properties`
-  * :menuselection:`Rename`
-  * :menuselection:`Add Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
+  * :menuselection:`Zoom to layer extent -->`
+  * :menuselection:`Show in overview -->`
+  * :menuselection:`Remove -->`
+  * :menuselection:`Open attribute table -->`
+  * :menuselection:`Toggle editing (not available for GRASS layers) -->`
+  * :menuselection:`Save as -->`
+  * :menuselection:`Save selection as -->`
+  * :menuselection:`Query -->`
+  * :menuselection:`Properties -->`
+  * :menuselection:`Rename -->`
+  * :menuselection:`Add Group -->`
+  * :menuselection:`Expand all -->`
+  * :menuselection:`Collapse all -->`
 
 .. * :menuselection:`Make to toplevel item`
 .. * :menuselection:`Show file groups`
 
 * **Right mouse button menu for layer groups**
 
-  * :menuselection:`Zoom to group`
-  * :menuselection:`Remove`
-  * :menuselection:`Set group CRS`
-  * :menuselection:`Rename`
-  * :menuselection:`Add Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
+  * :menuselection:`Zoom to group -->`
+  * :menuselection:`Remove -->`
+  * :menuselection:`Set group CRS -->`
+  * :menuselection:`Rename -->`
+  * :menuselection:`Add Group -->`
+  * :menuselection:`Expand all -->`
+  * :menuselection:`Collapse all -->`
 
 .. *  :menuselection:`Show file groups`
 
@@ -618,7 +618,7 @@ performed on the map as described in the toolbar description above.  The map
 view and the legend are tightly bound to each other - the maps in view reflect
 changes you make in the legend area.
 
-.. note::
+.. tip::
    **Zooming the Map with the Mouse Wheel**
 
    .. index::`zoom mouse wheel`
@@ -629,7 +629,7 @@ changes you make in the legend area.
    of the mouse wheel zoom using the :menuselection:`Map tools` tab under 
    the :menuselection:`Settings --> Options` menu.
 
-.. note::
+.. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
    
    .. index::`pan!arrow keys`
@@ -686,20 +686,20 @@ At the far right of the status bar you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection properties 
 for the current project.
 
-.. note::
+.. tip::
    **Calculating the correct Scale of your Map Canvas**
 
    .. index::`Scale calculate`
    When you start QGIS, degrees is the default unit, and it tells QGIS
    that any coordinate in your layer is in degrees. To get correct scale values,
    you can either change this to meter manually in the :guilabel:`General` tab under
-   :menuselection:`Settings` --> :menuselection:`Project Properties` or you can 
+   :menuselection:`Settings -->` :menuselection:`Project Properties -->` or you can 
    select a project Coordinate Reference System (CRS) clicking on the
-   |mIconProjectionDisabled| `CRS status` icon in the lower right-hand corner of 
+   |mIconProjectionDisabled| :guilabel:`CRS status` icon in the lower right-hand corner of 
    the statusbar. In the last case, the units are set to what the project 
    projection specifies, e.g. '+units=m'.
 
-.. _`shorcuts`:
+.. _`shortcuts`:
 
 Keyboard shortcuts
 -------------------
@@ -708,7 +708,7 @@ Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You find them in
 Section :ref:`label_menubar` below. Additionally the menu option 
-:menuselection:`Settings` --> :menuselection:`Configure Shortcuts` allows to 
+:menuselection:`Settings -->` :menuselection:`Configure Shortcuts -->` allows to 
 change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS 
 features.
 
@@ -734,7 +734,7 @@ When you need help on a specific topic, you can access context help via the
 :guilabel:`Help` button available in most dialogs - please note that third-party 
 plugins can point to dedicated web pages.
 
-.. _`subsect:redraw_events`:
+.. _`redraw_events`:
 
 Rendering
 ===========
@@ -759,8 +759,8 @@ Scale Dependent Rendering
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
 open the :guilabel:`Properties` dialog by double-clicking on the layer in the
-legend. On the |tab|`General` tab, set the minimum and maximum scale values and 
-then click on the :guilabel`Use scale dependent rendering` checkbox.
+legend. On the :guilabel:`General` tab, set the minimum and maximum scale values and 
+then click on the |checkbox|:guilabel:`Use scale dependent rendering` checkbox.
 
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.
@@ -805,7 +805,7 @@ refresh of the map canvas.
 You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
-menu option :menuselection:`Settings --> Options` and click on the
+menu option :menuselection:`Settings --> Options -->` and click on the
 :guilabel:`Rendering` tab. Uncheck the |checkbox| :guilabel:`By default new layers 
 added to the map should be displayed` checkbox. Any layer added to the map will 
 be off (invisible) by default.
@@ -834,7 +834,7 @@ between pressing ESC and the time the map drawing is halted.
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
-datastore, choose menu option :menuselection:`Settings --> Options`
+datastore, choose menu option :menuselection:`Settings --> Options -->`
 click on the :guilabel:`Rendering` tab. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
@@ -849,7 +849,7 @@ during the reading of the features. A suggested value to start with is 500.
 .. index::`rendering!quality`
 
 To influence the rendering quality of the map you have 3 options. Choose menu
-option :menuselection:`Settings --> Options` click on the :guilabel:`Rendering` tab and select or deselect following checkboxes.
+option :menuselection:`Settings --> Options -->` click on the :guilabel:`Rendering` tab and select or deselect following checkboxes.
 
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some 
@@ -882,7 +882,7 @@ Measure length, areas and angles
 
 |mActionMeasure| QGIS is able to measure real distances between given points 
 according to a defined ellipsoid. To configure this, choose menu option
-:menuselection:`Settings --> Options`, click on the :guilabel:`Map tools` tab and 
+:menuselection:`Settings --> Options -->`, click on the :guilabel:`Map tools` tab and 
 choose the appropriate ellipsoid. There you can also define a rubberband color 
 and your preferred measurement units (meters or feet) and angle units (degrees, 
 radians and gon). The tools then allows you to click points on the map. Each 

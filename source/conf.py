@@ -208,7 +208,7 @@ rst_epilog = """
 .. |mActionAddWmsLayer| image:: /img/en/mActionAddWmsLayer.png
 .. |mActionOpenTable| image:: /img/en/mActionOpenTable.png
 .. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
-.. |labeling| image:: /img/en/labeling.png
+.. |mActionLabeling| image:: /img/en/mActionLabeling.png
 .. |mActionInOverview| image:: /img/en/mActionInOverview.png
 .. |mActionAddAllToOverview| image:: /img/en/mActionAddAllToOverview.png
 .. |mActionRemoveAllFromOverview| image:: /img/en/mActionRemoveAllFromOverview.png
@@ -224,6 +224,12 @@ rst_epilog = """
 .. |mActionHelpSponsors| image:: /img/en/mActionHelpSponsors.png
 .. |mActionTextAnnotation| image:: /img/en/mActionTextAnnotation.png
 .. |mActionAnnotation| image:: /img/en/mActionAnnotation.png
+.. |mIconStopRendering| image:: /img/en/mIconStopRendering.png
+.. |mIconProjectionDisabled| image:: /img/en/mIconProjectionDisabled.png
+.. |mActionMeasure| image:: /img/en/mActionMeasure.png
+.. |mActionMeasureArea| image:: /img/en/mActionMeasureArea.png
+.. |mActionMeasureAngle| image:: /img/en/mActionMeasureAngle.png
+
 
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
