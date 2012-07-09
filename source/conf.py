@@ -160,39 +160,87 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddRasterLayer| image:: /img/en/mActionAddRasterLayer.png
 .. |mActionAddOgrLayer| image:: /img/en/mActionAddOgrLayer.png
+   :width: 1.5em
 .. |mActionShowPluginManager| image:: /img/en/mActionShowPluginManager.png
 .. |mActionFileNew| image:: /img/en/mActionFileNew.png
 .. |mActionFileOpen| image:: /img/en/mActionFileOpen.png
 .. |mActionFileSave| image:: /img/en/mActionFileSave.png
+   :width: 1.5em
 .. |mActionFileSaveAs| image:: /img/en/mActionFileSaveAs.png
 .. |mActionSaveMapAsImage| image:: /img/en/mActionSaveMapAsImage.png
 .. |mActionNewComposer| image:: /img/en/mActionNewComposer.png
 .. |mActionComposerManager| image:: /img/en/mActionComposerManager.png
 .. |mActionFileExit| image:: /img/en/mActionFileExit.png
 .. |mActionUndo| image:: /img/en/mActionUndo.png
+   :width: 1.5em
 .. |mActionRedo| image:: /img/en/mActionRedo.png
+   :width: 1.5em
+.. |mActionSelect| image:: /img/en/mActionSelect.png
+   :width: 1.5em
 .. |mActionEditCut| image:: /img/en/mActionEditCut.png
+   :width: 1.5em
 .. |mActionEditCopy| image:: /img/en/mActionEditCopy.png
+   :width: 1.5em
 .. |mActionEditPaste| image:: /img/en/mActionEditPaste.png
+   :width: 1.5em
+.. |mActionDeleteAttribute| image:: img/en/mActionDeleteAttribute.png
+   :width: 1.5em
 .. |mActionDeleteSelected| image:: /img/en/mActionDeleteSelected.png
+   :width: 1.5em
+.. |mActionDeleteVertex| image:: /img/en/mActionDeleteVertex.png
+   :width: 1.5em
 .. |mActionSimplify| image:: /img/en/mActionSimplify.png
+   :width: 2em
 .. |mActionAddRing| image:: /img/en/mActionAddRing.png
+   :width: 2em
 .. |mActionAddIsland| image:: /img/en/mActionAddIsland.png
+   :width: 2em
 .. |mActionDeleteRing| image:: /img/en/mActionDeleteRing.png
+   :width: 2em
 .. |mActionDeletePart| image:: /img/en/mActionDeletePart.png
+   :width: 2em
 .. |mActionReshape| image:: /img/en/mActionReshape.png
+   :width: 1.5em
 .. |mActionSplitFeatures| image:: /img/en/mActionSplitFeatures.png
-.. |mActionMergeFeat| image:: /img/en/mActionMergeFeatures.png
+   :width: 1.5em
+.. |mActionMergeFeatures| image:: /img/en/mActionMergeFeatures.png
+   :width: 1.5em
 .. |mActionNodeTool| image:: /img/en/mActionNodeTool.png
+   :width: 1.5em
+.. |mActionSelectedToTop| image:: /img/en/mActionSelectedToTop.png
+   :width: 1.5em
+.. |mActionInvertSelection| image:: /img/en/mActionInvertSelection.png
+   :width: 1.5em
+.. |mActionCopySelected| image:: /img/en/mActionCopySelected.png
+   :width: 1.5em
+.. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
+   :width: 1.5em
+.. |mActionNewAttribute| image:: /img/en/mActionNewAttribute.png
+   :width: 1.5em
+.. |mActionCalculateField| image:: /img/en/mActionCalculateField.png
+   :width: 1.5em
 .. |mActionRotatePointSymbols| image:: /img/en/mActionRotatePointSymbols.png
+   :width: 1.5em
 .. |mActionToggleEditing| image:: /img/en/mActionToggleEditing.png
+   :width: 1.5em
 .. |mActionCapturePoint| image:: /img/en/mActionCapturePoint.png
+   :width: 1.5em
 .. |mActionCaptureLine| image:: /img/en/mActionCaptureLine.png
+   :width: 1.5em
 .. |mActionCapturePolygon| image:: /img/en/mActionCapturePolygon.png
+   :width: 1.5em
+.. |mActionMoveFeature| image:: /img/en/mActionMoveFeature.png
+   :width: 1.5em
 .. |mActionPan| image:: /img/en/mActionPan.png
+   :width: 1.5em
 .. |mActionZoomIn| image:: /img/en/mActionZoomIn.png
+   :width: 1.5em
 .. |mActionZoomOut| image:: /img/en/mActionZoomOut.png
+   :width: 1.5em
 .. |mActionIdentify| image:: /img/en/mActionIdentify.png
+   :width: 1.5em
+.. |mActionNewVectorLayer| image:: /img/en/mActionNewVectorLayer.png
+   :width: 1.5em
 .. |mActionZoomFullExtent| image:: /img/en/mActionZoomFullExtent.png
 .. |mActionZoomToLayer| image:: /img/en/mActionZoomToLayer.png
 .. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
@@ -203,12 +251,17 @@ rst_epilog = """
 .. |mActionShowBookmarks| image:: /img/en/mActionShowBookmarks.png
 .. |mActionDraw| image:: /img/en/mActionDraw.png
 .. |mActionAddNonDbLayer| image:: /img/en/mActionAddNonDbLayer.png
+   :width: 1.5em
 .. |mActionAddLayer| image:: /img/en/mActionAddLayer.png
+   :width: 1.5em
 .. |mActionAddSpatiaLiteLayer| image:: /img/en/mActionAddSpatiaLiteLayer.png
+   :width: 1.5em
 .. |mActionAddWmsLayer| image:: /img/en/mActionAddWmsLayer.png
 .. |mActionOpenTable| image:: /img/en/mActionOpenTable.png
+   :width: 1.5em
 .. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
 .. |mActionLabeling| image:: /img/en/mActionLabeling.png
+   :width: 1.5em
 .. |mActionInOverview| image:: /img/en/mActionInOverview.png
 .. |mActionAddAllToOverview| image:: /img/en/mActionAddAllToOverview.png
 .. |mActionRemoveAllFromOverview| image:: /img/en/mActionRemoveAllFromOverview.png
@@ -229,8 +282,8 @@ rst_epilog = """
 .. |mActionMeasure| image:: /img/en/mActionMeasure.png
 .. |mActionMeasureArea| image:: /img/en/mActionMeasureArea.png
 .. |mActionMeasureAngle| image:: /img/en/mActionMeasureAngle.png
-
-
+.. |spiticon| image:: /plugins/img/en/plugins_spit/spiticon.png
+   :width: 1.5em
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
 .. |matrix| image:: img/en/plugins_ftools/matrix.png
