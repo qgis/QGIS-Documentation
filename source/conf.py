@@ -283,7 +283,22 @@ rst_epilog = """
 .. |mActionMeasureArea| image:: /img/en/mActionMeasureArea.png
 .. |mActionMeasureAngle| image:: /img/en/mActionMeasureAngle.png
 .. |spiticon| image:: /plugins/img/en/plugins_spit/spiticon.png
+.. |mActionSelectRectangle| image:: /img/en/mActionSelectRectangle.png
    :width: 1.5em
+.. |mActionSelectPolygon| image:: /img/en/mActionSelectPolygon.png
+   :width: 1.5em
+.. |mActionSelectFreehand| image:: /img/en/mActionSelectFreehand.png
+   :width: 1.5em
+.. |mActionSelectRadius| image:: /img/en/mActionSelectRadius.png
+   :width: 1.5em
+.. |mActionDeselectAll| image:: /img/en/mActionDeselectAll.png
+   :width: 1.5em
+.. |mActionFormAnnotation| image:: /img/en/mActionFormAnnotation.png
+   :width: 1.5em
+.. |gpstrack_barchart| image:: /img/en/gpstrack_barchart.png
+   :width: 1.5em
+.. |gpstrack_polarchart| image:: /img/en/gpstrack_polarchart.png
+   :width. 1.5em
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
 .. |matrix| image:: img/en/plugins_ftools/matrix.png

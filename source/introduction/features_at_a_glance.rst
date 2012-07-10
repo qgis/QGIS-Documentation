@@ -902,21 +902,32 @@ The cursor becomes cross-shaped. Click to draw the first segment of the angle yo
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
 
+Measure tools in action
 
+.. _`measure_line`:
 
-.. image:: measure_line.png
-   :width: 0.33 cm
+.. figure:: img/en/measure_line.png
+   :align: center
+   :width: 1em
+
    Measure lines
 
-.. image:: measure_area.png
-   :width: 0.33	cm
+.. _`measure_area`:
+
+.. figure:: img/en/measure_area.png
+   :align: center
+   :width: 0.33em
+
    Measure areas
 
-.. image:: measure_line.png
-   :width: 0.33	cm
+.. _`measure_angle`:
+
+.. figure:: img/en/measure_angle.png
+   :align: center
+   :width: 30em
+
    Measure angles
 
-Measure tools in action
 
 .. _`sec_selection`:
 
@@ -1132,7 +1143,7 @@ a layer without CRS is loaded.
 
 * |radiobuttonoff| :guilabel:`Prompt for Coordinate Reference System (CRS)`
 * |radiobuttonoff| :guilabel:`Project wide default Coordinate Reference System (CRS) will be used`
-* |radiobuttonon| :guilabel`Global default Coordinate Reference System (CRS) displayed below will be used`
+* |radiobuttonon| :guilabel:`Global default Coordinate Reference System (CRS) displayed below will be used`
 
 **Locale Tab**
 
@@ -1257,7 +1268,7 @@ Spatial Bookmarks
 .. index::`bookmarks`
 .. index::`spatial bookmarks|\see{bookmarks}`
 
-Spatial Bookmarks allow you to ``bookmark'' a geographic location and return to 
+Spatial Bookmarks allow you to "bookmark" a geographic location and return to 
 it later.
 
 Creating a Bookmark
@@ -1266,10 +1277,9 @@ Creating a Bookmark
 To create a bookmark:
 
 #. Zoom or pan to the area of interest.
-#. Select the menu option :menuselection:`View --> New Bookmark` or press :kbd:`Ctrl-B`.
+#. Select the menu option :menuselection:`View --> New Bookmark -->` or press :kbd:`Ctrl-B`.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
-#. Click |button| :menuselection:`OK` to add the bookmark or 
-   |button| :menuselection:`Cancel` to exit without adding the bookmark.
+#. Click :guilabel:`OK` to add the bookmark or :guilabel:`Cancel` to exit without adding the bookmark.
 
 
 
@@ -1279,7 +1289,7 @@ Working with Bookmarks
 -----------------------
 
 To use or manage bookmarks, select the menu option 
-:menuselection:`View --> Show Bookmarks`. The 
+:menuselection:`View --> Show Bookmarks -->`. The 
 :menuselection:`Geospatial Bookmarks` dialog allows you to zoom to or delete a 
 bookmark. You can not edit the bookmark name or coordinates.
 
@@ -1287,7 +1297,7 @@ Zooming to a Bookmark
 ----------------------
 
 From the :menuselection:`Geospatial Bookmarks` dialog, select the desired 
-bookmark by clicking on it, then click |button| :menuselection:`Zoom To`.
+bookmark by clicking on it, then click :guilabel:`Zoom To`.
 You can also zoom to a bookmark by double-clicking on it.
 
 Deleting a Bookmark
@@ -1304,8 +1314,7 @@ Live GPS tracking
 ==================
 
 
-To activate Live GPS tracking in QGIS you need to select
-:menuselection:`View --> Live GPS tracking`. You will get a new docked Window on 
+To activate Live GPS tracking in QGIS you need to select :menuselection:`View --> Live GPS tracking --> `. You will get a new docked Window on 
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
