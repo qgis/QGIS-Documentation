@@ -184,7 +184,7 @@ These six components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
-.. `label_menubar`:
+.. _label_menubar:
 
 Menu Bar
 ---------
@@ -488,7 +488,7 @@ the mouse over the toolbars.
    **Restoring toolbars** 
 
    If you have accidentally hidden all your toolbars, you can get them
-   back by choosing menu option :menuselection:`Settings --> Toolbars`.
+   back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
 
 .. _`label_legend`:
 
@@ -947,7 +947,7 @@ To select one or several features just click on
 
 To deselect all selected features click on |mActionDeselectAll|.
 
-.. _`sec_projects`:
+.. _sec_projects:
 
 Projects
 =========
@@ -956,17 +956,17 @@ Projects
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
-Section :ref:`gui_options`). QGIS can save the state of your
+Section :ref:`subsec_gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
-:menuselection:`File` --> |mActionFileSave| :menuselection:`Save Project`
-or :menuselection:`File` |mActionFileSaveAs| :menuselection:`Save Project As`.
+:menuselection:`File -->` |mActionFileSave| :guilabel:`Save Project`
+or :menuselection:`File -->` |mActionFileSaveAs| :guilabel:`Save Project As`.
 
 Load saved projects into a QGIS session using
-:menuselection:`File` --> |mActionFileOpen| :menuselection:`Open Project`
+:menuselection:`File -->` |mActionFileOpen| :guilabel:`Open Project`
 or :menuselection:`File --> Open Recent Project`.
 
 If you wish to clear your session and start fresh, choose
-:menuselection:`File` --> |mActionFileNew| :menuselection:`New Project`.
+:menuselection:`File -->` |mActionFileNew| :guilabel:`New Project`.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -1019,7 +1019,7 @@ Output
 .. index::`output!save as image!print composer!quick print`
 
 There are several ways to generate output from your QGIS session. We have
-discussed one already in Section \ref{sec:projects}: saving as a project file.
+discussed one already in Section :ref:`sec_projects` saving as a project file.
 Here is a sampling of other ways to produce output files:
 
 * Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens
@@ -1030,16 +1030,13 @@ Here is a sampling of other ways to produce output files:
   dialog where you can layout and print the current map canvas (see
   Section :ref:`label_printcomposer`).
 
-.. `subsec_gui_options`:
+.. _subsec_gui_options:
 
 GUI Options 
 =============
 
 
-|mActionOptions| Some basic options for QGIS can be selected using the :
-guilabel:`Options` dialog. Select the menu option :menuselection:`Settings` --> 
-|mActionOptions| :menuselection:`Options`. The tabs where you can optimize your 
-options are:
+|mActionOptions| Some basic options for QGIS can be selected using the :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`. The tabs where you can optimize your options are:
 
 **General Tab**
 
@@ -1156,24 +1153,26 @@ a layer without CRS is loaded.
 
 .. _`fig_proxy-settings`:
 
-.. figure::img/en/proxy-settings.png
+.. figure:: img/en/proxy-settings.png
+   :align: center
+   :width: 30em
    
    Proxy-settings in |qg|
 
 * |checkbox| :guilabel:`Use proxy for web access` and define host, port, user, 
   and password.
-* Set the :menuselection:`Proxy type` according to your needs.
+* Set the :menuselection:`Proxy type -->` according to your needs.
 
-  * :menuselection:`Default Proxy`: Proxy is determined based on the application 
+  * :menuselection:`Default Proxy -->`: Proxy is determined based on the application 
      proxy set using
-  * :menuselection:`Socks5Proxy`: Generic proxy for any kind of connection. 
+  * :menuselection:`Socks5Proxy -->`: Generic proxy for any kind of connection. 
      Supports TCP, UDP, binding to a port (incoming connections) and 
      authentication.
-  * :menuselection:`HttpProxy`: Implemented using the "CONNECT" command, supports 
+  * :menuselection:`HttpProxy -->`: Implemented using the "CONNECT" command, supports 
     only outgoing TCP connections; supports authentication.
-  * :menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, it 
+  * :menuselection:`HttpCachingProxy -->`: Implemented using normal HTTP commands, it 
     is useful only in the context of HTTP requests
-  * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is 
+  * :menuselection:`FtpCachingProxy -->`: Implemented using an FTP proxy, it is 
     useful only in the context of FTP requests
  
 * Define Cache settings (path and size)
@@ -1314,7 +1313,7 @@ Live GPS tracking
 ==================
 
 
-To activate Live GPS tracking in QGIS you need to select :menuselection:`View --> Live GPS tracking --> `. You will get a new docked Window on 
+To activate Live GPS tracking in QGIS you need to select :menuselection:`View --> Live GPS tracking -->` . You will get a new docked Window on 
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
@@ -1328,8 +1327,8 @@ There are 4 possible screens in this GPS tracking window
 * |mActionOptions| GPS options screen (see Figure :ref:`fig:gpstrack_options`).
 
 With a plugged in GPS receiver (has to be supported by your operating system)
-a simple click on |button| :menuselection:`Connect` connects the GPS to QGIS. 
-A second click (now |button| :menuselection:`Disconnect`) disconnects the 
+a simple click on :guilabel:`Connect` connects the GPS to QGIS. 
+A second click (now :guilabel:`Disconnect`) disconnects the 
 GPS-Receiver from your Computer. For GNU/Linux gpsd support is integrated to 
 support connection to most GPS receivers. Therefore you first have to configure 
 gpsd properly to connect QGIS to it.
@@ -1384,10 +1383,10 @@ GPS options
 |mActionOptions| In case of connection problems you can switch from 
 |radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| 
 :menuselection:`Use path/port below` and select the path/port your GPS receiver 
-is connected to.  A click on |button| :menuselection:`Connect` again initiates 
+is connected to.  A click on :guilabel:`Connect` again initiates 
 the connection to the GPS receiver.
 
-With the slider |slider| :menuselection:`GPS Cursor Size` you can shrink and grow 
+With the slider :menuselection:`GPS Cursor Size` |slider| you can shrink and grow 
 the position cursor on the canvas. Activating |radiobuttonon| 
 :menuselection:`Auto-add vertices` within GPS digitizing your track will 
 automatically be recorded in the active vector layer (of course the layer has to 
