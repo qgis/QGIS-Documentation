@@ -1400,7 +1400,7 @@ Track color and width sets the color of and the width of your drawn track.
 
 If you want to set a feature manually you have to go back to
 |mActionToggleEditing| ''Position Coordinates''
-and click on |button| :menuselection:`Add feature`.
+and click on :guilabel:`Add feature`.
 
 .. [1] Keyboard shortcuts can now be configured manually
    (shortcuts presented in this section are the defaults), using the Configure
