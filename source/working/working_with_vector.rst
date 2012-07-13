@@ -15,11 +15,11 @@ Oracle spatial and MS SQL spatial databases and many more. At the date of this
 document, 69 vector formats are supported by the OGR library [OGRweb]_. The complete 
 list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
-**note**: Not all of the listed formats may work in QGIS for various reasons. For 
-example, some require external commercial libraries or the GDAL/OGR installation 
-of your OS was not build to support the format you want to use. Only those formats 
-that have been well tested will appear in the list of file types when loading a 
-vector into QGIS. Other untested formats can be loaded by selecting *.*.
+.. note:: 
+   Not all of the listed formats may work in |qg| for various reasons. 
+   For example, some require external commercial libraries or the GDAL/OGR installation of your OS was not build to support the format you want to use. 
+   Only those formats that have been well tested will appear in the list of file types when loading a vector into |qg|. 
+   Other untested formats can be loaded by selecting *.*.
 
 Working with GRASS vector data is described in Section \ref{sec:grass}.
 
@@ -90,7 +90,7 @@ Selecting a shapefile from the list and clicking \button{Open} loads it into
 
 .. _tip_layer_colors:
 
-.. tip:: Layer Colors
+.. tip:: **Layer Colors**
 
    When you add a layer to the map, it is assigned a random color. When adding more than one layer at a time, different colors are assigned to each layer.
 
@@ -98,7 +98,7 @@ Once loaded, you can zoom around the shapefile using the map navigation tools. T
 
 .. _tip_load_from_external_drive_OSX:
 
-.. tip:: Load layer and project from mounted external drives on OS X
+.. tip:: **Load layer and project from mounted external drives on OS X**
 
    On OS X, portable drives that are mounted besides the primary hard drive do not show up under File \arrow Open Project as expected. We are working on a more OSX-native open/save dialog to fix this. As a workaround you can type '/Volumes' in the File name box and press return. Then you can navigate to external drives and network mounts.
 
@@ -206,10 +206,18 @@ Optional you can activate following checkboxes:
 
 Once all parameters and options are set, you can test the connection by clicking on the \button{Test Connect} button:index:`PostgreSQL!connection!testing`.
 
-\begin{Tip}\caption{\textsc{|qg| User Settings and Security}}:index:`settings`:index:`security`
-Your customized settings for |qg| are stored based on the operating system. |nix|, the settings are stored in your home directory in
-*.|qg|/}. |win|, the settings are stored in the registry. Depending on your computing environment, storing passwords in your |qg| settings may be a security risk.
-\end{Tip}
+.. _tip_settings_security:
+
+.. tip:: **QGIS User Settings and Security**
+
+   Your customized settings for |qg| are stored based on the operating system. 
+
+   * |nix|, the settings are stored in your home directory in \*.qgis/. 
+   * |win|, the settings are stored in the registry. 
+
+   Depending on your computing environment, storing passwords in your |qg| settings may be a security risk.
+
+
 
 Loading a PostGIS Layer
 -----------------------
@@ -221,9 +229,7 @@ Loading a PostGIS Layer
 To load a layer from PostGIS, perform the following steps:
 
 
-[label=--]
-*  If the :guilabel:`Add PostGIS Table(s)` dialog is not already open, click on the
-|mActionAddLayer| :guilabel:`Add PostGIS Layer` toolbar button.
+*  If the :guilabel:`Add PostGIS Table(s)` dialog is not already open, click on the |mActionAddLayer| :guilabel:`Add PostGIS Layer` toolbar button.
 *  Choose the connection from the drop-down list and click \button{Connect}.
 *  Select or unselect \checkbox{Also list tables with no geometry}
 *  Optionally use some \checkbox{Search Options} to define which features to load from the layer or use the \button{Build query} icon to start the Query builder dialog.
@@ -232,11 +238,13 @@ To load a layer from PostGIS, perform the following steps:
 *  Click on the \button{Add} button to add the layer to the map.
 
 
+.. _tip_postgis_layers:
 
-\begin{Tip}\caption{\textsc{PostGIS Layers}}
-Normally a PostGIS layer is defined by an entry in the geometry\_columns table. From version \OLD % should be 0.9.0 on, |qg| can load layers that do not have an entry in the geometry\_columns table. This includes both tables and views.
+.. tip:: **PostGIS Layers**
+
+   Normally a PostGIS layer is defined by an entry in the geometry_columns table. From version 0.9.0 on, |qg| can load layers that do not have an entry in the geometry_columns table. This includes both tables and views.
 Defining a spatial view provides a powerful means to visualize your data. Refer to your PostgreSQL manual for information on creating views.
-\end{Tip}
+
 
 Some details about PostgreSQL layers
 ------------------------------------
@@ -276,10 +284,13 @@ into a PostgreSQL database named \usertext{gis\_data}, use the following command
 This creates a new layer named \usertext{lakes\_new} in the
 \usertext{gis\_data} database. The new layer will have a spatial reference identifier (SRID) of 2964. See Section
 \ref{label_projections} for more information on spatial reference systems and projections.
-\begin{Tip}
-\caption{\textsc{Exporting datasets from PostGIS}:index:`PostGIS!Exporting`}
-Like the import-tool *shp2pgsql} there is also a tool to export PostGIS-datasets as shapefiles: *pgsql2shp}. This is shipped within your PostGIS distribution.
-\end{Tip}
+
+.. _tip_export_from_postgis:
+
+.. tip:: **Exporting datasets from PostGIS**
+
+   Like the import-tool **shp2pgsql** there is also a tool to export PostGIS-datasets as shapefiles: **pgsql2shp**. This is shipped within your PostGIS distribution.
+
 
 **SPIT Plugin**
 
@@ -292,10 +303,12 @@ To import a shapefile, click on the |spiticon| :guilabel:`SPIT` tool in the tool
 :guilabel:`SPIT - Shapefile to PostGIS Import Tool` dialog. Select the PostGIS database you want to connect to and click on \button{Connect}. If you want, you can define or change some import options. Now you can add one or more files to the queue by clicking on the \button{Add} button. To process the files, click on the \button{OK}
 button. The progress of the import as well as any errors/warnings will be displayed as each shapefile is processed.
 
-\begin{Tip}\caption{\textsc{Importing Shapefiles Containing PostgreSQL Reserved Words}}:index:`PostGIS!SPIT!reserved words`
-If a shapefile is added to the queue containing fields that are reserved words in the PostgreSQL database a dialog will popup showing the status of each field. You can edit the field names:index:`PostGIS!SPIT!editing field names`
-prior to import and change any that are reserved words (or change any other field names as desired). Attempting to import a shapefile with reserved words as field names will likely fail.
-\end{Tip}
+.. _tip_importing_shapefiles:
+
+.. tip:: **Importing Shapefiles Containing PostgreSQL Reserved Words**
+
+   If a shapefile is added to the queue containing fields that are reserved words in the PostgreSQL database a dialog will popup showing the status of each field. You can edit the field names prior to import and change any that are reserved words (or change any other field names as desired). Attempting to import a shapefile with reserved words as field names will likely fail.
+
 
 **ogr2ogr**
 
@@ -434,9 +447,12 @@ Creating a new SpatiaLite layer
 
 If you want to create a new SpatiaLite layer, please refer to section \ref{sec:create spatialite}.
 
-\begin{Tip}\caption{\textsc{SpatiaLite data management Plugins}}:index:`SpatiaLite!Data management`
-For SpatiaLite data management you can also use several Python plugins: QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and installed with the Plugin Installer.
-\end{Tip}
+.. _tip_spatialite_management_plugin:
+
+.. tip:: **SpatiaLite data management Plugins**
+
+   For SpatiaLite data management you can also use several Python plugins: QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and installed with the Plugin Installer.
+
 
 The Vector Properties Dialog
 ============================
@@ -552,9 +568,13 @@ Working with the New Generation Symbology
 In the \tab{Style} tab you can choose one of the four renderers: single symbol, categorized, graduated and rule-based. Depending on the chosen renderer, the symbology tab provides different settings and options, that will be described in the following sections. The new generation symbology dialog also provides a \button{Style Manager} button which gives access to the Style Manager
 (see section \ref{subsec:stylemanager}). The Style Manager allows you to edit and remove existing symbols and add new ones.
 
-\begin{Tip}\caption{\textsc{Select and change multiple symbols}}:index:`vector layers!symbology`
-The New Generation Symbology allows to select multiple symbols and right click to change color, transparency, size, or outline width of selected entries.
-\end{Tip}
+
+.. _tip_change_multiple_symbols:
+
+.. tip:: **Select and change multiple symbols**
+
+   The New Generation Symbology allows to select multiple symbols and right click to change color, transparency, size, or outline width of selected entries.
+
 
 Single Symbol Renderer
 ----------------------
@@ -1240,9 +1260,12 @@ Editing
 
 |qg| supports various capabilities for editing OGR, PostGIS and Spatialite vector layers. **Note** - the procedure for editing GRASS layers is different - see Section \ref{grass_digitizing} for details.
 
-\begin{Tip}\caption{\textsc{Concurrent Edits}}
-This version of |qg| does not track if somebody else is editing a feature at the same time as you. The last person to save their edits wins.
-\end{Tip}
+.. _tip_concurrent_edits:
+
+.. tip:: **Concurrent Edits**
+
+   This version of |qg| does not track if somebody else is editing a feature at the same time as you. The last person to save their edits wins.
+
 
 Setting the Snapping Tolerance and Search Radius
 ------------------------------------------------
@@ -1375,9 +1398,12 @@ This can be found in the context menu after right clicking on the legend entry f
 Alternately, you can use the :index:`Toggle Editing`
 |mActionToggleEditing| :guilabel:`Toggle editing` button from the digitizing toolbar to start or stop the editing mode.:index:`editing!icons` Once the layer is in edit mode, markers will appear at the vertices, and additional tool buttons on the editing toolbar will become available.
 
-\begin{Tip}\caption{\textsc{Save Regularly}}
-Remember to |mActionFileSave| :guilabel:`Save Edits` regularly. This will also check that your data source can accept all the changes.
-\end{Tip}
+.. _tip_save_regularly:
+
+.. tip:: **Save Regularly**
+
+   Remember to |mActionFileSave| :guilabel:`Save Edits` regularly. This will also check that your data source can accept all the changes.
+
 
 Adding Features
 ---------------
@@ -1408,9 +1434,12 @@ The attribute window will appear, allowing you to enter the information for the 
 
 With the |mActionMoveFeature| :guilabel:`Move Feature` icon on the toolbar you can move existing features.
 
-\begin{Tip}\caption{\textsc{Attribute Value Types}}
-At least for shapefile editing the attribute types are validated during the entry. Because of this, it is not possible to enter a number into the text-column in the dialog :guilabel:`Enter Attribute Values` or vice versa. If you need to do so, you should edit the attributes in a second step within the :guilabel:`Attribute table` dialog.
-\end{Tip}
+.. _tip_attributes_types:
+
+.. tip:: **Attribute Value Types**
+
+   At least for shapefile editing the attribute types are validated during the entry. Because of this, it is not possible to enter a number into the text-column in the dialog :guilabel:`Enter Attribute Values` or vice versa. If you need to do so, you should edit the attributes in a second step within the :guilabel:`Attribute table` dialog.
+
 
 Node Tool
 ---------
@@ -1424,11 +1453,12 @@ Important is to set the property \mainmenuopt{Settings} \arrow
 \dropmenuopttwo{mActionOptions}{Options} \arrow
 \tab{Digitizing} \arrow \selectnumber{Search Radius}{10} to a number greater than zero. Otherwise |qg| will not be able to tell which vertex is being edited.
 
-\begin{Tip}\caption{\textsc{Vertex Markers}}
-The current version of |qg| supports three kinds of vertex-markers -
-Semi transparent circle, Cross and None. To change the marker style, choose
-\dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu and click on the \tab{Digitizing} tab and select the appropriate entry.
-\end{Tip}
+.. _tip_vertex_markers:
+
+.. tip:: **Vertex Markers**
+
+   The current version of |qg| supports three kinds of vertex-markers: Semi transparent circle, Cross and None. To change the marker style, choose \dropmenuopttwo{mActionOptions}{Options} from the \mainmenuopt{Settings} menu and click on the \tab{Digitizing} tab and select the appropriate entry.
+
 
 Basic operations
 ----------------
@@ -1490,11 +1520,12 @@ As an example we are copying some lakes to a new layer:
 
 What happens if the source and target layers have different schemas (field names and types are not the same)? |qg| populates what matches and ignores the rest. If you don't care about the attributes being copied to the target layer, it doesn't matter how you design the fields and data types. If you want to make sure everything - feature and its attributes - gets copied, make sure the schemas match.
 
-\begin{Tip}\caption{\textsc{Congruency of Pasted Features}}
-If your source and destination layers use the same projection, then the pasted features will have geometry identical to the source layer.
-However if the destination layer is a different projection then |qg| cannot guarantee the geometry is identical.
-This is simply because there are small rounding-off errors involved when converting between projections.
-\end{Tip}
+.. _tip_projections_and_pasting:
+
+.. tip:: **Congruency of Pasted Features**
+
+   If your source and destination layers use the same projection, then the pasted features will have geometry identical to the source layer. However if the destination layer is a different projection then |qg| cannot guarantee the geometry is identical. This is simply because there are small rounding-off errors involved when converting between projections.
+
 
 Deleting Selected Features
 --------------------------
@@ -1507,10 +1538,12 @@ If we want to delete an entire polygon, we can do that by first selecting the po
 The |mActionEditCut| :guilabel:`Cut Features` tool on the digitizing toolbar can also be used to delete features. This effectively deletes the feature but also places it on a ``spatial clipboard". So we cut the feature to delete.
 We could then use the |mActionEditPaste| :guilabel:`paste tool` to put it back, giving us a one-level undo capability. Cut, copy, and paste work on the currently selected features, meaning we can operate on more than one at a time.
 
-\begin{Tip}\caption{\textsc{Feature Deletion Support}}
-When editing ESRI shapefiles, the deletion of features only works if |qg| is linked to a GDAL version 1.3.2 or greater.
-The OS X and Windows versions of |qg| available from the download site are built using GDAL 1.3.2 or higher.
-\end{Tip}
+.. _tip_deleting_features:
+
+.. tip:: **Feature Deletion Support**
+
+   When editing ESRI shapefiles, the deletion of features only works if |qg| is linked to a GDAL version 1.3.2 or greater. The OS X and Windows versions of |qg| available from the download site are built using GDAL 1.3.2 or higher.
+
 
 Saving Edited Layers
 --------------------
@@ -1525,9 +1558,12 @@ If you want to save edits to the current layer but want to continue editing with
 
 If the changes cannot be saved (e.g. disk full, or the attributes have values that are out of range), the |qg| in-memory state is preserved.  This allows you to adjust your edits and try again.
 
-\begin{Tip}\caption{\textsc{Data Integrity}}
-It is always a good idea to back up your data source before you start editing. While the authors of |qg| have made every effort to preserve the integrity of your data, we offer no warranty in this regard.
-\end{Tip}
+.. _tip_data_integrity:
+
+.. tip:: **Data Integrity**
+
+   It is always a good idea to back up your data source before you start editing. While the authors of |qg| have made every effort to preserve the integrity of your data, we offer no warranty in this regard.
+
 
 Advanced digitizing
 -------------------
@@ -1784,10 +1820,12 @@ Save selected features as new layer
 The selected features can be saved as any OGR supported vector format and also transformed into another Coordinate Reference System (CRS). Just open the right mouse menu of the layer and click on \dropmenuopt{Save selection as} to define the name of the output file, its format and CRS (see Section \ref{label_legend}).
 It is also possible to specify OGR creation options within the dialog.
 
-\begin{Tip}\caption{\textsc{Manipulating Attribute data}}
-Currently only PostGIS layers are supported for adding or dropping attribute columns within this dialog. In future versions of |qg|, other datasources will be supported, because this feature was implemented in GDAL/OGR
-> 1.6.0
-\end{Tip}
+.. _tip_attribute_columns:
+
+.. tip:: **Manipulating Attribute data**
+
+   Currently only PostGIS layers are supported for adding or dropping attribute columns within this dialog. In future versions of |qg|, other datasources will be supported, because this feature was implemented in GDAL/OGR > 1.6.0
+
 
 Working with non spatial attribute tables
 =========================================
@@ -1829,12 +1867,12 @@ The **Operators section** contains all usable operators. To add an operator to t
 
 The \button{Test} button shows a message box with the number of features satisfying the current query, which is usable in the process of query construction. The \button{Clear} button clears the text in the SQL where clause text field. The \button{Save} and \button{Load} button allow to save and load SQL queries. The \button{OK} button closes the window and selects the features satisfying the query. The \button{Cancel} button closes the window without changing the current selection.
 
-\begin{Tip}\caption{\textsc{Changing the Layer Definition}}:index:`Query Builder!changing layer definitions`
-You can change the layer definition after it is loaded by altering the SQL query used to define the layer. To do this, open the vector :guilabel:`Layer Properties`
-dialog by double-clicking on the layer in the legend and click on the
-\button{Query Builder} button on the \tab{General} tab. See Section
-\ref{sec:vectorprops} for more information.
-\end{Tip}
+.. _tip_sql_layer_definition:
+
+.. tip:: **Changing the Layer Definition**
+
+   You can change the layer definition after it is loaded by altering the SQL query used to define the layer. To do this, open the vector :guilabel:`Layer Properties` dialog by double-clicking on the layer in the legend and click on the \button{Query Builder} button on the \tab{General} tab. See Section \ref{sec:vectorprops} for more information.
+
 
 Select by query
 ===============
