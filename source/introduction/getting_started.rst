@@ -110,7 +110,7 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 
 **start |qg|**
 
-* |nix| Start |qg| by typing: ``|qg|`` at a command prompt, or
+* |nix| Start |qg| by typing: "|qg|" at a command prompt, or
   if using precompiled binary, using the Applications menu.
 * |win| Start |qg| using the Start menu or desktop shortcut, 
   or double click on a |qg| project file.
@@ -145,7 +145,7 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 #. Click on the :guilabel:`Labels` tab and check the |checkbox| 'Display lables'
    checkbox to enable labeling. Choose NAMES field as field containing label.
 #. To improve readability of labels, you can add a white buffer around them,
-   by clicking ``Buffer'' in the list on the left, checking |checkbox| 'Buffer labels?'
+   by clicking "Buffer" in the list on the left, checking |checkbox| 'Buffer labels?'
    and choosing 3 as buffer size.
 #. Click :guilabel:`Apply`, check if the result looks good and finally 
    click :guilabel:`OK`.

@@ -160,9 +160,9 @@ interface as discussed below):
 
 .. `fig_startup`:
 
-.. figure:: img/en/startup.png
+.. figure:: ../img/en/startup.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    QGIS GUI with Alaska sample data (KDE)
 
@@ -712,11 +712,13 @@ Section :ref:`label_menubar` below. Additionally the menu option
 change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS 
 features.
 
-.. figure:: img/en/shortcuts.png 
-   :align:center
-   :width: 8cm
+.. _`shortcuts`:
 
-    Define shortcut options |nix| (KDE)}
+.. figure:: ../img/en/shortcuts.png 
+   :align: center
+   :width: 30em
+
+   Define shortcut options |nix| (KDE)
 
 Configuration is very simple. Just select a feature from the list and click
 on :guilabel:`Change`, :guilabel:`Set none` or :guilabel:`Set default`. Once you 
@@ -906,23 +908,23 @@ Measure tools in action
 
 .. _`measure_line`:
 
-.. figure:: img/en/measure_line.png
+.. figure:: ../img/en/measure_line.png
    :align: center
-   :width: 1em
+   :width: 30em
 
    Measure lines
 
 .. _`measure_area`:
 
-.. figure:: img/en/measure_area.png
+.. figure:: ../img/en/measure_area.png
    :align: center
-   :width: 0.33em
+   :width: 30em
 
    Measure areas
 
 .. _`measure_angle`:
 
-.. figure:: img/en/measure_angle.png
+.. figure:: ../img/en/measure_angle.png
    :align: center
    :width: 30em
 
@@ -1153,9 +1155,9 @@ a layer without CRS is loaded.
 
 .. _`fig_proxy-settings`:
 
-.. figure:: img/en/proxy-settings.png
+.. figure:: ../img/en/proxy-settings.png
    :align: center
-   :width: 30em
+   :width: 50em
    
    Proxy-settings in |qg|
 
@@ -1220,9 +1222,11 @@ The |mActionTextAnnotation| text annotation tools in the attribute toolbar
 provides the possibility to place formatted text in a balloon on the QGIS map 
 canvas. Use the text annotation tool and click into the map canvas.
 
-.. figure:: img/en/annotation.png
+.. _`annotation`:
+
+.. figure:: ../img/en/annotation.png
    :align: center
-   :width: 12 cm
+   :width: 30 em
 
    Annotation text dialog |nix| 
 
