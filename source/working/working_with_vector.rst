@@ -1,4 +1,4 @@
-.. _vector_working_with:
+.. _label_workingvector:
 
 ==========================
  Working with Vector Data
@@ -16,10 +16,7 @@ document, 69 vector formats are supported by the OGR library [OGRweb]_. The comp
 list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note:: 
-   Not all of the listed formats may work in |qg| for various reasons. 
-   For example, some require external commercial libraries or the GDAL/OGR installation of your OS was not build to support the format you want to use. 
-   Only those formats that have been well tested will appear in the list of file types when loading a vector into |qg|. 
-   Other untested formats can be loaded by selecting *.*.
+   Not all of the listed formats may work in |qg| for various reasons. For example, some require external commercial libraries or the GDAL/OGR installation of your OS was not build to support the format you want to use. Only those formats that have been well tested will appear in the list of file types when loading a vector into |qg|. Other untested formats can be loaded by selecting *.*.
 
 Working with GRASS vector data is described in Section :ref:`grass`.
 
@@ -144,7 +141,7 @@ Loading an ArcInfo Binary Coverage
 
 Similarly, you can load directory based vector files in the UK National Transfer Format as well as the raw TIGER Format of the US Census Bureau.
 
-.. _vector_postgis:
+.. _label_postgis:
 
 PostGIS Layers
 ==============
@@ -436,15 +433,11 @@ Usage
 ``gis\_data=\# update TABLE set the\_geom=ST\_shift\_longitude(the\_geom);``
 *  If everything went right you should receive a confirmation about the number of features that were updated, then you'll be able to load the map and see the difference (Figure_vector_5_)
 
-
+.. _label_spatialite:
 
 SpatiaLite Layers
 =================
 
-:index:`SpatiaLite layers!properties dialog`
-:index:`vector layers!SpatlaLIte|see{SpatiaLite`}
-:index:`SpatiaLite!layers`
-`label_spatialite`:
 
 |mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite database, begin by clicking on the |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer` toolbar button or by selecting the \dropmenuopttwo{mActionAddSpatiaLiteLayer}{Add SpatiaLite Layer...} option from the \mainmenuopt{Layer} menu or by typing \keystroke{Ctrl+Shift+L}.
 This will bring up a window, which will allow you to either connect to a SpatiaLite database already known to |qg|, which you can choose from the dropdown menu or to define a new connection to a new database. To define a new connection, click on \button{New} and use the file browser to point to your SpatiaLite database, which is a file with a *.sqlite } extension.
@@ -1336,7 +1329,7 @@ Avoid intersections of new polygons
 The second topological option in the \checkbox{Avoid Int.} column, called
 'Avoid intersections of new polygons' avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons. If you already have one polygon, it is possible with this option to digitise the second one such that both intersect and |qg| then cuts the second polygon to the common boundary. The advantage is that users don't have to digitize all vertices of the common boundary.
 
-.. _vector_digitizing_existing_layer:
+.. _sec_edit_existing_layer:
 
 Digitizing an existing layer
 ----------------------------
@@ -1348,7 +1341,7 @@ Digitizing an existing layer
 By default, |qg| loads layers read-only: This is a safeguard to avoid accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider supports it, and the underlying data source is writable (i.e. its files are not read-only). Layer editing is most versatile when used on PostgreSQL/PostGIS data sources.
 
-In general, editing vector layers is divided into a digitizing and an advanced digitizing toolbar, described in Section :ref:`vector_advanced_digitizing`. You can select and unselect both under \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
+In general, editing vector layers is divided into a digitizing and an advanced digitizing toolbar, described in Section :ref:`sec_advanced_edit`. You can select and unselect both under \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
 Using the basic digitizing tools you can perform the following functions:
 
 .. _table_editing:
@@ -1544,7 +1537,7 @@ If the changes cannot be saved (e.g. disk full, or the attributes have values th
 
    It is always a good idea to back up your data source before you start editing. While the authors of |qg| have made every effort to preserve the integrity of your data, we offer no warranty in this regard.
 
-.. _vector_advanced_digitizing:
+.. _sec_advanced_edit:
 
 Advanced digitizing
 -------------------
@@ -1688,16 +1681,18 @@ To change the rotation, select a point feature in the map canvas and rotate it h
 .. note:: 
    If you hold the \keystroke{Ctrl} key pressed, the rotation will be done in 15 degree steps.
 
+.. _sec_create_shape:
+
 Creating a new Shapefile and Spatialite layer
 ---------------------------------------------
-`sec_create shape`::index:`editing!creating a new shape layer`
+
 
 |qg| allows to create new Shapefile layers and new Spatialite layers.
 Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer to section :ref:`creating_new_grass_vectors` for more information on creating GRASS vector layers.
 
 Creating a new Shapefile layer
 ------------------------------
-`sec_create shape`::index:`editing!creating a new shapefile layer`
+
 
 To create a new Shape layer for editing, choose \button{new} \arrow
 |mActionNewVectorLayer| :guilabel:`New Shapefile Layer` from the
@@ -1713,7 +1708,7 @@ Note that |qg| does not yet support creation of 2.5D features (i.e. features wit
 
 To complete the creation of the new Shapefile layer, add the desired attributes by clicking on the \button{Add} button and specifying a name and type for the attribute. A first 'id' column is added as default but can be removed, if not wanted. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
 \selectstring{Type}{string} attributes are supported. Additionally and according to the attribute type you can also define the width and precision of the new attribute column. Once you are happy with the attributes, click
-\button{OK} and provide a name for the shapefile. |qg| will automatically add a *.shp} extension to the name you specify. Once the layer has been created, it will be added to the map and you can edit it in the same way as described in Section :ref:`vector_digitizing_existing_layer` above.
+\button{OK} and provide a name for the shapefile. |qg| will automatically add a *.shp} extension to the name you specify. Once the layer has been created, it will be added to the map and you can edit it in the same way as described in Section :ref:`sec_edit_existing_layer` above.
 
 .. _vector_create_spatialite:
 
@@ -1734,15 +1729,15 @@ To create a new SpatiaLite layer for editing, choose \button{new} \arrow
 First step is to select an existing Spatialite database or to create a new Spatialite database. This can be done with the browse \button{...} button to the right of the database field. Then add a name for the new layer and define the layer type and the EPSG SRID. If desired you can select to
 \checkbox{create an autoincrementing primary key}.
 
-To define an attribute table for the new Spatialite layer, add the names of the attribute columns you want to create with the according column type and click on the \button{Add to attribute list} button. Once you are happy with the attributes, click \button{OK}. |qg| will automatically add the new layer to the legend and you can edit it in the same way as described in Section :ref:`vector_digitizing_existing_layer` above.
+To define an attribute table for the new Spatialite layer, add the names of the attribute columns you want to create with the according column type and click on the \button{Add to attribute list} button. Once you are happy with the attributes, click \button{OK}. |qg| will automatically add the new layer to the legend and you can edit it in the same way as described in Section :ref:`sec_edit_existing_layer` above.
 
 The spatialite creation dialog allows to create multiple layers without closing the dialog when you click \button{Apply}.
+
+.. _`sec_attribute table`:
 
 Working with the Attribute Table
 --------------------------------
 
-`sec_attribute table`:
-:index:`editing!working with the attribute table`
 
 The attribute table displays features of a selected layer. Each row in the table represents one map feature and each column contains a particular piece of information about the feature. Features in the table can be searched, selected, moved or even edited.
 
@@ -1794,7 +1789,6 @@ The other buttons at the bottom left of the attribute table window provide follo
 *  |mActionDeleteAttribute| :guilabel:`Delete Column` only for PostGIS layers yet also with \keystroke{Ctrl+L}
 *  |mActionCalculateField| :guilabel:`Open field calculator` also with
 \keystroke{Ctrl+I}
-
 
 
 Save selected features as new layer
