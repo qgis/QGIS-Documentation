@@ -21,7 +21,7 @@ list is available at http://www.gdal.org/ogr/ogr_formats.html.
    Only those formats that have been well tested will appear in the list of file types when loading a vector into |qg|. 
    Other untested formats can be loaded by selecting *.*.
 
-Working with GRASS vector data is described in Section \ref{sec:grass}.
+Working with GRASS vector data is described in Section :ref:`grass`.
 
 This section describes how to work with several common formats: ESRI shapefiles, 
 PostGIS layers and Spatialite layers. Many of the features available in |qg| work 
@@ -55,23 +55,23 @@ Loading a Shapefile
 |mActionAddNonDbLayer| To load a shapefile, start |qg| and click on the |mActionAddNonDbLayer| 
 toolbar button or simply type \keystroke{Ctrl+Shift+V}.
 
-This will bring up a new window (see figure_vector1_).
+This will bring up a new window (see figure_vector_1_).
 
-.. _figure_vector1:
+.. _figure_vector_1:
 .. figure:: img/en/Addvectorlayerdialog.png
    :align: center
 
    Figure Vector 1: Add Vector Layer Dialog |nix|
 
 From the available options check \radiobuttonon{File}. Click on \button{Browse}.
-That will bring up a standard open file dialog (see figure_vector2_) which allows you to 
+That will bring up a standard open file dialog (see figure_vector_2_) which allows you to 
 navigate the file system and load a shapefile or other supported data source.
 The selection box \selectstring{Files of type}{\ldots} allows you to preselect some OGR 
 supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
-.. _figure_vector2:
+.. _figure_vector_2:
 .. figure:: img/en/shapefileopendialog.png
    :width: 450
    :align: center
@@ -79,9 +79,9 @@ You can also select the Encoding type for the shapefile if desired.
    Figure Vector 2: Open an OGR Supported Vector Layer Dialog |nix|
 
 Selecting a shapefile from the list and clicking \button{Open} loads it into
-|qg|. Figure_vector3_ shows |qg| after loading the *alaska.shp* file.
+|qg|. Figure_vector_3_ shows |qg| after loading the *alaska.shp* file.
 
-.. _figure_vector3:
+.. _figure_vector_3:
 .. figure:: img/en/shapefileloaded.png
    :width: 650
    :align: center
@@ -94,7 +94,7 @@ Selecting a shapefile from the list and clicking \button{Open} loads it into
 
    When you add a layer to the map, it is assigned a random color. When adding more than one layer at a time, different colors are assigned to each layer.
 
-Once loaded, you can zoom around the shapefile using the map navigation tools. To change the style of a layer, open the :guilabel:`Layer Properties` dialog by double clicking on the layer name or by right-clicking on the name in the legend and choosing \dropmenuopt{Properties} from the popup menu. See Section \ref{sec:symbology} for more information on setting symbology of vector layers.
+Once loaded, you can zoom around the shapefile using the map navigation tools. To change the style of a layer, open the :guilabel:`Layer Properties` dialog by double clicking on the layer name or by right-clicking on the name in the legend and choosing \dropmenuopt{Properties} from the popup menu. See Section :ref:`vector_style_tab` for more information on setting symbology of vector layers.
 
 .. _tip_load_from_external_drive_OSX:
 
@@ -163,38 +163,44 @@ Creating a stored Connection
 \dropmenuopttwo{mActionAddLayer}{Add PostGIS Layer...} option from the
 \mainmenuopt{Layer} menu or typing \keystroke{Ctrl+Shift+D}. You can also open the :guilabel:`Add Vector Layer` dialog and select \radiobuttonon{Database}.
 The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access the connection manager:index:`PostgreSQL!connection manager`, click on the \button{New} button to display the \\
-:guilabel:`Create a New PostGIS Connection` dialog. The parameters required for a connection are shown in table \ref{tab:postgis_connection_parms}.
+:guilabel:`Create a New PostGIS Connection` dialog. The parameters required for a connection are shown in table :ref:`table_connections`.
 
-\begin{table}[ht]:index:`PostgreSQL!connection parameters`
-\centering
-\caption{PostGIS Connection Parameters}`tab_postgis_connection_parms`:\medskip
- \begin{tabular}{|l|p{5in}|}
-\hline Name & A name for this connection. Can be the same as \textsl{Database}. \\
-\hline Service & Service parameter to be used alternatively to hostname/port
-(and potentially database). This can be defined in pg\_service.conf \\
-\hline Host :index:`PostgreSQL!host`
-& Name of the database host. This must be a resolvable host name the same as would be used to open a telnet connection or ping the host. If the database is on the same computer as |qg|, simply enter 'localhost' here. \\
-\hline Port :index:`PostgreSQL!port`& Port number the PostgreSQL database server listens on. The default port is 5432.\\
-\hline Database :index:`PostgreSQL!database` & Name of the database.  \\
-\hline SSL mode :index:`PostgreSQL!sslmode`& How the SSL connection will be negotiated with the server. These are the options:
-\begin {itemize}
-\item disable: only try an unencrypted SSL connection;
-\item allow: try a non-SSL connection, if that fails, try an SSL connection;
-\item prefer (the default): try an SSL connection, if that fails, try a non-SSL connection;
-\item require: only try an SSL connection.
-\end {itemize}
-Note that massive speedups in PostGIS layer rendering can be achieved by disabling SSL in the connection editor. \\
-\hline Username :index:`PostgreSQL!username`& User name used to login to the database. \\
-\hline Password :index:`PostgreSQL!password`& Password used with
-\textsl{Username} to connect to the database.\\
-\hline
-\end{tabular}
-\end{table}
+index:`PostgreSQL!connection parameters`
+
+.. _table_connections:
+
+
+
+==============  ================================================================================
+\               \
+--------------  --------------------------------------------------------------------------------
+Name            A name for this connection. Can be the same as *Database*
+--------------  --------------------------------------------------------------------------------
+Service         Service parameter to be used alternatively to hostname/port (and potentially database). This can be defined in pg\_service.conf
+Host            Name of the database host. This must be a resolvable host name the same as would be used to open a telnet connection or ping the host. If the database is on the same computer as |qg|, simply enter 'localhost' here.
+Port            Port number the PostgreSQL database server listens on. The default port is 5432.
+Database        Name of the database.
+SSL mode        How the SSL connection will be negotiated with the server. 
+                
+                These are the options:
+
+                + disable: only try an unencrypted SSL connection
+                + allow: try a non-SSL connection, if that fails, try an SSL connection
+                + prefer (the default): try an SSL connection, if that fails, try a 
+                  non-SSL connection;
+                + require: only try an SSL connection.
+
+                Note that massive speedups in PostGIS layer rendering can be achieved by disabling SSL in the connection editor.
+username        User name used to login to the database.
+Password        Password used with *Username* to connect to the database.
+==============  ================================================================================
+
+**Table PostGIS Connection Parameters**
+
 
 Optional you can activate following checkboxes:
 
 
-[label=--]
 *  \checkbox{Save Username}
 *  \checkbox{Save Password}
 *  \checkbox{Only look in the geometry\_columns table}
@@ -218,13 +224,13 @@ Once all parameters and options are set, you can test the connection by clicking
    Depending on your computing environment, storing passwords in your |qg| settings may be a security risk.
 
 
+.. _vector_loading_postgis:
 
 Loading a PostGIS Layer
 -----------------------
-:index:`PostgreSQL!loading layers`
 
-|mActionAddLayer| Once you have one or more connections defined, you can load layers from the PostgreSQL database. Of course this requires having data in PostgreSQL. See Section
-\ref{sec:loading_postgis_data} for a discussion on importing data into the database.
+
+|mActionAddLayer| Once you have one or more connections defined, you can load layers from the PostgreSQL database. Of course this requires having data in PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for a discussion on importing data into the database.
 
 To load a layer from PostGIS, perform the following steps:
 
@@ -234,7 +240,7 @@ To load a layer from PostGIS, perform the following steps:
 *  Select or unselect \checkbox{Also list tables with no geometry}
 *  Optionally use some \checkbox{Search Options} to define which features to load from the layer or use the \button{Build query} icon to start the Query builder dialog.
 *  Find the layer(s) you wish to add in the list of available layers.
-*  Select it by clicking on it. You can select multiple layers by holding down the \keystroke{Shift} key while clicking. See Section \ref{sec:query_builder} for information on using the PostgreSQL Query Builder to further define the layer.
+*  Select it by clicking on it. You can select multiple layers by holding down the \keystroke{Shift} key while clicking. See Section :ref:`vector_query_builder` for information on using the PostgreSQL Query Builder to further define the layer.
 *  Click on the \button{Add} button to add the layer to the map.
 
 
@@ -263,6 +269,8 @@ If a suitable column cannot be found, |qg| will not load the layer. If this occu
 .. %FIXME: Add missing information
 .. % When dealing with views, |qg| parses the view definition and
 
+.. _vector_import_data_in_postgis:
+
 Importing Data into PostgreSQL
 ------------------------------
 `sec_loading_postgis_data`:
@@ -283,7 +291,7 @@ into a PostgreSQL database named \usertext{gis\_data}, use the following command
 
 This creates a new layer named \usertext{lakes\_new} in the
 \usertext{gis\_data} database. The new layer will have a spatial reference identifier (SRID) of 2964. See Section
-\ref{label_projections} for more information on spatial reference systems and projections.
+:ref:`label_projections` for more information on spatial reference systems and projections.
 
 .. _tip_export_from_postgis:
 
@@ -345,7 +353,9 @@ If you like to use PostgreSQL's *COPY}-command instead of the default
 
 *ogr2ogr} does not create spatial indexes like *shp2pgsl}
 does. You need to create them manually using the normal SQL-command
-*CREATE INDEX} afterwards as an extra step (as described in the next section \ref{label_improve}).
+*CREATE INDEX} afterwards as an extra step (as described in the next section :ref:`vector_improving_performance`).
+
+.. _vector_improving_performance:
 
 Improving Performance
 ---------------------
@@ -388,9 +398,9 @@ Vector layers crossing 180$^\circ$ longitude
 :index:`vector layers!crossing`
 
 Many GIS packages don't wrap vector maps, with a geographic reference system
-(lat/lon), crossing the \degrees{180} longitude line. As result, if we open such map in |qg|, we will see two far, distinct locations, that should show near each other. In Figure_vector4_ the tiny point on the far left of the map canvas (Chatham Islands), should be within the grid, right of New Zealand main islands.
+(lat/lon), crossing the \degrees{180} longitude line. As result, if we open such map in |qg|, we will see two far, distinct locations, that should show near each other. In Figure_vector_4_ the tiny point on the far left of the map canvas (Chatham Islands), should be within the grid, right of New Zealand main islands.
 
-.. _figure_vector4:
+.. _figure_vector_4:
 .. figure:: img/en/vectorNotWrapping.png
    :width: 650
    :align: center
@@ -405,7 +415,7 @@ function. This function reads every point/vertex in every component of every fea
 \degrees{360} to it. The result would be a \degrees{0} - \degrees{360} version of the data to be plotted in a \degrees{180} centric map.
 
 
-.. _figure_vector5:
+.. _figure_vector_5:
 .. figure:: img/en/vectorWrapping.png
    :width: 650
    :align: center
@@ -420,11 +430,11 @@ Usage
 
 
 [label=--]
-*  Import data to PostGIS (\ref{sec:loading_postgis_data}) using for example the PostGIS Manager plugin or the SPIT plugin
+*  Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using for example the PostGIS Manager plugin or the SPIT plugin
 *  Use the PostGIS command line interface to issue the following command
 (this is an example where "TABLE" is the actual name of your PostGIS table) \\
 ``gis\_data=\# update TABLE set the\_geom=ST\_shift\_longitude(the\_geom);``
-*  If everything went right you should receive a confirmation about the number of features that were updated, then you'll be able to load the map and see the difference (Figure_vector5_)
+*  If everything went right you should receive a confirmation about the number of features that were updated, then you'll be able to load the map and see the difference (Figure_vector_5_)
 
 
 
@@ -445,7 +455,7 @@ Creating a new SpatiaLite layer
 -------------------------------
 
 
-If you want to create a new SpatiaLite layer, please refer to section \ref{sec:create spatialite}.
+If you want to create a new SpatiaLite layer, please refer to section :ref:`vector_create_spatialite`.
 
 .. _tip_spatialite_management_plugin:
 
@@ -453,11 +463,11 @@ If you want to create a new SpatiaLite layer, please refer to section \ref{sec:c
 
    For SpatiaLite data management you can also use several Python plugins: QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and installed with the Plugin Installer.
 
+.. _vector_properties_dialog:
 
 The Vector Properties Dialog
 ============================
-`sec_vectorprops`:
-:index:`vector layers!properties dialog`
+
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides information about the layer, symbology settings and labeling options. If your vector layer has been loaded from a PostgreSQL/PostGIS datastore, you can also alter the underlying SQL for the layer by invoking the :guilabel:`Query Builder`
 dialog on the \tab{General} tab.
@@ -465,7 +475,7 @@ To access the :guilabel:`Layer Properties` dialog, double-click on a layer in th
 from the popup menu.
 
 
-.. _figure_vector6:
+.. _figure_vector_6:
 .. figure:: img/en/vectorLayerSymbology.png
    :width: 650
    :align: center
@@ -473,15 +483,17 @@ from the popup menu.
    Figure Vector 6: Vector Layer Properties Dialog |nix|
 
 
+.. _vector_style_tab:
+
 Style Tab
 ---------
-`sec_symbology`:
-:index:`vector layers!symbology`
+
 
 Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and finally replace the old symbology. |qg| 1.7.0 now uses the new symbology as default, which provides a variety of improvements and new features.
 
-A description of the old symbology is available in section
-\ref{sec:oldsymbology}.
+A description of the old symbology is available in section :ref:`vector_old_symbology`.
+
+.. _vector_new_symbology:
 
 Understanding the new generation symbology
 ------------------------------------------
@@ -489,42 +501,31 @@ Understanding the new generation symbology
 
 There are three types of symbols: marker symbols (for points), line symbols (for lines) and fill and outline symbols (for polygons). Symbols can consist of one or more symbol layers. It is possible to define the color of a symbol and this color is then defined for all symbol layers. Some layers may have the color locked - for those the color can not be altered. This is useful when you define the color of a multilayer symbol. Similarly, it is possible to define the width for line symbols, as well as size and rotation for marker symbols.
 
+.. _vector_symbol_types:
+
 Available symbol layer types
 ----------------------------
-`symboltypes`:
 
+* Point layers
 
-[label=--]
-*  Point layers
+  - **Font marker**: Rendering with a font.
+  - **Simple marker**: Rendering with a hardcoded marker.
+  - **SVG marker**: Rendering with a SVG picture.
 
-[label=--]
-*  **Font marker**: Rendering with a font.
-*  **Simple marker**: Rendering with a hardcoded marker.
-*  **SVG marker**: Rendering with a SVG picture.
+* Line layers
 
+  - **Line decoration**: Add a line decoration, e.g an arrow to indicate line direction.
+  - **Marker line**: A line rendered by repeating a marker symbol.
+  - **Simple line**: Usual rendering of a line (with specified width color and pen style).
 
-\item Line layers
+* Polygon layers
 
-[label=--]
-*  **Line decoration**: Add a line decoration, e.g an arrow to indicate line direction.
-*  **Marker line**: A line rendered by repeating a marker symbol.
-*  **Simple line**: Usual rendering of a line (with specified width,
-	color and pen style).
-
-
-\item Polygon layers
-
-[label=--]
-*  **Centroid fill**: Fill a polygon centroid with a hardcoded marker.
-*  **SVG fill**: Fill a polygon with a SVG symbol.
-*  **Simple fill**: Usual rendering of a polygon (with defined fill color,
-	fill pattern and outline).
-*  **Outline: Line decoration**: Add a line decoration, e.g an arrow to indicate line direction.
-*  **Outline: Marker line**: Use a hardcoded marker as area outline.
-*  **Outline: Simple line**: Define width, color and pen style as area outline.
-
-
-
+  - **Centroid fill**: Fill a polygon centroid with a hardcoded marker.
+  - **SVG fill**: Fill a polygon with a SVG symbol.
+  - **Simple fill**: Usual rendering of a polygon (with defined fill color, fill pattern and outline).
+  - **Outline: Line decoration**: Add a line decoration, e.g an arrow to indicate line direction.
+  - **Outline: Marker line**: Use a hardcoded marker as area outline.
+  - **Outline: Simple line**: Define width, color and pen style as area outline.
 
 
 Color ramps
@@ -535,16 +536,12 @@ Color ramps are used to define a range of colors that can be used during the cre
 
 There are three types of color ramps:
 
-
-[label=--]
-*  **Gradient**: Linear gradient from one color to some other.
-*  **Random**: Randomly generated colors from a specified area of color space.
-*  **ColorBrewer**: Create color area from a color shema and a defined number of color classes.
-
-
+* **Gradient**: Linear gradient from one color to some other.
+* **Random**: Randomly generated colors from a specified area of color space.
+* **ColorBrewer**: Create color area from a color shema and a defined number of color classes.
 
 Color ramps can be defined in the \tab{Color ramp} tab of the :guilabel:`Style Manager`
-(see Section \ref{subsec:stylemanager}) by clicking the \button{Add} button and then choosing a color ramp type.
+(see Section :ref:`vector_style_manager`) by clicking the \button{Add} button and then choosing a color ramp type.
 
 Styles
 ------
@@ -563,10 +560,9 @@ The categorized and graduated renderer can be created by specifying a symbol and
 Working with the New Generation Symbology
 =========================================
 
-`new_generation_sym`:
 
 In the \tab{Style} tab you can choose one of the four renderers: single symbol, categorized, graduated and rule-based. Depending on the chosen renderer, the symbology tab provides different settings and options, that will be described in the following sections. The new generation symbology dialog also provides a \button{Style Manager} button which gives access to the Style Manager
-(see section \ref{subsec:stylemanager}). The Style Manager allows you to edit and remove existing symbols and add new ones.
+(see section :ref:`vector_style_manager`). The Style Manager allows you to edit and remove existing symbols and add new ones.
 
 
 .. _tip_change_multiple_symbols:
@@ -598,7 +594,7 @@ After having done any needed changes, the symbol can be added to the list of cur
 .. |singlesymbol_ng_area| image:: img/en/singlesymbol_ng_area.png
    :width: 330
 
-.. _figure_symbology1:
+.. _figure_symbology_1:
 
 +-----------------------------------+----------------------------------+
 | |singlesymbol_ng_point|           | |singlesymbol_ng_line|           |
@@ -618,28 +614,26 @@ Categorized Renderer
 The Categorized Renderer is used to render all features from a layer, using a single user-defined symbol, which color reflects the value of a selected feature's attribute. The \tab{Style} tab allows you to select:
 
 
-[label=--]
-*  The attribute (using the Column listbox)
-*  The symbol (using the Symbol dialog)
-*  The colors (using the Color Ramp listbox)
-
+* The attribute (using the Column listbox)
+* The symbol (using the Symbol dialog)
+* The colors (using the Color Ramp listbox)
 
 
 The \button{Advanced} button in the lower right corner of the dialog allows to set the fields containing rotation and size scale information.
 For convenience, the list in the bottom part of the tab lists the values of all currently selected attributes together, including the symbols that will be rendered.
 
-The example in figure_symbology2_ shows the category rendering dialog used for the rivers layer of the |qg| sample dataset.
+The example in figure_symbology_2_ shows the category rendering dialog used for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology2:
+.. _figure_symbology_2:
 .. figure:: img/en/categorysymbol_ng_line.png
    :width: 650
    :align: center
 
    Figure Symbology 2: Categorized Symbolizing options |nix|
 
-You can create a custom color ramp choosing New color ramp... from the Color ramp dropdown menu. A dialog will prompt for the ramp type: Gradient, Random, ColorBrewer, then each one has options for number of steps and/or multiple stops in the color ramp. See figure_symbology3_ for an example of custom color ramp.
+You can create a custom color ramp choosing New color ramp... from the Color ramp dropdown menu. A dialog will prompt for the ramp type: Gradient, Random, ColorBrewer, then each one has options for number of steps and/or multiple stops in the color ramp. See figure_symbology_3_ for an example of custom color ramp.
 
-.. _figure_symbology3:
+.. _figure_symbology_3:
 .. figure:: img/en/customColorRampGradient.png
    :align: center
 
@@ -653,35 +647,33 @@ The Graduated Renderer is used to render all the features from a layer, using a 
 
 Analogue to the categorized rendered, the \tab{Style} tab allows you to select:
 
-
-[label=--]
-*  The attribute (using the Column listbox)
-*  The symbol (using the Symbol Properties button)
-*  The colors (using the Color Ramp list)
+* The attribute (using the Column listbox)
+* The symbol (using the Symbol Properties button)
+* The colors (using the Color Ramp list)
 
 
 
 Additionally, you can specify the number of classes and also the mode how to classify features inside the classes (using the Mode list). The available modes are:
 
 
- *  Equal Interval
- *  Quantile
- *  Natural Breaks (Jenks)
- *  Standard Deviation
- *  Pretty Breaks
+* Equal Interval
+* Quantile
+* Natural Breaks (Jenks)
+* Standard Deviation
+* Pretty Breaks
 
 
 
 The listbox in the  bottom part of the \tab{Style} tab lists the classes together with their ranges, labels and symbols that will be rendered.
 
-The example in figure_symbology4_ shows the graduated rendering dialog for the rivers layer of the |qg| sample dataset.
+The example in figure_symbology_4_ shows the graduated rendering dialog for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology4:
+.. _figure_symbology_4:
 .. figure:: img/en/graduatesymbol_ng_line.png
    :width: 650
    :align: center
 
-   Figure Symbology4: Graduated Symbolizing options |nix|
+   Figure Symbology 4: Graduated Symbolizing options |nix|
 
 
 Rule-based rendering
@@ -690,9 +682,9 @@ Rule-based rendering
 
 The rule-based renderer is used to render all the features from a layer, using rule based symbols, whose color reflects the classification of a selected feature's attribute to a class. The rules are based on SQL statements. You can also use the Query Builder to create them. The dialog allows rule grouping by filter or scale and you can decide if you want to enable symbol levels or use only first matched rule.
 
-The example in figure_symbology5 shows the rule-based rendering dialog for the rivers layer of the |qg| sample dataset.
+The example in figure_symbology_5 shows the rule-based rendering dialog for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology5:
+.. _figure_symbology_5:
 .. figure:: img/en/rulesymbol_ng_line.png
    :width: 650
    :align: center
@@ -705,7 +697,7 @@ Point displacement
 
 The point displacement renderer is only available, if you load the Displacement plugin in the QGIS Plugin Manager. It offers to visualize all features of a point layer, even if they have the same location. To do this, the symbols of the points are placed on a displacement circle around a center symbol.
 
-.. _figure_symbology6:
+.. _figure_symbology_6:
 .. figure:: img/en/poi_displacement.png
    :width: 650
    :align: center
@@ -721,8 +713,7 @@ The symbol properties dialog allows the user to specify different properties of 
 :guilabel:`Layer Properties` dialog.
 
 The control panels allow adding or removing layers, changing the position of layers, or locking layers for color changes. In the right part of the dialog, there are shown the settings applicable to the single symbol layer selected in the symbol layer list. The most important is the 'Symbol Layer Type' combo box, which allows you to choose the layer type. The available options depend on the layer type
-(Point, Line, Polygon). The symbol layer type options are described in section
-\ref{symboltypes}.
+(Point, Line, Polygon). The symbol layer type options are described in section :ref:`vector_symbol_types`.
 
 .. |symbolproperties1| image:: img/en/symbolproperties1.png
    :width: 330
@@ -731,7 +722,7 @@ The control panels allow adding or removing layers, changing the position of lay
 .. |symbolproperties3| image:: img/en/symbolproperties3.png
    :width: 330
 
-.. _figure_symbology7:
+.. _figure_symbology_7:
 
 +------------------------------------------+--------------------------------------+
 | |symbolproperties1|                      | |symbolproperties2|                  |
@@ -744,27 +735,29 @@ The control panels allow adding or removing layers, changing the position of lay
 +------------------------------------------+--------------------------------------+
 Figure Symbology 7: Defining symbol properties |nix|
 
+.. _vector_style_manager:
 
 Style Manager to manage symbols and color ramps
 ===============================================
-`subsec_stylemanager`:
+
 
 The Style Manager is a small helper application, that lists symbols and color ramps available in a style. It also allows you to add and/or remove items. To launch the Style Manager, click on \mainmenuopt{Settings} \arrow \dropmenuopt{Style Manager} in the main menu.
 
-.. _figure_symbology8:
+.. _figure_symbology_8:
 .. figure:: img/en/stylemanager.png
    :width: 350
    :align: center
 
    Figure Symbology 8: Style Manager to manage symbols and color ramps |nix|
 
+.. _vector_old_symbology:
+
 Old Symbology
 =============
-`sec_oldsymbology`:
-:index:`vector layers!old symbology`
 
-**Note**: |qg| 1.7.4 still supports the usage of the old symbology, although it is recommended to switch to the new symbology, described in section
-\ref{sec:symbology}, because the old symbology will be removed in one of the next releases.
+
+.. note:: 
+   |qg| 1.7.4 still supports the usage of the old symbology, although it is recommended to switch to the new symbology, described in section :ref:`vector_new_symbology`, because the old symbology will be removed in one of the next releases.
 
 If you want or need to switch back to the old symbology you can click on the
 \button{Old symbology} button in the \tab{Style} tab of the :guilabel:`Layer Properties` dialog.
@@ -774,19 +767,11 @@ You can also make the old symobolgy the default, deactivating \checkbox{Use new 
 The old |qg| symbology supports the following renderers:
 
 
-\begin{description}
-    \item[Single symbol] - a single style is applied to every
-    object in the layer.:index:`vector layers!renderers!single symbol`
-    \item[Graduated symbol] - objects within the layer are
-    displayed with different symbols classified by the values of a
-    particular field.:index:`vector layers!renderers!graduated symbol`
-    \item[Continuous color] - objects within the layer are
-    displayed with a spread of colours classified by the numerical
-    values within a specified field.:index:`vector layers!renderers!continuous color`
-    \item[Unique value] - objects are classified by the unique
-    values within a specified field with each value having a
-    different symbol.:index:`vector layers!renderers!unique value`
-\end{description}
+* **Single symbol** - a single style is applied to every object in the layer.
+* **Graduated symbol** - objects within the layer are displayed with different symbols classified by the values of a particular field.
+* **Continuous color** - objects within the layer are displayed with a spread of colours classified by the numerical values within a specified field.
+* **Unique value** - objects are classified by the unique values within a specified field with each value having a different symbol.
+
 
 To change the symbology for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.:index:`symbology!changing`
 
@@ -799,7 +784,7 @@ To change the symbology for a layer, simply double click on its legend entry and
 .. |vectorClassifyUnique| image:: img/en/vectorClassifyUnique.png
    :width: 330
 
-.. _figure_symbology9:
+.. _figure_symbology_9:
 
 +---------------------------+---------------------------+
 | |vectorClassifySingle|    | |vectorClassifyGraduated| |
@@ -813,29 +798,22 @@ To change the symbology for a layer, simply double click on its legend entry and
 
 Figure Symbology 9: Old Symbolizing Options |nix|
 
+
 Style Options
 -------------
- `sec_style_options`: :index:`vector layers!styles`
+
+
 Within this dialog you can style your vector layer. Depending on the selected rendering option you have the possibility to also classify your map features.
 
 At least the following styling options apply for nearly all renderers:
-\begin{description}
-\item[Fill options]
-\begin{description}
- \item[Fill style] - Style for filling. Beside the given brushes you can
- select \selectstring{Fill style}{? Texture} and click the \browsebutton
- button for selecting your own texture file. Currently the fileformats
- **.jpeg, *.xpm, and *.png} are supported.
- \item[Fill color] - fill-color of your features.
-\end{description}
-\item[Outline options]
-\begin{description}
- \item[Outline style] - Pen-style for your outline of your feature. You can
- also set this to 'no Pen'.
- \item[Outline color] - color of the ouline of your feature.
- \item[Outline width] - width of your features.
-\end{description}
-\end{description}
+
+* **Fill style** - Style for filling. Beside the given brushes you can select \selectstring{Fill style}{? Texture} and click the \browsebutton button for selecting your own texture file. Currently the fileformats **.jpeg, *.xpm, and *.png} are supported.
+* **Fill color** - fill-color of your features.
+* **Outline options**
+
+  * Outline style - Pen-style for your outline of your feature. You can also set this to 'no Pen'.
+  * Outline color - color of the ouline of your feature.
+  * Outline width - width of your features.
 
 Once you have styled your layer you also could save your layer-style to a separate file (with **.qml}-ending).
 To do this, use the button \button{Save Style \ldots}. No need to say that
@@ -846,18 +824,19 @@ If you wish to always use a particular style whenever the layer is loaded, use t
 
 Vector transparency
 -------------------
- `sec_vect_transparency`:
-:index:`vector layers!transparency`
 
-|qg| allows to set a transparency for every vector layer. This can be done with the slider \slider{Transparency} inside the \tab{Style} tab (see fig. \ref{subfig:single_symbol}). This is very useful for overlaying several vector layers.
+
+|qg| allows to set a transparency for every vector layer. This can be done with the slider \slider{Transparency} inside the \tab{Style} tab. This is very useful for overlaying several vector layers.
+
+.. _vector_labels_tab:
 
 Labels Tab
 ----------
-`labeltab`:
+
 
 As for the symbology |qg| 1.7.4 currently provides an old and a new labeling engine in parallel. The \tab{Labels} tab still contains the old labeling. The new labeling is implemented as a core application and will replace the features of the old labels tab in one of the next versions.
 
-We recommend to switch to the new labeling, described in section \ref{newlabel}.
+We recommend to switch to the new labeling, described in section :ref:`vector_new_labeling`.
 
 The old labeling in the \tab{Labels} tab allows you to enable labeling features and control a number of options related to fonts, placement, style, alignment and buffering. We will illustrate this by labeling the lakes shapefile of the
 *|qg|\_example\_dataset}:
@@ -924,19 +903,17 @@ The remaining entries inside the \tab{Label} tab allow you control the appearanc
 
 Not that the \tab{Label} tab provides a \classname{preview-box} where your selected label is shown.
 
+.. _vector_new_labeling:
+
 New Labeling
 ============
 
-:index:`New labeling``newlabel`:
 
 The new |mActionLabeling| :guilabel:`Labeling` core application provides smart labeling for vector point,  line and polygon layers and only requires a few parameters.
-This new application will replace the current QGIS labeling, described in section
-\ref{labeltab} and also supports on-the-fly transformated layers.
+This new application will replace the current QGIS labeling, described in section :ref:`vector_labels_tab` and also supports on-the-fly transformated layers.
 
 Using new labeling
 ------------------
-
-
 
 
   #.  Start QGIS and load a vector point, line or polygon layer.
@@ -944,14 +921,13 @@ Using new labeling
   |mActionLabeling| :guilabel:`Labeling` icon in the QGIS toolbar menu.
 
 
-
 Labeling point layers
 ---------------------
 
 
-First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement and text style, labeling priority, scale-based visibility, if every part of multipart feature is to be labeled and if features act as obstacles for labels or not (see Figure_labels1_ ).
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement and text style, labeling priority, scale-based visibility, if every part of multipart feature is to be labeled and if features act as obstacles for labels or not (see Figure_labels_1_ ).
 
-.. _figure_labels1:
+.. _figure_labels_1:
 .. figure:: img/en/label_points.png
    :width: 650
    :align: center
@@ -962,9 +938,9 @@ Labeling line layers
 --------------------
 
 
-First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement, orientation, distance to feature, text style, labeling priority, scale-based visibility, if every part of a multipart line is to be labeled, if lines shall be merged to avoid duplicate labels and if features act as obstacles for labels or not (see Figure_labels2_ ).
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement, orientation, distance to feature, text style, labeling priority, scale-based visibility, if every part of a multipart line is to be labeled, if lines shall be merged to avoid duplicate labels and if features act as obstacles for labels or not (see Figure_labels_2_ ).
 
-.. _figure_labels2:
+.. _figure_labels_2:
 .. figure:: img/en/label_line.png
    :width: 650
    :align: center
@@ -976,9 +952,9 @@ Labeling polygon layers
 -----------------------
 
 
-First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement, distance and text style, labeling priority, scale-based visibility, if every part of multipart feature is to be labeled and if features act as obstacles for labels or not (see Figure_labels3_ ).
+First step is to activate the \checkbox{Label this layer} checkbox and select an attribute column to use for labeling. After that you can define the label placement, distance and text style, labeling priority, scale-based visibility, if every part of multipart feature is to be labeled and if features act as obstacles for labels or not (see Figure_labels_3_ ).
 
-.. _figure_labels3:
+.. _figure_labels_3:
 .. figure:: img/en/label_area.png
    :width: 650
    :align: center
@@ -991,7 +967,7 @@ Change engine settings
 
 Additionally you can click the \button{Engine settings} button and select the search method, used to find the best label placement. Available is Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
-.. _figure_labels4:
+.. _figure_labels_4:
 .. figure:: img/en/label_engine.png
    :width: 300
    :align: center
@@ -1017,6 +993,8 @@ There is a list of supported key words, that can be used for the placement of la
 
 A combination of key words in one column also works, e.g.: base right or bottom left.
 
+.. _vector_attributes_tab:
+
 Attributes Tab
 --------------
 :index:`Attributes``label_attributes`:
@@ -1030,11 +1008,11 @@ At the moment only columns from PostGIS layers can be removed and added. The OGR
 edit widget
 -----------
 
-.. _figure_fields1:
+.. _figure_fields_1:
 .. figure:: img/en/editwidgetsdialog.png
    :width: 650
 
-   Figure Fields1: Dialog to select an edit widget for an attribute column |nix|
+   Figure Fields 1: Dialog to select an edit widget for an attribute column |nix|
 
 Within the \tab{Attributes} tab you also find an ``edit widget`` column. This column can be used to define values or a range of values that are allowed to be added to the specific attribute table column. If you click on the \button{edit widget} button, a dialog opens, where you can define different widgets. These widgets are:
 
@@ -1176,7 +1154,7 @@ This completes the action and it is ready to use. The final text of the action s
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and zoom in to an area of interest. Make sure the *lakes} layer is active and identify a lake. In the result box you'll now see that our action is visible:
 
-.. _figure_actions1:
+.. _figure_actions_1:
 .. figure:: img/en/action_identifyaction.png
    :align: center
 
@@ -1198,9 +1176,9 @@ Joins Tab
 `sec_joins`:
 :index:`vector layers!joins`
 
-The \tab{Joins} tab allows you to join a loaded attribute table to a loaded vector layer. As key columns you have to define a join layer, a join field and a target field. QGIS currently supports to join non spatial table formats supported by OGR, delimited text and the PostgreSQL provider (see figure_joins1_).
+The \tab{Joins} tab allows you to join a loaded attribute table to a loaded vector layer. As key columns you have to define a join layer, a join field and a target field. QGIS currently supports to join non spatial table formats supported by OGR, delimited text and the PostgreSQL provider (see figure_joins_1_).
 
-.. _figure_joins1
+.. _figure_joins_1
 .. figure:: img/en/join_attributes.png
    :align: center
 
@@ -1220,16 +1198,16 @@ Diagram Tab
 `sec_diagram`:
 :index:`vector layers!diagram`
 
-The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer (see figure_diagrams1_).
+The \tab{Diagram} tab allows you to add a grahic overlay to a vector layer (see figure_diagrams_1_).
 
-.. _figure_diagrams1:
+.. _figure_diagrams_1:
 .. figure:: ../plugins/img/en/plugins_diagram_overlay/diagram_tab.png
    :width: 650
    :align: center
 
    Figure Diagrams 1: Vector properties dialog with diagram tab |nix|
 
-The current core implementation of diagrams provides support for piecharts and text diagrams, and for linear scaling of the diagram size according to a classification attribute. The placement of the diagrams interacts with the new labeling. We will demonstrate an example and overlay the alaska boundary layer a piechart diagram showing some temperature data from a climate vector layer. Both vector layers are part of the |qg| sample dataset (see Section~\ref{label_sampledata}).
+The current core implementation of diagrams provides support for piecharts and text diagrams, and for linear scaling of the diagram size according to a classification attribute. The placement of the diagrams interacts with the new labeling. We will demonstrate an example and overlay the alaska boundary layer a piechart diagram showing some temperature data from a climate vector layer. Both vector layers are part of the |qg| sample dataset (see Section :ref:`label_sampledata`).
 
 #.  First click on the |mActionAddOgrLayer| :guilabel:`Load Vector` icon, browse to the |qg| sample dataset folder and load the two vector shape layers
 *alaska.shp} and *climate.shp}.
@@ -1243,10 +1221,10 @@ The current core implementation of diagrams provides support for piecharts and t
 #.  For linear scaling of the diagram size we define *T\_F\_JUL}
 as classification attribute.
 #.  Now click on \button{Find maximum value}, choose 10 as size value and click \button{Apply} to display the diagram in the |qg| main window.
-#.  You can now adapt the chart size, or change the attribute colors double clicking on the color values in the attribute field. Figure_diagrams2 gives an impression.
+#.  You can now adapt the chart size, or change the attribute colors double clicking on the color values in the attribute field. Figure_diagrams_2_ gives an impression.
 #.  Finally click \button{Ok}.
 
-.. _figure_diagrams2:
+.. _figure_diagrams_2:
 .. figure:: ../plugins/img/en/plugins_diagram_overlay/climate_diagram.png
    :width: 650
    :align: center
@@ -1258,7 +1236,7 @@ Editing
 =======
 :index:`editing`
 
-|qg| supports various capabilities for editing OGR, PostGIS and Spatialite vector layers. **Note** - the procedure for editing GRASS layers is different - see Section \ref{grass_digitizing} for details.
+|qg| supports various capabilities for editing OGR, PostGIS and Spatialite vector layers. **Note** - the procedure for editing GRASS layers is different - see Section :ref:`grass_digitizing` for details.
 
 .. _tip_concurrent_edits:
 
@@ -1289,12 +1267,12 @@ The snapping tolerance setting affects all tools which work with tolerance.
 In our small digitizing project (working with the Alaska dataset), we define the snapping units in feet. Your results may vary, but something on the order of 300ft should be fine at a scale of 1:10 000 should be a reasonable setting.
 #.  A layer based snapping tolerance can be defined by choosing
 \mainmenuopt{Settings} (or \mainmenuopt{File}) \arrow
-\button{Snapping options\dots} to enable and adjust snapping mode and tolerance on a layer basis (see figure_edit1_ ).
+\button{Snapping options\dots} to enable and adjust snapping mode and tolerance on a layer basis (see figure_edit_1_ ).
 
 
 Note that this layer based snapping overrides the global snapping option set in the Digitizing tab. So if you need to edit one layer, and snap its vertices to another layer, then enable snapping only on the \usertext{snap to} layer, then decrease the global snapping tolerance to a smaller value.  Furthermore, snapping will never occur to a layer which is not checked in the snapping options dialog, regardless of the global snapping tolerance. So be sure to mark the checkbox for those layers that you need to snap to.
 
-.. _figure_edit1:
+.. _figure_edit_1:
 .. figure:: img/en/editProjectSnapping.png
    :width: 650
    :align: center
@@ -1358,6 +1336,8 @@ Avoid intersections of new polygons
 The second topological option in the \checkbox{Avoid Int.} column, called
 'Avoid intersections of new polygons' avoids overlaps in polygon mosaics. It is for quicker digitizing of adjacent polygons. If you already have one polygon, it is possible with this option to digitise the second one such that both intersect and |qg| then cuts the second polygon to the common boundary. The advantage is that users don't have to digitize all vertices of the common boundary.
 
+.. _vector_digitizing_existing_layer:
+
 Digitizing an existing layer
 ----------------------------
 
@@ -1368,7 +1348,7 @@ Digitizing an existing layer
 By default, |qg| loads layers read-only: This is a safeguard to avoid accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider supports it, and the underlying data source is writable (i.e. its files are not read-only). Layer editing is most versatile when used on PostgreSQL/PostGIS data sources.
 
-In general, editing vector layers is divided into a digitizing and an advanced digitizing toolbar, described in Section \ref{sec:advanced_edit}. You can select and unselect both under \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
+In general, editing vector layers is divided into a digitizing and an advanced digitizing toolbar, described in Section :ref:`vector_advanced_digitizing`. You can select and unselect both under \mainmenuopt{Settings} \arrow \dropmenuopt{Toolbars}.
 Using the basic digitizing tools you can perform the following functions:
 
 .. _table_editing:
@@ -1420,12 +1400,12 @@ To digitize the geometry, left-click on the map area to create the first point o
 
 For lines and polygons, keep on left-clicking for each additional point you wish to capture.  When you have finished adding points, right-click anywhere on the map area to confirm you have finished entering the geometry of that feature.
 
-The attribute window will appear, allowing you to enter the information for the new feature. Figure_edit2_  shows setting attributes for a fictitious new river in Alaska. In the \tab{Digitizing} tab under the
+The attribute window will appear, allowing you to enter the information for the new feature. Figure_edit_2_  shows setting attributes for a fictitious new river in Alaska. In the \tab{Digitizing} tab under the
 \mainmenuopt{Settings} \arrow \dropmenuopt{Options} menu, you can also activate
 \checkbox{Suppress attributes pop-up windows after each created feature}
 \checkbox{Reuse last entered attribute values}.
 
-.. _figure_edit2:
+.. _figure_edit_2:
 .. figure:: img/en/editDigitizing.png
    :width: 350
    :align: center
@@ -1564,6 +1544,7 @@ If the changes cannot be saved (e.g. disk full, or the attributes have values th
 
    It is always a good idea to back up your data source before you start editing. While the authors of |qg| have made every effort to preserve the integrity of your data, we offer no warranty in this regard.
 
+.. _vector_advanced_digitizing:
 
 Advanced digitizing
 -------------------
@@ -1599,7 +1580,7 @@ Undo and Redo
 :index:`vector layers!undo`
 :index:`vector layers!redo`
 
-The |mActionUndo| :guilabel:`Undo` and |mActionRedo| :guilabel:`Redo` tools allow the user to undo or redo vector editing operations. There is also a dockable widget, which shows all operations in the undo/redo history (see Figure_edit3_). This widget is not displayed by default; it can be displayed by right clicking on the toolbar and activating the Undo/Redo check box. Undo/Redo is however active, even if the widget is not displayed.
+The |mActionUndo| :guilabel:`Undo` and |mActionRedo| :guilabel:`Redo` tools allow the user to undo or redo vector editing operations. There is also a dockable widget, which shows all operations in the undo/redo history (see Figure_edit_3_). This widget is not displayed by default; it can be displayed by right clicking on the toolbar and activating the Undo/Redo check box. Undo/Redo is however active, even if the widget is not displayed.
 
 When Undo is hit, the state of all features and attributes are reverted to the state before the reverted operation happened. Changes other than normal vector editing operations (for example changes done by a plugin), may or may not be reverted, depending on how the changes were performed.
 
@@ -1663,7 +1644,8 @@ You can reshape line and polygon features using the
 
 For example, you can edit the boundary of a polygon with this tool. First, click in the inner area of the polygon next to the point where you want to add a new vertex. Then, cross the boundary and add the vertices outside the polygon. To finish, right-click in the inner area of the polygon. The tool will automatically add a node where the new line crosses the border. It is also possible to remove part of the area from the polygon, starting the new line outside the polygon, adding vertices inside, and ending the line outside the polygon with a right click.
 
-**Note**: The reshape tool may alter the starting position of a polygon ring or a closed line. So the point that is represented 'twice' will not be the same any more. This may not be a problem for most applications, but it is something to consider.
+.. note:: 
+   The reshape tool may alter the starting position of a polygon ring or a closed line. So the point that is represented 'twice' will not be the same any more. This may not be a problem for most applications, but it is something to consider.
 
 Split Features
 --------------
@@ -1694,23 +1676,24 @@ Rotate Point Symbols
 
 .. % FIXME change, if support in new symbology is available, too The |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols` tool is currently only supported by the old symbology engine. It allows to change the rotation of point symbols in the map canvas, if you have defined a rotation column from the attribute table of the point layer in the \tab{Style} tab of the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
 
-.. _figure_edit4:
+.. _figure_edit_4:
 .. figure:: img/en/rotatepointsymbol.png
    :width: 150
    :align: center
 
    Figure Edit 4: Rotate Point Symbols |nix|
 
-To change the rotation, select a point feature in the map canvas and rotate it holding the left mouse button pressed. A red arrow with the rotation value will be visualized (see Figure_edit4_). When you release the left mouse button again, the value will be updated in the attribute table.
+To change the rotation, select a point feature in the map canvas and rotate it holding the left mouse button pressed. A red arrow with the rotation value will be visualized (see Figure_edit_4_). When you release the left mouse button again, the value will be updated in the attribute table.
 
-**Note**: If you hold the \keystroke{Ctrl} key pressed, the rotation will be done in 15 degree steps.
+.. note:: 
+   If you hold the \keystroke{Ctrl} key pressed, the rotation will be done in 15 degree steps.
 
 Creating a new Shapefile and Spatialite layer
 ---------------------------------------------
 `sec_create shape`::index:`editing!creating a new shape layer`
 
 |qg| allows to create new Shapefile layers and new Spatialite layers.
-Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer to section \ref{sec:creating_new_grass_vectors} for more information on creating GRASS vector layers.
+Creation of a new GRASS layer is supported within the GRASS-plugin. Please refer to section :ref:`creating_new_grass_vectors` for more information on creating GRASS vector layers.
 
 Creating a new Shapefile layer
 ------------------------------
@@ -1718,9 +1701,9 @@ Creating a new Shapefile layer
 
 To create a new Shape layer for editing, choose \button{new} \arrow
 |mActionNewVectorLayer| :guilabel:`New Shapefile Layer` from the
-\mainmenuopt{Layer} menu. The :guilabel:`New Vector Layer` dialog will be displayed as shown in Figure_edit5_. Choose the type of layer (point, line or polygon) and the CRS (Coordinate Reference System).
+\mainmenuopt{Layer} menu. The :guilabel:`New Vector Layer` dialog will be displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or polygon) and the CRS (Coordinate Reference System).
 
-.. _figure_edit5:
+.. _figure_edit_5:
 .. figure:: img/en/editNewVector.png
    :align: center
 
@@ -1730,17 +1713,19 @@ Note that |qg| does not yet support creation of 2.5D features (i.e. features wit
 
 To complete the creation of the new Shapefile layer, add the desired attributes by clicking on the \button{Add} button and specifying a name and type for the attribute. A first 'id' column is added as default but can be removed, if not wanted. Only \selectstring{Type}{real}, \selectstring{Type}{integer}, and
 \selectstring{Type}{string} attributes are supported. Additionally and according to the attribute type you can also define the width and precision of the new attribute column. Once you are happy with the attributes, click
-\button{OK} and provide a name for the shapefile. |qg| will automatically add a *.shp} extension to the name you specify. Once the layer has been created, it will be added to the map and you can edit it in the same way as described in Section \ref{sec:edit_existing_layer} above.
+\button{OK} and provide a name for the shapefile. |qg| will automatically add a *.shp} extension to the name you specify. Once the layer has been created, it will be added to the map and you can edit it in the same way as described in Section :ref:`vector_digitizing_existing_layer` above.
+
+.. _vector_create_spatialite:
 
 Creating a new SpatiaLite layer
 ===============================
-`sec_create spatialite`::index:`editing!creating a new spatialite layer`
+
 
 To create a new SpatiaLite layer for editing, choose \button{new} \arrow
 |mActionNewVectorLayer| :guilabel:`New SpatiaLite Layer` from the
-\mainmenuopt{Layer} menu. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in Figure_edit6_.
+\mainmenuopt{Layer} menu. The :guilabel:`New SpatiaLite Layer` dialog will be displayed as shown in Figure_edit_6_.
 
-.. _figure_edit6:
+.. _figure_edit_6:
 .. figure:: img/en/editNewSpatialite.png
    :align: center
 
@@ -1749,7 +1734,7 @@ To create a new SpatiaLite layer for editing, choose \button{new} \arrow
 First step is to select an existing Spatialite database or to create a new Spatialite database. This can be done with the browse \button{...} button to the right of the database field. Then add a name for the new layer and define the layer type and the EPSG SRID. If desired you can select to
 \checkbox{create an autoincrementing primary key}.
 
-To define an attribute table for the new Spatialite layer, add the names of the attribute columns you want to create with the according column type and click on the \button{Add to attribute list} button. Once you are happy with the attributes, click \button{OK}. |qg| will automatically add the new layer to the legend and you can edit it in the same way as described in Section \ref{sec:edit_existing_layer} above.
+To define an attribute table for the new Spatialite layer, add the names of the attribute columns you want to create with the according column type and click on the \button{Add to attribute list} button. Once you are happy with the attributes, click \button{OK}. |qg| will automatically add the new layer to the legend and you can edit it in the same way as described in Section :ref:`vector_digitizing_existing_layer` above.
 
 The spatialite creation dialog allows to create multiple layers without closing the dialog when you click \button{Apply}.
 
@@ -1764,9 +1749,9 @@ The attribute table displays features of a selected layer. Each row in the table
 To open the attribute table for a vector layer, make the layer active by clicking on it in the map legend area. Then use \mainmenuopt{Layer} from the main menu and and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table}
 from the menu. It is also possible to rightlick on the layer and choose \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} from the dropdown menu.
 
-This will open a new window which displays the feature attributes in the layer (figure_attributes1_). The number of features and the number of selected features are shown in the attribute table title.
+This will open a new window which displays the feature attributes in the layer (figure_attributes_1_). The number of features and the number of selected features are shown in the attribute table title.
 
-.. _figure_attributes1:
+.. _figure_attributes_1:
 .. figure:: img/en/vectorAttributeTable.png
    :width: 550
    :align: center
@@ -1786,7 +1771,7 @@ Rows can be selected by clicking on the row number on the left side of the row. 
 The table can be sorted by any column, by clicking on the column header. A small arrow indicates the sort order (downward pointing means descending values from the top row down, upward pointing means ascending values from the top row down).
 
 For a **simple search by attributes** on only one column the \button{Look for}
-field can be used. Select the field (column) from which the search should be performed from the dropdown menu and hit the \button{Search} button. The matching rows will be selected and the total number of matching rows will appear in the title bar of the attribute table, and in the status bar of the main window. For more complex searches use the Advanced search \button{...}, which will launch the Search Query Builder described in Section \ref{sec:select_by_query}.
+field can be used. Select the field (column) from which the search should be performed from the dropdown menu and hit the \button{Search} button. The matching rows will be selected and the total number of matching rows will appear in the title bar of the attribute table, and in the status bar of the main window. For more complex searches use the Advanced search \button{...}, which will launch the Search Query Builder described in Section :ref:`vector_query_builder`.
 
 To show selected records only, use the checkbox \checkbox{Show selected only}.
 To search selected records only, use the checkbox \checkbox{Search selected only}. The \checkbox{Case sensitive} checkbox allows to select case sensitive.
@@ -1817,7 +1802,7 @@ Save selected features as new layer
 
 :index:`editing!save selection as new layer`
 
-The selected features can be saved as any OGR supported vector format and also transformed into another Coordinate Reference System (CRS). Just open the right mouse menu of the layer and click on \dropmenuopt{Save selection as} to define the name of the output file, its format and CRS (see Section \ref{label_legend}).
+The selected features can be saved as any OGR supported vector format and also transformed into another Coordinate Reference System (CRS). Just open the right mouse menu of the layer and click on \dropmenuopt{Save selection as} to define the name of the output file, its format and CRS (see Section :ref:`label_legend`).
 It is also possible to specify OGR creation options within the dialog.
 
 .. _tip_attribute_columns:
@@ -1836,19 +1821,21 @@ QGIS allows also to load non spatial tables. This includes currently tables supp
 When you load the table you will see it in the legend field. It can be opened e.g. with the \dropmenuopttwo{mActionOpenTable}{Open Attribute Table} tool and is then editable like any other layer attribute table.
 
 As an example you can use columns of the non spatial table to define attribute values or a range of values that are allowed to be added to a specific vector layer during digitizing.
-Have a closer look at the edit widget in section~\ref{label_attributes} to find out more.
+Have a closer look at the edit widget in section :ref:`vector_attributes_tab` to find out more.
+
+
+.. _vector_query_builder:
 
 Query Builder
 =============
-`sec_query_builder`:
-:index:`Query Builder`
+
 
 The \button{Advanced search\dots} button opens the Query Builder and allows you to define a subset of a table using a SQL-like WHERE clause, display the result in the main window and save it as a Shapefile. For example, if you have a
 *towns} layer with a \usertext{population} field you could select only larger towns by entering
-\usertext{population > 100000} in the SQL box of the query builder. Figure_attributes2_ shows an example of the query builder populated with data from a PostGIS layer with attributes stored in PostgreSQL.
+\usertext{population > 100000} in the SQL box of the query builder. Figure_attributes_2_ shows an example of the query builder populated with data from a PostGIS layer with attributes stored in PostgreSQL.
 The Fields, Values and Operators sections help the user to construct the SQL-like query.
 
-.. _figure_attributes2:
+.. _figure_attributes_2:
 .. figure:: img/en/queryBuilder.png
    :width: 550
    :align: center
@@ -1871,42 +1858,38 @@ The \button{Test} button shows a message box with the number of features satisfy
 
 .. tip:: **Changing the Layer Definition**
 
-   You can change the layer definition after it is loaded by altering the SQL query used to define the layer. To do this, open the vector :guilabel:`Layer Properties` dialog by double-clicking on the layer in the legend and click on the \button{Query Builder} button on the \tab{General} tab. See Section \ref{sec:vectorprops} for more information.
+   You can change the layer definition after it is loaded by altering the SQL query used to define the layer. To do this, open the vector :guilabel:`Layer Properties` dialog by double-clicking on the layer in the legend and click on the \button{Query Builder} button on the \tab{General} tab. See Section :ref:`vector_properties_dialog` for more information.
 
 
 Select by query
 ===============
 `sec_select_by_query`:
 
-With |qg| it is possible also to select features using a similar query builder interface to that used in \ref{sec:query_builder}. In the above section the purpose of the query builder is to only show features meeting the filter criteria as a 'virtual layer' / subset. The purpose of the select by query function is to highlight all features that meet a particular criteria.
+With |qg| it is possible also to select features using a similar query builder interface to that used in :ref:`vector_query_builder`. In the above section the purpose of the query builder is to only show features meeting the filter criteria as a 'virtual layer' / subset. The purpose of the select by query function is to highlight all features that meet a particular criteria.
 Select by query can be used with all vector data providers.
 
 To do a `select by query' on a loaded layer, click on the button |mActionOpenTable| :guilabel:`Open Table` to open the attribute table of the layer. Then click the \button{Advanced...} button at the bottom. This starts the Query Builder that allows to define a subset of a table and display it as described in Section
-\ref{sec:query_builder}.
+:ref:`vector_query_builder`.
 
 Save selected features as new layer
 -----------------------------------
 
 :index:`Query Builder!save selection as new layer`
 
-The selected features can be saved as any OGR supported vector format and also transformed into another Coordinate Reference System (CRS). Just open the right mouse menu of the layer and click on \dropmenuopt{Save selection as} to define the name of the output file, its format and CRS (see Section \ref{label_legend}).
+The selected features can be saved as any OGR supported vector format and also transformed into another Coordinate Reference System (CRS). Just open the right mouse menu of the layer and click on \dropmenuopt{Save selection as} to define the name of the output file, its format and CRS (see Section :ref:`label_legend`).
 It is also possible to specify OGR creation options within the dialog.
+
+.. _vector_field_calculator:
 
 Field Calculator
 ================
-`sec_field_calculator`:
-:index:`PostgreSQL!field calculator`
-:index:`PostGIS!field calculator`
-:index:`OGR!field calculator`
-:index:`field calculator!PostgreSQL`
-:index:`field calculator!PostGIS`
-:index:`field calculator!OGR`
+
 
 The |mActionCalculateField| :guilabel:`Field Calculator` button in the attribute table allows to perform calculations on basis of existing attribute values or defined functions, e.g to calculate length or area of geometry features. The results can be written to a new attribute column or it can be used to update values in an already existing column. The creation of new attribute fields is currently only possible in PostGIS and with OGR formats, if GDAL version is >= 1.6.0.
 
-You have to bring the vector layer in editing mode, before you can click on the field calculator icon to open the dialog (see Figure_attributes3). In the dialog you first have to select whether you want to update an existing field, only update selected features or create a new attribute field, where the results of the calculation will be added.
+You have to bring the vector layer in editing mode, before you can click on the field calculator icon to open the dialog (see Figure_attributes_3). In the dialog you first have to select whether you want to update an existing field, only update selected features or create a new attribute field, where the results of the calculation will be added.
 
-.. _figure_attributes3:
+.. _figure_attributes_3:
 .. figure:: img/en/fieldcalculator.png
    :width: 550
    :align: center
