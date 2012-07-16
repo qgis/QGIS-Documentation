@@ -160,7 +160,7 @@ interface as discussed below):
 
 .. `fig_startup`:
 
-.. figure:: ../img/en/startup.png
+.. figure:: img/en/startup.png
    :align: center
    :width: 30em
 
@@ -569,38 +569,13 @@ legend item is a raster or a vector layer. For GRASS vector layers
 
 It is possible to select more than one Layer or Group at the same time 
 by holding down the :kbd:`Ctrl`-Key while selecting the Layers with the 
-left mouse button. You can than move all selected Layers to a new Group at 
+left mouse button. You can then move all selected Layers to a new Group at 
 the same time.
 
 You are also able to delete more than one Layer or Group at once by selecting 
 several Layers with the :kbd:`Ctrl` - Key and pressing :kbd:`Ctrl D` afterwards.
 This way all selected Layers or Groups will be removed from the Layerlist.
 
-.. isn't included in Titan anymore, except for an "toggle overview"
-.. %Each legend entry can show the following mini icons:
-.. %
-
-.. image:: /img/pyramid.png
-  :width: 0.7 cm
-   
-   This is a raster that has pyramids built for it to improve rendering 
-   efficiency (see Section :ref:`raster_pyramids`)
-
-.. image:: no_pyramid.png
-   :width: 0.7 cm
-
-  This is a raster that has no pyramid layers 
-  (see Section :ref:`raster_pyramids`
-
-.. image:: inoverview.png
-   :width: 0.7 cm
-
-   This layer is shown in the overview map area as well as in the main map window.
-
-.. image:: editable.png
-   :width: 0.7 cm
-
-  This is a vector layer that is currently enabled for editing.\\
 
 .. _`label_mapview`:
 
@@ -714,7 +689,7 @@ features.
 
 .. _`shortcuts`:
 
-.. figure:: ../img/en/shortcuts.png 
+.. figure:: img/en/shortcuts.png 
    :align: center
    :width: 30em
 
@@ -908,7 +883,7 @@ Measure tools in action
 
 .. _`measure_line`:
 
-.. figure:: ../img/en/measure_line.png
+.. figure:: img/en/measure_line.png
    :align: center
    :width: 30em
 
@@ -916,7 +891,7 @@ Measure tools in action
 
 .. _`measure_area`:
 
-.. figure:: ../img/en/measure_area.png
+.. figure:: img/en/measure_area.png
    :align: center
    :width: 30em
 
@@ -924,7 +899,7 @@ Measure tools in action
 
 .. _`measure_angle`:
 
-.. figure:: ../img/en/measure_angle.png
+.. figure:: img/en/measure_angle.png
    :align: center
    :width: 30em
 
@@ -1155,7 +1130,7 @@ a layer without CRS is loaded.
 
 .. _`fig_proxy-settings`:
 
-.. figure:: ../img/en/proxy-settings.png
+.. figure:: img/en/proxy-settings.png
    :align: center
    :width: 50em
    
@@ -1224,7 +1199,7 @@ canvas. Use the text annotation tool and click into the map canvas.
 
 .. _`annotation`:
 
-.. figure:: ../img/en/annotation.png
+.. figure:: img/en/annotation.png
    :align: center
    :width: 30 em
 
@@ -1254,7 +1229,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. figure:: img/en/custom_annotation.png
    :align: center
-   :width: 10 cm
+   :width: 30em
 
    Customized qt designer annotation form |nix| 
 
@@ -1346,6 +1321,7 @@ gpsd properly to connect QGIS to it.
 
 .. figure:: gpstrack_main.png
    :width: 0.33	cm
+
    Position coordinates
 
 

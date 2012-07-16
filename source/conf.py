@@ -203,7 +203,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSplitFeatures| image:: /img/en/mActionSplitFeatures.png
    :width: 1.5em
-.. |mActionMergeFeatures| image:: /img/en/mActionMergeFeatures.png
+.. |mActionMergeFeat| image:: /img/en/mActionMergeFeatures.png
    :width: 1.5em
 .. |mActionNodeTool| image:: /img/en/mActionNodeTool.png
    :width: 1.5em
@@ -295,9 +295,9 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFormAnnotation| image:: /img/en/mActionFormAnnotation.png
    :width: 1.5em
-.. |gpstrack_barchart| image:: /img/en/gpstrack_barchart.png
+.. |gpstrack_barchart| image:: /introduction/img/en/gpstrack_barchart.png
    :width: 1.5em
-.. |gpstrack_polarchart| image:: /img/en/gpstrack_polarchart.png
+.. |gpstrack_polarchart| image:: /introduction/img/en/gpstrack_polarchart.png
    :width. 1.5em
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
