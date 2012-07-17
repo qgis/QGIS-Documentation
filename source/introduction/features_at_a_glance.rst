@@ -158,7 +158,7 @@ When QGIS starts, you are presented with the GUI as shown below
 (the numbers 1 through 6 in yellow ovals refer to the six major areas of the
 interface as discussed below):
 
-.. `fig_startup`:
+.. _fig_startup:
 
 .. figure:: img/en/startup.png
    :align: center
@@ -687,7 +687,7 @@ Section :ref:`label_menubar` below. Additionally the menu option
 change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS 
 features.
 
-.. _`shortcuts`:
+.. _shortcuts:
 
 .. figure:: img/en/shortcuts.png 
    :align: center
@@ -881,7 +881,7 @@ is displayed in a popup dialog.
 
 Measure tools in action
 
-.. _`measure_line`:
+.. _measure_line:
 
 .. figure:: img/en/measure_line.png
    :align: center
@@ -889,7 +889,7 @@ Measure tools in action
 
    Measure lines
 
-.. _`measure_area`:
+.. _measure_area:
 
 .. figure:: img/en/measure_area.png
    :align: center
@@ -897,7 +897,7 @@ Measure tools in action
 
    Measure areas
 
-.. _`measure_angle`:
+.. _measure_angle:
 
 .. figure:: img/en/measure_angle.png
    :align: center
@@ -1128,7 +1128,7 @@ a layer without CRS is loaded.
 **Network Tab**
 
 
-.. _`fig_proxy-settings`:
+.. _fig_proxy-settings:
 
 .. figure:: img/en/proxy-settings.png
    :align: center
@@ -1197,7 +1197,7 @@ The |mActionTextAnnotation| text annotation tools in the attribute toolbar
 provides the possibility to place formatted text in a balloon on the QGIS map 
 canvas. Use the text annotation tool and click into the map canvas.
 
-.. _`annotation`:
+.. _annotation:
 
 .. figure:: img/en/annotation.png
    :align: center
@@ -1226,6 +1226,8 @@ Additionally you can also create your own annotation forms. The
 a vector layer in a customized qt designer form (see Figure :ref:`fig:custom-annotations`). It is similar to the
 designer forms for the identify tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
+
+.. _custom_annotation:
 
 .. figure:: img/en/custom_annotation.png
    :align: center
@@ -1296,7 +1298,7 @@ To activate Live GPS tracking in QGIS you need to select :menuselection:`View --
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
-(see Figure :ref:`fig:gpstrack_liv`) and Figure :ref:`fig:gpstrack_options`).
+(see Figure :ref:`fig:gpstrack_liv` and Figure :ref:`fig:gpstrack_options`).
 
 * |mActionToggleEditing| GPS position coordinates and for manually entering 
   Vertices and Features.
@@ -1314,47 +1316,55 @@ gpsd properly to connect QGIS to it.
 
 .. warning::
    If you want to record your position to the canvas you have to
-   create a new vector layer first and switch it to editable status to be able
+   create a new vector layer first and switch it to editable status to be able 
    to record your track.
 
-.. `fig:gpstrack_liv`
+.. _gpstrack_main:
 
-.. figure:: gpstrack_main.png
-   :width: 0.33	cm
+.. figure:: img/en/gpstrack_main.png
+   :align: center
+   :width: 15em
 
    Position coordinates
 
+.. _gpstrack_stren:
 
-.. figure:: gpstrack_stren.png
-   :width: 0.33	cm
-   GPS signal strenght
+.. figure:: img/en/gpstrack_stren.png
+   :align: center
+   :width: 15em
 
-.. figure:: gpstrack_polar.png
-   :width: 0.33	cm
+   GPS signal strength
+
+.. _gpstrack_polar:
+
+.. figure:: img/en/gpstrack_polar.png
+   :align: center
+   :width: 15em
+
    GPS polar window
 
-   Live GPS Track |nix|
+   Live GPS tracking |nix|
 
 Position coordinates
 ---------------------
 
 |mActionToggleEditing| If the GPS is
 receiving signals from satellites you will see your position in latitude,
-longitude and elevation as you can see in Figure :ref:`subfig:gpstrack_main`.
+longitude and elevation as you can see in Figure :ref:`gpstrack_main`.
 
 GPS signal strength
 --------------------
 
 |gpstrack_barchart| Here you can see
 the signal strenght of the satellites you are receiving signals from
-Figure :ref:`subfig:gpstrack_stren`.
+Figure :ref:`gpstrack_stren`.
 
 GPS polar window
 ----------------
 
 |gpstrack_polarchart| If you want
 to know where in the sky all the connected satellites are, you have to
-switch to the polar screen (Figure :ref:`subfig:gpstrack_polar`).
+switch to the polar screen (Figure :ref:`gpstrack_polar`).
 You can also see the ID numbers of the satellites you are receiving signals from.
 
 GPS options
