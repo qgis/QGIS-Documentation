@@ -879,32 +879,14 @@ The cursor becomes cross-shaped. Click to draw the first segment of the angle yo
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
 
+.. _measure_in_action:
+
++------------------------+---------------------------+-----------------------+
+| |measure_line|         | |measure_area|            | |measure_angle|       |
++------------------------+---------------------------+-----------------------+
+| (a) Measure lines      | (b) Measure areas         | (c) Measure angles    |
++------------------------+---------------------------+-----------------------+
 Measure tools in action
-
-.. _measure_line:
-
-.. figure:: img/en/measure_line.png
-   :align: center
-   :width: 30em
-
-   Measure lines
-
-.. _measure_area:
-
-.. figure:: img/en/measure_area.png
-   :align: center
-   :width: 30em
-
-   Measure areas
-
-.. _measure_angle:
-
-.. figure:: img/en/measure_angle.png
-   :align: center
-   :width: 30em
-
-   Measure angles
-
 
 .. _`sec_selection`:
 
@@ -1319,31 +1301,14 @@ gpsd properly to connect QGIS to it.
    create a new vector layer first and switch it to editable status to be able 
    to record your track.
 
-.. _gpstrack_main:
+.. _table_figure_gps_tracking:
 
-.. figure:: img/en/gpstrack_main.png
-   :align: center
-   :width: 15em
-
-   Position coordinates
-
-.. _gpstrack_stren:
-
-.. figure:: img/en/gpstrack_stren.png
-   :align: center
-   :width: 15em
-
-   GPS signal strength
-
-.. _gpstrack_polar:
-
-.. figure:: img/en/gpstrack_polar.png
-   :align: center
-   :width: 15em
-
-   GPS polar window
-
-   Live GPS tracking |nix|
++---------------------------+-----------------------------+---------------------------+
+||gpstrack_main|            ||gpstrack_stren|             | |gpstrack_polar|          |
++---------------------------+-----------------------------+---------------------------+
+| (a) Position coordinates  | (b) GPS signal strength     | (c) GPS polar window      |
++---------------------------+-----------------------------+---------------------------+
+Live GPS tracking |nix|
 
 Position coordinates
 ---------------------

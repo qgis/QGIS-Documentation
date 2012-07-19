@@ -387,7 +387,18 @@ rst_epilog = """
    :width: 1.5em
 .. |dxf2shp_converter| image:: img/en/plugins_dxf2shape_converter/dxf2shp_converter.png
    :width: 1.5em
-.. |
+.. |measure_line| image:: /introduction/img/en/measure_line.png
+   :width: 20em
+.. |measure_area| image:: /introduction/img/en/measure_area.png
+   :width: 20em
+.. |measure_angle| image:: /introduction/img/en/measure_angle.png
+   :width: 20em
+.. |gpstrack_main| image:: /introduction/img/en/gpstrack_main.png
+   :width: 15em
+.. |gpstrack_stren| image:: /introduction/img/en/gpstrack_stren.png
+   :width: 15em
+.. |gpstrack_polar| image:: /introduction/img/en/gpstrack_polar.png
+   :width: 15em
 
 """
 

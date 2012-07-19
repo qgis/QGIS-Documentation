@@ -20,7 +20,6 @@ format. It requires the following parameters to be specified before running:
 *  **Output file type**: Specify the geometry type of the output Shapefile. Currently supported types are polyline, polygon, and point.
 *  **Export text labels**: When this checkbox is enabled, an additional Shapefile point layer will be created, and the associated dbf table will contain  information about the "TEXT" fields found in the dxf file, and the text strings themselves.
 
-
 .. _`plugins/plugins_dxf2shape_converter/dxf2shape_dialog`:
 
 .. figure:: img/en/plugins_dxf2shape_converter/dxf2shape_dialog.png
