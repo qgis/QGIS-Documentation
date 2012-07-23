@@ -1303,13 +1303,14 @@ gpsd properly to connect QGIS to it.
 
 .. _table_figure_gps_tracking:
 
-Live GPS tracking |nix|
+Live GPS tracking |nix| 
 
 +----------------------------------+--------------------------------+-----------------------------+
 | |gpstrack_main|                  |   |gpstrack_stren|             |    |gpstrack_polar|         |
 +----------------------------------+--------------------------------+-----------------------------+
 | (a) Position coordinates         | (b) GPS signal_strength        | (c) GPS polar window        |
 +----------------------------------+--------------------------------+-----------------------------+
+ 
 
 
 Position coordinates
@@ -1317,7 +1318,7 @@ Position coordinates
 
 |mActionToggleEditing| If the GPS is
 receiving signals from satellites you will see your position in latitude,
-longitude and elevation as you can see in Figure :ref:`table_figure_gps_tracking <Live GPS tracking>`.
+longitude and elevation as you can see in Figure :ref:`table_figure_gps_tracking`.
 
 GPS signal strength
 --------------------

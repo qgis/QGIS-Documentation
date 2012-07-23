@@ -2,9 +2,9 @@
 
 .. index:: `label_raster`
 
---------------------------------------------
+*************************
 Working with Raster Data
---------------------------------------------
+*************************
 
 .. index:: `raster layers`
 
@@ -13,9 +13,8 @@ Working with Raster Data
 .. %\updatedisclaimer
 
 This Section describes how to visualize and set raster layer properties.
-|qg| uses the GDAL library to read and write raster data formats
-GRASS raster support is supplied by a native QGIS data provider 
-plugin. [1]_ , including Arc/Info Binary Grid 
+|qg| uses the GDAL library to read and write raster data formats [1]
+, including Arc/Info Binary Grid 
 .. index:: `Arc/Info Binary Grid`
 , Arc/Info ASCII Grid 
 .. index:: `Arc/Info ASCII Grid`
@@ -26,7 +25,7 @@ plugin. [1]_ , including Arc/Info Binary Grid
 and many more. 
 
 At the date of this document, more than 100 raster formats are supported 
-by the GDAL library FIXME\cite{GDALweb}. A complete list is available at 
+by the GDAL library [#GDALweb]_ . A complete list is available at 
 http://www.gdal.org/formats_list.html.
 
 **Note** Not all of the listed formats may work in QGIS for various 
@@ -41,7 +40,7 @@ Working with GRASS raster data is described in Section :ref:`sec:grass`.
 .. index:: `label_whatsraster`
 
 What is raster data?
-=============================================
+====================
 
 .. index:: `raster layers!definition`
 
@@ -65,7 +64,7 @@ or in an appropriate world file to properly display the data.
 .. index:: `label_loadraster`
 
 Loading raster data in QGIS
-===================================================
+===========================
 
 Raster layers are loaded either by clicking on the |mActionAddRasterLayer| 
 :guilabel:`Load Raster` icon or by selecting the :guilabel:`View` --> 
@@ -79,28 +78,27 @@ Once a raster layer is loaded in the map legend you can click on the layer name 
 right mouse button to select and activate layer specific features or to open
 a dialog to set raster properties for the layer.
 
-Right mouse button menu for raster layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Right mouse button menu for raster layers**
 
 .. [label=--]
 
-* :guilabel:`Zoom to layer extent`
-* :guilabel:`Zoom to best scale (100\%)`
-* :guilabel:`Show in overview`
-* :guilabel:`Remove`
-* :guilabel:`Set layer CRS`
-* :guilabel:`Set project CRS from layer`
-* :guilabel:`Properties`
-* :guilabel:`Rename`
-* :guilabel:`Add Group`
-* :guilabel:`Expand all`
-* :guilabel:`Collapse all`
+* :menuselection:`Zoom to layer extent`
+* :menuselection:`Zoom to best scale (100\%)`
+* :menuselection:`Show in overview`
+* :menuselection:`Remove`
+* :menuselection:`Set layer CRS -->`
+* :menuselection:`Set project CRS from layer`
+* :menuselection:`Properties -->`
+* :menuselection:`Rename -->`
+* :menuselection:`Add Group`
+* :menuselection:`Expand all`
+* :menuselection:`Collapse all`
 
 
 .. index:: `label_rasterprop`
 
 Raster Properties Dialog
-================================================
+=========================
 
 To view and set the properties for a raster layer, double click
 on the layer name in the map legend or right click on the layer name and choose
@@ -111,13 +109,13 @@ There are several tabs on the dialog:
 
 .. [label=--]
 
-* |tab| :guilabel:`Style`
-* |tab| :guilabel:`Transparency`
-* |tab| :guilabel:`Colormap`
-* |tab| :guilabel:`General`
-* |tab| :guilabel:`Metadata`
-* |tab| :guilabel:`Pyramids`
-* |tab| :guilabel:`Histogram`
+* :guilabel:`Style`
+* :guilabel:`Transparency`
+* :guilabel:`Colormap`
+* :guilabel:`General`
+* :guilabel:`Metadata`
+* :guilabel:`Pyramids`
+* :guilabel:`Histogram`
 
 
 .. \begin{figure}[h]
@@ -129,12 +127,12 @@ There are several tabs on the dialog:
 .. index:: `label_symbology`	
 
 Style Tab
-********************************
+----------
 
 QGIS can render raster layers in two different way: 
 .. index:: `raster layers!supported channels`
 
-.. [label=--]
+.. FIXME: need to define rst style for [label=--]
 * Single band - one band of the image will be rendered as gray or in 
   pseudocolor or a freak out.
 * Three band color - three bands from the image will be rendered, each
@@ -145,8 +143,7 @@ QGIS can render raster layers in two different way:
 Within both render types you can invert the color output using the
 |checkbox| :guilabel:`Invert color map` checkbox.
 
-Single Band Rendering
-~~~~~~~~~~~~~~~~~~~~~
+**Single Band Rendering**
 
 This selection offers you two possibilites to choose. At first you can
 select which band you like to use for rendering (if the dataset has more than
@@ -165,8 +162,7 @@ Also available are
 * :guilabel:`Colormap`
 
 
-When selecting the entry |selectstring| :guilabel:`Colormap`, the tab
-|tab| :guilabel:`Colormap` becomes available. See more on that at chapter
+When selecting the entry |selectstring| :guilabel:`Colormap`, the tab :guilabel:`Colormap` becomes available. See more on that at chapter
 :ref:`label_colormaptab`.
 
 QGIS can restrict the data displayed to only show cells whose values are
@@ -177,8 +173,8 @@ This is useful when you have one or two cells with abnormally high values in
 a raster grid that are having a negative impact on the rendering of the raster. 
 This option is only available for pseudocolor and freak out images.
 
-Three band color
-~~~~~~~~~~~~~~~~
+**Three band color**
+
 
 This selection offers you a wide range of options to modify the appearance
 of your rasterlayer. For example you could switch color-bands from the
@@ -190,13 +186,13 @@ Also scaling of colors are available.
    **Viewing a Single Band of a Multiband Raster**
    If you want to view a single band (for example Red) of a multiband
    image, you might think you would set the Green and Blue bands to 
-   ``Not Set''. But this is not the correct way. To display the Red band,
+   "Not Set". But this is not the correct way. To display the Red band,
    set the image type to grayscale, then select Red as the band to use for Gray.
 
 .. index:: `rastertab:transparency`
 
 Transparency Tab
-***********************************************
+-----------------
 
 QGIS has the ability to display each raster layer at varying transparency
 levels. .. index:: `raster layers!transparency` Use the transparency slider to 
@@ -241,7 +237,7 @@ and applies them to the current rasterlayer.
 .. index:: `label_colormaptab`
 
 Colormap
-**********************************
+---------
 
 The |tab| :guilabel:`Colormap` tab is only available, when you have selected a
 single-band-rendering within the |tab| :guilabel:`Style` tab 
@@ -279,7 +275,7 @@ supported
 ..index:: `label_generaltab` 
 
 General Tab
-***********************************
+-------------
 
 The |tab| :guilabel:`General` tab displays basic information about the selected raster,
 including the layer source and  display name in the legend (which can be
@@ -298,7 +294,7 @@ This can be modified by hitting the :guilabel:`Specify` button.
 .. index:: `label_metatab`
 
 Metadata Tab
-*********************************
+-------------
 
 The |tab| :guilabel:`Metadata` tab displays a wealth of information about the raster layer,
 including statistics about each band in the current raster layer. Statistics
@@ -315,7 +311,7 @@ inside this tab. To update the statistics you need to change to tab
 .. index:: `raster_pyramids`
 
 Pyramids Tab
-***********************************
+-------------
 
 Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
@@ -345,7 +341,7 @@ version of your raster, make a backup copy prior to building pyramids.
 .. index:: `label_histogram`
 
 Histogram Tab
-************************************
+---------------
 
 The |tab| :guilabel:`Histogram` tab allows you to view the distribution
 .. index:: `raster layers!histogram` of the bands or colors in your raster. It is 
@@ -378,7 +374,7 @@ left of the tab.
 .. index:: `sec:raster_calc`
 
 Raster Calculator
-========================================
+=================
 
 .. index:: `Raster!raster calculator`
 .. index:: `Raster calculator`
@@ -415,7 +411,7 @@ automatically added to the legend area and can be visualized.
 .. index:: `sec:raster_analysis`
 
 Raster Analysis
-==========================================
+===============
 
 .. index:: `Raster!raster analysis`
 .. index:: `Raster analysis`
@@ -423,5 +419,5 @@ Raster Analysis
 Apart from the raster calculator, additional raster analysis in |qg| 1.7 is provided 
 by the GDALTools core plugin. Please refer to section :ref:`label_plugingdaltools` 
 for more information.
-
+ 
 .. [1] GRASS raster support is supplied by a native QGIS data provider plugin. 
