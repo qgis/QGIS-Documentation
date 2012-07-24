@@ -1169,11 +1169,12 @@ require a restart of QGIS before they will be effective.
 
 .. _`sec_annotations`:
 
-Annotation Tools 
-==================
+.. index::
+   single: annotation
 
-:index:`annotations`
-:index:`text annotation|see{annotations}`
+Annotation Tools 
+================
+
 
 The |mActionTextAnnotation| text annotation tools in the attribute toolbar 
 provides the possibility to place formatted text in a balloon on the QGIS map 

@@ -295,6 +295,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFormAnnotation| image:: /img/en/mActionFormAnnotation.png
    :width: 1.5em
+.. |mActionContextHelp| image:: /img/en/mActionContextHelp.png
+   :width: 1.5em
+.. |mActionFolder| image:: /img/en/mActionFolder.png
+   :width: 1.5em
 .. |gpstrack_barchart| image:: /introduction/img/en/gpstrack_barchart.png
    :width: 1.5em
 .. |gpstrack_polarchart| image:: /introduction/img/en/gpstrack_polarchart.png

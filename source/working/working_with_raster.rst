@@ -118,11 +118,13 @@ There are several tabs on the dialog:
 * :guilabel:`Histogram`
 
 
-.. \begin{figure}[h]
-..   \centering
-..    \includegraphics[clip=true, width=14cm]{rasterPropertiesDialog}
-..    \caption{Raster Layers Properties Dialog \nixcaption}\label{fig:raster_properties}
-.. \end{figure}
+.. _rasterPropertiesDialog:
+
+.. figure:: img/en/rasterPropertiesDialog.png
+   :align: center
+   :width: 40em
+
+   Raster Layers Properties Dialog
 
 .. index:: `label_symbology`	
 
@@ -218,14 +220,14 @@ are neccessary:
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster 
    filename in the legend or by right-clicking and choosing :guilabel:`Properties` 
    from the popup menu.
-#. Select the |tab| :guilabel:`Transparency` tab
+#. Select the :guilabel:`Transparency` tab
 #. Click the |mActionNewAttribute| :guilabel:`Add values manually`
    button. A new row will appear in the pixel-list.
 #. Enter the raster-value (we use 0 here) and adjust the transparency to 20 %.
 #. Press the :guilabel:`Apply` button and have a look at the map.
 
 
-You can repeat the steps :ref:`enum:add` and :ref:`enum:transp` to adjust
+You can repeat the steps 4 and 5 to adjust
 more values with custom transparency.
 
 As you can see this is quite easy to set custom transparency, but it can be
@@ -239,8 +241,8 @@ and applies them to the current rasterlayer.
 Colormap
 ---------
 
-The |tab| :guilabel:`Colormap` tab is only available, when you have selected a
-single-band-rendering within the |tab| :guilabel:`Style` tab 
+The :guilabel:`Colormap` tab is only available, when you have selected a
+single-band-rendering within the :guilabel:`Style` tab 
 (see chapt. :ref:`label_sombology`).
 
 Three ways of color interpolation are available:
@@ -267,7 +269,7 @@ Alternatively you can click on the button |mActionNewAttribute|
 
 The block :guilabel:`Generate new color map` allows you to create newly
 categorized colormaps. You only need to select the |selectnumber| 
-:guilabel:`number of classes 15` and press the button :guilabel:`Classify`. Currently
+:guilabel:`number of classes` and press the button :guilabel:`Classify`. Currently
 only one |selectstring| :guilabel:`Classification mode Equal Interval` is
 supported 
 .. index:: `raster layer!classify`.
@@ -277,7 +279,7 @@ supported
 General Tab
 -------------
 
-The |tab| :guilabel:`General` tab displays basic information about the selected raster,
+The :guilabel:`General` tab displays basic information about the selected raster,
 including the layer source and  display name in the legend (which can be
 modified). This tab also shows a thumbnail of the layer, its legend symbol,
 and the palette.
@@ -296,7 +298,7 @@ This can be modified by hitting the :guilabel:`Specify` button.
 Metadata Tab
 -------------
 
-The |tab| :guilabel:`Metadata` tab displays a wealth of information about the raster layer,
+The :guilabel:`Metadata` tab displays a wealth of information about the raster layer,
 including statistics about each band in the current raster layer. Statistics
 are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.
@@ -305,8 +307,8 @@ statistics have not yet been collected.
 
 This tab is mainly for information. You cannot change any values printed
 inside this tab. To update the statistics you need to change to tab
-|tab| :guilabel:`Histogram` and press the button :guilabel:`Refresh` on the bottom right,
-(see ch. :ref:`label_histogram`.
+:guilabel:`Histogram` and press the button :guilabel:`Refresh` on the bottom right,
+(see ch. :ref:`label_histogram`).
 
 .. index:: `raster_pyramids`
 
@@ -343,9 +345,9 @@ version of your raster, make a backup copy prior to building pyramids.
 Histogram Tab
 ---------------
 
-The |tab| :guilabel:`Histogram` tab allows you to view the distribution
+The :guilabel:`Histogram` tab allows you to view the distribution
 .. index:: `raster layers!histogram` of the bands or colors in your raster. It is 
-generated automaticaly when you open |tab| :guilabel:`Histogram` tab. You can 
+generated automaticaly when you open :guilabel:`Histogram` tab. You can 
 choose which bands to display by selecting them in the list box at the bottom 
 left of the tab. 
 
