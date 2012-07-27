@@ -95,6 +95,9 @@ rst_epilog = """
 .. |osx| image:: /img/en/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
+.. |degrees| unicode:: 0x00B0
+   :ltrim:
+.. |wedge| unicode:: 0x005e
 .. |checkbox| image:: /img/en/checkbox.png
 .. |radiobuttonon| image:: /img/en/radiobuttonon.png
 .. |radiobuttonoff| image:: /img/en/radiobuttonoff.png
@@ -203,6 +206,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSplitFeatures| image:: /img/en/mActionSplitFeatures.png
    :width: 1.5em
+.. |mActionMergeFeatures| image:: /img/en/mActionMergeFeatures.png
+   :width: 1.5em
 .. |mActionMergeFeat| image:: /img/en/mActionMergeFeatures.png
    :width: 1.5em
 .. |mActionNodeTool| image:: /img/en/mActionNodeTool.png
@@ -214,7 +219,7 @@ rst_epilog = """
 .. |mActionCopySelected| image:: /img/en/mActionCopySelected.png
    :width: 1.5em
 .. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
-   :width: 1.5em
+   :width: 1em
 .. |mActionNewAttribute| image:: /img/en/mActionNewAttribute.png
    :width: 1.5em
 .. |mActionCalculateField| image:: /img/en/mActionCalculateField.png
@@ -262,6 +267,8 @@ rst_epilog = """
 .. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
 .. |mActionLabeling| image:: /img/en/mActionLabeling.png
    :width: 1.5em
+.. |labeling| image:: /img/en/mActionLabeling.png
+   :width: 1.5em
 .. |mActionInOverview| image:: /img/en/mActionInOverview.png
 .. |mActionAddAllToOverview| image:: /img/en/mActionAddAllToOverview.png
 .. |mActionRemoveAllFromOverview| image:: /img/en/mActionRemoveAllFromOverview.png
@@ -270,6 +277,7 @@ rst_epilog = """
 .. |mActionProjectProperties| image:: /img/en/mActionProjectProperties.png
 .. |mActionCustomProjection| image:: /img/en/mActionCustomProjection.png
 .. |mActionOptions| image:: /img/en/mActionOptions.png
+   :width: 1em
 .. |mActionHelpContents| image:: /img/en/mActionHelpContents.png
 .. |mActionQgisHomePage| image:: /img/en/mActionQgisHomePage.png
 .. |mActionCheckQgisVersion| image:: /img/en/mActionCheckQgisVersion.png

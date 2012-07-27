@@ -1,6 +1,3 @@
-.. |degrees| unicode:: 0x00B0
-   :ltrim:
-.. |wedge| unicode:: 0x005e
 
 .. _label_workingvector:
 
@@ -1142,7 +1139,7 @@ Editing
 Setting the Snapping Tolerance and Search Radius
 ------------------------------------------------
 
-`snapping_tolerance`:
+.. _`snapping_tolerance`:
 
 Before we can edit vertices, we must set the snapping tolerance and search radius to a value that allows us an optimal editing of the vector layer geometries.
 
