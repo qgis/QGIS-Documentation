@@ -27,7 +27,7 @@ visually scan the GUI to find something that looks like the instruction in the m
 *  Tool: |mActionAddRasterLayer| :guilabel:`Add a Raster Layer`
 *  Button : :guilabel:`Save as Default`
 *  Dialog Box Title: :guilabel:`Layer Properties`
-*  Tab: |tab|
+*  Tab: :guilabel:`General`
 *  Checkbox: |checkbox| Render
 *  Radio Button:  |radiobuttonon| Postgis SRID |radiobuttonoff| EPSG ID
 *  Select a Number: |selectnumber|
