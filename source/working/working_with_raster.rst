@@ -127,11 +127,12 @@ There are several tabs on the dialog:
    Raster Layers Properties Dialog
 
 .. index:: `label_symbology`	
+.. _label_symbology:
 
 Style Tab
 ----------
 
-QGIS can render raster layers in two different way: 
+QGIS can render raster layers in two different ways: 
 .. index:: `raster layers!supported channels`
 
 .. FIXME: need to define rst style for [label=--]
@@ -237,13 +238,14 @@ quite a lot of work. Therefore you can use the button |mActionFileSave|
 and applies them to the current rasterlayer.
 
 .. index:: `label_colormaptab`
+.. _label_colormaptab:
 
 Colormap
 ---------
 
 The :guilabel:`Colormap` tab is only available, when you have selected a
 single-band-rendering within the :guilabel:`Style` tab 
-(see chapt. :ref:`label_sombology`).
+(see chapt. :ref:`label_symbology`).
 
 Three ways of color interpolation are available:
 
@@ -341,6 +343,7 @@ created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
 
 .. index:: `label_histogram`
+.. _label_histogram:
 
 Histogram Tab
 ---------------
