@@ -4,9 +4,9 @@
 
 .. label_forward:
 
-=========
+*********
 Foreword
-=========
+*********
 
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
 Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
@@ -31,12 +31,13 @@ program that is free of cost and can be freely modified. You should have
 received a full copy of the license with your copy of QGIS, and you also can
 find it in Appendix `gpl_appendix`_.  
 
-.. note::
-    **Up-to-date Documentation**
-    :index:documentation
-    The latest version of this document can always be found at 
-    http://download.osgeo.org/qgis/doc/manual/, or in the documentation
-    area of the QGIS website at http://www.qgis.org/en/documentation
+:index:documentation
+
+.. tip::
+        **Up-to-date Documentation**
+        The latest version of this document can always be found at 
+        http://download.osgeo.org/qgis/doc/manual/, or in the documentation
+        area of the QGIS website at http://www.qgis.org/en/documentation
 
 
 Features
@@ -46,8 +47,8 @@ Features
 plugins. As a short summary they are presented in six categories to gain a
 first insight.
 
-View data
-**********
+**View data**
+
 
 You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
@@ -66,8 +67,8 @@ formats include:
    Web Feature Service (WFS), see Section `working_with_ogc`_.
 *  OpenStreetMap data (see Section `plugins_osm`_).
 
-Explore data and compose maps
-******************************
+**Explore data and compose maps**
+
 
 You can compose maps and interactively explore spatial data with a friendly
 GUI. The many helpful tools available in the GUI include:
@@ -84,8 +85,8 @@ GUI. The many helpful tools available in the GUI include:
 *  decorate your map with a north arrow scale bar and copyright label
 *  save and restore projects
 
-Create, edit, manage and export data
-*************************************
+**Create, edit, manage and export data**
+
 
 You can create, edit, manage and export vector maps in several formats. Raster
 data have to be imported into GRASS to be able to edit and export them into
@@ -104,8 +105,8 @@ other formats. QGIS offers the following:
    `sec_attribute_table`_) or Table Manager plugin.
 *  Save screenshots as georeferenced images.
 
-Analyse data
-*************
+**Analyse data**
+
 
 You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
 supported formats using the fTools Python plugin. QGIS currently offers
@@ -114,22 +115,21 @@ tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
 `sec_grass`_).
 
-Publish maps on the Internet
-*****************************
+**Publish maps on the Internet**
+
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
 be used as a WMS or WFS client, and as WMS server. 
 
-Extend QGIS functionality through plugins
-******************************************
+**Extend QGIS functionality through plugins**
+
 
 QGIS can be adapted to your special needs with the extensible
 plugin architecture. QGIS provides libraries that can be used to create
 plugins.  You can even create new applications with C++ or Python!
 
-Core Plugins
-**************
+**Core Plugins**
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
     containing x,y coordinates).
@@ -158,16 +158,16 @@ Core Plugins
 #.  eVIS (Event Visualization Tool).
 #.  fTools (Tools for vector data analysis and management).
 
-External Python Plugins
-************************
+**External Python Plugins**
+
 
 QGIS offers a growing number of external python plugins that are provided by
 the community. These plugins reside in the official PyQGIS repository, and
 can be easily installed using the Python Plugin Installer (See Section
 `sec_plugins`_).
 
-What's new in version \CURRENT
-*******************************
+**What's new in version \CURRENT**
+
 
 Please note that this is a release in our 'cutting edge' release series. As such 
 it contains new features and extends the programmatic interface over QGIS 1.0.x 
@@ -175,8 +175,8 @@ and QGIS 1.6.0. We recommend that you use this version over previous releases.
 
 This release includes over 277 bug fixes and many new features and enhancements.
 
-Symbology labels and diagrams
-******************************
+**Symbology labels and diagrams**
+
 
 * New symbology now used by default.
 * Diagram system that uses the same smart placement system as labeling-ng.
@@ -208,8 +208,8 @@ Symbology labels and diagrams
   * Added 'Lines to polygons' tool to vector menu.
   * Added voronoi polygon tool to Vector menu.
 
-User interface updates
-***********************
+**User interface updates**
+
 
 * Allow managing missing layers in a list.
 * Zoom to group of layers.
@@ -219,8 +219,8 @@ User interface updates
   right-click legend menu.
 * General clean-ups and usability improvements.
 
-CRS Handling
-*************
+**CRS Handling**
+
 
 * Show active crs in status bar.
 * Assign layer CRS to project (in the legend context menu).
@@ -228,16 +228,16 @@ CRS Handling
 * Allow setting CRS for multiple layers at once.
 * Default to last selection when prompting for CRS.
 
-Rasters
-********
+**Rasters**
+
 
 * Added AND and OR operator for raster calculator.
 * On-the-fly reprojection of rasters added.
 * Proper implementation of raster providers.
 * Added raster toolbar with histogram stretch functions.
 
-Providers and Data Handling
-****************************
+**Providers and Data Handling**
+
 
 * New SQLAnywhere vector provider.
 * Table join support.
@@ -261,8 +261,8 @@ Providers and Data Handling
 * Allow merging/assigning attribute values to a set of features.
 * Allow OGR 'save as' without attributes (for eg. DGN/DXF).
 
-Api and Developer Centric
-**************************
+**Api and Developer Centric**
+
 
 * Refactored attribute dialog calls to QgsFeatureAttribute.
 * Added QgsVectorLayer::featureAdded signal.
@@ -273,22 +273,20 @@ Api and Developer Centric
   relevant error messages, and now supports zooming to errors. See the new
   QgsGeometry.validateGeometry function.
 
-QGIS Server
-************
+**QGIS Server**
 
 * Ability to specify wms service capabilities in the properties section of the
   project file (instead of wms_metadata.xml file).
 * Support for wms printing with GetPrint-Request.
 
-Plugins
-********
+**Plugins**
 
 * Support for icons of plugins in the plugin manager dialog.
 * Removed quickprint plugin - use easyprint plugin rather from plugin repo.
 * Removed ogr convertor plugin - use 'save as' context menu rather.
 
-Printing
-*********
+**Printing**
+
 
 * Undo/Redo support for the print composer.
 
