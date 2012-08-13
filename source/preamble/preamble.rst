@@ -16,7 +16,7 @@ License. Find more information on the Quantum GIS Homepage
 http://www.qgis.org.
 
 
-The details, data, results etc.~in this document have been 
+The details, data, results etc. in this document have been 
 written and verified to the best of knowledge and responsibility of the 
 authors and editors. Nevertheless, mistakes concerning the content are possible.
 
@@ -25,7 +25,7 @@ and publishers do not take any responsibility or liability for failures and
 their consequences. Your are always welcome to indicate possible mistakes.
 
 
-This document has been typeset with \LaTeX. It is available as \LaTeX~source
+This document has been typeset with \LaTeX. It is available as \LaTeX source
 code via `subversion <http://wiki.qgis.org/qgiswiki/DocumentationWritersCorner>`_
 and online as PDF document via http://qgis.osgeo.org/documentation/manuals.html. 
 Translated versions of this document can be downloaded via the documentation 
