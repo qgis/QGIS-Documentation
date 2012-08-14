@@ -2,9 +2,10 @@
 
 .. _`label_projections`:
 
----------------------------------------------------
+
+*************************
 Working with Projections 
----------------------------------------------------
+*************************
 
 :index:`Projections!working with`
 
@@ -22,7 +23,7 @@ them overlay properly.
 .. _`label_projoverview`:
 
 Overview of Projection Support
-========================================================
+===============================
 
 QGIS has support for approximately 2,700 known CRS. Definitions for
 each of these CRS are stored in a SQLite database that is installed with
@@ -49,7 +50,7 @@ shapefile named :file:`alaska.shp` would have a corresponding projection
 file named :file:`alaska.prj`.
 
 Whenever you select a new CRS, the used layer units will automatically be
-changed in the |tab| :guilabel:`General` tab of the
+changed in the :guilabel:`General` tab of the
 |mActionOptions| :guilabel:`Project Properties` dialog under the
 :guilabel:`Edit` (Gnome, OSX) or :guilabel:`Settings` (KDE, Windows)
 menu.
@@ -59,13 +60,13 @@ Specifying a Projection
 
 :index:`Projections!specifying`
 
-.. _`sec:projection-specifying`:
+.. _`sec_projection-specifying`:
 
-.. \begin{figure}[bt]
-   \centering
-   \includegraphics[clip=true, width=12cm]{crsdialog}
-   \caption{CRS tab in the QGIS Options Dialog \osxcaption}\label{fig:crsdialog}
-   \end{figure}
+.. figure:: img/en/crsdialog.png
+   :align: center
+   :width: 40em
+
+   CRS tab in the QGIS Options Dialog
 
 QGIS starts each new project using the global default projection.The
 global default CRS is EPSG:4326 - WGS 84 
@@ -76,9 +77,9 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 When you use layers that do not have a CRS, you need to define how
 QGIS responds to these layers. This can be done globally or
-project-wide in the |tab| :guilabel:`CRS` tab under :menuselection:`Edit` -->
+project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit ->'
 |mActionOptions| :guilabel:`Options` (Gnome, OSX) or
-:menuselection:`Settings` --> |mActionOptions| :guilabel:`Options`
+:menuselection:`Settings -> `|mActionOptions| :guilabel:`Options`
 (KDE, Windows).
 
 The options shown in Figure :ref:`fig:crsdialog` are:
@@ -113,7 +114,7 @@ Figure :ref:`fig:vector_symbology`.
 .. _`label_projstart`:
 
 Define On The Fly (OTF) Projection
-=========================================================
+===================================
 
 
 QGIS now supports OTF projection for both raster and vector
@@ -191,7 +192,7 @@ shown in Figure :ref:`fig:projections` and described below.
 .. _`sec:customprojections`:
 
 Custom Coordinate Reference Systems
-===============================================================
+====================================
 
 :index:`Projections!custom`
 
