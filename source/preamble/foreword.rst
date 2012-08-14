@@ -60,12 +60,12 @@ formats include:
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii 
    Grid, JPEG, PNG and many more.
-*  SpatiaLite databases (see Section `label_spatialite`_) 
+*  SpatiaLite databases (see section :ref:`label_spatialite`) 
 *  GRASS raster and vector data from GRASS databases (location/mapset),
-   see Section `sec_grass`_.
+   see section :ref:`sec_grass`.
 *  Online spatial data served as OGC-compliant Web Map Service (WMS) or
-   Web Feature Service (WFS), see Section `working_with_ogc`_.
-*  OpenStreetMap data (see Section `plugins_osm`_).
+   Web Feature Service (WFS), see section :ref:`working_with_ogc`.
+*  OpenStreetMap data (see section :ref:`plugins_osm`).
 
 **Explore data and compose maps**
 
@@ -101,8 +101,8 @@ other formats. QGIS offers the following:
 *  Visualize and edit OpenStreetMap data.
 *  Create PostGIS layers from shapefiles with the SPIT plugin.
 *  Improved handling of PostGIS tables.
-*  Manage vector attribute tables with the new attribute table (see Section 
-   `sec_attribute_table`_) or Table Manager plugin.
+*  Manage vector attribute tables with the new attribute table (see section 
+   :ref:`sec_attribute_table`) or Table Manager plugin.
 *  Save screenshots as georeferenced images.
 
 **Analyse data**
@@ -164,7 +164,7 @@ plugins.  You can even create new applications with C++ or Python!
 QGIS offers a growing number of external python plugins that are provided by
 the community. These plugins reside in the official PyQGIS repository, and
 can be easily installed using the Python Plugin Installer (See Section
-`sec_plugins`_).
+:ref:`load_external_plugin`).
 
 **What's new in version \CURRENT**
 
@@ -248,7 +248,7 @@ This release includes over 277 bug fixes and many new features and enhancements.
 * Use layer names instead of ids in drop down list when loading value maps from
   layers.
 * Support feature form expression fields: line edits on the form which name
-  prefix 'expr_' are evaluated. Their value is interpreted as field calculator
+  prefix "expr_" are evaluated. Their value is interpreted as field calculator
   string and replaced with the calculated value.
 * Support searching for NULL in attribute table.
 * Attribute editing improvements
@@ -259,7 +259,7 @@ This release includes over 277 bug fixes and many new features and enhancements.
 * Improved attribute handling.
 * Optionally re-use entered attribute values for next digitized feature.
 * Allow merging/assigning attribute values to a set of features.
-* Allow OGR 'save as' without attributes (for eg. DGN/DXF).
+* Allow OGR "save as" without attributes (for eg. DGN/DXF).
 
 **Api and Developer Centric**
 
