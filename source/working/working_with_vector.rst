@@ -1545,7 +1545,7 @@ To define an attribute table for the new Spatialite layer, add the names of the 
 
 The spatialite creation dialog allows to create multiple layers without closing the dialog when you click **[Apply]**.
 
-.. _`sec_attribute table`:
+.. _sec_attribute_table:
 
 Working with the Attribute Table
 --------------------------------
