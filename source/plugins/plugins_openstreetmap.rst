@@ -1,6 +1,6 @@
 ..   !TeX  root  =  user_guide.tex
 
-.. _`osm`:
+.. _plugins_osm:
 
 OpenStreetMap Plugin
 ====================
