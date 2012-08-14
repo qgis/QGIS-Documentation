@@ -82,10 +82,11 @@ plugins are automatically loaded.
    QGIS and add the plugins one at a time from the :file:`Plugin Manager 
    to determine which plugin is causing the problem.
 
+.. _load_external_plugin:
 
 Loading an external QGIS Plugin
 *******************************
-.. _`load_external_plugin`:
+
 
 External QGIS plugins are written in Python. They are by default stored in 
 either the 'Official' or 'User contributed' QGIS Repositories, or in various 
