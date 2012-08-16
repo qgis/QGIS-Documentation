@@ -957,7 +957,7 @@ Within the :guilabel:`Attributes` tab you also find an ``edit widget`` column. T
 *  **Calendar**: Opens a calendar widget to enter a date. Column type must be text.
 
 
-.. _`vectorgeneraltab`:
+.. _vectorgeneraltab:
 
 General Tab
 -----------
