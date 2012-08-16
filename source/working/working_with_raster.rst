@@ -276,7 +276,9 @@ only one |selectstring| :guilabel:`Classification mode Equal Interval` is
 supported 
 .. index:: `raster layer!classify`.
 
-..index:: `label_generaltab` 
+..index:: `label_generaltab`
+ 
+.. _label_generaltab:
 
 General Tab
 -------------
