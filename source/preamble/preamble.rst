@@ -58,7 +58,9 @@ identically.
 +------------------+--------------------+---------------------+
 |Jürgen E. Fischer | Marco Hugentobler  | Gavin Macaulay      |
 +------------------+--------------------+---------------------+
-|Gary E. Sherman   | Tim Sutton         |                     |
+|Larissa Junek     | Diethard Jansen    | Paolo Corti         |
++------------------+--------------------+---------------------+
+|Gary E. Sherman   | Tim Sutton         | Alex Bruy           |
 +------------------+--------------------+---------------------+
 
 Copyright (c) 2004 - 2012 |QG| Development Team
