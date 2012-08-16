@@ -267,7 +267,7 @@ entry. For more information about tools and toolbars, see Section
 | |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`          |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
 +-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
 
-After activating |mActionToggleEditing| :menuselection:`Toggle editing` mode 
+After activating |mActionToggleEditing| :sup:`Toggle editing` mode 
 for a layer, you will find a capture feature icon in the :menuselection:`Edit`
 menu depending on the layer type (point, line or polygon).
 
@@ -670,7 +670,7 @@ for the current project.
    you can either change this to meter manually in the :guilabel:`General` tab under
    :menuselection:`Settings -->` :menuselection:`Project Properties -->` or you can 
    select a project Coordinate Reference System (CRS) clicking on the
-   |mIconProjectionDisabled| :guilabel:`CRS status` icon in the lower right-hand corner of 
+   |mIconProjectionDisabled| :sup:`CRS status` icon in the lower right-hand corner of 
    the statusbar. In the last case, the units are set to what the project 
    projection specifies, e.g. '+units=m'.
 
@@ -696,7 +696,7 @@ features.
    Define shortcut options |nix| (KDE)
 
 Configuration is very simple. Just select a feature from the list and click
-on :guilabel:`Change`, :guilabel:`Set none` or :guilabel:`Set default`. Once you 
+on **[Change]**, **[Set none]** or **[Set default]**. Once you 
 have found your configuration, you can save it as XML file and load it to another
 QGIS installation.
 
@@ -898,11 +898,11 @@ The QGIS toolbar provides several tools to select features in the map canvas.
 To select one or several features just click on 
 |mActionSelect| and select your tool:
 
-* |mActionSelect| :guilabel:`Select features`
-* |mActionSelectRectangle| :guilabel:`Select features by rectangle`
-* |mActionSelectPolygon| :guilabel:`Select features by polygon`
-* |mActionSelectFreehand| :guilabel:`Select features by freehand`
-* |mActionSelectRadius| :guilabel:`Select features by radius`
+* |mActionSelect| :sup:`Select features`
+* |mActionSelectRectangle| :sup:`Select features by rectangle`
+* |mActionSelectPolygon| :sup:`Select features by polygon`
+* |mActionSelectFreehand| :sup:`Select features by freehand`
+* |mActionSelectRadius| :sup:`Select features by radius`
 
 To deselect all selected features click on |mActionDeselectAll|.
 
@@ -1140,9 +1140,9 @@ a layer without CRS is loaded.
 * Define timeout for network requests in ms - default is 60000
 
 Excluding some URLs can be added to the text box below the proxy-settings (see
-Figure :ref:`fig_proxy-settings`) by pressing the :guilabel:`Add`-button. After 
+Figure :ref:`fig_proxy-settings`) by pressing the **[Add]** button. After 
 that double-click into the just created URL-field and enter the URL you would like
-to exclude from using the proxy. Obviously the button :guilabel:`Remove` removes 
+to exclude from using the proxy. Obviously the button **[Remove]** removes 
 the selected entry.
 
 If you need more detailed information about the different proxy-settings,
@@ -1242,7 +1242,7 @@ To create a bookmark:
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark -->` or press :kbd:`Ctrl-B`.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
-#. Click :guilabel:`OK` to add the bookmark or :guilabel:`Cancel` to exit without adding the bookmark.
+#. Click **[OK]** to add the bookmark or **[Cancel]** to exit without adding the bookmark.
 
 
 
@@ -1260,16 +1260,16 @@ Zooming to a Bookmark
 ----------------------
 
 From the :menuselection:`Geospatial Bookmarks` dialog, select the desired 
-bookmark by clicking on it, then click :guilabel:`Zoom To`.
+bookmark by clicking on it, then click **[Zoom To]**.
 You can also zoom to a bookmark by double-clicking on it.
 
 Deleting a Bookmark
 -------------------
 
 To delete a bookmark from the :guilabel:`Geospatial Bookmarks`
-dialog, click on it then click :guilabel:`Delete`.
-Confirm your choice by clicking :guilabel:`Yes` or cancel the
-delete by clicking :guilabel:`No`.
+dialog, click on it then click **[Delete]**.
+Confirm your choice by clicking **[Yes]** or cancel the
+delete by clicking **[No]**.
 
 .. _`sec_gpstracking`:
 
@@ -1291,8 +1291,8 @@ There are 4 possible screens in this GPS tracking window
 * |mActionOptions| GPS options screen (see Figure :ref:`fig:gpstrack_options`).
 
 With a plugged in GPS receiver (has to be supported by your operating system)
-a simple click on :guilabel:`Connect` connects the GPS to QGIS. 
-A second click (now :guilabel:`Disconnect`) disconnects the 
+a simple click on **[Connect]** connects the GPS to QGIS. 
+A second click (now **[Disconnect]**) disconnects the 
 GPS-Receiver from your Computer. For GNU/Linux gpsd support is integrated to 
 support connection to most GPS receivers. Therefore you first have to configure 
 gpsd properly to connect QGIS to it.
@@ -1342,7 +1342,7 @@ GPS options
 |mActionOptions| In case of connection problems you can switch from 
 |radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| 
 :menuselection:`Use path/port below` and select the path/port your GPS receiver 
-is connected to.  A click on :guilabel:`Connect` again initiates 
+is connected to.  A click on **[Connect]** again initiates 
 the connection to the GPS receiver.
 
 With the slider :menuselection:`GPS Cursor Size` |slider| you can shrink and grow 
@@ -1358,8 +1358,8 @@ or there is any change at all.
 Track color and width sets the color of and the width of your drawn track.
 
 If you want to set a feature manually you have to go back to
-|mActionToggleEditing| ''Position Coordinates''
-and click on :guilabel:`Add feature`.
+|mActionToggleEditing| "Position Coordinates"
+and click on **[Add feature]**.
 
 .. [1] Keyboard shortcuts can now be configured manually
    (shortcuts presented in this section are the defaults), using the Configure

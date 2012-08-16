@@ -125,19 +125,19 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 
 **Load raster and vector layers from the sample dataset**
 
-#. Click on the |mActionAddRasterLayer| :guilabel:`Load Raster` icon.
+#. Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select 
-   the ERDAS Img file :file:`landcover.img` and click :guilabel:`Open`.
+   the ERDAS Img file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the Filetype combobox at the
    bottom of the dialog is set on the right type, in this case "Erdas Imagine
    Images (*.img, *.IMG)".
-#. Now click on the |mActionAddOgrLayer| :guilabel:`Load Vector` icon. 
+#. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon. 
 #. |radiobuttonon| :guilabel:`File` should be selected as Source Type in the new
-   :guilabel:`Add Vector Layer` dialog. Now click :guilabel:`Browse` to select
+   :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select
    the vector layer.
 #. Browse to the folder :file:`qgis_sample_data/gml/`, select "GML"
    from the filetype combobox, then select the GML file :file:`lakes.gml` 
-   and click :guilabel:`Open`, then in Add Vector dialog click :guilabel:`OK`.
+   and click **[Open]**, then in Add Vector dialog click **[OK]**.
 #. Zoom in a bit to your favorite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the 
    :guilabel:`Properties` dialog.
@@ -147,8 +147,8 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 #. To improve readability of labels, you can add a white buffer around them,
    by clicking "Buffer" in the list on the left, checking |checkbox|:guilabel:`Buffer labels?`
    and choosing 3 as buffer size.
-#. Click :guilabel:`Apply`, check if the result looks good and finally 
-   click :guilabel:`OK`.
+#. Click **[Apply]**, check if the result looks good and finally 
+   click **[OK]**.
 
 You can see how easy it is to visualize raster and vector layers in 
 |qg|. Let's move on to the sections that follow to learn more about the 
