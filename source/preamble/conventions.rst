@@ -1,8 +1,4 @@
-..  when the revision of a section has been finalized, 
-..  comment out the following line:
-..  \updatedisclaimer
-
-.. label_conventions:
+.. _label_conventions:
 
 ============
 Conventions
@@ -19,13 +15,10 @@ The GUI convention styles are intended to mimic the appearance of the GUI. In
 general, the objective is to use the non-hover appearance, so a user can 
 visually scan the GUI to find something that looks like the instruction in the manual.
 
-.. |mActionAddRasterLayer| image:: _static/mActionAddRasterLayer.png
-   :width: 1em
-
 *  Menu Options: :menuselection:`Layer --> Add a Raster Layer` or 
    :menuselection:`Settings --> Toolbars --> Digitizing`
-*  Tool: |mActionAddRasterLayer| :guilabel:`Add a Raster Layer`
-*  Button : :guilabel:`Save as Default`
+*  Tool: |mActionAddRasterLayer| :sup:`Add a Raster Layer`
+*  Button : **[Save as Default]**
 *  Dialog Box Title: :guilabel:`Layer Properties`
 *  Tab: :guilabel:`General`
 *  Checkbox: |checkbox| Render
