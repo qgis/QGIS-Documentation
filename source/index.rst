@@ -17,7 +17,7 @@ Welcome to QGIS manual
 	working/working_with_ogc
 	server/server
 	working/working_with_projections
-	grass integration
+	grass_integration
 	print_composer/print_composer
 	plugins/plugins_index
 	plugins/plugins
