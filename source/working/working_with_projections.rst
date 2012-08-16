@@ -77,12 +77,11 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 When you use layers that do not have a CRS, you need to define how
 QGIS responds to these layers. This can be done globally or
-project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit ->'
-|mActionOptions| :guilabel:`Options` (Gnome, OSX) or
-:menuselection:`Settings -> `|mActionOptions| :guilabel:`Options`
+project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit -->` |mActionOptions| :guilabel:`Options` (Gnome, OSX) or
+:menuselection:`Settings -->`  |mActionOptions| :guilabel:`Options`
 (KDE, Windows).
 
-The options shown in Figure :ref:`fig:crsdialog` are:
+The options shown in Figure `sec_projection-specifying`_ are:
 
 .. [label=--]
 
@@ -92,8 +91,7 @@ The options shown in Figure :ref:`fig:crsdialog` are:
 
 
 If you want to define the coordinate reference system for a certain
-layer without CRS information, you can also do that in the
-|tab| :guilabel:`General` tab of the raster (Section :ref:`label_generaltab`) and
+layer without CRS information, you can also do that in the :guilabel:`General` tab of the raster (section :ref:`label_generaltab`) and
 vector (Section :ref:`vectorgeneraltab`) properties dialog. If your
 layer already has a CRS defined, it will be displayed as shown in
 Figure :ref:`fig:vector_symbology`.
@@ -105,7 +103,7 @@ Figure :ref:`fig:vector_symbology`.
 
    * :guilabel:`Set layer CRS` takes you directly to the Coordinate
      Reference System Selector dialog. Which you also get to by the
-     guilabel:`Select` button on the :guilabel:`General` tab of the layer
+     :guilabel:`Select` button on the :guilabel:`General` tab of the layer
      properties dialog.
    * :guilabel:`Set project CRS from Layer` redefines the project
      CRS using the layer's CRS
@@ -120,7 +118,7 @@ Define On The Fly (OTF) Projection
 QGIS now supports OTF projection for both raster and vector
 data. However, OTF is not activated by default. To use OTF projection,
 you must activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox
-in the |tab| :guilabel:`CRS` tab of the |mActionProjectProperties|
+in the :guilabel:`CRS` tab of the |mActionProjectProperties|
 :menuselection:`Project Properties` dialog.
 
 There are three ways to achieve this end:
@@ -130,28 +128,29 @@ There are three ways to achieve this end:
    menu.
 #. Click on the |geographic| :guilabel:`CRS status` icon in the lower 
    right-hand corner of the statusbar.
-#. Turn OTF on by default, by selecting the |tab| :guilabel:`CRS` tab of the 
+#. Turn OTF on by default, by selecting the :guilabel:`CRS` tab of the 
    :guilabel:`Options` dialog and selecting |checkbox| 
    :guilabel:`Enable 'on the fly' reprojection by default`
 
 
 If you have already loaded a layer, and want to enable OTF projection, the
-best practice is to open the |tab| :guilabel:`Coordinate Reference System` 
-tab of the :guilabel:`Project Properties` dialog, select the a CRS, and 
+best practice is to open the :guilabel:`Coordinate Reference System` 
+tab of the :guilabel:`Project Properties` dialog, select a CRS, and 
 activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox. 
 The |geographic| :guilabel:`CRS status` icon will no longer be greyed-out
 and all layers will be OTF projected to the CRS shown next to the icon.
 
-The |tab| :guilabel:`Coordinate Reference System` tab of the 
+The :guilabel:`Coordinate Reference System` tab of the 
 :guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure :ref:`fig:projections` and described below.
+shown in Figure :ref:`projections` and described below.
 
-.. \begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=10cm]{projectionDialog}
-   \caption{Projection Dialog \wincaption}\label{fig:projections}
-   \end{figure}
+.. _`projection_dialog`
 
+.. figure:: img/en/projectionDialog.png
+   :align: center
+   :width: 40em
+
+   Projection Dialog
 
 .. index:: `Projections!enabling`
 
@@ -183,10 +182,10 @@ shown in Figure :ref:`fig:projections` and described below.
 
    If you open the :guilabel:`Project Properties` dialog from the
    :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings`
-   (KDE, Windows) menu, you must click on the |tab| 
+   (KDE, Windows) menu, you must click on the 
    :guilabel:`Coordinate Reference System` tab to view the CRS settings. 
    Opening the dialog from the |geographic| :guilabel:`CRS status` icon 
-   will automatically bring the |tab| :guilabel:`Coordinate Reference System` 
+   will automatically bring the :guilabel:`Coordinate Reference System` 
    tab to the front.
 
 .. _`sec:customprojections`:
