@@ -1,4 +1,4 @@
-.. _`working_with_ogc`:
+.. _working_with_ogc:
 
 ---------------------
 Working with OGC Data
