@@ -192,6 +192,14 @@ Also scaling of colors are available.
    "Not Set". But this is not the correct way. To display the Red band,
    set the image type to grayscale, then select Red as the band to use for Gray.
 
+**Contrast enhancement**
+
+
+.. note::  
+   when adding GRASS rasters the option *Contrast enhancement* will be 
+   always set to automatically to *stretch to min max* regardless if 
+   the Quantum GIS general options this is set to another value.
+
 .. index:: `rastertab:transparency`
 
 Transparency Tab
