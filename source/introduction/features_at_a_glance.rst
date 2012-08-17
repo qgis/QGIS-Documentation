@@ -1176,7 +1176,7 @@ Annotation Tools
 ================
 
 
-The |mActionTextAnnotation| text annotation tools in the attribute toolbar 
+The |mActionTextAnnotation| text annotation tools in the attribute t oolbar 
 provides the possibility to place formatted text in a balloon on the QGIS map 
 canvas. Use the text annotation tool and click into the map canvas.
 
