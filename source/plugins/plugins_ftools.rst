@@ -200,6 +200,13 @@ click the :menuselection:`fTools Information -->` menu item in the
 
 .. \caption{fTools Geometry tools}\label{tab:ftool_geometry}
 
+.. note::
+
+	The *Simplify geometry* tool can be used to remove duplicate nodes in line and polygon
+	geometries, just set the *Simplify tolerance* parameter to 0 and this will do
+	the trick.
+
+
 +---------------------+-----------------+--------------------------------------+
 | Data management tools available via the fTools plugin**                      |
 +---------------------+-----------------+--------------------------------------+
