@@ -196,8 +196,7 @@ Custom Coordinate Reference Systems
 :index:`Projections!custom`
 
 If QGIS does not provide the coordinate reference system you need, you
-can define a custom CRS. To define a CRS, select |mIconNew| 
-:guilabel:`Custom CRS` from the :menuselection:`Edit` (Gnome, OSX) or 
+can define a custom CRS. To define a CRS, select |mIconNew|:guilabel:`Custom CRS` from the :menuselection:`Edit` (Gnome, OSX) or 
 :menuselection:`Settings` (KDE, Windows) menu.  Custom CRS are stored in your 
 QGIS user database. In addition to your custom CRS, this database also contains 
 your spatial bookmarks and other custom data.
