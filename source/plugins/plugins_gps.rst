@@ -56,6 +56,12 @@ checkboxes to select the feature types you want to load from that GPX file.
 Each feature type will be loaded in a separate layer when you click 
 :guilabel:`OK`.  The file :file:`national_monuments.gpx` only includes waypoints.
 
+.. note::  
+   GPS units allow to store data in different coordinate systems. Anyway when downloading
+   a GPX file (from your GPS unit or a web site) and then loading it in Quantum GIS, be sure that this
+   has the data stored in WGS84 (latitude/longitude). Quantum GIS do expect this 
+   because is what the official GPX specifications says. See http://www.topografix.com/GPX/1/1/
+
 GPSBabel
 --------
 
