@@ -1070,6 +1070,54 @@ You can define multiple actions for a layer and each will show up in the :guilab
 
 You can think of all kinds of uses for actions. For example, if you have a point layer containing locations of images or photos along with a file name, you could create an action to launch a viewer to display the image. You could also use actions to launch web-based reports for an attribute field or combination of fields, specifying them in the same way we did in our Google search example.
 
+We can also make more complex examples, for instance on how to use **Python** actions.
+
+Usually when we create an action to open a file with an external application we can use absolute paths, or eventually relative paths, in the second case the path is relative to the location of the external program executable file. But what about we need to use relative paths, relative to the selected layer (a file based one, like a shapefile or spatialite)? The following code will do the trick:
+
+::
+
+
+	command = "firefox";
+	imagerelpath = "images_test/test_image.jpg"; 
+	layer = qgis.utils.iface.activeLayer(); 
+	import os.path; 
+	layerpath = layer.source() if layer.providerType() == 'ogr' else (qgis.core.QgsDataSourceURI(layer.source()).database() if layer.providerType() == 'spatialite' else None); 
+	path = os.path.dirname(str(layerpath)); 
+	image = os.path.join(path,imagerelpath); 
+	import subprocess; 
+	subprocess.Popen( [command, image ] );
+
+we have to just remember that the action is one of type *Python* and to change the *command* and *imagerelpath* variables to fit our needs. 
+
+But what about if the relative path need to be relative to the (saved) project file? The code of the Python action would be:
+
+::
+
+
+	command="firefox"; 
+	imagerelpath="images/test_image.jpg"; 
+	projectpath=qgis.core.QgsProject.instance().fileName(); 
+	import os.path; path=os.path.dirname(str(projectpath)) if projectpath != '' else None; 
+	image=os.path.join(path, imagerelpath); 
+	import subprocess;
+	subprocess.Popen( [command, image ] );
+
+Another Python actions example if the one that allows us to add new layers to the project. For instance the following examples will add to the project respectively a vector and a raster. The name of files to be added to the project and the name to be given to the layer are data driven (*filename* and *layname* are column names of the table of attributes of the vector where the action was created):
+
+::
+
+
+	qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]', 'ogr')
+	
+
+To add a raster (a tif image in this example) it becomes:
+
+::
+
+
+	qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]')
+
+
 .. _`sec_joins`:
 
 Joins Tab
