@@ -15,7 +15,6 @@ The GRASS plugin provides access to GRASS GIS[GRASSweb] databases and functional
 In this Section we'll introduce the plugin functionalities and give some examples on managing and working with GRASS data. Following main features are provided with the toolbar menu, when you start the GRASS plugin, as described in section :ref:`sec_starting_grass` :
 
 
-[label=--]
 *  |grass_open_mapset| :guilabel:`Open mapset`
 *  |grass_new_mapset| :guilabel:`New mapset`
 *  |grass_close_mapset| :guilabel:`Close mapset`
@@ -92,16 +91,17 @@ GRASS LOCATION and MAPSET
 =========================
 `sec_about_loc`:
 
-GRASS data are stored in a directory referred to as GISDBASE. This directory often called :file:`grassdata}, must be created before you start working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects stored in subdirectories called :file:`LOCATION}.
-Each :file:`LOCATION} is defined by its coordinate system, map projection and geographical boundaries. Each :file:`LOCATION} can have several
-:file:`MAPSETs} (subdirectories of the :file:`LOCATION}) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler \& Mitasova 2008
-[neteler_mitasova08]_). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION}.
-[#]_ and :file:`v.external} you can create read-only links to external GDAL/OGR-supported data sets without importing them. But because this is not the usual way for beginners to work with GRASS, this functionality will not be described here.}
+GRASS data are stored in a directory referred to as GISDBASE. This directory often called :file:`grassdata`, must be created before you start working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects stored in subdirectories called :file:`LOCATION`.
+Each :file:`LOCATION` is defined by its coordinate system, map projection and geographical boundaries. Each :file:`LOCATION` can have several
+:file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler \& Mitasova 2008 [neteler_mitasova08]_). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION`.[#]
 
-\begin{figure}[ht]
-\centering
-\includegraphics[clip=true]{grass_location}
-\caption{GRASS data in the alaska LOCATION (adapted from Neteler \& Mitasova 2008 [neteler_mitasova08]_)}`fig_grass_location`:\end{figure}
+.. _`grass_location`:
+
+.. figure:: img/en/grass_location.png
+   :align: center
+   :width: 40em
+
+   GRASS data in the alaska LOCATION
 
 .. _sec_create_loc:
 
@@ -721,8 +721,6 @@ A sample XML file for generating the module \usertext{v.buffer} (v.buffer.qgm) l
 The parser reads this definition and creates a new tab inside the toolbox when you select the module. A more detailed description for adding new modules, changing the modules group, etc. can be found on the QGIS wiki at \\
 http://wiki.qgis.org/qgiswiki/Adding\_New\_Tools\_to\_the\_GRASS\_Toolbox.
 
-\FloatBarrier
-.. [#] This is not strictly true - with the GRASS modules
-:file:`r.external
- .. [#] When creating a new :file:`LOCATION
+ .. [#] This is not strictly true - with the GRASS modules :file:`r.external` and :file:`v.external` you can create read-only links to external GDAL/OGR-supported   data sets without importing them. But because this is not the usual way for beginners to work with GRASS, this functionality will not be described here.
+ .. [#] When creating a new :file:`LOCATION`
  .. [#] Although it is possible to mix geometry elements, it is unusual and even in GRASS only used in special cases such as vector network analysis. Normally you should prefere to store different geometry elements in different layers.
