@@ -416,6 +416,26 @@ rst_epilog = """
    :width: 15em
 .. |gpstrack_polar| image:: /introduction/img/en/gpstrack_polar.png
    :width: 15em
+.. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
+   :width: 1.5em
+.. |grass_new_mapset| image:: /grass_integration/img/en/grass_new_mapset.png
+   :width: 1.5em
+.. |grass_close_mapset| image:: /grass_integration/img/en/grass_close_mapset.png
+   :width: 1.5em
+.. |grass_add_vector| image:: /grass_integration/img/en/grass_add_vector.png
+   :width: 1.5em
+.. |grass_add_raster| image:: /grass_integration/img/en/grass_add_raster.png
+   :width: 1.5em
+.. |grass_new_vector_layer| image:: /grass_integration/img/en/grass_new_vector_layer.png
+   :width: 1.5em
+.. |grass_edit| image:: /grass_integration/img/en/grass_edit.png
+   :width: 1.5em
+.. |grass_tools| image:: /grass_integration/img/en/grass_tools.png
+   :width: 1.5em
+.. |grass_region| image:: /grass_integration/img/en/grass_region.png
+   :width: 1.5em
+.. |grass_region_edit| image:: /grass_integration/img/en/grass_region_edit.png
+   :width: 1.5em
 
 """
 
