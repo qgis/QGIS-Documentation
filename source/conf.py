@@ -436,6 +436,8 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_region_edit| image:: /grass_integration/img/en/grass_region_edit.png
    :width: 1.5em
+.. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
+   :width: 1.5em
 
 """
 
