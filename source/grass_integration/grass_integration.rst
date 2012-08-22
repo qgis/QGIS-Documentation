@@ -112,14 +112,13 @@ Creating a new GRASS LOCATION
 
 As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata` .
 
-
 .. _`create_grass_location`:
 
 .. figure:: img/en/create_grass_location.png
    :align: center
    :width: 30em
 
-   Creating a new GRASS LOCATION or a new MAPSET in
+   Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
 
   #.  Start QGIS and make sure the GRASS plugin is loaded.
@@ -165,8 +164,6 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
   #.  Notice that some of the tools in the GRASS toolbar that were
   disabled are now enabled.
 
-
-
 If that seemed like a lot of steps, it's really not all that bad and a very quick way to create a :file:`LOCATION`. The :file:`LOCATION alaska` is now ready for data import (see section :ref:`sec_import_loc_data`).
 You can also use the already existing vector and raster data in the sample GRASS :file:`LOCATION alaska` included in the QGIS alaska dataset
 :ref:`label_sampledata` and move on to Section :ref:`label_vectmodel`.
@@ -177,28 +174,27 @@ Adding a new MAPSET
 --------------------
 `sec_add_mapset`:
 
-A user has only write access to a GRASS :file:`MAPSET} he created. This means that besides access to his own :file:`MAPSET}, each user can read maps in other user's :file:`MAPSETs}, but he can modify or remove only the maps in his own :file:`MAPSET}. All :file:`MAPSETs} include a
-:file:`WIND} file that stores the current boundary coordinate values and the currently selected raster resolution (Neteler \& Mitasova 2008
-[neteler_mitasova08]_, see Section \ref{sec:grass_region}).
+A user has only write access to a GRASS :file:`MAPSET` he created. This means that besides access to his own :file:`MAPSET`, each user can read maps in other user's :file:`MAPSETs`, but he can modify or remove only the maps in his own :file:`MAPSET`. All :file:`MAPSETs` include a
+:file:`WIND` file that stores the current boundary coordinate values and the currently selected raster resolution (Neteler \& Mitasova 2008
+[neteler_mitasova08]_, see Section :ref:`sec_grass_region`).
 
 
-
-  #.  Start QGIS and make sure the GRASS plugin is loaded
+  #.  Start QGIS and make sure the GRASS plugin is loaded.
   #.  In the GRASS toolbar, click on the
-  |grass_new_mapset| :guilabel:`New mapset` icon to bring up the
-  :file:`MAPSET} wizard.
-  #.  Select the GRASS database (GISDBASE) folder :file:`grassdata}
-  with the :file:`LOCATION alaska}, where we want to add a further
-  :file:`MAPSET}, called test.
-  #.  Click \button{Next}.
-  #.  We can use this wizard to create a new :file:`MAPSET} within an
-  existing :file:`LOCATION} or to create a new :file:`LOCATION}
-  altogether. Click on the radio button \radiobuttonon{Select location}
-  (see Figure \ref{fig:create_grass_location}) and click \button{Next}.
-  #.  Enter the name :file:`text} for the new :file:`MAPSET}. Below
-  in the wizard you see a list of existing :file:`MAPSETs} and its owners.
-  #.  Click \button{Next}, check out the summary to make sure it's all
-  correct and click \button{Finish}
+      |grass_new_mapset| :guilabel:`New mapset` icon to bring up the
+      :file:`MAPSET` wizard.
+  #.  Select the GRASS database (GISDBASE) folder :file:`grassdata`
+      with the :file:`LOCATION alaska`, where we want to add a further
+      :file:`MAPSET`, called test.
+  #.  Click :guilabel:`Next`.
+  #.  We can use this wizard to create a new :file:`MAPSET` within an
+      existing :file:`LOCATION` or to create a new :file:`LOCATION`
+      altogether. Click on the radio button |radiobuttonon| `Select location`
+      (see figure `create_grass_location`_) and click :guilabel:`Next`.
+  #.  Enter the name :file:`text` for the new :file:`MAPSET`. Below
+      in the wizard you see a list of existing :file:`MAPSETs` and its owners.
+  #.  Click :guilabel:`Next`, check out the summary to make sure it's all
+      correct and click :guilabel:`Finish`.
 
 
 .. _sec_import_loc_data:
@@ -207,52 +203,50 @@ Importing data into a GRASS LOCATION
 ====================================
 
 This Section gives an example how to import raster and vector data into the
-:file:`alaska} GRASS :file:`LOCATION} provided by the QGIS alaska dataset. Therefore we use a landcover raster map :file:`landcover.img}
-and a vector GML File :file:`lakes.gml} from the QGIS alaska dataset \ref{label_sampledata}.
-
+:file:`alaska` GRASS :file:`LOCATION` provided by the QGIS alaska dataset. Therefore we use a landcover raster map :file:`landcover.img`
+and a vector GML File :file:`lakes.gml` from the QGIS alaska dataset :ref:`label_sampledata`.
 
 
   #.  Start QGIS and make sure the GRASS plugin is loaded.
-  #.  In the GRASS toolbar, click the \toolbtntwo{grass_open_mapset}{Open
-  MAPSET} icon to bring up the :file:`MAPSET} wizard.
-  #.  Select as GRASS database the folder :file:`grassdata} in the QGIS
-  alaska dataset, as :file:`LOCATION alaska}, as :file:`MAPSET}
-  :file:`demo} and click \button{OK}.
+  #.  In the GRASS toolbar, click the |grass_open_mapset|:guilabel:`Open
+      MAPSET` icon to bring up the :file:`MAPSET` wizard.
+  #.  Select as GRASS database the folder :file:`grassdata` in the QGIS
+      alaska dataset, as :file:`LOCATION alaska`, as :file:`MAPSET`
+      :file:`demo` and click :guilabel:`OK`.
   #.  Now click the |grass_tools| :guilabel:`Open GRASS tools` icon. The
-  GRASS Toolbox (see Section \ref{subsec:grass_toolbox}) dialog appears.
-  #.  To import the raster map :file:`landcover.img}, click the module
-  :file:`r.in.gdal} in the \tab{Modules Tree} tab. This GRASS module
-  allows to import GDAL supported raster files into a GRASS
-  :file:`LOCATION}. The module dialog for :file:`r.in.gdal} appears.
-  #.  Browse to the folder :file:`raster} in the QGIS alaska dataset
-  and select the file :file:`landcover.img}.
-  #.  As raster output name define :file:`landcover\_grass} and click
-  \button{Run}. In the \tab{Output} tab you see the currently running GRASS
-  command :file:`r.in.gdal -o input=/path/to/landcover.img
-  output=landcover\_grass}.
-  #.  When it says **Succesfully finished** click \button{View output}.
-  The :file:`landcover\_grass} raster layer is now imported into GRASS and
-  will be visualized in the QGIS canvas.
-  #.  To import the vector GML file :file:`lakes.gml}, click the module
-  :file:`v.in.ogr} in the \tab{Modules Tree} tab. This GRASS module allows
-  to import OGR supported vector files into a GRASS :file:`LOCATION}. The
-  module dialog for :file:`v.in.ogr} appears.
-  #.  Browse to the folder :file:`gml} in the QGIS alaska
-  dataset and select the file :file:`lakes.gml} as OGR file.
-  #.  As vector output name define :file:`lakes\_grass} and click
-  \button{Run}. You don't have to care about the other options in this
-  example. In the \tab{Output} tab you see the currently running GRASS
-  command :file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass}.
-  #.  When it says **Succesfully finished** click \button{View output}.
-  The :file:`lakes\_grass} vector layer is now imported into GRASS and will
-  be visualized in the QGIS canvas.
+      GRASS Toolbox (see section :ref:`subsec_grass_toolbox`) dialog appears.
+  #.  To import the raster map :file:`landcover.img`, click the module
+      :file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module
+      allows to import GDAL supported raster files into a GRASS
+      :file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears.
+  #.  Browse to the folder :file:`raster` in the QGIS alaska dataset
+      and select the file :file:`landcover.img`.
+  #.  As raster output name define :file:`landcover\_grass}` and click
+      :guilabel:`Run`. In the :guilabel:`Output` tab you see the currently running GRASS
+      command :file:`r.in.gdal -o input=/path/to/landcover.img
+      output=landcover\_grass`.
+  #.  When it says **Succesfully finished** click :guilabel:`View output`.
+      The :file:`landcover\_grass` raster layer is now imported into GRASS and
+      will be visualized in the QGIS canvas.
+  #.  To import the vector GML file :file:`lakes.gml`, click the module
+      :file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module allows
+      to import OGR supported vector files into a GRASS :file:`LOCATION`. The
+      module dialog for :file:`v.in.ogr` appears.
+  #.  Browse to the folder :file:`gml` in the QGIS alaska
+      dataset and select the file :file:`lakes.gml` as OGR file.
+  #.  As vector output name define :file:`lakes\_grass` and click
+      :guilabel:`Run`. You don't have to care about the other options in this
+      example. In the :guilabel:`Output` tab you see the currently running GRASS
+      command :file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass`.
+  #.  When it says **Succesfully finished** click :guilabel:`View output`.
+      The :file:`lakes\_grass` vector layer is now imported into GRASS and will
+      be visualized in the QGIS canvas.
 
-
-
+.. _label_vectmodel:
 
 The GRASS vector data model
 ===========================
-`label_vectmodel`::index:`GRASS!vector data model`
+::index:`GRASS!vector data model`
 
 It is important to understand the GRASS vector data model prior to digitizing.:index:`GRASS!digitizing` In general, GRASS uses a topological vector model.:index:`GRASS!topology` This means that areas are not represented as closed polygons, but by one or more boundaries. A boundary between two adjacent areas is digitized only once, and it is shared by both areas.
 Boundaries must be connected and closed without gaps. An area is identified (and labeled) by the **centroid** of the area.
@@ -265,22 +259,24 @@ It is possible to store several 'layers' in one vector dataset. For example, fie
 The 'layer' of the feature is defined by 'layer' inside GRASS. 'Layer' is the number which defines if there are more than one layer inside the dataset, e.g.
 if the geometry is forest or lake. For now, it can be only a number, in the future GRASS will also support names as fields in the user interface.
 
-Attributes can be stored inside the GRASS :file:`LOCATION} as DBase or SQLITE3 or in external database tables, for example PostgreSQL, MySQL, Oracle, etc.:index:`GRASS!attribute storage`
+Attributes can be stored inside the GRASS :file:`LOCATION` as DBase or SQLITE3 or in external database tables, for example PostgreSQL, MySQL, Oracle, etc.:index:`GRASS!attribute storage`
 
 Attributes in database tables are linked to geometry elements using a 'category' value.:index:`GRASS!attribute linkage` 'Category' (key, ID) is an integer attached to geometry primitives, and it is used as the link to one key column in the database table.
 
-\begin{Tip}\caption{\textsc{Learning the GRASS Vector Model}}
-The best way to learn the GRASS vector model and its capabilities is to download one of the many GRASS tutorials where the vector model is described more deeply. See http://grass.osgeo.org/gdp/manuals.php for more information, books and tutorials in several languages.
-\end{Tip}
+.. tip::
+   **Learning the GRASS Vector Model**
+   The best way to learn the GRASS vector model and its capabilities is to download one of the many GRASS tutorials where the vector model is described more deeply. See http://grass.osgeo.org/gdp/manuals.php for more information, books and tutorials in several languages.
+
+.. _`sec_creating_new_grass_vectors`:
 
 Creating a new GRASS vector layer
 =================================
-`sec_creating_new_grass_vectors`::index:`GRASS!Creating new vectors|see{editing!creating a new layer`}
+::index:`GRASS!Creating new vectors|see{editing!creating a new layer`}
 
 To create a new GRASS vector layer with the GRASS plugin click the
 |grass_new_vector_layer| :guilabel:`Create new GRASS vector` toolbar icon.
 Enter a name in the text box and you can start digitizing point, line or polygon geometries, following the procedure described in Section
-\ref{grass_digitizing}.
+:ref:`grass_digitizing`.
 
 In GRASS it is possible to organize all sort of geometry types (point, line and area) in one layer, because GRASS uses a topological vector model, so you don't need to select the geometry type when creating a new GRASS vector. This is different from Shapefile creation with QGIS, because Shapefiles use the Simple Feature vector model (see Section \ref{sec:create shape}).
 
@@ -288,9 +284,11 @@ In GRASS it is possible to organize all sort of geometry types (point, line and 
 If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure \ref{fig:grass_digitizing_table}).
 \end{Tip}
 
+.. _grass_digitizing:
+
 Digitizing and editing a GRASS vector layer
 ===========================================
-:index:`GRASS!digitizing tools``grass_digitizing`:
+:index:`GRASS!digitizing tools`
 
 The digitizing tools for GRASS vector layers are accessed using the
 |grass_edit| :guilabel:`Edit GRASS vector layer` icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure \ref{fig:grass_digitizing_category}
@@ -416,9 +414,11 @@ The \tab{Table} tab provides information about the database table for a given 'l
 You must be the owner of the GRASS :file:`MAPSET} you want to edit. It is impossible to edit data layers in a :file:`MAPSET} that is not yours, even if you have write permissions.
 \end{Tip}
 
+.. _sec_grass_region:
+
 The GRASS region tool
 =====================
-`sec_grass_region`::index:`GRASS!region`
+::index:`GRASS!region`
 
 The region definition (setting a spatial working window) in GRASS is important for working with raster layers. Vector analysis is by default not limited to any defined region definitions. But all newly-created rasters will have the spatial extension and resolution of the currently defined GRASS region, regardless of their original extension and resolution. The current GRASS region is stored in the :file:`\$LOCATION/\$MAPSET/WIND} file, and it defines north, south, east and west bounds, number of columns and rows, horizontal and vertical spatial resolution.
 
