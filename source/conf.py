@@ -210,7 +210,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionMergeFeatures| image:: /img/en/mActionMergeFeatures.png
    :width: 1.5em
-.. |mActionMergeFeat| image:: /img/en/mActionMergeFeatures.png
+.. |mergeFeats| image:: /img/en/mActionMergeFeatures.png
    :width: 1.5em
 .. |mActionNodeTool| image:: /img/en/mActionNodeTool.png
    :width: 1.5em
@@ -249,14 +249,23 @@ rst_epilog = """
 .. |mActionNewVectorLayer| image:: /img/en/mActionNewVectorLayer.png
    :width: 1.5em
 .. |mActionZoomFullExtent| image:: /img/en/mActionZoomFullExtent.png
+   :width: 1.5em
 .. |mActionZoomToLayer| image:: /img/en/mActionZoomToLayer.png
+   :width: 1.5em
 .. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
+   :width: 1.5em
 .. |mActionZoomLast| image:: /img/en/mActionZoomLast.png
+   :width: 1.5em
 .. |mActionZoomNext| image:: /img/en/mActionZoomNext.png
+   :width: 1.5em
 .. |mActionMapTips| image:: /img/en/mActionMapTips.png
+   :width: 1.5em
 .. |mActionNewBookmark| image:: /img/en/mActionNewBookmark.png
+   :width: 1.5em
 .. |mActionShowBookmarks| image:: /img/en/mActionShowBookmarks.png
+   :width: 1.5em
 .. |mActionDraw| image:: /img/en/mActionDraw.png
+   :width: 1.5em
 .. |mActionAddNonDbLayer| image:: /img/en/mActionAddNonDbLayer.png
    :width: 1.5em
 .. |mActionAddLayer| image:: /img/en/mActionAddLayer.png
@@ -264,36 +273,58 @@ rst_epilog = """
 .. |mActionAddSpatiaLiteLayer| image:: /img/en/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
 .. |mActionAddWmsLayer| image:: /img/en/mActionAddWmsLayer.png
+   :width: 1.5em
 .. |mActionOpenTable| image:: /img/en/mActionOpenTable.png
    :width: 1.5em
 .. |mActionRemoveLayer| image:: /img/en/mActionRemoveLayer.png
+   :width: 1.5em
 .. |mActionLabeling| image:: /img/en/mActionLabeling.png
    :width: 1.5em
-.. |labeling| image:: /img/en/mActionLabeling.png
-   :width: 1.5em
 .. |mActionInOverview| image:: /img/en/mActionInOverview.png
+   :width: 1.5em
 .. |mActionAddAllToOverview| image:: /img/en/mActionAddAllToOverview.png
+   :width: 1.5em
 .. |mActionRemoveAllFromOverview| image:: /img/en/mActionRemoveAllFromOverview.png
+   :width: 1.5em
+.. |RemoveAllOVerview| image:: /img/en/mActionRemoveAllFromOverview.png
+   :width: 1.5em
 .. |mActionShowAllLayers| image:: /img/en/mActionShowAllLayers.png
+   :width: 1.5em
 .. |mActionHideAllLayers| image:: /img/en/mActionHideAllLayers.png
+   :width: 1.5em
 .. |mActionProjectProperties| image:: /img/en/mActionProjectProperties.png
+   :width: 1.5em
 .. |mActionCustomProjection| image:: /img/en/mActionCustomProjection.png
+   :width: 1.5em
 .. |mActionOptions| image:: /img/en/mActionOptions.png
    :width: 1em
 .. |mActionHelpContents| image:: /img/en/mActionHelpContents.png
+   :width: 1.5em
 .. |mActionQgisHomePage| image:: /img/en/mActionQgisHomePage.png
+   :width: 1.5em
 .. |mActionCheckQgisVersion| image:: /img/en/mActionCheckQgisVersion.png
+   :width: 1.5em
 .. |mActionHelpAbout| image:: /img/en/mActionHelpAbout.png
+   :width: 1.5em
 .. |mActionHelpSponsors| image:: /img/en/mActionHelpSponsors.png
+   :width: 1.5em
 .. |mActionTextAnnotation| image:: /img/en/mActionTextAnnotation.png
+   :width: 1.5em
 .. |mActionAnnotation| image:: /img/en/mActionAnnotation.png
+   :width: 1.5em
 .. |mIconStopRendering| image:: /img/en/mIconStopRendering.png
+   :width: 1.5em
 .. |mIconProjectionDisabled| image:: /img/en/mIconProjectionDisabled.png
+   :width: 1.5em
 .. |mActionMeasure| image:: /img/en/mActionMeasure.png
+   :width: 1.5em
 .. |mActionMeasureArea| image:: /img/en/mActionMeasureArea.png
+   :width: 1.5em
 .. |mActionMeasureAngle| image:: /img/en/mActionMeasureAngle.png
+   :width: 1.5em
 .. |spiticon| image:: /plugins/img/en/plugins_spit/spiticon.png
 .. |mActionOptions| image:: /img/en/mActionOptions.png
+   :width: 1.5em
 .. |mActionSelectRectangle| image:: /img/en/mActionSelectRectangle.png
    :width: 1.5em
 .. |mActionSelectPolygon| image:: /img/en/mActionSelectPolygon.png

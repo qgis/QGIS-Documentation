@@ -117,8 +117,8 @@ name and QGIS will open with all layers loaded described in the given file.
 
 To start with a specific map extent use this option. You need to add the 
 bounding box of your extent in the following order separated by a comma::
-	
-	--extent xmin,ymin,xmax,ymax
+
+    --extent xmin,ymin,xmax,ymax
 
 **Command line option** ``---nologo``
 
@@ -202,244 +202,188 @@ The toolbar containing the tool is listed after each menu option as a checkbox
 entry. For more information about tools and toolbars, see Section
 :ref:`label_toolbars`.
 
+\
 
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| Menu Option                                                           | Shortcut            | Reference                              | Toolbar                         |
-+=======================================================================+=====================+========================================+=================================+
-| |mActionFileNew| :guilabel:`File`                                                                                                                                      | 
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`New Project`                                               | :kbd:`Ctrl+N`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileOpen| :guilabel:`Open Project`                            | :kbd:`Ctrl+O`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Open Recent Projects`                                      |                     | see Section :ref:`sec_projects`        |                                 |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileSave| :guilabel:`Save Project`                            | :kbd:`Ctrl+S`       | see Section :ref:`sec_projects`        | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileSaveAs| :guilabel:`Save Project As`                       | :kbd:`Ctrl+Shift+S` | see Section :ref:`sec_projects`        | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSaveMapAsImage| :guilabel:`Save as Image`                     |                     | see Section :ref:`sec_output`          |                                 |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionNewComposer| :guilabel:`New Print Composer`                   | :kbd:`Ctrl+P`       | see Section :ref:`label_printcomposer` | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionComposerManager| :guilabel:`Composer manager`                 |                     | see Section :ref:`label_printcomposer` | :guilabel:`File`                |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Print Composers`                                           |                     | see Section :ref:`label_printcomposer` |                                 |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionFileExit| :guilabel:`Exit`                                    | :kbd:`Ctrl+Q`       |                                        |                                 |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Edit`                                                                                                                                                       |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionUndo| :guilabel:`Undo`                                        | :kbd:`Ctrl+Z`       | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionRedo| :guilabel:`Redo`                                        | :kbd:`Ctrl+Shift+Z` | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditCut| :guilabel:`Cut Features`                             | :kbd:`Ctrl+X`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditCopy| :guilabel:`Copy Features`                           | :kbd:`Ctrl+C`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditPaste| :guilabel:`Paste Features`                         | :kbd:`Ctrl+V`       | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionEditPaste| :guilabel:`Move Feature`                           |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeleteSelected| :guilabel:`Delete Selected`                   |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSimplify| :guilabel:`Simplify Feature`                        |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionAddRing| :guilabel:`Add Ring`                                 |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionAddIsland| :guilabel:`Add Part`                               |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeleteRing| :guilabel:`Delete Ring`                           |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDeletePart| :guilabel:`Delete Part`                           |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionReshape| :guilabel:`Reshape Features`                         |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionSplitFeatures| :guilabel:`Split Features`                     |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionMergeFeat| :guilabel:`Merge selected Features`                |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionMergeFeat| :guilabel:`Merge attributes of selected Features`  |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionNodeTool| :guilabel:`Node Tool`                               |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`          |                     | see Section :ref:`sec_advanced_edit`   | :guilabel:`Advanced Digitizing` |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+\ 
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**File**                                                        \                     \                                           \ 
+|mActionFileNew| :guilabel:`New Project`                        :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`File`
+|mActionFileOpen| :guilabel:`Open Project`                      :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`File`
+:menuselection:`Open Recent Projects -->`                       \                     see :ref:`sec_projects`                     \  
+|mActionFileSave| :guilabel:`Save Project`                      :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`File`
+|mActionFileSaveAs| :guilabel:`Save Project As`                 :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`File`
+|mActionSaveMapAsImage| :guilabel:`Save as Image`               \                     see :ref:`sec_output`                       \ 
+|mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`File`
+|mActionComposerManager| :guilabel:`Composer manager`           \                     see :ref:`label_printcomposer`              :guilabel:`File`
+:menuselection:`Print Composers`                                \                     see :ref:`label_printcomposer`              \ 
+|mActionFileExit| :guilabel:`Exit`                              :kbd:`Ctrl+Q`         \                                           \ 
+==============================================================  ====================  ==========================================  =============================== 
+
+----
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Edit**                                                        \                     \                                           \ 
+|mActionUndo| :guilabel:`Undo`                                  :kbd:`Ctrl+Z`         see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionRedo| :guilabel:`Redo`                                  :kbd:`Ctrl+Shift+Z`   see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing` 
+|mActionEditCut| :guilabel:`Cut Features`                       :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionEditCopy| :guilabel:`Copy Features`                     :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionEditPaste| :guilabel:`Paste Features`                   :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionEditPaste| :guilabel:`Move Feature`                     \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionAddIsland| :guilabel:`Add Part`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mergeFeats| :guilabel:`Merge selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mergeFeats| :guilabel:`Merge attributes of selected Features`  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionNodeTool| :guilabel:`Node Tool`                         \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+==============================================================  ====================  ==========================================  ===============================
+
+\ 
+
+\
 
 After activating |mActionToggleEditing| :sup:`Toggle editing` mode 
 for a layer, you will find a capture feature icon in the :menuselection:`Edit`
-menu depending on the layer type (point, line or polygon).
+menu depending on the layer type (point, line or polygon). 
 
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| Menu Option                                                           | Shortcut            | Reference                              | Toolbar                         |
-+=======================================================================+=====================+========================================+=================================+
-| |mActionCapturePoint| :guilabel:`Capture Point`                       |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionCaptureLine| :guilabel:`Capture Line`                         |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionCapturePolygon| :guilabel:`Capture Polygon`                   |                     | see Sec :ref:`sec_edit_existing_layer` | :guilabel:`Digitizing`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+---- 
 
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Edit** extra                                                  \                     \                                           \ 
+|mActionCapturePoint| :guilabel:`Capture Point`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCaptureLine| :guilabel:`Capture Line`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCapturePolygon| :guilabel:`Capture Polygon`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+==============================================================  ====================  ==========================================  ===============================
 
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| Menu Option                                                           | Shortcut            | Reference                              | Toolbar                         |
-+=======================================================================+=====================+========================================+=================================+
-| :guilabel:`View`                                                                                                                                                       |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionPan| :guilabel:`Pan Map`                                      |                     |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomIn| :guilabel:`Zoom In`                                   | :kbd:`Ctrl++`       |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomOut| :guilabel:`Zoom Out`                                 | :kbd:`Ctrl+-`       |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Select`                                                    |                     | see Section :ref:`sec_selection`       | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionIdentify| :guilabel:`Identify Features`                       | :kbd:`Ctrl+Shift+I` |                                        | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Measure`                                                   |                     | see Section :ref:`sec_measure`         | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomFullExtent| :guilabel:`Zoom Full`                         | :kbd:`Ctrl+Shift+F` |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomToLayer| :guilabel:`Zoom To Layer`                        |                     |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomToSelected| :guilabel:`Zoom To Selection`                 | :kbd:`Ctrl+J`       |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomLast| :guilabel:`Zoom Last`                               |                     |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionZoomNext| :guilabel:`Zoom Next`                               |                     |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Zoom Actual Size`                                          |                     |                                        |                                 |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionMapTips| :guilabel:`Map Tips`                                 |                     |                                        | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionNewBookmark| :guilabel:`New Bookmark`                         | :kbd:`Ctrl+B`       | see Section :ref:`sec_bookmarks`       | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionShowBookmarks| :guilabel:`Show Bookmarks`                     | :kbd:`Ctrl+Shift+B` | see Section :ref:`sec_bookmarks`       | :guilabel:`Attributes`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| |mActionDraw| :guilabel:`Refresh`                                     | :kbd:`Ctrl+R`       |                                        | :guilabel:`Map Navigation`      |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Tile scale slider`                                         |                     | see Section :ref:`sec_tilesets`        | :guilabel:`Tile scale`          |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Live GPS tracking`                                         |                     | see Section :ref:`sec_gpstracking`     | :guilabel:`GPS Information`     |
-+-----------------------------------------------------------------------+---------------------+----------------------------------------+---------------------------------+
+----
 
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**View**                                                        \                     \                                           \ 
+|mActionPan| :guilabel:`Pan Map`                                \                     \                                           :guilabel:`Map Navigation`
+|mActionZoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
+|mActionZoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         \                                           :guilabel:`Map Navigation`
+:menuselection:`Select`                                         \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
+|mActionIdentify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`   \                                           :guilabel:`Attributes`
+:menuselection:`Measure`                                        \                     see :ref:`sec_measure`                      :guilabel:`Attributes`
+|mActionZoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`   \                                           :guilabel:`Map Navigation`
+|mActionZoomToLayer| :guilabel:`Zoom To Layer`                  \                     \                                           :guilabel:`Map Navigation`
+|mActionZoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
+|mActionZoomLast| :guilabel:`Zoom Last`                         \                     \                                           :guilabel:`Map Navigation`
+|mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
+:menuselection:`Zoom Actual Size`                               \                     \                                           \ 
+|mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
+|mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
+|mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
+|mActionDraw| :guilabel:`Refresh`                               :kbd:`Ctrl+R`                                                     :guilabel:`Map Navigation`
+:menuselection:`Tile scale slider`                              \                     see :ref:`sec_tilesets`                     :guilabel:`Tile scale`
+:menuselection:`Live GPS tracking`                              \                     see :ref:`sec_gpstracking`                  :guilabel:`GPS Information`
+==============================================================  ====================  ==========================================  =============================== 
 
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| Menu Option                                                          | Shortcut             | Reference                              | Toolbar                         |
-+======================================================================+======================+========================================+=================================+
-|  :guilabel:`Layer`                                                                                                                                                     |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`New`                                                      |                      | see Section :ref:`sec_create shape`    | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`                  | :kbd:`Ctrl+Shift+V`  | see Section :ref:`label_workingvector` | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddRasterLayer| :guilabel:`Add Raster Layer`                 | :kbd:`Ctrl+Shift+R`  | see Section :ref:`label_raster`        | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddLayer| :guilabel:`Add PostGIS Layer`                      | :kbd:`Ctrl+Shift+D`  | see Section :ref:`label_postgis`       | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`         | :kbd:`Ctrl+Shift+L`  | see Section :ref:`label_spatialite`    | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                       | :kbd:`Ctrl+Shift+W`  | see Section :ref:`sec_ogc-wms`         | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionOpenTable| :guilabel:`Open Attribute Table`                  |                      |                                        | :guilabel:`Attributes`          |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionFileSave| :guilabel:`Save edits`                             |                      |                                        | :guilabel:`Digitizing`          |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionToggleEditing| :guilabel:`Toggle editing`                    |                      |                                        | :guilabel:`Digitizing`          |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Save as...`                                                                                                                                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Save selection as vector file...`                         |                      | See :ref:`sec_attribute table`         |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionRemoveLayer| :guilabel:`Remove Layer`                        | :kbd:`Ctrl+D`        |                                        |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Set CRS of Layer(s)`                                      | :kbd:`Ctrl+Shift+C`  |                                        |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Set project CRS from Layer`                               |                                                                                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Properties`                                               |                                                                                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| :guilabel:`Query...`                                                                                                                                                   |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |labeling| :guilabel:`Labeling`                                      |                      |                                        |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionInOverview| :guilabel:`Add to Overview`                      | :kbd:`Ctrl+Shift+O`  |                                        | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionAddAllToOverview| :guilabel:`Add All To Overview`            |                      |                                        |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionRemoveAllFromOverview| :guilabel:`Remove All From Overview`  |                      |                                        |                                 |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionShowAllLayers| :guilabel:`Show All Layers`                   | :kbd:`Ctrl+Shift+U`  |                                        | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
-| |mActionHideAllLayers| :guilabel:`Hide All Layers`                   | :kbd:`Ctrl+Shift+H`  |                                        | :guilabel:`Manage Layers`       |
-+----------------------------------------------------------------------+----------------------+----------------------------------------+---------------------------------+
+----
 
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Layer**                                                       \                     \                                           \ 
+:menuselection:`New`                                            \                     see :ref:`sec_create shape`                 :guilabel:`Manage Layers`
+|mActionAddNonDbLayer| :guilabel:`Add Vector Layer`             :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
+|mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`label_raster`                     :guilabel:`Manage Layers`
+|mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
+|mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
+|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`sec_ogc-wms`                      :guilabel:`Manage Layers`
+|mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
+|mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
+|mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
+:menuselection:`Save as...`                                     \                     \                                           \ 
+:menuselection:`Save selection as vector file...`               \                     See :ref:`sec_attribute table`              \ 
+|mActionRemoveLayer| :guilabel:`Remove Layer`                   :kbd:`Ctrl+D`         \                                           \ 
+:menuselection:`Set CRS of Layer(s)`                            :kbd:`Ctrl+Shift+C`   \                                           \ 
+:menuselection:`Set project CRS from Layer`                     \                     \                                           \ 
+:menuselection:`Properties`                                     \                     \                                           \ 
+:menuselection:`Query...`                                       \                     \                                           \ 
+|mActionLabeling| :guilabel:`Labeling`                          \                     \                                           \ 
+|mActionInOverview| :guilabel:`Add to Overview`                 :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers` 
+|mActionAddAllToOverview| :guilabel:`Add All To Overview`       \                     \                                           \  
+|RemoveAllOverview| :guilabel:`Remove All From Overview`        \                     \                                           \  
+|mActionShowAllLayers| :guilabel:`Show All Layers`              :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
+|mActionHideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers` 
+==============================================================  ====================  ==========================================  =============================== 
 
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| Menu Option                                                          | Shortcut             | Reference                                | Toolbar                         |
-+======================================================================+======================+==========================================+=================================+
-| :guilabel:`Settings`                                                                                                                                                     |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Panels`                                                   |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Toolbars`                                                 |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Toggle Full Screen Mode`                                  | :kbd:`Ctrl-F`        |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionProjectProperties| :guilabel:`Project Properties`            | :kbd:`Ctrl+Shift+P`  | see Section :ref:`sec_projects`          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionCustomProjection| :guilabel:`Custom CRS`                     |                      | see Section :ref:`sec_customprojections` | :guilabel:`Style Manager`       |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionOptions| :guilabel:`Configure shortcuts`                     |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionOptions| :guilabel:`Options`                                 |                      | see Section :ref:`subsec_gui_options`    |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Snapping Options`                                         |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+----
 
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| Menu Option                                                          | Shortcut             | Reference                                | Toolbar                         |
-+======================================================================+======================+==========================================+=================================+
-| :guilabel:`Plugins` - (Further menu items are added by plugins as they are loaded.)                                                                                      |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionShowPluginManager| :guilabel:`Manage Plugins`                |                      | see Section :ref:`sec_managing_plugins`  | :guilabel:`Plugins`             |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Python Console`                                           |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| Menu Option                                                          | Shortcut             | Reference                                | Toolbar                         |
-+======================================================================+======================+==========================================+=================================+
-| :guilabel:`Raster`                                                                                                                                                       |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`Raster calculator`                                        |                      | see Section :ref:`sec_raster_calc`       |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Settings**                                                    \                     \                                           \ 
+:menuselection:`Panels`                                         \                     \                                           \ 
+:menuselection:`Toolbars`                                       \                     \                                           \ 
+:menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \ 
+|mActionProjectProperties| :guilabel:`Project Properties`       :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \ 
+|mActionCustomProjection| :guilabel:`Custom CRS`                \                     see :ref:`sec_customprojections`            :guilabel:`Style Manager`
+|mActionOptions| :guilabel:`Configure shortcuts`                \                     \                                           \ 
+|mActionOptions| :guilabel:`Options`                            \                     see :ref:`subsec_gui_options`               \ 
+:menuselection:`Snapping Options`                               \                     \                                           \ 
+==============================================================  ====================  ==========================================  ===============================
  
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| Menu Option                                                          | Shortcut             | Reference                                | Toolbar                         |
-+======================================================================+======================+==========================================+=================================+
-| Help                                                                                                                                                                     |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionHelpContents| :guilabel:`Help Contents`                      | :kbd:`F1`            |                                          | :guilabel:`Help`                |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| :guilabel:`API Documentation`                                        |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionQgisHomePage| :guilabel:`QGIS Home Page`                     | :kbd:`Ctrl+H`        |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`             |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionHelpAbout| :guilabel:`About`                                 |		      |						 |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
-| |mActionHelpSponsors| :guilabel:`QGIS Sponsors`                      |                      |                                          |                                 |
-+----------------------------------------------------------------------+----------------------+------------------------------------------+---------------------------------+
+----
 
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Plugins**                                                     \                     \                                           \ 
+(Further menu items are added by plugins                        \                     \                                           \ 
+\ as they are loaded.)                                          \                     \                                           \ 
+|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`sec_managing_plugins`             :guilabel:`Plugins`
+:menuselection:`Python Console`                                 \                     \                                           \ 
+==============================================================  ====================  ==========================================  =============================== 
 
+----
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Raster**                                                      \                     \                                           \ 
+:menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \ 
+==============================================================  ====================  ==========================================  =============================== 
+
+----
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Help**                                                        \                     \                                           \ 
+|mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`     
+:menuselection:`API Documentation`                              \                     \                                           \ 
+|mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \ 
+|mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \ 
+|mActionHelpAbout| :guilabel:`About`                            \                     \                                           \ 
+|mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \ 
+==============================================================  ====================  ==========================================  ===============================
+ 
+----
 
 .. note::
    |nix| The Menu Bar items listed above are the default ones in KDE 
    window manager. In GNOME, Settings menu is missing and its items are to be 
    found there:
+
+\
+
+\
 
 +-----------------------------------------------------------------------+------------------------+
 | |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`File menu`  |
@@ -460,7 +404,7 @@ menu depending on the layer type (point, line or polygon).
 +-----------------------------------------------------------------------+------------------------+
 | :guilabel:`Tile scale slider`                                         | :guilabel:`View`       |
 +-----------------------------------------------------------------------+------------------------+
-| :guilabel:`Live GPS tracking`	                                        | :guilabel:`View`       |
+| :guilabel:`Live GPS tracking`                                         | :guilabel:`View`       |
 +-----------------------------------------------------------------------+------------------------+
 
 
@@ -1164,7 +1108,7 @@ require a restart of QGIS before they will be effective.
 * |win| settings are stored in the registry under:
 ::
 
-	\\HKEY\CURRENT_USER\Software\QuantumGISqgis
+   \\HKEY\CURRENT_USER\Software\QuantumGISqgis
 
 
 .. _`sec_annotations`:

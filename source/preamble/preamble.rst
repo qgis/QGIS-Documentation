@@ -1,3 +1,4 @@
+
 .. _qgis.documentation.preamble:
 
 **********
@@ -25,9 +26,8 @@ and publishers do not take any responsibility or liability for failures and
 their consequences. Your are always welcome to indicate possible mistakes.
 
 
-This document has been typeset with \LaTeX. It is available as \LaTeX source
-code via `subversion <http://wiki.qgis.org/qgiswiki/DocumentationWritersCorner>`_
-and online as PDF document via http://qgis.osgeo.org/documentation/manuals.html. 
+This document has been typeset with reStructuredText. It is available as reST source code via `github <https://github.com/qgis/QGIS-Documentation <http://wiki.qgis.org/qgiswiki/DocumentationWritersCorner>`_
+and online as HTML or PDF document via http://qgis.osgeo.org/documentation/manuals.html. 
 Translated versions of this document can be downloaded via the documentation 
 area of the QGIS project as well. For more information about contributing to
 this document and about translating it, please visit: http://www.qgis.org/wiki/ 
@@ -43,25 +43,37 @@ identically.
 
 **User, Installation and Coding Guide Authors and Editors:**
 
-+------------------+--------------------+---------------------+
-|Tara Athan        | Radim Blazek       | Godofredo Contreras |
-+------------------+--------------------+---------------------+
-|Otto Dassau       | Martin Dobias      | Peter Ersts         |
-+------------------+--------------------+---------------------+
-|Anne Ghisla       | Stephan Holl       | N. Horning          |
-+------------------+--------------------+---------------------+
-|Magnus Homann     | K. Koy             | Lars Luthman        |
-+------------------+--------------------+---------------------+
-|Werner Macho      | Carson J.Q. Farmer | Tyler Mitchell      |
-+------------------+--------------------+---------------------+
-|Claudia A. Engel  | Brendan Morely     | David Willis        |
-+------------------+--------------------+---------------------+
-|Jürgen E. Fischer | Marco Hugentobler  | Gavin Macaulay      |
-+------------------+--------------------+---------------------+
-|Larissa Junek     | Diethard Jansen    | Paolo Corti         |
-+------------------+--------------------+---------------------+
-|Gary E. Sherman   | Tim Sutton         | Alex Bruy           |
-+------------------+--------------------+---------------------+
++-------------------+---------------------+----------------------+
+| Tara Athan        | Radim Blazek        | Godofredo Contreras  |
++-------------------+---------------------+----------------------+
+| Otto Dassau       | Martin Dobias       | Peter Ersts          |
++-------------------+---------------------+----------------------+
+| Anne Ghisla       | Stephan Holl        | N\. Horning          |
++-------------------+---------------------+----------------------+
+| Magnus Homann     | K\. Koy             | Lars Luthman         |
++-------------------+---------------------+----------------------+
+| Werner Macho      | Carson J.Q. Farmer  | Tyler Mitchell       |
++-------------------+---------------------+----------------------+
+| Claudia A. Engel  | Brendan Morely      | David Willis         |
++-------------------+---------------------+----------------------+
+| Jürgen E. Fischer | Marco Hugentobler   | Gavin Macaulay       |
++-------------------+---------------------+----------------------+
+| Larissa Junek     | Diethard Jansen     | Paolo Corti          |
++-------------------+---------------------+----------------------+
+| Gary E. Sherman   | Tim Sutton          | Alex Bruy            |
++-------------------+---------------------+----------------------+
+
+
+**Translators who contributed to this translated version (Not English):**
+
++-------------------+---------------------+----------------------+
+| translator one    | translator two      | translator three     |
++-------------------+---------------------+----------------------+
+| translator four   | translator five     | translator six       |
++-------------------+---------------------+----------------------+
+| translator seven  | translator eight    | translator nine      |
++-------------------+---------------------+----------------------+
+
 
 Copyright (c) 2004 - 2012 |QG| Development Team
 

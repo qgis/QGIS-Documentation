@@ -8,241 +8,368 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-07 14:05\n"
+"POT-Creation-Date: 2012-08-18 10:49\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../working/working_with_projections.rst:7
 # 2d149926b191481383df9676615eac82
+#: ../../working/working_with_projections.rst:8
 msgid "Working with Projections"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:9
 # 11ba43bff33c4aa0a0291bcae1149bb8
+#: ../../working/working_with_projections.rst:10
 msgid ":index:`Projections!working with`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:15
 # e73b67209ded49d5a3d6895443615c6b
-msgid "QGIS allows users to define a global and project-wide CRS (Coordinate Reference System) for layers without a pre-defined CRS. It also allows the user to define custom coordinate reference systems and supports on-the-fly (OTF) projection of vector and raster layers. All these features allow the user to display layers with different CRS and have them overlay properly."
+#: ../../working/working_with_projections.rst:16
+msgid ""
+"QGIS allows users to define a global and project-wide CRS (Coordinate "
+"Reference System) for layers without a pre-defined CRS. It also allows the "
+"user to define custom coordinate reference systems and supports on-the-fly "
+"(OTF) projection of vector and raster layers. All these features allow the "
+"user to display layers with different CRS and have them overlay properly."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:25
 # dceaf327b2cd4b6ba01b037096b9dbe0
+#: ../../working/working_with_projections.rst:26
 msgid "Overview of Projection Support"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:27
 # d8d8c9329663446685af653fbbfc4e24
-msgid "QGIS has support for approximately 2,700 known CRS. Definitions for each of these CRS are stored in a SQLite database that is installed with QGIS. Normally you do not need to manipulate the database directly. In fact, doing so may cause projection support to fail. Custom CRS are stored in a user database. See Section :ref:`sec:customprojections` for information on managing your custom coordinate reference systems."
+#: ../../working/working_with_projections.rst:28
+msgid ""
+"QGIS has support for approximately 2,700 known CRS. Definitions for each of "
+"these CRS are stored in a SQLite database that is installed with QGIS. "
+"Normally you do not need to manipulate the database directly. In fact, doing "
+"so may cause projection support to fail. Custom CRS are stored in a user "
+"database. See Section :ref:`sec:customprojections` for information on "
+"managing your custom coordinate reference systems."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:34
 # 5284d37a90bb4351a99ba4d51a545827
-msgid "The CRS available in QGIS are based on those defined by the European Petroleum Group (ESPG):index:`ESPG` and the Institut Geographique National of France (IGNF):index:`IGNF` and are largely abstracted from the spatial reference tables used in GDAL:index:`GDAL`. EPSG identifiers are present in the database and can be used to specify a CRS in QGIS."
+#: ../../working/working_with_projections.rst:35
+msgid ""
+"The CRS available in QGIS are based on those defined by the European "
+"Petroleum Group (ESPG):index:`ESPG` and the Institut Geographique National "
+"of France (IGNF):index:`IGNF` and are largely abstracted from the spatial "
+"reference tables used in GDAL:index:`GDAL`. EPSG identifiers are present in "
+"the database and can be used to specify a CRS in QGIS."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:40
 # fea7d1f715f34e75ab039d0b7068a023
-msgid "In order to use OTF projection, your data must contain information about its coordinate reference system or you have to define a global, layer or project-wide CRS. For PostGIS layers QGIS uses the spatial reference identifier that was specified when the layer was created. For data supported by OGR, QGIS relies on the presence of a recognized means of specifying the CRS. In the case of shapefiles, this means a file containing the Well Known Text (WKT):index:`WKT` specification of the CRS. This projection file has the same base name as the shapefile and a prj extension. For example, a shapefile named :file:`alaska.shp` would have a corresponding projection file named :file:`alaska.prj`."
+#: ../../working/working_with_projections.rst:41
+msgid ""
+"In order to use OTF projection, your data must contain information about its "
+"coordinate reference system or you have to define a global, layer or project-"
+"wide CRS. For PostGIS layers QGIS uses the spatial reference identifier that "
+"was specified when the layer was created. For data supported by OGR, QGIS "
+"relies on the presence of a recognized means of specifying the CRS. In the "
+"case of shapefiles, this means a file containing the Well Known Text (WKT):"
+"index:`WKT` specification of the CRS. This projection file has the same base "
+"name as the shapefile and a prj extension. For example, a shapefile named :"
+"file:`alaska.shp` would have a corresponding projection file named :file:"
+"`alaska.prj`."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:51
-# f1bbb134008d4b1b949b215e6444e411
-msgid "Whenever you select a new CRS, the used layer units will automatically be changed in the |tab| :guilabel:`General` tab of the |mActionOptions| :guilabel:`Project Properties` dialog under the :guilabel:`Edit` (Gnome, OSX) or :guilabel:`Settings` (KDE, Windows) menu."
+# d9fb1eb512494be383c3d70ea1f6e448
+#: ../../working/working_with_projections.rst:52
+msgid ""
+"Whenever you select a new CRS, the used layer units will automatically be "
+"changed in the :guilabel:`General` tab of the |mActionOptions| :guilabel:"
+"`Project Properties` dialog under the :guilabel:`Edit` (Gnome, OSX) or :"
+"guilabel:`Settings` (KDE, Windows) menu."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:58
 # 24f0f09f587144368d30b519d7da9804
+#: ../../working/working_with_projections.rst:59
 msgid "Specifying a Projection"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:60
 # 3a7a3b7ecc074fbba884e52a247e006f
+#: ../../working/working_with_projections.rst:61
 msgid ":index:`Projections!specifying`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:70
 # e4d05f16414e4ce1b7129f20682a4b8e
-msgid "QGIS starts each new project using the global default projection.The global default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) and comes predefined in QGIS. This default can be changed using the :guilabel:`Select Global Default` button shown in Figure :ref:`fig:crsdialog`. This choice will be saved for use in subsequent QGIS sessions."
+#: ../../working/working_with_projections.rst:71
+msgid ""
+"QGIS starts each new project using the global default projection.The global "
+"default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 "
+"+no_defs``) and comes predefined in QGIS. This default can be changed using "
+"the :guilabel:`Select Global Default` button shown in Figure :ref:`fig:"
+"crsdialog`. This choice will be saved for use in subsequent QGIS sessions."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:77
-# e66ce7e15f074e72982fb95f71471ae9
-msgid "When you use layers that do not have a CRS, you need to define how QGIS responds to these layers. This can be done globally or project-wide in the |tab| :guilabel:`CRS` tab under :menuselection:`Edit` --> |mActionOptions| :guilabel:`Options` (Gnome, OSX) or :menuselection:`Settings` --> |mActionOptions| :guilabel:`Options` (KDE, Windows)."
+# 5a1a8877bd0d4edaa227a4d1020850fe
+#: ../../working/working_with_projections.rst:78
+msgid ""
+"When you use layers that do not have a CRS, you need to define how QGIS "
+"responds to these layers. This can be done globally or project-wide in the :"
+"guilabel:`CRS` tab under :menuselection:`Edit -->` |mActionOptions| :"
+"guilabel:`Options` (Gnome, OSX) or :menuselection:`Settings -->`  |"
+"mActionOptions| :guilabel:`Options` (KDE, Windows)."
 msgstr ""
 
+# eecd77793c3b42768b8dbb2d2e19cdce
 #: ../../working/working_with_projections.rst:84
-# 903ada818af44628b6a12c6c6a81f54d
-msgid "The options shown in Figure :ref:`fig:crsdialog` are:"
+msgid "The options shown in Figure `sec_projection-specifying`_ are:"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:88
 # 720556a81bef4581aa27a28b0b9449d7
+#: ../../working/working_with_projections.rst:88
 msgid "|checkbox| :guilabel:`Prompt for CRS`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:89
 # b05e58a5d745449fa4c8ca6005d0cc0e
+#: ../../working/working_with_projections.rst:89
 msgid "|checkbox| :guilabel:`Project wide default CRS will be used`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:90
 # 16d7deee0cbb44c8895085e4e7836f4c
+#: ../../working/working_with_projections.rst:90
 msgid "|checkbox| :guilabel:`Global default CRS displayed below will be used`"
 msgstr ""
 
+# bdda1b724d1449beb75bcbd84888b314
 #: ../../working/working_with_projections.rst:93
-# 6541be6d4bc741848974ba2ddf63c5de
-msgid "If you want to define the coordinate reference system for a certain layer without CRS information, you can also do that in the |tab| :guilabel:`General` tab of the raster (Section :ref:`label_generaltab`) and vector (Section :ref:`vectorgeneraltab`) properties dialog. If your layer already has a CRS defined, it will be displayed as shown in Figure :ref:`fig:vector_symbology`."
+msgid ""
+"If you want to define the coordinate reference system for a certain layer "
+"without CRS information, you can also do that in the :guilabel:`General` tab "
+"of the raster (section :ref:`label_generaltab`) and vector (Section :ref:"
+"`vectorgeneraltab`) properties dialog. If your layer already has a CRS "
+"defined, it will be displayed as shown in Figure :ref:`fig:vector_symbology`."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:101
 # b115be6c2f7f47f08e796e8d5038eac2
-msgid "**CRS in the Map Legend** Right clicking on a layer in the Map Legend (Section :ref:`label_legend`) provides two CRS short cuts."
+#: ../../working/working_with_projections.rst:100
+msgid ""
+"**CRS in the Map Legend** Right clicking on a layer in the Map Legend "
+"(Section :ref:`label_legend`) provides two CRS short cuts."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:105
-# e37372ed343a441bbfd96e91060b2ab6
-msgid ":guilabel:`Set layer CRS` takes you directly to the Coordinate Reference System Selector dialog. Which you also get to by the guilabel:`Select` button on the :guilabel:`General` tab of the layer properties dialog."
+# 36fc081e59f2402cbaf96cf5b79346b9
+#: ../../working/working_with_projections.rst:104
+msgid ""
+":guilabel:`Set layer CRS` takes you directly to the Coordinate Reference "
+"System Selector dialog. Which you also get to by the :guilabel:`Select` "
+"button on the :guilabel:`General` tab of the layer properties dialog."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:109
 # 5776814f1301414995b94fb499ca9e60
-msgid ":guilabel:`Set project CRS from Layer` redefines the project CRS using the layer's CRS"
+#: ../../working/working_with_projections.rst:108
+msgid ""
+":guilabel:`Set project CRS from Layer` redefines the project CRS using the "
+"layer's CRS"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:116
 # 951e4837be9f4f10ad31a85c20c1ea16
+#: ../../working/working_with_projections.rst:115
 msgid "Define On The Fly (OTF) Projection"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:119
-# 056c1aaec0c54552b1b8d15583f0339f
-msgid "QGIS now supports OTF projection for both raster and vector data. However, OTF is not activated by default. To use OTF projection, you must activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox in the |tab| :guilabel:`CRS` tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog."
+# 894cf7b3ca9f4c348e447996186f52b9
+#: ../../working/working_with_projections.rst:118
+msgid ""
+"QGIS now supports OTF projection for both raster and vector data. However, "
+"OTF is not activated by default. To use OTF projection, you must activate "
+"the |checkbox| :guilabel:`Enable on the fly projection` checkbox in the :"
+"guilabel:`CRS` tab of the |mActionProjectProperties| :menuselection:`Project "
+"Properties` dialog."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:125
 # c77d9e607d664256866b2f129c95ea66
+#: ../../working/working_with_projections.rst:124
 msgid "There are three ways to achieve this end:"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:127
 # 176d6c7f3a3d4299b63853196e5df780
-msgid "Select |mActionOptions| :menuselection:`Project Properties` from the :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows) menu."
+#: ../../working/working_with_projections.rst:126
+msgid ""
+"Select |mActionOptions| :menuselection:`Project Properties` from the :"
+"menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
+"Windows) menu."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:130
 # 777bef707b7e40edbe95cb33999ba04a
-msgid "Click on the |geographic| :guilabel:`CRS status` icon in the lower right-hand corner of the statusbar."
+#: ../../working/working_with_projections.rst:129
+msgid ""
+"Click on the |geographic| :guilabel:`CRS status` icon in the lower right-"
+"hand corner of the statusbar."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:132
-# 7136a4f1b65d41c99560993881d74751
-msgid "Turn OTF on by default, by selecting the |tab| :guilabel:`CRS` tab of the :guilabel:`Options` dialog and selecting |checkbox| :guilabel:`Enable 'on the fly' reprojection by default`"
+# 98a630828a1d430192020bb2cf5de55d
+#: ../../working/working_with_projections.rst:131
+msgid ""
+"Turn OTF on by default, by selecting the :guilabel:`CRS` tab of the :"
+"guilabel:`Options` dialog and selecting |checkbox| :guilabel:`Enable 'on the "
+"fly' reprojection by default`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:137
-# 031c4175244d4735b15615cdc14f5568
-msgid "If you have already loaded a layer, and want to enable OTF projection, the best practice is to open the |tab| :guilabel:`Coordinate Reference System` tab of the :guilabel:`Project Properties` dialog, select the a CRS, and activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox. The |geographic| :guilabel:`CRS status` icon will no longer be greyed-out and all layers will be OTF projected to the CRS shown next to the icon."
+# 896ef68cf3d24e68aa58fd7cf27b4f84
+#: ../../working/working_with_projections.rst:136
+msgid ""
+"If you have already loaded a layer, and want to enable OTF projection, the "
+"best practice is to open the :guilabel:`Coordinate Reference System` tab of "
+"the :guilabel:`Project Properties` dialog, select a CRS, and activate the |"
+"checkbox| :guilabel:`Enable on the fly projection` checkbox. The |"
+"geographic| :guilabel:`CRS status` icon will no longer be greyed-out and all "
+"layers will be OTF projected to the CRS shown next to the icon."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:144
-# 0f8c40185e1a4fb0b6877ef544fcd77e
-msgid "The |tab| :guilabel:`Coordinate Reference System` tab of the :guilabel:`Project Properties` dialog contains five important components as shown in Figure :ref:`fig:projections` and described below."
+# 9fb5954892524776aab207a22d1a95d8
+#: ../../working/working_with_projections.rst:143
+msgid ""
+"The :guilabel:`Coordinate Reference System` tab of the :guilabel:`Project "
+"Properties` dialog contains five important components as shown in Figure :"
+"ref:`projections` and described below."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:157
 # e5a95c939f45456aa6a72188d9792272
-msgid "**Enable on the fly projection** - this checkbox is used to enable or disable OTF projection. When off, each layer is drawn using the coordinates as read from the data source. When on, the coordinates in each layer are projected to the coordinate reference system defined for the map canvas."
+#: ../../working/working_with_projections.rst:157
+msgid ""
+"**Enable on the fly projection** - this checkbox is used to enable or "
+"disable OTF projection. When off, each layer is drawn using the coordinates "
+"as read from the data source. When on, the coordinates in each layer are "
+"projected to the coordinate reference system defined for the map canvas."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:162
 # d7349f7f8f40471ca3957b15aaf5758a
-msgid "**Coordinate Reference System** - this is a list of all CRS supported by QGIS, including Geographic, Projected and Custom coordinate reference systems. To use a CRS, select it from the list by expanding the appropriate node and selecting the CRS. The active CRS is preselected."
+#: ../../working/working_with_projections.rst:162
+msgid ""
+"**Coordinate Reference System** - this is a list of all CRS supported by "
+"QGIS, including Geographic, Projected and Custom coordinate reference "
+"systems. To use a CRS, select it from the list by expanding the appropriate "
+"node and selecting the CRS. The active CRS is preselected."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:166
 # 9e0a3cafc0444a0da2c9f445fea0758a
-msgid "**Proj4 text** - this is the CRS string used by the Proj4 projection engine. This text is read-only and provided for informational purposes."
+#: ../../working/working_with_projections.rst:166
+msgid ""
+"**Proj4 text** - this is the CRS string used by the Proj4 projection engine. "
+"This text is read-only and provided for informational purposes."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:169
 # 04cc94404f1d40baac51f24b5e36b568
-msgid "**Search** - if you know the EPSG code, the identifier or the name for a Coordinate Reference System, you can use the search feature to find it. Enter the identifier and click on :guilabel:`Find`. Use the |checkbox| :guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid projections."
+#: ../../working/working_with_projections.rst:169
+msgid ""
+"**Search** - if you know the EPSG code, the identifier or the name for a "
+"Coordinate Reference System, you can use the search feature to find it. "
+"Enter the identifier and click on :guilabel:`Find`. Use the |checkbox| :"
+"guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid "
+"projections."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:174
 # 03cd540c52bc47b9af6cb1e76093a431
-msgid "**Recently used CRS** - if you have certain CRS that you frequently use in your everyday GIS work, these will be displayed in the table at the bottom of the Projection Dialog. Click on one of these buttons to select the associated CRS."
+#: ../../working/working_with_projections.rst:174
+msgid ""
+"**Recently used CRS** - if you have certain CRS that you frequently use in "
+"your everyday GIS work, these will be displayed in the table at the bottom "
+"of the Projection Dialog. Click on one of these buttons to select the "
+"associated CRS."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:181
 # 96daa4f2941041c797d1110633e8c8e2
+#: ../../working/working_with_projections.rst:181
 msgid "**Project Properties Dialog**"
 msgstr ""
 
+# df784fa4f5a64101b231da2695fd9a0e
 #: ../../working/working_with_projections.rst:183
-# b227585ebe4040ddbfaaf978c22cef01
-msgid "If you open the :guilabel:`Project Properties` dialog from the :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows) menu, you must click on the |tab| :guilabel:`Coordinate Reference System` tab to view the CRS settings. Opening the dialog from the |geographic| :guilabel:`CRS status` icon will automatically bring the |tab| :guilabel:`Coordinate Reference System` tab to the front."
+msgid ""
+"If you open the :guilabel:`Project Properties` dialog from the :"
+"menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
+"Windows) menu, you must click on the :guilabel:`Coordinate Reference System` "
+"tab to view the CRS settings. Opening the dialog from the |geographic| :"
+"guilabel:`CRS status` icon will automatically bring the :guilabel:"
+"`Coordinate Reference System` tab to the front."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:194
 # 92eb4f68157846c6bc3efc67312c30a9
+#: ../../working/working_with_projections.rst:194
 msgid "Custom Coordinate Reference Systems"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:196
 # 1bcb1d4659e04f10ad5c6368f0bf50cb
+#: ../../working/working_with_projections.rst:196
 msgid ":index:`Projections!custom`"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:198
 # 059f4f2ab46f41dcb55d1c6c0f8c5aa6
-msgid "If QGIS does not provide the coordinate reference system you need, you can define a custom CRS. To define a CRS, select |mIconNew| :guilabel:`Custom CRS` from the :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows) menu.  Custom CRS are stored in your QGIS user database. In addition to your custom CRS, this database also contains your spatial bookmarks and other custom data."
+#: ../../working/working_with_projections.rst:198
+msgid ""
+"If QGIS does not provide the coordinate reference system you need, you can "
+"define a custom CRS. To define a CRS, select |mIconNew| :guilabel:`Custom "
+"CRS` from the :menuselection:`Edit` (Gnome, OSX) or :menuselection:"
+"`Settings` (KDE, Windows) menu.  Custom CRS are stored in your QGIS user "
+"database. In addition to your custom CRS, this database also contains your "
+"spatial bookmarks and other custom data."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:211
 # 1963c2880d8b4a22b2758a9303c63ab8
-msgid "Defining a custom CRS in QGIS requires a good understanding of the Proj.4 projection library. To begin, refer to the Cartographic Projection Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990 (available at ftp://ftp.remotesensing.org/proj/OF90-284.pdf."
+#: ../../working/working_with_projections.rst:211
+msgid ""
+"Defining a custom CRS in QGIS requires a good understanding of the Proj.4 "
+"projection library. To begin, refer to the Cartographic Projection "
+"Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, "
+"U.S. Geological Survey Open-File Report 90-284, 1990 (available at ftp://ftp."
+"remotesensing.org/proj/OF90-284.pdf."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:217
 # cfdf9e66384e4c39b17b682cc57ef348
-msgid "This manual describes the use of the ``proj.4`` and related command line utilities. The cartographic parameters used with ``proj.4`` are described in the user manual, and are the same as those used by QGIS."
+#: ../../working/working_with_projections.rst:217
+msgid ""
+"This manual describes the use of the ``proj.4`` and related command line "
+"utilities. The cartographic parameters used with ``proj.4`` are described in "
+"the user manual, and are the same as those used by QGIS."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:221
 # da28231ea5fd4afb98a3817af3587b92
-msgid "The :guilabel:`Custom Coordinate Reference System Definition` dialog requires only two parameters to define a user CRS:"
+#: ../../working/working_with_projections.rst:221
+msgid ""
+"The :guilabel:`Custom Coordinate Reference System Definition` dialog "
+"requires only two parameters to define a user CRS:"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:225
 # a41cc906d4244d44b8766b5688f29636
+#: ../../working/working_with_projections.rst:225
 msgid "a descriptive name and"
 msgstr ""
 
-#: ../../working/working_with_projections.rst:226
 # 1e7d6e6df69e46348e8db4da22874fb6
+#: ../../working/working_with_projections.rst:226
 msgid "the cartographic parameters in PROJ.4 format."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:229
 # 0413d15bc8dc41feb6a6a8f785999d5b
-msgid "To create a new CRS, click the |mIconNew| :guilabel:`New` button and enter a descriptive name and the CRS parameters. After that you can save your CRS by clicking the button |mActionFileSave| :guilabel:`Save`."
+#: ../../working/working_with_projections.rst:229
+msgid ""
+"To create a new CRS, click the |mIconNew| :guilabel:`New` button and enter a "
+"descriptive name and the CRS parameters. After that you can save your CRS by "
+"clicking the button |mActionFileSave| :guilabel:`Save`."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:233
 # 23f2aac25138492ca63c2fbc10eaa581
-msgid "Note that the :guilabel:`Parameters` must begin with a ``+proj=``-block, to represent the new coordinate reference system."
+#: ../../working/working_with_projections.rst:233
+msgid ""
+"Note that the :guilabel:`Parameters` must begin with a ``+proj=``-block, to "
+"represent the new coordinate reference system."
 msgstr ""
 
-#: ../../working/working_with_projections.rst:236
 # ca42226585014e4996f1432e5df26110
-msgid "You can test your CRS parameters to see if they give sane results by clicking on the :guilabel:`Calculate` button inside the :guilabel:`Test` block and pasting your CRS parameters into the :guilabel:`Parameters` field. Then enter known WGS 84 latitude and longitude values in :guilabel:`North` and :guilabel:`East` fields respectively. Click on :guilabel:`Calculate` and compare the results with the known values in your coordinate reference system."
+#: ../../working/working_with_projections.rst:236
+msgid ""
+"You can test your CRS parameters to see if they give sane results by "
+"clicking on the :guilabel:`Calculate` button inside the :guilabel:`Test` "
+"block and pasting your CRS parameters into the :guilabel:`Parameters` field. "
+"Then enter known WGS 84 latitude and longitude values in :guilabel:`North` "
+"and :guilabel:`East` fields respectively. Click on :guilabel:`Calculate` and "
+"compare the results with the known values in your coordinate reference "
+"system."
 msgstr ""
-
