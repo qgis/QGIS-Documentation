@@ -172,7 +172,6 @@ You can also use the already existing vector and raster data in the sample GRASS
 
 Adding a new MAPSET
 --------------------
-`sec_add_mapset`:
 
 A user has only write access to a GRASS :file:`MAPSET` he created. This means that besides access to his own :file:`MAPSET`, each user can read maps in other user's :file:`MAPSETs`, but he can modify or remove only the maps in his own :file:`MAPSET`. All :file:`MAPSETs` include a
 :file:`WIND` file that stores the current boundary coordinate values and the currently selected raster resolution (Neteler \& Mitasova 2008
@@ -278,11 +277,11 @@ To create a new GRASS vector layer with the GRASS plugin click the
 Enter a name in the text box and you can start digitizing point, line or polygon geometries, following the procedure described in Section
 :ref:`grass_digitizing`.
 
-In GRASS it is possible to organize all sort of geometry types (point, line and area) in one layer, because GRASS uses a topological vector model, so you don't need to select the geometry type when creating a new GRASS vector. This is different from Shapefile creation with QGIS, because Shapefiles use the Simple Feature vector model (see Section \ref{sec:create shape}).
+In GRASS it is possible to organize all sort of geometry types (point, line and area) in one layer, because GRASS uses a topological vector model, so you don't need to select the geometry type when creating a new GRASS vector. This is different from Shapefile creation with QGIS, because Shapefiles use the Simple Feature vector model (see Section :ref:`sec_create_shape`).
 
-\begin{Tip}\caption{\textsc{Creating an attribute table for a new GRASS vector layer}}
-If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure \ref{fig:grass_digitizing_table}).
-\end{Tip}
+.. tip::
+   **Creating an attribute table for a new GRASS vector layer**
+   If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure  `grass_digitizing_table`_).
 
 .. _grass_digitizing:
 
@@ -291,27 +290,56 @@ Digitizing and editing a GRASS vector layer
 :index:`GRASS!digitizing tools`
 
 The digitizing tools for GRASS vector layers are accessed using the
-|grass_edit| :guilabel:`Edit GRASS vector layer` icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure \ref{fig:grass_digitizing_category}
-shows the GRASS edit dialog that is displayed when you click on the edit tool.
+|grass_edit| :guilabel:`Edit GRASS vector layer` icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure `grass_digitizing_category`_ shows the GRASS edit dialog that is displayed when you click on the edit tool.
 The tools and settings are discussed in the following sections.
 
-\begin{Tip}\caption{\textsc{Digitizing polygons in GRASS}}
-If you want to create a polygon in GRASS, you first digitize the boundary of the polygon, setting the mode to \usertext{No category}. Then you add a centroid (label point) into the closed boundary, setting the mode to
-\usertext{Next not used}. The reason is, that a topological vector model links attribute information of a polygon always to the centroid and not to the boundary.
-\end{Tip}
+.. tip::
+   **Digitizing polygons in GRASS**
+   If you want to create a polygon in GRASS, you first digitize the boundary of the polygon, setting the mode to ``No category``. Then you add a centroid  (label point) into the closed boundary, setting the mode to ``Next not used``. The reason is, that a topological vector model links attribute information of a polygon always to the centroid and not to the boundary.
 
-Toolbar
-~~~~~~~
-`label_grasstoolbar`:
+.. _label_grasstoolbar:
 
-In Figure \ref{fig:grass_digitizing_toolbar} you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
+**Toolbar**
+
+In Figure `grass_digitizing_toolbar`_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
 explains the available functionalities.
 
-\begin{figure}[h]
-   \centering
-   \includegraphics[clip=true,width=12cm]{grass_digitizing_toolbar}
-   \caption{GRASS Digitizing Toolbar \nixcaption}`fig_grass_digitizing_toolbar`:
-\end{figure}
+.. _`grass_digitizing_toolbar`:
+
+.. figure:: img/en/grass_digitizing_toolbar.png
+   :align: center
+   :width: 30em
+
+   GRASS Digitizing Toolbar
+
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| Icon                   | Tool            | Purpose                                                                                           |                
++========================+=================+===================================================================================================+
++----------------------- +-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_new_point|      | New Point       | Digitize new point                                                                                |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_new_line|       | New Line        | Digitize new line                                                                                 |      
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_new_boundary|   | New Boundary    | Digitize new boundary (finish by selecting new tool)                                              |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_new_centroid|   | New Centroid    | Digitize new centroid (label existing area)                                                       |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_move_vertex|    | Move vertex     | Move one vertex of existing line or boundary and identify new position                            |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_add_vertex|     | Add vertex      | Add a new vertex to existing line                                                                 |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_delete_vertex|  | Delete vertex   | Delete vertex from existing line (confirm selected vertex by another click)                       |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_move_line|      | Move element    | Move selected boundary, line, point or centroid and click on new position                         |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_split_line|     | Split line      | Split an existing line to 2 parts                                                                 |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_delete_line|    | Delete element  | Delete existing boundary, line, point or centroid (confirm selected element by another click)     |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_edit_attributes|| Edit attributes | Edit attributes of selected element (note that one element can represent more features, see above)|
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
+| |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
++------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 
 {\renewcommand{\arraystretch}{2}
 \begin{table}[h]:index:`GRASS!digitizing tools`
