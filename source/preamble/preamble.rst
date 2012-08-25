@@ -43,39 +43,39 @@ identically.
 
 **User, Installation and Coding Guide Authors and Editors:**
 
-+-------------------+---------------------+----------------------+
-| Tara Athan        | Radim Blazek        | Godofredo Contreras  |
-+-------------------+---------------------+----------------------+
-| Otto Dassau       | Martin Dobias       | Peter Ersts          |
-+-------------------+---------------------+----------------------+
-| Anne Ghisla       | Stephan Holl        | N\. Horning          |
-+-------------------+---------------------+----------------------+
-| Magnus Homann     | K\. Koy             | Lars Luthman         |
-+-------------------+---------------------+----------------------+
-| Werner Macho      | Carson J.Q. Farmer  | Tyler Mitchell       |
-+-------------------+---------------------+----------------------+
-| Claudia A. Engel  | Brendan Morely      | David Willis         |
-+-------------------+---------------------+----------------------+
-| Jürgen E. Fischer | Marco Hugentobler   | Gavin Macaulay       |
-+-------------------+---------------------+----------------------+
-| Larissa Junek     | Diethard Jansen     | Paolo Corti          |
-+-------------------+---------------------+----------------------+
-| Gary E. Sherman   | Tim Sutton          | Alex Bruy            |
-+-------------------+---------------------+----------------------+
++----------------------+----------------------+----------------------+
+| Tara Athan           | Radim Blazek         | Godofredo Contreras  |
++----------------------+----------------------+----------------------+
+| Otto Dassau          | Martin Dobias        | Peter Ersts          |
++----------------------+----------------------+----------------------+
+| Anne Ghisla          | Stephan Holl         | N\. Horning          |
++----------------------+----------------------+----------------------+
+| Magnus Homann        | K\. Koy              | Lars Luthman         |
++----------------------+----------------------+----------------------+
+| Werner Macho         | Carson J.Q. Farmer   | Tyler Mitchell       |
++----------------------+----------------------+----------------------+
+| Claudia A. Engel     | Brendan Morely       | David Willis         |
++----------------------+----------------------+----------------------+
+| Jürgen E. Fischer    | Marco Hugentobler    | Gavin Macaulay       |
++----------------------+----------------------+----------------------+
+| Larissa Junek        | Diethard Jansen      | Paolo Corti          |
++----------------------+----------------------+----------------------+
+| Gary E. Sherman      | Tim Sutton           | Alex Bruy            |
++----------------------+----------------------+----------------------+
 
 
 **Translators who contributed to this translated version (Not English):**
 
-+-------------------+---------------------+----------------------+
-| translator one    | translator two      | translator three     |
-+-------------------+---------------------+----------------------+
-| translator four   | translator five     | translator six       |
-+-------------------+---------------------+----------------------+
-| translator seven  | translator eight    | translator nine      |
-+-------------------+---------------------+----------------------+
++----------------------+----------------------+----------------------+
+| translator one       | translator two       | translator three     |
++----------------------+----------------------+----------------------+
+| translator four      | translator five      | translator six       |
++----------------------+----------------------+----------------------+
+| translator seven     | translator eight     | translator nine      |
++----------------------+----------------------+----------------------+
 
 
-Copyright (c) 2004 - 2012 |QG| Development Team
+Copyright (c) 2004 - 2012    |QG| Development Team
 
 **Internet :** http://www.qgis.org
 
