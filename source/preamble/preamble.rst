@@ -26,7 +26,7 @@ and publishers do not take any responsibility or liability for failures and
 their consequences. Your are always welcome to indicate possible mistakes.
 
 
-This document has been typeset with reStructuredText. It is available as reST source code via `github <https://github.com/qgis/QGIS-Documentation <http://wiki.qgis.org/qgiswiki/DocumentationWritersCorner>`_
+This document has been typeset with reStructuredText. It is available as reST source code via `github <https://github.com/qgis/QGIS-Documentation>`_
 and online as HTML or PDF document via http://qgis.osgeo.org/documentation/manuals.html. 
 Translated versions of this document can be downloaded via the documentation 
 area of the QGIS project as well. For more information about contributing to

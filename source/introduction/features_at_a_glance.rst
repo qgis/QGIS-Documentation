@@ -162,7 +162,7 @@ interface as discussed below):
 
 .. figure:: img/en/startup.png
    :align: center
-   :width: 30em
+   :width: 45em
 
    QGIS GUI with Alaska sample data (KDE)
 
@@ -825,12 +825,19 @@ is displayed in a popup dialog.
 
 .. _measure_in_action:
 
-+------------------------+---------------------------+-----------------------+
-| |measure_line|         | |measure_area|            | |measure_angle|       |
-+------------------------+---------------------------+-----------------------+
-| (a) Measure lines      | (b) Measure areas         | (c) Measure angles    |
-+------------------------+---------------------------+-----------------------+
++------------------------+------------------------+
+| |measure_line|         | |measure_angle|        |
++------------------------+------------------------+
+| (a) Measure lines      | (b) Measure angles     |
++------------------------+------------------------+
+
++------------------------+
+| |measure_area|         |
++------------------------+
+| (c) Measure areas      |
++------------------------+
 Measure tools in action
+
 
 .. _`sec_selection`:
 
@@ -1058,7 +1065,7 @@ a layer without CRS is loaded.
 
 .. figure:: img/en/proxy-settings.png
    :align: center
-   :width: 50em
+   :width: 45em
    
    Proxy-settings in |qg|
 
@@ -1128,7 +1135,7 @@ canvas. Use the text annotation tool and click into the map canvas.
 
 .. figure:: img/en/annotation.png
    :align: center
-   :width: 30 em
+   :width: 30em
 
    Annotation text dialog |nix| 
 
