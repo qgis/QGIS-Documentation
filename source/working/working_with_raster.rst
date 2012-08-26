@@ -1,27 +1,22 @@
-.. %  !TeX  root  =  user_guide.tex                                             
 
-.. index:: `label_raster`
 
 *************************
 Working with Raster Data
 *************************
 
-.. index:: `raster layers`
+.. index:: `Raster`
 
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
 .. %\updatedisclaimer
 
+.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid; GeoTIFF
+.. index:: 
+   pair: Erdas: Imagine; 
+
 This Section describes how to visualize and set raster layer properties.
-|qg| uses the GDAL library to read and write raster data formats [1]
-, including Arc/Info Binary Grid 
-.. index:: `Arc/Info Binary Grid`
-, Arc/Info ASCII Grid 
-.. index:: `Arc/Info ASCII Grid`
-, GeoTIFF 
-.. index:: `GeoTIFF`
-, Erdas Imagine 
-.. index:: `Erdas Img.` 
+|qg| uses the :index:`GDAL` library to read and write raster data formats [1], 
+including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine 
 and many more. 
 
 At the date of this document, more than 100 raster formats are supported 
@@ -35,14 +30,11 @@ to use. Only those formats that have been well tested will appear in the list
 of file types when loading a raster into QGIS. Other untested formats can 
 be loaded by selecting *.*.
 
-Working with GRASS raster data is described in Section :ref:`sec:grass`.
+Working with GRASS raster data is described in Section :ref:`sec_grass`.
 
-.. index:: `label_whatsraster`
 
 What is raster data?
 ====================
-
-.. index:: `raster layers!definition`
 
 Raster data in GIS are matrices of discrete cells that represent features on,
 above or below the earth's surface. Each cell in the raster grid is the same
@@ -56,23 +48,21 @@ record for each cell. They are geocoded by its pixel resolution and the x/y
 coordinate of a corner pixel of the raster layer. This allows QGIS to position
 the data correctly in the map canvas.
 
-QGIS makes use of georeference information inside the raster layer (e.g. GeoTiff)
+QGIS makes use of georeference information inside the raster layer (e.g. :index:`GeoTiff`)
 or in an appropriate world file to properly display the data.
 
-.. index:: `raster layers!georeferenced`
-
-.. index:: `label_loadraster`
+.. index:: loading_raster
 
 Loading raster data in QGIS
 ===========================
 
 Raster layers are loaded either by clicking on the |mActionAddRasterLayer| 
-:guilabel:`Load Raster` icon or by selecting the :guilabel:`View` --> 
+:sup:`Load Raster` icon or by selecting the :menuselection:`View -->` 
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one 
 layer can be loaded at the same time by holding down the :kbd:`Control` or 
 :kbd:`Shift` key and clicking on multiple items in the dialog 
-:guilabel:`Open a GDAL Supported Raster Data Source`. 
-.. index:: `raster layers!loading`
+:guilabel:`Open a GDAL Supported Raster Data Source`.
+ 
 
 Once a raster layer is loaded in the map legend you can click on the layer name with the
 right mouse button to select and activate layer specific features or to open
@@ -95,52 +85,45 @@ a dialog to set raster properties for the layer.
 * :menuselection:`Collapse all`
 
 
-.. index:: `label_rasterprop`
-
 Raster Properties Dialog
 =========================
 
 To view and set the properties for a raster layer, double click
 on the layer name in the map legend or right click on the layer name and choose
 :guilabel:`Properties` from the context menu: 
-.. index:: `raster layers!context menu`
-Figure :ref:`fig:raster_properties` shows the :guilabel:`Raster Layer Properties` dialog.
+
+This will open the :guilabel:`Raster Layer Properties` dialog, (see figure_raster_1_).
+
 There are several tabs on the dialog:
-
-.. [label=--]
-
-* :guilabel:`Style`
-* :guilabel:`Transparency`
-* :guilabel:`Colormap`
-* :guilabel:`General`
-* :guilabel:`Metadata`
-* :guilabel:`Pyramids`
-* :guilabel:`Histogram`
+   - :guilabel:`Style`
+   - :guilabel:`Transparency`
+   - :guilabel:`Colormap`
+   - :guilabel:`General`
+   - :guilabel:`Metadata`
+   - :guilabel:`Pyramids`
+   - :guilabel:`Histogram`
 
 
-.. _rasterPropertiesDialog:
-
+.. _figure_raster_1:
 .. figure:: img/en/rasterPropertiesDialog.png
    :align: center
    :width: 40em
 
-   Raster Layers Properties Dialog
+   Figure Raster 1: Raster Layers Properties Dialog |nix|
 
-.. index:: `label_symbology`	
+.. index:: Symbology, Single_Band_Raster, Three_Band_Color_Raster, Multi_Band_Raster	
+
 .. _label_symbology:
 
 Style Tab
 ----------
 
 QGIS can render raster layers in two different ways: 
-.. index:: `raster layers!supported channels`
-
-.. FIXME: need to define rst style for [label=--]
-* Single band - one band of the image will be rendered as gray or in 
-  pseudocolor or a freak out.
-* Three band color - three bands from the image will be rendered, each
-  band representing the red, green or blue component that will be used to create
-  a color image.
+   1. Single band - one band of the image will be rendered as gray or in 
+      pseudocolor or a freak out.
+   2. Three band color - three bands from the image will be rendered, each
+      band representing the red, green or blue component that will be used to create
+      a color image.
 
 
 Within both render types you can invert the color output using the
@@ -155,23 +138,23 @@ one band).
 The second option offers a selection of available colortables for rendering.
 
 The following settings are available through the dropdownbox
-|selectstring| :guilabel:`color map` :guilabel:`Grayscale`, where grayscale is 
+:guilabel:`color map: Grayscale` |selectstring|, where grayscale is 
 the default setting.
-Also available are
 
-.. [label=--]
-* :guilabel:`Pseudocolor`
-* :guilabel:`Freak Out`
-* :guilabel:`Colormap`
+.. index:: Pseudocolor, Freak_out
+
+Also available are:
+   - :guilabel:`Pseudocolor`
+   - :guilabel:`Freak Out`
+   - :guilabel:`Colormap`
 
 
-When selecting the entry |selectstring| :guilabel:`Colormap`, the tab :guilabel:`Colormap` becomes available. See more on that at chapter
-:ref:`label_colormaptab`.
+When selecting the entry :guilabel:`Colormap` |selectstring|, the tab :guilabel:`Colormap` becomes available. For more information see :ref:`label_colormaptab`.
 
 QGIS can restrict the data displayed to only show cells whose values are
 within a given number of standard deviations of the mean for the
 layer. 
-.. index:: `raster layers!standard deviation` 
+
 This is useful when you have one or two cells with abnormally high values in 
 a raster grid that are having a negative impact on the rendering of the raster. 
 This option is only available for pseudocolor and freak out images.
@@ -185,12 +168,14 @@ standard RGB-order to something else.
 
 Also scaling of colors are available.
 
-.. tip::  
-   **Viewing a Single Band of a Multiband Raster**
+.. tip:: **Viewing a Single Band of a Multiband Raster**
+
    If you want to view a single band (for example Red) of a multiband
    image, you might think you would set the Green and Blue bands to 
    "Not Set". But this is not the correct way. To display the Red band,
    set the image type to grayscale, then select Red as the band to use for Gray.
+
+.. index:: Contrast_enhancement
 
 **Contrast enhancement**
 
@@ -200,21 +185,21 @@ Also scaling of colors are available.
    always set to automatically to *stretch to min max* regardless if 
    the Quantum GIS general options this is set to another value.
 
-.. index:: `rastertab:transparency`
+.. index:: `Transparency`
 
 Transparency Tab
 -----------------
 
 QGIS has the ability to display each raster layer at varying transparency
-levels. .. index:: `raster layers!transparency` Use the transparency slider to 
-indicate  to what extent the underlying layers (if any) should be visible 
-though the current raster layer.  This is very useful, if you like to overlay 
-more than one rasterlayer, e.g. a shaded relief-map overlayed by a classified 
-rastermap. This will make the look of the map more three dimensional.
+levels. Use the transparency slider to indicate to what extent the underlying 
+layers (if any) should be visible though the current raster layer. 
+This is very useful, if you like to overlay more than one rasterlayer, e.g. a 
+shaded relief-map overlayed by a classified rastermap. 
+This will make the look of the map more three dimensional.
 
 Additionally you can enter a rastervalue, which should be treated as
 *NODATA*. This can be done manually or with the 
-|mActionContextHelp| :guilabel:`Add values from display` icon.
+|mActionContextHelp| :sup:`Add values from display` icon.
 
 An even more flexible way to customize the transparency can be done in the
 :guilabel:`Custom transparency options` section.
@@ -227,65 +212,63 @@ are neccessary:
 
 #. Load the rasterfile :file:`landcover`.
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster 
-   filename in the legend or by right-clicking and choosing :guilabel:`Properties` 
+   filename in the legend or by right-clicking and choosing :menuselection:`Properties` 
    from the popup menu.
 #. Select the :guilabel:`Transparency` tab
-#. Click the |mActionNewAttribute| :guilabel:`Add values manually`
+#. Click the |mActionNewAttribute| :sup:`Add values manually`
    button. A new row will appear in the pixel-list.
 #. Enter the raster-value (we use 0 here) and adjust the transparency to 20 %.
-#. Press the :guilabel:`Apply` button and have a look at the map.
+#. Press the **[Apply]** button and have a look at the map.
 
 
 You can repeat the steps 4 and 5 to adjust
 more values with custom transparency.
 
 As you can see this is quite easy to set custom transparency, but it can be
-quite a lot of work. Therefore you can use the button |mActionFileSave|
-:guilabel:`Export to file` to save your transparency-list to a file. The button
-|mActionFolder| :guilabel:`Import from file` loads your transparency-settings 
+quite a lot of work. Therefore you can use the button 
+|mActionFileSave| :sup:`Export to file` to save your transparency-list to a file. 
+The button |mActionFolder| :sup:`Import from file` loads your transparency-settings 
 and applies them to the current rasterlayer.
 
-.. index:: `label_colormaptab`
+
 .. _label_colormaptab:
 
 Colormap
 ---------
 
+.. index:: `Colormap`
+
 The :guilabel:`Colormap` tab is only available, when you have selected a
 single-band-rendering within the :guilabel:`Style` tab 
-(see chapt. :ref:`label_symbology`).
+(see :ref:`label_symbology`).
+
+.. index:: Color_interpolation, Discrete
 
 Three ways of color interpolation are available:
-
-.. [label=--]
-
-* :guilabel:`Discrete`
-* :guilabel:`Linear`
-* :guilabel:`Exact`
+   1. :guilabel:`Discrete`
+   2. :guilabel:`Linear`
+   3. :guilabel:`Exact`
 
 
-The button :guilabel:`Add Entry` adds a color to the individual color-table. 
-:guilabel:`Delete Entry` deletes a color from the individual color-table and the 
-:guilabel:`Sort` sorts the color table according to the pixel values in the 
+The button **[Add Entry]** adds a color to the individual color-table. 
+**[Delete Entry]** deletes a color from the individual color-table and the 
+**[Sort]** button sorts the color table according to the pixel values in the 
 value column. Double-Clicking on the value-column lets you insert a 
 specific value. Double clicking on the color-column opens the dialog 
 :guilabel:`Select color` where you can select a color to apply on that value. 
 Further you can also add labels for each color but this value won't be displayed 
 when you use the identify feature tool.   
 
-Alternatively you can click on the button |mActionNewAttribute|
-:guilabel:`Load colormap from Band`, which tries to load the table from the band 
-(if it has any).
+Alternatively you can click on the button 
+|mActionNewAttribute| :sup:`Load colormap from Band`, which 
+tries to load the table from the band (if it has any).
 
 The block :guilabel:`Generate new color map` allows you to create newly
-categorized colormaps. You only need to select the |selectnumber| 
-:guilabel:`number of classes` and press the button :guilabel:`Classify`. Currently
-only one |selectstring| :guilabel:`Classification mode Equal Interval` is
-supported 
-.. index:: `raster layer!classify`.
+categorized colormaps. You only need to select the :guilabel:`number of classes` 
+|selectnumber| and press the button :guilabel:`Classify`. Currently
+only one :guilabel:`Classification mode: Equal Interval` |selectstring| is
+supported. 
 
-..index:: `label_generaltab`
- 
 .. _label_generaltab:
 
 General Tab
@@ -296,16 +279,14 @@ including the layer source and  display name in the legend (which can be
 modified). This tab also shows a thumbnail of the layer, its legend symbol,
 and the palette.
 
-.. index:: `raster layers!properties`
-
-Additionally scale-dependent visability can be set in this tab. You need to
+Additionally scale-dependent visibility can be set in this tab. You need to
 check the checkbox and set an appropriate scale where your data will be
 displayed in the map canvas.
 
 Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
-This can be modified by hitting the :guilabel:`Specify` button.
+This can be modified by hitting the **[Specify]** button.
 
-.. index:: `label_metatab`
+.. index:: `Metadata`
 
 Metadata Tab
 -------------
@@ -315,14 +296,12 @@ including statistics about each band in the current raster layer. Statistics
 are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.
 
-.. index:: `raster layers!metadata`
-
 This tab is mainly for information. You cannot change any values printed
 inside this tab. To update the statistics you need to change to tab
-:guilabel:`Histogram` and press the button :guilabel:`Refresh` on the bottom right,
-(see ch. :ref:`label_histogram`).
+:guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
+(see :ref:`label_histogram`).
 
-.. index:: `raster_pyramids`
+.. index:: `Pyramids`
 
 Pyramids Tab
 -------------
@@ -331,35 +310,32 @@ Large resolution raster layers can slow navigation in QGIS. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
 improved as QGIS selects the most suitable resolution to use depending on the
 level of zoom.
-.. index:: `raster layers!pyramids`
-.. index:: `raster layers!resolution pyramids`
 
 You must have write access in the directory where the original data is stored
 to build pyramids. 
 
 Several resampling methods can be used to calculate the pyramids:
-
-.. [label=--]
-* :guilabel:`Average`
-* :guilabel:`Nearest Neighbour`
+   * :guilabel:`Average`
+   * :guilabel:`Nearest Neighbour`
 
 
-When checking the checkbox |checkbox| 
-:guilabel:`Build pyramids internally if possible` 
+When checking the checkbox |checkbox| :guilabel:`Build pyramids internally if possible` 
 QGIS tries to build pyramids internally.
 
 Please note that building pyramids may alter the original data file and once
 created they cannot be removed. If you wish to preserve a 'non-pyramided'
 version of your raster, make a backup copy prior to building pyramids.
 
-.. index:: `label_histogram`
+
 .. _label_histogram:
 
 Histogram Tab
 ---------------
 
+.. index:: `Histogram`
+
 The :guilabel:`Histogram` tab allows you to view the distribution
-.. index:: `raster layers!histogram` of the bands or colors in your raster. It is 
+of the bands or colors in your raster. It is 
 generated automaticaly when you open :guilabel:`Histogram` tab. You can 
 choose which bands to display by selecting them in the list box at the bottom 
 left of the tab. 
@@ -374,35 +350,35 @@ left of the tab.
 .. %You can define the number of chart columns to use and decide whether you want
 .. %to \checkbox{Allow approximation} or display \checkbox{out of range} values
 .. %Once you view the histogram, you'll notice that the band statistics have been
-.. %populated on the |tab| :guilabel:`metadata} tab... index:: `raster layers!metadata)`
+.. %populated on the |tab| :guilabel:`metadata} tab... )`
 
+.. index:: Raster_statistics
 
 .. tip::
    **Gathering Raster Statistics**
 
    To gather statistics for a layer, select pseudocolor rendering and
-   click the :guilabel:`Apply` button. Gathering statistics for a layer can be time
+   click the **[Apply]** button. Gathering statistics for a layer can be time
    consuming. Please be patient while QGIS examines your data!
 
-   .. index:: `raster layers!statistics`
-
-.. index:: `sec:raster_calc`
 
 Raster Calculator
 =================
 
-.. index:: `Raster!raster calculator`
-.. index:: `Raster calculator`
+.. index:: `Raster_Calculator`
 
-The :guilabel:`Raster Calculator` in the :guilabel:`Layer` menu allows to 
-perform calculations on basis of existing raster pixel values. The results 
-are written to a new raster layer with a GDAL supported format. 
+The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu 
+(see figure_raster_2_) allows to perform calculations on basis of existing 
+raster pixel values. 
+The results are written to a new raster layer with a GDAL supported format. 
 
-.. \begin{figure}[ht]
-..  \centering
-..    \includegraphics[clip=true, width=11.5cm]{raster_calculator}
-..    \caption{Raster Calculator \nixcaption}\label{fig:raster_calculator}
-.. \end{figure}
+.. _figure_raster_2:
+.. figure:: img/en/raster_calculator.png
+   :align: center
+   :width: 38em
+
+   Figure Raster 2: Raster Calculator |nix|
+
 
 The **Fields list** contains all loaded raster layers that can be used. 
 To add a raster to the raster calculator expression field, double
@@ -423,13 +399,11 @@ are available. Stay tuned for more operators to come!
 With the |checkbox| :guilabel:`Result to project` checkbox the result layer will 
 automatically added to the legend area and can be visualized. 
 
-.. index:: `sec:raster_analysis`
 
 Raster Analysis
 ===============
 
-.. index:: `Raster!raster analysis`
-.. index:: `Raster analysis`
+.. index:: `Analysis`
 
 Apart from the raster calculator, additional raster analysis in |qg| 1.7 is provided 
 by the GDALTools core plugin. Please refer to section :ref:`label_plugingdaltools` 
