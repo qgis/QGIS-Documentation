@@ -316,6 +316,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconProjectionDisabled| image:: /img/en/mIconProjectionDisabled.png
    :width: 1.5em
+.. |mIconProjectionEnabled| image:: /img/en/mIconProjectionEnabled.png
+   :width: 1.5em
 .. |mActionMeasure| image:: /img/en/mActionMeasure.png
    :width: 1.5em
 .. |mActionMeasureArea| image:: /img/en/mActionMeasureArea.png
