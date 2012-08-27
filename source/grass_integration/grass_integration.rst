@@ -107,7 +107,7 @@ Each :file:`LOCATION` is defined by its coordinate system, map projection and ge
 Creating a new GRASS LOCATION
 ------------------------------
 
-As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`.
+As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
 
 .. _`create_grass_location`:
 
@@ -118,46 +118,46 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
 
- #. Start QGIS and make sure the GRASS plugin is loaded.
- #. Visualize the :file:`alaska.shp` Shapefile (see section
-    :ref:`vector_load_shapefile`) from the QGIS alaska dataset :ref:`label_sampledata`.
- #. In the GRASS toolbar, click on the |grass_open_mapset|:guilabel:`Open mapset` icon to bring up the :file:`MAPSET` wizard.
- #. Select an existing GRASS database (GISDBASE) folder
-    :file:`grassdata` or create one for the new :file:`LOCATION` using a
-    file manager on your computer. Then click :guilabel:`Next`.
- #. We can use this wizard to create a new :file:`MAPSET` within an
-    existing :file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create
-    a new :file:`LOCATION` altogether. Click on the radio button
-    |radiobuttonon|`Create new location` (see figure :ref:`create_grass_location`).
- #. Enter a name for the :file:`LOCATION` - we used alaska and click :guilabel:`Next`. 
- #. Define the projection by clicking on the radio button
-    \radiobuttonon{Projection} to enable the projection list
- #. We are using Albers Equal Area Alaska (feet) projection. Since we
-    happen to know that it is represented by the EPSG ID 2964, we enter it in
-    the search box. (Note: If you want to repeat this process for another
-    :file:`LOCATION} and projection and haven't memorized the EPSG ID,
-    click on the |mIconProjectionEnabled| :guilabel:`projector` icon in the lower right-hand
-    corner of the status bar (see section :ref:`label_projstart`)).
- #. Click :guilabel:`Find` to select the projection.
- #. Click :guilabel:`Next`
- #. To define the default region, we have to enter the :file:`LOCATION`
-    bounds in north, south, east, and west direction. Here we simply click on
-    the button :guilabel:`Set current QGIS extent`, to apply the extend of the
-    loaded layer :file:`alaska.shp` as the GRASS default region extend.
- #. Click :guilabel:`Next`
- #. We also need to define a :file:`MAPSET` within our new
-    :file:`LOCATION`. You can name it whatever you like - we used demo.
-    [#]_, GRASS automatically creates a special :file:`MAPSET` called :file:`PERMANENT` designed to
-    store the core data for the project, its default spatial extend and
-    coordinate system definitions (Neteler \& Mitasova 2008
-    [neteler_mitasova08]_).}
- #. Check out the summary to make sure it's correct and click
-    \button{Finish}
- #. The new :file:`LOCATION alaska` and two :file:`MAPSETs demo`
-    and :file:`PERMANENT` are created. The currently opened working set is
-    :file:`MAPSET demo`, as you defined.
- #. Notice that some of the tools in the GRASS toolbar that were
-    disabled are now enabled.
+#. Start QGIS and make sure the GRASS plugin is loaded.
+#. Visualize the :file:`alaska.shp` Shapefile (see Section
+   :ref:`vector_load_shapefile`) from the QGIS alaska dataset :ref:`label_sampledata`.
+#. In the GRASS toolbar, click on the |grass_open_mapset|:guilabel:`Open mapset` icon to bring up the :file:`MAPSET` wizard.
+#. Select an existing GRASS database (GISDBASE) folder
+   :file:`grassdata` or create one for the new :file:`LOCATION` using a
+   file manager on your computer. Then click :guilabel:`Next`.
+#. We can use this wizard to create a new :file:`MAPSET` within an
+   existing :file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create
+   a new :file:`LOCATION` altogether. Click on the radio button
+   |radiobuttonon|:guilabel:`Create new location` (see figure :ref:`create_grass_location`).
+#. Enter a name for the :file:`LOCATION` - we used alaska and click :guilabel:`Next`. 
+#. Define the projection by clicking on the radio button
+   |radiobuttonon|:guilabel:`Projection` to enable the projection list.
+#. We are using Albers Equal Area Alaska (feet) projection. Since we
+   happen to know that it is represented by the EPSG ID 2964, we enter it in
+   the search box. (Note: If you want to repeat this process for another
+   :file:`LOCATION` and projection and haven't memorized the EPSG ID,
+   click on the |mIconProjectionEnabled| :guilabel:`projector` icon in the lower right-hand
+   corner of the status bar (see Section :ref:`label_projstart`)).
+#. Click :guilabel:`Find` to select the projection.
+#. Click :guilabel:`Next`
+#. To define the default region, we have to enter the :file:`LOCATION`
+   bounds in north, south, east, and west direction. Here we simply click on
+   the button :guilabel:`Set current QGIS extent`, to apply the extend of the
+   loaded layer :file:`alaska.shp` as the GRASS default region extend.
+#. Click :guilabel:`Next`
+#. We also need to define a :file:`MAPSET` within our new
+   :file:`LOCATION`. You can name it whatever you like - we used demo.
+   [#]_, GRASS automatically creates a special :file:`MAPSET` called :file:`PERMANENT` designed to
+   store the core data for the project, its default spatial extend and
+   coordinate system definitions (Neteler \& Mitasova 2008
+   [neteler_mitasova08]_).}
+#. Check out the summary to make sure it's correct and click
+   :guilabel:`Finish`.
+#. The new :file:`LOCATION alaska` and two :file:`MAPSETs demo`
+   and :file:`PERMANENT` are created. The currently opened working set is
+   :file:`MAPSET demo`, as you defined.
+#. Notice that some of the tools in the GRASS toolbar that were
+   disabled are now enabled.
 
 If that seemed like a lot of steps, it's really not all that bad and a very quick way to create a :file:`LOCATION`. The :file:`LOCATION alaska` is now ready for data import (see section :ref:`sec_import_loc_data`).
 You can also use the already existing vector and raster data in the sample GRASS :file:`LOCATION alaska` included in the QGIS alaska dataset
@@ -173,22 +173,20 @@ A user has only write access to a GRASS :file:`MAPSET` he created. This means th
 [neteler_mitasova08]_, see Section :ref:`sec_grass_region`).
 
 
-  #.  Start QGIS and make sure the GRASS plugin is loaded.
-  #.  In the GRASS toolbar, click on the
-      |grass_new_mapset| :guilabel:`New mapset` icon to bring up the
-      :file:`MAPSET` wizard.
-  #.  Select the GRASS database (GISDBASE) folder :file:`grassdata`
-      with the :file:`LOCATION alaska`, where we want to add a further
-      :file:`MAPSET`, called test.
-  #.  Click :guilabel:`Next`.
-  #.  We can use this wizard to create a new :file:`MAPSET` within an
-      existing :file:`LOCATION` or to create a new :file:`LOCATION`
-      altogether. Click on the radio button |radiobuttonon| `Select location`
-      (see figure `create_grass_location`_) and click :guilabel:`Next`.
-  #.  Enter the name :file:`text` for the new :file:`MAPSET`. Below
-      in the wizard you see a list of existing :file:`MAPSETs` and its owners.
-  #.  Click :guilabel:`Next`, check out the summary to make sure it's all
-      correct and click :guilabel:`Finish`.
+#.  Start QGIS and make sure the GRASS plugin is loaded.
+#.  In the GRASS toolbar, click on the |grass_new_mapset| :guilabel:`New mapset` icon to bring up the
+    :file:`MAPSET` wizard.
+#.  Select the GRASS database (GISDBASE) folder :file:`grassdata`
+    with the :file:`LOCATION alaska`, where we want to add a further
+    :file:`MAPSET`, called test.
+#.  Click :guilabel:`Next`.
+#.  We can use this wizard to create a new :file:`MAPSET` within an
+    existing :file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on the radio button |radiobuttonon|:guilabel:`Select location`
+    (see figure `create_grass_location`_) and click :guilabel:`Next`.
+#.  Enter the name :file:`text` for the new :file:`MAPSET`. Below
+    in the wizard you see a list of existing :file:`MAPSETs` and its owners.
+#.  Click :guilabel:`Next`, check out the summary to make sure it's all
+    correct and click :guilabel:`Finish`.
 
 
 .. _sec_import_loc_data:
@@ -201,40 +199,40 @@ This Section gives an example how to import raster and vector data into the
 and a vector GML File :file:`lakes.gml` from the QGIS alaska dataset :ref:`label_sampledata`.
 
 
-  #.  Start QGIS and make sure the GRASS plugin is loaded.
-  #.  In the GRASS toolbar, click the |grass_open_mapset|:guilabel:`Open
-      MAPSET` icon to bring up the :file:`MAPSET` wizard.
-  #.  Select as GRASS database the folder :file:`grassdata` in the QGIS
-      alaska dataset, as :file:`LOCATION alaska`, as :file:`MAPSET`
-      :file:`demo` and click :guilabel:`OK`.
-  #.  Now click the |grass_tools| :guilabel:`Open GRASS tools` icon. The
-      GRASS Toolbox (see section :ref:`subsec_grass_toolbox`) dialog appears.
-  #.  To import the raster map :file:`landcover.img`, click the module
-      :file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module
-      allows to import GDAL supported raster files into a GRASS
-      :file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears.
-  #.  Browse to the folder :file:`raster` in the QGIS alaska dataset
-      and select the file :file:`landcover.img`.
-  #.  As raster output name define :file:`landcover\_grass}` and click
-      :guilabel:`Run`. In the :guilabel:`Output` tab you see the currently running GRASS
-      command :file:`r.in.gdal -o input=/path/to/landcover.img
-      output=landcover\_grass`.
-  #.  When it says **Succesfully finished** click :guilabel:`View output`.
-      The :file:`landcover\_grass` raster layer is now imported into GRASS and
-      will be visualized in the QGIS canvas.
-  #.  To import the vector GML file :file:`lakes.gml`, click the module
-      :file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module allows
-      to import OGR supported vector files into a GRASS :file:`LOCATION`. The
-      module dialog for :file:`v.in.ogr` appears.
-  #.  Browse to the folder :file:`gml` in the QGIS alaska
-      dataset and select the file :file:`lakes.gml` as OGR file.
-  #.  As vector output name define :file:`lakes\_grass` and click
-      :guilabel:`Run`. You don't have to care about the other options in this
-      example. In the :guilabel:`Output` tab you see the currently running GRASS
-      command :file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass`.
-  #.  When it says **Succesfully finished** click :guilabel:`View output`.
-      The :file:`lakes\_grass` vector layer is now imported into GRASS and will
-      be visualized in the QGIS canvas.
+#.  Start QGIS and make sure the GRASS plugin is loaded.
+#.  In the GRASS toolbar, click the |grass_open_mapset|:guilabel:`Open
+    MAPSET` icon to bring up the :file:`MAPSET` wizard.
+#.  Select as GRASS database the folder :file:`grassdata` in the QGIS
+    alaska dataset, as :file:`LOCATION alaska`, as :file:`MAPSET`
+    :file:`demo` and click :guilabel:`OK`.
+#.  Now click the |grass_tools| :guilabel:`Open GRASS tools` icon. The
+    GRASS Toolbox (see section :ref:`subsec_grass_toolbox`) dialog appears.
+#.  To import the raster map :file:`landcover.img`, click the module
+    :file:`r.in.gdal` in the :guilabel:`Modules Tree` tab. This GRASS module
+    allows to import GDAL supported raster files into a GRASS
+    :file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears.
+#.  Browse to the folder :file:`raster` in the QGIS alaska dataset
+    and select the file :file:`landcover.img`.
+#.  As raster output name define :file:`landcover\_grass}` and click
+    :guilabel:`Run`. In the :guilabel:`Output` tab you see the currently running GRASS
+    command :file:`r.in.gdal -o input=/path/to/landcover.img
+    output=landcover\_grass`.
+#.  When it says **Succesfully finished** click :guilabel:`View output`.
+    The :file:`landcover\_grass` raster layer is now imported into GRASS and
+    will be visualized in the QGIS canvas.
+#.  To import the vector GML file :file:`lakes.gml`, click the module
+    :file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module allows
+    to import OGR supported vector files into a GRASS :file:`LOCATION`. The
+    module dialog for :file:`v.in.ogr` appears.
+#.  Browse to the folder :file:`gml` in the QGIS alaska
+    dataset and select the file :file:`lakes.gml` as OGR file.
+#.  As vector output name define :file:`lakes\_grass` and click
+    :guilabel:`Run`. You don't have to care about the other options in this
+    example. In the :guilabel:`Output` tab you see the currently running GRASS
+    command :file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass`.
+#.  When it says **Succesfully finished** click :guilabel:`View output`.
+    The :file:`lakes\_grass` vector layer is now imported into GRASS and will
+    be visualized in the QGIS canvas.
 
 .. _label_vectmodel:
 
