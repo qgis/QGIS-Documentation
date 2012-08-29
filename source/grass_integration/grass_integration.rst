@@ -93,13 +93,12 @@ GRASS data are stored in a directory referred to as GISDBASE. This directory oft
 Each :file:`LOCATION` is defined by its coordinate system, map projection and geographical boundaries. Each :file:`LOCATION` can have several
 :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler \& Mitasova 2008 [neteler_mitasova08]_). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#].
 
-.. _`grass_location`:
-
+.. _figure_grass_location_1:
 .. figure:: img/en/grass_location.png
    :align: center
    :width: 40em
 
-   GRASS data in the alaska LOCATION
+   Figure GRASS location 1: GRASS data in the alaska LOCATION
 
 
 .. _sec_create_loc:
@@ -139,12 +138,12 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    click on the |mIconProjectionEnabled| :guilabel:`projector` icon in the lower right-hand
    corner of the status bar (see Section :ref:`label_projstart`)).
 #. Click :guilabel:`Find` to select the projection.
-#. Click :guilabel:`Next`
+#. Click :guilabel:`Next`.
 #. To define the default region, we have to enter the :file:`LOCATION`
    bounds in north, south, east, and west direction. Here we simply click on
    the button :guilabel:`Set current QGIS extent`, to apply the extend of the
    loaded layer :file:`alaska.shp` as the GRASS default region extend.
-#. Click :guilabel:`Next`
+#. Click :guilabel:`Next`.
 #. We also need to define a :file:`MAPSET` within our new
    :file:`LOCATION`. You can name it whatever you like - we used demo.
    [#]_, GRASS automatically creates a special :file:`MAPSET` called :file:`PERMANENT` designed to
