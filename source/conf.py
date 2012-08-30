@@ -471,6 +471,30 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
    :width: 1.5em
+.. |grass_new_point| image:: /grass_integration/img/en/grass_new_point.png
+   :width: 1.5em
+.. |grass_new_line| image:: /grass_integration/img/en/grass_new_line.png
+   :width: 1.5em
+.. |grass_new_boundary| image:: /grass_integration/img/en/grass_new_boundary.png
+   :width: 1.5em
+.. |grass_new_centroid| image:: /grass_integration/img/en/grass_new_centroid.png
+   :width: 1.5em
+.. |grass_move_vertex| image:: /grass_integration/img/en/grass_move_vertex.png
+   :width: 1.5em
+.. |grass_add_vertex| image:: /grass_integration/img/en/grass_add_vertex.png
+   :width: 1.5em
+.. |grass_delete_vertex| image:: /grass_integration/img/en/grass_delete_vertex.png
+   :width: 1.5em
+.. |grass_move_line| image:: /grass_integration/img/en/grass_move_line.png
+   :width: 1.5em
+.. |grass_split_line| image:: /grass_integration/img/en/grass_split_line.png
+   :width: 1.5em
+.. |grass_delete_line| image:: /grass_integration/img/en/grass_delete_line.png
+   :width: 1.5em
+.. |grass_edit_attributes| image:: /grass_integration/img/en/grass_edit_attributes.png
+   :width: 1.5em
+.. |grass_close_edit| image:: /grass_integration/img/en/grass_close_edit.png
+   :width: 1.5em
 
 """
 
