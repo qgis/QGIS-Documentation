@@ -108,13 +108,11 @@ Creating a new GRASS LOCATION
 
 As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
 
-.. _`create_grass_location`:
-
+.. _figure_grass_location_2:
 .. figure:: img/en/create_grass_location.png
    :align: center
-   :width: 30em
 
-   Creating a new GRASS LOCATION or a new MAPSET in |QG|
+   Figure GRASS location 2: Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
@@ -127,7 +125,7 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
 #. We can use this wizard to create a new :file:`MAPSET` within an
    existing :file:`LOCATION` (see section :ref:`sec_add_mapset`) or to create
    a new :file:`LOCATION` altogether. Click on the radio button
-   |radiobuttonon|:guilabel:`Create new location` (see figure :ref:`create_grass_location`).
+   |radiobuttonon|:guilabel:`Create new location` (see figure_grass_location_2_).
 #. Enter a name for the :file:`LOCATION` - we used alaska and click :guilabel:`Next`. 
 #. Define the projection by clicking on the radio button
    |radiobuttonon|:guilabel:`Projection` to enable the projection list.
@@ -181,7 +179,7 @@ A user has only write access to a GRASS :file:`MAPSET` he created. This means th
 #.  Click :guilabel:`Next`.
 #.  We can use this wizard to create a new :file:`MAPSET` within an
     existing :file:`LOCATION` or to create a new :file:`LOCATION` altogether. Click on the radio button |radiobuttonon|:guilabel:`Select location`
-    (see figure `create_grass_location`_) and click :guilabel:`Next`.
+    (see figure_grass_location_2_) and click :guilabel:`Next`.
 #.  Enter the name :file:`text` for the new :file:`MAPSET`. Below
     in the wizard you see a list of existing :file:`MAPSETs` and its owners.
 #.  Click :guilabel:`Next`, check out the summary to make sure it's all
@@ -293,16 +291,15 @@ The tools and settings are discussed in the following sections.
 
 **Toolbar**
 
-In Figure `grass_digitizing_toolbar`_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
+In Figure grass_digitizing_1_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
 explains the available functionalities.
 
-.. _`grass_digitizing_toolbar`:
-
+.. _figure_grass_digitizing_1:
 .. figure:: img/en/grass_digitizing_toolbar.png
    :align: center
    :width: 30em
 
-   GRASS Digitizing Toolbar
+   Figure GRASS digitizing 1:  GRASS Digitizing Toolbar
 
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | Icon                   | Tool            | Purpose                                                                                           |                
@@ -332,106 +329,80 @@ explains the available functionalities.
 | |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 
-{\renewcommand{\arraystretch}{2}
-\begin{table}[h]:index:`GRASS!digitizing tools`
-\centering
- \begin{tabular}{|m{1cm}|m{4cm}|m{8.5cm}|}
- \hline **Icon** & **Tool** & **Purpose** \\
-\hline \includegraphics[width=0.7cm]{grass_new_point} & New Point & Digitize new point \\
-\hline \includegraphics[width=0.7cm]{grass_new_line} & New Line & Digitize new line (finish by selecting new tool) \\
-\hline \includegraphics[width=0.7cm]{grass_new_boundary} & New Boundary &
-Digitize new boundary (finish by selecting new tool)\\
-\hline \includegraphics[width=0.7cm]{grass_new_centroid} & New Centroid &
-Digitize new centroid (label existing area)\\
-\hline \includegraphics[width=0.7cm]{grass_move_vertex} & Move vertex & Move one vertex of existing line or boundary and identify new position\\
-\hline \includegraphics[width=0.7cm]{grass_add_vertex} & Add vertex & Add a new vertex to existing line\\
-\hline \includegraphics[width=0.7cm]{grass_delete_vertex} & Delete vertex &
-Delete vertex from existing line (confirm selected vertex by another click)\\
-\hline \includegraphics[width=0.7cm]{grass_move_line} & Move element & Move selected boundary, line, point or centroid and click on new position\\
-\hline \includegraphics[width=0.7cm]{grass_split_line} & Split line & Split an existing line to 2 parts\\
-\hline \includegraphics[width=0.7cm]{grass_delete_line} & Delete element &
-Delete existing boundary, line, point or centroid (confirm selected element by another click)\\
-\hline \includegraphics[width=0.7cm]{grass_edit_attributes} & Edit attributes
-& Edit attributes of selected element (note that one element can represent more features, see above)\\
-\hline \includegraphics[width=0.7cm]{grass_close_edit} & Close & Close session and save current status (rebuilds topology afterwards)\\
-\hline
-\end{tabular}
-\caption{GRASS Digitizing Tools}`tab_grass_tools`:
-\end{table}}
+GRASS Digitizing Tools
+
 
 **Category Tab**
 
 :index:`GRASS!category settings`
 
-The \tab{Category} tab allows you to define the way in which the category values will be assigned to a new geometry element.
+The `Category`tab allows you to define the way in which the category values will be assigned to a new geometry element.
 
-\begin{figure}[h]
- \centering
-  \includegraphics[clip=true,width=8cm]{grass_digitizing_category}
-  \caption{GRASS Digitizing Category Tab \nixcaption}`fig_grass_digitizing_category`:
- \end{figure}
+.. _figure_grass_digitizing_2:
+.. figure:: img/en/grass_digitizing_category.png
+   :align: center
+   :width: 40em
 
+   Figure GRASS digitizing 2: GRASS Digitizing Category Tab
 
-[label=--]
-*  **Mode**: what category value shall be applied to new geometry elements.
+* **Mode**: what category value shall be applied to new geometry elements.
+ *  Next not used - apply next not yet used category value to geometry element.
+ *  Manual entry - manually define the category value for the geometry element in the 'Category'-entry field.
+ *  No category - Do not apply a category value to the geometry element. This is e.g. used for area boundaries, because the category values are connected via the   centroid.
 
-[label=--]
-*  Next not used - apply next not yet used category value to geometry element.
-*  Manual entry - manually define the category value for the geometry element in the 'Category'-entry field.
-*  No category - Do not apply a category value to the geometry element.
-This is e.g. used for area boundaries, because the category values are connected via the centroid.
-
-
-\item **Category** - A number (ID) is attached to each digitized geometry element. It is used to connect each geometry element with its attributes.
-\item **Field (layer)** - Each geometry element can be connected with several attribute tables using different GRASS geometry layers. Default layer number is 1.
+* **Category** - A number (ID) is attached to each digitized geometry element. It is used to connect each geometry element with its attributes.
+* **Field (layer)** - Each geometry element can be connected with several attribute tables using different GRASS geometry layers. Default layer number is 1.
 
 
+.. tip:: **Creating an additional GRASS 'layer' with QGIS**
 
-\begin{Tip}\caption{\textsc{Creating an additional GRASS 'layer' with QGIS}}
-If you would like to add more layers to your dataset, just add a new number in the 'Field (layer)' entry box and press return. In the Table tab you can create your new table connected to your new layer.
-\end{Tip}
+   If you would like to add more layers to your dataset, just add a new number in the 'Field (layer)' entry box and press return. In the Table tab you can create     your new table connected to your new layer.
 
 **Settings Tab**
 
 `label_settingtab`::index:`GRASS!snapping tolerance`
 
-The \tab{Settings} tab allows you to set the snapping in screen pixels. The threshold defines at what distance new points or line ends are snapped to existing nodes. This helps to prevent gaps or dangles between boundaries. The default is set to 10 pixels.
+The :guilabel:`Settings` tab allows you to set the snapping in screen pixels. The threshold defines at what distance new points or line ends are snapped to existing nodes. This helps to prevent gaps or dangles between boundaries. The default is set to 10 pixels.
 
-\begin{figure}[h]
- \centering
- \includegraphics[clip=true,width=8cm]{grass_digitizing_settings}
- \caption{GRASS Digitizing Settings Tab \nixcaption}`fig_grass_digitizing_settings`:
-\end{figure}
+.. _figure_grass_digitizing_3:
+.. figure:: img/en/grass_digitizing_settings.png
+   :align: center
+   :width: 30em
 
-**Symbology Tab**
+   Figure GRASS digitizing 3: GRASS Digitizing Settings Tab
+
+* **Symbology Tab**
 
 :index:`GRASS!symbology settings`
 
-The \tab{Symbology} tab allows you to view and set symbology and color settings for various geometry types and their topological status (e.g. closed
+The :guilabel:`Symbology` tab allows you to view and set symbology and color settings for various geometry types and their topological status (e.g. closed
 / opened boundary).
 
-\begin{figure}[h]
- \centering
- \includegraphics[clip=true,width=8cm]{grass_digitizing_symbology}
- \caption{GRASS Digitizing Symbolog Tab \nixcaption}`fig_grass_digitizing_symbology`:
-\end{figure}
+.. _figure_grass_digitizing_4:
+.. figure:: img/en/grass_digitizing_symbology.png
+   :align: center
+   :width: 30em
+
+   Figure GRASS digitizing 4: GRASS Digitizing Symbolog Tab
+
 
 **Table Tab**
 
  :index:`GRASS!table editing`
 
-The \tab{Table} tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section
-\ref{sec:creating_new_grass_vectors}).
+The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:sec:creating_new_grass_vectors}).
 
-\begin{figure}[h]
- \centering
- \includegraphics[clip=true,width=10cm]{grass_digitizing_table}
- \caption{GRASS Digitizing Table Tab \nixcaption}`fig_grass_digitizing_table`:
- \end{figure}
+.. _figure_grass_digitizing_5:
+.. figure:: img/en/grass_digitizing_table.png
+   :align: center
+   :width: 30em
 
-\begin{Tip}\caption{\textsc{GRASS Edit Permissions}}:index:`GRASS!edit permissions`
-You must be the owner of the GRASS :file:`MAPSET} you want to edit. It is impossible to edit data layers in a :file:`MAPSET} that is not yours, even if you have write permissions.
-\end{Tip}
+   Figure GRASS digitizing 5: GRASS Digitizing Table Tab
+
+.. tip:: **GRASS Edit Permissions**
+
+   You must be the owner of the GRASS :file:`MAPSET` you want to edit. It is impossible to edit data layers in a :file:`MAPSET` that is not yours, even if you have   write permissions.
+
 
 .. _sec_grass_region:
 
@@ -444,9 +415,8 @@ The region definition (setting a spatial working window) in GRASS is important f
 It is possible to switch on/off the visualization of the GRASS region in the QGIS canvas using the |grass_region| :guilabel:`Display current GRASS region`
 button. :index:`GRASS!region!display`.
 
-With the |grass_region_edit| :guilabel:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click \button{OK}. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click \button{OK}.:index:`GRASS!region!editing`
-The GRASS module :file:`g.region} provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section
-\ref{subsec:grass_toolbox}.
+With the |grass_region_edit| :guilabel:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click :guilabel:`OK`. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click :guilabel:`OK`.:index:`GRASS!region!editing`
+The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:subsec:grass_toolbox}.
 
 .. _subsec_grass_toolbox:
 
@@ -464,13 +434,12 @@ Working with GRASS modules
 ---------------------------
 `grass_modules`::index:`GRASS!toolbox`
 
-\begin{figure}[ht]
-\centering
-   \subfloat[Modules Tree] {`subfig_grass_module_tree`:\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_moduletree}}
-   \hspace{0.5cm}
-   \subfloat[Searchable Modules List] {`subfig_grass_module_list`:\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_modulelist}}
-\caption{GRASS Toolbox and searchable Modules List \nixcaption}`fig_grass_modules`:
-\end{figure}
+.. _figure_grass_toolbox_1:
+.. figure:: img/en/grass_toolbox_moduletree.png
+   :align: center
+   :width: 40em
+
+   Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
 
