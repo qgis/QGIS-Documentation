@@ -60,13 +60,12 @@ Specifying a Projection
 
 :index:`Projections!specifying`
 
-.. _`sec_projection-specifying`:
-
+.. _figure_projection_1:
 .. figure:: img/en/crsdialog.png
    :align: center
    :width: 40em
 
-   CRS tab in the QGIS Options Dialog
+   Figure Projection 1: CRS tab in the QGIS Options Dialog
 
 QGIS starts each new project using the global default projection.The
 global default CRS is EPSG:4326 - WGS 84 
@@ -144,13 +143,12 @@ The :guilabel:`Coordinate Reference System` tab of the
 :guilabel:`Project Properties` dialog contains five important components as 
 shown in Figure :ref:`projections` and described below.
 
-.. _`projection_dialog`
-
+.. _figure_projection_2:
 .. figure:: img/en/projectionDialog.png
    :align: center
    :width: 40em
 
-   Projection Dialog
+   Figure Projection 2: Projection Dialog
 
 .. index:: `Projections!enabling`
 

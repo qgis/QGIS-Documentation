@@ -351,6 +351,8 @@ rst_epilog = """
    :width: 1.5em
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
+.. |wfs| image:: /img/en/wfs.png
+   :width: 1.5em
 .. |matrix| image:: img/en/plugins_ftools/matrix.png
    :width: 3em
 .. |sum_lines| image:: img/en/plugins_ftools/sum_lines.png
