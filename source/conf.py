@@ -175,6 +175,56 @@ rst_epilog = """
 .. |mActionSaveMapAsImage| image:: /img/en/mActionSaveMapAsImage.png
 .. |mActionNewComposer| image:: /img/en/mActionNewComposer.png
 .. |mActionComposerManager| image:: /img/en/mActionComposerManager.png
+.. |mActionExportMapServer| image:: /img/en/mActionExportMapServer.png
+   :width: 1.5em
+.. |mActionSaveAsSVG| image:: /img/en/mActionSaveAsSVG.png
+   :width: 1.5em
+.. |mActionSaveAsPDF| image:: /img/en/mActionSaveAsPDF.png
+   :width: 1.5em
+.. |mActionFilePrint| image:: /img/en/mActionFilePrint.png
+   :width: 1.5em
+.. |mActionAddArrow| image:: /img/en/mActionAddArrow.png
+   :width: 1.5em
+.. |mActionAddBasicShape| image:: /img/en/mActionAddBasicShape.png
+   :width: 1.5em
+.. |mActionAddLegend| image:: /img/en/mActionAddLegend.png
+   :width: 1.5em
+.. |mActionAddMap| image:: /img/en/mActionAddMap.png
+   :width: 1.5em
+.. |mActionLabel| image:: /img/en/mActionLabel.png
+   :width: 1.5em
+.. |mActionScaleBar| image:: /img/en/mActionScaleBar.png
+   :width: 1.5em
+.. |mActionSelectPan| image:: /img/en/mActionSelectPan.png
+   :width: 1.5em
+.. |mActionGroupItems| image:: /img/en/mActionGroupItems.png
+   :width: 1.5em
+.. |mActionUnGroupItems| image:: /img/en/mActionUnGroupItems.png
+   :width: 1.5em
+.. |mActionRaiseItems| image:: /img/en/mActionRaiseItems.png
+   :width: 1.5em
+.. |mActionLowerItems| image:: /img/en/mActionLowerItems.png
+   :width: 1.5em
+.. |mActionMoveItemContent| image:: /img/en/mActionMoveItemContent.png
+   :width: 1.5em
+.. |mActionMoveItemsToTop| image:: /img/en/mActionMoveItemsToTop.png
+   :width: 1.5em
+.. |mActionMoveItemsToBottom| image:: /img/en/mActionMoveItemsToBottom.png
+   :width: 1.5em
+.. |mActionAlignLeft|  image:: /img/en/mActionAlignLeft.png
+   :width: 1.5em
+.. |mActionAlignRight|  image:: /img/en/mActionAlignRight.png
+   :width: 1.5em
+.. |mActionAlignHCenter|  image:: /img/en/mActionAlignHcenter.png
+   :width: 1.5em
+.. |mActionAlignVCenter|  image:: /img/en/mActionAlignVCenter.png
+   :width: 1.5em
+.. |mActionAlignTop|  image:: /img/en/mActionAlignTop.png
+   :width: 1.5em
+.. |mActionAlignBottom|  image:: /img/en/mActionAlignBottom.png
+   :width: 1.5em
+.. |mIconLock|  image:: /img/en/mIconLock.png
+   :width: 1.5em
 .. |mActionFileExit| image:: /img/en/mActionFileExit.png
 .. |mActionUndo| image:: /img/en/mActionUndo.png
    :width: 1.5em
