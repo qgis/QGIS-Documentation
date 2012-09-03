@@ -1,7 +1,5 @@
 .. _`label_printcomposer`:
 
-:index:`print composer`
-
 --------------
 Print Composer
 --------------
@@ -12,11 +10,12 @@ images, basic shapes, arrows and text labels. You can size, group, align
 and position each element and adjust the properties to create your layout.
 The layout can be printed or exported to image formats, Postscript, PDF
 or to SVG [1]_ and you can save the layout as template and load it again
-in another session. See a list of tools in table~\ref{tab:printcomposer_tools}:
+in another session. See a list of tools in :ref:`table_printcomposer_tools`:
 
-.. _`printcomposer_tools`:
+.. index:: print_composer, tools
 
-.. index:: `Print composer; tools`
+.. _Table_printcomposer_tools:
+
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
 +==========================+=======================================+============================+==========================================+
@@ -73,17 +72,16 @@ Composer`.
 Using Print Composer
 ====================
 
-.. `print_composer_blank`:
-
+.. _figure_composer_1:
 .. figure:: img/en/print_composer_blank.png
    :align: center
-   :width: 12 em
+   :width: 40em
 
-   Print Composer |nix|
+   Figure Composer 1: Print Composer |nix|
 
 Opening the print composer provides you with a blank canvas to which you
 can add the current QGIS map canvas, legend, scalebar, images, basic
-shapes, arrows and text. Figure `print_composer_blank`_ shows the initial
+shapes, arrows and text. Figure_composer_1_ shows the initial
 view of the print composer with an activated |checkbox| Snap to grid mode
 but before any elements are added. The print composer provides three tabs:
 
@@ -150,20 +148,23 @@ might be necessary to switch back to the standard labeling in some cases.
 Map item tab --- Map and Extents dialog
 ***************************************
 
-.. `mapdialog`:
 
+.. _figure_composer_2:
 .. figure:: img/en/print_composer_map1.png
    :align: center
-   :width: 12 em
+   :width: 20 em
+
+----
 
 .. figure:: img/en/print_composer_map2.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
-   Print Composer map item tab --- Map and Extents dialog |nix|
+   Figure Composer 2: Print Composer map item tab --- Map and Extents dialog |nix|
 
 Map dialog
 ~~~~~~~~~~
+
 
 The **Map** dialog of the map item tab provides following functionalities
 (see Figure `mapdialog`_ a):
@@ -201,20 +202,22 @@ view selecting the map element in the print composer and clicking the
 Map item tab --- Grid and General options dialog
 ************************************************
 
-.. `sec_map_dialog`:
-
+.. _figure_composer_3:
 .. figure:: img/en/print_composer_map3.png
    :align: center
-   :width: 12 em
+   :width: 20em
+
+----
 
 .. figure:: img/en/print_composer_map4.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
-   Print Composer map item tab --- Grid and General options dialog |nix|
+   Figure Composer 3: Print Composer map item tab --- Grid and General options dialog |nix|
 
 Grid dialog
 ~~~~~~~~~~~
+
 
 The **Grid** dialog of the map item tab provides following functionalities
 (see Figure `sec_map_dialog`_ a):
@@ -246,6 +249,7 @@ functionalities (see Figure `sec_map_dialog`_ b):
 Adding other elements to the Print Composer
 ===========================================
 
+
 Besides adding a current QGIS map canvas to the Print Composer, it is also
 possible to add, position, move and customize legend, scalebar, images and
 label elements.
@@ -253,24 +257,28 @@ label elements.
 Label item tab --- Label and General options dialog
 ***************************************************
 
+
 To add a label, click the |mActionLabel| :guilabel:`Add label` icon, place
 the element with the left mouse button on the print composer canvas and
 position and customize their appearance in the label item tab.
 
-.. `label_option`:
+.. _figure_composer_4:
 
 .. figure:: img/en/print_composer_label1.png
    :align: center
-   :width: 12 em
+   :width: 20 em
+
+----
 
 .. figure:: img/en/print_composer_label2.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
-   Print composer label item tab --- Label options and General options dialog |nix|
+   Figure Composer 4: Print composer label item tab --- Label options and General options dialog |nix|
 
 Label dialog
 ~~~~~~~~~~~~
+
 
 The **Label** dialog of the label item tab provides following functionalities
 (see Figure `label_option`_ a):
@@ -281,6 +289,7 @@ The **Label** dialog of the label item tab provides following functionalities
 
 General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
+
 
 The **General options** dialog of the label item tab provides following
 functionalities (see Figure `label_option`_ b):
@@ -295,21 +304,24 @@ functionalities (see Figure `label_option`_ b):
 Image item tab --- Picture options and General options dialog
 *************************************************************
 
+
 To add an image, click the |mActionSaveMapAsImage| :guilabel:`Add image`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the image item tab.
 
-.. `imageoptions`:
+.. _figure_composer_5:
 
 .. figure:: img/en/print_composer_image1.png
    :align: center
-   :width: 12 em
+   :width: 20 em
+
+----
 
 .. figure:: img/en/print_composer_image2.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
-   Print composer image item tab - Picture options and General options |nix|
+   Figure Composer 5: Print composer image item tab - Picture options and General options |nix|
 
 Picture options dialog
 ~~~~~~~~~~~~~~~~~~~~~~

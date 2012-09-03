@@ -4,12 +4,13 @@
 Working with OGC Data
 ---------------------
 
-QGIS supports WMS and WFS as data sources. WMS-support is native; WFS and
-WFS-T is implemented as a plugin.
+QGIS supports WMS and WFS as data sources. 
+
 
 What is OGC Data
 ================
-:index:`OGC!introduction`
+
+.. index:: Open_Geospatial_Consortium, OGC
 
 The Open Geospatial Consortium (OGC), is an international organization
 with more than 300 commercial, governmental, nonprofit and research
@@ -20,6 +21,8 @@ Describing a basic data model for geographic features an increasing number
 of specifications are developed to serve specific needs for interoperable
 location and geospatial technology, including GIS. Further information
 can be found under http://www.opengeospatial.org/.
+
+.. index:: WMS, WFS, WCS, CAT, SFS, GML
 
 Important OGC specifications are:
 
@@ -38,20 +41,16 @@ WFS and WMS as a client.
 
 .. _`ogc-wms`:
 
-:index:`WMS!client`
-:index:`OGC!WMS!client`
-
 WMS Client
 ==========
 
-:index:`rasters!WMS`
+.. index:: WMS_client
+
 
 .. _`ogc-wms-about`:
 
 Overview of WMS Support
 ***********************
-
-:index:`WMS!client!about`
 
 QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1
 and 1.3 servers. It has particularly been tested against publicly
@@ -81,33 +80,33 @@ server understands HTTP as the data transport mechanism.
 Selecting WMS Servers
 *********************
 
-:index:`WMS!remote server!selection`
 
-The first time you use the WMS feature, there are no servers defined. You
-can begin by clicking the |mActionAddWmsLayer| :guilabel:`Add WMS layer`
-button inside the toolbar, or through the :menuselection:`Layer -->
-Add WMS Layer...` menu.
+The first time you use the WMS feature, there are no servers defined. 
+
+Begin by clicking the |mActionAddWmsLayer| :sup:`Add WMS layer`
+button inside the toolbar, or through the 
+:menuselection:`Layer --> Add WMS Layer...` menu.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
-the WMS server pops up. Fortunately you can add some servers to play with
-by clicking the :guilabel:`Add default servers` button. This will add at
-least three WMS servers for you to use, including the NASA (JPL) WMS
-server. To define a new WMS server in the |tab| Layers, select
-:guilabel:`New`. Then enter the parameters to connect to your desired
-WMS server, as listed in table :ref:`wms_connection_parms:
+the WMS server appears. You can add some servers to play with
+by clicking the **[Add default servers]** button. This will add two 
+WMS demo servers for you to use, the WMS servers of the DM Solutions Group and Lizardtech. 
+To define a new WMS server in the tab :guilabel:`Layers`, select the
+**[New]** button. Then enter the parameters to connect to your desired
+WMS server, as listed in table_OGC_1_:
 
-:index:`WMS!client!connection parameters`
+.. _table_OGC_1:
 
 +--------------------------------------+----------------------------------------------------------------+
 | Name                                 | A name for this connection.  This name will be used in the     |
 |                                      | Server Connections drop-down box so that you can distinguish   |
 |                                      | it from other WMS Servers.                                     |
 +--------------------------------------+----------------------------------------------------------------+
-| URL :index:`WMS!URL`                 | URL of the server providing the data. This must be a resolvable|
+| URL                                  | URL of the server providing the data. This must be a resolvable|
 |                                      | host name; the same format as you would use to open a telnet   |
 |                                      | connection or ping a host.                                     |
 +--------------------------------------+----------------------------------------------------------------+
-| Username :index:`WMS!authentication` | Username to access a secured WMS-server.  This parameter is    |
+| Username                             | Username to access a secured WMS-server.  This parameter is    |
 |                                      | optional.                                                      |
 +--------------------------------------+----------------------------------------------------------------+
 | Password                             | Password for a basic authenticated WMS-server. This parameter  |
@@ -121,24 +120,22 @@ WMS server, as listed in table :ref:`wms_connection_parms:
 |                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities` |
 |                                      | , use given URI from URL-field above                           |
 +--------------------------------------+----------------------------------------------------------------+
+Table OGC 1: WMS Connection Parameters 
 
-WMS Connection Parameters .. _`tab:wms_connection_parms`
-
+.. index:: Proxy, proxy-server
 
 If you need to set up a proxy-server to be able to receive WMS-services
 from the internet, you can add your proxy-server in the options. Choose
-menu :menuselection:`Settings --> Options` and click on the |tab| 
-:guilabel:`Network & Proxy` tab. There you can add your proxy-settings and enable them by
-setting the |checkbox| Use proxy for web access. Make sure that you select
+menu :menuselection:`Settings --> Options` and click on the tab 
+:guilabel:`Network & Proxy`. There you can add your proxy-settings and enable them by
+setting the |checkbox| :guilabel:`Use proxy for web access`. Make sure that you select
 the correct proxy-type from the :menuselection:`Proxy type` dropdown menu.
 
 Once the new WMS Server connection has been created, it will be preserved
 for future QGIS sessions.
 
-:index:`WMS!remote server!URL`
 
-.. note::
-   **On WMS Server URLs**
+.. tip:: **On WMS Server URLs**
    
    Be sure, when entering in the WMS server URL, that you have the base URL.
    For example, you shouldn't have fragments such as ``request=GetCapabilities``
@@ -149,49 +146,46 @@ for future QGIS sessions.
 Loading WMS Layers
 ******************
 
-:index:`WMS!client!layers`
 
 Once you have successfully filled in your parameters you can select the
-:guilabel:`Connect` button to retrieve the capabilities of the selected
+**[Connect]** button to retrieve the capabilities of the selected
 server. This includes the Image encoding, Layers, Layer Styles and
 Projections. Since this is a network operation, the speed of the response
 depends on the quality of your network connection to the WMS server. While
 downloading data from the WMS server, the download progress is visualized
 in the left bottom of the WMS Plugin dialog.
 
-Your screen should now look a bit like Figure `connection_wms`_, which
+.. following should be replaced in 1.8 with the response of de DM Solutions Group
+
+Your screen should now look a bit like figure_OGR_1_, which
 shows the response provided by the NASA JPL OnEarth WMS server.
 
-.. `connection_wms`:
-
-.. figure::img/en/connection_wms.png
+.. _figure_OGR_1:
+.. figure:: img/en/connection_wms.png
    :align: center
-   :width: 12 em
+   :width: 45em
 
-   Dialog for adding a WMS server, showing its available layers |nix|
+   Figure OGR 1: Dialog for adding a WMS server, showing its available layers |nix|
 
 Image Encoding
 ~~~~~~~~~~~~~~
 
-The |tab| Image encoding section now lists the formats that are supported
+The :guilabel:`Image encoding` section now lists the formats that are supported
 by both the client and server. Choose one depending on your image accuracy
 requirements.
 
-:index:`WMS!image encoding`
-
-.. note::
-   **Image Encoding**
+.. tip:: **Image Encoding**
    
    You will typically find that a WMS server offers you the choice of JPEG
    or PNG image encoding. JPEG is a lossy compression format, whereas PNG
    faithfully reproduces the raw raster data.
 
-Use JPEG if you expect the WMS data to be photographic in nature and/or
-you don't mind some loss in picture quality. This trade-off typically
-reduces by 5 times the data transfer requirement compared to PNG.
+   Use JPEG if you expect the WMS data to be photographic in nature and/or
+   you don't mind some loss in picture quality. This trade-off typically
+   reduces by 5 times the data transfer requirement compared to PNG.
 
-Use PNG if you want precise representations of the original data, and you
-don't mind the increased data transfer requirements.
+   Use PNG if you want precise representations of the original data, and you
+   don't mind the increased data transfer requirements.
 
 Options
 ~~~~~~~
@@ -201,14 +195,14 @@ for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
 Below the layer name you find the default projection, provided by the
-mapserver. If the :guilabel:`Change...` button is active, you can click
+mapserver. If the **[Change...]** button is active, you can click
 on it and change the default projection of the WMS to another CRS,
 provided by the WMS server.
 
 Layer Order
 ~~~~~~~~~~~
 
-The |tab| Layer Order tab lists the selected layers available from the
+The tab :guilabel:`Layer Order` lists the selected layers available from the
 current connected WMS server. You may notice that some layers are expandable,
 this means that the layer can be displayed in a choice of image styles.
 
@@ -217,13 +211,12 @@ When several layers are selected, they will be combined at the WMS Server
 and transmitted to QGIS in one go.
 
 
-.. note::
-   **WMS Layer Ordering**
+.. tip:: **WMS Layer Ordering**
   
-   In this version of QGIS, WMS layers rendered by a server are overlaid
+   WMS layers rendered by a server are overlaid
    in the order listed in the Layers section, from top to bottom of the
    list. If you want to change the overlay order, you can use the
-   |tab| Layer Order tab.
+   tab :guilabel:`Layer Order`.
 
 .. _`ogc-wms-transparency`:
 
@@ -233,10 +226,9 @@ Transparency
 In this version of QGIS, the transparency setting is hard-coded to be
 always on, where available.
 
-:index:`WMS!layer transparency`
+.. index:: WMS_layer_transparency
 
-.. note::
-  **WMS Layer Transparency**
+.. tip:: **WMS Layer Transparency**
   
   The availability of WMS image transparency depends on the image encoding
   used: PNG and GIF support transparency, whilst JPEG leaves it unsupported.
@@ -244,17 +236,7 @@ always on, where available.
 Coordinate Reference System
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:index:`WMS!CRS`
-:index:`WMS!coordinate reference system`
-:index:`OGC!CRS`
-:index:`OGC!coordinate reference system`
-:index:`Projections!WMS`
-:index:`Projections!CRS`
-:index:`Projections!coordinate reference system`
-:index:`CRS`
-:index:`coordinate reference system`
-:index:`SRS`
-:index:`Projections!SRS`
+.. index:: Coordinate_Reference_System, SRS, CRS
 
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS
 Projection.
@@ -262,19 +244,18 @@ Projection.
 Each WMS Layer can be presented in multiple CRSs, depending on the
 capability of the WMS server. You may notice that the *x* changes in the
 *Coordinate Reference System (x available)* header as you select and
-deselect layers from the |tab| Layers section.
+deselect layers from the :guilabel:`Layers section` tab.
 
-To choose a CRS, select :guilabel:`Change...` and a dialog similar to
-Figure `projections`_ in Section :ref:`label_projstart` will appear.
+To choose a CRS, select **[Change...]** and a dialog similar to
+:ref:`figure_projection_2` in :ref:`label_projstart` will appear.
 The main difference with the WMS version of the screen is that only
 those CRSs supported by the WMS Server will be shown.
 
-.. note::
-   **WMS Projections**
+.. tip:: **WMS Projections**
    
    For best results, make the WMS layer the first layer you add to your
    project. This allows the project projection to inherit the CRS you used
-   to render the WMS layer. On-the-fly projection (see Section :ref:`projection-specifying`)
+   to render the WMS layer. On-the-fly projection (see :ref:`projection-specifying`)
    can then be used to fit any subsequent vector layers to the project
    projection. In this version of QGIS, if you add a WMS layer later, and
    give it a different CRS to the current project projection, unpredictable
@@ -285,21 +266,16 @@ those CRSs supported by the WMS Server will be shown.
 Server-Search
 *************
 
-:index:`WMS!serversearch`
-:index:`WMS!search`
-:index:`OGC!search`
-
-Within QGIS you can search for WMS-servers. Figure `searchtab`_ shows
-the newly created |tab| Search tab with the :guilabel:`Add Layer(s) from a
+Within QGIS you can search for WMS-servers. Figure_OGC_2_ shows
+the tab :guilabel:`Search` with the :guilabel:`Add Layer(s) from a
 Server` dialog.
 
-.. `searchtab`:
-
-.. figure::img/en/wms_server_search.png
+.. _Figure_OGC_2:
+.. figure:: img/en/wms_server_search.png
    :align: center
-   :width: 12 em
+   :width: 38em
 
-   Dialog for searching WMS servers after some keywords |nix|
+   Figure OGC 2: Dialog for searching WMS servers after some keywords |nix|
 
 As you can see it is possible to enter a search-string in the text field
 and hit the :guilabel:`Search` button.
@@ -309,13 +285,13 @@ the text field.
 
 Browse the result list and inspect your search results within the table.
 To visualize the results, select a table entry, press the :guilabel:`Add
-selected row to WMS-list` button and change back to the |tab| Server tab.
+selected row to WMS-list` button and change back to the tab :guilabel:`Server`.
 
 QGIS automatically has updated your server list and the selected search
 result is already enabled in the list of saved WMS-servers.
 
 You only need to request the list of layers by clicking the
-:guilabel:`Connect` button.
+**[Connect]** button.
 
 This option is quite handy when you want to search maps by specific
 keywords.
@@ -327,12 +303,11 @@ Basically this option is a frontend to the API of http://geopole.org.
 Tilesets
 ********
 
-:index:`WMS!tileset`
-:index:`WMS!WMS-C`
+.. index:: WMS_tiles, WMS-C
 
 When using WMS-C (Cached WMS) Services like
 http://labs.metacarta.com/wms-c/Basic.py you are able to browse through
-the |tab| Tiles tab given by the server. Additional information like
+the tab :guilabel:`Tiles` given by the server. Additional information like
 tile size, formats and supported CRS are listed in this table.
 
 In combination with this feature you can use the tile scale slider from
@@ -344,12 +319,10 @@ available scales from the tileserver with nice slider docked in.
 Using the Identify Tool
 ***********************
 
-:index:`WMS!identify`
-:index:`identify!WMS`
-:index:`WMS!GetFeatureInfo`
+.. index:: WMS_identify
 
 Once you have added a WMS server, and if any layer from a WMS server is
-queryable, you can then use the |mActionIdentify| :guilabel:`Identify`
+queryable, you can then use the |mActionIdentify| :sup:`Identify`
 tool to select a pixel on the map canvas. A query is made to the WMS
 server for each selection made.
 
@@ -361,28 +334,25 @@ this text is dependent on the particular WMS server used.
 Viewing Properties
 ------------------
 
-:index:`WMS!properties`
-:index:`rasters!properties`
+.. index:: WMS_properties
 
 Once you have added a WMS server, you can view its properties by
-right-clicking on it in the legend, and selecting :guilabel:`Properties`.
+right-clicking on it in the legend, and selecting :menuselection:`Properties`.
 
 .. _`ogc-wms-properties-metadata`:
 
 Metadata Tab
 ~~~~~~~~~~~~
 
-:index:`rasters!metadata`
-:index:`WMS!metadata`
-:index:`WMS!capabilites`
+.. index:: WMS_metadata
 
-The |tab| Metadata tab displays a wealth of information about the WMS
+The tab :guilabel:`Metadata` displays a wealth of information about the WMS
 server, generally collected from the Capabilities statement returned from
 that server.
 
-Many definitions can be gleaned by reading the WMS standards
-FIXME\cite{OGCWMS010101web}, FIXME\cite{OGCWMS010300web}, but
-here are a few handy definitions:
+Many definitions can be gleaned by reading the 
+`WMS standards <http://www.opengeospatial.org/standards/wms/>`_, 
+but here are a few handy definitions:
 
 * **Server Properties**
  - **WMS Version** --- The WMS version supported by the server.
@@ -411,13 +381,13 @@ here are a few handy definitions:
    servers to get the raster data for a layer.  This entry shows how many
    times the request for this layer is forwarded to peer WMS servers for
    a result.
- - **Fixed Width, **Fixed Height** --- Whether or not this layer has fixed
+ - **Fixed Width, Fixed Height** --- Whether or not this layer has fixed
    source pixel dimensions. This version of QGIS assumes all WMS layers
    have this set to nothing. Deficient layers may be rendered strangely.
  - **WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84
    coordinates. Some WMS servers do not set this correctly (e.g. UTM
    coordinates are used instead). If this is the case, then the initial
-   view of this layer may be rendered with a very ``zoomed-out'' appearance
+   view of this layer may be rendered with a very ``zoomed-out`` appearance
    by QGIS. The WMS webmaster should be informed of this error, which
    they may know as the WMS XML elements ``LatLonBoundingBox``,
    ``EX_GeographicBoundingBox`` or the CRS:84 ``BoundingBox``.
@@ -431,7 +401,6 @@ here are a few handy definitions:
 WMS Client Limitations
 **********************
 
-:index:`WMS!client!limits`
 
 Not all possible WMS Client functionality had been included in this version
 of QGIS. Some of the more notable exceptions follow.
@@ -439,9 +408,8 @@ of QGIS. Some of the more notable exceptions follow.
 Editing WMS Layer Settings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:index:`WMS!layer settings!editing`
 
-Once you've completed the |mActionAddWmsLayer| :guilabel:`Add WMS layer`
+Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer`
 procedure, there is no ability to change the settings.
 
 A workaround is to delete the layer completely and start again.
@@ -449,19 +417,15 @@ A workaround is to delete the layer completely and start again.
 WMS Servers Requiring Authentication
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:index:`WMS!remote server!authentication`
-:index:`WMS!remote server!basic authentication`
 
 Currently public accessible and secured WMS-services are supported.
 The secured WMS-servers can be accessed by public authentication. You
 can add the (optional) credentials when you add a WMS-server. See section
 :ref:`ogc-wms-servers` for details.
 
-:index:`WMS!secured layers!`
-:index:`OGC!Authentication`
+.. index:: InteProxy, Secured_OGC_Authentication
 
-.. note::
-   **Accessing secured OGC-layers**
+.. tip:: **Accessing secured OGC-layers**
   
    If you need to access secured layers with other secured methods than
    basic authentication, you could use InteProxy as a transparent proxy,
@@ -469,13 +433,11 @@ can add the (optional) credentials when you add a WMS-server. See section
    be found at the InteProxy-manual found on the website
    http://inteproxy.wald.intevation.org.
 
-:index:`WMS!QGISmapserver`
-:index:`OGC!WMS1.3.0`
+.. index:: QGIS_mapserver, WMS_1.3.0
 
-.. note::
-   **QGIS WMS Mapserver**
+.. tip:: **QGIS WMS Mapserver**
 
-   Note that with the Version 1.7.0 QGIS brings its own implementation of
+   From Version 1.7.0 QGIS has its own implementation of
    a WMS 1.3.0 Mapserver. Read more about this at chapter :ref:`label_qgisserver`.
 
 .. _`ogc-wfs`:
@@ -483,20 +445,14 @@ can add the (optional) credentials when you add a WMS-server. See section
 WFS and WFS-T Client
 ====================
 
-:index:`WFS!WFS-T`
-:index:`WFS!Transactional`
+.. index:: WFS, WFS-T, WFS_Transactional
 
 In QGIS, a WFS layer behaves pretty much like any other vector layer. You
 can identify and select features and view the attribute table. Since QGIS
-1.6 editing (WFS-T) is also supported, if the server provides this feature.
-To start the WFS plugin you need to open :menuselection:`Plugins -->
-Plugin Manager...`, activate the |checkbox| WFS plugin checkbox and click
-:guilabel:`OK`.
+1.6 editing (WFS-T) is also supported.
 
-A new |mIconAddWfsLayer| :guilabel:`Add WFS Layer` icon appears next to
-the WMS icon. Click on it to open the dialog. In general adding a WFS
-layer is very similar to the procedure used with WMS. The difference is
-there are no default servers defined, so we have to add our own.
+In general adding a WFS layer is very similar to the procedure used with WMS. 
+The difference is there are no default servers defined, so we have to add our own.
 
 Loading a WFS Layer
 -------------------
@@ -504,35 +460,34 @@ Loading a WFS Layer
 As an example we use the DM Solutions WFS server and display a layer.
 The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 
-#. Make sure the WFS plugin is loaded; if not, open the Plugin Manager
-   and load it
-#. Click on the |mIconAddWfsLayer| :guilabel:`Add WFS Layer` tool on the
-   Layers toolbar
-#. Click on :guilabel:`New1`
-#. Enter |inputtext| Name DM Solutions as the name
+#. Click on the |wfs| :sup:`Add WFS Layer` tool on the
+   Layers toolbar, the dialog :guilabel:`Add WFS Layer from a Server` appears
+#. Click on **[New]**
+#. Enter ``DM Solutions`` as name
 #. Enter the URL (see above)
-#. Click :guilabel:`OK`
-#. Choose |selectstring| Server Connections DM Solutions from the dropdown
-   box
-#. Click :guilabel:`Connect`
+#. Click **[OK]**
+#. Choose :guilabel:`Server Connections DM Solutions` |selectstring| from the dropdown box
+#. Click **[Connect]**
 #. Wait for the list of layers to be populated
-#. Click on the |clicklistitem| Parks layer
-#. Click :guilabel:`Ok` to add the layer to the map
-#. Wait patiently for the features to appear
+#. select the :guilabel:`Parks` layer in the list
+#. Click **[Apply]** to add the layer to the map
 
-Note that the WFS-plugin also recognizes the proxy-settings you have set
-in your preferences.
+Note that proxy-settings you have set in your preferences are also recognized.
 
-.. `connection_wfs`:
-
-.. figure::img/en/wfs_dmsolutions.png
+.. _figure_OGC_3:
+.. figure::img/en/connection_wfs.png
    :align: center
-   :width: 12 em
+   :width: 34 em
 
-   Adding a WFS layer |nix|
+   Figure OGC 3: Adding a WFS layer |nix|
 
-Without using the checkbox |checkbox| Only request features overlapping the
-current view extent QGIS fetches all features from the WFS-server. If you
+.. in QGIS 1.8 the following checkbox seems to be missing, maybe the
+   loading of features is allready prevented by default when it is not
+   the first layer loaded? This needs to be checked..
+
+Without using the checkbox |checkbox| 
+:guilabel:`Only request features overlapping the current view extent` 
+QGIS fetches all features from the WFS-server. If you
 only want to have a small selection based on your extent, zoom to the area
 of interest, request the WFS-layer again and make sure you have checked
 the checkbox mentioned above. Basically this adds the BBOX-parameter with
@@ -544,7 +499,7 @@ You'll notice the download progress is visualized in the left bottom of
 the QGIS main window. Once the layer is loaded, you can identify and
 select a province or two and view the attribute table.
 
-Remember this plugin works best with MapServer WFS servers. It still
+Adding WFS layers works best with MapServer WFS servers. It still
 could be, that you might experience random behavior and crashes. You can
 look forward to improvements in a future version of the plugin.
 
@@ -554,20 +509,14 @@ If you encounter problems with any other WFS-server, please do not
 hesitate to contact the development team. Please refer to Section
 :ref:`label_helpsupport` for further information about the mailinglists.
 
-:index:`WFS!remote server!`
 
-.. note::
-   **Finding WFS Servers**
+.. tip:: **Finding WFS Servers**
   
    You can find additional WFS servers by using Google or your favorite
    search engine. There are a number of lists with public URLs, some of
    them maintained and some not.
 
-:index:`WFS!authenticate remote server!`
-:index:`WFS!secured WFS server!`
-
-.. note::
-   **Accessing secure WFS Servers**
+.. tip:: **Accessing secure WFS Servers**
 
    Within the dialog :guilabel:`Create a new WFS-connection` QGIS does not
    support authenticated WFS-connections yet. Within one of the next releases
