@@ -410,13 +410,13 @@ The GRASS region tool
 =====================
 ::index:`GRASS!region`
 
-The region definition (setting a spatial working window) in GRASS is important for working with raster layers. Vector analysis is by default not limited to any defined region definitions. But all newly-created rasters will have the spatial extension and resolution of the currently defined GRASS region, regardless of their original extension and resolution. The current GRASS region is stored in the :file:`\$LOCATION/\$MAPSET/WIND} file, and it defines north, south, east and west bounds, number of columns and rows, horizontal and vertical spatial resolution.
+The region definition (setting a spatial working window) in GRASS is important for working with raster layers. Vector analysis is by default not limited to any defined region definitions. But all newly-created rasters will have the spatial extension and resolution of the currently defined GRASS region, regardless of their original extension and resolution. The current GRASS region is stored in the :file:`\$LOCATION/\$MAPSET/WIND` file, and it defines north, south, east and west bounds, number of columns and rows, horizontal and vertical spatial resolution.
 
 It is possible to switch on/off the visualization of the GRASS region in the QGIS canvas using the |grass_region| :guilabel:`Display current GRASS region`
 button. :index:`GRASS!region!display`.
 
 With the |grass_region_edit| :guilabel:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click :guilabel:`OK`. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click :guilabel:`OK`.:index:`GRASS!region!editing`
-The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:subsec:grass_toolbox}.
+The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:`subsec:grass_toolbox`.
 
 .. _subsec_grass_toolbox:
 
@@ -430,9 +430,11 @@ and :file:`MAPSET`. To use the GRASS toolbox you need to open a :file:`LOCATION`
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 330) GRASS modules through a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs within the GRASS plugin Toolbox.
 
+.. _grass_modules:
+
 Working with GRASS modules
 ---------------------------
-`grass_modules`::index:`GRASS!toolbox`
+::index:`GRASS!toolbox`
 
 .. _figure_grass_toolbox_1:
 .. figure:: img/en/grass_toolbox_moduletree.png
@@ -443,7 +445,7 @@ Working with GRASS modules
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
 
-A complete list of GRASS modules available in the graphical Toolbox in QGIS version \CURRENT is available in the GRASS wiki ( http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list.
+A complete list of GRASS modules available in the graphical Toolbox in QGIS version \CURRENT is available in the GRASS wiki ( http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list).
 
 It is also possible to customize the GRASS Toolbox content. This procedure is described in Section
 :ref:`sec_toolbox-customizing`.
@@ -463,9 +465,8 @@ Clicking on a graphical module icon a new tab will be added to the toolbox dialo
 \caption{GRASS Toolbox Module Dialogs \nixcaption}`fig_grass_module_dialog`:
 \end{figure}
 \FloatBarrier
+
 **Options**
-
-
 
 The :guilabel:`Options` tab provides a simplified module dialog where you can usually select a raster or vector layer visualized in the QGIS canvas and enter further module specific parameters to run the module. The provided module parameters are often not complete to keep the dialog clear. If you want to use further module parameters and flags, you need to start the GRASS Shell and run the module in the command line.
 
@@ -496,23 +497,20 @@ The following examples will demonstrate the power of some of the GRASS modules.
 The first example creates a vector contour map from an elevation raster
 (DEM). Assuming you have the Alaska :file:`LOCATION` set up as explained in Section :ref:`sec_import_loc_data`.
 
-[label=--]
-*  First open the location by clicking the
-|grass_open_mapset| :guilabel:`Open mapset` button and choosing the Alaska location.
-*  Now load the ``gtopo30} elevation raster by clicking
-|grass_add_raster| :guilabel:`Add GRASS raster layer` and selecting the
-\usertext{gtopo30} raster from the demo location.
-*  Now open the Toolbox with the |grass_tools| :guilabel:`Open GRASS tools` button.
-*  In the list of tool categories double click Raster \arrow Surface Management \arrow Generate vector contour lines.
-*  Now a single click on the tool \classname{r.contour} will open the tool dialog as explained above \ref{grass_modules}. The
-\usertext{gtopo30} raster should appear as the \inputtext{Name of input raster}{gtopo30}.
-*  Type into the \inputtext{Increment between Contour levels}{100} the value 100. (This will create contour lines at intervals of 100 meters.)
-*  Type into the \inputtext{Name for output vector map}{ctour\_100}
-the name \usertext{ctour\_100}.
-*  Click \button{Run} to start the process. Wait for several moments until the message \usertext{Successfully finished} appears in the output window.
-Then click \button{View Output} and \button{close}.
-
-
+* First open the location by clicking the
+  |grass_open_mapset| :guilabel:`Open mapset` button and choosing the Alaska location.
+* Now load the ``gtopo30`` elevation raster by clicking
+  |grass_add_raster| :guilabel:`Add GRASS raster layer` and selecting the
+  ``gtopo30`` raster from the demo location.
+* Now open the Toolbox with the |grass_tools| :guilabel:`Open GRASS tools` button.
+* In the list of tool categories double click :menuselection:`Raster --> Surface Management --> Generate vector contour lines`.
+* Now a single click on the tool **r.contour** will open the tool dialog as explained above :ref:`grass_modules`. The
+  ``gtopo30`` raster should appear as the :guilabel:`Name of input raster` |selectstring| :guilabel:`gtopo30`.
+* Type into the :guilabel:`Increment between Contour levels` |selectstring| :guilabel:`100` the value 100. (This will create contour lines at intervals of 100    meters.)
+* Type into the :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour_100`
+  the name ``ctour\_100``.
+* Click :guilabel:`Run` to start the process. Wait for several moments until the message ``Successfully finished`` appears in the output window.
+  Then click :guilabel:`View Output` and :guilabel:`close`.
 
 \begin{figure}[ht]
 \centering
@@ -522,128 +520,99 @@ Then click \button{View Output} and \button{close}.
    \caption{\grass Toolbox r.contour module \nixcaption}`fig_grass_toolbox_rcontour`:
 \end{figure}
 
-Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in \ref{sec:vectorprops}.
+Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in :ref:`vector_properties_dialog`.
 
 Next zoom in to a small mountainous area in the center of Alaska.
-Zooming in close you will notice that the contours have sharp corners. GRASS offers the \classname{v.generalize} tool to slightly alter vector maps while keeping their overall shape. The tool uses several different algorithms with different purposes. Some of the algorithms (i.e. Douglas Peuker and Vertex reduction) simplify the line by removing some of the vertices. The resulting vector will load faster. This process will be used when you have a highly detailed vector, but you are creating a very small scale map, so the detail is unnecessary.
+Zooming in close you will notice that the contours have sharp corners. GRASS offers the **v.generalize** tool to slightly alter vector maps while keeping their overall shape. The tool uses several different algorithms with different purposes. Some of the algorithms (i.e. Douglas Peuker and Vertex reduction) simplify the line by removing some of the vertices. The resulting vector will load faster. This process will be used when you have a highly detailed vector, but you are creating a very small scale map, so the detail is unnecessary.
 
-\begin{Tip}\caption{\textsc{The simplify tool}}:index:`GRASS!display results`
-Note that the QGIS fTools plugin has a \dropmenuopt{Simplify geometries} tool that works just like the GRASS \classname{v.generalize}
-Douglas-Peuker algorithm.
-\end{Tip}
+.. tip:: **The simplify tool** }}:index:`GRASS!display results`
+   
+   Note that the QGIS fTools plugin has a :menuselection:`Simplify geometries -->` tool that works just like the GRASS **v.generalize**
+   Douglas-Peuker algorithm.
 
 However, the purpose of this example is different. The contour lines created by r.contour have sharp angles that should be smoothed. Among the
-\classname{v.generalize} algorithms there is Chaikens which does just that
+**v.generalize** algorithms there is Chaikens which does just that
 (also Hermite splines). Be aware that these algorithms can **add**
 additional vertices to the vector, causing it to load even more slowly.
 
+* Open the GRASS toolbox and double click the categories :menuselection:`Vector --> Develop map --> Generalization`, then click on the **v.generalize**
+  module to open its options window.
+* Check that the ``ctour\_100`` vector appears as the
+  :guilabel:`Name of input vector` |selectstring| :guilabel:`ctour\_100`.
+* From the list of algorithms choose Chaiken's. Leave all other options at their default, and scroll down to the last row to enter the
+  :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour\_100\_smooth`, and click
+  :guilabel:`Run`.
+* The process takes several moments. Once ``Successfully finished`` appears in the output windows, click :guilabel:`View output` and then
+  :guilabel:`close`.
+* You may change the color of the vector to display it clearly on the raster background and to contrast with the original contour lines. You will notice that the new contour lines have smoother corners than the original while staying faithful to the original overall shape.
 
-[label=--]
-*  Open the GRASS toolbox and double click the categories Vector \arrow Develop map \arrow Generalization, then click on the \classname{v.generalize}
-module to open its options window.
-*  Check that the \usertext{ctour\_100} vector appears as the
-\inputtext{Name of input vector}{ctour\_100}.
-*  From the list of algorithms choose Chaiken's. Leave all other options at their default, and scroll down to the last row to enter the
-\inputtext{Name for output vector map}{ctour\_100\_smooth}, and click
-\button{Run}.
-*  The process takes several moments. Once \usertext{Successfully finished} appears in the output windows, click \button{View output} and then
-\button{close}.
-*  You may change the color of the vector to display it clearly on the raster background and to contrast with the original contour lines. You will notice that the new contour lines have smoother corners than the original while staying faithful to the original overall shape.
+.. _figure_grass_module_2:
+.. figure:: img/en/grass_toolbox_vgeneralize.png
+   :align: center
+   :width: 40em
 
+   Figure GRASS module 2: GRASS module v.generalize to smooth a vector map |nix|
 
+.. tip:: **Other uses for r.contour**:index:`GRASS!toolbox`
 
-\begin{figure}[h]
- \centering
- \includegraphics[clip=true, width=14cm]{grass_toolbox_vgeneralize}
- \caption{GRASS module v.generalize to smooth a vector map \nixcaption}`fig_grass_toolbox_vgeneralize`:
-\end{figure}
-
-\begin{Tip}\caption{\textsc{Other uses for r.contour}}:index:`GRASS!toolbox`
-The procedure described above can be used in other equivalent situations. If you have a raster map of precipitation data, for example, then the same method will be used to create a vector map of isohyetal (constant rainfall) lines
-\end{Tip}
+   The procedure described above can be used in other equivalent situations. If you have a raster map of precipitation data, for example, then the same method will  be used to create a vector map of isohyetal (constant rainfall) lines.
 
 **Creating a Hillshade 3D effect**
 
 
 Several methods are used to display elevation layers and give a 3D effect to maps. The use of contour lines as shown above is one popular method often chosen to produce topographic maps. Another way to display a 3D effect is by hillshading. The hillshade effect is created from a DEM (elevation) raster by first calculating the slope and aspect of each cell, then simulating the sun's position in the sky and giving a reflectance value to each cell. Thus you get sun facing slopes lighted and the slopes facing away from the sun (in shadow) are darkened.
 
+* Begin this example by loading the ``gtopo30`` elevation raster.
+  Start the GRASS toolbox and under the Raster category double click to open :menuselection:`Spatial analysis --> Terrain analysis`.
+* Then click **r.shaded.relief** to open the module.
+* Change the :guilabel:`azimuth angle` |selectstring| :guilabel:`270` to 315. Enter
+  ``gtopo30\_shade`` for the new hillshade raster, and click :guilabel:`run`.
+* When the process completes, add the hillshade raster to the map. You should see it displayed in grayscale.
+* To view both the hill shading and the colors of the ``gtopo30`` together shift the hillshade map below the ``gtopo30`` map in the table of contents, then open the
+  :menuselection:`Properties` window of ``gtopo30``, switch to the :guilabel:`transparency` tab and set its transparency level to about 25\%.
 
-[label=--]
-*  Begin this example by loading the \usertext{gtopo30} elevation raster.
-Start the GRASS toolbox and under the Raster category double click to open Spatial analysis \arrow Terrain analysis.
-*  Then click \classname{r.shaded.relief} to open the module.
-*  Change the \inputtext{azimuth angle}{270} to 315. Enter
-\usertext{gtopo30\_shade} for the new hillshade raster, and click
-\button{run}.
-*  When the process completes, add the hillshade raster to the map. You should see it displayed in grayscale.
-*  To view both the hill shading and the colors of the
-\usertext{gtopo30} together shift the hillshade map below the
-\usertext{gtopo30} map in the table of contents, then open the
-\dropmenuopt{Properties} window of \usertext{gtopo30}, switch to the
-\tab{transparency} tab and set its transparency level to about 25\%.
-
-
-
-You should now have the \usertext{gtopo30} elevation with its colormap and transparency setting displayed **above** the grayscale hillshade map. In order to see the visual effects of the hillshading, turn off the
-\usertext{gtopo30\_shade} map, then turn it back on.
+You should now have the ``gtopo30`` elevation with its colormap and transparency setting displayed **above** the grayscale hillshade map. In order to see the visual effects of the hillshading, turn off the ``gtopo30\_shade`` map, then turn it back on.
 
 **Using the GRASS shell**
 
+The GRASS plugin in QGIS is designed for users who are new to GRASS, and not familiar with all the modules and options. As such, some modules in the toolbox do not show all the options available, and some modules do not appear at all. The GRASS shell (or console) gives the user access to those additional GRASS modules that do not appear in the toolbox tree, and also to some additional options to the modules that are in the toolbox with the simplest default parameters. This example demonstrates the use of an additional option in the **r.shaded.relief** module that was shown above.
 
+.. figure_grass_module_3:
+.. figure:: img/en/grass_toolbox_shell.png
+   :align: center
+   :width: 40em
 
-The GRASS plugin in QGIS is designed for users who are new to GRASS, and not familiar with all the modules and options. As such, some modules in the toolbox do not show all the options available, and some modules do not appear at all. The GRASS shell (or console) gives the user access to those additional GRASS modules that do not appear in the toolbox tree, and also to some additional options to the modules that are in the toolbox with the simplest default parameters. This example demonstrates the use of an additional option in the \classname{r.shaded.relief} module that was shown above.
+   Figure GRASS module 3: The GRASS shell, r.shaded.relief module |nix|
 
-\begin{figure}[ht]
- \centering
- \includegraphics[clip=true, width=12cm]{grass_toolbox_shell}
- \caption{The GRASS shell, r.shaded.relief module \nixcaption}`fig_grass_toolbox_shell`:
-\end{figure}
+The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies the elevation values relative to the X-Y coordinate units so that the hillshade effect is even more pronounced.
 
-The module \classname{r.shaded.relief} can take a parameter \usertext{zmult}
-which multiplies the elevation values relative to the X-Y coordinate units so that the hillshade effect is even more pronounced.
+* Load the ``gtopo30`` elevation raster as above, then start the GRASS toolbox and click on the GRASS shell. In the shell window type the command ``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and press :guilabel:`Enter`.
+* After the process finishes shift to the :guilabel:`Browse` tab and double click on the new ``gtopo30_shade2`` raster to display in QGIS.
+* As explained above, shift the shaded relief raster below the gtopo30 raster in the Table of Contents, then check transparency of the colored gtopo30 layer. You   should see that the 3D effect stands out more strongly compared to the first shaded relief map.
 
+.. figure_grass_module_4:
+.. figure:: img/en/grass_toolbox_shadedrelief.png
+   :align: center
+   :width: 40em
 
-[label=--]
-*  Load the \usertext{gtopo30} elevation raster as above, then start the GRASS toolbox and click on the GRASS shell. In the shell window type the command:\linebreak
-\usertext{r.shaded.relief map=gtopo30 shade=gtopo30\_shade2 azimuth=315 zmult=3} \linebreak and press \keystroke{Enter}.
+   Figure GRASS module 4: Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 
-
-
-
-[label=--]
-*  After the process finishes shift to the \tab{Browse} tab and double click on the new \usertext{gtopo30\_shade2} raster to display in QGIS.
-*  As explained above, shift the shaded relief raster below the gtopo30 raster in the Table of Contents, then check transparency of the colored gtopo30 layer. You should see that the 3D effect stands out more strongly compared to the first shaded relief map.
-
-
-
-\begin{figure}[ht]
- \centering
- \includegraphics[clip=true, width=12cm]{grass_toolbox_shadedrelief}
- \caption{Displaying shaded relief created with the GRASS module r.shaded.relief \nixcaption}`fig_grass_toolbox_shadedrelief`:
-\end{figure}
 
 **Raster statistics in a vector map**
 
-
-
 The next example shows how a GRASS module can aggregate raster data and add columns of statistics for each polygon in a vector map.
 
-
-[label=--]
-*  Again using the Alaska data, refer to \ref{sec:import_loc_data} to import the trees shapefile from the \usertext{shapefiles} directory into GRASS.
-*  Now an intermediary step is required: centroids must be added to the imported trees map to make it a complete GRASS area vector (including both boundaries and centroids).
-*  From the toolbox choose Vector \arrow Manage features, and open the module \classname{v.centroids}.
-*  Enter as the \inputtext{output vector map}{\usertext{forest\_areas}}
-and run the module.
-*  Now load the \usertext{forest\_areas} vector and display the types of forests - deciduous, evergreen, mixed - in different colors: In the layer
-\dropmenuopt{Properties} window, \tab{symbology} tab, choose \\
-\selectstring{Legend type}{Unique value} and set the
-\inputtext{Classification field}{VEGDESC} to VEGDESC. (Refer to the explanation of the symbology tab \ref{sec:symbology} in the vector section).
-*  Next reopen the GRASS toolbox and open Vector \arrow Vector update by other maps.
-*  Click on the \classname{v.rast.stats} module. Enter \usertext{gtopo30}, and \usertext{forest\_areas}.
-*  Only one additional parameter is needed: Enter \inputtext{column prefix}{\usertext{elev}}, and click \button{run}. This is a computationally heavy operation which will run for a long time (probably up to two hours).
-*  Finally open the \usertext{forest\_areas} attribute table, and verify that several new columns have been added including \usertext{elev\_min},
-\usertext{elev\_max}, \usertext{elev\_mean} etc. for each forest polygon.
+* Again using the Alaska data, refer to :ref:sec_import_loc_data} to import the trees shapefile from the ``shapefiles`` directory into GRASS.
+* Now an intermediary step is required: centroids must be added to the imported trees map to make it a complete GRASS area vector (including both boundaries and  centroids).
+* From the toolbox choose :menuselection:`Vector --> Manage features`, and open the module **v.centroids**.
+* Enter as the :guilabel:`output vector map` ``forest_areas`` and run the module.
+* Now load the ``forest_areas`` vector and display the types of forests - deciduous, evergreen, mixed - in different colors: In the layer
+  :menuselection:`Properties -->` window, :guilabel:`symbology` tab, choose :guilabel:`Legend type` :menuselection:`Unique value -->` and set the :guilabel:`Classification field` ``VEGDESC`` to VEGDESC. (Refer to the explanation of the symbology tab :ref:sec_symbology in the vector section).
+* Next reopen the GRASS toolbox and open :menuselection:`Vector --> Vector update` by other maps.
+* Click on the **v.rast.stats** module. Enter ``gtopo30``, and ``forest_areas``.
+* Only one additional parameter is needed: Enter :guilabel:`column prefix` ``elev``, and click :guilabel:`run`. This is a computationally heavy operation which will  run for a long time (probably up to two hours).
+* Finally open the ``forest_areas`` attribute table, and verify that several new columns have been added including ``elev_min``,
+  ``elev_max``, ``elev_mean`` etc. for each forest polygon.
 
 
 
@@ -652,21 +621,20 @@ Working with the GRASS LOCATION browser
  :index:`GRASS!toolbox!Browser`
 
 Another useful feature inside the GRASS Toolbox is the GRASS
-:file:`LOCATION} browser. In Figure~\ref{fig:grass_mapset_browser} you can see the current working :file:`LOCATION} with its :file:`MAPSETs}.
+:file:`LOCATION` browser. In figure_grass_module_5_ you can see the current working :file:`LOCATION` with its :file:`MAPSETs`.
 
-In the left browser windows you can browse through all :file:`MAPSETs}
-inside the current :file:`LOCATION}. The right browser window shows some meta information for selected raster or vector layers, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
+In the left browser windows you can browse through all :file:`MAPSETs` inside the current :file:`LOCATION`. The right browser window shows some meta information for selected raster or vector layers, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
 
-\begin{figure}[h]
- \centering
- \includegraphics[clip=true,width=10cm]{grass_mapset_browser}
- \caption{GRASS LOCATION browser \nixcaption}`fig_grass_mapset_browser`:
-\end{figure}
+.. _figure_grass_module_5:
+.. figure:: img/en/grass_mapset_browser.png
+   :align: center
+   :width: 30em
 
-The toolbar inside the \tab{Browser} tab offers following tools to manage the selected :file:`LOCATION}:
+   Figure GRASS module 5: GRASS LOCATION browser |nix|
 
 
-[label=--]
+The toolbar inside the :guilabel:`Browser` tab offers following tools to manage the selected :file:`LOCATION`:
+
 *  \toolboxtwo{grass_add_map}{Add selected map to canvas}
 *  \toolboxtwo{grass_copy_map}{Copy selected map}
 *  \toolboxtwo{grass_rename_map}{Rename selected map}
@@ -679,10 +647,12 @@ The toolbar inside the \tab{Browser} tab offers following tools to manage the se
 The \toolboxtwo{grass_rename_map}{Rename selected map} and
 \toolboxtwo{grass_delete_map}{Delete selected map} only work with maps inside your currently selected :file:`MAPSET}. All other tools also work with raster and vector layers in another :file:`MAPSET}.
 
+.. _sec_toolbox-customizing:
+
 Customizing the GRASS Toolbox
 ------------------------------
  :index:`GRASS!toolbox!customize`
-`sec_toolbox-customizing`:
+
 
 Nearly all GRASS modules can be added to the GRASS toolbox. A XML interface is provided to parse the pretty simple XML files which configures the modules appearance and parameters inside the toolbox.
 
