@@ -4,13 +4,15 @@
 Print Composer
 --------------
 
+
 The print composer provides growing layout and printing capabilities. It
 allows you to add elements such as the QGIS map canvas, legend, scalebar,
 images, basic shapes, arrows and text labels. You can size, group, align
 and position each element and adjust the properties to create your layout.
 The layout can be printed or exported to image formats, Postscript, PDF
 or to SVG [1]_ and you can save the layout as template and load it again
-in another session. See a list of tools in :ref:`table_printcomposer_tools`:
+in another session. See a list of tools in :ref:`Table_printcomposer_tools`:
+
 
 .. index:: print_composer, tools
 
@@ -59,43 +61,48 @@ All Print Composer tools are available in menus and as icons in a toolbar.
 The toolbar can be switched off and on using the right mouse button holding
 the mouse over the toolbar.
 
+
 Open a new Print Composer Template
 ==================================
 
 Before you start to work with the print composer, you need to load some
 raster and vector layers in the QGIS map canvas and adapt their properties
 to suite your own convenience. After everything is rendered and symbolized
-to your liking you click the |mActionNewComposer| :guilabel:`New Print
-Composer` icon in the toolbar or choose :menuselection:`File --> New Print
-Composer`.
+to your liking you click the |mActionNewComposer| :sup:`New Print Composer` 
+icon in the toolbar or choose :menuselection:`File --> New Print Composer`.
+
 
 Using Print Composer
 ====================
 
-.. _figure_composer_1:
+
+Opening the print composer provides you with a blank canvas to which you
+can add the current QGIS map canvas, legend, scalebar, images, basic
+shapes, arrows and text. Figure_composer_1_ shows the initial
+view of the print composer with an activated |checkbox| :guilabel:`Snap to grid` mode
+but before any elements are added.
+
+
+.. _Figure_composer_1:
 .. figure:: img/en/print_composer_blank.png
    :align: center
    :width: 40em
 
    Figure Composer 1: Print Composer |nix|
 
-Opening the print composer provides you with a blank canvas to which you
-can add the current QGIS map canvas, legend, scalebar, images, basic
-shapes, arrows and text. Figure_composer_1_ shows the initial
-view of the print composer with an activated |checkbox| Snap to grid mode
-but before any elements are added. The print composer provides three tabs:
+The print composer provides three tabs:
 
-* The |tab| General tab allows you to set paper size, orientation, the
+* The :guilabel:`General` tab allows you to set paper size, orientation, the
   print quality for the output file in dpi and to activate snapping to a
-  grid of a defined resolution. Please note, the |checkbox| Snap to grid
+  grid of a defined resolution. Please note, the |checkbox| :guilabel:`Snap to grid`
   feature only works, if you define a grid resolution > 0. Furthermore you
-  can also activate the |checkbox| Print as raster checkbox. This means all
+  can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means all
   elements will be rastered before printing or saving as Postscript of PDF.
-* The |tab| Item tab displays the properties for the selected map element.
-  Click the |mActionSelectPan| :guilabel:`Select/Move item` icon to select
+* The :guilabel:`Item` tab displays the properties for the selected map element.
+  Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
-  |tab| Item tab and customize the settings for the selected element.
-* The |tab| Command history tab displays a history of all changes applied
+  :guilabel:`Item` tab and customize the settings for the selected element.
+* The :guilabel:`Command history` tab displays a history of all changes applied
   to the print composer layout. With a mouse click it is possible to undo
   and redo layout steps back and forth to a certain status.
 
@@ -103,45 +110,46 @@ You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
 Each element has its own properties and in the case of the map, its own
 extent. If you want to remove an elements from the composer canvas. you can
-do that with the kbd:`Delete` or the :kbd:`Backspace` key.
+do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 Adding a current QGIS map canvas to the Print Composer
 ======================================================
 
-To add the QGIS map canvas, click on the |mActionAddMap| :guilabel:`Add
-new map from QGIS map canvas` button in the print composer toolbar and
-drag a rectangle on the composer canvas with the left mouse button to
-add the map. To display the current map, you can choose between three
-different modes in the map |tab| Item tab:
 
-* |selectstring| Preview Rectangle is the default setting. It only
-  displays an empty box with a message **Map will be printed here**.
-* |selectstring| Preview Cache renders the map in the current screen
+Click on the |mActionAddMap| :sup:`Add new map from QGIS map canvas` 
+toolbar button in the print composer toolbar, to add the QGIS map canvas. 
+Now drag a rectangle on the composer canvas with the left mouse button to
+add the map. To display the current map, you can choose between three
+different modes in the map :guilabel:`Item` tab:
+
+* :guilabel:`Preview` ``Rectangle`` |selectstring| is the default setting. It only
+  displays an empty box with a message ``Map will be printed here``.
+* :guilabel:`Preview` ``Cache`` |selectstring| renders the map in the current screen
   resolution. If case you zoom in or out the composer window, the map is
   not rendered again but the image will be scaled.
-* |selectstring| Preview Render means, that if you zoom in or out the
+* :guilabel:`Preview` ``Render`` |selectstring| means, that if you zoom in or out the
   composer window, the map will be rendered again, but for space reasons,
   only up to a maximum resolution.
 
 **Cache** is default preview mode for newly added print composer maps.
 
 You can resize the map element by clicking on the
-|mActionSelectPan| :guilabel:`Select/Move item` button, selecting the
+|mActionSelectPan| :sup:`Select/Move item` button, selecting the
 element, and dragging one of the blue handles in the corner of the map.
 With the map selected, you can now adapt more properties in the map
-|tab| Item tab.
+:guilabel:`Item` tab.
 
 To move layers within the map element select the map element, click
-the |mActionMoveItemContent| :guilabel:`Move item content` icon and move
+the |mActionMoveItemContent| :sup:`Move item content` icon and move
 the layers within the map element frame with the left mouse button. After
 you found the right place for an element, you can lock the element position
 within the print composer canvas. Select the map element and click on the
-right mouse button to |mIconLock| :guilabel:`Lock` the element position
+right mouse button to |mIconLock| :sup:`Lock` the element position
 and again to unlock the element. You can lock the map element also
-activating the |checkbox| Lock layers for map item checkbox in the Map
+activating the |checkbox| :guilabel:`Lock layers for map item` checkbox in the Map
 dialog of the Map Item tab.
 
-**Note:** QGIS \CURRENT is now able to show labels from the new labeling
+**Note:** QGIS is now able to show labels from the new labeling
 plugin also in the map composer, but it is not yet scaled correctly. So it
 might be necessary to switch back to the standard labeling in some cases.
 
@@ -149,43 +157,47 @@ Map item tab --- Map and Extents dialog
 ***************************************
 
 
-.. _figure_composer_2:
-.. figure:: img/en/print_composer_map1.png
-   :align: center
-   :width: 20 em
-
-----
-
-.. figure:: img/en/print_composer_map2.png
-   :align: center
-   :width: 20 em
-
-   Figure Composer 2: Print Composer map item tab --- Map and Extents dialog |nix|
-
 Map dialog
 ~~~~~~~~~~
 
 
 The **Map** dialog of the map item tab provides following functionalities
-(see Figure `mapdialog`_ a):
+(see :figure_composer_2_):
 
 * The **Preview** area allows to define the preview modes Rectangle,
-  Cache and Render, as described above. Click on the :guilabel:`Update preview`
+  Cache and Render, as described above. Click on the **[Update preview]**
   button to apply changes to the map view.
 * The **Map** area allows to resize the map element specifying the width
-  and height or the scale. The |selectstring| Rotation 0 field allows to
-  rotate the map element content clockwise in degrees. Note, a coordinate
-  frame can only be added with the default value 0. Furthermore you can
-  enable the checkboxes |checkbox| Lock layers for map items and
-  |checkbox| Draw map canvas items.
+  and height or the scale. The field :guilabel:`Rotation` ``0`` |selectstring| 
+  allows to rotate the map element content clockwise in degrees. Note, a 
+  coordinate frame can only be added with the default value 0. Furthermore you 
+  can enable the checkboxes |checkbox| :guilabel:`Lock layers` for map items and
+  |checkbox| :guilabel:`Draw map canvas items`.
+
+
+.. |composer_map_dialog 1| image:: img/en/print_composer_map1.png 
+   :width: 20 em
+.. |composer_map_dialog 2| image:: img/en/print_composer_map2.png
+   :width: 20 em
+
+.. _figure_composer_2:
+
++---------------------------+---------------------------+
+| |composer_map_dialog 2|   | |composer_map_dialog 2|   |
++---------------------------+---------------------------+
+| a) Map dialog             | b) Extents dialog         |        
++---------------------------+---------------------------+
+Figure Composer 2: Print Composer map item tab - Map and Extents dialog |nix|
+
 
 If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
-:guilabel:`Update preview` button.
+**[Update preview]** button.
 
 Extents dialog
 ~~~~~~~~~~~~~~
+
 
 The **Extents** dialog of the map item tab provides following functionalities
 (see Figure `mapdialog`_ b):
@@ -196,11 +208,12 @@ The **Extents** dialog of the map item tab provides following functionalities
 If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
-:guilabel:`Update preview` button in the map |tab| Item tab (see Figure
+:guilabel:`Update preview` button in the map :guilabel:`Item` tab (see Figure
 `mapdialog`_ a).
 
 Map item tab --- Grid and General options dialog
 ************************************************
+
 
 .. _figure_composer_3:
 .. figure:: img/en/print_composer_map3.png
@@ -415,6 +428,7 @@ functionalities (see Figure `legendoptions`_ c):
 Scalebar item tab --- Scalebar and General options dialog
 *********************************************************
 
+
 To add a scalebar, click the |mActionScaleBar| :guilabel:`Add new scalebar`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the scalebar item tab.
@@ -434,6 +448,7 @@ canvas and position and customize their appearance in the scalebar item tab.
 Scalebar dialog
 ~~~~~~~~~~~~~~~
 
+
 The **Scalebar** dialog of the scalebar item tab provides following
 functionalities (see Figure `scalebaroptions`_ a):
 
@@ -448,6 +463,7 @@ functionalities (see Figure `scalebaroptions`_ a):
 General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
+
 The **General options** dialog of the scalebar item tab provides following
 features (see Figure `scalebaroptions`_ b):
 
@@ -461,6 +477,7 @@ features (see Figure `scalebaroptions`_ b):
 Navigation tools
 ================
 
+
 For map navigation the print composer provides 4 general tools:
 
 * |mActionZoomIn| :guilabel:`Zoom in`,
@@ -472,13 +489,14 @@ For map navigation the print composer provides 4 general tools:
 Revert and Restore tools
 ========================
 
+
 During the layout process it is possible to revert and restore changes.
 This can be done with the revert and restore tools:
 
 * |mActionUndo| :guilabel:`Revert last changes`,
 * |mActionRedo| :guilabel:`Restore last changes`.
 
-or by mouse click within the |tab| Command history tab (see figure
+or by mouse click within the :guilabel:`Command history` tab (see figure
 `commandhist`_).
 
 .. `commandhist`:
@@ -491,6 +509,7 @@ or by mouse click within the |tab| Command history tab (see figure
 
 Add Basic shape and Arrow
 =========================
+
 
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
 to the print composer canvas.
@@ -519,6 +538,7 @@ to the print composer canvas.
 Add attribute table values
 ==========================
 
+
 It is possible to add parts of a vector attribute table to the print composer
 canvas.
 
@@ -537,6 +557,7 @@ canvas.
 Table dialog
 ~~~~~~~~~~~~
 
+
 The **Table** dialog of the attribute table item tab provides following
 functionalities (see Figure `attrcomp`_ a):
 
@@ -552,6 +573,7 @@ functionalities (see Figure `attrcomp`_ a):
 General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
+
 The **General options** dialog of the attribute table item tab provides
 following functionalities (see Figure `attrcomp`_ b):
 
@@ -564,6 +586,7 @@ following functionalities (see Figure `attrcomp`_ b):
 
 Raise, lower and align elements
 ===============================
+
 
 Raise or lower functionalities for elements are inside the |mActionRaiseItems|
 :guilabel:`Raise selected items` pulldown menu. Choose an element on the
@@ -579,6 +602,7 @@ All selected will then be aligned within to their common bounding box.
 
 Creating Output
 ===============
+
 
 Figure `print_composer_complete`_ shows the print composer with an example
 print layout including each type of map element described in the sections
@@ -610,6 +634,7 @@ possible to define the resolution (print quality) and paper size:
 
 Saving and loading a print composer layout
 ==========================================
+
 
 With the |mActionFileSaveAs| :guilabel:`Save as template` and
 |mActionFolder| :guilabel:`Load from template` icons you can save the
