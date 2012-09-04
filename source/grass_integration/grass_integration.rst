@@ -635,17 +635,14 @@ In the left browser windows you can browse through all :file:`MAPSETs` inside th
 
 The toolbar inside the :guilabel:`Browser` tab offers following tools to manage the selected :file:`LOCATION`:
 
-*  \toolboxtwo{grass_add_map}{Add selected map to canvas}
-*  \toolboxtwo{grass_copy_map}{Copy selected map}
-*  \toolboxtwo{grass_rename_map}{Rename selected map}
-*  \toolboxtwo{grass_delete_map}{Delete selected map}
-*  \toolboxtwo{grass_set_region}{Set current region to selected map}
-*  \toolboxtwo{grass_refresh}{Refresh browser window}
+*  |grass_add_map| :guilabel:`Add selected map to canvas`
+*  |grass_copy_map| :guilabel:`Copy selected map` 
+*  |grass_rename_map| :guilabel:`Rename selected map`
+*  |grass_delete_map| :guilabel:`Delete selected map`
+*  |grass_set_region| :guilabel:`Set current region to selected map`
+*  |grass_refresh| :guilabel:`Refresh browser window`
 
-
-
-The \toolboxtwo{grass_rename_map}{Rename selected map} and
-\toolboxtwo{grass_delete_map}{Delete selected map} only work with maps inside your currently selected :file:`MAPSET}. All other tools also work with raster and vector layers in another :file:`MAPSET}.
+The |grass_rename_map| :guilabel:`Rename selected map` and |grass_delete_map| :guilabel:`Delete selected map` only work with maps inside your currently selected :file:`MAPSET`. All other tools also work with raster and vector layers in another :file:`MAPSET`.
 
 .. _sec_toolbox-customizing:
 
@@ -656,18 +653,18 @@ Customizing the GRASS Toolbox
 
 Nearly all GRASS modules can be added to the GRASS toolbox. A XML interface is provided to parse the pretty simple XML files which configures the modules appearance and parameters inside the toolbox.
 
-A sample XML file for generating the module \usertext{v.buffer} (v.buffer.qgm) looks like this:
+A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) looks like this:
+
 ::
 
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE qgisgrassmodule SYSTEM "http://mrcc.com/qgisgrassmodule.dtd">
 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE qgisgrassmodule SYSTEM "http://mrcc.com/qgisgrassmodule.dtd">
-
-<qgisgrassmodule label="Vector buffer" module="v.buffer">
-        <option key="input" typeoption="type" layeroption="layer" />
-        <option key="buffer"/>
-        <option key="output" />
-</qgisgrassmodule>
+  <qgisgrassmodule label="Vector buffer" module="v.buffer">
+          <option key="input" typeoption="type" layeroption="layer" />
+          <option key="buffer"/>
+          <option key="output" />
+  </qgisgrassmodule>
 
 
 The parser reads this definition and creates a new tab inside the toolbox when you select the module. A more detailed description for adding new modules, changing the modules group, etc. can be found on the QGIS wiki at \\
