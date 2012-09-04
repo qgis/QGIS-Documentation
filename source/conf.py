@@ -547,7 +547,18 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_close_edit| image:: /grass_integration/img/en/grass_close_edit.png
    :width: 1.5em
-
+.. |grass_add_map| image:: /grass_integration/img/en/grass_add_map.png
+   :width: 1.5em
+.. |grass_copy_map| image:: /grass_integration/img/en/grass_copy_map.png
+   :width: 1.5em
+.. |grass_rename_map| image:: /grass_integration/img/en/grass_rename_map.png
+   :width: 1.5em
+.. |grass_delete_map| image:: /grass_integration/img/en/grass_delete_map.png
+   :width: 1.5em
+.. |grass_set_region| image:: /grass_integration/img/en/grass_set_region.png
+   :width: 1.5em
+.. |grass_refresh| image:: /grass_integration/img/en/grass_refresh.png
+   :width: 1.5em
 """
 
 
