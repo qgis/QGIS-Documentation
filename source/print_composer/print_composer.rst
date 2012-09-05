@@ -175,15 +175,15 @@ The **Map** dialog of the map item tab provides following functionalities
   |checkbox| :guilabel:`Draw map canvas items`.
 
 
-.. |composer_map_dialog 1| image:: img/en/print_composer_map1.png 
+.. |composer_map_dialog1| image:: img/en/print_composer_map1.png 
    :width: 20 em
-.. |composer_map_dialog 2| image:: img/en/print_composer_map2.png
+.. |composer_map_dialog2| image:: img/en/print_composer_map2.png
    :width: 20 em
 
 .. _figure_composer_2:
 
 +---------------------------+---------------------------+
-| |composer_map_dialog 2|   | |composer_map_dialog 2|   |
+| |composer_map_dialog1|    | |composer_map_dialog2|    |
 +---------------------------+---------------------------+
 | a) Map dialog             | b) Extents dialog         |        
 +---------------------------+---------------------------+

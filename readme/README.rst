@@ -81,19 +81,33 @@ Which will point to :
 
 
 Label/reference
-================
+===============
 
 This is for create a reference somewhere::
 	
-	.. _`my_anchor`:
+	.. _my_anchor:
 
-This is call the reference in the **same page**::
-	
-	see section `my_anchor`_ for more information
+	Label/reference
+	===============
 
-This is the same thing, but called in another page::
+This will call the reference in the **same page**::
 	
-	see section :ref:`my_anchor` for more information.
+	see my_anchor_ for more information. Notice how it will jump to 
+        the following line/thing following the 'anchor'. 
+
+        Normally to declare this label you do not need to use apastroph's but 
+        you do need to use empty lines before and after the anchor. If you use 
+        :ref:`my anchor` it will display the caption instead 
+        (In this case the title of this section!)
+
+Here is a reference preferably not to use::
+
+       .. _`another.anchor`:
+  
+Because the reference often displays a full caption, there is not really the need
+to use the word section:
+
+        see :ref:`my_anchor`
 
 .. _`image`:
 
@@ -102,15 +116,61 @@ Figure and image
 
 Figure::
 	
-	.. `fig_mylabel`:
-	
+	.. _fig_readme_1:
 	.. figure:: img/en/nix.png
 	   :align: center
-	   :width: 	12 em
+	   :width: 12 em
 
-	   My caption
+	   Figure Readme 1: My caption
 
-To use caption juste insert text after a blanck line in the figure block.
+Notice that with figures you do not need to use a blank line behind the anchor. This is the 
+only exception I know.
+
+To use a caption (see My caption) just insert indented text after a blank line 
+in the figure block.
+
+Referencing to the figure can be done in two ways first using the reference label like this::
+           (see fig_readme_1_). 
+
+It will show the anchor fig_readme1_.
+It can be used in the same :file:`.rst` document but not in other .rst documents.
+
+You can also use the reference like this::
+           (see :ref:`fig_readme_1`)
+
+You can use this reference to show the full caption instead (see :ref:`fig_readme_1`).  
+
+This reference can be used from the same :file:`.rst` and from other :file:`.rst` documents!
+
+Tables
+------
+
+a simple table::
+
+=======  =======  =======
+x        y        z 
+=======  =======  =======
+1        2        3 
+2        4        \
+=======  =======  =======
+
+Use a ``\`` to leave an empty space.
+
+You can also use more complicated tables by drawing them using refences and all::
+
+  .. _my_drawn_table_1:
+
+  +---------------+--------------------+
+  | Windows       | Mac OSX            |
+  +---------------+--------------------+
+  | |win|         | |osx|              |
+  +---------------+--------------------+
+  | and of course not to forget |nix|  |              
+  +------------------------------------+
+
+  Table 1: My drawn table, mind you this is unfortunately not regarded a caption 
+
+  You can reference to it like this my_drawn_table1_. 
 
 Pictures
 --------
@@ -133,7 +193,7 @@ and call it in your paragraph::
 
 	my paragraph begins here with a nice picture |label|.
 
-Here is how this exemple become:
+Here is how this example become:
 
 .. |label| image:: img/en/nix.png
 
