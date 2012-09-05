@@ -1,4 +1,4 @@
-..   !TeX  root  =  user_guide.tex
+ ..   !TeX  root  =  user_guide.tex
 
 .. _sec_grass:
 **********************
@@ -210,12 +210,12 @@ and a vector GML File :file:`lakes.gml` from the QGIS alaska dataset :ref:`label
     :file:`LOCATION`. The module dialog for :file:`r.in.gdal` appears.
 #.  Browse to the folder :file:`raster` in the QGIS alaska dataset
     and select the file :file:`landcover.img`.
-#.  As raster output name define :file:`landcover\_grass}` and click
+#.  As raster output name define :file:`landcover_grass` and click
     :guilabel:`Run`. In the :guilabel:`Output` tab you see the currently running GRASS
     command :file:`r.in.gdal -o input=/path/to/landcover.img
-    output=landcover\_grass`.
+    output=landcover_grass`.
 #.  When it says **Succesfully finished** click :guilabel:`View output`.
-    The :file:`landcover\_grass` raster layer is now imported into GRASS and
+    The :file:`landcover_grass` raster layer is now imported into GRASS and
     will be visualized in the QGIS canvas.
 #.  To import the vector GML file :file:`lakes.gml`, click the module
     :file:`v.in.ogr` in the :guilabel:`Modules Tree` tab. This GRASS module allows
@@ -223,7 +223,7 @@ and a vector GML File :file:`lakes.gml` from the QGIS alaska dataset :ref:`label
     module dialog for :file:`v.in.ogr` appears.
 #.  Browse to the folder :file:`gml` in the QGIS alaska
     dataset and select the file :file:`lakes.gml` as OGR file.
-#.  As vector output name define :file:`lakes\_grass` and click
+#.  As vector output name define :file:`lakes_grass` and click
     :guilabel:`Run`. You don't have to care about the other options in this
     example. In the :guilabel:`Output` tab you see the currently running GRASS
     command :file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\_grass`.
@@ -280,7 +280,7 @@ Digitizing and editing a GRASS vector layer
 :index:`GRASS!digitizing tools`
 
 The digitizing tools for GRASS vector layers are accessed using the
-|grass_edit| :guilabel:`Edit GRASS vector layer` icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure `grass_digitizing_category`_ shows the GRASS edit dialog that is displayed when you click on the edit tool.
+|grass_edit| :guilabel:`Edit GRASS vector layer` icon on the toolbar. Make sure you have loaded a GRASS vector and it is the selected layer in the legend before clicking on the edit tool. Figure figure_grass_digitizing_2_ shows the GRASS edit dialog that is displayed when you click on the edit tool.
 The tools and settings are discussed in the following sections.
 
 .. tip:: **Digitizing polygons in GRASS**
@@ -291,7 +291,7 @@ The tools and settings are discussed in the following sections.
 
 **Toolbar**
 
-In Figure grass_digitizing_1_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table \ref{tab:grass_tools}
+In Figure grass_digitizing_1_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table table_grass_digitizing_1_
 explains the available functionalities.
 
 .. _figure_grass_digitizing_1:
@@ -301,6 +301,7 @@ explains the available functionalities.
 
    Figure GRASS digitizing 1:  GRASS Digitizing Toolbar
 
+.. _table_grass_digitizing_1:
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | Icon                   | Tool            | Purpose                                                                                           |                
 +========================+=================+===================================================================================================+
@@ -329,14 +330,14 @@ explains the available functionalities.
 | |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 
-GRASS Digitizing Tools
+Table GRASS Digitizing 1: GRASS Digitizing Tools
 
 
 **Category Tab**
 
 :index:`GRASS!category settings`
 
-The `Category`tab allows you to define the way in which the category values will be assigned to a new geometry element.
+The :guilabel:`Category` tab allows you to define the way in which the category values will be assigned to a new geometry element.
 
 .. _figure_grass_digitizing_2:
 .. figure:: img/en/grass_digitizing_category.png
@@ -390,7 +391,7 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 
  :index:`GRASS!table editing`
 
-The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:sec:creating_new_grass_vectors}).
+The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:`sec_creating_new_grass_vectors`).
 
 .. _figure_grass_digitizing_5:
 .. figure:: img/en/grass_digitizing_table.png
@@ -416,7 +417,7 @@ It is possible to switch on/off the visualization of the GRASS region in the QGI
 button. :index:`GRASS!region!display`.
 
 With the |grass_region_edit| :guilabel:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click :guilabel:`OK`. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click :guilabel:`OK`.:index:`GRASS!region!editing`
-The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:`subsec:grass_toolbox`.
+The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:`subsec_grass_toolbox`.
 
 .. _subsec_grass_toolbox:
 
@@ -436,6 +437,8 @@ Working with GRASS modules
 ---------------------------
 ::index:`GRASS!toolbox`
 
+
+
 .. _figure_grass_toolbox_1:
 .. figure:: img/en/grass_toolbox_moduletree.png
    :align: center
@@ -450,21 +453,23 @@ A complete list of GRASS modules available in the graphical Toolbox in QGIS vers
 It is also possible to customize the GRASS Toolbox content. This procedure is described in Section
 :ref:`sec_toolbox-customizing`.
 
-As shown in Figure :ref:`fig_grass_modules`, you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
+As shown in figure_grass_toolbox_4_ , you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
 
 Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and
-:guilabel:`Manual`. In Figure :ref:`fig_grass_module_dialog` you see an example for the GRASS module :file:`v.buffer`.
+:guilabel:`Manual`. In Figure figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
 
-\begin{figure}[h]
-\centering
-   \subfloat[Module Options] {`subfig_grass_module_option`:\includegraphics[clip=true, width=0.3\textwidth]{grass_module_option}}
-   \hspace{1cm}
-   \subfloat[Modules Output] {`subfig_grass_module_output`:\includegraphics[clip=true, width=0.3\textwidth]{grass_module_output}}
-   \hspace{1cm}
-   \subfloat[Module Manual] {`subfig_grass_module_manual`:\includegraphics[clip=true, width=0.3\textwidth]{grass_module_manual}}
-\caption{GRASS Toolbox Module Dialogs \nixcaption}`fig_grass_module_dialog`:
-\end{figure}
-\FloatBarrier
+.. _figure_grass_toolbox_2:
+
++----------------------------------+--------------------------------+
+| |grass_module_option|            | |grass_module_output|          |
++----------------------------------+--------------------------------+
+| 1.Module Options                 | 2.Modules Output               |
++----------------------------------+--------------------------------+
+| |grass_module_manual|                                             |
++----------------------------------+--------------------------------+
+| 3.Module Manual                                                   |
++-------------------------------------------------------------------+
+Figure GRASS Toolbox 2: GRASS Toolbox Module Dialogs |nix|
 
 **Options**
 
