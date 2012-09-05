@@ -123,6 +123,7 @@ Figure::
 
 	   Figure Readme 1: My caption
 
+
 Notice that with figures you do not need to use a blank line behind the anchor. This is the 
 only exception I know.
 
@@ -130,13 +131,17 @@ To use a caption (see My caption) just insert indented text after a blank line
 in the figure block.
 
 Referencing to the figure can be done in two ways first using the reference label like this::
+
            (see fig_readme_1_). 
+
 
 It will show the anchor fig_readme1_.
 It can be used in the same :file:`.rst` document but not in other .rst documents.
 
 You can also use the reference like this::
+
            (see :ref:`fig_readme_1`)
+
 
 You can use this reference to show the full caption instead (see :ref:`fig_readme_1`).  
 
@@ -147,14 +152,14 @@ Tables
 
 a simple table::
 
-=======  =======  =======
-x        y        z 
-=======  =======  =======
-1        2        3 
-2        4        \
-=======  =======  =======
+     =======  =======  =======
+     x        y        z 
+     =======  =======  =======
+     1        2        3 
+     2        4        \
+     =======  =======  =======
 
-Use a ``\`` to leave an empty space.
+Use a ``\`` followed by an empty space ``\ `` to leave an empty space.
 
 You can also use more complicated tables by drawing them using refences and all::
 
