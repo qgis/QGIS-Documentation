@@ -79,11 +79,12 @@ Which will point to :
 
 	.. [1] Updates of core plugins
 
+.. _my_anchor:
 
 Label/reference
 ===============
 
-This is for create a reference somewhere::
+This is used to create a reference somewhere::
 	
 	.. _my_anchor:
 
@@ -94,20 +95,22 @@ This will call the reference in the **same page**::
 	
 	see my_anchor_ for more information. Notice how it will jump to 
         the following line/thing following the 'anchor'. 
-
         Normally to declare this label you do not need to use apastroph's but 
         you do need to use empty lines before and after the anchor. If you use 
-        :ref:`my anchor` it will display the caption instead 
+        :ref:`my_anchor` it will display the caption instead 
         (In this case the title of this section!)
 
+So reference 1 (my_anchor_) and reference 2 :ref:`my_anchor`
+ 
 Here is a reference preferably not to use::
 
        .. _`another.anchor`:
   
 Because the reference often displays a full caption, there is not really the need
-to use the word section:
+to use the word section::
 
         see :ref:`my_anchor`
+
 
 .. _`image`:
 
@@ -159,7 +162,7 @@ a simple table::
      2        4        \
      =======  =======  =======
 
-Use a ``\`` followed by an empty space ``\ `` to leave an empty space.
+Use a ``\`` followed by an empty space ``\\ `` to leave an empty space.
 
 You can also use more complicated tables by drawing them using refences and all::
 
