@@ -559,6 +559,23 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_refresh| image:: /grass_integration/img/en/grass_refresh.png
    :width: 1.5em
+.. |grass_module_option| image:: /grass_integration/img/en/grass_module_option.png
+   :width: 20em
+.. |grass_module_output| image:: /grass_integration/img/en/grass_module_output.png
+   :width: 20em
+.. |grass_module_manual| image:: /grass_integration/img/en/grass_module_manual.png
+   :width: 20em
+.. |grass_toolbox_moduletree| image:: /grass_integration/img/en/grass_toolbox_moduletree.png
+   :width: 30em
+.. |grass_toolbox_modulelist| image:: /grass_integration/img/en/grass_toolbox_modulelist.png
+   :width: 30em
+.. |grass_toolbox_rcontour| image:: /grass_integration/img/en/grass_toolbox_rcontour.png
+   :width: 20em
+.. |grass_toolbox_rcontour2| image:: /grass_integration/img/en/grass_toolbox_rcontour2.png
+   :width: 20em
+.. |delimited_text| image:: img/en/plugins_delimited_text/delimited_text.png
+   :width: 1.5em
+
 """
 
 
