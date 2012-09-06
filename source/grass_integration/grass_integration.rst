@@ -302,6 +302,7 @@ explains the available functionalities.
    Figure GRASS digitizing 1:  GRASS Digitizing Toolbar
 
 .. _table_grass_digitizing_1:
+
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | Icon                   | Tool            | Purpose                                                                                           |                
 +========================+=================+===================================================================================================+
@@ -329,7 +330,6 @@ explains the available functionalities.
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-
 Table GRASS Digitizing 1: GRASS Digitizing Tools
 
 
@@ -342,7 +342,7 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
 .. _figure_grass_digitizing_2:
 .. figure:: img/en/grass_digitizing_category.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Figure GRASS digitizing 2: GRASS Digitizing Category Tab
 
@@ -372,7 +372,7 @@ The :guilabel:`Settings` tab allows you to set the snapping in screen pixels. Th
 
    Figure GRASS digitizing 3: GRASS Digitizing Settings Tab
 
-* **Symbology Tab**
+**Symbology Tab**
 
 :index:`GRASS!symbology settings`
 
@@ -437,14 +437,14 @@ Working with GRASS modules
 ---------------------------
 ::index:`GRASS!toolbox`
 
-
-
 .. _figure_grass_toolbox_1:
-.. figure:: img/en/grass_toolbox_moduletree.png
-   :align: center
-   :width: 40em
 
-   Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List
++------------------------------+----------------------------+
+| |grass_toolbox_moduletree|   | |grass_toolbox_modulelist| |
++------------------------------+----------------------------+
+| 1. Modules Tree              | 2. Searchable Modules List | 
++------------------------------+----------------------------+
+Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List |nix|
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
 
@@ -453,7 +453,7 @@ A complete list of GRASS modules available in the graphical Toolbox in QGIS vers
 It is also possible to customize the GRASS Toolbox content. This procedure is described in Section
 :ref:`sec_toolbox-customizing`.
 
-As shown in figure_grass_toolbox_4_ , you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
+As shown in figure_grass_toolbox_1_ , you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
 
 Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and
 :guilabel:`Manual`. In Figure figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
@@ -513,17 +513,18 @@ The first example creates a vector contour map from an elevation raster
   ``gtopo30`` raster should appear as the :guilabel:`Name of input raster` |selectstring| :guilabel:`gtopo30`.
 * Type into the :guilabel:`Increment between Contour levels` |selectstring| :guilabel:`100` the value 100. (This will create contour lines at intervals of 100    meters.)
 * Type into the :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour_100`
-  the name ``ctour\_100``.
+  the name ``ctour_100``.
 * Click :guilabel:`Run` to start the process. Wait for several moments until the message ``Successfully finished`` appears in the output window.
   Then click :guilabel:`View Output` and :guilabel:`close`.
 
-\begin{figure}[ht]
-\centering
-   \subfloat[r.contour Options] {`subfig_grass_toolbox_rcontour`:\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour}}
-    \hspace{0.5cm}
-   \subfloat[r.contour Output] {`subfig_grass_toolbox_rcontour2`:\includegraphics[clip=true, width=0.4\textwidth]{grass_toolbox_rcontour2}}
-   \caption{\grass Toolbox r.contour module \nixcaption}`fig_grass_toolbox_rcontour`:
-\end{figure}
+..  _figure_grass_module_1:
+
++--------------------------+---------------------------+
+| |grass_toolbox_rcontour| | |grass_toolbox_rcontour2| |
++--------------------------+---------------------------+
+| 1. r.contour Options     | 2. r.contour Output       |
++--------------------------+---------------------------+
+Figure GRASS module 1: GRASS Toolbox r.contour module |nix|     
 
 Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in :ref:`vector_properties_dialog`.
 
@@ -542,10 +543,10 @@ additional vertices to the vector, causing it to load even more slowly.
 
 * Open the GRASS toolbox and double click the categories :menuselection:`Vector --> Develop map --> Generalization`, then click on the **v.generalize**
   module to open its options window.
-* Check that the ``ctour\_100`` vector appears as the
-  :guilabel:`Name of input vector` |selectstring| :guilabel:`ctour\_100`.
+* Check that the ``ctour_100`` vector appears as the
+  :guilabel:`Name of input vector` |selectstring| :guilabel:`ctour_100`.
 * From the list of algorithms choose Chaiken's. Leave all other options at their default, and scroll down to the last row to enter the
-  :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour\_100\_smooth`, and click
+  :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour_100_smooth`, and click
   :guilabel:`Run`.
 * The process takes several moments. Once ``Successfully finished`` appears in the output windows, click :guilabel:`View output` and then
   :guilabel:`close`.
@@ -571,12 +572,12 @@ Several methods are used to display elevation layers and give a 3D effect to map
   Start the GRASS toolbox and under the Raster category double click to open :menuselection:`Spatial analysis --> Terrain analysis`.
 * Then click **r.shaded.relief** to open the module.
 * Change the :guilabel:`azimuth angle` |selectstring| :guilabel:`270` to 315. Enter
-  ``gtopo30\_shade`` for the new hillshade raster, and click :guilabel:`run`.
+  ``gtopo30_shade`` for the new hillshade raster, and click :guilabel:`run`.
 * When the process completes, add the hillshade raster to the map. You should see it displayed in grayscale.
 * To view both the hill shading and the colors of the ``gtopo30`` together shift the hillshade map below the ``gtopo30`` map in the table of contents, then open the
-  :menuselection:`Properties` window of ``gtopo30``, switch to the :guilabel:`transparency` tab and set its transparency level to about 25\%.
+  :menuselection:`Properties` window of ``gtopo30``, switch to the :guilabel:`transparency` tab and set its transparency level to about 25%.
 
-You should now have the ``gtopo30`` elevation with its colormap and transparency setting displayed **above** the grayscale hillshade map. In order to see the visual effects of the hillshading, turn off the ``gtopo30\_shade`` map, then turn it back on.
+You should now have the ``gtopo30`` elevation with its colormap and transparency setting displayed **above** the grayscale hillshade map. In order to see the visual effects of the hillshading, turn off the ``gtopo30_shade`` map, then turn it back on.
 
 **Using the GRASS shell**
 
@@ -607,7 +608,7 @@ The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies t
 
 The next example shows how a GRASS module can aggregate raster data and add columns of statistics for each polygon in a vector map.
 
-* Again using the Alaska data, refer to :ref:sec_import_loc_data} to import the trees shapefile from the ``shapefiles`` directory into GRASS.
+* Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import the trees shapefile from the ``shapefiles`` directory into GRASS.
 * Now an intermediary step is required: centroids must be added to the imported trees map to make it a complete GRASS area vector (including both boundaries and  centroids).
 * From the toolbox choose :menuselection:`Vector --> Manage features`, and open the module **v.centroids**.
 * Enter as the :guilabel:`output vector map` ``forest_areas`` and run the module.
