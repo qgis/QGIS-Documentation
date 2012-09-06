@@ -162,7 +162,7 @@ Map dialog
 
 
 The **Map** dialog of the map item tab provides following functionalities
-(see :figure_composer_2_):
+(see :figure_composer_2_ a):
 
 * The **Preview** area allows to define the preview modes Rectangle,
   Cache and Render, as described above. Click on the **[Update preview]**
@@ -182,12 +182,14 @@ The **Map** dialog of the map item tab provides following functionalities
 
 .. _figure_composer_2:
 
+Print Composer map item tab
+
 +---------------------------+---------------------------+
 | |composer_map_dialog1|    | |composer_map_dialog2|    |
 +---------------------------+---------------------------+
 | a) Map dialog             | b) Extents dialog         |        
 +---------------------------+---------------------------+
-Figure Composer 2: Print Composer map item tab - Map and Extents dialog |nix|
+Figure Composer 2: Map and Extents dialog |nix|
 
 
 If you change the view on the QGIS map canvas by zooming or panning or
@@ -200,7 +202,7 @@ Extents dialog
 
 
 The **Extents** dialog of the map item tab provides following functionalities
-(see Figure `mapdialog`_ b):
+(see Figure figure_composer_map_1_ b):
 
 * The **Map extent** area allow to specify the map extent using Y and X
   min/max values or clicking the :guilabel:`Set to map canvas extent` button.
@@ -209,31 +211,19 @@ If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
 :guilabel:`Update preview` button in the map :guilabel:`Item` tab (see Figure
-`mapdialog`_ a).
+figure_composer_2_ a).
 
 Map item tab --- Grid and General options dialog
 ************************************************
 
 
-.. _figure_composer_3:
-.. figure:: img/en/print_composer_map3.png
-   :align: center
-   :width: 20em
-
-----
-
-.. figure:: img/en/print_composer_map4.png
-   :align: center
-   :width: 20 em
-
-   Figure Composer 3: Print Composer map item tab --- Grid and General options dialog |nix|
 
 Grid dialog
 ~~~~~~~~~~~
 
 
 The **Grid** dialog of the map item tab provides following functionalities
-(see Figure `sec_map_dialog`_ a):
+(see Figure_composer_3_ a):
 
 * The |checkbox| Show grid checkbox allows to overlay a grid to the map
   element. As grid type you can specify to use solid line or cross.
@@ -246,11 +236,28 @@ The **Grid** dialog of the map item tab provides following functionalities
   define the grid color, the annotation font, the annotation distance from
   the map frame and the precision of the drawn coordinates.
 
+.. |composer_map_dialog3| image:: img/en/print_composer_map3.png
+   :width: 20 em
+.. |composer_map_dialog4| image:: img/en/print_composer_map4.png
+   :width: 20 em
+
+.. _figure_composer_3:
+
+Print Composer map item tab
+
++---------------------------+---------------------------+
+| |composer_map_dialog3|    | |composer_map_dialog4|    |
++---------------------------+---------------------------+
+| a) Grid Dialog            | b) General options dialog |
++---------------------------+---------------------------+
+Figure Composer 3: Grid and General options dialog |nix|
+   
+
 General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **General options** dialog of the map item tab provides following
-functionalities (see Figure `sec_map_dialog`_ b):
+functionalities (see Figure_composer_3_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the map canvas. The :guilabel:`Position`
@@ -271,30 +278,35 @@ Label item tab --- Label and General options dialog
 ***************************************************
 
 
-To add a label, click the |mActionLabel| :guilabel:`Add label` icon, place
+To add a label, click the |mActionLabel| :sup:`Add label` icon, place
 the element with the left mouse button on the print composer canvas and
 position and customize their appearance in the label item tab.
 
-.. _figure_composer_4:
 
-.. figure:: img/en/print_composer_label1.png
-   :align: center
+.. |composer_label1| image:: img/en/print_composer_label1.png
+   :width: 20 em
+.. |composer_label2| image:: img/en/print_composer_label2.png
    :width: 20 em
 
-----
+.. _figure_composer_label_1:
 
-.. figure:: img/en/print_composer_label2.png
-   :align: center
-   :width: 20 em
+Print composer label item tab
 
-   Figure Composer 4: Print composer label item tab --- Label options and General options dialog |nix|
++---------------------------+---------------------------+
+| |composer_label1|         | |composer_label2|         |
++---------------------------+---------------------------+
+| a) Label options Dialog   | b) General options dialog |
++---------------------------+---------------------------+
+Figure Composer Label 1:  Label options and General options dialog |nix|
+
+
 
 Label dialog
 ~~~~~~~~~~~~
 
 
 The **Label** dialog of the label item tab provides following functionalities
-(see Figure `label_option`_ a):
+(see Figure_composer_label_1_ a):
 
 * The **Label** dialog offers to add text labels to the composer canvas.
   You can define the horizontal and vertical alignment, select font and
@@ -305,7 +317,7 @@ General options dialog
 
 
 The **General options** dialog of the label item tab provides following
-functionalities (see Figure `label_option`_ b):
+functionalities (see Figure_composer_label_1_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the label. The :guilabel:`Position`
@@ -318,29 +330,32 @@ Image item tab --- Picture options and General options dialog
 *************************************************************
 
 
-To add an image, click the |mActionSaveMapAsImage| :guilabel:`Add image`
+To add an image, click the |mActionSaveMapAsImage| :sup:`Add image`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the image item tab.
 
-.. _figure_composer_5:
-
-.. figure:: img/en/print_composer_image1.png
-   :align: center
+.. |composer_image1| image:: img/en/print_composer_image1.png
+   :width: 20 em
+.. |composer_image2| image:: img/en/print_composer_image2.png
    :width: 20 em
 
-----
+.. _figure_composer_image_1:
 
-.. figure:: img/en/print_composer_image2.png
-   :align: center
-   :width: 20 em
+Print composer image item tab
 
-   Figure Composer 5: Print composer image item tab - Picture options and General options |nix|
++---------------------------+---------------------------+
+| |composer_image1|         | |composer_image2|         |
++---------------------------+---------------------------+
+| a) Picture options Dialog | b) General options dialog |
++---------------------------+---------------------------+
+Figure Composer Image 1: Picture options and General options |nix|
+
 
 Picture options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **Picture options** dialog of the image item tab provides following
-functionalities (see Figure `imageoptions`_ a):
+functionalities (see Figure_composer_image_1_ a):
 
 * The **Search directories** area allows to add and remove directories
   with images in SVG format to the picture database.
@@ -357,7 +372,7 @@ General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **General options** dialog of the image item tab provides following
-functionalities (see Figure `imageoptions`_ b):
+functionalities (see Figure_composer_image_1_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the picture. The :guilabel:`Position`
@@ -373,27 +388,37 @@ To add a map legend, click the |mActionAddLegend| :guilabel:`Add new legend`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the legend item tab.
 
-.. `legendoptions`:
+.. |composer_legend1| image:: img/en/print_composer_legend1.png
+   :width: 20 em
+.. |composer_legend2| image:: img/en/print_composer_legend2.png
+   :width: 20 em
+.. |composer_legend3| image:: img/en/print_composer_legend3.png
+   :width: 20 em
 
-.. figure:: img/en/print_composer_legend1.png
-   :align: center
-   :width: 12 em
+.. _figure_composer_legend_1:
 
-.. figure:: img/en/print_composer_legend2.png
-   :align: center
-   :width: 12 em
+Print composer legend item tab
 
-.. figure:: img/en/print_composer_legend3.png
-   :align: center
-   :width: 12 em
++---------------------------+---------------------------+
+| |composer_legend1|        | |composer_legend2|        |
++---------------------------+---------------------------+
+| a) general dialog         | b) Legend item dialog     |
++---------------------------+---------------------------+
 
-   Print composer legend item tab --- General, Legend items and Item option dialog |nix|
++---------------------------+
+| |composer_legend3|        | 
++---------------------------+
+| c) Item options dialog    |
++---------------------------+
+
+Figure Composer Legend 1: General, Legend items and Item option dialog |nix|
+
 
 General dialog
 ~~~~~~~~~~~~~~
 
 The **General** dialog of the legend item tab provides following
-functionalities (see Figure `legendoptions`_ a):
+functionalities (see Figure_composer_legend_1_ a):
 
 * Here you can adapt the legend title. You can change the font of the
   legend title, layer and item name. You can change width and height of
@@ -403,7 +428,7 @@ Legend items dialog
 ~~~~~~~~~~~~~~~~~~~
 
 The **Legend items** dialog of the legend item tab provides following
-functionalities (see Figure `legendoptions`_ b):
+functionalities (see Figure_composer_legend_1_ b):
 
 * The legend items window lists all legend items and allows to change
   item order, edit layer names, remove and restore items of the list.
@@ -416,7 +441,7 @@ Item options dialog
 ~~~~~~~~~~~~~~~~~~~
 
 The **Item options** dialog of the legend item tab provides following
-functionalities (see Figure `legendoptions`_ c):
+functionalities (see Figure_composer_legend_1_ c):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the legend. The :guilabel:`Position`
@@ -433,24 +458,29 @@ To add a scalebar, click the |mActionScaleBar| :guilabel:`Add new scalebar`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the scalebar item tab.
 
-.. `scalebaroptions`:
+.. |composer_scalebar1| image:: img/en/print_composer_scalebar1.png
+   :width: 20 em
+.. |composer_scalebar2| image:: img/en/print_composer_scalebar2.png
+   :width: 20 em
 
-.. figure:: img/en/print_composer_scalebar1.png
-   :align: center
-   :width: 12 em
+.. _figure_composer_scalebar:
 
-.. figure:: img/en/print_composer_scalebar2.png
-   :align: center
-   :width: 12 em
+Print composer scalebar item tab
 
-   Print composer scalebar item tab - Scalebar and General options dialog |nix|
++-----------------------------+-----------------------------+
+| |composer_scalebar1|        | |composer_scalebar2|        |
++-----------------------------+-----------------------------+
+| a) Scalebar options Dialog  | b) General options dialog   |
++-----------------------------+-----------------------------+
+Figure Composer Scalebar: Scalebar and General options dialog |nix|
+
 
 Scalebar dialog
 ~~~~~~~~~~~~~~~
 
 
 The **Scalebar** dialog of the scalebar item tab provides following
-functionalities (see Figure `scalebaroptions`_ a):
+functionalities (see Figure_composer_scalebar_ a):
 
 * The scalebar dialog allows to define the segment size of the scalebar
   in map units, the map units used per bar units, and how many left and
@@ -465,7 +495,7 @@ General options dialog
 
 
 The **General options** dialog of the scalebar item tab provides following
-features (see Figure `scalebaroptions`_ b):
+features (see Figure_composer_scalebar_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the scalebar. The :guilabel:`Position`
@@ -503,7 +533,7 @@ or by mouse click within the :guilabel:`Command history` tab (see figure
 
 .. figure:: img/en/command_hist.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
    Command history in the Print Composer |nix|
 
@@ -518,11 +548,11 @@ to the print composer canvas.
 
 .. figure:: img/en/print_composer_shape.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
 .. figure:: img/en/print_composer_arrow.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
    Print composer basic shape and arrow item tab --- Shape and Arrow options dialog |nix|
 
@@ -546,11 +576,11 @@ canvas.
 
 .. figure:: img/en/print_composer_attribute1.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
 .. figure:: img/en/print_composer_attribute2.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
    Print composer attribute table item tab --- Table and General options dialog |nix|
 
@@ -612,7 +642,7 @@ above.
 
 .. figure:: img/en/print_composer_complete.png
    :align: center
-   :width: 12 em
+   :width: 40 em
 
    Print Composer with map view, legend, scalebar, coordinates and text added |nix|
 
@@ -649,7 +679,7 @@ add a new composer template or to manage already existing templates.
 
 .. figure:: img/en/print_composer_manager.png
    :align: center
-   :width: 12 em
+   :width: 20 em
 
    Composer Manager |nix|
 
