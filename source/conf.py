@@ -575,6 +575,17 @@ rst_epilog = """
    :width: 20em
 .. |delimited_text| image:: img/en/plugins_delimited_text/delimited_text.png
    :width: 1.5em
+.. |mActionGDALScript| image:: img/en/plugins_georeferencer/mActionGDALScript.png
+   :width: 1.5em
+.. |mActionLinkQGisToGeoref| image:: img/en/plugins_georeferencer/mActionLinkQGisToGeoref.png
+   :width: 1.5em
+.. |mActionStartGeoref| image:: img/en/plugins_georeferencer/mActionStartGeoref.png
+   :width: 1.5em
+.. |mActionLinkGeorefToQGis| image:: img/en/plugins_georeferencer/mActionLinkGeorefToQGis.png
+   :width: 1.5em
+.. |georeferencer| image:: img/en/plugins_georeferencer/georeferencer.png
+   :width: 1.5em
+.. |mActionCapturePoint| image:: img/en/plugins_georeferencer/mActionCapturePoint.png
 
 """
 
