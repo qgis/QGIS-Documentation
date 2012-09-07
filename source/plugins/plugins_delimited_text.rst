@@ -23,7 +23,7 @@ To view a delimited text file as layer, the text file must contain:
 
 
 As an example of a valid text file we import the elevation point data file 
-:file:`elevp.csv` coming with the QGIS sample dataset (See Section `label_sampledata`_):
+:file:`elevp.csv` coming with the QGIS sample dataset (See Section :ref:`label_sampledata`):
 
 ::
  
