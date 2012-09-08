@@ -11,12 +11,12 @@ images, basic shapes, arrows and text labels. You can size, group, align
 and position each element and adjust the properties to create your layout.
 The layout can be printed or exported to image formats, Postscript, PDF
 or to SVG [1]_ and you can save the layout as template and load it again
-in another session. See a list of tools in :ref:`Table_printcomposer_tools`:
+in another session. See a list of tools in table_printcomposer_tools_:
 
 
 .. index:: print_composer, tools
 
-.. _Table_printcomposer_tools:
+.. _table_printcomposer_tools:
 
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
@@ -355,7 +355,7 @@ Picture options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **Picture options** dialog of the image item tab provides following
-functionalities (see Figure_composer_image_1_ a):
+functionalities (see figure_composer_image_1_ a):
 
 * The **Search directories** area allows to add and remove directories
   with images in SVG format to the picture database.
@@ -372,7 +372,7 @@ General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **General options** dialog of the image item tab provides following
-functionalities (see Figure_composer_image_1_ b):
+functionalities (see figure_composer_image_1_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the picture. The :guilabel:`Position`
@@ -418,7 +418,7 @@ General dialog
 ~~~~~~~~~~~~~~
 
 The **General** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ a):
+functionalities (see figure_composer_legend_1_ a):
 
 * Here you can adapt the legend title. You can change the font of the
   legend title, layer and item name. You can change width and height of
@@ -428,7 +428,7 @@ Legend items dialog
 ~~~~~~~~~~~~~~~~~~~
 
 The **Legend items** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ b):
+functionalities (see figure_composer_legend_1_ b):
 
 * The legend items window lists all legend items and allows to change
   item order, edit layer names, remove and restore items of the list.
@@ -441,7 +441,7 @@ Item options dialog
 ~~~~~~~~~~~~~~~~~~~
 
 The **Item options** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ c):
+functionalities (see figure_composer_legend_1_ c):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the legend. The :guilabel:`Position`
@@ -480,7 +480,7 @@ Scalebar dialog
 
 
 The **Scalebar** dialog of the scalebar item tab provides following
-functionalities (see Figure_composer_scalebar_ a):
+functionalities (see figure_composer_scalebar_ a):
 
 * The scalebar dialog allows to define the segment size of the scalebar
   in map units, the map units used per bar units, and how many left and
@@ -495,7 +495,7 @@ General options dialog
 
 
 The **General options** dialog of the scalebar item tab provides following
-features (see Figure_composer_scalebar_ b):
+features (see figure_composer_scalebar_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the scalebar. The :guilabel:`Position`
@@ -526,16 +526,15 @@ This can be done with the revert and restore tools:
 * |mActionUndo| :guilabel:`Revert last changes`,
 * |mActionRedo| :guilabel:`Restore last changes`.
 
-or by mouse click within the :guilabel:`Command history` tab (see figure
-`commandhist`_).
+or by mouse click within the :guilabel:`Command history` tab (see figure_composure_history_).
 
-.. `commandhist`:
+.. figure_composer_history:
 
 .. figure:: img/en/command_hist.png
    :align: center
-   :width: 20 em
+   :width: 40 em
 
-   Command history in the Print Composer |nix|
+   Figure Composure History: Command history in the Print Composer |nix|
 
 Add Basic shape and Arrow
 =========================
@@ -544,17 +543,22 @@ Add Basic shape and Arrow
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
 to the print composer canvas.
 
-.. `shapearrow`:
-
-.. figure:: img/en/print_composer_shape.png
-   :align: center
+.. |composer_shape| image:: img/en/print_composer_shape.png
+   :width: 20 em
+.. |composer_arrow| image:: img/en/print_composer_arrow.png
    :width: 20 em
 
-.. figure:: img/en/print_composer_arrow.png
-   :align: center
-   :width: 20 em
+.. _figure_composer_shapes:
 
-   Print composer basic shape and arrow item tab --- Shape and Arrow options dialog |nix|
+Print composer basic shape and arrow item tab
+
++-----------------------------+-----------------------------+
+| |composer_shape|            | |composer_arrow|            |
++-----------------------------+-----------------------------+
+| a) shape dialog             | b) arrow dialog             |
++-----------------------------+-----------------------------+
+Figure Composer Shapes: Shape and Arrow options dialog |nix|
+
 
 * The **Shape** dialog allows to draw an ellipse, rectangle, or triangle
   in the print composer canvas. You can define its outline and fill color,
@@ -572,24 +576,29 @@ Add attribute table values
 It is possible to add parts of a vector attribute table to the print composer
 canvas.
 
-.. `attrcomp`:
-
-.. figure:: img/en/print_composer_attribute1.png
-   :align: center
+.. |composer_attribute1| image:: img/en/print_composer_attribute1.png
+   :width: 20 em
+.. |composer_attribute2| image:: img/en/print_composer_attribute2.png
    :width: 20 em
 
-.. figure:: img/en/print_composer_attribute2.png
-   :align: center
-   :width: 20 em
+.. _figure_composer_attributes:
 
-   Print composer attribute table item tab --- Table and General options dialog |nix|
+Print composer attribute table item tab
+
++-----------------------------+-----------------------------+
+| |composer_attribute1|       | |composer_attribute2|       |
++-----------------------------+-----------------------------+
+| a) Table Dialog             | b) General options dialog   |
++-----------------------------+-----------------------------+
+Figure Composer Attributes: Table and General options dialog |nix|
+
 
 Table dialog
 ~~~~~~~~~~~~
 
 
 The **Table** dialog of the attribute table item tab provides following
-functionalities (see Figure `attrcomp`_ a):
+functionalities (see figure_composer_attributes_ a):
 
 * The **Table** dialog allows to select the vector layer and columns of
   the attribute table. Attribute columns can be sorted and you can define
@@ -605,7 +614,7 @@ General options dialog
 
 
 The **General options** dialog of the attribute table item tab provides
-following functionalities (see Figure `attrcomp`_ b):
+following functionalities (see figure_composer_attributes_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the table. The :guilabel:`Position`
@@ -621,12 +630,11 @@ Raise, lower and align elements
 Raise or lower functionalities for elements are inside the |mActionRaiseItems|
 :guilabel:`Raise selected items` pulldown menu. Choose an element on the
 print composer canvas and select the matching functionality to raise or
-lower the selected element compared to the other elements (see table
-`printcomposer_tools`_).
+lower the selected element compared to the other elements (see table_printcomposer_tools_).
 
 There are several alignment functionalities available within the
 |mActionAlignLeft| :guilabel:`Align selected items` pulldown menu (see
-table `printcomposer_tools`_). To use an alignment functionality , you
+table_composer_tools_). To use an alignment functionality , you
 first select some elements and then click on the matching alignment icon.
 All selected will then be aligned within to their common bounding box.
 
@@ -634,11 +642,11 @@ Creating Output
 ===============
 
 
-Figure `print_composer_complete`_ shows the print composer with an example
+Figure_composer_complete_ shows the print composer with an example
 print layout including each type of map element described in the sections
 above.
 
-.. `print_composer_complete`:
+.. figure_composer_complete:
 
 .. figure:: img/en/print_composer_complete.png
    :align: center
@@ -668,20 +676,19 @@ Saving and loading a print composer layout
 
 With the |mActionFileSaveAs| :guilabel:`Save as template` and
 |mActionFolder| :guilabel:`Load from template` icons you can save the
-current state of a print composer session as a  *.qpt template and load
+current state of a print composer session as a  :file:`*.qpt` template and load
 the template again in another session.
 
 The  |mActionComposerManager| :guilabel:`Composer Manager` button in the
 toolbar and in :menuselection:`File --> Composer Manager` allows to
 add a new composer template or to manage already existing templates.
 
-.. `print_composer_manager`:
-
+.. _figure_composer_manager:
 .. figure:: img/en/print_composer_manager.png
    :align: center
-   :width: 20 em
+   :width: 24 em
 
-   Composer Manager |nix|
+   Figure Composer Manager |nix|
 
 .. [1] Export to SVG supported, but it is not working properly with some
 recent Qt4 versions. You should try and check individual on your system
