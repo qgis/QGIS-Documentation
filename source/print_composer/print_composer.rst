@@ -1,3 +1,5 @@
+.. index:: Create_Maps, Layout_Maps, Compose_Maps
+
 .. _`label_printcomposer`:
 
 --------------
@@ -11,12 +13,12 @@ images, basic shapes, arrows and text labels. You can size, group, align
 and position each element and adjust the properties to create your layout.
 The layout can be printed or exported to image formats, Postscript, PDF
 or to SVG [1]_ and you can save the layout as template and load it again
-in another session. See a list of tools in :ref:`Table_printcomposer_tools`:
+in another session. See a list of tools in table_composer_1_:
 
 
 .. index:: print_composer, tools
 
-.. _Table_printcomposer_tools:
+.. _table_composer_1:
 
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
@@ -56,11 +58,13 @@ in another session. See a list of tools in :ref:`Table_printcomposer_tools`:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+Table Composer 1: Print Composer Tools
 
 All Print Composer tools are available in menus and as icons in a toolbar.
 The toolbar can be switched off and on using the right mouse button holding
 the mouse over the toolbar.
 
+.. index:: Composer_Template, Map_Template
 
 Open a new Print Composer Template
 ==================================
@@ -162,7 +166,7 @@ Map dialog
 
 
 The **Map** dialog of the map item tab provides following functionalities
-(see :figure_composer_2_ a):
+(see figure_composer_2_ a):
 
 * The **Preview** area allows to define the preview modes Rectangle,
   Cache and Render, as described above. Click on the **[Update preview]**
@@ -171,9 +175,13 @@ The **Map** dialog of the map item tab provides following functionalities
   and height or the scale. The field :guilabel:`Rotation` ``0`` |selectstring| 
   allows to rotate the map element content clockwise in degrees. Note, a 
   coordinate frame can only be added with the default value 0. Furthermore you 
-  can enable the checkboxes |checkbox| :guilabel:`Lock layers` for map items and
+  can enable the checkboxes |checkbox| :guilabel:`Lock layers for map items` and
   |checkbox| :guilabel:`Draw map canvas items`.
 
+If you change the view on the QGIS map canvas by zooming or panning or
+changing vector or raster properties, you can update the print composer
+view selecting the map element in the print composer and clicking the
+**[Update preview]** button.
 
 .. |composer_map_dialog1| image:: img/en/print_composer_map1.png 
    :width: 20 em
@@ -191,18 +199,12 @@ Print Composer map item tab
 +---------------------------+---------------------------+
 Figure Composer 2: Map and Extents dialog |nix|
 
-
-If you change the view on the QGIS map canvas by zooming or panning or
-changing vector or raster properties, you can update the print composer
-view selecting the map element in the print composer and clicking the
-**[Update preview]** button.
-
 Extents dialog
 ~~~~~~~~~~~~~~
 
 
 The **Extents** dialog of the map item tab provides following functionalities
-(see Figure figure_composer_map_1_ b):
+(see Figure figure_composer_2_ b):
 
 * The **Map extent** area allow to specify the map extent using Y and X
   min/max values or clicking the :guilabel:`Set to map canvas extent` button.
@@ -210,13 +212,13 @@ The **Extents** dialog of the map item tab provides following functionalities
 If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
-:guilabel:`Update preview` button in the map :guilabel:`Item` tab (see Figure
+**[Update preview]** button in the map :guilabel:`Item` tab (see Figure
 figure_composer_2_ a).
 
 Map item tab --- Grid and General options dialog
 ************************************************
 
-
+.. index:: Grid, Map_Grid
 
 Grid dialog
 ~~~~~~~~~~~
@@ -225,11 +227,11 @@ Grid dialog
 The **Grid** dialog of the map item tab provides following functionalities
 (see Figure_composer_3_ a):
 
-* The |checkbox| Show grid checkbox allows to overlay a grid to the map
+* The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the map
   element. As grid type you can specify to use solid line or cross.
   Furthermore you can define an interval in X and Y direction, an X and
   Y offset, and the width used for cross or line grid type.
-* The |checkbox| Draw annotation checkbox allows to add coordinates to
+* The |checkbox| :guilabel:`Draw annotation` checkbox allows to add coordinates to
   the map frame. The annotation can be drawn inside or outside the map
   frame. The annotation direction can be defined as horizontal, vertical,
   horizontal and vertical, or boundary direction. And finally you can
@@ -260,11 +262,11 @@ The **General options** dialog of the map item tab provides following
 functionalities (see Figure_composer_3_ b):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the map canvas. The :guilabel:`Position`
+  a background color and opacity for the map canvas. The **[Position]**
   button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| Show frame checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox.
 
 Adding other elements to the Print Composer
 ===========================================
@@ -274,8 +276,8 @@ Besides adding a current QGIS map canvas to the Print Composer, it is also
 possible to add, position, move and customize legend, scalebar, images and
 label elements.
 
-Label item tab --- Label and General options dialog
-***************************************************
+Label item tab \- Label and General options dialog
+*************************************************
 
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place
@@ -288,7 +290,7 @@ position and customize their appearance in the label item tab.
 .. |composer_label2| image:: img/en/print_composer_label2.png
    :width: 20 em
 
-.. _figure_composer_label_1:
+.. _figure_composer_4:
 
 Print composer label item tab
 
@@ -297,7 +299,7 @@ Print composer label item tab
 +---------------------------+---------------------------+
 | a) Label options Dialog   | b) General options dialog |
 +---------------------------+---------------------------+
-Figure Composer Label 1:  Label options and General options dialog |nix|
+Figure Composer 4:  Label options and General options dialog |nix|
 
 
 
@@ -306,7 +308,7 @@ Label dialog
 
 
 The **Label** dialog of the label item tab provides following functionalities
-(see Figure_composer_label_1_ a):
+(see figure_composer_4_ a):
 
 * The **Label** dialog offers to add text labels to the composer canvas.
   You can define the horizontal and vertical alignment, select font and
@@ -317,17 +319,17 @@ General options dialog
 
 
 The **General options** dialog of the label item tab provides following
-functionalities (see Figure_composer_label_1_ b):
+functionalities (see figure_composer_4_ b):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the label. The :guilabel:`Position`
   button opens the :guilabel:`Set items position` dialog and allows to
   set the map canvas position using reference points or coordinates.
   Furthermore you can select or unselect to display the element frame with
-  the |checkbox| Show frame checkbox.
+  the |checkbox| :guilabel:`Show frame` checkbox.
 
-Image item tab --- Picture options and General options dialog
-*************************************************************
+Image item tab \- Picture options and General options dialog
+************************************************************
 
 
 To add an image, click the |mActionSaveMapAsImage| :sup:`Add image`
@@ -339,7 +341,7 @@ canvas and position and customize their appearance in the image item tab.
 .. |composer_image2| image:: img/en/print_composer_image2.png
    :width: 20 em
 
-.. _figure_composer_image_1:
+.. _figure_composer_5:
 
 Print composer image item tab
 
@@ -348,14 +350,16 @@ Print composer image item tab
 +---------------------------+---------------------------+
 | a) Picture options Dialog | b) General options dialog |
 +---------------------------+---------------------------+
-Figure Composer Image 1: Picture options and General options |nix|
+Figure Composer 5: Picture options and General options |nix|
+
+.. index:: Picture_database, Rotated_North_Arrow
 
 
 Picture options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **Picture options** dialog of the image item tab provides following
-functionalities (see Figure_composer_image_1_ a):
+functionalities (see figure_composer_5_ a):
 
 * The **Search directories** area allows to add and remove directories
   with images in SVG format to the picture database.
@@ -364,7 +368,7 @@ functionalities (see Figure_composer_image_1_ a):
 * The **Options** area shows the current selected picture and allows to
   define width, height and clockwise rotation of the picture. It is also
   possible to add a user specific SVG path. Activating the
-  |checkbox| Sync from map checkbox synchronizes the rotation of a picture
+  |checkbox| :guilabel:`Sync from map` checkbox synchronizes the rotation of a picture
   in the qgis map canvas (i.e. a rotated north arrow) with the appropriate
   print composer image.
 
@@ -372,19 +376,21 @@ General options dialog
 ~~~~~~~~~~~~~~~~~~~~~~
 
 The **General options** dialog of the image item tab provides following
-functionalities (see Figure_composer_image_1_ b):
+functionalities (see figure_composer_5_ b):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the picture. The :guilabel:`Position`
+  a background color and opacity for the picture. The **[Position]**
   button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| Show frame checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox.
 
-Legend item tab --- General, Legend items and Item option dialog
+.. index:: Map_Legend
+
+Legend item tab \- General, Legend items and Item option dialog
 ****************************************************************
 
-To add a map legend, click the |mActionAddLegend| :guilabel:`Add new legend`
+To add a map legend, click the |mActionAddLegend| :sup:`Add new legend`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the legend item tab.
 
@@ -395,7 +401,7 @@ canvas and position and customize their appearance in the legend item tab.
 .. |composer_legend3| image:: img/en/print_composer_legend3.png
    :width: 20 em
 
-.. _figure_composer_legend_1:
+.. _figure_composer_6:
 
 Print composer legend item tab
 
@@ -411,14 +417,15 @@ Print composer legend item tab
 | c) Item options dialog    |
 +---------------------------+
 
-Figure Composer Legend 1: General, Legend items and Item option dialog |nix|
+Figure Composer 6: General, Legend items and Item option dialog |nix|
 
 
 General dialog
 ~~~~~~~~~~~~~~
 
+
 The **General** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ a):
+functionalities (see figure_composer_6_ a):
 
 * Here you can adapt the legend title. You can change the font of the
   legend title, layer and item name. You can change width and height of
@@ -427,34 +434,38 @@ functionalities (see Figure_composer_legend_1_ a):
 Legend items dialog
 ~~~~~~~~~~~~~~~~~~~
 
+
 The **Legend items** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ b):
+functionalities (see figure_composer_6_ b):
 
 * The legend items window lists all legend items and allows to change
   item order, edit layer names, remove and restore items of the list.
   After changing the symbology in the QGIS main window you can click on
-  :guilabel:`Update` to adapt the changes in the legend element of the
-  print composer. The item order can be changed using the :guilabel:`Up`
-  and :guilabel:`Down` buttons or with Drag and Drop functionality.
+  **[Update]** to adapt the changes in the legend element of the
+  print composer. The item order can be changed using the **[Up]**
+  and **[Down]** buttons or with Drag and Drop functionality.
 
 Item options dialog
 ~~~~~~~~~~~~~~~~~~~
 
+
 The **Item options** dialog of the legend item tab provides following
-functionalities (see Figure_composer_legend_1_ c):
+functionalities (see figure_composer_6_ c):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the legend. The :guilabel:`Position`
+  a background color and opacity for the legend. The **[Position]**
   button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| Show frame checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox.
 
-Scalebar item tab --- Scalebar and General options dialog
-*********************************************************
+.. index:: Scalebar, Map_Scalebar
+
+Scalebar item tab \- Scalebar and General options dialog
+********************************************************
 
 
-To add a scalebar, click the |mActionScaleBar| :guilabel:`Add new scalebar`
+To add a scalebar, click the |mActionScaleBar| :sup:`Add new scalebar`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the scalebar item tab.
 
@@ -463,7 +474,7 @@ canvas and position and customize their appearance in the scalebar item tab.
 .. |composer_scalebar2| image:: img/en/print_composer_scalebar2.png
    :width: 20 em
 
-.. _figure_composer_scalebar:
+.. _figure_composer_7:
 
 Print composer scalebar item tab
 
@@ -472,7 +483,7 @@ Print composer scalebar item tab
 +-----------------------------+-----------------------------+
 | a) Scalebar options Dialog  | b) General options dialog   |
 +-----------------------------+-----------------------------+
-Figure Composer Scalebar: Scalebar and General options dialog |nix|
+Figure Composer 7: Scalebar and General options dialog |nix|
 
 
 Scalebar dialog
@@ -480,7 +491,7 @@ Scalebar dialog
 
 
 The **Scalebar** dialog of the scalebar item tab provides following
-functionalities (see Figure_composer_scalebar_ a):
+functionalities (see figure_composer_7_ a):
 
 * The scalebar dialog allows to define the segment size of the scalebar
   in map units, the map units used per bar units, and how many left and
@@ -495,14 +506,14 @@ General options dialog
 
 
 The **General options** dialog of the scalebar item tab provides following
-features (see Figure_composer_scalebar_ b):
+features (see figure_composer_7_ b):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the scalebar. The :guilabel:`Position`
-  button opens the \dialog{Set items position} dialog and allows to set
+  a background color and opacity for the scalebar. The **[Position]**
+  button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| Show frame checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox.
 
 Navigation tools
 ================
@@ -510,11 +521,13 @@ Navigation tools
 
 For map navigation the print composer provides 4 general tools:
 
-* |mActionZoomIn| :guilabel:`Zoom in`,
-* |mActionZoomOut| :guilabel:`Zoom out`,
-* |mActionZoomFullExtent| :guilabel:`Zoom to full extend` and
-* |mActionDraw| :guilabel:`Refresh the view`, if you find the view in an
-  inconsistent state.
+* |mActionZoomIn| :sup:`Zoom in`
+* |mActionZoomOut| :sup:`Zoom out`
+* |mActionZoomFullExtent| :sup:`Zoom to full extend`
+* |mActionDraw| :sup:`Refresh the view` (if you find the view in an
+  inconsistent state)
+
+.. index:: Revert_Layout_Actions
 
 Revert and Restore tools
 ========================
@@ -523,19 +536,18 @@ Revert and Restore tools
 During the layout process it is possible to revert and restore changes.
 This can be done with the revert and restore tools:
 
-* |mActionUndo| :guilabel:`Revert last changes`,
-* |mActionRedo| :guilabel:`Restore last changes`.
+* |mActionUndo| :sup:`Revert last changes`
+* |mActionRedo| :sup:`Restore last changes`
 
-or by mouse click within the :guilabel:`Command history` tab (see figure
-`commandhist`_).
+or by mouse click within the :guilabel:`Command history` tab (see figure_composer_8_).
 
-.. `commandhist`:
+.. figure_composer_8:
 
 .. figure:: img/en/command_hist.png
    :align: center
-   :width: 20 em
+   :width: 40 em
 
-   Command history in the Print Composer |nix|
+   Figure Composure 8: Command history in the Print Composer |nix|
 
 Add Basic shape and Arrow
 =========================
@@ -544,17 +556,22 @@ Add Basic shape and Arrow
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
 to the print composer canvas.
 
-.. `shapearrow`:
-
-.. figure:: img/en/print_composer_shape.png
-   :align: center
+.. |composer_shape| image:: img/en/print_composer_shape.png
+   :width: 20 em
+.. |composer_arrow| image:: img/en/print_composer_arrow.png
    :width: 20 em
 
-.. figure:: img/en/print_composer_arrow.png
-   :align: center
-   :width: 20 em
+.. _figure_composer_9:
 
-   Print composer basic shape and arrow item tab --- Shape and Arrow options dialog |nix|
+Print composer basic shape and arrow item tab
+
++-----------------------------+-----------------------------+
+| |composer_shape|            | |composer_arrow|            |
++-----------------------------+-----------------------------+
+| a) shape dialog             | b) arrow dialog             |
++-----------------------------+-----------------------------+
+Figure Composer 9: Shape and Arrow options dialog |nix|
+
 
 * The **Shape** dialog allows to draw an ellipse, rectangle, or triangle
   in the print composer canvas. You can define its outline and fill color,
@@ -572,24 +589,29 @@ Add attribute table values
 It is possible to add parts of a vector attribute table to the print composer
 canvas.
 
-.. `attrcomp`:
-
-.. figure:: img/en/print_composer_attribute1.png
-   :align: center
+.. |composer_attribute1| image:: img/en/print_composer_attribute1.png
+   :width: 20 em
+.. |composer_attribute2| image:: img/en/print_composer_attribute2.png
    :width: 20 em
 
-.. figure:: img/en/print_composer_attribute2.png
-   :align: center
-   :width: 20 em
+.. _figure_composer_10:
 
-   Print composer attribute table item tab --- Table and General options dialog |nix|
+Print composer attribute table item tab
+
++-----------------------------+-----------------------------+
+| |composer_attribute1|       | |composer_attribute2|       |
++-----------------------------+-----------------------------+
+| a) Table Dialog             | b) General options dialog   |
++-----------------------------+-----------------------------+
+Figure Composer 10: Table and General options dialog |nix|
+
 
 Table dialog
 ~~~~~~~~~~~~
 
 
 The **Table** dialog of the attribute table item tab provides following
-functionalities (see Figure `attrcomp`_ a):
+functionalities (see figure_composer_10_ a):
 
 * The **Table** dialog allows to select the vector layer and columns of
   the attribute table. Attribute columns can be sorted and you can define
@@ -605,83 +627,89 @@ General options dialog
 
 
 The **General options** dialog of the attribute table item tab provides
-following functionalities (see Figure `attrcomp`_ b):
+following functionalities (see figure_composer_10_ b):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the table. The :guilabel:`Position`
+  a background color and opacity for the table. The **[Position]**
   button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| Show frame checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox.
 
 Raise, lower and align elements
 ===============================
 
 
 Raise or lower functionalities for elements are inside the |mActionRaiseItems|
-:guilabel:`Raise selected items` pulldown menu. Choose an element on the
+:sup:`Raise selected items` pulldown menu. Choose an element on the
 print composer canvas and select the matching functionality to raise or
-lower the selected element compared to the other elements (see table
-`printcomposer_tools`_).
+lower the selected element compared to the other elements (see table_composer_1_).
 
 There are several alignment functionalities available within the
-|mActionAlignLeft| :guilabel:`Align selected items` pulldown menu (see
-table `printcomposer_tools`_). To use an alignment functionality , you
+|mActionAlignLeft| :sup:`Align selected items` pulldown menu (see
+table_composer_1_). To use an alignment functionality , you
 first select some elements and then click on the matching alignment icon.
 All selected will then be aligned within to their common bounding box.
+
+.. index:: Printing, Export_Map
 
 Creating Output
 ===============
 
 
-Figure `print_composer_complete`_ shows the print composer with an example
+Figure_composer_11_ shows the print composer with an example
 print layout including each type of map element described in the sections
 above.
 
-.. `print_composer_complete`:
+.. figure_composer_11:
 
 .. figure:: img/en/print_composer_complete.png
    :align: center
    :width: 40 em
 
-   Print Composer with map view, legend, scalebar, coordinates and text added |nix|
+   Figure Composer 11: Print Composer with map view, legend, scalebar, coordinates and text added |nix|
+
+.. index:: Export_as_image, Export_as_PDF, Export_as_SVG 
 
 The print composer allows you to create several output formats and it is
 possible to define the resolution (print quality) and paper size:
 
-* The |mActionFilePrint| :guilabel:`Print` icon allows to print the layout
+* The |mActionFilePrint| :sup:`Print` icon allows to print the layout
   to a connected printer or a Postscript file depending on installed printer
   drivers.
-* The |mActionExportMapServer| :guilabel:`Export as image` icon exports
+* The |mActionExportMapServer| :sup:`Export as image` icon exports
   the composer canvas in several image formats such as PNG, BPM, TIF, JPG,...
-* The |mActionSaveAsPDF| :guilabel:`Export as PDF` saves the defined
+* The |mActionSaveAsPDF| :sup:`Export as PDF` saves the defined
   print composer canvas directly as a PDF.
-* The |mActionSaveAsSVG| :guilabel:`Export as SVG` icon saves the print
-  composer canvas as a SVG (Scalable Vector Graphic). **Note:** Currently
-  the SVG output is very basic. This is not a QGIS problem, but a problem
-  of the underlaying Qt library. This will hopefully be sorted out in
-  future versions.
+* The |mActionSaveAsSVG| :sup:`Export as SVG` icon saves the print
+  composer canvas as a SVG (Scalable Vector Graphic). 
+
+.. Note:: 
+
+  Currently the SVG output is very basic. This is not a QGIS problem, 
+  but a problem of the underlaying Qt library. This will hopefully be 
+  sorted out in future versions.
+
+.. index:: Composer_Manager
 
 Saving and loading a print composer layout
 ==========================================
 
 
-With the |mActionFileSaveAs| :guilabel:`Save as template` and
-|mActionFolder| :guilabel:`Load from template` icons you can save the
-current state of a print composer session as a  *.qpt template and load
+With the |mActionFileSaveAs| :sup:`Save as template` and
+|mActionFolder| :sup:`Load from template` icons you can save the
+current state of a print composer session as a  :file:`*.qpt` template and load
 the template again in another session.
 
-The  |mActionComposerManager| :guilabel:`Composer Manager` button in the
+The  |mActionComposerManager| :sup:`Composer Manager` button in the
 toolbar and in :menuselection:`File --> Composer Manager` allows to
 add a new composer template or to manage already existing templates.
 
-.. `print_composer_manager`:
-
+.. _figure_composer_12:
 .. figure:: img/en/print_composer_manager.png
    :align: center
-   :width: 20 em
+   :width: 24 em
 
-   Composer Manager |nix|
+   Figure Composer 12: The Print Composer Manager |nix|
 
-.. [1] Export to SVG supported, but it is not working properly with some
-recent Qt4 versions. You should try and check individual on your system
+.. [1] Export to SVG supported, but it is not working properly with some recent Qt4 versions. You should try and check individual on your system.
