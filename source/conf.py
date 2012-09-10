@@ -586,6 +586,9 @@ rst_epilog = """
 .. |georeferencer| image:: img/en/plugins_georeferencer/georeferencer.png
    :width: 1.5em
 .. |mActionCapturePoint| image:: img/en/plugins_georeferencer/mActionCapturePoint.png
+   :width: 1.5em
+.. |pencil| image:: img/en/plugins_georeferencer/pencil.png
+   :width: 1.5em
 
 """
 
