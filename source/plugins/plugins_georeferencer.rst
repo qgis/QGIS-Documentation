@@ -46,7 +46,7 @@ As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected coordinates
 (mmmm.mm) which correspond with the selected point on the image, two
 alternative procedures can be used:
 
-* The raster itself sometimes provides crosses with coordinates `written'
+* The raster itself sometimes provides crosses with coordinates "written"
   on the image. In this case you can enter the coordinates manually.
 * Using already georeferenced layers, this can be either vector or raster
   data that contain the same objects/features that you have on the image
@@ -61,22 +61,20 @@ will compute the world file parameters. The more coordinates you provide,
 the better the result will be.
 
 The first step is to start QGIS, load the Georeferencer Plugin (see Section
-:ref:`load_core_plugin`) and click on the |georeferencer| :guilabel:`Georeferencer`
+:ref:`plugins/plugins/load_core_plugin`) and click on the |georeferencer| :guilabel:`Georeferencer`
 icon which appears in the QGIS toolbar menu. The Georeferencer Plugin
-dialog appears as shown in Figure `georefplugin`_.
+dialog appears as shown in figure_georefplugin_1_.
 
 For this example, we are using a topo sheet of South Dakota from SDGS.
 It can later be visualized together with the data from the GRASS spearfish60
-location. You can download the topo sheet here:
-:download:`http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz`
+location. You can download the topo sheet here: http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz .
 
-.. _`georefplugin`:
-
+.. _figure_georefplugin_1:
 .. figure:: img/en/plugins_georeferencer/georefplugin.png
    :align: center
    :width: 30em
 
-   Georeferencer Plugin Dialog |nix|
+   Figure Georeferencer 1: Georeferencer Plugin Dialog |nix|
 
 
 .. _`georeferencer_entering`:
@@ -84,36 +82,33 @@ location. You can download the topo sheet here:
 Entering ground control points (GCPs)
 -------------------------------------
 
-#.  To start georeferencing an unreferenced raster, we must load it using
-    the |mActionAddRasterLayer| button. The raser will show up in the main
-    working area of the dialog. Once the raster is loaded, we can start to
-    enter reference points.
-#.  Using the |mActionCapturePoint| :giulabel:`Add Point` button, add
-    points to the main working area and enter their coordinates (see Figure
-    `choose_points`_). For this procedure you have two options:
-
-    #.  Click on a point in the raster image and enter the X and Y coordinates
-        manually
-    #.  Click on a point in the raster image and choose the button
-        |pencil| :guilabel:`from map canvas` to add the X and Y coordinates
-        with the help of a georeferenced map already loaded in the QGIS
-        map canvas.
-
-#.  With the |mActionMoveFeature| button, you can move the GCPs in both
-    windows, if they are at the wrong place.
+#. To start georeferencing an unreferenced raster, we must load it using
+   the |mActionAddRasterLayer| button. The raster will show up in the main
+   working area of the dialog. Once the raster is loaded, we can start to
+   enter reference points.
+#. Using the |mActionCapturePoint| :guilabel:`Add Point` button, add
+   points to the main working area and enter their coordinates (see Figure
+   figure_georefplugin_2_). For this procedure you have two options:
+  #.Click on a point in the raster image and enter the X and Y coordinates
+    manually
+  #.Click on a point in the raster image and choose the button
+    |pencil| :guilabel:`from map canvas` to add the X and Y coordinates
+    with the help of a georeferenced map already loaded in the QGIS
+    map canvas.
+#. With the |mActionMoveFeature| button, you can move the GCPs in both
+   windows, if they are at the wrong place.
 
 Continue entering points. You should have at least 4 points, and the more
 coordinates you can provide, the better the result will be. There are
 additional tools on the plugin dialog to zoom and pan the working area in
 order to locate a relevant set of GCP points.
 
-.. _`choose_points`:
-
+.. _figure_georefplugin_2:
 .. figure:: img/en/plugins_georeferencer/choose_points.png
    :align: center
    :width: 30em
 
-   Add points to the raster image |nix|
+   Figure Georeferencer 2: Add points to the raster image |nix|
 
 
 The points that are added to the map will be stored in a separate text
@@ -134,13 +129,12 @@ Defining the transformation settings
 After you have added your GCPs to the raster image, you need to define the
 transformation settings for the georeferencing process.
 
-.. _`georef_transform`:
-
+.. _figure_georefplugin_3:
 .. figure:: img/en/plugins_georeferencer/transformation_settings.png
    :align: center
-   :width: 30em
+   :width: 20em
 
-   Defining the georeferencer transformation settings |nix|
+   Figure Georeferencer 3: Defining the georeferencer transformation settings |nix|
 
 
 Available Transformation algorithms
