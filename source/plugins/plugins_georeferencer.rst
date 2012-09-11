@@ -89,19 +89,18 @@ Entering ground control points (GCPs)
 #. Using the |mActionCapturePoint| :guilabel:`Add Point` button, add
    points to the main working area and enter their coordinates (see Figure
    figure_georefplugin_2_). For this procedure you have two options:
-  #.Click on a point in the raster image and enter the X and Y coordinates
-    manually
-  #.Click on a point in the raster image and choose the button
-    |pencil| :guilabel:`from map canvas` to add the X and Y coordinates
-    with the help of a georeferenced map already loaded in the QGIS
-    map canvas.
-#. With the |mActionMoveFeature| button, you can move the GCPs in both
-   windows, if they are at the wrong place.
 
-Continue entering points. You should have at least 4 points, and the more
-coordinates you can provide, the better the result will be. There are
-additional tools on the plugin dialog to zoom and pan the working area in
-order to locate a relevant set of GCP points.
+    a.Click on a point in the raster image and enter the X and Y coordinates manually.
+
+    b.Click on a point in the raster image and choose the button |pencil| :guilabel:`from map canvas` to add the X and Y coordinates 
+     with the help of a georeferenced map already loaded in the QGIS map canvas.
+
+    c.With the |mActionMoveFeature| button, you can move the GCPs in both windows, if they are at the wrong place.
+
+#. Continue entering points. You should have at least 4 points, and the more
+   coordinates you can provide, the better the result will be. There are
+   additional tools on the plugin dialog to zoom and pan the working area in
+   order to locate a relevant set of GCP points.
 
 .. _figure_georefplugin_2:
 .. figure:: img/en/plugins_georeferencer/choose_points.png
