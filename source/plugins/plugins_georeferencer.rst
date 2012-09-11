@@ -14,7 +14,7 @@ Features
 
 ..index:: Georeferencer, tools
 
-.. _`georeferencer_tools`:
+.. _table_georefplugin_1:
 
 +---------------------------+----------------------------+---------------------------+----------------------------+
 | Icon                      | Purpose                    | Icon                      | Purpose                    |
@@ -38,6 +38,7 @@ Features
 +---------------------------+----------------------------+---------------------------+----------------------------+
 | |mActionLinkQGisToGeoref| | Link QGIS to Georeferencer |                           |                            |
 +---------------------------+----------------------------+---------------------------+----------------------------+
+Table Georeferencer 1: Georeferencer Tools
 
 Usual procedure
 ---------------
