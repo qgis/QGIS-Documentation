@@ -2,7 +2,8 @@
 Using QGIS Core Plugins
 -----------------------
 .. _`core_plugins`:
-:index:`plugins!core`
+.. :index::
+    single:core plugins
 
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
 | Icon                   | Plugin                   | Description                         				 | Manual Reference            		  |
