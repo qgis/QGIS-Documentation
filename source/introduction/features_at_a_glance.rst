@@ -41,7 +41,8 @@ To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx|
 Command Line Options
 --------------------
 
-:index:`command line options`
+.. index::
+   single:command line options
 
 |nix| QGIS supports a number of options when started from the command line. To
 get a list of the options, enter ``qgis ---help`` on the command line.
@@ -152,7 +153,8 @@ with all plugins and settings
 QGIS GUI
 ========
 
-.. :index:`main window`
+.. :index::
+    single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
 (the numbers 1 through 6 in yellow ovals refer to the six major areas of the
@@ -189,7 +191,8 @@ context help.
 Menu Bar
 ---------
 
-.. index::`menus`
+.. index::
+   single:menus
 
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
@@ -415,7 +418,8 @@ Menu Option                                                     Shortcut        
 Toolbars
 --------
 
-.. index::`toolbars`
+.. index::
+   single:toolbars
 
 The toolbars provide access to most of the same functions as the menus,
 plus additional tools for interacting with the map. Each toolbar item has
@@ -426,7 +430,8 @@ Every menubar can be moved around according to your needs. Additionally every
 menubar can be switched off using your right mouse button context menu holding
 the mouse over the toolbars.
 
-.. index::`layout!toolbars`
+.. index::
+   single:layout toolbars
 
 .. tip::
    **Restoring toolbars** 
@@ -439,11 +444,13 @@ the mouse over the toolbars.
 Map Legend
 -----------
 
-.. index::`legend`
+.. index::
+   single:legend
 
 The map legend area lists all the layers in the project.
 The checkbox in each legend entry can be used to show or hide the layer 
- .. index::`layer!visibility`
+ .. index::
+    single:layer visibility
 A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
@@ -540,7 +547,8 @@ changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   .. index::`zoom mouse wheel`
+   .. index::
+      single:zoom mouse wheel
    You can use the mouse wheel to zoom in and out on the map. Place
    the mouse cursor inside the map area and roll the wheel forward (away from 
    you) to zoom in and backwards (towards you) to zoom out. The mouse cursor 
@@ -551,7 +559,8 @@ changes you make in the legend area.
 .. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
    
-   .. index::`pan!arrow keys`
+   .. index::
+      single:pan arrow keys
    You can use the arrow keys to pan in the map. Place the mouse cursor
    inside the map area and click on the right arrow key to pan East, left arrow
    key to pan West, up arrow key to pan North and down arrow key to pan South.
@@ -563,7 +572,8 @@ changes you make in the legend area.
 Map Overview 
 ------------
 
-.. index::`Map overview`
+.. index::
+   single:Map overview
 
 The map overview panel provides a full extent view of layers added to it. It
 can be selected under the menu :menuselection:`Settings --> Panels`.
@@ -623,7 +633,8 @@ for the current project.
 Keyboard shortcuts
 -------------------
 
-.. index::`Keyboard shortcuts`
+.. index::
+   single:Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You find them in
 Section :ref:`label_menubar` below. Additionally the menu option 
@@ -649,7 +660,8 @@ QGIS installation.
 Context help
 ------------
 
-.. index::`Context help`
+.. index::
+   single:Context help
 
 When you need help on a specific topic, you can access context help via the 
 :guilabel:`Help` button available in most dialogs - please note that third-party 
@@ -659,7 +671,8 @@ plugins can point to dedicated web pages.
 
 Rendering
 ===========
-.. index::`Rendering`
+.. index::
+   single:Rendering
 
 By default, QGIS renders all visible layers whenever the map canvas must be
 refreshed. The events that trigger a refresh of the map canvas include:
@@ -675,7 +688,8 @@ QGIS allows you to control the rendering process in a number of ways.
 
 Scale Dependent Rendering
 -------------------------
-.. index::`Rendering scale dependent`
+.. index::
+   single:Rendering scale dependent
 
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
@@ -686,7 +700,8 @@ then click on the |checkbox|:guilabel:`Use scale dependent rendering` checkbox.
 You can determine the scale values by first zooming to the level you want
 to use and noting the scale value in the QGIS status bar.
 
-.. index::`Scale`
+.. index::
+   single:Scale
 
 .. _`label_controlmap`:
 
@@ -733,7 +748,8 @@ be off (invisible) by default.
 
 **Stopping Rendering**
 
-.. index::`Rendering halting`
+.. index::
+   single:Rendering halting
 
 .. _`label_stoprender`
 
@@ -750,7 +766,8 @@ between pressing ESC and the time the map drawing is halted.
 **c) Updating the Map Display During Rendering**
 
 
-.. index::`rendering!update during drawing`
+.. index::
+   single:rendering update during drawing
 
 You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
@@ -767,7 +784,8 @@ during the reading of the features. A suggested value to start with is 500.
 **d) Influence Rendering Quality**
 
 
-.. index::`rendering!quality`
+.. index::
+   single:rendering quality
 
 To influence the rendering quality of the map you have 3 options. Choose menu
 option :menuselection:`Settings --> Options -->` click on the :guilabel:`Rendering` tab and select or deselect following checkboxes.
@@ -781,7 +799,8 @@ option :menuselection:`Settings --> Options -->` click on the :guilabel:`Renderi
 
 Measuring 
 ==========
-.. index::`measure`
+.. index::
+   single:measure
 
 Measuring works within projected coordinate systems (e.g., UTM) and 
 unprojected data. If the loaded map is defined with a geographic coordinate system
@@ -797,9 +816,12 @@ to use.
 Measure length, areas and angles
 ---------------------------------
 
-.. index::`measure:line length`
-.. index::`measure:areas`
-.. index::`measure:angles`
+.. index::
+   single:measure;line length
+.. index::
+   single:measure;areas
+.. index::
+   single:measure;angles
 
 |mActionMeasure| QGIS is able to measure real distances between given points 
 according to a defined ellipsoid. To configure this, choose menu option
@@ -861,7 +883,8 @@ To deselect all selected features click on |mActionDeselectAll|.
 
 Projects
 =========
-.. index::`projects`
+.. index::
+   single:projects
 
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
@@ -926,7 +949,10 @@ include:
 Output 
 =======
 
-.. index::`output!save as image!print composer!quick print`
+.. index::
+   single:output save as image
+.. index::
+   single:print composer quick print
 
 There are several ways to generate output from your QGIS session. We have
 discussed one already in Section :ref:`sec_projects` saving as a project file.
@@ -1179,8 +1205,10 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 Spatial Bookmarks
 ==================
 
-.. index::`bookmarks`
-.. index::`spatial bookmarks|\see{bookmarks}`
+.. index::
+   single:bookmarks
+.. index::
+   single:spatial bookmarks;see bookmarks
 
 Spatial Bookmarks allow you to "bookmark" a geographic location and return to 
 it later.
