@@ -52,7 +52,7 @@ Using the Plugin
 To use the plugin you must first enable it as described in Section 
 :ref:`plugins/plugins/managing_plugins`.
 
-Click the new toolbar icon |delimited_text| :guilabel:`Add Delimited Text Layer` 
+Click the new toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` 
 to open the Delimited Text dialog as shown in figure_text_1_.
 
 .. _figure_text_1:
