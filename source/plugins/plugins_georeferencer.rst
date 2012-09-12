@@ -12,7 +12,8 @@ on the raster for which you can accurately determine their coordinates.
 Features
 --------
 
-..index:: Georeferencer, tools
+.. index::
+   single:Georeferencer tools
 
 .. _table_georefplugin_1:
 
@@ -87,13 +88,13 @@ Entering ground control points (GCPs)
    the |mActionAddRasterLayer| button. The raster will show up in the main
    working area of the dialog. Once the raster is loaded, we can start to
    enter reference points.
-#. Using the |mActionCapturePoint| :guilabel:`Add Point` button, add
+#. Using the |mActionCapturePoint| :sup:`Add Point` button, add
    points to the main working area and enter their coordinates (see Figure
    figure_georefplugin_2_). For this procedure you have two options:
 
     a.Click on a point in the raster image and enter the X and Y coordinates manually.
 
-    b.Click on a point in the raster image and choose the button |pencil| :guilabel:`from map canvas` to add the X and Y coordinates 
+    b.Click on a point in the raster image and choose the button |pencil| :sup:`from map canvas` to add the X and Y coordinates 
      with the help of a georeferenced map already loaded in the QGIS map canvas.
 
     c.With the |mActionMoveFeature| button, you can move the GCPs in both windows, if they are at the wrong place.
