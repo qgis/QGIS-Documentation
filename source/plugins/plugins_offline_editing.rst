@@ -17,7 +17,7 @@ be synchronized with the master data source, e.g. a PostGIS database. If several
 persons are working simultaneously on the same datasets, it is difficult to 
 merge the edits by hand, even if people don’t change the same features.
 
-The |offline_editing_copy|:guilabel:`Offline Editing` Plugin automates the synchronisation by copying the content of a datasource (usually PostGIS or WFS-T) to a spatialite database and storing the offline edits to dedicated tables. After being connected to the network again, it is possible to apply the offline edits to the master dataset.
+The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the synchronisation by copying the content of a datasource (usually PostGIS or WFS-T) to a spatialite database and storing the offline edits to dedicated tables. After being connected to the network again, it is possible to apply the offline edits to the master dataset.
 
 **Using the plugin**
 
