@@ -2,14 +2,16 @@
 QGIS Plugins
 -------------------------------
 .. _`plugins`:
-:index:`plugins`
+.. index::
+   single:plugins
 
 QGIS has been designed with a plugin architecture.
 This allows many new features/functions to be easily added to the application.
 Many of the features in QGIS are actually implemented as either **core**
 or **external plugins**.
 
-:index:`plugins!types`
+.. index::
+   single: plugins; types
 
 *  **Core Plugins** are maintained by the QGIS Development
 Team and are automatically part of every QGIS distribution.
@@ -28,7 +30,8 @@ More information about external plugins are provided in Section
 Managing Plugins
 ================
 
-:index:`plugins!managing`
+.. :index::
+    single:plugins;managing
 
 Managing plugins in general means loading or unloading them using
 the :file:`Plugin Manager`. External plugins can be installed and
@@ -45,7 +48,8 @@ Loading a QGIS Core Plugin
 Loading a QGIS Core Plugin is done from the main menu 
 :menuselection:`Plugins --> Manage Plugins`
 
-:index:`plugins!manager`
+.. index::
+   single: plugins; manager
 
 .. figure::img/en/plugins/pluginmanager.png
    :align: center
@@ -64,7 +68,8 @@ plugin name, and click :guilabel:`OK`. When you exit the application, a list
 of loaded plugins is retained, and the next time you run QGIS these
 plugins are automatically loaded.
 
-:index:`crashes`
+.. index::
+   single:crashes
 
 .. note:: 
    **Crashing Plugins**
@@ -136,9 +141,12 @@ Using the QGIS Python Plugin Installer
 **************************************
 
 .. _`python_plugin_installer`:
-:index:`plugins!installing`
-:index:`plugins!Python Plugin Installer`
-:index:`plugins!upgrading`
+.. index::
+   single: plugins; installing
+.. index::
+   single: plugins; Python Plugin Installer
+.. index::
+   single: plugins; upgrading
 
 .. figure::img/en/plugins/pluginmanager.png
    :align: center
@@ -263,7 +271,8 @@ whether you would like to:
 Data Providers
 ==============
 
-:index:`data providers`
+.. index::
+   single:data providers
 
 Data Providers are "special" plugins that provides access to a data store.
 By default, QGIS supports PostGIS layers and disk-based data stores supported by 
