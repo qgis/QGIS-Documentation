@@ -22,13 +22,16 @@ several useful Data Management Tools.
 .. _`ftools_function`:
 **fTools functions**
 
-Tables `ftool_analysis`_ through `fTool_data_management`_ list 
+table_ftools_1_ through table_ftools_5_ list 
 the functions available via the fTools plugin, along with a brief description 
 of each function. For further information on an individual fTools function, 
 click the :menuselection:`fTools Information -->` menu item in the 
 :menuselection:`Vector` menu.
 
-.. index:: `Analysis tools`
+.. index::
+   single:Analysis tools
+
+.. _table_ftools_1:
 
 +---------------------+-----------------+--------------------------------------+
 | **Analysis tools available via the fTools plugin**                           |
@@ -71,11 +74,11 @@ click the :menuselection:`fTools Information -->` menu item in the
 |                     |                 | or stream intersections, ignores     |
 |                     |                 | line intersections with length > 0.  |
 +---------------------+-----------------+--------------------------------------+
+Table Ftools 1: fTools Analysis tools
 
-.. \caption{fTools Analysis tools}\label{tab:ftool_analysis}
 
-
-:index:`Research tools`
+.. index::
+   single:Research tools
 
 +---------------------+-----------------+--------------------------------------+
 | **Research tools available via the fTools plugin**                           |
@@ -107,8 +110,7 @@ click the :menuselection:`fTools Information -->` menu item in the
 |                     | layer extent    | polygon layer from the extent of an  |
 |                     |                 | input raster or vector layer.        |
 +---------------------+-----------------+--------------------------------------+
-
-.. \caption{fTools Research tools}\label{tab:ftool_research}
+Table Ftools 2: fTools Research tools
 
 +---------------------+-----------------+--------------------------------------+
 | **Geoprocessing tools available via the fTools plugin**                      |
@@ -147,9 +149,7 @@ click the :menuselection:`fTools Information -->` menu item in the
 |                     |                 | values are combined to form one      |
 |                     |                 | single feature.                      |
 +---------------------+-----------------+--------------------------------------+
-
-
-.. \caption{fTools Geoprocessing tools}\label{tab:ftool_geoprocessing}
+Table Ftools 3: fTools Geoprocessing tools
 
 +---------------------+-----------------+--------------------------------------+
 | **Geometry tools available via the fTools plugin**                           |
@@ -197,8 +197,7 @@ click the :menuselection:`fTools Information -->` menu item in the
 | |extract_nodes|     | Extract nodes   | Extract nodes from line and polygon  |
 |                     |                 | layers and output them as points.    |
 +---------------------+-----------------+--------------------------------------+
-
-.. \caption{fTools Geometry tools}\label{tab:ftool_geometry}
+Table Ftools 4: fTools Geometry tools
 
 .. note::
 
@@ -206,6 +205,7 @@ click the :menuselection:`fTools Information -->` menu item in the
 	geometries, just set the *Simplify tolerance* parameter to 0 and this will do
 	the trick.
 
+.. _table_ftools_5:
 
 +---------------------+-----------------+--------------------------------------+
 | Data management tools available via the fTools plugin**                      |
@@ -233,4 +233,4 @@ click the :menuselection:`fTools Information -->` menu item in the
 |                     |                 | the layer type (point, line, area)   |
 +---------------------+-----------------+--------------------------------------+
 
-.. \caption{fTools Data management tools}\label{tab:fTool_data_management}
+Table Ftools 5: fTools Data management tools
