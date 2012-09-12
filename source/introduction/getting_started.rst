@@ -17,7 +17,8 @@ visualizing raster and vector layers.
 Installation
 =============
 
-.. :index:`installation`
+.. :index::
+    single:installation
 
 Installation of |qg| is very simple. Standard installer packages are
 available for MS Windows and Mac OS X. For many flavors of GNU/Linux binary
@@ -45,7 +46,8 @@ flash drive together with all plugins and settings.
 Sample Data
 ============
 
-:index:`data!sample` 
+.. :index::
+    single:data sample 
 
 The user guide contains examples based on the |qg| sample dataset. 
 
