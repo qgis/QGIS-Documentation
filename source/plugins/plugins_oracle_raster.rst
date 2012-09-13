@@ -10,7 +10,7 @@ Oracle GeoRaster Plugin
 .. \updatedisclaimer
 
 In Oracle databases, raster data can be stored in SDO\_GEORASTER objects available with the 
-Oracle Spatial extension. In QGIS, the |oracle_raster| :guilabel:`OracleGeoRasterPlugin`
+Oracle Spatial extension. In QGIS, the |oracle_raster| :sup:`OracleGeoRasterPlugin`
 is supported by GDAL, and depends on Oracle's Database product being installed and working 
 on your machine. While Oracle is proprietary software, they provide their software free for 
 development and testing purposes. Here is one simple example of how to load raster images 
@@ -31,7 +31,7 @@ Managing connections
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager (see Section 
 :ref:`plugins/plugins/load_core_plugin`). The first time you load a GeoRaster in QGIS, you must create a 
 connection to the Oracle database that contains the data. To do this, begin by clicking on 
-the |oracle_raster| :guilabel:`Select GeoRaster` toolbar button, it will open the Select Oracle 
+the |oracle_raster| :sup:`Select GeoRaster` toolbar button, it will open the Select Oracle 
 Spatial GeoRaster dialog window. Click on :guilabel:`New` to open the dialog window, and specify 
 the connection parameters (See Figure `plugins/plugins_oracle_raster/OracleCreate`_ ):
 
@@ -49,7 +49,7 @@ the connection parameters (See Figure `plugins/plugins_oracle_raster/OracleCreat
    :align: center
    :width: 20em
 
-Create Oracle connection dialog
+   Create Oracle connection dialog
 
 Now, back on the main Oracle Spatial GeoRaster dialog window (See Figure `plugins/plugins_oracle_raster/OracleSelect`_), use the drop-down list to choose one connection, and use the :guilabel:`Connect` button to establish a connection. You 
 may also :guilabel:`Edit` the connection by opening the previous dialog and making changes to the connection 
@@ -79,7 +79,7 @@ beginning and select another table name.
    :align: center
    :width: 20em
 
-Select Oracle GeoRaster dialog
+   Select Oracle GeoRaster dialog
 
 
 The Selection data entry can also be used to enter a Where clause at the end of the  identification string, e.g. 'geor:scott/tiger@orcl,gdal_import,raster,geoid='. 
