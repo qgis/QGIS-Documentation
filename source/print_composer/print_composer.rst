@@ -1,10 +1,15 @@
-.. index:: Create_Maps, Layout_Maps, Compose_Maps
+.. index::
+   single:Create_Maps
+.. index::
+   single:Layout_Maps
+.. index::
+   single:Compose_Maps
 
 .. _`label_printcomposer`:
 
---------------
+***************
 Print Composer
---------------
+***************
 
 
 The print composer provides growing layout and printing capabilities. It
@@ -16,7 +21,8 @@ or to SVG [1]_ and you can save the layout as template and load it again
 in another session. See a list of tools in table_composer_1_:
 
 
-.. index:: print_composer, tools
+.. index::
+   single: print_composer;tools
 
 .. _table_composer_1:
 
@@ -64,7 +70,10 @@ All Print Composer tools are available in menus and as icons in a toolbar.
 The toolbar can be switched off and on using the right mouse button holding
 the mouse over the toolbar.
 
-.. index:: Composer_Template, Map_Template
+.. index::
+   single:Composer_Template
+.. index::
+   single:Map_Template
 
 Open a new Print Composer Template
 ==================================
@@ -158,11 +167,10 @@ plugin also in the map composer, but it is not yet scaled correctly. So it
 might be necessary to switch back to the standard labeling in some cases.
 
 Map item tab --- Map and Extents dialog
-***************************************
+----------------------------------------
 
 
-Map dialog
-~~~~~~~~~~
+**Map dialog**
 
 
 The **Map** dialog of the map item tab provides following functionalities
@@ -199,8 +207,7 @@ Print Composer map item tab
 +---------------------------+---------------------------+
 Figure Composer 2: Map and Extents dialog |nix|
 
-Extents dialog
-~~~~~~~~~~~~~~
+**Extents dialog**
 
 
 The **Extents** dialog of the map item tab provides following functionalities
@@ -216,12 +223,12 @@ view selecting the map element in the print composer and clicking the
 figure_composer_2_ a).
 
 Map item tab --- Grid and General options dialog
-************************************************
+-------------------------------------------------
 
-.. index:: Grid, Map_Grid
+.. index::
+   single: Grid;Map_Grid
 
-Grid dialog
-~~~~~~~~~~~
+**Grid dialog**
 
 
 The **Grid** dialog of the map item tab provides following functionalities
@@ -255,8 +262,8 @@ Print Composer map item tab
 Figure Composer 3: Grid and General options dialog |nix|
    
 
-General options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**General options dialog**
+
 
 The **General options** dialog of the map item tab provides following
 functionalities (see Figure_composer_3_ b):
@@ -277,7 +284,7 @@ possible to add, position, move and customize legend, scalebar, images and
 label elements.
 
 Label item tab \- Label and General options dialog
-*************************************************
+----------------------------------------------------
 
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place
@@ -303,8 +310,7 @@ Figure Composer 4:  Label options and General options dialog |nix|
 
 
 
-Label dialog
-~~~~~~~~~~~~
+**Label dialog**
 
 
 The **Label** dialog of the label item tab provides following functionalities
@@ -314,8 +320,7 @@ The **Label** dialog of the label item tab provides following functionalities
   You can define the horizontal and vertical alignment, select font and
   font color for the text and it is possible to define a text margin in mm.
 
-General options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**General options dialog**
 
 
 The **General options** dialog of the label item tab provides following
@@ -329,7 +334,7 @@ functionalities (see figure_composer_4_ b):
   the |checkbox| :guilabel:`Show frame` checkbox.
 
 Image item tab \- Picture options and General options dialog
-************************************************************
+--------------------------------------------------------------
 
 
 To add an image, click the |mActionSaveMapAsImage| :sup:`Add image`
@@ -352,11 +357,13 @@ Print composer image item tab
 +---------------------------+---------------------------+
 Figure Composer 5: Picture options and General options |nix|
 
-.. index:: Picture_database, Rotated_North_Arrow
+.. index::
+   single:Picture_database
+.. index::
+   single:Rotated_North_Arrow
 
 
-Picture options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**Picture options dialog**
 
 The **Picture options** dialog of the image item tab provides following
 functionalities (see figure_composer_5_ a):
@@ -372,8 +379,7 @@ functionalities (see figure_composer_5_ a):
   in the qgis map canvas (i.e. a rotated north arrow) with the appropriate
   print composer image.
 
-General options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**General options dialog**
 
 The **General options** dialog of the image item tab provides following
 functionalities (see figure_composer_5_ b):
@@ -385,10 +391,11 @@ functionalities (see figure_composer_5_ b):
   you can select or unselect to display the element frame with the
   |checkbox| :guilabel:`Show frame` checkbox.
 
-.. index:: Map_Legend
+.. index::
+   single:Map_Legend
 
 Legend item tab \- General, Legend items and Item option dialog
-****************************************************************
+-----------------------------------------------------------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend`
 icon, place the element with the left mouse button on the print composer
@@ -420,8 +427,7 @@ Print composer legend item tab
 Figure Composer 6: General, Legend items and Item option dialog |nix|
 
 
-General dialog
-~~~~~~~~~~~~~~
+**General dialog**
 
 
 The **General** dialog of the legend item tab provides following
@@ -431,8 +437,8 @@ functionalities (see figure_composer_6_ a):
   legend title, layer and item name. You can change width and height of
   the legend symbol and you can add layer, symbol, icon label and box space.
 
-Legend items dialog
-~~~~~~~~~~~~~~~~~~~
+**Legend items dialog**
+
 
 
 The **Legend items** dialog of the legend item tab provides following
@@ -445,8 +451,8 @@ functionalities (see figure_composer_6_ b):
   print composer. The item order can be changed using the **[Up]**
   and **[Down]** buttons or with Drag and Drop functionality.
 
-Item options dialog
-~~~~~~~~~~~~~~~~~~~
+**Item options dialog**
+
 
 
 The **Item options** dialog of the legend item tab provides following
@@ -459,10 +465,11 @@ functionalities (see figure_composer_6_ c):
   you can select or unselect to display the element frame with the
   |checkbox| :guilabel:`Show frame` checkbox.
 
-.. index:: Scalebar, Map_Scalebar
+.. index::
+   single: Scalebar; Map_Scalebar
 
 Scalebar item tab \- Scalebar and General options dialog
-********************************************************
+---------------------------------------------------------
 
 
 To add a scalebar, click the |mActionScaleBar| :sup:`Add new scalebar`
@@ -486,8 +493,7 @@ Print composer scalebar item tab
 Figure Composer 7: Scalebar and General options dialog |nix|
 
 
-Scalebar dialog
-~~~~~~~~~~~~~~~
+**Scalebar dialog**
 
 
 The **Scalebar** dialog of the scalebar item tab provides following
@@ -501,8 +507,8 @@ functionalities (see figure_composer_7_ a):
 * Furthermore you can define height, line width, label and box space of
   the scale bar. Add a unit label and define the scalebar font and color.
 
-General options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**General options dialog**
+
 
 
 The **General options** dialog of the scalebar item tab provides following
@@ -606,8 +612,8 @@ Print composer attribute table item tab
 Figure Composer 10: Table and General options dialog |nix|
 
 
-Table dialog
-~~~~~~~~~~~~
+**Table dialog**
+
 
 
 The **Table** dialog of the attribute table item tab provides following
@@ -622,8 +628,8 @@ functionalities (see figure_composer_10_ a):
 * Additionally you can define the grid characteristics of the table and
   the header and content font.
 
-General options dialog
-~~~~~~~~~~~~~~~~~~~~~~
+**General options dialog**
+
 
 
 The **General options** dialog of the attribute table item tab provides
@@ -651,7 +657,8 @@ table_composer_1_). To use an alignment functionality , you
 first select some elements and then click on the matching alignment icon.
 All selected will then be aligned within to their common bounding box.
 
-.. index:: Printing, Export_Map
+.. index::
+   single:Printing; Export_Map
 
 Creating Output
 ===============
