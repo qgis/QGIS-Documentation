@@ -4,15 +4,14 @@
 Working with Raster Data
 *************************
 
-.. index:: `Raster`
+.. index:: Raster
 
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
 .. %\updatedisclaimer
 
 .. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid; GeoTIFF
-.. index:: 
-   pair: Erdas: Imagine; 
+.. index:: Erdas Imagine 
 
 This Section describes how to visualize and set raster layer properties.
 |qg| uses the :index:`GDAL` library to read and write raster data formats [1], 
@@ -185,7 +184,7 @@ Also scaling of colors are available.
    always set to automatically to *stretch to min max* regardless if 
    the Quantum GIS general options this is set to another value.
 
-.. index:: `Transparency`
+.. index:: Transparency
 
 Transparency Tab
 -----------------
@@ -236,7 +235,7 @@ and applies them to the current rasterlayer.
 Colormap
 ---------
 
-.. index:: `Colormap`
+.. index:: Colormap
 
 The :guilabel:`Colormap` tab is only available, when you have selected a
 single-band-rendering within the :guilabel:`Style` tab 
@@ -286,7 +285,7 @@ displayed in the map canvas.
 Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
 This can be modified by hitting the **[Specify]** button.
 
-.. index:: `Metadata`
+.. index:: Metadata
 
 Metadata Tab
 -------------
@@ -301,7 +300,7 @@ inside this tab. To update the statistics you need to change to tab
 :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
 (see :ref:`label_histogram`).
 
-.. index:: `Pyramids`
+.. index:: Pyramids
 
 Pyramids Tab
 -------------
@@ -332,7 +331,7 @@ version of your raster, make a backup copy prior to building pyramids.
 Histogram Tab
 ---------------
 
-.. index:: `Histogram`
+.. index:: Histogram
 
 The :guilabel:`Histogram` tab allows you to view the distribution
 of the bands or colors in your raster. It is 
@@ -365,7 +364,7 @@ left of the tab.
 Raster Calculator
 =================
 
-.. index:: `Raster_Calculator`
+.. index:: Raster_Calculator
 
 The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu 
 (see figure_raster_2_) allows to perform calculations on basis of existing 
@@ -403,7 +402,7 @@ automatically added to the legend area and can be visualized.
 Raster Analysis
 ===============
 
-.. index:: `Analysis`
+.. index:: Analysis
 
 Apart from the raster calculator, additional raster analysis in |qg| 1.7 is provided 
 by the GDALTools core plugin. Please refer to section :ref:`label_plugingdaltools` 
