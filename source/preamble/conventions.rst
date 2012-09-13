@@ -1,8 +1,8 @@
 .. _label_conventions:
 
-============
+************
 Conventions
-============
+************
 
 This section describes a collection of uniform styles throughout the manual. 
 The conventions used in this manual are as follows:
