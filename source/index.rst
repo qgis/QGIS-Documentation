@@ -23,8 +23,6 @@ Welcome to QGIS manual
 	plugins/plugins
 	plugins/core_plugins
 	preamble/help_and_support
+        appendices/appendices
 
-.. appendices/gpl
-.. appendices/qgis_qt_gpl_exception
-.. appendices/fdl_1.3
 
