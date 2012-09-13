@@ -183,8 +183,8 @@ shown in Figure :ref:`projections` and described below.
 
 .. _`sec:customprojections`:
 
-Custom Coordinate Reference Systems
-====================================
+Custom Coordinate Reference System
+===================================
 
 .. index:: Custom_CRS
 
