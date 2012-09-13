@@ -1,6 +1,7 @@
  ..   !TeX  root  =  user_guide.tex
 
 .. _sec_grass:
+
 **********************
 GRASS GIS Integration
 **********************
