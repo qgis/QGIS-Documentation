@@ -1,8 +1,11 @@
+Appendix
+========
+
 .. index::
    single:license;GPL
 
 GNU GENERAL PUBLIC LICENSE
-===========================
+---------------------------
 
 Version 2, June 1991
 
@@ -265,8 +268,8 @@ DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR
 A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH
 HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
-Quantum GIS Qt exception for GPL
----------------------------------
+**Quantum GIS Qt exception for GPL**
+
 
  In addition, as a special exception, the QGIS Development Team gives
  permission to link the code of this program with the Qt library,
@@ -281,7 +284,7 @@ Quantum GIS Qt exception for GPL
  your version.
 
 GNU Free Documentation License
-===============================
+-------------------------------
 
 
                           Version 1.3, 3 November 2008
@@ -321,8 +324,8 @@ whether it is published as a printed book.  We recommend this License
 principally for works whose purpose is instruction or reference.
 
 
-1. APPLICABILITY AND DEFINITIONS
----------------------------------
+**1. APPLICABILITY AND DEFINITIONS**
+
 
 This License applies to any manual or other work, in any medium, that
 contains a notice placed by the copyright holder saying it can be
@@ -413,8 +416,8 @@ implication that these Warranty Disclaimers may have is void and has
 no effect on the meaning of this License.
 
 
-2. VERBATIM COPYING
----------------------
+**2. VERBATIM COPYING**
+
 
 You may copy and distribute the Document in any medium, either
 commercially or noncommercially, provided that this License, the
@@ -430,8 +433,8 @@ You may also lend copies, under the same conditions stated above, and
 you may publicly display copies.
 
 
-3. COPYING IN QUANTITY
------------------------
+**3. COPYING IN QUANTITY**
+
 
 
 If you publish printed copies (or copies in media that commonly have
@@ -470,8 +473,8 @@ Document well before redistributing any large number of copies, to give
 them a chance to provide you with an updated version of the Document.
 
 
-4. MODIFICATIONS
------------------
+**4. MODIFICATIONS**
+
 
 You may copy and distribute a Modified Version of the Document under
 the conditions of sections 2 and 3 above, provided that you release
@@ -570,8 +573,8 @@ give permission to use their names for publicity for or to assert or
 imply endorsement of any Modified Version.
 
 
-5. COMBINING DOCUMENTS
------------------------
+**5. COMBINING DOCUMENTS**
+
 
 
 You may combine the Document with other documents released under this
@@ -596,8 +599,8 @@ in the various original documents, forming one section Entitled
 and any sections Entitled ``Dedications''.  You must delete all sections
 Entitled ``Endorsements''.
 
-6. COLLECTIONS OF DOCUMENTS
-----------------------------
+**6. COLLECTIONS OF DOCUMENTS**
+
 
 You may make a collection consisting of the Document and other documents
 released under this License, and replace the individual copies of this
@@ -611,8 +614,7 @@ License into the extracted document, and follow this License in all
 other respects regarding verbatim copying of that document.
 
 
-7. AGGREGATION WITH INDEPENDENT WORKS
----------------------------------------
+**7. AGGREGATION WITH INDEPENDENT WORKS**
 
 
 A compilation of the Document or its derivatives with other separate
@@ -633,8 +635,8 @@ Otherwise they must appear on printed covers that bracket the whole
 aggregate.
 
 
-8. TRANSLATION
-----------------
+**8. TRANSLATION**
+
 
 
 Translation is considered a kind of modification, so you may
@@ -656,8 +658,8 @@ its Title (section~1) will typically require changing the actual
 title.
 
 
-9. TERMINATION
-----------------
+**9. TERMINATION**
+
 
 
 You may not copy, modify, sublicense, or distribute the Document
@@ -686,8 +688,8 @@ reinstated, receipt of a copy of some or all of the same material does
 not give you any rights to use it.
 
 
-10. FUTURE REVISIONS OF THIS LICENSE
---------------------------------------
+**10. FUTURE REVISIONS OF THIS LICENSE**
+
 
 
 The Free Software Foundation may publish new, revised versions
@@ -710,8 +712,8 @@ version permanently authorizes you to choose that version for the
 Document.
 
 
-11. RELICENSING
------------------
+**11. RELICENSING**
+
 
 
 ``Massive Multiauthor Collaboration Site'' (or ``MMC Site'') means any
@@ -742,8 +744,8 @@ under CC-BY-SA on the same site at any time before August 1, 2009,
 provided the MMC is eligible for relicensing.
 
 
-ADDENDUM: How to use this License for your documents
-------------------------------------------------------
+**ADDENDUM: How to use this License for your documents**
+
 
 To use this License in a document you have written, include a copy of
 the License in the document and put the following copyright and
