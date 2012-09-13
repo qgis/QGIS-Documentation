@@ -589,6 +589,16 @@ rst_epilog = """
    :width: 1.5em
 .. |pencil| image:: img/en/plugins_georeferencer/pencil.png
    :width: 1.5em
+.. |tracking| image:: img/en/plugins_coordinate_capture/tracking.png
+   :width: 1.5em
+.. |plugin| image:: img/en/plugins_road_graph/plugin.png
+   :width: 1.5em
+.. |spatialquery| image:: img/en/plugins_spatial_query/spatialquery.png
+   :width: 1.5em
+.. |selectesubsetlayer| image:: img/en/plugins_spatial_query/selectesubsetlayer.png
+   :width: 1.5em
+.. |selectcreatelayer| image:: img/en/plugins_spatial_query/selectcreatelayer.png
+   :width: 1.5em
 
 """
 
