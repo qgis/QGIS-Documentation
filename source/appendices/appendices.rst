@@ -4,6 +4,8 @@ Appendix
 .. index::
    single:license;GPL
 
+.. _gpl_appendix:
+
 GNU GENERAL PUBLIC LICENSE
 ---------------------------
 
@@ -282,6 +284,8 @@ HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
  exception to your version of the file, but you are not obligated to do
  so. If you do not wish to do so, delete this exception statement from
  your version.
+
+.. _gfl_appendix:
 
 GNU Free Documentation License
 -------------------------------
