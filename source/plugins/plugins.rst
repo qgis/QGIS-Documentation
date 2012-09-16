@@ -160,8 +160,8 @@ plugins, as well as plugins available in remote repositories.
 Each plugin can be either:
 
 * **not installed** - this means the plugin is available in the repository, 
-   but is not installed yet. In order to install it, select the plugin from the 
-   list and click the button **[Install plugin]**.
+  but is not installed yet. In order to install it, select the plugin from the 
+  list and click the button **[Install plugin]**.
 * **new** - this means that the plugin is newly available in the repository.
 * **installed** - this indicates that the plugin is already installed. If it is 
   also available in any repository the **[Reinstall plugin]** button will 
@@ -182,17 +182,12 @@ To install a plugin, select it from the list and click the
 in its own directory.
 
 * |nix| Linux and other unices:
-   
    * ``./share/qgis/python/plugins``
    * ``/home/\$USERNAME/.qgis/python/plugins``
-
 * |osx| Mac OS X:
-   
    * ``./Contents/MacOS/share/qgis/python/plugins``
    * ``/Users/$USERNAME/.qgis/python/plugins``
-
 * |win| Windows:
-
    * ``C:\text\Program Files\QGIS\python\plugins``
    * ``C:\text\Documents and Settings\$USERNAME\.qgis\python\plugins``
 
