@@ -175,6 +175,7 @@ rst_epilog = """
 .. |mActionSaveMapAsImage| image:: /img/en/mActionSaveMapAsImage.png
 .. |mActionNewComposer| image:: /img/en/mActionNewComposer.png
 .. |mActionComposerManager| image:: /img/en/mActionComposerManager.png
+.. |mapserver_export| image:: img/en/plugins_mapserver_export/mapserver_export.png
 .. |mActionExportMapServer| image:: /img/en/mActionExportMapServer.png
    :width: 1.5em
 .. |mActionSaveAsSVG| image:: /img/en/mActionSaveAsSVG.png
@@ -403,6 +404,8 @@ rst_epilog = """
    :width: 1.5em
 .. |wfs| image:: /img/en/wfs.png
    :width: 1.5em
+.. |ftools| image:: img/en/plugins_ftools/ftools_logo.png
+   :width: 1.5em
 .. |matrix| image:: img/en/plugins_ftools/matrix.png
    :width: 3em
 .. |sum_lines| image:: img/en/plugins_ftools/sum_lines.png
@@ -501,6 +504,8 @@ rst_epilog = """
    :width: 15em
 .. |gpstrack_polar| image:: /introduction/img/en/gpstrack_polar.png
    :width: 15em
+.. |grass| image:: /grass_integration/img/en/grass.png
+   :width: 1.5em
 .. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_mapset| image:: /grass_integration/img/en/grass_new_mapset.png
@@ -574,7 +579,7 @@ rst_epilog = """
 .. |grass_toolbox_rcontour2| image:: /grass_integration/img/en/grass_toolbox_rcontour2.png
    :width: 20em
 .. |delimited_text| image:: img/en/plugins_delimited_text/delimited_text.png
-   :width: 1.5em
+   :width: 1.5em   
 .. |mActionGDALScript| image:: img/en/plugins_georeferencer/mActionGDALScript.png
    :width: 1.5em
 .. |mActionLinkQGisToGeoref| image:: img/en/plugins_georeferencer/mActionLinkQGisToGeoref.png
@@ -588,6 +593,8 @@ rst_epilog = """
 .. |mActionCapturePoint| image:: img/en/plugins_georeferencer/mActionCapturePoint.png
    :width: 1.5em
 .. |pencil| image:: img/en/plugins_georeferencer/pencil.png
+   :width: 1.5em
+.. |coordinate_capture| image:: img/en/plugins_coordinate_capture/coordinate_capture.png
    :width: 1.5em
 .. |tracking| image:: img/en/plugins_coordinate_capture/tracking.png
    :width: 1.5em

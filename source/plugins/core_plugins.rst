@@ -7,60 +7,43 @@
 Using QGIS Core Plugins
 -----------------------
 
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| Icon                   | Plugin                   | Description                         				 | Manual Reference            		  |
-+========================+==========================+====================================================================+========================================+
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |delimited_text|       | Add Delimited Text Layer | Loads and displays delimited text files containing x,y coordinates | Chapter :ref:`label_dltext`		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |coordinate_capture|   | Coordinate Capture       | Capture mouse coordinate in different CRS				 | Chapter :ref:`coordcapt`		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |copyright_label|      | Copyright Label 	    | Draws a copyright label with information 				 | Chapter :ref:`copyrightlabel`	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| ||                     | Diagram Overlay	    | Placing diagrams on vector layers 				 | Chapter :ref:`diagram` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| ||                     | Displacement plugin	    | Handles point displacement in case they have the same position 	 | Chapter :ref:`new_generation_sym`	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |dxf2shp_converter|    | DXF2Shape Converter      | Converts from DXF to SHP file format 				 | Chapter :ref:`dxf2shape` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| ||                     | eVis 		    | Event Visualization Tool 						 | Chapter :ref:`evis` 			  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| ||                     | fTools		    | A suite of analysis, geometry, geoprocessing, and research tools	 | Chapter :ref:`ftools` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |gps_importer|         | GPS Tools                | Tools for loading and importing GPS data 				 | Chapter :ref:`label_plugingps` 	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |grass|                | GRASS 		    | Activates the mighty GRASS Toolbox 				 | Chapter :ref:`grass` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |raster-info|           | GDAL Tools               | Graphical interface for most commonly used raster functions	 | Chapter :ref:`label_plugingdaltools  ` | 
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |georeferencer|        | Georeferencer GDAL	    | Adding projection info to Rasterfiles using GDAL 			 | Chapter :ref:`georef` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |interpolation|        | Interpolation plugin     | Interpolation on base of vertices of a vector layer 		 | Chapter :ref:`interpol` 		  | 
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |mapserver_export|     | MapServer Export Plugin  | Export a saved QGIS project file to a MapServer map file		 | Chapter :ref:`mapserver_export` 	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |north_arrow|          | North Arrow 		    | Displays a north arrow overlayed onto the map			 | Chapter :ref:`northarrow` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |offline_editing_copy| | Offline Editing 	    | Offline editing and synchronizing with database			 | Chapter :ref:`offlinedit` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |osm_load|             | OpenStreetMap 	    | Visualize and edit OpenStreetMap data 				 | Chapter :ref:`plugins_osm` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |oracle_raster|        | Oracle Spatial Georaster | Access Oracle Spatial GeoRasters 					 | Chapter :ref:`oracleraster` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |plugin_installer|     | Plugin Installer         | Download and install python plugins				 | Chapter :ref:`python_plugin_installer` |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |raster_terrain|       | Raster Terrain Modelling | Compute slope, aspect, ruggedness and total curvature of DEMs 	 | Chapter :ref:`rasterrain` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| ||                     | Road graph Plugin 	    | Solve shortest path problem					 | Chapter :ref:`roadgraph` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |spiticon|             | SPIT 		    | Shapefile to Postgres/PostGIS Import Tool				 | Chapter :ref:`loading_postgis_data` 	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| || 		         | SQL Anywhere plugin      | Store vector layers within a SQL anywhere database		 | Chapter :ref:`sqlanywhere` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |scale_bar|            | Scalebar                 |Draws a scale bar 							 | Chapter :ref:`scalebar` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |spatialquery|         | Spatial Query            | Make spatial queries on vector layers				 | Chapter :ref:`spatial_query` 	  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
-| |mIconAddWfsLayer|     | WFS Plugin 		    | Add WFS layers to the QGIS canvas					 | Chapter :ref:`ogc-wfs` 		  |
-+------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
+\ 
 
+\ 
+
+\ 
+
+======================  ========================  ==================================================================  ==================================
+Icon                    Plugin                    Description                                                         Manual Reference
+======================  ========================  ==================================================================  ==================================
+|delimited_text|        Add Delimited Text Layer  Loads and displays delimited text files containing x,y coordinates  see :ref:`label_dltext`
+|coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS                           see :ref:`coordcapt`
+|dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                                see :ref:`dxf2shape`
+|event_id|              eVis                      Event Visualization Tool                                            see :ref:`evis`
+|ftools|                fTools                    A suite of analysis, geometry, geoprocessing, and research tools    see :ref:`ftools`
+|gps_importer|          GPS Tools                 Tools for loading and importing GPS data                            see :ref:`label_plugingps`
+|grass|                 GRASS                     Activates the mighty GRASS Toolbox                                  see :ref:`sec_grass`
+\                       GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
+|georeferencer|         Georeferencer GDAL        Adding projection info to Rasterfiles using GDAL                    see :ref:`georef`
+|interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer                 see :ref:`interpol`
+|mapserver_export|      MapServer Export Plugin   Export a saved QGIS project file to a MapServer map file            see :ref:`mapserver_export`
+|offline_editing_copy|  Offline Editing           Offline editing and synchronizing with database                     see :ref:`offlinedit`
+|osm_load|              OpenStreetMap             Visualize and edit OpenStreetMap data                               see :ref:`plugins_osm`
+|oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                                    see :ref:`oracleraster`
+|plugin_installer|      Plugin Installer          Download and install python plugins                                 see :ref:`python_plugin_installer`
+|raster_terrain|        Raster Terrain Modellin   Compute slope, aspect, ruggedness and total curvature of DEMs       see :ref:`rasterrain`
+\                       Road graph Plugin         Solve shortest path problem                                         see :ref:`roadgraph`
+|spiticon|              SPIT                      Shapefile to Postgres/PostGIS Import Tool                           see :ref:`loading_postgis_data`
+\                       SQL Anywhere plugin       Store vector layers within a SQL anywhere database                  see :ref:`sqlanywhere`
+|spatialquery|          Spatial Query             Make spatial queries on vector layers                               see :ref:`spatial_query`
+======================  ========================  ==================================================================  ==================================
+
+
+
+.. % removed in 1.8.0, no longer a plugin but an integral part of QGIS !!
+.. % |scale_bar|              Scalebar                    Draws a scale bar                                                    see :ref:`scalebar`
+.. % ||                       Displacement plugin         Handles point displacement in case they have the same position       see :ref:`new_generation_sym`
+.. % |copyright_label|        Copyright Label             Draws a copyright label with information                             see :ref:`copyrightlabel`
+.. % ||                       Diagram Overlay             Placing diagrams on vector layers                                    see :ref:`diagram`
+.. % |north_arrow|            North Arrow                 Displays a north arrow overlayed onto the map                        see :ref:`northarrow`
+.. % |mIconAddWfsLayer|       WFS Plugin                  Add WFS layers to the QGIS canvas                                    see :ref:`ogc-wfs`
