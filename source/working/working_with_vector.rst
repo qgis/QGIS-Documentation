@@ -8,7 +8,7 @@
 
 
 |qg| uses the OGR library to read and write vector data formats [#]_, 
-including ESRI shapefiles, MapInfo and Microsation file formats; Postgis, 
+including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, 
 Spatialite, Oracle spatial databases and many more. At the date of this 
 document, 69 vector formats are supported by the OGR library [OGRweb]_. 
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
@@ -796,23 +796,27 @@ current style symbols (using the **[Save as style]** button) and then easily
 be used in the future.
 
 .. |singlesymbol_ng_point| image:: img/en/singlesymbol_ng_point.png 
-   :width: 330
+   :width: 25em
 .. |singlesymbol_ng_line| image:: img/en/singlesymbol_ng_line.png 
-   :width: 330
+   :width: 25em
 .. |singlesymbol_ng_area| image:: img/en/singlesymbol_ng_area.png
-   :width: 330
+   :width: 25em
 
 .. _figure_symbology_1:
 
-+-----------------------------------+----------------------------------+
-| |singlesymbol_ng_point|           | |singlesymbol_ng_line|           |
-+-----------------------------------+----------------------------------+
-| 1. Single symbol point properties | 2. Single symbol line properties |
-+-----------------------------------+----------------------------------+
-| |singlesymbol_ng_area|                                               |
-+----------------------------------------------------------------------+
-| 3. Single symbol area properties                                     |
-+----------------------------------------------------------------------+
++-----------------------------------+
+| |singlesymbol_ng_point|           |
++-----------------------------------+
+| a. Single symbol point properties |
++-----------------------------------+
+| |singlesymbol_ng_line|            |
++-----------------------------------+
+| b. Single symbol line properties  |
++-----------------------------------+
+| |singlesymbol_ng_area|            |
++-----------------------------------+
+| c. Single symbol area properties  |
++-----------------------------------+
 Figure Symbology 1: Single Symbolizing options |nix|
 
 
@@ -984,15 +988,15 @@ layer type options are described in section :ref:`vector_symbol_types`.
 +------------------------------------------+
 | |symbolproperties1|                      |
 +------------------------------------------+
-| 1. Line composed from three simple lines |
+| a. Line composed from three simple lines |
 +------------------------------------------+
 | |symbolproperties2|                      |
 +------------------------------------------+
-| 2. Symbol properties for point layer     |
+| b. Symbol properties for point layer     |
 +------------------------------------------+
 | |symbolproperties3|                      |
 +------------------------------------------+
-| 3. Filling pattern for a polygon         |
+| c. Filling pattern for a polygon         |
 +------------------------------------------+
 Figure Symbology 7: Defining symbol properties |nix|
 
@@ -1310,7 +1314,7 @@ Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
 .. _figure_labels_4:
 .. figure:: img/en/label_engine.png
-   :width: 30em
+   :width: 20em
    :align: center
 
    Figure Labels 4: Dialog to change label engine settings |nix|
@@ -1356,13 +1360,18 @@ Until then QGIS (and any other software that uses GDAL/OGR) can only use a
 workaround to delete Shapefile columns. In QGIS this "workaround" is a 
 third-party plugin called Table Manager.
 
-edit widget
+Edit Widget
 -----------
 
+.. following is included to give some space between title and figure!
+
+\ 
+
+\ 
 
 .. _figure_fields_1:
 .. figure:: img/en/editwidgetsdialog.png
-   :width: 40
+   :width: 40 em
 
    Figure Fields 1: Dialog to select an edit widget for an attribute 
    column |nix|
@@ -1456,7 +1465,7 @@ dialog. To :index:`define an action`, open the vector
 Provide a descriptive name for the action. The action itself must contain 
 the name of the application that will be executed when the action is invoked. 
 You can add one or more attribute field values as arguments to the application.
- When the action is invoked any set of characters that start with a \% 
+When the action is invoked any set of characters that start with a \% 
 followed by the name of a field will be replaced by the value of that field. 
 The special characters :index:`%%` will be replaced by the value of the field 
 that was selected from the identify results or attribute table (see Using 
@@ -2205,6 +2214,10 @@ you to adjust your edits and try again.
 Advanced digitizing
 -------------------
 
+.. following provides space between header and table!!
+\ 
+
+\ 
 
 .. _table_advanced_editing:
 
@@ -2331,12 +2344,16 @@ the polygon with a right click.
    any more. This may not be a problem for most applications, but it is 
    something to consider.
 
+.. index:: Split_Features
+
 Split Features
 --------------
 
 
 You can split features using the |mActionSplitFeatures| :sup:`Split Features` 
 icon on the toolbar. Just draw a line across the feature you want to split.
+
+.. index:: Merge_Selected_Features
 
 Merge selected features
 -----------------------
@@ -2345,6 +2362,8 @@ Merge selected features
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to merge 
 features that have common boundaries and the same attributes.
 
+.. index:: Merge_Attributes_of_Selected_Features
+
 Merge attributes of selected features
 -------------------------------------
 
@@ -2352,6 +2371,8 @@ Merge attributes of selected features
 The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool 
 allows to :index:`merge attributes of features` with common boundaries and 
 attributes without merging their boundaries.
+
+.. index:: Rotate_Point_symbols
 
 Rotate Point Symbols
 --------------------
@@ -2380,6 +2401,8 @@ button again, the value will be updated in the attribute table.
 .. note:: 
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15 
    degree steps.
+
+.. index:: Create_New_Layers, New_Shapefile_Layer
 
 .. _sec_create_shape:
 
@@ -2426,6 +2449,8 @@ automatically add a :file:`.shp` extension to the name you specify. Once the
 layer has been created, it will be added to the map and you can edit it in the 
 same way as described in Section :ref:`sec_edit_existing_layer` above.
 
+.. index:: New_Spatialite_Layer
+
 .. _vector_create_spatialite:
 
 Creating a new SpatiaLite layer
@@ -2460,6 +2485,8 @@ legend and you can edit it in the same way as described in Section
 The spatialite creation dialog allows to create multiple layers without 
 closing the dialog when you click **[Apply]**.
 
+.. index:: Work_with_Attribute_Table
+
 .. _sec_attribute_table:
 
 Working with the Attribute Table
@@ -2487,6 +2514,8 @@ selected features are shown in the attribute table title.
    :align: center
 
    Figure Attributes 1: Attribute Table for Alaska layer |nix|
+
+.. index:: Attribute_Table_Selection
 
 Selecting features in an attribute table
 ----------------------------------------
@@ -2569,6 +2598,7 @@ within the dialog.
    datasources will be supported, because this feature was implemented in 
    GDAL/OGR > 1.6.0
 
+.. index:: Non_Spatial_Attribute_Tables
 
 Working with non spatial attribute tables
 =========================================
@@ -2586,6 +2616,7 @@ values or a range of values that are allowed to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section 
 :ref:`vector_attributes_tab` to find out more.
 
+.. index:: Query_Builder
 
 .. _vector_query_builder:
 
@@ -2645,7 +2676,9 @@ window without changing the current selection.
    :guilabel:`General` tab. See Section :ref:`vector_properties_dialog` for 
    more information.
 
-.. _`sec_select_by_query`:
+.. index:: Select_using_Query
+
+.. _sec_select_by_query:
 
 Select by query
 ===============
@@ -2674,6 +2707,8 @@ the right mouse menu of the layer and click on
 :menuselection:`Save selection as -->` to define the name of the output file, 
 its format and CRS (see Section :ref:`label_legend`). It is also possible to 
 specify OGR creation options within the dialog.
+
+.. index:: Field_Calculator, Calculator_Field, Derived_Fields
 
 .. _vector_field_calculator:
 
@@ -2751,6 +2786,7 @@ calculate the length of the ``railroads`` layer from the
 Due to limited space screen, not all the operators are available through 
 the buttons. They are all listed in the following table.
 
+.. index:: Field_Calculator_Operators
 
 ===================================  ========================================================
 List of operators supported by the field calculator
