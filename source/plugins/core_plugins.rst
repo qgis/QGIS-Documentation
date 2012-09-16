@@ -1,9 +1,11 @@
+.. :index::
+    single:core plugins
+
+.. _core_plugins:
+
 -----------------------
 Using QGIS Core Plugins
 -----------------------
-.. _`core_plugins`:
-.. :index::
-    single:core plugins
 
 +------------------------+--------------------------+--------------------------------------------------------------------+----------------------------------------+
 | Icon                   | Plugin                   | Description                         				 | Manual Reference            		  |

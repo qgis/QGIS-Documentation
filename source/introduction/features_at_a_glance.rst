@@ -966,7 +966,7 @@ Here is a sampling of other ways to produce output files:
   dialog where you can layout and print the current map canvas (see
   Section :ref:`label_printcomposer`).
 
-.. _subsec_gui_options:
+.. _gui_options:
 
 GUI Options 
 =============
