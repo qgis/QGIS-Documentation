@@ -23,7 +23,7 @@ Icon                    Plugin                    Description                   
 |ftools|                fTools                    A suite of analysis, geometry, geoprocessing, and research tools    see :ref:`ftools`
 |gps_importer|          GPS Tools                 Tools for loading and importing GPS data                            see :ref:`plugin_gps`
 |grass|                 GRASS                     Activates the mighty GRASS Toolbox                                  see :ref:`sec_grass`
-|raster_info|           GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
+|raster-info|           GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
 |georeferencer|         Georeferencer GDAL        Adding projection info to Rasterfiles using GDAL                    see :ref:`georef`
 |interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer                 see :ref:`interpol`
 |mapserver_export|      MapServer Export Plugin   Export a saved QGIS project file to a MapServer map file            see :ref:`mapserver_export`

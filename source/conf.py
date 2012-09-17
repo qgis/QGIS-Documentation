@@ -396,7 +396,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconNew| image:: /img/en/mIconNew.png
    :width: 1.5em
-.. |raster_info| image:: /img/en/raster_info.png
+.. |raster-info| image:: /img/en/raster-info.png
    :width: 1.5em
 .. |plugin_installer| image:: /img/en/plugin_installer.png
    :width: 1.5em
