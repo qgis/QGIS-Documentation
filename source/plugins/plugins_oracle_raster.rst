@@ -1,6 +1,7 @@
 ..  !TeX  root  =  user_guide.tex
 
-.. _`plugins/plugins_oracleraster/oracleraster`:
+.. _oracle_raster:
+
 Oracle GeoRaster Plugin
 =======================
 

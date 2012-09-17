@@ -21,15 +21,15 @@ Icon                    Plugin                    Description                   
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                                see :ref:`dxf2shape`
 |event_id|              eVis                      Event Visualization Tool                                            see :ref:`evis`
 |ftools|                fTools                    A suite of analysis, geometry, geoprocessing, and research tools    see :ref:`ftools`
-|gps_importer|          GPS Tools                 Tools for loading and importing GPS data                            see :ref:`label_plugingps`
+|gps_importer|          GPS Tools                 Tools for loading and importing GPS data                            see :ref:`plugin_gps`
 |grass|                 GRASS                     Activates the mighty GRASS Toolbox                                  see :ref:`sec_grass`
-\                       GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
+|raster_info|           GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
 |georeferencer|         Georeferencer GDAL        Adding projection info to Rasterfiles using GDAL                    see :ref:`georef`
 |interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer                 see :ref:`interpol`
 |mapserver_export|      MapServer Export Plugin   Export a saved QGIS project file to a MapServer map file            see :ref:`mapserver_export`
 |offline_editing_copy|  Offline Editing           Offline editing and synchronizing with database                     see :ref:`offlinedit`
 |osm_load|              OpenStreetMap             Visualize and edit OpenStreetMap data                               see :ref:`plugins_osm`
-|oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                                    see :ref:`oracleraster`
+|oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                                    see :ref:`oracle_raster`
 |plugin_installer|      Plugin Installer          Download and install python plugins                                 see :ref:`python_plugin_installer`
 |raster_terrain|        Raster Terrain Modellin   Compute slope, aspect, ruggedness and total curvature of DEMs       see :ref:`rasterrain`
 \                       Road graph Plugin         Solve shortest path problem                                         see :ref:`roadgraph`

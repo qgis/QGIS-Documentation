@@ -396,6 +396,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconNew| image:: /img/en/mIconNew.png
    :width: 1.5em
+.. |raster_info| image:: /img/en/raster_info.png
+   :width: 1.5em
+.. |plugin_installer| image:: /img/en/plugin_installer.png
+   :width: 1.5em
 .. |gpstrack_barchart| image:: /introduction/img/en/gpstrack_barchart.png
    :width: 1.5em
 .. |gpstrack_polarchart| image:: /introduction/img/en/gpstrack_polarchart.png
@@ -504,7 +508,7 @@ rst_epilog = """
    :width: 15em
 .. |gpstrack_polar| image:: /introduction/img/en/gpstrack_polar.png
    :width: 15em
-.. |grass| image:: /grass_integration/img/en/grass.png
+.. |grass| image:: /grass_integration/img/en/grasslogo.png
    :width: 1.5em
 .. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
    :width: 1.5em
