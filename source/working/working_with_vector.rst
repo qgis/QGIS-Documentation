@@ -360,7 +360,7 @@ unique constraint, preferably indexed).
 
 .. index:: shp2pgsql
 
-.. _sec_loading_postgis_data:
+.. _loading_postgis_data:
 
 .. _vector_import_data_in_postgis:
 
@@ -399,6 +399,8 @@ reference systems and projections.
    your PostGIS distribution.
 
 .. index:: SPIT, Shapefile_to_Postgis_Import_Tool
+
+.. _spit_plugin:
 
 **SPIT Plugin**
 

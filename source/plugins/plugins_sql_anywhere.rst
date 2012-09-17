@@ -1,6 +1,6 @@
 ..  !TeX  root  =  user_guide.tex
 
-.. _`label_sqlanywhere`:
+.. _sqlanywhere:
 
 SQL Anywhere Plugin
 ====================
