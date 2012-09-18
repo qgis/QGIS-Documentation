@@ -243,7 +243,17 @@ The GRASS vector data model
 .. index::
    single:GRASS;vector data model
 
-It is important to understand the GRASS vector data model prior to digitizing.:index:`GRASS!digitizing` In general, GRASS uses a topological vector model.:index:`GRASS!topology` This means that areas are not represented as closed polygons, but by one or more boundaries. A boundary between two adjacent areas is digitized only once, and it is shared by both areas.
+It is important to understand the GRASS vector data model prior to digitizing.
+
+.. index::
+   single:GRASS;digitizing
+
+In general, GRASS uses a topological vector model.
+
+.. index::
+   single:GRASS;topology
+
+This means that areas are not represented as closed polygons, but by one or more boundaries. A boundary between two adjacent areas is digitized only once, and it is shared by both areas.
 Boundaries must be connected and closed without gaps. An area is identified (and labeled) by the **centroid** of the area.
 
 Besides boundaries and centroids, a vector map can also contain points and lines. All these geometry elements can be mixed in one vector and will be represented in different so called 'layers' inside one GRASS vector map. So in GRASS a layer is not a vector or raster map but a level inside a vector layer. This is important to distinguish carefully.
@@ -374,9 +384,10 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
 
    If you would like to add more layers to your dataset, just add a new number in the 'Field (layer)' entry box and press return. In the Table tab you can create     your new table connected to your new layer.
 
+.. _label_settingtab:
+
 **Settings Tab**
 
-`label_settingtab`
 .. index::
    single:GRASS;snapping tolerance
 
@@ -439,7 +450,11 @@ button.
 .. index::
    single:GRASS;region display
 
-With the |grass_region_edit| :sup:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click **[OK]**. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click **[OK]**.:index:`GRASS!region!editing`
+With the |grass_region_edit| :sup:`Edit current GRASS region` icon you can open a dialog to change the current region and the symbology of the GRASS region rectangle in the QGIS canvas. Type in the new region bounds and resolution and click **[OK]**. It also allows to select a new region interactively with your mouse on the QGIS canvas. Therefore click with the left mouse button in the QGIS canvas, open a rectangle, close it using the left mouse button again and click **[OK]**.
+
+.. index::
+   single:GRASS;region editing
+
 The GRASS module :file:`g.region` provide a lot more parameters to define an appropriate region extend and resolution for your raster analysis. You can use these parameters with the GRASS Toolbox, described in Section :ref:`subsec_grass_toolbox`.
 
 .. _subsec_grass_toolbox:
