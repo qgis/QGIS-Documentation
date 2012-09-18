@@ -10,7 +10,7 @@ Working with Raster Data
 .. % comment out the following line:
 .. %\updatedisclaimer
 
-.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid; GeoTIFF
+.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
 .. index:: Erdas Imagine 
 
 This Section describes how to visualize and set raster layer properties.
