@@ -154,7 +154,11 @@ options.
 |                      | raster.                                               |
 +----------------------+-------------------------------------------------------+
 
-.. maybe simpler rewording of the description is necessary 
+.. maybe simpler rewording of the description is necessary
+
+\
+
+\
 
 .. _`plugins/plugins_gdaltools/raster_menu`:
 
