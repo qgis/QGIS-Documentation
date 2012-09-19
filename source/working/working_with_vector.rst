@@ -1057,7 +1057,7 @@ The old |qg| symbology supports the following renderers:
 * **Unique value** - objects are classified by the unique values within a specified field with each value having a different symbol.
 
 
-To :index:`change the symbology` for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
+To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
 
 .. |vectorClassifySingle| image:: img/en/vectorClassifySingle.png
    :width: 330
@@ -1492,7 +1492,7 @@ and ``Y`` field and the value of these can be used in the action with
 available from the :guilabel:`Identify Results` dialog box, not the 
 :guilabel:`Attribute Table` dialog box.
 
-Two :index:`example actions` are shown below:
+Two :index:'example actions' are shown below:
 
   *  ``konqueror http://www.google.com/search?q=%nam``
   *  ``konqueror http://www.google.com/search?q=%%``
@@ -1762,7 +1762,7 @@ Editing
 =======
 
 
-|qg| supports various capabilities for :index:`editing` OGR, PostGIS and 
+|qg| supports various capabilities for :index:'editing' OGR, PostGIS and 
 Spatialite vector layers. **Note** - the procedure for editing GRASS layers 
 is different - see Section :ref:`grass_digitizing` for details.
 
@@ -2495,7 +2495,7 @@ Working with the Attribute Table
 --------------------------------
 
 
-The :index:`attribute table` displays features of a selected layer. Each row 
+The :index:'attribute table' displays features of a selected layer. Each row 
 in the table represents one map feature and each column contains a particular 
 piece of information about the feature. Features in the table can be searched, 
 selected, moved or even edited.
