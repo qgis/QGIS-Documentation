@@ -8,8 +8,8 @@ Plugins
    :maxdepth: 2
 
    plugins
+   core_plugins
    plugins_coordinate_capture
-   plugins_decorations
    plugins_delimited_text
    plugins_dxf2shape_converter
    plugins_evis
@@ -27,3 +27,4 @@ Plugins
    plugins_road_graph
    plugins_spatial_query
    plugins_sql_anywhere
+.. plugins_decorations from 1.8.0 no longer a plugin, integrated in QGIS product

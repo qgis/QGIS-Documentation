@@ -20,8 +20,6 @@ Welcome to QGIS manual
 	grass_integration/grass_integration
 	print_composer/print_composer
 	plugins/plugins_index
-	plugins/plugins
-	plugins/core_plugins
 	preamble/help_and_support
         appendices/appendices
 
