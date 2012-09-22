@@ -8,7 +8,7 @@ Plugins
    :maxdepth: 2
 
    plugins
-   plugins_coordinate_capture/index
+   plugins_coordinate_capture
    plugins_decorations
    plugins_delimited_text
    plugins_dxf2shape_converter
