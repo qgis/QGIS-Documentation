@@ -1,13 +1,9 @@
-.. %  !TeX  root  =  user_guide.tex 
+
 .. _`label_dltext`: 
 
 Delimited Text Plugin
 =========================================
     
-
-.. % when the revision of a section has been finalized, 
-   % comment out the following line:
-   % \updatedisclaimer
 
 The Delimited Text plugin allows you to load a delimited text file as a layer in QGIS. 
 
@@ -50,7 +46,7 @@ Using the Plugin
 ~~~~~~~~~~~~~~~~
 
 To use the plugin you must first enable it as described in Section 
-:ref:`plugins/plugins/managing_plugins`.
+:ref:`managing_plugins`.
 
 Click the new toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` 
 to open the Delimited Text dialog as shown in figure_text_1_.
@@ -63,15 +59,15 @@ to open the Delimited Text dialog as shown in figure_text_1_.
    Figure Text 1: Delimited Text Dialog |nix|
 
 First select the file (e.g., :file:`qgis_sample_data/csv/elevp.csv`) to 
-import by clicking on the :guilabel:`Browse` button. Once the file is selected, 
+import by clicking on the **[Browse]** button. Once the file is selected, 
 the plugin attempts to parse the file using the last used delimiter, in this 
 case a semi-colon (;). To properly parse the file, it 
 is important to select the correct delimiter. To change the delimiter to tab use 
-\t (this is a regular expression for the tab character).
+\\t (this is a regular expression for the tab character).
 
 Once the file is parsed, choose the X and Y fields from the drop down lists and 
 if available also the WKT field for the CRS information. Finally enter a Layer 
-name (e.g., :file:`elevp` ) as shown in figure_text_1_ . To add the layer to the map, click :guilabel:`OK`. The delimited text file now 
+name (e.g., :file:`elevp` ) as shown in figure_text_1_ . To add the layer to the map, click **[OK]**. The delimited text file now 
 behaves as any other map layer in QGIS.
 
 
