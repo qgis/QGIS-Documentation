@@ -1,11 +1,9 @@
+
 .. _`ftools`: 
 
 fTools Plugin
 =============
 
-.. % when the revision of a section has been finalized, 
-.. % comment out the following line:
-.. % \updatedisclaimer
 
 The goal of the fTools python plugin is to provide a one-stop resource for
 many common vector-based GIS tasks, without the need for additional software, 
@@ -14,19 +12,23 @@ data management and analysis functions that are both fast and functional.
 
 fTools is now automatically installed and enabled in new versions of QGIS, and 
 as with all plugins, it can be disabled and enabled using the Plugin Manager 
-(See Section :ref:`plugins/plugins/load_core_plugin`).  When enabled, the fTools plugin 
+(See Section :ref:`load_core_plugin`).  When enabled, the fTools plugin 
 adds a :menuselection:`Vector` menu to QGIS, providing functions ranging from 
 Analysis and Research Tools to Geometry and Geoprocessing Tools, as well as 
 several useful Data Management Tools.
 
 .. _`ftools_function`:
+
 **fTools functions**
 
 table_ftools_1_ through table_ftools_5_ list 
 the functions available via the fTools plugin, along with a brief description 
-of each function. For further information on an individual fTools function, 
-click the :menuselection:`fTools Information -->` menu item in the 
-:menuselection:`Vector` menu.
+of each function. 
+
+.. not available anymore!! should be described in this manual from older release..
+.. For further information on an individual fTools function, 
+.. click the :menuselection:`fTools Information -->` menu item in the 
+.. :menuselection:`Vector` menu.
 
 .. index::
    single:Analysis tools
@@ -157,7 +159,7 @@ Table Ftools 3: fTools Geoprocessing tools
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
 | |check_geometry|    | Check geometry  | Check polygons for intersections,    |
-|                     |                 |closed-holes, and fix node ordering.  |
+|                     |                 | closed-holes, and fix node ordering. |
 +---------------------+-----------------+--------------------------------------+
 | |export_geometry|   | Export/Add      | Add vector layer geometry info to    |
 |                     | geometry columns| point (XCOORD, YCOORD), line         |
@@ -166,7 +168,7 @@ Table Ftools 3: fTools Geoprocessing tools
 +---------------------+-----------------+--------------------------------------+
 | |centroids|         | Polygon         | Calculate the true centroids for     |
 |                     | centroids       | each polygon in an input polygon     |
-|                     |                 |layer.                                |
+|                     |                 | layer.                               |
 +---------------------+-----------------+--------------------------------------+
 | |delaunay|          | Delaunay        | Calculate and output (as polygons)   |
 |                     | triangulation   | the delaunay triangulation of an     |
