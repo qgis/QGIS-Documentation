@@ -1,15 +1,15 @@
+
 .. _`label_plugingdaltools`:
 
 GDAL Tools Plugin
 =================
 
-.. % when the revision of a section has been finalized, 
-.. % comment out the following line:
-.. % \updatedisclaimer
 
 .. _`whatsgdal`:
+
 What is GDALTools?
 ------------------
+
 
 The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial 
 Data Abstraction Library, http://gdal.osgeo.org . These are raster management 
@@ -20,8 +20,10 @@ collection of one or more raster files. These tools are available when the
 plugin is installed and activated.
 
 .. _`gdal_lib`:
+
 The GDAL Library
 ----------------
+
 
 The GDAL library consists of a set of command line programs, each with a large 
 list of options. Users comfortable with running commands from a terminal may 
@@ -156,19 +158,20 @@ options.
 
 .. maybe simpler rewording of the description is necessary
 
-\
+\ 
 
-\
+ \ 
 
-.. _`plugins/plugins_gdaltools/raster_menu`:
+.. _figure_GDAL_1:
 
 .. figure:: img/en/plugins_gdaltools/raster_menu.png
    :align: center
    :width: 40em
 
-   The *GDALTools* menu list
+   Figure GDAL 1: The *GDALTools* menu list
 
 .. _`gdal_examples`:
+
 Examples
 --------
 
@@ -176,35 +179,35 @@ Below are some examples of use of the tools.
 
 **Getting information about a raster**
 
-.. _`plugins/plugins_gdaltools/gdalinfo`:
+.. _figure_GDAL_2:
 
 .. figure:: img/en/plugins_gdaltools/gdalinfo.png
    :align: center
    :width: 40em
 
-   The *Information* dialog window
+   Figure GDAL 2: The *Information* dialog window
 
 **Creating contour lines**
 
 This example will create contour lines from an SRTM elevation tile.
 
-.. _`plugins/plugins_gdaltools/gdal_contour`:
+.. _figure_GDAL_3:
 
 .. figure:: img/en/plugins_gdaltools/gdal_contour.png
    :align: center
    :width: 40em
 
-   The *Contours* dialog window
+   Figure GDAL 3: The *Contours* dialog window
 
 and the result:
 
-.. _`plugins/plugins_gdaltools/qgis_contours`:
+.. _figure_GDAL_4:
 
 .. figure:: img/en/plugins_gdaltools/qgis_contours.png
    :align: center
    :width: 40em
 
-   The resulting contours layer
+   Figure GDAL 4: The resulting contours layer
 
 **Using GDALwarp to reproject a raster**
 
@@ -212,11 +215,11 @@ Here's the dialog window for reprojecting a landcover image, originally in the
 Albers Equal Area projection for Alaska (from the QGIS sample dataset) into 
 Lon/Lat WGS84 (EPSG:4326).
 
-.. _`plugins/plugins_gdaltools/gdalwarp`:
+.. _figure_GDAL_5:
 
 .. figure:: img/en/plugins_gdaltools/gdalwarp.png
    :align: center
    :width: 40em
 
-   The *GDAL warp* dialog window
+   Figure GDAL 5: The *GDAL warp* dialog window
 
