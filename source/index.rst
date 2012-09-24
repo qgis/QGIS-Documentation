@@ -22,5 +22,6 @@ Welcome to QGIS manual
 	plugins/plugins_index
 	preamble/help_and_support
         appendices/appendices
+	literature_web/literature_and_web_references
 
 
