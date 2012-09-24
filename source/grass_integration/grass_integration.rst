@@ -96,7 +96,7 @@ GRASS LOCATION and MAPSET
 
 GRASS data are stored in a directory referred to as GISDBASE. This directory often called :file:`grassdata`, must be created before you start working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects stored in subdirectories called :file:`LOCATION`.
 Each :file:`LOCATION` is defined by its coordinate system, map projection and geographical boundaries. Each :file:`LOCATION` can have several
-:file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler \& Mitasova 2008 [neteler_mitasova08]_). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
+:file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (:ref:`Neteler_&_Mitasova_2008`). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
 
 .. _figure_grass_location_1:
 .. figure:: img/en/grass_location.png
