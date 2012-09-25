@@ -10,7 +10,7 @@
 |qg| uses the OGR library to read and write vector data formats [#]_, 
 including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, 
 Spatialite, Oracle spatial databases and many more. At the date of this 
-document, 69 vector formats are supported by the OGR library [OGRweb]_. 
+document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`). 
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note:: 
@@ -496,7 +496,7 @@ The syntax for creating a GiST [#]_ index is:
 
 Note that for large tables, creating the index can take a long time. 
 Once the index is created, you should perform a ``VACUUM ANALYZE``. 
-See the PostGIS documentation [PostGISweb]_ for more information.
+See the PostGIS documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more information.
 
 The following is an example of creating a GiST index:
 ::
