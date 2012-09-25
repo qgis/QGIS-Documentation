@@ -1,14 +1,9 @@
-..  !TeX  root  =  user_guide.tex
 
 .. _oracle_raster:
 
 Oracle GeoRaster Plugin
 =======================
 
-
-.. when the revision of a section has been finalized, 
-.. comment out the following line:
-.. \updatedisclaimer
 
 In Oracle databases, raster data can be stored in SDO\_GEORASTER objects available with the 
 Oracle Spatial extension. In QGIS, the |oracle_raster| :sup:`OracleGeoRasterPlugin`
@@ -30,76 +25,83 @@ Managing connections
 
 
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager (see Section 
-:ref:`plugins/plugins/load_core_plugin`). The first time you load a GeoRaster in QGIS, you must create a 
+:ref:`load_core_plugin`). The first time you load a GeoRaster in QGIS, you must create a 
 connection to the Oracle database that contains the data. To do this, begin by clicking on 
 the |oracle_raster| :sup:`Select GeoRaster` toolbar button, it will open the Select Oracle 
-Spatial GeoRaster dialog window. Click on :guilabel:`New` to open the dialog window, and specify 
-the connection parameters (See Figure `plugins/plugins_oracle_raster/OracleCreate`_ ):
+Spatial GeoRaster dialog window. Click on **[New]** to open the dialog window, and specify 
+the connection parameters (See Figure_oracle_raster_1_):
 
 
-.. FIXME need to define rst style for [label=--]
 *  **Name**: Enter a name for the database connection.
 *  **Database instance**: Enter the name of the database that you will connect to.
 *  **Username**: Specify your own username that you will use to access the database.
-*  **Password**: The password associated with your username that is required to access the database.
+*  **Password**: The password associated with your username that is required to access 
+   the database.
 
 
-.. _`plugins/plugins_oracle_raster/OracleCreate`:
+.. _Figure_oracle_raster_1:
 
 .. figure:: img/en/plugins_oracle_raster/oracle_create_dialog.png
    :align: center
    :width: 20em
 
-   Create Oracle connection dialog
+   Figure Oracle Raster 1: Create Oracle connection dialog
 
-Now, back on the main Oracle Spatial GeoRaster dialog window (See Figure `plugins/plugins_oracle_raster/OracleSelect`_), use the drop-down list to choose one connection, and use the :guilabel:`Connect` button to establish a connection. You 
-may also :guilabel:`Edit` the connection by opening the previous dialog and making changes to the connection 
-information, or use the :guilabel:`Delete` button to remove the connection from the drop-down list.
+Now, back on the main Oracle Spatial GeoRaster dialog window (See Figure_oracle_raster_2_), 
+use the drop-down list to choose one connection, and use the **[Connect]** button to 
+establish a connection. You may also **[Edit]** the connection by opening the previous 
+dialog and making changes to the connection information, or use the **[Delete]** button 
+to remove the connection from the drop-down list.
 
 Selecting a GeoRaster
 ---------------------
 
 
-Once a connection has been established, the sub-datasets window will show the names of all the tables that 
-contains GeoRaster columns in that database in the format of a GDAL subdataset name.
+Once a connection has been established, the sub-datasets window will show the names 
+of all the tables that contains GeoRaster columns in that database in the format of 
+a GDAL subdataset name.
 
-Click on one of the listed subdatasets and then click on :guilabel:`Select` to choose the table name. Now another 
-list of subdatasets will show with the names of GeoRaster columns on that table. This is usually a short list, 
-since most users will not have more than one or two GeoRaster columns on the same table.
+Click on one of the listed subdatasets and then click on **[Select]** to 
+choose the table name. Now another list of subdatasets will show with the names of 
+GeoRaster columns on that table. This is usually a short list, since most users 
+will not have more than one or two GeoRaster columns on the same table.
 
-Click on one of the listed subdatasets and then click on :guilabel:`Select` to choose one of the the table/column 
-combination. The dialog will now show all the rows that contains GeoRaster objects. Note that the subdataset 
-list will now show the Raster Data Table and Raster Id's pairs.
+Click on one of the listed subdatasets and then click on **[Select]** to choose 
+one of the the table/column combination. The dialog will now show all the rows 
+that contains GeoRaster objects. Note that the subdataset list will now show the 
+Raster Data Table and Raster Id's pairs.
 
-At anytime the Selection entry can be edited in order to go directly to a known GeoRaster or to go back to the 
-beginning and select another table name.
+At anytime the Selection entry can be edited in order to go directly to a known 
+GeoRaster or to go back to the beginning and select another table name.
 
-.. _`plugins/plugins_oracle_raster/OracleSelect`:
+.. _Figure_oracle_raster_2:
 
 .. figure:: img/en/plugins_oracle_raster/oracle_select_dialog.png
    :align: center
-   :width: 20em
+   :width: 30em
 
-   Select Oracle GeoRaster dialog
+   Figure Oracle Raster 2: Select Oracle GeoRaster dialog
 
 
-The Selection data entry can also be used to enter a Where clause at the end of the  identification string, e.g. 'geor:scott/tiger@orcl,gdal_import,raster,geoid='. 
-
+The Selection data entry can also be used to enter a Where clause at the end of 
+the identification string, e.g. ``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. 
 See http://www.gdal.org/frmt_georaster.html for more information.
 
 Displaying GeoRaster
 --------------------
 
 
-Finally, by selecting a GeoRaster from the list of Raster Data Table and Raster Id's, the raster image will be 
-loaded into QGIS.
+Finally, by selecting a GeoRaster from the list of Raster Data Table and Raster 
+Id's, the raster image will be loaded into QGIS.
 
-The Select Oracle Spatial GeoRaster dialog window can be closed now and next time it opens it will keep the same 
-connection, and will show the same previous list of subdataset making it very easy to open up another image 
-from the same context.
+The Select Oracle Spatial GeoRaster dialog window can be closed now and next time 
+it opens it will keep the same connection, and will show the same previous list 
+of subdataset making it very easy to open up another image from the same context.
 
-**Note:** GeoRasters that contains pyramids will display much faster but the pyramids need to be generated 
-outside of QGIS using Oracle PL/SQL or gdaladdo.
+**Note:** 
+
+   GeoRasters that contains pyramids will display much faster but the pyramids 
+   need to be generated outside of QGIS using Oracle PL/SQL or gdaladdo.
 
 The following is example using gdaladdo: ::
 
@@ -121,6 +123,3 @@ cd .. ::
        COMMIT;
    END;
    /
-
-
-.. \FloatBarrier
