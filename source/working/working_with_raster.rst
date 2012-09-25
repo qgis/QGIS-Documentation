@@ -14,12 +14,12 @@ Working with Raster Data
 .. index:: Erdas Imagine 
 
 This Section describes how to visualize and set raster layer properties.
-|qg| uses the :index:`GDAL` library to read and write raster data formats [1], 
+|qg| uses the :index:`GDAL` library to read and write raster data formats [#]_, 
 including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine 
 and many more. 
 
 At the date of this document, more than 100 raster formats are supported 
-by the GDAL library [#GDALweb]_ . A complete list is available at 
+by the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A complete list is available at 
 http://www.gdal.org/formats_list.html.
 
 **Note** Not all of the listed formats may work in QGIS for various 
@@ -408,4 +408,4 @@ Apart from the raster calculator, additional raster analysis in |qg| 1.7 is prov
 by the GDALTools core plugin. Please refer to section :ref:`label_plugingdaltools` 
 for more information.
  
-.. [1] GRASS raster support is supplied by a native QGIS data provider plugin. 
+.. [#] GRASS raster support is supplied by a native QGIS data provider plugin. 
