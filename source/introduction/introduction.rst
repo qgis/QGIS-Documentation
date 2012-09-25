@@ -9,7 +9,7 @@ Introduction To GIS
 .. comment out the following line:
 .. \updatedisclaimer
 
-A Geographical Information System (GIS) ([1])
+A Geographical Information System (GIS) (Mitchell 2005 :ref:`literature_and_web`)
 is a collection of software that allows you to create, visualize, query and
 analyze geospatial data. Geospatial data refers to information about the
 geographic location of an entity. This often involves the use of a
@@ -141,7 +141,3 @@ building on the former.
    with the last point being at the same location as the first, we call 
    this a polygon. A triangle, circle, rectangle, etc. are all polygons. 
    The key feature of polygons is that there is a fixed area within them.
-
-.. [1] This chapter is by Tyler Mitchell (http://www.oreillynet.com/pub/wlg/7053) and used under the Creative Commons License. Tyler is the author of     *Web Mapping Illustrated}, published by O'Reilly, 2005.* [#mitchel05]_ 
-
-
