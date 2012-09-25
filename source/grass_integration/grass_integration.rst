@@ -12,7 +12,7 @@ GRASS GIS Integration
 ..  comment out the following line:
 ..  \updatedisclaimer
 
-The GRASS plugin provides access to GRASS GIS [GRASSweb]_ databases and functionalities. This includes visualization of GRASS raster and vector layers, digitizing vector layers, editing vector attributes, creating new vector layers and analysing GRASS 2D and 3D data with more than 300 GRASS modules.
+The GRASS plugin provides access to GRASS GIS (see GRASS-PROJECT :ref:`literature_and_web`) databases and functionalities. This includes visualization of GRASS raster and vector layers, digitizing vector layers, editing vector attributes, creating new vector layers and analysing GRASS 2D and 3D data with more than 300 GRASS modules.
 
 In this Section we'll introduce the plugin functionalities and give some examples on managing and working with GRASS data. Following main features are provided with the toolbar menu, when you start the GRASS plugin, as described in section :ref:`sec_starting_grass` :
 
@@ -96,7 +96,7 @@ GRASS LOCATION and MAPSET
 
 GRASS data are stored in a directory referred to as GISDBASE. This directory often called :file:`grassdata`, must be created before you start working with the GRASS plugin in QGIS. Within this directory, the GRASS GIS data are organized by projects stored in subdirectories called :file:`LOCATION`.
 Each :file:`LOCATION` is defined by its coordinate system, map projection and geographical boundaries. Each :file:`LOCATION` can have several
-:file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (:ref:`Neteler_&_Mitasova_2008`). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
+:file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler & Mitasova 2008 :ref:`literature_and_web`). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
 
 .. _figure_grass_location_1:
 .. figure:: img/en/grass_location.png
@@ -151,8 +151,7 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    :file:`LOCATION`. You can name it whatever you like - we used demo.
    [#]_, GRASS automatically creates a special :file:`MAPSET` called :file:`PERMANENT` designed to
    store the core data for the project, its default spatial extend and
-   coordinate system definitions (Neteler \& Mitasova 2008
-   [neteler_mitasova08]_).}
+   coordinate system definitions (Neteler & Mitasova 2008 :ref:`literature_and_web`)
 #. Check out the summary to make sure it's correct and click
    **[Finish]**.
 #. The new :file:`LOCATION alaska` and two :file:`MAPSETs demo`
@@ -171,8 +170,7 @@ Adding a new MAPSET
 --------------------
 
 A user has only write access to a GRASS :file:`MAPSET` he created. This means that besides access to his own :file:`MAPSET`, each user can read maps in other user's :file:`MAPSETs`, but he can modify or remove only the maps in his own :file:`MAPSET`. All :file:`MAPSETs` include a
-:file:`WIND` file that stores the current boundary coordinate values and the currently selected raster resolution (Neteler \& Mitasova 2008
-[neteler_mitasova08]_, see Section :ref:`sec_grass_region`).
+:file:`WIND` file that stores the current boundary coordinate values and the currently selected raster resolution (Neteler & Mitasova 2008 :ref:`literature_and_web`, see Section :ref:`sec_grass_region`).
 
 
 #.  Start QGIS and make sure the GRASS plugin is loaded.
@@ -294,7 +292,7 @@ In GRASS it is possible to organize all sort of geometry types (point, line and 
 
 .. tip:: **Creating an attribute table for a new GRASS vector layer**
    
-   If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see Figure  `grass_digitizing_table`_).
+   If you want to assign attributes to your digitized geometry features, make sure to create an attribute table with columns before you start digitizing (see figure_grass_digitizing_5_).
 
 .. _grass_digitizing:
 
@@ -315,7 +313,7 @@ The tools and settings are discussed in the following sections.
 
 **Toolbar**
 
-In Figure grass_digitizing_1_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table table_grass_digitizing_1_
+In figure_grass_digitizing_1_ you see the GRASS digitizing toolbar icons provided by the GRASS plugin. Table table_grass_digitizing_1_
 explains the available functionalities.
 
 .. _figure_grass_digitizing_1:
@@ -494,7 +492,7 @@ It is also possible to customize the GRASS Toolbox content. This procedure is de
 As shown in figure_grass_toolbox_1_ , you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
 
 Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and
-:guilabel:`Manual`. In Figure figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
+:guilabel:`Manual`. In figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
 
 .. _figure_grass_toolbox_2:
 
