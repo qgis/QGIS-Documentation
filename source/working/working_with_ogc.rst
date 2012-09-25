@@ -351,7 +351,7 @@ server, generally collected from the Capabilities statement returned from
 that server.
 
 Many definitions can be gleaned by reading the 
-`WMS standards <http://www.opengeospatial.org/standards/wms/>`_, 
+WMS standards (see OPEN-GEOSPATIAL-CONSORTIUM :ref:`literature_and_web`), 
 but here are a few handy definitions:
 
 * **Server Properties**
