@@ -1,11 +1,12 @@
+
 .. _`roadgraph`:
 
 Road Graph Plugin
 =================
 
-The |plugin| :sup:`Road Graph` Plugin is a C++ plugin for QGIS, that
-calculates the shortest path between two points on any polyline layer and
-plots this path over the road network.
+The Road Graph Plugin is a C++ plugin for QGIS, that calculates the 
+shortest path between two points on any polyline layer and plots this 
+path over the road network.
 
 **Main features**:
 
@@ -36,25 +37,26 @@ dialog.
 Usage
 ~~~~~
 
+
 After plugin activation you will see additional panel on the left side of
 the main QGIS window. Now make some definitions to the :guilabel:`Road graph
 settings` dialog in the menu :menuselection:`Plugins --> Road Graph`.
 
-.. `roadgraphsettings`:
+.. _figure_road_graph_1:
 
 .. figure:: img/en/plugins_road_graph/roadgraph_settings.png
    :align: center
    :width: 20 em
 
-   Define settings for the road graph plugin |nix|
+   Figure Road Graph 1: Define settings for the road graph plugin |nix|
 
 Select a Start and a Stop point in the road network layer and click on
-:guilabel:`Calculate`.
+**[Calculate]**.
 
-.. `roadgraphsample`:
+.. _figure_road_graph_2:
 
 .. figure:: img/en/plugins_road_graph/roadgraph_sample.png
    :align: center
-   :width: 20 em
+   :width: 40 em
 
-   Road Graph Plugin |nix|
+   Figure Road Graph 2: Road Graph Plugin |nix|
