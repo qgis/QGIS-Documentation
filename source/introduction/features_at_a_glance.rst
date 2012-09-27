@@ -292,7 +292,7 @@ Menu Option                                                     Shortcut        
 |mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionDraw| :guilabel:`Refresh`                               :kbd:`Ctrl+R`                                                     :guilabel:`Map Navigation`
-:menuselection:`Tile scale slider`                              \                     see :ref:`sec_tilesets`                     :guilabel:`Tile scale`
+:menuselection:`Tile scale slider`                              \                     see :ref:`tilesets`                         :guilabel:`Tile scale`
 :menuselection:`Live GPS tracking`                              \                     see :ref:`sec_gpstracking`                  :guilabel:`GPS Information`
 ==============================================================  ====================  ==========================================  =============================== 
 
@@ -302,17 +302,17 @@ Menu Option                                                     Shortcut        
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Layer**                                                       \                     \                                           \ 
-:menuselection:`New`                                            \                     see :ref:`sec_create shape`                 :guilabel:`Manage Layers`
+:menuselection:`New`                                            \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
 |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`             :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
-|mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`label_raster`                     :guilabel:`Manage Layers`
+|mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`sec_ogc-wms`                      :guilabel:`Manage Layers`
+|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`sec_ogc_wms`                      :guilabel:`Manage Layers`
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
 |mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
 |mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
 :menuselection:`Save as...`                                     \                     \                                           \ 
-:menuselection:`Save selection as vector file...`               \                     See :ref:`sec_attribute table`              \ 
+:menuselection:`Save selection as vector file...`               \                     See :ref:`sec_attribute_table`              \ 
 |mActionRemoveLayer| :guilabel:`Remove Layer`                   :kbd:`Ctrl+D`         \                                           \ 
 :menuselection:`Set CRS of Layer(s)`                            :kbd:`Ctrl+Shift+C`   \                                           \ 
 :menuselection:`Set project CRS from Layer`                     \                     \                                           \ 
@@ -336,7 +336,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`Toolbars`                                       \                     \                                           \ 
 :menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \ 
 |mActionProjectProperties| :guilabel:`Project Properties`       :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \ 
-|mActionCustomProjection| :guilabel:`Custom CRS`                \                     see :ref:`sec_customprojections`            :guilabel:`Style Manager`
+|mActionCustomProjection| :guilabel:`Custom CRS`                \                     see :ref:`sec_custom_projections`           :guilabel:`Style Manager`
 |mActionOptions| :guilabel:`Configure shortcuts`                \                     \                                           \ 
 |mActionOptions| :guilabel:`Options`                            \                     see :ref:`subsec_gui_options`               \ 
 :menuselection:`Snapping Options`                               \                     \                                           \ 

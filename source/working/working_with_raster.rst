@@ -52,6 +52,8 @@ or in an appropriate world file to properly display the data.
 
 .. index:: loading_raster
 
+.. _load_raster:
+
 Loading raster data in QGIS
 ===========================
 
@@ -360,6 +362,7 @@ left of the tab.
    click the **[Apply]** button. Gathering statistics for a layer can be time
    consuming. Please be patient while QGIS examines your data!
 
+.. _sec_raster_calc:
 
 Raster Calculator
 =================

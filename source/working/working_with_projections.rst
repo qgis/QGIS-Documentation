@@ -181,7 +181,7 @@ shown in Figure :ref:`projections` and described below.
    will automatically bring the :guilabel:`Coordinate Reference System` 
    tab to the front.
 
-.. _`sec:customprojections`:
+.. _sec_custom_projections:
 
 Custom Coordinate Reference System
 ===================================
