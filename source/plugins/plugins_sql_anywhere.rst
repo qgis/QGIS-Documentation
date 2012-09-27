@@ -1,13 +1,9 @@
-..  !TeX  root  =  user_guide.tex
 
 .. _sqlanywhere:
 
 SQL Anywhere Plugin
 ====================
 
-.. when the revision of a section has been finalized, 
-.. comment out the following line:
-.. \updatedisclaimer
 
 SQL Anywhere is a proprietary relational database management system (RDBMS) 
 from Sybase. SQL Anywhere includes spatial support including OGC, shape files 
@@ -18,13 +14,13 @@ native data provider added to QGIS under the GPL v3. The Plugin allows
 to connect to this SQL Anywhere. The :guilabel:`Add SQL Anywhere layer` 
 dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
 
-.. _`fig:sqlanywhere`:
+.. _figure_sql_anywhere:
 
 .. figure:: img/en/plugins_sql_anywhere/sql_anywhere.png
    :align: center
    :width: 40 em
 
-   SQL Anywhere dialog (KDE)
+   Figure SQL Anywhere 1: SQL Anywhere dialog (KDE) |nix|
 
 .. FIXME Needs an example, but the database is proprietary
 
