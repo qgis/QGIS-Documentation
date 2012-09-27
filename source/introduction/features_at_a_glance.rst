@@ -307,7 +307,7 @@ Menu Option                                                     Shortcut        
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`sec_ogc_wms`                      :guilabel:`Manage Layers`
+|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
 |mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
 |mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
@@ -338,7 +338,7 @@ Menu Option                                                     Shortcut        
 |mActionProjectProperties| :guilabel:`Project Properties`       :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \ 
 |mActionCustomProjection| :guilabel:`Custom CRS`                \                     see :ref:`sec_custom_projections`           :guilabel:`Style Manager`
 |mActionOptions| :guilabel:`Configure shortcuts`                \                     \                                           \ 
-|mActionOptions| :guilabel:`Options`                            \                     see :ref:`subsec_gui_options`               \ 
+|mActionOptions| :guilabel:`Options`                            \                     see :ref:`gui_options`                      \ 
 :menuselection:`Snapping Options`                               \                     \                                           \ 
 ==============================================================  ====================  ==========================================  ===============================
  
@@ -350,7 +350,7 @@ Menu Option                                                     Shortcut        
 **Plugins**                                                     \                     \                                           \ 
 (Further menu items are added by plugins                        \                     \                                           \ 
 \ as they are loaded.)                                          \                     \                                           \ 
-|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`sec_managing_plugins`             :guilabel:`Plugins`
+|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 :guilabel:`Plugins`
 :menuselection:`Python Console`                                 \                     \                                           \ 
 ==============================================================  ====================  ==========================================  =============================== 
 
