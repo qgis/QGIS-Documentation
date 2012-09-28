@@ -54,7 +54,7 @@ You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables using PostGIS and SpatiaLite, vector 
+*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector 
    formats supported by the installed OGR library, including ESRI shapefiles,
    MapInfo, SDTS, GML and many more.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
@@ -73,6 +73,7 @@ formats include:
 You can compose maps and interactively explore spatial data with a friendly
 GUI. The many helpful tools available in the GUI include:
 
+*  QGIS browser
 *  on the fly projection
 *  map composer
 *  overview panel
@@ -120,7 +121,7 @@ include the complete GRASS functionality of more than 400 modules (See Section
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS or WFS client, and as WMS server. 
+be used as a WMS or WFS client, and as WMS or WFS server. 
 
 **Extend QGIS functionality through plugins**
 
@@ -133,6 +134,7 @@ plugins.  You can even create new applications with C++ or Python!
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
     containing x,y coordinates).
+#.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
 #.  Coordinate Capture (Capture mouse coordinates in different CRS).
 #.  Decorations (Copyright Label, North Arrow and Scale bar).
 #.  Diagram Overlay (Placing diagrams on vector layer).
@@ -143,6 +145,7 @@ plugins.  You can even create new applications with C++ or Python!
 #.  GRASS (GRASS GIS integration).
 #.  GDALTools (Integrate GDAL Tools into QGIS).
 #.  Georeferencer GDAL (Adding projection information to raster using GDAL).
+#.  Heatmap tool (Generating raster heatmaps from point data).
 #.  Interpolation plugin (interpolate based on vertices of a vector layer).
 #.  Mapserver Export (Export QGIS project file to a MapServer map file).
 #.  Offline Editing (Allow offline editing and synchronizing with database).
@@ -154,6 +157,7 @@ plugins.  You can even create new applications with C++ or Python!
 #.  SPIT (Import Shapefile to PostgreSQL/PostGIS).
 #.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).
 #.  Spatial Query Plugin (make spatial queries on vector layers).
+#.  Terrain Analysis Plugin.
 #.  WFS Plugin (Add WFS layers to QGIS canvas).
 #.  eVIS (Event Visualization Tool).
 #.  fTools (Tools for vector data analysis and management).
