@@ -144,10 +144,10 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 #. Double click the :file:`lakes` layer in the map legend to open the 
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and check the |checkbox| 'Display lables'
+#. Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:`Display lables`
    checkbox to enable labeling. Choose NAMES field as field containing label.
 #. To improve readability of labels, you can add a white buffer around them,
-   by clicking "Buffer" in the list on the left, checking |checkbox|:guilabel:`Buffer labels?`
+   by clicking "Buffer" in the list on the left, checking |checkbox| :guilabel:`Buffer labels?`
    and choosing 3 as buffer size.
 #. Click **[Apply]**, check if the result looks good and finally 
    click **[OK]**.

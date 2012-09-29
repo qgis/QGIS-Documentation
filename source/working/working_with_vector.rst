@@ -267,7 +267,7 @@ username        User name used to login to the database.
 Password        Password used with *Username* to connect to the database.
 ==============  ================================================================================
 
-**Table PostGIS Connection Parameters**
+   **Table PostGIS Connection Parameters**
 
 
 .. _tip_settings_security:
@@ -819,7 +819,8 @@ be used in the future.
 +-----------------------------------+
 | c. Single symbol area properties  |
 +-----------------------------------+
-Figure Symbology 1: Single Symbolizing options |nix|
+
+   Figure Symbology 1: Single Symbolizing options |nix|
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
@@ -1000,7 +1001,8 @@ layer type options are described in section :ref:`vector_symbol_types`.
 +------------------------------------------+
 | c. Filling pattern for a polygon         |
 +------------------------------------------+
-Figure Symbology 7: Defining symbol properties |nix|
+
+   Figure Symbology 7: Defining symbol properties |nix|
 
 
 .. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
@@ -1080,7 +1082,7 @@ To :index:'change the symbology' for a layer, simply double click on its legend 
 | 3. Continuous color       | 4. Unique value           |
 +---------------------------+---------------------------+
 
-Figure Symbology 9: Old Symbolizing Options |nix|
+   Figure Symbology 9: Old Symbolizing Options |nix|
 
 
 .. index:: Fill_Style, Fill_Color, Outline_Options
@@ -1968,7 +1970,7 @@ Using the basic digitizing tools you can perform the following functions:
 | |mActionFileSave|       | Save edits and continue       |                         |                                  |
 +-------------------------+-------------------------------+-------------------------+----------------------------------+
 
-Table Editing: Vector layer basic editing toolbar
+   Table Editing: Vector layer basic editing toolbar
 
 
 All editing sessions start by choosing the |mActionToggleEditing| 
@@ -2239,7 +2241,7 @@ Advanced digitizing
 | |mActionMergeFeatures| | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
 +------------------------+---------------------------------------+-----------------------------+-------------------------+
 
-Table Advanced Editing: Vector layer advanced editing toolbar
+   Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 Undo and Redo
@@ -2831,7 +2833,7 @@ substr(*a*,from,len)                 len characters of string *a* starting from 
 \- *a*  			     negative value of *a*
 ===================================  ========================================================
 
-List of operators for the field calculator
+   List of operators for the field calculator
 
  .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
  .. [#] GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net

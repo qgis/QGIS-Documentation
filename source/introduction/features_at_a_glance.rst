@@ -5,10 +5,6 @@ Features at a Glance
 ********************
 
 
-.. when the revision of a section has been finalized,
-.. comment out the following line:
-.. \updatedisclaimer
-
 After a first and simple sample session in Section :ref:`label.getstarted` we now
 want to give you a more detailed overview of the features of QGIS.  Most 
 features presented in the following chapters will be explained and described in
@@ -164,7 +160,7 @@ interface as discussed below):
 
 .. figure:: img/en/startup.png
    :align: center
-   :width: 45em
+   :width: 40em
 
    QGIS GUI with Alaska sample data (KDE)
 
@@ -716,8 +712,8 @@ Map rendering can be controlled in the following ways:
 
 .. index::`rendering!suspending`
 
-To suspend rendering, click the |checkbox| Render checkbox in the lower right
-corner of the statusbar. When the |checkbox| Render box is not checked, QGIS
+To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the lower right
+corner of the statusbar. When the |checkbox| :guilabel:`Render` checkbox is not checked, QGIS
 does not redraw the canvas in response to any of the events described in
 Section :ref:`redraw_events`. Examples of when you might want to suspend
 rendering include:
@@ -727,7 +723,7 @@ rendering include:
 * Add one or more large layers and zoom to a specific view before drawing
 * Any combination of the above
 
-Checking the |checkbox| Render box enables rendering and causes an immediate
+Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and causes an immediate
 refresh of the map canvas.
 
 .. _`label_settinglayer`:
@@ -788,7 +784,8 @@ during the reading of the features. A suggested value to start with is 500.
    single:rendering quality
 
 To influence the rendering quality of the map you have 3 options. Choose menu
-option :menuselection:`Settings --> Options -->` click on the :guilabel:`Rendering` tab and select or deselect following checkboxes.
+option :menuselection:`Settings --> Options -->` click on the :guilabel:`Rendering` 
+tab and select or deselect following checkboxes.
 
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some 
@@ -858,6 +855,7 @@ is displayed in a popup dialog.
 +------------------------+
 | (c) Measure areas      |
 +------------------------+
+
 Measure tools in action
 
 
@@ -972,7 +970,10 @@ GUI Options
 =============
 
 
-|mActionOptions| Some basic options for QGIS can be selected using the :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`. The tabs where you can optimize your options are:
+|mActionOptions| Some basic options for QGIS can be selected using the 
+:guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->` 
+|mActionOptions| :menuselection:`Options`. The tabs where you can optimize 
+your options are:
 
 **General Tab**
 
@@ -1054,7 +1055,7 @@ absolute or relative in the :guilabel:`General` tab of the
 * Define default snap mode (to vertex, to segment, to vertex and segment)
 * Define default snapping tolerance in map units or pixel
 * Define search radius for vertex edits in map units or pixel
-* |checkbox|:guilabel:`Show markers only for selected features`
+* |checkbox| :guilabel:`Show markers only for selected features`
 * Define vertex marker style (cross (default), semi transparent circle or
   none) and vertex marker size.
 * |checkbox| :guilabel:`Reuse last entered attribute values`
@@ -1091,7 +1092,7 @@ a layer without CRS is loaded.
 
 .. figure:: img/en/proxy-settings.png
    :align: center
-   :width: 45em
+   :width: 40em
    
    Proxy-settings in |qg|
 
@@ -1285,13 +1286,15 @@ gpsd properly to connect QGIS to it.
 
 Live GPS tracking |nix| 
 
-+----------------------------------+--------------------------------+-----------------------------+
-| |gpstrack_main|                  |   |gpstrack_stren|             |    |gpstrack_polar|         |
-+----------------------------------+--------------------------------+-----------------------------+
-| (a) Position coordinates         | (b) GPS signal_strength        | (c) GPS polar window        |
-+----------------------------------+--------------------------------+-----------------------------+
- 
-
++-------------------------------+-----------------------------+
+| |gpstrack_main|                                             |
++-------------------------------+-----------------------------+
+| (a) Position coordinates                                    | 
++-------------------------------+-----------------------------+
+| |gpstrack_stren|              |    |gpstrack_polar|         | 
++-------------------------------+-----------------------------+
+| (b) GPS signal_strength       | (c) GPS polar window        |
++-------------------------------+-----------------------------+
 
 Position coordinates
 ---------------------

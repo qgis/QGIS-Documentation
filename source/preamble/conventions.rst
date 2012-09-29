@@ -21,8 +21,8 @@ visually scan the GUI to find something that looks like the instruction in the m
 *  Button : **[Save as Default]**
 *  Dialog Box Title: :guilabel:`Layer Properties`
 *  Tab: :guilabel:`General`
-*  Checkbox: |checkbox| Render
-*  Radio Button:  |radiobuttonon| Postgis SRID |radiobuttonoff| EPSG ID
+*  Checkbox: |checkbox| :guilabel:`Render`
+*  Radio Button:  |radiobuttonon| :guilabel:`Postgis SRID` |radiobuttonoff| :guilabel:`EPSG ID`
 *  Select a Number: |selectnumber|
 *  Select a String: |selectstring|
 *  Browse for a File: |browsebutton|
