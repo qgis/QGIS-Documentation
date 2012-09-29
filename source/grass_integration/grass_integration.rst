@@ -27,6 +27,7 @@ In this Section we'll introduce the plugin functionalities and give some example
 *  |grass_tools| :sup:`Open GRASS tools`
 *  |grass_region| :sup:`Display current GRASS region`
 *  |grass_region_edit| :sup:`Edit current GRASS region`
+
 .. *  |grass_shell| :sup:`Open GRASS Shell`
 
 
@@ -39,17 +40,22 @@ Starting the GRASS plugin
 =========================
 
 
-To use GRASS functionalities and/or visualize GRASS vector and raster layers in QGIS, you must select and load the GRASS plugin with the Plugin Manager.
-Therefore click the menu :menuselection:`Plugins -->` :menuselection:`Manage Plugins -->`, select :menuselection:`GRASS -->` and click **[OK]**.
+To use GRASS functionalities and/or visualize GRASS vector and raster layers in QGIS, 
+you must select and load the GRASS plugin with the Plugin Manager.
+Therefore click the menu :menuselection:`Plugins -->` :menuselection:`Manage Plugins -->`, 
+select :menuselection:`GRASS -->` and click **[OK]**.
 
 You can now start loading raster and vector layers from an existing GRASS
-:file:`LOCATION` (see section :ref:`sec_load_grassdata`). Or you create a new GRASS :file:`LOCATION` with QGIS (see section :ref:`sec_create_loc`) and import some raster and vector data (see Section :ref:`sec_import_loc_data`) for further analysis with the GRASS Toolbox (see section
-:ref:`subsec_grass_toolbox`).
+:file:`LOCATION` (see section :ref:`sec_load_grassdata`). Or you create a new GRASS 
+:file:`LOCATION` with QGIS (see section :ref:`sec_create_loc`) and import some raster 
+and vector data (see Section :ref:`sec_import_loc_data`) for further analysis with the 
+GRASS Toolbox (see section :ref:`subsec_grass_toolbox`).
 
 .. _sec_load_grassdata:
 
 Loading GRASS raster and vector layers
 ======================================
+
 .. index::
    single:GRASS;loading data
 
@@ -57,7 +63,8 @@ With the GRASS plugin, you can load vector or raster layers using the appropriat
 
 
  #. Create a new folder :file:`grassdata`, download the QGIS alaska
-    dataset :file:`qgis\_sample\_data.zip` from http://download.osgeo.org/qgis/data/ and unzip the file into :file:`grassdata`.
+    dataset :file:`qgis\_sample\_data.zip` from http://download.osgeo.org/qgis/data/ 
+    and unzip the file into :file:`grassdata`.
  #. Start QGIS.
  #. If not already done in a previous QGIS session, load the GRASS plugin
     clicking on :menuselection:`Plugins -->` :menuselection:`Manage Plugins -->` and
@@ -78,16 +85,21 @@ With the GRASS plugin, you can load vector or raster layers using the appropriat
     boundary vector layer will be overlayed on top of the :file:`gtopo30` map. You can
     now adapt the layer properties as described in chapter :ref:`vector_properties_dialog`,
     e.g. change opacity, fill and outline color.
- #. Also load the other two vector layers :file:`rivers` and :file:`airports` and adapt their properties.
+ #. Also load the other two vector layers :file:`rivers` and :file:`airports` and 
+    adapt their properties.
 
 
 
 As you see, it is very simple to load GRASS raster and vector layers in QGIS.
-See following sections for editing GRASS data and creating a new :file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the GRASS website at http://grass.osgeo.org/download/data.php.
+See following sections for editing GRASS data and creating a new :file:`LOCATION`. 
+More sample GRASS :file:`LOCATIONs` are available at the GRASS website at 
+http://grass.osgeo.org/download/data.php.
 
 .. tip:: **GRASS Data Loading**
    
-   If you have problems loading data or QGIS terminates abnormally, check to make sure you have loaded the GRASS plugin properly as described in  section :ref:`sec_starting_grass`.
+   If you have problems loading data or QGIS terminates abnormally, check to make 
+   sure you have loaded the GRASS plugin properly as described in  section 
+   :ref:`sec_starting_grass`.
 
 .. _sec_about_loc:
 
@@ -238,6 +250,7 @@ and a vector GML File :file:`lakes.gml` from the QGIS alaska dataset :ref:`label
 
 The GRASS vector data model
 ===========================
+
 .. index::
    single:GRASS;vector data model
 
@@ -298,6 +311,7 @@ In GRASS it is possible to organize all sort of geometry types (point, line and 
 
 Digitizing and editing a GRASS vector layer
 ===========================================
+
 .. index::
    single:GRASS;digitizing tools
 
@@ -352,7 +366,8 @@ explains the available functionalities.
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
 | |grass_close_edit|     | Close           | Close session and save current status (rebuilds topology afterwards)                              |
 +------------------------+-----------------+---------------------------------------------------------------------------------------------------+
-Table GRASS Digitizing 1: GRASS Digitizing Tools
+
+   Table GRASS Digitizing 1: GRASS Digitizing Tools
 
 
 **Category Tab**
@@ -480,7 +495,8 @@ Working with GRASS modules
 +------------------------------+----------------------------+
 | 1. Modules Tree              | 2. Searchable Modules List | 
 +------------------------------+----------------------------+
-Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List |nix|
+
+   Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List |nix|
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
 
@@ -505,7 +521,8 @@ Clicking on a graphical module icon a new tab will be added to the toolbox dialo
 +----------------------------------+--------------------------------+
 | 3.Module Manual                                                   |
 +-------------------------------------------------------------------+
-Figure GRASS Toolbox 2: GRASS Toolbox Module Dialogs |nix|
+
+   Figure GRASS Toolbox 2: GRASS Toolbox Module Dialogs |nix|
 
 **Options**
 
@@ -560,9 +577,10 @@ The first example creates a vector contour map from an elevation raster
 +--------------------------+---------------------------+
 | |grass_toolbox_rcontour| | |grass_toolbox_rcontour2| |
 +--------------------------+---------------------------+
-| 1. r.contour Options     | 2. r.contour Output       |
+| 1. r\.contour Options    | 2. r\.contour Output      |
 +--------------------------+---------------------------+
-Figure GRASS module 1: GRASS Toolbox r.contour module |nix|     
+
+   Figure GRASS module 1: GRASS Toolbox r.contour module |nix|     
 
 Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in :ref:`vector_properties_dialog`.
 
