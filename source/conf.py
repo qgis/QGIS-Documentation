@@ -146,17 +146,9 @@ rst_epilog = """
    :width: 1.5em
 .. |osm_generateTags| image:: img/en/plugins_openstreetmap/osm_generateTags.png
    :width: 1.5em
-.. |osm_identify| image:: img/en/plugins_openstreetmap/osm_identify.png
-   :width: 1.5em
 .. |osm_editRelation| image:: img/en/plugins_openstreetmap/osm_editRelation.png
    :width: 1.5em
 .. |osm_questionMark| image:: img/en/plugins_openstreetmap/osm_questionMark.png
-   :width: 1.5em
-.. |osm_upload| image:: img/en/plugins_openstreetmap/osm_upload.png
-   :width: 1.5em 
-.. |osm_save| image:: img/en/plugins_openstreetmap/osm_save.png
-   :width: 1.5em
-.. |osm_import| image:: img/en/plugins_openstreetmap/osm_import.png
    :width: 1.5em
 .. |offline_editing_copy| image:: img/en/plugins_offline_editing/offline_editing_copy.png
    :width: 1.5em
@@ -303,8 +295,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionZoomToLayer| image:: /img/en/mActionZoomToLayer.png
    :width: 1.5em
-.. |mActionZoomToSelected| image:: /img/en/mActionZoomToSelected.png
-   :width: 1.5em
 .. |mActionZoomLast| image:: /img/en/mActionZoomLast.png
    :width: 1.5em
 .. |mActionZoomNext| image:: /img/en/mActionZoomNext.png
@@ -376,8 +366,6 @@ rst_epilog = """
 .. |mActionMeasureAngle| image:: /img/en/mActionMeasureAngle.png
    :width: 1.5em
 .. |spiticon| image:: /plugins/img/en/plugins_spit/spiticon.png
-.. |mActionOptions| image:: /img/en/mActionOptions.png
-   :width: 1.5em
 .. |mActionSelectRectangle| image:: /img/en/mActionSelectRectangle.png
    :width: 1.5em
 .. |mActionSelectPolygon| image:: /img/en/mActionSelectPolygon.png
@@ -529,8 +517,6 @@ rst_epilog = """
 .. |grass_region| image:: /grass_integration/img/en/grass_region.png
    :width: 1.5em
 .. |grass_region_edit| image:: /grass_integration/img/en/grass_region_edit.png
-   :width: 1.5em
-.. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_point| image:: /grass_integration/img/en/grass_new_point.png
    :width: 1.5em
