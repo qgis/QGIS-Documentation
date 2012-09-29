@@ -276,7 +276,7 @@ Attributes in database tables are linked to geometry elements using a 'category'
    
    The best way to learn the GRASS vector model and its capabilities is to download one of the many GRASS tutorials where the vector model is described more deeply. See http://grass.osgeo.org/gdp/manuals.php for more information, books and tutorials in several languages.
 
-.. _`sec_creating_new_grass_vectors`:
+.. _creating_new_grass_vectors:
 
 Creating a new GRASS vector layer
 =================================

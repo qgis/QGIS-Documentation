@@ -69,7 +69,6 @@ window (see figure_vector_1_).
 
 .. _figure_vector_1:
 .. figure:: img/en/Addvectorlayerdialog.png
-   :width: 30em
    :align: center
 
    Figure Vector 1: Add Vector Layer Dialog |nix|
@@ -638,14 +637,12 @@ in the legend or right-click on the layer and select
 
    Figure Vector 6: Vector Layer Properties Dialog |nix|
 
-
 .. _vector_style_tab:
-
-.. index:: New_Symbology, Symbology_New
 
 Style Tab
 ---------
 
+.. index:: New_Symbology, Symbology_New
 
 Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and 
 finally replace the old symbology. |qg| 1.7.4 now uses the new symbology as 
