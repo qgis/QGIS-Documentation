@@ -279,10 +279,12 @@ Attributes can be stored inside the GRASS :file:`LOCATION` as DBase or SQLITE3 o
 
 .. index::
    single:GRASS;attribute storage
+
 Attributes in database tables are linked to geometry elements using a 'category' value. 
 
 .. index::
    single:GRASS;attribute linkage
+
 'Category' (key, ID) is an integer attached to geometry primitives, and it is used as the link to one key column in the database table.
 
 .. tip:: **Learning the GRASS Vector Model**
@@ -385,9 +387,11 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
    Figure GRASS digitizing 2: GRASS Digitizing Category Tab
 
 * **Mode**: what category value shall be applied to new geometry elements.
+
  *  Next not used - apply next not yet used category value to geometry element.
  *  Manual entry - manually define the category value for the geometry element in the 'Category'-entry field.
- *  No category - Do not apply a category value to the geometry element. This is e.g. used for area boundaries, because the category values are connected via the   centroid.
+ *  No category - Do not apply a category value to the geometry element. This is e.g. 
+    used for area boundaries, because the category values are connected via the centroid.
 
 * **Category** - A number (ID) is attached to each digitized geometry element. It is used to connect each geometry element with its attributes.
 * **Field (layer)** - Each geometry element can be connected with several attribute tables using different GRASS geometry layers. Default layer number is 1.

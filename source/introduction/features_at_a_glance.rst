@@ -445,8 +445,10 @@ Map Legend
 
 The map legend area lists all the layers in the project.
 The checkbox in each legend entry can be used to show or hide the layer 
- .. index::
-    single:layer visibility
+
+.. index::
+   single:layer visibility
+
 A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
@@ -543,8 +545,9 @@ changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   .. index::
-      single:zoom mouse wheel
+.. index::
+   single:zoom mouse wheel
+
    You can use the mouse wheel to zoom in and out on the map. Place
    the mouse cursor inside the map area and roll the wheel forward (away from 
    you) to zoom in and backwards (towards you) to zoom out. The mouse cursor 
@@ -614,7 +617,8 @@ for the current project.
 .. tip::
    **Calculating the correct Scale of your Map Canvas**
 
-   .. index::`Scale calculate`
+.. index::`Scale calculate`
+
    When you start QGIS, degrees is the default unit, and it tells QGIS
    that any coordinate in your layer is in degrees. To get correct scale values,
    you can either change this to meter manually in the :guilabel:`General` tab under
@@ -638,7 +642,7 @@ Section :ref:`label_menubar` below. Additionally the menu option
 change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS 
 features.
 
-.. _shortcuts:
+.. _figure_shortcuts:
 
 .. figure:: img/en/shortcuts.png 
    :align: center
@@ -747,7 +751,7 @@ be off (invisible) by default.
 .. index::
    single:Rendering halting
 
-.. _`label_stoprender`
+.. _label_stoprender:
 
 To stop the map drawing, press the ESC key. This will halt the refresh of
 the map canvas and leave the map partially drawn. It may take a bit of time
@@ -1140,6 +1144,7 @@ require a restart of QGIS before they will be effective.
 * |osx| you can find your settings in: 
   \$HOME/Library/Preferences/org.qgis.qgis.plist
 * |win| settings are stored in the registry under:
+
 ::
 
    \\HKEY\CURRENT_USER\Software\QuantumGISqgis
