@@ -14,12 +14,13 @@ document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-S
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note:: 
+
    Not all of the listed formats may work in |qg| for various reasons. 
-For example, some require external commercial libraries or the GDAL/OGR 
-installation of your OS was not build to support the format you want to use. 
-Only those formats that have been well tested will appear in the list of 
-file types when loading a vector into |qg|. Other untested formats can be 
-loaded by selecting `*.*`. 
+   For example, some require external commercial libraries or the GDAL/OGR 
+   installation of your OS was not build to support the format you want to use. 
+   Only those formats that have been well tested will appear in the list of 
+   file types when loading a vector into |qg|. Other untested formats can be 
+   loaded by selecting `*.*`. 
 
 Working with GRASS vector data is described in Section :ref:`grass`.
 
@@ -107,8 +108,8 @@ the :file:`alaska.shp` file.
 .. tip:: **Layer Colors**
 
    When you add a layer to the map, it is assigned a random color. 
-When adding more than one layer at a time, different colors are assigned 
-to each layer.
+   When adding more than one layer at a time, different colors are assigned 
+   to each layer.
 
 Once loaded, you can zoom around the shapefile using the map navigation tools. 
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog 
@@ -425,10 +426,10 @@ as each shapefile is processed.
 .. tip:: **Importing Shapefiles Containing PostgreSQL Reserved Words**
 
    If a shapefile is added to the queue containing fields that are reserved 
-words in the PostgreSQL database a dialog will popup showing the status of 
-each field. You can edit the field names prior to import and change any that 
-are reserved words (or change any other field names as desired). Attempting 
-to import a shapefile with reserved words as field names will likely fail.
+   words in the PostgreSQL database a dialog will popup showing the status of 
+   each field. You can edit the field names prior to import and change any that 
+   are reserved words (or change any other field names as desired). Attempting 
+   to import a shapefile with reserved words as field names will likely fail.
 
 .. index:: ogr2ogr
 
@@ -1100,6 +1101,7 @@ At least the following styling options apply for nearly all renderers:
   fileformats :file:`*.jpeg`, :file:`*.xpm`, and :file:`*.png` are supported.
 * **Fill color** - fill-color of your features.
 * **Outline options**
+
   * Outline style - Pen-style for your outline of your feature. 
     You can also set this to 'no Pen'.
   * Outline color - color of the ouline of your feature.
@@ -1694,7 +1696,8 @@ layer`, a join field and a target field. QGIS currently supports to join non
 spatial table formats supported by OGR, delimited text and the PostgreSQL 
 provider (see figure_joins_1_).
 
-.. _figure_joins_1
+.. _figure_joins_1:
+
 .. figure:: img/en/join_attributes.png
    :width: 30em
    :align: center
@@ -2216,6 +2219,7 @@ Advanced digitizing
 -------------------
 
 .. following provides space between header and table!!
+
 \ 
 
 \ 
