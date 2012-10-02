@@ -153,7 +153,7 @@ QGIS GUI
     single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
-(the numbers 1 through 6 in yellow ovals refer to the six major areas of the
+(the numbers 1 through 7 in yellow ovals refer to the six major areas of the
 interface as discussed below):
 
 .. _fig_startup:
@@ -175,10 +175,12 @@ The QGIS GUI is divided into six areas:
 +--------------+-----------------+
 |2. Tool Bar   | 5. Map Overview |
 +--------------+-----------------+
-|3. Map Legend | 6. Status Bar   |
+|3. Map Legend | 6. Browser      |
 +--------------+-----------------+
+|7. Status Bar                   |
++--------------------------------+     
 
-These six components of the QGIS interface are described in more detail in
+These seven components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
@@ -589,6 +591,13 @@ If you click and drag the red rectangle in the overview that shows your
 current extent, the main map view will update accordingly.
 
 .. _`label_statusbar`:
+
+Browser
+-------
+
+.. index:: Browser
+
+The browser panel ...
 
 Status Bar
 ----------
