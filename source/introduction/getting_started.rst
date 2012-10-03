@@ -131,8 +131,8 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select 
    the ERDAS Img file :file:`landcover.img` and click **[Open]**.
 #. If the file is not listed, check if the Filetype combobox at the
-   bottom of the dialog is set on the right type, in this case "Erdas Imagine
-   Images (*.img, *.IMG)".
+   bottom of the dialog is set on the right type, in this case 
+   "Erdas Imagine Images (:file:`*.img`, :file:`*.IMG`)".
 #. Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon. 
 #. |radiobuttonon| :guilabel:`File` should be selected as Source Type in the new
    :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select

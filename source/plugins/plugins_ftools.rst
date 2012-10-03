@@ -76,6 +76,7 @@ of each function.
 |                     |                 | or stream intersections, ignores     |
 |                     |                 | line intersections with length > 0.  |
 +---------------------+-----------------+--------------------------------------+
+
 Table Ftools 1: fTools Analysis tools
 
 
@@ -112,6 +113,7 @@ Table Ftools 1: fTools Analysis tools
 |                     | layer extent    | polygon layer from the extent of an  |
 |                     |                 | input raster or vector layer.        |
 +---------------------+-----------------+--------------------------------------+
+
 Table Ftools 2: fTools Research tools
 
 +---------------------+-----------------+--------------------------------------+
@@ -151,6 +153,7 @@ Table Ftools 2: fTools Research tools
 |                     |                 | values are combined to form one      |
 |                     |                 | single feature.                      |
 +---------------------+-----------------+--------------------------------------+
+
 Table Ftools 3: fTools Geoprocessing tools
 
 +---------------------+-----------------+--------------------------------------+
@@ -199,6 +202,7 @@ Table Ftools 3: fTools Geoprocessing tools
 | |extract_nodes|     | Extract nodes   | Extract nodes from line and polygon  |
 |                     |                 | layers and output them as points.    |
 +---------------------+-----------------+--------------------------------------+
+
 Table Ftools 4: fTools Geometry tools
 
 .. note::

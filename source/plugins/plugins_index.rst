@@ -16,7 +16,6 @@ Plugins
    plugins_ftools
    plugins_gdaltools
    plugins_georeferencer
-   grass_integration
    plugins_gps
    plugins_interpolation
    plugins_mapserver_export

@@ -5,14 +5,12 @@ Raster Terrain Modelling Plugin
 ===============================
 
 
-
 The Raster Terrain Modelling plugin can be used to calculate the slope, aspect, 
 ruggedness, and total curvature for digital elevation models (DEM). It is very 
 simple to handle and provides an intuitive graphical user interface for 
 creating new raster layers (See Figure_raster_terrain_1_).
 The plugin requires the following parameters to be specified before running:
 
-.. FIXME: need to define rst style for [label=--]
 *  **Analysis**: Can be one of slope, aspect, ruggedness, or total curvature.
 *  **Input layer**: Specify the input raster from a list of loaded raster 
    layers.
@@ -24,7 +22,6 @@ The plugin requires the following parameters to be specified before running:
 
 Description of the analysis:
 
-.. FIXME: need to define rst style for [label=--]
 *  **Slope**: Calculates slope angle for each cell in degrees (based on 
    first order derivative estimation).
 *  **Aspect**: Exposition (starting with 0 for north direction, in degrees 
@@ -43,8 +40,8 @@ Description of the analysis:
 
 .. _`raster_terrain_usage`
 
-**Using the plugin**
-
+Using the plugin
+----------------
 
 #.  Start QGIS and load a DEM raster layer. 
 #.  Load the Raster Terrain Modelling plugin in the Plugin Manager see 

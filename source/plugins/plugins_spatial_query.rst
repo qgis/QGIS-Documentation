@@ -48,7 +48,7 @@ options.
 * Additionally you can |checkbox| :guilabel:`Zoom to item` or display 
   |checkbox| :guilabel:`Log messages`.
 
-.. figure_spatial_query_1:
+.. _figure_spatial_query_1:
 
 .. figure:: img/en/plugins_spatial_query/spatial_query_sample.png
    :align: center

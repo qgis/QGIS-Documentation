@@ -64,9 +64,9 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
    Figure 2: Export to MapServer Dialog |nix|
 
 \ 
- \ 
+
 \ 
- \ 
+
 
 +-----------------------+----------------------------------------------------------------------------+
 | **Map file**          | Enter the name for the map file to be created. You can use the button at   |
@@ -94,9 +94,8 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
 +-----------------------+----------------------------------------------------------------------------+
 
 \ 
- \ 
+
 \ 
- \ 
 
 Only the inputs :guilabel:`Map file` and :guilabel:`QGIS project file` are 
 required to create a map file, however by omitting the other parameters, you 
