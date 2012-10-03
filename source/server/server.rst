@@ -14,6 +14,7 @@ C++ that works together with a webserver (e.g. Apache, Lighttpd). It is
 funded by the EU projects Orchestra, Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
+
 It uses QGIS as backend for the GIS logic and for map rendering. Furthermore the 
 Qt library is used for graphics and for platform independent 
 C++ programming. In contrast to other WMS software, the QGIS Server uses 
@@ -21,6 +22,7 @@ cartographic rules in as a configuration language, both for the server
 configuration and for the user-defined cartographic rules. 
 
 .. index:: Publish_to_Web_plugin
+
 Moreover, the QGIS Server project provides the 'Publish to Web' plugin, a 
 plugin for QGIS desktop which exports the current layers and symbology as a 
 web project for QGIS Server (containing cartographic visualization rules 

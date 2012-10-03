@@ -120,6 +120,7 @@ WMS server, as listed in table_OGC_1_:
 |                                      | :guilabel:`Ignore GetFeatureInfo URI reported in capabilities` |
 |                                      | , use given URI from URL-field above                           |
 +--------------------------------------+----------------------------------------------------------------+
+
 Table OGC 1: WMS Connection Parameters 
 
 .. index:: Proxy, proxy-server
@@ -355,46 +356,48 @@ WMS standards (see OPEN-GEOSPATIAL-CONSORTIUM :ref:`literature_and_web`),
 but here are a few handy definitions:
 
 * **Server Properties**
- - **WMS Version** --- The WMS version supported by the server.
- - **Image Formats** --- The list of MIME-types the server can respond
-   with when drawing the map.  QGIS supports whatever formats the
-   underlying Qt libraries were built with, which is typically at least
-   ``image/png`` and ``image/jpeg``.
- - **Identity Formats** --- The list of MIME-types the server can respond
-   with when you use the Identify tool.  Currently QGIS supports the
-   ``text-plain`` type.
+
+  - **WMS Version** --- The WMS version supported by the server.
+  - **Image Formats** --- The list of MIME-types the server can respond
+    with when drawing the map.  QGIS supports whatever formats the
+    underlying Qt libraries were built with, which is typically at least
+    ``image/png`` and ``image/jpeg``.
+  - **Identity Formats** --- The list of MIME-types the server can respond
+    with when you use the Identify tool.  Currently QGIS supports the
+    ``text-plain`` type.
 
 * **Layer Properties**
- - **Selected** --- Whether or not this layer was selected when its 
-   server was added to this project.
- - **Visible** --- Whether or not this layer is selected as visible in
-   the legend. (Not yet used in this version of QGIS.)
- - **Can Identify** --- Whether or not this layer will return any results
-   when the Identify tool is used on it.
- - **Can be Transparent** --- Whether or not this layer can be rendered
-   with transparency. This version of QGIS will always use transparency
-   if this is ``Yes`` and the image encoding supports transparency
- - **Can Zoom In** --- Whether or not this layer can be zoomed in by the
-   server. This version of QGIS assumes all WMS layers have this set to
-   ``Yes``. Deficient layers may be rendered strangely.
- - **Cascade Count** --- WMS servers can act as a proxy to other WMS
-   servers to get the raster data for a layer.  This entry shows how many
-   times the request for this layer is forwarded to peer WMS servers for
-   a result.
- - **Fixed Width, Fixed Height** --- Whether or not this layer has fixed
-   source pixel dimensions. This version of QGIS assumes all WMS layers
-   have this set to nothing. Deficient layers may be rendered strangely.
- - **WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84
-   coordinates. Some WMS servers do not set this correctly (e.g. UTM
-   coordinates are used instead). If this is the case, then the initial
-   view of this layer may be rendered with a very ``zoomed-out`` appearance
-   by QGIS. The WMS webmaster should be informed of this error, which
-   they may know as the WMS XML elements ``LatLonBoundingBox``,
-   ``EX_GeographicBoundingBox`` or the CRS:84 ``BoundingBox``.
- - **Available in CRS** --- The projections that this layer can be rendered
-   in by the WMS server. These are listed in the WMS-native format.
- - **Available in style** --- The image styles that this layer can be
-   rendered in by the WMS server.
+
+  - **Selected** --- Whether or not this layer was selected when its 
+    server was added to this project.
+  - **Visible** --- Whether or not this layer is selected as visible in
+    the legend. (Not yet used in this version of QGIS.)
+  - **Can Identify** --- Whether or not this layer will return any results
+    when the Identify tool is used on it.
+  - **Can be Transparent** --- Whether or not this layer can be rendered
+    with transparency. This version of QGIS will always use transparency
+    if this is ``Yes`` and the image encoding supports transparency
+  - **Can Zoom In** --- Whether or not this layer can be zoomed in by the
+    server. This version of QGIS assumes all WMS layers have this set to
+    ``Yes``. Deficient layers may be rendered strangely.
+  - **Cascade Count** --- WMS servers can act as a proxy to other WMS
+    servers to get the raster data for a layer.  This entry shows how many
+    times the request for this layer is forwarded to peer WMS servers for
+    a result.
+  - **Fixed Width, Fixed Height** --- Whether or not this layer has fixed
+    source pixel dimensions. This version of QGIS assumes all WMS layers
+    have this set to nothing. Deficient layers may be rendered strangely.
+  - **WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84
+    coordinates. Some WMS servers do not set this correctly (e.g. UTM
+    coordinates are used instead). If this is the case, then the initial
+    view of this layer may be rendered with a very ``zoomed-out`` appearance
+    by QGIS. The WMS webmaster should be informed of this error, which
+    they may know as the WMS XML elements ``LatLonBoundingBox``,
+    ``EX_GeographicBoundingBox`` or the CRS:84 ``BoundingBox``.
+  - **Available in CRS** --- The projections that this layer can be rendered
+    in by the WMS server. These are listed in the WMS-native format.
+  - **Available in style** --- The image styles that this layer can be
+    rendered in by the WMS server.
 
 .. _`ogc-wms-limits`:
 

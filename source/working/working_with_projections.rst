@@ -28,6 +28,7 @@ information on managing your custom coordinate reference systems.
 
 .. index:: EPSG, IGNF, European_Petroleom_Search_Group
 .. index:: Institut_Geographique_National_de_France
+
 The CRS available in QGIS are based on those defined by the European
 Petroleum Search Group (EPSG) and the Institut Geographique
 National de France (IGNF) and are largely abstracted 
@@ -147,6 +148,7 @@ shown in Figure :ref:`projections` and described below.
    Figure Projection 2: Projection Dialog |win|
 
 .. index:: Proj4, Proj4_text
+
 #. **Enable on the fly projection** -
    this checkbox is used to enable or disable OTF projection. When off, each
    layer is drawn using the coordinates as read from the data source. When on,
@@ -203,6 +205,7 @@ your spatial bookmarks and other custom data.
    Figure Projection 3: Custom CRS Dialog |nix|
 
 .. index:: Proj.4
+
 Defining a custom CRS in QGIS requires a good understanding of the Proj.4
 projection library. To begin, refer to the Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S.
