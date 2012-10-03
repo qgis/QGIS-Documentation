@@ -1777,10 +1777,10 @@ is different - see Section :ref:`grass_digitizing` for details.
 
 .. index:: Snapping, Snapping_Tolerance
 
+.. _`snapping_tolerance`:
+
 Setting the Snapping Tolerance and Search Radius
 ------------------------------------------------
-
-.. _`snapping_tolerance`:
 
 Before we can edit vertices, we must set the snapping tolerance and search 
 radius to a value that allows us an optimal editing of the vector layer 

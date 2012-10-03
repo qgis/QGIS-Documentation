@@ -291,12 +291,13 @@ Attributes in database tables are linked to geometry elements using a 'category'
    
    The best way to learn the GRASS vector model and its capabilities is to download one of the many GRASS tutorials where the vector model is described more deeply. See http://grass.osgeo.org/gdp/manuals.php for more information, books and tutorials in several languages.
 
+.. index::
+      see:GRASS;Creating new vectors;editing;creating a new layer
+
 .. _creating_new_grass_vectors:
 
 Creating a new GRASS vector layer
 =================================
-.. index::
-      see:GRASS;Creating new vectors;editing;creating a new layer
 
 To create a new GRASS vector layer with the GRASS plugin click the
 |grass_new_vector_layer| :sup:`Create new GRASS vector` toolbar icon.
@@ -438,7 +439,7 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 .. index::
    single:GRASS;table editing
 
-The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:`sec_creating_new_grass_vectors`).
+The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:`creating_new_grass_vectors`).
 
 .. _figure_grass_digitizing_5:
 .. figure:: img/en/grass_digitizing_table.png

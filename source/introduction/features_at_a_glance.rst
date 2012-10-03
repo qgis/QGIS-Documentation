@@ -131,7 +131,7 @@ They will still be available in Plugins Manager after-wards.
 **Command line option** ``---optionspath``
 
 You can have multiple configurations and decide which one to use when starting 
-QGIS using this option. See :ref:`subsec_gui_options` to check where does the 
+QGIS using this option. See :ref:`gui_options` to check where does the 
 operating system save the settings files. Presently there is no way to specify 
 in which file where to write the settings, therefore you can create a copy of 
 the original settings file and rename it.
@@ -470,7 +470,7 @@ with one click.
 The content of the right mouse button context menu depends on whether the selected 
 legend item is a raster or a vector layer. For GRASS vector layers 
 :menuselection:`toggle editing -->` is not available. See section 
-:ref:`grass_digitising` for information on editing GRASS vector layers.
+:ref:`grass_digitizing` for information on editing GRASS vector layers.
 
 * **Right mouse button menu for raster layers**
 
@@ -890,17 +890,18 @@ To select one or several features just click on
 
 To deselect all selected features click on |mActionDeselectAll|.
 
+.. index::
+   single:projects
+
 .. _sec_projects:
 
 Projects
 =========
-.. index::
-   single:projects
 
 The state of your QGIS session is considered a Project.  QGIS
 works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
-Section :ref:`subsec_gui_options`). QGIS can save the state of your
+Section :ref:`gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
 :menuselection:`File -->` |mActionFileSave| :guilabel:`Save Project`
 or :menuselection:`File -->` |mActionFileSaveAs| :guilabel:`Save Project As`.
@@ -1038,7 +1039,7 @@ absolute or relative in the :guilabel:`General` tab of the
 * The Mode setting determines which layers will be shown by the Identify
   tool. By switching to ``Top down`` or ``Top down, stop at
   first`` instead of ``Current layer`` attributes for all identifiable
-  layers (see the Project properties section under: :ref:`projects` to set
+  layers (see the Project properties section under: :ref:`sec_projects` to set
   which layers are identifiable) will be shown with the Identify tool.
 * |checkbox| :guilabel:`Open feature form, if a single feature is identified`
 * Define search radius for identifying and displaying map tips as a
@@ -1198,11 +1199,11 @@ map canvas.
 
 Additionally you can also create your own annotation forms. The
 |mActionFormAnnotation| form annotation tool is useful to display attributes of 
-a vector layer in a customized qt designer form (see Figure :ref:`fig:custom-annotations`). It is similar to the
+a vector layer in a customized qt designer form (see figure_custom_annotations_). It is similar to the
 designer forms for the identify tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
-.. _custom_annotation:
+.. _figure_custom_annotation:
 
 .. figure:: img/en/custom_annotation.png
    :align: center
@@ -1275,14 +1276,14 @@ To activate Live GPS tracking in QGIS you need to select :menuselection:`View --
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
-(see Figure :ref:`fig:gpstrack_liv` and Figure :ref:`fig:gpstrack_options`).
+(see table_figure_gpstrack_liv_ and Figure_gpstrack_options_).
 
 * |mActionToggleEditing| GPS position coordinates and for manually entering 
   Vertices and Features.
 * |gpstrack_barchart| GPS signal strength of satellite connections.
 * |gpstrack_polarchart| GPS polar screen showing number and polar position of 
   satellites.
-* |mActionOptions| GPS options screen (see Figure :ref:`fig:gpstrack_options`).
+* |mActionOptions| GPS options screen (see Figure_gpstrack_options_).
 
 With a plugged in GPS receiver (has to be supported by your operating system)
 a simple click on **[Connect]** connects the GPS to QGIS. 
@@ -1315,21 +1316,21 @@ Position coordinates
 
 |mActionToggleEditing| If the GPS is
 receiving signals from satellites you will see your position in latitude,
-longitude and elevation as you can see in Figure :ref:`table_figure_gps_tracking`.
+longitude and elevation as you can see in Figure table_figure_gps_tracking_.
 
 GPS signal strength
 --------------------
 
 |gpstrack_barchart| Here you can see
 the signal strenght of the satellites you are receiving signals from
-Figure :ref:`gpstrack_stren`.
+table_figure_gps_tracking_.
 
 GPS polar window
 ----------------
 
 |gpstrack_polarchart| If you want
 to know where in the sky all the connected satellites are, you have to
-switch to the polar screen (Figure :ref:`gpstrack_polar`).
+switch to the polar screen (see table_figure_gps_tracking_).
 You can also see the ID numbers of the satellites you are receiving signals from.
 
 GPS options
@@ -1356,6 +1357,16 @@ Track color and width sets the color of and the width of your drawn track.
 If you want to set a feature manually you have to go back to
 |mActionToggleEditing| "Position Coordinates"
 and click on **[Add feature]**.
+
+.. _Figure_gpstrack_options:
+
+.. figure:: img/en/gpstrack_options.png
+   :align: center
+   :width: 20em
+
+   GPS tracking options window |nix| 
+
+----
 
 .. [1] Keyboard shortcuts can now be configured manually
    (shortcuts presented in this section are the defaults), using the Configure
