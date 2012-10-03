@@ -64,6 +64,7 @@ in another session. See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionAlignTop|        | Align selected items top              | |mActionAlignBottom|       | Align selected items bottom              |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+
 Table Composer 1: Print Composer Tools
 
 All Print Composer tools are available in menus and as icons in a toolbar.
@@ -205,6 +206,7 @@ Print Composer map item tab
 +---------------------------+---------------------------+
 | a) Map dialog             | b) Extents dialog         |        
 +---------------------------+---------------------------+
+
 Figure Composer 2: Map and Extents dialog |nix|
 
 **Extents dialog**
@@ -259,6 +261,7 @@ Print Composer map item tab
 +---------------------------+---------------------------+
 | a) Grid Dialog            | b) General options dialog |
 +---------------------------+---------------------------+
+
 Figure Composer 3: Grid and General options dialog |nix|
    
 
@@ -306,8 +309,8 @@ Print composer label item tab
 +---------------------------+---------------------------+
 | a) Label options Dialog   | b) General options dialog |
 +---------------------------+---------------------------+
-Figure Composer 4:  Label options and General options dialog |nix|
 
+Figure Composer 4:  Label options and General options dialog |nix|
 
 
 **Label dialog**
@@ -355,6 +358,7 @@ Print composer image item tab
 +---------------------------+---------------------------+
 | a) Picture options Dialog | b) General options dialog |
 +---------------------------+---------------------------+
+
 Figure Composer 5: Picture options and General options |nix|
 
 .. index::
@@ -490,6 +494,7 @@ Print composer scalebar item tab
 +-----------------------------+-----------------------------+
 | a) Scalebar options Dialog  | b) General options dialog   |
 +-----------------------------+-----------------------------+
+
 Figure Composer 7: Scalebar and General options dialog |nix|
 
 
@@ -547,7 +552,7 @@ This can be done with the revert and restore tools:
 
 or by mouse click within the :guilabel:`Command history` tab (see figure_composer_8_).
 
-.. figure_composer_8:
+.. _figure_composer_8:
 
 .. figure:: img/en/command_hist.png
    :align: center
@@ -576,6 +581,7 @@ Print composer basic shape and arrow item tab
 +-----------------------------+-----------------------------+
 | a) shape dialog             | b) arrow dialog             |
 +-----------------------------+-----------------------------+
+
 Figure Composer 9: Shape and Arrow options dialog |nix|
 
 
@@ -609,6 +615,7 @@ Print composer attribute table item tab
 +-----------------------------+-----------------------------+
 | a) Table Dialog             | b) General options dialog   |
 +-----------------------------+-----------------------------+
+
 Figure Composer 10: Table and General options dialog |nix|
 
 
@@ -668,7 +675,7 @@ Figure_composer_11_ shows the print composer with an example
 print layout including each type of map element described in the sections
 above.
 
-.. figure_composer_11:
+.. _figure_composer_11:
 
 .. figure:: img/en/print_composer_complete.png
    :align: center
