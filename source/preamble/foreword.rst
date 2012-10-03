@@ -252,7 +252,7 @@ This release includes over 277 bug fixes and many new features and enhancements.
 * Use layer names instead of ids in drop down list when loading value maps from
   layers.
 * Support feature form expression fields: line edits on the form which name
-  prefix "expr_" are evaluated. Their value is interpreted as field calculator
+  prefix "expr\_" are evaluated. Their value is interpreted as field calculator
   string and replaced with the calculated value.
 * Support searching for NULL in attribute table.
 * Attribute editing improvements
