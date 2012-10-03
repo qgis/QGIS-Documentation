@@ -1362,7 +1362,7 @@ and click on **[Add feature]**.
 
 .. figure:: img/en/gpstrack_options.png
    :align: center
-   :width: 20em
+   :width: 15em
 
    GPS tracking options window |nix| 
 

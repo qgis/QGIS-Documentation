@@ -23,7 +23,7 @@ QGIS has support for approximately 2,700 known CRS. Definitions for
 each of these CRS are stored in a SQLite database that is installed with
 QGIS. Normally you do not need to manipulate the database directly. In fact,
 doing so may cause projection support to fail. Custom CRS are stored in a
-user database. See Section :ref:`sec:customprojections` for
+user database. See Section :ref:`sec_custom_projections` for
 information on managing your custom coordinate reference systems.
 
 .. index:: EPSG, IGNF, European_Petroleom_Search_Group
@@ -88,7 +88,7 @@ If you want to define the coordinate reference system for a certain
 layer without CRS information, you can also do that in the :guilabel:`General` tab of the raster (see :ref:`label_generaltab`) and
 vector (see :ref:`vectorgeneraltab`) properties dialog. If your
 layer already has a CRS defined, it will be displayed as shown in
-:ref:`fig_vector_6`.
+:ref:`figure_vector_6`.
 
 .. tip:: **CRS in the Map Legend** 
 
@@ -137,7 +137,7 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 The :guilabel:`Coordinate Reference System` tab of the 
 :guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure :ref:`projections` and described below.
+shown in Figure_projections_2_ and described below.
 
 
 .. _figure_projection_2:

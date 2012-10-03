@@ -60,7 +60,7 @@ Loading a QGIS Core Plugin is done from the main menu
 The :guilabel:`Plugin Manager` lists all the available plugins and their
 status (loaded or unloaded), including all core plugins and all external
 plugins that have been installed and automatically activated using the
-:guilabel:`Python Plugin Installer` (see Section :ref:`_load_external_plugin`).
+:guilabel:`Python Plugin Installer` (see Section :ref:`load_external_plugin`).
 Those plugins that are already loaded have a check mark to the left of
 their name. Figure_plugins_1_ shows the Plugin Manager dialog.
 

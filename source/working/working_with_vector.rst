@@ -22,7 +22,7 @@ The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
    file types when loading a vector into |qg|. Other untested formats can be 
    loaded by selecting `*.*`. 
 
-Working with GRASS vector data is described in Section :ref:`grass`.
+Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 This section describes how to work with several common formats: ESRI 
 shapefiles, PostGIS layers and Spatialite layers. Many of the features 
@@ -230,7 +230,7 @@ You can also open the :guilabel:`Add Vector Layer` dialog and select
 The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access 
 the connection manager, click on the **[New]** button to display 
 the :guilabel:`Create a New PostGIS Connection` dialog. The parameters 
-required for a connection are shown in table :ref:`table_connections`.
+required for a connection are shown in table_connections_.
 
 Optional you can activate following checkboxes:
 
