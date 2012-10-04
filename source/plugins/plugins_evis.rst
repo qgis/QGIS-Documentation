@@ -428,7 +428,7 @@ D. **Console Window**: The console window where messages related to processing a
 E. **Help**: Displays the on line help.
 F. **OK**: Closes the main "Database Connection" window.
 
-.. _`evis_xml_tags`
+.. _`evis_xml_tags`:
 
 .. _`evis_xml_format`:
 

@@ -118,6 +118,7 @@ your GPS device you can create a new type (see section :ref:`defining-new-device
 The port may be a file name or some other name that your operating system uses 
 as a reference to the physical port in your computer that the GPS device is 
 connected to. It may also be simply usb, for usb enabled GPS units. 
+
   * |nix| On Linux this is something like /dev/ttyS0 or /dev/ttyS1 
   * |win| On Windows it is COM1 or COM2.
 

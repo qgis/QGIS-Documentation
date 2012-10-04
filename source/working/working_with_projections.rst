@@ -137,7 +137,7 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 The :guilabel:`Coordinate Reference System` tab of the 
 :guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure_projections_2_ and described below.
+shown in Figure_projection_2_ and described below.
 
 
 .. _figure_projection_2:

@@ -544,11 +544,11 @@ performed on the map as described in the toolbar description above.  The map
 view and the legend are tightly bound to each other - the maps in view reflect
 changes you make in the legend area.
 
-.. tip::
-   **Zooming the Map with the Mouse Wheel**
-
 .. index::
    single:zoom mouse wheel
+
+.. tip::
+   **Zooming the Map with the Mouse Wheel**
 
    You can use the mouse wheel to zoom in and out on the map. Place
    the mouse cursor inside the map area and roll the wheel forward (away from 
@@ -562,6 +562,7 @@ changes you make in the legend area.
    
    .. index::
       single:pan arrow keys
+
    You can use the arrow keys to pan in the map. Place the mouse cursor
    inside the map area and click on the right arrow key to pan East, left arrow
    key to pan West, up arrow key to pan North and down arrow key to pan South.
@@ -1199,7 +1200,7 @@ map canvas.
 
 Additionally you can also create your own annotation forms. The
 |mActionFormAnnotation| form annotation tool is useful to display attributes of 
-a vector layer in a customized qt designer form (see figure_custom_annotations_). It is similar to the
+a vector layer in a customized qt designer form (see figure_custom_annotation_). It is similar to the
 designer forms for the identify tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
@@ -1276,7 +1277,7 @@ To activate Live GPS tracking in QGIS you need to select :menuselection:`View --
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
-(see table_figure_gpstrack_liv_ and Figure_gpstrack_options_).
+(see table_figure_gps_tracking_ and Figure_gpstrack_options_).
 
 * |mActionToggleEditing| GPS position coordinates and for manually entering 
   Vertices and Features.

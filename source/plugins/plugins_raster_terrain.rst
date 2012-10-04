@@ -38,7 +38,7 @@ Description of the analysis:
 
    Figure Raster Terrain 1: Raster Terrain Modelling Plugin
 
-.. _`raster_terrain_usage`
+.. _`raster_terrain_usage`:
 
 Using the plugin
 ----------------
