@@ -632,7 +632,7 @@ html_theme_path = ['../themes']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['static']
+html_static_path = ['../static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -684,8 +684,8 @@ htmlhelp_basename = 'QGISUserGuide'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('user_guide', 'QGISUserGuide.tex', u'QGIS Workshop Documentation',
-   u'Greg Corradini and Aaron Racicot', 'manual'),
+  ('user_manual/index', 'QGISUserGuide.tex', u'QGIS Workshop Documentation',
+   u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -710,7 +710,7 @@ latex_documents = [
 # Grouping the document tree into PDF files. List of tuples
 # (source start file, target name, title, author).
 pdf_documents = [
-    ('user_guide', u'QGISUserGuide', u'QGIS User Guide', u'QGIS Project'),
+    ('user_manual/index', u'QGISUserGuide', u'QGIS User Guide', u'QGIS Project'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:

@@ -1,5 +1,6 @@
 #!/bin/bash
-LOCALES='af id de'
+LOCALES='de'
+BUILDDIR=build
 
 if [ $1 ]; then
   LOCALES=$1
@@ -20,10 +21,11 @@ else
   done
 fi
 
-# We need to flush the _build dir or the translations dont come through
-rm -rf _build
+# We need to flush the build dir or the translations dont come through
+rm -rf ${BUILDDIR}
+mkdir ${BUILDDIR}
 #Add english to the list and generated docs
-LOCALES='en af id de'
+LOCALES='en de'
 
 if [ $1 ]; then
   LOCALES=$1
@@ -32,20 +34,24 @@ fi
 for LOCALE in ${LOCALES}
 do
   # Compile the html docs for this locale
-  rm -rf _static
-  cp -r _static_${LOCALE} _static
+  rm -rf static/*
+  cp -r resources/${LOCALE}/* static
   echo "Building HTML for locale '${LOCALE}'..."
-  sphinx-build -D language=${LOCALE} -b html . _build/html/${LOCALE}
+  set -x
+  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${BUILDDIR}/html/${LOCALE}
 
   # Compile the latex docs for that locale
-  sphinx-build -D language=${LOCALE} -b latex . _build/latex/${LOCALE}
+  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
   # Compile the pdf docs for that locale
   # we use texi2pdf since latexpdf target is not available via 
   # sphinx-build which we need to use since we need to pass language flag
   pushd .
-  cd _build/latex/${LOCALE}/
-  texi2pdf --quiet  LinfinitiQGISTrainingManual.tex
-  mv LinfinitiQGISTrainingManual.pdf LinfinitiQGISTrainingManual-${LOCALE}.pdf
+  cd ${BUILDDIR}/latex/${LOCALE}/
+  texi2pdf --quiet QGISUserGuide.tex
+  mv QGISUserGuide.pdf ../../QGISUserGuide-${LOCALE}.pdf
   popd
-  rm -rf _static
 done
+rm -rf static/*
+git checkout static/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
+rm -rf ${BUILDDIR}/doctrees
+rm -rf ${BUILDDIR}/latex
