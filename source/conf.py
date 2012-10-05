@@ -684,7 +684,7 @@ htmlhelp_basename = 'QGISUserGuide'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('user_manual/index', 'QGISUserGuide.tex', u'QGIS Workshop Documentation',
+  ('user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide',
    u'QGIS Project', 'manual'),
 ]
 
