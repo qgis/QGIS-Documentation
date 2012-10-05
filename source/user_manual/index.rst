@@ -31,6 +31,7 @@ Welcome to QGIS manual
 	server/server
 	working/working_with_projections
 	grass_integration/grass_integration
+        sextante/sextante.rst
 	print_composer/print_composer
 	plugins/plugins_index
 	preamble/help_and_support
