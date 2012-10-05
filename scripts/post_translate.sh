@@ -37,7 +37,6 @@ do
   rm -rf static/*
   cp -r resources/${LOCALE}/* static
   echo "Building HTML for locale '${LOCALE}'..."
-  set -x
   sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${BUILDDIR}/html/${LOCALE}
 
   # Compile the latex docs for that locale
