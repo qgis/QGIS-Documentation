@@ -24,7 +24,7 @@ def help():
     print 'figures_in_rst.py input.rst [path to move to]'
 
 def find_figures(in_rst_file):
-    figure_tag = '.. figure::'
+    figure_tag = 'figure::'
     figures =[]
     for i_line in in_rst_file:
         if figure_tag in i_line:
