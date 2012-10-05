@@ -47,8 +47,8 @@ done
 
 # Now get rid of temporary POT files
 rm -rf i18n/pot
-rm -rf resources/*
-git checkout resources/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
+rm -rf static/*
+git checkout static/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
 
 
 
