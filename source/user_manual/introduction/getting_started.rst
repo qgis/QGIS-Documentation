@@ -41,6 +41,140 @@ QGIS allows to define a ``--configpath`` option that overrides the default path
 this directory, too. This allows users to e.g. carry a QGIS installation on a 
 flash drive together with all plugins and settings. 
 
+.. _`label_startingqgis`:
+
+Starting and Stopping QGIS
+===========================
+
+In Section :ref:`samplesession` you already learned how to start QGIS. We will
+repeat this here and you will see that QGIS also provides further command line 
+options.
+
+* |nix| Assuming that QGIS is installed in the PATH, you can start QGIS
+  by typing: ``qgis``  at a command prompt or by double clicking on the QGIS
+  application link (or shortcut) on the desktop or in the application menu.
+* |win| Start QGIS using the Start menu or desktop shortcut,
+  or double click on a QGIS project file.
+* |osx| Double click the icon in your Applications folder. If you need to 
+  start QGIS in a shell, run 
+  /path-to-installation-executable/Contents/MacOS/Qgis.
+
+
+To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx| 
+:menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`.
+
+.. _`label_commandline`:
+
+Command Line Options
+--------------------
+
+.. index::
+   single:command line options
+
+|nix| QGIS supports a number of options when started from the command line. To
+get a list of the options, enter ``qgis ---help`` on the command line.
+The usage statement for QGIS is:
+
+::
+
+	qgis --help
+	Quantum GIS - 1.7.0-Wroclaw 'Wroclaw' (exported)
+	Quantum GIS (QGIS) is a viewer for spatial data sets, including
+	raster and vector data.
+	Usage: qgis [options] [FILES]
+	  options:
+	        [--snapshot filename]           emit snapshot of loaded datasets to given file
+	        [--width width]                 width of snapshot to emit
+	        [--height height]               height of snapshot to emit
+	        [--lang language]               use language for interface text
+	        [--project projectfile]         load the given QGIS project
+	        [--extent xmin,ymin,xmax,ymax]  set initial map extent
+	        [--nologo]                      hide splash screen
+	        [--noplugins]                   don't restore plugins on startup
+	        [--optionspath path]            use the given QSettings path
+	        [--configpath path]             use the given path for all user configuration
+	        [--help]                        this text
+
+	  FILES:
+	    Files specified on the command line can include rasters,
+	    vectors, and QGIS project files (.qgs):
+	     1. Rasters - Supported formats include GeoTiff, DEM
+	        and others supported by GDAL
+	     2. Vectors - Supported formats include ESRI Shapefiles
+	        and others supported by OGR and PostgreSQL layers using
+	        the PostGIS extension
+
+.. tip::
+	**Example Using command line arguments**
+	You can start QGIS by specifying one or more data files
+	on the command line. For example, assuming you are in the
+	qgis_sample_data directory, you could start QGIS with a vector layer
+	and a raster file set to load on startup using the following command:
+	``qgis ./raster/landcover.img ./gml/lakes.gml``
+
+**Command line option** ``---snapshot``
+
+
+This option allows you to create a snapshot in PNG format from the current view.
+This comes in handy when you have a lot of projects and want to
+generate snapshots from your data.
+
+Currently it generates a PNG-file with 800x600 pixels. This can be adapted
+using the ``---width`` and ``---height`` command line
+arguments. A filename can be added after ``---snapshot``.
+
+**Command line option** ``---lang``
+
+
+Based on your locale QGIS, selects the correct localization. If you would like
+to change your language, you can specify a language code. For example:
+``---lang=it``
+starts QGIS in italian localization. A list of currently supported
+languages with language code and status is provided at
+http://www.qgis.org/wiki/GUI_Translation_Progress
+
+**Command line option** ``---project``
+
+
+Starting QGIS with an existing project file is also possible. Just
+add the command line option ``---project`` followed by your project
+name and QGIS will open with all layers loaded described in the given file.
+
+**Command line option** ``---extent``
+
+
+To start with a specific map extent use this option. You need to add the 
+bounding box of your extent in the following order separated by a comma::
+
+    --extent xmin,ymin,xmax,ymax
+
+**Command line option** ``---nologo``
+
+
+This command line argument hides the splash screen when you start QGIS.
+
+**Command line option** ``---noplugins``
+
+
+If you have trouble at startup with plugins, you can avoid loading them at startup. 
+They will still be available in Plugins Manager after-wards.
+
+**Command line option** ``---optionspath``
+
+You can have multiple configurations and decide which one to use when starting 
+QGIS using this option. See :ref:`gui_options` to check where does the 
+operating system save the settings files. Presently there is no way to specify 
+in which file where to write the settings, therefore you can create a copy of 
+the original settings file and rename it.
+
+**Command line option** ``---configpath``
+
+
+This option is similar to the one above, but furthermore overrides the default 
+path (~/.qgis) for user configuration and forces QSettings to use this directory, 
+too. This allows users to e.g. carry QGIS installation on a flash drive together 
+with all plugins and settings
+
 .. _label_sampledata:
 
 Sample Data
@@ -155,3 +289,67 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 You can see how easy it is to visualize raster and vector layers in 
 |qg|. Let's move on to the sections that follow to learn more about the 
 available functionality, features and settings and how to use them.
+
+.. _`sec_output`:
+
+Output 
+=======
+
+.. index::
+   single:output save as image
+.. index::
+   single:print composer quick print
+
+There are several ways to generate output from your QGIS session. We have
+discussed one already in Section :ref:`sec_projects` saving as a project file.
+Here is a sampling of other ways to produce output files:
+
+* Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens
+  a file dialog where you select the name, path and type of image (PNG or JPG
+  format). A world file with extension PNGW or JPGW saved in the same folder
+  georeferences the image.
+* Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a
+  dialog where you can layout and print the current map canvas (see
+  Section :ref:`label_printcomposer`).
+
+
+.. _sec_projects:
+
+Projects
+=========
+
+The state of your QGIS session is considered a Project.  QGIS
+works on one project at a time.  Settings are either considered
+as being per-project, or as a default for new projects (see
+Section :ref:`gui_options`). QGIS can save the state of your
+workspace into a project file using the menu options
+:menuselection:`File -->` |mActionFileSave| :guilabel:`Save Project`
+or :menuselection:`File -->` |mActionFileSaveAs| :guilabel:`Save Project As`.
+
+Load saved projects into a QGIS session using
+:menuselection:`File -->` |mActionFileOpen| :guilabel:`Open Project`
+or :menuselection:`File --> Open Recent Project`.
+
+If you wish to clear your session and start fresh, choose
+:menuselection:`File -->` |mActionFileNew| :guilabel:`New Project`.
+Either of these menu options will prompt you to save the existing project
+if changes have been made since it was opened or last saved.
+
+The kinds of information saved in a project file include:
+
+* Layers added
+* Layer properties, including symbolization
+* Projection for the map view
+* Last viewed extent
+
+The project file is saved in XML format, so it is possible to edit
+the file outside QGIS if you know what you are doing. The file format
+was updated several times compared to earlier QGIS versions. Project files
+from older QGIS versions may not work properly anymore. To be made aware of this,
+in the :guilabel:`General` tab under :menuselection:`Settings --> Options`
+you can select: 
+
+ |checkbox| :guilabel:`Prompt to save project changes when required`
+ |checkbox| :guilabel:`Warn when opening a project file saved with an older 
+ version of QGIS`
+

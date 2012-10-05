@@ -9,9 +9,12 @@ Welcome to QGIS manual
 	preamble/preamble
 	preamble/foreword
 	preamble/conventions
-	introduction/introduction
+	introduction/gis_introduction
 	introduction/getting_started
-	introduction/features_at_a_glance
+	introduction/qgis_configuration
+	introduction/qgis_gui
+        introduction/general_tools
+        working/working_with_projections
 	working/working_with_vector
 	working/working_with_raster
 	working/working_with_ogc
