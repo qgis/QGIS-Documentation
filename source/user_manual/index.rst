@@ -26,12 +26,12 @@ Welcome to QGIS manual
 	working_with_raster/raster_calculator
 	working_with_raster/raster_analysis
 	working_with_ogc/working_with_ogc
-	working_with_gps/plugins_gps.rst
-	working_with_gps/live_GPS_tracking.rst
-	server/server
+	working_with_gps/plugins_gps
+	working_with_gps/live_GPS_tracking
 	working/working_with_projections
 	grass_integration/grass_integration
-        sextante/sextante.rst
+        osm/openstreetmap
+        sextante/sextante
 	print_composer/print_composer
 	plugins/plugins_index
 	preamble/help_and_support
