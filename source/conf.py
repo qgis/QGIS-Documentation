@@ -25,7 +25,7 @@ import sys, os
 extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['templates']
 
 
 # The suffix of source filenames.
@@ -65,7 +65,7 @@ release = '1.7.4'
 
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
-exclude_trees = ['buildout', '_build']
+exclude_trees = ['buildout', 'build']
 
 # The reST default role (used for this markup: `text`) to use for all documents.
 #default_role = None
@@ -632,7 +632,7 @@ html_theme_path = ['../themes']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['img']
+html_static_path = ['static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
