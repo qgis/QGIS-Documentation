@@ -16,8 +16,16 @@ Welcome to QGIS manual
         introduction/general_tools
         working_with_projections/working_with_projections
 	qgis_browser/qgis_browser
-        working_with_vector/working_with_vector
+        working_with_vector/supported_data
+        working_with_vector/vector_properties
+        working_with_vector/query_builder
+        working_with_vector/editing_geometry_attributes
+        working_with_vector/field_calculator
 	working_with_raster/working_with_raster
+	working_with_raster/supported_data
+	working_with_raster/raster_properties
+	working_with_raster/raster_calculator
+	working_with_raster/raster_analysis
 	working_with_ogc/working_with_ogc
 	working_with_gps/plugins_gps.rst
 	working_with_gps/live_GPS_tracking.rst
