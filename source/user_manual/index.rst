@@ -18,6 +18,8 @@ Welcome to QGIS manual
 	working/working_with_vector
 	working/working_with_raster
 	working/working_with_ogc
+	working_with_gps/plugins_gps.rst
+	working_with_gps/live_GPS_tracking.rst
 	server/server
 	working/working_with_projections
 	grass_integration/grass_integration
