@@ -14,10 +14,11 @@ Welcome to QGIS manual
 	introduction/qgis_configuration
 	introduction/qgis_gui
         introduction/general_tools
-        working/working_with_projections
-	working/working_with_vector
-	working/working_with_raster
-	working/working_with_ogc
+        working_with_projections/working_with_projections
+	qgis_browser/qgis_browser
+        working_with_vector/working_with_vector
+	working_with_raster/working_with_raster
+	working_with_ogc/working_with_ogc
 	working_with_gps/plugins_gps.rst
 	working_with_gps/live_GPS_tracking.rst
 	server/server
