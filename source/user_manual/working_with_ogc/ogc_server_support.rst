@@ -6,7 +6,6 @@
 QGIS Server
 ============
 
-
 QGIS Server is an open source WMS 1.3 implementation which, in addition, 
 implements advanced cartographic features for thematic mapping. The QGIS
 Server is a FastCGI/CGI (Common Gateway Interface) application written in 

@@ -6,7 +6,6 @@ Working with OGC Data
 
 QGIS supports WMS and WFS as data sources. 
 
-
 What is OGC Data
 ================
 
