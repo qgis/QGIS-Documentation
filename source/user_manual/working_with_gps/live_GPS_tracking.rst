@@ -93,7 +93,7 @@ and click on **[Add feature]**.
 
 .. _Figure_gpstrack_options:
 
-.. figure:: img/en/gpstrack_options.png
+.. figure:: ../../../static/user_manual/working_with_gps/gpstrack_options.png
    :align: center
    :width: 15em
 

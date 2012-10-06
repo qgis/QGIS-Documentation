@@ -10,7 +10,7 @@ ability to display coordinates on the map canvas for two
 selected Coordinate Reference Systems (CRS).
 
 .. _figure_coordinate_capture_1:
-.. figure:: img/en/plugins_coordinate_capture/coordinate_capture_dialog.png
+.. figure:: ../../../static/user_manual/plugins/coordinate_capture_dialog.png
    :align: center
    :width: 20em
 

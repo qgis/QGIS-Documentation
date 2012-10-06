@@ -44,7 +44,7 @@ settings` dialog in the menu :menuselection:`Plugins --> Road Graph`.
 
 .. _figure_road_graph_1:
 
-.. figure:: img/en/plugins_road_graph/roadgraph_settings.png
+.. figure:: ../../../static/user_manual/plugins/roadgraph_settings.png
    :align: center
    :width: 20 em
 
@@ -55,7 +55,7 @@ Select a Start and a Stop point in the road network layer and click on
 
 .. _figure_road_graph_2:
 
-.. figure:: img/en/plugins_road_graph/roadgraph_sample.png
+.. figure:: ../../../static/user_manual/plugins/roadgraph_sample.png
    :align: center
    :width: 40 em
 

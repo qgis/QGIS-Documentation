@@ -65,7 +65,7 @@ in the first section, used to defining the Default Coordinate Reference System t
 This choice will be saved for use in subsequent QGIS sessions.
 
 .. _figure_projection_1:
-.. figure:: img/en/crsdialog.png
+.. figure:: ../../../static/user_manual/working_with_projections/crsdialog.png
    :align: center
    :width: 40em
 
@@ -141,7 +141,7 @@ shown in Figure_projection_2_ and described below.
 
 
 .. _figure_projection_2:
-.. figure:: img/en/projectionDialog.png
+.. figure:: ../../../static/user_manual/working_with_projections/projectionDialog.png
    :align: center
    :width: 40em
 
@@ -198,7 +198,7 @@ your spatial bookmarks and other custom data.
 
 
 .. _figure_projection_3:
-.. figure:: img/en/customProjectionDialog.png
+.. figure:: ../../../static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
    :width: 30em
 

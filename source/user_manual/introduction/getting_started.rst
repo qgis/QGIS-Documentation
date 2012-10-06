@@ -254,7 +254,7 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 
 .. _`fig_simple_session`:
 
-.. figure::_static/simple_session.png
+.. ../../../static/user_manual/introduction/simple_session.png
    :align: center
    
    A Simple |qg| Session

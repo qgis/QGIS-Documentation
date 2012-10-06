@@ -20,7 +20,7 @@ features.
 
 .. _figure_shortcuts:
 
-.. figure:: img/en/shortcuts.png 
+.. figure:: ../../../static/user_manual/introduction/shortcuts.png 
    :align: center
    :width: 30em
 
@@ -272,7 +272,7 @@ canvas. Use the text annotation tool and click into the map canvas.
 
 .. _annotation:
 
-.. figure:: img/en/annotation.png
+.. figure:: ../../../static/user_manual/introduction/annotation.png
    :align: center
    :width: 30em
 
@@ -302,7 +302,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. _figure_custom_annotation:
 
-.. figure:: img/en/custom_annotation.png
+.. figure:: ../../../static/user_manual/introduction/custom_annotation.png
    :align: center
    :width: 30em
 
