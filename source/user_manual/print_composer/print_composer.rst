@@ -98,7 +98,7 @@ but before any elements are added.
 
 
 .. _Figure_composer_1:
-.. figure:: ../../../static/user_manual/print_composer/print_composer_blank.png
+.. figure:: img/en/print_composer_blank.png
    :align: center
    :width: 40em
 
@@ -558,7 +558,7 @@ There can only be one atlas map by print composer. To enable the generation of a
   :guilabel:`Output filename expression` field is meaningless.
 
 .. _Figure_composer_13:
-.. figure:: ../../../static/user_manual/print_composer/print_composer_atlas.png
+.. figure:: img/en/print_composer_atlas.png
    :align: center
    :width: 30em
 
@@ -599,7 +599,7 @@ or by mouse click within the :guilabel:`Command history` tab (see figure_compose
 
 .. _figure_composer_8:
 
-.. figure:: ../../../static/user_manual/print_composer/command_hist.png
+.. figure:: img/en/command_hist.png
    :align: center
    :width: 40 em
 
@@ -722,7 +722,7 @@ above.
 
 .. _figure_composer_11:
 
-.. figure:: ../../../static/user_manual/print_composer/print_composer_complete.png
+.. figure:: img/en/print_composer_complete.png
    :align: center
    :width: 40 em
 
@@ -765,7 +765,7 @@ toolbar and in :menuselection:`File --> Composer Manager` allows to
 add a new composer template or to manage already existing templates.
 
 .. _figure_composer_12:
-.. figure:: ../../../static/user_manual/print_composer/print_composer_manager.png
+.. figure:: img/en/print_composer_manager.png
    :align: center
    :width: 24 em
 

@@ -20,7 +20,7 @@ field, only update selected features or create a new attribute field, where
 the results of the calculation will be added.
 
 .. _figure_attributes_3:
-.. figure:: ../../../static/user_manual/working_with_vector/fieldcalculator.png
+.. figure:: img/en/fieldcalculator.png
    :width: 40em
    :align: center
 

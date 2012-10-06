@@ -70,7 +70,7 @@ the WMS with the URL ``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described
 in :ref:`ogc-wms-servers`.
 
 .. _figure_server_1:
-.. figure:: ../../../static/user_manual/working_with_ogc/standard_wms_usa.png
+.. figure:: img/en/standard_wms_usa.png
    :align: center
    :width: 40 em
 
@@ -97,7 +97,7 @@ queryable (see figure_server_2_). Now save the session in a
 project file :file:`alaska\_airports.qgs`. 
 
 .. _figure_server_2:
-.. figure:: ../../../static/user_manual/working_with_ogc/wms_server_definition.png
+.. figure:: img/en/wms_server_definition.png
    :align: center
    :width: 40 em
 
@@ -112,7 +112,7 @@ Now we test our project WMS, add the WMS with the URL
 :ref:`Creating a WMS from a QGIS project` to QGIS and load the WMS, see figure_server_3_.
 
 .. _figure_server_3:
-.. figure:: ../../../static/user_manual/working_with_ogc/wms_server_project.png
+.. figure:: img/en/wms_server_project.png
    :align: center
    :width: 40 em
 

@@ -75,7 +75,7 @@ It can later be visualized together with the data from the GRASS spearfish60
 location. You can download the topo sheet here: http://grass.osgeo.org/sampledata/spearfish\_toposheet.tar.gz .
 
 .. _figure_georeferencer_1:
-.. figure:: ../../../static/user_manual/plugins/georefplugin.png
+.. figure:: img/en/plugins_georeferencer/georefplugin.png
    :align: center
    :width: 40em
 
@@ -109,7 +109,7 @@ Entering ground control points (GCPs)
    order to locate a relevant set of GCP points.
 
 .. _figure_georeferencer_2:
-.. figure:: ../../../static/user_manual/plugins/choose_points.png
+.. figure:: img/en/plugins_georeferencer/choose_points.png
    :align: center
    :width: 35em
 
@@ -135,7 +135,7 @@ After you have added your GCPs to the raster image, you need to define the
 transformation settings for the georeferencing process.
 
 .. _figure_georeferencer_3:
-.. figure:: ../../../static/user_manual/plugins/transformation_settings.png
+.. figure:: img/en/plugins_georeferencer/transformation_settings.png
    :align: center
    :width: 20em
 

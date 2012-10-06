@@ -16,7 +16,7 @@ dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
 
 .. _figure_sql_anywhere:
 
-.. figure:: ../../../static/user_manual/plugins/sql_anywhere.png
+.. figure:: img/en/plugins_sql_anywhere/sql_anywhere.png
    :align: center
    :width: 40 em
 

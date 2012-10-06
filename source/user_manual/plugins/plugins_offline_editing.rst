@@ -28,7 +28,7 @@ apply the offline edits to the master dataset.
 
 .. _figure_offline_1:
 
-.. figure:: ../../../static/user_manual/plugins/create_offline_project.png
+.. figure:: img/en/plugins_offline_editing/create_offline_project.png
    :align: center
    :width: 40em
 

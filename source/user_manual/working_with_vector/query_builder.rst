@@ -18,7 +18,7 @@ from a PostGIS layer with attributes stored in PostgreSQL. The Fields, Values
 and Operators sections help the user to construct the SQL-like query.
 
 .. _figure_attributes_2:
-.. figure:: ../../../static/user_manual/working_with_vector/queryBuilder.png
+.. figure:: img/en/queryBuilder.png
    :width: 40em
    :align: center
 

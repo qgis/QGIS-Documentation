@@ -39,7 +39,7 @@ ShareAlike 2.0 license.
 
 .. _figure_osm_1:
 
-.. figure:: ../../../static/user_manual/osm/osmweb.png
+.. figure:: img/en/plugins_openstreetmap/osmweb.png
    :align:  center
    :width:  40em
 
@@ -149,7 +149,7 @@ together with new graphical components as shown in figure_osm_2_.
 
 .. _figure_osm_2:
 
-.. figure:: ../../../static/user_manual/osm/osm_widgets.png
+.. figure:: img/en/plugins_openstreetmap/osm_widgets.png
    :align: center
    :width: 40em
 
@@ -216,7 +216,7 @@ toolbar in your QGIS installation. You can enable it again selecting
 
 .. _figure_osm_3:
 
-.. figure:: ../../../static/user_manual/osm/osmloaddialog.png
+.. figure:: img/en/plugins_openstreetmap/osmloaddialog.png
    :align: center
    :width: 30em
 
@@ -301,7 +301,7 @@ on the OSM Feature widget. Don't forget to identify feature first.
 
 .. _figure_OSM_4:
 
-.. figure:: ../../../static/user_manual/osm/osm_changefeaturetag.png
+.. figure:: img/en/plugins_openstreetmap/osm_changefeaturetag.png
    :align: center
    :width: 40em
 
@@ -331,7 +331,7 @@ following message:
 
 .. _figure_osm_5:
 
-.. figure:: ../../../static/user_manual/osm/osm_pointcreation.png
+.. figure:: img/en/plugins_openstreetmap/osm_pointcreation.png
    :align: center
    :width: 30 em
 
@@ -501,7 +501,7 @@ button a dialog occurs and provides following functionalities:
 
 .. _figure_osm_6:
 
-.. figure:: ../../../static/user_manual/osm/osm_downloaddialog.png
+.. figure:: img/en/plugins_openstreetmap/osm_downloaddialog.png
    :align: center
    :width: 30em
 
@@ -559,7 +559,7 @@ After clicking the **[Upload]** button a new dialog will appear.
 
 .. _figure_OSM_7:
 
-.. figure:: ../../../static/user_manual/osm/osm_uploaddialog.png
+.. figure:: img/en/plugins_openstreetmap/osm_uploaddialog.png
    :align: center
    :width: 25em
 
@@ -590,7 +590,7 @@ OpenStreetMap -->`. After clicking on the button a new dialog appears.
 
 .. _figure_OSM_8:
 
-.. figure:: ../../../static/user_manual/osm/osm_savedialog.png
+.. figure:: img/en/plugins_openstreetmap/osm_savedialog.png
   :align: center
   :width: 25em
 
@@ -623,7 +623,7 @@ After clicking on the button following message may show up:
 
 .. _figure_OSM_9:
 
-.. figure:: ../../../static/user_manual/osm/osm_importdialog.png
+.. figure:: img/en/plugins_openstreetmap/osm_importdialog.png
    :align: center
    :width: 25em
    
@@ -637,7 +637,7 @@ the current OSM layer again):
 
 .. _figure_OSM_10:
 
-.. figure:: ../../../static/user_manual/osm/osm_importtoosmdialog.png
+.. figure:: img/en/plugins_openstreetmap/osm_importtoosmdialog.png
    :align: center
    :width: 25em
 

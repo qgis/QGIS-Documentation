@@ -147,7 +147,7 @@ a layer without CRS is loaded.
 
 .. _fig_proxy-settings:
 
-.. figure:: ../../../static/user_manual/introduction/proxy-settings.png
+.. figure:: img/en/proxy-settings.png
    :align: center
    :width: 40em
    
