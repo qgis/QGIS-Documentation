@@ -6,7 +6,6 @@ A script to move figures that are used in rst file to another folder
 begin                : 2012-10-05
 written by           : Diethard Jansen, Raymond Nijssen
 copyright            : (C) 2012 Quantum GIS Project
-email                : diethard.jansen at gmail.com 
  ***************************************************************************/
 
 /***************************************************************************
