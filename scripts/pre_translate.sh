@@ -1,7 +1,6 @@
 #!/bin/bash
 
-LOCALES='de'
-# Don't add the code "en" (English) here or bad things will happen!
+LOCALES='de nl'
 
 if [ $1 ]; then
   LOCALES=$1

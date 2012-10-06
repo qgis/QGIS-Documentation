@@ -45,8 +45,9 @@ You will need the following tools (Werner, plz add if I missed something :-) )
 
 * git (from packagemanager)
 * sphinx (via 'sudo pip install sphinx')
-* texlive
-* texlive-fonts-recommended
+* texlive (from packagemanager)
+* texlive-fonts-recommended (from packagemanager0
+* texi2pdf (from packagemanager, in Ubuntu in package 'texinfo')
 
 
 Generation
@@ -56,11 +57,11 @@ Git clone this project::
 
  git clone git@github.com:qgis/QGIS-Documentation.git
  # to later update your tree do
- git pull origin master
+ git pull --rebase origin master
 
 You should have a directory tree like this::
 
- ├── i18n               will hold
+ ├── i18n               will hold the po files for all languages
  ├── Makefile           ? to be removed ?
  ├── output             ? will contain output (? not in github ?)
  ├── readme.rst         this file 
@@ -71,12 +72,12 @@ You should have a directory tree like this::
  ├── static             used for building, plz keep this here and clean
  └── themes             contains themes for output
 
-Run pre_translate.sh script to create the gettext files (po, pot)::
+Run pre_translate.sh script to create the gettext files (po, pot) in the i18n directory::
 
  cd QGIS-Documentation
  scripts/pre_translate.sh
 
-Translators edit their i18n files
+Translators translate their i18n files using tools like linguist
 
 Run post_translate.sh script to build all translated pdf and html files::
 

@@ -1,8 +1,10 @@
 #!/bin/bash
-LOCALES='de'
+
+# GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
+LOCALES='de nl'
 
 BUILDDIR=build
-mdkir ${DUILDDIR}
+mkdir ${BUILDDIR}
 
 # output dirs
 PDFDIR=`pwd`/output/pdf
@@ -35,7 +37,7 @@ fi
 rm -rf ${BUILDDIR}
 mkdir ${BUILDDIR}
 #Add english to the list and generated docs
-LOCALES='en de'
+LOCALES+=' en'
 
 if [ $1 ]; then
   LOCALES=$1
