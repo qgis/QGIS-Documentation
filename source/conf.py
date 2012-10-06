@@ -25,7 +25,7 @@ import sys, os
 extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['templates']
+templates_path = ['../templates']
 
 
 # The suffix of source filenames.
@@ -46,7 +46,7 @@ copyright = u'2012, QGIS project'
 # built documents.
 #
 # The short X.Y version.
-version = '1.7.4'
+version = '1.7'
 # The full version, including alpha/beta/rc tags.
 release = '1.7.4'
 
@@ -603,7 +603,7 @@ rst_epilog = """
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
 #html_theme = 'sphinxdoc'
-html_theme = 'sphinxdoc'
+html_theme = 'linfiniti-sphinx-theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

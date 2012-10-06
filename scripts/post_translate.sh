@@ -1,6 +1,16 @@
 #!/bin/bash
 LOCALES='de'
+
 BUILDDIR=build
+mdkir ${DUILDDIR}
+
+# output dirs
+PDFDIR=`pwd`/output/pdf
+HTMLDIR=`pwd`/output/html
+mkdir -p ${PDFDIR}
+mkdir -p ${HTMLDIR}
+
+VERSION=`cat source/conf.py | grep "version = '.*'" | grep -o "[0-9]\.[0-9]"`
 
 if [ $1 ]; then
   LOCALES=$1
@@ -37,7 +47,7 @@ do
   rm -rf static/*
   cp -r resources/${LOCALE}/* static
   echo "Building HTML for locale '${LOCALE}'..."
-  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${BUILDDIR}/html/${LOCALE}
+  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
 
   # Compile the latex docs for that locale
   sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
@@ -47,10 +57,11 @@ do
   pushd .
   cd ${BUILDDIR}/latex/${LOCALE}/
   texi2pdf --quiet QGISUserGuide.tex
-  mv QGISUserGuide.pdf ../../QGISUserGuide-${LOCALE}.pdf
+  mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
   popd
 done
+
 rm -rf static/*
+rm -rf ${BUILDDIR}
+
 git checkout static/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
-rm -rf ${BUILDDIR}/doctrees
-rm -rf ${BUILDDIR}/latex
