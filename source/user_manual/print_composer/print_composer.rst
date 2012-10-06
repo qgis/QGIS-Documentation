@@ -119,6 +119,8 @@ The print composer provides three tabs:
 * The :guilabel:`Command history` tab displays a history of all changes applied
   to the print composer layout. With a mouse click it is possible to undo
   and redo layout steps back and forth to a certain status.
+* The :guilabel:`Atlas generation` tab allows to enable the generation of an
+  atlas for the current composer and gives access to its parameters.
 
 You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
@@ -525,6 +527,49 @@ features (see figure_composer_7_ b):
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
   |checkbox| :guilabel:`Show frame` checkbox.
+
+Atlas generation
+================
+
+The print composer includes generation functions that allow to create map books in an automated way. The concept is to use a coverage layer, which contains geometries and fields. For each geometry in the coverage layer, a new output will be generated where the content of some canvas maps will be moved to highlight the current geometry. Fields associated to this geometry can be used within text labels.
+
+There can only be one atlas map by print composer. To enable the generation of an atlas and access generation parameters, refer to the `Atlas generation` tab. This tab contains the following widgets (see Figure_composer_13_):
+
+* A combo box :guilabel:`Composer map to use` that allows to choose which map item will be
+  used as the atlas map, i.e. on which map geometries from the coverage layer will be iterated over
+  and displayed.
+* A combo box :guilabel:`Coverage layer` that allows to choose the (vector) layer containing the
+  geometries on which to iterate over.
+* An optional :guilabel:`Hidden coverage layer` |checkbox|, that if checked, will hide the
+  coverage layer (but not the other ones) during the generation.
+* An input box :guilabel:`Margin around coverage` that allows to select the amount of
+  space added around each geometry within the allocated map. Its value
+  is meaningful only when using the autoscaling mode.
+* A :guilabel:`Fixed scale` |checkbox| that allows to toggle between auto-scale and
+  fixed-scale mode. In fixed scale mode, the map will only be translated
+  for each geometry to be centered. In auto-scale mode, the map's extents
+  are computed in such a way that each geometry will appear in its whole.
+* An :guilabel:`Output filename expression` textbox that is used to generate a filename for each
+  geometry if needed. It is based on expressions. This
+  field is meaningful only for rendering to multiple files.
+* A :guilabel:`Single file export when possible` |checkbox| that allows to force the
+  generation of a single file if this is possible by the chosen output
+  format (PDF for instance). If this field is checked, the value of the
+  :guilabel:`Output filename expression` field is meaningless.
+
+.. _Figure_composer_13:
+.. figure:: img/en/print_composer_atlas.png
+   :align: center
+   :width: 30em
+
+   Figure Composer 13: Atlas generation tab |nix|
+
+Generation
+----------
+
+The atlas generation is done when the user asks for a print or an export. The behaviour of these functions will be slightly changed if an atlas map has been selected.
+
+For instance, when the user asks for an export to PDF, if an atlas map is defined, the user will be asked for a directory where to save all the generated PDF files (except if the "Single file export when possible" has been selected).
 
 Navigation tools
 ================
