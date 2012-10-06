@@ -41,7 +41,7 @@ the connection parameters (See Figure_oracle_raster_1_):
 
 .. _Figure_oracle_raster_1:
 
-.. figure:: img/en/plugins_oracle_raster/oracle_create_dialog.png
+.. figure:: ../../../static/user_manual/plugins/oracle_create_dialog.png
    :align: center
    :width: 20em
 
@@ -76,7 +76,7 @@ GeoRaster or to go back to the beginning and select another table name.
 
 .. _Figure_oracle_raster_2:
 
-.. figure:: img/en/plugins_oracle_raster/oracle_select_dialog.png
+.. figure:: ../../../static/user_manual/plugins/oracle_select_dialog.png
    :align: center
    :width: 30em
 

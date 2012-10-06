@@ -69,7 +69,7 @@ window (see figure_vector_1_).
 
 
 .. _figure_vector_1:
-.. figure:: img/en/Addvectorlayerdialog.png
+.. figure:: ../../../static/user_manual/working_with_vector/Addvectorlayerdialog.png
    :align: center
 
    Figure Vector 1: Add Vector Layer Dialog |nix|
@@ -85,7 +85,7 @@ You can also select the Encoding type for the shapefile if desired.
 
 
 .. _figure_vector_2:
-.. figure:: img/en/shapefileopendialog.png
+.. figure:: ../../../static/user_manual/working_with_vector/shapefileopendialog.png
    :width: 40em
    :align: center
 
@@ -97,7 +97,7 @@ the :file:`alaska.shp` file.
 
 
 .. _figure_vector_3:
-.. figure:: img/en/shapefileloaded.png
+.. figure:: ../../../static/user_manual/working_with_vector/shapefileloaded.png
    :width: 40em
    :align: center
 
@@ -533,7 +533,7 @@ tiny point on the far left of the map canvas (Chatham Islands), should
 be within the grid, right of New Zealand main islands.
 
 .. _figure_vector_4:
-.. figure:: img/en/vectorNotWrapping.png
+.. figure:: ../../../static/user_manual/working_with_vector/vectorNotWrapping.png
    :width: 40em
    :align: center
 
@@ -550,7 +550,7 @@ a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
 
 
 .. _figure_vector_5:
-.. figure:: img/en/vectorWrapping.png
+.. figure:: ../../../static/user_manual/working_with_vector/vectorWrapping.png
    :width: 40em
    :align: center
 

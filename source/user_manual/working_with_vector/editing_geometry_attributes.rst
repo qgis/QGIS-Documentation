@@ -66,7 +66,7 @@ the snapping options dialog, regardless of the global snapping tolerance.
 So be sure to mark the checkbox for those layers that you need to snap to.
 
 .. _figure_edit_1:
-.. figure:: img/en/editProjectSnapping.png
+.. figure:: ../../../static/user_manual/working_with_vector/editProjectSnapping.png
    :width: 40em
    :align: center
 
@@ -256,7 +256,7 @@ river in Alaska. In the :guilabel:`Digitizing` tab under the
 |checkbox| :guilabel:`Reuse last entered attribute values`.
 
 .. _figure_edit_2:
-.. figure:: img/en/editDigitizing.png
+.. figure:: ../../../static/user_manual/working_with_vector/editDigitizing.png
    :width: 30em
    :align: center
 
@@ -505,7 +505,7 @@ the history list; all features will be reverted to the state they were in
 after the selected operation.
 
 .. _figure_edit_3:
-.. figure:: img/en/redo_undo.png
+.. figure:: ../../../static/user_manual/working_with_vector/redo_undo.png
    :width: 40em
    :align: center
 
@@ -631,7 +631,7 @@ from the attribute table of the point layer in the :guilabel:`Style` tab of
 the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
 
 .. _figure_edit_4:
-.. figure:: img/en/rotatepointsymbol.png
+.. figure:: ../../../static/user_manual/working_with_vector/rotatepointsymbol.png
    :width: 15em
    :align: center
 
@@ -670,7 +670,7 @@ displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (Coordinate Reference System).
 
 .. _figure_edit_5:
-.. figure:: img/en/editNewVector.png
+.. figure:: ../../../static/user_manual/working_with_vector/editNewVector.png
    :width: 30em
    :align: center
 
@@ -707,7 +707,7 @@ To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 be displayed as shown in Figure_edit_6_.
 
 .. _figure_edit_6:
-.. figure:: img/en/editNewSpatialite.png
+.. figure:: ../../../static/user_manual/working_with_vector/editNewSpatialite.png
    :width: 30em 
    :align: center
 
@@ -753,7 +753,7 @@ layer (figure_attributes_1_). The number of features and the number of
 selected features are shown in the attribute table title.
 
 .. _figure_attributes_1:
-.. figure:: img/en/vectorAttributeTable.png
+.. figure:: ../../../static/user_manual/working_with_vector/vectorAttributeTable.png
    :width: 40em
    :align: center
 

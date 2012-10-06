@@ -161,7 +161,7 @@ Your screen should now look a bit like figure_OGR_1_, which
 shows the response provided by the NASA JPL OnEarth WMS server.
 
 .. _figure_OGR_1:
-.. figure:: img/en/connection_wms.png
+.. figure:: ../../../static/user_manual/working_with_ogc/connection_wms.png
    :align: center
    :width: 45em
 
@@ -271,7 +271,7 @@ the tab :guilabel:`Search` with the :guilabel:`Add Layer(s) from a
 Server` dialog.
 
 .. _Figure_OGC_2:
-.. figure:: img/en/wms_server_search.png
+.. figure:: ../../../static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
    :width: 38em
 
@@ -477,7 +477,7 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 Note that proxy-settings you have set in your preferences are also recognized.
 
 .. _figure_OGC_3:
-.. figure::img/en/connection_wfs.png
+.. ../../../static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
    :width: 34 em
 

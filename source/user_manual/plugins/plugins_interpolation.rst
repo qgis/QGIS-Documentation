@@ -26,7 +26,7 @@ The plugin requires the following parameters to be specified before running:
 
 .. _figure_interpolation_1:
 
-.. figure:: img/en/plugins_interpolation/interpolate_dialog.png
+.. figure:: ../../../static/user_manual/plugins/interpolate_dialog.png
    :align: center
    :width: 40em
 
@@ -58,7 +58,7 @@ The processing only takes a few minutes, and covers the northern part of Alaska.
 
 .. _figure_interpolation_2:
 
-.. figure:: img/en/plugins_interpolation/interpolate_tin.png
+.. figure:: ../../../static/user_manual/plugins/interpolate_tin.png
    :align: center
    :width: 30em
 

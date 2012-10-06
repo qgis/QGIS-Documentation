@@ -111,7 +111,7 @@ Each :file:`LOCATION` is defined by its coordinate system, map projection and ge
 :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler & Mitasova 2008 :ref:`literature_and_web`). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
 
 .. _figure_grass_location_1:
-.. figure:: img/en/grass_location.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_location.png
    :align: center
    :width: 40em
 
@@ -126,7 +126,7 @@ Creating a new GRASS LOCATION
 As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
 
 .. _figure_grass_location_2:
-.. figure:: img/en/create_grass_location.png
+.. figure:: ../../../static/user_manual/grass_integration/create_grass_location.png
    :align: center
 
    Figure GRASS location 2: Creating a new GRASS LOCATION or a new MAPSET in |QG|
@@ -334,7 +334,7 @@ In figure_grass_digitizing_1_ you see the GRASS digitizing toolbar icons provide
 explains the available functionalities.
 
 .. _figure_grass_digitizing_1:
-.. figure:: img/en/grass_digitizing_toolbar.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_digitizing_toolbar.png
    :align: center
    :width: 30em
 
@@ -381,7 +381,7 @@ explains the available functionalities.
 The :guilabel:`Category` tab allows you to define the way in which the category values will be assigned to a new geometry element.
 
 .. _figure_grass_digitizing_2:
-.. figure:: img/en/grass_digitizing_category.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_digitizing_category.png
    :align: center
    :width: 30em
 
@@ -412,7 +412,7 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
 The :guilabel:`Settings` tab allows you to set the snapping in screen pixels. The threshold defines at what distance new points or line ends are snapped to existing nodes. This helps to prevent gaps or dangles between boundaries. The default is set to 10 pixels.
 
 .. _figure_grass_digitizing_3:
-.. figure:: img/en/grass_digitizing_settings.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_digitizing_settings.png
    :align: center
    :width: 30em
 
@@ -427,7 +427,7 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 / opened boundary).
 
 .. _figure_grass_digitizing_4:
-.. figure:: img/en/grass_digitizing_symbology.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_digitizing_symbology.png
    :align: center
    :width: 30em
 
@@ -442,7 +442,7 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:`creating_new_grass_vectors`).
 
 .. _figure_grass_digitizing_5:
-.. figure:: img/en/grass_digitizing_table.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_digitizing_table.png
    :align: center
    :width: 30em
 
@@ -617,7 +617,7 @@ additional vertices to the vector, causing it to load even more slowly.
 * You may change the color of the vector to display it clearly on the raster background and to contrast with the original contour lines. You will notice that the new contour lines have smoother corners than the original while staying faithful to the original overall shape.
 
 .. _figure_grass_module_2:
-.. figure:: img/en/grass_toolbox_vgeneralize.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
    :width: 40em
 
@@ -650,7 +650,7 @@ You should now have the ``gtopo30`` elevation with its colormap and transparency
 The GRASS plugin in QGIS is designed for users who are new to GRASS, and not familiar with all the modules and options. As such, some modules in the toolbox do not show all the options available, and some modules do not appear at all. The GRASS shell (or console) gives the user access to those additional GRASS modules that do not appear in the toolbox tree, and also to some additional options to the modules that are in the toolbox with the simplest default parameters. This example demonstrates the use of an additional option in the **r.shaded.relief** module that was shown above.
 
 .. figure_grass_module_3:
-.. figure:: img/en/grass_toolbox_shell.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
    :width: 40em
 
@@ -663,7 +663,7 @@ The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies t
 * As explained above, shift the shaded relief raster below the gtopo30 raster in the Table of Contents, then check transparency of the colored gtopo30 layer. You   should see that the 3D effect stands out more strongly compared to the first shaded relief map.
 
 .. figure_grass_module_4:
-.. figure:: img/en/grass_toolbox_shadedrelief.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
    :width: 40em
 
@@ -699,7 +699,7 @@ Another useful feature inside the GRASS Toolbox is the GRASS
 In the left browser windows you can browse through all :file:`MAPSETs` inside the current :file:`LOCATION`. The right browser window shows some meta information for selected raster or vector layers, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
 
 .. _figure_grass_module_5:
-.. figure:: img/en/grass_mapset_browser.png
+.. figure:: ../../../static/user_manual/grass_integration/grass_mapset_browser.png
    :align: center
    :width: 30em
 

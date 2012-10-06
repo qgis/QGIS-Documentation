@@ -57,7 +57,7 @@ To see the Display window click on the :guilabel:`Display` tab in the Generic Ev
 window. The Display window is used to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis_1:
-.. figure:: img/en/plugins_evis/evisdisplay.png
+.. figure:: ../../../static/user_manual/plugins/evisdisplay.png
    :align: center
    :width: 40em
 
@@ -91,7 +91,7 @@ Understanding the Options window
  \ 
 
 .. _figure_eVis_2:
-.. figure:: img/en/plugins_evis/evisoptions.png
+.. figure:: ../../../static/user_manual/plugins/evisoptions.png
    :align: center
    :width: 40em
 
@@ -138,7 +138,7 @@ Understanding the Configure External Applications window
  \ 
 
 .. _figure_eVis_3:
-.. figure:: img/en/plugins_evis/evisexternal.png
+.. figure:: ../../../static/user_manual/plugins/evisexternal.png
    :align: center
    :width: 40em
  
@@ -310,7 +310,7 @@ were entered above.
 
 .. _figure_eVis_4:
 
-.. figure:: img/en/plugins_evis/evisdatabase.png
+.. figure:: ../../../static/user_manual/plugins/evisdatabase.png
    :align: center
    :width: 40em
 
@@ -353,7 +353,7 @@ In the Database File Selection window, enter the name of the layer that will be 
 results of the query in the Name of New Layer textbox.
 
 .. _figure_eVis_5:
-.. figure:: img/en/plugins_evis/evissql_query.png
+.. figure:: ../../../static/user_manual/plugins/evissql_query.png
    :align: center
    :width: 40em
 
@@ -411,7 +411,7 @@ successful an error message will appear in the Output Console window.
 
 .. _figure_eVis_6:
 
-.. figure:: img/en/plugins_evis/evispredefined.png
+.. figure:: ../../../static/user_manual/plugins/evispredefined.png
    :align: center
    :width: 40em
 

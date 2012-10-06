@@ -11,7 +11,7 @@ raster pixel values.
 The results are written to a new raster layer with a GDAL supported format. 
 
 .. _figure_raster_2:
-.. figure:: img/en/raster_calculator.png
+.. figure:: ../../../static/user_manual/working_with_raster/raster_calculator.png
    :align: center
    :width: 38em
 

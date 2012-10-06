@@ -32,7 +32,7 @@ Description of the analysis:
 
 .. _figure_raster_terrain_1:
 
-.. figure:: img/en/plugins_raster_terrain/raster_terrain_dialog.png
+.. figure:: ../../../static/user_manual/plugins/raster_terrain_dialog.png
    :align: center
    :width: 40em
 
