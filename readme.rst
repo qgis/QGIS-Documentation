@@ -7,6 +7,8 @@ Where I can read this documentation
 It is possible to read the HTML version of the documentation for many languages 
 here:
 
+TODO: update
+
 * English: http://documentation.qgis.org/user_guide/html/en
 * French: http://documentation.qgis.org/user_guide/html/fr
 * German: http://documentation.qgis.org/user_guide/html/de
@@ -30,142 +32,63 @@ committed at this repository.
 Quick Overview
 --------------------------------------------------------------------------------
 
-* git clone the project
-* create the internationalization directory structure
-* compile the message (make compile_messages)
-* build the documentation (make html)
-* translators edit the files
-* administrator update the template files for each master document release
+* install required tools
+* git clone the QGIS Documentation project
+* run pre_translate.sh
+* translators edit their i18n files
+* run post_translate.sh
 
-Installation
+Tools
 --------------------------------------------------------------------------------
 
-Git clone this project.
-   
-Now create a virtualenv, source it and install latest requirements::
-    
-    virtualenv --no-site-packages qgis-doc-env
-    . qgis-doc-env/bin/activate
-    pip install -r requirements.txt
-   
-Create the internationalization directory structure
+You will need the following tools (Werner, plz add if I missed something :-) ) 
+
+* git (from packagemanager)
+* sphinx (via 'sudo pip install sphinx')
+* texlive
+* texlive-fonts-recommended
+
+
+Generation
 --------------------------------------------------------------------------------
 
-Project administrators must generate .pot files (and update them every time the 
-master document has been updated). He/she must generate .pot files for each
-directory containing .rst files. For example::
+Git clone this project::
 
-	$ sphinx-build -b gettext -c source source/others/ source/translated/pot
-	$ sphinx-build -b gettext -c source source/introduction/ source/translated/pot
-	$ sphinx-build -b gettext -c source source/plugins/ source/translated/pot/
-	$ sphinx-build -b gettext -c source source/print_composer/ source/translated/pot/
-	$ sphinx-build -b gettext -c source source/server/ source/translated/pot/
-	$ sphinx-build -b gettext -c source source/working/ source/translated/pot/
+ git clone git@github.com:qgis/QGIS-Documentation.git
+ # to later update your tree do
+ git pull origin master
 
-To add a new language the administrator need to copy the source/translated/pot 
-directory to source/transated/language-code directory, where your-language-code 
-is the `ISO language code with 2 digits 
-<http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>`_, and rename the files 
-.pot to .po.
+You should have a directory tree like this::
 
-For example, for the Italian version of the User Guide::
+ ├── i18n               will hold
+ ├── Makefile           ? to be removed ?
+ ├── output             ? will contain output (? not in github ?)
+ ├── readme.rst         this file 
+ ├── requirements.txt   ? to be removed ?
+ ├── resources          containing all images for sources
+ ├── scripts            containing buildscripts and conf.py
+ ├── source             containing all rst sources
+ ├── static             used for building, plz keep this here and clean
+ └── themes             contains themes for output
 
-	mkdir source/translated/it
-	mkdir source/translated/it/LC_MESSAGES
-	cp source/translated/pot/* source/translated/it/
-	cd source/translated/it/
-	for f in *.pot; do mv $f `basename $f .pot`.po; done;
+Run pre_translate.sh script to create the gettext files (po, pot)::
 
-This is how it should look the directory tree::
+ cd QGIS-Documentation
+ scripts/pre_translate.sh
 
-	translated/
-	├── it
-	│   ├── conventions.po
-	│   ├── foreword.po
-	│   ├── help_and_support.po
-	│   ├── index.po
-	│   ├── introduction.po
-	│   ├── LC_MESSAGES
-	│   ├── plugins.po
-	│   ├── preamble.po
-	│   ├── print_composer.po
-	│   ├── server.po
-	│   └── working.po
-	└── pot
-	    ├── conventions.pot
-	    ├── foreword.pot
-	    ├── help_and_support.pot
-	    ├── index.pot
-	    ├── introduction.pot
-	    ├── plugins.pot
-	    ├── preamble.pot
-	    ├── print_composer.pot
-	    ├── server.pot
-	    └── working.pot
+Translators edit their i18n files
 
-  
-Build the documentation
---------------------------------------------------------------------------------
+Run post_translate.sh script to build all translated pdf and html files::
 
-You can build the documentation in the following way:
+ cd QGIS-Documentation
+ scripts/post_translate.sh
 
-* first compile all the messages for getting updated translations in the build::
-
-    make compile_messages
-
-You should have the following structure now::
-
-	translated/
-	├── it
-	│   ├── conventions.po
-	│   ├── foreword.po
-	│   ├── help_and_support.po
-	│   ├── index.po
-	│   ├── introduction.po
-	│   ├── LC_MESSAGES
-	│   │   ├── conventions.mo
-	│   │   ├── foreword.mo
-	│   │   ├── help_and_support.mo
-	│   │   ├── index.mo
-	│   │   ├── introduction.mo
-	│   │   ├── plugins.mo
-	│   │   ├── preamble.mo
-	│   │   ├── print_composer.mo
-	│   │   ├── server.mo
-	│   │   └── working.mo
-	│   ├── plugins.po
-	│   ├── preamble.po
-	│   ├── print_composer.po
-	│   ├── server.po
-	│   └── working.po
-	└── pot
-	    ├── conventions.pot
-	    ├── foreword.pot
-	    ├── help_and_support.pot
-	    ├── index.pot
-	    ├── introduction.pot
-	    ├── plugins.pot
-	    ├── preamble.pot
-	    ├── print_composer.pot
-	    ├── server.pot
-	    └── working.pot
-
-
-* then clean the build directory::
-
-    make clean
-    
-* then compile the project to the desired output. For html::
-    
-    make html
-    
-* for pdf::
-    
-    make pdf
-    
 
 Translators edit workflow
 --------------------------------------------------------------------------------
+
+TODO: update this
+
 
 Every time a new master document is released, the translators can start 
 translating the .po files of competence.
