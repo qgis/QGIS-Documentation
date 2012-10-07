@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
-LOCALES='de'
+LOCALES='nl'
 
 BUILDDIR=build
-mkdir ${BUILDDIR}
+# be sure to remove an old build dir
+rm -rf ${BUILDDIR}
+mkdir -p ${BUILDDIR}
 
 # output dirs
 PDFDIR=`pwd`/output/pdf

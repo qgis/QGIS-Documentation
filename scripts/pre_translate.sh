@@ -13,6 +13,10 @@ mkdir -p i18n/pot
 mkdir -p source/static
 
 BUILDDIR=build
+# be sure to remove an old build dir
+rm -rf ${BUILDDIR}
+mkdir -p ${BUILDDIR}
+
 sphinx-build -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
 
 # Now iteratively update the locale specific .po files with any new strings needed translation
