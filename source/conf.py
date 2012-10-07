@@ -496,78 +496,64 @@ rst_epilog = """
    :width: 15em
 .. |gpstrack_polar| image:: /introduction/img/en/gpstrack_polar.png
    :width: 15em
-.. |grass| image:: /grass_integration/img/en/grasslogo.png
+.. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
-.. |grass_open_mapset| image:: /grass_integration/img/en/grass_open_mapset.png
+.. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
-.. |grass_new_mapset| image:: /grass_integration/img/en/grass_new_mapset.png
+.. |grass_new_mapset| image:: /static/common/grass_new_mapset.png
    :width: 1.5em
-.. |grass_close_mapset| image:: /grass_integration/img/en/grass_close_mapset.png
+.. |grass_close_mapset| image:: /static/common/grass_close_mapset.png
    :width: 1.5em
-.. |grass_add_vector| image:: /grass_integration/img/en/grass_add_vector.png
+.. |grass_add_vector| image:: /static/common/grass_add_vector.png
    :width: 1.5em
-.. |grass_add_raster| image:: /grass_integration/img/en/grass_add_raster.png
+.. |grass_add_raster| image:: /static/common/grass_add_raster.png
    :width: 1.5em
-.. |grass_new_vector_layer| image:: /grass_integration/img/en/grass_new_vector_layer.png
+.. |grass_new_vector_layer| image:: /static/common/grass_new_vector_layer.png
    :width: 1.5em
-.. |grass_edit| image:: /grass_integration/img/en/grass_edit.png
+.. |grass_edit| image:: /static/common/grass_edit.png
    :width: 1.5em
-.. |grass_tools| image:: /grass_integration/img/en/grass_tools.png
+.. |grass_tools| image:: /static/common/grass_tools.png
    :width: 1.5em
-.. |grass_region| image:: /grass_integration/img/en/grass_region.png
+.. |grass_region| image:: /static/common/grass_region.png
    :width: 1.5em
-.. |grass_region_edit| image:: /grass_integration/img/en/grass_region_edit.png
+.. |grass_region_edit| image:: /static/common/grass_region_edit.png
    :width: 1.5em
-.. |grass_new_point| image:: /grass_integration/img/en/grass_new_point.png
+.. |grass_new_point| image:: /static/common/grass_new_point.png
    :width: 1.5em
-.. |grass_new_line| image:: /grass_integration/img/en/grass_new_line.png
+.. |grass_new_line| image:: /static/common/grass_new_line.png
    :width: 1.5em
-.. |grass_new_boundary| image:: /grass_integration/img/en/grass_new_boundary.png
+.. |grass_new_boundary| image:: /static/common/grass_new_boundary.png
    :width: 1.5em
-.. |grass_new_centroid| image:: /grass_integration/img/en/grass_new_centroid.png
+.. |grass_new_centroid| image:: /static/common/grass_new_centroid.png
    :width: 1.5em
-.. |grass_move_vertex| image:: /grass_integration/img/en/grass_move_vertex.png
+.. |grass_move_vertex| image:: /static/common/grass_move_vertex.png
    :width: 1.5em
-.. |grass_add_vertex| image:: /grass_integration/img/en/grass_add_vertex.png
+.. |grass_add_vertex| image:: /static/common/grass_add_vertex.png
    :width: 1.5em
-.. |grass_delete_vertex| image:: /grass_integration/img/en/grass_delete_vertex.png
+.. |grass_delete_vertex| image:: /static/common/grass_delete_vertex.png
    :width: 1.5em
-.. |grass_move_line| image:: /grass_integration/img/en/grass_move_line.png
+.. |grass_move_line| image:: /static/common/grass_move_line.png
    :width: 1.5em
-.. |grass_split_line| image:: /grass_integration/img/en/grass_split_line.png
+.. |grass_split_line| image:: /static/common/grass_split_line.png
    :width: 1.5em
-.. |grass_delete_line| image:: /grass_integration/img/en/grass_delete_line.png
+.. |grass_delete_line| image:: /static/common/grass_delete_line.png
    :width: 1.5em
-.. |grass_edit_attributes| image:: /grass_integration/img/en/grass_edit_attributes.png
+.. |grass_edit_attributes| image:: /static/common/grass_edit_attributes.png
    :width: 1.5em
-.. |grass_close_edit| image:: /grass_integration/img/en/grass_close_edit.png
+.. |grass_close_edit| image:: /static/common/grass_close_edit.png
    :width: 1.5em
-.. |grass_add_map| image:: /grass_integration/img/en/grass_add_map.png
+.. |grass_add_map| image:: /static/common/grass_add_map.png
    :width: 1.5em
-.. |grass_copy_map| image:: /grass_integration/img/en/grass_copy_map.png
+.. |grass_copy_map| image:: /static/common/grass_copy_map.png
    :width: 1.5em
-.. |grass_rename_map| image:: /grass_integration/img/en/grass_rename_map.png
+.. |grass_rename_map| image:: /static/common/grass_rename_map.png
    :width: 1.5em
-.. |grass_delete_map| image:: /grass_integration/img/en/grass_delete_map.png
+.. |grass_delete_map| image:: /static/common/grass_delete_map.png
    :width: 1.5em
-.. |grass_set_region| image:: /grass_integration/img/en/grass_set_region.png
+.. |grass_set_region| image:: /static/common/grass_set_region.png
    :width: 1.5em
-.. |grass_refresh| image:: /grass_integration/img/en/grass_refresh.png
+.. |grass_refresh| image:: /static/common/grass_refresh.png
    :width: 1.5em
-.. |grass_module_option| image:: /grass_integration/img/en/grass_module_option.png
-   :width: 20em
-.. |grass_module_output| image:: /grass_integration/img/en/grass_module_output.png
-   :width: 20em
-.. |grass_module_manual| image:: /grass_integration/img/en/grass_module_manual.png
-   :width: 20em
-.. |grass_toolbox_moduletree| image:: /grass_integration/img/en/grass_toolbox_moduletree.png
-   :width: 30em
-.. |grass_toolbox_modulelist| image:: /grass_integration/img/en/grass_toolbox_modulelist.png
-   :width: 30em
-.. |grass_toolbox_rcontour| image:: /grass_integration/img/en/grass_toolbox_rcontour.png
-   :width: 20em
-.. |grass_toolbox_rcontour2| image:: /grass_integration/img/en/grass_toolbox_rcontour2.png
-   :width: 20em
 .. |delimited_text| image:: /static/user_manual/plugins/delimited_text.png
    :width: 1.5em   
 .. |mActionGDALScript| image:: /static/user_manual/plugins/mActionGDALScript.png

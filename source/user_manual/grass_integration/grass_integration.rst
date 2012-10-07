@@ -493,6 +493,12 @@ The GRASS Shell inside the GRASS Toolbox provides access to almost all (more tha
 Working with GRASS modules
 ---------------------------
 
+.. |grass_toolbox_moduletree| image:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
+   :width: 30em
+.. |grass_toolbox_modulelist| image:: /static/user_manual/grass_integration/grass_toolbox_modulelist.png
+   :width: 30em
+
+
 .. _figure_grass_toolbox_1:
 
 +------------------------------+----------------------------+
@@ -514,6 +520,14 @@ As shown in figure_grass_toolbox_1_ , you can look for the appropriate GRASS mod
 
 Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and
 :guilabel:`Manual`. In figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
+
+.. |grass_module_option| image:: /static/user_manual/grass_integration/grass_module_option.png
+   :width: 20em
+.. |grass_module_output| image:: /static/user_manual/grass_integration/grass_module_output.png
+   :width: 20em
+.. |grass_module_manual| image:: /static/user_manual/grass_integration/grass_module_manual.png
+   :width: 20em
+
 
 .. _figure_grass_toolbox_2:
 
@@ -576,6 +590,12 @@ The first example creates a vector contour map from an elevation raster
   the name ``ctour_100``.
 * Click **[Run]** to start the process. Wait for several moments until the message ``Successfully finished`` appears in the output window.
   Then click **[View Output]** and **[close]**.
+
+
+.. |grass_toolbox_rcontour| image:: /static/user_manual/grass_integration/grass_toolbox_rcontour.png
+   :width: 20em
+.. |grass_toolbox_rcontour2| image:: /static/user_manual/grass_integration/grass_toolbox_rcontour2.png
+   :width: 20em
 
 ..  _figure_grass_module_1:
 
