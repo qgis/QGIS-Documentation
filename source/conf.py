@@ -110,11 +110,11 @@ rst_epilog = """
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png
 .. |tab| image:: /static/common/tab.png
-.. |icon_sqlanywhere| image:: img/en/plugins_sql_anywhere/sqlanywhere.png
+.. |icon_sqlanywhere| image:: /static/user_manual/plugins/sqlanywhere.png
    :width: 1.5em
-.. |oracle_raster| image:: img/en/plugins_oracle_raster/oracle_raster.png
+.. |oracle_raster| image:: /static/user_manual/plugins/oracle_raster.png
    :width: 1.5em
-.. |raster_terrain| image:: img/en/plugins_raster_terrain/raster_terrain.png
+.. |raster_terrain| image:: /static/user_manual/plugins/raster_terrain.png
    :width: 1.5em
 .. |osm_load| image:: img/en/plugins_openstreetmap/osm_load.png
    :width: 1.5em
@@ -396,93 +396,93 @@ rst_epilog = """
    :width: 1.5em
 .. |wfs| image:: /static/common/wfs.png
    :width: 1.5em
-.. |ftools| image:: img/en/plugins_ftools/ftools_logo.png
+.. |ftools| image:: /static/user_manual/plugins/ftools_logo.png
    :width: 1.5em
-.. |matrix| image:: img/en/plugins_ftools/matrix.png
+.. |matrix| image:: /static/user_manual/plugins/matrix.png
    :width: 3em
-.. |sum_lines| image:: img/en/plugins_ftools/sum_lines.png
+.. |sum_lines| image:: /static/user_manual/plugins/sum_lines.png
    :width: 3em
-.. |sum_points| image:: img/en/plugins_ftools/sum_points.png
+.. |sum_points| image:: /static/user_manual/plugins/sum_points.png
    :width: 3em
-.. |unique| image:: img/en/plugins_ftools/unique.png
+.. |unique| image:: /static/user_manual/plugins/unique.png
    :width: 3em
-.. |basic_statistics| image:: img/en/plugins_ftools/basic_statistics.png
+.. |basic_statistics| image:: /static/user_manual/plugins/basic_statistics.png
    :width: 3em
-.. |neighbor| image:: img/en/plugins_ftools/neighbour.png
+.. |neighbor| image:: /static/user_manual/plugins/neighbour.png
    :width: 3em
-.. |mean| image:: img/en/plugins_ftools/mean.png
+.. |mean| image:: /static/user_manual/plugins/mean.png
    :width: 3em
-.. |intersections| image:: img/en/plugins_ftools/intersections.png
+.. |intersections| image:: /static/user_manual/plugins/intersections.png
    :width: 3em
-.. |random_selection| image:: img/en/plugins_ftools/random_selection.png
+.. |random_selection| image:: /static/user_manual/plugins/random_selection.png
    :width: 3em
-.. |sub_selection| image:: img/en/plugins_ftools/sub_selection.png
+.. |sub_selection| image:: /static/user_manual/plugins/sub_selection.png
    :width: 3em
-.. |random_points| image:: img/en/plugins_ftools/random_points.png
+.. |random_points| image:: /static/user_manual/plugins/random_points.png
    :width: 3em
-.. |regular_points| image:: img/en/plugins_ftools/regular_points.png
+.. |regular_points| image:: /static/user_manual/plugins/regular_points.png
    :width: 3em
-.. |vector_grid| image:: img/en/plugins_ftools/vector_grid.png
+.. |vector_grid| image:: /static/user_manual/plugins/vector_grid.png
    :width: 3em
-.. |select_location| image:: img/en/plugins_ftools/select_location.png
+.. |select_location| image:: /static/user_manual/plugins/select_location.png
    :width: 3em
-.. |layer_extent| image:: img/en/plugins_ftools/layer_extent.png
+.. |layer_extent| image:: /static/user_manual/plugins/layer_extent.png
    :width: 3em
-.. |convex_hull| image:: img/en/plugins_ftools/convex_hull.png
+.. |convex_hull| image:: /static/user_manual/plugins/convex_hull.png
    :width: 3em
-.. |buffer| image:: img/en/plugins_ftools/buffer.png
+.. |buffer| image:: /static/user_manual/plugins/buffer.png
    :width: 3em
-.. |intersect| image:: img/en/plugins_ftools/intersect.png
+.. |intersect| image:: /static/user_manual/plugins/intersect.png
    :width: 3em
-.. |union| image:: img/en/plugins_ftools/union.png
+.. |union| image:: /static/user_manual/plugins/union.png
    :width: 3em
-.. |sym_difference| image:: img/en/plugins_ftools/sym_difference.png
+.. |sym_difference| image:: /static/user_manual/plugins/sym_difference.png
    :width: 3em
-.. |clip| image:: img/en/plugins_ftools/clip.png
+.. |clip| image:: /static/user_manual/plugins/clip.png
    :width: 3em
-.. |difference| image:: img/en/plugins_ftools/difference.png
+.. |difference| image:: /static/user_manual/plugins/difference.png
    :width: 3em
-.. |dissolve| image:: img/en/plugins_ftools/dissolve.png
+.. |dissolve| image:: /static/user_manual/plugins/dissolve.png
    :width: 3em
-.. |check_geometry| image::  img/en/plugins_ftools/check_geometry.png
+.. |check_geometry| image::  /static/user_manual/plugins/check_geometry.png
    :width: 3em
-.. |export_geometry| image:: img/en/plugins_ftools/export_geometry.png
+.. |export_geometry| image:: /static/user_manual/plugins/export_geometry.png
    :width: 3em
-.. |centroids| image:: img/en/plugins_ftools/centroids.png
+.. |centroids| image:: /static/user_manual/plugins/centroids.png
    :width: 3em
-.. |delaunay| image:: img/en/plugins_ftools/delaunay.png
+.. |delaunay| image:: /static/user_manual/plugins/delaunay.png
    :width: 3em
-.. |simplify| image:: img/en/plugins_ftools/simplify.png
+.. |simplify| image:: /static/user_manual/plugins/simplify.png
    :width: 3em
-.. |multi_to_single| image:: img/en/plugins_ftools/multi_to_single.png
+.. |multi_to_single| image:: /static/user_manual/plugins/multi_to_single.png
    :width: 3em
-.. |single_to_multi| image:: img/en/plugins_ftools/single_to_multi.png
+.. |single_to_multi| image:: /static/user_manual/plugins/single_to_multi.png
    :width: 3em
-.. |to_lines| image:: img/en/plugins_ftools/to_lines.png
+.. |to_lines| image:: /static/user_manual/plugins/to_lines.png
    :width: 3em
-.. |lines_to|  image:: img/en/plugins_ftools/lines_to.png
+.. |lines_to|  image:: /static/user_manual/plugins/lines_to.png
    :width: 3em
-.. |extract_nodes| image:: img/en/plugins_ftools/extract_nodes.png
+.. |extract_nodes| image:: /static/user_manual/plugins/extract_nodes.png
    :width: 3em
-.. |export_projection| image:: img/en/plugins_ftools/export_projection.png
+.. |export_projection| image:: /static/user_manual/plugins/export_projection.png
    :width: 3em
-.. |define_projection| image:: img/en/plugins_ftools/define_projection.png
+.. |define_projection| image:: /static/user_manual/plugins/define_projection.png
    :width: 3em
-.. |join_location| image:: img/en/plugins_ftools/join_location.png
+.. |join_location| image:: /static/user_manual/plugins/join_location.png
    :width: 3em
-.. |split_layer| image:: img/en/plugins_ftools/split_layer.png
+.. |split_layer| image:: /static/user_manual/plugins/split_layer.png
    :width: 3em
-.. |merge_shapes| image:: img/en/plugins_ftools/merge_shapes.png
+.. |merge_shapes| image:: /static/user_manual/plugins/merge_shapes.png
    :width: 3em
-.. |event_browser| image:: img/en/plugins_evis/event_browser.png
+.. |event_browser| image:: /static/user_manual/plugins/event_browser.png
    :width: 1.5em
-.. |event_id| image:: img/en/plugins_evis/event_id.png
+.. |event_id| image:: /static/user_manual/plugins/event_id.png
    :width: 1.5em
-.. |evis_connect| image:: img/en/plugins_evis/evis_connect.png
+.. |evis_connect| image:: /static/user_manual/plugins/evis_connect.png
    :width: 1.5em
-.. |evis_file| image:: img/en/plugins_evis/evis_file.png
+.. |evis_file| image:: /static/user_manual/plugins/evis_file.png
    :width: 1.5em
-.. |dxf2shp_converter| image:: img/en/plugins_dxf2shape_converter/dxf2shp_converter.png
+.. |dxf2shp_converter| image:: /static/user_manual/plugins/dxf2shp_converter.png
    :width: 1.5em
 .. |measure_line| image:: /introduction/img/en/measure_line.png
    :width: 22em
@@ -568,31 +568,31 @@ rst_epilog = """
    :width: 20em
 .. |grass_toolbox_rcontour2| image:: /grass_integration/img/en/grass_toolbox_rcontour2.png
    :width: 20em
-.. |delimited_text| image:: img/en/plugins_delimited_text/delimited_text.png
+.. |delimited_text| image:: /static/user_manual/plugins/delimited_text.png
    :width: 1.5em   
-.. |mActionGDALScript| image:: img/en/plugins_georeferencer/mActionGDALScript.png
+.. |mActionGDALScript| image:: /static/user_manual/plugins/mActionGDALScript.png
    :width: 1.5em
-.. |mActionLinkQGisToGeoref| image:: img/en/plugins_georeferencer/mActionLinkQGisToGeoref.png
+.. |mActionLinkQGisToGeoref| image:: /static/user_manual/plugins/mActionLinkQGisToGeoref.png
    :width: 2.5em
-.. |mActionStartGeoref| image:: img/en/plugins_georeferencer/mActionStartGeoref.png
+.. |mActionStartGeoref| image:: /static/user_manual/plugins/mActionStartGeoref.png
    :width: 1.5em
-.. |mActionLinkGeorefToQGis| image:: img/en/plugins_georeferencer/mActionLinkGeorefToQGis.png
+.. |mActionLinkGeorefToQGis| image:: /static/user_manual/plugins/mActionLinkGeorefToQGis.png
    :width: 2.5em
-.. |georeferencer| image:: img/en/plugins_georeferencer/georeferencer.png
+.. |georeferencer| image:: /static/user_manual/plugins/georeferencer.png
    :width: 1.5em
-.. |pencil| image:: img/en/plugins_georeferencer/pencil.png
+.. |pencil| image:: /static/user_manual/plugins/pencil.png
    :width: 1.5em
-.. |coordinate_capture| image:: img/en/plugins_coordinate_capture/coordinate_capture.png
+.. |coordinate_capture| image:: /static/user_manual/plugins/coordinate_capture.png
    :width: 1.5em
-.. |tracking| image:: img/en/plugins_coordinate_capture/tracking.png
+.. |tracking| image:: /static/user_manual/plugins/tracking.png
    :width: 1.5em
 .. |plugin| image:: img/en/plugins_road_graph/plugin.png
    :width: 1.5em
-.. |spatialquery| image:: img/en/plugins_spatial_query/spatialquery.png
+.. |spatialquery| image:: /static/user_manual/plugins/spatialquery.png
    :width: 1.5em
-.. |selectesubsetlayer| image:: img/en/plugins_spatial_query/selectesubsetlayer.png
+.. |selectesubsetlayer| image:: /static/user_manual/plugins/selectesubsetlayer.png
    :width: 1.5em
-.. |selectcreatelayer| image:: img/en/plugins_spatial_query/selectcreatelayer.png
+.. |selectcreatelayer| image:: /static/user_manual/plugins/selectcreatelayer.png
    :width: 1.5em
 
 """
