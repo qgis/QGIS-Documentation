@@ -18,18 +18,20 @@ Using headlines
 Adding new haedlines, you should use following styles for chapter, section, 
 subsection and minisec.
 
-	********
-	Chapter
-	********
+headlines::
 
-	Section
-	=======
+  ********
+  Chapter
+  ********
+
+  Section
+  =======
+
+  Subsection
+  ----------
 	
-	Subsection
-	----------
-	
-	Minisec
-	.......
+  Minisec
+  .......
 
 Inline tags
 ===========
