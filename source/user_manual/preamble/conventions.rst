@@ -1,15 +1,19 @@
+
+.. comment, if file is revised
+.. role:: disclaimer
+.. :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated` 
+
 .. _label_conventions:
 
-************
+***********
 Conventions
-************
+***********
 
 This section describes a collection of uniform styles throughout the manual. 
 The conventions used in this manual are as follows:
 
 GUI Conventions
 ================
-
 
 The GUI convention styles are intended to mimic the appearance of the GUI. In 
 general, the objective is to use the non-hover appearance, so a user can 
@@ -36,7 +40,6 @@ A shadow indicates a clickable GUI component.
 
 Text or Keyboard Conventions
 =============================
-
 
 The manual also includes styles related to text, keyboard commands and coding 
 to indicate different entities, such as classes, or methods. They don't 

@@ -1,6 +1,6 @@
-----------------
+****************
 Help and Support
-----------------
+****************
 
 .. _`label_helpsupport`:
 
@@ -13,7 +13,7 @@ mailing list. Your questions will reach a broader audience and answers will
 benefit others.
 
 qgis-users
-~~~~~~~~~~
+----------
 
 This mailing list is used for discussion of QGIS in general, as well as
 specific questions regarding its installation and use. You can subscribe
@@ -21,7 +21,7 @@ to the qgis-users mailing list by visiting the following URL:
 http://lists.osgeo.org/mailman/listinfo/qgis-user
 
 fossgis-talk-liste
-~~~~~~~~~~~~~~~~~~
+------------------
 
 For the german speaking audience the german FOSSGIS e.V. provides the
 fossgis-talk-liste mailing list. This mailing list is used for discussion
@@ -30,14 +30,14 @@ fossgis-talk-liste mailing list by visiting the following URL:
 https://lists.fossgis.de/mailman/listinfo/fossgis-talk-liste
 
 qgis-developer
-~~~~~~~~~~~~~~
+--------------
 
 If you are a developer facing problems of a more technical nature, you
 may want to join the qgis-developer mailing list here:
 http://lists.osgeo.org/mailman/listinfo/qgis-developer
 
 qgis-commit
-~~~~~~~~~~~
+-----------
 
 Each time a commit is made to the QGIS code repository an email is posted
 to this list. If you want to be up to date with every change to the current
@@ -45,14 +45,14 @@ code base, you can subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-commit
 
 qgis-trac
-~~~~~~~~~
+---------
 
 This list provides email notification related to project management,
 including bug reports, tasks, and feature requests. You can subscribe
 to this list at: http://lists.osgeo.org/mailman/listinfo/qgis-trac
 
 qgis-community-team
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 This list deals with topics like documentation, context help, user-guide,
 online experience including web sites, blog, mailing lists, forums, and
@@ -61,7 +61,7 @@ list is a good starting point to ask your questions. You can subscribe
 to this list at: http://lists.osgeo.org/mailman/listinfo/qgis-community-team
 
 qgis-release-team
-~~~~~~~~~~~~~~~~~
+-----------------
 
 This list deals with topics like the release process, packaging binaries
 for various OS and announcing new releases to the world at large. You can
@@ -69,7 +69,7 @@ subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-release-team
 
 qgis-tr
-~~~~~~~
+-------
 
 This list deals with the translation efforts. If you like to work on the
 translation of the manuals or the graphical user interface (GUI), this
@@ -77,7 +77,7 @@ list is a good starting point to ask your questions. You can subscribe
 to this list at: http://lists.osgeo.org/mailman/listinfo/qgis-tr
 
 qgis-edu
-~~~~~~~~
+--------
 
 This list deals with QGIS education efforts. If you like to work on QGIS
 education materials, this list is a good starting point to ask your
@@ -85,7 +85,7 @@ questions. You can subscribe to this list at:
 http://lists.osgeo.org/mailman/listinfo/qgis-edu
 
 qgis-psc
-~~~~~~~~
+--------
 
 This list is used to discuss Steering Committee issues related to overall
 management and direction of Quantum GIS. You can subscribe to this list
