@@ -9,6 +9,9 @@ fi
 
 # Create / update the translation catalogue - this will generate the master .pot files
 mkdir -p i18n/pot
+# Create a (temporary) static directory in source to hold all (localised ) static content
+mkdir -p source/static
+
 BUILDDIR=build
 sphinx-build -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
 
@@ -21,11 +24,11 @@ do
   mkdir -p i18n/${LOCALE}/LC_MESSAGES
 
   # Clone the en resources and then overwrite with any localised versions of the same files.
-  cp -r resources/en/* static/
+  cp -r resources/en/* source/static/
   PODIR=resources/${LOCALE}
   if [ -d $PODIR ];
   then
-      cp -r ${PODIR}/* static/
+      cp -r ${PODIR}/* source/static/
   fi
 
   # Merge or copy all the updated pot files over to locale specific po files
@@ -46,8 +49,4 @@ done
 
 # Now get rid of temporary POT files
 rm -rf i18n/pot
-rm -rf static/*
-git checkout static/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
-
-
-
+rm -rf source/static

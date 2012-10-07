@@ -44,10 +44,16 @@ if [ $1 ]; then
 fi
 
 for LOCALE in ${LOCALES}
+# Compile the html docs for this locale
 do
-  # Compile the html docs for this locale
-  rm -rf static/*
-  cp -r resources/${LOCALE}/* static
+  # cleanup all images for the other locale
+  rm -rf source/static
+  mkdir -p source/static
+  # copy english (base) resources to the static dir
+  cp -r resources/en/* source/static
+  # now overwrite possible available (localised) resources over the english ones
+  cp -r resources/${LOCALE}/* source/static
+
   echo "Building HTML for locale '${LOCALE}'..."
   sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
 
@@ -63,7 +69,5 @@ do
   popd
 done
 
-rm -rf static/*
+#rm -rf source/static
 rm -rf ${BUILDDIR}
-
-git checkout static/EVERYTHING_YOU_PUT_HERE_WILL_BE_DESTROYED
