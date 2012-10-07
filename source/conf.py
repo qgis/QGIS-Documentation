@@ -88,28 +88,28 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 rst_epilog = """
-.. |nix| image:: ../../../static/common/nix.png
+.. |nix| image:: /static/common/nix.png
    :width: 1em
-.. |win| image:: ../../../static/common/win.png
+.. |win| image:: /static/common/win.png
    :width: 1em
-.. |osx| image:: ../../../static/common/osx.png
+.. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
 .. |degrees| unicode:: 0x00B0
    :ltrim:
-.. |geographic| image:: ../../../static/common/geographic.png
+.. |geographic| image:: /static/common/geographic.png
 .. |wedge| unicode:: 0x005e
-.. |checkbox| image:: ../../../static/common/checkbox.png
-.. |radiobuttonon| image:: ../../../static/common/radiobuttonon.png
-.. |radiobuttonoff| image:: ../../../static/common/radiobuttonoff.png
-.. |selectnumber| image:: ../../../static/common/selectnumber.png
-.. |selectstring| image:: ../../../static/common/selectstring.png
-.. |selectstring2| image:: ../../../static/common/selectstring2.png
-.. |browsebutton| image:: ../../../static/common/browsebutton.png
-.. |selectcolor| image:: ../../../static/common/selectcolor.png
-.. |slider| image:: ../../../static/common/slider.png
-.. |inputtext| image:: ../../../static/common/inputtext.png
-.. |tab| image:: ../../../static/common/tab.png
+.. |checkbox| image:: /static/common/checkbox.png
+.. |radiobuttonon| image:: /static/common/radiobuttonon.png
+.. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
+.. |selectnumber| image:: /static/common/selectnumber.png
+.. |selectstring| image:: /static/common/selectstring.png
+.. |selectstring2| image:: /static/common/selectstring2.png
+.. |browsebutton| image:: /static/common/browsebutton.png
+.. |selectcolor| image:: /static/common/selectcolor.png
+.. |slider| image:: /static/common/slider.png
+.. |inputtext| image:: /static/common/inputtext.png
+.. |tab| image:: /static/common/tab.png
 .. |icon_sqlanywhere| image:: img/en/plugins_sql_anywhere/sqlanywhere.png
    :width: 1.5em
 .. |oracle_raster| image:: img/en/plugins_oracle_raster/oracle_raster.png
@@ -154,239 +154,239 @@ rst_epilog = """
    :width: 1.5em
 .. |interpolation| image:: img/en/plugins_interpolation/interpolation.png
    :width: 1.5em
-.. |mActionAddRasterLayer| image:: ../../../static/common/mActionAddRasterLayer.png
+.. |mActionAddRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../../../static/common/mActionAddOgrLayer.png
+.. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
-.. |mActionShowPluginManager| image:: ../../../static/common/mActionShowPluginManager.png
-.. |mActionFileNew| image:: ../../../static/common/mActionFileNew.png
-.. |mActionFileOpen| image:: ../../../static/common/mActionFileOpen.png
-.. |mActionFileSave| image:: ../../../static/common/mActionFileSave.png
+.. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
+.. |mActionFileNew| image:: /static/common/mActionFileNew.png
+.. |mActionFileOpen| image:: /static/common/mActionFileOpen.png
+.. |mActionFileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
-.. |mActionFileSaveAs| image:: ../../../static/common/mActionFileSaveAs.png
-.. |mActionSaveMapAsImage| image:: ../../../static/common/mActionSaveMapAsImage.png
-.. |mActionNewComposer| image:: ../../../static/common/mActionNewComposer.png
-.. |mActionComposerManager| image:: ../../../static/common/mActionComposerManager.png
+.. |mActionFileSaveAs| image:: /static/common/mActionFileSaveAs.png
+.. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+.. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
+.. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
 .. |mapserver_export| image:: img/en/plugins_mapserver_export/mapserver_export.png
-.. |mActionExportMapServer| image:: ../../../static/common/mActionExportMapServer.png
+.. |mActionExportMapServer| image:: /static/common/mActionExportMapServer.png
    :width: 1.5em
-.. |mActionSaveAsSVG| image:: ../../../static/common/mActionSaveAsSVG.png
+.. |mActionSaveAsSVG| image:: /static/common/mActionSaveAsSVG.png
    :width: 1.5em
-.. |mActionSaveAsPDF| image:: ../../../static/common/mActionSaveAsPDF.png
+.. |mActionSaveAsPDF| image:: /static/common/mActionSaveAsPDF.png
    :width: 1.5em
-.. |mActionFilePrint| image:: ../../../static/common/mActionFilePrint.png
+.. |mActionFilePrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
-.. |mActionAddArrow| image:: ../../../static/common/mActionAddArrow.png
+.. |mActionAddArrow| image:: /static/common/mActionAddArrow.png
    :width: 1.5em
-.. |mActionAddBasicShape| image:: ../../../static/common/mActionAddBasicShape.png
+.. |mActionAddBasicShape| image:: /static/common/mActionAddBasicShape.png
    :width: 1.5em
-.. |mActionAddLegend| image:: ../../../static/common/mActionAddLegend.png
+.. |mActionAddLegend| image:: /static/common/mActionAddLegend.png
    :width: 1.5em
-.. |mActionAddMap| image:: ../../../static/common/mActionAddMap.png
+.. |mActionAddMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
-.. |mActionLabel| image:: ../../../static/common/mActionLabel.png
+.. |mActionLabel| image:: /static/common/mActionLabel.png
    :width: 1.5em
-.. |mActionScaleBar| image:: ../../../static/common/mActionScaleBar.png
+.. |mActionScaleBar| image:: /static/common/mActionScaleBar.png
    :width: 1.5em
-.. |mActionSelectPan| image:: ../../../static/common/mActionSelectPan.png
+.. |mActionSelectPan| image:: /static/common/mActionSelectPan.png
    :width: 1.5em
-.. |mActionGroupItems| image:: ../../../static/common/mActionGroupItems.png
+.. |mActionGroupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
-.. |mActionUnGroupItems| image:: ../../../static/common/mActionUnGroupItems.png
+.. |mActionUnGroupItems| image:: /static/common/mActionUnGroupItems.png
    :width: 1.5em
-.. |mActionRaiseItems| image:: ../../../static/common/mActionRaiseItems.png
+.. |mActionRaiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
-.. |mActionLowerItems| image:: ../../../static/common/mActionLowerItems.png
+.. |mActionLowerItems| image:: /static/common/mActionLowerItems.png
    :width: 1.5em
-.. |mActionMoveItemContent| image:: ../../../static/common/mActionMoveItemContent.png
+.. |mActionMoveItemContent| image:: /static/common/mActionMoveItemContent.png
    :width: 1.5em
-.. |mActionMoveItemsToTop| image:: ../../../static/common/mActionMoveItemsToTop.png
+.. |mActionMoveItemsToTop| image:: /static/common/mActionMoveItemsToTop.png
    :width: 1.5em
-.. |mActionMoveItemsToBottom| image:: ../../../static/common/mActionMoveItemsToBottom.png
+.. |mActionMoveItemsToBottom| image:: /static/common/mActionMoveItemsToBottom.png
    :width: 1.5em
-.. |mActionAlignLeft|  image:: ../../../static/common/mActionAlignLeft.png
+.. |mActionAlignLeft|  image:: /static/common/mActionAlignLeft.png
    :width: 1.5em
-.. |mActionAlignRight|  image:: ../../../static/common/mActionAlignRight.png
+.. |mActionAlignRight|  image:: /static/common/mActionAlignRight.png
    :width: 1.5em
-.. |mActionAlignHCenter|  image:: ../../../static/common/mActionAlignHcenter.png
+.. |mActionAlignHCenter|  image:: /static/common/mActionAlignHcenter.png
    :width: 1.5em
-.. |mActionAlignVCenter|  image:: ../../../static/common/mActionAlignVCenter.png
+.. |mActionAlignVCenter|  image:: /static/common/mActionAlignVCenter.png
    :width: 1.5em
-.. |mActionAlignTop|  image:: ../../../static/common/mActionAlignTop.png
+.. |mActionAlignTop|  image:: /static/common/mActionAlignTop.png
    :width: 1.5em
-.. |mActionAlignBottom|  image:: ../../../static/common/mActionAlignBottom.png
+.. |mActionAlignBottom|  image:: /static/common/mActionAlignBottom.png
    :width: 1.5em
-.. |mIconLock|  image:: ../../../static/common/mIconLock.png
+.. |mIconLock|  image:: /static/common/mIconLock.png
    :width: 1.5em
-.. |mActionFileExit| image:: ../../../static/common/mActionFileExit.png
-.. |mActionUndo| image:: ../../../static/common/mActionUndo.png
+.. |mActionFileExit| image:: /static/common/mActionFileExit.png
+.. |mActionUndo| image:: /static/common/mActionUndo.png
    :width: 1.5em
-.. |mActionRedo| image:: ../../../static/common/mActionRedo.png
+.. |mActionRedo| image:: /static/common/mActionRedo.png
    :width: 1.5em
-.. |mActionSelect| image:: ../../../static/common/mActionSelect.png
+.. |mActionSelect| image:: /static/common/mActionSelect.png
    :width: 1.5em
-.. |mActionEditCut| image:: ../../../static/common/mActionEditCut.png
+.. |mActionEditCut| image:: /static/common/mActionEditCut.png
    :width: 1.5em
-.. |mActionEditCopy| image:: ../../../static/common/mActionEditCopy.png
+.. |mActionEditCopy| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
-.. |mActionEditPaste| image:: ../../../static/common/mActionEditPaste.png
+.. |mActionEditPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
 .. |mActionDeleteAttribute| image:: img/en/mActionDeleteAttribute.png
    :width: 1.5em
-.. |mActionDeleteSelected| image:: ../../../static/common/mActionDeleteSelected.png
+.. |mActionDeleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
-.. |mActionDeleteVertex| image:: ../../../static/common/mActionDeleteVertex.png
+.. |mActionDeleteVertex| image:: /static/common/mActionDeleteVertex.png
    :width: 1.5em
-.. |mActionSimplify| image:: ../../../static/common/mActionSimplify.png
+.. |mActionSimplify| image:: /static/common/mActionSimplify.png
    :width: 2em
-.. |mActionAddRing| image:: ../../../static/common/mActionAddRing.png
+.. |mActionAddRing| image:: /static/common/mActionAddRing.png
    :width: 2em
-.. |mActionAddIsland| image:: ../../../static/common/mActionAddIsland.png
+.. |mActionAddIsland| image:: /static/common/mActionAddIsland.png
    :width: 2em
-.. |mActionDeleteRing| image:: ../../../static/common/mActionDeleteRing.png
+.. |mActionDeleteRing| image:: /static/common/mActionDeleteRing.png
    :width: 2em
-.. |mActionDeletePart| image:: ../../../static/common/mActionDeletePart.png
+.. |mActionDeletePart| image:: /static/common/mActionDeletePart.png
    :width: 2em
-.. |mActionReshape| image:: ../../../static/common/mActionReshape.png
+.. |mActionReshape| image:: /static/common/mActionReshape.png
    :width: 1.5em
-.. |mActionSplitFeatures| image:: ../../../static/common/mActionSplitFeatures.png
+.. |mActionSplitFeatures| image:: /static/common/mActionSplitFeatures.png
    :width: 1.5em
-.. |mActionMergeFeatures| image:: ../../../static/common/mActionMergeFeatures.png
+.. |mActionMergeFeatures| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
-.. |mergeFeats| image:: ../../../static/common/mActionMergeFeatures.png
+.. |mergeFeats| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
-.. |mActionNodeTool| image:: ../../../static/common/mActionNodeTool.png
+.. |mActionNodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
-.. |mActionSelectedToTop| image:: ../../../static/common/mActionSelectedToTop.png
+.. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
-.. |mActionInvertSelection| image:: ../../../static/common/mActionInvertSelection.png
+.. |mActionInvertSelection| image:: /static/common/mActionInvertSelection.png
    :width: 1.5em
-.. |mActionCopySelected| image:: ../../../static/common/mActionCopySelected.png
+.. |mActionCopySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
-.. |mActionZoomToSelected| image:: ../../../static/common/mActionZoomToSelected.png
+.. |mActionZoomToSelected| image:: /static/common/mActionZoomToSelected.png
    :width: 1em
-.. |mActionNewAttribute| image:: ../../../static/common/mActionNewAttribute.png
+.. |mActionNewAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
-.. |mActionCalculateField| image:: ../../../static/common/mActionCalculateField.png
+.. |mActionCalculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
-.. |mActionRotatePointSymbols| image:: ../../../static/common/mActionRotatePointSymbols.png
+.. |mActionRotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
    :width: 1.5em
-.. |mActionToggleEditing| image:: ../../../static/common/mActionToggleEditing.png
+.. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
-.. |mActionCapturePoint| image:: ../../../static/common/mActionCapturePoint.png
+.. |mActionCapturePoint| image:: /static/common/mActionCapturePoint.png
    :width: 1.5em
-.. |mActionCaptureLine| image:: ../../../static/common/mActionCaptureLine.png
+.. |mActionCaptureLine| image:: /static/common/mActionCaptureLine.png
    :width: 1.5em
-.. |mActionCapturePolygon| image:: ../../../static/common/mActionCapturePolygon.png
+.. |mActionCapturePolygon| image:: /static/common/mActionCapturePolygon.png
    :width: 1.5em
-.. |mActionMoveFeature| image:: ../../../static/common/mActionMoveFeature.png
+.. |mActionMoveFeature| image:: /static/common/mActionMoveFeature.png
    :width: 1.5em
-.. |mActionPan| image:: ../../../static/common/mActionPan.png
+.. |mActionPan| image:: /static/common/mActionPan.png
    :width: 1.5em
-.. |mActionZoomIn| image:: ../../../static/common/mActionZoomIn.png
+.. |mActionZoomIn| image:: /static/common/mActionZoomIn.png
    :width: 1.5em
-.. |mActionZoomOut| image:: ../../../static/common/mActionZoomOut.png
+.. |mActionZoomOut| image:: /static/common/mActionZoomOut.png
    :width: 1.5em
-.. |mActionIdentify| image:: ../../../static/common/mActionIdentify.png
+.. |mActionIdentify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
-.. |mActionNewVectorLayer| image:: ../../../static/common/mActionNewVectorLayer.png
+.. |mActionNewVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
-.. |mActionZoomFullExtent| image:: ../../../static/common/mActionZoomFullExtent.png
+.. |mActionZoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
-.. |mActionZoomToLayer| image:: ../../../static/common/mActionZoomToLayer.png
+.. |mActionZoomToLayer| image:: /static/common/mActionZoomToLayer.png
    :width: 1.5em
-.. |mActionZoomLast| image:: ../../../static/common/mActionZoomLast.png
+.. |mActionZoomLast| image:: /static/common/mActionZoomLast.png
    :width: 1.5em
-.. |mActionZoomNext| image:: ../../../static/common/mActionZoomNext.png
+.. |mActionZoomNext| image:: /static/common/mActionZoomNext.png
    :width: 1.5em
-.. |mActionMapTips| image:: ../../../static/common/mActionMapTips.png
+.. |mActionMapTips| image:: /static/common/mActionMapTips.png
    :width: 1.5em
-.. |mActionNewBookmark| image:: ../../../static/common/mActionNewBookmark.png
+.. |mActionNewBookmark| image:: /static/common/mActionNewBookmark.png
    :width: 1.5em
-.. |mActionShowBookmarks| image:: ../../../static/common/mActionShowBookmarks.png
+.. |mActionShowBookmarks| image:: /static/common/mActionShowBookmarks.png
    :width: 1.5em
-.. |mActionDraw| image:: ../../../static/common/mActionDraw.png
+.. |mActionDraw| image:: /static/common/mActionDraw.png
    :width: 1.5em
-.. |mActionAddNonDbLayer| image:: ../../../static/common/mActionAddNonDbLayer.png
+.. |mActionAddNonDbLayer| image:: /static/common/mActionAddNonDbLayer.png
    :width: 1.5em
-.. |mActionAddLayer| image:: ../../../static/common/mActionAddLayer.png
+.. |mActionAddLayer| image:: /static/common/mActionAddLayer.png
    :width: 1.5em
-.. |mActionAddSpatiaLiteLayer| image:: ../../../static/common/mActionAddSpatiaLiteLayer.png
+.. |mActionAddSpatiaLiteLayer| image:: /static/common/mActionAddSpatiaLiteLayer.png
    :width: 1.5em
-.. |mActionAddWmsLayer| image:: ../../../static/common/mActionAddWmsLayer.png
+.. |mActionAddWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
-.. |mActionOpenTable| image:: ../../../static/common/mActionOpenTable.png
+.. |mActionOpenTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
-.. |mActionRemoveLayer| image:: ../../../static/common/mActionRemoveLayer.png
+.. |mActionRemoveLayer| image:: /static/common/mActionRemoveLayer.png
    :width: 1.5em
-.. |mActionLabeling| image:: ../../../static/common/mActionLabeling.png
+.. |mActionLabeling| image:: /static/common/mActionLabeling.png
    :width: 1.5em
-.. |mActionInOverview| image:: ../../../static/common/mActionInOverview.png
+.. |mActionInOverview| image:: /static/common/mActionInOverview.png
    :width: 1.5em
-.. |mActionAddAllToOverview| image:: ../../../static/common/mActionAddAllToOverview.png
+.. |mActionAddAllToOverview| image:: /static/common/mActionAddAllToOverview.png
    :width: 1.5em
-.. |mActionRemoveAllFromOverview| image:: ../../../static/common/mActionRemoveAllFromOverview.png
+.. |mActionRemoveAllFromOverview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
-.. |RemoveAllOVerview| image:: ../../../static/common/mActionRemoveAllFromOverview.png
+.. |RemoveAllOVerview| image:: /static/common/mActionRemoveAllFromOverview.png
    :width: 1.5em
-.. |mActionShowAllLayers| image:: ../../../static/common/mActionShowAllLayers.png
+.. |mActionShowAllLayers| image:: /static/common/mActionShowAllLayers.png
    :width: 1.5em
-.. |mActionHideAllLayers| image:: ../../../static/common/mActionHideAllLayers.png
+.. |mActionHideAllLayers| image:: /static/common/mActionHideAllLayers.png
    :width: 1.5em
-.. |mActionProjectProperties| image:: ../../../static/common/mActionProjectProperties.png
+.. |mActionProjectProperties| image:: /static/common/mActionProjectProperties.png
    :width: 1.5em
-.. |mActionCustomProjection| image:: ../../../static/common/mActionCustomProjection.png
+.. |mActionCustomProjection| image:: /static/common/mActionCustomProjection.png
    :width: 1.5em
-.. |mActionOptions| image:: ../../../static/common/mActionOptions.png
+.. |mActionOptions| image:: /static/common/mActionOptions.png
    :width: 1em
-.. |mActionHelpContents| image:: ../../../static/common/mActionHelpContents.png
+.. |mActionHelpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
-.. |mActionQgisHomePage| image:: ../../../static/common/mActionQgisHomePage.png
+.. |mActionQgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
-.. |mActionCheckQgisVersion| image:: ../../../static/common/mActionCheckQgisVersion.png
+.. |mActionCheckQgisVersion| image:: /static/common/mActionCheckQgisVersion.png
    :width: 1.5em
-.. |mActionHelpAbout| image:: ../../../static/common/mActionHelpAbout.png
+.. |mActionHelpAbout| image:: /static/common/mActionHelpAbout.png
    :width: 1.5em
-.. |mActionHelpSponsors| image:: ../../../static/common/mActionHelpSponsors.png
+.. |mActionHelpSponsors| image:: /static/common/mActionHelpSponsors.png
    :width: 1.5em
-.. |mActionTextAnnotation| image:: ../../../static/common/mActionTextAnnotation.png
+.. |mActionTextAnnotation| image:: /static/common/mActionTextAnnotation.png
    :width: 1.5em
-.. |mActionAnnotation| image:: ../../../static/common/mActionAnnotation.png
+.. |mActionAnnotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
-.. |mIconStopRendering| image:: ../../../static/common/mIconStopRendering.png
+.. |mIconStopRendering| image:: /static/common/mIconStopRendering.png
    :width: 1.5em
-.. |mIconProjectionDisabled| image:: ../../../static/common/mIconProjectionDisabled.png
+.. |mIconProjectionDisabled| image:: /static/common/mIconProjectionDisabled.png
    :width: 1.5em
-.. |mIconProjectionEnabled| image:: ../../../static/common/mIconProjectionEnabled.png
+.. |mIconProjectionEnabled| image:: /static/common/mIconProjectionEnabled.png
    :width: 1.5em
-.. |mActionMeasure| image:: ../../../static/common/mActionMeasure.png
+.. |mActionMeasure| image:: /static/common/mActionMeasure.png
    :width: 1.5em
-.. |mActionMeasureArea| image:: ../../../static/common/mActionMeasureArea.png
+.. |mActionMeasureArea| image:: /static/common/mActionMeasureArea.png
    :width: 1.5em
-.. |mActionMeasureAngle| image:: ../../../static/common/mActionMeasureAngle.png
+.. |mActionMeasureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
-.. |spiticon| image:: /plugins../../../static/common/plugins_spit/spiticon.png
-.. |mActionSelectRectangle| image:: ../../../static/common/mActionSelectRectangle.png
+.. |spiticon| image:: /plugins/static/common/plugins_spit/spiticon.png
+.. |mActionSelectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
-.. |mActionSelectPolygon| image:: ../../../static/common/mActionSelectPolygon.png
+.. |mActionSelectPolygon| image:: /static/common/mActionSelectPolygon.png
    :width: 1.5em
-.. |mActionSelectFreehand| image:: ../../../static/common/mActionSelectFreehand.png
+.. |mActionSelectFreehand| image:: /static/common/mActionSelectFreehand.png
    :width: 1.5em
-.. |mActionSelectRadius| image:: ../../../static/common/mActionSelectRadius.png
+.. |mActionSelectRadius| image:: /static/common/mActionSelectRadius.png
    :width: 1.5em
-.. |mActionDeselectAll| image:: ../../../static/common/mActionDeselectAll.png
+.. |mActionDeselectAll| image:: /static/common/mActionDeselectAll.png
    :width: 1.5em
-.. |mActionFormAnnotation| image:: ../../../static/common/mActionFormAnnotation.png
+.. |mActionFormAnnotation| image:: /static/common/mActionFormAnnotation.png
    :width: 1.5em
-.. |mActionContextHelp| image:: ../../../static/common/mActionContextHelp.png
+.. |mActionContextHelp| image:: /static/common/mActionContextHelp.png
    :width: 1.5em
-.. |mActionFolder| image:: ../../../static/common/mActionFolder.png
+.. |mActionFolder| image:: /static/common/mActionFolder.png
    :width: 1.5em
-.. |mIconNew| image:: ../../../static/common/mIconNew.png
+.. |mIconNew| image:: /static/common/mIconNew.png
    :width: 1.5em
-.. |raster-info| image:: ../../../static/common/raster-info.png
+.. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
-.. |plugin_installer| image:: ../../../static/common/plugin_installer.png
+.. |plugin_installer| image:: /static/common/plugin_installer.png
    :width: 1.5em
 .. |gpstrack_barchart| image:: /introduction/img/en/gpstrack_barchart.png
    :width: 1.5em
@@ -394,7 +394,7 @@ rst_epilog = """
    :width: 1.5em
 .. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
    :width: 1.5em
-.. |wfs| image:: ../../../static/common/wfs.png
+.. |wfs| image:: /static/common/wfs.png
    :width: 1.5em
 .. |ftools| image:: img/en/plugins_ftools/ftools_logo.png
    :width: 1.5em
