@@ -1,7 +1,7 @@
 .. `label_qgismainwindow`:
-
+********
 QGIS GUI
-========
+********
 
 .. :index::
     single:main window

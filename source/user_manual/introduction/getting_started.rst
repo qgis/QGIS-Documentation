@@ -4,9 +4,9 @@
 
 .. _`label.getstarted`:
 
-================
+***************
 Getting Started
-================
+***************
 
 This chapter gives a quick overview of installing |qg|, some sample 
 data from the |qg| web page and running a first and simple session 
@@ -26,15 +26,15 @@ packages (rpm and deb) or software repositories to add to your installation
 manager are provided. Get the latest information on binary packages at the
 |qg| website at http://download.qgis.org.
 
-**Installation from source**
-
+Installation from source
+........................
 
 If you need to build |qg| from source, please refer to the coding and
 compiling guide available at http://www.qgis.org/en/documentation/manuals.html. 
 The installation instructions are also distributed with the |qg| source code.
 
-**Installation on external media**
-
+Installation on external media
+..............................
 
 QGIS allows to define a ``--configpath`` option that overrides the default path 
 (e.g. ~/.qgis under Linux) for user configuration and forces QSettings to use 
@@ -66,7 +66,7 @@ To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx|
 .. _`label_commandline`:
 
 Command Line Options
---------------------
+====================
 
 .. index::
    single:command line options
@@ -236,7 +236,7 @@ official GRASS GIS website http://grass.osgeo.org/download/data.php.
 .. _samplesession:
 
 Sample Session
-===============
+==============
 
 Now that you have |qg| installed and a sample dataset available, we would 
 like to demonstrate a short and simple |qg| sample session. We will visualize 
@@ -244,7 +244,8 @@ a raster and a vector layer. We will use the landcover raster
 layer :file:`qgis_sample_data/raster/landcover.img` and the lakes 
 vector layer :file:`qgis_sample_data/gml/lakes.gml`.
 
-**start |qg|**
+Start QGIS
+..........
 
 * |nix| Start |qg| by typing: "|qg|" at a command prompt, or
   if using precompiled binary, using the Applications menu.
@@ -259,7 +260,8 @@ vector layer :file:`qgis_sample_data/gml/lakes.gml`.
    
    A Simple |qg| Session
 
-**Load raster and vector layers from the sample dataset**
+Load raster and vector layers from the sample dataset
+.....................................................
 
 #. Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon.
 #. Browse to the folder :file:`qgis_sample_data/raster/`, select 

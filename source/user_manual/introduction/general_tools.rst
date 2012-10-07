@@ -88,7 +88,8 @@ Map rendering can be controlled in the following ways:
 
 .. _`label_suspendrender`:
 
-**a) Suspending Rendering**
+a) Suspending Rendering
+.......................
 
 .. index::`rendering!suspending`
 
@@ -108,8 +109,8 @@ refresh of the map canvas.
 
 .. _`label_settinglayer`:
 
-**b) Setting Layer Add Option** 
-
+b) Setting Layer Add Option
+...........................
 
 .. index::`rendering!options`
 .. index::`layers!initial visibility`
@@ -122,7 +123,8 @@ menu option :menuselection:`Settings --> Options -->` and click on the
 added to the map should be displayed` checkbox. Any layer added to the map will 
 be off (invisible) by default.
 
-**Stopping Rendering**
+Stopping Rendering
+..................
 
 .. index::
    single:Rendering halting
@@ -139,8 +141,8 @@ between pressing ESC and the time the map drawing is halted.
 
 .. _`label_updatemap`:
 
-**c) Updating the Map Display During Rendering**
-
+c) Updating the Map Display During Rendering
+............................................
 
 .. index::
    single:rendering update during drawing
@@ -157,8 +159,8 @@ during the reading of the features. A suggested value to start with is 500.
 
 .. _`label_renderquality`:
 
-**d) Influence Rendering Quality**
-
+d) Influence Rendering Quality
+.............................
 
 .. index::
    single:rendering quality
@@ -238,12 +240,10 @@ is displayed in a popup dialog.
 
 Measure tools in action
 
-
 .. _`sec_selection`:
 
 Select and deselect features 
 -----------------------------
-
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
 To select one or several features just click on 
@@ -264,7 +264,6 @@ To deselect all selected features click on |mActionDeselectAll|.
 
 Annotation Tools 
 ================
-
 
 The |mActionTextAnnotation| text annotation tools in the attribute t oolbar 
 provides the possibility to place formatted text in a balloon on the QGIS map 
@@ -289,7 +288,8 @@ by default in the other themes too.
 The |mActionAnnotation| move annotation tool allows to move the annotation on the 
 map canvas.
 
-**Form annotations**
+Form annotations
+................
 
 .. index::`annotations`
 .. index::`form annotation|\see{annotations}`
@@ -335,8 +335,6 @@ To create a bookmark:
 #. Select the menu option :menuselection:`View --> New Bookmark -->` or press :kbd:`Ctrl-B`.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
 #. Click **[OK]** to add the bookmark or **[Cancel]** to exit without adding the bookmark.
-
-
 
 Note that you can have multiple bookmarks with the same name.
 

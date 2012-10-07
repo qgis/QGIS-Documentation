@@ -12,8 +12,7 @@ Conventions
 This section describes a collection of uniform styles throughout the manual. 
 The conventions used in this manual are as follows:
 
-GUI Conventions
-================
+**GUI Conventions**
 
 The GUI convention styles are intended to mimic the appearance of the GUI. In 
 general, the objective is to use the non-hover appearance, so a user can 
@@ -38,8 +37,7 @@ visually scan the GUI to find something that looks like the instruction in the m
 
 A shadow indicates a clickable GUI component.
 
-Text or Keyboard Conventions
-=============================
+**Text or Keyboard Conventions**
 
 The manual also includes styles related to text, keyboard commands and coding 
 to indicate different entities, such as classes, or methods. They don't 
@@ -64,8 +62,7 @@ Code is indicated by a fixed-width font::
 	PROJCS["NAD_1927_Albers",
 	  GEOGCS["GCS_North_American_1927",
 
-Platform-specific instructions
-===============================
+**Platform-specific instructions**
 
 GUI sequences and small amounts of text can be formatted inline: Click 
 |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS  --> Quit to close QGIS`.

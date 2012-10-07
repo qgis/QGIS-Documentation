@@ -32,8 +32,7 @@ Translated versions of this document can be downloaded via the documentation
 area of the QGIS project as well. For more information about contributing to
 this document and about translating it, please visit: http://www.qgis.org/wiki/ 
 
-Links in this Document
-......................
+**Links in this Document**
 
 This document contains internal and external links.  Clicking on an
 internal link moves within the document, while clicking on an external link
@@ -42,8 +41,7 @@ while external links are shown in red and are handled by the
 system browser. In HTML form, the browser displays and handles both
 identically. 
 
-User, Installation and Coding Guide Authors and Editors:
-.......................................................
+**User, Installation and Coding Guide Authors and Editors:**
 
 +----------------------+----------------------+----------------------+
 | Tara Athan           | Radim Blazek         | Godofredo Contreras  |
@@ -65,9 +63,7 @@ User, Installation and Coding Guide Authors and Editors:
 | Gary E. Sherman      | Tim Sutton           | Alex Bruy            |
 +----------------------+----------------------+----------------------+
 
-
-Translators who contributed to this translated version (Not English):
-....................................................................
+**Translators who contributed to this translated version (Not English)**
 
 +----------------------+----------------------+----------------------+
 | translator one       | translator two       | translator three     |
@@ -78,13 +74,11 @@ Translators who contributed to this translated version (Not English):
 +----------------------+----------------------+----------------------+
 
 
-Copyright (c) 2004 - 2012    |QG| Development Team
+Copyright (c) 2004 - 2012  QGIS Development Team
 
-Internet: http://www.qgis.org
-.........
+**Internet:** http://www.qgis.org
 
-License of this document
-========================
+**License of this document**
 
 Permission is granted to copy, distribute and/or modify this document under 
 the terms of the GNU Free Documentation License, Version 1.3 or any later 

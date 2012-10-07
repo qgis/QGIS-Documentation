@@ -39,261 +39,146 @@ find it in Appendix :ref:`gpl_appendix`.
         http://download.osgeo.org/qgis/doc/manual/, or in the documentation
         area of the QGIS website at http://www.qgis.org/en/documentation
 
+.. `label_intro`:
 
-Features
-=========
+Introduction To GIS
+===================
 
-|qg| offers many common GIS functionalities provided by core features and
-plugins. As a short summary they are presented in six categories to gain a
-first insight.
+.. when the revision of a section has been finalized, 
+.. comment out the following line:
+.. \updatedisclaimer
 
-View data
-.........
+A Geographical Information System (GIS) (Mitchell 2005 :ref:`literature_and_web`)
+is a collection of software that allows you to create, visualize, query and
+analyze geospatial data. Geospatial data refers to information about the
+geographic location of an entity. This often involves the use of a
+geographic coordinate, like a latitude or longitude value. Spatial data is
+another commonly used term, as are: geographic data, GIS data, map data,
+location data, coordinate data and spatial geometry data.
 
-You can view and overlay vector and raster data in different formats and
-projections without conversion to an internal or common format. Supported
-formats include:
+Applications using geospatial data perform a variety of functions. Map
+production is the most easily understood function of geospatial
+applications. Mapping programs take geospatial data and render it in a form
+that is viewable, usually on a computer screen or printed page.
+Applications can present static maps (a simple image) or dynamic maps that
+are customised by the person viewing the map through a desktop program or a
+web page.
 
-*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector 
-   formats supported by the installed OGR library, including ESRI shapefiles,
-   MapInfo, SDTS, GML and many more.
-*  Raster and imagery formats supported by the installed GDAL (Geospatial
-   Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii 
-   Grid, JPEG, PNG and many more.
-*  SpatiaLite databases (see section :ref:`label_spatialite`) 
-*  GRASS raster and vector data from GRASS databases (location/mapset),
-   see section :ref:`sec_grass`.
-*  Online spatial data served as OGC-compliant Web Map Service (WMS) or
-   Web Feature Service (WFS), see section :ref:`working_with_ogc`.
-*  OpenStreetMap data (see section :ref:`plugins_osm`).
+Many people mistakenly assume that geospatial applications just produce
+maps, but geospatial data analysis is another primary function of
+geospatial applications. Some typical types of analysis include computing:
 
-Explore data and compose maps
-.............................
 
-You can compose maps and interactively explore spatial data with a friendly
-GUI. The many helpful tools available in the GUI include:
+#.  distances between geographic locations
+#.  the amount of area (e.g., square meters) within a certain geographic region
+#.  what geographic features overlap other features
+#.  the amount of overlap between features
+#.  the number of locations within a certain distance of another
+#.  and so on...
 
-*  QGIS browser
-*  on the fly projection
-*  map composer
-*  overview panel
-*  spatial bookmarks
-*  identify/select features
-*  edit/view/search attributes
-*  feature labeling
-*  change vector and raster symbology
-*  add a graticule layer - now via fTools plugin
-*  decorate your map with a north arrow scale bar and copyright label
-*  save and restore projects
+These may seem simplistic, but can be applied in all sorts of ways across
+many disciplines. The results of analysis may be shown on a map, but are
+often tabulated into a report to support management decisions.
 
-Create, edit, manage and export data
-....................................
+The recent phenomena of location-based services promises to introduce all
+sorts of other features, but many will be based on a combination of maps
+and analysis. For example, you have a cell phone that tracks your
+geographic location. If you have the right software, your phone can tell
+you what kind of restaurants are within walking distance. While this is a
+novel application of geospatial technology, it is essentially doing
+geospatial data analysis and listing the results for you.
 
-You can create, edit, manage and export vector maps in several formats. Raster
-data have to be imported into GRASS to be able to edit and export them into
-other formats. QGIS offers the following: 
+.. `label_whynew`:
 
-*  Digitizing tools for OGR supported formats and GRASS vector layer.
-*  Create and edit shapefiles and GRASS vector layers.
-*  Geocode images with the Georeferencer plugin.
-*  GPS tools to import and export GPX format, and convert other GPS
-   formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been
-   addedto list of GPS devices).
-*  Visualize and edit OpenStreetMap data.
-*  Create PostGIS layers from shapefiles with the SPIT plugin.
-*  Improved handling of PostGIS tables.
-*  Manage vector attribute tables with the new attribute table (see section 
-   :ref:`sec_attribute_table`) or Table Manager plugin.
-*  Save screenshots as georeferenced images.
+Why is all this so new?
+-----------------------
 
-Analyse data
-............
+Well, it's not. There are many new hardware devices that are enabling
+mobile geospatial services. Many open source geospatial applications are
+also available, but the existence of geospatially focused hardware and
+software is nothing new. Global positioning system (GPS) receivers are
+becoming commonplace, but have been used in various industries for more
+than a decade. Likewise, desktop mapping and analysis tools have also been
+a major commercial market, primarily focused on industries such as natural
+resource management.
 
-You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
-supported formats using the fTools Python plugin. QGIS currently offers
-vector analysis, sampling, geoprocessing, geometry and database management
-tools. You can also use the integrated GRASS tools, which 
-include the complete GRASS functionality of more than 400 modules (See Section
-:ref:`sec_grass`).
+What is new is how the latest hardware and software is being applied and
+who is applying it. Traditional users of mapping and analysis tools were
+highly trained GIS Analysts or digital mapping technicians trained to use
+CAD-like tools. Now, the processing capabilities of home PCs and open
+source software (OSS) packages have enabled an army of hobbyists, professionals,
+web developers, etc. to interact with geospatial data. The learning curve
+has come down. The costs have come down. The amount of geospatial
+technology saturation has increased.
 
-Publish maps on the Internet
-............................
+How is geospatial data stored? In a nutshell, there are two types of
+geospatial data in widespread use today. This is in addition to
+traditional tabular data that is also widely used by geospatial
+applications.
 
-QGIS can be used to export data to a mapfile and to publish them on the
-Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS or WFS client, and as WMS or WFS server. 
+.. `label_rasterdata`:
 
-Extend QGIS functionality through plugins
-.........................................
+Raster Data
+-----------
 
-QGIS can be adapted to your special needs with the extensible
-plugin architecture. QGIS provides libraries that can be used to create
-plugins.  You can even create new applications with C++ or Python!
 
-Core Plugins
-............
+One type of geospatial data is called raster data or simply "a raster". The
+most easily recognised form of raster data is digital satellite imagery or
+air photos. Elevation shading or digital elevation models are also
+typically represented as raster data. Any type of map feature can be
+represented as raster data, but there are limitations.
 
-#.  Add Delimited Text Layer (Loads and displays delimited text files
-    containing x,y coordinates).
-#.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
-#.  Coordinate Capture (Capture mouse coordinates in different CRS).
-#.  Decorations (Copyright Label, North Arrow and Scale bar).
-#.  Diagram Overlay (Placing diagrams on vector layer).
-#.  Displacement Plugin (Handle point displacement in case points have the same
-    position).
-#.  Dxf2Shp Converter (Convert DXF to Shape).
-#.  GPS Tools (Loading and importing GPS data).
-#.  GRASS (GRASS GIS integration).
-#.  GDALTools (Integrate GDAL Tools into QGIS).
-#.  Georeferencer GDAL (Adding projection information to raster using GDAL).
-#.  Heatmap tool (Generating raster heatmaps from point data).
-#.  Interpolation plugin (interpolate based on vertices of a vector layer).
-#.  Mapserver Export (Export QGIS project file to a MapServer map file).
-#.  Offline Editing (Allow offline editing and synchronizing with database).
-#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data).
-#.  Oracle Spatial GeoRaster support.
-#.  Plugin Installer (Download and install QGIS python plugins).
-#.  Raster terrain analysis (Raster based terrain analysis).
-#.  Road graph plugin (Shortest Path network analysis).
-#.  SPIT (Import Shapefile to PostgreSQL/PostGIS).
-#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).
-#.  Spatial Query Plugin (make spatial queries on vector layers).
-#.  Terrain Analysis Plugin.
-#.  WFS Plugin (Add WFS layers to QGIS canvas).
-#.  eVIS (Event Visualization Tool).
-#.  fTools (Tools for vector data analysis and management).
+A raster is a regular grid made up of cells, or in the case of imagery,
+pixels. They have a fixed number of rows and columns. Each cell has a
+numeric value and has a certain geographic size (e.g. 30x30 meters in
+size).
 
-External Python Plugins
-.......................
+Multiple overlapping rasters are used to represent images using more than
+one colour value (i.e. one raster for each set of red, green and blue
+values is combined to create a colour image). Satellite imagery also
+represents data in multiple "bands". Each band is essentially a separate,
+spatially overlapping raster, where each band holds values of certain
+wavelengths of light. As you can imagine, a large raster takes up more file
+space. A raster with smaller cells can provide more detail, but takes up
+more file space. The trick is finding the right balance between cell size
+for storage purposes and cell size for analytical or mapping purposes.
 
-QGIS offers a growing number of external python plugins that are provided by
-the community. These plugins reside in the official PyQGIS repository, and
-can be easily installed using the Python Plugin Installer (See Section
-:ref:`load_external_plugin`).
+.. `label_vectordata`:
 
-What's new in version \CURRENT
-..............................
+Vector Data
+------------
 
-Please note that this is a release in our 'cutting edge' release series. As such 
-it contains new features and extends the programmatic interface over QGIS 1.0.x 
-and QGIS 1.6.0. We recommend that you use this version over previous releases.
+Vector data is also used in geospatial applications. If you stayed awake
+during trigonometry and coordinate geometry classes, you will already be
+familiar with some of the qualities of vector data. In its simplest sense,
+vectors are a way of describing a location by using a set of coordinates.
+Each coordinate refers to a geographic location using a system of x and y
+values.
 
-This release includes over 277 bug fixes and many new features and enhancements.
+This can be thought of in reference to a Cartesian plane - you know, the
+diagrams from school that showed an x and y-axis. You might have used them
+to chart declining retirement savings or increasing compound mortgage
+interest, but the concepts are essential to geospatial data analysis and
+mapping.
 
-Symbology labels and diagrams
-.............................
+There are various ways of representing these geographic coordinates
+depending on your purpose. This is a whole area of study for another day -
+map projections.
 
-* New symbology now used by default.
-* Diagram system that uses the same smart placement system as labeling-ng.
-* Export and import of styles (symbology-ng).
-* Labels for rules in rule-based renderers.
-* Font marker can have an X,Y offset.
-* Line symbology:
+Vector data takes on three forms, each progressively more complex and
+building on the former.  
 
-  * Option to put marker on the central point of a line.
-  * Option to put marker only on first/last vertex of a line.
-  * Allow the marker line symbol layer to draw markers on each vertex.
+#. Points - A single coordinate (x y) represents a discrete geographic location
+#. Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung 
+   together in a certain order, like drawing a line from Point (x1 y1) 
+   to Point (x2 y2) and so on. These parts between each point are considered 
+   line segments. They have a length and the line can be said to have a 
+   direction based on the order of the points. Technically, a line is a 
+   single pair of coordinates connected together, whereas a line string 
+   is multiple lines connected together.  
+#. Polygons - When lines are strung together by more than two points, 
+   with the last point being at the same location as the first, we call 
+   this a polygon. A triangle, circle, rectangle, etc. are all polygons. 
+   The key feature of polygons is that there is a fixed area within them.
 
-* Polygon symbology:
-
-  * Rotation for svg fills.
-  * Added 'centroid fill' symbol layer which draws a marker on polygon's centroid.
-  * Allow the line symbol layers to be used for outline of polygon (fill) symbols.
-
-* Labels:
-
-  * Ability to set label distance in map units.
-  * Move/rotate/change label edit tools to interactively change data defined
-    label properties.
-
-* New Tools:
-
-  * Added GUI for gdaldem.
-  * Added field calculator with functions like $x, $y and $perimeter.
-  * Added 'Lines to polygons' tool to vector menu.
-  * Added voronoi polygon tool to Vector menu.
-
-User interface updates
-......................
-
-* Allow managing missing layers in a list.
-* Zoom to group of layers.
-* 'Tip of the day' on startup. You can en/disable tips in the options panel.
-* Better organisation of menus, separate database menu added.
-* Add ability to show number of features in legend classes. Accessible via
-  right-click legend menu.
-* General clean-ups and usability improvements.
-
-CRS Handling
-............
-
-* Show active crs in status bar.
-* Assign layer CRS to project (in the legend context menu).
-* Select default CRS for new projects.
-* Allow setting CRS for multiple layers at once.
-* Default to last selection when prompting for CRS.
-
-Rasters
-.......
-
-* Added AND and OR operator for raster calculator.
-* On-the-fly reprojection of rasters added.
-* Proper implementation of raster providers.
-* Added raster toolbar with histogram stretch functions.
-
-Providers and Data Handling
-...........................
-
-* New SQLAnywhere vector provider.
-* Table join support.
-* Feature form updates.
-* Make NULL value string representation configurable.
-* Fix feature updates in feature form from attribute table.
-* Add support for NULL values in value maps (comboboxes).
-* Use layer names instead of ids in drop down list when loading value maps from
-  layers.
-* Support feature form expression fields: line edits on the form which name
-  prefix "expr\_" are evaluated. Their value is interpreted as field calculator
-  string and replaced with the calculated value.
-* Support searching for NULL in attribute table.
-* Attribute editing improvements
-* Improved interactive attribute editing in table (adding/deleting features,
-  attribute update).
-* Allow adding of geometryless features.
-* Fixed attribute undo/redo.
-* Improved attribute handling.
-* Optionally re-use entered attribute values for next digitized feature.
-* Allow merging/assigning attribute values to a set of features.
-* Allow OGR "save as" without attributes (for eg. DGN/DXF).
-
-Api and Developer Centric
-.........................
-
-* Refactored attribute dialog calls to QgsFeatureAttribute.
-* Added QgsVectorLayer::featureAdded signal.
-* Layer menu function added.
-* Added option to load c++ plugins from user specified directories. Requires
-  application restart to activate.
-* Completely new geometry checking tool for fTools. Significantly faster, more
-  relevant error messages, and now supports zooming to errors. See the new
-  QgsGeometry.validateGeometry function.
-
-QGIS Server
-...........
-
-* Ability to specify wms service capabilities in the properties section of the
-  project file (instead of wms_metadata.xml file).
-* Support for wms printing with GetPrint-Request.
-
-Plugins
-.......
-
-* Support for icons of plugins in the plugin manager dialog.
-* Removed quickprint plugin - use easyprint plugin rather from plugin repo.
-* Removed ogr convertor plugin - use 'save as' context menu rather.
-
-Printing
-........
-
-* Undo/Redo support for the print composer.
 

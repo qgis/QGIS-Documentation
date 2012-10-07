@@ -7,9 +7,9 @@ Welcome to QGIS manual
 	:maxdepth: 2
 
 	preamble/preamble
-	preamble/foreword
-	preamble/conventions
-	introduction/gis_introduction
+        preamble/conventions
+        preamble/foreword
+        preamble/features
 	introduction/getting_started
 	introduction/qgis_configuration
 	introduction/qgis_gui
