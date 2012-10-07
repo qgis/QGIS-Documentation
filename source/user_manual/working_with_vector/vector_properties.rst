@@ -16,7 +16,7 @@ in the legend or right-click on the layer and select
 
 
 .. _figure_vector_6:
-.. figure:: ../../../static/user_manual/working_with_vector/vectorLayerSymbology.png
+.. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
    :align: center
 
@@ -179,11 +179,11 @@ After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Save as style]** button) and then easily 
 be used in the future.
 
-.. |singlesymbol_ng_point| image:: ../../../static/user_manual/working_with_vectors/singlesymbol_ng_point.png 
+.. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_point.png 
    :width: 25em
-.. |singlesymbol_ng_line| image:: ../../../static/user_manual/working_with_vectors/singlesymbol_ng_line.png 
+.. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_line.png 
    :width: 25em
-.. |singlesymbol_ng_area| image:: ../../../static/user_manual/working_with_vectors/singlesymbol_ng_area.png
+.. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_area.png
    :width: 25em
 
 .. _figure_symbology_1:
@@ -231,7 +231,7 @@ The example in figure_symbology_2_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_2:
-.. figure:: ../../../static/user_manual/working_with_vector/categorysymbol_ng_line.png
+.. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :width: 40em
    :align: center
 
@@ -246,7 +246,7 @@ and/or multiple stops in the color ramp. See figure_symbology_3_ for an
 example of custom color ramp.
 
 .. _figure_symbology_3:
-.. figure:: ../../../static/user_manual/working_with_vector/customColorRampGradient.png
+.. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
 
    Figure Symbology 3: Example of custom gradient color ramp with multiple 
@@ -290,7 +290,7 @@ The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_4:
-.. figure:: ../../../static/user_manual/working_with_vector/graduatesymbol_ng_line.png
+.. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :width: 40em
    :align: center
 
@@ -314,7 +314,7 @@ The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_5:
-.. figure:: ../../../static/user_manual/working_with_vector/rulesymbol_ng_line.png
+.. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :width: 40em
    :align: center
 
@@ -334,7 +334,7 @@ this, the symbols of the points are placed on a displacement circle around
 a center symbol.
 
 .. _figure_symbology_6:
-.. figure:: ../../../static/user_manual/working_with_vector/poi_displacement.png
+.. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :width: 40em
    :align: center
 
@@ -361,11 +361,11 @@ selected in the symbol layer list. The most important is the
 available options depend on the layer type (Point, Line, Polygon). The symbol 
 layer type options are described in section :ref:`vector_symbol_types`.
 
-.. |symbolproperties1| image:: ../../../static/user_manual/working_with_vectors/symbolproperties1.png
+.. |symbolproperties1| image:: /static/user_manual/working_with_vectors/symbolproperties1.png
    :width: 30em
-.. |symbolproperties2| image:: ../../../static/user_manual/working_with_vectors/symbolproperties2.png
+.. |symbolproperties2| image:: /static/user_manual/working_with_vectors/symbolproperties2.png
    :width: 30em
-.. |symbolproperties3| image:: ../../../static/user_manual/working_with_vectors/symbolproperties3.png
+.. |symbolproperties3| image:: /static/user_manual/working_with_vectors/symbolproperties3.png
    :width: 30em
 
 .. _figure_symbology_7:
@@ -401,7 +401,7 @@ To launch the Style Manager, click on :menuselection:`Settings -->
 Style Manager` in the main menu.
 
 .. _figure_symbology_8:
-.. figure:: ../../../static/user_manual/working_with_vector/stylemanager.png
+.. figure:: /static/user_manual/working_with_vector/stylemanager.png
    :width: 24em
    :align: center
 
@@ -443,13 +443,13 @@ The old |qg| symbology supports the following renderers:
 
 To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
 
-.. |vectorClassifySingle| image:: ../../../static/user_manual/working_with_vectors/vectorClassifySingle.png
+.. |vectorClassifySingle| image:: /static/user_manual/working_with_vectors/vectorClassifySingle.png
    :width: 330
-.. |vectorClassifyGraduated| image:: ../../../static/user_manual/working_with_vectors/vectorClassifyGraduated.png
+.. |vectorClassifyGraduated| image:: /static/user_manual/working_with_vectors/vectorClassifyGraduated.png
    :width: 330
-.. |vectorClassifyContinous| image:: ../../../static/user_manual/working_with_vectors/vectorClassifyContinous.png
+.. |vectorClassifyContinous| image:: /static/user_manual/working_with_vectors/vectorClassifyContinous.png
    :width: 330
-.. |vectorClassifyUnique| image:: ../../../static/user_manual/working_with_vectors/vectorClassifyUnique.png
+.. |vectorClassifyUnique| image:: /static/user_manual/working_with_vectors/vectorClassifyUnique.png
    :width: 330
 
 .. _figure_symbology_9:
@@ -643,7 +643,7 @@ visibility, if every part of multipart feature is to be labeled and if
 features act as obstacles for labels or not (see Figure_labels_1_ ).
 
 .. _figure_labels_1:
-.. figure:: ../../../static/user_manual/working_with_vector/label_points.png
+.. figure:: /static/user_manual/working_with_vector/label_points.png
    :width: 40em
    :align: center
 
@@ -662,7 +662,7 @@ duplicate labels and if features act as obstacles for labels or not
 (see Figure_labels_2_ ).
 
 .. _figure_labels_2:
-.. figure:: ../../../static/user_manual/working_with_vector/label_line.png
+.. figure:: /static/user_manual/working_with_vector/label_line.png
    :width: 40em
    :align: center
 
@@ -682,7 +682,7 @@ not (see Figure_labels_3_ ).
 
 
 .. _figure_labels_3:
-.. figure:: ../../../static/user_manual/working_with_vector/label_area.png
+.. figure:: /static/user_manual/working_with_vector/label_area.png
    :width: 40em
    :align: center
 
@@ -700,7 +700,7 @@ the search method, used to find the best label placement. Available is
 Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
 .. _figure_labels_4:
-.. figure:: ../../../static/user_manual/working_with_vector/label_engine.png
+.. figure:: /static/user_manual/working_with_vector/label_engine.png
    :width: 20em
    :align: center
 
@@ -757,7 +757,7 @@ Edit Widget
 \ 
 
 .. _figure_fields_1:
-.. figure:: ../../../static/user_manual/working_with_vector/editwidgetsdialog.png
+.. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :width: 40 em
 
    Figure Fields 1: Dialog to select an edit widget for an attribute 
@@ -980,7 +980,7 @@ zoom in to an area of interest. Make sure the ``lakes`` layer is active and
 identify a lake. In the result box you'll now see that our action is visible:
 
 .. _figure_actions_1:
-.. figure:: ../../../static/user_manual/working_with_vector/action_identifyaction.png
+.. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
 
    Figure Actions 1: Select feature and choose action |nix|
@@ -1082,7 +1082,7 @@ provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
-.. figure:: ../../../static/user_manual/working_with_vector/join_attributes.png
+.. figure:: /static/user_manual/working_with_vector/join_attributes.png
    :width: 30em
    :align: center
 
@@ -1103,7 +1103,7 @@ The :guilabel:`Diagram` tab allows you to add a grahic overlay to a vector
 layer (see figure_diagrams_1_).
 
 .. _figure_diagrams_1:
-.. figure:: ../../../static/user_manual/working_with_vector/diagram_tab.png
+.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :width: 40em
    :align: center
 
@@ -1137,7 +1137,7 @@ layer. Both vector layers are part of the |qg| sample dataset (see Section
 #.  Finally click **[Ok]**.
 
 .. _figure_diagrams_2:
-.. figure:: ../../../static/user_manual/working_with_vector/climate_diagram.png
+.. figure:: /static/user_manual/working_with_vector/climate_diagram.png
    :width: 40em
    :align: center
 

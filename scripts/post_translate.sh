@@ -69,5 +69,5 @@ do
   popd
 done
 
-#rm -rf source/static
+rm -rf source/static
 rm -rf ${BUILDDIR}
