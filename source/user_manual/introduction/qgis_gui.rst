@@ -12,7 +12,7 @@ interface as discussed below):
 
 .. _fig_startup:
 
-.. figure:: ../../../static/user_manual/introduction/startup.png
+.. figure:: /static/user_manual/introduction/startup.png
    :align: center
    :width: 40em
 

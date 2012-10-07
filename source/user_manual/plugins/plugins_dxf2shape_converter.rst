@@ -18,7 +18,7 @@ format. It requires the following parameters to be specified before running:
    strings themselves.
 
 .. _figure_dxf2shape_1:
-.. figure:: ../../../static/user_manual/plugins/dxf2shape_dialog.png
+.. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
    :width: 30em
 

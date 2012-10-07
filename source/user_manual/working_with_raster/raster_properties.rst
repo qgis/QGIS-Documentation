@@ -18,7 +18,7 @@ There are several tabs on the dialog:
 
 
 .. _figure_raster_1:
-.. figure:: ../../../static/user_manual/working_with_raster/rasterPropertiesDialog.png
+.. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
    :width: 40em
 

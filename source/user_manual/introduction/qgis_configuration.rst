@@ -143,7 +143,7 @@ Network Tab
 
 .. _fig_proxy-settings:
 
-.. figure:: ../../../static/user_manual/introduction/proxy-settings.png
+.. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
    :width: 40em
    

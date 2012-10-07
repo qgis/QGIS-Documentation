@@ -255,7 +255,7 @@ Start QGIS
 
 .. _`fig_simple_session`:
 
-.. ../../../static/user_manual/introduction/simple_session.png
+.. /static/user_manual/introduction/simple_session.png
    :align: center
    
    A Simple |qg| Session

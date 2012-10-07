@@ -164,7 +164,7 @@ options.
 
 .. _figure_GDAL_1:
 
-.. figure:: ../../../static/user_manual/plugins/raster_menu.png
+.. figure:: /static/user_manual/plugins/raster_menu.png
    :align: center
    :width: 40em
 
@@ -181,7 +181,7 @@ Below are some examples of use of the tools.
 
 .. _figure_GDAL_2:
 
-.. figure:: ../../../static/user_manual/plugins/gdalinfo.png
+.. figure:: /static/user_manual/plugins/gdalinfo.png
    :align: center
    :width: 40em
 
@@ -193,7 +193,7 @@ This example will create contour lines from an SRTM elevation tile.
 
 .. _figure_GDAL_3:
 
-.. figure:: ../../../static/user_manual/plugins/gdal_contour.png
+.. figure:: /static/user_manual/plugins/gdal_contour.png
    :align: center
    :width: 40em
 
@@ -203,7 +203,7 @@ and the result:
 
 .. _figure_GDAL_4:
 
-.. figure:: ../../../static/user_manual/plugins/qgis_contours.png
+.. figure:: /static/user_manual/plugins/qgis_contours.png
    :align: center
    :width: 40em
 
@@ -217,7 +217,7 @@ Lon/Lat WGS84 (EPSG:4326).
 
 .. _figure_GDAL_5:
 
-.. figure:: ../../../static/user_manual/plugins/gdalwarp.png
+.. figure:: /static/user_manual/plugins/gdalwarp.png
    :align: center
    :width: 40em
 

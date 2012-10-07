@@ -50,7 +50,7 @@ options.
 
 .. _figure_spatial_query_1:
 
-.. figure:: ../../../static/user_manual/plugins/spatial_query_sample.png
+.. figure:: /static/user_manual/plugins/spatial_query_sample.png
    :align: center
    :width: 40 em
 

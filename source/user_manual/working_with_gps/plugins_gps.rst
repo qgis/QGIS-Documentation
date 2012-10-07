@@ -50,7 +50,7 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
 
 .. _figure_gps_1:
 
-.. figure:: ../../../static/user_manual/working_with_gps/loadgpx.png
+.. figure:: /static/user_manual/working_with_gps/loadgpx.png
    :align: center
    :width: 40em
 
@@ -105,7 +105,7 @@ be stored, and the name of the new layer.
 
 .. _figure_gps_2:
 
-.. figure::  ../../../static/user_manual/working_with_gps/download.png
+.. figure::  /static/user_manual/working_with_gps/download.png
    :align: center
    :width: 40em
 

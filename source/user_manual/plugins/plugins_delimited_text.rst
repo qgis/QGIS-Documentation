@@ -52,7 +52,7 @@ Click the new toolbar icon |delimited_text| :sup:`Add Delimited Text Layer`
 to open the Delimited Text dialog as shown in figure_text_1_.
 
 .. _figure_text_1:
-.. figure:: ../../../static/user_manual/plugins/delimited_text_dialog.png
+.. figure:: /static/user_manual/plugins/delimited_text_dialog.png
    :align: center
    :width: 30em
 
