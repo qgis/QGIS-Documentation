@@ -18,7 +18,7 @@ Using headlines
 Adding new haedlines, you should use following styles for chapter, section, 
 subsection and minisec.
 
-headlines::
+* headlines::
 
   ********
   Chapter
