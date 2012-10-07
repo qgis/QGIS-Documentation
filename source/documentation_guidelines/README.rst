@@ -1,6 +1,6 @@
-===================================
+***********************************
 Migration guide / convention style
-===================================
+***********************************
 
 Introduction
 ============
@@ -10,6 +10,28 @@ See also: http://sphinx.pocoo.org/markup/inline.html or convention.rst file.
 In general, when creating rst documentation for the QGIS project, please follow 
 the `Python documentation style guide lines 
 <http://docs.python.org/devguide/documenting.html>`_.
+
+
+Using headlines
+===============
+
+Adding new haedlines, you should use following styles for chapter, section, 
+subsection and minisec.
+
+code::
+ 
+ ********
+ Chapter
+ ********
+
+ Section
+ =======
+
+ Subsection
+ ----------
+
+ Minisec
+ .......
 
 Inline tags
 ===========
