@@ -9,21 +9,18 @@ here:
 
 TODO: update
 
-* English: http://documentation.qgis.org/user_guide/html/en
-* French: http://documentation.qgis.org/user_guide/html/fr
-* German: http://documentation.qgis.org/user_guide/html/de
-* Italian: http://documentation.qgis.org/user_guide/html/it
-* Japanese: http://documentation.qgis.org/user_guide/html/ja
-* Portuguese: http://documentation.qgis.org/user_guide/html/pt
-* Russian: http://documentation.qgis.org/user_guide/html/ru
-* Spanish: http://documentation.qgis.org/user_guide/html/es
+* English: http://documentation.qgis.org/user_manual/html/en
+* French: http://documentation.qgis.org/user_manual/html/fr
+* German: http://documentation.qgis.org/user_manual/html/de
+* Italian: http://documentation.qgis.org/user_manual/html/it
+* Japanese: http://documentation.qgis.org/user_manual/html/ja
+* Portuguese: http://documentation.qgis.org/user_manual/html/pt
+* Russian: http://documentation.qgis.org/user_manual/html/ru
+* Spanish: http://documentation.qgis.org/user_manual/html/es
 
 It is available also the subdomain docs.qgis.org, for example for the German 
 language:
-http://docs.qgis.org/user_guide/html/de/
-
-It is possible to read the HTML English version of the documentation here:
-http://readthedocs.org/docs/qgis/en/latest/
+http://docs.qgis.org/user_manual/html/de/
 
 In the qgis.org site the documentation is scheduled to be built every 30 
 minutes. In the readthedocs.org site it is built every time something is 
@@ -41,13 +38,13 @@ Quick Overview
 Tools
 --------------------------------------------------------------------------------
 
-You will need the following tools (Werner, plz add if I missed something :-) ) 
+You will need the following tools
 
 * git (from packagemanager)
 * sphinx (via 'sudo pip install sphinx')
 * texlive (from packagemanager)
 * texlive-fonts-recommended (from packagemanager0
-* texi2pdf (from packagemanager, in Ubuntu in package 'texinfo')
+* texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 
 
 Generation
@@ -61,15 +58,12 @@ Git clone this project::
 
 You should have a directory tree like this::
 
- ├── i18n               will hold the po files for all languages
- ├── Makefile           ? to be removed ?
- ├── output             ? will contain output (? not in github ?)
- ├── readme.rst         this file 
- ├── requirements.txt   ? to be removed ?
+ ├── i18n               will hold the po files (translated strings) for all languages
+ ├── output             will contain output (? not in github ?)
+ ├── readme.rst         this file
  ├── resources          containing all images for sources
  ├── scripts            containing buildscripts and conf.py
  ├── source             containing all rst sources
- ├── static             used for building, plz keep this here and clean
  └── themes             contains themes for output
 
 Run pre_translate.sh script to create the gettext files (po, pot) in the i18n directory::
@@ -113,4 +107,17 @@ This is a basic usage of the msgmerge command::
 	msgmerge source/translated/it/introduction.po \ 
 		source/translated/pot/introduction.pot -U
 
+
+New Language workflow
+--------------------------------------------------------------------------------
+
+- add you locale code in the pre_translate.sh script in the line with 'LOCALE='
+
+- run 'scripts/pre_translate.sh'. There will be a new directory in the
+i18n directory for your language, containing the po-files for all source files
+
+- create an empty(!) directory in the resources directory for your language
+The idea is to ONLY put images in exact the same directory structure if you want
+an image to be 'translated': default the english one will be used from the
+'en' directory, and only if there is an translated one it wil be found and used.
 
