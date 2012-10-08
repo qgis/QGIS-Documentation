@@ -224,6 +224,14 @@ The cursor becomes cross-shaped. Click to draw the first segment of the angle yo
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
 
+.. |measure_line| image:: /static/user_manual/introduction/measure_line.png
+   :width: 22em
+.. |measure_area| image:: /static/user_manual/introduction/measure_area.png
+   :width: 22em
+.. |measure_angle| image:: /static/user_manual/introduction/measure_angle.png
+   :width: 17em
+
+
 .. _measure_in_action:
 
 +------------------------+------------------------+

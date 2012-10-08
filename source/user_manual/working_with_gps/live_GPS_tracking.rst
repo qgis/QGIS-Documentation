@@ -30,6 +30,14 @@ gpsd properly to connect QGIS to it.
    create a new vector layer first and switch it to editable status to be able 
    to record your track.
 
+.. |gpstrack_main| image:: /static/user_manual/introduction/gpstrack_main.png
+   :width: 20em
+.. |gpstrack_stren| image:: /static/user_manual/introduction/gpstrack_stren.png
+   :width: 15em
+.. |gpstrack_polar| image:: /static/user_manual/introduction/gpstrack_polar.png
+   :width: 15em
+
+
 .. _table_figure_gps_tracking:
 
 Live GPS tracking |nix| 
