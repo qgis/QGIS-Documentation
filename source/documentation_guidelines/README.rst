@@ -29,9 +29,6 @@ headlines::
 
   Subsection
   ----------
-	
-  Minisec
-  .......
 
 Inline tags
 ===========
