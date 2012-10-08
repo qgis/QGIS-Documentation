@@ -484,12 +484,6 @@ rst_epilog = """
    :width: 1.5em
 .. |dxf2shp_converter| image:: /static/user_manual/plugins/dxf2shp_converter.png
    :width: 1.5em
-.. |measure_line| image:: /introduction/img/en/measure_line.png
-   :width: 22em
-.. |measure_area| image:: /introduction/img/en/measure_area.png
-   :width: 22em
-.. |measure_angle| image:: /introduction/img/en/measure_angle.png
-   :width: 17em
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
