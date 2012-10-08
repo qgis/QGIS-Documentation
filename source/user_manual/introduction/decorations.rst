@@ -1,29 +1,31 @@
-%  !TeX  root  =  user_guide.tex
 
-Decorations Plugins
-===================
+.. _decorations:
+
+Decorations
+===========
 
 
-% when the revision of a section has been finalized,
-% comment out the following line:
-% \updatedisclaimer
-
-The Decorations Plugins includes the Copyright Label Plugin, the North
+The Decorations of QGIS includes the Copyright Label Plugin, the North
 Arrow Plugin and the Scale Bar Plugin. They are used to ``decorate'' the
 map by adding cartographic elements.
 
-Copyright Label Plugin}\label{copyrightlabel
-********************************************
+.. note:: 
+   Before QGIS 1.8 the decoration plugin provided the same functionality.
+   From 1.8 onwards it has become an integral part of QGIS.
 
 
-The title of this plugin is a bit misleading - you can add any random text to the map.
+Copyright Label
+***************
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=7cm]{copyright}
-   \caption{Copyright Label Plugin \nixcaption}\label{fig:copyright}
-\end{figure}
 
+You can add a Copyright label of your choose using the text you prefer to the map.
+
+.. _figure_decorations_1:
+
+.. figure:: /static/user_manual/introduction/copyright.png
+   :align: centre 
+
+   Figure Decorations 1: Your own copyright added |nix|
 
 
 #.  Make sure the plugin is loaded
@@ -50,14 +52,16 @@ QGIS determine the direction, it makes its best guess as to how the arrow
 should be oriented. For placement of the arrow you have four options,
 corresponding to the four corners of the map canvas.
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{north_arrow_dialog}
-   \caption{North Arrow Plugin \nixcaption}\label{fig:north_arrow}
-\end{figure}
+.. _figure_decorations_2:
 
-Scale Bar Plugin}\label{scalebar
-********************************
+.. figure:: /static/user_manual/introduction/north_arrow.png
+   :align: centre
+
+   Figure Decorations 2: The North Arrow |nix|
+ 
+
+Scale Bar
+*********
 
 
 The Scale Bar plugin adds a simple scale bar to the map canvas. You
@@ -82,16 +86,15 @@ To add a scale bar:
   canvas is resized \checkbox{Automatically snap to round number on resize}
 #.  Click \button{OK}
 
+.. _figure_decorations_3:
 
+.. figure: /static/user_manual/introduction/scale_bar.png
+   :align: centre
 
-\begin{figure}[ht]
-   \centering
-   \includegraphics[clip=true, width=8cm]{scale_bar_dialog}
-   \caption{Scale Bar Plugin \nixcaption}\label{fig:scale_bar}
-\end{figure}
+   Figure Decorations 3: The Scale Bar |nix|
 
-\begin{Tip}\caption{\textsc{Plugins Settings Saved to Project}}:index:`plugins settings`
-When you save a .qgs project, any changes you have made to NorthArrow, ScaleBar and Copyright plugins will be saved in the project and restored nexttime you load the project.
-\end{Tip}
+.. tip:: Settings of Decorations
 
-\FloatBarrier
+   When you save a .qgs project, any changes you have made to NorthArrow, 
+   ScaleBar and Copyright plugins will be saved in the project and restored 
+   the next time you load the project.
