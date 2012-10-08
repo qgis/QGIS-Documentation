@@ -11,9 +11,9 @@ Welcome to QGIS manual
         preamble/foreword
         preamble/features
 	introduction/getting_started
-	introduction/qgis_configuration
-	introduction/qgis_gui
+        introduction/qgis_gui
         introduction/general_tools
+        introduction/qgis_configuration
         working_with_projections/working_with_projections
 	qgis_browser/qgis_browser
         working_with_vector/supported_data
