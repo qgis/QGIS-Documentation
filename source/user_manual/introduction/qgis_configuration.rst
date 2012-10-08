@@ -24,8 +24,9 @@ include:
 
 .. _gui_options:
 
-GUI Options 
-=============
+*******
+Options 
+*******
 
 |mActionOptions| Some basic options for QGIS can be selected using the 
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->` 
@@ -33,7 +34,7 @@ GUI Options
 your options are:
 
 General Tab
-...........
+===========
 
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
@@ -60,7 +61,7 @@ General Tab
 * Add path(s) to search for additional C++ plugin libraries. 
 
 Rendering Tab
-.............
+=============
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
 * Define number of features to draw before updating the display.
@@ -77,7 +78,7 @@ absolute or relative in the :guilabel:`General` tab of the
 :menuselection:`Settings --> Project Properties` menu.
 
 Map tools Tab
-.............
+=============
 
 * The Mode setting determines which layers will be shown by the Identify
   tool. By switching to ``Top down`` or ``Top down, stop at
@@ -98,13 +99,13 @@ Map tools Tab
 * Define Zoom factor for wheel mouse
 
 Overlays Tab
-............
+============
 
 * Define placement algorithm for labels (choose between central point
   (standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)
 
 Digitizing Tab
-..............
+==============
 
 * Define Rubberband line color and line width
 * Define default snap mode (to vertex, to segment, to vertex and segment)
@@ -117,7 +118,7 @@ Digitizing Tab
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 
 CRS Tab
-.......
+=======
 
 The CRS tab is divided in two areas. The first area allows to define the default 
 CRS for new projects.
@@ -133,13 +134,13 @@ a layer without CRS is loaded.
 * |radiobuttonon| :guilabel:`Global default Coordinate Reference System (CRS) displayed below will be used`
 
 Locale Tab
-..........
+==========
 
 * |checkbox| :guilabel:`Overwrite system locale and use defined locale instead`
 * Information about active system locale
 
 Network Tab
-...........
+===========
 
 .. _fig_proxy-settings:
 
