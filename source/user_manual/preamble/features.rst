@@ -1,6 +1,6 @@
-
+*********
 Features
-=========
+*********
 
 |qg| offers many common GIS functionalities provided by core features and
 plugins. As a short summary they are presented in six categories to gain a
@@ -123,7 +123,7 @@ can be easily installed using the Python Plugin Installer (See Section
 :ref:`load_external_plugin`).
 
 What's new in the version 1.8
------------------------------
+=============================
 
 Please note that this is a release in our 'cutting edge' release series. As such 
 it contains new features and extends the programmatic interface over QGIS 1.0.x 
