@@ -179,11 +179,11 @@ After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Save as style]** button) and then easily 
 be used in the future.
 
-.. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_point.png 
+.. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png 
    :width: 25em
-.. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_line.png 
+.. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png 
    :width: 25em
-.. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vectors/singlesymbol_ng_area.png
+.. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
    :width: 25em
 
 .. _figure_symbology_1:
@@ -361,11 +361,11 @@ selected in the symbol layer list. The most important is the
 available options depend on the layer type (Point, Line, Polygon). The symbol 
 layer type options are described in section :ref:`vector_symbol_types`.
 
-.. |symbolproperties1| image:: /static/user_manual/working_with_vectors/symbolproperties1.png
+.. |symbolproperties1| image:: /static/user_manual/working_with_vector/symbolproperties1.png
    :width: 30em
-.. |symbolproperties2| image:: /static/user_manual/working_with_vectors/symbolproperties2.png
+.. |symbolproperties2| image:: /static/user_manual/working_with_vector/symbolproperties2.png
    :width: 30em
-.. |symbolproperties3| image:: /static/user_manual/working_with_vectors/symbolproperties3.png
+.. |symbolproperties3| image:: /static/user_manual/working_with_vector/symbolproperties3.png
    :width: 30em
 
 .. _figure_symbology_7:
@@ -443,13 +443,13 @@ The old |qg| symbology supports the following renderers:
 
 To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
 
-.. |vectorClassifySingle| image:: /static/user_manual/working_with_vectors/vectorClassifySingle.png
+.. |vectorClassifySingle| image:: /static/user_manual/working_with_vector/vectorClassifySingle.png
    :width: 330
-.. |vectorClassifyGraduated| image:: /static/user_manual/working_with_vectors/vectorClassifyGraduated.png
+.. |vectorClassifyGraduated| image:: /static/user_manual/working_with_vector/vectorClassifyGraduated.png
    :width: 330
-.. |vectorClassifyContinous| image:: /static/user_manual/working_with_vectors/vectorClassifyContinous.png
+.. |vectorClassifyContinous| image:: /static/user_manual/working_with_vector/vectorClassifyContinous.png
    :width: 330
-.. |vectorClassifyUnique| image:: /static/user_manual/working_with_vectors/vectorClassifyUnique.png
+.. |vectorClassifyUnique| image:: /static/user_manual/working_with_vector/vectorClassifyUnique.png
    :width: 330
 
 .. _figure_symbology_9:
