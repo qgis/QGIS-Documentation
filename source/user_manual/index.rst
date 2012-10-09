@@ -12,8 +12,8 @@ Welcome to QGIS manual
         preamble/features
 	introduction/getting_started
         introduction/qgis_gui
-	introduction/decorations
         introduction/general_tools
+	introduction/decorations
         introduction/qgis_configuration
         working_with_projections/working_with_projections
 	qgis_browser/qgis_browser

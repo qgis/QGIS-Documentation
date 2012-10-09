@@ -386,12 +386,12 @@ rst_epilog = """
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
-.. |copyright| image:: /static/common/copyright_label.png
+.. |copyright_label| image:: /static/common/copyright_label.png
    :width: 1.5em
 .. |north_arrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |scale_bar| image:: /static/common/scale_bar.png
-   :width: 1.5em
+   :width: 2.5em
 .. |plugin_installer| image:: /static/common/plugin_installer.png
    :width: 1.5em
 .. |gpstrack_barchart| image:: /static/common//gpstrack_barchart.png

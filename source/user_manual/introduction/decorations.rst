@@ -5,25 +5,27 @@ Decorations
 ===========
 
 
-The Decorations of QGIS includes the Copyright Label Plugin, the North
-Arrow Plugin and the Scale Bar Plugin. They are used to ``decorate'' the
-map by adding cartographic elements.
+The Decorations of QGIS includes the Copyright Label, the North Arrow and 
+the Scale Bar. They are used to 'decorate' the map by adding cartographic 
+elements.
 
 .. note:: 
-   Before QGIS 1.8 the Decoration Plugin provided the same functionality.
-   From 1.8 onwards it has become an integral part of QGIS.
+   Before QGIS 1.8 the same functionality was provided by the Decoration 
+   Plugin.
 
 
 Copyright Label
 ***************
 
 
-|copyright_label| You can add a Copyright label of your choose using the text you prefer to the map.
+|copyright_label| :menuselection:`Copyright label` adds a Copyright label 
+of your choice, using the text you prefer to the map.
 
 .. _figure_decorations_1:
 
 .. figure:: /static/user_manual/introduction/copyright.png
-   :align: centre 
+   :align: center
+   :width: 20em 
 
    Figure Decorations 1: Your own copyright added |nix|
 
@@ -46,8 +48,8 @@ North Arrow
 ***********
 
 
-|north_arrow| The North Arrow plugin places a simple north arrow on the map 
-canvas. At present there is only one style available. You can adjust the 
+|north_arrow| :menuselection:`North Arrow` places a simple north arrow on the 
+map canvas. At present there is only one style available. You can adjust the 
 angle of the arrow or let QGIS set the direction automatically. If you choose 
 to let QGIS determine the direction, it makes its best guess as to how the 
 arrow should be oriented. For placement of the arrow you have four options,
@@ -56,7 +58,8 @@ corresponding to the four corners of the map canvas.
 .. _figure_decorations_2:
 
 .. figure:: /static/user_manual/introduction/north_arrow.png
-   :align: centre
+   :align: center
+   :width: 20em 
 
    Figure Decorations 2: The North Arrow |nix|
  
@@ -65,8 +68,8 @@ Scale Bar
 *********
 
 
-|scale_bar| The Scale Bar plugin adds a simple scale bar to the map canvas. You
-control the style and placement, as well as the labeling of the bar.
+|scale_bar| :menuselection:`Scale Bar` adds a simple scale bar to the map 
+canvas. You control the style and placement, as well as the labeling of the bar.
 
 QGIS only supports displaying the scale in the same units as your map frame. 
 So if the units of your layers are in meters, you can't create a scale bar in
@@ -92,12 +95,13 @@ To add a scale bar:
 .. _figure_decorations_3:
 
 .. figure: /static/user_manual/introduction/scale_bar.png
-   :align: centre
+   :align: center
+   :width: 20em 
 
    Figure Decorations 3: The Scale Bar |nix|
 
 .. tip:: Settings of Decorations
 
    When you save a .qgs project, any changes you have made to NorthArrow, 
-   ScaleBar and Copyright plugins will be saved in the project and restored 
+   ScaleBar and Copyright will be saved in the project and restored 
    the next time you load the project.
