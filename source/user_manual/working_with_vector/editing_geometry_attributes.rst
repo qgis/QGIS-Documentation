@@ -2,7 +2,6 @@
 Editing
 =======
 
-
 |qg| supports various capabilities for :index:'editing' OGR, PostGIS and 
 Spatialite vector layers. **Note** - the procedure for editing GRASS layers 
 is different - see Section :ref:`grass_digitizing` for details.

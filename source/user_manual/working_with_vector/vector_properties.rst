@@ -1,9 +1,9 @@
 
 .. _vector_properties_dialog:
 
+
 The Vector Properties Dialog
 ============================
-
 
 The :guilabel:`Layer Properties` dialog for a vector layer provides 
 information about the layer, symbology settings and labeling options. 
@@ -30,17 +30,13 @@ Style Tab
 .. index:: New_Symbology, Symbology_New
 
 Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and 
-finally replace the old symbology. |qg| 1.7.4 now uses the new symbology as 
+finally replace the old symbology. |qg| 1.8 now uses the new symbology as 
 default, which provides a variety of improvements and new features.
 
 A description of the old symbology is available in section 
 :ref:`vector_old_symbology`.
 
 .. _vector_new_symbology:
-
-Understanding the new generation symbology
-------------------------------------------
-
 
 There are three types of symbols: marker symbols (for points), line symbols 
 (for lines) and fill and outline symbols (for polygons). Symbols can consist 
@@ -58,7 +54,7 @@ marker symbols.
 .. _vector_symbol_types:
 
 Available symbol layer types
-----------------------------
+............................
 
 * Point layers
 
@@ -88,7 +84,7 @@ Available symbol layer types
 .. index:: Color_ramps
 
 Color ramps
------------
+...........
 
 
 Color ramps are used to define a range of colors that can be used during 
@@ -106,7 +102,7 @@ Color ramps can be defined in the :guilabel:`Color ramp` tab of the
 clicking the **[Add]** button and then choosing a color ramp type.
 
 Styles
-------
+......
 
 
 A style groups a set of various symbols and color ramps. You can define 
@@ -118,7 +114,7 @@ default style in |qg| (modifiable) and the user can add further styles.
 .. index:: Renderers
 
 Renderers
----------
+.........
 
 
 The renderer is responsible for drawing a feature together with the correct 
@@ -130,8 +126,7 @@ The categorized and graduated renderer can be created by specifying a symbol
 and a color ramp \- they will set the colors for symbols appropriately.
 
 Working with the New Generation Symbology
-=========================================
-
+-----------------------------------------
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated and rule-based. Depending on the chosen 
@@ -154,7 +149,7 @@ edit and remove existing symbols and add new ones.
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
 
 Single Symbol Renderer
-----------------------
+......................
 
 
 The Single Symbol Renderer is used to render all features of the layer using 
@@ -208,7 +203,7 @@ be used in the future.
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 Categorized Renderer
---------------------
+....................
 
 
 The Categorized Renderer is used to render all features from a layer, using 
@@ -256,7 +251,7 @@ example of custom color ramp.
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile 
 
 Graduated Renderer
-------------------
+..................
 
 
 The Graduated Renderer is used to render all the features from a layer, using 
@@ -300,7 +295,7 @@ the rivers layer of the |qg| sample dataset.
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
 
 Rule-based rendering
---------------------
+....................
 
 
 The rule-based renderer is used to render all the features from a layer, 
@@ -324,7 +319,7 @@ for the rivers layer of the |qg| sample dataset.
 .. index:: Displacement_plugin
 
 Point displacement
-------------------
+..................
 
 
 The point displacement renderer is only available, if you load the 
@@ -343,8 +338,7 @@ a center symbol.
 .. index:: Symbol_Properties
 
 Symbol Properties
------------------
-
+.................
 
 The symbol properties dialog allows the user to specify different properties 
 of the symbol to be rendered. In the top left part of the dialog, you find 
@@ -392,7 +386,7 @@ layer type options are described in section :ref:`vector_symbol_types`.
 .. _vector_style_manager:
 
 Style Manager to manage symbols and color ramps
-===============================================
+-----------------------------------------------
 
 
 The Style Manager is a small helper application, that lists symbols and color 
@@ -412,8 +406,7 @@ Style Manager` in the main menu.
 .. _vector_old_symbology:
 
 Old Symbology
-=============
-
+-------------
 
 .. note:: 
    |qg| 1.7.4 still supports the usage of the old symbology, although it is 
@@ -469,9 +462,7 @@ To :index:'change the symbology' for a layer, simply double click on its legend 
 
 .. index:: Fill_Style, Fill_Color, Outline_Options
 
-Style Options
--------------
-
+**Style Options**
 
 Within this dialog you can style your vector layer. Depending on the 
 selected rendering option you have the possibility to also classify your 
@@ -503,9 +494,7 @@ if you make changes to the style that you are not happy with, use the
 
 .. index:: Vector_Transparency, Transparency_Vector
 
-Vector transparency
--------------------
-
+**Vector transparency**
 
 |qg| allows to set a transparency for every vector layer. This can be done 
 with the slider :guilabel:`Transparency` |slider| inside the 
@@ -519,7 +508,6 @@ layers.
 Labels Tab
 ----------
 
-
 As for the symbology |qg| 1.7.4 currently provides an old and a new labeling 
 engine in parallel. The :guilabel:`Labels` tab still contains the old 
 labeling. The new labeling is implemented as a core application and will 
@@ -532,7 +520,6 @@ The old labeling in the :guilabel:`Labels` tab allows you to enable labeling
 features and control a number of options related to fonts, placement, style, 
 alignment and buffering. We will illustrate this by labeling the lakes 
 shapefile of the :file:`QGIS_example_dataset`:
-
 
 
 #.  Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml` 
@@ -613,8 +600,7 @@ selected label is shown.
 .. _vector_new_labeling:
 
 New Labeling
-============
-
+------------
 
 The new |mActionLabeling| :sup:`Labeling` core application provides smart 
 labeling for vector point,  line and polygon layers and only requires a 
@@ -623,18 +609,14 @@ This new application will replace the current QGIS labeling, described in
 section :ref:`vector_labels_tab` and also supports on-the-fly transformated 
 layers.
 
-Using new labeling
-------------------
-
+**Using new labeling**
 
   #.  Start QGIS and load a vector point, line or polygon layer.
   #.  Activate the layer in the legend and click on the |mActionLabeling| 
       :sup:`Labeling` icon in the QGIS toolbar menu.
 
 
-Labeling point layers
----------------------
-
+**Labeling point layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` 
 checkbox and select an attribute column to use for labeling. After that you 
@@ -649,9 +631,7 @@ features act as obstacles for labels or not (see Figure_labels_1_ ).
 
    Figure Labels 1: Smart labeling of vector point layers |nix|
 
-Labeling line layers
---------------------
-
+**Labeling line layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` 
 checkbox and select an attribute column to use for labeling. After that 
@@ -669,9 +649,7 @@ duplicate labels and if features act as obstacles for labels or not
    Figure Labels 2: Smart labeling of vector line layers |nix|
 
 
-Labeling polygon layers
------------------------
-
+**Labeling polygon layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` 
 checkbox and select an attribute column to use for labeling. After that 
@@ -691,9 +669,7 @@ not (see Figure_labels_3_ ).
 .. index:: Label_Engine_Settings, Colliding_Labels
 .. index:: Popmusic_Tabu, Popmusic_Chain, Chain, Popmusic_Tabu_Chain, FALP
 
-Change engine settings
-----------------------
-
+**Change engine settings**
 
 Additionally you can click the **[Engine settings]** button and select 
 the search method, used to find the best label placement. Available is 
@@ -710,9 +686,7 @@ Furthermore the number of candidates can be defined for point, line and
 polygon features, and you can define whether to show all labels (including 
 colliding labels) and label candidates for debugging.
 
-Keywords to use in attribute columns for labeling
--------------------------------------------------
-
+**Keywords to use in attribute columns for labeling**
 
 There is a list of supported key words, that can be used for the placement 
 of labels in defined attribute colums.
@@ -733,7 +707,6 @@ bottom left.
 Attributes Tab
 --------------
 
-
 Within the :guilabel:`Attributes` tab the attributes of the selected 
 dataset can be manipulated. The buttons |mActionNewAttribute| 
 :guilabel:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column` 
@@ -747,8 +720,7 @@ Until then QGIS (and any other software that uses GDAL/OGR) can only use a
 workaround to delete Shapefile columns. In QGIS this "workaround" is a 
 third-party plugin called Table Manager.
 
-Edit Widget
------------
+**Edit Widget**
 
 .. following is included to give some space between title and figure!
 
@@ -802,7 +774,6 @@ widgets. These widgets are:
 General Tab
 -----------
 
-
 The :guilabel:`General` tab is essentially like that of the raster dialog. 
 It allows you to change the display name, set scale dependent rendering 
 options, create a spatial index of the vector file (only for OGR supported 
@@ -818,7 +789,6 @@ attribute table and select the |browsebutton| button next to Advanced search.
 Metadata Tab
 ------------
 
-
 The :guilabel:`Metadata` tab contains general information about the layer, 
 including specifics about the type and location, number of features, feature 
 type, and the editing capabilities. The :guilabel:`Extents` section, providing 
@@ -828,7 +798,6 @@ to get information about the layer, but is not yet editable.
 
 Actions Tab
 -----------
-
 
 |qg| provides the ability to perform an action based on the attributes of a 
 feature. This can be used to perform any number of actions, for example, 
@@ -842,9 +811,7 @@ the following discussion.
 
 .. index:: Actions, Attribute_Actions
 
-Defining Actions
-----------------
-
+**Defining Actions**
 
 Attribute actions are defined from the vector :guilabel:`Layer Properties` 
 dialog. To :index:`define an action`, open the vector 
@@ -895,9 +862,7 @@ The second example uses the \%\% notation which does not rely on a particular
 field for its value. When the action is invoked, the \%\% will be replaced by 
 the value of the selected field in the identify results or attribute table.
 
-Using Actions
--------------
-
+**Using Actions**
 
 Actions can be invoked from either the :guilabel:`Identify Results` dialog or 
 an :guilabel:`Attribute Table` dialog (recall that these dialogs can be opened 
@@ -1097,7 +1062,6 @@ Additionally the add vector join dialog allows to:
 
 Diagram Tab
 -----------
-
 
 The :guilabel:`Diagram` tab allows you to add a grahic overlay to a vector 
 layer (see figure_diagrams_1_).

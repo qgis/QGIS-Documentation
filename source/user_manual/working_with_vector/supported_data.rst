@@ -1,11 +1,5 @@
-
-.. _label_workingvector:
-
-**************************
- Working with Vector Data
-**************************
-
-
+Supported Data Formats
+======================
 
 |qg| uses the OGR library to read and write vector data formats [#]_, 
 including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, 
@@ -35,7 +29,7 @@ attributes functions.
 .. _vector_shapefiles:
 
 ESRI Shapefiles
-===============
+---------------
 
 
 The standard vector file format used in |qg| is the ESRI Shapefile. 
@@ -58,9 +52,7 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 .. _vector_load_shapefile:
 
-Loading a Shapefile
--------------------
-
+**Loading a Shapefile**
 
 |mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and 
 click on the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar 
@@ -130,9 +122,7 @@ symbology of vector layers.
 
 .. _vector_improving_performance_shape:
 
-Improving Performance Shape
----------------------------
-
+**Improving Performance Shape**
 
 To improve the performance of drawing a shapefile, you can create a spatial 
 index. A spatial index will improve the speed of both zooming and panning. 
@@ -149,9 +139,7 @@ Use these steps to create the index:
 
 .. _vector_shape_problem_loading:
 
-Problem loading a shape .prj file
----------------------------------
-
+**Problem loading a shape .prj file**
 
 If you load a shapefile with :file:`.prj` file and |qg| is not able to read 
 the coordinate reference system from that file, you have to define the 
@@ -172,8 +160,7 @@ a :file:`.qpj` file, it will be used instead of the :file:`.prj`.
 .. _vector_loading_mapinfo:
 
 Loading a MapInfo Layer
-=======================
-
+-----------------------
 
 |mActionAddNonDbLayer| To load a MapInfo layer, click on the 
 |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type 
@@ -187,7 +174,7 @@ Loading a MapInfo Layer
 .. _vector_loading_arcinfo_coverage:
 
 Loading an ArcInfo Binary Coverage
-==================================
+----------------------------------
 
 |mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on 
 the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or 
@@ -204,7 +191,7 @@ Transfer Format as well as the raw TIGER Format of the US Census Bureau.
 .. _label_postgis:
 
 PostGIS Layers
-==============
+--------------
 
 
 PostGIS layers are stored in a PostgreSQL database. The advantages of 
@@ -216,9 +203,7 @@ work more accurately than with OGR layers in |qg|.
 
 .. _vector_create_stored_connection:
 
-Creating a stored Connection
-----------------------------
-
+**Creating a stored Connection**
 
 |mActionAddLayer| The first time you use a PostGIS data source, you must 
 create a connection to the PostgreSQL database that contains the data. 
@@ -284,8 +269,7 @@ Password        Password used with *Username* to connect to the database.
 
 .. _vector_loading_postgis:
 
-Loading a PostGIS Layer
------------------------
+**Loading a PostGIS Layer**
 
 
 |mActionAddLayer| Once you have one or more connections defined, you can 
@@ -322,9 +306,7 @@ To load a layer from PostGIS, perform the following steps:
 
 .. _sec_postgis_details:
 
-Some details about PostgreSQL layers
-------------------------------------
-
+**Some details about PostgreSQL layers**
 
 This section contains some details on how |qg| accesses PostgreSQL layers. 
 Most of the time |qg| should simply provide you with a list of database 
@@ -367,9 +349,7 @@ unique constraint, preferably indexed).
 Importing Data into PostgreSQL
 ------------------------------
 
-
 **shp2pgsql**
-
 
 Data can be imported into PostgreSQL using a number of methods. PostGIS 
 includes a utility called **shp2pgsql** that can be used to import 
@@ -379,9 +359,7 @@ shapefile named :file:`lakes.shp` into a PostgreSQL database named
 
 ::
 
-
   shp2pgsql -s 2964 lakes.shp lakes_new | psql gis_data
-
 
 This creates a new layer named ``lakes_new`` in the ``gis_data`` database. 
 The new layer will have a spatial reference identifier (SRID) of 2964. 
@@ -403,7 +381,6 @@ reference systems and projections.
 .. _spit_plugin:
 
 **SPIT Plugin**
-
 
 |spiticon| |qg| comes with a plugin named SPIT (Shapefile to PostGIS 
 Import Tool). SPIT can be used to load multiple shapefiles at one time 
@@ -434,7 +411,6 @@ as each shapefile is processed.
 .. index:: ogr2ogr
 
 **ogr2ogr**
-
 
 Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata 
 in PostGIS: **ogr2ogr**. This is part of your GDAL installation. 
@@ -475,9 +451,7 @@ afterwards as an extra step (as described in the next section
 
 .. _vector_improving_performance:
 
-Improving Performance
----------------------
-
+**Improving Performance**
 
 Retrieving features from a PostgreSQL database can be time consuming, 
 especially over a network. You can improve the drawing performance of 
@@ -522,8 +496,7 @@ The following is an example of creating a GiST index:
 .. index:: ST_Shift_Longitude
 
 Vector layers crossing 180 |degrees| longitude
--------------------------------------------------------
-
+-----------------------------------------------
 
 Many GIS packages don't wrap vector maps, with a geographic reference 
 system (lat/lon), :index:`crossing the 180 degrees longitude line`. 
@@ -558,8 +531,7 @@ a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
    **ST_Shift_Longitude** function |nix|
 
 
-Usage
------
+**Usage**
 
 
 *  Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using 
@@ -577,8 +549,7 @@ Usage
 .. _label_spatialite:
 
 SpatiaLite Layers
-=================
-
+-----------------
 
 |mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite 
 database, begin by clicking on the |mActionAddSpatiaLiteLayer| 
@@ -598,9 +569,7 @@ format and the CRS and then add ``SPATIALITE=YES`` in the OGR data source
 creation option field. This tells OGR to create a SpatiaLite database. 
 See also http://www.gdal.org/ogr/drv_sqlite.html.
 
-Creating a new SpatiaLite layer
--------------------------------
-
+**Creating a new SpatiaLite layer**
 
 If you want to create a new SpatiaLite layer, please refer to section 
 :ref:`vector_create_spatialite`.

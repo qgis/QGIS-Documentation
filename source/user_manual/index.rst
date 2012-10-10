@@ -17,11 +17,7 @@ Welcome to QGIS manual
         introduction/qgis_configuration
         working_with_projections/working_with_projections
 	qgis_browser/qgis_browser
-        working_with_vector/supported_data
-        working_with_vector/vector_properties
-        working_with_vector/query_builder
-        working_with_vector/editing_geometry_attributes
-        working_with_vector/field_calculator
+        working_with_vector/index
 	working_with_raster/supported_data
 	working_with_raster/raster_properties
 	working_with_raster/raster_calculator
