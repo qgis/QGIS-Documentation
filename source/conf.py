@@ -110,49 +110,49 @@ rst_epilog = """
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png
 .. |tab| image:: /static/common/tab.png
-.. |icon_sqlanywhere| image:: /static/user_manual/plugins/sqlanywhere.png
+.. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
-.. |oracle_raster| image:: /static/user_manual/plugins/oracle_raster.png
+.. |oracle_raster| image:: /static/common/oracle_raster.png
    :width: 1.5em
-.. |raster_terrain| image:: /static/user_manual/plugins/raster_terrain.png
+.. |raster_terrain| image:: /static/common/raster_terrain.png
    :width: 1.5em
-.. |osm_load| image:: img/en/plugins_openstreetmap/osm_load.png
+.. |osm_load| image:: /static/common/osm_load.png
    :width: 1.5em
-.. |osm_featureManager| image:: img/en/plugins_openstreetmap/osm_featureManager.png
+.. |osm_featureManager| image:: /static/common/osm_featureManager.png
    :width: 1.5em
-.. |osm_download| image::  img/en/plugins_openstreetmap/osm_download.png
+.. |osm_download| image::  /static/common/osm_download.png
    :width: 1.5em
-.. |osm_upload| image:: img/en/plugins_openstreetmap/osm_upload.png
+.. |osm_upload| image:: /static/common/osm_upload.png
    :width: 1.5em
-.. |osm_import| image:: img/en/plugins_openstreetmap/osm_import.png
+.. |osm_import| image:: /static/common/osm_import.png
    :width: 1.5em
-.. |osm_save| image:: img/en/plugins_openstreetmap/osm_save.png
+.. |osm_save| image:: /static/common/osm_save.png
    :width: 1.5em
-.. |osm_identify| image:: img/en/plugins_openstreetmap/osm_identify.png
+.. |osm_identify| image:: /static/common/osm_identify.png
    :width: 1.5em
-.. |osm_createPoint| image:: img/en/plugins_openstreetmap/osm_createPoint.png
+.. |osm_createPoint| image:: /static/common/osm_createPoint.png
    :width: 1.5em
-.. |osm_createLine| image:: img/en/plugins_openstreetmap/osm_createLine.png
+.. |osm_createLine| image:: /static/common/osm_createLine.png
    :width: 1.5em
-.. |osm_createPolygon| image:: img/en/plugins_openstreetmap/osm_createPolygon.png
+.. |osm_createPolygon| image:: /static/common/osm_createPolygon.png
    :width: 1.5em
-.. |osm_move| image:: img/en/plugins_openstreetmap/osm_move.png
+.. |osm_move| image:: /static/common/osm_move.png
    :width: 1.5em
-.. |osm_removeFeat| image:: img/en/plugins_openstreetmap/osm_removeFeat.png
+.. |osm_removeFeat| image:: /static/common/osm_removeFeat.png
    :width: 1.5em
-.. |osm_createRelation| image:: img/en/plugins_openstreetmap/osm_createRelation.png
+.. |osm_createRelation| image:: /static/common/osm_createRelation.png
    :width: 1.5em
-.. |osm_addRelation| image:: img/en/plugins_openstreetmap/osm_addRelation.png
+.. |osm_addRelation| image:: /static/common/osm_addRelation.png
    :width: 1.5em
-.. |osm_generateTags| image:: img/en/plugins_openstreetmap/osm_generateTags.png
+.. |osm_generateTags| image:: /static/common/osm_generateTags.png
    :width: 1.5em
-.. |osm_editRelation| image:: img/en/plugins_openstreetmap/osm_editRelation.png
+.. |osm_editRelation| image:: /static/common/osm_editRelation.png
    :width: 1.5em
-.. |osm_questionMark| image:: img/en/plugins_openstreetmap/osm_questionMark.png
+.. |osm_questionMark| image:: /static/common/osm_questionMark.png
    :width: 1.5em
-.. |offline_editing_copy| image:: img/en/plugins_offline_editing/offline_editing_copy.png
+.. |offline_editing_copy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
-.. |interpolation| image:: img/en/plugins_interpolation/interpolation.png
+.. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
 .. |mActionAddRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
@@ -167,7 +167,7 @@ rst_epilog = """
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
 .. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
-.. |mapserver_export| image:: img/en/plugins_mapserver_export/mapserver_export.png
+.. |mapserver_export| image:: /static/common/mapserver_export.png
 .. |mActionExportMapServer| image:: /static/common/mActionExportMapServer.png
    :width: 1.5em
 .. |mActionSaveAsSVG| image:: /static/common/mActionSaveAsSVG.png
@@ -365,7 +365,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionMeasureAngle| image:: /static/common/mActionMeasureAngle.png
    :width: 1.5em
-.. |spiticon| image:: /plugins/static/common/plugins_spit/spiticon.png
+.. |spiticon| image:: /static/common/spiticon.png
 .. |mActionSelectRectangle| image:: /static/common/mActionSelectRectangle.png
    :width: 1.5em
 .. |mActionSelectPolygon| image:: /static/common/mActionSelectPolygon.png
@@ -386,109 +386,109 @@ rst_epilog = """
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
-.. |copyright| image:: /static/common/copyright_label.png
+.. |copyright_label| image:: /static/common/copyright_label.png
    :width: 1.5em
 .. |north_arrow| image:: /static/common/north_arrow.png
    :width: 1.5em
 .. |scale_bar| image:: /static/common/scale_bar.png
-   :width: 1.5em
+   :width: 2.5em
 .. |plugin_installer| image:: /static/common/plugin_installer.png
    :width: 1.5em
 .. |gpstrack_barchart| image:: /static/common//gpstrack_barchart.png
    :width: 1.5em
 .. |gpstrack_polarchart| image:: /static/common/gpstrack_polarchart.png
    :width: 1.5em
-.. |gps_importer| image:: img/en/plugins_gps/gps_importer.png
+.. |gps_importer| image:: /static/common/gps_importer.png
    :width: 1.5em
 .. |wfs| image:: /static/common/wfs.png
    :width: 1.5em
-.. |ftools| image:: /static/user_manual/plugins/ftools_logo.png
+.. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
-.. |matrix| image:: /static/user_manual/plugins/matrix.png
+.. |matrix| image:: /static/common/matrix.png
    :width: 3em
-.. |sum_lines| image:: /static/user_manual/plugins/sum_lines.png
+.. |sum_lines| image:: /static/common/sum_lines.png
    :width: 3em
-.. |sum_points| image:: /static/user_manual/plugins/sum_points.png
+.. |sum_points| image:: /static/common/sum_points.png
    :width: 3em
-.. |unique| image:: /static/user_manual/plugins/unique.png
+.. |unique| image:: /static/common/unique.png
    :width: 3em
-.. |basic_statistics| image:: /static/user_manual/plugins/basic_statistics.png
+.. |basic_statistics| image:: /static/common/basic_statistics.png
    :width: 3em
-.. |neighbor| image:: /static/user_manual/plugins/neighbour.png
+.. |neighbor| image:: /static/common/neighbour.png
    :width: 3em
-.. |mean| image:: /static/user_manual/plugins/mean.png
+.. |mean| image:: /static/common/mean.png
    :width: 3em
-.. |intersections| image:: /static/user_manual/plugins/intersections.png
+.. |intersections| image:: /static/common/intersections.png
    :width: 3em
-.. |random_selection| image:: /static/user_manual/plugins/random_selection.png
+.. |random_selection| image:: /static/common/random_selection.png
    :width: 3em
-.. |sub_selection| image:: /static/user_manual/plugins/sub_selection.png
+.. |sub_selection| image:: /static/common/sub_selection.png
    :width: 3em
-.. |random_points| image:: /static/user_manual/plugins/random_points.png
+.. |random_points| image:: /static/common/random_points.png
    :width: 3em
-.. |regular_points| image:: /static/user_manual/plugins/regular_points.png
+.. |regular_points| image:: /static/common/regular_points.png
    :width: 3em
-.. |vector_grid| image:: /static/user_manual/plugins/vector_grid.png
+.. |vector_grid| image:: /static/common/vector_grid.png
    :width: 3em
-.. |select_location| image:: /static/user_manual/plugins/select_location.png
+.. |select_location| image:: /static/common/select_location.png
    :width: 3em
-.. |layer_extent| image:: /static/user_manual/plugins/layer_extent.png
+.. |layer_extent| image:: /static/common/layer_extent.png
    :width: 3em
-.. |convex_hull| image:: /static/user_manual/plugins/convex_hull.png
+.. |convex_hull| image:: /static/common/convex_hull.png
    :width: 3em
-.. |buffer| image:: /static/user_manual/plugins/buffer.png
+.. |buffer| image:: /static/common/buffer.png
    :width: 3em
-.. |intersect| image:: /static/user_manual/plugins/intersect.png
+.. |intersect| image:: /static/common/intersect.png
    :width: 3em
-.. |union| image:: /static/user_manual/plugins/union.png
+.. |union| image:: /static/common/union.png
    :width: 3em
-.. |sym_difference| image:: /static/user_manual/plugins/sym_difference.png
+.. |sym_difference| image:: /static/common/sym_difference.png
    :width: 3em
-.. |clip| image:: /static/user_manual/plugins/clip.png
+.. |clip| image:: /static/common/clip.png
    :width: 3em
-.. |difference| image:: /static/user_manual/plugins/difference.png
+.. |difference| image:: /static/common/difference.png
    :width: 3em
-.. |dissolve| image:: /static/user_manual/plugins/dissolve.png
+.. |dissolve| image:: /static/common/dissolve.png
    :width: 3em
-.. |check_geometry| image::  /static/user_manual/plugins/check_geometry.png
+.. |check_geometry| image::  /static/common/check_geometry.png
    :width: 3em
-.. |export_geometry| image:: /static/user_manual/plugins/export_geometry.png
+.. |export_geometry| image:: /static/common/export_geometry.png
    :width: 3em
-.. |centroids| image:: /static/user_manual/plugins/centroids.png
+.. |centroids| image:: /static/common/centroids.png
    :width: 3em
-.. |delaunay| image:: /static/user_manual/plugins/delaunay.png
+.. |delaunay| image:: /static/common/delaunay.png
    :width: 3em
-.. |simplify| image:: /static/user_manual/plugins/simplify.png
+.. |simplify| image:: /static/common/simplify.png
    :width: 3em
-.. |multi_to_single| image:: /static/user_manual/plugins/multi_to_single.png
+.. |multi_to_single| image:: /static/common/multi_to_single.png
    :width: 3em
-.. |single_to_multi| image:: /static/user_manual/plugins/single_to_multi.png
+.. |single_to_multi| image:: /static/common/single_to_multi.png
    :width: 3em
-.. |to_lines| image:: /static/user_manual/plugins/to_lines.png
+.. |to_lines| image:: /static/common/to_lines.png
    :width: 3em
-.. |lines_to|  image:: /static/user_manual/plugins/lines_to.png
+.. |lines_to|  image:: /static/common/lines_to.png
    :width: 3em
-.. |extract_nodes| image:: /static/user_manual/plugins/extract_nodes.png
+.. |extract_nodes| image:: /static/common/extract_nodes.png
    :width: 3em
-.. |export_projection| image:: /static/user_manual/plugins/export_projection.png
+.. |export_projection| image:: /static/common/export_projection.png
    :width: 3em
-.. |define_projection| image:: /static/user_manual/plugins/define_projection.png
+.. |define_projection| image:: /static/common/define_projection.png
    :width: 3em
-.. |join_location| image:: /static/user_manual/plugins/join_location.png
+.. |join_location| image:: /static/common/join_location.png
    :width: 3em
-.. |split_layer| image:: /static/user_manual/plugins/split_layer.png
+.. |split_layer| image:: /static/common/split_layer.png
    :width: 3em
-.. |merge_shapes| image:: /static/user_manual/plugins/merge_shapes.png
+.. |merge_shapes| image:: /static/common/merge_shapes.png
    :width: 3em
-.. |event_browser| image:: /static/user_manual/plugins/event_browser.png
+.. |event_browser| image:: /static/common/event_browser.png
    :width: 1.5em
-.. |event_id| image:: /static/user_manual/plugins/event_id.png
+.. |event_id| image:: /static/common/event_id.png
    :width: 1.5em
-.. |evis_connect| image:: /static/user_manual/plugins/evis_connect.png
+.. |evis_connect| image:: /static/common/evis_connect.png
    :width: 1.5em
-.. |evis_file| image:: /static/user_manual/plugins/evis_file.png
+.. |evis_file| image:: /static/common/evis_file.png
    :width: 1.5em
-.. |dxf2shp_converter| image:: /static/user_manual/plugins/dxf2shp_converter.png
+.. |dxf2shp_converter| image:: /static/common/dxf2shp_converter.png
    :width: 1.5em
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
@@ -548,31 +548,31 @@ rst_epilog = """
    :width: 1.5em
 .. |grass_refresh| image:: /static/common/grass_refresh.png
    :width: 1.5em
-.. |delimited_text| image:: /static/user_manual/plugins/delimited_text.png
+.. |delimited_text| image:: /static/common/delimited_text.png
    :width: 1.5em   
-.. |mActionGDALScript| image:: /static/user_manual/plugins/mActionGDALScript.png
+.. |mActionGDALScript| image:: /static/common/mActionGDALScript.png
    :width: 1.5em
-.. |mActionLinkQGisToGeoref| image:: /static/user_manual/plugins/mActionLinkQGisToGeoref.png
+.. |mActionLinkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
    :width: 2.5em
-.. |mActionStartGeoref| image:: /static/user_manual/plugins/mActionStartGeoref.png
+.. |mActionStartGeoref| image:: /static/common/mActionStartGeoref.png
    :width: 1.5em
-.. |mActionLinkGeorefToQGis| image:: /static/user_manual/plugins/mActionLinkGeorefToQGis.png
+.. |mActionLinkGeorefToQGis| image:: /static/common/mActionLinkGeorefToQGis.png
    :width: 2.5em
-.. |georeferencer| image:: /static/user_manual/plugins/georeferencer.png
+.. |georeferencer| image:: /static/common/georeferencer.png
    :width: 1.5em
-.. |pencil| image:: /static/user_manual/plugins/pencil.png
+.. |pencil| image:: /static/common/pencil.png
    :width: 1.5em
-.. |coordinate_capture| image:: /static/user_manual/plugins/coordinate_capture.png
+.. |coordinate_capture| image:: /static/common/coordinate_capture.png
    :width: 1.5em
-.. |tracking| image:: /static/user_manual/plugins/tracking.png
+.. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
-.. |plugin| image:: img/en/plugins_road_graph/plugin.png
+.. |plugin| image:: /static/common/plugin.png
    :width: 1.5em
-.. |spatialquery| image:: /static/user_manual/plugins/spatialquery.png
+.. |spatialquery| image:: /static/common/spatialquery.png
    :width: 1.5em
-.. |selectesubsetlayer| image:: /static/user_manual/plugins/selectesubsetlayer.png
+.. |selectesubsetlayer| image:: /static/common/selectesubsetlayer.png
    :width: 1.5em
-.. |selectcreatelayer| image:: /static/user_manual/plugins/selectcreatelayer.png
+.. |selectcreatelayer| image:: /static/common/selectcreatelayer.png
    :width: 1.5em
 
 """

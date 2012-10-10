@@ -194,9 +194,9 @@ changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
 **[Update preview]** button.
 
-.. |composer_map_dialog1| image:: img/en/print_composer_map1.png 
+.. |composer_map_dialog1| image:: /static/user_manual/print_composer/print_composer_map1.png 
    :width: 20 em
-.. |composer_map_dialog2| image:: img/en/print_composer_map2.png
+.. |composer_map_dialog2| image:: /static/user_manual/print_composer/print_composer_map2.png
    :width: 20 em
 
 .. _figure_composer_2:
@@ -249,9 +249,9 @@ The **Grid** dialog of the map item tab provides following functionalities
   define the grid color, the annotation font, the annotation distance from
   the map frame and the precision of the drawn coordinates.
 
-.. |composer_map_dialog3| image:: img/en/print_composer_map3.png
+.. |composer_map_dialog3| image:: /static/user_manual/print_composer/print_composer_map3.png
    :width: 20 em
-.. |composer_map_dialog4| image:: img/en/print_composer_map4.png
+.. |composer_map_dialog4| image:: /static/user_manual/print_composer/print_composer_map4.png
    :width: 20 em
 
 .. _figure_composer_3:
@@ -297,9 +297,9 @@ the element with the left mouse button on the print composer canvas and
 position and customize their appearance in the label item tab.
 
 
-.. |composer_label1| image:: img/en/print_composer_label1.png
+.. |composer_label1| image:: /static/user_manual/print_composer/print_composer_label1.png
    :width: 20 em
-.. |composer_label2| image:: img/en/print_composer_label2.png
+.. |composer_label2| image:: /static/user_manual/print_composer/print_composer_label2.png
    :width: 20 em
 
 .. _figure_composer_4:
@@ -346,9 +346,9 @@ To add an image, click the |mActionSaveMapAsImage| :sup:`Add image`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the image item tab.
 
-.. |composer_image1| image:: img/en/print_composer_image1.png
+.. |composer_image1| image:: /static/user_manual/print_composer/print_composer_image1.png
    :width: 20 em
-.. |composer_image2| image:: img/en/print_composer_image2.png
+.. |composer_image2| image:: /static/user_manual/print_composer/print_composer_image2.png
    :width: 20 em
 
 .. _figure_composer_5:
@@ -407,11 +407,11 @@ To add a map legend, click the |mActionAddLegend| :sup:`Add new legend`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the legend item tab.
 
-.. |composer_legend1| image:: img/en/print_composer_legend1.png
+.. |composer_legend1| image:: /static/user_manual/print_composer/print_composer_legend1.png
    :width: 20 em
-.. |composer_legend2| image:: img/en/print_composer_legend2.png
+.. |composer_legend2| image:: /static/user_manual/print_composer/print_composer_legend2.png
    :width: 20 em
-.. |composer_legend3| image:: img/en/print_composer_legend3.png
+.. |composer_legend3| image:: /static/user_manual/print_composer/print_composer_legend3.png
    :width: 20 em
 
 .. _figure_composer_6:
@@ -482,9 +482,9 @@ To add a scalebar, click the |mActionScaleBar| :sup:`Add new scalebar`
 icon, place the element with the left mouse button on the print composer
 canvas and position and customize their appearance in the scalebar item tab.
 
-.. |composer_scalebar1| image:: img/en/print_composer_scalebar1.png
+.. |composer_scalebar1| image:: /static/user_manual/print_composer/print_composer_scalebar1.png
    :width: 20 em
-.. |composer_scalebar2| image:: img/en/print_composer_scalebar2.png
+.. |composer_scalebar2| image:: /static/user_manual/print_composer/print_composer_scalebar2.png
    :width: 20 em
 
 .. _figure_composer_7:
@@ -612,9 +612,9 @@ Add Basic shape and Arrow
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
 to the print composer canvas.
 
-.. |composer_shape| image:: img/en/print_composer_shape.png
+.. |composer_shape| image:: /static/user_manual/print_composer/print_composer_shape.png
    :width: 20 em
-.. |composer_arrow| image:: img/en/print_composer_arrow.png
+.. |composer_arrow| image:: /static/user_manual/print_composer/print_composer_arrow.png
    :width: 20 em
 
 .. _figure_composer_9:
@@ -646,9 +646,9 @@ Add attribute table values
 It is possible to add parts of a vector attribute table to the print composer
 canvas.
 
-.. |composer_attribute1| image:: img/en/print_composer_attribute1.png
+.. |composer_attribute1| image:: /static/user_manual/print_composer/print_composer_attribute1.png
    :width: 20 em
-.. |composer_attribute2| image:: img/en/print_composer_attribute2.png
+.. |composer_attribute2| image:: /static/user_manual/print_composer/print_composer_attribute2.png
    :width: 20 em
 
 .. _figure_composer_10:
