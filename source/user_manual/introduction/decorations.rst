@@ -19,7 +19,11 @@ Copyright Label
 
 
 |copyright_label| :menuselection:`Copyright label` adds a Copyright label 
-of your choice, using the text you prefer to the map.
+using the text you prefer to the map.
+
+.. only:: html
+
+   Figure Decorations 1
 
 .. _figure_decorations_1:
 
@@ -27,10 +31,11 @@ of your choice, using the text you prefer to the map.
    :align: center
    :width: 20em 
 
-   Figure Decorations 1: Your own copyright added |nix|
+   The copyright Dialog |nix|
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
+    The dialog starts (see figure_decorations_1_).
 #.  Enter the text you want to place on the map. You can use HTML as
     shown in the example
 #.  Choose the placement of the label from the :guilabel:`Placement` 
@@ -55,13 +60,17 @@ to let QGIS determine the direction, it makes its best guess as to how the
 arrow should be oriented. For placement of the arrow you have four options,
 corresponding to the four corners of the map canvas.
 
+.. only:: html
+
+   Figure Decorations 2
+
 .. _figure_decorations_2:
 
-.. figure:: /static/user_manual/introduction/north_arrow.png
+.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
    :width: 20em 
 
-   Figure Decorations 2: The North Arrow |nix|
+   The North Arrow Dialog |nix|
  
 
 Scale Bar
@@ -70,6 +79,19 @@ Scale Bar
 
 |scale_bar| :menuselection:`Scale Bar` adds a simple scale bar to the map 
 canvas. You control the style and placement, as well as the labeling of the bar.
+
+.. only:: html
+
+   Figure Decorations 3
+
+.. _figure_decorations_3:
+
+.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
+   :align: center
+   :width: 20em 
+
+   The North Arrow Dialog |nix|
+ 
 
 QGIS only supports displaying the scale in the same units as your map frame. 
 So if the units of your layers are in meters, you can't create a scale bar in
@@ -80,6 +102,7 @@ To add a scale bar:
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Scale Bar`
+    The dialog starts (see figure_decorations_3_)
 #.  Choose the placement from the :guilabel:`Placement` 'Bottom Left'  
     drop-down list
 #.  Choose the style from the :guilabel:`Scale bar style` 'Tick Down' list
@@ -94,7 +117,7 @@ To add a scale bar:
 
 .. _figure_decorations_3:
 
-.. figure: /static/user_manual/introduction/scale_bar.png
+.. figure: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
    :width: 20em 
 
