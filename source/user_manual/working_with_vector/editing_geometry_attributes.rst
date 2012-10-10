@@ -1,4 +1,3 @@
-
 Editing
 =======
 
@@ -25,7 +24,7 @@ radius to a value that allows us an optimal editing of the vector layer
 geometries.
 
 Snapping tolerance
-------------------
+..................
 
 
 Snapping tolerance is the distance |qg| uses to ``search`` for the closest 
@@ -74,8 +73,7 @@ So be sure to mark the checkbox for those layers that you need to snap to.
 .. index:: Search_Radius
 
 Search radius
--------------
-
+.............
 
 Search radius is the distance |qg| uses to ``search`` for the closest vertex 
 you are trying to move when you click on the map. If you aren't within the 
@@ -97,7 +95,6 @@ wide snapping tolerance.
 Zooming and Panning
 -------------------
 
-
 Before editing a layer, you should zoom in to your area of interest. 
 This avoids waiting while all the vertex markers are rendered across the 
 entire layer.
@@ -108,7 +105,7 @@ with the mouse, navigating can also be done with the mouse wheel, spacebar
 and the arrow keys.
 
 Zooming and panning with the mouse wheel
-----------------------------------------
+........................................
 
 
 While digitizing you can press the mouse wheel to pan inside of the main 
@@ -121,7 +118,7 @@ tab under the :menuselection:`Settings -->` |mActionOptions|
 :menuselection:`Options` menu.
 
 Panning with the arrow keys
----------------------------
+...........................
 
 
 Panning the Map during digitizing is possible with the arrow keys. 
@@ -136,8 +133,7 @@ the map display to zoom in or out without interrupting your digitizing session.
 .. Index:: Topological_Editing
 
 Topological editing
-~~~~~~~~~~~~~~~~~~~
-
+-------------------
 
 Besides layer based snapping options you can also define some topological 
 functionalities in the :guilabel:`Snapping options...` dialog in the 
@@ -149,7 +145,7 @@ polygon layers you can activate the column |checkbox|
 .. index:: Shared_Polygon_Boundaries
 
 Enable topological editing
---------------------------
+..........................
 
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing 
@@ -160,7 +156,7 @@ once and |qg| will take care about updating the other boundary.
 .. Index:: Avoid_Intersections_Of_Polygons
 
 Avoid intersections of new polygons
------------------------------------
+...................................
 
 
 The second topological option in the |checkbox| :guilabel:`Avoid Int.` 
@@ -230,8 +226,7 @@ available.
 
 
 Adding Features
----------------
-
+...............
 
 You can use the |mActionCapturePoint| :sup:`Capture point`, 
 |mActionCaptureLine| :sup:`Capture line` or |mActionCapturePolygon| 
@@ -278,7 +273,7 @@ move existing features.
 .. index:: Node_Tool
 
 Node Tool
----------
+.........
 
 
 For both PostgreSQL/PostGIS and shapefile-based layers, the 
@@ -308,7 +303,8 @@ not be able to tell which vertex is being edited.
 
 
 Basic operations
-----------------
+................
+
 .. index:: Nodes, Vertices, Vertex
 
 Start by activating the |mActionNodeTool| :sup:`Node Tool` and selecting a 
@@ -347,8 +343,7 @@ this is turned on. On the fly projection is also supported, and the node
 tool provides tooltips to identify a vertex by hovering the pointer over it.
 
 Cutting, Copying and Pasting Features
--------------------------------------
-
+.....................................
 
 Selected features can be cut, copied and pasted between layers in the same 
 |qg| project, as long as destination layers are set to |mActionToggleEditing| 
@@ -402,7 +397,7 @@ make sure the schemas match.
 
 
 Deleting Selected Features
---------------------------
+..........................
 
 
 If we want to delete an entire polygon, we can do that by first selecting the 
@@ -428,7 +423,7 @@ currently selected features, meaning we can operate on more than one at a time.
 
 
 Saving Edited Layers
---------------------
+....................
 
 
 When a layer is in editing mode, any changes remain in the memory of |qg|. 
@@ -484,7 +479,7 @@ Advanced digitizing
 
 
 Undo and Redo
--------------
+.............
 
 
 The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allow the 
@@ -511,7 +506,7 @@ after the selected operation.
    Figure Edit 3: Redo and Undo digitizing steps |nix|
 
 Simplify Feature
-----------------
+................
 
 
 The |mActionSimplify| :sup:`Simplify Feature` tool allows to reduce the 
@@ -523,7 +518,7 @@ the new, simplified geometry will be stored. If a feature cannot be simplified
 (e.g. MultiPolygons), a message shows up.
 
 Add Ring
---------
+........
 
 
 You can create :index:`ring polygons` using the |mActionAddRing| 
@@ -533,7 +528,7 @@ only the area in between the boundaries of the outer and inner polygons remain
 as a ring polygon.
 
 Add Part
---------
+........
 
 
 You can |mActionAddIsland| :sup:`add part` polygons to a selected 
@@ -541,7 +536,7 @@ You can |mActionAddIsland| :sup:`add part` polygons to a selected
 the selected multipolygon.
 
 Delete Ring
------------
+...........
 
 
 The |mActionDeleteRing| :sup:`Delete Ring` tool allows to delete ring polygons 
@@ -551,7 +546,7 @@ can be used on polygon and multi-polygon features. Before you select the
 vertices of a ring, adjust the vertex edit tolerance.
 
 Delete Part
------------
+...........
 
 
 The |mActionDeletePart| :sup:`Delete Part` tool allows to delete parts from 
@@ -561,7 +556,7 @@ tool works with all multi-part geometries point, line and polygon. Before you
 select the vertices of a part, adjust the vertex edit tolerance.
 
 Reshape Features
-----------------
+................
 
 
 You can reshape line and polygon features using the |mActionReshape| 
@@ -590,7 +585,7 @@ the polygon with a right click.
 .. index:: Split_Features
 
 Split Features
---------------
+..............
 
 
 You can split features using the |mActionSplitFeatures| :sup:`Split Features` 
@@ -599,7 +594,7 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 .. index:: Merge_Selected_Features
 
 Merge selected features
------------------------
+.......................
 
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to merge 
@@ -608,7 +603,7 @@ features that have common boundaries and the same attributes.
 .. index:: Merge_Attributes_of_Selected_Features
 
 Merge attributes of selected features
--------------------------------------
+.....................................
 
 
 The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool 
@@ -618,7 +613,7 @@ attributes without merging their boundaries.
 .. index:: Rotate_Point_symbols
 
 Rotate Point Symbols
---------------------
+....................
 
 
 .. % FIXME change, if support in new symbology is available, too 
@@ -652,14 +647,13 @@ button again, the value will be updated in the attribute table.
 Creating a new Shapefile and Spatialite layer
 ---------------------------------------------
 
-
 |qg| allows to create new Shapefile layers and new Spatialite layers. Creation 
 of a new GRASS layer is supported within the GRASS-plugin. Please refer to 
 section :ref:`creating_new_grass_vectors` for more information on creating 
 GRASS vector layers.
 
 Creating a new Shapefile layer
-------------------------------
+..............................
 
 
 To create a new Shape layer for editing, choose :menuselection:`New -->` 
@@ -697,7 +691,7 @@ same way as described in Section :ref:`sec_edit_existing_layer` above.
 .. _vector_create_spatialite:
 
 Creating a new SpatiaLite layer
-===============================
+...............................
 
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->` 
@@ -761,7 +755,7 @@ selected features are shown in the attribute table title.
 .. index:: Attribute_Table_Selection
 
 Selecting features in an attribute table
-----------------------------------------
+........................................
 
 
 **Each selected row** in the attribute table displays the attributes of a 
@@ -822,7 +816,7 @@ following functionality:
 
 
 Save selected features as new layer
-===================================
+...................................
 
 
 The selected features can be saved as any OGR supported vector format and 
@@ -844,8 +838,7 @@ within the dialog.
 .. index:: Non_Spatial_Attribute_Tables
 
 Working with non spatial attribute tables
-=========================================
-
+.........................................
 
 QGIS allows also to load non spatial tables. This includes currently tables 
 supported by OGR, delimited text and the PostgreSQL provider. The tables can 
