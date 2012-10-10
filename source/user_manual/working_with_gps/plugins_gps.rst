@@ -1,4 +1,3 @@
-
 .. _`plugin_gps`:
 
 GPS Plugin
