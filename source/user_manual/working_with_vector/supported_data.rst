@@ -62,7 +62,7 @@ window (see figure_vector_1_).
 
 
 .. _figure_vector_1:
-.. figure:: /static/user_manual/working_with_vector/Addvectorlayerdialog.png
+.. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
 
    Figure Vector 1: Add Vector Layer Dialog |nix|
