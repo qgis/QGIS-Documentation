@@ -2,7 +2,6 @@
 
 .. _`label_qgisserver`:
 
-============
 QGIS Server
 ============
 
@@ -46,7 +45,7 @@ URLs to get more information:
 .. index:: apache, apache2, Debian_Squeeze
 
 Sample installation on Debian Squeeze
-=====================================
+--------------------------------------
 
 At this point we will give a short and simple sample installation howto for 
 Debian Squeeze. Many other OS provide packages for QGIS Server, too. If you 
@@ -80,7 +79,7 @@ in :ref:`ogc-wms-servers`.
 .. _`Creating a WMS from a QGIS project`:
 
 Creating a WMS from a QGIS project
-==================================
+-----------------------------------
 
 To provide a new qgis wms server we have to create a qgis project file with some 
 data. Here we use the 'regions' and the 'aiport' shapefiles from the 
