@@ -1,6 +1,4 @@
 
-.. _working_with_raster:
-
 *************************
 Working with Raster Data
 *************************
