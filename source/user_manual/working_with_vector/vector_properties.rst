@@ -1,6 +1,4 @@
-
 .. _vector_properties_dialog:
-
 
 The Vector Properties Dialog
 ============================
@@ -53,8 +51,7 @@ marker symbols.
 
 .. _vector_symbol_types:
 
-Available symbol layer types
-............................
+**Available symbol layer types**
 
 * Point layers
 
@@ -83,9 +80,7 @@ Available symbol layer types
 
 .. index:: Color_ramps
 
-Color ramps
-...........
-
+**Color ramps**
 
 Color ramps are used to define a range of colors that can be used during 
 the creation of renderers. The symbol's color will be set from the color ramp.
@@ -101,9 +96,7 @@ Color ramps can be defined in the :guilabel:`Color ramp` tab of the
 :guilabel:`Style Manager` (see Section :ref:`vector_style_manager`) by 
 clicking the **[Add]** button and then choosing a color ramp type.
 
-Styles
-......
-
+**Styles**
 
 A style groups a set of various symbols and color ramps. You can define 
 your prefered or frequently used symbols, and can use it  without having 
@@ -113,9 +106,7 @@ default style in |qg| (modifiable) and the user can add further styles.
 
 .. index:: Renderers
 
-Renderers
-.........
-
+**Renderers**
 
 The renderer is responsible for drawing a feature together with the correct 
 symbol. There are four types of renderers: single symbol, categorized 
@@ -126,7 +117,7 @@ The categorized and graduated renderer can be created by specifying a symbol
 and a color ramp \- they will set the colors for symbols appropriately.
 
 Working with the New Generation Symbology
------------------------------------------
+.........................................
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated and rule-based. Depending on the chosen 
@@ -148,9 +139,7 @@ edit and remove existing symbols and add new ones.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
 
-Single Symbol Renderer
-......................
-
+**Single Symbol Renderer**
 
 The Single Symbol Renderer is used to render all features of the layer using 
 a single user-defined symbol. The properties, that can be adjusted in the
@@ -202,8 +191,7 @@ be used in the future.
 
 .. index:: Categorized_Renderer, Renderer_Categorized
 
-Categorized Renderer
-....................
+**Categorized Renderer**
 
 
 The Categorized Renderer is used to render all features from a layer, using 
@@ -250,9 +238,7 @@ example of custom color ramp.
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile 
 
-Graduated Renderer
-..................
-
+**Graduated Renderer**
 
 The Graduated Renderer is used to render all the features from a layer, using 
 a single user-defined symbol, whose color reflects the classification of a 
@@ -294,8 +280,7 @@ the rivers layer of the |qg| sample dataset.
 
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
 
-Rule-based rendering
-....................
+**Rule-based rendering**
 
 
 The rule-based renderer is used to render all the features from a layer, 
@@ -318,9 +303,7 @@ for the rivers layer of the |qg| sample dataset.
 .. index:: Point_Displacement_Renderer, Renderer_Point_Displacement
 .. index:: Displacement_plugin
 
-Point displacement
-..................
-
+**Point displacement**
 
 The point displacement renderer is only available, if you load the 
 Displacement plugin in the QGIS Plugin Manager. It offers to visualize 
@@ -337,8 +320,7 @@ a center symbol.
 
 .. index:: Symbol_Properties
 
-Symbol Properties
-.................
+**Symbol Properties**
 
 The symbol properties dialog allows the user to specify different properties 
 of the symbol to be rendered. In the top left part of the dialog, you find 
@@ -385,28 +367,12 @@ layer type options are described in section :ref:`vector_symbol_types`.
 
 .. _vector_style_manager:
 
-Style Manager to manage symbols and color ramps
------------------------------------------------
-
-
-The Style Manager is a small helper application, that lists symbols and color 
-ramps available in a style. It also allows you to add and/or remove items. 
-To launch the Style Manager, click on :menuselection:`Settings --> 
-Style Manager` in the main menu.
-
-.. _figure_symbology_8:
-.. figure:: /static/user_manual/working_with_vector/stylemanager.png
-   :width: 24em
-   :align: center
-
-   Figure Symbology 8: Style Manager to manage symbols and color ramps |nix|
-
 .. index:: Old_Symbology, Symbology_Old
 
 .. _vector_old_symbology:
 
 Old Symbology
--------------
+.............
 
 .. note:: 
    |qg| 1.7.4 still supports the usage of the old symbology, although it is 
@@ -504,6 +470,21 @@ layers.
 .. index:: Labeling_Engine, Labeling_New, Labeling_Old
 
 .. _vector_labels_tab:
+
+Style Manager to manage symbols and color ramps
+-----------------------------------------------
+
+The Style Manager is a small helper application, that lists symbols and color 
+ramps available in a style. It also allows you to add and/or remove items. 
+To launch the Style Manager, click on :menuselection:`Settings --> 
+Style Manager` in the main menu.
+
+.. _figure_symbology_8:
+.. figure:: /static/user_manual/working_with_vector/stylemanager.png
+   :width: 24em
+   :align: center
+
+   Figure Symbology 8: Style Manager to manage symbols and color ramps |nix|
 
 Labels Tab
 ----------
