@@ -9,7 +9,7 @@
 
 	supported_data
         vector_properties
-        query_builder
         editing_geometry_attributes
-        field_calculator
+        query_builder
+	field_calculator
 
