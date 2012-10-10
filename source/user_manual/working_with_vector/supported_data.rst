@@ -52,7 +52,8 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 .. _vector_load_shapefile:
 
-**Loading a Shapefile**
+Loading a Shapefile
+...................
 
 |mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and 
 click on the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar 
@@ -122,7 +123,8 @@ symbology of vector layers.
 
 .. _vector_improving_performance_shape:
 
-**Improving Performance Shape**
+Improving Performance Shape
+...........................
 
 To improve the performance of drawing a shapefile, you can create a spatial 
 index. A spatial index will improve the speed of both zooming and panning. 
@@ -139,7 +141,8 @@ Use these steps to create the index:
 
 .. _vector_shape_problem_loading:
 
-**Problem loading a shape .prj file**
+Problem loading a shape .prj file
+.................................
 
 If you load a shapefile with :file:`.prj` file and |qg| is not able to read 
 the coordinate reference system from that file, you have to define the 
@@ -193,7 +196,6 @@ Transfer Format as well as the raw TIGER Format of the US Census Bureau.
 PostGIS Layers
 --------------
 
-
 PostGIS layers are stored in a PostgreSQL database. The advantages of 
 PostGIS are the spatial indexing, filtering and query capabilities it 
 provides. Using PostGIS, vector functions such as select and identify 
@@ -203,7 +205,8 @@ work more accurately than with OGR layers in |qg|.
 
 .. _vector_create_stored_connection:
 
-**Creating a stored Connection**
+Creating a stored Connection
+............................
 
 |mActionAddLayer| The first time you use a PostGIS data source, you must 
 create a connection to the PostgreSQL database that contains the data. 
@@ -269,7 +272,8 @@ Password        Password used with *Username* to connect to the database.
 
 .. _vector_loading_postgis:
 
-**Loading a PostGIS Layer**
+Loading a PostGIS Layer
+.......................
 
 
 |mActionAddLayer| Once you have one or more connections defined, you can 
@@ -306,7 +310,8 @@ To load a layer from PostGIS, perform the following steps:
 
 .. _sec_postgis_details:
 
-**Some details about PostgreSQL layers**
+Some details about PostgreSQL layers
+....................................
 
 This section contains some details on how |qg| accesses PostgreSQL layers. 
 Most of the time |qg| should simply provide you with a list of database 
@@ -349,7 +354,8 @@ unique constraint, preferably indexed).
 Importing Data into PostgreSQL
 ------------------------------
 
-**shp2pgsql**
+shp2pgsql
+...........
 
 Data can be imported into PostgreSQL using a number of methods. PostGIS 
 includes a utility called **shp2pgsql** that can be used to import 
@@ -380,7 +386,8 @@ reference systems and projections.
 
 .. _spit_plugin:
 
-**SPIT Plugin**
+SPIT Plugin
+...........
 
 |spiticon| |qg| comes with a plugin named SPIT (Shapefile to PostGIS 
 Import Tool). SPIT can be used to load multiple shapefiles at one time 
@@ -410,7 +417,8 @@ as each shapefile is processed.
 
 .. index:: ogr2ogr
 
-**ogr2ogr**
+ogr2ogr
+.......
 
 Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata 
 in PostGIS: **ogr2ogr**. This is part of your GDAL installation. 
@@ -451,7 +459,8 @@ afterwards as an extra step (as described in the next section
 
 .. _vector_improving_performance:
 
-**Improving Performance**
+Improving Performance
+.....................
 
 Retrieving features from a PostgreSQL database can be time consuming, 
 especially over a network. You can improve the drawing performance of 
@@ -530,9 +539,8 @@ a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
    Figure Vector 5: Crossing 180 |degrees| longitude applying the 
    **ST_Shift_Longitude** function |nix|
 
-
-**Usage**
-
+Usage
+.....
 
 *  Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using 
    for example the PostGIS Manager plugin or the SPIT plugin
@@ -569,7 +577,8 @@ format and the CRS and then add ``SPATIALITE=YES`` in the OGR data source
 creation option field. This tells OGR to create a SpatiaLite database. 
 See also http://www.gdal.org/ogr/drv_sqlite.html.
 
-**Creating a new SpatiaLite layer**
+Creating a new SpatiaLite layer
+...............................
 
 If you want to create a new SpatiaLite layer, please refer to section 
 :ref:`vector_create_spatialite`.
@@ -583,4 +592,3 @@ If you want to create a new SpatiaLite layer, please refer to section
    For SpatiaLite data management you can also use several Python plugins: 
    QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and 
    installed with the Plugin Installer.
-
