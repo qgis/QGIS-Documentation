@@ -471,8 +471,8 @@ layers.
 
 .. _vector_labels_tab:
 
-Style Manager to manage symbols and color ramps
------------------------------------------------
+Style Manager
+............
 
 The Style Manager is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. 
