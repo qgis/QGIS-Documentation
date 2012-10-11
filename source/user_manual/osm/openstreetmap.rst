@@ -1,8 +1,9 @@
 
 .. _plugins_osm:
 
+*********************
 OpenStreetMap Plugin
-====================
+*********************
 
 
 In recent years, the OpenStreetMap project has gained popularity because in many 
@@ -25,8 +26,8 @@ http://www.openstreetmap.org.
 
 .. delete this piece about skipping?
 
-The OpenStreetMap project
--------------------------
+**The OpenStreetMap project**
+
 
 
 OpenStreetMap is a project to create a free editable map of the world. The maps 
@@ -73,8 +74,8 @@ payload is used for the communication with the OSM server as well.
 
 .. _`qgis-osm-connection`:
 
-QGIS - OSM Connection
----------------------
+**QGIS - OSM Connection**
+
 
 
 The first part of this section describes how OSM data primitives
@@ -131,7 +132,7 @@ Relation creation, deletion and moving.
 
 
 Installation
-------------
+============
 
 
 The OpenStreetMap plugin is a core plugin inside QGIS. If you have python
@@ -140,7 +141,7 @@ Manager as described in section :ref:`load_core_plugin`.
 
 
 Basic user interface
---------------------
+=====================
 
 
 The first time the OSM plugin is started (and after the first data are
@@ -201,7 +202,7 @@ functionality (editing, identification, etc.).
 
 
 Loading OSM data
-----------------
+=================
 
 
 The first action that should be done after starting the OSM Plugin is
@@ -251,7 +252,7 @@ depends on the amount of loaded data.
 
 
 Viewing OSM data
-----------------
+=================
 
 
 After the OSM data are loaded, you can identify map features using the
@@ -280,7 +281,7 @@ identified features by right-clicking.
 
 
 Editing basic OSM data
-----------------------
+=======================
 
 
 'Basic data'  in this context means non-relational OSM features -
@@ -425,7 +426,7 @@ the feature type is automatically changed to Point.
 .. _`editing_osm_relation`:
 
 Editing relations
------------------
+==================
 
 
 Thanks to existence of OSM relations we can join OSM features into groups and
@@ -437,8 +438,8 @@ update or remove them.
 
 .. _examining_relation:
 
-Examining relation
-******************
+**Examining relation**
+
 
 
 If you want to see relation properties, first identify one of its members.
@@ -450,8 +451,8 @@ properties of the selected relation. In the table called 'Relation members'
 you see brief information on the relation members. If you click on a member,
 the plugin will make a rubberband on it in the map.
 
-Relation creation
-*****************
+**Relation creation**
+
 
 There are 2 ways to create a relation:
 
@@ -478,8 +479,8 @@ be done either by writing member identifiers, types and roles or using the
 Finally when type, tags and members are chosen, the dialog can be submitted.
 In such case the plugin creates a new relation for you.
 
-Changing relation
-*****************
+**Changing relation**
+
 
 If you want to change an existing relation, identify it first (follow steps
 written above in Section :ref:`examining_relation`). After that click on the
@@ -490,7 +491,7 @@ given relations. You can change relation tags, members or even its type.
 After submitting the dialog your changes will be committed.
 
 Downloading OSM data
---------------------
+=====================
 
 To download data from OpenStreetMap server click on the
 |osm_download|:sup:`Download OSM data` button. If there is no
@@ -545,7 +546,7 @@ dialog tells you why. When action finishes successfully both the progress dialog
 and download dialog will close themselves.
 
 Uploading OSM data
-------------------
+===================
 
 Note that the upload is always done on current OSM data. Before opening the
 OSM Upload dialog, please be sure that you really have the right active
@@ -579,7 +580,7 @@ one at http://www.openstreetmap.org. Finally use **[Upload]** to start an
 upload operation.
 
 Saving OSM data
----------------
+================
 
 
 To save data from a current map extent to an XML file click on the
@@ -610,7 +611,7 @@ is visible in the current extent. For each saved line/polygon all its member
 nodes are saved too.
 
 Import OSM data
----------------
+================
 
 To import OSM data from an opened non-OSM vector layer follow this
 instructions: Choose current OSM data by clicking on one of their layers.
