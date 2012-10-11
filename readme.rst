@@ -9,14 +9,14 @@ here:
 
 TODO: update
 
-* English: http://documentation.qgis.org/user_manual/html/en
-* French: http://documentation.qgis.org/user_manual/html/fr
-* German: http://documentation.qgis.org/user_manual/html/de
-* Italian: http://documentation.qgis.org/user_manual/html/it
-* Japanese: http://documentation.qgis.org/user_manual/html/ja
-* Portuguese: http://documentation.qgis.org/user_manual/html/pt
-* Russian: http://documentation.qgis.org/user_manual/html/ru
-* Spanish: http://documentation.qgis.org/user_manual/html/es
+* English: http://documentation.qgis.org/html/en/user_manual/
+* French: http://documentation.qgis.org/html/fr/user_manual/
+* German: http://documentation.qgis.org/html/de/user_manual/
+* Italian: http://documentation.qgis.org/html/it/user_manual/
+* Japanese: http://documentation.qgis.org/html/ja/user_manual/
+* Portuguese: http://documentation.qgis.org/html/pt/user_manual/
+* Russian: http://documentation.qgis.org/html/ru/user_manual/
+* Spanish: http://documentation.qgis.org/html/es/user_manual/
 
 It is available also the subdomain docs.qgis.org, for example for the German 
 language:
