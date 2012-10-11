@@ -21,7 +21,6 @@ that are linked to features stored in vector files, databases, or spreadsheets.
 
 .. _`evis_browser`:
 
--------------
 Event Browser
 -------------
 
@@ -35,8 +34,8 @@ the image was acquired. Your vector layer must be loaded into QGIS before runnin
 
 .. _`evis_launch_browser`:
 
-Launch the Event Browser module
--------------------------------
+**Launch the Event Browser module**
+
 
 To launch the Event browser module either click on the |event_browser| :sup:`Event Browser`
 icon or click on :menuselection:`Database -->` :menuselection:`eVis -->` :menuselection:`eVis Event Browser -->`. This will open the Generic Event Browser window.
@@ -49,8 +48,8 @@ application to allow eVis to display documents other than images.
 
 .. _`evis_display_window`:
 
-Understanding the Display window
---------------------------------
+**Understanding the Display window**
+
 
 
 To see the Display window click on the :guilabel:`Display` tab in the Generic Event Browser
@@ -83,8 +82,8 @@ G. **Feature indicator**: This heading indicates which feature is being displaye
 
 .. _`evis_options_window`:
 
-Understanding the Options window
---------------------------------
+**Understanding the Options window**
+
 
 \ 
 
@@ -130,8 +129,8 @@ J. **Save**: This will save the settings without closing the Options pane.
 
 .. _`evis_external_window`:
 
-Understanding the Configure External Applications window
---------------------------------------------------------
+**Understanding the Configure External Applications window**
+
 
 \ 
 
@@ -156,8 +155,8 @@ C. **Delete current row**: Delete the file type highlighted in the table and def
 
 .. _`evis_specifying`:
 
-Specifying the location and name of a photograph
-------------------------------------------------
+**Specifying the location and name of a photograph**
+
 
 
 The location and name of the photograph can be stored using an absolute or relative path or a URL if
@@ -183,8 +182,8 @@ Table: Example format using absolute path, relative path, and a URL
 
 .. _`evis_location`:
 
-Specifying the location and name of other supporting documents
---------------------------------------------------------------
+**Specifying the location and name of other supporting documents**
+
 
 
 Supporting documents such as text documents, videos, and sound clips can also be displayed or played
@@ -200,8 +199,8 @@ documents from Wikis and other web sites that use a database to manage the web p
 
 .. _`evis_using_browser`:
 
-Using the Generic Event Browser
--------------------------------
+**Using the Generic Event Browser**
+
 
 
 When the Event Browser window opens a photograph will appear in the display window if the document
@@ -229,7 +228,7 @@ To close the Generic Event Browser window click on the Close button from the Dis
 
 .. _`evis_id_tool`:
 
--------------
+
 Event ID Tool
 -------------
 
@@ -241,8 +240,7 @@ the Event ID tool.
 
 .. _`evis_launch_id`:
 
-Launch the Event ID module
---------------------------
+**Launch the Event ID module**
 
 
 To launch the Event ID module either click on the |event_id| :sup:`Event ID`
@@ -259,7 +257,6 @@ described in the Event Browser section of this guide.
 
 .. _`evis_database`:
 
--------------------
 Database connection
 -------------------
 
@@ -273,8 +270,7 @@ spreadsheet) it is necessary to configure your ODBC driver for the operating sys
 
 .. _`evis_launch_database`:
 
-Launch the Database Connection module
--------------------------------------
+**Launch the Database Connection module**
 
 
 To launch the Database Connection module either click on the appropriate icon
@@ -288,8 +284,8 @@ initiated by the different sections of this module.
 
 .. _`evis_connect_database`:
 
-Connect to a database
----------------------
+**Connect to a database**
+
 
 
 Click on the :guilabel:`Database Connection` tab to open the database connection interface. 
@@ -334,8 +330,8 @@ M. **OK**: Close the main "Database Connection" window.
 
 .. _`evis_running_sql`:
 
-Running SQL queries
--------------------
+**Running SQL queries**
+
 
 
 SQL queries are used to extract information from a database or ODBC resource. In eVis the output
@@ -388,8 +384,7 @@ shapefile."
 
 .. _`evis_predefined`:
 
-Running predefined queries
---------------------------
+**Running predefined queries**
 
 
 With predefined queries you can select previously written queries stored in XML format in a file.
@@ -432,8 +427,8 @@ F. **OK**: Closes the main "Database Connection" window.
 
 .. _`evis_xml_format`:
 
-XML format for eVis predefined queries
---------------------------------------
+**XML format for eVis predefined queries**
+
 
 The XML tags read by eVis
 
