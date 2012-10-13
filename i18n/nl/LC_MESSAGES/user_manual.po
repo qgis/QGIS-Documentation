@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-11 20:04\n"
+"POT-Creation-Date: 2012-10-13 22:41\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -3597,11 +3597,11 @@ msgid ""
 "Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked"
 msgstr ""
 
-# 3d1d45fae8b243988453f9b9c614dd8f
+# 21b69e261cc647a8abd45ec25147cd0f
 #: ../../source/user_manual/introduction/general_tools.rst:380
 msgid ""
 "Optionally choose to automatically snap to a round number when the canvas is "
-"resized |checkbox| guilabel`Automatically snap to round number on resize`"
+"resized |checkbox| :guilabel:`Automatically snap to round number on resize`"
 msgstr ""
 
 # 34d6edeffa544614a0e634082555c99a
@@ -11444,6 +11444,264 @@ msgid ""
 "georeferencing` to create the new georeferenced raster."
 msgstr ""
 
+# 764c78f8fbbd444c9dd159b3386e2a6a
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:4
+msgid "Heatmap Plugin"
+msgstr ""
+
+# a6dba080673942ba9d2cb553deb27d8a
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:7
+msgid ""
+"The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a point "
+"vector map. A heatmap is a raster map showing the density or magnitude of "
+"point related information. From the result \"hotspots\" can easily be "
+"identified."
+msgstr ""
+
+# 42285559b2b9407e957614597d759669
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:11
+msgid "Activate the Heatmap plugin"
+msgstr ""
+
+# 25dc72de5a8549fcaa362ba18ee4451e
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:13
+msgid ""
+"First this core plugin needs to be activated using the Plugin Manager (see "
+"Section :ref:`load_core_plugin`). After activation the heatmap icon |"
+"heatmap| can be found in the Raster Toolbar."
+msgstr ""
+
+# ee4949fbe4f54a0ebe414b03fc5686bd
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:16
+msgid ""
+"Select from menu :menuselection:`View -->` :menuselection:`Toolbars -->` :"
+"menuselection:`Raster` to activate the Raster Toolbar when it is not yet "
+"activated."
+msgstr ""
+
+# 38f6c617aad2433cab48b261a912115c
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:20
+msgid "Using the Heatmap plugin"
+msgstr ""
+
+# 6ca5ed5f7b704ea193a644349070e367
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:22
+msgid ""
+"The |heatmap| :sup:`Heatmap` toolbutton starts the Dialog of the Heatmap "
+"plugin (see figure_heatmap_2_)."
+msgstr ""
+
+# 07a8dc36a9754e3e9f727338b2891cd7
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:25
+msgid "The dialog has the following options:"
+msgstr ""
+
+# 73f7d8daad8c493bac73b060bc7457cf
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:27
+msgid ""
+"The field :guilabel:`Input Point dialog`: Provides a selection of loaded "
+"point vector maps."
+msgstr ""
+
+# 7e6ad67f8e3a46768b6e8ab4724023e1
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:29
+msgid ""
+"The field :guilabel:`Output Raster`: Using the browser button you select the "
+"folder and the name of the output raster the heatmap plugin will generate. "
+"It is not necessary to give a file extension"
+msgstr ""
+
+# 6051ae4efceb47ef9d55f5a46b36f5fd
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:32
+msgid ""
+"The :guilabel:`Output Format` can be selected. Although all formats "
+"supported by GDAL can be choosen, GeoTIFF is most in cases the best format "
+"to choose. This format offers, for example, support for the creation of "
+"pyramids for better perfomance, which lacks for other formats."
+msgstr ""
+
+# ce4baa46f6004754babcfa57317a6bda
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:36
+msgid ""
+"The field :guilabel:`Radius`: can be used to give the radius in meters or "
+"mapunit. When the radius is choosen too small you will not get a nice "
+"heatmap. In places where more circles around points overlap eachother the "
+"brighter hotspots will occur!"
+msgstr ""
+
+# 159bc3f987ab47f697577e66afae5e84
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:39
+msgid ""
+"The field :guilabel:`Decay Ratio`: is used to show with which ratio the fire "
+"dies out from the center. when given 0 the heat will be completely "
+"extinguished towards at the edge of given Radius of the circel."
+msgstr ""
+
+# cb347abcce4843d3879bee782c2b247a
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:43
+msgid ""
+"When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give "
+"acces to additional advanced options."
+msgstr ""
+
+# 9fceb074ff234b328901dcdac3f0b61d
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:46
+msgid ""
+"The fields :guilabel:`Row` and :guilabel:`Column`, can be used to change the "
+"size of the output raster."
+msgstr ""
+
+# 8909ebd638334e96bf574e7eb3d4705f
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:48
+msgid ""
+"The fields :guilabel:`Cell Size X` and :guilabel:`Cell Size Y` influence the "
+"pixelsize."
+msgstr ""
+
+# b6b1b5b7b761473b9368c85e3221daca
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:50
+msgid ""
+"The point vector layer may have attribute fields that can be used to set:"
+msgstr ""
+
+# 055673d855af4477b3a5029985939014
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:52
+msgid ""
+"the radius of an attribute field using :guilabel:`Use Radius from Field`."
+msgstr ""
+
+# f2fddb08dba9402eb19608dfab4e8ac2
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:53
+msgid ""
+"the weight factor of an attribute field using :guilabel:`Use Weight from "
+"field`. This weight factor will give points more 'heat' when the weight "
+"factor is higher."
+msgstr ""
+
+# 9d820dfca18640df9bfe9d5d899d6cd2
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:56
+msgid ""
+"When the output raster is given, the **[OK]** button can be used to create a "
+"heatmap. The first result is a grey surface that still needs to be given "
+"additional treatment to make it a heatmap."
+msgstr ""
+
+# 3be3d35bb9644c1c95400557bd82f0d5
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:61
+msgid "Creating a Heatmap"
+msgstr ""
+
+# 83b58f5f55b04a889057f3f003a7f2b5
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:63
+msgid ""
+"We will use in following example the ``airports`` vector point layer from "
+"the QGIS sample dataset (see :ref:`label_sampledata`)."
+msgstr ""
+
+# 9131986a2aff442bbe46b3d8a5082526
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:66
+msgid "In figure_heatmap_1_ the airports of Alaska are shown."
+msgstr ""
+
+# 938d0ebf09f44cb695b218a45eafc18a
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:79
+msgid ""
+"Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts "
+"(see figure_heatmap_2_)."
+msgstr ""
+
+# 6e9a6d97b70544bfbfd03ce4230067b3
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:81
+msgid ""
+"In field :guilabel:`Input Point Vector` select ``airpoirt`` from the list of "
+"point layers loaded in current project."
+msgstr ""
+
+# 5022a8ef8bd64360b1b7a25629bf04fc
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:83
+msgid ""
+"In field :guilabel:`Output Raster` five the name and location using the "
+"browse button |browse| of the output raster. Give the output raster file the "
+"name ``heatmap_airports`` to give an file extension is not necessary."
+msgstr ""
+
+# 07ee0d4cf80443af811a4e4b8f3e1eeb
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:86
+msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
+msgstr ""
+
+# 388799c26b3041aa8b62b6693c2da3e7
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:87
+msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
+msgstr ""
+
+# 39b17c07be9a401ea1e2255381f34cc6
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:88
+msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
+msgstr ""
+
+# d6b8a3eeb7b74c778154cade15ef2a83
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:89
+msgid ""
+"Click on **[OK]**  to create and load the new raster map (see "
+"figure_heatmap_3_)."
+msgstr ""
+
+# d5609b733e294f2b840a8fe3e793515e
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:102
+msgid ""
+"The result after loading the heatmap is probably not the result which was "
+"expected. It is still a grey even surface not showing any variation. First "
+"some additional configuration of this layer needs to be done to make the "
+"heatmap present itself."
+msgstr ""
+
+# 6fc5886ff12f4f648bdde97fc17655bb
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:118
+msgid "# Open the properties dialog of layer ``heatmap_airports``"
+msgstr ""
+
+# 7f3a409b34564468a3722560889c3472
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:120
+msgid ""
+"Select the layer heatmap_airports and click on the rightmouse button, "
+"Select :menuselection:`Properties` from the popup menu)."
+msgstr ""
+
+# fd8fb31f5f254157bea8d56906218c17
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:123
+msgid ""
+"# Select the :guilabel:`Style` tab. # In section Single band properties "
+"chance the field :guilabel:`Color map` from"
+msgstr ""
+
+# ca8f7525df9249be8b511c9a25327bf2
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:125
+msgid "``Grayscale`` to ``Pseudocolor``."
+msgstr ""
+
+# eaa2d7584fad4d34a25e3e09ef8e9326
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:126
+msgid ""
+"# Select the **[Apply]** button. # Switch to the :guilabel:`Transparency` "
+"tab and move the slider of"
+msgstr ""
+
+# c5d8286ba50e4e4fa3b37360a51866bd
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:128
+msgid ":guilabel:`Global transparency` to 40%."
+msgstr ""
+
+# b668260d2c77410b8b043ec750a0c070
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:129
+msgid "# Select **[OK]**"
+msgstr ""
+
+# 7ee98ed333554ee5948d8c27412d242e
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:131
+msgid "The final result is shown in figure_heatmap_4_."
+msgstr ""
+
 # 868d52d3b25d4c978dc7bbdd576d53b8
 #: ../../source/user_manual/plugins/plugins_index.rst:5
 msgid "Plugins"
@@ -15840,47 +16098,56 @@ msgid ""
 "QGIS see :ref:`sec_grass`)."
 msgstr ""
 
-# 074a1bfac792428c9b4e9e3f7a36bd0e
+# 6e8a84c49de649fcb04779245d2d98a9
 #: ../../source/user_manual/qgis_browser/qgis_browser.rst:14
 msgid ""
 "Use QGIS Browser to preview your data. The drag and drop function makes it "
-"easy to get your data into the Map view and the Map legend. It's also "
-"possible to run QGIS Browser as a standalone application."
+"easy to get your data into the Map view and the Map legend."
+msgstr ""
+
+# 26d7bf7739bd46fab88f77310c912744
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:16
+msgid ""
+"#.Activate QGIS Browser: Right-click on the tool bar and click |checkbox|:"
+"guilabel:`Browser`. #.Drag the panel into the legend window. #.Klick on the :"
+"guilabel:`Browser` tab. #.Browse in your database and choose the shapefile "
+"folder from qgis_sample_data. #.Press the :kbd:`Shift` key and klick on "
+"airports.shp and alaska.shp . #.Press the left mouse button and drag the "
+"files into the map canvas. #.Right-click on a layer and choose :guilabel:"
+"`Set project CRS from layer`. For more information see :ref:`...` ."
+msgstr ""
+
+# 6c3c25021aad4d8ead2ee1b3aee0fb27
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:25
+msgid "It's also possible to run QGIS Browser as a standalone application."
 msgstr ""
 
 # c4a67f1047654672b95cf4b967facb06
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:17
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:27
 msgid "**Start qgis browser**"
 msgstr ""
 
 # 321aea23ce304a93884ac08521419e45
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:19
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:29
 msgid "|nix| Type in \"qbrowser\" at a command prompt."
 msgstr ""
 
-# 90e285eecb404024abfa8aed062e39af
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:20
-msgid ""
-"|win| Start QGIS browser using the Start menu or desktop shortcut, or double "
-"click on a QGIS project file."
-msgstr ""
-
 # eba890c4bb0f4841819a98890b3f6153
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:22
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:32
 msgid ""
 "|osx| QGIS browser is not available yet from your your Applications folder. "
 "However it can easily be made available:"
 msgstr ""
 
 # 221035c87eb3441f98f1469b91d116f3
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:25
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:35
 msgid ""
 "In Finder use :menuselection:`Go --> Go to map...` and use it to find the "
 "folder ``/Applications/QGIS.app/Contents/MacOS/bin``"
 msgstr ""
 
 # 99fae46673144300a842bb412c690b78
-#: ../../source/user_manual/qgis_browser/qgis_browser.rst:28
+#: ../../source/user_manual/qgis_browser/qgis_browser.rst:38
 msgid ""
 "Use the key combination :kbd:`option - command` and drag **qbrowser.app** "
 "while holding down the left mouse button to the Applications folder. This "
