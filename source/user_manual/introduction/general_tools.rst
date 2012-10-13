@@ -378,7 +378,7 @@ To add a scale bar:
 #.  Set the size of the bar and its label :guilabel:`Size of bar` '30 degrees'
 #.  Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked
 #.  Optionally choose to automatically snap to a round number when the
-    canvas is resized |checkbox| guilabel`Automatically snap to round number 
+    canvas is resized |checkbox| :guilabel:`Automatically snap to round number 
     on resize`
 #.  Click **[OK]**
 
