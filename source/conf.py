@@ -574,7 +574,8 @@ rst_epilog = """
    :width: 1.5em
 .. |selectcreatelayer| image:: /static/common/selectcreatelayer.png
    :width: 1.5em
-
+.. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
 """
 
 
