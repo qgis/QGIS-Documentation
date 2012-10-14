@@ -718,4 +718,5 @@ pdf_stylesheets = ['sphinx','kerning','a4']
 
 locale_dirs = ['../i18n']
 
-
+# create 1 po file per rst file instead of one po file per module
+gettext_compact = False
