@@ -13,7 +13,6 @@ Welcome to QGIS manual
 	introduction/getting_started
         introduction/qgis_gui
         introduction/general_tools
-	introduction/decorations
         introduction/qgis_configuration
         working_with_projections/working_with_projections
 	qgis_browser/qgis_browser

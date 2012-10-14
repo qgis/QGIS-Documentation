@@ -11,7 +11,7 @@ You can use QGIS to 'compose' your map by adding and arranging layers,
 symbolizing them, customizing the colors and then creating a map file for MapServer.
 
 Creating the Project File
-*************************
+--------------------------
 
 
 The MapServer Export Plugin operates on a saved QGIS project file and
@@ -48,7 +48,7 @@ We use raster and vector files from the QGIS sample dataset :ref:`label_sampleda
 .. index:: msexport
 
 Creating the Map File
-*********************
+----------------------
 
 
 The tool **msexport** to export a QGIS project file to a MapServer map file is 
@@ -127,7 +127,7 @@ our map file for WMS.
 .. index:: shp2img, FWTools
 
 Testing the Map File
-********************
+---------------------
 
 
 We can now test our work using the **shp2img** tool to create an image from 

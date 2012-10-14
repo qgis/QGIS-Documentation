@@ -35,7 +35,7 @@ are used. You can change defaults and some plugin settings in plugin settings
 dialog.
 
 Usage
-~~~~~
+------
 
 
 After plugin activation you will see additional panel on the left side of

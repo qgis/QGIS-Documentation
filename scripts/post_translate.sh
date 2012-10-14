@@ -1,7 +1,11 @@
 #!/bin/bash
 
 # GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
-LOCALES='nl'
+LOCALES='fr de it ja pt ru es nl'
+
+if [ $1 ]; then
+  LOCALES=$1
+fi
 
 BUILDDIR=build
 # be sure to remove an old build dir
@@ -15,10 +19,6 @@ mkdir -p ${PDFDIR}
 mkdir -p ${HTMLDIR}
 
 VERSION=`cat source/conf.py | grep "version = '.*'" | grep -o "[0-9]\.[0-9]"`
-
-if [ $1 ]; then
-  LOCALES=$1
-fi
 
 if [[ $1 = "en" ]]; then
   echo "Not running localization for English."

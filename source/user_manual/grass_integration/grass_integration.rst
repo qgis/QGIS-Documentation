@@ -571,7 +571,8 @@ GRASS module examples
 
 The following examples will demonstrate the power of some of the GRASS modules.
 
-**Creating contour lines**
+Creating contour lines
+.......................
 
 The first example creates a vector contour map from an elevation raster
 (DEM). Assuming you have the Alaska :file:`LOCATION` set up as explained in Section :ref:`sec_import_loc_data`.
@@ -649,8 +650,8 @@ additional vertices to the vector, causing it to load even more slowly.
 
    The procedure described above can be used in other equivalent situations. If you have a raster map of precipitation data, for example, then the same method will  be used to create a vector map of isohyetal (constant rainfall) lines.
 
-**Creating a Hillshade 3D effect**
-
+Creating a Hillshade 3D effect
+...............................
 
 Several methods are used to display elevation layers and give a 3D effect to maps. The use of contour lines as shown above is one popular method often chosen to produce topographic maps. Another way to display a 3D effect is by hillshading. The hillshade effect is created from a DEM (elevation) raster by first calculating the slope and aspect of each cell, then simulating the sun's position in the sky and giving a reflectance value to each cell. Thus you get sun facing slopes lighted and the slopes facing away from the sun (in shadow) are darkened.
 
@@ -690,7 +691,8 @@ The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies t
    Figure GRASS module 4: Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 
 
-**Raster statistics in a vector map**
+Raster statistics in a vector map
+..................................
 
 The next example shows how a GRASS module can aggregate raster data and add columns of statistics for each polygon in a vector map.
 

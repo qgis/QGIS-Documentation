@@ -7,8 +7,8 @@ Delimited Text Plugin
 
 The Delimited Text plugin allows you to load a delimited text file as a layer in QGIS. 
 
-Requirements
-~~~~~~~~~~~~
+**Requirements**
+
 
 
 To view a delimited text file as layer, the text file must contain:
@@ -42,8 +42,8 @@ Some items of note about the text file are:
 
 
 
-Using the Plugin
-~~~~~~~~~~~~~~~~
+**Using the Plugin**
+
 
 To use the plugin you must first enable it as described in Section 
 :ref:`managing_plugins`.

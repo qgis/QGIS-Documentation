@@ -3,9 +3,9 @@
 
 .. _plugins:
 
--------------------------------
+**************
 QGIS Plugins
--------------------------------
+**************
 
 QGIS has been designed with a plugin architecture.
 This allows many new features/functions to be easily added to the application.
@@ -41,7 +41,7 @@ directly activated or uninstalled using the :guilabel:`Python Plugin Installer`.
 .. _load_core_plugin:
 
 Loading a QGIS Core Plugin
-***************************
+---------------------------
 
 
 Loading a QGIS Core Plugin is done from the main menu 
@@ -88,7 +88,7 @@ plugins are automatically loaded.
 .. _load_external_plugin:
 
 Loading an external QGIS Plugin
-*******************************
+--------------------------------
 
 
 External QGIS plugins are written in Python. They are by default stored in 
@@ -134,7 +134,7 @@ There is only one step required to integrate external plugins into QGIS:
 .. _`python_plugin_installer`:
 
 Using the QGIS Python Plugin Installer
-**************************************
+---------------------------------------
 
 .. index::
    single: plugins; installing
@@ -174,8 +174,8 @@ Each plugin can be either:
   broken. The reason will be explained in the plugin description field.
 
 
-Plugins tab
-~~~~~~~~~~~
+**Plugins tab**
+
 
 To install a plugin, select it from the list and click the 
 **[Install plugin]** button. The plugin is then activated and installed 
@@ -212,8 +212,8 @@ to a core plugin, you can uninstall this update with the
 **[Uninstall plugin]** and revert to the version shipped with Quantum GIS. 
 This default version however, cannot be uninstalled.
 
-Repositories tab
-~~~~~~~~~~~~~~~~
+**Repositories tab**
+
 
 The second tab :guilabel:`Repositories`, contains a list of plugin repositories 
 available for the :guilabel:`Plugin Installer`. By default, only the QGIS Official 
@@ -226,8 +226,8 @@ responsibility for them. You can also manage the repository list manually, that
 is add, remove, and edit the entries. Temporarily disabling a particular 
 repository is possible by clicking the **[Edit]** button.
 
-Options tab
-~~~~~~~~~~~
+**Options tab**
+
 
 
 The :guilabel:`Options` tab is where you can configure the settings of the 

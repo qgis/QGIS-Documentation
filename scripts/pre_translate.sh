@@ -1,11 +1,10 @@
 #!/bin/bash
 
-LOCALES='de nl'
+LOCALES='fr de it ja pt ru es nl'
 
 if [ $1 ]; then
   LOCALES=$1
 fi
-
 
 # Create / update the translation catalogue - this will generate the master .pot files
 mkdir -p i18n/pot

@@ -10,8 +10,7 @@ systems by creating a new GeoTiff or by adding a world file to the existing
 image. The basic approach to georeferencing a raster is to locate points
 on the raster for which you can accurately determine their coordinates.
 
-Features
---------
+**Features**
 
 .. index::
    single:Georeferencer tools
@@ -44,8 +43,7 @@ Features
 Table Georeferencer 1: Georeferencer Tools
 
 Usual procedure
----------------
-
+----------------
 
 As X and Y coordinates (DMS (dd mm ss.ss), DD (dd.dd) or projected coordinates
 (mmmm.mm) which correspond with the selected point on the image, two
@@ -85,7 +83,7 @@ location. You can download the topo sheet here: http://grass.osgeo.org/sampledat
 .. _`georeferencer_entering`:
 
 Entering ground control points (GCPs)
--------------------------------------
+......................................
 
 #. To start georeferencing an unreferenced raster, we must load it using
    the |mActionAddRasterLayer| button. The raster will show up in the main
@@ -129,7 +127,7 @@ e.g. numerical sorting. The GCP list is automatically updated.
 .. _`georeferencer_transformation`:
 
 Defining the transformation settings
-------------------------------------
+.....................................
 
 After you have added your GCPs to the raster image, you need to define the
 transformation settings for the georeferencing process.
@@ -143,7 +141,7 @@ transformation settings for the georeferencing process.
 
 
 Available Transformation algorithms
------------------------------------
+...................................
 
 Depending on how many ground control point you have captured, you may want
 to use different transformation algorithms. Choice of transformation
@@ -173,7 +171,7 @@ Currently, following algorithms are available:
    of coordinates.
 
 Define the Resampling method
-----------------------------
+.............................
 
 The type of resampling you choose will likely depending on your input data
 and the ultimate objective of the exercise. If you don't want to change
@@ -189,7 +187,7 @@ It is prossible to choose between five different resampling methods.
 #.  Lanczos
 
 Define the transformation settings
-----------------------------------
+...................................
 
 There are several options that need to be defined for the georeferenced output
 raster.
@@ -217,14 +215,14 @@ raster.
    automatically into the QGIS map canvas when the transformation is done.
 
 Show and adapt raster properties
---------------------------------
+.................................
 
 
 Clicking on the :guilabel:`Raster properties` dialog in the :guilabel:`Settings`
 menu opens the raster properties of the layer that you want to georeference.
 
 Configure the georeferencer
----------------------------
+............................
 
 
 *  You can define if you want to show GCP coordiniates and/or IDs.
@@ -236,7 +234,7 @@ Configure the georeferencer
 .. _`georeferencer_running`:
 
 Running the transformation
---------------------------
+...........................
 
 
 After all GCPs have been collected and all transformation settings are
