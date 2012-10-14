@@ -15,7 +15,7 @@ component like the toolbox or the graphical modeler, just like you do
 with any other SEXTANTE geoalgorithm.
 
 A note on file formats
-~~~~~~~~~~~~~~~~~~~~~~
+......................
 
 When using an external software, opening a file in QGIS does not mean
 that it can be opened and processed as well on that other software. In
@@ -57,7 +57,7 @@ information about which formats are supported, check the GDAL
 documentation.
 
 A note on vector layer selections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.................................
 
 By default, when an external algorithm takes a vector layer, it will use
 all its features, even if a selection exist in QGIS. You can make an
@@ -105,7 +105,7 @@ installed SEXTANTE. Running the algorithm, however, needs SAGA binaries
 installed in your system.
 
 About SAGA grid system limitations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..................................
 
 Most of SAGA algorithms that require several input raster layers,
 require them to have the same grid system. That is, to cover the same
@@ -149,7 +149,7 @@ do not need a unique input grid system, no resampling is performed
 before calling SAGA, and those parameters are not used.
 
 Logging
-~~~~~~~~
+.......
 
 When SEXTANTE calls SAGA, it does it using its command-line interface, thus passing a set of commands to perform all the required operation. SAGA show its progress by writing information to the console, which includes the percentage of processing already done, along with additional content. This output is filtered by SEXTANTE and used to update the progress bar while the algorithm is running. 
 

@@ -26,19 +26,23 @@ algorithms and will be explained later in this chapter).
    used to execute a single algorithm or run a batch process based on
    that algorithm.
 
-   .. figure:: toolbox.png
-      :align: center
-      :alt: image
+.. _figure_toolbox_1:
 
+.. figure:: /static/user_manual/sextante/toolbox.png
+   :align: center
+
+   Figure SEXANTE 1: Toolbox
 
 -  The SEXTANTE graphical modeler. Several algorithms can be combined
    graphically using the modeler to define a workflow, creating a single
    process that involves several sub-processes
 
-   .. figure:: models.png
-      :align: center
-      :alt: image
+.. _figure_model_2:
 
+.. figure:: /static/user_manual/sextante/models.png
+   :align: center
+
+   Figure SEXANTE 1: Models
 
 -  The SEXTANTE history manager. All actions performed using any of the
    aforementioned elements are stored in a history file and can be later
@@ -53,10 +57,12 @@ algorithms and will be explained later in this chapter).
    allows you to execute batch processes and automate the execution of a
    single algorithm on multiple datasets.
 
-   .. figure:: batch_processing.png
-      :align: center
-      :alt: image
+.. _figure_batchprocess_1:
 
+.. figure:: /static/user_manual/sextante/batch_processing.png
+   :align: center
+
+   Figure SEXANTE 1: Batch Processing
 
 Along the following sections we will review each one of this elements in
 detail.

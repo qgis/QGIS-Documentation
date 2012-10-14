@@ -1,5 +1,5 @@
-Using SEXTANTE from the console. Creating scripts.
-==================================================
+Using SEXTANTE from the console. Creating scripts
+=================================================
 
 Introduction
 ------------

@@ -22,10 +22,12 @@ The modeler has a working canvas where the structure of the model and
 the workflow it represents are shown. On the left part of the window, a
 panel with two tabs can be used to add new elements to the model.
 
-.. figure:: modeler_canvas.png
-   :align: center
-   :alt: image
+.. _figure_modeler_1:
 
+.. figure:: /static/user_manual/sextante/modeler_canvas.png
+   :align: center
+
+   Figure SEXANTE 1: Modeler
 
 Creating a model involves two steps:
 
@@ -69,16 +71,21 @@ adding a numerical value, as it can be seen in the next figure, apart
 from the description of the parameter you have to set a default value
 and a range of valid values.
 
-.. figure:: models_parameters.png
-   :align: center
-   :alt: image
+.. _figure_model_parameter_1:
 
+.. figure:: /static/user_manual/sextante/models_parameters.png
+   :align: center
+
+   Figure SEXANTE 1: Model Parameters
 
 For each added input, a new element is added to the modeler canvas.
 
-.. figure:: models_parameters2.png
+.. _figure_model_parameter_2:
+
+.. figure:: /static/user_manual/sextante/models_parameters2.png
    :align: center
-   :alt: image
+
+   Figure SEXANTE 2: Model Parameters
 
 
 Definition of the workflow
@@ -88,10 +95,12 @@ Once the inputs have been defined, it is time to define the algorithms
 to apply on them. Algorithms can be found in the *Algorithms* tab,
 grouped much in the same way as they are in the toolbox.
 
-.. figure:: models_parameters3.png
-   :align: center
-   :alt: image
+.. _figure_model_parameter_3:
 
+.. figure:: /static/user_manual/sextante/models_parameters3.png
+   :align: center
+
+   Figure SEXANTE 3: Model Parameters
 
 To add an algorithm, double-click on its name. An execution dialog will
 appear, with a content similar to the one found in the execution panel
@@ -99,10 +108,12 @@ that SEXTANTE shows when executing the algorithm from the toolbox. the
 one shown next correspond to the SAGA convergence index algorithm, the
 same one we saw in the section dedicated to the SEXTANTe toolbox.
 
-.. figure:: models_parameters4.png
-   :align: center
-   :alt: image
+.. _figure_model_parameter_4:
 
+.. figure:: /static/user_manual/sextante/models_parameters4.png
+   :align: center
+
+   Figure SEXANTE 4: Model Parameters
 
 As you can see, some differences exist. Instead of the file output box
 that was used to set the filepath for output layers and tables, a simple
@@ -145,10 +156,12 @@ and the algorithm will be added to the canvas. It will be linked to all
 the other elements in the canvas, whether algorithms or inputs, which
 provide objects that are used as inputs for that algorithm.
 
-.. figure:: models_parameters5.png
-   :align: center
-   :alt: image
+.. _figure_model_parameter_5:
 
+.. figure:: /static/user_manual/sextante/models_parameters5.png
+   :align: center
+
+   Figure SEXANTE 5: Model Parameters
 
 Elements can be dragged to a different position within the canvas, to
 change the way the module structure is displayed and make it more clear
@@ -199,15 +212,22 @@ You can edit the model you are currently creating, redefining the workflow and t
 
 If you right-click on an algorithm in the canvas representing the model, you will see a context menu like the one shown next:
 
-.. figure:: modeler_right_click.png
+.. _figure_model_right_click:
+
+.. figure:: /static/user_manual/sextante/modeler_right_click.png
    :align: center
 
+   Figure SEXANTE 1: Modeler Right Click
 
 Selecting the *Remove* option will cause the selected algorithm to be removed. An algorithm can be removed only if there are no other algorithms dependind on it. That is, if no output from the algorithm is used in a different one as input. If you try to remove an algorithm that has others depending on it, SEXTANTE will show you a warning message like the one you can see below:
+  
+.. _figure_cannot_delete_alg:
 
-.. figure:: cannot_delete_alg.png
+.. figure:: /static/user_manual/sextante/cannot_delete_alg.png
    :align: center
-   
+
+   Figure SEXANTE 1: Cannot Delete ALG
+ 
 Selecting the *Edit* option or simply double-clicking on the algorithm icon will show the parameters dialog of the algorithm, so you can change the inputs and parameter values. Not all input elements available in the model will appear in this case as available inputs. Layers or values generated at a more advanced step in the workflow defined by the model will not be available if they cause circular dependencies.
 
 Select the new values and then click on the *OK* button as usual. The connections between the model elements will change accordingly in the modeler canvas.
@@ -219,8 +239,12 @@ Algorithms can be deactivated in the modeler, so they will not be executed once 
 
 To deactivate an algorithm, right--click on its icon in the model canvas and select the *Deactivate* option. You will see that the algorithm is represented now with a red label under its name indicating that is not active.
 
-.. figure:: deactivated.png
+.. deactivated.png:
+
+.. figure:: /static/user_manual/sextante/deactivated.png
    :align: center
+
+   Figure SEXANTE 1: Deactivate
 
 All algorithms depending (directly or undirectly) on that algorithm will also appear as inactive, since they cannot be executed now.
 
@@ -232,9 +256,12 @@ Editing model help files and meta-information
 
 You can document your models from SEXTANTE. Just click on the *Edit model help* button and a dialog like the one shown next will appear.
 
-.. figure:: help_edition.png
+.. _figure_help_edition:
+
+.. figure:: /static/user_manual/sextante/help_edition.png
    :align: center
-   :alt: image
+
+   Figure SEXANTE 1: Help Edition
 
 On the right-hand side you will see a simple HTML page, created using the description of the input parameters and outputs of the algorithm, along with some additional items like a general description of the model or its author. The first time you open the help editor all those descriptions are empty, but you can edit them using the elements on the left-hand side of the dialog. Select an element on the upper part and the write its description in the texbox below.
 

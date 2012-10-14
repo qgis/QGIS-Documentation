@@ -2,7 +2,7 @@ The SEXTANTE history manager
 ============================
 
 The SEXTANTE history
-====================
+--------------------
 
 Every time you execute a SEXTANTE algorithm, information about the
 process is stored in the SEXTANTE history manager. Along with the
@@ -15,8 +15,12 @@ The SEXTANTE history manager is a set of registry entries grouped
 according to their date of execution, making it easier to find
 information about an algorithm executed at any particular moment.
 
-.. image:: history.png
-   :align: center   
+.. _figure_history_1:
+
+.. figure:: /static/user_manual/sextante/history.png
+   :align: center
+
+   Figure SEXANTE 1: History
 
 Process information is kept as a command-line expression, even if the
 algorithm was launched from the toolbox. This makes it also useful for

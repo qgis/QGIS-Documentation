@@ -11,10 +11,12 @@ point to run them whether as a single process or as a batch process
 involving several executions of a same algorithm on different sets of
 inputs.
 
-.. image:: toolbox.png
-   :align: center
-   
+.. _figure_toolbox:
 
+.. figure:: /static/user_manual/sextante/toolbox.png
+   :align: center
+
+   Figure SEXANTE 1: Toolbox
 
 The toolbox contains all the algorithms available, divided into groups.
 Each group represents a so-called algorithm provider, which is a set of
@@ -50,9 +52,12 @@ Once you double-click on the name of the algorithm that you want to
 execute, a dialog similar to the next one is shown (in this case, the
 dialog corresponds to the *SAGA-Convergence index* algorithm).
 
-.. figure:: parameters_dialog.png
+.. _figure_parameters_dialog:
+
+.. figure:: /static/user_manual/sextante/parameters_dialog.png
    :align: center
-   :alt: image
+
+   Figure SEXANTE 1: Paarameters Dialog
 
  
 This dialog is used to set the input values that the algorithm needs to
@@ -92,10 +97,12 @@ parameters found on the table can be of one of the following types.
    from any of this variables such as the cellsize of a layer or the
    northern most coordinate of another one.
 
-   .. figure:: number_selector.png
-      :align: center
-      :alt: image
+.. _figure_number_selector:
 
+.. figure:: /static/user_manual/sextante/number_selector.png
+   :align: center
+
+   Figure SEXANTE 1: Number Selector
       
 -  A range, with min and max values to be introduced in two text boxes.
 
@@ -108,43 +115,55 @@ parameters found on the table can be of one of the following types.
 
 -  A extent, to be entered by four number representing its xmin, max, ymin, ymax limits. Clicking on the button on the right-hand side of the value selector, a pop-up menu will appear, giving you two option: to select the value from a layer or the current canvas extent, or to define it by dragging directly onto the map canvas. 
 
-   .. figure:: extent.png
-      :align: center
+.. _figure_extent:
 
+.. figure:: /static/user_manual/sextante/extent.png
+   :align: center
+
+   Figure SEXANTE 1: Extent
 
   If you select the first option, you will see a window like the next one.
 
-   .. figure:: extent_list.png
-      :align: center
+.. _figure_extent_list:
 
+.. figure:: /static/user_manual/sextante/extent_list.png
+   :align: center
 
+   Figure SEXANTE 1: Extent List
 
   If you select the second one, the parameters window will hide itself, so you can click and drag onto the canvas. Once you have defined the selected rectangle, the dialog will reappear, containing the values in the extent text box.
 
+.. _figure_extent_drag:
 
-   .. figure:: extent_drag.png
-      :align: center
-      :alt: image
+.. figure:: /static/user_manual/sextante/extent_drag.png
+   :align: center
+
+   Figure SEXANTE 1: Extent Drag
 
 -  A list of elements (whether raster layers, vector ones or tables), to
    select from the list of the ones available in QGIS. To make the
    selection, click on the small button on the left side of the
    corresponding row to see a dialog like the following one.
 
-   .. figure:: multiple_selection.png
-      :align: center
-      :alt: image
+.. _figure_multiple_selection:
 
-      
+.. figure:: /static/user_manual/sextante/multiple_selection.png
+   :align: center
+
+   Figure SEXANTE 1: Multiple Selection
+     
 -  A small table to be edited by the user. These are used to define
    parameters like lookup tables or convolution kernels, among others.
 
    Click on the button on the right side to see the table and edit its
    values.
 
-   .. figure:: fixed_table.png
-      :align: center
-      :alt: image
+.. _figure_fixed_table:
+
+.. figure:: /static/user_manual/sextante/fixed_table.png
+   :align: center
+
+   Figure SEXANTE 1: Fixed Table
 
       
    Depending on the algorithm, the number of rows can be modified or
@@ -158,7 +177,7 @@ parameters found on the table can be of one of the following types.
    would be a good place to start...
 
 A note on projections
-~~~~~~~~~~~~~~~~~~~~~
+.....................
 
 SEXTANTE -and also most of the external applications whose algorithms
 are available from SEXTANTE- does not perform any reprojection on input
@@ -260,10 +279,12 @@ each one of its outputs. Just right-click on the name of the algorithm
 in the toolbox and select *Edit rendering styles*. You will see a dialog
 like the one shown next.
 
-.. figure:: rendering_styles.png
-   :align: center
-   :alt: image
+.. _figure_rendering_styles:
 
+.. figure:: /static/user_manual/sextante/rendering_styles.png
+   :align: center
+
+   Figure SEXANTE 1: Rendering Styles
    
 Select the style file (\*.qml) that you want for each output and press
 OK.
