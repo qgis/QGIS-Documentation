@@ -14,8 +14,13 @@ To execute an algorithm as a batch process, right-click on its name in
 the toolbox and select the *Execute as batch process* option in the
 pop-up menu that will appear
 
-.. image:: batch_processing_right_click.png
+.. _figure_sextante_1:
+
+.. figure:: /static/user_manual/sextante/batch_processing_right_click.png
    :align: center
+   :width: 40em
+
+   Figure SEXANTE 1: Batch Processing Right Click
 
 The parameters table
 --------------------
@@ -26,8 +31,13 @@ need not just a single value for each parameter, but a set of them
 instead, one for each time the algorithm has to be executed. Values are
 introduced using a table like the one shown next.
 
-.. image:: batch_processing.png
+.. _figure_sextante_2:
+
+.. figure:: /static/user_manual/sextante/batch_processing.png
    :align: center
+   :width: 40em
+
+   Figure SEXANTE 2: Batch Processing
 
 Each line of this table represents a single execution of the algorithm,
 and each cell contains the value of one of the parameters. It is similar
@@ -72,8 +82,13 @@ dialog that appears when clicking on the accompanying button.
 Once you select the file, a new dialog is shown to allow for
 autocompletion of other cells in the same column (same parameter).
 
-.. image:: batch_processing_save.png
+.. _figure_sextante_3:
+
+.. figure:: /static/user_manual/sextante/batch_processing_save.png
    :align: center
+   :width: 40em
+
+   Figure SEXANTE 3: Batch Processing Save
 
 If the default value (*Do not autocomplete*) is selected, SEXTANTE will
 just put the selected filename in the selected cell from the parameters
@@ -87,8 +102,14 @@ selected filepath, or appending the value of another field at the same
 row. This is particularly useful for naming output data object according
 to input ones.
 
-.. image:: batch_processing_filepath.png
+.. _figure_sextante_4:
+
+.. figure:: /static/user_manual/sextante/batch_processing_filepath.png
    :align: center
+   :width: 40em
+
+   Figure SEXANTE 4: Batch Processing File Path
+
 
 Executing the batch process
 ---------------------------
