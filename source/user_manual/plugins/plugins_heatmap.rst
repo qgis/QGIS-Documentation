@@ -24,61 +24,76 @@ The |heatmap| :sup:`Heatmap` toolbutton starts the Dialog of the Heatmap plugin
 
 The dialog has the following options:
 
-* The field :guilabel:`Input Point dialog`: Provides a selection of loaded point 
-  vector maps.
-* The field :guilabel:`Output Raster`: Using the browser button you select the folder 
+* **Input Point dialog**: Provides a selection of loaded point vector maps.
+* **Output Raster**: Using the browser button you select the folder 
   and the name of the output raster the heatmap plugin will generate. It is not 
   necessary to give a file extension 
-* The :guilabel:`Output Format` can be selected. Although all formats supported by 
+* **Output Format**: Selection of the output format. Although all formats supported by 
   GDAL can be choosen, GeoTIFF is most in cases the best format to choose. This format 
   offers, for example, support for the creation of pyramids for better perfomance, which 
   lacks for other formats.
-* The field :guilabel:`Radius`: can be used to give the radius in meters or mapunit. 
+* **Radius**: can be used to give the radius in meters or mapunit. 
   When the radius is choosen too small you will not get a nice heatmap. In places 
   where more circles around points overlap eachother the brighter hotspots will occur! 
-* The field :guilabel:`Decay Ratio`: is used to show with which ratio the fire dies out 
-  from the center. when given 0 the heat will be completely extinguished towards at the 
-  edge of given Radius of the circel.
+* **Decay Ratio**: is used to show with which ratio the fire dies out from the center. 
+  
+  * When 0 is given (=minimum) the heat will concentrated in the centre of given radius 
+    and be completely extinguished at the edge.  
+  * When 10 is given (=maximum) the heat is concentrated at the edge and in the centre 
+    it is completely extinguished. Higher given values are allowed but have no effect.
+  * When 1 is given the heat is spread evenly over the whole circel.
+  * When a negative Decay Ratio is given you will create coolmap instead of heatmap!
+
 
 When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give acces to 
 additional advanced options.
 
-* The fields :guilabel:`Row` and :guilabel:`Column`, can be used to change the size of 
-  the output raster.
-* The fields :guilabel:`Cell Size X` and :guilabel:`Cell Size Y` influence the pixelsize.
+* **Row** and **Column**, can be used to change the pixelsize of the output raster.
+  More rows and colums means a smaller pixelsize and the size of the output file will 
+  become bigger and processing a bit slower.
+  When doubling the number of rows this will automatically double the size of Columns 
+  and the cell sizes will also be halved. The area of the output raster will 
+  remain the same! 
+* **Cell Size X** and **Cell Size Y** influence the pixelsize of the output raster and 
+  will also change the rows and columns.
 
-The point vector layer may have attribute fields that can be used to set:
+The point vector layer may have attribute fields that can be used to create a heatmap:
 
-* the radius of an attribute field using :guilabel:`Use Radius from Field`.
-* the weight factor of an attribute field using :guilabel:`Use Weight from field`.
-  This weight factor will give points more 'heat' when the weight factor is higher.
+* **Use Radius from Field**: the radius set from an attribute field.
+* **Use Weight from field**: the weight factor set from an attribute field. 
 
 When the output raster is given, the **[OK]** button can be used to create a heatmap.
 The first result is a grey surface that still needs to be given additional treatment to make it a heatmap.
 
+.. warning:: **Changing the raster size properties**
+
+   When changing the raster size properties, this also changes the resulting output.
+   The hotspot areas will become bigger. 
 
 Creating a Heatmap
 ------------------
 
-We will use in following example the ``airports`` vector point layer from the QGIS 
-sample dataset (see :ref:`label_sampledata`).
+For the following example, we will use the ``airports`` vector point layer from the QGIS 
+sample dataset (see :ref:`label_sampledata`). Another exellent QGIS tutorial on making 
+heatmaps can be found on `http://qgis.spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
-In figure_heatmap_1_ the airports of Alaska are shown.
+In Figure_Heatmap_1_ the airports of Alaska are shown.
 
 .. only:: html
 
    Figure Heatmap 1
+
 
 .. _figure_heatmap_1:
 .. figure:: /static/user_manual/plugins/heatmap_start.png
    :width: 40em
    :align: center
 
-   Airports of Alaska
+   Airports of Alaska |osx|
 
 
 #. Select the |heatmap| :sup:`Heatmap` toolbutton. 
-   The heatmap dialog starts (see figure_heatmap_2_).
+   The heatmap dialog starts (see Figure_Heatmap_2_).
 #. In field :guilabel:`Input Point Vector` select ``airpoirt`` from the list of 
    point layers loaded in current project.
 #. In field :guilabel:`Output Raster` five the name and location using the browse 
@@ -87,19 +102,19 @@ In figure_heatmap_1_ the airports of Alaska are shown.
 #. In field :guilabel:`Output Format` choose ``GeoTIFF``.
 #. In the field :guilabel:`Radius` give ``1000000`` meters.
 #. The original :guilabel:`Decay Ratio` of ``0.1`` is fine.
-#. Click on **[OK]**  to create and load the new raster map (see figure_heatmap_3_).
-
+#. Click on **[OK]**  to create and load the new raster map (see Figure_Heatmap_3_).
 
 .. only:: html
 
    Figure Heatmap 2
+
 
 .. _figure_heatmap_2:
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
    :width: 30em
    :align: center
 
-   The Heatmap Dialog
+   The Heatmap Dialog |osx|
 
 The result after loading the heatmap is probably not the result which was expected.
 It is still a grey even surface not showing any variation.
@@ -110,38 +125,39 @@ the heatmap present itself.
 
    Figure Heatmap 3
 
+
 .. _figure_heatmap_3:
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
-   :align: center
    :width: 40em
+   :align: center
+
+   The heatmap after loading looks like a grey surface |osx|
 
 
-   The heatmap after loading looks like a grey surface
-
-# Open the properties dialog of layer ``heatmap_airports`` 
+#. Open the properties dialog of layer ``heatmap_airports`` 
 
    Select the layer heatmap_airports and click on the rightmouse button, 
    Select :menuselection:`Properties` from the popup menu).
 
-# Select the :guilabel:`Style` tab.
-# In section Single band properties chance the field :guilabel:`Color map` from
-  ``Grayscale`` to ``Pseudocolor``.
-# Select the **[Apply]** button.
-# Switch to the :guilabel:`Transparency` tab and move the slider of 
-  :guilabel:`Global transparency` to 40%. 
-# Select **[OK]** 
+#. Select the :guilabel:`Style` tab.
+#. In section Single band properties chance the field :guilabel:`Color map` from
+   ``Grayscale`` to ``Pseudocolor``.
+#. Select the **[Apply]** button.
+#. Switch to the :guilabel:`Transparency` tab and move the slider of 
+   :guilabel:`Global transparency` to 40%. 
+#. Select **[OK]** 
 
-The final result is shown in figure_heatmap_4_.
+The final result is shown in Figure_Heatmap_4_.
 
 .. only:: html
 
    Figure Heatmap 4
 
+
 .. _figure_heatmap_4:
-
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
-   :align: center
    :width: 40em
+   :align: center
 
-   Final result of heatmap created of airports of Alaska
+   Final result of heatmap created of airports of Alaska |osx|
 
