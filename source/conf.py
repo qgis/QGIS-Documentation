@@ -22,7 +22,7 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = []
+extensions = ['sphinx.ext.pngmath']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
@@ -231,7 +231,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionEditPaste| image:: /static/common/mActionEditPaste.png
    :width: 1.5em
-.. |mActionDeleteAttribute| image:: img/en/mActionDeleteAttribute.png
+.. |mActionDeleteAttribute| image:: /static/common/mActionDeleteAttribute.png
    :width: 1.5em
 .. |mActionDeleteSelected| image:: /static/common/mActionDeleteSelected.png
    :width: 1.5em
