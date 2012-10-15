@@ -35,14 +35,14 @@ The dialog has the following options:
 * **Radius**: can be used to give the radius in meters or mapunit. 
   When the radius is choosen too small you will not get a nice heatmap. In places 
   where more circles around points overlap eachother the brighter hotspots will occur! 
-* **Decay Ratio**: is used to show with which ratio the fire dies out from the center. 
+* **Decay Ratio**: is used to show with which ratio the heat dies out from the center. 
   
   * When 0 is given (=minimum) the heat will concentrated in the centre of given radius 
     and be completely extinguished at the edge.  
   * When 10 is given (=maximum) the heat is concentrated at the edge and in the centre 
     it is completely extinguished. Higher given values are allowed but have no effect.
   * When 1 is given the heat is spread evenly over the whole circel.
-  * When a negative Decay Ratio is given you will create coolmap instead of heatmap!
+  * When a negative Decay Ratio is given you will create a Coolmap instead of a Heatmap!
 
 
 When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give acces to 
