@@ -26,11 +26,11 @@ Use QGIS Browser to preview your data. The drag and drop function makes it easy 
 
 .. only:: html
    
-   Figure browser 1
+   **Figure browser 1**
 
 .. figure:: /static/user_manual/qgis_browser/browser_import_shapes.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    Drag and drop shapefiles with QGIS browser |nix|
 
@@ -55,7 +55,7 @@ It's also possible to run QGIS Browser as a standalone application.
 
 .. only:: html
 
-   Figure browser 2
+   **Figure browser 2**
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
@@ -64,8 +64,8 @@ It's also possible to run QGIS Browser as a standalone application.
    Qgis browser as a standalone application to view your metadata |nix|
 
 In figure_browser_standalone_metadata_ you can see the enhanced functionality of Qgis browser.
-
-  
+The :guilabel:`Param` tab provides the details of your connection based databases like PostGIS or MSSQL Spatial.
+The :guilabel:`Metadata` tab   
 
 
 
