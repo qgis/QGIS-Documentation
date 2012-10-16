@@ -62,10 +62,15 @@ window (see figure_vector_1_).
 
 
 .. _figure_vector_1:
+
+.. only:: html
+   
+   **Figure Vector 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
 
-   Figure Vector 1: Add Vector Layer Dialog |nix|
+   Add Vector Layer Dialog |nix|
 
 From the available options check |radiobuttonon| :guilabel:`File`. 
 Click on button **[Browse]**. That will bring up a standard open file 
@@ -78,11 +83,16 @@ You can also select the Encoding type for the shapefile if desired.
 
 
 .. _figure_vector_2:
+
+.. only:: html
+   
+   **Figure Vector 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :width: 40em
    :align: center
 
-   Figure Vector 2: Open an OGR Supported Vector Layer Dialog |nix|
+   Open an OGR Supported Vector Layer Dialog |nix|
 
 Selecting a shapefile from the list and clicking **[Open]** loads it 
 into |qg|. Figure_vector_3_ shows |qg| after loading 
@@ -90,11 +100,16 @@ the :file:`alaska.shp` file.
 
 
 .. _figure_vector_3:
+
+.. only:: html
+   
+   **Figure Vector 3:** 
+
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :width: 40em
    :align: center
 
-   Figure Vector 3: |qg| with Shapefile of Alaska loaded |nix|
+   |qg| with Shapefile of Alaska loaded |nix|
 
 .. _tip_layer_colors:
 
@@ -515,12 +530,16 @@ tiny point on the far left of the map canvas (Chatham Islands), should
 be within the grid, right of New Zealand main islands.
 
 .. _figure_vector_4:
+
+.. only:: html
+   
+   **Figure Vector 4:** 
+
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
    :width: 40em
    :align: center
 
-   Figure Vector 4: Map in lat/lon crossing the 180 |degrees| longitude 
-   line |nix|
+   Map in lat/lon crossing the 180 |degrees| longitude line |nix|
 
 
 A workaround is to transform the longitude values using PostGIS and the 
@@ -532,12 +551,17 @@ a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
 
 
 .. _figure_vector_5:
+
+.. only:: html
+   
+   **Figure Vector 5:** 
+
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
    :width: 40em
    :align: center
 
-   Figure Vector 5: Crossing 180 |degrees| longitude applying the 
-   **ST_Shift_Longitude** function |nix|
+   Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude** 
+   function |nix|
 
 Usage
 .....
@@ -592,3 +616,10 @@ If you want to create a new SpatiaLite layer, please refer to section
    For SpatiaLite data management you can also use several Python plugins: 
    QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and 
    installed with the Plugin Installer.
+
+----
+
+ .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
+ .. [#] GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net
+ .. [#] http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html
+

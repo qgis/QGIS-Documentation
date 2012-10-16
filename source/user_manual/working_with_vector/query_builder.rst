@@ -15,11 +15,16 @@ from a PostGIS layer with attributes stored in PostgreSQL. The Fields, Values
 and Operators sections help the user to construct the SQL-like query.
 
 .. _figure_attributes_2:
+
+.. only:: html
+   
+   **Figure Attributes 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/queryBuilder.png
    :width: 40em
    :align: center
 
-   Figure Attributes 2: Query Builder |nix|
+   Query Builder |nix|
 
 The **Fields list** contains all attributes of the attribute table to be 
 searched. To add an attribute to the SQL where clause field, double click its 

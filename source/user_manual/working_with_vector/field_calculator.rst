@@ -20,11 +20,16 @@ field, only update selected features or create a new attribute field, where
 the results of the calculation will be added.
 
 .. _figure_attributes_3:
+
+.. only:: html
+   
+   **Figure Attributes 3:** 
+
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
    :width: 40em
    :align: center
 
-   Figure Attributes 2: Field Calculator |nix|
+   Field Calculator |nix|
 
 If you choose to add a new field, you need to enter a field name, a field type
 (integer, real or string), the total field width, and the field precision.
@@ -119,7 +124,3 @@ substr(*a*,from,len)                 len characters of string *a* starting from 
 ===================================  ========================================================
 
    List of operators for the field calculator
-
- .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
- .. [#] GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net
- .. [#] http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html

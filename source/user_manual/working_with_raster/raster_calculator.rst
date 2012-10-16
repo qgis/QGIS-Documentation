@@ -11,11 +11,16 @@ raster pixel values.
 The results are written to a new raster layer with a GDAL supported format. 
 
 .. _figure_raster_2:
+
+.. only:: html
+
+   **Figure Raster 2:**
+
 .. figure:: /static/user_manual/working_with_raster/raster_calculator.png
    :align: center
    :width: 38em
 
-   Figure Raster 2: Raster Calculator |nix|
+   Raster Calculator |nix|
 
 
 The **Fields list** contains all loaded raster layers that can be used. 

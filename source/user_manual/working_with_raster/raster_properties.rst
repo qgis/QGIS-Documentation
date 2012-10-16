@@ -18,11 +18,16 @@ There are several tabs on the dialog:
 
 
 .. _figure_raster_1:
+
+.. only:: html
+
+   **Figure Raster 1:**
+
 .. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
    :width: 40em
 
-   Figure Raster 1: Raster Layers Properties Dialog |nix|
+   Raster Layers Properties Dialog |nix|
 
 .. index:: Symbology, Single_Band_Raster, Three_Band_Color_Raster, Multi_Band_Raster	
 

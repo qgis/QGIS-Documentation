@@ -1,16 +1,16 @@
 
+.. index:: Raster
+.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
+.. index:: Erdas Imagine 
+
 *************************
 Working with Raster Data
 *************************
-
-.. index:: Raster
 
 .. % when the revision of a section has been finalized,
 .. % comment out the following line:
 .. %\updatedisclaimer
 
-.. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
-.. index:: Erdas Imagine 
 
 This Section describes how to visualize and set raster layer properties.
 |qg| uses the :index:`GDAL` library to read and write raster data formats [#]_, 
@@ -84,3 +84,6 @@ a dialog to set raster properties for the layer.
 * :menuselection:`Expand all`
 * :menuselection:`Collapse all`
 
+----
+ 
+.. [#] GRASS raster support is supplied by a native QGIS data provider plugin. 

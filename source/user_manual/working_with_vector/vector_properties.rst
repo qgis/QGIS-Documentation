@@ -14,6 +14,11 @@ in the legend or right-click on the layer and select
 
 
 .. _figure_vector_6:
+
+.. only:: html
+
+   **Figure Vector 6:** 
+
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
    :align: center
@@ -172,6 +177,10 @@ be used in the future.
 
 .. _figure_symbology_1:
 
+.. only:: html
+
+   **Figure Symbology 1:** 
+
 +-----------------------------------+
 | |singlesymbol_ng_point|           |
 +-----------------------------------+
@@ -186,7 +195,7 @@ be used in the future.
 | c. Single symbol area properties  |
 +-----------------------------------+
 
-   Figure Symbology 1: Single Symbolizing options |nix|
+   Single Symbolizing options |nix|
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
@@ -214,11 +223,16 @@ The example in figure_symbology_2_ shows the category rendering dialog used
 for the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_2:
+
+.. only:: html
+
+   **Figure Symbology 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :width: 40em
    :align: center
 
-   Figure Symbology 2: Categorized Symbolizing options |nix|
+   Categorized Symbolizing options |nix|
 
 .. index:: Color_Ramp, Gradient_Color_Ramp, ColorBrewer, Custom_Color_Ramp
 
@@ -229,11 +243,15 @@ and/or multiple stops in the color ramp. See figure_symbology_3_ for an
 example of custom color ramp.
 
 .. _figure_symbology_3:
+
+.. only:: html
+
+   **Figure Symbology 3:** 
+
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
 
-   Figure Symbology 3: Example of custom gradient color ramp with multiple 
-   stops |nix|
+   Example of custom gradient color ramp with multiple stops |nix|
 
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile 
@@ -271,11 +289,16 @@ The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_4:
+
+.. only:: html
+
+   **Figure Symbology 4:** 
+
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :width: 40em
    :align: center
 
-   Figure Symbology 4: Graduated Symbolizing options |nix|
+   Graduated Symbolizing options |nix|
 
 
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
@@ -294,11 +317,16 @@ The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
 .. _figure_symbology_5:
+
+.. only:: html
+
+   **Figure Symbology 5:** 
+
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :width: 40em
    :align: center
 
-   Figure Symbology 5: Rule-based Symbolizing options |nix|
+   Rule-based Symbolizing options |nix|
 
 .. index:: Point_Displacement_Renderer, Renderer_Point_Displacement
 .. index:: Displacement_plugin
@@ -312,11 +340,16 @@ this, the symbols of the points are placed on a displacement circle around
 a center symbol.
 
 .. _figure_symbology_6:
+
+.. only:: html
+
+   **Figure Symbology 6:** 
+
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :width: 40em
    :align: center
 
-   Figure Symbology 6: Point displacement dialog |nix|
+   Point displacement dialog |nix|
 
 .. index:: Symbol_Properties
 
@@ -346,6 +379,10 @@ layer type options are described in section :ref:`vector_symbol_types`.
 
 .. _figure_symbology_7:
 
+.. only:: html
+
+   **Figure Symbology 7:** 
+
 +------------------------------------------+
 | |symbolproperties1|                      |
 +------------------------------------------+
@@ -360,7 +397,7 @@ layer type options are described in section :ref:`vector_symbol_types`.
 | c. Filling pattern for a polygon         |
 +------------------------------------------+
 
-   Figure Symbology 7: Defining symbol properties |nix|
+   Defining symbol properties |nix|
 
 
 .. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
@@ -413,6 +450,10 @@ To :index:'change the symbology' for a layer, simply double click on its legend 
 
 .. _figure_symbology_9:
 
+.. only:: html
+
+   **Figure Symbology 9:** 
+
 +---------------------------+---------------------------+
 | |vectorClassifySingle|    | |vectorClassifyGraduated| |
 +---------------------------+---------------------------+
@@ -423,7 +464,7 @@ To :index:'change the symbology' for a layer, simply double click on its legend 
 | 3. Continuous color       | 4. Unique value           |
 +---------------------------+---------------------------+
 
-   Figure Symbology 9: Old Symbolizing Options |nix|
+   Old Symbolizing Options |nix|
 
 
 .. index:: Fill_Style, Fill_Color, Outline_Options
@@ -480,11 +521,16 @@ To launch the Style Manager, click on :menuselection:`Settings -->
 Style Manager` in the main menu.
 
 .. _figure_symbology_8:
+
+.. only:: html
+
+   **Figure Symbology 8:** 
+
 .. figure:: /static/user_manual/working_with_vector/stylemanager.png
    :width: 24em
    :align: center
 
-   Figure Symbology 8: Style Manager to manage symbols and color ramps |nix|
+   Style Manager to manage symbols and color ramps |nix|
 
 Labels Tab
 ----------
@@ -606,11 +652,16 @@ visibility, if every part of multipart feature is to be labeled and if
 features act as obstacles for labels or not (see Figure_labels_1_ ).
 
 .. _figure_labels_1:
+
+.. only:: html
+
+   **Figure Labels 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/label_points.png
    :width: 40em
    :align: center
 
-   Figure Labels 1: Smart labeling of vector point layers |nix|
+   Smart labeling of vector point layers |nix|
 
 **Labeling line layers**
 
@@ -623,11 +674,16 @@ duplicate labels and if features act as obstacles for labels or not
 (see Figure_labels_2_ ).
 
 .. _figure_labels_2:
+
+.. only:: html
+
+   **Figure Labels 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/label_line.png
    :width: 40em
    :align: center
 
-   Figure Labels 2: Smart labeling of vector line layers |nix|
+   Smart labeling of vector line layers |nix|
 
 
 **Labeling polygon layers**
@@ -641,11 +697,16 @@ not (see Figure_labels_3_ ).
 
 
 .. _figure_labels_3:
+
+.. only:: html
+
+   **Figure Labels 3:** 
+
 .. figure:: /static/user_manual/working_with_vector/label_area.png
    :width: 40em
    :align: center
 
-   Figure Labels 3: Smart labeling of vector polygon layers |nix|
+   Smart labeling of vector polygon layers |nix|
 
 .. index:: Label_Engine_Settings, Colliding_Labels
 .. index:: Popmusic_Tabu, Popmusic_Chain, Chain, Popmusic_Tabu_Chain, FALP
@@ -657,11 +718,16 @@ the search method, used to find the best label placement. Available is
 Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
 .. _figure_labels_4:
+
+.. only:: html
+
+   **Figure Labels 4:** 
+
 .. figure:: /static/user_manual/working_with_vector/label_engine.png
    :width: 20em
    :align: center
 
-   Figure Labels 4: Dialog to change label engine settings |nix|
+   Dialog to change label engine settings |nix|
 
 Furthermore the number of candidates can be defined for point, line and 
 polygon features, and you can define whether to show all labels (including 
@@ -710,11 +776,15 @@ third-party plugin called Table Manager.
 \ 
 
 .. _figure_fields_1:
+
+.. only:: html
+
+   **Figure Fields 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :width: 40 em
 
-   Figure Fields 1: Dialog to select an edit widget for an attribute 
-   column |nix|
+   Dialog to select an edit widget for an attribute column |nix|
 
 Within the :guilabel:`Attributes` tab you also find an ``edit widget`` column. 
 This column can be used to define values or a range of values that are allowed 
@@ -928,10 +998,15 @@ zoom in to an area of interest. Make sure the ``lakes`` layer is active and
 identify a lake. In the result box you'll now see that our action is visible:
 
 .. _figure_actions_1:
+
+.. only:: html
+
+   **Figure Actions 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
 
-   Figure Actions 1: Select feature and choose action |nix|
+   Select feature and choose action |nix|
 
 When we click on the action, it brings up Firefox and navigates to the URL 
 http://www.google.com/search?q=Tustumena. It is also possible to add further 
@@ -1030,11 +1105,15 @@ provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
+.. only:: html
+
+   **Figure Joins 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
    :width: 30em
    :align: center
 
-   Figure Joins 1: Join an attribute table to an existing vector layer |nix|
+   Join an attribute table to an existing vector layer |nix|
 
 Additionally the add vector join dialog allows to:
 
@@ -1050,11 +1129,14 @@ The :guilabel:`Diagram` tab allows you to add a grahic overlay to a vector
 layer (see figure_diagrams_1_).
 
 .. _figure_diagrams_1:
+
+   **Figure Diagrams 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
    :width: 40em
    :align: center
 
-   Figure Diagrams 1: Vector properties dialog with diagram tab |nix|
+   Vector properties dialog with diagram tab |nix|
 
 The current core implementation of diagrams provides support for piecharts 
 and text diagrams, and for linear scaling of the diagram size according to 
@@ -1084,10 +1166,13 @@ layer. Both vector layers are part of the |qg| sample dataset (see Section
 #.  Finally click **[Ok]**.
 
 .. _figure_diagrams_2:
+
+   **Figure Diagrams 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/climate_diagram.png
    :width: 40em
    :align: center
 
-   Figure Diagrams 2: Diagram from temperature data overlayed on a map |nix|
+   Diagram from temperature data overlayed on a map |nix|
 
 

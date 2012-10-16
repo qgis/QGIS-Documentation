@@ -65,11 +65,16 @@ in the first section, used to defining the Default Coordinate Reference System t
 This choice will be saved for use in subsequent QGIS sessions.
 
 .. _figure_projection_1:
+
+.. only:: html
+
+   **Figure Projection 1:**
+
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
    :width: 40em
 
-   Figure Projection 1: CRS tab in the QGIS Options Dialog |osx|
+   CRS tab in the QGIS Options Dialog |osx|
 
 
 When you use layers that do not have a CRS, you need to define how
@@ -141,11 +146,16 @@ shown in Figure_projection_2_ and described below.
 
 
 .. _figure_projection_2:
+
+.. only:: html
+
+   **Figure Projection 2:**
+
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
    :width: 40em
 
-   Figure Projection 2: Projection Dialog |win|
+   Projection Dialog |win|
 
 .. index:: Proj4, Proj4_text
 
@@ -198,11 +208,16 @@ your spatial bookmarks and other custom data.
 
 
 .. _figure_projection_3:
+
+.. only:: html
+
+   **Figure Projection 3:**
+
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
    :width: 30em
 
-   Figure Projection 3: Custom CRS Dialog |nix|
+   Custom CRS Dialog |nix|
 
 .. index:: Proj.4
 

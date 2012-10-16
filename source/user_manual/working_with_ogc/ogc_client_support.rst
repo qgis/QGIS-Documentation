@@ -161,11 +161,16 @@ Your screen should now look a bit like figure_OGR_1_, which
 shows the response provided by the NASA JPL OnEarth WMS server.
 
 .. _figure_OGR_1:
+
+.. only:: html
+
+   **Figure OGR 1:**
+
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
    :width: 45em
 
-   Figure OGR 1: Dialog for adding a WMS server, showing its available layers |nix|
+   Dialog for adding a WMS server, showing its available layers |nix|
 
 **Image Encoding**
 
@@ -271,11 +276,16 @@ the tab :guilabel:`Search` with the :guilabel:`Add Layer(s) from a
 Server` dialog.
 
 .. _Figure_OGC_2:
+
+.. only:: html
+
+   **Figure OGR 2:**
+
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
    :width: 38em
 
-   Figure OGC 2: Dialog for searching WMS servers after some keywords |nix|
+   Dialog for searching WMS servers after some keywords |nix|
 
 As you can see it is possible to enter a search-string in the text field
 and hit the :guilabel:`Search` button.
@@ -477,11 +487,16 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 Note that proxy-settings you have set in your preferences are also recognized.
 
 .. _figure_OGC_3:
-.. /static/user_manual/working_with_ogc/connection_wfs.png
+
+.. only:: html
+
+   **Figure OGR 3:**
+
+.. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
    :width: 34 em
 
-   Figure OGC 3: Adding a WFS layer |nix|
+   Adding a WFS layer |nix|
 
 .. in QGIS 1.8 the following checkbox seems to be missing, maybe the
    loading of features is allready prevented by default when it is not

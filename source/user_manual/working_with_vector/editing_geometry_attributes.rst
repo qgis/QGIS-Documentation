@@ -63,12 +63,19 @@ Furthermore, snapping will never occur to a layer which is not checked in
 the snapping options dialog, regardless of the global snapping tolerance. 
 So be sure to mark the checkbox for those layers that you need to snap to.
 
+
+
 .. _figure_edit_1:
+
+.. only:: html
+
+   **Figure Edit 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
    :width: 40em
    :align: center
 
-   Figure Edit 1: Edit snapping options on a layer basis |nix|
+   Edit snapping options on a layer basis |nix|
 
 .. index:: Search_Radius
 
@@ -250,11 +257,16 @@ river in Alaska. In the :guilabel:`Digitizing` tab under the
 |checkbox| :guilabel:`Reuse last entered attribute values`.
 
 .. _figure_edit_2:
+
+.. only:: html
+
+   **Figure Edit 2:** 
+
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
    :width: 30em
    :align: center
 
-   Figure Edit 2: Enter Attribute Values Dialog after digitizing a new vector 
+   Enter Attribute Values Dialog after digitizing a new vector 
    feature |nix|
 
 With the |mActionMoveFeature| :sup:`Move Feature` icon on the toolbar you can 
@@ -499,11 +511,16 @@ the history list; all features will be reverted to the state they were in
 after the selected operation.
 
 .. _figure_edit_3:
+
+.. only:: html
+
+   **Figure Edit 3:** 
+
 .. figure:: /static/user_manual/working_with_vector/redo_undo.png
    :width: 40em
    :align: center
 
-   Figure Edit 3: Redo and Undo digitizing steps |nix|
+   Redo and Undo digitizing steps |nix|
 
 Simplify Feature
 ................
@@ -625,11 +642,16 @@ from the attribute table of the point layer in the :guilabel:`Style` tab of
 the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
 
 .. _figure_edit_4:
+
+.. only:: html
+
+   **Figure Edit 4:** 
+
 .. figure:: /static/user_manual/working_with_vector/rotatepointsymbol.png
    :width: 15em
    :align: center
 
-   Figure Edit 4: Rotate Point Symbols |nix|
+   Rotate Point Symbols |nix|
 
 To change the rotation, select a point feature in the map canvas and rotate 
 it holding the left mouse button pressed. A red arrow with the rotation value 
@@ -663,11 +685,16 @@ displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (Coordinate Reference System).
 
 .. _figure_edit_5:
+
+.. only:: html
+
+   **Figure Edit 5:** 
+
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
    :width: 30em
    :align: center
 
-   Figure Edit 5: Creating a new Shapefile layer Dialog |nix|
+   Creating a new Shapefile layer Dialog |nix|
 
 Note that |qg| does not yet support creation of 2.5D features (i.e. features 
 with X,Y,Z coordinates) or measure features. At this time, only shapefiles 
@@ -700,11 +727,16 @@ To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 be displayed as shown in Figure_edit_6_.
 
 .. _figure_edit_6:
+
+.. only:: html
+
+   **Figure Edit 6:** 
+
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
    :width: 30em 
    :align: center
 
-   Figure Edit 6: Creating a New Spatialite layer Dialog |nix|
+   Creating a New Spatialite layer Dialog |nix|
 
 First step is to select an existing Spatialite database or to create a new 
 Spatialite database. This can be done with the browse button |browsebutton| to 
@@ -746,11 +778,16 @@ layer (figure_attributes_1_). The number of features and the number of
 selected features are shown in the attribute table title.
 
 .. _figure_attributes_1:
+
+.. only:: html
+
+   **Figure Attributes 1:** 
+
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
    :width: 40em
    :align: center
 
-   Figure Attributes 1: Attribute Table for Alaska layer |nix|
+   Attribute Table for Alaska layer |nix|
 
 .. index:: Attribute_Table_Selection
 
