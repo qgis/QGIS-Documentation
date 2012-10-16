@@ -104,7 +104,6 @@ rst_epilog = """
 .. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
 .. |selectnumber| image:: /static/common/selectnumber.png
 .. |selectstring| image:: /static/common/selectstring.png
-.. |selectstring2| image:: /static/common/selectstring2.png
 .. |browsebutton| image:: /static/common/browsebutton.png
 .. |selectcolor| image:: /static/common/selectcolor.png
 .. |slider| image:: /static/common/slider.png
@@ -192,7 +191,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionGroupItems| image:: /static/common/mActionGroupItems.png
    :width: 1.5em
-.. |mActionUnGroupItems| image:: /static/common/mActionUnGroupItems.png
+.. |mActionUnGroupItems| image:: /static/common/mActionUngroupItems.png
    :width: 1.5em
 .. |mActionRaiseItems| image:: /static/common/mActionRaiseItems.png
    :width: 1.5em
@@ -208,7 +207,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAlignRight|  image:: /static/common/mActionAlignRight.png
    :width: 1.5em
-.. |mActionAlignHCenter|  image:: /static/common/mActionAlignHcenter.png
+.. |mActionAlignHCenter|  image:: /static/common/mActionAlignHCenter.png
    :width: 1.5em
 .. |mActionAlignVCenter|  image:: /static/common/mActionAlignVCenter.png
    :width: 1.5em
@@ -465,8 +464,6 @@ rst_epilog = """
 .. |single_to_multi| image:: /static/common/single_to_multi.png
    :width: 3em
 .. |to_lines| image:: /static/common/to_lines.png
-   :width: 3em
-.. |lines_to|  image:: /static/common/lines_to.png
    :width: 3em
 .. |extract_nodes| image:: /static/common/extract_nodes.png
    :width: 3em

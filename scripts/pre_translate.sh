@@ -16,6 +16,10 @@ BUILDDIR=build
 rm -rf ${BUILDDIR}
 mkdir -p ${BUILDDIR}
 
+# copy english resources to static to be able to do a proper sphinx-build
+mkdir source/static
+cp -r resources/en/* source/static/
+
 sphinx-build -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
 
 # Now iteratively update the locale specific .po files with any new strings needed translation
@@ -25,7 +29,8 @@ do
   echo "Updating translation catalog for ${LOCALE}:"
   echo "------------------------------------"
   mkdir -p i18n/${LOCALE}/LC_MESSAGES
-
+  # cleanup images from static (different locales can have different localized images)
+  rm -rf source/static/*
   # Clone the en resources and then overwrite with any localised versions of the same files.
   cp -r resources/en/* source/static/
   PODIR=resources/${LOCALE}
