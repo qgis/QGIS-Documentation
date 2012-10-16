@@ -142,15 +142,19 @@ Figure and image
 Figure::
 	
 	.. _fig_readme_1:
+
+	.. only:: html
+
+	   **Figure Readme 1**
+
 	.. figure:: img/en/nix.png
 	   :align: center
 	   :width: 12 em
 
-	   Figure Readme 1: My caption
+	   My caption
 
-
-Notice that with figures you do not need to use a blank line behind the anchor. This is the 
-only exception I know.
+Use .. only:: html to make the number of the figure (**Figure Readme 1**) visible only in the html files.
+The scripts will insert an automatical enumeration in pdf.
 
 To use a caption (see My caption) just insert indented text after a blank line 
 in the figure block.
