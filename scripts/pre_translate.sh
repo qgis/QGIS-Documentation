@@ -17,7 +17,6 @@ rm -rf ${BUILDDIR}
 mkdir -p ${BUILDDIR}
 
 # copy english resources to static to be able to do a proper sphinx-build
-mkdir source/static
 cp -r resources/en/* source/static/
 
 sphinx-build -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
