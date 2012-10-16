@@ -1,7 +1,5 @@
-
-.. comment, if file is revised
-.. role:: disclaimer
-.. :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated` 
+.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+|updatedisclaimer|
 
 .. _label_conventions:
 

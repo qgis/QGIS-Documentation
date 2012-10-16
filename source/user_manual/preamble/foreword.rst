@@ -1,6 +1,5 @@
-.. when the revision of a section has been finalized, 
-.. comment out the following line:
-.. \updatedisclaimer
+.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+|updatedisclaimer|
 
 .. label_forward:
 

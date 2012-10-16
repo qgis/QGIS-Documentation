@@ -87,6 +87,11 @@ pygments_style = 'sphinx'
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
 
+rst_prolog = """
+.. role:: disclaimer
+.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated for QGIS 1.8`
+"""
+
 rst_epilog = """
 .. |nix| image:: /static/common/nix.png
    :width: 1em
