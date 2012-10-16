@@ -374,7 +374,7 @@ layer type options are described in section :ref:`vector_symbol_types`.
 Old Symbology
 .............
 
-.. note:: 
+.. note::
    |qg| 1.7.4 still supports the usage of the old symbology, although it is 
    recommended to switch to the new symbology, described in section 
    :ref:`vector_new_symbology`, because the old symbology will be removed in 
@@ -472,7 +472,7 @@ layers.
 .. _vector_labels_tab:
 
 Style Manager
-............
+.............
 
 The Style Manager is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. 

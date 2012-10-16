@@ -1,4 +1,5 @@
 .. `label_qgismainwindow`:
+
 ********
 QGIS GUI
 ********

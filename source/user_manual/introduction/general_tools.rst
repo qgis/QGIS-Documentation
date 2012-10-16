@@ -1,8 +1,8 @@
 .. `general_tools`:
 
-**************
+*************
 General Tools
-**************
+*************
 
 .. _`shortcuts`:
 
@@ -46,7 +46,7 @@ plugins can point to dedicated web pages.
 .. _`redraw_events`:
 
 Rendering
-==========
+=========
 .. index::
    single:Rendering
 
@@ -160,7 +160,7 @@ during the reading of the features. A suggested value to start with is 500.
 .. _`label_renderquality`:
 
 d) Influence Rendering Quality
-.............................
+..............................
 
 .. index::
    single:rendering quality
@@ -177,7 +177,7 @@ tab and select or deselect following checkboxes.
 .. _`sec_measure`:
 
 Measuring 
-==========
+=========
 .. index::
    single:measure
 
@@ -193,7 +193,7 @@ To select a measure tool click on |mActionMeasure| and select the tool you want
 to use.
 
 Measure length, areas and angles
----------------------------------
+--------------------------------
 
 .. index::
    single:measure;line length
@@ -251,7 +251,7 @@ Measure tools in action
 .. _`sec_selection`:
 
 Select and deselect features 
------------------------------
+----------------------------
 
 The QGIS toolbar provides several tools to select features in the map canvas. 
 To select one or several features just click on 
@@ -282,7 +282,7 @@ elements.
 
 
 Copyright Label
-***************
+---------------
 
 
 |copyright_label| :menuselection:`Copyright label` adds a Copyright label 
@@ -317,7 +317,7 @@ date in the lower right hand corner of the map canvas.
 
 
 North Arrow
-***********
+-----------
 
 
 |north_arrow| :menuselection:`North Arrow` places a simple north arrow on the 
@@ -341,7 +341,7 @@ corresponding to the four corners of the map canvas.
  
 
 Scale Bar
-*********
+---------
 
 
 |scale_bar| :menuselection:`Scale Bar` adds a simple scale bar to the map 
@@ -353,7 +353,7 @@ canvas. You control the style and placement, as well as the labeling of the bar.
 
 .. _figure_decorations_3:
 
-.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
+.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
    :width: 20em 
 
@@ -369,7 +369,7 @@ To add a scale bar:
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Scale Bar`
-    The dialog starts (see figure_decorations_3_)
+    The dialog starts (see figure_decorations_4_)
 #.  Choose the placement from the :guilabel:`Placement` 'Bottom Left'  
     drop-down list
 #.  Choose the style from the :guilabel:`Scale bar style` 'Tick Down' list
@@ -382,7 +382,7 @@ To add a scale bar:
     on resize`
 #.  Click **[OK]**
 
-.. _figure_decorations_3:
+.. _figure_decorations_4:
 
 .. figure: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
@@ -404,7 +404,8 @@ To add a scale bar:
 Annotation Tools 
 ================
 
-The |mActionTextAnnotation| text annotation tools in the attribute t oolbar 
+
+The |mActionTextAnnotation| text annotation tools in the attribute toolbar 
 provides the possibility to place formatted text in a balloon on the QGIS map 
 canvas. Use the text annotation tool and click into the map canvas.
 
@@ -428,7 +429,7 @@ The |mActionAnnotation| move annotation tool allows to move the annotation on th
 map canvas.
 
 Form annotations
-................
+----------------
 
 .. index::`annotations`
 .. index::`form annotation|\see{annotations}`
@@ -455,7 +456,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 .. _`sec_bookmarks`:
 
 Spatial Bookmarks
-==================
+=================
 
 .. index::
    single:bookmarks
@@ -478,7 +479,7 @@ To create a bookmark:
 Note that you can have multiple bookmarks with the same name.
 
 Working with Bookmarks
------------------------
+----------------------
 
 To use or manage bookmarks, select the menu option 
 :menuselection:`View --> Show Bookmarks -->`. The 
@@ -486,7 +487,7 @@ To use or manage bookmarks, select the menu option
 bookmark. You can not edit the bookmark name or coordinates.
 
 Zooming to a Bookmark
-----------------------
+---------------------
 
 From the :menuselection:`Geospatial Bookmarks` dialog, select the desired 
 bookmark by clicking on it, then click **[Zoom To]**.
@@ -499,4 +500,3 @@ To delete a bookmark from the :guilabel:`Geospatial Bookmarks`
 dialog, click on it then click **[Delete]**.
 Confirm your choice by clicking **[Yes]** or cancel the
 delete by clicking **[No]**.
-

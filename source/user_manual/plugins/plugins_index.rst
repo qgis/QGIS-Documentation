@@ -16,12 +16,10 @@ Plugins
    plugins_ftools
    plugins_gdaltools
    plugins_georeferencer
-   plugins_gps
    plugins_interpolation
    plugins_mapserver_export
    plugins_offline_editing
    plugins_oracle_raster
-   plugins_openstreetmap
    plugins_raster_terrain
    plugins_heatmap
    plugins_road_graph

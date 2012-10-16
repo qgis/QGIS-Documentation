@@ -42,6 +42,7 @@ It's also possible to run QGIS Browser as a standalone application.
 * |nix| Type in "qbrowser" at a command prompt.
 .. * |win| Start QGIS browser using the Start menu or desktop shortcut, or 
   double click on a QGIS project file.
+  
 * |osx| QGIS browser is not available yet from your your Applications folder. 
   However it can easily be made available:     
 
