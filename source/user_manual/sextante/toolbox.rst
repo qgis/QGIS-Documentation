@@ -59,7 +59,7 @@ dialog corresponds to the *SAGA-Convergence index* algorithm).
 
    Figure SEXANTE 6: Paarameters Dialog
 
- 
+
 This dialog is used to set the input values that the algorithm needs to
 be executed. It shows a table where input values and configuration
 parameters are to be set. It, of course, has a different content
@@ -73,12 +73,22 @@ of the algorithm, the structure is similar for all of them. The
 parameters found on the table can be of one of the following types.
 
 -  A raster layer, to select from a list of all the ones available
-   (currently opened) in QGIS. The selector contains as well a button on its right-hand side, to let you select filenames that represent layers currently not loaded in QGIS.
+   (currently opened) in QGIS. The selector contains as well a button on its
+   right-hand side, to let you select filenames that represent layers currently
+   not loaded in QGIS.
 
 -  A vector layer, to select from a list of all the ones available in
-   the QGIS. Layers not loaded in QGIS can be selected as well, as in the case of raster layers, but only if the algorithm does not require a table field selected from the attributes table of the layer. In that case, only opened layers can be selected, since they need to be open so as to retrieve the list of field names available.
-   
-  You will see a button by each vector layer selector. If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features. We will see more about this kind of execution at the end of this section.
+   the QGIS. Layers not loaded in QGIS can be selected as well, as in the case
+   of raster layers, but only if the algorithm does not require a table field
+   selected from the attributes table of the layer. In that case, only opened
+   layers can be selected, since they need to be open so as to retrieve the
+   list of field names available.
+
+   You will see a button by each vector layer selector. If the algorithm
+   contains several of them, you will be able to toggle just one of them. If
+   the button corresponding to a vector input is toggled, the algorithm will be
+   executed iteratively on each one of its features. We will see more about
+   this kind of execution at the end of this section.
 
 -  A table, to select from a list of all the ones available in QGIS.
    Non-spatial tables are loaded into QGIS like vector layers, and in
@@ -103,7 +113,7 @@ parameters found on the table can be of one of the following types.
    :align: center
 
    Figure SEXANTE 7: Number Selector
-      
+
 -  A range, with min and max values to be introduced in two text boxes.
 
 -  A text string, to be introduced in a text box.
@@ -111,9 +121,15 @@ parameters found on the table can be of one of the following types.
 -  A field, to choose from the attributes table of a vector layer or a
    single table selected in another parameter.
 
--  A Coordinate Reference System. You can type the EPSG code directly in the text box, or select it from the CRS selection dialog that appear when you click on the button on the right-hand size
+-  A Coordinate Reference System. You can type the EPSG code directly in the
+   text box, or select it from the CRS selection dialog that appear when you
+   click on the button on the right-hand size
 
--  A extent, to be entered by four number representing its xmin, max, ymin, ymax limits. Clicking on the button on the right-hand side of the value selector, a pop-up menu will appear, giving you two option: to select the value from a layer or the current canvas extent, or to define it by dragging directly onto the map canvas. 
+-  A extent, to be entered by four number representing its xmin, max, ymin,
+   ymax limits. Clicking on the button on the right-hand side of the value
+   selector, a pop-up menu will appear, giving you two option: to select the
+   value from a layer or the current canvas extent, or to define it by dragging
+   directly onto the map canvas.
 
 .. _figure_extent:
 
@@ -131,7 +147,10 @@ parameters found on the table can be of one of the following types.
 
    Figure SEXANTE 9: Extent List
 
-  If you select the second one, the parameters window will hide itself, so you can click and drag onto the canvas. Once you have defined the selected rectangle, the dialog will reappear, containing the values in the extent text box.
+  If you select the second one, the parameters window will hide itself, so you
+  can click and drag onto the canvas. Once you have defined the selected
+  rectangle, the dialog will reappear, containing the values in the extent text
+  box.
 
 .. _figure_extent_drag:
 
@@ -151,7 +170,7 @@ parameters found on the table can be of one of the following types.
    :align: center
 
    Figure SEXANTE 11: Multiple Selection
-     
+
 -  A small table to be edited by the user. These are used to define
    parameters like lookup tables or convolution kernels, among others.
 
@@ -165,7 +184,7 @@ parameters found on the table can be of one of the following types.
 
    Figure SEXANTE 12: Fixed Table
 
-      
+
    Depending on the algorithm, the number of rows can be modified or
    not, using the buttons on the right side of the window.
 
@@ -252,11 +271,23 @@ algorithm execution in a new dialog. This dialog will keep the results
 produced by SEXTANTE during the current session, and can be shown at any
 time by selecting the *SEXTANTE results viewer* menu
 
-Some external applications might have files (with no particular extension restrictions) as output, but they do not belong to any of the categories above. Those outut files will not be processed by QGIS (opened or included into the current QGIS project), since most of the times correspond to file formats or elements not supported by QGIS. This is, for instance, the case with LAS files used for LiDAR data. The files get created, but you won't see anything new in your QGIS working session.
+Some external applications might have files (with no particular extension
+restrictions) as output, but they do not belong to any of the categories above.
+Those outut files will not be processed by QGIS (opened or included into the
+current QGIS project), since most of the times correspond to file formats or
+elements not supported by QGIS. This is, for instance, the case with LAS files
+used for LiDAR data. The files get created, but you won't see anything new in
+your QGIS working session.
 
-For all the other types of outputs, you will find a check box that you can use to tell SEXTANTE not whether to load the file once it is generated by the algorithm or not. By default, all files are opened.
+For all the other types of outputs, you will find a check box that you can use
+to tell SEXTANTE not whether to load the file once it is generated by the
+algorithm or not. By default, all files are opened.
 
-SEXTANTE does not support optional outputs, so all outputs are created, but you can uncheck the corresponding check box if you are not interested in a given output, which virtually makes it behave like an optional output (although the layer is created anyway, but if you leave the text box empty, it will be saved to a temporary file and deleted once you exit QGIS)
+SEXTANTE does not support optional outputs, so all outputs are created, but you
+can uncheck the corresponding check box if you are not interested in a given
+output, which virtually makes it behave like an optional output (although the
+layer is created anyway, but if you leave the text box empty, it will be saved
+to a temporary file and deleted once you exit QGIS)
 
 Configuring SEXTANTE
 --------------------
@@ -285,7 +316,7 @@ like the one shown next.
    :align: center
 
    Figure SEXANTE 13: Rendering Styles
-   
+
 Select the style file (\*.qml) that you want for each output and press
 OK.
 

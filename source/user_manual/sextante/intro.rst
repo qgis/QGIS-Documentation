@@ -1,17 +1,18 @@
+************
 Introduction
-============
+************
 
 
-This chapter introduces SEXTANTE, the powerful geospatial analysis framework of QGIS.
-SEXTANTE is a geoprocessing environment that can be used to call native
-and third party algorithms from QGIS, making your spatial analysis tasks
+This chapter introduces SEXTANTE, the powerful geospatial analysis framework
+of QGIS. SEXTANTE is a geoprocessing environment that can be used to call
+native and third party algorithms from QGIS, making your spatial analysis tasks
 more productive and easy to accomplish.
 
 In the following sections we will review how to use the graphical
 elements of SEXTANTE and take the most out of each one of them
 
 Basic elements of the SEXTANTE GUI
-----------------------------------
+==================================
 
 There are four basic elements in the SEXTANTE GUI, which are used to run
 SEXTANTE algorithms for different purposes. Choosing one tool or another
@@ -43,7 +44,7 @@ algorithms and will be explained later in this chapter).
    process that involves several sub-processes
 
 .. only:: html
-   
+
    Figure Sextante 2
 
 .. _figure_model:

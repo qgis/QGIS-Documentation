@@ -5,9 +5,9 @@ Introduction
 ------------
 
 SEXTANTE can be extended using additional applications, calling them
-from within SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are supported, along 
-with some other command-line applications that provide spatial data 
-analysis functionalities. 
+from within SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are
+supported, along with some other command-line applications that provide
+spatial data analysis functionalities.
 This chapter will show you how to configure SEXTANTE to include these
 additional applications. Once you have correctly configured the system,
 you will be able to execute external algorithms from any SEXTANTE
@@ -151,11 +151,22 @@ before calling SAGA, and those parameters are not used.
 Logging
 .......
 
-When SEXTANTE calls SAGA, it does it using its command-line interface, thus passing a set of commands to perform all the required operation. SAGA show its progress by writing information to the console, which includes the percentage of processing already done, along with additional content. This output is filtered by SEXTANTE and used to update the progress bar while the algorithm is running. 
+When SEXTANTE calls SAGA, it does it using its command-line interface, thus
+passing a set of commands to perform all the required operation. SAGA show its
+progress by writing information to the console, which includes the percentage
+of processing already done, along with additional content. This output is
+filtered by SEXTANTE and used to update the progress bar while the algorithm
+is running.
 
-Both the commands sent by SEXTANTE and the additional information printed by SAGA can be logged along with other SEXTANTE log messages, and you might find them useful to track in detailed what is going on when SEXTANTE runs a SAGA algorithm. you will find two settings, namely *Log console output* and *Log execution commands*  to activate that logging mechanism. 
+Both the commands sent by SEXTANTE and the additional information printed by
+SAGA can be logged along with other SEXTANTE log messages, and you might find
+them useful to track in detailed what is going on when SEXTANTE runs a SAGA
+algorithm. you will find two settings, namely *Log console output* and *Log
+execution commands*  to activate that logging mechanism.
 
-Most other providers that use an external application and call it through the command-line have similar options, so you will find them as well in other places in the SEXTANTE settings list.
+Most other providers that use an external application and call it through the
+command-line have similar options, so you will find them as well in other
+places in the SEXTANTE settings list.
 
 
 R. Creating R scripts
@@ -276,7 +287,7 @@ layer:
     ##field=field layer
     ##nortest=group
     library(nortest)
-    >lillie.test(layer[[field]])    
+    >lillie.test(layer[[field]])
 
 The output ot the last line is printed, but the output of the first is
 not (and neither are the outputs from other command lines added
@@ -315,9 +326,14 @@ Configuring GRASS is not much different from configuring SAGA. First,
 the path to the GRASS folder has to be defined, but only if you are
 running Windows. Additionaly, a shell interpreter (usually msys.exe,
 which can be found in most GRASS for Windows distributions) has to be
-defined and its path set up as well. 
+defined and its path set up as well.
 
-By default, SEXTANTE tries to configure its GRASS connector to use the GRASS distribution that ships along with QGIS. This should work without problems in most systems, but if you experience problems, you might have to do it manually. Also, if you want to use a different GRASS version, you can change that setting and point to the folder where that other version is kept. GRASS 6.4 is needed for algorithms to work correctly.
+By default, SEXTANTE tries to configure its GRASS connector to use the GRASS
+distribution that ships along with QGIS. This should work without problems in
+most systems, but if you experience problems, you might have to do it manually.
+Also, if you want to use a different GRASS version, you can change that setting
+and point to the folder where that other version is kept. GRASS 6.4 is needed
+for algorithms to work correctly.
 
 If you are running Linux, you just
 have to make sure that GRASS is correctly installed, and that it can be
@@ -343,7 +359,8 @@ with uses geographical (lat/lon) coordinates or projected ones.
 GDAL
 -----
 
-No additional configuration is needed to run GDAL algorithms, since it is already incorporated to QGIS and SEXTANTE can infere its configuration from it.
+No additional configuration is needed to run GDAL algorithms, since it is already
+incorporated to QGIS and SEXTANTE can infere its configuration from it.
 
 
 OTB

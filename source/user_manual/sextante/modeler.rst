@@ -167,7 +167,9 @@ Elements can be dragged to a different position within the canvas, to
 change the way the module structure is displayed and make it more clear
 and intuitive. Links between elements are update automatically.
 
-You can run your algorithm anytime clicking on the *Run* button. However, in order to use it from the toolbox, it has to be saved and the modeler dialog closed, to allow the toolbox to refresh its contents.
+You can run your algorithm anytime clicking on the *Run* button. However, in
+order to use it from the toolbox, it has to be saved and the modeler dialog
+closed, to allow the toolbox to refresh its contents.
 
 Saving and loading models
 -------------------------
@@ -208,9 +210,12 @@ you have trouble loading or executing models.
 Editing a model
 ---------------
 
-You can edit the model you are currently creating, redefining the workflow and the relationships between the algorithms and inputs that define the model itself.
+You can edit the model you are currently creating, redefining the workflow and
+the relationships between the algorithms and inputs that define the model
+itself.
 
-If you right-click on an algorithm in the canvas representing the model, you will see a context menu like the one shown next:
+If you right-click on an algorithm in the canvas representing the model, you
+will see a context menu like the one shown next:
 
 .. _figure_model_right_click:
 
@@ -219,25 +224,40 @@ If you right-click on an algorithm in the canvas representing the model, you wil
 
    Figure SEXTANTE 20: Modeler Right Click
 
-Selecting the *Remove* option will cause the selected algorithm to be removed. An algorithm can be removed only if there are no other algorithms dependind on it. That is, if no output from the algorithm is used in a different one as input. If you try to remove an algorithm that has others depending on it, SEXTANTE will show you a warning message like the one you can see below:
-  
+Selecting the *Remove* option will cause the selected algorithm to be removed.
+An algorithm can be removed only if there are no other algorithms dependind on
+it. That is, if no output from the algorithm is used in a different one as
+input. If you try to remove an algorithm that has others depending on it,
+SEXTANTE will show you a warning message like the one you can see below:
+
 .. _figure_cannot_delete_alg:
 
 .. figure:: /static/user_manual/sextante/cannot_delete_alg.png
    :align: center
 
    Figure SEXTANTE 21: Cannot Delete ALG
- 
-Selecting the *Edit* option or simply double-clicking on the algorithm icon will show the parameters dialog of the algorithm, so you can change the inputs and parameter values. Not all input elements available in the model will appear in this case as available inputs. Layers or values generated at a more advanced step in the workflow defined by the model will not be available if they cause circular dependencies.
 
-Select the new values and then click on the *OK* button as usual. The connections between the model elements will change accordingly in the modeler canvas.
+Selecting the *Edit* option or simply double-clicking on the algorithm icon
+will show the parameters dialog of the algorithm, so you can change the inputs
+and parameter values. Not all input elements available in the model will appear
+in this case as available inputs. Layers or values generated at a more advanced
+step in the workflow defined by the model will not be available if they cause
+circular dependencies.
+
+Select the new values and then click on the *OK* button as usual. The
+connections between the model elements will change accordingly in the modeler
+canvas.
 
 Activating and deactivating algorithms
 --------------------------------------
 
-Algorithms can be deactivated in the modeler, so they will not be executed once the model is run. This can be used to test just a given part of the model, or when you do not need all the outputs it generates.
+Algorithms can be deactivated in the modeler, so they will not be executed once
+the model is run. This can be used to test just a given part of the model, or
+when you do not need all the outputs it generates.
 
-To deactivate an algorithm, right--click on its icon in the model canvas and select the *Deactivate* option. You will see that the algorithm is represented now with a red label under its name indicating that is not active.
+To deactivate an algorithm, right--click on its icon in the model canvas and
+select the *Deactivate* option. You will see that the algorithm is represented
+now with a red label under its name indicating that is not active.
 
 .. deactivated.png:
 
@@ -246,15 +266,18 @@ To deactivate an algorithm, right--click on its icon in the model canvas and sel
 
    Figure SEXTANTE 22: Deactivate
 
-All algorithms depending (directly or undirectly) on that algorithm will also appear as inactive, since they cannot be executed now.
+All algorithms depending (directly or undirectly) on that algorithm will also
+appear as inactive, since they cannot be executed now.
 
-To activate an algorithm, just right--click on its icon and select the *Activate* option.
+To activate an algorithm, just right--click on its icon and select the
+*Activate* option.
 
 
 Editing model help files and meta-information
 ---------------------------------------------
 
-You can document your models from SEXTANTE. Just click on the *Edit model help* button and a dialog like the one shown next will appear.
+You can document your models from SEXTANTE. Just click on the *Edit model help*
+button and a dialog like the one shown next will appear.
 
 .. _figure_help_edition:
 
@@ -263,9 +286,16 @@ You can document your models from SEXTANTE. Just click on the *Edit model help* 
 
    Figure SEXTANTE 23: Help Edition
 
-On the right-hand side you will see a simple HTML page, created using the description of the input parameters and outputs of the algorithm, along with some additional items like a general description of the model or its author. The first time you open the help editor all those descriptions are empty, but you can edit them using the elements on the left-hand side of the dialog. Select an element on the upper part and the write its description in the texbox below.
+On the right-hand side you will see a simple HTML page, created using the
+description of the input parameters and outputs of the algorithm, along with
+some additional items like a general description of the model or its author.
+The first time you open the help editor all those descriptions are empty, but
+you can edit them using the elements on the left-hand side of the dialog.
+Select an element on the upper part and the write its description in the texbox
+below.
 
-Model help is saved in a file in the same folder as the model itself. You do not have to worry about saving it, since it is done automatically.
+Model help is saved in a file in the same folder as the model itself. You do
+not have to worry about saving it, since it is done automatically.
 
 About available algorithms
 --------------------------
