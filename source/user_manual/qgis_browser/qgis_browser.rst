@@ -12,6 +12,7 @@ QGIS Browser
 The QGIS Browser is a new panel in QGIS that lets you easily navigate in your database. You can have access to common vector files (e.g. ESRI shapefile or MapInfo files), databases (e.g.PostGIS or MSSQL Spatial), WMS/WFS connections. You can also view your GRASS data (to get the data into QGIS see :ref:`sec_grass`).
 
 Use QGIS Browser to preview your data. The drag and drop function makes it easy to get your data into the Map view and the Map legend.
+.. here we can mention the possibility to drag&drop data into the db-manager!
 
 #. Activate QGIS Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser`.
 #. Drag the panel into the legend window.
