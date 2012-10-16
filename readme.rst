@@ -17,23 +17,23 @@ TODO: update
 * Portuguese: http://documentation.qgis.org/html/pt/user_manual/
 * Russian: http://documentation.qgis.org/html/ru/user_manual/
 * Spanish: http://documentation.qgis.org/html/es/user_manual/
+* Dutch: http://documentation.qgis.org/html/nl/user_manual/
 
-It is available also the subdomain docs.qgis.org, for example for the German 
+It is also available via the subdomain docs.qgis.org, for example for the German 
 language:
-http://docs.qgis.org/user_manual/html/de/
+http://docs.qgis.org/html/de/user_manual/
 
-In the qgis.org site the documentation is scheduled to be built every 30 
-minutes. In the readthedocs.org site it is built every time something is 
-committed at this repository.
+In the qgis.org site the documentation is scheduled to be built every 6 hours.
+
 
 Quick Overview
 --------------------------------------------------------------------------------
 
 * install required tools
 * git clone the QGIS Documentation project
-* run pre_translate.sh
+* run pre_translate.sh (if you want to update ALL translation files)
 * translators edit their i18n files
-* run post_translate.sh
+* run 'post_translate.sh en' if you only want english docs (without locale for all)
 
 Tools
 --------------------------------------------------------------------------------
@@ -73,10 +73,18 @@ Run pre_translate.sh script to create the gettext files (po, pot) in the i18n di
 
 Translators translate their i18n files using tools like linguist
 
-Run post_translate.sh script to build all translated pdf and html files::
+Run 'post_translate.sh' script to build all translated pdf and html files::
 
  cd QGIS-Documentation
  scripts/post_translate.sh
+
+NOTE: if you only want to create docs in one language, use the locale code as parameter.
+Eg to only create english docs::
+
+ cd QGIS-Documentation
+ scripts/post_translate.sh en
+
+
 
 
 Translators edit workflow
@@ -111,13 +119,15 @@ This is a basic usage of the msgmerge command::
 New Language workflow
 --------------------------------------------------------------------------------
 
-- add you locale code in the pre_translate.sh script in the line with 'LOCALE='
+- add your locale code in the pre_translate.sh script in the line with 'LOCALE='
 
 - run 'scripts/pre_translate.sh'. There will be a new directory in the
 i18n directory for your language, containing the po-files for all source files
 
 - create an empty(!) directory in the resources directory for your language
 The idea is to ONLY put images in exact the same directory structure if you want
-an image to be 'translated': default the english one will be used from the
+an image to be 'translated'. As default the english one will be used from the
 'en' directory, and only if there is an translated one it wil be found and used.
+
+- add your locale code in the post_translate.sh script in the line with 'LOCALE='
 
