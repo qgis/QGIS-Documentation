@@ -20,6 +20,10 @@ features.
 
 .. _figure_shortcuts:
 
+.. only:: html
+
+   **Figure Shortcuts**
+
 .. figure:: /static/user_manual/introduction/shortcuts.png 
    :align: center
    :width: 30em
@@ -288,11 +292,11 @@ Copyright Label
 |copyright_label| :menuselection:`Copyright label` adds a Copyright label 
 using the text you prefer to the map.
 
+.. _figure_decorations_1:
+
 .. only:: html
 
-   Figure Decorations 1
-
-.. _figure_decorations_1:
+   **Figure Decorations 1**
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
@@ -327,11 +331,11 @@ to let QGIS determine the direction, it makes its best guess as to how the
 arrow should be oriented. For placement of the arrow you have four options,
 corresponding to the four corners of the map canvas.
 
+.. _figure_decorations_2:
+
 .. only:: html
 
-   Figure Decorations 2
-
-.. _figure_decorations_2:
+   **Figure Decorations 2**
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
@@ -347,17 +351,17 @@ Scale Bar
 |scale_bar| :menuselection:`Scale Bar` adds a simple scale bar to the map 
 canvas. You control the style and placement, as well as the labeling of the bar.
 
-.. only:: html
-
-   Figure Decorations 3
-
 .. _figure_decorations_3:
 
-.. figure:: /static/user_manual/introduction/north_arrow_dialog.png
+.. only:: html
+
+   **Figure Decorations 3**
+
+.. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
    :width: 20em 
 
-   The North Arrow Dialog |nix|
+   The Scale Bar Dialog |nix|
  
 
 QGIS only supports displaying the scale in the same units as your map frame. 
@@ -369,7 +373,7 @@ To add a scale bar:
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Scale Bar`
-    The dialog starts (see figure_decorations_4_)
+    The dialog starts (see figure_decorations_3_)
 #.  Choose the placement from the :guilabel:`Placement` 'Bottom Left'  
     drop-down list
 #.  Choose the style from the :guilabel:`Scale bar style` 'Tick Down' list
@@ -382,13 +386,6 @@ To add a scale bar:
     on resize`
 #.  Click **[OK]**
 
-.. _figure_decorations_4:
-
-.. figure: /static/user_manual/introduction/scale_bar_dialog.png
-   :align: center
-   :width: 20em 
-
-   Figure Decorations 3: The Scale Bar |nix|
 
 .. tip:: Settings of Decorations
 
@@ -441,6 +438,10 @@ designer forms for the identify tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. _figure_custom_annotation:
+
+.. only:: html
+
+   **Figure Custom Annotation**
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
