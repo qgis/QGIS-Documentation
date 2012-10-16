@@ -767,6 +767,8 @@ The **[Query Builder]** button allows you to create a subset of the features
 in the layer - but currently this button is only available when you open the 
 attribute table and select the |browsebutton| button next to Advanced search.
 
+.. _vectormetadatatab:
+
 Metadata Tab
 ------------
 
