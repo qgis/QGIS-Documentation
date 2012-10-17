@@ -16,7 +16,7 @@ inputs.
 .. figure:: /static/user_manual/sextante/toolbox.png
    :align: center
 
-   Figure SEXANTE 5: Toolbox
+   Figure SEXTANTE 5: Toolbox
 
 The toolbox contains all the algorithms available, divided into groups.
 Each group represents a so-called algorithm provider, which is a set of
@@ -57,7 +57,7 @@ dialog corresponds to the *SAGA-Convergence index* algorithm).
 .. figure:: /static/user_manual/sextante/parameters_dialog.png
    :align: center
 
-   Figure SEXANTE 6: Paarameters Dialog
+   Figure SEXTANTE 6: Paarameters Dialog
 
 
 This dialog is used to set the input values that the algorithm needs to
@@ -112,7 +112,7 @@ parameters found on the table can be of one of the following types.
 .. figure:: /static/user_manual/sextante/number_selector.png
    :align: center
 
-   Figure SEXANTE 7: Number Selector
+   Figure SEXTANTE 7: Number Selector
 
 -  A range, with min and max values to be introduced in two text boxes.
 
@@ -133,31 +133,39 @@ parameters found on the table can be of one of the following types.
 
 .. _figure_extent:
 
+.. only:: html
+
+   **Figure SEXTANTE 8**
+
 .. figure:: /static/user_manual/sextante/extent.png
    :align: center
 
-   Figure SEXANTE 8: Extent
+   SEXTANTE Extent
 
-  If you select the first option, you will see a window like the next one.
+If you select the first option, you will see a window like the next one.
 
 .. _figure_extent_list:
+
+.. only:: html
+
+   **Figure SEXTANTE 9**
 
 .. figure:: /static/user_manual/sextante/extent_list.png
    :align: center
 
-   Figure SEXANTE 9: Extent List
+   SEXTANTE Extent List
 
-  If you select the second one, the parameters window will hide itself, so you
-  can click and drag onto the canvas. Once you have defined the selected
-  rectangle, the dialog will reappear, containing the values in the extent text
-  box.
+If you select the second one, the parameters window will hide itself, so you 
+can click and drag onto the canvas. Once you have defined the selected
+rectangle, the dialog will reappear, containing the values in the extent text 
+box.
 
 .. _figure_extent_drag:
 
 .. figure:: /static/user_manual/sextante/extent_drag.png
    :align: center
 
-   Figure SEXANTE 10: Extent Drag
+   Figure SEXTANTE 10: Extent Drag
 
 -  A list of elements (whether raster layers, vector ones or tables), to
    select from the list of the ones available in QGIS. To make the
@@ -169,7 +177,7 @@ parameters found on the table can be of one of the following types.
 .. figure:: /static/user_manual/sextante/multiple_selection.png
    :align: center
 
-   Figure SEXANTE 11: Multiple Selection
+   Figure SEXTANTE 11: Multiple Selection
 
 -  A small table to be edited by the user. These are used to define
    parameters like lookup tables or convolution kernels, among others.
@@ -182,7 +190,7 @@ parameters found on the table can be of one of the following types.
 .. figure:: /static/user_manual/sextante/fixed_table.png
    :align: center
 
-   Figure SEXANTE 12: Fixed Table
+   Figure SEXTANTE 12: Fixed Table
 
 
    Depending on the algorithm, the number of rows can be modified or
@@ -315,7 +323,7 @@ like the one shown next.
 .. figure:: /static/user_manual/sextante/rendering_styles.png
    :align: center
 
-   Figure SEXANTE 13: Rendering Styles
+   Figure SEXTANTE 13: Rendering Styles
 
 Select the style file (\*.qml) that you want for each output and press
 OK.
