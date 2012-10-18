@@ -16,17 +16,17 @@ in the legend or right-click on the layer and select
 :menuselection:`Properties` from the popup menu.
 
 
-.. _figure_vector_6:
+.. _figure_vector_properties_1:
 
 .. only:: html
 
-   **Figure Vector 6:** 
+   **Figure Vector Proporties 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
    :align: center
 
-   Figure Vector 6: Vector Layer Properties Dialog |nix|
+   Vector Layer Properties Dialog |nix|
 
 .. _vector_style_tab:
 
