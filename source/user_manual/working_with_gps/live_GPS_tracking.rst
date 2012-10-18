@@ -11,14 +11,14 @@ To activate Live GPS tracking in QGIS you need to select :menuselection:`View --
 the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window
-(see table_figure_gps_tracking_ and Figure_gpstrack_options_).
+(see figure_GPS_Tracking_1_ and figure_GPS_Tracking_2_).
 
 * |mActionToggleEditing| GPS position coordinates and for manually entering 
   Vertices and Features.
 * |gpstrack_barchart| GPS signal strength of satellite connections.
 * |gpstrack_polarchart| GPS polar screen showing number and polar position of 
   satellites.
-* |mActionOptions| GPS options screen (see Figure_gpstrack_options_).
+* |mActionOptions| GPS options screen (see Figure_GPS_Tracking_2_).
 
 With a plugged in GPS receiver (has to be supported by your operating system)
 a simple click on **[Connect]** connects the GPS to QGIS. 
@@ -40,9 +40,9 @@ gpsd properly to connect QGIS to it.
    :width: 15em
 
 
-.. _table_figure_gps_tracking:
+.. _figure_gps_tracking_1:
 
-Live GPS tracking |nix| 
+   **Figure GPS Tracking 1:**
 
 +-------------------------------+-----------------------------+
 | |gpstrack_main|                                             |
@@ -53,6 +53,9 @@ Live GPS tracking |nix|
 +-------------------------------+-----------------------------+
 | (b) GPS signal_strength       | (c) GPS polar window        |
 +-------------------------------+-----------------------------+
+
+   Live GPS tracking |nix| 
+
 
 Position coordinates
 ---------------------
@@ -101,7 +104,11 @@ If you want to set a feature manually you have to go back to
 |mActionToggleEditing| "Position Coordinates"
 and click on **[Add feature]**.
 
-.. _Figure_gpstrack_options:
+.. _figure_gps_tracking_2:
+
+.. only:: html
+
+   **Figure GPS Tracking 2:**
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
    :align: center

@@ -46,17 +46,21 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
 
 
 1. Click on the |gps_importer| :sup:`GPS Tools` icon and open the
-   :guilabel:`Load GPX file` tab (see figure_gps_1_).
+   :guilabel:`Load GPX file` tab (see figure_GPS_1_).
 2. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, 
    select the GPX file :file:`national_monuments.gpx` and click **[Open]**.
 
 .. _figure_gps_1:
 
+.. only:: html
+
+   **Figure GPS 1:**
+
 .. figure:: /static/user_manual/working_with_gps/loadgpx.png
    :align: center
    :width: 40em
 
-   Figure GPS 1: The *GPS Tools* dialog window
+   The *GPS Tools* dialog window
 
 Use the browse button |browsebutton| to select the GPX file, then use the
 checkboxes to select the feature types you want to load from that GPX file.
@@ -100,18 +104,22 @@ Downloading GPS data from a device
 
 QGIS can use GPSBabel to download data from a GPS device directly as new vector 
 layers. For this we use the :guilabel:`Download from GPS` tab of the GPS 
-Tools dialog (see Figure_gps_2_). Here, we select the type of 
+Tools dialog (see Figure_GPS_2_). Here, we select the type of 
 GPS device, the port that it is connected to (or usb if your GPS supports this), 
 the feature type that you want to download, the GPX file where the data should 
 be stored, and the name of the new layer.
 
 .. _figure_gps_2:
 
+.. only:: html
+
+   **Figure GPS 2:**
+
 .. figure::  /static/user_manual/working_with_gps/download.png
    :align: center
    :width: 40em
 
-   Figure GPS 2: The download tool
+   The download tool
 
 The device type you select in the GPS device menu determines how GPSBabel tries 
 to communicate with your GPS device. If none of the available types work with 
