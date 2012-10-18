@@ -86,12 +86,12 @@ heatmaps can be found on `http://qgis.spatialthoughts.com <http://qgis.spatialth
 
 In Figure_Heatmap_1_ the airports of Alaska are shown.
 
+.. _figure_heatmap_1:
+
 .. only:: html
 
-   Figure Heatmap 1
+   **Figure Heatmap 1:**
 
-
-.. _figure_heatmap_1:
 .. figure:: /static/user_manual/plugins/heatmap_start.png
    :width: 40em
    :align: center
@@ -111,12 +111,12 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
 #. The original :guilabel:`Decay Ratio` of ``0.1`` is fine.
 #. Click on **[OK]**  to create and load the new raster map (see Figure_Heatmap_3_).
 
+.. _figure_heatmap_2:
+
 .. only:: html
 
-   Figure Heatmap 2
+   **Figure Heatmap 2:**
 
-
-.. _figure_heatmap_2:
 .. figure:: /static/user_manual/plugins/heatmap_dialog.png
    :width: 30em
    :align: center
@@ -126,14 +126,14 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
 The result after loading the heatmap is probably not the result which was expected.
 It is still a grey even surface not showing any variation.
 First some additional configuration of this layer needs to be done to make 
-the heatmap present itself. 
+the heatmap present itself.
+
+.. _figure_heatmap_3:
 
 .. only:: html
 
-   Figure Heatmap 3
+   **Figure Heatmap 3:**
 
-
-.. _figure_heatmap_3:
 .. figure:: /static/user_manual/plugins/heatmap_loaded_grey.png
    :width: 40em
    :align: center
@@ -156,12 +156,12 @@ the heatmap present itself.
 
 The final result is shown in Figure_Heatmap_4_.
 
+.. _figure_heatmap_4:
+
 .. only:: html
 
-   Figure Heatmap 4
+   **Figure Heatmap 4:**
 
-
-.. _figure_heatmap_4:
 .. figure:: /static/user_manual/plugins/heatmap_loaded_colour.png
    :width: 40em
    :align: center

@@ -46,19 +46,27 @@ settings` dialog in the menu :menuselection:`Plugins --> Road Graph`.
 
 .. _figure_road_graph_1:
 
+.. only:: html
+
+   **Figure Road Graph 1:**
+
 .. figure:: /static/user_manual/plugins/roadgraph_settings.png
    :align: center
    :width: 20 em
 
-   Figure Road Graph 1: Define settings for the road graph plugin |nix|
+   Define settings for the road graph plugin |nix|
 
 Select a Start and a Stop point in the road network layer and click on
 **[Calculate]**.
 
 .. _figure_road_graph_2:
 
+.. only:: html
+
+   **Figure Road Graph 2:**
+
 .. figure:: /static/user_manual/plugins/roadgraph_sample.png
    :align: center
    :width: 40 em
 
-   Figure Road Graph 2: Road Graph Plugin |nix|
+   Road Graph Plugin |nix|

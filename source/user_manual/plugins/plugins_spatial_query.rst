@@ -53,8 +53,12 @@ options.
 
 .. _figure_spatial_query_1:
 
+.. only:: html
+
+   **Figure Spatial Query 1:**
+
 .. figure:: /static/user_manual/plugins/spatial_query_sample.png
    :align: center
    :width: 40 em
 
-   Figure Spatial Query 1: Spatial Query analysis - regions contain airports |nix|
+   Spatial Query analysis - regions contain airports |nix|

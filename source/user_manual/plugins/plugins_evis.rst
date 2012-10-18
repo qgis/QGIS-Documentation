@@ -58,11 +58,16 @@ To see the Display window click on the :guilabel:`Display` tab in the Generic Ev
 window. The Display window is used to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis_1:
+
+.. only:: html
+
+   **Figure eVis 1:**
+
 .. figure:: /static/user_manual/plugins/evisdisplay.png
    :align: center
    :width: 40em
 
-   Figure eVis 1: The *eVis* display window |win|
+   The *eVis* display window |win|
 
 A. **Display window**: A window where the photograph will appear.
 B. **Increase zoom button**: Zoom in to see more detail. If the entire image cannot be
@@ -92,11 +97,16 @@ G. **Feature indicator**: This heading indicates which feature is being displaye
  \ 
 
 .. _figure_eVis_2:
+
+.. only:: html
+
+   **Figure eVis 2:**
+
 .. figure:: /static/user_manual/plugins/evisoptions.png
    :align: center
    :width: 40em
 
-   Figure eVis 2: The *eVis* Options window |win|
+   The *eVis* Options window |win|
 
 A. **File location**: A dropdown list to specify the attribute field that contains the
    directory path or URL for the photographs or other documents being displayed. If the location is a
@@ -139,11 +149,16 @@ J. **Save**: This will save the settings without closing the Options pane.
  \ 
 
 .. _figure_eVis_3:
+
+.. only:: html
+
+   **Figure eVis 3:**
+
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
    :width: 40em
  
-   Figure eVis 3: The *eVis* External Applications window |win|
+   The *eVis* External Applications window |win|
 
 
 A. **File reference table**: A table containing file types that can be opened using eVis.
@@ -308,11 +323,15 @@ were entered above.
 
 .. _figure_eVis_4:
 
+.. only:: html
+
+   **Figure eVis 4:**
+
 .. figure:: /static/user_manual/plugins/evisdatabase.png
    :align: center
    :width: 40em
 
-   Figure eVis 4: The *eVis* Database connection window |win|
+   The *eVis* Database connection window |win|
 
 
 A. **Database Type**: A dropdown list to specify the type of database that will be used.
@@ -351,11 +370,16 @@ In the Database File Selection window, enter the name of the layer that will be 
 results of the query in the Name of New Layer textbox.
 
 .. _figure_eVis_5:
+
+.. only:: html
+
+   **Figure eVis 5:**
+
 .. figure:: /static/user_manual/plugins/evissql_query.png
    :align: center
    :width: 40em
 
-   Figure eVis 5: The eVis SQL query tab |win|
+   The eVis SQL query tab |win|
 
 A. **SQL Query Text Window**: A screen to type SQL queries.
 B. **Run Query**: Button to execute the query entered in the SQL Query Window.
@@ -408,11 +432,15 @@ successful an error message will appear in the Output Console window.
 
 .. _figure_eVis_6:
 
+.. only:: html
+
+   **Figure eVis 6:**
+
 .. figure:: /static/user_manual/plugins/evispredefined.png
    :align: center
    :width: 40em
 
-   Figure eVis 6: The *eVis* Predefined queries tab |win|
+   The *eVis* Predefined queries tab |win|
 
 A. **Open Query File**: Launches the "Open File" file browser to search for the XML file
    holding the predefined queries.

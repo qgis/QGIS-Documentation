@@ -24,11 +24,16 @@ you need to arrange the raster and vector layers you want to use in
 MapServer and save this status in a QGIS project file.
 
 .. _figure_mapserver_export_1:
+
+.. only:: html
+
+   **Figure Mapserver Export 1:**
+
 .. figure:: /static/user_manual/plugins/mapserver_export_qgis.png
    :align: center
    :width: 40em
 
-   Figure 1: Arrange raster and vector layers for QGIS project file |nix|
+   Arrange raster and vector layers for QGIS project file |nix|
 
 
 In this example, we demonstrate the four steps required to create a simple 
@@ -59,11 +64,16 @@ To use it from within QGIS, you need to enable the MapServer Export Plugin first
 using the Plugin Manager (see :ref:`load_core_plugin`).
 
 .. _figure_mapserver_export_2:
+
+.. only:: html
+
+   **Figure Mapserver Export 2:**
+
 .. figure:: /static/user_manual/plugins/mapserver_export_dialog.png
    :align: center
    :width: 40em
    
-   Figure 2: Export to MapServer Dialog |nix|
+   Export to MapServer Dialog |nix|
 
 \ 
 
@@ -149,11 +159,16 @@ project. As you can see in Figure_mapserver_export_3_, all information
 except the airport symbols are included.
 
 .. _figure_mapserver_export_3:
+
+.. only:: html
+
+   **Figure Mapserver Export 3:**
+
 .. figure:: /static/user_manual/plugins/mapserver_export_test.png
    :align: center
    :width: 30em
    
-   Figure 3: Test PNG created by shp2img with all MapServer Export layers |nix|
+   Test PNG created by shp2img with all MapServer Export layers |nix|
 
 If you plan to use the map file to serve WMS requests, you probably don't have 
 to tweak anything. If you plan to use it with a mapping template or a custom 

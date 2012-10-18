@@ -43,11 +43,15 @@ the connection parameters (See Figure_oracle_raster_1_):
 
 .. _Figure_oracle_raster_1:
 
+.. only:: html
+
+   **Figure Oracle Raster 1:**
+
 .. figure:: /static/user_manual/plugins/oracle_create_dialog.png
    :align: center
    :width: 20em
 
-   Figure Oracle Raster 1: Create Oracle connection dialog
+   Create Oracle connection dialog
 
 Now, back on the main Oracle Spatial GeoRaster dialog window (See Figure_oracle_raster_2_), 
 use the drop-down list to choose one connection, and use the **[Connect]** button to 
@@ -78,11 +82,15 @@ GeoRaster or to go back to the beginning and select another table name.
 
 .. _Figure_oracle_raster_2:
 
+.. only:: html
+
+   **Figure Oracle Raster 2:**
+
 .. figure:: /static/user_manual/plugins/oracle_select_dialog.png
    :align: center
    :width: 30em
 
-   Figure Oracle Raster 2: Select Oracle GeoRaster dialog
+   Select Oracle GeoRaster dialog
 
 
 The Selection data entry can also be used to enter a Where clause at the end of 

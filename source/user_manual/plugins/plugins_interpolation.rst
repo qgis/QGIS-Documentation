@@ -28,11 +28,15 @@ The plugin requires the following parameters to be specified before running:
 
 .. _figure_interpolation_1:
 
+.. only:: html
+
+   **Figure Interpolation 1:**
+
 .. figure:: /static/user_manual/plugins/interpolate_dialog.png
    :align: center
    :width: 40em
 
-   Figure Interpolation 1: Interpolation Plugin |nix|
+   Interpolation Plugin |nix|
 
 
 .. _`interpolation_usage`:
@@ -60,10 +64,14 @@ The processing only takes a few minutes, and covers the northern part of Alaska.
 
 .. _figure_interpolation_2:
 
+.. only:: html
+
+   **Figure Interpolation 2:**
+
 .. figure:: /static/user_manual/plugins/interpolate_tin.png
    :align: center
    :width: 30em
 
-   Figure Interpolation 2: Interpolation of elevp data using TIN method |nix|
+   Interpolation of elevp data using TIN method |nix|
 
 

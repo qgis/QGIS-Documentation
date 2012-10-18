@@ -28,11 +28,16 @@ apply the offline edits to the master dataset.
 *  Edit the layers offline.
 *  After being connected again, upload the changes with the 'Synchronize' button.
 
-.. _figure_offline_1:
+.. _figure_offline_editing_1:
+
+.. only:: html
+
+   **Figure Offline Editing 1:**
+
 
 .. figure:: /static/user_manual/plugins/create_offline_project.png
    :align: center
    :width: 40em
 
-   Figure Offline 1: Create an offline project from PostGIS or WFS layers 
+   Create an offline project from PostGIS or WFS layers 
 

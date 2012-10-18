@@ -51,14 +51,19 @@ To use the plugin you must first enable it as described in Section
 :ref:`managing_plugins`.
 
 Click the new toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` 
-to open the Delimited Text dialog as shown in figure_text_1_.
+to open the Delimited Text dialog as shown in figure_delimited_text_1_.
 
-.. _figure_text_1:
+.. _figure_delimited_text_1:
+
+.. only:: html
+
+   **Figure Delimited Test 1:**
+
 .. figure:: /static/user_manual/plugins/delimited_text_dialog.png
    :align: center
    :width: 30em
 
-   Figure Text 1: Delimited Text Dialog |nix|
+   Delimited Text Dialog |nix|
 
 First select the file (e.g., :file:`qgis_sample_data/csv/elevp.csv`) to 
 import by clicking on the **[Browse]** button. Once the file is selected, 
@@ -69,7 +74,8 @@ is important to select the correct delimiter. To change the delimiter to tab use
 
 Once the file is parsed, choose the X and Y fields from the drop down lists and 
 if available also the WKT field for the CRS information. Finally enter a Layer 
-name (e.g., :file:`elevp` ) as shown in figure_text_1_ . To add the layer to the map, click **[OK]**. The delimited text file now 
-behaves as any other map layer in QGIS.
+name (e.g., :file:`elevp` ) as shown in figure_delimited_text_1_ . To add the 
+layer to the map, click **[OK]**. The delimited text file now behaves as any 
+other map layer in QGIS.
 
 

@@ -164,13 +164,17 @@ options.
 
  \ 
 
-.. _figure_GDAL_1:
+.. _figure_GDAL_Tools_1:
+
+.. only:: html
+
+   **Figure GDAL Tools 1:**
 
 .. figure:: /static/user_manual/plugins/raster_menu.png
    :align: center
    :width: 40em
 
-   Figure GDAL 1: The *GDALTools* menu list
+   The *GDALTools* menu list
 
 .. _`gdal_examples`:
 
@@ -181,35 +185,47 @@ Below are some examples of use of the tools.
 
 **Getting information about a raster**
 
-.. _figure_GDAL_2:
+.. _figure_GDAL_Tools_2:
+
+.. only:: html
+
+   **Figure GDAL Tools 2**
 
 .. figure:: /static/user_manual/plugins/gdalinfo.png
    :align: center
    :width: 40em
 
-   Figure GDAL 2: The *Information* dialog window
+   The *Information* dialog window
 
 **Creating contour lines**
 
 This example will create contour lines from an SRTM elevation tile.
 
-.. _figure_GDAL_3:
+.. _figure_GDAL_Tools_3:
+
+.. only:: html
+
+   **Figure GDAL Tools 3**
 
 .. figure:: /static/user_manual/plugins/gdal_contour.png
    :align: center
    :width: 40em
 
-   Figure GDAL 3: The *Contours* dialog window
+   The *Contours* dialog window
 
 and the result:
 
-.. _figure_GDAL_4:
+.. _figure_GDAL_Tools_4:
+
+.. only:: html
+
+   **Figure GDAL Tools 4**
 
 .. figure:: /static/user_manual/plugins/qgis_contours.png
    :align: center
    :width: 40em
 
-   Figure GDAL 4: The resulting contours layer
+   The resulting contours layer
 
 **Using GDALwarp to reproject a raster**
 
@@ -217,11 +233,14 @@ Here's the dialog window for reprojecting a landcover image, originally in the
 Albers Equal Area projection for Alaska (from the QGIS sample dataset) into 
 Lon/Lat WGS84 (EPSG:4326).
 
-.. _figure_GDAL_5:
+.. _figure_GDAL_Tools_5:
+
+.. only:: html
+
+   **Figure GDAL Tools 5**
 
 .. figure:: /static/user_manual/plugins/gdalwarp.png
    :align: center
    :width: 40em
 
-   Figure GDAL 5: The *GDAL warp* dialog window
-
+   The *GDAL warp* dialog window

@@ -18,11 +18,15 @@ dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
 
 .. _figure_sql_anywhere:
 
+.. only:: html
+
+   **Figure SQL Anywhere 1:**
+
 .. figure:: /static/user_manual/plugins/sql_anywhere.png
    :align: center
    :width: 40 em
 
-   Figure SQL Anywhere 1: SQL Anywhere dialog (KDE) |nix|
+   SQL Anywhere dialog (KDE) |nix|
 
 .. FIXME Needs an example, but the database is proprietary
 

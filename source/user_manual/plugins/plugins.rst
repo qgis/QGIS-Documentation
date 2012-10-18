@@ -54,11 +54,16 @@ Loading a QGIS Core Plugin is done from the main menu
    single: plugins; manager
 
 .. _figure_plugins_1:
+
+.. only:: html
+
+   **Figure Plugins 1:**
+
 .. figure:: /static/user_manual/plugins/pluginmanager.png
    :align: center
    :width: 30em
    
-   Figure Plugins 1: Plugin Manager |nix|
+   Plugin Manager |nix|
 
 The :guilabel:`Plugin Manager` lists all the available plugins and their
 status (loaded or unloaded), including all core plugins and all external
@@ -153,11 +158,16 @@ the tab :guilabel:`Plugins`, containing a list of all locally installed Python
 plugins, as well as plugins available in remote repositories. 
 
 .. _figure_plugins_2:
+
+.. only:: html
+
+   **Figure Plugins 1:**
+
 .. figure:: /static/user_manual/plugins/plugininstaller.png
    :align: center
    :width: 40em
    
-   Figure Plugins 2: Installing external python plugins |nix|
+   Installing external python plugins |nix|
 
 
 Each plugin can be either:

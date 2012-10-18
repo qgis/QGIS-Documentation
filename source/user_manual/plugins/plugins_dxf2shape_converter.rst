@@ -20,11 +20,16 @@ format. It requires the following parameters to be specified before running:
    strings themselves.
 
 .. _figure_dxf2shape_1:
+
+.. only:: html
+
+   **Figure Dxf2Shape 1:**
+
 .. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
    :width: 30em
 
-   Figure 1: Dxf2Shape Converter Plugin
+   Dxf2Shape Converter Plugin
 
 
 **Using the Plugin**

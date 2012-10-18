@@ -34,11 +34,15 @@ Description of the analysis:
 
 .. _figure_raster_terrain_1:
 
+.. only:: html
+
+   **Figure Raster Terrain 1:**
+
 .. figure:: /static/user_manual/plugins/raster_terrain_dialog.png
    :align: center
    :width: 40em
 
-   Figure Raster Terrain 1: Raster Terrain Modelling Plugin
+   Raster Terrain Modelling Plugin
 
 .. _`raster_terrain_usage`:
 
