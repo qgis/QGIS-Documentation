@@ -40,17 +40,21 @@ using them in creative, productive, or unexpected ways. Both rendered images and
 vector dataset of OSM are available for download under a Creative Commons Attribution 
 ShareAlike 2.0 license.
 
-.. _figure_osm_1:
+.. _figure_openstreetmap_1:
+
+.. only:: html
+
+   **Figure OpenStreetMap 1:**
 
 .. figure:: /static/user_manual/osm/osmweb.png
    :align:  center
    :width:  40em
 
-   Figure OSM 1: OpenStreetMap data in the web
+   OpenStreetMap data in the web
 
 
 OpenStreetMap was inspired by sites such as Wikipedia - the map display
-(see Figure_osm_1_ ) features a prominent :guilabel:`Edit` tab and a
+(see Figure_OpenStreetMap_1_ ) features a prominent :guilabel:`Edit` tab and a
 full revision history is maintained. Registered users can upload GPS track
 logs and edit the vector data using the given editing tools.
 
@@ -148,15 +152,19 @@ Basic user interface
 
 The first time the OSM plugin is started (and after the first data are
 loaded), several new OSM plugin icons appear in the QGIS toolbar menu
-together with new graphical components as shown in figure_osm_2_. 
+together with new graphical components as shown in figure_OpenStreetMap_2_. 
 
-.. _figure_osm_2:
+.. _figure_openstreetmap_2:
+
+.. only:: html
+
+   **Figure OpenStreetMap 2:**
 
 .. figure:: /static/user_manual/osm/osm_widgets.png
    :align: center
    :width: 40em
 
-   Figure OSM 2: OSM plugin user interface
+   OSM plugin user interface
 
 
 **OSM Features widget**
@@ -217,13 +225,17 @@ icon. If there is no such button, maybe someone disabled OpenStreetMap
 toolbar in your QGIS installation. You can enable it again selecting
 :menuselection:`Settings --> Toolbars --> OpenStreetMap -->`.
 
-.. _figure_osm_3:
+.. _figure_openstreetmap_3:
+
+.. only:: html
+
+   **Figure OpenStreetMap 3:**
 
 .. figure:: /static/user_manual/osm/osmloaddialog.png
    :align: center
    :width: 30em
 
-   Figure OSM 3: Load OSM data dialog
+   Load OSM data dialog
 
 The purpose of its elements is explained below.
 
@@ -302,13 +314,17 @@ Changing the property/tag of an OSM feature can be done directly in
 the table of feature tags. The Tags table of basic features can be found
 on the OSM Feature widget. Don't forget to identify feature first.
 
-.. _figure_OSM_4:
+.. _figure_openstreetmap_4:
+
+.. only:: html
+
+   **Figure OpenStreetMap 4:**
 
 .. figure:: /static/user_manual/osm/osm_changefeaturetag.png
    :align: center
    :width: 40em
 
-   Figure OSM 4: Changing an OSM feature tag
+   Changing an OSM feature tag
 
 If you want to change a tag value, just double-click in the appropriate row of
 column 'Value' and type, or select a new value. If you want to remove a tag,
@@ -332,13 +348,17 @@ such line or polygon as its new member. If your cursor is over an existing
 point, a new point cannot be created. In such case the OSM plugin will show
 following message:
 
-.. _figure_osm_5:
+.. _figure_openstreetmap_5:
+
+.. only:: html
+
+   **Figure OpenStreetMap 5:**
 
 .. figure:: /static/user_manual/osm/osm_pointcreation.png
    :align: center
    :width: 30 em
 
-   Figure OSM 5: OSM point creation message
+   OSM point creation message
 
 The mechanism of helping a user to hit the line or polygon is called snapping
 and is enabled by default. If you want to create a point very close to some
@@ -502,13 +522,17 @@ You can enable it again at :menuselection:`Settings --> Toolbars
 --> OpenStreetMap -->` . After clicking the
 button a dialog occurs and provides following functionalities:
 
-.. _figure_osm_6:
+.. _figure_openstreetmap_6:
+
+.. only:: html
+
+   **Figure OpenStreetMap 6:**
 
 .. figure:: /static/user_manual/osm/osm_downloaddialog.png
    :align: center
    :width: 30em
 
-   Figure OSM 6: OSM download dialog
+   OSM download dialog
 
 **Extent**: Specifies an area to download data from intervals of latitude 
 and longitude degrees. Because there is some restriction of OpenStreetMap 
@@ -560,13 +584,17 @@ OSM toolbar in your QGIS installation is disabled. You can enable it
 again in :menuselection:`Settings --> Toolbars --> OpenStreetMap -->` . 
 After clicking the **[Upload]** button a new dialog will appear.
 
-.. _figure_OSM_7:
+.. _figure_openstreetmap_7:
+
+.. only:: html
+
+   **Figure OpenStreetMap 7:**
 
 .. figure:: /static/user_manual/osm/osm_uploaddialog.png
    :align: center
    :width: 25em
 
-   Figure OSM 7: OSM upload dialog
+   OSM upload dialog
 
 At the top of the dialog you can check, if you are uploading the correct data.
 There is a short name of a current database. In the table you find information
@@ -591,13 +619,17 @@ the OSM toolbar in your QuantumGIS installation is probably disabled.
 You can enable it again in :menuselection:`Settings --> Toolbars --> 
 OpenStreetMap -->`. After clicking on the button a new dialog appears.
 
-.. _figure_OSM_8:
+.. _figure_openstreetmap_8:
+
+.. only:: html
+
+   **Figure OpenStreetMap 8:**
 
 .. figure:: /static/user_manual/osm/osm_savedialog.png
   :align: center
   :width: 25em
 
-  Figure OSM 8: OSM saving dialog
+  OSM saving dialog
 
 Select features you want to save into XML file and the file itself. Use
 the **[OK]** button to start the operation. The process will create an
@@ -624,13 +656,17 @@ toolbar in your QGIS installation. You can enable it again in
 
 After clicking on the button following message may show up:
 
-.. _figure_OSM_9:
+.. _figure_openstreetmap_9:
+
+.. only:: html
+
+   **Figure OpenStreetMap 9:**
 
 .. figure:: /static/user_manual/osm/osm_importdialog.png
    :align: center
    :width: 25em
    
-   Figure OSM 9: OSM import message dialog
+   OSM import message dialog
 
 In such case there is no vector layer currently loaded. The import must 
 be done from a loaded layer - please load a vector layer from which you 
@@ -638,13 +674,17 @@ want to import data. After a layer is osm_importtoosmdialog.pngopened,
 your second try should give you a better result (don't forget to mark 
 the current OSM layer again):
 
-.. _figure_OSM_10:
+.. _figure_openstreetmap_10:
+
+.. only:: html
+
+   **Figure OpenStreetMap 10:**
 
 .. figure:: /static/user_manual/osm/osm_importtoosmdialog.png
    :align: center
    :width: 25em
 
-   Figure_OSM_10: Import data to OSM dialog
+   Import data to OSM dialog
 
 Use the submit dialog to start the process of OSM data importing.
 Reject it if you are not sure you want to import something.
