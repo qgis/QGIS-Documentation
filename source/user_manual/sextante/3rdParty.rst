@@ -104,7 +104,7 @@ the algorithm descriptions (needed to create the parameters dialog and
 give SEXTANTE the information it needs about the algorithm) are not
 included with SAGA, but with SEXTANTE instead. That is, they are part of
 SEXTANTE, so you have them in your installation even if you have not
-installed SEXTANTE. Running the algorithm, however, needs SAGA binaries
+installed SAGA. Running the algorithm, however, needs SAGA binaries
 installed in your system.
 
 About SAGA grid system limitations
@@ -366,7 +366,35 @@ No additional configuration is needed to run GDAL algorithms, since it is alread
 incorporated to QGIS and SEXTANTE can infere its configuration from it.
 
 
-OTB
----
+Orfeo ToolBox
+-------------
 
-[to be written]
+Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB
+installed in your system and configured SEXTANTE properly so it can find all
+necessary files (command-line tools and libraries). Please note that OTB
+binaries are not included in SEXTANTE, so you have to download and install the
+software yourself. Please check the OTB website for more information.
+
+Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog and
+configure OTB algorithm provider. In the *Orfeo Toolbox (image analysis)* block
+you will find all settings related to OTB. First ensure that algorithms are
+enabled and |checkbox| :guilabel:`Activate` is checked.
+
+Then configure path to the folder where OTB command-line tools and libraries
+are installed:
+
+*  |nix| usually *OTB applications folder* point to ``/usr/lib/otb/applications``
+   and *OTB command line tools folder* is ``/usr/bin``;
+*  |win| if you use OSGeo4W installer, than install ``otb-bin`` package and enter
+   ``C:\OSGeo4W\apps\orfeotoolbox\applications`` as *OTB applications folder*
+   and ``C:\OSGeo4W\bin`` as *OTB command line tools folder*;
+
+Notice that, ever before doing that, OTB algorithms are shown in the toolbox
+and you can open them to fill the corresponding parameters dialog. However, if
+you try to run the algorithm after entering the parameter values, SEXTANTE will
+show an error message. This is because the algorithm descriptions (needed to
+create the parameters dialog and give SEXTANTE the information it needs about
+the algorithm) are not included with OTB, but with SEXTANTE instead. That is,
+they are part of SEXTANTE, so you have them in your installation even if you
+have not installed OTB. Running the algorithm, however, needs OTB binaries
+installed in your system.
