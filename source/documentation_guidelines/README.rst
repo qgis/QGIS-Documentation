@@ -1,12 +1,16 @@
 
 .. _QGIS-documentation-guidelines:
 
-***********************************
-Migration guide / convention style
-***********************************
+************************
+Documentation Guidelines
+************************
 
 Introduction
 ============
+
+These are guidelines to use for latex to rst conversion.
+
+There is also information about general use of rst in QGIS documenation.
 
 See also: http://sphinx.pocoo.org/markup/inline.html or convention.rst file.
 

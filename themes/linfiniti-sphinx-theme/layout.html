@@ -32,7 +32,7 @@
 {%- macro sidebar() %}
       {%- if render_sidebar %}
       <div class="well sidebar-nav">
-          <a class="brand" href="http://qgis.org">
+          <a class="brand" href="{{ pathto('index') }}">
           {%- block sidebarlogo %}
           {%- if logo %}
               <img src="{{ pathto('_static/' + logo, 1) }}" alt="Logo"/>

@@ -1,4 +1,7 @@
 
+============================
+A Gentle Introduction to GIS
+============================
 
 .. _A-Gentle-Introduction-To-GIS-reference:
 

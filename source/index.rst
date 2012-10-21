@@ -1,14 +1,19 @@
 
-===========================
-QGIS Documentation Projects
-===========================
+=================================
+Welcome to the QGIS Documentation
+=================================
 
 Currently we are building a infrastructure to more easily maintain and translate various
 QGIS documentation projects.
 
 All documentation is written in RST, saved in Github, and po/pot translatable.
 
-Currently we have three sub projectst:
+.. toctree::
+    :maxdepth: 1
+
+    user_manual/index
+    documentation_guidelines/README
+    gentle_gis_introduction/AGentleIntroductionToGIS
 
 
 User manual
@@ -24,7 +29,7 @@ It will be updated with every update of QGIS.
 Documentation Guidelines
 ------------------------
 
-:ref:`The QGIS Documentaion Guidelines <QGIS-documentation-guidelines>`.  These guidelines are there to let all QGIS documenation have the same
+:ref:`The QGIS Documentation Guidelines <QGIS-documentation-guidelines>`.  These guidelines are there to let all QGIS documenation have the same
 look and feel.
 
 Before contributing to the documenation, please read and understand those
