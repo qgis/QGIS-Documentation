@@ -1,4 +1,7 @@
 
+
+.. _A-Gentle-Introduction-To-GIS-reference:
+
 A Gentle Introduction to GIS
 
 Brought to you with Quantum GIS, a Free and Open Source Software GIS Application for everyone.

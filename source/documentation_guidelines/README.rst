@@ -1,3 +1,6 @@
+
+.. _QGIS-documentation-guidelines:
+
 ***********************************
 Migration guide / convention style
 ***********************************
