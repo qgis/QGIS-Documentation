@@ -27,10 +27,14 @@ panel with two tabs can be used to add new elements to the model.
 
 .. _figure_modeler:
 
+.. only:: html
+
+   **Figure SEXTANTE 14:**
+
 .. figure:: /static/user_manual/sextante/modeler_canvas.png
    :align: center
 
-   Figure SEXTANTE 14: Modeler
+   Modeler |win|
 
 Creating a model involves two steps:
 
@@ -76,19 +80,27 @@ and a range of valid values.
 
 .. _figure_model_parameter:
 
+.. only:: html
+
+   **Figure SEXTANTE 15:**
+
 .. figure:: /static/user_manual/sextante/models_parameters.png
    :align: center
 
-   Figure SEXTANTE 15: Model Parameters
+   Model Parameters |win|
 
 For each added input, a new element is added to the modeler canvas.
 
 .. _figure_model_parameter_2:
 
+.. only:: html
+
+   **Figure SEXTANTE 16:**
+
 .. figure:: /static/user_manual/sextante/models_parameters2.png
    :align: center
 
-   Figure SEXTANTE 16: Model Parameters
+   Model Parameters |win|
 
 
 Definition of the workflow
@@ -100,10 +112,14 @@ grouped much in the same way as they are in the toolbox.
 
 .. _figure_model_parameter_3:
 
+.. only:: html
+
+   **Figure SEXTANTE 17:**
+
 .. figure:: /static/user_manual/sextante/models_parameters3.png
    :align: center
 
-   Figure SEXTANTE 17: Model Parameters
+   Model Parameters |win|
 
 To add an algorithm, double-click on its name. An execution dialog will
 appear, with a content similar to the one found in the execution panel
@@ -113,10 +129,14 @@ same one we saw in the section dedicated to the SEXTANTe toolbox.
 
 .. _figure_model_parameter_4:
 
+.. only:: html 
+
+   **Figure SEXTANTE 18:**
+
 .. figure:: /static/user_manual/sextante/models_parameters4.png
    :align: center
 
-   Figure SEXTANTE 18: Model Parameters
+   Model Parameters |win|
 
 As you can see, some differences exist. Instead of the file output box
 that was used to set the filepath for output layers and tables, a simple
@@ -161,10 +181,14 @@ provide objects that are used as inputs for that algorithm.
 
 .. _figure_model_parameter_5:
 
+.. only:: html
+
+   **Figure SEXTANTE 19:**
+
 .. figure:: /static/user_manual/sextante/models_parameters5.png
    :align: center
 
-   Figure SEXTANTE 19: Model Parameters
+   Model Parameters |win|
 
 Elements can be dragged to a different position within the canvas, to
 change the way the module structure is displayed and make it more clear
@@ -222,10 +246,14 @@ will see a context menu like the one shown next:
 
 .. _figure_model_right_click:
 
+.. only:: html
+
+   **Figure SEXTANTE 20:**
+
 .. figure:: /static/user_manual/sextante/modeler_right_click.png
    :align: center
 
-   Figure SEXTANTE 20: Modeler Right Click
+   Modeler Right Click |win|
 
 Selecting the *Remove* option will cause the selected algorithm to be removed.
 An algorithm can be removed only if there are no other algorithms dependind on
@@ -235,10 +263,14 @@ SEXTANTE will show you a warning message like the one you can see below:
 
 .. _figure_cannot_delete_alg:
 
+.. only:: html
+
+   **Figure SEXTANTE 21:**
+
 .. figure:: /static/user_manual/sextante/cannot_delete_alg.png
    :align: center
 
-   Figure SEXTANTE 21: Cannot Delete ALG
+   Cannot Delete ALG |win|
 
 Selecting the *Edit* option or simply double-clicking on the algorithm icon
 will show the parameters dialog of the algorithm, so you can change the inputs
@@ -264,10 +296,14 @@ now with a red label under its name indicating that is not active.
 
 .. deactivated.png:
 
+.. only:: html
+
+   **Figure SEXTANTE 22:**
+
 .. figure:: /static/user_manual/sextante/deactivated.png
    :align: center
 
-   Figure SEXTANTE 22: Deactivate
+   Deactivate |win|
 
 All algorithms depending (directly or undirectly) on that algorithm will also
 appear as inactive, since they cannot be executed now.
@@ -284,10 +320,14 @@ button and a dialog like the one shown next will appear.
 
 .. _figure_help_edition:
 
+.. only:: html
+
+   **Figure SEXTANTE 23:**
+
 .. figure:: /static/user_manual/sextante/help_edition.png
    :align: center
 
-   Figure SEXTANTE 23: Help Edition
+   Help Edition |win|
 
 On the right-hand side you will see a simple HTML page, created using the
 description of the input parameters and outputs of the algorithm, along with
