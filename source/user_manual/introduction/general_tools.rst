@@ -25,7 +25,7 @@ features.
 
 .. only:: html
 
-   **Figure Shortcuts**
+   **Figure Shortcuts 1:**
 
 .. figure:: /static/user_manual/introduction/shortcuts.png 
    :align: center
@@ -299,7 +299,7 @@ using the text you prefer to the map.
 
 .. only:: html
 
-   **Figure Decorations 1**
+   **Figure Decorations 1:**
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
@@ -338,7 +338,7 @@ corresponding to the four corners of the map canvas.
 
 .. only:: html
 
-   **Figure Decorations 2**
+   **Figure Decorations 2:**
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
@@ -358,7 +358,7 @@ canvas. You control the style and placement, as well as the labeling of the bar.
 
 .. only:: html
 
-   **Figure Decorations 3**
+   **Figure Decorations 3:**
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
@@ -411,6 +411,10 @@ canvas. Use the text annotation tool and click into the map canvas.
 
 .. _annotation:
 
+.. only:: html
+
+   **Figure annotation 1:**
+
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
    :width: 30em
@@ -444,7 +448,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. only:: html
 
-   **Figure Custom Annotation**
+   **Figure annotation 2:**
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
