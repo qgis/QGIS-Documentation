@@ -20,10 +20,14 @@ information about an algorithm executed at any particular moment.
 
 .. _figure_history_1:
 
+.. only:: html
+
+   **Figure SEXANTE 28:**
+
 .. figure:: /static/user_manual/sextante/history.png
    :align: center
 
-   Figure SEXANTE 28: History
+   History |win|
 
 Process information is kept as a command-line expression, even if the
 algorithm was launched from the toolbox. This makes it also useful for
