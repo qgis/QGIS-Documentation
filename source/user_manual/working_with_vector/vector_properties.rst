@@ -20,7 +20,7 @@ in the legend or right-click on the layer and select
 
 .. only:: html
 
-   **Figure Vector Proporties 1:** 
+   **Figure Vector Properties 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
@@ -66,6 +66,8 @@ marker symbols.
   - **Font marker**: Rendering with a font.
   - **Simple marker**: Rendering with a hardcoded marker.
   - **SVG marker**: Rendering with a SVG picture.
+  - **Ellipse marker**: Rendering with ellipse shapes.
+  - **Vector field marker**: Rendering 
 
 * Line layers
 
@@ -81,12 +83,28 @@ marker symbols.
   - **SVG fill**: Fill a polygon with a SVG symbol.
   - **Simple fill**: Usual rendering of a polygon (with defined fill color, 
     fill pattern and outline).
+  - **Line pattern fill**: Fill a polygon with a line pattern.
+  - **Point pattern fill**: Fill a polygon with a point pattern.
   - **Outline: Line decoration**: Add a line decoration, e.g an arrow to 
     indicate line direction.
   - **Outline: Marker line**: Use a hardcoded marker as area outline.
   - **Outline: Simple line**: Define width, color and pen style as area outline.
 
 .. index:: Color_ramps
+
+
+.. _figure_vector_7:
+
+.. only:: html
+
+   **Figure Vector 7:**
+
+.. figure:: /static/user_manual/working_with_vector/ellipse_marker.png
+   :width: 40em
+   :align: center
+
+   Rendering ellipse markers |nix|
+
 
 **Color ramps**
 
