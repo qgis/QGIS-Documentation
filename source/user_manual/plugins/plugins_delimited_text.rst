@@ -57,7 +57,7 @@ to open the Delimited Text dialog as shown in figure_delimited_text_1_.
 
 .. only:: html
 
-   **Figure Delimited Test 1:**
+   **Figure Delimited Text 1:**
 
 .. figure:: /static/user_manual/plugins/delimited_text_dialog.png
    :align: center
