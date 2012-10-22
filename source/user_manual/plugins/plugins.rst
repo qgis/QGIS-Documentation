@@ -161,7 +161,7 @@ plugins, as well as plugins available in remote repositories.
 
 .. only:: html
 
-   **Figure Plugins 1:**
+   **Figure Plugins 2:**
 
 .. figure:: /static/user_manual/plugins/plugininstaller.png
    :align: center
