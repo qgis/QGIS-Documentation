@@ -71,7 +71,7 @@ Command Line Options
    single:command line options
 
 |nix| QGIS supports a number of options when started from the command line. To
-get a list of the options, enter ``qgis ---help`` on the command line.
+get a list of the options, enter ``qgis --help`` on the command line.
 The usage statement for QGIS is:
 
 ::
@@ -111,7 +111,7 @@ The usage statement for QGIS is:
 	and a raster file set to load on startup using the following command:
 	``qgis ./raster/landcover.img ./gml/lakes.gml``
 
-**Command line option** ``---snapshot``
+**Command line option** ``--snapshot``
 
 
 This option allows you to create a snapshot in PNG format from the current view.
@@ -119,27 +119,27 @@ This comes in handy when you have a lot of projects and want to
 generate snapshots from your data.
 
 Currently it generates a PNG-file with 800x600 pixels. This can be adapted
-using the ``---width`` and ``---height`` command line
-arguments. A filename can be added after ``---snapshot``.
+using the ``--width`` and ``--height`` command line
+arguments. A filename can be added after ``--snapshot``.
 
-**Command line option** ``---lang``
+**Command line option** ``--lang``
 
 
 Based on your locale QGIS, selects the correct localization. If you would like
 to change your language, you can specify a language code. For example:
-``---lang=it``
+``--lang=it``
 starts QGIS in italian localization. A list of currently supported
 languages with language code and status is provided at
 http://www.qgis.org/wiki/GUI_Translation_Progress
 
-**Command line option** ``---project``
+**Command line option** ``--project``
 
 
 Starting QGIS with an existing project file is also possible. Just
-add the command line option ``---project`` followed by your project
+add the command line option ``--project`` followed by your project
 name and QGIS will open with all layers loaded described in the given file.
 
-**Command line option** ``---extent``
+**Command line option** ``--extent``
 
 
 To start with a specific map extent use this option. You need to add the 
@@ -147,18 +147,18 @@ bounding box of your extent in the following order separated by a comma::
 
     --extent xmin,ymin,xmax,ymax
 
-**Command line option** ``---nologo``
+**Command line option** ``--nologo``
 
 
 This command line argument hides the splash screen when you start QGIS.
 
-**Command line option** ``---noplugins``
+**Command line option** ``--noplugins``
 
 
 If you have trouble at startup with plugins, you can avoid loading them at startup. 
 They will still be available in Plugins Manager after-wards.
 
-**Command line option** ``---optionspath``
+**Command line option** ``--optionspath``
 
 You can have multiple configurations and decide which one to use when starting 
 QGIS using this option. See :ref:`gui_options` to check where does the 
@@ -166,7 +166,7 @@ operating system save the settings files. Presently there is no way to specify
 in which file where to write the settings, therefore you can create a copy of 
 the original settings file and rename it.
 
-**Command line option** ``---configpath``
+**Command line option** ``--configpath``
 
 
 This option is similar to the one above, but furthermore overrides the default 
