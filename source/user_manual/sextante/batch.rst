@@ -19,10 +19,14 @@ pop-up menu that will appear
 
 .. _figure_sextante_1:
 
+.. only:: html
+
+   **Figure SEXANTE 24:**
+
 .. figure:: /static/user_manual/sextante/batch_processing_right_click.png
    :align: center
 
-   Figure SEXANTE 24: Batch Processing Right Click
+   Batch Processing Right Click |win|
 
 The parameters table
 --------------------
@@ -35,10 +39,14 @@ introduced using a table like the one shown next.
 
 .. _figure_sextante_2:
 
+.. only:: html
+
+   **Figure SEXANTE 25:**
+
 .. figure:: /static/user_manual/sextante/batch_processing.png
    :align: center
 
-   Figure SEXANTE 25: Batch Processing
+   Batch Processing |win|
 
 Each line of this table represents a single execution of the algorithm,
 and each cell contains the value of one of the parameters. It is similar
@@ -85,10 +93,14 @@ autocompletion of other cells in the same column (same parameter).
 
 .. _figure_sextante_3:
 
+.. only:: html
+
+   **Figure SEXANTE 26:**
+
 .. figure:: /static/user_manual/sextante/batch_processing_save.png
    :align: center
 
-   Figure SEXANTE 26: Batch Processing Save
+   Batch Processing Save
 
 If the default value (*Do not autocomplete*) is selected, SEXTANTE will
 just put the selected filename in the selected cell from the parameters
@@ -104,10 +116,14 @@ to input ones.
 
 .. _figure_sextante_4:
 
+.. only:: html
+
+   **Figure SEXANTE 27:**
+
 .. figure:: /static/user_manual/sextante/batch_processing_filepath.png
    :align: center
 
-   Figure SEXANTE 27: Batch Processing File Path
+   Batch Processing File Path |win|
 
 
 Executing the batch process
