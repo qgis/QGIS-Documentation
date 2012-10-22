@@ -112,11 +112,16 @@ Each :file:`LOCATION` is defined by its coordinate system, map projection and ge
 :file:`MAPSETs` (subdirectories of the :file:`LOCATION`) that are used to subdivide the project into different topics, subregions, or as workspaces for individual team members (Neteler & Mitasova 2008 :ref:`literature_and_web`). In order to analyze vector and raster layers with GRASS modules, you must import them into a GRASS :file:`LOCATION` [#]_ .
 
 .. _figure_grass_location_1:
+
+.. only:: html
+
+   **Figure GRASS location 1:**
+
 .. figure:: /static/user_manual/grass_integration/grass_location.png
    :align: center
    :width: 40em
 
-   Figure GRASS location 1: GRASS data in the alaska LOCATION
+   GRASS data in the alaska LOCATION
 
 
 .. _sec_create_loc:
@@ -127,10 +132,15 @@ Creating a new GRASS LOCATION
 As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
 
 .. _figure_grass_location_2:
+
+.. only:: html
+
+   **Figure GRASS location 2:**
+
 .. figure:: /static/user_manual/grass_integration/create_grass_location.png
    :align: center
 
-   Figure GRASS location 2: Creating a new GRASS LOCATION or a new MAPSET in |QG|
+   Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
@@ -335,11 +345,16 @@ In figure_grass_digitizing_1_ you see the GRASS digitizing toolbar icons provide
 explains the available functionalities.
 
 .. _figure_grass_digitizing_1:
+
+.. only:: html
+
+   **Figure GRASS digitizing 1:**
+
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_toolbar.png
    :align: center
    :width: 30em
 
-   Figure GRASS digitizing 1:  GRASS Digitizing Toolbar
+   GRASS Digitizing Toolbar
 
 .. _table_grass_digitizing_1:
 
@@ -382,11 +397,16 @@ explains the available functionalities.
 The :guilabel:`Category` tab allows you to define the way in which the category values will be assigned to a new geometry element.
 
 .. _figure_grass_digitizing_2:
+
+.. only:: html
+
+   **Figure GRASS digitizing 2:**
+
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_category.png
    :align: center
    :width: 30em
 
-   Figure GRASS digitizing 2: GRASS Digitizing Category Tab
+   GRASS Digitizing Category Tab
 
 * **Mode**: what category value shall be applied to new geometry elements.
 
@@ -413,11 +433,16 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
 The :guilabel:`Settings` tab allows you to set the snapping in screen pixels. The threshold defines at what distance new points or line ends are snapped to existing nodes. This helps to prevent gaps or dangles between boundaries. The default is set to 10 pixels.
 
 .. _figure_grass_digitizing_3:
+
+.. only:: html
+
+   **Figure GRASS digitizing 3:**
+
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_settings.png
    :align: center
    :width: 30em
 
-   Figure GRASS digitizing 3: GRASS Digitizing Settings Tab
+   GRASS Digitizing Settings Tab
 
 **Symbology Tab**
 
@@ -428,11 +453,16 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 / opened boundary).
 
 .. _figure_grass_digitizing_4:
+
+.. only:: html
+
+   **Figure GRASS digitizing 4:**
+
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_symbology.png
    :align: center
    :width: 30em
 
-   Figure GRASS digitizing 4: GRASS Digitizing Symbolog Tab
+   GRASS Digitizing Symbolog Tab
 
 
 **Table Tab**
@@ -443,11 +473,16 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 The :guilabel:`Table` tab provides information about the database table for a given 'layer'. Here you can add new columns to an existing attribute table, or create a new database table for a new GRASS vector layer (see Section :ref:`creating_new_grass_vectors`).
 
 .. _figure_grass_digitizing_5:
+
+.. only:: html
+
+   **Figure GRASS digitizing 5:**
+
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_table.png
    :align: center
    :width: 30em
 
-   Figure GRASS digitizing 5: GRASS Digitizing Table Tab
+   GRASS Digitizing Table Tab
 
 .. tip:: **GRASS Edit Permissions**
 
@@ -502,13 +537,17 @@ Working with GRASS modules
 
 .. _figure_grass_toolbox_1:
 
+.. only:: html
+
+   **Figure GRASS toolbox 1:**
+
 +------------------------------+----------------------------+
 | |grass_toolbox_moduletree|   | |grass_toolbox_modulelist| |
 +------------------------------+----------------------------+
 | 1. Modules Tree              | 2. Searchable Modules List | 
 +------------------------------+----------------------------+
 
-   Figure GRASS toolbox 1: GRASS Toolbox and searchable Modules List |nix|
+  GRASS Toolbox and searchable Modules List |nix|
 
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
 
@@ -532,6 +571,10 @@ Clicking on a graphical module icon a new tab will be added to the toolbox dialo
 
 .. _figure_grass_toolbox_2:
 
+.. only:: html
+
+   **Figure GRASS Toolbox 2:**
+
 +----------------------------------+--------------------------------+
 | |grass_module_option|            | |grass_module_output|          |
 +----------------------------------+--------------------------------+
@@ -542,7 +585,7 @@ Clicking on a graphical module icon a new tab will be added to the toolbox dialo
 | 3.Module Manual                                                   |
 +-------------------------------------------------------------------+
 
-   Figure GRASS Toolbox 2: GRASS Toolbox Module Dialogs |nix|
+  GRASS Toolbox Module Dialogs |nix|
 
 **Options**
 
@@ -601,13 +644,17 @@ The first example creates a vector contour map from an elevation raster
 
 ..  _figure_grass_module_1:
 
+.. only:: html
+
+   **Figure GRASS module 1:**
+
 +--------------------------+---------------------------+
 | |grass_toolbox_rcontour| | |grass_toolbox_rcontour2| |
 +--------------------------+---------------------------+
 | 1. r\.contour Options    | 2. r\.contour Output      |
 +--------------------------+---------------------------+
 
-   Figure GRASS module 1: GRASS Toolbox r.contour module |nix|     
+   GRASS Toolbox r.contour module |nix|     
 
 Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in :ref:`vector_properties_dialog`.
 
@@ -639,11 +686,16 @@ additional vertices to the vector, causing it to load even more slowly.
 * You may change the color of the vector to display it clearly on the raster background and to contrast with the original contour lines. You will notice that the new contour lines have smoother corners than the original while staying faithful to the original overall shape.
 
 .. _figure_grass_module_2:
+
+.. only:: html
+
+   **Figure GRASS module 2:**
+
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
    :width: 40em
 
-   Figure GRASS module 2: GRASS module v.generalize to smooth a vector map |nix|
+   GRASS module v.generalize to smooth a vector map |nix|
 
 .. index::
    single:GRASS;toolbox
@@ -672,11 +724,16 @@ You should now have the ``gtopo30`` elevation with its colormap and transparency
 The GRASS plugin in QGIS is designed for users who are new to GRASS, and not familiar with all the modules and options. As such, some modules in the toolbox do not show all the options available, and some modules do not appear at all. The GRASS shell (or console) gives the user access to those additional GRASS modules that do not appear in the toolbox tree, and also to some additional options to the modules that are in the toolbox with the simplest default parameters. This example demonstrates the use of an additional option in the **r.shaded.relief** module that was shown above.
 
 .. figure_grass_module_3:
+
+.. only:: html
+
+   **Figure GRASS module 3:**
+
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
    :width: 40em
 
-   Figure GRASS module 3: The GRASS shell, r.shaded.relief module |nix|
+   The GRASS shell, r.shaded.relief module |nix|
 
 The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies the elevation values relative to the X-Y coordinate units so that the hillshade effect is even more pronounced.
 
@@ -685,11 +742,16 @@ The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies t
 * As explained above, shift the shaded relief raster below the gtopo30 raster in the Table of Contents, then check transparency of the colored gtopo30 layer. You   should see that the 3D effect stands out more strongly compared to the first shaded relief map.
 
 .. figure_grass_module_4:
+
+.. only:: html
+
+   **Figure GRASS module 4:**
+
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
    :width: 40em
 
-   Figure GRASS module 4: Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
+   Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 
 
 Raster statistics in a vector map
@@ -722,11 +784,16 @@ Another useful feature inside the GRASS Toolbox is the GRASS
 In the left browser windows you can browse through all :file:`MAPSETs` inside the current :file:`LOCATION`. The right browser window shows some meta information for selected raster or vector layers, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
 
 .. _figure_grass_module_5:
+
+.. only:: html
+
+   **Figure GRASS module 5:**
+
 .. figure:: /static/user_manual/grass_integration/grass_mapset_browser.png
    :align: center
    :width: 30em
 
-   Figure GRASS module 5: GRASS LOCATION browser |nix|
+   GRASS LOCATION browser |nix|
 
 
 The toolbar inside the :guilabel:`Browser` tab offers following tools to manage the selected :file:`LOCATION`:
