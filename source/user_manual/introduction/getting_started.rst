@@ -30,7 +30,8 @@ Installation from source
 
 If you need to build |qg| from source, please refer to the coding and
 compiling guide available at http://www.qgis.org/en/documentation/manuals.html. 
-The installation instructions are also distributed with the |qg| source code.
+The installation instructions are also distributed with the |qg| source code 
+in a file called 'INSTALL'.
 
 Installation on external media
 ..............................
