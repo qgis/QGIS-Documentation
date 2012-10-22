@@ -152,6 +152,10 @@ Network Tab
 
 .. _fig_proxy-settings:
 
+.. only:: html
+
+   **Figure Network Tab:**
+
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
    :width: 40em
