@@ -101,11 +101,16 @@ but before any elements are added.
 
 
 .. _Figure_composer_1:
+
+.. only:: html
+
+   **Figure Composer 1:**
+
 .. figure:: /static/user_manual/print_composer/print_composer_blank.png
    :align: center
    :width: 40em
 
-   Figure Composer 1: Print Composer |nix|
+   Print Composer |nix|
 
 The print composer provides three tabs:
 
@@ -204,7 +209,9 @@ view selecting the map element in the print composer and clicking the
 
 .. _figure_composer_2:
 
-Print Composer map item tab
+.. only:: html
+
+   **Figure Composer 2:**
 
 +---------------------------+---------------------------+
 | |composer_map_dialog1|    | |composer_map_dialog2|    |
@@ -212,7 +219,7 @@ Print Composer map item tab
 | a) Map dialog             | b) Extents dialog         |        
 +---------------------------+---------------------------+
 
-Figure Composer 2: Map and Extents dialog |nix|
+Print Composer map item tab - Map and Extents dialog |nix|
 
 **Extents dialog**
 
@@ -259,7 +266,9 @@ The **Grid** dialog of the map item tab provides following functionalities
 
 .. _figure_composer_3:
 
-Print Composer map item tab
+.. only:: html
+
+   **Figure Composer 3:**
 
 +---------------------------+---------------------------+
 | |composer_map_dialog3|    | |composer_map_dialog4|    |
@@ -267,7 +276,7 @@ Print Composer map item tab
 | a) Grid Dialog            | b) General options dialog |
 +---------------------------+---------------------------+
 
-Figure Composer 3: Grid and General options dialog |nix|
+Print Composer map item tab - Grid and General options dialog |nix|
    
 
 **General options dialog**
@@ -307,7 +316,9 @@ position and customize their appearance in the label item tab.
 
 .. _figure_composer_4:
 
-Print composer label item tab
+.. only:: html
+
+   **Figure Composer 4:**
 
 +---------------------------+---------------------------+
 | |composer_label1|         | |composer_label2|         |
@@ -315,7 +326,7 @@ Print composer label item tab
 | a) Label options Dialog   | b) General options dialog |
 +---------------------------+---------------------------+
 
-Figure Composer 4:  Label options and General options dialog |nix|
+Print composer label item tab - Label options and General options dialog |nix|
 
 
 **Label dialog**
@@ -356,7 +367,9 @@ canvas and position and customize their appearance in the image item tab.
 
 .. _figure_composer_5:
 
-Print composer image item tab
+.. only:: html
+
+   **Figure Composer 5:**
 
 +---------------------------+---------------------------+
 | |composer_image1|         | |composer_image2|         |
@@ -364,7 +377,7 @@ Print composer image item tab
 | a) Picture options Dialog | b) General options dialog |
 +---------------------------+---------------------------+
 
-Figure Composer 5: Picture options and General options |nix|
+Print composer image item tab - Picture options and General options |nix|
 
 .. index::
    single:Picture_database
@@ -419,7 +432,9 @@ canvas and position and customize their appearance in the legend item tab.
 
 .. _figure_composer_6:
 
-Print composer legend item tab
+.. only:: html
+
+   **Figure Composer 6:**
 
 +---------------------------+---------------------------+
 | |composer_legend1|        | |composer_legend2|        |
@@ -433,7 +448,7 @@ Print composer legend item tab
 | c) Item options dialog    |
 +---------------------------+
 
-Figure Composer 6: General, Legend items and Item option dialog |nix|
+Print composer legend item tab - General, Legend items and Item option dialog |nix|
 
 
 **General dialog**
@@ -492,7 +507,9 @@ canvas and position and customize their appearance in the scalebar item tab.
 
 .. _figure_composer_7:
 
-Print composer scalebar item tab
+.. only:: html
+
+   **Figure Composer 7:**
 
 +-----------------------------+-----------------------------+
 | |composer_scalebar1|        | |composer_scalebar2|        |
@@ -500,7 +517,7 @@ Print composer scalebar item tab
 | a) Scalebar options Dialog  | b) General options dialog   |
 +-----------------------------+-----------------------------+
 
-Figure Composer 7: Scalebar and General options dialog |nix|
+Print composer scalebar item tab - Scalebar and General options dialog |nix|
 
 
 **Scalebar dialog**
@@ -560,12 +577,17 @@ There can only be one atlas map by print composer. To enable the generation of a
   format (PDF for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
 
-.. _Figure_composer_13:
+.. _figure_composer_8:
+
+.. only:: html
+
+   **Figure Composer 8:**
+
 .. figure:: /static/user_manual/print_composer/print_composer_atlas.png
    :align: center
    :width: 30em
 
-   Figure Composer 13: Atlas generation tab |nix|
+   Atlas generation tab |nix|
 
 Generation
 ----------
@@ -598,15 +620,19 @@ This can be done with the revert and restore tools:
 * |mActionUndo| :sup:`Revert last changes`
 * |mActionRedo| :sup:`Restore last changes`
 
-or by mouse click within the :guilabel:`Command history` tab (see figure_composer_8_).
+or by mouse click within the :guilabel:`Command history` tab (see figure_composer_9_).
 
-.. _figure_composer_8:
+.. _figure_composer_9:
+
+.. only:: html
+
+   **Figure Composer 9:**
 
 .. figure:: /static/user_manual/print_composer/command_hist.png
    :align: center
    :width: 40 em
 
-   Figure Composure 8: Command history in the Print Composer |nix|
+   Command history in the Print Composer |nix|
 
 Add Basic shape and Arrow
 =========================
@@ -620,9 +646,11 @@ to the print composer canvas.
 .. |composer_arrow| image:: /static/user_manual/print_composer/print_composer_arrow.png
    :width: 20 em
 
-.. _figure_composer_9:
+.. _figure_composer_10:
 
-Print composer basic shape and arrow item tab
+.. only:: html
+
+   **Figure Composer 10:**
 
 +-----------------------------+-----------------------------+
 | |composer_shape|            | |composer_arrow|            |
@@ -630,7 +658,7 @@ Print composer basic shape and arrow item tab
 | a) shape dialog             | b) arrow dialog             |
 +-----------------------------+-----------------------------+
 
-Figure Composer 9: Shape and Arrow options dialog |nix|
+Print composer basic shape and arrow item tab - Shape and Arrow options dialog |nix|
 
 
 * The **Shape** dialog allows to draw an ellipse, rectangle, or triangle
@@ -654,9 +682,11 @@ canvas.
 .. |composer_attribute2| image:: /static/user_manual/print_composer/print_composer_attribute2.png
    :width: 20 em
 
-.. _figure_composer_10:
+.. _figure_composer_11:
 
-Print composer attribute table item tab
+.. only:: html
+
+   **Figure Composer 11:**
 
 +-----------------------------+-----------------------------+
 | |composer_attribute1|       | |composer_attribute2|       |
@@ -664,7 +694,7 @@ Print composer attribute table item tab
 | a) Table Dialog             | b) General options dialog   |
 +-----------------------------+-----------------------------+
 
-Figure Composer 10: Table and General options dialog |nix|
+Print composer attribute table item tab - Table and General options dialog |nix|
 
 
 **Table dialog**
@@ -719,17 +749,21 @@ Creating Output
 ===============
 
 
-Figure_composer_11_ shows the print composer with an example
+Figure_composer_12_ shows the print composer with an example
 print layout including each type of map element described in the sections
 above.
 
-.. _figure_composer_11:
+.. _figure_composer_12:
+
+.. only:: html
+
+   **Figure Composer 12:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
    :width: 40 em
 
-   Figure Composer 11: Print Composer with map view, legend, scalebar, coordinates and text added |nix|
+   Print Composer with map view, legend, scalebar, coordinates and text added |nix|
 
 .. index:: Export_as_image, Export_as_PDF, Export_as_SVG 
 
@@ -767,11 +801,16 @@ The  |mActionComposerManager| :sup:`Composer Manager` button in the
 toolbar and in :menuselection:`File --> Composer Manager` allows to
 add a new composer template or to manage already existing templates.
 
-.. _figure_composer_12:
+.. _figure_composer_13:
+
+.. only:: html
+
+   **Figure Composer 13:**
+
 .. figure:: /static/user_manual/print_composer/print_composer_manager.png
    :align: center
    :width: 24 em
 
-   Figure Composer 12: The Print Composer Manager |nix|
+   The Print Composer Manager |nix|
 
 .. [1] Export to SVG supported, but it is not working properly with some recent Qt4 versions. You should try and check individual on your system.
