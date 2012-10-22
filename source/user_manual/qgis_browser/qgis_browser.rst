@@ -30,7 +30,7 @@ Use QGIS Browser to preview your data. The drag and drop function makes it easy 
 
 .. only:: html
    
-   **Figure browser 1**
+   **Figure browser 1:**
 
 .. figure:: /static/user_manual/qgis_browser/browser_import_shapes.png
    :align: center
@@ -60,7 +60,7 @@ It's also possible to run QGIS Browser as a standalone application.
 
 .. only:: html
 
-   **Figure browser 2**
+   **Figure browser 2:**
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
@@ -78,7 +78,7 @@ It's also possible to preview the attributes of your files in the :guilabel:`Att
 
 .. only:: html
 
-   **Figure browser 3**
+   **Figure browser 3:**
 
 .. figure:: /static/user_manual/qgis_browser/browser_preview.png
    :align: center
