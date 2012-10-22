@@ -16,6 +16,10 @@ interface as discussed below):
 
 .. _fig_startup:
 
+.. only:: html
+
+   **Figure QGIS GUI 1:**
+
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
    :width: 40em
