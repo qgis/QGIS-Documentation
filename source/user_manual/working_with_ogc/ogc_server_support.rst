@@ -107,7 +107,7 @@ project file :file:`alaska\_airports.qgs`.
 
 .. only:: html
 
-   **Figure Server 1:**
+   **Figure Server 2:**
 
 .. figure:: /static/user_manual/working_with_ogc/wms_server_definition.png
    :align: center
