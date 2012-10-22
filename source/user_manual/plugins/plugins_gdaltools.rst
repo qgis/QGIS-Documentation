@@ -189,7 +189,7 @@ Below are some examples of use of the tools.
 
 .. only:: html
 
-   **Figure GDAL Tools 2**
+   **Figure GDAL Tools 2:**
 
 .. figure:: /static/user_manual/plugins/gdalinfo.png
    :align: center
@@ -205,7 +205,7 @@ This example will create contour lines from an SRTM elevation tile.
 
 .. only:: html
 
-   **Figure GDAL Tools 3**
+   **Figure GDAL Tools 3:**
 
 .. figure:: /static/user_manual/plugins/gdal_contour.png
    :align: center
@@ -219,7 +219,7 @@ and the result:
 
 .. only:: html
 
-   **Figure GDAL Tools 4**
+   **Figure GDAL Tools 4:**
 
 .. figure:: /static/user_manual/plugins/qgis_contours.png
    :align: center
@@ -237,7 +237,7 @@ Lon/Lat WGS84 (EPSG:4326).
 
 .. only:: html
 
-   **Figure GDAL Tools 5**
+   **Figure GDAL Tools 5:**
 
 .. figure:: /static/user_manual/plugins/gdalwarp.png
    :align: center
