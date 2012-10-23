@@ -16,12 +16,14 @@ in the legend or right-click on the layer and select
 :menuselection:`Properties` from the popup menu.
 
 
-.. _figure_vector_properties_1:
+.. do not change the order of reference-tag and only-tag, this figure has
+an external reference.
 
 .. only:: html
 
    **Figure Vector Properties 1:** 
 
+.. _figure_vector_properties_1:
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
    :align: center
