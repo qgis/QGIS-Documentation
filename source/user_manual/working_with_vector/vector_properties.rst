@@ -93,11 +93,11 @@ marker symbols.
 .. index:: Color_ramps
 
 
-.. _figure_vector_7:
+.. _figure_vector_properties_2:
 
 .. only:: html
 
-   **Figure Vector 7:**
+   **Figure Vector Properties 2:**
 
 .. figure:: /static/user_manual/working_with_vector/ellipse_marker.png
    :width: 40em
