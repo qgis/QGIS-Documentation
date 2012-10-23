@@ -141,19 +141,35 @@ Figure and image
 
 Figure
 
+
 ::
 	
-   .. _fig_readme_1:
+   .. _figure_readme_1:
 
    .. only:: html
 
     **Figure Readme 1:**
 
-    .. figure:: img/en/nix.png
+    .. figure:: ../static/common/qgislogo.png
+       :width: 20 em
        :align: center
-       :width: 12 em
 
-       My caption
+       A caption: A logo I like
+
+
+The result looks like this:
+
+.. _figure_readme_1:
+
+.. only:: html
+
+**Figure Readme 1:**
+
+.. figure:: ../static/common/qgislogo.png
+   :width: 20 em
+   :align: center
+
+   A caption: A logo I like
 
 Use ``.. only:: html`` to make the number to the figure (**Figure Readme 1**) visible only in the html files.
 The scripts will insert an automatical generated number before the caption of the figure in pdf.
@@ -165,22 +181,19 @@ Referencing to the figure can be done in two ways first using the reference labe
 
 ::
 
-   (see fig_readme_1_). 
+   (see Figure_Readme_1_). 
 
 
-It will show the anchor fig_readme1_.
+It will show the anchor Figure_Readme_1_ and you can use uppercase if you want.
 It can be used in the same :file:`.rst` document but not in other .rst documents.
 
-You can also use the reference like this
+You can not use the reference like this anymore, because in html the reference
+to the caption is lost (it now refers to the place before **Figure Readme 1:** 
 
 ::
 
-   (see :ref:`fig_readme_1`)
+   (see :ref:`fig_readme_1`, does not work due to lost reference to caption, a choice we made)
 
-
-You can use this reference to show the full caption instead (see :ref:`fig_readme_1`).  
-
-This reference can be used from the same :file:`.rst` and from other :file:`.rst` documents!
 
 Tables
 ------
@@ -224,9 +237,8 @@ Image
 
 ::
 	
-   .. image:: img/en/nix.png
-      :width: 12 em
-      :align: center
+   .. image:: ../static/common/qgislogo.png
+      :width: 10 em
 
 
 Replacement
@@ -237,20 +249,22 @@ inside a paragraph, just create an alias somewhere
 
 ::
 	
-   .. |label| image:: static/common/nix.png
-              :width: 2 em
+   .. |nice_logo| image:: ../static/common/qgislogo.png
+                  :width: 10 em
 
 and call it in your paragraph
 
 ::
 
-   my paragraph begins here with a nice picture |label|.
+   my paragraph begins here with a nice logo |nice_logol|.
 
 Here is how this example become:
 
-.. |label| image:: static/common/nix.png
+.. |nice_logo| image:: ../static/common/qgislogo.png
+               :width: 10 em
 
-my paragraph begins here with a nice picture |label|.
+my paragraph begins here with a nice logo |nice_logo|.
+
 
 Index
 =====

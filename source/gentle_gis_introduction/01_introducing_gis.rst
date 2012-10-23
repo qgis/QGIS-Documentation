@@ -17,7 +17,7 @@ Just as we use a word processor to write documents and deal with words on a comp
 GIS stands for **'Geographical Information System'**.
 A GIS consists of:
 
-- **Digital Data **– the geographical information that you will view and analyse using computer hardware and software.
+- **Digital Data** – the geographical information that you will view and analyse using computer hardware and software.
 
 - **Computer Hardware** – computers used for storing data, displaying graphics and processing data.
 

@@ -13,7 +13,7 @@ Topology
 
 Overview:
 
-**Topology **expresses the spatial relationships between connecting or adjacent vector features (points, polylines and polygons) in a GIS.
+**Topology** expresses the spatial relationships between connecting or adjacent vector features (points, polylines and polygons) in a GIS.
 Topological or topology-based data are useful for detecting and correcting digitising errors (e.g. two lines in a roads vector layer that do not meet perfectly at an intersection).
 Topology is necessary for carrying out some types of spatial analysis, such as network analysis.
 
@@ -120,16 +120,10 @@ What have we learned?
 Let's wrap up what we covered in this worksheet:
 
 - **Topology** shows the spatial relation of neighbouring vector features.
-
-- Topology in GIS is provided by **topological tools**.
-  
-
+- Topology in GIS is provided by **topological tools**.  
 - Topology can be used to **detect and correct digitizing errors**.
-
 - For some tools, such as **network analysis**, topological data is essential.
-
 - **Snapping distance** and **search radius** help us to digitise topologically correct vector data.
-
 - **Simple feature** data is not a true topological data format but it is commonly used by GIS applications.
 
 Now you try!
