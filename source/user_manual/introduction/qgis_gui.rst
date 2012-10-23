@@ -1,4 +1,5 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+
 |updatedisclaimer|
 
 .. `label_qgismainwindow`:
@@ -493,3 +494,8 @@ for the current project.
    the statusbar. In the last case, the units are set to what the project 
    projection specifies, e.g. '+units=m'.
 
+----
+
+.. [1] Keyboard shortcuts can now be configured manually
+   (shortcuts presented in this section are the defaults), using the Configure
+   Shortcuts tool under Settings Menu.

@@ -1,4 +1,5 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+
 |updatedisclaimer|
 
 .. _`sec_gpstracking`:
@@ -115,9 +116,3 @@ and click on **[Add feature]**.
    :width: 15em
 
    GPS tracking options window |nix| 
-
-----
-
-.. [1] Keyboard shortcuts can now be configured manually
-   (shortcuts presented in this section are the defaults), using the Configure
-   Shortcuts tool under Settings Menu.
