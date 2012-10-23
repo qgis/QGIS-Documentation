@@ -31,7 +31,7 @@ Special sponsors
 
 
 2012 Sponsors
--------------
+=============
 
 .. tabularcolumns:: |C|L| 
 .. list-table::
@@ -71,7 +71,7 @@ Special sponsors
 
 
 2011 Sponsors
--------------
+=============
 
 .. tabularcolumns:: |C|L| 
 .. list-table::
@@ -106,7 +106,7 @@ Special sponsors
 
 
 2010 Sponsors
--------------
+=============
 
 .. tabularcolumns:: |C|L| 
 .. list-table::
