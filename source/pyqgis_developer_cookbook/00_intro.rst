@@ -90,7 +90,7 @@ fetch, upgrade and remove Python plugins. See `Python Plugin Repositories
 <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page for various
 sources of plugins.
 
-Creating plugins in Python is simple, see :ref:`plugins` for detailed
+Creating plugins in Python is simple, see :ref:`developing_plugins` for detailed
 instructions.
 
 .. index::

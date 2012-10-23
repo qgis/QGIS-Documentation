@@ -13,7 +13,7 @@ produced by the QGIS project:
   sponsors are listed
 * On our web site at http://qgis.org/en/sponsorship/sponsors.html
 * A rotating banner on the front of QGIS.org which links over to the
-sponsor's page
+  sponsor's page
 * Place on our official  poster
 * Place on our official flyers
 * Place on an inside dedicated page in the manual (cover to remain clean QGIS

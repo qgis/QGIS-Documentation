@@ -62,7 +62,7 @@ Special sponsors
            :alt: GeoSynergy
      - **Bronze**
      - GeoSynergy, Australia (5.2012) http://www.geosynergy.com.au/
-   * -  .. figure:: /static/qgis_governance/sponsorship/ibW_BZWM.jpg
+   * -  .. figure:: /static/qgis_governance/sponsorship/ibW_BZWM.png
            :width: 6 cm
            :alt: ibW Bildungszentrum Wald
      - **Bronze**
