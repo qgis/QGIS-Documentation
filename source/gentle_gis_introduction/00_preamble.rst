@@ -1,31 +1,11 @@
 
 
-Table of Contents
-=================
-
-.. toctree::
-    :maxdepth: 2
-
-    Preamble <00_preamble>
-    Introducing GIS <01_introducing_gis>
-    Vector Data <02_vector_data>
-    Vector Attribute Data <03_vector_attribute_data>
-    Data Capture <04_data_capture>
-    Raster Data <05_raster_data>
-    Topology <06_topology>
-    Coordinate Reference Systems <07_coordinate_reference_systems>
-    Map Production <08_map_production>
-    Vector Spatial Analysis Buffers <09_vector_spatial_analysis_buffers>
-    Apatial Analysis Interpolation <10_spatial_analysis_interpolation>
-    Authors and Contributors <11_authors_and_contributors>
-    GNU Free Documentation License <12_gnu_free_documentation_license>
-
-
-****************************
-A Gentle Introduction to GIS
-****************************
 
 .. _A-Gentle-Introduction-To-GIS-reference:
+
+********
+Preamble
+********
 
 A Gentle Introduction to GIS
 
