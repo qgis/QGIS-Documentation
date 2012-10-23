@@ -95,7 +95,7 @@ If you want to define the coordinate reference system for a certain
 layer without CRS information, you can also do that in the :guilabel:`General` tab of the raster (see :ref:`label_generaltab`) and
 vector (see :ref:`vectorgeneraltab`) properties dialog. If your
 layer already has a CRS defined, it will be displayed as shown in
-:ref:`figure_vector_6`.
+:ref:`figure_vector_properties_1` .
 
 .. tip:: **CRS in the Map Legend** 
 
