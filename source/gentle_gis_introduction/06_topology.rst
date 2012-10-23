@@ -78,9 +78,14 @@ The following list shows some examples of where topology rules can be defined fo
 - Contour lines in a vector line layer must not intersect (cross each other).
   
 
-**Topological tools**Many GIS applications provide tools for topological editing.
-For example in QGIS you can **enable topological editing** to improve editing and maintaining common boundaries in polygon layers.
-A GIS such as QGIS 'detects' a shared boundary in a polygon map so you only have to move the edge vertex of one polygon boundary and QGIS will ensure the updating of the other polygon boundaries as shown in (1) . 
+**Topological tools**
+
+Many GIS applications provide tools for topological editing.
+For example in QGIS you can **enable topological editing** to improve editing 
+and maintaining common boundaries in polygon layers.
+A GIS such as QGIS 'detects' a shared boundary in a polygon map so you only 
+have to move the edge vertex of one polygon boundary and QGIS will ensure the 
+updating of the other polygon boundaries as shown in (1) . 
 
 Another topological option allows you to prevent** polygon overlaps** during digitising (see (2) ).
 If you already have one polygon, it is possible with this option to digitise a second adjacent polygon so that both polygons overlap and QGIS then clips the second polygon to the common boundary.
@@ -112,12 +117,14 @@ If you specify the search radius too small the GIS application won't find any fe
 
 **Common problems / things to be aware of**
 
- mainly designed for simplicity and for fast rendering but not for data analysis that require topology (such as finding routes across a network).
-Many GIS applications are able to show topological and simple feature data together and some can also create, edit and analyse both.
+Mainly designed for simplicity and for fast rendering but not for data 
+analysis that require topology (such as finding routes across a network).
+Many GIS applications are able to show topological and simple feature data 
+together and some can also create, edit and analyse both.
 
 What have we learned?
 
-Let's wrap up what we covered in this worksheet:
+Let\'s wrap up what we covered in this worksheet:
 
 * **Topology** shows the spatial relation of neighbouring vector features.
 * Topology in GIS is provided by **topological tools**.  
