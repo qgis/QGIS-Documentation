@@ -40,10 +40,11 @@ gpsd properly to connect QGIS to it.
 .. |gpstrack_polar| image:: /static/user_manual/working_with_gps/gpstrack_polar.png
    :width: 15em
 
-
-.. _figure_gps_tracking_1:
+.. only:: html
 
    **Figure GPS Tracking 1:**
+
+.. _figure_gps_tracking_1:
 
 +-------------------------------+-----------------------------+
 | |gpstrack_main|                                             |
@@ -63,21 +64,20 @@ Position coordinates
 
 |mActionToggleEditing| If the GPS is
 receiving signals from satellites you will see your position in latitude,
-longitude and elevation as you can see in Figure table_figure_gps_tracking_.
+longitude and elevation as you can see in Figure 1. figure_gps_tracking_1_.
 
 GPS signal strength
 --------------------
 
 |gpstrack_barchart| Here you can see
-the signal strenght of the satellites you are receiving signals from
-table_figure_gps_tracking_.
+the signal strenght of the satellites you are receiving signals from 2. figure_gps_tracking_1_.
 
 GPS polar window
 ----------------
 
 |gpstrack_polarchart| If you want
 to know where in the sky all the connected satellites are, you have to
-switch to the polar screen (see table_figure_gps_tracking_).
+switch to the polar screen (see 3. figure_gps_tracking_1_).
 You can also see the ID numbers of the satellites you are receiving signals from.
 
 GPS options
