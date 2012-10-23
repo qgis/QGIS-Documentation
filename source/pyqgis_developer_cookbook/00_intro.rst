@@ -20,7 +20,6 @@ SIP and this allows seamless integration of PyQGIS with PyQt.
    Getting PyQGIS to work (Manual compilation, Troubleshooting)
 
 
-
 There are several ways how to use QGIS python bindings, they are covered
 in detail in the following sections:
 
@@ -44,13 +43,17 @@ and examine their code.
   pair: Python; console
 
 Python Console
---------------
+==============
 
 For scripting, it is possible to take advantage of integrated Python console.
 It can be opened from menu: :menuselection:`Plugins --> Python Console`.
 The console opens as a non-modal utility window:
 
-.. image:: console.png
+.. figure:: /static/pyqgis_developer_cookbook/console.png
+   :align: center
+   :width: 40em
+
+   QGIS Python console
 
 The screenshot above illustrates how to get the layer currntly selected
 in the layer list, show its ID and optionally, if it is a vector layer,
@@ -67,12 +70,13 @@ commands)::
   import qgis.utils
 
 For those which use the console often, it may be useful to set a shortcut
-for triggering the console (within menu :menuselection:`Settings --> Configure shortcuts...`)
+for triggering the console (within menu :menuselection:`Settings --> Configure
+shortcuts...`)
 
 .. index:: Python; plugins
 
 Python Plugins
---------------
+==============
 
 Quantum GIS allows enhancement of its functionality using plugins. This
 was originally possible only with C++ language. With the addition of Python
@@ -82,16 +86,18 @@ compiling for each platform needed) and easier development.
 
 Many plugins covering various functionality have been written since the
 introduction of Python support. Plugin installer allows users to easily
-fetch, upgrade and remove Python plugins. See `Python Plugin Repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_
-page for various sources of plugins.
+fetch, upgrade and remove Python plugins. See `Python Plugin Repositories
+<http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page for various
+sources of plugins.
 
-Creating plugins in Python is simple, see :ref:`plugins` for detailed instructions.
+Creating plugins in Python is simple, see :ref:`plugins` for detailed
+instructions.
 
 .. index::
   pair: Python; custom applications
 
 Python Applications
--------------------
+===================
 
 Often when processing some GIS data, it is handy to create some scripts for
 automating the process instead of doing the same task again and again.
@@ -107,7 +113,7 @@ any further custom map tools.
 
 
 Using PyQGIS in custom application
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 Note: do *not* use :file:`qgis.py` as a name for your test script --- Python
 will not be able to import the bindings as the script's name will shadow them.
@@ -128,7 +134,7 @@ function is important to let QGIS search for the available providers.
   # load providers
   QgsApplication.initQgis()
 
-Now you can work with QGIS API - load layers and do some processing or fire
+Now you can work with QGIS API --- load layers and do some processing or fire
 up a GUI with a map canvas. The possibilities are endless :-)
 
 When you are done with using QGIS library, call :func:`exitQgis` to make
@@ -141,11 +147,11 @@ delete layers)::
   pair: custom applications; running
 
 Running Custom Applications
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------
 
 You will need to tell your system where to search for QGIS libraries and
-appropriate Python modules if they are not in a well-known location --- otherwise Python
-will complain::
+appropriate Python modules if they are not in a well-known location ---
+otherwise Python will complain::
 
   >>> import qgis.core
   ImportError: No module named qgis.core
@@ -189,4 +195,3 @@ usually two possibilities:
 The two deployment models can be mixed - deploy standalone application on
 Windows and Mac OS X, for Linux leave the installation of QGIS up to user
 and his package manager.
-

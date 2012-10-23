@@ -1,16 +1,17 @@
-
 .. _crs:
 
+*******************
 Projections Support 
-===================
+*******************
 
 .. index:: coordinate reference systems
 
 Coordinate reference systems
-----------------------------
+============================
 
-Coordinate reference systems (CRS) are encapsulated by :class:`QgsCoordinateReferenceSystem` class.
-Instances of this class can be created by several different ways:
+Coordinate reference systems (CRS) are encapsulated by
+:class:`QgsCoordinateReferenceSystem` class. Instances of this class can be
+created by several different ways:
 
 * specify CRS by its ID::
 
@@ -32,16 +33,22 @@ Instances of this class can be created by several different ways:
            AXIS["Longitude",EAST], AXIS["Latitude",NORTH]]'
     crs = QgsCoordinateReferenceSystem(wkt)
 
-* create invalid CRS and then use one of the :func:`create*` functions to initialize it. In following example we use Proj4 string to initialize the projection::
+* create invalid CRS and then use one of the :func:`create*` functions to
+  initialize it. In following example we use Proj4 string to initialize the
+  projection::
 
     crs = QgsCoordinateReferenceSystem()
     crs.createFromProj4("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs")
 
-It's wise to check whether creation (i.e. lookup in the database) of the CRS has been successful: :func:`isValid` must return :const:`True`.
+It's wise to check whether creation (i.e. lookup in the database) of the CRS
+has been successful: :func:`isValid` must return :const:`True`.
 
-Note that for initialization of spatial reference systems QGIS needs to lookup appropriate values in its internal database :file:`srs.db`.
-Thus in case you create an independent application you need to set paths correctly with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the database.
-If you are running the commands from QGIS python console or developing a plugin you do not care: everything is already set up for you.
+Note that for initialization of spatial reference systems QGIS needs to lookup
+appropriate values in its internal database :file:`srs.db`. Thus in case you
+create an independent application you need to set paths correctly with
+:func:`QgsApplication.setPrefixPath` otherwise it will fail to find the database.
+If you are running the commands from QGIS python console or developing a plugin
+you do not care: everything is already set up for you.
 
 Accessing spatial reference system information::
 
@@ -60,12 +67,14 @@ Accessing spatial reference system information::
 .. index:: projections
 
 Projections
------------
+===========
 
-You can do transformation between different spatial reference systems by using :class:`QgsCoordinateTransform` class.
-The easiest way to use it is to create source and destination CRS and construct :class:`QgsCoordinateTransform` instance with them.
-Then just repeatedly call :func:`transform` function to do the transformation. By default it does forward transformation,
-but it is capable to do also inverse transformation::
+You can do transformation between different spatial reference systems by using
+:class:`QgsCoordinateTransform` class. The easiest way to use it is to create
+source and destination CRS and construct :class:`QgsCoordinateTransform`
+instance with them. Then just repeatedly call :func:`transform` function to do
+the transformation. By default it does forward transformation, but it is
+capable to do also inverse transformation::
 
   crsSrc = QgsCoordinateReferenceSystem(4326)    # WGS 84
   crsDest = QgsCoordinateReferenceSystem(32633)  # WGS 84 / UTM zone 33N
@@ -78,4 +87,3 @@ but it is capable to do also inverse transformation::
   # inverse transformation: dest -> src
   pt2 = xform.transform(pt1, QgsCoordinateTransform.ReverseTransform)
   print "Transformed back:", pt2
-

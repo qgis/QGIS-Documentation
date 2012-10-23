@@ -1,22 +1,25 @@
-
 .. _raster:
 
 .. index:: raster layers; using
 
+*******************
 Using Raster Layers
-===================
+*******************
 
 This sections lists various operations you can do with raster layers.
 
 .. index:: raster layers; details
 
 Layer Details
--------------
+=============
 
-A raster layer consists of one or more raster bands - it is referred to as either single band or multi band raster.
-One band represents a matrix of values. Usual color image (e.g. aerial photo) is a raster consisting of red, blue and green band.
-Single band layers typically represent either continuous variables (e.g. elevation) or discrete variables (e.g. land use).
-In some cases, a raster layer comes with a palette and raster values refer to colors stored in the palette.
+A raster layer consists of one or more raster bands - it is referred to as
+either single band or multi band raster. One band represents a matrix of
+values. Usual color image (e.g. aerial photo) is a raster consisting of red,
+blue and green band. Single band layers typically represent either continuous
+variables (e.g. elevation) or discrete variables (e.g. land use). In some
+cases, a raster layer comes with a palette and raster values refer to colors
+stored in the palette.
 
   >>> rlayer.width(), rlayer.height()
   (812, 301)
@@ -34,9 +37,10 @@ In some cases, a raster layer comes with a palette and raster values refer to co
 .. index:: raster layers; drawing style
 
 Drawing Style
--------------
+=============
 
-When a raster layer is loaded, it gets a default drawing style based on its type. It can be altered either in raster layer properties or programmatically.
+When a raster layer is loaded, it gets a default drawing style based on its
+type. It can be altered either in raster layer properties or programmatically.
 The following drawing styles exist:
 
 ====== =============================== ===============================================================================================
@@ -57,13 +61,16 @@ To query the current drawing style:
   >>> rlayer.drawingStyle()
   9
 
-Single band raster layers can be drawn either in gray colors (low values = black, high values = white) or with a pseudocolor algorithm
-that assigns colors for values from the single band. Single band rasters with a palette can be additionally drawn using their palette.
-Multiband layers are typically drawn by mapping the bands to RGB colors. Other possibility is to use just one band for gray or pseudocolor
-drawing.
+Single band raster layers can be drawn either in gray colors (low values =
+black, high values = white) or with a pseudocolor algorithm that assigns colors
+for values from the single band. Single band rasters with a palette can be
+additionally drawn using their palette. Multiband layers are typically drawn by
+mapping the bands to RGB colors. Other possibility is to use just one band for
+gray or pseudocolor drawing.
 
-The following sections explain how to query and modify the layer drawing style. After doing the changes, you might want to force update
-of map canvas, see :ref:`refresh-layer`.
+The following sections explain how to query and modify the layer drawing style.
+After doing the changes, you might want to force update of map canvas, see
+:ref:`refresh-layer`.
 
 **TODO:** contrast enhancements, transparency (no data), user defined min/max, band statistics
 
@@ -72,21 +79,29 @@ of map canvas, see :ref:`refresh-layer`.
 Single Band Rasters
 -------------------
 
-They are rendered in gray colors by default. To change the drawing style to pseudocolor:
+They are rendered in gray colors by default. To change the drawing style to
+pseudocolor:
 
   >>> rlayer.setDrawingStyle(QgsRasterLayer.SingleBandPseudoColor)
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.PseudoColorShader)
 
-The ``PseudoColorShader`` is a basic shader that highlighs low values in blue and high values in red. Another, ``FreakOutShader`` uses
-more fancy colors and according to the documentation, it will frighten your granny and make your dogs howl.
+The ``PseudoColorShader`` is a basic shader that highlighs low values in blue
+and high values in red. Another, ``FreakOutShader`` uses more fancy colors and
+according to the documentation, it will frighten your granny and make your dogs
+howl.
 
-There is also ``ColorRampShader`` which maps the colors as specified by its color map. It has three modes of interpolation of values:
+There is also ``ColorRampShader`` which maps the colors as specified by its
+color map. It has three modes of interpolation of values:
 
-* linear (``INTERPOLATED``): resulting color is linearly interpolated from the color map entries above and below the actual pixel value
-* discrete (``DISCRETE``): color is used from the color map entry with equal or higher value
-* exact (``EXACT``): color is not interpolated, only the pixels with value equal to color map entries are drawn
+* linear (``INTERPOLATED``): resulting color is linearly interpolated from the
+  color map entries above and below the actual pixel value
+* discrete (``DISCRETE``): color is used from the color map entry with equal
+  or higher value
+* exact (``EXACT``): color is not interpolated, only the pixels with value
+  equal to color map entries are drawn
 
-To set an interpolated color ramp shader ranging from green to yellow color (for pixel values from 0 to 255)::
+To set an interpolated color ramp shader ranging from green to yellow color
+(for pixel values from 0 to 255)::
 
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.ColorRampShader)
   >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
@@ -103,14 +118,17 @@ To return back to default gray levels, use:
 Multi Band Rasters
 ------------------
 
-By default, QGIS maps the first three bands to red, green and blue values to create a color image (this is the ``MultiBandColor`` drawing style.
-In some cases you might want to override these setting. The following code interchanges red band (1) and green band (2):
+By default, QGIS maps the first three bands to red, green and blue values to
+create a color image (this is the ``MultiBandColor`` drawing style. In some
+cases you might want to override these setting. The following code interchanges
+red band (1) and green band (2):
 
   >>> rlayer.setGreenBandName(rlayer.bandName(1))
   >>> rlayer.setRedBandName(rlayer.bandName(2))
 
-In case only one band is necessary for visualization of the raster, single band drawing can be chosen - either gray levels or pseudocolor,
-see previous section::
+In case only one band is necessary for visualization of the raster, single band
+drawing can be chosen --- either gray levels or pseudocolor, see previous
+section::
 
   >>> rlayer.setDrawingStyle(QgsRasterLayer.MultiBandSingleBandPseudoColor)
   >>> rlayer.setGrayBandName(rlayer.bandName(1))
@@ -123,20 +141,27 @@ see previous section::
 .. _refresh-layer:
 
 Refreshing Layers
------------------
+=================
 
-If you do change layer symbology and would like ensure that the changes are immediately visible to the user, call these methods::
+If you do change layer symbology and would like ensure that the changes are
+immediately visible to the user, call these methods::
 
    if hasattr(layer, "setCacheImage"): layer.setCacheImage(None)
    layer.triggerRepaint()
 
-The first call will ensure that the cached image of rendered layer is erased in case render caching is turned on. This functionality is available from QGIS 1.4,
-in previous versions this function does not exist - to make sure that the code works with all versions of QGIS, we first check whether the method exists.
+The first call will ensure that the cached image of rendered layer is erased
+in case render caching is turned on. This functionality is available from
+QGIS 1.4, in previous versions this function does not exist --- to make sure
+that the code works with all versions of QGIS, we first check whether the
+method exists.
 
-The second call emits signal that will force any map canvas containing the layer to issue a refresh.
+The second call emits signal that will force any map canvas containing the
+layer to issue a refresh.
 
-In case you have changed layer symbology (see sections about raster and vector layers on how to do that), you might want to force QGIS to update the layer
-symbology in the layer list (legend) widget. This can be done as follows (``iface`` is an instance of QgisInterface)::
+In case you have changed layer symbology (see sections about raster and vector
+layers on how to do that), you might want to force QGIS to update the layer
+symbology in the layer list (legend) widget. This can be done as follows
+(``iface`` is an instance of QgisInterface)::
 
    iface.legendInterface().refreshLayerSymbology(layer)
 
@@ -144,7 +169,7 @@ symbology in the layer list (legend) widget. This can be done as follows (``ifac
   pair: raster layers; querying
 
 Query Values
-------------
+============
 
 To do a query on value of bands of raster layer at some specified point::
 
@@ -152,6 +177,7 @@ To do a query on value of bands of raster layer at some specified point::
   for (k,v) in ident.iteritems():
     print str(k),":",str(v)
 
-The identify function returns True/False (to indicate succeess or failure) and a dictionary - keys are band names, values are the values at chosen point.
-Both key and value are QString instances so to see actual value you'll need to convert them to python strings (as shown in code snippet). 
-
+The identify function returns True/False (to indicate succeess or failure) and
+a dictionary --- keys are band names, values are the values at chosen point.
+Both key and value are QString instances so to see actual value you'll need to
+convert them to python strings (as shown in code snippet).

@@ -1,23 +1,23 @@
-﻿
-.. _network-analysis:
+﻿.. _network-analysis:
 
+************************
 Network analysis library
-========================
+************************
 
-Starting from `ee19294562 <https://github.com/qgis/Quantum-GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_
+Starting from revision `ee19294562 <https://github.com/qgis/Quantum-GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_
 (QGIS >= 1.8) the new network analysis library was added to the QGIS core
 analysis library. The library:
 
- * creates mathematical graph from geographical data (polyline vector layers)
- * implements basics method of the graph theory (currently only Dijkstra's
-   algorithm)
+* creates mathematical graph from geographical data (polyline vector layers)
+* implements basics method of the graph theory (currently only Dijkstra's
+  algorithm)
 
 Network analysis library was created by exporting basics functions from
 RoadGraph core plugin and now you can use it's methods in plugins or
 directly from Python console.
 
 General information
--------------------
+===================
 
 Briefly typical use case can be described as:
 
@@ -26,7 +26,7 @@ Briefly typical use case can be described as:
 3. use analysis results (for example, visualize them)
 
 Building graph
---------------
+==============
 
 The first thing you need to do --- is to prepare input data, that is to
 convert vector layer into graph. All further actions will use this graph,
@@ -71,34 +71,34 @@ from qgis.networkanalysis import *
 
 Than create director::
 
-# don't use information about road direction from layer attributes,
-# all roads are treated as two-way
-director = QgsLineVectorLayerDirector( vLayer, -1, '', '', '', 3 )
-
-# use fied with index 5 as source of information about roads direction.
-# unilateral roads with direct direction have attribute value "yes",
-# unilateral roads with reverse direction — "1", and accordingly bilateral
-# roads — "no". By default roads are treated as two-way. This
-# scheme can be used with OpenStreetMap data
-director = QgsLineVectorLayerDirector( vLayer, 5, 'yes', '1', 'no', 3 )
+  # don't use information about road direction from layer attributes,
+  # all roads are treated as two-way
+  director = QgsLineVectorLayerDirector( vLayer, -1, '', '', '', 3 )
+  
+  # use fied with index 5 as source of information about roads direction.
+  # unilateral roads with direct direction have attribute value "yes",
+  # unilateral roads with reverse direction - "1", and accordingly bilateral
+  # roads - "no". By default roads are treated as two-way. This
+  # scheme can be used with OpenStreetMap data
+  director = QgsLineVectorLayerDirector( vLayer, 5, 'yes', '1', 'no', 3 )
 
 To construct a director  we should pass vector layer, that will be used
 as source for graph and information about allowed movement on each road
 segment (unilateral or bilateral movement, direct or reverse direction).
 Here is full list of this parameters:
 
- * vl — vector layer used to build graph
- * directionFieldId — index of the attribute table field, where information
-   about roads directions is stored. If -1, then don't use this info at all
- * directDirectionValue — field value for roads with direct direction
-   (moving from first line point to last one)
- * reverseDirectionValue — field value for roads with reverse direction
-   (moving from last line point to first one)
- * bothDirectionValue — field value for bilateral roads
-   (for such roads we can move from first point to last and from last to first)
- * defaultDirection — default road direction. This value will be used for
-   those roads where field directionFieldId is not set or have some value
-   different from above.
+* vl --- vector layer used to build graph
+* directionFieldId --- index of the attribute table field, where information
+  about roads directions is stored. If -1, then don't use this info at all
+* directDirectionValue --- field value for roads with direct direction
+  (moving from first line point to last one)
+* reverseDirectionValue --- field value for roads with reverse direction
+  (moving from last line point to first one)
+* bothDirectionValue --- field value for bilateral roads
+  (for such roads we can move from first point to last and from last to first)
+* defaultDirection --- default road direction. This value will be used for
+  those roads where field directionFieldId is not set or have some value
+  different from above.
 
 It is necessary then to create strategy for calculating edge properties::
 
@@ -111,10 +111,11 @@ And tell the director about this strategy::
 Now we can create builder, which will create graph. QgsGraphBuilder constructor
 takes several arguments:
 
-* crs — coordinate reference system to use. Mandatory argument.
-* otfEnabled — use  «on the fly» reprojection or no. By default true (use OTF).
-* topologyTolerance — topological tolerance. Default value is 0.
-* ellipsoidID — ellipsoid to use. By default "WGS84".
+* crs --- coordinate reference system to use. Mandatory argument.
+* otfEnabled --- use "on the fly" reprojection or no. By default const:`True`
+  (use OTF).
+* topologyTolerance --- topological tolerance. Default value is 0.
+* ellipsoidID --- ellipsoid to use. By default "WGS84".
 
 ::
 
@@ -143,7 +144,7 @@ With the next code we can get indexes of our points::
 
 
 Graph analysis
---------------
+==============
 
 Networks analysis is used to find answers on two questions: which vertices
 are connected and how to find a shortest path. To solve this problems network
@@ -156,10 +157,10 @@ The results can be represented as shortest path tree.
 The shortest path tree is as oriented weighted graph (or more precisely --- tree)
 with the following properties:
 
-  * only one vertex have no incoming edges — the root of the tree
-  * all other vertices have only one incoming edge
-  * if vertex B is reachable from vertex A, then path from A to B is single
-    available path and it is optimal (shortest) on this graph
+* only one vertex have no incoming edges — the root of the tree
+* all other vertices have only one incoming edge
+* if vertex B is reachable from vertex A, then path from A to B is single
+  available path and it is optimal (shortest) on this graph
 
 To get shortest path tree use methods Use methods :func:`shortestTree` and
 :func:`dijkstra` of `QgsGraphAnalyzer <http://qgis.org/api/api/classQgsGraphAnalyzer.html>`_
@@ -170,9 +171,9 @@ The :func:`shortestTree` method is useful when you want to walk around the
 shortest path tree. It always creates new graph object (QgsGraph) and accepts
 three variables:
 
-  * source — input graph
-  * startVertexIdx — index of the point on the tree (the root of the tree)
-  * criterionNum — number of edge property to use (started from 0).
+* source --- input graph
+* startVertexIdx --- index of the point on the tree (the root of the tree)
+* criterionNum --- number of edge property to use (started from 0).
 
 ::
 
@@ -263,13 +264,13 @@ Same thing but using :func:`dijkstra` method::
     rb.addPoint ( graph.vertex( graph.arc( edgeId ).outVertex() ).point() )
 
 Finding shortest path
-^^^^^^^^^^^^^^^^^^^^^
+---------------------
 
-To find optimal path between two points the following approach is used. Both points
-(start A and end B) are "tied" to graph when it builds. Than using methods
-:func:`shortestTree` or :func:`dijkstra` we build shortest tree with root
-in the start point A. In the same tree we also found end point B and start to
-walk through tree from point B to point A. Whole algorithm can be written
+To find optimal path between two points the following approach is used. Both
+points (start A and end B) are "tied" to graph when it builds. Than using
+methods :func:`shortestTree` or :func:`dijkstra` we build shortest tree with
+root in the start point A. In the same tree we also found end point B and start
+to walk through tree from point B to point A. Whole algorithm can be written
 as::
 
     assign Т = B
@@ -384,15 +385,15 @@ And here is the same sample but using :func:`dikstra` method::
       rb.addPoint(pnt)
 
 Areas of the availability
-^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------
 
 Area of availability for vertex A is a subset of graph vertices, that are
 accessible from vertex A and cost of the path from A to this vertices are
 not greater that some value.
 
-More clearly this can be shown with the following example: "There is a fire station.
-What part of city fire command can reach in 5 minutes? 10 minutes? 15 minutes?".
-Answers on this questions are fire station's areas of availability.
+More clearly this can be shown with the following example: "There is a fire
+station. What part of city fire command can reach in 5 minutes? 10 minutes?
+15 minutes?". Answers on this questions are fire station's areas of availability.
 
 To find areas of availablity we can use method :func:`dijksta` of the
 :class:`QgsGraphAnalyzer` class. It is enough to compare elements of cost

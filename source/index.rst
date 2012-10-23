@@ -13,7 +13,7 @@ All documentation is written in RST, saved in Github, and po/pot translatable.
 
     user_manual/index
     documentation_guidelines/README
-    A Gentle GIS Introduction <gentle_gis_introduction/00_preamble>
+    A Gentle GIS Introduction <gentle_gis_introduction/index>
     pyqgis_developer_cookbook/index
 
 

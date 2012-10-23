@@ -2,10 +2,12 @@
 
 .. _pluginlayer:
 
+*******************
 Using Plugin Layers
-===================
+*******************
 
-If your plugin uses its own methods to render a map layer, writing your own layer type based on QgsPluginLayer might be the best way to implement that.
+If your plugin uses its own methods to render a map layer, writing your own
+layer type based on QgsPluginLayer might be the best way to implement that.
 
 **TODO:**
    Check correctness and elaborate on good use cases for QgsPluginLayer, ...
@@ -13,9 +15,10 @@ If your plugin uses its own methods to render a map layer, writing your own laye
 .. index:: plugin layers; subclassing QgsPluginLayer
 
 Subclassing QgsPluginLayer
---------------------------
+==========================
 
-Below is an example of a minimal QgsPluginLayer implementation. It is an excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-watermark-plugin>`_::
+Below is an example of a minimal QgsPluginLayer implementation. It is an
+excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-watermark-plugin>`_::
 
   class WatermarkPluginLayer(QgsPluginLayer):
 
@@ -33,7 +36,8 @@ Below is an example of a minimal QgsPluginLayer implementation. It is an excerpt
       painter.restore()
       return True
 
-Methods for reading and writing specific information to the project file can also be added::
+Methods for reading and writing specific information to the project file can
+also be added::
 
     def readXml(self, node):
 

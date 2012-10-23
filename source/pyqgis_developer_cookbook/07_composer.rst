@@ -2,18 +2,22 @@
 
 .. _composer:
 
+**************************
 Map Rendering and Printing
-==========================
+**************************
 
-There are generally two approaches when input data should be rendered as a map: either do it quick way using :class:`QgsMapRenderer` or
-produce more fine-tuned output by composing the map with :class:`QgsComposition` class and friends.
+There are generally two approaches when input data should be rendered as a map:
+either do it quick way using :class:`QgsMapRenderer` or produce more fine-tuned
+output by composing the map with :class:`QgsComposition` class and friends.
 
 .. index:: map rendering; simple
 
 Simple Rendering
-----------------
+================
 
-Render some layers using :class:`QgsMapRenderer` - create destination paint device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output size and do the rendering::
+Render some layers using :class:`QgsMapRenderer` - create destination paint
+device (``QImage``, ``QPainter`` etc.), set up layer set, extent, output size
+and do the rendering::
 
   # create image
   img = QImage(QSize(800,600), QImage.Format_ARGB32_Premultiplied)
@@ -52,42 +56,50 @@ Render some layers using :class:`QgsMapRenderer` - create destination paint devi
 .. index:: output; using Map Composer
 
 Output using Map Composer
--------------------------
+=========================
 
-Map composer is a very handy tool if you would like to do a more sophisticated output than the simple rendering shown above.
-Using the composer it is possible to create complex map layouts consisting of map views, labels, legend, tables and other
-elements that are usually present on paper maps. The layouts can be then exported to PDF, raster images or directly printed
-on a printer.
+Map composer is a very handy tool if you would like to do a more sophisticated
+output than the simple rendering shown above. Using the composer it is possible
+to create complex map layouts consisting of map views, labels, legend, tables
+and other elements that are usually present on paper maps. The layouts can be
+then exported to PDF, raster images or directly printed on a printer.
 
-The composer consists of a bunch of classes. They all belong to the core library. QGIS application has a convenient GUI
-for placement of the elements, though it is not available in the gui library.
-If you are not familiar with `Qt Graphics View framework <http://doc.qt.nokia.com/stable/graphicsview.html>`_, then you are
-encouraged to check the documentation now, because the composer is based on it.
+The composer consists of a bunch of classes. They all belong to the core
+library. QGIS application has a convenient GUI for placement of the elements,
+though it is not available in the gui library. If you are not familiar with
+`Qt Graphics View framework <http://doc.qt.nokia.com/stable/graphicsview.html>`_,
+then you are encouraged to check the documentation now, because the composer
+is based on it.
 
-The central class of the composer is :class:`QgsComposition` which is derived from :class:`QGraphicsScene`. Let us create
-one::
+The central class of the composer is :class:`QgsComposition` which is derived
+from :class:`QGraphicsScene`. Let us create one::
 
   mapRenderer = iface.mapCanvas().mapRenderer()
   c = QgsComposition(mapRenderer)
   c.setPlotStyle(QgsComposition.Print)
 
-Note that the composition takes an instance of :class:`QgsMapRenderer`. In the code we expect we are running within QGIS
-application and thus use the map renderer from map canvas. The composition uses various parameters from the map renderer,
-most importantly the default set of map layers and the current extent. When using composer in a standalone application,
-you can create your own map renderer instance the same way as shown in the section above and pass it to the composition.
+Note that the composition takes an instance of :class:`QgsMapRenderer`. In the
+code we expect we are running within QGIS application and thus use the map
+renderer from map canvas. The composition uses various parameters from the map
+renderer, most importantly the default set of map layers and the current extent.
+When using composer in a standalone application, you can create your own map
+renderer instance the same way as shown in the section above and pass it to
+the composition.
 
-It is possible to add various elements (map, label, ...) to the composition - these elements have to be descendants
-of :class:`QgsComposerItem` class. Currently supported items are:
+It is possible to add various elements (map, label, ...) to the composition ---
+these elements have to be descendants of :class:`QgsComposerItem` class.
+Currently supported items are:
 
-* map - this item tells the libraries where to put the map itself. Here we create a map and stretch it over the whole paper size::
+* map --- this item tells the libraries where to put the map itself. Here we
+  create a map and stretch it over the whole paper size::
   
     x, y = 0, 0
     w, h = c.paperWidth(), c.paperHeight()
     composerMap = QgsComposerMap(c, x,y,w,h)
     c.addItem(composerMap)
 
-* label - allows displaying labels. It is possible to modify its font, color, alignment and margin.
-  ::
+* label --- allows displaying labels. It is possible to modify its font, color,
+  alignment and margin::
 
     composerLabel = QgsComposerLabel(c)
     composerLabel.setText("Hello world")
@@ -115,8 +127,9 @@ of :class:`QgsComposerItem` class. Currently supported items are:
 * shape
 * table
 
-By default the newly created composer items have zero position (top left corner of the page) and zero size.
-The position and size are always measured in millimeters::
+By default the newly created composer items have zero position (top left corner
+of the page) and zero size. The position and size are always measured in
+millimeters::
 
   # set label 1cm from the top and 2cm from the left of the page
   composerLabel.setItemPosition(20,10)
@@ -128,14 +141,17 @@ A frame is drawn around each item by default. How to remove the frame::
   composerLabel.setFrame(False)
 
 
-Besides creating the composer items by hand, QGIS has support for composer templates which are essentially compositions
-with all their items saved to a .qpt file (with XML syntax). Unfortunately this functionality is not yet available in the API.
+Besides creating the composer items by hand, QGIS has support for composer
+templates which are essentially compositions with all their items saved to a
+.qpt file (with XML syntax). Unfortunately this functionality is not yet
+available in the API.
 
-Once the composition is ready (the composer items have been created and added to the composition), we can
-proceed to produce a raster and/or vector output.
+Once the composition is ready (the composer items have been created and added
+to the composition), we can proceed to produce a raster and/or vector output.
 
-The default output settings for composition are page size A4 and resolution 300 DPI. You can change them if necessary. The paper
-size is specified in millimeters::
+The default output settings for composition are page size A4 and resolution 300
+DPI. You can change them if necessary. The paper size is specified in
+millimeters::
 
   c.setPaperSize(width, height)
   c.setPrintResolution(dpi)
@@ -143,7 +159,7 @@ size is specified in millimeters::
 .. index:: output; raster image
 
 Output to a raster image
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 The following code fragment shows how to render a composition to a raster image::
 
@@ -170,7 +186,7 @@ The following code fragment shows how to render a composition to a raster image:
 .. index:: output; PDF
 
 Output to PDF
-~~~~~~~~~~~~~
+-------------
 
 The following code fragment renders a composition to a PDF file::
 
@@ -187,5 +203,3 @@ The following code fragment renders a composition to a PDF file::
   paperRectPixel = printer.pageRect(QPrinter.DevicePixel)
   c.render(pdfPainter, paperRectPixel, paperRectMM)
   pdfPainter.end()
-
-

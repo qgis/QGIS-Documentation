@@ -2,9 +2,9 @@
 
 .. _plugins:
 
+*************************
 Developing Python Plugins
-=========================
-
+*************************
 
 It is possible to create plugins in Python programming language. In comparison
 with classical plugins written in C++ these should be easier to write,
@@ -44,7 +44,7 @@ Steps:
 .. index:: plugins; writing
 
 Writing a plugin
-----------------
+================
 
 Since the introduction of python plugins in QGIS, a number of plugins have
 appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_
@@ -97,12 +97,12 @@ Useful to help you start with a typical plugin.
 .. index:: plugins; writing code
 
 Writing code
-------------
+============
 
 .. index:: plugins; __init__.py, __init__.py
 
 __init__.py
-^^^^^^^^^^^
+-----------
 
 First, plugin manager needs to retrieve some basic information about the
 plugin such as its name, description etc. File :file:`__init__.py` is the
@@ -130,10 +130,11 @@ right place where to put this information::
 
 In QGIS 1.9.90 plugins can be placed not only into `Plugins` menu but also
 into `Raster`, `Vector`, `Database` and `Web` menus. Therefore a new "category"
-metadata entry has been introduced. This metadata entry is used as tip for users and tells them
-where (in which menu) the plugin can be found. Allowed values for "category" are:
-Vector, Raster, Database, Web and Layers. For example, if your plugin will be
-available from `Raster` menu, add this to :file:`__init__.py`::
+metadata entry has been introduced. This metadata entry is used as tip for
+users and tells them where (in which menu) the plugin can be found. Allowed
+values for "category" are: Vector, Raster, Database, Web and Layers. For
+example, if your plugin will be available from `Raster` menu, add this to
+:file:`__init__.py`::
 
   def category():
     return "Raster"
@@ -141,7 +142,7 @@ available from `Raster` menu, add this to :file:`__init__.py`::
 .. index:: plugins; metadata.txt, metadata, metadata.txt
 
 metadata.txt
-^^^^^^^^^^^^
+------------
 
 For QGIS >= 1.8 you need to add a metadata.txt (`see here <https://github.com/qgis/qgis-django/blob/master/qgis-app/plugins/docs/introduction.rst>`_)
 An exampe for this metadata.txt::
@@ -186,7 +187,7 @@ An exampe for this metadata.txt::
 .. index:: plugins; plugin.py, plugin.py
 
 plugin.py
-^^^^^^^^^
+---------
 
 One thing worth mentioning is ``classFactory()`` function which is called
 when the plugin gets loaded to QGIS. It receives reference to instance of
@@ -238,13 +239,13 @@ case it's called ``TestPlugin``. This is how should this class look like
       print "TestPlugin: renderTest called!"
 
 
-If you use QGIS 1.9.90 or higher and want to place your plugin into one
-of the new menus (`Raster`, `Vector`, `Database` or `Web`), you should 
-modify the code of the ``initGui()`` and ``unload()`` functions. Since these new menus
-are available only in QGIS 1.9.90, our first
-step is to check if the running QGIS version has all necessary functions. If the new
-menus are available, we will place our plugin under this menu, otherwise
-we will use the old `Plugins` menu. Here is an example for `Raster` menu::
+If you use QGIS 1.9.90 or higher and want to place your plugin into one of the
+new menus (`Raster`, `Vector`, `Database` or `Web`), you should modify the code
+of the ``initGui()`` and ``unload()`` functions. Since these new menus are
+available only in QGIS 1.9.90, our first step is to check if the running QGIS
+version has all necessary functions. If the new menus are available, we will
+place our plugin under this menu, otherwise we will use the old `Plugins` menu.
+Here is an example for `Raster` menu::
 
     def initGui(self):
       # create action that will start plugin configuration
@@ -289,7 +290,7 @@ These functions are called when the plugin is loaded and unloaded.
 .. index:: plugins; resource file, resources.qrc
 
 Resource File
-^^^^^^^^^^^^^
+-------------
 
 You can see that in ``initGui()`` we've used an icon from the resource file
 (called :file:`resources.qrc` in our case)::
@@ -319,7 +320,7 @@ files and install the plugin to your QGIS installation.
 .. index:: plugins; documentation, plugins; implementing help
 
 Documentation
--------------
+=============
 
 *This documentation method requires Qgis version 1.5.*
 
@@ -343,14 +344,14 @@ on which the browser will be positioned.
 .. index:: plugins; code snippets
 
 Code Snippets
--------------
+=============
 
 This section features code snippets to facilitate plugin development.
 
 .. index:: plugins; call method with shortcut
 
 How to call a method by a key shortcut
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------
 
 In the plug-in add to the ``initGui()``::
 
@@ -371,7 +372,7 @@ The method that is called when F7 is pressed::
 .. index:: plugins; toggle layers
 
 How to toggle Layers (work around)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------
 
 *Note:* from QGIS 1.5 there is :class:`QgsLegendInterface` class that allows
 some manipulation with list of layers within legend.
@@ -393,7 +394,7 @@ The method requires the layer number (0 being the top most) and can be called by
 .. index:: plugins; access attributes of selected features
 
 How to access attribute table of selected features
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------------------------
 
 ::
 
@@ -425,7 +426,7 @@ field of the selected feature(s)) and can be called by::
 .. index:: plugins; debugging with PDB, debugging plugins
 
 How to debug a plugin using PDB
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------
 
 First add this code in the spot where you would like to debug::
 
@@ -450,12 +451,12 @@ And when the application hits your breakpoint you can type in the console!
 .. index:: plugins; testing
 
 Testing
--------
+=======
 
 .. index:: plugins; releasing
 
 Releasing the plugin
---------------------
+====================
 
 Once your plugin is ready and you think the plugin could be helpful for
 some people, do not hesitate to upload it to `PyQGIS plugin repository <http://plugins.qgis.org/>`_.
@@ -467,7 +468,7 @@ list the plugins and their metadata, for examples see other `plugin repositories
 .. index:: plugins; Windows IDE configuration
 
 Remark: Configuring Your IDE on Windows
----------------------------------------
+=======================================
 
 On Linux there is no additional configuration needed to develop plug-ins.
 But on Windows you need to make sure you that you have the same environment
