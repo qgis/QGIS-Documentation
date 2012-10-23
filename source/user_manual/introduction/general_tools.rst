@@ -242,6 +242,10 @@ is displayed in a popup dialog.
 
 .. _measure_in_action:
 
+.. only:: html
+
+   **Figure Measure 1:**
+
 +------------------------+------------------------+
 | |measure_line|         | |measure_angle|        |
 +------------------------+------------------------+
