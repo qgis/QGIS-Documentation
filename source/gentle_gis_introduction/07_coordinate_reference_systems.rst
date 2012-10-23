@@ -208,37 +208,51 @@ What have we learned?
 
 Let's wrap up what we covered in this worksheet:
 
-- **Map projections** portray the surface of the earth on a two-dimensional, flat piece of paper or computer screen.
-  
-
-- There are global map projections, but most map projections are created and **optimized to project smaller areas** of the earth's surface.
-
-- Map projections are never absolutely accurate representations of the spherical earth.
-  They show **distortions of angular conformity, distance and area.** It is impossible to preserve all these characteristics at the same time in a map projection.
-
-- **A Coordinate reference system **(CRS) defines, with the help of coordinates, how the two-dimensional, projected map is related to real locations on the earth.
-
-- There are two different types of coordinate reference systems: **Geographic Coordinate Systems** and **Projected Coordinate Systems**.
-
-- **On the Fly projection** is a functionality in GIS that allows us to overlay layers, even if they are projected in different coordinate reference systems.
+* **Map projections** portray the surface of the earth on a two-dimensional, 
+  flat piece of paper or computer screen.
+* There are global map projections, but most map projections are created 
+  and **optimized to project smaller areas** of the earth's surface.
+* Map projections are never absolutely accurate representations of the 
+  spherical earth.
+  They show **distortions of angular conformity, distance and area.** It is 
+  impossible to preserve all these characteristics at the same time in a map 
+  projection.
+* **A Coordinate reference system** (CRS) defines, with the help of 
+  coordinates, how the two-dimensional, projected map is related to real 
+  locations on the earth.
+* There are two different types of coordinate reference systems: 
+  **Geographic Coordinate Systems** and **Projected Coordinate Systems**.
+* **On the Fly projection** is a functionality in GIS that allows us to 
+  overlay layers, even if they are projected in different coordinate 
+  reference systems.
 
 Now you try!
 
 Here are some ideas for you to try with your learners:
 
-- Start QGIS and load two layers of the same area but with different projections and let your pupils find the coordinates of several places on the two layers.
+* Start QGIS and load two layers of the same area but with different 
+  projections and let your pupils find the coordinates of several places 
+  on the two layers.
   You can show them that it is not possible to overlay the two layers.
-  Then define the coordinate reference system as Geographic/ WGS 84 inside the Project Properties Dialog and activate the check box 'enable On-the-fly CRS transformation'.
-  Load the two layers of the same area again and let your pupils see how On-the-fly projection works.
-
-- You can open the Project Properties Dialog in QGIS and show your pupils the many different Coordinate Reference Systems so they get an idea of the complexity of this topic.
-  With 'On-the-fly CRS transformation' enabled you can select different CRS to display the same layer in different projections.
+  Then define the coordinate reference system as Geographic/ WGS 84 inside 
+  the Project Properties Dialog and activate the check box 'enable On-the-fly 
+  CRS transformation'.
+  Load the two layers of the same area again and let your pupils see how 
+  On-the-fly projection works.
+* You can open the Project Properties Dialog in QGIS and show your pupils the 
+  many different Coordinate Reference Systems so they get an idea of the 
+  complexity of this topic.
+  With 'On-the-fly CRS transformation' enabled you can select different CRS 
+  to display the same layer in different projections.
 
 Something to think about:
 
-If you don't have a computer available, you can show your pupils the principles of the three map projection families.
-Get a globe and paper and demonstrate how cylindrical, conical and planar projections work in general.
-With the help of a transparency sheet you can draw a two-dimensional coordinate reference system showing X axes and Y axes.
+If you don't have a computer available, you can show your pupils the 
+principles of the three map projection families.
+Get a globe and paper and demonstrate how cylindrical, conical and planar 
+projections work in general.
+With the help of a transparency sheet you can draw a two-dimensional 
+coordinate reference system showing X axes and Y axes.
 Then, let your pupils define coordinates (x and y values) for different places.
 
 
@@ -246,19 +260,17 @@ Further reading:
 
 Books:
 
-- Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems.
+* Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems.
   3rd Edition.
   w Hill.
   (ISBN 0070658986)
-
-- DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems.
+* DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems.
   3rd Edition.
   Wiley.
   (ISBN 9814126195)
-
-- Galati, Stephen R. (2006): Geographic Information Systems Demystified.
+* Galati, Stephen R. (2006): Geographic Information Systems Demystified.
   Artech House Inc.
-  (ISBN 
+  (ISBN ?)
 
 **Websites:** 
 
