@@ -186,7 +186,7 @@ Map item tab --- Map and Extents dialog
 
 
 The **Map** dialog of the map item tab provides following functionalities
-(see figure_composer_2_ a):
+(see figure_composer_2_ 1.):
 
 * The **Preview** area allows to define the preview modes Rectangle,
   Cache and Render, as described above. Click on the **[Update preview]**
@@ -226,7 +226,7 @@ Print Composer map item tab - Map and Extents dialog |nix|
 
 
 The **Extents** dialog of the map item tab provides following functionalities
-(see Figure figure_composer_2_ b):
+(see Figure figure_composer_2_ 2.):
 
 * The **Map extent** area allow to specify the map extent using Y and X
   min/max values or clicking the :guilabel:`Set to map canvas extent` button.
@@ -235,7 +235,7 @@ If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
 **[Update preview]** button in the map :guilabel:`Item` tab (see Figure
-figure_composer_2_ a).
+figure_composer_2_ 1.).
 
 Map item tab --- Grid and General options dialog
 -------------------------------------------------
@@ -247,7 +247,7 @@ Map item tab --- Grid and General options dialog
 
 
 The **Grid** dialog of the map item tab provides following functionalities
-(see Figure_composer_3_ a):
+(see Figure_composer_3_ 1.):
 
 * The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the map
   element. As grid type you can specify to use solid line or cross.
@@ -284,7 +284,7 @@ Print Composer map item tab - Grid and General options dialog |nix|
 
 
 The **General options** dialog of the map item tab provides following
-functionalities (see Figure_composer_3_ b):
+functionalities (see Figure_composer_3_ 2.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the map canvas. The **[Position]**
@@ -334,7 +334,7 @@ Print composer label item tab - Label options and General options dialog |nix|
 
 
 The **Label** dialog of the label item tab provides following functionalities
-(see figure_composer_4_ a):
+(see figure_composer_4_ 1.):
 
 * The **Label** dialog offers to add text labels to the composer canvas.
   You can define the horizontal and vertical alignment, select font and
@@ -344,7 +344,7 @@ The **Label** dialog of the label item tab provides following functionalities
 
 
 The **General options** dialog of the label item tab provides following
-functionalities (see figure_composer_4_ b):
+functionalities (see figure_composer_4_ 2.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the label. The :guilabel:`Position`
@@ -389,7 +389,7 @@ Print composer image item tab - Picture options and General options |nix|
 **Picture options dialog**
 
 The **Picture options** dialog of the image item tab provides following
-functionalities (see figure_composer_5_ a):
+functionalities (see figure_composer_5_ 1.):
 
 * The **Search directories** area allows to add and remove directories
   with images in SVG format to the picture database.
@@ -405,7 +405,7 @@ functionalities (see figure_composer_5_ a):
 **General options dialog**
 
 The **General options** dialog of the image item tab provides following
-functionalities (see figure_composer_5_ b):
+functionalities (see figure_composer_5_ 2.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the picture. The **[Position]**
@@ -456,7 +456,7 @@ Print composer legend item tab - General, Legend items and Item option dialog |n
 
 
 The **General** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ a):
+functionalities (see figure_composer_6_ 1.):
 
 * Here you can adapt the legend title. You can change the font of the
   legend title, layer and item name. You can change width and height of
@@ -467,7 +467,7 @@ functionalities (see figure_composer_6_ a):
 
 
 The **Legend items** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ b):
+functionalities (see figure_composer_6_ 2.):
 
 * The legend items window lists all legend items and allows to change
   item order, edit layer names, remove and restore items of the list.
@@ -481,7 +481,7 @@ functionalities (see figure_composer_6_ b):
 
 
 The **Item options** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ c):
+functionalities (see figure_composer_6_ 3.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the legend. The **[Position]**
@@ -525,7 +525,7 @@ Print composer scalebar item tab - Scalebar and General options dialog |nix|
 
 
 The **Scalebar** dialog of the scalebar item tab provides following
-functionalities (see figure_composer_7_ a):
+functionalities (see figure_composer_7_ 1.):
 
 * The scalebar dialog allows to define the segment size of the scalebar
   in map units, the map units used per bar units, and how many left and
@@ -540,7 +540,7 @@ functionalities (see figure_composer_7_ a):
 
 
 The **General options** dialog of the scalebar item tab provides following
-features (see figure_composer_7_ b):
+features (see figure_composer_7_ 2.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the scalebar. The **[Position]**
@@ -703,7 +703,7 @@ Print composer attribute table item tab - Table and General options dialog |nix|
 
 
 The **Table** dialog of the attribute table item tab provides following
-functionalities (see figure_composer_10_ a):
+functionalities (see figure_composer_11_ 1.):
 
 * The **Table** dialog allows to select the vector layer and columns of
   the attribute table. Attribute columns can be sorted and you can define
@@ -719,7 +719,7 @@ functionalities (see figure_composer_10_ a):
 
 
 The **General options** dialog of the attribute table item tab provides
-following functionalities (see figure_composer_10_ b):
+following functionalities (see figure_composer_10_ 2.):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the table. The **[Position]**
