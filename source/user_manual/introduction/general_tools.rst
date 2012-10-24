@@ -530,7 +530,7 @@ The following dialog allows you to embed layers from other projects:
 #. Press |browsebutton| to look for another project from the Alaska dataset.
 #. Select the project file grassland. You can see the content of the project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` and klick on the layers grassland and regions.
-   The layers are embedded in the map legend and the map view now (see figure... ). 
+   The layers are embedded in the map legend and the map view now (see figure_view_embedded_ ). 
 
 .. _figure_embed_dialog:
 
