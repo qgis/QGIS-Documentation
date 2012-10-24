@@ -4,9 +4,9 @@
 
 .. _plugins_osm:
 
-*********************
-OpenStreetMap Plugin
-*********************
+*************
+OpenStreetMap
+*************
 
 
 In recent years, the OpenStreetMap project has gained popularity because in many 
@@ -15,22 +15,20 @@ The objective of the OSM project is to create a free editable map of the world
 from GPS data, aerial photography or from local knowledge. To support this 
 objective, QGIS provides a plugin that enables its users to work with OSM data.
 
-This plugin provides the basic functionalities for OSM data manipulation; this 
-includes data loading, importing, saving, downloading, editing and uploading data 
-back to the OpenStreetMap server. While implementing the OSM plugin an inspiration 
-was taken from existing OSM data editors. The purpose was to combine their 
-functionalities to get the best possible result.
+The OpenStreetMap plugin, a core QGIS plugin, provides the basic functionalities 
+for OSM data manipulation; this includes data loading, importing, 
+saving, downloading, editing and uploading data back to the OpenStreetMap server. 
+While implementing the OSM plugin an inspiration was taken from existing OSM data 
+editors. The purpose was to combine their functionalities to get the best possible 
+result.
 
 The following section gives a brief introduction to principles of the OSM project. 
-If you are not interested in information on OSM just skip the next section. 
 
 Parts of the following paragraphs are copied from the OpenStreetMap web site at 
 http://www.openstreetmap.org.
 
-.. delete this piece about skipping?
-
-**The OpenStreetMap project**
-
+The OpenStreetMap project
+=========================
 
 
 OpenStreetMap is a project to create a free editable map of the world. The maps 
@@ -81,8 +79,8 @@ payload is used for the communication with the OSM server as well.
 
 .. _`qgis-osm-connection`:
 
-**QGIS - OSM Connection**
-
+QGIS - OSM Connection
+=====================
 
 
 The first part of this section describes how OSM data primitives
@@ -142,9 +140,9 @@ Installation
 ============
 
 
-The OpenStreetMap plugin is a core plugin inside QGIS. If you have python
-support enabled, the 'OpenStreetMap' plugin can be selected in the Plugin
-Manager as described in section :ref:`load_core_plugin`.
+The OpenStreetMap plugin is a core plugin inside QGIS. The 'OpenStreetMap' 
+plugin can be selected in the Plugin Manager as described in section 
+:ref:`load_core_plugin`.
 
 
 Basic user interface
@@ -168,7 +166,8 @@ together with new graphical components as shown in figure_OpenStreetMap_2_.
    OSM plugin user interface
 
 
-**OSM Features widget**
+OSM Features widget
+-------------------
 
 The OSM Feature widget helps to identify OSM features. It shows basic 
 information on the feature type and identifier as well as information on
@@ -177,8 +176,8 @@ editing tools (in the top part of it). More information on those tools can be
 found in the sections below. The widget is initially disabled. It activates 
 itself after successful loading some OSM data.
 
-**OSM Undo/Redo widget**
-
+OSM Undo/Redo widget
+--------------------
 
 This Undo/Redo widget is used to undo and redo edit actions. It consists
 not only a classic Undo and Redo button, but also shows a list with a
@@ -186,8 +185,9 @@ brief description of the edit actions that were done. The OSM Undo/Redo
 widget is initially closed. You can show it using a button on the OSM Feature
 widget.
 
-**Toolbar menu icons**
 
+Toolbar menu icons
+------------------
 
 |osm_load| :sup:`Load OSM from file` is used to load data from a special 
 OpenStreetMap XML file.
@@ -308,7 +308,8 @@ position or shape of any existing basic feature. You can remove features or
 add new ones. All changes on nodes and ways are remembered by Undo/Redo all 
 changes can be easily uploaded to the OpenStreetMap server.
 
-**Changing feature tags**
+Changing feature tags
+---------------------
 
 
 Changing the property/tag of an OSM feature can be done directly in
@@ -337,7 +338,8 @@ where '<next tag value>' is written. Notice that you cannot change the key of
 an existing tag pair. Conveniently, there are some combo boxes of all
 existing tag keys and their typical values.
 
-**Point creation**
+Point creation
+--------------
 
 
 For point creation there is a |osm_createPoint| :sup:`Create point`
@@ -366,7 +368,8 @@ and is enabled by default. If you want to create a point very close to some
 line (but not on it) you must disable snapping by holding the
 :kbd:`Ctrl` key first.
 
-**Line creation**
+Line creation
+-------------
 
 
 For line creation, there is a |osm_createLine| :sup:`Create Line` button
@@ -382,7 +385,8 @@ Snapping is performed to all map vertices - points from the Point vector layer
 and all Line and Polygon members. Snapping can be disabled by holding the
 :kbd:`Ctrl` key.
 
-**Polygon creation**
+Polygon creation
+----------------
 
 
 For polygon creation there is a |osm_createPolygon| :sup:`Create polygon`
@@ -395,8 +399,8 @@ operation is ignored. Snapping is performed to all map vertexes - points
 (from Point vector layer) and all Line and Polygon members. Snapping can be
 disabled by holding the :kbd:`Ctrl` key.
 
-**Map feature moving**
-
+Map feature moving
+------------------
 
 If you want to move a feature (no matter what type) please use the
 |osm_move| :sup:`Move feature` button from the OSM Feature widget menu.
@@ -424,8 +428,8 @@ Snapping is also supported in this operation, this means:
    by holding :kbd:`Ctrl` key during the operation.
 
 
-
-**Map feature removing**
+Map feature removing
+--------------------
 
 If you want to remove a feature, you must identify it first. To remove
 an identified feature, use the |osm_removeFeat| :sup:`Remove this
@@ -449,7 +453,7 @@ the feature type is automatically changed to Point.
 .. _`editing_osm_relation`:
 
 Editing relations
-==================
+=================
 
 
 Thanks to existence of OSM relations we can join OSM features into groups and
@@ -461,8 +465,8 @@ update or remove them.
 
 .. _examining_relation:
 
-**Examining relation**
-
+Examining relation
+------------------
 
 
 If you want to see relation properties, first identify one of its members.
@@ -474,7 +478,8 @@ properties of the selected relation. In the table called 'Relation members'
 you see brief information on the relation members. If you click on a member,
 the plugin will make a rubberband on it in the map.
 
-**Relation creation**
+Relation creation
+-----------------
 
 
 There are 2 ways to create a relation:
@@ -483,7 +488,6 @@ There are 2 ways to create a relation:
    button on OSM Feature widget.
 #. You can create it from the :guilabel:`Relation` tab of OSM Feature widget
    using the |osm_addRelation|:sup:`Add relation` button.
-
 
 
 In both cases a dialog will appear. For the second case, the feature that
@@ -502,8 +506,8 @@ be done either by writing member identifiers, types and roles or using the
 Finally when type, tags and members are chosen, the dialog can be submitted.
 In such case the plugin creates a new relation for you.
 
-**Changing relation**
-
+Changing relation
+-----------------
 
 If you want to change an existing relation, identify it first (follow steps
 written above in Section :ref:`examining_relation`). After that click on the
@@ -689,5 +693,3 @@ the current OSM layer again):
 
 Use the submit dialog to start the process of OSM data importing.
 Reject it if you are not sure you want to import something.
-
-

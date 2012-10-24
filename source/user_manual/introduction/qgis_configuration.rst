@@ -151,7 +151,7 @@ Locale Tab
 Network Tab
 -----------
 
-.. _fig_proxy-settings:
+.. _figure_network_tab:
 
 .. only:: html
 
@@ -185,7 +185,7 @@ Network Tab
 * Define timeout for network requests in ms - default is 60000
 
 Excluding some URLs can be added to the text box below the proxy-settings (see
-Figure :ref:`fig_proxy-settings`) by pressing the **[Add]** button. After 
+Figure_Network_Tab_) by pressing the **[Add]** button. After 
 that double-click into the just created URL-field and enter the URL you would like
 to exclude from using the proxy. Obviously the button **[Remove]** removes 
 the selected entry.
