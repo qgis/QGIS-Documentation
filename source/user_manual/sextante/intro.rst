@@ -36,7 +36,7 @@ algorithms and will be explained later in this chapter).
 
    **Figure Sextante 1:**
 
-.. _figure_toolbox:
+.. _figure_toolbox_1:
 
 .. figure:: /static/user_manual/sextante/toolbox.png
    :align: center

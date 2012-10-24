@@ -15,7 +15,7 @@ point to run them whether as a single process or as a batch process
 involving several executions of a same algorithm on different sets of
 inputs.
 
-.. _figure_toolbox:
+.. _figure_toolbox_2:
 
 .. only:: html
 
