@@ -556,6 +556,7 @@ The following dialog allows you to embed layers from other projects:
 
    Embedded layers in a project |nix|
 
+While the embedded layers are editable you can't change it's properties like Style and Labeling.
 
 Removing layers
 ---------------
