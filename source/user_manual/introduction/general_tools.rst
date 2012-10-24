@@ -513,3 +513,52 @@ To delete a bookmark from the :guilabel:`Geospatial Bookmarks`
 dialog, click on it then click **[Delete]**.
 Confirm your choice by clicking **[Yes]** or cancel the
 delete by clicking **[No]**.
+
+Nesting Projects
+================
+
+.. index:: nesting projects
+
+If you want to embed content from other project files into your project you can choose
+:menuselection:`Layer --> Embed Layers and Groups -->`.
+
+Embedding layers
+----------------
+
+The following dialog allows you to embed layers from other projects:
+
+#. Press |browsebutton| to look for another project from the Alaska dataset.
+#. Select the project file grassland. You can see the content of the project (see figure_embed_dialog_).
+#. Press :kbd:`Ctrl` and klick on the layers grassland and regions.
+   The layers are embedded in the map legend and the map view now (see figure... ). 
+
+.. _figure_embed_dialog:
+
+.. only:: html
+
+   **Figure Nesting 1:**
+
+.. figure:: /static/user_manual/introduction/embed_dialog.png
+   :align: center
+   :width: 30em
+
+   Select layers and groups to embed |nix|
+
+.. _figure_view_embedded:
+
+.. only:: html
+
+   **Figure Nesting 2:**
+
+.. figure:: /static/user_manual/introduction/view_embedded.png
+   :align: center
+   :width: 50em
+
+   Embedded layers in a project |nix|
+
+
+Removing layers
+---------------
+
+Right-click on the embedded layer and choose |mActionRemoveLayer| :guilabel:`Remove` .
+
