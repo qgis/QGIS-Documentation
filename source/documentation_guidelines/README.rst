@@ -126,8 +126,8 @@ This will call the reference in the **same page**
 
 So reference 1 (my_anchor_) and reference 2 :ref:`my_anchor`
    
-Because the reference often displays a full caption, there is not really the need
-to use the word section
+Because the reference often displays a full caption, there is not really 
+the need to use the word section
 
 ::
 
@@ -139,8 +139,8 @@ to use the word section
 Figure and image
 =================
 
-Figure
 
+Figure
 
 ::
 	
@@ -148,13 +148,13 @@ Figure
 
    .. only:: html
 
-    **Figure Readme 1:**
+      **Figure Readme 1:**
 
-    .. figure:: ../static/common/qgislogo.png
-       :width: 20 em
-       :align: center
+   .. figure:: ../static/common/qgislogo.png
+      :width: 20 em
+      :align: center
 
-       A caption: A logo I like
+      A caption: A logo I like
 
 
 The result looks like this:
@@ -163,7 +163,7 @@ The result looks like this:
 
 .. only:: html
 
-**Figure Readme 1:**
+   **Figure Readme 1:**
 
 .. figure:: ../static/common/qgislogo.png
    :width: 20 em
@@ -171,28 +171,33 @@ The result looks like this:
 
    A caption: A logo I like
 
-Use ``.. only:: html`` to make the number to the figure (**Figure Readme 1**) visible only in the html files.
-The scripts will insert an automatical generated number before the caption of the figure in pdf.
+Use ``.. only:: html`` to make the number to the figure (**Figure Readme 1**) 
+visible only in the html files.
+The scripts will insert an automatical generated number before the caption of 
+the figure in pdf.
 
 To use a caption (see My caption) just insert indented text after a blank line 
 in the figure block.
 
-Referencing to the figure can be done in two ways first using the reference label like this
+Referencing to the figure can be done in two ways first using the reference 
+label like this
 
 ::
 
    (see Figure_Readme_1_). 
 
 
-It will show the anchor Figure_Readme_1_ and you can use uppercase if you want.
-It can be used in the same :file:`.rst` document but not in other .rst documents.
+It will show the anchor Figure_Readme_1_. You can use uppercase if you want.
+It can be used in the same :file:`.rst` document but not in other .rst 
+documents.
 
 You can not use the reference like this anymore, because in html the reference
 to the caption is lost (it now refers to the place before **Figure Readme 1:** 
 
 ::
 
-   (see :ref:`fig_readme_1`, does not work due to lost reference to caption, a choice we made)
+   see :ref:`figure_readme_1`, does not work due to the lost reference to 
+   the caption of the figure, this is not a 'bug' but a choice we made!
 
 
 Tables
@@ -227,7 +232,24 @@ You can also use more complicated tables by drawing them using refences and all
 
    My drawn table, mind you this is unfortunately not regarded a caption 
 
-   You can reference to it like this my_drawn_table1_. 
+   You can reference to it like this my_drawn_table_1_. 
+
+The result:
+
+.. _my_drawn_table_1:
+
++---------------+--------------------+
+| Windows       | Mac OSX            |
++---------------+--------------------+
+| |win|         | |osx|              |
++---------------+--------------------+
+| and of course not to forget |nix|  |              
++------------------------------------+
+
+My drawn table, mind you this is unfortunately not regarded a caption 
+
+You can reference to it like this my_drawn_table_1_. 
+
 
 
 Pictures
@@ -250,18 +272,18 @@ inside a paragraph, just create an alias somewhere
 ::
 	
    .. |nice_logo| image:: ../static/common/qgislogo.png
-                  :width: 10 em
+                  :width: 2 em
 
 and call it in your paragraph
 
 ::
 
-   my paragraph begins here with a nice logo |nice_logol|.
+   my paragraph begins here with a nice logo |nice_logo|.
 
 Here is how this example become:
 
 .. |nice_logo| image:: ../static/common/qgislogo.png
-               :width: 10 em
+               :width: 2 em
 
 my paragraph begins here with a nice logo |nice_logo|.
 

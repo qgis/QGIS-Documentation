@@ -1,0 +1,303 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-24 12:23\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user_manual/plugins/plugins.rst:7
+# 56461db5f7944192a0fc3d26903f0871
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:16
+# 28e9c4e35b6f4d2f8b6a4728af3eec8f
+msgid "QGIS Plugins"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:18
+# 50423cd1c6b9495d81e7d3609720219a
+msgid "QGIS has been designed with a plugin architecture. This allows many new features/functions to be easily added to the application. Many of the features in QGIS are actually implemented as either **core** or **external plugins**."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:26
+# 264ad891bde34de0abe1157bca7fa22a
+msgid "**Core Plugins** are maintained by the QGIS Development Team and are automatically part of every QGIS distribution. They are written in one of two languages: C++ or Python. More information about core plugins are provided in Section :ref:`core_plugins`"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:31
+# 8d0656ea752e47b4b3644d3aaa9bf74b
+msgid "**External Plugins** are currently all written in Python. They are stored in external repositories and maintained by the individual authors. They can be added to QGIS using the :guilabel:`Python Plugin Installer`. More information about external plugins is provided in Section :ref:`load_external_plugin`."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:43
+# 0c051d61713e44459a33ddcd7317a302
+msgid "Managing Plugins"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:45
+# 7ea34347241449c48689d59f09d32c4a
+msgid "Managing plugins in general means loading or unloading them using the :guilabel:`Plugin Manager`. External plugins can be installed and directly activated or uninstalled using the :guilabel:`Python Plugin Installer`. To deactivate and reactivate external plugins, the :guilabel:`Plugin Manager` is used again."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:52
+# f7bb23eae1354b6185faaff334253ce5
+msgid "Loading a QGIS Core Plugin"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:55
+# 0976001b6388448b881b8b1b49c39e90
+msgid "Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --> Manage Plugins`"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:73
+# 2754411fb70943be8f6dc2debfe77759
+msgid "The :guilabel:`Plugin Manager` lists all the available plugins and their status (loaded or unloaded), including all core plugins and all external plugins that have been installed and automatically activated using the :guilabel:`Python Plugin Installer` (see Section :ref:`load_external_plugin`). Those plugins that are already loaded have a check mark to the left of their name. Figure_plugins_1_ shows the Plugin Manager dialog."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:80
+# 0a4efdf7f3d047f1a49c210b9b064426
+msgid "To enable a particular plugin, click on the checkbox to the left of the plugin name, and click **[OK]**. When you exit the application, a list of loaded plugins is retained, and the next time you run QGIS these plugins are automatically loaded."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:88
+# d153e5b31d244c4598c7e140cdc3116c
+msgid "**Crashing Plugins**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:90
+# 3a97ccf450e6487d82923501050d6c38
+msgid "If you find that QGIS crashes on startup, a plugin may be at fault. You can stop all plugins from loading by editing your stored settings file (see :ref:`gui_options` for location). Locate the plugins settings and change all the plugin values to false to prevent them from loading. |nix| For example, to prevent the Delimited text plugin from loading, the entry in \\$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this: ``Add Delimited Text Layer=false``. Do this for each plugin in the [Plugins] section. You can then start QGIS and add the plugins one at a time from the :guilabel:`Plugin Manager` to determine which plugin is causing the problem."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:104
+# a7f6abc4e8ef4ccfbd81baa5e19c2ab2
+msgid "Loading an external QGIS Plugin"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:107
+# 699e243d1e524b97a4069fdb941b5b61
+msgid "External QGIS plugins are written in Python. They are by default stored in either the 'Official' or 'User contributed' QGIS Repositories, or in various other external repositories maintained by individual authors. These lists are available automatically from the :guilabel:`Python Plugin installer` via :menuselection:`Fetch Python Plugins...`."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:113
+# 58e5d18100d44cf99d9069b47643fc33
+msgid "Detailed documentation about the usage, minimum QGIS version, homepage, authors, and other important information are provided with the external plugins themselves and is not included in this manual [#]_ [#]_."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:117
+# df470d108a0c40b691df0bb99c1c438a
+msgid "Currently (at the time of testing version 1.8 of QGIS) there are over 90 external plugins available from thirteen listed repositories. Some of these plugins offer functionality that will be required by many users (for example: providing the user with the ability to view and edit OpenStreetMap data, or to add GoogleMap layers) while others offer very specialized functions (for example: Calculate economic pipe diameters for water supply networks)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:124
+# add1c51220f043b79a9ee1ba2300ce53
+msgid "It is, however, quite straightforward to search through all the available external plugins by providing keywords, choosing a named repository and/or filtering on the status of plugins (currently installed or uninstalled in your system). Searching and filtering is done from the QGIS Python Plugin Installer (see figure_plugins_2_)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:129
+# 9dd67c97e751461bbc84e482fe5f396a
+msgid "**Add more repositories**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:131
+# 922919c369a148c7819da5dca832aef2
+msgid "To add the 'User contributed' repository and/or several external author repositories, open the Plugin Installer (:menuselection:`Plugins --> Fetch Python Plugins`), go to the tab :guilabel:`Repositories`, and click **[Add 3rd party repositories]**. If you do not want one or more of the added repositories, they can be disabled via the **[Edit...]** button, or completely removed with the **[Delete]** button."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:139
+# cb8b00c1e9984bf4a552fef427bab028
+msgid "There is only one step required to integrate external plugins into QGIS:"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:141
+# c5cc78fc42f1436e87c4374efca4d1f4
+msgid "Download an external plugin from a repository using the :guilabel:`Python Plugin Installer` (see :ref:`python_plugin_installer`). The new external plugin will be added to the list of available plugins in the :guilabel:`Plugin Manager` and is automatically loaded."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:150
+# 0aa54e3d902c470a9eb66987d30a37a5
+msgid "Using the QGIS Python Plugin Installer"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:159
+# f41608ac37244911b289be3ffffb56fd
+msgid "In order to download and install an external Python plugin, click the menu :menuselection:`Plugins --> Fetch Python Plugins`. The :guilabel:`Plugin Installer` window will appear (figure_plugins_2_) with the tab :guilabel:`Plugins`, containing a list of all locally installed Python plugins, as well as plugins available in remote repositories."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:178
+# 167b06484fd246338b2612015fbf10ba
+msgid "Each plugin can be either:"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:180
+# 3c07fd6da8784b1a9e1cd7e1d2ca9176
+msgid "**not installed** - this means the plugin is available in the repository, but is not installed yet. In order to install it, select the plugin from the list and click the button **[Install plugin]**."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:183
+# 1c85a19b6f23483fa64aeb6f0881ea4e
+msgid "**new** - this means that the plugin is newly available in the repository."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:184
+# 3b2060ece58a46528b04d325c758f95d
+msgid "**installed** - this indicates that the plugin is already installed. If it is also available in any repository the **[Reinstall plugin]** button will be enabled. If the available version is older than the installed version, the **[Downgrade plugin]** button will appear instead."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:188
+# 3e36145edf5f434a8fc22e5b144c9b8e
+msgid "**upgradeable** - this means that the plugin is installed, but there is an updated version available. In this case, the **[Upgrade plugin]** and **[Upgrade all]** buttons will be enabled."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:191
+# 07d2c05f40cf488fad3c930d29b12be6
+msgid "**invalid** - this means that the plugin is installed, but is unavailable or broken. The reason will be explained in the plugin description field."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:195
+# 619e72ed6d0d4cd1a8b963d4b8bda304
+msgid "**Plugins tab**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:198
+# df954d802db94243acc5c9be82311ce1
+msgid "To install a plugin, select it from the list and click the **[Install plugin]** button. The plugin is then activated and installed in its own directory."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:203
+# 1e36ee7154e34688907c823f90ae5d58
+msgid "``./share/qgis/python/plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:204
+# 4b6f3b8990474abb9965d4f1bd739c86
+msgid "``/home/\\$USERNAME/.qgis/python/plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:206
+# b0d5035d84d04fc4b4bbe833a4fa6ee1
+msgid "``./Contents/MacOS/share/qgis/python/plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:207
+# ef1eb99adcd8406d83e5583bf16b3ec2
+msgid "``/Users/$USERNAME/.qgis/python/plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:209
+# ba0223a12ea643abb02f58efb888f9e4
+msgid "``C:\\text\\Program Files\\QGIS\\python\\plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:210
+# c7221cf9b8cd49858d6661bf4debdb91
+msgid "``C:\\text\\Documents and Settings\\$USERNAME\\.qgis\\python\\plugins``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:213
+# b9978ae10ce3466896a650b3c1077183
+msgid "If the installation is successful, a confirmation message will appear."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:215
+# 5acbcd06a35e4772910980a875f6406c
+msgid "If the installation fails, the reason for the failure will be displayed in a warning dialog. Most often, errors are the result of connection problems and/or missing Python modules. In the former case you will likely need to wait before trying the install again, in the latter case, you should install the missing modules relevant to your operating system prior to using the plugin. For Linux, most required modules should be available via a package manager. For install instructions in Windows|win| visit the module home page. If you are using a proxy, you may need to configure it under :menuselection:`Edit --> Options (Gnome, OSX)` or :menuselection:`Settings --> Options (KDE, Windows)` on the :guilabel:`Proxy` tab."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:227
+# f6020eb93dc3430ba676127a0d76af9a
+msgid "The **[Uninstall plugin]** button is enabled only if the selected plugin is installed and is not a core plugin. Note that if you have installed an update to a core plugin, you can uninstall this update with the **[Uninstall plugin]** and revert to the version shipped with Quantum GIS. This default version however, cannot be uninstalled."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:233
+# ae7e09dd0fab413c990c62943b462e4a
+msgid "**Repositories tab**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:236
+# 34696ff7bdd04125bb10a81f22d0fb43
+msgid "The second tab :guilabel:`Repositories`, contains a list of plugin repositories available for the :guilabel:`Plugin Installer`. By default, only the QGIS Official Repository is enabled. You can add several user-contributed repositories, including the central QGIS Contributed Repository and other external repositories by clicking the **[Add 3rd party repositories]** button. The added repositories contain a large number of useful plugins which are not maintained by the QGIS Development Team. As such, we cannot take any responsibility for them. You can also manage the repository list manually, that is add, remove, and edit the entries. Temporarily disabling a particular repository is possible by clicking the **[Edit]** button."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:247
+# 5d10b37184a64d2099522f9ea3665449
+msgid "**Options tab**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:251
+# edc71ad0de764e49b082c89aca211e3e
+msgid "The :guilabel:`Options` tab is where you can configure the settings of the :guilabel:`Plugin Installer`. The |checkbox| :guilabel:`Check for updates on startup` checkbox tells QGIS to automatically look for plugin updates and news. By default, if this feature is enabled all repositories listed and enabled in the :guilabel:`Repositories` tab are checked for updates each time the program is started. The frequency of update checking can be adjusted using the dropdown menu, and may be adjusted from once a day right up to once a month. If a new plugin or update is available for one of the installed plugins, a notification will appear in the Status Bar. If the checkbox is disabled, looking for updates and news is performed only when the :guilabel:`Plugin Installer` is manually launched from the menu."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:255
+# 7c8cb53e817f495f90cef873a7367565
+msgid "Although the plugin installer update can handle ports different from 80, some internet connections will cause problems when attempting to automatically check for updates. In these cases, a *Looking for new plugins...* indicator will remain visible in the Status Bar during your entire QGIS session, and may cause a program crash when exiting. In this case please disable the checkbox."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:257
+# 9ca14332ab964bea8983f2258d59cca2
+msgid "In addition, you may specify the type of plugins that are displayed by the :guilabel:`Python Plugin Installer`. Under *Allowed plugins*, you can specify whether you would like to:"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:260
+# 33bd195561cd4f69906d2fb6934b82e6
+msgid "Only show plugins from the official repository,"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:261
+# 0f812d9cc8df4907912548a615327da0
+msgid "Show all plugins except those marked as experimental,"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:262
+# 46a9e10336a04eb8b153914d7800893c
+msgid "or Show all plugins, even those marked as experimental."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:264
+# e1fb4c77e9ca44b7b9868ff08cbd0b8d
+msgid "**Using experimental plugins**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:266
+# dde4c3d693f5429e8ee19d3539f1e8f4
+msgid "Experimental plugins are generally unsuitable for production use. These plugins are in the early stages of development, and should be considered 'incomplete' or 'proof of concept' tools. The QGIS development team does not recommend installing these plugins unless you intend to use them for testing purposes."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:276
+# ea32fabd1e8f42f799342a337f8f0c21
+msgid "Data Providers"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:278
+# bcd5674280da430da4f754ff7621d045
+msgid "Data Providers are \"special\" plugins that provides access to a data store. By default, QGIS supports PostGIS layers and disk-based data stores supported by the GDAL/OGR library. A Data Provider plugin extends the ability of QGIS to use other data sources."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:281
+# bed11475633a459b9d9c583cfa5cb1e5
+msgid "Data Provider plugins are registered automatically by QGIS at startup. They are not managed by the Plugin Manager but used behind the scenes when a data type is added as a layer in QGIS."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:284
+# 842c123ac9ce4fd9b110280965ff6861
+msgid "Updates of core plugins may be available in this repository as external overlays."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins.rst:286
+# a9ca3ab32c1c4fd5a9dd712e08588373
+msgid "fTools, Mapserver Export, and the Plugin Installer are Python plugins, but they are also part of the QGIS sources, and are automatically loaded and enabled inside the QGIS Plugin Manager (see Section :ref:`load_external_plugin`)."
+msgstr ""
+

@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-24 12:23\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:7
+# 4384a05ed4f84a718208a8a4704f2569
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:14
+# c3bf9406bdda4b249853a8e9a16f6eec
+msgid "Field Calculator"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:16
+# 5e57ad94fd704b1ab0016d637b177430
+msgid "The |mActionCalculateField| :sup:`Field Calculator` button in the attribute table allows to perform calculations on basis of existing attribute values or defined functions, e.g to calculate length or area of geometry features. The results can be written to a new attribute column or it can be used to update values in an already existing column. The creation of new attribute fields is currently only possible in PostGIS and with OGR formats, if GDAL version is >= 1.6.0."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:24
+# dae3b11e52944e6d8c3cdac43f25aac2
+msgid "You have to bring the vector layer in editing mode, before you can click on the field calculator icon to open the dialog (see Figure_attributes_3). In the dialog you first have to select whether you want to update an existing field, only update selected features or create a new attribute field, where the results of the calculation will be added."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:42
+# 44e97a396a13481ba6f23546e6b59764
+msgid "If you choose to add a new field, you need to enter a field name, a field type (integer, real or string), the total field width, and the field precision. For example, if you choose a field width of 10 and a field precision of 3 it means you have 6 signs before the dot, then the dot and another 3 signs for the precision."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:48
+# 8e2bc2eed3484aefa19878271f040f60
+msgid "The **Fields list** contains all attributes of the attribute table to be searched. To add an attribute to the Field calculator expression field, double click its name in the Fields list. Generally you can use the various fields, values and operators to construct the calculation expression or you can just type it into the box."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:54
+# 7226deeee3ec4e9babfe877fbb59a558
+msgid "The **Values list** lists the values of an attribute field. To list all possible values, select the attribute field in the Fields list and click the **[All]** button. To list all values of an attribute field that are present in the sample table, select the attribute in the Fields list and click the **[Sample]** button. The procedure is the same as for the Query Builder. To add a value to the Field calculator expression box, double click its name in the Values list."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:62
+# 1c84471c0ff9418bb48f68478ea6ca6d
+msgid "The **Operators section** contains all usable operators. To add an operator to the Field calculator expression box, click the appropriate button. Mathematical calculations ( + , - , \\* , ...), trigonometric functions ( sin, cos, tan, ...), extract geometric information ( length and area ) are available, together with concatenator (||) and row counter. Stay tuned for more operators to come!"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:69
+# 1106e3f62f02472d82ee2ba63980a434
+msgid "A short example illustrates how the field calculator works. We want to calculate the length of the ``railroads`` layer from the :file:`QGIS_example_dataset`:"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:75
+# 3913ac9743bf4ed1816361e2df166724
+msgid "Load the Shapefile *railroads.shp* in |qg| and open the :guilabel:`Attribute Table` dialog."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:77
+# d633b72383274ea1b9291970d384d0cb
+msgid "Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the |mActionCalculateField| :sup:`Field Calculator` dialog."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:79
+# fd7851ae2da542da8b44acd58ccd262d
+msgid "Unselect the |checkbox| :guilabel:`Update existing field` checkbox to enable the new field box."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:81
+# 107620c86df94075976ad41b3ed114df
+msgid "Add ``length`` as output field name, ``real`` as output field type and define output field width 10 and a precision of 3."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:83
+# ce8ab8b2c3494504b538aecc293c8a31
+msgid "Now click on Operator ``length`` to add it as \\$length into the field calculator expression box and click **[Ok]**."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:88
+# 38c835e995dc4252ab06df446ec35df8
+msgid "Due to limited space screen, not all the operators are available through the buttons. They are all listed in the following table."
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:94
+# 89f792afa5594fb998bec8da26c6a265
+msgid "List of operators supported by the field calculator"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:96
+# f9395b84b7fe49509e052075cf16f800
+msgid "String"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:96
+# f6aca5919d1d448aac78210936162eab
+msgid "Literal string value"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:98
+# 8485940f053b4b0ab8c0ee26d369e314
+msgid "NULL"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:98
+# d4ec0a8a25144acbb99a8fba53a903b3
+msgid "null value"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:99
+# 8ac13d9a07854e6c89ff09274afa3521
+msgid "sqrt(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:99
+# cee92d804b0c4abfb3a0fd0aa77c4258
+msgid "square root"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:100
+# 1077c69c23db4dbbb48b39c4c819e188
+msgid "sin(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:100
+# 6caea8687c924f56b97475418aec43f0
+msgid "sinus of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:101
+# 1162c7877ab84968a0e5d9f4990f8001
+msgid "cos(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:101
+# 07b5c2ad58bc41c795327fdd2226bb81
+msgid "cosinus of *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:102
+# 3587866cf8cb49db975f842dc4aab918
+msgid "tan(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:102
+# 808bb5e4bf6147b8ac4de90cc5ea761d
+msgid "tangens of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:103
+# 0fe005bc7992446ebfa888f8b5502bc5
+msgid "asin(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:103
+# 9704c22c9f964bb38693a2eb72c6232c
+msgid "arcussinus of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:104
+# 1721dba4729f4a98a0004318eeba77c3
+msgid "acos(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:104
+# 80ca6bc0697f41e4a729debbcb3e6ce3
+msgid "arcuscosinus of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:105
+# c961f4c5d2664fe79231184fa84f14ea
+msgid "atan(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:105
+# 61b273bd6cff4469bae0c94995c8aaee
+msgid "arcustangens of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:106
+# 58514571deef46fc80047812fdea6f6c
+msgid "to int(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:106
+# 6c5b05e82b8e48dd8ed7f1dc07ba4684
+msgid "convert string *a* to integer"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:107
+# e2126e78e2b446919ada86215602b736
+msgid "to real(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:107
+# 6ace4239f6304304b9dc18b0f9da909d
+msgid "convert string *a* to real"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:108
+# 1a5e1f8a91594b63b9714b5a53fb64f5
+msgid "to string(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:108
+# 9670641b125d48038f3b3ee01342cff2
+msgid "convert number *a* to string"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:109
+# c795411615054545bb217c6c44569e50
+msgid "lower(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:109
+# b3db96a927e644f0b0363f0548a03315
+msgid "convert string *a* to lower case"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:110
+# febfe9bc302b4ed8a2ad54534a3e319b
+msgid "upper(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:110
+# 8ef974b234f74b11927e1533e1a0be45
+msgid "convert string *a* to upper case"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:111
+# 9cdf79da7df44cfdbc161a300ce0342a
+msgid "length(*a*)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:111
+# b14f5693486d471a9cf9a1c1da5f6c6e
+msgid "length of string *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:112
+# a0714336aa624928bf29e98cf58ddb72
+msgid "atan2(y,x)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:112
+# 0e9833dc69ef4c5d88433878e337ca74
+msgid "arcustangens of y/x using the signs of the two arguments to determine the quadrant of the result"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:114
+# 47db97cae5704f9899b6bff69df70ca8
+msgid "replace(*a*, replacethis, withthat)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:114
+# 695adba240ec4899b9ea514cd2bbfde5
+msgid "replace *replacethis* with *withthat* in string *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:115
+# fade7a9f3439414083ca274806d9328d
+msgid "substr(*a*,from,len)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:115
+# fcff2f4bd94f4669a2222e8796e99583
+msgid "len characters of string *a* starting from from (first character index is 1)"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:117
+# e7c853a9c6114f608b07e343f58b372e
+msgid "*a* || *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:117
+# 8b1db979f3934a19ba59a3b60b2a553c
+msgid "concatenate strings *a* and *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:118
+# 454caf677e744a818d56508743f0447e
+msgid "\\$rownum"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:118
+# dee76e01d71a41f7815b4675967f27b3
+msgid "number current row"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:119
+# d3561861fae94d56bdc221785e9965bc
+msgid "\\$area"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:119
+# 0256377d2d9c41ddbb8c6c65e6572d1a
+msgid "area of polygon"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:120
+# 7ad310c8479349c0a089dec4ceaf1eb5
+msgid "\\$perimeter"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:120
+# 33719d1749364badbbc8025dc7325b69
+msgid "perimeter of polygon"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:121
+# 8bc38ca26fc648bea517cd0c04023282
+msgid "\\$length"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:121
+# 2d1bb2662557493591622b39a57fd5f4
+msgid "length of line"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:122
+# 46d5e9ae64cd4a5284bff1aa75adf9ea
+msgid "\\$id"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:122
+# b65b72813ad347d880375b6412f0ae94
+msgid "feature id"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:123
+# 64e15fac1eb0490eba2149cf35155880
+msgid "\\$x"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:123
+# 6341538f567a4a40994ae63d0f344e86
+msgid "x coordinate of point"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:124
+# bb0b433fe8d349dcbba14b88a4dceab8
+msgid "\\$y"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:124
+# 7a66cf2319ea45feaad6de0746dabf77
+msgid "y coordinate of point"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:125
+# 148380e21feb4f17a62c34d55e3e2c63
+msgid "*a* |wedge| *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:125
+# 1113ca5dd11e4c8e9fc6c3c71dfe9e13
+msgid "*a* raised to the power of *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:126
+# aa5ca9c4f67c492d9bef87569fb7b617
+msgid "*a* \\* *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:126
+# 1782df86ad214af696ccf66e0b3850e4
+msgid "*a* multiplied by *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:127
+# 69b73e15917c4c1bb3fd389e2515b453
+msgid "*a* / *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:127
+# 262bed14164343ac9e4ef102eaf5c243
+msgid "*a* divided by *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:128
+# 2907f6d1eda44bcb8fbf0de21feffe08
+msgid "*a* + *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:128
+# 83563efcbb2142e8ae978bf8c0a10951
+msgid "*a* plus *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:129
+# 84e5dc620e8b444ebc89cf7136ab1cda
+msgid "*a* - *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:129
+# 2b56558f0ce94912afb5dbfd15191b9f
+msgid "*a* minus *b*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:130
+# 3f9aa81e1c41442cb6076b97a768aa2c
+msgid "\\+ *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:130
+# 0e2e4297e6f64d15a0a0eaa54c651bac
+msgid "positive sign"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:131
+# 305c1ee0398a4d899fb49b6f29ed7fb7
+msgid "\\- *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:131
+# dcec10847279406c822340e613b098d7
+msgid "negative value of *a*"
+msgstr ""
+
+#: ../../source/user_manual/working_with_vector/field_calculator.rst:134
+# 804c06b6dc8a427eaf710d24c1f93cbe
+msgid "List of operators for the field calculator"
+msgstr ""
+

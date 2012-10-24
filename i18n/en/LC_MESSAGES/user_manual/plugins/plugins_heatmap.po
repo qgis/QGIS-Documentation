@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-24 12:23\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:7
+# ce3f0029de294fc78ff992d5d93c9aa1
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:12
+# ce1ac2300ae740a2a756b3fb2b551c27
+msgid "Heatmap Plugin"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:15
+# 54046e0ecbfb4ba5b7c7b7f85e12fd77
+msgid "The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a point vector map. A heatmap is a raster map showing the density or magnitude of point related information. From the result \"hotspots\" can easily be identified."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:21
+# f53045624c98473ea40f82084c6a75ce
+msgid "Activate the Heatmap plugin"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:23
+# 0d85590c6db1451bbecb24676d5a2262
+msgid "First this core plugin needs to be activated using the Plugin Manager (see Section :ref:`load_core_plugin`). After activation the heatmap icon |heatmap| can be found in the Raster Toolbar."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:27
+# 0000284408fc4efdbcc898d06badfd2b
+msgid "Select from menu :menuselection:`View -->` :menuselection:`Toolbars -->` :menuselection:`Raster` to activate the Raster Toolbar when it is not yet activated."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:32
+# 198ed520a8f048a7821658472debafe4
+msgid "Using the Heatmap plugin"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:34
+# 6a9fb7a129444a45adf132759baafea1
+msgid "The |heatmap| :sup:`Heatmap` toolbutton starts the Dialog of the Heatmap plugin (see figure_heatmap_2_)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:37
+# 79812e917f7443f39f5b99f45e112f6b
+msgid "The dialog has the following options:"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:39
+# 2daf07a512a3475da2ae52bfd84fa9c0
+msgid "**Input Point dialog**: Provides a selection of loaded point vector maps."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:40
+# 4b156c84941946948565ed7cd9632935
+msgid "**Output Raster**: Using the browser button you select the folder and the name of the output raster the heatmap plugin will generate. It is not necessary to give a file extension"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:43
+# 3e1fa1c6117d46b0bbd8cb1119e89d74
+msgid "**Output Format**: Selection of the output format. Although all formats supported by GDAL can be choosen, GeoTIFF is most in cases the best format to choose. This format offers, for example, support for the creation of pyramids for better perfomance, which lacks for other formats."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:47
+# 91be3865e7154bd1a6670c85bea82634
+msgid "**Radius**: can be used to give the radius in meters or mapunit. When the radius is choosen too small you will not get a nice heatmap. In places where more circles around points overlap eachother the brighter hotspots will occur!"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:50
+# d517cc4c4e6447c9a3b1d0ba29f9d652
+msgid "**Decay Ratio**: is used to show with which ratio the heat dies out from the center."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:52
+# 7720b8ceb3b74ac4b3209c2f092b7fb7
+msgid "When 0 is given (=minimum) the heat will concentrated in the centre of given radius and be completely extinguished at the edge."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:54
+# 0109aa2650394cddb1d287e06b8c77d0
+msgid "When 10 is given (=maximum) the heat is concentrated at the edge and in the centre it is completely extinguished. Higher given values are allowed but have no effect."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:56
+# 6de70ff5a4ba4d5db6861731e05ff938
+msgid "When 1 is given the heat is spread evenly over the whole circel."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:57
+# bf98c6eefd58432e8a7de368793579be
+msgid "When a negative Decay Ratio is given you will create a Coolmap instead of a Heatmap!"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:60
+# 625b27ee966445e7bb3d09d374037d96
+msgid "When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give acces to additional advanced options."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:63
+# 213132fe62f34fcbb2668cb5b04d2982
+msgid "**Row** and **Column**, can be used to change the pixelsize of the output raster. More rows and colums means a smaller pixelsize and the size of the output file will become bigger and processing a bit slower. When doubling the number of rows this will automatically double the size of Columns and the cell sizes will also be halved. The area of the output raster will remain the same!"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:69
+# 2728cafb3f8d4625922e341ae1e39934
+msgid "**Cell Size X** and **Cell Size Y** influence the pixelsize of the output raster and will also change the rows and columns."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:72
+# 744b0ab08a904a748d9b4af238ed8dc4
+msgid "The point vector layer may have attribute fields that can be used to create a heatmap:"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:74
+# a6913a8800f44f66bc4e6767084227b8
+msgid "**Use Radius from Field**: the radius set from an attribute field."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:75
+# da3c50ac5bce4a80bdb046baff09f44a
+msgid "**Use Weight from field**: the weight factor set from an attribute field."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:77
+# 823b92c0f511429a89e6ce0228768952
+msgid "When the output raster is given, the **[OK]** button can be used to create a heatmap. The first result is a grey surface that still needs to be given additional treatment to make it a heatmap."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:80
+# 4156c2b14b3d46d68a1bc4b47e151eaf
+msgid "**Changing the raster size properties**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:82
+# d24b82b8818c414c89450d0c3488285b
+msgid "When changing the raster size properties, this also changes the resulting output. The hotspot areas will become bigger."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:86
+# a69e843f75544e65bc958d8113c5cd62
+msgid "Creating a Heatmap"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:88
+# 4d0ed5fb208f4d14a608a9cbd96edc74
+msgid "For the following example, we will use the ``airports`` vector point layer from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent QGIS tutorial on making heatmaps can be found on `http://qgis.spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:92
+# 24dd96c9c2ae4be0b99644488f38a590
+msgid "In Figure_Heatmap_1_ the airports of Alaska are shown."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:107
+# e924838c27ac4c6a810193985a1c3f47
+msgid "Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts (see Figure_Heatmap_2_)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:109
+# 4623c5d03e72418aa78fbec868998ed7
+msgid "In field :guilabel:`Input Point Vector` select ``airpoirt`` from the list of point layers loaded in current project."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:111
+# b25d0307bb6d48d5929efdd752144a53
+msgid "In field :guilabel:`Output Raster` five the name and location using the browse button |browsebutton| of the output raster. Give the output raster file the name ``heatmap_airports`` to give an file extension is not necessary."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:114
+# bc833fa50e54428fa0264ef4148d511e
+msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:115
+# d6eb1c4b574e4c99ae90dc59dc64c9b8
+msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:116
+# c67d0e37d66f4f11a01be06102d589cf
+msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:117
+# 6f8ce19378dc4120942148e091bf7bb1
+msgid "Click on **[OK]**  to create and load the new raster map (see Figure_Heatmap_3_)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:131
+# be55448ad09947ef82c097304a616dde
+msgid "The result after loading the heatmap is probably not the result which was expected. It is still a grey even surface not showing any variation. First some additional configuration of this layer needs to be done to make the heatmap present itself."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:149
+# 8af9df2256a14e90ad42b29401f6c6f7
+msgid "Open the properties dialog of layer ``heatmap_airports``"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:151
+# ef4066ef4e75442f81396c821a8b3e9e
+msgid "Select the layer heatmap_airports and click on the rightmouse button, Select :menuselection:`Properties` from the popup menu)."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:154
+# f45b1075d02e4acc933c3ae15635aa33
+msgid "Select the :guilabel:`Style` tab."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:155
+# 05ea3cfefdb64c85b7d02a0ee3727c17
+msgid "In section Single band properties chance the field :guilabel:`Color map` from ``Grayscale`` to ``Pseudocolor``."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:157
+# 9990615848354a0d9637980fa8be0683
+msgid "Select the **[Apply]** button."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:158
+# fd3a93d393bb4d4ebf468126e68cac24
+msgid "Switch to the :guilabel:`Transparency` tab and move the slider of :guilabel:`Global transparency` to 40%."
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:160
+# ecc781c42fdc45398df7ee1e141d8076
+msgid "Select **[OK]**"
+msgstr ""
+
+#: ../../source/user_manual/plugins/plugins_heatmap.rst:162
+# bcfca0f1f66f42718f531fc8af197099
+msgid "The final result is shown in Figure_Heatmap_4_."
+msgstr ""
+
