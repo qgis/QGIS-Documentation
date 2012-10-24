@@ -54,15 +54,14 @@ It's also possible to run QGIS Browser as a standalone application.
 .. * |win| Start QGIS browser using the Start menu or desktop shortcut, or 
   double click on a QGIS project file.
   
-* |osx| QGIS browser is not available yet from your your Applications folder. 
-  However it can easily be made available:     
+* |osx| QGIS browser is not available yet from your your Applications folder.
+  However it can easily be made available. In Finder use
+  :menuselection:`Go --> Go to map...` and use it to find the folder
+  ``/Applications/QGIS.app/Contents/MacOS/bin``.
 
-    In Finder use :menuselection:`Go --> Go to map...` and use it to find 
-    the folder ``/Applications/QGIS.app/Contents/MacOS/bin``
-
-    Use the key combination :kbd:`option - command` and drag **qbrowser.app** 
-    while holding down the left mouse button to the Applications folder. 
-    This will create a link that you can use to start QGIS browser.
+  Use the key combination :kbd:`option - command` and drag **qbrowser.app** 
+  while holding down the left mouse button to the Applications folder. 
+  This will create a link that you can use to start QGIS browser.
 
 .. _figure_browser_standalone_metadata:
 

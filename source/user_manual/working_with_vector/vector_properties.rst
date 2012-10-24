@@ -22,9 +22,10 @@ an external reference.
 
 .. only:: html
 
-   **Figure Vector Properties 1:** 
+   **Figure Vector Properties 1:**
 
 .. _figure_vector_properties_1:
+
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
    :width: 40em
    :align: center
