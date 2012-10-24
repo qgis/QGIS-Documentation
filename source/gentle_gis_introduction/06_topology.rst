@@ -78,9 +78,14 @@ The following list shows some examples of where topology rules can be defined fo
 - Contour lines in a vector line layer must not intersect (cross each other).
   
 
-**Topological tools**Many GIS applications provide tools for topological editing.
-For example in QGIS you can **enable topological editing** to improve editing and maintaining common boundaries in polygon layers.
-A GIS such as QGIS 'detects' a shared boundary in a polygon map so you only have to move the edge vertex of one polygon boundary and QGIS will ensure the updating of the other polygon boundaries as shown in (1) . 
+**Topological tools**
+
+Many GIS applications provide tools for topological editing.
+For example in QGIS you can **enable topological editing** to improve editing 
+and maintaining common boundaries in polygon layers.
+A GIS such as QGIS 'detects' a shared boundary in a polygon map so you only 
+have to move the edge vertex of one polygon boundary and QGIS will ensure the 
+updating of the other polygon boundaries as shown in (1) . 
 
 Another topological option allows you to prevent** polygon overlaps** during digitising (see (2) ).
 If you already have one polygon, it is possible with this option to digitise a second adjacent polygon so that both polygons overlap and QGIS then clips the second polygon to the common boundary.
@@ -112,51 +117,62 @@ If you specify the search radius too small the GIS application won't find any fe
 
 **Common problems / things to be aware of**
 
- mainly designed for simplicity and for fast rendering but not for data analysis that require topology (such as finding routes across a network).
-Many GIS applications are able to show topological and simple feature data together and some can also create, edit and analyse both.
+Mainly designed for simplicity and for fast rendering but not for data 
+analysis that require topology (such as finding routes across a network).
+Many GIS applications are able to show topological and simple feature data 
+together and some can also create, edit and analyse both.
 
 What have we learned?
 
-Let's wrap up what we covered in this worksheet:
+Let\'s wrap up what we covered in this worksheet:
 
-- **Topology** shows the spatial relation of neighbouring vector features.
-- Topology in GIS is provided by **topological tools**.  
-- Topology can be used to **detect and correct digitizing errors**.
-- For some tools, such as **network analysis**, topological data is essential.
-- **Snapping distance** and **search radius** help us to digitise topologically correct vector data.
-- **Simple feature** data is not a true topological data format but it is commonly used by GIS applications.
+* **Topology** shows the spatial relation of neighbouring vector features.
+* Topology in GIS is provided by **topological tools**.  
+* Topology can be used to **detect and correct digitizing errors**.
+* For some tools, such as **network analysis**, topological data is essential.
+* **Snapping distance** and **search radius** help us to digitise 
+  topologically correct vector data.
+* **Simple feature** data is not a true topological data format but it is 
+  commonly used by GIS applications.
 
 Now you try!
 
 Here are some ideas for you to try with your learners:
 
-- Mark your local bus stops on a toposheet map and then task your learners to find the shortest route between two stops.
-
-- Think of how you would create vector features in a GIS to represent a topological road network of your town.
-  What topological rules are important and what tools can your learners use in QGIS to make sure that the new road layer is topologically correct? 
+* Mark your local bus stops on a toposheet map and then task your learners 
+  to find the shortest route between two stops.
+* Think of how you would create vector features in a GIS to represent a 
+  topological road network of your town.
+  What topological rules are important and what tools can your learners use 
+  in QGIS to make sure that the new road layer is topologically correct? 
 
 Something to think about:
 
-If you don't have a computer available, you can use a map of a bus or railway network and discuss the spatial relationships and topology with your learners.
+If you don't have a computer available, you can use a map of a bus or 
+railway network and discuss the spatial relationships and topology with 
+your learners.
 
 Further reading:
 
 **Books:** 
 
-- Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems.
+* Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems.
   3rd Edition.
   w Hill.
   (ISBN 0070658986)
 
-- DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems.
+* DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems.
   3rd Edition.
   Wiley.
   (ISBN 9814126195)
 
 Websites:
 
-The QGIS User Guide also has more detailed information on topological editing provided in QGIS.
+The QGIS User Guide also has more detailed information on topological editing 
+provided in QGIS.
 
 What's next?
 
-In the section that follows we will take a closer look at **Coordinate Reference Systems** to understand how we relate data from our spherical earth onto flat maps!
+In the section that follows we will take a closer look at **Coordinate 
+Reference Systems** to understand how we relate data from our spherical 
+earth onto flat maps!
