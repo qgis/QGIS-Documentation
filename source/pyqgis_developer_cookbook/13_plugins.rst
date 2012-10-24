@@ -1,6 +1,6 @@
 .. index:: plugins; developing, Python; developing plugins
 
-.. _plugins:
+.. _developing_plugins:
 
 *************************
 Developing Python Plugins

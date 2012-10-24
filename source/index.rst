@@ -13,8 +13,9 @@ All documentation is written in RST, saved in Github, and po/pot translatable.
 
     user_manual/index
     documentation_guidelines/README
-    A Gentle GIS Introduction <gentle_gis_introduction/index>
+    gentle_gis_introduction/index
     pyqgis_developer_cookbook/index
+    qgis_governance/index
 
 
 User manual
@@ -49,3 +50,9 @@ PyQGIS Developer Cookbook
 :ref:`PyQGIS Developer Cookbook <PyQGIS-Developer-Cookbook>`. This cookbook is
 intended to work both as a tutorial and a reference guide for peoples that want
 to learn QGIS Python API.
+
+QGIS Governance
+---------------
+
+:ref:`QGIS Governance <QGIS-Governance>`. This document descibes official QGIS
+governance, bylaws, procedures etc.
