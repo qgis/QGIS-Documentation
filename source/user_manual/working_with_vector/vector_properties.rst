@@ -150,12 +150,12 @@ Working with the New Generation Symbology
 .........................................
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
-symbol, categorized, graduated and rule-based. For each renderer all types 
-of symbol layer types are available. Depending on the chosen 
-renderer, the symbology tab provides different settings and options, that 
-will be described in the following sections. The new generation symbology 
-dialog also provides a **[Style Manager]** button which gives access to the 
-Style Manager
+symbol, categorized, graduated and rule-based. For each data types (points, 
+lines and polygons) all appropriate symbol layer types are available. 
+Depending on the chosen renderer, the symbology tab provides different 
+settings and options, that will be described in the following sections. 
+The new generation symbology dialog also provides a **[Style Manager]** 
+button which gives access to the Style Manager
 (see section :ref:`vector_style_manager`). The Style Manager allows you to 
 edit and remove existing symbols and add new ones.
 
