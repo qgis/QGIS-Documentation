@@ -322,7 +322,7 @@ Layers in the legend window can be organised into groups. To do so, right click
 in the legend window and choose :menuselection:`Add group -->`. Type in a name for the
 group and press :kbd:`Enter`. Now click on an existing layer and drag it
 onto the group. Also, if new layers are added to the project while a group is
-selected, they will automatically be placed in the group.
+selected, they will automatically be placed in the group. 
 
 To bring a layer out of a group you can drag it out, or right click on it and 
 choose :menuselection:`Make to toplevel item -->`. Groups can be nested inside other groups.
@@ -380,7 +380,6 @@ legend item is a raster or a vector layer. For GRASS vector layers
 
 .. *  :menuselection:`Show file groups`
 
-
 It is possible to select more than one Layer or Group at the same time 
 by holding down the :kbd:`Ctrl`-Key while selecting the Layers with the 
 left mouse button. You can then move all selected Layers to a new Group at 
@@ -389,6 +388,9 @@ the same time.
 You are also able to delete more than one Layer or Group at once by selecting 
 several Layers with the :kbd:`Ctrl` - Key and pressing :kbd:`Ctrl D` afterwards.
 This way all selected Layers or Groups will be removed from the Layerlist.
+
+You can select multiple layers and group them. Select the layers and right click on a layer. 
+Choose :menuselection:`Group selected`. Type in a name for the new group and press :kbd:`Enter`.
 
 
 .. _`label_mapview`:
