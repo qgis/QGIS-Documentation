@@ -150,7 +150,8 @@ Working with the New Generation Symbology
 .........................................
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
-symbol, categorized, graduated and rule-based. Depending on the chosen 
+symbol, categorized, graduated and rule-based. For each renderer all types 
+of symbol layer types are available. Depending on the chosen 
 renderer, the symbology tab provides different settings and options, that 
 will be described in the following sections. The new generation symbology 
 dialog also provides a **[Style Manager]** button which gives access to the 
