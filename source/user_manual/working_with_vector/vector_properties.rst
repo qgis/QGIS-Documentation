@@ -61,7 +61,7 @@ marker symbols.
 .. index:: Line_decoration, Marker_line, Simple_line
 .. index:: Centroid_fill, SVG_fill, Simple_fill
 
-.. _vector_symbol_types:
+.. _vector_symbol_layer_types:
 
 **Available symbol layer types**
 
@@ -151,7 +151,7 @@ Working with the New Generation Symbology
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated and rule-based. For each data types (points, 
-lines and polygons) all appropriate symbol layer types are available. 
+lines and polygons) all vector_symbol_layer_types_ are available. 
 Depending on the chosen renderer, the symbology tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
