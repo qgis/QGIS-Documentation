@@ -7,8 +7,6 @@ Where I can read this documentation
 It is possible to read the HTML version of the documentation for many languages 
 here:
 
-TODO: update
-
 * English: http://documentation.qgis.org/html/en/user_manual/
 * French: http://documentation.qgis.org/html/fr/user_manual/
 * German: http://documentation.qgis.org/html/de/user_manual/
@@ -25,6 +23,10 @@ http://docs.qgis.org/html/de/user_manual/
 
 In the qgis.org site the documentation is scheduled to be built every 6 hours.
 
+Pdf versions of the manual is available here: 
+http://documentation.qgis.org/pdf/
+
+
 
 Quick Overview
 --------------------------------------------------------------------------------
@@ -40,10 +42,13 @@ Tools
 
 You will need the following tools
 
-* git (from packagemanager)
-* sphinx (via 'sudo pip install sphinx')
+* git (from packagemanager) to clone/download the source from Github.com
+* msgfmt (from packagemanager: in Ubuntu/Debian it is in packag 'gettext')
 * texlive (from packagemanager)
-* texlive-fonts-recommended (from packagemanager0
+* texlive-fonts-recommended (Ubuntu: from packagemanager)
+In debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra
+* python-pip python installation (via sudo apt-get install python-pip)
+* sphinx (via 'sudo pip install sphinx')
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 
 
@@ -85,35 +90,25 @@ Eg to only create english docs::
  scripts/post_translate.sh en
 
 
-
-
-Translators edit workflow
+Document Translators edit workflow
 --------------------------------------------------------------------------------
 
-TODO: update this
+Every language has it's own maintainer.
 
+The maintainer will run the 'scripts/pre_translate.sh' script
+after every significant change in the documentation. You can off course also run
+this script yourself.
 
-Every time a new master document is released, the translators can start 
-translating the .po files of competence.
+This will generate the .po files needed for translation. 
 
-Translators must edit the .po files using the web application, based on Pootle, 
-or an offline editor, with `QtLinguist 
+Translators must edit the .po files using the web application `http://translate.qgis.org`_,
+based on Pootle, or an offline editor, like `QtLinguist 
 <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
 highly recommended choice.
 
 As soon as they finish editing one or more of the .po files, they should commit 
 as soon as possible the edits to the git repository, in order to minimize the 
 possibility of conflicts.
-
-When a new version of the master document is released, the administrator must 
-produce the new version of the template files (.pot).
-At this point the administrator should also use the msgmerge command, for 
-identifing the differences that each .po files has with the master document.
-
-This is a basic usage of the msgmerge command::
-
-	msgmerge source/translated/it/introduction.po \ 
-		source/translated/pot/introduction.pot -U
 
 
 New Language workflow
