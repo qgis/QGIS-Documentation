@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-26 23:10\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:9
+# 467c5497967b4d499f38666833b42a08
+msgid "Projections Support"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:14
+# 6a3d9337f0504960aff87c4a0392732f
+msgid "Coordinate reference systems"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:16
+# 0d99c0ffa7c64137a17b75f1ecee9e30
+msgid "Coordinate reference systems (CRS) are encapsulated by :class:`QgsCoordinateReferenceSystem` class. Instances of this class can be created by several different ways:"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:20
+# fa720db1f64849e582179a4e2c76b1b3
+msgid "specify CRS by its ID::"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:25
+# 92701015d2834cac95e8b436db5f0bd3
+msgid "QGIS uses three different IDs for every reference system:"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:27
+# 39ea8a66a62844dea39db35266e25c3c
+msgid ":const:`PostgisCrsId` - IDs used within PostGIS databases."
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:28
+# e9b74f3a105343a688767b07f9194e87
+msgid ":const:`InternalCrsId` - IDs internally used in QGIS database."
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:29
+# ed2d039d9e184e409b39c2bb665f8061
+msgid ":const:`EpsgCrsId` - IDs assigned by the EPSG organization"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:31
+# 5a1ce5079b4e412784c352841188f06e
+msgid "If not specified otherwise in second parameter, PostGIS SRID is used by default."
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:33
+# 42a616604c014d8b932374306b7aaa93
+msgid "specify CRS by its well-known text (WKT)::"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:40
+# ddd1e08d13a44fd3ad46e91028a9016e
+msgid "create invalid CRS and then use one of the :func:`create*` functions to initialize it. In following example we use Proj4 string to initialize the projection::"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:47
+# 188a7b12b84b4ee08077510da5c7e7e3
+msgid "It's wise to check whether creation (i.e. lookup in the database) of the CRS has been successful: :func:`isValid` must return :const:`True`."
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:50
+# aac68e58fc6943be8e5c5aaf529667fb
+msgid "Note that for initialization of spatial reference systems QGIS needs to lookup appropriate values in its internal database :file:`srs.db`. Thus in case you create an independent application you need to set paths correctly with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the database. If you are running the commands from QGIS python console or developing a plugin you do not care: everything is already set up for you."
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:57
+# 29dda2266113407cb6c8d4d03d79b4c8
+msgid "Accessing spatial reference system information::"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:74
+# 94fd00dbe2684a9eaebe34d204b380bb
+msgid "Projections"
+msgstr ""
+
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:76
+# 02ba1a8f3da34f3faf8bf910381ac812
+msgid "You can do transformation between different spatial reference systems by using :class:`QgsCoordinateTransform` class. The easiest way to use it is to create source and destination CRS and construct :class:`QgsCoordinateTransform` instance with them. Then just repeatedly call :func:`transform` function to do the transformation. By default it does forward transformation, but it is capable to do also inverse transformation::"
+msgstr ""
+
