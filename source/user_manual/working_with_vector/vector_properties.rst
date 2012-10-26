@@ -18,7 +18,7 @@ in the legend or right-click on the layer and select
 
 
 .. do not change the order of reference-tag and only-tag, this figure has
-an external reference.
+   an external reference.
 
 .. only:: html
 
@@ -150,7 +150,7 @@ Working with the New Generation Symbology
 .........................................
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
-symbol, categorized, graduated and rule-based. For each data types (points, 
+symbol, categorized, graduated, rule-based and point displacement . For each data type (points, 
 lines and polygons) all vector_symbol_layer_types_ are available. 
 Depending on the chosen renderer, the symbology tab provides different 
 settings and options, that will be described in the following sections. 
@@ -394,7 +394,7 @@ dialog, there are shown the settings applicable to the single symbol layer
 selected in the symbol layer list. The most important is the 
 'Symbol Layer Type' combo box, which allows you to choose the layer type. The 
 available options depend on the layer type (Point, Line, Polygon). The symbol 
-layer type options are described in section :ref:`vector_symbol_types`.
+layer type options are described in section vector_symbol_layer_types_.
 
 .. |symbolproperties1| image:: /static/user_manual/working_with_vector/symbolproperties1.png
    :width: 30em
