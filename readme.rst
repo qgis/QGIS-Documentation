@@ -23,7 +23,7 @@ http://docs.qgis.org/html/de/user_manual/
 
 In the qgis.org site the documentation is scheduled to be built every 6 hours.
 
-Pdf versions of the manual is available here: 
+Pdf versions of the manual are available here: 
 http://documentation.qgis.org/pdf/
 
 
@@ -46,7 +46,7 @@ You will need the following tools
 * msgfmt (from packagemanager: in Ubuntu/Debian it is in packag 'gettext')
 * texlive (from packagemanager)
 * texlive-fonts-recommended (Ubuntu: from packagemanager)
-In debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra
+* in debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra
 * python-pip python installation (via sudo apt-get install python-pip)
 * sphinx (via 'sudo pip install sphinx')
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
@@ -76,7 +76,9 @@ Run pre_translate.sh script to create the gettext files (po, pot) in the i18n di
  cd QGIS-Documentation
  scripts/pre_translate.sh
 
-Translators translate their i18n files using tools like linguist
+Translators now can translate their local i18n files using tools like linguist or via a website.
+
+Another option is to download a .po file from Github, translate it and sent it back to a language maintainer.
 
 Run 'post_translate.sh' script to build all translated pdf and html files::
 
@@ -101,7 +103,7 @@ this script yourself.
 
 This will generate the .po files needed for translation. 
 
-Translators must edit the .po files using the web application `http://translate.qgis.org`_,
+Translators must edit the .po files using the web application http://translate.qgis.org,
 based on Pootle, or an offline editor, like `QtLinguist 
 <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
 highly recommended choice.
