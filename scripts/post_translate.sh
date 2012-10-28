@@ -25,7 +25,7 @@ if [[ $1 = "en" ]]; then
 else
   for LOCALE in ${LOCALES}
   do
-    for POFILE in `find i18n/${LOCALE}/LC_MESSAGES/ -type f`
+    for POFILE in `find i18n/${LOCALE}/LC_MESSAGES/ -type f -name '*.po'`
     do
       MOFILE=`echo ${POFILE} | sed -e 's,\.po,\.mo,'`
       # Compile the translated strings
