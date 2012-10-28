@@ -10,3 +10,4 @@ QGIS Governance
    organisation/index
    sponsorship/index
    developer_meetings/index
+   release_checklists/index
