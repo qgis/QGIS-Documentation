@@ -71,22 +71,27 @@ You should have a directory tree like this::
  ├── source             containing all rst sources
  └── themes             contains themes for output
 
-Run pre_translate.sh script to create the gettext files (po, pot) in the i18n directory::
+Run pre_translate.sh script to create the gettext files (po, pot) in the i18n
+directory::
 
  cd QGIS-Documentation
  scripts/pre_translate.sh
 
-Translators now can translate their local i18n files using tools like linguist or via a website.
+Translators now can translate their local i18n files using tools like linguist
+or via a website.
 
-Another option is to download a .po file from Github, translate it and sent it back to a language maintainer.
+Another option is to download a .po file from Github, translate it and sent it
+back to a language maintainer.
 
 Run 'post_translate.sh' script to build all translated pdf and html files::
 
  cd QGIS-Documentation
  scripts/post_translate.sh
 
-NOTE: if you only want to create docs in one language, use the locale code as parameter.
-Eg to only create english docs::
+.. note:: if you only want to create docs in one language, use the locale code
+   as parameter.
+
+For example, to create english docs::
 
  cd QGIS-Documentation
  scripts/post_translate.sh en
