@@ -105,6 +105,8 @@ rst_epilog = """
 .. |geographic| image:: /static/common/geographic.png
 .. |wedge| unicode:: 0x005e
 .. |checkbox| image:: /static/common/checkbox.png
+.. |checkbox_checked| image:: /static/common/checkbox.png
+.. |checkbox_unchecked| image:: /static/common/checkbox_unchecked.png
 .. |radiobuttonon| image:: /static/common/radiobuttonon.png
 .. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
 .. |selectnumber| image:: /static/common/selectnumber.png
