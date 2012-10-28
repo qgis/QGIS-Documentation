@@ -46,8 +46,6 @@ default, which provides a variety of improvements and new features.
 A description of the old symbology is available in section 
 :ref:`vector_old_symbology`.
 
-.. _vector_new_symbology:
-
 There are three types of symbols: marker symbols (for points), line symbols 
 (for lines) and fill and outline symbols (for polygons). Symbols can consist 
 of one or more symbol layers. It is possible to define the color of a symbol 
@@ -61,9 +59,10 @@ marker symbols.
 .. index:: Line_decoration, Marker_line, Simple_line
 .. index:: Centroid_fill, SVG_fill, Simple_fill
 
-.. _vector_symbol_layer_types:
+.. _vector_symbol_types:
 
-**Available symbol layer types**
+Available symbol layer types
+............................
 
 * Point layers
 
@@ -146,12 +145,15 @@ of the graduated renderer.
 The categorized and graduated renderer can be created by specifying a symbol 
 and a color ramp \- they will set the colors for symbols appropriately.
 
+.. _vector_new_symbology:
+
 Working with the New Generation Symbology
 .........................................
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
-symbol, categorized, graduated, rule-based and point displacement . For each data type (points, 
-lines and polygons) all vector_symbol_layer_types_ are available. 
+symbol, categorized, graduated, rule-based and point displacement. For each 
+data type (points, lines and polygons) vector symbol layer types are 
+available (see :ref:`vector_symbol_types`). 
 Depending on the chosen renderer, the symbology tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
@@ -394,7 +396,7 @@ dialog, there are shown the settings applicable to the single symbol layer
 selected in the symbol layer list. The most important is the 
 'Symbol Layer Type' combo box, which allows you to choose the layer type. The 
 available options depend on the layer type (Point, Line, Polygon). The symbol 
-layer type options are described in section vector_symbol_layer_types_.
+layer type options are described in section :ref:`vector_symbol_types`.
 
 .. |symbolproperties1| image:: /static/user_manual/working_with_vector/symbolproperties1.png
    :width: 30em
@@ -425,10 +427,6 @@ layer type options are described in section vector_symbol_layer_types_.
 
    Defining symbol properties |nix|
 
-
-.. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
-
-.. _vector_style_manager:
 
 .. index:: Old_Symbology, Symbology_Old
 
@@ -534,9 +532,9 @@ with the slider :guilabel:`Transparency` |slider| inside the
 :guilabel:`Style` tab. This is very useful for overlaying several vector 
 layers.
 
-.. index:: Labeling_Engine, Labeling_New, Labeling_Old
+.. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
 
-.. _vector_labels_tab:
+.. _vector_style_manager:
 
 Style Manager
 .............
@@ -557,6 +555,11 @@ Style Manager` in the main menu.
    :align: center
 
    Style Manager to manage symbols and color ramps |nix|
+
+
+.. index:: Labeling_Engine, Labeling_New, Labeling_Old
+
+.. _vector_labels_tab:
 
 Labels Tab
 ----------
