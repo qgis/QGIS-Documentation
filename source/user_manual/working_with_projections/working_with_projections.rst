@@ -147,12 +147,14 @@ The :guilabel:`Coordinate Reference System` tab of the
 :guilabel:`Project Properties` dialog contains five important components as 
 shown in Figure_projection_2_ and described below.
 
-
-.. _figure_projection_2:
+.. following picture has an external reference from working with ogc, so 
+   the reference of this figure needs a capture!
 
 .. only:: html
 
    **Figure Projection 2:**
+
+.. _figure_projection_2:
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center

@@ -1,6 +1,6 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
 
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. index:: Mapserver_Export_Plugin
 
@@ -12,6 +12,9 @@ MapServer Export Plugin
 
 You can use QGIS to 'compose' your map by adding and arranging layers, 
 symbolizing them, customizing the colors and then creating a map file for MapServer.
+
+NOTE: currently the plugin only works when you use 'Old Symbology' in QGIS. 
+'New Symbology' is not yet supported.
 
 Creating the Project File
 --------------------------
@@ -59,9 +62,7 @@ Creating the Map File
 ----------------------
 
 
-The tool **msexport** to export a QGIS project file to a MapServer map file is 
-installed in your QGIS binary directory and can be used independently of QGIS.
-To use it from within QGIS, you need to enable the MapServer Export Plugin first 
+To use the Mapserver Export plugin from within QGIS, you need to enable the MapServer Export Plugin first 
 using the Plugin Manager (see :ref:`load_core_plugin`).
 
 .. _figure_mapserver_export_2:
@@ -75,10 +76,6 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
    :width: 40em
    
    Export to MapServer Dialog |nix|
-
-\ 
-
-\ 
 
 
 +-----------------------+----------------------------------------------------------------------------+
@@ -106,9 +103,6 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
 | **Web Footer**        | Full path to the MapServer footer file to be used with the map file        |
 +-----------------------+----------------------------------------------------------------------------+
 
-\ 
-
-\ 
 
 Only the inputs :guilabel:`Map file` and :guilabel:`QGIS project file` are 
 required to create a map file, however by omitting the other parameters, you 
@@ -133,17 +127,70 @@ For this example, we will create a map file using the project file
    QGIS displays the success of your efforts.
 
 
+.. _figure_mapserver_export_3:
+
+.. only:: html
+
+   **Figure Mapserver Export 3:**
+
+.. figure:: /static/user_manual/plugins/mapserver_export_success.png
+   :align: center
+   :width: 40em
+
+   Export to MapServer Succesfull Dialog |nix|
+
+
 You can view the map file in any text editor or visualizer. If you take a 
 look, you'll notice that the export tool adds the metadata needed to enable 
 our map file for WMS.
 
 .. index:: shp2img, FWTools
 
+Troubleshooting
+---------------
+
+If you get error messages from mapserver like::
+
+  loadSymbolSet(): Unable to access file. (./symbols/symbols.txt) 
+
+  msLoadFontset(): Unable to access file. Error opening fontset ./fonts/fonts.txt. 
+
+This means that that the map file is requesting for fonts or symbol definition files
+but that Mapserver cannot find those.
+
+Either comment the lines containing those names in the map file (this is possible if 
+you do not have labels or use styles from the symbols.txt). Or create those files (see below).
+
+The most simple fonts.txt file (because arial is used in the qgis generated map files) 
+contains the following line::
+
+  # either relative to the map file or a full path:
+  arial /usr/share/fonts/truetype/msttcorefonts/arial.ttf
+
+The most simple symbols.txt file contains the definition of a circle symbol (because a circle
+symbol is used for point layers)::
+
+  SYMBOLSET
+      SYMBOL
+      NAME "circle"
+      TYPE ellipse
+      FILLED true
+      POINTS
+      1 1
+      END
+      END
+  END
+
+
 Testing the Map File
 ---------------------
 
+We can now test our work.
 
-We can now test our work using the **shp2img** tool to create an image from 
+If the map file is accessible for you mapserver cgi you can use the 
+one of the url's from the success dialog.
+
+Another option is using the **shp2img** tool to create an image from 
 the map file. The **shp2img** utility is part of MapServer and FWTools.
 To create an image from our map:
 
@@ -159,17 +206,22 @@ In addition, the extent of the PNG will be the same as when we saved the
 project. As you can see in Figure_mapserver_export_3_, all information 
 except the airport symbols are included.
 
-.. _figure_mapserver_export_3:
+.. _figure_mapserver_export_4:
 
 .. only:: html
 
-   **Figure Mapserver Export 3:**
+   **Figure Mapserver Export 4:**
 
 .. figure:: /static/user_manual/plugins/mapserver_export_test.png
    :align: center
    :width: 30em
-   
+
    Test PNG created by shp2img with all MapServer Export layers |nix|
+
+
+
+Using Map File
+---------------------
 
 If you plan to use the map file to serve WMS requests, you probably don't have 
 to tweak anything. If you plan to use it with a mapping template or a custom 

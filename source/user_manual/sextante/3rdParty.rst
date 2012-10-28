@@ -11,12 +11,29 @@ Introduction
 SEXTANTE can be extended using additional applications, calling them
 from within SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are
 supported, along with some other command-line applications that provide
-spatial data analysis functionalities.
+spatial data analysis functionalities. Algorithms relying on an external 
+application are managed by their own algorithm provider.
+
 This chapter will show you how to configure SEXTANTE to include these
-additional applications. Once you have correctly configured the system,
+additional applications, and will explain some particular features of the algorithm
+based on them. Once you have correctly configured the system,
 you will be able to execute external algorithms from any SEXTANTE
 component like the toolbox or the graphical modeler, just like you do
 with any other SEXTANTE geoalgorithm.
+
+By default, all algorithms that rely on an external appplication not shipped with QGIS
+are not enabled. You can enable them in the SEXTANTE configuration dialog. Make sure
+that the corresponding application is already installed in your system. Enabling an 
+algorithm provider without installing the application it needs will cause the algorithms
+to appear in the toolbox, but an error will be thrown when you try to execute them.
+
+This is because the algorithm descriptions (needed to
+create the parameters dialog and give SEXTANTE the information it needs about
+the algorithm) are not included with each appllication, but with SEXTANTE instead. 
+That is,they are part of SEXTANTE, so you have them in your installation even if you
+have not installed any other software. Running the algorithm, however, needs the
+application binaries to be installed in your system.
+
 
 A note on file formats
 ......................
@@ -97,16 +114,6 @@ properly installed and its folder is added to the PATH environment
 variable. Just open a console and type ``saga_cmd`` to check that the
 system can found where SAGA binaries are located.
 
-Notice that, ever before doing that, SAGA algorithms are shown in the
-toolbox and you can open them to fill the corresponding parameters
-dialog. However, if you try to run the algorithm after entering the
-parameter values, SEXTANTE will show an error message. This is because
-the algorithm descriptions (needed to create the parameters dialog and
-give SEXTANTE the information it needs about the algorithm) are not
-included with SAGA, but with SEXTANTE instead. That is, they are part of
-SEXTANTE, so you have them in your installation even if you have not
-installed SAGA. Running the algorithm, however, needs SAGA binaries
-installed in your system.
 
 About SAGA grid system limitations
 ..................................
@@ -151,6 +158,25 @@ to do so. There are two ways of setting the target grid system:
 For algorithms that do not use multiple raster layers, or for those that
 do not need a unique input grid system, no resampling is performed
 before calling SAGA, and those parameters are not used.
+
+Limitations for multi-band layers
+..................................
+
+Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a
+multi-band layer (such as an RGB or multi-spectral image), you first have to
+split it into single-banded images. To do so, you can use the *SAGA/Grid - Tools/Split RGB image*
+algorithm (which creates 3 images from an RGB image) or the *SAGA/Grid - tools/Extract band* 
+algorithm (to extract a single band)
+
+Limitations in cellsize
+........................
+
+SAGA assumes that raster layers have the same cellsize in the X and Y axis. If you 
+are working with a layer with different values for its horizontal and vertical
+cellsizes, you might get unexcepted results. In this case, a warning will be added
+to the SEXTANTE log, indicating that an input layer might not be suitable to be 
+processed by SAGA.
+
 
 Logging
 .......
@@ -390,12 +416,81 @@ are installed:
    ``C:\OSGeo4W\apps\orfeotoolbox\applications`` as *OTB applications folder*
    and ``C:\OSGeo4W\bin`` as *OTB command line tools folder*;
 
-Notice that, ever before doing that, OTB algorithms are shown in the toolbox
-and you can open them to fill the corresponding parameters dialog. However, if
-you try to run the algorithm after entering the parameter values, SEXTANTE will
-show an error message. This is because the algorithm descriptions (needed to
-create the parameters dialog and give SEXTANTE the information it needs about
-the algorithm) are not included with OTB, but with SEXTANTE instead. That is,
-they are part of SEXTANTE, so you have them in your installation even if you
-have not installed OTB. Running the algorithm, however, needs OTB binaries
-installed in your system.
+
+TauDEM
+-------
+To use this plugin you need to install TauDEM command line tools.
+
+Windows
+........
+
+Please visit TauDEM homepage for installation instructions and precompiled
+binaries for 32bit and 64bit systems. NOTE: you need TauDEM 5.0.6 executables,
+version 5.2 currently not supported
+
+TauDEM homepage: http://hydrology.usu.edu/taudem/taudem5.0/downloads.html
+
+Linux
+......
+
+There are no packages for most Linux distribution, so you should compile
+TauDEM by yourself. As TauDEM uses MPICH2, first install it using your favorite
+package manager. Also TauDEM works fine with OpenMPI, so you can use it
+instead of MPICH2.
+
+Download TauDEM 5.0.6 source code and extract files in some folder
+
+TauDEM sources: http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506.zip
+
+Open ``linearpart.h`` file and add after line
+
+::
+
+   #include "mpi.h"
+
+add new line with
+
+::
+   
+   #include <stdint.h>
+
+so you'll get
+
+::
+   
+   #include "mpi.h"
+   #include <stdlib.h>
+
+Save changes and close file. Now open ``tiffIO.h``, find line ``#include "stdint.h"``
+and replace quotes (``""``) with ``<>``, so you'll get
+
+::
+
+   #include <stdint.h>
+
+Save changes and close file. Create build directory and cd into it
+
+::
+   
+   mkdir build
+   cd build
+
+Configure your build with command
+
+::
+
+   CXX=mpixcc cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+
+and then compile
+
+::
+
+   make
+
+Finaly, to install TauDEM into ``/usr/local/bin``, run
+
+::
+
+   sudo make install
+
+
