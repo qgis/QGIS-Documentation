@@ -208,13 +208,13 @@ a simple table
 ::
 
    =======  =======  =======
-   x        y        z 
+   x        y        z
    =======  =======  =======
-   1        2        3 
-   2        4        \
+   1        2        3
+   2        4        
    =======  =======  =======
 
-Use a ``\`` followed by an empty space ``\\ `` to leave an empty space.
+Use a ``\`` followed by an empty space ' ' to leave an empty space.
 
 You can also use more complicated tables by drawing them using refences and all
 
@@ -227,7 +227,7 @@ You can also use more complicated tables by drawing them using refences and all
    +---------------+--------------------+
    | |win|         | |osx|              |
    +---------------+--------------------+
-   | and of course not to forget |nix|  |              
+   | and of course not to forget |nix|  |
    +------------------------------------+
 
    My drawn table, mind you this is unfortunately not regarded a caption 
@@ -243,7 +243,7 @@ The result:
 +---------------+--------------------+
 | |win|         | |osx|              |
 +---------------+--------------------+
-| and of course not to forget |nix|  |              
+| and of course not to forget |nix|  |
 +------------------------------------+
 
 My drawn table, mind you this is unfortunately not regarded a caption 
