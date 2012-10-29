@@ -96,19 +96,6 @@ Available symbol layer types
 .. index:: Color_ramps
 
 
-.. _figure_vector_properties_2:
-
-.. only:: html
-
-   **Figure Vector Properties 2:**
-
-.. figure:: /static/user_manual/working_with_vector/ellipse_marker.png
-   :width: 40em
-   :align: center
-
-   Rendering ellipse markers |nix|
-
-
 **Color ramps**
 
 Color ramps are used to define a range of colors that can be used during 
@@ -197,11 +184,11 @@ current style symbols (using the **[Save as style]** button) and then easily
 be used in the future.
 
 .. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png 
-   :width: 25em
+   :width: 30em
 .. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png 
-   :width: 25em
+   :width: 30em
 .. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
-   :width: 25em
+   :width: 30em
 
 .. _figure_symbology_1:
 
