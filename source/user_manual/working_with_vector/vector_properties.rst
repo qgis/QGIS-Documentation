@@ -423,7 +423,7 @@ Old Symbology
 .............
 
 .. note::
-   |qg| 1.7.4 still supports the usage of the old symbology, although it is 
+   |qg| 1.8. still supports the usage of the old symbology, although it is 
    recommended to switch to the new symbology, described in section 
    :ref:`vector_new_symbology`, because the old symbology will be removed in 
    one of the next releases.
@@ -449,34 +449,6 @@ The old |qg| symbology supports the following renderers:
 
 
 To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
-
-.. |vectorClassifySingle| image:: /static/user_manual/working_with_vector/vectorClassifySingle.png
-   :width: 330
-.. |vectorClassifyGraduated| image:: /static/user_manual/working_with_vector/vectorClassifyGraduated.png
-   :width: 330
-.. |vectorClassifyContinous| image:: /static/user_manual/working_with_vector/vectorClassifyContinous.png
-   :width: 330
-.. |vectorClassifyUnique| image:: /static/user_manual/working_with_vector/vectorClassifyUnique.png
-   :width: 330
-
-.. _figure_symbology_9:
-
-.. only:: html
-
-   **Figure Symbology 9:** 
-
-+---------------------------+---------------------------+
-| |vectorClassifySingle|    | |vectorClassifyGraduated| |
-+---------------------------+---------------------------+
-| 1. Single symbol          | 2. Graduated Symbol       |
-+---------------------------+---------------------------+
-| |vectorClassifyContinous| | |vectorClassifyUnique|    |
-+---------------------------+---------------------------+
-| 3. Continuous color       | 4. Unique value           |
-+---------------------------+---------------------------+
-
-   Old Symbolizing Options |nix|
-
 
 .. index:: Fill_Style, Fill_Color, Outline_Options
 
