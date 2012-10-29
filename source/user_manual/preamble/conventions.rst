@@ -1,8 +1,5 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-.. following update disclaimer is now commented out and no longer visible!
-
-   |updatedisclaimer| 
+.. comment out this disclaimer (by putting space in front of it) if file is uptodate with release
+ |updatedisclaimer|
 
 .. _label_conventions:
 
@@ -22,7 +19,7 @@ visually scan the GUI to find something that looks like the instruction in the m
 *  Menu Options: :menuselection:`Layer --> Add a Raster Layer` or 
    :menuselection:`Settings --> Toolbars --> Digitizing`
 *  Tool: |mActionAddRasterLayer| :sup:`Add a Raster Layer`
-*  Button : **[Save as Default]**
+*  Button : **\[Save as Default\]**
 *  Dialog Box Title: :guilabel:`Layer Properties`
 *  Tab: :guilabel:`General`
 *  Checkbox: |checkbox| :guilabel:`Render`
@@ -52,16 +49,21 @@ correspond to any actual appearance.
 *  Name of a Class: **NewLayer**
 *  Method: *classFactory*
 *  Server: *myhost.de*
-*  User Text: ``qgis ---help``
+*  User Text: ``qgis --help`` 
+
 
 .. *  Single Keystroke: press \keystroke{p}
 .. *  Name of a Field: \fieldname{NAMES}
 .. *  SQL Table: \sqltable{example needed here}
 
-Code is indicated by a fixed-width font::
-	
-	PROJCS["NAD_1927_Albers",
-	  GEOGCS["GCS_North_American_1927",
+
+Lines of code are indicated by a fixed-width font::
+
+    PROJCS["NAD_1927_Albers",
+      GEOGCS["GCS_North_American_1927",
+
+
+
 
 **Platform-specific instructions**
 
@@ -86,6 +88,6 @@ and this and this and this and this and this.
 that and that and that and that and that and that and that and that and that.
 
 Screenshots that appear throughout the user guide have been created on different 
-platforms; the platform is indicated by the platform-specific iconsat the end of 
+platforms; the platform is indicated by the platform-specific icon at the end of 
 the figure caption.
 

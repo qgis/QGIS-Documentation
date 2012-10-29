@@ -1,6 +1,5 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-.. |updatedisclaimer|
+.. comment out this disclaimer (by putting space in front of it) if file is uptodate with release
+ |updatedisclaimer|
 
 .. index:: Mapserver_Export_Plugin
 

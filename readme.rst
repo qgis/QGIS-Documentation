@@ -50,6 +50,7 @@ You will need the following tools
 * python-pip python installation (via sudo apt-get install python-pip)
 * sphinx (via 'sudo pip install sphinx')
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
+* dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
 
 
 Generation
