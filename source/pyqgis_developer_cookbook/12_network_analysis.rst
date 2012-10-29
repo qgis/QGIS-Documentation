@@ -67,7 +67,7 @@ It's time to dive in the process.
 
 First of all, to use this library we should import networkanalysis module::
 
-from qgis.networkanalysis import *
+  from qgis.networkanalysis import *
 
 Than create director::
 
