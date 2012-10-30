@@ -12,7 +12,7 @@ All documentation is written in RST, saved in Github, and po/pot translatable.
     :maxdepth: 1
 
     user_manual/index
-    documentation_guidelines/README
+    documentation_guidelines/index
     gentle_gis_introduction/index
     pyqgis_developer_cookbook/index
     qgis_governance/index
