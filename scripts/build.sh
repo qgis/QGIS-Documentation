@@ -14,7 +14,7 @@ git pull
 . sphinx-env/bin/activate
 
 # build html and pdf for all LOCALES
-sh scripts/pre_translate.sh >> /var/www/documentation/$LOGFILE 2>&1
-sh scripts/post_translate.sh >> /var/www/documentation/$LOGFILE 2>&1
+sh scripts/pre_translate.sh >> $LOGFILE 2>&1
+sh scripts/post_translate.sh >> $LOGFILE 2>&1
 
 
