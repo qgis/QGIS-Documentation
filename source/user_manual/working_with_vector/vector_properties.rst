@@ -69,8 +69,8 @@ Available symbol layer types
   - **Font marker**: Rendering with a font.
   - **Simple marker**: Rendering with a hardcoded marker.
   - **SVG marker**: Rendering with a SVG picture.
-  - **Ellipse marker**: Rendering with ellipse shapes.
-  - **Vector field marker**: Rendering 
+  - **Ellipse marker**: Rendering with ellipse shapes derived from attributes.
+  - **Vector field marker**: Rendering with vector fields derived from attributes.
 
 * Line layers
 
@@ -161,7 +161,7 @@ edit and remove existing symbols and add new ones.
 
 **Single Symbol Renderer**
 
-The Single Symbol Renderer is used to render all features of the layer using 
+The Single Symbol Renderer (see figure_symbology_1_) is used to render all features of the layer using 
 a single user-defined symbol. The properties, that can be adjusted in the
 ``Style`` tab, depend partially on the type of the layer, but all types share 
 the following structure. In the top left part of the tab, there is a preview 
@@ -184,11 +184,11 @@ current style symbols (using the **[Save as style]** button) and then easily
 be used in the future.
 
 .. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png 
-   :width: 30em
+   :width: 40em
 .. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png 
-   :width: 30em
+   :width: 40em
 .. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
-   :width: 30em
+   :width: 40em
 
 .. _figure_symbology_1:
 
@@ -244,7 +244,7 @@ for the rivers layer of the |qg| sample dataset.
    **Figure Symbology 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
-   :width: 40em
+   :width: 50em
    :align: center
 
    Categorized Symbolizing options |nix|
@@ -348,9 +348,7 @@ for the rivers layer of the |qg| sample dataset.
 
 **Point displacement**
 
-The point displacement renderer is only available, if you load the 
-Displacement plugin in the QGIS Plugin Manager. It offers to visualize 
-all features of a point layer, even if they have the same location. To do 
+The point displacement renderer offers to visualize all features of a point layer, even if they have the same location. To do 
 this, the symbols of the points are placed on a displacement circle around 
 a center symbol.
 
@@ -371,10 +369,10 @@ a center symbol.
 **Symbol Properties**
 
 The symbol properties dialog allows the user to specify different properties 
-of the symbol to be rendered. In the top left part of the dialog, you find 
+of the symbol to be rendered. In the bottom left part of the dialog, you find 
 a preview of the current symbol as it will be displayed in the map canvas. 
-Below the preview is the list of symbol layers. To start the symbol 
-properties dialog, click the **[** |mActionOptions| **Properties...]** 
+Above the preview is the list of symbol layers. To start the symbol 
+properties dialog, click the **[** |mActionOptions| **Change...]** 
 button in the :guilabel:`Style` tab of the :guilabel:`Layer Properties` dialog.
 
 The control panels allow adding or removing layers, changing the position 
@@ -386,11 +384,11 @@ available options depend on the layer type (Point, Line, Polygon). The symbol
 layer type options are described in section :ref:`vector_symbol_types`.
 
 .. |symbolproperties1| image:: /static/user_manual/working_with_vector/symbolproperties1.png
-   :width: 30em
+   :width: 40em
 .. |symbolproperties2| image:: /static/user_manual/working_with_vector/symbolproperties2.png
-   :width: 30em
+   :width: 40em
 .. |symbolproperties3| image:: /static/user_manual/working_with_vector/symbolproperties3.png
-   :width: 30em
+   :width: 40em
 
 .. _figure_symbology_7:
 
@@ -413,6 +411,25 @@ layer type options are described in section :ref:`vector_symbol_types`.
 +------------------------------------------+
 
    Defining symbol properties |nix|
+
+**Style Manager**
+
+The Style Manager is a small helper application, that lists symbols and color 
+ramps available in a style. It also allows you to add and/or remove items. 
+To launch the Style Manager, click on :menuselection:`Settings --> 
+Style Manager` in the main menu.
+
+.. _figure_symbology_8:
+
+.. only:: html
+
+   **Figure Symbology 8:** 
+
+.. figure:: /static/user_manual/working_with_vector/stylemanager.png
+   :width: 24em
+   :align: center
+
+   Style Manager to manage symbols and color ramps |nix|
 
 
 .. index:: Old_Symbology, Symbology_Old
@@ -450,6 +467,7 @@ The old |qg| symbology supports the following renderers:
 
 To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
 
+
 .. index:: Fill_Style, Fill_Color, Outline_Options
 
 **Style Options**
@@ -472,6 +490,8 @@ At least the following styling options apply for nearly all renderers:
   * Outline color - color of the ouline of your feature.
   * Outline width - width of your features.
 
+The **drawing by field** option provides the possibility to symbolize your features with a ...
+
 Once you have styled your layer you also could save your layer-style to a 
 separate file (ending with :file:`*.qml`).
 To do this, use the button **[Save Style...]**. No need to say that 
@@ -484,6 +504,7 @@ if you make changes to the style that you are not happy with, use the
 
 .. index:: Vector_Transparency, Transparency_Vector
 
+
 **Vector transparency**
 
 |qg| allows to set a transparency for every vector layer. This can be done 
@@ -495,26 +516,6 @@ layers.
 
 .. _vector_style_manager:
 
-Style Manager
-.............
-
-The Style Manager is a small helper application, that lists symbols and color 
-ramps available in a style. It also allows you to add and/or remove items. 
-To launch the Style Manager, click on :menuselection:`Settings --> 
-Style Manager` in the main menu.
-
-.. _figure_symbology_8:
-
-.. only:: html
-
-   **Figure Symbology 8:** 
-
-.. figure:: /static/user_manual/working_with_vector/stylemanager.png
-   :width: 24em
-   :align: center
-
-   Style Manager to manage symbols and color ramps |nix|
-
 
 .. index:: Labeling_Engine, Labeling_New, Labeling_Old
 
@@ -523,7 +524,7 @@ Style Manager` in the main menu.
 Labels Tab
 ----------
 
-As for the symbology |qg| 1.7.4 currently provides an old and a new labeling 
+As for the symbology |qg| 1.8 currently provides an old and a new labeling 
 engine in parallel. The :guilabel:`Labels` tab still contains the old 
 labeling. The new labeling is implemented as a core application and will 
 replace the features of the old labels tab in one of the next versions.
@@ -568,8 +569,7 @@ the text-label.
 
 To change the position of the text relative to the feature:
 
-#.  Click on the ``Font`` entry.
-#.  Change the placement by selecting one of the radio buttons in the 
+#.  Beneath the Basic label options change the placement by selecting one of the radio buttons in the 
     ``Placement`` group. To fix our labels, choose the |radiobuttonon| 
     :guilabel:`Right` radio button.
 #.  the ``Font size units`` allows you to select between |radiobuttonon| 
@@ -578,7 +578,7 @@ To change the position of the text relative to the feature:
 
 
 Things are looking better, but the labels are still too close to the marker. 
-To fix this we can use the options on the ``Position`` entry. Here we can 
+To fix this we can use the options on the ``Offset`` entry which is on the bottom of the menu. Here we can 
 add offsets for the X and Y directions. Adding an X offset of 5 will move 
 our labels off the marker and make them more readable. Of course if your 
 marker symbol or font is larger, more of an offset will be required.
@@ -587,7 +587,7 @@ The last adjustment we'll make is to ``Buffer`` the labels. This just means
 putting a backdrop around them to make them stand out better. To buffer the 
 lakes labels:
 
-#.  Click the |checkbox| :guilabel:`Buffer Labels?` checkbox to enable 
+#.  Click the |checkbox| :guilabel:`Buffer Labels` checkbox to enable 
     buffering.
 #.  Choose a size for the buffer using the spin box.
 #.  Choose a color by clicking on **[Color]** and choosing your favorite 
@@ -602,7 +602,7 @@ again by clicking **[Apply]**.
 A buffer of 1 points seems to give a good result. Notice you can also 
 specify the buffer size in map units if that works out better for you.
 
-The remaining entries inside the :guilabel:`Label` tab allow you control 
+The advanced entries inside the :guilabel:`Label` tab allow you control 
 the appearance of the labels using attributes stored in the layer. The 
 entries beginning with ``Data defined`` allow you to set all the parameters 
 for the labels using fields in the layer.
