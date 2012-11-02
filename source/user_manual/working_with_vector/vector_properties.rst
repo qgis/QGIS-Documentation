@@ -633,7 +633,7 @@ New Labeling
 ------------
 
 The new |mActionLabeling| :sup:`Labeling` core application provides smart 
-labeling for vector point,  line and polygon layers and only requires a 
+labeling for vector point, line and polygon layers and only requires a 
 few parameters.
 This new application will replace the current QGIS labeling, described in 
 section :ref:`vector_labels_tab` and also supports on-the-fly transformated 
@@ -661,7 +661,7 @@ features act as obstacles for labels or not (see Figure_labels_1_ ).
    **Figure Labels 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
-   :width: 40em
+   :width: 70em
    :align: center
 
    Smart labeling of vector point layers |nix|
