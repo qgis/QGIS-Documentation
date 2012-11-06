@@ -592,7 +592,7 @@ rst_epilog = """
 #html_theme = 'basic'
 #html_theme = 'sphinxdoc'
 #html_theme = 'qgis-theme'
-html_theme = 'test-theme'
+html_theme = 'qgis2-theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
