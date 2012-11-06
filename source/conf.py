@@ -588,8 +588,11 @@ rst_epilog = """
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
 #html_theme = 'sphinxdoc'
-html_theme = 'linfiniti-sphinx-theme'
+#html_theme = 'linfiniti-sphinx-theme'
+#html_theme = 'basic'
+#html_theme = 'sphinxdoc'
 #html_theme = 'qgis-theme'
+html_theme = 'test-theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -605,6 +608,7 @@ html_theme_path = ['../themes']
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
+html_short_title = 'QGIS Docs'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -630,6 +634,10 @@ html_static_path = ['static']
 
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
+html_sidebars = {
+        '**': ['localtoc.html', 'searchbox.html']
+#      ,'using/windows': ['windowssidebar.html', 'sourcelink.html', 'searchbox.html']
+      }
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
