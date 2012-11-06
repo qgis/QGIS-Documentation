@@ -161,7 +161,7 @@ edit and remove existing symbols and add new ones.
 
 **Single Symbol Renderer**
 
-The Single Symbol Renderer (see figure_symbology_1_) is used to render all features of the layer using 
+The Single Symbol Renderer (see figure_symbology_1_ to figure_symbology_3_) is used to render all features of the layer using 
 a single user-defined symbol. The properties, that can be adjusted in the
 ``Style`` tab, depend partially on the type of the layer, but all types share 
 the following structure. In the top left part of the tab, there is a preview 
@@ -181,14 +181,7 @@ consists of more than one layer).
 
 After having done any needed changes, the symbol can be added to the list of 
 current style symbols (using the **[Save as style]** button) and then easily 
-be used in the future.
-
-.. |singlesymbol_ng_point| image:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png 
-   :width: 40em
-.. |singlesymbol_ng_line| image:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png 
-   :width: 40em
-.. |singlesymbol_ng_area| image:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
-   :width: 40em
+be used in the future. You can choose between QGIS layer style file (.qml) and SLD file(.sld).
 
 .. _figure_symbology_1:
 
@@ -196,21 +189,35 @@ be used in the future.
 
    **Figure Symbology 1:** 
 
-+-----------------------------------+
-| |singlesymbol_ng_point|           |
-+-----------------------------------+
-| a. Single symbol point properties |
-+-----------------------------------+
-| |singlesymbol_ng_line|            |
-+-----------------------------------+
-| b. Single symbol line properties  |
-+-----------------------------------+
-| |singlesymbol_ng_area|            |
-+-----------------------------------+
-| c. Single symbol area properties  |
-+-----------------------------------+
+.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png
+   :align: center
+   :width: 40em
 
-   Single Symbolizing options |nix|
+   Single symbol point properties |nix|
+
+.. figure_symbology_2:
+
+.. only:: html
+
+   **Figure Symbology 2:**
+
+.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
+   :align: center
+   :width: 40em
+
+   Single symbol line properties |nix|
+
+.. figure_symbology_3:
+
+.. only:: html
+
+   **Figure Symbology 3:**
+
+.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
+   :align: center
+   :width: 40em
+
+   Single symbol area properties |nix|
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
@@ -234,14 +241,14 @@ For convenience, the list in the bottom part of the tab lists the values of
 all currently selected attributes together, including the symbols that will 
 be rendered.
 
-The example in figure_symbology_2_ shows the category rendering dialog used 
+The example in figure_symbology_4_ shows the category rendering dialog used 
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_2:
+.. _figure_symbology_4:
 
 .. only:: html
 
-   **Figure Symbology 2:** 
+   **Figure Symbology 4:** 
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :width: 50em
@@ -254,14 +261,14 @@ for the rivers layer of the |qg| sample dataset.
 You can create a custom color ramp choosing :menuselection:`New color ramp...` 
 from the Color ramp dropdown menu. A dialog will prompt for the ramp type: 
 Gradient, Random, ColorBrewer, then each one has options for number of steps 
-and/or multiple stops in the color ramp. See figure_symbology_3_ for an 
+and/or multiple stops in the color ramp. See figure_symbology_5_ for an 
 example of custom color ramp.
 
-.. _figure_symbology_3:
+.. _figure_symbology_5:
 
 .. only:: html
 
-   **Figure Symbology 3:** 
+   **Figure Symbology 5:** 
 
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
@@ -300,14 +307,14 @@ modes are:
 The listbox in the  bottom part of the :guilabel:`Style` tab lists the classes 
 together with their ranges, labels and symbols that will be rendered.
 
-The example in figure_symbology_4_ shows the graduated rendering dialog for 
+The example in figure_symbology_6_ shows the graduated rendering dialog for 
 the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_4:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 4:** 
+   **Figure Symbology 6:** 
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
    :width: 40em
@@ -328,14 +335,14 @@ statements. You can also use the Query Builder to create them. The dialog
 allows rule grouping by filter or scale and you can decide if you want to 
 enable symbol levels or use only first matched rule.
 
-The example in figure_symbology_5_ shows the rule-based rendering dialog 
+The example in figure_symbology_7_ shows the rule-based rendering dialog 
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_5:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 5:** 
+   **Figure Symbology 7:** 
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
    :width: 40em
@@ -352,11 +359,11 @@ The point displacement renderer offers to visualize all features of a point laye
 this, the symbols of the points are placed on a displacement circle around 
 a center symbol.
 
-.. _figure_symbology_6:
+.. _figure_symbology_8:
 
 .. only:: html
 
-   **Figure Symbology 6:** 
+   **Figure Symbology 8:** 
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
    :width: 40em
@@ -383,34 +390,42 @@ selected in the symbol layer list. The most important is the
 available options depend on the layer type (Point, Line, Polygon). The symbol 
 layer type options are described in section :ref:`vector_symbol_types`.
 
-.. |symbolproperties1| image:: /static/user_manual/working_with_vector/symbolproperties1.png
-   :width: 40em
-.. |symbolproperties2| image:: /static/user_manual/working_with_vector/symbolproperties2.png
-   :width: 40em
-.. |symbolproperties3| image:: /static/user_manual/working_with_vector/symbolproperties3.png
-   :width: 40em
-
-.. _figure_symbology_7:
+.. _figure_symbology_9:
 
 .. only:: html
 
-   **Figure Symbology 7:** 
+   **Figure Symbology 9:**
 
-+------------------------------------------+
-| |symbolproperties1|                      |
-+------------------------------------------+
-| a. Line composed from three simple lines |
-+------------------------------------------+
-| |symbolproperties2|                      |
-+------------------------------------------+
-| b. Symbol properties for point layer     |
-+------------------------------------------+
-| |symbolproperties3|                      |
-+------------------------------------------+
-| c. Filling pattern for a polygon         |
-+------------------------------------------+
+.. figure:: /static/user_manual/working_with_vector/symbolproperties1.png
+   :align: center
+   :width: 40em
 
-   Defining symbol properties |nix|
+   Line composed from three simple lines |nix|
+
+.. _figure_symbology_10:
+
+.. only:: html
+
+   **Figure Symbology 10:**
+
+.. figure:: /static/user_manual/working_with_vector/symbolproperties2.png
+   :align: center
+   :width: 40em
+
+   Symbol properties for point layer |nix|
+
+.. _figure_symbology_11:
+
+.. only:: html
+
+   **Figure Symbology 11:**
+
+.. figure:: /static/user_manual/working_with_vector/symbolproperties3.png
+   :align: center
+   :width: 40em
+   
+   Filling pattern for a polygon |nix|
+
 
 **Style Manager**
 
@@ -419,11 +434,11 @@ ramps available in a style. It also allows you to add and/or remove items.
 To launch the Style Manager, click on :menuselection:`Settings --> 
 Style Manager` in the main menu.
 
-.. _figure_symbology_8:
+.. _figure_symbology_12:
 
 .. only:: html
 
-   **Figure Symbology 8:** 
+   **Figure Symbology 12:** 
 
 .. figure:: /static/user_manual/working_with_vector/stylemanager.png
    :width: 24em
@@ -618,7 +633,7 @@ New Labeling
 ------------
 
 The new |mActionLabeling| :sup:`Labeling` core application provides smart 
-labeling for vector point,  line and polygon layers and only requires a 
+labeling for vector point, line and polygon layers and only requires a 
 few parameters.
 This new application will replace the current QGIS labeling, described in 
 section :ref:`vector_labels_tab` and also supports on-the-fly transformated 
@@ -634,10 +649,11 @@ layers.
 **Labeling point layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` 
-checkbox and select an attribute column to use for labeling. After that you 
-can define the label placement and text style, labeling priority, scale-based 
-visibility, if every part of multipart feature is to be labeled and if 
-features act as obstacles for labels or not (see Figure_labels_1_ ).
+checkbox and select an attribute column to use for labeling. Click |browsebutton| if you want to define labels based on expressions. 
+After that you can define the text style and the scale-based 
+visibility in the :guilabel:`Label settings` tab (see Figure_labels_1_ ). Choose the :guilabel:`Advanced` tab for the label placement and the labeling priority. You can define if every part of multipart feature is to be labeled here.
+
+.. features act as obstacles for labels or not .
 
 .. _figure_labels_1:
 
@@ -646,7 +662,7 @@ features act as obstacles for labels or not (see Figure_labels_1_ ).
    **Figure Labels 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
-   :width: 40em
+   :width: 60em
    :align: center
 
    Smart labeling of vector point layers |nix|
@@ -654,12 +670,10 @@ features act as obstacles for labels or not (see Figure_labels_1_ ).
 **Labeling line layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` 
-checkbox and select an attribute column to use for labeling. After that 
-you can define the label placement, orientation, distance to feature, 
-text style, labeling priority, scale-based visibility, if every part of 
-a multipart line is to be labeled, if lines shall be merged to avoid 
-duplicate labels and if features act as obstacles for labels or not 
-(see Figure_labels_2_ ).
+checkbox in the :guilabel:`Label settings` tab and select an attribute column to use for labeling. Here you can also define labels based on expressions. After that 
+you can define the text style and the scale-based visibility.
+Further labeling options are available through the :guilabel:`Advanced` tab. You can define the label placement and label distance, a line orientation dependend position and the labeling priority here. Furthermore you can define if every part of a multipart line is to be labeled, if lines shall be merged to avoid 
+duplicate labels (and if features act as obstacles for labels or not) (see Figure_labels_2_ ).
 
 .. _figure_labels_2:
 
@@ -668,7 +682,7 @@ duplicate labels and if features act as obstacles for labels or not
    **Figure Labels 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_line.png
-   :width: 40em
+   :width: 60em
    :align: center
 
    Smart labeling of vector line layers |nix|
@@ -691,7 +705,7 @@ not (see Figure_labels_3_ ).
    **Figure Labels 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_area.png
-   :width: 40em
+   :width: 60em
    :align: center
 
    Smart labeling of vector polygon layers |nix|
