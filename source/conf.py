@@ -118,6 +118,8 @@ rst_epilog = """
 .. |tab| image:: /static/common/tab.png
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
+.. |icon_dbmanager| image:: /static/common/dbmanager.png
+   :width: 1.5em
 .. |oracle_raster| image:: /static/common/oracle_raster.png
    :width: 1.5em
 .. |raster_terrain| image:: /static/common/raster_terrain.png
