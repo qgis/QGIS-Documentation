@@ -39,7 +39,7 @@ Style Tab
 
 .. index:: New_Symbology, Symbology_New
 
-Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and 
+|symbology| Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and 
 finally replace the old symbology. |qg| 1.8 now uses the new symbology as 
 default, which provides a variety of improvements and new features.
 
@@ -540,7 +540,7 @@ layers.
 Labels Tab
 ----------
 
-As for the symbology |qg| 1.8 currently provides an old and a new labeling 
+|labels| As for the symbology |qg| 1.8 currently provides an old and a new labeling 
 engine in parallel. The :guilabel:`Labels` tab still contains the old 
 labeling. The new labeling is implemented as a core application and will 
 replace the features of the old labels tab in one of the next versions.
@@ -756,11 +756,11 @@ bottom left.
 
 .. _vector_attributes_tab:
 
-Attributes Tab
---------------
+Fields Tab
+----------
 
-Within the :guilabel:`Attributes` tab the attributes of the selected 
-dataset can be manipulated. The buttons |mActionNewAttribute| 
+|attributes| Within the :guilabel:`Fields` tab the field attributes of the 
+selected dataset can be manipulated. The buttons |mActionNewAttribute| 
 :guilabel:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column` 
 can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
 
@@ -791,7 +791,7 @@ third-party plugin called Table Manager.
 
    Dialog to select an edit widget for an attribute column |nix|
 
-Within the :guilabel:`Attributes` tab you also find an ``edit widget`` column. 
+Within the :guilabel:`Fields` tab you also find an ``edit widget`` column. 
 This column can be used to define values or a range of values that are allowed 
 to be added to the specific attribute table column. If you click on the 
 **[edit widget]** button, a dialog opens, where you can define different 
@@ -830,7 +830,7 @@ widgets. These widgets are:
 General Tab
 -----------
 
-The :guilabel:`General` tab is essentially like that of the raster dialog. 
+|general| The :guilabel:`General` tab is essentially like that of the raster dialog. 
 It allows you to change the display name, set scale dependent rendering 
 options, create a spatial index of the vector file (only for OGR supported 
 formats and PostGIS) and view or change the projection of the specific vector 
@@ -847,7 +847,7 @@ attribute table and select the |browsebutton| button next to Advanced search.
 Metadata Tab
 ------------
 
-The :guilabel:`Metadata` tab contains general information about the layer, 
+|metadata| The :guilabel:`Metadata` tab contains general information about the layer, 
 including specifics about the type and location, number of features, feature 
 type, and the editing capabilities. The :guilabel:`Extents` section, providing 
 layer extent information, and the :guilabel:`Layer Spatial Reference System` 
@@ -857,7 +857,7 @@ to get information about the layer, but is not yet editable.
 Actions Tab
 -----------
 
-|qg| provides the ability to perform an action based on the attributes of a 
+|action| |qg| provides the ability to perform an action based on the attributes of a 
 feature. This can be used to perform any number of actions, for example, 
 running a program with arguments built from the attributes of a feature or 
 passing parameters to a web reporting tool.
@@ -1102,7 +1102,7 @@ Joins Tab
 ---------
 
 
-The :guilabel:`Joins` tab allows you to :index:`join a loaded attribute table 
+|join| The :guilabel:`Joins` tab allows you to :index:`join a loaded attribute table 
 to a loaded vector layer`. As key columns you have to define a :index:`join 
 layer`, a join field and a target field. QGIS currently supports to join non 
 spatial table formats supported by OGR, delimited text and the PostgreSQL 
@@ -1130,7 +1130,7 @@ Additionally the add vector join dialog allows to:
 Diagram Tab
 -----------
 
-The :guilabel:`Diagram` tab allows you to add a grahic overlay to a vector 
+|diagram| The :guilabel:`Diagram` tab allows you to add a graphic overlay to a vector 
 layer (see figure_diagrams_1_).
 
 .. _figure_diagrams_1:

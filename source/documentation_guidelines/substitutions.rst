@@ -5,7 +5,7 @@ Substitutions
 Usage
 =====
 
-When you want to use an icon from |qgis| in a rst document 
+When you want to use an icon from |qg| in a rst document 
 there is a big chance that there is allready a substitution defined 
 in conf.py that can/should be used. When a new icon in QGIS is added
 it should be added first to conf.py before it is used in a rst document.
@@ -78,13 +78,16 @@ Manage Layers and overview
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |mActionAddOgrLayer|            ``|mActionAddOgrLayer|``   	    |mActionAddNonDbLayer| 	    ``|mActionAddNonDbLayer|``
-|mActionAddRasterLayer|         ``|mActionAddRasterLayer|``         \                               \ 
+|mActionAddRasterLayer|         ``|mActionAddRasterLayer|``         |mActionAddMssqlLayer|          ``|mActionAddMssqlLayer|``
 |mActionAddLayer|               ``|mActionAddLayer|``    	    |mActionAddSpatiaLiteLayer|	    ``|mActionAddSpatiaLiteLayer|``
 |mActionNewVectorLayer|		``|mActionNewVectorLayer|``         |mActionRemoveLayer|	    ``|mActionRemoveLayer|``
 |mActionAddWmsLayer|       	``|mActionAddWmsLayer|``    	    |wfs|         		    ``|wfs|``
+|icon_sqlanywhere|              ``|icon_sqlanywhere|``              |oracle_raster|                 ``|oracle_raster|``
+|dbmanager|           		``|dbmanager|``              	    |gdal|                 	    ``|gdal|``
 |mActionInOverview|		``|mActionInOverview|``  	    |mActionAddAllToOverview|	    ``|mActionAddAllToOverview|``
 |mActionRemoveAllFromOverview|	``|mActionRemoveAllFromOverview|``  |RemoveAllOVerview|             ``|RemoveAllOVerview|``
 |mActionShowAllLayers|		``|mActionShowAllLayers|``          |mActionHideAllLayers|	    ``|mActionHideAllLayers|``
+|mIconZip|  			``|mIconZip|`` 			    \ 		                    \ 
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -126,6 +129,7 @@ Icon                            Substitution                        Icon        
 |mActionDeleteRing|		``|mActionDeleteRing|``  	    |mActionDeletePart|		    ``|mActionDeletePart|``
 |mergeFeats|                    ``|mergeFeats|``  	    	    |mActionMergeFeatures|	    ``|mActionMergeFeatures|``
 |mActionSplitFeatures|		``|mActionSplitFeatures|``          |mActionRotatePointSymbols|     ``|mActionRotatePointSymbols|``
+|mActionOffsetCurve|  		``|mActionOffsetCurve|``  	    \                               \ 
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -135,7 +139,7 @@ Map Navigation and attributes
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|mActionPan|                    ``|mActionPan|``                    soon pan to selection           ``|soon pan to selection|``
+|mActionPan|                    ``|mActionPan|``                    |PanToSelected|                 ``|PanToSelected|``
 |mActionZoomIn|			``|mActionZoomIn|``		    |mActionZoomOut|		    ``|mActionZoomOut|``
 |mActionZoomFullExtent|	        ``|mActionZoomFullExtent|``	    |mActionZoomToLayer|            ``|mActionZoomToLayer|``	    
 |mActionZoomLast|               ``|mActionZoomLast|``   	    |mActionZoomNext|		    ``|mActionZoomNext|``
@@ -180,10 +184,10 @@ Icon                            Substitution                        Icon        
 ==============================  ==================================  ==============================  ==================================
 |mActionProjectProperties|	``|mActionProjectProperties|``      |mActionOptions|         	    ``|mActionOptions|``
 |copyright_label|		``|copyright_label|``          	    |north_arrow|    		    ``|north_arrow|``
-|scale_bar|  			``|scale_bar|``                     \                               \  
+|scale_bar|  			``|scale_bar|``                     |locale|			    ``|locale|``			    
 |gps_importer|       		``|gps_importer|``                  |gpstrack_barchart|		    ``|gpstrack_barchart|``
 |gpstrack_polarchart|		``|gpstrack_polarchart|``           |tracking|          	    ``|tracking|``
-|mActionFolder|                 ``|mActionFolder|``                 |raster-info|		    ``|raster-info|``
+|mActionFolder|                 ``|mActionFolder|``                 \                               \ 
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -207,13 +211,12 @@ Projections and Georeferencer
 ==============================  ==================================  ==============================  ==================================
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
-|geographic|                    ``|geographic|``                    \                               \  
+|geographic|                    ``|geographic|``                    |CRS|                           ``|CRS|``
 |mActionCustomProjection|  	``|mActionCustomProjection|``       |mIconNew|     		    ``|mIconNew|``
 |mIconProjectionDisabled|	``|mIconProjectionDisabled|``       |mIconProjectionEnabled|        ``|mIconProjectionEnabled|``
 |georeferencer|      		``|georeferencer|``                 |pencil|        		    ``|pencil|``
 |mActionLinkQGisToGeoref|	``|mActionLinkQGisToGeoref|`` 	    |mActionLinkGeorefToQGis|	    ``|mActionLinkGeorefToQGis|``
 |coordinate_capture|		``|coordinate_capture|`` 	    |mActionStartGeoref|     	    ``|mActionStartGeoref|``
-|selectesubsetlayer|		``|selectesubsetlayer|``            |selectcreatelayer|  	    ``|selectcreatelayer|``
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -242,6 +245,20 @@ Icon                            Substitution                        Icon        
 |mIconLock|                     ``|mIconLock|``      		    \                   	    \ 
 ==============================  ==================================  ==============================  ==================================
 
+Properties
+==========
+
+Icons used in Layer Properties dialog:
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|symbology|                     ``|symbology|``                     |labels|                        ``|labels|``
+|attributes|			``|attributes|``		    |general|			    ``|general|``
+|metadata|  			``|metadata|``  		    |action|  			    ``|action|``
+|join|     			``|join|``     			    |diagram|			    ``|diagram|``
+==============================  ==================================  ==============================  ==================================
+
 
 Plugin Icons
 ============
@@ -255,13 +272,13 @@ Standard provided with basic install, but not loaded with initial install
 Icon                            Substitution                        Icon                            Substitution
 ==============================  ==================================  ==============================  ==================================
 |mActionShowPluginManager|      ``|mActionShowPluginManager|``      |plugin_installer|        	    ``|plugin_installer|``
-|icon_sqlanywhere|              ``|icon_sqlanywhere|``              |oracle_raster|                 ``|oracle_raster|``
-|raster_terrain|                ``|raster_terrain|``  		    |heatmap|  			    ``|heatmap|``
-|offline_editing_copy|          ``|offline_editing_copy|`` 	    |interpolation|                 ``|interpolation|``
+|offline_editing_copy|          ``|offline_editing_copy|`` 	    |offline_editing_sync|	    ``|offline_editing_sync|``
+|plugin|   			``|plugin|``              	    |interpolation|                 ``|interpolation|``
 |mapserver_export|		``|mapserver_export|``     	    |mActionExportMapServer|	    ``|mActionExportMapServer|``
 |spiticon|               	``|spiticon|``                      |delimited_text|		    ``|delimited_text|`` 
 |mActionGDALScript|		``|mActionGDALScript|``		    |dxf2shp_converter|		    ``|dxf2shp_converter|``
-|spatialquery|			``|spatialquery|``     		    |plugin|   			    ``|plugin|``
+|spatialquery|			``|spatialquery|``     		    |selectesubsetlayer|	    ``|selectesubsetlayer|``
+|selectcreatelayer|  	    	``|selectcreatelayer|``             \                     	    \ 
 ==============================  ==================================  ==============================  ==================================
 
 
@@ -334,6 +351,17 @@ Icon                            Substitution                        Icon        
 |osm_questionMark|       	``|osm_questionMark|``              \                               \ 
 ==============================  ==================================  ==============================  ==================================
 
+Raster related
+..............
+
+==============================  ==================================  ==============================  ==================================
+Icon                            Substitution                        Icon                            Substitution
+==============================  ==================================  ==============================  ==================================
+|fullCumulativeStretch|         ``|fullCumulativeStretch|``	    |FullHistogramStretch|	    ``|FullHistogramStretch|``
+|ShowRasterCalculator| 		``|ShowRasterCalculator|``          |raster-stats|                  ``|raster-stats|``
+|raster-interpolate|  		``|raster-interpolate|``            |raster-info|		    ``|raster-info|``
+|raster_terrain|                ``|raster_terrain|``  		    |heatmap|  			    ``|heatmap|``
+==============================  ==================================  ==============================  ==================================
 
 eVis plugin
 ...........
