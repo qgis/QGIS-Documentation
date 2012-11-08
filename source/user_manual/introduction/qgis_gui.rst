@@ -295,13 +295,13 @@ the mouse over the toolbars.
    single:layout toolbars
 
 .. tip::
-   **Restoring toolbars** 
+        **Restoring toolbars** 
 
-   If you have accidentally hidden all your toolbars, you can get them
-   back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
-   If a toolbar disappears under Windows, which seems to be a problem in qgis from time to time, you have to remove   
-   \\HKEY_CURRENT_USER\\Software\\QuantumGIS\\qgis\\UI\\state in the registry. When you restart qgis, the key is written 
-   again with the default state, and all toolbars are visible again. 
+        If you have accidentally hidden all your toolbars, you can get them
+        back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
+        If a toolbar disappears under Windows, which seems to be a problem in qgis from time to time, you have to remove   
+        ``\HKEY_CURRENT_USER\\Software\\QuantumGIS\\qgis\\UI\\state`` in the registry. When you restart qgis, the key is written 
+        again with the default state, and all toolbars are visible again. 
 
 .. _`label_legend`:
 
