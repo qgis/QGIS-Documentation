@@ -277,6 +277,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionRotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
    :width: 1.5em
+.. |mActionOffsetCurve| image:: /static/common/mActionOffsetCurve.png
+   :width: 1.5em
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
 .. |mActionCapturePoint| image:: /static/common/mActionCapturePoint.png

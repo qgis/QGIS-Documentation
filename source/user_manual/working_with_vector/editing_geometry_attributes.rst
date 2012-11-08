@@ -486,10 +486,12 @@ Advanced digitizing
 +------------------------+---------------------------------------+-----------------------------+-------------------------+
 | |mActionDeletePart|    | Delete Part                           | |mActionReshape|            | Reshape Features        |
 +------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionSplitFeatures| | Split Features                        | |mActionMergeFeatures|      | Merge Selected Features |
+| |mActionOffsetCurve|   | Offset Curves                         | |mActionSplitFeatures|      | Split Features          |
 +------------------------+---------------------------------------+-----------------------------+-------------------------+
+| |mActionMergeFeatures| | Merge Selected Features               |                                                       +------------------------+---------------------------------------+-------------------------+
 | |mActionMergeFeatures| | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
 +------------------------+---------------------------------------+-----------------------------+-------------------------+
+| 
 
    Table Advanced Editing: Vector layer advanced editing toolbar
 
