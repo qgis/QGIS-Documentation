@@ -1,106 +1,52 @@
-{%- block doctype -%}
-<!DOCTYPE html>
-{%- endblock %}
+{% extends "basic/layout.html" %}
 
-{%- set reldelim1 = reldelim1 is not defined and ' &raquo;' or reldelim1 %}
-{%- set reldelim2 = reldelim2 is not defined and ' |' or reldelim2 %}
-{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and
-                         (sidebars != []) %}
-{%- set url_root = pathto('', 1) %}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+<!-- Sphinx also brings it's own jquery, but this one is too old for bootstrap.
+    TODO get rid of the one from Sphinx -->
+{% set script_files = script_files + ['_static/bootstrap/js/jquery.js'] %}
+{% set script_files = script_files + ['_static/bootstrap/js/bootstrap.js'] %}
 
-{%- macro relbar() %}
-    <div class="related">
-      <h3>{{ _('Navigation') }}</h3>
-      <ul>
-        {%- for rellink in rellinks %}
-        <li class="right" {% if loop.first %}style="margin-right: 10px"{% endif %}>
-          <a href="{{ pathto(rellink[0]) }}" title="{{ rellink[1]|striptags|e }}"
-             {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
-          {%- if not loop.first %}{{ reldelim2 }}{% endif %}</li>
-        {%- endfor %}
-
-        {%- block rootrellink %}
-          <li><a href="{{ pathto(master_doc) }}">{{ shorttitle|e }}</a>{{ reldelim1 }}</li>
-        {%- endblock %}
-
-        {%- for parent in parents %}
-          <li><a href="{{ parent.link|e }}" {% if loop.last %}{{ accesskey("U") }}{% endif %}>{{ parent.title }}</a>{{ reldelim1 }}</li>
-        {%- endfor %}
-
-        {%- block relbaritems %} 
-        {% endblock %}
-      </ul>
-    </div>
-{%- endmacro %}
-
-{%- macro script() %}
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '{{ url_root }}',
-        VERSION:     '{{ release|e }}',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
-        HAS_SOURCE:  {{ has_source|lower }}
-      };
-    </script>
-    {%- for scriptfile in script_files %}
-    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
-    {%- endfor %}
-{%- endmacro %}
-
-{%- macro css() %}
-    <link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
-    {%- for cssfile in css_files %}
-    <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
-    {%- endfor %}
-{%- endmacro %}
-
-<html lang="en">
-  <head>
-    <!--<meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>-->
-
-    <meta http-equiv="Content-Type" content="text/html; charset={{ encoding }}" />
-    {{ metatags }}
-    {%- block htmltitle %}
-    <title>{{ title|striptags|e }}{{ titlesuffix }}</title>
-    {%- endblock %}
-    {{ css() }}
-    {%- if not embedded %}
-    {{ script() }}
-    {%- if use_opensearch %}
-    <link rel="search" type="application/opensearchdescription+xml"
-          title="{% trans docstitle=docstitle|e %}Search within {{ docstitle }}{% endtrans %}"
-          href="{{ pathto('_static/opensearch.xml', 1) }}"/>
-    {%- endif %}
-    {%- if favicon %}
-    <link rel="shortcut icon" href="{{ pathto('_static/' + favicon, 1) }}"/>
-    {%- endif %}
-    {%- endif %}
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <!--<link href="../assets/css/bootstrap.css" rel="stylesheet">-->
+{% set css_files = css_files + ['_static/bootstrap/css/bootstrap.min.css'] %}
+<!-- qgis.css BEFORE bootstrap-responsive -->
+{% set css_files = css_files + ['_static/qgis.css'] %}
+{% set css_files = css_files + ['_static/bootstrap/css/bootstrap-responsive.min.css'] %}
 
 
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
+{% block extrahead %}
+    <!-- without this part, the responsive-css for bootstrap kill some rules
+        TODO: remove this, or make this obsolete ?? -->
+    <style>
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+    }
+    .navbar .brand {
+        background-image: url("http://plugins.qgis.org/static/images/blue/logo.png");
+        background-repeat: no-repeat;
+        height: 42px;
+        padding-left: 60px;
+    }
+    .navbar-inverse .navbar-inner {
+        background-color:none;
+    }
     </style>
 
-    <!-- TODO: put this in css() macro or so ?? -->
-    <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap.min.css', 1) }}" type="text/css" />
-    <link rel="stylesheet" href="{{ pathto('_static/bootstrap/css/bootstrap-responsive.css', 1) }}" type="text/css" />
+    <script>
+        // put a line below the current locale flag
+        $(document).ready(function(){
+            var currentPage = '{{current_page_name}}.html';
+            var currentLang = window.location.href.slice(window.location.href.indexOf(currentPage)-3 ,window.location.href.indexOf(currentPage)-1);
+            $('#flag_'+currentLang).css('border-bottom', 'solid 1px #111111');
+        })
+
+        // load current page in a different language
+        function gotoLang(lang){
+            var currentPage = '{{current_page_name}}.html';
+            var baseUrl = window.location.href.slice(0,window.location.href.indexOf(currentPage)-3); // -3 removes current locale 
+            window.location.href = baseUrl + lang + '/' + currentPage;
+        }
+    </script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -113,10 +59,14 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  </head>
+{% endblock %}
 
-  <body>
+<!-- overriding relbar1: NO relbar above the content -->
+{% block relbar1 %}{% endblock %}
 
+{% block content %}
+
+    <!-- bootstrap stuff from fluid.html example -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -125,26 +75,38 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">QGIS</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
+              <!-- to be used later? -->
+              <!--Logged in as <a href="#" class="navbar-link">Username</a>-->
             </p>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="http://www.qgis.org">QGIS Home</a></li>
+              <li><a href="http://download.qgis.org/">Download</a></li>
+              <li class="active"><a href="{{ pathto(master_doc) }}">Documentation</a></li>
+              <li><a href="http://www.qgis.org/community.html">Community</a></li>
+              <li><a href="#development">Development</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
+    <!-- bootstrap stuff from fluid.html example -->
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
           <div class="well sidebar-nav">
             <!-- sidebar -->
+            <ul id="locales">
+                <!-- TODO: get the flag images from a central place (the are in Qgis repo in the images dir) -->
+                <li id="flag_en"><a href="#" onclick="gotoLang('en');"><img src="http://qgis.org/components/com_joomfish/images/flags/en.gif"/></a></li>
+                <li id="flag_de"><a href="#" onclick="gotoLang('de');"><img src="http://qgis.org/components/com_joomfish/images/flags/de.gif"/></a></li>
+                <li id="flag_fr"><a href="#" onclick="gotoLang('fr');"><img src="http://qgis.org/components/com_joomfish/images/flags/fr.gif"/></a></li>
+                <li id="flag_it"><a href="#" onclick="gotoLang('it');"><img src="http://qgis.org/components/com_joomfish/images/flags/it.gif"/></a></li>
+                <li id="flag_nl"><a href="#" onclick="gotoLang('nl');"><img src="http://qgis.org/components/com_joomfish/images/flags/nl.gif"/></a></li>
+            </ul><span style="clear:both">&nbsp;</span>
             {%- if sidebars != None %}
                 {#- new style sidebar: explicitly include/exclude templates #}
                 {%- for sidebartemplate in sidebars %}
@@ -156,46 +118,13 @@
         <div class="span9">
           <div cclass="hero-unit">
 
-          {%- block header %}
-          {% endblock %}
+            {%- block qgisrelbar %}{{ relbar() }}{% endblock %}
 
-          {%- block relbar1 %}
-            {{ relbar() }}
-          {% endblock %}
-
-          {%- block content %}
-            {%- block document %}
-              {% block body %} {% endblock %}
-            {%- endblock %}
-          {%- endblock %}
+            {% block body %} {% endblock %}
 
           </div>
         </div><!--/span-->
-
       <hr>
-
-      <footer>
-        <p>&copy; Company 2012</p>
-      </footer>
-
     </div><!--/.fluid-container-->
+{% endblock %}
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>
-
-  </body>
-</html>

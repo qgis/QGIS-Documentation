@@ -3,14 +3,63 @@
 
 /* color for disclaimer (used when files need to be revised)*/
 .disclaimer {
-    color:red;
-    border:2px solid red;
-    padding:5px 50px 5px 50px;
+  display:block;
+  margin-top:5px;
+  color:red;
+  border:2px solid red;
+  padding:5px 50px 5px 50px;
+
 }
 body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+  padding-top: 75px;
+  padding-bottom: 40px;
+  font-size: 14px;
 }
+
+h3 {
+  font-size: 22px;
+}
+
+#locales li{
+  float: left;
+  list-style-type: none;
+  padding: 0 1px 1px 1px;
+}
+#locales {
+  margin-left:2px;
+}
+.search input[type=text] {
+  width:90%;
+}
+
 .sidebar-nav {
-    padding: 9px 0;
+  padding: 9px 5px;
+}
+
+.navbar .brand {
+  background-image: url("http://plugins.qgis.org/static/images/blue/logo.png");
+  background-repeat: no-repeat;
+  padding-left: 60px;
+  height:42px;
+}
+
+.navbar .nav {
+  margin-top: 23px;
+}
+
+.navbar-inverse .navbar-inner {
+  background-image: url('http://plugins.qgis.org/static/images/blue/bg_logo.png');
+  background-repeat: repeat-x;
+  border:none;
+}
+
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+  color: #000000;
+  background-color: transparent;
+}
+
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav > li > a:hover {
+  color: #000000;
 }
