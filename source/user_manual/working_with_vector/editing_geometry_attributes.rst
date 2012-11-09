@@ -475,25 +475,27 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| Icon                   | Purpose                               | Icon                        | Purpose                 |
-+========================+=======================================+=============================+=========================+
-| |mActionUndo|          | Undo                                  | |mActionRedo|               | Redo                    |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionSimplify|      | Simplify Feature                      | |mActionAddRing|            | Add Ring                |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionAddIsland|     | Add Part                              | |mActionDeleteRing|         | Delete Ring             |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionDeletePart|    | Delete Part                           | |mActionReshape|            | Reshape Features        |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionOffsetCurve|   | Offset Curves                         | |mActionSplitFeatures|      | Split Features          |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| |mActionMergeFeatures| | Merge Selected Features               |                                                       +------------------------+---------------------------------------+-------------------------+
-| |mActionMergeFeatures| | Merge Attributes of Selected Features | |mActionRotatePointSymbols| | Rotate Point Symbols    |
-+------------------------+---------------------------------------+-----------------------------+-------------------------+
-| 
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| Icon                    | Purpose                               | Icon                        | Purpose              |
++=========================+=======================================+=============================+======================+
+| |mActionUndo|           | Undo                                  | |mActionRedo|               | Redo                 |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionSimplify|       | Simplify Feature                      | |mActionAddRing|            | Add Ring             |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionAddIsland|      | Add Part                              | |mActionDeleteRing|         | Delete Ring          |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionDeletePart|     | Delete Part                           | |mActionReshape|            | Reshape Features     |  
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionOffsetCurve|    | Offset Curves                         | |mActionSplitFeatures|      | Split Features       |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionMergeFeatures|  | Merge Selected Features               | |mActionRotatePointSymbols| | Rotate Point Symbols |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
+| |mActionMergeFeatures|  | Merge Attributes of Selected Features |                             |                      |
++-------------------------+---------------------------------------+-----------------------------+----------------------+
 
    Table Advanced Editing: Vector layer advanced editing toolbar
+
+
 
 
 Undo and Redo
@@ -604,6 +606,17 @@ the polygon with a right click.
    closed line. So the point that is represented 'twice' will not be the same 
    any more. This may not be a problem for most applications, but it is 
    something to consider.
+
+
+
+Offset Curves
+.............
+
+The offset curve tool is a new editing tool.
+It creates parallel shifts of lines and polygon rings . The tool can be applied to the edited
+layer (the geometries are modified) or also to background layers (creates copies of the lines / rings 
+and adds it to the the edited layer). It is thus ideally suited for the creation of distance
+line layers.
 
 .. index:: Split_Features
 
@@ -768,7 +781,7 @@ Working with the Attribute Table
 --------------------------------
 
 
-The :index:'attribute table' displays features of a selected layer. Each row 
+The :index:`attribute table` displays features of a selected layer. Each row 
 in the table represents one map feature and each column contains a particular 
 piece of information about the feature. Features in the table can be searched, 
 selected, moved or even edited.
