@@ -18,10 +18,10 @@ currently only possible in PostGIS and with OGR formats, if GDAL version is
 >= 1.6.0.
 
 You have to bring the vector layer in editing mode, before you can click on 
-the field calculator icon to open the dialog (see Figure_attributes_3). In 
-the dialog you first have to select whether you want to update an existing 
-field, only update selected features or create a new attribute field, where 
-the results of the calculation will be added.
+the field calculator icon to open the dialog (see figure_attributes_3_). In 
+the dialog you first have to select whether you want to only update selected features,
+create a new attribute field where the results of the calculation will be added or update an existing 
+field.
 
 .. _figure_attributes_3:
 
@@ -30,13 +30,13 @@ the results of the calculation will be added.
    **Figure Attributes 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
-   :width: 40em
+   :width: 50em
    :align: center
 
    Field Calculator |nix|
 
 If you choose to add a new field, you need to enter a field name, a field type
-(integer, real or string), the total field width, and the field precision.
+(integer, real or string), the total field width, and the field precision (see figure_attributes_3_) .
 For example, if you choose a field width of 10 and a field precision of 3 it 
 means you have 6 signs before the dot, then the dot and another 3 signs for 
 the precision.
