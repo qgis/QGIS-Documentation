@@ -9,10 +9,12 @@
 Query Builder
 =============
 
-The **[Advanced search...]** button opens the Query Builder and allows you to 
-define a subset of a table using a SQL-like WHERE clause, display the result 
-in the main window and save it as a Shapefile. For example, if you have a
-``towns`` layer with a ``population`` field you could select only larger towns 
+The Query Builder allows you to define a subset of a table using a SQL-like WHERE clause, display the result 
+in the main window and save it as a Shapefile.
+
+Open the attribute table choosing |mActionOpenTable| :menuselection:`Open Attribute Table` from the menu bar.
+Click on the **[Advanced Search]** button to open the query builder.
+For example, if you have a ``towns`` layer with a ``population`` field you could select only larger towns 
 by entering ``population > 100000`` in the SQL box of the query builder. 
 Figure_attributes_2_ shows an example of the query builder populated with data 
 from a PostGIS layer with attributes stored in PostgreSQL. The Fields, Values 
