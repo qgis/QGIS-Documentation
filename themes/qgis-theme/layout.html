@@ -37,7 +37,8 @@
         $(document).ready(function(){
             var currentPage = '{{current_page_name}}.html';
             var currentLang = window.location.href.slice(window.location.href.indexOf(currentPage)-3 ,window.location.href.indexOf(currentPage)-1);
-            $('#flag_'+currentLang).css('border-bottom', 'solid 1px #111111');
+            //$('#flag_'+currentLang).css('border-bottom', 'solid 1px #111111');
+            $('#flag_'+currentLang).css('background-color', '#cccccc');
         })
 
         // load current page in a different language
@@ -105,6 +106,9 @@
                 <li id="flag_de"><a href="#" onclick="gotoLang('de');"><img src="http://qgis.org/components/com_joomfish/images/flags/de.gif"/></a></li>
                 <li id="flag_fr"><a href="#" onclick="gotoLang('fr');"><img src="http://qgis.org/components/com_joomfish/images/flags/fr.gif"/></a></li>
                 <li id="flag_it"><a href="#" onclick="gotoLang('it');"><img src="http://qgis.org/components/com_joomfish/images/flags/it.gif"/></a></li>
+                <li id="flag_es"><a href="#" onclick="gotoLang('es');"><img src="http://qgis.org/components/com_joomfish/images/flags/es.gif"/></a></li>
+                <li id="flag_pt"><a href="#" onclick="gotoLang('pt');"><img src="http://qgis.org/components/com_joomfish/images/flags/pt.gif"/></a></li>
+                <li id="flag_ja"><a href="#" onclick="gotoLang('ja');"><img src="http://qgis.org/components/com_joomfish/images/flags/ja.gif"/></a></li>
                 <li id="flag_nl"><a href="#" onclick="gotoLang('nl');"><img src="http://qgis.org/components/com_joomfish/images/flags/nl.gif"/></a></li>
             </ul><span style="clear:both">&nbsp;</span>
             {%- if sidebars != None %}

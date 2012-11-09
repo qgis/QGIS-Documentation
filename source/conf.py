@@ -118,6 +118,8 @@ rst_epilog = """
 .. |tab| image:: /static/common/tab.png
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
+.. |icon_dbmanager| image:: /static/common/dbmanager.png
+   :width: 1.5em
 .. |oracle_raster| image:: /static/common/oracle_raster.png
    :width: 1.5em
 .. |raster_terrain| image:: /static/common/raster_terrain.png
@@ -276,6 +278,8 @@ rst_epilog = """
 .. |mActionCalculateField| image:: /static/common/mActionCalculateField.png
    :width: 1.5em
 .. |mActionRotatePointSymbols| image:: /static/common/mActionRotatePointSymbols.png
+   :width: 1.5em
+.. |mActionOffsetCurve| image:: /static/common/mActionOffsetCurve.png
    :width: 1.5em
 .. |mActionToggleEditing| image:: /static/common/mActionToggleEditing.png
    :width: 1.5em
@@ -579,6 +583,48 @@ rst_epilog = """
 .. |selectcreatelayer| image:: /static/common/selectcreatelayer.png
    :width: 1.5em
 .. |heatmap| image:: /static/common/heatmap.png
+   :width: 1.5em
+.. |CRS| image:: /static/common/CRS.png
+   :width: 1.5em
+.. |action| image:: /static/common/action.png
+   :width: 2em
+.. |attributes| image:: /static/common/attributes.png
+   :width: 2em
+.. |diagram| image:: /static/common/diagram.png
+   :width: 2em
+.. |general| image:: /static/common/general.png
+   :width: 2em
+.. |metadata| image:: /static/common/metadata.png
+   :width: 2em
+.. |symbology| image:: /static/common/symbology.png
+   :width: 2em
+.. |join| image:: /static/common/join.png
+   :width: 2em
+.. |labels| image:: /static/common/labels.png
+   :width: 2em
+.. |locale| image:: /static/common/locale.png
+   :width: 2em
+.. |dbmanager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |gdal| image:: /static/common/gdal.png
+   :width: 1.5em
+.. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
+   :width: 1.5em
+.. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
+   :width: 1.5em
+.. |FullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png   
+   :width: 1.5em
+.. |PanToSelected| image:: /static/common/mActionPanToSelected.png
+   :width: 1.5em
+.. |ShowRasterCalculator| image:: /static/common/mActionShowRasterCalculator.png
+   :width: 1.5em
+.. |mIconZip| image:: /static/common/mIconZip.png
+   :width: 2em
+.. |offline_editing_sync| image:: /static/common/offline_editing_sync.png
+   :width: 1.5em
+.. |raster-interpolate| image:: /static/common/raster-interpolate.png
+   :width: 1.5em
+.. |raster-stats| image:: /static/common/raster-stats.png
    :width: 1.5em
 """
 
