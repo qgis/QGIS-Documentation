@@ -11,7 +11,7 @@ Introduction
 SEXTANTE can be extended using additional applications, calling them
 from within SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are
 supported, along with some other command-line applications that provide
-spatial data analysis functionalities. Algorithms relying on an external 
+spatial data analysis functionalities. Algorithms relying on an external
 application are managed by their own algorithm provider.
 
 This chapter will show you how to configure SEXTANTE to include these
@@ -23,13 +23,13 @@ with any other SEXTANTE geoalgorithm.
 
 By default, all algorithms that rely on an external appplication not shipped with QGIS
 are not enabled. You can enable them in the SEXTANTE configuration dialog. Make sure
-that the corresponding application is already installed in your system. Enabling an 
+that the corresponding application is already installed in your system. Enabling an
 algorithm provider without installing the application it needs will cause the algorithms
 to appear in the toolbox, but an error will be thrown when you try to execute them.
 
 This is because the algorithm descriptions (needed to
 create the parameters dialog and give SEXTANTE the information it needs about
-the algorithm) are not included with each appllication, but with SEXTANTE instead. 
+the algorithm) are not included with each appllication, but with SEXTANTE instead.
 That is,they are part of SEXTANTE, so you have them in your installation even if you
 have not installed any other software. Running the algorithm, however, needs the
 application binaries to be installed in your system.
@@ -165,16 +165,16 @@ Limitations for multi-band layers
 Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a
 multi-band layer (such as an RGB or multi-spectral image), you first have to
 split it into single-banded images. To do so, you can use the *SAGA/Grid - Tools/Split RGB image*
-algorithm (which creates 3 images from an RGB image) or the *SAGA/Grid - tools/Extract band* 
+algorithm (which creates 3 images from an RGB image) or the *SAGA/Grid - tools/Extract band*
 algorithm (to extract a single band)
 
 Limitations in cellsize
 ........................
 
-SAGA assumes that raster layers have the same cellsize in the X and Y axis. If you 
+SAGA assumes that raster layers have the same cellsize in the X and Y axis. If you
 are working with a layer with different values for its horizontal and vertical
 cellsizes, you might get unexcepted results. In this case, a warning will be added
-to the SEXTANTE log, indicating that an input layer might not be suitable to be 
+to the SEXTANTE log, indicating that an input layer might not be suitable to be
 processed by SAGA.
 
 
@@ -451,13 +451,13 @@ Open ``linearpart.h`` file and add after line
 add new line with
 
 ::
-   
+
    #include <stdint.h>
 
 so you'll get
 
 ::
-   
+
    #include "mpi.h"
    #include <stdlib.h>
 
@@ -471,7 +471,7 @@ and replace quotes (``""``) with ``<>``, so you'll get
 Save changes and close file. Create build directory and cd into it
 
 ::
-   
+
    mkdir build
    cd build
 
@@ -479,7 +479,7 @@ Configure your build with command
 
 ::
 
-   CXX=mpixcc cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+   CXX=mpicxx cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
 
 and then compile
 
