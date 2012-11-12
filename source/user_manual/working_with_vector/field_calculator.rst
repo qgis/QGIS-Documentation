@@ -41,26 +41,28 @@ For example, if you choose a field width of 10 and a field precision of 3 it
 means you have 6 signs before the dot, then the dot and another 3 signs for 
 the precision.
 
-The **Fields list** contains all attributes of the attribute table to be 
-searched. To add an attribute to the Field calculator expression field, 
-double click its name in the Fields list. Generally you can use the various 
-fields, values and operators to construct the calculation expression or you 
+The **Function List** contains functions as well as fields and values. View the help function in the **Selected Function Help**. In **Expression** you see the calculation expressions you create with the **Function List**. The most commonly used operators, see **Operators**.
+
+In the *Function List**, click on ``>-Fields and Values`` to view all attributes of the attribute table
+to be searched. To add an attribute to the Field calculator **Expression** field, 
+double click its name in the Fields and Values list. Generally you can use the various 
+fields, values and functions to construct the calculation expression or you 
 can just type it into the box.
 
-The **Values list** lists the values of an attribute field. To list all 
-possible values, select the attribute field in the Fields list and click the 
-**[All]** button. To list all values of an attribute field that are present 
-in the sample table, select the attribute in the Fields list and click the 
-**[Sample]** button. The procedure is the same as for the Query Builder. To 
-add a value to the Field calculator expression box, double click its name in 
+To display the values ​​of a field, you just right click on the appropriate field. 
+You can choose between :guilabel:`Load top 10 unique values` and :guilabel:`Load all unique values`.
+On the right side opens the **Field Values** list with the unique values.
+To add a value to the Field calculator **Expression** box, double click its name in 
 the Values list.
 
-The **Operators section** contains all usable operators. To add an operator 
-to the Field calculator expression box, click the appropriate button. 
-Mathematical calculations ( + , - , \* , ...), trigonometric functions ( sin, 
-cos, tan, ...), extract geometric information ( length and area ) are 
-available, together with concatenator (||) and row counter. Stay tuned for 
-more operators to come!
+The :guilabel:`>-Operators`, :guilabel:`>-Math`, :guilabel:`>-Conversions`, :guilabel:`>-String`, :guilabel:`>-Geometry` and :guilabel`>-Record` menu provides several functions.
+In :guilabel:`>-Operators` you find mathematical operators.
+Find :guilabel:`>-Math` for mathematical functions.
+The :guilabel:`>-Conversions` group contains functions that convert one data type to another.
+The :guilabel:`>-String` group provides functions for data strings.
+In the :guilabel:`>-Geometry` group you find functions for geometry objects.
+With :guilabel`>-Record` group functions you can add a numeration to your data set. 
+To add an operator to the Field calculator **Expression** box, click on the > and then double klick the function. 
 
 A short example illustrates how the field calculator works. We want to 
 calculate the length of the ``railroads`` layer from the 
