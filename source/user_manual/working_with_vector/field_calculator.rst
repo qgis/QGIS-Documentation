@@ -43,58 +43,62 @@ the precision.
 
 The **Function List** contains functions as well as fields and values. View the help function in the **Selected Function Help**. In **Expression** you see the calculation expressions you create with the **Function List**. The most commonly used operators, see **Operators**.
 
-In the *Function List**, click on ``>-Fields and Values`` to view all attributes of the attribute table
+In the *Function List**, click on :guilabel:`>-Fields and Values` to view all attributes of the attribute table
 to be searched. To add an attribute to the Field calculator **Expression** field, 
 double click its name in the Fields and Values list. Generally you can use the various 
 fields, values and functions to construct the calculation expression or you 
 can just type it into the box.
-
 To display the values ​​of a field, you just right click on the appropriate field. 
 You can choose between :guilabel:`Load top 10 unique values` and :guilabel:`Load all unique values`.
 On the right side opens the **Field Values** list with the unique values.
 To add a value to the Field calculator **Expression** box, double click its name in 
-the Values list.
+the **Field Values** list.
 
-The :guilabel:`>-Operators`, :guilabel:`>-Math`, :guilabel:`>-Conversions`, :guilabel:`>-String`, :guilabel:`>-Geometry` and :guilabel`>-Record` menu provides several functions.
+The :guilabel:`>-Operators`, :guilabel:`>-Math`, :guilabel:`>-Conversions`, :guilabel:`>-String`, :guilabel:`>-Geometry` and :guilabel:`>-Record` menu provides several functions.
 In :guilabel:`>-Operators` you find mathematical operators.
 Find :guilabel:`>-Math` for mathematical functions.
 The :guilabel:`>-Conversions` group contains functions that convert one data type to another.
 The :guilabel:`>-String` group provides functions for data strings.
 In the :guilabel:`>-Geometry` group you find functions for geometry objects.
-With :guilabel`>-Record` group functions you can add a numeration to your data set. 
+With :guilabel:`>-Record` group functions you can add a numeration to your data set. 
 To add an operator to the Field calculator **Expression** box, click on the > and then double klick the function. 
 
 A short example illustrates how the field calculator works. We want to 
 calculate the length of the ``railroads`` layer from the 
 :file:`QGIS_example_dataset`:
 
-
-
 #. Load the Shapefile *railroads.shp* in |qg| and open the 
    :guilabel:`Attribute Table` dialog.
 #. Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the 
    |mActionCalculateField| :sup:`Field Calculator` dialog.
-#. Unselect the |checkbox| :guilabel:`Update existing field` checkbox to 
-   enable the new field box.
-#. Add ``length`` as output field name, ``real`` as output field type and 
-   define output field width 10 and a precision of 3.
-#. Now click on Operator ``length`` to add it as \$length into the field 
+#. Select the |checkbox| :guilabel:`Create a new field` checkbox to safe the calculations into a new field.
+#. Add ``length`` as Output field name, ``real`` as Output field type and 
+   define Output field width 10 and a Precision of 3.
+#. Now click on function ``length`` in the :guilabel:`>-Geometry` group to add it as \$length into the field 
    calculator expression box and click **[Ok]**.
+#. You can now find a new column ``length`` in the attribute table.
 
 
+The available functions are listed in the following table.
 
-Due to limited space screen, not all the operators are available through 
-the buttons. They are all listed in the following table.
-
-.. index:: Field_Calculator_Operators
+.. index:: Field_Calculator_Functions
 
 ===================================  ========================================================
-List of operators supported by the field calculator
+List of functions supported by the field calculator
 ---------------------------------------------------------------------------------------------
 String                               Literal string value
 ===================================  ========================================================
+column name "column name"            value of the field column name
+'string'                             a string value
 NULL                                 null value
-sqrt(*a*)                            square root
+*a* IS NULL                          *a* has no value
+*a* IS NOT NULL                      *a* has a value
+*a* IN (value[,value])               *a* is below the values listed
+*a* NOT IN (value[,value])           *a* is not below the values listed
+*a* OR *b*                           *a* or *b* is true
+*a* AND *b*                          *a* and *b* is true
+NOT *a*                              inverted truth value of a
+sqrt(*a*)                            square root of *a*
 sin(*a*)                             sinus of *a* 
 cos(*a*)                             cosinus of *b*
 tan(*a*)  			     tangens of *a*
@@ -109,7 +113,8 @@ upper(*a*)			     convert string *a* to upper case
 length(*a*)			     length of string *a*
 atan2(y,x)  			     arcustangens of y/x using the signs of the two arguments 
                                      to determine the quadrant of the result
-replace(*a*, replacethis, withthat)  replace *replacethis* with *withthat* in string *a*
+replace(*a*, replacethis, withthat)  replace *this* with *that* in string *a*
+regexp_replace(a,this,that)          replace the regular expression *this* with *that*
 substr(*a*,from,len)                 len characters of string *a* starting from from 
                                      (first character index is 1)
 *a* || *b*                           concatenate strings *a* and *b*
@@ -120,6 +125,20 @@ substr(*a*,from,len)                 len characters of string *a* starting from 
 \$id     			     feature id
 \$x  				     x coordinate of point
 \$y  				     y coordinate of point
+xat(n)                               X coordinate of the point of an n-th line (indeces start at 0;
+                                     negative values refer to the line end)
+yat(n)                               y coordinate of the point of an n-th line (indeces start at 0;
+                                     negative values refer to the line end)
+*a*=*b*                              *a* and *b* are equal
+*a*!=*b*                             *a* and *b* are not equal
+*a*<>*b*
+*a*>=*b*                             *a* is larger than or equal to *b*
+*a*<=*b*                             *a* is less than or equal to *b*
+*a*>*b*                              *a* is larger than *b*
+*a*<*b*                              *a* is smaller than *b*
+*a*~*b*                              *a* matches the regular expression *b*
+*a* LIKE *b*                         *a* equals *b*
+*a* ILIKE *b*                        *a* equals *b* (without regard to case-sensitive)
 *a* |wedge| *b*  		     *a* raised to the power of *b* 
 *a* \* *b*        		     *a* multiplied by *b*
 *a* / *b*  			     *a* divided by *b* 
@@ -129,4 +148,4 @@ substr(*a*,from,len)                 len characters of string *a* starting from 
 \- *a*  			     negative value of *a*
 ===================================  ========================================================
 
-   List of operators for the field calculator
+   List of functions for the field calculator
