@@ -9,8 +9,8 @@
 Query Builder
 =============
 
-The Query Builder allows you to define a subset of a table using a SQL-like WHERE clause, display the result 
-in the main window and save it as a Shapefile.
+The Query Builder allows you to define a subset of a table using a SQL-like WHERE clause and display the result 
+in the main window. The query result then can be saved as a new vector layer.
 
 Query
 -----
@@ -35,15 +35,15 @@ and Operators sections help the user to construct the SQL-like query.
 
    Query Builder |nix|
 
-The **Fields list** contains all attributes of the attribute table to be 
-searched. To add an attribute to the SQL where clause field, double click its 
+The **Fields list** contains all attribute columns of the attribute table to be 
+searched. To add an attribute column to the SQL where clause field, double click its 
 name in the Fields list. Generally you can use the various fields, values and 
 operators to construct the query or you can just type it into the SQL box.
 
-The **Values list** lists the values of an attribute. To list all possible 
+The **Values list** lists the values of an attribute table. To list all possible 
 values of an attribute, select the attribute in the Fields list and click 
-the **[all]** button. To list all values of an attribute that are present in 
-the sample table, select the attribute in the Fields list and click the 
+the **[all]** button. To list the first 25 unique values of an attribute column, 
+select the attribute column in the Fields list and click the 
 **[Sample]** button. To add a value to the SQL where clause field, double 
 click its name in the Values list.
 
@@ -79,13 +79,14 @@ window without changing the current selection.
 Selection
 ---------
 
-With |qg| it is possible also to select features using a similar query 
+With |qg| it is possible also to select features for visualisation using a similar query 
 builder interface to that used in :ref:`vector_query_builder`. In the above 
 section the purpose of the query builder is to highlight all selected features meeting 
 the filter criteria in yellow. The rest of the features do not change their appearance.
-Another possibility is to make a selection by right clicking on a layer and choosing
-:guilabel:`Query ...`. If you perform a SQL query here only the selected features are 
-displayed in the map view. Features that don't match the SQL query don't appear in the map view.
+
+Another possibility is to make a selection by right clicking on a layer in the legend and 
+choosing :guilabel:`Query ...`. If you perform a SQL query here only the selected features are 
+displayed in the map view. Features that don't match the SQL query are not visualised in the map view.
 The same function is available from the :guilabel:`General` tab in the vector :guilabel:`Layer Properties` dialog. 
 You can find a **[Query builder]** button right below. 
 The selection described above can be used with all vector data providers.
