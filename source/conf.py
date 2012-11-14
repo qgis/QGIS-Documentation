@@ -500,6 +500,8 @@ rst_epilog = """
    :width: 1.5em
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
+.. |gentlelogo| image:: /static/common/qgislogo.png
+   :width: 3em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_mapset| image:: /static/common/grass_new_mapset.png

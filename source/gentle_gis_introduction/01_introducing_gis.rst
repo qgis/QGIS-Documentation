@@ -6,7 +6,7 @@ Introducing GIS
 +-------------------+-------------+------------------------------------------------------------------+
 | GIS for Educators |                                                                                |
 +-------------------+-------------+------------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Understanding what GIS is and what it can be used for.           |
+| |gentlelogo|      | Objectives: | Understanding what GIS is and what it can be used for.           |
 +                   +-------------+------------------------------------------------------------------+
 |                   | Keywords:   | GIS, Computer, Maps, Data, Information System, Spatial, Analysis |
 +-------------------+-------------+------------------------------------------------------------------+

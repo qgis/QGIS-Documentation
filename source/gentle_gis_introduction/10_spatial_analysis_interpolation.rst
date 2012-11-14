@@ -6,7 +6,7 @@ Spatial Analysis (Interpolation)
 +-------------------+-------------+---------------------------------------------------------------------------------------------+
 | GIS for Educators |                                                                                                           |
 +-------------------+-------------+---------------------------------------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Understanding of interpolation as part of spatial analysis                                  |
+| |gentlelogo|      | Objectives: | Understanding of interpolation as part of spatial analysis                                  |
 +                   +-------------+---------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Point data, interpolation method, Inverse Distance Weighted, Triangulated Irregular Network |
 +-------------------+-------------+---------------------------------------------------------------------------------------------+

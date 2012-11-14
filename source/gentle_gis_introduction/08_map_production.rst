@@ -6,7 +6,7 @@ Map Production
 +-------------------+-------------+---------------------------------------------------------------------------------+
 | GIS for Educators |                                                                                               |
 +-------------------+-------------+---------------------------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Understanding of map production for spatial data                                |
+| |gentlelogo|      | Objectives: | Understanding of map production for spatial data                                |
 +                   +-------------+---------------------------------------------------------------------------------+
 |                   | Keywords:   | Map production, map layout, scale bar, north arrow, legend, map body, map unit  |
 +-------------------+-------------+---------------------------------------------------------------------------------+

@@ -6,7 +6,7 @@ Vector Attribute Data
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+
 | GIS for Educators |                                                                                                                                   |
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
+| |gentlelogo|      | Objectives: | In this topic we describe how attribute data are associated with vector features and can be used to symbolise data. |
 +                   +-------------+---------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Attribute, database, fields, data, vector, symbology                                                                |
 +-------------------+-------------+---------------------------------------------------------------------------------------------------------------------+

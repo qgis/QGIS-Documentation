@@ -6,7 +6,7 @@ Data Capture
 +-------------------+-------------+---------------------------------------------------------+
 | GIS for Educators |                                                                       |
 +-------------------+-------------+---------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Learn how to create and edit vector and attribute data. |
+| |gentlelogo|      | Objectives: | Learn how to create and edit vector and attribute data. |
 +                   +-------------+---------------------------------------------------------+
 |                   | Keywords:   | Editing, data capture, heads\-up, table, database.      |
 +-------------------+-------------+---------------------------------------------------------+

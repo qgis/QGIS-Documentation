@@ -6,7 +6,7 @@ Vector Spatial Analysis (Buffers)
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------------+
 | GIS for Educators |                                                                                                                                      |
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Understanding the use of buffering in vector spatial analysis.                                                         |
+| |gentlelogo|      | Objectives: | Understanding the use of buffering in vector spatial analysis.                                                         |
 +                   +-------------+------------------------------------------------------------------------------------------------------------------------+
 |                   | Keywords:   | Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, outward and inward buffer, multiple buffer  |
 +-------------------+-------------+------------------------------------------------------------------------------------------------------------------------+

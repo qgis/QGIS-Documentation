@@ -6,7 +6,7 @@ Raster Data
 +-------------------+-------------+-----------------------------------------------------------------+
 | GIS for Educators |                                                                               |
 +-------------------+-------------+-----------------------------------------------------------------+
-| \|picture_57\|    | Objectives: | Understand what raster data is and how it can be used in a GIS. |
+| |gentlelogo|      | Objectives: | Understand what raster data is and how it can be used in a GIS. |
 +                   +-------------+-----------------------------------------------------------------+
 |                   | Keywords:   | Raster, Pixel, Remote Sensing, Satellite, Image, Georeference   |
 +-------------------+-------------+-----------------------------------------------------------------+
