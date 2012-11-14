@@ -12,6 +12,9 @@ Query Builder
 The Query Builder allows you to define a subset of a table using a SQL-like WHERE clause, display the result 
 in the main window and save it as a Shapefile.
 
+Query
+-----
+
 Open the attribute table choosing |mActionOpenTable| :menuselection:`Open Attribute Table` from the menu bar.
 Click on the **[Advanced Search]** button to open the query builder.
 For example, if you have a ``towns`` layer with a ``population`` field you could select only larger towns 
@@ -57,6 +60,7 @@ and load SQL queries. The **[OK]** button closes the window and selects
 the features satisfying the query. The **[Cancel]** button closes the 
 window without changing the current selection.
 
+
 .. _tip_sql_layer_definition:
 
 .. tip:: **Changing the Layer Definition**
@@ -70,23 +74,22 @@ window without changing the current selection.
 
 .. index:: Select_using_Query
 
-.. _sec_select_by_query:
+.. _sec_selection:
 
-Select by query
----------------
+Selection
+---------
 
 With |qg| it is possible also to select features using a similar query 
 builder interface to that used in :ref:`vector_query_builder`. In the above 
-section the purpose of the query builder is to only show features meeting 
-the filter criteria as a 'virtual layer' / subset. The purpose of the select 
-by query function is to highlight all features that meet a particular 
-criteria. Select by query can be used with all vector data providers.
+section the purpose of the query builder is to highlight all selected features meeting 
+the filter criteria in yellow. The rest of the features do not change their appearance.
+Another possibility is to make a selection by right clicking on a layer and choosing
+:guilabel:`Query ...`. If you perform a SQL query here only the selected features are 
+displayed in the map view. Features that don't match the SQL query don't appear in the map view.
+The same function is available from the :guilabel:`General` tab in the vector :guilabel:`Layer Properties` dialog. 
+You can find a **[Query builder]** button right below. 
+The selection described above can be used with all vector data providers.
 
-To do a 'select by query' on a loaded layer, click on the button 
-|mActionOpenTable| :sup:`Open Table` to open the attribute table of the layer. 
-Then click the **[Advanced...]** button at the bottom. This starts the Query 
-Builder that allows to define a subset of a table and display it as described 
-in Section :ref:`vector_query_builder`.
 
 Save selected features as new layer
 -----------------------------------
