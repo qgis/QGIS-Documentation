@@ -61,7 +61,7 @@ The :guilabel:`>-Conversions` group contains functions that convert one data typ
 The :guilabel:`>-String` group provides functions for data strings.
 In the :guilabel:`>-Geometry` group you find functions for geometry objects.
 With :guilabel:`>-Record` group functions you can add a numeration to your data set. 
-To add an operator to the Field calculator **Expression** box, click on the > and then double klick the function. 
+To add a function to the Field calculator **Expression** box, click on the > and then double klick the function. 
 
 A short example illustrates how the field calculator works. We want to 
 calculate the length of the ``railroads`` layer from the 
