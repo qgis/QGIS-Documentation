@@ -173,7 +173,7 @@ Properties` dialog, or the **[Change]** button right of the preview, which
 opens an ordinary :guilabel:`Color` dialog.
 
 In the :guilabel:`Style` tab you can apart from a general layer transparency 
-also define to use millimeter or map units for the size scale. In the **[Advanced]**button
+also define to use millimeter or map units for the size scale. In the **[Advanced]** button
 next to the **[Save as style]** button you can use data-defined size scale and rotation. Here the :menuselection:`Symbol levels -->` menu allows to enable and define the order in which the symbol layers are rendered (if the symbol 
 consists of more than one layer).
 
@@ -321,7 +321,9 @@ the rivers layer of the |qg| sample dataset.
    Graduated Symbolizing options |nix|
 
 
+
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
+
 
 **Rule-based rendering**
 
@@ -329,12 +331,20 @@ the rivers layer of the |qg| sample dataset.
 The rule-based renderer is used to render all the features from a layer, 
 using rule based symbols, whose color reflects the classification of a 
 selected feature's attribute to a class. The rules are based on SQL 
-statements. You can also use the Query Builder to create them. The dialog 
-allows rule grouping by filter or scale and you can decide if you want to 
+statements. The dialog allows rule grouping by filter or scale and you can decide if you want to 
 enable symbol levels or use only first matched rule.
 
 The example in figure_symbology_7_ shows the rule-based rendering dialog 
 for the rivers layer of the |qg| sample dataset.
+
+To create a rule activate a row by clicking on it and press the **[Edit]** button. In the 
+Rule properties dialog you can define a label for the rule. Press the |browsebutton| button
+to open the Expression string builder. In the **Function List**, click on :guilabel:`>-Fields and Values`
+to view all attributes of the attribute table to be searched. To add an attribute to the 
+Field calculator **Expression** field, double click its name in the :guilabel:`>-Fields and Values` list.
+Generally you can use the various fields, values and functions to construct the calculation expression or you 
+can just type it into the box (see :ref:`vector_field_calculator`).
+
 
 .. _figure_symbology_7:
 
