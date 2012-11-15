@@ -13,9 +13,7 @@ The |mActionCalculateField| :sup:`Field Calculator` button in the attribute
 table allows to perform calculations on basis of existing attribute values or 
 defined functions, e.g to calculate length or area of geometry features. The 
 results can be written to a new attribute column or it can be used to update 
-values in an already existing column. The creation of new attribute fields is 
-currently only possible in PostGIS and with OGR formats, if GDAL version is 
->= 1.6.0.
+values in an already existing column.
 
 You have to bring the vector layer in editing mode, before you can click on 
 the field calculator icon to open the dialog (see figure_attributes_3_). In 
