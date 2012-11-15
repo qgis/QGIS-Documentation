@@ -337,10 +337,10 @@ enable symbol levels or use only first matched rule.
 The example in figure_symbology_7_ shows the rule-based rendering dialog 
 for the rivers layer of the |qg| sample dataset.
 
-To create a rule activate a row by clicking on it and press the **[Edit]** button. In the 
-Rule properties dialog you can define a label for the rule. Press the |browsebutton| button
-to open the Expression string builder. In the **Function List**, click on :guilabel:`>-Fields and Values`
-to view all attributes of the attribute table to be searched. To add an attribute to the 
+To create a rule, activate an existing row by clicking on it or click on '+' and click 
+on the new rule. Then press the [Edit] button. In the Rule properties dialog you can define a label
+for the rule. Press the |browsebutton| button to open the Expression string builder. In the **Function List**, 
+click on :guilabel:`>-Fields and Values`to view all attributes of the attribute table to be searched. To add an attribute to the 
 Field calculator **Expression** field, double click its name in the :guilabel:`>-Fields and Values` list.
 Generally you can use the various fields, values and functions to construct the calculation expression or you 
 can just type it into the box (see :ref:`vector_field_calculator`).
