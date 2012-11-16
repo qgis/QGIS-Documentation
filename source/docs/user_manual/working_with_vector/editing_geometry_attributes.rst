@@ -616,7 +616,7 @@ The offset curve tool is a new editing tool.
 It creates parallel shifts of lines and polygon rings . The tool can be applied to the edited
 layer (the geometries are modified) or also to background layers (creates copies of the lines / rings 
 and adds it to the the edited layer). It is thus ideally suited for the creation of distance
-line layers.
+line layers.The displacement is shown at the bottom left of the taskbar.
 
 .. index:: Split_Features
 

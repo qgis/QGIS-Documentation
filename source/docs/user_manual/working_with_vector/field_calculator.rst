@@ -13,9 +13,7 @@ The |mActionCalculateField| :sup:`Field Calculator` button in the attribute
 table allows to perform calculations on basis of existing attribute values or 
 defined functions, e.g to calculate length or area of geometry features. The 
 results can be written to a new attribute column or it can be used to update 
-values in an already existing column. The creation of new attribute fields is 
-currently only possible in PostGIS and with OGR formats, if GDAL version is 
->= 1.6.0.
+values in an already existing column.
 
 You have to bring the vector layer in editing mode, before you can click on 
 the field calculator icon to open the dialog (see figure_attributes_3_). In 
@@ -43,9 +41,9 @@ the precision.
 
 The **Function List** contains functions as well as fields and values. View the help function in the **Selected Function Help**. In **Expression** you see the calculation expressions you create with the **Function List**. The most commonly used operators, see **Operators**.
 
-In the *Function List**, click on :guilabel:`>-Fields and Values` to view all attributes of the attribute table
+In the **Function List**, click on :guilabel:`>-Fields and Values` to view all attributes of the attribute table
 to be searched. To add an attribute to the Field calculator **Expression** field, 
-double click its name in the Fields and Values list. Generally you can use the various 
+double click its name in the :guilabel:`>-Fields and Values` list. Generally you can use the various 
 fields, values and functions to construct the calculation expression or you 
 can just type it into the box.
 To display the values ​​of a field, you just right click on the appropriate field. 
@@ -67,8 +65,7 @@ A short example illustrates how the field calculator works. We want to
 calculate the length of the ``railroads`` layer from the 
 :file:`QGIS_example_dataset`:
 
-#. Load the Shapefile *railroads.shp* in |qg| and open the 
-   :guilabel:`Attribute Table` dialog.
+#. Load the Shapefile *railroads.shp* in |qg| and press |mActionOpenTable| :menuselection:`Open Attribute Table`.
 #. Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the 
    |mActionCalculateField| :sup:`Field Calculator` dialog.
 #. Select the |checkbox| :guilabel:`Create a new field` checkbox to safe the calculations into a new field.
@@ -149,3 +146,7 @@ yat(n)                               y coordinate of the point of an n-th line (
 ===================================  ========================================================
 
    List of functions for the field calculator
+
+The field calculator **Function list** with the **Selected Function Help** , **Operators** and **Expression** menu are also available
+through the rule-based rendering in the Style tab of the Layer properties and the expression based labeling |browsebutton|
+in the |mActionLabeling| :sup:`Labeling` core application.  
