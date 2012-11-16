@@ -108,15 +108,15 @@
             <!-- sidebar -->
             <ul id="locales">
                 <!-- TODO: get the flag images from a central place (the are in Qgis repo in the images dir) -->
-                <li id="flag_en"><a href="#" onclick="gotoLang('en');"><img src="http://qgis.org/components/com_joomfish/images/flags/en.gif" title="en" alt="en"/></a></li>
-                <li id="flag_de"><a href="#" onclick="gotoLang('de');"><img src="http://qgis.org/components/com_joomfish/images/flags/de.gif" title="de" alt="de"/></a></li>
-                <li id="flag_fr"><a href="#" onclick="gotoLang('fr');"><img src="http://qgis.org/components/com_joomfish/images/flags/fr.gif" title="fr" alt="fr"/></a></li>
-                <li id="flag_it"><a href="#" onclick="gotoLang('it');"><img src="http://qgis.org/components/com_joomfish/images/flags/it.gif" title="it" alt="it"/></a></li>
-                <li id="flag_es"><a href="#" onclick="gotoLang('es');"><img src="http://qgis.org/components/com_joomfish/images/flags/es.gif" title="es" alt="es"/></a></li>
-                <li id="flag_pt"><a href="#" onclick="gotoLang('pt');"><img src="http://qgis.org/components/com_joomfish/images/flags/pt.gif" title="pt" alt="pt"/></a></li>
-                <li id="flag_ru"><a href="#" onclick="gotoLang('ru');"><img src="http://qgis.org/components/com_joomfish/images/flags/ru.gif" title="ru" alt="ru"/></a></li>
-                <li id="flag_ja"><a href="#" onclick="gotoLang('ja');"><img src="http://qgis.org/components/com_joomfish/images/flags/ja.gif" title="ja" alt="ja"/></a></li>
-                <li id="flag_nl"><a href="#" onclick="gotoLang('nl');"><img src="http://qgis.org/components/com_joomfish/images/flags/nl.gif" title="nl" alt="nl"/></a></li>
+                    <li id="flag_en"><a href="#" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en_US.png', 1)}}" title="en" alt="en"/></a></li>
+                    <li id="flag_de"><a href="#" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"/></a></li>
+                    <li id="flag_fr"><a href="#" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"/></a></li>
+                    <li id="flag_it"><a href="#" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"/></a></li>
+                    <li id="flag_es"><a href="#" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"/></a></li>
+                    <li id="flag_pt"><a href="#" onclick="gotoLang('pt');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt" alt="pt"/></a></li>
+                    <li id="flag_ru"><a href="#" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"/></a></li>
+                    <li id="flag_ja"><a href="#" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"/></a></li>
+                    <li id="flag_nl"><a href="#" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"/></a></li>
             </ul><span style="clear:both">&nbsp;</span>
             {%- if sidebars != None %}
                 {#- new style sidebar: explicitly include/exclude templates #}

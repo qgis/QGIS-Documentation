@@ -16,6 +16,8 @@ QGIS
 
 Welcome to the Quantum GIS Project
 
+|qgissplash|
+
 Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
 (GIS) licensed under the GNU General Public License. QGIS is an official project
 of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, 

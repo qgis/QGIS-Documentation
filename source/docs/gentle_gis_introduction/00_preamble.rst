@@ -28,7 +28,7 @@ in partnership with:
 Spatial Information Management Unit, Office of the Premier, Eastern Cape, South Africa.
 
 .. image:: /static/gentle_gis_introduction/picture_16.jpg
-    :width: 10em
+    :width: 25em
 
 Copyright (c) 2009 Chief Directorate: Spatial Planning 
 
