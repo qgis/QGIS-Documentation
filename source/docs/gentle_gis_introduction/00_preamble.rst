@@ -12,6 +12,7 @@ A Gentle Introduction to GIS
 Brought to you with Quantum GIS, a Free and Open Source Software GIS Application for everyone.
 
 .. image:: /static/gentle_gis_introduction/picture_13.png
+    :width: 8em
 
 T. Sutton, O. Dassau, M. Sutton
 
@@ -20,12 +21,14 @@ sponsored by:
 Chief Directorate: Spatial Planning & Information, Department of Land Affairs, Eastern Cape, South Africa.
 
 .. image:: /static/gentle_gis_introduction/picture_18.png
+    :width: 6em
 
 in partnership with:
 
 Spatial Information Management Unit, Office of the Premier, Eastern Cape, South Africa.
 
 .. image:: /static/gentle_gis_introduction/picture_16.jpg
+    :width: 10em
 
 Copyright (c) 2009 Chief Directorate: Spatial Planning 
 

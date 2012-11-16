@@ -655,7 +655,7 @@ html_theme_path = ['../themes']
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
-html_short_title = 'QGIS Docs'
+html_short_title = 'QGIS'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -683,11 +683,13 @@ html_static_path = ['static']
 #html_sidebars = {}
 html_sidebars = {
         'index': ['globaltoc.html', 'searchbox.html']
-        ,'documentation_guidelines/**': ['localtoc.html', 'searchbox.html']
-        ,'gentle_gis_introduction/**': ['localtoc.html', 'searchbox.html']
-        ,'pyqgis_developer_cookbook/**': ['localtoc.html', 'searchbox.html']
-        ,'qgis_governance/**': ['localtoc.html', 'searchbox.html']
-        ,'user_manual/**': ['localtoc.html', 'searchbox.html']
+        ,'docs/**': ['localtoc.html', 'searchbox.html']
+        ,'website/**': ['localtoc.html', 'searchbox.html']
+#        ,'docs/gentle_gis_introduction/**': ['localtoc.html', 'searchbox.html']
+#        ,'docs/pyqgis_developer_cookbook/**': ['localtoc.html', 'searchbox.html']
+#        ,'docs/qgis_governance/**': ['localtoc.html', 'searchbox.html']
+#        ,'docs/user_manual/**': ['localtoc.html', 'searchbox.html']
+#        ,'website/**': ['localtoc.html', 'searchbox.html']
 #      ,'using/windows': ['windowssidebar.html', 'sourcelink.html', 'searchbox.html']
       }
 

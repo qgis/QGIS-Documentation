@@ -70,6 +70,7 @@
 <!-- overriding relbar1: NO relbar above the content -->
 {% block relbar1 %}{% endblock %}
 
+
 {% block content %}
 
     <!-- bootstrap stuff from fluid.html example -->
@@ -88,11 +89,11 @@
               <!--Logged in as <a href="#" class="navbar-link">Username</a>-->
             </p>
             <ul class="nav">
-              <li><a href="http://www.qgis.org">QGIS Home</a></li>
-              <li><a href="http://download.qgis.org/">Download</a></li>
-              <li class="active"><a href="{{ pathto(master_doc) }}">Documentation</a></li>
-              <li><a href="http://www.qgis.org/community.html">Community</a></li>
-              <li><a href="#development">Development</a></li>
+              <li><a href="{{ pathto(master_doc) }}">QGIS Home</a></li>
+              <!-- <li><a href="http://download.qgis.org/">Download</a></li> -->
+              <li xxclass="active"><a href="{{ pathto('docs/index') }}">Documentation</a></li>
+              <li><a href="{{ pathto('website/community/index') }}">Community</a></li>
+              <li><a href="{{ pathto('website/development/index') }}">Development</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

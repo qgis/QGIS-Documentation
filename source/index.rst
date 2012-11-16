@@ -1,58 +1,27 @@
 
-=================================
-Welcome to the QGIS Documentation
-=================================
-
-Currently we are building a infrastructure to more easily maintain and translate
-various QGIS documentation projects.
-
-All documentation is written in RST, saved in Github, and po/pot translatable.
+====
+QGIS
+====
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
+    :hidden:
 
-    user_manual/index
-    documentation_guidelines/index
-    gentle_gis_introduction/index
-    pyqgis_developer_cookbook/index
-    qgis_governance/index
-
-
-User manual
------------
-
-:ref:`The QGIS User Manual <QGIS-manual-index-reference>`. The main project.
-The User manual should contain all information needed for an user to get started.
-
-It will be updated with every update of QGIS.
+    QGIS User Guide <docs/user_manual/index>
+    docs/gentle_gis_introduction/index
+    Download QGIS <website/download>
+    website/community/index
+    website/development/index
 
 
-Documentation Guidelines
-------------------------
+Welcome to the Quantum GIS Project
 
-:ref:`The QGIS Documentation Guidelines <QGIS-documentation-guidelines>`. These
-guidelines are there to let all QGIS documenation have the same look and feel.
+Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
+(GIS) licensed under the GNU General Public License. QGIS is an official project
+of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, 
+Mac OSX, Windows and Android and supports numerous vector, raster, and database 
+formats and functionalities.
 
-Before contributing to the documenation, please read and understand those
-guidelines
+Our latest release is QGIS 1.8.0 you can read the `release annoucement here
+<http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
-
-A Gentle Introduction to GIS
-----------------------------
-
-:ref:`A Gentle Introduction to GIS <A-Gentle-Introduction-To-GIS-reference>`.
-This introduction to GIS is an introductory text to get your feet wet in GIS
-
-
-PyQGIS Developer Cookbook
--------------------------
-
-:ref:`PyQGIS Developer Cookbook <PyQGIS-Developer-Cookbook>`. This cookbook is
-intended to work both as a tutorial and a reference guide for peoples that want
-to learn QGIS Python API.
-
-QGIS Governance
----------------
-
-:ref:`QGIS Governance <QGIS-Governance>`. This document descibes official QGIS
-governance, bylaws, procedures etc.
