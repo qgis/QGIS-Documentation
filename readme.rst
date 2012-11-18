@@ -43,8 +43,8 @@ Tools
 You will need the following tools
 
 * git (from packagemanager) to clone/download the source from Github.com
-* msgfmt (from packagemanager: in Ubuntu/Debian it is in packag 'gettext')
 * texlive (from packagemanager)
+* gettext (from packagemanager) for translation tools
 * texlive-fonts-recommended (Ubuntu: from packagemanager)
 * in debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra
 * python-pip python installation (via sudo apt-get install python-pip)
