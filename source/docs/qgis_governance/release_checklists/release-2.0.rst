@@ -35,11 +35,11 @@ Two weeks before - string freeze - Date here
   but to finalise their work.
 * |checkbox_unchecked| Ensure any new contributors have been added to AUTHORS
   along with their mugshot if available (reserved for SVN
-  committers)|style="background-color:#bee5ae;"
+  committers)
 * |checkbox_unchecked| Ensure any new contributors have been added to
   CONTRIBUTORS (reserved for non GIT committers)
 * |checkbox_unchecked| Ensure any new sponsors have been added to SPONSORS
-  |checkbox_unchecked| Update the ChangeLog with a list of changes implemented
+* |checkbox_unchecked| Update the ChangeLog with a list of changes implemented
   in this release (complete changelog section below)
 * |checkbox_unchecked| Update index.html to reflect *what's new*,
   *requirements*, and *documentation* (see current index.html in ./doc of the
@@ -99,19 +99,31 @@ Day of release - Date
 Packaging Team 
 ...............
 
-
-|Tim Sutton|tim at linfiniti.com|Release Manager||
-|Jürgen E. Fischer|jef at norbit.de|Ubuntu Packages||
-|Jürgen E. Fischer / Tim Sutton|jef at norbit.de / tim at linfiniti.com|Windows packaging||
-|Otto Dassau|otto.dassau at gmx.de |openSUSE Packaging||
-|William|kyngchaos at kyngchaos.com|OSX Frameworks Build and OSX all in one bundle||
-|Niccolo Rigacci|qgis at rigacci.org|Debian Lenny||
-|Volker Fröhlich|volker27 at gmx.at|Fedora packaging||
-|BABA Yoshihiko|babayoshihiko at mac.com|OSX via Fink||
-|Antonio Chay|antonio.chay at gmail.com|CentOS 5.x||
-|Jeremy Spykerman|jeremy.spykerman at gmail.com||
-|Jim Hammack|hammack AT gotslack.org||| Slackware 13.0|
-|Tim Sutton|tim at linfiniti.com|Source|qgis.org/dowloads/||
++------------------------------+---------------------------------------+----------------------------------------------+
+|Tim Sutton                    |tim at linfiniti.com                   |Release Manager                               |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Jürgen E. Fischer             |jef at norbit.de                       |Ubuntu Packages                               |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Jürgen E. Fischer / Tim Sutton|jef at norbit.de / tim at linfiniti.com|Windows packaging                             |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Otto Dassau                   |otto.dassau at gmx.de                  |openSUSE Packaging                            |
++------------------------------+---------------------------------------+----------------------------------------------+
+|William                       |kyngchaos at kyngchaos.com             |OSX Frameworks Build and OSX all in one bundle|
++------------------------------+---------------------------------------+----------------------------------------------+
+|Niccolo Rigacci               |qgis at rigacci.org                    |Debian Lenny                                  |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Volker Fröhlich               |volker27 at gmx.at                     |Fedora packaging                              |
++------------------------------+---------------------------------------+----------------------------------------------+
+|BABA Yoshihiko                |babayoshihiko at mac.com               |OSX via Fink                                  |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Antonio Chay                  |antonio.chay at gmail.com              |CentOS 5.x                                    |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Jeremy Spykerman              |jeremy.spykerman at gmail.com          |                                              |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Jim Hammack                   |hammack AT gotslack.org                |Slackware 13.0                                |
++------------------------------+---------------------------------------+----------------------------------------------+
+|Tim Sutton                    |tim at linfiniti.com                   |Source @ qgis.org/dowloads/                   |
++------------------------------+---------------------------------------+----------------------------------------------+
 
 Packages should be uploaded to qgis.org into the appropriate subdirs under
 :file:`/var/www/downloads`
@@ -225,11 +237,11 @@ future release. To do this:
   a new milestone in redmine for 1.8.0. Create the milestone here:
 
 * Now you need to update each open bug on the branch and reset its milestone for
-the next release in the future. This can be done easily doing a batch update in redmine.
+  the next release in the future. This can be done easily doing a batch update in redmine.
 
 
 Create the source tarball 
-..........................
+.........................
 
 This is best achieved by running this little script::
 
@@ -248,71 +260,71 @@ TODO: Add details here on how to generate the changelog.
 Pro-forma call for packaging announcement 
 .........................................
 
-```
-Hi All
+mail::
 
-Dear QGIS devs & packagers
-
---- Note to casual readers ---
-
-Please do not pre-announce this release - give the packagers and release team 
-a chance to do their thing so that people hearing about the release have a fair 
-chance of finding a package, reading all our press material etc. 
-
---- End note ---
-
-I have branched QGIS 1.8.0 for release. The branch can be checked out like 
-this (as a tracking branch)
-
-git clone git://github.com/qgis/Quantum-GIS.git
-git branch --track release-1_8 origin/release-1_8
-git checkout release-1_8
-
-Or (to check out the tag made immediately before branching)
-
-git fetch
-git checkout final-1_8_0
-
-
-Source tarballs can be obtained from here:
-
-http://qgis.org/downloads/qgis-1.8.0.tar.bz2
-http://qgis.org/downloads/qgis-1.8.0.tar.bz2.md5
-
-Some notes:
-
-- Please do not commit anything to the release branch except packaging related
-  tweaks.
-- we will be focussing our efforts on master towards an upcoming 2.0 release.
-  There are no 1.8.x point releases planned except in the case of highly
-  critical bugfixes being needed.
-- If you make a package please be so kind as to update the download wiki page at 
-  http://www.qgis.org/wiki/Download with the details of your package.
-- If you are able to make packages for unlisted platforms / distros please
-  discuss your plans on this thread so that we can avoid duplication of effort.
-- I would like to make the release announcement next week, so it will be great
-  to have as many packages as possible ready by then.
-- GIT master is open again for general commits - please seek guidance from
-  Marco Hugentobler (PSC Code Manager) if you are planning any major code
-  changes.
-- Please accompany any updates to core with unit tests!
-
-Many thanks to all the developers, testers, bug fixers, bug reporters, document
-writers, translators and users that help to make QGIS a reality!
-
-Lastly can I call on the release team (or any interested people) to help to put
-together visual changelog (link below), press announcements etc. ready for the
-release date? I will send you an email when the packages are ready and you can
-start broadcasting announcements.
-
-Visual Changelog Wiki Page: http://hub.qgis.org/wiki/quantum-gis/Release_VisualGuide_18
-
-Best regards
-```
+ Hi All
+ 
+ Dear QGIS devs & packagers
+ 
+ --- Note to casual readers ---
+ 
+ Please do not pre-announce this release - give the packagers and release team 
+ a chance to do their thing so that people hearing about the release have a fair 
+ chance of finding a package, reading all our press material etc. 
+ 
+ --- End note ---
+ 
+ I have branched QGIS 1.8.0 for release. The branch can be checked out like 
+ this (as a tracking branch)
+ 
+ git clone git://github.com/qgis/Quantum-GIS.git
+ git branch --track release-1_8 origin/release-1_8
+ git checkout release-1_8
+ 
+ Or (to check out the tag made immediately before branching)
+ 
+ git fetch
+ git checkout final-1_8_0
+ 
+ 
+ Source tarballs can be obtained from here:
+ 
+ http://qgis.org/downloads/qgis-1.8.0.tar.bz2
+ http://qgis.org/downloads/qgis-1.8.0.tar.bz2.md5
+ 
+ Some notes:
+ 
+ - Please do not commit anything to the release branch except packaging related
+   tweaks.
+ - we will be focussing our efforts on master towards an upcoming 2.0 release.
+   There are no 1.8.x point releases planned except in the case of highly
+   critical bugfixes being needed.
+ - If you make a package please be so kind as to update the download wiki page at 
+   http://www.qgis.org/wiki/Download with the details of your package.
+ - If you are able to make packages for unlisted platforms / distros please
+   discuss your plans on this thread so that we can avoid duplication of effort.
+ - I would like to make the release announcement next week, so it will be great
+   to have as many packages as possible ready by then.
+ - GIT master is open again for general commits - please seek guidance from
+   Marco Hugentobler (PSC Code Manager) if you are planning any major code
+   changes.
+ - Please accompany any updates to core with unit tests!
+ 
+ Many thanks to all the developers, testers, bug fixers, bug reporters, document
+ writers, translators and users that help to make QGIS a reality!
+ 
+ Lastly can I call on the release team (or any interested people) to help to put
+ together visual changelog (link below), press announcements etc. ready for the
+ release date? I will send you an email when the packages are ready and you can
+ start broadcasting announcements.
+ 
+ Visual Changelog Wiki Page: http://hub.qgis.org/wiki/quantum-gis/Release_VisualGuide_18
+ 
+ Best regards
 
 
 Windows Binary upload 
-......................
+.....................
 
 Put the binary onto the server::
 
@@ -330,41 +342,47 @@ is virus free:
 `Gary Shood Virus Checker <http://www.garyshood.com/virus/>`_
 
 
-h1. Announcing the release 
+Announcing the release
+----------------------
 
-Note you can get stats for the previous release like this:
+Note you can get stats for the previous release like with "awstats": 
+  http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-1.8.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
 
-"awstats":http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-1.8.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
-
-h2. IRC TOPIC update
+IRC TOPIC update
+................
 
 Tim or Gary can update the IRC topic using this procedure:
 
-<pre>
-/msg chanserv op #qgis
-/topic #qgis to: !!Quantum GIS "Wroclaw" 1.8.2 released Nov 2011! - http://download.qgis.org || Logs: http://irclogs.geoapt.com/qgis || All activity on this channel is logged !!
-</pre>
+::
 
-h2. Update Version Text File
+  /msg chanserv op #qgis
+  /topic #qgis to: !!Quantum GIS "Wroclaw" 1.8.2 released Nov 2011! - http://download.qgis.org || Logs: http://irclogs.geoapt.com/qgis || All activity on this channel is logged !!
 
-The file accessed form the _Help->Check QGIS Version_ menu is located at http://qgis.org/version.txt. This should be updated to reflect the current release.
+Update Version Text File
+........................
 
-h2. Create an announcement template 
+The file accessed from the :menuselection:`Help --> Check QGIS Version` menu is located at http://qgis.org/version.txt. This should be updated to reflect the current release.
+
+Create an announcement template 
+...............................
 
 An announcement template will save you retypping the same text at the various places of announcement. The following text can be used as a basis:
 
 
-h3. A Generic release subject 
+A Generic release subject 
++++++++++++++++++++++++++
 
 Announcing the release of QGIS 1.8.0 (unstable release).
 
 
-h3. A generic 20 word summary 
+A generic 20 word summary 
++++++++++++++++++++++++++
 
 Quantum GIS is a user friendly Open Source Geographic Information System that runs on Linux, Unix, Mac OSX, and Windows.
 
 
-h3. A mailing list announcement 
+A mailing list announcement 
++++++++++++++++++++++++++++
 
 We are very pleased to announce the release of QGIS 1.8.0 'Lisboa'. This release contains new features and extends the programmatic interface over QGIS 1.0.x and QGIS 1.7.x
 
@@ -384,12 +402,13 @@ Silver Sponsor
 - State of Vorarlberg (http://www.vorarlberg.at - Austria, November 2011)
 
 Bronze Sponsors
+
 - Argusoft (http://www.argusoft.de - Germany, June 2012)
 - GeoSynergy (http://www.geosynergy.com.au - Australia May, 2012)
 - ibW Bildungszentrum Wald (http://www.bzwmaienfeld.ch - Switzerland, March 2012)
 - City of Uster (http://gis.uster.ch - Switzerland - November 2011)
 
-*QGIS Sponsorship is valid for one year.
+*QGIS Sponsorship is valid for one year.*
 
 A current list of donors who have made contributions large and small to the project can be seen here:
 
@@ -417,8 +436,8 @@ The QGIS Team!
 
 
 
-
-h2. A generic product description 
+A generic product description 
+.............................
 
 Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
 (GIS) that runs on Linux, Unix, Mac OSX, and Windows. QGIS supports vector,
@@ -429,6 +448,6 @@ plugins to do things like display tracks from your GPS. QGIS is Open Source
 software and its free of cost.
 
 
-h2. A generic features list 
-
+A generic features list 
+.......................
 

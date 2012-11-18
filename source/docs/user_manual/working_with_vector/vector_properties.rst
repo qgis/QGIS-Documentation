@@ -540,9 +540,6 @@ layers.
 
 .. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
 
-.. _vector_style_manager:
-
-
 .. index:: Labeling_Engine, Labeling_New, Labeling_Old
 
 .. _vector_labels_tab:

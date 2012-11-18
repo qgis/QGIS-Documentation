@@ -40,8 +40,8 @@ The QGIS GUI is divided into six areas:
 +--------------+-----------------+
 |3. Map Legend | 6. Browser      |
 +--------------+-----------------+
-|7. Status Bar                   |
-+--------------------------------+     
+|7. Status Bar |                 |
++--------------+-----------------+
 
 These seven components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and

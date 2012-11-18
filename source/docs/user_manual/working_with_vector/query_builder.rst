@@ -74,7 +74,7 @@ window without changing the current selection.
 
 .. index:: Select_using_Query
 
-.. _sec_selection:
+.. _sec_selection_query:
 
 Selection
 ---------

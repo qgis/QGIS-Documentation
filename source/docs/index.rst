@@ -1,3 +1,4 @@
+:orphan:
 
 =================================
 Welcome to the QGIS Documentation
@@ -13,7 +14,7 @@ All documentation is written in RST, saved in Github, and po/pot translatable.
     :hidden:
 
     user_manual/index
-    documentation_guidelines/index/index
+    documentation_guidelines/index
     gentle_gis_introduction/index
     pyqgis_developer_cookbook/index
     qgis_governance/index
