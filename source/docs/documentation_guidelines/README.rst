@@ -150,7 +150,7 @@ Figure
 
       **Figure Readme 1:**
 
-   .. figure:: ../static/common/qgislogo.png
+   .. figure:: /static/common/qgislogo.png
       :width: 20 em
       :align: center
 
@@ -165,7 +165,7 @@ The result looks like this:
 
    **Figure Readme 1:**
 
-.. figure:: ../static/common/qgislogo.png
+.. figure:: /static/common/qgislogo.png
    :width: 20 em
    :align: center
 
@@ -259,7 +259,7 @@ Image
 
 ::
 	
-   .. image:: ../static/common/qgislogo.png
+   .. image:: /static/common/qgislogo.png
       :width: 10 em
 
 
@@ -271,7 +271,7 @@ inside a paragraph, just create an alias somewhere
 
 ::
 	
-   .. |nice_logo| image:: ../static/common/qgislogo.png
+   .. |nice_logo| image:: /static/common/qgislogo.png
                   :width: 2 em
 
 and call it in your paragraph
@@ -282,7 +282,7 @@ and call it in your paragraph
 
 Here is how this example become:
 
-.. |nice_logo| image:: ../static/common/qgislogo.png
+.. |nice_logo| image:: /static/common/qgislogo.png
                :width: 2 em
 
 my paragraph begins here with a nice logo |nice_logo|.
