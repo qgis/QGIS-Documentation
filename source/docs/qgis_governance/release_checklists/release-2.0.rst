@@ -342,13 +342,14 @@ is virus free:
 `Gary Shood Virus Checker <http://www.garyshood.com/virus/>`_
 
 
-h1. Announcing the release 
+Announcing the release
+----------------------
 
-Note you can get stats for the previous release like this:
+Note you can get stats for the previous release like with "awstats": 
+  http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-1.8.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
 
-"awstats":http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-1.8.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
-
-h2. IRC TOPIC update
+IRC TOPIC update
+................
 
 Tim or Gary can update the IRC topic using this procedure:
 
@@ -357,26 +358,31 @@ Tim or Gary can update the IRC topic using this procedure:
   /msg chanserv op #qgis
   /topic #qgis to: !!Quantum GIS "Wroclaw" 1.8.2 released Nov 2011! - http://download.qgis.org || Logs: http://irclogs.geoapt.com/qgis || All activity on this channel is logged !!
 
-h2. Update Version Text File
+Update Version Text File
+........................
 
 The file accessed from the :menuselection:`Help --> Check QGIS Version` menu is located at http://qgis.org/version.txt. This should be updated to reflect the current release.
 
-h2. Create an announcement template 
+Create an announcement template 
+...............................
 
 An announcement template will save you retypping the same text at the various places of announcement. The following text can be used as a basis:
 
 
-h3. A Generic release subject 
+A Generic release subject 
++++++++++++++++++++++++++
 
 Announcing the release of QGIS 1.8.0 (unstable release).
 
 
-h3. A generic 20 word summary 
+A generic 20 word summary 
++++++++++++++++++++++++++
 
 Quantum GIS is a user friendly Open Source Geographic Information System that runs on Linux, Unix, Mac OSX, and Windows.
 
 
-h3. A mailing list announcement 
+A mailing list announcement 
++++++++++++++++++++++++++++
 
 We are very pleased to announce the release of QGIS 1.8.0 'Lisboa'. This release contains new features and extends the programmatic interface over QGIS 1.0.x and QGIS 1.7.x
 
@@ -396,6 +402,7 @@ Silver Sponsor
 - State of Vorarlberg (http://www.vorarlberg.at - Austria, November 2011)
 
 Bronze Sponsors
+
 - Argusoft (http://www.argusoft.de - Germany, June 2012)
 - GeoSynergy (http://www.geosynergy.com.au - Australia May, 2012)
 - ibW Bildungszentrum Wald (http://www.bzwmaienfeld.ch - Switzerland, March 2012)
@@ -429,8 +436,8 @@ The QGIS Team!
 
 
 
-
-h2. A generic product description 
+A generic product description 
+.............................
 
 Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
 (GIS) that runs on Linux, Unix, Mac OSX, and Windows. QGIS supports vector,
@@ -441,6 +448,6 @@ plugins to do things like display tracks from your GPS. QGIS is Open Source
 software and its free of cost.
 
 
-h2. A generic features list 
-
+A generic features list 
+.......................
 
