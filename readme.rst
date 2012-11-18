@@ -43,12 +43,12 @@ Tools
 You will need the following tools
 
 * git (from packagemanager) to clone/download the source from Github.com
-* texlive (from packagemanager)
 * gettext (from packagemanager) for translation tools
+* texlive (from packagemanager: on Arch, it is texlive-core and texlive-bin)
 * texlive-fonts-recommended (Ubuntu: from packagemanager)
-* in debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra
+* in debian you'll need 'texlive-latex-extra': sudo apt-get install texlive-latex-extra (texlive-latexextra on Arch)
 * python-pip python installation (via sudo apt-get install python-pip)
-* sphinx (via 'sudo pip install sphinx')
+* sphinx (via 'sudo pip install sphinx'; on Arch install python-sphinx)
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 * dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
 
