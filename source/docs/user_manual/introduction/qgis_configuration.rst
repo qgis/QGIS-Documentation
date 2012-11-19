@@ -12,7 +12,7 @@ QGIS is highly configurable ... (please add more introduction here)
 Project Properties
 ==================
 
-In the properties window for the project under |nix| :menuselection:`File -->
+In the properties window for the project under |nix| :menuselection:`Settings -->
 Project Properties` or |win| :menuselection:`Settings -->
 Project Properties` you set project specific options. These
 include:
@@ -48,14 +48,17 @@ General Tab
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * Change Selection and background Color
+* Change the QGIS Style
 * Change the icon theme (choose between default, classic, gis and newgis)
 * Change icon size between 16, 24 and 32 pixel.
+* Change the menu size
 * Define double click action in legend (choose between 'open layer properties' 
   and 'open ') attribute table.
 * |checkbox| :guilabel:`Capitalize layer names in legend`
 * |checkbox| :guilabel:`Display classification attribute names in legend`
 * |checkbox| :guilabel:`Create raster icons in legend`
 * |checkbox| :guilabel:`Hide splash screen at startup`
+* |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart
   required)`
 * |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart
@@ -63,11 +66,21 @@ General Tab
 * |checkbox| :guilabel:`Open attribute table in a dock window`
 * |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
 * |checkbox| :guilabel:`Add new layers to selected group`
+* |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
 * Attribute table behavior (choose between Show all features (default), Show 
   selected features,
   show features in current canvas)
+* Attribute table row cache
 * Define representation for NULL values
+* Prompt for raster sublayers
+* Scan for valid items in the browser dock
+* Scan for contents of compressed files (.zip) in browser dock
+
+Plugins tab
+-----------
+
 * Add path(s) to search for additional C++ plugin libraries. 
+
 
 Rendering Tab
 -------------
