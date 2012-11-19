@@ -109,8 +109,8 @@ There are three types of color ramps:
   of color classes.
 
 Color ramps can be defined in the :guilabel:`Color ramp` tab of the 
-:guilabel:`Style Manager` (see Section :ref:`vector_style_manager`) by 
-clicking the **[Add]** button and then choosing a color ramp type.
+:guilabel:`Style Manager` by clicking the **[Add]** button and then choosing 
+a color ramp type (see section vector_style_manager_ ).
 
 **Styles**
 
@@ -145,7 +145,7 @@ Depending on the chosen renderer, the symbology tab provides different
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
 button which gives access to the Style Manager
-(see section vector_style_manager_ ). The Style Manager allows you to 
+(see Section vector_style_manager_ ). The Style Manager allows you to 
 edit and remove existing symbols and add new ones.
 
 
