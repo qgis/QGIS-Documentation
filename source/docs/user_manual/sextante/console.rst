@@ -386,16 +386,3 @@ dialog without saving the script (i.e. you discard it), the help content you
 wrote will be lost. If your script was already saved and is associated to a
 filename, saving is done automatically.
 
-Communicating with the user
-----------------------------
-
-You can send messages to the user to inform about the progress of the
-algorithm. To do so, just print whatever information you want to show in the
-textbox above the progress bar in the algorithm dialog, using the ``print``
-command. For instance, just use ``print "Processing polygon layer"`` and the
-text will be redirected to that textbox.
-
-If the text you print is just a number between 0 and 100, it will be understood
-as the percentage of the process that has been already finished, and instead of
-redirecting the text to the textbox, the progress bar will be update to that
-percentage of completion.
