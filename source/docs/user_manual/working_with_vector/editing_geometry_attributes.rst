@@ -870,6 +870,13 @@ following functionality:
    also with :kbd:`Ctrl+L`
 *  |mActionCalculateField| :sup:`Open field calculator` also with :kbd:`Ctrl+I`
 
+.. tip:: **Skip WKT geometry**
+   
+   If you want to use attribute data in external programs (such as Excel) use the
+   |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
+   You can copy the information without vector geometries if you deactivate
+   :menuselection:`Settings --> Options -->` General tab |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`.
+
 
 Save selected features as new layer
 ...................................
