@@ -76,6 +76,14 @@ General Tab
 * Scan for valid items in the browser dock
 * Scan for contents of compressed files (.zip) in browser dock
 
+GDAL tab
+--------
+
+GDAL is a data exchange library for raster files. In this tab you can define which
+GDAL driver to be used for a raster format as in some cases more than one GDAL driver 
+is available.
+
+
 Plugins tab
 -----------
 
@@ -92,6 +100,8 @@ Rendering Tab
   performance`
 * |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 * |checkbox| :guilabel:`Use new generation symbology for rendering`
+* Define the default Raster settings for visualisation: RGB band selection, |checkbox| :guilabel:`Use standard deviation` and 
+  Contrast Enhancement
 * Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
 
 
@@ -136,8 +146,14 @@ Digitizing Tab
 * |checkbox| :guilabel:`Show markers only for selected features`
 * Define vertex marker style (cross (default), semi transparent circle or
   none) and vertex marker size.
-* |checkbox| :guilabel:`Reuse last entered attribute values`
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
+* |checkbox| :guilabel:`Reuse last entered attribute values`
+
+* Validate geometries
+* Join style for curve offset
+* Quadrantsegments for curve offset
+* Miter limit for curve offset
+
 
 CRS Tab
 -------
@@ -152,8 +168,8 @@ The second area allows to define the action, when a new layer is created, or whe
 a layer without CRS is loaded.
 
 * |radiobuttonoff| :guilabel:`Prompt for Coordinate Reference System (CRS)`
-* |radiobuttonoff| :guilabel:`Project wide default Coordinate Reference System (CRS) will be used`
-* |radiobuttonon| :guilabel:`Global default Coordinate Reference System (CRS) displayed below will be used`
+* |radiobuttonoff| :guilabel:`Use project Coordinate Reference System (CRS)`
+* |radiobuttonon| :guilabel:`Use default Coordinate Reference System (CRS) displayed below`
 
 Locale Tab
 ----------
