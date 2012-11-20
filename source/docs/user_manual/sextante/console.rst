@@ -34,12 +34,12 @@ console, and also how to write your own algorithms using Python.
 Calling SEXTANTE from the Python console
 ----------------------------------------
 
-The first thing you have to do is to import the ``Sextante`` class with
+The first thing you have to do is to import the SEXTANTE functions with
 the following line:
 
 ::
 
-    >>from sextante.core.Sextante import Sextante
+    >>import sextante
 
 Now, there is basically just one (interesting) thing you can do with
 SEXTANTE from the console: to execute an algorithm. That is done using
@@ -55,7 +55,7 @@ You will see something like this.
 
 ::
 
-    >>> Sextante.alglist()
+    >>> sextante.alglist()
     Accumulated Cost (Anisotropic)---------------->saga:accumulatedcost(anisotropic)
     Accumulated Cost (Isotropic)------------------>saga:accumulatedcost(isotropic)
     Add Coordinates to points--------------------->saga:addcoordinatestopoints
@@ -96,6 +96,8 @@ following result:
     Upslope Area---------------------------------->saga:upslopearea
     Vegetation Index[slope based]----------------->saga:vegetationindex[slopebased]
 
+This result might change depending on the algorithms you have available.
+
 It is easier now to find the algorithm you are looking for and its
 command-line name, in this case *saga:slopeaspectcurvature*
 
@@ -113,7 +115,7 @@ get the following description.
 
 ::
 
-    >Sextante.alghelp("saga:slopeaspectcurvature")
+    >sextante.alghelp("saga:slopeaspectcurvature")
     ALGORITHM: Slope, Aspect, Curvature
        ELEVATION <ParameterRaster>
        METHOD <ParameterSelection>
@@ -129,7 +131,7 @@ algorithms: ``runalg``. Its syntax is as follows:
 
 ::
 
-    > runalg{name_of_the_algorithm, param1, param2, ..., paramN,
+    > sextante.runalg{name_of_the_algorithm, param1, param2, ..., paramN,
              Output1, Output2, ..., OutputN)
 
 The list of parameters and outputs to add depends on the algorithm you
@@ -155,7 +157,7 @@ of input parameter
 
    ::
 
-       >>Sextante.algoptions("saga:slopeaspectcurvature")
+       >>sextante.algoptions("saga:slopeaspectcurvature")
        METHOD(Method)
            0 - [0] Maximum Slope (Travis et al. 1975)
            1 - [1] Maximum Triangle Slope (Tarboton 1997)
@@ -236,11 +238,11 @@ Index(TWI) directly from a DEM
 
     ##dem=raster
     ##twi=output
-    ret_slope = Sextante.runalg("saga:slopeaspectcurvature", dem, 0, None,
+    ret_slope = sextante.runalg("saga:slopeaspectcurvature", dem, 0, None,
                     None, None, None, None)
-    ret_area = Sextante.runalg("saga:catchmentarea(mass-fluxmethod)", "dem",
+    ret_area = sextante.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
                     0, False, False, False, False, None, None, None, None, None)
-    Sextante.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
+    sextante.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
                     ret_area['AREA'], None, 1, 0, twi)
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA.
@@ -302,7 +304,7 @@ you can use the variable name ``A_numerical_value``
 
 Layers and tables values are strings containing the filepath of the
 corresponding object. To turn them into a QGIS object, you can use the
-``getObject()`` method in the ``Sextante`` class. Multiple inputs also
+``sextante.getObjectFromUri()`` function. Multiple inputs also
 have a string value, which contains the filepaths to all selected
 object, separated by semicolons.
 
@@ -317,6 +319,10 @@ Outputs are defined in a similar manner, using the following tags:
 -  ``output html``
 
 -  ``output file``
+
+-  ``output number``
+
+-  ``output string``
 
 The value assigned to the output variables is always a string with a
 filepath. It will correspond to a temporary filepath in case the user
@@ -335,9 +341,29 @@ able to properly use the algorithm in the modeler, since its syntax (as
 defined by the tags explained above) will not match what the algorithm
 really creates.
 
+Hidden outputs (numbers and strings) do not have a value. Instead, it is
+you who has to assign a value to them. To do so, just set the value of a
+variable with the name you used to declare that output. For instance, if
+you have used this declaration,
+
+::
+
+    ##average=output number
+
+the following line will set the value of the output to 5:
+
+::
+
+    average = 5
+
 In addition to the tags for parameters and outputs, you can also define
 the group under which the algorithm will be shown, using the ``group``
 tag.
+
+If you algorithm takes a long time to process, it is a good idea to inform
+the user. You have a global named ``progress`` available, with two available
+methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the progress
+text and the progress bar.
 
 Several examples are provided with SEXTANTE. Please, check them to see
 real examples of how to create algorithms using this feature of
