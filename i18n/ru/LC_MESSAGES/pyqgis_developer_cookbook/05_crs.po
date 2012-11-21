@@ -15,84 +15,132 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:9
 # 467c5497967b4d499f38666833b42a08
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:9
 msgid "Projections Support"
-msgstr ""
+msgstr "Работа с проекциями"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:14
 # 6a3d9337f0504960aff87c4a0392732f
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:14
 msgid "Coordinate reference systems"
-msgstr ""
+msgstr "Системы координат"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:16
 # 0d99c0ffa7c64137a17b75f1ecee9e30
-msgid "Coordinate reference systems (CRS) are encapsulated by :class:`QgsCoordinateReferenceSystem` class. Instances of this class can be created by several different ways:"
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:16
+msgid ""
+"Coordinate reference systems (CRS) are encapsulated by "
+":class:`QgsCoordinateReferenceSystem` class. Instances of this class can be "
+"created by several different ways:"
 msgstr ""
+"Системы координат (Coordinate reference system, CRS) инкапсулируются классом "
+":class:`QgsCoordinateReferenceSystem`. Создать экземпляр этого класса можно "
+"одним из способов:"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:20
 # fa720db1f64849e582179a4e2c76b1b3
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:20
 msgid "specify CRS by its ID::"
-msgstr ""
+msgstr "задать CRS по её ID::"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:25
 # 92701015d2834cac95e8b436db5f0bd3
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:25
 msgid "QGIS uses three different IDs for every reference system:"
 msgstr ""
+"QGIS использует три разных идентификатора для каждой системы координат:"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:27
 # 39ea8a66a62844dea39db35266e25c3c
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:27
 msgid ":const:`PostgisCrsId` - IDs used within PostGIS databases."
-msgstr ""
+msgstr ":const:`PostgisCrsId` --- идентификатор, используемый в базах PostGIS"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:28
 # e9b74f3a105343a688767b07f9194e87
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:28
 msgid ":const:`InternalCrsId` - IDs internally used in QGIS database."
 msgstr ""
+":const:`InternalCrsId` --- внутренний идентификатор, используемый в базе QGIS"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:29
 # ed2d039d9e184e409b39c2bb665f8061
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:29
 msgid ":const:`EpsgCrsId` - IDs assigned by the EPSG organization"
-msgstr ""
+msgstr ":const:`EpsgCrsId` --- идентификатор, назначенный EPSG"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:31
 # 5a1ce5079b4e412784c352841188f06e
-msgid "If not specified otherwise in second parameter, PostGIS SRID is used by default."
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:31
+msgid ""
+"If not specified otherwise in second parameter, PostGIS SRID is used by "
+"default."
 msgstr ""
+"По умолчанию используется PostGIS SRID, если иное не определено вторым "
+"параметром."
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:33
 # 42a616604c014d8b932374306b7aaa93
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:33
 msgid "specify CRS by its well-known text (WKT)::"
-msgstr ""
+msgstr "задать CRS по её представлению в формате WKT (well-known text)::"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:40
 # ddd1e08d13a44fd3ad46e91028a9016e
-msgid "create invalid CRS and then use one of the :func:`create*` functions to initialize it. In following example we use Proj4 string to initialize the projection::"
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:40
+msgid ""
+"create invalid CRS and then use one of the :func:`create*` functions to "
+"initialize it. In following example we use Proj4 string to initialize the "
+"projection::"
 msgstr ""
+"создать недействительную CRS, а затем использовать одну из функций "
+":func:`create*` для её инициализации. В примере ниже для инициализации "
+"проекции используется строка в формате Proj4::"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:47
 # 188a7b12b84b4ee08077510da5c7e7e3
-msgid "It's wise to check whether creation (i.e. lookup in the database) of the CRS has been successful: :func:`isValid` must return :const:`True`."
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:47
+msgid ""
+"It's wise to check whether creation (i.e. lookup in the database) of the CRS "
+"has been successful: :func:`isValid` must return :const:`True`."
 msgstr ""
+"Желательно проверить успешность создания (т.е выполнить поиск в базе данных) "
+"системы координат: :func:`isValid` должна вернуть :const:`True`."
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:50
 # aac68e58fc6943be8e5c5aaf529667fb
-msgid "Note that for initialization of spatial reference systems QGIS needs to lookup appropriate values in its internal database :file:`srs.db`. Thus in case you create an independent application you need to set paths correctly with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the database. If you are running the commands from QGIS python console or developing a plugin you do not care: everything is already set up for you."
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:50
+msgid ""
+"Note that for initialization of spatial reference systems QGIS needs to "
+"lookup appropriate values in its internal database :file:`srs.db`. Thus in "
+"case you create an independent application you need to set paths correctly "
+"with :func:`QgsApplication.setPrefixPath` otherwise it will fail to find the "
+"database. If you are running the commands from QGIS python console or "
+"developing a plugin you do not care: everything is already set up for you."
 msgstr ""
+"Заметим, что для инициализации систем координат QGIS требуется выполнить "
+"поиск необходимых значений в своей внутренней базе данных :file:`srs.db`. "
+"Поэтому, если создаётся самостоятельное приложение, необходимо правильно\n"
+"настроить пути при помощи :func:`QgsApplication.setPrefixPath`, иначе не "
+"удастся найти базу данных. В случае создания расширения или при работе в "
+"консоли Python QGIS беспокоиться не о чем: всё уже настроено."
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:57
 # 29dda2266113407cb6c8d4d03d79b4c8
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:57
 msgid "Accessing spatial reference system information::"
-msgstr ""
+msgstr "Получение информации о системе координат::"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:74
 # 94fd00dbe2684a9eaebe34d204b380bb
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:74
 msgid "Projections"
-msgstr ""
+msgstr "Проекции"
 
-#: ../../source/pyqgis_developer_cookbook/05_crs.rst:76
 # 02ba1a8f3da34f3faf8bf910381ac812
-msgid "You can do transformation between different spatial reference systems by using :class:`QgsCoordinateTransform` class. The easiest way to use it is to create source and destination CRS and construct :class:`QgsCoordinateTransform` instance with them. Then just repeatedly call :func:`transform` function to do the transformation. By default it does forward transformation, but it is capable to do also inverse transformation::"
+#: ../../source/pyqgis_developer_cookbook/05_crs.rst:76
+msgid ""
+"You can do transformation between different spatial reference systems by "
+"using :class:`QgsCoordinateTransform` class. The easiest way to use it is to "
+"create source and destination CRS and construct "
+":class:`QgsCoordinateTransform` instance with them. Then just repeatedly "
+"call :func:`transform` function to do the transformation. By default it does "
+"forward transformation, but it is capable to do also inverse transformation::"
 msgstr ""
-
+"Для преобразования между разными системами координат используется класс "
+":class:`QgsCoordinateTransform`. Наиболее простой способ использования --- "
+"создать объекты для исходной и целевой систем координат и инициализировать "
+"ими экземпляр класса :class:`QgsCoordinateTransform`. После чего можно "
+"выполнять преобразование, вызывая функцию :func:`transform`. По умолчанию "
+"выполняется прямое преобразование, но можно осуществлять и обратное::"
