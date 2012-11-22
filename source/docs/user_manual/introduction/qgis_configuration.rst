@@ -49,7 +49,7 @@ General Tab
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * Change Selection and background Color
 * Change the QGIS Style
-* Change the icon theme (choose between default, classic, gis and newgis)
+* Change the icon theme (choose between 'default', 'classic', 'gis' and 'newgis')
 * Change icon size between 16, 24 and 32 pixel.
 * Change the menu size
 * Define double click action in legend (choose between 'open layer properties' 
@@ -67,9 +67,8 @@ General Tab
 * |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
 * |checkbox| :guilabel:`Add new layers to selected group`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
-* :guilabel:`Attribute table behavior` (choose between Show all features (default), Show 
-  selected features,
-  show features in current canvas)
+* :guilabel:`Attribute table behavior` (choose between 'Show all features' (default), 'Show 
+  selected features','Show features in current canvas')
 * :guilabel:`Attribute table row cache`
 * Define :guilabel:`Representation for NULL values`
 * :guilabel:`Prompt for raster sublayers` Some rasters support sublayers - they are called subdatasets in gdal.
@@ -103,22 +102,22 @@ is available.
 Plugins tab
 -----------
 
-* Add path(s) to search for additional C++ plugin libraries. 
+* Add :guilabel:`Path(s) to search for additional C++ plugin libraries`. 
 
 
 Rendering Tab
 -------------
 
 * |checkbox| :guilabel:`By default new layers added to the map should be displayed`
-* Define number of features to draw before updating the display.
+* Define :guilabel:`Number of features to draw before updating the display`.
 * |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing
   performance`
 * |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 * |checkbox| :guilabel:`Use new generation symbology for rendering`
-* Define the default Raster settings for visualisation: RGB band selection, |checkbox| :guilabel:`Use standard deviation` and 
-  Contrast Enhancement
-* Add/remove path(s) to search for Scalable Vector Graphics (SVG) symbols
+* Define the default Raster settings for visualisation: 'RGB band selection', |checkbox| :guilabel:`Use standard deviation` and 
+  'Contrast Enhancement'
+* Add/remove :guilabel:`Path(s) to search for Scalable Vector Graphics (SVG) symbols`
 
 
 Additionally you can define whether to save the path for svg textures
@@ -128,47 +127,50 @@ absolute or relative in the :guilabel:`General` tab of the
 Map tools Tab
 -------------
 
-* The Mode setting determines which layers will be shown by the Identify
-  tool. By switching to ``Top down`` or ``Top down, stop at
-  first`` instead of ``Current layer`` attributes for all identifiable
+* The :guilabel:`Mode` setting determines which layers will be shown by the Identify
+  tool. By switching to 'Top down' or 'Top down, stop at
+  first' instead of 'Current layer' attributes for all identifiable
   layers (see the Project properties section under: :ref:`sec_projects` to set
   which layers are identifiable) will be shown with the Identify tool.
 * |checkbox| :guilabel:`Open feature form, if a single feature is identified`
-* Define search radius for identifying and displaying map tips as a
-  percentage of the map width
-* Define ellipsoid for distance calculations
-* Define rubberband color for measure tools
-* Define decimal places
+* Define :guilabel:`Search radius for identifying and displaying map tips as a
+  percentage of the map width`
+* Define :guilabel:`Ellipsoid for distance calculations`
+* Define :guilabel:`Rubberband color` for measure tools
+* Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit`
-* |radiobuttonon| :guilabel:`Define preferred measurement units (meters or feet)`
-* |radiobuttonon| :guilabel:`Define preferred angle units (Degrees, Radians or Gon)`
-* Define Mouse wheel action (Zoom, Zoom and recenter, Zoom to mouse
-  cursor, Nothing)
-* Define Zoom factor for wheel mouse
+* |radiobuttonon| :guilabel:`Define preferred measurement units ('meters' or 'feet')`
+* |radiobuttonon| :guilabel:`Define preferred angle units ('Degrees', 'Radians' or 'Gon')`
+* Define :guilabel:`Mouse wheel action` ('Zoom', 'Zoom and recenter', 'Zoom to mouse
+  cursor', 'Nothing')
+* Define :guilabel:`Zoom factor` for wheel mouse
 
 Overlays Tab
 ------------
 
-* Define placement algorithm for labels (choose between central point
-  (standard), chain, popmusic tabu chain, popmusic tabu and popmusic chain)
+* Define :guilabel:`Placement algorithm` for labels (choose between 'Central point'
+  (standard), 'Chain', 'Popmusic tabu chain', 'Popmusic tabu' and 'Popmusic chain')
 
 Digitizing Tab
 --------------
 
 * Define Rubberband line color and line width
-* Define default snap mode (to vertex, to segment, to vertex and segment)
-* Define default snapping tolerance in map units or pixel
-* Define search radius for vertex edits in map units or pixel
+* Define :guilabel:`Default snap mode` ('To vertex', 'To segment', 'To vertex and segment')
+* Define :guilabel:`Default snapping tolerance` in map units or pixel
+* Define search radius for vertex edits in 'map units' or 'pixel'
 * |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex marker style (cross (default), semi transparent circle or
-  none) and vertex marker size.
+* Define vertex :guilabel:`Marker style` ('Cross' (default), 'Semi transparent', 'Circle' or
+  'None') and vertex :guilabel:`Marker size`.
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 * |checkbox| :guilabel:`Reuse last entered attribute values`
-
-* Validate geometries
-* Join style for curve offset
-* Quadrantsegments for curve offset
-* Miter limit for curve offset
+* :guilabel:`Validate geometries` Editing complex lines/polygons with many nodes can end up 
+  with very slow rendering. This is because the default validation procedures in QGIS can use
+  a lot of time. To speed up rendering it is possible to select GEOS geometry validation
+  (starting from GEOS 3.3) or to switch it off. GEOS geometry validation is much faster,
+  but the disadvantage is that only the first geometry problem will be reported.
+* :guilabel:`Join style for curve offset` 
+* :guilabel:`Quadrantsegments for curve offset`
+* :guilabel:`Miter limit for curve offset`
 
 
 CRS Tab
@@ -177,7 +179,7 @@ CRS Tab
 The CRS tab is divided in two areas. The first area allows to define the default 
 CRS for new projects.
 
-* Select a CRS and always start new projects with this CRS.
+* Select a CRS and :guilabel:`Always start new projects with this CRS`.
 * |checkbox| :guilabel:`Enable on the fly re-projection by default`
 
 The second area allows to define the action, when a new layer is created, or when 
@@ -190,7 +192,7 @@ a layer without CRS is loaded.
 Locale Tab
 ----------
 
-* |checkbox| :guilabel:`Overwrite system locale and use defined locale instead`
+* |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
 Network Tab
@@ -208,8 +210,8 @@ Network Tab
    
    Proxy-settings in |qg|
 
-* |checkbox| :guilabel:`Use proxy for web access` and define host, port, user, 
-  and password.
+* |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User', 
+  and 'Password'.
 * Set the :menuselection:`Proxy type -->` according to your needs.
 
   * :menuselection:`Default Proxy -->`: Proxy is determined based on the application 
@@ -224,7 +226,7 @@ Network Tab
   * :menuselection:`FtpCachingProxy -->`: Implemented using an FTP proxy, it is 
     useful only in the context of FTP requests
  
-* Define Cache settings (path and size)
+* Define :guilabel:`Cache settings` (path and size)
 * Define WMS search address, default is 
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
 * Define timeout for network requests in ms - default is 60000
