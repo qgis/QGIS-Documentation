@@ -67,23 +67,30 @@ General Tab
 * |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
 * |checkbox| :guilabel:`Add new layers to selected group`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
-* Attribute table behavior (choose between Show all features (default), Show 
+* :guilabel:`Attribute table behavior` (choose between Show all features (default), Show 
   selected features,
   show features in current canvas)
-* Attribute table row cache
-* Define representation for NULL values
+* :guilabel:`Attribute table row cache`
+* Define :guilabel:`Representation for NULL values`
 * :guilabel:`Prompt for raster sublayers` Some rasters support sublayers - they are called subdatasets in gdal.
   An example is netcdf files - if there are many netcdf variables, gdal
   sees every variable as a subdataset.
-  The option is to control how to deal with sublayers when a file with sublayers is opened. You have the following choices:
+  The option is to control how to deal with sublayers when a file with sublayers is opened. 
+  You have the following choices:
   'Always': always ask (if there are existing sublayers)
   'If needed': ask if layer has no bands, but has sublayers
   'Never': never prompt, will not load anything
   'Load all': never prompt, but load all sublayers
-* Scan for valid items in the browser dock. The 'Check extension' option was designed to speed up the loading of a directory, which
+* :guilabel:`Scan for valid items in the browser dock` The 'Check extension' option
+  was designed to speed up the loading of a directory, which
   can be time-consuming when 'Check file contents' is activated and
   there are many files (tens or hundreds).
-* Scan for contents of compressed files (.zip) in browser dock
+* :guilabel:`Scan for contents of compressed files (.zip) in browser dock` 
+  This option was also designed to speed up the loading of a directory. You have
+  the following choices:
+  'Basic Scan': checks that the extension is supported by one of the drivers
+  'Full Scan': opens every file to check it is valid
+  'Passthru': don't use this option it will be removed in the next QGIS version
 
 GDAL tab
 --------
