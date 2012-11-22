@@ -179,7 +179,15 @@ consists of more than one layer).
 
 After having done any needed changes, the symbol can be added to the list of 
 current style symbols (using the **[Save as style]** button) and then easily 
-be used in the future. Furthermore you can use the **[Save Style]** button to save the symbol as a QGIS layer style file (.qml) or SLD file(.sld).
+be used in the future. Furthermore you can use the **[Save Style]** button to 
+save the symbol as a QGIS layer style file (.qml) or SLD file(.sld). Currently 
+in version 1.8 SLDs can be exported from any type of renderer: single symbol,
+categorized, graduated or rule-based, but when importing an SLD, either a
+single symbol or rule-based renderer is created.
+That means that categorized or graduated styles are converted to rule-based.
+If you want to preserve those renderers, you have to stick to the QML format.
+On the other hand, it could be very handy sometimes to have this easy way of
+converting styles to rule-based.
 
 .. _figure_symbology_1:
 
