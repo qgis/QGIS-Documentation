@@ -57,9 +57,7 @@ Overview of WMS Support
 
 QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1
 and 1.3 servers. It has particularly been tested against publicly
-accessible servers such as DEMIS and JPL OnEarth.
-
-.. NASA JPL OnEarth does not exist anymore
+accessible servers such as DEMIS.
 
 WMS servers act upon requests by the client (e.g. QGIS) for a raster map
 with a given extent, set of layers, symbolization style, and transparency.
@@ -162,7 +160,7 @@ in the left bottom of the WMS Plugin dialog.
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
 Your screen should now look a bit like figure_OGR_1_, which
-shows the response provided by the NASA JPL OnEarth WMS server.
+shows the response provided by the DM Solutions Group WMS server.
 
 .. _figure_OGR_1:
 
@@ -199,17 +197,22 @@ requirements.
 **Options**
 
 
-The Options field provides a text-field where you can add a layer name
+The Options field provides a text-field where you can add a :guilabel:`Layer name`
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
-Below the layer name you find the default projection, provided by the
-mapserver. If the **[Change...]** button is active, you can click
+Below the layer name you find the :guilabel:`Tile size`, which makes it possible to
+produce rasters with a high resolution for e.g. printing purposes.
+
+The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
+the server to query.
+
+If you select a WMS from the list a field with the default projection, provided by the
+mapserver, appears. If the **[Change...]** button is active, you can click
 on it and change the default projection of the WMS to another CRS,
 provided by the WMS server.
 
 **Layer Order**
-
 
 The tab :guilabel:`Layer Order` lists the selected layers available from the
 current connected WMS server. You may notice that some layers are expandable,
@@ -232,8 +235,8 @@ and transmitted to QGIS in one go.
 **Transparency**
 
 
-In this version of QGIS, the transparency setting is hard-coded to be
-always on, where available.
+In this version of QGIS, the :guilabel:`Global transparency` setting from the :guilabel:`Layer Properties`
+is hard-coded to be always on, where available.
 
 .. index:: WMS_layer_transparency
 
@@ -321,7 +324,7 @@ Tilesets
 
 When using WMS-C (Cached WMS) Services like
 http://labs.metacarta.com/wms-c/Basic.py you are able to browse through
-the tab :guilabel:`Tiles` given by the server. Additional information like
+the tab :guilabel:`Tilesets` given by the server. Additional information like
 tile size, formats and supported CRS are listed in this table.
 
 In combination with this feature you can use the tile scale slider from
@@ -423,16 +426,12 @@ of QGIS. Some of the more notable exceptions follow.
 
 **Editing WMS Layer Settings**
 
-
-
 Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer`
 procedure, there is no ability to change the settings.
 
 A workaround is to delete the layer completely and start again.
 
 **WMS Servers Requiring Authentication**
-
-
 
 Currently public accessible and secured WMS-services are supported.
 The secured WMS-servers can be accessed by public authentication. You
