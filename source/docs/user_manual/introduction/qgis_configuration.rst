@@ -154,7 +154,7 @@ Overlays Tab
 Digitizing Tab
 --------------
 
-* Define Rubberband line color and line width
+* Define Rubberband :guilabel:`Line color` and :guilabel:`Line width`
 * Define :guilabel:`Default snap mode` ('To vertex', 'To segment', 'To vertex and segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixel
 * Define search radius for vertex edits in 'map units' or 'pixel'
@@ -168,6 +168,11 @@ Digitizing Tab
   a lot of time. To speed up rendering it is possible to select GEOS geometry validation
   (starting from GEOS 3.3) or to switch it off. GEOS geometry validation is much faster,
   but the disadvantage is that only the first geometry problem will be reported.
+
+The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool in :ref:`sec_advanced_edit`.
+Through the various settings, it is possible to influence the shape of the line offset. These options are
+possible from GEOS 3.3 .
+
 * :guilabel:`Join style for curve offset` 
 * :guilabel:`Quadrantsegments for curve offset`
 * :guilabel:`Miter limit for curve offset`
@@ -227,9 +232,9 @@ Network Tab
     useful only in the context of FTP requests
  
 * Define :guilabel:`Cache settings` (path and size)
-* Define WMS search address, default is 
+* Define :guilabel:`WMS search address`, default is 
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
-* Define timeout for network requests in ms - default is 60000
+* Define :guilabel:`Timeout for network requests (ms)` - default is 60000
 
 Excluding some URLs can be added to the text box below the proxy-settings (see
 Figure_Network_Tab_) by pressing the **[Add]** button. After 

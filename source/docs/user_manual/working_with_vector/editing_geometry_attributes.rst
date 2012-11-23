@@ -486,7 +486,7 @@ Advanced digitizing
 +-------------------------+---------------------------------------+-----------------------------+----------------------+
 | |mActionDeletePart|     | Delete Part                           | |mActionReshape|            | Reshape Features     |  
 +-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionOffsetCurve|    | Offset Curves                         | |mActionSplitFeatures|      | Split Features       |
+| |mActionOffsetCurve|    | Offset Curve                          | |mActionSplitFeatures|      | Split Features       |
 +-------------------------+---------------------------------------+-----------------------------+----------------------+
 | |mActionMergeFeatures|  | Merge Selected Features               | |mActionRotatePointSymbols| | Rotate Point Symbols |
 +-------------------------+---------------------------------------+-----------------------------+----------------------+
