@@ -1,3 +1,5 @@
+.. _QGIS-documentation-guidelines:
+
 ========================
 Documentation Guidelines
 ========================
