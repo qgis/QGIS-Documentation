@@ -264,3 +264,7 @@ require a restart of QGIS before they will be effective.
 
    \\HKEY\CURRENT_USER\Software\QuantumGISqgis
 
+Customization
+=============
+
+
