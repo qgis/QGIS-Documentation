@@ -56,5 +56,5 @@ to learn QGIS Python API.
 QGIS Governance
 ---------------
 
-:ref:`QGIS Governance <QGIS-Governance>`. This document descibes official QGIS
+:ref:`QGIS Governance <QGIS-Governance>`. This document describes official QGIS
 governance, bylaws, procedures etc.
