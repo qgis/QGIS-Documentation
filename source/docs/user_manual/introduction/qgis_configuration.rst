@@ -270,7 +270,10 @@ The customization tool is a new development in QGIS 1.8.. It lets you (de)activa
 almost every element in the QGIS user interface. This can get very useful if you have 
 a lot of plug-ins installed that you never use and that are filling your screen.
 
-QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you..., 
-in |checkbox| :guilabel:`Menus` you ... , in |checkbox| :guilabel:`Status Bar` ..., 
+QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you 
+find the dock windows.Dock windows are applications that can be started and used as
+a floating, top-level window or embedded to the QGIS main window as a docked widget.
+In |checkbox| :guilabel:`Menus` you can hide entries in the Menu bar, features like 
+the coordinate information can be daectivated in the |checkbox| :guilabel:`Status Bar`, 
 in |checkbox| :guilabel:`Toolbars` ... and in |checkbox| :guilabel:`Widgets` there are ... .
 
