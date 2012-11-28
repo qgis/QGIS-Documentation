@@ -23,9 +23,9 @@ interface as discussed below):
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
-   :width: 40em
+   :width: 50em
 
-   QGIS GUI with Alaska sample data (KDE)
+   QGIS GUI with Alaska sample data |nix|
 
 .. note:: 
    Your window decorations (title bar, etc.) may appear
@@ -36,14 +36,12 @@ The QGIS GUI is divided into six areas:
 +--------------+-----------------+
 |1. Menu Bar   | 4. Map View     |
 +--------------+-----------------+
-|2. Tool Bar   | 5. Map Overview |
+|2. Tool Bar   | 5. Status Bar   |
 +--------------+-----------------+
-|3. Map Legend | 6. Browser      |
-+--------------+-----------------+
-|7. Status Bar |                 |
+|3. Map Legend |                 |
 +--------------+-----------------+
 
-These seven components of the QGIS interface are described in more detail in
+These five components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
@@ -276,13 +274,13 @@ Menu Option                                                     Shortcut        
 
 .. _`label_toolbars`:
 
-Toolbars
---------
+Toolbar
+-------
 
 .. index::
-   single:toolbars
+   single:toolbar
 
-The toolbars provide access to most of the same functions as the menus,
+The toolbar provides access to most of the same functions as the menus,
 plus additional tools for interacting with the map. Each toolbar item has
 popup help available. Hold your mouse over the item and a short description of
 the tool's purpose will be displayed.

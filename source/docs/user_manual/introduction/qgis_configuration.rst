@@ -8,8 +8,33 @@ QGIS Configuration
 ******************
 
 QGIS is highly configurable through the :menuselection:`Settings -->` menu.
-Choose between Project properties, Options and Customization.
+Choose between Panels, Toolbars, Project properties, Options and Customization.
 ..  (please add more introduction here)
+
+.. _sec_panels_and_toolbars:
+
+Panels and Toolbars
+===================
+
+In the :menuselection:`Panels-->` menu you can switch on and off QGIS widgets.
+The :menuselection:`Toolbars-->` menu provides the possibility to switch on
+and off icon groups in the QGIS toolbar.
+
+.. index::
+   single:Map overview
+
+.. tip:: **Activating the QGIS overview**
+   
+   In QGIS you can use an overview panel that provides a full extent view of layers added to it.
+   It can be selected under the menu :menuselection:`Settings --> Panels`.
+   Within the view is a rectangle showing the current map extent. This allows
+   you to quickly determine which area of the map you are currently viewing. Note
+   that labels are not rendered to the map overview even if the layers in the
+   map overview have been set up for labeling.
+   If you click and drag the red rectangle in the overview that shows your
+   current extent, the main map view will update accordingly.
+
+
 
 Project Properties
 ==================
@@ -67,7 +92,7 @@ General Tab
   required)`
 * |checkbox| :guilabel:`Open attribute table in a dock window`
 * |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
-* |checkbox| :guilabel:`Add new layers to selected group`
+* |checkbox| :guilabel:`Add new layers to selected or current group`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
 * :guilabel:`Attribute table behavior` (choose between 'Show all features' (default), 'Show 
   selected features','Show features in current canvas')
@@ -274,7 +299,7 @@ a lot of plug-ins installed that you never use and that are filling your screen.
 
 QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you 
 find the dock windows. Dock windows are applications that can be started and used as
-a floating, top-level window or embedded to the QGIS main window as a docked widget.
+a floating, top-level window or embedded to the QGIS main window as a docked widget (see also sec_panels_and_toolbars_).
 In |checkbox| :guilabel:`Menus` you can hide entries in the Menu bar. In the
 |checkbox| :guilabel:`Status Bar` features like the coordinate information can be daectivated.
 In |checkbox| :guilabel:`Toolbars` you can (de)activate the toolbar icons of QGIS
