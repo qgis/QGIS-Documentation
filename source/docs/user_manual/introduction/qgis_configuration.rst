@@ -7,7 +7,9 @@
 QGIS Configuration
 ******************
 
-QGIS is highly configurable ... (please add more introduction here)
+QGIS is highly configurable through the :menuselection:`Settings -->` menu.
+Choose between Project properties, Options and Customization.
+..  (please add more introduction here)
 
 Project Properties
 ==================
@@ -27,10 +29,10 @@ include:
 * With the third :guilabel:`Identifiable layers` tab you set (or disable) 
   which layers will respond to the identify tool. (See the Map tools paragraph from
   the :ref:`gui_options` section to enable identifying of multiple layers.)
-* The tab :guilabel:`WMS Server` allows to define information about the QGIS 
-  mapserver Service Capabilities, the Extent and the CRS Restrictions. Activating 
-  the |checkbox| :guilabel:`Add WKT geometry to feature info response` will allow 
-  to query the WMS layers.
+* The tab :guilabel:`OWS Server` allows to define information about the QGIS 
+  mapserver Service Capabilities, the Extent and the CRS Restrictions as well as
+  the WFS Capabilities. Activating the |checkbox| :guilabel:`Add WKT geometry to feature info response`
+  will allow to query the WMS layers.
 
 .. _gui_options:
 
@@ -234,7 +236,7 @@ Network Tab
 * Define :guilabel:`Cache settings` (path and size)
 * Define :guilabel:`WMS search address`, default is 
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
-* Define :guilabel:`Timeout for network requests (ms)` - default is 60000
+* Define :guilabel:`Timeout for network requests (ms)` - deeingebundenfault is 60000
 
 Excluding some URLs can be added to the text box below the proxy-settings (see
 Figure_Network_Tab_) by pressing the **[Add]** button. After 
@@ -271,9 +273,39 @@ almost every element in the QGIS user interface. This can get very useful if you
 a lot of plug-ins installed that you never use and that are filling your screen.
 
 QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you 
-find the dock windows.Dock windows are applications that can be started and used as
+find the dock windows. Dock windows are applications that can be started and used as
 a floating, top-level window or embedded to the QGIS main window as a docked widget.
-In |checkbox| :guilabel:`Menus` you can hide entries in the Menu bar, features like 
-the coordinate information can be daectivated in the |checkbox| :guilabel:`Status Bar`, 
-in |checkbox| :guilabel:`Toolbars` ... and in |checkbox| :guilabel:`Widgets` there are ... .
+In |checkbox| :guilabel:`Menus` you can hide entries in the Menu bar. In the
+|checkbox| :guilabel:`Status Bar` features like the coordinate information can be daectivated.
+In |checkbox| :guilabel:`Toolbars` you can (de)activate the toolbar icons of QGIS
+and in |checkbox| :guilabel:`Widgets` you can (de)activate dialogs as well as their buttons.
+
+With |mActionSelect| :guilabel:`Switch to catching widgets in main application`
+you can click on elements in QGIS you want to be hidden and find the corresponding entry 
+in Customization (see figure_customization_). 
+
+.. _figure_customization:
+
+.. only:: html
+
+   **Figure Customization 1:**
+
+.. figure:: /static/user_manual/introduction/customization.png
+
+   The Customization dialog |nix|
+
+
+You can save your various different setups for different uses as well (see figure_ini_file_).
+
+.. _figure_ini_file:
+
+.. only:: html
+
+   **Figure Customization 2:**
+
+.. figure:: /static/user_manual/introduction/customization_ini_file.png
+
+   Saving settings as a customization ini file |nix|
+
+Before your changes are applied, you basically need to restart QGIS.
 
