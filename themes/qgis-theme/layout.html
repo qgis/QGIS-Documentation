@@ -48,8 +48,12 @@
 
         // load current page in a different language
         function gotoLang(lang){
-            var currentPage = '{{current_page_name}}.html';
-            var baseUrl = window.location.href.slice(0,window.location.href.indexOf(currentPage)-3); // -3 removes current locale 
+            var currentPage = '{{current_page_name}}.html'; // coming from sphinx
+            var index = window.location.href.indexOf(currentPage);
+            if (index<0){ // we are on a default/index page (like index.html)
+                index = window.location.href.length;
+            }
+            var baseUrl = window.location.href.slice(0,index-3); // removing '/en*' or other locale
             window.location.href = baseUrl + lang + '/' + currentPage;
         }
     </script>
@@ -108,15 +112,15 @@
             <!-- sidebar -->
             <ul id="locales">
                 <!-- TODO: get the flag images from a central place (the are in Qgis repo in the images dir) -->
-                    <li id="flag_en"><a href="#" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en_US.png', 1)}}" title="en" alt="en"/></a></li>
-                    <li id="flag_de"><a href="#" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"/></a></li>
-                    <li id="flag_fr"><a href="#" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"/></a></li>
-                    <li id="flag_it"><a href="#" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"/></a></li>
-                    <li id="flag_es"><a href="#" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"/></a></li>
-                    <li id="flag_pt"><a href="#" onclick="gotoLang('pt');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt" alt="pt"/></a></li>
-                    <li id="flag_ru"><a href="#" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"/></a></li>
-                    <li id="flag_ja"><a href="#" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"/></a></li>
-                    <li id="flag_nl"><a href="#" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"/></a></li>
+                    <li id="flag_en" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en_US.png', 1)}}" title="en" alt="en"/></li>
+                    <li id="flag_de" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"/></li>
+                    <li id="flag_fr" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"/></li>
+                    <li id="flag_it" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"/></li>
+                    <li id="flag_es" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"/></li>
+                    <li id="flag_pt" onclick="gotoLang('pt');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt" alt="pt"/></li>
+                    <li id="flag_ru" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"/></li>
+                    <li id="flag_ja" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"/></li>
+                    <li id="flag_nl" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"/></li>
             </ul><span style="clear:both">&nbsp;</span>
             {%- if sidebars != None %}
                 {#- new style sidebar: explicitly include/exclude templates #}
