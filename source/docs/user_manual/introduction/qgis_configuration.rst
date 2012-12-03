@@ -34,6 +34,28 @@ and off icon groups in the QGIS toolbar.
    If you click and drag the red rectangle in the overview that shows your
    current extent, the main map view will update accordingly.
 
+.. tip:: **Working with the QGIS layer order**
+
+   Since QGIS 1.8 there is widget that allows to define a legend independent 
+   drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
+   Determine the drawing order of the layers in the map view here. Doing so makes
+   it possible to order your layers in order of importance, for example, but to
+   still display them in the correct order (see figure_layer_order_). Checking the
+   |checkbox| :guilabel:`control rendering order` box underneath the list of layers
+   will cause a revert to default behavior.
+
+  .. _figure_layer_order:
+
+  .. only:: html
+
+     **Figure Layer Order:**
+ 
+  .. figure:: /static/user_manual/introduction/layer_order.png
+      :align: center
+      :width: 40em
+
+      The new layer order list |nix|
+
 
 
 Project Properties
