@@ -104,12 +104,23 @@ layer already has a CRS defined, it will be displayed as shown in
    provides two CRS short cuts.
 
    * :guilabel:`Set layer CRS` takes you directly to the Coordinate
-     Reference System Selector dialog. Which you also get to by the
+     Reference System Selector dialog (see figure_projection_2_). Which you also get to by the
      **[Select]** button on the :guilabel:`General` tab of the layer
      properties dialog.
    * :guilabel:`Set project CRS from Layer` redefines the project
      CRS using the layer's CRS
 
+  .. _figure_projection_2:
+
+  .. only:: html
+
+     **Figure Projection 2**
+ 
+  .. figure:: /static/user_manual/working_with_projections/crs_selector.png
+      :align: center
+      :width: 40em
+
+      The CRS selector dialog |nix|
 
 .. index:: OTF, On_The_Fly_Projection
 
@@ -145,16 +156,16 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 The :guilabel:`Coordinate Reference System` tab of the 
 :guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure_projection_2_ and described below.
+shown in Figure_projection_3_ and described below.
 
 .. following picture has an external reference from working with ogc, so 
    the reference of this figure needs a capture!
 
 .. only:: html
 
-   **Figure Projection 2:**
+   **Figure Projection 3:**
 
-.. _figure_projection_2:
+.. _figure_projection_3:
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
