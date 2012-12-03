@@ -31,7 +31,7 @@ interface as discussed below):
    Your window decorations (title bar, etc.) may appear
    different depending on your operating system and window manager.
 
-The QGIS GUI is divided into six areas:
+The QGIS GUI is divided into five areas:
 
 +--------------+-----------------+
 |1. Menu Bar   | 4. Map View     |
@@ -136,6 +136,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 **View**                                                        \                     \                                           \ 
 |mActionPan| :guilabel:`Pan Map`                                \                     \                                           :guilabel:`Map Navigation`
+|PanToSelected| :guilabel:`Pan Map to Selection`                \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
 |mActionZoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         \                                           :guilabel:`Map Navigation`
 :menuselection:`Select`                                         \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
@@ -449,6 +450,12 @@ To the left of the coordinate display in the status bar is a small button that
 will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
+Next to the coordinate display you find the scale display. It shows the scale of
+the map view. If you zoom in or out QGIS shows you the current scale. Since QGIS 1.8
+there is a scale selector which allows you to choose between predefined scales 
+from 1:500 until 1:1000000 .
+
+
 A progress bar in the status bar shows progress of rendering
 as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
@@ -464,10 +471,12 @@ At the far right of the status bar you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection properties 
 for the current project.
 
+
 .. tip::
    **Calculating the correct Scale of your Map Canvas**
 
-.. index::`Scale calculate`
+   .. index::
+      single:scale calculate
 
    When you start QGIS, degrees is the default unit, and it tells QGIS
    that any coordinate in your layer is in degrees. To get correct scale values,
