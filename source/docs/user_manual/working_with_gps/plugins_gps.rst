@@ -40,7 +40,7 @@ To load a GPX file you first need to load the plugin.
 :menuselection:`Plugins -->` |mActionShowPluginManager| 
 :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. 
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin 
-is loaded a button with a small handheld GPS device will show up in the 
+is loaded two buttons with a small handheld GPS device will show up in the 
 toolbar. An example GPX file is available in the QGIS sample dataset:
 :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 :ref:`label_sampledata` for more information about the sample data.
@@ -61,7 +61,7 @@ toolbar. An example GPX file is available in the QGIS sample dataset:
    :align: center
    :width: 40em
 
-   The *GPS Tools* dialog window
+   The *GPS Tools* dialog window |nix|
 
 Use the browse button |browsebutton| to select the GPX file, then use the
 checkboxes to select the feature types you want to load from that GPX file.
