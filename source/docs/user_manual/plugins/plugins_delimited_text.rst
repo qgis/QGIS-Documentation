@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`label_dltext`: 
+.. _label_dltext: 
 
 Delimited Text Plugin
 =========================================
