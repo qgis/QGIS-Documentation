@@ -239,9 +239,9 @@ available.
 Adding Features
 ...............
 
-You can use the |mActionCapturePoint| :sup:`Capture point`, 
-|mActionCaptureLine| :sup:`Capture line` or |mActionCapturePolygon| 
-:sup:`Capture polygon` icons on the toolbar to put the |qg| cursor into 
+You can use the |mActionCapturePoint| :sup:`Add Feature`, 
+|mActionCaptureLine| :sup:`Add Feature` or |mActionCapturePolygon| 
+:sup:`Add Feature` icons on the toolbar to put the |qg| cursor into 
 digitizing mode.
 
 For each feature, you first digitize the geometry, then enter its attributes. 
@@ -273,7 +273,7 @@ river in Alaska. In the :guilabel:`Digitizing` tab under the
    Enter Attribute Values Dialog after digitizing a new vector 
    feature |nix|
 
-With the |mActionMoveFeature| :sup:`Move Feature` icon on the toolbar you can 
+With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar you can 
 move existing features.
 
 .. _tip_attributes_types:
@@ -385,8 +385,8 @@ As an example we are copying some lakes to a new layer:
 #.  Load or create the layer you want to copy to (target layer)
 #.  Start editing for target layer
 #.  Make the source layer active by clicking on it in the legend
-#.  Use the |mActionSelect| :sup:`Select` tool to select the feature(s) on 
-    the source layer
+#.  Use the |mActionSelect| :sup:`Select Single Feature` tool to select the feature(s) on 
+    the source layer 
 #.  Click on the |mActionEditCopy| :sup:`Copy Features` tool
 #.  Make the destination layer active by clicking on it in the legend
 #.  Click on the |mActionEditPaste| :sup:`Paste Features` tool
@@ -417,7 +417,7 @@ Deleting Selected Features
 
 
 If we want to delete an entire polygon, we can do that by first selecting the 
-polygon using the regular |mActionSelect| :sup:`Select Features` tool. You 
+polygon using the regular |mActionSelect| :sup:`Select Single Feature` tool. You 
 can select multiple features for deletion. Once you have the selection set, 
 use the |mActionDeleteSelected| :sup:`Delete Selected` tool to delete the 
 features.
@@ -425,7 +425,7 @@ features.
 The |mActionEditCut| :sup:`Cut Features` tool on the digitizing toolbar can 
 also be used to delete features. This effectively deletes the feature but 
 also places it on a "spatial clipboard". So we cut the feature to delete. 
-We could then use the |mActionEditPaste| :sup:`paste tool` to put it back, 
+We could then use the |mActionEditPaste| :sup:`Paste Features` tool to put it back, 
 giving us a one-level undo capability. Cut, copy, and paste work on the 
 currently selected features, meaning we can operate on more than one at a time.
 
