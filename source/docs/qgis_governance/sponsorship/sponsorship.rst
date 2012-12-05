@@ -31,14 +31,16 @@ Donations thus contributed effectively to the great success of the meeting (see
 e.g. a report).
 
 We encourage you to donate again to the upcoming developer meetings.
+
 How can you support the QGIS Development
+========================================
 
 There are two kinds of financial contributions, we accept: sponsorships: a
 sponsorship is an annual commitment of funds to the project.  donation: a
-donation is a once off financial contribution to the QGIS project.  
+donation is a once off financial contribution to the QGIS project.
 
 Sponsorship
-===========
+-----------
 
 Sponsors can sponsor Quantum GIS for any amount of money of at least 500 €/700
 US$. Sponsorships last one year, after which they may be continued with a new
@@ -55,7 +57,7 @@ euros    us dollars sponsorship level
 ======== ========== =================
 
 Donation
-========
+--------
 
 Donations can be of any amount, through the Make A Donation PayPal link
 provided in the left-hand menu of this website or through our bank account
@@ -66,7 +68,7 @@ If you wish to send us a larger donation, you are strongly encouraged to use
 the bank account rather than PayPal.
 
 What is your benefit sponsoring the QGIS Development?
------------------------------------------------------
+=====================================================
 
 Sponsoring the Quantum GIS project provides the following benefits:
 
@@ -92,7 +94,7 @@ Sponsoring the Quantum GIS project provides the following benefits:
 
 
 How do we use financial support?
---------------------------------
+================================
 
 The sponsorship funds will be spent to directly improve the code base of the
 project, to fund tasks that generally receive less attention from developers,
@@ -124,7 +126,7 @@ following project activities:
 .. warning:: Acceptance of sponsorship offers is at the discretion of the QGIS
    PSC. We reserve the right to decline offers of sponsorship if the sponsoring
    organisation or party seems to be at odds with the ethos of our project. For
-   example offers from marketing companies that have nothing to do with GIS / 
+   example offers from marketing companies that have nothing to do with GIS /
    spatial services, or offers where we have reason to believe the presence of
    the sponsors logo and marketing materials on our site and other materials will
    degrade the experience of our users will be declined.
