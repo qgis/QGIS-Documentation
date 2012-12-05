@@ -95,7 +95,8 @@ Menu Option                                                     Shortcut        
 |mActionEditCut| :guilabel:`Cut Features`                       :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionEditCopy| :guilabel:`Copy Features`                     :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionEditPaste| :guilabel:`Paste Features`                   :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionEditPaste| :guilabel:`Move Feature`                     \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCapturePoint| :guilabel:`Add Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionMoveFeature| :guilabel:`Move Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -103,6 +104,7 @@ Menu Option                                                     Shortcut        
 |mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionOffsetCurve| :guilabel:`Offset Curves`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeats| :guilabel:`Merge selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeats| :guilabel:`Merge attributes of selected Features`  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -115,7 +117,7 @@ Menu Option                                                     Shortcut        
 \
 
 After activating |mActionToggleEditing| :sup:`Toggle editing` mode 
-for a layer, you will find a capture feature icon in the :menuselection:`Edit`
+for a layer, you will find an add feature icon in the :menuselection:`Edit`
 menu depending on the layer type (point, line or polygon). 
 
 ---- 
@@ -124,9 +126,9 @@ menu depending on the layer type (point, line or polygon).
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Edit** extra                                                  \                     \                                           \ 
-|mActionCapturePoint| :guilabel:`Capture Point`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionCaptureLine| :guilabel:`Capture Line`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionCapturePolygon| :guilabel:`Capture Polygon`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCapturePoint| :guilabel:`Add Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCaptureLine| :guilabel:`Add Feature`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCapturePolygon| :guilabel:`Add Feature`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
 
 ----
@@ -139,21 +141,21 @@ Menu Option                                                     Shortcut        
 |PanToSelected| :guilabel:`Pan Map to Selection`                \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
 |mActionZoomOut| :guilabel:`Zoom Out`                           :kbd:`Ctrl+-`         \                                           :guilabel:`Map Navigation`
-:menuselection:`Select`                                         \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
+:menuselection:`Select -->`                                     \                     see :ref:`sec_selection`                    :guilabel:`Attributes`
 |mActionIdentify| :guilabel:`Identify Features`                 :kbd:`Ctrl+Shift+I`   \                                           :guilabel:`Attributes`
-:menuselection:`Measure`                                        \                     see :ref:`sec_measure`                      :guilabel:`Attributes`
+:menuselection:`Measure -->`                                    \                     see :ref:`sec_measure`                      :guilabel:`Attributes`
 |mActionZoomFullExtent| :guilabel:`Zoom Full`                   :kbd:`Ctrl+Shift+F`   \                                           :guilabel:`Map Navigation`
 |mActionZoomToLayer| :guilabel:`Zoom To Layer`                  \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
 |mActionZoomLast| :guilabel:`Zoom Last`                         \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
 :menuselection:`Zoom Actual Size`                               \                     \                                           \ 
+:menuselection:`Decorations -->`                                \                     see :ref:`decorations`                      \
 |mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
 |mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionDraw| :guilabel:`Refresh`                               :kbd:`Ctrl+R`                                                     :guilabel:`Map Navigation`
 :menuselection:`Tile scale slider`                              \                     see :ref:`tilesets`                         :guilabel:`Tile scale`
-:menuselection:`Live GPS tracking`                              \                     see :ref:`sec_gpstracking`                  :guilabel:`GPS Information`
 ==============================================================  ====================  ==========================================  =============================== 
 
 ----
@@ -163,11 +165,18 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 **Layer**                                                       \                     \                                           \ 
 :menuselection:`New`                                            \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
+:guilabel:`Embed Layers and Groups ...`                         \                     see :ref:`nesting_projects`                 \
 |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`             :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
+(the following entries appear when core plugins are loaded)
+|delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Add Delimited Text Layer`
+|gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Create new GPX layer`
+|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Add Oracle GeoRaster Layer`
+|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Add SQL Anywhere Layer`
+|wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Add WFS Layer`
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
 |mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
 |mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
