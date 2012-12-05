@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`plugin_gps`:
+.. _plugin_gps:
 
 GPS Plugin
 ==========
