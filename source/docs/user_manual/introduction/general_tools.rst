@@ -514,6 +514,8 @@ dialog, click on it then click **[Delete]**.
 Confirm your choice by clicking **[Yes]** or cancel the
 delete by clicking **[No]**.
 
+.. _nesting_projects:
+
 Nesting Projects
 ================
 
