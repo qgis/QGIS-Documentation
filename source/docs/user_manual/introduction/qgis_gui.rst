@@ -177,6 +177,8 @@ Menu Option                                                     Shortcut        
 |oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Add Oracle GeoRaster Layer`
 |icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Add SQL Anywhere Layer`
 |wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Add WFS Layer`
+|mActionEditCopy| :guilabel:`Copy style`                        \                     see :ref:`vector_style_tab`                 \
+|mActionEditPaste| :guilabel:`Paste style`                      \                     see :ref:`vector_style_tab`                 \
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
 |mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
 |mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
@@ -201,12 +203,14 @@ Menu Option                                                     Shortcut        
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Settings**                                                    \                     \                                           \ 
-:menuselection:`Panels`                                         \                     \                                           \ 
-:menuselection:`Toolbars`                                       \                     \                                           \ 
+:menuselection:`Panels -->`                                     \                     \                                           \ 
+:menuselection:`Toolbars -->`                                   \                     \                                           \ 
 :menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \ 
-|mActionProjectProperties| :guilabel:`Project Properties`       :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \ 
-|mActionCustomProjection| :guilabel:`Custom CRS`                \                     see :ref:`sec_custom_projections`           :guilabel:`Style Manager`
-|mActionOptions| :guilabel:`Configure shortcuts`                \                     \                                           \ 
+|mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \ 
+|mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
+:guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \
+|mActionOptions| :guilabel:`Configure shortcuts ...`            \                     \                                           \ 
+|mActionOptions| :guilabel:`Customization ...`
 |mActionOptions| :guilabel:`Options`                            \                     see :ref:`gui_options`                      \ 
 :menuselection:`Snapping Options`                               \                     \                                           \ 
 ==============================================================  ====================  ==========================================  ===============================
