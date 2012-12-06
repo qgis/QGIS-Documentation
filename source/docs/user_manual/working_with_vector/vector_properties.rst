@@ -61,8 +61,8 @@ marker symbols.
 
 .. _vector_symbol_types:
 
-Available symbol layer types
-............................
+**Available symbol layer types**
+
 
 * Point layers
 
@@ -119,6 +119,13 @@ your prefered or frequently used symbols, and can use it  without having
 to recreate it everytime. Style items (symbols and color ramps) have always 
 a name by which they can be queried from the style. There is at least one 
 default style in |qg| (modifiable) and the user can add further styles.
+In the lower part of the Style tab there are four buttons for managing styles:
+Use **[Restore Default Style]** to get back to your default settings, **[Save As Default]**
+to save your style as default, **[Load Style...]** to get to your own styles and 
+**[Save Style]** to save your own styles.
+Layer styles can also be transferred from one layer to another layer.
+Activate a layer and choose :menuselection:`Layer -->` |mActionEditCopy| :guilabel:`Copy style`
+and switch to another layer. Then choose :menuselection:`Layer -->` |mActionEditPaste| :guilabel:`Paste style`.
 
 .. index:: Renderers
 
@@ -134,8 +141,8 @@ and a color ramp \- they will set the colors for symbols appropriately.
 
 .. _vector_new_symbology:
 
-Working with the New Generation Symbology
-.........................................
+**Working with the New Generation Symbology**
+
 
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated, rule-based and point displacement. For each 
@@ -446,7 +453,8 @@ You can also change the symbol layer properties in the right part of the dialog.
 
 .. _vector_style_manager:
 
-**Style Manager**
+Style Manager
+-------------
 
 The Style Manager is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. 
@@ -471,7 +479,7 @@ Style Manager` in the main menu.
 .. _vector_old_symbology:
 
 Old Symbology
-.............
+-------------
 
 .. note::
    |qg| 1.8. still supports the usage of the old symbology, although it is 
