@@ -210,9 +210,9 @@ Menu Option                                                     Shortcut        
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
 :guilabel:`Style Manager...`                                    \                     see :ref:`vector_style_manager`             \
 |mActionOptions| :guilabel:`Configure shortcuts ...`            \                     \                                           \ 
-|mActionOptions| :guilabel:`Customization ...`
-|mActionOptions| :guilabel:`Options`                            \                     see :ref:`gui_options`                      \ 
-:menuselection:`Snapping Options`                               \                     \                                           \ 
+|mActionOptions| :guilabel:`Customization ...`                  \                     see :ref:`sec_customization`                \
+|mActionOptions| :guilabel:`Options ...`                        \                     see :ref:`gui_options`                      \ 
+:menuselection:`Snapping Options ...`                           \                     \                                           \ 
 ==============================================================  ====================  ==========================================  ===============================
  
 ----
@@ -221,10 +221,15 @@ Menu Option                                                     Shortcut        
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Plugins**                                                     \                     \                                           \ 
-(Further menu items are added by plugins                        \                     \                                           \ 
-\ as they are loaded.)                                          \                     \                                           \ 
+(the following items are visible if all core plugins are 
+activated)                                                      \                     \                                           \ 
+|plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
 |mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 :guilabel:`Plugins`
 :menuselection:`Python Console`                                 \                     \                                           \ 
+:menuselection:`Easy Print -->`                                 \                     see :ref:`plugins_easyprint`                :guilabel:`Easy Print`
+:menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS ...`
+:menuselection:`OpenLayers Plugin -->`                          \                     see :ref:`
+:menuselection:`Table -->`                                      \                     see :ref:`
 ==============================================================  ====================  ==========================================  =============================== 
 
 ----

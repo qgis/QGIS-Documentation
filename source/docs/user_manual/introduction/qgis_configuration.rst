@@ -313,6 +313,8 @@ require a restart of QGIS before they will be effective.
 
    \\HKEY\CURRENT_USER\Software\QuantumGISqgis
 
+.. _sec_customization:
+
 Customization
 =============
 The customization tool is a new development in QGIS 1.8.. It lets you (de)activate

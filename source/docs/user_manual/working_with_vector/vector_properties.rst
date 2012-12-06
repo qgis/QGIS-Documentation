@@ -459,7 +459,7 @@ Style Manager
 The Style Manager is a small helper application, that lists symbols and color 
 ramps available in a style. It also allows you to add and/or remove items. 
 To launch the Style Manager, click on :menuselection:`Settings --> 
-Style Manager` in the main menu.
+Style Manager` in the main menu. Alternatively, you can access it via the :guilabel:`Style` tab.
 
 .. _figure_symbology_12:
 
