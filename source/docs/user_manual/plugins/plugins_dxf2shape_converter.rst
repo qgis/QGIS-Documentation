@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`dxf2shape`:
+.. _dxf2shape:
 
 Dxf2Shp Converter Plugin
 ========================
