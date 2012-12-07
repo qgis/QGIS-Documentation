@@ -25,25 +25,30 @@ Member's roles withing the PSC
 
 The PSC consists of 5 identified roles as follows:
 
-* **Chair**: To support the activities and present a public face to the
+* **Chair**
+   To support the activities and present a public face to the
    project. To issue press releases, conduct interviews, collaborate with PSC
    members and provide stability and guidance to the project.
-* **Community Adviser**: To further building of relations with the community.
+* **Community Adviser**
+   To further building of relations with the community.
    To ensure smooth running of the QGIS.org online experience including web sites,
    blog, mailing lists, forums etc. To achieve these aims he / she will recruit
    and advise 'managers' to curate these individual online services and provide
    oversight for their activities.
-* **Technical Adviser**: To provide oversight and guidance to the development
+* **Technical Adviser**
+   To provide oversight and guidance to the development
    effort. This will include recruiting and facilitating 'managers' for discrete
    areas of the code based (core, gui, plugins, providers, tests) who will ensure
    consistency and quality of code added into the SVN code repository.
-* **Financial and Marketing advisor**: To provide reporting and explore avenues
+* **Financial and Marketing advisor**
+   To provide reporting and explore avenues
    of revenue for the QGIS project. To interface with business to secure funding
    for future efforts. To identify areas where funding is needed and put into
    place actions to secure this funding. To keep track of funding as managed by
    OSGeo. To present the PSC with financial options for any initiative requiring
    funding.
-* **Release Manager**: To oversee timely, regular, stable releases of QGIS on
+* **Release Manager**
+   To oversee timely, regular, stable releases of QGIS on
    the various supported platforms. To recruit and support build managers to
    create packages for supported platforms. To oversee the maintenance of the trac
    bug tracking system.
@@ -68,15 +73,15 @@ To nominate someone:
 
 * Nominator checks with the nominee to make sure they are willing to serve on
   the PSC and commit to the goals and duties described in this document
-* Nominator submits the nomination via email to the PSC mailing list. 
+* Nominator submits the nomination via email to the PSC mailing list.
 * The subject line of your email must be **Nomination for QGIS PSC**
-* Nominations without the correct subject line will be rejected 
-* Nominations without complete information will be rejected 
+* Nominations without the correct subject line will be rejected
+* Nominations without complete information will be rejected
 
 
 Complete information includes:
 
-* Full name of the nominator 
+* Full name of the nominator
 * Email address of the nominator
 * Full name of the nominee
 * Email address of the nominee
@@ -116,4 +121,3 @@ The PSC is not:
 * A legal entity
 * Intended to deal with minutae of the project (these should be delegated to
   trusted members)
- 
