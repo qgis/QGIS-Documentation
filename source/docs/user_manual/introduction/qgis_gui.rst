@@ -224,13 +224,31 @@ Menu Option                                                     Shortcut        
 (the following items are visible if all core plugins are 
 activated)                                                      \                     \                                           \ 
 |plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
-|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 :guilabel:`Plugins`
+|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 \
 :menuselection:`Python Console`                                 \                     \                                           \ 
-:menuselection:`Easy Print -->`                                 \                     see :ref:`plugins_easyprint`                :guilabel:`Easy Print`
+:menuselection:`Easy Print -->`                                 \                     see :ref:`easyprint`                        :guilabel:`Easy Print`
 :menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS ...`
-:menuselection:`OpenLayers Plugin -->`                          \                     see :ref:`
-:menuselection:`Table -->`                                      \                     see :ref:`
+:menuselection:`OpenLayers Plugin -->`                          \                     see :ref:`open_layers`                      \
+:menuselection:`Table -->`                                      \                     see :ref:`table_manager`                    \
 ==============================================================  ====================  ==========================================  =============================== 
+
+----
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Vector** (only visible if core plugins are activated)         \                     \                                           \
+:menuselection:`Analysis Tools -->`                             \                     see :ref:`ftools`                           \                     
+:menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        \
+:menuselection:`Data Management Tools -->`                      \                     see :ref:`ftools`                           \
+:menuselection:`Dxf2Shp -->`                                    \                     see :ref:`dxf2shape`                        \
+:menuselection:`Geometry Tools -->`                             \                     see :ref:`ftools`                           \
+:menuselection:`Geoprocessing Tools -->`                        \                     see :ref:`ftools`                           \
+:menuselection:`GPS -->`                                        \                     see :ref:`plugin_gps`                       :guilabel:`GPS Tools`
+:menuselection:`Research Tools -->`                             \                     see :ref:`ftools`                           \
+:menuselection:`Road Graph -->`                                 \                     see :ref:`roadgraph`                        \
+:menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Spatial Query`
+==============================================================  ====================  ==========================================  ===============================
 
 ----
 
@@ -239,6 +257,19 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 **Raster**                                                      \                     \                                           \ 
 :menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \ 
+(the following items are visible if all core plugins are
+ activated)
+:menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Georeferencer`
+:menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Heatmap`
+:menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Interpolation`
+|| :guilabel:`Terrain Analysis`                                 \                     see :ref:`rasterrain`                       \
+:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal statistics`                 :guilabel:`Zonal statistics`
+:menuselection:`Projections -->`                                \                     see :ref:`label_plugingdaltools`            \
+:menuselection:`Conversion -->`                                 \                     see :ref:`label_plugingdaltools`            \
+:menuselection:`Extraction -->`                                 \                     see :ref:`label_plugingdaltools`            \
+:menuselection:`Analysis -->`                                   \                     see :ref:`label_plugingdaltools`            \
+:menuselection:`Miscellaneous -->`                              \                     see :ref:`label_plugingdaltools`            \
+:guilabel:`GdalTools settings`                                  \                     see :ref:`label_plugingdaltools`            \
 ==============================================================  ====================  ==========================================  =============================== 
 
 ----
