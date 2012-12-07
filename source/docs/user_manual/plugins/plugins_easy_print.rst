@@ -1,0 +1,4 @@
+.. _easyprint:
+
+EasyPrint plugin
+================
