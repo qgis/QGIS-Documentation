@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`ftools`: 
+.. _ftools: 
 
 fTools Plugin
 =============
