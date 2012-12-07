@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`roadgraph`:
+.. _roadgraph:
 
 Road Graph Plugin
 =================
