@@ -2,7 +2,7 @@
 
 |updatedisclaimer|
 
-.. _`spatial_query`:
+.. _spatial_query:
 
 Spatial Query Plugin
 ====================
