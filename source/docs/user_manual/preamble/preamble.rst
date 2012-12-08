@@ -46,16 +46,15 @@ This document contains internal and external links.  Clicking on an internal lin
 | Gary E. Sherman      | Tim Sutton           | Alex Bruy            |
 +----------------------+----------------------+----------------------+
 
-**Translators who contributed to this translated version (Not English)**
-
-+----------------------+----------------------+----------------------+
-| translator one       | translator two       | translator three     |
-+----------------------+----------------------+----------------------+
-| translator four      | translator five      | translator six       |
-+----------------------+----------------------+----------------------+
-| translator seven     | translator eight     | translator nine      |
-+----------------------+----------------------+----------------------+
-
+.. Add this section, if it is a translation from the english master documentation
+.. 
+.. **Translators who contributed to this translated version (Not English)**
+..
+..+----------------------+----------------------+----------------------+
+..| translator one       | translator two       | translator three     |
+..+----------------------+----------------------+----------------------+
+..| translator four      | translator five      | translator six       |
+..+----------------------+----------------------+----------------------+
 
 Copyright (c) 2004 - 2012  QGIS Development Team
 
