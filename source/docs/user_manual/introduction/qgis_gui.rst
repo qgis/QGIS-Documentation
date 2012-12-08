@@ -170,13 +170,14 @@ Menu Option                                                     Shortcut        
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
+|| :guilabel:`Add MSSQL Spatial Layer`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
 (the following entries appear when core plugins are loaded)
-|delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Add Delimited Text Layer`
-|gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Create new GPX layer`
-|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Add Oracle GeoRaster Layer`
-|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Add SQL Anywhere Layer`
-|wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Add WFS Layer`
+|delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
+|gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
+|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
+|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
+|wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Manage Layers`
 |mActionEditCopy| :guilabel:`Copy style`                        \                     see :ref:`vector_style_tab`                 \
 |mActionEditPaste| :guilabel:`Paste style`                      \                     see :ref:`vector_style_tab`                 \
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
@@ -226,10 +227,7 @@ activated)                                                      \               
 |plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
 |mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 \
 :menuselection:`Python Console`                                 \                     \                                           \ 
-:menuselection:`Easy Print -->`                                 \                     see :ref:`easyprint`                        :guilabel:`Easy Print`
-:menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS ...`
-:menuselection:`OpenLayers Plugin -->`                          \                     see :ref:`open_layers`                      \
-:menuselection:`Table -->`                                      \                     see :ref:`table_manager`                    \
+:menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
 ==============================================================  ====================  ==========================================  =============================== 
 
 ----
@@ -241,13 +239,13 @@ Menu Option                                                     Shortcut        
 :menuselection:`Analysis Tools -->`                             \                     see :ref:`ftools`                           \                     
 :menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        \
 :menuselection:`Data Management Tools -->`                      \                     see :ref:`ftools`                           \
-:menuselection:`Dxf2Shp -->`                                    \                     see :ref:`dxf2shape`                        \
+:menuselection:`Dxf2Shp -->`                                    \                     see :ref:`dxf2shape`                        :guilabel:`Vector`
 :menuselection:`Geometry Tools -->`                             \                     see :ref:`ftools`                           \
 :menuselection:`Geoprocessing Tools -->`                        \                     see :ref:`ftools`                           \
-:menuselection:`GPS -->`                                        \                     see :ref:`plugin_gps`                       :guilabel:`GPS Tools`
+:menuselection:`GPS -->`                                        \                     see :ref:`plugin_gps`                       :guilabel:`Vector`
 :menuselection:`Research Tools -->`                             \                     see :ref:`ftools`                           \
 :menuselection:`Road Graph -->`                                 \                     see :ref:`roadgraph`                        \
-:menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Spatial Query`
+:menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Vector`
 ==============================================================  ====================  ==========================================  ===============================
 
 ----
@@ -259,11 +257,11 @@ Menu Option                                                     Shortcut        
 :menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \ 
 (the following items are visible if all core plugins are
  activated)
-:menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Georeferencer`
-:menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Heatmap`
-:menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Interpolation`
+:menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
+:menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
+:menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
 || :guilabel:`Terrain Analysis`                                 \                     see :ref:`rasterrain`                       \
-:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal statistics`                 :guilabel:`Zonal statistics`
+:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal statistics`                 :guilabel:`Raster`
 :menuselection:`Projections -->`                                \                     see :ref:`label_plugingdaltools`            \
 :menuselection:`Conversion -->`                                 \                     see :ref:`label_plugingdaltools`            \
 :menuselection:`Extraction -->`                                 \                     see :ref:`label_plugingdaltools`            \
@@ -277,8 +275,31 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
+**Database*(only visible if core plugins are activated)         \                     \                                           \
+:menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
+:menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
+:menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
+:menuselection:`Spit -->`                                       \                     see :ref:`spit`                             :guilabel:`Database`
+==============================================================  ====================  ==========================================  ===============================
+
+---
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+**Web**(only visible if core plugins are activated)
+:menuselection:`MapServer Export ... -->`                       \                     see :ref:`mapserver_export`                 :guilabel:`Web`                     
+:menuselection:`OpenStreetMap -->`                              \                     see :ref:`plugins_osm`                      :guilabel:`OpenStreetMap`                  
+==============================================================  ====================  ==========================================  ===============================
+
+---
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
 **Help**                                                        \                     \                                           \ 
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`     
+|| :guilabel:`What's This?`                                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \ 
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \ 
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \ 

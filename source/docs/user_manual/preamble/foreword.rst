@@ -9,14 +9,15 @@ Foreword
 *********
 
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
+
 Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
 was born in May of 2002 and was established as a project on SourceForge in June
 of the same year. We've worked hard to make GIS software (which is traditionally
 expensive proprietary software) a viable prospect for anyone with basic access
 to a Personal Computer. QGIS currently runs on most Unix platforms, Windows, and
-OS X. QGIS is developed using the Qt toolkit (http://qt.nokia.com)
-and C++. This means that QGIS feels snappy to use and has a pleasing, 
-easy-to-use graphical user interface (GUI). 
+OS X. QGIS is developed using the Qt toolkit (http://qt.digia.com)
+and C++. This means that QGIS feels snappy to use and has a pleasing,
+easy-to-use graphical user interface (GUI).
 
 QGIS aims to be an easy-to-use GIS, providing common functions and features.
 The initial goal was to provide a GIS data viewer. QGIS has reached the point
@@ -24,29 +25,25 @@ in its evolution where it is being used by many for their daily GIS data viewing
 needs. QGIS supports a number of raster and vector data formats, with new
 format support easily added using the plugin architecture.
 
-QGIS is released under the GNU General Public License (GPL). Developing QGIS 
+QGIS is released under the GNU General Public License (GPL). Developing QGIS
 under this license means that you can inspect and modify the source code,
 and guarantees that you, our happy user, will always have access to a GIS
 program that is free of cost and can be freely modified. You should have
 received a full copy of the license with your copy of QGIS, and you also can
-find it in Appendix :ref:`gpl_appendix`.  
+find it in Appendix :ref:`gpl_appendix`.
 
 .. index:: documentation
 
 .. tip::
         **Up-to-date Documentation**
-        The latest version of this document can always be found at 
+        The latest version of this document can always be found at
         http://download.osgeo.org/qgis/doc/manual/, or in the documentation
-        area of the QGIS website at http://www.qgis.org/en/documentation
+        area of the QGIS website at http://www.documentation.qgis.org
 
 .. `label_intro`:
 
 Introduction To GIS
 ===================
-
-.. when the revision of a section has been finalized, 
-.. comment out the following line:
-.. \updatedisclaimer
 
 A Geographical Information System (GIS) (Mitchell 2005 :ref:`literature_and_web`)
 is a collection of software that allows you to create, visualize, query and
@@ -121,7 +118,6 @@ applications.
 Raster Data
 -----------
 
-
 One type of geospatial data is called raster data or simply "a raster". The
 most easily recognised form of raster data is digital satellite imagery or
 air photos. Elevation shading or digital elevation models are also
@@ -139,7 +135,9 @@ values is combined to create a colour image). Satellite imagery also
 represents data in multiple "bands". Each band is essentially a separate,
 spatially overlapping raster, where each band holds values of certain
 wavelengths of light. As you can imagine, a large raster takes up more file
-space. A raster with smaller cells can provide more detail, but takes up
+space.
+
+A raster with smaller cells can provide more detail, but takes up
 more file space. The trick is finding the right balance between cell size
 for storage purposes and cell size for analytical or mapping purposes.
 
@@ -166,19 +164,17 @@ depending on your purpose. This is a whole area of study for another day -
 map projections.
 
 Vector data takes on three forms, each progressively more complex and
-building on the former.  
+building on the former.
 
 #. Points - A single coordinate (x y) represents a discrete geographic location
-#. Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung 
-   together in a certain order, like drawing a line from Point (x1 y1) 
-   to Point (x2 y2) and so on. These parts between each point are considered 
-   line segments. They have a length and the line can be said to have a 
-   direction based on the order of the points. Technically, a line is a 
-   single pair of coordinates connected together, whereas a line string 
-   is multiple lines connected together.  
-#. Polygons - When lines are strung together by more than two points, 
-   with the last point being at the same location as the first, we call 
-   this a polygon. A triangle, circle, rectangle, etc. are all polygons. 
+#. Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung
+   together in a certain order, like drawing a line from Point (x1 y1)
+   to Point (x2 y2) and so on. These parts between each point are considered
+   line segments. They have a length and the line can be said to have a
+   direction based on the order of the points. Technically, a line is a
+   single pair of coordinates connected together, whereas a line string
+   is multiple lines connected together.
+#. Polygons - When lines are strung together by more than two points,
+   with the last point being at the same location as the first, we call
+   this a polygon. A triangle, circle, rectangle, etc. are all polygons.
    The key feature of polygons is that there is a fixed area within them.
-
-

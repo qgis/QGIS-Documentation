@@ -10,26 +10,28 @@ Features
 plugins. As a short summary they are presented in six categories to gain a
 first insight.
 
-**View data**
+View data
+---------
 
 You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector 
+*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector
    formats supported by the installed OGR library, including ESRI shapefiles,
    MapInfo, SDTS, GML and many more.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
-   Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii 
+   Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
    Grid, JPEG, PNG and many more.
-*  SpatiaLite databases (see section :ref:`label_spatialite`) 
+*  SpatiaLite databases (see section :ref:`label_spatialite`)
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC-compliant Web Map Service (WMS) or
    Web Feature Service (WFS), see section :ref:`working_with_ogc`.
 *  OpenStreetMap data (see section :ref:`plugins_osm`).
 
-**Explore data and compose maps**
+Explore data and compose maps
+-----------------------------
 
 You can compose maps and interactively explore spatial data with a friendly
 GUI. The many helpful tools available in the GUI include:
@@ -47,11 +49,12 @@ GUI. The many helpful tools available in the GUI include:
 *  decorate your map with a north arrow scale bar and copyright label
 *  save and restore projects
 
-**Create, edit, manage and export data**
+Create, edit, manage and export data
+------------------------------------
 
 You can create, edit, manage and export vector maps in several formats. Raster
 data have to be imported into GRASS to be able to edit and export them into
-other formats. QGIS offers the following: 
+other formats. QGIS offers the following:
 
 *  Digitizing tools for OGR supported formats and GRASS vector layer.
 *  Create and edit shapefiles and GRASS vector layers.
@@ -62,32 +65,36 @@ other formats. QGIS offers the following:
 *  Visualize and edit OpenStreetMap data.
 *  Create PostGIS layers from shapefiles with the SPIT plugin.
 *  Improved handling of PostGIS tables.
-*  Manage vector attribute tables with the new attribute table (see section 
+*  Manage vector attribute tables with the new attribute table (see section
    :ref:`sec_attribute_table`) or Table Manager plugin.
 *  Save screenshots as georeferenced images.
 
-**Analyse data**
+Analyse data
+------------
 
 You can perform spatial data analysis on PostgreSQL/PostGIS and other OGR
 supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
-tools. You can also use the integrated GRASS tools, which 
+tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
 :ref:`sec_grass`).
 
-**Publish maps on the Internet**
+Publish maps on the Internet
+----------------------------
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS or WFS client, and as WMS or WFS server. 
+be used as a WMS or WFS client, and as WMS or WFS server.
 
-**Extend QGIS functionality through plugins**
+Extend QGIS functionality through plugins
+-----------------------------------------
 
 QGIS can be adapted to your special needs with the extensible
 plugin architecture. QGIS provides libraries that can be used to create
 plugins.  You can even create new applications with C++ or Python!
 
-**Core Plugins**
+Core Plugins
+............
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
     containing x,y coordinates).
@@ -119,7 +126,8 @@ plugins.  You can even create new applications with C++ or Python!
 #.  eVIS (Event Visualization Tool).
 #.  fTools (Tools for vector data analysis and management).
 
-**External Python Plugins**
+External Python Plugins
+........................
 
 QGIS offers a growing number of external python plugins that are provided by
 the community. These plugins reside in the official PyQGIS repository, and
@@ -127,10 +135,10 @@ can be easily installed using the Python Plugin Installer (See Section
 :ref:`load_external_plugin`).
 
 What's new in the version 1.8
-=============================
+-----------------------------
 
-Please note that this is a release in our 'cutting edge' release series. As such 
-it contains new features and extends the programmatic interface over QGIS 1.0.x 
+Please note that this is a release in our 'cutting edge' release series. As such
+it contains new features and extends the programmatic interface over QGIS 1.0.x
 and QGIS 1.6.0. We recommend that you use this version over previous releases.
 
 This release includes over 277 bug fixes and many new features and enhancements.
@@ -242,4 +250,3 @@ This release includes over 277 bug fixes and many new features and enhancements.
 **Printing**
 
 * Undo/Redo support for the print composer.
-
