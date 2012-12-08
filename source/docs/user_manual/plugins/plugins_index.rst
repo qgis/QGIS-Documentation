@@ -18,19 +18,16 @@ Plugins
    plugins_delimited_text
    plugins_dxf2shape_converter
    plugins_evis
-   plugins_easy_print
    plugins_ftools
    plugins_gdaltools
    plugins_georeferencer
    plugins_interpolation
    plugins_mapserver_export
    plugins_offline_editing
-   plugins_open_layers
    plugins_oracle_raster
    plugins_raster_terrain
    plugins_heatmap
    plugins_road_graph
    plugins_spatial_query
    plugins_sql_anywhere
-   plugins_table_manager
 .. plugins_decorations from 1.8.0 no longer a plugin, integrated in QGIS product
