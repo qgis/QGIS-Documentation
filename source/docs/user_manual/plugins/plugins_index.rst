@@ -30,4 +30,5 @@ Plugins
    plugins_road_graph
    plugins_spatial_query
    plugins_sql_anywhere
+   plugins_zonal_statistics
 .. plugins_decorations from 1.8.0 no longer a plugin, integrated in QGIS product
