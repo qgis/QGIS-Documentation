@@ -43,23 +43,27 @@
         $(document).ready(function(){
             var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
             var langPlusPage = window.location.href.match(search);
-            if (langPlusPage.length != 1){
+            if (langPlusPage==undefined){
+                // it's possible this is a index.html page called without 'index.html', try without the currentPage
+                search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+                langPlusPage = window.location.href.match(search);
+            }
+            if (langPlusPage == undefined || langPlusPage.length != 1){
                 alert('This is an documentation error, please report back to QGIS devs.');
                 return;
             }
             langPlusPage = langPlusPage[0];
             currentLang = langPlusPage.replace(currentPage, '');
-            // put some style around the current locale flag, we have to remove the '/' here
-            $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
             var allLanguages = ['af','ar','bg','ca_ES','cs_CZ','da_DK','de','el_GR','en','es','et_EE','eu_ES','fa','fi','fr','gl_ES','he','hr_HR','hu','id','is','it','ja','ka_GE','ko_KR','lo','lt','lv','mn','nl','no','pl_PL','pt_BR','pt_PT','ro','ru','sk','sl_SI','sq_AL','sr_Cyrl','sr_Latn','sv','sw','ta','th','tr','uk','vi','xh','zh_CN','zh_TW'];
             var html = '';
             for (var i = 0; i<allLanguages.length; i++){
                 var lang = allLanguages[i];
-                console.log(lang);
                 html+='<li id="flag_'+lang+'" onclick="gotoLang(\''+lang+'\');"><img src="_static/img/flags/'+lang+'.png" title="'+lang+'" alt="'+lang+'"/></li>\n'
             }
             // put the html (a list li-elements into the locale lu):
             $('#locales').html(html);
+            // put some style around the current locale flag, we have to remove the '/' here
+            $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
         })
 
         // load current page in a different language
