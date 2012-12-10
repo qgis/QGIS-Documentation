@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# b077a7c339c445b9932ffcd92edb10b9
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:11
+msgid "Expressions, Filtering and Calculating Values"
+msgstr ""
+
+# cef679fcf57c4dafa9ffc660dd049abc
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:13
+msgid ""
+"QGIS has some support for parsing of SQL-like expressions. Only a small "
+"subset of SQL syntax is supported. The expressions can be evaluated either "
+"as boolean predicates (returning True or False) or as functions (returning a "
+"scalar value)."
+msgstr ""
+
+# b769b7a8ebe44b51913ead8d4ec2e119
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:17
+msgid "Three basic types are supported:"
+msgstr ""
+
+# b81e5bed244b46bc90d4a9a8399aa5ab
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:19
+msgid ""
+"number --- both whole numbers and decimal numbers, e.g. ``123``, ``3.14``"
+msgstr ""
+
+# e29afd0a8f2848f8999c28489ee031b4
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:20
+msgid "string --- they have to be enclosed in single quotes: ``'hello world'``"
+msgstr ""
+
+# 1975d1f2f9be42ce92254ed7010bb540
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:21
+msgid ""
+"column reference --- when evaluating, the reference is substituted with the "
+"actual value of the field. The names are not escaped."
+msgstr ""
+
+# b1c6e6c0e4544976b23c282eedfd38bf
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:24
+msgid "The following operations are available:"
+msgstr ""
+
+# 00073a544448491883c8aaae78030840
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:26
+msgid "arithmetic operators: ``+``, ``-``, ``*``, ``/``, ``^``"
+msgstr ""
+
+# 1bb9593c780048299703b10266ea7d88
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:27
+msgid "parentheses: for enforcing the operator precedence: ``(1 + 1) * 3``"
+msgstr ""
+
+# c3d08cf2bf8449748fc2de5be1f269fb
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:28
+msgid "unary plus and minus: ``-12``, ``+5``"
+msgstr ""
+
+# 9420357e116f4d608e7a9dd97b630e63
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:29
+msgid ""
+"mathematical functions: ``sqrt``, ``sin``, ``cos``, ``tan``, ``asin``, "
+"``acos``, ``atan``"
+msgstr ""
+
+# 12273c7e539d4921a7be5764e481ce45
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:31
+msgid "geometry functions: ``$area``, ``$length``"
+msgstr ""
+
+# e00208fc04e043e0b0e69d866c1a1096
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:32
+msgid "conversion functions: ``to int``, ``to real``, ``to string``"
+msgstr ""
+
+# 6b5f28ab06ad44f38f03e0d6ce369e04
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:34
+msgid "And following predicates are supported:"
+msgstr ""
+
+# 6421d08b610249f9ba085fffff1d36f4
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:36
+msgid "comparison: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``"
+msgstr ""
+
+# 4222527a08da487d9494b8aba5e6e5ca
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:37
+msgid "pattern matching: ``LIKE`` (using % and _), ``~`` (regular expressions)"
+msgstr ""
+
+# 2ca13107980e4c9ebfda02e117f3d8b2
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:38
+msgid "logical predicates: ``AND``, ``OR``, ``NOT``"
+msgstr ""
+
+# 14d50bed361a47bba24bf08dfc1c851d
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:39
+msgid "NULL value checking: ``IS NULL``, ``IS NOT NULL``"
+msgstr ""
+
+# f4c049061f084ac9910bdafae9907115
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:41
+msgid ""
+"**Compatibility note:** mathematical, geometry, conversion functions and "
+"power operator ``^`` are available from QGIS 1.4."
+msgstr ""
+
+# 92691e5b0e2a4b68ad8b6a829c6945f8
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:44
+msgid "Examples of predicates:"
+msgstr ""
+
+# 525ba31eac794587aa2ba625799eec02
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:46
+msgid "``1 + 2 = 3``"
+msgstr ""
+
+# f82786ec06904cb4b5616e0ba938c027
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:47
+msgid "``sin(angle) > 0``"
+msgstr ""
+
+# cdec02d05256498bb4cec5b94bef0fb5
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:48
+msgid "``'Hello' LIKE 'He%'``"
+msgstr ""
+
+# c6a6b3d4ea8347df82009d4d04362798
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:49
+msgid "``(x > 10 AND y > 10) OR z = 0``"
+msgstr ""
+
+# 54aa49e2d2174ef28a36882a9195bf44
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:51
+msgid "Examples of scalar expressions:"
+msgstr ""
+
+# 63727afb05de4ae7885ede9df4ec5e32
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:53
+msgid "``2 ^ 10``"
+msgstr ""
+
+# f456125bbb46459eb51f7c40c636cbff
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:54
+msgid "``sqrt(val)``"
+msgstr ""
+
+# 6a1221497bc54233b8af334839e5dc8d
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:55
+msgid "``$length + 1``"
+msgstr ""
+
+# ef488f3c62754802be4f3419e665cd6f
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:60
+msgid "Parsing Expressions"
+msgstr ""
+
+# 9eaf6cc1d6044c34a0e7a182d2d187b3
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:63
+msgid "**TODO:** parsing, error handling"
+msgstr ""
+
+# 1a6367be84dc403e92b492dbad47ee29
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:75
+msgid ""
+"**TODO:** working with the tree, evaluation as a predicate, as a function, "
+"error handling"
+msgstr ""
+
+# b843fe008e1a40dd9afe18069f1e1a3a
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:80
+msgid "Evaluating Expressions"
+msgstr ""

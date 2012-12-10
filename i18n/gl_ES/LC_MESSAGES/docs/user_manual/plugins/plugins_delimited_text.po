@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# a4f2b590e31945a2a8bee2ff7d8d5575
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:7
+msgid "|updatedisclaimer|"
+msgstr ""
+
+# 7d82e8d77baf4b539d4f51e389e417f1
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:12
+msgid "Delimited Text Plugin"
+msgstr ""
+
+# ce18afa3858e4e3a8e5a167eed392420
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:15
+msgid ""
+"The Delimited Text plugin allows you to load a delimited text file as a "
+"layer in QGIS."
+msgstr ""
+
+# 6d651f634ec5415fa017dd68b0d6798b
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:17
+msgid "**Requirements**"
+msgstr ""
+
+# e90a93e61b7241c3aa50b531cfe9ffa8
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:21
+msgid "To view a delimited text file as layer, the text file must contain:"
+msgstr ""
+
+# 99fce79bea4a464e822110974cd15203
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:23
+msgid ""
+"A delimited header row of field names. This must be the first line in the "
+"text file."
+msgstr ""
+
+# e508d3abc04f4e5faa56c8a20e85de85
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:24
+msgid ""
+"The header row must contain an X and Y field. These fields can have any name."
+msgstr ""
+
+# 72b11bd5f3844ae7828db31305a29013
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:25
+msgid ""
+"The x and y coordinates must be specified as a number. The coordinate system "
+"is not important."
+msgstr ""
+
+# bb0aa941600d422b9977786b34928864
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:28
+msgid ""
+"As an example of a valid text file we import the elevation point data file :"
+"file:`elevp.csv` coming with the QGIS sample dataset (See Section :ref:"
+"`label_sampledata`):"
+msgstr ""
+
+# c99a8357922b4c998ef8aea476a6743b
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:40
+msgid "Some items of note about the text file are:"
+msgstr ""
+
+# 057a63510d8b487eb052c2bc58d5a134
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:43
+msgid ""
+"The example text file uses ; as delimiter. Any character can be used to "
+"delimit the fields."
+msgstr ""
+
+# 4e3d16c010784e7d8925e9ae7c5c2509
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:45
+msgid "The first row is the header row. It contains the fields X, Y and ELEV."
+msgstr ""
+
+# 2e3abd19556c4bb98d53f3a566433c09
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:46
+msgid "No quotes (\") are used to delimit text fields."
+msgstr ""
+
+# c787055fa5954a8fa7fa8d7167eb2597
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:47
+msgid "The x coordinates are contained in the X field."
+msgstr ""
+
+# 928d962609ee4046a084088cda947603
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:48
+msgid "The y coordinates are contained in the Y field."
+msgstr ""
+
+# 79a7c05a8f1b423cb43619cdf7766a0d
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:52
+msgid "**Using the Plugin**"
+msgstr ""
+
+# e9916a12fc134208ae4a079c25c657cf
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:55
+msgid ""
+"To use the plugin you must first enable it as described in Section :ref:"
+"`managing_plugins`."
+msgstr ""
+
+# b194d3216ea44c30b8e5c1b70cb6a790
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:58
+msgid ""
+"Click the new toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` "
+"to open the Delimited Text dialog as shown in figure_delimited_text_1_."
+msgstr ""
+
+# dfa439dba2f6406c9241fcd4c07be46b
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:73
+msgid ""
+"First select the file (e.g., :file:`qgis_sample_data/csv/elevp.csv`) to "
+"import by clicking on the **[Browse]** button. Once the file is selected, "
+"the plugin attempts to parse the file using the last used delimiter, in this "
+"case a semi-colon (;). To properly parse the file, it is important to select "
+"the correct delimiter. To change the delimiter to tab use \\\\t (this is a "
+"regular expression for the tab character)."
+msgstr ""
+
+# 578309ef65cd45e6a0ed62c550ee4701
+#: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:80
+msgid ""
+"Once the file is parsed, choose the X and Y fields from the drop down lists "
+"and if available also the WKT field for the CRS information. Finally enter a "
+"Layer name (e.g., :file:`elevp` ) as shown in figure_delimited_text_1_ . To "
+"add the layer to the map, click **[OK]**. The delimited text file now "
+"behaves as any other map layer in QGIS."
+msgstr ""

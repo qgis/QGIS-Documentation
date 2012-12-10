@@ -38,25 +38,40 @@
     </style>
 
     <script>
-        // put a line below the current locale flag
+        var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/'
+        var currentLang = 'en';
         $(document).ready(function(){
-            var currentPage = '{{current_page_name}}.html';
-            var currentLang = window.location.href.slice(window.location.href.indexOf(currentPage)-3 ,window.location.href.indexOf(currentPage)-1);
-            //$('#flag_'+currentLang).css('border-bottom', 'solid 1px #111111');
-            $('#flag_'+currentLang).css('background-color', '#cccccc');
+            var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            var langPlusPage = window.location.href.match(search);
+            if (langPlusPage.length != 1){
+                alert('This is an documentation error, please report back to QGIS devs.');
+                return;
+            }
+            langPlusPage = langPlusPage[0];
+            currentLang = langPlusPage.replace(currentPage, '');
+            // put some style around the current locale flag, we have to remove the '/' here
+            $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+            var allLanguages = ['af','ar','bg','ca_ES','cs_CZ','da_DK','de','el_GR','en','es','et_EE','eu_ES','fa','fi','fr','gl_ES','he','hr_HR','hu','id','is','it','ja','ka_GE','ko_KR','lo','lt','lv','mn','nl','no','pl_PL','pt_BR','pt_PT','ro','ru','sk','sl_SI','sq_AL','sr_Cyrl','sr_Latn','sv','sw','ta','th','tr','uk','vi','xh','zh_CN','zh_TW'];
+            var html = '';
+            for (var i = 0; i<allLanguages.length; i++){
+                var lang = allLanguages[i];
+                console.log(lang);
+                html+='<li id="flag_'+lang+'" onclick="gotoLang(\''+lang+'\');"><img src="_static/img/flags/'+lang+'.png" title="'+lang+'" alt="'+lang+'"/></li>\n'
+            }
+            // put the html (a list li-elements into the locale lu):
+            $('#locales').html(html);
         })
 
         // load current page in a different language
         function gotoLang(lang){
-            var currentPage = '{{current_page_name}}.html'; // coming from sphinx
-            var index = window.location.href.indexOf(currentPage);
-            if (index<0){ // we are on a default/index page (like index.html)
-                index = window.location.href.length;
-            }
-            var baseUrl = window.location.href.slice(0,index-3); // removing '/en*' or other locale
-            window.location.href = baseUrl + lang + '/' + currentPage;
+            var currentUrl = window.location.href;
+            var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+            window.location.href = newUrl;
         }
     </script>
+
+
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -110,18 +125,22 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <!-- sidebar -->
+            <div>
             <ul id="locales">
                 <!-- TODO: get the flag images from a central place (the are in Qgis repo in the images dir) -->
-                    <li id="flag_en" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en_US.png', 1)}}" title="en" alt="en"/></li>
-                    <li id="flag_de" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"/></li>
-                    <li id="flag_fr" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"/></li>
-                    <li id="flag_it" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"/></li>
-                    <li id="flag_es" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"/></li>
-                    <li id="flag_pt" onclick="gotoLang('pt');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt" alt="pt"/></li>
-                    <li id="flag_ru" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"/></li>
-                    <li id="flag_ja" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"/></li>
-                    <li id="flag_nl" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"/></li>
+                    <!--<li id="flag_en" onclick="gotoLang('en');"><img src="_static/img/flags/en_US.png" title="en" alt="en"/></li>
+                    <li id="flag_de" onclick="gotoLang('de');"><img src="_static/img/flags/de.png" title="de" alt="de"/></li>
+                    <li id="flag_fr" onclick="gotoLang('fr');"><img src="_static/img/flags/fr.png" title="fr" alt="fr"/></li>
+                    <li id="flag_it" onclick="gotoLang('it');"><img src="_static/img/flags/it.png" title="it" alt="it"/></li>
+                    <li id="flag_es" onclick="gotoLang('es');"><img src="_static/img/flags/es.png" title="es" alt="es"/></li>
+                    <li id="flag_pt" onclick="gotoLang('pt');"><img src="_static/img/flags/pt_PT.png" title="pt" alt="pt"/></li>
+                    <li id="flag_ru" onclick="gotoLang('ru');"><img src="_static/img/flags/ru.png" title="ru" alt="ru"/></li>
+                    <li id="flag_ja" onclick="gotoLang('ja');"><img src="_static/img/flags/ja.png" title="ja" alt="ja"/></li>
+                    <li id="flag_nl" onclick="gotoLang('nl');"><img src="_static/img/flags/nl.png" title="nl" alt="nl"/></li>
+                    <li id="flag_gl_ES" onclick="gotoLang('gl_ES');"><img src="_static/img/flags/gl_ES.png" title="gl_ES" alt="gl_ES"/></li>
+                    <li id="flag_sv" onclick="gotoLang('sv');"><img src="_static/img/flags/sv.png" title="sv" alt="sv"/></li>-->
             </ul><span style="clear:both">&nbsp;</span>
+            </div>
             {%- if sidebars != None %}
                 {#- new style sidebar: explicitly include/exclude templates #}
                 {%- for sidebartemplate in sidebars %}

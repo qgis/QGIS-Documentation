@@ -1,0 +1,1477 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# cbaf4bece48144d48accb35e0feb320a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:7
+msgid "|updatedisclaimer|"
+msgstr ""
+
+# 716da14f57b14348a250109cd47f3eb2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:10
+msgid "Editing"
+msgstr ""
+
+# 86380ecfbc4b4fcf9832befd8ca9c3c0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:12
+msgid ""
+"|qg| supports various capabilities for :index:'editing' OGR, PostGIS and "
+"Spatialite vector layers. **Note** - the procedure for editing GRASS layers "
+"is different - see Section :ref:`grass_digitizing` for details."
+msgstr ""
+
+# c3d7b47aec4b4f10bfc31288a564c660
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:18
+msgid "**Concurrent Edits**"
+msgstr ""
+
+# ef8c217f5d88496e8c529d2f7424f1a4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:20
+msgid ""
+"This version of |qg| does not track if somebody else is editing a feature at "
+"the same time as you. The last person to save their edits wins."
+msgstr ""
+
+# 6b00e32fe9d24e32a875c690929c2f2a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:28
+msgid "Setting the Snapping Tolerance and Search Radius"
+msgstr ""
+
+# 931c2a13c6b347f690b85695c0cfa1b6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:30
+msgid ""
+"Before we can edit vertices, we must set the snapping tolerance and search "
+"radius to a value that allows us an optimal editing of the vector layer "
+"geometries."
+msgstr ""
+
+# 2523265064a74eddb977a32d6c895b48
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:35
+msgid "Snapping tolerance"
+msgstr ""
+
+# a45cccbe5b934720bc750034fef79f34
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:38
+msgid ""
+"Snapping tolerance is the distance |qg| uses to ``search`` for the closest "
+"vertex and/or segment you are trying to connect when you set a new vertex or "
+"move an existing vertex. If you aren't within the snapping tolerance, |qg| "
+"will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and/or segment. The snapping tolerance "
+"setting affects all tools which work with tolerance."
+msgstr ""
+
+# 0e699c1f66594c0bab98c1b2b49c0312
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:46
+msgid ""
+"A general, project wide snapping tolerance can be defined choosing :"
+"menuselection:`Settings -->` |mActionOptions| :menuselection:`Options`. On "
+"Mac: go to  :menuselection:`QIS -->` |mActionOptions| :menuselection:"
+"`Preferences...`, on Linux: :menuselection:`Edit -->` |mActionOptions| :"
+"menuselection:`Options`. In the :guilabel:`Digitizing` tab you can select "
+"between to vertex, to segment or to vertex and segment as default snap mode. "
+"You can also define a default snapping tolerance and a search radius for "
+"vertex edits. The tolerance an be set either in map units or in pixels. The "
+"advantage of choosing pixels, is that the snapping tolerance doesn't have to "
+"be changed after zoom operations. In our small digitizing project (working "
+"with the Alaska dataset), we define the snapping units in feet. Your results "
+"may vary, but something on the order of 300ft should be fine at a scale of "
+"1:10 000 should be a reasonable setting."
+msgstr ""
+
+# 15cff1f624f2464dbeb993a7ab43b48e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:60
+msgid ""
+"A layer based snapping tolerance can be defined by choosing :menuselection:"
+"`Settings -->` (or :menuselection:`File -->`) :menuselection:`Snapping "
+"options...` to enable and adjust snapping mode and tolerance on a layer "
+"basis (see figure_edit_1_ )."
+msgstr ""
+
+# bad7c92fd8d4437dbe0e9af792c5fc05
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:66
+msgid ""
+"Note that this layer based snapping overrides the global snapping option set "
+"in the Digitizing tab. So if you need to edit one layer, and snap its "
+"vertices to another layer, then enable snapping only on the ``snap to`` "
+"layer, then decrease the global snapping tolerance to a smaller value. "
+"Furthermore, snapping will never occur to a layer which is not checked in "
+"the snapping options dialog, regardless of the global snapping tolerance. So "
+"be sure to mark the checkbox for those layers that you need to snap to."
+msgstr ""
+
+# 52966ea9f9ba447e82b0cee5f99ae83f
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:91
+msgid "Search radius"
+msgstr ""
+
+# 33d34355c372460592ea16d3c2853600
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:93
+msgid ""
+"Search radius is the distance |qg| uses to ``search`` for the closest vertex "
+"you are trying to move when you click on the map. If you aren't within the "
+"search radius, |qg| won't find and select any vertex for editing and it will "
+"pop up an annoying warning to that effect. Snap tolerance and search radius "
+"are set in map units or pixels, so you may find you need to experiment to "
+"get them set right. If you specify too big of a tolerance, |qg| may snap to "
+"the wrong vertex, especially if you are dealing with a large number of "
+"vertices in close proximity. Set search radius too small and it won't find "
+"anything to move."
+msgstr ""
+
+# 49792b59d223454ba74b8909f9cd0efe
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:103
+msgid ""
+"The search radius for vertex edits in layer units can be defined in the :"
+"guilabel:`Digitizing` tab under :menuselection:`Settings -->` |"
+"mActionOptions| :menuselection:`Options`. The same place where you define "
+"the general, project wide snapping tolerance."
+msgstr ""
+
+# 183f9976607442be9a48114057638849
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:111
+msgid "Zooming and Panning"
+msgstr ""
+
+# 4e294b04e23f46efb15666209df6f0f9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:113
+msgid ""
+"Before editing a layer, you should zoom in to your area of interest. This "
+"avoids waiting while all the vertex markers are rendered across the entire "
+"layer."
+msgstr ""
+
+# e055b6668ba54c3094946c035a1a4be9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:117
+msgid ""
+"Apart from using the |mActionPan| :sup:`pan` and |mActionZoomIn| :sup:`zoom-"
+"in` / |mActionZoomOut| :sup:`zoom-out` icons on the toolbar with the mouse, "
+"navigating can also be done with the mouse wheel, spacebar and the arrow "
+"keys."
+msgstr ""
+
+# 77167d4bf69343e585ee60a96fe968f3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:123
+msgid "Zooming and panning with the mouse wheel"
+msgstr ""
+
+# 7b475fa0529044d79a0cf9d9706d6d54
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:126
+msgid ""
+"While digitizing you can press the mouse wheel to pan inside of the main "
+"window and you can roll the mouse wheel to zoom in and out on the map. For "
+"zooming place the mouse cursor inside the map area and roll it forward (away "
+"from you) to zoom in and backwards (towards you) to zoom out. The mouse "
+"cursor position will be the center of the zoomed area of interest. You can "
+"customize the behavior of the mouse wheel zoom using the :guilabel:`Map "
+"tools` tab under the :menuselection:`Settings -->` |mActionOptions| :"
+"menuselection:`Options` menu."
+msgstr ""
+
+# b7694c69de3f4d43887b99ad9f440dff
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:136
+msgid "Panning with the arrow keys"
+msgstr ""
+
+# d5312fe92df8417e87b93f885b8f1e2d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:139
+msgid ""
+"Panning the Map during digitizing is possible with the arrow keys. Place the "
+"mouse cursor inside the map area and click on the right arrow key to pan "
+"east, left arrow key to pan west, up arrow key to pan north and down arrow "
+"key to pan south."
+msgstr ""
+
+# fb9dd99caf5449df8d206f71831faa72
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:144
+msgid ""
+"You can also use the spacebar to temporarily cause mouse movements to pan "
+"then map. The :kbd:`PgUp` and :kbd:`PgDown` keys on your keyboard will cause "
+"the map display to zoom in or out without interrupting your digitizing "
+"session."
+msgstr ""
+
+# 89bb4d92e615447eba4a99af170d5f8e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:151
+msgid "Topological editing"
+msgstr ""
+
+# b3d55e7a717b45baba9b88989820d748
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:153
+msgid ""
+"Besides layer based snapping options you can also define some topological "
+"functionalities in the :guilabel:`Snapping options...` dialog in the :"
+"menuselection:`Settings` (or :menuselection:`File`) menu. Here you can "
+"define |checkbox| :guilabel:`Enable topological editing` and/or for polygon "
+"layers you can activate the column |checkbox| :guilabel:`Avoid Int.` which "
+"avoids intersection of new polygons."
+msgstr ""
+
+# 30ffa4627cc8403ca9a5c7c3452cef50
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:163
+msgid "Enable topological editing"
+msgstr ""
+
+# acfb60b2f1a947f2a782ec146a11c5f5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:166
+msgid ""
+"The option |checkbox| :guilabel:`Enable topological editing` is for editing "
+"and maintaining common boundaries in polygon mosaics. QGIS 'detects' a "
+"shared boundary in a polygon mosaic and you only have to move the vertex "
+"once and |qg| will take care about updating the other boundary."
+msgstr ""
+
+# d9da60f8362849d4afcbf5ee3a17f5d7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:174
+msgid "Avoid intersections of new polygons"
+msgstr ""
+
+# 23f3383fa33a4e0a97545816ac08e1f0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:177
+msgid ""
+"The second topological option in the |checkbox| :guilabel:`Avoid Int.` "
+"column, called :guilabel:`Avoid intersections of new polygons` avoids "
+"overlaps in polygon mosaics. It is for quicker digitizing of adjacent "
+"polygons. If you already have one polygon, it is possible with this option "
+"to digitise the second one such that both intersect and |qg| then cuts the "
+"second polygon to the common boundary. The advantage is that users don't "
+"have to digitize all vertices of the common boundary."
+msgstr ""
+
+# a6e4476a503a46f697c23a1786c659ce
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:190
+msgid "Digitizing an existing layer"
+msgstr ""
+
+# 49a2f318f0004a75bb5609275fe9d73f
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:192
+msgid ""
+"By default, |qg| loads layers read-only: This is a safeguard to avoid "
+"accidentally editing a layer if there is a slip of the mouse. However, you "
+"can choose to edit any layer as long as the data provider supports it, and "
+"the underlying data source is writable (i.e. its files are not read-only). "
+"Layer editing is most versatile when used on PostgreSQL/PostGIS data sources."
+msgstr ""
+
+# ad5a70c463d8480881a8d33707454826
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:199
+msgid ""
+"In general, editing vector layers is divided into a digitizing and an "
+"advanced digitizing toolbar, described in Section :ref:`sec_advanced_edit`. "
+"You can select and unselect both under :menuselection:`Settings --> Toolbars "
+"-->`. Using the basic digitizing tools you can perform the following "
+"functions:"
+msgstr ""
+
+# e25c0611bf2e44e98d302d853100eb45
+# 086099d4b6aa4ff0a4ddc3bcb7795eef
+# 750612a8210e499f9f6d7e46a933326d
+# e18f4f41d33a4e998284e0e1be0afe95
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:207
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:483
+msgid "Icon"
+msgstr ""
+
+# 05395d2771ee416d994c2ed431ade9fd
+# dae40a0122944a9cabac81459d43a124
+# bdd38ed6ef8e48259cf8b0dae4e83bf9
+# 7953b23b9ba44d71834877263c67e3c7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:207
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:483
+msgid "Purpose"
+msgstr ""
+
+# a245a804e3ed4edb9ca27f4e88a0a797
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:209
+msgid "|mActionToggleEditing|"
+msgstr ""
+
+# 60401efddeca4ffeb0fdb193be3f3d29
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:209
+msgid "Toggle editing"
+msgstr ""
+
+# b1b924db341f4f5fa208c5225cd711a4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:209
+msgid "|mActionCapturePoint|"
+msgstr ""
+
+# 929c71ae2746442fa846e489f5b7ca44
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:209
+msgid "Adding Features: Capture Point"
+msgstr ""
+
+# a4c41746a7284dfd949ce272bab034f2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:211
+msgid "|mActionCaptureLine|"
+msgstr ""
+
+# 080305d648f041d6a49041c8c06f0c2a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:211
+msgid "Adding Features: Capture Line"
+msgstr ""
+
+# 87dfde66ec0a42469b035fd21c96e2ee
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:211
+msgid "|mActionCapturePolygon|"
+msgstr ""
+
+# e641de41d10644d984ebbc5b3f198880
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:211
+msgid "Adding Features: Capture Polygon"
+msgstr ""
+
+# 4d324d039142448fbd632105c2de1ea2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:213
+msgid "|mActionMoveFeature|"
+msgstr ""
+
+# fe25200a847d45f2b3148023c1a9a234
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:213
+msgid "Move Feature"
+msgstr ""
+
+# a6110ca528d34ed990ed1ba1bb2b3a5c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:213
+msgid "|mActionNodeTool|"
+msgstr ""
+
+# 9f762c923f8046a8be6ea244e7069846
+# ce851c91224b427fb30224db574e481e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:213
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:296
+msgid "Node Tool"
+msgstr ""
+
+# a3295f1de76f4047b87d2e2b5b405793
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:215
+msgid "|mActionDeleteSelected|"
+msgstr ""
+
+# b7065de5429f4216a8ebe4e2ea09b7d5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:215
+msgid "Delete Selected"
+msgstr ""
+
+# e9b9290cda9f4a828b0abface511221b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:215
+msgid "|mActionEditCut|"
+msgstr ""
+
+# 13022cafbbb24fdc8c6878026f1def2b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:215
+msgid "Cut Features"
+msgstr ""
+
+# 5af1ccc7f6014d0db65db4e822a40b5f
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
+msgid "|mActionEditCopy|"
+msgstr ""
+
+# f2c27b4835d740b5b772f7f2d78bd189
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
+msgid "Copy Features"
+msgstr ""
+
+# f4cc7b3f08724e938869f1a5d64ac987
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
+msgid "|mActionEditPaste|"
+msgstr ""
+
+# 57b2f92348c04f9bb830f72392c271a1
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:217
+msgid "Paste Features"
+msgstr ""
+
+# 38d8d6c3d0554282bcb121ad000a4ae1
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:219
+msgid "|mActionFileSave|"
+msgstr ""
+
+# f840c176933d4b118d122ecf4ca477a4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:219
+msgid "Save edits and continue"
+msgstr ""
+
+# c8f72c4f095442bcb171e937532eaa5c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:222
+msgid "Table Editing: Vector layer basic editing toolbar"
+msgstr ""
+
+# f6f3182a04ea4a3695e64f5706baf4c0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:225
+msgid ""
+"All editing sessions start by choosing the |mActionToggleEditing| :guilabel:"
+"`Toggle editing` option. This can be found in the context menu after right "
+"clicking on the legend entry for that layer."
+msgstr ""
+
+# 08703e6a412a4798a815095d1ff52daf
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:229
+msgid ""
+"Alternately, you can use the :index:`Toggle Editing` |mActionToggleEditing| :"
+"sup:`Toggle editing` button from the digitizing toolbar to start or stop the "
+"editing mode. Once the layer is in edit mode, markers will appear at the "
+"vertices, and additional tool buttons on the editing toolbar will become "
+"available."
+msgstr ""
+
+# a8160ee5e2b346aaa91dce678b59aee0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:237
+msgid "**Save Regularly**"
+msgstr ""
+
+# 6dc528b39f42451bba69c4472d597b92
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:239
+msgid ""
+"Remember to |mActionFileSave| :sup:`Save Edits` regularly. This will also "
+"check that your data source can accept all the changes."
+msgstr ""
+
+# cd65ee461f3140299b2b427db4ee88fa
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:244
+msgid "Adding Features"
+msgstr ""
+
+# 28ba6195d597404eb7690899968d9627
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:246
+msgid ""
+"You can use the |mActionCapturePoint| :sup:`Add Feature`, |"
+"mActionCaptureLine| :sup:`Add Feature` or |mActionCapturePolygon| :sup:`Add "
+"Feature` icons on the toolbar to put the |qg| cursor into digitizing mode."
+msgstr ""
+
+# 6b87b870fb244df7924689e5649c3ba2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:251
+msgid ""
+"For each feature, you first digitize the geometry, then enter its "
+"attributes. To digitize the geometry, left-click on the map area to create "
+"the first point of your new feature."
+msgstr ""
+
+# cb53b7d9fe2b4d3f9e0f58dbacaf1dd7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:255
+msgid ""
+"For lines and polygons, keep on left-clicking for each additional point you "
+"wish to capture.  When you have finished adding points, right-click anywhere "
+"on the map area to confirm you have finished entering the geometry of that "
+"feature."
+msgstr ""
+
+# c5ffaede4d544f7ca87d9741c68f96a6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:260
+msgid ""
+"The attribute window will appear, allowing you to enter the information for "
+"the new feature. Figure_edit_2_ shows setting attributes for a fictitious "
+"new river in Alaska. In the :guilabel:`Digitizing` tab under the :"
+"menuselection:`Settings --> Options` menu, you can also activate |checkbox| :"
+"guilabel:`Suppress attributes pop-up windows after each created feature` |"
+"checkbox| :guilabel:`Reuse last entered attribute values`."
+msgstr ""
+
+# 82b687e94db648659294730e94658b17
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:280
+msgid ""
+"With the |mActionMoveFeature| :sup:`Move Feature(s)` icon on the toolbar you "
+"can move existing features."
+msgstr ""
+
+# b2e9718a98ca424383cecc99c2af6411
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:285
+msgid "**Attribute Value Types**"
+msgstr ""
+
+# 6bc49af182294c85b1094850745e4a6b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:287
+msgid ""
+"At least for shapefile editing the attribute types are validated during the "
+"entry. Because of this, it is not possible to enter a number into the text-"
+"column in the dialog :guilabel:`Enter Attribute Values` or vice versa. If "
+"you need to do so, you should edit the attributes in a second step within "
+"the :guilabel:`Attribute table` dialog."
+msgstr ""
+
+# 92294cd97c934d2eb0e337e872e584ae
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:299
+msgid ""
+"For both PostgreSQL/PostGIS and shapefile-based layers, the |"
+"mActionNodeTool| :sup:`Node Tool` provides manipulation capabilites of "
+"feature vertices similar to CAD programs. It is possible to simply select "
+"multiple vertices at once and to move, add or delete them alltogether. The "
+"node tool also works with 'on the fly' projection turned on and supports the "
+"topological editing feature. This tool is, unlike other tools in Quantum "
+"GIS, persistent, so when some operation is done, selection stays active for "
+"this feature and tool. If the node tool couldn't find any features, a "
+"warning will be displayed."
+msgstr ""
+
+# 05b8a795752947ed9fc32ef051430788
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:309
+msgid ""
+"Important is to set the property :menuselection:`Settings -->` |"
+"mActionOptions| :menuselection:`Options --> Digitizing -->` :guilabel:"
+"`Search Radius:` |selectnumber| to a number greater than zero (i.e. 10). "
+"Otherwise |qg| will not be able to tell which vertex is being edited."
+msgstr ""
+
+# 5d4480d6ea9647148cbdfbdda6d08be4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:316
+msgid "**Vertex Markers**"
+msgstr ""
+
+# e461cd6a83d44a7aacba971cfc6d6d48
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:318
+msgid ""
+"The current version of |qg| supports three kinds of vertex-markers: Semi "
+"transparent circle, Cross and None. To change the marker style, choose |"
+"mActionOptions| :menuselection:`Options` from the :menuselection:`Settings` "
+"menu and click on the :guilabel:`Digitizing` tab and select the appropriate "
+"entry."
+msgstr ""
+
+# 6ee11aa2e1cf48f28838aa832bcceff7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:326
+msgid "Basic operations"
+msgstr ""
+
+# 94efc26aa75f4e6b8dde80fe3c9a93c6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:330
+msgid ""
+"Start by activating the |mActionNodeTool| :sup:`Node Tool` and selecting a "
+"feature by clicking on it. Red boxes will appear at each vertex of this "
+"feature."
+msgstr ""
+
+# 193d1b74d5b9425c9311de93278a859a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:337
+msgid ""
+"**Selecting vertices**: You can select vertices by clicking on them one at a "
+"time, by clicking on an edge to select the vertices at both ends, or by "
+"clicking and dragging a rectangle around some vertices.  When a vertex is "
+"selected its color changes to blue. To add more vertices to the current "
+"selection, hold down the :kbd:`Ctrl` key while clicking. Hold down :kbd:"
+"`Ctrl` or :kbd:`Shift` when clicking to toggle the selection state of "
+"vertices (vertices that are currently unselected will be selected as usual, "
+"but also vertices that are already selected will become unselected)."
+msgstr ""
+
+# 594087e9f0ec492aafd067083ecd5108
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:345
+msgid ""
+"**Adding vertices**: To add a vertex simply double click near an edge and a "
+"new vertex will appear on the edge near to the cursor. Note that the vertex "
+"will appear on the edge, not at the cursor position, therefore it has to be "
+"moved if necessary."
+msgstr ""
+
+# 7f66eeb355b6496886852250e7fcc4d2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:349
+msgid ""
+"**Deleting vertices**: After selecting vertices for deletion, click the :kbd:"
+"`Delete` key. Note that you cannot use the |mActionNodeTool| :sup:`Node "
+"Tool` to delete a complete feature; |qg| will ensure it retains the minimum "
+"number of vertices for the feature type you are working on. To delete a "
+"complete feature use the |mActionDeleteSelected| :sup:`Delete Selected` tool."
+msgstr ""
+
+# 60ef8979cee54684a788a133cb115014
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:355
+msgid ""
+"**Moving vertices**: Select all the vertices you want to move. Click on a "
+"selected vertex or edge and drag in the direction you wish to move. All the "
+"selected vertices will move together. If snapping is enabled, the whole "
+"selection can jump to the nearest vertex or line."
+msgstr ""
+
+# 7317f7d669fc4abfb86d0573aeee9778
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:360
+msgid ""
+"Each change made with the node tool is stored as a separate entry in the "
+"undo dialog. Remember that all operations support topological editing when "
+"this is turned on. On the fly projection is also supported, and the node "
+"tool provides tooltips to identify a vertex by hovering the pointer over it."
+msgstr ""
+
+# 3121c883ba7a4470a71f2f1de4d4538b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:366
+msgid "Cutting, Copying and Pasting Features"
+msgstr ""
+
+# 90526cf003b54f8e8cc97229f21f22aa
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:368
+msgid ""
+"Selected features can be cut, copied and pasted between layers in the same |"
+"qg| project, as long as destination layers are set to |"
+"mActionToggleEditing| :sup:`Toggle editing` beforehand."
+msgstr ""
+
+# 7535546e580341bab74210ed03d9c3b5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:374
+msgid ""
+"Features can also be pasted to external applications as text:  That is, the "
+"features are represented in CSV format with the geometry data appearing in "
+"the OGC Well-Known Text (WKT) format."
+msgstr ""
+
+# 5e9a2b2bf4314b0fa442394651ee8476
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:378
+msgid ""
+"However in this version of |qg|, text features from outside |qg| cannot be "
+"pasted to a layer within |qg|. When would the copy and paste function come "
+"in handy? Well, it turns out that you can edit more than one layer at a time "
+"and copy/paste features between layers. Why would we want to do this?  Say "
+"we need to do some work on a new layer but only need one or two lakes, not "
+"the 5,000 on our ``big_lakes`` layer. We can create a new layer and use copy/"
+"paste to plop the needed lakes into it."
+msgstr ""
+
+# 0177c30cd4b6422fbcc15ea2dc9f3552
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:386
+msgid "As an example we are copying some lakes to a new layer:"
+msgstr ""
+
+# a0b47eea60994568ba94f4f1fa7aaa1b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:388
+msgid "Load the layer you want to copy from (source layer)"
+msgstr ""
+
+# 4a5c8802bac441f6b0ad520aec68de50
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:389
+msgid "Load or create the layer you want to copy to (target layer)"
+msgstr ""
+
+# 832dc45f6f1b4cdb822bcefe7ca008e5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:390
+msgid "Start editing for target layer"
+msgstr ""
+
+# b4679d9316d3431794dda1efb271c9bd
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:391
+msgid "Make the source layer active by clicking on it in the legend"
+msgstr ""
+
+# 9daa11d8bf6f4247904090435778f283
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:392
+msgid ""
+"Use the |mActionSelect| :sup:`Select Single Feature` tool to select the "
+"feature(s) on the source layer"
+msgstr ""
+
+# d1b595e713f2499abe30f316bfbadeef
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:394
+msgid "Click on the |mActionEditCopy| :sup:`Copy Features` tool"
+msgstr ""
+
+# f016dcde0c2c4756a599a0f6ca4eec21
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:395
+msgid "Make the destination layer active by clicking on it in the legend"
+msgstr ""
+
+# 8bd5b61cfb694535842a3841d8f4bb3d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:396
+msgid "Click on the |mActionEditPaste| :sup:`Paste Features` tool"
+msgstr ""
+
+# 46125b43fc6d4ed1987ec9dbd01d3833
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:397
+msgid "Stop editing and save the changes"
+msgstr ""
+
+# 46aa55e0af2e426eb2d5f7bd421473d6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:401
+msgid ""
+"What happens if the source and target layers have different schemas (field "
+"names and types are not the same)? |qg| populates what matches and ignores "
+"the rest. If you don't care about the attributes being copied to the target "
+"layer, it doesn't matter how you design the fields and data types. If you "
+"want to make sure everything - feature and its attributes - gets copied, "
+"make sure the schemas match."
+msgstr ""
+
+# d1c2057b52d3497982a30173a6d0a56e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:410
+msgid "**Congruency of Pasted Features**"
+msgstr ""
+
+# 70aa60b8779247b494c0159e1dea2994
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:412
+msgid ""
+"If your source and destination layers use the same projection, then the "
+"pasted features will have geometry identical to the source layer. However if "
+"the destination layer is a different projection then |qg| cannot guarantee "
+"the geometry is identical. This is simply because there are small rounding-"
+"off errors involved when converting between projections."
+msgstr ""
+
+# 142273d7611347eeb9c1bfca346d5e53
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:420
+msgid "Deleting Selected Features"
+msgstr ""
+
+# f7953924ae0041f0adca95d06bd85ac4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:423
+msgid ""
+"If we want to delete an entire polygon, we can do that by first selecting "
+"the polygon using the regular |mActionSelect| :sup:`Select Single Feature` "
+"tool. You can select multiple features for deletion. Once you have the "
+"selection set, use the |mActionDeleteSelected| :sup:`Delete Selected` tool "
+"to delete the features."
+msgstr ""
+
+# d0ac889d6d354cf39db103af087f336d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:429
+msgid ""
+"The |mActionEditCut| :sup:`Cut Features` tool on the digitizing toolbar can "
+"also be used to delete features. This effectively deletes the feature but "
+"also places it on a \"spatial clipboard\". So we cut the feature to delete. "
+"We could then use the |mActionEditPaste| :sup:`Paste Features` tool to put "
+"it back, giving us a one-level undo capability. Cut, copy, and paste work on "
+"the currently selected features, meaning we can operate on more than one at "
+"a time."
+msgstr ""
+
+# d1c1338a7cc14ff0898e5403e406b17b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:438
+msgid "**Feature Deletion Support**"
+msgstr ""
+
+# f5ab8239979f4956949d6400dfe9020c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:440
+msgid ""
+"When editing ESRI shapefiles, the deletion of features only works if |qg| is "
+"linked to a GDAL version 1.3.2 or greater. The OS X and Windows versions of |"
+"qg| available from the download site are built using GDAL 1.3.2 or higher."
+msgstr ""
+
+# ed26f01c4f3e4eab93e02e48746f5bdc
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:446
+msgid "Saving Edited Layers"
+msgstr ""
+
+# bae19cb1b6fb464c8c060b257cadcb11
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:449
+msgid ""
+"When a layer is in editing mode, any changes remain in the memory of |qg|. "
+"Therefore they are not committed/saved immediately to the data source or "
+"disk. If you want to save edits to the current layer but want to continue "
+"editing without leaving the editing mode, you can click the |"
+"mActionFileSave| :sup:`Save Edits` button. When you turn editing mode off "
+"with the |mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for that "
+"matter), you are also asked if you want to save your changes or discard them."
+msgstr ""
+
+# f9c4ac563c6f4913a2cab9c7b3a5cb83
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:457
+msgid ""
+"If the changes cannot be saved (e.g. disk full, or the attributes have "
+"values that are out of range), the |qg| in-memory state is preserved.  This "
+"allows you to adjust your edits and try again."
+msgstr ""
+
+# f35cc201470d4f91a18962a6843b6ad4
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:463
+msgid "**Data Integrity**"
+msgstr ""
+
+# eb6e41362f054b3299c2d4ff5a68313a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:465
+msgid ""
+"It is always a good idea to back up your data source before you start "
+"editing. While the authors of |qg| have made every effort to preserve the "
+"integrity of your data, we offer no warranty in this regard."
+msgstr ""
+
+# 91ac908cd2454cde9a120cacee306ccd
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:472
+msgid "Advanced digitizing"
+msgstr ""
+
+# 1191b8904e494d1baa0e1212e9558bb6
+# 1d11d629453d4804b5f1dc00b38040b0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:476
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:478
+msgid "\\"
+msgstr ""
+
+# 0cb5b480f3d24d978a6e3cf7366b19b9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:485
+msgid "|mActionUndo|"
+msgstr ""
+
+# b44d7b28afe94daa96e0cba6ceaf4f57
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:485
+msgid "Undo"
+msgstr ""
+
+# 0608274181854ef0a6ed524d7cfcf1ca
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:485
+msgid "|mActionRedo|"
+msgstr ""
+
+# a6e04a3312bc4bf99e4231bb7445ef95
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:485
+msgid "Redo"
+msgstr ""
+
+# ef666268756c4de597c14ff87c92841b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:487
+msgid "|mActionSimplify|"
+msgstr ""
+
+# cd35d251988b4e84b54b533691ad3055
+# cb27573ad7ab40798d14e30c10f8eb14
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:487
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:538
+msgid "Simplify Feature"
+msgstr ""
+
+# 69176282955047bc816e0639a1f7c954
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:487
+msgid "|mActionAddRing|"
+msgstr ""
+
+# ce03df3e0b1d4d6dbf18b8804301819e
+# 3046bca4aaaf4f6a8f595b2d6d631515
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:487
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:550
+msgid "Add Ring"
+msgstr ""
+
+# f520f1de287349f1b61f3f1c5d4567a2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+msgid "|mActionAddIsland|"
+msgstr ""
+
+# eddf52f904d94d6eb0aadb6ec2af91e6
+# ac46148ad84b488485ea4a36563941bb
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:560
+msgid "Add Part"
+msgstr ""
+
+# 97d77bec621348869b3a4f2368ff9433
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+msgid "|mActionDeleteRing|"
+msgstr ""
+
+# b696dbdc362d43e9a435177666afb7ce
+# 7254f592f74d4f99b00af272c0a27c24
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:489
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:568
+msgid "Delete Ring"
+msgstr ""
+
+# 3318302b6bdc4948ab202c41dbe08af7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
+msgid "|mActionDeletePart|"
+msgstr ""
+
+# e4387f507ff7480ea6ea0828b0e1e9f7
+# ecf3e26a089d4cfdb4869fb4d75d1bc5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:578
+msgid "Delete Part"
+msgstr ""
+
+# bf91349903b44c32848f4461220afdb2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
+msgid "|mActionReshape|"
+msgstr ""
+
+# 4acf4da033b14855a173b90aa2255a1d
+# 8169dba2a97d43bba48589410278c83e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:491
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:588
+msgid "Reshape Features"
+msgstr ""
+
+# 3aff8dc5229542be996d49438fbf3298
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:493
+msgid "|mActionOffsetCurve|"
+msgstr ""
+
+# 34d4615e426e4b06b3fc54466bd45800
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:493
+msgid "Offset Curve"
+msgstr ""
+
+# 005b43e39e6449e181aea444c43c0b35
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:493
+msgid "|mActionSplitFeatures|"
+msgstr ""
+
+# 4966db10e93b46e695ffe4cbbeb2baa3
+# bce89b1569c84b98a34c20a98b0e5ea9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:493
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:628
+msgid "Split Features"
+msgstr ""
+
+# 141392fa39864fdaa73cfb722233ca43
+# 95395ac8ea194f8f9d896b069a868e81
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:495
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:497
+msgid "|mActionMergeFeatures|"
+msgstr ""
+
+# 9ff70c7aaa304b9c9cc43da6be7dbd9f
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:495
+msgid "Merge Selected Features"
+msgstr ""
+
+# 7b3b22d58bb64f8f98442177479f6851
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:495
+msgid "|mActionRotatePointSymbols|"
+msgstr ""
+
+# 108aa7c52ffb4eebb8af5e8349b8bff8
+# 806d0028452d4c928070b4b203ab2689
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:495
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:656
+msgid "Rotate Point Symbols"
+msgstr ""
+
+# 189aac5f260747db82bbfc0625ee50e9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:497
+msgid "Merge Attributes of Selected Features"
+msgstr ""
+
+# d237cbaf338f44adb726a69577152620
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:500
+msgid "Table Advanced Editing: Vector layer advanced editing toolbar"
+msgstr ""
+
+# f1b03e97ff4c4fdeb593dc33af3c069c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:506
+msgid "Undo and Redo"
+msgstr ""
+
+# 54cbad28a6f04f97b13b1a3aff15c17c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:509
+msgid ""
+"The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allow the "
+"user to undo or redo vector editing operations. There is also a dockable "
+"widget, which shows all operations in the undo/redo history (see "
+"Figure_edit_3_). This widget is not displayed by default; it can be "
+"displayed by right clicking on the toolbar and activating the Undo/Redo "
+"check box. Undo/Redo is however active, even if the widget is not displayed."
+msgstr ""
+
+# ee84a609b2c945749c2b6e1e443231d6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:516
+msgid ""
+"When Undo is hit, the state of all features and attributes are reverted to "
+"the state before the reverted operation happened. Changes other than normal "
+"vector editing operations (for example changes done by a plugin), may or may "
+"not be reverted, depending on how the changes were performed."
+msgstr ""
+
+# 5b16337f366d4d78ba74a3d2e5e1cd18
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:521
+msgid ""
+"To use the undo/redo history widget simply click to select an operation in "
+"the history list; all features will be reverted to the state they were in "
+"after the selected operation."
+msgstr ""
+
+# 8840a5269f944f93898182e0dd369f83
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:541
+msgid ""
+"The |mActionSimplify| :sup:`Simplify Feature` tool allows to reduce the "
+"number of vertices of a feature, as long as the geometry doesn't change. You "
+"need to select a feature, it will be highlighted by a red rubber band and a "
+"slider appears. Moving the slider, the red rubber band is changing its shape "
+"to show how the feature is being simplified. Clicking **[OK]** the new, "
+"simplified geometry will be stored. If a feature cannot be simplified (e.g. "
+"MultiPolygons), a message shows up."
+msgstr ""
+
+# be48d22ec7ed498da44446b4f0358ea3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:553
+msgid ""
+"You can create :index:`ring polygons` using the |mActionAddRing| :sup:`Add "
+"Ring` icon in the toolbar. This means inside an existing area it is possible "
+"to digitize further polygons, that will occur as a 'hole', so only the area "
+"in between the boundaries of the outer and inner polygons remain as a ring "
+"polygon."
+msgstr ""
+
+# e8136e1b5dbd4d40a48868f8fb8fd34e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:563
+msgid ""
+"You can |mActionAddIsland| :sup:`add part` polygons to a selected :index:"
+"`multipolygon`. The new part polygon has to be digitized outside the "
+"selected multipolygon."
+msgstr ""
+
+# 2619aeab472c4426a719d6bee869ffd9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:571
+msgid ""
+"The |mActionDeleteRing| :sup:`Delete Ring` tool allows to delete ring "
+"polygons inside an existing area. This tool only works with polygon layers. "
+"It doesn't change anything when it is used on the outer ring of the polygon. "
+"This tool can be used on polygon and multi-polygon features. Before you "
+"select the vertices of a ring, adjust the vertex edit tolerance."
+msgstr ""
+
+# b6f2ceb363f04355a96da45b67cc724e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:581
+msgid ""
+"The |mActionDeletePart| :sup:`Delete Part` tool allows to delete parts from "
+"multifeatures (e.g. to delete polygons from a multipolygon feature). It "
+"won't delete the last part of the feature, this last part will stay "
+"untouched. This tool works with all multi-part geometries point, line and "
+"polygon. Before you select the vertices of a part, adjust the vertex edit "
+"tolerance."
+msgstr ""
+
+# d261a26e508d4a1e8a34f1d78ae32cb3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:591
+msgid ""
+"You can reshape line and polygon features using the |mActionReshape| :sup:"
+"`Reshape Features` icon on the toolbar. It replaces the line or polygon part "
+"from the first to the last intersection with the original line. With "
+"polygons this can sometimes lead to unintended results. It is mainly useful "
+"to replace smaller parts of a polygon, not major overhauls and the reshape "
+"line is not allowed to cross several polygon rings as this would generate an "
+"invalid polygon."
+msgstr ""
+
+# c0efb49d414242bd881c307ce8ee5da8
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:599
+msgid ""
+"For example, you can edit the boundary of a polygon with this tool. First, "
+"click in the inner area of the polygon next to the point where you want to "
+"add a new vertex. Then, cross the boundary and add the vertices outside the "
+"polygon. To finish, right-click in the inner area of the polygon. The tool "
+"will automatically add a node where the new line crosses the border. It is "
+"also possible to remove part of the area from the polygon, starting the new "
+"line outside the polygon, adding vertices inside, and ending the line "
+"outside the polygon with a right click."
+msgstr ""
+
+# 5e8a6c03c4194736a4b31b36f9bbae02
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:609
+msgid ""
+"The reshape tool may alter the starting position of a polygon ring or a "
+"closed line. So the point that is represented 'twice' will not be the same "
+"any more. This may not be a problem for most applications, but it is "
+"something to consider."
+msgstr ""
+
+# 69aa908b43534ba893d62c2dd6f3fef7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:617
+msgid "Offset Curves"
+msgstr ""
+
+# d6b95f16342346b8b7351fd16c37031e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:619
+msgid ""
+"The offset curve tool is a new editing tool. It creates parallel shifts of "
+"lines and polygon rings . The tool can be applied to the edited layer (the "
+"geometries are modified) or also to background layers (creates copies of the "
+"lines / rings and adds it to the the edited layer). It is thus ideally "
+"suited for the creation of distance line layers.The displacement is shown at "
+"the bottom left of the taskbar."
+msgstr ""
+
+# 5195484051da44fdb442aa665830fcb8
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:631
+msgid ""
+"You can split features using the |mActionSplitFeatures| :sup:`Split "
+"Features` icon on the toolbar. Just draw a line across the feature you want "
+"to split."
+msgstr ""
+
+# f30086e9098145cca3b80516a07eca2a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:637
+msgid "Merge selected features"
+msgstr ""
+
+# 9bf10118645245f7a4394c61f6381cab
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:640
+msgid ""
+"The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to "
+"merge features that have common boundaries and the same attributes."
+msgstr ""
+
+# 33fa755581a94e13baeafc3a66a45b0a
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:646
+msgid "Merge attributes of selected features"
+msgstr ""
+
+# 26102f18bba34718ad6d67976494e1fd
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:649
+msgid ""
+"The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool "
+"allows to :index:`merge attributes of features` with common boundaries and "
+"attributes without merging their boundaries."
+msgstr ""
+
+# dde0410b950a419ea78ce2c55d698f47
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:661
+msgid ""
+"The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` tool is "
+"currently only supported by the old symbology engine. It allows to change "
+"the rotation of point symbols in the map canvas, if you have defined a "
+"rotation column from the attribute table of the point layer in the :guilabel:"
+"`Style` tab of the :guilabel:`Layer Properties`. Otherwise the tool is "
+"inactive."
+msgstr ""
+
+# 28440d59197f4057b16057c37f71c19d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:679
+msgid ""
+"To change the rotation, select a point feature in the map canvas and rotate "
+"it holding the left mouse button pressed. A red arrow with the rotation "
+"value will be visualized (see Figure_edit_4_). When you release the left "
+"mouse button again, the value will be updated in the attribute table."
+msgstr ""
+
+# bbba6d16ddf749aca9a0d133b4ecdf8b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:685
+msgid ""
+"If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15 "
+"degree steps."
+msgstr ""
+
+# 29139fc0fff84fa3af17f1378a76ed6d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:693
+msgid "Creating a new Shapefile and Spatialite layer"
+msgstr ""
+
+# 854e63dd81394545a77c68a580cc2719
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:695
+msgid ""
+"|qg| allows to create new Shapefile layers and new Spatialite layers. "
+"Creation of a new GRASS layer is supported within the GRASS-plugin. Please "
+"refer to section :ref:`creating_new_grass_vectors` for more information on "
+"creating GRASS vector layers."
+msgstr ""
+
+# a2f9a0987aff4550995301cc83e19fbb
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:701
+msgid "Creating a new Shapefile layer"
+msgstr ""
+
+# 88f4953ada3e4c3b991a4e63acaa89ea
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:704
+msgid ""
+"To create a new Shape layer for editing, choose :menuselection:`New -->` |"
+"mActionNewVectorLayer| :menuselection:`New Shapefile Layer...` from the :"
+"menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be "
+"displayed as shown in Figure_edit_5_. Choose the type of layer (point, line "
+"or polygon) and the CRS (Coordinate Reference System)."
+msgstr ""
+
+# 2ef6595b76c8434dbc7eda38f60ed6f7
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:722
+msgid ""
+"Note that |qg| does not yet support creation of 2.5D features (i.e. features "
+"with X,Y,Z coordinates) or measure features. At this time, only shapefiles "
+"can be created. In a future version of |qg|, creation of any OGR or "
+"PostgreSQL layer type will be supported."
+msgstr ""
+
+# 06206f77cb4e4fd594a74b1aa2ecccb3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:727
+msgid ""
+"To complete the creation of the new Shapefile layer, add the desired "
+"attributes by clicking on the **[Add]** button and specifying a name and "
+"type for the attribute. A first 'id' column is added as default but can be "
+"removed, if not wanted. Only :guilabel:`Type: real` |selectstring|, :"
+"guilabel:`Type: integer` |selectstring|, and :guilabel:`Type: string` |"
+"selectstring| attributes are supported. Additionally and according to the "
+"attribute type you can also define the width and precision of the new "
+"attribute column. Once you are happy with the attributes, click **[OK]** and "
+"provide a name for the shapefile. |qg| will automatically add a :file:`.shp` "
+"extension to the name you specify. Once the layer has been created, it will "
+"be added to the map and you can edit it in the same way as described in "
+"Section :ref:`sec_edit_existing_layer` above."
+msgstr ""
+
+# 305ee53c7f5d412199e864d176f83db5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:744
+msgid "Creating a new SpatiaLite layer"
+msgstr ""
+
+# 476804459db946a586495265e8576d07
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:747
+msgid ""
+"To create a new SpatiaLite layer for editing, choose :menuselection:`New --"
+">` |mActionNewVectorLayer| :menuselection:`New SpatiaLite Layer...` from "
+"the :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog "
+"will be displayed as shown in Figure_edit_6_."
+msgstr ""
+
+# 74419f94b50b4ecfbec89af9f2db2bdb
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:764
+msgid ""
+"First step is to select an existing Spatialite database or to create a new "
+"Spatialite database. This can be done with the browse button |browsebutton| "
+"to the right of the database field. Then add a name for the new layer and "
+"define the layer type and the EPSG SRID. If desired you can select to |"
+"checkbox| :guilabel:`create an autoincrementing primary key`."
+msgstr ""
+
+# 85e0f70898384d45910082933808e483
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:770
+msgid ""
+"To define an attribute table for the new Spatialite layer, add the names of "
+"the attribute columns you want to create with the according column type and "
+"click on the **[Add to attribute list]** button. Once you are happy with the "
+"attributes, click **[OK]**. |qg| will automatically add the new layer to the "
+"legend and you can edit it in the same way as described in Section :ref:"
+"`sec_edit_existing_layer` above."
+msgstr ""
+
+# 9ab09fc9d8be4ba185ca92d124dd4d96
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:777
+msgid ""
+"The spatialite creation dialog allows to create multiple layers without "
+"closing the dialog when you click **[Apply]**."
+msgstr ""
+
+# 1cf11ffc3409459d9c78174352eb4406
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:785
+msgid "Working with the Attribute Table"
+msgstr ""
+
+# c3552fc70679481b9c3712355674b64b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:788
+msgid ""
+"The :index:`attribute table` displays features of a selected layer. Each row "
+"in the table represents one map feature and each column contains a "
+"particular piece of information about the feature. Features in the table can "
+"be searched, selected, moved or even edited."
+msgstr ""
+
+# f27b2eb8f46f4557a708b9c827f71cf9
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:793
+msgid ""
+"To open the attribute table for a vector layer, make the layer active by "
+"clicking on it in the map legend area. Then from the main menu :"
+"menuselection:`Layer` choose |mActionOpenTable| :menuselection:`Open "
+"Attribute Table`. It is also possible to rightclick on the layer and choose |"
+"mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown "
+"menu."
+msgstr ""
+
+# d1825a7a9a2640f9ac2979d59c3e19d3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:799
+msgid ""
+"This will open a new window which displays the feature attributes in the "
+"layer (figure_attributes_1_). The number of features and the number of "
+"selected features are shown in the attribute table title."
+msgstr ""
+
+# 0587f56184a6419989d79245c66161f0
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:818
+msgid "Selecting features in an attribute table"
+msgstr ""
+
+# 599ac9b6bff8480286c0e4c86faf7c1c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:821
+msgid ""
+"**Each selected row** in the attribute table displays the attributes of a "
+"selected feature in the layer. If the set of features selected in the main "
+"window is changed, the selection is also updated in the attribute table. "
+"Likewise, if the set of rows selected in the attribute table is changed, the "
+"set of features selected in the main window will be updated."
+msgstr ""
+
+# f2f88ca5e05342968fa1a1ed69b42f5c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:827
+msgid ""
+"Rows can be selected by clicking on the row number on the left side of the "
+"row. **Multiple rows** can be marked by holding the :kbd:`Ctrl` key. A "
+"**continuous selection** can be made by holding the :kbd:`Shift` key and "
+"clicking on several row headers on the left side of the rows. All rows "
+"between the current cursor position and the clicked row are selected. Moving "
+"the cursor position in the attribute table, by clicking a cell in the table, "
+"does not change the row selection. Changing the selection in the main canvas "
+"does not move the cursor position in the attribute table."
+msgstr ""
+
+# 1cc6ea10a76f44e099a6022b3d568689
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:836
+msgid ""
+"The table can be sorted by any column, by clicking on the column header. A "
+"small arrow indicates the sort order (downward pointing means descending "
+"values from the top row down, upward pointing means ascending values from "
+"the top row down)."
+msgstr ""
+
+# d37de1d7699a481cb79982ecc6e8e8f3
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:841
+msgid ""
+"For a **simple search by attributes** on only one column the ``Look for`` "
+"field can be used. Select the field (column) from which the search should be "
+"performed from the dropdown menu and hit the **[Search]** button. The "
+"matching rows will be selected and the total number of matching rows will "
+"appear in the title bar of the attribute table, and in the status bar of the "
+"main window. For more complex searches use the Advanced search button |"
+"browsebutton|, which will launch the Search Query Builder described in "
+"Section :ref:`vector_query_builder`."
+msgstr ""
+
+# 75e87830c9ba42269f2c10c645780acd
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:850
+msgid ""
+"To show selected records only, use the checkbox |checkbox| :guilabel:`Show "
+"selected only`. To search selected records only, use the checkbox |"
+"checkbox| :guilabel:`Search selected only`. The |checkbox| :guilabel:`Case "
+"sensitive` checkbox allows to select case sensitive. The other buttons at "
+"the bottom left of the attribute table window provide following "
+"functionality:"
+msgstr ""
+
+# 11ef571e8e4440518a0c653c0e017f33
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:859
+msgid "|mActionOpenTable| :sup:`Unselect all` also with :kbd:`Ctrl+U`"
+msgstr ""
+
+# af341803a95747ae8c06d6d850ebb81f
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:860
+msgid ""
+"|mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`"
+msgstr ""
+
+# 8da162422d65464ea2dcbfbc49eeaaf5
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:861
+msgid ""
+"|mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+S`"
+msgstr ""
+
+# 32dc554803cd4e9395f15a1e3088c026
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:862
+msgid ""
+"|mActionCopySelected| :sup:`Copy selected rows to clipboard` also with :kbd:"
+"`Ctrl+C`"
+msgstr ""
+
+# c8dcd63d091c4b4c87571819c418819d
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:864
+msgid ""
+"|mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with :kbd:"
+"`Ctrl+J`"
+msgstr ""
+
+# 064b3aa5191c435fbe7dc39ef0da770e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:866
+msgid ""
+"|mActionToggleEditing| :sup:`Toggle editing mode` to edit single values of "
+"attribute table and to enable functionalities described below also with :kbd:"
+"`Ctrl+E`"
+msgstr ""
+
+# ea244f957ed447ed9e892a86da13c289
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:869
+msgid ""
+"|mActionDeleteSelected| :sup:`Delete selected features` also with :kbd:`Ctrl"
+"+D`"
+msgstr ""
+
+# 5e1f79251b2c4d02960f91c2b446bc52
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:871
+msgid ""
+"|mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR "
+"layers with GDAL version >= 1.6 also with :kbd:`Ctrl+W`"
+msgstr ""
+
+# ec0c27b8cc024b5aae3961ccfb699c83
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:873
+msgid ""
+"|mActionDeleteAttribute| :sup:`Delete Column` only for PostGIS layers yet "
+"also with :kbd:`Ctrl+L`"
+msgstr ""
+
+# 6e85924c1c63439f82df602e77feced6
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:875
+msgid ""
+"|mActionCalculateField| :sup:`Open field calculator` also with :kbd:`Ctrl+I`"
+msgstr ""
+
+# 64cacb7ea6104dbfbaf8fd3ff6872854
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:877
+msgid "**Skip WKT geometry**"
+msgstr ""
+
+# 0884aa99c6394c3eac4031730e22a62c
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:879
+msgid ""
+"If you want to use attribute data in external programs (such as Excel) use "
+"the |mActionCopySelected| :sup:`Copy selected rows to clipboard` button. You "
+"can copy the information without vector geometries if you deactivate :"
+"menuselection:`Settings --> Options -->` General tab |checkbox| :guilabel:"
+"`Copy geometry in WKT representation from attribute table`."
+msgstr ""
+
+# 0f382f9a44a746bda511d0eaaaccb8ce
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:886
+msgid "Save selected features as new layer"
+msgstr ""
+
+# a1131d3e97684403be5c60ec7fad38f8
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:889
+msgid ""
+"The selected features can be saved as any OGR supported vector format and "
+"also transformed into another Coordinate Reference System (CRS). Just open "
+"the right mouse menu of the layer and click on :menuselection:`Save "
+"selection as -->` to define the name of the output file, its format and CRS "
+"(see Section :ref:`label_legend`). It is also possible to specify OGR "
+"creation options within the dialog."
+msgstr ""
+
+# 30c2ae0f67f0466cb504f3553fb803cf
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:898
+msgid "**Manipulating Attribute data**"
+msgstr ""
+
+# 1358ed1061c940f0874280b5cca2684b
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:900
+msgid ""
+"Currently only PostGIS layers are supported for adding or dropping attribute "
+"columns within this dialog. In future versions of |qg|, other datasources "
+"will be supported, because this feature was implemented in GDAL/OGR > 1.6.0"
+msgstr ""
+
+# 544157afddeb4838b08d9510a37efbd8
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:908
+msgid "Working with non spatial attribute tables"
+msgstr ""
+
+# 1bd1f277bb07477495370a27a6e835d2
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:910
+msgid ""
+"QGIS allows also to load non spatial tables. This includes currently tables "
+"supported by OGR, delimited text and the PostgreSQL provider. The tables can "
+"be used for field lookups or just generally browsed and edited using the "
+"table view. When you load the table you will see it in the legend field. It "
+"can be opened e.g. with the |mActionOpenTable| :sup:`Open Attribute Table` "
+"tool and is then editable like any other layer attribute table."
+msgstr ""
+
+# 8b6a2ed9298146d4be8d13208eb34d5e
+#: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:917
+msgid ""
+"As an example you can use columns of the non spatial table to define "
+"attribute values or a range of values that are allowed to be added to a "
+"specific vector layer during digitizing. Have a closer look at the edit "
+"widget in section :ref:`vector_attributes_tab` to find out more."
+msgstr ""
