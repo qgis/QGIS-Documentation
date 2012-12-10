@@ -621,6 +621,12 @@ If you want to create a new SpatiaLite layer, please refer to section
    QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and 
    installed with the Plugin Installer.
 
+.. _label_mssql:
+
+MSSQL Spatial Layers
+--------------------
+
+
 ----
 
  .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
