@@ -116,6 +116,8 @@ rst_epilog = """
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png
 .. |tab| image:: /static/common/tab.png
+.. |dem_analysis| image:: /static/common/dem.png
+   :width: 1.5em
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
 .. |icon_dbmanager| image:: /static/common/dbmanager.png
