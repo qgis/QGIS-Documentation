@@ -107,14 +107,14 @@ You find a list of current language maintainers in the `Project Organigram
 If your language is not listed, please contact the `QGIS-Community-Team Mailinglist 
 <http://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ and ask for help.
 
-*Howto for language maintainers*
+''Howto for language maintainers''
 
 * get an account on github.com
 * install git on your computer (I use Ubuntu and with Linux systems you just need to write: sudo apt-get install git). For other OS users, have a look at the github homepage (look for application section)
 * on github.com search the repository of Qgis-Documentation and `fork it <https://help.github.com/articles/fork-a-repo>`_, it just means that you create a copy of the original repository on your github account.
 * finally you have to do a pull request on github. It means that you send a request to the owners of the repository you forked (so Qgis-Documentation) asking them to accept your translations and move them to the "original repository". For doing that go on github.com, browse on the directory of your repository and click pull request (https://help.github.com/articles/using-pull-requests).
 
-*Howto for translators*
+''Howto for translators''
 
 * clone the forked repository from your language maintainer (this step copies the repository to your computer)
 * now that you have all the files on your computer just translate them! (suggested softwares are qt linguist, lokalize, but you can use the software you want)
