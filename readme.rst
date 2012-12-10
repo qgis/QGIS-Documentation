@@ -101,7 +101,9 @@ For example, to create english docs::
 Document Translators edit workflow
 --------------------------------------------------------------------------------
 
-Every language has it's own maintainer.
+Every language has it's own maintainer, please contact them, if you want to help. 
+You find a list of current maintainers in the `Projekt Organigram 
+http://hub.qgis.org/wiki/quantum-gis/Project_Organigram#QGIS-Manual-Translation`_. 
 
 The maintainer will run the 'scripts/pre_translate.sh' script
 after every significant change in the documentation. You can off course also run
