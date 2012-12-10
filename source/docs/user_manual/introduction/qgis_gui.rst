@@ -170,7 +170,7 @@ Menu Option                                                     Shortcut        
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|| :guilabel:`Add MSSQL Spatial Layer`
+|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
 (the following entries appear when core plugins are loaded)
 |delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
@@ -260,8 +260,8 @@ Menu Option                                                     Shortcut        
 :menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
 :menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
 :menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
-|| :guilabel:`Terrain Analysis`                                 \                     see :ref:`rasterrain`                       \
-:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal statistics`                 :guilabel:`Raster`
+|dem_analysis| :guilabel:`Terrain Analysis`                     \                     see :ref:`rasterrain`                       \
+:menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal_statistics`                 :guilabel:`Raster`
 :menuselection:`Projections -->`                                \                     see :ref:`label_plugingdaltools`            \
 :menuselection:`Conversion -->`                                 \                     see :ref:`label_plugingdaltools`            \
 :menuselection:`Extraction -->`                                 \                     see :ref:`label_plugingdaltools`            \
@@ -275,7 +275,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Database*(only visible if core plugins are activated)         \                     \                                           \
+**Database** (only visible if core plugins are activated)       \                     \                                           \
 :menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
 :menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
@@ -287,7 +287,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Web**(only visible if core plugins are activated)
+**Web** (only visible if core plugins are activated)
 :menuselection:`MapServer Export ... -->`                       \                     see :ref:`mapserver_export`                 :guilabel:`Web`                     
 :menuselection:`OpenStreetMap -->`                              \                     see :ref:`plugins_osm`                      :guilabel:`OpenStreetMap`                  
 ==============================================================  ====================  ==========================================  ===============================
