@@ -41,7 +41,7 @@ options.
 |                      | mosaic of the list of input gdal datasets.            |
 +----------------------+-------------------------------------------------------+
 | Contour              | This program generates a vector contour file from the |
-|                      | input raster elevation model (DEM).                   |
+|                      | input raster elevation model (DEM).                   | 
 +----------------------+-------------------------------------------------------+
 | Rasterize            | This program burns vector geometries (points, lines   |
 |                      | and polygons) into the raster band(s) of a raster     |
@@ -67,9 +67,9 @@ options.
 +----------------------+-------------------------------------------------------+
 | Sieve                | This utility removes raster polygons smaller than a   |
 |                      | provided threshold size (in pixels) and replaces      |
-|                      | replaces them with the pixel value of the largest     |
-|                      | neighbor polygon. The result can be written back to   |
-|                      | the existing raster band, or copied into a new file.  |
+|                      | them with the pixel value of the largest neighbor     |
+|                      | polygon. The result can be written back to the        |
+|                      | existing raster band, or copied into a new file.      |
 +----------------------+-------------------------------------------------------+
 | Proximity            | This utility generates a raster proximity map         |
 |                      | indicating the distance from the center of each pixel |
@@ -84,6 +84,10 @@ options.
 |                      | used to "fix up" lossy compressed aerial photos so    |
 |                      | that color pixels can be treated as transparent when  |
 |                      | mosaicing.                                            |
++----------------------+-------------------------------------------------------+
+| Fill nodata          | This utility fills selection raster regions (usually  |
+|                      | nodata areas) by interpolation from valid pixels      |
+|                      | around the edges of the area.                         |
 +----------------------+-------------------------------------------------------+
 | Warp                 | This utility is an image mosaicing,                   |
 |                      | reprojection and warping utility. The program can     |
@@ -122,6 +126,12 @@ options.
 |                      | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4   |
 |                      | declarations (as above), or the name of a .prf file   |
 |                      | containing well known text.                           |
++----------------------+-------------------------------------------------------+
+| Extract projection   | This utility helps you to generate projection         |
+|                      | information from an input file. If you want to        |
+|                      | extract projection from a whole directory you can use |
+|                      | the Batch mode. It's possible to create a *.prj file  |
+|                      | from the input file.                                  |
 +----------------------+-------------------------------------------------------+
 | Build Overviews      | The gdaladdo utility can be used to build or rebuild  |
 |                      | overview images for most supported file formats with  |

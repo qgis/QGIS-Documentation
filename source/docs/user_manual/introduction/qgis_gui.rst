@@ -12,7 +12,7 @@ QGIS GUI
     single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
-(the numbers 1 through 7 in yellow ovals refer to the six major areas of the
+(the numbers 1 through 5 in yellow ovals refer to the six major areas of the
 interface as discussed below):
 
 .. _fig_startup:

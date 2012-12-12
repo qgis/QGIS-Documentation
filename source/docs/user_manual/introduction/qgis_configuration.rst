@@ -34,6 +34,8 @@ and off icon groups in the QGIS toolbar.
    If you click and drag the red rectangle in the overview that shows your
    current extent, the main map view will update accordingly.
 
+.. tip:: **Show Log messages**
+
 .. tip:: **Working with the QGIS layer order**
 
    Since QGIS 1.8 there is widget that allows to define a legend independent 
