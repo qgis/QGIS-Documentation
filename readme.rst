@@ -142,7 +142,7 @@ highly recommended choice.
 * files translated need to be "synchronized"  with the old ones in the directory of the forked repo
 * if you are linux users, open the terminal and get in the directory of the forked repo, and just write git add * , this simple command updates the files of the forked repository
 * now you have to commit the files writing git commit in the bash
-* at this point the translated files are on your computer only. You need then to upload them on the forked github account. Open the terminal and write git origin master. Now if you look at your github page the files are updated with the translations.
+* at this point the translated files are on your computer only. You need then to upload them on the forked github account. Open the terminal and write git push origin master. Now if you look at your github page the files are updated with the translations.
 * your language maintainer will take care that every significant translation go into the master repository. 
 * Generally, as soon as you finish editing one or more .po files, you should commit as soon as possible the edits to the git repository, in order to minimize the possibility of conflicts.
 
