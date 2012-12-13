@@ -35,6 +35,8 @@ and off icon groups in the QGIS toolbar.
    current extent, the main map view will update accordingly.
 
 .. tip:: **Show Log messages**
+  
+   Since QGIS 1.8 it's possible to track the QGIS messages.
 
 .. tip:: **Working with the QGIS layer order**
 
