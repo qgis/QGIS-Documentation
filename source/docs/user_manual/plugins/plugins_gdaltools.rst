@@ -207,7 +207,6 @@ List of GDAL tools
 
 .. figure:: /static/user_manual/plugins/raster_menu.png
    :align: center
-   :width: 40em
 
    The *GDALTools* menu list
 
@@ -228,7 +227,6 @@ Below are some examples of use of the tools.
 
 .. figure:: /static/user_manual/plugins/gdalinfo.png
    :align: center
-   :width: 40em
 
    The *Information* dialog window
 
@@ -244,7 +242,6 @@ This example will create contour lines from an SRTM elevation tile.
 
 .. figure:: /static/user_manual/plugins/gdal_contour.png
    :align: center
-   :width: 40em
 
    The *Contours* dialog window
 
@@ -276,6 +273,5 @@ Lon/Lat WGS84 (EPSG:4326).
 
 .. figure:: /static/user_manual/plugins/gdalwarp.png
    :align: center
-   :width: 40em
 
    The *GDAL warp* dialog window
