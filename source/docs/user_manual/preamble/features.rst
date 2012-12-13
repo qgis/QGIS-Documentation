@@ -139,114 +139,72 @@ What's new in the version 1.8
 
 Please note that this is a release in our 'cutting edge' release series. As such
 it contains new features and extends the programmatic interface over QGIS 1.0.x
-and QGIS 1.6.0. We recommend that you use this version over previous releases.
+and QGIS 1.7.0. We recommend that you use this version over previous releases.
 
-This release includes over 277 bug fixes and many new features and enhancements.
+This release includes hundreds of bug fixes and many new features and enhancements that will be described in this manual.
 
-**Symbology labels and diagrams**
+**QGIS Browser**
 
-* New symbology now used by default.
-* Diagram system that uses the same smart placement system as labeling-ng.
-* Export and import of styles (symbology-ng).
-* Labels for rules in rule-based renderers.
-* Font marker can have an X,Y offset.
-* Line symbology:
+A stand alone app and a new panel in QGIS. The browser lets you easily navigate your file system and connection based (PostGIS, WFS etc.) datasets, preview them and drag and drop items into the canvas.
 
-  * Option to put marker on the central point of a line.
-  * Option to put marker only on first/last vertex of a line.
-  * Allow the marker line symbol layer to draw markers on each vertex.
+**DB Manager**
 
-* Polygon symbology:
+The DB manager is now officially part of QGIS core. You can drag layers from the QGIS Browser into DB Manager and it will import your layer into your spatial database. Drag and drop tables between spatial databases and they will get imported. You can use the DB Manager to execute SQL queries against your spatial database and then view the spatial output for queries by adding the results to QGIS as a query layer. You can also create, edit, delete, and empty tables, and move them to another schema.
 
-  * Rotation for svg fills.
-  * Added 'centroid fill' symbol layer which draws a marker on polygon's centroid.
-  * Allow the line symbol layers to be used for outline of polygon (fill) symbols.
+**Terrain Analysis Plugin:**
 
-* Labels:
+A new core plugin was added for doing terrain analysis (slope, aspect, hillshade, relief and ruggedness index).
 
-  * Ability to set label distance in map units.
-  * Move/rotate/change label edit tools to interactively change data defined
-    label properties.
+**New symbol layer types**
 
-* New Tools:
+* Line Pattern Fill
+* Point Pattern Fill
+* Ellipse renderer (render ellipse and also rectangles, triangles, crosses)
 
-  * Added GUI for gdaldem.
-  * Added field calculator with functions like $x, $y and $perimeter.
-  * Added 'Lines to polygons' tool to vector menu.
-  * Added voronoi polygon tool to Vector menu.
+**New plugin repository** 
 
-**User interface updates**
+Note that the old repository is now no longer supported by default; plugin authors are kindly requested to move their plugins to the new repository. Get the QGIS Plugins list at http://plugins.qgis.org/plugins/
 
-* Allow managing missing layers in a list.
-* Zoom to group of layers.
-* 'Tip of the day' on startup. You can en/disable tips in the options panel.
-* Better organisation of menus, separate database menu added.
-* Add ability to show number of features in legend classes. Accessible via
-  right-click legend menu.
-* General clean-ups and usability improvements.
+**More new features**
 
-**CRS Handling**
+* Support for nesting projects within other projects to embed content from other project files.
+* Layer grouping: Option to add layers to selected or active group.
+* Message log: Lets you keep an eye on the messages QGIS generates during loading and operation.
+* GUI Customization: Allows setting up simplified QGIS interface by hiding various components of main window and widgets in dialogs.
+* Action Tool is now accessible from the map tools toolbar and allows you to click on a vector feature and execute an action.
+* New scale selector: select from a list of predefined scales
+* Pan To Selected tool: Pans the map to selected feature(s); does not change the zoom level.
+* Copy and paste styles between layers
+* Updated CRS selector dialog
+* Define Legend-independent drawing order
+* MSSQL Spatial Support - you can now connect to your Microsoft SQL Server spatial databases using QGIS.
+* Print Composers allows to have multiple lines on legend items using a specified character
+* Expression based labeling
+* Heatmap Plugin - a new core plugin has been added for generating raster heatmaps from point data.
+* The GPS live tracking user interface was overhauled and many fixes and improvements were added to it.
+* The menu was re-organised a little - we now have separate menus for Vector, Raster, Web and many plugins were updated to place their menus in the new Vector, Raster and Web top level menus.
+* Offset Curves - a new digitising tool for creating offset curves was added.
+* Option to add layers to selected or active groups
+* New tools in the Vector Layer Properties to densify geoemtries and Build spatial index
+* Export/add geometry column tool can export info using layer CRS, project CRS or ellipsoidal measurements
+* Model/view based tree for rules in rule-based renderer
+* Improvements in Spatial Bookmarks
+* New Plugin metadata in metadata.txt
+* Refactored postgres data provider: support for arbitrary key (including non-numeric and multi column), support for requesting a certain geometry type and/or srid in QgsDataSourceURI
+* Added gdal_fillnodata to GDALTools plugin
+* Support for PostGIS TopoGeometry datatype
+* Python bindings for vector field symbol layer and general updates to the python bindings.
+* Added a Benchmark program
+* Added Row cache for attribute table
+* UUID generation widget for attribute table
+* Added support of editable views in SpatiaLite databases
+* added expression based widget in field calculator
+* Creation of event layers in analysis lib using linear referencing
+* Load/save layer styles in the new symbology renderer from/to SLD document
+* WFS support in QGIS Server
+* Option to skip WKT geometry when copying from attribute table
+* Support loading of zipped and gzipped layers
+* The QGIS test suite now passes all tests on major platforms and nightly tests
+* You can set tile size for WMS layers
 
-* Show active crs in status bar.
-* Assign layer CRS to project (in the legend context menu).
-* Select default CRS for new projects.
-* Allow setting CRS for multiple layers at once.
-* Default to last selection when prompting for CRS.
 
-**Rasters**
-
-* Added AND and OR operator for raster calculator.
-* On-the-fly reprojection of rasters added.
-* Proper implementation of raster providers.
-* Added raster toolbar with histogram stretch functions.
-
-**Providers and Data Handling**
-
-* New SQLAnywhere vector provider.
-* Table join support.
-* Feature form updates.
-* Make NULL value string representation configurable.
-* Fix feature updates in feature form from attribute table.
-* Add support for NULL values in value maps (comboboxes).
-* Use layer names instead of ids in drop down list when loading value maps from
-  layers.
-* Support feature form expression fields: line edits on the form which name
-  prefix "expr\_" are evaluated. Their value is interpreted as field calculator
-  string and replaced with the calculated value.
-* Support searching for NULL in attribute table.
-* Attribute editing improvements
-* Improved interactive attribute editing in table (adding/deleting features,
-  attribute update).
-* Allow adding of geometryless features.
-* Fixed attribute undo/redo.
-* Improved attribute handling.
-* Optionally re-use entered attribute values for next digitized feature.
-* Allow merging/assigning attribute values to a set of features.
-* Allow OGR "save as" without attributes (for eg. DGN/DXF).
-
-**Api and Developer Centric**
-
-* Refactored attribute dialog calls to QgsFeatureAttribute.
-* Added QgsVectorLayer::featureAdded signal.
-* Layer menu function added.
-* Added option to load c++ plugins from user specified directories. Requires
-  application restart to activate.
-* Completely new geometry checking tool for fTools. Significantly faster, more
-  relevant error messages, and now supports zooming to errors. See the new
-  QgsGeometry.validateGeometry function.
-
-**QGIS Server**
-
-* Ability to specify wms service capabilities in the properties section of the
-  project file (instead of wms_metadata.xml file).
-* Support for wms printing with GetPrint-Request.
-
-**Plugins**
-
-* Support for icons of plugins in the plugin manager dialog.
-* Removed quickprint plugin - use easyprint plugin rather from plugin repo.
-* Removed ogr convertor plugin - use 'save as' context menu rather.
-
-**Printing**
-
-* Undo/Redo support for the print composer.
