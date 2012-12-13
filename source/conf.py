@@ -625,6 +625,47 @@ rst_epilog = """
    :width: 1.5em
 .. |gdal_translate| image:: /static/common/translate.png
    :width: 1.5em
+.. |gdal_dem| image:: /static/common/gdal_dem.png
+   :width: 1.5em
+.. |gdal_about| image:: /static/common/about.png
+   :width: 1.5em
+.. |gdal_contour| image:: /static/common/contour.png
+   :width: 1.5em
+.. |gdal_edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |gdal_fillnodata| image:: /static/common/fillnodata.png
+   :width: 1.5em
+.. |gdal_grid| image:: /static/common/grid.png
+   :width: 1.5em
+.. |gdal_merge| image:: /static/common/merge.png
+   :width: 1.5em
+.. |gdal_nearblack| image:: /static/common/nearblack.png
+   :width: 1.5em
+.. |gdal_proximity| image:: /static/common/proximity.png
+   :width: 1.5em
+.. |gdal_raster-clip| image:: /static/common/raster-clip.png
+   :width: 1.5em
+.. |gdal_raster-overview| image:: /static/common/raster-overview.png
+   :width: 1.5em
+.. |gdal_raster-paletted| image:: /static/common/raster-paletted.png
+   :width: 1.5em
+.. |gdal_raster-rgb| image:: /static/common/raster-rgb.png
+   :width: 1.5em
+.. |gdal_rasterize| image:: /static/common/rasterize.png
+   :width: 1.5em
+.. |gdal_reset| image:: /static/common/reset.png
+   :width: 1.5em
+.. |gdal_sieve| image:: /static/common/sieve.png
+   :width: 1.5em
+.. |gdal_tileindex| image:: /static/common/tileindex.png
+   :width: 1.5em
+.. |gdal_tooltip| image:: /static/common/tooltip.png
+   :width: 1.5em
+.. |gdal_translate| image:: /static/common/translate.png
+   :width: 1.5em
+.. |gdal_vrt| image:: /static/common/vrt.png
+   :width: 1.5em
+
 .. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
