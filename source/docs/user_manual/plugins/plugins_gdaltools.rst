@@ -36,61 +36,63 @@ options.
 
 **List of GDAL tools**
 
-:menuselection:`Projections -->
-+----------------------+-------------------------------------------------------+
-| ||Warp (Reproject)   | This utility is an image mosaicing,                   |
-|                      | reprojection and warping utility. The program can     |
-|                      | reproject to any supported projection, and can also   |
-|                      | apply GCPs stored with the image if the image is "raw"|
-|                      | with control information.                             |
-+----------------------+-------------------------------------------------------+
-| ||Assign projection  | This utility is an image mosaicing, reprojection and  |
-|                      | warping utility. The program can reproject to any     |
-|                      | supported projection, and can also apply GCPs stored  |
-|                      | with the image if the image is "raw" with control     |
-|                      | information.  ``-s_srs srs_def``: source spatial      |
-|                      | reference set. The coordinate systems that can be     |
-|                      | passed are anything supported by the                  |
-|                      | OGRSpatialReference.SetFromUserInput() call, which    |
-|                      | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4   |
-|                      | declarations (as above), or the name of a .prf file   |
-|                      | containing well known text.  ``-t_srs srs_def``:      |
-|                      | target spatial reference set. The coordinate systems  |
-|                      | that can be passed are anything supported by the      |
-|                      | OGRSpatialReference.SetFromUserInput() call, which    |
-|                      | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4   |
-|                      | declarations (as above), or the name of a .prf file   |
-|                      | containing well known text.                           |
-+----------------------+-------------------------------------------------------+
-| ||Extract projection | This utility helps you to generate projection         |
-|                      | information from an input file. If you want to        |
-|                      | extract projection from a whole directory you can use |
-|                      | the Batch mode. It's possible to create a *.prj file  |
-|                      | from the input file.                                  |
-+----------------------+-------------------------------------------------------+
+:menuselection:`Projections -->`
+
++--------------------------------------------------------+------------------------------------------------------+
+| |gdal_warp|:guilabel:`Warp (Reproject)`                |This utility is an image mosaicing, reprojection and  |
+|                                                        |warping utility. The program can reproject to any     |
+|                                                        |supported projection, and can also  apply GCPs stored |
+|                                                        | with the image if the image is "raw" with control    |
+|                                                        | information.                                         |
++--------------------------------------------------------+------------------------------------------------------+
+| |gdal_assign_projection|:guilabel:`Assign projection`  | This utility is an image mosaicing, reprojection and |
+|                                                        | warping utility. The program can reproject to any    |
+|                                                        | supported projection, and can also apply GCPs stored |
+|                                                        | with the image if the image is "raw" with control    |
+|                                                        | information.  ``-s_srs srs_def``: source spatial     |
+|                                                        | reference set. The coordinate systems that can be    |
+|                                                        | passed are anything supported by the                 |
+|                                                        | OGRSpatialReference.SetFromUserInput() call, which   |
+|                                                        | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4  |
+|                                                        | declarations (as above), or the name of a .prf file  |
+|                                                        | containing well known text.  ``-t_srs srs_def``:     |
+|                                                        | target spatial reference set. The coordinate systems |
+|                                                        | that can be passed are anything supported by the     |
+|                                                        | OGRSpatialReference.SetFromUserInput() call, which   |
+|                                                        | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4  |
+|                                                        | declarations (as above), or the name of a .prf file  |
+|                                                        | containing well known text.                          |
++--------------------------------------------------------+------------------------------------------------------+
+| |gdal_extract_projection|:guilabel:`Extract projection`| This utility helps you to generate projection        |
+|                                                        | information from an input file. If you want to       |
+|                                                        | extract projection from a whole directory you can use|
+|                                                        | the Batch mode. It's possible to create a *.prj file |
+|                                                        | from the input file.                                 |
++--------------------------------------------------------+------------------------------------------------------+
 
 :menuselection:`Conversion -->`
-+----------------------+-------------------------------------------------------+
-| || Rasterize         | This program burns vector geometries (points, lines   |
-|                      | and polygons) into the raster band(s) of a raster     |
-|                      | image. Vectors are read from OGR supported vector     |
-|                      | formats. Note that the vector data must in the same   |
-|                      | coordinate system as the raster data; on the fly      |
-|                      | reprojection is not provided.                         |
-+----------------------+-------------------------------------------------------+
-| || Polygonize        | This utility creates vector polygons for all connected|
-|                      | regions of pixels in the raster sharing a common pixel|
-|                      | value. Each polygon is created with an attribute      |
-|                      | indicating the pixel value of that polygon.  The      |
-|                      | utility will create the output vector datasource if it|
-|                      | does not already exist, defaulting to ESRI shapefile  |
-|                      | format.                                               |
-+----------------------+-------------------------------------------------------+
-| || Translate         | This utility can be used to convert raster data       |
-|                      | between different formats, potentially performing some|
-|                      | operations like subsettings, resampling, and rescaling|
-|                      | pixels in the process.                                |
-+----------------------+-------------------------------------------------------+
+
++---------------------------------------+-------------------------------------------------------+
+| |gdal_rasterize|:guilabel:`Rasterize` | This program burns vector geometries (points, lines   |
+|                                       | and polygons) into the raster band(s) of a raster     |
+|                                       | image. Vectors are read from OGR supported vector     |
+|                                       | formats. Note that the vector data must in the same   |
+|                                       | coordinate system as the raster data; on the fly      |
+|                                       | reprojection is not provided.                         |
++----------------------+------------------------------------------------------------------------+
+| |gdal_polygonize|:guilabel`Polygonize`| This utility creates vector polygons for all connected|
+|                                       | regions of pixels in the raster sharing a common pixel|
+|                                       | value. Each polygon is created with an attribute      |
+|                                       | indicating the pixel value of that polygon.  The      |
+|                                       | utility will create the output vector datasource if it|
+|                                       | does not already exist, defaulting to ESRI shapefile  |
+|                                       | format.                                               |
++---------------------------------------+-------------------------------------------------------+
+| |gdal_translate|:guilabel:`Translate` | This utility can be used to convert raster data       |
+|                                       | between different formats, potentially performing some|
+|                                       | operations like subsettings, resampling, and rescaling|
+|                                       | pixels in the process.                                |
++---------------------------------------+-------------------------------------------------------+
 | || RGB to PCT        | This utility will compute an optimal pseudo-color     |
 |                      | table for a given RGB image using a median cut        |
 |                      | algorithm on a downsampled RGB histogram. Then it     |

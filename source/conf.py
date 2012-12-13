@@ -406,7 +406,7 @@ rst_epilog = """
    :width: 2.5em
 .. |plugin_installer| image:: /static/common/plugin_installer.png
    :width: 1.5em
-.. |gpstrack_barchart| image:: /static/common//gpstrack_barchart.png
+.. |gpstrack_barchart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |gpstrack_polarchart| image:: /static/common/gpstrack_polarchart.png
    :width: 1.5em
@@ -612,6 +612,18 @@ rst_epilog = """
 .. |dbmanager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |gdal| image:: /static/common/gdal.png
+   :width: 1.5em
+.. |gdal_warp| image:: /static/common/warp.png
+   :width: 1.5em
+.. |gdal_assign_projection| image:: /static/common/projection-add.png
+   :width: 1.5em
+.. |gdal_extract_projection| image:: /static/common/projection-export.png
+   :width: 1.5em
+.. |gdal_rasterize| image:: /static/common/rasterize.png
+   :width: 1.5em
+.. |gdal_polygonize| image:: /static/common/polygonize.png
+   :width: 1.5em
+.. |gdal_translate| image:: /static/common/translate.png
    :width: 1.5em
 .. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
