@@ -1,6 +1,6 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
 
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. label_forward:
 
@@ -36,9 +36,8 @@ find it in Appendix :ref:`gpl_appendix`.
 
 .. tip::
         **Up-to-date Documentation**
-        The latest version of this document can always be found at
-        http://download.osgeo.org/qgis/doc/manual/, or in the documentation
-        area of the QGIS website at http://www.documentation.qgis.org
+        The latest version of this document can always be found in the documentation
+        area of the QGIS website at http://documentation.qgis.org
 
 .. `label_intro`:
 
