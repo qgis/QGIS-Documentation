@@ -1,6 +1,6 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
 
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. _qgis.documentation.preamble:
 
@@ -59,15 +59,11 @@ handles both identically.
 | Gary E. Sherman      | Tim Sutton           | Alex Bruy            |
 +----------------------+----------------------+----------------------+
 
-.. Add this section, if it is a translation from the english master documentation
+.. Add this section with a table (as seen above), if it is a translation 
+.. from the english master documentation
 .. 
 .. **Translators who contributed to this translated version (Not English)**
 ..
-..+----------------------+----------------------+----------------------+
-..| translator one       | translator two       | translator three     |
-..+----------------------+----------------------+----------------------+
-..| translator four      | translator five      | translator six       |
-..+----------------------+----------------------+----------------------+
 
 Copyright (c) 2004 - 2012 QGIS Development Team
 
