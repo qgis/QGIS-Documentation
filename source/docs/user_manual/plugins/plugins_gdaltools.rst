@@ -22,11 +22,8 @@ a raster DEM, and to make a vrt (Virtual Raster Tile in XML format) from a
 collection of one or more raster files. These tools are available when the 
 plugin is installed and activated.
 
-.. _`gdal_lib`:
 
-The GDAL Library
-----------------
-
+**The GDAL Library**
 
 The GDAL library consists of a set of command line programs, each with a large 
 list of options. Users comfortable with running commands from a terminal may 
@@ -77,7 +74,7 @@ List of GDAL tools
 |                                                        | declarations (as above), or the name of a .prf file  |
 |                                                        | containing well known text. This utility is also     |   
 |                                                        | described on the GDAL website                        |                  
-|                                                        | http://www.gdal.org/gdalwarp.html                    |
+|                                                        |  http://www.gdal.org/gdalwarp.html                   |
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_extract_projection|:guilabel:`Extract projection`| This utility helps you to generate projection        |
 |                                                        | information from an input file. If you want to       |
