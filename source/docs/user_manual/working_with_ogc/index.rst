@@ -2,6 +2,8 @@
 
 |updatedisclaimer|
 
+.. _sec_ogc:
+
 **********************
 Working with OGC Data
 **********************

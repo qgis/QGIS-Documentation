@@ -2,6 +2,9 @@
 
 |updatedisclaimer|
 
+
+.. _label_sextante:
+
 ********
 SEXTANTE
 ********

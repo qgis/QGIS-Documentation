@@ -37,17 +37,17 @@ You can compose maps and interactively explore spatial data with a friendly
 GUI. The many helpful tools available in the GUI include:
 
 *  QGIS browser
-*  on the fly projection
-*  map composer
-*  overview panel
-*  spatial bookmarks
-*  identify/select features
-*  edit/view/search attributes
-*  feature labeling
-*  change vector and raster symbology
-*  add a graticule layer - now via fTools plugin
-*  decorate your map with a north arrow scale bar and copyright label
-*  save and restore projects
+*  On the fly projection
+*  Map composer
+*  Overview panel
+*  Spatial bookmarks
+*  Identify/select features
+*  Edit/view/search attributes
+*  Feature labeling
+*  Change vector and raster symbology
+*  Add a graticule layer - now via fTools plugin
+*  Decorate your map with a north arrow scale bar and copyright label
+*  Save and restore projects
 
 Create, edit, manage and export data
 ------------------------------------
@@ -77,14 +77,17 @@ supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
 tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
-:ref:`sec_grass`).
+:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial 
+analysis framework to call native and third party algorithms from QGIS, such as 
+GDAL, SAGA, GRASS, FTools, ... (See Section :ref:`label_sextante`).
 
 Publish maps on the Internet
 ----------------------------
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS or WFS client, and as WMS or WFS server.
+be used as a WMS, WMS-C or WFS and WFS-T client, and as WMS or WFS server 
+(see section :ref:`sec_ogc`).
 
 Extend QGIS functionality through plugins
 -----------------------------------------
