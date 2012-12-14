@@ -23,7 +23,7 @@ formats include:
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
    Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
-*  GRASS raster and vector data from GRASS databases (location/mapset), 
+*  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC-compliant Web Map Service (WMS) or
    Web Feature Service (WFS), see section :ref:`working_with_ogc`.
@@ -44,7 +44,7 @@ GUI. The many helpful tools available in the GUI include:
 *  Edit/view/search attributes
 *  Feature labeling
 *  Change vector and raster symbology
-*  Add a graticule layer - now via fTools plugin
+*  Add a graticule layer - now via fTools plugin and as decoration
 *  Decorate your map with a north arrow scale bar and copyright label
 *  Save and restore projects
 
@@ -76,16 +76,16 @@ supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
 tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
-:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial 
-analysis framework to call native and third party algorithms from QGIS, such as 
-GDAL, SAGA, GRASS, FTools, ... (See Section :ref:`label_sextante`).
+:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial
+analysis framework to call native and third party algorithms from QGIS, such as
+GDAL, SAGA, GRASS, fTools, ... (See Section :ref:`label_sextante`).
 
 Publish maps on the Internet
 ----------------------------
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS, WMS-C or WFS and WFS-T client, and as WMS or WFS server 
+be used as a WMS, WMS-C or WFS and WFS-T client, and as WMS or WFS server
 (see section :ref:`sec_ogc`).
 
 Extend QGIS functionality through plugins
@@ -138,19 +138,29 @@ Please note that this is a release in our 'cutting edge' release series. As such
 it contains new features and extends the programmatic interface over QGIS 1.0.x
 and QGIS 1.7.0. We recommend that you use this version over previous releases.
 
-This release includes hundreds of bug fixes and many new features and enhancements that will be described in this manual.
+This release includes hundreds of bug fixes and many new features and enhancements
+that will be described in this manual.
 
 **QGIS Browser**
 
-A stand alone app and a new panel in QGIS. The browser lets you easily navigate your file system and connection based (PostGIS, WFS etc.) datasets, preview them and drag and drop items into the canvas.
+A stand alone app and a new panel in QGIS. The browser lets you easily navigate
+your file system and connection based (PostGIS, WFS etc.) datasets, preview them
+and drag and drop items into the canvas.
 
 **DB Manager**
 
-The DB manager is now officially part of QGIS core. You can drag layers from the QGIS Browser into DB Manager and it will import your layer into your spatial database. Drag and drop tables between spatial databases and they will get imported. You can use the DB Manager to execute SQL queries against your spatial database and then view the spatial output for queries by adding the results to QGIS as a query layer. You can also create, edit, delete, and empty tables, and move them to another schema.
+The DB manager is now officially part of QGIS core. You can drag layers from the
+QGIS Browser into DB Manager and it will import your layer into your spatial
+database. Drag and drop tables between spatial databases and they will get
+imported. You can use the DB Manager to execute SQL queries against your spatial
+database and then view the spatial output for queries by adding the results to
+QGIS as a query layer. You can also create, edit, delete, and empty tables, and
+move them to another schema.
 
 **Terrain Analysis Plugin:**
 
-A new core plugin was added for doing terrain analysis (slope, aspect, hillshade, relief and ruggedness index).
+A new core plugin was added for doing terrain analysis (slope, aspect, hillshade,
+relief and ruggedness index).
 
 **New symbol layer types**
 
@@ -158,39 +168,55 @@ A new core plugin was added for doing terrain analysis (slope, aspect, hillshade
 * Point Pattern Fill
 * Ellipse renderer (render ellipse and also rectangles, triangles, crosses)
 
-**New plugin repository** 
+**New plugin repository**
 
-Note that the old repository is now no longer supported by default; plugin authors are kindly requested to move their plugins to the new repository. Get the QGIS Plugins list at http://plugins.qgis.org/plugins/
+Note that the old repository is now no longer supported by default; plugin authors
+are kindly requested to move their plugins to the new repository. Get the QGIS
+Plugins list at http://plugins.qgis.org/plugins/
 
 **More new features**
 
-* Support for nesting projects within other projects to embed content from other project files.
-* Layer grouping: Option to add layers to selected or active group.
-* Message log: Lets you keep an eye on the messages QGIS generates during loading and operation.
-* GUI Customization: Allows setting up simplified QGIS interface by hiding various components of main window and widgets in dialogs.
-* Action Tool is now accessible from the map tools toolbar and allows you to click on a vector feature and execute an action.
+* Support for nesting projects within other projects to embed content from other
+  project files
+* Layer grouping: Option to add layers to selected or active group
+* Message log: Lets you keep an eye on the messages QGIS generates during loading
+  and operation
+* GUI Customization: Allows setting up simplified QGIS interface by hiding various
+  components of main window and widgets in dialogs
+* Action Tool is now accessible from the map tools toolbar and allows you to
+  click on a vector feature and execute an action
 * New scale selector: select from a list of predefined scales
-* Pan To Selected tool: Pans the map to selected feature(s); does not change the zoom level.
+* Pan To Selected tool: Pans the map to selected feature(s); does not change the
+  zoom level
 * Copy and paste styles between layers
 * Updated CRS selector dialog
 * Define Legend-independent drawing order
-* MSSQL Spatial Support - you can now connect to your Microsoft SQL Server spatial databases using QGIS.
-* Print Composers allows to have multiple lines on legend items using a specified character
+* MSSQL Spatial Support - you can now connect to your Microsoft SQL Server spatial
+  databases using QGIS
+* Print Composers allows to have multiple lines on legend items using a specified
+  character
 * Expression based labeling
-* Heatmap Plugin - a new core plugin has been added for generating raster heatmaps from point data.
-* The GPS live tracking user interface was overhauled and many fixes and improvements were added to it.
-* The menu was re-organised a little - we now have separate menus for Vector, Raster, Web and many plugins were updated to place their menus in the new Vector, Raster and Web top level menus.
-* Offset Curves - a new digitising tool for creating offset curves was added.
-* Option to add layers to selected or active groups
-* New tools in the Vector Layer Properties to densify geoemtries and Build spatial index
-* Export/add geometry column tool can export info using layer CRS, project CRS or ellipsoidal measurements
+* Heatmap Plugin - a new core plugin has been added for generating raster heatmaps
+  from point data
+* The GPS live tracking user interface was overhauled and many fixes and
+  improvements were added to it
+* The menu was re-organised a little - we now have separate menus for Vector,
+  Raster, Web and many plugins were updated to place their menus in the new
+  Vector, Raster and Web top level menus
+* Offset Curves - a new digitising tool for creating offset curves was added
+* New tools in the Vector menu to Densify geomtries and Build spatial index
+* Export/add geometry column tool can export info using layer CRS, project CRS
+  or ellipsoidal measurements
 * Model/view based tree for rules in rule-based renderer
 * Improvements in Spatial Bookmarks
 * New Plugin metadata in metadata.txt
-* Refactored postgres data provider: support for arbitrary key (including non-numeric and multi column), support for requesting a certain geometry type and/or srid in QgsDataSourceURI
+* Refactored postgres data provider: support for arbitrary key (including
+  non-numeric and multi column), support for requesting a certain geometry type
+  and/or srid in QgsDataSourceURI
 * Added gdal_fillnodata to GDALTools plugin
 * Support for PostGIS TopoGeometry datatype
-* Python bindings for vector field symbol layer and general updates to the python bindings.
+* Python bindings for vector field symbol layer and general updates to the Python
+  bindings
 * Added a Benchmark program
 * Added Row cache for attribute table
 * UUID generation widget for attribute table
@@ -203,5 +229,3 @@ Note that the old repository is now no longer supported by default; plugin autho
 * Support loading of zipped and gzipped layers
 * The QGIS test suite now passes all tests on major platforms and nightly tests
 * You can set tile size for WMS layers
-
-

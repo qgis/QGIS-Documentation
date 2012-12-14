@@ -166,9 +166,10 @@ Vector data takes on three forms, each progressively more complex and
 building on the former.
 
 #. Points - A single coordinate (x y) represents a discrete geographic location
-#. Lines - Multiple coordinates (x1 y1, x2 y2, x3 y4, ... xn yn) strung
-   together in a certain order, like drawing a line from Point (x1 y1)
-   to Point (x2 y2) and so on. These parts between each point are considered
+#. Lines - Multiple coordinates (x\ :sub:`1` y\ :sub:`1`, x\ :sub:`2` y\ :sub:`2`,
+   x\ :sub:`3` y\ :sub:`3`, ... x\ :sub:`n` y\ :sub:`n`) strung
+   together in a certain order, like drawing a line from Point (x\ :sub:`1` y\ :sub:`1`)
+   to Point (x\ :sub:`2` y\ :sub:`2`) and so on. These parts between each point are considered
    line segments. They have a length and the line can be said to have a
    direction based on the order of the points. Technically, a line is a
    single pair of coordinates connected together, whereas a line string
