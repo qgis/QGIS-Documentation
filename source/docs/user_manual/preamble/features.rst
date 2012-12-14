@@ -1,6 +1,6 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
 
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 *********
 Features
@@ -17,18 +17,17 @@ You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector
+*  Spatially-enabled tables using PostGIS, SpatiaLite and MSSQL Spatial, vector
    formats supported by the installed OGR library, including ESRI shapefiles,
-   MapInfo, SDTS, GML and many more.
+   MapInfo, SDTS, GML and many more, see section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
-   Grid, JPEG, PNG and many more.
-*  SpatiaLite databases (see section :ref:`label_spatialite`)
-*  GRASS raster and vector data from GRASS databases (location/mapset),
+   Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
+*  GRASS raster and vector data from GRASS databases (location/mapset), 
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC-compliant Web Map Service (WMS) or
    Web Feature Service (WFS), see section :ref:`working_with_ogc`.
-*  OpenStreetMap data (see section :ref:`plugins_osm`).
+*  OpenStreetMap data, see section :ref:`plugins_osm`.
 
 Explore data and compose maps
 -----------------------------
@@ -101,12 +100,9 @@ Core Plugins
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
     containing x,y coordinates).
-#.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
 #.  Coordinate Capture (Capture mouse coordinates in different CRS).
-#.  Decorations (Copyright Label, North Arrow and Scale bar).
+#.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
 #.  Diagram Overlay (Placing diagrams on vector layer).
-#.  Displacement Plugin (Handle point displacement in case points have the same
-    position).
 #.  Dxf2Shp Converter (Convert DXF to Shape).
 #.  GPS Tools (Loading and importing GPS data).
 #.  GRASS (GRASS GIS integration).
@@ -123,9 +119,7 @@ Core Plugins
 #.  Road graph plugin (Shortest Path network analysis).
 #.  SPIT (Import Shapefile to PostgreSQL/PostGIS).
 #.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).
-#.  Spatial Query Plugin (make spatial queries on vector layers).
-#.  Terrain Analysis Plugin.
-#.  WFS Plugin (Add WFS layers to QGIS canvas).
+#.  Zonal statictics plugin (Calculate count, sum, mean of raster for each polygon of a vector layer).
 #.  eVIS (Event Visualization Tool).
 #.  fTools (Tools for vector data analysis and management).
 
