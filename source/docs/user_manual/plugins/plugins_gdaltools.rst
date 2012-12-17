@@ -84,8 +84,8 @@ List of GDAL tools
 |                                                        | http://www.gdal.org/gdalwarp.html .                  |
 +--------------------------------------------------------+------------------------------------------------------+
 
-
-
+\
+\
 :menuselection:`Conversion -->`
 
 +--------------------------------------------------------+-------------------------------------------------------+
@@ -126,8 +126,8 @@ List of GDAL tools
 |                                                        | format. For more information see                      |
 |                                                        | http://www.gdal.org/pct2rgb.html                      | 
 +--------------------------------------------------------+-------------------------------------------------------+
-
-
+\
+\
 :menuselection:`Extraction -->`
 
 +--------------------------------------------------------+-------------------------------------------------------+
@@ -147,8 +147,8 @@ List of GDAL tools
 |                                                        | is also desribed on the gdal website                  |                   
 |                                                        | http://www.gdal.org/gdal_translate.html .             |
 +--------------------------------------------------------+-------------------------------------------------------+
-
-
+\
+\
 :menuselection:`Analysis -->`
 
 +--------------------------------------------------------+-------------------------------------------------------+
@@ -158,14 +158,15 @@ List of GDAL tools
 |                                                        | polygon. The result can be written back to the        |
 |                                                        | existing raster band, or copied into a new file. For  |
 |                                                        | more information see                                  |
-|                                                        | http://www.gdal.org/gdal_sieve.html                   |
+|                                                        | http://www.gdal.org/gdal_sieve.html .                 |
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_nearblack|:guilabel:`Near Black`                 | This utility will scan an image and try to set all    |
 |                                                        | pixels that are nearly black (or nearly white) around |
 |                                                        | the edge to exactly black (or white). This is often   |
 |                                                        | used to "fix up" lossy compressed aerial photos so    |
 |                                                        | that color pixels can be treated as transparent when  |
-|                                                        | mosaicing. See also http://www.gdal.org/nearblack.html|
+|                                                        | mosaicing. See also                                   |
+|                                                        | http://www.gdal.org/nearblack.html .                  |
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_fillnodata|:guilabel:`Fill nodata`               | This utility fills selection raster regions (usually  |
 |                                                        | nodata areas) by interpolation from valid pixels      |
@@ -194,8 +195,8 @@ List of GDAL tools
 |                                                        | and a roughness map from any GDAL-supported elevation |
 |                                                        | raster. For more information you can read on          | |                                                        | http://www.gdal.org/gdaldem.html                      |
 +--------------------------------------------------------+-------------------------------------------------------+
-
-
+\
+\
 :menuselection:`Miscellaneous -->`
 
 +--------------------------------------------------------+-------------------------------------------------------+

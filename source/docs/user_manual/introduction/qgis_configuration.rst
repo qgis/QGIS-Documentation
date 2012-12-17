@@ -23,7 +23,7 @@ and off icon groups in the QGIS toolbar.
 .. index::
    single:Map overview
 
-.. tip:: **Activating the QGIS overview**
+.. tip:: **Activating the QGIS Overview**
    
    In QGIS you can use an overview panel that provides a full extent view of layers added to it.
    It can be selected under the menu :menuselection:`Settings --> Panels`.
@@ -34,11 +34,11 @@ and off icon groups in the QGIS toolbar.
    If you click and drag the red rectangle in the overview that shows your
    current extent, the main map view will update accordingly.
 
-.. tip:: **Show Log messages**
+.. tip:: **Show Log Messages**
   
    Since QGIS 1.8 it's possible to track the QGIS messages.
 
-.. tip:: **Working with the QGIS layer order**
+.. tip:: **Working with the QGIS Layer order**
 
    Since QGIS 1.8 there is widget that allows to define a legend independent 
    drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
