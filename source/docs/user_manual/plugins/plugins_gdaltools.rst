@@ -193,7 +193,8 @@ List of GDAL tools
 |                                                        | shaded relief, a slope, an aspect, a color relief, a  |
 |                                                        | Terrain Ruggedness Index, a Topographic Position Index|
 |                                                        | and a roughness map from any GDAL-supported elevation |
-|                                                        | raster. For more information you can read on          | |                                                        | http://www.gdal.org/gdaldem.html                      |
+|                                                        | raster. For more information you can read on          | 
+|                                                        | http://www.gdal.org/gdaldem.html                      |
 +--------------------------------------------------------+-------------------------------------------------------+
 \
 \
