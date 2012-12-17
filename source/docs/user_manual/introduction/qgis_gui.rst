@@ -1,8 +1,6 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-.. |updatedisclaimer|
-
-.. `label_qgismainwindow`:
+.. _`label_qgismainwindow`:
 
 ********
 QGIS GUI
@@ -170,7 +168,7 @@ Menu Option                                                     Shortcut        
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
 |mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`
+|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
 (the following entries appear when core plugins are loaded)
 |delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
@@ -279,7 +277,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
 :menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
-:menuselection:`Spit -->`                                       \                     see :ref:`spit`                             :guilabel:`Database`
+:menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                             :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
 ---

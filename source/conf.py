@@ -619,8 +619,6 @@ rst_epilog = """
    :width: 1.5em
 .. |gdal_extract_projection| image:: /static/common/projection-export.png
    :width: 1.5em
-.. |gdal_rasterize| image:: /static/common/rasterize.png
-   :width: 1.5em
 .. |gdal_polygonize| image:: /static/common/polygonize.png
    :width: 1.5em
 .. |gdal_translate| image:: /static/common/translate.png
@@ -660,8 +658,6 @@ rst_epilog = """
 .. |gdal_tileindex| image:: /static/common/tileindex.png
    :width: 1.5em
 .. |gdal_tooltip| image:: /static/common/tooltip.png
-   :width: 1.5em
-.. |gdal_translate| image:: /static/common/translate.png
    :width: 1.5em
 .. |gdal_vrt| image:: /static/common/vrt.png
    :width: 1.5em

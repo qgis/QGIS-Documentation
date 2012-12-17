@@ -223,11 +223,11 @@ QGIS user database. In addition to your custom CRS, this database also contains
 your spatial bookmarks and other custom data.
 
 
-.. _figure_projection_3:
+.. _figure_projection_4:
 
 .. only:: html
 
-   **Figure Projection 3:**
+   **Figure Projection 4:**
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center

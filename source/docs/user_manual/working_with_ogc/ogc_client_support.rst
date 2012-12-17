@@ -258,8 +258,8 @@ capability of the WMS server. You may notice that the *x* changes in the
 *Coordinate Reference System (x available)* header as you select and
 deselect layers from the :guilabel:`Layers section` tab.
 
-To choose a CRS, select **[Change...]** and a dialog similar to
-:ref:`figure_projection_2` in :ref:`label_projstart` will appear.
+To choose a CRS, select **[Change...]** and a dialog similar to 
+:ref:`_figure_projection_2` in :ref:`label_projstart` will appear.
 The main difference with the WMS version of the screen is that only
 those CRSs supported by the WMS Server will be shown.
 

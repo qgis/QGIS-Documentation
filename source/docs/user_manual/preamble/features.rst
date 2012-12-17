@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-.. |updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 *********
 Features
@@ -17,7 +15,7 @@ You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables using PostGIS, SpatiaLite and MSSQL Spatial, vector
+*  Spatially-enabled tables and views using PostGIS, SpatiaLite and MSSQL Spatial, vector
    formats supported by the installed OGR library, including ESRI shapefiles,
    MapInfo, SDTS, GML and many more, see section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial

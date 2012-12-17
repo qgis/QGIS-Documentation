@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-.. |updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _`label_plugingdaltools`:
 
@@ -74,14 +72,14 @@ List of GDAL tools
 |                                                        | declarations (as above), or the name of a .prf file  |
 |                                                        | containing well known text. This utility is also     |   
 |                                                        | described on the GDAL website                        |                  
-|                                                        |  http://www.gdal.org/gdalwarp.html                   |
+|                                                        | http://www.gdal.org/gdalwarp.html                    |
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_extract_projection|:guilabel:`Extract projection`| This utility helps you to generate projection        |
 |                                                        | information from an input file. If you want to       |
 |                                                        | extract projection from a whole directory you can use|
 |                                                        | the Batch mode. It's possible to create a *.prj file |
 |                                                        | from the input file. See also at                     |
-|                                                        | http://www.gdal.org/gdalwarp.html .                  |
+|                                                        | http://www.gdal.org/gdalwarp.html.                   |
 +--------------------------------------------------------+------------------------------------------------------+
 
 \
@@ -126,6 +124,7 @@ List of GDAL tools
 |                                                        | format. For more information see                      |
 |                                                        | http://www.gdal.org/pct2rgb.html                      | 
 +--------------------------------------------------------+-------------------------------------------------------+
+
 \
 \
 :menuselection:`Extraction -->`
@@ -147,6 +146,7 @@ List of GDAL tools
 |                                                        | is also desribed on the gdal website                  |                   
 |                                                        | http://www.gdal.org/gdal_translate.html .             |
 +--------------------------------------------------------+-------------------------------------------------------+
+
 \
 \
 :menuselection:`Analysis -->`
@@ -196,6 +196,7 @@ List of GDAL tools
 |                                                        | raster. For more information you can read on          | 
 |                                                        | http://www.gdal.org/gdaldem.html                      |
 +--------------------------------------------------------+-------------------------------------------------------+
+
 \
 \
 :menuselection:`Miscellaneous -->`
@@ -228,7 +229,6 @@ List of GDAL tools
 |                                                        | filename, and a polygon geometry outlining the raster.|
 |                                                        | See also http://www.gdal.org/gdaltindex.html .        |
 +--------------------------------------------------------+-------------------------------------------------------+
-
 
 .. maybe simpler rewording of the description is necessary
 

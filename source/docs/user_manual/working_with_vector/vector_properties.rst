@@ -147,12 +147,12 @@ and a color ramp \- they will set the colors for symbols appropriately.
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated, rule-based and point displacement. For each 
 data type (points, lines and polygons) vector symbol layer types are 
-available (see :ref:`vector_symbol_types`). 
+available (see vector_symbol_types_). 
 Depending on the chosen renderer, the symbology tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
 button which gives access to the Style Manager
-(see Section vector_style_manager_ ). The Style Manager allows you to 
+(see Section vector_style_manager_). The Style Manager allows you to 
 edit and remove existing symbols and add new ones.
 
 
@@ -411,8 +411,10 @@ dialog, there are shown the settings applicable to the single symbol layer
 selected in the symbol layer list. The most important is the 
 'Symbol Layer Type' combo box, which allows you to choose the layer type. The 
 available options depend on the layer type (Point, Line, Polygon). The symbol 
-layer type options are described in section :ref:`vector_symbol_types`.
-You can also change the symbol layer properties in the right part of the dialog. For example if you have chosen an SVG marker for a point layer it is now possible to change its color using the :guilabel:`Color` menu (see figure_symbology_10_).
+layer type options are described in section vector_symbol_types_.
+You can also change the symbol layer properties in the right part of the dialog. 
+For example if you have chosen an SVG marker for a point layer it is now 
+possible to change its color using the :guilabel:`Color` menu (see figure_symbology_10_).
 
 .. _figure_symbology_9:
 
@@ -484,7 +486,7 @@ Old Symbology
 .. note::
    |qg| 1.8. still supports the usage of the old symbology, although it is 
    recommended to switch to the new symbology, described in section 
-   :ref:`vector_new_symbology`, because the old symbology will be removed in 
+   vector_new_symbology_, because the old symbology will be removed in 
    one of the next releases.
 
 If you want or need to switch back to the old symbology you can click on 
