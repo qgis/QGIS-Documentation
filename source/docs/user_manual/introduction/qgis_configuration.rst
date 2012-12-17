@@ -18,7 +18,19 @@ Panels and Toolbars
 
 In the :menuselection:`Panels-->` menu you can switch on and off QGIS widgets.
 The :menuselection:`Toolbars-->` menu provides the possibility to switch on
-and off icon groups in the QGIS toolbar.
+and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
+
+.. _figure_panels_toolbars:
+
+.. only:: html
+
+   **Figure Panels and Toolbars:**
+
+.. figure:: /static/user_manual/introduction/panels_and_toolbars.png
+   :align: center
+   :width: 40em
+
+   The Panels and Toolbars menu |nix|
 
 .. index::
    single:Map overview
@@ -36,7 +48,10 @@ and off icon groups in the QGIS toolbar.
 
 .. tip:: **Show Log Messages**
   
-   Since QGIS 1.8 it's possible to track the QGIS messages.
+   Since QGIS 1.8 it's possible to track the QGIS messages. You can activate 
+   |checkbox|:guilabel:`Log Messages` in the menu 
+   :menuselection:`Settings --> Panels` and follow the messages 
+   in the :guilabel:`General` and :guilabel:`Plugin` tab during loading and operation.  
 
 .. tip:: **Working with the QGIS Layer order**
 
