@@ -134,7 +134,7 @@ The print composer provides three tabs:
 You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
 Each element has its own properties and in the case of the map, its own
-extent. If you want to remove an elements from the composer canvas. you can
+extent. If you want to remove any elements from the composer canvas you can
 do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
 
 Adding a current QGIS map canvas to the Print Composer
@@ -204,9 +204,9 @@ view selecting the map element in the print composer and clicking the
 **[Update preview]** button.
 
 .. |composer_map_dialog1| image:: /static/user_manual/print_composer/print_composer_map1.png 
-   :width: 20 em
+   :width: 30 em
 .. |composer_map_dialog2| image:: /static/user_manual/print_composer/print_composer_map2.png
-   :width: 20 em
+   :width: 30 em
 
 .. _figure_composer_2:
 
@@ -226,7 +226,7 @@ Print Composer map item tab - Map and Extents dialog |nix|
 
 
 The **Extents** dialog of the map item tab provides following functionalities
-(see Figure figure_composer_2_ 2.):
+(see Figure figure_composer_2_ b)):
 
 * The **Map extent** area allow to specify the map extent using Y and X
   min/max values or clicking the :guilabel:`Set to map canvas extent` button.
@@ -235,7 +235,7 @@ If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
 **[Update preview]** button in the map :guilabel:`Item` tab (see Figure
-figure_composer_2_ 1.).
+figure_composer_2_ a)).
 
 Map item tab --- Grid and General options dialog
 -------------------------------------------------
@@ -247,7 +247,7 @@ Map item tab --- Grid and General options dialog
 
 
 The **Grid** dialog of the map item tab provides following functionalities
-(see Figure_composer_3_ 1.):
+(see Figure_composer_3_ a)):
 
 * The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the map
   element. As grid type you can specify to use solid line or cross.
@@ -284,7 +284,7 @@ Print Composer map item tab - Grid and General options dialog |nix|
 
 
 The **General options** dialog of the map item tab provides following
-functionalities (see Figure_composer_3_ 2.):
+functionalities (see Figure_composer_3_ b)):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the map canvas. The **[Position]**

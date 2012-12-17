@@ -1,6 +1,6 @@
 .. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
 
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. `label_qgismainwindow`:
 
@@ -358,7 +358,7 @@ the tool's purpose will be displayed.
 
 Every menubar can be moved around according to your needs. Additionally every
 menubar can be switched off using your right mouse button context menu holding
-the mouse over the toolbars.
+the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
 
 .. index::
    single:layout toolbars
