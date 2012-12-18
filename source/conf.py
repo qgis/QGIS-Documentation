@@ -164,6 +164,8 @@ rst_epilog = """
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
+.. |mAction| image:: /static/common/mAction.png
+   :width: 1.5em
 .. |mActionAddRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
 .. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png

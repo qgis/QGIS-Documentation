@@ -885,12 +885,31 @@ Actions Tab
 |action| |qg| provides the ability to perform an action based on the attributes of a 
 feature. This can be used to perform any number of actions, for example, 
 running a program with arguments built from the attributes of a feature or 
-passing parameters to a web reporting tool.
+passing parameters to a web reporting tool. 
+
+.. _figure_actions_1:
+
+.. only:: html
+
+   **Figure Actions 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/action_dialog.png
+   :align: center
+
+   Overview action dialog with some sample actions |nix|
 
 Actions are useful when you frequently want to run an external application or 
-view a web page based on one or more values in your vector layer. An example 
-is performing a search based on an attribute value. This concept is used in 
-the following discussion.
+view a web page based on one or more values in your vector layer. They are 
+devided into 6 types and can be used like this:
+
+* Generic, Mac, Windows and Unix actions start an external process,
+* Python actions execute a python expression,
+* Generic and Python actions are visible everywhere,
+* Mac, Windows and Unix actions are visible only on the respective platform (ie. you can define three 'Edit' actions to open an editor and the users can only see and execute the one 'Edit' action for their platform to run the editor).
+
+There are several examples included in the dialog. You can load them clicking 
+on **[Add default actions]**. An example is performing a search based on an 
+attribute value. This concept is used in the following discussion.
 
 .. index:: Actions, Attribute_Actions
 
@@ -899,7 +918,7 @@ the following discussion.
 Attribute actions are defined from the vector :guilabel:`Layer Properties` 
 dialog. To :index:`define an action`, open the vector 
 :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
-Provide a descriptive name for the action. The action itself must contain 
+Select Generic as Type and provide a descriptive name for the action. The action itself must contain 
 the name of the application that will be executed when the action is invoked. 
 You can add one or more attribute field values as arguments to the application.
 When the action is invoked any set of characters that start with a \% 
@@ -947,13 +966,14 @@ the value of the selected field in the identify results or attribute table.
 
 **Using Actions**
 
-Actions can be invoked from either the :guilabel:`Identify Results` dialog or 
-an :guilabel:`Attribute Table` dialog (recall that these dialogs can be opened 
-by clicking |mActionIdentify| :sup:`Identify Features` or |mActionOpenTable| 
-:sup:`Open Attribute Table`). To invoke an action, right click on the record 
-and choose the action from the popup menu. Actions are listed in the popup 
-menu by the name you assigned when defining the actions. Click on the action 
-you wish to invoke.
+Actions can be invoked from either the :guilabel:`Identify Results` dialog, 
+an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action` 
+(recall that these dialogs can be opened by clicking |mActionIdentify| 
+:sup:`Identify Features` or |mActionOpenTable| :sup:`Open Attribute Table` or 
+|mAction| :sup:`Run Feature Action`). To invoke an action, right 
+click on the record and choose the action from the popup menu. Actions are 
+listed in the popup menu by the name you assigned when defining the actions. 
+Click on the action you wish to invoke.
 
 If you are invoking an action that uses the \%\% notation, right-click on the 
 field value in the :guilabel:`Identify Results` dialog or the 
@@ -1027,11 +1047,11 @@ We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and 
 identify a lake. In the result box you'll now see that our action is visible:
 
-.. _figure_actions_1:
+.. _figure_actions_2:
 
 .. only:: html
 
-   **Figure Actions 1:** 
+   **Figure Actions 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
