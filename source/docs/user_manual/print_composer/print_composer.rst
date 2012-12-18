@@ -186,7 +186,7 @@ Map item tab --- Map and Extents dialog
 
 
 The **Map** dialog of the map item tab provides following functionalities
-(see figure_composer_2_ 1.):
+(see figure_composer_2_ a)):
 
 * The **Preview** area allows to define the preview modes Rectangle,
   Cache and Render, as described above. Click on the **[Update preview]**
@@ -261,9 +261,9 @@ The **Grid** dialog of the map item tab provides following functionalities
   the map frame and the precision of the drawn coordinates.
 
 .. |composer_map_dialog3| image:: /static/user_manual/print_composer/print_composer_map3.png
-   :width: 20 em
+   :width: 30 em
 .. |composer_map_dialog4| image:: /static/user_manual/print_composer/print_composer_map4.png
-   :width: 20 em
+   :width: 30 em
 
 .. _figure_composer_3:
 
@@ -287,11 +287,11 @@ The **General options** dialog of the map item tab provides following
 functionalities (see Figure_composer_3_ b)):
 
 * Here you can define color and outline width for the element frame, set
-  a background color and opacity for the map canvas. The **[Position]**
-  button opens the :guilabel:`Set items position` dialog and allows to set
+  a background color and opacity for the map canvas. The **[Position and size]**
+  button opens the :guilabel:`Set item position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox.
+  |checkbox| :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` ...
 
 Adding other elements to the Print Composer
 ===========================================
