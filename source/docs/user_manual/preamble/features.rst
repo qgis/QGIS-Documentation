@@ -97,29 +97,31 @@ Core Plugins
 ............
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
-    containing x,y coordinates).
-#.  Coordinate Capture (Capture mouse coordinates in different CRS).
+    containing x,y coordinates)
+#.  Coordinate Capture (Capture mouse coordinates in different CRS)
 #.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
-#.  Diagram Overlay (Placing diagrams on vector layer).
-#.  Dxf2Shp Converter (Convert DXF to Shape).
-#.  GPS Tools (Loading and importing GPS data).
-#.  GRASS (GRASS GIS integration).
-#.  GDALTools (Integrate GDAL Tools into QGIS).
-#.  Georeferencer GDAL (Adding projection information to raster using GDAL).
-#.  Heatmap tool (Generating raster heatmaps from point data).
-#.  Interpolation plugin (interpolate based on vertices of a vector layer).
-#.  Mapserver Export (Export QGIS project file to a MapServer map file).
-#.  Offline Editing (Allow offline editing and synchronizing with database).
-#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data).
-#.  Oracle Spatial GeoRaster support.
-#.  Plugin Installer (Download and install QGIS python plugins).
-#.  Raster terrain analysis (Raster based terrain analysis).
-#.  Road graph plugin (Shortest Path network analysis).
-#.  SPIT (Import Shapefile to PostgreSQL/PostGIS).
-#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).
-#.  Zonal statictics plugin (Calculate count, sum, mean of raster for each polygon of a vector layer).
-#.  eVIS (Event Visualization Tool).
-#.  fTools (Tools for vector data analysis and management).
+#.  Diagram Overlay (Placing diagrams on vector layer)
+#.  Dxf2Shp Converter (Convert DXF to Shape)
+#.  GPS Tools (Loading and importing GPS data)
+#.  GRASS (GRASS GIS integration)
+#.  GDALTools (Integrate GDAL Tools into QGIS)
+#.  Georeferencer GDAL (Adding projection information to raster using GDAL)
+#.  Heatmap tool (Generating raster heatmaps from point data)
+#.  Interpolation plugin (interpolate based on vertices of a vector layer)
+#.  Mapserver Export (Export QGIS project file to a MapServer map file)
+#.  Offline Editing (Allow offline editing and synchronizing with database)
+#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data)
+#.  Oracle Spatial GeoRaster support
+#.  Plugin Installer (Download and install QGIS python plugins)
+#.  Raster terrain analysis (Raster based terrain analysis)
+#.  Road graph plugin (Shortest Path network analysis)
+#.  SPIT (Import Shapefile to PostgreSQL/PostGIS)
+#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
+#.  Zonal statictics plugin (Calculate count, sum, mean of raster for each polygon
+    of a vector layer)
+#.  Spatial Query plugin (Makes spatial queries on vector layers)
+#.  eVIS (Event Visualization Tool)
+#.  fTools (Tools for vector data analysis and management)
 
 External Python Plugins
 ........................
