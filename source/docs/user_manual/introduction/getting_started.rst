@@ -249,7 +249,7 @@ to change your language, you can specify a language code. For example:
 ``--lang=it``
 starts QGIS in italian localization. A list of currently supported
 languages with language code and status is provided at
-http://www.qgis.org/wiki/GUI_Translation_Progress
+http://hub.qgis.org/wiki/quantum-gis/GUI_Translation_Progress
 
 **Command line option** ``--project``
 
@@ -329,9 +329,10 @@ from older QGIS versions may not work properly anymore. To be made aware of this
 in the :guilabel:`General` tab under :menuselection:`Settings --> Options`
 you can select:
 
- |checkbox| :guilabel:`Prompt to save project changes when required`
- |checkbox| :guilabel:`Warn when opening a project file saved with an older
- version of QGIS`
+|checkbox| :guilabel:`Prompt to save project changes when required`
+
+|checkbox| :guilabel:`Warn when opening a project file saved with an older
+version of QGIS`
 
 .. _`sec_output`:
 
