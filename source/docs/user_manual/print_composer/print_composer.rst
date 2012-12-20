@@ -291,7 +291,8 @@ functionalities (see Figure_composer_3_ b)):
   button opens the :guilabel:`Set item position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` ...
+  |checkbox| :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` 
+  you can create a relationship to the other print composer items.
 
 Adding other elements to the Print Composer
 ===========================================
@@ -351,7 +352,8 @@ functionalities (see figure_composer_4_ b)):
   button opens the :guilabel:`Set items position` dialog and allows to
   set the map canvas position using reference points or coordinates.
   Furthermore you can select or unselect to display the element frame with
-  the |checkbox| :guilabel:`Show frame` checkbox. Item ID !
+  the |checkbox| :guilabel:`Show frame` checkbox. Use the Item ID to
+  create a relationship to other print composer items.
 
 Image item tab \- Picture options and General options dialog
 --------------------------------------------------------------
@@ -412,7 +414,8 @@ functionalities (see figure_composer_5_ b)):
   button opens the :guilabel:`Set item position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox. Item ID !
+  |checkbox| :guilabel:`Show frame` checkbox. With the Item ID you can create
+  a relationship to other print composer items.
 
 .. index::
    single:Map_Legend
@@ -456,7 +459,7 @@ Print composer legend item tab - General, Legend items and Item option dialog |n
 
 
 The **General** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ 1.):
+functionalities (see figure_composer_6_ a)):
 
 * Here you can adapt the legend title. You can change the font of the
   legend title, layer and item name. You can change width and height of
@@ -467,7 +470,7 @@ functionalities (see figure_composer_6_ 1.):
 **Legend items dialog**
 
 The **Legend items** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ 2.):
+functionalities (see figure_composer_6_ b)):
 
 * The legend items window lists all legend items and allows to change
   item order, edit layer names, remove and restore items of the list.
@@ -479,7 +482,7 @@ functionalities (see figure_composer_6_ 2.):
 **Item options dialog**
 
 The **Item options** dialog of the legend item tab provides following
-functionalities (see figure_composer_6_ 3.):
+functionalities (see figure_composer_6_ c)):
 
 * Here you can define color and outline width for the element frame, set
   a background color and opacity for the legend. The **[Position and size]**
