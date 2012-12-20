@@ -491,7 +491,7 @@ changes you make in the legend area.
    the mouse cursor inside the map area and roll the wheel forward (away from
    you) to zoom in and backwards (towards you) to zoom out. The mouse cursor
    position is the center where the zoom occurs. You can customize the behavior
-   of the mouse wheel zoom using the :menuselection:`Map tools` tab under
+   of the mouse wheel zoom using the :guilabel:`Map tools` tab under
    the :menuselection:`Settings --> Options` menu.
 
 .. tip::
@@ -549,12 +549,12 @@ for the current project.
 
    When you start QGIS, degrees is the default unit, and it tells QGIS
    that any coordinate in your layer is in degrees. To get correct scale values,
-   you can either change this to meter manually in the :guilabel:`General` tab under
-   :menuselection:`Settings -->` :menuselection:`Project Properties -->` or you can
-   select a project Coordinate Reference System (CRS) clicking on the
-   |mIconProjectionDisabled| :sup:`CRS status` icon in the lower right-hand corner of
-   the statusbar. In the last case, the units are set to what the project
-   projection specifies, e.g. '+units=m'.
+   you can either change this to meter manually in the :guilabel:`General` tab
+   under :menuselection:`Settings --> Project Properties` or you can select a
+   project Coordinate Reference System (CRS) clicking on the |mIconProjectionDisabled|
+   :sup:`CRS status` icon in the lower right-hand corner of the statusbar. In
+   the last case, the units are set to what the project projection specifies,
+   e.g. '+units=m'.
 
 ----
 
