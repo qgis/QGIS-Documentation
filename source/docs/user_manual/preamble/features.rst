@@ -224,8 +224,8 @@ Plugins list at http://plugins.qgis.org/plugins/
 * added expression based widget in field calculator
 * Creation of event layers in analysis lib using linear referencing
 * Load/save layer styles in the new symbology renderer from/to SLD document
-* WFS support in QGIS Server
-* WFS support is now standard in QGIS
+* QGIS Server can act as WFS Server
+* WFS Client support is now a core feature in QGIS
 * Option to skip WKT geometry when copying from attribute table
 * Support loading of zipped and gzipped layers
 * The QGIS test suite now passes all tests on major platforms and nightly tests
