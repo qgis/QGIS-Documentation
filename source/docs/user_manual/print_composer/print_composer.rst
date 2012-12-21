@@ -760,7 +760,7 @@ above.
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
-   :width: 40 em
+   :width: 50 em
 
    Print Composer with map view, legend, scalebar, coordinates and text added |nix|
 
