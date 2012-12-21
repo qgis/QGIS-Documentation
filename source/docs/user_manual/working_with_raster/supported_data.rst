@@ -18,7 +18,7 @@ Working with Raster Data
 This Section describes how to visualize and set raster layer properties.
 |qg| uses the :index:`GDAL` library to read and write raster data formats [#]_, 
 including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine 
-and many more. 
+and many more. The raster data can also be loaded in read mode from zip archives into QGIS.
 
 At the date of this document, more than 100 raster formats are supported 
 by the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A complete list is available at 
