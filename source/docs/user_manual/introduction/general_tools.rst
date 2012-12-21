@@ -487,7 +487,7 @@ To create a bookmark:
 #. Zoom or pan to the area of interest.
 #. Select the menu option :menuselection:`View --> New Bookmark -->` or press :kbd:`Ctrl-B`.
 #. Enter a descriptive name for the bookmark (up to 255 characters).
-#. Click **[OK]** to add the bookmark or **[Cancel]** to exit without adding the bookmark.
+#. Press :kbd:`Enter` to add the bookmark or **[Delete]** to remove the bookmark.
 
 Note that you can have multiple bookmarks with the same name.
 
