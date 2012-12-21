@@ -479,9 +479,8 @@ functionalities (see figure_composer_6_ b)):
   print composer. The item order can be changed using the **[Up]**
   and **[Down]** buttons or with Drag and Drop functionality.
 
-**Item options dialog**
-
-The **Item options** dialog of the legend item tab provides following
+**General options dialog**
+The **General options** dialog of the legend item tab provides following
 functionalities (see figure_composer_6_ c)):
 
 * Here you can define color and outline width for the element frame, set
@@ -489,7 +488,8 @@ functionalities (see figure_composer_6_ c)):
   button opens the :guilabel:`Set item position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox. Item ID !
+  |checkbox| :guilabel:`Show frame` checkbox. Use the Item ID to create a 
+  relationship to other print composer items.
 
 .. index::
    single: Scalebar; Map_Scalebar
@@ -547,7 +547,8 @@ features (see figure_composer_7_ b)):
   button opens the :guilabel:`Set items position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox. Item ID !
+  |checkbox| :guilabel:`Show frame` checkbox. With the Item ID you can create
+  a relationship to the other print composer items.
 
 Atlas generation
 ================
@@ -716,8 +717,6 @@ functionalities (see figure_composer_11_ a)):
 
 **General options dialog**
 
-
-
 The **General options** dialog of the attribute table item tab provides
 following functionalities (see figure_composer_10_ b)):
 
@@ -726,7 +725,8 @@ following functionalities (see figure_composer_10_ b)):
   button opens the :guilabel:`Set item position` dialog and allows to set
   the map canvas position using reference points or coordinates. Furthermore
   you can select or unselect to display the element frame with the
-  |checkbox| :guilabel:`Show frame` checkbox. Item ID !
+  |checkbox| :guilabel:`Show frame` checkbox. Use the Item ID to create a 
+  relationship to the other print composer items.
 
 Raise, lower and align elements
 ===============================
@@ -799,7 +799,7 @@ current state of a print composer session as a  :file:`*.qpt` template and load
 the template again in another session.
 
 The  |mActionComposerManager| :sup:`Composer Manager` button in the
-toolbar and in :menuselection:`File --> Composer Manager` allows to
+QGIS toolbar and in :menuselection:`File --> Composer Manager` allows to
 add a new composer template or to manage already existing templates.
 
 .. _figure_composer_13:
