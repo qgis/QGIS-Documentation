@@ -1,4 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 |updatedisclaimer|
 
@@ -22,6 +22,8 @@ Icon                    Plugin                    Description                   
 ======================  ========================  ==================================================================  ==================================
 |delimited_text|        Add Delimited Text Layer  Loads and displays delimited text files containing x,y coordinates  see :ref:`label_dltext`
 |coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS                           see :ref:`coordcapt`
+|icon_dbmanager|        DB Manager                Manage your databases within QGIS                                   see :ref:`dbmanager`	
+|		        Diagram Overlay           Placing Diagrams on vector layers                                   see :ref:`diagram_overlay`
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                                see :ref:`dxf2shape`
 |event_id|              eVis                      Event Visualization Tool                                            see :ref:`evis`
 |ftools|                fTools                    A suite of analysis, geometry, geoprocessing, and research tools    see :ref:`ftools`
@@ -29,6 +31,7 @@ Icon                    Plugin                    Description                   
 |grass|                 GRASS                     Activates the mighty GRASS Toolbox                                  see :ref:`sec_grass`
 |raster-info|           GDAL Tools                Graphical interface for most commonly used raster functions         see :ref:`label_plugingdaltools`
 |georeferencer|         Georeferencer GDAL        Adding projection info to Rasterfiles using GDAL                    see :ref:`georef`
+|heatmap|               Heatmap			  Create heatmap raster from input vector points                      see :ref:`heatmap_plugin`
 |interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer                 see :ref:`interpol`
 |mapserver_export|      MapServer Export Plugin   Export a saved QGIS project file to a MapServer map file            see :ref:`mapserver_export`
 |offline_editing_copy|  Offline Editing           Offline editing and synchronizing with database                     see :ref:`offlinedit`
@@ -38,8 +41,9 @@ Icon                    Plugin                    Description                   
 |raster_terrain|        Raster Terrain Modellin   Compute slope, aspect, ruggedness and total curvature of DEMs       see :ref:`rasterrain`
 \                       Road graph Plugin         Solve shortest path problem                                         see :ref:`roadgraph`
 |spiticon|              SPIT                      Shapefile to Postgres/PostGIS Import Tool                           see :ref:`loading_postgis_data`
-\                       SQL Anywhere plugin       Store vector layers within a SQL anywhere database                  see :ref:`sqlanywhere`
+|icon_sqlanywhere|      SQL Anywhere plugin       Store vector layers within a SQL anywhere database                  see :ref:`sqlanywhere`
 |spatialquery|          Spatial Query             Make spatial queries on vector layers                               see :ref:`spatial_query`
+\                       Zonal Statistics          Calculate count, sum, mean of raster for vector polygons            see :ref:`zonal_statistics`
 ======================  ========================  ==================================================================  ==================================
 
 
