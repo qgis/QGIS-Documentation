@@ -77,8 +77,8 @@ List of GDAL tools
 | |gdal_extract_projection|:guilabel:`Extract projection`| This utility helps you to generate projection        |
 |                                                        | information from an input file. If you want to       |
 |                                                        | extract projection from a whole directory you can use|
-|                                                        | the Batch mode. It's possible to create a *.prj file |
-|                                                        | from the input file. See also at                     |
+|                                                        | the Batch mode. It's possible to create a .prj file  |
+|                                                        | from the input file. See also                        |
 |                                                        | http://www.gdal.org/gdalwarp.html.                   |
 +--------------------------------------------------------+------------------------------------------------------+
 
