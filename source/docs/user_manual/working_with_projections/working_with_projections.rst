@@ -86,11 +86,11 @@ project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit -->` |mAction
 :menuselection:`Settings -->`  |mActionOptions| :guilabel:`Options`
 (KDE, Windows).
 
-The options shown in figure_projection_2_ are:
+The options shown in figure_projection_1_ are:
 
-* |checkbox| :guilabel:`Prompt for CRS` 
-* |checkbox| :guilabel:`Use project CRS`
-* |checkbox| :guilabel:`Use default CRS displayed below`
+* |radiobuttonoff| :guilabel:`Prompt for CRS` 
+* |radiobuttonoff| :guilabel:`Use project CRS`
+* |radiobuttonon| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain
 layer without CRS information, you can also do that in the :guilabel:`General` tab of the raster (see :ref:`label_generaltab`) and
