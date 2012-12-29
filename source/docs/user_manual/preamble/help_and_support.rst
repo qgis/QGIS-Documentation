@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 ****************
 Help and Support
@@ -147,6 +145,13 @@ The QGIS-community also runs a weblog at http://www.qgis.org/planet
 which has some interesting articles for users and developers as well provided
 by other blogs in the community. You are invited to contribute your own QGIS
 blog!
+
+Plugins
+=======
+
+The website http://plugins.qgis.org provides the official QGIS plugins web portal. 
+Here you find a list of all stable and experimental QGIS plugins available via 
+the 'Official QGIS Plugin Repository'. 
 
 Wiki
 ====

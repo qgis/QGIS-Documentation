@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _`label_projections`:
 
@@ -126,12 +124,12 @@ layer already has a CRS defined, it will be displayed as shown in
 
 .. _`label_projstart`:
 
-Define On The Fly (OTF) Projection
+Define On The Fly (OTF) Reprojection
 ===================================
 
-QGIS now supports OTF projection for both raster and vector
+QGIS supports OTF reprojection for both raster and vector
 data. However, OTF is not activated by default. To use OTF projection,
-you must activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox
+you must activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox
 in the :guilabel:`CRS` tab of the |mActionProjectProperties|
 :menuselection:`Project Properties` dialog.
 
@@ -150,7 +148,7 @@ There are three ways to achieve this end:
 If you have already loaded a layer, and want to enable OTF projection, the
 best practice is to open the :guilabel:`Coordinate Reference System` 
 tab of the :guilabel:`Project Properties` dialog, select a CRS, and 
-activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox. 
+activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox. 
 The |geographic| :sup:`CRS status` icon will no longer be greyed-out
 and all layers will be OTF projected to the CRS shown next to the icon.
 
@@ -175,14 +173,14 @@ shown in Figure_projection_3_ and described below.
 
 .. index:: Proj4, Proj4_text
 
-#. **Enable on the fly projection** -
+#. **Enable on the fly CRS transformation** -
    this checkbox is used to enable or disable OTF projection. When off, each
-   layer is drawn using the coordinates as read from the data source. When on,
-   the coordinates in each layer are projected to the coordinate reference
-   system defined for the map canvas.
+   layer is drawn using the coordinates as read from the data source and the 
+   components described below are inactive. When on, the coordinates in each 
+   layer are projected to the coordinate reference system defined for the map canvas.
 #. **Coordinate Reference System** - this is a list of all CRS
    supported by QGIS, including Geographic, Projected and Custom coordinate
-   reference systems. To use a CRS, select it from the list by expanding
+   reference systems. To define a CRS,  select it from the list by expanding
    the appropriate node and selecting the CRS. The active CRS is preselected.
 #. **Proj4 text** - this is the CRS string used by the Proj4
    projection engine. This text is read-only and provided for informational
