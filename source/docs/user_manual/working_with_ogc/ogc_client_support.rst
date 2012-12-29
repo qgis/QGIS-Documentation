@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _working_with_ogc:
 
@@ -148,7 +146,6 @@ for future QGIS sessions.
 Loading WMS Layers
 -------------------
 
-
 Once you have successfully filled in your parameters you can select the
 **[Connect]** button to retrieve the capabilities of the selected
 server. This includes the Image encoding, Layers, Layer Styles and
@@ -201,8 +198,8 @@ The Options field provides a text-field where you can add a :guilabel:`Layer nam
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
-Below the layer name you find the :guilabel:`Tile size`, which makes it possible to
-produce rasters with a high resolution for e.g. printing purposes.
+Below the layer name you can define :guilabel:`Tile size`, if you want to set tile 
+sizes (eg. 256x256) to split up the WMS request into multiple requests.
 
 The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
 the server to query.
