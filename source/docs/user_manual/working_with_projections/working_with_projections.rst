@@ -125,7 +125,7 @@ layer already has a CRS defined, it will be displayed as shown in
 .. _`label_projstart`:
 
 Define On The Fly (OTF) Reprojection
-===================================
+====================================
 
 QGIS supports OTF reprojection for both raster and vector
 data. However, OTF is not activated by default. To use OTF projection,
