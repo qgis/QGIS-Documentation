@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+SPHINXBUILD=`which sphinx-build`
 
 # GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
 LOCALES='fr de it ru nl'
@@ -58,7 +60,7 @@ do
   cp -r resources/${LOCALE}/* source/static
 
   echo "Building HTML for locale '${LOCALE}'..."
-  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
+  ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
 
   # Compile the latex docs for that locale
 #  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SPHINXBUILD=`which sphinx-build`
+
 LOCALES='fr de it ru nl'
 #LOCALES='af ar bg ca_ES cs_CZ da_DK de el_GR en es et_EE eu_ES fa fi fr gl_ES he hr_HR hu id is it ja ka_GE ko_KR lo lt lv mn nl no pl_PL pt_BR pt_PT ro ru sk sl_SI sq_AL sr_Cyrl sr_Latn sv sw ta th tr uk vi xh zh_CN zh_TW'
 
@@ -20,7 +22,7 @@ mkdir -p ${BUILDDIR}
 # copy english resources to static to be able to do a proper sphinx-build
 cp -r resources/en/* source/static/
 
-sphinx-build -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
+${SPHINXBUILD} -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
 
 # Now iteratively update the locale specific .po files with any new strings needed translation
 
