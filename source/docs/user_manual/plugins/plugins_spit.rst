@@ -1,3 +1,5 @@
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+
 .. index:: SPIT, Shapefile_to_Postgis_Import_Tool
 
 .. _label_spit:
