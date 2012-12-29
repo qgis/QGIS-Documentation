@@ -1,18 +1,14 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _plugin_gps:
 
 GPS Plugin
 ==========
 
-
 .. _`whatsgps`:
 
 What is GPS?
 ------------
-
 
 GPS, the Global Positioning System, is a satellite-based system that allows 
 anyone with a GPS receiver to find their exact position anywhere in the world.  
@@ -41,14 +37,18 @@ To load a GPX file you first need to load the plugin.
 :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. 
 Activate the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin 
 is loaded two buttons with a small handheld GPS device will show up in the 
-toolbar. An example GPX file is available in the QGIS sample dataset:
-:file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
+toolbar:
+
+* |gps_importer| :sup:`Create new GPX Layer`
+* |gps_importer| :sup:`GPS Tools`
+
+For working with GPS data we provide an example GPX file available in the QGIS sample 
+dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 :ref:`label_sampledata` for more information about the sample data.
 
-
-1. Click on the |gps_importer| :sup:`GPS Tools` icon and open the
+#. Click on the |gps_importer| :sup:`GPS Tools` icon and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_1_).
-2. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, 
+#. :guilabel:`Browse` to the folder :file:`qgis_sample_data/gps/`, 
    select the GPX file :file:`national_monuments.gpx` and click **[Open]**.
 
 .. _figure_gps_1:
