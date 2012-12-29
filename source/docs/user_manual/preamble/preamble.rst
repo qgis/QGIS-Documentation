@@ -63,7 +63,7 @@ handles both identically.
 .. **Translators who contributed to this translated version (Not English)**
 ..
 
-Copyright (c) 2004 - 2012 QGIS Development Team
+Copyright (c) 2004 - 2013 QGIS Development Team
 
 **Internet:** http://www.qgis.org
 

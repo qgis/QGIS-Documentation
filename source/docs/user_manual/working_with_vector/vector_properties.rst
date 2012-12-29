@@ -1187,11 +1187,16 @@ layer (see figure_diagrams_1_).
    Vector properties dialog with diagram tab |nix|
 
 The current core implementation of diagrams provides support for piecharts 
-and text diagrams, and for linear scaling of the diagram size according to 
-a classification attribute. The placement of the diagrams interacts with the 
-new labeling. We will demonstrate an example and overlay the alaska boundary 
-layer a piechart diagram showing some temperature data from a climate vector 
-layer. Both vector layers are part of the |qg| sample dataset (see Section 
+and text diagrams. Text values ​​of different data columns are displayed one 
+below the other with a circle or a box and dividers. Diagram size is based 
+on a fixed size or on linear scaling according to a classification attribute. 
+The placement of the diagrams interacts with the new labeling, so position 
+conflicts between diagrams and labels are detected and solved. In addition 
+to chart positions can be fixed by the users hand.
+
+We will demonstrate an example and overlay the alaska boundary layer a 
+piechart diagram showing some temperature data from a climate vector layer. 
+Both vector layers are part of the |qg| sample dataset (see Section 
 :ref:`label_sampledata`).
 
 #.  First click on the |mActionAddOgrLayer| :sup:`Load Vector` icon, browse 
@@ -1199,15 +1204,15 @@ layer. Both vector layers are part of the |qg| sample dataset (see Section
     :file:`alaska.shp` and :file:`climate.shp`.
 #.  Double click the ``climate`` layer in the map legend to open the 
     :guilabel:`Layer Properties` dialog.
-#.  Click on the ``Diagram Overlay`` and select **[Pie chart]** as Diagram type.
+#.  Click on the ``Diagrams``, activate ``Display diagrams`` and select 
+    **[Text diagram]** as Diagram type.
+#.  As Background color we choose a light blue and set a fixed size to 18 mm.
+#.  Placement could be set to AroundPoint.
 #.  In the diagram we want to display the values of the three columns 
     ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. First select ``T_F_JAN`` as 
     Attributes and click the green **[\+]** button, then ``T_F_JUL`` and 
     finally ``T_F_MEAN``.
-#.  For linear scaling of the diagram size we define ``T_F_JUL`` as 
-    classification attribute.
-#.  Now click on **[Find maximum value]**, choose 10 as size value and click 
-    **[Apply]** to display the diagram in the |qg| main window.
+#.  Now click **[Apply]** to display the diagram in the |qg| main window.
 #.  You can now adapt the chart size, or change the attribute colors double 
     clicking on the color values in the attribute field. Figure_diagrams_2_ 
     gives an impression.
