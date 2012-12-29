@@ -811,6 +811,7 @@ third-party plugin called Table Manager.
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :width: 40 em
+   :align: center
 
    Dialog to select an edit widget for an attribute column |nix|
 
@@ -854,16 +855,32 @@ General Tab
 -----------
 
 |general| The :guilabel:`General` tab is essentially like that of the raster dialog. 
-It allows you to change the display name, set scale dependent rendering 
-options, create a spatial index of the vector file (only for OGR supported 
-formats and PostGIS) and view or change the projection of the specific vector 
-layer. Additionally it is possible to define a certain Edit User Interface 
-for the vector layer written with the Qt Creator IDE and tools at 
-http://qt.nokia.com/products/developer-tools.
+There a several options available:
 
-The **[Query Builder]** button allows you to create a subset of the features 
-in the layer - but currently this button is only available when you open the 
-attribute table and select the |browsebutton| button next to Advanced search.
+* Change the display name of the layer.
+* Set a display field to be used for the ``Identify Results`` dialog. 
+* Define a certain Edit User Interface for the vector layer written with the Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/.
+* Create a ``Spatial Index`` (only for OGR supported formats and PostGIS).
+* Add an ``Init function`` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
+* ``Update Extents`` information for a layer.
+* View or change the projection of the specific vector layer, clicking on ``Specify CRS``.
+
+Furthermore you can activate and set |checkbox| :menuselection:`Use scale 
+dependent rendering`, define provider specific options (e.g. encoding) and with the 
+**[Query Builder]** button you can create a subset of the features in the layer 
+that will be visualized (also refer to section :ref:`sec_selection_query`). 
+
+.. _figure_general_vect:
+
+.. only:: html
+
+   **Figure General 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/vector_general_tab.png
+   :width: 40 em
+   :align: center
+
+   General tab in vector layers properties dialog |nix|
 
 .. _vectormetadatatab:
 
@@ -875,7 +892,23 @@ including specifics about the type and location, number of features, feature
 type, and the editing capabilities. The :guilabel:`Extents` section, providing 
 layer extent information, and the :guilabel:`Layer Spatial Reference System` 
 section, providing information about the CRS of the layer. This is a quick way 
-to get information about the layer, but is not yet editable.
+to get information about the layer. 
+
+Additionally you can add/edit a title for the layer and some abtract information. 
+These information will be saved in the QGIS project file for following sessions 
+and will be used for QGIS server. 
+
+.. _figure_metadata_vect:
+
+.. only:: html
+
+   **Figure Metadata 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+   :width: 40 em
+   :align: center
+
+   Metadata tab in vector layers properties dialog |nix|
 
 Actions Tab
 -----------
@@ -892,6 +925,7 @@ passing parameters to a web reporting tool.
    **Figure Actions 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
+   :width: 40 em
    :align: center
 
    Overview action dialog with some sample actions |nix|
