@@ -216,7 +216,7 @@ Map tools Tab
 Overlays Tab
 ------------
 
-* Define :guilabel:`Placement algorithm` for labels (choose between 'Central point'
+* Define :guilabel:`Placement algorithm` for labels, symboly and diagrams (choose between 'Central point'
   (standard), 'Chain', 'Popmusic tabu chain', 'Popmusic tabu' and 'Popmusic chain')
 
 Digitizing Tab

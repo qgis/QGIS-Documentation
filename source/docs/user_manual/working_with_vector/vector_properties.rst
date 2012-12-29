@@ -1170,10 +1170,10 @@ Additionally the add vector join dialog allows to:
 
 .. _`sec_diagram`:
 
-Diagram Tab
------------
+Diagrams Tab
+------------
 
-|diagram| The :guilabel:`Diagram` tab allows you to add a graphic overlay to a vector 
+|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a vector 
 layer (see figure_diagrams_1_).
 
 .. _figure_diagrams_1:
@@ -1195,7 +1195,7 @@ conflicts between diagrams and labels are detected and solved. In addition
 to chart positions can be fixed by the users hand.
 
 We will demonstrate an example and overlay the alaska boundary layer a 
-piechart diagram showing some temperature data from a climate vector layer. 
+text diagram showing some temperature data from a climate vector layer. 
 Both vector layers are part of the |qg| sample dataset (see Section 
 :ref:`label_sampledata`).
 
@@ -1228,4 +1228,9 @@ Both vector layers are part of the |qg| sample dataset (see Section
 
    Diagram from temperature data overlayed on a map |nix|
 
+Additionally in the :menuselection:`Settings --> Options` dialog, there is a 
+``Overlay`` tab where it is possible to select the placement algorithm of the diagrams. 
+The central point method is a generic one, the others use algorithms of the PAL library. 
+They also consider diagram objects and labels in different layers. Also see section 
+:ref:`diagram_overlay` for additional diagram features. 
 
