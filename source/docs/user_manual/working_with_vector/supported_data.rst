@@ -7,7 +7,7 @@ Supported Data Formats
 |qg| uses the OGR library to read and write vector data formats [#]_, 
 including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, 
 Spatialite, Oracle spatial databases and many more. The vector data can also
-be loaded in read mode from zip and gzip archives into QGIS.At the date of this 
+be loaded in read mode from zip and gzip archives into QGIS. At the date of this 
 document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`). 
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
@@ -93,7 +93,6 @@ You can also select the Encoding type for the shapefile if desired.
    **Figure Vector 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
-   :width: 40em
    :align: center
 
    Open an OGR Supported Vector Layer Dialog |nix|
@@ -110,7 +109,6 @@ the :file:`alaska.shp` file.
    **Figure Vector 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
-   :width: 40em
    :align: center
 
    |qg| with Shapefile of Alaska loaded |nix|

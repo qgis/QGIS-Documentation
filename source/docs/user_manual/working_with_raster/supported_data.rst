@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. index:: Raster
 .. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF
@@ -18,7 +16,8 @@ Working with Raster Data
 This Section describes how to visualize and set raster layer properties.
 |qg| uses the :index:`GDAL` library to read and write raster data formats [#]_, 
 including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine 
-and many more. The raster data can also be loaded in read mode from zip archives into QGIS.
+and many more. The raster data can also be loaded in read mode from zip and gzip 
+archives into QGIS.
 
 At the date of this document, more than 100 raster formats are supported 
 by the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A complete list is available at 
@@ -79,13 +78,15 @@ a dialog to set raster properties for the layer.
 * :menuselection:`Zoom to best scale (100\%)`
 * :menuselection:`Show in overview`
 * :menuselection:`Remove`
-* :menuselection:`Set layer CRS -->`
-* :menuselection:`Set project CRS from layer`
-* :menuselection:`Properties -->`
-* :menuselection:`Rename -->`
-* :menuselection:`Add Group`
+* :menuselection:`Set Layer CRS`
+* :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Properties`
+* :menuselection:`Rename`
+* :menuselection:`Copy Style`
+* :menuselection:`Add New Group`
 * :menuselection:`Expand all`
 * :menuselection:`Collapse all`
+* :menuselection:`Update Drawing Order`
 
 ----
  

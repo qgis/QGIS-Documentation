@@ -73,7 +73,6 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
-   :width: 40em
 
    CRS tab in the QGIS Options Dialog |osx|
 
@@ -116,7 +115,6 @@ layer already has a CRS defined, it will be displayed as shown in
  
   .. figure:: /static/user_manual/working_with_projections/crs_selector.png
       :align: center
-      :width: 40em
 
       The CRS selector dialog |nix|
 
@@ -167,7 +165,6 @@ shown in Figure_projection_3_ and described below.
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
-   :width: 40em
 
    Projection Dialog |win|
 
@@ -229,7 +226,6 @@ your spatial bookmarks and other custom data.
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
-   :width: 30em
 
    Custom CRS Dialog |nix|
 

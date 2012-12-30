@@ -2,24 +2,14 @@
 
 .. _`rasterrain`:
 
-Raster Terrain Modelling Plugin
+Raster Terrain Analysis Plugin
 ===============================
 
 
-The Raster Terrain Modelling plugin can be used to calculate the slope, aspect, 
-ruggedness, and total curvature for digital elevation models (DEM). It is very 
+|dem_analysis| The Raster Terrain Analysis Plugin can be used to calculate the slope, aspect, 
+hillshade, ruggedness index and relief for digital elevation models (DEM). It is very 
 simple to handle and provides an intuitive graphical user interface for 
 creating new raster layers (See Figure_raster_terrain_1_).
-The plugin requires the following parameters to be specified before running:
-
-*  **Analysis**: Can be one of slope, aspect, ruggedness, or total curvature.
-*  **Input layer**: Specify the input raster from a list of loaded raster 
-   layers.
-*  **Output layer**: Specify a name and path for the output raster file.
-*  **Output format**: Specify a format type for the output raster file. 
-   (Default is GeoTiff).
-
-
 
 Description of the analysis:
 
@@ -27,9 +17,10 @@ Description of the analysis:
    first order derivative estimation).
 *  **Aspect**: Exposition (starting with 0 for north direction, in degrees 
    counterclockwise).
-*  **Ruggedness factor**: A quantitative measurement of terrain heterogeneity.
-*  **Total curvature**: A curvature measure that combines plan- and profile 
-   curvature.
+*  **Hillshade**: Create shaded map using light and shadow to provide a more three-dimensional appearance for a shaded relief 
+   map.
+*  **Ruggedness Index**: A quantitative measurement of terrain heterogeneity as described by Riley et al. (1999). It is calculated for every location, by summarizing the change in elevation within the 3x3 pixel grid. 
+*  **Relief**: Creating a shaded relief map from digital elevation data. Implemented is a method to choose the elevation colors analysing the frequency distribution.
 
 .. _figure_raster_terrain_1:
 
@@ -41,20 +32,16 @@ Description of the analysis:
    :align: center
    :width: 40em
 
-   Raster Terrain Modelling Plugin
+   Raster Terrain Modelling Plugin (slope calculation)
 
 .. _`raster_terrain_usage`:
 
 Using the plugin
 ----------------
 
-#.  Start QGIS and load a DEM raster layer. 
-#.  Load the Raster Terrain Modelling plugin in the Plugin Manager see 
-    Section :ref:`load_core_plugin` and click on the |raster_terrain| 
-    :sup:`Raster Terrain Modelling` icon which appears in the QGIS toolbar 
-    menu. The Raster Terrain Modelling plugin dialog appears as shown in 
-    Figure_raster_terrain_1_.
-#.  Select an analysis method (e.g. :menuselection:`Slope -->`).
+#.  Start QGIS and load the gtopo30 raster layer from the GRASS sample location. 
+#.  Load the Raster Terrain Analysis plugin in the Plugin Manager see Section :ref:`load_core_plugin` 
+#.  Select an analysis method (e.g. :menuselection:`Slope -->`) from the :menuselection:`Raster --> Terrain Analysis` menu. The slope dialog appears as shown in Figure_raster_terrain_1_.
 #.  Specify an output file path, and an output file type.
 #.  Click **[OK]**.
 

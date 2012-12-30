@@ -1,7 +1,7 @@
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-Using SEXTANTE from the console. Creating scripts
-=================================================
+Using SEXTANTE from the console
+===============================
 
 Introduction
 ------------

@@ -217,7 +217,7 @@ Using the basic digitizing tools you can perform the following functions:
 
 
 All editing sessions start by choosing the |mActionToggleEditing| 
-:guilabel:`Toggle editing` option. This can be found in the context menu 
+:sup:`Toggle editing` option. This can be found in the context menu 
 after right clicking on the legend entry for that layer.
 
 Alternately, you can use the :index:`Toggle Editing` |mActionToggleEditing| 
@@ -864,8 +864,8 @@ following functionality:
    :kbd:`Ctrl+D`
 *  |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR 
    layers with GDAL version >= 1.6 also with :kbd:`Ctrl+W`
-*  |mActionDeleteAttribute| :sup:`Delete Column` only for PostGIS layers yet 
-   also with :kbd:`Ctrl+L`
+*  |mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR 
+   layers with GDAL version >= 1.9 also with :kbd:`Ctrl+L`
 *  |mActionCalculateField| :sup:`Open field calculator` also with :kbd:`Ctrl+I`
 
 .. tip:: **Skip WKT geometry**
@@ -887,14 +887,6 @@ as -->` to define the name of the output file, its format and CRS (see Section
 :ref:`label_legend`). It is also possible to specify OGR creation options 
 within the dialog.
 
-.. _tip_attribute_columns:
-
-.. tip:: **Manipulating Attribute data**
-
-   Currently only PostGIS layers are supported for adding or dropping 
-   attribute columns within this dialog. In future versions of |qg|, other 
-   datasources will be supported, because this feature was implemented in 
-   GDAL/OGR > 1.6.0
 
 .. index:: Non_Spatial_Attribute_Tables
 

@@ -26,7 +26,6 @@ format. It requires the following parameters to be specified before running:
 
 .. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
-   :width: 30em
 
    Dxf2Shape Converter Plugin
 

@@ -423,79 +423,79 @@ rst_epilog = """
 .. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
 .. |matrix| image:: /static/common/matrix.png
-   :width: 3em
+   :width: 1.5em
 .. |sum_lines| image:: /static/common/sum_lines.png
-   :width: 3em
+   :width: 1.5em
 .. |sum_points| image:: /static/common/sum_points.png
-   :width: 3em
+   :width: 1.5em
 .. |unique| image:: /static/common/unique.png
-   :width: 3em
+   :width: 1.5em
 .. |basic_statistics| image:: /static/common/basic_statistics.png
-   :width: 3em
+   :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png
-   :width: 3em
+   :width: 1.5em
 .. |mean| image:: /static/common/mean.png
-   :width: 3em
+   :width: 1.5em
 .. |intersections| image:: /static/common/intersections.png
-   :width: 3em
+   :width: 1.5em
 .. |random_selection| image:: /static/common/random_selection.png
-   :width: 3em
+   :width: 1.5em
 .. |sub_selection| image:: /static/common/sub_selection.png
-   :width: 3em
+   :width: 1.5em
 .. |random_points| image:: /static/common/random_points.png
-   :width: 3em
+   :width: 1.5em
 .. |regular_points| image:: /static/common/regular_points.png
-   :width: 3em
+   :width: 1.5em
 .. |vector_grid| image:: /static/common/vector_grid.png
-   :width: 3em
+   :width: 1.5em
 .. |select_location| image:: /static/common/select_location.png
-   :width: 3em
+   :width: 1.5em
 .. |layer_extent| image:: /static/common/layer_extent.png
-   :width: 3em
+   :width: 1.5em
 .. |convex_hull| image:: /static/common/convex_hull.png
-   :width: 3em
+   :width: 1.5em
 .. |buffer| image:: /static/common/buffer.png
-   :width: 3em
+   :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
-   :width: 3em
+   :width: 1.5em
 .. |union| image:: /static/common/union.png
-   :width: 3em
+   :width: 1.5em
 .. |sym_difference| image:: /static/common/sym_difference.png
-   :width: 3em
+   :width: 1.5em
 .. |clip| image:: /static/common/clip.png
-   :width: 3em
+   :width: 1.5em
 .. |difference| image:: /static/common/difference.png
-   :width: 3em
+   :width: 1.5em
 .. |dissolve| image:: /static/common/dissolve.png
-   :width: 3em
+   :width: 1.5em
 .. |check_geometry| image::  /static/common/check_geometry.png
-   :width: 3em
+   :width: 1.5em
 .. |export_geometry| image:: /static/common/export_geometry.png
-   :width: 3em
+   :width: 1.5em
 .. |centroids| image:: /static/common/centroids.png
-   :width: 3em
+   :width: 1.5em
 .. |delaunay| image:: /static/common/delaunay.png
-   :width: 3em
+   :width: 1.5em
 .. |simplify| image:: /static/common/simplify.png
-   :width: 3em
+   :width: 1.5em
 .. |multi_to_single| image:: /static/common/multi_to_single.png
-   :width: 3em
+   :width: 1.5em
 .. |single_to_multi| image:: /static/common/single_to_multi.png
-   :width: 3em
+   :width: 1.5em
 .. |to_lines| image:: /static/common/to_lines.png
-   :width: 3em
+   :width: 1.5em
 .. |extract_nodes| image:: /static/common/extract_nodes.png
-   :width: 3em
+   :width: 1.5em
 .. |export_projection| image:: /static/common/export_projection.png
-   :width: 3em
+   :width: 1.5em
 .. |define_projection| image:: /static/common/define_projection.png
-   :width: 3em
+   :width: 1.5em
 .. |join_location| image:: /static/common/join_location.png
-   :width: 3em
+   :width: 1.5em
 .. |split_layer| image:: /static/common/split_layer.png
-   :width: 3em
+   :width: 1.5em
 .. |merge_shapes| image:: /static/common/merge_shapes.png
-   :width: 3em
+   :width: 1.5em
 .. |event_browser| image:: /static/common/event_browser.png
    :width: 1.5em
 .. |event_id| image:: /static/common/event_id.png
@@ -510,7 +510,7 @@ rst_epilog = """
    :width: 1.5em
 .. |qgissplash| image:: /static/common/splash.png
 .. |gentlelogo| image:: /static/common/qgislogo.png
-   :width: 3em
+   :width: 1.5em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_mapset| image:: /static/common/grass_new_mapset.png

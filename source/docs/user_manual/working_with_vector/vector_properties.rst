@@ -847,6 +847,10 @@ widgets. These widgets are:
    be used.
 *  **Calendar**: Opens a calendar widget to enter a date. Column type must be 
    text.
+*  **Value Relation**: Offers values from a related table in a combobox. You can 
+   select layer, key column and value column.
+*  **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers) 
+   field, if empty. 
 
 
 .. _vectorgeneraltab:

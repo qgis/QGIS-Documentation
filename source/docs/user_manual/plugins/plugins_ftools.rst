@@ -22,10 +22,6 @@ several useful Data Management Tools.
 
 **fTools functions**
 
-table_ftools_1_ through table_ftools_5_ list 
-the functions available via the fTools plugin, along with a brief description 
-of each function. 
-
 .. not available anymore!! should be described in this manual from older release..
 .. For further information on an individual fTools function, 
 .. click the :menuselection:`fTools Information -->` menu item in the 

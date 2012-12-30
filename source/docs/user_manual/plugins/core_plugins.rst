@@ -36,7 +36,7 @@ Icon                    Plugin                    Description                   
 |osm_load|              OpenStreetMap             Visualize and edit OpenStreetMap data                               see :ref:`plugins_osm`
 |oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                                    see :ref:`oracle_raster`
 |plugin_installer|      Plugin Installer          Download and install python plugins                                 see :ref:`python_plugin_installer`
-|raster_terrain|        Raster Terrain Modellin   Compute slope, aspect, ruggedness and total curvature of DEMs       see :ref:`rasterrain`
+|raster_terrain|        Raster Terrain Analysis   Compute slope, aspect, ruggedness and total curvature of DEMs       see :ref:`rasterrain`
 \                       Road graph Plugin         Solve shortest path problem                                         see :ref:`roadgraph`
 |spiticon|              SPIT                      Shapefile to Postgres/PostGIS Import Tool                           see :ref:`loading_postgis_data`
 |icon_sqlanywhere|      SQL Anywhere plugin       Store vector layers within a SQL anywhere database                  see :ref:`sqlanywhere`
