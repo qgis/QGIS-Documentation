@@ -28,7 +28,6 @@ features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 30em
 
    Define shortcut options |nix| (KDE)
 
@@ -217,6 +216,17 @@ radians and gon). The tools then allows you to click points on the map. Each
 segment-length as well as the total shows up in the measure-window. To stop
 measuring click your right mouse button.
 
+.. _figure_measure_length:
+
+.. only:: html
+
+   **Figure Measure 1:**
+
+.. figure:: /static/user_manual/introduction/measure_line.png
+   :align: center
+
+   Measure Distance |nix| (KDE)
+
 |mActionMeasureArea| Areas can also be measured.  In the measure window the
 accumulated area-size appears. In addition, the measuring tool will snap to the
 currently selected layer, provided that layer has its snapping tolerance set.
@@ -225,38 +235,32 @@ a line feature, or around a polygon feature, first set its snapping tolerance,
 then select the layer. Now, when using the measuring tools, each mouse click
 (within the tolerance setting) will snap to that layer.
 
+.. _figure_measure_area:
+
+.. only:: html
+
+   **Figure Measure 2:**
+
+.. figure:: /static/user_manual/introduction/measure_area.png
+   :align: center
+
+   Measure Area |nix| (KDE)
+
 |mActionMeasureAngle| You can also measure angles, selecting Measure Angle tool.
 The cursor becomes cross-shaped. Click to draw the first segment of the angle you
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
 
-.. |measure_line| image:: /static/user_manual/introduction/measure_line.png
-   :width: 22em
-.. |measure_area| image:: /static/user_manual/introduction/measure_area.png
-   :width: 22em
-.. |measure_angle| image:: /static/user_manual/introduction/measure_angle.png
-   :width: 17em
-
-
-.. _measure_in_action:
+.. _figure_measure_angle:
 
 .. only:: html
 
-   **Figure Measure 1:**
+   **Figure Measure 3:**
 
-+------------------------+------------------------+
-| |measure_line|         | |measure_angle|        |
-+------------------------+------------------------+
-| (a) Measure lines      | (b) Measure angles     |
-+------------------------+------------------------+
+.. figure:: /static/user_manual/introduction/measure_angle.png
+   :align: center
 
-+------------------------+
-| |measure_area|         |
-+------------------------+
-| (c) Measure areas      |
-+------------------------+
-
-Measure tools in action
+   Measure Angle |nix| (KDE)
 
 .. _`sec_selection`:
 
@@ -530,7 +534,7 @@ The following dialog allows you to embed layers from other projects:
 #. Press |browsebutton| to look for another project from the Alaska dataset.
 #. Select the project file grassland. You can see the content of the project (see figure_embed_dialog_).
 #. Press :kbd:`Ctrl` and klick on the layers grassland and regions.
-   The layers are embedded in the map legend and the map view now (see figure_view_embedded_ ).
+   The layers are embedded in the map legend and the map view now.
 
 .. _figure_embed_dialog:
 
@@ -543,18 +547,6 @@ The following dialog allows you to embed layers from other projects:
    :width: 30em
 
    Select layers and groups to embed |nix|
-
-.. _figure_view_embedded:
-
-.. only:: html
-
-   **Figure Nesting 2:**
-
-.. figure:: /static/user_manual/introduction/view_embedded.png
-   :align: center
-   :width: 50em
-
-   Embedded layers in a project |nix|
 
 While the embedded layers are editable you can't change it's properties like Style and Labeling.
 
