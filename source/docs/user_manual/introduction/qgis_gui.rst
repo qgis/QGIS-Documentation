@@ -26,18 +26,16 @@ interface as discussed below):
    QGIS GUI with Alaska sample data |nix|
 
 .. note::
-   Your window decorations (title bar, etc.) may appear
-   different depending on your operating system and window manager.
+   Your window decorations (title bar, etc.) may appear different depending on 
+   your operating system and window manager. 
 
 The QGIS GUI is divided into five areas:
 
-+--------------+-----------------+
-|1. Menu Bar   | 4. Map View     |
-+--------------+-----------------+
-|2. Tool Bar   | 5. Status Bar   |
-+--------------+-----------------+
-|3. Map Legend |                 |
-+--------------+-----------------+
+#. Menu Bar 
+#. Tool Bar
+#. Map Legend
+#. Map View
+#. Status Bar
 
 These five components of the QGIS interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
@@ -93,8 +91,8 @@ Menu Option                                                     Shortcut        
 |mActionEditCut| :guilabel:`Cut Features`                       :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionEditCopy| :guilabel:`Copy Features`                     :kbd:`Ctrl+C`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionEditPaste| :guilabel:`Paste Features`                   :kbd:`Ctrl+V`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionCapturePoint| :guilabel:`Add Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionMoveFeature| :guilabel:`Move Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -115,7 +113,7 @@ Menu Option                                                     Shortcut        
 \
 
 After activating |mActionToggleEditing| :sup:`Toggle editing` mode
-for a layer, you will find an add feature icon in the :menuselection:`Edit`
+for a layer, you will find the ``Add Feature`` icon in the :menuselection:`Edit`
 menu depending on the layer type (point, line or polygon).
 
 ----
@@ -147,7 +145,7 @@ Menu Option                                                     Shortcut        
 |mActionZoomToSelected| :guilabel:`Zoom To Selection`           :kbd:`Ctrl+J`         \                                           :guilabel:`Map Navigation`
 |mActionZoomLast| :guilabel:`Zoom Last`                         \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomNext| :guilabel:`Zoom Next`                         \                     \                                           :guilabel:`Map Navigation`
-:menuselection:`Zoom Actual Size`                               \                     \                                           \
+|mActionZoomActual| :guilabel:`Zoom Actual Size`                \                     \                                           :guilabel:`Map Navigation`
 :menuselection:`Decorations -->`                                \                     see :ref:`decorations`                      \
 |mActionMapTips| :guilabel:`Map Tips`                           \                     \                                           :guilabel:`Attributes`
 |mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
@@ -170,7 +168,7 @@ Menu Option                                                     Shortcut        
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
 |mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
-(the following entries appear when core plugins are loaded)
+(the following 5 entries appear when core plugins are loaded)
 |delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
 |gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
 |oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
@@ -202,8 +200,8 @@ Menu Option                                                     Shortcut        
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Settings**                                                    \                     \                                           \
-:menuselection:`Panels -->`                                     \                     \                                           \
-:menuselection:`Toolbars -->`                                   \                     \                                           \
+:menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
+:menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
 :menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \
 |mActionProjectProperties| :guilabel:`Project Properties ...`   :kbd:`Ctrl+Shift+P`   see :ref:`sec_projects`                     \
 |mActionCustomProjection| :guilabel:`Custom CRS ...`            \                     see :ref:`sec_custom_projections`           \
@@ -220,8 +218,7 @@ Menu Option                                                     Shortcut        
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 **Plugins**                                                     \                     \                                           \
-(the following items are visible if all core plugins are
-activated)                                                      \                     \                                           \
+(Following items are visible if all core plugins are selected)
 |plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
 |mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 \
 :menuselection:`Python Console`                                 \                     \                                           \
@@ -253,8 +250,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 **Raster**                                                      \                     \                                           \
 :menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \
-(the following items are visible if all core plugins are
- activated)
+(Following items are visible if all core plugins are selected)
 :menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
 :menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
 :menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
@@ -277,7 +273,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
 :menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
-:menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                             :guilabel:`Database`
+:menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
 ---
@@ -310,7 +306,7 @@ Menu Option                                                     Shortcut        
 .. note::
    |nix| The Menu Bar items listed above are the default ones in KDE
    window manager. In GNOME, Settings menu is missing and its items are to be
-   found there:
+   found here:
 
 \
 
@@ -412,32 +408,50 @@ for information on editing GRASS vector layers.
   * :menuselection:`Zoom to best scale (100 %)`
   * :menuselection:`Show in overview`
   * :menuselection:`Remove`
+  * :menuselection:`Set Layer CRS`
+  * :menuselection:`Set Project CRS from Layer`
   * :menuselection:`Properties`
   * :menuselection:`Rename`
-  * :menuselection:`Add Group`
+  * :menuselection:`Copy Style`
+  * :menuselection:`Add New Group`
   * :menuselection:`Expand all`
   * :menuselection:`Collapse all`
+  * :menuselection:`Update Drawing Order`
 
-.. *  :menuselection:`Show file groups`
+\
+
+  ``Additionally, according to layer position`` 
+
+  * :menuselection:`Make to toplevel item`
+  * :menuselection:`Show file groups`
 
 * **Right mouse button menu for vector layers**
 
   * :menuselection:`Zoom to layer extent`
   * :menuselection:`Show in overview`
   * :menuselection:`Remove`
+  * :menuselection:`Set Layer CRS`
+  * :menuselection:`Set Project CRS from Layer`
   * :menuselection:`Open attribute table`
   * :menuselection:`Toggle editing` (not available for GRASS layers)
   * :menuselection:`Save as`
   * :menuselection:`Save selection as`
   * :menuselection:`Query`
+  * :menuselection:`Show Feature Count`
   * :menuselection:`Properties`
   * :menuselection:`Rename`
-  * :menuselection:`Add Group`
+  * :menuselection:`Copy Style`
+  * :menuselection:`Add New Group`
   * :menuselection:`Expand all`
   * :menuselection:`Collapse all`
+  * :menuselection:`Update Drawing Order`
 
-.. * :menuselection:`Make to toplevel item`
-.. * :menuselection:`Show file groups`
+\
+
+  ``Additionally, according to layer position`` 
+
+  * :menuselection:`Make to toplevel item`
+  * :menuselection:`Show file groups`
 
 * **Right mouse button menu for layer groups**
 
@@ -445,11 +459,17 @@ for information on editing GRASS vector layers.
   * :menuselection:`Remove`
   * :menuselection:`Set group CRS`
   * :menuselection:`Rename`
-  * :menuselection:`Add Group`
+  * :menuselection:`Add New Group`
   * :menuselection:`Expand all`
   * :menuselection:`Collapse all`
+  * :menuselection:`Update Drawing Order`
 
-.. *  :menuselection:`Show file groups`
+\
+
+  ``Additionally, according to position`` 
+
+  *  :menuselection:`Show file groups`
+
 
 It is possible to select more than one layer or group at the same time
 by holding down the :kbd:`Ctrl` key while selecting the layers with the

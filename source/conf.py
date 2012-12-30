@@ -278,7 +278,9 @@ rst_epilog = """
 .. |mActionCopySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
 .. |mActionZoomToSelected| image:: /static/common/mActionZoomToSelected.png
-   :width: 1em
+   :width: 1.5em
+.. |mActionZoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
 .. |mActionNewAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |mActionCalculateField| image:: /static/common/mActionCalculateField.png
