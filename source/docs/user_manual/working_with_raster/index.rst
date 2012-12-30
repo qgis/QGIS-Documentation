@@ -12,7 +12,6 @@ Working with Raster Data
 	supported_data
 	raster_properties
 	raster_calculator
-	raster_analysis
 
 
 
