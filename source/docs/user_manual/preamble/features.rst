@@ -178,7 +178,7 @@ Plugins list at http://plugins.qgis.org/plugins/
 
 * Support for nesting projects within other projects to embed content from other
   project files
-* Layer grouping: Option to add layers to selected or active group
+* Group Selected: Option to group layers to a group
 * Message log: Lets you keep an eye on the messages QGIS generates during loading
   and operation
 * GUI Customization: Allows setting up simplified QGIS interface by hiding various

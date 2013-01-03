@@ -385,11 +385,13 @@ A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
 
-Layers in the legend window can be organised into groups. To do so, right click
-in the legend window and choose :menuselection:`Add group`. Type in a name for the
-group and press :kbd:`Enter`. Now click on an existing layer and drag it
-onto the group. Also, if new layers are added to the project while a group is
-selected, they will automatically be placed in the group.
+Layers in the legend window can be organised into groups. There are two ways to do so:
+
+#. Right click in the legend window and choose :menuselection:`Add Group`. Type in a 
+   name for the group and press :kbd:`Enter`. Now click on an existing layer and drag it
+   onto the group.
+#. Select some layers, right click in the legend window and choose :menuselection:`Group Selected`. 
+   The selected layers will automatically be placed in a new group.
 
 To bring a layer out of a group you can drag it out, or right click on it and
 choose :menuselection:`Make to toplevel item`. Groups can be nested inside other groups.
@@ -420,9 +422,10 @@ for information on editing GRASS vector layers.
 
 \
 
-  ``Additionally, according to layer position`` 
+  ``Additionally, according to layer position and selection`` 
 
   * :menuselection:`Make to toplevel item`
+  * :menuselection:`Group Selected`
   * :menuselection:`Show file groups`
 
 * **Right mouse button menu for vector layers**
@@ -448,9 +451,10 @@ for information on editing GRASS vector layers.
 
 \
 
-  ``Additionally, according to layer position`` 
+  ``Additionally, according to layer position and selection`` 
 
   * :menuselection:`Make to toplevel item`
+  * :menuselection:`Group Selected`
   * :menuselection:`Show file groups`
 
 * **Right mouse button menu for layer groups**
