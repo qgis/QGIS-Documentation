@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 Raster Properties Dialog
 =========================
@@ -181,9 +179,11 @@ specific value. Double clicking on the color-column opens the dialog
 Further you can also add labels for each color but this value won't be displayed 
 when you use the identify feature tool.   
 
-Alternatively you can click on the button 
-|mActionNewAttribute| :sup:`Load colormap from Band`, which 
-tries to load the table from the band (if it has any).
+You can also click on the button |mActionNewAttribute| :sup:`Load color map from Band`, 
+which tries to load the table from the band (if it has any). And you can use the buttons 
+|mActionFileOpen| :sup:`Load color map from file` or |mActionFileSave| :sup:`Export color map to file` 
+to load an existing color table or to save the defined color table for other 
+sessions.
 
 The block :guilabel:`Generate new color map` allows you to create newly
 categorized colormaps. You only need to select the :guilabel:`number of classes` 
@@ -257,22 +257,10 @@ Histogram Tab
 .. index:: Histogram
 
 The :guilabel:`Histogram` tab allows you to view the distribution
-of the bands or colors in your raster. It is 
-generated automaticaly when you open :guilabel:`Histogram` tab. You can 
-choose which bands to display by selecting them in the list box at the bottom 
-left of the tab. 
+of the bands or colors in your raster. It is generated automaticaly when 
+you open :guilabel:`Histogram` tab. All existing bands will be displayed 
+together. You can save the histogramm as an image with the |mActionFileSave| button. 
 
-.. %% FIXME not supported at the moment
-.. %Two different chart types are allowed:
-
-.. [label=--]
-.. %*  Bar chart
-.. %*  Line graph
-
-.. %You can define the number of chart columns to use and decide whether you want
-.. %to \checkbox{Allow approximation} or display \checkbox{out of range} values
-.. %Once you view the histogram, you'll notice that the band statistics have been
-.. %populated on the |tab| :guilabel:`metadata} tab... )`
 
 .. index:: Raster_statistics
 

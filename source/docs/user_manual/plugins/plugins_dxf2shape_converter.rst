@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _dxf2shape:
 
@@ -28,7 +26,6 @@ format. It requires the following parameters to be specified before running:
 
 .. figure:: /static/user_manual/plugins/dxf2shape_dialog.png
    :align: center
-   :width: 30em
 
    Dxf2Shape Converter Plugin
 

@@ -9,3 +9,4 @@ Documentation Guidelines
 
 	README
         substitutions
+	do_translations

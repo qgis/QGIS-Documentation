@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 *********
 Features
@@ -17,18 +15,17 @@ You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables using PostGIS,SpatiaLite and MSSQL Spatial, vector
+*  Spatially-enabled tables and views using PostGIS, SpatiaLite and MSSQL Spatial, vector
    formats supported by the installed OGR library, including ESRI shapefiles,
-   MapInfo, SDTS, GML and many more.
+   MapInfo, SDTS, GML and many more, see section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
-   Grid, JPEG, PNG and many more.
-*  SpatiaLite databases (see section :ref:`label_spatialite`)
+   Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC-compliant Web Map Service (WMS) or
    Web Feature Service (WFS), see section :ref:`working_with_ogc`.
-*  OpenStreetMap data (see section :ref:`plugins_osm`).
+*  OpenStreetMap data, see section :ref:`plugins_osm`.
 
 Explore data and compose maps
 -----------------------------
@@ -37,17 +34,17 @@ You can compose maps and interactively explore spatial data with a friendly
 GUI. The many helpful tools available in the GUI include:
 
 *  QGIS browser
-*  on the fly projection
-*  map composer
-*  overview panel
-*  spatial bookmarks
-*  identify/select features
-*  edit/view/search attributes
-*  feature labeling
-*  change vector and raster symbology
-*  add a graticule layer - now via fTools plugin
-*  decorate your map with a north arrow scale bar and copyright label
-*  save and restore projects
+*  On the fly projection
+*  Map composer
+*  Overview panel
+*  Spatial bookmarks
+*  Identify/select features
+*  Edit/view/search attributes
+*  Feature labeling
+*  Change vector and raster symbology
+*  Add a graticule layer - now via fTools plugin and as decoration
+*  Decorate your map with a north arrow scale bar and copyright label
+*  Save and restore projects
 
 Create, edit, manage and export data
 ------------------------------------
@@ -77,14 +74,17 @@ supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
 tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
-:ref:`sec_grass`).
+:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial
+analysis framework to call native and third party algorithms from QGIS, such as
+GDAL, SAGA, GRASS, fTools, ... (See Section :ref:`label_sextante`).
 
 Publish maps on the Internet
 ----------------------------
 
 QGIS can be used to export data to a mapfile and to publish them on the
 Internet using a webserver with UMN MapServer installed. QGIS can also
-be used as a WMS or WFS client, and as WMS or WFS server.
+be used as a WMS, WMS-C or WFS and WFS-T client, and as WMS or WFS server
+(see section :ref:`sec_ogc`).
 
 Extend QGIS functionality through plugins
 -----------------------------------------
@@ -97,34 +97,31 @@ Core Plugins
 ............
 
 #.  Add Delimited Text Layer (Loads and displays delimited text files
-    containing x,y coordinates).
+    containing x,y coordinates)
+#.  Coordinate Capture (Capture mouse coordinates in different CRS)
 #.  DB Manager (Exchange, edit and view layers and tables; execute SQL queries)
-#.  Coordinate Capture (Capture mouse coordinates in different CRS).
-#.  Decorations (Copyright Label, North Arrow and Scale bar).
-#.  Diagram Overlay (Placing diagrams on vector layer).
-#.  Displacement Plugin (Handle point displacement in case points have the same
-    position).
-#.  Dxf2Shp Converter (Convert DXF to Shape).
-#.  GPS Tools (Loading and importing GPS data).
-#.  GRASS (GRASS GIS integration).
-#.  GDALTools (Integrate GDAL Tools into QGIS).
-#.  Georeferencer GDAL (Adding projection information to raster using GDAL).
-#.  Heatmap tool (Generating raster heatmaps from point data).
-#.  Interpolation plugin (interpolate based on vertices of a vector layer).
-#.  Mapserver Export (Export QGIS project file to a MapServer map file).
-#.  Offline Editing (Allow offline editing and synchronizing with database).
-#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data).
-#.  Oracle Spatial GeoRaster support.
-#.  Plugin Installer (Download and install QGIS python plugins).
-#.  Raster terrain analysis (Raster based terrain analysis).
-#.  Road graph plugin (Shortest Path network analysis).
-#.  SPIT (Import Shapefile to PostgreSQL/PostGIS).
-#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database).
-#.  Spatial Query Plugin (make spatial queries on vector layers).
-#.  Terrain Analysis Plugin.
-#.  WFS Plugin (Add WFS layers to QGIS canvas).
-#.  eVIS (Event Visualization Tool).
-#.  fTools (Tools for vector data analysis and management).
+#.  Diagram Overlay (Placing diagrams on vector layer)
+#.  Dxf2Shp Converter (Convert DXF to Shape)
+#.  GPS Tools (Loading and importing GPS data)
+#.  GRASS (GRASS GIS integration)
+#.  GDALTools (Integrate GDAL Tools into QGIS)
+#.  Georeferencer GDAL (Adding projection information to raster using GDAL)
+#.  Heatmap tool (Generating raster heatmaps from point data)
+#.  Interpolation plugin (interpolate based on vertices of a vector layer)
+#.  Mapserver Export (Export QGIS project file to a MapServer map file)
+#.  Offline Editing (Allow offline editing and synchronizing with database)
+#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data)
+#.  Oracle Spatial GeoRaster support
+#.  Plugin Installer (Download and install QGIS python plugins)
+#.  Raster terrain analysis (Raster based terrain analysis)
+#.  Road graph plugin (Shortest Path network analysis)
+#.  SPIT (Import Shapefile to PostgreSQL/PostGIS)
+#.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
+#.  Zonal statictics plugin (Calculate count, sum, mean of raster for each polygon
+    of a vector layer)
+#.  Spatial Query plugin (Makes spatial queries on vector layers)
+#.  eVIS (Event Visualization Tool)
+#.  fTools (Tools for vector data analysis and management)
 
 External Python Plugins
 ........................
@@ -139,114 +136,97 @@ What's new in the version 1.8
 
 Please note that this is a release in our 'cutting edge' release series. As such
 it contains new features and extends the programmatic interface over QGIS 1.0.x
-and QGIS 1.6.0. We recommend that you use this version over previous releases.
+and QGIS 1.7.0. We recommend that you use this version over previous releases.
 
-This release includes over 277 bug fixes and many new features and enhancements.
+This release includes hundreds of bug fixes and many new features and enhancements
+that will be described in this manual.
 
-**Symbology labels and diagrams**
+**QGIS Browser**
 
-* New symbology now used by default.
-* Diagram system that uses the same smart placement system as labeling-ng.
-* Export and import of styles (symbology-ng).
-* Labels for rules in rule-based renderers.
-* Font marker can have an X,Y offset.
-* Line symbology:
+A stand alone app and a new panel in QGIS. The browser lets you easily navigate
+your file system and connection based (PostGIS, WFS etc.) datasets, preview them
+and drag and drop items into the canvas.
 
-  * Option to put marker on the central point of a line.
-  * Option to put marker only on first/last vertex of a line.
-  * Allow the marker line symbol layer to draw markers on each vertex.
+**DB Manager**
 
-* Polygon symbology:
+The DB manager is now officially part of QGIS core. You can drag layers from the
+QGIS Browser into DB Manager and it will import your layer into your spatial
+database. Drag and drop tables between spatial databases and they will get
+imported. You can use the DB Manager to execute SQL queries against your spatial
+database and then view the spatial output for queries by adding the results to
+QGIS as a query layer. You can also create, edit, delete, and empty tables, and
+move them to another schema.
 
-  * Rotation for svg fills.
-  * Added 'centroid fill' symbol layer which draws a marker on polygon's centroid.
-  * Allow the line symbol layers to be used for outline of polygon (fill) symbols.
+**Terrain Analysis Plugin:**
 
-* Labels:
+A new core plugin was added for doing terrain analysis (slope, aspect, hillshade,
+relief and ruggedness index).
 
-  * Ability to set label distance in map units.
-  * Move/rotate/change label edit tools to interactively change data defined
-    label properties.
+**New symbol layer types**
 
-* New Tools:
+* Line Pattern Fill
+* Point Pattern Fill
+* Ellipse renderer (render ellipse and also rectangles, triangles, crosses)
 
-  * Added GUI for gdaldem.
-  * Added field calculator with functions like $x, $y and $perimeter.
-  * Added 'Lines to polygons' tool to vector menu.
-  * Added voronoi polygon tool to Vector menu.
+**New plugin repository**
 
-**User interface updates**
+Note that the old repository is now no longer supported by default; plugin authors
+are kindly requested to move their plugins to the new repository. Get the QGIS
+Plugins list at http://plugins.qgis.org/plugins/
 
-* Allow managing missing layers in a list.
-* Zoom to group of layers.
-* 'Tip of the day' on startup. You can en/disable tips in the options panel.
-* Better organisation of menus, separate database menu added.
-* Add ability to show number of features in legend classes. Accessible via
-  right-click legend menu.
-* General clean-ups and usability improvements.
+**More new features**
 
-**CRS Handling**
-
-* Show active crs in status bar.
-* Assign layer CRS to project (in the legend context menu).
-* Select default CRS for new projects.
-* Allow setting CRS for multiple layers at once.
-* Default to last selection when prompting for CRS.
-
-**Rasters**
-
-* Added AND and OR operator for raster calculator.
-* On-the-fly reprojection of rasters added.
-* Proper implementation of raster providers.
-* Added raster toolbar with histogram stretch functions.
-
-**Providers and Data Handling**
-
-* New SQLAnywhere vector provider.
-* Table join support.
-* Feature form updates.
-* Make NULL value string representation configurable.
-* Fix feature updates in feature form from attribute table.
-* Add support for NULL values in value maps (comboboxes).
-* Use layer names instead of ids in drop down list when loading value maps from
-  layers.
-* Support feature form expression fields: line edits on the form which name
-  prefix "expr\_" are evaluated. Their value is interpreted as field calculator
-  string and replaced with the calculated value.
-* Support searching for NULL in attribute table.
-* Attribute editing improvements
-* Improved interactive attribute editing in table (adding/deleting features,
-  attribute update).
-* Allow adding of geometryless features.
-* Fixed attribute undo/redo.
-* Improved attribute handling.
-* Optionally re-use entered attribute values for next digitized feature.
-* Allow merging/assigning attribute values to a set of features.
-* Allow OGR "save as" without attributes (for eg. DGN/DXF).
-
-**Api and Developer Centric**
-
-* Refactored attribute dialog calls to QgsFeatureAttribute.
-* Added QgsVectorLayer::featureAdded signal.
-* Layer menu function added.
-* Added option to load c++ plugins from user specified directories. Requires
-  application restart to activate.
-* Completely new geometry checking tool for fTools. Significantly faster, more
-  relevant error messages, and now supports zooming to errors. See the new
-  QgsGeometry.validateGeometry function.
-
-**QGIS Server**
-
-* Ability to specify wms service capabilities in the properties section of the
-  project file (instead of wms_metadata.xml file).
-* Support for wms printing with GetPrint-Request.
-
-**Plugins**
-
-* Support for icons of plugins in the plugin manager dialog.
-* Removed quickprint plugin - use easyprint plugin rather from plugin repo.
-* Removed ogr convertor plugin - use 'save as' context menu rather.
-
-**Printing**
-
-* Undo/Redo support for the print composer.
+* Support for nesting projects within other projects to embed content from other
+  project files
+* Layer grouping: Option to add layers to selected or active group
+* Message log: Lets you keep an eye on the messages QGIS generates during loading
+  and operation
+* GUI Customization: Allows setting up simplified QGIS interface by hiding various
+  components of main window and widgets in dialogs
+* Action Tool is now accessible from the map tools toolbar and allows you to
+  click on a vector feature and execute an action
+* New scale selector: select from a list of predefined scales
+* Pan To Selected tool: Pans the map to selected feature(s); does not change the
+  zoom level
+* Copy and paste styles between layers
+* Updated CRS selector dialog
+* Define Legend-independent drawing order
+* MSSQL Spatial Support - you can now connect to your Microsoft SQL Server spatial
+  databases using QGIS
+* Print Composers allows to have multiple lines on legend items using a specified
+  character
+* Expression based labeling
+* Heatmap Plugin - a new core plugin has been added for generating raster heatmaps
+  from point data
+* The GPS live tracking user interface was overhauled and many fixes and
+  improvements were added to it
+* The menu was re-organised a little - we now have separate menus for Vector,
+  Raster, Web and many plugins were updated to place their menus in the new
+  Vector, Raster and Web top level menus
+* Offset Curves - a new digitising tool for creating offset curves was added
+* New tools in the Vector menu to Densify geomtries and Build spatial index
+* Export/add geometry column tool can export info using layer CRS, project CRS
+  or ellipsoidal measurements
+* Model/view based tree for rules in rule-based renderer
+* Improvements in Spatial Bookmarks
+* New Plugin metadata in metadata.txt
+* Refactored postgres data provider: support for arbitrary key (including
+  non-numeric and multi column), support for requesting a certain geometry type
+  and/or srid in QgsDataSourceURI
+* Added gdal_fillnodata to GDALTools plugin
+* Support for PostGIS TopoGeometry datatype
+* Python bindings for vector field symbol layer and general updates to the Python
+  bindings
+* Added a Benchmark program
+* Added Row cache for attribute table
+* UUID generation widget for attribute table
+* Added support of editable views in SpatiaLite databases
+* added expression based widget in field calculator
+* Creation of event layers in analysis lib using linear referencing
+* Load/save layer styles in the new symbology renderer from/to SLD document
+* QGIS Server can act as WFS Server
+* WFS Client support is now a core feature in QGIS
+* Option to skip WKT geometry when copying from attribute table
+* Support loading of zipped and gzipped layers
+* The QGIS test suite now passes all tests on major platforms and nightly tests
+* You can set tile size for WMS layers

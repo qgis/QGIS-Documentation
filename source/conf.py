@@ -116,9 +116,13 @@ rst_epilog = """
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png
 .. |tab| image:: /static/common/tab.png
+.. |dem_analysis| image:: /static/common/dem.png
+   :width: 1.5em
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
 .. |icon_dbmanager| image:: /static/common/dbmanager.png
+   :width: 1.5em
+.. |icon_zonal_statistics| image:: /static/common/raster-stats.png
    :width: 1.5em
 .. |oracle_raster| image:: /static/common/oracle_raster.png
    :width: 1.5em
@@ -161,6 +165,8 @@ rst_epilog = """
 .. |offline_editing_copy| image:: /static/common/offline_editing_copy.png
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
+   :width: 1.5em
+.. |mAction| image:: /static/common/mAction.png
    :width: 1.5em
 .. |mActionAddRasterLayer| image:: /static/common/mActionAddRasterLayer.png
    :width: 1.5em
@@ -272,7 +278,9 @@ rst_epilog = """
 .. |mActionCopySelected| image:: /static/common/mActionCopySelected.png
    :width: 1.5em
 .. |mActionZoomToSelected| image:: /static/common/mActionZoomToSelected.png
-   :width: 1em
+   :width: 1.5em
+.. |mActionZoomActual| image:: /static/common/mActionZoomActual.png
+   :width: 1.5em
 .. |mActionNewAttribute| image:: /static/common/mActionNewAttribute.png
    :width: 1.5em
 .. |mActionCalculateField| image:: /static/common/mActionCalculateField.png
@@ -404,7 +412,7 @@ rst_epilog = """
    :width: 2.5em
 .. |plugin_installer| image:: /static/common/plugin_installer.png
    :width: 1.5em
-.. |gpstrack_barchart| image:: /static/common//gpstrack_barchart.png
+.. |gpstrack_barchart| image:: /static/common/gpstrack_barchart.png
    :width: 1.5em
 .. |gpstrack_polarchart| image:: /static/common/gpstrack_polarchart.png
    :width: 1.5em
@@ -415,79 +423,79 @@ rst_epilog = """
 .. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
 .. |matrix| image:: /static/common/matrix.png
-   :width: 3em
+   :width: 1.5em
 .. |sum_lines| image:: /static/common/sum_lines.png
-   :width: 3em
+   :width: 1.5em
 .. |sum_points| image:: /static/common/sum_points.png
-   :width: 3em
+   :width: 1.5em
 .. |unique| image:: /static/common/unique.png
-   :width: 3em
+   :width: 1.5em
 .. |basic_statistics| image:: /static/common/basic_statistics.png
-   :width: 3em
+   :width: 1.5em
 .. |neighbor| image:: /static/common/neighbour.png
-   :width: 3em
+   :width: 1.5em
 .. |mean| image:: /static/common/mean.png
-   :width: 3em
+   :width: 1.5em
 .. |intersections| image:: /static/common/intersections.png
-   :width: 3em
+   :width: 1.5em
 .. |random_selection| image:: /static/common/random_selection.png
-   :width: 3em
+   :width: 1.5em
 .. |sub_selection| image:: /static/common/sub_selection.png
-   :width: 3em
+   :width: 1.5em
 .. |random_points| image:: /static/common/random_points.png
-   :width: 3em
+   :width: 1.5em
 .. |regular_points| image:: /static/common/regular_points.png
-   :width: 3em
+   :width: 1.5em
 .. |vector_grid| image:: /static/common/vector_grid.png
-   :width: 3em
+   :width: 1.5em
 .. |select_location| image:: /static/common/select_location.png
-   :width: 3em
+   :width: 1.5em
 .. |layer_extent| image:: /static/common/layer_extent.png
-   :width: 3em
+   :width: 1.5em
 .. |convex_hull| image:: /static/common/convex_hull.png
-   :width: 3em
+   :width: 1.5em
 .. |buffer| image:: /static/common/buffer.png
-   :width: 3em
+   :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
-   :width: 3em
+   :width: 1.5em
 .. |union| image:: /static/common/union.png
-   :width: 3em
+   :width: 1.5em
 .. |sym_difference| image:: /static/common/sym_difference.png
-   :width: 3em
+   :width: 1.5em
 .. |clip| image:: /static/common/clip.png
-   :width: 3em
+   :width: 1.5em
 .. |difference| image:: /static/common/difference.png
-   :width: 3em
+   :width: 1.5em
 .. |dissolve| image:: /static/common/dissolve.png
-   :width: 3em
+   :width: 1.5em
 .. |check_geometry| image::  /static/common/check_geometry.png
-   :width: 3em
+   :width: 1.5em
 .. |export_geometry| image:: /static/common/export_geometry.png
-   :width: 3em
+   :width: 1.5em
 .. |centroids| image:: /static/common/centroids.png
-   :width: 3em
+   :width: 1.5em
 .. |delaunay| image:: /static/common/delaunay.png
-   :width: 3em
+   :width: 1.5em
 .. |simplify| image:: /static/common/simplify.png
-   :width: 3em
+   :width: 1.5em
 .. |multi_to_single| image:: /static/common/multi_to_single.png
-   :width: 3em
+   :width: 1.5em
 .. |single_to_multi| image:: /static/common/single_to_multi.png
-   :width: 3em
+   :width: 1.5em
 .. |to_lines| image:: /static/common/to_lines.png
-   :width: 3em
+   :width: 1.5em
 .. |extract_nodes| image:: /static/common/extract_nodes.png
-   :width: 3em
+   :width: 1.5em
 .. |export_projection| image:: /static/common/export_projection.png
-   :width: 3em
+   :width: 1.5em
 .. |define_projection| image:: /static/common/define_projection.png
-   :width: 3em
+   :width: 1.5em
 .. |join_location| image:: /static/common/join_location.png
-   :width: 3em
+   :width: 1.5em
 .. |split_layer| image:: /static/common/split_layer.png
-   :width: 3em
+   :width: 1.5em
 .. |merge_shapes| image:: /static/common/merge_shapes.png
-   :width: 3em
+   :width: 1.5em
 .. |event_browser| image:: /static/common/event_browser.png
    :width: 1.5em
 .. |event_id| image:: /static/common/event_id.png
@@ -502,7 +510,7 @@ rst_epilog = """
    :width: 1.5em
 .. |qgissplash| image:: /static/common/splash.png
 .. |gentlelogo| image:: /static/common/qgislogo.png
-   :width: 3em
+   :width: 1.5em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_mapset| image:: /static/common/grass_new_mapset.png
@@ -611,6 +619,55 @@ rst_epilog = """
    :width: 1.5em
 .. |gdal| image:: /static/common/gdal.png
    :width: 1.5em
+.. |gdal_warp| image:: /static/common/warp.png
+   :width: 1.5em
+.. |gdal_assign_projection| image:: /static/common/projection-add.png
+   :width: 1.5em
+.. |gdal_extract_projection| image:: /static/common/projection-export.png
+   :width: 1.5em
+.. |gdal_polygonize| image:: /static/common/polygonize.png
+   :width: 1.5em
+.. |gdal_translate| image:: /static/common/translate.png
+   :width: 1.5em
+.. |gdal_dem| image:: /static/common/gdal_dem.png
+   :width: 1.5em
+.. |gdal_about| image:: /static/common/about.png
+   :width: 1.5em
+.. |gdal_contour| image:: /static/common/contour.png
+   :width: 1.5em
+.. |gdal_edit| image:: /static/common/edit.png
+   :width: 1.5em
+.. |gdal_fillnodata| image:: /static/common/fillnodata.png
+   :width: 1.5em
+.. |gdal_grid| image:: /static/common/grid.png
+   :width: 1.5em
+.. |gdal_merge| image:: /static/common/merge.png
+   :width: 1.5em
+.. |gdal_nearblack| image:: /static/common/nearblack.png
+   :width: 1.5em
+.. |gdal_proximity| image:: /static/common/proximity.png
+   :width: 1.5em
+.. |gdal_raster-clip| image:: /static/common/raster-clip.png
+   :width: 1.5em
+.. |gdal_raster-overview| image:: /static/common/raster-overview.png
+   :width: 1.5em
+.. |gdal_raster-paletted| image:: /static/common/raster-paletted.png
+   :width: 1.5em
+.. |gdal_raster-rgb| image:: /static/common/raster-rgb.png
+   :width: 1.5em
+.. |gdal_rasterize| image:: /static/common/rasterize.png
+   :width: 1.5em
+.. |gdal_reset| image:: /static/common/reset.png
+   :width: 1.5em
+.. |gdal_sieve| image:: /static/common/sieve.png
+   :width: 1.5em
+.. |gdal_tileindex| image:: /static/common/tileindex.png
+   :width: 1.5em
+.. |gdal_tooltip| image:: /static/common/tooltip.png
+   :width: 1.5em
+.. |gdal_vrt| image:: /static/common/vrt.png
+   :width: 1.5em
+
 .. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png

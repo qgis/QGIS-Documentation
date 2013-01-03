@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _ftools: 
 
@@ -23,10 +21,6 @@ several useful Data Management Tools.
 .. _`ftools_function`:
 
 **fTools functions**
-
-table_ftools_1_ through table_ftools_5_ list 
-the functions available via the fTools plugin, along with a brief description 
-of each function. 
 
 .. not available anymore!! should be described in this manual from older release..
 .. For further information on an individual fTools function, 

@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _working_with_ogc:
 
@@ -148,7 +146,6 @@ for future QGIS sessions.
 Loading WMS Layers
 -------------------
 
-
 Once you have successfully filled in your parameters you can select the
 **[Connect]** button to retrieve the capabilities of the selected
 server. This includes the Image encoding, Layers, Layer Styles and
@@ -201,8 +198,8 @@ The Options field provides a text-field where you can add a :guilabel:`Layer nam
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
-Below the layer name you find the :guilabel:`Tile size`, which makes it possible to
-produce rasters with a high resolution for e.g. printing purposes.
+Below the layer name you can define :guilabel:`Tile size`, if you want to set tile 
+sizes (eg. 256x256) to split up the WMS request into multiple requests.
 
 The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
 the server to query.
@@ -258,10 +255,9 @@ capability of the WMS server. You may notice that the *x* changes in the
 *Coordinate Reference System (x available)* header as you select and
 deselect layers from the :guilabel:`Layers section` tab.
 
-To choose a CRS, select **[Change...]** and a dialog similar to
-:ref:`figure_projection_2` in :ref:`label_projstart` will appear.
-The main difference with the WMS version of the screen is that only
-those CRSs supported by the WMS Server will be shown.
+To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3 
+in :ref:`label_projstart` will appear. The main difference with the WMS version of 
+the screen is that only those CRSs supported by the WMS Server will be shown.
 
 .. tip:: **WMS Projections**
    

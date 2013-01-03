@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# bc19c1db10554fd0b1cea9e59fa8fb97
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:11
+msgid "Geometry Handling"
+msgstr ""
+
+# ddbdc06c0f834ca4adc582c8e731a440
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:13
+msgid ""
+"Points, linestrings, polygons that represent a spatial feature are commonly "
+"referred to as geometries. In QGIS they are represented with :class:"
+"`QgsGeometry` class. All possible geometry types are nicely shown in `JTS "
+"discussion page <http://www.vividsolutions.com/jts/discussion."
+"htm#spatialDataModel>`_."
+msgstr ""
+
+# 0687f23a7793470f9bf108901c658de8
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:18
+msgid ""
+"Sometimes one geometry is actually a collection of simple (single-part) "
+"geometries. Such a geometry is called multi-part geometry. If it contains "
+"just one type of simple geometry, we call it multi-point, multi-linestring "
+"or multi-polygon. For example, a country consisting of multiple islands can "
+"be represented as a multi-polygon."
+msgstr ""
+
+# c7a7ff2e9a6f4ca1b433494d047feafb
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:24
+msgid ""
+"The coordinates of geometries can be in any coordinate reference system "
+"(CRS). When fetching features from a layer, associated geometries will have "
+"coordinates in CRS of the layer."
+msgstr ""
+
+# 23df6212ddad411ba96ddc02c8924662
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:31
+msgid "Geometry Construction"
+msgstr ""
+
+# 529efd132ea3433681544ad83b78ebc8
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:33
+msgid "There are several options how to create a geometry:"
+msgstr ""
+
+# 1ee5b6d30cad4515a220e5289ec34a28
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:35
+msgid "from coordinates::"
+msgstr ""
+
+# 75ac62f90b31433d884b39b7c61bf478
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:41
+msgid "Coordinates are given using :class:`QgsPoint` class."
+msgstr ""
+
+# 34552832762240d8918f0b7984691df5
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:43
+msgid ""
+"Polyline (Linestring) is represented by a list of points. Polygon is "
+"represented by a list of linear rings (i.e. closed linestrings). First ring "
+"is outer ring (boundary), optional subsequent rings are holes in the polygon."
+msgstr ""
+
+# 21fbce774fab426fb19ca9e5b0d406b3
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:47
+msgid ""
+"Multi-part geometries go one level further: multi-point is a list of points, "
+"multi-linestring is a list of linestrings and multi-polygon is a list of "
+"polygons."
+msgstr ""
+
+# a07b61519c2e47d5a97acfb49d3aeec8
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:51
+msgid "from well-known text (WKT)::"
+msgstr ""
+
+# 52e068e069cc406c8972484a03b21234
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:55
+msgid "from well-known binary (WKB)::"
+msgstr ""
+
+# 55e8c284cde24ca1b5f30c5611160d85
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:64
+msgid "Access to Geometry"
+msgstr ""
+
+# 0fb2691948634849b23d6d23a0985862
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:66
+msgid ""
+"First, you should find out geometry type, :func:`wkbType` method is the one "
+"to use --- it returns a value from QGis.WkbType enumeration::"
+msgstr ""
+
+# 9f4961f3da3a480d9a125463413ae477
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:78
+msgid ""
+"As an alternative, one can use :func:`type` method which returns a value "
+"from QGis.GeometryType enumeration. There is also a helper function :func:"
+"`isMultipart` to find out whether a geometry is multipart or not."
+msgstr ""
+
+# 119491367aa44dc79a7f3e21d7ffa2b3
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:82
+msgid ""
+"To extract information from geometry there are accessor functions for every "
+"vector type. How to use accessors::"
+msgstr ""
+
+# a4bd1124e1654f429f264c65cd239d95
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:92
+msgid ""
+"Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
+"objects, the values are accessible with :func:`x` and :func:`y` methods."
+msgstr ""
+
+# ac216a12a97d4cfdb6ac1ff469b40f14
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:95
+msgid ""
+"For multipart geometries there are similar accessor functions: :func:"
+"`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
+msgstr ""
+
+# 0498ac24264748089384916855c212c9
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:101
+msgid "Geometry Predicates and Operations"
+msgstr ""
+
+# 9f8d665424b8440cb67a4fdc601f3039
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:103
+msgid ""
+"QGIS uses GEOS library for advanced geometry operations such as geometry "
+"predicates (:func:`contains`, :func:`intersects`, ...) and set operations (:"
+"func:`union`, :func:`difference`, ...)"
+msgstr ""
+
+# e49060811ca642249aa2d3c81238655e
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:108
+msgid "**TODO:**"
+msgstr ""
+
+# f658b2b93c0d4900bb4022e025da4f57
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:110
+msgid ":func:`area`, :func:`length`, :func:`distance`"
+msgstr ""
+
+# 995aa31ee45d4a01a20a183178d0128b
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:111
+msgid ":func:`transform`"
+msgstr ""
+
+# 2578394ac232452eb9dbb494b340eb7b
+#: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:112
+msgid "available predicates and set operations"
+msgstr ""

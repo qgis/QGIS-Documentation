@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. index::
    single:plugins
@@ -99,35 +97,36 @@ plugins are automatically loaded.
 Loading an external QGIS Plugin
 --------------------------------
 
-
 External QGIS plugins are written in Python. They are by default stored in 
-either the 'Official' or 'User contributed' QGIS Repositories, or in various 
-other external repositories maintained by individual authors. These lists are 
-available automatically from the :guilabel:`Python Plugin installer` 
-via :menuselection:`Fetch Python Plugins...`.
+either the 'Official' QGIS Repository, or in various other external repositories 
+maintained by individual authors. The 'Official' QGIS Repository is available 
+automatically from the :guilabel:`Python Plugin installer` via 
+:menuselection:`Fetch Python Plugins...`.
 
 Detailed documentation about the usage, minimum QGIS version, homepage, authors,
-and other important information are provided with the external plugins themselves
-and is not included in this manual [#]_ [#]_. 
+and other important information are provided for the 'Official' QGIS Repository 
+at http://plugins.qgis.org/plugins/. For other external repositories, they might 
+be available with the external plugins themselves. In general it is not included 
+in this manual [#]_ [#]_. 
 
-Currently (at the time of testing version 1.8 of QGIS) there are over 90 
-external plugins available from thirteen listed repositories. Some of these 
-plugins offer functionality that will be required by many users (for example: 
-providing the user with the ability to view and edit OpenStreetMap data, or to 
-add GoogleMap layers) while others offer very specialized functions (for 
-example: Calculate economic pipe diameters for water supply networks).
+Currently there are over 150 external plugins available from the 'Official' 
+QGIS Repository. Some of these plugins offer functionality that will be 
+required by many users (for example: providing the user with the ability to 
+view and edit OpenStreetMap data, or to add GoogleMap layers) while others offer 
+very specialized functions (for example: Calculate economic pipe diameters for 
+water supply networks).
 
 It is, however, quite straightforward to search through all the available 
 external plugins by providing keywords, choosing a named repository and/or 
 filtering on the status of plugins (currently installed or uninstalled in your 
-system). Searching and filtering is done from the QGIS Python Plugin Installer (see figure_plugins_2_).
+system). Searching and filtering is done from the QGIS Python Plugin Installer 
+(see figure_plugins_2_).
 
 .. tip:: **Add more repositories**
    
-   To add the 'User contributed' repository and/or several external author 
-   repositories, open the Plugin Installer 
+   To add external author repositories, open the Plugin Installer 
    (:menuselection:`Plugins --> Fetch Python Plugins`), go to the tab 
-   :guilabel:`Repositories`, and click **[Add 3rd party repositories]**.
+   :guilabel:`Repositories`, and click **[Add]**.
    If you do not want one or more of the added repositories, they can be 
    disabled via the **[Edit...]** button, or completely removed with the 
    **[Delete]** button.
@@ -277,6 +276,6 @@ By default, QGIS supports PostGIS layers and disk-based data stores supported by
 Data Provider plugins are registered automatically by QGIS at startup.
 They are not managed by the Plugin Manager but used behind the scenes when a data type is added as a layer in QGIS.
 
-.. [#] Updates of core plugins may be available in this repository as external overlays.
+.. [#] Updates of core python plugins may be available in this repository as external overlays.
 
 .. [#] fTools, Mapserver Export, and the Plugin Installer are Python plugins, but they are also part of the QGIS sources, and are automatically loaded and enabled inside the QGIS Plugin Manager (see Section :ref:`load_external_plugin`).

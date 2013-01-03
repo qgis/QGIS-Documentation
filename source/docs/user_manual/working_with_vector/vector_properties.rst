@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _vector_properties_dialog:
 
@@ -147,12 +145,12 @@ and a color ramp \- they will set the colors for symbols appropriately.
 In the :guilabel:`Style` tab you can choose one of the four renderers: single 
 symbol, categorized, graduated, rule-based and point displacement. For each 
 data type (points, lines and polygons) vector symbol layer types are 
-available (see :ref:`vector_symbol_types`). 
+available (see vector_symbol_types_). 
 Depending on the chosen renderer, the symbology tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
 button which gives access to the Style Manager
-(see Section vector_style_manager_ ). The Style Manager allows you to 
+(see Section vector_style_manager_). The Style Manager allows you to 
 edit and remove existing symbols and add new ones.
 
 
@@ -411,8 +409,10 @@ dialog, there are shown the settings applicable to the single symbol layer
 selected in the symbol layer list. The most important is the 
 'Symbol Layer Type' combo box, which allows you to choose the layer type. The 
 available options depend on the layer type (Point, Line, Polygon). The symbol 
-layer type options are described in section :ref:`vector_symbol_types`.
-You can also change the symbol layer properties in the right part of the dialog. For example if you have chosen an SVG marker for a point layer it is now possible to change its color using the :guilabel:`Color` menu (see figure_symbology_10_).
+layer type options are described in section vector_symbol_types_.
+You can also change the symbol layer properties in the right part of the dialog. 
+For example if you have chosen an SVG marker for a point layer it is now 
+possible to change its color using the :guilabel:`Color` menu (see figure_symbology_10_).
 
 .. _figure_symbology_9:
 
@@ -484,7 +484,7 @@ Old Symbology
 .. note::
    |qg| 1.8. still supports the usage of the old symbology, although it is 
    recommended to switch to the new symbology, described in section 
-   :ref:`vector_new_symbology`, because the old symbology will be removed in 
+   vector_new_symbology_, because the old symbology will be removed in 
    one of the next releases.
 
 If you want or need to switch back to the old symbology you can click on 
@@ -811,6 +811,7 @@ third-party plugin called Table Manager.
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :width: 40 em
+   :align: center
 
    Dialog to select an edit widget for an attribute column |nix|
 
@@ -846,6 +847,10 @@ widgets. These widgets are:
    be used.
 *  **Calendar**: Opens a calendar widget to enter a date. Column type must be 
    text.
+*  **Value Relation**: Offers values from a related table in a combobox. You can 
+   select layer, key column and value column.
+*  **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers) 
+   field, if empty. 
 
 
 .. _vectorgeneraltab:
@@ -854,16 +859,32 @@ General Tab
 -----------
 
 |general| The :guilabel:`General` tab is essentially like that of the raster dialog. 
-It allows you to change the display name, set scale dependent rendering 
-options, create a spatial index of the vector file (only for OGR supported 
-formats and PostGIS) and view or change the projection of the specific vector 
-layer. Additionally it is possible to define a certain Edit User Interface 
-for the vector layer written with the Qt Creator IDE and tools at 
-http://qt.nokia.com/products/developer-tools.
+There a several options available:
 
-The **[Query Builder]** button allows you to create a subset of the features 
-in the layer - but currently this button is only available when you open the 
-attribute table and select the |browsebutton| button next to Advanced search.
+* Change the display name of the layer.
+* Set a display field to be used for the ``Identify Results`` dialog. 
+* Define a certain Edit User Interface for the vector layer written with the Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/.
+* Create a ``Spatial Index`` (only for OGR supported formats and PostGIS).
+* Add an ``Init function`` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
+* ``Update Extents`` information for a layer.
+* View or change the projection of the specific vector layer, clicking on ``Specify CRS``.
+
+Furthermore you can activate and set |checkbox| :menuselection:`Use scale 
+dependent rendering`, define provider specific options (e.g. encoding) and with the 
+**[Query Builder]** button you can create a subset of the features in the layer 
+that will be visualized (also refer to section :ref:`sec_selection_query`). 
+
+.. _figure_general_vect:
+
+.. only:: html
+
+   **Figure General 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/vector_general_tab.png
+   :width: 40 em
+   :align: center
+
+   General tab in vector layers properties dialog |nix|
 
 .. _vectormetadatatab:
 
@@ -875,7 +896,23 @@ including specifics about the type and location, number of features, feature
 type, and the editing capabilities. The :guilabel:`Extents` section, providing 
 layer extent information, and the :guilabel:`Layer Spatial Reference System` 
 section, providing information about the CRS of the layer. This is a quick way 
-to get information about the layer, but is not yet editable.
+to get information about the layer. 
+
+Additionally you can add/edit a title for the layer and some abtract information. 
+These information will be saved in the QGIS project file for following sessions 
+and will be used for QGIS server. 
+
+.. _figure_metadata_vect:
+
+.. only:: html
+
+   **Figure Metadata 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+   :width: 40 em
+   :align: center
+
+   Metadata tab in vector layers properties dialog |nix|
 
 Actions Tab
 -----------
@@ -883,12 +920,32 @@ Actions Tab
 |action| |qg| provides the ability to perform an action based on the attributes of a 
 feature. This can be used to perform any number of actions, for example, 
 running a program with arguments built from the attributes of a feature or 
-passing parameters to a web reporting tool.
+passing parameters to a web reporting tool. 
+
+.. _figure_actions_1:
+
+.. only:: html
+
+   **Figure Actions 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/action_dialog.png
+   :width: 40 em
+   :align: center
+
+   Overview action dialog with some sample actions |nix|
 
 Actions are useful when you frequently want to run an external application or 
-view a web page based on one or more values in your vector layer. An example 
-is performing a search based on an attribute value. This concept is used in 
-the following discussion.
+view a web page based on one or more values in your vector layer. They are 
+devided into 6 types and can be used like this:
+
+* Generic, Mac, Windows and Unix actions start an external process,
+* Python actions execute a python expression,
+* Generic and Python actions are visible everywhere,
+* Mac, Windows and Unix actions are visible only on the respective platform (ie. you can define three 'Edit' actions to open an editor and the users can only see and execute the one 'Edit' action for their platform to run the editor).
+
+There are several examples included in the dialog. You can load them clicking 
+on **[Add default actions]**. An example is performing a search based on an 
+attribute value. This concept is used in the following discussion.
 
 .. index:: Actions, Attribute_Actions
 
@@ -897,7 +954,7 @@ the following discussion.
 Attribute actions are defined from the vector :guilabel:`Layer Properties` 
 dialog. To :index:`define an action`, open the vector 
 :guilabel:`Layer Properties` dialog and click on the :guilabel:`Actions` tab. 
-Provide a descriptive name for the action. The action itself must contain 
+Select Generic as Type and provide a descriptive name for the action. The action itself must contain 
 the name of the application that will be executed when the action is invoked. 
 You can add one or more attribute field values as arguments to the application.
 When the action is invoked any set of characters that start with a \% 
@@ -945,13 +1002,14 @@ the value of the selected field in the identify results or attribute table.
 
 **Using Actions**
 
-Actions can be invoked from either the :guilabel:`Identify Results` dialog or 
-an :guilabel:`Attribute Table` dialog (recall that these dialogs can be opened 
-by clicking |mActionIdentify| :sup:`Identify Features` or |mActionOpenTable| 
-:sup:`Open Attribute Table`). To invoke an action, right click on the record 
-and choose the action from the popup menu. Actions are listed in the popup 
-menu by the name you assigned when defining the actions. Click on the action 
-you wish to invoke.
+Actions can be invoked from either the :guilabel:`Identify Results` dialog, 
+an :guilabel:`Attribute Table` dialog or from :guilabel:`Run Feature Action` 
+(recall that these dialogs can be opened by clicking |mActionIdentify| 
+:sup:`Identify Features` or |mActionOpenTable| :sup:`Open Attribute Table` or 
+|mAction| :sup:`Run Feature Action`). To invoke an action, right 
+click on the record and choose the action from the popup menu. Actions are 
+listed in the popup menu by the name you assigned when defining the actions. 
+Click on the action you wish to invoke.
 
 If you are invoking an action that uses the \%\% notation, right-click on the 
 field value in the :guilabel:`Identify Results` dialog or the 
@@ -1025,11 +1083,11 @@ We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and 
 identify a lake. In the result box you'll now see that our action is visible:
 
-.. _figure_actions_1:
+.. _figure_actions_2:
 
 .. only:: html
 
-   **Figure Actions 1:** 
+   **Figure Actions 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
@@ -1150,10 +1208,10 @@ Additionally the add vector join dialog allows to:
 
 .. _`sec_diagram`:
 
-Diagram Tab
------------
+Diagrams Tab
+------------
 
-|diagram| The :guilabel:`Diagram` tab allows you to add a graphic overlay to a vector 
+|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a vector 
 layer (see figure_diagrams_1_).
 
 .. _figure_diagrams_1:
@@ -1167,11 +1225,16 @@ layer (see figure_diagrams_1_).
    Vector properties dialog with diagram tab |nix|
 
 The current core implementation of diagrams provides support for piecharts 
-and text diagrams, and for linear scaling of the diagram size according to 
-a classification attribute. The placement of the diagrams interacts with the 
-new labeling. We will demonstrate an example and overlay the alaska boundary 
-layer a piechart diagram showing some temperature data from a climate vector 
-layer. Both vector layers are part of the |qg| sample dataset (see Section 
+and text diagrams. Text values ​​of different data columns are displayed one 
+below the other with a circle or a box and dividers. Diagram size is based 
+on a fixed size or on linear scaling according to a classification attribute. 
+The placement of the diagrams interacts with the new labeling, so position 
+conflicts between diagrams and labels are detected and solved. In addition 
+to chart positions can be fixed by the users hand.
+
+We will demonstrate an example and overlay the alaska boundary layer a 
+text diagram showing some temperature data from a climate vector layer. 
+Both vector layers are part of the |qg| sample dataset (see Section 
 :ref:`label_sampledata`).
 
 #.  First click on the |mActionAddOgrLayer| :sup:`Load Vector` icon, browse 
@@ -1179,15 +1242,15 @@ layer. Both vector layers are part of the |qg| sample dataset (see Section
     :file:`alaska.shp` and :file:`climate.shp`.
 #.  Double click the ``climate`` layer in the map legend to open the 
     :guilabel:`Layer Properties` dialog.
-#.  Click on the ``Diagram Overlay`` and select **[Pie chart]** as Diagram type.
+#.  Click on the ``Diagrams``, activate ``Display diagrams`` and select 
+    **[Text diagram]** as Diagram type.
+#.  As Background color we choose a light blue and set a fixed size to 18 mm.
+#.  Placement could be set to AroundPoint.
 #.  In the diagram we want to display the values of the three columns 
     ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. First select ``T_F_JAN`` as 
     Attributes and click the green **[\+]** button, then ``T_F_JUL`` and 
     finally ``T_F_MEAN``.
-#.  For linear scaling of the diagram size we define ``T_F_JUL`` as 
-    classification attribute.
-#.  Now click on **[Find maximum value]**, choose 10 as size value and click 
-    **[Apply]** to display the diagram in the |qg| main window.
+#.  Now click **[Apply]** to display the diagram in the |qg| main window.
 #.  You can now adapt the chart size, or change the attribute colors double 
     clicking on the color values in the attribute field. Figure_diagrams_2_ 
     gives an impression.
@@ -1203,4 +1266,9 @@ layer. Both vector layers are part of the |qg| sample dataset (see Section
 
    Diagram from temperature data overlayed on a map |nix|
 
+Additionally in the :menuselection:`Settings --> Options` dialog, there is a 
+``Overlay`` tab where it is possible to select the placement algorithm of the diagrams. 
+The central point method is a generic one, the others use algorithms of the PAL library. 
+They also consider diagram objects and labels in different layers. Also see section 
+:ref:`diagram_overlay` for additional diagram features. 
 

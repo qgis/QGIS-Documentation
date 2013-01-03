@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _`label_projections`:
 
@@ -75,7 +73,6 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
-   :width: 40em
 
    CRS tab in the QGIS Options Dialog |osx|
 
@@ -86,11 +83,11 @@ project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit -->` |mAction
 :menuselection:`Settings -->`  |mActionOptions| :guilabel:`Options`
 (KDE, Windows).
 
-The options shown in figure_projection_2_ are:
+The options shown in figure_projection_1_ are:
 
-* |checkbox| :guilabel:`Prompt for CRS` 
-* |checkbox| :guilabel:`Use project CRS`
-* |checkbox| :guilabel:`Use default CRS displayed below`
+* |radiobuttonoff| :guilabel:`Prompt for CRS` 
+* |radiobuttonoff| :guilabel:`Use project CRS`
+* |radiobuttonon| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain
 layer without CRS information, you can also do that in the :guilabel:`General` tab of the raster (see :ref:`label_generaltab`) and
@@ -118,7 +115,6 @@ layer already has a CRS defined, it will be displayed as shown in
  
   .. figure:: /static/user_manual/working_with_projections/crs_selector.png
       :align: center
-      :width: 40em
 
       The CRS selector dialog |nix|
 
@@ -126,12 +122,12 @@ layer already has a CRS defined, it will be displayed as shown in
 
 .. _`label_projstart`:
 
-Define On The Fly (OTF) Projection
-===================================
+Define On The Fly (OTF) Reprojection
+====================================
 
-QGIS now supports OTF projection for both raster and vector
+QGIS supports OTF reprojection for both raster and vector
 data. However, OTF is not activated by default. To use OTF projection,
-you must activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox
+you must activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox
 in the :guilabel:`CRS` tab of the |mActionProjectProperties|
 :menuselection:`Project Properties` dialog.
 
@@ -150,7 +146,7 @@ There are three ways to achieve this end:
 If you have already loaded a layer, and want to enable OTF projection, the
 best practice is to open the :guilabel:`Coordinate Reference System` 
 tab of the :guilabel:`Project Properties` dialog, select a CRS, and 
-activate the |checkbox| :guilabel:`Enable on the fly projection` checkbox. 
+activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox. 
 The |geographic| :sup:`CRS status` icon will no longer be greyed-out
 and all layers will be OTF projected to the CRS shown next to the icon.
 
@@ -169,20 +165,19 @@ shown in Figure_projection_3_ and described below.
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
-   :width: 40em
 
    Projection Dialog |win|
 
 .. index:: Proj4, Proj4_text
 
-#. **Enable on the fly projection** -
+#. **Enable on the fly CRS transformation** -
    this checkbox is used to enable or disable OTF projection. When off, each
-   layer is drawn using the coordinates as read from the data source. When on,
-   the coordinates in each layer are projected to the coordinate reference
-   system defined for the map canvas.
+   layer is drawn using the coordinates as read from the data source and the 
+   components described below are inactive. When on, the coordinates in each 
+   layer are projected to the coordinate reference system defined for the map canvas.
 #. **Coordinate Reference System** - this is a list of all CRS
    supported by QGIS, including Geographic, Projected and Custom coordinate
-   reference systems. To use a CRS, select it from the list by expanding
+   reference systems. To define a CRS,  select it from the list by expanding
    the appropriate node and selecting the CRS. The active CRS is preselected.
 #. **Proj4 text** - this is the CRS string used by the Proj4
    projection engine. This text is read-only and provided for informational
@@ -223,15 +218,14 @@ QGIS user database. In addition to your custom CRS, this database also contains
 your spatial bookmarks and other custom data.
 
 
-.. _figure_projection_3:
+.. _figure_projection_4:
 
 .. only:: html
 
-   **Figure Projection 3:**
+   **Figure Projection 4:**
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
-   :width: 30em
 
    Custom CRS Dialog |nix|
 

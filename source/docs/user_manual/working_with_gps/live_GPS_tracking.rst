@@ -1,6 +1,4 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
-
-|updatedisclaimer|
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _`sec_gpstracking`:
 
@@ -8,18 +6,17 @@ Live GPS tracking
 ==================
 
 
-To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings --> `|checkbox| :guilabel:`GPS information`.
+To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings -->` |checkbox| :guilabel:`GPS information`.
 You will get a new docked Window on the left side of the canvas.
 
-There are 4 possible screens in this GPS tracking window
-(see figure_GPS_Tracking_1_ and figure_GPS_Tracking_2_).
+There are 4 possible screens in this GPS tracking window:
 
 * |mActionToggleEditing| GPS position coordinates and for manually entering 
   Vertices and Features.
 * |gpstrack_barchart| GPS signal strength of satellite connections.
 * |gpstrack_polarchart| GPS polar screen showing number and polar position of 
   satellites.
-* |mActionOptions| GPS options screen (see Figure_GPS_Tracking_2_).
+* |mActionOptions| GPS options screen (see figure_gps_options_).
 
 With a plugged in GPS receiver (has to be supported by your operating system)
 a simple click on **[Connect]** connects the GPS to QGIS. 
@@ -33,79 +30,90 @@ gpsd properly to connect QGIS to it.
    create a new vector layer first and switch it to editable status to be able 
    to record your track.
 
-.. |gpstrack_main| image:: /static/user_manual/working_with_gps/gpstrack_main.png
-   :width: 20em
-.. |gpstrack_stren| image:: /static/user_manual/working_with_gps/gpstrack_stren.png
-   :width: 15em
-.. |gpstrack_polar| image:: /static/user_manual/working_with_gps/gpstrack_polar.png
-   :width: 15em
+Position and additional attributes
+----------------------------------
+
+|mActionToggleEditing| If the GPS is receiving signals from satellites you will see your position in latitude,
+longitude and altitude together with additional attributes.
+
+.. _figure_gps_position:
 
 .. only:: html
+   
+   **Figure GPS Position:** 
 
-   **Figure GPS Tracking 1:**
+.. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
+   :align: center
 
-.. _figure_gps_tracking_1:
-
-+-------------------------------+-----------------------------+
-| |gpstrack_main|                                             |
-+-------------------------------+-----------------------------+
-| (a) Position coordinates                                    | 
-+-------------------------------+-----------------------------+
-| |gpstrack_stren|              |    |gpstrack_polar|         | 
-+-------------------------------+-----------------------------+
-| (b) GPS signal_strength       | (c) GPS polar window        |
-+-------------------------------+-----------------------------+
-
-   Live GPS tracking |nix| 
-
-
-Position coordinates
----------------------
-
-|mActionToggleEditing| If the GPS is
-receiving signals from satellites you will see your position in latitude,
-longitude and elevation as you can see in Figure 1. figure_gps_tracking_1_.
+   GPS tracking position and additional attributes |nix|
 
 GPS signal strength
 --------------------
 
-|gpstrack_barchart| Here you can see
-the signal strenght of the satellites you are receiving signals from 2. figure_gps_tracking_1_.
+|gpstrack_barchart| Here you can see the signal strenght of the satellites you are receiving signals from 2.
+
+.. _figure_gps_strength:
+
+.. only:: html
+   
+   **Figure GPS Strength:** 
+
+.. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
+   :align: center
+
+   GPS tracking signal strength |nix|
+
 
 GPS polar window
 ----------------
 
-|gpstrack_polarchart| If you want
-to know where in the sky all the connected satellites are, you have to
-switch to the polar screen (see 3. figure_gps_tracking_1_).
-You can also see the ID numbers of the satellites you are receiving signals from.
+|gpstrack_polarchart| If you want to know where in the sky all the connected 
+satellites are, you have to switch to the polar screen. You can also see the 
+ID numbers of the satellites you are receiving signals from.
+
+.. _figure_gps_polar:
+
+.. only:: html
+   
+   **Figure GPS polar window:** 
+
+.. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
+   :align: center
+
+   GPS tracking polar window |nix|
 
 GPS options
 ------------
 
-|mActionOptions| In case of connection problems you can switch from 
-|radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| 
-:menuselection:`Use path/port below` and select the path/port your GPS receiver 
-is connected to.  A click on **[Connect]** again initiates 
-the connection to the GPS receiver.
+|mActionOptions| In case of connection problems you can switch between: 
 
-With the slider :menuselection:`GPS Cursor Size` |slider| you can shrink and grow 
-the position cursor on the canvas. Activating |radiobuttonon| 
-:menuselection:`Auto-add vertices` within GPS digitizing your track will 
-automatically be recorded in the active vector layer (of course the layer has to 
-be in edit mode).
+* |radiobuttonon| :menuselection:`Autodetect`
+* |radiobuttonon| :menuselection:`Internal`, 
+* |radiobuttonon| :menuselection:`Serial device`
+* |radiobuttonon| :menuselection:`gpsd` (selecting Host, Port and Device your GPS is connected to). 
 
-With GPS map recenter you can decide in which way the canvas will be
-updated if your recorded coordinates start either to move out of canvas
-or there is any change at all.
+A click on **[Connect]** again initiates the connection to the GPS receiver.
 
-Track color and width sets the color of and the width of your drawn track.
+You can activate |checkbox| :menuselection:`Automatically save added features` when 
+you are in editing mode. Or you can can activate |checkbox| 
+:menuselection:`Automatically add points` to the main windows with a certain width 
+and color.
 
-If you want to set a feature manually you have to go back to
-|mActionToggleEditing| "Position Coordinates"
-and click on **[Add feature]**.
+Activating |checkbox| :menuselection:`Cursor` you can use a slider |slider| to shrink 
+and grow the position cursor on the canvas. 
 
-.. _figure_gps_tracking_2:
+Activating |radiobuttonon| :menuselection:`Map centering` allows to decide in which 
+way the canvas will be updated. This includes ``always``, ``when leaving`` if your 
+recorded coordinates start either to move out of canvas or ``never`` to keep map extend.
+
+Finally you can activate |checkbox| :menuselection:`Log file` and define a path and a 
+file where log messages about the gps tracking a logged.
+
+If you want to set a feature manually you have to go back to |mActionToggleEditing| 
+"Position Coordinates" and click on **[Add Point]** or 
+**[Add track point]**.
+
+.. _figure_gps_options:
 
 .. only:: html
 
@@ -113,6 +121,5 @@ and click on **[Add feature]**.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
    :align: center
-   :width: 15em
 
    GPS tracking options window |nix| 

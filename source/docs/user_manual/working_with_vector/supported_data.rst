@@ -1,13 +1,13 @@
-.. comment out this disclaimer (by putting '.. ' in front of it) if file is uptodate with release
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-|updatedisclaimer|
 
 Supported Data Formats
 ======================
 
 |qg| uses the OGR library to read and write vector data formats [#]_, 
 including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, 
-Spatialite, Oracle spatial databases and many more. At the date of this 
+Spatialite, Oracle spatial databases and many more. The vector data can also
+be loaded in read mode from zip and gzip archives into QGIS. At the date of this 
 document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`). 
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
@@ -93,7 +93,6 @@ You can also select the Encoding type for the shapefile if desired.
    **Figure Vector 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
-   :width: 40em
    :align: center
 
    Open an OGR Supported Vector Layer Dialog |nix|
@@ -110,7 +109,6 @@ the :file:`alaska.shp` file.
    **Figure Vector 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
-   :width: 40em
    :align: center
 
    |qg| with Shapefile of Alaska loaded |nix|
@@ -373,11 +371,23 @@ unique constraint, preferably indexed).
 Importing Data into PostgreSQL
 ------------------------------
 
+Data can be imported into PostgreSQL/PostGIS using several tools, such as the SPIT 
+plugin, or the command line tools shp2pgsql or ogr2ogr.
+
+.. _spit_plugin:
+
+SPIT Plugin
+...........
+
+|qg| comes with a core plugin named |spiticon| :sup:`SPIT` (Shapefile to 
+PostGIS Import Tool). SPIT can be used to load multiple shapefiles at 
+one time and includes support for schemas. See Section :ref:`label_spit` for 
+more information.
+
 shp2pgsql
 ...........
 
-Data can be imported into PostgreSQL using a number of methods. PostGIS 
-includes a utility called **shp2pgsql** that can be used to import 
+PostGIS includes a utility called **shp2pgsql** that can be used to import 
 shapefiles into a PostGIS enabled database. For example, to import a 
 shapefile named :file:`lakes.shp` into a PostgreSQL database named 
 ``gis_data``, use the following command:
@@ -401,38 +411,7 @@ reference systems and projections.
    PostGIS-datasets as shapefiles: **pgsql2shp**. This is shipped within 
    your PostGIS distribution.
 
-.. index:: SPIT, Shapefile_to_Postgis_Import_Tool
 
-.. _spit_plugin:
-
-SPIT Plugin
-...........
-
-|spiticon| |qg| comes with a plugin named SPIT (Shapefile to PostGIS 
-Import Tool). SPIT can be used to load multiple shapefiles at one time 
-and includes support for schemas. To use SPIT, open the Plugin Manager 
-from the :menuselection:`Plugins` menu, check the box next to the 
-|checkbox| :guilabel:`SPIT plugin` and click **[OK]**. The SPIT icon 
-will be added to the plugin toolbar.
-
-To import a shapefile, click on the |spiticon| :sup:`SPIT` tool in the 
-toolbar to open the :guilabel:`SPIT - Shapefile to PostGIS Import Tool` 
-dialog. Select the PostGIS database you want to connect to and click 
-on **[Connect]**. If you want, you can define or change some import options. 
-Now you can add one or more files to the queue by clicking on the 
-**[Add]** button. To process the files, click on the **[OK]** button. 
-The progress of the import as well as any errors/warnings will be displayed 
-as each shapefile is processed.
-
-.. _tip_importing_shapefiles:
-
-.. tip:: **Importing Shapefiles Containing PostgreSQL Reserved Words**
-
-   If a shapefile is added to the queue containing fields that are reserved 
-   words in the PostgreSQL database a dialog will popup showing the status of 
-   each field. You can edit the field names prior to import and change any that 
-   are reserved words (or change any other field names as desired). Attempting 
-   to import a shapefile with reserved words as field names will likely fail.
 
 .. index:: ogr2ogr
 
@@ -605,6 +584,8 @@ format and the CRS and then add ``SPATIALITE=YES`` in the OGR data source
 creation option field. This tells OGR to create a SpatiaLite database. 
 See also http://www.gdal.org/ogr/drv_sqlite.html.
 
+QGIS also supports editable Views in SpatiaLite.
+
 Creating a new SpatiaLite layer
 ...............................
 
@@ -620,6 +601,15 @@ If you want to create a new SpatiaLite layer, please refer to section
    For SpatiaLite data management you can also use several Python plugins: 
    QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and 
    installed with the Plugin Installer.
+
+.. _label_mssql:
+
+MSSQL Spatial Layers
+--------------------
+
+QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer| 
+:sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available 
+in the MS SQL node in the QBrowser tree, providing drag and drop import support.
 
 ----
 
