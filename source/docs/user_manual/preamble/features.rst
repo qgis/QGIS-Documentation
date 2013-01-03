@@ -76,7 +76,7 @@ tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
 :ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial
 analysis framework to call native and third party algorithms from QGIS, such as
-GDAL, SAGA, GRASS, fTools, ... (See Section :ref:`label_sextante`).
+GDAL, SAGA, GRASS, fTools and more (see section :ref:`label_sextante`).
 
 Publish maps on the Internet
 ----------------------------
@@ -157,7 +157,7 @@ database and then view the spatial output for queries by adding the results to
 QGIS as a query layer. You can also create, edit, delete, and empty tables, and
 move them to another schema.
 
-**Terrain Analysis Plugin:**
+**Terrain Analysis Plugin**
 
 A new core plugin was added for doing terrain analysis (slope, aspect, hillshade,
 relief and ruggedness index).
@@ -204,7 +204,7 @@ Plugins list at http://plugins.qgis.org/plugins/
   Raster, Web and many plugins were updated to place their menus in the new
   Vector, Raster and Web top level menus
 * Offset Curves - a new digitising tool for creating offset curves was added
-* New tools in the Vector menu to Densify geomtries and Build spatial index
+* New tools in the Vector menu to Densify geometries and Build spatial index
 * Export/add geometry column tool can export info using layer CRS, project CRS
   or ellipsoidal measurements
 * Model/view based tree for rules in rule-based renderer
