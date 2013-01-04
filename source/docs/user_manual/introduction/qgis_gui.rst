@@ -490,7 +490,7 @@ Map View
 
 .. index::`map view`
 
-This is the 'business end' of QGIS - maps are displayed in this area! The
+This is the "business end" of QGIS - maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
 have chosen to load (see sections that follow for more information on how to
 load layers). The map view can be panned (shifting the focus of the map display
