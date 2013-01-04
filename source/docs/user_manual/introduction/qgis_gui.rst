@@ -404,75 +404,69 @@ legend item is a raster or a vector layer. For GRASS vector layers
 :menuselection:`Toggle editing` is not available. See section :ref:`grass_digitizing`
 for information on editing GRASS vector layers.
 
-* **Right mouse button menu for raster layers**
+**Right mouse button menu for raster layers**
 
-  * :menuselection:`Zoom to layer extent`
-  * :menuselection:`Zoom to best scale (100 %)`
-  * :menuselection:`Show in overview`
-  * :menuselection:`Remove`
-  * :menuselection:`Set Layer CRS`
-  * :menuselection:`Set Project CRS from Layer`
-  * :menuselection:`Properties`
-  * :menuselection:`Rename`
-  * :menuselection:`Copy Style`
-  * :menuselection:`Add New Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
-  * :menuselection:`Update Drawing Order`
+ * :menuselection:`Zoom to layer extent`
+ * :menuselection:`Zoom to best scale (100 %)`
+ * :menuselection:`Show in overview`
+ * :menuselection:`Remove`
+ * :menuselection:`Set Layer CRS`
+ * :menuselection:`Set Project CRS from Layer`
+ * :menuselection:`Properties`
+ * :menuselection:`Rename`
+ * :menuselection:`Copy Style`
+ * :menuselection:`Add New Group`
+ * :menuselection:`Expand all`
+ * :menuselection:`Collapse all`
+ * :menuselection:`Update Drawing Order`
 
+   Additionally, according to layer position and selection 
+
+   * :menuselection:`Make to toplevel item`
+   * :menuselection:`Group Selected`
+   * :menuselection:`Show file groups`
 \
+**Right mouse button menu for vector layers**
 
-  ``Additionally, according to layer position and selection`` 
+ * :menuselection:`Zoom to layer extent`
+ * :menuselection:`Show in overview`
+ * :menuselection:`Remove`
+ * :menuselection:`Set Layer CRS`
+ * :menuselection:`Set Project CRS from Layer`
+ * :menuselection:`Open attribute table`
+ * :menuselection:`Toggle editing` (not available for GRASS layers)
+ * :menuselection:`Save as`
+ * :menuselection:`Save selection as`
+ * :menuselection:`Query`
+ * :menuselection:`Show Feature Count`
+ * :menuselection:`Properties`
+ * :menuselection:`Rename`
+ * :menuselection:`Copy Style`
+ * :menuselection:`Add New Group`
+ * :menuselection:`Expand all`
+ * :menuselection:`Collapse all`
+ * :menuselection:`Update Drawing Order`
 
-  * :menuselection:`Make to toplevel item`
-  * :menuselection:`Group Selected`
-  * :menuselection:`Show file groups`
+   Additionally, according to layer position and selection 
 
-* **Right mouse button menu for vector layers**
-
-  * :menuselection:`Zoom to layer extent`
-  * :menuselection:`Show in overview`
-  * :menuselection:`Remove`
-  * :menuselection:`Set Layer CRS`
-  * :menuselection:`Set Project CRS from Layer`
-  * :menuselection:`Open attribute table`
-  * :menuselection:`Toggle editing` (not available for GRASS layers)
-  * :menuselection:`Save as`
-  * :menuselection:`Save selection as`
-  * :menuselection:`Query`
-  * :menuselection:`Show Feature Count`
-  * :menuselection:`Properties`
-  * :menuselection:`Rename`
-  * :menuselection:`Copy Style`
-  * :menuselection:`Add New Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
-  * :menuselection:`Update Drawing Order`
-
+   * :menuselection:`Make to toplevel item`
+   * :menuselection:`Group Selected`
+   * :menuselection:`Show file groups`
 \
+**Right mouse button menu for layer groups**
 
-  ``Additionally, according to layer position and selection`` 
+ * :menuselection:`Zoom to group`
+ * :menuselection:`Remove`
+ * :menuselection:`Set group CRS`
+ * :menuselection:`Rename`
+ * :menuselection:`Add New Group`
+ * :menuselection:`Expand all`
+ * :menuselection:`Collapse all`
+ * :menuselection:`Update Drawing Order`
 
-  * :menuselection:`Make to toplevel item`
-  * :menuselection:`Group Selected`
-  * :menuselection:`Show file groups`
+   Additionally, according to position
 
-* **Right mouse button menu for layer groups**
-
-  * :menuselection:`Zoom to group`
-  * :menuselection:`Remove`
-  * :menuselection:`Set group CRS`
-  * :menuselection:`Rename`
-  * :menuselection:`Add New Group`
-  * :menuselection:`Expand all`
-  * :menuselection:`Collapse all`
-  * :menuselection:`Update Drawing Order`
-
-\
-
-  ``Additionally, according to position`` 
-
-  *  :menuselection:`Show file groups`
+   *  :menuselection:`Show file groups`
 
 
 It is possible to select more than one layer or group at the same time
