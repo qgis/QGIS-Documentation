@@ -796,7 +796,7 @@ html_show_copyright = False
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide',
+  ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide',
    u'QGIS Project', 'manual'),
 ]
 
@@ -822,7 +822,7 @@ latex_documents = [
 # Grouping the document tree into PDF files. List of tuples
 # (source start file, target name, title, author).
 pdf_documents = [
-    ('user_manual/index', u'QGISUserGuide', u'QGIS User Guide', u'QGIS Project'),
+    ('docs/user_manual/index', u'QGISUserGuide', u'QGIS User Guide', u'QGIS Project'),
 ]
 
 # A comma-separated list of custom stylesheets. Example:
