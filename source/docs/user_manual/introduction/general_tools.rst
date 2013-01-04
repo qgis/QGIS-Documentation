@@ -28,6 +28,7 @@ features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
+   :width: 20em
 
    Define shortcut options |nix| (KDE)
 
@@ -224,6 +225,7 @@ measuring click your right mouse button.
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
+   :width: 15em
 
    Measure Distance |nix| (KDE)
 
@@ -243,6 +245,7 @@ then select the layer. Now, when using the measuring tools, each mouse click
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
+   :width: 15em
 
    Measure Area |nix| (KDE)
 
@@ -259,6 +262,7 @@ is displayed in a popup dialog.
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
+   :width: 15em
 
    Measure Angle |nix| (KDE)
 
@@ -310,7 +314,7 @@ using the text you prefer to the map.
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
-   :width: 20em
+   :width: 15em
 
    The copyright Dialog |nix|
 
@@ -424,7 +428,7 @@ canvas. Use the text annotation tool and click into the map canvas.
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    Annotation text dialog |nix|
 
@@ -459,7 +463,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    Customized qt designer annotation form |nix|
 
@@ -544,14 +548,13 @@ The following dialog allows you to embed layers from other projects:
 
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Select layers and groups to embed |nix|
 
 While the embedded layers are editable you can't change it's properties like Style and Labeling.
 
-Removing layers
----------------
+**Removing embedded layers**
 
 Right-click on the embedded layer and choose |mActionRemoveLayer| :guilabel:`Remove` .
 

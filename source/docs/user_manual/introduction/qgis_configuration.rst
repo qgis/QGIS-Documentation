@@ -26,7 +26,7 @@ and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
 .. figure:: /static/user_manual/introduction/panels_and_toolbars.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The Panels and Toolbars menu |nix|
 
@@ -50,29 +50,6 @@ and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
    |checkbox|:guilabel:`Log Messages` in the menu 
    :menuselection:`Settings --> Panels` and follow the messages 
    in the :guilabel:`General` and :guilabel:`Plugin` tab during loading and operation.  
-
-.. tip:: **Working with the QGIS Layer order**
-
-   Since QGIS 1.8 there is widget that allows to define a legend independent 
-   drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
-   Determine the drawing order of the layers in the map view here. Doing so makes
-   it possible to order your layers in order of importance, for example, but to
-   still display them in the correct order (see figure_layer_order_). Checking the
-   |checkbox| :guilabel:`control rendering order` box underneath the list of layers
-   will cause a revert to default behavior.
-
-  .. _figure_layer_order:
-
-  .. only:: html
-
-     **Figure Layer Order:**
- 
-  .. figure:: /static/user_manual/introduction/layer_order.png
-      :align: center
-      :width: 40em
-
-      The new layer order list |nix|
-
 
 
 Project Properties
@@ -277,7 +254,7 @@ Network Tab
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
-   :width: 40em
+   :width: 25em
    
    Proxy-settings in |qg|
 
@@ -338,6 +315,18 @@ The customization tool is a new development in QGIS 1.8.. It lets you (de)activa
 almost every element in the QGIS user interface. This can get very useful if you have 
 a lot of plug-ins installed that you never use and that are filling your screen.
 
+.. _figure_customization:
+
+.. only:: html
+
+   **Figure Customization 1:**
+
+.. figure:: /static/user_manual/introduction/customization.png
+   :align: center
+   :width: 25em
+
+   The Customization dialog |nix|
+
 QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you 
 find the dock windows. Dock windows are applications that can be started and used as
 a floating, top-level window or embedded to the QGIS main window as a docked widget (see also sec_panels_and_toolbars_).
@@ -350,28 +339,6 @@ With |mActionSelect| :guilabel:`Switch to catching widgets in main application`
 you can click on elements in QGIS you want to be hidden and find the corresponding entry 
 in Customization (see figure_customization_). 
 
-.. _figure_customization:
-
-.. only:: html
-
-   **Figure Customization 1:**
-
-.. figure:: /static/user_manual/introduction/customization.png
-
-   The Customization dialog |nix|
-
-
-You can save your various different setups for different uses as well (see figure_ini_file_).
-
-.. _figure_ini_file:
-
-.. only:: html
-
-   **Figure Customization 2:**
-
-.. figure:: /static/user_manual/introduction/customization_ini_file.png
-
-   Saving settings as a customization ini file |nix|
-
-Before your changes are applied, you basically need to restart QGIS.
+You can save your various different setups for different use cases as well. Before 
+your changes are applied, you basically need to restart QGIS.
 

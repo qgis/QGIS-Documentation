@@ -683,8 +683,8 @@ button again, the value will be updated in the attribute table.
 
 .. _sec_create_shape:
 
-Creating a new Shapefile and Spatialite layer
----------------------------------------------
+Creating a new Vector layer
+---------------------------
 
 |qg| allows to create new Shapefile layers and new Spatialite layers. Creation 
 of a new GRASS layer is supported within the GRASS-plugin. Please refer to 

@@ -21,7 +21,7 @@ interface as discussed below):
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
-   :width: 50em
+   :width: 30em
 
    QGIS GUI with Alaska sample data |nix|
 
@@ -52,22 +52,23 @@ Menu Bar
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
 menu options are listed below, together with the icons of the corresponding
-tools as they appear on the toolbar, as well as keyboard
-shortcuts. [1]_
+tools as they appear on the toolbar, as well as keyboard shortcuts. Keyboard 
+shortcuts can also be configured manually (shortcuts presented in this 
+section are the defaults), using the [**Configure Shortcuts**] tool under 
+:menuselection:`Settings`.
+
 Although most menu options have a corresponding tool and vice-versa,
 the menus are not organized quite like the toolbars.
 The toolbar containing the tool is listed after each menu option as a checkbox
-entry. For more information about tools and toolbars, see Section
-:ref:`label_toolbars`.
+entry. Some menu options only appear, if the corresponding plugin is loaded. 
+For more information about tools and toolbars, see Section :ref:`label_toolbars`.
 
-\
-
-\
+File
+....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**File**                                                        \                     \                                           \
 |mActionFileNew| :guilabel:`New Project`                        :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`File`
 |mActionFileOpen| :guilabel:`Open Project`                      :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`File`
 :menuselection:`Open Recent Projects -->`                       \                     see :ref:`sec_projects`                     \
@@ -80,12 +81,12 @@ Menu Option                                                     Shortcut        
 |mActionFileExit| :guilabel:`Exit`                              :kbd:`Ctrl+Q`         \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Edit
+....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Edit**                                                        \                     \                                           \
 |mActionUndo| :guilabel:`Undo`                                  :kbd:`Ctrl+Z`         see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionRedo| :guilabel:`Redo`                                  :kbd:`Ctrl+Shift+Z`   see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionEditCut| :guilabel:`Cut Features`                       :kbd:`Ctrl+X`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
@@ -103,7 +104,7 @@ Menu Option                                                     Shortcut        
 |mActionOffsetCurve| :guilabel:`Offset Curves`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mergeFeats| :guilabel:`Merge selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mergeFeats| :guilabel:`Merge attributes of selected Features`  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mergeFeats| :guilabel:`Merge attr. of selected Features`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionNodeTool| :guilabel:`Node Tool`                         \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
@@ -116,23 +117,23 @@ After activating |mActionToggleEditing| :sup:`Toggle editing` mode
 for a layer, you will find the ``Add Feature`` icon in the :menuselection:`Edit`
 menu depending on the layer type (point, line or polygon).
 
-----
+Edit (extra)
+............
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Edit** extra                                                  \                     \                                           \
 |mActionCapturePoint| :guilabel:`Add Feature`                   \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionCaptureLine| :guilabel:`Add Feature`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionCapturePolygon| :guilabel:`Add Feature`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+View
+....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**View**                                                        \                     \                                           \
 |mActionPan| :guilabel:`Pan Map`                                \                     \                                           :guilabel:`Map Navigation`
 |PanToSelected| :guilabel:`Pan Map to Selection`                \                     \                                           :guilabel:`Map Navigation`
 |mActionZoomIn| :guilabel:`Zoom In`                             :kbd:`Ctrl++`         \                                           :guilabel:`Map Navigation`
@@ -154,13 +155,13 @@ Menu Option                                                     Shortcut        
 :menuselection:`Tile scale slider`                              \                     see :ref:`tilesets`                         :guilabel:`Tile scale`
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Layer
+.....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Layer**                                                       \                     \                                           \
-:menuselection:`New`                                            \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
+:menuselection:`New -->`                                        \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
 :guilabel:`Embed Layers and Groups ...`                         \                     see :ref:`nesting_projects`                 \
 |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`             :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
@@ -168,7 +169,6 @@ Menu Option                                                     Shortcut        
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
 |mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
 |mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
-(the following 5 entries appear when core plugins are loaded)
 |delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
 |gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
 |oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
@@ -194,12 +194,12 @@ Menu Option                                                     Shortcut        
 |mActionHideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Settings
+........
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Settings**                                                    \                     \                                           \
 :menuselection:`Panels -->`                                     \                     see :ref:`sec_panels_and_toolbars`          \
 :menuselection:`Toolbars -->`                                   \                     see :ref:`sec_panels_and_toolbars`          \
 :menuselection:`Toggle Full Screen Mode`                        :kbd:`Ctrl-F`         \                                           \
@@ -212,25 +212,25 @@ Menu Option                                                     Shortcut        
 :menuselection:`Snapping Options ...`                           \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Plugins
+.......
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Plugins**                                                     \                     \                                           \
-(Following items are visible if all core plugins are selected)
 |plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
 |mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 \
 :menuselection:`Python Console`                                 \                     \                                           \
 :menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Vector
+......
+
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Vector** (only visible if core plugins are activated)         \                     \                                           \
 :menuselection:`Analysis Tools -->`                             \                     see :ref:`ftools`                           \
 :menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        \
 :menuselection:`Data Management Tools -->`                      \                     see :ref:`ftools`                           \
@@ -243,14 +243,13 @@ Menu Option                                                     Shortcut        
 :menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Vector`
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Raster
+......
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Raster**                                                      \                     \                                           \
 :menuselection:`Raster calculator`                              \                     see  :ref:`sec_raster_calc`                 \
-(Following items are visible if all core plugins are selected)
 :menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
 :menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
 :menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
@@ -264,34 +263,34 @@ Menu Option                                                     Shortcut        
 :guilabel:`GdalTools settings`                                  \                     see :ref:`label_plugingdaltools`            \
 ==============================================================  ====================  ==========================================  ===============================
 
-----
+Database
+........
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Database** (only visible if core plugins are activated)       \                     \                                           \
 :menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
 :menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
 :menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
----
+Web
+...
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Web** (only visible if core plugins are activated)
 :menuselection:`MapServer Export ... -->`                       \                     see :ref:`mapserver_export`                 :guilabel:`Web`
 :menuselection:`OpenStreetMap -->`                              \                     see :ref:`plugins_osm`                      :guilabel:`OpenStreetMap`
 ==============================================================  ====================  ==========================================  ===============================
 
----
+Help
+....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-**Help**                                                        \                     \                                           \
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 || :guilabel:`What's This?`                                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
@@ -301,7 +300,6 @@ Menu Option                                                     Shortcut        
 |mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-----
 
 .. note::
    |nix| The Menu Bar items listed above are the default ones in KDE
@@ -483,9 +481,31 @@ several Layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way all selected Layers or groups will be removed from the layerlist.
 
 You can select multiple layers and group them. Select the layers and right click
-on a layer. Choose :menuselection:`Group selected`. Type in a name for the new
-group and press :kbd:`Enter`.
+on a layer. Choose :menuselection:`Group selected`. Click on the new group, type 
+in a name and press :kbd:`Enter`.
 
+Working with the Legend independent layer order
+...............................................
+
+Since QGIS 1.8 there is a widget that allows to define a legend independent 
+drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
+Determine the drawing order of the layers in the map view here. Doing so makes
+it possible to order your layers in order of importance, for example, but to
+still display them in the correct order (see figure_layer_order_). Checking the
+|checkbox| :guilabel:`control rendering order` box underneath the list of layers
+will cause a revert to default behavior.
+
+  .. _figure_layer_order:
+
+  .. only:: html
+
+     **Figure Layer Order:**
+ 
+  .. figure:: /static/user_manual/introduction/layer_order.png
+      :align: center
+      :width: 30em
+
+      Define a legend independent layer order |nix|
 
 .. _`label_mapview`:
 
@@ -578,8 +598,3 @@ for the current project.
    the last case, the units are set to what the project projection specifies,
    e.g. '+units=m'.
 
-----
-
-.. [1] Keyboard shortcuts can now be configured manually
-   (shortcuts presented in this section are the defaults), using the Configure
-   Shortcuts tool under Settings Menu.
