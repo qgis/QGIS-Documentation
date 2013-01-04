@@ -75,4 +75,4 @@ do
 done
 
 rm -rf source/static
-rm -rf ${BUILDDIR}
+#rm -rf ${BUILDDIR}

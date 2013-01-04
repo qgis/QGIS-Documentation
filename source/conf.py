@@ -173,14 +173,21 @@ rst_epilog = """
 .. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
 .. |mActionFileNew| image:: /static/common/mActionFileNew.png
+   :width: 1.5em
 .. |mActionFileOpen| image:: /static/common/mActionFileOpen.png
+   :width: 1.5em
 .. |mActionFileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |mActionFileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
+   :width: 1.5em
 .. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
+   :width: 1.5em
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
 .. |mapserver_export| image:: /static/common/mapserver_export.png
 .. |mActionExportMapServer| image:: /static/common/mActionExportMapServer.png
    :width: 1.5em
@@ -788,7 +795,7 @@ html_show_copyright = False
 # -- Options for LaTeX output --------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-#latex_paper_size = 'letter'
+latex_paper_size = 'a4'
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
@@ -806,7 +813,7 @@ latex_documents = [
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-#latex_use_parts = False
+latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
 #latex_preamble = ''
@@ -831,7 +838,7 @@ pdf_stylesheets = ['sphinx','kerning','a4']
 # Create a compressed PDF
 # Use True/False or 1/0
 # Example: compressed=True
-#pdf_compressed=False
+pdf_compressed=True
 
 # A colon-separated list of folders to search for fonts. Example:
 # pdf_font_path=['/usr/share/fonts', '/usr/share/texmf-dist/fonts/']

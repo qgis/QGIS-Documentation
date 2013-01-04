@@ -425,7 +425,9 @@ for information on editing GRASS vector layers.
    * :menuselection:`Make to toplevel item`
    * :menuselection:`Group Selected`
    * :menuselection:`Show file groups`
+
 \
+
 **Right mouse button menu for vector layers**
 
  * :menuselection:`Zoom to layer extent`
@@ -452,7 +454,9 @@ for information on editing GRASS vector layers.
    * :menuselection:`Make to toplevel item`
    * :menuselection:`Group Selected`
    * :menuselection:`Show file groups`
+
 \
+
 **Right mouse button menu for layer groups**
 
  * :menuselection:`Zoom to group`
