@@ -337,8 +337,7 @@ and in |checkbox| :guilabel:`Widgets` you can (de)activate dialogs as well as th
 
 With |mActionSelect| :guilabel:`Switch to catching widgets in main application`
 you can click on elements in QGIS you want to be hidden and find the corresponding entry 
-in Customization (see figure_customization_). 
-
-You can save your various different setups for different use cases as well. Before 
-your changes are applied, you basically need to restart QGIS.
+in Customization (see figure_customization_). You can also save your various different 
+setups for different use cases as well. Before your changes are applied, you need to 
+restart QGIS.
 
