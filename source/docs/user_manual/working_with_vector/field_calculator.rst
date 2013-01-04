@@ -26,7 +26,7 @@ field.
    **Figure Attributes 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/fieldcalculator.png
-   :width: 50em
+   :width: 30em
    :align: center
 
    Field Calculator |nix|
@@ -74,76 +74,71 @@ calculate the length of the ``railroads`` layer from the
 #. You can now find a new column ``length`` in the attribute table.
 
 
-The available functions are listed in the following table.
+The available functions are listed below.
 
 .. index:: Field_Calculator_Functions
 
-===================================  ========================================================
-List of functions supported by the field calculator
----------------------------------------------------------------------------------------------
-String                               Literal string value
-===================================  ========================================================
-column name "column name"            value of the field column name
-'string'                             a string value
-NULL                                 null value
-*a* IS NULL                          *a* has no value
-*a* IS NOT NULL                      *a* has a value
-*a* IN (value[,value])               *a* is below the values listed
-*a* NOT IN (value[,value])           *a* is not below the values listed
-*a* OR *b*                           *a* or *b* is true
-*a* AND *b*                          *a* and *b* is true
-NOT *a*                              inverted truth value of a
-sqrt(*a*)                            square root of *a*
-sin(*a*)                             sinus of *a* 
-cos(*a*)                             cosinus of *b*
-tan(*a*)  			     tangens of *a*
-asin(*a*) 			     arcussinus of *a*
-acos(*a*) 			     arcuscosinus of *a* 
-atan(*a*) 			     arcustangens of *a*
-to int(*a*) 			     convert string *a* to integer
-to real(*a*) 			     convert string *a* to real
-to string(*a*)			     convert number *a* to string
-lower(*a*)    			     convert string *a* to lower case
-upper(*a*)			     convert string *a* to upper case
-length(*a*)			     length of string *a*
-atan2(y,x)  			     arcustangens of y/x using the signs of the two arguments 
-                                     to determine the quadrant of the result
-replace(*a*, replacethis, withthat)  replace *this* with *that* in string *a*
-regexp_replace(a,this,that)          replace the regular expression *this* with *that*
-substr(*a*,from,len)                 len characters of string *a* starting from from 
-                                     (first character index is 1)
-*a* || *b*                           concatenate strings *a* and *b*
-\$rownum    			     number current row
-\$area  			     area of polygon
-\$perimeter			     perimeter of polygon
-\$length   			     length of line
-\$id     			     feature id
-\$x  				     x coordinate of point
-\$y  				     y coordinate of point
-xat(n)                               X coordinate of the point of an n-th line (indeces start at 0;
-                                     negative values refer to the line end)
-yat(n)                               y coordinate of the point of an n-th line (indeces start at 0;
-                                     negative values refer to the line end)
-*a*=*b*                              *a* and *b* are equal
-*a*!=*b*                             *a* and *b* are not equal
-*a*<>*b*
-*a*>=*b*                             *a* is larger than or equal to *b*
-*a*<=*b*                             *a* is less than or equal to *b*
-*a*>*b*                              *a* is larger than *b*
-*a*<*b*                              *a* is smaller than *b*
-*a*~*b*                              *a* matches the regular expression *b*
-*a* LIKE *b*                         *a* equals *b*
-*a* ILIKE *b*                        *a* equals *b* (without regard to case-sensitive)
-*a* |wedge| *b*  		     *a* raised to the power of *b* 
-*a* \* *b*        		     *a* multiplied by *b*
-*a* / *b*  			     *a* divided by *b* 
-*a* + *b*  			     *a* plus *b*
-*a* - *b*  			     *a* minus *b*
-\+ *a*     			     positive sign
-\- *a*  			     negative value of *a*
-===================================  ========================================================
+::
 
-   List of functions for the field calculator
+ column name "column name"            value of the field column name
+ 'string'                             a string value
+ NULL                                 null value
+ a IS NULL                            a has no value
+ a IS NOT NULL                        a has a value
+ a IN (value[,value])                 a is below the values listed
+ a NOT IN (value[,value])             a is not below the values listed
+ a OR b                               a or *b* is true
+ a AND b                              a and *b* is true
+ NOT a                                inverted truth value of a
+ sqrt(a)                              square root of a
+ sin(a)                               sinus of a 
+ cos(a)                               cosinus of b
+ tan(a)  			      tangens of a
+ asin(a) 			      arcussinus of a
+ acos(a) 			      arcuscosinus of a 
+ atan(a) 			      arcustangens of a
+ to int(a) 			      convert string a to integer
+ to real(a) 			      convert string a to real
+ to string(a)			      convert number a to string
+ lower(a)    			      convert string a to lower case
+ upper(a)			      convert string a to upper case
+ length(a)			      length of string a
+ atan2(y,x)  			      arcustangens of y/x using the signs of the two arguments 
+                                      to determine the quadrant of the result
+ replace(*a*, replacethis, withthat)  replace this with that in string a
+ regexp_replace(a,this,that)          replace the regular expression this with that
+ substr(*a*,from,len)                 len characters of string *a* starting from from 
+                                      (first character index is 1)
+ a || b                               concatenate strings a and b
+ $rownum    			      number current row
+ $area  			      area of polygon
+ $perimeter			      perimeter of polygon
+ $length   			      length of line
+ $id     			      feature id
+ $x  				      x coordinate of point
+ $y  				      y coordinate of point
+ xat(n)                               X coordinate of the point of an n-th line (indeces start at 0;
+                                      negative values refer to the line end)
+ yat(n)                               y coordinate of the point of an n-th line (indeces start at 0;
+                                      negative values refer to the line end)
+ a = b                                a and b are equal
+ a != b                               a and b are not equal
+ a <> b
+ a >= b                               a is larger than or equal to b
+ a <= b                               a is less than or equal to b
+ a > b                                a is larger than b
+ a < b                                a is smaller than b
+ a ~ b                                a matches the regular expression b
+ a LIKE b                             a equals b
+ a ILIKE b                            a equals b (without regard to case-sensitive)
+ a |wedge| b  		              a raised to the power of b 
+ a * b        		              a multiplied by b
+ a / b  			      a divided by b
+ a + b  			      a plus b
+ a - b  			      a minus b
+ + a     			      positive sign
+ - a  			              negative value of a
+
 
 The field calculator **Function list** with the **Selected Function Help** , **Operators** and **Expression** menu are also available
 through the rule-based rendering in the Style tab of the Layer properties and the expression based labeling |browsebutton|

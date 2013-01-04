@@ -73,6 +73,7 @@ window (see figure_vector_1_).
 
 .. figure:: /static/user_manual/working_with_vector/addvectorlayerdialog.png
    :align: center
+   :width: 25em
 
    Add Vector Layer Dialog |nix|
 
@@ -94,6 +95,7 @@ You can also select the Encoding type for the shapefile if desired.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileopendialog.png
    :align: center
+   :width: 25em
 
    Open an OGR Supported Vector Layer Dialog |nix|
 
@@ -110,6 +112,7 @@ the :file:`alaska.shp` file.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
+   :width: 30em
 
    |qg| with Shapefile of Alaska loaded |nix|
 
@@ -235,7 +238,22 @@ You can also open the :guilabel:`Add Vector Layer` dialog and select
 The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access 
 the connection manager, click on the **[New]** button to display 
 the :guilabel:`Create a New PostGIS Connection` dialog. The parameters 
-required for a connection are shown in table_connections_.
+required for a connection are:
+
+* **Name**: A name for this connection. Can be the same as *Database*
+* **Service**: Service parameter to be used alternatively to hostname/port (and potentially database). This can be defined in pg\_service.conf
+* **Host**: Name of the database host. This must be a resolvable host name the same as would be used to open a telnet connection or ping the host. If the database is on the same computer as |qg|, simply enter *'localhost'* here.
+* **Port**: Port number the PostgreSQL database server listens on. The default port is 5432.
+* **Database**: Name of the database.
+* **SSL mode**: How the SSL connection will be negotiated with the server.  Note that massive speedups in PostGIS layer rendering can be achieved by disabling SSL in the connection editor:
+  * disable: only try an unencrypted SSL connection
+  * allow: try a non-SSL connection, if that fails, try an SSL connection
+  * prefer (the default): try an SSL connection, if that fails, try a 
+  * non-SSL connection;
+  * require: only try an SSL connection.
+* **Username**: User name used to login to the database.
+* **Password**: Password used with *Username* to connect to the database.
+
 
 Optional you can activate following checkboxes:
 
@@ -250,42 +268,16 @@ Optional you can activate following checkboxes:
 Once all parameters and options are set, you can test the connection 
 by clicking on the **[Test Connect]** button.
 
-.. _table_connections:
-
-==============  ================================================================================
-Name            A name for this connection. Can be the same as *Database*
-==============  ================================================================================
-Service         Service parameter to be used alternatively to hostname/port (and potentially database). This can be defined in pg\_service.conf
-Host            Name of the database host. This must be a resolvable host name the same as would be used to open a telnet connection or ping the host. If the database is on the same computer as |qg|, simply enter *'localhost'* here.
-Port            Port number the PostgreSQL database server listens on. The default port is 5432.
-Database        Name of the database.
-SSL mode        How the SSL connection will be negotiated with the server. These are the options:
-
-                + disable: only try an unencrypted SSL connection
-                + allow: try a non-SSL connection, if that fails, try an SSL connection
-                + prefer (the default): try an SSL connection, if that fails, try a 
-                  non-SSL connection;
-                + require: only try an SSL connection.
-
-                Note that massive speedups in PostGIS layer rendering can be achieved by disabling SSL in the connection editor.
-username        User name used to login to the database.
-Password        Password used with *Username* to connect to the database.
-==============  ================================================================================
-
-   **Table PostGIS Connection Parameters**
-
-
 .. _tip_settings_security:
 
 .. tip:: **QGIS User Settings and Security**
 
-   Your customized settings for |qg| are stored based on the operating system. 
+   Depending on your computing environment, storing passwords in your |qg| 
+   settings may be a security risk. Your customized settings for |qg| are 
+   stored based on the operating system: 
 
    * |nix|, the settings are stored in your home directory in :file:`.qgis/`. 
    * |win|, the settings are stored in the registry. 
-
-   Depending on your computing environment, storing passwords in your |qg| 
-   settings may be a security risk.
 
 .. _vector_loading_postgis:
 
@@ -519,7 +511,7 @@ be within the grid, right of New Zealand main islands.
    **Figure Vector 4:** 
 
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Map in lat/lon crossing the 180 |degrees| longitude line |nix|
@@ -540,7 +532,7 @@ a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
    **Figure Vector 5:** 
 
 .. figure:: /static/user_manual/working_with_vector/vectorWrapping.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude** 

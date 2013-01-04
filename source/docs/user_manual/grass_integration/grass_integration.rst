@@ -161,7 +161,7 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    the search box. (Note: If you want to repeat this process for another
    :file:`LOCATION` and projection and haven't memorized the EPSG ID,
    click on the |mIconProjectionEnabled| :sup:`projector` icon in the lower right-hand
-   corner of the status bar (see Section :ref:`label_projstart`)).
+   corner of the status bar (see Section :ref:`label_projections`)).
 #. Click **[Find]** to select the projection.
 #. Click **[Next]**.
 #. To define the default region, we have to enter the :file:`LOCATION`
