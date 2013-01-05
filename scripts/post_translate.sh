@@ -69,6 +69,9 @@ do
   # sphinx-build which we need to use since we need to pass language flag
   pushd .
   cd ${BUILDDIR}/latex/${LOCALE}/
+  # need to build 3x to have proper toc and index
+  texi2pdf --quiet QGISUserGuide.tex
+  texi2pdf --quiet QGISUserGuide.tex
   texi2pdf --quiet QGISUserGuide.tex
   mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
   popd
