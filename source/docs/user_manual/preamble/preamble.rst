@@ -51,6 +51,13 @@ handles both identically.
 | Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde |                      |
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
+\
+
+**Sponsors**
+
+The update of this user manual was kindly sponsored by 
+`Kanton Solothurn <http://www.so.ch/departemente/bau-und-justiz/amt-fuer-geoinformation.html>`_, Switzerland.
+
 .. Add this section with a table (as seen above), if it is a translation 
 .. from the english master documentation
 .. 
