@@ -38,6 +38,7 @@ algorithms and will be explained later in this chapter).
 
 .. figure:: /static/user_manual/sextante/toolbox.png
    :align: center
+   :width: 15em
 
    SEXTANTE Toolbox |win|
 
@@ -53,6 +54,7 @@ algorithms and will be explained later in this chapter).
 
 .. figure:: /static/user_manual/sextante/models.png
    :align: center
+   :width: 30em
 
    SEXTANTE Models |win|
 
@@ -68,6 +70,7 @@ algorithms and will be explained later in this chapter).
 
 .. figure:: /static/user_manual/sextante/history.png
    :align: center
+   :width: 30em
 
    SEXTANTE History |win|
 
@@ -84,6 +87,7 @@ algorithms and will be explained later in this chapter).
 
 .. figure:: /static/user_manual/sextante/batch_processing.png
    :align: center
+   :width: 30em
 
    SEXTANTE Batch Processing |win|
 

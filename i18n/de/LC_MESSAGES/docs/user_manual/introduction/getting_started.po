@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2012-12-23 19:33\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -78,196 +78,18 @@ msgid ""
 "installation on a flash drive together with all plugins and settings."
 msgstr ""
 
-# f2bbcfcd95c9417ea52ef30667d53899
-#: ../../source/docs/user_manual/introduction/getting_started.rst:52
-msgid "Starting and Stopping QGIS"
-msgstr ""
-
-# 96e6ec82802549e8a0f8dd889c6ecba5
-#: ../../source/docs/user_manual/introduction/getting_started.rst:54
-msgid ""
-"In Section :ref:`samplesession` you already learned how to start QGIS. We "
-"will repeat this here and you will see that QGIS also provides further "
-"command line options."
-msgstr ""
-
-# 9ad2d9abc73d4e779fe9139ca4e58898
-#: ../../source/docs/user_manual/introduction/getting_started.rst:58
-msgid ""
-"|nix| Assuming that QGIS is installed in the PATH, you can start QGIS by "
-"typing: ``qgis``  at a command prompt or by double clicking on the QGIS "
-"application link (or shortcut) on the desktop or in the application menu."
-msgstr ""
-
-# e28ebccc04ff4a70abcaaaf6467ecfc2
-#: ../../source/docs/user_manual/introduction/getting_started.rst:61
-msgid ""
-"|win| Start QGIS using the Start menu or desktop shortcut, or double click "
-"on a QGIS project file."
-msgstr ""
-
-# 6c88df5fc9dc43dd93a5b6cb9c96f79f
-#: ../../source/docs/user_manual/introduction/getting_started.rst:63
-msgid ""
-"|osx| Double click the icon in your Applications folder. If you need to "
-"start QGIS in a shell, run /path-to-installation-executable/Contents/MacOS/"
-"Qgis."
-msgstr ""
-
-# 1622c3d1e93d4deb9d732eafc79b02b5
-#: ../../source/docs/user_manual/introduction/getting_started.rst:68
-msgid ""
-"To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |"
-"osx| :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`."
-msgstr ""
-
-# a28bb88f47624e95ad655aaefbd5de03
-#: ../../source/docs/user_manual/introduction/getting_started.rst:74
-msgid "Command Line Options"
-msgstr ""
-
-# ad4e419df6a2481b8dcd1d0ba4927bcb
-#: ../../source/docs/user_manual/introduction/getting_started.rst:79
-msgid ""
-"|nix| QGIS supports a number of options when started from the command line. "
-"To get a list of the options, enter ``qgis --help`` on the command line. The "
-"usage statement for QGIS is:"
-msgstr ""
-
-# 4f0224bb0e194a29858829fb1d602490
-#: ../../source/docs/user_manual/introduction/getting_started.rst:113
-msgid ""
-"**Example Using command line arguments** You can start QGIS by specifying "
-"one or more data files on the command line. For example, assuming you are in "
-"the qgis_sample_data directory, you could start QGIS with a vector layer and "
-"a raster file set to load on startup using the following command: ``qgis ./"
-"raster/landcover.img ./gml/lakes.gml``"
-msgstr ""
-
-# 084652c9bb684407a9f984823400d2a0
-#: ../../source/docs/user_manual/introduction/getting_started.rst:120
-msgid "**Command line option** ``--snapshot``"
-msgstr ""
-
-# b3329686d7b343bc9d68b38bd53117f7
-#: ../../source/docs/user_manual/introduction/getting_started.rst:123
-msgid ""
-"This option allows you to create a snapshot in PNG format from the current "
-"view. This comes in handy when you have a lot of projects and want to "
-"generate snapshots from your data."
-msgstr ""
-
-# f67d4bae70d94bd4b31bbe4a8cae47ac
-#: ../../source/docs/user_manual/introduction/getting_started.rst:127
-msgid ""
-"Currently it generates a PNG-file with 800x600 pixels. This can be adapted "
-"using the ``--width`` and ``--height`` command line arguments. A filename "
-"can be added after ``--snapshot``."
-msgstr ""
-
-# 35f7654389a9440f948fb66ebf26deee
-#: ../../source/docs/user_manual/introduction/getting_started.rst:131
-msgid "**Command line option** ``--lang``"
-msgstr ""
-
-# 263c27b5678843e7806669a958b8eb44
-#: ../../source/docs/user_manual/introduction/getting_started.rst:134
-msgid ""
-"Based on your locale QGIS, selects the correct localization. If you would "
-"like to change your language, you can specify a language code. For example: "
-"``--lang=it`` starts QGIS in italian localization. A list of currently "
-"supported languages with language code and status is provided at http://www."
-"qgis.org/wiki/GUI_Translation_Progress"
-msgstr ""
-
-# 67188ab1557a4deca57141ec183db100
-#: ../../source/docs/user_manual/introduction/getting_started.rst:141
-msgid "**Command line option** ``--project``"
-msgstr ""
-
-# 84cbfff708314c3c9f0227749af4bf1e
-#: ../../source/docs/user_manual/introduction/getting_started.rst:144
-msgid ""
-"Starting QGIS with an existing project file is also possible. Just add the "
-"command line option ``--project`` followed by your project name and QGIS "
-"will open with all layers loaded described in the given file."
-msgstr ""
-
-# 13fac1c4445c43aeb92065761ba02e5e
-#: ../../source/docs/user_manual/introduction/getting_started.rst:148
-msgid "**Command line option** ``--extent``"
-msgstr ""
-
-# a86e0745fba9481298bead402c653f1b
-#: ../../source/docs/user_manual/introduction/getting_started.rst:151
-msgid ""
-"To start with a specific map extent use this option. You need to add the "
-"bounding box of your extent in the following order separated by a comma::"
-msgstr ""
-
-# 25849d0a94fa4096a83ecc9de5ed5fbc
-#: ../../source/docs/user_manual/introduction/getting_started.rst:156
-msgid "**Command line option** ``--nologo``"
-msgstr ""
-
-# bfb881df7732493eb0be4b298314c2ea
-#: ../../source/docs/user_manual/introduction/getting_started.rst:159
-msgid "This command line argument hides the splash screen when you start QGIS."
-msgstr ""
-
-# 167e3fc11be349689e117bfe6ea8cdf6
-#: ../../source/docs/user_manual/introduction/getting_started.rst:161
-msgid "**Command line option** ``--noplugins``"
-msgstr ""
-
-# 3381cc6f8f984cce91246f071caf05bd
-#: ../../source/docs/user_manual/introduction/getting_started.rst:164
-msgid ""
-"If you have trouble at startup with plugins, you can avoid loading them at "
-"startup. They will still be available in Plugins Manager after-wards."
-msgstr ""
-
-# d0fc129a6de345dcac95b24d25edab4b
-#: ../../source/docs/user_manual/introduction/getting_started.rst:167
-msgid "**Command line option** ``--optionspath``"
-msgstr ""
-
-# 9b005565d8aa4b5881f14204cabbe2e3
-#: ../../source/docs/user_manual/introduction/getting_started.rst:169
-msgid ""
-"You can have multiple configurations and decide which one to use when "
-"starting QGIS using this option. See :ref:`gui_options` to check where does "
-"the operating system save the settings files. Presently there is no way to "
-"specify in which file where to write the settings, therefore you can create "
-"a copy of the original settings file and rename it."
-msgstr ""
-
-# 2bf282c1970746f0a817dc15ad67ddc2
-#: ../../source/docs/user_manual/introduction/getting_started.rst:175
-msgid "**Command line option** ``--configpath``"
-msgstr ""
-
-# 98842cf6356d410cb024bf5cff20a4ea
-#: ../../source/docs/user_manual/introduction/getting_started.rst:178
-msgid ""
-"This option is similar to the one above, but furthermore overrides the "
-"default path (~/.qgis) for user configuration and forces QSettings to use "
-"this directory, too. This allows users to e.g. carry QGIS installation on a "
-"flash drive together with all plugins and settings"
-msgstr ""
-
 # 034c7a2974524ae3bef4f7e65d508623
-#: ../../source/docs/user_manual/introduction/getting_started.rst:186
+#: ../../source/docs/user_manual/introduction/getting_started.rst:52
 msgid "Sample Data"
 msgstr ""
 
 # 485d353090ea4e679382f2a00d7e0d57
-#: ../../source/docs/user_manual/introduction/getting_started.rst:191
+#: ../../source/docs/user_manual/introduction/getting_started.rst:57
 msgid "The user guide contains examples based on the |qg| sample dataset."
 msgstr ""
 
 # 4df087180b4643bfaee9dbcdb6b7bd1c
-#: ../../source/docs/user_manual/introduction/getting_started.rst:193
+#: ../../source/docs/user_manual/introduction/getting_started.rst:59
 msgid ""
 "|win| The Windows installer has an option to download the |qg| sample "
 "dataset. If checked, the data will be downloaded to your :file:`My "
@@ -278,26 +100,26 @@ msgid ""
 msgstr ""
 
 # 7a5ef5bf84644365888caf1c9cff43e2
-#: ../../source/docs/user_manual/introduction/getting_started.rst:200
+#: ../../source/docs/user_manual/introduction/getting_started.rst:66
 msgid "use GIS data that you already have;"
 msgstr ""
 
 # eb458e5beb6f432bbd0e5270870404a2
-#: ../../source/docs/user_manual/introduction/getting_started.rst:201
+#: ../../source/docs/user_manual/introduction/getting_started.rst:67
 msgid ""
 "download the sample data from the qgis website at http://download.qgis.org; "
 "or"
 msgstr ""
 
 # 80bb98d8fd6847debed160964a0fad78
-#: ../../source/docs/user_manual/introduction/getting_started.rst:202
+#: ../../source/docs/user_manual/introduction/getting_started.rst:68
 msgid ""
 "uninstall |qg| and reinstall with the data download option checked, only if "
 "the above solutions are unsuccessful."
 msgstr ""
 
 # a31181dd294841cfb66255f241e42bda
-#: ../../source/docs/user_manual/introduction/getting_started.rst:205
+#: ../../source/docs/user_manual/introduction/getting_started.rst:71
 msgid ""
 "|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation "
 "packages available as rpm, deb or dmg. To use the sample dataset download "
@@ -310,7 +132,7 @@ msgid ""
 msgstr ""
 
 # 5cb17c47eeb74b32ac8caee264289d61
-#: ../../source/docs/user_manual/introduction/getting_started.rst:237
+#: ../../source/docs/user_manual/introduction/getting_started.rst:103
 msgid ""
 "If you intend to use |qg| as graphical frontend for GRASS, you can find a "
 "selection of sample locations (e.g. Spearfish or South Dakota) at the "
@@ -318,12 +140,12 @@ msgid ""
 msgstr ""
 
 # 828c49e3d3854d7abb97de51adc56a73
-#: ../../source/docs/user_manual/introduction/getting_started.rst:244
+#: ../../source/docs/user_manual/introduction/getting_started.rst:110
 msgid "Sample Session"
 msgstr ""
 
 # 049ead74593f464aa37b7b030370167c
-#: ../../source/docs/user_manual/introduction/getting_started.rst:246
+#: ../../source/docs/user_manual/introduction/getting_started.rst:112
 msgid ""
 "Now that you have |qg| installed and a sample dataset available, we would "
 "like to demonstrate a short and simple |qg| sample session. We will "
@@ -333,48 +155,48 @@ msgid ""
 msgstr ""
 
 # 26198d7eaf4c403f8d7ec2c87809f309
-#: ../../source/docs/user_manual/introduction/getting_started.rst:253
+#: ../../source/docs/user_manual/introduction/getting_started.rst:119
 msgid "Start QGIS"
 msgstr ""
 
 # e0e76da146b64369928e4cbc0ecb9560
-#: ../../source/docs/user_manual/introduction/getting_started.rst:255
+#: ../../source/docs/user_manual/introduction/getting_started.rst:121
 msgid ""
 "|nix| Start |qg| by typing: \"|qg|\" at a command prompt, or if using "
 "precompiled binary, using the Applications menu."
 msgstr ""
 
 # a182f69688064c4fba1f5a36b4c257fe
-#: ../../source/docs/user_manual/introduction/getting_started.rst:257
+#: ../../source/docs/user_manual/introduction/getting_started.rst:123
 msgid ""
 "|win| Start |qg| using the Start menu or desktop shortcut, or double click "
 "on a |qg| project file."
 msgstr ""
 
 # 1339882fac8a42668ba108f8149b6e09
-#: ../../source/docs/user_manual/introduction/getting_started.rst:259
+#: ../../source/docs/user_manual/introduction/getting_started.rst:125
 msgid "|osx| Double click the icon in your Applications folder."
 msgstr ""
 
 # 5cb4104fae0843c999b74b4d33a58b8a
-#: ../../source/docs/user_manual/introduction/getting_started.rst:269
+#: ../../source/docs/user_manual/introduction/getting_started.rst:135
 msgid "Load raster and vector layers from the sample dataset"
 msgstr ""
 
 # f4f837bfbfe34b368808223190f51b1f
-#: ../../source/docs/user_manual/introduction/getting_started.rst:271
+#: ../../source/docs/user_manual/introduction/getting_started.rst:137
 msgid "Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon."
 msgstr ""
 
 # c87668c9f3f445ee83277991d34bfeef
-#: ../../source/docs/user_manual/introduction/getting_started.rst:272
+#: ../../source/docs/user_manual/introduction/getting_started.rst:138
 msgid ""
 "Browse to the folder :file:`qgis_sample_data/raster/`, select the ERDAS Img "
 "file :file:`landcover.img` and click **[Open]**."
 msgstr ""
 
 # b645709e4bcd41568f355633ed102e67
-#: ../../source/docs/user_manual/introduction/getting_started.rst:274
+#: ../../source/docs/user_manual/introduction/getting_started.rst:140
 msgid ""
 "If the file is not listed, check if the Filetype combobox at the bottom of "
 "the dialog is set on the right type, in this case \"Erdas Imagine Images (:"
@@ -382,12 +204,12 @@ msgid ""
 msgstr ""
 
 # 287fd74849744b7a89f82eeff8a85fed
-#: ../../source/docs/user_manual/introduction/getting_started.rst:277
+#: ../../source/docs/user_manual/introduction/getting_started.rst:143
 msgid "Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon."
 msgstr ""
 
 # 5dc941561b9d41928d19f78d38ef64f2
-#: ../../source/docs/user_manual/introduction/getting_started.rst:278
+#: ../../source/docs/user_manual/introduction/getting_started.rst:144
 msgid ""
 "|radiobuttonon| :guilabel:`File` should be selected as Source Type in the "
 "new :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select "
@@ -395,7 +217,7 @@ msgid ""
 msgstr ""
 
 # 1efc003e26754a09b8a639d9b9d4fed9
-#: ../../source/docs/user_manual/introduction/getting_started.rst:281
+#: ../../source/docs/user_manual/introduction/getting_started.rst:147
 msgid ""
 "Browse to the folder :file:`qgis_sample_data/gml/`, select \"GML\" from the "
 "filetype combobox, then select the GML file :file:`lakes.gml` and click **"
@@ -403,24 +225,24 @@ msgid ""
 msgstr ""
 
 # 6edd367e7f1d41979c66613a69c5978f
-#: ../../source/docs/user_manual/introduction/getting_started.rst:284
+#: ../../source/docs/user_manual/introduction/getting_started.rst:150
 msgid "Zoom in a bit to your favorite area with some lakes."
 msgstr ""
 
 # fa8cccb28e8f4c6482d8ab1bf1e2bdda
-#: ../../source/docs/user_manual/introduction/getting_started.rst:285
+#: ../../source/docs/user_manual/introduction/getting_started.rst:151
 msgid ""
 "Double click the :file:`lakes` layer in the map legend to open the :guilabel:"
 "`Properties` dialog."
 msgstr ""
 
 # 22cb7e3f8c37457c96dd589960abd542
-#: ../../source/docs/user_manual/introduction/getting_started.rst:287
+#: ../../source/docs/user_manual/introduction/getting_started.rst:153
 msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
 msgstr ""
 
 # 6493c253305f4fb486833811f5034808
-#: ../../source/docs/user_manual/introduction/getting_started.rst:288
+#: ../../source/docs/user_manual/introduction/getting_started.rst:154
 msgid ""
 "Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:"
 "`Display lables` checkbox to enable labeling. Choose NAMES field as field "
@@ -428,7 +250,7 @@ msgid ""
 msgstr ""
 
 # 8e9e4d4e05564b0cbd08463c8f776ae8
-#: ../../source/docs/user_manual/introduction/getting_started.rst:290
+#: ../../source/docs/user_manual/introduction/getting_started.rst:156
 msgid ""
 "To improve readability of labels, you can add a white buffer around them, by "
 "clicking \"Buffer\" in the list on the left, checking |checkbox| :guilabel:"
@@ -436,56 +258,204 @@ msgid ""
 msgstr ""
 
 # ca31b2ffb858431c974338c164886054
-#: ../../source/docs/user_manual/introduction/getting_started.rst:293
+#: ../../source/docs/user_manual/introduction/getting_started.rst:159
 msgid ""
 "Click **[Apply]**, check if the result looks good and finally click **[OK]**."
 msgstr ""
 
 # 3c1dd06280f34d37a5a0a2587bcc30b4
-#: ../../source/docs/user_manual/introduction/getting_started.rst:296
+#: ../../source/docs/user_manual/introduction/getting_started.rst:162
 msgid ""
 "You can see how easy it is to visualize raster and vector layers in |qg|. "
 "Let's move on to the sections that follow to learn more about the available "
 "functionality, features and settings and how to use them."
 msgstr ""
 
-# ebd6885af3bb45fe8a69aa4bd8ff3f19
-#: ../../source/docs/user_manual/introduction/getting_started.rst:303
-msgid "Output"
+# f2bbcfcd95c9417ea52ef30667d53899
+#: ../../source/docs/user_manual/introduction/getting_started.rst:169
+msgid "Starting and Stopping QGIS"
 msgstr ""
 
-# edd5f6cbb8fb47bea1148af9f7d98b7c
-#: ../../source/docs/user_manual/introduction/getting_started.rst:310
+# 96e6ec82802549e8a0f8dd889c6ecba5
+#: ../../source/docs/user_manual/introduction/getting_started.rst:171
 msgid ""
-"There are several ways to generate output from your QGIS session. We have "
-"discussed one already in Section :ref:`sec_projects` saving as a project "
-"file. Here is a sampling of other ways to produce output files:"
+"In Section :ref:`samplesession` you already learned how to start QGIS. We "
+"will repeat this here and you will see that QGIS also provides further "
+"command line options."
 msgstr ""
 
-# cb2e008e856f47bca1e0a8bfb47e2e19
-#: ../../source/docs/user_manual/introduction/getting_started.rst:314
+# 9ad2d9abc73d4e779fe9139ca4e58898
+#: ../../source/docs/user_manual/introduction/getting_started.rst:175
 msgid ""
-"Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens a "
-"file dialog where you select the name, path and type of image (PNG or JPG "
-"format). A world file with extension PNGW or JPGW saved in the same folder "
-"georeferences the image."
+"|nix| Assuming that QGIS is installed in the PATH, you can start QGIS by "
+"typing: ``qgis``  at a command prompt or by double clicking on the QGIS "
+"application link (or shortcut) on the desktop or in the application menu."
 msgstr ""
 
-# 552c4b49b31f4418a5e6726ba8cf5dd1
-#: ../../source/docs/user_manual/introduction/getting_started.rst:318
+# e28ebccc04ff4a70abcaaaf6467ecfc2
+#: ../../source/docs/user_manual/introduction/getting_started.rst:178
 msgid ""
-"Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a "
-"dialog where you can layout and print the current map canvas (see Section :"
-"ref:`label_printcomposer`)."
+"|win| Start QGIS using the Start menu or desktop shortcut, or double click "
+"on a QGIS project file."
+msgstr ""
+
+# 6c88df5fc9dc43dd93a5b6cb9c96f79f
+#: ../../source/docs/user_manual/introduction/getting_started.rst:180
+msgid ""
+"|osx| Double click the icon in your Applications folder. If you need to "
+"start QGIS in a shell, run /path-to-installation-executable/Contents/MacOS/"
+"Qgis."
+msgstr ""
+
+# 1622c3d1e93d4deb9d732eafc79b02b5
+#: ../../source/docs/user_manual/introduction/getting_started.rst:185
+msgid ""
+"To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |"
+"osx| :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`."
+msgstr ""
+
+# a28bb88f47624e95ad655aaefbd5de03
+#: ../../source/docs/user_manual/introduction/getting_started.rst:191
+msgid "Command Line Options"
+msgstr ""
+
+# ad4e419df6a2481b8dcd1d0ba4927bcb
+#: ../../source/docs/user_manual/introduction/getting_started.rst:196
+msgid ""
+"|nix| QGIS supports a number of options when started from the command line. "
+"To get a list of the options, enter ``qgis --help`` on the command line. The "
+"usage statement for QGIS is:"
+msgstr ""
+
+# 4f0224bb0e194a29858829fb1d602490
+#: ../../source/docs/user_manual/introduction/getting_started.rst:230
+msgid ""
+"**Example Using command line arguments** You can start QGIS by specifying "
+"one or more data files on the command line. For example, assuming you are in "
+"the qgis_sample_data directory, you could start QGIS with a vector layer and "
+"a raster file set to load on startup using the following command: ``qgis ./"
+"raster/landcover.img ./gml/lakes.gml``"
+msgstr ""
+
+# 084652c9bb684407a9f984823400d2a0
+#: ../../source/docs/user_manual/introduction/getting_started.rst:237
+msgid "**Command line option** ``--snapshot``"
+msgstr ""
+
+# b3329686d7b343bc9d68b38bd53117f7
+#: ../../source/docs/user_manual/introduction/getting_started.rst:240
+msgid ""
+"This option allows you to create a snapshot in PNG format from the current "
+"view. This comes in handy when you have a lot of projects and want to "
+"generate snapshots from your data."
+msgstr ""
+
+# f67d4bae70d94bd4b31bbe4a8cae47ac
+#: ../../source/docs/user_manual/introduction/getting_started.rst:244
+msgid ""
+"Currently it generates a PNG-file with 800x600 pixels. This can be adapted "
+"using the ``--width`` and ``--height`` command line arguments. A filename "
+"can be added after ``--snapshot``."
+msgstr ""
+
+# 35f7654389a9440f948fb66ebf26deee
+#: ../../source/docs/user_manual/introduction/getting_started.rst:248
+msgid "**Command line option** ``--lang``"
+msgstr ""
+
+# b4132ee2879b477a849f115ae7242aca
+#: ../../source/docs/user_manual/introduction/getting_started.rst:251
+msgid ""
+"Based on your locale QGIS, selects the correct localization. If you would "
+"like to change your language, you can specify a language code. For example: "
+"``--lang=it`` starts QGIS in italian localization. A list of currently "
+"supported languages with language code and status is provided at http://hub."
+"qgis.org/wiki/quantum-gis/GUI_Translation_Progress"
+msgstr ""
+
+# 67188ab1557a4deca57141ec183db100
+#: ../../source/docs/user_manual/introduction/getting_started.rst:258
+msgid "**Command line option** ``--project``"
+msgstr ""
+
+# 84cbfff708314c3c9f0227749af4bf1e
+#: ../../source/docs/user_manual/introduction/getting_started.rst:261
+msgid ""
+"Starting QGIS with an existing project file is also possible. Just add the "
+"command line option ``--project`` followed by your project name and QGIS "
+"will open with all layers loaded described in the given file."
+msgstr ""
+
+# 13fac1c4445c43aeb92065761ba02e5e
+#: ../../source/docs/user_manual/introduction/getting_started.rst:265
+msgid "**Command line option** ``--extent``"
+msgstr ""
+
+# a86e0745fba9481298bead402c653f1b
+#: ../../source/docs/user_manual/introduction/getting_started.rst:268
+msgid ""
+"To start with a specific map extent use this option. You need to add the "
+"bounding box of your extent in the following order separated by a comma::"
+msgstr ""
+
+# 25849d0a94fa4096a83ecc9de5ed5fbc
+#: ../../source/docs/user_manual/introduction/getting_started.rst:273
+msgid "**Command line option** ``--nologo``"
+msgstr ""
+
+# bfb881df7732493eb0be4b298314c2ea
+#: ../../source/docs/user_manual/introduction/getting_started.rst:276
+msgid "This command line argument hides the splash screen when you start QGIS."
+msgstr ""
+
+# 167e3fc11be349689e117bfe6ea8cdf6
+#: ../../source/docs/user_manual/introduction/getting_started.rst:278
+msgid "**Command line option** ``--noplugins``"
+msgstr ""
+
+# 3381cc6f8f984cce91246f071caf05bd
+#: ../../source/docs/user_manual/introduction/getting_started.rst:281
+msgid ""
+"If you have trouble at startup with plugins, you can avoid loading them at "
+"startup. They will still be available in Plugins Manager after-wards."
+msgstr ""
+
+# d0fc129a6de345dcac95b24d25edab4b
+#: ../../source/docs/user_manual/introduction/getting_started.rst:284
+msgid "**Command line option** ``--optionspath``"
+msgstr ""
+
+# 9b005565d8aa4b5881f14204cabbe2e3
+#: ../../source/docs/user_manual/introduction/getting_started.rst:286
+msgid ""
+"You can have multiple configurations and decide which one to use when "
+"starting QGIS using this option. See :ref:`gui_options` to check where does "
+"the operating system save the settings files. Presently there is no way to "
+"specify in which file where to write the settings, therefore you can create "
+"a copy of the original settings file and rename it."
+msgstr ""
+
+# 2bf282c1970746f0a817dc15ad67ddc2
+#: ../../source/docs/user_manual/introduction/getting_started.rst:292
+msgid "**Command line option** ``--configpath``"
+msgstr ""
+
+# 98842cf6356d410cb024bf5cff20a4ea
+#: ../../source/docs/user_manual/introduction/getting_started.rst:295
+msgid ""
+"This option is similar to the one above, but furthermore overrides the "
+"default path (~/.qgis) for user configuration and forces QSettings to use "
+"this directory, too. This allows users to e.g. carry QGIS installation on a "
+"flash drive together with all plugins and settings"
 msgstr ""
 
 # 98c8a00f27a94ec8aae68b623dd6c1de
-#: ../../source/docs/user_manual/introduction/getting_started.rst:326
+#: ../../source/docs/user_manual/introduction/getting_started.rst:303
 msgid "Projects"
 msgstr ""
 
 # c5af7b1b2913421db6d2953c61681ecf
-#: ../../source/docs/user_manual/introduction/getting_started.rst:328
+#: ../../source/docs/user_manual/introduction/getting_started.rst:305
 msgid ""
 "The state of your QGIS session is considered a Project.  QGIS works on one "
 "project at a time.  Settings are either considered as being per-project, or "
@@ -496,7 +466,7 @@ msgid ""
 msgstr ""
 
 # 9a5565af6c734de1b668f75d923ed7eb
-#: ../../source/docs/user_manual/introduction/getting_started.rst:336
+#: ../../source/docs/user_manual/introduction/getting_started.rst:313
 msgid ""
 "Load saved projects into a QGIS session using :menuselection:`File -->` |"
 "mActionFileOpen| :guilabel:`Open Project` or :menuselection:`File --> Open "
@@ -504,7 +474,7 @@ msgid ""
 msgstr ""
 
 # a7fa0ab624864e4aa3363677fc53f042
-#: ../../source/docs/user_manual/introduction/getting_started.rst:340
+#: ../../source/docs/user_manual/introduction/getting_started.rst:317
 msgid ""
 "If you wish to clear your session and start fresh, choose :menuselection:"
 "`File -->` |mActionFileNew| :guilabel:`New Project`. Either of these menu "
@@ -513,32 +483,32 @@ msgid ""
 msgstr ""
 
 # 9494b646334148748f591d6e3909a937
-#: ../../source/docs/user_manual/introduction/getting_started.rst:345
+#: ../../source/docs/user_manual/introduction/getting_started.rst:322
 msgid "The kinds of information saved in a project file include:"
 msgstr ""
 
 # bd59b16ab1634604911f3ec72402ffee
-#: ../../source/docs/user_manual/introduction/getting_started.rst:347
+#: ../../source/docs/user_manual/introduction/getting_started.rst:324
 msgid "Layers added"
 msgstr ""
 
 # 877b3f91c94b4df3a9c3fd31d9f862e5
-#: ../../source/docs/user_manual/introduction/getting_started.rst:348
+#: ../../source/docs/user_manual/introduction/getting_started.rst:325
 msgid "Layer properties, including symbolization"
 msgstr ""
 
 # 81a06c9a8fe640ab9ddde25933b0b11a
-#: ../../source/docs/user_manual/introduction/getting_started.rst:349
+#: ../../source/docs/user_manual/introduction/getting_started.rst:326
 msgid "Projection for the map view"
 msgstr ""
 
 # c14d0c9bbc7f44eab291df8f47b91afc
-#: ../../source/docs/user_manual/introduction/getting_started.rst:350
+#: ../../source/docs/user_manual/introduction/getting_started.rst:327
 msgid "Last viewed extent"
 msgstr ""
 
 # 8658f66f33d1445889e792a59ca44184
-#: ../../source/docs/user_manual/introduction/getting_started.rst:352
+#: ../../source/docs/user_manual/introduction/getting_started.rst:329
 msgid ""
 "The project file is saved in XML format, so it is possible to edit the file "
 "outside QGIS if you know what you are doing. The file format was updated "
@@ -548,10 +518,44 @@ msgid ""
 "can select:"
 msgstr ""
 
-# 3d85d0a92c3d498d8f4e5203a296db3b
+# 1b75ee7067f3453ca404cb25227a48ff
+#: ../../source/docs/user_manual/introduction/getting_started.rst:336
+msgid "|checkbox| :guilabel:`Prompt to save project changes when required`"
+msgstr ""
+
+# 131fb89e8fae42a195f7183e609e77a7
+#: ../../source/docs/user_manual/introduction/getting_started.rst:338
+msgid ""
+"|checkbox| :guilabel:`Warn when opening a project file saved with an older "
+"version of QGIS`"
+msgstr ""
+
+# ebd6885af3bb45fe8a69aa4bd8ff3f19
+#: ../../source/docs/user_manual/introduction/getting_started.rst:344
+msgid "Output"
+msgstr ""
+
+# edd5f6cbb8fb47bea1148af9f7d98b7c
+#: ../../source/docs/user_manual/introduction/getting_started.rst:351
+msgid ""
+"There are several ways to generate output from your QGIS session. We have "
+"discussed one already in Section :ref:`sec_projects` saving as a project "
+"file. Here is a sampling of other ways to produce output files:"
+msgstr ""
+
+# cb2e008e856f47bca1e0a8bfb47e2e19
+#: ../../source/docs/user_manual/introduction/getting_started.rst:355
+msgid ""
+"Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens a "
+"file dialog where you select the name, path and type of image (PNG or JPG "
+"format). A world file with extension PNGW or JPGW saved in the same folder "
+"georeferences the image."
+msgstr ""
+
+# 552c4b49b31f4418a5e6726ba8cf5dd1
 #: ../../source/docs/user_manual/introduction/getting_started.rst:359
 msgid ""
-"|checkbox| :guilabel:`Prompt to save project changes when required` |"
-"checkbox| :guilabel:`Warn when opening a project file saved with an older "
-"version of QGIS`"
+"Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a "
+"dialog where you can layout and print the current map canvas (see Section :"
+"ref:`label_printcomposer`)."
 msgstr ""

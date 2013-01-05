@@ -167,7 +167,7 @@ shows the response provided by the DM Solutions Group WMS server.
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
-   :width: 45em
+   :width: 30em
 
    Dialog for adding a WMS server, showing its available layers |nix|
 
@@ -286,7 +286,7 @@ Server` dialog.
 
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
-   :width: 38em
+   :width: 30em
 
    Dialog for searching WMS servers after some keywords |nix|
 
@@ -493,7 +493,7 @@ Note that proxy-settings you have set in your preferences are also recognized.
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
-   :width: 34 em
+   :width: 20 em
 
    Adding a WFS layer |nix|
 

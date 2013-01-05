@@ -24,6 +24,7 @@ pop-up menu that will appear
 
 .. figure:: /static/user_manual/sextante/batch_processing_right_click.png
    :align: center
+   :width: 20em
 
    Batch Processing Right Click |win|
 
@@ -44,6 +45,7 @@ introduced using a table like the one shown next.
 
 .. figure:: /static/user_manual/sextante/batch_processing.png
    :align: center
+   :width: 30em
 
    Batch Processing |win|
 
@@ -98,6 +100,7 @@ autocompletion of other cells in the same column (same parameter).
 
 .. figure:: /static/user_manual/sextante/batch_processing_save.png
    :align: center
+   :width: 20em
 
    Batch Processing Save
 
@@ -121,6 +124,7 @@ to input ones.
 
 .. figure:: /static/user_manual/sextante/batch_processing_filepath.png
    :align: center
+   :width: 20em
 
    Batch Processing File Path |win|
 

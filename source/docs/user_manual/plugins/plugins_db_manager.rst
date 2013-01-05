@@ -15,7 +15,7 @@ The DB Manager Plugin is officially part of |qg| core and intends to replace the
 
 .. figure:: /static/user_manual/plugins/db_manager.png
    :align: center
-   :width: 40 em
+   :width: 30 em
 
    DB Manager dialog (KDE) |nix|
 

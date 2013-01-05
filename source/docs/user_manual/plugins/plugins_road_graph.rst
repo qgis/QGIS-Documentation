@@ -66,6 +66,6 @@ Select a Start and a Stop point in the road network layer and click on
 
 .. figure:: /static/user_manual/plugins/roadgraph_sample.png
    :align: center
-   :width: 40 em
+   :width: 30 em
 
    Road Graph Plugin |nix|

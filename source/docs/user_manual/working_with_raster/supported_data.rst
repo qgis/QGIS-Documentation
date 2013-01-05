@@ -14,9 +14,10 @@ Working with Raster Data
 
 
 This Section describes how to visualize and set raster layer properties.
-|qg| uses the :index:`GDAL` library to read and write raster data formats [#]_, 
+|qg| uses the :index:`GDAL` library to read and write raster data formats, 
 including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine 
-and many more. The raster data can also be loaded in read mode from zip and gzip 
+and many more. GRASS raster support is supplied by a native QGIS data provider 
+plugin. The raster data can also be loaded in read mode from zip and gzip 
 archives into QGIS.
 
 At the date of this document, more than 100 raster formats are supported 
@@ -88,6 +89,3 @@ a dialog to set raster properties for the layer.
 * :menuselection:`Collapse all`
 * :menuselection:`Update Drawing Order`
 
-----
- 
-.. [#] GRASS raster support is supplied by a native QGIS data provider plugin. 

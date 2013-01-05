@@ -27,7 +27,7 @@ There are several tabs on the dialog:
 
 .. figure:: /static/user_manual/working_with_raster/rasterPropertiesDialog.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Raster Layers Properties Dialog |nix|
 

@@ -25,6 +25,7 @@ information about an algorithm executed at any particular moment.
 
 .. figure:: /static/user_manual/sextante/history.png
    :align: center
+   :width: 25em
 
    History |win|
 

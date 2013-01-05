@@ -59,7 +59,7 @@ dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 
 .. figure:: /static/user_manual/working_with_gps/loadgpx.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The *GPS Tools* dialog window |nix|
 
@@ -118,7 +118,7 @@ be stored, and the name of the new layer.
 
 .. figure::  /static/user_manual/working_with_gps/download.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The download tool
 

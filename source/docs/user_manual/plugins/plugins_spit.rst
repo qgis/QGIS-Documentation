@@ -30,7 +30,7 @@ as each shapefile is processed.
    **Figure SPIT Plugin 1:** 
 
 .. figure:: /static/user_manual/plugins/spit_plugin.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Using SPIT Plugin to import Shape files to PostGIS |nix|

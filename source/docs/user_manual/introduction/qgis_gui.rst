@@ -300,15 +300,11 @@ Menu Option                                                     Shortcut        
 |mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-
-.. note::
-   |nix| The Menu Bar items listed above are the default ones in KDE
-   window manager. In GNOME, Settings menu is missing and its items are to be
-   found here:
-
 \
 
-\
+Please not that for Linux |nix| the Menu Bar items listed above are the default ones 
+in KDE window manager. In GNOME, Settings menu is missing and its items are to be
+found here:
 
 +-----------------------------------------------------------------------+------------------------+
 | |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`File`       |

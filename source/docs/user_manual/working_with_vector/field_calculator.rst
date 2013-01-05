@@ -103,8 +103,8 @@ The available functions are listed below.
  lower(a)    			      convert string a to lower case
  upper(a)			      convert string a to upper case
  length(a)			      length of string a
- atan2(y,x)  			      arcustangens of y/x using the signs of the two arguments 
-                                      to determine the quadrant of the result
+ atan2(y,x)  			      arcustangens of y/x using the signs of the two  
+                                      arguments to determine the quadrant of the result
  replace(*a*, replacethis, withthat)  replace this with that in string a
  regexp_replace(a,this,that)          replace the regular expression this with that
  substr(*a*,from,len)                 len characters of string *a* starting from from 
@@ -117,10 +117,10 @@ The available functions are listed below.
  $id     			      feature id
  $x  				      x coordinate of point
  $y  				      y coordinate of point
- xat(n)                               X coordinate of the point of an n-th line (indeces start at 0;
-                                      negative values refer to the line end)
- yat(n)                               y coordinate of the point of an n-th line (indeces start at 0;
-                                      negative values refer to the line end)
+ xat(n)                               X coordinate of the point of an n-th line (indeces
+                                      start at 0; negative values refer to the line end)
+ yat(n)                               y coordinate of the point of an n-th line (indeces
+                                      start at 0; negative values refer to the line end)
  a = b                                a and b are equal
  a != b                               a and b are not equal
  a <> b

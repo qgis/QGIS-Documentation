@@ -23,7 +23,7 @@ dialog is similar in functionality to the dialogs for PostGIS and SpatiaLite.
 
 .. figure:: /static/user_manual/plugins/sql_anywhere.png
    :align: center
-   :width: 40 em
+   :width: 30 em
 
    SQL Anywhere dialog (KDE) |nix|
 

@@ -70,7 +70,7 @@ and their associated attribute data.
 
 .. figure:: /static/user_manual/plugins/evisdisplay.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    The *eVis* display window |win|
 
@@ -106,7 +106,7 @@ Understanding the Options window
 
 .. figure:: /static/user_manual/plugins/evisoptions.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    The *eVis* Options window |win|
 
@@ -159,7 +159,7 @@ Understanding the Configure External Applications window
 
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
-   :width: 40em
+   :width: 30em
  
    The *eVis* External Applications window |win|
 
@@ -341,7 +341,7 @@ above.
 
 .. figure:: /static/user_manual/plugins/evisdatabase.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    The *eVis* Database connection window |win|
 
@@ -392,7 +392,7 @@ created from the results of the query in the Name of New Layer textbox.
 
 .. figure:: /static/user_manual/plugins/evissql_query.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    The eVis SQL query tab |win|
 
@@ -462,7 +462,7 @@ the Output Console window.
 
 .. figure:: /static/user_manual/plugins/evispredefined.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    The *eVis* Predefined queries tab |win|
 

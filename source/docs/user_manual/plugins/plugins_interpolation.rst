@@ -33,7 +33,7 @@ The plugin requires the following parameters to be specified before running:
 
 .. figure:: /static/user_manual/plugins/interpolate_dialog.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Interpolation Plugin |nix|
 

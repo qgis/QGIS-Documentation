@@ -165,7 +165,7 @@ plugins, as well as plugins available in remote repositories.
 
 .. figure:: /static/user_manual/plugins/plugininstaller.png
    :align: center
-   :width: 40em
+   :width: 30em
    
    Installing external python plugins |nix|
 
