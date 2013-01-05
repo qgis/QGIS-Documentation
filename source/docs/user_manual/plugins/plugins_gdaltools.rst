@@ -45,8 +45,8 @@ List of GDAL tools
    The *GDALTools* menu list
 
 
-:menuselection:`Projections -->`
-
+Projections
+...........
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_warp|:guilabel:`Warp (Reproject)`                | This utility is an image mosaicing, reprojection and |
 |                                                        | warping utility. The program can reproject to any    |
@@ -85,8 +85,8 @@ List of GDAL tools
 
 \
 \
-:menuselection:`Conversion -->`
-
+Conversion
+..........
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_rasterize|:guilabel:`Rasterize`                  | This program burns vector geometries (points, lines   |
 |                                                        | and polygons) into the raster band(s) of a raster     |
@@ -128,8 +128,8 @@ List of GDAL tools
 
 \
 \
-:menuselection:`Extraction -->`
-
+Extraction
+..........
 +--------------------------------------------------------+-------------------------------------------------------+
 ||gdal_contour|:guilabel:`Contour`                       | This program generates a vector contour file from the |
 |                                                        | input raster elevation model (DEM).                   |
@@ -150,8 +150,8 @@ List of GDAL tools
 
 \
 \
-:menuselection:`Analysis -->`
-
+Analysis
+........
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_sieve|:guilabel:`Sieve`                          | This utility removes raster polygons smaller than a   |
 |                                                        | provided threshold size (in pixels) and replaces      |
@@ -200,8 +200,8 @@ List of GDAL tools
 
 \
 \
-:menuselection:`Miscellaneous -->`
-
+Miscellaneous
+.............
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_vrt|:guilabel:`Build Virtual Raster`             | This program builds a VRT (Virtual Dataset) that is a |
 |                                                        | mosaic of the list of input gdal datasets. See also   |

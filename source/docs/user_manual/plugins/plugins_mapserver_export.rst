@@ -33,7 +33,7 @@ MapServer and save this status in a QGIS project file.
 
 .. figure:: /static/user_manual/plugins/mapserver_export_qgis.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    Arrange raster and vector layers for QGIS project file |nix|
 
@@ -71,7 +71,7 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
 
 .. figure:: /static/user_manual/plugins/mapserver_export_dialog.png
    :align: center
-   :width: 30em
+   :width: 25em
    
    Export to MapServer Dialog |nix|
 
