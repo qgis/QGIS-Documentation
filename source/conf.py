@@ -366,6 +366,8 @@ rst_epilog = """
    :width: 1em
 .. |mActionHelpContents| image:: /static/common/mActionHelpContents.png
    :width: 1.5em
+.. |mActionWhatsThis| image:: /static/common/whats_this.png
+   :width: 1.5em
 .. |mActionQgisHomePage| image:: /static/common/mActionQgisHomePage.png
    :width: 1.5em
 .. |mActionCheckQgisVersion| image:: /static/common/mActionCheckQgisVersion.png

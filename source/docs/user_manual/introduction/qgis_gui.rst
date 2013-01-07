@@ -292,7 +292,7 @@ Help
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
-|| :guilabel:`What's This?`                                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
+|mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
