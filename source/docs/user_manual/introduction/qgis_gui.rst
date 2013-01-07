@@ -568,7 +568,7 @@ as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
 status of lengthy operations.
 
-If a new plugin or a plugin update is available, you will see a message in the
+If a new plugin or a plugin update is available, you will see a message at the
 far right of the status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering|
