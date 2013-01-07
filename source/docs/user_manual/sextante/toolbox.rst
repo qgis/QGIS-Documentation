@@ -21,6 +21,7 @@ inputs.
 
 .. figure:: /static/user_manual/sextante/toolbox.png
    :align: center
+   :width: 15em
 
    SEXTANTE Toolbox |win| 
 
@@ -66,6 +67,7 @@ dialog corresponds to the *SAGA-Convergence index* algorithm).
 
 .. figure:: /static/user_manual/sextante/parameters_dialog.png
    :align: center
+   :width: 30em
 
    Parameters Dialog |win|
 
@@ -125,6 +127,7 @@ parameters found on the table can be of one of the following types.
 
 .. figure:: /static/user_manual/sextante/number_selector.png
    :align: center
+   :width: 30em
 
    Number Selector |win|
 
@@ -153,6 +156,7 @@ parameters found on the table can be of one of the following types.
 
 .. figure:: /static/user_manual/sextante/extent.png
    :align: center
+   :width: 20em
 
    SEXTANTE Extent |win|
 
@@ -166,6 +170,7 @@ If you select the first option, you will see a window like the next one.
 
 .. figure:: /static/user_manual/sextante/extent_list.png
    :align: center
+   :width: 20em
 
    SEXTANTE Extent List |win|
 
@@ -182,6 +187,7 @@ box.
 
 .. figure:: /static/user_manual/sextante/extent_drag.png
    :align: center
+   :width: 20em
 
    Extent Drag |win|
 
@@ -198,6 +204,7 @@ box.
 
 .. figure:: /static/user_manual/sextante/multiple_selection.png
    :align: center
+   :width: 20em
 
    Multiple Selection |win|
 
@@ -215,6 +222,7 @@ box.
 
 .. figure:: /static/user_manual/sextante/fixed_table.png
    :align: center
+   :width: 20em
 
    Fixed Table |win|
 
@@ -352,6 +360,7 @@ like the one shown next.
 
 .. figure:: /static/user_manual/sextante/rendering_styles.png
    :align: center
+   :width: 30em
 
    Rendering Styles |win|
 

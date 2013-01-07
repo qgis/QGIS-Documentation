@@ -125,39 +125,40 @@ into the master repository from time to time.
 Howto for translators
 .....................
 
-Translators can edit the .po files using the web application http://translate.qgis.org,
-based on Pootle, or work locally and use an offline editor. `QtLinguist 
-<http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
-highly recommended choice.
+A thorough explanation for translators is written here:
+http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
 
-*If you want to translate using the web application*
 
-* Do this ...
-* do that ...
+.. temporarily commented the following part out:
 
-*If you want to translate locally*
-
-* clone the forked repository from your language maintainer (this step copies the repository to your computer)
-* now that you have all the files on your computer just translate them! (suggested softwares are qt linguist, lokalize, but you can use the software you want)
-* files translated need to be "synchronized"  with the old ones in the directory of the forked repo
-* if you are linux users, open the terminal and get in the directory of the forked repo, and just write git add * , this simple command updates the files of the forked repository
-* now you have to commit the files writing git commit in the bash
-* at this point the translated files are on your computer only. You need then to upload them on the forked github account. Open the terminal and write git push origin master. Now if you look at your github page the files are updated with the translations.
-* your language maintainer will take care that every significant translation go into the master repository. 
-* Generally, as soon as you finish editing one or more .po files, you should commit as soon as possible the edits to the git repository, in order to minimize the possibility of conflicts.
-
-New Language workflow
-----------------------
-
-- add your locale code in the pre_translate.sh script in the line with 'LOCALE='
-
-- run 'scripts/pre_translate.sh'. There will be a new directory in the
-i18n directory for your language, containing the po-files for all source files
-
-- create an empty(!) directory in the resources directory for your language
-The idea is to ONLY put images in exact the same directory structure if you want
-an image to be 'translated'. As default the english one will be used from the
-'en' directory, and only if there is an translated one it wil be found and used.
-
-- add your locale code in the post_translate.sh script in the line with 'LOCALE='
+.. Translators work locally and use an offline editor. `QtLinguist 
+.. <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
+.. highly recommended choice.
+.. 
+.. 
+.. *If you want to translate locally*
+.. 
+.. * clone the forked repository from your language maintainer (this step copies the repository to your computer)
+.. * now that you have all the files on your computer just translate them! (suggested softwares are qt linguist, lokalize, but you can use the software you want)
+.. * files translated need to be "synchronized"  with the old ones in the directory of the forked repo
+.. * if you are linux users, open the terminal and get in the directory of the forked repo, and just write git add * , this simple command updates the files of the forked repository
+.. * now you have to commit the files writing git commit in the bash
+.. * at this point the translated files are on your computer only. You need then to upload them on the forked github account. Open the terminal and write git push origin master. Now if you look at your github page the files are updated with the translations.
+.. * your language maintainer will take care that every significant translation go into the master repository. 
+.. * Generally, as soon as you finish editing one or more .po files, you should commit as soon as possible the edits to the git repository, in order to minimize the possibility of conflicts.
+.. 
+.. New Language workflow
+.. ----------------------
+.. 
+.. - add your locale code in the pre_translate.sh script in the line with 'LOCALE='
+.. 
+.. - run 'scripts/pre_translate.sh'. There will be a new directory in the
+.. i18n directory for your language, containing the po-files for all source files
+.. 
+.. - create an empty(!) directory in the resources directory for your language
+.. The idea is to ONLY put images in exact the same directory structure if you want
+.. an image to be 'translated'. As default the english one will be used from the
+.. 'en' directory, and only if there is an translated one it wil be found and used.
+.. 
+.. - add your locale code in the post_translate.sh script in the line with 'LOCALE='
 

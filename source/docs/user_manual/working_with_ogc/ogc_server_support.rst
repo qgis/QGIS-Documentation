@@ -77,7 +77,7 @@ state boundaries of Alaska. Add the WMS with the URL
 
 .. figure:: /static/user_manual/working_with_ogc/standard_wms_usa.png
    :align: center
-   :width: 40 em
+   :width: 25 em
 
    Standard WMS with USA boundaries included in the qgis server (KDE) |nix|
 
@@ -92,6 +92,18 @@ data. Here we use the 'alaska' shapefile from the qgis_sample_dataset. Define th
 colors and styles of the layers in QGIS and define the project CRS, if not already 
 done.
 
+.. _figure_server_2:
+
+.. only:: html
+
+   **Figure Server 2:**
+
+.. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
+   :align: center
+   :width: 20 em
+
+   Definitions for a qgis project WMS/WFS server (KDE)
+
 Then open the ``OWS Server`` tab in the menu :menuselection:`Settings --> 
 Project Properties` and define the general fields under 'Service Capabilities'.
 
@@ -103,38 +115,16 @@ can be requested.
 For ``WFS Capabilities`` you only need to select the layers that you want to provide 
 as WFS. Now save the session in a project file :file:`alaska.qgs`. 
 
-.. _figure_server_2:
-
-.. only:: html
-
-   **Figure Server 2:**
-
-.. figure:: /static/user_manual/working_with_ogc/ows_server_definition.png
-   :align: center
-   :width: 40 em
-
-   Definitions for a qgis project WMS/WFS server (KDE)
-
 To provide the project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` 
 with admin privileges and add the project file :file:`alaska.qgs` and a copy of the 
 :file:`qgis\_mapserv.fcgi` file - that's all.
 
-Now we test our project WMS, add the WMS with the URL 
-``http://localhost/cgi-bin/project/qgis_mapserv.fcgi`` as described in 
-:ref:`ogc-wms-layers` to QGIS and load the WMS.
+Now we test our project WMS and WFS, add the WMS and WFS as described in 
+:ref:`ogc-wms-layers` and :ref:`ogc-wfs` to QGIS and load the WMS. The URL is:
 
-.. _figure_server_3:
+:: 
+ 
+ http://localhost/cgi-bin/project/qgis_mapserv.fcgi
 
-.. only:: html
-
-   **Figure Server 3:**
-
-.. figure:: /static/user_manual/working_with_ogc/wms_server_project.png
-   :align: center
-   :width: 40 em
-
-   QGIS WMS Server based on a qgis project (KDE)
-
-Also test the project WFS and load the WFS with the URL ``http://localhost/cgi-bin/project/qgis_mapserv.fcgi`` 
-as described in section :ref:`ogc-wfs`. 
+  
 

@@ -44,6 +44,7 @@ longitude and altitude together with additional attributes.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
    :align: center
+   :width: 10em
 
    GPS tracking position and additional attributes |nix|
 
@@ -60,6 +61,7 @@ GPS signal strength
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
    :align: center
+   :width: 10em
 
    GPS tracking signal strength |nix|
 
@@ -79,6 +81,7 @@ ID numbers of the satellites you are receiving signals from.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
    :align: center
+   :width: 10em
 
    GPS tracking polar window |nix|
 
@@ -93,6 +96,18 @@ GPS options
 * |radiobuttonon| :menuselection:`gpsd` (selecting Host, Port and Device your GPS is connected to). 
 
 A click on **[Connect]** again initiates the connection to the GPS receiver.
+
+.. _figure_gps_options:
+
+.. only:: html
+
+   **Figure GPS Tracking 2:**
+
+.. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
+   :align: center
+   :width: 10em
+
+   GPS tracking options window |nix|
 
 You can activate |checkbox| :menuselection:`Automatically save added features` when 
 you are in editing mode. Or you can can activate |checkbox| 
@@ -112,14 +127,4 @@ file where log messages about the gps tracking a logged.
 If you want to set a feature manually you have to go back to |mActionToggleEditing| 
 "Position Coordinates" and click on **[Add Point]** or 
 **[Add track point]**.
-
-.. _figure_gps_options:
-
-.. only:: html
-
-   **Figure GPS Tracking 2:**
-
-.. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
-   :align: center
-
-   GPS tracking options window |nix| 
+ 

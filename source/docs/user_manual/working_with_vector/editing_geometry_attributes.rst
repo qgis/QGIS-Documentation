@@ -65,8 +65,6 @@ Furthermore, snapping will never occur to a layer which is not checked in
 the snapping options dialog, regardless of the global snapping tolerance. 
 So be sure to mark the checkbox for those layers that you need to snap to.
 
-
-
 .. _figure_edit_1:
 
 .. only:: html
@@ -265,7 +263,7 @@ river in Alaska. In the :guilabel:`Digitizing` tab under the
    **Figure Edit 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/editDigitizing.png
-   :width: 30em
+   :width: 20em
    :align: center
 
    Enter Attribute Values Dialog after digitizing a new vector 
@@ -507,6 +505,18 @@ Figure_edit_3_). This widget is not displayed by default; it can be
 displayed by right clicking on the toolbar and activating the Undo/Redo 
 check box. Undo/Redo is however active, even if the widget is not displayed.
 
+.. _figure_edit_3:
+
+.. only:: html
+
+   **Figure Edit 3:** 
+
+.. figure:: /static/user_manual/working_with_vector/redo_undo.png
+   :width: 15em
+   :align: center
+
+   Redo and Undo digitizing steps |nix|
+
 When Undo is hit, the state of all features and attributes are reverted to 
 the state before the reverted operation happened. Changes other than normal 
 vector editing operations (for example changes done by a plugin), may or may 
@@ -515,18 +525,6 @@ not be reverted, depending on how the changes were performed.
 To use the undo/redo history widget simply click to select an operation in 
 the history list; all features will be reverted to the state they were in 
 after the selected operation.
-
-.. _figure_edit_3:
-
-.. only:: html
-
-   **Figure Edit 3:** 
-
-.. figure:: /static/user_manual/working_with_vector/redo_undo.png
-   :width: 40em
-   :align: center
-
-   Redo and Undo digitizing steps |nix|
 
 Simplify Feature
 ................
@@ -610,8 +608,8 @@ the polygon with a right click.
 Offset Curves
 .............
 
-The offset curve tool is a new editing tool.
-It creates parallel shifts of lines and polygon rings . The tool can be applied to the edited
+The |mActionOffsetCurve| :sup:`Offset Curve` tool is a new editing tool.
+It creates parallel shifts of lines and polygon rings. The tool can be applied to the edited
 layer (the geometries are modified) or also to background layers (creates copies of the lines / rings 
 and adds it to the the edited layer). It is thus ideally suited for the creation of distance
 line layers.The displacement is shown at the bottom left of the taskbar.
@@ -683,8 +681,8 @@ button again, the value will be updated in the attribute table.
 
 .. _sec_create_shape:
 
-Creating a new Shapefile and Spatialite layer
----------------------------------------------
+Creating a new Vector layer
+---------------------------
 
 |qg| allows to create new Shapefile layers and new Spatialite layers. Creation 
 of a new GRASS layer is supported within the GRASS-plugin. Please refer to 
@@ -701,6 +699,11 @@ To create a new Shape layer for editing, choose :menuselection:`New -->`
 displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or 
 polygon) and the CRS (Coordinate Reference System).
 
+Note that |qg| does not yet support creation of 2.5D features (i.e. features 
+with X,Y,Z coordinates) or measure features. At this time, only shapefiles 
+can be created. In a future version of |qg|, creation of any OGR or PostgreSQL 
+layer type will be supported.
+
 .. _figure_edit_5:
 
 .. only:: html
@@ -708,15 +711,10 @@ polygon) and the CRS (Coordinate Reference System).
    **Figure Edit 5:** 
 
 .. figure:: /static/user_manual/working_with_vector/editNewVector.png
-   :width: 30em
+   :width: 20em
    :align: center
 
    Creating a new Shapefile layer Dialog |nix|
-
-Note that |qg| does not yet support creation of 2.5D features (i.e. features 
-with X,Y,Z coordinates) or measure features. At this time, only shapefiles 
-can be created. In a future version of |qg|, creation of any OGR or PostgreSQL 
-layer type will be supported.
 
 To complete the creation of the new Shapefile layer, add the desired attributes
 by clicking on the **[Add]** button and specifying a name and type for the 
@@ -750,7 +748,7 @@ be displayed as shown in Figure_edit_6_.
    **Figure Edit 6:** 
 
 .. figure:: /static/user_manual/working_with_vector/editNewSpatialite.png
-   :width: 30em 
+   :width: 20em 
    :align: center
 
    Creating a New Spatialite layer Dialog |nix|
@@ -801,7 +799,7 @@ selected features are shown in the attribute table title.
    **Figure Attributes 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/vectorAttributeTable.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Attribute Table for Alaska layer |nix|
@@ -857,8 +855,8 @@ following functionality:
    :kbd:`Ctrl+C`
 *  |mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with 
    :kbd:`Ctrl+J`
-*  |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values of 
-   attribute table and to enable functionalities described below also with 
+*  |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values 
+   and to enable functionalities described below also with 
    :kbd:`Ctrl+E`
 *  |mActionDeleteSelected| :sup:`Delete selected features` also with 
    :kbd:`Ctrl+D`

@@ -58,6 +58,6 @@ options.
 
 .. figure:: /static/user_manual/plugins/spatial_query_sample.png
    :align: center
-   :width: 40 em
+   :width: 30 em
 
    Spatial Query analysis - regions contain airports |nix|

@@ -87,7 +87,7 @@ GeoRaster or to go back to the beginning and select another table name.
 
 .. figure:: /static/user_manual/plugins/oracle_select_dialog.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Select Oracle GeoRaster dialog
 

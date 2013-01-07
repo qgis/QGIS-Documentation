@@ -70,7 +70,7 @@ and their associated attribute data.
 
 .. figure:: /static/user_manual/plugins/evisdisplay.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The *eVis* display window |win|
 
@@ -106,7 +106,7 @@ Understanding the Options window
 
 .. figure:: /static/user_manual/plugins/evisoptions.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The *eVis* Options window |win|
 
@@ -159,7 +159,7 @@ Understanding the Configure External Applications window
 
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
-   :width: 40em
+   :width: 25em
  
    The *eVis* External Applications window |win|
 
@@ -185,20 +185,14 @@ of the different approaches are listed in Table `evis_examples`_.
 
 .. _`evis_examples`:
 
-+---------+---------+-------------------------------------------------------------------------+-----------+
-| X       | Y       | FILE                                                                    | BEARING   |
-+---------+---------+-------------------------------------------------------------------------+-----------+
-| 780596  | 1784017 | ``C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG``                     | 275       |
-+---------+---------+-------------------------------------------------------------------------+-----------+
-| 780596  | 1784017 | ``/groundphotos/DSC_0169.JPG``                                          | 80        |
-+---------+---------+-------------------------------------------------------------------------+-----------+
-| 780819  | 1784015 | ``http://biodiversityinformatics.amnh.org/evis_test\data/DSC_0170.JPG`` | 10        |
-+---------+---------+-------------------------------------------------------------------------+-----------+
-| 780596  | 1784017 | ``pdf:http://www.testsite.com/attachments.php?attachment_id-12``        | 76        | 
-+---------+---------+-------------------------------------------------------------------------+-----------+
+::
 
+  X        Y        FILE                                                                  BEARING 
+  780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG                       275    
+  780596   1784017  /groundphotos/DSC_0169.JPG                                            80   
+  780819   1784015  http://biodiversityinformatics.amnh.org/evis_testdata/DSC_0170.JPG    10
+  780596   1784017  pdf:http://www.testsite.com/attachments.php?attachment_id-12          76 
 
-Table: Example format using absolute path, relative path, and a URL
 
 .. _`evis_location`:
 
@@ -341,7 +335,7 @@ above.
 
 .. figure:: /static/user_manual/plugins/evisdatabase.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The *eVis* Database connection window |win|
 
@@ -392,7 +386,7 @@ created from the results of the query in the Name of New Layer textbox.
 
 .. figure:: /static/user_manual/plugins/evissql_query.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The eVis SQL query tab |win|
 
@@ -462,7 +456,7 @@ the Output Console window.
 
 .. figure:: /static/user_manual/plugins/evispredefined.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    The *eVis* Predefined queries tab |win|
 
@@ -565,7 +559,7 @@ A complete sample XML file with three queries is displayed below:
     </query>
    </doc>
 
-----
+
 
 .. [1] This section is derived from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) 
        User's Guide. American Museum of Natural History, Center for Biodiversity and Conservation. 

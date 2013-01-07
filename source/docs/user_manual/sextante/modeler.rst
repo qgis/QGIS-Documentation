@@ -32,6 +32,7 @@ panel with two tabs can be used to add new elements to the model.
 
 .. figure:: /static/user_manual/sextante/modeler_canvas.png
    :align: center
+   :width: 30em
 
    Modeler |win|
 
@@ -85,6 +86,7 @@ and a range of valid values.
 
 .. figure:: /static/user_manual/sextante/models_parameters.png
    :align: center
+   :width: 20em
 
    Model Parameters |win|
 
@@ -98,6 +100,7 @@ For each added input, a new element is added to the modeler canvas.
 
 .. figure:: /static/user_manual/sextante/models_parameters2.png
    :align: center
+   :width: 20em
 
    Model Parameters |win|
 
@@ -117,6 +120,7 @@ grouped much in the same way as they are in the toolbox.
 
 .. figure:: /static/user_manual/sextante/models_parameters3.png
    :align: center
+   :width: 30em
 
    Model Parameters |win|
 
@@ -134,6 +138,7 @@ same one we saw in the section dedicated to the SEXTANTe toolbox.
 
 .. figure:: /static/user_manual/sextante/models_parameters4.png
    :align: center
+   :width: 30em
 
    Model Parameters |win|
 
@@ -186,6 +191,7 @@ provide objects that are used as inputs for that algorithm.
 
 .. figure:: /static/user_manual/sextante/models_parameters5.png
    :align: center
+   :width: 30em
 
    Model Parameters |win|
 
@@ -251,6 +257,7 @@ will see a context menu like the one shown next:
 
 .. figure:: /static/user_manual/sextante/modeler_right_click.png
    :align: center
+   :width: 20em
 
    Modeler Right Click |win|
 
@@ -268,6 +275,7 @@ SEXTANTE will show you a warning message like the one you can see below:
 
 .. figure:: /static/user_manual/sextante/cannot_delete_alg.png
    :align: center
+   :width: 15em
 
    Cannot Delete ALG |win|
 
@@ -301,6 +309,7 @@ now with a red label under its name indicating that is not active.
 
 .. figure:: /static/user_manual/sextante/deactivated.png
    :align: center
+   :width: 15em
 
    Deactivate |win|
 
@@ -325,6 +334,7 @@ button and a dialog like the one shown next will appear.
 
 .. figure:: /static/user_manual/sextante/help_edition.png
    :align: center
+   :width: 30em
 
    Help Edition |win|
 

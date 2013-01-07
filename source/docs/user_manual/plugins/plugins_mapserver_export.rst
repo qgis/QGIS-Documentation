@@ -33,7 +33,7 @@ MapServer and save this status in a QGIS project file.
 
 .. figure:: /static/user_manual/plugins/mapserver_export_qgis.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    Arrange raster and vector layers for QGIS project file |nix|
 
@@ -71,7 +71,7 @@ using the Plugin Manager (see :ref:`load_core_plugin`).
 
 .. figure:: /static/user_manual/plugins/mapserver_export_dialog.png
    :align: center
-   :width: 40em
+   :width: 25em
    
    Export to MapServer Dialog |nix|
 
@@ -133,7 +133,7 @@ For this example, we will create a map file using the project file
 
 .. figure:: /static/user_manual/plugins/mapserver_export_success.png
    :align: center
-   :width: 40em
+   :width: 20em
 
    Export to MapServer Succesfull Dialog |nix|
 
@@ -227,8 +227,5 @@ interface, you may have a bit of manual work to do. To see how easy it is to go
 from QGIS to serving maps on the web, take a look at Christopher Schmidt's 5 
 minute flash video. He used an older version of QGIS (version 0.8), but the 
 demo applies equally well to newer versions.
-[#]_
 
-----
-
-.. [#] http://openlayers.org/presentations/mappingyourdata/
+see http://openlayers.org/presentations/mappingyourdata/

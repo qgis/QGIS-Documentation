@@ -81,7 +81,7 @@ location. You can download the topo sheet here: http://grass.osgeo.org/sampledat
 
 .. figure:: /static/user_manual/plugins/georefplugin.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Georeferencer Plugin Dialog |nix|
 
@@ -120,7 +120,7 @@ Entering ground control points (GCPs)
 
 .. figure:: /static/user_manual/plugins/choose_points.png
    :align: center
-   :width: 35em
+   :width: 20em
 
    Add points to the raster image |nix|
 

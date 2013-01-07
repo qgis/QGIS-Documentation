@@ -20,7 +20,7 @@ output columns in the vector layer with a user-defined prefix.
 
 .. figure:: /static/user_manual/plugins/zonal_statistics.png
    :align: center
-   :width: 30 em
+   :width: 20 em
 
    Zonal statistics dialog (KDE) |nix|
 

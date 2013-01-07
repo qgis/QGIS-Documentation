@@ -33,7 +33,7 @@ The plugin requires the following parameters to be specified before running:
 
 .. figure:: /static/user_manual/plugins/interpolate_dialog.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Interpolation Plugin |nix|
 
@@ -55,22 +55,5 @@ The plugin requires the following parameters to be specified before running:
     Raster Layer Properties dialog and select :guilabel:`Pseudocolor` |selectstring| as Color Map 
     in the :guilabel:`Symbology` tab. Or you can define a new color table as described in section 
     :ref:`working_with_raster`.
-
-
-In figure_interpolation_2_ you see the TIN interpolation result with a 998 cols x 812 rows (5 km) 
-resolution for the :file:`elevp.csv` data visualized using the Pseudocolor color table. 
-The processing only takes a few minutes, and covers the northern part of Alaska.
-
-.. _figure_interpolation_2:
-
-.. only:: html
-
-   **Figure Interpolation 2:**
-
-.. figure:: /static/user_manual/plugins/interpolate_tin.png
-   :align: center
-   :width: 30em
-
-   Interpolation of elevp data using TIN method |nix|
 
 

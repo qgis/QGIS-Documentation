@@ -3,7 +3,7 @@
 SPHINXBUILD=`which sphinx-build`
 
 # GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
-LOCALES='fr de it ru nl'
+LOCALES='fr de it ja ru nl'
 #LOCALES='af ar bg ca_ES cs_CZ da_DK de el_GR en es et_EE eu_ES fa fi fr gl_ES he hr_HR hu id is it ja ka_GE ko_KR lo lt lv mn nl no pl_PL pt_BR pt_PT ro ru sk sl_SI sq_AL sr_Cyrl sr_Latn sv sw ta th tr uk vi xh zh_CN zh_TW'
 
 if [ $1 ]; then
@@ -63,15 +63,18 @@ do
   ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
 
   # Compile the latex docs for that locale
-#  sphinx-build -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
-#  # Compile the pdf docs for that locale
-#  # we use texi2pdf since latexpdf target is not available via 
-#  # sphinx-build which we need to use since we need to pass language flag
-#  pushd .
-#  cd ${BUILDDIR}/latex/${LOCALE}/
-#  texi2pdf --quiet QGISUserGuide.tex
-#  mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
-#  popd
+  ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
+  # Compile the pdf docs for that locale
+  # we use texi2pdf since latexpdf target is not available via 
+  # sphinx-build which we need to use since we need to pass language flag
+  pushd .
+  cd ${BUILDDIR}/latex/${LOCALE}/
+  # need to build 3x to have proper toc and index
+  texi2pdf --quiet QGISUserGuide.tex
+  texi2pdf --quiet QGISUserGuide.tex
+  texi2pdf --quiet QGISUserGuide.tex
+  mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
+  popd
 done
 
 rm -rf source/static

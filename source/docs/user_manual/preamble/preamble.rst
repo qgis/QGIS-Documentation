@@ -37,25 +37,26 @@ handles both identically.
 
 **User, Installation and Coding Guide Authors and Editors:**
 
-+----------------------+----------------------+----------------------+
-| Tara Athan           | Radim Blazek         | Godofredo Contreras  |
-+----------------------+----------------------+----------------------+
-| Otto Dassau          | Martin Dobias        | Peter Ersts          |
-+----------------------+----------------------+----------------------+
-| Anne Ghisla          | Stephan Holl         | N\. Horning          |
-+----------------------+----------------------+----------------------+
-| Magnus Homann        | K\. Koy              | Lars Luthman         |
-+----------------------+----------------------+----------------------+
-| Werner Macho         | Carson J.Q. Farmer   | Tyler Mitchell       |
-+----------------------+----------------------+----------------------+
-| Claudia A. Engel     | Brendan Morely       | David Willis         |
-+----------------------+----------------------+----------------------+
-| Jürgen E. Fischer    | Marco Hugentobler    | Gavin Macaulay       |
-+----------------------+----------------------+----------------------+
-| Larissa Junek        | Diethard Jansen      | Paolo Corti          |
-+----------------------+----------------------+----------------------+
-| Gary E. Sherman      | Tim Sutton           | Alex Bruy            |
-+----------------------+----------------------+----------------------+
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Tara Athan         | Radim Blazek        | Godofredo Contreras  | Otto Dassau          | Martin Dobias        |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Peter Ersts        | Anne Ghisla         | Stephan Holl         | N\. Horning          | Magnus Homann        |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Werner Macho       | Carson J.Q. Farmer  | Tyler Mitchell       | K\. Koy              | Lars Luthman         |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Claudia A. Engel   | Brendan Morely      | David Willis         | Jürgen E. Fischer    | Marco Hugentobler    |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Larissa Junek      | Diethard Jansen     | Paolo Corti          | Gavin Macaulay       | Gary E. Sherman      |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+| Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde |                      |
++--------------------+---------------------+----------------------+----------------------+----------------------+
+
+\
+
+**Sponsors**
+
+The update of this user manual was kindly sponsored by 
+`Kanton Solothurn <http://www.so.ch/departemente/bau-und-justiz/amt-fuer-geoinformation.html>`_, Switzerland.
 
 .. Add this section with a table (as seen above), if it is a translation 
 .. from the english master documentation

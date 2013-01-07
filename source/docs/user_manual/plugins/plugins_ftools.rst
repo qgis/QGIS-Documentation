@@ -20,20 +20,13 @@ several useful Data Management Tools.
 
 .. _`ftools_function`:
 
-**fTools functions**
-
-.. not available anymore!! should be described in this manual from older release..
-.. For further information on an individual fTools function, 
-.. click the :menuselection:`fTools Information -->` menu item in the 
-.. :menuselection:`Vector` menu.
-
 .. index::
    single:Analysis tools
 
 .. _table_ftools_1:
 
-+---------------------+-----------------+--------------------------------------+
-| **Analysis tools available via the fTools plugin**                           |
+Analysis tools
+..............
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -76,12 +69,12 @@ several useful Data Management Tools.
 
 Table Ftools 1: fTools Analysis tools
 
-
 .. index::
    single:Research tools
 
-+---------------------+-----------------+--------------------------------------+
-| **Research tools available via the fTools plugin**                           |
+
+Research tools
+..............
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -113,8 +106,8 @@ Table Ftools 1: fTools Analysis tools
 
 Table Ftools 2: fTools Research tools
 
-+---------------------+-----------------+--------------------------------------+
-| **Geoprocessing tools available via the fTools plugin**                      |
+Geoprocessing tools
+...................
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -153,8 +146,8 @@ Table Ftools 2: fTools Research tools
 
 Table Ftools 3: fTools Geoprocessing tools
 
-+---------------------+-----------------+--------------------------------------+
-| **Geometry tools available via the fTools plugin**                           |
+Geometry tools
+..............
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
@@ -210,8 +203,8 @@ Table Ftools 4: fTools Geometry tools
 
 .. _table_ftools_5:
 
-+---------------------+-----------------+--------------------------------------+
-| Data management tools available via the fTools plugin**                      |
+Data management tools
+.....................
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+

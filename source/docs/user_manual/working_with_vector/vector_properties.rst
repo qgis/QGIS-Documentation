@@ -25,7 +25,7 @@ in the legend or right-click on the layer and select
 .. _figure_vector_properties_1:
 
 .. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Vector Layer Properties Dialog |nix|
@@ -166,7 +166,7 @@ edit and remove existing symbols and add new ones.
 
 **Single Symbol Renderer**
 
-The Single Symbol Renderer (see figure_symbology_1_ to figure_symbology_3_) is used to render all features of the layer using 
+The Single Symbol Renderer is used to render all features of the layer using 
 a single user-defined symbol. The properties, that can be adjusted in the
 ``Style`` tab, depend partially on the type of the layer, but all types share 
 the following structure. In the top left part of the tab, there is a preview 
@@ -177,9 +177,23 @@ the **[Change]** button below the preview, which opens a :guilabel:`Symbol
 Properties` dialog, or the **[Change]** button right of the preview, which 
 opens an ordinary :guilabel:`Color` dialog.
 
+.. _figure_symbology_1:
+
+.. only:: html
+
+   **Figure Symbology 1:**
+
+.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
+   :align: center
+   :width: 20em
+
+   Single symbol line properties |nix|
+
 In the :guilabel:`Style` tab you can apart from a general layer transparency 
 also define to use millimeter or map units for the size scale. In the **[Advanced]** button
-next to the **[Save as style]** button you can use data-defined size scale and rotation. Here the :menuselection:`Symbol levels -->` menu allows to enable and define the order in which the symbol layers are rendered (if the symbol 
+next to the **[Save as style]** button you can use data-defined size scale and rotation. 
+Here the :menuselection:`Symbol levels -->` menu allows to enable and define the order 
+in which the symbol layers are rendered (if the symbol 
 consists of more than one layer).
 
 After having done any needed changes, the symbol can be added to the list of 
@@ -193,43 +207,6 @@ That means that categorized or graduated styles are converted to rule-based.
 If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it could be very handy sometimes to have this easy way of
 converting styles to rule-based.
-
-.. _figure_symbology_1:
-
-.. only:: html
-
-   **Figure Symbology 1:** 
-
-.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_point.png
-   :align: center
-   :width: 40em
-
-   Single symbol point properties |nix|
-
-.. _figure_symbology_2:
-
-.. only:: html
-
-   **Figure Symbology 2:**
-
-.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
-   :align: center
-   :width: 40em
-
-   Single symbol line properties |nix|
-
-.. _figure_symbology_3:
-
-.. only:: html
-
-   **Figure Symbology 3:**
-
-.. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_area.png
-   :align: center
-   :width: 40em
-
-   Single symbol area properties |nix|
-
 
 .. index:: Categorized_Renderer, Renderer_Categorized
 
@@ -252,17 +229,17 @@ For convenience, the list in the bottom part of the tab lists the values of
 all currently selected attributes together, including the symbols that will 
 be rendered.
 
-The example in figure_symbology_4_ shows the category rendering dialog used 
+The example in figure_symbology_2_ shows the category rendering dialog used 
 for the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_4:
+.. _figure_symbology_2:
 
 .. only:: html
 
-   **Figure Symbology 4:** 
+   **Figure Symbology 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
-   :width: 50em
+   :width: 25em
    :align: center
 
    Categorized Symbolizing options |nix|
@@ -272,17 +249,18 @@ for the rivers layer of the |qg| sample dataset.
 You can create a custom color ramp choosing :menuselection:`New color ramp...` 
 from the Color ramp dropdown menu. A dialog will prompt for the ramp type: 
 Gradient, Random, ColorBrewer, then each one has options for number of steps 
-and/or multiple stops in the color ramp. See figure_symbology_5_ for an 
+and/or multiple stops in the color ramp. See figure_symbology_3_ for an 
 example of custom color ramp.
 
-.. _figure_symbology_5:
+.. _figure_symbology_3:
 
 .. only:: html
 
-   **Figure Symbology 5:** 
+   **Figure Symbology 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
+   :width: 12em
 
    Example of custom gradient color ramp with multiple stops |nix|
 
@@ -296,13 +274,24 @@ a single user-defined symbol, whose color reflects the classification of a
 selected feature's attribute to a class. Like Categorized Renderer, it allows 
 to define rotation and size scale from specified columns.
 
+.. _figure_symbology_4:
+
+.. only:: html
+
+   **Figure Symbology 4:** 
+
+.. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
+   :width: 25em
+   :align: center
+
+   Graduated Symbolizing options |nix|
+
 Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to 
 select:
 
 * The attribute (using the Column listbox)
 * The symbol (using the Symbol Properties button)
 * The colors (using the Color Ramp list)
-
 
 Additionally, you can specify the number of classes and also the mode how to 
 classify features inside the classes (using the Mode list). The available 
@@ -318,25 +307,10 @@ modes are:
 The listbox in the  bottom part of the :guilabel:`Style` tab lists the classes 
 together with their ranges, labels and symbols that will be rendered.
 
-The example in figure_symbology_6_ shows the graduated rendering dialog for 
+The example in figure_symbology_4_ shows the graduated rendering dialog for 
 the rivers layer of the |qg| sample dataset.
 
-.. _figure_symbology_6:
-
-.. only:: html
-
-   **Figure Symbology 6:** 
-
-.. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
-   :width: 40em
-   :align: center
-
-   Graduated Symbolizing options |nix|
-
-
-
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
-
 
 **Rule-based rendering**
 
@@ -347,7 +321,7 @@ selected feature's attribute to a class. The rules are based on SQL
 statements. The dialog allows rule grouping by filter or scale and you can decide if you want to 
 enable symbol levels or use only first matched rule.
 
-The example in figure_symbology_7_ shows the rule-based rendering dialog 
+The example in figure_symbology_5_ shows the rule-based rendering dialog 
 for the rivers layer of the |qg| sample dataset.
 
 To create a rule, activate an existing row by clicking on it or click on '+' and click 
@@ -359,14 +333,14 @@ Generally you can use the various fields, values and functions to construct the 
 can just type it into the box (see :ref:`vector_field_calculator`).
 
 
-.. _figure_symbology_7:
+.. _figure_symbology_5:
 
 .. only:: html
 
-   **Figure Symbology 7:** 
+   **Figure Symbology 5:** 
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Rule-based Symbolizing options |nix|
@@ -380,14 +354,14 @@ The point displacement renderer offers to visualize all features of a point laye
 this, the symbols of the points are placed on a displacement circle around 
 a center symbol.
 
-.. _figure_symbology_8:
+.. _figure_symbology_6:
 
 .. only:: html
 
-   **Figure Symbology 8:** 
+   **Figure Symbology 6:** 
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Point displacement dialog |nix|
@@ -412,44 +386,19 @@ available options depend on the layer type (Point, Line, Polygon). The symbol
 layer type options are described in section vector_symbol_types_.
 You can also change the symbol layer properties in the right part of the dialog. 
 For example if you have chosen an SVG marker for a point layer it is now 
-possible to change its color using the :guilabel:`Color` menu (see figure_symbology_10_).
+possible to change its color using the :guilabel:`Color` menu.
 
-.. _figure_symbology_9:
+.. _figure_symbology_7:
 
 .. only:: html
 
-   **Figure Symbology 9:**
+   **Figure Symbology 7:**
 
 .. figure:: /static/user_manual/working_with_vector/symbolproperties1.png
    :align: center
-   :width: 40em
+   :width: 25em
 
    Line composed from three simple lines |nix|
-
-.. _figure_symbology_10:
-
-.. only:: html
-
-   **Figure Symbology 10:**
-
-.. figure:: /static/user_manual/working_with_vector/symbolproperties2.png
-   :align: center
-   :width: 40em
-
-   Symbol properties for point layer |nix|
-
-.. _figure_symbology_11:
-
-.. only:: html
-
-   **Figure Symbology 11:**
-
-.. figure:: /static/user_manual/working_with_vector/symbolproperties3.png
-   :align: center
-   :width: 40em
-   
-   Filling pattern for a polygon |nix|
-
 
 .. _vector_style_manager:
 
@@ -461,14 +410,14 @@ ramps available in a style. It also allows you to add and/or remove items.
 To launch the Style Manager, click on :menuselection:`Settings --> 
 Style Manager` in the main menu. Alternatively, you can access it via the :guilabel:`Style` tab.
 
-.. _figure_symbology_12:
+.. _figure_symbology_10:
 
 .. only:: html
 
-   **Figure Symbology 12:** 
+   **Figure Symbology 10:** 
 
 .. figure:: /static/user_manual/working_with_vector/stylemanager.png
-   :width: 24em
+   :width: 25em
    :align: center
 
    Style Manager to manage symbols and color ramps |nix|
@@ -688,7 +637,7 @@ The :guilabel:`Data defined settings` tab provides you with the attribute-based 
    **Figure Labels 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
-   :width: 60em
+   :width: 30em
    :align: center
 
    Smart labeling of vector point layers |nix|
@@ -709,7 +658,7 @@ Use :guilabel:`Data defined settings` for attribute-based or database-connection
    **Figure Labels 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_line.png
-   :width: 60em
+   :width: 30em
    :align: center
 
    Smart labeling of vector line layers |nix|
@@ -731,7 +680,7 @@ Use :guilabel:`Data defined settings` for attribute-based or database-connection
    **Figure Labels 3:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_area.png
-   :width: 60em
+   :width: 30em
    :align: center
 
    Smart labeling of vector polygon layers |nix|
@@ -752,7 +701,7 @@ Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
    **Figure Labels 4:** 
 
 .. figure:: /static/user_manual/working_with_vector/label_engine.png
-   :width: 20em
+   :width: 15em
    :align: center
 
    Dialog to change label engine settings |nix|
@@ -810,7 +759,7 @@ third-party plugin called Table Manager.
    **Figure Fields 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
-   :width: 40 em
+   :width: 25 em
    :align: center
 
    Dialog to select an edit widget for an attribute column |nix|
@@ -881,7 +830,7 @@ that will be visualized (also refer to section :ref:`sec_selection_query`).
    **Figure General 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_tab.png
-   :width: 40 em
+   :width: 25 em
    :align: center
 
    General tab in vector layers properties dialog |nix|
@@ -909,7 +858,7 @@ and will be used for QGIS server.
    **Figure Metadata 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
-   :width: 40 em
+   :width: 25 em
    :align: center
 
    Metadata tab in vector layers properties dialog |nix|
@@ -929,7 +878,7 @@ passing parameters to a web reporting tool.
    **Figure Actions 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
-   :width: 40 em
+   :width: 25 em
    :align: center
 
    Overview action dialog with some sample actions |nix|
@@ -1091,6 +1040,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
+   :width: 15em
 
    Select feature and choose action |nix|
 
@@ -1196,7 +1146,7 @@ provider (see figure_joins_1_).
    **Figure Joins 1:** 
 
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
-   :width: 30em
+   :width: 25em
    :align: center
 
    Join an attribute table to an existing vector layer |nix|
@@ -1214,16 +1164,6 @@ Diagrams Tab
 |diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a vector 
 layer (see figure_diagrams_1_).
 
-.. _figure_diagrams_1:
-
-   **Figure Diagrams 1:** 
-
-.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
-   :width: 40em
-   :align: center
-
-   Vector properties dialog with diagram tab |nix|
-
 The current core implementation of diagrams provides support for piecharts 
 and text diagrams. Text values ​​of different data columns are displayed one 
 below the other with a circle or a box and dividers. Diagram size is based 
@@ -1231,6 +1171,16 @@ on a fixed size or on linear scaling according to a classification attribute.
 The placement of the diagrams interacts with the new labeling, so position 
 conflicts between diagrams and labels are detected and solved. In addition 
 to chart positions can be fixed by the users hand.
+
+.. _figure_diagrams_1:
+
+   **Figure Diagrams 1:** 
+
+.. figure:: /static/user_manual/working_with_vector/diagram_tab.png
+   :width: 25em
+   :align: center
+
+   Vector properties dialog with diagram tab |nix|
 
 We will demonstrate an example and overlay the alaska boundary layer a 
 text diagram showing some temperature data from a climate vector layer. 
@@ -1261,7 +1211,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
    **Figure Diagrams 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/climate_diagram.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Diagram from temperature data overlayed on a map |nix|

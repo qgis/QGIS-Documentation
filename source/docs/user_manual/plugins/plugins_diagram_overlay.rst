@@ -16,10 +16,12 @@ the Plugin Manager (see Section :ref:`load_core_plugin`). It will then appear as
 
 .. _figure_overlay_1:
 
+.. only:: html
+
    **Figure Overlay 1:** 
 
 .. figure:: /static/user_manual/plugins/overlay_tab1.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Vector properties dialog with overlay tab |nix|
@@ -54,10 +56,12 @@ sample dataset (see Section :ref:`label_sampledata`).
 
 .. _figure_overlay_2:
 
-   **Figure Overlay 2:** 
+.. only:: html
+
+   **Figure Overlay 2:**
 
 .. figure:: /static/user_manual/plugins/overlay_tab2.png
-   :width: 40em
+   :width: 25em
    :align: center
 
    Pie chart diagram from temperature data overlayed on a map |nix|

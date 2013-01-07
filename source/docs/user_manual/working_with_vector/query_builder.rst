@@ -28,7 +28,7 @@ and Operators sections help the user to construct the SQL-like query.
    **Figure Attributes 2:** 
 
 .. figure:: /static/user_manual/working_with_vector/queryBuilder.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Query Builder |nix|

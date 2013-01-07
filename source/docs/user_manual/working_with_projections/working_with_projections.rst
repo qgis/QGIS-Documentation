@@ -73,6 +73,7 @@ This choice will be saved for use in subsequent QGIS sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
+   :width: 30em
 
    CRS tab in the QGIS Options Dialog |osx|
 
@@ -98,29 +99,10 @@ layer already has a CRS defined, it will be displayed as shown in
 .. tip:: **CRS in the Map Legend** 
 
    Right clicking on a layer in the Map Legend (Section :ref:`label_legend`) 
-   provides two CRS short cuts.
-
-   * :guilabel:`Set layer CRS` takes you directly to the Coordinate
-     Reference System Selector dialog (see figure_projection_2_). Which you also get to by the
-     **[Select]** button on the :guilabel:`General` tab of the layer
-     properties dialog.
-   * :guilabel:`Set project CRS from Layer` redefines the project
-     CRS using the layer's CRS
-
-  .. _figure_projection_2:
-
-  .. only:: html
-
-     **Figure Projection 2**
- 
-  .. figure:: /static/user_manual/working_with_projections/crs_selector.png
-      :align: center
-
-      The CRS selector dialog |nix|
-
-.. index:: OTF, On_The_Fly_Projection
-
-.. _`label_projstart`:
+   provides two CRS short cuts. :guilabel:`Set layer CRS` takes you directly 
+   to the Coordinate Reference System Selector dialog (see figure_projection_2_). 
+   :guilabel:`Set project CRS from Layer` redefines the project CRS using 
+   the layer's CRS
 
 Define On The Fly (OTF) Reprojection
 ====================================
@@ -159,12 +141,13 @@ shown in Figure_projection_3_ and described below.
 
 .. only:: html
 
-   **Figure Projection 3:**
+   **Figure Projection 2:**
 
-.. _figure_projection_3:
+.. _figure_projection_2:
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
+   :width: 30em
 
    Projection Dialog |win|
 
@@ -218,14 +201,15 @@ QGIS user database. In addition to your custom CRS, this database also contains
 your spatial bookmarks and other custom data.
 
 
-.. _figure_projection_4:
+.. _figure_projection_3:
 
 .. only:: html
 
-   **Figure Projection 4:**
+   **Figure Projection 3:**
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
+   :width: 30em
 
    Custom CRS Dialog |nix|
 

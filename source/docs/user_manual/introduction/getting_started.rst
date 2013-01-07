@@ -308,15 +308,15 @@ works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
 Section :ref:`gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
-:menuselection:`File -->` |mActionFileSave| :guilabel:`Save Project`
-or :menuselection:`File -->` |mActionFileSaveAs| :guilabel:`Save Project As`.
+:menuselection:`File -->` |mActionFileSave| :sup:`Save Project`
+or :menuselection:`File -->` |mActionFileSaveAs| :sup:`Save Project As`.
 
 Load saved projects into a QGIS session using
-:menuselection:`File -->` |mActionFileOpen| :guilabel:`Open Project`
+:menuselection:`File -->` |mActionFileOpen| :sup:`Open Project`
 or :menuselection:`File --> Open Recent Project`.
 
 If you wish to clear your session and start fresh, choose
-:menuselection:`File -->` |mActionFileNew| :guilabel:`New Project`.
+:menuselection:`File -->` |mActionFileNew| :sup:`New Project`.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -353,10 +353,10 @@ There are several ways to generate output from your QGIS session. We have
 discussed one already in Section :ref:`sec_projects` saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option |mActionSaveMapAsImage| :menuselection:`Save as Image` opens
+* Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as Image` opens
   a file dialog where you select the name, path and type of image (PNG or JPG
   format). A world file with extension PNGW or JPGW saved in the same folder
   georeferences the image.
-* Menu option |mActionNewComposer| :menuselection:`New Print Composer` opens a
+* Menu option :menuselection:`File -->` |mActionNewComposer| :sup:`New Print Composer` opens a
   dialog where you can layout and print the current map canvas (see
   Section :ref:`label_printcomposer`).

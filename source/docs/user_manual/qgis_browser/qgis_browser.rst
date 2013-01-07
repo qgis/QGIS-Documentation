@@ -16,6 +16,18 @@ database. You can have access to common vector files (e.g. ESRI shapefile or
 MapInfo files), databases (e.g.PostGIS or MSSQL Spatial), WMS/WFS connections.
 You can also view your GRASS data (to get the data into QGIS see :ref:`sec_grass`).
 
+.. _figure_browser_standalone_metadata:
+
+.. only:: html
+
+   **Figure browser 1:**
+
+.. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
+   :align: center
+   :width: 35em
+
+   Qgis browser as a standalone application to view metadata, preview and attributes |nix|
+
 Use QGIS Browser to preview your data. The drag and drop function makes it easy
 to get your data into the Map view and the Map legend.
 
@@ -30,19 +42,7 @@ to get your data into the Map view and the Map legend.
 #. Right-click on a layer and choose :guilabel:`Set project CRS from layer`.
    For more information see :ref:`label_projections`.
 #. Click on |mActionZoomFullExtent| :guilabel:`Zoom Full` to make the layers
-   visible (see figure_browser_import_).
-
-.. _figure_browser_import:
-
-.. only:: html
-   
-   **Figure browser 1:**
-
-.. figure:: /static/user_manual/qgis_browser/browser_import_shapes.png
-   :align: center
-   :width: 50em
-
-   Drag and drop shapefiles with QGIS browser |nix|
+   visible.
 
 It's also possible to run QGIS Browser as a standalone application.
 
@@ -59,36 +59,12 @@ It's also possible to run QGIS Browser as a standalone application.
   while holding down the left mouse button to the Applications folder. 
   This will create a link that you can use to start QGIS browser.
 
-.. _figure_browser_standalone_metadata:
-
-.. only:: html
-
-   **Figure browser 2:**
-
-.. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
-   :align: center
-   :width: 50em
-
-   Qgis browser as a standalone application to view your metadata |nix|
-
 In figure_browser_standalone_metadata_ you can see the enhanced functionality
 of Qgis browser. The :guilabel:`Param` tab provides the details of your
 connection based datasets like PostGIS or MSSQL Spatial. The :guilabel:`Metadata`
 tab contains general information about the file (see :ref:`vectormetadatatab`).
 With the :guilabel:`Preview` tab you can have a look at your files without
-importing them into your QGIS project (see figure_browser_preview_). It's also
-possible to preview the attributes of your files in the :guilabel:`Attributes`
-tab.
+importing them into your QGIS project. It's also possible to preview the 
+attributes of your files in the :guilabel:`Attributes` tab.
 
-.. _figure_browser_preview:
-
-.. only:: html
-
-   **Figure browser 3:**
-
-.. figure:: /static/user_manual/qgis_browser/browser_preview.png
-   :align: center
-   :width: 50em
-
-   Preview files in Qgis browser |nix|
 

@@ -167,7 +167,7 @@ shows the response provided by the DM Solutions Group WMS server.
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wms.png
    :align: center
-   :width: 45em
+   :width: 30em
 
    Dialog for adding a WMS server, showing its available layers |nix|
 
@@ -256,7 +256,7 @@ capability of the WMS server. You may notice that the *x* changes in the
 deselect layers from the :guilabel:`Layers section` tab.
 
 To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3 
-in :ref:`label_projstart` will appear. The main difference with the WMS version of 
+in :ref:`label_projections` will appear. The main difference with the WMS version of 
 the screen is that only those CRSs supported by the WMS Server will be shown.
 
 .. tip:: **WMS Projections**
@@ -286,7 +286,7 @@ Server` dialog.
 
 .. figure:: /static/user_manual/working_with_ogc/wms_server_search.png
    :align: center
-   :width: 38em
+   :width: 30em
 
    Dialog for searching WMS servers after some keywords |nix|
 
@@ -493,7 +493,7 @@ Note that proxy-settings you have set in your preferences are also recognized.
 
 .. figure:: /static/user_manual/working_with_ogc/connection_wfs.png
    :align: center
-   :width: 34 em
+   :width: 20 em
 
    Adding a WFS layer |nix|
 

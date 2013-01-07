@@ -16,6 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Language: ja_JP\n"
 
 # a9ffdf22aff1470a99ed4d9910ce3615
 #: ../../source/docs/user_manual/preamble/foreword.rst:7
@@ -25,13 +26,13 @@ msgstr ""
 # 622373e2fb154f78a7355ab21e7ea271
 #: ../../source/docs/user_manual/preamble/foreword.rst:13
 msgid "Foreword"
-msgstr ""
+msgstr "序文"
 
 # 2293bf23700448498f7df7b6d3dc753b
 #: ../../source/docs/user_manual/preamble/foreword.rst:15
 msgid ""
 "Welcome to the wonderful world of Geographical Information Systems (GIS)!"
-msgstr ""
+msgstr "地理情報システム (GIS)のすばらしい世界へようこそ!"
 
 # 294ff7d842c24c789bd59044237e91f8
 #: ../../source/docs/user_manual/preamble/foreword.rst:17
@@ -45,6 +46,11 @@ msgid ""
 "toolkit (http://qt.digia.com) and C++. This means that QGIS feels snappy to "
 "use and has a pleasing, easy-to-use graphical user interface (GUI)."
 msgstr ""
+"Quantum GIS (QGIS) はオープンソースの地理情報システムです.このプロジェクトは2002年5月に開始され,同じ年の6月 "
+"SourceForgeのプロジェクトを立ち上げました. "
+"（かつては高価で独占的ソフトであった)GISソフトウェアを作成する作業は困難を伴いました.このソフトウェアはだれでもパーソナルコンピュータを使って地理情報に関する基本的作業に使う有効な手段になります.QGISは多くのUnix,Windows,OS "
+"Xで動作します.QGISは　Qt toolkit (http://qt.nokia.com) と C++ "
+"で開発されています.これによってはQGISは軽快で使いやすいグラフィカルユーザーインターフェース(GUI)を利用できるようになりました."
 
 # d52b574518854651b7ac744c9711f5e0
 #: ../../source/docs/user_manual/preamble/foreword.rst:26
@@ -55,6 +61,7 @@ msgid ""
 "data viewing needs. QGIS supports a number of raster and vector data "
 "formats, with new format support easily added using the plugin architecture."
 msgstr ""
+"QGISはGISの一般的は機能や特徴をそなえた使いやすいシステムになることをねらってます.最初のQGISの開発目標はGISデータの表示システムでした.多くの人がGISのデータを見たいという要求を持っていたのでこの目標は達成されました.QGISは多くの種類のラスタデータとベクタデータをサポートします.またプラグイン方式を利用することで新たなデータ形式に簡単に対応できます."
 
 # 5fc2e8c8487a4959953f1fb2aa6e6a89
 #: ../../source/docs/user_manual/preamble/foreword.rst:32
@@ -66,6 +73,10 @@ msgid ""
 "received a full copy of the license with your copy of QGIS, and you also can "
 "find it in Appendix :ref:`gpl_appendix`."
 msgstr ""
+"QGISは GNU General Public License (GPL)でリリースされています. QGIS はこの "
+"ライセンスで開発されているのであなたはソースコードを調べたり改造することができます.いつでも無料でGISプログラムにアクセスでき,自由に改造できます. "
+"その場合QGISのライセンスの全てを適用する必要があります.ライセンスの詳細はAppendix "
+":ref:`gpl_appendix`.を参照してください."
 
 # 07a9fe6098204532bbf4dc41c5011cdf
 #: ../../source/docs/user_manual/preamble/foreword.rst:42
@@ -74,23 +85,28 @@ msgid ""
 "be found at http://download.osgeo.org/qgis/doc/manual/, or in the "
 "documentation area of the QGIS website at http://www.documentation.qgis.org"
 msgstr ""
+"**文書の最新版**  このドキュメントの最新版は http://download.osgeo.org/qgis/doc/manual/  または "
+"QGISウェッブサイトのドキュメントエリア http://www.documentation.qgis.org で参照できます"
 
 # 934a758aa3734fd9b221f45fdbf0d029
 #: ../../source/docs/user_manual/preamble/foreword.rst:50
 msgid "Introduction To GIS"
-msgstr ""
+msgstr "GIS入門"
 
 # fd8d36822eb247e484c744f070a6b6a8
 #: ../../source/docs/user_manual/preamble/foreword.rst:52
 msgid ""
-"A Geographical Information System (GIS) (Mitchell 2005 :ref:"
-"`literature_and_web`) is a collection of software that allows you to create, "
-"visualize, query and analyze geospatial data. Geospatial data refers to "
-"information about the geographic location of an entity. This often involves "
-"the use of a geographic coordinate, like a latitude or longitude value. "
-"Spatial data is another commonly used term, as are: geographic data, GIS "
-"data, map data, location data, coordinate data and spatial geometry data."
+"A Geographical Information System (GIS) (Mitchell 2005 "
+":ref:`literature_and_web`) is a collection of software that allows you to "
+"create, visualize, query and analyze geospatial data. Geospatial data refers "
+"to information about the geographic location of an entity. This often "
+"involves the use of a geographic coordinate, like a latitude or longitude "
+"value. Spatial data is another commonly used term, as are: geographic data, "
+"GIS data, map data, location data, coordinate data and spatial geometry data."
 msgstr ""
+"地理情報システム (GIS) (Mitchell 2005 :ref:`literature_and_web`) "
+"とは地理空間データを作成,表示,検索,解析するためのソフトウェアのことです. 空間データは同じ意味で別の言い方がいくつかあります.地理データ, "
+"GISデータ,地図データ,位置データ,座標データ,地理空間データなどです."
 
 # e09868bbe59d48a3bbd4202e999a645f
 #: ../../source/docs/user_manual/preamble/foreword.rst:60
@@ -102,6 +118,9 @@ msgid ""
 "can present static maps (a simple image) or dynamic maps that are customised "
 "by the person viewing the map through a desktop program or a web page."
 msgstr ""
+"空間データを利用するアプリケーションには様々な機能があります.地図作成機能が "
+"空間データ利用に最もわかりやすい仕事でしょう.地図プログラムは空間データにアクセスしてそれを描画して可視化します.通常はコンピュータの画面や紙を利用して "
+"地図を表示します.アプリケーションでは静的な地図（単純なイメージ）かダイナミックに表示を変えられる地図を表示します.ダイナミックな地図はデスクトッププログラムかWebページを使って地図のみかけを変えることができます."
 
 # 4306c4f3f2824212813f040f4495e8e6
 #: ../../source/docs/user_manual/preamble/foreword.rst:68
@@ -110,37 +129,39 @@ msgid ""
 "maps, but geospatial data analysis is another primary function of geospatial "
 "applications. Some typical types of analysis include computing:"
 msgstr ""
+"多くの人たちは空間情報アプリケーションの機能は地図を作成するだけだと誤解しています.しかし空間データ解析は空間情報アプリケーションの別の重要な "
+"機能です.いくつかの典型的な解析処理はコンピュータの計算処理を含んでいます:"
 
 # 7de90a1853ea4267aed2b8fce3e2bc83
 #: ../../source/docs/user_manual/preamble/foreword.rst:73
 msgid "distances between geographic locations"
-msgstr ""
+msgstr "位置間の距離計算"
 
 # 4ec4750138b345aca299f5944bc20a6e
 #: ../../source/docs/user_manual/preamble/foreword.rst:74
 msgid ""
 "the amount of area (e.g., square meters) within a certain geographic region"
-msgstr ""
+msgstr "ある領域内の面積集計 (たとえば平方メートル)"
 
 # eab07987889d442987b06b07435cd494
 #: ../../source/docs/user_manual/preamble/foreword.rst:75
 msgid "what geographic features overlap other features"
-msgstr ""
+msgstr "どの地物が他の地物と重なりあっているかの判定"
 
 # 147f1d383bdb40aeaebb9d41fb67b6d8
 #: ../../source/docs/user_manual/preamble/foreword.rst:76
 msgid "the amount of overlap between features"
-msgstr ""
+msgstr "地物間の重なり部分の集計"
 
 # 18b6dc29496e4bf2b7b1d9353334626a
 #: ../../source/docs/user_manual/preamble/foreword.rst:77
 msgid "the number of locations within a certain distance of another"
-msgstr ""
+msgstr "ある位置から指定した距離内にある地物の数"
 
 # 6e968e2c2b6c4a80b66c50660b6bc303
 #: ../../source/docs/user_manual/preamble/foreword.rst:78
 msgid "and so on..."
-msgstr ""
+msgstr "等々..."
 
 # 830c022c59c54abd8149eaab021c9a4d
 #: ../../source/docs/user_manual/preamble/foreword.rst:80
@@ -149,6 +170,8 @@ msgid ""
 "many disciplines. The results of analysis may be shown on a map, but are "
 "often tabulated into a report to support management decisions."
 msgstr ""
+"これらのことは単純なことのように見えるかもしれません.しかしこれらの機能は "
+"いろいろな方法で多くの分野に適用できます.分析の結果を地図上に表示することは経営の意思決定をサポートするレポートとして頻繁に使われます."
 
 # b2abbdf844f6479bb350d6dafddab9b1
 #: ../../source/docs/user_manual/preamble/foreword.rst:84
@@ -161,11 +184,15 @@ msgid ""
 "application of geospatial technology, it is essentially doing geospatial "
 "data analysis and listing the results for you."
 msgstr ""
+"最近の位置情報サービスでは多くの機能を紹介しています.それらの機能の 多くは地図と解析処理の組み合わせで構成されています.たとえば携帯電話であなたの "
+"位置を記録できます.あなたが適切なソフトウェアを持っていれば歩いていける距離に "
+"あるレストランを携帯電話で探せます.これは空間情報テクノロジーのを使った新しい "
+"アプリケーションです.この機能のためには空間データを解析して結果を一覧にする ことが必要です."
 
 # ee96feef8e444cec961083d0fd76f5f5
 #: ../../source/docs/user_manual/preamble/foreword.rst:95
 msgid "Why is all this so new?"
-msgstr ""
+msgstr "それは何か新しい機能なんでしょうか?"
 
 # 237ac3639eaf43ee9c609161b39fda11
 #: ../../source/docs/user_manual/preamble/foreword.rst:97
@@ -179,6 +206,7 @@ msgid ""
 "commercial market, primarily focused on industries such as natural resource "
 "management."
 msgstr ""
+"いいえちがいます.空間情報サービスをモバイルで利用するための新しい機器はたくさんあります.そのために多くのオープンソース空間情報アプリケーションは利用できますが,既存の空間情報用ハードウェアとソフトウェアはなにか新しいものではありません.グローバルポジショニングシステム(GPS)レシーバーは10年以上もの間様々な産業で使われるようになり,ありふれたデバイスになりました.同じようにデスクトップマッピングと解析ツールは大きなコマーシャルマーケットを形成しています.たとえば自然資源管理の産業などが主要な対象です."
 
 # 4718cb3511d14b09a0417c61c459e0f2
 #: ../../source/docs/user_manual/preamble/foreword.rst:106
@@ -192,6 +220,7 @@ msgid ""
 "come down. The costs have come down. The amount of geospatial technology "
 "saturation has increased."
 msgstr ""
+"新しいことというのは最新のハードウェアとソフトウェアが利用されていることと,誰がそれを使っているかということです.旧来のマッピングと解析ツールのユーザーはGISアナリストかCADツール利用と同じようなデジタルマッピングについて高度に訓練されたユーザーです.現在は家庭用PCの計算能力とオープンソースソフトウェア(OSS)パッケージの利用によってホビイスト,プロフェッショナル,WEB開発者等の大群が空間データを扱えるようになりました.学習曲線は低下しています.コストも低下しています.空間情報テクノロジの進化は加速しています."
 
 # 3326063593a7407ab0a2fe0ff3cdea9f
 #: ../../source/docs/user_manual/preamble/foreword.rst:115
@@ -200,11 +229,13 @@ msgid ""
 "geospatial data in widespread use today. This is in addition to traditional "
 "tabular data that is also widely used by geospatial applications."
 msgstr ""
+"どのように空間データは保存されているでしょうか？ 一言でいえば2つのタイプの空間データの利用が今日では幅広い支持を集めています. "
+"これに加えて伝統的な表形式データも空間アプリケーションで幅広く利用されています."
 
 # da8407f55c6242a8925a235b4e59365f
 #: ../../source/docs/user_manual/preamble/foreword.rst:123
 msgid "Raster Data"
-msgstr ""
+msgstr "ラスタデータ"
 
 # 476cce1f00404721b95dd08928cf8c05
 #: ../../source/docs/user_manual/preamble/foreword.rst:125
@@ -215,6 +246,9 @@ msgid ""
 "typically represented as raster data. Any type of map feature can be "
 "represented as raster data, but there are limitations."
 msgstr ""
+"空間データの一つのタイプはラスタデータまたは単に\"ラスタ\"とよばれます.ラスタデータとして最も わかりやすい例がデジタル衛星写真や航空写真です. "
+"標高の陰影図やデジタル標高モデルも典型的なラスタデータといえます. "
+"任意のタイプの地図地物はラスタデータとしてあらわすことができます.しかし制限があります."
 
 # 77175576fd60411c806b7b7b1e840b84
 #: ../../source/docs/user_manual/preamble/foreword.rst:131
@@ -223,6 +257,8 @@ msgid ""
 "pixels. They have a fixed number of rows and columns. Each cell has a "
 "numeric value and has a certain geographic size (e.g. 30x30 meters in size)."
 msgstr ""
+"ラスタデータはセルによって構成される規則的な格子,またはピクセルで構成されるイメージで形成されています.それらは固定の行と列でできています.それぞれのセルは数値と地理上のサイズ "
+"(例 30x30 メーター)を持っています."
 
 # 43330db355d74e7eb223c893cffe44ca
 #: ../../source/docs/user_manual/preamble/foreword.rst:136
@@ -234,6 +270,9 @@ msgid ""
 "overlapping raster, where each band holds values of certain wavelengths of "
 "light. As you can imagine, a large raster takes up more file space."
 msgstr ""
+"複数の重なったラスタは1個の色の値を使って表現されます (例　一つのラスタは赤、緑、青の値の重ね合わせでカラーイメージを作成します）. "
+"衛星イメージは複数の\"バンド\"で構成されます.それぞれのバンドは特有の光学波長持ち分離させられており,空間的に重ね合わせられます. "
+"また広範なラスタはより大きなファイルサイズが必要になることが想像できます."
 
 # f4a52d1531a44fcea97894f9456dce08
 #: ../../source/docs/user_manual/preamble/foreword.rst:144
@@ -242,11 +281,13 @@ msgid ""
 "space. The trick is finding the right balance between cell size for storage "
 "purposes and cell size for analytical or mapping purposes."
 msgstr ""
+"ラスタのセルサイズが小さくなればさらに詳細がわかりますが,これはファイルスペースの増大もまねきます. "
+"セルのサイズを記憶する目的と,解析またはマッピングに利用するためのセルサイズのバランスを見出すことが計略として必要です."
 
 # e5ad2a9192f8426b93417060867b23b0
 #: ../../source/docs/user_manual/preamble/foreword.rst:151
 msgid "Vector Data"
-msgstr ""
+msgstr "ベクタデータ"
 
 # 53b00f7e39b24108aee0719a5eb1fa2e
 #: ../../source/docs/user_manual/preamble/foreword.rst:153
@@ -258,6 +299,8 @@ msgid ""
 "Each coordinate refers to a geographic location using a system of x and y "
 "values."
 msgstr ""
+"ベクタデータも地理情報アプリケーションで利用されます.あなたが三角法と空間幾何学の授業で起きていたならばベクタデータの特徴になじんでいるはずです.簡単にいうとベクタとは座標群を利用して位置を表す方法です. "
+"それぞれの座標はxとyの値で表現されている地理座標システムを参照しています."
 
 # c1b1e29d71004fc8bc306f53018f6e46
 #: ../../source/docs/user_manual/preamble/foreword.rst:160
@@ -268,6 +311,7 @@ msgid ""
 "interest, but the concepts are essential to geospatial data analysis and "
 "mapping."
 msgstr ""
+"これは学校で教えているx軸とy軸で表わされるデカルト座標系を参考にしています.あなたもこのようなグラフを退職後の貯えの減少や複合ローンの利息の増加計算に使ったかもしれません.しかしこの概念は空間データ解析とマッピングの本質的要素です."
 
 # a39bd4563ec7456294ca36fa617db695
 #: ../../source/docs/user_manual/preamble/foreword.rst:166
@@ -275,20 +319,20 @@ msgid ""
 "There are various ways of representing these geographic coordinates "
 "depending on your purpose. This is a whole area of study for another day - "
 "map projections."
-msgstr ""
+msgstr "あなたの目的に合致した空間情報表示方法はたくさんあります.これは地図投影という分野で別の日に勉強すべき分野です."
 
 # 9036a6d20f734dacaba8927425727f94
 #: ../../source/docs/user_manual/preamble/foreword.rst:170
 msgid ""
 "Vector data takes on three forms, each progressively more complex and "
 "building on the former."
-msgstr ""
+msgstr "ベクタデータには3種類の形態があります,それぞれ進歩してさらに複合して構築されています."
 
 # 286e025411e44aa19d6c0b9297d47cec
 #: ../../source/docs/user_manual/preamble/foreword.rst:173
 msgid ""
 "Points - A single coordinate (x y) represents a discrete geographic location"
-msgstr ""
+msgstr "点 - 単一座標(x y) で個別の地理的位置を表します"
 
 # 5e147c08075c42cf87ffd08bdcd7dec1
 #: ../../source/docs/user_manual/preamble/foreword.rst:174
@@ -301,6 +345,9 @@ msgid ""
 "coordinates connected together, whereas a line string is multiple lines "
 "connected together."
 msgstr ""
+"線 - 複数の座標 (x1 y1, x2 y2, x3 y4, ... xn yn) がPoint (x1 y1) から Point (x2 "
+"y2)まで線を描くようにある順序で並んでいるものです.各点の間のパートはラインセグメントとみなされます.それらは長さと点の順序によって決まる方向を持ちます. "
+"技術的には1個のラインは1対の座標間でお互いに接続したものです.それに対してラインストリングは複数のラインが接続したものです."
 
 # 1115b8dbe68b4108b1cdf73fae79c265
 #: ../../source/docs/user_manual/preamble/foreword.rst:181
@@ -310,3 +357,5 @@ msgid ""
 "A triangle, circle, rectangle, etc. are all polygons. The key feature of "
 "polygons is that there is a fixed area within them."
 msgstr ""
+"多角形 - 複数のラインが2点以上の連続で並び,最後の点が最初の点と等しい場合を多角形とします.三角形,円,四角形,etcはすべて多角形です. "
+"多角形の特徴は固定領域が内部にあることです."

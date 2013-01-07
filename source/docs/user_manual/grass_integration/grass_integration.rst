@@ -118,7 +118,7 @@ Each :file:`LOCATION` is defined by its coordinate system, map projection and ge
 
 .. figure:: /static/user_manual/grass_integration/grass_location.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    GRASS data in the alaska LOCATION
 
@@ -129,18 +129,6 @@ Creating a new GRASS LOCATION
 ------------------------------
 
 As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
-
-.. _figure_grass_location_2:
-
-.. only:: html
-
-   **Figure GRASS location 2:**
-
-.. figure:: /static/user_manual/grass_integration/create_grass_location.png
-   :align: center
-
-   Creating a new GRASS LOCATION or a new MAPSET in |QG|
-
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
 #. Visualize the :file:`alaska.shp` Shapefile (see Section
@@ -161,7 +149,7 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    the search box. (Note: If you want to repeat this process for another
    :file:`LOCATION` and projection and haven't memorized the EPSG ID,
    click on the |mIconProjectionEnabled| :sup:`projector` icon in the lower right-hand
-   corner of the status bar (see Section :ref:`label_projstart`)).
+   corner of the status bar (see Section :ref:`label_projections`)).
 #. Click **[Find]** to select the projection.
 #. Click **[Next]**.
 #. To define the default region, we have to enter the :file:`LOCATION`
@@ -181,6 +169,19 @@ As an example here is how the sample GRASS :file:`LOCATION alaska`, which is pro
    :file:`MAPSET demo`, as you defined.
 #. Notice that some of the tools in the GRASS toolbar that were
    disabled are now enabled.
+
+
+.. _figure_grass_location_2:
+
+.. only:: html
+
+   **Figure GRASS location 2:**
+
+.. figure:: /static/user_manual/grass_integration/create_grass_location.png
+   :align: center
+   :width: 20em
+
+   Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
 If that seemed like a lot of steps, it's really not all that bad and a very quick way to create a :file:`LOCATION`. The :file:`LOCATION alaska` is now ready for data import (see section :ref:`sec_import_loc_data`).
 You can also use the already existing vector and raster data in the sample GRASS :file:`LOCATION alaska` included in the QGIS alaska dataset
@@ -351,7 +352,7 @@ explains the available functionalities.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_toolbar.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS Digitizing Toolbar
 
@@ -403,7 +404,7 @@ The :guilabel:`Category` tab allows you to define the way in which the category 
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_category.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS Digitizing Category Tab
 
@@ -439,7 +440,7 @@ The :guilabel:`Settings` tab allows you to set the snapping in screen pixels. Th
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_settings.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS Digitizing Settings Tab
 
@@ -459,7 +460,7 @@ The :guilabel:`Symbology` tab allows you to view and set symbology and color set
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_symbology.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS Digitizing Symbolog Tab
 
@@ -479,7 +480,7 @@ The :guilabel:`Table` tab provides information about the database table for a gi
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_table.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS Digitizing Table Tab
 
@@ -521,6 +522,18 @@ The |grass_tools| :sup:`Open GRASS Tools` box provides GRASS module functionalit
 and :file:`MAPSET`. To use the GRASS toolbox you need to open a :file:`LOCATION` and :file:`MAPSET` where you have write-permission
 (usually granted, if you created the :file:`MAPSET`). This is necessary, because new raster or vector layers created during analysis need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`.
 
+.. _figure_grass_toolbox_1:
+
+.. only:: html
+
+   **Figure GRASS toolbox 1:**
+
+.. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
+   :align: center
+   :width: 20em
+
+   GRASS Toolbox and Module Tree |nix|
+
 The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 330) GRASS modules through a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs within the GRASS plugin Toolbox.
 
 .. _grass_modules:
@@ -528,27 +541,8 @@ The GRASS Shell inside the GRASS Toolbox provides access to almost all (more tha
 Working with GRASS modules
 ---------------------------
 
-.. |grass_toolbox_moduletree| image:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
-   :width: 30em
-.. |grass_toolbox_modulelist| image:: /static/user_manual/grass_integration/grass_toolbox_modulelist.png
-   :width: 30em
-
-
-.. _figure_grass_toolbox_1:
-
-.. only:: html
-
-   **Figure GRASS toolbox 1:**
-
-+------------------------------+----------------------------+
-| |grass_toolbox_moduletree|   | |grass_toolbox_modulelist| |
-+------------------------------+----------------------------+
-| 1. Modules Tree              | 2. Searchable Modules List | 
-+------------------------------+----------------------------+
-
-  GRASS Toolbox and searchable Modules List |nix|
-
-The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories, but are searchable as well.
+The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories 
+[**Module Tree**], but are searchable as well using the [**Modules List**].
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS version \CURRENT is available in the GRASS wiki ( http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list).
 
@@ -557,54 +551,67 @@ It is also possible to customize the GRASS Toolbox content. This procedure is de
 
 As shown in figure_grass_toolbox_1_ , you can look for the appropriate GRASS module using the thematically grouped :guilabel:`Modules Tree` or the searchable :guilabel:`Modules List` tab.
 
-Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and
-:guilabel:`Manual`. In figure_grass_toolbox_2_ you see an example for the GRASS module :file:`v.buffer`.
-
-.. |grass_module_option| image:: /static/user_manual/grass_integration/grass_module_option.png
-   :width: 20em
-.. |grass_module_output| image:: /static/user_manual/grass_integration/grass_module_output.png
-   :width: 20em
-.. |grass_module_manual| image:: /static/user_manual/grass_integration/grass_module_manual.png
-   :width: 20em
-
-
-.. _figure_grass_toolbox_2:
-
-.. only:: html
-
-   **Figure GRASS Toolbox 2:**
-
-+----------------------------------+--------------------------------+
-| |grass_module_option|            | |grass_module_output|          |
-+----------------------------------+--------------------------------+
-| 1.Module Options                 | 2.Modules Output               |
-+----------------------------------+--------------------------------+
-| |grass_module_manual|                                             |
-+----------------------------------+--------------------------------+
-| 3.Module Manual                                                   |
-+-------------------------------------------------------------------+
-
-  GRASS Toolbox Module Dialogs |nix|
+Clicking on a graphical module icon a new tab will be added to the toolbox dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` and :guilabel:`Manual`.
 
 **Options**
 
-The :guilabel:`Options` tab provides a simplified module dialog where you can usually select a raster or vector layer visualized in the QGIS canvas and enter further module specific parameters to run the module. The provided module parameters are often not complete to keep the dialog clear. If you want to use further module parameters and flags, you need to start the GRASS Shell and run the module in the command line.
+The :guilabel:`Options` tab provides a simplified module dialog where you can usually select a raster or vector layer visualized in the QGIS canvas and enter further module specific parameters to run the module. 
+
+.. _figure_grass_module_1:
+
+.. only:: html
+
+   **Figure GRASS module 1:**
+
+.. figure:: /static/user_manual/grass_integration/grass_module_option.png
+   :align: center
+   :width: 20em
+
+   GRASS Toolbox Module Options |nix|
+
+
+The provided module parameters are often not complete to keep the dialog clear. If you want to use further module parameters and flags, you need to start the GRASS Shell and run the module in the command line.
 
 A new feature in QGIS \CURRENT is the support for a
 :guilabel:`show advanced options` button below the simplified module dialog in the :guilabel:`Options` tab. At the moment it is only added to the module v.in.ascii as an example use, but will probably be part of more / all modules in the GRASS toolbox in future versions of QGIS. This allows to use the complete GRASS module options without the need to switch to the GRASS Shell.
 
 **Output**
 
+.. _figure_grass_module_2:
+
+.. only:: html
+
+   **Figure GRASS module 2:**
+
+.. figure:: /static/user_manual/grass_integration/grass_module_output.png
+   :align: center
+   :width: 20em
+
+   GRASS Toolbox Module Output |nix|
+
 The :guilabel:`Output` tab provides information about the output status of the module. When you click the **[Run]** button, the module switches to the
 :guilabel:`Output` tab and you see information about the analysis process. If all works well, you will finally see a ``Successfully finished`` message.
 
 **Manual**
+
+.. _figure_grass_module_3:
+
+.. only:: html
+
+   **Figure GRASS module 3:**
+
+.. figure:: /static/user_manual/grass_integration/grass_module_manual.png
+   :align: center
+   :width: 20em
+
+   GRASS Toolbox Module Manual |nix|
 
 The :guilabel:`Manual` tab shows the HTML help page of the GRASS module. You can use it to check further module parameters and flags or to get a deeper knowledge about the purpose of the module. At the end of each module manual page you see further links to the :file:`Main Help index`, the
 :file:`Thematic index` and the :file:`Full index`. These links provide the same information as if you use the module :file:`g.manual`.
 
 .. index::
    single:GRASS;display results
+
 .. tip:: **Display results immediately** 
    
    If you want to display your calculation results immediately in your map canvas, you can use the 'View Output' button at the bottom of the module tab.
@@ -629,31 +636,10 @@ The first example creates a vector contour map from an elevation raster
 * In the list of tool categories double click :menuselection:`Raster --> Surface Management --> Generate vector contour lines`.
 * Now a single click on the tool **r.contour** will open the tool dialog as explained above :ref:`grass_modules`. The
   ``gtopo30`` raster should appear as the :guilabel:`Name of input raster` |selectstring| :guilabel:`gtopo30`.
-* Type into the :guilabel:`Increment between Contour levels` |selectstring| :guilabel:`100` the value 100. (This will create contour lines at intervals of 100    meters.)
+* Type into the :guilabel:`Increment between Contour levels` |selectstring| :guilabel:`100` the value 100. (This will create contour lines at intervals of 100 meters.)
 * Type into the :guilabel:`Name for output vector map` |selectstring| :guilabel:`ctour_100`
   the name ``ctour_100``.
-* Click **[Run]** to start the process. Wait for several moments until the message ``Successfully finished`` appears in the output window.
-  Then click **[View Output]** and **[close]**.
-
-
-.. |grass_toolbox_rcontour| image:: /static/user_manual/grass_integration/grass_toolbox_rcontour.png
-   :width: 20em
-.. |grass_toolbox_rcontour2| image:: /static/user_manual/grass_integration/grass_toolbox_rcontour2.png
-   :width: 20em
-
-..  _figure_grass_module_1:
-
-.. only:: html
-
-   **Figure GRASS module 1:**
-
-+--------------------------+---------------------------+
-| |grass_toolbox_rcontour| | |grass_toolbox_rcontour2| |
-+--------------------------+---------------------------+
-| 1. r\.contour Options    | 2. r\.contour Output      |
-+--------------------------+---------------------------+
-
-   GRASS Toolbox r.contour module |nix|     
+* Click **[Run]** to start the process. Wait for several moments until the message ``Successfully finished`` appears in the output window. Then click **[View Output]** and **[close]**.
 
 Since this is a large region, it will take a while to display. After it finishes rendering, you can open the layer properties window to change the line color so that the contours appear clearly over the elevation raster, as in :ref:`vector_properties_dialog`.
 
@@ -684,15 +670,15 @@ additional vertices to the vector, causing it to load even more slowly.
   **[close]**.
 * You may change the color of the vector to display it clearly on the raster background and to contrast with the original contour lines. You will notice that the new contour lines have smoother corners than the original while staying faithful to the original overall shape.
 
-.. _figure_grass_module_2:
+.. _figure_grass_module_4:
 
 .. only:: html
 
-   **Figure GRASS module 2:**
+   **Figure GRASS module 4:**
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    GRASS module v.generalize to smooth a vector map |nix|
 
@@ -722,15 +708,15 @@ You should now have the ``gtopo30`` elevation with its colormap and transparency
 
 The GRASS plugin in QGIS is designed for users who are new to GRASS, and not familiar with all the modules and options. As such, some modules in the toolbox do not show all the options available, and some modules do not appear at all. The GRASS shell (or console) gives the user access to those additional GRASS modules that do not appear in the toolbox tree, and also to some additional options to the modules that are in the toolbox with the simplest default parameters. This example demonstrates the use of an additional option in the **r.shaded.relief** module that was shown above.
 
-.. figure_grass_module_3:
+.. figure_grass_module_5:
 
 .. only:: html
 
-   **Figure GRASS module 3:**
+   **Figure GRASS module 5:**
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
-   :width: 40em
+   :width: 20em
 
    The GRASS shell, r.shaded.relief module |nix|
 
@@ -740,15 +726,15 @@ The module **r.shaded.relief** can take a parameter ``zmult`` which multiplies t
 * After the process finishes shift to the :guilabel:`Browse` tab and double click on the new ``gtopo30_shade2`` raster to display in QGIS.
 * As explained above, shift the shaded relief raster below the gtopo30 raster in the Table of Contents, then check transparency of the colored gtopo30 layer. You   should see that the 3D effect stands out more strongly compared to the first shaded relief map.
 
-.. figure_grass_module_4:
+.. figure_grass_module_6:
 
 .. only:: html
 
-   **Figure GRASS module 4:**
+   **Figure GRASS module 6:**
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 
@@ -778,19 +764,19 @@ Working with the GRASS LOCATION browser
    single:GRASS toolbox;Browser
 
 Another useful feature inside the GRASS Toolbox is the GRASS
-:file:`LOCATION` browser. In figure_grass_module_5_ you can see the current working :file:`LOCATION` with its :file:`MAPSETs`.
+:file:`LOCATION` browser. In figure_grass_module_7_ you can see the current working :file:`LOCATION` with its :file:`MAPSETs`.
 
 In the left browser windows you can browse through all :file:`MAPSETs` inside the current :file:`LOCATION`. The right browser window shows some meta information for selected raster or vector layers, e.g. resolution, bounding box, data source, connected attribute table for vector data and a command history.
 
-.. _figure_grass_module_5:
+.. _figure_grass_module_7:
 
 .. only:: html
 
-   **Figure GRASS module 5:**
+   **Figure GRASS module 7:**
 
 .. figure:: /static/user_manual/grass_integration/grass_mapset_browser.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    GRASS LOCATION browser |nix|
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2012-12-23 19:33\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# af9860129426439caa191002b8bb4c9c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
 # 7fa96c3c27d74e94b6e3a8cbf5058c6b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:10
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:9
 msgid "Supported Data Formats"
 msgstr ""
 
-# be23cd50e5694576981fb54cd1beaa2c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:12
+# fa3de30de1d244e0bd89f1ff861eb321
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:11
 msgid ""
 "|qg| uses the OGR library to read and write vector data formats [#]_, "
 "including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, "
-"Spatialite, Oracle spatial databases and many more. At the date of this "
-"document, 69 vector formats are supported by the OGR library (see OGR-"
+"Spatialite, Oracle spatial databases and many more. The vector data can also "
+"be loaded in read mode from zip and gzip archives into QGIS.At the date of "
+"this document, 69 vector formats are supported by the OGR library (see OGR-"
 "SOFTWARE-SUITE :ref:`literature_and_web`). The complete list is available at "
 "http://www.gdal.org/ogr/ogr_formats.html."
 msgstr ""
@@ -648,23 +644,43 @@ msgstr ""
 msgid "Importing Data into PostgreSQL"
 msgstr ""
 
+# bcdec364ddb844c1b590fe97e89eeb89
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:380
+msgid ""
+"Data can be imported into PostgreSQL/PostGIS using several tools, such as "
+"the SPIT plugin, or the command line tools shp2pgsql or ogr2ogr."
+msgstr ""
+
+# de55da5ef5604e5da7c9aef6fd5d3880
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:386
+msgid "SPIT Plugin"
+msgstr ""
+
+# 9e4274fe90d74becafb7e864989caf9b
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:388
+msgid ""
+"|qg| comes with a core plugin named |spiticon| :sup:`SPIT` (Shapefile to "
+"PostGIS Import Tool). SPIT can be used to load multiple shapefiles at one "
+"time and includes support for schemas. See Section :ref:`label_spit` for "
+"more information."
+msgstr ""
+
 # c651746dc1254ee3aa9ef95bdaec0829
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:381
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:394
 msgid "shp2pgsql"
 msgstr ""
 
-# 96a886ad5c8e44698e4b17dee768ecc0
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:383
+# a4d2dfba61fd4f3c81882e4f199ec3a1
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:396
 msgid ""
-"Data can be imported into PostgreSQL using a number of methods. PostGIS "
-"includes a utility called **shp2pgsql** that can be used to import "
+"PostGIS includes a utility called **shp2pgsql** that can be used to import "
 "shapefiles into a PostGIS enabled database. For example, to import a "
 "shapefile named :file:`lakes.shp` into a PostgreSQL database named "
 "``gis_data``, use the following command:"
 msgstr ""
 
 # 882591476e1a4237890707a96493f480
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:393
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:405
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` database. "
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
@@ -673,81 +689,37 @@ msgid ""
 msgstr ""
 
 # 256669ebb2b44e32a0a23038c76f75e8
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:402
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:414
 msgid "**Exporting datasets from PostGIS**"
 msgstr ""
 
 # b3e6fde30622488aadae0dbdee91a00b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:404
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:416
 msgid ""
 "Like the import-tool **shp2pgsql** there is also a tool to export PostGIS-"
 "datasets as shapefiles: **pgsql2shp**. This is shipped within your PostGIS "
 "distribution."
 msgstr ""
 
-# de55da5ef5604e5da7c9aef6fd5d3880
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:413
-msgid "SPIT Plugin"
-msgstr ""
-
-# 0f4f76914e9a424e8cf87eb15dc56b7a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:415
-msgid ""
-"|spiticon| |qg| comes with a plugin named SPIT (Shapefile to PostGIS Import "
-"Tool). SPIT can be used to load multiple shapefiles at one time and includes "
-"support for schemas. To use SPIT, open the Plugin Manager from the :"
-"menuselection:`Plugins` menu, check the box next to the |checkbox| :guilabel:"
-"`SPIT plugin` and click **[OK]**. The SPIT icon will be added to the plugin "
-"toolbar."
-msgstr ""
-
-# 4101785fc59842af824f6aed28eb508f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:422
-msgid ""
-"To import a shapefile, click on the |spiticon| :sup:`SPIT` tool in the "
-"toolbar to open the :guilabel:`SPIT - Shapefile to PostGIS Import Tool` "
-"dialog. Select the PostGIS database you want to connect to and click on **"
-"[Connect]**. If you want, you can define or change some import options. Now "
-"you can add one or more files to the queue by clicking on the **[Add]** "
-"button. To process the files, click on the **[OK]** button. The progress of "
-"the import as well as any errors/warnings will be displayed as each "
-"shapefile is processed."
-msgstr ""
-
-# cfc0b538f37945d98db2232715532bab
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:433
-msgid "**Importing Shapefiles Containing PostgreSQL Reserved Words**"
-msgstr ""
-
-# 2e709fa1673e49c9a7076f5804638caa
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:435
-msgid ""
-"If a shapefile is added to the queue containing fields that are reserved "
-"words in the PostgreSQL database a dialog will popup showing the status of "
-"each field. You can edit the field names prior to import and change any that "
-"are reserved words (or change any other field names as desired). Attempting "
-"to import a shapefile with reserved words as field names will likely fail."
-msgstr ""
-
 # cf78ae1249734fb98fb0a7092d6088f4
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:444
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:425
 msgid "ogr2ogr"
 msgstr ""
 
 # 97e59dd0e83f41629dee853a056043ae
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:446
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:427
 msgid ""
 "Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata "
 "in PostGIS: **ogr2ogr**. This is part of your GDAL installation."
 msgstr ""
 
 # 7d36159995e64c38a9d0351ea92b7bcb
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:449
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:430
 msgid "To import a shapefile into PostGIS, do the following: ::"
 msgstr ""
 
 # a50e1c349bb140afbb15177b905e6396
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:456
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:437
 msgid ""
 "This will import the shapefile :file:`alaska.shp` into the PostGIS-database "
 "*postgis* using the user *postgres* with the password *topsecret* on host "
@@ -755,14 +727,14 @@ msgid ""
 msgstr ""
 
 # e959cd5cff0d4aa796616558fb2fd7d5
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:460
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:441
 msgid ""
 "Note that OGR must be built with PostgreSQL to support PostGIS. You can see "
 "this by typing ::"
 msgstr ""
 
 # fdf5a130eb2d4aa2868b3e0a880e027a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:467
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:448
 msgid ""
 "If you like to use PostgreSQL's **COPY** \\ -command instead of the default "
 "**INSERT INTO** method you can export the following environment-variable (at "
@@ -770,7 +742,7 @@ msgid ""
 msgstr ""
 
 # eb1f24e8233b46d788528cd8189a1319
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:476
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:457
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need "
 "to create them manually using the normal SQL-command **CREATE INDEX** "
@@ -779,12 +751,12 @@ msgid ""
 msgstr ""
 
 # 14c8a99495934fa6832051b5ade18a8f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:486
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:467
 msgid "Improving Performance"
 msgstr ""
 
 # 3e67640fa3b54becb88791bc8861c963
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:488
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:469
 msgid ""
 "Retrieving features from a PostgreSQL database can be time consuming, "
 "especially over a network. You can improve the drawing performance of "
@@ -795,12 +767,12 @@ msgid ""
 msgstr ""
 
 # 4a957d30a3c74e76be7fedf62d9109d1
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:495
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:476
 msgid "The syntax for creating a GiST [#]_ index is: ::"
 msgstr ""
 
 # e7104cd3be2141dfb1f48e8aae4b35a1
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:503
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:484
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once "
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
@@ -809,17 +781,17 @@ msgid ""
 msgstr ""
 
 # 4c7d023e19f9475db0f43853abbe21f7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:507
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:488
 msgid "The following is an example of creating a GiST index: ::"
 msgstr ""
 
 # d98ff361925140debb5b2c33424e9191
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:531
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:512
 msgid "Vector layers crossing 180 |degrees| longitude"
 msgstr ""
 
 # e31342bdd8f344e9b82935cfaa502b90
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:533
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:514
 msgid ""
 "Many GIS packages don't wrap vector maps, with a geographic reference system "
 "(lat/lon), :index:`crossing the 180 degrees longitude line`. As result, if "
@@ -830,7 +802,7 @@ msgid ""
 msgstr ""
 
 # cf07d308f72a42afad6db57f10519cf7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:553
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:534
 msgid ""
 "A workaround is to transform the longitude values using PostGIS and the "
 "**ST_Shift_Longitude** [#]_ function. This function reads every point/vertex "
@@ -841,31 +813,31 @@ msgid ""
 msgstr ""
 
 # 8c477519b540412182c2df383e10132f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:575
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:556
 msgid "Usage"
 msgstr ""
 
 # c1b73884d6534db487ed748dad7b4c07
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:577
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:558
 msgid ""
 "Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using for "
 "example the PostGIS Manager plugin or the SPIT plugin"
 msgstr ""
 
 # 7b35397c44dd4172b47140b7668675ac
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:579
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:560
 msgid ""
 "Use the PostGIS command line interface to issue the following command (this "
 "is an example where \"TABLE\" is the actual name of your PostGIS table)"
 msgstr ""
 
 # 195117fd47384f64bd501a4ed06e034a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:582
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:563
 msgid "``gis_data=# update TABLE set the_geom=ST_shift_longitude(the_geom);``"
 msgstr ""
 
 # 5037377ec6ec4f52825fbe1d9a2265bd
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:583
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:564
 msgid ""
 "If everything went right you should receive a confirmation about the number "
 "of features that were updated, then you'll be able to load the map and see "
@@ -873,12 +845,12 @@ msgid ""
 msgstr ""
 
 # 5483bd28bda14acc91bd8cc0e2d4ed8d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:592
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:573
 msgid "SpatiaLite Layers"
 msgstr ""
 
 # 14b50d396184467c8d910297bd3743c6
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:594
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:575
 msgid ""
 "|mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite "
 "database, begin by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add "
@@ -893,7 +865,7 @@ msgid ""
 msgstr ""
 
 # af3d394ba3cb4147b9ddfca6397ca865
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:605
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:586
 msgid ""
 "If you want to save a vector layer to SpatiaLite format you can do this by "
 "right clicking the layer in the legend. Then click on :menuselection:`Save "
@@ -903,47 +875,66 @@ msgid ""
 "ogr/drv_sqlite.html."
 msgstr ""
 
+# b0849b7e3cb5490e825773f3dfb6c150
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:593
+msgid "QGIS also supports editable Views in SpatiaLite."
+msgstr ""
+
 # a05666053e014596a38d103e35593e50
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:613
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:596
 msgid "Creating a new SpatiaLite layer"
 msgstr ""
 
 # 1c8646f1dfa84e549846e49fbfcda4d9
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:615
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:598
 msgid ""
 "If you want to create a new SpatiaLite layer, please refer to section :ref:"
 "`vector_create_spatialite`."
 msgstr ""
 
 # 7e675417e6a84273ba66fb0ce2eca4cf
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:622
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:605
 msgid "**SpatiaLite data management Plugins**"
 msgstr ""
 
 # c0271a9e98bf438e8d7e0b0562d82d33
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:624
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:607
 msgid ""
 "For SpatiaLite data management you can also use several Python plugins: "
 "QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and "
 "installed with the Plugin Installer."
 msgstr ""
 
+# de7602c0d071458fbc0f5d2de14b36ed
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:614
+msgid "MSSQL Spatial Layers"
+msgstr ""
+
+# 2936210cc3f543068b9bbf912c1f1f8d
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:616
+msgid ""
+"QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer| :"
+"sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available "
+"in the MS SQL node in the QBrowser tree, providing drag and drop import "
+"support."
+msgstr ""
+
 # f930a73742ef4b31b2f8afa19dab5a40
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:630
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:622
 msgid ""
 "GRASS vector and PostgreSQL support is supplied by native QGIS data provider "
 "plugins."
 msgstr ""
 
 # 55484cce975a49978319ab4c01e19fef
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:631
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:623
 msgid ""
 "GiST index information is taken from the PostGIS documentation available at "
 "http://postgis.refractions.net"
 msgstr ""
 
 # 6ae85578b6584612b743b65df75de85a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:632
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:624
 msgid ""
 "http://postgis.refractions.net/documentation/manual-1.4/ST\\_Shift"
 "\\_Longitude.html"
