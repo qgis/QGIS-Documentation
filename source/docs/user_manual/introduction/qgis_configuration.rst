@@ -7,7 +7,8 @@ QGIS Configuration
 
 QGIS is highly configurable through the :menuselection:`Settings -->` menu.
 Choose between Panels, Toolbars, Project properties, Options and Customization.
-..  (please add more introduction here)
+
+..  please add more introduction here
 
 .. _sec_panels_and_toolbars:
 
@@ -90,7 +91,7 @@ General Tab
 
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
-* Change Selection and background Color
+* Change Selection and Background color
 * Change the QGIS Style
 * Change the icon theme (choose between 'default', 'classic', 'gis' and 'newgis')
 * Change icon size between 16, 24 and 32 pixel.

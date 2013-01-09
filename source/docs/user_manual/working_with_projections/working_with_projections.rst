@@ -98,7 +98,7 @@ layer already has a CRS defined, it will be displayed as shown in
 
 .. tip:: **CRS in the Map Legend** 
 
-   Right clicking on a layer in the Map Legend (Section :ref:`label_legend`) 
+   Right-clicking on a layer in the Map Legend (Section :ref:`label_legend`) 
    provides two CRS short cuts. :guilabel:`Set layer CRS` takes you directly 
    to the Coordinate Reference System Selector dialog (see figure_projection_2_). 
    :guilabel:`Set project CRS from Layer` redefines the project CRS using 
@@ -134,7 +134,7 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 The :guilabel:`Coordinate Reference System` tab of the 
 :guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure_projection_3_ and described below.
+shown in Figure_projection_2_ and described below.
 
 .. following picture has an external reference from working with ogc, so 
    the reference of this figure needs a capture!
@@ -219,7 +219,7 @@ Defining a custom CRS in QGIS requires a good understanding of the Proj.4
 projection library. To begin, refer to the Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S.
 Geological Survey Open-File Report 90-284, 1990 (available at 
-ftp://ftp.remotesensing.org/proj/OF90-284.pdf.
+ftp://ftp.remotesensing.org/proj/OF90-284.pdf ).
 
 This manual describes the use of the ``proj.4`` and related command line
 utilities. The cartographic parameters used with ``proj.4`` are
