@@ -13,7 +13,7 @@ QGIS Browser
 
 The QGIS Browser is a new panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI shapefile or
-MapInfo files), databases (e.g.PostGIS or MSSQL Spatial), WMS/WFS connections.
+MapInfo files), databases (e.g.PostGIS or MSSQL Spatial) and WMS/WFS connections.
 You can also view your GRASS data (to get the data into QGIS see :ref:`sec_grass`).
 
 .. _figure_browser_standalone_metadata:

@@ -4,8 +4,19 @@ Checklist for QGIS Release 2.0
 .. This is a comment and will not be rendered. Please update the items marked
    as |checkbox_unchecked| to |checkbox_checked| when they are completed.
 
-Release Timeline for QGIS 1.8.0
-...............................
+Blocking Features
+-----------------
+
+ * Symbology overhaul
+ * Labelling overhaul
+ * New web site and docs
+ * SEXTANTE integration
+ * Interface cleanup and consistency
+ * Plugins migration
+ * Merge new_vector_api branch
+
+Release Timeline
+................
 
 * |checkbox_unchecked| Small enhancements and bug fixes can continue in trunk
 * |checkbox_unchecked| Set date for next release about two months into the
