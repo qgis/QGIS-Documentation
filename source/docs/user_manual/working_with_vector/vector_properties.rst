@@ -325,9 +325,9 @@ The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
 To create a rule, activate an existing row by clicking on it or click on '+' and click 
-on the new rule. Then press the [Edit] button. In the Rule properties dialog you can define a label
+on the new rule. Then press the **[Edit]** button. In the Rule properties dialog you can define a label
 for the rule. Press the |browsebutton| button to open the Expression string builder. In the **Function List**, 
-click on :guilabel:`>-Fields and Values`to view all attributes of the attribute table to be searched. To add an attribute to the 
+click on :guilabel:`>-Fields and Values` to view all attributes of the attribute table to be searched. To add an attribute to the 
 Field calculator **Expression** field, double click its name in the :guilabel:`>-Fields and Values` list.
 Generally you can use the various fields, values and functions to construct the calculation expression or you 
 can just type it into the box (see :ref:`vector_field_calculator`).
@@ -456,7 +456,7 @@ The old |qg| symbology supports the following renderers:
 * **Unique value** - objects are classified by the unique values within a specified field with each value having a different symbol.
 
 
-To :index:'change the symbology' for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
+To :index:`change the symbology` for a layer, simply double click on its legend entry and the vector :guilabel:`Layer Properties` dialog will be shown.
 
 
 .. index:: Fill_Style, Fill_Color, Outline_Options
@@ -480,8 +480,6 @@ At least the following styling options apply for nearly all renderers:
     You can also set this to 'no Pen'.
   * Outline color - color of the ouline of your feature.
   * Outline width - width of your features.
-
-The **drawing by field** option provides the possibility to symbolize your features with a ...
 
 Once you have styled your layer you also could save your layer-style to a 
 separate file (ending with :file:`*.qml`).
@@ -595,7 +593,7 @@ the appearance of the labels using attributes stored in the layer. The
 entries beginning with ``Data defined`` allow you to set all the parameters 
 for the labels using fields in the layer.
 
-Not that the :guilabel:`Label` tab provides a ``preview-box`` where your 
+Note that the :guilabel:`Label` tab provides a ``preview-box`` where your 
 selected label is shown.
 
 .. index:: New_Labeling, Smart_Labeling
@@ -733,16 +731,12 @@ Fields Tab
 
 |attributes| Within the :guilabel:`Fields` tab the field attributes of the 
 selected dataset can be manipulated. The buttons |mActionNewAttribute| 
-:guilabel:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column` 
+:sup:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column` 
 can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
 
 At the moment only columns from PostGIS layers can be removed and added. The 
-OGR library supports to add new columns, but not to remove them, if you have 
-a GDAL version >= 1.6 installed.  In the GDAL/OGR trac there is a ticket with 
-a patch that awaits to be committed (http://trac.osgeo.org/gdal/ticket/2671). 
-Until then QGIS (and any other software that uses GDAL/OGR) can only use a 
-workaround to delete Shapefile columns. In QGIS this "workaround" is a 
-third-party plugin called Table Manager.
+OGR library supports to add and remove columns, if you have 
+a GDAL version >= 1.9 installed.
 
 **Edit Widget**
 
@@ -808,17 +802,17 @@ General Tab
 -----------
 
 |general| The :guilabel:`General` tab is essentially like that of the raster dialog. 
-There a several options available:
+There are several options available:
 
 * Change the display name of the layer.
-* Set a display field to be used for the ``Identify Results`` dialog. 
+* Set a display field to be used for the :guilabel:`Identify Results` dialog. 
 * Define a certain Edit User Interface for the vector layer written with the Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/.
-* Create a ``Spatial Index`` (only for OGR supported formats and PostGIS).
-* Add an ``Init function`` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
-* ``Update Extents`` information for a layer.
-* View or change the projection of the specific vector layer, clicking on ``Specify CRS``.
+* Create a :guilabel:`Spatial Index` (only for OGR supported formats and PostGIS).
+* Add an :guilabel:`Init function` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
+* :guilabel:`Update Extents` information for a layer.
+* View or change the projection of the specific vector layer, clicking on :guilabel:`Specify CRS`.
 
-Furthermore you can activate and set |checkbox| :menuselection:`Use scale 
+Furthermore you can activate and set |checkbox| :guilabel:`Use scale 
 dependent rendering`, define provider specific options (e.g. encoding) and with the 
 **[Query Builder]** button you can create a subset of the features in the layer 
 that will be visualized (also refer to section :ref:`sec_selection_query`). 
@@ -922,8 +916,8 @@ with a ``0`` on the end. The brackets will be removed by |qg| when it
 substitutes in the value of the field. If you want the substituted field to be 
 surrounded by square brackets, use a second set like this: ``[[%col10]]``.
 
-The :guilabel:`Identify Results` dialog box includes a *(Derived)* item that 
-contains information relevant to the layer type. The values in this item can 
+Using the :guilabel:`Identify Features` tool you can open :guilabel:`Identify Results` dialog.
+It includes a *(Derived)* item that contains information relevant to the layer type. The values in this item can 
 be accessed in a similar way to the other fields by using preceeding the 
 derived field name by ``(Derived).``. For example, a point layer has an ``X`` 
 and ``Y`` field and the value of these can be used in the action with 
@@ -931,7 +925,7 @@ and ``Y`` field and the value of these can be used in the action with
 available from the :guilabel:`Identify Results` dialog box, not the 
 :guilabel:`Attribute Table` dialog box.
 
-Two :index:'example actions' are shown below:
+Two :index:`example actions` are shown below:
 
   *  ``konqueror http://www.google.com/search?q=%nam``
   *  ``konqueror http://www.google.com/search?q=%%``
@@ -1000,9 +994,9 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 
 #.  Make sure the ``lakes`` layer is loaded.
 #.  Open the :guilabel:`Layer Properties` dialog by double-clicking on the 
-    layer in the legend or right-click and choose \dropmenuopt{Properties} 
+    layer in the legend or right-click and choose :guilabel:`Properties` 
     from the popup menu.
-#.  Click on the ``Actions`` tab.
+#.  Click on the :guilabel:`Actions` tab.
 #.  Enter a name for the action, for example ``Google Search``.
 #.  For the action, we need to provide the name of the external program to run. 
     In this case, we can use Firefox. If the program is not in your path, you 
