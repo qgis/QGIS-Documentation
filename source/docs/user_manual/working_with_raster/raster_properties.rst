@@ -146,8 +146,8 @@ more values with custom transparency.
 
 As you can see this is quite easy to set custom transparency, but it can be
 quite a lot of work. Therefore you can use the button 
-|mActionFileSave| :sup:`Export to file` to save your transparency-list to a file. 
-The button |mActionFolder| :sup:`Import from file` loads your transparency-settings 
+|mActionFileSave| :sup:`Export to file` to save your transparency list to a file. 
+The button |mActionFolder| :sup:`Import from file` loads your transparency settings 
 and applies them to the current rasterlayer.
 
 
@@ -186,7 +186,7 @@ to load an existing color table or to save the defined color table for other
 sessions.
 
 The block :guilabel:`Generate new color map` allows you to create newly
-categorized colormaps. You only need to select the :guilabel:`number of classes` 
+categorized colormaps. You only need to select the :guilabel:`number of entries` 
 |selectnumber| and press the button :guilabel:`Classify`. Currently
 only one :guilabel:`Classification mode: Equal Interval` |selectstring| is
 supported. 
@@ -259,7 +259,7 @@ Histogram Tab
 The :guilabel:`Histogram` tab allows you to view the distribution
 of the bands or colors in your raster. It is generated automaticaly when 
 you open :guilabel:`Histogram` tab. All existing bands will be displayed 
-together. You can save the histogramm as an image with the |mActionFileSave| button. 
+together. You can save the histogram as an image with the |mActionFileSave| button. 
 
 
 .. index:: Raster_statistics
