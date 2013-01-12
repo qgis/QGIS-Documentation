@@ -7,7 +7,7 @@ Raster Calculator
 
 .. index:: Raster_Calculator
 
-The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu 
+The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu 
 (see figure_raster_2_) allows to perform calculations on basis of existing 
 raster pixel values. 
 The results are written to a new raster layer with a GDAL supported format. 
@@ -25,7 +25,7 @@ The results are written to a new raster layer with a GDAL supported format.
    Raster Calculator |nix|
 
 
-The **Fields list** contains all loaded raster layers that can be used. 
+The **Raster bands** list contains all loaded raster layers that can be used. 
 To add a raster to the raster calculator expression field, double
 click its name in the Fields list. You can then use the operators to construct 
 calculation expressions or you can just type it into the box.

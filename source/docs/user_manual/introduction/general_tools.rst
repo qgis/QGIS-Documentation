@@ -15,7 +15,7 @@ Keyboard shortcuts
    single:Keyboard shortcuts
 
 QGIS provides default keyboard shortcuts for many features. You find them in
-Section :ref:`label_menubar` below. Additionally the menu option
+Section :ref:`label_menubar`. Additionally the menu option
 :menuselection:`Settings --> Configure Shortcuts` allows to
 change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS
 features.
@@ -230,7 +230,7 @@ measuring click your right mouse button.
    Measure Distance |nix| (KDE)
 
 |mActionMeasureArea| Areas can also be measured.  In the measure window the
-accumulated area-size appears. In addition, the measuring tool will snap to the
+accumulated area size appears. In addition, the measuring tool will snap to the
 currently selected layer, provided that layer has its snapping tolerance set.
 (See Section :ref:`snapping_tolerance`).  So if you want to measure exactly along
 a line feature, or around a polygon feature, first set its snapping tolerance,
@@ -275,7 +275,7 @@ The QGIS toolbar provides several tools to select features in the map canvas.
 To select one or several features just click on
 |mActionSelect| and select your tool:
 
-* |mActionSelect| :sup:`Select features`
+* |mActionSelect| :sup:`Select single feature`
 * |mActionSelectRectangle| :sup:`Select features by rectangle`
 * |mActionSelectPolygon| :sup:`Select features by polygon`
 * |mActionSelectFreehand| :sup:`Select features by freehand`
@@ -330,7 +330,7 @@ using the text you prefer to the map.
 #.  Click **[OK]**
 
 
-In the example above (default) places a copyright symbol followed by the
+In the example above (default) QGIS places a copyright symbol followed by the
 date in the lower right hand corner of the map canvas.
 
 
@@ -416,9 +416,9 @@ Annotation Tools
 ================
 
 
-The |mActionTextAnnotation| text annotation tools in the attribute toolbar
+The |mActionTextAnnotation| :guilabel:`Text Annotation` tools in the attribute toolbar
 provides the possibility to place formatted text in a balloon on the QGIS map
-canvas. Use the text annotation tool and click into the map canvas.
+canvas. Use the :guilabel:`Text Annotation` tool and click into the map canvas.
 
 .. _annotation:
 
@@ -437,10 +437,10 @@ text editor to enter the formatted text and other item settings. E.g. there
 is the choice of having the item placed on a map position (displayed by
 a marker symbol) or to have the item on a screen position (not related
 to the map). The item can be moved by map position (drag the map marker)
-or by moving only the balloon. The icons are part of gis theme, and are used
+or by moving only the balloon. The icons are part of GIS theme, and are used
 by default in the other themes too.
 
-The |mActionAnnotation| move annotation tool allows to move the annotation on the
+The |mActionAnnotation| :guilabel:`Move Annotation` tool allows to move the annotation on the
 map canvas.
 
 Form annotations
@@ -450,9 +450,10 @@ Form annotations
 .. index::`form annotation|\see{annotations}`
 
 Additionally you can also create your own annotation forms. The
-|mActionFormAnnotation| form annotation tool is useful to display attributes of
+|mActionFormAnnotation| :guilabel:`Form Annotation` tool is useful to display attributes of
 a vector layer in a customized qt designer form (see figure_custom_annotation_). It is similar to the
-designer forms for the identify tool, but displayed in an annotation item.
+designer forms for the 
+:guilabel:`Identify features` tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. _figure_custom_annotation:
@@ -468,7 +469,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
    Customized qt designer annotation form |nix|
 
 .. note::
-   If you press :kbd:`Ctrl+T` while an annotation tool is active
+   If you press :kbd:`Ctrl+T` while an :guilabel:`Annotation` tool is active
    (move annotation, text annotation, form annotation), the visibility states
    of the items are inverted.
 

@@ -292,7 +292,7 @@ Help
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
-|| :guilabel:`What's This?`                                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
+|mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
@@ -568,13 +568,13 @@ as each layer is drawn to the map view. In some cases, such as the gathering
 of statistics in raster layers, the progress bar will be used to show the
 status of lengthy operations.
 
-If a new plugin or a plugin update is available, you will see a message in the
-status bar. On the right side of the status bar is a small
+If a new plugin or a plugin update is available, you will see a message at the
+far right of the status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering|
 immediately stops the current map rendering process.
 
-At the far right of the status bar you find the EPSG code of the current
+To the right of the render functions you find the EPSG code of the current
 project CRS and a projector icon. Clicking on this opens the projection properties
 for the current project.
 

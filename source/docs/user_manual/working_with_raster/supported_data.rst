@@ -29,7 +29,7 @@ reasons. For example, some require external commercial libraries or
 the GDAL installation of your OS was not built to support the format you want
 to use. Only those formats that have been well tested will appear in the list
 of file types when loading a raster into QGIS. Other untested formats can 
-be loaded by selecting *.*.
+be loaded by selecting the GDAL [All files] filter.
 
 Working with GRASS raster data is described in Section :ref:`sec_grass`.
 
@@ -60,7 +60,7 @@ Loading raster data in QGIS
 ===========================
 
 Raster layers are loaded either by clicking on the |mActionAddRasterLayer| 
-:sup:`Load Raster` icon or by selecting the :menuselection:`View -->` 
+:sup:`Load Raster` icon or by selecting the :menuselection:`Layer -->` 
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than one 
 layer can be loaded at the same time by holding down the :kbd:`Control` or 
 :kbd:`Shift` key and clicking on multiple items in the dialog 
@@ -76,8 +76,8 @@ a dialog to set raster properties for the layer.
 .. [label=--]
 
 * :menuselection:`Zoom to layer extent`
-* :menuselection:`Zoom to best scale (100\%)`
-* :menuselection:`Show in overview`
+* :menuselection:`Zoom to Best Scale (100\%)`
+* :menuselection:`Show in Overview`
 * :menuselection:`Remove`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`

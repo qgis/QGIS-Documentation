@@ -5,8 +5,8 @@ Supported Data Formats
 ======================
 
 |qg| uses the OGR library to read and write vector data formats [#]_,
-including ESRI shapefiles, MapInfo and Microstation file formats; Postgis,
-Spatialite, Oracle spatial databases and many more. The vector data can also
+including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
+SpatiaLite, Oracle Spatial databases and many more. The vector data can also
 be loaded in read mode from zip and gzip archives into QGIS. At the date of this
 document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
@@ -23,7 +23,7 @@ The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 This section describes how to work with several common formats: ESRI
-shapefiles, PostGIS layers and Spatialite layers. Many of the features
+Shapefiles, PostGIS layers and SpatiaLite layers. Many of the features
 available in |qg| work the same, regardless of the vector data source.
 This is by design and includes the identify, select, labeling and
 attributes functions.
@@ -256,7 +256,7 @@ required for a connection are:
   * disable: only try an unencrypted SSL connection
   * allow: try a non-SSL connection, if that fails, try an SSL connection
   * prefer (the default): try an SSL connection, if that fails, try a
-  * non-SSL connection;
+    non-SSL connection;
   * require: only try an SSL connection.
 
 * **Username**: User name used to login to the database.
@@ -462,8 +462,8 @@ Improving Performance
 
 Retrieving features from a PostgreSQL database can be time consuming,
 especially over a network. You can improve the drawing performance of
-PostgreSQL layers by ensuring that a :index:`PostGIS!spatial index`
-spatial index exists on each layer in the database. PostGIS supports
+PostgreSQL layers by ensuring that a :index:`PostGIS spatial index`
+exists on each layer in the database. PostGIS supports
 creation of a :index:`GiST (Generalized Search Tree) index` to speed
 up spatial searches of the data.
 
@@ -584,7 +584,7 @@ format and the CRS and then add ``SPATIALITE=YES`` in the OGR data source
 creation option field. This tells OGR to create a SpatiaLite database.
 See also http://www.gdal.org/ogr/drv_sqlite.html.
 
-QGIS also supports editable Views in SpatiaLite.
+QGIS also supports editable views in SpatiaLite.
 
 Creating a new SpatiaLite layer
 ...............................

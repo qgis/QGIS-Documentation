@@ -55,36 +55,98 @@ Examples of scalar expressions:
 Parsing Expressions
 ===================
 
-
-**TODO:** parsing, error handling
-
 ::
 
-  >>> s = QgsSearchString()
-  >>> s.setString("1 + 1 = 2")
-  True
-  >>> s.setString("1 + 1 =")
+  >>> exp = QgsExpression('1 + 1 = 2')
+  >>> exp.hasParserError()
   False
-  >>> s.parserErrorMsg()
+  >>> exp = QgsExpression('1 + 1 = ')
+  >>> exp.hasParserError()
+  True
+  >>> exp.parserErrorString()
   PyQt4.QtCore.QString(u'syntax error, unexpected $end')
-
-**TODO:** working with the tree, evaluation as a predicate, as a function, error handling
 
 .. index:: expressions; evaluating
 
 Evaluating Expressions
 ======================
 
+Basic Expressions
+-----------------
+
 ::
 
-  st = ss.tree()
-  if not st:
-    raise ValueError, "empty expression was used"
+  >>> exp = QgsExpression('1 + 1 = 2')
+  >>> value = exp.evaluate()
+  >>> value.toInt()
+  (1, True)
 
-  print st.makeSearchString()
+Expressions with features
+--------------------------
 
-  res = st.checkAgainst(fields, feature.attributeMap())
+The following example will evaluate the given expression against a feature.  "Column" is a name of the field in the layer. 
 
-  res, value = st.getValue(st, fields, feature.attributeMap(), feature.geometry())
+::
 
-  print st.errorMsg()
+  >>> exp = QgsExpression('Column = 99')
+  >>> value = exp.evaluate(feature, layer.pendingFields())
+  >>> value.toBool()
+  True
+
+You can also use :func:`QgsExpression.prepare()` if you need check more then one feature.  Using :func:`QgsExpression.prepare()` will increase the speed that evaluate takes to run.
+
+::
+
+  >>> exp = QgsExpression('Column = 99')
+  >>> exp.prepare(layer.pendingFields())
+  >>> value = exp.evaluate(feature)
+  >>> value.toBool()
+  True
+ 
+
+Hanlding errors
+---------------
+
+::
+
+  exp = QgsExpression("1 + 1 = 2 ")
+  if exp.hasParserError():
+    raise Expection(exp.parserErrorString())
+
+  value = exp.evaluate()
+  if exp.hasEvalError(): 
+    raise ValueError(exp.evalErrorString())
+
+  value.toInt()
+
+Examples
+========
+
+The following example can be used to filter a layer and return any feature that matches a predicate.
+
+::
+
+  def where(layer, exp):
+    print "Where"
+    exp = QgsExpression(exp)
+    if exp.hasParserError():
+      raise Expection(exp.parserErrorString())
+    exp.prepare(layer.pendingFields())
+    feature = QgsFeature()
+    layer.select(layer.pendingAllAttributesList())
+    while layer.nextFeature(feature):
+      value = exp.evaluate(feature)
+    if exp.hasEvalError(): 
+      raise ValueError(exp.evalErrorString())
+      if value.toBool():
+        yield feature
+
+  layer = qgis.utils.iface.activeLayer()
+  for f in where(layer, 'Test > 1.0'):
+    print f + " Matches expression"
+
+
+
+
+
+
