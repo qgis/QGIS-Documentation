@@ -367,6 +367,25 @@ like the one shown next.
 Select the style file (\*.qml) that you want for each output and press
 OK.
 
+Other configuration parameters in the ``General`` group are explained below:
+
+- ``Use filename as layer name``. The name of each resulting layer created
+   by SEXTANTE is defined by the algorithm generating it. In some cases, a
+   fixed name might be used, that meaning that the same name will be used,
+   no matter which input layer is used. In other cases, the name might 
+   depend on the name of the input layer or some of the parameters used to 
+   run the algorithm. If this check-box is checked, the name will be taken 
+   from the output filename instead. Notice, that, if the output is saved 
+   to a temporary file, the filename of this temporary file is usually 
+   long and meaningless one intended to avoid collision with other already 
+   existing filenames.
+
+- ``Use only selected features``. If this option is selected, whenever a 
+   vector layer is used as input for an algorithm, only its selected 
+   features will be used. If the layer has no selected features, all of 
+   them will be used.
+
+
 Apart from the *General* block in the settings dialog, you will also
 find one for each algorithm provider. They contain an *Activate* item
 that you can use to make algorithms appear or not in the toolbox. Also,
