@@ -194,7 +194,7 @@ requirements.
 **Options**
 
 
-The Options field provides a text-field where you can add a :guilabel:`Layer name`
+The Options field provides a text field where you can add a :guilabel:`Layer name`
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
@@ -275,7 +275,7 @@ Server-Search
 --------------
 
 Within QGIS you can search for WMS-servers. Figure_OGC_2_ shows
-the tab :guilabel:`Search` with the :guilabel:`Add Layer(s) from a
+the tab :guilabel:`Server Search` with the :guilabel:`Add Layer(s) from a
 Server` dialog.
 
 .. _Figure_OGC_2:
@@ -292,23 +292,17 @@ Server` dialog.
 
 As you can see it is possible to enter a search-string in the text field
 and hit the :guilabel:`Search` button.
-
 After a short while the search result will be populated into the tab below
 the text field.
-
 Browse the result list and inspect your search results within the table.
 To visualize the results, select a table entry, press the :guilabel:`Add
 selected row to WMS-list` button and change back to the tab :guilabel:`Server`.
-
 QGIS automatically has updated your server list and the selected search
-result is already enabled in the list of saved WMS-servers.
-
+result is already enabled in the list of saved WMS-servers in the :guilabel:`Layers` tab.
 You only need to request the list of layers by clicking the
 **[Connect]** button.
-
 This option is quite handy when you want to search maps by specific
 keywords.
-
 Basically this option is a frontend to the API of http://geopole.org.
 
 .. _`tilesets`:
@@ -322,7 +316,6 @@ When using WMS-C (Cached WMS) Services like
 http://labs.metacarta.com/wms-c/Basic.py you are able to browse through
 the tab :guilabel:`Tilesets` given by the server. Additional information like
 tile size, formats and supported CRS are listed in this table.
-
 In combination with this feature you can use the tile scale slider from
 the :menuselection:`View --> Tile scale slider`, which gives you the
 available scales from the tileserver with nice slider docked in.
@@ -338,7 +331,6 @@ Once you have added a WMS server, and if any layer from a WMS server is
 queryable, you can then use the |mActionIdentify| :sup:`Identify`
 tool to select a pixel on the map canvas. A query is made to the WMS
 server for each selection made.
-
 The results of the query are returned in plain text. The formatting of
 this text is dependent on the particular WMS server used.
 
@@ -362,7 +354,6 @@ right-clicking on it in the legend, and selecting :menuselection:`Properties`.
 The tab :guilabel:`Metadata` displays a wealth of information about the WMS
 server, generally collected from the Capabilities statement returned from
 that server.
-
 Many definitions can be gleaned by reading the 
 WMS standards (see OPEN-GEOSPATIAL-CONSORTIUM :ref:`literature_and_web`), 
 but here are a few handy definitions:
@@ -424,7 +415,6 @@ of QGIS. Some of the more notable exceptions follow.
 
 Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer`
 procedure, there is no ability to change the settings.
-
 A workaround is to delete the layer completely and start again.
 
 **WMS Servers Requiring Authentication**
@@ -480,7 +470,7 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 #. Choose :guilabel:`Server Connections DM Solutions` |selectstring| from the dropdown box
 #. Click **[Connect]**
 #. Wait for the list of layers to be populated
-#. select the :guilabel:`Parks` layer in the list
+#. Select the :guilabel:`Parks` layer in the list
 #. Click **[Apply]** to add the layer to the map
 
 Note that proxy-settings you have set in your preferences are also recognized.
@@ -501,25 +491,21 @@ Note that proxy-settings you have set in your preferences are also recognized.
    loading of features is allready prevented by default when it is not
    the first layer loaded? This needs to be checked..
 
-Without using the checkbox |checkbox| 
-:guilabel:`Only request features overlapping the current view extent` 
-QGIS fetches all features from the WFS-server. If you
-only want to have a small selection based on your extent, zoom to the area
-of interest, request the WFS-layer again and make sure you have checked
-the checkbox mentioned above. Basically this adds the BBOX-parameter with
-the values from your current extent to the WFS-query. This is extremely
-useful when you only want to request **some** features from a huge
-WFS-dataset.
+.. Without using the checkbox |checkbox| 
+.. :guilabel:`Only request features overlapping the current view extent` 
+.. QGIS fetches all features from the WFS-server. If you
+.. only want to have a small selection based on your extent, zoom to the area
+.. of interest, request the WFS-layer again and make sure you have checked
+.. the checkbox mentioned above. Basically this adds the BBOX-parameter with
+.. the values from your current extent to the WFS-query. This is extremely
+.. useful when you only want to request **some** features from a huge
+.. WFS-dataset.
 
 You'll notice the download progress is visualized in the left bottom of
 the QGIS main window. Once the layer is loaded, you can identify and
 select a province or two and view the attribute table.
 
-Adding WFS layers works best with MapServer WFS servers. It still
-could be, that you might experience random behavior and crashes. You can
-look forward to improvements in a future version of the plugin.
-
-This means that only WFS 1.0.0 is supported. At this point there have not
+Only WFS 1.0.0 is supported. At this point there have not
 been many tests against WFS versions implemented in other WFS-servers.
 If you encounter problems with any other WFS-server, please do not
 hesitate to contact the development team. Please refer to Section
