@@ -293,6 +293,9 @@ Summary Rules for translation
    Check if/how it is translated in the QGIS Application.
 #. Text between Double Stars and double apostrophes often indicate values or 
    fieldnames, sometimes they need translation sometimes not.
+#. Be aware to use exactly the same apostrophes of the source text.
+#. Don't end the translated strings with a new paragraph, otherwise the 
+   text will not be translated during the html generation.
 
 
 Stick to above presented rules and the translated document will look fine!
