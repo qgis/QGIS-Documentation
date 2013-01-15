@@ -6,7 +6,7 @@ Live GPS tracking
 ==================
 
 
-To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings -->` |checkbox| :guilabel:`GPS information`.
+To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings --> Panels -->` |checkbox| :guilabel:`GPS information`.
 You will get a new docked Window on the left side of the canvas.
 
 There are 4 possible screens in this GPS tracking window:
@@ -91,7 +91,7 @@ GPS options
 |mActionOptions| In case of connection problems you can switch between: 
 
 * |radiobuttonon| :menuselection:`Autodetect`
-* |radiobuttonon| :menuselection:`Internal`, 
+* |radiobuttonon| :menuselection:`Internal` 
 * |radiobuttonon| :menuselection:`Serial device`
 * |radiobuttonon| :menuselection:`gpsd` (selecting Host, Port and Device your GPS is connected to). 
 
@@ -117,14 +117,14 @@ and color.
 Activating |checkbox| :menuselection:`Cursor` you can use a slider |slider| to shrink 
 and grow the position cursor on the canvas. 
 
-Activating |radiobuttonon| :menuselection:`Map centering` allows to decide in which 
-way the canvas will be updated. This includes ``always``, ``when leaving`` if your 
-recorded coordinates start either to move out of canvas or ``never`` to keep map extend.
+Activating :guilabel`Map centering` allows to decide in which 
+way the canvas will be updated. This includes |radiobuttonon| :guilabel:`always`, |radiobuttonon| :guilabel:`when leaving` if your 
+recorded coordinates start either to move out of canvas or |radiobuttonon| :guilabel:`never` to keep map extend.
 
 Finally you can activate |checkbox| :menuselection:`Log file` and define a path and a 
 file where log messages about the gps tracking a logged.
 
 If you want to set a feature manually you have to go back to |mActionToggleEditing| 
-"Position Coordinates" and click on **[Add Point]** or 
+"Position Coordinates" and click on **[Add feature]** or 
 **[Add track point]**.
  

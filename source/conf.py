@@ -184,6 +184,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
+.. |mActionAddImage| image:: /static/common/mActionAddImage.png
+   :width: 1.5em
 .. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png

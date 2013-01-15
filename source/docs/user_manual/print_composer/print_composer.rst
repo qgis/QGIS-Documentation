@@ -35,7 +35,7 @@ as template and load it again in another session. See a list of tools in table_c
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionFolder|          | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionExportMapServer| | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
+| |mActionSaveMapAsImage|  | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionFilePrint|         | Print or export as Postscript            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -45,7 +45,7 @@ as template and load it again in another session. See a list of tools in table_c
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionUndo|            | Revert last change                    | |mActionRedo|              | Restore last change                      |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionSaveMapAsImage|    | Add image to print composition           |
+| |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionAddImage|          | Add image to print composition           |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionLabel|           | Add label to print composition        | |mActionAddLegend|         | Add new legend to print composition      |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
