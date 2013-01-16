@@ -25,7 +25,7 @@ selected Coordinate Reference Systems (CRS).
 #. Start QGIS, select |mActionOptions| :guilabel:`Project Properties` from 
    the :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu 
    and click on the :guilabel:`Projection` tab. As an alternative you 
-   you can also click on the |mIconProjectionEnabled| :sup:`projector` icon in 
+   can also click on the |mIconProjectionEnabled| :sup:`projector` icon in 
    the lower right-hand corner of the statusbar.
 #. Click on the |checkbox| `Enable on the fly projection` checkbox and select 
    a projected coordinate system of your choice (see also :ref:`label_projections`).
