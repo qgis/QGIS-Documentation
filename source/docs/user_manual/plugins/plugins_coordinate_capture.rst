@@ -33,7 +33,7 @@ selected Coordinate Reference Systems (CRS).
    :ref:`load_core_plugin`) and ensure that the dialog is visible by going 
    to :menuselection:`View --> Panels` and ensuring that 
    |checkbox| `Coordinate Capture` is enabled. 
-   The cordinate capture dialog appears as shown in Figure figure_coordinate_capture_1_.
+   The coordinate capture dialog appears as shown in Figure figure_coordinate_capture_1_.
 #. Click on the |geographic| :sup:`Click to the select the CRS to use for 
    coordinate display` icon and select a different CRS from the one you selected above.
 #. To start capturing coordinates, click on **[Start capture]**. You can now 
