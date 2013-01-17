@@ -173,6 +173,9 @@ Geometry tools
 | |simplify|          | Simplify        | Generalize lines or polygons with a  |
 |                     | geometry        | modified Douglas-Peucker algorithm.  |
 +---------------------+-----------------+--------------------------------------+
+|                     | Densify         | Densify lines or polygons by adding  |
+|                     | geometry        | vertices                             |
++---------------------+-----------------+--------------------------------------+
 | |multi_to_single|   | Multipart to    | Convert multipart features to        |
 |                     | singleparts     | multiple singlepart features.        |
 |                     |                 | Creates simple polygons and lines.   |
@@ -208,9 +211,6 @@ Data management tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |export_projection| | Export to       | Project features to new CRS and      |
-|                     | projection      | export as new shapefile.             |
-+---------------------+-----------------+--------------------------------------+
 | |define_projection| | Define          | Specify the CRS for shapefiles whose |
 |                     | projection      | CRS has not been defined.            |
 +---------------------+-----------------+--------------------------------------+
@@ -225,8 +225,11 @@ Data management tools
 |                     | layer           | separate layers based on input field.|
 +---------------------+-----------------+--------------------------------------+
 | |merge_shapes|      | Merge shapefiles| Merge several shapefiles within a    |
-|                     |                 | folder into a new shapefile based on |
+|                     | to one          | folder into a new shapefile based on |
 |                     |                 | the layer type (point, line, area)   |
++---------------------+-----------------+--------------------------------------+
+|                     | Create spatial  |                                      |
+|                     | index           |                                      |       
 +---------------------+-----------------+--------------------------------------+
 
 Table Ftools 5: fTools Data management tools
