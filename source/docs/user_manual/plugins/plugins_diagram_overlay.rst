@@ -39,8 +39,8 @@ sample dataset (see Section :ref:`label_sampledata`).
     :file:`alaska.shp` and :file:`climate.shp`.
 #.  Double click the ``climate`` layer in the map legend to open the 
     :guilabel:`Layer Properties` dialog.
-#.  Click on the ``Overlay`` tab, activate ``Display diagrams`` and select 
-    **[Pie Chart]** as Diagram type.
+#.  Click on the :guilabel:`Overlay` tab, activate |checkbox| :guilabel:`Display diagrams` and select 
+    :guilabel:`Pie Chart` |selectstring| as Diagram type.
 #.  In the Pie chart we want to display the values of the three columns 
     ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. First select ``T_F_JAN`` as 
     Attributes and click the green **[\+]** button, then ``T_F_JUL`` and 

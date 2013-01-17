@@ -14,7 +14,7 @@ What is GDALTools?
 
 The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial 
 Data Abstraction Library, http://gdal.osgeo.org . These are raster management 
-tools to query, re-project, warp, merge a wide variety of raster formats. Also 
+tools to query, re-project, warp and merge a wide variety of raster formats. Also 
 included are tools to create a contour (vector) layer, or a shaded relief from 
 a raster DEM, and to make a vrt (Virtual Raster Tile in XML format) from a 
 collection of one or more raster files. These tools are available when the 
