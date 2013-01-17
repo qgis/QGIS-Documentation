@@ -74,7 +74,7 @@ With the GRASS plugin, you can load vector or raster layers using the appropriat
  #. For :file:`Gisdbase` browse and select or enter the path to the
     newly created folder :file:`grassdata`.
  #. You should now be able to select the :file:`LOCATION alaska`
-    and the :file:`MAPSET demo`.
+    and the MAPSET :file:`demo`.
  #. Click **[OK]**. Notice that some previously disabled tools in the
     GRASS toolbar are now enabled.
  #. Click on |grass_add_raster| :sup:`Add GRASS raster layer`,
@@ -128,7 +128,7 @@ Each :file:`LOCATION` is defined by its coordinate system, map projection and ge
 Creating a new GRASS LOCATION
 ------------------------------
 
-As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer (see Section :ref:`label_sampledata`).
+As an example here is how the sample GRASS :file:`LOCATION alaska`, which is projected in Albers Equal Area projection with unit feet was created for the QGIS sample dataset. This sample GRASS :file:`LOCATION alaska` will be used for all examples and exercises in the following GRASS GIS related chapters. It is useful to download and install the dataset on your computer :ref:`label_sampledata`).
 
 #. Start QGIS and make sure the GRASS plugin is loaded.
 #. Visualize the :file:`alaska.shp` Shapefile (see Section
@@ -518,7 +518,7 @@ The GRASS toolbox
 .. index::
    single:GRASS toolbox
 
-The |grass_tools| :sup:`Open GRASS tools` box provides GRASS module functionalities to work with data inside a selected GRASS :file:`LOCATION`
+The |grass_tools| :sup:`Open GRASS Tools` box provides GRASS module functionalities to work with data inside a selected GRASS :file:`LOCATION`
 and :file:`MAPSET`. To use the GRASS toolbox you need to open a :file:`LOCATION` and :file:`MAPSET` where you have write-permission
 (usually granted, if you created the :file:`MAPSET`). This is necessary, because new raster or vector layers created during analysis need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`.
 
@@ -541,7 +541,8 @@ The GRASS Shell inside the GRASS Toolbox provides access to almost all (more tha
 Working with GRASS modules
 ---------------------------
 
-The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories in the :guilabel:`Module Tree` tab, but are searchable as well using the :guilabel:`Modules List` tab.
+The GRASS Shell inside the GRASS Toolbox provides access to almost all (more than 300) GRASS modules in a command line interface. To offer a more user friendly working environment, about 200 of the available GRASS modules and functionalities are also provided by graphical dialogs. These dialogs are grouped in categories 
+[**Module Tree**], but are searchable as well using the [**Modules List**].
 
 A complete list of GRASS modules available in the graphical Toolbox in QGIS version \CURRENT is available in the GRASS wiki ( http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list).
 
