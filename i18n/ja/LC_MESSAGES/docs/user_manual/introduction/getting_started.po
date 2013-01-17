@@ -8,438 +8,633 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-16 00:23\n"
+"POT-Creation-Date: 2013-01-16 00:58\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:11
 # 34a65e9f03864d4193fc188d3a477412
+#: ../../source/docs/user_manual/introduction/getting_started.rst:11
 msgid "Getting Started"
 msgstr "はじめましょう"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:13
 # 87f1d64f19744acf941868907a96b363
-msgid "This chapter gives a quick overview of installing |qg|, some sample data from the |qg| web page and running a first and simple session visualizing raster and vector layers."
-msgstr "本章では |qg| のインストール,|qg| ウェブページにあるサンプルデータ,最初の実行と,ラスタとベクタのレイヤの表示を行うサンプル実行について説明します."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:13
+msgid ""
+"This chapter gives a quick overview of installing |qg|, some sample data "
+"from the |qg| web page and running a first and simple session visualizing "
+"raster and vector layers."
+msgstr ""
+"本章では |qg| のインストール,|qg| ウェブページにあるサンプルデータ,最初の実行"
+"と,ラスタとベクタのレイヤの表示を行うサンプル実行について説明します."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:20
 # 7699185198394aae96456172ad821e99
+#: ../../source/docs/user_manual/introduction/getting_started.rst:20
 msgid "Installation"
 msgstr "インストール"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:25
 # 35b3b1f1b5ca4855bf640ff0ab4b531c
-msgid "Installation of |qg| is very simple. Standard installer packages are available for MS Windows and Mac OS X. For many flavors of GNU/Linux binary packages (rpm and deb) or software repositories to add to your installation manager are provided. Get the latest information on binary packages at the |qg| website at http://download.qgis.org."
-msgstr "|qg| のインストールはとても簡単です。 MS Windows用とMac OS X用の標準インストールパッケージがあります. "
-"各種GNU/Linux用バイナリパッケージ(rpmとdeb)とインストールマネージャに追加するソフトウェアレポジトリが提供されています. "
-"バイナリパッケージの最新の情報は |qg| ウェブサイト http://qgis.osgeo.org/download/にあります."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:25
+msgid ""
+"Installation of |qg| is very simple. Standard installer packages are "
+"available for MS Windows and Mac OS X. For many flavors of GNU/Linux binary "
+"packages (rpm and deb) or software repositories to add to your installation "
+"manager are provided. Get the latest information on binary packages at the |"
+"qg| website at http://download.qgis.org."
+msgstr ""
+"|qg| のインストールはとても簡単です。 MS Windows用とMac OS X用の標準インス"
+"トールパッケージがあります. 各種GNU/Linux用バイナリパッケージ(rpmとdeb)とイン"
+"ストールマネージャに追加するソフトウェアレポジトリが提供されています. バイナ"
+"リパッケージの最新の情報は |qg| ウェブサイト http://qgis.osgeo.org/download/"
+"にあります."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:32
 # 237288b1880a4e52b54d285b8651fdef
+#: ../../source/docs/user_manual/introduction/getting_started.rst:32
 msgid "Installation from source"
 msgstr "ソースからのインストール"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:34
 # fdce8a65d2da4146bd1074d801e8d9f1
-msgid "If you need to build |qg| from source, please refer to the installation instructions. They are distributed with the |qg| source code in a file called 'INSTALL'. You can also find it online at https://github.com/qgis/Quantum-GIS/blob/master/INSTALL"
-msgstr "|qg| をソースからビルドする必要がある場合はインストール手順を参照して下さい.それは |qg| ソースコードの `INSTALL` "
-"というファイルで配布されています.これと同じものは "
-"https://github.com/qgis/QuantumGIS/blob/maste/INSTALL で参照できます"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:34
+msgid ""
+"If you need to build |qg| from source, please refer to the installation "
+"instructions. They are distributed with the |qg| source code in a file "
+"called 'INSTALL'. You can also find it online at https://github.com/qgis/"
+"Quantum-GIS/blob/master/INSTALL"
+msgstr ""
+"|qg| をソースからビルドする必要がある場合はインストール手順を参照して下さい."
+"それは |qg| ソースコードの `INSTALL` というファイルで配布されています.これと"
+"同じものは https://github.com/qgis/QuantumGIS/blob/maste/INSTALL で参照できま"
+"す"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:40
 # 498b8129903344b6a713a5d88ffbe388
+#: ../../source/docs/user_manual/introduction/getting_started.rst:40
 msgid "Installation on external media"
 msgstr "外部メディアへのインストール"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:42
 # 41ca1b194ca44daab4c90386ee9d27ed
-msgid "QGIS allows to define a ``--configpath`` option that overrides the default path (e.g. ~/.qgis under Linux) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry a QGIS installation on a flash drive together with all plugins and settings."
-msgstr "QGIS ではデフォルトの作業環境パス(例. ~/.qgis Linuxの場合) を上書きする ``--configpath`` "
-"オプションがあります.ユーザー設定とQSettingsもこのディレクトリに設定されます.たとえばこのオプションを使うとユーザーはQGISのインストレーションをすべての外部プラグインと設定込みでUSBフラッシュメモリ等で持ち運ぶことができます."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:42
+msgid ""
+"QGIS allows to define a ``--configpath`` option that overrides the default "
+"path (e.g. ~/.qgis under Linux) for user configuration and forces QSettings "
+"to use this directory, too. This allows users to e.g. carry a QGIS "
+"installation on a flash drive together with all plugins and settings."
+msgstr ""
+"QGIS ではデフォルトの作業環境パス(例. ~/.qgis Linuxの場合) を上書きする ``--"
+"configpath`` オプションがあります.ユーザー設定とQSettingsもこのディレクトリに"
+"設定されます.たとえばこのオプションを使うとユーザーはQGISのインストレーション"
+"をすべての外部プラグインと設定込みでUSBフラッシュメモリ等で持ち運ぶことができ"
+"ます."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:50
 # 3fb3a4fcbe3044e8917bbe2a5966a338
+#: ../../source/docs/user_manual/introduction/getting_started.rst:50
 msgid "Sample Data"
 msgstr "サンプルデータ"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:55
 # bed5319f4f124e3e909905e3b99e449a
+#: ../../source/docs/user_manual/introduction/getting_started.rst:55
 msgid "The user guide contains examples based on the |qg| sample dataset."
 msgstr "ユーザガイドには、QGISサンプルデータセットをもとにした例があります."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:57
 # 44413959bf6b4e2ba7e88ccfa018c49c
-msgid "|win| The Windows installer has an option to download the |qg| sample dataset. If checked, the data will be downloaded to your :file:`My Documents` folder and placed in a folder called :file:`GIS Database`. You may use Windows Explorer to move this folder to any convenient location. If you did not select the checkbox to install the sample dataset during the initial |qg| installation, you can either"
-msgstr "|win| Windowsインストーラには|qg| サンプルデータセットをダウンロードするオプションがあります. これにチェックを入れると "
-":file:`My Documents` フォルダにサンプルデータがダウンロードされ :file:`GIS Database` "
-"フォルダにデータが作成されます. Windowsエキスプローラをこのフォルダに移動すると便利です.  "
-"サンプルデータセットインストールチェックボックスを選択しないことも|qg|初期インストールで指定することができます"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:57
+msgid ""
+"|win| The Windows installer has an option to download the |qg| sample "
+"dataset. If checked, the data will be downloaded to your :file:`My "
+"Documents` folder and placed in a folder called :file:`GIS Database`. You "
+"may use Windows Explorer to move this folder to any convenient location. If "
+"you did not select the checkbox to install the sample dataset during the "
+"initial |qg| installation, you can either"
+msgstr ""
+"|win| Windowsインストーラには|qg| サンプルデータセットをダウンロードするオプ"
+"ションがあります. これにチェックを入れると :file:`My Documents` フォルダにサ"
+"ンプルデータがダウンロードされ :file:`GIS Database` フォルダにデータが作成さ"
+"れます. Windowsエキスプローラをこのフォルダに移動すると便利です.  サンプル"
+"データセットインストールチェックボックスを選択しないことも|qg|初期インストー"
+"ルで指定することができます"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:64
 # 927e9a9a829d4adcb89251a1d8088cac
+#: ../../source/docs/user_manual/introduction/getting_started.rst:64
 msgid "use GIS data that you already have;"
 msgstr "利用しているGIS data がすでにある場合;"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:65
 # 1e045e1cf272485585cb3369cb99cab4
-msgid "download the sample data from the qgis website at http://download.qgis.org; or"
-msgstr "QGISウェブサイト http://download.qgis.org からダウンロードして下さい; または"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:65
+msgid ""
+"download the sample data from the qgis website at http://download.qgis.org; "
+"or"
+msgstr ""
+"QGISウェブサイト http://download.qgis.org からダウンロードして下さい; または"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:66
 # 5b38e0e8067643bf923b55dc56a60b7c
-msgid "uninstall |qg| and reinstall with the data download option checked, only if the above solutions are unsuccessful."
-msgstr "もし上記の方法がうまくいかない場合|qg| をアンインストールしてデータインストールオプションをチェックして再インストールして下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:66
+msgid ""
+"uninstall |qg| and reinstall with the data download option checked, only if "
+"the above solutions are unsuccessful."
+msgstr ""
+"もし上記の方法がうまくいかない場合|qg| をアンインストールしてデータインストー"
+"ルオプションをチェックして再インストールして下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:69
 # ee1fb7ff71d544609b9e015a7031e945
-msgid "|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation packages available as rpm, deb or dmg. To use the sample dataset download the file :file:`qgis_sample_data` as ZIP or TAR archive from http://download.osgeo.org/qgis/data/ and unzip or untar the archive on your system. The Alaska dataset includes all GIS data that are used as examples and screenshots in the user guide, and also includes a small GRASS database. The projection for the qgis sample dataset is Alaska Albers Equal Area with unit feet. The EPSG code is 2964."
-msgstr "|nix| |osx|  GNU/Linux と Mac OSX のrpm, deb または "
-"dmg等のパッケージではデータセットのインストールは用意されていません.サンプルデータセットを利用したい場合は:file:`qgis_sample_data` "
-"をZIPまたはTARアーカイブ形式で http://download.osgeo.org/qgis/data/ "
-"からダウンロードしてあなたのシステム上でunzipまたはuntarを行ってくださいAlaskaデータセットにはユーザガイドのスクリーンショットで使われているがすべてのGISデータセットが含まれています,また小規模なGRASSデータベースが含まれています. "
-"サンプルデータセットの投影法はAlaska Albers Equal Area で 単位はfeetです. EPSGコードは 2964です."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:69
+msgid ""
+"|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation "
+"packages available as rpm, deb or dmg. To use the sample dataset download "
+"the file :file:`qgis_sample_data` as ZIP or TAR archive from http://download."
+"osgeo.org/qgis/data/ and unzip or untar the archive on your system. The "
+"Alaska dataset includes all GIS data that are used as examples and "
+"screenshots in the user guide, and also includes a small GRASS database. The "
+"projection for the qgis sample dataset is Alaska Albers Equal Area with unit "
+"feet. The EPSG code is 2964."
+msgstr ""
+"|nix| |osx|  GNU/Linux と Mac OSX のrpm, deb または dmg等のパッケージではデー"
+"タセットのインストールは用意されていません.サンプルデータセットを利用したい場"
+"合は:file:`qgis_sample_data` をZIPまたはTARアーカイブ形式で http://download."
+"osgeo.org/qgis/data/ からダウンロードしてあなたのシステム上でunzipまたはuntar"
+"を行ってくださいAlaskaデータセットにはユーザガイドのスクリーンショットで使わ"
+"れているがすべてのGISデータセットが含まれています,また小規模なGRASSデータベー"
+"スが含まれています. サンプルデータセットの投影法はAlaska Albers Equal Area "
+"で 単位はfeetです. EPSGコードは 2964です."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:101
 # 8221c21b73724d6f86994158a579e17a
-msgid "If you intend to use |qg| as graphical frontend for GRASS, you can find a selection of sample locations (e.g. Spearfish or South Dakota) at the official GRASS GIS website http://grass.osgeo.org/download/data.php."
-msgstr "もし |qg| をGRASSのグラフィカルなフロントエンドとして利用したい場合,サンプルロケーション (例. Spearfish または "
-"SouthDakota)  を 公式GRASS GIS ウェッブサイト "
-"http://grass.osgeo.org/download/data.php　で見つけることができます."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:101
+msgid ""
+"If you intend to use |qg| as graphical frontend for GRASS, you can find a "
+"selection of sample locations (e.g. Spearfish or South Dakota) at the "
+"official GRASS GIS website http://grass.osgeo.org/download/data.php."
+msgstr ""
+"もし |qg| をGRASSのグラフィカルなフロントエンドとして利用したい場合,サンプル"
+"ロケーション (例. Spearfish または SouthDakota)  を 公式GRASS GIS ウェッブサ"
+"イト http://grass.osgeo.org/download/data.php　で見つけることができます."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:108
 # 3a9e9fbc06bb482ba88a8f738551cb45
+#: ../../source/docs/user_manual/introduction/getting_started.rst:108
 msgid "Sample Session"
 msgstr "サンプルセッション"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:110
 # 0a5db24d1dbd46a7853c3ca831da6343
-msgid "Now that you have |qg| installed and a sample dataset available, we would like to demonstrate a short and simple |qg| sample session. We will visualize a raster and a vector layer. We will use the landcover raster layer :file:`qgis_sample_data/raster/landcover.img` and the lakes vector layer :file:`qgis_sample_data/gml/lakes.gml`."
-msgstr " |qg| のインストールとサンプルデータセットが使用可能になったところで, 短い,単純な |qg| "
-"サンプルセッションのデモンストレーションを行いたいます. ラスタレイヤとベクタレイヤを表示します. "
-":file:`qgis_sample_data/raster/landcover.img`  の土地被覆ラスタと  "
-":file:`qgis_sample_data/gml/lakes.gml`. の湖沼ベクタとを使います。"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:110
+msgid ""
+"Now that you have |qg| installed and a sample dataset available, we would "
+"like to demonstrate a short and simple |qg| sample session. We will "
+"visualize a raster and a vector layer. We will use the landcover raster "
+"layer :file:`qgis_sample_data/raster/landcover.img` and the lakes vector "
+"layer :file:`qgis_sample_data/gml/lakes.gml`."
+msgstr ""
+" |qg| のインストールとサンプルデータセットが使用可能になったところで, 短い,単"
+"純な |qg| サンプルセッションのデモンストレーションを行いたいます. ラスタレイ"
+"ヤとベクタレイヤを表示します. :file:`qgis_sample_data/raster/landcover.img`  "
+"の土地被覆ラスタと  :file:`qgis_sample_data/gml/lakes.gml`. の湖沼ベクタとを"
+"使います。"
 
-
-#: ../../source/docs/user_manual/introduction/getting_started.rst:117
 # 053ec09ed9d841d7afe205f7cacff43b
+#: ../../source/docs/user_manual/introduction/getting_started.rst:117
 msgid "Start QGIS"
 msgstr "QGISの開始"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:119
 # f92462e7d57449bda37364b05b6a9e99
-msgid "|nix| Start |qg| by typing: \"|qg|\" at a command prompt, or if using precompiled binary, using the Applications menu."
-msgstr "|nix|  |qg| を起動するにはコマンドプロンプトで \"|qg|\"とタイプするか "
-"プリコンパイルされたバイナリを利用する場合はアプリケーションメニューから起動できます."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:119
+msgid ""
+"|nix| Start |qg| by typing: \"|qg|\" at a command prompt, or if using "
+"precompiled binary, using the Applications menu."
+msgstr ""
+"|nix|  |qg| を起動するにはコマンドプロンプトで \"|qg|\"とタイプするか プリコ"
+"ンパイルされたバイナリを利用する場合はアプリケーションメニューから起動できま"
+"す."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:121
 # 381fee3a90fa49aab96717930c9323c0
-msgid "|win| Start |qg| using the Start menu or desktop shortcut, or double click on a |qg| project file."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:121
+msgid ""
+"|win| Start |qg| using the Start menu or desktop shortcut, or double click "
+"on a |qg| project file."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:123
 # 666b5264913e4adf9297aaf29c144329
+#: ../../source/docs/user_manual/introduction/getting_started.rst:123
 msgid "|osx| Double click the icon in your Applications folder."
 msgstr "|osx|  アプリケーションフォルダのアイコンをダブルクリックして下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:133
 # a319f8f2310a41d18ff6b4467e1225df
+#: ../../source/docs/user_manual/introduction/getting_started.rst:133
 msgid "Load raster and vector layers from the sample dataset"
 msgstr "ラスタレイヤとベクタレイヤのサンプルデータセットからのロード"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:135
 # ea9c952c2713423c9f5e8a79def8c3dd
+#: ../../source/docs/user_manual/introduction/getting_started.rst:135
 msgid "Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon."
 msgstr " |mActionAddRasterLayer| :sup:`Load Raster` アイコンをクリックします."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:136
 # 4b360827cfdf48da8792ab4e8edcd9c1
-msgid "Browse to the folder :file:`qgis_sample_data/raster/`, select the ERDAS Img file :file:`landcover.img` and click **[Open]**."
-msgstr "フォルダ :file:`qgis_sample_data/raster/`, を開いて ERDAS Img file "
-":file:`landcover.img` を選択した後 **[Open]** をクリックします."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:136
+msgid ""
+"Browse to the folder :file:`qgis_sample_data/raster/`, select the ERDAS Img "
+"file :file:`landcover.img` and click **[Open]**."
+msgstr ""
+"フォルダ :file:`qgis_sample_data/raster/`, を開いて ERDAS Img file :file:"
+"`landcover.img` を選択した後 **[Open]** をクリックします."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:138
 # dbd939273fc44d3aa62b62425dbb9bd7
-msgid "If the file is not listed, check if the Filetype combobox at the bottom of the dialog is set on the right type, in this case \"Erdas Imagine Images (:file:`*.img`, :file:`*.IMG`)\"."
-msgstr "ファイル名が表示されていないならファイルの種類コンボボックス (ダイアログの下部) が正しく設定されているか確認してください.この場合は, "
-"\"Erdas Imagine Images (:file:`*.img`, :file:`*.IMG`)\". となっているか確認して下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:138
+msgid ""
+"If the file is not listed, check if the Filetype combobox at the bottom of "
+"the dialog is set on the right type, in this case \"Erdas Imagine Images (:"
+"file:`*.img`, :file:`*.IMG`)\"."
+msgstr ""
+"ファイル名が表示されていないならファイルの種類コンボボックス (ダイアログの下"
+"部) が正しく設定されているか確認してください.この場合は, \"Erdas Imagine "
+"Images (:file:`*.img`, :file:`*.IMG`)\". となっているか確認して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:141
 # be4c859253484efa92c606e377594271
+#: ../../source/docs/user_manual/introduction/getting_started.rst:141
 msgid "Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon."
-msgstr "ここで |mActionAddOgrLayer| :sup:`Load Vector` アイコンをクリックします."
+msgstr ""
+"ここで |mActionAddOgrLayer| :sup:`Load Vector` アイコンをクリックします."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:142
 # def7241727bb4cd79f7aef388d4ab646
-msgid "|radiobuttonon| :guilabel:`File` should be selected as Source Type in the new :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select the vector layer."
-msgstr ":guilabel:`Add Vector Layer` ダイアログで |radiobuttonon| :guilabel:`File` "
-"がソースタイプとして選択されている必要があります . ここで **[Browse]** をクリックしてベクタレイヤを選択して下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:142
+msgid ""
+"|radiobuttonon| :guilabel:`File` should be selected as Source Type in the "
+"new :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select "
+"the vector layer."
+msgstr ""
+":guilabel:`Add Vector Layer` ダイアログで |radiobuttonon| :guilabel:`File` が"
+"ソースタイプとして選択されている必要があります . ここで **[Browse]** をクリッ"
+"クしてベクタレイヤを選択して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:145
 # 4937f7970be547bea682b406ba0e12ca
-msgid "Browse to the folder :file:`qgis_sample_data/gml/`, select \"GML\" from the filetype combobox, then select the GML file :file:`lakes.gml` and click **[Open]**, then in Add Vector dialog click **[OK]**."
-msgstr " :file:`qgis_sample_data/gml/`,　フォルダを開いてファイルタイプコンボボックスで \"GML\" "
-"を選択して下さい.それからGMLファイル :file:`lakes.gml` を選択し **[Open]**, をクリックして下さい.そして Add "
-"Vector ダイアログで **[OK]** をクリックして下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:145
+msgid ""
+"Browse to the folder :file:`qgis_sample_data/gml/`, select \"GML\" from the "
+"filetype combobox, then select the GML file :file:`lakes.gml` and click **"
+"[Open]**, then in Add Vector dialog click **[OK]**."
+msgstr ""
+" :file:`qgis_sample_data/gml/`,　フォルダを開いてファイルタイプコンボボックス"
+"で \"GML\" を選択して下さい.それからGMLファイル :file:`lakes.gml` を選択し **"
+"[Open]**, をクリックして下さい.そして Add Vector ダイアログで **[OK]** をク"
+"リックして下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:148
 # c56be3ee460d4300af939ebb7963d9d7
+#: ../../source/docs/user_manual/introduction/getting_started.rst:148
 msgid "Zoom in a bit to your favorite area with some lakes."
 msgstr "いくつかの湖が表示されている場所を拡大して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:149
 # 30046a7e66f3474f9dfc0b4732ee54f7
-msgid "Double click the :file:`lakes` layer in the map legend to open the :guilabel:`Properties` dialog."
-msgstr "地図凡例にある :file:`lakes` layer をダブルクリックして :guilabel:`Properties` ダイアログを開いて下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:149
+msgid ""
+"Double click the :file:`lakes` layer in the map legend to open the :guilabel:"
+"`Properties` dialog."
+msgstr ""
+"地図凡例にある :file:`lakes` layer をダブルクリックして :guilabel:"
+"`Properties` ダイアログを開いて下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:151
 # afa0ea1557dc4771ac43d785db2b291c
+#: ../../source/docs/user_manual/introduction/getting_started.rst:151
 msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
-msgstr ":guilabel:`Style` タブをクリックして塗りつぶし色として青を選択して下さい."
+msgstr ""
+":guilabel:`Style` タブをクリックして塗りつぶし色として青を選択して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:152
 # a9119c693bf34a3fbdb7ca476ae01643
-msgid "Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:`Display lables` checkbox to enable labeling. Choose NAMES field as field containing label."
-msgstr ":guilabel:`Labels` タブをクリックして |checkbox| :guilabel:`Display lables` "
-"チェックボックスをチェックしてラベル表示を有効にして下さい.NAMES フィールドをラベルが含まれているフィールドとして選択して下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:152
+msgid ""
+"Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:"
+"`Display lables` checkbox to enable labeling. Choose NAMES field as field "
+"containing label."
+msgstr ""
+":guilabel:`Labels` タブをクリックして |checkbox| :guilabel:`Display lables` "
+"チェックボックスをチェックしてラベル表示を有効にして下さい.NAMES フィールドを"
+"ラベルが含まれているフィールドとして選択して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:154
 # f156d92a3d4843be840d369f1a51f20c
-msgid "To improve readability of labels, you can add a white buffer around them, by clicking \"Buffer\" in the list on the left, checking |checkbox| :guilabel:`Buffer labels?` and choosing 3 as buffer size."
-msgstr "ラベルを読みやすくするために白のふちどり（バッファ)をラベルのまわりに設定することができます., リストの左にある \"Buffer\"をクリックして "
-"|checkbox| :guilabel:`Buffer labels?` をチェックしてください.そして 3 をバッファサイズとして選択して下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:154
+msgid ""
+"To improve readability of labels, you can add a white buffer around them, by "
+"clicking \"Buffer\" in the list on the left, checking |checkbox| :guilabel:"
+"`Buffer labels?` and choosing 3 as buffer size."
+msgstr ""
+"ラベルを読みやすくするために白のふちどり（バッファ)をラベルのまわりに設定する"
+"ことができます., リストの左にある \"Buffer\"をクリックして |checkbox| :"
+"guilabel:`Buffer labels?` をチェックしてください.そして 3 をバッファサイズと"
+"して選択して下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:157
 # 461bc2fd735949a980252494cd792f6f
-msgid "Click **[Apply]**, check if the result looks good and finally click **[OK]**."
-msgstr " **[Apply]**, をクリックして下さい. 結果をチェックしてよければ最後に **[OK]** をクリックして下さい."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:157
+msgid ""
+"Click **[Apply]**, check if the result looks good and finally click **[OK]**."
+msgstr ""
+" **[Apply]**, をクリックして下さい. 結果をチェックしてよければ最後に **[OK]"
+"** をクリックして下さい."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:160
 # cee72f4396af4a2296957be748650496
-msgid "You can see how easy it is to visualize raster and vector layers in |qg|. Let's move on to the sections that follow to learn more about the available functionality, features and settings and how to use them."
-msgstr " |qg|. でラスタレイヤとベクタレイヤの表示がどれだけ簡単かお分かりいただけたと思います. "
-"以降のセクションに移動して,使用可能な機能,特徴,設定方法や,それらの利用方法について学習してみてください."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:160
+msgid ""
+"You can see how easy it is to visualize raster and vector layers in |qg|. "
+"Let's move on to the sections that follow to learn more about the available "
+"functionality, features and settings and how to use them."
+msgstr ""
+" |qg|. でラスタレイヤとベクタレイヤの表示がどれだけ簡単かお分かりいただけたと"
+"思います. 以降のセクションに移動して,使用可能な機能,特徴,設定方法や,それらの"
+"利用方法について学習してみてください."
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:167
 # 40557415fe2744259b83fcd9d527f762
+#: ../../source/docs/user_manual/introduction/getting_started.rst:167
 msgid "Starting and Stopping QGIS"
 msgstr "QGISの起動と終了"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:169
 # b99412388de64422a7063d42343fffcd
-msgid "In Section :ref:`samplesession` you already learned how to start QGIS. We will repeat this here and you will see that QGIS also provides further command line options."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:169
+msgid ""
+"In Section :ref:`samplesession` you already learned how to start QGIS. We "
+"will repeat this here and you will see that QGIS also provides further "
+"command line options."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:173
 # a2af4d05afc542dda285027b2fdd6f8c
-msgid "|nix| Assuming that QGIS is installed in the PATH, you can start QGIS by typing: ``qgis``  at a command prompt or by double clicking on the QGIS application link (or shortcut) on the desktop or in the application menu."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:173
+msgid ""
+"|nix| Assuming that QGIS is installed in the PATH, you can start QGIS by "
+"typing: ``qgis``  at a command prompt or by double clicking on the QGIS "
+"application link (or shortcut) on the desktop or in the application menu."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:176
 # fcb0a1ccc5b142dea32c16e9b879d62d
-msgid "|win| Start QGIS using the Start menu or desktop shortcut, or double click on a QGIS project file."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:176
+msgid ""
+"|win| Start QGIS using the Start menu or desktop shortcut, or double click "
+"on a QGIS project file."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:178
 # 577966ffa1614dee9fa8ae88d25fa8d2
-msgid "|osx| Double click the icon in your Applications folder. If you need to start QGIS in a shell, run /path-to-installation-executable/Contents/MacOS/Qgis."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:178
+msgid ""
+"|osx| Double click the icon in your Applications folder. If you need to "
+"start QGIS in a shell, run /path-to-installation-executable/Contents/MacOS/"
+"Qgis."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:183
 # d00398142fe840718e3ca2e662b7b15c
-msgid "To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:183
+msgid ""
+"To stop QGIS, click the menu options |nix| |win| :menuselection:`File` |"
+"osx| :menuselection:`QGIS --> Quit`, or use the shortcut :kbd:`Ctrl+Q`."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:189
 # 8eb5c6918efb473e8b0f0c1533d837ce
+#: ../../source/docs/user_manual/introduction/getting_started.rst:189
 msgid "Command Line Options"
-msgstr  "コマンドラインオプション"
+msgstr "コマンドラインオプション"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:194
 # c87312cc75aa4a7bb28cb6156be6abaa
-msgid "|nix| QGIS supports a number of options when started from the command line. To get a list of the options, enter ``qgis --help`` on the command line. The usage statement for QGIS is:"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:194
+msgid ""
+"|nix| QGIS supports a number of options when started from the command line. "
+"To get a list of the options, enter ``qgis --help`` on the command line. The "
+"usage statement for QGIS is:"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:229
 # 50135e32b7f94206b381b6fe37c77716
-msgid "**Example Using command line arguments** You can start QGIS by specifying one or more data files on the command line. For example, assuming you are in the qgis_sample_data directory, you could start QGIS with a vector layer and a raster file set to load on startup using the following command: ``qgis ./raster/landcover.img ./gml/lakes.gml``"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:229
+msgid ""
+"**Example Using command line arguments** You can start QGIS by specifying "
+"one or more data files on the command line. For example, assuming you are in "
+"the qgis_sample_data directory, you could start QGIS with a vector layer and "
+"a raster file set to load on startup using the following command: ``qgis ./"
+"raster/landcover.img ./gml/lakes.gml``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:236
 # 6a07d23c032347dbbc80667b3bbdcb97
+#: ../../source/docs/user_manual/introduction/getting_started.rst:236
 msgid "**Command line option** ``--snapshot``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:239
 # e5eda982cb764ee4b765598a9263f684
-msgid "This option allows you to create a snapshot in PNG format from the current view. This comes in handy when you have a lot of projects and want to generate snapshots from your data."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:239
+msgid ""
+"This option allows you to create a snapshot in PNG format from the current "
+"view. This comes in handy when you have a lot of projects and want to "
+"generate snapshots from your data."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:243
 # f1029ecc8b3843c9a401cc4e743ad788
-msgid "Currently it generates a PNG-file with 800x600 pixels. This can be adapted using the ``--width`` and ``--height`` command line arguments. A filename can be added after ``--snapshot``."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:243
+msgid ""
+"Currently it generates a PNG-file with 800x600 pixels. This can be adapted "
+"using the ``--width`` and ``--height`` command line arguments. A filename "
+"can be added after ``--snapshot``."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:247
 # a451e53858d146f7975c3fd21ff5c31b
+#: ../../source/docs/user_manual/introduction/getting_started.rst:247
 msgid "**Command line option** ``--lang``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:250
 # 6649d72a87f04fea9e21c81c1d6d7f58
-msgid "Based on your locale QGIS, selects the correct localization. If you would like to change your language, you can specify a language code. For example: ``--lang=it`` starts QGIS in italian localization. A list of currently supported languages with language code and status is provided at http://hub.qgis.org/wiki/quantum-gis/GUI_Translation_Progress"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:250
+msgid ""
+"Based on your locale QGIS, selects the correct localization. If you would "
+"like to change your language, you can specify a language code. For example: "
+"``--lang=it`` starts QGIS in italian localization. A list of currently "
+"supported languages with language code and status is provided at http://hub."
+"qgis.org/wiki/quantum-gis/GUI_Translation_Progress"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:257
 # 68683bf7919c47c68bac9da62b4612c3
+#: ../../source/docs/user_manual/introduction/getting_started.rst:257
 msgid "**Command line option** ``--project``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:260
 # 42488714377d4a5b9e0dd6c65a8902e6
-msgid "Starting QGIS with an existing project file is also possible. Just add the command line option ``--project`` followed by your project name and QGIS will open with all layers loaded described in the given file."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:260
+msgid ""
+"Starting QGIS with an existing project file is also possible. Just add the "
+"command line option ``--project`` followed by your project name and QGIS "
+"will open with all layers loaded described in the given file."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:264
 # 78592f0e242c43e0ba7e6042c2fb89e0
+#: ../../source/docs/user_manual/introduction/getting_started.rst:264
 msgid "**Command line option** ``--extent``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:267
 # 2b8f1b9e532d46149d491492099c2b6f
-msgid "To start with a specific map extent use this option. You need to add the bounding box of your extent in the following order separated by a comma::"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:267
+msgid ""
+"To start with a specific map extent use this option. You need to add the "
+"bounding box of your extent in the following order separated by a comma::"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:272
 # fa171116e05e4df68db4fce1e2a2946a
+#: ../../source/docs/user_manual/introduction/getting_started.rst:272
 msgid "**Command line option** ``--nologo``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:275
 # 4496aa86c4a142a9a047232b1d01effb
+#: ../../source/docs/user_manual/introduction/getting_started.rst:275
 msgid "This command line argument hides the splash screen when you start QGIS."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:277
 # c1b96038145940deb2e1a114c1b3a764
+#: ../../source/docs/user_manual/introduction/getting_started.rst:277
 msgid "**Command line option** ``--noplugins``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:280
 # 71f07c7bc7a2407aa3796c49b09c1782
-msgid "If you have trouble at startup with plugins, you can avoid loading them at startup. They will still be available in Plugins Manager after-wards."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:280
+msgid ""
+"If you have trouble at startup with plugins, you can avoid loading them at "
+"startup. They will still be available in Plugins Manager after-wards."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:283
 # 5efc8fcced784152b0a9883b36a41d3c
+#: ../../source/docs/user_manual/introduction/getting_started.rst:283
 msgid "**Command line option** ``--nocustomization``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:286
 # ee2e51053fe64646ad3b4c7afec3d7c0
-msgid "Using this command line argument existing GUI customization will not be applied at startup."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:286
+msgid ""
+"Using this command line argument existing GUI customization will not be "
+"applied at startup."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:289
 # fde508d746b64ad7bb371f558830221c
+#: ../../source/docs/user_manual/introduction/getting_started.rst:289
 msgid "**Command line option** ``--optionspath``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:291
 # ee760964b7ff47b2a22fb56d7dd6d031
-msgid "You can have multiple configurations and decide which one to use when starting QGIS using this option. See :ref:`gui_options` to check where does the operating system save the settings files. Presently there is no way to specify in which file where to write the settings, therefore you can create a copy of the original settings file and rename it."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:291
+msgid ""
+"You can have multiple configurations and decide which one to use when "
+"starting QGIS using this option. See :ref:`gui_options` to check where does "
+"the operating system save the settings files. Presently there is no way to "
+"specify in which file where to write the settings, therefore you can create "
+"a copy of the original settings file and rename it."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:297
 # e6cc119b0f144bd483853f9e3dd31fbc
+#: ../../source/docs/user_manual/introduction/getting_started.rst:297
 msgid "**Command line option** ``--configpath``"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:300
 # 3811275738984f67a7ae7dd00e02fc60
-msgid "This option is similar to the one above, but furthermore overrides the default path (~/.qgis) for user configuration and forces QSettings to use this directory, too. This allows users to e.g. carry QGIS installation on a flash drive together with all plugins and settings"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:300
+msgid ""
+"This option is similar to the one above, but furthermore overrides the "
+"default path (~/.qgis) for user configuration and forces QSettings to use "
+"this directory, too. This allows users to e.g. carry QGIS installation on a "
+"flash drive together with all plugins and settings"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:308
 # 4746b1962ed4402c81e23c220fe49c4e
+#: ../../source/docs/user_manual/introduction/getting_started.rst:308
 msgid "Projects"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:310
 # bb3eb47341c6479ab37915464aee9d22
-msgid "The state of your QGIS session is considered a Project.  QGIS works on one project at a time.  Settings are either considered as being per-project, or as a default for new projects (see Section :ref:`gui_options`). QGIS can save the state of your workspace into a project file using the menu options :menuselection:`File -->` |mActionFileSave| :sup:`Save Project` or :menuselection:`File -->` |mActionFileSaveAs| :sup:`Save Project As`."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:310
+msgid ""
+"The state of your QGIS session is considered a Project.  QGIS works on one "
+"project at a time.  Settings are either considered as being per-project, or "
+"as a default for new projects (see Section :ref:`gui_options`). QGIS can "
+"save the state of your workspace into a project file using the menu options :"
+"menuselection:`File -->` |mActionFileSave| :sup:`Save Project` or :"
+"menuselection:`File -->` |mActionFileSaveAs| :sup:`Save Project As`."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:318
 # 8d8e96973a384afa8d1edbf8938eeca4
-msgid "Load saved projects into a QGIS session using :menuselection:`File -->` |mActionFileOpen| :sup:`Open Project` or :menuselection:`File --> Open Recent Project`."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:318
+msgid ""
+"Load saved projects into a QGIS session using :menuselection:`File -->` |"
+"mActionFileOpen| :sup:`Open Project` or :menuselection:`File --> Open Recent "
+"Project`."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:322
 # 0eaaeed8620046569aaa4285fcbea8f1
-msgid "If you wish to clear your session and start fresh, choose :menuselection:`File -->` |mActionFileNew| :sup:`New Project`. Either of these menu options will prompt you to save the existing project if changes have been made since it was opened or last saved."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:322
+msgid ""
+"If you wish to clear your session and start fresh, choose :menuselection:"
+"`File -->` |mActionFileNew| :sup:`New Project`. Either of these menu options "
+"will prompt you to save the existing project if changes have been made since "
+"it was opened or last saved."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:327
 # 9e9399ebcb0a4f38804e8623932d3174
+#: ../../source/docs/user_manual/introduction/getting_started.rst:327
 msgid "The kinds of information saved in a project file include:"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:329
 # 45dadef0cf594be4894d0c245eb6eb35
+#: ../../source/docs/user_manual/introduction/getting_started.rst:329
 msgid "Layers added"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:330
 # 7aced8fe12124cfb9eb906c09fb9b855
+#: ../../source/docs/user_manual/introduction/getting_started.rst:330
 msgid "Layer properties, including symbolization"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:331
 # 360acd39cc59482e86219108e5d5c30a
+#: ../../source/docs/user_manual/introduction/getting_started.rst:331
 msgid "Projection for the map view"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:332
 # 696ba514a29b498db40db8efb18e2bbd
+#: ../../source/docs/user_manual/introduction/getting_started.rst:332
 msgid "Last viewed extent"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:334
 # 26f9defe530b4c988cc3a5861b33cc7f
-msgid "The project file is saved in XML format, so it is possible to edit the file outside QGIS if you know what you are doing. The file format was updated several times compared to earlier QGIS versions. Project files from older QGIS versions may not work properly anymore. To be made aware of this, in the :guilabel:`General` tab under :menuselection:`Settings --> Options` you can select:"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:334
+msgid ""
+"The project file is saved in XML format, so it is possible to edit the file "
+"outside QGIS if you know what you are doing. The file format was updated "
+"several times compared to earlier QGIS versions. Project files from older "
+"QGIS versions may not work properly anymore. To be made aware of this, in "
+"the :guilabel:`General` tab under :menuselection:`Settings --> Options` you "
+"can select:"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:341
 # ec7b566521b34bd59082b776c7091a46
+#: ../../source/docs/user_manual/introduction/getting_started.rst:341
 msgid "|checkbox| :guilabel:`Prompt to save project changes when required`"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:343
 # 08b4cc1bd5d942008ac472c85af22809
-msgid "|checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:343
+msgid ""
+"|checkbox| :guilabel:`Warn when opening a project file saved with an older "
+"version of QGIS`"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:349
 # 685fc4cdd38c4d45ab5a751f50bd11cd
+#: ../../source/docs/user_manual/introduction/getting_started.rst:349
 msgid "Output"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:356
 # ed2e7c9ecf4b4e6daeb6c6f2c0e43d8e
-msgid "There are several ways to generate output from your QGIS session. We have discussed one already in Section :ref:`sec_projects` saving as a project file. Here is a sampling of other ways to produce output files:"
+#: ../../source/docs/user_manual/introduction/getting_started.rst:356
+msgid ""
+"There are several ways to generate output from your QGIS session. We have "
+"discussed one already in Section :ref:`sec_projects` saving as a project "
+"file. Here is a sampling of other ways to produce output files:"
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:360
 # 9e66115cc3774a3db9421446f3446ac1
-msgid "Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as Image` opens a file dialog where you select the name, path and type of image (PNG or JPG format). A world file with extension PNGW or JPGW saved in the same folder georeferences the image."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:360
+msgid ""
+"Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as "
+"Image` opens a file dialog where you select the name, path and type of image "
+"(PNG or JPG format). A world file with extension PNGW or JPGW saved in the "
+"same folder georeferences the image."
 msgstr ""
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:364
 # db7496098b9d48cd8f8915a12363dc92
-msgid "Menu option :menuselection:`File -->` |mActionNewComposer| :sup:`New Print Composer` opens a dialog where you can layout and print the current map canvas (see Section :ref:`label_printcomposer`)."
+#: ../../source/docs/user_manual/introduction/getting_started.rst:364
+msgid ""
+"Menu option :menuselection:`File -->` |mActionNewComposer| :sup:`New Print "
+"Composer` opens a dialog where you can layout and print the current map "
+"canvas (see Section :ref:`label_printcomposer`)."
 msgstr ""
-
