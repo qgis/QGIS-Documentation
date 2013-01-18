@@ -43,16 +43,16 @@ In the layer attribute table the following fields can be used:
   directions are correspond to the one-way road, both directions ---
   two-way road.
 
-If some fields don't have any value or do not exists --- default values
+If some fields don't have any value or do not exist --- default values
 are used. You can change defaults and some plugin settings in plugin settings
 dialog.
 
 Usage
 ------
 
-After plugin activation you will see additional panel on the left side of
+After plugin activation you will see an additional panel on the left side of
 the main QGIS window. Now make some definitions to the :guilabel:`Road graph
-settings` dialog in the menu :menuselection:`Plugins --> Road Graph`.
+plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph -->`.
 
 Select a Start and a Stop point in the road network layer and click on
 **[Calculate]**.
