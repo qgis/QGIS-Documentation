@@ -16,11 +16,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Language: ja_JP\n"
 
 # 73eb3d6b63bf437396e4cf385c815e4d
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:11
 msgid "QGIS GUI"
-msgstr ""
+msgstr "QGIS GUI"
 
 # 678e80f1d0f5409b947976daed54dbfc
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:16
@@ -28,52 +29,52 @@ msgid ""
 "When QGIS starts, you are presented with the GUI as shown below (the numbers "
 "1 through 5 in yellow ovals refer to the six major areas of the interface as "
 "discussed below):"
-msgstr ""
+msgstr "QGISが起動すると以下のようなGUIが表示されます（1から5までの黄色円上の数字は以下に説明する６つの主要なインターフェースを示します):"
 
 # 25d104971bcf46dbba4629380478af17
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:33
 msgid ""
 "Your window decorations (title bar, etc.) may appear different depending on "
 "your operating system and window manager."
-msgstr ""
+msgstr "ウィンドウの装飾（タイトルバーとか）は利用している オペレーティングシステムやウィンドウマネージャによって見かけが異なります."
 
 # 9819f69440df46009f0764b75b88bc24
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:36
 msgid "The QGIS GUI is divided into five areas:"
-msgstr ""
+msgstr "QGISのGUIは5つの領域に分割されています:"
 
 # b78d8b8cc3e94e6c89346f012addbd14
 # 532db11e7a3c469db946049a6b127d50
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:38
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:51
 msgid "Menu Bar"
-msgstr ""
+msgstr "メニューバー"
 
 # 3ddd447c395f45ff9678aa08f52490ce
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:39
 msgid "Tool Bar"
-msgstr ""
+msgstr "ツールバー"
 
 # bf2358174892492a8118440b9501fec0
 # 0326994587bd44e5a8696a0036291637
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:40
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:371
 msgid "Map Legend"
-msgstr ""
+msgstr "地図凡例"
 
 # 137ffb718f814259872ac58f4ede821a
 # 2da73f2816344a349b61bac6528541d6
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:41
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:513
 msgid "Map View"
-msgstr ""
+msgstr "地図ビュー"
 
 # b6db9d2388564124b287807cf1a10f45
 # 29cc700a540343bb8bbeee7e502ad5b4
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:42
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:557
 msgid "Status Bar"
-msgstr ""
+msgstr "ステータスバー"
 
 # 30dae81fb5fb446d856ce7848ba8d6a5
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:44
@@ -82,6 +83,8 @@ msgid ""
 "the following sections. Two more sections present keyboard shortcuts and "
 "context help."
 msgstr ""
+"これらの5つのQGISインターフェースについては次のセクションで "
+"詳しく説明します.さらに2つのセクションでキーボードショートカットとコンテキストヘルプについて解説します."
 
 # c75012f0ff51421f903c533976592e4f
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:56
@@ -91,9 +94,13 @@ msgid ""
 "options are listed below, together with the icons of the corresponding tools "
 "as they appear on the toolbar, as well as keyboard shortcuts. Keyboard "
 "shortcuts can also be configured manually (shortcuts presented in this "
-"section are the defaults), using the [**Configure Shortcuts**] tool under :"
-"menuselection:`Settings`."
+"section are the defaults), using the [**Configure Shortcuts**] tool under "
+":menuselection:`Settings`."
 msgstr ""
+"メニューバーで標準の階層的メニューを利用するとQGISの様々な機能を利用できます. "
+"トップレベルのメニューとiいくつかのメニューオプションの要約は以下にリストされます,さらに各機能に対応したツールバー上のアイコンとキーボードショートカットについても以下に記述します.キーボードショートカットは手動で設定できます(このセクションに示したショートカットはデフォルトの設定です) "
+"ショートカットの設定は  :menuselection:`Settings` メニューの [**Configure Shortcuts**]  "
+"ツールで可能です."
 
 # f4b27d1d98b140c3a3d295277f6463f4
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:64
@@ -2007,8 +2014,8 @@ msgstr ""
 msgid ""
 "Every menubar can be moved around according to your needs. Additionally "
 "every menubar can be switched off using your right mouse button context menu "
-"holding the mouse over the toolbars (read also :ref:"
-"`sec_panels_and_toolbars`)."
+"holding the mouse over the toolbars (read also "
+":ref:`sec_panels_and_toolbars`)."
 msgstr ""
 
 # ec8a5fc0b8584443ae0e0b5104cff1c9
@@ -2022,9 +2029,10 @@ msgid ""
 "If you have accidentally hidden all your toolbars, you can get them back by "
 "choosing menu option :menuselection:`Settings --> Toolbars -->`. If a "
 "toolbar disappears under Windows, which seems to be a problem in QGIS from "
-"time to time, you have to remove ``\\HKEY_CURRENT_USER\\Software\\QuantumGIS"
-"\\qgis\\UI\\state`` in the registry. When you restart QGIS, the key is "
-"written again with the default state, and all toolbars are visible again."
+"time to time, you have to remove "
+"``\\HKEY_CURRENT_USER\\Software\\QuantumGIS\\qgis\\UI\\state`` in the "
+"registry. When you restart QGIS, the key is written again with the default "
+"state, and all toolbars are visible again."
 msgstr ""
 
 # fe221784e3c64d4dbff2fad1b38c96ce
@@ -2037,8 +2045,8 @@ msgstr ""
 # 4b3008048d1440979e34e3885e8e58d1
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:382
 msgid ""
-"A layer can be selected and dragged up or down in the legend to change the z-"
-"ordering. Z-ordering means that layers listed nearer the top of the legend "
+"A layer can be selected and dragged up or down in the legend to change the "
+"z-ordering. Z-ordering means that layers listed nearer the top of the legend "
 "are drawn over layers listed lower down in the legend."
 msgstr ""
 
@@ -2060,8 +2068,8 @@ msgstr ""
 # 664df306f2ec406fbe45f599e1d00e2d
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:391
 msgid ""
-"Select some layers, right click in the legend window and choose :"
-"menuselection:`Group Selected`. The selected layers will automatically be "
+"Select some layers, right click in the legend window and choose "
+":menuselection:`Group Selected`. The selected layers will automatically be "
 "placed in a new group."
 msgstr ""
 
@@ -2084,9 +2092,9 @@ msgstr ""
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:400
 msgid ""
 "The content of the right mouse button context menu depends on whether the "
-"selected legend item is a raster or a vector layer. For GRASS vector layers :"
-"menuselection:`Toggle editing` is not available. See section :ref:"
-"`grass_digitizing` for information on editing GRASS vector layers."
+"selected legend item is a raster or a vector layer. For GRASS vector layers "
+":menuselection:`Toggle editing` is not available. See section "
+":ref:`grass_digitizing` for information on editing GRASS vector layers."
 msgstr ""
 
 # 5e21c6d191014a04b88994bde1bf346c
@@ -2342,8 +2350,8 @@ msgid ""
 "cursor inside the map area and roll the wheel forward (away from you) to "
 "zoom in and backwards (towards you) to zoom out. The mouse cursor position "
 "is the center where the zoom occurs. You can customize the behavior of the "
-"mouse wheel zoom using the :guilabel:`Map tools` tab under the :"
-"menuselection:`Settings --> Options` menu."
+"mouse wheel zoom using the :guilabel:`Map tools` tab under the "
+":menuselection:`Settings --> Options` menu."
 msgstr ""
 
 # 817e8b16b7dd4692a3989b02870e462d
@@ -2395,8 +2403,8 @@ msgid ""
 "If a new plugin or a plugin update is available, you will see a message at "
 "the far right of the status bar. On the right side of the status bar is a "
 "small checkbox which can be used to temporarily prevent layers being "
-"rendered to the map view (see Section :ref:`redraw_events` below). The icon |"
-"mIconStopRendering| immediately stops the current map rendering process."
+"rendered to the map view (see Section :ref:`redraw_events` below). The icon "
+"|mIconStopRendering| immediately stops the current map rendering process."
 msgstr ""
 
 # c7a19284e5a64249bd994b287fb309c9
@@ -2417,10 +2425,10 @@ msgstr ""
 msgid ""
 "When you start QGIS, degrees is the default unit, and it tells QGIS that any "
 "coordinate in your layer is in degrees. To get correct scale values, you can "
-"either change this to meter manually in the :guilabel:`General` tab under :"
-"menuselection:`Settings --> Project Properties` or you can select a project "
-"Coordinate Reference System (CRS) clicking on the |mIconProjectionDisabled| :"
-"sup:`CRS status` icon in the lower right-hand corner of the statusbar. In "
-"the last case, the units are set to what the project projection specifies, e."
-"g. '+units=m'."
+"either change this to meter manually in the :guilabel:`General` tab under "
+":menuselection:`Settings --> Project Properties` or you can select a project "
+"Coordinate Reference System (CRS) clicking on the |mIconProjectionDisabled| "
+":sup:`CRS status` icon in the lower right-hand corner of the statusbar. In "
+"the last case, the units are set to what the project projection specifies, "
+"e.g. '+units=m'."
 msgstr ""
