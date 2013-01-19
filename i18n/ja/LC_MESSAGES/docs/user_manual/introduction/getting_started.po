@@ -29,11 +29,12 @@ msgid ""
 "from the |qg| web page and running a first and simple session visualizing "
 "raster and vector layers."
 msgstr ""
+"本章では,QGISのインストール,QGISウェブページにあるサンプルデータ,最初の実行と,ラスタとベクタのレイヤの表示を行うサンプル実行について説明します."
 
 # fb6fd89417384b1eb51419173ed14518
 #: ../../source/docs/user_manual/introduction/getting_started.rst:20
 msgid "Installation"
-msgstr ""
+msgstr "インストール"
 
 # 33ab415cf2ff4321a0a63adb8bf71abd
 #: ../../source/docs/user_manual/introduction/getting_started.rst:25
@@ -44,11 +45,14 @@ msgid ""
 "manager are provided. Get the latest information on binary packages at the |"
 "qg| website at http://download.qgis.org."
 msgstr ""
+"|qg| のインストールはとても簡単です。 MS Windows用とMac OS X用の標準インストールパッケージがあります. "
+"各種GNU/Linux用バイナリパッケージ(rpmとdeb)とインストールマネージャに追加するソフトウェアレポジトリが提供されています. "
+"バイナリパッケージの最新の情報は |qg| ウェブサイト http://qgis.osgeo.org/download/にあります."
 
 # d4b17446d9f442f9ba3e20905493dfa6
 #: ../../source/docs/user_manual/introduction/getting_started.rst:32
 msgid "Installation from source"
-msgstr ""
+msgstr "ソースからのインストール"
 
 # b7b89e55ea6b49a9be8ccc0098fb0cfa
 #: ../../source/docs/user_manual/introduction/getting_started.rst:34
@@ -58,11 +62,14 @@ msgid ""
 "called 'INSTALL'. You can also find it online at https://github.com/qgis/"
 "Quantum-GIS/blob/master/INSTALL"
 msgstr ""
+"|qg| をソースからビルドする必要がある場合はインストール手順を参照して下さい.それは |qg| ソースコードの `INSTALL` "
+"というファイルで配布されています.これと同じものは "
+"https://github.com/qgis/QuantumGIS/blob/maste/INSTALL で参照できます"
 
 # 6ec738caf4f34a30827ac9057ca5d0c1
 #: ../../source/docs/user_manual/introduction/getting_started.rst:40
 msgid "Installation on external media"
-msgstr ""
+msgstr "外部メディアへのインストール"
 
 # 8f88949a5f504d4cbcef2a7dfb037373
 #: ../../source/docs/user_manual/introduction/getting_started.rst:42
@@ -72,16 +79,18 @@ msgid ""
 "to use this directory, too. This allows users to e.g. carry a QGIS "
 "installation on a flash drive together with all plugins and settings."
 msgstr ""
+"QGIS ではデフォルトの作業環境パス(例. ~/.qgis Linuxの場合) を上書きする ``–-configpath`` "
+"オプションがあります.ユーザー設定とQSettingsもこのディレクトリに設定されます.たとえばこのオプションを使うとユーザーはQGISのインストレーションをすべての外部プラグインと設定込みでUSBフラッシュメモリ等で持ち運ぶことができます."
 
 # 2226e32b0f54496d98e8148120d7b81d
 #: ../../source/docs/user_manual/introduction/getting_started.rst:50
 msgid "Sample Data"
-msgstr ""
+msgstr "サンプルデータ"
 
 # ef75ca545e1746869ee16f8f5a265584
 #: ../../source/docs/user_manual/introduction/getting_started.rst:55
 msgid "The user guide contains examples based on the |qg| sample dataset."
-msgstr ""
+msgstr  "ユーザガイドには、QGISサンプルデータセットをもとにした例があります."
 
 # 81c57f6f9599470cb144ec723674d985
 #: ../../source/docs/user_manual/introduction/getting_started.rst:57
@@ -93,11 +102,15 @@ msgid ""
 "you did not select the checkbox to install the sample dataset during the "
 "initial |qg| installation, you can either"
 msgstr ""
+"|win| Windowsインストーラには|qg| サンプルデータセットをダウンロードするオプションがあります. これにチェックを入れると "
+":file:`My Documents` フォルダにサンプルデータがダウンロードされ :file:`GIS Database` "
+"フォルダにデータが作成されます. Windowsエキスプローラをこのフォルダに移動すると便利です.  "
+"サンプルデータセットインストールチェックボックスを選択しないことも|qg|初期インストールで指定することができます"
 
 # a4b282c8948a42c48d91a2d762810ee4
 #: ../../source/docs/user_manual/introduction/getting_started.rst:64
 msgid "use GIS data that you already have;"
-msgstr ""
+msgstr "サンプルGISデータを利用する場合;"
 
 # 449a98a0e3a44f338aac5a03109d77a6
 #: ../../source/docs/user_manual/introduction/getting_started.rst:65
@@ -105,6 +118,7 @@ msgid ""
 "download the sample data from the qgis website at http://download.qgis.org; "
 "or"
 msgstr ""
+"QGISウェブサイト http://download.qgis.org からダウンロードして下さい; または"
 
 # d9f70a1a2f544dd081c907637d8357f9
 #: ../../source/docs/user_manual/introduction/getting_started.rst:66
@@ -112,6 +126,7 @@ msgid ""
 "uninstall |qg| and reinstall with the data download option checked, only if "
 "the above solutions are unsuccessful."
 msgstr ""
+"もし上記の方法がうまくいかない場合|qg| をアンインストールしてデータインストールオプションをチェックして再インストールして下さい."
 
 # b201ef29d9324929a333d5f71bafc7af
 #: ../../source/docs/user_manual/introduction/getting_started.rst:69
@@ -125,6 +140,11 @@ msgid ""
 "projection for the qgis sample dataset is Alaska Albers Equal Area with unit "
 "feet. The EPSG code is 2964."
 msgstr ""
+"|nix| |osx|  GNU/Linux と Mac OSX のrpm, deb または "
+"dmg等のパッケージではデータセットのインストールは用意されていません.サンプルデータセットを利用したい場合は:file:`qgis_sample_data` "
+"をZIPまたはTARアーカイブ形式で http://download.osgeo.org/qgis/data/ "
+"からダウンロードしてあなたのシステム上でunzipまたはuntarを行ってくださいAlaskaデータセットにはユーザガイドのスクリーンショットで使われているがすべてのGISデータセットが含まれています,また小規模なGRASSデータベースが含まれています. "
+"サンプルデータセットの投影法はAlaska Albers Equal Area で 単位はfeetです. EPSGコードは 2964です."
 
 # b14c2ac4ec9445a780f36e10970965c0
 #: ../../source/docs/user_manual/introduction/getting_started.rst:101
@@ -133,11 +153,14 @@ msgid ""
 "selection of sample locations (e.g. Spearfish or South Dakota) at the "
 "official GRASS GIS website http://grass.osgeo.org/download/data.php."
 msgstr ""
+"もし |qg| をGRASSのグラフィカルなフロントエンドとして利用したい場合,サンプルロケーション (例. Spearfish または "
+"SouthDakota)  を 公式GRASS GIS ウェッブサイト "
+"http://grass.osgeo.org/download/data.php　で見つけることができます."
 
 # bf70ca1bb63c419ca2ae1f4de0bca5e5
 #: ../../source/docs/user_manual/introduction/getting_started.rst:108
 msgid "Sample Session"
-msgstr ""
+msgstr "サンプルセッション"
 
 # 624dda2722424d7b9c353013c26a6e3b
 #: ../../source/docs/user_manual/introduction/getting_started.rst:110
@@ -148,11 +171,15 @@ msgid ""
 "layer :file:`qgis_sample_data/raster/landcover.img` and the lakes vector "
 "layer :file:`qgis_sample_data/gml/lakes.gml`."
 msgstr ""
+" |qg| のインストールとサンプルデータセットが使用可能になったところで, 短い,単純な |qg| "
+"サンプルセッションのデモンストレーションを行いたいます. ラスタレイヤとベクタレイヤを表示します. "
+":file:`qgis_sample_data/raster/landcover.img`  の土地被覆ラスタと  "
+":file:`qgis_sample_data/gml/lakes.gml`. の湖沼ベクタとを使います。"
 
 # 0d4a7677ce25401fb6b395eaa990339d
 #: ../../source/docs/user_manual/introduction/getting_started.rst:117
 msgid "Start QGIS"
-msgstr ""
+msgstr "QGISの起動"
 
 # da3e3e7746ff4ac7aa125c97f16fd9d0
 #: ../../source/docs/user_manual/introduction/getting_started.rst:119
@@ -167,21 +194,25 @@ msgid ""
 "|win| Start |qg| using the Start menu or desktop shortcut, or double click "
 "on a |qg| project file."
 msgstr ""
+"|nix|  |qg| を起動するにはコマンドプロンプトで \"|qg|\"とタイプするか "
+"プリコンパイルされたバイナリを利用する場合はアプリケーションメニューから起動できます."
 
 # 6a3f47b1645849088b13b7e116dd766c
 #: ../../source/docs/user_manual/introduction/getting_started.rst:123
 msgid "|osx| Double click the icon in your Applications folder."
 msgstr ""
+"|win| |qg| を起動するためにはスタートメニューかデスクトップショートカットの利用,または |qg| "
+"プロジェクトファイルをダブルクリックして下さい."
 
 # 16efd49d94d04671b0e0451f6bda56d1
 #: ../../source/docs/user_manual/introduction/getting_started.rst:133
 msgid "Load raster and vector layers from the sample dataset"
-msgstr ""
+msgstr "ラスタレイヤとベクタレイヤのサンプルデータセットからのロード"
 
 # e26a7d9698f34f36a00c056ab9568e92
 #: ../../source/docs/user_manual/introduction/getting_started.rst:135
 msgid "Click on the |mActionAddRasterLayer| :sup:`Load Raster` icon."
-msgstr ""
+msgstr " |mActionAddRasterLayer| :sup:`Load Raster` アイコンをクリックします."
 
 # 77b5c736c5c54b09a29d7cf0737b1ab7
 #: ../../source/docs/user_manual/introduction/getting_started.rst:136
@@ -189,6 +220,8 @@ msgid ""
 "Browse to the folder :file:`qgis_sample_data/raster/`, select the ERDAS Img "
 "file :file:`landcover.img` and click **[Open]**."
 msgstr ""
+"フォルダ :file:`qgis_sample_data/raster/`, を開いて ERDAS Img file "
+":file:`landcover.img` を選択した後 **[Open]** をクリックします."
 
 # b3e7443b82654f1286ec013810b009ed
 #: ../../source/docs/user_manual/introduction/getting_started.rst:138
@@ -197,11 +230,13 @@ msgid ""
 "the dialog is set on the right type, in this case \"Erdas Imagine Images (:"
 "file:`*.img`, :file:`*.IMG`)\"."
 msgstr ""
+"ファイル名が表示されていないならファイルの種類コンボボックス (ダイアログの下部) が正しく設定されているか確認してください.この場合は, "
+"\"Erdas Imagine Images (:file:`*.img`, :file:`*.IMG`)\". となっているか確認して下さい."
 
 # 905e014809b44435b9a2bfa445bc1563
 #: ../../source/docs/user_manual/introduction/getting_started.rst:141
 msgid "Now click on the |mActionAddOgrLayer| :sup:`Load Vector` icon."
-msgstr ""
+msgstr "ここで |mActionAddOgrLayer| :sup:`Load Vector` アイコンをクリックします."
 
 # f9b4c1969bea44b7aadfe1034f6df257
 #: ../../source/docs/user_manual/introduction/getting_started.rst:142
@@ -210,6 +245,8 @@ msgid ""
 "new :guilabel:`Add Vector Layer` dialog. Now click **[Browse]** to select "
 "the vector layer."
 msgstr ""
+":guilabel:`Add Vector Layer` ダイアログで |radiobuttonon| :guilabel:`File` "
+"がソースタイプとして選択されている必要があります . ここで **[Browse]** をクリックしてベクタレイヤを選択して下さい."
 
 # fa4cc8ebe83d4a45b08f799327c30e01
 #: ../../source/docs/user_manual/introduction/getting_started.rst:145
@@ -218,11 +255,14 @@ msgid ""
 "filetype combobox, then select the GML file :file:`lakes.gml` and click **"
 "[Open]**, then in Add Vector dialog click **[OK]**."
 msgstr ""
+" :file:`qgis_sample_data/gml/`,　フォルダを開いてファイルタイプコンボボックスで \"GML\" "
+"を選択して下さい.それからGMLファイル :file:`lakes.gml` を選択し **[Open]**, をクリックして下さい.そして Add "
+"Vector ダイアログで **[OK]** をクリックして下さい."
 
 # 4cdc880b4a6e432794ec14c12effa445
 #: ../../source/docs/user_manual/introduction/getting_started.rst:148
 msgid "Zoom in a bit to your favorite area with some lakes."
-msgstr ""
+msgstr "いくつかの湖が表示されている場所を拡大して下さい."
 
 # e9c1af2996364339b578571f3cd73505
 #: ../../source/docs/user_manual/introduction/getting_started.rst:149
@@ -230,11 +270,12 @@ msgid ""
 "Double click the :file:`lakes` layer in the map legend to open the :guilabel:"
 "`Properties` dialog."
 msgstr ""
+"地図凡例にある :file:`lakes` layer をダブルクリックして :guilabel:`Properties` ダイアログを開いて下さい."
 
 # e1c3f603db6e4e64be9335e222bf6494
 #: ../../source/docs/user_manual/introduction/getting_started.rst:151
 msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
-msgstr ""
+msgstr ":guilabel:`Style` タブをクリックして塗りつぶし色として青を選択して下さい."
 
 # f986daea380844398c90ac926c5b8b3d
 #: ../../source/docs/user_manual/introduction/getting_started.rst:152
@@ -243,6 +284,8 @@ msgid ""
 "`Display lables` checkbox to enable labeling. Choose NAMES field as field "
 "containing label."
 msgstr ""
+":guilabel:`Labels` タブをクリックして |checkbox| :guilabel:`Display lables` "
+"チェックボックスをチェックしてラベル表示を有効にして下さい.NAMES フィールドをラベルが含まれているフィールドとして選択して下さい."
 
 # 8f34da0b1cdb46668f75b56e6ba19176
 #: ../../source/docs/user_manual/introduction/getting_started.rst:154
@@ -251,12 +294,15 @@ msgid ""
 "clicking \"Buffer\" in the list on the left, checking |checkbox| :guilabel:"
 "`Buffer labels?` and choosing 3 as buffer size."
 msgstr ""
+"ラベルを読みやすくするために白のふちどり（バッファ)をラベルのまわりに設定することができます., リストの左にある \"Buffer\"をクリックして "
+"|checkbox| :guilabel:`Buffer labels?` をチェックしてください.そして 3 をバッファサイズとして選択して下さい."
 
 # 83e03693183e4ce89b28ab2a4b52fcba
 #: ../../source/docs/user_manual/introduction/getting_started.rst:157
 msgid ""
 "Click **[Apply]**, check if the result looks good and finally click **[OK]**."
 msgstr ""
+ " **[Apply]**, をクリックして下さい. 結果をチェックしてよければ最後に **[OK]** をクリックして下さい."
 
 # 4ce33d3285844852855d3416e80f54e6
 #: ../../source/docs/user_manual/introduction/getting_started.rst:160
@@ -265,11 +311,13 @@ msgid ""
 "Let's move on to the sections that follow to learn more about the available "
 "functionality, features and settings and how to use them."
 msgstr ""
+" |qg|. でラスタレイヤとベクタレイヤの表示がどれだけ簡単かお分かりいただけたと思います. "
+"以降のセクションに移動して,使用可能な機能,特徴,設定方法や,それらの利用方法について学習してみてください."
 
 # 7684348ba55f4e82a9e61ce26ad6a853
 #: ../../source/docs/user_manual/introduction/getting_started.rst:167
 msgid "Starting and Stopping QGIS"
-msgstr ""
+msgstr "QGISの起動と終了"
 
 # a911b7824cbc42a0bfc7826104042ef6
 #: ../../source/docs/user_manual/introduction/getting_started.rst:169
@@ -312,7 +360,7 @@ msgstr ""
 # a02ae4593e964131836218620a85b4ba
 #: ../../source/docs/user_manual/introduction/getting_started.rst:189
 msgid "Command Line Options"
-msgstr ""
+msgstr "コマンドラインオプション"
 
 # 1016798c2e934995add539aeb79b7cf2
 #: ../../source/docs/user_manual/introduction/getting_started.rst:194
