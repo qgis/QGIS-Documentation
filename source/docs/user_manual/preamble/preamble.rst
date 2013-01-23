@@ -48,7 +48,7 @@ handles both identically.
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 | Larissa Junek      | Diethard Jansen     | Paolo Corti          | Gavin Macaulay       | Gary E. Sherman      |
 +--------------------+---------------------+----------------------+----------------------+----------------------+
-| Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde |                      |
+| Tim Sutton         | Alex Bruy           | Raymond Nijssen      | Richard Duivenvoorde | Andreas Neumann      |
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
 \
