@@ -126,6 +126,8 @@ The print composer provides three tabs:
 * The :guilabel:`Command history` tab displays a history of all changes applied
   to the print composer layout. With a mouse click it is possible to undo
   and redo layout steps back and forth to a certain status.
+
+
 .. * The :guilabel:`Atlas generation` tab allows to enable the generation of an
 ..   atlas for the current composer and gives access to its parameters.
 
@@ -359,9 +361,9 @@ functionalities:
 Image item properties tab \- Picture options and General options dialog
 -----------------------------------------------------------------------
 
-To add an image, click the |mActionAddImage| :sup:`Add image`
-icon, place the element with the left mouse button on the print composer
-canvas and position and customize their appearance in the image :guilabel:`Item Properties` tab.
+To add an image, click the |mActionSaveMapAsImage| :sup:`Add image` icon, place the 
+element with the left mouse button on the print composer canvas and position 
+and customize their appearance in the image :guilabel:`Item Properties` tab.
 
 .. index::
    single:Picture_database
