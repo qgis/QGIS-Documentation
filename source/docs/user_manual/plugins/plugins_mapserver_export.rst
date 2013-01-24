@@ -201,7 +201,7 @@ To create an image from our map:
 
 This creates a PNG with all the layers included in the QGIS project file.
 In addition, the extent of the PNG will be the same as when we saved the 
-project. As you can see in Figure_mapserver_export_3_, all information 
+project. As you can see in figure_mapserver_export_4_, all information 
 except the airport symbols are included.
 
 .. _figure_mapserver_export_4:

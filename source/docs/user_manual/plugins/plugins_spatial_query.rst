@@ -33,19 +33,19 @@ airports. Following steps are necessary:
 #. Load the Spatial Query plugin in the Plugin Manager (see Section
    :ref:`load_core_plugin`) and click on the |spatialquery| 
    :sup:`Spatial Query` icon which appears in the QGIS toolbar menu. The 
-   plugin dialog appears as shown in figure_spatial_query_1_.
+   plugin dialog appears.
 #. Select layer regions as source layer and airports as reference feature
    layer.
 #. Select 'Contains' as operator and click **[Apply]**.
 
 Now you get a list of feature IDs from the query and you have several
-options.
+options as shown in figure_spatial_query_1_.
 
 * Click on the |selectesubsetlayer| :sup:`Create layer with list of
   items`
 * Select an ID from the list and click on |selectcreatelayer|
   :sup:`Create layer with selected`
-* Select the :guilabel:`Remove from current selection` in the field 
+* Select the :menuselection:`Remove from current selection -->` in the field 
   :guilabel:`And use the result to`.
 * Additionally you can |checkbox| :guilabel:`Zoom to item` or display 
   |checkbox| :guilabel:`Log messages`.

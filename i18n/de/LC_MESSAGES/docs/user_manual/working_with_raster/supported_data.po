@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-23 19:33\n"
+"POT-Creation-Date: 2013-01-23 14:06\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,24 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# e0dfae83642742b7ac73a51c5d3f4d56
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
 # 63f786582e274ae1ace734acd764a20e
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:15
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:13
 msgid "Working with Raster Data"
 msgstr ""
 
-# da57ecc2db5148b9a3bc28cd129a87a8
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:22
+# b6b93b300d2040b8bb47ca6715d2ed38
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:20
 msgid ""
 "This Section describes how to visualize and set raster layer properties. |"
-"qg| uses the :index:`GDAL` library to read and write raster data formats [#]"
-"_, including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas "
-"Imagine and many more. The raster data can also be loaded in read mode from "
-"zip archives into QGIS."
+"qg| uses the :index:`GDAL` library to read and write raster data formats, "
+"including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine "
+"and many more. GRASS raster support is supplied by a native QGIS data "
+"provider plugin. The raster data can also be loaded in read mode from zip "
+"and gzip archives into QGIS."
 msgstr ""
 
 # c70cc2694a52460291b79849ac9ad0b6
@@ -45,7 +41,7 @@ msgid ""
 "complete list is available at http://www.gdal.org/formats_list.html."
 msgstr ""
 
-# 3686e8c60eb5443b9ac27de145ad87f5
+# bccee7476dab40859f2b358241380bff
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:31
 msgid ""
 "**Note** Not all of the listed formats may work in QGIS for various reasons. "
@@ -53,7 +49,7 @@ msgid ""
 "installation of your OS was not built to support the format you want to use. "
 "Only those formats that have been well tested will appear in the list of "
 "file types when loading a raster into QGIS. Other untested formats can be "
-"loaded by selecting *.*."
+"loaded by selecting the GDAL [All files] filter."
 msgstr ""
 
 # bd55ae4a971f4202a31c1254b5fd5766
@@ -100,11 +96,11 @@ msgstr ""
 msgid "Loading raster data in QGIS"
 msgstr ""
 
-# d60401855a724a0e8c0333b2fc18a78c
+# 6a6115765c0e41319a550dfeab0c2c3a
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:66
 msgid ""
 "Raster layers are loaded either by clicking on the |mActionAddRasterLayer| :"
-"sup:`Load Raster` icon or by selecting the :menuselection:`View -->` |"
+"sup:`Load Raster` icon or by selecting the :menuselection:`Layer -->` |"
 "mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
 "one layer can be loaded at the same time by holding down the :kbd:`Control` "
 "or :kbd:`Shift` key and clicking on multiple items in the dialog :guilabel:"
@@ -129,14 +125,14 @@ msgstr ""
 msgid ":menuselection:`Zoom to layer extent`"
 msgstr ""
 
-# a1627bfcf74c4981b6d5df5d735545eb
+# 45dbf7d196334acca94ada47ab6f896c
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
-msgid ":menuselection:`Zoom to best scale (100\\%)`"
+msgid ":menuselection:`Zoom to Best Scale (100\\%)`"
 msgstr ""
 
-# 165e712d596e4315b4ebc3f77f503a75
+# 2336cc116b854bc398fcd5eec859dbd3
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:84
-msgid ":menuselection:`Show in overview`"
+msgid ":menuselection:`Show in Overview`"
 msgstr ""
 
 # 7f5053f5056f485ca0523c6c64dbb62f
@@ -144,42 +140,47 @@ msgstr ""
 msgid ":menuselection:`Remove`"
 msgstr ""
 
-# 0f8a898c0e634c41b421880fef221d86
+# 89f14dd83bd64b828827066c96b806af
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
-msgid ":menuselection:`Set layer CRS -->`"
+msgid ":menuselection:`Set Layer CRS`"
 msgstr ""
 
-# f1809b12b52648a0b7e2820f95bf7634
+# 33181453426247a8846022eca31d6705
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:87
-msgid ":menuselection:`Set project CRS from layer`"
+msgid ":menuselection:`Set Project CRS from Layer`"
 msgstr ""
 
-# d18bff5c3a934350b0bd43fffb80f851
+# a7a5e592a45c49d6a5cfedd3b2ad3df1
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:88
-msgid ":menuselection:`Properties -->`"
+msgid ":menuselection:`Properties`"
 msgstr ""
 
-# 517d14d8fae54206b16aeee32b534691
+# 9fa20ba2377d4cdf876c8945a0b1636b
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:89
-msgid ":menuselection:`Rename -->`"
+msgid ":menuselection:`Rename`"
 msgstr ""
 
-# 3d2014abfb58485aa2ce74e3e1c4af41
+# ff478bdd99fb4aba96abc1315dab18ca
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:90
-msgid ":menuselection:`Add Group`"
+msgid ":menuselection:`Copy Style`"
+msgstr ""
+
+# 3f95a9fab0204a9182c6f4ea22c6ec17
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+msgid ":menuselection:`Add New Group`"
 msgstr ""
 
 # a79f0943ee2648d4977aa269ea897222
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
 msgid ":menuselection:`Expand all`"
 msgstr ""
 
 # 06c7064c8b8547b2bb654b9536d21d5c
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:93
 msgid ":menuselection:`Collapse all`"
 msgstr ""
 
-# ba39fb9c48f94611ae9d26d05aebd64e
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:96
-msgid "GRASS raster support is supplied by a native QGIS data provider plugin."
+# 308dd20c22ed42f6b3c6b89cec73b234
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:94
+msgid ":menuselection:`Update Drawing Order`"
 msgstr ""
