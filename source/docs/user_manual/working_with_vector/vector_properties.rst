@@ -807,7 +807,7 @@ There are several options available:
 * Change the display name of the layer.
 * Set a display field to be used for the :guilabel:`Identify Results` dialog. 
 * Define a certain Edit User Interface for the vector layer written with the Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/.
-* Create a :guilabel:`Spatial Index` (only for OGR supported formats and PostGIS).
+* Create a :guilabel:`Spatial Index` (only for OGR supported formats).
 * Add an :guilabel:`Init function` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
 * :guilabel:`Update Extents` information for a layer.
 * View or change the projection of the specific vector layer, clicking on :guilabel:`Specify CRS`.

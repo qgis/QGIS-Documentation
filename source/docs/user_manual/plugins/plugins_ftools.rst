@@ -226,10 +226,10 @@ Data management tools
 +---------------------+-----------------+--------------------------------------+
 | |merge_shapes|      | Merge shapefiles| Merge several shapefiles within a    |
 |                     | to one          | folder into a new shapefile based on |
-|                     |                 | the layer type (point, line, area)   |
+|                     |                 | the layer type (point, line, area).  |
 +---------------------+-----------------+--------------------------------------+
-|                     | Create spatial  |                                      |
-|                     | index           |                                      |       
+|                     | Create spatial  | Create a spatial index for OGR       |
+|                     | index           | supported formats.                   |       
 +---------------------+-----------------+--------------------------------------+
 
 Table Ftools 5: fTools Data management tools

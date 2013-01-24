@@ -25,7 +25,7 @@ source code via `github <https://github.com/qgis/QGIS-Documentation>`_ and
 online as HTML and PDF via http://documentation.qgis.org. Translated versions of
 this document can be downloaded in several formats via the documentation area of
 the QGIS project as well. For more information about contributing to this
-document and about translating it, please visit: http://www.qgis.org/wiki/
+document and about translating it, please visit: http://www.qgis.org/wiki/.
 
 **Links in this Document**
 
