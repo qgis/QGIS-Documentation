@@ -256,7 +256,7 @@ required for a connection are:
   * disable: only try an unencrypted SSL connection
   * allow: try a non-SSL connection, if that fails, try an SSL connection
   * prefer (the default): try an SSL connection, if that fails, try a
-  * non-SSL connection;
+    non-SSL connection;
   * require: only try an SSL connection.
 
 * **Username**: User name used to login to the database.

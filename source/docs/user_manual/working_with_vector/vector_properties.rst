@@ -807,7 +807,7 @@ There are several options available:
 * Change the display name of the layer.
 * Set a display field to be used for the :guilabel:`Identify Results` dialog. 
 * Define a certain Edit User Interface for the vector layer written with the Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/.
-* Create a :guilabel:`Spatial Index` (only for OGR supported formats and PostGIS).
+* Create a :guilabel:`Spatial Index` (only for OGR supported formats).
 * Add an :guilabel:`Init function` for the layer. They will overwrite existing QGIS widget initializations, if applied. 
 * :guilabel:`Update Extents` information for a layer.
 * View or change the projection of the specific vector layer, clicking on :guilabel:`Specify CRS`.
@@ -1186,8 +1186,8 @@ Both vector layers are part of the |qg| sample dataset (see Section
     :file:`alaska.shp` and :file:`climate.shp`.
 #.  Double click the ``climate`` layer in the map legend to open the 
     :guilabel:`Layer Properties` dialog.
-#.  Click on the ``Diagrams``, activate ``Display diagrams`` and select 
-    **[Text diagram]** as Diagram type.
+#.  Click on the :guilabel:`Diagrams` tab, activate :guilabel:`Display diagrams` and select 
+    :guilabel:`Text diagram` as Diagram type.
 #.  As Background color we choose a light blue and set a fixed size to 18 mm.
 #.  Placement could be set to AroundPoint.
 #.  In the diagram we want to display the values of the three columns 
@@ -1195,7 +1195,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
     Attributes and click the green **[\+]** button, then ``T_F_JUL`` and 
     finally ``T_F_MEAN``.
 #.  Now click **[Apply]** to display the diagram in the |qg| main window.
-#.  You can now adapt the chart size, or change the attribute colors double 
+#.  You can now adapt the chart size, or change the attribute colors by double 
     clicking on the color values in the attribute field. Figure_diagrams_2_ 
     gives an impression.
 #.  Finally click **[Ok]**.

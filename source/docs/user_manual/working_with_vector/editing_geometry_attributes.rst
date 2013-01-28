@@ -3,8 +3,8 @@
 Editing
 =======
 
-|qg| supports various capabilities for :index:'editing' OGR, PostGIS and 
-Spatialite vector layers. **Note** - the procedure for editing GRASS layers 
+|qg| supports various capabilities for :index:`editing` OGR, PostGIS and 
+SpatiaLite vector layers. **Note** - the procedure for editing GRASS layers 
 is different - see Section :ref:`grass_digitizing` for details.
 
 .. _tip_concurrent_edits:
@@ -128,7 +128,7 @@ Panning with the arrow keys
 ...........................
 
 
-Panning the Map during digitizing is possible with the arrow keys. 
+Panning the map during digitizing is possible with the arrow keys. 
 Place the mouse cursor inside the map area and click on the right arrow key 
 to pan east, left arrow key to pan west, up arrow key to pan north and down 
 arrow key to pan south.
@@ -684,7 +684,7 @@ button again, the value will be updated in the attribute table.
 Creating a new Vector layer
 ---------------------------
 
-|qg| allows to create new Shapefile layers and new Spatialite layers. Creation 
+|qg| allows to create new Shapefile layers and new SpatiaLite layers. Creation 
 of a new GRASS layer is supported within the GRASS-plugin. Please refer to 
 section :ref:`creating_new_grass_vectors` for more information on creating 
 GRASS vector layers.
@@ -700,9 +700,7 @@ displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (Coordinate Reference System).
 
 Note that |qg| does not yet support creation of 2.5D features (i.e. features 
-with X,Y,Z coordinates) or measure features. At this time, only shapefiles 
-can be created. In a future version of |qg|, creation of any OGR or PostgreSQL 
-layer type will be supported.
+with X,Y,Z coordinates) or measure features.
 
 .. _figure_edit_5:
 
@@ -751,22 +749,22 @@ be displayed as shown in Figure_edit_6_.
    :width: 20em 
    :align: center
 
-   Creating a New Spatialite layer Dialog |nix|
+   Creating a New SpatiaLite layer Dialog |nix|
 
-First step is to select an existing Spatialite database or to create a new 
-Spatialite database. This can be done with the browse button |browsebutton| to 
+First step is to select an existing SpatiaLite database or to create a new 
+SpatiaLite database. This can be done with the browse button |browsebutton| to 
 the right of the database field. Then add a name for the new layer and define 
 the layer type and the EPSG SRID. If desired you can select to |checkbox| 
-:guilabel:`create an autoincrementing primary key`.
+:guilabel:`Create an autoincrementing primary key`.
 
-To define an attribute table for the new Spatialite layer, add the names of 
+To define an attribute table for the new SpatiaLite layer, add the names of 
 the attribute columns you want to create with the according column type and 
 click on the **[Add to attribute list]** button. Once you are happy with the 
 attributes, click **[OK]**. |qg| will automatically add the new layer to the 
 legend and you can edit it in the same way as described in Section 
 :ref:`sec_edit_existing_layer` above.
 
-The spatialite creation dialog allows to create multiple layers without 
+The SpatiaLite creation dialog allows to create multiple layers without 
 closing the dialog when you click **[Apply]**.
 
 .. index:: Work_with_Attribute_Table
@@ -830,7 +828,7 @@ small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from 
 the top row down).
 
-For a **simple search by attributes** on only one column the ``Look for`` 
+For a **simple search by attributes** on only one column the :guilabel:`Look for`
 field can be used. Select the field (column) from which the search should be 
 performed from the dropdown menu and hit the **[Search]** button. The 
 matching rows will be selected and the total number of matching rows will 

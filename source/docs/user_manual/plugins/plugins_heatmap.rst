@@ -30,7 +30,7 @@ The |heatmap| :sup:`Heatmap` toolbutton starts the Dialog of the Heatmap plugin
 
 The dialog has the following options:
 
-* **Input Point dialog**: Provides a selection of loaded point vector maps.
+* **Input Point Vector** dialog: Provides a selection of loaded point vector maps.
 * **Output Raster**: Using the browser button you select the folder 
   and the name of the output raster the heatmap plugin will generate. It is not 
   necessary to give a file extension 
@@ -43,11 +43,11 @@ The dialog has the following options:
   where more circles around points overlap eachother the brighter hotspots will occur! 
 * **Decay Ratio**: is used to show with which ratio the heat dies out from the center. 
   
-  * When 0 is given (=minimum) the heat will concentrated in the centre of given radius 
+  * When 0 is given (=minimum) the heat will be concentrated in the centre of given radius 
     and be completely extinguished at the edge.  
   * When 10 is given (=maximum) the heat is concentrated at the edge and in the centre 
     it is completely extinguished. Higher given values are allowed but have no effect.
-  * When 1 is given the heat is spread evenly over the whole circel.
+  * When 1 is given the heat is spread evenly over the whole circle.
   * When a negative Decay Ratio is given you will create a Coolmap instead of a Heatmap!
 
 
@@ -141,10 +141,8 @@ the heatmap present itself.
 
 
 #. Open the properties dialog of layer ``heatmap_airports`` 
-
    Select the layer heatmap_airports and click on the rightmouse button, 
    Select :menuselection:`Properties` from the popup menu).
-
 #. Select the :guilabel:`Style` tab.
 #. In section Single band properties chance the field :guilabel:`Color map` from
    ``Grayscale`` to ``Pseudocolor``.

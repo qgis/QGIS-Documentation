@@ -113,21 +113,23 @@ but before any elements are added.
 
 The print composer provides three tabs:
 
-* The :guilabel:`General` tab allows you to set paper size, orientation, the
+* The :guilabel:`Composition` tab allows you to set paper size, orientation, the
   print quality for the output file in dpi and to activate snapping to a
   grid of a defined resolution. Please note, the |checkbox| :guilabel:`Snap to grid`
   feature only works, if you define a grid resolution > 0. Furthermore you
   can also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means all
   elements will be rastered before printing or saving as Postscript of PDF.
-* The :guilabel:`Item` tab displays the properties for the selected map element.
+* The :guilabel:`Item Properties` tab displays the properties for the selected map element.
   Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
-  :guilabel:`Item` tab and customize the settings for the selected element.
+  :guilabel:`Item Properties` tab and customize the settings for the selected element.
 * The :guilabel:`Command history` tab displays a history of all changes applied
   to the print composer layout. With a mouse click it is possible to undo
   and redo layout steps back and forth to a certain status.
-* The :guilabel:`Atlas generation` tab allows to enable the generation of an
-  atlas for the current composer and gives access to its parameters.
+
+
+.. * The :guilabel:`Atlas generation` tab allows to enable the generation of an
+..   atlas for the current composer and gives access to its parameters.
 
 You can add multiple elements to the composer. It is also possible to have
 more than one map view or legend or scalebar in the print composer canvas.
@@ -139,28 +141,27 @@ Adding a current QGIS map canvas to the Print Composer
 ======================================================
 
 
-Click on the |mActionAddMap| :sup:`Add new map from QGIS map canvas` 
+Click on the |mActionAddMap| :sup:`Add new map` 
 toolbar button in the print composer toolbar, to add the QGIS map canvas. 
 Now drag a rectangle on the composer canvas with the left mouse button to
 add the map. To display the current map, you can choose between three
-different modes in the map :guilabel:`Item` tab:
+different modes in the map :guilabel:`Item Properties` tab:
 
-* :guilabel:`Preview` ``Rectangle`` |selectstring| is the default setting. It only
+* :guilabel:`Preview` :guilabel:`Rectangle` |selectstring| is the default setting. It only
   displays an empty box with a message ``Map will be printed here``.
-* :guilabel:`Preview` ``Cache`` |selectstring| renders the map in the current screen
+* :guilabel:`Preview` :guilabel:`Cache` |selectstring| renders the map in the current screen
   resolution. If case you zoom in or out the composer window, the map is
   not rendered again but the image will be scaled.
-* :guilabel:`Preview` ``Render`` |selectstring| means, that if you zoom in or out the
+* :guilabel:`Preview` :guilabel:`Render` |selectstring| means, that if you zoom in or out the
   composer window, the map will be rendered again, but for space reasons,
   only up to a maximum resolution.
 
 **Cache** is default preview mode for newly added print composer maps.
-
 You can resize the map element by clicking on the
 |mActionSelectPan| :sup:`Select/Move item` button, selecting the
 element, and dragging one of the blue handles in the corner of the map.
 With the map selected, you can now adapt more properties in the map
-:guilabel:`Item` tab.
+:guilabel:`Item Properties` tab.
 
 To move layers within the map element select the map element, click
 the |mActionMoveItemContent| :sup:`Move item content` icon and move
@@ -170,19 +171,19 @@ within the print composer canvas. Select the map element and click on the
 right mouse button to |mIconLock| :sup:`Lock` the element position
 and again to unlock the element. You can lock the map element also
 activating the |checkbox| :guilabel:`Lock layers for map item` checkbox in the Map
-dialog of the Map Item tab.
+dialog of the :guilabel:`Item Properties` tab.
 
 **Note:** QGIS is now able to show labels from the new labeling
 plugin also in the map composer, but it is not yet scaled correctly. So it
 might be necessary to switch back to the standard labeling in some cases.
 
-Map item tab --- Map and Extents dialog
-----------------------------------------
+Map item properties tab --- Map and Extents dialog
+--------------------------------------------------
 
 
 **Map dialog**
 
-The **Map** dialog of the map item tab provides following functionalities
+The **Map** dialog of the map :guilabel:`Item Properies` tab provides following functionalities
 (see figure_composer_2_)):
 
 .. _Figure_composer_2:
@@ -235,18 +236,18 @@ The **Extents** dialog of the map item tab provides following functionalities
 If you change the view on the QGIS map canvas by zooming or panning or
 changing vector or raster properties, you can update the print composer
 view selecting the map element in the print composer and clicking the
-**[Update preview]** button in the map :guilabel:`Item` tab (see Figure
+**[Update preview]** button in the map :guilabel:`Item Properties` tab (see Figure
 figure_composer_2_ a)).
 
-Map item tab --- Grid and General options dialog
--------------------------------------------------
+Map item properties tab --- Grid and General options dialog
+-----------------------------------------------------------
 
 .. index::
    single: Grid;Map_Grid
 
 **Grid dialog**
 
-The **Grid** dialog of the map item tab provides following functionalities
+The **Grid** dialog of the map :guilabel:`Item Properties` tab provides following functionalities
 (see Figure_composer_4_)):
 
 .. _Figure_composer_4:
@@ -275,7 +276,7 @@ The **Grid** dialog of the map item tab provides following functionalities
 **General options dialog**
 
 
-The **General options** dialog of the map item tab provides following
+The **General options** dialog of the map :guilabel:`Item Properties` tab provides following
 functionalities (see Figure_composer_5_)):
 
 .. _Figure_composer_5:
@@ -301,17 +302,16 @@ functionalities (see Figure_composer_5_)):
 Adding other elements to the Print Composer
 ===========================================
 
-
 Besides adding a current QGIS map canvas to the Print Composer, it is also
 possible to add, position, move and customize legend, scalebar, images and
 label elements.
 
-Label item tab \- Label and General options dialog
-----------------------------------------------------
+Label item properties tab \- Label and General options dialog
+--------------------------------------------------------------
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place
 the element with the left mouse button on the print composer canvas and
-position and customize their appearance in the label item tab.
+position and customize their appearance in the label :guilabel:`Item Properties` tab.
 
 **Label dialog**
 
@@ -335,7 +335,7 @@ The **Label** dialog of the label item tab provides following functionalities:
 
 **General options dialog**
 
-The **General options** dialog of the label item tab provides following
+The **General options** dialog of the label :guilabel:`Item Properties` tab provides following
 functionalities:
 
 .. _Figure_composer_7:
@@ -358,12 +358,12 @@ functionalities:
   the |checkbox| :guilabel:`Show frame` checkbox. Use the Item ID to
   create a relationship to other print composer items.
 
-Image item tab \- Picture options and General options dialog
---------------------------------------------------------------
+Image item properties tab \- Picture options and General options dialog
+-----------------------------------------------------------------------
 
-To add an image, click the |mActionSaveMapAsImage| :sup:`Add image`
-icon, place the element with the left mouse button on the print composer
-canvas and position and customize their appearance in the image item tab.
+To add an image, click the |mActionSaveMapAsImage| :sup:`Add image` icon, place the 
+element with the left mouse button on the print composer canvas and position 
+and customize their appearance in the image :guilabel:`Item Properties` tab.
 
 .. index::
    single:Picture_database
@@ -372,7 +372,7 @@ canvas and position and customize their appearance in the image item tab.
 
 **Picture options dialog**
 
-The **Picture options** dialog of the image item tab provides following
+The **Picture options** dialog of the image :guilabel:`Item Properties` tab provides following
 functionalities (see figure_composer_5_ a)):
 
 .. _Figure_composer_8:
@@ -392,7 +392,7 @@ functionalities (see figure_composer_5_ a)):
 * The **Options** area shows the current selected picture and allows to
   define width, height and clockwise rotation of the picture. It is also
   possible to add a user specific SVG path. Activating the
-  |checkbox| :guilabel:`Sync from map` checkbox synchronizes the rotation of a picture
+  |checkbox| :guilabel:`Sync with map` checkbox synchronizes the rotation of a picture
   in the qgis map canvas (i.e. a rotated north arrow) with the appropriate
   print composer image. 
 * The **Search directories** area allows to add and remove directories
@@ -400,7 +400,7 @@ functionalities (see figure_composer_5_ a)):
 
 **General options dialog**
 
-The **General options** dialog of the image item tab provides following
+The **General options** dialog of the image :guilabel:`Item Properties` tab provides following
 functionalities:
 
 .. _Figure_composer_9:
@@ -426,12 +426,12 @@ functionalities:
 .. index::
    single:Map_Legend
 
-Legend item tab \- General, Legend items and Item option dialog
------------------------------------------------------------------
+Legend item properties tab \- General, Legend items and Item option dialog
+--------------------------------------------------------------------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend`
 icon, place the element with the left mouse button on the print composer
-canvas and position and customize their appearance in the legend item tab.
+canvas and position and customize their appearance in the legend :guilabel:`Item Properties` tab.
 
 **General dialog**
 
@@ -458,7 +458,7 @@ functionalities (see figure_composer_10_):
 
 **Legend items dialog**
 
-The **Legend items** dialog of the legend item tab provides following
+The **Legend items** dialog of the legend :guilabel:`Item Properties` tab provides following
 functionalities (see figure_composer_11_):
 
 .. _Figure_composer_11:
@@ -482,7 +482,7 @@ functionalities (see figure_composer_11_):
 
 **General options dialog**
 
-The **General options** dialog of the legend item tab provides following
+The **General options** dialog of the legend :guilabel:`Item Properties` tab provides following
 functionalities (see figure_composer_12_):
 
 .. _Figure_composer_12:
@@ -508,16 +508,16 @@ functionalities (see figure_composer_12_):
 .. index::
    single: Scalebar; Map_Scalebar
 
-Scalebar item tab \- Scalebar and General options dialog
----------------------------------------------------------
+Scalebar item properties tab \- Scalebar and General options dialog
+-------------------------------------------------------------------
 
 To add a scalebar, click the |mActionScaleBar| :sup:`Add new scalebar`
 icon, place the element with the left mouse button on the print composer
-canvas and position and customize their appearance in the scalebar item tab.
+canvas and position and customize their appearance in the scalebar :guilabel:`Item Properties` tab.
 
 **Scalebar dialog**
 
-The **Scalebar** dialog of the scalebar item tab provides following
+The **Scalebar** dialog of the scalebar :guilabel:`Item Properties` tab provides following
 functionalities (see figure_composer_13_):
 
 .. _Figure_composer_13:
@@ -542,7 +542,7 @@ functionalities (see figure_composer_13_):
 
 **General options dialog**
 
-The **General options** dialog of the scalebar item tab provides following
+The **General options** dialog of the scalebar :guilabel:`Item Properties` tab provides following
 features (see figure_composer_7_ b)):
 
 .. _Figure_composer_14:
@@ -807,7 +807,7 @@ possible to define the resolution (print quality) and paper size:
 * The |mActionFilePrint| :sup:`Print` icon allows to print the layout
   to a connected printer or a Postscript file depending on installed printer
   drivers.
-* The |mActionExportMapServer| :sup:`Export as image` icon exports
+* The |mActionSaveMapAsImage| :sup:`Export as image` icon exports
   the composer canvas in several image formats such as PNG, BPM, TIF, JPG,...
 * The |mActionSaveAsPDF| :sup:`Export as PDF` saves the defined
   print composer canvas directly as a PDF.

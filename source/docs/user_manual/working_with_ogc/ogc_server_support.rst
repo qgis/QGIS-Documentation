@@ -18,7 +18,7 @@ funded by the EU projects Orchestra, Sany and the city of Uster in Switzerland.
 It uses QGIS as backend for the GIS logic and for map rendering. Furthermore the 
 Qt library is used for graphics and for platform independent 
 C++ programming. In contrast to other WMS software, the QGIS Server uses 
-cartographic rules in as a configuration language, both for the server 
+cartographic rules as a configuration language, both for the server 
 configuration and for the user-defined cartographic rules. 
 
 .. index:: Publish_to_Web_plugin
@@ -56,10 +56,8 @@ have to build it all from source, please refer to the URLs above.
 Apart from qgis and qgis-mapserver you need a webserver, in our case apache2. 
 You can install all packages with aptitude or apt-get install together 
 with other necessary dependency packages.
-
 After installation you should test, if the webserver and qgis server works as 
 expected. 
-
 Make sure the apache server is running with ``/etc/init.d/apache2 start``. Open 
 a web browser and type URL: ``http://localhost``. If apache is up, you should see 
 the message 'It works!'.
@@ -106,15 +104,12 @@ done.
 
 Then open the ``OWS Server`` tab in the menu :menuselection:`Settings --> 
 Project Properties` and define the general fields under 'Service Capabilities'.
-
 For ``WMS Capabilities`` define 'Coordinate System Restrictions' and 'Advertised Extend'. 
 Additionally you can enable the checkbox |checkbox| :guilabel:`Add WKT geometry to 
 feature into response` to make the layers queryable and add a Maximum width and height that 
 can be requested.
-
 For ``WFS Capabilities`` you only need to select the layers that you want to provide 
 as WFS. Now save the session in a project file :file:`alaska.qgs`. 
-
 To provide the project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-bin/project`` 
 with admin privileges and add the project file :file:`alaska.qgs` and a copy of the 
 :file:`qgis\_mapserv.fcgi` file - that's all.

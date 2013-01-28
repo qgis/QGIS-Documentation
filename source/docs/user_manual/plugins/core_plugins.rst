@@ -41,6 +41,6 @@ Icon                    Plugin                    Description                   
 |spiticon|              SPIT                      Shapefile to PostGIS Import Tool                        :ref:`loading_postgis_data`
 |icon_sqlanywhere|      SQL Anywhere plugin       Access SQL anywhere DB                                  :ref:`sqlanywhere`
 |spatialquery|          Spatial Query             Spatial queries on vectors                              :ref:`spatial_query`
-\                       Zonal Statistics          Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
+|raster-stats|          Zonal Statistics          Calculate raster statistics for vector polygons         :ref:`zonal_statistics`
 ======================  ========================  ======================================================  ===============================
 

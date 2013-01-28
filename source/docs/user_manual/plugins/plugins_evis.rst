@@ -42,7 +42,7 @@ Launch the Event Browser module
 ...............................
 
 To launch the Event browser module either click on the |event_browser|
-:sup:`Event Browser` icon or click on :menuselection:`Database --> eVis -->
+:sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis -->
 eVis Event Browser -->`. This will open the Generic Event Browser window.
 
 The Generic Event Browser window has three tabs displayed at the top of the
@@ -75,11 +75,11 @@ and their associated attribute data.
    The *eVis* display window |win|
 
 A. **Display window**: A window where the photograph will appear.
-B. **Increase zoom button**: Zoom in to see more detail. If the entire image
+B. **Zoom in button**: Zoom in to see more detail. If the entire image
    cannot be displayed in the display window, scroll bars will appear on the
    left and bottom sides of the window to allow you to pan around the image.
-C. **Reduce zoom button**: Zoom out to see more area.
-D. **Zoom to full extent button**: Displays the full extent of the photograph.
+C. **Zoom out button**: Zoom out to see more area.
+D. **Zoom to full extent** button: Displays the full extent of the photograph.
 E. **Attribute information window**: All of the attribute information for the
    point associated with the photograph being viewed is displayed here. If the
    file type being referenced in the displayed record is not an image but is
@@ -110,10 +110,10 @@ Understanding the Options window
 
    The *eVis* Options window |win|
 
-A. **File location**: A dropdown list to specify the attribute field that
+A. **File path**: A dropdown list to specify the attribute field that
    contains the directory path or URL for the photographs or other documents
-   being displayed. If the location is a relative path then the checkbox to
-   the right of the dropdown menu must be clicked. The base path for a relative
+   being displayed. If the location is a relative path then the checkbox must
+   be clicked. The base path for a relative
    path can be entered in the Base Path text box below. Information about the
    different options for specifying the file location are noted in the section
    :ref:`evis_specifying` below.
