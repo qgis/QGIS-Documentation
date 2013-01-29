@@ -10,7 +10,7 @@ You can download QGIS from ....
 
 QGIS is freely available on Windows, MacOS X, Linux and Android. Recommendend installers:
 
-* `<Windows http://qgis.org/downloads/QGIS-OSGeo4W-1.8.0-2-Setup.exe>`_
+* `Windows <http://qgis.org/downloads/QGIS-OSGeo4W-1.8.0-2-Setup.exe>`_
 * Linux
 
   * Debian
