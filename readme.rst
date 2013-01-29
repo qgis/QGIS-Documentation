@@ -162,3 +162,56 @@ http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
 .. 
 .. - add your locale code in the post_translate.sh script in the line with 'LOCALE='
 
+Authors and translators
+--------------------------------------------------------------------------------
+
+The English QGIS manual (Master Document) and its translation is managed by the Community Assistant (Manual Team Lead) and supported by additional language specific teams.
+
+English Manual (Master Document)
+................................................................................
+
+* Community Assistant (Manual Team Lead): ??
+
+  * Contributor : Otto Dassau < dassau[at]gbd-consult.de >
+  * Contributor : Larissa Junek < junek[at]gbd-consult.de >
+
+Manual and Application Translations
+................................................................................
+
+* Community Assistant (Manual Team Lead): ??
+
+  * Dutch Team Lead : Richard Duivenvoorde < richard[at]duif.net >
+  * French Team Lead : Marie Silvestre < marie_silvestre[at]yahoo.fr >
+  * German Team Lead : Otto Dassau < dassau[at]gbd-consult.de >
+  * Greek Team Lead : Dr. Nicolas Karanikolas (not confirmed)
+  * Italian Team Lead : Paolo Cavallini < cavallini[at]faunalia.it >
+
+    * Contributor : Matteo Ghetta
+    * Contributor : Iacopo Zetti
+    * Contributor : Pasquale Di Donato
+    * Contributor : Giuseppe Patti < geognu[at]infinito.it >
+    * Contributor : Simona Santini
+
+  * Japanese Team Lead: Kayam Yoichi < yoichi.kayama[at]gmail.com >
+  * Lao Team Lead: Anousak Souphavanh < anousak at gmail.com >
+  * Lithuanian Team Lead : Kestas M < m.kestas[at]gmail.com >
+  * Polish Team Lead : Robert Szczepanek < robert[at]szczepanek.pl >
+
+    * Contributor : Andrzej Swiader < andrzej.swiader[at]uj.edu.pl >
+
+  * Portuguese (pt_BR) Team Lead: Arthur Nanni < comunidade[at]qgisbrasil.org >
+
+    * Contributor : Rodrigo Sperb
+    * Contributor : Sidney Goveia
+
+  * Portuguese (pt_PT) Team Lead: Giovanni Manghi < giovanni.manghi[at]faunalia.pt >
+
+    * Contributor : Vânia Neves < vania.neves[at]faunalia.pt >
+    * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
+    * Contributor : Zara Teixeira < zarafani[at]gmail.com >
+
+  * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
+  * Spanish Team Lead : Mario Pisa < mario.pisa[at]gmail.com >
+
+    * Contributor : Carlos Dávila < cdavilam[at]jemila.jazztel.es >
+
