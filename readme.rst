@@ -215,3 +215,18 @@ Manual and Application Translations
 
     * Contributor : Carlos Dávila < cdavilam[at]jemila.jazztel.es >
 
+
+QGIS Website and Website Translation 
+--------------------------------------------------------------------------------
+
+QGIS Website and Website Translation is managed by the Community Assistant (Website Team Lead) and supported by numerous contributors.
+
+* Community Assistant (Website and  Website Translation Team Lead): Werner Macho <werner.macho[at]gmail.com>
+
+  * Contributor : Otto Dassau  <dassau[at]gbd-consult.de>
+
+* German Translation
+
+  * Contributor: Horst Düster  <Horst.Duester at bd.so.ch>
+  * Contributor: Otto Dassau  <dassau[at]gbd-consult.de>
+
