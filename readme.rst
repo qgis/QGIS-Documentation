@@ -7,19 +7,19 @@ Where I can read this documentation
 It is possible to read the HTML version of the documentation for many languages 
 here:
 
-* English: http://documentation.qgis.org/html/en/user_manual/
-* French: http://documentation.qgis.org/html/fr/user_manual/
-* German: http://documentation.qgis.org/html/de/user_manual/
-* Italian: http://documentation.qgis.org/html/it/user_manual/
-* Japanese: http://documentation.qgis.org/html/ja/user_manual/
-* Portuguese: http://documentation.qgis.org/html/pt/user_manual/
-* Russian: http://documentation.qgis.org/html/ru/user_manual/
-* Spanish: http://documentation.qgis.org/html/es/user_manual/
-* Dutch: http://documentation.qgis.org/html/nl/user_manual/
+* English: http://documentation.qgis.org/html/en/docs/user_manual/
+* French: http://documentation.qgis.org/html/fr/docs/user_manual/
+* German: http://documentation.qgis.org/html/de/docs/user_manual/
+* Italian: http://documentation.qgis.org/html/it/docs/user_manual/
+* Japanese: http://documentation.qgis.org/html/ja/docs/user_manual/
+* Portuguese: http://documentation.qgis.org/html/pt/docs/user_manual/
+* Russian: http://documentation.qgis.org/html/ru/docs/user_manual/
+* Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
+* Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
 
 It is also available via the subdomain docs.qgis.org, for example for the German 
 language:
-http://docs.qgis.org/html/de/user_manual/
+http://docs.qgis.org/html/de/docs/user_manual/
 
 In the qgis.org site the documentation is scheduled to be built every 6 hours.
 
@@ -161,4 +161,72 @@ http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
 .. 'en' directory, and only if there is an translated one it wil be found and used.
 .. 
 .. - add your locale code in the post_translate.sh script in the line with 'LOCALE='
+
+Authors and translators
+--------------------------------------------------------------------------------
+
+The English QGIS manual (Master Document) and its translation is managed by the Community Assistant (Manual Team Lead) and supported by additional language specific teams.
+
+English Manual (Master Document)
+................................................................................
+
+* Community Assistant (Manual Team Lead): ??
+
+  * Contributor : Otto Dassau < dassau[at]gbd-consult.de >
+  * Contributor : Larissa Junek < junek[at]gbd-consult.de >
+
+Manual and Application Translations
+................................................................................
+
+* Community Assistant (Manual Team Lead): ??
+
+  * Dutch Team Lead : Richard Duivenvoorde < richard[at]duif.net >
+  * French Team Lead : Marie Silvestre < marie_silvestre[at]yahoo.fr >
+  * German Team Lead : Otto Dassau < dassau[at]gbd-consult.de >
+  * Greek Team Lead : Dr. Nicolas Karanikolas (not confirmed)
+  * Italian Team Lead : Paolo Cavallini < cavallini[at]faunalia.it >
+
+    * Contributor : Matteo Ghetta
+    * Contributor : Iacopo Zetti
+    * Contributor : Pasquale Di Donato
+    * Contributor : Giuseppe Patti < geognu[at]infinito.it >
+    * Contributor : Simona Santini
+
+  * Japanese Team Lead: Kayam Yoichi < yoichi.kayama[at]gmail.com >
+  * Lao Team Lead: Anousak Souphavanh < anousak at gmail.com >
+  * Lithuanian Team Lead : Kestas M < m.kestas[at]gmail.com >
+  * Polish Team Lead : Robert Szczepanek < robert[at]szczepanek.pl >
+
+    * Contributor : Andrzej Swiader < andrzej.swiader[at]uj.edu.pl >
+
+  * Portuguese (pt_BR) Team Lead: Arthur Nanni < comunidade[at]qgisbrasil.org >
+
+    * Contributor : Rodrigo Sperb
+    * Contributor : Sidney Goveia
+
+  * Portuguese (pt_PT) Team Lead: Giovanni Manghi < giovanni.manghi[at]faunalia.pt >
+
+    * Contributor : Vânia Neves < vania.neves[at]faunalia.pt >
+    * Contributor : Alexandre Neto < senhor.neto[at]gmail.com >
+    * Contributor : Zara Teixeira < zarafani[at]gmail.com >
+
+  * Russian Team Lead: Alex Bruy < alexander.bruy[at]gmail.com >
+  * Spanish Team Lead : Mario Pisa < mario.pisa[at]gmail.com >
+
+    * Contributor : Carlos Dávila < cdavilam[at]jemila.jazztel.es >
+
+
+QGIS Website and Website Translation 
+--------------------------------------------------------------------------------
+
+QGIS Website and Website Translation is managed by the Community Assistant (Website Team Lead) and supported by numerous contributors.
+
+* Community Assistant (Website and  Website Translation Team Lead): Werner Macho <werner.macho[at]gmail.com>
+
+  * Contributor : Otto Dassau  <dassau[at]gbd-consult.de>
+
+* German Translation
+
+  * Contributor: Horst Düster  <Horst.Duester at bd.so.ch>
+  * Contributor: Otto Dassau  <dassau[at]gbd-consult.de>
 

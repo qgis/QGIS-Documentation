@@ -133,6 +133,12 @@ msgid ""
 "scale values and then click on the |checkbox|:guilabel:`Use scale dependent "
 "rendering` checkbox."
 msgstr ""
+"Le rendu dépendant de l'échelle permet de spécifier les échelles minimale et "
+"maximale auxquelles la couche doit être visible. Pour définir une échelle de "
+"rendu, ouvrez la fenêtre de :guilabel:`Propriétés` en double-cliquant sur "
+"une couche dans la légende et dans l'onglet :guilabel:`Général`, saisissez "
+"les valeurs voulues puis cochez la case |checkbox|:guilabel:`Utiliser le "
+"rendu dépendant de la mise à l'échelle`."
 
 # f995166bd6aa40049f75d77408d244f8
 #: ../../source/docs/user_manual/introduction/general_tools.rst:86
@@ -140,21 +146,23 @@ msgid ""
 "You can determine the scale values by first zooming to the level you want to "
 "use and noting the scale value in the QGIS status bar."
 msgstr ""
+"Vous pouvez déterminer les valeurs d'échelle en zoomant au niveau que vous "
+"voulez utiliser et en notant les valeurs de la barre d'état."
 
 # f799cb554e444a469476ba92e9223cee
 #: ../../source/docs/user_manual/introduction/general_tools.rst:95
 msgid "Controlling Map Rendering"
-msgstr ""
+msgstr "Contrôler le rendu"
 
 # decc4ef5a7b447f68b6f7d8269fcd547
 #: ../../source/docs/user_manual/introduction/general_tools.rst:97
 msgid "Map rendering can be controlled in the following ways:"
-msgstr ""
+msgstr "Le rendu de la carte peut être contrôlé de différentes manières :"
 
 # 7be7bdae1e034e208243d972f9e9857e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:102
 msgid "a) Suspending Rendering"
-msgstr ""
+msgstr "a) Suspendre le rendu"
 
 # ce5c80689fe6422892ee8b7da530da0c
 #: ../../source/docs/user_manual/introduction/general_tools.rst:106
@@ -165,26 +173,37 @@ msgid ""
 "in response to any of the events described in Section :ref:`redraw_events`. "
 "Examples of when you might want to suspend rendering include:"
 msgstr ""
+"Pour suspendre le rendu, cliquez sur la case |checkbox| :guilabel:`Rendu` "
+"dans le coin inférieur droit de la barre de statut. Quand cette case n'est "
+"pas cochée, QGIS ne redessine pas la carte en réponse aux évènements décrits "
+"dans la section :ref:`redraw_events`. Voici quelques cas pour lesquels vous "
+"pourriez souhaiter ce comportement :"
 
 # fc5838053c954c8baedaea8c773ddd92
 #: ../../source/docs/user_manual/introduction/general_tools.rst:112
 msgid "Add many layers and symbolize them prior to drawing"
 msgstr ""
+"l'ajout d'un nombre important de couches et la définition de leur sémiologie "
+"avant de les afficher,"
 
 # 5c1c9777ef84427cafeeef0752f13edf
 #: ../../source/docs/user_manual/introduction/general_tools.rst:113
 msgid "Add one or more large layers and set scale dependency before drawing"
 msgstr ""
+"l'ajout d'une ou plusieurs couches lourdes et le choix d'un rendu dépendant "
+"de l'échelle avant leur affichage,"
 
 # b5dbbabec1aa42efacddd4fa67a68dab
 #: ../../source/docs/user_manual/introduction/general_tools.rst:114
 msgid "Add one or more large layers and zoom to a specific view before drawing"
 msgstr ""
+"l'ajout d'une ou plusieurs couches lourdes et le zoom sur un endroit "
+"spécifique avant l'affichage,"
 
 # b92ef933f8e9475c9c8d104950c5a739
 #: ../../source/docs/user_manual/introduction/general_tools.rst:115
 msgid "Any combination of the above"
-msgstr ""
+msgstr "n'importe quelle combinaison des éléments précédents."
 
 # e2d766a55f844ab9a468798842f7e795
 #: ../../source/docs/user_manual/introduction/general_tools.rst:117
@@ -192,11 +211,13 @@ msgid ""
 "Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
 "causes an immediate refresh of the map canvas."
 msgstr ""
+"Cocher la case |checkbox| :guilabel:`Rendu` activera de nouveau le rendu et "
+"provoquera un rafraîchissement immédiat de la carte."
 
 # 420edf433a354813bc263790f31e9c4e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:123
 msgid "b) Setting Layer Add Option"
-msgstr ""
+msgstr "b) Définir les options d'ajout de couche"
 
 # c9db6ba0733744bca828dc974caad19e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:128
@@ -209,11 +230,18 @@ msgid ""
 "layers added to the map should be displayed` checkbox. Any layer added to "
 "the map will be off (invisible) by default."
 msgstr ""
+"Il est possible de définir une option qui chargera toutes les nouvelles "
+"couches sans les dessiner, elles seront ajoutées à la carte, mais la case de "
+"visibilité sera décochée par défaut. Pour définir cette option, sélectionnez "
+"l'option :menuselection:`Préférences --> Options -->` et cliquez sur "
+"l'onglet :guilabel:`Rendu`. Décochez la case |checkbox| :guilabel:`Par "
+"défaut les couches supplémentaires sont affichées`. Les nouvelles couches "
+"ajoutées à la carte seront invisibles par défaut."
 
 # ba3a6997c8a348f9a1babd2ea4ed7044
 #: ../../source/docs/user_manual/introduction/general_tools.rst:137
 msgid "Stopping Rendering"
-msgstr ""
+msgstr "Arrêter le rendu"
 
 # b444bf58ee7e4992940e288805055411
 #: ../../source/docs/user_manual/introduction/general_tools.rst:144
@@ -223,6 +251,11 @@ msgid ""
 "bit of time between pressing :kbd:`ESC` and the time the map drawing is "
 "halted."
 msgstr ""
+"Pour arrêter le rendu de la carte, appuyez sur la touche :kbd:`ESC`. Ceci "
+"stoppera le rafraîchissement de la vue de la carte et laissera la carte "
+"partiellement dessinée. Il est possible qu'il y ait un délai entre le moment "
+"où la touche est pressée et le moment où le rendu de la carte est "
+"effectivement arrêté."
 
 # 83995c4f76e446e78e582c5ebed9fccd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:149
@@ -230,11 +263,15 @@ msgid ""
 "It is currently not possible to stop rendering - this was disabled in qt4 "
 "port because of User Interface (UI) problems and crashes."
 msgstr ""
+"Il n'est actuellement pas possible d'arrêter le rendu de cette manière - "
+"cette fonctionnalité a été désactivée lors du port vers qt4 du fait "
+"d'instabilités."
 
 # dc0adedb3e8644e7ba6a6fe3fcbfdced
 #: ../../source/docs/user_manual/introduction/general_tools.rst:155
 msgid "c) Updating the Map Display During Rendering"
 msgstr ""
+"c) Mettre à jour l'affichage de la carte pendant le rendu de l'affichage"
 
 # a95ff2dd0f3c4e948e427c146e35e4fd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:160
@@ -249,11 +286,21 @@ msgid ""
 "poor performance as the map canvas is continually updated during the reading "
 "of the features. A suggested value to start with is 500."
 msgstr ""
+"Vous pouvez définir une option pour mettre à jour l'affichage de la carte "
+"quand des entités sont dessinées. Par défaut, QGIS n'affiche pas les entités "
+"d'une couche tant que la couche n'a pas été rendue entièrement. Pour mettre "
+"à jour l'affichage à mesure que les entités sont lues dans la table "
+"attributaire, sélectionnez le menu :menuselection:`Préférences --> Options` "
+"puis l'onglet :guilabel:`Rendu`. Mettez comme valeur le nombre d'entités à "
+"mettre à jour durant le rendu. Si elle est égale à 0, cela désactive la mise "
+"à jour durant le dessin (c'est la valeur par défaut). Une valeur trop basse "
+"risque d'impacter les performances, car la vue de la carte sera constamment "
+"mise à jour durant la lecture des entités. Il est suggéré de commencer à 500."
 
 # 5a4e1549dcb8495c825f80eedd2b5978
 #: ../../source/docs/user_manual/introduction/general_tools.rst:173
 msgid "d) Influence Rendering Quality"
-msgstr ""
+msgstr "d) Influencer la qualité du rendu"
 
 # cd47f527a4e843f4a2bca263410431b4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:178
@@ -262,6 +309,10 @@ msgid ""
 "menu option :menuselection:`Settings --> Options` click on the "
 ":guilabel:`Rendering` tab and select or deselect following checkboxes."
 msgstr ""
+"Pour influencer la qualité du rendu de la carte vous avez trois "
+"possibilités. Dans le menu :menuselection:`Préférences --> Options` puis "
+"l'onglet :guilabel:`Rendu` et sélectionnez ou désélectionnez les cases "
+"suivantes :"
 
 # 335d37a72ca34b5cba1db8445bdb639a
 #: ../../source/docs/user_manual/introduction/general_tools.rst:183
@@ -269,16 +320,19 @@ msgid ""
 "|checkbox| :guilabel:`Make lines appear less jagged at the expense of some "
 "drawing performance`"
 msgstr ""
+"|checkbox| :guilabel:`Les lignes semblent moins déchiquetées aux dépens "
+"d'une certaine vitesse d'exécution`"
 
 # 866be9a8f32c45b9b0903cbd03fdce55
 #: ../../source/docs/user_manual/introduction/general_tools.rst:185
 msgid "|checkbox| :guilabel:`Fix problems with incorrectly filled polygons`"
 msgstr ""
+"|checkbox| :guilabel:`Corriger les polygones remplis de manière erronée`"
 
 # 0fe682b9151d4c6ba8c7dff2b126fedd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:190
 msgid "Measuring"
-msgstr ""
+msgstr "Mesurer"
 
 # 834aed343c25463e8091284f0d0ca34a
 #: ../../source/docs/user_manual/introduction/general_tools.rst:194
@@ -291,6 +345,15 @@ msgid ""
 "use the snapping settings from the digitizing module. This is useful, if you "
 "want to measure along lines or areas in vector layers."
 msgstr ""
+"Les mesures fonctionnent uniquement au sein des systèmes de coordonnées "
+"projetées (par exemple : UTM, Lambert 93) et pour les données sans système "
+"de coordonnées. Si la couche active est définie par un système de "
+"coordonnées géographiques (latitude/longitude), les résultats d'une mesure "
+"de ligne ou d'aires seront incorrects. Pour y remédier, vous devez spécifier "
+"un système de coordonnées plus approprié (voir Section "
+":ref:`label_projections`). Les outils de mesure utilisent les paramètres "
+"d'accrochage de l'outil de numérisation. C'est utile pour mesurer des "
+"distances et des aires pour des couches vectorielles."
 
 # bd703b35cc04406aad907f549ee852d4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:202
@@ -298,11 +361,13 @@ msgid ""
 "To select a measure tool click on |mActionMeasure| and select the tool you "
 "want to use."
 msgstr ""
+"Pour sélectionner un outil de mesure, cliquez sur |mActionMeasure| puis sur "
+"l'outil voulu."
 
 # af822c35f0e9445ba20ee311106a940d
 #: ../../source/docs/user_manual/introduction/general_tools.rst:206
 msgid "Measure length, areas and angles"
-msgstr ""
+msgstr "Mesurer des longueurs, des aires et des angles"
 
 # abf62364211f4434ac3aee3264677bb5
 #: ../../source/docs/user_manual/introduction/general_tools.rst:215
@@ -316,6 +381,15 @@ msgid ""
 "points on the map. Each segment-length as well as the total shows up in the "
 "measure-window. To stop measuring click your right mouse button."
 msgstr ""
+"|mActionMeasure| QGIS peut mesurer des distances réelles entre plusieurs "
+"points selon un ellipsoïde défini. Pour le configurer, allez dans le menu "
+":menuselection:`Préférences --> Options` puis dans l'onglet "
+":guilabel:`Outils cartographiques` et choisissez l'ellipsoïde approprié. "
+"Vous pouvez également modifier ici la couleur du trait, l'unité de mesure "
+"(mètre ou pied) et l'unité d'angle (degrés, radian ou gon). Cet outil permet "
+"de placer des points sur la carte. La longueur de chaque segment s'affiche "
+"dans la fenêtre de mesure ainsi que la longueur cumulée totale. Pour stopper "
+"les mesures, faites un clic droit."
 
 # a953eb209219476d9fce90e680231afc
 #: ../../source/docs/user_manual/introduction/general_tools.rst:236
@@ -329,6 +403,14 @@ msgid ""
 "tools, each mouse click (within the tolerance setting) will snap to that "
 "layer."
 msgstr ""
+"|mActionMeasureArea| Les aires peuvent aussi être mesurées. Dans la fenêtre "
+"de mesure apparaît la surface totale mesurée. En complément, l'outil de "
+"mesure s'accrochera à la couche sélectionnée à partir du moment où celle-ci "
+"à un seuil d'accrochage défini (voir la section :ref:`snapping_tolerance`). "
+"Donc si vous voulez mesurer avec exactitude une ligne ou le contour d'un "
+"polygone, spécifiez d'abord un seuil d'accrochage puis sélectionnez la "
+"couche. Avec l'outil de mesure, chaque clic de souris se situant dans ce "
+"seuil s'accrochera aux entités de cette couche."
 
 # 9c575f6ba1574ce0a481975c0c19e32b
 #: ../../source/docs/user_manual/introduction/general_tools.rst:256
@@ -338,11 +420,16 @@ msgid ""
 "the angle you wish to measure, then move the the cursor to draw the desired "
 "angle. The measure is displayed in a popup dialog."
 msgstr ""
+"|mActionMeasureAngle| Vous pouvez aussi mesurer des angles en sélectionnant "
+"l'outil de mesure d'angles. Le curseur adopte une forme en croix. Cliquez "
+"pour dessiner le premier côté de l'angle à mesurer puis bougez le curseur "
+"pour dessiner l'angle désiré. La mesure est affichée dans une fenêtre de "
+"dialogue."
 
 # 0c1d69cc13214000b6ef582c5d940a37
 #: ../../source/docs/user_manual/introduction/general_tools.rst:276
 msgid "Select and deselect features"
-msgstr ""
+msgstr "Sélectionner et désélectionner des entités"
 
 # 11e5f9cbaca94d34b963860e77fb3174
 #: ../../source/docs/user_manual/introduction/general_tools.rst:278
@@ -351,41 +438,45 @@ msgid ""
 "canvas. To select one or several features just click on |mActionSelect| and "
 "select your tool:"
 msgstr ""
+"La barre d'outils fournit plusieurs outils de sélection d'entités à partir "
+"du canevas de la carte. Pour sélectionner une ou plusieurs entités, cliquez "
+"sur |mActionSelect| et choisissez l'outil :"
 
 # 5129e0e6fdd9423abcd895b5368a9f63
 #: ../../source/docs/user_manual/introduction/general_tools.rst:282
 msgid "|mActionSelect| :sup:`Select single feature`"
-msgstr ""
+msgstr "|mActionSelect| :sup:`Sélection d'entités`"
 
 # 29c60a2d79a542c58e11e65a029e1def
 #: ../../source/docs/user_manual/introduction/general_tools.rst:283
 msgid "|mActionSelectRectangle| :sup:`Select features by rectangle`"
-msgstr ""
+msgstr "|mActionSelectRectangle| :sup:`Sélection d'entités avec un rectangle`"
 
 # ad5c56c935b54063ba512f78b255b086
 #: ../../source/docs/user_manual/introduction/general_tools.rst:284
 msgid "|mActionSelectPolygon| :sup:`Select features by polygon`"
-msgstr ""
+msgstr "|mActionSelectPolygon| :sup:`Sélection d'entités avec un polygone`"
 
 # cb383340eec447549667f2c71867b027
 #: ../../source/docs/user_manual/introduction/general_tools.rst:285
 msgid "|mActionSelectFreehand| :sup:`Select features by freehand`"
-msgstr ""
+msgstr "|mActionSelectFreehand| :sup:`Sélection d'entités à main levée`"
 
 # 9208594c7af4476abb4de4dc53d6c150
 #: ../../source/docs/user_manual/introduction/general_tools.rst:286
 msgid "|mActionSelectRadius| :sup:`Select features by radius`"
-msgstr ""
+msgstr "|mActionSelectRadius| :sup:`Sélection d'entités selon un rayon`"
 
 # 2c652ecca6d24d7a9e365864e1418dde
 #: ../../source/docs/user_manual/introduction/general_tools.rst:288
 msgid "To deselect all selected features click on |mActionDeselectAll|."
 msgstr ""
+"Pour désélectionner toutes les entités, cliquez sur |mActionDeselectAll|."
 
 # e967b13097f24f5997b2ec757631c5c5
 #: ../../source/docs/user_manual/introduction/general_tools.rst:294
 msgid "Decorations"
-msgstr ""
+msgstr "Décorations"
 
 # 0982236d52c1434fa58ad222be0d959c
 #: ../../source/docs/user_manual/introduction/general_tools.rst:297
@@ -394,17 +485,22 @@ msgid ""
 "the Scale Bar. They are used to 'decorate' the map by adding cartographic "
 "elements."
 msgstr ""
+"Les éléments de décorations dans QGIS incluent l'etiquette de Copyright, la "
+"flèche du nord et la barre d'échelle. Ils s'utilisent pour \"décorer\" la "
+"carte."
 
 # 0a49b629c53c4d70a3b99aee988c1b48
 #: ../../source/docs/user_manual/introduction/general_tools.rst:302
 msgid ""
 "Before QGIS 1.8 the same functionality was provided by the Decoration Plugin."
 msgstr ""
+"Avant la version 1.8 de QGIS, ils étaient accessibles via l'extension "
+"Décoration."
 
 # d5764e1188db47b3aa33fa7a35e47782
 #: ../../source/docs/user_manual/introduction/general_tools.rst:307
 msgid "Copyright Label"
-msgstr ""
+msgstr "Étiquette de Copyright"
 
 # 2b0edd0363a74650b98dd5a00467e0f2
 #: ../../source/docs/user_manual/introduction/general_tools.rst:310
@@ -412,6 +508,8 @@ msgid ""
 "|copyright_label| :guilabel:`Copyright label` adds a Copyright label using "
 "the text you prefer to the map."
 msgstr ""
+"|copyright_label| :guilabel:`Étiquette de Copyright` ajoute une zone de "
+"texte permettant de spécifier le Copyright de la carte."
 
 # ac6c00f24cd7448aa5d7c1782ff2d4bc
 #: ../../source/docs/user_manual/introduction/general_tools.rst:326
@@ -419,6 +517,8 @@ msgid ""
 "Select from menu :menuselection:`View --> Decorations --> Copyright Label`. "
 "The dialog starts (see figure_decorations_1_)."
 msgstr ""
+"Sélectionnez via le menu :menuselection:`Vue --> Décorations --> Étiquette "
+"de Copyright`. La fenêtre s'affiche (voir figure_decorations_1_)."
 
 # 27149e9274b34625af0ff08f606231f7
 #: ../../source/docs/user_manual/introduction/general_tools.rst:328
@@ -426,6 +526,8 @@ msgid ""
 "Enter the text you want to place on the map. You can use HTML as shown in "
 "the example"
 msgstr ""
+"Entrez le texte que vous souhaitez afficher sur la carte. Vous pouvez "
+"utiliser du code HTML comme le montre l'exemple"
 
 # df5745eba8044b8a91fe7720abfe6fe6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:330
@@ -433,6 +535,8 @@ msgid ""
 "Choose the placement of the label from the :guilabel:`Placement` 'Bottom "
 "Right' drop-down box"
 msgstr ""
+"Choisissez l'emplacement de l'étiquette grâce à la liste déroulante "
+":guilabel:`Position`"
 
 # f75479f1a6f9412fb87258880a80ba6f
 #: ../../source/docs/user_manual/introduction/general_tools.rst:332
@@ -440,13 +544,15 @@ msgid ""
 "Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is "
 "checked"
 msgstr ""
+"Assurez-vous que la case |checkbox| :guilabel:`Activez l'étiquette des "
+"droits d'auteur` est cochée"
 
 # 4aedd69654184875a24ed7074f468a90
 # 1e670950324f48138dd635e9d35c3e03
 #: ../../source/docs/user_manual/introduction/general_tools.rst:334
 #: ../../source/docs/user_manual/introduction/general_tools.rst:405
 msgid "Click **[OK]**"
-msgstr ""
+msgstr "CLiquez sur **[OK]**"
 
 # 38a20b988cf44cd5a14f0c07b6dbbae1
 #: ../../source/docs/user_manual/introduction/general_tools.rst:337
@@ -454,11 +560,13 @@ msgid ""
 "In the example above (default) QGIS places a copyright symbol followed by "
 "the date in the lower right hand corner of the map canvas."
 msgstr ""
+"Dans l'exemple ci-dessus (proposé par défaut), QGIS place un symbole de "
+"copyrigth suivi de la date dans le coin inférieur droit de la carte."
 
 # f2cf4966a57a441d88e426e1811e9e64
 #: ../../source/docs/user_manual/introduction/general_tools.rst:342
 msgid "North Arrow"
-msgstr ""
+msgstr "Flèche du nord"
 
 # c549dfb2c63d4bd4bdcd5498ee2407a7
 #: ../../source/docs/user_manual/introduction/general_tools.rst:345
@@ -470,11 +578,17 @@ msgid ""
 "how the arrow should be oriented. For placement of the arrow you have four "
 "options, corresponding to the four corners of the map canvas."
 msgstr ""
+"|north_arrow| :guilabel:`Flèche du nord` place une simple flèche sur la "
+"carte. Pour le moment seul un style de flèche est disponible. Vous pouvez "
+"modifier l'angle de la flèche ou laisser QGis définir la direction "
+"automatiquement. SI vous choisissez cette dernière option, QGIS fait au "
+"mieux. Quatre options sont disponibles concernant l'emplacement, "
+"correspondant aux quatre coins de la carte."
 
 # 2a7346ecc9ff41d98efea29ecf36775f
 #: ../../source/docs/user_manual/introduction/general_tools.rst:366
 msgid "Scale Bar"
-msgstr ""
+msgstr "Échelle graphique"
 
 # 4df51262a7cd4837b93b835b0cdf9268
 #: ../../source/docs/user_manual/introduction/general_tools.rst:369
@@ -482,6 +596,9 @@ msgid ""
 "|scale_bar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
 "You control the style and placement, as well as the labeling of the bar."
 msgstr ""
+"|scale_bar| :guilabel:`Échelle graphique` ajoute une simple barre d'échelle "
+"sur la carte. Vous choisissez le style, l'emplacement ainsi que les "
+"étiquettes de la barre."
 
 # c3bee68354114951a788f93430367ef6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:385
@@ -491,11 +608,15 @@ msgid ""
 "in feet. Likewise if you are using decimal degrees, you can't create a scale "
 "bar to display distance in meters."
 msgstr ""
+"QGIS permet uniquement d'afficher l'échelle dans la même unité que celle de "
+"la carte. Donc, si l'unité est le mètre, vous ne pouvez créer une échelle en "
+"pieds. De la même manière, si vous utilisez les degrés décimaux, vous ne "
+"pouvez afficher une échelle en mètres."
 
 # 3ae3c824e45641739bc757476e29e130
 #: ../../source/docs/user_manual/introduction/general_tools.rst:390
 msgid "To add a scale bar:"
-msgstr ""
+msgstr "Pour ajouter une échelle graphique :"
 
 # 3f267b60e2684bd4aeb8c492d867d523
 #: ../../source/docs/user_manual/introduction/general_tools.rst:393
@@ -503,6 +624,8 @@ msgid ""
 "Select from menu :menuselection:`View --> Decorations --> Scale Bar` The "
 "dialog starts (see figure_decorations_3_)"
 msgstr ""
+"Sélectionnez le menu :menuselection:`Vue --> Décorations --> Échelle "
+"graphique`. Une fenêtre s'affiche (voir figure_decorations_3_)"
 
 # ba0b533c8b1a4947b828c9ed6aca2975
 #: ../../source/docs/user_manual/introduction/general_tools.rst:395
@@ -510,11 +633,14 @@ msgid ""
 "Choose the placement from the :guilabel:`Placement` 'Bottom Left' drop-down "
 "list"
 msgstr ""
+"Choisissez un emplacement grâce à la liste déroulante :guilabel:`Emplacement`"
 
 # 2b3b4b71a28b4effb40e5dc6c03448c8
 #: ../../source/docs/user_manual/introduction/general_tools.rst:397
 msgid "Choose the style from the :guilabel:`Scale bar style` 'Tick Down' list"
 msgstr ""
+"Choisissez le style via la liste déroulante :guilabel:`Style de la barre "
+"d'échelle`"
 
 # 00f0835f7fe941fbbe76def093ecd3bc
 #: ../../source/docs/user_manual/introduction/general_tools.rst:398
@@ -522,18 +648,22 @@ msgid ""
 "Select the color for the bar :guilabel:`Color of bar` 'black' or use the "
 "default black color"
 msgstr ""
+"Sélectionnez la couleur via la liste déroulante :guilabel:`Couleur de la "
+"barre` ou laissez le noir définit par défaut"
 
 # ff86414150da443b899f78990004a560
 #: ../../source/docs/user_manual/introduction/general_tools.rst:400
 msgid ""
 "Set the size of the bar and its label :guilabel:`Size of bar` '30 degrees'"
-msgstr ""
+msgstr "Définissez la taille via la liste :guilabel:`Taille de la barre`"
 
 # e4789a32fd2e421bb23a79a70cb5a600
 #: ../../source/docs/user_manual/introduction/general_tools.rst:401
 msgid ""
 "Make sure the |checkbox| :guilabel:`Enable scale bar` checkbox is checked"
 msgstr ""
+"Assurez-vous que la case |checkbox| :guilabel:`Activer l'échelle graphique` "
+"est cochée"
 
 # 52212fdc8bab4e4cbf7fe9b7ecafbbe4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:402
@@ -541,11 +671,14 @@ msgid ""
 "Optionally choose to automatically snap to a round number when the canvas is "
 "resized |checkbox| :guilabel:`Automatically snap to round number on resize`"
 msgstr ""
+"En option vous pouvez choisir d'arrondir à l'entier le plus proche lors d'un "
+"changement de zoom avec |checkbox| :guilabel:`Arrondir automatiquement lors "
+"du changement de zoom`"
 
 # a7db351871e34b52a4bcbd8cc7c474d8
 #: ../../source/docs/user_manual/introduction/general_tools.rst:408
 msgid "Settings of Decorations"
-msgstr ""
+msgstr "Paramètre des décorations"
 
 # d233300bc18a422494b91178a3e9676c
 #: ../../source/docs/user_manual/introduction/general_tools.rst:410
@@ -554,11 +687,14 @@ msgid ""
 "ScaleBar and Copyright will be saved in the project and restored the next "
 "time you load the project."
 msgstr ""
+"Lorsque vous sauvegardez un projet QGIS, toutes modifications faites sur la "
+"flèche du nord, l'échelle graphique et le copyrigth seront sauvées dans le "
+"fichier de projet et restaurées à la prochaine ouverture du projet."
 
 # 03cdb5fa641a4b08874c3292d6f80661
 #: ../../source/docs/user_manual/introduction/general_tools.rst:420
 msgid "Annotation Tools"
-msgstr ""
+msgstr "Outils d'annotation"
 
 # 94016e2f26cf45f79fa04de63470d009
 #: ../../source/docs/user_manual/introduction/general_tools.rst:423
@@ -568,6 +704,10 @@ msgid ""
 "balloon on the QGIS map canvas. Use the :guilabel:`Text Annotation` tool and "
 "click into the map canvas."
 msgstr ""
+"L'outil |mActionTextAnnotation| :guilabel:`Annotation de texte` de la barre "
+"d'outils d'attribut fournit la possibilité de placer du texte formaté dans "
+"des phylactères sur la carte. Sélectionnez l'outil d'annotation "
+":guilabel:`Annotation de texte` puis cliquez sur la carte."
 
 # 78deb7024a9c453a971aef1e1a9caf61
 #: ../../source/docs/user_manual/introduction/general_tools.rst:439
@@ -580,6 +720,16 @@ msgid ""
 "moving only the balloon. The icons are part of GIS theme, and are used by "
 "default in the other themes too."
 msgstr ""
+"Un double clic dans l'emprise d'une annotation (matérialisée par quatre "
+"carrés aux angles) provoque l'ouverture d'une fenêtre de dialogue avec "
+"diverses options. Il y a un éditeur de texte avec quelques options (choix de "
+"la police de caractères, de la taille, de la graisse, etc.), le choix de la "
+"couleur de fond du cadre, ainsi que de la couleur et de l'épaisseur du "
+"contour. Il est également possible de choisir le marqueur. La position de ce "
+"dernier peut être soit fixe sur la carte soit relative à l'interface "
+"graphique et n'est pas impactée par la navigation dans la carte. La bulle "
+"peut être déplacée indépendamment du marqueur. Le déplacement du marqueur "
+"affecte l'ensemble de l'annotation."
 
 # 8a77be02ec79477fb4603275bc0315f3
 #: ../../source/docs/user_manual/introduction/general_tools.rst:447
@@ -587,11 +737,13 @@ msgid ""
 "The |mActionAnnotation| :guilabel:`Move Annotation` tool allows to move the "
 "annotation on the map canvas."
 msgstr ""
+"L'outil |mActionAnnotation| :guilabel:`Déplacer une annotation` permet de "
+"déplacer l'annotation sélectionnée sur la carte."
 
 # 5a7eb4b8075c428693f78f989569f3c1
 #: ../../source/docs/user_manual/introduction/general_tools.rst:451
 msgid "Form annotations"
-msgstr ""
+msgstr "Formulaire d'annotation"
 
 # 4b396ce840894f3ab576876dc46ccef9
 #: ../../source/docs/user_manual/introduction/general_tools.rst:456
@@ -603,6 +755,13 @@ msgid ""
 ":guilabel:`Identify features` tool, but displayed in an annotation item. "
 "Also see QGIS blog http://blog.qgis.org/node/143 for more information."
 msgstr ""
+"En outre, vous pouvez créer vos propres formulaires d'annotation. L'outil "
+"|mActionFormAnnotation| :guilabel:`Formulaire d'annotation` est utile pour "
+"afficher les attributs d'une entité dans un formulaire qt personnalisé (voir "
+"figure_custom_annotation_). L'approche est similaire à la conception de "
+"formulaires pour l'outil :guilabel:`Identifier les entités`, mais affiche "
+"les informations sous la forme d'une annotation. Pour un complément "
+"d'information, reportez-vous au blog http://blog.qgis.org/node/143."
 
 # 79992a1242e34fea9994772c1ac74233
 #: ../../source/docs/user_manual/introduction/general_tools.rst:476
@@ -611,11 +770,15 @@ msgid ""
 "(move annotation, text annotation, form annotation), the visibility states "
 "of the items are inverted."
 msgstr ""
+"Si vous pressez les touches :kbd:`Ctrl+T` alors que l'outil "
+":guilabel:`Annotation` est activé (déplacement d'annotation, annotation de "
+"texte ou formulaire d'annotation), les annotations sont automatiquement "
+"cachées ou, inversement, rendues visibles."
 
 # 8c7ab5505617460cbcf15931e7a311e4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:483
 msgid "Spatial Bookmarks"
-msgstr ""
+msgstr "Signets spatiaux"
 
 # efabc0c82ebf478ca252ac9791b09155
 #: ../../source/docs/user_manual/introduction/general_tools.rst:490
@@ -623,21 +786,23 @@ msgid ""
 "Spatial Bookmarks allow you to \"bookmark\" a geographic location and return "
 "to it later."
 msgstr ""
+"Les signets spatiaux vous permettent de marquer une zone de la carte pour y "
+"retourner plus tard."
 
 # 80f26b08aa8b497fafafb0318a132aa0
 #: ../../source/docs/user_manual/introduction/general_tools.rst:494
 msgid "Creating a Bookmark"
-msgstr ""
+msgstr "Créer un signet"
 
 # ac6e159ba8794ca4920d72977af8e7d3
 #: ../../source/docs/user_manual/introduction/general_tools.rst:496
 msgid "To create a bookmark:"
-msgstr ""
+msgstr "Pour créer un signet :"
 
 # 8759b0eff04c454fb081713bb86403b0
 #: ../../source/docs/user_manual/introduction/general_tools.rst:498
 msgid "Zoom or pan to the area of interest."
-msgstr ""
+msgstr "Déplacez-vous sur la zone concernée."
 
 # 5e48548f230c4c27ba279af0f33c097b
 #: ../../source/docs/user_manual/introduction/general_tools.rst:499
@@ -645,11 +810,13 @@ msgid ""
 "Select the menu option :menuselection:`View --> New Bookmark` or press "
 ":kbd:`Ctrl-B`."
 msgstr ""
+"Sélectionnez le menu :menuselection:`Vue --> Nouveau signet...` ou appuyez "
+"sur les touches  :kbd:`Ctrl-B`."
 
 # f3f534cab5d74c308105b0bab6e4ebf2
 #: ../../source/docs/user_manual/introduction/general_tools.rst:500
 msgid "Enter a descriptive name for the bookmark (up to 255 characters)."
-msgstr ""
+msgstr "Entrez un nom pour décrire le signet (jusqu'à 255 caractères)."
 
 # 7a23bdb141ce4dc48c176d7d7562d215
 #: ../../source/docs/user_manual/introduction/general_tools.rst:501
@@ -657,16 +824,18 @@ msgid ""
 "Press :kbd:`Enter` to add the bookmark or **[Delete]** to remove the "
 "bookmark."
 msgstr ""
+"Appuyez sur :kbd:`Entrée` pour ajouter le signet ou sur **[Annuler]** pour "
+"sortir de la fenêtre sans l'enregistrer."
 
 # a0679a6fbcc445e7b409c34e8e2d2a32
 #: ../../source/docs/user_manual/introduction/general_tools.rst:503
 msgid "Note that you can have multiple bookmarks with the same name."
-msgstr ""
+msgstr "Notez que vous pouvez avoir plusieurs signets portant le même nom."
 
 # 9621f67439394cbab2487b217484c081
 #: ../../source/docs/user_manual/introduction/general_tools.rst:506
 msgid "Working with Bookmarks"
-msgstr ""
+msgstr "Travailler avec les signets"
 
 # add53dafefa64bea87388f1eb445a634
 #: ../../source/docs/user_manual/introduction/general_tools.rst:508
@@ -676,11 +845,16 @@ msgid ""
 "zoom to or delete a bookmark. You can not edit the bookmark name or "
 "coordinates."
 msgstr ""
+"Pour utiliser ou gérer les signets allez dans le menu :menuselection:`Vue "
+"--> Montrer les signets`.\n"
+"La fenêtre :guilabel:`Signets géospatiaux` vous permet de rappeler ou "
+"d'effacer un signet. Vous ne pouvez pas modifier le nom d'un signet ou ses "
+"coordonnées."
 
 # 3dd6da8a13684057a1ce40ea6c2b7261
 #: ../../source/docs/user_manual/introduction/general_tools.rst:514
 msgid "Zooming to a Bookmark"
-msgstr ""
+msgstr "Zoomer sur un signet"
 
 # 5eb7ac3b58a34b659cd560de7ca1fe6d
 #: ../../source/docs/user_manual/introduction/general_tools.rst:516
@@ -689,11 +863,14 @@ msgid ""
 "bookmark by clicking on it, then click **[Zoom To]**. You can also zoom to a "
 "bookmark by double-clicking on it."
 msgstr ""
+"Depuis la fenêtre :guilabel:`Signets géospatiaux`, sélectionnez le signet "
+"voulu en cliquant dessus puis sur le bouton **[Zoomer sur]**. Vous pouvez "
+"aussi zoomer en opérant un double-clic."
 
 # be814536ef6c481390b022e1c11594d0
 #: ../../source/docs/user_manual/introduction/general_tools.rst:521
 msgid "Deleting a Bookmark"
-msgstr ""
+msgstr "Effacer un signet"
 
 # 9a9175209974485bb6590feb58c9f71e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:523
@@ -702,11 +879,14 @@ msgid ""
 "on it then click **[Delete]**. Confirm your choice by clicking **[Yes]** or "
 "cancel the delete by clicking **[No]**."
 msgstr ""
+"Pour effacer un signet depuis la fenêtre :guilabel:`Signets géospatiaux`, "
+"cliquez dessus puis sur le bouton **[Effacer]**. Confirmez votre choix en "
+"cliquant sur **[Oui]** ou annuler en cliquant sur **[Non]**."
 
 # 88ed6fbc49094a2ebceb7512307f0103
 #: ../../source/docs/user_manual/introduction/general_tools.rst:531
 msgid "Nesting Projects"
-msgstr ""
+msgstr "Inclusion de projets"
 
 # 1a8ad94734f34a5f867ba5ca6fb7b2e1
 #: ../../source/docs/user_manual/introduction/general_tools.rst:535
@@ -714,22 +894,29 @@ msgid ""
 "If you want to embed content from other project files into your project you "
 "can choose :menuselection:`Layer --> Embed Layers and Groups`."
 msgstr ""
+"Si vous souhaitez inclure dans votre projet QGIS des couches ou des groupes "
+"de couches issus d'un autre projet, utilisez le menu :menuselection:`Couches "
+"--> Intégrer des couches et des groupes`."
 
 # 4923b014bb82484ca45c4fdb7dcb4a12
 #: ../../source/docs/user_manual/introduction/general_tools.rst:539
 msgid "Embedding layers"
-msgstr ""
+msgstr "Intégrer des couches"
 
 # 01550e397b8546cfa89e1ff9a197867b
 #: ../../source/docs/user_manual/introduction/general_tools.rst:541
 msgid "The following dialog allows you to embed layers from other projects:"
 msgstr ""
+"La fenêtre suivante vous permet d'intégrer des couches provenant d'autres "
+"projets QGIS :"
 
 # edb1163c1fc44a038d72e3353c5ba225
 #: ../../source/docs/user_manual/introduction/general_tools.rst:543
 msgid ""
 "Press |browsebutton| to look for another project from the Alaska dataset."
 msgstr ""
+"Cliquez sur |browsebutton| pour rechercher un autre projet dans le jeu de "
+"données Alaska."
 
 # e215f0e2a6ad4aaca0b86e14e2bcb1f4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:544
@@ -737,6 +924,8 @@ msgid ""
 "Select the project file grassland. You can see the content of the project "
 "(see figure_embed_dialog_)."
 msgstr ""
+"Sélectionnez le fichier de projet grassland. Vous en visualisez le contenu "
+"(voir figure_embed_dialog_)."
 
 # 7b466f849037415fa4ba87ab271f4322
 #: ../../source/docs/user_manual/introduction/general_tools.rst:545
@@ -744,6 +933,9 @@ msgid ""
 "Press :kbd:`Ctrl` and klick on the layers grassland and regions. The layers "
 "are embedded in the map legend and the map view now."
 msgstr ""
+"Maintenez la touche :kbd:`Ctrl` appuyée et sélectionnez les couches "
+"grassland et regions. Ces couches peuvent maintenant être intégrées à la "
+"légende et à la carte."
 
 # 6704a2d199b14d058afafcb20e2a2234
 #: ../../source/docs/user_manual/introduction/general_tools.rst:560
@@ -751,11 +943,13 @@ msgid ""
 "While the embedded layers are editable you can't change it's properties like "
 "Style and Labeling."
 msgstr ""
+"Bien que les couches intégrées oient éditables, vous ne pouvez pas en "
+"modifier le style et l'étiquetage."
 
 # d361385ad1d14c3ba048d617c72bd51c
 #: ../../source/docs/user_manual/introduction/general_tools.rst:562
 msgid "**Removing embedded layers**"
-msgstr ""
+msgstr "**Supprimer des couches intégrées**"
 
 # ed6cfd4494954a019a6f087bc3f41eda
 #: ../../source/docs/user_manual/introduction/general_tools.rst:564
@@ -763,6 +957,8 @@ msgid ""
 "Right-click on the embedded layer and choose |mActionRemoveLayer| "
 ":guilabel:`Remove` ."
 msgstr ""
+"Faites un clic-droit sur la couche intégrée et sélectionnez "
+"|mActionRemoveLayer| :guilabel:`Supprimer`."
 
 # 5ef39ab1ea494f91a3201658f8a8e449
 #~ msgid "|updatedisclaimer|"

@@ -227,21 +227,18 @@ This default version however, cannot be uninstalled.
 
 **Repositories tab**
 
-
 The second tab :guilabel:`Repositories`, contains a list of plugin repositories 
 available for the :guilabel:`Plugin Installer`. By default, only the QGIS Official 
 Repository is enabled. You can add several user-contributed repositories, 
 including the central QGIS Contributed Repository and other external 
-repositories by clicking the **[Add 3rd party repositories]** button. The 
+repositories by clicking the **[Add ...]** button. The 
 added repositories contain a large number of useful plugins which are not 
 maintained by the QGIS Development Team. As such, we cannot take any 
 responsibility for them. You can also manage the repository list manually, that 
 is add, remove, and edit the entries. Temporarily disabling a particular 
-repository is possible by clicking the **[Edit]** button.
+repository is possible by clicking the **[Edit ...]** button.
 
 **Options tab**
-
-
 
 The :guilabel:`Options` tab is where you can configure the settings of the 
 :guilabel:`Plugin Installer`. The |checkbox| :guilabel:`Check for updates 

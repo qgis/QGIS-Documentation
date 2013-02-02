@@ -15,7 +15,7 @@ The plugin requires the following parameters to be specified before running:
 * **Input vector layer**: Specify the input point vector layer(s) from a list of 
   loaded point layers. If several layers are specified, then data from all layers 
   is used for interpolation. Note: It is possible to insert lines or polygons as 
-  constraints for the triangulation, by specifying either "structure lines" or 
+  constraints for the triangulation, by specifying either "points", "structure lines" or 
   "break lines" in the :menuselection:`Type -->` dropdown menu.
 * **Interpolation attribute**: Select attribute column to be used for interpolation 
   or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox to use the layers stored Z values.
@@ -44,7 +44,7 @@ The plugin requires the following parameters to be specified before running:
 
 #.  Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`). 
 #.  Load the Interpolation plugin in the Plugin Manager (see Section :ref:`load_core_plugin`) 
-    and click on the |interpolation| :sup:`Interpolation` icon which appears in the QGIS 
+    and click on the |raster-interpolate| :sup:`Interpolation` icon which appears in the QGIS 
     toolbar menu. The Interpolation plugin dialog appears as shown in Figure_interpolation_1_.
 #.  Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column (e.g., ``ELEV``) 
     for interpolation.

@@ -14,7 +14,7 @@ merge the edits by hand, even if people don’t change the same features.
 
 The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the 
 synchronisation by copying the content of a datasource (usually PostGIS or 
-WFS-T) to a spatialite database and storing the offline edits to dedicated 
+WFS-T) to a SpatiaLite database and storing the offline edits to dedicated 
 tables. After being connected to the network again, it is possible to 
 apply the offline edits to the master dataset.
 
@@ -22,10 +22,10 @@ apply the offline edits to the master dataset.
 
 *  Open some vector layers, e.g. from a PostGIS or WFS-T datasource
 *  Save it as a project
-*  Press the 'Convert to offline project' button and select the layers to 
+*  Press the |offline_editing_copy|:sup:`Convert to offline project` icon and select the layers to 
    save. The content of the layers is saved to spatialite tables.
 *  Edit the layers offline.
-*  After being connected again, upload the changes with the 'Synchronize' button.
+*  After being connected again, upload the changes with the |offline_editing_sync|:sup:`Synchronize` button.
 
 .. _figure_offline_editing_1:
 
