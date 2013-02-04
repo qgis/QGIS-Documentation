@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-06 20:10\n"
+"POT-Creation-Date: 2013-02-02 12:26\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 msgid "Raster Calculator"
 msgstr ""
 
-# 1ae19bf875ab460997838724932e96ca
+# 2b67ab5e9ed9406eb8f3d561d356e308
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
 msgid ""
-"The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
 "(see figure_raster_2_) allows to perform calculations on basis of existing "
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
 
-# d5d9305cfb8a44048cbdf23f0f5ca4c2
+# 54857b91dcca4848a32e564a0e303a44
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:32
 msgid ""
-"The **Fields list** contains all loaded raster layers that can be used. To "
-"add a raster to the raster calculator expression field, double click its "
-"name in the Fields list. You can then use the operators to construct "
-"calculation expressions or you can just type it into the box."
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions or you can just type it into the box."
 msgstr ""
 
 # 85477bec7334487390625441323c2464
@@ -59,11 +59,11 @@ msgid ""
 "( sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
 msgstr ""
 
-# d86712d5252b440b859c47aeb14370cc
+# 8f130a611d8342d9afa18e0bb47fe88e
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:48
 msgid ""
-"With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
-"will automatically added to the legend area and can be visualized."
+"With the |checkbox| :guilabel:`Add result to project` checkbox the result "
+"layer will automatically added to the legend area and can be visualized."
 msgstr ""
 
 # 8bf3879b24344136be819768754a4fed
@@ -88,12 +88,12 @@ msgstr ""
 msgid "**Using a mask**"
 msgstr ""
 
-# b1ac909404e344c1b54207846df6451e
+# d4182c6155dc418780cf9a4fc48a4ee0
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
 msgid ""
 "If you want to mask out parts of a raster, because you are only interested "
 "in elevations above 0 meter, you can use following expression to create a "
-"mask and apply the result to a ne raster in one step."
+"mask and apply the result to a raster in one step."
 msgstr ""
 
 # 5e51086257f94e30b556e06cff69a072
@@ -101,37 +101,4 @@ msgstr ""
 msgid ""
 "For every cell greater than or equal to 0, set its value to 1, otherwise set "
 "it to 0. This creates the mask on the fly."
-msgstr ""
-
-# 3c99be8551ea460a85a15e2254f0e3ea
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:78
-msgid "**Replace values with conditional statements**"
-msgstr ""
-
-# c8d6063621be464890c942c97cec2a50
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:84
-msgid ""
-"All cells in the elevation raster with a value less or equal (le) then 50 "
-"will be replaces with the value 200."
-msgstr ""
-
-# 3758953aae01498da1f673d56f0e3488
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:91
-msgid ""
-"All cells in the elevation raster with value equal (eq) to the appropriate "
-"pixels in fourth band of the layer raster will be replaced with the value "
-"150."
-msgstr ""
-
-# 94042f7b55384c1fb2dd649820ce3548
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:98
-msgid ""
-"All cells in the elevation raster with value greater than (gt) the "
-"appropriate pixels in fourth band of the layer raster will be replaced with "
-"the appropriate pixels from the second band of the baselayer raster."
-msgstr ""
-
-# 2489b2214c7941b7a98fd91c63171dd7
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:102
-msgid "Available conditional statements are:"
 msgstr ""
