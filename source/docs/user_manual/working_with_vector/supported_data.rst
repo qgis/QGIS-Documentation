@@ -4,12 +4,14 @@
 Supported Data Formats
 ======================
 
-|qg| uses the OGR library to read and write vector data formats [#]_,
+|qg| uses the OGR library to read and write vector data formats,
 including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
 SpatiaLite, Oracle Spatial databases and many more. The vector data can also
-be loaded in read mode from zip and gzip archives into QGIS. At the date of this
-document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
+be loaded in read mode from zip and gzip archives into QGIS. 
+At the date of this document, 69 vector formats are supported by the OGR library 
+(see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
+GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
 
 .. note::
 
@@ -22,11 +24,11 @@ The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
-This section describes how to work with several common formats: ESRI
-Shapefiles, PostGIS layers and SpatiaLite layers. Many of the features
-available in |qg| work the same, regardless of the vector data source.
-This is by design and includes the identify, select, labeling and
-attributes functions.
+This section describes how to work with several common formats: 
+ESRI Shapefiles, PostGIS layers and SpatiaLite layers. 
+Many of the features available in |qg| work the same, regardless of the 
+vector data source. This is by design and includes the identify, select, 
+labeling and attributes functions.
 
 .. index:: ESRI, Shapefile, OGR
 
@@ -422,6 +424,7 @@ Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata
 in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
 
 To import a shapefile into PostGIS, do the following:
+
 ::
 
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres \
@@ -434,6 +437,7 @@ server *myhost.de*.
 
 Note that OGR must be built with PostgreSQL to support PostGIS.
 You can see this by typing
+
 ::
 
   ogrinfo --formats | grep -i post
@@ -442,6 +446,7 @@ You can see this by typing
 If you like to use PostgreSQL's **COPY** \ -command instead of the default
 **INSERT INTO** method you can export the following environment-variable
 (at least available on |nix| and |osx|):
+
 ::
 
 
@@ -467,7 +472,11 @@ exists on each layer in the database. PostGIS supports
 creation of a :index:`GiST (Generalized Search Tree) index` to speed
 up spatial searches of the data.
 
-The syntax for creating a GiST [#]_ index is:
+GiST index information is taken from the PostGIS documentation available 
+at http://postgis.refractions.net
+
+The syntax for creating a GiST index is:
+
 ::
 
 
@@ -480,6 +489,7 @@ Once the index is created, you should perform a ``VACUUM ANALYZE``.
 See the PostGIS documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more information.
 
 The following is an example of creating a GiST index:
+
 ::
 
 
@@ -526,10 +536,11 @@ be within the grid, right of New Zealand main islands.
 
 
 A workaround is to transform the longitude values using PostGIS and the
-**ST_Shift_Longitude** [#]_ function. This function reads every point/vertex
-in every component of every feature in a geometry, and if the longitude
-coordinate is < 0 |degrees| adds 360 |degrees| to it. The result would be
-a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
+**ST_Shift_Longitude** function 
+(see http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html). 
+This function reads every point/vertex in every component of every feature in a geometry, 
+and if the longitude coordinate is < 0 |degrees| adds 360 |degrees| to it. The result 
+would be a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
 180 |degrees| centric map.
 
 
@@ -610,10 +621,3 @@ MSSQL Spatial Layers
 QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer|
 :sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available
 in the MS SQL node in the QBrowser tree, providing drag and drop import support.
-
-----
-
- .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
- .. [#] GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net
- .. [#] http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html
-
