@@ -3,24 +3,23 @@
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-01-10 19:14\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-02-05 14:11+0100\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
 # 248b0fdca6b44f0889dc6a9316657f57
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:11
 msgid "Working with Projections"
-msgstr ""
+msgstr "Utiliser les projections"
 
 # 34931fb8ebdf44e6810af3a7ac0f3262
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:15
@@ -31,11 +30,18 @@ msgid ""
 "(OTF) projection of vector and raster layers. All these features allow the "
 "user to display layers with different CRS and have them overlay properly."
 msgstr ""
+"QGIS permet à l'utilisateur de définir un Système de Coordonnées de "
+"Référence  (SCR) par défaut et pour l'ensemble des projets, pour les couches "
+"démunies de SCR prédéfini. Il lui permet également de définir des systèmes "
+"de coordonnées  de référence personnalisés et autorise la projection à la "
+"volée de couches  vecteur et raster. Toutes ces fonctionnalités permettent à "
+"l'utilisateur d'afficher des couches avec différents SCR et de les "
+"superposer correctement."
 
 # 7089b8a4b4c94d218efa5c12e5347494
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:25
 msgid "Overview of Projection Support"
-msgstr ""
+msgstr "Aperçu de la gestion des projections"
 
 # 8b228fe44c7c4269bb7fe693335ab0d4
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:27
@@ -47,6 +53,14 @@ msgid ""
 "database. See Section :ref:`sec_custom_projections` for information on "
 "managing your custom coordinate reference systems."
 msgstr ""
+"QGIS gère approximativement 2 700 SCR connus. Les définitions pour chacun "
+"d'entre eux sont stockées dans une base de données SQLite qui est installée "
+"avec QGIS. Normalement vous n'avez pas besoin de manipuler cette  base de "
+"données directement. En fait, cela peut poser des problèmes de gestion de "
+"projections. Les SCR personnalisés y sont stockés dans une base de données "
+"utilisateur. Reportez-vous à la section :ref:`sec_custom_projections` pour "
+"avoir des informations sur la gestion de vos systèmes de coordonnées de "
+"référence personnalisées."
 
 # 677d734069d943a993f1d328ffa68207
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:37
@@ -57,6 +71,11 @@ msgid ""
 "used in GDAL. EPSG identifiers are present in the database and can be used "
 "to specify a CRS in QGIS."
 msgstr ""
+"Les SCR disponibles dans QGIS sont basés sur ceux définis par l'EPSG et "
+"l'Institut National Géographique (IGNF) et sont en grande partie extraits "
+"des  tables spatiales de référence de GDAL. Les identifiants EPSG sont "
+"présents dans la base de données et peuvent être utilisés pour définir un "
+"SCR dans QGIS."
 
 # cb4c992f39e24bc0a296183131d96fa2
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:43
@@ -72,6 +91,17 @@ msgid ""
 "`alaska.shp` would have a corresponding projection file named :file:`alaska."
 "prj`."
 msgstr ""
+"Dans le but d'utiliser la projection à la volée, vos données doivent "
+"contenir des informations sur leur système de coordonnées de référence sinon "
+"vous devrez définir un SCR global, par projet, ou bien par couche. Pour les "
+"couches PostGIS, QGIS utilise l'identifiant de référence spatiale qui a été "
+"défini quand la couche a été créée. Pour les données gérées par OGR, QGIS "
+"utilise un moyen spécifique au format pour définir le SCR. Dans le cas du "
+"shapefile, il s'agit d'un fichier contenant une spécification Well Known "
+"Text (WKT) (:index:`WKT`) de la projection. Le fichier de projection a le "
+"même nom que le fichier shape et une extension prj. Par exemple, un "
+"shapefile nommé :file:`alaska.shp` aura un fichier de projection "
+"correspondant nommé :file:`alaska.prj`."
 
 # 21e6570cc9f6455fbef6a76d2ba428ee
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:54
@@ -81,11 +111,15 @@ msgid ""
 "`Project Properties` dialog under the :guilabel:`Edit` (Gnome, OSX) or :"
 "guilabel:`Settings` (KDE, Windows) menu."
 msgstr ""
+"Lorsque vous sélectionnez un nouveau SCR, les unités des couches utilisées "
+"seront automatiquement changées dans l'onglet  :guilabel:`Général` de la "
+"fenêtre des |mActionOptions| :guilabel:`Propriétés du projet` du menu :"
+"guilabel:`Éditer` (Gnome, OSX) ou :guilabel:`Préférences` (KDE, Windows)."
 
 # fadb836ffed9485b9f630a1dd42004c5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:63
 msgid "Specifying a Projection"
-msgstr ""
+msgstr "Définir une projection"
 
 # a694d592152240b5ba2feed74a94ee83
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:65
@@ -98,6 +132,13 @@ msgid ""
 "shown in figure_projection_1_. This choice will be saved for use in "
 "subsequent QGIS sessions."
 msgstr ""
+"QGIS assigne à chaque nouveau projet la projection globale définie par "
+"défaut. Par défaut il s'agit du EPSG:4326 - WGS 84 (``proj=longlat "
+"+ellps=WGS84 +datum=WGS84 +no_defs``). Ce SCR par défaut peut être modifié "
+"via le bouton  **[Sélection...]** dans la première partie de l'onglet qui "
+"permet de définir le SCR par défaut pour les nouveaux projets, voir "
+"figure_projection_1_. Ce choix est sauvegardé pour toutes les sessions QGIS "
+"suivantes."
 
 # 2b449552e9ae46a5bfa7168f8840e170
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:85
@@ -108,26 +149,33 @@ msgid ""
 "guilabel:`Options` (Gnome, OSX) or :menuselection:`Settings -->`  |"
 "mActionOptions| :guilabel:`Options` (KDE, Windows)."
 msgstr ""
+"Lorsque vous utilisez des couches qui sont dépourvues de SCR, vous devez "
+"contrôler et définir le choix de la projection pour ces couches. Cela peut "
+"être réalisée globalement ou par projet dans l'onglet :guilabel:`SCR` dans "
+"le menu :menuselection:`Éditer` |mActionOptions| :guilabel:`Options` (Gnome, "
+"OSX) ou :menuselection:`Préférences` |mActionOptions| :guilabel:`Options` "
+"(KDE, Windows)."
 
 # d58773dd269140e490210e2116b1e3ca
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:91
 msgid "The options shown in figure_projection_1_ are:"
-msgstr ""
+msgstr "Les options montrées sur figure_projection_1_ sont :"
 
 # 54027d5ac636419e9ed1e5808c82436a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:93
 msgid "|radiobuttonoff| :guilabel:`Prompt for CRS`"
-msgstr ""
+msgstr "|radiobuttonoff| :guilabel:`Demander le SCR`"
 
 # 355b183907784d83a997411cfc75fba1
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:94
 msgid "|radiobuttonoff| :guilabel:`Use project CRS`"
-msgstr ""
+msgstr "|radiobuttonoff| :guilabel:`Utiliser le SCR du projet`"
 
 # 08a66d7e2e1445c8880b52eeea765394
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:95
 msgid "|radiobuttonon| :guilabel:`Use default CRS displayed below`"
 msgstr ""
+"|radiobuttonoff| :guilabel:`Utiliser le SCR par défaut affiché ci-dessous`"
 
 # 0b39a5aec153413caddd576674eda6b5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:97
@@ -138,11 +186,18 @@ msgid ""
 "`vectorgeneraltab`) properties dialog. If your layer already has a CRS "
 "defined, it will be displayed as shown in :ref:`figure_vector_properties_1` ."
 msgstr ""
+"Si vous voulez définir le système de coordonnées de référence pour certaines "
+"couches sans information de projection, vous pouvez également faire cela "
+"dans l'onglet :guilabel:`Général` de la fenêtre de propriétés des couches "
+"raster (voir :ref:`label_generaltab`) ou vecteur  (voir :ref:"
+"`vectorgeneraltab`). Si votre couche a déjà une projection définie, elle "
+"sera affichée comme indiqué dans la figure :ref:"
+"`figure_vector_properties_1` ."
 
 # 2d61d88c0de249399881925dc1b044d7
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:103
 msgid "**CRS in the Map Legend**"
-msgstr ""
+msgstr "**SCR depuis la légende de la carte**"
 
 # 26d23e594dec44c48e1c778f709c1ab4
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:105
@@ -153,11 +208,16 @@ msgid ""
 "guilabel:`Set project CRS from Layer` redefines the project CRS using the "
 "layer's CRS"
 msgstr ""
+"Un clic-droit sur une couche dans la légende (Section :ref:`label_legend`) "
+"propose deux raccourcis concernant les SCR.  :guilabel:`Définir le SCR de la "
+"couche` ouvre directement la fenêtre de sélection de SCR (voir "
+"figure_projection_2_). :guilabel:`Définir le SCR du projet depuis cette "
+"couche` applique le SCR de la couche au projet."
 
 # 322ed4e0510d4d1e9fdad98eb414ea8e
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:112
 msgid "Define On The Fly (OTF) Reprojection"
-msgstr ""
+msgstr "Définir la projection à la volée"
 
 # 2332da54bdde4c5aaba252c5e9e88f87
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:114
