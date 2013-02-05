@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-01-10 19:14\n"
-"PO-Revision-Date: 2013-02-05 14:11+0100\n"
+"PO-Revision-Date: 2013-02-05 17:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -228,11 +228,16 @@ msgid ""
 "guilabel:`CRS` tab of the |mActionProjectProperties| :menuselection:`Project "
 "Properties` dialog."
 msgstr ""
+"QGIS gère la projection à la volée pour les rasters et les vecteurs. Par "
+"contre elle n'est pas activée par défaut. Pour utiliser la projection à la "
+"volée, vous devez cocher la case |checkbox| :guilabel:`Activer la projection "
+"'à la volée'` dans l'onglet :guilabel:`SCR` de la fenêtre de  |"
+"mActionProjectProperties| :menuselection:`Propriétés du projet`."
 
 # 9a66f736383547108b04d79d18972752
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:120
 msgid "There are three ways to achieve this end:"
-msgstr ""
+msgstr "Il y a trois manières de le faire :"
 
 # 7161fe9a618e42899dc24661197e76de
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:122
@@ -241,6 +246,9 @@ msgid ""
 "menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
 "Windows) menu."
 msgstr ""
+"Sélectionner |mActionOptions| :menuselection:`Proriétés du projet` depuis le "
+"menu :menuselection:`Éditer` (Gnome, OSX) ou :menuselection:`Préférences` "
+"(KDE, Windows)."
 
 # 5a86b7464e624590b40286b884f67839
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:125
@@ -248,6 +256,8 @@ msgid ""
 "Click on the |geographic| :sup:`CRS status` icon in the lower right-hand "
 "corner of the statusbar."
 msgstr ""
+"Cliquer sur l'icône |geographic| :sup:`Statut de la projection` depuis le "
+"coin inférieur droit de la barre d'état."
 
 # 298bd7640af745318e84152ca175f359
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:127
@@ -256,6 +266,9 @@ msgid ""
 "guilabel:`Options` dialog and selecting |checkbox| :guilabel:`Enable 'on the "
 "fly' reprojection by default`"
 msgstr ""
+"Choisir d'activer la projection à la volée par défaut en cochant la case |"
+"checkbox| :guilabel:`Activer la reprojection 'à la volée' par défaut` dans "
+"l'onglet :guilabel:`SCR` de la fenêtre des :guilabel:`Options`."
 
 # 0ee905fe15694c23af5bd0465a2159d5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:132
@@ -267,6 +280,14 @@ msgid ""
 "geographic| :sup:`CRS status` icon will no longer be greyed-out and all "
 "layers will be OTF projected to the CRS shown next to the icon."
 msgstr ""
+"Si vous avez déjà chargé une couche, et désirez activer la projection à la "
+"volée, la meilleure façon de faire est d'ouvrir l'onglet  :guilabel:`Système "
+"de coordonnées de référence` de la fenêtre des  :guilabel:`Propriétés du "
+"projet`, de sélectionner le SCR de la couche chargée, et de cocher la case |"
+"checkbox| :guilabel:`Activer la projection à la volée`. L'icône |"
+"geographic| :sup:`Statut de la projection` ne sera plus grisé et toutes les "
+"couches chargées plus tard seront projetées à la volée dans le SCR défini "
+"qui apparait à gauche de l'icône."
 
 # 0e8a91fac8ab41b59af405dab2fee9db
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:139
@@ -275,6 +296,9 @@ msgid ""
 "Properties` dialog contains five important components as shown in "
 "Figure_projection_2_ and described below."
 msgstr ""
+"L'onglet:guilabel:`Système de Coordonnées de Référence` de la fenêtre de  :"
+"guilabel:`Propriétés du projet` contient cinq composants importants comme "
+"indiqué sur la figure Figure_projection_2_ et décrit ci-dessous."
 
 # c0720d83ec6648d5922ef4692a0eabde
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:160
@@ -285,6 +309,12 @@ msgid ""
 "are inactive. When on, the coordinates in each layer are projected to the "
 "coordinate reference system defined for the map canvas."
 msgstr ""
+"**Activer la projection à la volée** - cette case à cocher est utilisée pour "
+"activer ou désactiver la projection à la volée. Lorsqu'elle est décochée, "
+"chaque couche est dessinée en utilisant les coordonnées lues dans la source "
+"de données et les composants décrits ci-dessous sont inactifs. Lorsqu'elle "
+"est activée, les coordonnées de chaque couche sont projetées dans le système "
+"de coordonnées de référence défini pour la carte."
 
 # fac5a65dbaf242f794f03557b44ca29c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:165
@@ -294,6 +324,11 @@ msgid ""
 "systems. To define a CRS,  select it from the list by expanding the "
 "appropriate node and selecting the CRS. The active CRS is preselected."
 msgstr ""
+"**Système de Coordonnées de Référence** - c'est une liste de tous les SCR "
+"gérés par QGIS, incluant les systèmes de coordonnées de référence "
+"géographiques, projetés et personnalisés. Pour utiliser un SCR, sélectionnez-"
+"le dans la liste en dépliant le noeud approprié et en choisissant le système "
+"de coordonnées. Le SCR actif est présélectionné."
 
 # 1b122a62226f44dea38fe8d1e1f8a812
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:169
@@ -301,6 +336,9 @@ msgid ""
 "**Proj4 text** - this is the CRS string used by the Proj4 projection engine. "
 "This text is read-only and provided for informational purposes."
 msgstr ""
+"**Texte Proj4** - c'est la chaîne, décrivant le SCR, qui est utilisée par le "
+"moteur de projection Proj4. Ce texte est en lecture seule et est fourni à "
+"titre informatif."
 
 # 8914686801f449778d1e01225380d7cd
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:172
@@ -310,6 +348,11 @@ msgid ""
 "Enter the identifier and click on **[Find]**. Use the |checkbox| :guilabel:"
 "`Hide deprecated CRSs` checkbox to show only the currently valid projections."
 msgstr ""
+"**Rechercher** - si vous connaissez le code EPSG, l'identifiant ou le nom "
+"d'un système de coordonnées de référence, vous pouvez utiliser la fonction "
+"rechercher pour le retrouver. Entrez le code et cliquez sur le bouton **"
+"[Trouver]**, cochez la case  |checkbox| :guilabel:`Masquer les SCR "
+"obsolètes` pour n'obtenir que les projections valides."
 
 # e0ea52c276bb492688d89362375acb8c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:177
@@ -319,11 +362,14 @@ msgid ""
 "of the Projection Dialog. Click on one of these buttons to select the "
 "associated CRS."
 msgstr ""
+"**SCR utilisés récemment** - si vous utilisez certains SCR fréquemment dans "
+"vos travaux quotidiens, ils seront affichés dans la table dans la fenêtre de "
+"projection."
 
 # af88a8c9a86b43c59b1ad4378b23f41a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:183
 msgid "**Project Properties Dialog**"
-msgstr ""
+msgstr "**Fenêtre Propriétés du projet**"
 
 # 9255d7ab63de414baf318376df9ecaac
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:185
@@ -333,6 +379,10 @@ msgid ""
 "Windows) menu, you must click on the :guilabel:`Coordinate Reference System` "
 "tab to view the CRS settings."
 msgstr ""
+"Si vous ouvrez la fenêtre  :guilabel:`Propriétés du projet` à partir du "
+"menu :menuselection:`Éditer` (Gnome, OSX) ou :menuselection:`Préférences` "
+"(KDE, Windows) , vous devez cliquer sur l'onglet :guilabel:`Système de "
+"Coordonnées de Référence` pour voir les définitions des SCR."
 
 # 14a37c09531847c9b9ba05b4bd569412
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:190
@@ -341,11 +391,14 @@ msgid ""
 "automatically bring the :guilabel:`Coordinate Reference System` tab to the "
 "front."
 msgstr ""
+"Ouvrir la fenêtre à partir de l'icône |geographic| :guilabel:`Statut de la "
+"projection` vous amènera directement dans l'onglet  :guilabel:`Système de "
+"Coordonnées de Référence`."
 
 # 28ed5ed2029640a9811ee47fafefd399
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:197
 msgid "Custom Coordinate Reference System"
-msgstr ""
+msgstr "Système de Coordonnées de Référence personnalisé"
 
 # 0ae637dda1d94dc0b92184cbd554ac69
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:201
@@ -357,6 +410,13 @@ msgid ""
 "database. In addition to your custom CRS, this database also contains your "
 "spatial bookmarks and other custom data."
 msgstr ""
+"Si QGIS ne fournit pas le système de coordonnées de référence dont vous avez "
+"besoin, vous pouvez en définir un. Pour cela, sélectionnez |mIconNew|:"
+"guilabel:`Projection personnalisée` à partir du menu :menuselection:`Éditer` "
+"(Gnome, OSX) ou :menuselection:`Préférences` (KDE, Windows).  Les SCR "
+"personnalisés sont stockés dans votre base de données utilisateur de QGIS.  "
+"En plus de ceux-ci, cette base de données contient également vos signets "
+"spatiaux et autres données personnalisées."
 
 # 2634db9d581e4c9bbcd3950d8d93b5ce
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:222
@@ -367,6 +427,12 @@ msgid ""
 "U.S. Geological Survey Open-File Report 90-284, 1990 (available at ftp://ftp."
 "remotesensing.org/proj/OF90-284.pdf )."
 msgstr ""
+"Définir un SCR personnalisé dans QGIS nécessite une bonne compréhension de "
+"la bibliothèque de projection Proj4. Pour commencer, référez vous aux "
+"Procédures de Projection Cartographique pour l'environnement UNIX - Un "
+"manuel d'utilisateur de Gerald I. Evenden, U.S. Geological Survey Open-File "
+"Report 90-284, 1990 (available at ftp://ftp.remotesensing.org/proj/OF90-284."
+"pdf)."
 
 # b3efef12e7584792944538bc41ad4fc6
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:228
@@ -375,6 +441,10 @@ msgid ""
 "utilities. The cartographic parameters used with ``proj.4`` are described in "
 "the user manual and are the same as those used by QGIS."
 msgstr ""
+"Ce manuel décrit l'utilisation de ``proj.4`` et les applications en lignes "
+"de commandes liées. Les paramètres cartographiques utilisés avec ``proj.4`` "
+"sont décrit dans le manuel utilisateur et sont les mêmes que ceux utilisés "
+"par QGIS."
 
 # eaedba33babe4d06a4e53bc2ef6d9e3b
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:232
@@ -382,16 +452,19 @@ msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
 msgstr ""
+"La fenêtre :guilabel:`Définir un système de coordonnées de référence "
+"personnalisé` nécessite seulement deux paramètres pour définir un  SCR "
+"personnalisé :"
 
 # 7ee40f79edc649639bfd110a0fd83ed5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:235
 msgid "a descriptive name and"
-msgstr ""
+msgstr "un nom descriptif et"
 
 # 489aa504bbfb4c4ba9e97a3f831db7d0
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:236
 msgid "the cartographic parameters in PROJ.4 format."
-msgstr ""
+msgstr "les paramètres cartographiques au format PROJ.4."
 
 # e7265de033ec48a38145b5aef7b4c243
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:238
@@ -400,6 +473,10 @@ msgid ""
 "descriptive name and the CRS parameters. After that you can save your CRS by "
 "clicking the |mActionFileSave| :sup:`Save` button."
 msgstr ""
+"Pour créer un nouveau SCR, cliquez sur le bouton |mIconNew| :sup:`Nouveau` "
+"et entrez un nom descriptif et les paramètres du SCR. Après cela, vous "
+"pouvez  le sauvegarder en cliquant sur le bouton  |mActionFileSave| :sup:"
+"`Sauvegarder`."
 
 # a1677b5adb7a4eb091dd14438795c454
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:242
@@ -407,6 +484,8 @@ msgid ""
 "Note that the :guilabel:`Parameters` must begin with a ``+proj=``-block, to "
 "represent the new coordinate reference system."
 msgstr ""
+"Remarquez que les :guilabel:`Paramètres` doivent débuter par un  bloc ``"
+"+proj=`` pour représenter le nouveau système de coordonnées de référence."
 
 # 96714f3a3cd24c6ba9ab42b770289780
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:245
@@ -418,3 +497,10 @@ msgid ""
 "guilabel:`East` fields respectively. Click on **[Calculate]** and compare "
 "the results with the known values in your coordinate reference system."
 msgstr ""
+"Vous pouvez tester vos paramètres de SCR pour voir s'ils produisent des "
+"résultats valides en utilisant le bouton **[Calculer]** dans le bloc   :"
+"guilabel:`Test`. Copiez vos paramètres de projection dans le champ :guilabel:"
+"`Paramètres`, puis entrez des latitude et longitude connues en WGS 84 dans "
+"les champs :guilabel:`Nord` et :guilabel:`Est` respectivement. Cliquez sur "
+"le bouton **[Calculer]** et comparez les résultats avec les valeurs connues "
+"dans votre système de coordonnées de référence."
