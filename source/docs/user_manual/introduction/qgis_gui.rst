@@ -418,7 +418,7 @@ for information on editing GRASS vector layers.
 
    * :menuselection:`Make to toplevel item`
    * :menuselection:`Group Selected`
-   * :menuselection:`Show file groups`
+..   * :menuselection:`Show file groups`
 
 \
 
@@ -447,7 +447,7 @@ for information on editing GRASS vector layers.
 
    * :menuselection:`Make to toplevel item`
    * :menuselection:`Group Selected`
-   * :menuselection:`Show file groups`
+..   * :menuselection:`Show file groups`
 
 \
 
@@ -462,9 +462,9 @@ for information on editing GRASS vector layers.
  * :menuselection:`Collapse all`
  * :menuselection:`Update Drawing Order`
 
-   Additionally, according to position
+..   Additionally, according to position
 
-   *  :menuselection:`Show file groups`
+..   *  :menuselection:`Show file groups`
 
 
 It is possible to select more than one layer or group at the same time
