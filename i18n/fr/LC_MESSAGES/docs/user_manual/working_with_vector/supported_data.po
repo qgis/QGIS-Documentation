@@ -15,6 +15,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr\n"
+"X-Source-Language: C\n"
 
 # 7fa96c3c27d74e94b6e3a8cbf5058c6b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:9
@@ -28,20 +31,20 @@ msgid ""
 "ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS, SpatiaLite, "
 "Oracle Spatial databases and many more. The vector data can also be loaded "
 "in read mode from zip and gzip archives into QGIS. At the date of this "
-"document, 69 vector formats are supported by the OGR library (see OGR-"
-"SOFTWARE-SUITE :ref:`literature_and_web`). The complete list is available at "
-"http://www.gdal.org/ogr/ogr_formats.html. GRASS vector and PostgreSQL "
-"support is supplied by native QGIS data provider plugins."
+"document, 69 vector formats are supported by the OGR library (see "
+"OGR-SOFTWARE-SUITE :ref:`literature_and_web`). The complete list is "
+"available at http://www.gdal.org/ogr/ogr_formats.html. GRASS vector and "
+"PostgreSQL support is supplied by native QGIS data provider plugins."
 msgstr ""
 "|qg| utilise la bibliothèque OGR pour lire et écrire des données "
 "vectorielles incluant les formats ESRI Shapefiles, MapInfo et Microstation ; "
 "les bases de données PostGIS, Spatialite, Oracle Spatial et de nombreux "
 "autres formats. Les données vectorielles peuvent également être lues depuis "
 "des archives zip ou gzip. A ce jour, 69 formats de données vectorielles sont "
-"gérés par la bibliothèque OGR (voir OGR-SOFTWARE-SUITE :ref:"
-"`literature_and_web`). La liste complète est disponible sur http://www.gdal."
-"org/ogr/ogr_formats.html. Les données vectorielles GRASS et PostgreSQL sont "
-"gérées par des extensions natives de QGIS."
+"gérés par la bibliothèque OGR (voir OGR-SOFTWARE-SUITE "
+":ref:`literature_and_web`). La liste complète est disponible sur "
+"http://www.gdal.org/ogr/ogr_formats.html. Les données vectorielles GRASS et "
+"PostgreSQL sont gérées par des extensions natives de QGIS."
 
 # fb1509085c024181ae78d233802c49ad
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:22
@@ -66,8 +69,8 @@ msgstr ""
 msgid ""
 "Working with GRASS vector data is described in Section :ref:`sec_grass`."
 msgstr ""
-"Le travail sur des couches vectorielles GRASS est décrit dans la Section :"
-"ref:`sec_grass`."
+"Le travail sur des couches vectorielles GRASS est décrit dans la Section "
+":ref:`sec_grass`."
 
 # f41e3fbc802b4eb08c08a1359c9d9e43
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:31
@@ -94,9 +97,12 @@ msgstr "Shapefiles ESRI"
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:45
 msgid ""
 "The standard vector file format used in |qg| is the ESRI Shapefile. Support "
-"is provided by the :index:`OGR Simple Feature Library` ( http://www.gdal.org/"
-"ogr/ )."
+"is provided by the :index:`OGR Simple Feature Library` ( "
+"http://www.gdal.org/ogr/ )."
 msgstr ""
+"Le format de fichier vecteur standard utilisé par QGIS est le Shapefile "
+"ESRI. Il est géré à travers la bibliothèque :index:`OGR Simple Feature "
+"Library` ( http://www.gdal.org/ogr/ )."
 
 # 25e230857db04781b95412ea431dcd9a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:49
@@ -104,21 +110,23 @@ msgid ""
 "A shapefile actually consists of several files. The following three are "
 "required:"
 msgstr ""
+"Un shapefile est en réalité composé de plusieurs fichiers. Les trois "
+"suivants sont requis :"
 
 # 733432dc73264c7faa43306830008280
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:52
 msgid ":file:`.shp` file containing the feature geometries."
-msgstr ""
+msgstr ":file:`.shp` fichier contenant la géométrie des entités."
 
 # 8a97372c9c7a489f986d89b2159be93b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:53
 msgid ":file:`.dbf` file containing the attributes in dBase format."
-msgstr ""
+msgstr ":file:`.dbf` fichier contenant les attributs au format dBase."
 
 # 2c907e2db21e4ac481ba46a6cb286ebf
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:54
 msgid ":file:`.shx` index file."
-msgstr ""
+msgstr ":file:`.shx` fichier d'index."
 
 # 310dd9a5976945ec9081c61dd70c2359
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:56
@@ -129,11 +137,18 @@ msgid ""
 "additional files. For further details see the ESRI technical specification "
 "at: http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 msgstr ""
+"Un shapefile inclu également un fichier ayant l'extension :file:`.prj` qui "
+"contient les informations sur le système de coordonnées. Bien que ces "
+"informations soient très utiles elles ne sont pas obligatoires. Il peut y "
+"avoir encore d'autres fichiers associés aux données shapefile. Si vous "
+"souhaitez avoir plus de détails nous vous recommandons de vous reporter aux "
+"spécifications techniques du format shapefile, qui se trouve notamment sur "
+"http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 
 # fb7895208cdd47868ea16211f8456c25
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:66
 msgid "Loading a Shapefile"
-msgstr ""
+msgstr "Charger un Shapefile"
 
 # 7d812b5de0574e9d9dba4b3b9733881f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:68
@@ -143,6 +158,10 @@ msgid ""
 "type :kbd:`Ctrl+Shift+V`. This will bring up a new window (see "
 "figure_vector_1_)."
 msgstr ""
+"|mActionAddNonDbLayer| Pour :index:`charger un shapefile`, lancez |qg| et "
+"cliquez sur le bouton |mActionAddNonDbLayer| :sup:`Ajouter une couche "
+"vecteur` ou pressez les touches :kbd:`Ctrl+Shift+V`. Une nouvelle fenêtre "
+"apparaîtra (voir figure_vector_1_)."
 
 # dbcaac5461794abb9a620c685218a8b1
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:86
@@ -154,23 +173,34 @@ msgid ""
 "of type` |selectstring| allows you to preselect some OGR supported file "
 "formats."
 msgstr ""
+"Cliquez sur |radiobuttonon| :guilabel:`Fichier` puis sur le bouton "
+"**[Parcourir]**. L'outil ouvre alors une fenêtre de dialogue standard (voir "
+"figure_vector_2_) qui vous permet de naviguer dans les répertoires et les "
+"fichiers et charger le shapefile ou tout autre format géré. La boîte de "
+"sélection \\:guilabel:`Fichiers de type ` |selectstring| vous permet de "
+"présélectionner un format de fichier géré par OGR."
 
 # 41c7f19794a9429a9ea72dc028138a8a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:93
 msgid "You can also select the Encoding type for the shapefile if desired."
 msgstr ""
+"Si vous le souhaitez, vous pouvez également sélectionner le type de codage "
+"du shapefile."
 
 # 3a8f847a2e9c48a787f52bb5a82a6e52
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:108
 msgid ""
-"Selecting a shapefile from the list and clicking **[Open]** loads it into |"
-"qg|. Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file."
+"Selecting a shapefile from the list and clicking **[Open]** loads it into "
+"|qg|. Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file."
 msgstr ""
+"Sélectionner un shapefile dans la liste puis cliquer sur **[Ouvrir]** le "
+"charge dans QGIS. Figure_vector_3_ montre QGIS après avoir chargé le fichier "
+":file:`alaska.shp`."
 
 # c2aa98b18ded477b9afd51b1300a4b9c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:127
 msgid "**Layer Colors**"
-msgstr ""
+msgstr "**Couleur des couches**"
 
 # 67546799fca544a5a71e3f28b7148d55
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:129
@@ -178,6 +208,9 @@ msgid ""
 "When you add a layer to the map, it is assigned a random color. When adding "
 "more than one layer at a time, different colors are assigned to each layer."
 msgstr ""
+"Quand vous ajoutez une couche sur une carte, une couleur aléatoire lui est "
+"assignée. En ajoutant plusieurs couches en une fois, différentes couleurs "
+"sont assignées à chacune des couches."
 
 # 1ef2abd83aa34dc3b0a5381e0d3334c0
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:133
@@ -189,11 +222,19 @@ msgid ""
 "See Section :ref:`vector_style_tab` for more information on setting "
 "symbology of vector layers."
 msgstr ""
+"Une fois chargée, vous pouvez zoomer sur le shapefile en utilisant les "
+"outils de navigation sur la carte. Pour changer la symbologie d'une couche, "
+"ouvrez la fenêtre :guilabel:`Propriétés de la Couche` en double-cliquant sur "
+"le nom de la couche ou en faisant un clic droit sur son nom dans la légende "
+"et en choisissant :menuselection:`Propriétés` dans le menu qui apparait. "
+"Pour plus de détails sur les paramètres de la symbologie des couches "
+"vectorielles, référez-vous à la Section :ref:`vector_style_tab`."
 
 # ebdefb79f0cd4c4e9e524032c6958656
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:142
 msgid "**Load layer and project from mounted external drives on OS X**"
 msgstr ""
+"**Charger une couche et un projet depuis un lecteur externe sous OS X**"
 
 # 1fe49784c6a04c82b6abee73ee765875
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:144
@@ -204,11 +245,18 @@ msgid ""
 "you can type '/Volumes' in the File name box and press :kbd:`return`. Then "
 "you can navigate to external drives and network mounts."
 msgstr ""
+"Sous OS X, les lecteurs portables qui sont montés à côté du disque dur "
+"primaire n'apparaissent pas dans :menuselection:`Fichier --> Ouvrir un "
+"Projet ` comme attendu. Nous travaillons sur le support des fenêtres "
+"d'ouverture/enregistrement natives d'OS X pour résoudre ce problème. Pour y "
+"pallier, vous pouvez taper '/Volumes' dans la boîte de nom Fichier et "
+"appuyer sur press :kbd:`Entrée`. Vous pouvez ensuite parcourir les lecteurs "
+"externes et les montages réseau."
 
 # a080e68ca69646dcbb61876edad8816f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:153
 msgid "Improving Performance Shape"
-msgstr ""
+msgstr "Améliorer les performances d'affichage"
 
 # cedb792909344c00816d954d4421d900
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:155
@@ -217,30 +265,39 @@ msgid ""
 "index. A spatial index will improve the speed of both zooming and panning. "
 "Spatial indexes used by |qg| have a :file:`.qix` extension."
 msgstr ""
+"Pour améliorer les performances de dessin d'un shapefile, vous pouvez créer "
+"un index spatial. Un index spatial améliorera à la fois la vitesse "
+"d'exécution du zoom et du déplacement panoramique. Les index spatiaux "
+"utilisés par QGIS ont une extension :file:`.qix`."
 
 # 0bc69935808840ec910d2ab8cc2ce1c8
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:159
 msgid "Use these steps to create the index:"
-msgstr ""
+msgstr "Voici les étapes de création d'un index spatial :"
 
 # 373948666d074e258a890e79d6634a11
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:162
 msgid "Load a shapefile."
-msgstr ""
+msgstr "Chargez un shapefile."
 
 # 0f9360580907494fb260b871716e5807
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:163
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
-"shapefile name in the legend or by right-clicking and choosing :"
-"menuselection:`Properties` from the popup menu."
+"shapefile name in the legend or by right-clicking and choosing "
+":menuselection:`Properties` from the popup menu."
 msgstr ""
+"Ouvrez la fenêtre :guilabel:`Propriétés de la Couche` en double-cliquant sur "
+"le nom de la couche dans la légende ou en faisant un clic droit et en "
+"choisissant :menuselection:`Propriétés` dans le menu qui apparait."
 
 # a368fd13df974f10a38e79a246e1bc3e
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:166
 msgid ""
 "In the tab :guilabel:`General` click the **[Create Spatial Index]** button."
 msgstr ""
+"Dans l'onglet :guilabel:`Général`, cliquez sur le bouton **[Créer un index "
+"spatial]**."
 
 # e06ee8cf42d74fb6b4a49e2c62632dab
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:171
@@ -252,8 +309,8 @@ msgstr ""
 msgid ""
 "If you load a shapefile with :file:`.prj` file and |qg| is not able to read "
 "the coordinate reference system from that file, you have to define the "
-"proper projection manually within the :guilabel:`General` tab of the :"
-"guilabel:`Layer Properties` dialog of the layer. This is due to the fact, "
+"proper projection manually within the :guilabel:`General` tab of the "
+":guilabel:`Layer Properties` dialog of the layer. This is due to the fact, "
 "that :file:`.prj` files often do not provide the complete projection "
 "parameters, as used in |qg| and listed in the :guilabel:`CRS` dialog."
 msgstr ""
@@ -264,8 +321,8 @@ msgid ""
 "For that reason, if you create a new shapefile with |qg|, two different "
 "projection files are created. A :file:`.prj` file with limited projection "
 "parameters, compatible with ESRI software, and a :file:`.qpj` file, "
-"providing the complete parameters of the used CRS. Whenever |qg| finds a :"
-"file:`.qpj` file, it will be used instead of the :file:`.prj`."
+"providing the complete parameters of the used CRS. Whenever |qg| finds a "
+":file:`.qpj` file, it will be used instead of the :file:`.prj`."
 msgstr ""
 
 # 759d49a203e2477bb480c3ffbdb776e7
@@ -276,9 +333,9 @@ msgstr ""
 # b9dc838879614db28e95562d219c1e0b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:194
 msgid ""
-"|mActionAddNonDbLayer| To load a MapInfo layer, click on the |"
-"mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type :kbd:"
-"`Ctrl+Shift+V`, change the file type filter to :guilabel:`Files of Type "
+"|mActionAddNonDbLayer| To load a MapInfo layer, click on the "
+"|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
+":kbd:`Ctrl+Shift+V`, change the file type filter to :guilabel:`Files of Type "
 "[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)` |selectstring| and select the .TAB "
 "or .tab layer you want to load."
 msgstr ""
@@ -291,10 +348,10 @@ msgstr ""
 # cdf0e94341da48e3bbedaf199111911e
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:208
 msgid ""
-"|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the |"
-"mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type :kbd:"
-"`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select |"
-"radiobuttonon| :guilabel:`Directory`. Change to  :guilabel:`Type Arc/Info "
+"|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the "
+"|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
+":kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select "
+"|radiobuttonon| :guilabel:`Directory`. Change to  :guilabel:`Type Arc/Info "
 "Binary Coverage` |selectstring|. Navigate to the directory that contains the "
 "coverage files and select it."
 msgstr ""
@@ -331,13 +388,13 @@ msgid ""
 "|mActionAddLayer| The first time you use a PostGIS data source, you must "
 "create a connection to the PostgreSQL database that contains the data. Begin "
 "by clicking on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar "
-"button, selecting the |mActionAddLayer| :menuselection:`Add PostGIS Layer..."
-"` option from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`. "
-"You can also open the :guilabel:`Add Vector Layer` dialog and select |"
-"radiobuttonon| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)` "
-"dialog will be displayed. To access the connection manager, click on the **"
-"[New]** button to display the :guilabel:`Create a New PostGIS Connection` "
-"dialog. The parameters required for a connection are:"
+"button, selecting the |mActionAddLayer| :menuselection:`Add PostGIS "
+"Layer...` option from the :menuselection:`Layer` menu or typing "
+":kbd:`Ctrl+Shift+D`. You can also open the :guilabel:`Add Vector Layer` "
+"dialog and select |radiobuttonon| :guilabel:`Database`. The :guilabel:`Add "
+"PostGIS Table(s)` dialog will be displayed. To access the connection "
+"manager, click on the **[New]** button to display the :guilabel:`Create a "
+"New PostGIS Connection` dialog. The parameters required for a connection are:"
 msgstr ""
 
 # 789560e9ecf540c7b23318a071c1ffcf
@@ -663,9 +720,9 @@ msgstr ""
 # b3e6fde30622488aadae0dbdee91a00b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:416
 msgid ""
-"Like the import-tool **shp2pgsql** there is also a tool to export PostGIS-"
-"datasets as shapefiles: **pgsql2shp**. This is shipped within your PostGIS "
-"distribution."
+"Like the import-tool **shp2pgsql** there is also a tool to export "
+"PostGIS-datasets as shapefiles: **pgsql2shp**. This is shipped within your "
+"PostGIS distribution."
 msgstr ""
 
 # cf78ae1249734fb98fb0a7092d6088f4
@@ -713,8 +770,8 @@ msgstr ""
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need "
 "to create them manually using the normal SQL-command **CREATE INDEX** "
-"afterwards as an extra step (as described in the next section :ref:"
-"`vector_improving_performance`)."
+"afterwards as an extra step (as described in the next section "
+":ref:`vector_improving_performance`)."
 msgstr ""
 
 # 14c8a99495934fa6832051b5ade18a8f
@@ -778,12 +835,12 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:542
 msgid ""
 "A workaround is to transform the longitude values using PostGIS and the "
-"**ST_Shift_Longitude** function (see http://postgis.refractions.net/"
-"documentation/manual-1.4/ST\\_Shift\\_Longitude.html). This function reads "
-"every point/vertex in every component of every feature in a geometry, and if "
-"the longitude coordinate is < 0 |degrees| adds 360 |degrees| to it. The "
-"result would be a 0 |degrees| - 360 |degrees| version of the data to be "
-"plotted in a 180 |degrees| centric map."
+"**ST_Shift_Longitude** function (see "
+"http://postgis.refractions.net/documentation/manual-1.4/ST\\_Shift\\_Longitude.html). "
+"This function reads every point/vertex in every component of every feature "
+"in a geometry, and if the longitude coordinate is < 0 |degrees| adds 360 "
+"|degrees| to it. The result would be a 0 |degrees| - 360 |degrees| version "
+"of the data to be plotted in a 180 |degrees| centric map."
 msgstr ""
 
 # 8c477519b540412182c2df383e10132f
@@ -828,8 +885,8 @@ msgstr ""
 msgid ""
 "|mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite "
 "database, begin by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add "
-"SpatiaLite Layer` toolbar button or by selecting the |"
-"mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option "
+"SpatiaLite Layer` toolbar button or by selecting the "
+"|mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option "
 "from the :menuselection:`Layer` menu or by typing :kbd:`Ctrl+Shift+L`. This "
 "will bring up a window, which will allow you to either connect to a "
 "SpatiaLite database already known to |qg|, which you can choose from the "
@@ -845,8 +902,8 @@ msgid ""
 "right clicking the layer in the legend. Then click on :menuselection:`Save "
 "as`, define the name of the output file, sqlite as format and the CRS and "
 "then add ``SPATIALITE=YES`` in the OGR data source creation option field. "
-"This tells OGR to create a SpatiaLite database. See also http://www.gdal.org/"
-"ogr/drv_sqlite.html."
+"This tells OGR to create a SpatiaLite database. See also "
+"http://www.gdal.org/ogr/drv_sqlite.html."
 msgstr ""
 
 # 4414080c4a3140748d1d8dc48193eebe
@@ -862,8 +919,8 @@ msgstr ""
 # 1c8646f1dfa84e549846e49fbfcda4d9
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:607
 msgid ""
-"If you want to create a new SpatiaLite layer, please refer to section :ref:"
-"`vector_create_spatialite`."
+"If you want to create a new SpatiaLite layer, please refer to section "
+":ref:`vector_create_spatialite`."
 msgstr ""
 
 # 7e675417e6a84273ba66fb0ce2eca4cf
@@ -887,8 +944,8 @@ msgstr ""
 # 87d42488288b47cc8f127512507a3570
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:625
 msgid ""
-"QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer| :"
-"sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available "
-"in the MS SQL node in the QBrowser tree, providing drag and drop import "
-"support."
+"QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer| "
+":sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or "
+"available in the MS SQL node in the QBrowser tree, providing drag and drop "
+"import support."
 msgstr ""
