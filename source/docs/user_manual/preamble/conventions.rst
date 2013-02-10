@@ -55,7 +55,9 @@ correspond to any actual appearance.
 .. *  Name of a Field: \fieldname{NAMES}
 .. *  SQL Table: \sqltable{example needed here}
 
-Lines of code are indicated by a fixed-width font::
+Lines of code are indicated by a fixed-width font
+
+::
 
     PROJCS["NAD_1927_Albers",
       GEOGCS["GCS_North_American_1927",
