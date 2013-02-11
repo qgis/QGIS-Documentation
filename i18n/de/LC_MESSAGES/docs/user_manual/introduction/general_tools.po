@@ -78,7 +78,7 @@ msgstr ""
 # 7d876a51ec1e41fcb0f91a5349897591
 #: ../../source/docs/user_manual/introduction/general_tools.rst:59
 msgid "Rendering"
-msgstr "Rendern"
+msgstr "Layeranzeige kontrollieren"
 
 # e41d7ef8249c4edaabedd0dc83d7aeba
 #: ../../source/docs/user_manual/introduction/general_tools.rst:63
@@ -204,7 +204,7 @@ msgstr ""
 # b92ef933f8e9475c9c8d104950c5a739
 #: ../../source/docs/user_manual/introduction/general_tools.rst:115
 msgid "Any combination of the above"
-msgstr ""
+msgstr "Eine Kombination aus den oben genannten Punkten"
 
 # e2d766a55f844ab9a468798842f7e795
 #: ../../source/docs/user_manual/introduction/general_tools.rst:117
@@ -212,11 +212,13 @@ msgid ""
 "Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
 "causes an immediate refresh of the map canvas."
 msgstr ""
+"Wenn Sie die |checkbox| :guilabel:`Zeichnen` aktivieren, findet automatisch "
+"eine Erneuerung der Wiedergabe des Kartenfensters statt."
 
 # 420edf433a354813bc263790f31e9c4e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:123
 msgid "b) Setting Layer Add Option"
-msgstr ""
+msgstr "b) Option für Layer hinzufügen"
 
 # c9db6ba0733744bca828dc974caad19e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:128
@@ -229,11 +231,18 @@ msgid ""
 "layers added to the map should be displayed` checkbox. Any layer added to "
 "the map will be off (invisible) by default."
 msgstr ""
+"Sie können für das Hinzuladen neuer Layer eine Einstellung vornehmen, die "
+"bewirkt, dass diese beim Laden erst einmal nicht angezeigt werden. Um diese "
+"Option zu nutzen deaktivieren Sie in der Menuleiste unter "
+":menuselection:`Einstellungen -->Optionen --> im Reiter "
+":guilabel:`Darstellung das Kontrollkästchen |checkbox| "
+":guilabel:`Normalerweise werden alle neuen Layer im Kartenfenster "
+"angezeigt`. Dadurch werden alle neu geladenen Layer erstmal nicht angezeigt."
 
 # ba3a6997c8a348f9a1babd2ea4ed7044
 #: ../../source/docs/user_manual/introduction/general_tools.rst:137
 msgid "Stopping Rendering"
-msgstr ""
+msgstr "Zeichnen stoppen"
 
 # 37b695ed523248e984aede405d51356a
 #: ../../source/docs/user_manual/introduction/general_tools.rst:144
@@ -243,6 +252,10 @@ msgid ""
 "bit of time between pressing :kbd:`ESC` and the time the map drawing is "
 "halted."
 msgstr ""
+"Um die Wiedergabe einer Karte zu stoppen drücken Sie die :kbd:`ESC` Taste. "
+"Dies stoppt die Erneuerung der Wiedergabe und die Karte wird nur zum Teil "
+"angezeigt. Es kann sein dass etwas Zeit zwischen dem Drücken der :kbd:`Esc` "
+"Taste und dem Stoppen der Kartenwiedergabe vergeht."
 
 # 83995c4f76e446e78e582c5ebed9fccd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:149
@@ -250,11 +263,14 @@ msgid ""
 "It is currently not possible to stop rendering - this was disabled in qt4 "
 "port because of User Interface (UI) problems and crashes."
 msgstr ""
+"Es ist derzeit nicht möglich das Zeichnen zu stoppen - diese Funktion wurde "
+"mit der Version qt4 ausgeschaltet da es zu Problemen und Abstürzen der "
+"Benutzeroberfläche kam. "
 
 # dc0adedb3e8644e7ba6a6fe3fcbfdced
 #: ../../source/docs/user_manual/introduction/general_tools.rst:155
 msgid "c) Updating the Map Display During Rendering"
-msgstr ""
+msgstr "c) Anpassen des Kartenfensters bei der Wiedergabe"
 
 # a6a2b88b5cdb425e8587a74e5cd94b3f
 #: ../../source/docs/user_manual/introduction/general_tools.rst:160
@@ -269,11 +285,20 @@ msgid ""
 "poor performance as the map canvas is continually updated during the reading "
 "of the features. A suggested value to start with is 500."
 msgstr ""
+"Normalerweise werden in QGIS Inhalte von Layern erst visualisiert wenn "
+"sämtliche Daten geladen sind. Um zu bewirken, dass die Inhalte von Layern "
+"direkt beim Lesen angezeigt werden, verändern Sie in der Menüleiste unter "
+":menuselection:`Einstellungen -->Optionen` im Reiter :guilabel:`Darstellung` "
+"die Anzahl von Objekten, nach deren Zeichnung die Anzeige aktualisiert "
+"werden soll. Der Wert 0 (Standard) verhindert die Aktualisierung während des "
+"Zeichnens. Bei zu niedrigem Wert leidet die Leistung, das ständig ein Update "
+"der Wiedergabe stattfindet. Zu Beginn ist oftmals ein Wert von 500 sinnvoll. "
+" "
 
 # 5a4e1549dcb8495c825f80eedd2b5978
 #: ../../source/docs/user_manual/introduction/general_tools.rst:173
 msgid "d) Influence Rendering Quality"
-msgstr ""
+msgstr "d) Die Qualität der Wiedergabe beeinflussen"
 
 # 9bf1cab6b5b943339b93558763ab37b6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:178
@@ -282,6 +307,10 @@ msgid ""
 "menu option :menuselection:`Settings --> Options` click on the "
 ":guilabel:`Rendering` tab and select or deselect following checkboxes."
 msgstr ""
+"Um die Wiedergabequalität der Layer zu beeinflussen gibt es drei "
+"Möglichkeiten. Öffnen Sie den Reiter :guilabel:`Darstellung` im Menü "
+":menuselection:`Einstellungen -->Optionen -->` und aktivieren bzw. "
+"deaktivieren Sie folgende Kontrollkästchen: "
 
 # 335d37a72ca34b5cba1db8445bdb639a
 #: ../../source/docs/user_manual/introduction/general_tools.rst:183
@@ -289,16 +318,18 @@ msgid ""
 "|checkbox| :guilabel:`Make lines appear less jagged at the expense of some "
 "drawing performance`"
 msgstr ""
+"|checkbox| :guilabel:`Linien auf Kosten der Zeichengeschwindigkeit weniger "
+"gezackt zeichnen`"
 
 # 866be9a8f32c45b9b0903cbd03fdce55
 #: ../../source/docs/user_manual/introduction/general_tools.rst:185
 msgid "|checkbox| :guilabel:`Fix problems with incorrectly filled polygons`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Problem mit falsch gefüllten Polygonen beheben`"
 
 # 0fe682b9151d4c6ba8c7dff2b126fedd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:190
 msgid "Measuring"
-msgstr ""
+msgstr "Messen"
 
 # 834aed343c25463e8091284f0d0ca34a
 #: ../../source/docs/user_manual/introduction/general_tools.rst:194
@@ -311,6 +342,14 @@ msgid ""
 "use the snapping settings from the digitizing module. This is useful, if you "
 "want to measure along lines or areas in vector layers."
 msgstr ""
+"Das Messen funktioniert mit Projektionen (z.B. UTM) und auch mit nicht "
+"projizierten Daten. Wenn die geladene Karte als Geografisches "
+"Koordinatensystem abgebildet wird (z.B. Latitude/Longitude) sind die "
+"Messergebnisse falsch. Sie müssen dann ein passendes KBS mit einer "
+"Projektion verwenden (siehe Abschnitt :ref:`label_projections`). Alle "
+"Meßwerkzeuge verwenden auch die eingestellte Fangtoleranz der "
+"Digitalisierung. Dies ist zum Beispiel dann sinnvoll, wenn Sie entlang von "
+"Linien oder Polygongrenzen geladener Vektorlayer messen wollen."
 
 # bd703b35cc04406aad907f549ee852d4
 #: ../../source/docs/user_manual/introduction/general_tools.rst:202
@@ -318,11 +357,13 @@ msgid ""
 "To select a measure tool click on |mActionMeasure| and select the tool you "
 "want to use."
 msgstr ""
+"Um ein Meßwerkzeug auszuwählen klicken Sie auf |mActionMeasure| und suchen "
+"das Werkzeug das sie benutzen wollen aus."
 
 # af822c35f0e9445ba20ee311106a940d
 #: ../../source/docs/user_manual/introduction/general_tools.rst:206
 msgid "Measure length, areas and angles"
-msgstr ""
+msgstr "Strecken, Flächen und Winkel messen"
 
 # 50a1956caffa45abb7fdc2091aed2551
 #: ../../source/docs/user_manual/introduction/general_tools.rst:215
@@ -336,6 +377,15 @@ msgid ""
 "points on the map. Each segment-length as well as the total shows up in the "
 "measure-window. To stop measuring click your right mouse button."
 msgstr ""
+"|mActionMeasure| QGIS kann reale Distanzen ziwschen Punkten auf Basis eines "
+"vorgegebenen Ellipsoiden messen. Dazu wählen Sie im Menü "
+":menuselection:`Einstellungen -->Optionen im Reiter "
+":guilabel:`Kartenwerkzeuge` einen Ellipsoiden aus. Es kann außerdem die "
+"Gummibandfarbe und die bevorzugte Maßeinheit eingestellt werden. Das "
+"Werkzeug ermöglicht es, Punkte im Kartenfenster auszuwählen. Jedes "
+"Längensegment wird in einem Popup angezeigt und zusätzlich auch die "
+"Gesamtlänge aller Längensegmente. Um das Messen von Strecken zu beenden, "
+"klicken Sie auf die rechte Maustaste.  "
 
 # 88a868a66cb545acbeb904c1c1e97eec
 #: ../../source/docs/user_manual/introduction/general_tools.rst:236
@@ -349,6 +399,15 @@ msgid ""
 "tools, each mouse click (within the tolerance setting) will snap to that "
 "layer."
 msgstr ""
+"|mActionMeasureArea| Auch Flächengrößen können gemessen werden. Das Popup "
+"zeigt dabei die akkumulierte Flächengröße. Zusätzlich schnappt das "
+"Meßwerkzeug auf den gerade ausgewählten Layer wenn für den entsprechenden "
+"Layer ein Fangmodus eingestellt wurde (siehe Abschnitt "
+":ref:`snapping_tolerance`). Wenn Sie also exakt entlang einer Linie oder "
+"Polygonumrandung messen möchten, setzen Sie erst eine Fangtoleranz und "
+"selektieren dann den Layer. Wenn Sie jetzt das Meßwerkzeug benutzen schnappt "
+"man mit jedem Mausklick (innerhalb der eingestellten Toleranz) auf den "
+"Layer. "
 
 # 9c575f6ba1574ce0a481975c0c19e32b
 #: ../../source/docs/user_manual/introduction/general_tools.rst:256
@@ -358,11 +417,16 @@ msgid ""
 "the angle you wish to measure, then move the the cursor to draw the desired "
 "angle. The measure is displayed in a popup dialog."
 msgstr ""
+"|mActionMeasureAngle| Auch Winkel können mit dem Winkel messen- Werkzeug "
+"gemessen werden. Der Mauszeiger wird zum Kreuz. Drücken Sie die linke "
+"Maustaste und zeichnen Sie das erste Segment des Winkels, klicken nochmals "
+"auf die linke Maustaste und messen sie den Winkel, der im Dialogfenster "
+"angezeigt wird."
 
 # 0c1d69cc13214000b6ef582c5d940a37
 #: ../../source/docs/user_manual/introduction/general_tools.rst:276
 msgid "Select and deselect features"
-msgstr ""
+msgstr "Objekte auswählen und Auswahl aufheben"
 
 # 11e5f9cbaca94d34b963860e77fb3174
 #: ../../source/docs/user_manual/introduction/general_tools.rst:278
@@ -371,41 +435,46 @@ msgid ""
 "canvas. To select one or several features just click on |mActionSelect| and "
 "select your tool:"
 msgstr ""
+"Die Werkzeugleiste bietet mehrere Werkzeuge, um Objekte im Kartenfenster "
+"auszuwählen. Um ein oder mehrere Objekte auszuwählen, klicken Sie auf "
+"|mActionSelect| und wählen Sie dann das entsprechende Werkzeug:  "
 
 # af492cc647314a0d9492a6c099d3ddd6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:282
 msgid "|mActionSelect| :sup:`Select single feature`"
-msgstr ""
+msgstr "|mActionSelect| :sup:`Einzelnes Objekt wählen`"
 
 # 29c60a2d79a542c58e11e65a029e1def
 #: ../../source/docs/user_manual/introduction/general_tools.rst:283
 msgid "|mActionSelectRectangle| :sup:`Select features by rectangle`"
-msgstr ""
+msgstr "|mActionSelectRectangle| :sup:`Objekte durch Rechteck wählen`"
 
 # ad5c56c935b54063ba512f78b255b086
 #: ../../source/docs/user_manual/introduction/general_tools.rst:284
 msgid "|mActionSelectPolygon| :sup:`Select features by polygon`"
-msgstr ""
+msgstr "|mActionSelectPolygon| :sup:`Objekte durch Polygon wählen`"
 
 # cb383340eec447549667f2c71867b027
 #: ../../source/docs/user_manual/introduction/general_tools.rst:285
 msgid "|mActionSelectFreehand| :sup:`Select features by freehand`"
-msgstr ""
+msgstr "|mActionSelectFreehand| :sup:`Objekte freihändig wählen`"
 
 # 9208594c7af4476abb4de4dc53d6c150
 #: ../../source/docs/user_manual/introduction/general_tools.rst:286
 msgid "|mActionSelectRadius| :sup:`Select features by radius`"
-msgstr ""
+msgstr "|mActionSelectRadius| :sup:`Objekte durch Radius wählen`"
 
 # 2c652ecca6d24d7a9e365864e1418dde
 #: ../../source/docs/user_manual/introduction/general_tools.rst:288
 msgid "To deselect all selected features click on |mActionDeselectAll|."
 msgstr ""
+"Um die Auswahl von Objekten wieder aufzuheben, klicken Sie auf den Knopf "
+"|mActionDeselectAll|."
 
 # e967b13097f24f5997b2ec757631c5c5
 #: ../../source/docs/user_manual/introduction/general_tools.rst:294
 msgid "Decorations"
-msgstr ""
+msgstr "Dekorationen"
 
 # 0982236d52c1434fa58ad222be0d959c
 #: ../../source/docs/user_manual/introduction/general_tools.rst:297
@@ -414,17 +483,22 @@ msgid ""
 "the Scale Bar. They are used to 'decorate' the map by adding cartographic "
 "elements."
 msgstr ""
+"Die Dekorationen von QGIS beinhalten einen Urheberrechtshinweis, einen "
+"Nordpfeil und einen Maßstab. Sie werden dazu verwendet die Karte durch "
+"Hinzufügen von kartographischen Elementen zu Dekorieren."
 
 # 0a49b629c53c4d70a3b99aee988c1b48
 #: ../../source/docs/user_manual/introduction/general_tools.rst:302
 msgid ""
 "Before QGIS 1.8 the same functionality was provided by the Decoration Plugin."
 msgstr ""
+"Vor QGIS 1.8. wurde die gleiche Funktionaliät durch die Dekorationen Plugins "
+"zur Verfügung gestellt."
 
 # d5764e1188db47b3aa33fa7a35e47782
 #: ../../source/docs/user_manual/introduction/general_tools.rst:307
 msgid "Copyright Label"
-msgstr ""
+msgstr "Urheberrechtshinweis"
 
 # 6eb7149bd00940f4976c0f99f0821959
 #: ../../source/docs/user_manual/introduction/general_tools.rst:310
@@ -432,6 +506,8 @@ msgid ""
 "|copyright_label| :guilabel:`Copyright label` adds a Copyright label using "
 "the text you prefer to the map."
 msgstr ""
+"|copyright_label| :guilabel:`Urheberrechtshinweis` fügt einen "
+"Urheberrechtshinweis durch einen selbst erstellten Text der Karte hinzu."
 
 # ac6c00f24cd7448aa5d7c1782ff2d4bc
 #: ../../source/docs/user_manual/introduction/general_tools.rst:326
@@ -439,6 +515,9 @@ msgid ""
 "Select from menu :menuselection:`View --> Decorations --> Copyright Label`. "
 "The dialog starts (see figure_decorations_1_)."
 msgstr ""
+"Klicken Sie auf :menuselection:`Ansicht -->Dekorationen "
+"-->Urheberrechtshinweis. Der Dialog wird gestartet (siehe "
+"figure_decorations_1_).  "
 
 # 27149e9274b34625af0ff08f606231f7
 #: ../../source/docs/user_manual/introduction/general_tools.rst:328
@@ -446,6 +525,8 @@ msgid ""
 "Enter the text you want to place on the map. You can use HTML as shown in "
 "the example"
 msgstr ""
+"Geben Sie den Text ein, den Sie der Karte hinzufügen möchten. Wie im "
+"gezeigten Beispiel können Sie hierbei auch HTML Text verwenden."
 
 # df5745eba8044b8a91fe7720abfe6fe6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:330
@@ -453,6 +534,8 @@ msgid ""
 "Choose the placement of the label from the :guilabel:`Placement` 'Bottom "
 "Right' drop-down box"
 msgstr ""
+"Wählen Sie aus dem Drop-down Menü :guilabel:`Platzierung`'Unten Rechts' aus, "
+"wo der Urheberrechtshinweis im Kartenfenster zu sehen sein soll."
 
 # f75479f1a6f9412fb87258880a80ba6f
 #: ../../source/docs/user_manual/introduction/general_tools.rst:332
@@ -460,13 +543,15 @@ msgid ""
 "Make sure the |checkbox| :guilabel:`Enable Copyright Label` checkbox is "
 "checked"
 msgstr ""
+"Vergewissern Sie sich, dass da Kontrollkästchen |checkbox| "
+":guilabel:`Urheberrechtshinweis aktivieren` ausgewählt ist. "
 
 # 4aedd69654184875a24ed7074f468a90
 # 1e670950324f48138dd635e9d35c3e03
 #: ../../source/docs/user_manual/introduction/general_tools.rst:334
 #: ../../source/docs/user_manual/introduction/general_tools.rst:405
 msgid "Click **[OK]**"
-msgstr ""
+msgstr "Klicken Sie auf **OK**"
 
 # 0ed07c81fa61475ab03f6eacd10011b0
 #: ../../source/docs/user_manual/introduction/general_tools.rst:337
@@ -474,11 +559,13 @@ msgid ""
 "In the example above (default) QGIS places a copyright symbol followed by "
 "the date in the lower right hand corner of the map canvas."
 msgstr ""
+"In obigem Beispiel wird ein Copyright Symbol, gefolgt von dem Namen QGIS und "
+"dem Datum, in der rechten unteren Ecke des Kartenfensters angezeigt."
 
 # f2cf4966a57a441d88e426e1811e9e64
 #: ../../source/docs/user_manual/introduction/general_tools.rst:342
 msgid "North Arrow"
-msgstr ""
+msgstr "Nordpfeil"
 
 # e0cb2f5a771c42ed8ff28347a122a3ab
 #: ../../source/docs/user_manual/introduction/general_tools.rst:345
@@ -490,11 +577,17 @@ msgid ""
 "how the arrow should be oriented. For placement of the arrow you have four "
 "options, corresponding to the four corners of the map canvas."
 msgstr ""
+"|north_arrow| :guilabel:`Nordpfeil` platziert einen einfachen Nordpfeil im "
+"Kartenfenster. Bislang steht hierfür lediglich eine Pfeilform zur Verfügung. "
+"Sie können die Richtung des Nordpfeiles entweder selbst anpassen oder dies "
+"automatisch von QGIS bewerkstellingen lassen. Wenn Sie es QGIS überlassen "
+"die Richtung zu bestimmen, entscheided das Programm, in welche Richtung der "
+"Nordpfeil idealerweise zeigen sollte."
 
 # 2a7346ecc9ff41d98efea29ecf36775f
 #: ../../source/docs/user_manual/introduction/general_tools.rst:366
 msgid "Scale Bar"
-msgstr ""
+msgstr "Maßstab"
 
 # 0b626095a89141ab94b7ead6bae7dfc2
 #: ../../source/docs/user_manual/introduction/general_tools.rst:369
@@ -502,6 +595,9 @@ msgid ""
 "|scale_bar| :guilabel:`Scale Bar` adds a simple scale bar to the map canvas. "
 "You control the style and placement, as well as the labeling of the bar."
 msgstr ""
+"|scale_bar| :guilabel:`Maßstab` fügt dem Kartenausschnitt einen einfachen "
+"Maßstabsbalken hinzu. Dabei können Sie sowohl das Aussehen, die Platzierung "
+", als auch die Beschriftung festlegen."
 
 # c3bee68354114951a788f93430367ef6
 #: ../../source/docs/user_manual/introduction/general_tools.rst:385
@@ -511,6 +607,11 @@ msgid ""
 "in feet. Likewise if you are using decimal degrees, you can't create a scale "
 "bar to display distance in meters."
 msgstr ""
+"QGIS unterstützt hierbei jedoch lediglich die Darstellung des Balkens in "
+"denjenigen Einheiten, die auch in Ihren entsprechenden Karten verwendet "
+"werden. Dies bedeutet, dass Sie einer Karte deren Layer der Einheit Meter "
+"entsprechen, keinen Maßstabsbalken in den Einheiten Fuß oder Zoll hinzufügen "
+"können."
 
 # 3ae3c824e45641739bc757476e29e130
 #: ../../source/docs/user_manual/introduction/general_tools.rst:390
