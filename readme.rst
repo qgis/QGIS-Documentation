@@ -32,8 +32,9 @@ If you plan to update or translate the manual locally, you will need to create a
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 * dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
 
+*****************************************
 Working on the english QGIS Documentation
-=========================================
+*****************************************
 
 This section describes who to update/edit the english master documentation.
 
@@ -97,8 +98,9 @@ Now check, if the manual built correctly and commit and push your changes to you
 In your github account you can now open a pull request to merge your changes from your forked to the 
 official QGIS Documentation repository.
 
+******************************************
 Translating the english QGIS Documentation
-==========================================
+******************************************
 
 Every language has it's own maintainer, please contact them, if you want to help. 
 You find a list of current language maintainers in the `Project Organigram 
@@ -107,7 +109,7 @@ If your language is not listed, please contact the `QGIS-Community-Team Mailingl
 <http://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ and ask for help.
 
 Howto for language maintainers
-..............................
+------------------------------
 
 * get an account on github.com
 * install git on your computer (On Ubuntu and with Linux systems you just need to write: sudo apt-get install git). For other OS, have a look at the github homepage (look for application section)
@@ -161,13 +163,14 @@ http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
 .. 
 .. - add your locale code in the post_translate.sh script in the line with 'LOCALE='
 
+***********************
 Authors and translators
---------------------------------------------------------------------------------
+***********************
 
 The English QGIS manual (Master Document) and its translation is managed by the Community Assistant (Manual Team Lead) and supported by additional language specific teams.
 
 English Manual (Master Document)
-................................................................................
+--------------------------------
 
 * Community Assistant (Manual Team Lead): ??
 
@@ -175,7 +178,7 @@ English Manual (Master Document)
   * Contributor : Larissa Junek < junek[at]gbd-consult.de >
 
 Manual and Application Translations
-................................................................................
+-----------------------------------
 
 * Community Assistant (Manual Team Lead): ??
 
@@ -216,7 +219,7 @@ Manual and Application Translations
 
 
 QGIS Website and Website Translation 
---------------------------------------------------------------------------------
+------------------------------------
 
 QGIS Website and Website Translation is managed by the Community Assistant (Website Team Lead) and supported by numerous contributors.
 
