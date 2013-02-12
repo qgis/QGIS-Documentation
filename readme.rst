@@ -17,16 +17,11 @@ here:
 * Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
 * Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
 
-It is also available via the subdomain docs.qgis.org, for example for the German 
-language:
-http://docs.qgis.org/html/de/docs/user_manual/
+It is also available via the subdomain docs.qgis.org, for example for the German language: 
+http://docs.qgis.org/html/de/docs/user_manual/. In the qgis.org site the documentation is 
+scheduled to be built every 8 hours.
 
-In the qgis.org site the documentation is scheduled to be built every 6 hours.
-
-Pdf versions of the manual are available here: 
-http://documentation.qgis.org/pdf/
-
-
+Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
 
 Quick Overview
 --------------------------------------------------------------------------------
