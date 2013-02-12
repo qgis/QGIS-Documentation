@@ -31,10 +31,10 @@ If you plan to update or translate the manual locally, you will need to create a
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 * dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
 
-Update the QGIS Documentation
-=============================
+Working on the english QGIS Documentation
+=========================================
 
-This section describes who to update the english master documentation.
+This section describes who to update/edit the english master documentation.
 
 * install required tools
 * login to github and create a fork of the QGIS-Documentation master branch 
@@ -50,8 +50,7 @@ repository at the community-team mailing list.
 
 Generation
 ----------
-
-Git clone your forked project::
+Git clone your personal forked project::
 
  git clone git@github.com:<user>/QGIS-Documentation.git
  # to later update your tree do
@@ -67,34 +66,38 @@ You should have a directory tree like this::
  ├── source             containing all rst sources
  └── themes             contains themes for output
 
-Run pre_translate.sh script to create the gettext files (po, pot) in the i18n
-directory::
+Run post_translate.sh script to build the documentation::
 
  cd QGIS-Documentation
- sh ./scripts/pre_translate.sh en
+ sh ./scripts/post_translate.sh en
 
-Translators now can translate their local i18n files using tools like linguist
-or via a website.
+You can now edit the rst files in the folder ./source/docs/user_manual/, e.g.::
 
-Another option is to download a .po file from Github, translate it and sent it
-back to a language maintainer.
+ cd source/docs/user_manual/preamble/
+ gedit foreword.rst
 
-Run 'post_translate.sh' script to build all translated pdf and html files::
-
- cd QGIS-Documentation
- scripts/post_translate.sh
-
-.. note:: if you only want to create docs in one language, use the locale code
-   as parameter.
-
-For example, to create english docs::
+After editing the rst file, run 'post_translate.sh en' again to build the english pdf and html files::
 
  cd QGIS-Documentation
- scripts/post_translate.sh en
+ sh scripts/post_translate.sh en
 
+.. note:: if you want to create docs in another language, use the locale code as parameter.
 
-Document Translators edit workflow
---------------------------------------------------------------------------------
+For example, to create italian docs::
+
+ cd QGIS-Documentation
+ sh scripts/post_translate.sh it
+
+Now check, if the manual built correctly and commit and push your changes to your forked repository:
+
+ git commit source/docs/user_manual/preamble/foreword.rst -m 'updated foreword'
+ git push 
+
+In your github account you can now open a pull request to merge your changes from your forked to the 
+official QGIS Documentation repository.
+
+Translating the english QGIS Documentation
+==========================================
 
 Every language has it's own maintainer, please contact them, if you want to help. 
 You find a list of current language maintainers in the `Project Organigram 
