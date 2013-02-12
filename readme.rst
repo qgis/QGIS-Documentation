@@ -1,11 +1,7 @@
-Installation
-================================================================================
+QGIS Documentation
+==================
 
-Where I can read this documentation
---------------------------------------------------------------------------------
-
-It is possible to read the HTML version of the documentation for many languages 
-here:
+It is possible to read the HTML version of the documentation for many languages here:
 
 * English: http://documentation.qgis.org/html/en/docs/user_manual/
 * French: http://documentation.qgis.org/html/fr/docs/user_manual/
@@ -17,28 +13,13 @@ here:
 * Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
 * Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
 
-It is also available via the subdomain docs.qgis.org, for example for the German language: 
-http://docs.qgis.org/html/de/docs/user_manual/. In the qgis.org site the documentation is 
-scheduled to be built every 8 hours.
-
+In the qgis.org site the documentation is scheduled to be built every 8 hours. 
 Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
 
-Working on the master document
-------------------------------
+Tools you need to install, if you want to work on the documentation
+-------------------------------------------------------------------
 
-* install required tools
-* create a fork of the master branch of QGIS-Documentation
-* git clone your forked QGIS Documentation project
-* run './scripts/post_translate.sh en' locally to build the english docs
-* edit/update the rst files with the english documentation from ./source/docs/user_manual/
-* run './scripts/post_translate.sh en' locally again to check your changes
-* commit your changes to your forked repository 
-* create a pull request to merge your changes into the official QGIS-Documentation repository
-
-Tools
---------------------------------------------------------------------------------
-
-You will need the following tools
+If you plan to update or translate the manual locally, you will need to create a github account and install the following tools:
 
 * git (from packagemanager) to clone/download the source from Github.com
 * gettext (from packagemanager) for translation tools
@@ -50,12 +31,29 @@ You will need the following tools
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 * dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
 
+Update the QGIS Documentation
+=============================
+
+This section describes who to update the english master documentation.
+
+* install required tools
+* login to github and create a fork of the QGIS-Documentation master branch 
+* git clone your forked QGIS Documentation project to your computer
+* run './scripts/post_translate.sh en' locally to build the english docs
+* edit/update the rst files with the english documentation from ./source/docs/user_manual/
+* run './scripts/post_translate.sh en' locally again to check your changes
+* commit your changes to your forked repository 
+* create a pull request to merge your changes into the official QGIS-Documentation repository
+
+If you are more experienced you can also ask for direct write access to the official QGIS-Documentation 
+repository at the community-team mailing list.
+
 Generation
---------------------------------------------------------------------------------
+----------
 
-Git clone this project::
+Git clone your forked project::
 
- git clone git@github.com:qgis/QGIS-Documentation.git
+ git clone git@github.com:<user>/QGIS-Documentation.git
  # to later update your tree do
  git pull --rebase origin master
 
@@ -73,7 +71,7 @@ Run pre_translate.sh script to create the gettext files (po, pot) in the i18n
 directory::
 
  cd QGIS-Documentation
- scripts/pre_translate.sh
+ sh ./scripts/pre_translate.sh en
 
 Translators now can translate their local i18n files using tools like linguist
 or via a website.
