@@ -38,7 +38,8 @@ Working on the english QGIS Documentation
 
 This section describes who to update/edit the english master documentation.
 
-* install required tools
+* get an account on github.com
+* install required tools on your computer
 * login to github and create a fork of the QGIS-Documentation master branch 
 * git clone your forked QGIS Documentation project to your computer
 * run './scripts/post_translate.sh en' locally to build the english docs
@@ -103,65 +104,51 @@ Translating the english QGIS Documentation
 ******************************************
 
 Every language has it's own maintainer, please contact them, if you want to help. 
-You find a list of current language maintainers in the `Project Organigram 
-<http://hub.qgis.org/wiki/quantum-gis/Project_Organigram#QGIS-Manual-Translation>`_. 
-If your language is not listed, please contact the `QGIS-Community-Team Mailinglist 
+You find a list of current language maintainers at the end of this document. If your 
+language is not listed, please contact the `QGIS-Community-Team Mailinglist 
 <http://lists.osgeo.org/mailman/listinfo/qgis-community-team>`_ and ask for help.
 
 Howto for language maintainers
 ------------------------------
 
 * get an account on github.com
-* install git on your computer (On Ubuntu and with Linux systems you just need to write: sudo apt-get install git). For other OS, have a look at the github homepage (look for application section)
-* on github.com search the repository of Qgis-Documentation and the branch you want to work with and `fork it <https://help.github.com/articles/fork-a-repo>`_, it just means that you create a copy of the original repository on your github account.
+* install required tools on your computer
+* login to github and create a fork of the QGIS-Documentation translation branch, e.g. 'manual_en_v1.8' that other translators can work with.
 
-The maintainer should check the translations regularly. Therefore you should run the 
-'scripts/pre_translate.sh <language>' and 'scripts/post_translate.sh <language>' script 
-after every significant change in the documentation. This will generate and update the 
-.po files needed for translations. If all is fine, take care, that the translation go 
-into the master repository from time to time.
+Translators now can create their own fork from the forked repository of the maintainer, commit their translations 
+to their own forked repository and send pull request to the language maintainer's repository. Once the maintainer 
+receives a pull request, he should check the changes, accept the pull request and merge the changes with the official 
+QGIS Documentation repository. 
 
-* To update the master repository, you have to do a pull request on github. It means that you send a request to the owners of the repository you forked (so Qgis-Documentation) asking them to accept your translations and move them to the "original repository". For doing that go on github.com, browse on the directory of your repository and click pull request (https://help.github.com/articles/using-pull-requests).
+If the maintainer needs to add a new language workflow
+------------------------------------------------------
+
+* add your locale code in the pre_translate.sh script in the line with 'LOCALE='
+* run 'scripts/pre_translate.sh'. There will be a new directory in the i18n directory for your language, containing the po-files for all source files
+* create an empty(!) directory in the resources directory for your language. The idea is to ONLY put images in exact the same directory structure if you want an image to be 'translated'. As default the english one will be used from the 'en' directory, and only if there is an translated one it wil be found and used.
+* add your locale code in the post_translate.sh script in the line with 'LOCALE='
 
 Howto for translators
-.....................
+---------------------
 
-A thorough explanation for translators is written here:
+* get an account on github.com
+* install required tools on your computer
+* login to github and create a fork of the QGIS-Documentation translation branch, e.g. 'manual_en_v1.8' from your language maintainer.
+* git clone your forked QGIS Documentation project to your computer
+* run './scripts/pre_translate.sh <language>' locally to build the translation files
+* translate the .po files locally and use an offline editor. `QtLinguist <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the highly recommended choice.with the english documentation from ./source/docs/user_manual/
+* run './scripts/post_translate.sh <language>' locally again to check your translation
+* files translated need to be "synchronized"  with the ones in the directory of the forked repo. Commit your changes to your private forked repository and create a pull request on github. It means that you send a request to the owners of the repository you forked (language maintainer) asking hi to accept your translations and move them to the "original repository". For doing that go on github.com, browse on the directory of your repository and click pull request (https://help.github.com/articles/using-pull-requests).
+* your language maintainer will take care that every significant translation go into the master repository. 
+* Generally, as soon as you finish editing one or more .po files, you should commit as soon as possible the edits to the git repository, in order to minimize the possibility of conflicts.
+
+The maintainer and translator should update and check the translations regularly. Therefore you should 'git pull' 
+when you start to work and run the 'scripts/pre_translate.sh <language>' and  'scripts/post_translate.sh <language>' script after every significant change in the documentation. This will 
+generate and update the .po files needed for translations. If all is fine, take care, that the translation go 
+into the repository of your language maintainer.
+
+A thorough explanation for translators working with locally with linguist is written here:
 http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
-
-
-.. temporarily commented the following part out:
-
-.. Translators work locally and use an offline editor. `QtLinguist 
-.. <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being the 
-.. highly recommended choice.
-.. 
-.. 
-.. *If you want to translate locally*
-.. 
-.. * clone the forked repository from your language maintainer (this step copies the repository to your computer)
-.. * now that you have all the files on your computer just translate them! (suggested softwares are qt linguist, lokalize, but you can use the software you want)
-.. * files translated need to be "synchronized"  with the old ones in the directory of the forked repo
-.. * if you are linux users, open the terminal and get in the directory of the forked repo, and just write git add * , this simple command updates the files of the forked repository
-.. * now you have to commit the files writing git commit in the bash
-.. * at this point the translated files are on your computer only. You need then to upload them on the forked github account. Open the terminal and write git push origin master. Now if you look at your github page the files are updated with the translations.
-.. * your language maintainer will take care that every significant translation go into the master repository. 
-.. * Generally, as soon as you finish editing one or more .po files, you should commit as soon as possible the edits to the git repository, in order to minimize the possibility of conflicts.
-.. 
-.. New Language workflow
-.. ----------------------
-.. 
-.. - add your locale code in the pre_translate.sh script in the line with 'LOCALE='
-.. 
-.. - run 'scripts/pre_translate.sh'. There will be a new directory in the
-.. i18n directory for your language, containing the po-files for all source files
-.. 
-.. - create an empty(!) directory in the resources directory for your language
-.. The idea is to ONLY put images in exact the same directory structure if you want
-.. an image to be 'translated'. As default the english one will be used from the
-.. 'en' directory, and only if there is an translated one it wil be found and used.
-.. 
-.. - add your locale code in the post_translate.sh script in the line with 'LOCALE='
 
 ***********************
 Authors and translators
