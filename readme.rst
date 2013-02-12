@@ -88,7 +88,7 @@ For example, to create italian docs::
  cd QGIS-Documentation
  sh scripts/post_translate.sh it
 
-Now check, if the manual built correctly and commit and push your changes to your forked repository:
+Now check, if the manual built correctly and commit and push your changes to your forked repository::
 
  git commit source/docs/user_manual/preamble/foreword.rst -m 'updated foreword'
  git push 
