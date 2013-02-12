@@ -1,6 +1,5 @@
-
 QGIS Documentation
-===================
+==================
 
 It is possible to read the HTML version of the documentation for many languages here:
 
