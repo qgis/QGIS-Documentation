@@ -1,3 +1,4 @@
+
 QGIS Documentation
 ===================
 
@@ -19,7 +20,8 @@ Pdf versions of the manual are available here: http://documentation.qgis.org/pdf
 Tools you need to install, if you want to work on the documentation
 -------------------------------------------------------------------
 
-If you plan to update or translate the manual locally, you will need to create a github account and install the following tools:
+If you plan to update or translate the manual locally, you will need to create a github 
+account and install the following tools:
 
 * git (from packagemanager) to clone/download the source from Github.com
 * gettext (from packagemanager) for translation tools
@@ -50,6 +52,7 @@ repository at the community-team mailing list.
 
 Generation
 ----------
+
 Git clone your personal forked project::
 
  git clone git@github.com:<user>/QGIS-Documentation.git
