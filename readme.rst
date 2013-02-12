@@ -1,5 +1,6 @@
+******************
 QGIS Documentation
-==================
+******************
 
 It is possible to read the HTML version of the documentation for many languages here:
 
@@ -13,7 +14,8 @@ It is possible to read the HTML version of the documentation for many languages 
 * Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
 * Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
 
-In the qgis.org site the documentation is scheduled to be built every 8 hours. Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
+In the qgis.org site the documentation is scheduled to be built every 8 hours. 
+Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
 
 Tools you need to install, if you want to work on the documentation
 -------------------------------------------------------------------
