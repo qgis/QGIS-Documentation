@@ -23,14 +23,17 @@ scheduled to be built every 8 hours.
 
 Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
 
-Quick Overview
---------------------------------------------------------------------------------
+Working on the master document
+------------------------------
 
 * install required tools
-* git clone the QGIS Documentation project
-* run pre_translate.sh (if you want to update ALL translation files)
-* translators edit their i18n files
-* run 'post_translate.sh en' if you only want english docs (without locale for all)
+* create a fork of the master branch of QGIS-Documentation
+* git clone your forked QGIS Documentation project
+* run './scripts/post_translate.sh en' locally to build the english docs
+* edit/update the rst files with the english documentation from ./source/docs/user_manual/
+* run './scripts/post_translate.sh en' locally again to check your changes
+* commit your changes to your forked repository 
+* create a pull request to merge your changes into the official QGIS-Documentation repository
 
 Tools
 --------------------------------------------------------------------------------
@@ -46,7 +49,6 @@ You will need the following tools
 * sphinx (via 'sudo pip install sphinx'; on Arch install python-sphinx)
 * texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
 * dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
-
 
 Generation
 --------------------------------------------------------------------------------
