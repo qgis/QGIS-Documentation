@@ -13,14 +13,12 @@ It is possible to read the HTML version of the documentation for many languages 
 * Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
 * Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
 
-In the qgis.org site the documentation is scheduled to be built every 8 hours. 
-Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
+In the qgis.org site the documentation is scheduled to be built every 8 hours. Pdf versions of the manual are available here: http://documentation.qgis.org/pdf/
 
 Tools you need to install, if you want to work on the documentation
 -------------------------------------------------------------------
 
-If you plan to update or translate the manual locally, you will need to create a github 
-account and install the following tools:
+If you plan to update or translate the manual locally, you will need to create a github account and install the following tools:
 
 * git (from packagemanager) to clone/download the source from Github.com
 * gettext (from packagemanager) for translation tools
@@ -46,8 +44,7 @@ This section describes who to update/edit the english master documentation.
 * commit your changes to your forked repository 
 * create a pull request to merge your changes into the official QGIS-Documentation repository
 
-If you are more experienced you can also ask for direct write access to the official QGIS-Documentation 
-repository at the community-team mailing list.
+If you are more experienced you can also ask for direct write access to the official QGIS-Documentation repository at the community-team mailing list.
 
 Generation
 ----------
