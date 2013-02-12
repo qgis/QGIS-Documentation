@@ -112,7 +112,7 @@ Howto for language maintainers
 
 * get an account on github.com
 * install git on your computer (On Ubuntu and with Linux systems you just need to write: sudo apt-get install git). For other OS, have a look at the github homepage (look for application section)
-* on github.com search the repository of Qgis-Documentation and `fork it <https://help.github.com/articles/fork-a-repo>`_, it just means that you create a copy of the original repository on your github account.
+* on github.com search the repository of Qgis-Documentation and the branch you want to work with and `fork it <https://help.github.com/articles/fork-a-repo>`_, it just means that you create a copy of the original repository on your github account.
 
 The maintainer should check the translations regularly. Therefore you should run the 
 'scripts/pre_translate.sh <language>' and 'scripts/post_translate.sh <language>' script 
