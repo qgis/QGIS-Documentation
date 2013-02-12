@@ -94,7 +94,7 @@ Map rendering can be controlled in the following ways:
 
 .. _`label_suspendrender`:
 
-a) Suspending Rendering
+Suspending Rendering
 .......................
 
 .. index::`rendering!suspending`
@@ -115,7 +115,7 @@ refresh of the map canvas.
 
 .. _`label_settinglayer`:
 
-b) Setting Layer Add Option
+Setting Layer Add Option
 ...........................
 
 .. index::`rendering!options`
@@ -147,7 +147,7 @@ between pressing :kbd:`ESC` and the time the map drawing is halted.
 
 .. _`label_updatemap`:
 
-c) Updating the Map Display During Rendering
+Updating the Map Display During Rendering
 ............................................
 
 .. index::
@@ -165,8 +165,8 @@ during the reading of the features. A suggested value to start with is 500.
 
 .. _`label_renderquality`:
 
-d) Influence Rendering Quality
-..............................
+Influence Rendering Quality
+.............................
 
 .. index::
    single:rendering quality
