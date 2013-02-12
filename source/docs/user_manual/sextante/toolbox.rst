@@ -367,9 +367,9 @@ like the one shown next.
 Select the style file (\*.qml) that you want for each output and press
 OK.
 
-Other configuration parameters in the ``General`` group are explained below:
+Other configuration parameters in the ``General`` group are the following ones:
 
-- ``Use filename as layer name``. The name of each resulting layer created
+- *Use filename as layer name*. The name of each resulting layer created
    by SEXTANTE is defined by the algorithm generating it. In some cases, a
    fixed name might be used, that meaning that the same name will be used,
    no matter which input layer is used. In other cases, the name might 
@@ -380,11 +380,15 @@ Other configuration parameters in the ``General`` group are explained below:
    long and meaningless one intended to avoid collision with other already 
    existing filenames.
 
-- ``Use only selected features``. If this option is selected, whenever a 
+- *Use only selected features*. If this option is selected, whenever a 
    vector layer is used as input for an algorithm, only its selected 
    features will be used. If the layer has no selected features, all of 
    them will be used.
 
+- *Pre-execution script file* and *Post-execution script file*. This
+   parameters refer to scripts written using the SEXTANTE scripting 
+   functionality, and are explained in the section covering scripting and 
+   the SEXTANTE console.
 
 Apart from the *General* block in the settings dialog, you will also
 find one for each algorithm provider. They contain an *Activate* item

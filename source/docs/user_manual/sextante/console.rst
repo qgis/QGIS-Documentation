@@ -14,17 +14,16 @@ operations such as loops and conditional sentences can be added to
 create more flexible and powerful workflows.
 
 There is not a SEXTANTE console in QGIS, but all SEXTANTE commands are
-available instead from QGIS built-in Python console. That means that you
+available instead from the QGIS built-in Python console. That means that you
 can incorporate those command to your console work and connect SEXTANTE
 algorithms to all the other features (including methods from the QGIS
 API) available from there.
 
-The code that you can execute from the Python console, even if it does
+The code that you can execute from the Python console, even if it does not
 call any SEXTANTE method, can be converted into a new SEXTANTE algorithm
 that you can later call from the toolbox, the graphical modeler or any
 other SEXTANTE component, just like you do with any other SEXTANTE
-algorithm. In fact, some algorithms that you can find in the toolbox,
-like all the ones in the *mmqgis* group, are simple scripts.
+algorithm. In fact, some algorithms that you can find in the toolbox are simple scripts.
 
 In this chapter we will see how to use SEXTANTE from the QGIS Python
 console, and also how to write your own algorithms using Python.
@@ -218,8 +217,8 @@ Creating scripts and running them from the toolbox
 
 You can create your own algorithms by writing the corresponding Python
 code and adding a few extra lines to supply additional information
-needed by SEXTANTE. You can find a *Create new script* under the tools
-group in the script algorithms block of the toolbox. Double click on it
+needed by SEXTANTE. You can find a *Create new script* menu under the *tools*
+group in the script algorithms block of the toolbox. Double-click on it
 to open the script edition dialog. That's where you should type your
 code. Saving the script from there in the scripts folder (the default
 one when you open the save file dialog), with ``.py`` extension, will
@@ -384,3 +383,16 @@ dialog without saving the script (i.e. you discard it), the help content you
 wrote will be lost. If your script was already saved and is associated to a
 filename, saving is done automatically.
 
+Pre- and post-execution script hooks
+-------------------------------------
+
+Script can also be used to set pre- and post-execution hooks that are run before and after an algorithm is run. This can be used to automate tasks that should be performed whenever a SEXTANTE algorithm is executed.
+
+The syntax is identical to the syntax explained above, but an additional global variable named ``alg`` is available, representing the algorithm that has just been (or is about to be) executed.
+
+In the *General* group of the SEXTANTE config dialog you will find two entries named *Pre-execution script file* and *Post-execution script file* where the filename of the scripts to be run in each case can be entered.
+
+The following script is an example of a post-execution hook that, whenever an algorithm generates a raster layer, adds overviews (pyramids) to it.
+
+
+XXXXXXXXXXXXXXXXXXXX

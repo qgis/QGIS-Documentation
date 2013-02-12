@@ -48,8 +48,7 @@ history and log dialog) for knowing more about what is going wrong.
 Using GRASS raster layers is, for instance, one case in which you might
 have trouble and not be able to complete your work if you call an
 external algorithm using such a layer as input. For this reason, these
-layers will not appear as available to SEXTANTE algorithms (We are
-currently working on solving this, and expect to have it ready soon).
+layers will not appear as available to SEXTANTE algorithms.
 
 You should, however, find no problems at all with vector layers, since
 SEXTANTE automatically converts from the original file format to one
@@ -60,35 +59,19 @@ process a layer from a DB connection that one of a similar size stored
 in a shapefile.
 
 Providers not using external applications can process any layer that you
-can open in QGIS, since they open it for analysis trough QGIS.
+can open in QGIS, since they open it for analysis through QGIS.
 
-Regarding output formats, raster layers can be saved as TIFF (.tif)
-files, while vector layers are saved as shapefiles (.shp). These have
-been chosen as the *lingua franca* between supported third party
-applications and QGIS. If the output filename that you select is not one
-of the above, it will be modified, adding the corresponding suffix, and
-the default file format will be used.
+Regarding output formats, all raster layers supported by QGIS as output can be used, both for raster and vector layers. Some provider do not support certain formats, but all can export to common formats raster layers that can be later transformed by QGIS automatically. As in the case of input layers, if this conversion is needed, that might increase the processing time.
 
-In the case of GDAL, the number of supported output formats is larger.
-When you open the file selection dialog, you will see that you have more
-formats (and their corresponding extensions available). For more
-information about which formats are supported, check the GDAL
-documentation.
+If the extension of the filename specified when calling an algorithm does not match the extension of any of the formats supported by QGIS, then a suffix will be added to set a default format. In the case of raster layers, the ``tif`` extension is used, while `shp` is used for vector layer.
+
 
 A note on vector layer selections
 .................................
 
-By default, when an external algorithm takes a vector layer, it will use
-all its features, even if a selection exist in QGIS. You can make an
-external algorithm aware of that selection by checking the *Use selected
-features in external applications* item in the *General* settings group.
-When you do so, each time you execute an external algorithm that uses a
-vector layer, the selected features of that layer will be exported to a
-new layer, and the algorithm will work with that new layer instead.
+External applications are also aware of the selection that exist in vector layers within QGIS. However, that requires rewritting all input vector layers, just as if they were originally in a format not supported by the external application. Only when no selection exist, or the *Use only selected features* option is not enabled in the SEXTANTE general configuration, a layer can be directly passed to an external application.
 
-Notice that if you select this option, a layer with no selection will
-behave like a layer with all its features selected, not like an empty
-layer.
+In other cases, exporting only selected features is needed, which causes execution times to be longer.
 
 SAGA
 ----
