@@ -1936,6 +1936,8 @@ msgid ""
 "default ones in KDE window manager. In GNOME, Settings menu is missing and "
 "its items are to be found here:"
 msgstr ""
+"上記リストのメニューバーアイテムは |nix| "
+"Linux全般用ではなくデフォルトではＫＤＥウィンドウマネージャでのものです.GNOMEでは設定メニューが無く 以下のようになっています:"
 
 # 0fc5282bcad7458ab860388e57bceb20
 # efe981fc48d9457b986b860655716186
@@ -2042,6 +2044,10 @@ msgid ""
 "registry. When you restart QGIS, the key is written again with the default "
 "state, and all toolbars are visible again."
 msgstr ""
+"もしツールバーが突然隠れてしまった場合はメニューオプションの :menuselection:`Settings --> Toolbars -->` "
+"を選択して復活させることができます.Windows環境でQGISのツールバーが時々隠れる場合は "
+"レジストリの``\\HKEY_CURRENT_USER\\Software\\QuantumGIS\\qgis\\UI\\state`` "
+"を削除するべきです,QGISを再起動するとデフォルトの状態でキーは再度書き込まれツールバーは表示されます."
 
 # fe221784e3c64d4dbff2fad1b38c96ce
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:376
@@ -2049,6 +2055,7 @@ msgid ""
 "The map legend area lists all the layers in the project. The checkbox in "
 "each legend entry can be used to show or hide the layer."
 msgstr ""
+"凡例エリアにはプロジェクトのすべてのレイヤがリストされます.それぞれの凡例エントリのチェックボックスはレイヤの表示,非表示の制御に使われます."
 
 # 4b3008048d1440979e34e3885e8e58d1
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:382
@@ -2057,13 +2064,14 @@ msgid ""
 "z-ordering. Z-ordering means that layers listed nearer the top of the legend "
 "are drawn over layers listed lower down in the legend."
 msgstr ""
+"レイヤは選択してドラッグで上下に移動することによってZオーダリングを変えることができます.Zオーダリングとは,凡例のリストでの表示順が地図表示のレイヤ表示順になることです."
 
 # 6b905343266f4d7683cc7fa933e5e550
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:386
 msgid ""
 "Layers in the legend window can be organised into groups. There are two ways "
 "to do so:"
-msgstr ""
+msgstr "凡例ウィンドウのレイヤはグループに分類することができます.それをおこなう場合2種類の方法があります:"
 
 # e57ea6bd225e41b1871a7c18d2b900f0
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:388
@@ -2090,6 +2098,8 @@ msgid ""
 "and choose :menuselection:`Make to toplevel item`. Groups can be nested "
 "inside other groups."
 msgstr ""
+"レイヤをグループからはずしたい場合はドラッグしてグループの外に出すかレイヤをマウスで選択して :menuselection:`Make to "
+"toplevel item` をクリックして下さい.　グループは別のグループを内部に持つことも可能です,"
 
 # e543fd6499bd402ca66e7cca4768ce02
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:397
@@ -2125,7 +2135,7 @@ msgstr ":menuselection:`レイヤ領域にズームする`"
 # 16e937b90f4c4700ae6857c703d74d41
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:408
 msgid ":menuselection:`Zoom to best scale (100 %)`"
-msgstr ""
+msgstr ":menuselection:`最適スケール (100%)にズームする`"
 
 # fcd7bb71be384564993ae93d6ac25a5b
 # 41614a6d86c045969a2ce2fe49a0672f
@@ -2214,21 +2224,21 @@ msgstr ":menuselection:`描画順序を更新する`"
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:421
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:450
 msgid "Additionally, according to layer position and selection"
-msgstr ""
+msgstr "追加としてレイヤの位置と選択状態によって表示される項目"
 
 # 2dad7419c93345b19e40b6bdba96ee46
 # f8821a3488cd4e8cbcea2a79bd2a04cc
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:423
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:452
 msgid ":menuselection:`Make to toplevel item`"
-msgstr ""
+msgstr ":menuselection:`アイテムをトップレベルに移動する`"
 
 # 3199f0080dcc4476b4145710186069e6
 # a5b7577d7e814b5eaa1b45a7b8baaef3
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:424
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:453
 msgid ":menuselection:`Group Selected`"
-msgstr ""
+msgstr ":menuselection:`選択をグループにする`"
 
 # faceee5cca6541fd995753a32738e000
 # 8fbc0ed9b57a4dd0a040aaff040d9f91
@@ -2313,6 +2323,8 @@ msgid ""
 "afterwards. This way all selected Layers or groups will be removed from the "
 "layerlist."
 msgstr ""
+" :kbd:`Ctrl`キーと :kbd:`Ctrl+D` "
+"を同時に押しながら選択して,複数のレイヤやグループを一度に削除することができます.この方法で選択されたレイヤやグループがレイヤリストから削除されます."
 
 # d78bdd13db7c455daf8865bbc3919a9b
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:483
@@ -2321,11 +2333,14 @@ msgid ""
 "click on a layer. Choose :menuselection:`Group selected`. Click on the new "
 "group, type in a name and press :kbd:`Enter`."
 msgstr ""
+"複数のレイヤを選択してグループにすることができます.複数のレイヤを選択した後にレイヤ上でマウス右ボタンで "
+":menuselection:`選択をグループにする` をクリックして下さい..新しいグループをクリックしてグループの名前を入力して "
+":kbd:`Enter`.を押してください."
 
 # 5e2e49eda4c74125a8d92b931d09c755
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:488
 msgid "Working with the Legend independent layer order"
-msgstr ""
+msgstr "レイヤの順序と関係なく凡例で作業ができます"
 
 # e228528c593c41c9a0b35bb957b34c8c
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:490
@@ -2339,6 +2354,11 @@ msgid ""
 "order` box underneath the list of layers will cause a revert to default "
 "behavior."
 msgstr ""
+"QGIS1.8以降ウィジェットで描画順序と凡例の定義を独立させることができるようになりました.この機能はメニューの "
+":menuselection:`Settings --> Panels` "
+"で有効にできます.レイヤの描画順序はここのマップビューで指定できます.この機能を使うことによってたとえばレイヤを重要度順に並べることができます.しかし描画順序と同じ順序で表示したい場合は "
+"( figure_layer_order_ 参照). チェックボックス |checkbox| :guilabel:`control rendering "
+"order` をチェックするとレイヤのリストがデフォルトで表示されるようになります."
 
 # 87a9243e044043038b2afb12b8b73f4b
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:517
@@ -2352,6 +2372,10 @@ msgid ""
 "The map view and the legend are tightly bound to each other - the maps in "
 "view reflect changes you make in the legend area."
 msgstr ""
+"この場所に地図を表示することはQGISの最も重要な部分です！このウィンドウに 表示される地図はあなたがロードするベクタとラスタのレイヤに依存するでしょう "
+"（レイヤのロード方法の章に詳しい情報があります）.地図の表示は表示領域の 移動（地図を表示している場所を別の領域に移動すること）拡大、縮小ができます。 "
+"様々な地図上での操作が上記のツールバーの説明にあるように実行可能です。 マップビューと凡例はお互い強く関係しています.つまりビューに表示されている "
+"地図の表示は凡例の操作が反映されます."
 
 # 1d6316799b5845bf9a5c70d77d8c36a2
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:530
@@ -2368,6 +2392,10 @@ msgid ""
 "mouse wheel zoom using the :guilabel:`Map tools` tab under the "
 ":menuselection:`Settings --> Options` menu."
 msgstr ""
+"マウスホイールを地図の拡大縮小に利用できます.マウスカーソルを地図の内部に置いてホイールを前方（あなたと反対側）に "
+"動かすと,拡大を行い後方（あなたの側）に動かすと縮小表示を行います.マウスカーソルの位置はズームが行われる中心になります. "
+":menuselection:`Settings --> Options` にある :guilabel:`Map tools` "
+"タブでマウスホイールのズーム機能の動きをカスタマイズできます。"
 
 # 817e8b16b7dd4692a3989b02870e462d
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:540
@@ -2383,6 +2411,9 @@ msgid ""
 "also pan the map using the space bar: just move the mouse while holding down "
 "space bar."
 msgstr ""
+"矢印を使って地図のパンを行えます.マウスカーソルを地図内に置いて右矢印キーを押すと東にパンします. "
+"左矢印を押すと西にパンします.上矢印キーを押すと北へパンします。下矢印を押すと南にパンします。 "
+"またスペースバーをパンに利用できます:スペースバーを押したままでマウスを動かすと地図をパンできます."
 
 # 3950275622994862956e8361f03c0ec7
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:559
@@ -2393,6 +2424,9 @@ msgid ""
 "button that will toggle between showing coordinate position or the view "
 "extents of the map view as you pan and zoom in and out."
 msgstr ""
+"ステータスバーにはマウスポインターがマップビュー内を移動した時の位置の地図座標 "
+"（たとえばメートルか度数）が表示されます.座標表示の左側は小さいボタンになって "
+"いてマウスの位置座標の表示かマップビューの拡大、縮小した場合の現在の四隅の座標 表示を行うかの切り替えを行います."
 
 # 458fab857b0041c999ab5d8ee5eaf2ee
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:565
@@ -2402,6 +2436,7 @@ msgid ""
 "scale. Since QGIS 1.8 there is a scale selector which allows you to choose "
 "between predefined scales from 1:500 until 1:1000000."
 msgstr ""
+"座標表示のとなりに縮尺が表示されます.ここにはマップビューｎ縮尺が表示されます.拡大や縮小を行うとQGISはその時の縮尺を表示します.QGIS1.8以降ではスケールセレクタを使って1:500から1:1000000の間の設定された縮尺を選択できます."
 
 # b75348795c044deda533871f15cdba23
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:570
@@ -2411,6 +2446,8 @@ msgid ""
 "in raster layers, the progress bar will be used to show the status of "
 "lengthy operations."
 msgstr ""
+"ステータスバーの中にあるプログレスバーには各レイヤをマップビューに描画する処理の進行状況が表示されます. "
+"ラスタレイヤで統計処理をするような場合プログレスバーは非常に長い処理の進行状態を 表示することになります."
 
 # e71bddaf650240b58b987f9235d3affc
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:575
@@ -2421,6 +2458,10 @@ msgid ""
 "rendered to the map view (see Section :ref:`redraw_events` below). The icon "
 "|mIconStopRendering| immediately stops the current map rendering process."
 msgstr ""
+"新しいプラグインができたりプラグインのアップデートがあった場合はステータスバー "
+"の右端にメッセージが表示されます.ステータスバーの右側は小さいチェックボックスになって "
+"いてマップビューで一時的なレイヤが描画されないように指定できます（セクション  :ref:`redraw_events` 参照). "
+"|mIconStopRendering| アイコンをクリックすると地図の描画プロセスを中断できます."
 
 # c7a19284e5a64249bd994b287fb309c9
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:581
@@ -2429,6 +2470,7 @@ msgid ""
 "project CRS and a projector icon. Clicking on this opens the projection "
 "properties for the current project."
 msgstr ""
+"描画機能の右側にカレントプロジェクトのCRSのEPSGコードとプロジェクタアイコンが表示されています.これをクリックするとカレントプロジェクトのプロジェクションプロパティが開きます."
 
 # 6676d630a1fa4ad39c9e6852b28e08ea
 #: ../../source/docs/user_manual/introduction/qgis_gui.rst:587
@@ -2447,3 +2489,8 @@ msgid ""
 "the last case, the units are set to what the project projection specifies, "
 "e.g. '+units=m'."
 msgstr ""
+"QGISを起動した時点では度がデフォルトの単位です.この状態で任意のレイヤの座標値をQGISは度として扱います.正しい縮尺値を取得して,さらにメーター単位に手動で変更するためには, "
+":menuselection:`Settings --> Project Properties` の :guilabel:`General` "
+"タブ,または 右下のステータスバーにある |mIconProjectionDisabled| :sup:`CRS status` "
+"アイコンをクリックして,プロジェクトの空間参照システム(CRS)を選択して下さい.後者では,プロジェクトの投影方法の指定で単位がたとえば  "
+"'+units=m' のように指定されます."
