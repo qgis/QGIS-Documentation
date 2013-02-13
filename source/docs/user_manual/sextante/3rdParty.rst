@@ -259,8 +259,24 @@ Tables are opened using the ``read.csv()`` command. If a table entered
 by the user is not in CSV format, it will be converted prior to
 importing it in R.
 
-Knowing that, we can now understand the first line of our example script
-(the first line not starting with a Python comment).
+Additionaly, raster file can be read using the raster package instead of
+rgdal, by appending ``|R.raster`` to the data type definition, as show
+in the following example script, which computes a histogram using the 
+values in a raster layer:
+
+::
+
+  ##Classification=group
+  ##Layer = raster|R.raster
+  ##no_data_value = number 0
+  ##showplots
+  Layer <- raster(Layer, 1)
+  NAvalue(Layer) = no_data_value
+  hist(as.matrix(Layer), breaks=100, xlab = basename(filename(Layer)))
+
+
+Knowing that, we can now understand the first line of our first example 
+script (the first line not starting with a Python comment).
 
 ::
 
