@@ -33,7 +33,7 @@ msgid ""
 "Customization."
 msgstr ""
 "Sie können QGIS auf vielfache Art und Weise im :menuselection:`Settings -->` "
-"menu anpassen. Wählen Sie zwischen Bedienfeldern, Werkzeugkästen, "
+"Menü anpassen. Wählen Sie zwischen Bedienfeldern, Werkzeugkästen, "
 "Projekteinstellungen, Optionen und Anpassungen."
 
 # 14923fc141154820b4c684a4a3eac7bd
@@ -98,13 +98,13 @@ msgstr ""
 "Seit QGIS 1.8 ist es möglich das QGIS Protokoll zu verfolgen. Sie können die "
 "Checkbox |checkbox|:guilabel:`Protokoll` im Menü "
 ":menuselection:`Einstellungen -->Bedienfelder` aktivieren und die Meldungen "
-"während des Ladens und im Laufe von Operationen im "
-"Reiter:guilabel:`Allgemein`und :guilabel:`Erweiterungen`verfolgen."
+"während des Ladens und im Laufe von Operationen im Reiter "
+":guilabel:`Allgemein` und :guilabel:`Erweiterungen`   verfolgen."
 
 # a8a810edf66241d4a88db396666c956c
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:61
 msgid "Project Properties"
-msgstr ""
+msgstr "Projekteigenschaften"
 
 # 3812ef05658f4c2aae67af9ae0e08c85
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:63
@@ -114,6 +114,10 @@ msgid ""
 ":menuselection:`Settings --> Project Properties` you set project specific "
 "options. These include:"
 msgstr ""
+"In den Projekteigenschaften für das Projekt unter |nix| "
+":menuselection:`Einstellungen -->Projekteinstellungen` oder |win| "
+":menuselection:`Einstellungen--> Projekteinstellungen` stellen sie gezielt "
+"Eigenschaften ein. Diese beinhalten:"
 
 # 4aa981032a24421aa40c76c81bd53607
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:68
@@ -123,6 +127,11 @@ msgid ""
 "layers can be defined. You can define the layer units (only used when CRS "
 "transformation is disabled) and the precision of decimal places to use."
 msgstr ""
+"Im Reiter :guilabel:`Allgemein` den Projekttitel, die Auswahl- und "
+"Hintergrundfarbe, Layereinheiten, Genauigkeit und die Option die Pfade der "
+"Layer relativ zu speichern. Sie können Layereinheiten (nur verwendbar wenn "
+"die KBS Transformation deaktiviert ist) und die Präzision der Dezimalstellen "
+"einstellen."
 
 # 79ffefbc59264ba79ec817a3f367f087
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:72
@@ -131,6 +140,10 @@ msgid ""
 "the CRS for this project, and to enable on-the-fly re-projection of raster "
 "and vector layers when displaying layers from a different CRS."
 msgstr ""
+"Im :guilabel:`Koordinatenbezugssystem` Reiter können Sie das KBS für das "
+"Projekt einstellen sowie 'On-The-Fly'-KBS-Transformation von Raster- und "
+"Vektorlayern -für den Fall dass Layer mit verschiedenen CRS dargestellt "
+"werden- aktivieren."
 
 # fe5135950ba84cbc93f85a994c26487c
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:75
@@ -140,6 +153,10 @@ msgid ""
 "from the :ref:`gui_options` section to enable identifying of multiple "
 "layers.)"
 msgstr ""
+"Mit dem dritten :guilabel:`Abfragbare Layer` Reiter legen Sie fest (oder "
+"verhindern) welche Layer auf das 'Objekte abfragen'-Werkzeug reagieren. "
+"(siehe der Abschnitt über Kartenwerkzeuge im Abschnitt :ref:`gui_options` "
+"über das Einschalten der Identifizierung von Mehrfachlayern.) "
 
 # c71651d6b8b74570be26bcdb3a2bd2cf
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:78
@@ -149,11 +166,16 @@ msgid ""
 "as the WFS Capabilities. Activating the |checkbox| :guilabel:`Add WKT "
 "geometry to feature info response` will allow to query the WMS layers."
 msgstr ""
+"Der :guilabel:`OWS Server` Reiter ermöglicht es Ihnen Informationen über die "
+"QGIS Mapserver Diensteigenschaften, dessen Ausdehnung und "
+"Koordinatensystemeinschränkungen sowie die WFS-Capabilities zu definieren. "
+"Wenn sie |checkbox| :guilabel:`WKT-Geometrie in Objektinformationen "
+"einschließen ` aktivieren ist es möglich die WMS-Layer abzufragen."
 
 # 1f1259444199488cbd97e0544182d928
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:86
 msgid "Options"
-msgstr ""
+msgstr "Optionen"
 
 # e1c7a4d7de5b4270933e98230bd5a6d5
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:88
@@ -163,16 +185,23 @@ msgid ""
 "-->` |mActionOptions| :menuselection:`Options`. The tabs where you can "
 "optimize your options are:"
 msgstr ""
+"|mActionOptions| Einige grundlegende Optionen für QGIS können mit dem "
+":guilabel:`Options`Dialog gewählt werden. Wählen Sie die Menüoption "
+":menuselection:`Einstellungen --> |mActionOptions| "
+":menuselection:`Optionen`. Die Reiter mit denen Sie Ihre Optionen optimieren "
+"können sind:  "
 
 # 728fbaca68f84a178dc335bdbe6f1303
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:94
 msgid "General Tab"
-msgstr ""
+msgstr "Allgemein "
 
 # ec12b1b79d3e4ae49239e056f49f7472
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:96
 msgid "|checkbox| :guilabel:`Prompt to save project changes when required`"
 msgstr ""
+"|checkbox| :guilabel:`Bei Bedarf nachfragen, ob geänderte Projekte "
+"gespeichert werden sollen`"
 
 # 1b95560dcacd4b76b064549b3fe4e697
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:97
@@ -180,16 +209,18 @@ msgid ""
 "|checkbox| :guilabel:`Warn when opening a project file saved with an older "
 "version of QGIS`"
 msgstr ""
+"|checkbox| :guilabel:`Warnung ausgeben, wenn QGIS-Projekt einer früheren "
+"Version geöffnet wird "
 
 # bad960040f9a4b7b9009ab1846947c7a
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:98
 msgid "Change Selection and Background color"
-msgstr ""
+msgstr "Farbe für die Auswahl und die Hintergrundfarbe ändern"
 
 # be27cddaa5294c1abaf7dd909a1a0632
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:99
 msgid "Change the QGIS Style"
-msgstr ""
+msgstr "Den QGIS-Stil ändern"
 
 # b52a7d15566a4c72b63d9cda61e11ee8
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:100
@@ -197,16 +228,19 @@ msgid ""
 "Change the icon theme (choose between 'default', 'classic', 'gis' and "
 "'newgis')"
 msgstr ""
+"Das Icon-Thema ändern (wählen sie zwischen 'default', 'classis', 'gis' and "
+"'newgis')"
 
 # e91d747846f741c797498ac383779cfc
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:101
+#, fuzzy
 msgid "Change icon size between 16, 24 and 32 pixel."
-msgstr ""
+msgstr "Die Icon-Größe zwischen 16, 24 und 32 Pixeln ändern."
 
 # 2d62ed69fb9b415eb71758aa55103376
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:102
 msgid "Change the menu size"
-msgstr ""
+msgstr "Die Textgröße ändern"
 
 # d2aa03cf81ec4bfc9ccddab833bee78c
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:103
@@ -214,6 +248,8 @@ msgid ""
 "Define double click action in legend (choose between 'open layer properties' "
 "and 'open ') attribute table."
 msgstr ""
+"Die Doppelklick-Aktion in der Legende definieren (wählen Sie zwischen "
+"'Layereigenschaften öffnen' und 'Attributtabelle öffnen')."
 
 # 3de59b7e188d426b94f649a17031463a
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:105
