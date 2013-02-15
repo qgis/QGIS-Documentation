@@ -93,7 +93,7 @@ General Tab
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * Change Selection and Background color
 * Change the QGIS Style
-* Change the icon theme (choose between 'default', 'classic', 'gis' and 'newgis')
+* Change the icon theme (choose between 'default', 'classic' and 'gis')
 * Change icon size between 16, 24 and 32 pixel.
 * Change the menu size
 * Define double click action in legend (choose between 'open layer properties'
