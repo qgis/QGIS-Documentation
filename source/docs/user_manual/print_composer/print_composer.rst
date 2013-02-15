@@ -569,7 +569,7 @@ Atlas generation
 ================
 
 The print composer includes generation functions that allow to create map
-books in an automated way. The concept is to use coverage layer, which contains 
+books in an automated way. The concept is to use a coverage layer, which contains 
 geometries and fields. For each geometry in the coverage layer, a new output 
 will be generated where the content of some canvas maps will be moved to 
 highlight the current geometry. Fields associated to this geometry can be used 
@@ -598,6 +598,13 @@ only:: html
   geometries on which to iterate over.
 * An optional :guilabel:`Hidden coverage layer` |checkbox|, that if checked, will hide the
   coverage layer (but not the other ones) during the generation.
+* An optional :guilabel:`Sort features` |checkbox| that, if checked, allows to sort features of the
+  coverage layer. The associated combobox allows to choose which column will be used as the sorting key.
+  Sort order (either ascending or descending) is set by a two-state button that displays an up or
+  a down arrow.
+* An optional :guilabel:`Feature filter` text area that allows to specify an expression for filtering
+  features from the coverage layer. If the expression is not empty, only features that evaluate to true
+  will be selected. The button on the right allows to display the expression builder.
 * An input box :guilabel:`Margin around coverage` that allows to select the amount of
   space added around each geometry within the allocated map. Its value
   is meaningful only when using the autoscaling mode.
