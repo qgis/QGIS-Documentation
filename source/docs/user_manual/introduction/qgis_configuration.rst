@@ -203,7 +203,7 @@ Digitizing Tab
 * Define :guilabel:`Default snapping tolerance` in map units or pixel
 * Define search radius for vertex edits in 'map units' or 'pixel'
 * |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex :guilabel:`Marker style` ('Cross' (default), 'Semi transparent', 'Circle' or
+* Define vertex :guilabel:`Marker style` ('Cross' (default), 'Semi transparent circle' or
   'None') and vertex :guilabel:`Marker size`.
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 * |checkbox| :guilabel:`Reuse last entered attribute values`
