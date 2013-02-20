@@ -104,7 +104,6 @@ msgstr ""
 
 # 21e6570cc9f6455fbef6a76d2ba428ee
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:54
-#, fuzzy
 msgid ""
 "Whenever you select a new CRS, the used layer units will automatically be "
 "changed in the :guilabel:`General` tab of the |mActionOptions| "
@@ -135,9 +134,9 @@ msgid ""
 msgstr ""
 "QGIS startet ein neues Projekt mit dem Festlegen eines Standard-KBS. "
 "Vordefiniert ist EPSG:4326 - WGS84 (``proj=longlat +ellps=WGS84 +datum=WGS84 "
-"+no_defs``). Sie können diese Grundeinstellung ändern im Reiter [**KBS**] "
+"+no_defs``). Sie können diese Grundeinstellung ändern im Reiter **[KBS]** "
 "des Dialog :guilabel:`Optionen` im Menü :guilabel:`Einstellungen`, in dem "
-"Sie im obereb Bereich 'Neue Projekte immer in diesem KBS beginnen' auf den "
+"Sie im oberen Bereich 'Neue Projekte immer in diesem KBS beginnen' auf den "
 "Knopf  **[Wählen]** klicken und ein anderes KBS auswählen (siehe "
 "figure_projection_1_). Diese Einstellung wird dann für alle folgenden neuen "
 "Projekte angewendet."
@@ -283,6 +282,15 @@ msgid ""
 "|geographic| :sup:`CRS status` icon will no longer be greyed-out and all "
 "layers will be OTF projected to the CRS shown next to the icon."
 msgstr ""
+"Wenn Sie bereits einen Layer geladen haben und nun die Unterstützung für "
+"On-The-Fly (OTF) Projektion aktivieren wollen ist der beste Weg folgender:\n"
+"Öffnen Sie den Reiter :guilabel:`KBS` im Menü "
+":menuselection:`Projekteinstellungen ...`, wählen Sie das passende KBS für "
+"den Layer aus und aktivieren Sie dann das Kontrollkästchen |checkbox| "
+":guilabel:`'On-The-Fly'-KBS-Transformation aktivieren`. Das Icon "
+"|geographic| :sup:`KBS-Status` ist nun nicht länger ausgegraut, und alle "
+"daraufhin geladenen Layer werden On-The-Fly auf das\n"
+"ausgewählte KBS projiziert."
 
 # 93464f91f9aa4e1ca1747519d1ff1491
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:139
@@ -291,6 +299,9 @@ msgid ""
 "Properties` dialog contains five important components as shown in "
 "Figure_projection_2_ and described below."
 msgstr ""
+"Der Reiter :guilabel:`Koordinatenbezugssystem (KBS)` des "
+":guilabel:`Projekteigenschaften`-Dialogs enthält 5 wichtigw Optionen (siehe "
+"Figure_projection_2_). Diese werden im Folgenden beschrieben. "
 
 # ba83fa84ea3e45f08f8e62e824b61807
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:160
@@ -301,6 +312,12 @@ msgid ""
 "are inactive. When on, the coordinates in each layer are projected to the "
 "coordinate reference system defined for the map canvas."
 msgstr ""
+"**On-The-Fly-KBS-Transformation aktivieren** -über diese Checkbox wird die "
+"OTF Projektion aktiviert oder deaktiviert.Wenn sie deaktiviert ist, wird "
+"jeder Layer entsprechend seines KBS\n"
+" dargestellt und die unten beschriebenen Komponenten sind inaktiv. Wenn es "
+"aktiviert ist, wird jeder Layer beim Laden in das definierte "
+"Koordinatenbezugssystem 'on-the-fly' umgewandelt dargestellt.  "
 
 # e2947a8ee9824d4ca2b309a8b0c17d4a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:165
@@ -310,6 +327,11 @@ msgid ""
 "systems. To define a CRS,  select it from the list by expanding the "
 "appropriate node and selecting the CRS. The active CRS is preselected."
 msgstr ""
+"**Koordinatensystem** - dies ist eine Liste aller KBS die von QGIS "
+"unterstützt werden. Dies beinhaltet Geografische, Projizierte und "
+"Benutzerdefinierte Koordinatensysteme. Um ein KBS zu definieren wählen Sie "
+"es aus der Liste in dem sie die Knoten aufklappen aus. Das aktive KBS ist "
+"jetzt vorausgewählt. "
 
 # 1b122a62226f44dea38fe8d1e1f8a812
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:169
@@ -317,9 +339,12 @@ msgid ""
 "**Proj4 text** - this is the CRS string used by the Proj4 projection engine. "
 "This text is read-only and provided for informational purposes."
 msgstr ""
+"**Proj4Text** - dies ist ein Ausdruck der von der PROJ4-Bibliothek genutzt "
+"wird. Es dient nur zu Information und kann nicht verändert werden."
 
 # 8914686801f449778d1e01225380d7cd
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:172
+#, fuzzy
 msgid ""
 "**Search** - if you know the EPSG code, the identifier or the name for a "
 "Coordinate Reference System, you can use the search feature to find it. "
@@ -327,6 +352,9 @@ msgid ""
 ":guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid "
 "projections."
 msgstr ""
+"**Suchen** - wenn Sie den EPSG Code, die ID oder den Namen für ein "
+"Koordinatenbezugssystem kennen können Sie diese benutzen, um ihr "
+"Koordinatenbezugssystem zu finden. Geben Sie einfach eine ID ein"
 
 # e0ea52c276bb492688d89362375acb8c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:177
