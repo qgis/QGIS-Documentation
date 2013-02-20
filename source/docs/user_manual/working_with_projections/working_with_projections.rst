@@ -165,9 +165,9 @@ shown in Figure_projection_2_ and described below.
 #. **Proj4 text** - this is the CRS string used by the Proj4
    projection engine. This text is read-only and provided for informational
    purposes.
-#. **Search** - if you know the EPSG code, the identifier or the name
+#. **Filter** - if you know the EPSG code, the identifier or the name
    for a Coordinate Reference System, you can use the search feature to find it.
-   Enter the identifier and click on **[Find]**. Use the |checkbox| 
+   Enter the identifier and click **[Return]**. Use the |checkbox| 
    :guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid 
    projections.
 #. **Recently used CRS** - if you have certain CRS that you frequently
