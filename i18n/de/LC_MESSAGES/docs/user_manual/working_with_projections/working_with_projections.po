@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-20 15:01\n"
+"POT-Creation-Date: 2013-02-22 13:24\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,7 @@ msgid ""
 msgstr ""
 "QGIS unterstützt etwa 2700 bekannte Koordinatenbezugssysteme (KBS). Diese "
 "sind in einer SQlite-Datenbank abgelegt, die mit QGIS installiert wird "
-"Normalerweise muss diese Datenbank nicht editiert werden, und es kann\n"
+"Normalerweise muss diese Datenbank nicht editiert werden, und es kann "
 "Probleme verursachen, wenn Sie es dennoch versuchen. Selbst definierte KBS "
 "sind in einer Benutzerdatenbank abgelegt. Informationen zum Anlegen einer "
 "Benutzerdatenbank finden Sie im Abschnitt :ref:`sec_custom_projections`."
@@ -266,7 +266,7 @@ msgstr ""
 msgid ""
 "Turn OTF on by default, by selecting the :guilabel:`CRS` tab of the "
 ":guilabel:`Options` dialog and selecting |checkbox| :guilabel:`Enable 'on "
-"the fly' reprojection by default`"
+"the fly' reprojection by default`."
 msgstr ""
 "Aktivieren Sie OTF als Standardeinstellung, indem Sie den Reiter "
 ":guilabel:`KBS` im :guilabel:`Optionen` Dialog öffnen und |checkbox| "
@@ -293,14 +293,14 @@ msgstr ""
 "ausgewählte KBS projiziert."
 
 # 93464f91f9aa4e1ca1747519d1ff1491
-#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:139
+#: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:156
 msgid ""
 "The :guilabel:`Coordinate Reference System` tab of the :guilabel:`Project "
 "Properties` dialog contains five important components as shown in "
 "Figure_projection_2_ and described below."
 msgstr ""
 "Der Reiter :guilabel:`Koordinatenbezugssystem (KBS)` des "
-":guilabel:`Projekteigenschaften`-Dialogs enthält 5 wichtigw Optionen (siehe "
+":guilabel:`Projekteigenschaften`-Dialogs enthält 5 wichtige Optionen (siehe "
 "Figure_projection_2_). Diese werden im Folgenden beschrieben. "
 
 # ba83fa84ea3e45f08f8e62e824b61807
@@ -309,15 +309,15 @@ msgid ""
 "**Enable on the fly CRS transformation** - this checkbox is used to enable "
 "or disable OTF projection. When off, each layer is drawn using the "
 "coordinates as read from the data source and the components described below "
-"are inactive. When on, the coordinates in each layer are projected to the "
+"are inactive.When on, the coordinates in each layer are projected to the "
 "coordinate reference system defined for the map canvas."
 msgstr ""
-"**On-The-Fly-KBS-Transformation aktivieren** -über diese Checkbox wird die "
-"OTF Projektion aktiviert oder deaktiviert.Wenn sie deaktiviert ist, wird "
-"jeder Layer entsprechend seines KBS\n"
-" dargestellt und die unten beschriebenen Komponenten sind inaktiv. Wenn es "
-"aktiviert ist, wird jeder Layer beim Laden in das definierte "
-"Koordinatenbezugssystem 'on-the-fly' umgewandelt dargestellt.  "
+"**On-The-Fly-KBS-Transformation aktivieren** - über diese Checkbox wird die "
+"OTF Projektion aktiviert oder deaktiviert. Wenn sie deaktiviert ist, wird "
+"jeder Layer entsprechend seines KBS dargestellt und die unten beschriebenen "
+"Komponenten sind inaktiv. Wenn es aktiviert ist, wird jeder Layer beim Laden "
+"in das definierte Koordinatenbezugssystem 'on-the-fly' umgewandelt "
+"dargestellt."
 
 # e2947a8ee9824d4ca2b309a8b0c17d4a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:165
@@ -371,7 +371,7 @@ msgstr ""
 # af88a8c9a86b43c59b1ad4378b23f41a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:180
 msgid "**Project Properties Dialog**"
-msgstr ""
+msgstr "**Dialog Projekteigenschaften**"
 
 # 9255d7ab63de414baf318376df9ecaac
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:182
@@ -411,6 +411,14 @@ msgid ""
 "your QGIS user database. In addition to your custom CRS, this database also "
 "contains your spatial bookmarks and other custom data."
 msgstr ""
+"Wenn QGIS nicht das KBS bereithält, welches Sie brauchen, können Sie ein "
+"eigenes KBS erstellen. Dazu wählen Sie "
+"|mIconNew|:guilabel:`Benutzerkoordinatenbezugssysten ...` in der Menüleiste "
+":menuselection:`Bearbeiten` (GNOME, OSX) oder der Menüleiste "
+":menuselection:`Einstellungen` (KDE, Windows). Das eigene KBS wird in einer "
+"Benutzerdatenbank erstellt. In Ergänzung zu ihrem benutzerdefinierten KBS "
+"enthält diese Datenbank auch Ihre räumlichen Lesezeichen und andere "
+"benutzerdefinierte Daten."
 
 # 5fb61f2ab51d47a9b52119b298017c7b
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:219
@@ -421,6 +429,12 @@ msgid ""
 "U.S. Geological Survey Open-File Report 90-284, 1990 (available at "
 "ftp://ftp.remotesensing.org/proj/OF90-284.pdf )."
 msgstr ""
+"Wenn man in QGIS eine eigene Projektion erstellen möchte bedarf es einem "
+"grundlegenden Verständnis im Umgang mit der PROJ4-Bibliothek. Zu Beginn "
+"sollten Sie einen Blick in das Benutzerhandbuch von PROJ werfen. "
+"Cartographic Projection Procedures for the UNIX Environment - A User's "
+"Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, "
+"1990 (zu finden unter ftp://ftp.remotesensing.org/proj/OF90-284.pdf)."
 
 # b3efef12e7584792944538bc41ad4fc6
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:225
@@ -429,6 +443,9 @@ msgid ""
 "utilities. The cartographic parameters used with ``proj.4`` are described in "
 "the user manual and are the same as those used by QGIS."
 msgstr ""
+"Dieses Handbuch beschreibt die Anwendung von ``proj.4`` und die damit "
+"verbundenen Kommandozeilenprogramme. Die dort beschriebenen kartographischen "
+"Parameter sind identisch mit denen, die in QGIS verwendet werden."
 
 # eaedba33babe4d06a4e53bc2ef6d9e3b
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:229
@@ -436,16 +453,18 @@ msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
 msgstr ""
+"Der Dialog :guilabel:`Definition eines Benutzerkoordinatensystems` braucht "
+"nur zwei Einträge, um eine eigene Projektion zu definieren:"
 
 # 7ee40f79edc649639bfd110a0fd83ed5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:232
 msgid "a descriptive name and"
-msgstr ""
+msgstr "einen aussagekräftigen Namen und"
 
 # 489aa504bbfb4c4ba9e97a3f831db7d0
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:233
 msgid "the cartographic parameters in PROJ.4 format."
-msgstr ""
+msgstr "die kartografischen Parameter im PROJ.4-Format."
 
 # e7265de033ec48a38145b5aef7b4c243
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:235
@@ -454,6 +473,10 @@ msgid ""
 "descriptive name and the CRS parameters. After that you can save your CRS by "
 "clicking the |mActionFileSave| :sup:`Save` button."
 msgstr ""
+"Um ein neues KBS zu erstellen klicken Sie |mIconNew| :sup:`Neu` Knopf  und "
+"geben Sie einen aussagekräftigen Namen sowie die KBS-Parameter ein. Danach "
+"speichern Sie das neue KBS mit dem Knopf |mActionFileSave| :sup:`Speichern` "
+"ab."
 
 # a1677b5adb7a4eb091dd14438795c454
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:239
@@ -461,6 +484,8 @@ msgid ""
 "Note that the :guilabel:`Parameters` must begin with a ``+proj=``-block, to "
 "represent the new coordinate reference system."
 msgstr ""
+"Denken Sie daran, dass die kartographischen Parameter mit einem "
+"``+proj=``-Block beginnen müssen, um den Beginn eines neuen KBS anzuzeigen.\n"
 
 # 96714f3a3cd24c6ba9ab42b770289780
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:242
@@ -472,3 +497,9 @@ msgid ""
 ":guilabel:`East` fields respectively. Click on **[Calculate]** and compare "
 "the results with the known values in your coordinate reference system."
 msgstr ""
+"Sie können das neue KBS testen, um zu sehen, ob bei einer Konvertierung von "
+"bekannten WGS84 Lat-Lon Koordinaten in ihre Projektion ein sinnvolles "
+"Ergebnis herauskommt. Dazu kopieren Sie ihre kartographischen Parameter in "
+"das Fenster :guilabel:`Parameter`, geben ein paar bekannte WGS84 Lat-Lon "
+"Koordinaten an und klicken dann auf den Knopf **[Berechnen]**. Vergleichen\n"
+"Sie die Ergebnisse mit den Werten im Kartenfenster."
