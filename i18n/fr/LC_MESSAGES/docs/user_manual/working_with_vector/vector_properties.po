@@ -3,22 +3,21 @@
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-05 08:25\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-02-25 14:24+0100\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Language: fr\n"
 "X-Source-Language: C\n"
+"X-Generator: Poedit 1.5.4\n"
 
 # 94e533a81ba74ec29ee64253e84ce61e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:10
@@ -301,11 +300,25 @@ msgid ""
 ":guilabel:`Copy style` and switch to another layer. Then choose "
 ":menuselection:`Layer -->` |mActionEditPaste| :guilabel:`Paste style`."
 msgstr ""
+"Un style regroupe un ensemble de symboles et de palettes de couleurs. Vous "
+"pouvez choisir vos symboles préférés ou les plus utilisés afin de pouvoir "
+"les employer de nouveau sans devoir les recréer. Ces objets ont toujours un "
+"nom par lequel il est possible de les appeler. Il y a un style par défaut "
+"dans QGIS qui peut être modifié, l'utilisateur pouvant en créer de nouveau. "
+"Dans la partie inférieure de l'onglet Style, quatre boutons permettent de "
+"gérer les styles : utilisez **[Restaurer le style par défaut]** pour "
+"réinitialiser le style, **[Sauvegarder comme défaut]** pour définir le style "
+"par défaut, **[Charger le style...]** pour appliquer votre propre style et "
+"**[Sauvegarder le style...]** pour enregistrer le style courant. Le style "
+"appliqué à une couche peut être transféré à une autre couche : activez la "
+"couche, sélectionnez  :menuselection:`Couche -->` |mActionEditCopy| "
+":guilabel:`Copier le style`  puis activer l'autre couche et sélectionnez "
+":menuselection:`Couche -->` |mActionEditCopy| :guilabel:`Coller le style`."
 
 # bde689c9ad3e4c979c0cc9dc1768bf6a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:134
 msgid "**Renderers**"
-msgstr ""
+msgstr "**Moteurs de Rendu**"
 
 # e0e22eadbc1d4a598705cee0e2086580
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:136
@@ -318,11 +331,18 @@ msgid ""
 "created by specifying a symbol and a color ramp \\- they will set the colors "
 "for symbols appropriately."
 msgstr ""
+"Le moteur de rendu est responsable de l'affichage d'une entité avec le "
+"symbole adéquat. Il existe quatre types de rendus : symbole unique, "
+"catégorisé (nommé couleur unique dans l'ancienne symbologie), gradué et basé "
+"sur un ensemble de règles. Il n'y a pas de rendu de couleur continue, car il "
+"s'agit d'un cas spécifique du rendu gradué. Les rendus catégorisés et "
+"gradués peuvent être crées en spécifiant un symbole et une palette de "
+"couleur \\ - les couleurs des différents symboles changeront selon."
 
 # e0e50f807a7247a48322b178cd4d2212
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:146
 msgid "**Working with the New Generation Symbology**"
-msgstr ""
+msgstr "**Travailler avec la nouvelle symbologie**"
 
 # fe3dd6a192a24f9aaa569a9cc2b44d98
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:149
@@ -354,7 +374,7 @@ msgstr ""
 # 66345b4d04ec4f61a6325385f0879e1c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:171
 msgid "**Single Symbol Renderer**"
-msgstr ""
+msgstr "**Symboles unique**"
 
 # 18312a7c9274460fbe40bb8e704f330f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:173
@@ -370,6 +390,17 @@ msgid ""
 ":guilabel:`Symbol Properties` dialog, or the **[Change]** button right of "
 "the preview, which opens an ordinary :guilabel:`Color` dialog."
 msgstr ""
+"Le moteur de rendu pour symbole unique est utilisé pour représenter toutes "
+"les entités de la couche de la même façon, définie par l'utilisateur. Les "
+"propriétés, qui peuvent être ajustées dans l'onglet ``Style``, dépendent du "
+"type de géométrie de la couche, mais partagent une structure similaire. En "
+"haut à gauche figure un aperçu du symbole tel qu'il apparaîtra. En bas est "
+"affichée la liste des symboles déjà existants dans le style courant, prêts à "
+"être sélectionnés d'un simple clic. Le symbole courant peut être modifié en "
+"utilisant le bouton **[Modification...]** situé sous l'aperçu et qui ouvre "
+"la fenêtre de :guilabel:`Propriétés du symbole`, ou en utilisant le bouton "
+"**[Changer]** situé à droite de l'aperçu et qui ouvre la fenêtre "
+":guilabel:`Sélectionner une couleur`."
 
 # 0b43972f10004124acb61a8c89145cb3
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:196
@@ -381,6 +412,15 @@ msgid ""
 "-->` menu allows to enable and define the order in which the symbol layers "
 "are rendered (if the symbol consists of more than one layer)."
 msgstr ""
+"Dans l'onglet :guilabel:`Style`,vous pouvez définir non seulement la "
+"transparence générale de la couche mais également les unités à utiliser pour "
+"la taille des symboles (millimètre ou unité identique à celle de la carte). "
+"Avec le bouton **[Avancé]** situé à côté de **[Sauvegarder le style]**, vous "
+"pouvez spécifier un champ de la table attributaire à utiliser pour faire "
+"varier la taille ou la rotation. Ici le menu :menuselection:`Niveaux de "
+"symbole` permet définir manuellement dans quel ordre les couches de symboles "
+"doivent être dessinées (si plusieurs symboles différents ont été définis "
+"pour la couche)."
 
 # 946089f865f24d3b8f618cd0b8615231
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:203
@@ -397,6 +437,19 @@ msgid ""
 "the other hand, it could be very handy sometimes to have this easy way of "
 "converting styles to rule-based."
 msgstr ""
+"Après avoir effectué les modifications nécessaires, le symbole peut être "
+"ajouté à la liste des symboles existants (en utilisant le bouton "
+"**[Sauvegarder le style]**) pour être réemployé ultérieurement. De plus, "
+"vous pouvez utiliser le bouton **[Sauvegarder le style]** situé en bas pour "
+"exporter le symbole comme fichier de style QGIS (.qml) ou fichier SLD "
+"(.sld). Actuellement dans la version 1.8, des SLD peuvent être exportés pour "
+"tous les types de rendu (symbole unique, catégorisé, gradué ou basé sur un "
+"ensemble de règles) mais lors de l'importation d'un SLD seuls les rendus "
+"simple et basé sur un ensemble de règles peuvent être créés. Cela signifie "
+"que les rendus catégorisé et gradué seront convertis en un ensemble de "
+"règles. Si vous souhaitez conserver ces types de rendu, il faut fonctionner "
+"avec des fichiers QML. Mais il peut être très pratique d'utiliser ce système "
+"pour convertir des style en ensemble de règles."
 
 # 7d53187cd81d4b5ea45673d638c9d1ff
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:217
