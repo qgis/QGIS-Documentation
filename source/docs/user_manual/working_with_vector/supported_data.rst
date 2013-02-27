@@ -80,7 +80,7 @@ From the available options check |radiobuttonon| :guilabel:`File`.
 Click on button **[Browse]**. That will bring up a standard open file
 dialog (see figure_vector_2_) which allows you to navigate the file system
 and load a shapefile or other supported data source.
-The selection box :guilabel:`Files of type` |selectstring| allows you to
+The selection box :guilabel:`Filter` |selectstring| allows you to
 preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
