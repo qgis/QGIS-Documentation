@@ -229,7 +229,7 @@ is mandatory.
     pts=spsample(polyg,numpoints,type="random")
     output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
-The first lines, which start with a double Python comment sign (##),
+The first lines, which start with a double Python comment sign (``##``),
 tell SEXTANTE the inputs of the algorithm described in the file and the
 outputs that it will generate. They work exactly with the same syntax as
 the SEXTANTE scripts that we have already seen, so they will not be
@@ -259,24 +259,30 @@ Tables are opened using the ``read.csv()`` command. If a table entered
 by the user is not in CSV format, it will be converted prior to
 importing it in R.
 
-Additionaly, raster file can be read using the raster package instead of
-rgdal, by appending ``|R.raster`` to the data type definition, as show
+Additionally, raster files can be read using the ``raster`` package instead of
+``rgdal``, by using the ``userasterpackage`` tag, as shown
 in the following example script, which computes a histogram using the 
 values in a raster layer:
 
 ::
 
+  ##userasterpackage
   ##Classification=group
-  ##Layer = raster|R.raster
+  ##Layer = raster
   ##no_data_value = number 0
   ##showplots
   Layer <- raster(Layer, 1)
   NAvalue(Layer) = no_data_value
   hist(as.matrix(Layer), breaks=100, xlab = basename(filename(Layer)))
 
+If you are an advanced user and do not want SEXTANTE to create the object
+representing the layer, you can use the ``##passfilename`` tag to tell
+SEXTANTE that you prefer a string with the filename instead. In this case,
+it is up to you to open the file before performing any operation on the
+data it contains.
 
-Knowing that, we can now understand the first line of our first example 
-script (the first line not starting with a Python comment).
+With the above information, we can now understand the first line of 
+our first example script (the first line not starting with a Python comment).
 
 ::
 

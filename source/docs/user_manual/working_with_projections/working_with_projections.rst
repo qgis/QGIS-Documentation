@@ -122,7 +122,7 @@ There are three ways to achieve this end:
    right-hand corner of the statusbar.
 #. Turn OTF on by default, by selecting the :guilabel:`CRS` tab of the 
    :guilabel:`Options` dialog and selecting |checkbox| 
-   :guilabel:`Enable 'on the fly' reprojection by default`
+   :guilabel:`Enable 'on the fly' reprojection by default`.
 
 
 If you have already loaded a layer, and want to enable OTF projection, the
@@ -132,9 +132,7 @@ activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbo
 The |geographic| :sup:`CRS status` icon will no longer be greyed-out
 and all layers will be OTF projected to the CRS shown next to the icon.
 
-The :guilabel:`Coordinate Reference System` tab of the 
-:guilabel:`Project Properties` dialog contains five important components as 
-shown in Figure_projection_2_ and described below.
+.. index:: Proj4, Proj4_text
 
 .. following picture has an external reference from working with ogc, so 
    the reference of this figure needs a capture!
@@ -151,12 +149,14 @@ shown in Figure_projection_2_ and described below.
 
    Projection Dialog |win|
 
-.. index:: Proj4, Proj4_text
+The :guilabel:`Coordinate Reference System` tab of the 
+:guilabel:`Project Properties` dialog contains five important components as 
+shown in Figure_projection_2_ and described below.
 
 #. **Enable on the fly CRS transformation** -
    this checkbox is used to enable or disable OTF projection. When off, each
    layer is drawn using the coordinates as read from the data source and the 
-   components described below are inactive. When on, the coordinates in each 
+   components described below are inactive.When on, the coordinates in each 
    layer are projected to the coordinate reference system defined for the map canvas.
 #. **Coordinate Reference System** - this is a list of all CRS
    supported by QGIS, including Geographic, Projected and Custom coordinate
@@ -167,14 +167,11 @@ shown in Figure_projection_2_ and described below.
    purposes.
 #. **Filter** - if you know the EPSG code, the identifier or the name
    for a Coordinate Reference System, you can use the search feature to find it.
-   Enter the identifier and click **[Return]**. Use the |checkbox| 
-   :guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid 
-   projections.
+   Enter the EPSG code, the identifier or the name. 
 #. **Recently used CRS** - if you have certain CRS that you frequently
    use in your everyday GIS work, these will be displayed in the table
    at the bottom of the Projection Dialog. Click on one of these buttons to select
    the associated CRS.
-
 
 .. tip:: **Project Properties Dialog**
 
