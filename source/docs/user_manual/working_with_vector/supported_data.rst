@@ -4,8 +4,7 @@
 Supported Data Formats
 ======================
 
-|qg| uses the OGR library to read and write vector data formats [#]_,
-including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
+|qg| uses the OGR library to read and write vector data formats (GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins),including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
 SpatiaLite, Oracle Spatial databases and many more. The vector data can also
 be loaded in read mode from zip and gzip archives into QGIS. At the date of this
 document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
@@ -465,9 +464,9 @@ especially over a network. You can improve the drawing performance of
 PostgreSQL layers by ensuring that a :index:`PostGIS spatial index`
 exists on each layer in the database. PostGIS supports
 creation of a :index:`GiST (Generalized Search Tree) index` to speed
-up spatial searches of the data.
+up spatial searches of the data (GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net).
 
-The syntax for creating a GiST [#]_ index is:
+The syntax for creating a GiST index is:
 ::
 
 
@@ -506,7 +505,7 @@ Vector layers crossing 180 |degrees| longitude
 -----------------------------------------------
 
 Many GIS packages don't wrap vector maps, with a geographic reference
-system (lat/lon), :index:`crossing the 180 degrees longitude line`.
+system (lat/lon), :index:`crossing the 180 degrees longitude line`(http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html).
 As result, if we open such map in |qg|, we will see two far, distinct
 locations, that should show near each other. In Figure_vector_4_ the
 tiny point on the far left of the map canvas (Chatham Islands), should
@@ -526,7 +525,7 @@ be within the grid, right of New Zealand main islands.
 
 
 A workaround is to transform the longitude values using PostGIS and the
-**ST_Shift_Longitude** [#]_ function. This function reads every point/vertex
+**ST_Shift_Longitude** function. This function reads every point/vertex
 in every component of every feature in a geometry, and if the longitude
 coordinate is < 0 |degrees| adds 360 |degrees| to it. The result would be
 a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
@@ -610,10 +609,3 @@ MSSQL Spatial Layers
 QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer|
 :sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available
 in the MS SQL node in the QBrowser tree, providing drag and drop import support.
-
-----
-
- .. [#] GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins.
- .. [#] GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net
- .. [#] http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html
-
