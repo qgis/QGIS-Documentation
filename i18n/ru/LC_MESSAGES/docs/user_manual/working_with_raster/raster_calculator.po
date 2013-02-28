@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-01-26 14:26\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,37 +16,43 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# f7e67f4299724f3e926cd14072012fd1
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 405f443be2024e75a06667b7b6326636
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:12
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:10
 msgid "Raster Calculator"
-msgstr ""
+msgstr "Калькулятор растров"
 
-# 1ae19bf875ab460997838724932e96ca
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:16
+# 88301d8075fc40dcaf5e59dcea1a2fdd
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
 msgid ""
-"The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
 "(see figure_raster_2_) allows to perform calculations on basis of existing "
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
+":guilabel:`Калькулятор растров` доступный из меню :menuselection:`Растр` "
+"(см. figure_raster_2_) позволяет выполнять различные вычисления на основе "
+"значений пикселей. Результат вычислений сохраняется как изображение в "
+"GDAL-совместимом формате."
 
-# d5d9305cfb8a44048cbdf23f0f5ca4c2
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:34
+# cec3ee0246ee4fe8bf5211f808cd02a6
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:32
 msgid ""
-"The **Fields list** contains all loaded raster layers that can be used. To "
-"add a raster to the raster calculator expression field, double click its "
-"name in the Fields list. You can then use the operators to construct "
-"calculation expressions or you can just type it into the box."
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions or you can just type it into the box."
 msgstr ""
+"В списке **Каналы растров** перечисленны доступные растровые слои. Добавить "
+"растр в выражение можно двойным щелчком по его имени в списке. При "
+"построении выражения можно использовать кнопки операторов или просто "
+"набирать его в соответствующем поле."
 
 # 85477bec7334487390625441323c2464
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:39
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:37
 msgid ""
 "In the **Result layer** section you have to define an output layer. You can "
 "then define the extent of the calculation area based on an input raster "
@@ -54,19 +60,111 @@ msgid ""
 "resolution of the output layer. If the input layer has a different "
 "resolution, the values will be resampled with nearest neighbor algorithm."
 msgstr ""
+"В группе **Результаты** расположены настройки результирующего слоя. Здесь "
+"можно задать охват области вычислений по охвату исходного растра или введя "
+"координаты X, Y и желаемое количество строк и столбцов, чтобы получить "
+"необходимое разрешение итогового слоя. Если исходный слой имеет другое "
+"разрешение, величины будут пересчитанны по алгоритму «ближайший сосед»."
 
 # 1a689b24429249a385b157e55e359850
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:45
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:43
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
 "to the raster calculator expression box, click the appropriate button. "
-"Mathematical calculations ( + , - , * , ... ) and trigonometric functions "
-"( sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
+"Mathematical calculations ( + , - , * , ... ) and trigonometric functions ( "
+"sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
 msgstr ""
+"В разделе **Операторы** перечисленны все доступные операторы. Добавить "
+"оператор в поле выражения можно нажав соответсвующую кнопку. Доступны "
+"математические операторы (+, -, *, ...) и тригонометрические функции (sin, "
+"cos, tan,...). Планируется добавление дополнительных операторов."
 
-# d86712d5252b440b859c47aeb14370cc
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:50
+# bc2fd5f668cb41fba661858f3c833ad5
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:48
 msgid ""
-"With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
-"will automatically added to the legend area and can be visualized."
+"With the |checkbox| :guilabel:`Add result to project` checkbox the result "
+"layer will automatically added to the legend area and can be visualized."
 msgstr ""
+"При установленном флажке |checkbox| :guilabel:`Добавить результат в проект` "
+"итоговый слой будет автоматически добавлен к списку слоёв карты."
+
+# fb5e6e274989401d8909483e14832f2d
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:53
+msgid "Examples"
+msgstr "Примеры"
+
+# 258a795107424586a33aa9102e2079b9
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
+msgid "**Convert elevation values from meter to feet**"
+msgstr "**Конвертация значений высоты из метров в футы**"
+
+# 6f04821386a54a31b3fd9a5d583bee72
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
+msgid ""
+"Creating an elevation raster feet from a raster in meter, you need to use "
+"the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+"Чтобы создать растр высот с использованием футов в качестве единицы "
+"измерения из растра высот в метрах необходимо использовать коэффициент 3.28. "
+"Соответствующее выражение имеет вид:"
+
+# c693259dde434314997813fab0541908
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:64
+msgid "**Using a mask**"
+msgstr "**Использование маски**"
+
+# 91f25d49afe243e7b223103acfd99fc0
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
+msgid ""
+"If you want to mask out parts of a raster, because you are only interested "
+"in elevations above 0 meter, you can use following expression to create a "
+"mask and apply the result to a raster in one step."
+msgstr ""
+"Если необходимо «замаскировать» часть растра, например, потому что нужны "
+"только данные о высотах больше 0, можно использовать следующее выражение, "
+"которое создает маску и применяет её к растру в одно действие."
+
+# b2f82a4977714860b7043cdf4c082306
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:74
+msgid ""
+"For every cell greater than or equal to 0, set its value to 1, otherwise set "
+"it to 0. This creates the mask on the fly."
+msgstr ""
+"Каждый пиксель со значением большим или равным 0, станет равным 1, а все "
+"остальные пиксели получат значение 0. Т.е. маска создаётся «на лету»."
+
+# 36367cfad11547f5a50bd3c4073962b9
+#~ msgid "**Replace values with conditional statements**"
+#~ msgstr "**Замена значений по условию**"
+
+# 9a779a755d214000afb17b9c5b8a0096
+#~ msgid ""
+#~ "All cells in the elevation raster with a value less or equal (le) then 50 "
+#~ "will be replaced with the value 200."
+#~ msgstr ""
+#~ "Все ячейки растра высот со значением меньшим или равным (le) 50 будут "
+#~ "заменены на значение 200."
+
+# 26c7185a3cfa43e78b9ef506c7f83b07
+#~ msgid ""
+#~ "All cells in the elevation raster with value equal (eq) to the "
+#~ "appropriate pixels in fourth band of the layer raster will be replaced "
+#~ "with the value 150."
+#~ msgstr ""
+#~ "Все пиксели растра высот со значением равным (eq) соотвествующим "
+#~ "значениям четвертого канала слоя ``raster`` будут заменены на значение "
+#~ "150."
+
+# 18e4557872c34b1d8638d38a0d259d96
+#~ msgid ""
+#~ "All cells in the elevation raster with value greater than (gt) the "
+#~ "appropriate pixels in fourth band of the layer raster will be replaced "
+#~ "with the appropriate pixels from the second band of the baselayer raster."
+#~ msgstr ""
+#~ "Все значения растра высот большие чем (gt) соответствующие значения "
+#~ "пикселей четвертого канала слоя ``raster`` будут заменены на "
+#~ "соответствующие значения второго канала слоя ``baselayer``."
+
+# cb4b2ffa9e8f44a6811689ffba0262fb
+#~ msgid "Available conditional statements are:"
+#~ msgstr "Доступные условные операторы:"

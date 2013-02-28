@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-03-05 15:59\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,30 +16,39 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# af9860129426439caa191002b8bb4c9c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 7fa96c3c27d74e94b6e3a8cbf5058c6b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:10
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:9
 msgid "Supported Data Formats"
-msgstr ""
+msgstr "Поддерживаемые форматы"
 
-# be23cd50e5694576981fb54cd1beaa2c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:12
+# 63d50d2421cf4610b1a434da1c8b9df4
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:11
 msgid ""
-"|qg| uses the OGR library to read and write vector data formats [#]_, "
-"including ESRI shapefiles, MapInfo and Microstation file formats; Postgis, "
-"Spatialite, Oracle spatial databases and many more. At the date of this "
-"document, 69 vector formats are supported by the OGR library (see OGR-"
-"SOFTWARE-SUITE :ref:`literature_and_web`). The complete list is available at "
-"http://www.gdal.org/ogr/ogr_formats.html."
+"|qg| uses the OGR library to read and write vector data formats (GRASS "
+"vector and PostgreSQL support is supplied by native QGIS data provider "
+"plugins),including ESRI Shapefiles, MapInfo and Microstation file formats; "
+"PostGIS, SpatiaLite, Oracle Spatial databases and many more. The vector data "
+"can also be loaded in read mode from zip and gzip archives into QGIS. At the "
+"date of this document, 69 vector formats are supported by the OGR library "
+"(see OGR-SOFTWARE-SUITE :ref:`literature_and_web`). The complete list is "
+"available at http://www.gdal.org/ogr/ogr_formats.html."
 msgstr ""
+"|qg| использует библиотеку OGR для чтения и записи векторных данных (работа "
+"с векторными данными GRASS и данными PostgreSQL реализована через отдельные "
+"модули поставщиков данных), включая ESRI shape-файлы, файлы MapInfo и "
+"Microstation, пространственные базы PostGIS, SpatiaLite, Oracle и многие "
+"другие. Кроме того, векторные данные могут быть загруженны напрямую из "
+"архивов zip или gzip. На момент написания руководства, библиотекой OGR "
+"поддерживалось порядка 69 форматов векторных данных (см. OGR-SOFTWARE-SUITE "
+":ref:`literature_and_web`). С полным списком можно ознакомиться по адресу "
+"http://www.gdal.org/ogr/ogr_formats.html."
 
 # fb1509085c024181ae78d233802c49ad
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:20
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:19
 msgid ""
 "Not all of the listed formats may work in |qg| for various reasons. For "
 "example, some require external commercial libraries or the GDAL/OGR "
@@ -48,60 +57,82 @@ msgid ""
 "file types when loading a vector into |qg|. Other untested formats can be "
 "loaded by selecting `*.*`."
 msgstr ""
+"По различным причинам, не все из поддерживаемых форматов могут работать в "
+"QGIS. Например, некоторые требуют наличия внешних коммерческих библиотек или "
+"библиотеки GDAL/OGR в вашей операционной системе (ОС) скомпилированы без "
+"поддержки формата, который вы хотите использовать. При загрузке в QGIS "
+"данных векторных или растровых форматов в списке типов файлов будут "
+"отображаться только те форматы, которые были проверены. Остальные "
+"(непроверенные) форматы могут быть загружены, если выбрать «*.*» в "
+"выпадающем списке «Типы файлов»."
 
 # 43cac683dd284952b1e9c6359108c2f9
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:27
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:26
 msgid ""
 "Working with GRASS vector data is described in Section :ref:`sec_grass`."
 msgstr ""
+"Работа с векторными данными в формате GRASS описана в разделе "
+":ref:`sec_grass`."
 
 # c6dfdb7928d34ab2859cb88205cc1ea2
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:29
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:28
 msgid ""
 "This section describes how to work with several common formats: ESRI "
-"shapefiles, PostGIS layers and Spatialite layers. Many of the features "
+"Shapefiles, PostGIS layers and SpatiaLite layers. Many of the features "
 "available in |qg| work the same, regardless of the vector data source. This "
 "is by design and includes the identify, select, labeling and attributes "
 "functions."
 msgstr ""
+"В этой главе описывается, как работать с несколькими наиболее "
+"распространёнными форматами: ESRI shape-файлами, слоями PostGIS и "
+"SpatiaLite. Большинство функций |qg| (включая идентификацию, выборку, "
+"подписывание и работу с атрибутивной информацией) работают одинаково хорошо "
+"с различными источниками векторных данных. Это является особенностью |qg|."
 
 # 8aa97858b9e7445db016eb21457d47df
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:40
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:39
 msgid "ESRI Shapefiles"
-msgstr ""
+msgstr "Shape-файлы"
 
 # bc582a89281d478e8fc4993de01bba81
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:43
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:42
 msgid ""
 "The standard vector file format used in |qg| is the ESRI Shapefile. Support "
-"is provided by the :index:`OGR Simple Feature Library` ( http://www.gdal.org/"
-"ogr/ )."
+"is provided by the :index:`OGR Simple Feature Library` ( "
+"http://www.gdal.org/ogr/ )."
 msgstr ""
+"Стандартным векторным форматом данных в |qg| является ESRI shape-файл. Его "
+"поддержка осуществляется с помощью библиотеки :index:`OGR Simple Feature "
+"Library` (http://www.gdal.org/ogr/).\n"
+"состоит из нескольких файлов разных форматов. Из них три\n"
+"обязательны:"
 
 # 25e230857db04781b95412ea431dcd9a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:47
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:46
 msgid ""
 "A shapefile actually consists of several files. The following three are "
 "required:"
 msgstr ""
+"На самом деле, shape-файл\n"
+"состоит из нескольких файлов разных форматов. Из них три обязательны:"
 
 # 733432dc73264c7faa43306830008280
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:50
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:49
 msgid ":file:`.shp` file containing the feature geometries."
-msgstr ""
+msgstr ":file:`.shp` файл, содержащий геометрическую информацию об объектах"
 
 # 8a97372c9c7a489f986d89b2159be93b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:51
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:50
 msgid ":file:`.dbf` file containing the attributes in dBase format."
-msgstr ""
+msgstr ":file:`.dbf` файл, содержащий атрибутивную информацию в формате dBase"
 
 # 2c907e2db21e4ac481ba46a6cb286ebf
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:52
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:51
 msgid ":file:`.shx` index file."
-msgstr ""
+msgstr ":file:`.shx` индексный файл"
 
 # 310dd9a5976945ec9081c61dd70c2359
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:54
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:53
 msgid ""
 "Shapefiles also can include a file with a :file:`.prj` suffix, which "
 "contains the projection information. While it is very useful to have a "
@@ -109,20 +140,29 @@ msgid ""
 "additional files. For further details see the ESRI technical specification "
 "at: http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 msgstr ""
+"Shape-файл также включает файл с расширением :file:`.prj`, который содержит "
+"информацию о проекции. Иметь файл проекции очень полезно, но не\n"
+"обязательно. В структуру shape-файла могут входить и другие файлы. Подробное "
+"описание можно найти в официальной технической спецификации ESRI по адресу "
+"http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf."
 
 # fb7895208cdd47868ea16211f8456c25
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:64
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:63
 msgid "Loading a Shapefile"
-msgstr ""
+msgstr "Добавление shape-файла к карте"
 
 # 7d812b5de0574e9d9dba4b3b9733881f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:66
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:65
 msgid ""
 "|mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and click on "
 "the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or simply "
 "type :kbd:`Ctrl+Shift+V`. This will bring up a new window (see "
 "figure_vector_1_)."
 msgstr ""
+"|mActionAddNonDbLayer| Чтобы :index:`добавить shape-файл`, надо использовать "
+"кнопку |mActionAddNonDbLayer| :sup:`Добавить векторный слой` или сочетание "
+"клавиш :kbd:`Ctrl+Shift+V`. Появится новое диалоговое окно (см. рисунок "
+"figure_vector_1_)."
 
 # dbcaac5461794abb9a620c685218a8b1
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:83
@@ -130,27 +170,37 @@ msgid ""
 "From the available options check |radiobuttonon| :guilabel:`File`. Click on "
 "button **[Browse]**. That will bring up a standard open file dialog (see "
 "figure_vector_2_) which allows you to navigate the file system and load a "
-"shapefile or other supported data source. The selection box :guilabel:`Files "
-"of type` |selectstring| allows you to preselect some OGR supported file "
-"formats."
+"shapefile or other supported data source. The selection box "
+":guilabel:`Filter` |selectstring| allows you to preselect some OGR supported "
+"file formats."
 msgstr ""
+"В группе «Тип источника» надо отметить |radiobuttonon| :guilabel:`Файл`. "
+"Нажмите кнопку **[Обзор]**. При этом появится стандартный диалог открытия "
+"файла (см. рисунок figure_vector_2_), который позволяет выбрать и добавить "
+"нужный shape-файл или другой поддерживаемый источник данных. Выпадающее меню "
+"фильтра типов файлов :guilabel:`Тип файлов` |selectstring| позволяет "
+"фильтровать файлы с форматами, поддерживаемыми библиотекой OGR."
 
 # 41c7f19794a9429a9ea72dc028138a8a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:90
 msgid "You can also select the Encoding type for the shapefile if desired."
 msgstr ""
+"Для выбранного shape-файла можно указать кодировку атрибутивных данных."
 
 # 3a8f847a2e9c48a787f52bb5a82a6e52
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:105
 msgid ""
-"Selecting a shapefile from the list and clicking **[Open]** loads it into |"
-"qg|. Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file."
+"Selecting a shapefile from the list and clicking **[Open]** loads it into "
+"|qg|. Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file."
 msgstr ""
+"Выбор shape-файла из списка и нажатие кнопки **[Открыть]** загружает файл в "
+"|qg|. Рисунок Figure_vector_3_ демонстрирует |qg| после открытия файла "
+":file:`alaska.shp`."
 
 # c2aa98b18ded477b9afd51b1300a4b9c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:124
 msgid "**Layer Colors**"
-msgstr ""
+msgstr "**Цвет слоя**"
 
 # 67546799fca544a5a71e3f28b7148d55
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:126
@@ -158,6 +208,9 @@ msgid ""
 "When you add a layer to the map, it is assigned a random color. When adding "
 "more than one layer at a time, different colors are assigned to each layer."
 msgstr ""
+"Каждому вновь добавленному к карте слою присваивается случайный цвет. Если "
+"было открыто несколько слоёв, каждому присваивается свой цвет, отличный от "
+"других."
 
 # 1ef2abd83aa34dc3b0a5381e0d3334c0
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:130
@@ -169,11 +222,17 @@ msgid ""
 "See Section :ref:`vector_style_tab` for more information on setting "
 "symbology of vector layers."
 msgstr ""
+"Для навигации по открытому shape-файлу можно воспользоваться инструментами с "
+"панели навигации. Чтобы изменить символику слоя, следует открыть диалог "
+":guilabel:`Свойства слоя` двойным щелчком мыши на названии слоя или щёлкнув "
+"правой кнопкой мыши на названии слоя в легенде и выбрав пункт "
+":menuselection:`Свойства` из контестного меню. Дополнительную информацию о "
+"символике векторных слоёв можно найти в разделе :ref:`vector_style_tab`."
 
 # ebdefb79f0cd4c4e9e524032c6958656
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:139
 msgid "**Load layer and project from mounted external drives on OS X**"
-msgstr ""
+msgstr "**Добавление слоя или проекта со внешнего носителя в OS X**"
 
 # 1fe49784c6a04c82b6abee73ee765875
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:141
@@ -184,11 +243,17 @@ msgid ""
 "you can type '/Volumes' in the File name box and press :kbd:`return`. Then "
 "you can navigate to external drives and network mounts."
 msgstr ""
+"В OS X подключённые внешние устройства не появляются после выбора "
+":menuselection:`Файл --> Открыть проект`. Мы работаем над разрешением этой "
+"проблемы в диалогах открытия и сохранения в OS X. В качестве временного "
+"решения можно напечатать ``/Volumes`` в поле имени файла и нажать "
+":kbd:`Enter`. После этого можно указать путь ко внешним носителям и сетевым "
+"дискам."
 
 # a080e68ca69646dcbb61876edad8816f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:150
 msgid "Improving Performance Shape"
-msgstr ""
+msgstr "Улучшение производительности"
 
 # cedb792909344c00816d954d4421d900
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:152
@@ -197,46 +262,64 @@ msgid ""
 "index. A spatial index will improve the speed of both zooming and panning. "
 "Spatial indexes used by |qg| have a :file:`.qix` extension."
 msgstr ""
+"Для увеличения производительности при отрисовке shape-файла можно создать "
+"пространственный индекс. Пространственный индекс улучшает скорость отрисовки "
+"как при изменении масштаба, так и при панорамировании (перемещении слоя в "
+"каком-либо направлении без изменения\n"
+"масштаба). Файл пространственного индекса, используемого |qg|, имеет "
+"расширение :file:`.qix`."
 
 # 0bc69935808840ec910d2ab8cc2ce1c8
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:156
 msgid "Use these steps to create the index:"
-msgstr ""
+msgstr "Чтобы создать индекс, необходимо:"
 
 # 373948666d074e258a890e79d6634a11
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:159
 msgid "Load a shapefile."
-msgstr ""
+msgstr "Открыть shape-файл."
 
 # 0f9360580907494fb260b871716e5807
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:160
 msgid ""
 "Open the :guilabel:`Layer Properties` dialog by double-clicking on the "
-"shapefile name in the legend or by right-clicking and choosing :"
-"menuselection:`Properties` from the popup menu."
+"shapefile name in the legend or by right-clicking and choosing "
+":menuselection:`Properties` from the popup menu."
 msgstr ""
+"Открыть диалог :guilabel:`Свойства слоя` двойным щелчком по имени "
+"shape-файла в легенде или правым щелчком по нему же и выбором "
+":menuselection:`Свойства` в контекстном меню."
 
 # a368fd13df974f10a38e79a246e1bc3e
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:163
 msgid ""
 "In the tab :guilabel:`General` click the **[Create Spatial Index]** button."
 msgstr ""
+"Во вкладке :guilabel:`Общие` нажмите кнопку **[Создать пространственный "
+"индекс]**."
 
-# e06ee8cf42d74fb6b4a49e2c62632dab
+# йe06ee8cf42d74fb6b4a49e2c62632dab
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:168
 msgid "Problem loading a shape .prj file"
-msgstr ""
+msgstr "Проблема загрузки shape-файла с файлом .prj"
 
 # d3fa1b22654c4420be2d2277943ae135
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:170
 msgid ""
 "If you load a shapefile with :file:`.prj` file and |qg| is not able to read "
 "the coordinate reference system from that file, you have to define the "
-"proper projection manually within the :guilabel:`General` tab of the :"
-"guilabel:`Layer Properties` dialog of the layer. This is due to the fact, "
+"proper projection manually within the :guilabel:`General` tab of the "
+":guilabel:`Layer Properties` dialog of the layer. This is due to the fact, "
 "that :file:`.prj` files often do not provide the complete projection "
 "parameters, as used in |qg| and listed in the :guilabel:`CRS` dialog."
 msgstr ""
+"Если при открытии shape-файла, в состав которого входит файл с расширением "
+":file:`.prj`, |qg| не способна определить описанную систему координат,\n"
+"необходимо задать соответствующую проекцию вручную во вкладке "
+":guilabel:`Общие` диалога :guilabel:`Свойства слоя`. Эта проблема возникает "
+"вследствие того, что файлы :file:`.prj` часто не содержат всех необходимых "
+"параметров проекции, используемых в |qg| и перечисленных в диалоге\n"
+":guilabel:`Выбор системы координат`."
 
 # cd29826ec22f431494f8939fe04caa6c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:178
@@ -244,348 +327,368 @@ msgid ""
 "For that reason, if you create a new shapefile with |qg|, two different "
 "projection files are created. A :file:`.prj` file with limited projection "
 "parameters, compatible with ESRI software, and a :file:`.qpj` file, "
-"providing the complete parameters of the used CRS. Whenever |qg| finds a :"
-"file:`.qpj` file, it will be used instead of the :file:`.prj`."
+"providing the complete parameters of the used CRS. Whenever |qg| finds a "
+":file:`.qpj` file, it will be used instead of the :file:`.prj`."
 msgstr ""
+"Именно поэтому, новые shape-файлы, создаваемые в |qg|, имеют два различных "
+"файла проекций: файл :file:`.prj` с ограниченным набором параметров "
+"проекции, совместимый с ПО ESRI, и файл :file:`.qpj`, полностью описывающий "
+"параметры используемой системы координат. Всегда, когда |qg| имеет доступ к "
+"файлу :file:`.qpj`, последний будет использован вместо :file:`.prj`."
 
 # 759d49a203e2477bb480c3ffbdb776e7
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:189
 msgid "Loading a MapInfo Layer"
-msgstr ""
+msgstr "Добавление слоя MapInfo к карте"
 
 # b9dc838879614db28e95562d219c1e0b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:191
 msgid ""
-"|mActionAddNonDbLayer| To load a MapInfo layer, click on the |"
-"mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type :kbd:"
-"`Ctrl+Shift+V`, change the file type filter to :guilabel:`Files of Type "
-"[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)` |selectstring| and select the .TAB "
-"or .tab layer you want to load."
+"|mActionAddNonDbLayer| To load a MapInfo layer, click on the "
+"|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
+":kbd:`Ctrl+Shift+V`, change the file type filter to :guilabel:`Filter: "
+"Mapinfo File [OGR]`|selectstring| and select the .TAB or .tab layer you want "
+"to load."
 msgstr ""
+"|mActionAddNonDbLayer| Чтобы открыть слой MapInfo, нажмите кнопку "
+"|mActionAddNonDbLayer| :sup:`Добавить векторный слой` на панели инструментов "
+"или воспользуйтесь комбинацией клавиш :kbd:`Ctrl+Shift+V`, измените фильтр "
+":guilabel:`Тип файлов` |selectstring| на «[OGR] MapInfo (*.mif*.tab *.MIF "
+"*.TAB)» и выберите нужный файл."
 
 # e41cf8caced7487897ce9441abb0cdf6
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:203
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:202
 msgid "Loading an ArcInfo Binary Coverage"
-msgstr ""
+msgstr "Добавление на карту покрытия ArcInfo"
 
 # cdf0e94341da48e3bbedaf199111911e
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:205
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:204
 msgid ""
-"|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the |"
-"mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type :kbd:"
-"`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select |"
-"radiobuttonon| :guilabel:`Directory`. Change to  :guilabel:`Type Arc/Info "
+"|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the "
+"|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
+":kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog. Select "
+"|radiobuttonon| :guilabel:`Directory`. Change to  :guilabel:`Type Arc/Info "
 "Binary Coverage` |selectstring|. Navigate to the directory that contains the "
 "coverage files and select it."
 msgstr ""
+"|mActionAddNonDbLayer| Чтобы открыть покрытие ArcInfo в двоичном формате, "
+"нажмите на кнопку |mActionAddNonDbLayer| :sup:`Добавить векторный слой` на "
+"панели инструментов или воспользуйтесь комбинацией клавиш "
+":kbd:`Ctrl+Shift+V`, чтобы открыть диалог :guilabel:`Добавить векторный "
+"слой`. В группе :guilabel:`Тип источника` выберите |radiobuttonon| "
+":guilabel:`Каталог`. Установите :guilabel:`Тип файлов` |selectstring| в "
+"«Arc/Info Binary Coverage». Укажите путь к каталогу с файлами покрытия."
 
 # 0357b1aca06f4ec6972b2bb98a08a2f1
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:212
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:211
 msgid ""
 "Similarly, you can load directory based vector files in the UK National "
 "Transfer Format as well as the raw TIGER Format of the US Census Bureau."
 msgstr ""
+"Аналогично добавляются векторные слои UK National Transfer Format и TIGER "
+"Format Бюро переписи населения США (US Census Bureau)."
 
 # 7aef4279a6b44a9d9c130d10ef42e8f5
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:220
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:219
 msgid "PostGIS Layers"
-msgstr ""
+msgstr "Слои PostGIS"
 
 # acfd133beef6402591f58f8ee95c8008
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:222
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:221
 msgid ""
 "PostGIS layers are stored in a PostgreSQL database. The advantages of "
 "PostGIS are the spatial indexing, filtering and query capabilities it "
 "provides. Using PostGIS, vector functions such as select and identify work "
 "more accurately than with OGR layers in |qg|."
 msgstr ""
+"Слои PostGIS хранятся в базе данных PostgreSQL. Преимуществами PostGIS "
+"являются пространственное индексирование и широкие возможности фильтрации и "
+"построения запросов. При использовании PostGIS такие функции, как выбор и "
+"идентификация, работают более точно, чем при использовании OGR-совместимых "
+"слоёв."
 
 # bc4a54c3647849f4b1664a0cc134aa2a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:232
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:231
 msgid "Creating a stored Connection"
-msgstr ""
+msgstr "Настройка подключения к базе данных PostGIS (PostgreSQL)"
 
 # 291e1eda0e294895b752f9fd34e58d71
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:234
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:233
 msgid ""
 "|mActionAddLayer| The first time you use a PostGIS data source, you must "
 "create a connection to the PostgreSQL database that contains the data. Begin "
 "by clicking on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar "
-"button, selecting the |mActionAddLayer| :menuselection:`Add PostGIS Layer..."
-"` option from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`. "
-"You can also open the :guilabel:`Add Vector Layer` dialog and select |"
-"radiobuttonon| :guilabel:`Database`. The :guilabel:`Add PostGIS Table(s)` "
-"dialog will be displayed. To access the connection manager, click on the **"
-"[New]** button to display the :guilabel:`Create a New PostGIS Connection` "
-"dialog. The parameters required for a connection are shown in "
-"table_connections_."
+"button, selecting the |mActionAddLayer| :menuselection:`Add PostGIS "
+"Layer...` option from the :menuselection:`Layer` menu or typing "
+":kbd:`Ctrl+Shift+D`. You can also open the :guilabel:`Add Vector Layer` "
+"dialog and select |radiobuttonon| :guilabel:`Database`. The :guilabel:`Add "
+"PostGIS Table(s)` dialog will be displayed. To access the connection "
+"manager, click on the **[New]** button to display the :guilabel:`Create a "
+"New PostGIS Connection` dialog. The parameters required for a connection are:"
 msgstr ""
-
-# 48d287f356e94d02beb6ae467ee548df
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:246
-msgid "Optional you can activate following checkboxes:"
-msgstr ""
-
-# faa2d80c4191475d9e1f25936283fbb2
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:248
-msgid "|checkbox| :guilabel:`Save Username`"
-msgstr ""
-
-# bec8042b18db412a8079d51f63993a85
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:249
-msgid "|checkbox| :guilabel:`Save Password`"
-msgstr ""
-
-# 55427e6a4e7943f099456debe9335600
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:250
-msgid "|checkbox| :guilabel:`Only look in the geometry_columns table`"
-msgstr ""
-
-# 94f25fb844c24ceebe4ebd4f248e209b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:251
-msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
-msgstr ""
-
-# 005b009f38f44b8cbdb7da3d02c033ae
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:252
-msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
-msgstr ""
-
-# e30f6edd868a4c0ea83b9275567c4460
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:253
-msgid "|checkbox| :guilabel:`Use estimated table metadata`"
-msgstr ""
-
-# 63128912de5142f0bbfe1dd6ccbae678
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:256
-msgid ""
-"Once all parameters and options are set, you can test the connection by "
-"clicking on the **[Test Connect]** button."
-msgstr ""
-
-# 7d58ef29b7564bc7857d42a4fb629382
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:262
-msgid "Name"
-msgstr ""
+"|mActionAddLayer| При первом использовании данных PostGIS необходимо "
+"настроить подключение к базе данных PostgreSQL, содержащей нужную "
+"информацию. Нажмите на кнопку |mActionAddLayer| :sup:`Добавить слой PostGIS` "
+"на панели инструментов или выберите пункт |mActionAddLayer| "
+":menuselection:`Добавить слой PostGIS...` из меню :menuselection:`Слой`, "
+"также можно воспользоваться комбинацией клавиш :kbd:`Ctrl+Shift+D`. Ещё один "
+"вариант --- открыть диалог :guilabel:`Добавить векторный слой` и выбрать "
+"|radiobuttonon| :guilabel:`База данных` в группе :guilabel:`Тип источника`. "
+"Появится диалог :guilabel:`Добавить слои PostGIS`. Для получения доступа к "
+"менеджеру соединений, нажмите кнопку **[Создать]**. Появится диалог "
+":guilabel:`Новое PostGIS-соединение`. Необходимо указать следующие параметры:"
 
 # 9ddfb76e6a62492f9debd56e0a4ea377
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:262
-msgid "A name for this connection. Can be the same as *Database*"
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:245
+msgid "**Name**: A name for this connection. Can be the same as *Database*"
 msgstr ""
-
-# be7834d6d3844dd5ad12e8a4aab04c11
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:264
-msgid "Service"
-msgstr ""
+"**Имя**: имя для данного соединения. Может совпадать с именем *Базы данных*"
 
 # 9e62c0b08673416fbf3745bedbd42d43
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:264
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:246
 msgid ""
-"Service parameter to be used alternatively to hostname/port (and potentially "
-"database). This can be defined in pg\\_service.conf"
+"**Service**: Service parameter to be used alternatively to hostname/port "
+"(and potentially database). This can be defined in :file:`pg_service.conf`"
 msgstr ""
-
-# 987ff02a89fe4db2a8e5f3655b0e8d03
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:265
-msgid "Host"
-msgstr ""
+"**Служба**: Этот параметр может использоваться в качестве альтернативы для "
+"*Узла* и *Порта* (и, теоретически, *Базы данных*). Настройка выполняется в "
+"файле :file`:pg_service.conf`"
 
 # 69ecc6b7e3424a578b664c5c6e2ebf2d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:265
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:248
 msgid ""
-"Name of the database host. This must be a resolvable host name the same as "
-"would be used to open a telnet connection or ping the host. If the database "
-"is on the same computer as |qg|, simply enter *'localhost'* here."
+"**Host**: Name of the database host. This must be a resolvable host name the "
+"same as would be used to open a telnet connection or ping the host. If the "
+"database is on the same computer as |qg|, simply enter *'localhost'* here."
 msgstr ""
-
-# c3edd861f63444569506c5a7faadb5f3
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:266
-msgid "Port"
-msgstr ""
+"**Узел**: имя узла, на котором хранится база данных. Имя узла должно быть "
+"допустимым --- таким, какие используют для сетевого доступа или для пинга "
+"узла. Если база данных находится на том же компьютере, что и |qg|, просто "
+"введите здесь «localhost»"
 
 # c8743006cd634a5a9d8c562e9d0c7b1b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:266
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:251
 msgid ""
-"Port number the PostgreSQL database server listens on. The default port is "
-"5432."
+"**Port**: Port number the PostgreSQL database server listens on. The default "
+"port is 5432."
 msgstr ""
-
-# 6cd43289b98241fc919597b40dddd9dd
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:267
-msgid "Database"
-msgstr ""
+"**Порт**: номер порта, который «слушает» сервер базы данных PostgreSQL. По "
+"умолчанию используется порт 5432"
 
 # 78396f31863346ab92a368c3d9a15330
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:267
-msgid "Name of the database."
-msgstr ""
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:253
+msgid "**Database**: Name of the database."
+msgstr "**База данных**: имя базы данных"
 
-# 0f659c54ec35424ba9c7a4f13e27c778
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:268
-msgid "SSL mode"
-msgstr ""
-
-# 496af0fddc06432ca5e2053ad8371063
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:268
+# 8458f9f8e3504182bfd38a91a2e558a9
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:254
 msgid ""
-"How the SSL connection will be negotiated with the server. These are the "
-"options:"
+"**SSL mode**: How the SSL connection will be negotiated with the server. "
+"Note that massive speedups in PostGIS layer rendering can be achieved by "
+"disabling SSL in the connection editor. Following options are available:"
 msgstr ""
+"**Режим SSL**: настройка SSL-режима работы с сервером.Следует отметить, что "
+"значительного прироста скорости рендеринга слоя PostGIS можно достигнуть "
+"путём отключения SSL в менеджере соединений. Можно выбрать:"
 
 # ee02db74adab4e5aa73f2ce70a8d2f42
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:270
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:258
 msgid "disable: only try an unencrypted SSL connection"
-msgstr ""
+msgstr "запретить: использовать только не зашифрованное SSL-соединение"
 
 # 0571d1ec1be048a994597bf75dfb535c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:271
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:259
 msgid "allow: try a non-SSL connection, if that fails, try an SSL connection"
 msgstr ""
+"разрешить: будет произведена попытка установки не SSL-соединения, если она "
+"не удастся, будет использовано SSL-соединение"
 
 # c1d3abac3ff44d4291231dbdd8571357
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:272
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:260
 msgid ""
 "prefer (the default): try an SSL connection, if that fails, try a non-SSL "
 "connection;"
 msgstr ""
+"предпочитать (по умолчанию): будет произведена попытка установки "
+"SSL-соединения, если она не удастся, будет использовано не SSL-соединение"
 
 # 44ee6837299945f58ffa9c34156e1c61
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:274
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:262
 msgid "require: only try an SSL connection."
-msgstr ""
-
-# 8458f9f8e3504182bfd38a91a2e558a9
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:276
-msgid ""
-"Note that massive speedups in PostGIS layer rendering can be achieved by "
-"disabling SSL in the connection editor."
-msgstr ""
-
-# eb5cc4ca535a4174a2ab63599862100d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:277
-msgid "username"
-msgstr ""
+msgstr "требовать: использовать только SSL-соединение"
 
 # 72f8c1fd93904331ba6fdd4f1be37bc7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:277
-msgid "User name used to login to the database."
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:264
+msgid "**Username**: User name used to login to the database."
 msgstr ""
-
-# 6e78c3e0e5b446938032f80373c9ef4d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:278
-msgid "Password"
-msgstr ""
+"**Пользователь**: имя пользователя, которое используется для доступа к базе "
+"данных"
 
 # 74c2967a2a2d4a4294d37c66f4baa205
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:278
-msgid "Password used with *Username* to connect to the database."
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:265
+msgid "**Password**: Password used with *Username* to connect to the database."
 msgstr ""
+"**Пароль**: пароль, используемый вместе с *именем пользователя* для "
+"подключения к базе данных"
 
-# 9b56662cee2d45bfa93c9576b58e4ccd
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:281
-msgid "**Table PostGIS Connection Parameters**"
+# 48d287f356e94d02beb6ae467ee548df
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:268
+msgid "Optional you can activate following checkboxes:"
+msgstr "Также есть возможность активировать дополнительные настройки:"
+
+# faa2d80c4191475d9e1f25936283fbb2
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:270
+msgid "|checkbox| :guilabel:`Save Username`"
+msgstr "|checkbox| :guilabel:`Сохранить пользователя`"
+
+# bec8042b18db412a8079d51f63993a85
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:271
+msgid "|checkbox| :guilabel:`Save Password`"
+msgstr "|checkbox| :guilabel:`Сохранить пароль`"
+
+# 55427e6a4e7943f099456debe9335600
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:272
+msgid "|checkbox| :guilabel:`Only look in the geometry_columns table`"
+msgstr "|checkbox| :guilabel:`Искать только в таблице «geometry_columns»`"
+
+# 94f25fb844c24ceebe4ebd4f248e209b
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:273
+msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
+msgstr "|checkbox| :guilabel:`Искать только в схеме «public»`"
+
+# 005b009f38f44b8cbdb7da3d02c033ae
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:274
+msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
+msgstr "|checkbox| :guilabel:`Показать таблицы без геометрии`"
+
+# e30f6edd868a4c0ea83b9275567c4460
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:275
+msgid "|checkbox| :guilabel:`Use estimated table metadata`"
+msgstr "|checkbox| :guilabel:`Использовать расчётные метаданные таблицы`"
+
+# 63128912de5142f0bbfe1dd6ccbae678
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:278
+msgid ""
+"Once all parameters and options are set, you can test the connection by "
+"clicking on the **[Test Connect]** button."
 msgstr ""
+"Когда параметры установлены, можно проверить соединение путём нажатия на "
+"кнопку **[Проверить соединение]**."
 
 # b2c6a3e797d446918ffc8e3bcb138474
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:286
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:283
 msgid "**QGIS User Settings and Security**"
-msgstr ""
-
-# e5b489b4449e4b699a1723f53eee9f67
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:288
-msgid ""
-"Your customized settings for |qg| are stored based on the operating system."
-msgstr ""
-
-# 8466814a05ee45c0b5fc2e6333d783a8
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:290
-msgid ""
-"|nix|, the settings are stored in your home directory in :file:`.qgis/`."
-msgstr ""
-
-# ca5c2f0dd45f48e2b89b45c9f899fae3
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:291
-msgid "|win|, the settings are stored in the registry."
-msgstr ""
+msgstr "**Пользовательские настройки и безопасность**"
 
 # bc71f2f0149243f8a8fd87e53e5d92da
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:293
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:285
 msgid ""
 "Depending on your computing environment, storing passwords in your |qg| "
-"settings may be a security risk."
+"settings may be a security risk. Your customized settings for |qg| are "
+"stored based on the operating system:"
 msgstr ""
+"В зависимости от используемой операционной системы и настроек компьютера, "
+"хранение пароля в настройках |qg| может создавать угрозу безопасности. |qg| "
+"хранит пользовательские настройки:"
+
+# 8466814a05ee45c0b5fc2e6333d783a8
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:289
+msgid ""
+"|nix|, the settings are stored in your home directory in :file:`.qgis/`."
+msgstr "|nix| в «домашнем>> каталоге пользователя в каталоге :file:`./qgis`"
+
+# ca5c2f0dd45f48e2b89b45c9f899fae3
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:290
+msgid "|win|, the settings are stored in the registry."
+msgstr "|win| в реестре"
 
 # 3ec9776f544548a29d16a2d3f6dc482f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:299
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:295
 msgid "Loading a PostGIS Layer"
-msgstr ""
+msgstr "Добавление слоя PostGIS к карте"
 
 # 5d33beb9aeac46a9b46364aa0ea9cc65
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:302
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:298
 msgid ""
 "|mActionAddLayer| Once you have one or more connections defined, you can "
 "load layers from the PostgreSQL database. Of course this requires having "
 "data in PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for a "
 "discussion on importing data into the database."
 msgstr ""
+"|mActionAddLayer| Когда создано одно или более соединение, можно добавлять "
+"слои из PostgreSQL. Естественно, в базе данных PostgreSQL должна содержаться "
+"информация. См. раздел :ref:`vector_import_data_in_postgis`, в котором "
+"обсуждается импорт данных в базу данных."
 
 # bbb0819500ad4e509c9543751736a77d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:307
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:303
 msgid "To load a layer from PostGIS, perform the following steps:"
-msgstr ""
+msgstr "Для открытия слоя PostGIS проделайте следующие шаги:"
 
 # 1d19d791e0644aa28ff983100cef1655
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:310
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:306
 msgid ""
 "If the :guilabel:`Add PostGIS Table(s)` dialog is not already open, click on "
 "the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button."
 msgstr ""
+"Если диалог :guilabel:`Добавить слои PostGIS` ещё не открыт, нажмите кнопку "
+"|mActionAddLayer| :sup:`Добавить слой PostGIS` на панели инструментов"
 
 # 0732578dcb594584ab479a5d296e79e7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:312
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:308
 msgid "Choose the connection from the drop-down list and click **[Connect]**."
 msgstr ""
+"Выберите соединение из выпадающего списка и нажмите кнопку **[Подключиться]**"
 
 # aa370de3c04b41f29032fdc0bae8a135
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:313
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:309
 msgid ""
 "Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`"
 msgstr ""
+"При необходимости активируйте флажок |checkbox| :guilabel:`Показать таблицы "
+"без геометрии`"
 
 # 9079ffae87a443e0a4fa295c1e8bb73e
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:314
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:310
 msgid ""
 "Optionally use some |checkbox| :guilabel:`Search Options` to define which "
 "features to load from the layer or use the **[Build query]** button to start "
 "the Query builder dialog."
 msgstr ""
+"Установив флажок |checkbox| :guilabel:`Параметры поиска`, можно указать "
+"условия отбора объектов для загрузки или же можно открыть Конструктор "
+"запросов нажатием на кнопку **[Запрос]**"
 
 # d582fbf8dcd04cdca7d0853ce87145f7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:317
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:313
 msgid "Find the layer(s) you wish to add in the list of available layers."
-msgstr ""
+msgstr "Найдите слой, который желаете добавить в список доступных слоёв"
 
 # 63000c0e00714361a1a85b717df9b4aa
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:318
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:314
 msgid ""
 "Select it by clicking on it. You can select multiple layers by holding down "
 "the :kbd:`Shift` key while clicking. See Section :ref:`vector_query_builder` "
 "for information on using the PostgreSQL Query Builder to further define the "
 "layer."
 msgstr ""
+"Щёлкните по нему, чтобы выбрать. Можно выбрать несколько слоёв, если нажать "
+"и удерживать клавишу :kbd:`Shift`. В разделе :ref:`vector_query_builder` "
+"можно найти информацию об использовании «Конструктора запросов» при работе с "
+"PostgreSQL"
 
 # 2145ae5b15bf45e7a4c750505ded923e
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:322
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:318
 msgid "Click on the **[Add]** button to add the layer to the map."
-msgstr ""
+msgstr "Нажмите кнопку **[Добавить]**, чтобы добавить слой к карте"
 
 # 296b429320e447e492df49252b3970ac
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:326
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:322
 msgid "**PostGIS Layers**"
-msgstr ""
+msgstr "**Слои PostGIS**"
 
 # cf8c4c2347724baea724b4e8a398a3f2
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:328
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:324
 msgid ""
 "Normally a PostGIS layer is defined by an entry in the geometry_columns "
 "table. From version 0.9.0 on, |qg| can load layers that do not have an entry "
@@ -593,14 +696,20 @@ msgid ""
 "a spatial view provides a powerful means to visualize your data. Refer to "
 "your PostgreSQL manual for information on creating views."
 msgstr ""
+"Обычно слои PostGIS определяются наличием записей в таблице "
+"geometry_columns. Начиная с версии 0.9.0, |qg| может загружать слои, которые "
+"не имеют записей в таблице geometry_columns. Это касается таблиц и "
+"«представлений». Задание пространственных представлений --- мощное средство "
+"визуализации данных. В руководстве пользователя PostgreSQL можно найти "
+"дополнительную информацию по созданию представлений."
 
 # 88ddedf699aa40e08b3907788172fc35
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:337
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:333
 msgid "Some details about PostgreSQL layers"
-msgstr ""
+msgstr "Некоторые особенности работы со слоями PostgreSQL"
 
 # c093de0ff93b46f98a775179daa3ee74
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:339
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:335
 msgid ""
 "This section contains some details on how |qg| accesses PostgreSQL layers. "
 "Most of the time |qg| should simply provide you with a list of database "
@@ -609,9 +718,15 @@ msgid ""
 "you understand any |qg| messages and give you direction on changing the "
 "PostgreSQL table or view definition to allow |qg| to load it."
 msgstr ""
+"Этот раздел содержит некоторые подробности доступа к слоям PostgreSQL в "
+"|qg|. Обычно |qg| обеспечивает доступ к списку таблиц базы данных, которые "
+"можно добавить к карте и открывает их по запросу. Однако, если возникают "
+"трудности с открытием таблиц PostgreSQL, следующая информация может помочь "
+"понять сообщения |qg| и подсказать способы изменения способа определения "
+"таблицы или представления PostgreSQL."
 
 # 755429d7caa14f74bb8b4339cdca9d7c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:346
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:342
 msgid ""
 "|qg| requires that PostgreSQL layers contain a column that can be used as a "
 "unique key for the layer. For tables this usually means that the table needs "
@@ -622,9 +737,18 @@ msgid ""
 "column is indexed (note that primary keys are automatically indexed in "
 "PostgreSQL)."
 msgstr ""
+"|qg| требует наличия колонки в слое PostgreSQL, которая бы служила "
+"уникальным идентификатором (ключом) слоя. Для таблиц это обычно означает, "
+"что они должны иметь первичный ключ, или колонку с уникальными значениями "
+"строк в ней. В |qg| эта колонка должна содержать значения типа int4 (целое "
+"число размером 4 байта). Альтернативный способ --- использование колонки "
+"«ctid» в качестве первичного ключа. Если в таблице отсутствуют колонки, "
+"указанные выше, то вместо них будет использоваться колонка «oid». "
+"Индексирование колонок позволит повысить производительность (заметьте, что "
+"первичные ключи в PostgreSQL индексируются автоматически)."
 
 # 47971ee71d0b40e0a15427b49251f79e
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:355
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:351
 msgid ""
 "If the PostgreSQL layer is a view, the same requirement exists, but views do "
 "not have primary keys or columns with unique constraints on them. In this "
@@ -633,257 +757,316 @@ msgid ""
 "However there are several aspects of SQL that |qg| ignores these include the "
 "use of table aliases and columns that are generated by SQL functions."
 msgstr ""
+"Если слой PostgreSQL является представлением, к нему предъявляются те же "
+"требования, что были описаны выше, но представления не имеют первичных "
+"ключей или колонок с уникальными значениями. В этом случае |qg| попытается "
+"самостоятельно найти колонку в представлении, являющуюся производной от "
+"колонки, удовлетворяющей необходимым условиям. Это достигается посредством "
+"разбора SQL-опеределения представления. Однако, есть элементы SQL, "
+"игнорируемые |qg|, например, использование псевдонимов таблиц и колонок, "
+"создаваемых SQL-запросами."
 
 # 1f73cadb8a224116900af4fe39b1582c
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:363
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:359
 msgid ""
 "If a suitable column cannot be found, |qg| will not load the layer. If this "
 "occurs, the solution is to alter the view so that it does include a suitable "
 "column (a type of int4 and either a primary key or with a unique constraint, "
 "preferably indexed)."
 msgstr ""
+"Если невозможно найти подходящую колонку, |qg| не откроет слой. В таком "
+"случае следует изменить представление таким образом, чтобы оно содержало "
+"требуемую колонку (тип int4 и либо являющуюся первичным ключом, либо "
+"содержащую уникальные значения, желательно, индексированную)."
 
 # 021c43425356449a97c37275276493b7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:378
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:374
 msgid "Importing Data into PostgreSQL"
+msgstr "Импорт данных в PostgreSQL"
+
+# 36800e3c577c4b98bfce39cdbc056061
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:376
+msgid ""
+"Data can be imported into PostgreSQL/PostGIS using several tools, such as "
+"the SPIT plugin, or the command line tools shp2pgsql or ogr2ogr."
 msgstr ""
+"Cуществует несколько способов импорта данных в базу данных PostgreSQL с "
+"использованием различных инструментов таких как модуль SPIT или утилиты "
+"командной строки ``shp2pgsql`` и ``ogr2ogr``."
+
+# de55da5ef5604e5da7c9aef6fd5d3880
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:382
+msgid "SPIT Plugin"
+msgstr "Модуль SPIT"
+
+# 8e7bc7ad97ff429c8f95f21c66b975e3
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:384
+msgid ""
+"|qg| comes with a core plugin named |spiticon| :sup:`SPIT` (Shapefile to "
+"PostGIS Import Tool). SPIT can be used to load multiple shapefiles at one "
+"time and includes support for schemas. See Section :ref:`label_spit` for "
+"more information."
+msgstr ""
+"|qg| включает в себя модуль |spiticon| :sup:`SPIT` (Shapefile to PostGIS "
+"Import Tool --- инструмент импорта shape-файлов в PostGIS). SPIT способен "
+"осуществлять одновременный импорт нескольких shape-файлов и поддерживает "
+"схемы баз данных. Подробнее о работе с модулем рассказывается в разделе "
+":ref:`label_spit`."
 
 # c651746dc1254ee3aa9ef95bdaec0829
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:381
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:390
 msgid "shp2pgsql"
 msgstr ""
 
-# 96a886ad5c8e44698e4b17dee768ecc0
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:383
+# 81db8d125b3f4eeaa4869d07d19e4d40
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:392
 msgid ""
-"Data can be imported into PostgreSQL using a number of methods. PostGIS "
-"includes a utility called **shp2pgsql** that can be used to import "
+"PostGIS includes a utility called **shp2pgsql** that can be used to import "
 "shapefiles into a PostGIS enabled database. For example, to import a "
 "shapefile named :file:`lakes.shp` into a PostgreSQL database named "
 "``gis_data``, use the following command:"
 msgstr ""
+"PostGIS поставляется с утилитой **shp2pgsql**, которую можно использовать "
+"для импорта shape-файлов в базу данных PostGIS. Например для импорта "
+"shape-файла :file:`lakes.shp` в базу данных PostgreSQL, называющуюся "
+"``gis_data``, воспользуйтесь следующей командой:"
 
 # 882591476e1a4237890707a96493f480
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:393
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:401
 msgid ""
 "This creates a new layer named ``lakes_new`` in the ``gis_data`` database. "
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
 "Section :ref:`label_projections` for more information on spatial reference "
 "systems and projections."
 msgstr ""
+"При этом будет создан новый слой под названием ``lakes_new`` в базе данных "
+"``gis_data``. Новый слой будет иметь идентификатор системы координат (SRID) "
+"2964. Более подробную информацию о системах координат и проекциях можно "
+"найти в разделе :ref:`label_projections`."
 
 # 256669ebb2b44e32a0a23038c76f75e8
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:402
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:410
 msgid "**Exporting datasets from PostGIS**"
-msgstr ""
+msgstr "**Экспорт наборов данных из PostGIS**"
 
 # b3e6fde30622488aadae0dbdee91a00b
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:404
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:412
 msgid ""
-"Like the import-tool **shp2pgsql** there is also a tool to export PostGIS-"
-"datasets as shapefiles: **pgsql2shp**. This is shipped within your PostGIS "
-"distribution."
+"Like the import-tool **shp2pgsql** there is also a tool to export "
+"PostGIS-datasets as shapefiles: **pgsql2shp**. This is shipped within your "
+"PostGIS distribution."
 msgstr ""
-
-# de55da5ef5604e5da7c9aef6fd5d3880
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:413
-msgid "SPIT Plugin"
-msgstr ""
-
-# 0f4f76914e9a424e8cf87eb15dc56b7a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:415
-msgid ""
-"|spiticon| |qg| comes with a plugin named SPIT (Shapefile to PostGIS Import "
-"Tool). SPIT can be used to load multiple shapefiles at one time and includes "
-"support for schemas. To use SPIT, open the Plugin Manager from the :"
-"menuselection:`Plugins` menu, check the box next to the |checkbox| :guilabel:"
-"`SPIT plugin` and click **[OK]**. The SPIT icon will be added to the plugin "
-"toolbar."
-msgstr ""
-
-# 4101785fc59842af824f6aed28eb508f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:422
-msgid ""
-"To import a shapefile, click on the |spiticon| :sup:`SPIT` tool in the "
-"toolbar to open the :guilabel:`SPIT - Shapefile to PostGIS Import Tool` "
-"dialog. Select the PostGIS database you want to connect to and click on **"
-"[Connect]**. If you want, you can define or change some import options. Now "
-"you can add one or more files to the queue by clicking on the **[Add]** "
-"button. To process the files, click on the **[OK]** button. The progress of "
-"the import as well as any errors/warnings will be displayed as each "
-"shapefile is processed."
-msgstr ""
-
-# cfc0b538f37945d98db2232715532bab
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:433
-msgid "**Importing Shapefiles Containing PostgreSQL Reserved Words**"
-msgstr ""
-
-# 2e709fa1673e49c9a7076f5804638caa
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:435
-msgid ""
-"If a shapefile is added to the queue containing fields that are reserved "
-"words in the PostgreSQL database a dialog will popup showing the status of "
-"each field. You can edit the field names prior to import and change any that "
-"are reserved words (or change any other field names as desired). Attempting "
-"to import a shapefile with reserved words as field names will likely fail."
-msgstr ""
+"Наряду с инструментом для импорта **shp2pgsql** существует инструмент для "
+"экспорта наборов данных PostGIS в shape-файл: **pgsql2shp**. Он также входит "
+"в поставку PostGIS."
 
 # cf78ae1249734fb98fb0a7092d6088f4
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:444
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:421
 msgid "ogr2ogr"
 msgstr ""
 
 # 97e59dd0e83f41629dee853a056043ae
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:446
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:423
 msgid ""
 "Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata "
 "in PostGIS: **ogr2ogr**. This is part of your GDAL installation."
 msgstr ""
+"Кроме **shp2pgsql** и **SPIT** есть ещё один инструмент импорта "
+"пространственной информации в PostGIS --- **ogr2ogr**, --- который является "
+"частью установки GDAL.\n"
+"проделайте следующее (в \\nix):"
 
 # 7d36159995e64c38a9d0351ea92b7bcb
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:449
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:426
 msgid "To import a shapefile into PostGIS, do the following: ::"
-msgstr ""
+msgstr "Для импорта shape-файла в PostGIS проделайте следующее (в |nix|): ::"
 
 # a50e1c349bb140afbb15177b905e6396
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:456
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:433
 msgid ""
 "This will import the shapefile :file:`alaska.shp` into the PostGIS-database "
 "*postgis* using the user *postgres* with the password *topsecret* on host "
 "server *myhost.de*."
 msgstr ""
+"Эта команда импортирует файл :file:`alaska.shp` в базу данных PostGIS "
+"*postgis* на сервере *myhost.de*, используя в качестве имени пользователя "
+"базы данных *postgres* с паролем *topsecret*."
 
 # e959cd5cff0d4aa796616558fb2fd7d5
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:460
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:437
 msgid ""
 "Note that OGR must be built with PostgreSQL to support PostGIS. You can see "
 "this by typing ::"
 msgstr ""
+"Заметьте, что для работы с PostGIS в OGR должна быть включена поддержка "
+"PostgreSQL. Проверить её наличие можно с помощью команды (в |nix|) ::"
 
 # fdf5a130eb2d4aa2868b3e0a880e027a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:467
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:444
 msgid ""
 "If you like to use PostgreSQL's **COPY** \\ -command instead of the default "
 "**INSERT INTO** method you can export the following environment-variable (at "
 "least available on |nix| and |osx|): ::"
 msgstr ""
+"Те, кто предпочитают использовать команду PostgreSQL **COPY** вместо команды "
+"**INSERT INTO**, используемой по умолчанию, могут экспортировать следующие "
+"переменные среды (доступно, по крайней мере, для |nix| и |osx|): ::"
 
 # eb1f24e8233b46d788528cd8189a1319
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:476
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:453
 msgid ""
 "**ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You need "
 "to create them manually using the normal SQL-command **CREATE INDEX** "
-"afterwards as an extra step (as described in the next section :ref:"
-"`vector_improving_performance`)."
+"afterwards as an extra step (as described in the next section "
+":ref:`vector_improving_performance`)."
 msgstr ""
+"**ogr2ogr** не создаёт пространственный индекс, как это делает **shp2pgsl**. "
+"Его необходимо создать вручную, используя SQL-команду **CREATE INDEX** после "
+"экспорта (смотри описание в следующем разделе "
+":ref:`vector_improving_performance`)."
 
 # 14c8a99495934fa6832051b5ade18a8f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:486
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:463
 msgid "Improving Performance"
-msgstr ""
+msgstr "Повышение производительности"
 
 # 3e67640fa3b54becb88791bc8861c963
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:488
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:465
 msgid ""
 "Retrieving features from a PostgreSQL database can be time consuming, "
 "especially over a network. You can improve the drawing performance of "
-"PostgreSQL layers by ensuring that a :index:`PostGIS!spatial index` spatial "
-"index exists on each layer in the database. PostGIS supports creation of a :"
-"index:`GiST (Generalized Search Tree) index` to speed up spatial searches of "
-"the data."
+"PostgreSQL layers by ensuring that a :index:`PostGIS spatial index` exists "
+"on each layer in the database. PostGIS supports creation of a :index:`GiST "
+"(Generalized Search Tree) index` to speed up spatial searches of the data "
+"(GiST index information is taken from the PostGIS documentation available at "
+"http://postgis.refractions.net)."
 msgstr ""
+"Получение данных, находящихся в базе данных PostgreSQL, может серьёзно "
+"снижать производительность, особенно при работе через сеть. "
+"Производительность при отрисовке можно улучшить путём создания "
+"пространственного индекса для каждого слоя базы данных PostgreSQL. PostGIS "
+"поддерживает создание :index:`GiST-индекса` (Generalized Search Tree) для "
+"ускорения пространственного поиска данных (информация о GiST-индексе взята "
+"из документации к PostGIS, доступной по адресу "
+"http://postgis.refractions.net)."
 
 # 4a957d30a3c74e76be7fedf62d9109d1
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:495
-msgid "The syntax for creating a GiST [#]_ index is: ::"
-msgstr ""
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:472
+msgid "The syntax for creating a GiST index is: ::"
+msgstr "Ниже представлен порядок создания GiST-индекса: ::"
 
 # e7104cd3be2141dfb1f48e8aae4b35a1
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:503
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:480
 msgid ""
 "Note that for large tables, creating the index can take a long time. Once "
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
 "PostGIS documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more "
 "information."
 msgstr ""
+"Заметьте, что для больших таблиц создание индекса может занять "
+"продолжительное время. После создания индекса следует произвести выполнить "
+"команду ``VACUUM ANALYZE``. Дополнительную информацию можно найти в "
+"документации к PostGIS (POSTGIS-PROJECT :ref:`literature_and_web`)."
 
 # 4c7d023e19f9475db0f43853abbe21f7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:507
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:484
 msgid "The following is an example of creating a GiST index: ::"
-msgstr ""
+msgstr "Приведём пример создания GiST-индекса (|nix|): ::"
 
 # d98ff361925140debb5b2c33424e9191
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:531
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:508
 msgid "Vector layers crossing 180 |degrees| longitude"
-msgstr ""
+msgstr "Векторные слои, пересекающие долготу 180 |degrees|"
 
 # e31342bdd8f344e9b82935cfaa502b90
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:533
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:510
 msgid ""
 "Many GIS packages don't wrap vector maps, with a geographic reference system "
-"(lat/lon), :index:`crossing the 180 degrees longitude line`. As result, if "
-"we open such map in |qg|, we will see two far, distinct locations, that "
-"should show near each other. In Figure_vector_4_ the tiny point on the far "
-"left of the map canvas (Chatham Islands), should be within the grid, right "
-"of New Zealand main islands."
+"(lat/lon), :index:`crossing the 180 degrees longitude line` "
+"(http://postgis.refractions.net/documentation/manual-1.4/ST\\_Shift\\_Longitude.html). "
+"As result, if we open such map in |qg|, we will see two far, distinct "
+"locations, that should show near each other. In Figure_vector_4_ the tiny "
+"point on the far left of the map canvas (Chatham Islands), should be within "
+"the grid, right of New Zealand main islands."
 msgstr ""
+"Многие ГИС испытывают трудности при работе с векторными картами в системе "
+"координат широта/долгота (lat/lon), пересекающими долготу 180 |degrees|. При "
+"открытии таких карт в |qg| можно наблюдать две разнесённые на большое "
+"удаление друг от друга части территории/акватории, которые на самом деле "
+"представляют собой единое целое. На рисунке Figure_vector_4_ едва заметные "
+"точки в левой части карты (архипелаг Чатем), должны находиться внутри сетки, "
+"справа от главных островов (Северного и Южного) Новой Зеландии."
 
 # cf07d308f72a42afad6db57f10519cf7
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:553
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:529
 msgid ""
 "A workaround is to transform the longitude values using PostGIS and the "
-"**ST_Shift_Longitude** [#]_ function. This function reads every point/vertex "
-"in every component of every feature in a geometry, and if the longitude "
+"**ST_Shift_Longitude** function  This function reads every point/vertex in "
+"every component of every feature in a geometry, and if the longitude "
 "coordinate is < 0 |degrees| adds 360 |degrees| to it. The result would be a "
-"0 |degrees| - 360 |degrees| version of the data to be plotted in a 180 |"
-"degrees| centric map."
+"0 |degrees| - 360 |degrees| version of the data to be plotted in a 180 "
+"|degrees| centric map."
 msgstr ""
+"В качестве одного из вариантов решения проблемы можно предложить "
+"трансформацию значений координат долготы при помощи PostGIS и функции "
+"**ST_Shift_Longitude** (см. "
+"http://postgis.refractions.net/documentation/manual-1.4/ST_Shift_Longitude.html).Эта "
+"функция проверяет каждую точку (или узел) каждого объекта слоя, и, если "
+"координаты долготы < 0 |degrees|, добавляет 360 |degrees| к значению. На "
+"результирующей карте долгота объектов будет лежать в пределах 0 |degrees| -- "
+"360 |degrees| а сама карта будет отцентрирована по 180 |degrees| долготы."
 
 # 8c477519b540412182c2df383e10132f
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:575
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:550
 msgid "Usage"
-msgstr ""
+msgstr "Использование"
 
 # c1b73884d6534db487ed748dad7b4c07
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:577
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:552
 msgid ""
 "Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using for "
 "example the PostGIS Manager plugin or the SPIT plugin"
 msgstr ""
+"Импортируем данные в PostGIS (:ref:`vector_import_data_in_postgis`) при "
+"помощи модулей «PostGIS Manager» или «SPIT»"
 
 # 7b35397c44dd4172b47140b7668675ac
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:579
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:554
 msgid ""
 "Use the PostGIS command line interface to issue the following command (this "
 "is an example where \"TABLE\" is the actual name of your PostGIS table)"
 msgstr ""
+"Используя командную строку PostGIS, выполните следующую команду (в этом "
+"примере «TABLE» --- имя вашей таблицы PostGIS)"
 
 # 195117fd47384f64bd501a4ed06e034a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:582
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:557
 msgid "``gis_data=# update TABLE set the_geom=ST_shift_longitude(the_geom);``"
 msgstr ""
 
 # 5037377ec6ec4f52825fbe1d9a2265bd
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:583
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:558
 msgid ""
 "If everything went right you should receive a confirmation about the number "
 "of features that were updated, then you'll be able to load the map and see "
 "the difference (Figure_vector_5_)"
 msgstr ""
+"Если операция прошла успешно, появится подтверждение о количестве объектов, "
+"информация о которых обновлена, после этого будет возможно добавить объекты "
+"на карту и увидеть изменения (см. рисунок Figure_vector_5_)"
 
 # 5483bd28bda14acc91bd8cc0e2d4ed8d
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:592
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:567
 msgid "SpatiaLite Layers"
-msgstr ""
+msgstr "Слои SpatiaLite"
 
 # 14b50d396184467c8d910297bd3743c6
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:594
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:569
 msgid ""
 "|mActionAddSpatiaLiteLayer| The first time you load data from a SpatiaLite "
 "database, begin by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add "
-"SpatiaLite Layer` toolbar button or by selecting the |"
-"mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option "
+"SpatiaLite Layer` toolbar button or by selecting the "
+"|mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option "
 "from the :menuselection:`Layer` menu or by typing :kbd:`Ctrl+Shift+L`. This "
 "will bring up a window, which will allow you to either connect to a "
 "SpatiaLite database already known to |qg|, which you can choose from the "
@@ -891,60 +1074,153 @@ msgid ""
 "new connection, click on **[New]** and use the file browser to point to your "
 "SpatiaLite database, which is a file with a :file:`.sqlite` extension."
 msgstr ""
+"|mActionAddSpatiaLiteLayer| При первой загрузке слоёв из базы данных "
+"SpatiaLite воспользуйтесь кнопкой |mActionAddSpatiaLiteLayer| :sup:`Добавить "
+"слой SpatiaLite` на панели инструментов или пунктом "
+"mActionAddSpatiaLiteLayer :menuselection:`Добавить слой SpatiaLite...` в "
+"меню :menuselection:`Слой`, либо комбинацией клавиш :kbd:`Сtrl+Shift+L`. "
+"Появится окно, позволяющее соединиться с базой данных SpatiaLite, которая "
+"уже была подключена к |qg| ранее (её можно выбрать в выпадающем списке), или "
+"же создать новое подключение. Для создания нового подключения нажмите на "
+"кнопку **[Создать]** и используйте менеджер файлов, чтобы указать путь к "
+"нужной базе данных (файлу с расширением :file:`.sqlite`)."
 
 # af3d394ba3cb4147b9ddfca6397ca865
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:605
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:580
 msgid ""
 "If you want to save a vector layer to SpatiaLite format you can do this by "
 "right clicking the layer in the legend. Then click on :menuselection:`Save "
 "as`, define the name of the output file, sqlite as format and the CRS and "
 "then add ``SPATIALITE=YES`` in the OGR data source creation option field. "
-"This tells OGR to create a SpatiaLite database. See also http://www.gdal.org/"
-"ogr/drv_sqlite.html."
+"This tells OGR to create a SpatiaLite database. See also "
+"http://www.gdal.org/ogr/drv_sqlite.html."
 msgstr ""
+"Сохранить векторный слой в формате SpatiaLite можно выбрав пункт "
+":menuselection:`Сохранить как` в контекстном меню слоя. В появившемся окне "
+"необходимо указать имя итогового файла, необходимую систему координат, в "
+"качестве формата выбрать «SQLite» и добавить ``SPATIALITE=YES`` в поле "
+"«Источник данных». Эта строка указывает OGR, что необходимо создавать базу "
+"данных SpatiaLite, см. также http://www.gdal.org/ogr/drv_sqlite.html."
+
+# 5fcfe30a9f8f44c8ae5aef60c11eff65
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:587
+msgid "QGIS also supports editable views in SpatiaLite."
+msgstr ""
+"QGIS также поддерживает обновляемые «представления» (view) в базах данных "
+"SpatiaLite."
 
 # a05666053e014596a38d103e35593e50
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:613
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:590
 msgid "Creating a new SpatiaLite layer"
-msgstr ""
+msgstr "Создание нового слоя SpatiaLite"
 
 # 1c8646f1dfa84e549846e49fbfcda4d9
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:615
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:592
 msgid ""
-"If you want to create a new SpatiaLite layer, please refer to section :ref:"
-"`vector_create_spatialite`."
+"If you want to create a new SpatiaLite layer, please refer to section "
+":ref:`vector_create_spatialite`."
 msgstr ""
+"Процесс создания новых слоёв в базе SpatiaLite описан в разделе "
+":ref:`vector_create_spatialite`."
 
 # 7e675417e6a84273ba66fb0ce2eca4cf
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:622
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:599
 msgid "**SpatiaLite data management Plugins**"
-msgstr ""
+msgstr "**Модули для работы с данными SpatiaLite**"
 
 # c0271a9e98bf438e8d7e0b0562d82d33
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:624
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:601
 msgid ""
 "For SpatiaLite data management you can also use several Python plugins: "
 "QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and "
 "installed with the Plugin Installer."
 msgstr ""
+"уществует ряд расширений, предназначенных для работы с данными SpatiaLite: "
+"«QSpatiaLite», «SpatiaLite Manager» или «DB Manager» (входит в состав QGIS, "
+"наиболее предпочтительный вариант). Установить их можно при помощи "
+"Установщика модулей."
 
-# f930a73742ef4b31b2f8afa19dab5a40
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:630
+# a17918d0030d428d9b0608fda769b646
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:608
+msgid "MSSQL Spatial Layers"
+msgstr "Слои MSSQL Spatial"
+
+# 74282fbb06ef4e078572ba8c2d7f31a2
+#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:610
 msgid ""
-"GRASS vector and PostgreSQL support is supplied by native QGIS data provider "
-"plugins."
+"QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer| "
+":sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or "
+"available in the MS SQL node in the QBrowser tree, providing drag and drop "
+"import support."
 msgstr ""
+"В QGIS есть «родная» поддержка пространственных данных MS SQL 2008. Для "
+"добавления этих данных используется кнопка |mActionAddMssqlLayer| "
+":sup:`Добавить слой MSSQL Spatial` на панели инструментов, также "
+"присутствует отдельный узел в дереве данных Обозревателя и поддержка "
+"открытия слоёв путём перетаскивания их на карту."
 
 # 55484cce975a49978319ab4c01e19fef
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:631
-msgid ""
-"GiST index information is taken from the PostGIS documentation available at "
-"http://postgis.refractions.net"
-msgstr ""
+#~ msgid ""
+#~ "GiST index information is taken from the PostGIS documentation available "
+#~ "at http://postgis.refractions.net"
+#~ msgstr ""
+#~ "Информация о GiST-индексе взята из документации к PostGIS, доступной по "
+#~ "адресу http://postgis.refractions.net"
 
-# 6ae85578b6584612b743b65df75de85a
-#: ../../source/docs/user_manual/working_with_vector/supported_data.rst:632
-msgid ""
-"http://postgis.refractions.net/documentation/manual-1.4/ST\\_Shift"
-"\\_Longitude.html"
-msgstr ""
+# f930a73742ef4b31b2f8afa19dab5a40
+#~ msgid ""
+#~ "GRASS vector and PostgreSQL support is supplied by native QGIS data "
+#~ "provider plugins."
+#~ msgstr ""
+#~ "работа с векторными данными GRASS и данными PostgreSQL реализована через "
+#~ "отдельные модули поставщиков данных"
+
+# 7d58ef29b7564bc7857d42a4fb629382
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+# be7834d6d3844dd5ad12e8a4aab04c11
+#~ msgid "Service"
+#~ msgstr "Служба"
+
+# 987ff02a89fe4db2a8e5f3655b0e8d03
+#~ msgid "Host"
+#~ msgstr "Узел"
+
+# c3edd861f63444569506c5a7faadb5f3
+#~ msgid "Port"
+#~ msgstr "Порт"
+
+# 6cd43289b98241fc919597b40dddd9dd
+#~ msgid "Database"
+#~ msgstr "База данных"
+
+# 0f659c54ec35424ba9c7a4f13e27c778
+#~ msgid "SSL mode"
+#~ msgstr "Режим SSL"
+
+# 496af0fddc06432ca5e2053ad8371063
+#~ msgid ""
+#~ "How the SSL connection will be negotiated with the server. These are the "
+#~ "options:"
+#~ msgstr "Настройка SSL-режима работы с сервером. Можно выбрать:"
+
+# eb5cc4ca535a4174a2ab63599862100d
+#~ msgid "username"
+#~ msgstr "Пользователь"
+
+# 6e78c3e0e5b446938032f80373c9ef4d
+#~ msgid "Password"
+#~ msgstr "Пароль"
+
+# 9b56662cee2d45bfa93c9576b58e4ccd
+#~ msgid "**Table PostGIS Connection Parameters**"
+#~ msgstr "**Параметры подключения PostGIS**"
+
+# e5b489b4449e4b699a1723f53eee9f67
+#~ msgid ""
+#~ "Your customized settings for |qg| are stored based on the operating "
+#~ "system."
+#~ msgstr ""
+#~ "В зависимости от используемой операционной системы |qg| хранит "
+#~ "пользовательские настройки:"
