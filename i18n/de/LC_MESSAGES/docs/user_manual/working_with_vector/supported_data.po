@@ -119,12 +119,12 @@ msgstr ":file:`.shp` Datei (enthält die Geometrien)."
 # 8a97372c9c7a489f986d89b2159be93b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:50
 msgid ":file:`.dbf` file containing the attributes in dBase format."
-msgstr ":file:`.dbf`-Datei enthält die Attribute im dBase-Format."
+msgstr ":file:`.dbf`-Datei (enthält die Attribute im dBase-Format)."
 
 # 2c907e2db21e4ac481ba46a6cb286ebf
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:51
 msgid ":file:`.shx` index file."
-msgstr ":file:`.shx` enthält den räumlichen Index."
+msgstr ":file:`.shx` (enthält den räumlichen Index)."
 
 # 310dd9a5976945ec9081c61dd70c2359
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:53
@@ -162,7 +162,6 @@ msgstr ""
 
 # dbcaac5461794abb9a620c685218a8b1
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:83
-#, fuzzy
 msgid ""
 "From the available options check |radiobuttonon| :guilabel:`File`. Click on "
 "button **[Browse]**. That will bring up a standard open file dialog (see "
@@ -175,12 +174,15 @@ msgstr ""
 "klicken Sie auf den Knopf **[Durchsuchen]**. Dadurch erscheint ein weiterer "
 "Dialog zum Öffnen (siehe figure_vector_2_) mit dem Sie im Dateisystem "
 "navigieren können und Sie ein Shape oder eine andere unterstützte "
-"Datenquelle laden können. "
+"Datenquelle laden können. Die Auswahlbox :guilabel:`Filter` |selectstring| "
+"ermöglicht es Ihnen einige OGR untersützte Dateiformate vorzuwählen."
 
 # 41c7f19794a9429a9ea72dc028138a8a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:90
 msgid "You can also select the Encoding type for the shapefile if desired."
 msgstr ""
+"Außerdem kann auch der Kodierungstyp für das Shape eingestellt werden, falls "
+"dies notwendig ist.  "
 
 # 3a8f847a2e9c48a787f52bb5a82a6e52
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:105
@@ -188,11 +190,14 @@ msgid ""
 "Selecting a shapefile from the list and clicking **[Open]** loads it into "
 "|qg|. Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file."
 msgstr ""
+"Durch Auswahl eines Shapes und Anklicken des Knopfes **[Öffnen]** wird die "
+"Datei in QGIS geladen. In Abbildung Figure_vector_3_ sehen Sie das Ergebnis, "
+"nachdem die Beispieldatei :file:`alaska.shp` ins |qg| geladen wurde."
 
 # c2aa98b18ded477b9afd51b1300a4b9c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:124
 msgid "**Layer Colors**"
-msgstr ""
+msgstr "**Farben von Vektorlayern**"
 
 # 67546799fca544a5a71e3f28b7148d55
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:126
@@ -200,6 +205,9 @@ msgid ""
 "When you add a layer to the map, it is assigned a random color. When adding "
 "more than one layer at a time, different colors are assigned to each layer."
 msgstr ""
+"Wenn Sie einen neuen Vektorlayer in QGIS laden, werden Farben zufällig "
+"zugewiesen. Wenn Sie mehrere neue Vektorlayer laden, werden jeweils "
+"unterschiedliche Farben zugewiesen."
 
 # 1ef2abd83aa34dc3b0a5381e0d3334c0
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:130
@@ -211,11 +219,18 @@ msgid ""
 "See Section :ref:`vector_style_tab` for more information on setting "
 "symbology of vector layers."
 msgstr ""
+"Nach dem Laden können Sie mit den Navigationstools aus der Werkzeugleiste "
+"beliebig zoomen. Um den Stil eines Layers zu verändern öffnen Sie den "
+":guilabel:`Layereigenschaften` Dialog in dem Sie auf den Layernamen "
+"doppelklicken oder indem Sie einen Rechtsklick auf den Namen in der Legende "
+"machen und :menuselection:`Eigenschaften` im Popupmenu wählen. Vergleichen "
+"Sie Abschnitt :ref:`vector_style_tab` für weitere Informationen zum "
+"Editieren der Eigenschaften von Vektorlayern.    "
 
 # ebdefb79f0cd4c4e9e524032c6958656
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:139
 msgid "**Load layer and project from mounted external drives on OS X**"
-msgstr ""
+msgstr "**Layer und Projekte von externen Datenträgern laden unter OS X**"
 
 # 1fe49784c6a04c82b6abee73ee765875
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:141
@@ -226,11 +241,17 @@ msgid ""
 "you can type '/Volumes' in the File name box and press :kbd:`return`. Then "
 "you can navigate to external drives and network mounts."
 msgstr ""
+"Unter OS X werden externe Datenträger unter :menuselection:`Datei --> Öffne "
+"Projekt` nicht gemeinsam mit den internen Festplatten angezeigt. Dies soll "
+"zukünftig behoben werden. Solange können Sie '/Volumes' in das "
+"Eingabefenster 'Dateiname' eintragen und :kbd:`Return` drücken. Danach "
+"können Sie auch zu den externen Datenträgern bzw. Rechnern in einem Netzwerk "
+"browsen."
 
 # a080e68ca69646dcbb61876edad8816f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:150
 msgid "Improving Performance Shape"
-msgstr ""
+msgstr "Darstellungsgeschwindigkeit optimieren"
 
 # cedb792909344c00816d954d4421d900
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:152
@@ -239,16 +260,19 @@ msgid ""
 "index. A spatial index will improve the speed of both zooming and panning. "
 "Spatial indexes used by |qg| have a :file:`.qix` extension."
 msgstr ""
+"Um die Darstellungsgeschwindigkeit zu optimieren, kann ein räumlicher Index "
+"erstellt werden. Ein räumlicher Index erhöht die Geschwindigkeit beim Zoomen "
+"und Verschieben. Räumliche Indizes haben in |qg| die Endung :file:`.qix`."
 
 # 0bc69935808840ec910d2ab8cc2ce1c8
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:156
 msgid "Use these steps to create the index:"
-msgstr ""
+msgstr "Benutzen Sie folgende Schritte zum Erstellen eines räumlichen Index:"
 
 # 373948666d074e258a890e79d6634a11
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:159
 msgid "Load a shapefile."
-msgstr ""
+msgstr "Laden Sie ein Shape"
 
 # 0f9360580907494fb260b871716e5807
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:160
@@ -257,17 +281,22 @@ msgid ""
 "shapefile name in the legend or by right-clicking and choosing "
 ":menuselection:`Properties` from the popup menu."
 msgstr ""
+"Öffnen Sie den :guilabel:`Eigenschaften`-Dialog des Vektorlayers, indem Sie "
+"auf den Namen des Layers in der Legende doppelklicken oder mit der rechten "
+"Maustaste :menuselection:`Eigenschaften` auswählen."
 
 # a368fd13df974f10a38e79a246e1bc3e
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:163
 msgid ""
 "In the tab :guilabel:`General` click the **[Create Spatial Index]** button."
 msgstr ""
+"In dem Reiter :guilabel:`Allgemein` klicken Sie auf den **[Räumlichen Index "
+"erstellen]** Knopf."
 
 # e06ee8cf42d74fb6b4a49e2c62632dab
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:168
 msgid "Problem loading a shape .prj file"
-msgstr ""
+msgstr "Problem beim Laden eines Shapes mit .prj Datei"
 
 # d3fa1b22654c4420be2d2277943ae135
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:170
@@ -279,6 +308,13 @@ msgid ""
 "that :file:`.prj` files often do not provide the complete projection "
 "parameters, as used in |qg| and listed in the :guilabel:`CRS` dialog."
 msgstr ""
+"Wenn Sie ein Shape mit :file:`.prj`-Datei laden und QGIS ist nicht in der "
+"Lage, die Projektionsinformationen korrekt auszulesen, ist es notwendig das "
+"Koordinatenbezugsystem (KBS) manuell im :guilabel:`Allgemein` Reiter des "
+":guilabel:`Layereigenschaften` Dialog anzugeben.Hintergrund ist, dass "
+":file:`.prj` Dateien oftmals nich die vollständigen Projektionsparameter "
+"enthalten, so wie |qg| sie benötigt und auch im :guilabel:`KBS` Dialog "
+"anzeigt."
 
 # cd29826ec22f431494f8939fe04caa6c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:178
@@ -289,14 +325,23 @@ msgid ""
 "providing the complete parameters of the used CRS. Whenever |qg| finds a "
 ":file:`.qpj` file, it will be used instead of the :file:`.prj`."
 msgstr ""
+"Aus diesem Grund, wenn Sie ein neues Shapefile mit QGIS erstellen, werden "
+"derzeit zwei unterschiedliche Projektionsdateien angelegt. Eine :file:`.prj` "
+"Datei, mit den unvollständigen Projektionsparametern, wie sie z.B. von ESRI "
+"Software gelesen und erstellt wird, und eine :file:`.qpj` Datei, in der die "
+"vollständigen Projektionsparameter anthalten sind. Wenn Sie dann ein Shape "
+"in \n"
+"|qg| laden, und QGIS findet eine :file:`.qpj` Datei, dann wird diese "
+"anstelle der :file:`.prj` Datei benutzt."
 
 # 759d49a203e2477bb480c3ffbdb776e7
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:189
 msgid "Loading a MapInfo Layer"
-msgstr ""
+msgstr "MapInfo Layer laden"
 
 # b9dc838879614db28e95562d219c1e0b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:191
+#, fuzzy
 msgid ""
 "|mActionAddNonDbLayer| To load a MapInfo layer, click on the "
 "|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
@@ -304,6 +349,11 @@ msgid ""
 "[OGR] MapInfo (*.mif *.tab *.MIF *.TAB)` |selectstring| and select the .TAB "
 "or .tab layer you want to load."
 msgstr ""
+"Um eine MapInfo Datei zu laden, klicken Sie auf das Icon "
+"|mActionAddNonDbLayer| :sup:`Vektorlayer hinzufügen` in der Werkzeugleiste "
+"oder drücken Sie die Taste :kbd:`Strg-Shift-V`. Definieren Sie unter "
+"\\selectstring{Dateien des Typs}{MapInfo (*.mif *.tab *.MIF *.TAB)} und "
+"wählen die gewünschte Datei aus."
 
 # e41cf8caced7487897ce9441abb0cdf6
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:203
