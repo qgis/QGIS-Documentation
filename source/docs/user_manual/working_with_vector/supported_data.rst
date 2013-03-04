@@ -187,8 +187,7 @@ Loading a MapInfo Layer
 |mActionAddNonDbLayer| To load a MapInfo layer, click on the
 |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type
 :kbd:`Ctrl+Shift+V`, change the file type filter to
-:guilabel:`Files of Type [OGR] MapInfo (*.mif *.tab *.MIF *.TAB)`
-|selectstring| and select the .TAB or .tab layer you want to load.
+:guilabel:`Filter: Mapinfo File [OGR]`|selectstring| and select the .TAB or .tab layer you want to load.
 
 .. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format
 .. index:: US_Census_Bureau
@@ -505,8 +504,7 @@ Vector layers crossing 180 |degrees| longitude
 -----------------------------------------------
 
 Many GIS packages don't wrap vector maps, with a geographic reference
-system (lat/lon), :index:`crossing the 180 degrees longitude line`(http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html).
-As result, if we open such map in |qg|, we will see two far, distinct
+system (lat/lon), :index:`crossing the 180 degrees longitude line` (http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html). As result, if we open such map in |qg|, we will see two far, distinct
 locations, that should show near each other. In Figure_vector_4_ the
 tiny point on the far left of the map canvas (Chatham Islands), should
 be within the grid, right of New Zealand main islands.
@@ -525,8 +523,7 @@ be within the grid, right of New Zealand main islands.
 
 
 A workaround is to transform the longitude values using PostGIS and the
-**ST_Shift_Longitude** function. This function reads every point/vertex
-in every component of every feature in a geometry, and if the longitude
+**ST_Shift_Longitude** function  This function reads every point/vertex in every component of every feature in a geometry, and if the longitude
 coordinate is < 0 |degrees| adds 360 |degrees| to it. The result would be
 a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
 180 |degrees| centric map.
