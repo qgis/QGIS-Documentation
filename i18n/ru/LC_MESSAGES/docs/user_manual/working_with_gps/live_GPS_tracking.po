@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-05 21:02\n"
+"POT-Creation-Date: 2013-02-15 21:27\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,58 +16,62 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# b1009d45891b474b9a925d155068c4e8
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 4372c8f4952444ef9664d1f4c1a690be
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:12
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:10
 msgid "Live GPS tracking"
-msgstr ""
+msgstr "GPS-слежение"
 
-# 866500ed364046b6805965a96a89cd74
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:15
+# 241d46b0cf884d5097751ab81c8768b7
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:13
 msgid ""
-"To activate Live GPS tracking in QGIS you need to select :menuselection:"
-"`Settings --> `|checkbox| :guilabel:`GPS information`. You will get a new "
-"docked Window on the left side of the canvas."
+"To activate Live GPS tracking in QGIS you need to select "
+":menuselection:`Settings -->` |checkbox| :guilabel:`GPS information`. You "
+"will get a new docked Window on the left side of the canvas."
 msgstr ""
+"Для включения GPS-слежения в QGIS необходимо выбрать :menuselection:`Вид --> "
+"Панели -->` |checkbox| :guilabel:`GPS-слежение`. Появится новое окно, "
+"пристыкованное с левой стороны рабочей области."
 
-# 0e65b330521446da8b9ad9f31ada7592
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:18
-msgid ""
-"There are 4 possible screens in this GPS tracking window (see "
-"figure_GPS_Tracking_1_ and figure_GPS_Tracking_2_)."
-msgstr ""
+# 160a0905f1a0455db372fc8ecf6c1281
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:16
+msgid "There are 4 possible screens in this GPS tracking window:"
+msgstr "Существует 4 варианта окна GPS-слежения:"
 
 # c698bae1530144528fdb8e1eee539b11
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:21
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:18
 msgid ""
 "|mActionToggleEditing| GPS position coordinates and for manually entering "
 "Vertices and Features."
 msgstr ""
+"|mActionToggleEditing| Координаты текущего местоположения и кнопки "
+"добавления вершин и объектов."
 
 # 618660f9286b4de2babbecbf7f034fea
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:23
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:20
 msgid "|gpstrack_barchart| GPS signal strength of satellite connections."
-msgstr ""
+msgstr "|gpstrack_barchart| Мощность сигнала присоединенных спутников GPS."
 
 # 5aba523bf2084603a1de6498fb993cbb
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:24
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:21
 msgid ""
 "|gpstrack_polarchart| GPS polar screen showing number and polar position of "
 "satellites."
 msgstr ""
+"|gpstrack_polarchart| Экран положения спутников GPS, отображающий количество "
+"и расположение спутников."
 
-# 5a0f337306224494903bb47ac9a24593
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:26
-msgid "|mActionOptions| GPS options screen (see Figure_GPS_Tracking_2_)."
+# 54bf82b26c1b4099890c0e97e06fdefc
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:23
+msgid "|mActionOptions| GPS options screen (see figure_gps_options_)."
 msgstr ""
+"|mActionOptions| Экран параметров GPS (см. рисунок figure_gps_options_)."
 
 # aec2454935da46ba9f1e1675d6a0d86c
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:28
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:25
 msgid ""
 "With a plugged in GPS receiver (has to be supported by your operating "
 "system) a simple click on **[Connect]** connects the GPS to QGIS. A second "
@@ -76,126 +80,170 @@ msgid ""
 "most GPS receivers. Therefore you first have to configure gpsd properly to "
 "connect QGIS to it."
 msgstr ""
+"При подключенном GPS-приемнике (должен поддерживаться вашей операционной "
+"системой), простое нажатие на кнопке **[Подключиться]** подключает GPS к "
+"QGIS. Второе нажатие на кнопке (теперь уже **[Отключиться]**) отключает "
+"GPS-приемник от компьютера. Для GNU/Linux реализована поддержка gpsd, что "
+"позволяет подключаться к большинству приемников GPS. Поэтому вначале "
+"необходимо правильно сконфигурировать gpsd, чтобы QGIS смогла подключиться к "
+"нему."
 
 # 64548fdd79464eed87af3440d0c87f26
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:36
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:33
 msgid ""
 "If you want to record your position to the canvas you have to create a new "
 "vector layer first and switch it to editable status to be able to record "
 "your track."
 msgstr ""
+"Если вы хотите записать текущее местоположение или путь, необходимо сначала "
+"создать новый векторный слой и переключиться в режим редактирования."
 
-# 1eb9425c137446b9ade6410993cc8e19
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:54
-msgid "|gpstrack_main|"
+# e461f32b1be445bb9a4d75e8b85b0205
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:38
+msgid "Position and additional attributes"
+msgstr "Координаты текущего местоположения"
+
+# d9ecf70780864fac8e47bb253742c13a
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:40
+msgid ""
+"|mActionToggleEditing| If the GPS is receiving signals from satellites you "
+"will see your position in latitude, longitude and altitude together with "
+"additional attributes."
 msgstr ""
+"|mActionToggleEditing| Если GPS-приемник получает сигнал со спутников, вы "
+"увидите ваше текущее положение в формате широты и долготы, а также высоту "
+"над уровнем моря и некоторые другие параметры."
 
-# bd6d3ea911c242e196d4200e14a50f57
-# 4b136e8452a145e592bd38e2a69e355e
+# fab1d56619fa41daa8f2be7fc9af6bad
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:56
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:67
-msgid "Position coordinates"
-msgstr ""
+msgid "GPS signal strength"
+msgstr "Мощность сигнала GPS"
 
-# 3fdb0ce9a4f0495ebe1c75ea4e2b56b3
+# 6e2e4838dd044a69ad010333ded6d111
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:58
-msgid "|gpstrack_stren|"
+msgid ""
+"|gpstrack_barchart| Here you can see the signal strenght of the satellites "
+"you are receiving signals from 2."
 msgstr ""
-
-# ee1be09bd6b14406aba5816f2a859f5e
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:58
-msgid "|gpstrack_polar|"
-msgstr ""
-
-# 98a3eec89c8441fab0642608792bfd66
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
-msgid "GPS signal_strength"
-msgstr ""
+"|gpstrack_barchart| Здесь можно видеть мощность сигнала спутников, с которых "
+"вы получаете сигнал."
 
 # 99993d3937004f56b87b7b6985cbac50
 # 1f9537ac15824bb18c6d5aa4ccc116e5
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:60
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:80
-msgid "GPS polar window"
-msgstr ""
-
-# bb44369a79974564b3001f6a0a9a1127
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:63
-msgid "Live GPS tracking |nix|"
-msgstr ""
-
-# b59cbaad7be843039d7eec28011818fa
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:69
-msgid ""
-"|mActionToggleEditing| If the GPS is receiving signals from satellites you "
-"will see your position in latitude, longitude and elevation as you can see "
-"in Figure 1. figure_gps_tracking_1_."
-msgstr ""
-
-# fab1d56619fa41daa8f2be7fc9af6bad
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:74
-msgid "GPS signal strength"
-msgstr ""
+msgid "GPS polar window"
+msgstr "Положение спутников GPS"
 
-# 59f3e786ad0c4bd4abe68b05d66d3473
+# 405a6acadeee4fc6a12168c10838c514
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:76
 msgid ""
-"|gpstrack_barchart| Here you can see the signal strenght of the satellites "
-"you are receiving signals from 2. figure_gps_tracking_1_."
-msgstr ""
-
-# f9b6920ee9474671bb3ed9d1cd317eb6
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:82
-msgid ""
 "|gpstrack_polarchart| If you want to know where in the sky all the connected "
-"satellites are, you have to switch to the polar screen (see 3. "
-"figure_gps_tracking_1_). You can also see the ID numbers of the satellites "
-"you are receiving signals from."
+"satellites are, you have to switch to the polar screen. You can also see the "
+"ID numbers of the satellites you are receiving signals from."
 msgstr ""
+"|gpstrack_polarchart| Если вы хотите знать, где на небесной сфере "
+"располагаются все присоединенные спутники, переключитесь на окно "
+":guilabel:`Положение спутников`. Также здесь можно увидеть идентификационные "
+"номера (ID) спутников, с которых вы получаете сигнал."
 
 # c722081087524e1e90412ffca5085633
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:88
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:93
 msgid "GPS options"
-msgstr ""
+msgstr "Параметры GPS"
 
-# e475106f738846f187c6415cf9f32ebf
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:90
+# 4ecc29db48774a9990c5b23b2856aa14
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:95
+msgid "|mActionOptions| In case of connection problems you can switch between:"
+msgstr ""
+"|mActionOptions| В случае возникновения проблем с соединением, можно "
+"переключиться между:"
+
+# 095c0eadf6444bd4a88bec0f13f07620
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:97
+msgid "|radiobuttonon| :menuselection:`Autodetect`"
+msgstr "|radiobuttonon| :guilabel:`Автоопределение`"
+
+# 71e775c11c93416c891922bbf5125872
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:98
+msgid "|radiobuttonon| :menuselection:`Internal`,"
+msgstr "|radiobuttonon| :guilabel:`Встроенный приёмник`"
+
+# b0d40459d9c4420b8aa5ad5d524cf4b2
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:99
+msgid "|radiobuttonon| :menuselection:`Serial device`"
+msgstr "|radiobuttonon| :guilabel:`Серийный порт`"
+
+# 6e7d5269837d4b16bfe0cf0c304bb7dc
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:100
 msgid ""
-"|mActionOptions| In case of connection problems you can switch from |"
-"radiobuttonon| :menuselection:`Autodetect` to |radiobuttonon| :menuselection:"
-"`Use path/port below` and select the path/port your GPS receiver is "
-"connected to.  A click on **[Connect]** again initiates the connection to "
-"the GPS receiver."
+"|radiobuttonon| :menuselection:`gpsd` (selecting Host, Port and Device your "
+"GPS is connected to)."
 msgstr ""
+"|radiobuttonon| :guilabel:`gpsd` (и выбрать «Узел», «Порт» и «Устройство» к "
+"которому подключен приёмник)"
 
-# b997d9a9a706494cb54d2b690991dad8
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:96
-msgid ""
-"With the slider :menuselection:`GPS Cursor Size` |slider| you can shrink and "
-"grow the position cursor on the canvas. Activating |radiobuttonon| :"
-"menuselection:`Auto-add vertices` within GPS digitizing your track will "
-"automatically be recorded in the active vector layer (of course the layer "
-"has to be in edit mode)."
-msgstr ""
-
-# 865b34a9e2e3410b92ae6420a48944f2
+# 4e74062564c74c1b88a88f83d065ecc8
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:102
 msgid ""
-"With GPS map recenter you can decide in which way the canvas will be updated "
-"if your recorded coordinates start either to move out of canvas or there is "
-"any change at all."
+"A click on **[Connect]** again initiates the connection to the GPS receiver."
 msgstr ""
+"Нажатие кнопки **[Подключиться]** снова инициирует соединение с "
+"GPS-приемником."
 
-# 5f85b0b4b5af4520ae18f1c65c42fd89
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:106
+# b1b691f9ad7b4f79a1b8ded1d2d1d780
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:116
 msgid ""
-"Track color and width sets the color of and the width of your drawn track."
+"You can activate |checkbox| :menuselection:`Automatically save added "
+"features` when you are in editing mode. Or you can can activate |checkbox| "
+":menuselection:`Automatically add points` to the main windows with a certain "
+"width and color."
 msgstr ""
+"При необходимости можно активировать параметр |checkbox| "
+":guilabel:`Автоматически сохранять объекты` в группе :guilabel:`Оцифровка`. "
+"Или же можно включить |checkbox| :guilabel:`Добавлять точки автоматически` и "
+"автоматически записывать трек в активный векторный слой (разумеется,\n"
+"слой должен быть в режиме редактирования). При этом доступны настройки "
+"толщины и цвета трека."
 
-# e297e146eeca46ca850f47da36e24159
-#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:108
+# 9a5390ebbd944abaad1c54c20221fcc0
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:121
 msgid ""
-"If you want to set a feature manually you have to go back to |"
-"mActionToggleEditing| \"Position Coordinates\" and click on **[Add feature]"
-"**."
+"Activating |checkbox| :menuselection:`Cursor` you can use a slider |slider| "
+"to shrink and grow the position cursor on the canvas."
 msgstr ""
+"Активировав |checkbox| :guilabel:`Курсор` можно использовать  ползунок "
+"|slider|для  уменьшения и увеличения размера курсора текущего местоположения "
+"в окне карты."
+
+# 84886ab2ce1c4218b07c8672ec3ed93c
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:124
+msgid ""
+"Activating |radiobuttonon| :menuselection:`Map centering` allows to decide "
+"in which way the canvas will be updated. This includes ``always``, ``when "
+"leaving`` if your recorded coordinates start either to move out of canvas or "
+"``never`` to keep map extend."
+msgstr ""
+"Установка одного из параметров в группе :guilabel:`Центрирование карты` "
+"позволяет контролировать, в каких случаях будет обновляться окно карты: в "
+"случае, если записываемые координаты выходят за текущий охват карты, либо "
+"всегда (или же никогда)."
+
+# 93e2e6d64a98424583789fc89ffc4b3c
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:128
+msgid ""
+"Finally you can activate |checkbox| :menuselection:`Log file` and define a "
+"path and a file where log messages about the gps tracking a logged."
+msgstr ""
+"И, наконец, установив флажок |checkbox| :menuselection:`Файл журнала` можно "
+"указать путь к файлу, в который будут записываться отладочные сообщения."
+
+# b706e26fb98a4a27a9f126c5a898aa8f
+#: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:131
+msgid ""
+"If you want to set a feature manually you have to go back to "
+"|mActionToggleEditing| \"Position Coordinates\" and click on **[Add Point]** "
+"or **[Add track point]**."
+msgstr ""
+"Если вы хотите добавлять объекты вручную, вернитесь обратно к окну "
+"|mActionToggleEditing| :guilabel:`Координаты текущего местоположения` и "
+"нажмите **[Добавить объект]** или **[Добавить точку в трек]**."
