@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 11:04\n"
+"POT-Creation-Date: 2013-03-04 14:53\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -407,12 +407,12 @@ msgid ""
 "packages like ``maptools`` and, specially, ``sp``, is mandatory."
 msgstr ""
 
-# f5ca025154f54541a360703432527886
+# 618c3e7f76af4a74aabec6378125c5b2
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:236
 msgid ""
-"The first lines, which start with a double Python comment sign (##), tell "
-"SEXTANTE the inputs of the algorithm described in the file and the outputs "
-"that it will generate. They work exactly with the same syntax as the "
+"The first lines, which start with a double Python comment sign (``##``), "
+"tell SEXTANTE the inputs of the algorithm described in the file and the "
+"outputs that it will generate. They work exactly with the same syntax as the "
 "SEXTANTE scripts that we have already seen, so they will not be described "
 "here again. Check the corresponding section for more information."
 msgstr ""
@@ -455,24 +455,34 @@ msgid ""
 "R."
 msgstr ""
 
-# 427854519fa249edb58e4f8aab15e3d5
+# 95c62586a6da4cf4a95fecdd894d73b9
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:266
 msgid ""
-"Additionaly, raster file can be read using the raster package instead of "
-"rgdal, by appending ``|R.raster`` to the data type definition, as show in "
-"the following example script, which computes a histogram using the values in "
-"a raster layer:"
+"Additionally, raster files can be read using the ``raster`` package instead "
+"of ``rgdal``, by using the ``userasterpackage`` tag, as shown in the "
+"following example script, which computes a histogram using the values in a "
+"raster layer:"
 msgstr ""
 
-# 7139e4b4239f4d67a0db0ff4334dd1c2
+# cef7c9e576bb44338c4b84a16b3cd402
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:282
 msgid ""
-"Knowing that, we can now understand the first line of our first example "
-"script (the first line not starting with a Python comment)."
+"If you are an advanced user and do not want SEXTANTE to create the object "
+"representing the layer, you can use the ``##passfilename`` tag to tell "
+"SEXTANTE that you prefer a string with the filename instead. In this case, "
+"it is up to you to open the file before performing any operation on the data "
+"it contains."
+msgstr ""
+
+# b96fa0d4ecb64247adc459cd9db4f5ab
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:288
+msgid ""
+"With the above information, we can now understand the first line of our "
+"first example script (the first line not starting with a Python comment)."
 msgstr ""
 
 # 88f7903fbee84f2e9e14c825faf4e6e2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:289
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:295
 msgid ""
 "The variable ``polygon`` already contains a ``SpatialPolygonsDataFrame`` "
 "object, so it can be used to call the ``spsample`` method, just like the "
@@ -481,7 +491,7 @@ msgid ""
 msgstr ""
 
 # 2c718545315144ab99adc646cb8d38c1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:294
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:300
 msgid ""
 "Since we have declared an output of type vector named ``out``, we have to "
 "create a variable named ``out`` and store a ``Spatial*DataFrame`` object in "
@@ -492,7 +502,7 @@ msgid ""
 msgstr ""
 
 # 943b0163d3ee4367a677c9277f6abe62
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:301
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:307
 msgid ""
 "In this case, the result obtained from the ``spsample`` method has to be "
 "converted explicitly into a ``SpatialPointsDataFrame`` object, since it is "
@@ -501,7 +511,7 @@ msgid ""
 msgstr ""
 
 # 13e3fd15ca20488082d15af637cdcc63
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:306
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:312
 msgid ""
 "If you algorithm does not generate any layer, but a text result in the "
 "console instead, you have to tell SEXTANTE that you want the console to be "
@@ -513,7 +523,7 @@ msgid ""
 msgstr ""
 
 # 082c652247584a64af68d83919ac8794
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:323
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:329
 msgid ""
 "The output ot the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by "
@@ -521,28 +531,28 @@ msgid ""
 msgstr ""
 
 # 6ccd241af1d84f028fc3aa0d64baf5e7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:327
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:333
 msgid ""
 "If your algorithm creates any kind of graphics (using the ``plot()`` "
 "method), add the following line:"
 msgstr ""
 
 # b926562b392c4db189b92a821fce5f93
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:334
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:340
 msgid ""
 "This will cause SEXTANTE to redirect all R graphical outputs to a temporary "
 "file, which will be later opened once R execution has finished"
 msgstr ""
 
 # b01b101e6511400c8b76b4636810b5ea
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:337
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:343
 msgid ""
 "Both graphics and console results will be shown in the SEXTANTE results "
 "manager."
 msgstr ""
 
 # 6808ea63365440659b00d692bece8932
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:340
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:346
 msgid ""
 "For more information, please check the script files provided with SEXTANTE. "
 "Most of them are rather simple and will greatly help you understand how to "
@@ -550,7 +560,7 @@ msgid ""
 msgstr ""
 
 # 7765269d61ba4ef0b6260bd7eab75fb0
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:344
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:350
 msgid ""
 "A note about libraries: ``rgdal`` and ``maptools`` libraries are loaded by "
 "default so you do not have to add the corresponding *library()* commands "
@@ -562,12 +572,12 @@ msgid ""
 msgstr ""
 
 # c123721966f947f0b13ecafeca04126f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:354
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:360
 msgid "GRASS"
 msgstr ""
 
 # c7bf4d9fcee6495cbcbb508e03bcbad5
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:356
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:362
 msgid ""
 "Configuring GRASS is not much different from configuring SAGA. First, the "
 "path to the GRASS folder has to be defined, but only if you are running "
@@ -577,7 +587,7 @@ msgid ""
 msgstr ""
 
 # 7ee0e23d81f643b589dc97b3f2a292be
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:362
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:368
 msgid ""
 "By default, SEXTANTE tries to configure its GRASS connector to use the GRASS "
 "distribution that ships along with QGIS. This should work without problems "
@@ -588,14 +598,14 @@ msgid ""
 msgstr ""
 
 # a06010b814894f309c2f9c0c365f569c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:369
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:375
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is correctly "
 "installed, and that it can be run without problem from a console."
 msgstr ""
 
 # 727d98c3bf70499096c190e8d4e94c8b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:373
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:379
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be defined "
 "manually using values similar to the ones found in the SAGA configuration, "
@@ -606,7 +616,7 @@ msgid ""
 msgstr ""
 
 # 32f5d2f91a9c472283a58b12c14a7baf
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:380
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:386
 msgid ""
 "GRASS includes help files describing each algorithm. If you set the *GRASS "
 "help folder* parameter, SEXTANTE will open them when you use the *Show help* "
@@ -614,7 +624,7 @@ msgid ""
 msgstr ""
 
 # d60fab181b4843b4905ffb475ab9cbbb
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:384
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:390
 msgid ""
 "The last parameter that has to be configured is related to the mapset. A "
 "mapset is needed to run GRASS, and SEXTANTE creates a temporary one for each "
@@ -623,12 +633,12 @@ msgid ""
 msgstr ""
 
 # f28379c43d184ba8b38b7d6a8f664831
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:391
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:397
 msgid "GDAL"
 msgstr ""
 
 # d91ab9b9baab46789ea9ddd322d9946e
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:393
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:399
 msgid ""
 "No additional configuration is needed to run GDAL algorithms, since it is "
 "already incorporated to QGIS and SEXTANTE can infere its configuration from "
@@ -636,12 +646,12 @@ msgid ""
 msgstr ""
 
 # 673a5527d0794b8e849b5c070a595554
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:398
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:404
 msgid "Orfeo ToolBox"
 msgstr ""
 
 # 92de59ea6ac3440da8637b4d1756b79c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:400
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:406
 msgid ""
 "Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB "
 "installed in your system and configured SEXTANTE properly so it can find all "
@@ -651,7 +661,7 @@ msgid ""
 msgstr ""
 
 # 7828b00ee4d643deb6623bceb8913860
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:406
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:412
 msgid ""
 "Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog "
 "and configure OTB algorithm provider. In the *Orfeo Toolbox (image analysis)"
@@ -660,21 +670,21 @@ msgid ""
 msgstr ""
 
 # 5255830e906a4f39b2b3a3180f9d9550
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:411
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:417
 msgid ""
 "Then configure path to the folder where OTB command-line tools and libraries "
 "are installed:"
 msgstr ""
 
 # c5453fb2d83649b6bee9b52f8c9c1143
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:414
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:420
 msgid ""
 "|nix| usually *OTB applications folder* point to ``/usr/lib/otb/"
 "applications`` and *OTB command line tools folder* is ``/usr/bin``;"
 msgstr ""
 
 # c7fbed1d73bb405a9ab86f763c3961d1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:416
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:422
 msgid ""
 "|win| if you use OSGeo4W installer, than install ``otb-bin`` package and "
 "enter ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` as *OTB applications "
@@ -682,22 +692,22 @@ msgid ""
 msgstr ""
 
 # 546144600804461cb2e58556fc07cbeb
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:422
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:428
 msgid "TauDEM"
 msgstr ""
 
 # f718fb9142c14622a97c41f979cad76d
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:423
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:429
 msgid "To use this plugin you need to install TauDEM command line tools."
 msgstr ""
 
 # 4db081fcfec34b139e8ef4cd60e5b182
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:426
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:432
 msgid "Windows"
 msgstr ""
 
 # 8465d20c141b434eb8f53f5f9444127f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:428
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:434
 msgid ""
 "Please visit TauDEM homepage for installation instructions and precompiled "
 "binaries for 32bit and 64bit systems. NOTE: you need TauDEM 5.0.6 "
@@ -705,18 +715,18 @@ msgid ""
 msgstr ""
 
 # ee43d819fbb34201b2f7ddc6fcc71445
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:432
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:438
 msgid ""
 "TauDEM homepage: http://hydrology.usu.edu/taudem/taudem5.0/downloads.html"
 msgstr ""
 
 # 516ea97e52d347d8b70136f34a8980c9
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:435
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:441
 msgid "Linux"
 msgstr ""
 
 # 063ccba5f59b4aa78d40e1ee099d7fe1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:437
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:443
 msgid ""
 "There are no packages for most Linux distribution, so you should compile "
 "TauDEM by yourself. As TauDEM uses MPICH2, first install it using your "
@@ -725,55 +735,55 @@ msgid ""
 msgstr ""
 
 # 8e9beee990c94418aa8e17b2fecf0583
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:442
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:448
 msgid "Download TauDEM 5.0.6 source code and extract files in some folder"
 msgstr ""
 
 # da3becc093f44bd79dbe085c5a1578f2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:444
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:450
 msgid ""
 "TauDEM sources: http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506."
 "zip"
 msgstr ""
 
 # 5ecffdb1880b4596857c8c8de892dd63
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:446
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:452
 msgid "Open ``linearpart.h`` file and add after line"
 msgstr ""
 
 # a1b8ee62b312472ab7a5252610e37c93
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:452
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:458
 msgid "add new line with"
 msgstr ""
 
 # 5fd8a08d48ab432e88a7b44ad8ad4078
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:458
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:464
 msgid "so you'll get"
 msgstr ""
 
 # 53ead87ca52a48f5a010bd07e3ea2430
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:465
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:471
 msgid ""
 "Save changes and close file. Now open ``tiffIO.h``, find line ``#include "
 "\"stdint.h\"`` and replace quotes (``\"\"``) with ``<>``, so you'll get"
 msgstr ""
 
 # ab44b12e2fa04385a08e1d990afda4f9
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:472
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:478
 msgid "Save changes and close file. Create build directory and cd into it"
 msgstr ""
 
 # 55cb146a17ce4f808873a727a510e248
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:479
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:485
 msgid "Configure your build with command"
 msgstr ""
 
 # 76380f58f5684917ada88f35281006f2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:485
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:491
 msgid "and then compile"
 msgstr ""
 
 # e1337f11a8fe4d0b9f19a232556ebfc2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:491
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:497
 msgid "Finaly, to install TauDEM into ``/usr/local/bin``, run"
 msgstr ""
