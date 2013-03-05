@@ -162,7 +162,6 @@ msgstr ""
 
 # dbcaac5461794abb9a620c685218a8b1
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:83
-#, fuzzy
 msgid ""
 "From the available options check |radiobuttonon| :guilabel:`File`. Click on "
 "button **[Browse]**. That will bring up a standard open file dialog (see "
@@ -357,10 +356,11 @@ msgstr ""
 # e41cf8caced7487897ce9441abb0cdf6
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:202
 msgid "Loading an ArcInfo Binary Coverage"
-msgstr ""
+msgstr "ArcInfo Binary Coverage laden"
 
 # cdf0e94341da48e3bbedaf199111911e
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:204
+#, fuzzy
 msgid ""
 "|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the "
 "|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type "
@@ -369,6 +369,12 @@ msgid ""
 "Binary Coverage` |selectstring|. Navigate to the directory that contains the "
 "coverage files and select it."
 msgstr ""
+"Um ein ArcInfo Coverage zu laden, klicken Sie auf das Icon "
+"|mActionAddNonDbLayer| :sup:`Vektorlayer hinzufügen` in der Werkzeugleiste "
+"oder drücken Sie die Taste :kbd:`Strg+Shift+V`. Wählen Sie \n"
+"aus den möglichen Quelltypen |radiobuttonon| :guilabel:`Verzeichnis`, wählen "
+"Sie :guilabel:`ArcInfo Binary Coverage` |selectstring|. Wählen Sie nun den "
+"Ordner mit den ArcInfo Binary Coverage Dateien aus."
 
 # 0357b1aca06f4ec6972b2bb98a08a2f1
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:211
@@ -376,11 +382,14 @@ msgid ""
 "Similarly, you can load directory based vector files in the UK National "
 "Transfer Format as well as the raw TIGER Format of the US Census Bureau."
 msgstr ""
+"Auf die gleiche Art und Weise können auch andere Verzeichnis-basierte "
+"Vektorlayer geladen werden, wie etwa das U.K. National Transfer Format oder "
+"das raw TIGER Format des U.S. Census Bureau."
 
 # 7aef4279a6b44a9d9c130d10ef42e8f5
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:219
 msgid "PostGIS Layers"
-msgstr ""
+msgstr "PostGIS Layer laden"
 
 # acfd133beef6402591f58f8ee95c8008
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:221
@@ -390,11 +399,16 @@ msgid ""
 "provides. Using PostGIS, vector functions such as select and identify work "
 "more accurately than with OGR layers in |qg|."
 msgstr ""
+"PostGIS-Ebenen sind in einer PostgreSQL Datenbank gespeichert. Der Vorteil "
+"von PostGIS liegt in der Fähigkeitkeit, räumliche Indizes, Filterungen und "
+"Abfragen bereitszustellen. Vektorfunktionen wie Selektieren und Abfragen "
+"funktionieren besser als bei Ebenen, die durch die OGR-Bibliothek geladen "
+"wurden.\n"
 
 # bc4a54c3647849f4b1664a0cc134aa2a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:231
 msgid "Creating a stored Connection"
-msgstr ""
+msgstr "Erstellen einer PostGIS Anbindung"
 
 # b399414b2b454ecda82e0a13cb908d03
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:233
@@ -410,11 +424,23 @@ msgid ""
 "manager, click on the **[New]** button to display the :guilabel:`Create a "
 "New PostGIS Connection` dialog. The parameters required for a connection are:"
 msgstr ""
+"|mActionAddLayer| Beim ersten Einbinden einer PostGIS-Datenbank muss eine "
+"Anbindung erstellt und gespeichert werden. Klicken Sie dazu auf das Icon "
+"|mActionAddLayer| :sup:`PostGIS-Layer\n"
+"hinzufügen` in der Werkzeugleiste oder aus dem Menü :menuselection:`Layer` "
+"oder indem Sie :kbd:`Ctrl+Shift+D` drücken. Sie können auch den "
+":guilabel:`Vektorlayer hinzufügen` Dialog öffnen und |radiobuttonon| "
+":guilabel:`Datenbank` wählen. Der :guilabel:`PostGIS-Layer hinzufügen` "
+"Dialog wird angezeigt. Um eine neue Anbindung zu erstellen, klicken Sie auf "
+"den Knopf **[Neu]** und der :guilabel:`Neue PostGIS-Verbindung erzeugen` "
+"Dialog erscheint. Die für eine Verbindung erforderlichen Parameter sind:"
 
 # 1e59bbed4be3406fa2b2becdec8fad20
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:245
 msgid "**Name**: A name for this connection. Can be the same as *Database*"
 msgstr ""
+"**Name**:Ein Name für die Verbindung. Kann derselbe wie für die *Datenbank* "
+"sein "
 
 # 947120bdddd54a89b0204ed335eaa3fe
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:246
@@ -422,6 +448,9 @@ msgid ""
 "**Service**: Service parameter to be used alternatively to hostname/port "
 "(and potentially database). This can be defined in :file:`pg_service.conf`"
 msgstr ""
+"**Dienst**: Service Parameter, der anstelle von Host / Port und potenziell "
+"auch Datenbank verwendet werden kann. Kann unter :file:`pg_service.conf` "
+"definiert werden"
 
 # 5e2ea161a73e4843b0165632bd293a1c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:248
@@ -430,18 +459,22 @@ msgid ""
 "same as would be used to open a telnet connection or ping the host. If the "
 "database is on the same computer as |qg|, simply enter *'localhost'* here."
 msgstr ""
+"**Host**: Name des Datenbank-Hosts. Dies muss einauflösbarer Name für den "
+"HOST sein, genau wie beim Benutzen von telnet oder ping Wenn die Datenbank "
+"auf demselben Computer ist wie |qg|, tragen Sie hier einfach *'localhost'* "
+"ein."
 
 # c2025726d7d549e89a2d5508ee966d74
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:251
 msgid ""
 "**Port**: Port number the PostgreSQL database server listens on. The default "
 "port is 5432."
-msgstr ""
+msgstr "**Port**: Port Nummer der Datenbank auf dem Server. Standard ist 5432."
 
 # 69c540cb34c84081a73b622817f0f5db
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:253
 msgid "**Database**: Name of the database."
-msgstr ""
+msgstr "**Datenbank**: Name der Datenbank."
 
 # f3348f98e7c04c8398a5b7d8b8ad2c20
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:254
@@ -450,16 +483,22 @@ msgid ""
 "Note that massive speedups in PostGIS layer rendering can be achieved by "
 "disabling SSL in the connection editor. Following options are available:"
 msgstr ""
+"**SSL Modus**: Wie die SSL-Verbindung mit dem Server festgelegt wird. "
+"Beachten Sie dass es zu erheblichen Beschleunigungen im Darstellen von "
+"PostGIS Layern kommt wenn man SSL im Verbindungseditor abschaltet. Die "
+"Optionen sind:"
 
 # ee02db74adab4e5aa73f2ce70a8d2f42
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:258
 msgid "disable: only try an unencrypted SSL connection"
-msgstr ""
+msgstr "abschalten: Versuche nur eine Nicht-SSL-Verbindung"
 
 # 0571d1ec1be048a994597bf75dfb535c
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:259
 msgid "allow: try a non-SSL connection, if that fails, try an SSL connection"
 msgstr ""
+"erlauben: Versuche eine Nicht-SSL-Verbindung. Wenn das nicht klappt, "
+"versuche eine SSL-Verbindung"
 
 # c1d3abac3ff44d4291231dbdd8571357
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:260
@@ -467,56 +506,60 @@ msgid ""
 "prefer (the default): try an SSL connection, if that fails, try a non-SSL "
 "connection;"
 msgstr ""
+"bevorzugen (the default): Versuche eine SSL-Verbindung. Wenn das nicht "
+"klappt, versuche eine Nicht-SSL-Verbindung;"
 
 # 44ee6837299945f58ffa9c34156e1c61
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:262
 msgid "require: only try an SSL connection."
-msgstr ""
+msgstr "verlangen: Versuche nur eine SSL-Verbindung."
 
 # aaaff88c857e483a87c404432ff9811d
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:264
 msgid "**Username**: User name used to login to the database."
-msgstr ""
+msgstr "**Benutzername**: Benutzername, um sich bei der Datenbank anzumelden."
 
 # 630ba4fa34df499bbe083624dd207352
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:265
 msgid "**Password**: Password used with *Username* to connect to the database."
 msgstr ""
+"**Passwort**: Passwort das zusammen mit *Benutzername* verwendet wird um "
+"sich bei der Datenbank anzumelden."
 
 # 48d287f356e94d02beb6ae467ee548df
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:268
 msgid "Optional you can activate following checkboxes:"
-msgstr ""
+msgstr "Optional können noch die folgenden Kontrollkästchen aktiviert werden:"
 
 # faa2d80c4191475d9e1f25936283fbb2
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:270
 msgid "|checkbox| :guilabel:`Save Username`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Benutzernamen speichern`"
 
 # bec8042b18db412a8079d51f63993a85
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:271
 msgid "|checkbox| :guilabel:`Save Password`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Passwort speichern`"
 
 # 55427e6a4e7943f099456debe9335600
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:272
 msgid "|checkbox| :guilabel:`Only look in the geometry_columns table`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Nur in geometry_columns nachschauen`"
 
 # 94f25fb844c24ceebe4ebd4f248e209b
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:273
 msgid "|checkbox| :guilabel:`Only look in the 'public' schema`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Nur im 'public' Schema nachschauen`"
 
 # 005b009f38f44b8cbdb7da3d02c033ae
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:274
 msgid "|checkbox| :guilabel:`Also list tables with no geometry`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Auch geometrielose Tabellen anzeigen`"
 
 # e30f6edd868a4c0ea83b9275567c4460
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:275
 msgid "|checkbox| :guilabel:`Use estimated table metadata`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Gechätzte Tabellenmetadaten nutzen`"
 
 # 63128912de5142f0bbfe1dd6ccbae678
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:278
@@ -524,11 +567,13 @@ msgid ""
 "Once all parameters and options are set, you can test the connection by "
 "clicking on the **[Test Connect]** button."
 msgstr ""
+"Wenn alle Parameter eingetragen sind, kann die Verbindung getestet werden, "
+"indem Sie auf den Knopf **[Verbindung testen]** drücken."
 
 # b2c6a3e797d446918ffc8e3bcb138474
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:283
 msgid "**QGIS User Settings and Security**"
-msgstr ""
+msgstr "**QGIS Benutzereinstellungen und Sicherheit**"
 
 # ac0dc9324458455bbb3e749c48008199
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:285
@@ -537,22 +582,27 @@ msgid ""
 "settings may be a security risk. Your customized settings for |qg| are "
 "stored based on the operating system:"
 msgstr ""
+"Je nach Arbeitsumgebung birgt das Speichern von Passwörtern in Ihren "
+"|qg|-Einstellungen Risiken in sich. Ihre Einstellungen für |qg| werden "
+"basierend auf ihrem Betriebssystem gespeichert:"
 
 # 8466814a05ee45c0b5fc2e6333d783a8
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:289
 msgid ""
 "|nix|, the settings are stored in your home directory in :file:`.qgis/`."
 msgstr ""
+"|nix|, die Einstellungen werden in Ihrem Homeverzeichnis in :file:`.qgis/` "
+"gespeichert. "
 
 # ca5c2f0dd45f48e2b89b45c9f899fae3
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:290
 msgid "|win|, the settings are stored in the registry."
-msgstr ""
+msgstr "|win|, die Einstellungen werden in der Registry gespeichert."
 
 # 3ec9776f544548a29d16a2d3f6dc482f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:295
 msgid "Loading a PostGIS Layer"
-msgstr ""
+msgstr "Laden eines Layers aus der PostGIS Datenbank"
 
 # 5d33beb9aeac46a9b46364aa0ea9cc65
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:298
@@ -562,18 +612,29 @@ msgid ""
 "data in PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for a "
 "discussion on importing data into the database."
 msgstr ""
+"|mActionAddLayer| Nachdem Sie eine oder mehrere Verbindungen definiert und "
+"gespeichert haben, können Sie einzelne Ebenen aus PostGIS laden. Natürlich "
+"brauchen Sie dazu\n"
+"Daten in PostgreSQL/PostGIS. Eine Beschreibung zum Import von Daten nach "
+"PostgreSQL/PostGIS lesen Sie in Abschnitt "
+":ref:`vector_import_data_in_postgis`.  "
 
 # bbb0819500ad4e509c9543751736a77d
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:303
 msgid "To load a layer from PostGIS, perform the following steps:"
 msgstr ""
+"Um eine Ebene aus PostGIS zu laden, führen Sie folgende Schritte durch:"
 
 # 1d19d791e0644aa28ff983100cef1655
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:306
+#, fuzzy
 msgid ""
 "If the :guilabel:`Add PostGIS Table(s)` dialog is not already open, click on "
 "the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button."
 msgstr ""
+"**Dienst**: Service Parameter, der anstelle von Host / Port und potenziell "
+"auch Datenbank verwendet werden kann. Kann unter :file:`pg_service.conf` "
+"definiert werden"
 
 # 0732578dcb594584ab479a5d296e79e7
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:308
