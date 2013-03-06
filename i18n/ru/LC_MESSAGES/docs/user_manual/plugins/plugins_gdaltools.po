@@ -169,6 +169,11 @@ msgid ""
 "raster data; on the fly reprojection is not provided. For more information "
 "see http://www.gdal.org/gdal-rasterize.html"
 msgstr ""
+"Внедряет («прожигает») векторные объекты (точки, линии, полигоны) в канал(ы) "
+"растра. Векторные данные считываются из OGR-совместимых источников данных. "
+"Обратите внимание, что вектор иметь такую же систему координат, что и растр, "
+"перепроецирование не поддерживается. Подробное описание доступно по адресу "
+"http://www.gdal.org/gdal-rasterize.html"
 
 # 72f46bc4574749cea7d64fded39ab7c0
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:102
@@ -184,6 +189,11 @@ msgid ""
 "create the output vector datasource if it does not already exist, defaulting "
 "to ESRI shapefile format. See also http://www.gdal.org/gdal_polygonize.html"
 msgstr ""
+"Создаёт векторные полигоны для всех соединенных пикселей растра, имеющих "
+"одинаковое значение. Каждый созданный полигон имеет атрибут, содержащий "
+"значение соответствующих ему пикселей. Если выходной файл отсутствует --- он "
+"будет создан, по умолчанию используется формат shape-файлов. См. также "
+"http://www.gdal.org/gdal-rasterize.html"
 
 # 4f4351daa4b64f969f0927e78e2119be
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:111
@@ -299,6 +309,11 @@ msgid ""
 "copied into a new file. For more information see "
 "http://www.gdal.org/gdal_sieve.html ."
 msgstr ""
+"Удаляет растровые кластеры с размером меньшим заданного порога (в пикселях) "
+"и заменяет их значениями пикселей наибольшего прилегающего кластера. "
+"Результат может быть записан как в исходный растр, так и в новый файл. За "
+"подробным описанием обратитесь к странице "
+"http://www.gdal.org/gdal_sieve.html."
 
 # 10a130e852974f9aba68e803a949f8ba
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:167
@@ -367,6 +382,10 @@ msgid ""
 "values, you can choose from various interpolation methods. The utility is "
 "also described on the GDAL website http://www.gdal.org/gdal_grid.html ."
 msgstr ""
+"Создаёт регулярное покрытие (растр) из разрозненных данных OGR-совместимого "
+"источника. Исходные данные будут интерполированы, для заполнения ячеек "
+"покрытия, есть возможность выбора метода интерполяции. См. также "
+"http://www.gdal.org/gdal_grid.html"
 
 # db52949171654232874ba65e36ecf178
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:196
