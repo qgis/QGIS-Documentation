@@ -152,26 +152,30 @@ msgid ""
 "in response to any of the events described in Section :ref:`redraw_events`. "
 "Examples of when you might want to suspend rendering include:"
 msgstr ""
+"地図描画機能を停止するためには、ステータスバーの右下のコーナーにある |checkbox| :guilabel:`Render` "
+"チェックボックスをクリックして下さい. |checkbox| "
+":guilabel:`Render`チェックボックスがチェックされていない場合,QGISはセクション :ref:`redraw_events` "
+"で記述されているイベントが発生してもキャンバスの再描画を行いません.描画機能を停止したほうがいい例は以下のような場合です:"
 
 # fc5838053c954c8baedaea8c773ddd92
 #: ../../source/docs/user_manual/introduction/general_tools.rst:112
 msgid "Add many layers and symbolize them prior to drawing"
-msgstr ""
+msgstr "沢山のレイヤを追加して描画する前に描画方法を編集したい場合"
 
 # 5c1c9777ef84427cafeeef0752f13edf
 #: ../../source/docs/user_manual/introduction/general_tools.rst:113
 msgid "Add one or more large layers and set scale dependency before drawing"
-msgstr ""
+msgstr "データ量が多いレイヤを追加して描画する前に縮尺依存描画条件を指定したい場合"
 
 # b5dbbabec1aa42efacddd4fa67a68dab
 #: ../../source/docs/user_manual/introduction/general_tools.rst:114
 msgid "Add one or more large layers and zoom to a specific view before drawing"
-msgstr ""
+msgstr "データ量が多いレイヤを追加して描画する前に特定の位置にズームしておきたい場合"
 
 # b92ef933f8e9475c9c8d104950c5a739
 #: ../../source/docs/user_manual/introduction/general_tools.rst:115
 msgid "Any combination of the above"
-msgstr ""
+msgstr "上記の場合のいくつかの組み合わせ"
 
 # e2d766a55f844ab9a468798842f7e795
 #: ../../source/docs/user_manual/introduction/general_tools.rst:117
@@ -179,11 +183,13 @@ msgid ""
 "Checking the |checkbox| :guilabel:`Render` checkbox enables rendering and "
 "causes an immediate refresh of the map canvas."
 msgstr ""
+" |checkbox| :guilabel:`Render` "
+"]チェックボックスをチェックすると描画可能になり,即座にマップキャンバスの描画更新が行われます."
 
 # 420edf433a354813bc263790f31e9c4e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:123
 msgid "b) Setting Layer Add Option"
-msgstr ""
+msgstr "b) レイヤ追加オプションの設定"
 
 # c9db6ba0733744bca828dc974caad19e
 #: ../../source/docs/user_manual/introduction/general_tools.rst:128
@@ -196,11 +202,16 @@ msgid ""
 "layers added to the map should be displayed` checkbox. Any layer added to "
 "the map will be off (invisible) by default."
 msgstr ""
+"新しくレイヤを追加した時に,すぐに描画しないオプションを設定できます.レイヤが地図に追加された時に,地図凡例の可視属性チェックボックスがデフォルトでチェックされないことを意味します.このオプションを指定するためには "
+":menuselection:`Settings --> Options -->` を選択して "
+":guilabel:`Rendering`タブをクリックして |checkbox| :guilabel:`By default new layers "
+"added to the map should be displayed` "
+"のチェックをはずして下さい.すると地図に追加されたレイヤの表示属性は不可視の状態がデフォルトになります."
 
 # ba3a6997c8a348f9a1babd2ea4ed7044
 #: ../../source/docs/user_manual/introduction/general_tools.rst:137
 msgid "Stopping Rendering"
-msgstr ""
+msgstr "描画の中断"
 
 # 9cf377de012d4351b954a1734192ed39
 #: ../../source/docs/user_manual/introduction/general_tools.rst:144
@@ -210,13 +221,16 @@ msgid ""
 "bit of time between pressing :kbd:`ESC` and the time the map drawing is "
 "halted."
 msgstr ""
+"地図描画を中止させたい時は :kbd:`ESC` "
+"キーを押してください.これによってマップキャンバスの更新が中断され地図は一部だけ描画された状態になります. :kbd:`ESC` "
+"を押した後で描画が中断されるまで少し時間がかかります."
 
 # 83995c4f76e446e78e582c5ebed9fccd
 #: ../../source/docs/user_manual/introduction/general_tools.rst:149
 msgid ""
 "It is currently not possible to stop rendering - this was disabled in qt4 "
 "port because of User Interface (UI) problems and crashes."
-msgstr ""
+msgstr "現在は描画を停止することができません - これはqt4ではユーザインターフェース(UI)に問題があって落ちるからです."
 
 # dc0adedb3e8644e7ba6a6fe3fcbfdced
 #: ../../source/docs/user_manual/introduction/general_tools.rst:155
