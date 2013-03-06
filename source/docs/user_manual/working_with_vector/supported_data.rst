@@ -187,8 +187,7 @@ Loading a MapInfo Layer
 |mActionAddNonDbLayer| To load a MapInfo layer, click on the
 |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type
 :kbd:`Ctrl+Shift+V`, change the file type filter to
-:guilabel:`Files of Type [OGR] MapInfo (*.mif *.tab *.MIF *.TAB)`
-|selectstring| and select the .TAB or .tab layer you want to load.
+:guilabel:`Filter: Mapinfo File [OGR]`|selectstring| and select the .TAB or .tab layer you want to load.
 
 .. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format
 .. index:: US_Census_Bureau
@@ -300,7 +299,7 @@ a discussion on importing data into the database.
 To load a layer from PostGIS, perform the following steps:
 
 
-*  If the :guilabel:`Add PostGIS Table(s)` dialog is not already open,
+*  If the :guilabel:`Add PostGIS layers` dialog is not already open,
    click on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button.
 *  Choose the connection from the drop-down list and click **[Connect]**.
 *  Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`

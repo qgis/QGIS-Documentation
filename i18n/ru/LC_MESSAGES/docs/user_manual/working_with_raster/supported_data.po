@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-01-11 22:43\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,25 +16,31 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# e0dfae83642742b7ac73a51c5d3f4d56
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 63f786582e274ae1ace734acd764a20e
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:15
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:13
 msgid "Working with Raster Data"
-msgstr ""
+msgstr "Работа с растровыми данными"
 
-# bd2c70b7324f478d9afd2758e6dcaf2b
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:22
+# 079ebd6ff24e4bb29646e2d3e7fa9b20
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:20
 msgid ""
-"This Section describes how to visualize and set raster layer properties. |"
-"qg| uses the :index:`GDAL` library to read and write raster data formats [#]"
-"_, including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas "
-"Imagine and many more."
+"This Section describes how to visualize and set raster layer properties. "
+"|qg| uses the :index:`GDAL` library to read and write raster data formats, "
+"including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine "
+"and many more. GRASS raster support is supplied by a native QGIS data "
+"provider plugin. The raster data can also be loaded in read mode from zip "
+"and gzip archives into QGIS."
 msgstr ""
+"Из этой главы вы узнаете, как как визуализировать растровый слой и настроить "
+"его параметры. Реализация работы с растрами в |qg| основана на библиотеке "
+":index:`GDAL`, что позволяет открывать данные в форматах Arc/Info Binary "
+"Grid, Arc/Info ASCII Grid,GeoTIFF, Erdas Imagine и многих других. Работа с "
+"растровыми данными GRASS реализована через отдельный провайдер. Также "
+"поддерживается загрузка растровых данных напрямую из архивов zip и gzip."
 
 # c70cc2694a52460291b79849ac9ad0b6
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:27
@@ -43,8 +49,12 @@ msgid ""
 "the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A "
 "complete list is available at http://www.gdal.org/formats_list.html."
 msgstr ""
+"На момент написания руководства, библиотека GDAL подерживала свыше 100 "
+"различных форматов растровых данных (см. GDAL-SOFTWARE-SUITE "
+":ref:`literature_and_web`). С полным списком можно ознакомиться по адресу "
+"http://www.gdal.org/formats_list.html."
 
-# 3686e8c60eb5443b9ac27de145ad87f5
+# d499674501614a40b5702ff3b87284f3
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:31
 msgid ""
 "**Note** Not all of the listed formats may work in QGIS for various reasons. "
@@ -52,19 +62,27 @@ msgid ""
 "installation of your OS was not built to support the format you want to use. "
 "Only those formats that have been well tested will appear in the list of "
 "file types when loading a raster into QGIS. Other untested formats can be "
-"loaded by selecting *.*."
+"loaded by selecting the GDAL [All files] filter."
 msgstr ""
+"**Примечание**: по различным причинам, не все из поддерживаемых форматов "
+"могут работать в QGIS. Например, некоторые требуют наличия внешних "
+"коммерческих библиотек или библиотеки GDAL/OGR в вашей операционной системе "
+"(ОС) скомпилированы без поддержки формата, который вы хотите использовать. "
+"При загрузке в QGIS данных векторных или растровых форматов в списке типов "
+"файлов будут отображаться только те форматы, которые были проверены. "
+"Остальные (непроверенные) форматы могут быть загружены, если выбрать в "
+"выпадающем списке «Типы файлов» строку ``[GDAL] все файлы (*)``."
 
 # bd55ae4a971f4202a31c1254b5fd5766
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:38
 msgid ""
 "Working with GRASS raster data is described in Section :ref:`sec_grass`."
-msgstr ""
+msgstr "Работа с растровыми данными GRASS описана в разделе :ref:`sec_grass`."
 
 # 5892fcc21acd4b4d8824a12391991587
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:42
 msgid "What is raster data?"
-msgstr ""
+msgstr "Что такое растровые данные?"
 
 # 1a2b512266be496aa6221bb9c8cc54b0
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:44
@@ -76,6 +94,13 @@ msgid ""
 "aerial photography or satellite imagery and modelled data such as an "
 "elevation matrix."
 msgstr ""
+"Растровые данные в ГИС представляют из себя матрицы, каждая ячейка которых "
+"передаёт значение некого параметра поверхности. Каждая ячейка в растровой "
+"сетке имеет определенный размер. Как правило, ячейки имеют прямоугольную "
+"форму (в QGIS они всегда прямоугольные). Типичный набор растровых данных "
+"включает в себя данные дистанционного зондирования, такие как "
+"аэрофотосъемка, спутниковые снимки или смоделированные данные, например, "
+"матрицу высот."
 
 # 4ce6609b92f34631b0f02a2f66bdc57e
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:51
@@ -85,30 +110,42 @@ msgid ""
 "coordinate of a corner pixel of the raster layer. This allows QGIS to "
 "position the data correctly in the map canvas."
 msgstr ""
+"В отличии от векторных данных, у растров, как правило, нет присоединенных к "
+"каждой ячейке табличных данных. Они геокодируются размещением пикселей "
+"относительно координат углового пикселя растрового слоя, что позволяет "
+"корректно размещать такие данные на картах в |qg|."
 
 # 6b71e3718b674743b7fa7e245dc9b92f
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:56
 msgid ""
-"QGIS makes use of georeference information inside the raster layer (e.g. :"
-"index:`GeoTiff`) or in an appropriate world file to properly display the "
+"QGIS makes use of georeference information inside the raster layer (e.g. "
+":index:`GeoTiff`) or in an appropriate world file to properly display the "
 "data."
 msgstr ""
+"Для правильного отображения данных |qg| использует информацию о привязке, "
+"находящуюся внутри растрового слоя (например, :index:`GeoTiff`) или в "
+"соответствующем файле привязки."
 
 # 7fd958a00dac42448764e97c82c872d0
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:64
 msgid "Loading raster data in QGIS"
-msgstr ""
+msgstr "Загрузка растровых данных в QGIS"
 
-# d60401855a724a0e8c0333b2fc18a78c
+# a5536ad54916437bb73c13fcf0427dd5
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:66
 msgid ""
-"Raster layers are loaded either by clicking on the |mActionAddRasterLayer| :"
-"sup:`Load Raster` icon or by selecting the :menuselection:`View -->` |"
-"mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
+"Raster layers are loaded either by clicking on the |mActionAddRasterLayer| "
+":sup:`Load Raster` icon or by selecting the :menuselection:`Layer -->` "
+"|mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
 "one layer can be loaded at the same time by holding down the :kbd:`Control` "
-"or :kbd:`Shift` key and clicking on multiple items in the dialog :guilabel:"
-"`Open a GDAL Supported Raster Data Source`."
+"or :kbd:`Shift` key and clicking on multiple items in the dialog "
+":guilabel:`Open a GDAL Supported Raster Data Source`."
 msgstr ""
+"Растровые слои загружаются нажатием на кнопку |mActionAddRasterLayer| "
+":sup:`Добавить растровый слой` или выбором меню :menuselection:`Слой -->` "
+"|mActionAddRasterLayer| :menuselection:`Добавить растровый слой`. Несколько "
+"слоёв можно загрузить, удерживая клавишу :kbd:`Ctrl` или :kbd:`Shift` в "
+"диалоге :guilabel:`Открыть GDAL-совместимый источник растровых данных`."
 
 # a3a801b5368645e89bdea820aff3ce9c
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:74
@@ -117,68 +154,75 @@ msgid ""
 "name with the right mouse button to select and activate layer specific "
 "features or to open a dialog to set raster properties for the layer."
 msgstr ""
+"Когда растровый слой появится в панели «Слои», нажмите на нем правой кнопкой "
+"мыши для вызова контекстного меню."
 
 # ab19b2953ed545fba55b7b2064f22c2f
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:78
 msgid "**Right mouse button menu for raster layers**"
-msgstr ""
+msgstr "**Контекстное меню для растровых слоев**"
 
 # 66a338014efd4cf58d2897bcc702a6fe
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:82
 msgid ":menuselection:`Zoom to layer extent`"
-msgstr ""
+msgstr ":menuselection:`Увеличить до границ слоя`"
 
-# a1627bfcf74c4981b6d5df5d735545eb
+# 714147b6fd7d4ff6a5cd5122ff95f50f
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
-msgid ":menuselection:`Zoom to best scale (100\\%)`"
-msgstr ""
+msgid ":menuselection:`Zoom to Best Scale (100\\%)`"
+msgstr ":menuselection:`Увеличить до наилучшего масштаба (100%)`"
 
-# 165e712d596e4315b4ebc3f77f503a75
+# 91c1a0f0a91e4ac4b9d9daefd9d0d495
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:84
-msgid ":menuselection:`Show in overview`"
-msgstr ""
+msgid ":menuselection:`Show in Overview`"
+msgstr ":menuselection:`Показать в обзоре`"
 
 # 7f5053f5056f485ca0523c6c64dbb62f
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:85
 msgid ":menuselection:`Remove`"
-msgstr ""
+msgstr ":menuselection:`Удалить`"
 
-# 0f8a898c0e634c41b421880fef221d86
+# e1798965880849e991bd5d644c2ad35d
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
-msgid ":menuselection:`Set layer CRS -->`"
-msgstr ""
+msgid ":menuselection:`Set Layer CRS`"
+msgstr ":menuselection:`Изменить систему координат`"
 
-# f1809b12b52648a0b7e2820f95bf7634
+# 0c50a3d2f54b4f82bca1933712697740
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:87
-msgid ":menuselection:`Set project CRS from layer`"
-msgstr ""
+msgid ":menuselection:`Set Project CRS from Layer`"
+msgstr ":menuselection:`Выбрать систему координат слоя для проекта`"
 
-# d18bff5c3a934350b0bd43fffb80f851
+# 3c7b024d44124c3e8cc9a99be9bd0cb2
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:88
-msgid ":menuselection:`Properties -->`"
-msgstr ""
+msgid ":menuselection:`Properties`"
+msgstr ":menuselection:`Свойства`"
 
-# 517d14d8fae54206b16aeee32b534691
+# f4f631f271574fdea91341c7047d483a
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:89
-msgid ":menuselection:`Rename -->`"
-msgstr ""
+msgid ":menuselection:`Rename`"
+msgstr ":menuselection:`Переименовать`"
 
-# 3d2014abfb58485aa2ce74e3e1c4af41
+# 5555325e7c1942558bb904527d7ed3cb
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:90
-msgid ":menuselection:`Add Group`"
-msgstr ""
+msgid ":menuselection:`Copy Style`"
+msgstr ":menuselection:`Копировать стиль`"
+
+# 1e5c460096ce45e78499844df8007a0a
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+msgid ":menuselection:`Add New Group`"
+msgstr ":menuselection:`Добавить группу`"
 
 # a79f0943ee2648d4977aa269ea897222
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
 msgid ":menuselection:`Expand all`"
-msgstr ""
+msgstr ":menuselection:`Развернуть все`"
 
 # 06c7064c8b8547b2bb654b9536d21d5c
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:93
 msgid ":menuselection:`Collapse all`"
-msgstr ""
+msgstr ":menuselection:`Свернуть все`"
 
-# ba39fb9c48f94611ae9d26d05aebd64e
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:96
-msgid "GRASS raster support is supplied by a native QGIS data provider plugin."
-msgstr ""
+# d9cb6b9a016a47b197c8157d1775d393
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:94
+msgid ":menuselection:`Update Drawing Order`"
+msgstr ":menuselection:`Обновлять порядок отрисовки`"

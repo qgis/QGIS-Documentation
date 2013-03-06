@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-01-10 22:27\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
@@ -189,19 +188,56 @@ msgstr ""
 msgid "Parsing Expressions"
 msgstr "Разбор выражений"
 
-# 2d0b8209f95f4188b4c618b9390343f5
-#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:63
-msgid "**TODO:** parsing, error handling"
-msgstr ""
-
-# 75c8f8f1ef964eadb9d6865ae28aca32
-#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:75
-msgid ""
-"**TODO:** working with the tree, evaluation as a predicate, as a function, "
-"error handling"
-msgstr ""
-
 # 33a49066296a4d89aef813af1145c054
-#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:80
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:76
 msgid "Evaluating Expressions"
 msgstr "Вычисление выражений"
+
+# 92ac2b984bee4314ae4183fdd3c6cb7f
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:79
+msgid "Basic Expressions"
+msgstr "Простые выражения"
+
+# fe64214f91cd4a6d9b0dc54d31ffd173
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:89
+msgid "Expressions with features"
+msgstr "Выражения с объектами"
+
+# 7c37686184fc40a88a2728d1e4d1ec13
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:91
+msgid ""
+"The following example will evaluate the given expression against a feature.  "
+"\"Column\" is a name of the field in the layer."
+msgstr ""
+"В этих примерах выражение проверяется относительно объекта. \"Column\" это "
+"имя поля атрибутивной таблицы слоя."
+
+# b477ba650cb045a880bca0850963c8a8
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:100
+msgid ""
+"You can also use :func:`QgsExpression.prepare()` if you need check more then "
+"one feature.  Using :func:`QgsExpression.prepare()` will increase the speed "
+"that evaluate takes to run."
+msgstr ""
+"Если необходимо проверить несколько объектов, стоит использовать функцию "
+":func:`QgsExpression.prepare()`. Использование "
+":func:`QgsExpression.prepare()` повысит скорость анализа выражений."
+
+# 3912385fd56b4e2fafffef158b18187f
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:112
+msgid "Hanlding errors"
+msgstr "Обработка ошибок"
+
+# d43b70dcf6d04a698a6f49008fdf0722
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:127
+msgid "Examples"
+msgstr "Примеры"
+
+# 274d38b67f244b4ea4fb6a83fc5aaa52
+#: ../../source/docs/pyqgis_developer_cookbook/08_expressions.rst:129
+msgid ""
+"The following example can be used to filter a layer and return any feature "
+"that matches a predicate."
+msgstr ""
+"Следующие примеры могут использоваться для фильтрации слоя и возвращения "
+"объектов, удовлетворяющих условию."
