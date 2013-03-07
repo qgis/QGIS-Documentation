@@ -26,12 +26,12 @@ interface as discussed below):
    QGIS GUI with Alaska sample data |nix|
 
 .. note::
-   Your window decorations (title bar, etc.) may appear different depending on 
-   your operating system and window manager. 
+   Your window decorations (title bar, etc.) may appear different depending on
+   your operating system and window manager.
 
 The QGIS GUI is divided into five areas:
 
-#. Menu Bar 
+#. Menu Bar
 #. Tool Bar
 #. Map Legend
 #. Map View
@@ -52,15 +52,15 @@ Menu Bar
 The menu bar provides access to various QGIS features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
 menu options are listed below, together with the icons of the corresponding
-tools as they appear on the toolbar, as well as keyboard shortcuts. Keyboard 
-shortcuts can also be configured manually (shortcuts presented in this 
-section are the defaults), using the [**Configure Shortcuts**] tool under 
+tools as they appear on the toolbar, as well as keyboard shortcuts. Keyboard
+shortcuts can also be configured manually (shortcuts presented in this
+section are the defaults), using the [**Configure Shortcuts**] tool under
 :menuselection:`Settings`.
 
 Although most menu options have a corresponding tool and vice-versa,
 the menus are not organized quite like the toolbars.
 The toolbar containing the tool is listed after each menu option as a checkbox
-entry. Some menu options only appear, if the corresponding plugin is loaded. 
+entry. Some menu options only appear, if the corresponding plugin is loaded.
 For more information about tools and toolbars, see Section :ref:`label_toolbars`.
 
 File
@@ -302,7 +302,7 @@ Menu Option                                                     Shortcut        
 
 \
 
-Please not that for Linux |nix| the Menu Bar items listed above are the default ones 
+Please not that for Linux |nix| the Menu Bar items listed above are the default ones
 in KDE window manager. In GNOME, Settings menu is missing and its items are to be
 found here:
 
@@ -381,10 +381,10 @@ drawn over layers listed lower down in the legend.
 
 Layers in the legend window can be organised into groups. There are two ways to do so:
 
-#. Right click in the legend window and choose :menuselection:`Add Group`. Type in a 
+#. Right click in the legend window and choose :menuselection:`Add Group`. Type in a
    name for the group and press :kbd:`Enter`. Now click on an existing layer and drag it
    onto the group.
-#. Select some layers, right click in the legend window and choose :menuselection:`Group Selected`. 
+#. Select some layers, right click in the legend window and choose :menuselection:`Group Selected`.
    The selected layers will automatically be placed in a new group.
 
 To bring a layer out of a group you can drag it out, or right click on it and
@@ -395,72 +395,74 @@ with one click.
 
 The content of the right mouse button context menu depends on whether the selected
 legend item is a raster or a vector layer. For GRASS vector layers
-:menuselection:`Toggle editing` is not available. See section :ref:`grass_digitizing`
-for information on editing GRASS vector layers.
+|mActionToggleEditing| :sup:`Toggle editing` is not available. See section
+:ref:`grass_digitizing` for information on editing GRASS vector layers.
 
 **Right mouse button menu for raster layers**
 
- * :menuselection:`Zoom to layer extent`
- * :menuselection:`Zoom to best scale (100 %)`
- * :menuselection:`Show in overview`
- * :menuselection:`Remove`
- * :menuselection:`Set Layer CRS`
- * :menuselection:`Set Project CRS from Layer`
- * :menuselection:`Properties`
- * :menuselection:`Rename`
- * :menuselection:`Copy Style`
- * :menuselection:`Add New Group`
- * :menuselection:`Expand all`
- * :menuselection:`Collapse all`
- * :menuselection:`Update Drawing Order`
+* :menuselection:`Zoom to layer extent`
+* :menuselection:`Zoom to best scale (100 %)`
+* :menuselection:`Show in overview`
+* :menuselection:`Remove`
+* :menuselection:`Set Layer CRS`
+* :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Properties`
+* :menuselection:`Rename`
+* :menuselection:`Copy Style`
+* :menuselection:`Add New Group`
+* :menuselection:`Expand all`
+* :menuselection:`Collapse all`
+* :menuselection:`Update Drawing Order`
 
-   Additionally, according to layer position and selection 
+Additionally, according to layer position and selection
 
-   * :menuselection:`Make to toplevel item`
-   * :menuselection:`Group Selected`
+* :menuselection:`Make to toplevel item`
+* :menuselection:`Group Selected`
+
 ..   * :menuselection:`Show file groups`
 
 \
 
 **Right mouse button menu for vector layers**
 
- * :menuselection:`Zoom to layer extent`
- * :menuselection:`Show in overview`
- * :menuselection:`Remove`
- * :menuselection:`Set Layer CRS`
- * :menuselection:`Set Project CRS from Layer`
- * :menuselection:`Open attribute table`
- * :menuselection:`Toggle editing` (not available for GRASS layers)
- * :menuselection:`Save as`
- * :menuselection:`Save selection as`
- * :menuselection:`Query`
- * :menuselection:`Show Feature Count`
- * :menuselection:`Properties`
- * :menuselection:`Rename`
- * :menuselection:`Copy Style`
- * :menuselection:`Add New Group`
- * :menuselection:`Expand all`
- * :menuselection:`Collapse all`
- * :menuselection:`Update Drawing Order`
+* :menuselection:`Zoom to layer extent`
+* :menuselection:`Show in overview`
+* :menuselection:`Remove`
+* :menuselection:`Set Layer CRS`
+* :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Open attribute table`
+* :menuselection:`Toggle editing` (not available for GRASS layers)
+* :menuselection:`Save as`
+* :menuselection:`Save selection as`
+* :menuselection:`Query`
+* :menuselection:`Show Feature Count`
+* :menuselection:`Properties`
+* :menuselection:`Rename`
+* :menuselection:`Copy Style`
+* :menuselection:`Add New Group`
+* :menuselection:`Expand all`
+* :menuselection:`Collapse all`
+* :menuselection:`Update Drawing Order`
 
-   Additionally, according to layer position and selection 
+Additionally, according to layer position and selection
 
-   * :menuselection:`Make to toplevel item`
-   * :menuselection:`Group Selected`
+* :menuselection:`Make to toplevel item`
+* :menuselection:`Group Selected`
+
 ..   * :menuselection:`Show file groups`
 
 \
 
 **Right mouse button menu for layer groups**
 
- * :menuselection:`Zoom to group`
- * :menuselection:`Remove`
- * :menuselection:`Set group CRS`
- * :menuselection:`Rename`
- * :menuselection:`Add New Group`
- * :menuselection:`Expand all`
- * :menuselection:`Collapse all`
- * :menuselection:`Update Drawing Order`
+* :menuselection:`Zoom to group`
+* :menuselection:`Remove`
+* :menuselection:`Set group CRS`
+* :menuselection:`Rename`
+* :menuselection:`Add New Group`
+* :menuselection:`Expand all`
+* :menuselection:`Collapse all`
+* :menuselection:`Update Drawing Order`
 
 ..   Additionally, according to position
 ..
@@ -476,14 +478,10 @@ You are also able to delete more than one Layer or Group at once by selecting
 several Layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way all selected Layers or groups will be removed from the layerlist.
 
-You can select multiple layers and group them. Select the layers and right click
-on a layer. Choose :menuselection:`Group selected`. Click on the new group, type 
-in a name and press :kbd:`Enter`.
-
 Working with the Legend independent layer order
 ...............................................
 
-Since QGIS 1.8 there is a widget that allows to define a legend independent 
+Since QGIS 1.8 there is a widget that allows to define a legend independent
 drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
 Determine the drawing order of the layers in the map view here. Doing so makes
 it possible to order your layers in order of importance, for example, but to
@@ -491,17 +489,17 @@ still display them in the correct order (see figure_layer_order_). Checking the
 |checkbox| :guilabel:`control rendering order` box underneath the list of layers
 will cause a revert to default behavior.
 
-  .. _figure_layer_order:
+.. _figure_layer_order:
 
-  .. only:: html
+.. only:: html
 
-     **Figure Layer Order:**
- 
-  .. figure:: /static/user_manual/introduction/layer_order.png
-      :align: center
-      :width: 30em
+   **Figure Layer Order:**
 
-      Define a legend independent layer order |nix|
+.. figure:: /static/user_manual/introduction/layer_order.png
+    :align: center
+    :width: 30em
+
+    Define a legend independent layer order |nix|
 
 .. _`label_mapview`:
 

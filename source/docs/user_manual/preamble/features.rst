@@ -53,18 +53,18 @@ You can create, edit, manage and export vector maps in several formats. Raster
 data have to be imported into GRASS to be able to edit and export them into
 other formats. QGIS offers the following:
 
-*  Digitizing tools for OGR supported formats and GRASS vector layer.
-*  Create and edit shapefiles and GRASS vector layers.
-*  Geocode images with the Georeferencer plugin.
+*  Digitizing tools for OGR supported formats and GRASS vector layer
+*  Create and edit shapefiles and GRASS vector layers
+*  Geocode images with the Georeferencer plugin
 *  GPS tools to import and export GPX format, and convert other GPS
    formats to GPX or down/upload directly to a GPS unit (on Linux, usb: has been
-   addedto list of GPS devices).
-*  Visualize and edit OpenStreetMap data.
-*  Create PostGIS layers from shapefiles with the SPIT plugin.
-*  Improved handling of PostGIS tables.
+   addedto list of GPS devices)
+*  Visualize and edit OpenStreetMap data
+*  Create PostGIS layers from shapefiles with the SPIT plugin
+*  Improved handling of PostGIS tables
 *  Manage vector attribute tables with the new attribute table (see section
-   :ref:`sec_attribute_table`) or Table Manager plugin.
-*  Save screenshots as georeferenced images.
+   :ref:`sec_attribute_table`) or Table Manager plugin
+*  Save screenshots as georeferenced images
 
 Analyse data
 ------------
@@ -127,7 +127,7 @@ External Python Plugins
 ........................
 
 QGIS offers a growing number of external python plugins that are provided by
-the community. These plugins reside in the official PyQGIS repository, and
+the community. These plugins reside in the official plugins repository, and
 can be easily installed using the Python Plugin Installer (See Section
 :ref:`load_external_plugin`).
 
@@ -172,7 +172,7 @@ relief and ruggedness index).
 
 Note that the old repository is now no longer supported by default; plugin authors
 are kindly requested to move their plugins to the new repository. Get the QGIS
-Plugins list at http://plugins.qgis.org/plugins/
+Plugins list at http://plugins.qgis.org/plugins/.
 
 **More new features**
 

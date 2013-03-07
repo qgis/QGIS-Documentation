@@ -34,6 +34,7 @@ find it in Appendix :ref:`gpl_appendix`.
 
 .. tip::
         **Up-to-date Documentation**
+
         The latest version of this document can always be found in the documentation
         area of the QGIS website at http://documentation.qgis.org
 
