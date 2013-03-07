@@ -4,10 +4,12 @@
 Supported Data Formats
 ======================
 
-|qg| uses the OGR library to read and write vector data formats (GRASS vector and PostgreSQL support is supplied by native QGIS data provider plugins),including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
-SpatiaLite, Oracle Spatial databases and many more. The vector data can also
-be loaded in read mode from zip and gzip archives into QGIS. At the date of this
-document, 69 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
+|qg| uses the OGR library to read and write vector data formats (GRASS vector and
+PostgreSQL support is supplied by native QGIS data provider plugins),including
+ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS, SpatiaLite,
+Oracle Spatial databases and many more. The vector data can also be loaded in
+read mode from zip and gzip archives into QGIS. At the date of this document, 69
+vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note::
@@ -17,7 +19,7 @@ The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
    installation of your OS was not build to support the format you want to use.
    Only those formats that have been well tested will appear in the list of
    file types when loading a vector into |qg|. Other untested formats can be
-   loaded by selecting `*.*`.
+   loaded by selecting ``*.*``.
 
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
@@ -39,18 +41,16 @@ The standard vector file format used in |qg| is the ESRI Shapefile.
 Support is provided by the :index:`OGR Simple Feature Library`
 ( http://www.gdal.org/ogr/ ).
 
-A shapefile actually consists of several files.
-The following three are required:
+A shapefile actually consists of several files. The following three are required:
 
-#.  :file:`.shp` file containing the feature geometries.
-#.  :file:`.dbf` file containing the attributes in dBase format.
-#.  :file:`.shx` index file.
+#. :file:`.shp` file containing the feature geometries.
+#. :file:`.dbf` file containing the attributes in dBase format.
+#. :file:`.shx` index file.
 
-Shapefiles also can include a file with a :file:`.prj` suffix, which
-contains the projection information. While it is very useful to have a
-projection file, it is not mandatory. A shapefile dataset can contain
-additional files.
-For further details see the ESRI technical specification at:
+Shapefiles also can include a file with a :file:`.prj` suffix, which contains the
+projection information. While it is very useful to have a projection file, it is
+not mandatory. A shapefile dataset can contain additional files. For further
+details see the ESRI technical specification at:
 http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 .. _vector_load_shapefile:
@@ -58,10 +58,9 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 Loading a Shapefile
 ...................
 
-|mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and
-click on the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar
-button or simply type :kbd:`Ctrl+Shift+V`. This will bring up a new
-window (see figure_vector_1_).
+|mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and click on the
+|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or simply type
+:kbd:`Ctrl+Shift+V`. This will bring up a new window (see figure_vector_1_).
 
 
 .. _figure_vector_1:
@@ -76,12 +75,11 @@ window (see figure_vector_1_).
 
    Add Vector Layer Dialog |nix|
 
-From the available options check |radiobuttonon| :guilabel:`File`.
-Click on button **[Browse]**. That will bring up a standard open file
-dialog (see figure_vector_2_) which allows you to navigate the file system
-and load a shapefile or other supported data source.
-The selection box :guilabel:`Filter` |selectstring| allows you to
-preselect some OGR supported file formats.
+From the available options check |radiobuttonon| :guilabel:`File`. Click on button
+**[Browse]**. That will bring up a standard open file dialog (see figure_vector_2_)
+which allows you to navigate the file system and load a shapefile or other
+supported data source. The selection box :guilabel:`Filter` |selectstring| allows
+you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
@@ -98,9 +96,8 @@ You can also select the Encoding type for the shapefile if desired.
 
    Open an OGR Supported Vector Layer Dialog |nix|
 
-Selecting a shapefile from the list and clicking **[Open]** loads it
-into |qg|. Figure_vector_3_ shows |qg| after loading
-the :file:`alaska.shp` file.
+Selecting a shapefile from the list and clicking **[Open]** loads it into |qg|.
+Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 
 
 .. _figure_vector_3:
@@ -184,10 +181,10 @@ a :file:`.qpj` file, it will be used instead of the :file:`.prj`.
 Loading a MapInfo Layer
 -----------------------
 
-|mActionAddNonDbLayer| To load a MapInfo layer, click on the
-|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or type
-:kbd:`Ctrl+Shift+V`, change the file type filter to
-:guilabel:`Filter: Mapinfo File [OGR]`|selectstring| and select the .TAB or .tab layer you want to load.
+|mActionAddNonDbLayer| To load a MapInfo layer, click on the |mActionAddNonDbLayer|
+:sup:`Add Vector Layer` toolbar button or type :kbd:`Ctrl+Shift+V`, change the
+file type filter :guilabel:`Filter` |selectstring|: to 'Mapinfo File [OGR]' and
+select the MapInfo layer you want to load.
 
 .. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format
 .. index:: US_Census_Bureau
@@ -197,15 +194,14 @@ Loading a MapInfo Layer
 Loading an ArcInfo Binary Coverage
 ----------------------------------
 
-|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on
-the |mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or
-type :kbd:`Ctrl+Shift+V` to open the :guilabel:`Add Vector Layer` dialog.
-Select |radiobuttonon| :guilabel:`Directory`.
-Change to  :guilabel:`Type Arc/Info Binary Coverage` |selectstring|.
+|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the |mActionAddNonDbLayer|
+:sup:`Add Vector Layer` toolbar button or press :kbd:`Ctrl+Shift+V` to open the
+:guilabel:`Add Vector Layer` dialog. Select |radiobuttonon| :guilabel:`Directory`.
+Change to :guilabel:`Filter` |selectstring| to 'Arc/Info Binary Coverage'.
 Navigate to the directory that contains the coverage files and select it.
 
-Similarly, you can load directory based vector files in the UK National
-Transfer Format as well as the raw TIGER Format of the US Census Bureau.
+Similarly, you can load directory based vector files in the UK National Transfer
+Format as well as the raw TIGER Format of the US Census Bureau.
 
 .. index:: PostGIS, PostgreSQL
 
@@ -214,10 +210,10 @@ Transfer Format as well as the raw TIGER Format of the US Census Bureau.
 PostGIS Layers
 --------------
 
-PostGIS layers are stored in a PostgreSQL database. The advantages of
-PostGIS are the spatial indexing, filtering and query capabilities it
-provides. Using PostGIS, vector functions such as select and identify
-work more accurately than with OGR layers in |qg|.
+PostGIS layers are stored in a PostgreSQL database. The advantages of PostGIS are
+the spatial indexing, filtering and query capabilities it provides. Using PostGIS,
+vector functions such as select and identify work more accurately than with OGR
+layers in |qg|.
 
 .. index:: Connection_Manager
 
@@ -226,17 +222,16 @@ work more accurately than with OGR layers in |qg|.
 Creating a stored Connection
 ............................
 
-|mActionAddLayer| The first time you use a PostGIS data source, you must
-create a connection to the PostgreSQL database that contains the data.
-Begin by clicking on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar
-button, selecting the |mActionAddLayer| :menuselection:`Add PostGIS Layer...`
-option from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`.
-You can also open the :guilabel:`Add Vector Layer` dialog and select
-|radiobuttonon| :guilabel:`Database`.
-The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access
-the connection manager, click on the **[New]** button to display
-the :guilabel:`Create a New PostGIS Connection` dialog. The parameters
-required for a connection are:
+|mActionAddLayer| The first time you use a PostGIS data source, you must create
+a connection to the PostgreSQL database that contains the data. Begin by clicking
+on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button, selecting the
+|mActionAddLayer| :menuselection:`Add PostGIS Layer...` option from the
+:menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`. You can also open the
+:guilabel:`Add Vector Layer` dialog and select |radiobuttonon| :guilabel:`Database`.
+The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access the
+connection manager, click on the **[New]** button to display the
+:guilabel:`Create a New PostGIS Connection` dialog. The parameters required for
+a connection are:
 
 * **Name**: A name for this connection. Can be the same as *Database*
 * **Service**: Service parameter to be used alternatively to hostname/port (and
@@ -290,14 +285,12 @@ by clicking on the **[Test Connect]** button.
 Loading a PostGIS Layer
 .......................
 
-
-|mActionAddLayer| Once you have one or more connections defined, you can
-load layers from the PostgreSQL database. Of course this requires having
-data in PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for
-a discussion on importing data into the database.
+|mActionAddLayer| Once you have one or more connections defined, you can load
+layers from the PostgreSQL database. Of course this requires having data in
+PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for a discussion on
+importing data into the database.
 
 To load a layer from PostGIS, perform the following steps:
-
 
 *  If the :guilabel:`Add PostGIS layers` dialog is not already open,
    click on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button.
@@ -305,7 +298,7 @@ To load a layer from PostGIS, perform the following steps:
 *  Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`
 *  Optionally use some |checkbox| :guilabel:`Search Options` to define
    which features to load from the layer or use the **[Build query]** button
-   to start the Query builder dialog.
+   to start the :guilabel:`Query builder` dialog.
 *  Find the layer(s) you wish to add in the list of available layers.
 *  Select it by clicking on it. You can select multiple layers by holding
    down the :kbd:`Shift` key while clicking. See Section
@@ -458,12 +451,12 @@ afterwards as an extra step (as described in the next section
 Improving Performance
 .....................
 
-Retrieving features from a PostgreSQL database can be time consuming,
-especially over a network. You can improve the drawing performance of
-PostgreSQL layers by ensuring that a :index:`PostGIS spatial index`
-exists on each layer in the database. PostGIS supports
-creation of a :index:`GiST (Generalized Search Tree) index` to speed
-up spatial searches of the data (GiST index information is taken from the PostGIS documentation available at http://postgis.refractions.net).
+Retrieving features from a PostgreSQL database can be time consuming, especially
+over a network. You can improve the drawing performance of PostgreSQL layers by
+ensuring that a :index:`PostGIS spatial index` exists on each layer in the
+database. PostGIS supports creation of a :index:`GiST (Generalized Search Tree)
+index` to speed up spatial searches of the data (GiST index information is taken
+from the PostGIS documentation available at http://postgis.refractions.net).
 
 The syntax for creating a GiST index is:
 ::
@@ -473,9 +466,9 @@ The syntax for creating a GiST index is:
      USING GIST ( [geometryfield] GIST_GEOMETRY_OPS );
 
 
-Note that for large tables, creating the index can take a long time.
-Once the index is created, you should perform a ``VACUUM ANALYZE``.
-See the PostGIS documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more information.
+Note that for large tables, creating the index can take a long time. Once the
+index is created, you should perform a ``VACUUM ANALYZE``. See the PostGIS
+documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more information.
 
 The following is an example of creating a GiST index:
 ::
@@ -503,11 +496,13 @@ The following is an example of creating a GiST index:
 Vector layers crossing 180 |degrees| longitude
 -----------------------------------------------
 
-Many GIS packages don't wrap vector maps, with a geographic reference
-system (lat/lon), :index:`crossing the 180 degrees longitude line` (http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html). As result, if we open such map in |qg|, we will see two far, distinct
-locations, that should show near each other. In Figure_vector_4_ the
-tiny point on the far left of the map canvas (Chatham Islands), should
-be within the grid, right of New Zealand main islands.
+Many GIS packages don't wrap vector maps, with a geographic reference system
+(lat/lon), :index:`crossing the 180 degrees longitude line`
+(http://postgis.refractions.net/documentation/manual-1.4/ST\_Shift\_Longitude.html).
+As result, if we open such map in |qg|, we will see two far, distinct locations,
+that should show near each other. In Figure_vector_4_ the tiny point on the far
+left of the map canvas (Chatham Islands), should be within the grid, right of
+New Zealand main islands.
 
 .. _figure_vector_4:
 
@@ -523,10 +518,10 @@ be within the grid, right of New Zealand main islands.
 
 
 A workaround is to transform the longitude values using PostGIS and the
-**ST_Shift_Longitude** function  This function reads every point/vertex in every component of every feature in a geometry, and if the longitude
-coordinate is < 0 |degrees| adds 360 |degrees| to it. The result would be
-a 0 |degrees| - 360 |degrees| version of the data to be plotted in a
-180 |degrees| centric map.
+**ST_Shift_Longitude** function  This function reads every point/vertex in every
+component of every feature in a geometry, and if the longitude coordinate is
+< 0 |degrees| adds 360 |degrees| to it. The result would be a 0 |degrees| - 360 |degrees|
+version of the data to be plotted in a 180 |degrees| centric map.
 
 
 .. _figure_vector_5:
@@ -550,7 +545,7 @@ Usage
 *  Use the PostGIS command line interface to issue the following command
    (this is an example where "TABLE" is the actual name of your PostGIS table)
 
-   ``gis_data=# update TABLE set the_geom=ST_shift_longitude(the_geom);``
+   ``gis_data=# update TABLE set the_geom=ST_Shift_Longitude(the_geom);``
 *  If everything went right you should receive a confirmation about the
    number of features that were updated, then you'll be able to load the
    map and see the difference (Figure_vector_5_)
@@ -574,11 +569,11 @@ new connection, click on **[New]** and use the file browser to point to
 your SpatiaLite database, which is a file with a :file:`.sqlite` extension.
 
 If you want to save a vector layer to SpatiaLite format you can do this by
-right clicking the layer in the legend. Then click on
-:menuselection:`Save as`, define the name of the output file, sqlite as
-format and the CRS and then add ``SPATIALITE=YES`` in the OGR data source
-creation option field. This tells OGR to create a SpatiaLite database.
-See also http://www.gdal.org/ogr/drv_sqlite.html.
+right clicking the layer in the legend. Then click on :menuselection:`Save as..`,
+define the name of the output file, select 'SpatiaLite' as format and the CRS.
+Also you can select 'SQLite' as format, and then add ``SPATIALITE=YES`` in the
+OGR data source creation option field. This tells OGR to create a SpatiaLite
+database. See also http://www.gdal.org/ogr/drv_sqlite.html.
 
 QGIS also supports editable views in SpatiaLite.
 
@@ -595,14 +590,15 @@ If you want to create a new SpatiaLite layer, please refer to section
 .. tip:: **SpatiaLite data management Plugins**
 
    For SpatiaLite data management you can also use several Python plugins:
-   QSpatiaLite, SpatiaLite Manager or DB Manager. They can be downloaded and
-   installed with the Plugin Installer.
+   QSpatiaLite, SpatiaLite Manager or DB Manager (core plugin, recommended). They
+   can be downloaded and installed with the Plugin Installer.
 
 .. _label_mssql:
 
 MSSQL Spatial Layers
 --------------------
 
-QGIS also provides native MS SQL 2008 support. The |mActionAddMssqlLayer|
-:sup:`Add MSSQL Spatial Layer` is part of the new toolbar button or available
-in the MS SQL node in the QBrowser tree, providing drag and drop import support.
+|mActionAddMssqlLayer| QGIS also provides native MS SQL 2008 support. The
+|mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` is part of the new toolbar
+button or available in the MS SQL node in the QBrowser tree, providing drag and
+drop import support.

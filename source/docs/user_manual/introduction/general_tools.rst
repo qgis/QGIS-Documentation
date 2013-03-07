@@ -171,7 +171,7 @@ Influence Rendering Quality
 .. index::
    single:rendering quality
 
-To influence the rendering quality of the map you have 3 options. Choose menu
+To influence the rendering quality of the map you have 2 options. Choose menu
 option :menuselection:`Settings --> Options` click on the :guilabel:`Rendering`
 tab and select or deselect following checkboxes.
 
@@ -281,7 +281,8 @@ To select one or several features just click on
 * |mActionSelectFreehand| :sup:`Select features by freehand`
 * |mActionSelectRadius| :sup:`Select features by radius`
 
-To deselect all selected features click on |mActionDeselectAll|.
+To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
+features from all layers`.
 
 
 .. _decorations:
@@ -401,7 +402,9 @@ To add a scale bar:
 #.  Click **[OK]**
 
 
-.. tip:: Settings of Decorations
+.. tip::
+
+   **Settings of Decorations**
 
    When you save a .qgs project, any changes you have made to NorthArrow,
    ScaleBar and Copyright will be saved in the project and restored
@@ -452,7 +455,7 @@ Form annotations
 Additionally you can also create your own annotation forms. The
 |mActionFormAnnotation| :guilabel:`Form Annotation` tool is useful to display attributes of
 a vector layer in a customized qt designer form (see figure_custom_annotation_). It is similar to the
-designer forms for the 
+designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
 Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
@@ -557,5 +560,5 @@ While the embedded layers are editable you can't change it's properties like Sty
 
 **Removing embedded layers**
 
-Right-click on the embedded layer and choose |mActionRemoveLayer| :guilabel:`Remove` .
+Right-click on the embedded layer and choose |mActionRemoveLayer| :menuselection:`Remove` .
 
