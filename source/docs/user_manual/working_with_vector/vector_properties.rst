@@ -142,7 +142,7 @@ and a color ramp \- they will set the colors for symbols appropriately.
 **Working with the New Generation Symbology**
 
 
-In the :guilabel:`Style` tab you can choose one of the four renderers: single 
+In the :guilabel:`Style` tab you can choose one of the five renderers: single 
 symbol, categorized, graduated, rule-based and point displacement. For each 
 data type (points, lines and polygons) vector symbol layer types are 
 available (see vector_symbol_types_). 
