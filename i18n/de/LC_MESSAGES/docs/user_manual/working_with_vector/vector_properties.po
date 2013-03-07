@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-31 16:46\n"
+"POT-Creation-Date: 2013-03-07 14:52\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 94e533a81ba74ec29ee64253e84ce61e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:10
 msgid "The Vector Properties Dialog"
-msgstr ""
+msgstr "Vektorlayereigenschaften"
 
 # d9b194d459754443a6eeae0bf59b79af
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:12
@@ -34,11 +37,20 @@ msgid ""
 "click on the layer and select :menuselection:`Properties` from the popup "
 "menu."
 msgstr ""
+"Der :guilabel:`Layereigenschaften`-Dialog stellt Informationen über den "
+"Layer, Darstellungseinstellungen und Beschriftungsoptionen bereit. Wenn ein "
+"Vektorlayer aus einer PostgreSQL/PostGIS Datenbank geladen wurde, können "
+"über den Dialog :guilabel:`Layereigenschaften` auch SQL-Abfragen mit dem :"
+"guilabel:`Query Builder`-Dialog im Reiter :guilabel:`Allgemein` angewendet "
+"werden.  Um den :guilabel:`Layereigenschaften`-Dialog  zu erreichen "
+"doppelklicken Sie einen Layer in der Legende oder machen Sie einen "
+"Rechtsklick auf den Layer und wählen Sie :menuselection:`Eigenschaften` aus "
+"dem Popupmenü. "
 
 # 3d888e7132d04f498c6e6c1c431ef37d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:40
 msgid "Style Tab"
-msgstr ""
+msgstr "Stil"
 
 # 0b70ddab72804ed5a06c396d9b3749dd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:44
@@ -48,6 +60,10 @@ msgid ""
 "symbology as default, which provides a variety of improvements and new "
 "features."
 msgstr ""
+"|symbology|Ab der |qg| Version 1.4 wurde parallel eine neue Darstellung "
+"integriert, um die alte zu verbessern und letztlich auch abzulösen. |qg| 1.8 "
+"benutzt die neue Darstellung jetzt als Default-Einstellung was eine Vielzahl "
+"von Verbesserungen und neuen Features darstellt.  "
 
 # 8f6c03302ba24023828db9ae9b881d31
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:48
@@ -55,6 +71,8 @@ msgid ""
 "A description of the old symbology is available in section :ref:"
 "`vector_old_symbology`."
 msgstr ""
+"Eine Beschreibung der alten Darstellung finden Sie in Abschnitt :ref:"
+"`vector_old_symbology`."
 
 # 6c3985ef34ff489db8b074e92121b570
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:51
@@ -68,37 +86,47 @@ msgid ""
 "to define the width for line symbols, as well as size and rotation for "
 "marker symbols."
 msgstr ""
+"Es gibt drei verschiedene Symboltypen: Zeichensymbole (für Punkte), "
+"Liniensymbole (für Linien) und Füll- und Randsymbole (für Polygone). Symbole "
+"können aus einer oder mehreren Symbolebenen bestehen. Sie können die Farbe "
+"eines Symbols festlegen, und diese gilt dann für alle weiteren Symbolebenen."
+"Bei einigen Symbolen kann die Symbolfarbe gesperrt sein, bei diesen kann die "
+"Farbe dann nicht geändert werden. Dies ist nützlich, wenn man die Farbe "
+"eines Multilayer-Symbols definiert. Ebenso ist es möglich, die Breite für "
+"Liniensymbole sowie Größe und Rotation für Markersymbole zu definieren."
 
 # 86a6046fa1e04e29b0e8bdc3e8a5b23c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:66
 msgid "**Available symbol layer types**"
-msgstr ""
+msgstr "**Vorhandene Typen von Symbolebenen**"
 
 # 29894eb8eed44924a041081a4075a0d2
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:69
 msgid "Point layers"
-msgstr ""
+msgstr "Punktlayer"
 
 # bff5ffd9581f4fcf99ab4f1c29186639
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:71
 msgid "**Font marker**: Rendering with a font."
-msgstr ""
+msgstr "**Schriftmarkierung**: Darstellung mit einer definierten Schrift."
 
 # 0cbfaae400114280ba0ca6443942e30d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:72
 msgid "**Simple marker**: Rendering with a hardcoded marker."
-msgstr ""
+msgstr "**Einfache Markierung**: Darstellung mit einem definierten Symbol."
 
 # 4db67568c43e4d46b74a86f86418e30d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:73
 msgid "**SVG marker**: Rendering with a SVG picture."
-msgstr ""
+msgstr "**SVG Markierung**: Darstellen mit einem SVG-Bild."
 
 # 394bf1fa464a42c582f640398b060ce7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:74
 msgid ""
 "**Ellipse marker**: Rendering with ellipse shapes derived from attributes."
 msgstr ""
+"**Ellipsen-Markierung**: Darstellung mit Ellipsenformen die von Attributen "
+"abgeleitet wurden."
 
 # 9cd1ea48100148d2a1c672d8668dce99
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:75
@@ -106,11 +134,13 @@ msgid ""
 "**Vector field marker**: Rendering with vector fields derived from "
 "attributes."
 msgstr ""
+"**Vektorfeldmarkierung**:Darstellung mit Vektorfeldern die von Attributen "
+"abgeleitet wurden. "
 
 # 8ab7df1bacc140ee80b01c2e999a0552
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:77
 msgid "Line layers"
-msgstr ""
+msgstr "Linienlayer"
 
 # bc6fe4796eb149b4b0545ff1107691f0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:79
@@ -118,11 +148,15 @@ msgid ""
 "**Line decoration**: Add a line decoration, e.g an arrow to indicate line "
 "direction."
 msgstr ""
+"**Liniendecoration**: Hinzufügen einer Liniendekoration, z.B. Pfeil, um die "
+"Richtung der Linie darzustellen."
 
 # d6c7015ad6dd4ac0abb806f3d8aad387
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:81
 msgid "**Marker line**: A line rendered by repeating a marker symbol."
 msgstr ""
+"**Markierungslinie**: Darstellen einer Linie durch Wiederholung eines "
+"Symbols."
 
 # 7c80e299668c405498fcfabf5014d729
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:82
@@ -130,21 +164,25 @@ msgid ""
 "**Simple line**: Usual rendering of a line (with specified width color and "
 "pen style)."
 msgstr ""
+"**Einfache Linie**: Darstellen einer Linie (mit festgelegter Breite, Farbe "
+"und Stiftstil)."
 
 # 065d29f3b5ad446a83f1a63993ffc4dc
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:85
 msgid "Polygon layers"
-msgstr ""
+msgstr "Polygonlayer"
 
 # ff8c92d9ebd54b0d918ed54a7785cbe5
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:87
 msgid "**Centroid fill**: Fill a polygon centroid with a hardcoded marker."
 msgstr ""
+"**Zentrierte Füllung**: Darstellung eines Zentroids mit einem definierten "
+"Symbol."
 
 # 708dcd0b30554ad5833c1aef65ee0e55
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:88
 msgid "**SVG fill**: Fill a polygon with a SVG symbol."
-msgstr ""
+msgstr "**SVG-Füllung**: Füllen einer Fläche mit einem SVG-Bild."
 
 # 507a35a61fd04cbc9aef9aaae8995020
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:89
@@ -152,16 +190,20 @@ msgid ""
 "**Simple fill**: Usual rendering of a polygon (with defined fill color, fill "
 "pattern and outline)."
 msgstr ""
+"**Einfache Füllung**: Füllen einer Fläche (mit festgelegter Farbe, Füll- und "
+"Randstil)."
 
 # dfb7e76a21de40ca9e5f5dd1cdf1c75e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:91
 msgid "**Line pattern fill**: Fill a polygon with a line pattern."
 msgstr ""
+"**Liniendekoration**: Darstellen einer Randlinie durch Hinzufügen einer "
+"Liniendekoration."
 
 # 81b55d916c3c43c3b9873139f8ea8b98
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:92
 msgid "**Point pattern fill**: Fill a polygon with a point pattern."
-msgstr ""
+msgstr "**Punktmusterfüllung**: Füllen Sie ein Polygon mit einem Punktmuster."
 
 # 5b96ed5f76d04351b56f92b6b158307c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:93
@@ -169,22 +211,28 @@ msgid ""
 "**Outline: Line decoration**: Add a line decoration, e.g an arrow to "
 "indicate line direction."
 msgstr ""
+"**Rand: Liniendekoration**: Fügen Sie eine Liniendekoration, z.B. einen "
+"Pfeil um die Richtung der Liniendekoration anzuzeigen, ein."
 
 # 4abde395b0684747851c37c93333ae0c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:95
 msgid "**Outline: Marker line**: Use a hardcoded marker as area outline."
 msgstr ""
+"**Rand: Markierungslinie**: Darstellung einer Randlinie durch Wiederholung "
+"eines Symbols."
 
 # 1d6dbb96946a4710ad236ce2a06e244a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:96
 msgid ""
 "**Outline: Simple line**: Define width, color and pen style as area outline."
 msgstr ""
+"**Rand: Einfache Linie**: Definieren Sie Breite, Farbe und Schriftstil einer "
+"Randlinie."
 
 # 7caab91c619a4510b096bba5e37aefcb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:101
 msgid "**Color ramps**"
-msgstr ""
+msgstr "**Farbverläufe**"
 
 # 6c13541faf2c4e8e93789634601bf26c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:103
@@ -192,22 +240,25 @@ msgid ""
 "Color ramps are used to define a range of colors that can be used during the "
 "creation of renderers. The symbol's color will be set from the color ramp."
 msgstr ""
+"Farbverläufe werden verwendet, um eine Spannweite von Farben zu definieren, "
+"die für die Darstellung verwendet werden sollen. Die Symbolfarbe wird "
+"entsprechend des definierten Farbverlaufs angewendet."
 
 # 938f327c5a084d9a8519bce6b74d0a65
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:106
 msgid "There are three types of color ramps:"
-msgstr ""
+msgstr "Es gibt drei Typen von Farbverläufen:"
 
 # 7e9f0bd45be24679a47b5d54bd8c2061
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:108
 msgid "**Gradient**: Linear gradient from one color to some other."
-msgstr ""
+msgstr "**Gradient**: Linearer Gradient von einer zu anderen Farben."
 
 # c71c4ab0b3c44002ab5f4e6e5df3ef81
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:109
 msgid ""
 "**Random**: Randomly generated colors from a specified area of color space."
-msgstr ""
+msgstr "**Random**: Zufällig erstellte Farben aus einem festgelegten Farbraum."
 
 # 84101eca13e44dc6b3f6bfa3bfb95a4a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:110
@@ -215,6 +266,8 @@ msgid ""
 "**ColorBrewer**: Create color area from a color shema and a defined number "
 "of color classes."
 msgstr ""
+"**Farbbrauer**: Erstellen von Farbbereichen aus einem Farbschema und einer "
+"definierten Anzahl von Farbklassen. "
 
 # 748d697b1da94c94a99fd360cf72c1bb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:113
@@ -223,11 +276,15 @@ msgid ""
 "guilabel:`Style Manager` by clicking the **[Add]** button and then choosing "
 "a color ramp type (see section vector_style_manager_ )."
 msgstr ""
+"Sie können neue Farbverläufe im Reiter :guilabel:`Farbverlauf` des :guilabel:"
+"`Stilmanagers` definieren (siehe Kapitel vector_style_manager_), indem Sie "
+"auf **[Hinzufügen]** klicken \n"
+"und dann einen Farbverlauftyp auswählen."
 
 # 8f802c001afc498296bd272b912f2d1f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:117
 msgid "**Styles**"
-msgstr ""
+msgstr "**Stile**"
 
 # 07d3a75fab8f4f7e8469241a3d12bf8c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:119
@@ -246,11 +303,26 @@ msgid ""
 "`Copy style` and switch to another layer. Then choose :menuselection:`Layer "
 "-->` |mActionEditPaste| :guilabel:`Paste style`."
 msgstr ""
+"Ein Stil gruppiert eine Reihe unterschiedlicher Symbole und Farbanstiege. "
+"Dadurch ist es möglich, eigene, bevorzugte oder häufig benutzte Symbole "
+"festzulegen und abzuspeichern. Stile (Symbole und Farbanstiege) haben immer "
+"einen Namen, über den Sie gesucht werden können. Es gibt mindestens einen "
+"veränderbaren Standard-Stil in QGIS und Sie können weitere Stile hinzufügen. "
+"Im unteren Teil des :guilabel:`Stil` Reiters gibt es vier Knöpfe für das "
+"Verwalten von Stilen: Verwenden Sie **[Stilvorgaben wiederherstellen]** um "
+"zurück zu Ihren Standardeinstellungen zu gehen, **[Als Vorgabe speichern]** "
+"um Ihren Stil als Vorgabe zu speichern, **[Stil laden ...]** um zu Ihren "
+"eigenen Stilen zu gelangen und **[Stil speichern]** um Ihre eigenen Stile zu "
+"speichern. Der Stil eines Layers kann von einem Layer zu einem anderen Layer "
+"übetragen werden. Aktivieren Sie einen Layer und wählen Sie :menuselection:"
+"`Layer -->` |mActionEditCopy| :guilabel:`Stil kopieren` und wechseln Sie zu "
+"einem anderen Layer. Wählen Sie dann :menuselection:`Layer -->` |"
+"mActionEditPaste| :guilabel:`Stil einfügen`.   "
 
 # bde689c9ad3e4c979c0cc9dc1768bf6a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:134
 msgid "**Renderers**"
-msgstr ""
+msgstr "**Darstellungen**"
 
 # e0e22eadbc1d4a598705cee0e2086580
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:136
@@ -263,16 +335,25 @@ msgid ""
 "created by specifying a symbol and a color ramp \\- they will set the colors "
 "for symbols appropriately."
 msgstr ""
+"Über die Darstellung wird festgelegt, wie Objekte als Symbole angezeigt "
+"werden. Es gibt vier Arten der Darstellung: Einzelsymbol, Kategorisiert (in "
+"der alten Darstellung auch eindeutiger Wert genannt), Abgestuft und "
+"Regelbasierend. Die Vorgabe Fortlaufende Farbe gibt es nicht, da es sich "
+"dabei um einen Spezialfall der kategorisierten Darstellung handelt. Die "
+"kategorisierte und abgestufte Darstellung wird erreicht, indem ein Symbol "
+"mit einem Farbanstieg definiert wird - die Farben der Symbole werden dann "
+"passend gesetzt. "
 
 # e0e50f807a7247a48322b178cd4d2212
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:146
 msgid "**Working with the New Generation Symbology**"
-msgstr ""
+msgstr "**Mit der neuen Darstellung arbeiten**"
 
 # 3d1f48e6785c4b409c6600f5805f55a4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:149
+#, fuzzy
 msgid ""
-"In the :guilabel:`Style` tab you can choose one of the four renderers: "
+"In the :guilabel:`Style` tab you can choose one of the five renderers: "
 "single symbol, categorized, graduated, rule-based and point displacement. "
 "For each data type (points, lines and polygons) vector symbol layer types "
 "are available (see vector_symbol_types_). Depending on the chosen renderer, "
@@ -282,6 +363,8 @@ msgid ""
 "Manager (see Section vector_style_manager_). The Style Manager allows you to "
 "edit and remove existing symbols and add new ones."
 msgstr ""
+"Im Reiter :guilabel:`Stil`können Sie zwischen fünf Darstellungen wählen: "
+"Einzelsymbol, Kategorisiert, Abgestuft, Regelbasierend und Punktverdrängung. "
 
 # ee347c47779e4a089b2d27553126f21f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:163
