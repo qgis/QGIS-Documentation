@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-02-15 21:27\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,24 +16,22 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# 4d9f228b21e641dea38b490da1c7a3c0
-#: ../../source/docs/user_manual/sextante/batch.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # fb2ecbc928ce4fa492072738b27fce8a
-#: ../../source/docs/user_manual/sextante/batch.rst:10
+#: ../../source/docs/user_manual/sextante/batch.rst:8
 msgid "The SEXTANTE batch processing interface"
-msgstr ""
+msgstr "Интерфейс групповой обработки"
 
 # 2d42314fe83f49f191a4cda5b87b48f5
-#: ../../source/docs/user_manual/sextante/batch.rst:13
+#: ../../source/docs/user_manual/sextante/batch.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "Введение"
 
 # d80335bf945b4c2eb15605ea73c13d8a
-#: ../../source/docs/user_manual/sextante/batch.rst:15
+#: ../../source/docs/user_manual/sextante/batch.rst:13
 msgid ""
 "SEXTANTE algorithms (including models) can be executed as a batch process. "
 "That is, they can be executed using not a single set of inputs, but several "
@@ -41,22 +39,30 @@ msgid ""
 "when processing large amounts of data, since it is not necessary to launch "
 "the algorithm many times from the toolbox."
 msgstr ""
+"Все алгоритмы SEXTANTE, включая модели, могут использоваться для групповой "
+"обработки. Т.е. в этом случае они выполняются не один раз над одним набором "
+"данных, а несколько раз над разными наборами входных данных. Это полезно при "
+"обработке больших наборов данных, т.к. отпадает необходимость многократно "
+"запускать алгоритм из панели инструментов."
 
 # 9a1f65ca26794c939fa6224e3cd02937
-#: ../../source/docs/user_manual/sextante/batch.rst:21
+#: ../../source/docs/user_manual/sextante/batch.rst:19
 msgid ""
 "To execute an algorithm as a batch process, right-click on its name in the "
 "toolbox and select the *Execute as batch process* option in the pop-up menu "
 "that will appear"
 msgstr ""
+"Чтобы запустить алгоритм в режиме групповой обработки выделите его в панели "
+"инструментов, вызовите контекстное меню и выберите пункт :guilabel:`Execute "
+"as batch process`."
 
 # 310d4f31361040ad8f3d74bff3cb3bd2
-#: ../../source/docs/user_manual/sextante/batch.rst:37
+#: ../../source/docs/user_manual/sextante/batch.rst:36
 msgid "The parameters table"
-msgstr ""
+msgstr "Таблица параметров"
 
 # f5aa88052dfd45ad8b586789e466bf96
-#: ../../source/docs/user_manual/sextante/batch.rst:39
+#: ../../source/docs/user_manual/sextante/batch.rst:38
 msgid ""
 "Executing a batch process is similar to performing a single execution of an "
 "algorithm. Parameter values have to be defined, but in this case we need not "
@@ -64,6 +70,9 @@ msgid ""
 "each time the algorithm has to be executed. Values are introduced using a "
 "table like the one shown next."
 msgstr ""
+"Запуск групповой обработки во многом схож с выполнением единичной операции. "
+"Отличие лишь в том, что параметры теперь задаются для каждой итерации "
+"обработки. Диалог настройки в этом случае принимает вид таблицы."
 
 # c2d25c26e03e4009a39d84a2c06e16f0
 #: ../../source/docs/user_manual/sextante/batch.rst:56
@@ -73,6 +82,9 @@ msgid ""
 "parameters dialog that you see when executing an algorithm from the toolbox, "
 "but with a different arrangement."
 msgstr ""
+"Каждая строка таблицы соответствует одному запуску алгоритма, в ячейках "
+"находятся параметры. Это похоже на обычный диалог настройки алгоритмов, "
+"только используется другое расположение элементов."
 
 # 46364748dd7c459abf34043e8f852c97
 #: ../../source/docs/user_manual/sextante/batch.rst:61
@@ -80,6 +92,8 @@ msgid ""
 "By default, the table contains just two rows. You can add or remove rows "
 "using the buttons on the lower part of the window."
 msgstr ""
+"По умолчанию в таблице три строки, при необходимости добавить или удалить "
+"строки можно при помощи кнопок внизу окна."
 
 # 7c6076a533d84aca8b0613a94b507f1d
 #: ../../source/docs/user_manual/sextante/batch.rst:64
@@ -87,11 +101,13 @@ msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values"
 msgstr ""
+"После того, как размер таблицы (число строк в ней) задан, можно приступать к "
+"её заполнению."
 
 # 2f6601e1cdbf4db0976248a922b812e3
 #: ../../source/docs/user_manual/sextante/batch.rst:68
 msgid "Filling the parameters table"
-msgstr ""
+msgstr "Заполнение таблицы параметров"
 
 # 28ba6cfff049483c918c097c7a73bf8b
 #: ../../source/docs/user_manual/sextante/batch.rst:70
@@ -100,6 +116,8 @@ msgid ""
 "select it from the list of available options, depending on the parameter "
 "type."
 msgstr ""
+"Большинство параметров задается либо вводом необходимого значения в поле, "
+"либо путем выбора значения из выпадающего списка."
 
 # 0006104352bd43c9af605448d0ceb6ed
 #: ../../source/docs/user_manual/sextante/batch.rst:74
@@ -112,6 +130,12 @@ msgid ""
 "even if no data objects at all are opened and the algorithm cannot be run "
 "from the toolbox."
 msgstr ""
+"Основное отличие в порядке заполнения параметров, соответствующих слоям или "
+"таблицам, а также выходным файлам. Необходимо помнить, что в случае "
+"групповой обработки исходные слои (векторные или растровые) и таблицы "
+"загружаются из файлов на диске, а не берутся из открытых в QGIS. Поэтому, "
+"групповая обработка может быть запущена в любое время, даже при пустом "
+"проекте, когда обычный алгоритм не будет выполнен."
 
 # 36b3795ffb414c22bca311eccd5c7f50
 #: ../../source/docs/user_manual/sextante/batch.rst:82
@@ -124,6 +148,14 @@ msgid ""
 "needed. If it represents a multiple input, all the selected files will be "
 "added to a single cell, separated by semicolons."
 msgstr ""
+"Указать имена исходных файлов можно как вводя путь к файлу в поле, так и "
+"воспользовавшись кнопкой |browsebutton| возле соответствующего поля. В "
+"последнем случае откроется диалог выбора файлов с поддержкой множественного "
+"выбора. Если параметр является единичным файлом, то выбранные значения будут "
+"добавлены каждый в свою строку таблицы, при этом недостающие строки будут "
+"добавлены автоматически. Если же параметр принимает несколько величин, все "
+"выбранные файлы будут добавлены в одну строку (в качестве разделителя "
+"используется точка с запятой ``;``)."
 
 # bc22c88fd1f044f88aec401fb2f50238
 #: ../../source/docs/user_manual/sextante/batch.rst:91
@@ -133,6 +165,9 @@ msgid ""
 "can type the name directly or use the file chooser dialog that appears when "
 "clicking on the accompanying button."
 msgstr ""
+"В отличие от обычного выполнения алгоритма, все результаты сохраняются в "
+"файлы, создание временных файлов не допускается. Указать имя выходного файла "
+"можно как вручную, так и воспользовавшись диалогом выбора."
 
 # 6737608a76d246b3b29a9abd2caccb86
 #: ../../source/docs/user_manual/sextante/batch.rst:96
@@ -140,9 +175,11 @@ msgid ""
 "Once you select the file, a new dialog is shown to allow for autocompletion "
 "of other cells in the same column (same parameter)."
 msgstr ""
+"После выбора выходного файла появится ещё один диалог, позволяющий "
+"автоматически заполнить остальные ячейки."
 
 # 4f0f3910bb4846d19c75ee052ec4f978
-#: ../../source/docs/user_manual/sextante/batch.rst:110
+#: ../../source/docs/user_manual/sextante/batch.rst:111
 msgid ""
 "If the default value (*Do not autocomplete*) is selected, SEXTANTE will just "
 "put the selected filename in the selected cell from the parameters table. If "
@@ -151,25 +188,36 @@ msgid ""
 "much easier to fill the table, and the batch process can be defined with "
 "less effort."
 msgstr ""
+"Если выбрано значение :guilabel:`Do not autofill` (по умолчанию), SEXTANTE "
+"просто вставит в заданную ячейку выбранное имя файла. Если же выбрано любое "
+"другое значение, будут заполнены все ячейки. При этом имена файлов будут "
+"сформированы на основе указаного критерия автозаполнения. Такой подход "
+"значительно ускоряет заполнение таблицы параметров групповой обработки."
 
 # 9b0c5673aa8e4d92b56b22f074c0faba
-#: ../../source/docs/user_manual/sextante/batch.rst:117
+#: ../../source/docs/user_manual/sextante/batch.rst:118
 msgid ""
 "Automatic filling can be done simply adding correlative numbers to the "
 "selected filepath, or appending the value of another field at the same row. "
 "This is particularly useful for naming output data object according to input "
 "ones."
 msgstr ""
+"Для автозаполнения могут использоваться как последовательные номера, так и "
+"значения других полей этой же строки. Это в частности позволяет задавать "
+"имена выходным файлам в зависимости от исходных данных."
 
 # 1a076097c0ff4bf190206c9811daa4fe
-#: ../../source/docs/user_manual/sextante/batch.rst:135
+#: ../../source/docs/user_manual/sextante/batch.rst:137
 msgid "Executing the batch process"
-msgstr ""
+msgstr "Выполнение групповой обработки"
 
 # 834bb2b05277475d9975693d0cb790f9
-#: ../../source/docs/user_manual/sextante/batch.rst:137
+#: ../../source/docs/user_manual/sextante/batch.rst:139
 msgid ""
 "To execute the batch process once you have introduced all the necessary "
 "values, just click on *OK*. SEXTANTE will show the progress of the global "
 "batch process in the progress bar in the lower part of the dialog."
 msgstr ""
+"После заполнения всех необходимых полей можно запустить процесс групповой "
+"обработки просто нажав на кнопку **[OK]**. В нижней части диалога будет "
+"отображаться общий прогресс."
