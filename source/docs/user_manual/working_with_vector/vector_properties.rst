@@ -146,7 +146,7 @@ In the :guilabel:`Style` tab you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each 
 data type (points, lines and polygons) vector symbol layer types are 
 available (see vector_symbol_types_). 
-Depending on the chosen renderer, the symbology tab provides different 
+Depending on the chosen renderer, the style tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
 button which gives access to the Style Manager
@@ -159,7 +159,7 @@ edit and remove existing symbols and add new ones.
 .. tip:: **Select and change multiple symbols**
 
    The New Generation Symbology allows to select multiple symbols and right 
-   click to change color, transparency, size, or outline width of selected 
+   click to change color, transparency, size, or width of selected 
    entries.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
@@ -271,8 +271,8 @@ example of custom color ramp.
 
 The Graduated Renderer is used to render all the features from a layer, using 
 a single user-defined symbol, whose color reflects the classification of a 
-selected feature's attribute to a class. Like Categorized Renderer, it allows 
-to define rotation and size scale from specified columns.
+selected feature's attribute to a class. 
+
 
 .. _figure_symbology_4:
 
@@ -286,8 +286,12 @@ to define rotation and size scale from specified columns.
 
    Graduated Symbolizing options |nix|
 
+Like Categorized Renderer, it allows 
+to define rotation and size scale from specified columns.
+
 Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to 
 select:
+
 
 * The attribute (using the Column listbox)
 * The symbol (using the Symbol Properties button)
