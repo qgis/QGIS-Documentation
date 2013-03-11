@@ -159,7 +159,7 @@ edit and remove existing symbols and add new ones.
 .. tip:: **Select and change multiple symbols**
 
    The New Generation Symbology allows to select multiple symbols and right 
-   click to change color, transparency, size, or outline width of selected 
+   click to change color, transparency, size, or width of selected 
    entries.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
