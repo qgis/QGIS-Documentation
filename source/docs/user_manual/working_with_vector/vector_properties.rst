@@ -146,7 +146,7 @@ In the :guilabel:`Style` tab you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each 
 data type (points, lines and polygons) vector symbol layer types are 
 available (see vector_symbol_types_). 
-Depending on the chosen renderer, the symbology tab provides different 
+Depending on the chosen renderer, the style tab provides different 
 settings and options, that will be described in the following sections. 
 The new generation symbology dialog also provides a **[Style Manager]** 
 button which gives access to the Style Manager
