@@ -271,8 +271,8 @@ example of custom color ramp.
 
 The Graduated Renderer is used to render all the features from a layer, using 
 a single user-defined symbol, whose color reflects the classification of a 
-selected feature's attribute to a class. Like Categorized Renderer, it allows 
-to define rotation and size scale from specified columns.
+selected feature's attribute to a class. 
+
 
 .. _figure_symbology_4:
 
@@ -286,8 +286,12 @@ to define rotation and size scale from specified columns.
 
    Graduated Symbolizing options |nix|
 
+Like Categorized Renderer, it allows 
+to define rotation and size scale from specified columns.
+
 Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to 
 select:
+
 
 * The attribute (using the Column listbox)
 * The symbol (using the Symbol Properties button)
