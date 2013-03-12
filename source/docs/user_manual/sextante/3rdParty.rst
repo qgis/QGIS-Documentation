@@ -61,7 +61,7 @@ in a shapefile.
 Providers not using external applications can process any layer that you
 can open in QGIS, since they open it for analysis through QGIS.
 
-Regarding output formats, all raster layers supported by QGIS as output can be used, both for raster and vector layers. Some provider do not support certain formats, but all can export to common formats raster layers that can be later transformed by QGIS automatically. As in the case of input layers, if this conversion is needed, that might increase the processing time.
+Regarding output formats, all formats supported by QGIS as output can be used, both for raster and vector layers. Some provider do not support certain formats, but all can export to common formats raster layers that can be later transformed by QGIS automatically. As in the case of input layers, if this conversion is needed, that might increase the processing time.
 
 If the extension of the filename specified when calling an algorithm does not match the extension of any of the formats supported by QGIS, then a suffix will be added to set a default format. In the case of raster layers, the ``tif`` extension is used, while `shp` is used for vector layer.
 
@@ -250,7 +250,7 @@ parameter (thus, you should avoid using reserved R words as parameter
 names).
 
 Spatial elements such as vector and raster layers are read using the
-``readOGR()`` and ``readGDAL()`` commands (you do not have to worry
+``readOGR()`` and ``brick()`` commands (you do not have to worry
 about adding those commands to your description file, SEXTANTE will do
 it) and stored as ``Spatial*DataFrame`` objects. Table fields are stored
 as strings containing the name of the selected field.
@@ -259,21 +259,8 @@ Tables are opened using the ``read.csv()`` command. If a table entered
 by the user is not in CSV format, it will be converted prior to
 importing it in R.
 
-Additionally, raster files can be read using the ``raster`` package instead of
-``rgdal``, by using the ``userasterpackage`` tag, as shown
-in the following example script, which computes a histogram using the 
-values in a raster layer:
-
-::
-
-  ##userasterpackage
-  ##Classification=group
-  ##Layer = raster
-  ##no_data_value = number 0
-  ##showplots
-  Layer <- raster(Layer, 1)
-  NAvalue(Layer) = no_data_value
-  hist(as.matrix(Layer), breaks=100, xlab = basename(filename(Layer)))
+Additionally, raster files can be read using the ``readGDAL()`` command
+instead of ``brick()``, by using the ``##usereadgdal``.
 
 If you are an advanced user and do not want SEXTANTE to create the object
 representing the layer, you can use the ``##passfilename`` tag to tell
@@ -303,14 +290,24 @@ declare it, and contains a suitable value.
 In this case, the result obtained from the ``spsample`` method has to be
 converted explicitly into a ``SpatialPointsDataFrame`` object, since it
 is itself an object of class ``ppp``, which is not a suitable class to
-be retuned to SEXTANTE.
+be returned to SEXTANTE.
+
+If your algorithm generates raster layers, the way they are saved will 
+depend on whether you have used or not the ``#dontuserasterpackage`` 
+option. In you have used it, layers are saved using the ``writeGDAL()``
+method. If not, the ``writeRaster()`` method from the ``raster`` package
+will be used.
+
+If you have used the ``#passfilename`` option, outputs are generated using
+the raster package(with ``writeRaster()``), even though it is not used for 
+the inputs.
 
 If you algorithm does not generate any layer, but a text result in the
 console instead, you have to tell SEXTANTE that you want the console to
 be shown once the execution is finished. To do so, just start the
 command lines that produce the results you want to print with the
 “:math:`>`” sign. The output of all other lines will not be shown. For
-instance, here is the description file of an algorithms that performs a
+instance, here is the description file of an algorithm that performs a
 normality test on a given field (column) of the attributes of a vector
 layer:
 
