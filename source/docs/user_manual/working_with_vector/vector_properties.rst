@@ -286,8 +286,7 @@ selected feature's attribute to a class.
 
    Graduated Symbolizing options |nix|
 
-Like Categorized Renderer, it allows 
-to define rotation and size scale from specified columns.
+Like Categorized Renderer, it allows to define rotation and size scale from specified columns.
 
 Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to 
 select:
