@@ -100,6 +100,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
+.. |CURRENT| replace:: 1.8.0
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
@@ -151,6 +152,8 @@ rst_epilog = """
 .. |osm_move| image:: /static/common/osm_move.png
    :width: 1.5em
 .. |osm_removeFeat| image:: /static/common/osm_removeFeat.png
+   :width: 1.5em
+.. |osm_removeTag| image:: /static/common/osm_removeTag.png
    :width: 1.5em
 .. |osm_createRelation| image:: /static/common/osm_createRelation.png
    :width: 1.5em
@@ -577,7 +580,7 @@ rst_epilog = """
 .. |grass_refresh| image:: /static/common/grass_refresh.png
    :width: 1.5em
 .. |delimited_text| image:: /static/common/delimited_text.png
-   :width: 1.5em   
+   :width: 1.5em
 .. |mActionGDALScript| image:: /static/common/mActionGDALScript.png
    :width: 1.5em
 .. |mActionLinkQGisToGeoref| image:: /static/common/mActionLinkQGisToGeoref.png
@@ -681,7 +684,7 @@ rst_epilog = """
    :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
    :width: 1.5em
-.. |FullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png   
+.. |FullHistogramStretch| image:: /static/common/mActionFullHistogramStretch.png
    :width: 1.5em
 .. |PanToSelected| image:: /static/common/mActionPanToSelected.png
    :width: 1.5em
@@ -827,7 +830,7 @@ latex_use_parts = False
 #latex_use_modindex = True
 
 # -- Options for PDF output ----------------------------------------------------
- 
+
 # Grouping the document tree into PDF files. List of tuples
 # (source start file, target name, title, author).
 pdf_documents = [
