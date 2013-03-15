@@ -4,6 +4,19 @@ Checklist for QGIS Release 2.0
 .. This is a comment and will not be rendered. Please update the items marked
    as |checkbox_unchecked| to |checkbox_checked| when they are completed.
 
+
+Key Dates:
+----------
+
+* 1 April 2013 - Feature freeze - no new features in master
+* 1 May 2013 - GUI Freeze and String freeze - no changes to ui or
+  strings except where required for critical bug fixes. Call for
+  translations.
+* 1 June 2013 - Branch 2.0, code freeze (except for packaging related
+  changes), call for packaging
+* 7 June 2013 - Public release of 2.0
+
+
 Blocking Features
 -----------------
 
