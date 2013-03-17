@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-10 19:14\n"
+"POT-Creation-Date: 2013-03-17 22:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,13 +33,13 @@ msgid ""
 "Switzerland."
 msgstr ""
 
-# 0874812df8fe4db8938703e14b1181e3
+# fc9d26d384fe436ab8cefd8a90c776cc
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:22
 msgid ""
 "It uses QGIS as backend for the GIS logic and for map rendering. Furthermore "
 "the Qt library is used for graphics and for platform independent C++ "
 "programming. In contrast to other WMS software, the QGIS Server uses "
-"cartographic rules in as a configuration language, both for the server "
+"cartographic rules as a configuration language, both for the server "
 "configuration and for the user-defined cartographic rules."
 msgstr ""
 
@@ -102,31 +102,20 @@ msgid ""
 "have to build it all from source, please refer to the URLs above."
 msgstr ""
 
-# 10330a7accad470d80d75554e753ab99
+# 5f79d1a5ce754271ab15a3c7e2e4a919
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:60
 msgid ""
 "Apart from qgis and qgis-mapserver you need a webserver, in our case "
 "apache2. You can install all packages with aptitude or apt-get install "
-"together with other necessary dependency packages."
-msgstr ""
-
-# 8baacfb903de4b22aa31a991251f4fe1
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:64
-msgid ""
-"After installation you should test, if the webserver and qgis server works "
-"as expected."
-msgstr ""
-
-# a625000e6d934cd28033e3b5f6110222
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:67
-msgid ""
-"Make sure the apache server is running with ``/etc/init.d/apache2 start``. "
-"Open a web browser and type URL: ``http://localhost``. If apache is up, you "
-"should see the message 'It works!'."
+"together with other necessary dependency packages. After installation you "
+"should test, if the webserver and qgis server works as expected. Make sure "
+"the apache server is running with ``/etc/init.d/apache2 start``. Open a web "
+"browser and type URL: ``http://localhost``. If apache is up, you should see "
+"the message 'It works!'."
 msgstr ""
 
 # 6634f32504f244dfbf5c41c50b2a36e3
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:71
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:69
 msgid ""
 "Now we test the qgis server installation. The :file:`qgis_mapserv.fcgi` is "
 "available at ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` and provides a standard "
@@ -136,12 +125,12 @@ msgid ""
 msgstr ""
 
 # 04f05e451c064dbc94f86611d5648ead
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:92
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:90
 msgid "Creating a WMS/WFS from a QGIS project"
 msgstr ""
 
 # 49c99261026b4454bce21214ebff2d7f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:94
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:92
 msgid ""
 "To provide a new qgis wms/wfs server we have to create a qgis project file "
 "with some data. Here we use the 'alaska' shapefile from the "
@@ -149,40 +138,25 @@ msgid ""
 "define the project CRS, if not already done."
 msgstr ""
 
-# 41cc8f4b2fce42e2a1c0e2ad0455aa78
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:111
+# 256514feeefc458d831256490e27b5ee
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:109
 msgid ""
 "Then open the ``OWS Server`` tab in the menu :menuselection:`Settings --> "
 "Project Properties` and define the general fields under 'Service "
-"Capabilities'."
-msgstr ""
-
-# 5db686e7b4b148fd86a809136f7aace1
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:114
-msgid ""
-"For ``WMS Capabilities`` define 'Coordinate System Restrictions' and "
-"'Advertised Extend'. Additionally you can enable the checkbox |checkbox| :"
-"guilabel:`Add WKT geometry to feature into response` to make the layers "
-"queryable and add a Maximum width and height that can be requested."
-msgstr ""
-
-# 8f67cff947a94696a4fe56872a93ac42
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:119
-msgid ""
-"For ``WFS Capabilities`` you only need to select the layers that you want to "
-"provide as WFS. Now save the session in a project file :file:`alaska.qgs`."
-msgstr ""
-
-# c37e3bb8653543e0a3e803817ba1bc95
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:122
-msgid ""
-"To provide the project as a WMS/WFS, we create a new folder ``/usr/lib/cgi-"
-"bin/project`` with admin privileges and add the project file :file:`alaska."
-"qgs` and a copy of the :file:`qgis\\_mapserv.fcgi` file - that's all."
+"Capabilities'. For ``WMS Capabilities`` define 'Coordinate System "
+"Restrictions' and 'Advertised Extend'. Additionally you can enable the "
+"checkbox |checkbox| :guilabel:`Add WKT geometry to feature into response` to "
+"make the layers queryable and add a Maximum width and height that can be "
+"requested. For ``WFS Capabilities`` you only need to select the layers that "
+"you want to provide as WFS. Now save the session in a project file :file:"
+"`alaska.qgs`. To provide the project as a WMS/WFS, we create a new folder ``/"
+"usr/lib/cgi-bin/project`` with admin privileges and add the project file :"
+"file:`alaska.qgs` and a copy of the :file:`qgis\\_mapserv.fcgi` file - "
+"that's all."
 msgstr ""
 
 # 0a2a7ecd0b4c4be2929c23b55691b376
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:126
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:121
 msgid ""
 "Now we test our project WMS and WFS, add the WMS and WFS as described in :"
 "ref:`ogc-wms-layers` and :ref:`ogc-wfs` to QGIS and load the WMS. The URL is:"

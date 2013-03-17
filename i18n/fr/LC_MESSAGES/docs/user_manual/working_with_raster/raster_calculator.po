@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-10 19:14\n"
+"POT-Creation-Date: 2013-03-17 22:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 msgid "Raster Calculator"
 msgstr ""
 
-# 1ae19bf875ab460997838724932e96ca
+# eb3004924ea14d48b6583755ec872b66
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
 msgid ""
-"The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
 "(see figure_raster_2_) allows to perform calculations on basis of existing "
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
 
-# d5d9305cfb8a44048cbdf23f0f5ca4c2
+# 1ed7a5a6054648f692eb322a23a4ce1e
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:32
 msgid ""
-"The **Fields list** contains all loaded raster layers that can be used. To "
-"add a raster to the raster calculator expression field, double click its "
-"name in the Fields list. You can then use the operators to construct "
-"calculation expressions or you can just type it into the box."
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions or you can just type it into the box."
 msgstr ""
 
 # 85477bec7334487390625441323c2464
@@ -50,20 +50,21 @@ msgid ""
 "resolution, the values will be resampled with nearest neighbor algorithm."
 msgstr ""
 
-# 1a689b24429249a385b157e55e359850
+# 4bd2ffb061654f5188f826168ceaf3af
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:43
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
 "to the raster calculator expression box, click the appropriate button. "
-"Mathematical calculations ( + , - , * , ... ) and trigonometric functions "
-"( sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
+"Mathematical calculations (``+``, ``-``, ``*``, ... ) and trigonometric "
+"functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for "
+"more operators to come!"
 msgstr ""
 
-# d86712d5252b440b859c47aeb14370cc
+# f563e34eb8b14cc4b124faeb3982618d
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:48
 msgid ""
-"With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
-"will automatically added to the legend area and can be visualized."
+"With the |checkbox| :guilabel:`Add result to project` checkbox the result "
+"layer will automatically added to the legend area and can be visualized."
 msgstr ""
 
 # ffb1c3cb85bc42eeaece7ba63c8cbb9a
@@ -88,12 +89,12 @@ msgstr ""
 msgid "**Using a mask**"
 msgstr ""
 
-# 012045d7b08e45d2a7e7455a147698c3
+# 865f896a8b524c2bade41ec9761ecba0
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
 msgid ""
 "If you want to mask out parts of a raster, because you are only interested "
 "in elevations above 0 meter, you can use following expression to create a "
-"mask and apply the result to a ne raster in one step."
+"mask and apply the result to a raster in one step."
 msgstr ""
 
 # 954ce31afe634c0bbcaead1ea6d9e014
@@ -101,37 +102,4 @@ msgstr ""
 msgid ""
 "For every cell greater than or equal to 0, set its value to 1, otherwise set "
 "it to 0. This creates the mask on the fly."
-msgstr ""
-
-# 5a7e8ea6f1944d41bd338708295b72ba
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:78
-msgid "**Replace values with conditional statements**"
-msgstr ""
-
-# c7ab1db42e6d4dfcbeb09e3f1ef620a3
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:84
-msgid ""
-"All cells in the elevation raster with a value less or equal (le) then 50 "
-"will be replaces with the value 200."
-msgstr ""
-
-# 7be8e7255e5548b59026f774458fdb12
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:91
-msgid ""
-"All cells in the elevation raster with value equal (eq) to the appropriate "
-"pixels in fourth band of the layer raster will be replaced with the value "
-"150."
-msgstr ""
-
-# 751a413bb8de406aacf49a1a35a074e2
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:98
-msgid ""
-"All cells in the elevation raster with value greater than (gt) the "
-"appropriate pixels in fourth band of the layer raster will be replaced with "
-"the appropriate pixels from the second band of the baselayer raster."
-msgstr ""
-
-# 0774fd1950ce4e2fa3ae28f40bfc7fc1
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:102
-msgid "Available conditional statements are:"
 msgstr ""
