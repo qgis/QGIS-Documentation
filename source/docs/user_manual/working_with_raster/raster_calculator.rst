@@ -38,11 +38,11 @@ resampled with nearest neighbor algorithm.
 
 The **Operators section** contains all usable operators. To add an operator
 to the raster calculator expression box, click the appropriate button. Mathematical
-calculations ( + , - , * , ... ) and trigonometric functions ( sin, cos, tan, ... )
-are available. Stay tuned for more operators to come!
+calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
+``cos``, ``tan``, ... ) are available. Stay tuned for more operators to come!
 
-With the |checkbox| :guilabel:`Add result to project` checkbox the result layer will
-automatically added to the legend area and can be visualized.
+With the |checkbox| :guilabel:`Add result to project` checkbox the result layer
+will automatically added to the legend area and can be visualized.
 
 
 Examples

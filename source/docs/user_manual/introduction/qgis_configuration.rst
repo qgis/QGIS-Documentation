@@ -5,7 +5,7 @@
 QGIS Configuration
 ******************
 
-QGIS is highly configurable through the :menuselection:`Settings -->` menu.
+QGIS is highly configurable through the :menuselection:`Settings` menu.
 Choose between Panels, Toolbars, Project properties, Options and Customization.
 
 ..  please add more introduction here
@@ -83,8 +83,8 @@ Options
 
 |mActionOptions| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
-|mActionOptions| :menuselection:`Options`. The tabs where you can optimize
-your options are:
+|mActionOptions| :menuselection:`Options`. The tabs where you can optimize your
+options are:
 
 General Tab
 -----------
@@ -115,25 +115,28 @@ General Tab
   selected features','Show features in current canvas')
 * :guilabel:`Attribute table row cache`
 * Define :guilabel:`Representation for NULL values`
-* :guilabel:`Prompt for raster sublayers` Some rasters support sublayers - they are called subdatasets in gdal.
-  An example is netcdf files - if there are many netcdf variables, gdal
-  sees every variable as a subdataset.
-  The option is to control how to deal with sublayers when a file with sublayers is opened.
-  You have the following choices:
-  'Always': always ask (if there are existing sublayers)
-  'If needed': ask if layer has no bands, but has sublayers
-  'Never': never prompt, will not load anything
-  'Load all': never prompt, but load all sublayers
-* :guilabel:`Scan for valid items in the browser dock` The 'Check extension' option
-  was designed to speed up the loading of a directory, which
+* :guilabel:`Prompt for raster sublayers` |selectstring|. Some rasters support
+  sublayers - they are called subdatasets in GDAL. An example is netcdf files -
+  if there are many netcdf variables, GDAL sees every variable as a subdataset.
+  The option is to control how to deal with sublayers when a file with sublayers
+  is opened. You have the following choices:
+
+  * 'Always': always ask (if there are existing sublayers)
+  * 'If needed': ask if layer has no bands, but has sublayers
+  * 'Never': never prompt, will not load anything
+  * 'Load all': never prompt, but load all sublayers
+
+* :guilabel:`Scan for valid items in the browser dock`  |selectstring|. The 'Check
+  extension' option was designed to speed up the loading of a directory, which
   can be time-consuming when 'Check file contents' is activated and
   there are many files (tens or hundreds).
-* :guilabel:`Scan for contents of compressed files (.zip) in browser dock`
+* :guilabel:`Scan for contents of compressed files (.zip) in browser dock` |selectstring|
   This option was also designed to speed up the loading of a directory. You have
   the following choices:
-  'Basic Scan': checks that the extension is supported by one of the drivers
-  'Full Scan': opens every file to check it is valid
-  'Passthru': don't use this option it will be removed in the next QGIS version
+
+  * 'Basic Scan': checks that the extension is supported by one of the drivers
+  * 'Full Scan': opens every file to check it is valid
+  * 'Passthru': don't use this option it will be removed in the next QGIS version
 
 GDAL tab
 --------
@@ -159,8 +162,8 @@ Rendering Tab
   performance`
 * |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 * |checkbox| :guilabel:`Use new generation symbology for rendering`
-* Define the default Raster settings for visualisation: 'RGB band selection', |checkbox| :guilabel:`Use standard deviation` and
-  'Contrast Enhancement'
+* Define the default Raster settings for visualisation: 'RGB band selection',
+  |checkbox| :guilabel:`Use standard deviation` and 'Contrast Enhancement'
 * Add/remove :guilabel:`Path(s) to search for Scalable Vector Graphics (SVG) symbols`
 
 
@@ -172,10 +175,10 @@ Map tools Tab
 -------------
 
 * The :guilabel:`Mode` setting determines which layers will be shown by the Identify
-  tool. By switching to 'Top down' or 'Top down, stop at
-  first' instead of 'Current layer' attributes for all identifiable
-  layers (see the Project properties section under: :ref:`sec_projects` to set
-  which layers are identifiable) will be shown with the Identify tool.
+  tool. By switching to 'Top down' or 'Top down, stop at first' instead of 'Current
+  layer' attributes for all identifiable layers (see the Project properties section
+  under: :ref:`sec_projects` to set which layers are identifiable) will be shown
+  with the Identify tool.
 * |checkbox| :guilabel:`Open feature form, if a single feature is identified`
 * Define :guilabel:`Search radius for identifying and displaying map tips as a
   percentage of the map width`
@@ -184,27 +187,30 @@ Map tools Tab
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit`
 * |radiobuttonon| :guilabel:`Define preferred measurement units ('meters' or 'feet')`
-* |radiobuttonon| :guilabel:`Define preferred angle units ('Degrees', 'Radians' or 'Gon')`
-* Define :guilabel:`Mouse wheel action` ('Zoom', 'Zoom and recenter', 'Zoom to mouse
-  cursor', 'Nothing')
+* |radiobuttonon| :guilabel:`Define preferred angle units ('Degrees', 'Radians'
+  or 'Gon')`
+* Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
+  'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
 Overlays Tab
 ------------
 
-* Define :guilabel:`Placement algorithm` for labels, symboly and diagrams (choose between 'Central point'
-  (standard), 'Chain', 'Popmusic tabu chain', 'Popmusic tabu' and 'Popmusic chain')
+* Define :guilabel:`Placement algorithm` |selectstring| for labels, symboly and
+  diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
+  chain', 'Popmusic tabu' and 'Popmusic chain')
 
 Digitizing Tab
 --------------
 
 * Define Rubberband :guilabel:`Line color` and :guilabel:`Line width`
-* Define :guilabel:`Default snap mode` ('To vertex', 'To segment', 'To vertex and segment')
+* Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
+  'To vertex and segment')
 * Define :guilabel:`Default snapping tolerance` in map units or pixel
 * Define search radius for vertex edits in 'map units' or 'pixel'
 * |checkbox| :guilabel:`Show markers only for selected features`
-* Define vertex :guilabel:`Marker style` ('Cross' (default), 'Semi transparent circle' or
-  'None') and vertex :guilabel:`Marker size`.
+* Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), 'Semi
+  transparent circle' or 'None') and vertex :guilabel:`Marker size`.
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 * |checkbox| :guilabel:`Reuse last entered attribute values`
 * :guilabel:`Validate geometries` Editing complex lines/polygons with many nodes can end up
@@ -261,17 +267,17 @@ Network Tab
 
 * |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
   and 'Password'.
-* Set the :menuselection:`Proxy type -->` according to your needs.
+* Set the :guilabel:`Proxy type` |selectstring| according to your needs.
 
-  * :menuselection:`Default Proxy -->`: Proxy is determined based on the application
+  * :menuselection:`Default Proxy`: Proxy is determined based on the application
     proxy set using
-  * :menuselection:`Socks5Proxy -->`: Generic proxy for any kind of connection.
+  * :menuselection:`Socks5Proxy`: Generic proxy for any kind of connection.
     Supports TCP, UDP, binding to a port (incoming connections) and authentication.
-  * :menuselection:`HttpProxy -->`: Implemented using the "CONNECT" command, supports
+  * :menuselection:`HttpProxy`: Implemented using the "CONNECT" command, supports
     only outgoing TCP connections; supports authentication.
-  * :menuselection:`HttpCachingProxy -->`: Implemented using normal HTTP commands, it
+  * :menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, it
     is useful only in the context of HTTP requests
-  * :menuselection:`FtpCachingProxy -->`: Implemented using an FTP proxy, it is
+  * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is
     useful only in the context of FTP requests
 
 * Define :guilabel:`Cache settings` (path and size)
@@ -305,12 +311,13 @@ require a restart of QGIS before they will be effective.
 
 ::
 
-   \\HKEY\CURRENT_USER\Software\QuantumGISqgis
+   \HKEY\CURRENT_USER\Software\QuantumGIS\qgis
 
 .. _sec_customization:
 
 Customization
 =============
+
 The customization tool is a new development in QGIS 1.8.. It lets you (de)activate
 almost every element in the QGIS user interface. This can get very useful if you have
 a lot of plug-ins installed that you never use and that are filling your screen.
@@ -329,11 +336,12 @@ a lot of plug-ins installed that you never use and that are filling your screen.
 
 QGIS Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you
 find the dock windows. Dock windows are applications that can be started and used as
-a floating, top-level window or embedded to the QGIS main window as a docked widget (see also sec_panels_and_toolbars_).
-In |checkbox| :guilabel:`Menus` you can hide entries in the Menu bar. In the
-|checkbox| :guilabel:`Status Bar` features like the coordinate information can be daectivated.
-In |checkbox| :guilabel:`Toolbars` you can (de)activate the toolbar icons of QGIS
-and in |checkbox| :guilabel:`Widgets` you can (de)activate dialogs as well as their buttons.
+a floating, top-level window or embedded to the QGIS main window as a docked widget
+(see also :ref:`sec_panels_and_toolbars`). In |checkbox| :guilabel:`Menus` you
+can hide entries in the Menu bar. In the |checkbox| :guilabel:`Status Bar` features
+like the coordinate information can be daectivated. In |checkbox| :guilabel:`Toolbars`
+you can (de)activate the toolbar icons of QGIS and in |checkbox| :guilabel:`Widgets`
+you can (de)activate dialogs as well as their buttons.
 
 With |mActionSelect| :guilabel:`Switch to catching widgets in main application`
 you can click on elements in QGIS you want to be hidden and find the corresponding entry

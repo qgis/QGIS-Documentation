@@ -27,9 +27,9 @@ manager are provided. Get the latest information on binary packages at the
 Installation from source
 ........................
 
-If you need to build |qg| from source, please refer to the installation 
-instructions. They are distributed with the |qg| source code in a file 
-called 'INSTALL'. You can also find it online at 
+If you need to build |qg| from source, please refer to the installation
+instructions. They are distributed with the |qg| source code in a file
+called 'INSTALL'. You can also find it online at
 https://github.com/qgis/Quantum-GIS/blob/master/INSTALL
 
 Installation on external media
@@ -214,8 +214,8 @@ The usage statement for QGIS is:
 
           FILES:
             Files specified on the command line can include rasters,
-            vectors, and QGIS project files (.qgs): 
-            1. Rasters - Supported formats include GeoTiff, DEM 
+            vectors, and QGIS project files (.qgs):
+            1. Rasters - Supported formats include GeoTiff, DEM
                and others supported by GDAL
             2. Vectors - Supported formats include ESRI Shapefiles
                and others supported by OGR and PostgreSQL layers using
@@ -223,6 +223,7 @@ The usage statement for QGIS is:
 
 .. tip::
         **Example Using command line arguments**
+
         You can start QGIS by specifying one or more data files
         on the command line. For example, assuming you are in the
         qgis_sample_data directory, you could start QGIS with a vector layer
@@ -279,8 +280,8 @@ They will still be available in Plugins Manager after-wards.
 **Command line option** ``--nocustomization``
 
 
-Using this command line argument existing GUI customization will not be applied 
-at startup. 
+Using this command line argument existing GUI customization will not be applied
+at startup.
 
 **Command line option** ``--optionspath``
 
@@ -296,7 +297,7 @@ the original settings file and rename it.
 This option is similar to the one above, but furthermore overrides the default
 path (~/.qgis) for user configuration and forces QSettings to use this directory,
 too. This allows users to e.g. carry QGIS installation on a flash drive together
-with all plugins and settings
+with all plugins and settings.
 
 .. _sec_projects:
 
@@ -308,15 +309,15 @@ works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
 Section :ref:`gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
-:menuselection:`File -->` |mActionFileSave| :sup:`Save Project`
-or :menuselection:`File -->` |mActionFileSaveAs| :sup:`Save Project As`.
+:menuselection:`File -->` |mActionFileSave| :menuselection:`Save Project`
+or :menuselection:`File -->` |mActionFileSaveAs| :menuselection:`Save Project As`.
 
 Load saved projects into a QGIS session using
-:menuselection:`File -->` |mActionFileOpen| :sup:`Open Project`
+:menuselection:`File -->` |mActionFileOpen| :menuselection:`Open Project`
 or :menuselection:`File --> Open Recent Project`.
 
 If you wish to clear your session and start fresh, choose
-:menuselection:`File -->` |mActionFileNew| :sup:`New Project`.
+:menuselection:`File -->` |mActionFileNew| :menuselection:`New Project`.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -353,10 +354,10 @@ There are several ways to generate output from your QGIS session. We have
 discussed one already in Section :ref:`sec_projects` saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as Image` opens
-  a file dialog where you select the name, path and type of image (PNG or JPG
-  format). A world file with extension PNGW or JPGW saved in the same folder
+* Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as Image`
+  opens a file dialog where you select the name, path and type of image (PNG or
+  JPG format). A world file with extension PNGW or JPGW saved in the same folder
   georeferences the image.
-* Menu option :menuselection:`File -->` |mActionNewComposer| :sup:`New Print Composer` opens a
-  dialog where you can layout and print the current map canvas (see
-  Section :ref:`label_printcomposer`).
+* Menu option :menuselection:`File -->` |mActionNewComposer| :menuselection:`New
+  Print Composer` opens a dialog where you can layout and print the current map
+  canvas (see Section :ref:`label_printcomposer`).
