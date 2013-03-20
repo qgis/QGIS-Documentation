@@ -180,7 +180,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
    :file:`LOCATION`). GRASS automatically creates a special :file:`MAPSET` called
    :file:`PERMANENT` designed to store the core data for the project, its default
    spatial extend and coordinate system definitions (Neteler & Mitasova 2008
-   :ref:`literature_and_web`)
+   :ref:`literature_and_web`).
 #. Check out the summary to make sure it's correct and click **[Finish]**.
 #. The new :file:`LOCATION` 'alaska' and two :file:`MAPSETs` 'demo' and 'PERMANENT'
    are created. The currently opened working set is 'demo', as you defined.
@@ -215,6 +215,7 @@ Adding a new MAPSET
 A user has only write access to a GRASS :file:`MAPSET` he created. This means that
 besides access to his own :file:`MAPSET`, each user can read maps in other user's
 :file:`MAPSETs`, but he can modify or remove only the maps in his own :file:`MAPSET`.
+
 All :file:`MAPSETs` include a :file:`WIND` file that stores the current boundary
 coordinate values and the currently selected raster resolution (Neteler & Mitasova
 2008 :ref:`literature_and_web`, see Section :ref:`sec_grass_region`).
@@ -241,7 +242,7 @@ Importing data into a GRASS LOCATION
 ====================================
 
 This Section gives an example how to import raster and vector data into the
-:file:`alaska` GRASS :file:`LOCATION` provided by the QGIS alaska dataset.
+'alaska' GRASS :file:`LOCATION` provided by the QGIS 'Alaska' dataset.
 Therefore we use a landcover raster map :file:`landcover.img` and a vector GML
 file :file:`lakes.gml` from the QGIS 'Alaska' dataset :ref:`label_sampledata`.
 

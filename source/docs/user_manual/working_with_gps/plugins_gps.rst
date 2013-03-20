@@ -29,6 +29,7 @@ Loading GPS data from a file
 There are dozens of different file formats for storing GPS data. The format
 that QGIS uses is called GPX (GPS eXchange format), which is a standard
 interchange format that can contain any number of waypoints, routes and tracks
+in the same file.
 
 To load a GPX file you first need to load the plugin.
 :menuselection:`Plugins -->` |mActionShowPluginManager|

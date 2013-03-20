@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 16:11\n"
+"POT-Creation-Date: 2013-03-22 15:34\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
@@ -108,8 +107,8 @@ msgid ""
 "logs and edit the vector data using the given editing tools."
 msgstr ""
 "OpenStreetMap был вдохновлен такими проектами, как Wikipedia --- на карте "
-"сайта (см. рисунок Figure_OpenStreetMap_1_) есть большая закладка :guilabel:"
-"`Редактировать` и поддерживается полная история изменений. "
+"сайта (см. рисунок Figure_OpenStreetMap_1_) есть большая закладка "
+":guilabel:`Редактировать` и поддерживается полная история изменений. "
 "Зарегистрированные пользователи могут загружать GPS-треки и редактировать "
 "векторные данные с помощью различных инструментов."
 
@@ -314,8 +313,8 @@ msgstr "Установка"
 #: ../../source/docs/user_manual/osm/openstreetmap.rst:132
 msgid ""
 "The OpenStreetMap plugin is a core plugin inside QGIS. The 'OpenStreetMap' "
-"plugin can be selected in the Plugin Manager as described in section :ref:"
-"`load_core_plugin`."
+"plugin can be selected in the Plugin Manager as described in section "
+":ref:`load_core_plugin`."
 msgstr ""
 "Модуль OpenStreetMap является расширением ядра QGIS. Если включена поддержка "
 "Python, модуль «OpenStreetMap» должен появиться в Менеджере модулей и может "
@@ -475,8 +474,8 @@ msgstr ""
 msgid ""
 "To load data from a file use the |osm_load| :sup:`Load OSM from file` icon. "
 "If there is no such button, maybe someone disabled OpenStreetMap toolbar in "
-"your QGIS installation. You can enable it again selecting :menuselection:"
-"`Settings --> Toolbars --> OpenStreetMap`."
+"your QGIS installation. You can enable it again selecting "
+":menuselection:`Settings --> Toolbars --> OpenStreetMap`."
 msgstr ""
 "Для загрузки данных из файла нажмите на кнопку |osm_load| :sup:`Загрузить "
 "данные из файла`. Если у вас нет такой кнопки, возможно, у вас скрыта панель "
@@ -528,7 +527,6 @@ msgstr ""
 
 # 9023b824c52741f3923dd5e9ef022e10
 #: ../../source/docs/user_manual/osm/openstreetmap.rst:238
-#, fuzzy
 msgid ""
 "**Use custom renderer**: This option determines how many details of the map "
 "will be used. There are three pre-defined OSM styles for map displaying. Use "
@@ -540,7 +538,7 @@ msgstr ""
 "детализации карты. Существует три уровня детализации данных OSM. Используйте "
 "«Мелкий масштаб», если вам нужно просматривать данные на уровне региона. Вы "
 "также можете использовать «Средний масштаб» или «Крупный масштаб». Версия "
-"QGIS 1.8.0 не поддерживает динамическую смену стиля отрисовки."
+"QGIS |CURRENT| не поддерживает динамическую смену стиля отрисовки."
 
 # 7f0ae8bf57f54485ae728fa10565fca2
 #: ../../source/docs/user_manual/osm/openstreetmap.rst:244
@@ -577,8 +575,19 @@ msgstr ""
 "подсвечивается на карте, так что пользователь может видеть, что именно "
 "определилось."
 
-# f42f30b3641a4ff4ac53424c0c93e607
+# b8908f6b51394f1694b82b8dc93dfbf6
 #: ../../source/docs/user_manual/osm/openstreetmap.rst:259
+msgid ""
+"The :guilabel:`Properties` tab of the widget contains of all feature tags. "
+"Clicking on the :guilabel:`Relation` tab shows you a list of all relations "
+"connected with identified feature."
+msgstr ""
+"Вкладка :guilabel:`Свойства` панели содержит все теги объекта. Перейдя на "
+"вкладку :guilabel:`Отношение`, можно увидеть список всех отношений, "
+"связанных с текущим объектом."
+
+# f42f30b3641a4ff4ac53424c0c93e607
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:263
 msgid ""
 "If you want to hold a feature for a while to be able to read its properties "
 "and relations, move the mouse cursor at the same time, try left-clicking "
@@ -590,7 +599,7 @@ msgstr ""
 "идентификации приостановится, пока вы не нажмете на левую кнопку мыши снова."
 
 # 5aaa59da0f4b4fda94283605660b2ac9
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:263
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:267
 msgid ""
 "Sometimes there is more than one feature at a point where left-clicking was "
 "performed. This happens especially when clicking on cross-roads or if you "
@@ -606,12 +615,12 @@ msgstr ""
 "пролистать объекты по кругу правой кнопкой."
 
 # 5c17e44455a24a859c1284b429bc3a85
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:271
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:275
 msgid "Editing basic OSM data"
 msgstr "Редактирование базовых данных"
 
 # 4201cd25de5d407d8b9a18da37ff2704
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:273
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:277
 msgid ""
 "'Basic data' in this context means non-relational OSM features - nodes and "
 "ways. If you prefer to examine how to perform relational editing, skip this "
@@ -623,7 +632,7 @@ msgstr ""
 "следующей."
 
 # 44983db0fbba408087d8f310df66e49b
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:277
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:281
 msgid ""
 "Basic data editing is a key part of the OSM Plugin. You can change the "
 "property, position or shape of any existing basic feature. You can remove "
@@ -637,12 +646,12 @@ msgstr ""
 "OpenStreetMap."
 
 # 5bc68389f5b5419b8684c74c75e99c43
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:283
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:287
 msgid "Changing feature tags"
 msgstr "Изменение тегов объектов"
 
 # 5d4a1000e52e4352af27d03249af5627
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:285
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:289
 msgid ""
 "Changing the property/tag of an OSM feature can be done directly in the "
 "table of feature tags. The Tags table of basic features can be found on the "
@@ -652,12 +661,12 @@ msgstr ""
 "панели объектов. Не забудьте сначала выбрать объект."
 
 # 067eb177a45c4671aa271167f6393dc4
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:301
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:305
 msgid ""
 "If you want to change a tag value, just double-click in the appropriate row "
 "of column 'Value' and type, or select a new value. If you want to remove a "
-"tag, click in the relevant row, then use the button |osm_removeTag| :sup:"
-"`Remove selected tags` on the right bottom under the table."
+"tag, click in the relevant row, then use the button |osm_removeTag| "
+":sup:`Remove selected tags` on the right bottom under the table."
 msgstr ""
 "Для изменения тега объекта нужно дважды щелкнуть на соответствующей строке "
 "колонки «Значение» и ввести нужное значение. Если нужно удалить тег, "
@@ -665,7 +674,7 @@ msgstr ""
 "выбранные теги`, находящуюся справа внизу таблицы."
 
 # 7082d3f4adc247a8a5b30c96a3584ca0
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:306
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:310
 msgid ""
 "To add new tags just type the key and value into the last row of the table "
 "where '<next tag value>' is written. Notice that you cannot change the key "
@@ -679,12 +688,12 @@ msgstr ""
 "ключами и их значениями."
 
 # 9e1c73d01f3a4f36b721982c759f0cbc
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:312
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:316
 msgid "Point creation"
 msgstr "Создание точек"
 
 # 4b5d9dae2c4e476fa0b3e3e5a076f527
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:314
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:318
 msgid ""
 "For point creation there is a |osm_createPoint| :sup:`Create point` button "
 "on the OSM Feature widget. To create some points, just click on the button "
@@ -703,12 +712,12 @@ msgstr ""
 "будет показано следующее сообщение:"
 
 # d182241c8f0d4a7dbb72b98222ed8f2e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:334
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:338
 msgid ""
 "The mechanism of helping a user to hit the line or polygon is called "
 "snapping and is enabled by default. If you want to create a point very close "
-"to some line (but not on it) you must disable snapping by holding the :kbd:"
-"`Ctrl` key first."
+"to some line (but not on it) you must disable snapping by holding the "
+":kbd:`Ctrl` key first."
 msgstr ""
 "Механизм, помогающий пользователю точно попасть в линию или полигон, "
 "называется «прилипание», он включен по умолчанию. Если нужно создать точку "
@@ -716,12 +725,12 @@ msgstr ""
 "клавишу :kbd:`Ctrl`."
 
 # 8dbd997062f84273b784a5ea94ca8f9c
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:339
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:343
 msgid "Line creation"
 msgstr "Создание линии"
 
 # 58e44cd73f6f42678c665769a7b4983b
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:341
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:345
 msgid ""
 "For line creation, there is a |osm_createLine| :sup:`Create Line` button on "
 "the OSM Feature widget. To create a line just click the button and start "
@@ -737,7 +746,7 @@ msgstr ""
 "появится на карте."
 
 # 2bb564e5094f4f4d855fa81c17c3474e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:348
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:352
 msgid ""
 "A Line with less than two members cannot be created. In such case the "
 "operation is ignored."
@@ -746,23 +755,23 @@ msgstr ""
 "операция просто игнорируется."
 
 # d248f785239b40cc8b1944af9bc23cd6
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:351
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:355
 msgid ""
 "Snapping is performed to all map vertices - points from the Point vector "
 "layer and all Line and Polygon members. Snapping can be disabled by holding "
 "the :kbd:`Ctrl` key."
 msgstr ""
 "Прилипание работает для всех узлов карты --- точек из точечного слоя и всех "
-"узлов линейного и полигонального слоёв. Прилипание можно отключить, нажав :"
-"kbd:`Ctrl`."
+"узлов линейного и полигонального слоёв. Прилипание можно отключить, нажав "
+":kbd:`Ctrl`."
 
 # 5d1682f8f72f44fd903be0b8d3e99405
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:356
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:360
 msgid "Polygon creation"
 msgstr "Создание полигона"
 
 # 68229c3e6334402db1a95ade868b2b4e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:358
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:362
 msgid ""
 "For polygon creation there is a |osm_createPolygon| :sup:`Create polygon` "
 "button on the OSM Feature widget. To create a polygon just click the button "
@@ -782,26 +791,26 @@ msgstr ""
 "Полигон сразу появится на карте. Полигон из менее чем трех узлов создать "
 "невозможно. В случае, если узлов меньше трех, операция просто игнорируется. "
 "Прилипание работает для всех узлов карты --- точек из точечного слоя и всех "
-"узлов линейного и полигонального слоёв. Прилипание можно отключить нажав :"
-"kbd:`Ctrl`."
+"узлов линейного и полигонального слоёв. Прилипание можно отключить нажав "
+":kbd:`Ctrl`."
 
 # 859380acd2b14e928f33450d4722780d
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:368
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:372
 msgid "Map feature moving"
 msgstr "Перемещение объектов"
 
 # 0e35f38add814ae2b702980e263c9c3a
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:370
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:374
 msgid ""
-"If you want to move a feature (no matter what type) please use the |"
-"osm_move| :sup:`Move feature` button from the OSM Feature widget menu. Then "
+"If you want to move a feature (no matter what type) please use the "
+"|osm_move| :sup:`Move feature` button from the OSM Feature widget menu. Then "
 "you can browse the map (features are identified dynamically when you go over "
 "them) and click on the feature you want to move. If a wrong feature is "
-"selected after your click, don't move it from the place. Repeat right-"
-"clicking until the correct feature is identified. When selection is done and "
-"you move the cursor, you are no more able to change your decision what to "
-"move. To confirm the move, click on the left mouse button. To cancel a move, "
-"click another mouse button."
+"selected after your click, don't move it from the place. Repeat "
+"right-clicking until the correct feature is identified. When selection is "
+"done and you move the cursor, you are no more able to change your decision "
+"what to move. To confirm the move, click on the left mouse button. To cancel "
+"a move, click another mouse button."
 msgstr ""
 "Если вы хотите передвинуть объект (не важно какого типа), используйте "
 "инструмент |osm_move| :sup:`Перемещение объектов`, кнопка которого "
@@ -813,7 +822,7 @@ msgstr ""
 "отмены щёлкните правой."
 
 # de128fd305d14e91aadf71fe8efee29e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:379
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:383
 msgid ""
 "If you are moving a feature that is connected to another features, these "
 "connections won't be damaged. Other features will just adapt themselves to a "
@@ -824,12 +833,12 @@ msgstr ""
 "подстроиться к новой позиции перемещенного объекта."
 
 # 46d8a0e36e2c41f8bd32cb3b0c0cc2af
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:383
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:387
 msgid "Snapping is also supported in this operation, this means:"
 msgstr "Для этой операции также поддерживается прилипание:"
 
 # 7daebb50af5346f186ec6da1a2c36e48
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:385
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:389
 msgid ""
 "When moving a standalone (not part of any line/polygon) point,snapping to "
 "all map segments and vertices is performed."
@@ -838,7 +847,7 @@ msgstr ""
 "осуществляется прилипание ко всем сегментам и узлам."
 
 # 5727ce60ed31490c8d4ecde499d18937
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:387
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:391
 msgid ""
 "When moving a point that is a member of some lines/polygons,snapping to all "
 "map segments and vertices is performed, except for vertices of point parents."
@@ -848,7 +857,7 @@ msgstr ""
 "родительских объектов."
 
 # 1fb38c861e5946488c0a315ebff47734
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:389
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:393
 msgid ""
 "When moving a line/polygon, snapping to all map vertices is performed. Note "
 "that the OSM Plugin tries to snap only to the 3 closest-to-cursor vertices "
@@ -861,18 +870,18 @@ msgstr ""
 "Прилипание можно отключить, удерживая :kbd:`Ctrl` в процессе."
 
 # 23feba47710a40ccaba5a4d49d2323ac
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:395
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:399
 msgid "Map feature removing"
 msgstr "Удаление объектов"
 
 # 6c65dc2f31b34fb8a9133ee284798da8
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:397
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:401
 msgid ""
 "If you want to remove a feature, you must identify it first. To remove an "
 "identified feature, use the |osm_removeFeat| :sup:`Remove this feature` "
-"button on the OSM Feature widget. When removing a line/polygon, the line/"
-"polygon itself is deleted, so are all its member points that doesn't belong "
-"to any other line/polygon."
+"button on the OSM Feature widget. When removing a line/polygon, the "
+"line/polygon itself is deleted, so are all its member points that doesn't "
+"belong to any other line/polygon."
 msgstr ""
 "Если нужно удалить объект, его сначала нужно идентифицировать. Далее, чтобы "
 "его удалить, нужно использовать инструмент |osm_removeFeat| :sup:`Удалить "
@@ -881,7 +890,7 @@ msgstr ""
 "которые не принадлежат другой линии/полигону."
 
 # 66d8167f3be74630921b2a90a84103e0
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:403
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:407
 msgid ""
 "When removing a point that is member of some lines/polygons, the point is "
 "deleted and the geometries of parent lines/polygons are changed. The new "
@@ -892,7 +901,7 @@ msgstr ""
 "геометрия имеет меньше узлов, чем старая."
 
 # 14ac4e5d5d6c4e5897bfb6e0c98a61d0
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:407
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:411
 msgid ""
 "If the parent feature was a polygon with three vertexes, its new geometry "
 "has only two vertexes. And because there cannot exist polygon with only two "
@@ -904,7 +913,7 @@ msgstr ""
 "может, тип объекта автоматически меняется на линию."
 
 # 9958c71b4bd64ce8b02c41847470315c
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:411
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:415
 msgid ""
 "If the parent feature was a line with two vertexes, its new geometry has "
 "only one vertex. And because there cannot exist a line with only one vertex, "
@@ -915,12 +924,12 @@ msgstr ""
 "автоматически становится точкой."
 
 # c81c6450e6974943b7a4016ddc1d1221
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:418
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:422
 msgid "Editing relations"
 msgstr "Редактирование отношений"
 
 # dd6c73debb2a4ea18b4094127d1747e5
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:420
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:424
 msgid ""
 "Thanks to existence of OSM relations we can join OSM features into groups "
 "and give them common properties - in such way we can model any possible map "
@@ -937,12 +946,12 @@ msgstr ""
 "их изучать, создавать, обновлять и удалять."
 
 # ffb1672602ff44ca9ba7bf7be159bb27
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:430
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:434
 msgid "Examining relation"
 msgstr "Изучение отношений"
 
 # 01cafac362bf41bba62f469826a25804
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:432
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:436
 msgid ""
 "If you want to see relation properties, first identify one of its members. "
 "After that open the :guilabel:`Relations` tab on the OSM Feature widget. At "
@@ -962,17 +971,17 @@ msgstr ""
 "об участниках. Если выбрать одного из них, плагин подсветит его на карте."
 
 # 1524c61343804b5fba5d063ca7b0fe3c
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:442
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:446
 msgid "Relation creation"
 msgstr "Создание отношения"
 
 # ce357b362c474675b409ae953203ebd5
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:444
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:448
 msgid "There are 2 ways to create a relation:"
 msgstr "Существует два пути создания отношения:"
 
 # a596aa72348c4ebdba055be4b96b438e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:446
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:450
 msgid ""
 "You can use the |osm_createRelation|:sup:`Create relation` button on OSM "
 "Feature widget."
@@ -981,7 +990,7 @@ msgstr ""
 "кнопка которого находится на панели объектов."
 
 # 77a8844046ce4b35a634122beb2a1013
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:448
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:452
 msgid ""
 "You can create it from the :guilabel:`Relation` tab of OSM Feature widget "
 "using the |osm_addRelation|:sup:`Add relation` button."
@@ -990,7 +999,7 @@ msgstr ""
 "используя кнопку |osm_addRelation| :sup:`Добавить отношение`."
 
 # 68a4fe7c67134765b416b77b45362a47
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:451
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:455
 msgid ""
 "In both cases a dialog will appear. For the second case, the feature that is "
 "currently identified is automatically considered to be the first relation "
@@ -1005,38 +1014,38 @@ msgstr ""
 "свой. После этого добавьте остальных участников отношения и задайте теги."
 
 # 57475cc660ac4c6a90185214e990778e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:457
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:461
 msgid ""
-"If you have already selected a relation type, try using the |"
-"osm_generateTags| :sup:`Generate tags` button. It will generate typical tags "
-"to your relation type. Then you are expected to enter values to the keys. "
-"Choosing relation members can be done either by writing member identifiers, "
-"types and roles or using the |osm_identify| :sup:`Identify` tool and "
-"clicking on map."
+"If you have already selected a relation type, try using the "
+"|osm_generateTags| :sup:`Generate tags` button. It will generate typical "
+"tags to your relation type. Then you are expected to enter values to the "
+"keys. Choosing relation members can be done either by writing member "
+"identifiers, types and roles or using the |osm_identify| :sup:`Identify` "
+"tool and clicking on map."
 msgstr ""
-"Если тип отношения уже выбран, попробуйте использовать кнопку |"
-"osm_generateTags| :sup:`Сгенерировать теги`. Она автоматически создаст набор "
-"тегов, как правило, соответствующих выбранному типу. Затем нужно ввести "
-"соответствующие значения для ключей. Выбрать участников отношения можно либо "
-"вводом их идентификаторов, типов и ролей, либо использованием инструмента |"
-"osm_identify| :sup:`Идентифицировать` и указанием их на карте."
+"Если тип отношения уже выбран, попробуйте использовать кнопку "
+"|osm_generateTags| :sup:`Сгенерировать теги`. Она автоматически создаст "
+"набор тегов, как правило, соответствующих выбранному типу. Затем нужно "
+"ввести соответствующие значения для ключей. Выбрать участников отношения "
+"можно либо вводом их идентификаторов, типов и ролей, либо использованием "
+"инструмента |osm_identify| :sup:`Идентифицировать` и указанием их на карте."
 
 # cc178a71196448488598f09631c8162e
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:463
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:467
 msgid ""
 "Finally when type, tags and members are chosen, the dialog can be submitted. "
 "In such case the plugin creates a new relation for you."
 msgstr ""
-"После того как тип, теги и участники отношения выбраны, можно дать команду **"
-"[Создать отношение]**."
+"После того как тип, теги и участники отношения выбраны, можно дать команду "
+"**[Создать отношение]**."
 
 # 151c9a24c6b24d9fba84630b4c93a2df
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:467
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:471
 msgid "Changing relation"
 msgstr "Изменение отношений"
 
 # 918882e6c9934371b8beb0278b827d7f
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:469
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:473
 msgid ""
 "If you want to change an existing relation, identify it first (follow steps "
 "written above in Section :ref:`examining_relation`). After that click on the "
@@ -1047,36 +1056,35 @@ msgid ""
 "submitting the dialog your changes will be committed."
 msgstr ""
 "Если нужно изменить существующее отношение, его сначала нужно "
-"идентифицировать (как это сделать объясняется в секции :ref:"
-"`examining_relation`). После этого, нажмите на кнопку |osm_editRelation| :"
-"sup:`Редактировать отношение`. Отношение появится в панели объектов. "
-"Появится новый диалог, похожий на диалог создания отношения. Окно будет "
-"заполнено значениями из выбранного отношения. В нём можно изменять теги, "
-"участников и тип отношения."
+"идентифицировать (как это сделать объясняется в секции "
+":ref:`examining_relation`). После этого, нажмите на кнопку "
+"|osm_editRelation| :sup:`Редактировать отношение`. Отношение появится в "
+"панели объектов. Появится новый диалог, похожий на диалог создания "
+"отношения. Окно будет заполнено значениями из выбранного отношения. В нём "
+"можно изменять теги, участников и тип отношения."
 
 # fb0fb366fffd4e46b2a43213f5cc3743
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:478
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:482
 msgid "Downloading OSM data"
 msgstr "Загрузка данных OSM"
 
 # bc07dfc7770648e69e624b73c86cf1c3
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:480
-#, fuzzy
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:484
 msgid ""
-"To download data from OpenStreetMap server click on the |osm_download| :sup:"
-"`Download OSM data` button. If there is no such button, the OSM toolbar may "
-"be disabled in your QGIS instalation. You can enable it again at :"
-"menuselection:`Settings --> Toolbars --> OpenStreetMap` . After clicking the "
-"button a dialog appears and provides following functionalities:"
+"To download data from OpenStreetMap server click on the |osm_download| "
+":sup:`Download OSM data` button. If there is no such button, the OSM toolbar "
+"may be disabled in your QGIS instalation. You can enable it again at "
+":menuselection:`Settings --> Toolbars --> OpenStreetMap` . After clicking "
+"the button a dialog appears and provides following functionalities:"
 msgstr ""
-"Для загрузки данных с сервера OpenStreetMap нажмите на кнопку |"
-"osm_download| :sup:`Загрузить данные`. Если кнопки не видно, возможно, не "
-"включена панель инструментов модуля. Её можно включить в :menuselection:"
-"`Настройки --> Панели --> OpenStreetMap`. После нажатия кнопки появится "
-"диалоговое окно со следующими функциями:"
+"Для загрузки данных с сервера OpenStreetMap нажмите на кнопку |osm_download| "
+":sup:`Загрузить данные`. Если кнопки не видно, возможно, не включена панель "
+"инструментов модуля. Её можно включить в :menuselection:`Настройки --> "
+"Панели --> OpenStreetMap`. После нажатия кнопки появится диалоговое окно со "
+"следующими функциями:"
 
 # b1713ecd75404ada80f2ce30051f1220
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:498
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:502
 msgid ""
 "**Extent**: Specifies an area to download data from intervals of latitude "
 "and longitude degrees. Because there is some restriction of OpenStreetMap "
@@ -1091,7 +1099,7 @@ msgstr ""
 "кнопки |osm_questionMark| :sup:`Помощь` справа."
 
 # 8ead0d30a0e24c16aecc519cf3b6f6e8
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:504
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:508
 msgid ""
 "**Download to**: Here you are expected to write a path to the file where "
 "data will be stored. If you can't remember the structure of your disk, don't "
@@ -1101,7 +1109,7 @@ msgstr ""
 "данные. Для указания другого пути можно использовать кнопку |browsebutton|."
 
 # 5b33822eb0c943f092434d24c87c3f07
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:508
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:512
 msgid ""
 "**Open data automatically after download**: Determines, if the download "
 "process should be followed by loading the data process or not. If you prefer "
@@ -1113,28 +1121,27 @@ msgstr ""
 "это можно сделать, нажав кнопку |osm_load| :sup:`Загрузить данные из файла`."
 
 # 6761b4ba733a423a860511d1904383b8
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:513
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:517
 msgid ""
-"**Replace current data**: This option is active only if |radiobuttonon| :"
-"guilabel:`Open data automatically after download` is checked. Checking this "
+"**Replace current data**: This option is active only if |radiobuttonon| "
+":guilabel:`Open data automatically after download` is checked. Checking this "
 "option means that downloaded data should replace current data we are working "
 "with now. Layers of the current data will be removed and new ones will be "
 "loaded. When starting QGIS and downloading OSM data for the first time, this "
 "option is initially inactive, because there is nothing to replace."
 msgstr ""
-"**Заменить текущие данные**: Эта опция активна, только если включено |"
-"radiobuttonon| :guilabel:`Открыть данные сразу после загрузки`. Включение "
+"**Заменить текущие данные**: Эта опция активна, только если включено "
+"|radiobuttonon| :guilabel:`Открыть данные сразу после загрузки`. Включение "
 "этого переключателя приведет к тому, что загруженные данные заменят текущие. "
 "Слои данных будут удалены и вместо них будут загружены новые. При первом "
 "запуске QGIS и модуля эта опция будет неактивна, так как пока нечего "
 "заменять."
 
 # 95e6af48bded4a5f9faaf59598b61d4c
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:520
-#, fuzzy
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:524
 msgid ""
-"**Use custom renderer**: This option is active only if the |radiobuttonon| :"
-"guilabel:`Open data automatically after download` checkbox is checked. It "
+"**Use custom renderer**: This option is active only if the |radiobuttonon| "
+":guilabel:`Open data automatically after download` checkbox is checked. It "
 "determines how many details will be in the map. There are three predefined "
 "OSM styles for map displaying. Use 'Small scale' if you want to view OSM "
 "data at low level, to see all details and to edit something. If not you can "
@@ -1146,16 +1153,16 @@ msgstr ""
 "Эта опция определяет насколько детализированной будет карта. Существует три "
 "стиля. Используйте «Мелкий масштаб», если вам нужно работать с данными с "
 "низкой детализацией. Если нужно больше деталей, используйте «Средний "
-"масштаб» или «Крупный масштаб». QGIS 1.8.0 не поддерживает динамическую "
+"масштаб» или «Крупный масштаб». QGIS |CURRENT| не поддерживает динамическую "
 "смену стиля отрисовки."
 
 # ec94e4d1aeb3483f834c3290caa3fcda
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:528
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:532
 msgid "Click the **[Download]** button to start the download process."
 msgstr "Нажмите кнопку **[Загрузить]**, чтобы начался процесс загрузки."
 
 # 995553c7a8774e8abc04434831b633cf
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:530
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:534
 msgid ""
 "A progress dialog will continuously inform you about how much of data is "
 "already downloaded. When an error occurs during the download process, a "
@@ -1167,12 +1174,12 @@ msgstr ""
 "завершения индикатор прогресса и диалоговое окно закроются."
 
 # cd27f34227e14b9db57c8875290dedc1
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:536
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:540
 msgid "Uploading OSM data"
 msgstr "Выгрузка данных"
 
 # 97146432d3524f2f87601e644358d951
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:538
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:542
 msgid ""
 "Note that the upload is always done on current OSM data. Before opening the "
 "OSM Upload dialog, please be sure that you really have the right active "
@@ -1182,22 +1189,22 @@ msgstr ""
 "открытием диалога выгрузки убедитесь, что выбран правильный слой."
 
 # c6f2150e8da9480f981faf1b2ca20ae1
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:542
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:546
 msgid ""
-"To upload current data to the OSM server click on the |osm_upload| :sup:"
-"`Upload OSM data` button. If there is no such button, OSM toolbar in your "
-"QGIS installation is disabled. You can enable it again in :menuselection:"
-"`Settings --> Toolbars --> OpenStreetMap` . After clicking the **[Upload]** "
-"button a new dialog will appear."
+"To upload current data to the OSM server click on the |osm_upload| "
+":sup:`Upload OSM data` button. If there is no such button, OSM toolbar in "
+"your QGIS installation is disabled. You can enable it again in "
+":menuselection:`Settings --> Toolbars --> OpenStreetMap` . After clicking "
+"the **[Upload]** button a new dialog will appear."
 msgstr ""
-"Для загрузки текущих данных на сервер OSM нажмите кнопку |osm_upload| :sup:"
-"`Выгрузить данные`. Если кнопки не видно, возможно, не включена панель "
+"Для загрузки текущих данных на сервер OSM нажмите кнопку |osm_upload| "
+":sup:`Выгрузить данные`. Если кнопки не видно, возможно, не включена панель "
 "инструментов модуля. Её можно включить в :menuselection:`Настройки --> "
 "Панели --> OpenStreetMap`. После нажатия кнопки **[Выгрузить]** появится "
 "диалоговое окно."
 
 # 3e4776a79b134b5c86ed40354bfc99ae
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:560
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:564
 msgid ""
 "At the top of the dialog you can check, if you are uploading the correct "
 "data. There is a short name of a current database. In the table you find "
@@ -1210,44 +1217,45 @@ msgstr ""
 "для каждого типа объектов."
 
 # ca41ed2390b0418196520b211c210874
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:565
-#, fuzzy
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:569
 msgid ""
 "In the :guilabel:`Comment on your changes` box you can write brief "
 "information on meaning of your upload operation. Just write in brief what "
 "data changes you've done or let the box empty. Fill 'OSM account' arrays so "
 "that the server could authenticate you. If you don't have an account on the "
-"OSM server, it's the best time to create one at http://www.openstreetmap."
-"org. Finally use **[Upload]** to start an upload operation."
+"OSM server, it's the best time to create one at "
+"http://www.openstreetmap.org. Finally use **[Upload]** to start an upload "
+"operation."
 msgstr ""
 "В поле :guilabel:`Комментарий для ваших изменений` можно оставить краткое "
-"описание изменений или не заполнять поле вообще. Заполните поля :guilabel:"
-"`Учётная запись OSM`, чтобы сервер вас узнал. Если у вас нет учётной записи "
-"в OSM --- заведите ее по адресу http://www.openstreetmap.org. После того, "
-"как все готово, нажмите **[Выгрузить]**, чтобы началась выгрузка данных."
+"описание изменений или не заполнять поле вообще. Заполните поля "
+":guilabel:`Учётная запись OSM`, чтобы сервер вас узнал. Если у вас нет "
+"учётной записи в OSM --- заведите ее по адресу http://www.openstreetmap.org. "
+"После того, как все готово, нажмите **[Выгрузить]**, чтобы началась выгрузка "
+"данных."
 
 # f5f457a800f64e9bb4c9ea1536c7df74
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:573
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:577
 msgid "Saving OSM data"
 msgstr "Сохранение данных"
 
 # f123cc9533d9497eb027ba7a19c38c73
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:575
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:579
 msgid ""
-"To save data from a current map extent to an XML file click on the |"
-"osm_save| :sup:`Save OSM to file` button. If there is no such button, the "
+"To save data from a current map extent to an XML file click on the "
+"|osm_save| :sup:`Save OSM to file` button. If there is no such button, the "
 "OSM toolbar in your QuantumGIS installation is probably disabled. You can "
 "enable it again in :menuselection:`Settings --> Toolbars --> OpenStreetMap`. "
 "After clicking on the button a new dialog appears."
 msgstr ""
-"Чтобы сохранить данные текущего охвата карты в файл XML, нажмите на кнопку |"
-"osm_save| :sup:`Сохранить в файл`. Если кнопки не видно, возможно, не "
-"включена панель инструментов плагина. Её можно включить в :menuselection:"
-"`Настройки --> Панели --> OpenStreetMap`. После нажатия кнопки появится "
-"диалоговое окно."
+"Чтобы сохранить данные текущего охвата карты в файл XML, нажмите на кнопку "
+"|osm_save| :sup:`Сохранить в файл`. Если кнопки не видно, возможно, не "
+"включена панель инструментов плагина. Её можно включить в "
+":menuselection:`Настройки --> Панели --> OpenStreetMap`. После нажатия "
+"кнопки появится диалоговое окно."
 
 # 1de7b037cbbe4e8c9d8a27c29a642490
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:593
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:597
 msgid ""
 "Select features you want to save into XML file and the file itself. Use the "
 "**[OK]** button to start the operation. The process will create an XML file, "
@@ -1257,15 +1265,15 @@ msgid ""
 "information are not compulsory yet, see DTD for OSM XML version 0.6. In the "
 "output file OSM elements are not ordered."
 msgstr ""
-"Выберите объекты, которые нужно сохранить в файл XML и его имя. Нажмите **"
-"[OK]** для начала процесса. Результатом будет файл XML, содержащий данные "
+"Выберите объекты, которые нужно сохранить в файл XML и его имя. Нажмите "
+"**[OK]** для начала процесса. Результатом будет файл XML, содержащий данные "
 "OSM с текущим охватом карты. Данные сохраняются в формате версии 0.6. "
 "Некоторые элементы (<node>, <way>, <relation>) не содержат информации о "
 "пакетах изменений и uid. Эта информация не является обязательной (см. DTD "
 "для OSM XML версии 0.6). Выходные данные не сортируются."
 
 # fd219c5e88204632851aff42bbfaecda
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:601
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:605
 msgid ""
 "Notice that not only data from the current extent are saved. Into the output "
 "file the whole polygons and lines are saved even if only a small part of "
@@ -1277,19 +1285,19 @@ msgstr ""
 "целиком. Для каждой линии/полигона сохраняются все её участники."
 
 # 67f8c630dda84fd89270282f875ccbf4
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:607
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:611
 msgid "Import OSM data"
 msgstr "Импорт данных"
 
 # 916e1f4d289048fa8ea88d8243ad3ee7
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:609
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:613
 msgid ""
 "To import OSM data from an opened non-OSM vector layer follow this "
 "instructions. Choose current OSM data by clicking on one of their layers. "
 "Click on the |osm_import| :sup:`Import data from a layer` button. If there "
 "is no such button, someone has probably disabled the OpenStreetMap toolbar "
-"in your QGIS installation. You can enable it again in :menuselection:"
-"`Settings --> Toolbars --> OpenStreetMap`."
+"in your QGIS installation. You can enable it again in "
+":menuselection:`Settings --> Toolbars --> OpenStreetMap`."
 msgstr ""
 "Чтобы импортировать данные из открытого векторного не-OSM слоя, нужно: "
 "Выбрать текущие данные OSM, щелкнув на один из его слоёв. Выбрать инструмент "
@@ -1298,12 +1306,12 @@ msgstr ""
 "в :menuselection:`Настройки --> Панели --> OpenStreetMap`."
 
 # d63579966f264b989d1582f345dd1f51
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:615
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:619
 msgid "After clicking on the button following message may show up:"
 msgstr "После нажатия может появиться следующее окно:"
 
 # bb3338c43a124195bf4e73b1a499172b
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:629
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:633
 msgid ""
 "In such case there is no vector layer currently loaded. The import must be "
 "done from a loaded layer - please load a vector layer from which you want to "
@@ -1315,20 +1323,10 @@ msgstr ""
 "еще раз (не забудьте отметить текущий слой данных OSM):"
 
 # 6227cd7e119249b0a32c197cd665083d
-#: ../../source/docs/user_manual/osm/openstreetmap.rst:646
+#: ../../source/docs/user_manual/osm/openstreetmap.rst:650
 msgid ""
 "Use the submit dialog to start the process of OSM data importing. Reject it "
 "if you are not sure you want to import something."
 msgstr ""
 "Нажмите ОК, чтобы начать процесс импорта. Или закройте диалог если не "
 "уверены в том, что хотите импортировать данные."
-
-# b8908f6b51394f1694b82b8dc93dfbf6
-#~ msgid ""
-#~ "The :guilabel:`Properties` tab of the widget contains of all feature "
-#~ "tags. Clicking on the :guilabel:`Relation` tab shows you a list of all "
-#~ "relations connected with identified feature."
-#~ msgstr ""
-#~ "Вкладка :guilabel:`Свойства` панели содержит все теги объекта. Перейдя на "
-#~ "вкладку :guilabel:`Отношение`, можно увидеть список всех отношений, "
-#~ "связанных с текущим объектом."

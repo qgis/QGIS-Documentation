@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 16:11\n"
+"POT-Creation-Date: 2013-03-22 13:18\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,8 +16,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
@@ -29,9 +28,9 @@ msgstr "GPS-слежение"
 # 241d46b0cf884d5097751ab81c8768b7
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:12
 msgid ""
-"To activate Live GPS tracking in QGIS you need to select :menuselection:"
-"`Settings -->` |checkbox| :guilabel:`GPS information`. You will get a new "
-"docked window on the left side of the canvas."
+"To activate Live GPS tracking in QGIS you need to select "
+":menuselection:`Settings -->` |checkbox| :guilabel:`GPS information`. You "
+"will get a new docked window on the left side of the canvas."
 msgstr ""
 "Для включения GPS-слежения в QGIS необходимо выбрать :menuselection:`Вид --> "
 "Панели -->` |checkbox| :guilabel:`GPS-слежение`. Появится новое окно, "
@@ -83,8 +82,8 @@ msgid ""
 msgstr ""
 "При подключенном GPS-приемнике (должен поддерживаться вашей операционной "
 "системой), простое нажатие на кнопке **[Подключиться]** подключает GPS к "
-"QGIS. Второе нажатие на кнопке (теперь уже **[Отключиться]**) отключает GPS-"
-"приемник от компьютера. Для GNU/Linux реализована поддержка gpsd, что "
+"QGIS. Второе нажатие на кнопке (теперь уже **[Отключиться]**) отключает "
+"GPS-приемник от компьютера. Для GNU/Linux реализована поддержка gpsd, что "
 "позволяет подключаться к большинству приемников GPS. Поэтому вначале "
 "необходимо правильно сконфигурировать gpsd, чтобы QGIS смогла подключиться к "
 "нему."
@@ -143,9 +142,9 @@ msgid ""
 "ID numbers of the satellites you are receiving signals from."
 msgstr ""
 "|gpstrack_polarchart| Если вы хотите знать, где на небесной сфере "
-"располагаются все присоединенные спутники, переключитесь на окно :guilabel:"
-"`Положение спутников`. Также здесь можно увидеть идентификационные номера "
-"(ID) спутников, с которых вы получаете сигнал."
+"располагаются все присоединенные спутники, переключитесь на окно "
+":guilabel:`Положение спутников`. Также здесь можно увидеть идентификационные "
+"номера (ID) спутников, с которых вы получаете сигнал."
 
 # c722081087524e1e90412ffca5085633
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:94
@@ -166,24 +165,21 @@ msgstr "|radiobuttonon| :guilabel:`Автоопределение`"
 
 # 71e775c11c93416c891922bbf5125872
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:99
-#, fuzzy
-msgid "|radiobuttonoff| :guilabel:`Internal`,"
-msgstr "|radiobuttonon| :guilabel:`Встроенный приёмник`"
+msgid "|radiobuttonoff| :guilabel:`Internal`"
+msgstr "|radiobuttonoff| :guilabel:`Встроенный приёмник`"
 
 # b0d40459d9c4420b8aa5ad5d524cf4b2
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:100
-#, fuzzy
 msgid "|radiobuttonoff| :guilabel:`Serial device`"
-msgstr "|radiobuttonon| :guilabel:`Серийный порт`"
+msgstr "|radiobuttonoff| :guilabel:`Серийный порт`"
 
 # 6e7d5269837d4b16bfe0cf0c304bb7dc
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:101
-#, fuzzy
 msgid ""
 "|radiobuttonoff| :guilabel:`gpsd` (selecting Host, Port and Device your GPS "
-"is connected to)."
+"is connected to)"
 msgstr ""
-"|radiobuttonon| :guilabel:`gpsd` (и выбрать «Узел», «Порт» и «Устройство» к "
+"|radiobuttonoff| :guilabel:`gpsd` (и выбрать «Узел», «Порт» и «Устройство» к "
 "которому подключен приёмник)"
 
 # 4e74062564c74c1b88a88f83d065ecc8
@@ -191,20 +187,20 @@ msgstr ""
 msgid ""
 "A click on **[Connect]** again initiates the connection to the GPS receiver."
 msgstr ""
-"Нажатие кнопки **[Подключиться]** снова инициирует соединение с GPS-"
-"приемником."
+"Нажатие кнопки **[Подключиться]** снова инициирует соединение с "
+"GPS-приемником."
 
 # b1b691f9ad7b4f79a1b8ded1d2d1d780
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:118
 msgid ""
 "You can activate |checkbox| :menuselection:`Automatically save added "
-"features` when you are in editing mode. Or you can can activate |checkbox| :"
-"guilabel:`Automatically add points` to the main windows with a certain width "
-"and color."
+"features` when you are in editing mode. Or you can can activate |checkbox| "
+":guilabel:`Automatically add points` to the main windows with a certain "
+"width and color."
 msgstr ""
-"При необходимости можно активировать параметр |checkbox| :guilabel:"
-"`Автоматически сохранять объекты` в группе :guilabel:`Оцифровка`. Или же "
-"можно включить |checkbox| :guilabel:`Добавлять точки автоматически` и "
+"При необходимости можно активировать параметр |checkbox| "
+":guilabel:`Автоматически сохранять объекты` в группе :guilabel:`Оцифровка`. "
+"Или же можно включить |checkbox| :guilabel:`Добавлять точки автоматически` и "
 "автоматически записывать трек в активный векторный слой (разумеется, слой "
 "должен быть в режиме редактирования). При этом доступны настройки толщины и "
 "цвета трека."
@@ -215,8 +211,8 @@ msgid ""
 "Activating |checkbox| :guilabel:`Cursor` you can use a slider |slider| to "
 "shrink and grow the position cursor on the canvas."
 msgstr ""
-"Активировав |checkbox| :guilabel:`Курсор` можно использовать ползунок |"
-"slider| для уменьшения и увеличения размера курсора текущего местоположения "
+"Активировав |checkbox| :guilabel:`Курсор` можно использовать ползунок "
+"|slider| для уменьшения и увеличения размера курсора текущего местоположения "
 "в окне карты."
 
 # 84886ab2ce1c4218b07c8672ec3ed93c
@@ -234,10 +230,9 @@ msgstr ""
 
 # 93e2e6d64a98424583789fc89ffc4b3c
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:131
-#, fuzzy
 msgid ""
-"Finally you can activate |checkbox| :menuselection:`Log file` and define a "
-"path and a file where log messages about the gps tracking a logged."
+"Finally you can activate |checkbox| :guilabel:`Log file` and define a path "
+"and a file where log messages about the gps tracking a logged."
 msgstr ""
 "И, наконец, установив флажок |checkbox| :guilabel:`Файл журнала` можно "
 "указать путь к файлу, в который будут записываться отладочные сообщения."
@@ -245,10 +240,10 @@ msgstr ""
 # b706e26fb98a4a27a9f126c5a898aa8f
 #: ../../source/docs/user_manual/working_with_gps/live_GPS_tracking.rst:134
 msgid ""
-"If you want to set a feature manually you have to go back to |"
-"mActionToggleEditing| :sup:`Position` and click on **[Add Point]** or **[Add "
-"track point]**."
+"If you want to set a feature manually you have to go back to "
+"|mActionToggleEditing| :sup:`Position` and click on **[Add Point]** or "
+"**[Add track point]**."
 msgstr ""
-"Если вы хотите добавлять объекты вручную, вернитесь обратно к окну |"
-"mActionToggleEditing| :sup:`Позиционирование` и нажмите **[Добавить объект]"
-"** или **[Добавить точку в трек]**."
+"Если вы хотите добавлять объекты вручную, вернитесь обратно к окну "
+"|mActionToggleEditing| :sup:`Позиционирование` и нажмите **[Добавить "
+"объект]** или **[Добавить точку в трек]**."

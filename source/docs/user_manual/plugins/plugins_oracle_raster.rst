@@ -29,6 +29,7 @@ QGIS, you must create a connection to the Oracle database that contains the data
 To do this, begin by clicking on the |oracle_raster| :sup:`Select GeoRaster`
 toolbar button, it will open the :guilabel:`Select Oracle Spatial GeoRaster`
 dialog window. Click on **[New]** to open the dialog window, and specify
+the connection parameters (See Figure_oracle_raster_1_):
 
 * **Name**: Enter a name for the database connection
 * **Database instance**: Enter the name of the database that you will connect to

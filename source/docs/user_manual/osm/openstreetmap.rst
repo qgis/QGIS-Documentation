@@ -252,6 +252,10 @@ directly in the OSM Feature widget. There is also a dynamic rubberband displayed
 on the map so that the user is able to determine which feature is currently
 identified.
 
+The :guilabel:`Properties` tab of the widget contains of all feature tags.
+Clicking on the :guilabel:`Relation` tab shows you a list of all relations
+connected with identified feature.
+
 If you want to hold a feature for a while to be able to read its properties and
 relations, move the mouse cursor at the same time, try left-clicking while you
 are over the feature. Identification process will stop until next left-clicking.

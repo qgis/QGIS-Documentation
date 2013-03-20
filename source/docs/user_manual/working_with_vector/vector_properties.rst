@@ -976,7 +976,7 @@ click on the record and choose the action from the popup menu. Actions are
 listed in the popup menu by the name you assigned when defining the actions.
 Click on the action you wish to invoke.
 
-If you are invoking an action that uses the \%\% notation, right-click on the
+If you are invoking an action that uses the ``%%`` notation, right-click on the
 field value in the :guilabel:`Identify Results` dialog or the
 :guilabel:`Attribute Table` dialog that you wish to pass to the application
 or script.
@@ -1034,7 +1034,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    |selectstring| select 'NAMES' and click **[Insert Field]**.
 #. Your action text now looks like this:
 
-   ``firefox http://google.com/search?q=\%NAMES``
+   ``firefox http://google.com/search?q=%NAMES``
 #. To finalize the action click the **[Insert action]** button.
 
 
@@ -1043,7 +1043,7 @@ action should look like this:
 
 ::
 
-   firefox http://google.com/search?q=\%NAMES
+   firefox http://google.com/search?q=%NAMES
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and

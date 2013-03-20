@@ -60,7 +60,7 @@ Projections
 |                                                        | alter existing projection definition. Both single    |
 |                                                        | file and batch mode are supported. For more          |
 |                                                        | information please visit utility page at GDAL site   |
-|                                                        | http://www.gdal.org/gdalwarp.html                                                     |
+|                                                        | http://www.gdal.org/gdalwarp.html                    |
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_extract_projection|                              | This utility helps you to extract projection         |
 | :guilabel:`Extract projection`                         | information from an input file. If you want to       |

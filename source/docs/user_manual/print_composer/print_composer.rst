@@ -225,10 +225,10 @@ functionalities (see Figure figure_composer_3_):
 * The **Map extent** area allow to specify the map extent using Y and X min/max
   values or clicking the **[Set to map canvas extent]** button.
 
-+If you change the view on the QGIS map canvas by zooming or panning or changing
-+vector or raster properties, you can update the print composer view selecting
-+the map element in the print composer and clicking the **[Update preview]** button
-+in the map :guilabel:`Item Properties` tab (see Figure figure_composer_2_ a).
+If you change the view on the QGIS map canvas by zooming or panning or changing
+vector or raster properties, you can update the print composer view selecting
+the map element in the print composer and clicking the **[Update preview]** button
+in the map :guilabel:`Item Properties` tab (see Figure figure_composer_2_ a).
 
 Map item properties tab --- Grid and General options dialog
 -----------------------------------------------------------

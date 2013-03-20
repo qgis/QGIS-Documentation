@@ -195,9 +195,9 @@ Elements can be dragged to a different position within the canvas, to change the
 way the module structure is displayed and make it more clear and intuitive. Links
 between elements are update automatically.
 
-You can run your algorithm anytime clicking on the *Run* button. However, in order
-to use it from the toolbox, it has to be saved and the modeler dialog closed, to
-allow the toolbox to refresh its contents.
+You can run your algorithm anytime clicking on the **[Run]** button. However, in
+order to use it from the toolbox, it has to be saved and the modeler dialog
+closed, to allow the toolbox to refresh its contents.
 
 Saving and loading models
 -------------------------

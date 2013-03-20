@@ -122,11 +122,11 @@ are two ways of setting the target grid system:
 * Setting it manually. You define the extent setting the values of the following
   parameters:
 
-  - Resampling min X
-  - Resampling max X
-  - Resampling min Y
-  - Resampling max Y
-  - Resampling cellsize
+  - :guilabel:`Resampling min X`
+  - :guilabel:`Resampling max X`
+  - :guilabel:`Resampling min Y`
+  - :guilabel:`Resampling max Y`
+  - :guilabel:`Resampling cellsize`
 
   Notice that SEXTANTE will resample input layers to that extent, even if they
   do not overlap with it.
@@ -204,7 +204,7 @@ corresponding R commands to do so.
 
 Script files have the extension :file:`.rsx` and creating them is pretty easy
 if you just have a basic knowledge of R syntax and R scripting. They should be
-stored in the R scripts folder. You can set this folder in the :guilabel:`R`
+stored in the R-scripts folder. You can set this folder in the :guilabel:`R`
 settings group (available from the SEXTANTE settings dialog), just like you do
 with the folder for regular SEXTANTE scripts.
 
@@ -228,7 +228,7 @@ The first lines, which start with a double Python comment sign (``##``), tell
 SEXTANTE the inputs of the algorithm described in the file and the outputs that
 it will generate. They work exactly with the same syntax as the SEXTANTE scripts
 that we have already seen, so they will not be described here again. Check the
-corresponding section for more information.
+:ref:`sextante_scripts` section for more information.
 
 When you declare an input parameter, SEXTANTE uses that information for two
 things: creating the user interface to ask the user for the value of that

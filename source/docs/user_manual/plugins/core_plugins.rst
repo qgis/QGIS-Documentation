@@ -37,7 +37,7 @@ Icon                    Plugin                    Description                   
 |oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
 |plugin_installer|      Plugin Installer          Download and install python plugins                     :ref:`python_plugin_installer`
 |raster_terrain|        Raster Terrain Analysis   Compute geomorphological features from DEMs             :ref:`rasterrain`
-\                       Road graph Plugin         Shortest path analysis                                  :ref:`roadgraph`
+|roadgraph|             Road Graph Plugin         Shortest path analysis                                  :ref:`roadgraph`
 |spiticon|              SPIT                      Shapefile to PostGIS Import Tool                        :ref:`loading_postgis_data`
 |icon_sqlanywhere|      SQL Anywhere plugin       Access SQL anywhere DB                                  :ref:`sqlanywhere`
 |spatialquery|          Spatial Query             Spatial queries on vectors                              :ref:`spatial_query`

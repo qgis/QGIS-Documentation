@@ -698,6 +698,8 @@ rst_epilog = """
    :width: 1.5em
 .. |raster-stats| image:: /static/common/raster-stats.png
    :width: 1.5em
+.. |roadgraph| image:: /static/common/roadgraph.png
+   :width: 1.5em
 """
 
 
