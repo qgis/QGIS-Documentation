@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-23 14:06\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,7 @@ msgid "What is GDALTools?"
 msgstr ""
 
 # 49095a7672744aa68ba63a91912d097b
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:19
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:18
 msgid ""
 "The GDAL Tools plugin offers a GUI to the collection of tools in the "
 "Geospatial Data Abstraction Library, http://gdal.osgeo.org . These are "
@@ -39,13 +39,13 @@ msgid ""
 "These tools are available when the plugin is installed and activated."
 msgstr ""
 
-# fba3042e4b1b4d62a17569ee4c6ee9ea
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:28
-msgid "**The GDAL Library**"
+# 8556a51188424c72b865d41934fc7ae7
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:27
+msgid "The GDAL Library"
 msgstr ""
 
 # 184024e13e4947feaf06b8e5058c1a8a
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:30
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:29
 msgid ""
 "The GDAL library consists of a set of command line programs, each with a "
 "large list of options. Users comfortable with running commands from a "
@@ -55,22 +55,22 @@ msgid ""
 msgstr ""
 
 # 0d5d1b884b8f4889aeea583c87f95024
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:37
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:36
 msgid "List of GDAL tools"
 msgstr ""
 
 # 01939f0710614ff69ee3661c4c62fb0d
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:53
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:52
 msgid "Projections"
 msgstr ""
 
-# bb043769131046c2b43cdda23dd0eb17
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:55
-msgid "|gdal_warp|:guilabel:`Warp (Reproject)`"
+# 93d11157e08b46f6a55998556e75b726
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:54
+msgid "|gdal_warp| :guilabel:`Warp (Reproject)`"
 msgstr ""
 
 # d0e8ee8a7f8044fabb4a559d42691f46
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:55
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:54
 msgid ""
 "This utility is an image mosaicing, reprojection and warping utility. The "
 "program can reproject to any supported projection, and can also  apply GCPs "
@@ -79,64 +79,55 @@ msgid ""
 "gdalwarp.html"
 msgstr ""
 
-# 3d56c6a1ff0f46cda697734097f3ac92
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:62
-msgid "|gdal_assign_projection|:guilabel:`Assign projection`"
+# d80db43730524b85b6b2c270e6f232ed
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:61
+msgid "|gdal_assign_projection| :guilabel:`Assign projection`"
 msgstr ""
 
-# 8fddb857b2184336a208c5bb79cbd002
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:62
+# 1503ea08b09540669fe19ffbd0d4f31e
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:61
 msgid ""
-"This utility is an image mosaicing, reprojection and warping utility. The "
-"program can reproject to any supported projection, and can also apply GCPs "
-"stored with the image if the image is \"raw\" with control information.  ``-"
-"s_srs srs_def``: source spatial reference set. The coordinate systems that "
-"can be passed are anything supported by the OGRSpatialReference."
-"SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), "
-"PROJ.4 declarations (as above), or the name of a .prf file containing well "
-"known text.  ``-t_srs srs_def``: target spatial reference set. The "
-"coordinate systems that can be passed are anything supported by the "
-"OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and "
-"GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf "
-"file containing well known text. This utility is also described on the GDAL "
-"website http://www.gdal.org/gdalwarp.html"
+"This tool allows to assign projection to rasters that already georeferenced "
+"but miss projection information. Also with it help it is possible to alter "
+"existing projection definition. Both single file and batch mode are "
+"supported. For more information please visit utility page at GDAL site "
+"http://www.gdal.org/gdalwarp.html"
 msgstr ""
 
-# 39b3b93013084b45b791b007d29262d5
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:82
-msgid "|gdal_extract_projection|:guilabel:`Extract projection`"
+# c449e609fc804cd5a931decd7bba9b0c
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:69
+msgid "|gdal_extract_projection| :guilabel:`Extract projection`"
 msgstr ""
 
-# e762a28adfa844e78d6100bc9c26c82d
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:82
+# d0284d908414402cabd1c958b671e863
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:69
 msgid ""
-"This utility helps you to generate projection information from an input "
-"file. If you want to extract projection from a whole directory you can use "
-"the Batch mode. It's possible to create a .prj file from the input file. See "
-"also http://www.gdal.org/gdalwarp.html."
+"This utility helps you to extract projection information from an input file. "
+"If you want to extract projection from a whole directory you can use the "
+"Batch mode. It creates both :file:`.prj` and :file:`.wld` files."
 msgstr ""
 
 # eeee41e09eb94b588d2ed1f9489b4f5c
 # 61872f7d997246de9719d5a41621f1f4
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:91
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:134
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:156
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:206
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:77
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:120
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:136
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:186
 msgid "\\"
 msgstr ""
 
 # 23d577b74f1a4c2296dbb441e8e1c0a6
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:93
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:79
 msgid "Conversion"
 msgstr ""
 
-# 4b6876d06fce448287dc6d53a4c38a16
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:95
-msgid "|gdal_rasterize|:guilabel:`Rasterize`"
+# e56899ade4874077888245111e46e5ac
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:81
+msgid "|gdal_rasterize| :guilabel:`Rasterize`"
 msgstr ""
 
 # 431c9bb8d6cd45e498b78ce0fef5d08b
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:95
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:81
 msgid ""
 "This program burns vector geometries (points, lines and polygons) into the "
 "raster band(s) of a raster image. Vectors are read from OGR supported vector "
@@ -145,13 +136,13 @@ msgid ""
 "see http://www.gdal.org/gdal-rasterize.html"
 msgstr ""
 
-# 47fb2e30e5664d389cddf749071462ab
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:103
-msgid "|gdal_polygonize|:guilabel:`Polygonize`"
+# dd2590ff84a34ab5bfca56968147c477
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:89
+msgid "|gdal_polygonize| :guilabel:`Polygonize`"
 msgstr ""
 
 # bd1104e9f08b463da9083c2f320ba603
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:103
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:89
 msgid ""
 "This utility creates vector polygons for all connected regions of pixels in "
 "the raster sharing a common pixel value. Each polygon is created with an "
@@ -160,13 +151,13 @@ msgid ""
 "to ESRI shapefile format. See also http://www.gdal.org/gdal_polygonize.html"
 msgstr ""
 
-# 1847b592a4884de1bddfa86126e49501
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:112
-msgid "|gdal_translate|:guilabel:`Translate`"
+# 31775b469afa4a7ea5de60763b881243
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:98
+msgid "|gdal_translate| :guilabel:`Translate`"
 msgstr ""
 
 # 24b6e5cecacb449299c1bc6594c26aa1
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:112
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:98
 msgid ""
 "This utility can be used to convert raster data between different formats, "
 "potentially performing some operations like subsettings, resampling, and "
@@ -174,13 +165,13 @@ msgid ""
 "www.gdal.org/gdal_translate.html"
 msgstr ""
 
-# 7a319b4fedf243d188e926239f129c17
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:118
-msgid "|gdal_raster-rgb|:guilabel:`RGB to PCT`"
+# d2ded4c4b0bc48849bc5bc177bbcfcc1
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:104
+msgid "|gdal_raster-rgb| :guilabel:`RGB to PCT`"
 msgstr ""
 
 # f13b8e2e5c9e49eda0863b1bab412ad4
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:118
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:104
 msgid ""
 "This utility will compute an optimal pseudo-color table for a given RGB "
 "image using a median cut algorithm on a downsampled RGB histogram. Then it "
@@ -190,13 +181,13 @@ msgid ""
 "org/rgb2pct.html"
 msgstr ""
 
-# f2733a1c5b9b4eb1b859b2a20c2c26ba
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:127
-msgid "|gdal_raster-rgb|:guilabel:`PCT to RGB`"
+# 86809728c79345c6b044c6bd583cef37
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:113
+msgid "|gdal_raster-rgb| :guilabel:`PCT to RGB`"
 msgstr ""
 
 # 7daf3d787f7d403c8fe2ef5b3e1093d0
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:127
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:113
 msgid ""
 "This utility will convert a pseudocolor band on the input file into an "
 "output RGB file of the desired format. For more information see http://www."
@@ -204,52 +195,48 @@ msgid ""
 msgstr ""
 
 # f9af09297d764786abb5198a5c7a676c
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:136
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:122
 msgid "Extraction"
 msgstr ""
 
-# c03e8ebfc48a4a1ba1b418824af8071f
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:138
-msgid "|gdal_contour|:guilabel:`Contour`"
+# ebaba2fd519b469a85bd9716590db0e9
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:124
+msgid "|gdal_contour| :guilabel:`Contour`"
 msgstr ""
 
 # fde345cd55404ba9a7cb5c6b8caea26c
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:138
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:124
 msgid ""
 "This program generates a vector contour file from the input raster elevation "
 "model (DEM). On http://www.gdal.org/gdal_contour.html you can find more "
 "information."
 msgstr ""
 
-# c75ee2ed80f74be389e901f4f334a7b3
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:143
-msgid "|gdal_raster-clip|:guilabel:`Clipper`"
+# 3d652f4a0f634962a81769f0c71071a4
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:129
+msgid "|gdal_raster-clip| :guilabel:`Clipper`"
 msgstr ""
 
-# be66c55385694ee8af018f2e292292ef
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:143
+# be39b153619e4e1eb77ca1aceff02ed0
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:129
 msgid ""
-"This utility will automatically mosaic a set of images. All the images must "
-"be in the same coordinate system and have a matching number of bands, but "
-"they may be overlapping, and at different resolutions. In areas of overlap, "
-"the last image will be copied over earlier ones.  ``-ul_lr ulx uly lrx "
-"lry``: The extents of the output file. If not specified the aggregate "
-"extents of all input files will be used. The utility is also desribed on the "
-"gdal website http://www.gdal.org/gdal_translate.html ."
+"This utility allows to clip (extract subset) raster using selected extent or "
+"based on mask layer bounds. More information can be found at http://www.gdal."
+"org/gdal_translate.html."
 msgstr ""
 
 # 54724c071a5247ceaa64f844c0efad8f
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:158
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:138
 msgid "Analysis"
 msgstr ""
 
-# 2f7d05fa61534463abfad91aa1811064
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:160
-msgid "|gdal_sieve|:guilabel:`Sieve`"
+# 63ad92b9e5124e94b30bf868b7506504
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:140
+msgid "|gdal_sieve| :guilabel:`Sieve`"
 msgstr ""
 
 # 8b70970dc63445d58d65ee3406dc99a5
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:160
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:140
 msgid ""
 "This utility removes raster polygons smaller than a provided threshold size "
 "(in pixels) and replaces them with the pixel value of the largest neighbor "
@@ -258,13 +245,13 @@ msgid ""
 "gdal_sieve.html ."
 msgstr ""
 
-# c8ce90b73ac84d9596d970a4bec9cf61
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:168
-msgid "|gdal_nearblack|:guilabel:`Near Black`"
+# ed39c4c570084e0697ae76edb9e67375
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:148
+msgid "|gdal_nearblack| :guilabel:`Near Black`"
 msgstr ""
 
 # eaeb78577467471a93420b75d8c08a09
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:168
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:148
 msgid ""
 "This utility will scan an image and try to set all pixels that are nearly "
 "black (or nearly white) around the edge to exactly black (or white). This is "
@@ -273,13 +260,13 @@ msgid ""
 "nearblack.html ."
 msgstr ""
 
-# eeffb26cf8de42aa9c31d90fe4d077bd
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:176
-msgid "|gdal_fillnodata|:guilabel:`Fill nodata`"
+# 8b078882c398453a801bd756aba236f1
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:156
+msgid "|gdal_fillnodata| :guilabel:`Fill nodata`"
 msgstr ""
 
 # 399c21d7c03d4e9ebf841e9b943920ef
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:176
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:156
 msgid ""
 "This utility fills selection raster regions (usually nodata areas) by "
 "interpolation from valid pixels around the edges of the area. On http://www."
@@ -287,12 +274,12 @@ msgid ""
 msgstr ""
 
 # 873dcdb674cf4e0481fb34fdc35cd8ca
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:182
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:162
 msgid "|gdal_proximity|:guilabel:`Proximity`"
 msgstr ""
 
 # e50844f5f1624cff93f525f55db772b4
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:182
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:162
 msgid ""
 "This utility generates a raster proximity map indicating the distance from "
 "the center of each pixel to the center of the nearest pixel identified as a "
@@ -301,13 +288,13 @@ msgid ""
 "information see http://www.gdal.org/gdal_proximity.html ."
 msgstr ""
 
-# 7cf512cffa8f4ef1892cb5fb86b992b8
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:190
-msgid "|gdal_grid|:guilabel:`Grid`"
+# 1761d43dcaf5470fa9d08f5b455681d5
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:170
+msgid "|gdal_grid| :guilabel:`Grid`"
 msgstr ""
 
 # 74948bad9ae64f1282aeafb549384a37
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:190
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:170
 msgid ""
 "This utility creates regular grid (raster) from the scattered data read from "
 "the OGR datasource. Input data will be interpolated to fill grid nodes with "
@@ -315,13 +302,13 @@ msgid ""
 "also described on the GDAL website http://www.gdal.org/gdal_grid.html ."
 msgstr ""
 
-# de8dd133d0d34eb7a12acb5add33e375
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:197
-msgid "|gdal_dem|:guilabel:`DEM terrain models`"
+# 98a73c080f2f497cbb84749a94525c32
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:177
+msgid "|gdal_dem| :guilabel:`DEM terrain models`"
 msgstr ""
 
 # 90fbd5de888c4494950fb1084b8320bb
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:197
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:177
 msgid ""
 "Tools to analyze and visualize DEMs. It can create a shaded relief, a slope, "
 "an aspect, a color relief, a Terrain Ruggedness Index, a Topographic "
@@ -330,29 +317,29 @@ msgid ""
 msgstr ""
 
 # 94859fa0d20149b5a391806d52329ce7
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:208
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:188
 msgid "Miscellaneous"
 msgstr ""
 
-# 71232e23f4d2403393286c2189bf9522
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:210
-msgid "|gdal_vrt|:guilabel:`Build Virtual Raster`"
+# ad1b28f407ad4ab29fa76d34695c4036
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:190
+msgid "|gdal_vrt| :guilabel:`Build Virtual Raster`"
 msgstr ""
 
 # b4176cbb7f2e4d9991a011ae4089d957
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:210
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:190
 msgid ""
 "This program builds a VRT (Virtual Dataset) that is a mosaic of the list of "
 "input gdal datasets. See also http://www.gdal.org/gdalbuildvrt.html ."
 msgstr ""
 
-# 0883305501c648d49bd680b2c6f783f5
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:214
-msgid "|gdal_merge|:guilabel:`Merge`"
+# 5525bb5ee4f140d8ae7cf24ca5f3ff31
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:194
+msgid "|gdal_merge| :guilabel:`Merge`"
 msgstr ""
 
 # bd783680d84043c4b4f9748a1d58b3de
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:214
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:194
 msgid ""
 "This utility will automatically mosaic a set of images. All the images must "
 "be in the same coordinate system and have a matching number of bands, but "
@@ -361,38 +348,38 @@ msgid ""
 "described on http://www.gdal.org/gdal_merge.html ."
 msgstr ""
 
-# 99a0ccb52ea24cedb0ad3525f0c5ee52
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:222
-msgid "|raster-info|:guilabel:`Information`"
+# 7730dd84ad9f474a949e9a5b261800cd
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:202
+msgid "|raster-info| :guilabel:`Information`"
 msgstr ""
 
 # 31b7aca0988e4d50a9db3da7c63ea0b1
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:222
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:202
 msgid ""
 "This utility lists various information about a GDAL supported raster "
 "dataset. On http://www.gdal.org/gdalinfo.html you can find more information."
 msgstr ""
 
-# a5c692666968414da1c07ea086507911
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:227
-msgid "|gdal_raster-overview|:guilabel:`Build Overviews`"
+# 0cf7e5309a2a46dca9983eed5b9742f1
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:207
+msgid "|gdal_raster-overview| :guilabel:`Build Overviews`"
 msgstr ""
 
 # 971c520d67a7424da62c39118678bb3a
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:227
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:207
 msgid ""
 "The gdaladdo utility can be used to build or rebuild overview images for "
 "most supported file formats with one of several downsampling algorithms. For "
 "more information see http://www.gdal.org/gdaladdo.html ."
 msgstr ""
 
-# 010888dd37344dfaa65d4ecef5ac7739
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:232
-msgid "|gdal_tileindex|:guilabel:`Tile Index`"
+# f7d445eba2434a2e979095c1b1d30572
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:212
+msgid "|gdal_tileindex| :guilabel:`Tile Index`"
 msgstr ""
 
 # f1991e52e89346cbb896d3b6e70d6e5d
-#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:232
+#: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:212
 msgid ""
 "This utility builds a shapefile with a record for each input raster file, an "
 "attribute containing the filename, and a polygon geometry outlining the "
