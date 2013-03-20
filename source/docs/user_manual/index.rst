@@ -25,8 +25,7 @@ QGIS User Guide
         working_with_gps/index
         grass_integration/grass_integration
         osm/openstreetmap
-        ..commented sextante section because it is not part of the QGIS 1.8
-        ..sextante/index
+        sextante/index
         print_composer/print_composer
         plugins/plugins_index
         preamble/help_and_support
