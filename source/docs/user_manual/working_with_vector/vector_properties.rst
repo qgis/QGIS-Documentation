@@ -141,11 +141,11 @@ appropriately.
 **Working with the New Generation Symbology**
 
 
-In the :guilabel:`Style` tab you can choose one of the five renderers: single 
+In the :guilabel:`Style` tab you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each
 data type (points, lines and polygons) vector symbol layer types are available
 (see vector_symbol_types_). Depending on the chosen renderer, the symbology
-Depending on the chosen renderer, the :guilabel:`Style` tab provides different 
+Depending on the chosen renderer, the :guilabel:`Style` tab provides different
 following sections. The new generation symbology dialog also provides a
 **[Style Manager]** button which gives access to the Style Manager (see Section
 :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
@@ -157,7 +157,7 @@ existing symbols and add new ones.
 .. tip:: **Select and change multiple symbols**
 
    The New Generation Symbology allows to select multiple symbols and right
-   click to change color, transparency, size, or width of selected 
+   click to change color, transparency, size, or width of selected
    entries.
 
 .. index:: Single_Symbol_Renderer, Renderer_Single_Symbol
@@ -269,7 +269,7 @@ example of custom color ramp.
 
 The Graduated Renderer is used to render all the features from a layer, using
 a single user-defined symbol, whose color reflects the classification of a
-selected feature's attribute to a class. 
+selected feature's attribute to a class.
 
 
 .. _figure_symbology_4:
@@ -284,7 +284,7 @@ selected feature's attribute to a class.
 
    Graduated Symbolizing options |nix|
 
-Like Categorized Renderer, it allows 
+Like Categorized Renderer, it allows
 to define rotation and size scale from specified columns.
 
 Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to
@@ -1041,8 +1041,9 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 This completes the action and it is ready to use. The final text of the
 action should look like this:
 
-   ``firefox http://google.com/search?q=\%NAMES``
+::
 
+   firefox http://google.com/search?q=\%NAMES
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and

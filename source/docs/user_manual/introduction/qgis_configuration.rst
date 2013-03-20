@@ -304,14 +304,9 @@ http://doc.trolltech.com/4.5/qnetworkproxy.html#ProxyType-enum.
 You can modify the options according to your needs. Some of the changes may
 require a restart of QGIS before they will be effective.
 
-* |nix| settings are saved in a texfile: \$HOME/.config/QuantumGIS/qgis.conf
-* |osx| you can find your settings in:
-  \$HOME/Library/Preferences/org.qgis.qgis.plist
-* |win| settings are stored in the registry under:
-
-::
-
-   \HKEY\CURRENT_USER\Software\QuantumGIS\qgis
+* |nix| settings are saved in a text file: ``$HOME/.config/QuantumGIS/qgis.conf``
+* |osx| you can find your settings in: ``$HOME/Library/Preferences/org.qgis.qgis.plist``
+* |win| settings are stored in the registry under: ``HKEY\CURRENT_USER\Software\QuantumGIS\qgis``
 
 .. _sec_customization:
 

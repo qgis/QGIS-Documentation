@@ -131,8 +131,8 @@ the community. These plugins reside in the official plugins repository, and
 can be easily installed using the Python Plugin Installer (See Section
 :ref:`load_external_plugin`).
 
-What's new in the version 1.8
------------------------------
+What's new in the version |CURRENT|
+-----------------------------------
 
 Please note that this is a release in our 'cutting edge' release series. As such
 it contains new features and extends the programmatic interface over QGIS 1.0.x

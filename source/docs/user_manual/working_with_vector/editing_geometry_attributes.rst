@@ -57,7 +57,6 @@ The snapping tolerance setting affects all tools which work with tolerance.
    :menuselection:`Snapping options...` to enable and adjust snapping mode
    and tolerance on a layer basis (see figure_edit_1_ ).
 
-
 Note that this layer based snapping overrides the global snapping option
 set in the Digitizing tab. So if you need to edit one layer, and snap its
 vertices to another layer, then enable snapping only on the ``snap to``
@@ -115,7 +114,6 @@ and the arrow keys.
 Zooming and panning with the mouse wheel
 ........................................
 
-
 While digitizing you can press the mouse wheel to pan inside of the main
 window and you can roll the mouse wheel to zoom in and out on the map.
 For zooming place the mouse cursor inside the map area and roll it forward
@@ -127,7 +125,6 @@ tab under the :menuselection:`Settings -->` |mActionOptions|
 
 Panning with the arrow keys
 ...........................
-
 
 Panning the map during digitizing is possible with the arrow keys.
 Place the mouse cursor inside the map area and click on the right arrow key
@@ -155,7 +152,6 @@ polygon layers you can activate the column |checkbox|
 Enable topological editing
 ..........................
 
-
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
 and maintaining common boundaries in polygon mosaics. QGIS 'detects' a
 shared boundary in a polygon mosaic and you only have to move the vertex
@@ -165,7 +161,6 @@ once and |qg| will take care about updating the other boundary.
 
 Avoid intersections of new polygons
 ...................................
-
 
 The second topological option in the |checkbox| :guilabel:`Avoid Int.`
 column, called :guilabel:`Avoid intersections of new polygons` avoids
@@ -212,7 +207,7 @@ Using the basic digitizing tools you can perform the following functions:
 | |mActionFileSave|       | Save edits and continue       |                         |                                  |
 +-------------------------+-------------------------------+-------------------------+----------------------------------+
 
-  Table Editing: Vector layer basic editing toolbar
+Table Editing: Vector layer basic editing toolbar
 
 
 All editing sessions start by choosing the |mActionToggleEditing|
@@ -231,7 +226,6 @@ available.
 
    Remember to |mActionFileSave| :sup:`Save Edits` regularly. This will also
    check that your data source can accept all the changes.
-
 
 Adding Features
 ...............
@@ -288,7 +282,6 @@ move existing features.
 Node Tool
 .........
 
-
 For both PostgreSQL/PostGIS and shapefile-based layers, the
 |mActionNodeTool| :sup:`Node Tool` provides manipulation capabilites of
 feature vertices similar to CAD programs. It is possible to simply select
@@ -313,7 +306,6 @@ not be able to tell which vertex is being edited.
    choose |mActionOptions| :menuselection:`Options` from the
    :menuselection:`Settings` menu and click on the :guilabel:`Digitizing`
    tab and select the appropriate entry.
-
 
 Basic operations
 ................
@@ -409,10 +401,8 @@ make sure the schemas match.
    guarantee the geometry is identical. This is simply because there are
    small rounding-off errors involved when converting between projections.
 
-
 Deleting Selected Features
 ..........................
-
 
 If we want to delete an entire polygon, we can do that by first selecting the
 polygon using the regular |mActionSelect| :sup:`Select Single Feature` tool. You
@@ -435,10 +425,8 @@ currently selected features, meaning we can operate on more than one at a time.
    linked to a GDAL version 1.3.2 or greater. The OS X and Windows versions of
    |qg| available from the download site are built using GDAL 1.3.2 or higher.
 
-
 Saving Edited Layers
 ....................
-
 
 When a layer is in editing mode, any changes remain in the memory of |qg|.
 Therefore they are not committed/saved immediately to the data source or disk.
@@ -491,12 +479,11 @@ Advanced digitizing
 | |mActionMergeFeatures|  | Merge Attributes of Selected Features |                             |                      |
 +-------------------------+---------------------------------------+-----------------------------+----------------------+
 
-   Table Advanced Editing: Vector layer advanced editing toolbar
+Table Advanced Editing: Vector layer advanced editing toolbar
 
 
 Undo and Redo
 .............
-
 
 The |mActionUndo| :sup:`Undo` and |mActionRedo| :sup:`Redo` tools allow the
 user to undo or redo vector editing operations. There is also a dockable
@@ -529,7 +516,6 @@ after the selected operation.
 Simplify Feature
 ................
 
-
 The |mActionSimplify| :sup:`Simplify Feature` tool allows to reduce the
 number of vertices of a feature, as long as the geometry doesn't change.
 You need to select a feature, it will be highlighted by a red rubber band
@@ -541,7 +527,6 @@ the new, simplified geometry will be stored. If a feature cannot be simplified
 Add Ring
 ........
 
-
 You can create :index:`ring polygons` using the |mActionAddRing|
 :sup:`Add Ring` icon in the toolbar. This means inside an existing area it
 is possible to digitize further polygons, that will occur as a 'hole', so
@@ -551,14 +536,12 @@ as a ring polygon.
 Add Part
 ........
 
-
 You can |mActionAddIsland| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon has to be digitized outside
 the selected multipolygon.
 
 Delete Ring
 ...........
-
 
 The |mActionDeleteRing| :sup:`Delete Ring` tool allows to delete ring polygons
 inside an existing area. This tool only works with polygon layers. It doesn't
@@ -569,7 +552,6 @@ vertices of a ring, adjust the vertex edit tolerance.
 Delete Part
 ...........
 
-
 The |mActionDeletePart| :sup:`Delete Part` tool allows to delete parts from
 multifeatures (e.g. to delete polygons from a multipolygon feature). It won't
 delete the last part of the feature, this last part will stay untouched. This
@@ -578,7 +560,6 @@ select the vertices of a part, adjust the vertex edit tolerance.
 
 Reshape Features
 ................
-
 
 You can reshape line and polygon features using the |mActionReshape|
 :sup:`Reshape Features` icon on the toolbar. It replaces the line or polygon
@@ -604,7 +585,6 @@ the polygon with a right click.
    something to consider.
 
 
-
 Offset Curves
 .............
 
@@ -620,7 +600,6 @@ shown at the bottom left of the taskbar.
 Split Features
 ..............
 
-
 You can split features using the |mActionSplitFeatures| :sup:`Split Features`
 icon on the toolbar. Just draw a line across the feature you want to split.
 
@@ -628,7 +607,6 @@ icon on the toolbar. Just draw a line across the feature you want to split.
 
 Merge selected features
 .......................
-
 
 The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to merge
 features that have common boundaries and the same attributes.
@@ -638,7 +616,6 @@ features that have common boundaries and the same attributes.
 Merge attributes of selected features
 .....................................
 
-
 The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool
 allows to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
@@ -647,7 +624,6 @@ attributes without merging their boundaries.
 
 Rotate Point Symbols
 ....................
-
 
 .. % FIXME change, if support in new symbology is available, too
 
@@ -693,7 +669,6 @@ GRASS vector layers.
 Creating a new Shapefile layer
 ..............................
 
-
 To create a new Shape layer for editing, choose :menuselection:`New -->`
 |mActionNewVectorLayer| :menuselection:`New Shapefile Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New Vector Layer` dialog will be
@@ -733,7 +708,6 @@ same way as described in Section :ref:`sec_edit_existing_layer` above.
 
 Creating a new SpatiaLite layer
 ...............................
-
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
 |mActionNewVectorLayer| :menuselection:`New SpatiaLite Layer...` from the
@@ -775,7 +749,6 @@ closing the dialog when you click **[Apply]**.
 Working with the Attribute Table
 --------------------------------
 
-
 The :index:`attribute table` displays features of a selected layer. Each row
 in the table represents one map feature and each column contains a particular
 piece of information about the feature. Features in the table can be searched,
@@ -807,7 +780,6 @@ selected features are shown in the attribute table title.
 
 Selecting features in an attribute table
 ........................................
-
 
 **Each selected row** in the attribute table displays the attributes of a
 selected feature in the layer. If the set of features selected in the main
@@ -846,7 +818,6 @@ checkbox allows to select case sensitive.
 The other buttons at the bottom left of the attribute table window provide
 following functionality:
 
-
 * |mActionOpenTable| :sup:`Unselect all` also with :kbd:`Ctrl+U`
 * |mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`
 * |mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+S`
@@ -873,10 +844,8 @@ following functionality:
    :menuselection:`Settings --> Options -->` General tab |checkbox|
    :guilabel:`Copy geometry in WKT representation from attribute table`.
 
-
 Save selected features as new layer
 ...................................
-
 
 The selected features can be saved as any OGR supported vector format and
 also transformed into another Coordinate Reference System (CRS). Just open
@@ -884,7 +853,6 @@ the right mouse menu of the layer and click on :menuselection:`Save selection
 as -->` to define the name of the output file, its format and CRS (see Section
 :ref:`label_legend`). It is also possible to specify OGR creation options
 within the dialog.
-
 
 .. index:: Non_Spatial_Attribute_Tables
 

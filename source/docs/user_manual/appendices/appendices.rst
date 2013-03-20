@@ -8,13 +8,13 @@ Appendix
 
 .. _gpl_appendix:
 
-GNU GENERAL PUBLIC LICENSE
----------------------------
+GNU General Public License
+--------------------------
 
 Version 2, June 1991
 
 
-Copyright (C) 1989, 1991 Free Software Foundation, Inc.  
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.
 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA
 
 
@@ -102,12 +102,12 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
    also meet all of these conditions:
 
    a) You must cause the modified files to carry prominent notices stating
-      that you changed the files and the date of any change. 
+      that you changed the files and the date of any change.
 
    b) You must cause any work that you distribute or publish, that in whole
       or in part contains or is derived from the Program or any part thereof, to be
       licensed as a whole at no charge to all third parties under the terms of this
-      License. 
+      License.
 
    c) If the modified program normally reads commands interactively when run,
       you must cause it, when started running for such interactive use in the most
@@ -117,7 +117,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
       these conditions, and telling the user how to view a copy of this License.
       (Exception: if the Program itself is interactive but does not normally print
       such an announcement, your work based on the Program is not required to print
-      an announcement.) 
+      an announcement.)
 
    These requirements apply to the modified work as a whole. If identifiable
    sections of that work are not derived from the Program, and can be reasonably
@@ -144,21 +144,21 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
    a) Accompany it with the complete corresponding machine-readable source
       code, which must be distributed under the terms of Sections 1 and 2 above on a
-      medium customarily used for software interchange; or, 
+      medium customarily used for software interchange; or,
 
    b) Accompany it with a written offer, valid for at least three years, to
       give any third party, for a charge no more than your cost of physically
       performing source distribution, a complete machine-readable copy of the
       corresponding source code, to be distributed under the terms of Sections 1 and
-      2 above on a medium customarily used for software interchange; or, 
+      2 above on a medium customarily used for software interchange; or,
 
    c) Accompany it with the information you received as to the offer to
       distribute corresponding source code. (This alternative is allowed only for
       noncommercial distribution and only if you received the program in object code
-      or executable form with such an offer, in accord with Subsection b above.) 
+      or executable form with such an offer, in accord with Subsection b above.)
 
    The source code for a work means the preferred form of the work for making
-   modifications to it. For an executable work, complete source code means all 
+   modifications to it. For an executable work, complete source code means all
    the source code for all modules it contains, plus any associated interface
    definition files, plus the scripts used to control compilation and
    installation of the executable. However, as a special exception, the source
@@ -300,7 +300,7 @@ GNU Free Documentation License
   <http://fsf.org/>
 
 
-Everyone is permitted to copy and distribute verbatim copies of this 
+Everyone is permitted to copy and distribute verbatim copies of this
 license document, but changing it is not allowed.
 
 
@@ -768,7 +768,7 @@ license notices just after the title page:
 If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
 replace the "with ... Texts." line with this:
 
-    with the Invariant Sections being LIST THEIR TITLES, with the 
+    with the Invariant Sections being LIST THEIR TITLES, with the
     Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
 
 If you have Invariant Sections without Cover Texts, or some other

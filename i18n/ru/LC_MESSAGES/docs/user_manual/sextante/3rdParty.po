@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-17 22:00\n"
+"POT-Creation-Date: 2013-03-20 16:11\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,7 +44,7 @@ msgstr ""
 "приложений, которые вызываются из SEXTANTE. В настоящее время поддерживаются "
 "SAGA, GRASS, OTB (Orfeo Toolbox) и R, а также некоторые другие приложения, "
 "предоставляющие функции анализа пространственных данных. Алгоритмы, "
-"зависящие от внешних приложений, управлются своими провайдерами."
+"зависящие от внешних приложений, управляются своими провайдерами."
 
 # 127f51b43c654eb1a90e4676a892ddde
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:19
@@ -63,7 +63,7 @@ msgstr ""
 "построителя моделей, как и любой другой алгоритм SEXTANTE."
 
 # 806d290fa216479aa73edd0a1b4869f7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:26
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:25
 msgid ""
 "By default, all algorithms that rely on an external appplication not shipped "
 "with QGIS are not enabled. You can enable them in the SEXTANTE configuration "
@@ -77,7 +77,7 @@ msgstr ""
 "настройки SEXTANTE. Убедитесь, что соответствующее приложение уже "
 "установлено в системе. Активация провайдера алгоритмов без установки "
 "приложения, которое ему требуется, приведет к появлению алгоритмов в панели "
-"инструментов, но при попытке запуска вы получите ошибку."
+"инструментов, но при попытке запуска алгоритма вы получите ошибку."
 
 # bc0d7c631703441ba4d9b39084358646
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:32
@@ -97,12 +97,12 @@ msgstr ""
 "файлов приложения в системе."
 
 # df9fc05b421f4097991eda52e8dfadf8
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:41
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:40
 msgid "A note on file formats"
 msgstr "О форматах файлов"
 
 # e48f0d72c5374bad906f9f859fcb4390
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:43
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:42
 msgid ""
 "When using an external software, opening a file in QGIS does not mean that "
 "it can be opened and processed as well on that other software. In most "
@@ -125,7 +125,7 @@ msgstr ""
 "узнать что именно пошло не так."
 
 # 603ca1c6303d4794add09cfd310b01b2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:52
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:50
 #, fuzzy
 msgid ""
 "Using GRASS raster layers is, for instance, one case in which you might have "
@@ -140,7 +140,7 @@ msgstr ""
 "решением этой проблемы и надеемся оно будет доступно в ближайшее время)."
 
 # 8bfe07b90c594b479bb0e4a96de13ded
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:57
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:55
 msgid ""
 "You should, however, find no problems at all with vector layers, since "
 "SEXTANTE automatically converts from the original file format to one "
@@ -149,16 +149,16 @@ msgid ""
 "large size, so do not be surprised if it takes more to process a layer from "
 "a DB connection that one of a similar size stored in a shapefile."
 msgstr ""
-"С векторными слоями любыхз типов таких проблем возникать не должно, так как "
+"С векторными слоями любых типов таких проблем возникать не должно, так как "
 "SEXTANTE автоматически конвертирует их из исходного формата в формат, "
 "понимаемый внешним приложением, перед тем как выполнить алгоритм. Это "
-"увеличивает время обработки, и может потребовать длительное время для в "
-"случае больших слоёв. Так что не удивляйтесь, если обработка данных их базы "
-"данных будет длиться дольше, чем обработка аналогичных данных в формате "
-"shape-файлов."
+"увеличивает время обработки, и может потребовать длительное время в случае "
+"больших слоёв. Так что не удивляйтесь, если обработка данных их базы данных "
+"будет длиться дольше, чем обработка аналогичных данных в формате shape-"
+"файлов."
 
 # 6aa0f48bbc2d4dde9acb137ad55e73ce
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:65
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:62
 #, fuzzy
 msgid ""
 "Providers not using external applications can process any layer that you can "
@@ -167,8 +167,8 @@ msgstr ""
 "Провайдеры, не использующие внешние приложения, могут обрабатывать любые "
 "слои, открытые в QGIS, так как они открыты для анализа самой QGIS."
 
-# 294f345c82a1466c9dc66351a3337da2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:68
+# f7b7e8f85b7943d595f20ef6b22e32a3
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:65
 msgid ""
 "Regarding output formats, all formats supported by QGIS as output can be "
 "used, both for raster and vector layers. Some provider do not support "
@@ -177,22 +177,23 @@ msgid ""
 "if this conversion is needed, that might increase the processing time."
 msgstr ""
 
-# 464a81843058438db7e6eba5316cd2b3
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:70
+# b2ef2113bd4b4ad384a08010cf24e549
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:71
 msgid ""
 "If the extension of the filename specified when calling an algorithm does "
 "not match the extension of any of the formats supported by QGIS, then a "
 "suffix will be added to set a default format. In the case of raster layers, "
-"the ``tif`` extension is used, while `shp` is used for vector layer."
+"the :file:`tif` extension is used, while :file:`shp` is used for vector "
+"layer."
 msgstr ""
 
 # 956e339379694dbea17f4aad7b17d2c6
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:74
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:77
 msgid "A note on vector layer selections"
 msgstr "О выделении в векторных слоях"
 
-# 1f5eff2daea946eeb240b79c9a52b40e
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:76
+# 26fc2cdffeec4066b91a5a7278620560
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:79
 msgid ""
 "External applications are also aware of the selection that exist in vector "
 "layers within QGIS. However, that requires rewritting all input vector "
@@ -202,20 +203,20 @@ msgid ""
 "configuration, a layer can be directly passed to an external application."
 msgstr ""
 
-# 3ca35e849137476d8160911f094c842f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:78
+# a5bacd241fed416a9be8935d63e1611d
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:86
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "execution times to be longer."
 msgstr ""
 
 # e9540936d254452196666957a36b6e13
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:81
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:90
 msgid "SAGA"
 msgstr ""
 
 # cfe7cc0783da4b5f82393111603988e8
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:83
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:92
 msgid ""
 "SAGA algorithms can be run from SEXTANTE if you have SAGA installed in your "
 "system and you configure SEXTANTE properly so it can find SAGA executables. "
@@ -232,13 +233,13 @@ msgstr ""
 "установке можно найти на сайте SAGA. Поддерживаемая версия SAGA --- 2.0.8."
 
 # b1576e587c8049c4acfdacb886943d82
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:90
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:99
 msgid ""
 "Once SAGA is installed, and if you are running Windows, open the SEXTANTE "
-"configuration dialog. In the *SAGA* block you will find a setting named "
-"*SAGA Folder*. Enter the path to the folder where SAGA is installed. Close "
-"the configuration dialog and now you are ready to run SAGA algorithms from "
-"SEXTANTE."
+"configuration dialog. In the :guilabel:`SAGA` block you will find a setting "
+"named :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is "
+"installed. Close the configuration dialog and now you are ready to run SAGA "
+"algorithms from SEXTANTE."
 msgstr ""
 "После установки SAGA, если вы используете Windows, откройте диалог настройки "
 "SEXTANTE. В разделе :guilabel:`SAGA` найдите параметр :guilabel:`SAGA "
@@ -246,7 +247,7 @@ msgstr ""
 "Теперь вы можете запускать алгоритмы SAGA из SEXTANTE."
 
 # 05a555c74279422ea70cddacc5f1086c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:96
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:105
 msgid ""
 "In case you are using Linux, there is no need to configure that, and you "
 "will not see those folders. Instead, you must make sure that SAGA is "
@@ -260,12 +261,12 @@ msgstr ""
 "поверить, что система может найти файлы SAGA."
 
 # f9c5fc177bdd4908afc727b263063f21
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:104
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:112
 msgid "About SAGA grid system limitations"
 msgstr "Ограничения системы покрытий SAGA"
 
 # 223afda10b1c4f14a5cb244203ef8b42
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:106
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:114
 msgid ""
 "Most of SAGA algorithms that require several input raster layers, require "
 "them to have the same grid system. That is, to cover the same geographic "
@@ -283,10 +284,10 @@ msgstr ""
 "охвата. В случаях, когда несколько растров используется в качестве исходных "
 "данных алгоритма SAGA, SEXTANTE автоматически пересчитывает их в единую "
 "систему и затем передаёт SAGA (кроме случаев, когда соответствующий алгоритм "
-"SAGA может использовать слоис разными системами)."
+"SAGA может использовать слои с разными системами)."
 
 # 8fade0d15eab41bf8b57e81825f6eb38
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:115
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:122
 msgid ""
 "The definition of that common grid system is controlled by the user, and you "
 "will find several parameters in the SAGA group of the setting window to do "
@@ -296,43 +297,40 @@ msgstr ""
 "соответствующие настройки можно найти в разделе :guilabel:`SAGA` диалога "
 "параметров. Существует два способа задать целевую систему покрытия:"
 
-# 9c788ebef1e04ece981e09f27a73a84b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:119
-msgid "Setting it manually"
-msgstr "задать её вручную"
-
 # 15e182bcba8c47a69951005569586a1c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:121
-msgid ". You define the extent setting the values of the following parameters:"
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:126
+msgid ""
+"Setting it manually. You define the extent setting the values of the "
+"following parameters:"
 msgstr "Задать параметры охвата, установив следующие параметры:"
 
 # 6d5bf2a9b77440949eed15f737127c78
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:124
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:129
 msgid "Resampling min X"
 msgstr ""
 
 # 01922de25c5442738d62345f89299f1a
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:126
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:130
 msgid "Resampling max X"
 msgstr ""
 
 # 0076bb4752df48bebf464ef8561c3c2c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:128
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:131
 msgid "Resampling min Y"
 msgstr ""
 
 # bf5c3afb8721474d95921f6af17e3446
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:130
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:132
 msgid "Resampling max Y"
 msgstr ""
 
 # 0e447c11f7c545faab2507be378e3e1a
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:132
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:133
 msgid "Resampling cellsize"
 msgstr ""
 
 # f0438b2a4dcf40dca7fc5f3bf0160d4b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:134
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:135
 msgid ""
 "Notice that SEXTANTE will resample input layers to that extent, even if they "
 "do not overlap with it."
@@ -344,16 +342,17 @@ msgstr ""
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:137
 msgid ""
 "Setting it automatically from input layers. To select this option, just "
-"check the ’’Use min covering grid system for resampling’’ option. All the "
-"other settings will be ignored and the minimum extent that covers all the "
-"input layers will be used. The cellsize of the target layer is the maximum "
-"of all cellsizes of the input layers."
+"check the :guilabel:`Use min covering grid system for resampling` option. "
+"All the other settings will be ignored and the minimum extent that covers "
+"all the input layers will be used. The cellsize of the target layer is the "
+"maximum of all cellsizes of the input layers."
 msgstr ""
 "Установить автоматически из исходных слоёв. Для активации этого режима "
 "включите флажок :guilabel:`’Use min covering grid system for resampling`. "
 "Все остальные параметры в этом случае будут проигнорированы и будет "
-"использован минимальный охват, захватывающий всеисходные слои. Размер ячейки "
-"целевых слоёв будет равен максимальному размеру ячейки исходных растров."
+"использован минимальный охват, захватывающий все исходные слои. Размер "
+"ячейки целевых слоёв будет равен максимальному размеру ячейки исходных "
+"растров."
 
 # 6e2738aec2a4405aa65ab527e4299f74
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:143
@@ -373,19 +372,20 @@ msgstr "Ограничения многоканальных слоёв"
 
 # c4c05e09d1574cd4a9fdfd4631921593
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:150
+#, fuzzy
 msgid ""
 "Unlike QGIS, SAGA has no support for multi-band layers. If you want to use a "
-"multi-band layer (such as an RGB or multi-spectral image), you first have to "
-"split it into single-banded images. To do so, you can use the *SAGA/Grid - "
-"Tools/Split RGB image* algorithm (which creates 3 images from an RGB image) "
-"or the *SAGA/Grid - tools/Extract band* algorithm (to extract a single band)"
+"multiband layer (such as an RGB or multispectral image), you first have to "
+"split it into single-banded images. To do so, you can use the 'SAGA/Grid - "
+"Tools/Split RGB image' algorithm (which creates 3 images from an RGB image) "
+"or the 'SAGA/Grid - Tools/Extract band' algorithm (to extract a single band)."
 msgstr ""
 "В отличие от QGIS, SAGA не поддерживает многоканальные растры. Если "
 "требуется использовать многоканальное изображение (такое как RGB-растр или "
 "мультиспектральное изображение), вначале необходимо разделить его на "
-"одноканальные растры. Для этого можно использовать алгоритм *SAGA/Grid - "
-"Tools/Split RGB image* (создаёт 3 растра из RGB-композита) или *SAGA/Grid - "
-"tools/Extract band* (извлекает один канал)."
+"одноканальные растры. Для этого можно использовать алгоритм «SAGA/Grid - "
+"Tools/Split RGB image» (создаёт 3 растра из RGB-композита) или «SAGA/Grid - "
+"tools/Extract band» (извлекает один канал)."
 
 # 5a037f91c9bb405c9c58fc59ce088f96
 #: ../../source/docs/user_manual/sextante/3rdParty.rst:157
@@ -408,12 +408,12 @@ msgstr ""
 "информирующее о том, что исходный слой не подходит к использованию в SAGA."
 
 # 5582eea6163e4106a55ad8b16f4e147e
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:167
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:166
 msgid "Logging"
 msgstr "Логгирование"
 
 # 0055db94e0db4c7684ec364314d01fb7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:169
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:168
 msgid ""
 "When SEXTANTE calls SAGA, it does it using its command-line interface, thus "
 "passing a set of commands to perform all the required operation. SAGA show "
@@ -424,28 +424,30 @@ msgid ""
 msgstr ""
 "Когда SEXTANTE вызывает SAGA, она делает это с использованием интерфейса "
 "командной строки, т.е. передаёт набор команд, выполняющих необходимую "
-"операцию. SAGA отображает информацию о процессе, выводя сообщения на "
-"консоль, которые содержат данные о прогрессе выполнения, а также "
+"операцию. SAGA отображает информацию о процессе, выводя на консоль "
+"сообщения, которые содержат данные о прогрессе выполнения, а также "
 "дополнительные сведения. Эта информация фильтруется SEXTANTE и используется "
 "для обновления индикатора прогресса в процессе работы алгоритма."
 
 # 05ee937c789c4343b18c09ada63f3548
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:176
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:175
+#, fuzzy
 msgid ""
 "Both the commands sent by SEXTANTE and the additional information printed by "
 "SAGA can be logged along with other SEXTANTE log messages, and you might "
 "find them useful to track in detailed what is going on when SEXTANTE runs a "
-"SAGA algorithm. you will find two settings, namely *Log console output* and "
-"*Log execution commands*  to activate that logging mechanism."
+"SAGA algorithm. you will find two settings, namely :guilabel:`Log console "
+"output` and :guilabel:`Log execution commands` to activate that logging "
+"mechanism."
 msgstr ""
 "Команды, посылаемые SEXTANTE, а также информация, возвращаямая SAGA, могут "
 "записываться наряду с остальными сообщениями SEXTANTE. Эти сведения могут "
 "быть полезны для изучения того, как SEXTANTE взаимодействует с SAGA. За "
-"активацию логгирования отвечают два параметра --- *Log console output* and "
-"*Log execution commands*."
+"активацию логгирования отвечают два параметра --- :guilabel:`Log console "
+"output` and :guilabel:`Log execution commands`."
 
 # 55ad3e0cbae440c58cc9db1f6472515b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:182
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:181
 msgid ""
 "Most other providers that use an external application and call it through "
 "the command-line have similar options, so you will find them as well in "
@@ -456,12 +458,13 @@ msgstr ""
 "что вы можете встретить их и в других местах диалога настройки."
 
 # 66135d06a13d40a4aec212439977f95d
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:188
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:186
+#, fuzzy
 msgid "R. Creating R scripts"
-msgstr "R. Создание скриптов R"
+msgstr "R и скрипты R"
 
 # a244aee3a0b94a28afe72929b345a603
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:190
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:188
 msgid ""
 "R integration in SEXTANTE is different from that of SAGA in that there is "
 "not a predefined set of algorithms you can run (except for a few examples). "
@@ -480,12 +483,12 @@ msgstr ""
 "SEXTANTE (слои, таблицы)."
 
 # cda49548e17a40a89a424206ad127a48
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:198
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:195
 msgid ""
 "The first thing you have to do, as we saw in the case of SAGA, is to tell "
-"SEXTANTE where you R binaries are located. You can do so using the *R "
-"folder* entry in the SEXTANTE configuration dialog. Once you have set that "
-"parameter, you can start creating your own R scripts and executing them."
+"SEXTANTE where you R binaries are located. You can do so using the :guilabel:"
+"`R folder` entry in the SEXTANTE configuration dialog. Once you have set "
+"that parameter, you can start creating your own R scripts and executing them."
 msgstr ""
 "Прежде всего, как мы уже видели на примере SAGA, необходимо указать SEXTANTE "
 "где находятся исполнимые файлы R. Для этого предназначено поле :guilabel:`R "
@@ -493,18 +496,18 @@ msgstr ""
 "начинать создавать свои собственные скрипты R, а затем выполнять их."
 
 # 0103d2370ee047a1a67eb0ef09fd0753
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:204
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:200
 msgid ""
 "Once again, this is different in Linux, and you just have to make sure that "
 "the R folder is included in the PATH environment variable. If you can start "
 "R just typing ``R`` in a console, then you are ready to go."
 msgstr ""
-"И снова, в Linux всё значительно проще, достаточно убедиться, что R доступен "
+"И снова, в Linux всё значительно проще: достаточно убедиться, что R доступен "
 "в PATH. Если ыв можете запустить R просто введя в консоли ``R``, значит всё "
 "в порядке."
 
 # 440e8a1a5aa842c38570409f03a68481
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:208
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:204
 msgid ""
 "To add a new algorithm that calls an R function (or a more complex R script "
 "that you have developed and you would like to have available from SEXTANTE), "
@@ -517,13 +520,14 @@ msgstr ""
 "и содержащий соответствующие команды R."
 
 # a2b39b300b5c4652aff20bd8321c40cc
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:213
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:209
+#, fuzzy
 msgid ""
-"Script files have the extension ``rsx`` and creating them is pretty easy if "
-"you just have a basic knowledge of R syntax and R scripting. They should be "
-"stored in the R scripts folder. You can set this folder in the R settings "
-"group (available from the SEXTANTE settings dialog), just like you do with "
-"the folder for regular SEXTANTE scripts."
+"Script files have the extension :file:`.rsx` and creating them is pretty "
+"easy if you just have a basic knowledge of R syntax and R scripting. They "
+"should be stored in the R scripts folder. You can set this folder in the :"
+"guilabel:`R` settings group (available from the SEXTANTE settings dialog), "
+"just like you do with the folder for regular SEXTANTE scripts."
 msgstr ""
 "Файлы скриптов должны иметь расширение :file:`.rsx`, а создавать их при "
 "наличии базовых знаний синтаксиса R очень просто. Скрипты сохраняются в "
@@ -532,7 +536,7 @@ msgstr ""
 "каталога для обычных скриптов SEXTANTE."
 
 # 54e50d30c6a242afaa73f3c877432089
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:219
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:215
 msgid ""
 "Let’s have a look at a very simple file script file, which calls the R "
 "method ``spsample`` to create a random grid within the boundary of the "
@@ -549,7 +553,7 @@ msgstr ""
 "``maptools`` и особенно ``sp`` является обязательным."
 
 # f5ca025154f54541a360703432527886
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:236
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:231
 #, fuzzy
 msgid ""
 "The first lines, which start with a double Python comment sign (``##``), "
@@ -565,12 +569,12 @@ msgstr ""
 "будем. Обратитесь к соответствующему разделу за более подробной информацией."
 
 # e4440ddc1755401786251394074f912e
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:243
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:237
 msgid ""
 "When you declare an input parameter, SEXTANTE uses that information for two "
 "things: creating the user interface to ask the user for the value of that "
 "parameter and creating a corresponding R variable that can be later used as "
-"input for R commands"
+"input for R commands."
 msgstr ""
 "Когда вы описываете исходный параметр, SEXTANTE использует эту информацию "
 "для двух вещей: создания пользовательского интерфейса и для создания "
@@ -578,7 +582,7 @@ msgstr ""
 "R."
 
 # 96f292c815fc4772b0a8bcf45394ae52
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:248
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:242
 msgid ""
 "In the above example, we are declaring an input of type ``vector`` named "
 "``polyg``. When executing the algorithm, SEXTANTE will open in R the layer "
@@ -595,7 +599,7 @@ msgstr ""
 "использования зарезервированных слов R в качестве названий параметров)."
 
 # 573dbf6ad6d640e79c6867bf300664f1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:256
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:248
 #, fuzzy
 msgid ""
 "Spatial elements such as vector and raster layers are read using the "
@@ -611,7 +615,7 @@ msgstr ""
 "таблиц сохраняются как строки, содержащие имя выбранного поля."
 
 # c453503ba9c7402fae5b5925c52f4754
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:262
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:254
 msgid ""
 "Tables are opened using the ``read.csv()`` command. If a table entered by "
 "the user is not in CSV format, it will be converted prior to importing it in "
@@ -621,15 +625,15 @@ msgstr ""
 "создаётся пользователем и имеет формат, отличный от CSV, она будет "
 "соответствующим образом преобразована перед испортированием в R."
 
-# 4ec47b51bdfc4cf68c20e1f67a121936
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:266
+# 6e5a6412e39548e087151592015e9c9c
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:257
 msgid ""
 "Additionally, raster files can be read using the ``readGDAL()`` command "
 "instead of ``brick()``, by using the ``##usereadgdal``."
 msgstr ""
 
-# ab3f4c439c8c4f94b00b15a6e937dae7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:269
+# e48cea741b5d47409306a5559c2c1feb
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:260
 msgid ""
 "If you are an advanced user and do not want SEXTANTE to create the object "
 "representing the layer, you can use the ``##passfilename`` tag to tell "
@@ -639,7 +643,7 @@ msgid ""
 msgstr ""
 
 # 5f4b2d8bf07c4a019212fbb6d6cde98f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:275
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:265
 #, fuzzy
 msgid ""
 "With the above information, we can now understand the first line of our "
@@ -649,7 +653,7 @@ msgstr ""
 "примера, которая не начинается символом комментария Python."
 
 # 88f7903fbee84f2e9e14c825faf4e6e2
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:282
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:272
 msgid ""
 "The variable ``polygon`` already contains a ``SpatialPolygonsDataFrame`` "
 "object, so it can be used to call the ``spsample`` method, just like the "
@@ -661,7 +665,7 @@ msgstr ""
 "``numpoints``, которая содержит число точек для создания сетки."
 
 # 2c718545315144ab99adc646cb8d38c1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:287
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:276
 msgid ""
 "Since we have declared an output of type vector named ``out``, we have to "
 "create a variable named ``out`` and store a ``Spatial*DataFrame`` object in "
@@ -678,7 +682,7 @@ msgstr ""
 "описании, а также содержат значения правильного типа."
 
 # 943b0163d3ee4367a677c9277f6abe62
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:294
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:282
 #, fuzzy
 msgid ""
 "In this case, the result obtained from the ``spsample`` method has to be "
@@ -690,8 +694,8 @@ msgstr ""
 "преобразовать в объект ``SpatialPointsDataFrame``, так как изначально это "
 "экземпляр класса ``ppp``, который не подходит для возвращения SEXTANTE."
 
-# 40a0773f9fe047a18a4592869a430e8f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:299
+# e251d372eea843c89cb1f39293ed194e
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:286
 msgid ""
 "If your algorithm generates raster layers, the way they are saved will "
 "depend on whether you have used or not the ``#dontuserasterpackage`` option. "
@@ -699,36 +703,36 @@ msgid ""
 "not, the ``writeRaster()`` method from the ``raster`` package will be used."
 msgstr ""
 
-# e564ae063bea41d188b7a03309063e33
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:305
+# 27e7ef9420d44e64811d3d1668cccac5
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:291
 msgid ""
 "If you have used the ``#passfilename`` option, outputs are generated using "
-"the raster package(with ``writeRaster()``), even though it is not used for "
-"the inputs."
+"the ``raster`` package (with ``writeRaster()``), even though it is not used "
+"for the inputs."
 msgstr ""
 
 # 13e3fd15ca20488082d15af637cdcc63
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:309
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:295
 #, fuzzy
 msgid ""
 "If you algorithm does not generate any layer, but a text result in the "
 "console instead, you have to tell SEXTANTE that you want the console to be "
 "shown once the execution is finished. To do so, just start the command lines "
-"that produce the results you want to print with the “:math:`>`” sign. The "
-"output of all other lines will not be shown. For instance, here is the "
+"that produce the results you want to print with the ``>`` ('greater') sign. "
+"The output of all other lines will not be shown. For instance, here is the "
 "description file of an algorithm that performs a normality test on a given "
 "field (column) of the attributes of a vector layer:"
 msgstr ""
 "Если ваш алгоритм не создаёт никаких слоёв, а выдаёт текстовую информацию на "
 "консоль, необходимо указать SEXTANTE, что надо показать окно консоли после "
 "выполнения алгоритма. Для этого строки, отвечающие за вывод результата на "
-"консоль, должны начинаться с символа ``>``. Текст, выводимый другими "
-"командами отображаться не будет. Например, вот код алгоритма, выполняющего "
-"тест на нормальность заданного поля (столбца) атрибутивной таблицы "
-"векторного слоя:"
+"консоль, должны начинаться с символа ``>`` («больше»). Текст, выводимый "
+"другими командами отображаться не будет. Например, вот код алгоритма, "
+"выполняющего тест на нормальность заданного поля (столбца) атрибутивной "
+"таблицы векторного слоя:"
 
 # 082c652247584a64af68d83919ac8794
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:326
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:311
 msgid ""
 "The output ot the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by "
@@ -739,7 +743,7 @@ msgstr ""
 "SEXTANTE автоматически)."
 
 # 6ccd241af1d84f028fc3aa0d64baf5e7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:330
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:314
 msgid ""
 "If your algorithm creates any kind of graphics (using the ``plot()`` "
 "method), add the following line:"
@@ -748,16 +752,16 @@ msgstr ""
 "()``), добавьте следующую строку:"
 
 # b926562b392c4db189b92a821fce5f93
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:337
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:321
 msgid ""
 "This will cause SEXTANTE to redirect all R graphical outputs to a temporary "
-"file, which will be later opened once R execution has finished"
+"file, which will be later opened once R execution has finished."
 msgstr ""
 "Это заставит SEXTANTE сохранить все графические объекы во временный файл, "
 "который позже, после окончания обработки, будет открыт."
 
 # b01b101e6511400c8b76b4636810b5ea
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:340
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:324
 msgid ""
 "Both graphics and console results will be shown in the SEXTANTE results "
 "manager."
@@ -766,7 +770,7 @@ msgstr ""
 "SEXTANTE."
 
 # 6808ea63365440659b00d692bece8932
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:343
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:326
 msgid ""
 "For more information, please check the script files provided with SEXTANTE. "
 "Most of them are rather simple and will greatly help you understand how to "
@@ -777,15 +781,16 @@ msgstr ""
 "понимания того, как создавать свои собственные."
 
 # 7765269d61ba4ef0b6260bd7eab75fb0
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:347
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:332
+#, fuzzy
 msgid ""
-"A note about libraries: ``rgdal`` and ``maptools`` libraries are loaded by "
-"default so you do not have to add the corresponding *library()* commands "
-"(you have to make sure, however, that those two packages are installed in "
-"your R distribution). However, other additional libraries that you might "
-"need have to be explicitly loaded. Just add the necessary commands at the "
-"beginning of your script. You also have to make sure that the corresponding "
-"packages are installed in the R distribution used by SEXTANTE."
+"``rgdal`` and ``maptools`` libraries are loaded by default so you do not "
+"have to add the corresponding ``library()`` commands (you have to make sure, "
+"however, that those two packages are installed in your R distribution). "
+"However, other additional libraries that you might need have to be "
+"explicitly loaded. Just add the necessary commands at the beginning of your "
+"script. You also have to make sure that the corresponding packages are "
+"installed in the R distribution used by SEXTANTE."
 msgstr ""
 "Примечание: библиотеки ``rgdal`` и ``maptools`` загружаются по умолчанию, "
 "поэтому добавлять соответствующие команды ``library()`` нет необходимости "
@@ -797,18 +802,18 @@ msgstr ""
 "используемом SEXTANTE."
 
 # c123721966f947f0b13ecafeca04126f
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:357
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:341
 msgid "GRASS"
 msgstr ""
 
 # c7bf4d9fcee6495cbcbb508e03bcbad5
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:359
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:343
 msgid ""
 "Configuring GRASS is not much different from configuring SAGA. First, the "
 "path to the GRASS folder has to be defined, but only if you are running "
-"Windows. Additionaly, a shell interpreter (usually msys.exe, which can be "
-"found in most GRASS for Windows distributions) has to be defined and its "
-"path set up as well."
+"Windows. Additionaly, a shell interpreter (usually :file:`msys.exe`, which "
+"can be found in most GRASS for Windows distributions) has to be defined and "
+"its path set up as well."
 msgstr ""
 "Настройка GRASS мало чем отличается от настройки SAGA. Прежде всего "
 "необходимо указать путь к каталогу установки GRASS, но только в том случае, "
@@ -817,7 +822,7 @@ msgstr ""
 "в большинстве дистрибутивов GRASS для Windows) и его расположение."
 
 # 7ee0e23d81f643b589dc97b3f2a292be
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:365
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:349
 msgid ""
 "By default, SEXTANTE tries to configure its GRASS connector to use the GRASS "
 "distribution that ships along with QGIS. This should work without problems "
@@ -835,7 +840,7 @@ msgstr ""
 "работы алгоритмов требуется GRASS 6.4."
 
 # a06010b814894f309c2f9c0c365f569c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:372
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:356
 msgid ""
 "If you are running Linux, you just have to make sure that GRASS is correctly "
 "installed, and that it can be run without problem from a console."
@@ -844,14 +849,14 @@ msgstr ""
 "и запускается из командной строки без ошибок."
 
 # 727d98c3bf70499096c190e8d4e94c8b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:376
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:359
 msgid ""
 "GRASS algorithms use a region for calculations. This region can be defined "
 "manually using values similar to the ones found in the SAGA configuration, "
 "or automatically, taking the minimum extent that covers all the input layers "
 "used to execute the algorithm each time. If this is the behaviour you "
-"prefer, just check the *Use min covering region* option in the GRASS "
-"configuration parameters."
+"prefer, just check the :guilabel:`Use min covering region` option in the "
+"GRASS configuration parameters."
 msgstr ""
 "Алгоритмы GRASS выполняют операции над районом. Район может быть задан "
 "вручную, используя значения, схожие с параметрами настройки SAGA, или "
@@ -860,18 +865,18 @@ msgstr ""
 "covering region` в настройках провайдера GRASS."
 
 # 32f5d2f91a9c472283a58b12c14a7baf
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:383
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:366
 msgid ""
-"GRASS includes help files describing each algorithm. If you set the *GRASS "
-"help folder* parameter, SEXTANTE will open them when you use the *Show help* "
-"button from the parameters window of the algorithm."
+"GRASS includes help files describing each algorithm. If you set the :"
+"guilabel:`GRASS help folder` parameter, SEXTANTE will open them when you use "
+"the **[Show help]** button from the parameters window of the algorithm."
 msgstr ""
 "В состав GRASS входят файлы справки, описывающие каждый алгоритм. Если вы "
 "укажете путь к этому каталогу в поле :guilabel:`GRASS help folder`, SEXTANTE "
-"сможет открывать их по нажатию на кнопку **[Show help]** в окне амлгоритма."
+"сможет открывать их по нажатию на кнопку **[Show help]** в окне алгоритма."
 
 # d60fab181b4843b4905ffb475ab9cbbb
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:387
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:370
 msgid ""
 "The last parameter that has to be configured is related to the mapset. A "
 "mapset is needed to run GRASS, and SEXTANTE creates a temporary one for each "
@@ -885,12 +890,12 @@ msgstr ""
 "спроецированные."
 
 # f28379c43d184ba8b38b7d6a8f664831
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:394
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:376
 msgid "GDAL"
 msgstr ""
 
 # d91ab9b9baab46789ea9ddd322d9946e
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:396
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:378
 msgid ""
 "No additional configuration is needed to run GDAL algorithms, since it is "
 "already incorporated to QGIS and SEXTANTE can infere its configuration from "
@@ -900,12 +905,12 @@ msgstr ""
 "они уже включены в QGIS и SEXTANTE может получить необходимые данные от неё."
 
 # 673a5527d0794b8e849b5c070a595554
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:401
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:382
 msgid "Orfeo ToolBox"
 msgstr ""
 
 # 92de59ea6ac3440da8637b4d1756b79c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:403
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:384
 msgid ""
 "Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB "
 "installed in your system and configured SEXTANTE properly so it can find all "
@@ -921,20 +926,19 @@ msgstr ""
 "найти на сайте OTB."
 
 # 7828b00ee4d643deb6623bceb8913860
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:409
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:390
 msgid ""
 "Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog "
-"and configure OTB algorithm provider. In the *Orfeo Toolbox (image analysis)"
-"* block you will find all settings related to OTB. First ensure that "
-"algorithms are enabled and |checkbox| :guilabel:`Activate` is checked."
+"and configure OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image "
+"analysis)` block you will find all settings related to OTB. First ensure "
+"that algorithms are enabled."
 msgstr ""
 "После установки OTB запустите QGIS, откройте диалог настройки и "
 "сконфигурируйте провайдер OTB. Настройки находятся в группе :guilabel:`Orfeo "
-"Toolbox (image analysis)`. Прежде всего убедитесь, что провайдер активирован "
-"и|checkbox| :guilabel:`Activate` включен."
+"Toolbox (image analysis)`. Прежде всего убедитесь, что провайдер активирован."
 
 # 5255830e906a4f39b2b3a3180f9d9550
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:414
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:395
 msgid ""
 "Then configure path to the folder where OTB command-line tools and libraries "
 "are installed:"
@@ -943,70 +947,65 @@ msgstr ""
 "библиотекам:"
 
 # c5453fb2d83649b6bee9b52f8c9c1143
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:417
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:398
 msgid ""
-"|nix| usually *OTB applications folder* point to ``/usr/lib/otb/"
-"applications`` and *OTB command line tools folder* is ``/usr/bin``;"
+"|nix| usually :guilabel:`OTB applications folder` point to ``/usr/lib/otb/"
+"applications`` and :guilabel:`OTB command line tools folder` is ``/usr/bin``"
 msgstr ""
-"|nix| обычно *OTB applications folder* указывает на ``/usr/lib/otb/"
-"applications``, а *OTB command line tools folder* это ``/usr/bin``;"
+"|nix| обычно :guilabel:`OTB applications folder` указывает на ``/usr/lib/otb/"
+"applications``, а :guilabel:`OTB command line tools folder` это ``/usr/bin``"
 
 # c7fbed1d73bb405a9ab86f763c3961d1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:419
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:400
 msgid ""
 "|win| if you use OSGeo4W installer, than install ``otb-bin`` package and "
-"enter ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` as *OTB applications "
-"folder* and ``C:\\OSGeo4W\\bin`` as *OTB command line tools folder*;"
+"enter ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` as :guilabel:`OTB "
+"applications folder` and ``C:\\OSGeo4W\\bin`` as :guilabel:`OTB command line "
+"tools folder`"
 msgstr ""
 "|win| если вы используете установщик OSGeo4W, установите пакет ``otb-bin`` и "
-"укажите ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` в качестве *OTB "
-"applications folder*, а ``C:\\OSGeo4W\\bin`` в качестве *OTB command line "
-"tools folder*;"
+"укажите ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` в качестве :"
+"guilabel:`OTB applications folder`, а ``C:\\OSGeo4W\\bin`` в качестве :"
+"guilabel:`OTB command line tools folder`"
 
 # f859e7e38b6e415ebd5fe47b88b516c1
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:425
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:405
 msgid "TauDEM"
 msgstr ""
 
 # fafd2974950247faa4a766655f0e0205
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:426
-msgid "To use this plugin you need to install TauDEM command line tools."
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:407
+msgid "To use this provider you need to install TauDEM command line tools."
 msgstr ""
 "Для использования этого провайдера необходимо установить инструменты "
 "командной строкиTauDEM."
 
 # ff10d89cc2e74451a98442a81c0a97b9
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:429
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:410
 msgid "Windows"
 msgstr ""
 
 # 23b2079ded5548b5880ee7a974153ccd
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:431
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:412
 msgid ""
-"Please visit TauDEM homepage for installation instructions and precompiled "
-"binaries for 32bit and 64bit systems. NOTE: you need TauDEM 5.0.6 "
-"executables, version 5.2 currently not supported"
+"Please visit `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5.0/"
+"downloads.html>`_ for installation instructions and precompiled binaries for "
+"32bit and 64bit systems. **IMPORTANT**: you need TauDEM 5.0.6 executables, "
+"version 5.2 currently not supported."
 msgstr ""
 "Инструкция по установке, а также скомпилированные инструменты для 32-х и 64-"
-"х разрядных платформ находятся на домашней странице TauDEM. Примечание: "
-"необходимо загружать TauDEM версии 5.0.6, версия 5.2 в настоящее время не "
+"х разрядных платформ находятся на `домашней странице TauDEM <http://"
+"hydrology.usu.edu/taudem/taudem5.0/downloads.html>`_. **ВАЖНО**: необходимо "
+"загружать TauDEM версии 5.0.6, версия 5.2 в настоящее время не "
 "поддерживается."
 
-# 2e7765d016dd4e149bcb35a49dcc5994
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:435
-msgid ""
-"TauDEM homepage: http://hydrology.usu.edu/taudem/taudem5.0/downloads.html"
-msgstr ""
-"Домашняя страница TauDEM: http://hydrology.usu.edu/taudem/taudem5.0/"
-"downloads.html"
-
 # 3b8644018ef24baeaa08cebe1769e6a0
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:438
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:418
 msgid "Linux"
 msgstr ""
 
 # 27ad9dd300b04fd7a7adffc8e2e058c7
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:440
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:420
 msgid ""
 "There are no packages for most Linux distribution, so you should compile "
 "TauDEM by yourself. As TauDEM uses MPICH2, first install it using your "
@@ -1019,40 +1018,34 @@ msgstr ""
 "своего дистрибутива. Также TauDEM может работать с OpenMPI, так что можно "
 "установить его вместо MPICH2."
 
-# 2f63ba9799e44e8593282d10af7bcdeb
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:445
-msgid "Download TauDEM 5.0.6 source code and extract files in some folder"
-msgstr ""
-"Загрузите исходный код TauDEM 5.0.6 и распакуйте архив в какой-то каталог."
-
 # 8219d069f78d46b5bf339a4db7a6c153
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:447
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:424
 msgid ""
-"TauDEM sources: http://hydrology.usu.edu/taudem/taudem5.0/TauDEM5PCsrc_506."
-"zip"
+"Download TauDEM 5.0.6 `source code <http://hydrology.usu.edu/taudem/"
+"taudem5.0/TauDEM5PCsrc_506.zip>`_ and extract files in some folder."
 msgstr ""
-"Исходный код TauDEM: http://hydrology.usu.edu/taudem/taudem5.0/"
-"TauDEM5PCsrc_506.zip"
+"Загрузите `исходный код <http://hydrology.usu.edu/taudem/taudem5.0/"
+"TauDEM5PCsrc_506.zip>`_ TauDEM и распакуйте архив в какой-то каталог."
 
 # d88ff1e3e25c4dd9b61d06102945f130
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:449
-msgid "Open ``linearpart.h`` file and add after line"
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:427
+msgid "Open :file:`linearpart.h` file and add after line"
 msgstr "Откройте файл :file:`linearpart.h` и после строки"
 
 # b5f3a0dd7cd84a29938b3520203ef3eb
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:455
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:433
 msgid "add new line with"
 msgstr "добавьте новую строку"
 
 # 161151601ea142cdaa7af76db3bef06b
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:461
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:439
 msgid "so you'll get"
 msgstr "Т.е. у вас будет"
 
 # 39ae87f4eeec45fba746fc81022cde4c
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:468
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:446
 msgid ""
-"Save changes and close file. Now open ``tiffIO.h``, find line ``#include "
+"Save changes and close file. Now open :file:`tiffIO.h`, find line ``#include "
 "\"stdint.h\"`` and replace quotes (``\"\"``) with ``<>``, so you'll get"
 msgstr ""
 "Сохраните изменения и закройте файл. Теперь откройте файл file:`tiffIO.h`, "
@@ -1060,39 +1053,39 @@ msgstr ""
 "``<>``, т.е. у вас должно получиться"
 
 # 9a6f0b4ef2cc44ad87c222e68ef80b96
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:475
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:453
 msgid "Save changes and close file. Create build directory and cd into it"
 msgstr ""
 "Сохраните изменения и закройте файл. Создайте каталог сборки и перейдите в "
 "него."
 
 # 052036396aaf492abd790c21df38a522
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:482
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:460
 msgid "Configure your build with command"
 msgstr "Настройте параметры сборки при помощи команды"
 
 # 48b378e759f143d0af80f9d107f0c5e4
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:488
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:466
 msgid "and then compile"
 msgstr "и запустите компиляцию"
 
 # 7c8e85ae21fe40dab4d3e8e888bf6274
-#: ../../source/docs/user_manual/sextante/3rdParty.rst:494
+#: ../../source/docs/user_manual/sextante/3rdParty.rst:472
 msgid "Finaly, to install TauDEM into ``/usr/local/bin``, run"
 msgstr "Наконец, для установки TauDEM в `/usr/local/bin``, выполните"
 
 # 57adb55fc58b4e15b244f54a99fef5db
 #~ msgid ""
-#~ "Regarding output formats, raster layers can be saved as TIFF (.tif) "
-#~ "files, while vector layers are saved as shapefiles (.shp). These have "
-#~ "been chosen as the *lingua franca* between supported third party "
-#~ "applications and QGIS. If the output filename that you select is not one "
-#~ "of the above, it will be modified, adding the corresponding suffix, and "
-#~ "the default file format will be used."
+#~ "Regarding output formats, raster layers can be saved as TIFF (:file:`."
+#~ "tif`) files, while vector layers are saved as shapefiles (:file:`.shp`). "
+#~ "These have been chosen as the 'lingua franca' between supported third "
+#~ "party applications and QGIS. If the output filename that you select is "
+#~ "not one of the above, it will be modified, adding the corresponding "
+#~ "suffix, and the default file format will be used."
 #~ msgstr ""
 #~ "Что касается выходных форматов, то растровые данные сохраняются в формате "
 #~ "TIFF, а векторные --- как shape-файлы. Эти форматы были выбраны, так как "
-#~ "они являются *lingua franca* для QGIS и сторонних приложений. Если имя "
+#~ "они являются «ingua franca» для QGIS и сторонних приложений. Если имя "
 #~ "выходного файла не содержит соответствующего суффикса, будет добавлен "
 #~ "суффикс по умолчанию и использован формат по умолчанию."
 
@@ -1113,11 +1106,12 @@ msgstr "Наконец, для установки TauDEM в `/usr/local/bin``, �
 #~ msgid ""
 #~ "By default, when an external algorithm takes a vector layer, it will use "
 #~ "all its features, even if a selection exist in QGIS. You can make an "
-#~ "external algorithm aware of that selection by checking the *Use selected "
-#~ "features in external applications* item in the *General* settings group. "
-#~ "When you do so, each time you execute an external algorithm that uses a "
-#~ "vector layer, the selected features of that layer will be exported to a "
-#~ "new layer, and the algorithm will work with that new layer instead."
+#~ "external algorithm aware of that selection by checking the :guilabel:`Use "
+#~ "selected features in external applications` item in the :guilabel:"
+#~ "`General` settings group. When you do so, each time you execute an "
+#~ "external algorithm that uses a vector layer, the selected features of "
+#~ "that layer will be exported to a new layer, and the algorithm will work "
+#~ "with that new layer instead."
 #~ msgstr ""
 #~ "По умолчанию, когда внешнее приложение получает на обработку векторный "
 #~ "слой, используются все объекты, даже если в QGIS активно выделение. "
@@ -1137,3 +1131,19 @@ msgstr "Наконец, для установки TauDEM в `/usr/local/bin``, �
 #~ "Обратите внимание, что после активации этой настройки, слой без выделения "
 #~ "будет обрабатываться как слой со всеми выделенными объектами, а не как "
 #~ "пустой."
+
+# 9c788ebef1e04ece981e09f27a73a84b
+#~ msgid "Setting it manually"
+#~ msgstr "задать её вручную"
+
+# 2e7765d016dd4e149bcb35a49dcc5994
+#~ msgid ""
+#~ "TauDEM homepage: http://hydrology.usu.edu/taudem/taudem5.0/downloads.html"
+#~ msgstr ""
+#~ "Домашняя страница TauDEM: http://hydrology.usu.edu/taudem/taudem5.0/"
+#~ "downloads.html"
+
+# 2f63ba9799e44e8593282d10af7bcdeb
+#~ msgid "Download TauDEM 5.0.6 source code and extract files in some folder"
+#~ msgstr ""
+#~ "Загрузите исходный код TauDEM 5.0.6 и распакуйте архив в какой-то каталог."

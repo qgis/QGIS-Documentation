@@ -6,17 +6,17 @@
 Working with OGC Data
 *********************
 
-QGIS supports WMS and WFS as data sources. 
+QGIS supports WMS and WFS as data sources.
 
 What is OGC Data
 ================
 
 .. index:: Open_Geospatial_Consortium, OGC
 
-The Open Geospatial Consortium (OGC), is an international organization
-with more than 300 commercial, governmental, nonprofit and research
-organizations worldwide. Its members develop and implement standards for
-geospatial content and services, GIS data processing and exchange.
+The Open Geospatial Consortium (OGC), is an international organization with more
+than 300 commercial, governmental, nonprofit and research organizations worldwide.
+Its members develop and implement standards for geospatial content and services,
+GIS data processing and exchange.
 
 Describing a basic data model for geographic features an increasing number
 of specifications are developed to serve specific needs for interoperable
@@ -35,10 +35,9 @@ Important OGC specifications are:
 * **GML** --- Geography Markup Language
 
 OGC services are increasingly being used to exchange geospatial data between
-different GIS implementations and data stores.  QGIS can now deal with
-three of the above specifications, being SFS (through support of the
-PostgreSQL / PostGIS data provider, see Section :ref:`label_postgis`),
-WFS and WMS as a client.
+different GIS implementations and data stores. QGIS can now deal with three of
+the above specifications, being SFS (through support of the PostgreSQL / PostGIS
+data provider, see Section :ref:`label_postgis`), WFS and WMS as a client.
 
 .. _`ogc-wms`:
 
@@ -51,11 +50,11 @@ WMS Client
 .. _`ogc-wms-about`:
 
 Overview of WMS Support
-------------------------
+-----------------------
 
 QGIS currently can act as a WMS client that understands WMS 1.1, 1.1.1
-and 1.3 servers. It has particularly been tested against publicly
-accessible servers such as DEMIS.
+and 1.3 servers. It has particularly been tested against publicly accessible
+servers such as DEMIS.
 
 WMS servers act upon requests by the client (e.g. QGIS) for a raster map
 with a given extent, set of layers, symbolization style, and transparency.
@@ -77,22 +76,19 @@ server understands HTTP as the data transport mechanism.
 .. _`ogc-wms-servers`:
 
 Selecting WMS Servers
-----------------------
+---------------------
 
+The first time you use the WMS feature, there are no servers defined.
 
-The first time you use the WMS feature, there are no servers defined. 
-
-Begin by clicking the |mActionAddWmsLayer| :sup:`Add WMS layer`
-button inside the toolbar, or through the 
-:menuselection:`Layer --> Add WMS Layer...` menu.
+Begin by clicking the |mActionAddWmsLayer| :sup:`Add WMS layer` button inside the
+toolbar, or through the :menuselection:`Layer --> Add WMS Layer...` menu.
 
 The dialog :guilabel:`Add Layer(s) from a Server` for adding layers from
-the WMS server appears. You can add some servers to play with
-by clicking the **[Add default servers]** button. This will add two 
-WMS demo servers for you to use, the WMS servers of the DM Solutions Group and Lizardtech. 
-To define a new WMS server in the tab :guilabel:`Layers`, select the
-**[New]** button. Then enter the parameters to connect to your desired
-WMS server, as listed in table_OGC_1_:
+the WMS server appears. You can add some servers to play with by clicking the
+**[Add default servers]** button. This will add two WMS demo servers for you to
+use, the WMS servers of the DM Solutions Group and Lizardtech. To define a new
+WMS server in the tab :guilabel:`Layers`, select the **[New]** button. Then enter
+the parameters to connect to your desired WMS server, as listed in table_OGC_1_:
 
 .. _table_OGC_1:
 
@@ -120,23 +116,23 @@ WMS server, as listed in table_OGC_1_:
 |                                      | , use given URI from URL-field above                           |
 +--------------------------------------+----------------------------------------------------------------+
 
-Table OGC 1: WMS Connection Parameters 
+Table OGC 1: WMS Connection Parameters
 
 .. index:: Proxy, proxy-server
 
-If you need to set up a proxy-server to be able to receive WMS-services
-from the internet, you can add your proxy-server in the options. Choose
-menu :menuselection:`Settings --> Options` and click on the tab 
-:guilabel:`Network & Proxy`. There you can add your proxy-settings and enable them by
-setting the |checkbox| :guilabel:`Use proxy for web access`. Make sure that you select
-the correct proxy-type from the :menuselection:`Proxy type` dropdown menu.
+If you need to set up a proxy-server to be able to receive WMS-services from the
+internet, you can add your proxy-server in the options. Choose menu
+:menuselection:`Settings --> Options` and click on the tab :guilabel:`Network & Proxy`.
+There you can add your proxy-settings and enable them by setting the |checkbox|
+:guilabel:`Use proxy for web access`. Make sure that you select the correct
+proxy type from the :guilabel:`Proxy type` |selectstring| dropdown menu.
 
-Once the new WMS Server connection has been created, it will be preserved
-for future QGIS sessions.
+Once the new WMS Server connection has been created, it will be preserved for
+future QGIS sessions.
 
 
 .. tip:: **On WMS Server URLs**
-   
+
    Be sure, when entering in the WMS server URL, that you have the base URL.
    For example, you shouldn't have fragments such as ``request=GetCapabilities``
    or ``version=1.0.0`` in your URL.
@@ -146,18 +142,17 @@ for future QGIS sessions.
 Loading WMS Layers
 -------------------
 
-Once you have successfully filled in your parameters you can select the
-**[Connect]** button to retrieve the capabilities of the selected
-server. This includes the Image encoding, Layers, Layer Styles and
-Projections. Since this is a network operation, the speed of the response
-depends on the quality of your network connection to the WMS server. While
-downloading data from the WMS server, the download progress is visualized
-in the left bottom of the WMS Plugin dialog.
+Once you have successfully filled in your parameters you can use the
+**[Connect]** button to retrieve the capabilities of the selected server. This
+includes the Image encoding, Layers, Layer Styles and Projections. Since this is
+a network operation, the speed of the response depends on the quality of your
+network connection to the WMS server. While downloading data from the WMS server,
+the download progress is visualized in the left bottom of the WMS Plugin dialog.
 
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
-Your screen should now look a bit like figure_OGR_1_, which
-shows the response provided by the DM Solutions Group WMS server.
+Your screen should now look a bit like figure_OGR_1_, which shows the response
+provided by the DM Solutions Group WMS server.
 
 .. _figure_OGR_1:
 
@@ -173,13 +168,12 @@ shows the response provided by the DM Solutions Group WMS server.
 
 **Image Encoding**
 
-
 The :guilabel:`Image encoding` section now lists the formats that are supported
 by both the client and server. Choose one depending on your image accuracy
 requirements.
 
 .. tip:: **Image Encoding**
-   
+
    You will typically find that a WMS server offers you the choice of JPEG
    or PNG image encoding. JPEG is a lossy compression format, whereas PNG
    faithfully reproduces the raw raster data.
@@ -193,21 +187,20 @@ requirements.
 
 **Options**
 
-
 The Options field provides a text field where you can add a :guilabel:`Layer name`
 for the WMS-layer. This name will be presented in the legend after loading
 the layer.
 
-Below the layer name you can define :guilabel:`Tile size`, if you want to set tile 
+Below the layer name you can define :guilabel:`Tile size`, if you want to set tile
 sizes (eg. 256x256) to split up the WMS request into multiple requests.
 
 The :guilabel:`Feature limit for GetFeatureInfo` defines what features from
 the server to query.
 
-If you select a WMS from the list a field with the default projection, provided by the
-mapserver, appears. If the **[Change...]** button is active, you can click
-on it and change the default projection of the WMS to another CRS,
-provided by the WMS server.
+If you select a WMS from the list a field with the default projection, provided
+by the mapserver, appears. If the **[Change...]** button is active, you can click
+on it and change the default projection of the WMS to another CRS, provided by
+the WMS server.
 
 **Layer Order**
 
@@ -221,24 +214,22 @@ and transmitted to QGIS in one go.
 
 
 .. tip:: **WMS Layer Ordering**
-  
-   WMS layers rendered by a server are overlaid
-   in the order listed in the Layers section, from top to bottom of the
-   list. If you want to change the overlay order, you can use the
-   tab :guilabel:`Layer Order`.
+
+   WMS layers rendered by a server are overlaid in the order listed in the Layers
+   section, from top to bottom of the list. If you want to change the overlay
+   order, you can use the tab :guilabel:`Layer Order`.
 
 .. _`ogc-wms-transparency`:
 
 **Transparency**
 
-
-In this version of QGIS, the :guilabel:`Global transparency` setting from the :guilabel:`Layer Properties`
-is hard-coded to be always on, where available.
+In this version of QGIS, the :guilabel:`Global transparency` setting from the
+:guilabel:`Layer Properties` is hard-coded to be always on, where available.
 
 .. index:: WMS_layer_transparency
 
 .. tip:: **WMS Layer Transparency**
-  
+
   The availability of WMS image transparency depends on the image encoding
   used: PNG and GIF support transparency, whilst JPEG leaves it unsupported.
 
@@ -247,36 +238,33 @@ is hard-coded to be always on, where available.
 
 .. index:: Coordinate_Reference_System, SRS, CRS
 
-A Coordinate Reference System (CRS) is the OGC terminology for a QGIS
-Projection.
+A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
-Each WMS Layer can be presented in multiple CRSs, depending on the
-capability of the WMS server. You may notice that the *x* changes in the
-*Coordinate Reference System (x available)* header as you select and
-deselect layers from the :guilabel:`Layers section` tab.
+Each WMS Layer can be presented in multiple CRSs, depending on the capability of
+the WMS server. You may notice that the *x* changes in the *Coordinate Reference
+System (x available)* header as you select and deselect layers from the
+:guilabel:`Layers section` tab.
 
-To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3 
-in :ref:`label_projections` will appear. The main difference with the WMS version of 
-the screen is that only those CRSs supported by the WMS Server will be shown.
+To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3
+in :ref:`label_projections` will appear. The main difference with the WMS version
+of the screen is that only those CRSs supported by the WMS Server will be shown.
 
 .. tip:: **WMS Projections**
-   
-   For best results, make the WMS layer the first layer you add to your
-   project. This allows the project projection to inherit the CRS you used
-   to render the WMS layer. On-the-fly projection (see :ref:`label_projections`)
-   can then be used to fit any subsequent vector layers to the project
-   projection. In this version of QGIS, if you add a WMS layer later, and
-   give it a different CRS to the current project projection, unpredictable
-   results can occur.
+
+   For best results, make the WMS layer the first layer you add to your project.
+   This allows the project projection to inherit the CRS you used to render the
+   WMS layer. On-the-fly projection (see :ref:`label_projections`) can then be
+   used to fit any subsequent vector layers to the project projection. In this
+   version of QGIS, if you add a WMS layer later, and give it a different CRS to
+   the current project projection, unpredictable results can occur.
 
 .. _`serversearch`:
 
-Server-Search
---------------
+Server search
+-------------
 
-Within QGIS you can search for WMS-servers. Figure_OGC_2_ shows
-the tab :guilabel:`Server Search` with the :guilabel:`Add Layer(s) from a
-Server` dialog.
+Within QGIS you can search for WMS-servers. Figure_OGC_2_ shows the tab
+:guilabel:`Server Search` with the :guilabel:`Add Layer(s) from a Server` dialog.
 
 .. _Figure_OGC_2:
 
@@ -290,19 +278,17 @@ Server` dialog.
 
    Dialog for searching WMS servers after some keywords |nix|
 
-As you can see it is possible to enter a search-string in the text field
-and hit the :guilabel:`Search` button.
-After a short while the search result will be populated into the tab below
-the text field.
-Browse the result list and inspect your search results within the table.
-To visualize the results, select a table entry, press the :guilabel:`Add
-selected row to WMS-list` button and change back to the tab :guilabel:`Server`.
-QGIS automatically has updated your server list and the selected search
-result is already enabled in the list of saved WMS-servers in the :guilabel:`Layers` tab.
-You only need to request the list of layers by clicking the
-**[Connect]** button.
-This option is quite handy when you want to search maps by specific
-keywords.
+As you can see it is possible to enter a search-string in the text field and hit
+the **[Search]** button. After a short while the search result will be populated
+into the list below the text field. Browse the result list and inspect your search
+results within the table. To visualize the results, select a table entry, press
+the **[Add selected row to WMS-list]** button and change back to the tab
+:guilabel:`Layers`. QGIS automatically has updated your server list and the
+selected search result is already enabled in the list of saved WMS-servers in
+the :guilabel:`Layers` tab. You only need to request the list of layers by clicking
+the **[Connect]** button. This option is quite handy when you want to search maps
+by specific keywords.
+
 Basically this option is a frontend to the API of http://geopole.org.
 
 .. _`tilesets`:
@@ -312,12 +298,11 @@ Tilesets
 
 .. index:: WMS_tiles, WMS-C
 
-When using WMS-C (Cached WMS) Services like
-http://labs.metacarta.com/wms-c/Basic.py you are able to browse through
-the tab :guilabel:`Tilesets` given by the server. Additional information like
-tile size, formats and supported CRS are listed in this table.
-In combination with this feature you can use the tile scale slider from
-the :menuselection:`View --> Tile scale slider`, which gives you the
+When using WMS-C (Cached WMS) Services like http://labs.metacarta.com/wms-c/Basic.py
+you are able to browse through the tab :guilabel:`Tilesets` given by the server.
+Additional information like tile size, formats and supported CRS are listed in
+this table. In combination with this feature you can use the tile scale slider
+from the :menuselection:`View --> Tile scale slider`, which gives you the
 available scales from the tileserver with nice slider docked in.
 
 .. _`ogc-wms-identify`:
@@ -327,12 +312,11 @@ Using the Identify Tool
 
 .. index:: WMS_identify
 
-Once you have added a WMS server, and if any layer from a WMS server is
-queryable, you can then use the |mActionIdentify| :sup:`Identify`
-tool to select a pixel on the map canvas. A query is made to the WMS
-server for each selection made.
-The results of the query are returned in plain text. The formatting of
-this text is dependent on the particular WMS server used.
+Once you have added a WMS server, and if any layer from a WMS server is queryable,
+you can then use the |mActionIdentify| :sup:`Identify` tool to select a pixel on
+the map canvas. A query is made to the WMS server for each selection made.
+The results of the query are returned in plain text. The formatting of this text
+is dependent on the particular WMS server used.
 
 .. _`ogc-wms-properties`:
 
@@ -341,105 +325,99 @@ this text is dependent on the particular WMS server used.
 
 .. index:: WMS_properties
 
-Once you have added a WMS server, you can view its properties by
-right-clicking on it in the legend, and selecting :menuselection:`Properties`.
+Once you have added a WMS server, you can view its properties by right-clicking
+on it in the legend, and selecting :menuselection:`Properties`.
 
 .. _`ogc-wms-properties-metadata`:
 
 **Metadata Tab**
 
-
 .. index:: WMS_metadata
 
 The tab :guilabel:`Metadata` displays a wealth of information about the WMS
 server, generally collected from the Capabilities statement returned from
-that server.
-Many definitions can be gleaned by reading the 
-WMS standards (see OPEN-GEOSPATIAL-CONSORTIUM :ref:`literature_and_web`), 
-but here are a few handy definitions:
+that server. Many definitions can be cleaned by reading the WMS standards (see
+OPEN-GEOSPATIAL-CONSORTIUM :ref:`literature_and_web`), but here are a few handy
+definitions:
 
 * **Server Properties**
 
   - **WMS Version** --- The WMS version supported by the server.
-  - **Image Formats** --- The list of MIME-types the server can respond
-    with when drawing the map.  QGIS supports whatever formats the
-    underlying Qt libraries were built with, which is typically at least
-    ``image/png`` and ``image/jpeg``.
+  - **Image Formats** --- The list of MIME-types the server can respond with
+    when drawing the map. QGIS supports whatever formats the underlying Qt
+    libraries were built with, which is typically at least ``image/png`` and
+    ``image/jpeg``.
   - **Identity Formats** --- The list of MIME-types the server can respond
-    with when you use the Identify tool.  Currently QGIS supports the
+    with when you use the Identify tool. Currently QGIS supports the
     ``text-plain`` type.
 
 * **Layer Properties**
 
-  - **Selected** --- Whether or not this layer was selected when its 
-    server was added to this project.
-  - **Visible** --- Whether or not this layer is selected as visible in
-    the legend. (Not yet used in this version of QGIS.)
+  - **Selected** --- Whether or not this layer was selected when its server was
+    added to this project.
+  - **Visible** --- Whether or not this layer is selected as visible in the
+    legend. (Not yet used in this version of QGIS.)
   - **Can Identify** --- Whether or not this layer will return any results
     when the Identify tool is used on it.
-  - **Can be Transparent** --- Whether or not this layer can be rendered
-    with transparency. This version of QGIS will always use transparency
-    if this is ``Yes`` and the image encoding supports transparency
-  - **Can Zoom In** --- Whether or not this layer can be zoomed in by the
-    server. This version of QGIS assumes all WMS layers have this set to
-    ``Yes``. Deficient layers may be rendered strangely.
-  - **Cascade Count** --- WMS servers can act as a proxy to other WMS
-    servers to get the raster data for a layer.  This entry shows how many
-    times the request for this layer is forwarded to peer WMS servers for
-    a result.
-  - **Fixed Width, Fixed Height** --- Whether or not this layer has fixed
-    source pixel dimensions. This version of QGIS assumes all WMS layers
-    have this set to nothing. Deficient layers may be rendered strangely.
+  - **Can be Transparent** --- Whether or not this layer can be rendered with
+    transparency. This version of QGIS will always use transparency if this is
+    ``Yes`` and the image encoding supports transparency
+  - **Can Zoom In** --- Whether or not this layer can be zoomed in by the server.
+    This version of QGIS assumes all WMS layers have this set to ``Yes``.
+    Deficient layers may be rendered strangely.
+  - **Cascade Count** --- WMS servers can act as a proxy to other WMS servers to
+    get the raster data for a layer. This entry shows how many times the request
+    for this layer is forwarded to peer WMS servers for a result.
+  - **Fixed Width, Fixed Height** --- Whether or not this layer has fixed source
+    pixel dimensions. This version of QGIS assumes all WMS layers have this set
+    to nothing. Deficient layers may be rendered strangely.
   - **WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84
-    coordinates. Some WMS servers do not set this correctly (e.g. UTM
-    coordinates are used instead). If this is the case, then the initial
-    view of this layer may be rendered with a very ``zoomed-out`` appearance
-    by QGIS. The WMS webmaster should be informed of this error, which
-    they may know as the WMS XML elements ``LatLonBoundingBox``,
-    ``EX_GeographicBoundingBox`` or the CRS:84 ``BoundingBox``.
+    coordinates. Some WMS servers do not set this correctly (e.g. UTM coordinates
+    are used instead). If this is the case, then the initial view of this layer
+    may be rendered with a very 'zoomed-out' appearance by QGIS. The WMS webmaster
+    should be informed of this error, which they may know as the WMS XML elements
+    ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` or the CRS:84 ``BoundingBox``.
   - **Available in CRS** --- The projections that this layer can be rendered
     in by the WMS server. These are listed in the WMS-native format.
-  - **Available in style** --- The image styles that this layer can be
-    rendered in by the WMS server.
+  - **Available in style** --- The image styles that this layer can be rendered
+    in by the WMS server.
 
 .. _`ogc-wms-limits`:
 
 WMS Client Limitations
------------------------
-
+----------------------
 
 Not all possible WMS Client functionality had been included in this version
 of QGIS. Some of the more notable exceptions follow.
 
 **Editing WMS Layer Settings**
 
-Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer`
-procedure, there is no ability to change the settings.
-A workaround is to delete the layer completely and start again.
+Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer` procedure,
+there is no ability to change the settings. A workaround is to delete the layer
+completely and start again.
 
 **WMS Servers Requiring Authentication**
 
-Currently public accessible and secured WMS-services are supported.
-The secured WMS-servers can be accessed by public authentication. You
-can add the (optional) credentials when you add a WMS-server. See section
-:ref:`ogc-wms-servers` for details.
+Currently public accessible and secured WMS-services are supported. The secured
+WMS-servers can be accessed by public authentication. You can add the (optional)
+credentials when you add a WMS-server. See section :ref:`ogc-wms-servers` for
+details.
 
 .. index:: InteProxy, Secured_OGC_Authentication
 
 .. tip:: **Accessing secured OGC-layers**
-  
-   If you need to access secured layers with other secured methods than
-   basic authentication, you could use InteProxy as a transparent proxy,
-   which does support several authentication methods. More information can
-   be found at the InteProxy-manual found on the website
-   http://inteproxy.wald.intevation.org.
+
+   If you need to access secured layers with other secured methods than basic
+   authentication, you could use InteProxy as a transparent proxy, which does
+   support several authentication methods. More information can be found at the
+   InteProxy manual found on the website http://inteproxy.wald.intevation.org.
 
 .. index:: QGIS_mapserver, WMS_1.3.0
 
 .. tip:: **QGIS WMS Mapserver**
 
-   From Version 1.7.0 QGIS has its own implementation of
-   a WMS 1.3.0 Mapserver. Read more about this at chapter :ref:`label_qgisserver`.
+   From Version 1.7.0 QGIS has its own implementation of a WMS 1.3.0 Mapserver.
+   Read more about this at chapter :ref:`label_qgisserver`.
 
 .. _`ogc-wfs`:
 
@@ -448,11 +426,11 @@ WFS and WFS-T Client
 
 .. index:: WFS, WFS-T, WFS_Transactional
 
-In QGIS, a WFS layer behaves pretty much like any other vector layer. You
-can identify and select features and view the attribute table. Since QGIS
-1.6 editing (WFS-T) is also supported.
+In QGIS, a WFS layer behaves pretty much like any other vector layer. You can
+identify and select features and view the attribute table. Since QGIS 1.6 editing
+(WFS-T) is also supported.
 
-In general adding a WFS layer is very similar to the procedure used with WMS. 
+In general adding a WFS layer is very similar to the procedure used with WMS.
 The difference is there are no default servers defined, so we have to add our own.
 
 **Loading a WFS Layer**
@@ -464,16 +442,17 @@ The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap
 #. Click on the |wfs| :sup:`Add WFS Layer` tool on the
    Layers toolbar, the dialog :guilabel:`Add WFS Layer from a Server` appears
 #. Click on **[New]**
-#. Enter ``DM Solutions`` as name
+#. Enter 'DM Solutions' as name
 #. Enter the URL (see above)
 #. Click **[OK]**
-#. Choose :guilabel:`Server Connections DM Solutions` |selectstring| from the dropdown box
+#. Choose 'DM Solutions' from the dropdown list :guilabel:`Server Connections`
+   |selectstring|
 #. Click **[Connect]**
 #. Wait for the list of layers to be populated
 #. Select the :guilabel:`Parks` layer in the list
 #. Click **[Apply]** to add the layer to the map
 
-Note that proxy-settings you have set in your preferences are also recognized.
+Note that proxy settings you have set in your preferences are also recognized.
 
 .. _figure_OGC_3:
 
@@ -491,8 +470,8 @@ Note that proxy-settings you have set in your preferences are also recognized.
    loading of features is allready prevented by default when it is not
    the first layer loaded? This needs to be checked..
 
-.. Without using the checkbox |checkbox| 
-.. :guilabel:`Only request features overlapping the current view extent` 
+.. Without using the checkbox |checkbox|
+.. :guilabel:`Only request features overlapping the current view extent`
 .. QGIS fetches all features from the WFS-server. If you
 .. only want to have a small selection based on your extent, zoom to the area
 .. of interest, request the WFS-layer again and make sure you have checked
@@ -501,19 +480,18 @@ Note that proxy-settings you have set in your preferences are also recognized.
 .. useful when you only want to request **some** features from a huge
 .. WFS-dataset.
 
-You'll notice the download progress is visualized in the left bottom of
-the QGIS main window. Once the layer is loaded, you can identify and
-select a province or two and view the attribute table.
+You'll notice the download progress is visualized in the left bottom of the QGIS
+main window. Once the layer is loaded, you can identify and select a province or
+two and view the attribute table.
 
-Only WFS 1.0.0 is supported. At this point there have not
-been many tests against WFS versions implemented in other WFS-servers.
-If you encounter problems with any other WFS-server, please do not
-hesitate to contact the development team. Please refer to Section
-:ref:`label_helpsupport` for further information about the mailinglists.
-
+Only WFS 1.0.0 is supported. At this point there have not been many tests against
+WFS versions implemented in other WFS-servers. If you encounter problems with any
+other WFS-server, please do not hesitate to contact the development team. Please
+refer to Section :ref:`label_helpsupport` for further information about the
+mailinglists.
 
 .. tip:: **Finding WFS Servers**
-  
-   You can find additional WFS servers by using Google or your favorite
-   search engine. There are a number of lists with public URLs, some of
-   them maintained and some not.
+
+   You can find additional WFS servers by using Google or your favorite search
+   engine. There are a number of lists with public URLs, some of them maintained
+   and some not.

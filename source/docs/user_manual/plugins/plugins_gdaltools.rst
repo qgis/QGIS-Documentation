@@ -11,7 +11,6 @@ GDAL Tools Plugin
 What is GDALTools?
 ------------------
 
-
 The GDAL Tools plugin offers a GUI to the collection of tools in the Geospatial
 Data Abstraction Library, http://gdal.osgeo.org . These are raster management
 tools to query, re-project, warp and merge a wide variety of raster formats. Also
@@ -20,8 +19,8 @@ a raster DEM, and to make a vrt (Virtual Raster Tile in XML format) from a
 collection of one or more raster files. These tools are available when the
 plugin is installed and activated.
 
-
-**The GDAL Library**
+The GDAL Library
+................
 
 The GDAL library consists of a set of command line programs, each with a large
 list of options. Users comfortable with running commands from a terminal may
@@ -55,25 +54,13 @@ Projections
 |                                                        | information. For more information you can read on    |
 |                                                        | the GDAL website http://www.gdal.org/gdalwarp.html   |
 +--------------------------------------------------------+------------------------------------------------------+
-| |gdal_assign_projection| :guilabel:`Assign projection` | This utility is an image mosaicing, reprojection and |
-|                                                        | warping utility. The program can reproject to any    |
-|                                                        | supported projection, and can also apply GCPs stored |
-|                                                        | with the image if the image is "raw" with control    |
-|                                                        | information.  ``-s_srs srs_def``: source spatial     |
-|                                                        | reference set. The coordinate systems that can be    |
-|                                                        | passed are anything supported by the                 |
-|                                                        | OGRSpatialReference.SetFromUserInput() call, which   |
-|                                                        | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4  |
-|                                                        | declarations (as above), or the name of a .prf file  |
-|                                                        | containing well known text.  ``-t_srs srs_def``:     |
-|                                                        | target spatial reference set. The coordinate systems |
-|                                                        | that can be passed are anything supported by the     |
-|                                                        | OGRSpatialReference.SetFromUserInput() call, which   |
-|                                                        | includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4  |
-|                                                        | declarations (as above), or the name of a .prf file  |
-|                                                        | containing well known text. This utility is also     |
-|                                                        | described on the GDAL website                        |
-|                                                        | http://www.gdal.org/gdalwarp.html                    |
+| |gdal_assign_projection| :guilabel:`Assign projection` | This tool allows to assign projection to rasters that|
+|                                                        | already georeferenced but miss projection            |
+|                                                        | information. Also with it help it is possible to     |
+|                                                        | alter existing projection definition. Both single    |
+|                                                        | file and batch mode are supported. For more          |
+|                                                        | information please visit utility page at GDAL site   |
+|                                                        | http://www.gdal.org/gdalwarp.html                                                     |
 +--------------------------------------------------------+------------------------------------------------------+
 | |gdal_extract_projection|                              | This utility helps you to extract projection         |
 | :guilabel:`Extract projection`                         | information from an input file. If you want to       |
@@ -135,16 +122,10 @@ Extraction
 |                                                        | On http://www.gdal.org/gdal_contour.html you can find |
 |                                                        | more information.                                     |
 +--------------------------------------------------------+-------------------------------------------------------+
-||gdal_raster-clip| :guilabel:`Clipper`                  | This utility will automatically mosaic a set of       |
-|                                                        | images. All the images must be in the same coordinate |
-|                                                        | system and have a matching number of bands, but they  |
-|                                                        | may be overlapping, and at different resolutions. In  |
-|                                                        | areas of overlap, the last image will be copied over  |
-|                                                        | earlier ones.  ``-ul_lr ulx uly lrx lry``: The extents|
-|                                                        | of the output file. If not specified the aggregate    |
-|                                                        | extents of all input files will be used. The utility  |
-|                                                        | is also desribed on the gdal website                  |
-|                                                        | http://www.gdal.org/gdal_translate.html .             |
+||gdal_raster-clip| :guilabel:`Clipper`                  | This utility allows to clip (extract subset) raster   |
+|                                                        | using selected extent or based on mask layer bounds.  |
+|                                                        | More information can be found at                      |
+|                                                        | http://www.gdal.org/gdal_translate.html.              |
 +--------------------------------------------------------+-------------------------------------------------------+
 
 \
