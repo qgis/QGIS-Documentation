@@ -47,4 +47,4 @@ do
   done
 done
 # Push all the resources to the tx server
-tx push -s
+tx push -s -t --skip
