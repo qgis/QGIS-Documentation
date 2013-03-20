@@ -61,3 +61,13 @@ done
 # Now get rid of temporary POT files
 rm -rf i18n/pot
 rm -rf source/static
+
+echo "Pre-translate completed."
+echo ""
+echo "******************************************"
+echo "Consider running (or asking a Transifex admin to run) the"
+echo "following command so that transifex gets updated"
+echo ""
+echo "scripts/create-transifex-resources.sh"
+echo ""
+echo "******************************************"
