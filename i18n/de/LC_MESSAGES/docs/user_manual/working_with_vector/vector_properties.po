@@ -1519,14 +1519,14 @@ msgstr ""
 # 13951eb43ae84d9dabe280c68c5d7b5a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:748
 msgid "**Edit Widget**"
-msgstr ""
+msgstr "**Bearbeitungselement**"
 
 # 7ca7c50f9eb34e7a8cdce097969e5cf0
 # fcb90a9a81fa47fabb8e839271d6b19c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:752
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:754
 msgid "\\"
-msgstr ""
+msgstr "\\"
 
 # e8cc106edfd8423ea1b69228ef8e85eb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:768
@@ -1537,6 +1537,11 @@ msgid ""
 "the **[edit widget]** button, a dialog opens, where you can define different "
 "widgets. These widgets are:"
 msgstr ""
+"Innerhalb des Reiters :guilabel:`Felder` gibt es auch ein Feld "
+"``Bearbeitungselement``.Dieses Feld kann verwendet werden, um Werte oder "
+"Wertebereiche zu definieren, die während des Editierens einer bestimmten "
+"Attributspalte erlaubt sind. Auf Grundlage der Einträge werden "
+"unterschiedliche Eingabefenster während des Editierens erstellt: "
 
 # 03678b554d204c2094c5230015a54d4c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:774
@@ -1544,6 +1549,7 @@ msgid ""
 "**Line edit**: an edit field which allows to enter simple text (or restrict "
 "to numbers for numeric attributes)."
 msgstr ""
+"**Eingabezeile**: Eingabefeld für einfachen Text oder numerische Attribute."
 
 # 2b6f8ab0d1fb4b23af228c2debf582a4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:776
@@ -1552,6 +1558,9 @@ msgid ""
 "classification, if you have chosen 'unique value' as legend type in the "
 ":guilabel:`Style` tab of the properties dialog."
 msgstr ""
+"**Klassifikation**: Auswahlliste mit den Attributwerten, die im Reiter "
+":guilabel:`Stil` als Legendentyp `Eindeutiger Wert` für die Klassifikation "
+"benutzt werden."
 
 # 0856529a10a34679a16350369e70562f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:779
@@ -1559,6 +1568,8 @@ msgid ""
 "**Range**: Allows to set numeric values from a specific range. The edit "
 "widget can be either a slider or a spin box."
 msgstr ""
+"**Bereich**: Erlaubt die Eingabe von Werten eines gegebenen Bereichs. Das "
+"Eingabefeld ist dann entweder ein Schieberegler oder ein Drehfeld."
 
 # edb7eb06133946cdb4d3d734e5bbc19a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:781
@@ -1567,12 +1578,17 @@ msgid ""
 "attribute table. If editable is activated, a line edit is shown with "
 "autocompletion support, otherwise a combo box is used."
 msgstr ""
+"**Eindeutige Werte**:Der Benutzer kann einen Wert wählen, der bereits in dem "
+"Attribut verwendet wird. Wenn Änderbar ausgewählt wird, wird eine "
+"Eingabezeile mit Autovervollständigung angezeigt. Anderseits wird eine "
+"Auswahlliste dargestellt. "
 
 # 8438e805edc14e9d98f8b247ec0bbee4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:784
 msgid ""
 "**File name**: Simplifies the selection by adding a file chooser dialog."
 msgstr ""
+"**Dateiname**: Vereinfacht die Dateiauswahl durch einen Dateiauswahldialog."
 
 # 9e429c69db454968a611085db410b630
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:785
@@ -1581,6 +1597,10 @@ msgid ""
 "attribute, the description is shown in the combo box. You can define values "
 "manually or load them from a layer or a CSV file."
 msgstr ""
+"**Wertabbildung**: eine Auswahlliste mit vordefinierten Elementen. Der Wert "
+"wird in dem Attribut gespeichert, die Beschreibung in der Auswahlliste "
+"angezeigt. Sie können Werte manuell festlegen oder sie aus einem Layer oder "
+"einer CSV-Datei laden."
 
 # 806e95a6456b4dee9b81f8d76501baf9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:788
@@ -1588,6 +1608,9 @@ msgid ""
 "**Enumeration**: Opens a combo box with values that can be used within the "
 "columns type. This is currently only supported by the postgres provider."
 msgstr ""
+"**Aufzählung**: Hier wird ein Auswahlmenü mit Werten angezeigt, die als "
+"Spaltentyp benutzt werden können. Dies ist aktuell nur für Postgres als "
+"Datenprovider der Fall."
 
 # f6a0f1d22806460287dba40c78ec8216
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:790
@@ -1595,6 +1618,8 @@ msgid ""
 "**Immutable**: The immutable attribute column is read-only. The user is not "
 "able to modify the content."
 msgstr ""
+"**Unveränderbar**: In diesem Fall ist das Attribut unveränderlich. Der "
+"Benutzer kann es also nicht verändern."
 
 # 16290b111b534ad5954f0049c2fc7932
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:792
@@ -1602,6 +1627,8 @@ msgid ""
 "**Hidden**: A hidden attribute column is invisible. The user is not able to "
 "see its content."
 msgstr ""
+"**Versteckt**: Eine versteckte Attributspalte ist für den Anwender "
+"unsichtbar. Der Inhalt wird ausgeblendet."
 
 # 26d9541e05dc4612bf53567c5692b0e3
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:794
@@ -1609,6 +1636,9 @@ msgid ""
 "**Checkbox**: Displays a checkbox and you can define what attribute is added "
 "to the column when the checkbox is activated or not."
 msgstr ""
+"**Kontrollkästchen**: Zeigt ein Kontrollkästchen. Es kann festgelegt werden, "
+"welches Attribute bzw. welcher Wert eingetragen wird, wenn das "
+"Kontrollkästchen aktiv oder inaktiv ist. "
 
 # 5216591fc6b74e64a1c4411be0272dfd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:796
@@ -1616,6 +1646,8 @@ msgid ""
 "**Text edit**: This opens a text edit field that allows multiple lines to be "
 "used."
 msgstr ""
+"**Texteditor**: Öffnet ein Textfeld, in dem mehrzeiliger Text eingetragen "
+"werden kann."
 
 # 01b3bb3bcd3142eaa304490864edc40d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:798
@@ -1623,6 +1655,8 @@ msgid ""
 "**Calendar**: Opens a calendar widget to enter a date. Column type must be "
 "text."
 msgstr ""
+"**Kalender**:Öffnet ein Kalenderfenster, um ein Datum auszuwählen und in die "
+"Attributtabelle einzutragen. Der Spaltentyp muss String sein."
 
 # ac504170becb45dda09a68fac86a687f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:800
@@ -1630,6 +1664,8 @@ msgid ""
 "**Value Relation**: Offers values from a related table in a combobox. You "
 "can select layer, key column and value column."
 msgstr ""
+"**Wertbeziehung**: Bietet Werte aus einer verknüpften Tabelle in einem "
+"Auswahlmenü an. Sie können Layer, Schlüsselspalte und Wertspalte auswählen."
 
 # 775e63315473475e8807f3de95107200
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:802
@@ -1637,11 +1673,13 @@ msgid ""
 "**UUID Generator**: Generates a read-only UUID (Universally Unique "
 "Identifiers) field, if empty."
 msgstr ""
+"**UUID Generator**: Erstellt ein schreibgeschütztes UUID (Universally Unique "
+"Identifiers)-Feld wenn es leer ist."
 
 # e86ce9181f83405ebb74a6f8c1a95735
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:809
 msgid "General Tab"
-msgstr ""
+msgstr "Allgemein"
 
 # 3ee044f914894c1db9e0702e2faf83f1
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:811
@@ -1649,17 +1687,21 @@ msgid ""
 "|general| The :guilabel:`General` tab is essentially like that of the raster "
 "dialog. There are several options available:"
 msgstr ""
+"|general| Der Reiter :guilabel:`Allgemein` ist im wesentlichen wie der des "
+"Rasterdialogs. Es gibt mehrere Optionen:"
 
 # 150bd278eb044d539256e9d8f2b8ff78
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:814
 msgid "Change the display name of the layer."
-msgstr ""
+msgstr "Den Anzeigenamen des Layers ändern."
 
 # 3be62808ee834274b40654819870a6ba
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:815
 msgid ""
 "Set a display field to be used for the :guilabel:`Identify Results` dialog."
 msgstr ""
+"Ein Anzeigefeld das vom :guilabel:`Objekte abfragen` Dialog verwendet wird "
+"festlegen."
 
 # d0792930e04b408ca68fe94c918b15c4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:816
@@ -1667,11 +1709,15 @@ msgid ""
 "Define a certain Edit User Interface for the vector layer written with the "
 "Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/."
 msgstr ""
+"Ein User Interface einbinden, das sie selbst erstellen können mit den 'QT "
+"Creator IDE and Tools' Anwendungen von der URL "
+"http://qt.digia.com/Product/Developer-Tools/."
 
 # 4269548640ac4d8cae4aa53141f301a9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:817
 msgid "Create a :guilabel:`Spatial Index` (only for OGR supported formats)."
 msgstr ""
+"Einen :guilabel:`Räumlichen Index` (nur OGR-unterstüzte Formate) erstellen."
 
 # e8995301dc0848a38facc323fd5d9303
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:818
@@ -1679,11 +1725,13 @@ msgid ""
 "Add an :guilabel:`Init function` for the layer. They will overwrite existing "
 "QGIS widget initializations, if applied."
 msgstr ""
+"Eine :guilabel:`Initialisierungsfunktion` für den Layer hinzufügen. Sie "
+"überschreibt dann bei Anwendung bestehende |qg|Widget Initialisierungen."
 
 # 36eeae881e6a44109535fc44a2181c49
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:819
 msgid ":guilabel:`Update Extents` information for a layer."
-msgstr ""
+msgstr "Die :guilabel:`Ausmaße aktualisieren` für einen Layer"
 
 # 5fd08451c37146d4b5c3e96741556367
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:820
@@ -1691,6 +1739,8 @@ msgid ""
 "View or change the projection of the specific vector layer, clicking on "
 ":guilabel:`Specify CRS`."
 msgstr ""
+"Durch Klicken auf :guilabel:`KBS angeben` die Projektion eines ausgewählten "
+"Vektorlayers anzeigen oder verändern."
 
 # 5dee6270eec44da7a091ffcf701a88d3
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:822
@@ -1701,11 +1751,16 @@ msgid ""
 "in the layer that will be visualized (also refer to section "
 ":ref:`sec_selection_query`)."
 msgstr ""
+"Darüberhinaus können Sie |checkbox| :guilabel:`Maßstabsabhängig zeichnen` "
+"aktivieren und festlegen, provider-spezifische Optionen definieren (z.B. "
+"Kodierung) und mit dem **[Abfrageerstellung]** Knopf können Sie eine "
+"Untermenge von Objekten des Layers die dargestellt werden sollen erstellen "
+"(siehe auch Abschnitt :ref:`sec_selection_query`)."
 
 # e385308e2b9948aba4c1554b8af97847
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:842
 msgid "Metadata Tab"
-msgstr ""
+msgstr "Metadaten"
 
 # 451c97f788494f3f9088c21d16138d3c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:844
@@ -1718,6 +1773,13 @@ msgid ""
 "about the CRS of the layer. This is a quick way to get information about the "
 "layer."
 msgstr ""
+"|metadata| Der Reiter :guilabel:`Metadaten` enthält allgemeine Informationen "
+"zu dem Layer inklusive Angaben zu Datentyp, Datenquelle, Anzahl Objekte, "
+"Ausdehnung und Editiermöglichkeiten. Der Abschnitt :guilabel:`Ausdehnung` "
+"bietet Informationen zur Layerausdehnung und der Abschnitt "
+":guilabel:`Räumliches Bezugssystem des Layers` stellt Informationen über das "
+"KBS des Layers. Auf diese Weise bekommt man schnell einen Überblick über den "
+"Layer."
 
 # 5b5e5638f8d941eb919bdd0b5416d64c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:851
@@ -1726,11 +1788,14 @@ msgid ""
 "information. These information will be saved in the QGIS project file for "
 "following sessions and will be used for QGIS server."
 msgstr ""
+"Zusätzlich können Sie können Sie einen Titel mit einer Zusammenfassung "
+"hinzufügen/bearbeiten. Diese Informationen werden in der |qg| Projektdatei "
+"für die nächsten Sessions gespeichert und vom |qg| Server verwendet."
 
 # 2971f29bc21a45b49e729324edf19b82
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:868
 msgid "Actions Tab"
-msgstr ""
+msgstr "Aktionen auf Basis von Attributen"
 
 # f961dfcdfb9b433aa883d77fb55062f9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:870
@@ -1740,6 +1805,10 @@ msgid ""
 "for example, running a program with arguments built from the attributes of a "
 "feature or passing parameters to a web reporting tool."
 msgstr ""
+"|action| |qg| bietet die Möglichkeit, Aktionen auf Basis von Attributen "
+"einer Ebene durchzuführen. Dies kann für eine Vielzahl von Aktionen genutzt "
+"werden, z.B. um ein Programm mit Abfragen aus der Attributdatenbank zu "
+"füttern oder um Parameter an ein Web-Reporting-Tool weiterzugeben."
 
 # c8a070963d1a4340ae4e049dee2a39f0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:887
@@ -1748,6 +1817,10 @@ msgid ""
 "or view a web page based on one or more values in your vector layer. They "
 "are devided into 6 types and can be used like this:"
 msgstr ""
+"Aktionen auf Basis von Attributen sind sinnvoll wenn sie häufig eine externe "
+"Anwendung starten oder eine Internetseite auf Basis von einem oder mehreren "
+"Werten in Ihrem Vektorlayer visualisieren wollen. Sie sind in 6 Typen "
+"aufgeteilt und können wie folgt verwendet werden:"
 
 # beb6ced2485648769922298b5016fc19
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:891
@@ -2100,7 +2173,7 @@ msgstr ""
 # cc4cb213831b494d9f52ce4661b265f0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1134
 msgid "Joins Tab"
-msgstr ""
+msgstr "Verknüpfungen"
 
 # 4c408c90cfc044b28ce86b010536c0df
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1137
@@ -2111,21 +2184,27 @@ msgid ""
 "supports to join non spatial table formats supported by OGR, delimited text "
 "and the PostgreSQL provider (see figure_joins_1_)."
 msgstr ""
+"|join| Der Reiter :guilabel:`Verknüpfungen` ermöglicht es Ihnen :index:`eine "
+"geladene Attributtabelle mit einem geladenen Vektorlayer zu verknüpfen`. Als "
+"Schlüsselspalte müssen Sie einen :index:`Joinlayer`, ein Verknüpfungsfeld "
+"und ein Zielfeld definieren. Aktuell untersützt |qg| das Verknüpfen von "
+"nicht-räumlichen Tabellenformaten die von OGR, Delimited Text und dem "
+"PostgreSQL Provider unterstützt werden. (siehe figure_joins_1_).  "
 
 # 12375f1429d24c678e3957e0f2718b73
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1155
 msgid "Additionally the add vector join dialog allows to:"
-msgstr ""
+msgstr "Zusätzlich ermöglicht der Vektorverknüpfung hinzufügen Dialog: "
 
 # 687329fe1a8a4092a26880f709540e33
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1157
 msgid "|checkbox| :guilabel:`Cache join layer in virtual memory`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Verknüpfung im Speicher cachen`"
 
 # 6fb32faa105a4b8f9f94241ba6d17b88
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1158
 msgid "|checkbox| :guilabel:`Create attribute index on the join field`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`Index auf Feld erzeugen`"
 
 # 7237ad600b8f43968c141efad298ec8e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1163
