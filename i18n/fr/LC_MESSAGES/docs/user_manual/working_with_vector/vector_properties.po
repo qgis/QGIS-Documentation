@@ -108,25 +108,25 @@ msgstr "Couches de points"
 # bff5ffd9581f4fcf99ab4f1c29186639
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:70
 msgid "**Font marker**: Rendering with a font."
-msgstr "**Symbol de police** : symbol issu d'une police de caractère."
+msgstr "**Symbole de police** : symbole issu d'une police de caractère."
 
 # 0cbfaae400114280ba0ca6443942e30d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:71
 msgid "**Simple marker**: Rendering with a hardcoded marker."
-msgstr "**Symbol simple** : symbol de type prédéfini dans QGIS."
+msgstr "**Symbole simple** : symbole de type prédéfini dans QGIS."
 
 # 4db67568c43e4d46b74a86f86418e30d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:72
 msgid "**SVG marker**: Rendering with a SVG picture."
-msgstr "**Symbol SVG** : symbol au format SVG."
+msgstr "**Symbole SVG** : symbole au format SVG."
 
 # 394bf1fa464a42c582f640398b060ce7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:73
 msgid ""
 "**Ellipse marker**: Rendering with ellipse shapes derived from attributes."
 msgstr ""
-"**Symbol d'ellispe** : symbol dont la forme et la couleur varient selon les "
-"valeurs d'attributs."
+"**Symbole d'ellispe** : symbole dont la forme et la couleur varient selon "
+"les valeurs d'attributs."
 
 # 9cd1ea48100148d2a1c672d8668dce99
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:74
@@ -134,7 +134,7 @@ msgid ""
 "**Vector field marker**: Rendering with vector fields derived from "
 "attributes."
 msgstr ""
-"**Symbol de champ vectoriel** : rendu utilisant les valeurs d'attributs."
+"**Symbole de champ vectoriel** : rendu utilisant les valeurs d'attributs."
 
 # 8ab7df1bacc140ee80b01c2e999a0552
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:76
@@ -651,6 +651,13 @@ msgid ""
 "statements. The dialog allows rule grouping by filter or scale and you can "
 "decide if you want to enable symbol levels or use only first matched rule."
 msgstr ""
+"Ce moteur de rendu est utilisé pour afficher toutes les entités d'une couche "
+"en utilisant un ensemble de règles prédéfinies dont la couleur reflète la "
+"manière dont une entité a été classée en fonction de ses attributs. Les "
+"règles sont définies par des expressions SQL. La fenêtre permet de regrouper "
+"les règles par type de filtre ou échelle de validité. Vous pouvez activer le "
+"rendu selon les niveaux de symboles ou arréter le rendu à la première règle "
+"validée pour chaque entité."
 
 # 00577b19f1b5487a8dcb7099eb9d76fb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:329
@@ -658,6 +665,8 @@ msgid ""
 "The example in figure_symbology_5_ shows the rule-based rendering dialog for "
 "the rivers layer of the |qg| sample dataset."
 msgstr ""
+"L'exemple de la figure figure_symbology_5_ montre le rendu basé sur des "
+"règles pour la couche des rivières de l'échantillon de données de |qg|."
 
 # 8860fad38ff84c81b4a66087c359cf67
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:332
@@ -673,11 +682,22 @@ msgid ""
 "fields, values and functions to construct the calculation expression or you "
 "can just type it into the box (see :ref:`vector_field_calculator`)."
 msgstr ""
+"Pour créer une règle, séletionez une ligne existante en cliquant dessus puis "
+"cliquez sur le bouton **[Éditer]** ou cliquez directement sur '+'. Dans la "
+"fenêtre de :guilabel:`Propriétés de la règle` vous pouvez définir une "
+"Étiquette pour identifier la règle. Cliquez sur le bouton |browsebutton| "
+"pour ouvrir le Constructeur de chaîne d'expression. Dans la **Liste de "
+"fonctions**, cliquez sur :guilabel:`Champs et valeurs` pour visualiser tous "
+"les attributs de la table. Pour ajouter un champ  dans la zone "
+"**Expression**, double-cliquez sur son nom depuis la liste :guilabel:`Champs "
+"et valeurs`. Vous pouvez utiliser plusieurs champs, valeurs et fonctions "
+"pour construire l'expression à calculer ou les rentrer directement "
+"manuellement (voir :ref:`vector_field_calculator`)."
 
 # ea03a145c22145a6b8f1d7cebc13818a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:358
 msgid "**Point displacement**"
-msgstr ""
+msgstr "**Déplacement de point**"
 
 # 9d78553d5e85460db215df5a7c38681b
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:360
@@ -686,11 +706,14 @@ msgid ""
 "layer, even if they have the same location. To do this, the symbols of the "
 "points are placed on a displacement circle around a center symbol."
 msgstr ""
+"Le rendu de déplacement de point offre une visualisation de tous les points "
+"d'une couche, même si ceux-ci se superposent. Pour se faire, les symboles "
+"des points sont répartis en cercle autour d'un symbole central."
 
 # 2747b14ef17546cb95fb9d49f0bfc05f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:378
 msgid "**Symbol Properties**"
-msgstr ""
+msgstr "**Propriétés des symboles**"
 
 # 166ee87456a54cbdb8e15a6ef9dca4cc
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:380
@@ -703,6 +726,13 @@ msgid ""
 "**Change...]** button in the :guilabel:`Style` tab of the :guilabel:`Layer "
 "Properties` dialog."
 msgstr ""
+"La fenêtre de propriétés d'un symbole permet à l'utilisateur de spécifier "
+"ses différentes propriétés. En bas à gauche figure un aperçu du symbole tel "
+"qu'il sera affiché sur la carte. Juste au dessus est placée la liste des "
+"différentes couches de symbole. Pour accéder à cette fenêtre de "
+":guilabel:`Propriétés du symbole`, cliquez sur le bouton **[** "
+"|mActionOptions| **Modification...]** de l'onglet :guilabel:`Style` de la "
+"fenêtre de :guilabel:`Propriétés de la couche`."
 
 # d55e3fc8f5e8472da94d8c3c00b3921d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:387
@@ -719,11 +749,22 @@ msgid ""
 "an SVG marker for a point layer it is now possible to change its color using "
 ":guilabel:`Color` button."
 msgstr ""
+"Les boutons permettent d'ajouter ou de supprimer des couches de symbole, "
+"changer leur superposition, vérouiller leur couleur. Dans la partie droite "
+"sont affichés les paramètres relatifs à la couche de symbole sélectionnée. "
+"Le plus important est sans doute la liste :guilabel:`Type de Symbole` "
+"|selectstring| qui permet de choisir le type de la couche. Les options "
+"disponibles dépendent du type d'entités (Point, Ligne, Polygone). Les types "
+"de couche de symboles sont décrits dans la section vector_symbol_types_. "
+"Vous pouvez également changer les propriétés de la couche de symbole "
+"sélectionnée dans la partie droite de la fenêtre. Par exemple, si vous avez "
+"choisi un symbole SVG pour une couche de points, il est possible de changer "
+"la couleur en utilisant le bouton :guilabel:`Couleur`."
 
 # 119471a6ead2445990391980a3236fa8
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:413
 msgid "Style Manager"
-msgstr ""
+msgstr "Gestionnaire de styles"
 
 # 03b4f3ea8b7648cdbe83257e651a51da
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:415
@@ -734,6 +775,11 @@ msgid ""
 "Style Manager` in the main menu. Alternatively, you can access it via the "
 ":guilabel:`Style` tab."
 msgstr ""
+"Le gestionnaire de styles est une petite application qui liste les symboles "
+"et les palettes de couleurs disponibles. Il permet d'ajouter et/ou supprimer "
+"des styles. Pour l'utiliser, cliquez sur :menuselection:`Préférences --> "
+"Gestionnaire de Style` dans le menu principal. Vous pouvez également y "
+"accéder depuis l'onglet :guilabel:`Style`."
 
 # 0787ac28b93b4027b4b24da477708205
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:439
