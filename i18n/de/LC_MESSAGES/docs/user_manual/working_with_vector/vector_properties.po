@@ -1867,7 +1867,7 @@ msgstr ""
 # 4be495f1468a4182b1e437e11b6de2e8
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:902
 msgid "**Defining Actions**"
-msgstr ""
+msgstr "**Aktionen definieren**"
 
 # 49a53a4c280f42eeb3518d2fd7cc3b3d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:904
@@ -1886,6 +1886,20 @@ msgid ""
 "can be used to group text into a single argument to the program, script or "
 "command. Double quotes will be ignored if preceded by a backslash."
 msgstr ""
+"Aktionen auf Basis von Attributen werden im Dialg "
+":guilabel:`Layereigenschaften` festgelegt. Um eine :index:`Aktion` zu "
+"definieren, öffnen Sie den Dialg :guilabel:`Layereigenschaften` und klicken "
+"Sie auf den Reiter :guilabel:`Aktionen`. Wählen Sie Allgemein als Typ und "
+"geben Sie einen beschreibenden Namen für die Aktion in die Zeile Name ein. "
+"Die :index:`Aktion` selbst benötigt den Namen der Anwendung, die ausgeführt "
+"werden soll, wenn man die Aktion startet. Es ist möglich, eine oder mehrere "
+"Attributspalten als Argumente anzugeben. Alle Zeichen, die mit \\% und dem "
+"Namen eines Feldes beginnen, werden durch den Wert dieses Feldes ersetzt. "
+"Die Spezialfelder :index:`%\\%` werden ersetzt durch den Wert des Feldes, "
+"der auf Basis von Abfrageergebnissen selektiert wird (siehe Abschnitt "
+"Aktionen verwenden). Doppelte Anführungsstriche können dazu benutzt werden, "
+"um mehrere Worte als ein Ausdruck gruppiert zu übergeben. Doppelte "
+"Anführungsstriche werden ignoriert, wenn davor ein Backslash steht."
 
 # c31b46442d024d78bbf82077396c5bd7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:918
@@ -1899,6 +1913,14 @@ msgid ""
 "field to be surrounded by square brackets, use a second set like this: "
 "``[[%col10]]``."
 msgstr ""
+"Wenn in der Attributtabelle Spaltenamen auftreten, die eine Teilzeichenfolge "
+"eines anderen Spaltenamen sind (z.B.: ``Spalte1`` und ``Spalte10``) sollten "
+"Sie diese Spaltenamen (und %-Zeichen) in eckige Klammern schreiben (z.B.: "
+"``[%Spalte10]``. Dadurch wird verhindert, dass die ``[%Spalte10]`` Spalte "
+"interpretiert wird als ``%Spalte1`` und einer ``0`` am Ende. Die eckigen "
+"Klammern werden von QGIS bei der Ausführung entfernt. Wenn Sie möchten, dass "
+"um den Spaltennamen eine eckige Klammer steht, ergänzen Sie den Ausdruck "
+"durch zwei weitere eckige Klammern: ``[[%Spalte10]]``."
 
 # ac7e1d18206b4564a2d84a893243d452
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:926
