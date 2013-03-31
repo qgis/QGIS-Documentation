@@ -1148,7 +1148,7 @@ msgstr ""
 # a4e595119d554397b892e61caac7dd02
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:611
 msgid "New Labeling"
-msgstr ""
+msgstr "Nouveau moteur d'étiquetage"
 
 # 514eb49a5a0d454aa7b4279fdcd73f67
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:613
@@ -1159,16 +1159,21 @@ msgid ""
 "described in section :ref:`vector_labels_tab` and also supports on-the-fly "
 "transformated layers."
 msgstr ""
+"Le nouveau moteur d'|mActionLabeling| :sup:`Étiquetage` permet de générer "
+"intelligemment des étiquettes pour les couches vectorielles de points, "
+"lignes et polygones et requiert peu de paramètres. Il gère les couches "
+"transfoméées à la volée.Ce nouveau moteur remplacera celui décrit dans la "
+"section :ref:`vector_labels_tab`."
 
 # dc4bccd980c3463fbbd0f636442f3f86
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:619
 msgid "**Using new labeling**"
-msgstr ""
+msgstr "**Utiliser le nouveau moteur d'étiquetage**"
 
 # 2bcb5f0c6b264835b2f4253a023ab9cd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:621
 msgid "Start QGIS and load a vector point, line or polygon layer."
-msgstr ""
+msgstr "Démarrez QGIS et chargez une couche de points, lignes ou polygones."
 
 # 225569d2fb504265a507201d12979c2f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:622
@@ -1176,11 +1181,13 @@ msgid ""
 "Activate the layer in the legend and click on the |mActionLabeling| "
 ":sup:`Labeling` icon in the QGIS toolbar menu."
 msgstr ""
+"Sélectionnez la la couche dans la légende et cliquez sur le bouton  "
+"|mActionLabeling| :sup:`Étiquetage` situé dans la barre d'outils de QGIS."
 
 # b6db0c65e7f141e78825c8c0b4ef54fa
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:625
 msgid "**Labeling point layers**"
-msgstr ""
+msgstr "**Étiqueter une couche de points**"
 
 # 0c6cd28b05b241a69437761b87b280cd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:627
@@ -1197,11 +1204,24 @@ msgid ""
 "you with the attribute-based definition of Font properties, Buffer "
 "properties and Position."
 msgstr ""
+"La première étape est de cocher la case |checkbox| :guilabel:`Étiqueter "
+"cette couche avec` et de choisir le champ de la table d'attribut à utiliser "
+"pour les étiquettes. Cliquez sur |browsebutton| si vous souhaitez obtenir "
+"des étiquettes complexes générées par une expression. Vous pouvez ensuite "
+"définir le style du texte et l'échelle de visibilité dans l'onglet "
+":guilabel:`Paramètres d'étiquetage` (voir Figure_labels_1_). L'onglet "
+":guilabel:`Avancé` permet de définir l'emplacement des étiquettes et leurs "
+"priorités d'affichage. C'est ici que vous choisissez si toutes les parties "
+"d'une entité multi-parties doivent être étiquetées. Le caractère de retour à "
+"la ligne se définit également ici et permet d'introduire des retours à la "
+"ligne dans les étiquettes. L'onglet :guilabel:`Source de définition des "
+"paramètres` permet de définir les propriétés de la police, du tampon et de "
+"la position grâce aux valeurs stockées dans la table attributaire."
 
 # 7971266f9c9143fda7801a8b1c98ae79
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:653
 msgid "**Labeling line layers**"
-msgstr ""
+msgstr "**Étiqueter une couche de lignes**"
 
 # 8d66e20d249c47d4ae2d96f4f8b682bd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:655
@@ -1220,11 +1240,28 @@ msgid ""
 ":guilabel:`Data defined settings` for attribute-based or "
 "database-connection-based settings."
 msgstr ""
+"La première étape est de cocher la case |checkbox| :guilabel:`Étiqueter "
+"cette couche avec` et de choisir le champ de la table d'attribut à utiliser "
+"pour les étiquettes. Cliquez sur |browsebutton| si vous souhaitez obtenir "
+"des étiquettes complexes générées par une expression. Vous pouvez ensuite "
+"définir le style du texte et l'échelle de visibilité dans l'onglet "
+":guilabel:`Paramètres d'étiquetage`. D'autres options d'étiquetage sont "
+"disponibles via l'onglet :guilabel:`Avancé`. Vous pouvez définir "
+"l'emplacement des étiquettes et leur distance par rapport aux lignes ainsi "
+"que choisir un d'étiquetage suivant la direction des lignes et la priorité "
+"d'affichage. De plus, c'est ici que vous choisissez si toutes les parties "
+"d'une entité multi-parties doivent être étiquetées, si les lignes doivent "
+"être fusionnées pour éviter la duplication d'étiquettes et si un symbole de "
+"direction doit être ajouté (voir Figure_labels_2_). Vous pouvez empêcher "
+"l'étiquetage de certaines lignes et définir le caractère de retour à la "
+"ligne. Utilisez l'onglet :guilabel:`Source de définition des paramètres` "
+"pour définir des paramètres d'étiquetage grâce aux valeurs stockées dans la "
+"table attributaire."
 
 # 2b2dc31addea4949a220317da2f17fda
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:682
 msgid "**Labeling polygon layers**"
-msgstr ""
+msgstr "**Étiqueter une couche de polygones**"
 
 # 8b72c04cd90943dea125b5e7ddaf8128
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:684
@@ -1239,11 +1276,24 @@ msgid ""
 "Use :guilabel:`Data defined settings` for attribute-based or "
 "database-connection-based settings."
 msgstr ""
+"La première étape est de cocher la case |checkbox| :guilabel:`Étiqueter "
+"cette couche avec` et de choisir le champ de la table d'attribut à utiliser "
+"pour les étiquettes. Cliquez sur |browsebutton| si vous souhaitez obtenir "
+"des étiquettes complexes générées par une expression. Vous pouvez ensuite "
+"définir le style du texte et l'échelle de visibilité dans l'onglet "
+":guilabel:`Paramètres d'étiquetage` (voir Figure_labels_3_ ). Des options de "
+"placement, de distance et de priorité d'affichage sont disponibles via "
+"l'onglet :guilabel:`Avancé`. De plus, c'est ici que vous choisissez si "
+"toutes les parties d'une entité multi-parties doivent être étiquetées. Vous "
+"pouvez empêcher l'étiquetage de certains polygones et définir le caractère "
+"de retour à la ligne. Utilisez l'onglet :guilabel:`Source de définition des "
+"paramètres` pour définir des paramètres d'étiquetage grâce aux valeurs "
+"stockées dans la table attributaire."
 
 # 5c672bb2f1cf4d19a7b4a88f89d1b945
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:710
 msgid "**Change engine settings**"
-msgstr ""
+msgstr "**Modifier les paramètres de rendu des étiquettes**"
 
 # 9ab4b26520ab43afaa8a6c36318b298a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:712
@@ -1252,6 +1302,10 @@ msgid ""
 "search method, used to find the best label placement. Available is Chain, "
 "Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP."
 msgstr ""
+"En cliquant sur le bouton **[Paramètres]**, vous pouvez sélectionner la "
+"méthode de recherche à appliquer pour trouver le meilleur emplacement de "
+"chaque étiquette. Les méthodes disponibles sont : Chaîne, Popmusic Tabu, "
+"Popmusic Chain, Popmusic Tabu Chain et FALP."
 
 # a312669f72d74101a1795d921785e7ac
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:728
@@ -1260,11 +1314,15 @@ msgid ""
 "polygon features, and you can define whether to show all labels (including "
 "colliding labels) and label candidates for debugging."
 msgstr ""
+"De plus le nombre de possibilités peut être précisé pour les couches de "
+"points, lignes et polygones et vous pouvez choisir de forcer l'affichage de "
+"toutes les étiquettes (y compris celles qui se superposent) et afficher "
+"toutes les possibilité d'affichage, pour le débogage."
 
 # 691999e55f034a558fe54af91451cea7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:732
 msgid "**Keywords to use in attribute columns for labeling**"
-msgstr ""
+msgstr "**Mots-clé à utiliser dans les champs destinés à l'étiquetage**"
 
 # b4d640e84161430ebbbcc34389f5ad34
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:734
@@ -1272,26 +1330,31 @@ msgid ""
 "There is a list of supported key words, that can be used for the placement "
 "of labels in defined attribute columns."
 msgstr ""
+"Voici une liste des mots-clé supportés, qui peuvent être utilisés dans les "
+"attributs pour l'emplacement des étiquettes."
 
 # d87ba671dc484b698a0f090d204399e9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:738
 msgid "**For horizontal alignment**: ``left``, ``center``, ``right``"
-msgstr ""
+msgstr "**Pour l'alignement horizontal** : ``left``, ``center``, ``right``"
 
 # 554944a792d547c19d315d465933c4cc
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:739
 msgid "**For vertical alignment**: ``bottom``, ``base``, ``half``, ``top``"
 msgstr ""
+"**Pour l'alignement vertical** : ``bottom``, ``base``, ``half``, ``top``"
 
 # 89f497d0902547c29828b07155afc912
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:740
 msgid "**Colors can be specified in svg notation**, e.g. \\#ff0000"
 msgstr ""
+"**Les couleurs sont à spécifier en notation svg**, par exemple . \\#ff0000"
 
 # 8eddabd7c2b149d580c588f3739a3d16
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:741
 msgid "**for bold, underlined, strikeout and italic**: 0 = false 1 = true"
 msgstr ""
+"**Pour le gras, le souligné, le barré et l'italic** : 0 = faux 1 = vrai"
 
 # cb19fe3a9ed1459184365e1a531893e4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:743
@@ -1299,11 +1362,13 @@ msgid ""
 "A combination of key words in one column also works, e.g.: ``base right`` or "
 "``bottom left``."
 msgstr ""
+"Une combinaison de ces mots-clé dans un champ fonctionne également, par "
+"exemple : ``base right`` ou ``bottom left``."
 
 # 8f3f607f668840afbd675bf862701238
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:749
 msgid "Fields Tab"
-msgstr ""
+msgstr "Onglet Champs"
 
 # aa46fe2363c54ee3a1f13a39db154da4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:751
