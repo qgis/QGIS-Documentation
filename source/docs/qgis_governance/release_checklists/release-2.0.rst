@@ -8,13 +8,14 @@ Checklist for QGIS Release 2.0
 Key Dates:
 ----------
 
-* 1 April 2013 - Feature freeze - no new features in master
-* 1 May 2013 - GUI Freeze and String freeze - no changes to ui or
-  strings except where required for critical bug fixes. Call for
-  translations.
-* 1 June 2013 - Branch 2.0, code freeze (except for packaging related
-  changes), call for packaging
-* 7 June 2013 - Public release of 2.0
+* **1 April 2013** - Feature freeze - no new features in master.
+* **15 April 2013** - API Freeze - no changes to API except where it is in
+  direct response to broken functionality. 
+* **30 April** - GUI Freeze and String freeze - no changes to ui or strings
+  except where required for critical bug fixes. Call for translations.
+* **1 June 2013** - Branch 2.0, code freeze (except for packaging related
+  changes), call for packaging.
+* **7 June 2013** - Public release of 2.0
 
 
 Blocking Features
