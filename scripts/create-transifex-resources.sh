@@ -6,7 +6,9 @@
 # Note that this script updates or creates entries in .tx/config file
 #
 # Tim Sutton, March 2013
+VERSION=2-0
 LOCALES=`ls i18n`
+RELEASE_URL=https://www.transifex.com/projects/p/qgis-documentation/r/${VERSION}/
 for ITEM in docs website
 do
   for POFILE in `find i18n/en/LC_MESSAGES/${ITEM}/ -type f -name '*.po'`
@@ -20,7 +22,7 @@ do
     BASE=`echo $BASE | sed 's/_/-/g' | sed 's/ /-/g'`
     # Register each po file as a transifex resource (an individual translatable file)
     #set -x
-    RESOURCE=qgis-documentation.${ITEM}-$BASE
+    RESOURCE=qgis-documentation.v${VERSION}-${ITEM}-$BASE
     tx set -t PO --auto-local -r $RESOURCE \
       "$GENERICFILE" \
       --source-lang en \
@@ -47,4 +49,5 @@ do
   done
 done
 # Push all the resources to the tx server
-tx push -s
+tx set --auto-remote RELEASE_URL
+tx push -s -t --skip
