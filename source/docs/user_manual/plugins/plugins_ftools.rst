@@ -1,22 +1,22 @@
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-.. _ftools: 
+.. _ftools:
 
 fTools Plugin
 =============
 
 
-The goal of the fTools python plugin is to provide a one-stop resource for
-many common vector-based GIS tasks, without the need for additional software, 
-libraries, or complex workarounds. It provides a growing suite of spatial 
-data management and analysis functions that are both fast and functional. 
+The goal of the fTools python plugin is to provide a one-stop resource for many
+common vector-based GIS tasks, without the need for additional software,
+libraries, or complex workarounds. It provides a growing suite of spatial data
+management and analysis functions that are both fast and functional.
 
-fTools is now automatically installed and enabled in new versions of QGIS, and 
-as with all plugins, it can be disabled and enabled using the Plugin Manager 
-(See Section :ref:`load_core_plugin`).  When enabled, the fTools plugin 
-adds a :menuselection:`Vector` menu to QGIS, providing functions ranging from 
-Analysis and Research Tools to Geometry and Geoprocessing Tools, as well as 
-several useful Data Management Tools.
+fTools is now automatically installed and enabled in new versions of QGIS, and
+as with all plugins, it can be disabled and enabled using the Plugin Manager
+(See Section :ref:`load_core_plugin`). When enabled, the fTools plugin adds a
+:menuselection:`Vector` menu to QGIS, providing functions ranging from Analysis
+and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
+Data Management Tools.
 
 .. _`ftools_function`:
 
@@ -200,9 +200,9 @@ Table Ftools 4: fTools Geometry tools
 
 .. note::
 
-	The *Simplify geometry* tool can be used to remove duplicate nodes in line and polygon
-	geometries, just set the *Simplify tolerance* parameter to 0 and this will do
-	the trick.
+   The *Simplify geometry* tool can be used to remove duplicate nodes in line and
+   polygon geometries, just set the *Simplify tolerance* parameter to 0 and this
+   will do the trick.
 
 .. _table_ftools_5:
 
@@ -229,7 +229,7 @@ Data management tools
 |                     |                 | the layer type (point, line, area).  |
 +---------------------+-----------------+--------------------------------------+
 |                     | Create spatial  | Create a spatial index for OGR       |
-|                     | index           | supported formats.                   |       
+|                     | index           | supported formats.                   |
 +---------------------+-----------------+--------------------------------------+
 
 Table Ftools 5: fTools Data management tools

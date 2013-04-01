@@ -8,18 +8,17 @@ Appendix
 
 .. _gpl_appendix:
 
-GNU GENERAL PUBLIC LICENSE
----------------------------
+GNU General Public License
+--------------------------
 
 Version 2, June 1991
 
 
-Copyright (C) 1989, 1991 Free Software Foundation, Inc.  
+Copyright (C) 1989, 1991 Free Software Foundation, Inc.
 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA
 
-
-Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
+Everyone is permitted to copy and distribute verbatim copies of this license
+document, but changing it is not allowed.
 
 Preamble
 
@@ -102,12 +101,12 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
    also meet all of these conditions:
 
    a) You must cause the modified files to carry prominent notices stating
-      that you changed the files and the date of any change. 
+      that you changed the files and the date of any change.
 
    b) You must cause any work that you distribute or publish, that in whole
       or in part contains or is derived from the Program or any part thereof, to be
       licensed as a whole at no charge to all third parties under the terms of this
-      License. 
+      License.
 
    c) If the modified program normally reads commands interactively when run,
       you must cause it, when started running for such interactive use in the most
@@ -117,7 +116,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
       these conditions, and telling the user how to view a copy of this License.
       (Exception: if the Program itself is interactive but does not normally print
       such an announcement, your work based on the Program is not required to print
-      an announcement.) 
+      an announcement.)
 
    These requirements apply to the modified work as a whole. If identifiable
    sections of that work are not derived from the Program, and can be reasonably
@@ -144,21 +143,21 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
    a) Accompany it with the complete corresponding machine-readable source
       code, which must be distributed under the terms of Sections 1 and 2 above on a
-      medium customarily used for software interchange; or, 
+      medium customarily used for software interchange; or,
 
    b) Accompany it with a written offer, valid for at least three years, to
       give any third party, for a charge no more than your cost of physically
       performing source distribution, a complete machine-readable copy of the
       corresponding source code, to be distributed under the terms of Sections 1 and
-      2 above on a medium customarily used for software interchange; or, 
+      2 above on a medium customarily used for software interchange; or,
 
    c) Accompany it with the information you received as to the offer to
       distribute corresponding source code. (This alternative is allowed only for
       noncommercial distribution and only if you received the program in object code
-      or executable form with such an offer, in accord with Subsection b above.) 
+      or executable form with such an offer, in accord with Subsection b above.)
 
    The source code for a work means the preferred form of the work for making
-   modifications to it. For an executable work, complete source code means all 
+   modifications to it. For an executable work, complete source code means all
    the source code for all modules it contains, plus any associated interface
    definition files, plus the scripts used to control compilation and
    installation of the executable. However, as a special exception, the source
@@ -274,7 +273,6 @@ NO WARRANTY
 
 **Quantum GIS Qt exception for GPL**
 
-
  In addition, as a special exception, the QGIS Development Team gives
  permission to link the code of this program with the Qt library,
  including but not limited to the following versions (both free and
@@ -290,8 +288,7 @@ NO WARRANTY
 .. _gfl_appendix:
 
 GNU Free Documentation License
--------------------------------
-
+------------------------------
 
   Version 1.3, 3 November 2008
 
@@ -300,10 +297,8 @@ GNU Free Documentation License
   <http://fsf.org/>
 
 
-Everyone is permitted to copy and distribute verbatim copies of this 
+Everyone is permitted to copy and distribute verbatim copies of this
 license document, but changing it is not allowed.
-
-
 
 **Preamble**
 
@@ -328,9 +323,7 @@ it can be used for any textual work, regardless of subject matter or
 whether it is published as a printed book.  We recommend this License
 principally for works whose purpose is instruction or reference.
 
-
 **1. APPLICABILITY AND DEFINITIONS**
-
 
 This License applies to any manual or other work, in any medium, that
 contains a notice placed by the copyright holder saying it can be
@@ -420,9 +413,7 @@ License, but only as regards disclaiming warranties: any other
 implication that these Warranty Disclaimers may have is void and has
 no effect on the meaning of this License.
 
-
 **2. VERBATIM COPYING**
-
 
 You may copy and distribute the Document in any medium, either
 commercially or noncommercially, provided that this License, the
@@ -437,10 +428,7 @@ number of copies you must also follow the conditions in section 3.
 You may also lend copies, under the same conditions stated above, and
 you may publicly display copies.
 
-
 **3. COPYING IN QUANTITY**
-
-
 
 If you publish printed copies (or copies in media that commonly have
 printed covers) of the Document, numbering more than 100, and the
@@ -477,9 +465,7 @@ It is requested, but not required, that you contact the authors of the
 Document well before redistributing any large number of copies, to give
 them a chance to provide you with an updated version of the Document.
 
-
 **4. MODIFICATIONS**
-
 
 You may copy and distribute a Modified Version of the Document under
 the conditions of sections 2 and 3 above, provided that you release
@@ -577,10 +563,7 @@ The author(s) and publisher(s) of the Document do not by this License
 give permission to use their names for publicity for or to assert or
 imply endorsement of any Modified Version.
 
-
 **5. COMBINING DOCUMENTS**
-
-
 
 You may combine the Document with other documents released under this
 License, under the terms defined in section 4 above for modified
@@ -606,7 +589,6 @@ Entitled "Endorsements".
 
 **6. COLLECTIONS OF DOCUMENTS**
 
-
 You may make a collection consisting of the Document and other documents
 released under this License, and replace the individual copies of this
 License in the various documents with a single copy that is included in
@@ -618,9 +600,7 @@ it individually under this License, provided you insert a copy of this
 License into the extracted document, and follow this License in all
 other respects regarding verbatim copying of that document.
 
-
 **7. AGGREGATION WITH INDEPENDENT WORKS**
-
 
 A compilation of the Document or its derivatives with other separate
 and independent documents or works, in or on a volume of a storage or
@@ -639,10 +619,7 @@ electronic equivalent of covers if the Document is in electronic form.
 Otherwise they must appear on printed covers that bracket the whole
 aggregate.
 
-
 **8. TRANSLATION**
-
-
 
 Translation is considered a kind of modification, so you may
 distribute translations of the Document under the terms of section 4.
@@ -662,10 +639,7 @@ If a section in the Document is Entitled "Acknowledgements",
 its Title (section 1) will typically require changing the actual
 title.
 
-
 **9. TERMINATION**
-
-
 
 You may not copy, modify, sublicense, or distribute the Document
 except as expressly provided under this License.  Any attempt
@@ -692,10 +666,7 @@ this License.  If your rights have been terminated and not permanently
 reinstated, receipt of a copy of some or all of the same material does
 not give you any rights to use it.
 
-
 **10. FUTURE REVISIONS OF THIS LICENSE**
-
-
 
 The Free Software Foundation may publish new, revised versions
 of the GNU Free Documentation License from time to time.  Such new
@@ -716,10 +687,7 @@ License can be used, that proxy's public statement of acceptance of a
 version permanently authorizes you to choose that version for the
 Document.
 
-
 **11. RELICENSING**
-
-
 
 "Massive Multiauthor Collaboration Site" (or "MMC Site") means any
 World Wide Web server that publishes copyrightable works and also
@@ -748,9 +716,7 @@ The operator of an MMC Site may republish an MMC contained in the site
 under CC-BY-SA on the same site at any time before August 1, 2009,
 provided the MMC is eligible for relicensing.
 
-
 **ADDENDUM: How to use this License for your documents**
-
 
 To use this License in a document you have written, include a copy of
 the License in the document and put the following copyright and
@@ -768,7 +734,7 @@ license notices just after the title page:
 If you have Invariant Sections, Front-Cover Texts and Back-Cover Texts,
 replace the "with ... Texts." line with this:
 
-    with the Invariant Sections being LIST THEIR TITLES, with the 
+    with the Invariant Sections being LIST THEIR TITLES, with the
     Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
 
 If you have Invariant Sections without Cover Texts, or some other
