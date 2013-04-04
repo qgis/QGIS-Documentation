@@ -5,20 +5,23 @@
 eVis Plugin
 ===========
 
-The Biodiversity Informatics Facility at the American Museum of Natural
-History's (AMNH) Center for Biodiversity and Conservation (CBC) [1]_ has
-developed the Event Visualization Tool (eVis), another software tool to add to
-the suite of conservation monitoring and decision support tools for guiding
+The Biodiversity Informatics Facility at the American Museum of Natural History's
+(AMNH) Center for Biodiversity and Conservation (CBC) (this section is derived
+from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) User's Guide. American
+Museum of Natural History, Center for Biodiversity and Conservation. Available
+from http://biodiversityinformatics.amnh.org/, and released under the GNU FDL.)
+has developed the Event Visualization Tool (eVis), another software tool to add
+to the suite of conservation monitoring and decision support tools for guiding
 protected area and landscape planning. This plugin enables users to easily link
 geocoded (i.e., referenced with latitude and longitude or X and Y coordinates)
 photographs, and other supporting documents, to vector data in QGIS.
 
-eVis is now automatically installed and enabled in new versions of QGIS, and
-as with all plugins, it can be disabled and enabled using the Plugin Manager
+eVis is now automatically installed and enabled in new versions of QGIS, and as
+with all plugins, it can be disabled and enabled using the Plugin Manager
 (See :ref:`managing_plugins`).
 
-The eVis plugin is made up of three modules: the Database Connection tool,
-Event ID tool, and the Event Browser. These work together to allow viewing of
+The eVis plugin is made up of three modules: the 'Database Connection tool',
+'Event ID tool', and the 'Event Browser'. These work together to allow viewing of
 geocoded photographs and other documents that are linked to features stored in
 vector files, databases, or spreadsheets.
 
@@ -28,13 +31,13 @@ Event Browser
 -------------
 
 The Event Browser module provides the functionality to display geocoded
-photographs that are linked to vector features displayed in the QGIS map
-window. Point data, for example, can be from a vector file that can be input
-using QGIS or it can be from the result of a database query. The vector feature
-must have attribute information associated with it to describe the location
-and name of the file containing the photograph and, optionally, the compass
-direction the camera was pointed when the image was acquired. Your vector layer
-must be loaded into QGIS before running the Event Browser.
+photographs that are linked to vector features displayed in the QGIS map window.
+Point data, for example, can be from a vector file that can be input using QGIS
+or it can be from the result of a database query. The vector feature must have
+attribute information associated with it to describe the location and name of
+the file containing the photograph and, optionally, the compass direction the
+camera was pointed when the image was acquired. Your vector layer must be loaded
+into QGIS before running the Event Browser.
 
 .. _`evis_launch_browser`:
 
@@ -43,24 +46,24 @@ Launch the Event Browser module
 
 To launch the Event browser module either click on the |event_browser|
 :sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis -->
-eVis Event Browser -->`. This will open the Generic Event Browser window.
+eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
 
-The Generic Event Browser window has three tabs displayed at the top of the
-window. The :guilabel:`Display` tab is used to view the photograph and its
+The :guilabel:`Generic Event Browser` window has three tabs displayed at the top
+of the window. The :guilabel:`Display` tab is used to view the photograph and its
 associated attribute data. The :guilabel:`Options` tab provides a number of
-settings that can be adjusted to control the behavior of the eVis plugin.
-Lastly, the :guilabel:`Configure External Applications` tab is used to
-maintain a table of file extensions and their associated application to allow
-eVis to display documents other than images.
+settings that can be adjusted to control the behavior of the eVis plugin. Lastly,
+the :guilabel:`Configure External Applications` tab is used to maintain a table
+of file extensions and their associated application to allow eVis to display
+documents other than images.
 
 .. _`evis_display_window`:
 
 Understanding the Display window
 ................................
 
-To see the Display window click on the :guilabel:`Display` tab in the Generic
-Event Browser window. The Display window is used to view geocoded photographs
-and their associated attribute data.
+To see the :guilabel:`Display` window click on the :guilabel:`Display` tab in the
+:guilabel:`Generic Event Browser` window. The :guilabel:`Display` window is used
+to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis_1:
 
@@ -75,23 +78,23 @@ and their associated attribute data.
    The *eVis* display window |win|
 
 A. **Display window**: A window where the photograph will appear.
-B. **Zoom in button**: Zoom in to see more detail. If the entire image
-   cannot be displayed in the display window, scroll bars will appear on the
-   left and bottom sides of the window to allow you to pan around the image.
+B. **Zoom in button**: Zoom in to see more detail. If the entire image cannot be
+   displayed in the display window, scroll bars will appear on the left and bottom
+   sides of the window to allow you to pan around the image.
 C. **Zoom out button**: Zoom out to see more area.
 D. **Zoom to full extent** button: Displays the full extent of the photograph.
 E. **Attribute information window**: All of the attribute information for the
    point associated with the photograph being viewed is displayed here. If the
-   file type being referenced in the displayed record is not an image but is
-   of a file type defined in the :guilabel:`Configure External Applications`
-   tab then when you double-click on the value of the field containing the
-   path to the file the application to open the file will be launched to view
-   or hear the contents of the file. If the file extension is recognized the
-   attribute data will be displayed in green.
-F. **Navigation buttons**: Use the Previous and Next buttons to load the
-   previous or next feature when more than one feature is selected.
-G. **Feature indicator**: This heading indicates which feature is being
-   displayed and how many features are available for display.
+   file type being referenced in the displayed record is not an image but is of
+   a file type defined in the :guilabel:`Configure External Applications` tab
+   then when you double-click on the value of the field containing the path to
+   the file the application to open the file will be launched to view or hear
+   the contents of the file. If the file extension is recognized the attribute
+   data will be displayed in green.
+F. **Navigation buttons**: Use the Previous and Next buttons to load the previous
+   or next feature when more than one feature is selected.
+G. **Feature indicator**: This heading indicates which feature is being displayed
+   and how many features are available for display.
 
 .. _`evis_options_window`:
 
@@ -110,21 +113,20 @@ Understanding the Options window
 
    The *eVis* Options window |win|
 
-A. **File path**: A dropdown list to specify the attribute field that
-   contains the directory path or URL for the photographs or other documents
-   being displayed. If the location is a relative path then the checkbox must
-   be clicked. The base path for a relative
-   path can be entered in the Base Path text box below. Information about the
-   different options for specifying the file location are noted in the section
-   :ref:`evis_specifying` below.
+A. **File path**: A dropdown list to specify the attribute field that contains
+   the directory path or URL for the photographs or other documents being
+   displayed. If the location is a relative path then the checkbox must be
+   clicked. The base path for a relative path can be entered in the :guilabel:`Base
+   Path` text box below. Information about the different options for specifying
+   the file location are noted in the section :ref:`evis_specifying` below.
 B. **Compass bearing display field**: A dropdown list to specify the attribute
    field that contains the compass bearing associated with the photograph being
    displayed. If compass bearing information is available it is necessary to
    click the checkbox to the left of the dropdown menu title.
 C. **Compass offset setting**: Compass offsets can be used to compensate for
    declination (adjust bearings collected using magnetic bearings to true north
-   bearings). Click the |radiobuttonon| :guilabel:`Manual` radiobutton to
-   enter the offset in the text box or click the |radiobuttonon|
+   bearings). Click the |radiobuttonon| :guilabel:`Manual` radiobutton to enter
+   the offset in the text box or click the |radiobuttonon|
    :guilabel:`From Attribute` radiobutton to select the attribute field
    containing the offsets. For both of these options east declinations should
    be entered using positive values and west declinations should use negative
@@ -143,7 +145,8 @@ G. **Save settings**: If the checkbox is checked the values for the associated
 H. **Reset values**: Resets the values on this line to the default setting.
 I. **Restore faults**: This will reset all of the fields to their default
    settings. It has the same effect as clicking all of the **[Reset]** buttons.
-J. **Save**: This will save the settings without closing the Options pane.
+J. **Save**: This will save the settings without closing the :guilabel:`Options`
+   pane.
 
 
 .. _`evis_external_window`:
@@ -160,7 +163,7 @@ Understanding the Configure External Applications window
 .. figure:: /static/user_manual/plugins/evisexternal.png
    :align: center
    :width: 25em
- 
+
    The *eVis* External Applications window |win|
 
 
@@ -187,11 +190,11 @@ of the different approaches are listed in Table `evis_examples`_.
 
 ::
 
-  X        Y        FILE                                                                  BEARING 
-  780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG                       275    
-  780596   1784017  /groundphotos/DSC_0169.JPG                                            80   
+  X        Y        FILE                                                                  BEARING
+  780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG                       275
+  780596   1784017  /groundphotos/DSC_0169.JPG                                            80
   780819   1784015  http://biodiversityinformatics.amnh.org/evis_testdata/DSC_0170.JPG    10
-  780596   1784017  pdf:http://www.testsite.com/attachments.php?attachment_id-12          76 
+  780596   1784017  pdf:http://www.testsite.com/attachments.php?attachment_id-12          76
 
 
 .. _`evis_location`:
@@ -201,13 +204,13 @@ Specifying the location and name of other supporting documents
 
 Supporting documents such as text documents, videos, and sound clips can also
 be displayed or played by eVis. To do this it is necessary to add an entry in
-the file reference table that can be accessed from the Configure External
-Applications window in the Generic Event Browser that matches the file
-extension to an application that can be used to open the file. It is also
+the file reference table that can be accessed from the :guilabel:`Configure External
+Applications` window in the :guilabel:`Generic Event Browser` that matches the
+file extension to an application that can be used to open the file. It is also
 necessary to have the path or URL to the file in the attribute table for the
 vector layer. One additional rule that can be used for URLs that don't contain
 a file extension for the document you want to open is to specify the file
-extension before the URL. The format is --- file extension:URL. The URL is
+extension before the URL. The format is --- ``file extension:URL``. The URL is
 preceded by the file extension and a colon, and is particularly useful for
 accessing documents from Wikis and other web sites that use a database to
 manage the web pages (see Table `evis_examples`_).
@@ -217,61 +220,61 @@ manage the web pages (see Table `evis_examples`_).
 Using the Generic Event Browser
 -------------------------------
 
-When the Event Browser window opens a photograph will appear in the display
-window if the document referenced in the vector file attribute table is an
-image and if the file location information in the Options window is properly
-set. If a photograph is expected and it does not appear it will be necessary
-to adjust the parameters in the Options window.
+When the :guilabel:`Event Browser` window opens a photograph will appear in the
+display window if the document referenced in the vector file attribute table is
+an image and if the file location information in the :guilabel:`Options` window
+is properly set. If a photograph is expected and it does not appear it will be
+necessary to adjust the parameters in the :guilabel:`Options` window.
 
 If a supporting document (or an image that does not have a file extension
 recognized by eVis) is referenced in the attribute table the field containing
 the file path will be highlighted in green in the attribute information window
 if that file extension is defined in the file reference table located in the
-Configure External Applications window. To open the document double-click on
-the green-highlighted line in the attribute information window. If a supporting
-document is referenced in the attribute information window and the file path is
-not highlighted in green then it will be necessary to add an entry for the
-file's filename extension in the Configure External Applications window. If the
-file path is highlighted in green but does not open when double-clicked it will
-be necessary to adjust the parameters in the Options window so the file can be
-located by eVis.
+:guilabel:`Configure External Applications` window. To open the document
+double-click on the green-highlighted line in the attribute information window.
+If a supporting document is referenced in the attribute information window and
+the file path is not highlighted in green then it will be necessary to add an
+entry for the file's filename extension in the :guilabel:`Configure External
+Applications` window. If the file path is highlighted in green but does not open
+when double-clicked it will be necessary to adjust the parameters in the
+:guilabel:`Options` window so the file can be located by eVis.
 
-If no compass bearing is provided in the Options window a red asterisk will be
-displayed on top of the vector feature that is associated with the photograph
-being displayed. If a compass bearing is provided then an arrow will appear
-pointing in the direction indicated by the value in the compass bearing display
-field in the Generic Event Browser window. The arrow will be centered over the
-point that is associated with the photograph or other document.
+If no compass bearing is provided in the :guilabel:`Options` window a red asterisk
+will be displayed on top of the vector feature that is associated with the
+photograph being displayed. If a compass bearing is provided then an arrow will
+appear pointing in the direction indicated by the value in the compass bearing
+display field in the :guilabel:`Generic Event Browser` window. The arrow will be
+centered over the point that is associated with the photograph or other document.
 
-To close the Generic Event Browser window click on the **[Close]** button from
-the Display window.
+To close the :guilabel:`Generic Event Browser` window click on the **[Close]**
+button from the :guilabel:`Display` window.
 
 .. _`evis_id_tool`:
 
 Event ID Tool
 -------------
 
-The Event ID module allows you to display a photograph by clicking on a feature
+The 'Event ID' module allows you to display a photograph by clicking on a feature
 displayed in the QGIS map window. The vector feature must have attribute
 information associated with it to describe the location and name of the file
 containing the photograph and optionally the compass direction the camera was
 pointed when the image was acquired. This layer must be loaded into QGIS before
-running the Event ID tool.
+running the 'Event ID' tool.
 
 .. _`evis_launch_id`:
 
 Launch the Event ID module
 ..........................
 
-To launch the Event ID module either click on the |event_id| :sup:`Event ID`
-icon or click on :menuselection:`Plugins --> eVis --> Event ID Tool -->`. 
-This will cause the cursor to change to an arrow with an "i" on top of it
-signifying that the ID tool is active.
+To launch the 'Event ID' module either click on the |event_id| :sup:`Event ID`
+icon or click on :menuselection:`Plugins --> eVis --> Event ID Tool`. This will
+cause the cursor to change to an arrow with an 'i' on top of it signifying that
+the ID tool is active.
 
 To view the photographs linked to vector features in the active vector layer
 displayed in the QGIS map window, move the Event ID cursor over the feature and
-then click the mouse. After clicking on the feature, the Generic Event Browser
-window is opened and the photographs on or near the clicked locality are
+then click the mouse. After clicking on the feature, the :guilabel:`Generic Event
+Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
 you can cycle through the different features using the **[Previous]** and
 **[Next]** buttons. The other controls are described in the ref:`evis_browser`
@@ -282,7 +285,7 @@ section of this guide.
 Database connection
 -------------------
 
-The Database Connection module provides tools to connect to and query a
+The 'Database Connection' module provides tools to connect to and query a
 database or other ODBC resource, such as a spreadsheet.
 
 eVis can directly connect to four types of databases: Microsoft Access,
@@ -295,13 +298,13 @@ to configure your ODBC driver for the operating system you are using.
 Launch the Database Connection module
 .....................................
 
-To launch the Database Connection module either click on the appropriate icon
-|evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Plugins --> 
-eVis --> Database Connection -->`. This will launch the Database Connection
+To launch the 'Database Connection' module either click on the appropriate icon
+|evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Plugins -->
+eVis --> Database Connection`. This will launch the :guilabel:`Database Connection`
 window. The window has three tabs: :guilabel:`Predefined Queries`,
-:guilabel:`Database Connection`, and :guilabel:`SQL Query`. The Output Console
-window at the bottom of the window displays the status of actions initiated by
-the different sections of this module.
+:guilabel:`Database Connection`, and :guilabel:`SQL Query`. The :guilabel:`Output
+Console` window at the bottom of the window displays the status of actions
+initiated by the different sections of this module.
 
 .. _`evis_connect_database`:
 
@@ -309,22 +312,22 @@ Connect to a database
 .....................
 
 Click on the :guilabel:`Database Connection` tab to open the database
-connection interface. Next, click on the :menuselection:`Database Type -->`
-dropdown menu to select the type of database that you want to connect to. If a
+connection interface. Next, use the :menuselection:`Database Type` |selectstring|
+combobox to select the type of database that you want to connect to. If a
 password or username is required, that information can be entered in the
-Username and Password textboxes.
+:guilabel:`Username` and :guilabel:`Password` textboxes.
 
-Enter the database host in the Database Host textbox. This option is not
-available if you selected "MS Access" as the database type. If the database
+Enter the database host in the :guilabel:`Database Host` textbox. This option is
+not available if you selected "MS Access" as the database type. If the database
 resides on your desktop you should enter "localhost".
 
-Enter the name of the database in the Database Name textbox. If you selected
-"ODBC" as the database type, you need to enter the data source name.
+Enter the name of the database in the :guilabel:`Database Name` textbox. If you
+selected "ODBC" as the database type, you need to enter the data source name.
 
 When all of the parameters are filled in, click on the **[Connect]** button.
-If the connection is successful, a message will be written in the Output Console
-window stating that the connection was established. If a connection was not
-established you will need to check that the correct parameters were entered
+If the connection is successful, a message will be written in the :guilabel:`Output
+Console` window stating that the connection was established. If a connection was
+not established you will need to check that the correct parameters were entered
 above.
 
 .. _figure_eVis_4:
@@ -343,7 +346,7 @@ above.
 A. **Database Type**: A dropdown list to specify the type of database that will
    be used.
 B. **Database Host**: The name of the database host.
-C. **Port** The port number if a MYSQL or PostgreSQL database type is selected.
+C. **Port** The port number if a MySQL or PostgreSQL database type is selected.
 D. **Database Name** The name of the database.
 E. **Connect** A button to connect to the database using the parameters defined
    above.
@@ -372,11 +375,13 @@ extract all of the data from a worksheet in an Excel file, ``select * from [shee
 where ``sheet1`` is the name of the worksheet.
 
 Click on the **[Run Query]** button to execute the command. If the query
-is successful a Database File Selection window will be displayed. If the query
-is not successful an error message will appear in the Output Console window.
+is successful a :guilabel:`Database File Selection` window will be displayed. If
+the query is not successful an error message will appear in the :guilabel:`Output
+Console` window.
 
-In the Database File Selection window, enter the name of the layer that will be
-created from the results of the query in the Name of New Layer textbox.
+In the :guilabel:`Database File Selection` window, enter the name of the layer
+that will be created from the results of the query in the :guilabel:`Name of New
+Layer` textbox.
 
 .. _figure_eVis_5:
 
@@ -391,29 +396,29 @@ created from the results of the query in the Name of New Layer textbox.
    The eVis SQL query tab |win|
 
 A. **SQL Query Text Window**: A screen to type SQL queries.
-B. **Run Query**: Button to execute the query entered in the SQL Query Window.
+B. **Run Query**: Button to execute the query entered in the :guilabel:`SQL Query
+   Window`.
 C. **Console Window**: The console window where messages related to processing
    are displayed.
 D. **Help**: Displays the on line help.
-E. **OK**: Closes the main "Database Connection" window.
+E. **OK**: Closes the main :guilabel:`Database Connection` window.
 
+Use the :guilabel:`X Coordinate` |selectstring| and :guilabel:`Y Coordinate`
+|selectstring| comboboxes to select the field from the database that store the
+``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
+button causes the vector layer created from the SQL query to be displayed in the
+QGIS map window.
 
-Use the :menuselection:`X Coordinate -->` and :menuselection:`Y Coordinate -->`
-dropdown menus to select the field from the database that store the "X" (or
-longitude) and "Y" (or latitude) coordinates. Clicking on the **[OK]** button
-causes the vector layer created from the SQL query to be displayed in the QGIS
-map window.
-
-To save this vector file for future use, you can use the QGIS "Save as..."
+To save this vector file for future use, you can use the QGIS 'Save as...'
 command that is accessed by right clicking on the layer name in the QGIS map
-legend and then selecting "Save as shapefile."
+legend and then selecting 'Save as...'
 
 .. tip:: **Creating a vector layer from a Microsoft Excel Worksheet**
 
    When creating a vector layer from a Microsoft Excel Worksheet you might see
    that unwanted zeros ("0") have been inserted in the attribute table rows
    beneath valid data.This can be caused by deleting the values for these cells
-   in Excel using the :kbd:`backspace` key. To correct this problem you need to
+   in Excel using the :kbd:`Backspace` key. To correct this problem you need to
    open the Excel file (you'll need to close QGIS if there if you are connected
    to the file to allow you to edit the file) and then use
    :menuselection:`Edit --> Delete` to remove the blank rows from the file. To
@@ -432,7 +437,7 @@ commands. Click on the :guilabel:`Predefined Queries` tab to display the
 predefined query interface.
 
 To load a set of predefined queries click on the |evis_file| :sup:`Open File`
-icon. This opens the Open File window which is used to locate the file
+icon. This opens the :guilabel:`Open File` window which is used to locate the file
 containing the SQL queries. When the queries are loaded their titles, as
 defined in the XML file, will appear in the dropdown menu located just below
 the |evis_file| :sup:`Open File` icon, the full description of the query is
@@ -444,9 +449,9 @@ window. If it is the first time you are running a predefined query or are
 switching databases, you need to be sure to connect to the database.
 
 Click on the **[Run Query]** button in the :guilabel:`SQL Query` tab to execute
-the command. If the query is successful a Database File Selection window will
-be displayed. If the query is not successful an error message will appear in
-the Output Console window.
+the command. If the query is successful a :guilabel:`Database File Selection`
+window will be displayed. If the query is not successful an error message will
+appear in the :guilabel:`Output Console` window.
 
 .. _figure_eVis_6:
 
@@ -481,7 +486,7 @@ XML format for eVis predefined queries
 The XML tags read by eVis
 
 +------------------+------------------------------------------------------------------------------------------------+
-| Tag              | Description                                                                                    | 
+| Tag              | Description                                                                                    |
 +==================+================================================================================================+
 | query            | Defines the beginning and end of a query statement.                                            |
 +------------------+------------------------------------------------------------------------------------------------+
@@ -558,9 +563,3 @@ A complete sample XML file with three queries is displayed below:
       <autoconnect>false</autoconnect>
     </query>
    </doc>
-
-
-
-.. [1] This section is derived from Horning, N., K. Koy, P. Ersts. 2009. eVis (v1.1.0) 
-       User's Guide. American Museum of Natural History, Center for Biodiversity and Conservation. 
-       Available from `<http://biodiversityinformatics.amnh.org/>`_ , and released under the GNU FDL.

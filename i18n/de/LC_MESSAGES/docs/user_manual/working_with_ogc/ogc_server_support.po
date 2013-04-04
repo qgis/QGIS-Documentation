@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-23 14:06\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,12 +52,12 @@ msgid ""
 "expressed in SLD)."
 msgstr ""
 
-# 240d1b7029f14fc38d914464b1b0c657
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:35
+# 6e0c59ccd02f44a892bda810436cd875
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:34
 msgid ""
 "As QGIS desktop and QGIS Server use the same visualization libraries, the "
 "maps that are published on the web look the same as in desktop GIS. The "
-"Publish to Web plugin currently supports basic symbolization, with more "
+"'Publish to Web' plugin currently supports basic symbolization, with more "
 "complex cartographic visualization rules introduced manually. As the "
 "configuration is performed with the `SLD standard <http://www.opengeospatial."
 "org/standards/sld>`_ and its documented extensions, there is only one "
@@ -66,7 +66,7 @@ msgid ""
 msgstr ""
 
 # fa82d635b81d4991a17799998c6f807b
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:43
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:42
 msgid ""
 "In one of the following manuals we will provide a sample configuration to "
 "set up a QGIS Server. But for now we recommend to read one of the following "
@@ -74,28 +74,28 @@ msgid ""
 msgstr ""
 
 # c9dbb287034f4cf68ab86a277a03c3bd
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:47
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:46
 msgid "http://karlinapp.ethz.ch/qgis_wms/"
 msgstr ""
 
 # 2d8865278f7c4246847bc7875f04e115
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:48
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:47
 msgid "http://www.qgis.org/wiki/QGIS_mapserver_tutorial"
 msgstr ""
 
 # 16e9188a1b3b4520bb236f3ddb4edbd0
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:49
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:48
 msgid ""
 "http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/"
 msgstr ""
 
 # 4c9ffb4f782b4c03a1730961d66fd937
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:54
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:53
 msgid "Sample installation on Debian Squeeze"
 msgstr ""
 
 # 596b3cf4adf542079ff275b4c979d314
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:56
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:55
 msgid ""
 "At this point we will give a short and simple sample installation howto for "
 "Debian Squeeze. Many other OS provide packages for QGIS Server, too. If you "
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 
 # aceb3516ea1046fbba882326e548ea63
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:60
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:59
 msgid ""
 "Apart from qgis and qgis-mapserver you need a webserver, in our case "
 "apache2. You can install all packages with aptitude or apt-get install "
@@ -115,7 +115,7 @@ msgid ""
 msgstr ""
 
 # f9ca7f300653465aa477dd8c403ae27e
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:69
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:66
 msgid ""
 "Now we test the qgis server installation. The :file:`qgis_mapserv.fcgi` is "
 "available at ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` and provides a standard "
@@ -125,12 +125,12 @@ msgid ""
 msgstr ""
 
 # 73970adac2ab4903b981e28697247128
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:90
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:87
 msgid "Creating a WMS/WFS from a QGIS project"
 msgstr ""
 
 # 0a4f46cf0c1e4577b1ba227527f9dc32
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:92
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:89
 msgid ""
 "To provide a new qgis wms/wfs server we have to create a qgis project file "
 "with some data. Here we use the 'alaska' shapefile from the "
@@ -138,25 +138,25 @@ msgid ""
 "define the project CRS, if not already done."
 msgstr ""
 
-# 0a3c407e31874eccb2498f3d9a0b4253
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:109
+# 0de1bce27ce84de9b1cb8d7969be7b9e
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:106
 msgid ""
 "Then open the ``OWS Server`` tab in the menu :menuselection:`Settings --> "
 "Project Properties` and define the general fields under 'Service "
 "Capabilities'. For ``WMS Capabilities`` define 'Coordinate System "
 "Restrictions' and 'Advertised Extend'. Additionally you can enable the "
 "checkbox |checkbox| :guilabel:`Add WKT geometry to feature into response` to "
-"make the layers queryable and add a Maximum width and height that can be "
+"make the layers queryable and add a 'Maximum width' and height that can be "
 "requested. For ``WFS Capabilities`` you only need to select the layers that "
 "you want to provide as WFS. Now save the session in a project file :file:"
 "`alaska.qgs`. To provide the project as a WMS/WFS, we create a new folder ``/"
 "usr/lib/cgi-bin/project`` with admin privileges and add the project file :"
-"file:`alaska.qgs` and a copy of the :file:`qgis\\_mapserv.fcgi` file - "
-"that's all."
+"file:`alaska.qgs` and a copy of the :file:`qgis_mapserv.fcgi` file - that's "
+"all."
 msgstr ""
 
 # 1fe8145325bd412498c4fcc0c442d6cc
-#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:121
+#: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:118
 msgid ""
 "Now we test our project WMS and WFS, add the WMS and WFS as described in :"
 "ref:`ogc-wms-layers` and :ref:`ogc-wfs` to QGIS and load the WMS. The URL is:"
