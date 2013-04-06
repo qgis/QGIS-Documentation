@@ -1,35 +1,36 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS Documentation Project 1.8\n"
+"Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 14:25\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2013-04-06 12:25\n"
+"PO-Revision-Date: 2013-03-22 16:45+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-"
+"documentation/language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-# cb00db92fae246858d44c64b17c21f72
+# 2ea95a8bd1b8465aab6eb24fef94d7da
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:11
 msgid "Reading And Storing Settings"
 msgstr ""
 
-# 84cc9ea25e4a40aaa3c4d15b98cfde16
+# e0ebd122310a481f87589b8a3e3d1b15
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:13
 msgid ""
 "Many times it is useful for a plugin to save some variables so that the user "
 "does not have to enter or select them again next time the plugin is run."
 msgstr ""
 
-# 98d107a1f28448afa1264c80ef852a06
+# 5ee15e4c6e9048b0a5dbf2e34b8dd175
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:16
 msgid ""
 "These variables can be saved a retrieved with help of Qt and QGIS API. For "
@@ -39,12 +40,12 @@ msgid ""
 "to naming of keys."
 msgstr ""
 
-# 43f31c6669994305834b1b39b36825c2
+# bb9bb12912014e25a9d02da42f851e35
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:21
 msgid "We can make difference between several types of settings:"
 msgstr ""
 
-# 27aea148bb354f0b8df2db73bad8caae
+# 9155de6c55064cf7a6c7aff61f38b527
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:25
 msgid ""
 "**global settings** --- they are bound to the user at particular machine. "
@@ -57,7 +58,7 @@ msgid ""
 "is comprehensive, so we will provide just a simple example::"
 msgstr ""
 
-# b856ae8b208d4df6b8b9c30075a10fa2
+# 1d9de08e4f2048ad8e68f39599f5e6e3
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:46
 msgid ""
 "Qt uses QVariant instances for variable values in setValue() and value() "
@@ -66,19 +67,19 @@ msgid ""
 "that's why we use the to*() methods. Few more things to note here:"
 msgstr ""
 
-# b5365983cca74d0ea821c99470c8bfaa
+# 64eaa1d8a5884be09c98d59748874c07
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:51
 msgid ""
 "the second parameter to value() method is optional and states the default "
 "value if there is no previous value set"
 msgstr ""
 
-# 9c545ef15c85441b8057fdd8d8f8ccab
+# 88c9b508f29045d29cdf608308dc5267
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:53
 msgid "toString() returns a QString instance, not a Python string"
 msgstr ""
 
-# 04b35e4bed1d44c09ed35fb1f3e0a732
+# 9acb06955418439da6c062e2a5e00546
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:54
 msgid ""
 "toInt() and toDouble() return tuples (value, ok) --- the second item "
@@ -87,7 +88,7 @@ msgid ""
 "value."
 msgstr ""
 
-# faa9db47b3b54b1a81ca4e9ddaebab54
+# 424af6411cd44af1a4e21b037dd059bf
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:60
 msgid ""
 "**project settings** --- vary between different projects and therefore they "
@@ -97,7 +98,7 @@ msgid ""
 "projection for another one. An example of usage follows::"
 msgstr ""
 
-# 9c78893113f5492d9304b5857e7ed18d
+# 287b63c57299407c856d36dd7aaac2c2
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:76
 msgid ""
 "Hopefully the QgsProject class will be updated in future to provide API "
@@ -105,7 +106,7 @@ msgid ""
 "bindings, it is not possible to save floating point numbers."
 msgstr ""
 
-# d5565e10cebc4ef1999ca42cda06dff9
+# a89661488e464ebf916cbb3af9b4e83d
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:82
 msgid ""
 "**map layer settings** --- these settings are related to a particular "
@@ -118,7 +119,12 @@ msgid ""
 "instances::"
 msgstr ""
 
-# 6d735f5a89cc4d4ebd072bce3602b9c7
+# b60143887c2b4f028fba224fbb73e79c
+#: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:99
+msgid "**TODO:**"
+msgstr ""
+
+# c2c117c48ca046f3afdb15bf0003ca6e
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:98
 msgid "Keys for settings that can be shared among plugins"
 msgstr ""
