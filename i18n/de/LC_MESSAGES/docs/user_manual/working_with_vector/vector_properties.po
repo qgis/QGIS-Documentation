@@ -2194,6 +2194,11 @@ msgid ""
 "zoom in to an area of interest. Make sure the ``lakes`` layer is active and "
 "identify a lake. In the result box you'll now see that our action is visible:"
 msgstr ""
+"Damit ist die Aktion fertig für den Einsatz. Schließen Sie den "
+":guilabel:`Eigenschaften` Dialog und zoomen Sie in einen Bereich Ihrer Wahl. "
+"Stellen Sie sicher, dass der Layer ``lakes`` in der Legende aktiviert ist. "
+"Nun identifizieren Sie einen See. In der Ergebnisanzeige sollte nun die "
+"Aktion sichtbar sein:"
 
 # fd0c7a76e4f14f23b3df26a7c1f5a119
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1066
@@ -2205,6 +2210,14 @@ msgid ""
 "this example there is just no other field available that would make sense to "
 "search for."
 msgstr ""
+"Wenn wir nun auf das Wort ``action`` klicken, öffnet sich der Webbrowser "
+"Firefox und zeigt uns das Ergebnis der Internetrecherche z.B. nach dem See "
+"Tustumena an http://www.google.com/search?q=Tustumena. Es ist übrigens auch "
+"möglich, weitere Attributspalten zu ergänzen. Dazu fügen Sie einfach ein "
+"``+''-Zeichen an das Ende der Aktion, wählen eine weitere Attributspalte und "
+"klicken wieder auf den Knopf **[Attribut einfügen]**. In unserem Datensatz "
+"ist leider keine weitere sinnvolle Attributspalte vorhanden, nach der man im "
+"Internet suchen könnte."
 
 # d1c991056b684a4b8490e8af39a17a9e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1073
@@ -2212,6 +2225,9 @@ msgid ""
 "You can define multiple actions for a layer and each will show up in the "
 ":guilabel:`Identify Results` dialog."
 msgstr ""
+"Sie können auch mehrere Aktionen für einen Layer definieren. Sie alle werden "
+"dann bei der Abfrage von Objekten im :guilabel:`Identifikationsergebnis` "
+"Dialog angezeigt. "
 
 # edb50a05d3fd4e44802fb2d37179c9e7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1081
@@ -2223,13 +2239,20 @@ msgid ""
 "combination of fields, specifying them in the same way we did in our Google "
 "search example."
 msgstr ""
+"Sie sehen, man kann sich eine Vielzahl interessanter Aktionen ausdenken. "
+"Wenn Sie z.B. einen Punktlayer mit einzelnen Punkten haben, an denen Photos "
+"geschossen wurden, dann können Sie eine Aktion erstellen, über die Sie dann "
+"das entsprechende Photo anzeigen lassen können, wenn Sie auf den Punkt in "
+"der Karte klicken. Man kann auch zu bestimmten Attributen webbasierte\n"
+"Information ablegen (z.B. in einer HTML-Datei) und diese dann über eine "
+"Aktion anzeigen lassen, etwa so wie in dem Google Beispiel."
 
 # c71624d2e37048ac9720023d5ff6f13b
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1088
 msgid ""
 "We can also make more complex examples, for instance on how to use "
 "**Python** actions."
-msgstr ""
+msgstr "Ein komplexeres Beispiel ist die Anwendung von **Python** Aktionen."
 
 # cf3dbcd8cf6449cda9c367b065f669ac
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1091
@@ -2241,6 +2264,12 @@ msgid ""
 "layer (a file based one, like a shapefile or spatialite)? The following code "
 "will do the trick:"
 msgstr ""
+"Normalerweise wenn wir beim Erstellen von Aktionen zum Öffnen einer Datei "
+"mit einer externen Anwendung absolute Pfade, oder letztendlich relative "
+"Pfade verwenden ist im zweiten Fall der Pfad relativ zum Ort der "
+"ausführbaren Datei. Was aber wenn wir relative Pfade, die relativ zum "
+"ausgewählten Layer (eine dateibasierte, wie ein Shape oder SpatiaLite) sind "
+"benutzen müssen ? Mit dem folgenden Code können wir einen Trick anwenden:"
 
 # d0b1959cbe2d4bf7ac9cffa0f7660765
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1111
@@ -2248,6 +2277,9 @@ msgid ""
 "we have to just remember that the action is one of type *Python* and to "
 "change the *command* and *imagerelpath* variables to fit our needs."
 msgstr ""
+"Wir müssen uns nur ins Gedächtnis rufen dass es sich um eine *Python* "
+"Aktione handelt und dass das Ändern der *command* und *imagerelpath* "
+"Variablen auf unsere Bedürfnisse angepasst wird."
 
 # f2571056bb794d5a90e671392f084344
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1114
@@ -2255,6 +2287,8 @@ msgid ""
 "But what about if the relative path need to be relative to the (saved) "
 "project file? The code of the Python action would be:"
 msgstr ""
+"Was aber wenn der relative Pfad relativ zur (gespeicherten) Projektdatei "
+"sein muss? Der Code der Python Aktion würde wie folgt lauten:"
 
 # 55d88d92e1254a5cb45e3e6f596a3028
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1128
@@ -2266,11 +2300,20 @@ msgid ""
 "and *layname* are column names of the table of attributes of the vector "
 "where the action was created):"
 msgstr ""
+"Eine weiteres Beispiel für eine Python Aktion ist die die uns ermöglicht dem "
+"Projekt neue Layer hinzuzufügen. Zum Beispiel wird anhand des folgenden "
+"Beispiels dem Projekt eine Vektor- und eine Rasterdatei hinzugefügt. Die "
+"Vergabe des Namens der Datei die dem Projekt hinzugefügt werden soll und der "
+"Name des Layers werden gesteuert vergeben (*filename* und *layername* sind "
+"Spaltennamen der Attributtabelle der Vektordatei in der die Aktion erstellt "
+"wurde):  "
 
 # fd64068d436541a7a41e58bf3c0c9b65
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1141
 msgid "To add a raster (a tif image in this example) it becomes:"
 msgstr ""
+"Um eine Rasterdatei (in diesem Beispiel eine tif Datei) hinzuzufügen wird "
+"daraus:"
 
 # cc4cb213831b494d9f52ce4661b265f0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1152
@@ -2311,7 +2354,7 @@ msgstr "|checkbox| :guilabel:`Index auf Feld erzeugen`"
 # 7237ad600b8f43968c141efad298ec8e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1181
 msgid "Diagrams Tab"
-msgstr ""
+msgstr "Diagramme"
 
 # c4c9d79d27774921b11f7d3afe90be3b
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1183
@@ -2319,6 +2362,8 @@ msgid ""
 "|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay "
 "to a vector layer (see figure_diagrams_1_)."
 msgstr ""
+"|diagram| Der Reiter :guilabel:`Diagramme` ermöglicht es, ein Diagramm als "
+"Grafik über einen Vektorlayer zu visualisieren (siehe figure_diagrams_1_)."
 
 # a241891213de418fa35bf522a5352be4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1186
@@ -2331,6 +2376,14 @@ msgid ""
 "position conflicts between diagrams and labels are detected and solved. In "
 "addition to chart positions can be fixed by the users hand."
 msgstr ""
+"Die aktuelle Kernimplementation der Diagramme unterstützt Kuchendiagramme "
+"und Textdiagramme. Textwerte verschiedener Datenspalten werden untereinander "
+"anhand eines Kreises oder einer Box mit Trennstrichen dargestellt. Die "
+"Diagrammgröße basiert auf einer festgelegten Größe oder auf linearer "
+"Skalierung gemäß eines Klassifikationsattributes. Die Platzierung der "
+"Diagramme interagiert mit der neuen Darstellung, Positionskonflikte zwischen "
+"Diagrammen und Beschriftungen werden also ermittelt und aufgelöst. "
+"Zusätzlich können die Diagrammpositionen von Hand korrigiert werden."
 
 # 79876a06452b44b1bc57dc7548bced74
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1206
@@ -2340,6 +2393,10 @@ msgid ""
 "vector layers are part of the |qg| sample dataset (see Section "
 ":ref:`label_sampledata`)."
 msgstr ""
+"Wir werden in einem Beispiel den Alaska Grenzen Layer mit einem Text "
+"Diagramm das Temperaturdaten von einem Klima Layer zeigt überlagern. Beide "
+"Vektorlayer sind Teil des |qg| Beispieldatensatzes (siehe Abschnitt "
+":ref:`label_sampledata`)."
 
 # dfac2732f864488babeca157ce753205
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1211
@@ -2348,6 +2405,9 @@ msgid ""
 "the |qg| sample dataset folder and load the two vector shape layers "
 ":file:`alaska.shp` and :file:`climate.shp`."
 msgstr ""
+"Als erstes klicken Sie auf das |mActionAddOgrLayer| :sup:`Vektorlayer "
+"hinzufügen`Icon, dann navigieren Sie zum Ordner mit dem Beispieldatensatz "
+"und laden Sie die beiden Shapes :file:`alaska.shp` und :file:`climate.shp`."
 
 # 312b573e8e504db29548e32442d94d5a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1214
@@ -2355,6 +2415,8 @@ msgid ""
 "Double click the ``climate`` layer in the map legend to open the "
 ":guilabel:`Layer Properties` dialog."
 msgstr ""
+"Doppelklicken Sie auf den ``climate`` Layer in der Kartenlegende um den "
+"Dialog :guilabel:`Layereigenschaften` zu öffnen."
 
 # ec04da32e21d4b8780be965779ba0ec9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1216
@@ -2363,17 +2425,22 @@ msgid ""
 "and from :guilabel:`Diagram type` |selectstring| combobox select 'Text "
 "diagram'"
 msgstr ""
+"Klicken Sie auf den Reiter :guilabel:`Diagramme`, aktivieren Sie "
+":guilabel:`Diagramme anzeigen` und suchen Sie aus der "
+":guilabel:`Diagrammtyp` |selectstring| Kombobox 'Textdiagramm' aus."
 
 # 01d85297d0b34289bb536706e962494d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1218
 msgid ""
 "As Background color we choose a light blue and set a fixed size to 18 mm."
 msgstr ""
+"Suchen Sie als Hintergrundfarbe ein helles blau aus und legen Sie eine feste "
+"Größe von 18mm fest."
 
 # 92aef11d19764de6a3174fd56723a2cc
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1219
 msgid "Placement could be set to AroundPoint."
-msgstr ""
+msgstr "Sie können die Platzierung UmPunkt wählen."
 
 # 0eb306d5ca5240a0884155139ed862d4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1220
@@ -2383,11 +2450,15 @@ msgid ""
 "Attributes and click the green **[\\+]** button, then ``T_F_JUL`` and "
 "finally ``T_F_MEAN``."
 msgstr ""
+"Im Diagramm wollen wir die Werte von drei Attributspalten ``T_F_JAN``, "
+"``T_F_JUL`` und ``T_F_MEAN``  anzeigen. Als erstes selektieren wir "
+"``T_F_JAN`` als Attribut und klicken auf den grünen **[\\+]** Knopf, dann "
+"``T_F_JUL`` und schließlich ``T_F_MEAN``     "
 
 # b890e57049844334982cc8352f51d4b0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1224
 msgid "Now click **[Apply]** to display the diagram in the |qg| main window."
-msgstr ""
+msgstr "Klicken Sie jetzt **[Anwenden]** um das Diagramm in |qg| anzuzeigen."
 
 # e5797d5c7a90485f99dd69fce8c0c4f8
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1225
@@ -2396,11 +2467,14 @@ msgid ""
 "clicking on the color values in the attribute field. Figure_diagrams_2_ "
 "gives an impression."
 msgstr ""
+"Sie können nun die Diagrammgröße weiter anpassen oder die Farbe ändern, "
+"indem Sie auf die Farbe des Attributs doppelklicken. Figure_diagrams_2_ gibt "
+"einen ersten Eindruck wieder."
 
 # 7f84fd0eca924b9eaaae2687839f1f6a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1228
 msgid "Finally click **[Ok]**."
-msgstr ""
+msgstr "Abschließend klicken Sie **[OK]**."
 
 # 9a876c6b9e38482580878d6f32956f3c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1242
@@ -2412,3 +2486,9 @@ msgid ""
 "in different layers. Also see section :ref:`diagram_overlay` for additional "
 "diagram features."
 msgstr ""
+"Es gibt zusätzlich im :menuselection:`Einstellungen --> Optionen` Dialog "
+"einen Reiter :guilabel:`Überlagern` in dem es möglich ist den "
+"Platzierungsalgorithmus der Diagramme auszuwählen. Die Zentrum Methode ist "
+"eine allgemeine, die anderen benutzen Algorithmen der PAL Bibliothek. Sie "
+"prüfen auch Diagrammobjekte und Beschriftungen in verschiedenen Layern. Sie "
+"auch Anschnitt :ref:`diagram_overlay` für zusätzliche Diagrammfunktionen.    "
