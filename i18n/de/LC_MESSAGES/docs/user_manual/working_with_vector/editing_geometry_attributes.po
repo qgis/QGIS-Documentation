@@ -113,6 +113,22 @@ msgid ""
 "units in feet. Your results may vary, but something on the order of 300ft "
 "should be fine at a scale of 1:10 000 should be a reasonable setting."
 msgstr ""
+"Ein allgemeiner, projektweiter Fangmodus kann im Menü "
+":menuselection:`Einstellungen -->` |mActionOptions| "
+":menuselection:`Optionen` festgelegt werden. Unter Mac gehen Sie zu "
+":menuselection:`QIS -->` |mActionOptions| :menuselection:`Einstellungen "
+"...`, unter Gnome zu :menuselection:`Bearbeiten -->` |mActionOptions| "
+":menuselection:`Optionen`. Im Reiter :guilabel:`Digitalisierung` können Sie "
+"auswählen, ob sich der Fangmodus auf Stützpunkte, Segmente oder auf "
+"Stützpunkte und Segmente beziehen soll. Sie können auch eine "
+"Standardfangtoleranz    und einen Suchradius für das Bearbeiten von "
+"Stützpunkten definieren. Die Toleranz kann entweder in Karteneinheiten oder "
+"in Pixeln eingestellt werden. Der Vorteil bei Pixeln ist dass die "
+"Fangtoleranz nach Zoomoperationen nicht verändert werden muss. In unserem "
+"kleinen Digitalisierprojekt (wir arbeiten mit dem Alaskadatensatz) legen wir "
+"die Snapeinheiten in Fuß fest. Ihre Ergebnisse können variieren, aber etwas "
+"in der Größenordnung von 300 ft sollte in einem Maßstab von 1:10 000 ein "
+"angemessene Einstellung sein. "
 
 # 9e674bb94b9f4b2eaf3b1ac8f29f0a56
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:59
@@ -122,6 +138,10 @@ msgid ""
 ":menuselection:`Snapping options...` to enable and adjust snapping mode and "
 "tolerance on a layer basis (see figure_edit_1_ )."
 msgstr ""
+"Eine layerbezogene Fangtoleranz kann unter :menuselection:`Einstellungen "
+"-->` (oder :menuselection:`Datei -->`) :menuselection:`Fangoptionen ...` um "
+"den Fangmodus und die Fangtoleranz auf Layerbasis zu ermöglichen und "
+"anzupasssen definiert werden (siehe figure_edit_1_ )."
 
 # b99801acd6c34dc9a75a6f1bacfb7d45
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:65
@@ -134,11 +154,20 @@ msgid ""
 "the snapping options dialog, regardless of the global snapping tolerance. So "
 "be sure to mark the checkbox for those layers that you need to snap to."
 msgstr ""
+"Beachten Sie dass dieses layerbezogene Snapping die globale Snapoption aus "
+"dem Reiter Digitalisierung überschreibt. Wenn Sie also einen Layer "
+"bearbeiten und seine Stützpunkte zu einem anderen Layer snappen wollen dann "
+"stellen Sie das Snappen nur für den zu snappenden Layer ein und verringern "
+"die allgemeine Fangtoleranz auf einen kleineren Wert. Darüberhinaus "
+"funktioniert das Snappen nicht mit Layern die nicht im Fangoptionen Dialog "
+"aktiviert sind, egal wie die allgemeine Fangtoleranz aussieht. Vergewissern "
+"Sie sich also dass die Checkbox der Layer auf die Sie snappen müssen "
+"markiert ist."
 
 # 7b539ac385134b4da84782cb4bd1cf14
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:88
 msgid "Search radius"
-msgstr ""
+msgstr "Suchradius"
 
 # ca589320fe724de1b785cb42e98a7c64
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:90
@@ -153,6 +182,16 @@ msgid ""
 "vertices in close proximity. Set search radius too small and it won't find "
 "anything to move."
 msgstr ""
+"Der Suchradius ist die Distanz die |qg| benutzt um den nächstgelegenen "
+"Stützpunkt der verschoben werden soll zu ``finden``. Wenn Sie sich nicht "
+"innerhalb des Suchradius befinden wird |qg| keinen Stützpunkt zum Editieren "
+"finden und auswählen und es wird dazu eine störende Warnung erscheinen. Die "
+"Fangtoleranz und der Suchradius werden in Karteneinheiten oder Pixeln "
+"festgelegt Sie müssen also etwas experimentieren um sie richtig "
+"einzustellen. Wenn Sie eine zu große Toleranz festlegen, könnte |qg| zum "
+"falschen Stützpunkt snappen, besonders wenn es eine große Anzahl von "
+"Stützpunkten in geringer Entfernung gibt. Legen Sie den Suchradius zu klein "
+"fest wird es nichts zum verschieben finden."
 
 # 29634e776dba4bebaa85e04b244f07e3
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:100
@@ -162,11 +201,15 @@ msgid ""
 "|mActionOptions| :menuselection:`Options`. The same place where you define "
 "the general, project wide snapping tolerance."
 msgstr ""
+"Der Suchradius für die Stützpunktbearbeitung in Layereinheiten kann im "
+"Reiter :guilabel:`Digitalisierung` unter :menuselection:`Einstellungen -->` "
+"|mActionOptions| :menuselection:`Optionen` definiert werden. An der gleichen "
+"Stellen wo Sie die allgemeine, projektweite Fangtoleranz definieren."
 
 # a682a33223744459a377a303190adca6
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:108
 msgid "Zooming and Panning"
-msgstr ""
+msgstr "Zoomen und Karte verschieben"
 
 # 27f1976be3ff4255970e2052eb188bc4
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:110
@@ -175,6 +218,9 @@ msgid ""
 "avoids waiting while all the vertex markers are rendered across the entire "
 "layer."
 msgstr ""
+"Bevor Sie einen Layer editieren sollten Sie in den Bereich hineinzoomen, den "
+"Sie bearbeiten wollen. Dadurch vermeiden Sie lange Wartezeiten, bis alle "
+"Stützpunkte des Layers visualisiert werden."
 
 # 4adceb47d663430e8fcb333eccca600e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:114
@@ -184,11 +230,15 @@ msgid ""
 "the mouse, navigating can also be done with the mouse wheel, spacebar and "
 "the arrow keys."
 msgstr ""
+"Neben den |mActionPan| :sup:`Karte verschieben` und |mActionZoomIn| "
+":sup:`Hineinzoomen` / |mActionZoomOut| :sup:`Hinauszoomen` Icons in der "
+"Werkzeugleiste können Sie auch mit dem Mausrad, der Leertaste und den "
+"Pfeiltasten navigieren.     "
 
 # 23eb39a24bd040db82439ae6577af49c
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:120
 msgid "Zooming and panning with the mouse wheel"
-msgstr ""
+msgstr "Mit dem Mausrad im Kartenfenster zoomen und verschieben"
 
 # d446825e1eed4b7b88f8af77a57c144a
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:123
@@ -202,11 +252,20 @@ msgid ""
 "tools` tab under the :menuselection:`Settings -->` |mActionOptions| "
 ":menuselection:`Options` menu."
 msgstr ""
+"Während des Digitalisierens können Sie das Mausrad zum verschieben innerhalb "
+"des Hauptfenster drücken und Sie können das Mausrad zum hinein- und "
+"hinauszoomen drehen. Zum Zoomen platzieren Sie den Mauscursor in die Karte "
+"und rollen es vorwärts (von Ihnen weg) um hineinzuzoomen und rückwärts (zu "
+"Ihnen hin) um herauszuzoomen. Die Position des Mauscursors wird das Zentrum "
+"des Sie interessierenden Bereichs sein. Sie können das Verhalten des "
+"Mausrad-Zooms anhand des Reiters :guilabel:`Kartenwerkzeuge` unter "
+":menuselection:`Einstellungen -->`                            "
+"|mActionOptions| :menuselection:`Optionen` anpassen.  "
 
 # e8f31c20635844de90990eb13d97d16f
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:133
 msgid "Panning with the arrow keys"
-msgstr ""
+msgstr "Den Layer mit den Pfeiltasten verschieben"
 
 # aa8f403b005b46b8b7f20e6d49172afc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:136
@@ -216,6 +275,11 @@ msgid ""
 "east, left arrow key to pan west, up arrow key to pan north and down arrow "
 "key to pan south."
 msgstr ""
+"Das Verschieben des Layers im Kartenfenster während des Digitalisierens ist "
+"mit den Pfeiltasten möglich. Platzieren Sie den Mauszeiger in das "
+"Kartenfenster und drücken Sie rechte Pfeiltaste, um den Layer nach Osten zu "
+"verschieben, die linke Pfeiltaste für Westen, die Pfeiltaste nach unten für "
+"Süden und die Pfeiltaste nach oben für das Verschieben nach Norden."
 
 # defde523d3f34914a42c4b470e4b8c22
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:141
@@ -225,11 +289,15 @@ msgid ""
 "the map display to zoom in or out without interrupting your digitizing "
 "session."
 msgstr ""
+"Sie können auch die gedrückte Leertaste dazu verwenden, um den Layer im "
+"Kartenfenster zu verschieben. Die :kbd:`PgUp` und :kbd:`PgDown` Tasten auf "
+"Ihrem Keyboard bewirken dann das hineinzoomen und herauszoomen Ihres "
+"Kartenfensters ohne das Digitalisieren zu unterbrechen."
 
 # 0a71d06c206b48078c739d71f8062a88
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:148
 msgid "Topological editing"
-msgstr ""
+msgstr "Topologisches Editieren"
 
 # b02eac13611e4a67bc1d4f9b15bca6dd
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:150
@@ -241,11 +309,17 @@ msgid ""
 "layers you can activate the column |checkbox| :guilabel:`Avoid Int.` which "
 "avoids intersection of new polygons."
 msgstr ""
+"Abgesehen von der Einstellung des layerbasierten Fangmodus können im Menü "
+":menuselection:`Einstellungen -->`:guilabel:`Fangoptionen ...` auch "
+"topologische Funktionen aktiviert werden. Hier können sie |checkbox| "
+":guilabel:`Topologisches Editieren an` definieren und/oder für Polygonlayer "
+"können Sie die Spalte |checkbox| :guilabel:`Überschn.verm.` aktivieren die "
+"eine Überschneidung neuer Polygone vermeided.  "
 
 # 80ff95f1e7134a46bd23f63796b45944
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:160
 msgid "Enable topological editing"
-msgstr ""
+msgstr "Topologisches Editieren ermöglichen"
 
 # ab4b7ab168304603af3eae8655862f09
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:163
@@ -255,11 +329,16 @@ msgid ""
 "shared boundary in a polygon mosaic and you only have to move the vertex "
 "once and |qg| will take care about updating the other boundary."
 msgstr ""
+"Die Option |checkbox| :guilabel:`Topologisches Editieren an` unterstützt das "
+"Editieren und Kontrollieren gemeinsamer Grenzlinien in Polygonlayern. |qg| "
+"'erkennt' gemeinsame Flächengrenzen und beim Verschieben des Stützpunktes "
+"einer Fläche werden dann automatisch die anderen Flächengrenzen angepasst "
+"und mit verschoben."
 
 # b895b323152c43fc9fa3ac7b302e5671
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:171
 msgid "Avoid intersections of new polygons"
-msgstr ""
+msgstr "Überschneidung neuer Polygone vermeiden"
 
 # 814cf458bc974147b2b22373dcefdec1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:174
@@ -272,11 +351,18 @@ msgid ""
 "second polygon to the common boundary. The advantage is that users don't "
 "have to digitize all vertices of the common boundary."
 msgstr ""
+"Als zweite topologische Funktion gibt es ein Kontrollkästchen in der Spalte "
+"|checkbox| :guilabel:`Überschneidung verm.`. Damit wird es vereinfacht, "
+"angrenzende Polygone zu digitalisieren. Wenn bereits ein Polygon "
+"digitalisiert wurde, kann das zweite auch mit einer Überlagerung des ersten "
+"Polygons erstellt werden und QGIS schneidet dann die Überlagerungen weg, so "
+"dass die Flächen exakt aneinander liegen. Der Vorteil ist, dass nicht alle "
+"Stützpunkte einer gemeinsamen Grenzlinie digitalisiert werden müssen."
 
 # e06362e1611142f0b0522f9c2cdee272
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:187
 msgid "Digitizing an existing layer"
-msgstr ""
+msgstr "Einen vorhandenen Layer editieren"
 
 # b08b04da9a2b4e27a32e2340c24b8018
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:189
@@ -287,6 +373,11 @@ msgid ""
 "the underlying data source is writable (i.e. its files are not read-only). "
 "Layer editing is most versatile when used on PostgreSQL/PostGIS data sources."
 msgstr ""
+"Standardmäßig lädt QGIS Vektorlayer im 'read-only' Modus, um ungewolltes "
+"Editieren zu verhindern. Ansonsten können aber alle Ebenen editiert werden, "
+"wenn es der Datenanbieter erlaubt bzw. die Rechte entsprechend gesetzt sind. "
+"Das Editieren von Vektorlayern ist am vielseitigsten bei PostgreSQL/PostGIS "
+"Daten."
 
 # 4e036f2c3c504b608fa59222dd04525b
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:196
@@ -297,6 +388,11 @@ msgid ""
 "-->`. Using the basic digitizing tools you can perform the following "
 "functions:"
 msgstr ""
+"Das Editieren von Vektorlayern in QGIS ist unterteilt in Digitalisierung und "
+"erweiterte Digitalisierung, siehe Abschnitt :ref:`sec_advanced_edit`. Beide "
+"Werkzeugleisten können über das Menü :menuselection:`Einstellungen --> "
+"Werkzeugkästen -->` aktiviert und deaktiviert werden. Mit der Werkzeugleiste "
+"Digitalisierung können folgende Funktionen ausgeführt werden:"
 
 # 7f945905c6974c7985adda3b7a0277c2
 # 2d405e8c2cc448b693a68d468659e5b7
@@ -305,7 +401,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:204
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:481
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 # 0dee0e749914490fa00c4ef319734767
 # c695b24ed396410fa43e43d8aac30995
@@ -314,124 +410,124 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:204
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:481
 msgid "Purpose"
-msgstr ""
+msgstr "Funktion"
 
 # 2e3be963f18b41349f26f6747a2e1925
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:206
 msgid "|mActionToggleEditing|"
-msgstr ""
+msgstr "|mActionToggleEditing|"
 
 # 1ce04ea31e624645bd25b43390680b0f
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:206
 msgid "Toggle editing"
-msgstr ""
+msgstr "Bearbeitungsstatus umschalten"
 
 # 50a1922ec69947ed989022faed4a692c
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:206
 msgid "|mActionCapturePoint|"
-msgstr ""
+msgstr "|mActionCapturePoint|"
 
 # 3074f4accd8d4a428ac5e81ac08345fc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:206
 msgid "Adding Features: Capture Point"
-msgstr ""
+msgstr "Objekt hinzufügen: Punkt hinzufügen"
 
 # 251c26badd504570acf7136eeb4031df
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:208
 msgid "|mActionCaptureLine|"
-msgstr ""
+msgstr "|mActionCaptureLine|"
 
 # b6d7b360a85448dda78e93bfe4e46df1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:208
 msgid "Adding Features: Capture Line"
-msgstr ""
+msgstr "Objekt hinzufügen: Linie hinzufügen"
 
 # 7d66c979936947888c27f2c4df1bbb21
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:208
 msgid "|mActionCapturePolygon|"
-msgstr ""
+msgstr "|mActionCapturePolygon|"
 
 # be8585b21aef4b0a9c2ca106d65126a3
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:208
 msgid "Adding Features: Capture Polygon"
-msgstr ""
+msgstr "Objekt hinzufügen: Polygon hinzufügen"
 
 # debfc871b31d4dc0b81a29d77893baff
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:210
 msgid "|mActionMoveFeature|"
-msgstr ""
+msgstr "|mActionMoveFeature|"
 
 # 750bf8903b234ed7a65693e1cb24be0d
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:210
 msgid "Move Feature"
-msgstr ""
+msgstr "Objekt(e) verschieben"
 
 # e9923624b5034fc6995a82d4372433ad
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:210
 msgid "|mActionNodeTool|"
-msgstr ""
+msgstr "|mActionNodeTool|"
 
 # c05ab9c51b4e45219a18cf0e2c8d7853
 # 9ebc7dc31c65434bbf32be088b585421
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:210
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:293
 msgid "Node Tool"
-msgstr ""
+msgstr "Knotenwerkzeug"
 
 # 66463933cd9f4ed0a20173fde28dfe68
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:212
 msgid "|mActionDeleteSelected|"
-msgstr ""
+msgstr "|mActionDeleteSelected|"
 
 # f7c294eb6a8b4303be33842434dd2cfc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:212
 msgid "Delete Selected"
-msgstr ""
+msgstr "Ausgewähltes Löschen"
 
 # f71c1a66c07349619fa819a8aa09d640
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:212
 msgid "|mActionEditCut|"
-msgstr ""
+msgstr "|mActionEditCut|"
 
 # 914e13ab2b5443e583b1618c837a50de
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:212
 msgid "Cut Features"
-msgstr ""
+msgstr "Ausgewählte Objekte ausschneiden"
 
 # a91381c940a44269bb39d60375d6adc9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:214
 msgid "|mActionEditCopy|"
-msgstr ""
+msgstr "|mActionEditCopy|"
 
 # c8cdfcf68e224a6885ddbd1bd48b9c31
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:214
 msgid "Copy Features"
-msgstr ""
+msgstr "Objekte kopieren"
 
 # 62fbfe05ae5e4e978e1bfdf2e2f760a0
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:214
 msgid "|mActionEditPaste|"
-msgstr ""
+msgstr "|mActionEditPaste|"
 
 # 7597f96d97254282ab50ba604dff5bdb
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:214
 msgid "Paste Features"
-msgstr ""
+msgstr "Objekte einfügen"
 
 # f9d9b90c17d64fa2a3eb912a1860d4a1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:216
 msgid "|mActionFileSave|"
-msgstr ""
+msgstr "|mActionFileSave|"
 
 # a9cca382b4e5412a94177d650df51e00
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:216
 msgid "Save edits and continue"
-msgstr ""
+msgstr "Änderungen speichern"
 
 # 7daa4c02d5dc4047ac8f80af0a09fb03
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:219
 msgid "Table Editing: Vector layer basic editing toolbar"
-msgstr ""
+msgstr "Tabelle Bearbeiten: Funktionen der Werkzeugleiste Digitalisierung"
 
 # 0239e643b0c647ffb8de8c40478c448d
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:222
@@ -440,6 +536,10 @@ msgid ""
 ":sup:`Toggle editing` option. This can be found in the context menu after "
 "right clicking on the legend entry for that layer."
 msgstr ""
+"Alle Bearbeitungssessions beginnen mit dem Aktivieren der Funktion "
+"|mActionToggleEditing| :sup:`Bearbeitungsstatus umschalten`. Diese kann auch "
+"im Kontextmenü nach dem Rechtsklick auf den Legendeneintrag für den Layer "
+"aktiviert werden."
 
 # 70b8ff2fab1d4c009f66285c88b8752b
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:226
