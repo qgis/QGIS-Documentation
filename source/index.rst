@@ -10,10 +10,10 @@ QGIS
     website/download
     docs/user_manual/index
     docs/gentle_gis_introduction/index
-    http://plugins.qgis.org/
+    `Plugins <http://plugins.qgis.org>`_
     website/sponsorship
     website/support
-    website/case_studies
+    website/case_studies/index
     http://plugins.qgis.org/planet/
     http://hub.qgis.org/projects/quantum-gis
     website/community/index
@@ -27,6 +27,6 @@ Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
 Mac OSX, Windows and Android and supports numerous vector, raster, and database
 formats and functionalities.
 
-Our latest release is QGIS 1.8.0 you can read the `release annoucement here
+Our latest release is QGIS 1.8.0 you can read the `release announcement here
 <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
