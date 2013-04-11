@@ -7,20 +7,23 @@ QGIS
     :maxdepth: 2
     :hidden:
 
+    website/download
     docs/user_manual/index
     docs/gentle_gis_introduction/index
-    website/download
+    http://plugins.qgis.org/
+    website/sponsorship
+    website/support
+    website/case_studies
+    http://plugins.qgis.org/planet/
+    http://hub.qgis.org/projects/quantum-gis
     website/community/index
-    website/development/index
-
 
 Welcome to the Quantum GIS Project
 
 |qgissplash|
 
 Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
-(GIS) licensed under the GNU General Public License. QGIS is an official project
-of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix,
+(GIS), and includes a Desktop GIS, a webGIS server, and two different webGIS clients. It is licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix,
 Mac OSX, Windows and Android and supports numerous vector, raster, and database
 formats and functionalities.
 
