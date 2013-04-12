@@ -2,7 +2,7 @@
 
 SPHINXBUILD=`which sphinx-build`
 
-LOCALES='fr de it ja ru nl'
+LOCALES='fr de it ja ru nl pt_BR'
 #LOCALES='af ar bg ca_ES cs_CZ da_DK de el_GR en es et_EE eu_ES fa fi fr gl_ES he hr_HR hu id is it ja ka_GE ko_KR lo lt lv mn nl no pl_PL pt_BR pt_PT ro ru sk sl_SI sq_AL sr_Cyrl sr_Latn sv sw ta th tr uk vi xh zh_CN zh_TW'
 
 if [ $1 ]; then
@@ -61,13 +61,3 @@ done
 # Now get rid of temporary POT files
 rm -rf i18n/pot
 rm -rf source/static
-
-echo "Pre-translate completed."
-echo ""
-echo "******************************************"
-echo "Consider running (or asking a Transifex admin to run) the"
-echo "following command so that transifex gets updated"
-echo ""
-echo "scripts/create-transifex-resources.sh"
-echo ""
-echo "******************************************"
