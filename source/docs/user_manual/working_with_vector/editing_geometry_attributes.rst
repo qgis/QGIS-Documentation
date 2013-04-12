@@ -277,7 +277,7 @@ move existing features.
 
 .. tip:: **Attribute Value Types**
 
-   At least for shapefile editing the attribute types are validated during
+   For editing the attribute types are validated during
    the entry. Because of this, it is not possible to enter a number into
    the text-column in the dialog :guilabel:`Enter Attribute Values` or vice
    versa. If you need to do so, you should edit the attributes in a second
