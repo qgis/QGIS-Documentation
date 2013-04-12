@@ -1,5 +1,5 @@
 ================
-Downloading QGIS
+Download QGIS
 ================
 
 How to obtain QGIS?

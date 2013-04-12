@@ -1,4 +1,3 @@
-
 ====
 QGIS
 ====
@@ -10,13 +9,18 @@ QGIS
     website/download
     docs/user_manual/index
     docs/gentle_gis_introduction/index
-    `Plugins <http://plugins.qgis.org>`_
+    http://plugins.qgis.org
     website/sponsorship
-    website/support
+    website/commercial_support
     website/case_studies/index
     http://plugins.qgis.org/planet/
     http://hub.qgis.org/projects/quantum-gis
     website/community/index
+    https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=AdBwoAp9yoTKrVYVX_a8x5uNGxn6jbzjkZVnJaTIqW6pVT4i_Ns6S3DVWym&dispatch=5885d80a13c0db1f8e263663d3faee8d96fc0752e9614158f04872d2f2ae25dc
+
+.. todo:: add the PayPal button
+
+https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif
 
 Welcome to the Quantum GIS Project
 
@@ -29,4 +33,6 @@ formats and functionalities.
 
 Our latest release is QGIS 1.8.0 you can read the `release announcement here
 <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
+
+.. todo:: replace with a static link like current_release
 

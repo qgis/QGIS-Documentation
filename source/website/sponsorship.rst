@@ -1,4 +1,3 @@
-
 ================
 Sponsoring QGIS
 ================
@@ -35,123 +34,156 @@ Sponsors can sponsor Quantum GIS for any amount of money of at least 500 €/700
 List of sponsors
 ++++++++++++++++++++
 
-2013 - silver
-
-land_f
-
-
-State of Vorarlberg , Austria (3.2013)
-
-gold medal 2012
-
-aas long
-
- 
-
-ASIA AIR SURVEY, Japan (11.2012)
-
-GFOSS.itWe would like to thank GFOSS.it, the Italian Free and Open Source Software organisation for the sponsorship they provided to the QGIS project. This sponsorship was in the form of both financial support (at around 1,500 Euros annually) and project administration support in the form of financial services, until early 2012. Visit GFOSS.it for more information about the work they do (site mainly in Italian).
-
-osgeoAlso OSGeo is partly supporting our 2012.10 HackFest in Essen, Germany.
-
 Annually we also receive support from various organisations who appreciate the work we do and would like to facilitate the sustained development effort that goes into the project. For more information on sponsoring QGIS, please visit the sponsorship page. These sponsors are listed below with our thanks!
 
- silver medal 2012
+===================
+|gold| |aas_long|
+`ASIA AIR SURVEY <http://www.asiaairsurvey.com/>`_, Japan (11.2012-10.2015)
+===================
 
-logo_sogis
+.. |aas_long| image:: images/aas_long.png
+   :width: 600 px
 
-Kanton Solothurn, Switzerland (10.2012)
-
+|silver|
  
+.. image:: images/land_f.jpg
+   :width: 290 px
+   :align: left
 
-bronze_medal_2012
+`State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (3.2013)
 
+----
+
+.. image:: images/gfoss.png
+   :width: 150 px
+   :align: left
+
+We would like to thank GFOSS.it, the Italian Free and Open Source Software organisation for the sponsorship they provided to the QGIS project until early 2012. Visit `GFOSS.it <http://gfoss.it/>`_ for more information (site mainly in Italian).
+
+----
+
+.. image:: images/osgeo.png
+   :width: 100 px
+   :align: left
+
+Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.10 in Essen, Germany, and 2013.04 in Valmiera, Latvia.
+
+----
+
+|silver|
  
+.. image:: images/sogis.gif
+   :width: 200 px
+   :align: left
 
+`Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (10.2012)
+
+----
+
+|bronze|
  
+.. image:: images/fossgisev.png
+   :width: 140 px
+   :align: left
 
-sponsor fossgisev
+`www.fossgis.de <http://www.fossgis.de/>`_, Germany (8.2012) 
 
-www.fossgis.de, Germany (8.2012)
+----
 
+|bronze|
  
+.. image:: images/argus.jpg
+   :width: 130 px
+   :align: left
 
+`www.argusoft.de <http://www.argusoft.de/>`_, Germany (6.2012) 
+
+----
+
+|bronze|
  
+.. image:: images/geosynergy.jpg
+   :width: 150 px
+   :align: left
 
-argus_l2b
+`www.geosynergy.com.au <http://www.geosynergy.com.au/>`_, Australia (5.2012)
 
-www.argusoft.de, Germany (6.2012)
+----
 
+|bronze|
+
+.. image:: images/ibw_bzwm.png
+   :width: 150 px
+   :align: left
+
+`ibW Bildungszentrum Wald <http://www.bzwmaienfeld.ch/>`_, Switzerland (3.2012)
+
+----
+
+|silver|
+
+.. image:: images/sogis.gif
+   :width: 200 px
+   :align: left
+
+`Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (4.2011)
+
+----
+
+|silver|
+
+.. image:: images/land_f.jpg
+   :width: 290 px
+   :align: left
+
+`State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (11.2011)
+
+----
+
+|bronze|
+
+.. image:: images/uster.gif
+   :width: 100 px
+   :align: left
+
+`City of Uster <http://gis.uster.ch/>`_, Switzerland (11.2011)
+
+----
+
+|bronze|
  
+.. image:: images/municipia.jpg
+   :width: 78 px
+   :align: left
 
-GeoSynergy_6k
+`Municípia, SA <http://www.municipia.pt/>`_, Portugal (2.2011)
 
-www.geosynergy.com.au, Australia (5.2012)
+----
 
- 
+|bronze|
 
-Logo_ibW_BZWM
+.. image:: images/gfosservices.jpg
+   :width: 55 px
+   :align: left
 
-ibW Bildungszentrum Wald, Switzerland (3.2012)
+`Studio Associato Gfosservices <http://www.gfosservices.com/>`_, Italy (2.2010) 
 
- 
+----
 
- 
+|bronze|
 
-silver_medal_2011
+.. image:: images/nextgis.gif
+   :width: 130 px
+   :align: left
 
-logo_sogis
+`NextGIS <http://nextgis.org/>`_, Russia (3.2010)
 
-Kanton Solothurn, Switzerland (4.2011)
-
-
-land_f
-
-
-State of Vorarlberg , Austria (11.2011)
-
-
-
-bronze_medal_2011
-
-uster
-
-City of Uster , Switzerland (11.2011)
-
- 
-
- 
-
-Municipia-EM-SA-letring-Cinzento
-
-Municípia, SA , Portugal (2.2011)
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-gfosservices
-
-Studio Associato Gfosservices, Italy (2.2010)
-
- 
-
-nextgis
-
-NextGIS, Russia (3.2010)
+----
 
 Donation
 ......................
 
-Donations can be of any amount, through the Make A Donation PayPal link provided in the left-hand menu of this website or through our bank account (write us for details: cavallini at faunalia dot it). Even a small donation can make a big difference and help to reach important project goals!
+Donations can be of any amount, through the `Make A Donation PayPal <https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=AdBwoAp9yoTKrVYVX_a8x5uNGxn6jbzjkZVnJaTIqW6pVT4i_Ns6S3DVWym&dispatch=5885d80a13c0db1f8e263663d3faee8d96fc0752e9614158f04872d2f2ae25dc>`_ link provided also in the menu of this website or through our bank account (write us for details: cavallini at faunalia dot it). Even a small donation can make a difference and help to reach important project goals!
 
 If you wish to send us a larger donation, you are strongly encouraged to use the bank account rather than PayPal.
 
@@ -339,7 +371,7 @@ List of donors
 * Yves Jacolin
 * Zachary Patterson
 
-What is your benefit sponsoring the QGIS Development
+Your benefit sponsoring QGIS
 ------------------------------------------------------
 
 Sponsoring the Quantum GIS project provides the following benefits:
@@ -352,9 +384,9 @@ Sponsoring the Quantum GIS project provides the following benefits:
   * *Silver sponsors* will be listed on the sponsors page with a medium size logo (30k pixel, e.g. 200x150px)
   * *Bronze sponsors* will be listed on the sponsors page with a small size logo (6k pixel, e.g. 100x60px)
   * after the expiring of the sponsorship year, logos will be kept until space will allow, reducing their size by a half
+
 * Sponsors will be listed in the front matter of the QGIS manual
 * Sponsors will be allowed to use a special version of the QGIS logo on their web site and promotional materials, which shows they are a sponsor of the QGIS project
-* Donors will be listed on the donors page.
 
 No advertising will be placed within the QGIS application itself.
 
@@ -374,3 +406,12 @@ Decisions on spending of sponsorship funds will be made by the *QGIS Project Ste
 .. note:: Acceptance of sponsorship offers is at the discretion of the QGIS PSC. We reserve the right to decline offers of sponsorship if the sponsoring organisation or party seems to be at odds with the ethos of our project. For example offers from marketing companies that have nothing to do with GIS /spatial services, or offers where we have reason to believe the presence of  the sponsors logo and marketing materials on our site and other materials will degrade the experience of our users will be declined.
 
 Organizations or individuals interested in sponsoring the QGIS project should contact the **QGIS PSC Finance and Marketing advisor**, Paolo Cavallini at: cavallini at faunalia dot it (+39-348-3801953) with questions, or to make arrangements.
+
+.. |bronze| image:: images/bronze.png
+   :width: 60 px
+
+.. |silver| image:: images/silver.png
+   :width: 80 px
+
+.. |gold| image:: images/gold.png
+   :width: 100 px
