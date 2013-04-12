@@ -39,7 +39,7 @@ Steps:
    everything is OK.
 
 5. *Publish*: Publish your plugin in QGIS repository or make your own
-   repository as an "arsenal" of personal "GIS weapons" 
+   repository as an "arsenal" of personal "GIS weapons"
 
 .. index:: plugins; writing
 
@@ -50,10 +50,10 @@ Since the introduction of python plugins in QGIS, a number of plugins have
 appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_
 you can find some of them, you can use their source to learn more about
 programming with PyQGIS or find out whether you are not duplicating development
-effort. Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_\
+effort. QGIS team also maintains an :ref:`official_pyqgis_repository`.
+Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_\
 lists wishes from the community!
 
-.. index:: plugins; necessary files
 
 Creating necessary files
 ------------------------
@@ -80,10 +80,10 @@ What is the meaning of the files:
   paths to resources of the forms.
 * resources.py = The translation of the .qrc file described above to Python.
 * form.ui = The GUI created by QT-Designer.
-* form.py = The translation of the form.ui described above to Python. 
+* form.py = The translation of the form.ui described above to Python.
 * metadata.txt = Required for QGIS >= 1.8.0. Containts general info, version,
   name and some other metadata used by plugins website and plugin infrastructure.
-  Metadata in metadata.txt is preferred to the methods in __init__.py. 
+  Metadata in metadata.txt is preferred to the methods in __init__.py.
   If the text file is present, it is used to fetch the values. From QGIS 2.0
   the metadata from __init__.py will not be accepted and the metadata.txt
   file will be required.
@@ -94,6 +94,15 @@ QGIS Python plugin. Also there is a QGIS plugin called `Plugin Builder`
 that creates plugin template from QGIS and don't require internet connection.
 Useful to help you start with a typical plugin.
 
+
+.. warning::
+    If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
+    you you must make sure that the main plugin folder (`testplug` in the above example)
+    only contains ASCI letters (A-Z and a-z), digits and the characters underscore (_)
+    and minus (-), also it cannot start with a digit.
+
+
+
 .. index:: plugins; writing code
 
 Writing code
@@ -101,28 +110,98 @@ Writing code
 
 .. index:: plugins; __init__.py, __init__.py
 
+
+.. _plugin_metadata:
+
+metadata.txt
+------------
+
+First, plugin manager needs to retrieve some basic information about the
+plugin such as its name, description etc. File :file:`metadata.txt` is the
+right place where to put this information.
+
+
+.. important::
+    All metadata must be in UTF-8 encoding.
+
+
+
+
+.. notice::
+    For QGIS < 1.8 you also need to add metadata informations in the :file:`__init__.py` (see: :ref:`plugin_init_py`)
+
+
+An exampe for this metadata.txt::
+
+  ; the next section is mandatory
+  [general]
+  name=HelloWorld
+  qgisMinimumVersion=1.8
+  description=This is a plugin for greeting the
+      (going multiline) world
+  category=Raster
+  version=version 1.2
+  ; end of mandatory metadata
+
+  ; start of optional metadata
+  changelog=this is a very
+      very
+      very
+      very
+      very
+      very long multiline changelog
+
+  ; tags are in comma separated value format, spaces are allowed
+  tags=wkt,raster,hello world
+
+  ; these metadata can be empty
+  ; in a future version of the web application it will
+  ; be probably possible to create a project on redmine
+  ; if they are not filled
+  homepage=http://www.itopen.it
+  tracker=http://bugs.itopen.it
+  repository=http://www.itopen.it/repo
+  icon=icon.png
+
+  ; experimental flag
+  experimental=True
+
+  ; deprecated flag (applies to the whole plugin and not only to the uploaded version)
+  deprecated=False
+
+  ; if empty, it will be automatically set to major version + .9999
+  qgisMaximumVersion=1.9
+
+
+.. index:: plugins; plugin.py, plugin.py
+
+
+.. _plugin_init_py:
+
 __init__.py
 -----------
 
-First, plugin manager needs to retrieve some basic information about the
-plugin such as its name, description etc. File :file:`__init__.py` is the
-right place where to put this information::
+For QGIS < 1.8 you also need to add metadata into the :file:`__init__.py` file, please
+note that starting from QGIS 2.0 the metadata from :file:`__init__.py` will not be accepted and
+the :file:`metadata.txt` file will be required.
+
+An example :file:`__init__.py`::
 
   def name():
     return "My testing plugin"
-  
+
   def description():
     return "This plugin has no real use."
-  
+
   def version():
     return "Version 0.1"
-  
-  def qgisMinimumVersion(): 
+
+  def qgisMinimumVersion():
     return "1.0"
-  
+
   def authorName():
     return "Developer"
-  
+
   def classFactory(iface):
     # load TestPlugin class from file testplugin.py
     from testplugin import TestPlugin
@@ -139,52 +218,16 @@ example, if your plugin will be available from `Raster` menu, add this to
   def category():
     return "Raster"
 
+.. warning::
+    If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
+    you you must make sure that the above mentioned
+    functions only return plain strings (either in single or double quotes)
+    or a boolean value for the `experimental` field.
+
+
 .. index:: plugins; metadata.txt, metadata, metadata.txt
 
-metadata.txt
-------------
 
-For QGIS >= 1.8 you need to add a metadata.txt (`see here <https://github.com/qgis/qgis-django/blob/master/qgis-app/plugins/docs/introduction.rst>`_)
-An exampe for this metadata.txt::
-
-  ; the next section is mandatory
-  [general]
-  name=HelloWorld
-  qgisMinimumVersion=1.8
-  description=This is a plugin for greeting the 
-      (going multiline) world
-  category=Raster
-  version=version 1.2
-  ; end of mandatory metadata
-  
-  ; start of optional metadata
-  changelog=this is a very
-      very
-      very
-      very
-      very
-      very long multiline changelog
-  
-  ; tags are in comma separated value format, spaces are allowed
-  tags=wkt,raster,hello world
-  
-  ; these metadata can be empty
-  ; in a future version of the web application it will
-  ; be probably possible to create a project on redmine
-  ; if they are not filled
-  homepage=http://www.itopen.it
-  tracker=http://bugs.itopen.it
-  repository=http://www.itopen.it/repo
-  icon=icon.png
-  
-  ; experimental flag
-  experimental=True
-  
-  ; deprecated flag (applies to the whole plugin and not only to the uploaded version)
-  deprecated=False
-
-
-.. index:: plugins; plugin.py, plugin.py
 
 plugin.py
 ---------
@@ -260,7 +303,7 @@ Here is an example for `Raster` menu::
         self.iface.addRasterToolBarIcon(self.action)
         self.iface.addPluginToRasterMenu("&Test plugins", self.action)
       else:
-        # there is no Raster menu, place plugin under Plugins menu as usual 
+        # there is no Raster menu, place plugin under Plugins menu as usual
         self.iface.addToolBarIcon(self.action)
         self.iface.addPluginToMenu("&Test plugins", self.action)
 
@@ -385,7 +428,7 @@ here is a workaround how to toggle the layers using layer transparency::
     if lyr:
       cTran = lyr.getTransparency()
       lyr.setTransparency(0 if cTran > 100 else 255)
-      self.iface.mapCanvas().refresh()	
+      self.iface.mapCanvas().refresh()
 
 The method requires the layer number (0 being the top most) and can be called by::
 
@@ -400,9 +443,9 @@ How to access attribute table of selected features
 
   def changeValue(self, value):
     layer = self.iface.activeLayer()
-    if(layer):		
+    if(layer):
       nF = layer.selectedFeatureCount()
-      if (nF > 0):		
+      if (nF > 0):
       layer.startEditing()
       ob = layer.selectedFeaturesIds()
       b = QVariant(value)
@@ -416,7 +459,7 @@ How to access attribute table of selected features
         QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at least one feature from current layer")
     else:
       QMessageBox.critical(self.iface.mainWindow(),"Error","Please select a layer")
-  
+
 
 The method requires the one parameter (the new value for the attribute
 field of the selected feature(s)) and can be called by::
@@ -459,13 +502,102 @@ Releasing the plugin
 ====================
 
 Once your plugin is ready and you think the plugin could be helpful for
-some people, do not hesitate to upload it to `PyQGIS plugin repository <http://plugins.qgis.org/>`_.
+some people, do not hesitate to upload it to :ref:`official_pyqgis_repository`.
 On that page you can find also packaging guidelines how to prepare the
 plugin to work well with the plugin installer. Or in case you would like
 to set up your own plugin repository, create a simple XML file that will
 list the plugins and their metadata, for examples see other `plugin repositories <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_.
 
 .. index:: plugins; Windows IDE configuration
+
+
+.. _official_pyqgis_repository:
+
+Official python plugin repository
+---------------------------------
+
+You can find *official* python plugin repository at `PyQGIS plugin repository <http://plugins.qgis.org/>`_.
+
+In order to use the official repository you must obtain an OSGEO ID from the `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_.
+
+Once you have uploaded your plugin it will be approved by a staff member and you will be notified.
+
+
+.. index:: plugins; official python plugin repository
+
+
+Permissions
+...........
+
+These rules have been implemented in the official plugin repository:
+    * every registered user can add a new plugin
+    * *staff* users can approve or disapprove all plugin versions
+    * users which have the special permission `plugins.can_approve` get the versions they upload automatically approved
+    * users which have the special permission `plugins.can_approve` can approve versions uploaded by others as long as they are in the list of the plugin *owners*
+    * a particular plugin can be deleted and edited only by *staff* users and plugin *owners*
+    * if a user without `plugins.can_approve` permission uploads a new version, the plugin version is automatically unapproved.
+
+
+Trust management
+................
+
+Staff members can grant *trust* to selected plugin creators setting `plugins.can_approve` permission through the front-end application.
+
+The plugin details view offers direct links to grant trust to the plugin creator or the plugin *owners*.
+
+
+Validation
+..........
+
+The official repository has some validation rules that you should aware of when
+you want to upload a plugin:
+
+Valid metadata for the `__init__` file are:
+    * `name`
+    * `description`
+    * `version`
+    * `qgisMinimumVersion`
+    * `email`
+    * `author`
+    * `experimental`
+    * `category`
+
+
+To avoid direct execution of python code (which would be a security issue),
+metadata are read from the `__init__.py` file with a simple regular expression
+parser which extracts the string values returned by the functions inside the
+`__init__.py` file, this means that if the functions do not return strings
+(enclosed in single or double quotes) or a boolean value (for the
+`experimental` entry), the metadata entry for that function will not be
+extracted and if the metadata is mandatory the plugin will be considered
+invalid.
+
+The new `metadata.txt` file can contain other optional metadata which are read
+when the package is uploaded and are automatically imported.
+
+Mandatory metadata
+^^^^^^^^^^^^^^^^^^
+
+* `name`: a short string  containing the name of the plugin
+* `qgisMinimumVersion`: dotted notation of minimum QGIS version
+* `description`: longer text which describes the plugin
+* `version`: short string with the version dotted notation
+* `author`: author name
+* `email`: email of the author, will *not* be shown on the web site
+
+
+Optional metadata
+^^^^^^^^^^^^^^^^^
+
+* `changelog`: string, can be multiline, no HTML allowed
+* `experimental`: boolean flag, `True` or `False`
+* `deprecated`: boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
+* `tags`: comma separated list, spaces are allowe inside individual tags
+* `homepage`: a valid URL
+* `repository`: a valid URL for the source code repository
+* `tracker`: a valid URL for tickets and bug reports
+* `icon`: a file name or a relative path (relative to the base folder of the compressed package)
+
 
 Remark: Configuring Your IDE on Windows
 =======================================
@@ -498,4 +630,4 @@ Other IDEs might require a slightly different approach:
     path %PATH%;%GISBASE%\bin
     Start C:\pyscripter\pyscripter.exe --python25 --pythondllpath=C:\OSGeo4W\bin
 
-Now when you double click this batch file and it will start pyscripter. 
+Now when you double click this batch file and it will start pyscripter.
