@@ -18,7 +18,7 @@ mkdir -p ${BUILDDIR}
 # source/conf.py needs to be checked
 VERSION=`cat source/conf.py | grep "version = '.*'" | grep -o "[0-9]\.[0-9]"`
 
-# output dirs
+# output dir
 PDFDIR=`pwd`/output/${VERSION}/pdf
 HTMLDIR=`pwd`/output/${VERSION}/html
 mkdir -p ${PDFDIR}
