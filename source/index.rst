@@ -9,14 +9,14 @@ QGIS
     website/download
     docs/user_manual/index
     docs/gentle_gis_introduction/index
-    http://plugins.qgis.org
+    Plugins <http://plugins.qgis.org>
     website/sponsorship
     website/commercial_support
     website/case_studies/index
-    http://plugins.qgis.org/planet/
-    http://hub.qgis.org/projects/quantum-gis
+    News <http://plugins.qgis.org/planet/>
+    Bugs <http://hub.qgis.org/projects/quantum-gis>
     website/community/index
-    https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=AdBwoAp9yoTKrVYVX_a8x5uNGxn6jbzjkZVnJaTIqW6pVT4i_Ns6S3DVWym&dispatch=5885d80a13c0db1f8e263663d3faee8d96fc0752e9614158f04872d2f2ae25dc
+    Donate <https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=AdBwoAp9yoTKrVYVX_a8x5uNGxn6jbzjkZVnJaTIqW6pVT4i_Ns6S3DVWym&dispatch=5885d80a13c0db1f8e263663d3faee8d96fc0752e9614158f04872d2f2ae25dc>
 
 .. todo:: add the PayPal button
 
