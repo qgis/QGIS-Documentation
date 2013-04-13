@@ -23,7 +23,34 @@ Most linux distributions split QGIS into several packages; you can decide not to
 Ubuntu
 +++++++++
 
-Get packages from the ubuntugis project for *lucid, maverick, natty, oneiric and precise* by typing::
+Get packages from the ubuntugis project for i386 and amd64 adding the appropriate lines to /etc/apt/sources.list:
+
+Lucid::
+
+ deb     http://qgis.org/debian lucid main
+ deb-src http://qgis.org/debian lucid main
+
+Natty::
+
+ deb     http://qgis.org/debian natty main
+ deb-src http://qgis.org/debian natty main
+
+Oneiric::
+
+ deb     http://qgis.org/debian oneiric main
+ deb-src http://qgis.org/debian oneiric main
+
+Precise::
+
+ deb     http://qgis.org/debian precise main
+ deb-src http://qgis.org/debian precise main
+
+To add the the qgis.org repository public key to your apt keyring, type::
+
+ gpg --keyserver keyserver.ubuntu.com --recv 997D3880
+ gpg --export --armor 997D3880 | sudo apt-key add -
+
+Add also updated dependencies by typing::
 
  sudo apt-get install python-software-properties
  sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
