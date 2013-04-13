@@ -9,12 +9,8 @@ QGIS
 
     docs/user_manual/index
     docs/gentle_gis_introduction/index
-    website/download
-    website/community/index
-    website/development/index
 
-
-Welcome to the Quantum GIS Project
+Welcome to the Quantum GIS 1.8 Documentation
 
 |qgissplash|
 
@@ -23,7 +19,4 @@ Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System
 of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix,
 Mac OSX, Windows and Android and supports numerous vector, raster, and database
 formats and functionalities.
-
-Our latest release is QGIS 1.8.0 you can read the `release annoucement here
-<http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
