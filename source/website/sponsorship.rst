@@ -36,17 +36,19 @@ List of sponsors
 
 Annually we also receive support from various organisations who appreciate the work we do and would like to facilitate the sustained development effort that goes into the project. For more information on sponsoring QGIS, please visit the sponsorship page. These sponsors are listed below with our thanks!
 
-
 |gold|
-|aas_long| `ASIA AIR SURVEY <http://www.asiaairsurvey.com/>`_, Japan (11.2012-10.2015)
+|aas_long|
+
+`ASIA AIR SURVEY <http://www.asiaairsurvey.com/>`_, Japan (11.2012-10.2015)
 
 .. |aas_long| image:: images/aas_long.png
    :width: 600 px
 
 ----
 
-|silver|
-|land_f| `State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (3.2013)
+|silver| |land_f|
+
+`State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (3.2013)
  
 .. |land_f| image:: images/land_f.jpg
    :width: 290 px
@@ -69,88 +71,102 @@ Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.1
 
 ----
 
-|silver| |sogis| `Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (10.2012)
+|silver| |sogis|
+
+`Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (10.2012)
  
 .. |sogis| image:: images/sogis.gif
    :width: 200 px
 
 ----
 
-|bronze| |fossgisev| `www.fossgis.de <http://www.fossgis.de/>`_, Germany (8.2012) 
+|bronze| |fossgisev|
+
+`www.fossgis.de <http://www.fossgis.de/>`_, Germany (8.2012) 
  
 .. |fossgisev| image:: images/fossgisev.png
    :width: 140 px
 
 ----
 
-|bronze| |argus| `www.argusoft.de <http://www.argusoft.de/>`_, Germany (6.2012) 
+|bronze| |argus|
+
+`www.argusoft.de <http://www.argusoft.de/>`_, Germany (6.2012) 
  
-.. image:: images/argus.jpg
+.. |argus| image:: images/argus.jpg
    :width: 130 px
 
 ----
 
-|bronze| |geosynergy| `www.geosynergy.com.au <http://www.geosynergy.com.au/>`_, Australia (5.2012)
+|bronze| |geosynergy|
+
+`www.geosynergy.com.au <http://www.geosynergy.com.au/>`_, Australia (5.2012)
  
 .. |geosynergy| image:: images/geosynergy.jpg
    :width: 150 px
 
 ----
 
-|bronze| |ibw_bzwm| `ibW Bildungszentrum Wald <http://www.bzwmaienfeld.ch/>`_, Switzerland (3.2012)
+|bronze| |ibw_bzwm|
+
+`ibW Bildungszentrum Wald <http://www.bzwmaienfeld.ch/>`_, Switzerland (3.2012)
 
 .. |ibw_bzwm| image:: images/ibw_bzwm.png
    :width: 150 px
 
 ----
 
-|silver| `Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (4.2011)
+|silver| |sogis|
 
-.. image:: images/sogis.gif
+`Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (4.2011)
+
+.. |sogis| image:: images/sogis.gif
    :width: 200 px
-   :align: left
 
 ----
 
-|silver| `State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (11.2011)
+|silver| |land_f|
 
-.. image:: images/land_f.jpg
+`State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (11.2011)
+
+.. |land_f| image:: images/land_f.jpg
    :width: 290 px
-   :align: left
 
 ----
 
-|bronze| `City of Uster <http://gis.uster.ch/>`_, Switzerland (11.2011)
+|bronze| |uster|
 
-.. image:: images/uster.gif
+`City of Uster <http://gis.uster.ch/>`_, Switzerland (11.2011)
+
+.. |uster| image:: images/uster.gif
    :width: 100 px
-   :align: left
 
 ----
 
-|bronze| `Municípia, SA <http://www.municipia.pt/>`_, Portugal (2.2011)
+|bronze| |municipia|
+
+`Municípia, SA <http://www.municipia.pt/>`_, Portugal (2.2011)
  
-.. image:: images/municipia.jpg
+.. |municipia| image:: images/municipia.jpg
    :width: 78 px
-   :align: left
 
 ----
 
-|bronze| `Studio Associato Gfosservices <http://www.gfosservices.com/>`_, Italy (2.2010) 
+|bronze| |gfosservices|
 
-.. image:: images/gfosservices.jpg
+`Studio Associato Gfosservices <http://www.gfosservices.com/>`_, Italy (2.2010) 
+
+.. |gfosservices| image:: images/gfosservices.jpg
    :width: 55 px
-   :align: left
 
 ----
 
-|bronze| `NextGIS <http://nextgis.org/>`_, Russia (3.2010)
+|bronze| |nextgis|
 
-.. image:: images/nextgis.gif
+`NextGIS <http://nextgis.org/>`_, Russia (3.2010)
+
+.. |nextgis| image:: images/nextgis.gif
    :width: 130 px
-   :align: left
-
-----
 
 Donation
 ......................
@@ -383,7 +399,7 @@ Organizations or individuals interested in sponsoring the QGIS project should co
    :width: 60 px
 
 .. |silver| image:: images/silver.png
-   :width: 80 px
+   :width: 75 px
 
 .. |gold| image:: images/gold.png
    :width: 100 px
