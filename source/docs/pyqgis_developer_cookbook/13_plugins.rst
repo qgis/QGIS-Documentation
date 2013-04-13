@@ -30,6 +30,7 @@ Steps:
 
 2. *Create files*: Create the files described next.
    A starting point (:file:`__init.py__`).
+   Fill in the :ref:`plugin_metadata` (:file:`metadata.txt`)
    A main python plugin body (:file:`plugin.py`).
    A form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`.
 
@@ -51,8 +52,7 @@ appeared - on `Plugin Repositories wiki page <http://www.qgis.org/wiki/Python_Pl
 you can find some of them, you can use their source to learn more about
 programming with PyQGIS or find out whether you are not duplicating development
 effort. QGIS team also maintains an :ref:`official_pyqgis_repository`.
-Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_\
-lists wishes from the community!
+Ready to create a plugin but no idea what to do? `Python Plugin Ideas wiki page <http://www.qgis.org/wiki/Python_Plugin_Ideas>`_ lists wishes from the community!
 
 
 Creating necessary files
@@ -72,20 +72,19 @@ Here's the directory structure of our example plugin::
 
 What is the meaning of the files:
 
-* __init__.py = The starting point of the plugin. Contains general info,
-  version, name and main class.
-* plugin.py = The main working code of the plugin. Contains all the information
+* :file:`__init__.py` = The starting point of the plugin. It is normally empty.
+* :file:`plugin.py` = The main working code of the plugin. Contains all the information
   about the actions of the plugin and the main code.
-* resources.qrc = The .xml document created by QT-Designer. Contains relative
+* :file:`resources.qrc` = The .xml document created by QT-Designer. Contains relative
   paths to resources of the forms.
-* resources.py = The translation of the .qrc file described above to Python.
-* form.ui = The GUI created by QT-Designer.
-* form.py = The translation of the form.ui described above to Python.
-* metadata.txt = Required for QGIS >= 1.8.0. Containts general info, version,
+* :file:`resources.py` = The translation of the .qrc file described above to Python.
+* :file:`form.ui` = The GUI created by QT-Designer.
+* :file:`form.py` = The translation of the form.ui described above to Python.
+* :file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info, version,
   name and some other metadata used by plugins website and plugin infrastructure.
-  Metadata in metadata.txt is preferred to the methods in __init__.py.
+  Metadata in :file:`metadata.txt` is preferred to the methods in :file:`__init__.py`.
   If the text file is present, it is used to fetch the values. From QGIS 2.0
-  the metadata from __init__.py will not be accepted and the metadata.txt
+  the metadata from :file:`__init__.py` will not be accepted and the :file:`metadata.txt`
   file will be required.
 
 `Here <http://pyqgis.org/builder/plugin_builder.py>`_ and `there <http://www.dimitrisk.gr/qgis/creator/>`_
@@ -94,13 +93,9 @@ QGIS Python plugin. Also there is a QGIS plugin called `Plugin Builder`
 that creates plugin template from QGIS and don't require internet connection.
 Useful to help you start with a typical plugin.
 
-
 .. warning::
-    If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
-    you you must make sure that the main plugin folder (`testplug` in the above example)
-    only contains ASCI letters (A-Z and a-z), digits and the characters underscore (_)
-    and minus (-), also it cannot start with a digit.
-
+    If you plan to upload the plugin to the :ref:`official_pyqgis_repository` you must
+    check that your plugin follows some additional rules, required for plugin  :ref:`official_pyqgis_repository_validation`
 
 
 .. index:: plugins; writing code
@@ -108,13 +103,13 @@ Useful to help you start with a typical plugin.
 Writing code
 ============
 
-.. index:: plugins; __init__.py, __init__.py
+.. index:: plugins; metadata.txt
 
 
 .. _plugin_metadata:
 
-metadata.txt
-------------
+Plugin metadata
+---------------
 
 First, plugin manager needs to retrieve some basic information about the
 plugin such as its name, description etc. File :file:`metadata.txt` is the
@@ -124,26 +119,59 @@ right place where to put this information.
 .. important::
     All metadata must be in UTF-8 encoding.
 
+.. _plugin_metadata_table:
+
+=====================  ========  =======================================
+Metadata name          Required  Notes
+=====================  ========  =======================================
+name                   True      a short string  containing the name of the plugin
+qgisMinimumVersion     True      dotted notation of minimum QGIS version
+qgisMaximumVersion     False     dotted notation of maximum QGIS version
+description            True      longer text which describes the plugin, no HTML allowed
+version                True      short string with the version dotted notation
+author                 True      author name
+email                  True      email of the author, will *not* be shown on the web site
+changelog              False     string, can be multiline, no HTML allowed
+experimental           False     boolean flag, `True` or `False`
+deprecated             False     boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
+tags                   False     comma separated list, spaces are allowe inside individual tags
+homepage               False     a valid URL pointing to the homepage of your plugin
+repository             False     a valid URL for the source code repository
+tracker                False     a valid URL for tickets and bug reports
+icon                   False     a file name or a relative path (relative to the base folder of the plugin's compressed package)
+category               False     one of `Raster`, `Vector`, `Database` and `Web`
+=====================  ========  =======================================
 
 
+In QGIS 1.9.90 plugins can be placed not only into `Plugins` menu but also
+into `Raster`, `Vector`, `Database` and `Web` menus. Therefore a new "category"
+metadata entry has been introduced. This metadata entry is used as tip for
+users and tells them where (in which menu) the plugin can be found. Allowed
+values for "category" are: Vector, Raster, Database, Web and Layers. For
+example, if your plugin will be available from `Raster` menu, add this to
+:file:`metadata.txt`:.
 
-.. notice::
-    For QGIS < 1.8 you also need to add metadata informations in the :file:`__init__.py` (see: :ref:`plugin_init_py`)
+
+.. note::
+ If `qgisMaximumVersion` is empty, it will be automatically set to the major version plus `.99` when uploaded to the :ref:`official_pyqgis_repository`.
 
 
 An exampe for this metadata.txt::
 
   ; the next section is mandatory
+
   [general]
   name=HelloWorld
+  email=me@example.com
+  author=Just Me
   qgisMinimumVersion=1.8
   description=This is a plugin for greeting the
       (going multiline) world
-  category=Raster
   version=version 1.2
   ; end of mandatory metadata
 
   ; start of optional metadata
+  category=Raster
   changelog=this is a very
       very
       very
@@ -155,9 +183,6 @@ An exampe for this metadata.txt::
   tags=wkt,raster,hello world
 
   ; these metadata can be empty
-  ; in a future version of the web application it will
-  ; be probably possible to create a project on redmine
-  ; if they are not filled
   homepage=http://www.itopen.it
   tracker=http://bugs.itopen.it
   repository=http://www.itopen.it/repo
@@ -169,60 +194,8 @@ An exampe for this metadata.txt::
   ; deprecated flag (applies to the whole plugin and not only to the uploaded version)
   deprecated=False
 
-  ; if empty, it will be automatically set to major version + .9999
+  ; if empty, it will be automatically set to major version + .99
   qgisMaximumVersion=1.9
-
-
-.. index:: plugins; plugin.py, plugin.py
-
-
-.. _plugin_init_py:
-
-__init__.py
------------
-
-For QGIS < 1.8 you also need to add metadata into the :file:`__init__.py` file, please
-note that starting from QGIS 2.0 the metadata from :file:`__init__.py` will not be accepted and
-the :file:`metadata.txt` file will be required.
-
-An example :file:`__init__.py`::
-
-  def name():
-    return "My testing plugin"
-
-  def description():
-    return "This plugin has no real use."
-
-  def version():
-    return "Version 0.1"
-
-  def qgisMinimumVersion():
-    return "1.0"
-
-  def authorName():
-    return "Developer"
-
-  def classFactory(iface):
-    # load TestPlugin class from file testplugin.py
-    from testplugin import TestPlugin
-    return TestPlugin(iface)
-
-In QGIS 1.9.90 plugins can be placed not only into `Plugins` menu but also
-into `Raster`, `Vector`, `Database` and `Web` menus. Therefore a new "category"
-metadata entry has been introduced. This metadata entry is used as tip for
-users and tells them where (in which menu) the plugin can be found. Allowed
-values for "category" are: Vector, Raster, Database, Web and Layers. For
-example, if your plugin will be available from `Raster` menu, add this to
-:file:`__init__.py`::
-
-  def category():
-    return "Raster"
-
-.. warning::
-    If you plan to upload the plugin to the :ref:`official_pyqgis_repository`
-    you you must make sure that the above mentioned
-    functions only return plain strings (either in single or double quotes)
-    or a boolean value for the `experimental` field.
 
 
 .. index:: plugins; metadata.txt, metadata, metadata.txt
@@ -493,8 +466,8 @@ And when the application hits your breakpoint you can type in the console!
 
 .. index:: plugins; testing
 
-Testing
-=======
+.. todo::
+    Add testing informations
 
 .. index:: plugins; releasing
 
@@ -516,12 +489,14 @@ list the plugins and their metadata, for examples see other `plugin repositories
 Official python plugin repository
 ---------------------------------
 
-You can find *official* python plugin repository at `PyQGIS plugin repository <http://plugins.qgis.org/>`_.
+You can find the *official* python plugin repository at `<http://plugins.qgis.org/>`_.
 
 In order to use the official repository you must obtain an OSGEO ID from the `OSGEO web portal <http://www.osgeo.org/osgeo_userid/>`_.
 
 Once you have uploaded your plugin it will be approved by a staff member and you will be notified.
 
+.. todo::
+   Insert a link to the governance document
 
 .. index:: plugins; official python plugin repository
 
@@ -545,58 +520,21 @@ Staff members can grant *trust* to selected plugin creators setting `plugins.can
 
 The plugin details view offers direct links to grant trust to the plugin creator or the plugin *owners*.
 
+.. _official_pyqgis_repository_validation:
 
 Validation
 ..........
 
-The official repository has some validation rules that you should aware of when
-you want to upload a plugin:
+Plugin's metadata are automatically imported and validated from the compressed package when the plugin is uploaded.
 
-Valid metadata for the `__init__` file are:
-    * `name`
-    * `description`
-    * `version`
-    * `qgisMinimumVersion`
-    * `email`
-    * `author`
-    * `experimental`
-    * `category`
+Here are some validation rules that you should aware of when you want to upload a plugin
+on the official repository:
 
+#. the name of the main folder containing your plugin must contain only contains ASCII characters (A-Z and a-z), digits and the characters underscore (_) and minus (-), also it cannot start with a digit
+#. :file:`metadata.txt` is required
+#. all required metadata listed in :ref:`metadata table<plugin_metadata_table>` must be present
+#. the `version` metadata field must be unique
 
-To avoid direct execution of python code (which would be a security issue),
-metadata are read from the `__init__.py` file with a simple regular expression
-parser which extracts the string values returned by the functions inside the
-`__init__.py` file, this means that if the functions do not return strings
-(enclosed in single or double quotes) or a boolean value (for the
-`experimental` entry), the metadata entry for that function will not be
-extracted and if the metadata is mandatory the plugin will be considered
-invalid.
-
-The new `metadata.txt` file can contain other optional metadata which are read
-when the package is uploaded and are automatically imported.
-
-Mandatory metadata
-^^^^^^^^^^^^^^^^^^
-
-* `name`: a short string  containing the name of the plugin
-* `qgisMinimumVersion`: dotted notation of minimum QGIS version
-* `description`: longer text which describes the plugin
-* `version`: short string with the version dotted notation
-* `author`: author name
-* `email`: email of the author, will *not* be shown on the web site
-
-
-Optional metadata
-^^^^^^^^^^^^^^^^^
-
-* `changelog`: string, can be multiline, no HTML allowed
-* `experimental`: boolean flag, `True` or `False`
-* `deprecated`: boolean flag, `True` or `False`, applies to the whole plugin and not just to the uploaded version
-* `tags`: comma separated list, spaces are allowe inside individual tags
-* `homepage`: a valid URL
-* `repository`: a valid URL for the source code repository
-* `tracker`: a valid URL for tickets and bug reports
-* `icon`: a file name or a relative path (relative to the base folder of the compressed package)
 
 
 Remark: Configuring Your IDE on Windows
