@@ -676,7 +676,7 @@ displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (Coordinate Reference System).
 
 Note that |qg| does not yet support creation of 2.5D features (i.e. features
-with X,Y,Z coordinates) or measure features.
+with X,Y,Z coordinates).
 
 .. _figure_edit_5:
 
