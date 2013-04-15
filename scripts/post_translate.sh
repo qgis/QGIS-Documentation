@@ -3,7 +3,7 @@
 SPHINXBUILD=`which sphinx-build`
 
 # GENERATE PDF AND HTML FOR FOLLOWING LOCALES (EN IS ALWAYS GENERATED)
-LOCALES='fr de it ja ru nl'
+LOCALES='fr de it ja ru nl pt_BR'
 #LOCALES='af ar bg ca_ES cs_CZ da_DK de el_GR en es et_EE eu_ES fa fi fr gl_ES he hr_HR hu id is it ja ka_GE ko_KR lo lt lv mn nl no pl_PL pt_BR pt_PT ro ru sk sl_SI sq_AL sr_Cyrl sr_Latn sv sw ta th tr uk vi xh zh_CN zh_TW'
 
 if [ $1 ]; then
@@ -15,13 +15,14 @@ BUILDDIR=build
 rm -rf ${BUILDDIR}
 mkdir -p ${BUILDDIR}
 
-# output dirs
-PDFDIR=`pwd`/output/pdf
-HTMLDIR=`pwd`/output/html
+# source/conf.py needs to be checked
+VERSION=`cat source/conf.py | grep "version = '.*'" | grep -o "[0-9]\.[0-9]"`
+
+# output dir
+PDFDIR=`pwd`/output/${VERSION}/pdf
+HTMLDIR=`pwd`/output/${VERSION}/html
 mkdir -p ${PDFDIR}
 mkdir -p ${HTMLDIR}
-
-VERSION=`cat source/conf.py | grep "version = '.*'" | grep -o "[0-9]\.[0-9]"`
 
 if [[ $1 = "en" ]]; then
   echo "Not running localization for English."
