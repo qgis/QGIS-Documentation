@@ -739,8 +739,8 @@ attributes, click **[OK]**. |qg| will automatically add the new layer to the
 legend and you can edit it in the same way as described in Section
 :ref:`sec_edit_existing_layer` above.
 
-The SpatiaLite creation dialog allows to create multiple layers without
-closing the dialog when you click **[Apply]**.
+Further management of SpatiaLite-Layers can be done with the DB Manager see 
+:ref:`db_manager`.
 
 .. index:: Work_with_Attribute_Table
 
