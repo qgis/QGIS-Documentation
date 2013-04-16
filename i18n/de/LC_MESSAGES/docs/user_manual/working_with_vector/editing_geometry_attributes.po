@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 14:25\n"
+"POT-Creation-Date: 2013-04-16 10:58\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -647,12 +647,13 @@ msgstr "**Datentyp der Attribute**"
 
 # f191fb483f7946afa8ebdbf9975454e7
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:284
+#, fuzzy
 msgid ""
-"At least for shapefile editing the attribute types are validated during the "
-"entry. Because of this, it is not possible to enter a number into the "
-"text-column in the dialog :guilabel:`Enter Attribute Values` or vice versa. "
-"If you need to do so, you should edit the attributes in a second step within "
-"the :guilabel:`Attribute table` dialog."
+"For editing the attribute types are validated during the entry. Because of "
+"this, it is not possible to enter a number into the text-column in the "
+"dialog :guilabel:`Enter Attribute Values` or vice versa. If you need to do "
+"so, you should edit the attributes in a second step within the "
+":guilabel:`Attribute table` dialog."
 msgstr ""
 "QGIS kontrolliert beim Editieren, ob die eingetragenen Werte dem Datentyp "
 "der Attributspalte entspricht (z.B.: Zahl oder Text).\n"
@@ -982,7 +983,6 @@ msgstr ""
 
 # 6ed6fea9201746579e242c2360aac40c
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:427
-#, fuzzy
 msgid ""
 "The |mActionEditCut| :sup:`Cut Features` tool on the digitizing toolbar can "
 "also be used to delete features. This effectively deletes the feature but "
@@ -998,8 +998,8 @@ msgstr ""
 "dann den letzten Schritt, falls ein Fehler unterlaufen ist, wieder "
 "rückgängig machen, indem wir auf das Werkzeug |mActionEditPaste| "
 ":sup:`Objekte einfügen` drücken. Ausschneiden, kopieren und übergeben von "
-"Objekten funktioniert mit den gerade ausgewählten\n"
-"Objekten und können nach Bedarf kombiniert verwendet werden."
+"Objekten funktioniert mit den gerade ausgewählten Objekten und können nach "
+"Bedarf kombiniert verwendet werden."
 
 # 70f2c1a58e4e44f1bfd20aac418ea1c0
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:436
@@ -1225,7 +1225,7 @@ msgstr "Punktsymbole drehen"
 # c0a360cb1b084813ba1622d40aba57fd
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:495
 msgid "Merge Attributes of Selected Features"
-msgstr ""
+msgstr "Attribute gewählter Objekte vereinen"
 
 # 8ff64e8350664bf9839248dc87b52292
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:498
@@ -1249,6 +1249,14 @@ msgid ""
 "displayed by right clicking on the toolbar and activating the Undo/Redo "
 "check box. Undo/Redo is however active, even if the widget is not displayed."
 msgstr ""
+"Die Werkzeuge |mActionUndo| :sup:`Rückgängig` und |mActionRedo| "
+":sup:`Wiederholen` ermöglichen es, Arbeitsschritte der Vektoreditierung "
+"rückgängig zu machen oder zu wiederholen. Im Dialog Rücknahme/Wiederholung "
+"werden alle durchgeführten Operationen angezeigt (siehe Abbildung "
+"Figure_edit_3_). Dieser Dialog wird nicht standardmäßig angezeigt. Klicken "
+"Sie dazu in einem freien Bereich der Werkzeugleiste auf die rechte Maustaste "
+"und aktivieren dann das Kontrollkästchen Rücknahme/Wiederholung. Die "
+"Funktion ist übrigens immer aktiv, auch wenn der Dialog nicht angezeigt wird."
 
 # b453f975c3674ca38594bc93f88efbbd
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:524
@@ -1258,6 +1266,12 @@ msgid ""
 "vector editing operations (for example changes done by a plugin), may or may "
 "not be reverted, depending on how the changes were performed."
 msgstr ""
+"Wenn Sie auf die Funktion 'Rückgängig' klicken, werden alle Geometrien und "
+"Attribute auf den Status zurückgestellt, bevor die rückgängig gemachte "
+"Operation stattgefunden hat. Veränderung, die an anderer Stelle, z.B. in "
+"anderen Plugins durchgeführt wurden, können unspezifisch sein für die "
+"unterschiedlichen Operationen - d.h. sie können rückgängig gemacht werden "
+"oder aber einfach so bleiben."
 
 # ffb8f855616d4fa58b0e432f245d8ab6
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:529
@@ -1266,6 +1280,9 @@ msgid ""
 "the history list; all features will be reverted to the state they were in "
 "after the selected operation."
 msgstr ""
+"Wenn Sie Rücknahme/Wiederholung verwenden wollen klicken Sie einfach auf "
+"eine Operation in der history; alle Objekte werden dann auf den Stand vor "
+"der ausgewählten Operation zurückgesetzt."
 
 # e5f86c8a227746d28f51caf20de2e124
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:537
@@ -1278,6 +1295,16 @@ msgid ""
 "simplified geometry will be stored. If a feature cannot be simplified (e.g. "
 "MultiPolygons), a message shows up."
 msgstr ""
+"Das Werkzeug |mActionSimplify| :sup:`Objekt vereinfachen` ermöglicht es, die "
+"Anzahl der Stützpunkte eines Objektes zu veringern, solange sich die "
+"Geometrie nicht verändert. Sie müssen dazu eines oder mehrere Objekte "
+"auswählen. Dadurch werden diese von einem roten Gummiband umrandet und ein "
+"Schieber erscheint. Wenn Sie die Stellung des Schiebers verändern, können "
+"Sie\n"
+"sehen, wie das Objekt vereinfacht wird. Durch einen Klick auf **[OK]** wird "
+"die neue Geometrie abgespeichert. Wenn ein Objekt nicht vereinfacht werden "
+"kann (z.B. bei MultiPolygonen), erscheint ein Fenster mit einer "
+"entsprechenden Meldung.  "
 
 # d47079139f6c4b23bc6b2823af781632
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:549
@@ -1288,6 +1315,11 @@ msgid ""
 "in between the boundaries of the outer and inner polygons remain as a ring "
 "polygon."
 msgstr ""
+"Sie können :index:`Ring-Polygone` mit dem Werkzeug |mActionAddRing| "
+":sup:`Ring hinzufügen` erstellen. Das bedeutet, dass Sie innerhalb eines "
+"bestehenden Polygons weitere Polygone digitalisieren können. Diese "
+"erscheinen dann als 'Loch', so dass nur der Zwischenraum des inneren und des "
+"äußeren Polygons als Ring-Polygon übrig bleibt."
 
 # e47bf321c532481f9efb992d180c4116
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:559
@@ -1296,6 +1328,10 @@ msgid ""
 ":index:`multipolygon`. The new part polygon has to be digitized outside the "
 "selected multipolygon."
 msgstr ""
+"Mit dem Tool |mActionAddIsland| :sup:`Teil hinzufügen` können Sie ein neues "
+"Polygon digitalisieren und einem zuvor selektierten Multipolygon zuweisen. "
+"Das neue Teilpolygon muss ausserhalb des selektierten Multipolygons "
+"digitalisiert werden."
 
 # a46c120d22dd4901abec1e1116976271
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:567
@@ -1306,6 +1342,13 @@ msgid ""
 "This tool can be used on polygon and multi-polygon features. Before you "
 "select the vertices of a ring, adjust the vertex edit tolerance."
 msgstr ""
+"Das Werkzeug |mActionDeleteRing| :sup:`Ring löschen` ermöglicht es, "
+"Ringpolygone innerhalb eines existierenden Fläche zu löschen. Das Werkzeug "
+"funktioniert nur mit Polygonlayern und kann für Polygon- und "
+"Multipolygon-Objekte benutzt werden. Es findet keine Veränderung statt, wenn "
+"es auf den äußeren Ring eines Polygons angewendet wird. Bevor Sie die "
+"Vertices des Ringes selektieren, stellen Sie bitte die Fangtoleranz "
+"entsprechend ein.    "
 
 # c507af3d805247a18593735b6e167d2e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:577
@@ -1317,6 +1360,12 @@ msgid ""
 "polygon. Before you select the vertices of a part, adjust the vertex edit "
 "tolerance."
 msgstr ""
+"Mit dem |mActionDeletePart| :sup:`Teil löschen` Werkzeug können Teile eines "
+"Multi-Feature Objektes gelöscht werden (z.B. ein Polygon von einem "
+"Multipolygon Objekt löschen). Dabei wird der letzte Teil des Multi-Feature "
+"Objektes nicht gelöscht. Das Werkzeug funktioniert mit alles Multi-Feature "
+"Geometrien Punkte, Linien und Polygone. Bevor Sie die Vertices des Teils "
+"selektieren, stellen Sie bitte die Fangtoleranz entsprechend ein."
 
 # 92e74bfb56074c379ebfed5e16da1f94
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:587
@@ -1329,6 +1378,15 @@ msgid ""
 "line is not allowed to cross several polygon rings as this would generate an "
 "invalid polygon."
 msgstr ""
+"Die Geometrien von Linien und Polygonen können mit dem Werkzeug "
+"|mActionReshape| :sup:`Objekt überarbeiten`. Dabei ersetzt die gezogene "
+"Linie die originale Linie oder Flächenlinie eines Objektes von der ersten "
+"bis zur zweiten Überschneidung. Für Polygone kann dies manchmal zu "
+"unerwünschten Resultaten führen und ist vorwiegend sinnvoll, wenn man nur "
+"kleinere Teile\n"
+"einer Fläche ersetzen möchte und nicht für eine vollständige Überarbeitung. "
+"Dabei ist es für die Vereinfachungslinie auch nicht erlaubt, mehrere "
+"Polygongrenzen zu überschneiden."
 
 # 54d98df8b3d74a8dbc66924ff381d0ab
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:595
@@ -1342,6 +1400,16 @@ msgid ""
 "line outside the polygon, adding vertices inside, and ending the line "
 "outside the polygon with a right click."
 msgstr ""
+"Als Beispiel können Sie die Grenze eines Polygons mit diesem Tool "
+"bearbeiten. Klicken Sie als erstes in die Fläche des Polygons neben den "
+"Punkt wo Sie den neuen Stützpunkt hinzufügen wollen. Dann überqueren Sie die "
+"Grenze und fügen sie Stützpunkte außerhalb des Polygons ein. Machen Sie "
+"einen Rechtsklick in die Fläche des Polygons  zum Vervollständigen. Das "
+"Werkzeug wird automatisch einen Knoten an der Stelle wo die neue Linie die "
+"grenze kreuzt hinzufügen. Es ist auch möglich einen Teil der Polygonfläche "
+"zu entfernen indem man außerhalb des Polygons anfängt, Stützpunkte innerhalb "
+"des Polygons hinzufügt und außerhalb des Ploygons mit einem Rechtklick "
+"aufhört."
 
 # 9426c39955524c47a06b001a3fd3e955
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:605
@@ -1351,12 +1419,16 @@ msgid ""
 "any more. This may not be a problem for most applications, but it is "
 "something to consider."
 msgstr ""
+"Das Objekte überarbeiten Werkzeug kann die Startposition eines Polygonringes "
+"oder einer geschlossenen Linie verändern. Der Punkt, der zweimal abgebildet "
+"ist wird also nicht mehr der gleiche sein. Dies mag kein Problem für die "
+"meisten Anwendungen sein, sollte aber beachtet werden. "
 
 # 80af01532c904c98b36fc9fc942d5c62
 # 4f55790a5c2d458f81fd43111322efee
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:613
 msgid "Offset Curves"
-msgstr ""
+msgstr "Linie versetzen"
 
 # 3206576fae7444daba50ca8cc9742e80
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:615
@@ -1368,6 +1440,14 @@ msgid ""
 "layer). It is thus ideally suited for the creation of distance line "
 "layers.The displacement is shown at the bottom left of the taskbar."
 msgstr ""
+"Das |mActionOffsetCurve| :sup:`Linie versetzen ist ein neues "
+"Bearbeitungswerkzeug. Es erstellt parallele Versätze von Linien und "
+"Polygonringen. Das Werkzeug kann auf den bearbeiteten Layer (die Geometrien "
+"werden verändert) oder auch auf Layer im Hintergrund angewendet werden. (es "
+"erstellt Kopien von Linien/Ringen und fügt sie dem bearbeiteten Layer zu). "
+"Auf diese Weise ist es besonders gut für die Erstellung von "
+"Abstandslinienlayern geeignet. Der Versatz wird am linken unteren Ende der "
+"Statusleiste gezeigt."
 
 # aa9ca32dbf3e48069f8b9ea87115086f
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:628
@@ -1376,11 +1456,14 @@ msgid ""
 "Features` icon on the toolbar. Just draw a line across the feature you want "
 "to split."
 msgstr ""
+"Objekte können mit dem Werkzeug |mActionSplitFeatures| :sup:`Objekt teilen` "
+"geteilt werden. Zeichnen Sie dazu einfach eine Linie durch das Objekt, das "
+"Sie teilen wollen."
 
 # 299eb984aca243e0a2934deceeb9c8b8
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:634
 msgid "Merge selected features"
-msgstr ""
+msgstr "Gewählte Objekte verschmelzen"
 
 # d70befc8e4c74d1fad4529f18bf85d7b
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:637
@@ -1388,11 +1471,14 @@ msgid ""
 "The |mActionMergeFeatures| :sup:`Merge Selected Features` tool allows to "
 "merge features that have common boundaries and the same attributes."
 msgstr ""
+"Das Werkzeug |mActionMergeFeatures| :sup:`Gewählte Objekte verschmelzen` "
+"erlaubt es, Objekte die eine gemeinsame Grenzlinie und die gleichen "
+"Attribute tragen zu verschmelzen."
 
 # e7d009846ca3435fab912e907ec83106
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:643
 msgid "Merge attributes of selected features"
-msgstr ""
+msgstr "Attribute gewählter Objekte vereinen"
 
 # f8f78671c95e4e2db1ec9eb8d92bf04d
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:646
@@ -1401,6 +1487,9 @@ msgid ""
 "allows to :index:`merge attributes of features` with common boundaries and "
 "attributes without merging their boundaries."
 msgstr ""
+"Das Werkzeug |mActionMergeFeatures| :sup:`Attribute gewählter Objekte "
+"vereinen` erlaubt es, Attribute von Objekten, die eine gemeinsame Grenzlinie "
+"haben, zu vereinen ohne die Grenzlinie zu verschmelzen."
 
 # 215054a0e91d41ed9cfd9a85b1ecbdc1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:658
@@ -1412,6 +1501,12 @@ msgid ""
 ":guilabel:`Style` tab of the :guilabel:`Layer Properties`. Otherwise the "
 "tool is inactive."
 msgstr ""
+"Das |mActionRotatePointSymbols| :sup:`Punktsymbole drehen` Werkzeug "
+"funktioniert im Moment nur mit der alten Darstellung. Es ermöglicht, die "
+"gedrehte Darstellung von Punktsymbolen. Das Werkzeug ist aber nur aktiv, "
+"wenn Sie eine Attributspalte mit Drehwinkeln angelegt haben und diese im "
+"Reiter :guilabel:`Stil` des Dialogs .guilabel:`Layereigenschaften` angegeben "
+"haben."
 
 # a084bebf46e8481bb05fbf899aea31c1
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:676
@@ -1421,6 +1516,10 @@ msgid ""
 "value will be visualized (see Figure_edit_4_). When you release the left "
 "mouse button again, the value will be updated in the attribute table."
 msgstr ""
+"Um die Drehung zu ändern, wählen Sie einen Punkt im Kartenfenster aus und "
+"drehen diesen, indem Sie die linke Maustaste gedrückt halten. Ein roter "
+"Pfeil mit dem Drehwinkel wird dann angezeigt Wenn Sie die linke Maustaste "
+"wieder loslassen, wird der neue Wert in der Attributtabelle aktualisiert."
 
 # e5898ef30e574359a2ac3bbe960842b9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:682
@@ -1428,11 +1527,13 @@ msgid ""
 "If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15 "
 "degree steps."
 msgstr ""
+"Wenn Sie zusätzlich die :kbd:`Strg`-Taste gedrückt halten, findet die "
+"Drehung in 15 Grad Schritten statt."
 
 # 424f5a3792fe4422b2d187d11ca5e6c9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:690
 msgid "Creating a new Vector layer"
-msgstr ""
+msgstr "Einen neuen Vektorlayer erstellen"
 
 # c9c185e4d06c473991ea959889b03181
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:692
@@ -1442,11 +1543,15 @@ msgid ""
 "refer to section :ref:`creating_new_grass_vectors` for more information on "
 "creating GRASS vector layers."
 msgstr ""
+"|qg| ermöglicht es neue Shape- und SpatiaLite-Layerzu erstellen. Das "
+"Erstellen eines GRASS Vektorlayers ist mit dem GRASS-Plugin möglich. Weitere "
+"Information dazu finden Sie im Abschnitt\n"
+":ref:`creating_new_grass_vectors`."
 
 # 4471c66df5e843e2921152b2e0891288
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:698
 msgid "Creating a new Shapefile layer"
-msgstr ""
+msgstr "Eine neue Shapedatei erstellen"
 
 # 24c1f19ea54d4994a7f0a867089719c9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:701
@@ -1457,13 +1562,20 @@ msgid ""
 "displayed as shown in Figure_edit_5_. Choose the type of layer (point, line "
 "or polygon) and the CRS (Coordinate Reference System)."
 msgstr ""
+"Um einen neuen Shapelayer zu erstellen, wählen Sie :menuselection:`Neu "
+"-->|mActionNewVectorLayer| :menuselection:`Neuer Shapedatei Layer ...` aus "
+"dem Menü :menuselection:`Layer`. Dadurch startet der Dialog :guilabel:`Neuer "
+"Vektorlayer`(vgl. Abb. Figure_edit _5_). Wählen Sie hier den Typ des neuen "
+"Layers (Punkt, Linie oder Polygon) und das KBS (Koordinatenbezugsystem)."
 
 # 5ff5a255c3264d7dbbe052cd6bdc2944
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:707
 msgid ""
 "Note that |qg| does not yet support creation of 2.5D features (i.e. features "
-"with X,Y,Z coordinates) or measure features."
+"with X,Y,Z coordinates)."
 msgstr ""
+"Beachten Sie dass QGIS derzeit noch keine 2,5D Objekte erstellen kann (z.B. "
+"Objekte mit X,Y,Z Koordinaten)."
 
 # 25d40a3d75d8406b8430fecbed0a44d0
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:722
@@ -1481,11 +1593,24 @@ msgid ""
 "be added to the map and you can edit it in the same way as described in "
 "Section :ref:`sec_edit_existing_layer` above."
 msgstr ""
+"Um die Erstellung eines neuen Vektorlayers abzuschließen, ergänzen Sie die "
+"gewünschten Attributfelder, indem Sie auf den Knopf **[Hinzufügen]** klicken "
+"und den Namen und Datentyp angeben. Eine Defaultspalte 'ID' wird immer "
+"automatisch vorgegeben, kann aber bei Bedarf gelöscht werden. Es werden nur "
+"die Datentypen :guilabel:`Type:real` |selectstring|, "
+":guilabel:`Type:integer` |selectstring| und :guilabel:`Type:string` "
+"|selectstring| unterstützt. Zusätzlich kann entsprechend des gewählten "
+"Datentyps auch die Breite und Genauigkeit der Spalteneinträge festgelegt "
+"werden. Wenn dies getan ist, bestätigen Sie mit **[Ok]** und geben einen "
+"Namen für den Vektorlayer ein. Die Endung :file:`.shp` wird automatisch "
+"ergänzt, der neue Layer wird automatisch in die Kartenlegende eingefügt und "
+"Sie können den Layer entsprechend dem Kapitel :ref:`sec_edit_existing_layer` "
+"editieren. "
 
 # ebe5a25bfd01457d88068ee045e069ff
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:739
 msgid "Creating a new SpatiaLite layer"
-msgstr ""
+msgstr "Einen neuen SpatiaLite Layer erstellen"
 
 # 50e87fb70a624c379b644469575e6468
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:742
@@ -1495,6 +1620,10 @@ msgid ""
 "the :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog "
 "will be displayed as shown in Figure_edit_6_."
 msgstr ""
+"Um einen neuen SpatiaLite Layer zu erstellen, wählen Sie :menuselection:`Neu "
+"-->|mActionNewVectorLayer| :menuselection:`Neuer SpatiaLite Layer...` aus "
+"dem Menü :menuselection:`Layer`. Dadurch startet der Dialog :guilabel:`Neuer "
+"SpatiaLite Layer`(vgl. Figure_edit_6_)."
 
 # 24c7fdf907c54f77a3cb095d3d7cce86
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:759
@@ -1505,6 +1634,13 @@ msgid ""
 "define the layer type and the EPSG SRID. If desired you can select to "
 "|checkbox| :guilabel:`Create an autoincrementing primary key`."
 msgstr ""
+"Der erste Schritt besteht darin, eine bereits bestehende SpatiaLite "
+"Datenbank auszuwählen oder eine neue SpatiaLite Datenbank zu erstellen. Dies "
+"können Sie mit dem |browsebutton| Knopf rechts vom Feld 'Datenbank' machen. "
+"Danach tragen Sie den Namen für den zu erstellenden SpatiaLite Layer, den "
+"Layertyp und die EPSG-SRID Nummer (für die Projektion) ein. Wenn erwünscht, "
+"können Sie noch das Kontrollkästchen |checkbox| :guilabel:`automatisch "
+"inkrementierenden Primärschlüssel erzeugen` auswählen."
 
 # f2dc3846ec3b4343860a4b3f2222ee79
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:765
@@ -1516,6 +1652,12 @@ msgid ""
 "legend and you can edit it in the same way as described in Section "
 ":ref:`sec_edit_existing_layer` above."
 msgstr ""
+"Um die Attributtabelle des neuen SpatiaLite Layers festzulegen, geben Sie "
+"für die gewünschten Spalten die Namen und den Datentyp an und klicken dann \n"
+"jeweils auf den Knopf **[Der Attributliste hinzufügen]**. Wenn alles korrekt "
+"eingegeben ist, drücken Sie auf **[OK]**. |qg| zeigt den neuen Layer dann "
+"automatisch in der Legende an und Sie können mit dem Editieren beginnen, wie "
+"in Kapitel :ref:`sec_edit_existing_layer` beschrieben."
 
 # 5b4d4356ba474bb8a467a2036614682a
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:772
