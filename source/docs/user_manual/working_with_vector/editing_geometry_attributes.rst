@@ -740,7 +740,7 @@ legend and you can edit it in the same way as described in Section
 :ref:`sec_edit_existing_layer` above.
 
 Further management of SpatiaLite-Layers can be done with the DB Manager see 
-:ref:`db_manager`.
+:ref:`dbmanager`.
 
 .. index:: Work_with_Attribute_Table
 
