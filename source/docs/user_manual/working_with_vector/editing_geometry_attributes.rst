@@ -825,6 +825,7 @@ following functionality:
   :kbd:`Ctrl+C`
 * |mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with
   :kbd:`Ctrl+J`
+* |PanToSelected| :sup:`Pan map to the selected rows` also with :kbd:`Ctrl+P`
 * |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
   and to enable functionalities described below also with
   :kbd:`Ctrl+E`
