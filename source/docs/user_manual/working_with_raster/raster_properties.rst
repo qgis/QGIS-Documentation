@@ -213,9 +213,10 @@ statistics have not yet been collected.
 
 This tab is mainly for information. You cannot change any values printed
 inside this tab. 
-..To update the statistics you need to change to tab
-  :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
-  (see :ref:`label_histogram`).
+
+.. To update the statistics you need to change to tab
+   :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
+   (see :ref:`label_histogram`).
 
 .. index:: Pyramids
 
