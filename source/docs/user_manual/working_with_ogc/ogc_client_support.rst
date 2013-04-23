@@ -147,7 +147,7 @@ Once you have successfully filled in your parameters you can use the
 includes the Image encoding, Layers, Layer Styles and Projections. Since this is
 a network operation, the speed of the response depends on the quality of your
 network connection to the WMS server. While downloading data from the WMS server,
-the download progress is visualized in the left bottom of the WMS Plugin dialog.
+the download progress is visualized in the left bottom of the WMS dialog.
 
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
