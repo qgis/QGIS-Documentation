@@ -247,15 +247,6 @@ To choose a CRS, select **[Change...]** and a dialog similar to Figure Projectio
 in :ref:`label_projections` will appear. The main difference with the WMS version
 of the screen is that only those CRSs supported by the WMS Server will be shown.
 
-.. tip:: **WMS Projections**
-
-   For best results, make the WMS layer the first layer you add to your project.
-   This allows the project projection to inherit the CRS you used to render the
-   WMS layer. On-the-fly projection (see :ref:`label_projections`) can then be
-   used to fit any subsequent vector layers to the project projection. In this
-   version of QGIS, if you add a WMS layer later, and give it a different CRS to
-   the current project projection, unpredictable results can occur.
-
 .. _`serversearch`:
 
 Server search
