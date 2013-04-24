@@ -241,9 +241,7 @@ In this version of QGIS, the :guilabel:`Global transparency` setting from the
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
 Each WMS Layer can be presented in multiple CRSs, depending on the capability of
-the WMS server. You may notice that the *x* changes in the *Coordinate Reference
-System (x available)* header as you select and deselect layers from the
-:guilabel:`Layers section` tab.
+the WMS server.
 
 To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3
 in :ref:`label_projections` will appear. The main difference with the WMS version
