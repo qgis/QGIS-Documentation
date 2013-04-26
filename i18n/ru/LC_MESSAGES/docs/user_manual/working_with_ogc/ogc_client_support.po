@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-15 02:54\n"
+"POT-Creation-Date: 2013-04-26 17:18\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -359,7 +359,7 @@ msgid ""
 "Since this is a network operation, the speed of the response depends on the "
 "quality of your network connection to the WMS server. While downloading data "
 "from the WMS server, the download progress is visualized in the left bottom "
-"of the WMS Plugin dialog."
+"of the WMS dialog."
 msgstr ""
 "Как только были заданы параметры WMS-соединения, можно нажать кнопку "
 "**[Подключиться]** для получения доступа к содержимому выбранного сервера, "
@@ -565,21 +565,17 @@ msgstr ""
 "Система координат (CRS, Coordinate Reference System) --- проекция в "
 "терминологии OGC."
 
-# be03b434554844a4bc08b267e6b1a412
+# 11242d9bca974df7b4308dd31d08f25f
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:248
 msgid ""
 "Each WMS Layer can be presented in multiple CRSs, depending on the "
-"capability of the WMS server. You may notice that the *x* changes in the "
-"*Coordinate Reference System (x available)* header as you select and "
-"deselect layers from the :guilabel:`Layers section` tab."
+"capability of the WMS server."
 msgstr ""
-"В зависимости от настроек WMS-сервера, каждый слой может быть доступен в "
-"нескольких проекциях. Можно заметить, что величина *x* на панели *Система "
-"координат (доступно x)* изменяется при выборе слоёв из списка вкладки "
-":guilabel:`Слои`."
+"Каждый WMS-слой может быть отображен с использованием нескольких систем "
+"координат, список которых определяется настройками сервера."
 
 # 9b862fb84eda4400a9ed170dfd6cbf69
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:253
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:251
 msgid ""
 "To choose a CRS, select **[Change...]** and a dialog similar to Figure "
 "Projection 3 in :ref:`label_projections` will appear. The main difference "
@@ -592,37 +588,13 @@ msgstr ""
 "том, что оно содержит только те системы координат, которые поддерживаются "
 "WMS-сервером."
 
-# 091eaa2abab6420bad3812e559af9272
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:257
-msgid "**WMS Projections**"
-msgstr "**Системы координат WMS**"
-
-# 7d6006947cdd439d9ee16c53a1434ea6
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:259
-msgid ""
-"For best results, make the WMS layer the first layer you add to your "
-"project. This allows the project projection to inherit the CRS you used to "
-"render the WMS layer. On-the-fly projection (see :ref:`label_projections`) "
-"can then be used to fit any subsequent vector layers to the project "
-"projection. In this version of QGIS, if you add a WMS layer later, and give "
-"it a different CRS to the current project projection, unpredictable results "
-"can occur."
-msgstr ""
-"Рекомендуется всегда добавлять WMS-слой первым в проект. Это позволит в "
-"дальнейшем использовать его проекцию при добавлении в проект других слоёв. "
-"Приведение слоёв к проекции проекта достигается путём использования "
-"преобразования координат «на лету» (см. раздел :ref:`label_projections`).\n"
-"В текущей версии QGIS в случае добавления в проект WMS-слоя не первым и "
-"установки ему проекции, отличной от проекции проекта, возможны "
-"непредсказуемые последствия."
-
 # 4518c5e6d6f64ba1854070449f4029a1
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:269
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:258
 msgid "Server-Search"
 msgstr "Поиск серверов"
 
 # f5eb577faaa84d6caa300fa9e4ac2fc8
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:271
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:260
 msgid ""
 "Within QGIS you can search for WMS-servers. Figure_OGC_2_ shows the tab "
 ":guilabel:`Server Search` with the :guilabel:`Add Layer(s) from a Server` "
@@ -633,7 +605,7 @@ msgstr ""
 ":guilabel:`Добавить слои с сервера`."
 
 # 03d04c19f15f4ba3ba1218c63bc5db0f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:286
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:275
 msgid ""
 "As you can see it is possible to enter a search-string in the text field and "
 "hit the **[Search]** button. After a short while the search result will be "
@@ -658,17 +630,17 @@ msgstr ""
 "поиска карт по ключевым словам."
 
 # 5cd7cfeebad24306b399f784b1fd33e0
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:297
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:286
 msgid "Basically this option is a frontend to the API of http://geopole.org."
 msgstr "Фактически, это фронт-энд к API http://geopole.org."
 
 # e25b3e11c118453bbf1a4c2d7b0bfb17
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:302
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:291
 msgid "Tilesets"
 msgstr "Мозаики"
 
 # 9b50c937863b4a818b93768474c1d766
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:306
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:295
 msgid ""
 "When using WMS-C (Cached WMS) Services like "
 "http://labs.metacarta.com/wms-c/Basic.py you are able to browse through the "
@@ -687,12 +659,12 @@ msgstr ""
 "удобным механизмом их смены."
 
 # 7801a49002ed4169bf174301f1b02959
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:316
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:305
 msgid "Using the Identify Tool"
 msgstr "Использование инструмента определения объектов"
 
 # 6fa7d732e8684d1eb00338d3fe61f24c
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:320
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:309
 msgid ""
 "Once you have added a WMS server, and if any layer from a WMS server is "
 "queryable, you can then use the |mActionIdentify| :sup:`Identify` tool to "
@@ -709,12 +681,12 @@ msgstr ""
 "WMS-сервера."
 
 # 1aaf65c8af7b4a1e8a594cf05db30e6d
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:328
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:317
 msgid "**Viewing Properties**"
 msgstr "**Просмотр свойств**"
 
 # 477e22568db0465b97305c14b18dcbaa
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:332
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:321
 msgid ""
 "Once you have added a WMS server, you can view its properties by "
 "right-clicking on it in the legend, and selecting "
@@ -725,12 +697,12 @@ msgstr ""
 "menuselection:`Свойства`."
 
 # 9147c75c798545de847b3797adef222f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:337
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:326
 msgid "**Metadata Tab**"
 msgstr "**Метаданные**"
 
 # 30b3d2647a4649fab1333843725a5c79
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:341
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:330
 msgid ""
 "The tab :guilabel:`Metadata` displays a wealth of information about the WMS "
 "server, generally collected from the Capabilities statement returned from "
@@ -744,17 +716,17 @@ msgstr ""
 ":ref:`literature_and_web`), представим некоторые из них:"
 
 # 10122265fef54161baeef42e6864c7be
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:347
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:336
 msgid "**Server Properties**"
 msgstr "**Свойства сервера**"
 
 # 41054c2e2ad54010be47f8159750dcae
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:349
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:338
 msgid "**WMS Version** --- The WMS version supported by the server."
 msgstr "**Версия WMS** --- Версия WMS, поддерживаемая сервером."
 
 # 494e7a775dbc4e22b9c9316abacd87cd
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:350
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:339
 msgid ""
 "**Image Formats** --- The list of MIME-types the server can respond with "
 "when drawing the map. QGIS supports whatever formats the underlying Qt "
@@ -766,7 +738,7 @@ msgstr ""
 "обычно это ``image/png`` и ``image/jpeg``."
 
 # 11a273947d37484f9a4c7460761e1dff
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:354
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:343
 msgid ""
 "**Identity Formats** --- The list of MIME-types the server can respond with "
 "when you use the Identify tool. Currently QGIS supports the ``text-plain`` "
@@ -777,12 +749,12 @@ msgstr ""
 "``text-plain``."
 
 # dfc18afa1f644b88b61470081410dd7e
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:358
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:347
 msgid "**Layer Properties**"
 msgstr "**Свойства слоя**"
 
 # 0c981dec0be143a6bedd40030f3ef780
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:360
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:349
 msgid ""
 "**Selected** --- Whether or not this layer was selected when its server was "
 "added to this project."
@@ -791,7 +763,7 @@ msgstr ""
 "сервера в проект."
 
 # 8d832dc321f648d08af3f39464651b81
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:362
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:351
 msgid ""
 "**Visible** --- Whether or not this layer is selected as visible in the "
 "legend. (Not yet used in this version of QGIS.)"
@@ -800,7 +772,7 @@ msgstr ""
 "слоёв (не используется в текущей версии QGIS)."
 
 # e52776a486e7451e9fee882da997e2b1
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:364
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:353
 msgid ""
 "**Can Identify** --- Whether or not this layer will return any results when "
 "the Identify tool is used on it."
@@ -809,7 +781,7 @@ msgstr ""
 "помощью инструмента идентификации."
 
 # d4f09ac918a84576baa65674dd5ef521
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:366
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:355
 msgid ""
 "**Can be Transparent** --- Whether or not this layer can be rendered with "
 "transparency. This version of QGIS will always use transparency if this is "
@@ -821,7 +793,7 @@ msgstr ""
 "поддерживает прозрачность."
 
 # bd7588bd297f4fc6844ec2f171e738fc
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:369
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:358
 msgid ""
 "**Can Zoom In** --- Whether or not this layer can be zoomed in by the "
 "server. This version of QGIS assumes all WMS layers have this set to "
@@ -833,7 +805,7 @@ msgstr ""
 "слои могут быть отрисованы некорректно."
 
 # be33fc85017c42d98a08e2652a2aa3b6
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:372
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:361
 msgid ""
 "**Cascade Count** --- WMS servers can act as a proxy to other WMS servers to "
 "get the raster data for a layer. This entry shows how many times the request "
@@ -845,7 +817,7 @@ msgstr ""
 "результата."
 
 # 42bd396d75f64d77860e7998d439f164
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:375
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:364
 msgid ""
 "**Fixed Width, Fixed Height** --- Whether or not this layer has fixed source "
 "pixel dimensions. This version of QGIS assumes all WMS layers have this set "
@@ -857,7 +829,7 @@ msgstr ""
 "отрисованы некорректно."
 
 # 793e4e19eff3466c95c0b9135185678f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:378
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:367
 msgid ""
 "**WGS 84 Bounding Box** --- The bounding box of the layer, in WGS 84 "
 "coordinates. Some WMS servers do not set this correctly (e.g. UTM "
@@ -876,7 +848,7 @@ msgstr ""
 "CRS:84 ``BoundingBox``."
 
 # 30b66d94c9e944e8a122706b9df9297f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:384
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:373
 msgid ""
 "**Available in CRS** --- The projections that this layer can be rendered in "
 "by the WMS server. These are listed in the WMS-native format."
@@ -885,7 +857,7 @@ msgstr ""
 "WMS-сервером. Перечислены в «родном» для WMS формате."
 
 # e486c62baf9f481c8f3d96941cb7f7ce
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:386
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:375
 msgid ""
 "**Available in style** --- The image styles that this layer can be rendered "
 "in by the WMS server."
@@ -894,12 +866,12 @@ msgstr ""
 "WMS-сервером."
 
 # da5d0bf43a48484ea4bab16270eec7d4
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:392
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:381
 msgid "WMS Client Limitations"
 msgstr "Ограничения клиента WMS"
 
 # 199959e450474eba871dcd5b3484628b
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:394
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:383
 msgid ""
 "Not all possible WMS Client functionality had been included in this version "
 "of QGIS. Some of the more notable exceptions follow."
@@ -908,12 +880,12 @@ msgstr ""
 "Рассмотрим наиболее значимые."
 
 # 1b1d0ebae4a54f2fbbc740cb9da81778
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:397
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:386
 msgid "**Editing WMS Layer Settings**"
 msgstr "**Редактирование свойств WMS-слоя**"
 
 # 0a75b3cdf53f4a6aadf99938cfaa5d7f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:399
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:388
 msgid ""
 "Once you've completed the |mActionAddWmsLayer| :sup:`Add WMS layer` "
 "procedure, there is no ability to change the settings. A workaround is to "
@@ -924,12 +896,12 @@ msgstr ""
 "полного удаления слоя и повторного его добавления с новыми настройками."
 
 # 6ca936445a96454c914a98a35dc0a171
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:403
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:392
 msgid "**WMS Servers Requiring Authentication**"
 msgstr "**Защищённые WMS-серверы**"
 
 # 27fd11e3730648b6a053f57bbdbf3fc9
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:405
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:394
 msgid ""
 "Currently public accessible and secured WMS-services are supported. The "
 "secured WMS-servers can be accessed by public authentication. You can add "
@@ -943,12 +915,12 @@ msgstr ""
 "обратитесь к разделу :ref:`ogc-wms-servers`."
 
 # 73c106b665644905b9bc9874e85a0073
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:411
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:400
 msgid "**Accessing secured OGC-layers**"
 msgstr "**Доступ к защищённым слоям OGC**"
 
 # da0817613da742cb86ac5d46d3b34ea3
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:413
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:402
 msgid ""
 "If you need to access secured layers with other secured methods than basic "
 "authentication, you could use InteProxy as a transparent proxy, which does "
@@ -962,12 +934,12 @@ msgstr ""
 "по адресу http://inteproxy.wald.intevation.org."
 
 # ab287d08a71846caab6fe9d4009c30b9
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:420
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:409
 msgid "**QGIS WMS Mapserver**"
 msgstr "**WMS сервер QGIS**"
 
 # 8f800cac9da34e0b9548e736fb77b653
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:422
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:411
 msgid ""
 "From Version 1.7.0 QGIS has its own implementation of a WMS 1.3.0 Mapserver. "
 "Read more about this at chapter :ref:`label_qgisserver`."
@@ -977,12 +949,12 @@ msgstr ""
 "разделе :ref:`label_qgisserver`."
 
 # f2c51d4df7c240e189ea1bf6601b471a
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:428
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:417
 msgid "WFS and WFS-T Client"
 msgstr "Клиент WFS и WFS-T"
 
 # 8aae07bf61d8401e86479ad0904c815f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:432
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:421
 msgid ""
 "In QGIS, a WFS layer behaves pretty much like any other vector layer. You "
 "can identify and select features and view the attribute table. Since QGIS "
@@ -994,7 +966,7 @@ msgstr ""
 "такая возможность предоставляется сервером."
 
 # 82b20483b6a84e37abc581cd9fd144dc
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:436
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:425
 msgid ""
 "In general adding a WFS layer is very similar to the procedure used with "
 "WMS. The difference is there are no default servers defined, so we have to "
@@ -1005,12 +977,12 @@ msgstr ""
 "их необходимо добавить самостоятельно."
 
 # 5651f72e9af54b96918e4cf5847715c6
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:439
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:428
 msgid "**Loading a WFS Layer**"
 msgstr "**Добавление слоя WFS**"
 
 # 40f209ed6a8447fa82e20e340705d681
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:441
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:430
 msgid ""
 "As an example we use the DM Solutions WFS server and display a layer. The "
 "URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap"
@@ -1019,7 +991,7 @@ msgstr ""
 "по адресу http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap."
 
 # bddb9c168c9f4f0ead9fc1cf4f8ee60f
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:444
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:433
 msgid ""
 "Click on the |wfs| :sup:`Add WFS Layer` tool on the Layers toolbar, the "
 "dialog :guilabel:`Add WFS Layer from a Server` appears"
@@ -1028,27 +1000,27 @@ msgstr ""
 "Откроется диалог :guilabel:`Добавить слой WFS`"
 
 # 0e0ddde85dc4426eb5eed1970b432625
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:446
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:435
 msgid "Click on **[New]**"
 msgstr "Нажмите **[Создать]**"
 
 # e634947df42b4a2881dad4de11770aad
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:447
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:436
 msgid "Enter 'DM Solutions' as name"
 msgstr "Укажите «DM Solutions» в качестве имени"
 
 # 970eb6e6ee9a459d8716ef3aebe7bf55
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:448
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:437
 msgid "Enter the URL (see above)"
 msgstr "Введите URL (см. выше)"
 
 # 4afaae1c28c54b72903bed20eda9bd87
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:449
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:438
 msgid "Click **[OK]**"
 msgstr "Нажмите **[OK]**"
 
 # f860c7b9ebbb48a6add230501acdc4bf
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:450
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:439
 msgid ""
 "Choose 'DM Solutions' from the :guilabel:`Server Connections` |selectstring| "
 "combobox"
@@ -1057,27 +1029,27 @@ msgstr ""
 "выберите «DM Solutions»"
 
 # adc38f3158c848bbb91eb894290b2e01
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:452
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:441
 msgid "Click **[Connect]**"
 msgstr "Нажмите **[Подключиться]**"
 
 # ffca30a5e7fe4acda77843e21210588b
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:453
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:442
 msgid "Wait for the list of layers to be populated"
 msgstr "Дождитесь заполнения списка доступных слоев"
 
 # b1fdd71e05c74fecb97ededc95eda703
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:454
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:443
 msgid "Select the :guilabel:`Parks` layer in the list"
 msgstr "Выберите слой ``parks``"
 
 # 8bba0cd778894fa59624c09bb8fd732c
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:455
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:444
 msgid "Click **[Apply]** to add the layer to the map"
 msgstr "Чтобы добавить слой на карту, нажмите **[Применить]**"
 
 # 71291236d847482ab0e64c17e8afcd78
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:457
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:446
 msgid ""
 "Note that proxy-settings you have set in your preferences are also "
 "recognized."
@@ -1086,7 +1058,7 @@ msgstr ""
 "таковые были заданы."
 
 # a645a33e039b4503a493b3b3432f3599
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:485
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:474
 msgid ""
 "You'll notice the download progress is visualized in the left bottom of the "
 "QGIS main window. Once the layer is loaded, you can identify and select a "
@@ -1097,7 +1069,7 @@ msgstr ""
 "интересующих объектах, просматривать таблицу атрибутов."
 
 # 28b7529e54124dd799bae61ef3fd1017
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:489
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:478
 msgid ""
 "Only WFS 1.0.0 is supported. At this point there have not been many tests "
 "against WFS versions implemented in other WFS-servers. If you encounter "
@@ -1113,12 +1085,12 @@ msgstr ""
 "рассылки."
 
 # 7ad21e4b57864c8db27fc7cf3798817d
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:495
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:484
 msgid "**Finding WFS Servers**"
 msgstr "**Поиск WFS серверов**"
 
 # ab1aa9432d85485f9edfa344350fe8c8
-#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:497
+#: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:486
 msgid ""
 "You can find additional WFS servers by using Google or your favorite search "
 "engine. There are a number of lists with public URLs, some of them "
@@ -1127,3 +1099,38 @@ msgstr ""
 "Дополнительные WFS-серверы можно найти, используя Google или любую другую "
 "поисковую систему. Существует множество списков, содержащих URL "
 "WFS-серверов, некоторые из которых поддерживаются, а некоторые уже нет."
+
+# be03b434554844a4bc08b267e6b1a412
+#~ msgid ""
+#~ "Each WMS Layer can be presented in multiple CRSs, depending on the "
+#~ "capability of the WMS server. You may notice that the *x* changes in the "
+#~ "*Coordinate Reference System (x available)* header as you select and "
+#~ "deselect layers from the :guilabel:`Layers section` tab."
+#~ msgstr ""
+#~ "В зависимости от настроек WMS-сервера, каждый слой может быть доступен в "
+#~ "нескольких проекциях. Можно заметить, что величина *x* на панели *Система "
+#~ "координат (доступно x)* изменяется при выборе слоёв из списка вкладки "
+#~ ":guilabel:`Слои`."
+
+# 091eaa2abab6420bad3812e559af9272
+#~ msgid "**WMS Projections**"
+#~ msgstr "**Системы координат WMS**"
+
+# 7d6006947cdd439d9ee16c53a1434ea6
+#~ msgid ""
+#~ "For best results, make the WMS layer the first layer you add to your "
+#~ "project. This allows the project projection to inherit the CRS you used "
+#~ "to render the WMS layer. On-the-fly projection (see "
+#~ ":ref:`label_projections`) can then be used to fit any subsequent vector "
+#~ "layers to the project projection. In this version of QGIS, if you add a "
+#~ "WMS layer later, and give it a different CRS to the current project "
+#~ "projection, unpredictable results can occur."
+#~ msgstr ""
+#~ "Рекомендуется всегда добавлять WMS-слой первым в проект. Это позволит в "
+#~ "дальнейшем использовать его проекцию при добавлении в проект других "
+#~ "слоёв. Приведение слоёв к проекции проекта достигается путём "
+#~ "использования преобразования координат «на лету» (см. раздел "
+#~ ":ref:`label_projections`).\n"
+#~ "В текущей версии QGIS в случае добавления в проект WMS-слоя не первым и "
+#~ "установки ему проекции, отличной от проекции проекта, возможны "
+#~ "непредсказуемые последствия."
