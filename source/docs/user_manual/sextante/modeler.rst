@@ -112,9 +112,11 @@ in the same way as they are in the toolbox.
 
    Model Parameters |win|
 
-To add an algorithm, double-click on its name. An execution dialog will appear,
+The appearance of the toolbox has two modes here as well: simplified and advanced. However, there is no element to switch between views in the modeler, and you have to do it in the toolbox. The mode that is selected in the SEXTANTE toolbox is the one that will be used for the list of algorithms in the modeler.
+
+To add an algorithm to a model, double-click on its name. An execution dialog will appear,
 with a content similar to the one found in the execution panel that SEXTANTE shows
-when executing the algorithm from the toolbox. the one shown next correspond to
+when executing the algorithm from the toolbox. The one shown next correspond to
 the SAGA 'Convergence index' algorithm, the same one we saw in the section
 dedicated to the SEXTANTE toolbox.
 
@@ -363,18 +365,14 @@ context, it doesn't make too much sense.
 SEXTANTE models as Python code
 ------------------------------
 
-*This feature is temporarily unavailable*
 
-Along with the tab that contains the graphical design of the model, you will find
-another one containing a Python script which performs the same task as the model
-itself. Using that code, you can create a console script (we will explain them
-later in this manual) and modify it to incorporate actions and methods not
+Given a model, SEXTANTE can automatically create Python code that performs the same task as the model
+itself. This code is used to create a console script (we will explain them
+later in this manual) and you can modify that script to incorporate actions and methods not
 available in the graphical modeler, such as loops or conditional sentences.
 
 This feature is also a very practical way of learning how to use SEXTANTE from
 the console and how to create SEXTANTE algorithms using Python code, so you can
 use it as a learning tool when you start creating your own SEXTANTE scripts.
 
-You will find a button below the text field containing the Python code. Click on
-it to directly create a new script from that code, without having to copy and
-paste it in the SEXTANTE script editor.
+Save your model in the models folder and go to the toolbox, where it should appear now, ready to be run. Right click on the model name and select *Save as Python script* in the context menu that will pop-up. A dialog will prompt you to introduce the file where you want to save the script.

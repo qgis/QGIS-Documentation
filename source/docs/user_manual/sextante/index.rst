@@ -17,5 +17,6 @@ SEXTANTE
 	console
 	history
 	3rdParty
+	commander
 
 

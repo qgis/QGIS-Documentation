@@ -32,6 +32,13 @@ SEXTANTE, so you have them in your installation even if you have not installed
 any other software. Running the algorithm, however, needs the application binaries
 to be installed in your system.
 
+A note for Windows users
+........................
+
+If you are not an advanced user and you are running QGIS on windows, you might not be interested in reading the rest of this chapter. Make sure you install QGIS in your system using the OSGeo4W application. That will automatically install SAGA, GRASS and OTB in your system, and configure them so they can be run from SEXTANTE. All the algorithms in the simplified view of the toolbox will be ready to be run, without needing any further configuration.
+
+If you want to know more about how these providers work, or want to use some algorithms not included in the simplified toolbox (such as R scripts), keep on reading.
+
 A note on file formats
 ......................
 
@@ -92,6 +99,7 @@ are not included with SEXTANTE, so you have to download and install the software
 yourself. Please check the SAGA website at for more information. SAGA 2.0.8 is
 needed.
 
+In case of running 
 Once SAGA is installed, and if you are running Windows, open the SEXTANTE
 configuration dialog. In the :guilabel:`SAGA` block you will find a setting named
 :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
