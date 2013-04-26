@@ -113,7 +113,7 @@ A click on **[Connect]** again initiates the connection to the GPS receiver.
 
 You can activate |checkbox| :menuselection:`Automatically save added features`
 when you are in editing mode. Or you can can activate |checkbox|
-:guilabel:`Automatically add points` to the main windows with a certain width
+:guilabel:`Automatically add points` to the map canvas with a certain width
 and color.
 
 Activating |checkbox| :guilabel:`Cursor` you can use a slider |slider| to shrink
