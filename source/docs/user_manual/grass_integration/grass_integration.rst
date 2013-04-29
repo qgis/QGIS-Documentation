@@ -169,7 +169,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
    :file:`LOCATION` and projection and haven't memorized the EPSG ID,
    click on the |mIconProjectionEnabled| :sup:`projector` icon in the lower right-hand
    corner of the status bar (see Section :ref:`label_projections`)).
-#. Click **[Find]** to select the projection.
+#. In :guilabel:`Filter` insert 2964 to select the projection.
 #. Click **[Next]**.
 #. To define the default region, we have to enter the :file:`LOCATION`
    bounds in north, south, east, and west direction. Here we simply click on
