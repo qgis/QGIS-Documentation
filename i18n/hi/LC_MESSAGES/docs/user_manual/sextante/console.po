@@ -1,0 +1,438 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-29 19:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/sextante/console.rst:8
+# 77ed36e7e88042fb99112b05d7207aba
+msgid "Using SEXTANTE from the console"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:11
+# 02ee443e7ca34cd58e9674d446b62922
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:13
+# a243f7cd710940bd8670ad6ee859f011
+msgid "The console allows advanced users to increase their productivity and perform complex operations that cannot be performed using any of the other elements of the SEXTANTE GUI. Models involving several algorithms can be defined using the command-line interface, and additional operations such as loops and conditional sentences can be added to create more flexible and powerful workflows."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:19
+# 7b84a4c39ecc43a8b78828c5841587da
+msgid "There is not a SEXTANTE console in QGIS, but all SEXTANTE commands are available instead from the QGIS built-in Python console. That means that you can incorporate those command to your console work and connect SEXTANTE algorithms to all the other features (including methods from the QGIS API) available from there."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:24
+# 422fd432a2434a7b9d37a5f1ebed61f9
+msgid "The code that you can execute from the Python console, even if it does not call any SEXTANTE method, can be converted into a new SEXTANTE algorithm that you can later call from the toolbox, the graphical modeler or any other SEXTANTE component, just like you do with any other SEXTANTE algorithm. In fact, some algorithms that you can find in the toolbox are simple scripts."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:30
+# 0af32cfd6f0b4e87aee3607cabe301f7
+msgid "In this chapter we will see how to use SEXTANTE from the QGIS Python console, and also how to write your own algorithms using Python."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:34
+# 73dc67c74b3340c8b9e8909385306bd8
+msgid "Calling SEXTANTE from the Python console"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:36
+# e825eb3b780d4bb9a6ee9e9793ba59c5
+msgid "The first thing you have to do is to import the SEXTANTE functions with the following line:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:43
+# 8a44c6f7aa9348fd8ef5cfeeb7cc4ec1
+msgid "Now, there is basically just one (interesting) thing you can do with SEXTANTE from the console: to execute an algorithm. That is done using the ``runalg()`` method, which takes the name of the algorithm to execute as its first parameter, and then a variable number of additional parameter depending on the requirements of the algorithm. So the first thing you need to know is the name of the algorithm to execute. That is not the name you see in the toolbox, but rather a unique command–line name. To find the right name for your algorithm, you can use the ``algslist()`` method. Type the following line in you console:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:56
+# c9bebe33bc474be8be50ae77f513216b
+msgid "You will see something like this."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:79
+# 54af39e781384da49407582f625c713b
+msgid "That's a list of all the available algorithms, alphabetically ordered, along with their corresponding command-line names."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:82
+# 54fb7e796be74dde8073cee8f075fd02
+msgid "You can use a string as a parameter for this method. Instead of returning the full list of algorithm, it will only display those that include that string. If, for instance, you are looking for an algorithm to calculate slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:97
+# 9ee582b76e9a4c0489bd65d4952357af
+msgid "This result might change depending on the algorithms you have available."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:99
+# 62639019d8024639ac38d05b74173363
+msgid "It is easier now to find the algorithm you are looking for and its command-line name, in this case ``saga:slopeaspectcurvature``."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:102
+# 97548359045445a19e8badc6b47e9477
+msgid "Once you know the command-line name of the algorithm, the next thing to do is to know the right syntax to execute it. That means knowing which parameters are needed and the order in which they have to be passed when calling the ``runalg()`` method. SEXTANTE has a method to describe an algorithm in detail, which can be used to get a list of the parameters that an algorithms require and the outputs that it will generate. To do it, you can use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line name of the algorithm, not the full descriptive name."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:110
+# 6866b39af45841b2b64bf5f68f6874b4
+msgid "Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get the following description."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:125
+# a6ef334cbc67458d9e2589ff9a974a15
+msgid "Now you have everything you need to run any algorithm. As we have already mentioned, there is only one single command to execute algorithms: ``runalg()``. Its syntax is as follows:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:134
+# 41e94aa2b61f4b07bf24b7f9b92590f4
+msgid "The list of parameters and outputs to add depends on the algorithm you want to run, and is exactly the list that the ``alghelp()`` method gives you, in the same order as shown."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:138
+# 01a9556cf8b2417b9a67b9f86b9eafa2
+msgid "Depending on the type of parameter, values are introduced differently. The next one is a quick review of how to introduce values for each type of input parameter:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:141
+# 68565ab18b8a452caab7fd4286b63300
+msgid "Raster Layer, Vector Layer or Table. Simply use a string with the name that identifies the data object to use (the name it has in the QGIS Table of Contents) or a filename (if the corresponding layer is not opened, it will be opened, but not added to the map canvas). If you have an instance of a QGIS object representing the layer, you can also pass it as parameter. If the input is optional and you do not want to use any data object, use ``None``."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:147
+# b981b478cdee40b2831b2e590c1a266b
+msgid "Selection. If an algorithm has a selection parameter, the value of that parameter should be entered using an integer value. To know the available options, you can use the ``algoptions()`` command, as shown in the following example:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:164
+# da0626a6e72545cf9b788012ed7dbda3
+msgid "In this case, the algorithm has one of such such parameters, with 7 options. Notice that ordering is zero-based."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:166
+# 3decffc43cd8412f928d21648bb7175f
+msgid "Multiple input. The value is a string with input descriptors separated by semicolons (``;``). As in the case of single layers or tables, each input descriptor can be the data object name, or its filepath."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:169
+# ce8b55a2e0cc4415877dcc8144a5bfc1
+msgid "Table Field from XXX. Use a string with the name of the field to use. This parameter is case-sensitive."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:171
+# 5ee47bbd50f44528ad49d480e6775793
+msgid "Fixed Table. Type the list of all table values separated by commas (``,``) and enclosed between quotes (``\"``). Values start on the upper row and go from left to right. You can also use a 2D array of values representing the table."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:174
+# d7af0ca50c91432eb463921ea875580b
+msgid "CRS. Enter the EPSG code number of the desired CRS."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:175
+# 0e4ef26507b646a7a20a26793d706d79
+msgid "Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax`` values separated by commas (``,``)."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:178
+# 2be7f8bad989400f8ee6f7c63e360ccf
+msgid "Boolean, file, string and numerical parameters do not need any additional explanations."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:181
+# 5a598f7a562047a0b07460167c9a323c
+msgid "Input parameters such as strings booleans or numerical values have default values. To use them, use ``None`` in the corresponding parameter entry."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:184
+# e33b27384fee49d98a19b45639149f5d
+msgid "For output data objects, type the filepath to be used to save it, just as it is done from the toolbox. If you want to save the result to a temporary file, use ``None``. The extension of the file determines the file format. If you enter a file extension not included in the ones supported by the algorithm, the default file format for that output type will be used, and its corresponding extension appended to the given filepath."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:191
+# e1550fc6104045dcac97e37ca2aa3355
+msgid "Unlike when an algorithm is executed from the toolbox, outputs are not added to the map canvas if you execute that same algorithm from the Python Console. If you want to add an output to it, you have to do it yourself after running the algorithm. To do so, you can use QGIS API commands, or, even easier, use one of the handy methods provided by SEXTANTE for such task."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:197
+# e2734a1383e141a5a683b38d48867249
+msgid "The ``runalg`` method returns a dictionary with the output names (the ones shown in the algorithm description) as keys and the filepaths of those outputs as values. You can load those layers by passing its filepath to the ``load()`` method."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:203
+# a00bf7c8e88b4ac68f1fe5e1d8872c3c
+msgid "Additional functions for handling data"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:205
+# fbb5b2f95e554d729522bffe50b47d7e
+msgid "Apart from the functions used to call SEXTANTE algorithms, importing the ``sextante`` package will also import some additional functions that make it easier to work with data, particularly vector data. They are just convenience functions that wrap some functionality from the QGIS API, usually with a less complex syntax. These functions should be used when developing new algorithms, as they make it easier to operate with input data."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:207
+# 5240be9e89564b859fcc6fe38c68654b
+msgid "Below is a list of some of this commands. More information can be found in the classes under the ``sextante/tools`` package, and aso in the example scripts provided with SEXTANTE."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:209
+# e276cd97b8d6483191d0e5d7ad5a454e
+msgid "``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed object, which can be a filename or the name of the object in the QGIS Table of Contents."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:211
+# b4155d1c66114c6cbdd0c35c1b4b6d5e
+msgid "``values(layer, fields)``: Returns the values in the attributes table of a vector layer, for the passed fields. Fields can be passed as field names or as zero-based field indices. Returns a dict of lists, with the passed field identifiers as keys. It considers the existing selection"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:213
+# 6ec748cb39004dacabfa9508cf180820
+msgid "``getfeatures(layer)``: Returns an iterator over the features of a vector layer, considering the existing selection."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:215
+# 8d92a1f7f85248dabf597d2280ef918d
+msgid "``uniquelabels(layer, field)``: Returns a list of unique values for a given attribute.  Attribute can be passed as a field name or a zero-based field index. It considers the existing selection"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:218
+# 540a1b5329aa4400b26f1f76ea5471dc
+msgid "Creating scripts and running them from the toolbox"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:220
+# 9c6efb38d4624d5aace016ac4a90fe1d
+msgid "You can create your own algorithms by writing the corresponding Python code and adding a few extra lines to supply additional information needed by SEXTANTE. You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools` group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on it to open the script edition dialog. That's where you should type your code. Saving the script from there in the :file:`scripts` folder (the default one when you open the save file dialog), with :file:`.py` extension, will automatically create the corresponding algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:229
+# 82303d4260304d5e904884cc3465f845
+msgid "The name of the algorithm (the one you will see in the toolbox) is created from the filename, removing its extension and replacing low hyphens with blank spaces."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:232
+# 8a4c979b834747c49b93bcfc126283c5
+msgid "Let's have the following code, which calculates the Topographic Wetness Index (TWI) directly from a DEM"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:246
+# 45652d22aba34d13845a10fd89aea093
+msgid "As you can see, it involves 3 algorithms, all of them coming from SAGA. The last one of them calculates the TWI, but it needs a slope layer and a flow accumulation layer. We do not have these ones, but since we have the DEM, we can calculate them calling the corresponding SAGA algorithms."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:251
+# 452e4fe830b1426ab1b6736d39d835f5
+msgid "The part of the code where this processing takes place is not difficult to understand if you have read the previous sections in this chapter. The first lines, however, need some additional explanation. They provide SEXTANTE the information it needs to turn your code into an algorithm that can be run from any of its components, like the toolbox or the graphical modeler."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:257
+# ee9be8a0ed02478ba309d8f5b5941593
+msgid "These lines start with a double Python comment symbol (``##``) and have the following structure"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:264
+# 473f050657eb4b6984694d917b5d30d9
+msgid "Here is a list of all the parameter types that SEXTANTE supports in its scripts, their syntax and some examples."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:267
+# 592b6638d02b4990a6bf1a6e0206dc13
+msgid "``raster``. A raster layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:268
+# f0406c618118428c87720669d5d81970
+msgid "``vector``. A vector layer"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:269
+# e2433f435210404fa0d8cc01a302367b
+msgid "``table``. A table"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:270
+# a3dc18c5c2fc45b5bc50491165f89f01
+msgid "``number``. A numerical value. A default value must be provided. For instance, ``depth=number 2.4``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:272
+# 7f394f5b1e6e4d98af2836f919984c74
+msgid "``string``. A text string. As in the case of numerical values, a default value must be added. For instance, ``name=string Victor``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:274
+# b258b1220059489695becd79ac8018b3
+msgid "``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the default value. For example, ``verbose=boolean True``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:276
+# d32bf35069354994a21e1c551a4ac626
+msgid "``multiple raster``. A set of input raster layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:277
+# 4372e5e1f4ab43078dbc0b29703aeebb
+msgid "``multiple vector``. A set of input vector layers."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:278
+# f124ef0a775e448fb26fb8066d03d532
+msgid "``field``. A field in the attributes table of a vector layer. The name of the layer has to be added after the ``field`` tag. For instance, if you have declared a vector input with ``mylayer=vector``, you could use ``myfield=field mylayer`` to add a field from that layer as parameter."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:282
+# 0fdc3105eeee4b95af6e39eb89f7290c
+msgid "``folder``. A folder"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:283
+# 3570626bc6874b79b35a723d70671501
+msgid "``file``. A filename"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:285
+# 4814d6ccd6114dfc9a23f7c4b06b7101
+msgid "The parameter name is the name that will be shown to the user when executing the algorithm, and also the variable name to use in the script code. The value entered by the user for that parameter will be assigned to a variable with that name."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:289
+# ff359e7f4bdc48ffb8cdfff44d9fcd7c
+msgid "When showing the name of the parameter to the user, SEXTANTE will edit it to improve its appearance, replacing low hyphens with spaces. So, for instance, if you want the user to see a parameter named ``A numerical value``, you can use the variable name ``A_numerical_value``."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:294
+# 6a0888ad10624f2fbad6f9804d205933
+msgid "Layers and tables values are strings containing the filepath of the corresponding object. To turn them into a QGIS object, you can use the ``sextante.getObjectFromUri()`` function. Multiple inputs also have a string value, which contains the filepaths to all selected object, separated by semicolons (``;``)."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:299
+# f3005dc5a64d4409b2c1638090592a76
+msgid "Outputs are defined in a similar manner, using the following tags:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:301
+# 263de9bcafc44490b8d7fbe83d0f3493
+msgid "``output raster``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:302
+# 2331ee0b3ed24530ab36efd9466d5fd6
+msgid "``output vector``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:303
+# 064611aa0f1e43d0a4236ec8532d2276
+msgid "``output table``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:304
+# 629ac4e03b354ebdadce3a3d1783b011
+msgid "``output html``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:305
+# 5465ee1159864eee9acfb78e43596ef4
+msgid "``output file``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:306
+# 1840f2386a244902aa9f1dd3f25fdbc9
+msgid "``output number``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:307
+# f33c6d41a5574dbbb8b321528323c783
+msgid "``output string``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:309
+# d0b45e6821de4e5e91ed45ee79aa4718
+msgid "The value assigned to the output variables is always a string with a filepath. It will correspond to a temporary filepath in case the user has not entered any output filename."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:313
+# 754c4a68aee94f918df7d23fe2fb451a
+msgid "When you declare an output, SEXTANTE will try to add it to QGIS once the algorithm is finished. That is the reason why, although the ``runalg()`` method does not load the layers it produces, the final TWI layer will be loaded, since it is saved to the file entered by the user, which is the value of the corresponding output."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:318
+# 5d1c33964fc04c468766d52640daafe1
+msgid "Do not use the ``load()`` method in your script algorithms, but just when working with the console line. If a layer is created as output of an algorithm, it should be declared as such. Otherwise, you will not be able to properly use the algorithm in the modeler, since its syntax (as defined by the tags explained above) will not match what the algorithm really creates."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:324
+# 38c14c9f02244223ac8f5685c16286a7
+msgid "Hidden outputs (numbers and strings) do not have a value. Instead, it is you who has to assign a value to them. To do so, just set the value of a variable with the name you used to declare that output. For instance, if you have used this declaration,"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:333
+# b279c1710ed04ed08e45cce3759ccb47
+msgid "the following line will set the value of the output to 5:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:339
+# ecf22f54512f48049e0c7f1aaad232a3
+msgid "In addition to the tags for parameters and outputs, you can also define the group under which the algorithm will be shown, using the ``group`` tag."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:342
+# 0fdc58f5c78b41f3bd47423e515baa37
+msgid "If you algorithm takes a long time to process, it is a good idea to inform the user. You have a global named ``progress`` available, with two available methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the progress text and the progress bar."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:347
+# ababae29c2d24c2a8c533ea6bf5bc04d
+msgid "Several examples are provided with SEXTANTE. Please, check them to see real examples of how to create algorithms using this feature of SEXTANTE. You can right-click on any script algorithm and select :guilabel:`Edit script` to edit its code or just to see it."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:353
+# 588a907ab7d3466dbe2facac33133b97
+msgid "Documenting your scripts"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:355
+# 6376714f0be74a82a3f69d06e9957476
+msgid "As in the case of models, you can create additional documentation for your script, to explain what they do and how to use them. In the script editing dialog you will find a **[Edit script help]** button. Click on it and it will take you to the help editing dialog. Check the chapter about the graphical modeler to know more about this dialog and how to use it."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:361
+# 9505ee158b0142b58ba01dcb4f408175
+msgid "Help files are saved in the same folder as the script itself, adding the :file:`.help` extension to the filename. Notice that you can edit your script's help before saving it for the first time. If you later close the script editing dialog without saving the script (i.e. you discard it), the help content you wrote will be lost. If your script was already saved and is associated to a filename, saving is done automatically."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:369
+# 107c3c3ecafb4ab59b7c0e0535dd5edd
+msgid "Pre- and post-execution script hooks"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:371
+# 3208656f86224d95a181cb1ad8873fc9
+msgid "Script can also be used to set pre- and post-execution hooks that are run before and after an algorithm is run. This can be used to automate tasks that should be performed whenever a SEXTANTE algorithm is executed."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:375
+# cdc52b72dc024674b8279abe0071fd50
+msgid "The syntax is identical to the syntax explained above, but an additional global variable named ``alg`` is available, representing the algorithm that has just been (or is about to be) executed."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/console.rst:379
+# febe52baccf447c58726f4d1197d23b8
+msgid "In the :guilabel:`General` group of the SEXTANTE config dialog you will find two entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution script file` where the filename of the scripts to be run in each case can be entered."
+msgstr ""
+

@@ -1,0 +1,387 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-29 19:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:8
+# 91d834aa94c14d83806403edf33f250b
+msgid "Vector Spatial Analysis (Buffers)"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:11
+# 24281a1722164c128903a2d4ad7df707
+msgid "GIS for Educators"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:13
+# 45fc5cde51f74b859a7fb8687610c768
+msgid "|gentlelogo|"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:13
+# e01c28bd0d68429f82485962b4a30e9c
+msgid "Objectives:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:13
+# a9f8b771c8f447ba9fee19bc830db687
+msgid "Understanding the use of buffering in vector spatial analysis."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:15
+# 96eacc4a59eb49d4832403eae55e44a5
+msgid "Keywords:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:15
+# 1d29483895bd41ec856dc5c2db0698d1
+msgid "Vector, buffer zone, spatial analysis, buffer distance, dissolve boundary, outward and inward buffer, multiple buffer"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:18
+# b5c0ebd8f541487ebee6ea890ce66811
+msgid "Overview:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:20
+# b915b69f484f4fb28bed9b2165391e92
+msgid "**Spatial analysis** uses spatial information to extract new and additional meaning from GIS data. Usually spatial analysis is carried out using a GIS Application. GIS Applications normally have spatial analysis tools for feature statistics (e.g. how many vertices make up this polyline?) or geoprocessing such as feature buffering. The types of spatial analysis that are used vary according to subject areas. People working in water management and research (hydrology) will most likely be interested in analysing terrain and modelling water as it moves across it. n wildlife management users are interested in analytical functions that deal with wildlife point locations and their relationship to the environment. In this topic we will discuss buffering as an example of a useful spatial analysis that can be carried out with vector data."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:28
+# bd346452c5d24fc0b8cedd3445213963
+msgid "Buffering in detail:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:30
+# 9528a4fcc1a24e4fbb4003b05233b92b
+msgid "**Buffering** usually creates two areas: one area that is **within** a specified distance to selected real world features and the other area that is **beyond**. The area that is within the specified distance is called the **buffer zone.**"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:33
+# 3a12ce018e414bd9b032b2ebfa1f295e
+msgid "A **buffer zone** is any area that serves the purpose of keeping real world features distant from one another. Buffer zones are often set up to protect the environment, protect residential and commercial zones from industrial accidents or natural disasters, or to prevent violence."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:40
+# 5dd05f2c5b964303beebe8aba2d7c996
+msgid "Common types of buffer zones may be greenbelts between residential and commercial areas, border zones between countries (see  ), noise protection zones around airports, or pollution protection zones along rivers."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:43
+# 3ffef996c56046709a0fd51b429567fd
+msgid "In a GIS Application, **buffer zones are** always represented as **vector polygons** enclosing other polygon, line or point features (see Illustrations - )."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:50
+# d370723f38d54d7f8d6449a5c29fbcaa
+msgid "**Variations in buffering:****buffer distance** or buffer size **can vary** according to numerical values provided in the vector layer attribute table for each feature. The numerical values have to be defined in map units according to the Coordinate Reference System (CRS) used with the data. the buffer distance may be bigger than for organic farming (see   and  )."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:59
+# 5a6da6c062184ae6b4b491d468f3c324
+msgid "River"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:59
+# e5f5354c8d0d4d7c971b62529acf1d71
+msgid "Adjacent land use"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:59
+# be814e4fd6854feca4703cd46d0853d9
+msgid "Buffer distance (meters)"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:61
+# 03385e32ae704f9b8d959c786d640c80
+msgid "Breede River"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:61
+# 47341a87b3154b8fad65fc89eb868543
+msgid "Intensive vegetable cultivation"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:61
+# 0490a61a3b524f31af46134328fd8c8b
+msgid "100"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:63
+# 5ad50313f028455a9eac2b94107db369
+msgid "Komati"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:63
+# f96f8f858140417583c9a844d8232b26
+msgid "Intensive cotton cultivation"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:63
+# 76ae78d1a2fa471d880f17c1d6341779
+msgid "150"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:65
+# 083115165a594bc8813df75127e40bea
+msgid "Oranje"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:65
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:67
+# 848254caaa6c446d82442748a2d9b3df
+# 890dc81f7ad544f08f617dfd546a51fd
+msgid "Organic farming"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:65
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:67
+# 6a3226c3e35f4bcf9517163dea010533
+# 7b13e5fb4af34ee58797302dfc86cfe7
+msgid "50"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:67
+# a1b009fb484d498dbc508670f0db2133
+msgid "Telle river"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:70
+# 86977662b9304cc0aebe683ba700b506
+msgid "Table : Attribute table with different buffer distances to rivers based on information about the adjacent land use."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:72
+# 9dd15239e8dd4ade8036cd6f43986667
+msgid "Buffers around polyline features, such as rivers or roads, do not have to be on both sides of the lines. They can be on either the left side or the right side of the line feature. In these cases the left or right side is determined by the direction from the starting point to the end point of line during digitising."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:77
+# 792a67d849314ebeab327d29fc7af57e
+msgid "**Multiple buffer zones:**"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:79
+# 779a940adea441b7986bbb8182b4bd46
+msgid "A feature can also have more than one buffer zone. A nuclear power plant may be buffered with distances of 10, 15, 25 and 30 km, thus forming multiple rings around the plant as part of an evacuation plan (see  )."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:87
+# 084e017704644dfe8f04e4937d135fb4
+msgid "Buffering with intact or dissolved boundaries"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:93
+# cfdfb6d42d0f4ea3909ad7229fa36bc7
+msgid "Buffering outward and inward"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:95
+# ded15304198c426b9b22b0d3a637c6fc
+msgid "Buffer zones around polygon features are usually extended outward from a polygon boundary but it is also possible to create a buffer zone inward from a polygon boundary. Say, for example, the Department of Tourism wants to plan a new road around Robben Island and environmental laws require that the road is at least 200 meters inward from the coast line. They could use an inward buffer to find the 200m line inland and then plan their road not to go beyond that line."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:99
+# f4b0a6d61a604f6dbd5cee539225441d
+msgid "Common problems / things to be aware of:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:101
+# 98e3a39c0a6a44f5998405bcc26aeaed
+msgid "Most GIS Applications offer buffer creation as an analysis tool, but the options for creating buffers can vary. For example, not all GIS Applications allow you to buffer on either the left side or the right side of a line feature, to dissolve the boundaries of buffer zones or to buffer inward from a polygon boundary."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:104
+# ef5c1f42ad794667be17393c940d2ae7
+msgid "A buffer distance always has to be defined as a whole number (integer) or a decimal number (floating point value). This value is defined in map units (meters, feet, decimal degrees) according to the Coordinate Reference System (CRS) of the vector layer."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:108
+# c2f6824a1bc54d2d9a2969b4949eb427
+msgid "More spatial analysis tools"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:110
+# 7b47a576cf494617a17329faf218f911
+msgid "Buffering is a an important and often used spatial analysis tool but there are many others that can be used in a GIS and explored by the user."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:113
+# 3d5939be907c4b249379e31504dc86d7
+msgid "**Spatial overlay** is a process that allows you to identify the relationships between two polygon features that share all or part of the same area. The output vector layer is a combination of the input features information (see   ). Typical spatial overlay examples are:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:117
+# 1455552651d84a43879638b462788230
+msgid "**Intersection**: The output layer contains all areas where both layers overlap (intersect)."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:119
+# ae596b61dff848008fa48e1004f0c1e4
+msgid "**Union**: the output layer contains all areas of the two input layers combined."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:121
+# f5b1ff7f06ab4c0ea42a2cbd2e5a5219
+msgid "**Symmetrical difference**: The output layer contains all areas of the input layers except those areas where the two layers overlap (intersect)."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:123
+# dfd7dd98c6e84cb591da0f3151bb1c92
+msgid "**Difference**: The output layer contains all areas of the first input layer that do not overlap (intersect) with the second input layer."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:129
+# 1519925c959649578fd500dcffd1ed10
+msgid "What have we learned?"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:131
+# a12f1e22ba9a47d6a887bf7bed81476d
+msgid "Let's wrap up what we covered in this worksheet:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:133
+# a80f3ae8a57240578e7fc658b186b600
+msgid "**Buffer zones** describe areas around real world features."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:135
+# 75d7e2ded85b4596b5d56281821b0354
+msgid "Buffer zones are always **vector polygons**."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:137
+# 2e9fc8dad2dc4a0a9b41ba5e5f9205b0
+msgid "A feature can have **multiple** buffer zones."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:139
+# 2e711d6d94d04ba295a77e96fb7edb20
+msgid "The size of a buffer zone is defined by a **buffer distance**."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:141
+# 69f40f3755904fc98bc44ecece0b9724
+msgid "A buffer distance has to be an **integer** or **floating point** value."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:143
+# 63a9b5d7ffd4489cb6dd8a1d87941216
+msgid "A buffer distance can be different for each feature within a vector layer."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:145
+# a917c0d6f6bf4613b41fecee68abd2e9
+msgid "Polygons can be buffered **inward** or **outward** from the polygon boundary."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:147
+# 67dba540bba04ef6a160a640571920fd
+msgid "Buffer zones can be created with **intact** or **dissolved** boundaries."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:149
+# 3972db52c6634ec8b1704224bd963f75
+msgid "Besides buffering, a GIS usually provides a variety of vector analysis tools to solve spatial tasks."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:152
+# 31344e9a86fa4a3db5d0eb68308e0db7
+msgid "Now you try!"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:154
+# ca1c3030a5f94d24a843e8771290a22d
+msgid "Here are some ideas for you to try with your learners:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:156
+# 055874328f1d40f79759a01f398ae6f7
+msgid "Because of dramatic traffic increase, the town planners want to widen the main road and add a second lane. Create a buffer around the road to find properties that fall within the buffer zone (see  )."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:160
+# fc6dfb772bed44b8b02c16f5b0236382
+msgid "For controlling protesting groups, the police want to establish a neutral zone to keep protesters at least 100 meters from a building. Create a buffer around a building and colour it so that event planners can see where the buffer area is."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:163
+# 25713bcb7e1e419bb9dbeec068c243dd
+msgid "A truck factory plans to expand. The siting criteria stipulate that a potential site must be within 1 km of a heavy-duty road. Create a buffer along a main road so that you can see where potential sites are."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:167
+# c7d54e31d20c407eb900fd9ac0d9efca
+msgid "Imagine that the city wants to introduce a law stipulating that no bottle stores may be within a 1000 meter buffer zone of a school or a church. Create a 1km buffer around your school and then go and see if there would be any bottle stores too close to your school."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:174
+# 7a42ddfecbdc49a6a180a01075602a57
+msgid "Something to think about:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:176
+# 7bdb55d680a44c1dba4ba02cabad1d0a
+msgid "If you don't have a computer available, you can use a toposheet and a compass to create buffer zones around buildings. Make small pencil marks at equal distance all along your feature using the compass, then connect the marks using a ruler!"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:179
+# 1bd56d6e42814396855266c1d1b5df9a
+msgid "Further reading:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:181
+# 3c62797629df4bf9918adfcecfafedce
+msgid "**Books:**"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:183
+# 424fc7120dfa46cbb1f211062ae819ac
+msgid "Galati, Stephen R. (2006): Geographic Information Systems Demystified. Artech House Inc. (ISBN"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:187
+# 966f9352ba9e46aeb90cab349d7a99a6
+msgid "Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems. 3rd Edition. w Hill. (ISBN 0070658986)"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:192
+# 0cad2f205bc443ae85dceb40d8a467b6
+msgid "DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. 3rd Edition. Wiley. (ISBN 9814126195)"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:197
+# ac84d19c420a4c5e91c8971c864f3be7
+msgid "Websites:"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:199
+# 1af3fcd9ab634bc0acac76ff741c1cee
+msgid "The QGIS User Guide also has more detailed information on analysing vector data in QGIS."
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:201
+# 2eb57d3a22e042798b64ee80bcef32e2
+msgid "What's next?"
+msgstr ""
+
+#: ../../source/docs/gentle_gis_introduction/09_vector_spatial_analysis_buffers.rst:203
+# ab283c554b1a4c908c0e39afd0f96300
+msgid "In the section that follows we will take a closer look at** ****interpolation** as an example of spatial analysis you can do with raster data."
+msgstr ""
+

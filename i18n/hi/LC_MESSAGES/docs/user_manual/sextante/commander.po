@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-29 19:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/sextante/commander.rst:6
+# 2c6145a5a0d641df87547161e2128c81
+msgid "The SEXTANTE Commander"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:9
+# 86a35efcb43144f1ae8fbabba6ba2fdc
+msgid "Introduction"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:11
+# 5ff742834a994ef094284f46317f9f9f
+msgid "SEXTANTE includes a practical tool that allows you to run algorithms without having to use the toolbox, but just typing the name of the algorithm you want to run."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:13
+# 07404bf444fd412d8c1c593c3423749f
+msgid "This tools is known as the *SEXTANTE commander*, and it is just a simple text box with autocompletion where you type the command you want to run."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:27
+# ce51e36f66fc4a91bcc725d5330ec3f3
+msgid "The commander is started from the *Analysis* menu or, more practically, pressing ``Shift + Ctrl + M`` (you can change that default keyboard shortcut in the QGIS configuration if you prefer a different one). Apart from executing SEXTANTE algorithms, the commander gives you access to most of the functionality in QGIS, which means that it gives you a practical and efficient way of running QGIS tasks, and allows you to control QGIS reducing the usage of buttons and menus."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:29
+# da0753291c734c279dce22ec630b383a
+msgid "Moreover, the commander is configurable and you can add your custom commands and have them just a few keystrokes away, making it a powerful tool to become more productive in your daily work with QGIS"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:32
+# bbce442e7f484ae8948a8770675df89f
+msgid "Available commands"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:34
+# 4d08e18ec81a468c8b9a80f9b22d829f
+msgid "The commands available in the commander fall in the following categories:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:36
+# 65625c9ffcf84a92bcaa6f878e392475
+msgid "SEXTANTE algorithms. They are shown as ``SEXTANTE algorithm: <name of the algorithm>``."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:38
+# 2288a1be57834cf88402fc43634b3db1
+msgid "Menu items. They are shown as ``Menu item: <menu entry text>``. All menus items available from the QGIS interface are available, even if they are included in a submenu."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:40
+# 08d13b5b2d3c4fdd83e12c2b5eb533bd
+msgid "Python functions. You can create short Python functions that will be then included in the list of available commands. They are shown as ``Function: <function name>``"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:43
+# 62f0da0e2564455780f87e11f70222a9
+msgid "To run any of the above, just start typing and then select the corresponding element from the list of available ones that appears after filtering the whole list of commands with the text you have entered."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:45
+# 44005ab4d94846c48fd86de57bf22509
+msgid "In the case of calling a Python function, you can select the entry in the list, which is prefixed by ``Function:`` (for instance, ``Function: removeall), or just directly type the function name (``removeall`` in the previous example). There is no need to add brackets after the function name."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:49
+# 48cd7440a4b04c08abb8cc54ba292bd1
+msgid "Creating custom functions"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:51
+# cd2bcf9e7bae456ea5c38299be505727
+msgid "Custom functions are added by entering the corresponding Python code in the ``commands.py`` file that is found in the ``.qgis/sextante/commander directory`` in your user folder. It is just a simple Python file where you can add the functions that you need."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:53
+# b8f2da7a1d224c06a57156ac8bda5677
+msgid "The file is created the first time you open the commander, with a few example functions. If you haven't launched the commander yet, you can create the file yourself. To edit the commands file, use your favorite text editor. You can also use a built-in editor by calling the ``edit`` command from the commander. It will open the editor with the commands file, and you can edit it directly and then save your changes."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:56
+# 4e74242b2daa4fddbcd647cce2d42d4f
+msgid "For instance, you can add the following function, which removes all layers:"
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:66
+# 8f6caaba6f46418aa9e41aa6e1c01fd2
+msgid "Once you have added the function, it will be available in the commander, and you can invoke it by typing ``removeall``. There is no need to do anything apart from writing the function itself."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:68
+# 7af20f0ad8b34a53b3fec70309ec498f
+msgid "Functions can receive parameters. Add ``*args`` to your function definition, to receive argument. When calling the function from the commander, parameters have to be passed separated by spaces."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:70
+# e6b9224239094fccb00a46dcc5a0b3a0
+msgid "Here is an example of a function that loads a layer and takes a parameter with the filename of the layer to load."
+msgstr ""
+
+#: ../../source/docs/user_manual/sextante/commander.rst:80
+# d87141afd76c44a59c7b0b49cd4ca453
+msgid "If you want to load a layer in ``/home/myuser/points.shp``, type ``load /home/myuser/points.shp`` in the commander text box."
+msgstr ""
+

@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, QGIS project
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-29 19:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:10
+# aa6a78df5a834a53998cf8f2a5edcf5b
+msgid "Raster Calculator"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
+# 5f70c2202d92402097ed83f8fad8a4ec
+msgid "The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu (see figure_raster_2_) allows to perform calculations on basis of existing raster pixel values. The results are written to a new raster layer with a GDAL supported format."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:32
+# 96f1d1a461cd43ea83118ce836ded73a
+msgid "The **Raster bands** list contains all loaded raster layers that can be used. To add a raster to the raster calculator expression field, double click its name in the Fields list. You can then use the operators to construct calculation expressions or you can just type it into the box."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:37
+# f5f135554da24112a76ed92709bd4adc
+msgid "In the **Result layer** section you have to define an output layer. You can then define the extent of the calculation area based on an input raster layer or based on X,Y coordinates and on Columns and Rows to set the resolution of the output layer. If the input layer has a different resolution, the values will be resampled with nearest neighbor algorithm."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:43
+# b1a033aabcea4fadbf4e8146e7344745
+msgid "The **Operators section** contains all usable operators. To add an operator to the raster calculator expression box, click the appropriate button. Mathematical calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for more operators to come!"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:48
+# fddf1306a4f04d60805af1cd91d43577
+msgid "With the |checkbox| :guilabel:`Add result to project` checkbox the result layer will automatically added to the legend area and can be visualized."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:53
+# d9f7b3f022fd4b269cd2eb0dea6376fb
+msgid "Examples"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
+# f22ef14c9d1d44f5921e879734082794
+msgid "**Convert elevation values from meter to feet**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
+# cf4a34b8649e4e9496cabe8093afb888
+msgid "Creating an elevation raster feet from a raster in meter, you need to use the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:64
+# 4ef6e75d42e04e3682295bd9819cb7a0
+msgid "**Using a mask**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
+# 0cc37d2d3fbd4837adc54920faa1cb33
+msgid "If you want to mask out parts of a raster, because you are only interested in elevations above 0 meter, you can use following expression to create a mask and apply the result to a raster in one step."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:74
+# 20efa1a534aa489b8ff0af7381ad3bfd
+msgid "For every cell greater than or equal to 0, set its value to 1, otherwise set it to 0. This creates the mask on the fly."
+msgstr ""
+
