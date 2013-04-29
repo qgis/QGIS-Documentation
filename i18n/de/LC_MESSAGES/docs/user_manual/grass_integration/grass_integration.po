@@ -118,7 +118,7 @@ msgid ""
 msgstr ""
 "Um GRASS-Funktionen in QGIS zu benutzen oder GRASS Raster- und Vektorlayer "
 "zu visualisieren, muss das GRASS-Plugin im Plugin-Manager geladen werden. "
-"Wechseln Sie dazu in das Menü :menuselection:`Erweiterungen --> "
+"Wechseln Sie dazu in das Menü :menuselection:`Erweiterungen -->` "
 "|mActionShowPluginManager| :menuselection:`Erweiterungen verwalten`, wählen "
 "Sie |checkbox| :guilabel:`GRASS` aus und drücken dann auf **[OK]**. Nach dem "
 "Laden erscheint eine neue Werkzeugleiste mit den oben dargestellten Icons."
@@ -137,14 +137,14 @@ msgstr ""
 "Raster- und Vektorlayer aus einer existierenden GRASS-Datenbank "
 ":file:`Location` laden, oder Sie können eine neue GRASS\n"
 ":file:`Location` erstellten (siehe Abschnitt :ref:`sec_create_loc`), Daten "
-"in diese neue Location importieren (siehe Abschnitt :ref:import_loc_data`) "
+"in diese neue Location importieren (siehe Abschnitt :ref:`import_loc_data`) "
 "und über die GRASS-Werkzeugkiste mit den mehr als 300 GRASS Modulen "
 "analysieren (siehe Abschnitt :ref:`subsec_grass_toolbox`)."
 
 # 464480e55c9149f3bccd8bede8b160a9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:63
 msgid "Loading GRASS raster and vector layers"
-msgstr ""
+msgstr "GRASS Layer visualisieren"
 
 # d8b565919e7c46e896d4d1b22e251715
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:68
@@ -154,6 +154,11 @@ msgid ""
 "dataset (see Section :ref:`label_sampledata`). It includes a small sample "
 "GRASS :file:`LOCATION` with 3 vector layers and 1 raster elevation map."
 msgstr ""
+"Wenn das GRASS-Plugin geladen ist, können Sie GRASS Vektor- und Rasterlayer "
+"mit den entsprechenden Knöpfen in der Werkzeugleiste laden. Als Beispiel "
+"benutzen wir den Alaska Beispieldatensatz (siehe Kapitel "
+":ref:`label_sampledata`). Dieser enthält eine kleine GRASS :file:`LOCATION` "
+"mit 3 Vektor- und einem Rasterlayer mit Höheninformationen."
 
 # f8f67dad76174e47bcb94b293fc76609
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:73
@@ -162,11 +167,15 @@ msgid ""
 ":file:`qgis\\_sample\\_data.zip` from http://download.osgeo.org/qgis/data/ "
 "and unzip the file into :file:`grassdata`."
 msgstr ""
+"Erstellen Sie einen neuen Ordner :file:`grassdata` und laden Sie den QGIS "
+"Alaska Beispieldatensatz :file:`qgis\\_sample\\_data.zip` unter "
+"http://download.osgeo.org/qgis/data/ herunter und entpacken Sie diesen in "
+"den gerade erstellen Ordner."
 
 # d871768791954c02ad0b49cc9866dfe9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:76
 msgid "Start QGIS."
-msgstr ""
+msgstr "Starten Sie QGIS."
 
 # f9183dd49eb74f6cab250b9e452949b1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:77
@@ -176,6 +185,11 @@ msgid ""
 ":menuselection:`Manage Plugins` and activate |checkbox| :guilabel:`GRASS`. "
 "The GRASS toolbar appears in the QGIS main window."
 msgstr ""
+"Falls noch nicht geschehen, laden Sie das GRASS Plugin. Dazu wechseln Sie in "
+"das Menü :menuselection:`Erweiterungen -->` |mActionShowPluginManager| "
+":menuselection:`Erweiterungen verwalten` und wählen |checkbox| "
+":guilabel:`GRASS` aus. Die GRASS-Werkzeuge erscheinen nun in der "
+"Werkzeugleiste."
 
 # 6112e2823091423593b83106f8f8f4bd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:81
@@ -183,6 +197,8 @@ msgid ""
 "In the GRASS toolbar, click the |grass_open_mapset|:sup:`Open mapset` icon "
 "to bring up the :file:`MAPSET` wizard."
 msgstr ""
+"Klicken Sie nun auf das Icon |grass_open_mapset| :sup:`Mapset öffnen`, um "
+"eine Session in einer GRASS Location zu starten."
 
 # ff0c6ec3e4454ce4a1fcab5fdc2d947c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:83
@@ -190,6 +206,8 @@ msgid ""
 "For :file:`Gisdbase` browse and select or enter the path to the newly "
 "created folder :file:`grassdata`."
 msgstr ""
+"Als :file:`Gisdbase` suchen und wählen Sie bitte den Pfad zum Ordner "
+":file:`grassdata`."
 
 # e7e7d4c1853340cb90c5276fbe12cc1c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:85
@@ -197,6 +215,8 @@ msgid ""
 "You should now be able to select the :guilabel:`LOCATION` |selectstring| "
 ":file:`alaska` and the :guilabel:`MAPSET` |selectstring| :file:`demo`."
 msgstr ""
+"Sie sollten nun als :guilabel:`LOCATION` |selectstring| :file:`alaska` und "
+"als :guilabel:`MAPSET` |selectstring| :file:`demo` auswählen können."
 
 # 740bc5835dc745ebb158e1a9b8a57da6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:87
@@ -204,6 +224,8 @@ msgid ""
 "Click **[OK]**. Notice that some previously disabled tools in the GRASS "
 "toolbar are now enabled."
 msgstr ""
+"Klicken Sie auf **[OK]**. Einige weitere, zuvor grau hinterlegte "
+"GRASS-Werkzeuge sind nun aktiv."
 
 # e18ea18b057b4b5092b1317d197453e5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:89
@@ -212,6 +234,9 @@ msgid ""
 "name :file:`gtopo30` and click **[OK]**. The elevation layer will be "
 "visualized."
 msgstr ""
+"Klicken Sie auf |grass_add_raster| :sup:`GRASS-Rasterlayer hinzufügen`, "
+"wählen Sie den Layer :file:`gtopo30` und drücken Sie auf **[OK]**. Die "
+"Höhendaten werden nun dargestellt."
 
 # 30d637cf36394fdcbe06ada48a0f8011
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:92
@@ -222,6 +247,12 @@ msgid ""
 "now adapt the layer properties as described in chapter "
 ":ref:`vector_properties_dialog`, e.g. change opacity, fill and outline color."
 msgstr ""
+"Klicken Sie auf \\toolbtntwo |grass_add_vector| :sup:`GRASS-Vektorlayer "
+"hinzufügen`, wählen Sie den Layer :file:`alaska` und drücken Sie auf "
+":menuselection:`OK`. Der Layer mit der Landesgrenze von Alaska wird nun über "
+"dem Rasterlayer dargestellt. Sie können nun die Layereigenschaften "
+"einstellen, wie in Kapitel :ref:`vector_properies_dialog` beschrieben. Z.B.: "
+"die Transparenz verändern oder andere Farben auswählen."
 
 # e0f3c44e2b4b4da9ad8747539bd40dfb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:97
@@ -229,6 +260,8 @@ msgid ""
 "Also load the other two vector layers :file:`rivers` and :file:`airports` "
 "and adapt their properties."
 msgstr ""
+"Laden Sie auch noch die weiteren Vektorlayer :file:`rivers` und "
+":file:`airports` hinzu und passen Sie deren Layereigenschaften an."
 
 # 20333df611554788b8723475001bc092
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:100
@@ -238,11 +271,16 @@ msgid ""
 ":file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the "
 "GRASS website at http://grass.osgeo.org/download/data.php."
 msgstr ""
+"Wie man sehen kann, ist es sehr einfach sich Raster- und Vektordaten aus "
+"einer existierenden GRASS-Datenbank in QGIS anzeigen zu lassen. Lesen Sie "
+"die folgenden Kapitel, um zu lernen, wie man GRASS Daten editiert und eine "
+"neue Location erstellt. Weitere Beispiel GRASS-Datenbanken finden Sie auf "
+"der GRASS Homepage unter: http://grass.osgeo.org/download/data.php."
 
 # 393882c18ee1481ba94536a2103e6777
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:105
 msgid "**GRASS Data Loading**"
-msgstr ""
+msgstr "**Probleme beim Laden von GRASS-Layern**"
 
 # 84c4505687b54321b61fce98e2b1e731
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:107
@@ -251,11 +289,14 @@ msgid ""
 "make sure you have loaded the GRASS plugin properly as described in section "
 ":ref:`sec_starting_grass`."
 msgstr ""
+"Sollten Sie Probleme beim Laden von GRASS-Layern haben (z.B. beendet sich "
+"QGIS unvorhergesehen), dann überprüfen Sie bitte, ob das GRASS-Plugin "
+"korrekt geladen ist (siehe Abschnitt :ref:`sec_starting_grass`)."
 
 # 4c44feffcf18401897284f3debcc845a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:114
 msgid "GRASS LOCATION and MAPSET"
-msgstr ""
+msgstr "Information zur GRASS-Datenbank"
 
 # e8b10fbb0d9e49a68118016cfc51ce06
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:116
@@ -277,11 +318,28 @@ msgid ""
 "the usual way for beginners to work with GRASS, this functionality will not "
 "be described here.)."
 msgstr ""
+"GRASS Daten werden in einem Ordner gespeichert, der als GISDBASE bezeichnet "
+"wird. Standardmäßig wird der Ordner :file:`grassdata` genannt und er muss "
+"erstellt worden sein, bevor man beginnt, mit dem GRASS Plugin in QGIS zu "
+"arbeiten. Innerhalb dieses Ordners sind die GRASS Daten als Projekte (sog. "
+":file:`LOCATION`) in Unterordnern organisiert. Jede :file:`LOCATION` ist "
+"durch ein Koordinatenbezugssystem und eine räumliche Grenze (sog. "
+":file:`region`) definiert und kann darüberhinaus weitere Unterordner "
+":file:`MAPSETs` besitzen, um die Layer der :file:`LOCATION` weiter z.B. "
+"thematisch oder räumlich zu unterteilen (Neteler & Mitasova 2008 "
+":ref:`literature_and _web`). Um Raster- und Vektorlayer mit den GRASS "
+"Modulen zu analysieren, müssen diese zuerst in eine passende GRASS "
+":file:`LOCATION` importiert werden. (Dies ist nicht ganz korrekt. Mit den "
+"GRASS Modulen :file:`r.external` und :file:`v.external` können Sie eine "
+"'read-only' Verknüpfung zu externen durch GDAL/OGR-unterstützte Layer "
+"erstellen, ohne die Daten importieren zu müssen. Da dies aber nicht der "
+"normale Weg für GRASS Anfänger ist, wird auf diese Möglichkeit nicht näher "
+"eingegangen.)."
 
 # 8d7a7695e4f94635b95dcd35f6602353
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:147
 msgid "Creating a new GRASS LOCATION"
-msgstr ""
+msgstr "Eine neue GRASS LOCATION erstellen"
 
 # 46ee187f6f3d48799443c0377f7bf78c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:149
@@ -293,6 +351,11 @@ msgid ""
 "It is useful to download and install the dataset on your computer "
 ":ref:`label_sampledata`)."
 msgstr ""
+"Als ein Beispiel möchten wir Ihnen zeigen, wie die GRASS Location des Alaska "
+"Beispieldatensatzes erstellt wurde. Das Koordinatenbezugssystem ist Albers "
+"Equal Area mit der Einheit 'feet'. Diese GRASS Location :file:`alaska` wird "
+"für alle GRASS GIS Beispiele verwendet. Es ist also sinnvoll, sich diesen "
+"Datensatz zu installieren (siehe Abschnitt :ref:`label_sampledata`)."
 
 # 6f61802ca8b04071a78aaa3db9c80c2e
 # 7f9afbf5afaf4796acab1f8c4f42eedc
@@ -301,7 +364,7 @@ msgstr ""
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:230
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:257
 msgid "Start QGIS and make sure the GRASS plugin is loaded."
-msgstr ""
+msgstr "Laden Sie das GRASS Plugin, falls dies noch nicht geschehen ist."
 
 # d2d9c049ffb843f0930222259bc0bd39
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:156
@@ -310,6 +373,8 @@ msgid ""
 ":ref:`vector_load_shapefile`) from the QGIS alaska dataset "
 ":ref:`label_sampledata`."
 msgstr ""
+"Visualisieren Sie das Shape :file:`alaska.shp` (vgl. Kapitel "
+":ref:`vector_load_shapefile`) aus dem QGIS Beispieldatensatz."
 
 # 45a4079ce2894adaa0f67ad634334991
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:158
@@ -317,6 +382,8 @@ msgid ""
 "In the GRASS toolbar, click on the |grass_open_mapset|:sup:`Open mapset` "
 "icon to bring up the :file:`MAPSET` wizard."
 msgstr ""
+"Klicken Sie auf das Icon |grass_open_mapset|:sup:`Mapset öffnen` in der "
+"GRASS-Werkzeugleiste, um den :file:`MAPSET` Dialog zu starten."
 
 # 7481708cdb8544d1a03e863bc09f4d42
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:160
@@ -325,6 +392,9 @@ msgid ""
 "create one for the new :file:`LOCATION` using a file manager on your "
 "computer. Then click **[Next]**."
 msgstr ""
+"Wählen Sie einen existierenden Ordner mit bereits vorhandenen Locations oder "
+"erstellen Sie einen neuen Ordner :filename:`grassdata` für die zu "
+"erstellende Location. Klicken Sie auf **[Weiter]**."
 
 # 38c4e4a9232942608d6f62c5cbcf798d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:163
@@ -335,6 +405,12 @@ msgid ""
 "|radiobuttonon|:guilabel:`Create new location` (see "
 "figure_grass_location_2_)."
 msgstr ""
+"Mit dem Dialog kann eine bereits vorhandene :file:`LOCATION` durch eine "
+"weitere :file:`MAPSET` ergänzt werden, oder eine neue :file:`LOCATION` mit "
+"neuen :file:`MAPSETS` erstellt werden (siehe Abschnitt "
+":ref:`sec_add_mapset`). Klicken Sie nun auf den Knopf "
+"|radiobuttonon|:guilabel:`Erstelle neue Location` wie in Abbildung "
+"figure_grass_location_2_ ."
 
 # 5813ca3b47eb4c6f9ee6e80d0a508698
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:167
