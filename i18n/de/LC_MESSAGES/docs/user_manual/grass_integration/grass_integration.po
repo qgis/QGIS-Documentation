@@ -380,7 +380,6 @@ msgstr ""
 
 # 45a4079ce2894adaa0f67ad634334991
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:158
-#, fuzzy
 msgid ""
 "In the GRASS toolbar, click on the |grass_new_mapset|:sup:`New mapset` icon "
 "to bring up the :file:`MAPSET` wizard."
@@ -396,8 +395,8 @@ msgid ""
 "computer. Then click **[Next]**."
 msgstr ""
 "Wählen Sie einen existierenden Ordner mit bereits vorhandenen Locations oder "
-"erstellen Sie einen neuen Ordner :filename:`grassdata` für die zu "
-"erstellende Location. Klicken Sie auf **[Weiter]**."
+"erstellen Sie einen neuen Ordner :file:`grassdata` für die zu erstellende "
+"Location. Klicken Sie auf **[Weiter]**."
 
 # 38c4e4a9232942608d6f62c5cbcf798d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:163
@@ -473,6 +472,11 @@ msgid ""
 "button :guilabel:`Set current QGIS extent`, to apply the extend of the "
 "loaded layer :file:`alaska.shp` as the GRASS default region extend."
 msgstr ""
+"Um die Standardausdehnung der Location zu definieren, müssen wir die "
+"Eckkoordinaten der Umrandung angeben. Da wir einen Layer geladen haben, "
+"klicken wir einfach auf den Knopf **[Setze aktuelle QGIS-Ausdehung]**, um "
+"die Ausdehnung der Karte als Standardausdehnung für die :file:`LOCATION` zu "
+"verwenden."
 
 # 35a2ff98e6944198aae9f6b94bf1cafa
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:183
@@ -484,11 +488,20 @@ msgid ""
 "its default spatial extend and coordinate system definitions (Neteler & "
 "Mitasova 2008 :ref:`literature_and_web`)"
 msgstr ""
+"Wir müssen nun noch eine :file:`MAPSET` für die :file:`LOCATION` definieren. "
+"Wir haben uns für :file:`demo` entschieden. Beim Erstellen einer neuen "
+":file:`LOCATION`, wird automatisch eine spezielle :file:`MAPSET` mit dem "
+"Namen :file:`PERMANENT` eingerichtet, um Kerninformationen wie etwa die "
+"räumliche Ausdehung und das Koordinatenbezugssystem der Location zu sichern. "
+"Diese wird zusätzlich zu der von Ihnen gewählten Mapset erstellt (Neteler & "
+"Mitasova 2008 :ref:`literature_and _web`)"
 
 # ba2e1eece762479cb2f673d21b16a556
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:189
 msgid "Check out the summary to make sure it's correct and click **[Finish]**."
 msgstr ""
+"Prüfen Sie alles, damit alles wie gewünscht ist. Klicken Sie auf "
+"**[Abschliessen]**."
 
 # e0cceead52014333b51bfd9bd4b23e6b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:191
@@ -497,6 +510,9 @@ msgid ""
 ":file:`PERMANENT` are created. The currently opened working set is "
 ":file:`MAPSET demo`, as you defined."
 msgstr ""
+"Die neue :file:`LOCATION alaska` mit den beiden :file:`MAPSETs PERMANENT` "
+"und :file:`demo` sind nun erstellt worden. Ihre aktuelle Arbeitsumgebung ist "
+"die von Ihnen definierte :file:`MAPSET demo`."
 
 # 47a6339042ca4e5da1671a782688b736
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:194
@@ -504,6 +520,8 @@ msgid ""
 "Notice that some of the tools in the GRASS toolbar that were disabled are "
 "now enabled."
 msgstr ""
+"Beachten Sie, dass einige Werkzeuge des GRASS Plugins grau hinterlegt waren "
+"und nun auch zur Verfügung stehen."
 
 # 4a2af25fe012420f9eba5f094262a76a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:210
@@ -515,6 +533,12 @@ msgid ""
 ":file:`LOCATION alaska` included in the QGIS alaska dataset "
 ":ref:`label_sampledata` and move on to Section :ref:`label_vectmodel`."
 msgstr ""
+"Auch wenn es recht kompliziert aussieht, ist dies doch ein sehr einfacher "
+"Weg, eine neue GRASS Location zu erstellen. Unsere Location :file:`alaska` "
+"ist nun bereit für den Import von Daten (siehe Abschnitt "
+":ref:`sec_import_loc_data´). Sie können an dieser Stelle aber auch die "
+"vorhandene :file:`LOCATION alaska` des QGIS Beispieldatensatzes verwenden "
+"und direkt zu Kapitel :ref:`label_vectmodel` weitergehen."
 
 # ebb13175f2a945e7a04a04b65a856f7d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:220
