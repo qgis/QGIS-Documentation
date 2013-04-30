@@ -543,7 +543,7 @@ msgstr ""
 # ebb13175f2a945e7a04a04b65a856f7d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:220
 msgid "Adding a new MAPSET"
-msgstr ""
+msgstr "Eine neue GRASS MAPSET erstellen"
 
 # 95c0e74b5df64a6dbb2ebd0feb85c738
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:222
@@ -553,6 +553,11 @@ msgid ""
 "in other user's :file:`MAPSETs`, but he can modify or remove only the maps "
 "in his own :file:`MAPSET`."
 msgstr ""
+"Ein Benutzer hat nur Schreibrechte in einer :file:`MAPSET`, die er selbst "
+"erstellt hat. Darüberhinaus kann er die Daten der :file:`MAPSETs` anderer "
+"Benutzer in der aktuellen :file:`LOCATION` einsehen und für seine Analysen "
+"verwenden. Veränderungen finden aber lediglich in seiner eigenen "
+":file:`MAPSET` statt."
 
 # 53e77c696822453f962ed647329659b5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:226
@@ -562,6 +567,10 @@ msgid ""
 "(Neteler & Mitasova 2008 :ref:`literature_and_web`, see Section "
 ":ref:`sec_grass_region`)."
 msgstr ""
+"Alle :file:`MAPSETs` enthalten eine Datei :file:`WIND`, in der die aktuelle "
+"Ausdehnung und die Pixelauflösung der :file:`MAPSET` gespeichert ist "
+"(Neteler & Mitasova 2008 :ref:`literature_and_web`, siehe Abschnitt "
+":ref:`sec_grass_region`)."
 
 # 90bb0955bdd44fd9af51d94d07f559b7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:231
@@ -569,6 +578,8 @@ msgid ""
 "In the GRASS toolbar, click on the |grass_new_mapset| :sup:`New mapset` icon "
 "to bring up the :file:`MAPSET` wizard."
 msgstr ""
+"Klicken Sie auf das Icon |grass_new_mapset| :sup:`Neues Mapset` in der GRASS "
+"Werkzeugleiste, um den :file:`MAPSET` Dialog zu starten."
 
 # e35c3e7c13f7412db20e0a6b3e7f3f1a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:233
@@ -577,6 +588,9 @@ msgid ""
 ":file:`LOCATION alaska`, where we want to add a further :file:`MAPSET`, "
 "called test."
 msgstr ""
+"Wählen Sie als GRASS Datenbank (GISDBASE) den Ordner :file:`grassdata`, in "
+"der sich auch die :file:`LOCATION alaska´ befindet. Hier wollen wir eine "
+"weitere :file:`MAPSET` mit dem Namen test hinzufügen."
 
 # 90512e06aaeb4b6b95904c405462f991
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:237
@@ -586,6 +600,11 @@ msgid ""
 "the radio button |radiobuttonon|:guilabel:`Select location` (see "
 "figure_grass_location_2_) and click **[Next]**."
 msgstr ""
+"In diesem Dialog können Sie ein neues :file:`MAPSET` innerhalb der bereits "
+"vorhandenen `file:`LOCATION alaska`, oder eine ganz neue :file:`LOCATION` "
+"erstellen. Klicken Sie auf den Knopf |radiobuttonon|:guilabel:`Wähle "
+"Location` (siehe Abbildung figure_grass_location_2) und dann auf "
+"**[Weiter]**."
 
 # 64d07bd8bdc84199823ebaea031b02d5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:241
@@ -593,6 +612,9 @@ msgid ""
 "Enter the name :file:`text` for the new :file:`MAPSET`. Below in the wizard "
 "you see a list of existing :file:`MAPSETs` and its owners."
 msgstr ""
+"Geben Sie den Namen :file:`test` für die neue :file:`MAPSET` ein. Im unteren "
+"Bereich sehen Sie eine Liste bereits vorhandener :file:`MAPSETs` und ihre "
+"Besitzer."
 
 # 7f6cb547a2ac4b71a3920b0d484b2da4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:243
@@ -600,11 +622,13 @@ msgid ""
 "Click **[Next]**, check out the summary to make sure it's all correct and "
 "click **[Finish]**."
 msgstr ""
+"Klicken Sie auf **[Weiter]**, prüfen Sie die Einstellungen und drücken Sie "
+"dann auf **[Abschließen]**."
 
 # 375810bbb55f45dbaea5b2ecc4f1afe7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:250
 msgid "Importing data into a GRASS LOCATION"
-msgstr ""
+msgstr "Daten in eine GRASS LOCATION importieren"
 
 # c5d1f67a5c1640a4b50549bdb575da3e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:252
@@ -615,6 +639,11 @@ msgid ""
 "GML File :file:`lakes.gml` from the QGIS alaska dataset "
 ":ref:`label_sampledata`."
 msgstr ""
+"In diesem Abschnitt soll an einem Beispiel gezeigt werden, wie man Raster- "
+"und Vektorlayer aus dem QGIS Beispieldatensatz in die LOCATION "
+":file:`alaska` importieren kann. Zu diesem Zweck verwenden wir den "
+"Rasterlayer :file:`landcover.img` und die Vektor GML-Datei :file:`lakes.shp` "
+"aus dem Beispieldatensatz :ref:`label_sampledata`."
 
 # 837256e7547c4cfa83b4b1f1bef85b36
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:258
@@ -622,6 +651,9 @@ msgid ""
 "In the GRASS toolbar, click the |grass_open_mapset|:sup:`Open MAPSET` icon "
 "to bring up the :file:`MAPSET` wizard."
 msgstr ""
+"Klicken Sie auf das Icon |grass_open_mapset|:sup:`Mapset öffnen` in der "
+"GRASS Werkzeugleiste, um den :file:`MAPSET` Dialog zu\n"
+"starten."
 
 # 862113c175d748a89a10084232f5af84
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:260
@@ -630,6 +662,9 @@ msgid ""
 "dataset, as :file:`LOCATION alaska`, as :file:`MAPSET` :file:`demo` and "
 "click **[OK]**."
 msgstr ""
+"Wählen Sie als Gisdbase den Ordner :file:`grassdata` aus dem QGIS "
+"Alaskadatensatz, als :file:`LOCATION` :file:`alaska`, als Kartenset "
+":file:`demo` und klicken Sie dann auf **[OK]**."
 
 # 0e109388f451479d99c6c7b06ce1d429
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:263
@@ -637,6 +672,9 @@ msgid ""
 "Now click the |grass_tools| :sup:`Open GRASS tools` icon. The GRASS Toolbox "
 "(see section :ref:`subsec_grass_toolbox`) dialog appears."
 msgstr ""
+"Nun klicken Sie auf das Icon |grass_tools|:sup:`GRASS-Werkzeugkiste öffnen`, "
+"damit die GRASS Werkzeuge (siehe Abschnitt :ref:`subsec_grass_toolbox`) zur "
+"Verfügung stehen."
 
 # d9de7ff2754f4d93bc93d5d4672aa5d2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:265
@@ -646,6 +684,10 @@ msgid ""
 "allows to import GDAL supported raster files into a GRASS :file:`LOCATION`. "
 "The module dialog for :file:`r.in.gdal` appears."
 msgstr ""
+"Um den Rasterlayer :file:`landcover.img` zu importieren, drücken Sie auf das "
+"Modul :file:`r.in.gdal` im :guilabel:`Modulbaum` Reiter. Diese GRASS Module "
+"ermöglicht es, GDAL-unterstützte Rasterlayer in eine GRASS :file:`LOCATION` "
+"zu importieren."
 
 # a600f8369ec74799bee236cc4d9c3983
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:269
@@ -653,6 +695,8 @@ msgid ""
 "Browse to the folder :file:`raster` in the QGIS alaska dataset and select "
 "the file :file:`landcover.img`."
 msgstr ""
+"Wählen Sie als zu importierende Rasterdatei den Layer :file:`landcover.img` "
+"aus dem Beispieldatensatz."
 
 # 645b0e84bcdd4b26bd1d44468ea0cd39
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:271
@@ -661,6 +705,10 @@ msgid ""
 "the :guilabel:`Output` tab you see the currently running GRASS command "
 ":file:`r.in.gdal -o input=/path/to/landcover.img output=landcover_grass`."
 msgstr ""
+"Als Name der Ausgabe wählen Sie :file:`landcover_grass` und drücken Sie dann "
+"auf **[Starten]**. Im Reiter :guilabel:`Ergebnis` sehen Sie das gerade "
+"gestartete GRASS Kommando :file: `r.in.gdal -o input=/path/to/landcover.img "
+"output=landcover_grass`."
 
 # b0b4f24c6e8b4be1a6a536e8d5fec45d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:275
@@ -669,6 +717,9 @@ msgid ""
 ":file:`landcover_grass` raster layer is now imported into GRASS and will be "
 "visualized in the QGIS canvas."
 msgstr ""
+"Wenn Sie den Text **Erfolgreich beendet** sehen, klicken Sie auf den Knopf "
+"**[Ergebnis visualisieren]**. Der Layer :file:`landcover_grass` ist nun in "
+"die aktuelle GRASS Location importiert und wird im Kartenfenster angezeigt."
 
 # 1e8987df06e7495faaa1727c49b7688b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:278
@@ -678,6 +729,11 @@ msgid ""
 "allows to import OGR supported vector files into a GRASS :file:`LOCATION`. "
 "The module dialog for :file:`v.in.ogr` appears."
 msgstr ""
+"Um den Vektor GML-Layer :file:`lakes.gml` zu importieren, klicken Sie in der "
+"GRASS Werkzeugkiste auf das Modul :file:`v.in.ogr` im\n"
+":guilabel:`Modulbaum` Reiter. Dieses GRASS Modul ermöglicht es, "
+"OGR-unterstützte Vektorlayer in eine GRASS :file:`LOCATION` zu importieren. "
+"Der Moduldialog für :file:`v.in.ogr` erscheint als neuer Reiter."
 
 # 6746eb84a62c458b8d2ed353c9d9574f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:282
@@ -685,6 +741,8 @@ msgid ""
 "Browse to the folder :file:`gml` in the QGIS alaska dataset and select the "
 "file :file:`lakes.gml` as OGR file."
 msgstr ""
+"Wählen Sie als zu importierende Vektordatei den Layer :file:`lakes.gml` aus "
+"dem Beispieldatensatz."
 
 # 8703cb1d52a744e8aae65d23a2eb0c3c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:284
@@ -694,6 +752,10 @@ msgid ""
 ":guilabel:`Output` tab you see the currently running GRASS command "
 ":file:`v.in.ogr -o dsn=/path/to/lakes.gml output=lakes\\_grass`."
 msgstr ""
+"Als Name der Ausgabe wählen Sie :file:`lakes_grass` und drücken Sie dann auf "
+"**[Starten]**. Im Reiter :guilabel:`Ergebnis` sehen Sie das gerade "
+"gestartete GRASS Kommando :file:`v.in.ogr -o dsn=/path/to/lakes.shp "
+"output=lakes\\_grass`."
 
 # 3f4a34a9b8ab4d5ca5ebfaaa3192a362
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:288
