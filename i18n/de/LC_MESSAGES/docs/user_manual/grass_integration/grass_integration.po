@@ -536,7 +536,7 @@ msgstr ""
 "Auch wenn es recht kompliziert aussieht, ist dies doch ein sehr einfacher "
 "Weg, eine neue GRASS Location zu erstellen. Unsere Location :file:`alaska` "
 "ist nun bereit für den Import von Daten (siehe Abschnitt "
-":ref:`sec_import_loc_data´). Sie können an dieser Stelle aber auch die "
+":ref:`sec_import_loc_data`). Sie können an dieser Stelle aber auch die "
 "vorhandene :file:`LOCATION alaska` des QGIS Beispieldatensatzes verwenden "
 "und direkt zu Kapitel :ref:`label_vectmodel` weitergehen."
 
@@ -589,7 +589,7 @@ msgid ""
 "called test."
 msgstr ""
 "Wählen Sie als GRASS Datenbank (GISDBASE) den Ordner :file:`grassdata`, in "
-"der sich auch die :file:`LOCATION alaska´ befindet. Hier wollen wir eine "
+"der sich auch die :file:`LOCATION alaska` befindet. Hier wollen wir eine "
 "weitere :file:`MAPSET` mit dem Namen test hinzufügen."
 
 # 90512e06aaeb4b6b95904c405462f991
@@ -601,7 +601,7 @@ msgid ""
 "figure_grass_location_2_) and click **[Next]**."
 msgstr ""
 "In diesem Dialog können Sie ein neues :file:`MAPSET` innerhalb der bereits "
-"vorhandenen `file:`LOCATION alaska`, oder eine ganz neue :file:`LOCATION` "
+"vorhandenen :file:`LOCATION alaska`, oder eine ganz neue :file:`LOCATION` "
 "erstellen. Klicken Sie auf den Knopf |radiobuttonon|:guilabel:`Wähle "
 "Location` (siehe Abbildung figure_grass_location_2) und dann auf "
 "**[Weiter]**."
@@ -764,11 +764,14 @@ msgid ""
 ":file:`lakes\\_grass` vector layer is now imported into GRASS and will be "
 "visualized in the QGIS canvas."
 msgstr ""
+" Wenn Sie den Text **Erfolgreich beendet** sehen, klicken Sie auf den Knopf "
+"**[Ergebnis visualisieren]**. Der Layer :file:`lakes\\_grass` ist nun in die "
+"aktuelle GRASS Location importiert und wird im Kartenfenster angezeigt."
 
 # 29c55d32fdb545baad93c453767ec5d7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:295
 msgid "The GRASS vector data model"
-msgstr ""
+msgstr "Das GRASS Vektormodell"
 
 # 8ab80c7997364f55aef76b884e7adafa
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:300
@@ -776,11 +779,13 @@ msgid ""
 "It is important to understand the GRASS vector data model prior to "
 "digitizing."
 msgstr ""
+"Für das Arbeiten mit GRASS-Vektordaten ist es wichtig, das Datenmodell von "
+"GRASS-Vektoren zu kennen."
 
 # 717c0170f3ee459889860d97fe8dfbbd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:305
 msgid "In general, GRASS uses a topological vector model."
-msgstr ""
+msgstr "GRASS nutzt ein topologisches Datenmodell."
 
 # 600bff9fc8a443389f127b40ad336187
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:310
@@ -791,6 +796,13 @@ msgid ""
 "closed without gaps. An area is identified (and labeled) by the **centroid** "
 "of the area."
 msgstr ""
+"Das bedeutet, dass Flächen nicht als geschlossene Polygone vorhanden sind, "
+"sondern als ein oder mehrere Umrandungen (Boundaries). Eine Umrandung "
+"(Boundary) zwischen zwei aneinander grenzenden Flächen ist nur einmal "
+"digitalisiert worden; beide Flächen teilen sich diese Umrandung. Umrandungen "
+"dürfen keine Lücken haben. Eine Fläche besteht also aus einer Umrandung und "
+"einem Zentroid, der diese Fläche als ein sog. **Labelpunkt** mit einer "
+"Attributtabelle verknüpft."
 
 # a45ae1012a444d70a795904bf7eb8229
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:315
@@ -804,6 +816,15 @@ msgid ""
 "special cases such as vector network analysis. Normally you should prefere "
 "to store different geometry elements in different layers.)."
 msgstr ""
+"Neben den Umrandungen und Zentroiden kann eine Vektorkarte "
+"selbstverständlich auch Punkte und Linien enthalten. Alle diese "
+"Geometrieelemente können innerhalb ein und dem selben Datensatz enthalten "
+"sein. Sie werden in unterschiedlichen 'Ebenen' innerhalb von QGIS "
+"dargestellt. Auch wenn es möglich ist, Geometrieelemente zu mischen, so ist "
+"es eigentlich unüblich und wird normalerweise auch in GRASS GIS nur selten "
+"verwendet. Etwa bei Netzwerkanalysen. Im Normalfall sollten Sie versuchen, "
+"unterschiedliche Geometrietypen in unterschiedlichen Datensätzen (Layern) zu "
+"speichern."
 
 # cd20b2a06e2045179245938ead9be44f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:324
@@ -815,6 +836,15 @@ msgid ""
 "boundary between lake and forest is a road, so it can have a different "
 "attribute table."
 msgstr ""
+"Es ist auch möglich, unterschiedliche Inhalte des gleichen Geometrietyps in "
+"verschiendenen Ebenen eines Vektorlayers zu speichern. Beispielsweise "
+"können\n"
+"Felder, Wälder und Seen in einem Vektordatensatz gespeichert werden. "
+"Angrenzende Seen, Felder und Wälder teilen sich dann die gleiche Umrandung, "
+"jedoch haben sie separate Attributtabellen, die über ihre Ebene angesprochen "
+"wird. Darüber hinaus können Sie auch Attribute für die Umrandungen vergeben, "
+"falls eine Umrandung gleichzeitg einen Weg darstellt. In diesem Fall könnte "
+"auch die Umrandung eine separate Attributtabelle haben."
 
 # 30d087ad5f6f47c2932c8a412d6f8f10
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:330
@@ -825,6 +855,13 @@ msgid ""
 "number, in the future GRASS will also support names as fields in the user "
 "interface."
 msgstr ""
+"Die 'Ebene' eines jeden Objektes wird in GRASS intern als 'layer' "
+"bezeichnet. Verwechseln Sie dies bitte nicht mit dem Begriff Layer im Sinne "
+"einer Karte. Der GRASS Layer (Ebene) wird durch Zahl repräsentiert. Wenn "
+"mehr als ein Layer im Datensatz enthalten ist; beim obigen Beispiel wären es "
+"3 Layer (Felder, Wälder und Seen), gäbe es drei Layer (1,2 und 3). Derzeit "
+"werden nur Nummern als Layername unterstützt, in kommenden GRASS-Versionen "
+"werden auch Namen möglich sein."
 
 # 533e13556f60427ba1ab054414f6119c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:335
@@ -833,6 +870,8 @@ msgid ""
 "SQLITE3 or in external database tables, for example PostgreSQL, MySQL, "
 "Oracle, etc."
 msgstr ""
+"Attribute können in externen Datenbanktabellen abgelegt werden, "
+"beispielsweise DBase, PostgreSQL, MySQL, SQLITE3, etc."
 
 # 627f7d67ceb248178db6d681442e0286
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:341
@@ -840,6 +879,8 @@ msgid ""
 "Attributes in database tables are linked to geometry elements using a "
 "'category' value."
 msgstr ""
+"Die Attribute in den Tabellen werden über ein sog. 'Kategoriefeld' an die "
+"Geometrien des Datensatzes gehängt."
 
 # ccebe284c2494bca9c5f91fd4c1a3e16
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:347
@@ -847,11 +888,14 @@ msgid ""
 "'Category' (key, ID) is an integer attached to geometry primitives, and it "
 "is used as the link to one key column in the database table."
 msgstr ""
+"Die 'Kategorie' (oder key, ID, etc) ist eine Ganzzahl, über die eine "
+"Verknüpfung zwischen den Geometrien und den Spalten  in der Datenbanktabelle "
+"hergestellt wird."
 
 # d4a9a4019f2744a198cc87d54a86c90d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:350
 msgid "**Learning the GRASS Vector Model**"
-msgstr ""
+msgstr "**Das GRASS Vektormodell verstehen**"
 
 # a37cdc3b072c41b0b1ec6c40d745d60c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:352
@@ -861,11 +905,16 @@ msgid ""
 "more deeply. See http://grass.osgeo.org/gdp/manuals.php for more "
 "information, books and tutorials in several languages."
 msgstr ""
+"Der beste Weg, etwas über das GRASS Vektordatenmodell zu erfahren, ist das "
+"Studieren eines der vielen verfügbaren GRASS-Tutorien, wo dieses Thema "
+"vertieft behandelt wird.\n"
+"Unter http://grass.osgeo.org/gdp/manuals.php sind eine Vielzahl weiterer "
+"Informationsquellen in unterschiedlichen Sprachen vorhanden."
 
 # d8173ff4b90f4504a656dab6c625c6e6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:363
 msgid "Creating a new GRASS vector layer"
-msgstr ""
+msgstr "Einen neuen GRASS Vektorlayer erstellen"
 
 # 83562e994c7d474e8cd1b9f29b954216
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:365
@@ -876,6 +925,11 @@ msgid ""
 "geometries, following the procedure described in Section "
 ":ref:`grass_digitizing`."
 msgstr ""
+"Einen neuen GRASS Vektorlayer können Sie erstellen, indem Sie auf das Icon "
+"|grass_new_vector_layer| :sup:`Neuen GRASS-Vektorlayer anlegen` in der GRASS "
+"Werkzeugleiste klicken. Geben Sie einen Namen in der Textbox für den neuen "
+"GRASS Vektorlayer an und Sie können in dem Layer neue Geometrien erzeugen, "
+"wie in Abschnitt :ref:`grass_digitizing` beschrieben."
 
 # 8ffddf9226c1402895b79930a816e2e4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:370
@@ -886,11 +940,17 @@ msgid ""
 "This is different from Shapefile creation with QGIS, because Shapefiles use "
 "the Simple Feature vector model (see Section :ref:`sec_create_shape`)."
 msgstr ""
+"GRASS GIS erlaubt es aufgrund des topologischen Datenmodells, die "
+"verschiedenen Geometrietypen (Punkt, Linie und Fläche) in einem Vektorlayer "
+"abzuspeichern. Aus diesem Grund ist es nicht notwendig im Vorfeld einen "
+"Geometrietyp festzulegen. Dies unterscheidet sich von der Erstellung eines "
+"neuen Shapefile in QGIS, denn Shapefiles verwenden das Simple Feature\n"
+"Vektormodell (siehe Abschnitt :ref:`sec_create_shape`)."
 
 # ec28e52229b546e5a70a889c4c816252
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:376
 msgid "**Creating an attribute table for a new GRASS vector layer**"
-msgstr ""
+msgstr "**Erstellen einer Attributtabelle für einen neuen GRASS Vektorlayer**"
 
 # 5c2e214e39574a8bbfac97c47616f833
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:378
@@ -899,11 +959,15 @@ msgid ""
 "sure to create an attribute table with columns before you start digitizing "
 "(see figure_grass_digitizing_5_)."
 msgstr ""
+"Wenn Sie für ihre digitalisierten Geometrien auch eine Attributtabelle "
+"erstellen wollen, müssen Sie nach dem Anlegen des GRASS-Vektorlayers eine "
+"Attributtabelle mit entsprechenden Spalten erstellen, bevor Sie mit dem "
+"Digitalisieren beginnen (siehe figure_grass_digitizing_5_)."
 
 # 936e3aff152648c4b69dd50fae2770f0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:385
 msgid "Digitizing and editing a GRASS vector layer"
-msgstr ""
+msgstr "Digitalisieren und Editieren eines GRASS Vektorlayers"
 
 # 185c37498d7443adb67becec48e45aa8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:390
@@ -915,11 +979,17 @@ msgid ""
 "the GRASS edit dialog that is displayed when you click on the edit tool. The "
 "tools and settings are discussed in the following sections."
 msgstr ""
+"Die Digitalisierwerkzeuge für GRASS-Vektorlayer werden über den Knopf "
+"|grass_edit| :sup:`GRASS-Vektorlayer bearbeiten` in der GRASS-Werkzeugleiste "
+"gestartet. Dazu müssen Sie den zu bearbeitenden Layer in der Legende "
+"auswählen, bevor Sie auf den Editier-Knopf drücken. Abbildung "
+"figure_grass_digitizing_2_ zeigt den Dialog für die GRASS Digitalisierung. "
+"Die einzelnen Werkzeuge werden im folgenden Kapitel beschrieben."
 
 # 8249ffd39f9c42d3912cef0b24da5027
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:397
 msgid "**Digitizing polygons in GRASS**"
-msgstr ""
+msgstr "**Polygone in GRASS digitalisieren**"
 
 # 8c1c6be96b86408eb957eaa8c8ff859a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:399
@@ -930,11 +1000,18 @@ msgid ""
 "The reason is, that a topological vector model links attribute information "
 "of a polygon always to the centroid and not to the boundary."
 msgstr ""
+"Wenn Sie ein Polygon innerhalb eines GRASS Vektorlayers erstellen wollen, "
+"digitalisieren Sie zuerst die Grenze (Boundary) der Fläche mit der "
+"Moduseinstellung 'Keine Kategorie'. Danach fügen Sie einen Zentroid "
+"(Labelpunkt) mit der Moduseinstellung 'Nächst folgender Kategoriewert' "
+"hinzu. Der Grund ist, dass in topologischen Layern die Attributinformationen "
+"einer Fläche immer mit dem Zentroiden und nicht mit der Grenze verknüpft "
+"werden."
 
 # cac5bf0578284c6aa683eaf20ef1e188
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:407
 msgid "**Toolbar**"
-msgstr ""
+msgstr "**Werkzeugleiste**"
 
 # 759e15987a7242768a7540a900478f9c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:409
@@ -943,168 +1020,178 @@ msgid ""
 "provided by the GRASS plugin. Table table_grass_digitizing_1_ explains the "
 "available functionalities."
 msgstr ""
+"Abbildung figure_grass_digitizing_1_ zeigt die GRASS Digitalisierwerkzeuge. "
+"Tabelle table_grass_digitizing_1_ beschreibt die damit zur Verfügung "
+"stehenden Funktionalitäten."
 
 # 95a2b53147534f54a97856500d4707e6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:428
 msgid "Icon"
-msgstr ""
+msgstr "Icon"
 
 # 5eb22e95af794376b8cef0c85c36232f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:428
 msgid "Tool"
-msgstr ""
+msgstr "Werkzeug"
 
 # 8b8e604f66084b23b509d2796e1b16f9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:428
 msgid "Purpose"
-msgstr ""
+msgstr "Zweck"
 
 # 3ac57a09fe6f4fec9d75ae78c6c2cc97
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:430
 msgid "|grass_new_point|"
-msgstr ""
+msgstr "|grass_new_point|"
 
 # 06d01b9870c44d18a9d30845034d14bb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:430
 msgid "New Point"
-msgstr ""
+msgstr "Neuer Punkt"
 
 # 2fb4229f861b44fbb66dd64d3361926e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:430
 msgid "Digitize new point"
-msgstr ""
+msgstr "Digitalisiert neuen Punkt"
 
 # 138c8ea61f974c73ab50176365273ac0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:432
 msgid "|grass_new_line|"
-msgstr ""
+msgstr "|grass_new_line|"
 
 # 877a056a81fd4288a54a775f5b1feabb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:432
 msgid "New Line"
-msgstr ""
+msgstr "Neue Linie"
 
 # 0796f5686f2a4af699294134f6040004
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:432
 msgid "Digitize new line"
-msgstr ""
+msgstr "Digitalisiert neue Linie"
 
 # bfda28c08f12479c9a41e81f2421ccf8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:434
 msgid "|grass_new_boundary|"
-msgstr ""
+msgstr "|grass_new_boundary|"
 
 # 92d2c94f14124d6ab7c351dda04c2198
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:434
 msgid "New Boundary"
-msgstr ""
+msgstr "Neue Grenze"
 
 # f753fc2909c044849dbded1e11ef776e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:434
 msgid "Digitize new boundary (finish by selecting new tool)"
-msgstr ""
+msgstr "Digitalisiert neue Grenze (zum Beenden ein neues Werkzeug wählen)"
 
 # d891798af1684997abed7cf2e3725ec8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:436
 msgid "|grass_new_centroid|"
-msgstr ""
+msgstr "|grass_new_centroid|"
 
 # 2b2cd4ee388c44ef94066fa93b455bf0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:436
 msgid "New Centroid"
-msgstr ""
+msgstr "Neuer Zentroid"
 
 # 424fe9971fb64b959d45fce942294262
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:436
 msgid "Digitize new centroid (label existing area)"
 msgstr ""
+"Digitalisiert neuen Zentroiden (Labelpunkt für eine existierende Fläche)"
 
 # 409b3646435247adb42923329ef23e72
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:438
 msgid "|grass_move_vertex|"
-msgstr ""
+msgstr "|grass_move_vertex|"
 
 # 518c530da10542ad9682048ddc11f1e2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:438
 msgid "Move vertex"
-msgstr ""
+msgstr "Verschiebe Vertex"
 
 # 9cb0b68af13a4b54becb94f33400a1f7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:438
 msgid "Move one vertex of existing line or boundary and identify new position"
 msgstr ""
+"Wählt einen Stützpunkt einer existierenden Linie oder Umrandung und setzt "
+"diesen an eine neue Position"
 
 # 8de9f4d87667466b814e6474fe6b58f2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:440
 msgid "|grass_add_vertex|"
-msgstr ""
+msgstr "|grass_add_vertex|"
 
 # a0657f304dab4d7fb2e12275807a4ec9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:440
 msgid "Add vertex"
-msgstr ""
+msgstr "Vertex hinzufügen"
 
 # 228efdd042b84a39bfe872042573089a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:440
 msgid "Add a new vertex to existing line"
-msgstr ""
+msgstr "Fügt einen Stützpunkt zu einer existierenden Linie hinzu"
 
 # e7ba7efd0a054886b6da0baeae413bb6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:442
 msgid "|grass_delete_vertex|"
-msgstr ""
+msgstr "|grass_delete_vertex|"
 
 # 6ad9f19583674339a2e6dfa71be72042
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:442
 msgid "Delete vertex"
-msgstr ""
+msgstr "Lösche Vertex"
 
 # 7844019c27ae414490368fb31c96823b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:442
 msgid ""
 "Delete vertex from existing line (confirm selected vertex by another click)"
 msgstr ""
+"Löscht einen Stützpunkt von einer existierenden Linie (Bestätigung der "
+"Auswahl durch einen weiteren Klick nötig)"
 
 # 0b176bdbe05a405e8eb1e95c2ab1a0e2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:444
 msgid "|grass_move_line|"
-msgstr ""
+msgstr "|grass_move_line|"
 
 # 81c36c735e30400b90cff812c8aaa915
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:444
 msgid "Move element"
-msgstr ""
+msgstr "Verschiebe Element"
 
 # 816cd76e0b8949889ae3351a3599b9e9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:444
 msgid ""
 "Move selected boundary, line, point or centroid and click on new position"
 msgstr ""
+"Wählt existierende Grenze, Linie oder Zentroiden und verschiebt sie an eine "
+"neue Position"
 
 # 3761a4b665544072858c52d637717ee9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:446
 msgid "|grass_split_line|"
-msgstr ""
+msgstr "|grass_split_line|"
 
 # 37ad30d243b1434581aee80f3a4dee39
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:446
 msgid "Split line"
-msgstr ""
+msgstr "Unterteile Linie"
 
 # 8322fb15f1fb49aea693e73ce88d18eb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:446
 msgid "Split an existing line to 2 parts"
-msgstr ""
+msgstr "Teilt eine existierende Linie in zwei Teile"
 
 # 1680aa29736345e19fe39b652c17cdfb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:448
 msgid "|grass_delete_line|"
-msgstr ""
+msgstr "|grass_delete_line|"
 
 # 6cfb4b5c1e1c4ce2b779b30dd86dcfcc
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:448
 msgid "Delete element"
-msgstr ""
+msgstr "Element löschen"
 
 # 2c3b8970e9dc4c82b381574549c74794
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:448
@@ -1112,16 +1199,18 @@ msgid ""
 "Delete existing boundary, line, point or centroid (confirm selected element "
 "by another click)"
 msgstr ""
+"Löscht eine existierende Geometrie inklusive des Eintrags in der "
+"Attributtabelle (Bestätigung der Auswahl durch einen weiteren Klick nötig)."
 
 # 249562ecbd40403ea42d3db3d70afc6a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:450
 msgid "|grass_edit_attributes|"
-msgstr ""
+msgstr "|grass_edit_attributes|"
 
 # be1d65ab866943ec980fbf40466c6d10
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:450
 msgid "Edit attributes"
-msgstr ""
+msgstr "Editiere Attribute"
 
 # 10066a761fc74f309c27de83de9df2a9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:450
@@ -1129,31 +1218,33 @@ msgid ""
 "Edit attributes of selected element (note that one element can represent "
 "more features, see above)"
 msgstr ""
+"Editiert Attribute eines existierenden Objekts (Beachten Sie, dass ein "
+"Objekt mehrere Feature repräsentieren kann, siehe oben)"
 
 # e61e616c04394a7093f70122aef4239e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:452
 msgid "|grass_close_edit|"
-msgstr ""
+msgstr "|grass_close_edit|"
 
 # e11f208821074f7c8e0cc9e4aa6d6432
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:452
 msgid "Close"
-msgstr ""
+msgstr "Schließen"
 
 # b6d480dab62a401c8901685b4d24ad84
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:452
 msgid "Close session and save current status (rebuilds topology afterwards)"
-msgstr ""
+msgstr "Beendet die Bearbeitung (und aktualisiert die Topolgie anschließend)"
 
 # 80517751a13a4f9e9c84e4c6cefb095e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:455
 msgid "Table GRASS Digitizing 1: GRASS Digitizing Tools"
-msgstr ""
+msgstr "Tabelle GRASS Digitizing 1: GRASS Digitalisierwerkzeuge"
 
 # c318eca553a3473ea591896242e8898c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:458
 msgid "**Category Tab**"
-msgstr ""
+msgstr "**Reiter Kategorie**"
 
 # e08d5448c6aa48de93bbcd550ab0b5d4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:463
@@ -1161,18 +1252,23 @@ msgid ""
 "The :guilabel:`Category` tab allows you to define the way in which the "
 "category values will be assigned to a new geometry element."
 msgstr ""
+"In dem Reiter :guilabel:`Kategorie` können Sie einstellen, in welcher Weise "
+"Kategoriewerte neuen Objekten oder neue Kategoriewerte vorhandenen Objekten "
+"zugewiesen werden sollen."
 
 # b62a102ce74f4d988b8d55e020d0f76c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:478
 msgid ""
 "**Mode**: what category value shall be applied to new geometry elements."
-msgstr ""
+msgstr "**Modus**: Welcher Kategoriewert soll der Geometrie zugewiesen werden."
 
 # 2aa575a07b134e61a4448c0329ef6312
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:480
 msgid ""
 "Next not used - apply next not yet used category value to geometry element."
 msgstr ""
+"Nächst folgender Kategoriewert - der nächste Kategoriewert, der noch nicht "
+"im Vektordatensatz benutzt wird."
 
 # 55ee58e8e87d422c88df7180831404ac
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:481
@@ -1180,6 +1276,8 @@ msgid ""
 "Manual entry - manually define the category value for the geometry element "
 "in the 'Category'-entry field."
 msgstr ""
+"Manueller Eintrag  - Manuelles Eintragen der Kategoriewerte im "
+"'Kategorie'-Eingabgefeld vornehmen."
 
 # ccabb88bcb6f4e108d08d70136903841
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:483
@@ -1188,6 +1286,8 @@ msgid ""
 "e.g. used for area boundaries, because the category values are connected via "
 "the centroid."
 msgstr ""
+"Keine Kategorie - digitalisiere Geometrie ohne Angabe eines Kategoriewertes. "
+"Dies wird z.B. beim Digitalisieren einer Grenzlinie eines Polygons verwendet."
 
 # 3e835e1443db425989d4140c17944333
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:487
@@ -1195,6 +1295,8 @@ msgid ""
 "**Category** - A number (ID) is attached to each digitized geometry element. "
 "It is used to connect each geometry element with its attributes."
 msgstr ""
+"**Kategorie** - eine Nummer (ID), die dem digitalisierten Objekt zugewiesen "
+"wird und auf einen Eintrag in der Attributtabelle verweist."
 
 # 70f792fd47d94b6c917621c121237ca1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:489
@@ -1203,11 +1305,13 @@ msgid ""
 "attribute tables using different GRASS geometry layers. Default layer number "
 "is 1."
 msgstr ""
+"**Layer** - Objektidentifikation über die GRASS-Ebene (layer). Der "
+"Standardlayer in GRASS ist 1."
 
 # 11869e4ef95b465eb245a70237490d8c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:494
 msgid "**Creating an additional GRASS 'layer' with QGIS**"
-msgstr ""
+msgstr "**Erzeugen von weiteren GRASS 'Layern' mit QGIS**"
 
 # 6a3d47cef88442228a684177e860fee6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:496
@@ -1216,11 +1320,15 @@ msgid ""
 "in the 'Field (layer)' entry box and press return. In the Table tab you can "
 "create your new table connected to your new layer."
 msgstr ""
+"Wenn Sie weitere Ebenen (Layer) ihrem Datensatz hinzufügen wollen, so können "
+"Sie einfach eine neue Zahl in das 'Layer'-Feld eintippen und im Anschluss "
+"Return drücken. Im Reiter 'Tabelle' können Sie nun eine neue Attributtabelle "
+"erstellen und diese mit dem neuen 'Layer' verbinden."
 
 # f441c48dfb4243cbaca9c3e0e07e0d1b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:502
 msgid "**Settings Tab**"
-msgstr ""
+msgstr "**Reiter Einstellungen**"
 
 # f977172806bb4c149780e45591f994b8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:507
@@ -1230,11 +1338,16 @@ msgid ""
 "snapped to existing nodes. This helps to prevent gaps or dangles between "
 "boundaries. The default is set to 10 pixels."
 msgstr ""
+"Der Reiter :guilabel:`Einstellungen` erlaubt das Setzen der Fangtoleranz in "
+"Bildschirmpixeln. Dies ist der Schwellenwert in Pixeln, innerhalb dessen neu "
+"digitalisierte Knotenpunkte an vorhandene Knoten gesnappt werden. Dies "
+"hilft, Lücken oder Überlagerungen zwischen Objekten zu vermeiden. Der "
+"Standardwert ist auf 10 Pixel eingestellt."
 
 # 26ecd34310c94279ac3c15bc73927349
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:524
 msgid "**Symbology Tab**"
-msgstr ""
+msgstr "**Darstellung Reiter**"
 
 # 9e785bb522f141bbb2df699cd64b4b14
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:529
@@ -1243,11 +1356,14 @@ msgid ""
 "settings for various geometry types and their topological status (e.g. "
 "closed / opened boundary)."
 msgstr ""
+"Der Reiter :guilabel:`Darstellung` erlaubt die Farbeinstellungen für die "
+"verschiedenen Geometrietypen und ihren Topologiestatus (z.B. "
+"offene/geschlossene Fläche)."
 
 # d21dfbe482104ce9b6bbe122f744b582
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:546
 msgid "**Table Tab**"
-msgstr ""
+msgstr "**Reiter Tabelle**"
 
 # a3ab2ad692874496b7c68c20f3fed981
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:551
@@ -1257,11 +1373,15 @@ msgid ""
 "table, or create a new database table for a new GRASS vector layer (see "
 "Section :ref:`creating_new_grass_vectors`)."
 msgstr ""
+"Der Reiter :guilabel:`Tabelle` gibt Informationen über die Attributtabelle "
+"des aktuellen Layers. In diesem Reiter können Sie eine Attributtabelle "
+"hinzufügen, modifizieren oder eine neue Tabelle erstellen (siehe Abschnitt "
+":ref:`creating_new_grass_vectors`)."
 
 # 9c0785ed49514e959bf84e2af0115c37
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:568
 msgid "**GRASS Edit Permissions**"
-msgstr ""
+msgstr "**GRASS Schreibberechtigung**"
 
 # db20c4aec6d046a9a8fd3af3f2868350
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:570
@@ -1270,11 +1390,15 @@ msgid ""
 "impossible to edit data layers in a :file:`MAPSET` that is not yours, even "
 "if you have write permissions."
 msgstr ""
+"Um einen Datensatz zu editieren, müssen Sie der Besitzer des aktuellen "
+"GRASS-Mapsets sein. Es ist nicht möglich, Karten aus einem Mapset zu "
+"editieren, das Ihnen nicht 'gehört', auch wenn Sie auf Dateisystemebene die "
+"Schreibrechte haben."
 
 # fc9264def6ff46269479658b6ae5f4bb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:578
 msgid "The GRASS region tool"
-msgstr ""
+msgstr "Einstellung der GRASS Region"
 
 # 467c128d047342f59f1cd37569fc80da
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:582
@@ -1288,6 +1412,13 @@ msgid ""
 "file, and it defines north, south, east and west bounds, number of columns "
 "and rows, horizontal and vertical spatial resolution."
 msgstr ""
+"Die aktuelle Region (Projektausdehnung und Pixelauflösung) ist in GRASS sehr "
+"wichtig für alle Rastermodule. Alle neu erzeugten Rasterdaten haben nämlich "
+"die Ausdehnung und Auflösung der aktuellen Region, egal wie groß die "
+"Standard-Region definiert ist. Die Region ist in der Datei "
+":file:`\\$LOCATION\\_NAME/\\$MAPSET/WIND` gespeichert, und definiert Nord-, "
+"Süd-, Ost- und Westausdehnung sowie Anzahl der Spalten, Anzahl der Reihen "
+"und die horizontale und vertikale räumliche Pixelauflösung."
 
 # 2cd862904b1447c6a8cb94f907f0d12d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:590
@@ -1296,6 +1427,8 @@ msgid ""
 "QGIS canvas using the |grass_region| :sup:`Display current GRASS region` "
 "button."
 msgstr ""
+"Es ist auch möglich, die Region mit dem Knopf |grass_region| :sup:`Aktuelle "
+"GRASS-Region darstellen` aus- bzw. einzusschalten."
 
 # 401457d122c947cf9b7ba25e5c3829c5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:596
@@ -1308,6 +1441,14 @@ msgid ""
 "left mouse button in the QGIS canvas, open a rectangle, close it using the "
 "left mouse button again and click **[OK]**."
 msgstr ""
+"Um die aktuelle GRASS-Region zu ändern, benutzen Sie den Knopf "
+"|grass_region_edit|:sup:`Aktuelle GRASS-Region editieren`. Dort haben Sie "
+"die Möglichkeit, die Region zu verändern sowie das Aussehen der "
+"Regionsdarstellung. Wenn der Dialog sichtbar ist, können Sie die Region "
+"neben der einfachen Koordinateneingabe auch interaktiv mit der Maus im "
+"Kartenbild\n"
+"verändern. Die Koordinaten werden dann automatisch angepasst, sobald Sie den "
+"Dialog mit dem Knopf **[OK]** schließen."
 
 # e80d31b7edb64146b9b36d6cb9bb46c3
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:607
@@ -1321,7 +1462,7 @@ msgstr ""
 # 9098e7e383024a4b82900d02314bbeb0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:614
 msgid "The GRASS toolbox"
-msgstr ""
+msgstr "Die GRASS-Werkzeugkiste"
 
 # 06c4935d3bf0455ea4cd27bf1272a3d9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:618
@@ -1334,6 +1475,13 @@ msgid ""
 "raster or vector layers created during analysis need to be written to the "
 "currently selected :file:`LOCATION` and :file:`MAPSET`."
 msgstr ""
+"Die |grass_tools| :sup:`GRASS-Werkzeugkiste` ermöglicht es, GRASS Module auf "
+"Daten innerhalb einer ausgewählten GRASS :file:`LOCATION` und :file:`MAPSET` "
+"anzuwenden. Dazu muss im Vorfeld eine GRASS :file:`LOCATION und "
+":file:`MAPSET` geöffnet werden, in der Sie Schreibrechte besitzen. Dies ist "
+"normalerweise garantiert, wenn Sie die :file:`MAPSET` selbst erstellt haben "
+"und notwendig, damit die Ergebniskarten der Raster- und Vektoranalysen in "
+"der ausgewählten :file:`MAPSET` gespeichert werden können."
 
 # 620689dc7c9342019de7749b8f5db2bc
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:637
@@ -1344,11 +1492,15 @@ msgid ""
 "and functionalities are also provided by graphical dialogs within the GRASS "
 "plugin Toolbox."
 msgstr ""
+"Die GRASS Shell der Werkzeugkiste bietet Zugriff auf fast alle (mehr als "
+"330) GRASS Module über die Kommandozeile. Um eine benutzfreundliche Umgebung "
+"zu bieten, sind davon etwa 200 Module graphisch auswählbar und bieten einen "
+"Dialog in Form eines zusätzlichen Reiters in der Werkzeugkiste."
 
 # 21647efea441432088933d8fd178da5a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:645
 msgid "Working with GRASS modules"
-msgstr ""
+msgstr "Arbeiten mit GRASS Modulen"
 
 # 7d22485a8f294db0aeeab11aeaef47d7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:647
@@ -1358,6 +1510,11 @@ msgid ""
 "friendly working environment, about 200 of the available GRASS modules and "
 "functionalities are also provided by graphical dialogs."
 msgstr ""
+"Das GRASS Shell Modul in der Werkzeugkiste bietet Zugriff auf fast alle in "
+"GRASS GIS vorhandenen Module (mehr als 300). Um die Verwendung "
+"benutzerfreundlicher zu gestalten, sind etwa 200 Module über grafische "
+"Dialoge in die Werkzeugkiste integriert. Diese Module sind thematisch "
+"untergliedert, können aber auch durchsucht werden."
 
 # a01fa0131b124d32a1271bf944aee935
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:652
@@ -1366,6 +1523,9 @@ msgid ""
 "version 1.8.0 is available in the GRASS wiki ( "
 "http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list)."
 msgstr ""
+"Eine vollständige Liste vorhandener GRASS Module, die man über das QGIS "
+"GRASS Plugin ansprechen kann finden Sie im GRASS Wiki unter der URL : "
+"http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list."
 
 # 5b7076cbaedc4099861c3c5c25fbd0e1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:655
@@ -1373,6 +1533,9 @@ msgid ""
 "It is also possible to customize the GRASS Toolbox content. This procedure "
 "is described in Section :ref:`sec_toolbox-customizing`."
 msgstr ""
+"Es ist außerdem möglich, die GRASS Werkzeugkiste anzupassen und weitere "
+"Module zu integrieren. Die Herangehensweise ist in Abschnitt "
+":ref:`sec_toolbox-customizing` beschrieben."
 
 # 86268a197995433ca6272552d81c5aa3
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:658
@@ -1381,6 +1544,9 @@ msgid ""
 "module using the thematically grouped :guilabel:`Modules Tree` or the "
 "searchable :guilabel:`Modules List` tab."
 msgstr ""
+"Wie in Abbildung figure_grass_toolbox_1_ zu sehen, können Sie nach dem "
+"passenden GRASS Modul in dem Reiter :guilabel:`Modulbaum` nachschauen oder "
+"im Reiter :guilabel:`Modulliste` suchen."
 
 # 4557425589b744d494e4dd42fcca83e5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:662
@@ -1389,11 +1555,14 @@ msgid ""
 "dialog providing three new sub-tabs :guilabel:`Options`, :guilabel:`Output` "
 "and :guilabel:`Manual`."
 msgstr ""
+"Wenn Sie auf das grafische Icon eines Modules klicken, öffnet sich ein neuer "
+"Moduldialog mit drei Reitern :guilabel:`Optionen`, :guilabel:´Ergebnis` und "
+":guilabel:`Handbuch`."
 
 # d2ff542c219c4b12a4c4be0895d1f732
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:665
 msgid "**Options**"
-msgstr ""
+msgstr "**Optionen**"
 
 # 6adca6bda3bb4b2e9db0c02d9c0ab31b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:667
@@ -1402,6 +1571,9 @@ msgid ""
 "can usually select a raster or vector layer visualized in the QGIS canvas "
 "and enter further module specific parameters to run the module."
 msgstr ""
+"Der Reiter :guilabel:`Optionen` stellt Ihnen in vereinfachter Form die "
+"unbedingt notwendigen Eingabeparameter zur Verfügung, die das Modul zum "
+"Laufen benötigt."
 
 # cf00d372044942e79bdfe686341329c6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:684
@@ -1410,6 +1582,10 @@ msgid ""
 "clear. If you want to use further module parameters and flags, you need to "
 "start the GRASS Shell and run the module in the command line."
 msgstr ""
+"Bitte beachten Sie, dass diese Eingabefelder extra so einfach wie möglich "
+"gehalten wurden, um die Struktur klar zu halten. Falls Sie alle vom Modul "
+"unterstützten Parameter benötigen, nutzen Sie die GRASS-Eingabeshell, in der "
+"Sie das Modul ebenfalls aufrufen können."
 
 # 06edd8c8b9ab434b8c17fe6268092852
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:688
