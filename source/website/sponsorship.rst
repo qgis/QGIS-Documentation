@@ -274,6 +274,7 @@ List of donors
 * Jose Augusto Faes
 * Junji Yamakawa
 * K Brock Riedell
+* Kai Li
 * Kanton Solothurn SOGIS
 * Kenton Ngo
 * Kevin Hansen
