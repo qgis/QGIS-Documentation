@@ -764,7 +764,7 @@ msgid ""
 ":file:`lakes\\_grass` vector layer is now imported into GRASS and will be "
 "visualized in the QGIS canvas."
 msgstr ""
-" Wenn Sie den Text **Erfolgreich beendet** sehen, klicken Sie auf den Knopf "
+"Wenn Sie den Text **Erfolgreich beendet** sehen, klicken Sie auf den Knopf "
 "**[Ergebnis visualisieren]**. Der Layer :file:`lakes\\_grass` ist nun in die "
 "aktuelle GRASS Location importiert und wird im Kartenfenster angezeigt."
 
@@ -1458,6 +1458,10 @@ msgid ""
 "use these parameters with the GRASS Toolbox, described in Section "
 ":ref:`subsec_grass_toolbox`."
 msgstr ""
+"Das GRASS Modul :file:`g.region` bietet viele weitere Optionen zur "
+"Einstellung der passenden Ausdehnung und Auflösung der Region für die "
+"Rasteranalyse. Das Modul :file:`g.region` können Sie über die GRASS "
+"Werkzeugkiste nutzen, wie in Kapitel :ref:`subsec_grass_toolbox` beschrieben."
 
 # 9098e7e383024a4b82900d02314bbeb0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:614
@@ -1477,7 +1481,7 @@ msgid ""
 msgstr ""
 "Die |grass_tools| :sup:`GRASS-Werkzeugkiste` ermöglicht es, GRASS Module auf "
 "Daten innerhalb einer ausgewählten GRASS :file:`LOCATION` und :file:`MAPSET` "
-"anzuwenden. Dazu muss im Vorfeld eine GRASS :file:`LOCATION und "
+"anzuwenden. Dazu muss im Vorfeld eine GRASS :file:`LOCATION` und "
 ":file:`MAPSET` geöffnet werden, in der Sie Schreibrechte besitzen. Dies ist "
 "normalerweise garantiert, wenn Sie die :file:`MAPSET` selbst erstellt haben "
 "und notwendig, damit die Ergebniskarten der Raster- und Vektoranalysen in "
@@ -1511,7 +1515,7 @@ msgid ""
 "functionalities are also provided by graphical dialogs."
 msgstr ""
 "Das GRASS Shell Modul in der Werkzeugkiste bietet Zugriff auf fast alle in "
-"GRASS GIS vorhandenen Module (mehr als 300). Um die Verwendung "
+"GRASS GIS vorhandenen Module (mehr als 330). Um die Verwendung "
 "benutzerfreundlicher zu gestalten, sind etwa 200 Module über grafische "
 "Dialoge in die Werkzeugkiste integriert. Diese Module sind thematisch "
 "untergliedert, können aber auch durchsucht werden."
@@ -1556,7 +1560,7 @@ msgid ""
 "and :guilabel:`Manual`."
 msgstr ""
 "Wenn Sie auf das grafische Icon eines Modules klicken, öffnet sich ein neuer "
-"Moduldialog mit drei Reitern :guilabel:`Optionen`, :guilabel:´Ergebnis` und "
+"Moduldialog mit drei Reitern :guilabel:`Optionen`, :guilabel:`Ergebnis` und "
 ":guilabel:`Handbuch`."
 
 # d2ff542c219c4b12a4c4be0895d1f732
@@ -1598,11 +1602,18 @@ msgid ""
 "the complete GRASS module options without the need to switch to the GRASS "
 "Shell."
 msgstr ""
+"Eine neue Funktion seit der QGIS Version 1.8.0 ist der Knopf "
+":guilabel:`Fortgeschrittene Optionen einblenden` unterhalb der vereinfachten "
+"Moduldialoge im Reiter :guilabel:`Optionen`. Momentan ist diese Funktion nur "
+"für das Modul v.in.ascii umgesetzt. Es ist aber zukünftig für weitere Module "
+"vorgesehen und wird so die kompletten Funktionen der GRASS Module grafisch "
+"bereitstellen, ohne die GRASS Shell und somit die Kommandozeile benutzen zu "
+"müssen."
 
 # e506847efa14488eb78b72fad273282c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:695
 msgid "**Output**"
-msgstr ""
+msgstr "**Ergebnis**"
 
 # 9ddd73b2543f41289f4e3f211428bc16
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:709
@@ -1612,11 +1623,15 @@ msgid ""
 ":guilabel:`Output` tab and you see information about the analysis process. "
 "If all works well, you will finally see a ``Successfully finished`` message."
 msgstr ""
+"Der Reiter :guilabel:`Ergebnis` stellt die Ausgabe des Moduls zur Laufzeit "
+"dar. Nachdem Sie den Knopf **[Los]** gedrückt haben, wird auf diesen Reiter "
+"gewechselt und Sie sehen die Statusausgaben des Moduls. Wenn alles "
+"funktioniert hat, sehen Sie den Ausgabetext ``Erfolgreich beendet``."
 
 # 1e5240eb482645ba8091d0fb2b473007
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:714
 msgid "**Manual**"
-msgstr ""
+msgstr "**Handbuch**"
 
 # c4bb83f59362446c8bc2754414796771
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:728
@@ -1628,11 +1643,23 @@ msgid ""
 ":file:`Thematic index` and the :file:`Full index`. These links provide the "
 "same information as if you use the module :file:`g.manual`."
 msgstr ""
+"Der Reiter :guilabel:`Handbuch` enthält die Hilfeseite zu jedem GRASS-Modul. "
+"Falls Sie weitergehende Informationen zum gewählten Modul benötigen, schauen "
+"Sie in\n"
+"diese Hilfeseite. Dabei werden Sie feststellen, dass viele Module mehr "
+"Parameter haben, als im Reiter \\tab{Optionen} zu sehen sind. Das ist "
+"gewollt. Um die GUI möglichst einfach zu halten, sind nur die nötigsten "
+"Optionen übernommen worden. Natürlich stehen Ihnen alle Optionen des Moduls "
+"direkt in der GRASS-Eingabeshell zur Verfügung. Am Ende jeder Hilfeseite "
+"finden Sie weitere Links zum :file:`Main Help index`, dem :file:`Thematic "
+"index` und dem :file:`Full index`. Diese enthalten alle Informationen, die "
+"Sie ansonsten über das Modul\n"
+":file:`g.manual` finden."
 
 # fcd8ff4cd61a432793a85e1712b85fa0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:738
 msgid "**Display results immediately**"
-msgstr ""
+msgstr "**Ergebnisse direkt anzeigen**"
 
 # b3b0aa7fa3ea4c9e9689e47bb13ac3b9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:740
@@ -1640,11 +1667,14 @@ msgid ""
 "If you want to display your calculation results immediately in your map "
 "canvas, you can use the 'View Output' button at the bottom of the module tab."
 msgstr ""
+"Wollen Sie Ihre Ergenisse direkt in der Kartenansicht ansehen, nutzen Sie "
+"den Knopf 'Ergebnis visualisieren' im unteren Bereich des jeweiligen "
+"Modulreiters"
 
 # 8c9932cfa36745b9bae363276058645e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:744
 msgid "GRASS module examples"
-msgstr ""
+msgstr "GRASS Beispielanwendung"
 
 # 84adcc4a5b2e49f2994a6fc397a0e25c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:746
@@ -1652,11 +1682,13 @@ msgid ""
 "The following examples will demonstrate the power of some of the GRASS "
 "modules."
 msgstr ""
+"Die folgenden Beispiele sollen die Anwendung verschiedener GRASS Module "
+"demonstrieren."
 
 # 03c080c2f96b48f0a2e872aa26857442
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:749
 msgid "Creating contour lines"
-msgstr ""
+msgstr "Höhenlinien aus einem DGM erstellen"
 
 # 7783e53e1a4940f58a495796e5240545
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:751
@@ -1665,6 +1697,10 @@ msgid ""
 "(DEM). Assuming you have the Alaska :file:`LOCATION` set up as explained in "
 "Section :ref:`sec_import_loc_data`."
 msgstr ""
+"Im ersten Beispiel sollen automatisiert Höhenlinien auf Basis eines "
+"Höhenmodells (DGM) erstellt werden. Dabei gehen wir davon aus, dass Sie die "
+":file:`Alaska LOCATION` auf dem Rechner installiert ist, wie in Abschnitt "
+":ref:`sec_import_loc_data` beschrieben."
 
 # 03d8567c31e64249ad6ac85b909bf8ec
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:755
@@ -1672,6 +1708,9 @@ msgid ""
 "First open the location by clicking the |grass_open_mapset| :sup:`Open "
 "mapset` button and choosing the Alaska location."
 msgstr ""
+"Als erstes öffnen Sie die Location, indem Sie auf das "
+"|grass_open_mapset|:sup:`Mapset öffnen` Icon klicken und dann die Alaska "
+"Location auswählen."
 
 # e4745a24641048d68fa3cbd074a855b7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:757
@@ -1680,12 +1719,17 @@ msgid ""
 ":sup:`Add GRASS raster layer` and selecting the ``gtopo30`` raster from the "
 "demo location."
 msgstr ""
+"Nun laden Sie den ``gtopo30`` Rasterlayer, indem Sie auf das Icon "
+"|grass_add_raster|:sup:`GRASS-Rasterlayer hinzufügen` klicken und den Layer "
+"``gtopo30`` aus der Alaska Location auswählen und laden."
 
 # bf5643147bb1440b91f436fe71b94018
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:760
 msgid ""
 "Now open the Toolbox with the |grass_tools| :sup:`Open GRASS tools` button."
 msgstr ""
+"Als nächstes drücken Sie auf das Icon |grass_tools| "
+":sup:`GRASS-Werkzeugkiste öffnen`."
 
 # 282ad621b7c34531b781a4c56067a3d0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:761
@@ -1693,6 +1737,9 @@ msgid ""
 "In the list of tool categories double click :menuselection:`Raster --> "
 "Surface Management --> Generate vector contour lines`."
 msgstr ""
+"Im Reiter :guilabel:`Modulbaum` wechseln Sie mit der Maus in den Bereich "
+":menuselection:`Raster --> Oberflächenverwaltung --> Vektorkonturlinien "
+"erzeugen`."
 
 # 4a390c7de1bb4df5ad51ac0b408763eb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:763
@@ -1701,6 +1748,10 @@ msgid ""
 "explained above :ref:`grass_modules`. The ``gtopo30`` raster should appear "
 "as the :guilabel:`Name of input raster`."
 msgstr ""
+"Mit einem einfachen Klick auf **r.contour** öffnet sich das Modul in einem "
+"neuen Reiter, wie unter :ref:`grass_modules` beschrieben. Der ``gtopo30`` "
+"Rasterlayer sollte nun automatisch im Feld :guilabel:`Name der "
+"Eingaberasterkarte` erscheinen."
 
 # e56ddb5200f54e5b9b57b45e6f190363
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:766
@@ -1708,12 +1759,17 @@ msgid ""
 "Type into the :guilabel:`Increment between Contour levels` |selectnumber| "
 "the value 100. (This will create contour lines at intervals of 100 meters.)"
 msgstr ""
+"Geben Sie im Feld :guilabel:`Abstand zwischen den Kontourintervallen` "
+"|selectnumber| den Wert 100 an. (Dadurch werden Höhenlinien in einem Abstand "
+"von 100m erstellt.)"
 
 # c57f237cdfa244eb852c6748bd4d3d78
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:768
 msgid ""
 "Type into the :guilabel:`Name for output vector map` the name ``ctour_100``."
 msgstr ""
+"In das Feld :guilabel:`Name der Vektorausgabekarte` geben Sie den Namen "
+"``hoehen_100`` an."
 
 # e9b09fca76e54c79af91f5b4bd8096b8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:769
@@ -1722,6 +1778,9 @@ msgid ""
 "message ``Successfully finished`` appears in the output window. Then click "
 "**[View Output]** and **[close]**."
 msgstr ""
+"Drücken Sie nun auf den Knopf **[Starten]**. Nach einiger Zeit sollte im "
+"Ergebnisreiter die Meldung ``Erfolgreich beendet`` erscheinen. Drücken Sie "
+"nun auf den Knopf **[Ergebnis visualisieren]** und dann auf **[Schließen]**."
 
 # 848f1cd1a864497dba27dd0f5b4097a6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:773
@@ -1731,6 +1790,11 @@ msgid ""
 "line color so that the contours appear clearly over the elevation raster, as "
 "in :ref:`vector_properties_dialog`."
 msgstr ""
+"Da die aktuelle GRASS Region ziemlich groß ist, kann es eine Weile dauern, "
+"bis der Layer vollständig dargestellt wird. Danach können Sie noch die "
+"Layereigenschaften verändern und eine Farbe für die Linien auswählen, die "
+"sich deutlich vom Höhenmodell unterscheidet, siehe "
+":ref:`vector_properties_dialog`."
 
 # d5b4fa0e1fb742d6a4a266d6fbf107f1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:777
@@ -1745,11 +1809,20 @@ msgid ""
 "vector, but you are creating a very small scale map, so the detail is "
 "unnecessary."
 msgstr ""
+"Als nächstes zoomen Sie in einen bergigen Bereich im Zentrum Alaskas. Wenn "
+"Sie weit genug in die Karte hineingezoomt sind, werden Sie erkennen, dass "
+"die Höhenlinien teilweise sehr eckig erscheinen. Um das Erscheinungsbild zu "
+"optimieren, bietet GRASS ein Modul mit dem Namen **v.generalize**. Dabei "
+"wird mit Hilfe des Douglas Peuker Algorithmus und der einer Reduktion der "
+"Stützpunkte eine Glättung der Linien erreicht, ohne die Geometrien zu "
+"zerstören. Da der Ergebnislayer weniger Stützpunkte hat, ist er auch kleiner "
+"und kann schneller geladen werden. Die Analyse wird z.B. angewendet, wenn "
+"man sehr detailierte Daten nur in einem kleinen Maßstab anzeigen möchte."
 
 # fa22282243e24487a31efda4412d41e2
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:789
 msgid "**The simplify tool**"
-msgstr ""
+msgstr "**Geometrien in QGIS vereinfachen**"
 
 # e82060f4906a4a21a0c29569c6f9e3c8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:791
@@ -1758,6 +1831,9 @@ msgid ""
 "-->` tool that works just like the GRASS **v.generalize** Douglas-Peuker "
 "algorithm."
 msgstr ""
+"QGIS stellt mit den fTools auch ein Werkzeug :menuselection:`Geometrien "
+"vereinfachen` zur Verfügung. Es funktioniert genau wie der Douglas-Peuker "
+"Algorithmus im GRASS Modul **v.generalize**."
 
 # 8f3f407f5dd345d8860cfb27bf80f4ee
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:794
@@ -1768,6 +1844,13 @@ msgid ""
 "Hermite splines). Be aware that these algorithms can **add** additional "
 "vertices to the vector, causing it to load even more slowly."
 msgstr ""
+"In diesem Beispiel wollen wir nun aber etwas anderes erreichen. Die "
+"Höhenlinien, die wir mit r.contour erstellt haben, zeigen teilweise sehr "
+"scharfe Winkel, die wir glätten möchten. Unter den Algorithmen des Moduls "
+"**v.generalize** befindet sich auch der Chaikens-Algorithmus (), der exakt "
+"das macht, was wir möchten. Achten Sie aber darauf, dass es passieren\n"
+"kann, dass Stützpunkte nicht nur eliminiert sondern auch **hinzugefügt** "
+"werden können. Dadurch kann der Layer wieder langsamer geladen werden."
 
 # 0c9b3cf1409d4fe4bcdc1b602552b47d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:800
@@ -1776,6 +1859,9 @@ msgid ""
 ":menuselection:`Vector --> Develop map --> Generalization`, then click on "
 "the **v.generalize** module to open its options window."
 msgstr ""
+"Öffnen Sie die GRASS-Werkzeugkiste, wechseln Sie in den Bereich "
+":menuselection:`Vector --> Karte entwickeln --> Generalisierung`, und "
+"klicken dann auf das **v.generalize** Modul."
 
 # 5c9a597c77f848afa3f0ac72d8809b50
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:803
@@ -1783,6 +1869,8 @@ msgid ""
 "Check that the 'ctour_100' vector appears as the :guilabel:`Name of input "
 "vector`."
 msgstr ""
+"Stellen Sie sicher, dass 'hoehen_100' als Vektorlayer in Feld "
+":guilabel:`Name der Vektoreingabekarte` erscheint."
 
 # 0a1918be177a49d9b475480ccfded5d4
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:804
@@ -1792,6 +1880,10 @@ msgid ""
 ":guilabel:`Name for output vector map` 'ctour_100_smooth', and click "
 "**[Run]**."
 msgstr ""
+"Aus der Liste möglicher Algorithmen wählen Sie nun Chaiken's. Belassen Sie "
+"alle weiteren Optionen wie sie sind und gehen Sie zum Ende des Dialogs, wo "
+"Sie als :guilabel:`Name der Vektorausgabekarte 'hoehen_100_smooth' angeben. "
+"Drücken Sie nun auf **[Starten]**."
 
 # b4c8796bcd0d4b75a8e506f111a23e05
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:807
@@ -1799,6 +1891,9 @@ msgid ""
 "The process takes several moments. Once ``Successfully finished`` appears in "
 "the output windows, click **[View output]** and then **[close]**."
 msgstr ""
+"Der Prozess dauert eine Weile. Sobald ``Erfolgreich beendet`` im Reiter "
+":guilabel:`Ergebnis` erscheint, drücken Sie wieder auf **[Ergebnis "
+"visualisieren]** und dann auf **[Schließen]**."
 
 # a808b4afaa9c43dfa8f61b16ed027603
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:809
@@ -1808,11 +1903,15 @@ msgid ""
 "that the new contour lines have smoother corners than the original while "
 "staying faithful to the original overall shape."
 msgstr ""
+"Ändern Sie nun auch die Farbe des neuen Layers, damit er sich deutlich von "
+"dem Höhenmodell und den zuvor berechneten Höhenlinien abhebt. Sie werden "
+"erkennen, dass die Kanten der neuen Höhenlinien wesentlich weicher "
+"gezeichnet sind."
 
 # 22727750042d4f46b1ea695b8f97241b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:828
 msgid "**Other uses for r.contour**"
-msgstr ""
+msgstr "**Vektorlinien glätten mit dem GRASS Modul v.generalize**"
 
 # eac6e6135040430a9458b46b9fa13957
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:830
@@ -1822,11 +1921,14 @@ msgid ""
 "method will  be used to create a vector map of isohyetal (constant rainfall) "
 "lines."
 msgstr ""
+"Die oben beschriebene Anwendung kann auch in anderen Situationen verwendet "
+"werden. Wenn Sie z.B. eine Rasterkarte mit Niederschlagswerten haben, können "
+"Sie mit r.contour einen Isohyetallayer erstellen."
 
 # abaffe3291d240e9986feef313101517
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:835
 msgid "Creating a Hillshade 3D effect"
-msgstr ""
+msgstr "Erstellen eines 3D Schummerungseffekts"
 
 # 7ae03199e8044d899608683885090575
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:837
@@ -1840,6 +1942,16 @@ msgid ""
 "you get sun facing slopes lighted and the slopes facing away from the sun "
 "(in shadow) are darkened."
 msgstr ""
+"Es gibt verschiedene Methoden, um Höhenlayer anzuzeigen und ihnen einen 3D "
+"Schummerungseffekt zu verleihen. Der Gebrauch von Höhenlinien ist eine "
+"populäre Methode,\n"
+"die häufig angewendet wird, um topographische Karten zu erstellen. Eine "
+"andere Möglichkeit, um einen 3D Effekt zu erzeugen ist, bietet das "
+"Hillshading. Der Effekt basiert dabei auf einem Höhenmodell. Dabei wird "
+"zuerst die Hangneigung- und richtung der Zellen bestimmt und dann durch die "
+"Simulation des Sonnenstandes eine Reflexionswert erzeugt. Dadurch werden der "
+"Sonne zugewandte Bereiche aufgehellt und der Sonne abgewandte Bereiche (im "
+"Schatten) dunkler dargestellt."
 
 # e5384a377cec44f3af44b20fd9e0fdbd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:845
@@ -1848,22 +1960,29 @@ msgid ""
 "GRASS toolbox and under the Raster category double click to open "
 ":menuselection:`Spatial analysis --> Terrain analysis`."
 msgstr ""
+"Laden Sie zuerst den Rasterlayer ``gtopo30``. Öffnen Sie die "
+"GRASS-Werkzeugkiste, wechseln Sie in den Bereich :menuselection:`Räumliche "
+"Analysen -->Geländeanalyse`."
 
 # 94802d2e04a64e0e862e87774668fa91
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:848
 msgid "Then click **r.shaded.relief** to open the module."
-msgstr ""
+msgstr "Nun klicken Sie auf **r.shaded.relief**, um den Modulreiter zu öffnen."
 
 # 8a2a3ecd53a04e6eade72c6e66ba5ab1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:849
 msgid "Change the :guilabel:`azimuth angle` |selectnumber| 270 to 315."
 msgstr ""
+"Ändern Sie den Wert im Feld :guilabel:`Winkel der Sonne in Grad östlich von "
+"der Nordrichtung` |selectnumber| 270 auf 315."
 
 # 73ba5516ff2d4befb81b82a89fd29a41
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:850
 msgid ""
 "Enter ``gtopo30_shade`` for the new hillshade raster, and click **[Run**]."
 msgstr ""
+"Geben Sie als Name der Schummerungskarte den Namen ``gtopo30_shade`` an und "
+"klicken Sie auf **[Starten]**."
 
 # 8605d2c6d76c4e18882dd83ed495ce3f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:851
@@ -1871,6 +1990,8 @@ msgid ""
 "When the process completes, add the hillshade raster to the map. You should "
 "see it displayed in grayscale."
 msgstr ""
+"Nachdem die Karte berechnet wurde, visualisieren Sie sie und setzen Sie die "
+"Farbe des Rasterlayers auf Graustufen."
 
 # 97a20c1730a34e4485fb8a6551b4a594
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:853
@@ -1880,6 +2001,10 @@ msgid ""
 "then open the :menuselection:`Properties` window of ``gtopo30``, switch to "
 "the :guilabel:`transparency` tab and set its transparency level to about 25%."
 msgstr ""
+"Um die Schummerung und das Höhenmodell ``gtopo30`` zu sehen, ziehen Sie die "
+"Schummerungskarte in der Legende unter das Höhenmodell. Öffnen Sie dann den "
+"Dialog Layereigenschaften der Karte ``gtopo30``, und ändern Sie die "
+"Transparenz im Reiter :guilabel:`Transparenz` auf den Wert 25\\%."
 
 # 1fc8ec8419c94fd5aea85b379ab4540e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:858
@@ -1889,11 +2014,16 @@ msgid ""
 "order to see the visual effects of the hillshading, turn off the "
 "``gtopo30_shade`` map, then turn it back on."
 msgstr ""
+"Die Höhenkarte ``gtopo30`` wird nun als Farbkarte leicht transparent über "
+"der Schummerungskarte angezeigt. Dadurch entsteht ein visueller 3D Effekt. "
+"Um den Unterschied besser zu erkennen, wechseln Sie über das "
+"Kontrollkästchen den Anzeigemodus der Schummerungskarte in der Legende und "
+"wieder zurück."
 
 # e9a3a656d05e4e539133157485403c4f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:863
 msgid "**Using the GRASS shell**"
-msgstr ""
+msgstr "**Die GRASS Kommandozeile verwenden**"
 
 # 7771ef156b664dad9247c346dd29ee4e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:865
@@ -1907,6 +2037,18 @@ msgid ""
 "simplest default parameters. This example demonstrates the use of an "
 "additional option in the **r.shaded.relief** module that was shown above."
 msgstr ""
+"Das GRASS Plugin in QGIS stellt die GRASS Module oftmals in vereinfachter "
+"Form und auch nicht vollständig bereit. Es ist also grundsätzlich für "
+"Anwender gestaltet, die sich nicht\n"
+"so gut mit GRASS und all seinen Fähigkeiten auskennen oder nur einfacher "
+"Analysen durchführen wollen. Daher werden in den grafischen Moduldialogen "
+"oftmals nicht alle Optionen und Parameter, die das GRASS Modul bieten "
+"bereitgestellt, um den Umgang einfacher und intuitiver zu gestalten. Wer "
+"tiefer in GRASS einsteigen möchte, er hat die Möglichkeit,\n"
+"sämtliche Funktionalitäten und Module über die GRASS Kommandozeile (GRASS "
+"Shell) anzusprechen. In dem folgenden Beispiel soll eine zusätzliche Option "
+"des Moduls  **r.shaded.relief** angesprochen werden, die nur über die "
+"Kommandozeile genutzt werden kann. "
 
 # 52a35621ed314f99b9e212a19e013e04
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:886
@@ -1915,6 +2057,9 @@ msgid ""
 "multiplies the elevation values relative to the X-Y coordinate units so that "
 "the hillshade effect is even more pronounced."
 msgstr ""
+"Das Modul **r.shaded.relief** stellt einen zusätzliche Parameter ``zmult`` "
+"bereit, über den der Höhenwert relativ zu den X-Y Werten multipliziert "
+"werden kann. Dadurch wird der Schummerungseffekt noch prägnanter."
 
 # e8f4268b32a44aa9b2d2743e13d8dd82
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:890
@@ -1924,6 +2069,11 @@ msgid ""
 "``r.shaded.relief map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` and "
 "press **[Enter]**."
 msgstr ""
+"Laden Sie das Höhenmodell ``gtopo30`` wie im vorherigen Beispiel. Öffnen Sie "
+"die GRASS-Werkzeugkiste und klicken auf die GRASS Shell. In das "
+"Kommandozeilenfenster tippen Sie folgenden Befehl ``r.shaded.relief "
+"map=gtopo30 shade=gtopo30_shade2 azimuth=315 zmult=3`` und drücken dann die "
+"Taste **[Enter]**."
 
 # 2cf2fdb53f984f3093b1fd7e5ca569ad
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:894
@@ -1931,6 +2081,9 @@ msgid ""
 "After the process finishes shift to the :guilabel:`Browse` tab and double "
 "click on the new ``gtopo30_shade2`` raster to display in QGIS."
 msgstr ""
+"Wenn die Berechnung abgeschlossen ist, wechseln Sie den Reiter "
+":guilabel:`Browser` und Doppelklicken Sie auf die neu erstellte Karte "
+"``gtopo30_shade2``, um Sie in QGIS anzuzeigen."
 
 # d5834e7444cd49758b8b4b60ecb2145f
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:896
@@ -1940,11 +2093,14 @@ msgid ""
 "layer. You should see that the 3D effect stands out more strongly compared "
 "to the first shaded relief map."
 msgstr ""
+"Visualisieren Sie die Karten wie in dem obigen Beispiel beschrieben. Sie "
+"sollten dabei erkennen, dass der Schummerungseffekt stärker ist, wenn der "
+"zmult Parameter verwendet wird."
 
 # bdae1c38339c4c04b7aa0fdffd4b4553
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:915
 msgid "Raster statistics in a vector map"
-msgstr ""
+msgstr "Rasterstatistik auf Basis eines Vektorlayer berechnen"
 
 # a2cbb1bdf2d5412c817349903f1b4f84
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:917
@@ -1952,6 +2108,9 @@ msgid ""
 "The next example shows how a GRASS module can aggregate raster data and add "
 "columns of statistics for each polygon in a vector map."
 msgstr ""
+"Das folgende Beispiel zeigt, wie man univariate Statistik für Rasterwerte "
+"innerhalb von Vektorpolygonen berechnen kann und die Werte in neue "
+"Attributspalten des Vektorlayers hinzufügt."
 
 # df0bb7c307cf4d5bb19052a0274b96dd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:920
@@ -1959,6 +2118,9 @@ msgid ""
 "Again using the Alaska data, refer to :ref:`sec_import_loc_data` to import "
 "the trees shapefile from the ``shapefiles`` directory into GRASS."
 msgstr ""
+"Verwenden Sie wieder die Alaska Location (siehe Abschnitt "
+":ref:`sec_import_loc_data`), und importieren Sie das Shapefile :file:`trees` "
+"aus dem Ordner ``shapefiles`` nach GRASS."
 
 # baf9b1d59a3640b98de8f04efe93ef9c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:922
@@ -1967,6 +2129,10 @@ msgid ""
 "imported trees map to make it a complete GRASS area vector (including both "
 "boundaries and centroids)."
 msgstr ""
+"Als erstes müssen dem Layer trees Zentroide (Labelpunkte) hinzugefügt "
+"werden. Dadurch wird es ein korrekter topologischer Datensatz, bei dem an "
+"die Labelpunkte die Attribute aus der statistischen Analyse angehängt werden "
+"können."
 
 # 6f245b835ebb42b7b3b51f6acc4531b6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:925
@@ -1974,12 +2140,16 @@ msgid ""
 "From the toolbox choose :menuselection:`Vector --> Manage features`, and "
 "open the module **v.centroids**."
 msgstr ""
+"Wählen Sie aus der GRASS-Werkzeugkiste :menuselection:`Vector --> Manage "
+"features`, und öffnen Sie das Modul **v.centroids**."
 
 # 6f7b388c9a4f44d4944dcce601caaab9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:927
 msgid ""
 "Enter as the :guilabel:`output vector map` 'forest_areas' and run the module."
 msgstr ""
+"Geben Sie als :guilabel:`Name für die Ausgabevektorkarte` 'forest_areas' an "
+"und starten Sie das Modul."
 
 # fa26b01524b744459cedde8981817425
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:928
