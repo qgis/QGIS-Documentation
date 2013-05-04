@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # a450459f38c2426aa33a8623a82ff449
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:10
 msgid "Delimited Text Plugin"
-msgstr ""
+msgstr "Textdatei als Layer importieren Plugin"
 
 # d39e8470a97b44b0bd753fc3a6d98dfc
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:12
@@ -28,16 +31,21 @@ msgid ""
 "The Delimited Text plugin allows you to load a delimited text file as a "
 "layer in QGIS."
 msgstr ""
+"Mit dem Textdatei als Layer importieren Plugin können ASCII-Texttabellen, "
+"die u.a zwei Spalten für X- und Y-Koordinaten enthalten, als ein Layer in "
+"QGIS geladen werden."
 
 # ea40a56f2df642dfaada0c2d931463c0
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:16
 msgid "Requirements"
-msgstr ""
+msgstr "Anforderungen"
 
 # 2a444285cdc44420a85b3a05fd0f61d9
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:18
 msgid "To view a delimited text file as layer, the text file must contain:"
 msgstr ""
+"Um Datenspalten aus einer Textdatei in QGIS zu laden, muss diese Textdatei "
+"bestimmte Eigenschaften aufweisen:"
 
 # 118f6588aca8486d8cd6cb59c9ff6599
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:20
@@ -45,12 +53,17 @@ msgid ""
 "A delimited header row of field names. This must be the first line in the "
 "text file."
 msgstr ""
+"Eine Kopfzeile mit den Spaltennamen. Diese Kopfzeile muss nicht die erste "
+"Zeile der Datei sein."
 
 # fae1d6edefb94d7fa47e70ec8c20591b
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:22
 msgid ""
 "The header row must contain an X and Y field. These fields can have any name."
 msgstr ""
+"Die Textdatei muss mindestens eine Spalte mit X- und eine mit Y-Koordinaten "
+"enthalten. Die Bezeichnungen in der Kopfzeile für diese Spalten können "
+"beliebig sein."
 
 # 162522b76b06419892f785e1dcfc6f72
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:23
@@ -58,19 +71,23 @@ msgid ""
 "The x and y coordinates must be specified as a number. The coordinate system "
 "is not important."
 msgstr ""
+"Die X- und Y-Koordinaten müssen als Zahlen angegeben sein. Das "
+"Koordinatensystem spielt keine Rolle."
 
 # b4be6562fd054e9e95cf1746671972c4
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:26
 msgid ""
-"As an example of a valid text file we import the elevation point data file :"
-"file:`elevp.csv` coming with the QGIS sample dataset (See Section :ref:"
-"`label_sampledata`):"
+"As an example of a valid text file we import the elevation point data file "
+":file:`elevp.csv` coming with the QGIS sample dataset (See Section "
+":ref:`label_sampledata`):"
 msgstr ""
+"Als Beispiel für einen Textdatei importieren wir die Datei :file:`elevp.csv` "
+"aus dem QGIS Beispieldatensatz (siehe Kapitel :ref:`label_sampledata`):"
 
 # ad0f0f2453074361971bad47ab5c0abc
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:38
 msgid "Some items of note about the text file are:"
-msgstr ""
+msgstr "Einige weitere Anmerkungen zu Textdateien:"
 
 # 5158b7f64d90420e93ae8ba223554ab5
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:40
@@ -78,6 +95,8 @@ msgid ""
 "The example text file uses ``;`` (semicolon) as delimiter. Any character can "
 "be used to delimit the fields."
 msgstr ""
+"Die Beispieldatei verwendet ``;`` (Semikolon) als Trennzeichen. Es können "
+"auch andere Zeichen zum Trennen der Spalten verwendet werden."
 
 # 22d87553f6c0461590ab9c2fe371a77e
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:42
@@ -85,33 +104,38 @@ msgid ""
 "The first row is the header row. It contains the fields ``X``, ``Y`` and "
 "``ELEV``."
 msgstr ""
+"Die erste Zeile ist die Kopfzeile. Sie enthält die Spaltennamen ``X``, ``Y`` "
+"und ``ELEV``."
 
 # db10dda05d8344f988adc6ee91947a30
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:43
 msgid "No quotes (``\"``) are used to delimit text fields."
 msgstr ""
+"Anführungszeichen (``\"``) dürfen nicht als Trennzeichen benutzt werden."
 
 # d613de2adb51466bb7f10c0cd4c6f7a2
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:44
 msgid "The x coordinates are contained in the ``X`` field."
-msgstr ""
+msgstr "Die X-Koordinaten sind in der Spalte ``X`` enthalten"
 
 # d09558d5593d4d2486754e004c31feb6
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:45
 msgid "The y coordinates are contained in the ``Y`` field."
-msgstr ""
+msgstr "Die Y-Koordinaten sind in der Spalte ``Y`` enthalten."
 
 # 9f15c2b0491b4d01911e839c58cac617
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:48
 msgid "Using the Plugin"
-msgstr ""
+msgstr "Das Plugin verwenden"
 
 # 106aa3294e864f5a8f0abd93710c32d6
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:50
 msgid ""
-"To use the plugin you must first enable it as described in Section :ref:"
-"`managing_plugins`."
+"To use the plugin you must first enable it as described in Section "
+":ref:`managing_plugins`."
 msgstr ""
+"Um das Plugin zu verwenden, müssen Sie es zuerst laden, wie in Kapitel "
+":ref:`managing_plugins`."
 
 # 9853ee976a4e4b02bd1b9a90030b6714
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:53
@@ -120,6 +144,9 @@ msgid ""
 "to open the :guilabel:`Delimited Text` dialog as shown in "
 "figure_delimited_text_1_."
 msgstr ""
+"Klicken Sie danach auf das Icon |delimited_text| :sup:`Textdatei als Layer "
+"importieren` in der Werkzeugleiste, um den Dialog zu öffnen, wie in "
+"figure_delimited_text_1_ zu sehen."
 
 # 93bb3c383a764844a0201ec023133f46
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:68
@@ -131,6 +158,13 @@ msgid ""
 "select the correct delimiter. To change the delimiter to tab use ``\\t`` "
 "(this is a regular expression for the tab character)."
 msgstr ""
+"Als erses wählen Sie eine Datei (e.g., "
+":file:`qgis_sample_data/csv/elevp.csv`) für den Import aus, indem Sie auf "
+"den **[Durchsuchen]** Knopf drücken. Sobald eine Datei ausgewählt wurde, "
+"versucht das Plugin die Datei zu durchsuchen und auf Basis des zuletzt "
+"verwendeten Trennzeichens zu strukturieren, in diesem Fall mittels Semikolon "
+"(``;``). Wählen Sie bei Bedarf ein anderes, passendes Trennzeichen. Um einen "
+"Tabulator zu verwenden, geben Sie ``\\t`` ein."
 
 # 834ec10042b84cc1a2ca3df0a2c7dc8b
 #: ../../source/docs/user_manual/plugins/plugins_delimited_text.rst:75
@@ -141,3 +175,8 @@ msgid ""
 "figure_delimited_text_1_ . To add the layer to the map, click **[OK]**. The "
 "delimited text file now behaves as any other map layer in QGIS."
 msgstr ""
+"Wählen Sie nun die Spalten für die X- und Y-Koordinaten aus, tragen einen "
+"Namen ein unter dem die Daten in QGIS angezeigt werden sollen und wenn "
+"vorhanden auch die WKT-Spalte mit den KBS Informationen. Um die Daten zu "
+"sehen, klicken Sie auf **[Hinzufügen]**. Der Layer verhält sich nun wie "
+"jeder andere Vektorlayer in QGIS."
