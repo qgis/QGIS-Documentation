@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 706c6931a75040aaaab595a5f1154c41
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:10
 msgid "eVis Plugin"
-msgstr ""
+msgstr "eVis Plugin"
 
 # 515ea4dc036143878d375151f0243454
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:12
@@ -37,6 +40,18 @@ msgid ""
 "referenced with latitude and longitude or X and Y coordinates) photographs, "
 "and other supporting documents, to vector data in QGIS."
 msgstr ""
+"Der Biodiversitäts-Informatik Fachbereich am American Museum of Natural "
+"History's (AMNH) Center for Biodiversity and Conservation (CBC) (Dieser "
+"Abschnitt ist von Horning, N., K. Koy, P. Ersts abgeleitet. 2009 Evis "
+"(v1.1.0) User's Guide. American Museum of Natural History, Center for "
+"Biodiversity and Conservation. Erhältlich unter "
+"http://biodiversityinformatics.amnh.org/, und unter der GNU FDL "
+"veröffentlicht) hat das Event Visualization Tool (eVis) entwickelt, ein "
+"weiteres, ergänzendes Werkzeug im Bereich Monitoring und Decision Support "
+"Tools für die Analyse geschützter Bereiche und die Landschaftsplanung. "
+"Dieses Plugin ermöglicht die einfache Verknüpfung geokodierter Fotos  (d.h. "
+"referenziert mit Längen-und Breitengrad oder X- und Y-Koordinaten) und "
+"anderer Dokumente mit die Vektordaten in QGIS."
 
 # 8d6a9c3036ad4feb9e8b8ccb570811c4
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:23
@@ -45,6 +60,8 @@ msgid ""
 "as with all plugins, it can be disabled and enabled using the Plugin Manager "
 "(See :ref:`managing_plugins`)."
 msgstr ""
+"Das eVis Plugin wird wie alle Kern-Plugins mit dem Plugin-Manager aktiviert "
+"und deaktiviert (siehe Abschnitt :ref:`managing_plugins`)."
 
 # f90aaf6fadf3449a9aa504b00e04f785
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:27
@@ -54,11 +71,16 @@ msgid ""
 "viewing of geocoded photographs and other documents that are linked to "
 "features stored in vector files, databases, or spreadsheets."
 msgstr ""
+"Es besteht aus drei Modulen: der eVis-Datenbankverbindung, dem "
+"eVis-Ereignis-ID-Werkzeug und dem eVis-Ereignisbrowser. Diese Werkzeuge "
+"arbeiten zusammen, damit das Darstellen von georeferenzierten Fotos und "
+"anderen Dokumenten, die mit Vektorobjekten, Datenbanken oder Tabellen "
+"verlinkt sind, funktioniert."
 
 # e92f9e685137490c8cf5961142c9058f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:35
 msgid "Event Browser"
-msgstr ""
+msgstr "Ereignisbrowser"
 
 # 17bce5aeac08493192c73ffcf5816aa9
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:37
@@ -72,20 +94,33 @@ msgid ""
 "compass direction the camera was pointed when the image was acquired. Your "
 "vector layer must be loaded into QGIS before running the Event Browser."
 msgstr ""
+"Der Ereignisbrowser verfügt über Funktionen, um georeferenzierte Fotos "
+"anzuzeigen, die mit Vektorobjekten verknüpft sind, die im Kartenfenster "
+"dargestellt sind. Die Punktdaten können dabei z.B. ein in QGIS geladener "
+"Vektorlayer oder das Ergebnis einer Datenbankabfrage sein. Das Vektorobjekt "
+"muss Attribute mit Informationen zu dem Ort und dem Namen der "
+"darzustellenden Datei mit dem Foto enthalten und gegebenenfalls auch die "
+"Himmelsrichtung, in welche die Kamera gerichtet war, als das Bild geschossen "
+"wurde. Der Vektorlayer muss bereits in QGIS geladen sein, bevor Sie den "
+"Ereignisbrowser starten können."
 
 # cd023d1c83e944c49f5705198edfee6d
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:49
 msgid "Launch the Event Browser module"
-msgstr ""
+msgstr "Den eVis-Ereignisbrowser starten"
 
 # aefd1db65fc547c9a04c7466d11e94ef
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:51
 msgid ""
-"To launch the Event browser module either click on the |event_browser| :sup:"
-"`eVis Event Browser` icon or click on :menuselection:`Database --> eVis --> "
-"eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` "
-"window."
+"To launch the Event browser module either click on the |event_browser| "
+":sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis "
+"--> eVis Event Browser`. This will open the :guilabel:`Generic Event "
+"Browser` window."
 msgstr ""
+"Um den Ereignisbrowser zu starten, klicken Sie entweder auf das "
+"|event_browser| :sup:`eVis Event Browser` Icon oder auf "
+":menuselection:`Datenbank --> eVis --> eVis Ereignisbrowser`. Dies öffnet "
+"den  :guilabel:`Ereignisbrowser` Dialog."
 
 # 03753d51977140a78becb2be3149c0ac
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:55
@@ -98,11 +133,19 @@ msgid ""
 "tab is used to maintain a table of file extensions and their associated "
 "application to allow eVis to display documents other than images."
 msgstr ""
+"Der :guilabel:`Ereignisbrowser-Dialog` besteht aus drei Reitern am oberen "
+"linken Rand. Der Reiter :guilabel:`Anzeigen` wird verwendet, um das Foto "
+"anzuzeigen und das damit verbundene Datenattribut. Der Reiter "
+":guilabel:`Optionen` enthält eine Reihe von Einstellungen, die angepasst "
+"werden, um das Verhalten des Plugins zu verändern. Schließlich gibt es noch "
+"den Reiter :guilabel:`Externe Applikationen konfigurieren`, um eine Tabelle "
+"mit Dateierweiterungen und damit verbundenen Anwendungen zu managen, um "
+"andere Dokumente als Bilder anzeigen zu können."
 
 # 9d67dc697bdb4e009a8695a4ea1d188d
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:66
 msgid "Understanding the Display window"
-msgstr ""
+msgstr "Der Anzeigen-Reiter"
 
 # d9baca822b184a40b1e5c9a26818b920
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:68
@@ -112,11 +155,15 @@ msgid ""
 "window is used to view geocoded photographs and their associated attribute "
 "data."
 msgstr ""
+"Um das :guilabel:`Anzeigen` Fenster zu sehen, klicken Sie auf den "
+":guilabel:`Anzeigen` Reiter im Dialog :guilabel:`Ereignisbrowser`. Der "
+"Reiter :guilabel:`Anzeigen` des Ereignisbrowsers wird verwendet, um\n"
+"georeferenzierte Fotos und damit verknüpfte Attribute anzuzeigen."
 
 # 06eda766d0c34658a9d2030471dc35c2
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:84
 msgid "**Display window**: A window where the photograph will appear."
-msgstr ""
+msgstr "**Anzeigefenster**: Ein Fenster, in dem das Foto erscheint."
 
 # 7ec3f54106ee4555a69cdacb603e6142
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:85
@@ -125,17 +172,22 @@ msgid ""
 "be displayed in the display window, scroll bars will appear on the left and "
 "bottom sides of the window to allow you to pan around the image."
 msgstr ""
+"**Hineinzoomen**: Zoomen, um Details zu sehen. Wenn das gesamte Bild nicht "
+"im Anzeigefenster dargestellt werden kann, erscheinen Scrollbars auf der "
+"linken und unteren Seite des Fensters, um das Foto verschieben zu können."
 
 # 3ba785ea22564d4e91faca243c7e95a2
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:88
 msgid "**Zoom out button**: Zoom out to see more area."
 msgstr ""
+"**Herauszoomen**: Aus dem Bild herauszoomen, um einen Überblick zu haben. "
 
 # 40878985e353415db1445ac67b340846
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:89
 msgid ""
 "**Zoom to full extent** button: Displays the full extent of the photograph."
 msgstr ""
+"**Zur vollen Ausdehnung zoomen**: Zeigt die volle Ausdehnung des Fotos an."
 
 # 588f8e47425c4b7cb6d0526ecc8b4011
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:90
@@ -149,6 +201,15 @@ msgid ""
 "the contents of the file. If the file extension is recognized the attribute "
 "data will be displayed in green."
 msgstr ""
+"**Attributfenster**: Alle Attribute des Vektorpunktes, der mit dem Foto "
+"verlinkt ist werden hier angezeigt. Wenn der Datentyp, auf den verwiesen "
+"wird kein Foto ist, sondern ein anderer Datentyp, der im Reiter "
+":guilabel:`Externe Applikationen konfigurieren` definiert ist, dann öffnet "
+"sich die Anwendung mit dem\n"
+"speziellen Datentyp, indem Sie auf das Feld mit dem Pfad doppelkicken. Die "
+"Anwendung wird dann gestartet und Sie können den Inhalt anschauen oder "
+"anhören. Wenn die Datenendung erkannt wird, wird sie automatisch in grün "
+"angezeigt."
 
 # dab1de2e8ede4649884d048f39cbe9c2
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:98
@@ -156,6 +217,8 @@ msgid ""
 "**Navigation buttons**: Use the Previous and Next buttons to load the "
 "previous or next feature when more than one feature is selected."
 msgstr ""
+"**Navigation**: Verwenden Sie den 'Vorheriges' und 'Nächstes' Knopf, um "
+"weitere Objekte zu laden, falls vorhanden und selektiert."
 
 # d4d44c131d7a44f9a7d9f5b8a594d4a5
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:100
@@ -163,11 +226,14 @@ msgid ""
 "**Feature indicator**: This heading indicates which feature is being "
 "displayed and how many features are available for display."
 msgstr ""
+"**Objektindikator**: Diese Information in der Kopfzeile des Ereignisbrowsers "
+"gibt an, welches Objekt gerade angezeigt wird und wieviele insgesamt "
+"vorhanden sind."
 
 # 3801da6e7da54baf99f215c246239b7b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:106
 msgid "Understanding the Options window"
-msgstr ""
+msgstr "Der Optionen-Reiter"
 
 # 46889a57dd1b4424827c02acc96f1bb4
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:120
@@ -175,11 +241,19 @@ msgid ""
 "**File path**: A dropdown list to specify the attribute field that contains "
 "the directory path or URL for the photographs or other documents being "
 "displayed. If the location is a relative path then the checkbox must be "
-"clicked. The base path for a relative path can be entered in the :guilabel:"
-"`Base Path` text box below. Information about the different options for "
-"specifying the file location are noted in the section :ref:`evis_specifying` "
-"below."
+"clicked. The base path for a relative path can be entered in the "
+":guilabel:`Base Path` text box below. Information about the different "
+"options for specifying the file location are noted in the section "
+":ref:`evis_specifying` below."
 msgstr ""
+"**Dateipfad**: Eine Dropdown-Liste, um das Attributfeld zu definieren, "
+"welches den Verzeichnispfad oder die URL für die Fotos oder anderen "
+"Dokumente enthält. Wenn es ein relativer Pfad ist, dann wählen Sie das "
+"Kontrollkästchen |checkbox| :guilabel:`Pfad ist relaitiv`, links neben dem "
+"Dropdown-Menü. Der Grundpfad für den relativen Pfad kann in dem "
+":guilabel:`Grundpfad` eingegeben werden. Informationen über die "
+"verschiedenen Optionen zur Angabe des Speicherortes der Datei werden weiter "
+"unten beschrieben."
 
 # 562c67032e404c87bb2364bca23f5fac
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:126
@@ -189,6 +263,11 @@ msgid ""
 "displayed. If compass bearing information is available it is necessary to "
 "click the checkbox to the left of the dropdown menu title."
 msgstr ""
+"**Kompassrichtung**: Eine Dropdown-Liste, um das Attributfeld zu definieren, "
+"welches die Himmelsrichtung angibt, in der das Foto geschossen wurde. Wenn "
+"eine Kompassrichtung verfügbar ist, ist es notwendig, zuvor das "
+"Kontrollkästchen |checkbox| :guilabel:`Kompassrichtung anzeigen` "
+"auszuwählen, um die Spalte mit den Himmelsrichtungen auszuwählen."
 
 # 3d49a651809e4c328af5aee857787da1
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:130
@@ -201,6 +280,14 @@ msgid ""
 "For both of these options east declinations should be entered using positive "
 "values and west declinations should use negative values."
 msgstr ""
+"**Kompassversatz**: Der Kompassversatz kann verwendet werden, um die "
+"magnetische Abweichung zu kompensieren. (Abweichung der magnetischen zur "
+"wahren Nordrichtung). Klicken Sie dazu auf |radiobuttonon| "
+":guilabel`Manuell`, um die Abweichung einzugeben, oder auf radiobuttonon| "
+":guilabel`Aus Attribut`, um eine Attributspalte mit den Abweichungen "
+"festzulegen. Für beide Optionen sollten östliche Abweichungen als postive "
+"Zahlenwerte und westliche Abweichungen als negative Zahlenwerte angegeben "
+"werden."
 
 # 91f06588d9d64013a732cc812892e083
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:138
@@ -208,6 +295,9 @@ msgid ""
 "**Directory base path**: The base path onto which the relative path defined "
 "in Figure_eVis_2_ (A) will be appended."
 msgstr ""
+"**Relativer Pfad**: Der Grundpfad, auf den sich die relativen Pfade der "
+"Fotos und Dokumente beziehen wie in Abbildung Figure_eVis_2_ (A) und wird "
+"angehängt."
 
 # 57c096009db945bf959911278662f230
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:140
@@ -215,6 +305,9 @@ msgid ""
 "**Replace path**: If this checkbox is checked, only the file name from the A "
 "will be appended to the Base Path."
 msgstr ""
+"**Gesamten Pfad ersetzen**: Wenn dieses Kontrollkästchen aktiviert ist, wird "
+"nur der Dateiname an den Grundpfad angehängt, der als Attributspalte im "
+"Bereich Dateipfad definiert wurde."
 
 # 885b7f17baea4de3ba574d077f72173b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:142
@@ -224,6 +317,11 @@ msgid ""
 "text documents, and sound files. If not checked the path rules will only "
 "apply to photographs and other documents will ignore the Base Path parameter."
 msgstr ""
+"**Bildpfad auf alle Dokumente anwenden**: Wenn dieses Kontrollkästchen "
+"aktiviert ist, wird derselbe Grundpfad, der für Fotos verwendet wird, auch "
+"auf alle anderen Dokumente (Filme, Texte, usw.) verwendet. Ansonsten werden "
+"die definierten Pfadangaben nur für die Fotos verwendet. Alle anderen "
+"Dokumente ignorieren den Grundpfad."
 
 # 4bd180c7f51c43fca41d22cbd39cdebf
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:146
@@ -232,12 +330,17 @@ msgid ""
 "parameters will be saved for the next session when the window is closed or "
 "when the **[Save]** button below is pressed."
 msgstr ""
+"**Dies merken**: Wenn dieses Kontrollkästchen aktiviert ist, werden alle "
+"damit in Verbindung stehenden Parameter für die nächste Sitzung gespeichert. "
+"Sie können dazu auch global den Knopf **[Speichern]** drücken."
 
 # 2fb36f0c48934410876b49ba68d3f918
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:149
 msgid ""
 "**Reset values**: Resets the values on this line to the default setting."
 msgstr ""
+"**Zurücksetzen**: Setzt die Werte der jeweiligen Zeile auf die Standardwerte "
+"zurück."
 
 # 3dc16519d3654603951ae8559a1c42ad
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:150
@@ -245,18 +348,23 @@ msgid ""
 "**Restore faults**: This will reset all of the fields to their default "
 "settings. It has the same effect as clicking all of the **[Reset]** buttons."
 msgstr ""
+"**Voreinstellungen**: Damit werden alle Werte in den Feldern auf die "
+"Standardwerte zurückgesetzt. Es ist derselbe Effekt, als wenn Sie alle "
+"Zurücksetzen Knöpfe drücken."
 
 # fb81a0507fe04df29510d14c568637aa
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:152
 msgid ""
-"**Save**: This will save the settings without closing the :guilabel:"
-"`Options` pane."
+"**Save**: This will save the settings without closing the "
+":guilabel:`Options` pane."
 msgstr ""
+"**Speichern**: Dieser Knopf speichert alle Einstellungen, ohne den Dialog zu "
+"schließen."
 
 # 74ea4f9236364c41bc23ffd8d227aa28
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:159
 msgid "Understanding the Configure External Applications window"
-msgstr ""
+msgstr "Der Externe Applikationen konfigurieren Reiter"
 
 # 20bfd3a8820547db839bc21e2cbe6af9
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:174
@@ -267,6 +375,11 @@ msgid ""
 "opening a broad range of files such as movies, sound recordings, and text "
 "documents instead of only images."
 msgstr ""
+"**Datei Referenztabelle**: Eine Tabelle mit den Datentypen, die mit eVis "
+"geöffnet werden können. Jeder Datentyp benötigt eine Dateiendung, und den "
+"Pfad zu einer Anwendung, die den entsprechenden Datentyp anzeigen oder "
+"ausführen kann. Dies schließt neben Fotos u.a. auch Textdokumente, Filme "
+"oder Hörspiele mit ein."
 
 # bc95859d014540af9950b5032df7f558
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:179
@@ -274,6 +387,9 @@ msgid ""
 "**Add new file type**: Add a new file type with a unique extension and the "
 "path for the application that can open the file."
 msgstr ""
+"**Neuen Dateityp hinzufügen**: Füge einen neuen Dateityp mit einer "
+"einzigartigen Dateiendung hinzu, sowie einen Pfad zu der Applikation, mit "
+"der dieser Datentyp geöffnet werden kann."
 
 # f201a4c49e614983b3bbf35755c6ce3e
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:181
@@ -281,11 +397,13 @@ msgid ""
 "**Delete current row**: Delete the file type highlighted in the table and "
 "defined by a file extension and a path to an associated application."
 msgstr ""
+"**Aktuelle Zeile löschen**: Löschen Sie den ausgewählten Dateityp aus der "
+"Referenztabelle."
 
 # 4eb4fe01f6774812bcb0507020c8cfa5
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:187
 msgid "Specifying the location and name of a photograph"
-msgstr ""
+msgstr "Den Ort und Namen eines Fotos festlegen"
 
 # 60c339bd4d354871bbba529a491db722
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:189
@@ -294,45 +412,66 @@ msgid ""
 "relative path or a URL if the photograph is available on a web server. "
 "Examples of the different approaches are listed in Table `evis_examples`_."
 msgstr ""
+"Der Ort und Name eines Fotos kann über einen absoluten oder relativen Pfad "
+"festgelegt werden. Wenn das Foto auf einem Webserver liegt, kann auch eine "
+"URL verwendet werden. Beispiele für die verschiedenen Varianten finden Sie "
+"in Tabelle `evis_examples`_.  "
 
 # 72e7005dbcfd42bcbf38ec569ece124e
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:207
 msgid "Specifying the location and name of other supporting documents"
-msgstr ""
+msgstr "Den Ort und Namen anderer Dokumente und Dateien festlegen"
 
 # b56f59ea40994b4380ede40718f861c5
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:209
 msgid ""
 "Supporting documents such as text documents, videos, and sound clips can "
 "also be displayed or played by eVis. To do this it is necessary to add an "
-"entry in the file reference table that can be accessed from the :guilabel:"
-"`Configure External Applications` window in the :guilabel:`Generic Event "
-"Browser` that matches the file extension to an application that can be used "
-"to open the file. It is also necessary to have the path or URL to the file "
-"in the attribute table for the vector layer. One additional rule that can be "
-"used for URLs that don't contain a file extension for the document you want "
-"to open is to specify the file extension before the URL. The format is --- "
-"``file extension:URL``. The URL is preceded by the file extension and a "
-"colon, and is particularly useful for accessing documents from Wikis and "
+"entry in the file reference table that can be accessed from the "
+":guilabel:`Configure External Applications` window in the :guilabel:`Generic "
+"Event Browser` that matches the file extension to an application that can be "
+"used to open the file. It is also necessary to have the path or URL to the "
+"file in the attribute table for the vector layer. One additional rule that "
+"can be used for URLs that don't contain a file extension for the document "
+"you want to open is to specify the file extension before the URL. The format "
+"is --- ``file extension:URL``. The URL is preceded by the file extension and "
+"a colon, and is particularly useful for accessing documents from Wikis and "
 "other web sites that use a database to manage the web pages (see Table "
 "`evis_examples`_)."
 msgstr ""
+"Belege wie Text-Dokumente, Videos und Sound-Clips können ebenfalls angezeigt "
+"oder abgespielt werden. Dazu ist es notwendig, einen Eintrag in der "
+"Referenztabelle zu erstellen, über den die Quelle dann geöffnet\n"
+"werden kann. Außerdem ist es notwendig, den Pfad oder eine URL in die "
+"Attributtabelle des Vektorlayers für das entsprechende Objekt einzutragen. "
+"Eine weitere Regel, die für URLs verwendet werden kann, die keine\n"
+"Dateiendung für das Dokument enthalten, das Sie öffnen möchten, besteht "
+"darin, die Dateierweiterung vor der URL anzugeben. Das Format ist dann --- "
+"``Dateiendung:URL``. Vor die URL wird die Dateiendung mit einem Doppelpunkt "
+"geschrieben. Dies ist besonders nützlich für den Zugriff auf Dokumente in "
+"Wikis und anderen Webseiten, die eine Datenbank verwenden, um die Webseiten "
+"zu verwalten (siehe Tabelle `evis_examples`_)."
 
 # f0cab23d9355494490b2dacf2152c382
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:225
 msgid "Using the Generic Event Browser"
-msgstr ""
+msgstr "Arbeiten mit dem Ereignisbrowser"
 
 # e5ad3ff9db45415ca9b6dee164244e54
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:227
 msgid ""
 "When the :guilabel:`Event Browser` window opens a photograph will appear in "
 "the display window if the document referenced in the vector file attribute "
-"table is an image and if the file location information in the :guilabel:"
-"`Options` window is properly set. If a photograph is expected and it does "
-"not appear it will be necessary to adjust the parameters in the :guilabel:"
-"`Options` window."
+"table is an image and if the file location information in the "
+":guilabel:`Options` window is properly set. If a photograph is expected and "
+"it does not appear it will be necessary to adjust the parameters in the "
+":guilabel:`Options` window."
 msgstr ""
+"Wenn Sie den :guilabel:`Ereignisbrowser` starten, öffnet sich ein Foto und "
+"wird im Display angezeigt, wenn in der Attributtabelle auf das entsprechende "
+"Foto verwiesen wird, und wenn der Speicherort der Datei im Reiter "
+":guilabel:`Optionen` richtig eingestellt ist. Wenn Sie ein Foto erwarten, es "
+"aber nicht angezeigt wird, kontrollieren Sie die Parameter nochmals."
 
 # 74741ff074074aa7be27ca2d08892c13
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:233
@@ -351,6 +490,18 @@ msgid ""
 "necessary to adjust the parameters in the :guilabel:`Options` window so the "
 "file can be located by eVis."
 msgstr ""
+"Wenn auf ein Dokument (oder ein Bild, das nicht über eine eVis bekannte "
+"Dateierweiterung verfügt) in der Attributtabelle verwiesen wird, wird das "
+"Feld mit dem Dateipfad grün hervorgehoben dargestellt, wenn die\n"
+"Dateierweiterung sich in der definierten Referenztabelle im Reiter "
+":guilabel:`Externe Applikationen konfigurieren` befindet. Um das Dokument zu "
+"öffnen, doppelklicken Sie auf die grün markierte Zeile im Attribut "
+"Informationsfenster. Wenn auf ein Objekt in der Attributtabelle verwiesen "
+"wird und der Dateipfad nicht grün markiert ist, dann müssen Sie einen "
+"Eintrag für die Dateierweiterung entsprechend ergänzen. Wenn der Dateipfad "
+"grün markiert ist, sich aber nicht bei einem Doppelklick öffnet, müssen Sie "
+"die Parameter im Reiter :guilabel:`Optionen` einstellen, damit die Datei von "
+"eVis gefunden und dargestellt werden kann."
 
 # 20f2c487832343309b3c7cf648ac705a
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:246
@@ -363,18 +514,27 @@ msgid ""
 "window. The arrow will be centered over the point that is associated with "
 "the photograph or other document."
 msgstr ""
+"Wenn keine Kompassrichtung vorhanden ist, wird im Reiter "
+":guilabel:`Optionen` ein rotes Sternchen angezeigt, sofern das Vektorobjekt, "
+"das mit dem Foto verlinkt ist, angezeigt wird. Wenn eine Kompassrichtung "
+"vorhanden ist, erscheint ein Pfeil und weist in die Richtung, die durch der "
+"Wert in der Anzeige Kompassrichtung definiert ist. Der Pfeil wird über dem "
+"Vektorpunkt, der mit dem Foto oder einem anderen Dokument verknüpft ist, "
+"zentriert dargestellt."
 
 # f59de74a57b642e299cc191ee71be5da
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:253
 msgid ""
-"To close the :guilabel:`Generic Event Browser` window click on the **[Close]"
-"** button from the :guilabel:`Display` window."
+"To close the :guilabel:`Generic Event Browser` window click on the "
+"**[Close]** button from the :guilabel:`Display` window."
 msgstr ""
+"Um den Ereignisbrowser zu schließen, klicken Sie auf den Knopf "
+"**[Schließen]** im Dialogfenster."
 
 # d491f382dc41455a95acd105ff950899
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:259
 msgid "Event ID Tool"
-msgstr ""
+msgstr "Ereignis-ID-Werkzeug"
 
 # 5f0b90ccbabe4be19b6c52aa06c33e60
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:261
@@ -386,11 +546,18 @@ msgid ""
 "the camera was pointed when the image was acquired. This layer must be "
 "loaded into QGIS before running the 'Event ID' tool."
 msgstr ""
+"Das 'Ereignis-ID-Werkzeug' ermöglicht es Ihnen, ein Foto oder Dokument "
+"anzuzeigen, indem Sie auf ein Objekt eines aktivierten Vektorlayers im QGIS "
+"Kartenfenster klicken. Das Vektorobjekt muss auf Attribute verweisen, welche "
+"Informationen zum Pfad und Namen der Datei und gegebenenfalls der "
+"Kompassrichtung während der Aufnahme mit einer Kamera enthalten. Der "
+"Vektorlayer muss vor der Ausführung des Ereignis-ID-Werkzeugs in QGIS "
+"geladen worden sein."
 
 # e74a6f3506694c34869a5b6cd28a5430
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:271
 msgid "Launch the Event ID module"
-msgstr ""
+msgstr "Starten des Ereignis-ID-Werkzeugs"
 
 # b87f014f74d4423f909c602e35a4a24f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:273
@@ -400,24 +567,37 @@ msgid ""
 "This will cause the cursor to change to an arrow with an 'i' on top of it "
 "signifying that the ID tool is active."
 msgstr ""
+"Um das 'Ereignis-ID-Werkzeug' zu starten, klicken Sie entweder auf das "
+"|event_id| :sup:`Ereignis-ID-Werkzeug` Icon oder auf "
+":menuselection:`Datenbanken --> eVis --> Ereignis-ID-Werkzeug`. Dadurch "
+"wechselt der Mauszeiger zu einem Pfeil mit einem 'i' und zeigt an, dass das "
+"Ereignis-ID-Werkzeug aktiv ist."
 
 # 1c80ac520b0c467199c6e46d8f0afc21
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:278
 msgid ""
 "To view the photographs linked to vector features in the active vector layer "
 "displayed in the QGIS map window, move the Event ID cursor over the feature "
-"and then click the mouse. After clicking on the feature, the :guilabel:"
-"`Generic Event Browser` window is opened and the photographs on or near the "
-"clicked locality are available for display in the browser. If more than one "
-"photograph is available, you can cycle through the different features using "
-"the **[Previous]** and **[Next]** buttons. The other controls are described "
-"in the ref:`evis_browser` section of this guide."
+"and then click the mouse. After clicking on the feature, the "
+":guilabel:`Generic Event Browser` window is opened and the photographs on or "
+"near the clicked locality are available for display in the browser. If more "
+"than one photograph is available, you can cycle through the different "
+"features using the **[Previous]** and **[Next]** buttons. The other controls "
+"are described in the ref:`evis_browser` section of this guide."
 msgstr ""
+"Um die mit den Vektorobjekten verlinkten Fotos in dem aktiven Vektorlayer "
+"anzuzeigen, bewegen Sie den Ereignis-ID Mauszeiger über das Objekt und "
+"klicken dann auf die linke Maustaste. Nach einem Klick auf das Objekt, wird "
+"der :guilabel:`Ereignisbrowser` geöffnet und die Fotos auf oder in der Nähe "
+"des angeklickten Ortes werden angezeigt. Wenn mehr als ein Foto zur "
+"Verfügung steht, können Sie durch die verschiedenen Objekte wandeln, indem "
+"Sie auf die Schaltflächen **[Vorgeriges]** und **[Nächstes]** drücken. Die "
+"anderen Steuerelemente sind in Kapitel ref:`evis_browser` beschrieben."
 
 # 163a4b5691bd4ba7bd6decb9d3c52b8b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:290
 msgid "Database connection"
-msgstr ""
+msgstr "Datenbankverbindung"
 
 # 561a1241175449d1894790abe0de11cb
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:292
@@ -425,6 +605,8 @@ msgid ""
 "The 'Database Connection' module provides tools to connect to and query a "
 "database or other ODBC resource, such as a spreadsheet."
 msgstr ""
+"Der Dialog Datenbankverbindung ermöglicht es, sich mit einer Datenbank oder "
+"anderen ODBC Quelle, z.B. Excel-Tabellen zu verbinden."
 
 # e1119061bc034e6c88d08c0d0aed93d2
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:295
@@ -434,39 +616,55 @@ msgid ""
 "reading from an ODBC database (such as an Excel spreadsheet) it is necessary "
 "to configure your ODBC driver for the operating system you are using."
 msgstr ""
+"Das eVis Plugin kann direkt mit Microsoft Access, PostgreSQL, MySQL und "
+"SQLite Datenbanken verbunden werden. Außerdem können weitere Datenformate "
+"über ODBC angesprochen werden. Dabei muss der ODBC-Treiber entsprechend auf "
+"ihrem Betriebssystem konfiguriert werden."
 
 # 0851266f1caa4b839b102be3cdd7cea7
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:303
 msgid "Launch the Database Connection module"
-msgstr ""
+msgstr "Starten des Dialogs Datenbankverbindung"
 
 # 8b80ba73a725454d8c8d7914045a0516
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:305
 msgid ""
 "To launch the 'Database Connection' module either click on the appropriate "
-"icon |evis_connect| :sup:`eVis Database Connection` or click on :"
-"menuselection:`Plugins --> eVis --> Database Connection`. This will launch "
-"the :guilabel:`Database Connection` window. The window has three tabs: :"
-"guilabel:`Predefined Queries`, :guilabel:`Database Connection`, and :"
-"guilabel:`SQL Query`. The :guilabel:`Output Console` window at the bottom of "
-"the window displays the status of actions initiated by the different "
+"icon |evis_connect| :sup:`eVis Database Connection` or click on "
+":menuselection:`Plugins --> eVis --> Database Connection`. This will launch "
+"the :guilabel:`Database Connection` window. The window has three tabs: "
+":guilabel:`Predefined Queries`, :guilabel:`Database Connection`, and "
+":guilabel:`SQL Query`. The :guilabel:`Output Console` window at the bottom "
+"of the window displays the status of actions initiated by the different "
 "sections of this module."
 msgstr ""
+"Um den Dialog Datenbankverbindung zu starten, klicken Sie auf das Icon "
+"|evis_connect| :sup:`Datenbankverbindung` oder gehen Sie in das Menü "
+":menuselection:`Datenbanken --> eVis --> Datenbankverbindung`. Dadurch wird "
+"der Dialog Datenbankverbindung gestartet und Sie finden die drei Reiter "
+":guilabel:`Vordefinierte Abfragen`, :guilabel:`Datenbankverbindung` und "
+":guilabel:`SQL-Abfrage`. Im Fenster :guilabel:`Ausgabekonsole` werden "
+"Informationen zu den jeweiligen Aktionen angezeigt."
 
 # d71ba7ffa87a4d8aa61534f0854dc518
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:316
 msgid "Connect to a database"
-msgstr ""
+msgstr "Verbinden mit einer Datenbank"
 
 # cf812eba38d047849d82856d9cbf4785
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:318
 msgid ""
 "Click on the :guilabel:`Database Connection` tab to open the database "
-"connection interface. Next, use the :menuselection:`Database Type` |"
-"selectstring| combobox to select the type of database that you want to "
+"connection interface. Next, use the :menuselection:`Database Type` "
+"|selectstring| combobox to select the type of database that you want to "
 "connect to. If a password or username is required, that information can be "
 "entered in the :guilabel:`Username` and :guilabel:`Password` textboxes."
 msgstr ""
+"Drücken Sie auf den Reiter :guilabel:`Datenbankverbindung` und definieren "
+"Sie dann im Dropdown-Menü den :menuselection:`Datenbanktyp`, mit dem Sie "
+"sich verbinden wollen. Wenn ein Passwort oder Benutzername erforderlich ist, "
+"können diese Informationen in den Feldern Benutzername und Passwort "
+"eingegeben werden."
 
 # da4984bba2d6465e8cc971b45ddd1aab
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:324
@@ -475,6 +673,10 @@ msgid ""
 "option is not available if you selected \"MS Access\" as the database type. "
 "If the database resides on your desktop you should enter \"localhost\"."
 msgstr ""
+"Geben Sie dann den :guilabel:`Datenbank-Host` an. Diese Option ist nicht "
+"vorhanden, wenn Sie 'MSAccess' als Datenbanktyp ausgewählt haben. Wenn die "
+"Datenbank auf Ihrem Rechner läuft, geben Sie an dieser Stelle 'localhost' "
+"ein."
 
 # 376d184855d44174a9dac1688b279157
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:328
@@ -483,16 +685,23 @@ msgid ""
 "you selected \"ODBC\" as the database type, you need to enter the data "
 "source name."
 msgstr ""
+"Nun geben sie den Namen der Datenbank im Feld :guilabel:`Datenbankname` ein. "
+"Wenn Sie hier 'ODBC' als Datenbanktyp ausgewählt haben, müssen Sie den Namen "
+"der Datenquelle eingeben."
 
 # 07830a228df146768708d5f7da900473
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:331
 msgid ""
 "When all of the parameters are filled in, click on the **[Connect]** button. "
-"If the connection is successful, a message will be written in the :guilabel:"
-"`Output Console` window stating that the connection was established. If a "
-"connection was not established you will need to check that the correct "
-"parameters were entered above."
+"If the connection is successful, a message will be written in the "
+":guilabel:`Output Console` window stating that the connection was "
+"established. If a connection was not established you will need to check that "
+"the correct parameters were entered above."
 msgstr ""
+"Nachdem Sie alle Parameter angegeben haben, klicken Sie auf den "
+"**[Verbinden]** Knopf. Wenn die Verbindung erfolgreich ist, wird dies im "
+"Ausgabefenster angezeigt. Im anderen Fall müssen Sie die Parameter nochmal "
+"überprüfen, die Sie eingegeben haben."
 
 # 3635b3899c6d49c38e5bc59387d5e412
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:350
@@ -500,22 +709,24 @@ msgid ""
 "**Database Type**: A dropdown list to specify the type of database that will "
 "be used."
 msgstr ""
+"**Datenbanktyp**: Eine Dropdown-Liste, um den zu verwendenen Datenbanktyp "
+"festzulegen."
 
 # e9a39a9409864b688ffc6f394a83a7bc
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:352
 msgid "**Database Host**: The name of the database host."
-msgstr ""
+msgstr "**Datenbank-Host**: Der Name des Datenbank-Hosts."
 
 # d2777cef8d7f4e459cadbd8f9ae0bd5f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:353
 msgid ""
 "**Port** The port number if a MySQL or PostgreSQL database type is selected."
-msgstr ""
+msgstr "**Port**: Die Portnummer,  wenn MYSQL oder PostgreSQL benutzt wird."
 
 # 7600476a0de643e5bd39483d2eebda4c
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:354
 msgid "**Database Name** The name of the database."
-msgstr ""
+msgstr "**Datenbankname**: Der Name der Datenbank."
 
 # 4c9f53ebb4304ec3878ac91f4a396667
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:355
@@ -523,6 +734,7 @@ msgid ""
 "**Connect** A button to connect to the database using the parameters defined "
 "above."
 msgstr ""
+"**Verbinden**: Ein Knopf, um sich mit der definierten Datenbank zu verbinden."
 
 # 36842064f5ae4c48b63c4a0f0d4d541e
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:357
@@ -530,32 +742,39 @@ msgid ""
 "**Output Console** The console window where messages related to processing "
 "are displayed."
 msgstr ""
+"**Ausgabekonsole**: Hier werden Informationen zu den Prozessen angezeigt."
 
 # f5bcedc2b6d34c84b4b7be83d9c9aa9c
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:359
 msgid "**Username**: Username for use when a database is password protected."
 msgstr ""
+"**Benutzername**: Benutzername, um sich mit einer passwortgeschützten "
+"Datenbank zu verbinden."
 
 # 620addcfd74a451da2f40a89f421ce13
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:360
 msgid "**Password**: Password for use when a database is password protected."
-msgstr ""
+msgstr "**Passwort**: Passwort, wenn die Datenbank passwortgeschützt ist."
 
 # 9b0ff30df09c4065b0a9aadb18bd5f21
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:361
 msgid "**Predefined Queries**: Tab to open the \"Predefined Queries\" window."
 msgstr ""
+"**Vordefinierte Abfragen**: Reiter, um den Dialog 'Vordefinierte Abfragen' "
+"zu öffnen."
 
 # 6780ee7cb1564a65a5bf739c87716416
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:362
 msgid ""
 "**Database Connection**: Tab to open the \"Database Connection\" window."
 msgstr ""
+"**Datenbankverbindung**: Reiter, um den Dialog 'Datenbankverbindung' zu "
+"öffnen."
 
 # ae40711662f54ce3a1a85f896ae9f5bc
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:363
 msgid "**SQL Query**: Tab to open the \"SQL Query\" window."
-msgstr ""
+msgstr "**SQL-Abfrage**: Reiter, um den Dialog 'SQL-Abfrage' zu öffnen."
 
 # bfb69c203fbb47f684cd4b9dd768132d
 # 45ad36a7ddf64d55931e8206bce63f37
@@ -564,17 +783,17 @@ msgstr ""
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:407
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:480
 msgid "**Help**: Displays the on line help."
-msgstr ""
+msgstr "**Hilfe**: Zeigt die Online-Hilfe an."
 
 # ba4da3c7eaf34cc6a38d2910c383417f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:365
 msgid "**OK**: Close the main \"Database Connection\" window."
-msgstr ""
+msgstr "**OK**: Schließen des Dialogs 'Datenbankverbindung'."
 
 # e6b75d9b78a94425a8f5a7320ec1b81b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:371
 msgid "Running SQL queries"
-msgstr ""
+msgstr "SQL-Abfrage durchführen"
 
 # 4e9fca73f1d149b8a2a01bbbff496a02
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:373
@@ -583,40 +802,55 @@ msgid ""
 "resource. In eVis the output from these queries is a vector layer added to "
 "the QGIS map window. Click on the :guilabel:`SQL Query` tab to display the "
 "SQL query interface. SQL commands can be entered in this text window. A "
-"helpful tutorial on SQL commands is available at http://www.w3schools.com/"
-"sql. For example, to extract all of the data from a worksheet in an Excel "
-"file, ``select * from [sheet1$]`` where ``sheet1`` is the name of the "
-"worksheet."
+"helpful tutorial on SQL commands is available at "
+"http://www.w3schools.com/sql. For example, to extract all of the data from a "
+"worksheet in an Excel file, ``select * from [sheet1$]`` where ``sheet1`` is "
+"the name of the worksheet."
 msgstr ""
+"SQL-Abfragen werden verwendet, um Informationen aus einer Datenbank oder "
+"ODBC-Ressource zu extrahieren. In eVis wird die Abfrage als Vektorlayer zum "
+"QGIS Kartenfenster hinzugefügt. Klicken Sie auf den Reiter "
+":guilabel:`SQL-Abfrage`, um die SQL-Abfrage-Schnittstelle zu öffnen. Sie "
+"können dann SQL-Kommandos in dem Textfenster eingeben. Ein hilfreiches "
+"Tutorial über SQL-Befehle finden Sie unter der "
+"http://www.w3schools.com/sql/. Um z.B. einen Auszug aller Daten aus einer "
+"Excel-Datei zu erstellen, können Sie eingeben ``select * from [Blatt1\\$]`` "
+"wobei ``Blatt1'' der Name des Arbeitsblattes ist."
 
 # 989c792aaf7e4fab9ebf5a43570a5411
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:381
 msgid ""
 "Click on the **[Run Query]** button to execute the command. If the query is "
 "successful a :guilabel:`Database File Selection` window will be displayed. "
-"If the query is not successful an error message will appear in the :guilabel:"
-"`Output Console` window."
+"If the query is not successful an error message will appear in the "
+":guilabel:`Output Console` window."
 msgstr ""
+"Klicken Sie dann auf die Knopf **[Abfrage ausführen]**, um den Befehl "
+"auszuführen. Wenn die Abfrage erfolgreich ist, wird ein Auswahlfenster "
+"angezeigt. Wenn die Abfrage nicht erfolgreich ist, erscheint eine\n"
+"Fehlermeldung in der Ausgabekonsole."
 
 # b020c3a2e925434a90ca823e62e684d3
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:386
 msgid ""
 "In the :guilabel:`Database File Selection` window, enter the name of the "
-"layer that will be created from the results of the query in the :guilabel:"
-"`Name of New Layer` textbox."
+"layer that will be created from the results of the query in the "
+":guilabel:`Name of New Layer` textbox."
 msgstr ""
+"Im :guilabel:`Datenbank Dateiauswahl` Fenster geben Sie den Namen des Layers "
+"an, der aus dem Ergebnis der Abfrage erstellt werden soll."
 
 # 1b3e773a948345639a98edc917f48006
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:402
 msgid "**SQL Query Text Window**: A screen to type SQL queries."
-msgstr ""
+msgstr "**SQL-Abfrage**: Ein Fenster zur Eingabe von SQL-Abfragen."
 
 # 710191233c284ef89a09bcedcb853cc8
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:403
 msgid ""
 "**Run Query**: Button to execute the query entered in the :guilabel:`SQL "
 "Query Window`."
-msgstr ""
+msgstr "**Abfrage ausführen**: Knopf, um die SQL-Abfrage auszuführen."
 
 # d682129d13a643bd854b36909d5a947a
 # 71a57cac5e9443dd8beea14b0b09d927
@@ -626,11 +860,12 @@ msgid ""
 "**Console Window**: The console window where messages related to processing "
 "are displayed."
 msgstr ""
+"**Ausgabekonsole**: Hier werden Informationen zu den Prozessen angezeigt."
 
 # d25d8a00b07144648a91ee6f5f41ec6b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:408
 msgid "**OK**: Closes the main :guilabel:`Database Connection` window."
-msgstr ""
+msgstr "**OK**: Schließt das Fenster :guilabel:`Datenbankverbindung`."
 
 # c6eec31e9bc844718a67a5d1ff5786dc
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:410
@@ -641,6 +876,12 @@ msgid ""
 "the **[OK]** button causes the vector layer created from the SQL query to be "
 "displayed in the QGIS map window."
 msgstr ""
+"Verwenden Sie die |selectstring| Dropdown-Menüs :guilabel:`X Koordinate` "
+"|selectstring| und :guilabel:`Y Koordinate`, um die Spalten der Datenbank zu "
+"selektieren, in denen die ``X`` (oder Longitude) and ``Y`` (oder Latitude) "
+"Koordinaten abgelegt sind. Wenn Sie nun auf den **[OK]** Knopf drücken, wird "
+"ein Vektorlayer entsprechend der SQL-Abfrage erstellt und als neuer Layer in "
+"QGIS angezeigt."
 
 # 14402cc1248a4f45bcf41921281cab47
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:416
@@ -649,11 +890,14 @@ msgid ""
 "command that is accessed by right clicking on the layer name in the QGIS map "
 "legend and then selecting 'Save as...'"
 msgstr ""
+"Sie können den Layer als Shapefile speichern, wenn Sie mit dem Mauspfeil auf "
+"den Layernamen in der Legende zeigen und dann auf die rechte Maustaste "
+"klicken. Dort erscheint dann die Option 'Als Shapefile speichern'."
 
 # 91924c3fca164af2bba2747234e3a359
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:420
 msgid "**Creating a vector layer from a Microsoft Excel Worksheet**"
-msgstr ""
+msgstr "**Einen Vektorlayer von einem Microsoft Excel Arbeitsblatt erstellen**"
 
 # 0278b9a715b7487bae8929b2397dd42e
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:422
@@ -665,14 +909,22 @@ msgid ""
 "open the Excel file (you'll need to close QGIS if there if you are connected "
 "to the file to allow you to edit the file) and then use :menuselection:`Edit "
 "--> Delete` to remove the blank rows from the file. To avoid this problem "
-"you can simply delete several rows in the Excel Worksheet using :"
-"menuselection:`Edit --> Delete` before saving the file."
+"you can simply delete several rows in the Excel Worksheet using "
+":menuselection:`Edit --> Delete` before saving the file."
 msgstr ""
+"Beim Erstellen eines Vektorlayers aus einem Microsoft Excel-Arbeitsblattes "
+"entdecken Sie vielleicht, dass unerwünschte Nullwerte (\"0'') gemeinsam mit "
+"gültigen Daten in den Tabellenzeilen vorhanden sind. Dies kann verursacht "
+"werden, wenn Sie die Felder in Excel mit der Backspace Taste gelöscht haben. "
+"Um dieses Problem zu beheben, müssen Sie die Excel-Datei öffnen. (Sie müssen "
+"dazu QGIS und die Verbindung zur Excel-Tabelle zuerst beenden.) Dann können "
+"Sie die Datei in Excel bearbeiten und die leeren Zeilen über das "
+":menuselection:`Bearbeiten --> Löschen entfernen und dann wieder abspeichern."
 
 # 0d76e51efd8d412694e9e38f4f9040fb
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:436
 msgid "Running predefined queries"
-msgstr ""
+msgstr "Vordefinierte Abfragen starten"
 
 # f5f7e4ca557f446eb82d5b4ef2386279
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:438
@@ -682,6 +934,12 @@ msgid ""
 "with SQL commands. Click on the :guilabel:`Predefined Queries` tab to "
 "display the predefined query interface."
 msgstr ""
+"Über den Reiter :guilabel:`Vordefinierte Abfragen` können Sie zuvor "
+"schriftlich erstellte SQL-Abfragen, die als Datei im XML-Format gespeichert "
+"werden, wieder aufrufen. Dies ist besonders hilfreich, wenn Sie nicht "
+"vertraut sind mit SQL-Befehlen. Klicken Sie auf den Reiter "
+":guilabel:`Vordefinierte Abfragen`, um die vordefinierte "
+"Abfrage-Schnittstelle zu öffnen."
 
 # 5dc2e77227a84bfdb0ead4b45004e15c
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:443
@@ -694,6 +952,11 @@ msgid ""
 "description of the query is displayed in the text window under the dropdown "
 "menu."
 msgstr ""
+"Um eine Reihe von vordefinierten Abfragen zu laden, klicken Sie auf das "
+"|evis_file| :sup:`Datei öffnen` Icon. Dann können Sie die Datei mit den "
+"abgespeicherten SQL-Befehlen auswählen und laden. Danach erscheinen die "
+"einzelnen Abfragen im Dropdown-Menü. Eine Beschreibung der SQL-Abfrage wird "
+"jeweils im Textfenster unterhalb des Dropdown-Menüs angezeigt."
 
 # fb500dd4ea3e49fa8d671ad04c07deb4
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:450
@@ -703,6 +966,10 @@ msgid ""
 "query window. If it is the first time you are running a predefined query or "
 "are switching databases, you need to be sure to connect to the database."
 msgstr ""
+"Wählen Sie nun eine Abfrage, die Sie aus dem Dropdown-Menü ausführen möchten "
+"und klicken Sie auf den Reiter :guilabel:`SQL-Abfrage`, um die Abfrage "
+"anzuschauen. Wenn Sie eine vordefinierten Abfrage das erste Mal starten, "
+"müssen Sie sich erst vergewissern, dass die Datenbankverbindung steht."
 
 # b3d6548ff2e14094ba0382d63fc68393
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:455
@@ -712,6 +979,11 @@ msgid ""
 "Selection` window will be displayed. If the query is not successful an error "
 "message will appear in the :guilabel:`Output Console` window."
 msgstr ""
+"Klicken Sie auf den Knopf **[Abfrage ausführen]** im Reiter "
+":guilabel:`SQL-Abfrage`. Wenn die Abfrage erfolgreich ist, wird ein "
+"Auswahlfenster angezeigt. Wenn die Abfrage nicht erfolgreich ist, erscheint "
+"eine\n"
+"Fehlermeldung in der Ausgabekonsole."
 
 # f7a77d2f3acf4822811411ed0bf91285
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:472
@@ -719,6 +991,8 @@ msgid ""
 "**Open Query File**: Launches the \"Open File\" file browser to search for "
 "the XML file holding the predefined queries."
 msgstr ""
+"**Öffne Datei**: Startet den 'Datei öffnen' Dialog, um eine XML-Datei mit "
+"vordefinierten Abfragen zu laden."
 
 # 75411e9acc54443f9bee6a4690380df4
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:474
@@ -726,6 +1000,8 @@ msgid ""
 "**Predefined Queries**: A dropdown list with all of the queries defined by "
 "the predefined queries XML file."
 msgstr ""
+"**Vordefinierte Abfragen**: Eine Dropdown-Liste mit allen Abfragen der "
+"bereits erstellten XML-Datei."
 
 # 522d75c001034efe9e9cfb3c1fa91ba0
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:476
@@ -733,58 +1009,61 @@ msgid ""
 "**Query description**: A short description of the query. This description is "
 "from the predefined queries XML file."
 msgstr ""
+"**Abfragebeschreibung**: Eine Beschreibung der Abfrage. Diese Beschreibung "
+"ist in der XML-Datei enthalten."
 
 # 9dff5c5a74b74d14a9c85ef4ee7129cd
 # d121050a8c8c4a809977c6416ebef932
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:481
 msgid "**OK**: Closes the main \"Database Connection\" window."
-msgstr ""
+msgstr "**OK**: Schließt das Fenster 'Datenbankverbindung'."
 
 # 1f8db4f528054a11aa3b842d94409fa2
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:488
 msgid "XML format for eVis predefined queries"
-msgstr ""
+msgstr "XML-Format für vordefinierte Abfragen in eVis"
 
 # df858f6808454504b35a6b79425104db
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:490
 msgid "The XML tags read by eVis"
-msgstr ""
+msgstr "Die von eVis gelesenen XML-Tags"
 
 # 615cb5b2c9fa4109a057a5a01c06a00f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:493
 msgid "Tag"
-msgstr ""
+msgstr "Tag"
 
 # 28333713347d49d38920d3416fd845fa
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:493
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 # 4eafa183427c440e8f7528b4ef999577
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:495
 msgid "query"
-msgstr ""
+msgstr "query"
 
 # 5b75ddc5358247a28f575c1f362a6cf7
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:495
 msgid "Defines the beginning and end of a query statement."
-msgstr ""
+msgstr "Definiert den Anfang und das Ende einer Abfrage."
 
 # 7e14db2de4bb4f6b934f3f7303f3964e
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:497
 msgid "shortdescription"
-msgstr ""
+msgstr "shortdescription"
 
 # b689c9ce88db446288cddd55aaa57aed
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:497
 msgid ""
 "A short description of the query that appears in the eVis dropdown menu."
 msgstr ""
+"Eine kurze Beschreibung der Abfrage, die im eVis Dropdown-Menü erscheint."
 
 # 3deb5efe4d904c858c9c0da678d21e3c
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:499
 msgid "description"
-msgstr ""
+msgstr "description"
 
 # 2d0f2ef1e21a4e3abd5fb2d903eec21f
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:499
@@ -792,11 +1071,13 @@ msgid ""
 "A more detailed description of the query displayed in the Predefined Query "
 "text window."
 msgstr ""
+"Eine detailiertere Beschreibung der Abfrage, die in der eVis "
+"Abfragebeschreibung angezeigt wird."
 
 # 93a75eb042d942d4a339c7c083ecb202
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:501
 msgid "databasetype"
-msgstr ""
+msgstr "databasetype"
 
 # 2c66b3f246ba4783bf6ccc0f336835d5
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:501
@@ -804,67 +1085,69 @@ msgid ""
 "The database type as defined in the Database Type dropdown menu in the "
 "Database Connection tab."
 msgstr ""
+"Der Datebanktyp, wie er im Dropdown-Menü Datenbanktyp festgelegt wurde."
 
 # fb31a9f98bd74bf0b4f4adaf9cc11620
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:503
 msgid "databaseport"
-msgstr ""
+msgstr "databaseport"
 
 # d30d3e56e3104497940d80d5b88ace49
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:503
 msgid "The port as defined in the Port textbox in the Database Connection tab."
 msgstr ""
+"Der definierte Port, über den die Verbindung mit der Datenbank stattfindet."
 
 # fb22850d34a74322b40f99c1e816b706
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:505
 msgid "databasename"
-msgstr ""
+msgstr "databasename"
 
 # 0685dd5f5e3d49bf842d3b6471958c19
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:505
 msgid ""
 "The database name as defined in the Database Name textbox in the Database "
 "Connection tab."
-msgstr ""
+msgstr "Der definierte Datenbankname aus dem Reiter Datenbankverbindung."
 
 # 89a5e0e530d84853b3c3335d9f033d03
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:507
 msgid "databaseusername"
-msgstr ""
+msgstr "databaseusername"
 
 # 92d51096775f4d68ab04593ee10933db
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:507
 msgid ""
 "The database username as defined in the Username textbox in the Database "
 "Connection tab."
-msgstr ""
+msgstr "Der definierte Benutzername aus dem Reiter Datenbankverbindung."
 
 # 65fec61a8dc24f35b226c707d95f184d
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:509
 msgid "databasepassword"
-msgstr ""
+msgstr "databasepassword"
 
 # 7e007934a4be420a8ae968bdcf0c76dc
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:509
 msgid ""
 "The database password as defined in the Password textbox in the Database "
 "Connection tab."
-msgstr ""
+msgstr "Das definierte Passwort aus dem Reiter Datenbankverbindung."
 
 # a8f3e00f71d744938cedf50d832c5071
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:511
 msgid "sqlstatement"
-msgstr ""
+msgstr "sqlstatement"
 
 # c4ab7a40116d4279ba69ff75e0dfecaa
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:511
 msgid "The SQL command."
-msgstr ""
+msgstr "Die SQL-Abfrage."
 
 # 5565e90d287547f3a81e0a7cae7ae89b
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:513
 msgid "autoconnect"
-msgstr ""
+msgstr "autoconnect"
 
 # a2f7c6a5095f4d55819b04d1f96694dc
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:513
@@ -873,8 +1156,11 @@ msgid ""
 "to automatically connect to database without running the database connection "
 "routine in the Database Connection tab."
 msgstr ""
+"Eine Option ('true' oder 'false'), die festlegt, ob automatisch mit der "
+"Datenbank verbunden werden soll, ohne die Routine aus dem Reiter "
+":guilabel:`Datenbankverbindung` zu durchlaufen."
 
 # ef07a0ddfd79402d97d904b03c9b3bcd
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:518
 msgid "A complete sample XML file with three queries is displayed below:"
-msgstr ""
+msgstr "Ein Beispiel einer XML-Datei mit drei Abfragen ist unten dargestellt:"
