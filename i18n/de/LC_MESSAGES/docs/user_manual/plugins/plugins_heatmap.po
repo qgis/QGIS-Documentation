@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 8a5f2b3ef5ca42d5b60688164f5d517f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:10
 msgid "Heatmap Plugin"
-msgstr ""
+msgstr "Heatmap Plugin"
 
 # 6fcfa116b8314fcb8f8266a670b7f496
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:12
@@ -30,19 +33,26 @@ msgid ""
 "point related information. From the result \"hotspots\" can easily be "
 "identified."
 msgstr ""
+"Das |heatmap| :sup:`Heatmap` Plugin ermöglicht es, ein Heatmap Rasterlayer "
+"auf Basis eines Vektorpunktlayers zu berechnen. Eine Heatmap ist ein "
+"Rasterlayer, der die Dichte oder Größe punktbezogener Informationen "
+"darstellt. Aus dem Ergebnis können 'Hotspots' einfach erkannt werden."
 
 # d72bd6f97f9840e583b3bb3a7c7bf8e1
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:18
 msgid "Activate the Heatmap plugin"
-msgstr ""
+msgstr "Das Heatmap Plugin starten"
 
 # 608c23b488c34d418da450c871967ad5
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:20
 msgid ""
 "First this core plugin needs to be activated using the Plugin Manager (see "
-"Section :ref:`load_core_plugin`). After activation the heatmap icon |"
-"heatmap| can be found in the Raster Toolbar."
+"Section :ref:`load_core_plugin`). After activation the heatmap icon "
+"|heatmap| can be found in the Raster Toolbar."
 msgstr ""
+"Als erstes muss das Kern-Plugin mit dem Plugin Manager aktiviert werden "
+"(siehe Kapitel :ref:`load_core_plugin`). Sie finden dann das Icon |heatmap| "
+"in der Werkzeugleiste."
 
 # 9253d377b7964d76bb95a7a314ec0ee1
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:24
@@ -50,11 +60,13 @@ msgid ""
 "Select from menu :menuselection:`View --> Toolbars --> Raster` to activate "
 "the Raster Toolbar when it is not yet activated."
 msgstr ""
+"Wählen Sie aus dem Menü :menuselection:`Einstellungen --> Toolbars --> "
+"Raster`, um bei Bedarf die Raster Werkzeugleiste zu aktivieren."
 
 # fdd09ce3064440f68d1b3d4051aa131f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:28
 msgid "Using the Heatmap plugin"
-msgstr ""
+msgstr "Das Heatmap Plugin verwenden"
 
 # 83a224cdf297413b98444e06cc92ab27
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:30
@@ -62,18 +74,20 @@ msgid ""
 "The |heatmap| :sup:`Heatmap` toolbutton starts the dialog of the Heatmap "
 "plugin (see figure_heatmap_2_)."
 msgstr ""
+"Das |heatmap| :sup:`Heatmap` Icon started den Dialog des Plugins (siehe "
+"figure_heatmap_2_)."
 
 # c1e88ed7c8004f4280e7ba368d7ddf27
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:33
 msgid "The dialog has the following options:"
-msgstr ""
+msgstr "Der Dialog hat folgende Optionen:"
 
 # 2da80eeae0a14825a6f02e57fd4d2595
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:35
 msgid ""
 "**Input Point Vector** dialog: Provides a selection of loaded point vector "
 "maps."
-msgstr ""
+msgstr "**Eingabepunktlayer**: Auswahl zu ladender Punktvektorlayer."
 
 # 59e446e606fa49b3a686e0bbe3b656cc
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:36
@@ -82,6 +96,8 @@ msgid ""
 "the name of the output raster the Heatmap plugin will generate. It is not "
 "necessary to give a file extension"
 msgstr ""
+"**Ausgaberaster**: Mit dem |browsebutton| Knopf kann das Ausgaberaster "
+"definiert werden. Eine Dateierweiterung muss nicht angegeben werden"
 
 # 405ec487e4344c5e9ed2f5451c58691a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:39
@@ -90,6 +106,7 @@ msgid ""
 "supported by GDAL can be choosen, GeoTIFF is most in cases the best format "
 "to choose."
 msgstr ""
+"**Ausgabeformat**: Selektion des Ausgabeformats. Vorgegeben ist GeoTiff."
 
 # 1698d166ae8c4890a2de8d4175ee7b9b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:41
@@ -99,6 +116,10 @@ msgid ""
 "more circles around points overlap eachother the brighter hotspots will "
 "occur!"
 msgstr ""
+"**Radius**: kann verwendet werden, um dn Radius im Metern oder "
+"Karteneinheiten zu definieren. Wenn der Radius zu klein gewählt ist, kommen "
+"meist keine guten Ergebnisse heraus. An Orten, wo mehrere Kreise sich "
+"überlappen, erscheinen die 'Hotspots' heller!"
 
 # 86dc36e548044444a1461894b35fc890
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:44
@@ -106,6 +127,8 @@ msgid ""
 "**Decay Ratio**: is used to show with which ratio the heat dies out from the "
 "center."
 msgstr ""
+"**Verfallrate**: wird verwendet, um zu zeigen, bei welcher Rate die 'Heat' "
+"vom Zentrum aus abfällt."
 
 # 6565eb6ea37d4d66b1818e7300e063ed
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:47
@@ -113,6 +136,8 @@ msgid ""
 "When 0 is given (=minimum) the heat will be concentrated in the centre of "
 "given radius and be completely extinguished at the edge."
 msgstr ""
+"Wenn der Wert 0 ist (=Minimum) wird sich die Heat im Zentrum des Radius "
+"konzentrieren und an den Rändern ausgelöscht."
 
 # 976a5d30b3e24ee78ccd2e2d222fb99a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:49
@@ -121,11 +146,13 @@ msgid ""
 "centre it is completely extinguished. Higher given values are allowed but "
 "have no effect."
 msgstr ""
+"Wenn der Wert 10 ist (=Maximum) wird sich die Heat an den Rändern des Radius "
+"konzentrieren und im Zentrum ausgelöscht."
 
 # c996def7c6d84660b6af06bf30bf36d0
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:52
 msgid "When 1 is given the heat is spread evenly over the whole circle."
-msgstr ""
+msgstr "Wenn der Wert 1 ist, wird die Heat gleichmässig im Radius verteilt."
 
 # 991f6d19c0254c40ba4dcf0e7adb7c0f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:53
@@ -133,6 +160,8 @@ msgid ""
 "When a negative Decay Ratio is given you will create a Coolmap instead of a "
 "Heatmap!"
 msgstr ""
+"Bei einer negativen Verfallrate wird eine Coolmap anstatt einer Heatmap "
+"erstellt!"
 
 # d31a0e06526e46ac949dfe47337b1e7b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:56
@@ -140,6 +169,8 @@ msgid ""
 "When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give "
 "acces to additional advanced options."
 msgstr ""
+"Wenn das Kontrollkästchen |checkbox| :guilabel:`Erweitert` ausgewählt ist, "
+"können zusätzliche Parameter definiert werden."
 
 # 4446835eb66a42fd81aabf63dc99b1fd
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:59
@@ -151,6 +182,8 @@ msgid ""
 "the cell sizes will also be halved. The area of the output raster will "
 "remain the same!"
 msgstr ""
+"**Zeile** and **Spalte** können verwendet werden, um die Pixelgröße des "
+"Ausgaberasters zu definieren. Die Fläche des Ausgaberaster bleibt identisch!"
 
 # 0751ae6978474805aab35f75b1112b49
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:64
@@ -158,6 +191,8 @@ msgid ""
 "**Cell Size X** and **Cell Size Y** influence the pixelsize of the output "
 "raster and will also change the rows and columns."
 msgstr ""
+"**Zellengröße X** and **Zellengröße Y** beeinflussen die Pixelgröße des "
+"Ausgaberasters und verändern die Anzahl der Zeilen und Spalten."
 
 # 5bde457ab662426eb8ccd728ef64c1ad
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:67
@@ -165,17 +200,21 @@ msgid ""
 "The point vector layer may have attribute fields that can be used to create "
 "a heatmap:"
 msgstr ""
+"Der Punktlayer kann Attributspalten enthalten, die für die Heatmap verwendet "
+"werden können:"
 
 # f9a91afbf5fa4a98a3dbb41f3ac14042
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:70
 msgid "**Use Radius from Field**: the radius set from an attribute field."
-msgstr ""
+msgstr "**Feld für Radius**: Der Radius wird auf Basis einer Spalte definiert."
 
 # d0aa1e5bf7b6475dacd1e3a3aded95af
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:71
 msgid ""
 "**Use Weight from field**: the weight factor set from an attribute field."
 msgstr ""
+"**Feld für Gewichtung**: Die Gewichtung wird auf Basis einer Spalte "
+"definiert."
 
 # ca8694a5c5474e4f8131166806066aa9
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:73
@@ -184,11 +223,13 @@ msgid ""
 "heatmap. The first result is a grey surface that still needs to be given "
 "additional treatment to make it a heatmap."
 msgstr ""
+"Sobald das Ausgaberaster definiert ist, kann mit dem **[OK]** Knopf eine "
+"Heatmap erzeugt werden. Das Ergebnis ist eine Graustufenkarte."
 
 # b3816fad54c74b9bb1298878aa02af83
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:77
 msgid "**Changing the raster size properties**"
-msgstr ""
+msgstr "**Ändern der Rastergröße-Eigenschaften**"
 
 # 510203d9c8f7407b9496c5e6de67f991
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:79
@@ -196,26 +237,33 @@ msgid ""
 "When changing the raster size properties, this also changes the resulting "
 "output. The hotspot areas will become bigger."
 msgstr ""
+"Wenn die Rastergröße-Eigenschaften verändetr werden, ändert sich auch die "
+"Ausgabe. Die Hotspotflächen werden dann größer."
 
 # 54b1a2e44a274f0eaebb92beae990513
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:83
 msgid "Creating a Heatmap"
-msgstr ""
+msgstr "Erstellen einer Heatmap"
 
 # f0d38cc110074928bda6652199b46473
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:85
 msgid ""
 "For the following example, we will use the ``airports`` vector point layer "
 "from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent "
-"QGIS tutorial on making heatmaps can be found on `http://qgis."
-"spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07/tutorial-making-"
-"heatmaps-using-qgis-and.html>`_."
+"QGIS tutorial on making heatmaps can be found on "
+"`http://qgis.spatialthoughts.com "
+"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
 msgstr ""
+"Für das folgende Beispiel wird der Vektorlayer ``airports`` aus dem QGIS "
+"Beispieldatensatz benutzt (siehe :ref:`label_sampledata`). Ein anderes QGIS "
+"Tutorial zu diesem Thema findet man unter `http://qgis.spatialthoughts.com "
+"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
 
 # 3b4515a26ede475db5d701d388bca756
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:89
 msgid "In Figure_Heatmap_1_ the airports of Alaska are shown."
 msgstr ""
+"In Abbildung Figure_Heatmap_1_ sind die Flugplätze von Alaska zu sehen."
 
 # 38a89caf5b2840fc9dff1ca0cc123e91
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:104
@@ -223,6 +271,7 @@ msgid ""
 "Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts "
 "(see Figure_Heatmap_2_)."
 msgstr ""
+"Wählen Sie das Icon |heatmap| :sup:`Heatmap`, um den Dialog zu starten."
 
 # dbaa891101bb4eca819149de786c4423
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:106
@@ -230,29 +279,33 @@ msgid ""
 "In field :guilabel:`Input Point Vector` |selectstring| select ``airpoirt`` "
 "from the list of  point layers loaded in current project."
 msgstr ""
+"Im Feld :guilabel:`Eingabepunktlayer` |selectstring| wählen Sie ``airpoirt`` "
+"als Punktlayer."
 
 # 57a5edbec47c4f449c02e3b249023d79
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:108
 msgid ""
-"In field :guilabel:`Output Raster` give the name and location using the |"
-"browsebutton| button of the output raster. Give the output raster file the "
+"In field :guilabel:`Output Raster` give the name and location using the "
+"|browsebutton| button of the output raster. Give the output raster file the "
 "name ``heatmap_airports`` to give an file extension is not necessary."
 msgstr ""
+"Im Feld :guilabel:`Ausgaberaster` geben Sie den Namen der Ausgabekarte an. "
+"Geben Sie der Karte den Namen ``heatmap_airports``."
 
 # 947445e249eb489abd29c030fb578805
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:111
 msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
-msgstr ""
+msgstr "Im Feld :guilabel:`Ausgabeformat` wählen Sie ``GeoTIFF``."
 
 # 2db49076197c4cf3b78e18d0022279c3
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:112
 msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
-msgstr ""
+msgstr "Im Feld :guilabel:`Radius` tragen Sie ``1000000`` Meter ein."
 
 # 153f9f60760e4feba945a3efb0d4c5a0
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:113
 msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
-msgstr ""
+msgstr "Die vorgegebene :guilabel:`Verfallrate` von ``0.1`` ist in Ordnung."
 
 # 99b2aa93e4c24fc7b23bacdaa504b22b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:114
@@ -260,6 +313,8 @@ msgid ""
 "Click on **[OK]**  to create and load the new raster map (see "
 "Figure_Heatmap_3_)."
 msgstr ""
+"Klicken Sie auf **[OK]**, um die Heatmap zu erstellen (siehe "
+"Figure_Heatmap_3_)."
 
 # 0eb336e6460e4de88489026cf9cdc183
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:128
@@ -269,19 +324,23 @@ msgid ""
 "some additional configuration of this layer needs to be done to make the "
 "heatmap present itself."
 msgstr ""
+"Das Ergebnis ist vielleicht noch nicht, was Sie erwartet haben, da es noch "
+"eine grau Karte ist. Es müssen nun noch ein paar Einstellungen vorgenommen "
+"werden."
 
 # e150898d6929463d8368d62a0aa79a7b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:145
 msgid ""
 "Open the properties dialog of layer ``heatmap_airports`` (select the layer "
-"``heatmap_airports``, open context menu with right mouse button and select :"
-"guilabel:`Properties`)."
+"``heatmap_airports``, open context menu with right mouse button and select "
+":guilabel:`Properties`)."
 msgstr ""
+"Öffnen Sie den Layereigenschaften Dialog der Heatmap ``heatmap_airports``."
 
 # 5015054c56fc462091607985d13e2c1f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:148
 msgid "Select the :guilabel:`Symbology` tab."
-msgstr ""
+msgstr "Wechseln Sie in den :guilabel:`Stil` Reiter."
 
 # 4a2ea9c4349c42ac9e4cb877b545c58f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:149
@@ -289,11 +348,13 @@ msgid ""
 "Change :guilabel:`Color map` |selectstring| from 'Grayscale' to "
 "'Pseudocolor'."
 msgstr ""
+"Ändern Sie :guilabel:`Farbabbildung` |selectstring| von 'Graustufe' nach "
+"'Pseudocolor'."
 
 # 20ffde074d874f7691435b47c47fe110
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:150
 msgid "Press the **[Apply]** button."
-msgstr ""
+msgstr "Drücken Sie auf **[Anwenden]**."
 
 # 0a693020bfe843c5adda79f7e4bbf255
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:151
@@ -301,13 +362,15 @@ msgid ""
 "Switch to the :guilabel:`Transparency` tab and set :guilabel:`Global "
 "transparency` |slider| to 40%."
 msgstr ""
+"Wechseln Sie in den Reiter :guilabel:`Transparenz` und setzen Sie den "
+"Schieberegler auf 40%."
 
 # 60010176c49a4376aa5665a5e33d8bce
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:153
 msgid "Select **[OK]**"
-msgstr ""
+msgstr "Wählen Sie **[OK]**"
 
 # 9b2a5eb992f1418694dd4ee7f562d46a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:155
 msgid "The final result is shown in Figure_Heatmap_4_."
-msgstr ""
+msgstr "Das Endergebnis sehen Sie in Figure_Heatmap_4_."
