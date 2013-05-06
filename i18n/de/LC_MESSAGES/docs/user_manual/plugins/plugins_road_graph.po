@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 76005eb81e7d42038a2814361e0bb327
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
 msgid "Road Graph Plugin"
-msgstr ""
+msgstr "Straßengraph Plugin"
 
 # 79ef2e1513d9449b82ecd26fbd0c8208
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
@@ -29,26 +32,29 @@ msgid ""
 "path between two points on any polyline layer and plots this path over the "
 "road network."
 msgstr ""
+"Das Straßengraph Plugin ist ein C++ plugin, mit dem man die kürzeste "
+"Verbindung zwischen zwei Punkten entlang eines Polyline Vektorlayers "
+"berechnen kann. Das Ergebnis kann als Shapefile gespeichert werden."
 
 # f644620f42f54cd7a52782a96f3fd50b
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
 msgid "Main features:"
-msgstr ""
+msgstr "Hauptfunktionen:"
 
 # 71661542ee0941fbb64a9a666b5dc2c6
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
 msgid "calculate path, it's length and travel time"
-msgstr ""
+msgstr "Berechnung der Route, seiner Länge und der Reisezeit"
 
 # 8a99aa20eee9482c8efae8f64799541a
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
 msgid "optimize by length or by travel time"
-msgstr ""
+msgstr "Optimierung durch Länge oder Reisezeit"
 
 # ebd05e6b3227432daa67a5e252af3739
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
 msgid "export path to a vector layer"
-msgstr ""
+msgstr "Export der Route als Vektorlayer"
 
 # ddf0abe1604a413fbc9ec45afc9066d3
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:32
@@ -56,6 +62,8 @@ msgid ""
 "highlight roads directions (this is slow and used mainly for debug purposes "
 "and for the settings testing)"
 msgstr ""
+"Anzeigen der Vektorrichtungen (diese Funktion ist langsam und wird meist nur "
+"zum Testen verwendet)"
 
 # dda7e472b5874eedad14980f59a63431
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
@@ -67,16 +75,23 @@ msgid ""
 "different CRS introduce some errors that can result in discontinuities, even "
 "when 'snapping' is used."
 msgstr ""
+"Als Netzwerk kann jeder Polyline Vektorlayer verwendet werden, der in einem "
+"von QGIS unterstützten Format gespeichert ist. Zwei Linien mit einem "
+"gemeinsamen Punkt werden dabei als verknüpft angesehen. Wichtig ist, dass "
+"das Layer-KBS als Projekt-KBS gesetzt werden muss. Dies ist wichtig, da "
+"Neuberechnungen von Koordinaten ansonsten zu Fehlern führen können, selbst "
+"eine Fangtolleranz eintgestellt ist."
 
 # 09273e44229143a9aa5801a7a1f73ea5
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:42
 msgid "In the layer attribute table the following fields can be used:"
 msgstr ""
+"In der Attributtabelle des Layera können folgende Spalten genutzt werden:"
 
 # 9ac0db7b37b2487cb39a53a297928f5c
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
 msgid "speed on road section --- numeric field;"
-msgstr ""
+msgstr "Geschwindigkeit als numerische Spalte;"
 
 # f815a5b1e373406cb91f154c72fcfa59
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:45
@@ -85,6 +100,9 @@ msgid ""
 "directions are correspond to the one-way road, both directions --- two-way "
 "road"
 msgstr ""
+"Richtung in jedem Datentyp, der mit String kompatibel ist. Wenn eine Spalte "
+"benutzt wird, bezieht sie sich auf beide Richtungen, ansonsten wird "
+"unterschieden"
 
 # 50adcc20710448e5a32286ab24518cad
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:48
@@ -93,11 +111,15 @@ msgid ""
 "used. You can change defaults and some plugin settings in plugin settings "
 "dialog."
 msgstr ""
+"Wenn einige Zeilen keine Werte haben, werden die Defaultwerte verwendet. Sie "
+"können bei Bedarf geändert werden, gemeinsam mit ein paar weiteren "
+"Einstellungsmöglichkeiten im Dialog :guilabel:`Straßengraph-Einstellungen` "
+"im Menü :mainmenuopt:`Vektor` --> mainmenuopt`Straßengraph`."
 
 # fd53c8c01cb446f8be022cbc85660ba3
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:52
 msgid "Using the plugin"
-msgstr ""
+msgstr "Verwendung der Erweiterung"
 
 # 799f38821b89466d82695b7773a5b8c7
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
@@ -106,10 +128,16 @@ msgid ""
 "the main QGIS window. Now make some definitions to the :guilabel:`Road graph "
 "plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`."
 msgstr ""
+"Wenn Sie die Erweiterung laden, erscheint ein neues Fenster 'Kürzester Weg' "
+"unten links neben dem Kartenfenster. Legen Sie zu Beginn ein paar "
+"Einstellungen fest im Dialog :guilabel:`Straßengraph-Einstellungen} im Menu "
+"Menü :mainmenuopt:`Vektor` --> mainmenuopt`Straßengraph`."
 
 # 2df7ca01fcc540df991dc615689b86d9
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:58
 msgid ""
-"Select a Start and a Stop point in the road network layer and click on **"
-"[Calculate]**."
+"Select a Start and a Stop point in the road network layer and click on "
+"**[Calculate]**."
 msgstr ""
+"Wählen Sie nun einen Start- und einen Stop-Punkt im Vektorlayer auf dem "
+"Netzwerk und drücken Sie auf **[Berechnen]**."
