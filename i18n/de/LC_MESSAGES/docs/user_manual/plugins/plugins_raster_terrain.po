@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 4b73500d747e4bef90ea93e998e70766
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:10
 msgid "Raster Terrain Analysis Plugin"
-msgstr ""
+msgstr "Rastergeländeanalyse Plugin"
 
 # 3a019fa1ac38471fbe288d08b5616668
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:12
@@ -31,11 +34,16 @@ msgid ""
 "intuitive graphical user interface for creating new raster layers (See "
 "Figure_raster_terrain_1_)."
 msgstr ""
+"|dem_analysis| Das Rastergeländeanalyse Plugin ermöglicht es, Hangneigung "
+"(Neigung),  Exposition (Perspektive), Rauhigkeitsindex und Gesamtkrümmung "
+"auf Basis eines Höhenmodells (DGM) zu berechnen. Es ist sehr einfach zu \n"
+"handhaben und bietet eine intuitive grafische Benutzeroberfläche (siehe "
+"Abbildung Figure_raster_terrain_1_)."
 
 # f6eafcffb2704566b54d8fd32b56d9cf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:17
 msgid "Description of the analysis:"
-msgstr ""
+msgstr " Das Plugin benötigt die folgenden Parameter:"
 
 # 5bb21f7d840e402db87b712ac2102219
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:19
@@ -43,6 +51,8 @@ msgid ""
 "**Slope**: Calculates slope angle for each cell in degrees (based on first "
 "order derivative estimation)."
 msgstr ""
+"**Neigung**: Berechnet den Hangneigungswinkel für jede Zelle in Grad "
+"basierend auf der geschätzten Ableitung erster Ordnung."
 
 # 06fa4e4f3e0e4c8f9f072a3e709d903d
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:21
@@ -50,6 +60,8 @@ msgid ""
 "**Aspect**: Exposition (starting with 0 for north direction, in degrees "
 "counterclockwise)."
 msgstr ""
+"**Perspektive**: Berechnung der Exposition. Beginnend mit 0 für Nord und "
+"dann in Grad gegen den Uhrzeigersinn."
 
 # fc174235283848ac9852a7b53dd34ed0
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:23
@@ -57,6 +69,8 @@ msgid ""
 "**Hillshade**: Create shaded map using light and shadow to provide a more "
 "three-dimensional appearance for a shaded relief map."
 msgstr ""
+"**Schummerung**: Erstellen einer Schummerungskarte auf Basis von Licht und "
+"Schatten, um ein 3D-ähnliches Erscheinungsbild  zu schaffen."
 
 # 8545acfeaff649a99d015699850b4221
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:25
@@ -65,6 +79,9 @@ msgid ""
 "described by Riley et al. (1999). It is calculated for every location, by "
 "summarizing the change in elevation within the 3x3 pixel grid."
 msgstr ""
+"**Rauhigkeitsindex**: Eine quantitative Bestimmung der Heterogenität eines "
+"Geländes beschrieben durch Riley et al. (1999). Es wird für jeden Ort "
+"berechnet mit einem 3x3 Pixel Fenster."
 
 # f173ee81a584426696c146944c9692aa
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:28
@@ -73,25 +90,31 @@ msgid ""
 "Implemented is a method to choose the elevation colors analysing the "
 "frequency distribution."
 msgstr ""
+"**Relief**: Erstellen einer Shaded Relief Karte auf Basis eines DGM. "
+"Integriert ist eine Methode, um auf Basis der Häufigkeitsverteilung der "
+"Höhenwerte Farbwerte zuzuweisen."
 
 # 6e0b9ddde7b64e8591f7f81d3beeb960
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:47
 msgid "Using the plugin"
-msgstr ""
+msgstr "Das Plugin anwenden"
 
 # 83c9d1d5c2474aa39f58b7b2468904c5
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:49
 msgid ""
 "Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample "
 "location."
-msgstr ""
+msgstr "Starten Sie QGIS und laden Sie einen DGM Rasterlayer."
 
 # 2ce2bec1fb8a4c8597060192f4128daf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:51
 msgid ""
-"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section :"
-"ref:`load_core_plugin`)"
+"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`)"
 msgstr ""
+"Laden Sie das Rastergeländeanalyse Plugin im Plugin Manager (siehe Abschnitt "
+":ref:`load_core_plugin`) und klicken Sie auf das Icon "
+"|dem_analysis|`Rasterbasierende Geländeanalyse` in der Werkzeugleiste"
 
 # ee6fbecca5af48cc918522436d4c5fe9
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:53
@@ -100,13 +123,15 @@ msgid ""
 "Analysis --> Slope`). The :guilabel:`Slope` dialog appears as shown in "
 "Figure_raster_terrain_1_."
 msgstr ""
+"Wählen Sie eine Analysemethode (z.B.: :menuselection:`Raster --> "
+"Geländeanalyse --> Hangneigung`)."
 
 # b0c292487b02476895c1fa83adf499a3
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:55
 msgid "Specify an output file path, and an output file type."
-msgstr ""
+msgstr "Geben Sie eine Ausgabedatei mit Pfad und Dateiformat an."
 
 # fac8700fe99f4cecab6197b09a248c00
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:56
 msgid "Click **[OK]**."
-msgstr ""
+msgstr "Klicken Sie **[OK]**."
