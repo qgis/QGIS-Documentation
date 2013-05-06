@@ -707,7 +707,7 @@ msgid ""
 msgstr ""
 "Als Name der Ausgabe wählen Sie :file:`landcover_grass` und drücken Sie dann "
 "auf **[Starten]**. Im Reiter :guilabel:`Ergebnis` sehen Sie das gerade "
-"gestartete GRASS Kommando :file: `r.in.gdal -o input=/path/to/landcover.img "
+"gestartete GRASS Kommando :file:`r.in.gdal -o input=/path/to/landcover.img "
 "output=landcover_grass`."
 
 # b0b4f24c6e8b4be1a6a536e8d5fec45d
@@ -1647,14 +1647,13 @@ msgstr ""
 "Falls Sie weitergehende Informationen zum gewählten Modul benötigen, schauen "
 "Sie in\n"
 "diese Hilfeseite. Dabei werden Sie feststellen, dass viele Module mehr "
-"Parameter haben, als im Reiter \\tab{Optionen} zu sehen sind. Das ist "
+"Parameter haben, als im Reiter :guilabel:`Optionen` zu sehen sind. Das ist "
 "gewollt. Um die GUI möglichst einfach zu halten, sind nur die nötigsten "
 "Optionen übernommen worden. Natürlich stehen Ihnen alle Optionen des Moduls "
 "direkt in der GRASS-Eingabeshell zur Verfügung. Am Ende jeder Hilfeseite "
 "finden Sie weitere Links zum :file:`Main Help index`, dem :file:`Thematic "
 "index` und dem :file:`Full index`. Diese enthalten alle Informationen, die "
-"Sie ansonsten über das Modul\n"
-":file:`g.manual` finden."
+"Sie ansonsten über das Modul :file:`g.manual` finden."
 
 # fcd8ff4cd61a432793a85e1712b85fa0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:738
@@ -1860,7 +1859,7 @@ msgid ""
 "the **v.generalize** module to open its options window."
 msgstr ""
 "Öffnen Sie die GRASS-Werkzeugkiste, wechseln Sie in den Bereich "
-":menuselection:`Vector --> Karte entwickeln --> Generalisierung`, und "
+":menuselection:`Vektor --> Karte entwickeln --> Generalisierung`, und "
 "klicken dann auf das **v.generalize** Modul."
 
 # 5c9a597c77f848afa3f0ac72d8809b50
@@ -1882,7 +1881,7 @@ msgid ""
 msgstr ""
 "Aus der Liste möglicher Algorithmen wählen Sie nun Chaiken's. Belassen Sie "
 "alle weiteren Optionen wie sie sind und gehen Sie zum Ende des Dialogs, wo "
-"Sie als :guilabel:`Name der Vektorausgabekarte 'hoehen_100_smooth' angeben. "
+"Sie als :guilabel:`Name der Vektorausgabekarte` 'hoehen_100_smooth' angeben. "
 "Drücken Sie nun auf **[Starten]**."
 
 # b4c8796bcd0d4b75a8e506f111a23e05
@@ -2140,15 +2139,15 @@ msgid ""
 "From the toolbox choose :menuselection:`Vector --> Manage features`, and "
 "open the module **v.centroids**."
 msgstr ""
-"Wählen Sie aus der GRASS-Werkzeugkiste :menuselection:`Vector --> Manage "
-"features`, und öffnen Sie das Modul **v.centroids**."
+"Wählen Sie aus der GRASS-Werkzeugkiste :menuselection:`Vektor --> Karte "
+"entwickeln -->Objekte verwalten`, und öffnen Sie das Modul **v.centroids** "
 
 # 6f7b388c9a4f44d4944dcce601caaab9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:927
 msgid ""
 "Enter as the :guilabel:`output vector map` 'forest_areas' and run the module."
 msgstr ""
-"Geben Sie als :guilabel:`Name für die Ausgabevektorkarte` 'forest_areas' an "
+"Geben Sie als :guilabel:`Name für die Ausgabe-Vektorkarte` 'forest_areas' an "
 "und starten Sie das Modul."
 
 # fa26b01524b744459cedde8981817425
@@ -2161,6 +2160,12 @@ msgid ""
 ":guilabel:`Classification field` to 'VEGDESC'. (Refer to the explanation of "
 "the symbology tab :ref:sec_symbology in the vector section)."
 msgstr ""
+"Nun laden Sie den neuen Layer ``forest_areas`` und visualisieren Sie die "
+"verschiedenen Waldtypen in verschiedenen Farben - deciduous, evergreen und "
+"mixed. Dazu öffnen Sie den Dialog :guilabel:`Eigenschaften` des Layers, "
+"wechseln zum Reiter :guilabel:`Darstellung`, wählen |selectstring| "
+"'Eindeutiger Wert' und setzen das :guilabel:`Klassifikationsfeld` auf "
+"'VEGDESC' (siehe auch Abschnitt :ref:`sec_symbology`)."
 
 # 67f3e1eb4307488bb81df747f7d5be1b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:934
@@ -2168,6 +2173,8 @@ msgid ""
 "Next reopen the GRASS toolbox and open :menuselection:`Vector --> Vector "
 "update` by other maps."
 msgstr ""
+"Als nächstes öffnen Sie wieder die GRASS-Werkzeugkiste und wechseln nach "
+":menuselection:`Vektor --> Vektor mit anderen Karten aktualisieren`."
 
 # 544118370c58444db9ca1bd13d4f66bf
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:936
@@ -2175,6 +2182,9 @@ msgid ""
 "Click on the **v.rast.stats** module. Enter ``gtopo30``, and "
 "``forest_areas``."
 msgstr ""
+"Klicken Sie auf das **v.rast.stats** Modul. Geben Sie als :guilabel:`Name "
+"der Rasterkarte für die Statistiken berechnet werden sollen` ``gtopo30`` und "
+"als :guilabel:`Name der Vektorkarte (Polygone)` ``forest_areas`` an."
 
 # 7be4a90d5068455fb2d5f31cde9c35e5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:937
@@ -2183,6 +2193,9 @@ msgid ""
 "``elev``, and click **[run]**. This is a computationally heavy operation "
 "which will run for a long time (probably up to two hours)."
 msgstr ""
+"Nun fehlt nur noch ein Parameter: Geben Sie als :guilabel:`Spaltenpräfix` "
+"``elev`` an, und klicken Sie dann auf **[Starten]**. Die Berechnung wird "
+"ziemlich lange dauern (bis zu mehreren Stunden)."
 
 # e3f88f547a9f4159a7d3dd9b7503af5d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:940
@@ -2191,11 +2204,16 @@ msgid ""
 "new columns have been added including ``elev_min``, ``elev_max``, "
 "``elev_mean`` etc. for each forest polygon."
 msgstr ""
+"Wenn es erfolgreich beendet wurden. öffnen Sie den Layer ``forest_areas`` "
+"erneut und lassen Sie sich die Attributtabelle anzeigen. Dort gibt es nun "
+"weitere Spalten, in denen die Ergebnisse der univariate Statistik für "
+"Rasterwerte innerhalb der Vektorpolygone angezeigt werden, z.B.: "
+"``elev_min``, ``elev_max``, ``elev_mean``."
 
 # 10c96b559a22458f81896bd6b69f80b5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:946
 msgid "Working with the GRASS LOCATION browser"
-msgstr ""
+msgstr "Der GRASS Datei-Browser"
 
 # 2fb44e674fef4c5ca9abb6d729d81037
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:950
@@ -2204,6 +2222,9 @@ msgid ""
 ":file:`LOCATION` browser. In figure_grass_module_7_ you can see the current "
 "working :file:`LOCATION` with its :file:`MAPSETs`."
 msgstr ""
+"Eine weitere interessante Funktion in den GRASS-Werkzeugen ist der Browser. "
+"In figure_grass_module_7_ können Sie die aktuelle :file:`LOCATION` mit den "
+"dazu gehörigen :file:`MAPSETs` sehen.   "
 
 # 3348ad8ecfaf43d4a3036f6e42b5826a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:954
@@ -2214,6 +2235,12 @@ msgid ""
 "bounding box, data source, connected attribute table for vector data and a "
 "command history."
 msgstr ""
+"In der linken Hälfte des Datei-Browsers können Sie sich alle in der "
+"aktuellen Location enthaltenen Mapsets anschauen. In der rechten Hälfte des "
+"Fensters sehen Sie\n"
+"weitere Metainformationen zum ausgewählten Datensatz wie beispielsweise "
+"Auflösung, BoundingBox, Datenquelle, bei Vektordaten die Attributtabelle und "
+"die COMMAND Geschichte."
 
 # 25b066695ad0493688e5699520586fcd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:972
@@ -2221,36 +2248,39 @@ msgid ""
 "The toolbar inside the :guilabel:`Browser` tab offers following tools to "
 "manage the selected :file:`LOCATION`:"
 msgstr ""
+"Die Werkzeugleiste im GRASS Datei-Browser stellt folgende Werkzeuge für die "
+"ausgewählte :file:`LOCATION` zur Verfügung:"
 
 # f17a18df673542f4b103aa3023587d90
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:975
 msgid "|grass_add_map| :guilabel:`Add selected map to canvas`"
 msgstr ""
+"|grass_add_map| :guilabel:`Ausgewählten Layer dem Kartenfenster hinzufügen`"
 
 # 99b298e17f23445c93aa1259622affc0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:976
 msgid "|grass_copy_map| :guilabel:`Copy selected map`"
-msgstr ""
+msgstr "|grass_copy_map| :guilabel:`Gewählte Karte kopieren`"
 
 # af1985926ffc4802ab6def4223848707
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:977
 msgid "|grass_rename_map| :guilabel:`Rename selected map`"
-msgstr ""
+msgstr "|grass_rename_map| :guilabel:`Gewählte Karte umbenennen`"
 
 # 30f364cd74a144d0871294703d7f46d0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:978
 msgid "|grass_delete_map| :guilabel:`Delete selected map`"
-msgstr ""
+msgstr "|grass_delete_map| :guilabel:`Gewählte Karte löschen`"
 
 # ae43771bad2c477f96946ce0e903fca0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:979
 msgid "|grass_set_region| :guilabel:`Set current region to selected map`"
-msgstr ""
+msgstr "|grass_set_region| :guilabel:`Setze die Region auf die gewählte Karte`"
 
 # d2156d1788ae432c994d67a3680a622d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:980
 msgid "|grass_refresh| :guilabel:`Refresh browser window`"
-msgstr ""
+msgstr "|grass_refresh| :guilabel:`Neu zeichnen`"
 
 # 8f35ead82ed84513a4580551cd322a37
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:982
@@ -2260,11 +2290,15 @@ msgid ""
 "inside your currently selected :file:`MAPSET`. All other tools also work "
 "with raster and vector layers in another :file:`MAPSET`."
 msgstr ""
+"Die Knöpfe |grass_rename_map| :guilabel:`Gewählte Karte umbenennen` und "
+"|grass_delete_map| :guilabel:`Gewählte Karte löschen` stehen nur für die "
+"aktuelle :file:`MAPSET` zur Verfügung. Die anderen Werkzeuge funktionieren "
+"auch in den anderen :file:`MAPSETs`."
 
 # 55927d645a804af4952630733bae8705
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:990
 msgid "Customizing the GRASS Toolbox"
-msgstr ""
+msgstr "Anpassen der Module"
 
 # 5b63b8a1dd424191afff5f96c8aafb5a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:995
@@ -2273,6 +2307,9 @@ msgid ""
 "is provided to parse the pretty simple XML files which configures the "
 "modules appearance and parameters inside the toolbox."
 msgstr ""
+"Nahezu alle GRASS-Module können in die GRASS-Werkzeugkiste integriert "
+"werden. Eine XML-Schnittstelle wertet die sehr einfachen XML-Dateien, die "
+"die Module beschreiben, aus und übernimmt die Oberflächendarstellung."
 
 # b8f0339c199e4b9ea6c8691a7cafe2ed
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:999
@@ -2280,6 +2317,8 @@ msgid ""
 "A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
 "looks like this:"
 msgstr ""
+"Beispielhaft ist hier die XML-Datei zum Modul ``v.buffer`` (v.buffer.qgm) "
+"dargestellt:"
 
 # 71534670913143288a27095947622ec9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:1014
@@ -2289,3 +2328,7 @@ msgid ""
 "modules, changing the modules group, etc. can be found on the QGIS wiki at "
 "http://hub.qgis.org/projects/quantum-gis/wiki/Adding_New_Tools_to_the_GRASS_Toolbox"
 msgstr ""
+"Der XML-Auswerter liest diese Definition und erstellt einen neuen Reiter im "
+"Werkzeugkiste, wenn Sie das Modul auswählen. Ein detailierte Beschreibung, "
+"um neue Module in die GRASS Werkzeugkiste zu integrieren finden Sie unter: "
+"\\\\http://wiki.qgis.org/qgiswiki/Adding_New_Tools_to_the_GRASS_Toolbox"
