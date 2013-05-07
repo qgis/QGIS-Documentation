@@ -16,16 +16,19 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # 6d49823a96ec42e6a092a05210651da8
 #: ../../source/docs/user_manual/sextante/toolbox.rst:8
 msgid "The SEXTANTE toolbox"
-msgstr ""
+msgstr "Die SEXTANTE Toolbox"
 
 # e7365222d8154c1a82fb8b125265edd8
 #: ../../source/docs/user_manual/sextante/toolbox.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "Einführung"
 
 # 650e5a763df84bf1882ec5e88fcbf195
 #: ../../source/docs/user_manual/sextante/toolbox.rst:13
@@ -36,6 +39,11 @@ msgid ""
 "run them whether as a single process or as a batch process involving several "
 "executions of a same algorithm on different sets of inputs."
 msgstr ""
+"Die *Toolbox* ist das wichtigste Element der SEXTANTE GUI, und diejenige, "
+"die Sie eher in Ihrer täglichen Arbeit nutzen können. Sie zeigt eine Liste "
+"aller verfügbaren Algorithmen in verschiedene Blöcke unterteilt, und ist der "
+"Startpunkt, um sie als einzelne Prozesse oder als Batch-Prozess, der mehrere "
+"Durchläufe desselben Algorithmus auf verschiedene Datensätze erlaubt."
 
 # d692e1c92707426ebf1d1465865b07cd
 #: ../../source/docs/user_manual/sextante/toolbox.rst:31
@@ -53,6 +61,18 @@ msgid ""
 "useful, since they can be executed from elements such as the modeler or the "
 "batch processing interface, which we will soon describe."
 msgstr ""
+"Die Toolbox enthält alle vorhandenen Algorithmen in Gruppen unterteilt. Jede "
+"Gruppe stellt einen sogenannten \"Algorithmus-Anbieter\" dar, also eine "
+"Anzahl von Algorithmen, die aus der gleichen Quelle, zum Beispiel von einer "
+"Drittanbieter-Anwendung mit Geoverarbeitungs Fähigkeiten stammen. Einige "
+"dieser Gruppen repräsentieren Anwendungen von Drittanbietern (wie z.B. SAGA, "
+"GRASS GIS oder R), während andere  Algorithmen eigene SEXTANTE Elemente, die "
+"keine zusätzliche Software benötigen. Derzeit nutzen diese Anbieter bereits "
+"in QGIS bestehende Plugins (genauer gesagt, aus der fTools Vektor-Bibliothek "
+"zusammen mit QGIS und dem mmqgis Plugin, das Sie installieren können mit dem "
+"Plugin Manager). Sie können an dieser Stellen zusätzlich von den Elementen "
+"Modeller oder Batch-Verarbeitung genutzt werden, die wir in Kürze "
+"beschreiben."
 
 # 1f36b3fbdd984369bbc784fafb8c3206
 #: ../../source/docs/user_manual/sextante/toolbox.rst:43
@@ -62,6 +82,10 @@ msgid ""
 "define your own workflows and processing tasks. We will devote a full "
 "section to them a bit later."
 msgstr ""
+"Zusätzlich gibt es zwei weitere Provider, nämlich \"Models\" und "
+"\"Scripts\". Diese enthalten vom Benutzer erstellte Algorithmen und erlauben "
+"es, eigenen Workflows und Verarbeitungen zu definieren. Wir gehen darauf "
+"später noch genauer ein."
 
 # 8b6aefa568b2496ea74487b09c1720ee
 #: ../../source/docs/user_manual/sextante/toolbox.rst:47
@@ -72,16 +96,24 @@ msgid ""
 "you type, the number of algorithms in the toolbox is reduced to just those "
 "which contain the text you have entered in their names."
 msgstr ""
+"Im oberen Teil der Toolbox finden Sie ein Suchfeld. Um die Anzahl der "
+"angezeigten Algorithmen in der Toolbox zu reduzieren und es leichter zu "
+"machen, Sie zu finden, können Sie ein beliebiges Wort oder den Satz in das "
+"Textfeld eingeben. Beachten Sie, während Sie schreiben wird die Anzahl der "
+"Algorithmen in der Toolbox reduziert, so dass nur diejenigen sichtbar sind, "
+"die den Text enthalten, den Sie im Suchfeld eingeben haben."
 
 # 7719b3bbd06d461084af2fff1a583bc2
 #: ../../source/docs/user_manual/sextante/toolbox.rst:53
 msgid "To execute an algorithm, just double-click on its name in the toolbox."
 msgstr ""
+"Um einen Algorithmus zu starten, klicken Sie einfach doppelt auf den Namen "
+"in der Toolbox."
 
 # d13e3a0a2ac248d8b0e26b52bc066fbb
 #: ../../source/docs/user_manual/sextante/toolbox.rst:56
 msgid "The algorithm dialog"
-msgstr ""
+msgstr "Der Algorithmus Dialog"
 
 # dcd1b8203abc43549bc3c9ac056547fd
 #: ../../source/docs/user_manual/sextante/toolbox.rst:58
@@ -90,6 +122,9 @@ msgid ""
 "a dialog similar to the next one is shown (in this case, the dialog "
 "corresponds to the SAGA 'Convergence index' algorithm)."
 msgstr ""
+"Sobald Sie auf den Namen des Algorithmus klicken, die Sie ausführen möchten, "
+"wird ein Dialogfeld angezeigt wie unten zu sehen (in diesem Fall  der Dialog "
+"dem SAGA \"Konvergenz-Index\"-Algorithmus)."
 
 # ba5fb7df0a5c40bf9d934d556c8b1b30
 #: ../../source/docs/user_manual/sextante/toolbox.rst:75
@@ -101,6 +136,13 @@ msgid ""
 "based on those requirements. On the left side, the name of the parameter is "
 "shown. On the right side the value of the parameter can be set."
 msgstr ""
+"Dieser Dialog wird verwendet, um die Eingangs-Werte anzugeben, damit der "
+"Algorithmus ausgeführt werden kann. Es zeigt eine Tabelle, in der "
+"Eingangswerte und Konfigurationsparameter zu setzen sind. Der Inhalt des "
+"Dialogs sich in Abhängigkeit vom Algorithmus, der ausgeführt werden soll, "
+"und wird automatisch auf der Basis dieser Anforderungen erstellt. Auf der "
+"linken Seite wird der Name des Parameters angezeigt. Auf der rechten Seite "
+"wird der Parameter gesetzt."
 
 # 1bcc2056e1c542d0a1501cbcb698cc4c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:82
@@ -109,6 +151,9 @@ msgid ""
 "the algorithm, the structure is similar for all of them. The parameters "
 "found on the table can be of one of the following types."
 msgstr ""
+"Obwohl die Anzahl und Art der Parameter von den Eigenschaften des "
+"Algorithmus abhängt, ist die Struktur des Dialogs für alle ähnlich. Die "
+"Parameter können folgende Typen sein."
 
 # 730fae8db918492d8a194e538fef117f
 #: ../../source/docs/user_manual/sextante/toolbox.rst:86
@@ -118,6 +163,9 @@ msgid ""
 "side, to let you select filenames that represent layers currently not loaded "
 "in QGIS."
 msgstr ""
+"Ein Rasterlayer, aus der Liste aller in QGIS geladenen Layer. Und einen "
+"Auswahlknopf auf der rechten Seite, um nach Dateien zu suchen, die noch "
+"nicht in QGIS geladen sind."
 
 # 18633817638448aebcfbbbb1d2695a81
 #: ../../source/docs/user_manual/sextante/toolbox.rst:89
@@ -129,6 +177,12 @@ msgid ""
 "be selected, since they need to be open so as to retrieve the list of field "
 "names available."
 msgstr ""
+"Ein Vektorlayer, aus der Liste aller in QGIS geladenen Layer. Und einen "
+"Auswahlknopf auf der rechten Seite, um nach Dateien zu suchen, die noch "
+"nicht in QGIS geladen sind. Letzteres aber nur, wenn der Algorithmus nicht "
+"die Auswahl einer Attributspalte erfordert. In diesem Fall können nur "
+"bereits in QGIS geladene Layer ausgewählt werden, um auf die Liste der "
+"Spalten zugreifen zu können."
 
 # 5450bf74043c4618b00fda57be21f99f
 #: ../../source/docs/user_manual/sextante/toolbox.rst:96
@@ -139,22 +193,33 @@ msgid ""
 "executed iteratively on each one of its features. We will see more about "
 "this kind of execution at the end of this section."
 msgstr ""
+"Sie sehen eine Taste bei jedem Auswahlknopf für die Vektorlayer. Wenn der "
+"Algorithmus mehrere von ihnen enthält, werden Sie nur in der Lage sein, "
+"einen von ihnen zu verändern. Wenn die Taste entsprechend einem eingegebenen "
+"Vektor umgeschaltet wird, wird der Algorithmus iterativ auf jedes seiner "
+"Objekte ausgeführt. Sie werden mehr über diese Art der Ausführung am Ende "
+"dieses Abschnitts erfahren."
 
 # a745ef27aebe405dbf5f379a2809c398
 #: ../../source/docs/user_manual/sextante/toolbox.rst:102
 msgid ""
-"A table, to select from a list of all the ones available in QGIS. Non-"
-"spatial tables are loaded into QGIS like vector layers, and in fact they are "
-"treated as such by the program. Currently, the list of available tables that "
-"you will see when executing a SEXTANTE algorithm that needs one of them is "
-"restricted to tables coming from files in DBase (:file:`.dbf`) or Comma-"
-"Separated Values (:file:`.csv`) formats."
+"A table, to select from a list of all the ones available in QGIS. "
+"Non-spatial tables are loaded into QGIS like vector layers, and in fact they "
+"are treated as such by the program. Currently, the list of available tables "
+"that you will see when executing a SEXTANTE algorithm that needs one of them "
+"is restricted to tables coming from files in DBase (:file:`.dbf`) or "
+"Comma-Separated Values (:file:`.csv`) formats."
 msgstr ""
+"Eine Tabelle, um aus einer Liste von allen in QGIS vorhandenen zu wählen. "
+"Nicht-räumliche Tabellen werden in QGIS wie Vektor-Schichten geladen und "
+"werden auch als solche durch das Programm behandelt. Derzeit ist die Liste "
+"der verfügbaren Tabellen, die Sie sehen können auf Dateien im DBase- "
+"(:file:`.dbf`) und CSV-Format (:file:`.csv`) eingeschränkt."
 
 # cef2c8c3d1f548b794c9b946f0e6ff3c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:109
 msgid "An option, to choose from a selection list of possible options."
-msgstr ""
+msgstr "Eine Option, um mögliche Parameter aus einer Auswahlliste zu wählen."
 
 # 707434db74b34dba93f884296b2c0b8e
 #: ../../source/docs/user_manual/sextante/toolbox.rst:111
@@ -167,16 +232,26 @@ msgid ""
 "such as the cellsize of a layer or the northern most coordinate of another "
 "one."
 msgstr ""
+"Ein numerischer Wert, der in ein Textfeld eingetragen wird. Hier finden Sie "
+"einen Knopf an seiner Seite. Ein Klick darauf erscheint ein Dialog, mit dem "
+"Sie einen mathematischen Ausdruck eingeben können. Sie können es als "
+"handlichen Taschentechner verwenden. Einige nützliche Variablen, die "
+"automatisch in QGIS berechnet sind, können zu Ihrem Ausdruck hinzugefügt "
+"werden. Sie können einen Wert aus jeder dieser Variablen wie z.B. die "
+"Zellengröße eines Layers oder den nördlichsten Koordinatenwert eines Layers "
+"verwenden."
 
 # 14295ab6c1314c57b7a9a3bc7f4b99ab
 #: ../../source/docs/user_manual/sextante/toolbox.rst:130
 msgid "A range, with min and max values to be introduced in two text boxes."
 msgstr ""
+"Ein Wertebereich mit Minimum und Maxmum, der über zewi Textfelder angegeben "
+"wird."
 
 # 943f5338d91146708ebce74dedc8ce18
 #: ../../source/docs/user_manual/sextante/toolbox.rst:132
 msgid "A text string, to be introduced in a text box."
-msgstr ""
+msgstr "Ein Text, der in ein Textfeld eingegeben wird."
 
 # b905e88d12cf4f7e80ff09a4d1e894bc
 #: ../../source/docs/user_manual/sextante/toolbox.rst:134
@@ -184,6 +259,8 @@ msgid ""
 "A field, to choose from the attributes table of a vector layer or a single "
 "table selected in another parameter."
 msgstr ""
+"Eine Spalte die aus einer Attributtabelle ausgewählt wird oder eine einzelne "
+"Tabelle."
 
 # 9f225e4a18134e2186fbac137ea65b05
 #: ../../source/docs/user_manual/sextante/toolbox.rst:137
@@ -192,6 +269,9 @@ msgid ""
 "the text box, or select it from the CRS selection dialog that appear when "
 "you click on the button on the right-hand size"
 msgstr ""
+"Ein Koordinatenbezugsystem (KBS). Sie können den EPSG Code direkt in das "
+"Feld eintragen oder aus dem Auswahlfenster selektieren, wenn sie auf den "
+"Knopf rechts neben de, Feld klicken"
 
 # 81f3f4b5bd2546cda39fbe9b7da2c325
 #: ../../source/docs/user_manual/sextante/toolbox.rst:141
@@ -202,12 +282,18 @@ msgid ""
 "select the value from a layer or the current canvas extent, or to define it "
 "by dragging directly onto the map canvas."
 msgstr ""
+"Vier Zahl, die eingegeben werden, um die ``xmin``, ``xmax``, ``ymin``, "
+"``ymax`` Grenzen festzulegen. Mit einem Klick auf den Knopf auf der rechten "
+"Seite erscheint ein Pop-up-Menü mit zwei Optionen: um den Wert aus einem "
+"Layer zu übernehmen oder um das aktuelle Ausmaß des Kartenfensters zu "
+"wählen, oder durch das Aufziehen eines Rechtecks im Kartenfenster."
 
 # 6a41b76f13b74c7e8073f6ed73ef6cd9
 #: ../../source/docs/user_manual/sextante/toolbox.rst:159
 msgid ""
 "If you select the first option, you will see a window like the next one."
 msgstr ""
+"Wenn Sie die erste Option wählen, sehen Sie einen Dialog wie den nächsten."
 
 # 481ebc632942407a929fdd06fb5d252f
 #: ../../source/docs/user_manual/sextante/toolbox.rst:173
@@ -217,6 +303,10 @@ msgid ""
 "rectangle, the dialog will reappear, containing the values in the extent "
 "text box."
 msgstr ""
+"Wenn Sie den zweiten wählen, wird das Parameter-Fenster verschwinden, damit "
+"Sie durch Klicken und Ziehen im Kartenfenster einen Bereich definieren "
+"können. Wenn das Rechteck definiert ist, wird der Dialog mit den Werten "
+"wieder auftauchen."
 
 # cf05abeb55204eac9a6d962cb909984a
 #: ../../source/docs/user_manual/sextante/toolbox.rst:190
@@ -226,6 +316,10 @@ msgid ""
 "the small button on the left side of the corresponding row to see a dialog "
 "like the following one."
 msgstr ""
+"Eine Liste von Elementen (ob Rasterlayer, Vektorlayer oder Tabellen), aus "
+"der Liste von denen, die in QGIS geladen sind. Um eine Auswahl zu treffen, "
+"klicken Sie auf die kleine Taste auf der linken Seite der entsprechenden "
+"Zeile, um einen Dialog wie den Folgende zu sehen."
 
 # 48e341ff72f3482f908cce75b03f7b8e
 #: ../../source/docs/user_manual/sextante/toolbox.rst:207
@@ -233,12 +327,17 @@ msgid ""
 "A small table to be edited by the user. These are used to define parameters "
 "like lookup tables or convolution kernels, among others."
 msgstr ""
+"Eine kleine Tabelle, um vom Benutzer editiert werden kann. Diese wird "
+"verwendet, um Parameter wie Lookup-Tabellen oder Convolution Filter zu "
+"definieren."
 
 # fa85bd90fffe4c22abf41e8f9f8be23c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:210
 msgid ""
 "Click on the button on the right side to see the table and edit its values."
 msgstr ""
+"Klicken Sie auf den Knopf auf der rechten Seite, um die Tabelle zu sehen und "
+"zu editieren."
 
 # 1397bded92ff451c8942d4832f53b96c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:224
@@ -246,6 +345,8 @@ msgid ""
 "Depending on the algorithm, the number of rows can be modified or not, using "
 "the buttons on the right side of the window."
 msgstr ""
+"In Abhängigkeit vom Algorithmus kann die Anzahl der Zeilen verändert werden "
+"oder auch nicht, indem Sie auf den Knopf rechts neben dem Fenster klicken."
 
 # be4a1c8f2298469f85c2b5a8b119ba73
 #: ../../source/docs/user_manual/sextante/toolbox.rst:227
@@ -257,11 +358,17 @@ msgid ""
 "if you feel like contributing to the project, this would be a good place to "
 "start."
 msgstr ""
+"Sie finden einen **[Hilfe]** Knopf im unteren Teil des Parameter-Dialogs. "
+"Wenn eine Hilfedatei verfügbar ist, wird sie angezeigt, so dass Sie mehr "
+"Informationen über die Algorithmen bekommen sowie eine detaillierte "
+"Beschreibungen, was die einzelnen Parameter machen. Leider fehlt es den "
+"meisten Algorithmen an guter Dokumentation. Wenn Sie also einen Beitrag zum "
+"Projekt leisten möchten, wäre dies ein guter Startpunkt."
 
 # fc8f607c7ead436da501fe679c1579e4
 #: ../../source/docs/user_manual/sextante/toolbox.rst:234
 msgid "A note on projections"
-msgstr ""
+msgstr "Bemerkung zum Thema Projektionen"
 
 # a981d40b456442a19ecde0f74f2bcb57
 #: ../../source/docs/user_manual/sextante/toolbox.rst:236
@@ -273,6 +380,12 @@ msgid ""
 "input to an algorithm, whether vector or raster, it is up to you to make "
 "sure that they are all in the same coordinate system."
 msgstr ""
+"SEXTANTE --- und auch die meisten der externen Anwendungen, deren "
+"Algorithmen SEXTANTE bereitstellt --- verfügen über keine Reprojektion der "
+"Layer und setzen somit voraus, dass alle Daten bereits in einem gemeinsamen "
+"Koordinatenbezugsystem (KBS) sind und damit bereit für die Analyse. Wenn Sie "
+"mehr als einen Layer als Eingabe verwenden, ob Vektor oder Raster, ist es an "
+"Ihnen, sicherzustellen, dass sie alle im selben KBS sind."
 
 # 0e039130ebd044858fb81d7490008aaf
 #: ../../source/docs/user_manual/sextante/toolbox.rst:243
@@ -284,37 +397,44 @@ msgid ""
 "the resulting files as input to SEXTANTE. Also note that the reprojection "
 "process can be performed with SEXTANTE, which incorporates tools to do so."
 msgstr ""
+"Beachten Sie, dass QGIS 'on-the-fly' Reprojektion untertützt. Daher kann es "
+"erscheinen, dass sich zwei Layer scheinbar überlappen und im selben KBS "
+"sind, es aber in Wahrheit vielleicht nicht sind. Eine  Reprojektion sollte "
+"am besten manuell im Vorfeld stattfinden. Die resultierenden Dateien können "
+"dann als Eingabe für SEXTANTE verwendet werden. Beachten Sie auch, dass der "
+"Prozess der Reprojektion auch mit SEXTANTE durchgeführt werden kann."
 
 # c552deb5b35d42bfa01dbb467fa0a5f5
 #: ../../source/docs/user_manual/sextante/toolbox.rst:251
 msgid "Data objects generated by SEXTANTE algorithms"
-msgstr ""
+msgstr "Mit SEXTANTE Algorithmen erstellte Datenobjekte"
 
 # 46774743bf9647f78bc12f7012d2a9d4
 #: ../../source/docs/user_manual/sextante/toolbox.rst:253
 msgid ""
 "Data objects generated by SEXTANTE can be of any of the following types:"
 msgstr ""
+"Datenobjekte, die mit SEXTANTE erstellt wurden, können folgende Typen haben:"
 
 # 8e57398a034a404e9f6f5eb63145ce9a
 #: ../../source/docs/user_manual/sextante/toolbox.rst:255
 msgid "A raster layer"
-msgstr ""
+msgstr "Ein Rasterlayer"
 
 # 6e71dc11e72c4c3b829afadfc9528993
 #: ../../source/docs/user_manual/sextante/toolbox.rst:256
 msgid "A vector layer"
-msgstr ""
+msgstr "Ein Vektorlayer"
 
 # df23132fae974592a6a27b6a691da98d
 #: ../../source/docs/user_manual/sextante/toolbox.rst:257
 msgid "A table"
-msgstr ""
+msgstr "Eine Tabelle"
 
 # a0b736f82d5b42cf94ebf5f858de20b1
 #: ../../source/docs/user_manual/sextante/toolbox.rst:258
 msgid "An HTML file (used for text and graphical outputs)"
-msgstr ""
+msgstr "Eine HTML-Datei (wird für Text und grafische Ausgabe verwendet)"
 
 # 303fa6393d084b748921c28e69f6a4a3
 #: ../../source/docs/user_manual/sextante/toolbox.rst:260
@@ -330,6 +450,17 @@ msgid ""
 "yet implemented, SEXTANTE is prepared to handle them, and we expect to add "
 "new kinds of output channels in a near feature."
 msgstr ""
+"Sie sind alle auf der Festplatte gespeichert (es gibt keine "
+"In-Memory-Ergebnisse), und die Parameter-Tabelle enthält ein Textfeld "
+"entsprechend jeder Ausgabe, wo Sie eine Ausgabe eingeben können, der für die "
+"Speicherung verwendet wird. Die Ausgabe enthält die erforderlichen "
+"Informationen, um das resultierende Objekt irgendwo zu speichern. In den "
+"meisten Fällen werden Sie es in einer Datei speichern, aber die Architektur "
+"der SEXTANTE ermöglicht es für jede andere Art der Speicherung. Zum Beispiel "
+"kann ein Vektorlayer in einer Datenbank gespeichert werden oder sogar zu "
+"einem entfernten Server über eine WFS-T-Schnittstelle hochgeladen werden. "
+"Obwohl Lösungen wie diese noch nicht umgesetzt sind, wird SEXTANTE bereit "
+"sein, es zu nutzen, wenn es zukünftig möglich sein wird."
 
 # 0e70d88d0dfd444db72ea38191818e89
 #: ../../source/docs/user_manual/sextante/toolbox.rst:270
@@ -339,6 +470,11 @@ msgid ""
 "desired filepath. Supported file extensions are shown in the file format "
 "selector of the dialog, depending on the kind of output and the algorithm."
 msgstr ""
+"Um eine Ausgabe zu wählen, klicken Sie einfach auf den Knopf auf der rechten "
+"Seite neben dem Textfeld. Das öffnet einen Speicher-Datei Dialog, in dem Sie "
+"den gewünschte Dateipfad auswählen können. Unterstützte Datei-Erweiterungen "
+"werden in dem Dateiformat Selektor des Dialogs angezeigt, abhängig von der "
+"Art des Ergebnisses und des Algorithmus."
 
 # b0d4fde747214424a9e454a60e24f2fb
 #: ../../source/docs/user_manual/sextante/toolbox.rst:275
@@ -348,10 +484,19 @@ msgid ""
 "format, just select the corresponding file extension (or add it if you are "
 "directly typing the filepath instead). If the extension of the filepath you "
 "entered does not match any of the supported ones, a default extension "
-"(usually  :file:`.dbf` for tables, :file:`.tif` for raster layers and :file:"
-"`.shp` for vector ones) will be appended to the filepath and the file format "
-"corresponding to that extension will be used to save the layer or table."
+"(usually  :file:`.dbf` for tables, :file:`.tif` for raster layers and "
+":file:`.shp` for vector ones) will be appended to the filepath and the file "
+"format corresponding to that extension will be used to save the layer or "
+"table."
 msgstr ""
+"Das Format der Ausgabe wird durch die Dateinamen-Erweiterung definiert. Die "
+"unterstützten Formate sind abhängig von denen, die durch den Algorithmus "
+"selbst unterstützt werden. Um ein Format zu wählen, wählen Sie einfach die "
+"entsprechende Datei-Erweiterung (oder fügen Sie es hinzu, wenn Sie den "
+"Dateipfad eingeben). Wenn die Erweiterung mit keinem der unterstützten "
+"übereinstimmt, wird eine Standard-Erweiterung verwendet (in der Regel "
+":file:``Dbf für Tabellen, :file:``tif für Raster und :file:`Shp` für "
+"Vektor), um den Layer oder die Tabelle zu speichern."
 
 # 3a6216b41a3e4cf38e534374919847bc
 #: ../../source/docs/user_manual/sextante/toolbox.rst:284
@@ -361,17 +506,28 @@ msgid ""
 "you exit QGIS (take care with that in case you save your project and it "
 "contains temporary layers)."
 msgstr ""
+"Wenn Sie keinen Dateinamen angeben, wird das Ergebnis als temporäre Datei "
+"und im entsprechenden Standard-Dateiformat gespeichert und wieder gelöscht, "
+"sobald Sie QGIS verlassen beenden (Vorsicht, falls Sie ein QGIS Projekt "
+"speichern, dass temporäre Layer enthält)."
 
 # f80da724c7e54c6aab4ce5849a189229
 #: ../../source/docs/user_manual/sextante/toolbox.rst:289
 msgid ""
 "You can set a default folder for output data objects. Go to the "
 "configuration dialog (you can open it from the :menuselection:`SEXTANTE` "
-"menu), and in the :guilabel:`General` group you will find a parameter named :"
-"guilabel:`Output folder`. This output folder is used as the default path in "
+"menu), and in the :guilabel:`General` group you will find a parameter named "
+":guilabel:`Output folder`. This output folder is used as the default path in "
 "case you type just a filename with no path (i.e. :file:`myfile.shp`) when "
 "executing an algorithm."
 msgstr ""
+"Sie können einen Standard-Ordner für die Ausgabe der Daten definieren. Gehen "
+"Sie zum Konfigurations-Dialog (Sie können es im Menü "
+":menuselection:`SEXTANTE`-Menü) finden unter :guilabel:`Optionen --> "
+"Allgemein`. Dort gibt es einen Parameter :guilabel:`Ausgabeordner`. Dieser "
+"Ausgabeordner wird als Standard-Pfad verwendet, wenn Sie nur einen "
+"Dateinamen ohne Pfad (zB: file: `myfile.shp`) bei der Ausführung eines "
+"Algorithmus angeben."
 
 # 05d393953fdb499db66d08d16bd9900e
 #: ../../source/docs/user_manual/sextante/toolbox.rst:295
@@ -382,6 +538,12 @@ msgid ""
 "SEXTANTE during the current session, and can be shown at any time by "
 "selecting in menu :menuselection:`SEXTANTE --> SEXTANTE results viewer`."
 msgstr ""
+"Abgesehen von Layern und Tabellen, erzeugt SEXTANTE auch Grafiken und Texte "
+"als HTML-Dateien. Diese Ergebnisse werden am Ende der Ausführung des "
+"Algorithmus in einem neuen Fenster angezeigt. Dieser Dialog hält die "
+"Ergebnisse während der aktuellen Sitzung bereit und kann jederzeit über das "
+"Menü :menuselection:`SEXTANTE --> SEXTANTE Ergebnis-Betrachter` wieder "
+"angezeigt werden."
 
 # 83d011c53d364d028bfdf4b82b78b702
 #: ../../source/docs/user_manual/sextante/toolbox.rst:301
@@ -394,6 +556,13 @@ msgid ""
 "with LAS files used for LiDAR data. The files get created, but you won't see "
 "anything new in your QGIS working session."
 msgstr ""
+"Einige externe Anwendungen können Dateien (ohne besondere Einschränkungen "
+"bei der Dateinamen-Erweiterung haben) als Ausgabe erzeugen, die nicht zu "
+"einer der oben genannten Kategorien gehören. Diese Ausgabedateien werden "
+"nicht von QGIS verarbeitet (weder geöffnet noch in das aktuelle QGIS-Projekt "
+"integriert), da diese meistens nicht von QGIS unterstützt werden. Dies ist "
+"beispielsweise der Fall bei LAS Dateien für LIDAR-Daten. Die Dateien werden "
+"erstellt, aber Sie werden nicht in QGIS angezeigt."
 
 # fb761a0823bc416ea288fca1bfb84884
 #: ../../source/docs/user_manual/sextante/toolbox.rst:309
@@ -402,6 +571,9 @@ msgid ""
 "use to tell SEXTANTE not whether to load the file once it is generated by "
 "the algorithm or not. By default, all files are opened."
 msgstr ""
+"Für alle anderen Arten von Ausgaben finden Sie ein Kontrollkästchen, mit dem "
+"sie festlegen können, ob SEXTANTE die Datei in QGIS zu laden, wenn es durch "
+"den Algorithmus erzeugt wurde. Standardmäßig werden alle Dateien geöffnet."
 
 # 7e6ac33d142b498cbdf858a0ac8669d6
 #: ../../source/docs/user_manual/sextante/toolbox.rst:313
@@ -412,11 +584,16 @@ msgid ""
 "(although the layer is created anyway, but if you leave the text box empty, "
 "it will be saved to a temporary file and deleted once you exit QGIS)"
 msgstr ""
+"SEXTANTE unterstützt keine optionale Ausgabe, alle Ausgaben werden erstellt, "
+"aber Sie können über das entsprechende Kontrollkästchen definieren, wenn Sie "
+"an einer bestimmten Ausgabe nicht interessiert sind. (Der Layer wird zwar "
+"erstellt, aber nur temporär im Hintergrund, wenn Sie das Textfeld leer "
+"lassen, und wieder gelöscht, sobald Sie QGIS verlassen)"
 
 # d738e6257fe241bfb2a37d6ee4ae3a16
 #: ../../source/docs/user_manual/sextante/toolbox.rst:320
 msgid "Configuring SEXTANTE"
-msgstr ""
+msgstr "SEXTANTE Konfigurieren"
 
 # 0ac30495ecb745caa369982d4394bcc3
 #: ../../source/docs/user_manual/sextante/toolbox.rst:322
@@ -426,18 +603,29 @@ msgid ""
 "are structured in separate blocks that you can select on the left-hand side "
 "of the dialog."
 msgstr ""
+"Wie bereits erwähnt wurde, gibt das Konfigurationsmenü Zugang zu einem neuen "
+"Dialog, in dem Sie festlegen, wie SEXTANTE funktioniert. Die "
+"Konfigurationsparameter sind in separate Blöcke strukturiert und können auf "
+"der linken Seite des Dialogs ausgewählt werden."
 
 # 5aa189121d4a47f1ac279c179dc8f99b
 #: ../../source/docs/user_manual/sextante/toolbox.rst:327
 msgid ""
-"Along with the aforementioned :guilabel:`Output folder` entry, the :guilabel:"
-"`General` block contains parameters for setting the default rendering style "
-"for SEXTANTE layers (that is, layers generated by using algorithms from any "
-"of the SEXTANTE components). Just create the style you want using QGIS, save "
-"it to a file, and then enter the path to that file in the settings so "
-"SEXTANTE can use it. Whenever a layer is loaded by SEXTANTE and added to the "
-"QGIS canvas, it will be rendered with that style."
+"Along with the aforementioned :guilabel:`Output folder` entry, the "
+":guilabel:`General` block contains parameters for setting the default "
+"rendering style for SEXTANTE layers (that is, layers generated by using "
+"algorithms from any of the SEXTANTE components). Just create the style you "
+"want using QGIS, save it to a file, and then enter the path to that file in "
+"the settings so SEXTANTE can use it. Whenever a layer is loaded by SEXTANTE "
+"and added to the QGIS canvas, it will be rendered with that style."
 msgstr ""
+"Zusammen mit dem oben genannten :guilabel:`Ausgabeordner` Eintrag, enthält "
+"der :guilabel:`Allgemein` Block Parameter zur Einstellung der "
+"Standard-Darstellung für SEXTANTE Layer (d.h. Layer mit Algorithmen aus "
+"einer der SEXTANTE Komponenten). Erstellen Sie einfach den gewünschten Stil "
+"mit QGIS, speichern Sie es in eine Datei, und geben Sie den Pfad zu dieser "
+"Datei in den Einstellungen an, so dass SEXTANTE es verwenden kann. Immer, "
+"wenn ein Layer von SEXTANTE in QGIS geladen wird, wird dieser Stil verwendet."
 
 # 275fd7e315c04be09616ec7cba7d492e
 #: ../../source/docs/user_manual/sextante/toolbox.rst:335
@@ -447,6 +635,11 @@ msgid ""
 "toolbox and select :guilabel:`Edit rendering styles`. You will see a dialog "
 "like the one shown next."
 msgstr ""
+"Die Darstellung kann für jeden Algorithmus und jede seiner Ausgaben "
+"konfiguriert werden. Klicken Sie einfach auf den Namen des Algorithmus in "
+"der Toolbox, und wählen Sie mit der rechten Maustaste "
+":guilabel:`Farbwiedergabeart bearbeiten`. Sie sehen dann einen Dialog, wie "
+"den folgenden."
 
 # 665efdcf635b42d6af53f9afe0daaa87
 #: ../../source/docs/user_manual/sextante/toolbox.rst:352
@@ -454,6 +647,8 @@ msgid ""
 "Select the style file (:file:`.qml`) that you want for each output and press "
 "**[OK]**."
 msgstr ""
+"Wählen Sie die Stildatei (:file:`.qml`) für jede Ausgabedatei und klicken "
+"Sie dann **[OK]**."
 
 # 36ac890e75d44814a84cc0314182da3c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:355
@@ -461,6 +656,8 @@ msgid ""
 "Other configuration parameters in the :guilabel:`General` group are "
 "explained below:"
 msgstr ""
+"Andere Konfigurationsparameter im Bereich :guilabel:`Allgemein` werden unten "
+"beschrieben:"
 
 # 76cabe3408a1450a8e832a2484ed084c
 #: ../../source/docs/user_manual/sextante/toolbox.rst:358
@@ -475,6 +672,15 @@ msgid ""
 "filename of this temporary file is usually long and meaningless one intended "
 "to avoid collision with other already existing filenames."
 msgstr ""
+"**Dateinamen als Layernamen verwenden**. Der Name jedes mit SEXTANTE "
+"erstellten Layers wird durch den Algorithmus definiert. In einigen Fällen "
+"kann es ein fester Name sein. In anderen Fällen kann sich der Name auf den "
+"Namen eines Eingabelayers oder eines Parameters beziehen, um den Algorithmus "
+"verwenden zu können. Wenn dieses Kontrollkästchen aktiviert ist, wird "
+"stattdessen der Name aus der Ausgabe übernommen. Bemerken Sie: Wenn die "
+"Ausgabe in eine temporäre Datei gespeichert wird, ist der Name der "
+"temporären Datei in der Regel lang und bedeutungslos, um eine Kollision mit "
+"anderen, bereits bestehenden Dateinamen zu vermeiden."
 
 # 34e0871392804c3bb92708841c9522da
 #: ../../source/docs/user_manual/sextante/toolbox.rst:367
@@ -484,13 +690,24 @@ msgid ""
 "will be used. If the layer has no selected features, all of them will be "
 "used."
 msgstr ""
+"**Verwenden Sie nur ausgewählte Funktionen**. Wenn diese Option aktiviert "
+"ist und ein Vektorlayer als Eingabe für einen Algorithmus verwendet wird, "
+"werden nur selektierte Objekte verwendet. Wenn der Layer keine ausgewählten "
+"Objekte zeigt, werden alle verwendet."
 
 # 2fd59a241dcc4d65af9eaf9e1f83731f
 #: ../../source/docs/user_manual/sextante/toolbox.rst:371
 msgid ""
 "Apart from the :guilabel:`General` block in the settings dialog, you will "
-"also find one for each algorithm provider. They contain an :guilabel:"
-"`Activate` item that you can use to make algorithms appear or not in the "
-"toolbox. Also, some algorithm providers have their own configuration items, "
-"that we will explain later when covering particular algorithm providers."
+"also find one for each algorithm provider. They contain an "
+":guilabel:`Activate` item that you can use to make algorithms appear or not "
+"in the toolbox. Also, some algorithm providers have their own configuration "
+"items, that we will explain later when covering particular algorithm "
+"providers."
 msgstr ""
+"Abgesehen vom Bereich :guilabel:`Allgemein` im Menü Einstellungen, finden "
+"Sie auch einen für jeden Algorithmus-Provider. Sie enthalten ein "
+":guilabel:`aktivieren` Element, das Sie verwenden können, um festzulegen, ob "
+"Algorithmen dieses Providers in der Toolbox erscheinen oder nicht. Auch "
+"haben einige Provider ihre eigene Algorithmus-Konfiguration, die wir später "
+"noch genauer erklären."
