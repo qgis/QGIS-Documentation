@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: it_IT\n"
+"X-Source-Language: C\n"
 
 # 0ac839ce1e854aad80dae2eba8218dab
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:10
 msgid "Raster Terrain Analysis Plugin"
-msgstr ""
+msgstr "Plugin Analisi geomorfologica"
 
 # a516c91a4d7043dcb46045b26166ea5a
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:12
@@ -31,11 +34,16 @@ msgid ""
 "intuitive graphical user interface for creating new raster layers (See "
 "Figure_raster_terrain_1_)."
 msgstr ""
+"|dem_analysis| Il plugin Analisi geomorfologica (Raster Terrain Modelling) "
+"consente di calcolare la pendenza, l’esposizione, l’indice di asperità e la "
+"curvatura totale da un DEM (Digital Elevation Model). È semplice da usare "
+"grazie ad un’interfaccia grafica intuitiva: i risultati dell’analisi sono "
+"salvati in un nuovo layer raster (Figura Figure_raster_terrain_1_)."
 
 # f6eafcffb2704566b54d8fd32b56d9cf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:17
 msgid "Description of the analysis:"
-msgstr ""
+msgstr "Descrizione delle analisi:"
 
 # 5bb21f7d840e402db87b712ac2102219
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:19
@@ -43,13 +51,14 @@ msgid ""
 "**Slope**: Calculates slope angle for each cell in degrees (based on first "
 "order derivative estimation)."
 msgstr ""
+"**Pendenza**: calcola l’angolo di pendenza per ogni cella espresso in gradi."
 
 # 06fa4e4f3e0e4c8f9f072a3e709d903d
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:21
 msgid ""
 "**Aspect**: Exposition (starting with 0 for north direction, in degrees "
 "counterclockwise)."
-msgstr ""
+msgstr "**Esposizione**: 0 gradi per nord e continuando in senso orario."
 
 # 136365644c3d4198a49ed57453c43e1c
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:23
@@ -57,6 +66,8 @@ msgid ""
 "**Hillshade**: Create shaded map using light and shadow to provide a more "
 "three-dimensional appearance for a shaded relief map."
 msgstr ""
+"**Ombreggiatura**: crea una mappa dell'ombreggiatura del terreno con un "
+"effetto tridimensionale fornito dal gioco luce - ombra."
 
 # c96a07b787a242d0bfe2b177c1142c13
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:25
@@ -65,6 +76,10 @@ msgid ""
 "described by Riley et al. (1999). It is calculated for every location, by "
 "summarizing the change in elevation within the 3x3 pixel grid."
 msgstr ""
+"**Indice di asperità**: una misura quantitativa dell’eterogeneità del "
+"terreno descritta da Riley et al (1999). Viene calcolata per ogni area "
+"sommando il cambiamento di elevazione all'interno della griglia di pixel "
+"3x3. "
 
 # 3e8bbad4d5684b5c91e67f6e0c69f3fc
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:28
@@ -73,11 +88,14 @@ msgid ""
 "Implemented is a method to choose the elevation colors analysing the "
 "frequency distribution."
 msgstr ""
+"**Rilievo**: cra una mappa di ombreggiatura partendo da un DEM. E' "
+"implementato un metodo che permette di scegliere i colori dell'elevazione "
+"analizzando la distribuzione delle frequenze. "
 
 # 6e0b9ddde7b64e8591f7f81d3beeb960
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:47
 msgid "Using the plugin"
-msgstr ""
+msgstr "Usare il plugin"
 
 # 83c9d1d5c2474aa39f58b7b2468904c5
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:49
@@ -85,13 +103,17 @@ msgid ""
 "Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample "
 "location."
 msgstr ""
+"Avviare QGIS e caricare il file raster :file:`gtopo30` dalla location di "
+"GRASS."
 
 # 2ce2bec1fb8a4c8597060192f4128daf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:51
 msgid ""
-"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section :"
-"ref:`load_core_plugin`)"
+"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`)"
 msgstr ""
+"Caricare il plugin Analisi geomorfologica dal Gestore plugin (sezione "
+":ref:`load_core_plugin`)"
 
 # ee6fbecca5af48cc918522436d4c5fe9
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:53
@@ -100,13 +122,16 @@ msgid ""
 "Analysis --> Slope`). The :guilabel:`Slope` dialog appears as shown in "
 "Figure_raster_terrain_1_."
 msgstr ""
+"Selezionare un metodo di analisi dal menu (es. :menuselection:`Raster --> "
+"Analisi geomorfologica --> Pendenza`). Si aprirà cosi la finestra di dialogo "
+":guilabel:`Pendenza` come in figura Figure_raster_terrain_1_."
 
 # b0c292487b02476895c1fa83adf499a3
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:55
 msgid "Specify an output file path, and an output file type."
-msgstr ""
+msgstr "Specificare nome, percorso e formato del file di output."
 
 # fac8700fe99f4cecab6197b09a248c00
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:56
 msgid "Click **[OK]**."
-msgstr ""
+msgstr "Cliccare su **[OK]**."
