@@ -1098,7 +1098,9 @@ do the trick:
   imagerelpath = "images_test/test_image.jpg";
   layer = qgis.utils.iface.activeLayer();
   import os.path;
-  layerpath = layer.source() if layer.providerType() == 'ogr' else (qgis.core.QgsDataSourceURI(layer.source()).database() if layer.providerType() == 'spatialite' else None);
+  layerpath = layer.source() if layer.providerType() == 'ogr' else \
+  (qgis.core.QgsDataSourceURI(layer.source()).database() \
+  if layer.providerType() == 'spatialite' else None);
   path = os.path.dirname(str(layerpath));
   image = os.path.join(path,imagerelpath);
   import subprocess;
@@ -1116,7 +1118,8 @@ project file? The code of the Python action would be:
   command="firefox";
   imagerelpath="images/test_image.jpg";
   projectpath=qgis.core.QgsProject.instance().fileName();
-  import os.path; path=os.path.dirname(str(projectpath)) if projectpath != '' else None;
+  import os.path; path=os.path.dirname(str(projectpath)) \
+  if projectpath != '' else None;
   image=os.path.join(path, imagerelpath);
   import subprocess;
   subprocess.Popen( [command, image ] );
