@@ -3,9 +3,6 @@
 The SEXTANTE toolbox
 ====================
 
-Introduction
-------------
-
 The *Toolbox* is the main element of the SEXTANTE GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available
 algorithms grouped in different blocks, and is the access point to run them

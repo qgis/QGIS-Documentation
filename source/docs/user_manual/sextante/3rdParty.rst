@@ -3,9 +3,6 @@
 Configuring external applications
 =================================
 
-Introduction
-------------
-
 SEXTANTE can be extended using additional applications, calling them from within
 SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are supported, along
 with some other command-line applications that provide spatial data analysis

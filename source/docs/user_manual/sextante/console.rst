@@ -3,9 +3,6 @@
 Using SEXTANTE from the console
 ===============================
 
-Introduction
-------------
-
 The console allows advanced users to increase their productivity and perform
 complex operations that cannot be performed using any of the other elements of
 the SEXTANTE GUI. Models involving several algorithms can be defined using the
