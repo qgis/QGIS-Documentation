@@ -288,10 +288,14 @@ my paragraph begins here with a nice logo |nice_logo|.
 
 Index
 =====
-Several index tag exists in RST. Here the easiest one
+
+Several index tag exists in RST. To be able to translate the index, it is necessary to 
+integrate it into the normal text. Otherwise software like linguist or transifex won't 
+add it to the translatable text. Usage is:
 
 ::
 	
-   .. index:: `my index`
+   QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
+
 
 
