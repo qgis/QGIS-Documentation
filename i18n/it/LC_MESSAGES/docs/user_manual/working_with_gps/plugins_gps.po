@@ -89,11 +89,11 @@ msgstr ""
 "Per caricare un file GPX è necessario installare il plugin "
 ":menuselection:`Plugins -->` |mActionShowPluginManager| "
 ":menuselection:`Gestione Plugin...` aprendo la finestra di dialogo Gestione "
-"Plugin. Spuntare la casella |checkbox| :guilabel: `Strumenti GPS`. Quando il "
+"Plugin. Spuntare la casella |checkbox| :guilabel:`Strumenti GPS`. Quando il "
 "plugin è installato verranno visualizzati nella barra degli strumenti due "
 "pulsanti che rappresentano dei piccoli palamari GPS. Un esempio di file GPX "
-"è disponibile nel dataset campione :file: "
-"`qgis_sample_data/gps/national_monuments.gpx` vedi sezione "
+"è disponibile nel dataset campione "
+":file:`qgis_sample_data/gps/national_monuments.gpx` vedi sezione "
 ":ref:`label_sampledata` per maggiori informazioni sul dataset campione:"
 
 # e25ee81c155045db91c6cf370814a5b8
@@ -124,7 +124,7 @@ msgid ""
 "Click on the |gps_importer| :sup:`GPS Tools` icon and open the "
 ":guilabel:`Load GPX file` tab (see figure_GPS_1_)."
 msgstr ""
-"Cliccando sull'icona |gps_importer| :sup:`Strumenti GPS`verrà aperta la "
+"Cliccando sull'icona |gps_importer| :sup:`Strumenti GPS` verrà aperta la "
 "finestra :guilabel:`Carica file GPX` (vedi figura_GPS_1_)."
 
 # b1a4d39e35664ea2824144c32cb0945d
@@ -134,7 +134,7 @@ msgid ""
 ":file:`national_monuments.gpx` and click **[Open]**."
 msgstr ""
 "Navigare all'interno della cartella :file:`qgis_sample_data/gps/`, "
-"selezionare il file GPX :file:`national_monuments.gpx`e cliccare **[Apri]**."
+"selezionare il file GPX :file:`national_monuments.gpx` e cliccare **[Apri]**."
 
 # 2c3157ac8e5540078937b1cab347e3b8
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:69
@@ -287,7 +287,7 @@ msgid ""
 "When you click **[OK]** the data will be downloaded from the device and "
 "appear as a layer in QGIS."
 msgstr ""
-"Quando si clicca su **[OK]**i dati saranno scaricati dal dispositivo e "
+"Quando si clicca su **[OK]** i dati saranno scaricati dal dispositivo e "
 "appariranno come nuovi layer in QGIS."
 
 # e26c03374d914f549ded4d8d587446f8
@@ -348,7 +348,7 @@ msgstr ""
 "GPS` e :guilabel:`Carica su GPS`, è possibile configurare personalmente il "
 "proprio dispositivo. Per fare questo è possibile utilizzare l'editor dei "
 "dispositivi GPS, che si avvia cliccando sul bottone **[Modifica "
-"periferice]**sia nella finestra di download che in quella di upload. "
+"periferiche]** sia nella finestra di download che in quella di upload. "
 
 # f67e5a80ab7a4df5a06f7546d2d819e9
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:166
@@ -370,8 +370,8 @@ msgstr ""
 "di download è il comando che viene utilizzato per scaricare i dati dal "
 "dispositivo come file GPX. Questo solitamente sarà un comando di GPSBabel, "
 "ma è possibile utilizzare altre strighe di comando con le quali è possibile "
-"creare un file GPX. QGIS rimpiazzerà i tasti ``%type``, ``%in``, e "
-"``%out`quando il comando verrà lanciato."
+"creare un file GPX. QGIS rimpiazzerà i tasti ``%type``, ``%in``, e ``%out`` "
+"quando il comando verrà lanciato."
 
 # 4119f598430b405aac5e123d7574a90b
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:175
@@ -381,8 +381,8 @@ msgid ""
 "tracks. These are command line options that tell GPSBabel which feature type "
 "to download."
 msgstr ""
-"``%type``sarà interpretato come ``-w`` se si stanno scaricando dei "
-"waypoints, ``-r``se si stanno scaricando delle routes e ``-t` se si stanno "
+"``%type`` sarà interpretato come ``-w`` se si stanno scaricando dei "
+"waypoints, ``-r`` se si stanno scaricando delle routes e ``-t`` se si stanno "
 "scaricando dei trcks. Questi sono dei comandi opzionali con i quali è "
 "possibile dire a GPSBabel quali tipologie di file GPS si deisdera scaricare."
 
@@ -402,11 +402,10 @@ msgstr ""
 "mentre ``%out`` indica il nome del file GPX nel quale verranno salvati i "
 "dati. Dunque quando viene creato un nuovo dispositivo il seguente comando di "
 "download ``gpsbabel %type -i garmin -o gpx %in %out`` (questo è il comando "
-"di download per la tipologia di dispositivi predefiniti :guilabel:`GPS "
-"device:`Garmin serial |selectstring|) verrà utilizzato per scaricare "
-"waypoints dalla porta ``/dev/ttyS0`` all'interno del file GPX "
-"``output.gpx``, QGIS leggerà la stringa e avvierà il comando ``gpsbabel -w "
-"-i garmin -o gpx /dev/ttyS0 output.gpx``."
+"di download per la tipologia di dispositivi predefiniti 'Garmin serial') "
+"verrà utilizzato per scaricare waypoints dalla porta ``/dev/ttyS0`` "
+"all'interno del file GPX ``output.gpx``, QGIS leggerà la stringa e avvierà "
+"il comando ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 
 # e8e7d32b5c204448b286104f172c63d5
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:188
@@ -417,7 +416,7 @@ msgid ""
 "the port name."
 msgstr ""
 "Il comando di upload è il comando che viene utilizzato per caricare dati sul "
-"dispositivo. Vengono utilizzati i stessi tasti, ma ``%in` è utilizzato per "
+"dispositivo. Vengono utilizzati i stessi tasti, ma ``%in`` è utilizzato per "
 "indicare il nome del file GPX che contiene il layer in caricamento, e "
 "``%out`` viene sostituito dal nome della porta."
 
