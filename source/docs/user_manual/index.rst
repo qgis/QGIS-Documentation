@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. _QGIS-manual-index-reference:
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
