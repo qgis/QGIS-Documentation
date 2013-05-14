@@ -1031,17 +1031,14 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    layer. It's located just to the left of the **[Insert Field]** button.
 #. From the drop-down box :guilabel:`The valid attribute names for this layer`
    |selectstring| select 'NAMES' and click **[Insert Field]**.
-#. Your action text now looks like this:
-
-   ``firefox http://google.com/search?q=\%NAMES``
+#. Your action text now looks like this: ``firefox http://google.com/search?q=%NAMES``
 #. To finalize the action click the **[Insert action]** button.
 
 
 This completes the action and it is ready to use. The final text of the
 action should look like this:
 
-   ``firefox http://google.com/search?q=\%NAMES``
-
+   ``firefox http://google.com/search?q=%NAMES``
 
 We can now use the action. Close the :guilabel:`Layer Properties` dialog and
 zoom in to an area of interest. Make sure the ``lakes`` layer is active and
