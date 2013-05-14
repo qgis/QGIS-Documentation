@@ -292,12 +292,15 @@ Index
 =====
 
 Several index tag exists in RST. To be able to translate the index, it is necessary to 
-integrate it into the normal text. Otherwise software like linguist or transifex won't 
-add it to the translatable text. Usage is:
+integrate it into the normal text. In this case use this syntax:
 
 ::
 	
    QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
 
 
+If the term does not have to be translated, please use this syntax:
 
+::
+
+   .. index:: WMS, WFS, WCS, CAT, SFS, GML, ...
