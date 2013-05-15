@@ -311,15 +311,15 @@ works on one project at a time.  Settings are either considered
 as being per-project, or as a default for new projects (see
 Section :ref:`gui_options`). QGIS can save the state of your
 workspace into a project file using the menu options
-:menuselection:`File -->` |mActionFileSave| :menuselection:`Save Project`
-or :menuselection:`File -->` |mActionFileSaveAs| :menuselection:`Save Project As`.
+:menuselection:`Project -->` |mActionFileSave| :menuselection:`Save`
+or :menuselection:`Project -->` |mActionFileSaveAs| :menuselection:`Save As`.
 
 Load saved projects into a QGIS session using
-:menuselection:`File -->` |mActionFileOpen| :menuselection:`Open Project`
-or :menuselection:`File --> Open Recent Project`.
+:menuselection:`Project -->` |mActionFileOpen| :menuselection:`Open ...`, :menuselection:`Project --> New from template` or 
+:menuselection:`Project --> Open Recent`.
 
 If you wish to clear your session and start fresh, choose
-:menuselection:`File -->` |mActionFileNew| :menuselection:`New Project`.
+:menuselection:`Project -->` |mActionFileNew| :menuselection:`New`.
 Either of these menu options will prompt you to save the existing project
 if changes have been made since it was opened or last saved.
 
@@ -356,10 +356,10 @@ There are several ways to generate output from your QGIS session. We have
 discussed one already in Section :ref:`sec_projects` saving as a project file.
 Here is a sampling of other ways to produce output files:
 
-* Menu option :menuselection:`File -->` |mActionSaveMapAsImage| :sup:`Save as Image`
+* Menu option :menuselection:`Project -->` |mActionSaveMapAsImage| :sup:`Save as Image`
   opens a file dialog where you select the name, path and type of image (PNG or
   JPG format). A world file with extension PNGW or JPGW saved in the same folder
   georeferences the image.
-* Menu option :menuselection:`File -->` |mActionNewComposer| :menuselection:`New
+* Menu option :menuselection:`Project -->` |mActionNewComposer| :menuselection:`New
   Print Composer` opens a dialog where you can layout and print the current map
   canvas (see Section :ref:`label_printcomposer`).
