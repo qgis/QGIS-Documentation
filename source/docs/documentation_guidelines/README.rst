@@ -298,9 +298,41 @@ integrate it into the normal text. In this case use this syntax:
 	
    QGIS allows to load several :index:`Vector formats` supported by GDAL/OGR ...
 
-
 If the term does not have to be translated, please use this syntax:
 
 ::
 
    .. index:: WMS, WFS, WCS, CAT, SFS, GML, ...
+
+
+Add new Screenshots
+===================
+
+Here are some hints to create new, nice looking screenshots. For the user guide they go into ./resources/en/user_manual/
+
+* same environnement for all the screen caps (same OS, same decoration, same font size)
+* reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
+* the less clutter, the better (no need to activate all the toolbars)
+* don't resize them in an image editor, the size will be set into the rst files (downscalling the dimensions without properly upping the 
+resolution > ugly)
+* cut the background
+* save them in png (no jpeg artefacts)
+* the screenshot should show the content according to what is described in the text
+
+
+Translate Screenshots
+=====================
+
+Here are some hints to create screenshots for your translated user guide. They will go into ./resources/<your language>/user_manual/
+
+* same environnement for all the screen caps (same OS, same decoration, same font size)
+* same size as the english 'original' screenshots, otherwise they will be stretched and look ungly
+* reduce the window to the minimal space needed to show the feature (taking the all screen for a small modal window > overkill)
+* the less clutter, the better (no need to activate all the toolbars)
+* don't resize them in an image editor, the size will be set into the rst files (downscalling the dimensions without properly upping the 
+resolution > ugly)
+* cut the background
+* save them in png (no jpeg artefacts)
+* the screenshot should show the content according to what is described in the text
+
+
