@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 14:25\n"
+"POT-Creation-Date: 2013-05-18 17:44\n"
 "PO-Revision-Date: 2013-02-25 14:24+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -784,7 +784,7 @@ msgstr ""
 # 0787ac28b93b4027b4b24da477708205
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:439
 msgid "Old Symbology"
-msgstr ""
+msgstr "Ancienne symbologie"
 
 # abe7fde107dd4e78b10ec5d737456d87
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:442
@@ -794,6 +794,10 @@ msgid ""
 "vector_new_symbology_, because the old symbology will be removed in one of "
 "the next releases."
 msgstr ""
+"|qg| 1.8 permet toujours l'utilisation de l'ancienne symbologie, bien qu'il "
+"est recommandé de passer à la nouvelle, décrite dans la secion "
+"vector_new_symbology_. L'ancienne symbologie sera retirée dans l'une des "
+"prochaines versions."
 
 # 85a70564e4414f8daa19291759091f53
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:446
@@ -941,7 +945,7 @@ msgstr ""
 # b37b498a74b9435f84e5eaabfeed6c96
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:522
 msgid "Labels Tab"
-msgstr ""
+msgstr "Onglet Étiquettes"
 
 # 06e7bd49838345c39a1d25e618187b2c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:524
@@ -951,6 +955,10 @@ msgid ""
 "old labeling. The new labeling is implemented as a core application and will "
 "replace the features of the old labels tab in one of the next versions."
 msgstr ""
+"|labels| De même que pour la symbologie, |qg| 1.8 propose en parallèle deux "
+"moteurs d'étiquettes : un ancien et un nouveau. L'onglet "
+":guilabel:`Étiquettes` correspond toujours à l'ancien système d'étiquetage "
+"mais sera remplacé par le nouveau dans l'une des prochaines versions de QGIS."
 
 # 85f970ae13f64a0794c9d80024e1b780
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:529
@@ -958,6 +966,8 @@ msgid ""
 "We recommend to switch to the new labeling, described in section "
 ":ref:`vector_new_labeling`."
 msgstr ""
+"Nous vous recommandons de passer au nouveau système d'étiquetage décrit dans "
+"la section :ref:`vector_new_labeling`."
 
 # d4d86b5ae33a49fe88275f96b44f856c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:532
@@ -1377,6 +1387,11 @@ msgid ""
 ":sup:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column` can be "
 "used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`."
 msgstr ""
+"|attributes| Dans l'onglet :guilabel:`Champs`, il est possible de manipuler "
+"les attributs du jeu de données sélectionné. Les boutons  "
+"|mActionNewAttribute| :sup:`Nouvelle colonne` et |mActionDeleteAttribute| "
+":sup:`Effacer une colonne`} peuvent être utilisés lorsque le jeu de données "
+"est en |mActionToggleEditing| :sup:`mode édition`."
 
 # 5a945500fa2540cc9b26729c0e281802
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:756
@@ -1385,18 +1400,21 @@ msgid ""
 "OGR library supports to add and remove columns, if you have a GDAL version "
 ">= 1.9 installed."
 msgstr ""
+"Actuellement, seules les colonnes des couches PostGIS peuvent être effacées "
+"ou ajoutées. La bibliothèque OGR, dans les versions de GDAL >= 1.9, supporte "
+"l'ajout et la suppression de colonnes."
 
 # 13951eb43ae84d9dabe280c68c5d7b5a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:760
 msgid "**Edit Widget**"
-msgstr ""
+msgstr "**Outils d'édition**"
 
 # 7ca7c50f9eb34e7a8cdce097969e5cf0
 # fcb90a9a81fa47fabb8e839271d6b19c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:764
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:766
 msgid "\\"
-msgstr ""
+msgstr "\\"
 
 # e8cc106edfd8423ea1b69228ef8e85eb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:780
@@ -1407,6 +1425,12 @@ msgid ""
 "the **[edit widget]** button, a dialog opens, where you can define different "
 "widgets. These widgets are:"
 msgstr ""
+"Dans l'onglet :guilabel:`Champs` vous trouverez un colonne ``Outils "
+"d'édition``. Cette colonne peut être utilisée pour définir les valeurs ou "
+"les plages de valeurs permises lors de l'ajout d'attributs dans une colonne. "
+"Si vous cliquez sur le bouton **[Édition de ligne]**, une fenêtre s'ouvre et "
+"permet de choisir parmi les différents outils d'édition proposés. Ces outils "
+"sont :"
 
 # 03678b554d204c2094c5230015a54d4c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:786
@@ -1414,6 +1438,9 @@ msgid ""
 "**Line edit**: an edit field which allows to enter simple text (or restrict "
 "to numbers for numeric attributes)."
 msgstr ""
+"**Édition de ligne** : un champ d'édition qui permet d'entrer du texte "
+"simple (ou de restreindre à des nombres pour des attributs de type "
+"numériques)."
 
 # 2b6f8ab0d1fb4b23af228c2debf582a4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:788
@@ -1422,6 +1449,9 @@ msgid ""
 "classification, if you have chosen 'unique value' as legend type in the "
 ":guilabel:`Style` tab of the properties dialog."
 msgstr ""
+"**Classification** : Affiche une liste déroulante avec les valeurs utilisées "
+"pour la classification, si vous avez choisi le style 'Catégorisé' dans "
+"l'onglet :guilabel:`Style` de la fenêtre de propriétés."
 
 # 0856529a10a34679a16350369e70562f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:791
@@ -1429,6 +1459,8 @@ msgid ""
 "**Range**: Allows to set numeric values from a specific range. The edit "
 "widget can be either a slider or a spin box."
 msgstr ""
+"**Plage** : Permet de spécifier une plage de valeurs numériques disponibles. "
+"Il peut s'agir d'une barre coulissante ou d'une zone de texte éditable."
 
 # edb7eb06133946cdb4d3d734e5bbc19a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:793
@@ -1437,12 +1469,18 @@ msgid ""
 "attribute table. If editable is activated, a line edit is shown with "
 "autocompletion support, otherwise a combo box is used."
 msgstr ""
+"**Valeurs uniques** : L'utilisateur peut sélectionner l'une des valeurs déjà "
+"utilisées dans cette colonne. Une ligne est affichée avec le support de "
+"l'auto-complétion si la case 'Éditable' est cochée, une boîte de saisie est "
+"utilisée sinon."
 
 # 8438e805edc14e9d98f8b247ec0bbee4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:796
 msgid ""
 "**File name**: Simplifies the selection by adding a file chooser dialog."
 msgstr ""
+"**Nom de fichier** : Simplifie la sélection d'un fichier par l'ouverture "
+"d'un explorateur de fichiers."
 
 # 9e429c69db454968a611085db410b630
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:797
@@ -1451,6 +1489,10 @@ msgid ""
 "attribute, the description is shown in the combo box. You can define values "
 "manually or load them from a layer or a CSV file."
 msgstr ""
+"**Liste de valeurs** : Liste déroulante avec des valeurs prédéfinies. La "
+"valeur est stockée dans l'attribut, la description est affichée dans la "
+"liste. Vous pouvez défninir des valeurs manuellement ou les charger depuis "
+"la couche ou depuis un fichier CSV."
 
 # 806e95a6456b4dee9b81f8d76501baf9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:800
@@ -1458,6 +1500,9 @@ msgid ""
 "**Enumeration**: Opens a combo box with values that can be used within the "
 "columns type. This is currently only supported by the postgres provider."
 msgstr ""
+"**Énumération** : Ouvre une liste déroulante avec les valeurs qui peuvent "
+"être utilisées selon la définition du type de champ. Ce mode d'édition n'est "
+"actuellement disponible que pour les couches PostgreSQL."
 
 # f6a0f1d22806460287dba40c78ec8216
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:802
@@ -1465,6 +1510,8 @@ msgid ""
 "**Immutable**: The immutable attribute column is read-only. The user is not "
 "able to modify the content."
 msgstr ""
+"**Immuable** : Un attribut immuable est en lecture seule. L'utilisateur ne "
+"pourra pas le modifier."
 
 # 16290b111b534ad5954f0049c2fc7932
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:804
@@ -1472,6 +1519,8 @@ msgid ""
 "**Hidden**: A hidden attribute column is invisible. The user is not able to "
 "see its content."
 msgstr ""
+"**Cachée** : Un attribut caché sera invisible. L'utilisateur ne pourra pas "
+"visualiser son contenu."
 
 # 26d9541e05dc4612bf53567c5692b0e3
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:806
@@ -1479,6 +1528,8 @@ msgid ""
 "**Checkbox**: Displays a checkbox and you can define what attribute is added "
 "to the column when the checkbox is activated or not."
 msgstr ""
+"**Case à cocher** : Affiche une case à cocher et vous pouvez définir quelle "
+"valeur stocker quand la case est cochée ou pas."
 
 # 5216591fc6b74e64a1c4411be0272dfd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:808
@@ -1486,6 +1537,8 @@ msgid ""
 "**Text edit**: This opens a text edit field that allows multiple lines to be "
 "used."
 msgstr ""
+"**Édition de texte** : Ouvre une zone d'édition de texte permettant les "
+"retours à la ligne."
 
 # 01b3bb3bcd3142eaa304490864edc40d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:810
@@ -1493,6 +1546,8 @@ msgid ""
 "**Calendar**: Opens a calendar widget to enter a date. Column type must be "
 "text."
 msgstr ""
+"**Calendrier** : Ouvre un calendrier permettant de choisir une date. Le "
+"champ doit être de type texte."
 
 # 70b6a2268e4e4f83b74fc02680924ee2
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:812
@@ -1500,6 +1555,8 @@ msgid ""
 "**Value Relation**: Offers values from a related table in a combobox. You "
 "can select layer, key column and value column."
 msgstr ""
+"**Valeur relationnelle** : Propose les valeurs stockées dans un champ d'une "
+"autre table. Vous choisisez la table, le champ clé et le champ de valeur."
 
 # a254db8ed2b948d5bed0ceeb36fa96fc
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:814
@@ -1507,11 +1564,13 @@ msgid ""
 "**UUID Generator**: Generates a read-only UUID (Universally Unique "
 "Identifiers) field, if empty."
 msgstr ""
+"**Générateur d'UUID** : Champ en lecture seule qui génère un UUID "
+"(Identifiant Unique Universel) lorsqu'il est vide."
 
 # e86ce9181f83405ebb74a6f8c1a95735
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:820
 msgid "General Tab"
-msgstr ""
+msgstr "Onglet Général"
 
 # 4b6e4df6ead8406c946065a13aa4d57c
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:822
@@ -1519,17 +1578,21 @@ msgid ""
 "|general| The :guilabel:`General` tab is essentially like that of the raster "
 "dialog. There are several options available:"
 msgstr ""
+"|general| L'onglet :guilabel:`Général` des couches vectorielles est très "
+"proche de celui des couches raster. Voici les options disponibles :"
 
 # 4c9aee023d344febad0b38984916d996
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:825
 msgid "Change the display name of the layer"
-msgstr ""
+msgstr "modifier le nom affiché de la couche,"
 
 # 1f54258a48684f8eb5af7b05f9ddbd2e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:826
 msgid ""
 "Set a display field to be used for the :guilabel:`Identify Results` dialog"
 msgstr ""
+"choisir le champ à afficher dans la fenêtre d':guilabel:`Identification des "
+"résultats`,"
 
 # d4d6cf2a2a754ef68bdfdaeac789a905
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:827
@@ -1537,11 +1600,16 @@ msgid ""
 "Define a certain Edit User Interface for the vector layer written with the "
 "Qt Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/"
 msgstr ""
+"définir une Interface d'édition pour la couche, interface réalisée avec "
+"l'IDE Qt Creator et ses outils associés "
+"(http://qt.digia.com/Product/Developer-Tools/),"
 
 # 790a3f623162429385e9239107ea0ec0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:829
 msgid "Create a :guilabel:`Spatial Index` (only for OGR supported formats)"
 msgstr ""
+"créer un :guilabel:`Index Spatial` (uniquement pour les formats supportés "
+"par OGR),"
 
 # 92abe53900e54aff9a8628ea6b6fb2f6
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:830
@@ -1549,11 +1617,14 @@ msgid ""
 "Add an :guilabel:`Init function` for the layer. They will overwrite existing "
 "QGIS widget initializations, if applied"
 msgstr ""
+"ajouter une :guilabel:`Fonction d'initialisation` pour la couche. Elle "
+"écrasera les initialisations définies par QGIS,"
 
 # ea4bcc278d18410a83c10134f6994815
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:832
 msgid ":guilabel:`Update Extents` information for a layer"
 msgstr ""
+":guilabel:`Mettre à jour l'emprise` dans les informations de la couche,"
 
 # 61228500b2d84d89af6f2719167074ad
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:833
@@ -1561,6 +1632,8 @@ msgid ""
 "View or change the projection of the specific vector layer, clicking on "
 ":guilabel:`Specify CRS`"
 msgstr ""
+"visualiser ou modifier le système de coordonnées de référence de la couche "
+"en cliquant sur guilabel:`Specifier le SCR`,"
 
 # 75f35b389c2b407eaa7e852b6fcba5a6
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:836
@@ -1571,11 +1644,16 @@ msgid ""
 "in the layer that will be visualized (also refer to section "
 ":ref:`sec_selection_query`)."
 msgstr ""
+"De plus vous pouvez |checkbox| :guilabel:`Utiliser le rendu dépendant de "
+"l'échelle`, définir des options spécifiques (par exemple l'encodage) et, "
+"avec le bouton **[Constructeur de requête]**, vous pouvez restreindre la "
+"couche à un sous-ensemble d'entités (référez-vous également à la section "
+":ref:`sec_selection_query`)."
 
 # e385308e2b9948aba4c1554b8af97847
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:856
 msgid "Metadata Tab"
-msgstr ""
+msgstr "Onglet Métadonnées"
 
 # 1fe4b3b854cd4cb1af266cc0fc9f5dff
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:858
@@ -1588,6 +1666,12 @@ msgid ""
 "about the CRS of the layer. This is a quick way to get information about the "
 "layer."
 msgstr ""
+"|metadata| L'onglet :guilabel:`Métadonnées` contient les informations sur la "
+"couche dont le type et la localisation, le nombre d'entités, le type des "
+"entités et les possibilités d'éditions. Les sections :guilabel:`Emprise` et "
+":guilabel:`Système spatial de référence de la couche` fournissent d'autres "
+"informations sur la couche. Cet onglet permet d'obtenir rapidement des "
+"informations sur la couche."
 
 # 9641523a39864d21bf06ce97206b6296
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:865
@@ -1596,11 +1680,14 @@ msgid ""
 "information. These information will be saved in the QGIS project file for "
 "following sessions and will be used for QGIS server."
 msgstr ""
+"De plus, vous pouvez ajouter ou éditer le titre et le résumé de la couche. "
+"Ces informations seront sauvegardées dans le fichier de projet QGIS et "
+"utilisées par QGIS Server."
 
 # 2971f29bc21a45b49e729324edf19b82
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:882
 msgid "Actions Tab"
-msgstr ""
+msgstr "Onglet Actions"
 
 # f961dfcdfb9b433aa883d77fb55062f9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:884
@@ -1610,6 +1697,11 @@ msgid ""
 "for example, running a program with arguments built from the attributes of a "
 "feature or passing parameters to a web reporting tool."
 msgstr ""
+"|action| |qg| est capable d'effectuer des actions basées sur les attributs "
+"d'une entité. Il peut s'agir de nombreuses actions, par exemple exécuter un "
+"programme avec des arguments construits à partir des attributs d'une entité, "
+"ou encore, passer des paramètres à un outil de publication de rapports sur "
+"internet."
 
 # 0930a1fc38284815a2195ffd9d577f81
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:901
@@ -1618,21 +1710,27 @@ msgid ""
 "or view a web page based on one or more values in your vector layer. They "
 "are devided into 6 types and can be used like this:"
 msgstr ""
+"Les actions sont utiles si vous voulez exécuter fréquemment une application "
+"externe ou charger une page web basée sur une ou plusieurs valeurs de votre "
+"couche vecteur. Il en existe 6 types  qui peuvent être utilisés de la sorte :"
 
 # 0514260ba2794cc1903df1af401385ad
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:905
 msgid "Generic, Mac, Windows and Unix actions start an external process,"
 msgstr ""
+"Les actions Générique, Mac, Windows et Unix lancent un processus externe,"
 
 # db4b68198ff44316a551ce3c6edbd6b0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:906
 msgid "Python actions execute a python expression,"
-msgstr ""
+msgstr "Les actions Python lancent un code python,"
 
 # de288e0b10374c3da18580fdf1a37bb2
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:907
 msgid "Generic and Python actions are visible everywhere,"
 msgstr ""
+"Les actions Générique et Python sont disponibles quel que soit le système "
+"d'exploitation,"
 
 # e5847a5d926d460a8c1b15830ebda744
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:908
@@ -1642,6 +1740,10 @@ msgid ""
 "can only see and execute the one 'Edit' action for their platform to run the "
 "editor)."
 msgstr ""
+"Les actions Mac, Windows et Unix sont disponibles uniquement depuis les "
+"systèmes d'exploitation correspondants (c'est à dire que vous pouvez définir "
+"trois actions 'Editer' qui ouvrent un éditeur et les utilisateurs ne verront "
+"que l'action correspondant à leur système d'exploitation)."
 
 # ed19ba35af614d1a90deb6902afa340d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:912
@@ -1651,11 +1753,15 @@ msgid ""
 "based on an attribute value. This concept is used in the following "
 "discussion."
 msgstr ""
+"Quelques exemples d'actions sont fournis. Vous pouvez les charger en "
+"cliquant sur **[Ajouter les actions par défaut]**. Un des exemples effectue "
+"une recherche basée sur la valeur d'un attribut. C'est ce qui est développé "
+"par la suite."
 
 # 4be495f1468a4182b1e437e11b6de2e8
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:918
 msgid "**Defining Actions**"
-msgstr ""
+msgstr "**Définir des actions**"
 
 # 7390812a37614ab79ffc00b0d759bfbe
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:920
@@ -1674,6 +1780,21 @@ msgid ""
 "can be used to group text into a single argument to the program, script or "
 "command. Double quotes will be ignored if preceded by a backslash."
 msgstr ""
+"Les actions sur les attributs sont définies dans la fenêtre "
+":guilabel:`Propriétés de la couche`. Pour :index:`définir une action`, "
+"ouvrez la fenêtre :guilabel:`Propriétés de la couche` et cliquez sur "
+"l'onglet :guilabel:`Actions`. Sélectionnez le type 'Générique' et renseignez "
+"un nom pour l'action. L'action elle-même doit contenir le nom de "
+"l'application qui sera exécutée quand l'action sera lancée. Vous pouvez "
+"ajouter un ou plusieurs champs d'attributs comme argument pour "
+"l'application. Quand l'action est invoquée n'importe quelle chaîne de "
+"caractère précédée de ``%`` et correspondant au nom d'un champ sera remplacé "
+"par la valeur de ce champ. Le caractère spécial :index:`%%` sera remplacé "
+"par la valeur d'un champ qui a été sélectionné par le résultat d'un "
+"Identifier ou dans la table d'attributs (voir using_actions_, ci-dessous). "
+"Des guillemets peuvent être utilisés pour grouper du texte en un seul "
+"argument pour le programme, le script ou la commande. Les guillemets seront "
+"ignorés s'ils sont précédés d'un antislash."
 
 # c31b46442d024d78bbf82077396c5bd7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:934
@@ -1711,12 +1832,12 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:953
 #, qt-format
 msgid "``konqueror http://www.google.com/search?q=%nam``"
-msgstr ""
+msgstr "``konqueror http://www.google.com/search?q=%nam``"
 
 # ac09b5b561e24900a94c4284faec9151
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:954
 msgid "``konqueror http://www.google.com/search?q=%%``"
-msgstr ""
+msgstr "``konqueror http://www.google.com/search?q=%%``"
 
 # ab50402d45f74a5cb34b8bbbc5404898
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:956
@@ -1858,32 +1979,32 @@ msgid ""
 "|selectstring| select 'NAMES' and click **[Insert Field]**."
 msgstr ""
 
-# 2a17e0b5905f4844bcc8f3f42de5f31d
+# a225cc20e0364c5f8a630dd4fbed404e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1038
-msgid "Your action text now looks like this:"
-msgstr ""
-
-# 2e25ce5ac3ef4aaaa4071842cd061f0e
-# 119a3f589616424a9a00813d41bb2124
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1040
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1047
-msgid "``firefox http://google.com/search?q=\\%NAMES``"
+msgid ""
+"Your action text now looks like this: ``firefox "
+"http://google.com/search?q=%NAMES``"
 msgstr ""
 
 # b31cb736cc4940a7b2907fbaec6bbe9d
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1041
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1039
 msgid "To finalize the action click the **[Insert action]** button."
 msgstr ""
 
 # 5560a0b274e24cb39ec6fd161556b228
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1044
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1042
 msgid ""
 "This completes the action and it is ready to use. The final text of the "
 "action should look like this:"
 msgstr ""
 
+# dcfa652b103448abaff3a4f586a699f2
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1045
+msgid "``firefox http://google.com/search?q=%NAMES``"
+msgstr ""
+
 # e2fd6b5cf68046908378c44311500931
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1050
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1047
 msgid ""
 "We can now use the action. Close the :guilabel:`Layer Properties` dialog and "
 "zoom in to an area of interest. Make sure the ``lakes`` layer is active and "
@@ -1891,7 +2012,7 @@ msgid ""
 msgstr ""
 
 # fd0c7a76e4f14f23b3df26a7c1f5a119
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1066
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1063
 msgid ""
 "When we click on the action, it brings up Firefox and navigates to the URL "
 "http://www.google.com/search?q=Tustumena. It is also possible to add further "
@@ -1902,14 +2023,14 @@ msgid ""
 msgstr ""
 
 # d1c991056b684a4b8490e8af39a17a9e
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1073
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1070
 msgid ""
 "You can define multiple actions for a layer and each will show up in the "
 ":guilabel:`Identify Results` dialog."
 msgstr ""
 
 # edb50a05d3fd4e44802fb2d37179c9e7
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1081
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1078
 msgid ""
 "You can think of all kinds of uses for actions. For example, if you have a "
 "point layer containing locations of images or photos along with a file name, "
@@ -1920,14 +2041,14 @@ msgid ""
 msgstr ""
 
 # c71624d2e37048ac9720023d5ff6f13b
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1088
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1085
 msgid ""
 "We can also make more complex examples, for instance on how to use "
 "**Python** actions."
 msgstr ""
 
 # cf3dbcd8cf6449cda9c367b065f669ac
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1091
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1088
 msgid ""
 "Usually when we create an action to open a file with an external application "
 "we can use absolute paths, or eventually relative paths, in the second case "
@@ -1938,14 +2059,14 @@ msgid ""
 msgstr ""
 
 # d0b1959cbe2d4bf7ac9cffa0f7660765
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1111
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1110
 msgid ""
 "we have to just remember that the action is one of type *Python* and to "
 "change the *command* and *imagerelpath* variables to fit our needs."
 msgstr ""
 
 # f2571056bb794d5a90e671392f084344
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1114
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1113
 msgid ""
 "But what about if the relative path need to be relative to the (saved) "
 "project file? The code of the Python action would be:"
