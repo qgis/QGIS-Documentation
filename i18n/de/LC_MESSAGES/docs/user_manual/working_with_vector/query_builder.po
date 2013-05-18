@@ -15,11 +15,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: de_DE\n"
+"X-Source-Language: C\n"
 
 # b8493928622b4a6685cb39d0a15b3a35
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:12
 msgid "Query Builder"
-msgstr ""
+msgstr "Abfrageeditor"
 
 # f8e3f878f89c44469bc42aa1602fea04
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
@@ -28,11 +31,15 @@ msgid ""
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
 msgstr ""
+"Der Abfrageeditor ermöglicht es eine Auswahl einer Tabelle anhand einer "
+"SQL-ähnlichen WHERE Klausel zu definieren und das Ergebnis im Hauptfenster "
+"darzustellen. Das Abfrageergebnis kann dann als neuer Vektorlayer "
+"abgespeichert werden."
 
 # ab653b58d7474249b62c5eb57f10dbaa
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:19
 msgid "Query"
-msgstr ""
+msgstr "Abfrage"
 
 # 7cac8fe82960400f8918e6212b8d51c1
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
@@ -46,6 +53,16 @@ msgid ""
 "data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
 "Values and Operators sections help the user to construct the SQL-like query."
 msgstr ""
+"Öffnen Sie die Attributtabelle indem Sie |mActionOpenTable| "
+":sup:`Attributtabelle öffnen` aus der Menüleiste wählen. Um den "
+":guilabel:`Abfrageeditor` zu öffnen klicken Sie auf den **[Erweiterte "
+"Suche]** Knopf. Wenn Ihnen z.B. ein ``Städte`` Layer mit einem Feld "
+"``Bevölkerung`` zur Verfügung steht könnten Sie Städte die größer als 100000 "
+"Einwohner haben auswählen indem Sie ``Bevölkerung > 100000`` in das SQL "
+"Fenster des Abfrageeditors eingeben. Figure_attributes_2_ zeigt ein Beispiel "
+"des Abfrageeditors in dem Daten eines PostGIS Layers mit in PostgreSQL "
+"gespeicherten Attributen zu sehen sind. Die Bereiche Felder, Werte und "
+"Operatoren helfen bei der Erstellung von SQL-ähnlichen Abfragen."
 
 # 2e8c891160794d6ba176e20eb9752092
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
@@ -56,6 +73,11 @@ msgid ""
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
 msgstr ""
+"Das **Felderfenster** enthält eine Liste alle Attributspalten, die "
+"durchsucht werden können. Um eine Spalte in das 'SQL-Where-Klausel' Fenster "
+"zu schreiben, doppelklicken Sie auf den Namen im Felderfenster. Allgemein "
+"können Sie mehrere Felder, Werte oder Operatoren auswählen. Oder Sie "
+"schreiben die SQL-Abfrage direkt in das 'SQL-Where-Klausel' Fenster."
 
 # 97161690598940b5bf9aa238c809e776
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:47
@@ -67,6 +89,12 @@ msgid ""
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
 msgstr ""
+"Das **Wertefenster** enthält eine Liste aller Werte der im Feldfenster "
+"ausgewählten Attributspalte. Um alle möglichen Werte anzuzeigen, klicken Sie "
+"auf den Knopf **[Alle]**. Um die ersten 25 Werte einer Attributspalte "
+"aufzulisten, klicken Sie auf den Knopf **[Stichprobe]**. Um einen Wert in "
+"das 'SQL-Where-Klausel' Fenster zu schreiben, doppelklicken Sie auf den "
+"Namen im Wertefenster."
 
 # f8f17307acdc4cb7876b099ef31fb999
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:54
@@ -76,6 +104,11 @@ msgid ""
 "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
 "logical operators (``AND``, ``OR``, ...) are available."
 msgstr ""
+"Das **Operatorenfenster** enthält alle verwendbaren Operatoren. Um dem "
+"'SQL-Where-Klausel` Feld einen Operator hinzuzufügen, klicken Sie auf das "
+"entsprechende Icon. Es stehen relationale Operatoren (``=`` , ``>`` , ...), "
+"Text vergleichende Operatoren ( LIKE ) und logische Operatoren ( AND , OR , "
+"...) stehen zur Verfügung."
 
 # 9cef45f5cc95484aaab2720d93572303
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:59
@@ -88,11 +121,19 @@ msgid ""
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
 msgstr ""
+"Der **[Testen]** Knopf zeigt eine Nachricht mit der Anzahl von Objekten, die "
+"durch die aktuelle Abfrage gefunden werden. Sie ist von Vorteil für den "
+"Prozess der Abfrageerstellung. Der **[Löschen]** Knopf löscht den Text im "
+"'SQL-Where-Klausel' Textfeld. Die Knöpfe **[Speichern ...]** und **[Laden "
+"...]** ermöglichen SQL Abfragen zu speichern und zu laden. Der Knopf "
+"**[OK]** schließt das Fenster und wählt die Objekte die der Abfrage "
+"entsprechen aus. Der **[Abrrechen]** Knopf schließt das Fenster ohne die "
+"aktuelle Auswahl zu ändern."
 
 # bb9b9d226e3a46c7a82cdbde7ec3ca06
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:70
 msgid "**Changing the Layer Definition**"
-msgstr ""
+msgstr "**Ändern der Layer-Definition**"
 
 # e79aaac32e0f45c480b2650131d90bca
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
@@ -103,11 +144,17 @@ msgid ""
 "on the **[Query Builder]** button on the :guilabel:`General` tab. See "
 "Section :ref:`vector_properties_dialog` for more information."
 msgstr ""
+"Sie können die Definition der Ebene ändern nachdem sie geladen ist, indem "
+"sie die SQL-Abfrage anders starten. Dazu öffnen Sie den Dialog "
+":guilabel:`Layereigenschaften` durch Doppelklicken auf den Layernamen in der "
+"Legende. Im Reiter :guilabel:`Allgemein` befindet sich der Knopf "
+"**[Abfrageerstellung]**. Weitere Informationen können Sie im Kapitel "
+":ref:`vector_properties_dialog` finden."
 
 # 9daf0cc3963b4af5b1c3502caa974708
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:84
 msgid "Selection"
-msgstr ""
+msgstr "Auswahl"
 
 # 3496ad9fdbb34b41916f40ab0ea42db1
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:86
@@ -118,6 +165,11 @@ msgid ""
 "selected features meeting the filter criteria in yellow. The rest of the "
 "features do not change their appearance."
 msgstr ""
+"In |qg| ist es auch möglich Objekte für die Visualisierung anhand einer "
+"ähnlichen Abfrageschnittstelle wie in :ref:`vector_query_builder` zu "
+"selektieren. Im obigen Abschnitt geht es darum mit dem Abfrageeditor alle "
+"selektierten Objekte die die Filterkriterien erfüllen in gelb zu markieren. "
+"Der Rest der Objekte verändert sein Erscheinungsbild nicht."
 
 # cb07fad9efe9473cb90fe8df33029bc3
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:92
@@ -126,16 +178,25 @@ msgid ""
 "the legend and choosing :guilabel:`Query ...`. If you perform a SQL query "
 "here only the selected features are displayed in the map view. Features that "
 "don't match the SQL query are not visualised in the map view. The same "
-"function is available from the :guilabel:`General` tab in the vector :"
-"guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
+"function is available from the :guilabel:`General` tab in the vector "
+":guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
 "button right below. The selection described above can be used with all "
 "vector data providers."
 msgstr ""
+"Eine andere Möglichkeit ist es eine Auswahl mit einem Rechtsklick auf einen "
+"Layer in der Legende zu machen und dort :guilabel:`Abfrage ...` zu wählen. "
+"Wenn Sie hier eine SQL-Abfrage durchführen werden nur die selektierten "
+"Objekte in der Kartenübersicht dargestellt. Objekte die nicht zu der "
+"SQL-Abfrage passen werden nicht in der Kartenübersicht dargestellt. Die "
+"gleiche Funktion ist im Reiter :guilabel:`Allgemein` im "
+":guilabel:`Layereigenschaften` Dialog zugänglich. Sie können einen "
+"**[Abfrageerstellung]** rechts unten finden. Die oben beschriebene Auswahl "
+"kann mit allen Vektordatenprovidern benutzt werden. "
 
 # 1eef1e856ee347c7be2c4778c349ecce
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:101
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "Ausgewählte Objekte als neue Layer speichern"
 
 # f29f07bbbebd4c10bbd93b0394b39535
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:103
@@ -147,3 +208,10 @@ msgid ""
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
 msgstr ""
+"Die ausgewählten Objekte können in jedes OGR-unterstüzte Vektorformat "
+"gespeichert werden und auch in ein andere Koordinatenbezugssystem (CRS) "
+"transformiert werden. Öffnen Sie einfach das Rechte-Maustasten-Menü des "
+"Layers und klicken Sie auf :menuselection:`Auswahl speichern als ...` um den "
+"Namen der Ausgabedatei, Ihr Format und das KBS zu definieren (siehe "
+"Abschnitt :ref:`label_legend`). Es ist auch möglich die OGR "
+"Erstellungsoptionen innerhalb des Dialogs festzulegen.   "

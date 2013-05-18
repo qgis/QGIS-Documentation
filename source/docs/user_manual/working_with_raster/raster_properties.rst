@@ -212,9 +212,11 @@ are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.
 
 This tab is mainly for information. You cannot change any values printed
-inside this tab. To update the statistics you need to change to tab
-:guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
-(see :ref:`label_histogram`).
+inside this tab.
+
+.. To update the statistics you need to change to tab
+   :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
+   (see :ref:`label_histogram`).
 
 .. index:: Pyramids
 
@@ -253,13 +255,3 @@ The :guilabel:`Histogram` tab allows you to view the distribution of the bands
 or colors in your raster. It is generated automaticaly when you open
 :guilabel:`Histogram` tab. All existing bands will be displayed together. You can
 save the histogram as an image with the |mActionFileSave| button.
-
-
-.. index:: Raster_statistics
-
-.. tip::
-   **Gathering Raster Statistics**
-
-   To gather statistics for a layer, select pseudocolor rendering and
-   click the **[Apply]** button. Gathering statistics for a layer can be time
-   consuming. Please be patient while QGIS examines your data!

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-13 11:35\n"
+"POT-Creation-Date: 2013-04-26 17:18\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -526,26 +526,22 @@ msgstr ""
 "данные собираются по принципу «нужно знать», так что, возможно, статистика "
 "по слоям может быть не доступной."
 
-# 500044714c45429fb7969811933c273d
+# a3211e143eb24693ac9b70ca8f71842b
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:218
 msgid ""
 "This tab is mainly for information. You cannot change any values printed "
-"inside this tab. To update the statistics you need to change to tab "
-":guilabel:`Histogram` and press the button **[Refresh]** on the bottom "
-"right, (see :ref:`label_histogram`)."
+"inside this tab."
 msgstr ""
-"В основном, эта вкладка используется для просмотра информации. В ней нельзя "
-"изменить какие-либо значения. Для обновления статистики нужно перейти на "
-"вкладку :guilabel:`Гистограмма` и нажать кнопку **[Обновить]**. Подробнее о "
-"гистограммах говорится в разделе :ref:`label_histogram`."
+"Эта вкладка выполняет информативную функцию. Изменение, представленных на "
+"ней, данных невозможно."
 
 # 4bdc669312b74116b6c447dd621a6c4c
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:226
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:228
 msgid "Pyramids Tab"
 msgstr "Пирамиды"
 
 # 077cee8d69ea4a80b97f69f6e9bf6591
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:228
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:230
 msgid ""
 "Large resolution raster layers can slow navigation in QGIS. By creating "
 "lower resolution copies of the data (pyramids), performance can be "
@@ -559,7 +555,7 @@ msgstr ""
 "масштаба."
 
 # c153e34ef8f7483fa8e5d495fe5c2509
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:233
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:235
 msgid ""
 "You must have write access in the directory where the original data is "
 "stored to build pyramids."
@@ -568,22 +564,22 @@ msgstr ""
 "хранятся оригинальные данные."
 
 # 871b8fc2db3b4d0bbffdae09d5f34472
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:236
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:238
 msgid "Several resampling methods can be used to calculate the pyramids:"
 msgstr "При построении пирамид можно выбрать один из алгоритмов пересчета:"
 
 # 81056b1d28f541159546f4011198d767
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:238
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:240
 msgid "Average"
 msgstr "Среднее значение"
 
 # fe82e2151b0847b5b93a6533900e2995
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:239
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:241
 msgid "Nearest Neighbour"
 msgstr "Ближайший сосед"
 
 # 4c0687873bba40de80ffd3195d5e85a7
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:241
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:243
 msgid ""
 "When checking the checkbox |checkbox| :guilabel:`Build pyramids internally "
 "if possible` QGIS tries to build pyramids internally."
@@ -592,7 +588,7 @@ msgstr ""
 "если возможно` QGIS будет пытаться создать внутренние пирамиды."
 
 # e83f81d3285b49588bc75585adfbc6ed
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:244
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:246
 msgid ""
 "Please note that building pyramids may alter the original data file and once "
 "created they cannot be removed. If you wish to preserve a 'non-pyramided' "
@@ -604,12 +600,12 @@ msgstr ""
 "растровых данных."
 
 # 38e5af4c211c4ef296baa173955fae97
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:252
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:254
 msgid "Histogram Tab"
 msgstr "Гистограмма"
 
 # 07143b177a6c43599ba94d94f5f3a363
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:256
+#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:258
 msgid ""
 "The :guilabel:`Histogram` tab allows you to view the distribution of the "
 "bands or colors in your raster. It is generated automaticaly when you open "
@@ -622,21 +618,32 @@ msgstr ""
 "растра. Сохранить гистограмму в виде изображения можно нажав кнопку "
 "|mActionFileSave|."
 
+# 500044714c45429fb7969811933c273d
+#~ msgid ""
+#~ "This tab is mainly for information. You cannot change any values printed "
+#~ "inside this tab. To update the statistics you need to change to tab "
+#~ ":guilabel:`Histogram` and press the button **[Refresh]** on the bottom "
+#~ "right, (see :ref:`label_histogram`)."
+#~ msgstr ""
+#~ "В основном, эта вкладка используется для просмотра информации. В ней "
+#~ "нельзя изменить какие-либо значения. Для обновления статистики нужно "
+#~ "перейти на вкладку :guilabel:`Гистограмма` и нажать кнопку "
+#~ "**[Обновить]**. Подробнее о гистограммах говорится в разделе "
+#~ ":ref:`label_histogram`."
+
 # ae4a30c39bea4752889d91a4b8a19513
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:265
-msgid "**Gathering Raster Statistics**"
-msgstr "**Сбор статистики растра**"
+#~ msgid "**Gathering Raster Statistics**"
+#~ msgstr "**Сбор статистики растра**"
 
 # 771cdd670deb488bbd97038d8d646c92
-#: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:267
-msgid ""
-"To gather statistics for a layer, select pseudocolor rendering and click the "
-"**[Apply]** button. Gathering statistics for a layer can be time consuming. "
-"Please be patient while QGIS examines your data!"
-msgstr ""
-"Для сбора статистики по слою, выберите псевдоцветное преобразование и "
-"нажмите **[Применить]**. Сбор статистики может занять продолжительное время. "
-"Дождитесь, пока QGIS обработает ваши данные!"
+#~ msgid ""
+#~ "To gather statistics for a layer, select pseudocolor rendering and click "
+#~ "the **[Apply]** button. Gathering statistics for a layer can be time "
+#~ "consuming. Please be patient while QGIS examines your data!"
+#~ msgstr ""
+#~ "Для сбора статистики по слою, выберите псевдоцветное преобразование и "
+#~ "нажмите **[Применить]**. Сбор статистики может занять продолжительное "
+#~ "время. Дождитесь, пока QGIS обработает ваши данные!"
 
 # 283eefa21b244481b66accb8ba1e3bcc
 #~ msgid ":guilabel:`Discrete`"

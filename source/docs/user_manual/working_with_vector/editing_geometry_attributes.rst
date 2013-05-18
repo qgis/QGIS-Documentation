@@ -701,7 +701,7 @@ displayed as shown in Figure_edit_5_. Choose the type of layer (point, line or
 polygon) and the CRS (Coordinate Reference System).
 
 Note that |qg| does not yet support creation of 2.5D features (i.e. features
-with X,Y,Z coordinates) or measure features.
+with X,Y,Z coordinates).
 
 .. _figure_edit_5:
 
@@ -765,8 +765,8 @@ attributes, click **[OK]**. |qg| will automatically add the new layer to the
 legend and you can edit it in the same way as described in Section
 :ref:`sec_edit_existing_layer` above.
 
-The SpatiaLite creation dialog allows to create multiple layers without
-closing the dialog when you click **[Apply]**.
+Further management of SpatiaLite-Layers can be done with the DB Manager see 
+:ref:`dbmanager`.
 
 .. index:: Work_with_Attribute_Table
 
@@ -854,6 +854,7 @@ following functionality:
   :kbd:`Ctrl+C`
 * |mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with
   :kbd:`Ctrl+J`
+* |PanToSelected| :sup:`Pan map to the selected rows` also with :kbd:`Ctrl+P`
 * |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
   and to enable functionalities described below also with
   :kbd:`Ctrl+E`

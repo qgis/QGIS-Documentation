@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-20 14:25\n"
+"POT-Creation-Date: 2013-05-14 16:40\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -341,7 +341,6 @@ msgstr "Definieren Sie :guilabel:`Repräsentation für NULL-Werte`"
 
 # cc5b0a28c881402688d3dc4c31d5e48a
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:122
-#, fuzzy
 msgid ""
 ":guilabel:`Prompt for raster sublayers` |selectstring|. Some rasters support "
 "sublayers - they are called subdatasets in GDAL. An example is netcdf files "
@@ -357,31 +356,31 @@ msgstr ""
 "wird. Sie haben die folgenden Möglichkeiten: 'Immer' frage immer (ob es "
 "Unterlayer gibt) 'Wenn nötig' frage ob Layer zwar keine Bänder aber "
 "Unterlayer hat. 'Nie' nie nachfragen, es wird nichts geladen 'Alle laden' "
-"alle Layer ohne Nachfragen laden"
+"alle Layer ohne Nachfragen laden:"
 
 # f873bd3eca9a48f5932828318522f137
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:128
 msgid "'Always': always ask (if there are existing sublayers)"
-msgstr ""
+msgstr "'Immer': Frage immer (wenn es einen Sublayer gibt)"
 
 # dc4bc694a11e499bb233e873e3805050
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:129
 msgid "'If needed': ask if layer has no bands, but has sublayers"
 msgstr ""
+"'Wenn notwendig': Frage wenn der Layer keine Bänder aber Sublayer enthält"
 
 # 1b11c8c82a1a4e21be4fcba5c995300f
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:130
 msgid "'Never': never prompt, will not load anything"
-msgstr ""
+msgstr "'Niemals': Frage nicht nach und lade nichts"
 
 # eed512165c59448795c654adad066a72
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:131
 msgid "'Load all': never prompt, but load all sublayers"
-msgstr ""
+msgstr "'Lade alle': Frage nicht nach, sondern lade alle Sublayer"
 
 # 26071de7cb4c461faf9e2776a6a7626f
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:133
-#, fuzzy
 msgid ""
 ":guilabel:`Scan for valid items in the browser dock`  |selectstring|. The "
 "'Check extension' option was designed to speed up the loading of a "
@@ -395,7 +394,6 @@ msgstr ""
 
 # fa29fd40ae654d5ca3e6d266336e77ea
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:137
-#, fuzzy
 msgid ""
 ":guilabel:`Scan for contents of compressed files (.zip) in browser dock` |"
 "selectstring| This option was also designed to speed up the loading of a "
@@ -405,24 +403,28 @@ msgstr ""
 "Diese Option wurde ebenfalls entwickelt um das Laden eines Verzeichnisses zu "
 "beschleunigen. Sie haben die folgenden Möglichkeiten: 'Grundsuche' überprüft "
 "dass die Erweiterung von einem der Treiber unterstützt wird. 'Vollsuche' "
-"öffnet jede Datei um zu überprüfen dass diese gültig ist   "
+"öffnet jede Datei um zu überprüfen dass diese gültig ist:"
 
 # 90494145760a4179a54f81bdbe684934
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:141
 msgid ""
 "'Basic Scan': checks that the extension is supported by one of the drivers"
 msgstr ""
+"'Basis-Scan': Überprüft, ob die Erweiterung durch einen der vorhandenen "
+"Treiber unterstützt wird"
 
 # 000ca5864e26496faf3ab1bf6fc05a9f
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:142
 msgid "'Full Scan': opens every file to check it is valid"
-msgstr ""
+msgstr "'Voller Scan' öffnet jede Datei um Sie auf Gültigkeit zu prüfen"
 
 # 4986fa7abf674fbb9317bc0112582ee9
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:143
 msgid ""
 "'Passthru': don't use this option it will be removed in the next QGIS version"
 msgstr ""
+"'Durchlassen': Benutzen Sie diese Option nicht. Sie wird in der nächsten "
+"QGIS Version verschwinden"
 
 # 1c2bd50d11e4443db273aa7091e2535a
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:146
@@ -450,7 +452,7 @@ msgstr "Erweiterungen"
 msgid "Add :guilabel:`Path(s) to search for additional C++ plugin libraries`."
 msgstr ""
 ":guilabel:`Nach zusätzlichen C++-Erweiterungsbibliotheken zu durchsuchende "
-"Pfad(e)` 'Hinzufügen' oder 'Entfernen'"
+"Pfad(e)` 'Hinzufügen' oder 'Entfernen'."
 
 # 8b04f6443bc643a1bfb350959738949f
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:160
@@ -472,7 +474,7 @@ msgid ""
 "Define :guilabel:`Number of features to draw before updating the display`."
 msgstr ""
 "Definieren Sie die :guilabel:`Anzahl von Objekten nach deren Zeichnung die "
-"Anzeige aktualisiert werden soll`"
+"Anzeige aktualisiert werden soll`."
 
 # 2525b34a779043038ef1401ac4a0be10
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:164
@@ -608,7 +610,6 @@ msgstr ""
 
 # 57ceb3f4c62f495c8c18649a5ce21977
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:196
-#, fuzzy
 msgid ""
 "Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and "
 "recenter', 'Zoom to mouse cursor', 'Nothing')"
@@ -628,7 +629,6 @@ msgstr "Überlagern"
 
 # 81e63517755545138e5c81d16ec0da58
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:203
-#, fuzzy
 msgid ""
 "Define :guilabel:`Placement algorithm` |selectstring| for labels, symboly "
 "and diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic "
@@ -652,13 +652,12 @@ msgstr ""
 
 # 0a3e0e786d984ebaa3b536505046cba8
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:211
-#, fuzzy
 msgid ""
 "Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To "
 "segment', 'To vertex and segment')"
 msgstr ""
 "Definieren Sie den :guilabel:`Voreingestellten Fangmodus` ('Zum Sützpunkt', "
-"'Zum Segment', 'Zum Stützpunkt und Segment') "
+"'Zum Segment', 'Zum Stützpunkt und Segment')"
 
 # 0a7e931ba56343e287b03388ba94ca52
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:213
@@ -681,7 +680,6 @@ msgstr "|checkbox| :guilabel:`Markierungen nur für gewählte Objekte anzeigen`"
 
 # 81b0121c58144c4794b8c0b761fd7da1
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:216
-#, fuzzy
 msgid ""
 "Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), "
 "'Semi transparent circle' or 'None') and vertex :guilabel:`Marker size`."
@@ -769,7 +767,7 @@ msgstr ""
 msgid "Select a CRS and :guilabel:`Always start new projects with this CRS`."
 msgstr ""
 "Suchen Sie ein KBS aus und :guilabel:`Neue Projekte immer in diesem KBS "
-"beginnen`"
+"beginnen`."
 
 # f09b4fd9d4fc419d807e32d07c2c6b5f
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:242
@@ -840,7 +838,6 @@ msgstr ""
 
 # a4afe1328b3042f985025315122d8267
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:274
-#, fuzzy
 msgid "Set the :guilabel:`Proxy type` |selectstring| according to your needs."
 msgstr ""
 "Definieren Sie den :menuselection:`Proxytyp -->` entsprechend ihrer "
@@ -848,7 +845,6 @@ msgstr ""
 
 # a151994892974711867508850ea30f80
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:276
-#, fuzzy
 msgid ""
 ":menuselection:`Default Proxy`: Proxy is determined based on the application "
 "proxy set using"
@@ -858,7 +854,6 @@ msgstr ""
 
 # 704b9ddb24964de2bd72e566d2bfe328
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:278
-#, fuzzy
 msgid ""
 ":menuselection:`Socks5Proxy`: Generic proxy for any kind of connection. "
 "Supports TCP, UDP, binding to a port (incoming connections) and "
@@ -870,7 +865,6 @@ msgstr ""
 
 # 0d761efabd994cce962eba85bb2d5bef
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:280
-#, fuzzy
 msgid ""
 ":menuselection:`HttpProxy`: Implemented using the \"CONNECT\" command, "
 "supports only outgoing TCP connections; supports authentication."
@@ -880,7 +874,6 @@ msgstr ""
 
 # 5d7f792a77174eb8bf60bf092b4ced4e
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:282
-#, fuzzy
 msgid ""
 ":menuselection:`HttpCachingProxy`: Implemented using normal HTTP commands, "
 "it is useful only in the context of HTTP requests"
@@ -890,7 +883,6 @@ msgstr ""
 
 # 207a3eac8bab4ecaaf4a269cc7f02477
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:284
-#, fuzzy
 msgid ""
 ":menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is "
 "useful only in the context of FTP requests"
@@ -909,8 +901,8 @@ msgid ""
 "Define :guilabel:`WMS search address`, default is ``http://geopole.org/wms/"
 "search?search=\\%1\\&type=rss``"
 msgstr ""
-"Festlegen von WMS Suchadressen - Standard ist ``http://geopole.org/wms/"
-"search?search=\\%1\\&type=rss``"
+":guilabel:`WMS Suchadresse` - Standard ist ``http://geopole.org/wms/search?"
+"search=%1&type=rss``"
 
 # 9e7c65b85b4e4dcab5f9e804a2347653
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:290
@@ -932,11 +924,10 @@ msgid ""
 msgstr ""
 "Im unteren Fenster des Dialogs können Sie einige URLs hinzufügen, die dann "
 "von den Proxyeinstellungen ausgenommen werden (siehe Abbildung "
-"Figure_Network_Tab_), indem Sie auf den Knopf\n"
-"**[Hinzufügen]** klicken. Danach doppelklicken Sie auf das neu erstellte URL-"
-"Feld und tragen die entsprechende URL ein, die von den Proxyeinstellungen "
-"ausgenommen werden soll. Mit dem Knopf **[Löschen]** entfernen Sie die URL "
-"wieder."
+"Figure_Network_Tab_), indem Sie auf den Knopf **[Hinzufügen]** klicken. "
+"Danach doppelklicken Sie auf das neu erstellte URL-Feld und tragen die "
+"entsprechende URL ein, die von den Proxyeinstellungen ausgenommen werden "
+"soll. Mit dem Knopf **[Löschen]** entfernen Sie die URL wieder."
 
 # 56c4feaa8aae4e6da6b5665a0bea6ddf
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:298
@@ -1016,7 +1007,6 @@ msgstr ""
 
 # d00044c40f6c497c8c35533d0ae20395
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:341
-#, fuzzy
 msgid ""
 "QGIS Customization is divided into five groups. In |checkbox| :guilabel:"
 "`Docks` you find the dock windows. Dock windows are applications that can be "

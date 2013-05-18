@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QGIS Documentation Project'
-copyright = u'2012, QGIS project'
+copyright = u'2013, QGIS project'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -184,6 +184,8 @@ rst_epilog = """
 .. |mActionFileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |mActionFileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |mActionAddImage| image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em

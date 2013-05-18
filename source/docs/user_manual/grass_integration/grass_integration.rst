@@ -151,7 +151,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
 #. Start QGIS and make sure the GRASS plugin is loaded.
 #. Visualize the :file:`alaska.shp` Shapefile (see Section
    :ref:`vector_load_shapefile`) from the QGIS alaska dataset :ref:`label_sampledata`.
-#. In the GRASS toolbar, click on the |grass_open_mapset|:sup:`Open mapset` icon
+#. In the GRASS toolbar, click on the |grass_new_mapset|:sup:`New mapset` icon
    to bring up the :file:`MAPSET` wizard.
 #. Select an existing GRASS database (GISDBASE) folder
    :file:`grassdata` or create one for the new :file:`LOCATION` using a
@@ -169,7 +169,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
    :file:`LOCATION` and projection and haven't memorized the EPSG ID,
    click on the |mIconProjectionEnabled| :sup:`projector` icon in the lower right-hand
    corner of the status bar (see Section :ref:`label_projections`)).
-#. Click **[Find]** to select the projection.
+#. In :guilabel:`Filter` insert 2964 to select the projection.
 #. Click **[Next]**.
 #. To define the default region, we have to enter the :file:`LOCATION`
    bounds in north, south, east, and west direction. Here we simply click on

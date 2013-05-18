@@ -147,7 +147,7 @@ Once you have successfully filled in your parameters you can select the
 includes the Image encoding, Layers, Layer Styles and Projections. Since this is
 a network operation, the speed of the response depends on the quality of your
 network connection to the WMS server. While downloading data from the WMS server,
-the download progress is visualized in the left bottom of the WMS Plugin dialog.
+the download progress is visualized in the left bottom of the WMS dialog.
 
 .. following should be replaced in 1.8 with the response of de DM Solutions Group
 
@@ -242,22 +242,11 @@ In this version of QGIS, the :guilabel:`Global transparency` setting from the
 A Coordinate Reference System (CRS) is the OGC terminology for a QGIS Projection.
 
 Each WMS Layer can be presented in multiple CRSs, depending on the capability of
-the WMS server. You may notice that the *x* changes in the *Coordinate Reference
-System (x available)* header as you select and deselect layers from the
-:guilabel:`Layers section` tab.
+the WMS server.
 
 To choose a CRS, select **[Change...]** and a dialog similar to Figure Projection 3
 in :ref:`label_projections` will appear. The main difference with the WMS version of
 the screen is that only those CRSs supported by the WMS Server will be shown.
-
-.. tip:: **WMS Projections**
-
-   For best results, make the WMS layer the first layer you add to your project.
-   This allows the project projection to inherit the CRS you used to render the
-   WMS layer. On-the-fly projection (see :ref:`label_projections`) can then be
-   used to fit any subsequent vector layers to the project projection. In this
-   version of QGIS, if you add a WMS layer later, and give it a different CRS to
-   the current project projection, unpredictable results can occur.
 
 .. _`serversearch`:
 
