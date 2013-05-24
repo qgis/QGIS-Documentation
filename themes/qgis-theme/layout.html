@@ -1,4 +1,4 @@
-{% extends "basic/layout.html" %}
+{% extends "qgisbase.html" %}
 
 <!-- Sphinx also brings it's own jquery, but this one is too old for bootstrap.
     TODO get rid of the one from Sphinx -->
@@ -11,94 +11,17 @@
 {% set script_files = script_files + ['_static/bootstrap/js/bootstrap.js'] %}
 
 {% set css_files = css_files + ['_static/bootstrap/css/bootstrap.min.css'] %}
-<!-- qgis.css BEFORE bootstrap-responsive -->
+<!-- qgis.css BEFORE bootstrap-responsive !! -->
 {% set css_files = css_files + ['_static/qgis.css'] %}
 {% set css_files = css_files + ['_static/bootstrap/css/bootstrap-responsive.min.css'] %}
 
 
-{% block extrahead %}
-    <!-- without this part, the responsive-css for bootstrap kill some rules
-        TODO: remove this, or make this obsolete ?? -->
-    <style>
-    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 0px;
-    }
-    .navbar .brand {
-        background-image: url("http://plugins.qgis.org/static/images/blue/logo.png");
-        background-repeat: no-repeat;
-        height: 42px;
-        padding-left: 60px;
-    }
-    .navbar-inverse .navbar-inner {
-        background-color:none;
-    }
-    </style>
-
-    <script>
-        var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/'
-        var currentLang = 'en';
-        $(document).ready(function(){
-            var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
-            var langPlusPage = window.location.href.match(search);
-            if (langPlusPage==undefined){
-                // it's possible this is a index.html page called without 'index.html', try without the currentPage
-                search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
-                langPlusPage = window.location.href.match(search);
-            }
-            if (langPlusPage == undefined || langPlusPage.length != 1){
-                alert('This is an documentation error, please report back to QGIS devs.');
-                return;
-            }
-            langPlusPage = langPlusPage[0];
-            currentLang = langPlusPage.replace(currentPage, '');
-            // code below is not going to work because we need the compile time run path to the images
-            //var allLanguages = ['af','ar','bg','ca_ES','cs_CZ','da_DK','de','el_GR','en','es','et_EE','eu_ES','fa','fi','fr','gl_ES','he', 'hi', 'hr_HR','hu','id','is','it','ja','ka_GE','ko_KR','lo','lt','lv','mn','nl','no','pl_PL','pt_BR','pt_PT','ro','ru','sk','sl_SI','sq_AL','sr_Cyrl','sr_Latn','sv','sw','ta','th','tr','uk','vi','xh','zh_CN','zh_TW'];
-            //var html = '';
-            //for (var i = 0; i<allLanguages.length; i++){
-            //    var lang = allLanguages[i];
-            //    html+='<li id="flag_'+lang+'" onclick="gotoLang(\''+lang+'\');"><img src="_static/img/flags/'+lang+'.png" title="'+lang+'" alt="'+lang+'"/></li>\n'
-            //}
-            // put the html (a list li-elements into the locale lu):
-            //$('#locales').html(html);
-
-            // put some style around the current locale flag, we have to remove the '/' here
-            $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
-        })
-
-        // load current page in a different language
-        function gotoLang(lang){
-            var currentUrl = window.location.href;
-            var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
-            window.location.href = newUrl;
-        }
-    </script>
-
-
-
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-{% endblock %}
-
 <!-- overriding relbar1: NO relbar above the content -->
-{% block relbar1 %}{% endblock %}
-
+{% block relbar1 %}{% endblock relbar1 %}
 
 {% block content %}
 
-    <!-- bootstrap stuff from fluid.html example -->
+    <!-- menu: bootstrap stuff from fluid.html example -->
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -125,68 +48,16 @@
       </div>
     </div>
 
-    <!-- bootstrap stuff from fluid.html example -->
+    <!-- page: bootstrap stuff from fluid.html example -->
     <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
+
+    <!-- normal pages == non frontpage -->
+    {%- if pagename != 'index' %}
+      <div class="row-fluid" >
+        <div class="span3" >
           <div class="well sidebar-nav">
             <!-- sidebar -->
-            <div>
-            <ul id="locales">
-                <li id="flag_en" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en.png', 1)}}" title="en" alt="en"></li>
-                <!-- <li id="flag_af" onclick="gotoLang('af');"><img src="{{pathto('_static/img/flags/af.png', 1)}}" title="af" alt="af"></li> -->
-                <!-- <li id="flag_ar" onclick="gotoLang('ar');"><img src="{{pathto('_static/img/flags/ar.png', 1)}}" title="ar" alt="ar"></li> -->
-                <!-- <li id="flag_bg" onclick="gotoLang('bg');"><img src="{{pathto('_static/img/flags/bg.png', 1)}}" title="bg" alt="bg"></li> -->
-                <!-- <li id="flag_ca_ES" onclick="gotoLang('ca_ES');"><img src="{{pathto('_static/img/flags/ca_ES.png', 1)}}" title="ca_ES" alt="ca_ES"></li> -->
-                <!-- <li id="flag_cs_CZ" onclick="gotoLang('cs_CZ');"><img src="{{pathto('_static/img/flags/cs_CZ.png', 1)}}" title="cs_CZ" alt="cs_CZ"></li> -->
-                <!-- <li id="flag_da_DK" onclick="gotoLang('da_DK');"><img src="{{pathto('_static/img/flags/da_DK.png', 1)}}" title="da_DK" alt="da_DK"></li> -->
-                <li id="flag_de" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"></li>
-                <!-- <li id="flag_el_GR" onclick="gotoLang('el_GR');"><img src="{{pathto('_static/img/flags/el_GR.png', 1)}}" title="el_GR" alt="el_GR"></li> -->
-                <!-- <li id="flag_es" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"></li> -->
-                <!-- <li id="flag_et_EE" onclick="gotoLang('et_EE');"><img src="{{pathto('_static/img/flags/et_EE.png', 1)}}" title="et_EE" alt="et_EE"></li> -->
-                <!-- <li id="flag_eu_ES" onclick="gotoLang('eu_ES');"><img src="{{pathto('_static/img/flags/eu_ES.png', 1)}}" title="eu_ES" alt="eu_ES"></li> -->
-                <!-- <li id="flag_fa" onclick="gotoLang('fa');"><img src="{{pathto('_static/img/flags/fa.png', 1)}}" title="fa" alt="fa"></li> -->
-                <!-- <li id="flag_fi" onclick="gotoLang('fi');"><img src="{{pathto('_static/img/flags/fi.png', 1)}}" title="fi" alt="fi"></li> -->
-                <li id="flag_fr" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"></li>
-                <!-- <li id="flag_gl_ES" onclick="gotoLang('gl_ES');"><img src="{{pathto('_static/img/flags/gl_ES.png', 1)}}" title="gl_ES" alt="gl_ES"></li> -->
-                <!-- <li id="flag_he" onclick="gotoLang('he');"><img src="{{pathto('_static/img/flags/he.png', 1)}}" title="he" alt="he"></li> -->
-                <li id="flag_hi" onclick="gotoLang('hi');"><img src="{{pathto('_static/img/flags/hi.png', 1)}}" title="hi" alt="hi"></li>
-                <!-- <li id="flag_hr_HR" onclick="gotoLang('hr_HR');"><img src="{{pathto('_static/img/flags/hr_HR.png', 1)}}" title="hr_HR" alt="hr_HR"></li> -->
-                <!-- <li id="flag_hu" onclick="gotoLang('hu');"><img src="{{pathto('_static/img/flags/hu.png', 1)}}" title="hu" alt="hu"></li> -->
-                <!-- <li id="flag_id" onclick="gotoLang('id');"><img src="{{pathto('_static/img/flags/id.png', 1)}}" title="id" alt="id"></li> -->
-                <!-- <li id="flag_is" onclick="gotoLang('is');"><img src="{{pathto('_static/img/flags/is.png', 1)}}" title="is" alt="is"></li> -->
-                <li id="flag_it" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"></li>
-                <li id="flag_ja" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"></li>
-                <!-- <li id="flag_ka_GE" onclick="gotoLang('ka_GE');"><img src="{{pathto('_static/img/flags/ka_GE.png', 1)}}" title="ka_GE" alt="ka_GE"></li> -->
-                <!-- <li id="flag_ko_KR" onclick="gotoLang('ko_KR');"><img src="{{pathto('_static/img/flags/ko_KR.png', 1)}}" title="ko_KR" alt="ko_KR"></li> -->
-                <!-- <li id="flag_lo" onclick="gotoLang('lo');"><img src="{{pathto('_static/img/flags/lo.png', 1)}}" title="lo" alt="lo"></li> -->
-                <!-- <li id="flag_lt" onclick="gotoLang('lt');"><img src="{{pathto('_static/img/flags/lt.png', 1)}}" title="lt" alt="lt"></li> -->
-                <!-- <li id="flag_lv" onclick="gotoLang('lv');"><img src="{{pathto('_static/img/flags/lv.png', 1)}}" title="lv" alt="lv"></li> -->
-                <!-- <li id="flag_mn" onclick="gotoLang('mn');"><img src="{{pathto('_static/img/flags/mn.png', 1)}}" title="mn" alt="mn"></li> -->
-                <li id="flag_nl" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"></li>
-                <!-- <li id="flag_no" onclick="gotoLang('no');"><img src="{{pathto('_static/img/flags/no.png', 1)}}" title="no" alt="no"></li> -->
-                <!-- <li id="flag_pl_PL" onclick="gotoLang('pl_PL');"><img src="{{pathto('_static/img/flags/pl_PL.png', 1)}}" title="pl_PL" alt="pl_PL"></li> -->
-                <li id="flag_pt_BR" onclick="gotoLang('pt_BR');"><img src="{{pathto('_static/img/flags/pt_BR.png', 1)}}" title="pt_BR" alt="pt_BR"></li>
-                <!-- <li id="flag_pt_PT" onclick="gotoLang('pt_PT');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt_PT" alt="pt_PT"></li> -->
-                <!-- <li id="flag_ro" onclick="gotoLang('ro');"><img src="{{pathto('_static/img/flags/ro.png', 1)}}" title="ro" alt="ro"></li> -->
-                <li id="flag_ru" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"></li>
-                <!-- <li id="flag_sk" onclick="gotoLang('sk');"><img src="{{pathto('_static/img/flags/sk.png', 1)}}" title="sk" alt="sk"></li> -->
-                <!-- <li id="flag_sl_SI" onclick="gotoLang('sl_SI');"><img src="{{pathto('_static/img/flags/sl_SI.png', 1)}}" title="sl_SI" alt="sl_SI"></li> -->
-                <!-- <li id="flag_sq_AL" onclick="gotoLang('sq_AL');"><img src="{{pathto('_static/img/flags/sq_AL.png', 1)}}" title="sq_AL" alt="sq_AL"></li> -->
-                <!-- <li id="flag_sr_Cyrl" onclick="gotoLang('sr_Cyrl');"><img src="{{pathto('_static/img/flags/sr_Cyrl.png', 1)}}" title="sr_Cyrl" alt="sr_Cyrl"></li> -->
-                <!-- <li id="flag_sr_Latn" onclick="gotoLang('sr_Latn');"><img src="{{pathto('_static/img/flags/sr_Latn.png', 1)}}" title="sr_Latn" alt="sr_Latn"></li> -->
-                <!-- <li id="flag_sv" onclick="gotoLang('sv');"><img src="{{pathto('_static/img/flags/sv.png', 1)}}" title="sv" alt="sv"></li> -->
-                <!-- <li id="flag_sw" onclick="gotoLang('sw');"><img src="{{pathto('_static/img/flags/sw.png', 1)}}" title="sw" alt="sw"></li> -->
-                <!-- <li id="flag_ta" onclick="gotoLang('ta');"><img src="{{pathto('_static/img/flags/ta.png', 1)}}" title="ta" alt="ta"></li> -->
-                <!-- <li id="flag_th" onclick="gotoLang('th');"><img src="{{pathto('_static/img/flags/th.png', 1)}}" title="th" alt="th"></li> -->
-                <!-- <li id="flag_tr" onclick="gotoLang('tr');"><img src="{{pathto('_static/img/flags/tr.png', 1)}}" title="tr" alt="tr"></li> -->
-                <!-- <li id="flag_uk" onclick="gotoLang('uk');"><img src="{{pathto('_static/img/flags/uk.png', 1)}}" title="uk" alt="uk"></li> -->
-                <!-- <li id="flag_vi" onclick="gotoLang('vi');"><img src="{{pathto('_static/img/flags/vi.png', 1)}}" title="vi" alt="vi"></li> -->
-                <!-- <li id="flag_xh" onclick="gotoLang('xh');"><img src="{{pathto('_static/img/flags/xh.png', 1)}}" title="xh" alt="xh"></li> -->
-                <!-- <li id="flag_zh_CN" onclick="gotoLang('zh_CN');"><img src="{{pathto('_static/img/flags/zh_CN.png', 1)}}" title="zh_CN" alt="zh_CN"></li> -->
-                <!-- <li id="flag_zh_TW" onclick="gotoLang('zh_TW');"><img src="{{pathto('_static/img/flags/zh_TW.png', 1)}}" title="zh_TW" alt="zh_TW"></li> -->
-            </ul><span style="clear:both">&nbsp;</span>
-            </div>
+            {% block i18nflags1 %} {{ i18nflags() }} {% endblock %}
             {%- if sidebars != None %}
                 {#- new style sidebar: explicitly include/exclude templates #}
                 {%- for sidebartemplate in sidebars %}
@@ -194,17 +65,103 @@
                 {%- endfor %}
             {%- endif %}
           </div><!--/.well -->
-        </div><!--/span-->
+        </div><!--/span3-->
         <div class="span9">
-          <div cclass="hero-unit">
-
-            {%- block qgisrelbar %}{{ relbar() }}{% endblock %}
-
-            {% block body %} {% endblock %}
-
+          <div>
+            {% block qgisrelbar %}{{ relbar() }}{% endblock qgisrelbar %}
+            {% block body4all %}  {{ contentbody() }} {% endblock %}
           </div>
-        </div><!--/span-->
-      <hr>
-    </div><!--/.fluid-container-->
-{% endblock %}
+        </div><!--/span9-->
+      </div><!--/.row-fluid-->
+    {%- endif %}
 
+    <!-- frontpage -->
+    {%- if pagename == 'index' %}
+      <div class="row-fluid" >
+        <!-- fake span for because bootstrap has a special style for first span...-->
+        <div class="span9" style="min-height:0px;"></div>
+
+        <div class="well sidebar-nav">
+            {% block i18nflags2 %} {{ i18nflags() }} {% endblock %}
+        </div><!--/.well -->
+      </div><!-- .row-fluid-->
+
+
+
+      <div class="row-fluid">
+        <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+
+                {#% here we will build the carousel from the rst  with some javascript %#}
+
+                <!--<div class="item">
+                    <img src="http://www.qgis.org/templates/qgis/images/blue/banner.jpg" alt="">
+                    <div class="container">
+                        <div class="carousel-caption">
+                        <h1>Example headline.</h1>
+                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <a class="btn btn-large btn-primary" href="#">Sign up today</a>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div><!-- /.carousel-inner -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+         </div><!-- /.carousel -->
+      </div><!-- .row-fluid-->
+
+      <div class="row-fluid">
+        <div class="container marketing">
+        <!--<div class="row">-->
+            {% block body4frontpage %}  {{ contentbody() }} {% endblock %}
+        <!-- </div>/.row -->
+        </div> <!-- container marketing -->
+      </div><!-- .row-fluid-->
+      <script>
+
+        // jquery magic to take all h1 with class 'item' and put them in the carousel
+        $('.carousel-inner').append($('.item.section'))
+        // rearrange the dom structure a little to suite bootstrap
+        $('.item.section').each( function(index){
+            // remove .item class (not needed here)
+            $(this).removeClass('section');
+            // if this is the first item, make it active
+            if (index==0) {
+                $(this).addClass('active');
+            }
+            // add bootstrap helper divs
+            $(this).prepend('<div class="container"><div class="carousel-caption"></div></div>');
+            // now add all info to carousel-caption
+            $(this).find('.carousel-caption').append( $(this).find('h1') );
+            $(this).find('.carousel-caption').append( $(this).find('p') );
+            $(this).find('.carousel-caption').append( $(this).find('a.reference') );
+            // add some bootstrap classes
+            $(this).find('p').addClass('lead');
+            $(this).find('a.reference').addClass('btn btn-large btn-primary')
+            // image for background (// determines height!!)
+            $(this).prepend($(this).find('img'))
+        });
+        // 'restart' carousel
+        $('.carousel').carousel('cycle');
+
+        // jquery magic to put secions in marketing block
+        $('.compound').remove();
+        var currentrow;
+        // take all sections in marketing
+        $('.marketing .section').each(function(index){
+            // for every 3 sections create a row
+            if (index%3==0){
+                currentrow = $('<div class="row-fluid"></div>').appendTo($('.marketing'));
+            }
+            // and append this now span4 item to it (and well)
+            currentrow.append( $(this).addClass('span4').addClass('well') );
+        });
+      </script>
+    {%- endif %}
+
+    <hr>
+
+    </div><!--/.fluid-container-->
+
+{% endblock content %}

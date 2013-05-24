@@ -1,3 +1,6 @@
+
+.. _QGIS-commercial_support:
+
 ==================
 Commercial support
 ==================
