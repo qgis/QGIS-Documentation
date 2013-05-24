@@ -1,29 +1,25 @@
-:orphan:
 
-=================================
-Welcome to the QGIS Documentation
-=================================
+Documentation
+=============
 
-Currently we are building a infrastructure to more easily maintain and translate
-various QGIS documentation projects.
-
-All documentation is written in RST, saved in Github, and po/pot translatable.
+Contents
+--------
 
 .. toctree::
-    :maxdepth: 1
-    :hidden:
+   :maxdepth: 1
+   :hidden:
 
-    user_manual/index
-    documentation_guidelines/index
-    gentle_gis_introduction/index
-    pyqgis_developer_cookbook/index
-    qgis_governance/index
+   user_manual/index
+   documentation_guidelines/index
+   gentle_gis_introduction/index
+   pyqgis_developer_cookbook/index
+   qgis_governance/index
 
 
 User manual
 -----------
 
-:ref:`The QGIS User Manual <QGIS-manual-index-reference>`. The main project.
+:doc:`The QGIS User Manual <user_manual/preamble/preamble>`. The main project.
 The User manual should contain all information needed for an user to get started.
 
 It will be updated with every update of QGIS.
@@ -42,7 +38,7 @@ guidelines
 A Gentle Introduction to GIS
 ----------------------------
 
-:ref:`A Gentle Introduction to GIS <A-Gentle-Introduction-To-GIS-reference>`.
+:doc:`A Gentle Introduction to GIS <gentle_gis_introduction/00_preamble>`.
 This introduction to GIS is an introductory text to get your feet wet in GIS
 
 

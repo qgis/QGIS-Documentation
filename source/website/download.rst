@@ -1,3 +1,6 @@
+
+.. _QGIS-download:
+
 ================
 Download QGIS
 ================
@@ -18,6 +21,7 @@ Windows
 
 Linux
 ...............
+
 Most linux distributions split QGIS into several packages; you can decide not to install qgis-python, qgis-grass (or qgis-plugin-grass), or qgis-mapserver if you do not need it.
 
 Ubuntu
