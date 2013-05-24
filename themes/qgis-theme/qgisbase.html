@@ -1,0 +1,124 @@
+{% extends "basic/layout.html" %}
+
+{%- macro i18nflags() %}
+
+{#% we comment the not used yet flags out with sphinx comments instead of html
+comments, to not let all this comments showup in ALL pages %#}
+<div>
+<ul id="locales">
+<li id="flag_en" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en.png', 1)}}" title="en" alt="en"></li>
+{#% <li id="flag_af" onclick="gotoLang('af');"><img src="{{pathto('_static/img/flags/af.png', 1)}}" title="af" alt="af"></li> %#}
+{#% <li id="flag_ar" onclick="gotoLang('ar');"><img src="{{pathto('_static/img/flags/ar.png', 1)}}" title="ar" alt="ar"></li> %#}
+{#% <li id="flag_bg" onclick="gotoLang('bg');"><img src="{{pathto('_static/img/flags/bg.png', 1)}}" title="bg" alt="bg"></li> %#}
+{#% <li id="flag_ca_ES" onclick="gotoLang('ca_ES');"><img src="{{pathto('_static/img/flags/ca_ES.png', 1)}}" title="ca_ES" alt="ca_ES"></li> %#}
+{#% <li id="flag_cs_CZ" onclick="gotoLang('cs_CZ');"><img src="{{pathto('_static/img/flags/cs_CZ.png', 1)}}" title="cs_CZ" alt="cs_CZ"></li> %#}
+{#% <li id="flag_da_DK" onclick="gotoLang('da_DK');"><img src="{{pathto('_static/img/flags/da_DK.png', 1)}}" title="da_DK" alt="da_DK"></li> %#}
+<li id="flag_de" onclick="gotoLang('de');"><img src="{{pathto('_static/img/flags/de.png', 1)}}" title="de" alt="de"></li>
+{#% <li id="flag_el_GR" onclick="gotoLang('el_GR');"><img src="{{pathto('_static/img/flags/el_GR.png', 1)}}" title="el_GR" alt="el_GR"></li> %#}
+{#% <li id="flag_es" onclick="gotoLang('es');"><img src="{{pathto('_static/img/flags/es.png', 1)}}" title="es" alt="es"></li> %#}
+{#% <li id="flag_et_EE" onclick="gotoLang('et_EE');"><img src="{{pathto('_static/img/flags/et_EE.png', 1)}}" title="et_EE" alt="et_EE"></li> %#}
+{#% <li id="flag_eu_ES" onclick="gotoLang('eu_ES');"><img src="{{pathto('_static/img/flags/eu_ES.png', 1)}}" title="eu_ES" alt="eu_ES"></li> %#}
+{#% <li id="flag_fa" onclick="gotoLang('fa');"><img src="{{pathto('_static/img/flags/fa.png', 1)}}" title="fa" alt="fa"></li> %#}
+{#% <li id="flag_fi" onclick="gotoLang('fi');"><img src="{{pathto('_static/img/flags/fi.png', 1)}}" title="fi" alt="fi"></li> %#}
+<li id="flag_fr" onclick="gotoLang('fr');"><img src="{{pathto('_static/img/flags/fr.png', 1)}}" title="fr" alt="fr"></li>
+{#% <li id="flag_gl_ES" onclick="gotoLang('gl_ES');"><img src="{{pathto('_static/img/flags/gl_ES.png', 1)}}" title="gl_ES" alt="gl_ES"></li> %#}
+{#% <li id="flag_he" onclick="gotoLang('he');"><img src="{{pathto('_static/img/flags/he.png', 1)}}" title="he" alt="he"></li> %#}
+<li id="flag_hi" onclick="gotoLang('hi');"><img src="{{pathto('_static/img/flags/hi.png', 1)}}" title="hi" alt="hi"></li>
+{#% <li id="flag_hr_HR" onclick="gotoLang('hr_HR');"><img src="{{pathto('_static/img/flags/hr_HR.png', 1)}}" title="hr_HR" alt="hr_HR"></li> %#}
+{#% <li id="flag_hu" onclick="gotoLang('hu');"><img src="{{pathto('_static/img/flags/hu.png', 1)}}" title="hu" alt="hu"></li> %#}
+{#% <li id="flag_id" onclick="gotoLang('id');"><img src="{{pathto('_static/img/flags/id.png', 1)}}" title="id" alt="id"></li> %#}
+{#% <li id="flag_is" onclick="gotoLang('is');"><img src="{{pathto('_static/img/flags/is.png', 1)}}" title="is" alt="is"></li> %#}
+<li id="flag_it" onclick="gotoLang('it');"><img src="{{pathto('_static/img/flags/it.png', 1)}}" title="it" alt="it"></li>
+<li id="flag_ja" onclick="gotoLang('ja');"><img src="{{pathto('_static/img/flags/ja.png', 1)}}" title="ja" alt="ja"></li>
+{#% <li id="flag_ka_GE" onclick="gotoLang('ka_GE');"><img src="{{pathto('_static/img/flags/ka_GE.png', 1)}}" title="ka_GE" alt="ka_GE"></li> %#}
+{#% <li id="flag_ko_KR" onclick="gotoLang('ko_KR');"><img src="{{pathto('_static/img/flags/ko_KR.png', 1)}}" title="ko_KR" alt="ko_KR"></li> %#}
+{#% <li id="flag_lo" onclick="gotoLang('lo');"><img src="{{pathto('_static/img/flags/lo.png', 1)}}" title="lo" alt="lo"></li> %#}
+{#% <li id="flag_lt" onclick="gotoLang('lt');"><img src="{{pathto('_static/img/flags/lt.png', 1)}}" title="lt" alt="lt"></li> %#}
+{#% <li id="flag_lv" onclick="gotoLang('lv');"><img src="{{pathto('_static/img/flags/lv.png', 1)}}" title="lv" alt="lv"></li> %#}
+{#% <li id="flag_mn" onclick="gotoLang('mn');"><img src="{{pathto('_static/img/flags/mn.png', 1)}}" title="mn" alt="mn"></li> %#}
+<li id="flag_nl" onclick="gotoLang('nl');"><img src="{{pathto('_static/img/flags/nl.png', 1)}}" title="nl" alt="nl"></li>
+{#% <li id="flag_no" onclick="gotoLang('no');"><img src="{{pathto('_static/img/flags/no.png', 1)}}" title="no" alt="no"></li> %#}
+{#% <li id="flag_pl_PL" onclick="gotoLang('pl_PL');"><img src="{{pathto('_static/img/flags/pl_PL.png', 1)}}" title="pl_PL" alt="pl_PL"></li> %#}
+<li id="flag_pt_BR" onclick="gotoLang('pt_BR');"><img src="{{pathto('_static/img/flags/pt_BR.png', 1)}}" title="pt_BR" alt="pt_BR"></li>
+{#% <li id="flag_pt_PT" onclick="gotoLang('pt_PT');"><img src="{{pathto('_static/img/flags/pt_PT.png', 1)}}" title="pt_PT" alt="pt_PT"></li> %#}
+{#% <li id="flag_ro" onclick="gotoLang('ro');"><img src="{{pathto('_static/img/flags/ro.png', 1)}}" title="ro" alt="ro"></li> %#}
+<li id="flag_ru" onclick="gotoLang('ru');"><img src="{{pathto('_static/img/flags/ru.png', 1)}}" title="ru" alt="ru"></li>
+{#% <li id="flag_sk" onclick="gotoLang('sk');"><img src="{{pathto('_static/img/flags/sk.png', 1)}}" title="sk" alt="sk"></li> %#}
+{#% <li id="flag_sl_SI" onclick="gotoLang('sl_SI');"><img src="{{pathto('_static/img/flags/sl_SI.png', 1)}}" title="sl_SI" alt="sl_SI"></li> %#}
+{#% <li id="flag_sq_AL" onclick="gotoLang('sq_AL');"><img src="{{pathto('_static/img/flags/sq_AL.png', 1)}}" title="sq_AL" alt="sq_AL"></li> %#}
+{#% <li id="flag_sr_Cyrl" onclick="gotoLang('sr_Cyrl');"><img src="{{pathto('_static/img/flags/sr_Cyrl.png', 1)}}" title="sr_Cyrl" alt="sr_Cyrl"></li> %#}
+{#% <li id="flag_sr_Latn" onclick="gotoLang('sr_Latn');"><img src="{{pathto('_static/img/flags/sr_Latn.png', 1)}}" title="sr_Latn" alt="sr_Latn"></li> %#}
+{#% <li id="flag_sv" onclick="gotoLang('sv');"><img src="{{pathto('_static/img/flags/sv.png', 1)}}" title="sv" alt="sv"></li> %#}
+{#% <li id="flag_sw" onclick="gotoLang('sw');"><img src="{{pathto('_static/img/flags/sw.png', 1)}}" title="sw" alt="sw"></li> %#}
+{#% <li id="flag_ta" onclick="gotoLang('ta');"><img src="{{pathto('_static/img/flags/ta.png', 1)}}" title="ta" alt="ta"></li> %#}
+{#% <li id="flag_th" onclick="gotoLang('th');"><img src="{{pathto('_static/img/flags/th.png', 1)}}" title="th" alt="th"></li> %#}
+{#% <li id="flag_tr" onclick="gotoLang('tr');"><img src="{{pathto('_static/img/flags/tr.png', 1)}}" title="tr" alt="tr"></li> %#}
+{#% <li id="flag_uk" onclick="gotoLang('uk');"><img src="{{pathto('_static/img/flags/uk.png', 1)}}" title="uk" alt="uk"></li> %#}
+{#% <li id="flag_vi" onclick="gotoLang('vi');"><img src="{{pathto('_static/img/flags/vi.png', 1)}}" title="vi" alt="vi"></li> %#}
+{#% <li id="flag_xh" onclick="gotoLang('xh');"><img src="{{pathto('_static/img/flags/xh.png', 1)}}" title="xh" alt="xh"></li> %#}
+{#% <li id="flag_zh_CN" onclick="gotoLang('zh_CN');"><img src="{{pathto('_static/img/flags/zh_CN.png', 1)}}" title="zh_CN" alt="zh_CN"></li> %#}
+{#% <li id="flag_zh_TW" onclick="gotoLang('zh_TW');"><img src="{{pathto('_static/img/flags/zh_TW.png', 1)}}" title="zh_TW" alt="zh_TW"></li> %#}
+</ul><span style="clear:both">&nbsp;</span>
+</div>
+
+{%- endmacro %}
+
+
+{%- macro contentbody() %}
+    {% block body %} {% endblock %}
+{%- endmacro %}
+
+
+{% block extrahead %}
+
+    <script>
+        var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/'
+        var currentLang = 'en';
+        $(document).ready(function(){
+            var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            var langPlusPage = window.location.href.match(search);
+            if (langPlusPage==undefined){
+                // it's possible this is a index.html page called without 'index.html', try without the currentPage
+                search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+                langPlusPage = window.location.href.match(search);
+            }
+            if (langPlusPage == undefined || langPlusPage.length != 1){
+                alert('This is an documentation error, please report back to QGIS devs.');
+                return;
+            }
+            langPlusPage = langPlusPage[0];
+            currentLang = langPlusPage.replace(currentPage, '');
+            // code below is not going to work because we need the compile time run path to the images
+            //var allLanguages = ['af','ar','bg','ca_ES','cs_CZ','da_DK','de','el_GR','en','es','et_EE','eu_ES','fa','fi','fr','gl_ES','he', 'hi', 'hr_HR','hu','id','is','it','ja','ka_GE','ko_KR','lo','lt','lv','mn','nl','no','pl_PL','pt_BR','pt_PT','ro','ru','sk','sl_SI','sq_AL','sr_Cyrl','sr_Latn','sv','sw','ta','th','tr','uk','vi','xh','zh_CN','zh_TW'];
+            //var html = '';
+            //for (var i = 0; i<allLanguages.length; i++){
+            //    var lang = allLanguages[i];
+            //    html+='<li id="flag_'+lang+'" onclick="gotoLang(\''+lang+'\');"><img src="_static/img/flags/'+lang+'.png" title="'+lang+'" alt="'+lang+'"/></li>\n'
+            //}
+            // put the html (a list li-elements into the locale lu):
+            //$('#locales').html(html);
+
+            // put some style around the current locale flag, we have to remove the '/' here
+            $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        })
+
+        // load current page in a different language
+        function gotoLang(lang){
+            var currentUrl = window.location.href;
+            var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+            window.location.href = newUrl;
+        }
+    </script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+{% endblock extrahead %}
