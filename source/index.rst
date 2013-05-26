@@ -9,6 +9,32 @@
     website/community/index
 
 
+.. frontpage intro text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.. rst-class:: frontpageintro
+
+QGIS
+====
+
+.. |frontpage_logo_small| image:: /static/common/qgislogo.png
+    :width: 3 em
+
+|frontpage_logo_small| Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System (GIS)
+licensed under the GNU General Public License. QGIS is an official project of 
+the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, 
+Windows and Android and supports numerous vector, raster, and database formats and functionalities.
+
+It is translated in a lot of languages (all in one package). 
+
+Parts of this site are also translated. Try to click on the flags on top if available.
+
+This block of text is normally translated, and can also be used (by the translators
+of a locale, to say something locale specific, like pointing to sites 
+which are only available in a certain language (like http://www.qgis.nl)
+
+Or another paragraph....
+
+
 
 .. carousel content !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -37,30 +63,11 @@ You can read more about it in the 'Release notes 1.8'
 `Show me <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
 
-.. rst-class:: item
-
-QGIS TEST Headline
-==================
-
-.. then an image
-
-.. image:: http://www.qgis.org/templates/qgis/images/blue/banner.jpg
-
-.. then some text
-
-Here some marketing text (Paolo?)
-
-Or some other text
-
-.. then a link (for the button text)
-
-`Show me <#>`_
-
 
 .. rst-class:: item
 
-QGIS ANOTHER Headline
-=====================
+QGIS Case studies
+=================
 
 .. then an image
 
@@ -75,23 +82,29 @@ Have you seen our real world cases?
 :ref:`Show the case studies <QGIS-case-studies>`
 
 
-.. rst-class:: item
-
-QGIS without image and button
-=============================
-
-.. then NO image
-
-.. then some text
-
-An example without image or button
-
 
 
 
 .. all following sections will be in marketing div, below carousel !!!!!!!!!!!!!!!!!
 
 
+Screenshots
+===========
+
+Proofing of the pudding is seeing screenshots: :ref:`see them here<QGIS-screenshots>`.
+
+.. image:: /static/user_manual/introduction/startup.png
+    :alt: screenshot
+
+
+
+Download
+========
+
+The latest version of QGIS is 1.8, you can :ref:`download it from here <QGIS-download>`.
+
+
+|qgissplash|
 
 
 News
@@ -106,7 +119,9 @@ We collect them here: `Planet blog <http://plugins.qgis.org/planet/>`_.
 User Manual
 ===========
 
-Looking for the user manual? Please go to :ref:`The QGIS User Manual <QGIS-manual-index-reference>`
+The user manual for the stable version you can find here `QGIS Manual stable version (1.8) <http://docs.qgis.org/1.8/html/en/>`_.
+
+Please go to :ref:`The QGIS User Manual <QGIS-manual-index-reference>` to see the manual for current development version.
 
 
 
@@ -117,17 +132,6 @@ QGIS is used all over the world in real-world situations.
 
 Please :ref:`find some cases here <QGIS-case-studies>` from our users
 
-
-Commercial support
-==================
-
-Find out who in the world you can find :ref:`commercial support <QGIS-commercial_support>` for QGIS
-
-
-Download
-========
-
-The latest version of QGIS is 1.8, you can :ref:`download it from here <QGIS-download>`.
 
 
 Sponsorship
@@ -141,14 +145,10 @@ You want to help QGIS as a business?  Consider :ref:`sponsoring QGIS development
 
 
 
-Development
-===========
+Commercial support
+==================
 
-A developer? You want to build QGIS yourself?
-
-See https://github.com/qgis/Quantum-GIS/blob/master/INSTALL
-
-Interested in python plugin development, go here http://plugins.qgis.org
+Find out who in the world you can find :ref:`commercial support <QGIS-commercial_support>` for QGIS
 
 
 
@@ -159,8 +159,16 @@ Found a bug in the program or translation?
 
 Please go to http://hub.qgis.org/projects/quantum-gis
 
-.. image:: /static/user_manual/introduction/startup.png
-    :alt: alternate text
+
+
+Development
+===========
+
+A developer? You want to build QGIS yourself?
+
+See https://github.com/qgis/Quantum-GIS/blob/master/INSTALL
+
+Interested in python plugin development, go here http://plugins.qgis.org
 
 
 
