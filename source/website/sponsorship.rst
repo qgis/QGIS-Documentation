@@ -1,9 +1,9 @@
 
 .. _QGIS-sponsoring:
 
-================
+===============
 Sponsoring QGIS
-================
+===============
 
 QGIS is an entirely Open Source project. QGIS development is carried out largely by a group of volunteers, that in time have built up a large, valuable and useful code base, free to use and improve for everybody. As a result, you have free access to the source code and binaries that we provide on our web site. As a result of this volunteer approach, a number of tasks, less interesting or important for the developers, are sometimes left behind. In addition, promoting QGIS requires our participation at congresses and conferences and the production of information material, sometimes very expensive for volunteer developers.
 
@@ -17,7 +17,7 @@ Donations thus contributed effectively to the great success of the meeting.
 We encourage you to donate again to the upcoming developer meetings.
 
 How can you support the QGIS Development
--------------------------------------------
+----------------------------------------
 
 There are two kinds of financial contributions, we accept:
 
@@ -25,7 +25,7 @@ There are two kinds of financial contributions, we accept:
 * **donation**: a donation is a once off financial contribution to the QGIS project.
 
 Sponsorship
-...................
+...........
 
 Sponsors can sponsor Quantum GIS for any amount of money of at least 500 €/700 US$. Sponsorships last one year, after which they may be continued with a new payment, or allowed to lapse. At or above the following levels a sponsor will be designated as being one of the following class:
 
@@ -35,7 +35,7 @@ Sponsors can sponsor Quantum GIS for any amount of money of at least 500 €/700
 * 500+ €/700 US$: Bronze Sponsor
 
 List of sponsors
-++++++++++++++++++++
+++++++++++++++++
 
 Annually we also receive support from various organisations who appreciate the work we do and would like to facilitate the sustained development effort that goes into the project. For more information on sponsoring QGIS, please visit the sponsorship page. These sponsors are listed below with our thanks!
 
@@ -79,7 +79,7 @@ Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.1
 `Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (10.2012)
  
 .. |sogis| image:: images/sogis.gif
-   :width: 200 px
+   :width: 150 px
 
 ----
 
@@ -123,8 +123,7 @@ Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.1
 
 `Kanton Solothurn <http://www.agi.so.ch/>`_, Switzerland (4.2011)
 
-.. |sogis| image:: images/sogis.gif
-   :width: 200 px
+.. sogis as image already defined above
 
 ----
 
@@ -132,8 +131,7 @@ Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.1
 
 `State of Vorarlberg <http://www.vorarlberg.at/>`_, Austria (11.2011)
 
-.. |land_f| image:: images/land_f.jpg
-   :width: 290 px
+.. land_f image already defined above
 
 ----
 
@@ -172,14 +170,14 @@ Also `OSGeo <http://www.osgeo.org/>`_ is partly supporting our HackFests: 2012.1
    :width: 130 px
 
 Donation
-......................
+........
 
 Donations can be of any amount, through the `Make A Donation PayPal <https://www.paypal.com/us/cgi-bin/webscr?cmd=_flow&SESSION=AdBwoAp9yoTKrVYVX_a8x5uNGxn6jbzjkZVnJaTIqW6pVT4i_Ns6S3DVWym&dispatch=5885d80a13c0db1f8e263663d3faee8d96fc0752e9614158f04872d2f2ae25dc>`_ link provided also in the menu of this website or through our bank account (write us for details: cavallini at faunalia dot it). Even a small donation can make a difference and help to reach important project goals!
 
 If you wish to send us a larger donation, you are strongly encouraged to use the bank account rather than PayPal.
 
 List of donors
-++++++++++++++++++++
+++++++++++++++
 
 * Aaron Racicot
 * Adam Lane
@@ -364,7 +362,7 @@ List of donors
 * Zachary Patterson
 
 Your benefit sponsoring QGIS
-------------------------------------------------------
+----------------------------
 
 Sponsoring the Quantum GIS project provides the following benefits:
 
@@ -383,7 +381,7 @@ Sponsoring the Quantum GIS project provides the following benefits:
 No advertising will be placed within the QGIS application itself.
 
 How do we use financial support
------------------------------------
+-------------------------------
 
 The sponsorship funds will be spent to directly improve the code base of the project, to fund tasks that generally receive less attention from developers, and to fund work on peripheral project tasks so that core contributors can focus efforts on QGIS improvements. As examples, we fund the following project activities:
 

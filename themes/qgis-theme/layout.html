@@ -86,10 +86,8 @@
         </div><!--/.well -->
       </div><!-- .row-fluid-->
 
-
-
       <div class="row-fluid">
-        <div id="myCarousel" class="carousel slide">
+        <div id="qgiscarousel" class="carousel slide">
             <div class="carousel-inner">
 
                 {#% here we will build the carousel from the rst  with some javascript %#}
@@ -99,29 +97,44 @@
                     <div class="container">
                         <div class="carousel-caption">
                         <h1>Example headline.</h1>
-                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
                         <a class="btn btn-large btn-primary" href="#">Sign up today</a>
                         </div>
                     </div>
                 </div>-->
 
             </div><!-- /.carousel-inner -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+            <a class="left carousel-control" href="#qgiscarousel" data-slide="prev">&lsaquo;</a>
+            <a class="right carousel-control" href="#qgiscarousel" data-slide="next">&rsaquo;</a>
          </div><!-- /.carousel -->
       </div><!-- .row-fluid-->
 
       <div class="row-fluid">
-        <div class="container marketing">
+        <div id="introcontainer" class="section span8">
+            {#% this will be filled via javascript by finding the section with class frontpageintro from intro.rst %#}
+        </div> <!-- /.container -->
+        <div class="section span4">
+            {%- include "searchbox.html" %}
+        </div> <!-- /.container -->
+      </div><!-- /.row-fluid-->
+
+      <div class="row-fluid">
+        <div class="removecontainer marketing">
         <!--<div class="row">-->
             {% block body4frontpage %}  {{ contentbody() }} {% endblock %}
         <!-- </div>/.row -->
-        </div> <!-- container marketing -->
-      </div><!-- .row-fluid-->
+        </div> <!-- /.container .marketing -->
+      </div><!-- /.row-fluid-->
+
       <script>
+        // jquery magic to pull the frontpageintro section into the introcontainer
+        $('.frontpageintro').each( function(){
+            $('#introcontainer').append($(this));
+            $(this).removeClass('section');  // section now handled...
+        });
 
         // jquery magic to take all h1 with class 'item' and put them in the carousel
-        $('.carousel-inner').append($('.item.section'))
+        $('.carousel-inner').append($('.item.section'));
         // rearrange the dom structure a little to suite bootstrap
         $('.item.section').each( function(index){
             // remove .item class (not needed here)
@@ -165,3 +178,12 @@
     </div><!--/.fluid-container-->
 
 {% endblock content %}
+
+
+{%- block relbar2 %}
+    {#% overriding relbar2: NO relbar2 on frontpage %#}
+    {%- if pagename != 'index' %}
+    {{ relbar() }}
+    {%- endif %}
+
+{% endblock %}

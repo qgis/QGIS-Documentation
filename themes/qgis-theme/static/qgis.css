@@ -52,8 +52,9 @@
 .carousel img {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0; /* align right, because the caption is on the left side, so we overflow to the left */
     min-width: 100%;
+    max-width: 2000px; /* this makes us determine the size, otherwise bootstrap resizes the image */
     height: 280px;
 }
 
