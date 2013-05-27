@@ -8,6 +8,16 @@
 General Tools
 *************
 
+.. _`identify`:
+
+Identify features
+=================
+
+.. index::
+   single:Identify features
+
+
+
 .. _`shortcuts`:
 
 Keyboard shortcuts
