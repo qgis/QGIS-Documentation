@@ -1,7 +1,26 @@
 /* adding qgis specific css here, overriding bootstrap or adding new classes */
 
 
-/* color for disclaimer (used when files need to be revised)*/
+/* some helper media queries for rules that are size dependent */
+@media (max-width: 767px){
+
+}
+@media (max-width: 480px) {
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (max-width: 979px) {
+
+}
+
+/*
+    color for disclaimer (used when files need to be revised)
+*/
 .disclaimer {
   display:block;
   margin-top:5px;
@@ -10,7 +29,10 @@
   padding:5px 50px 5px 50px;
 
 }
-/* locales (flags) list */
+
+/* 
+    locales (flags) list 
+*/
 #locales li{
   float: left;
   list-style-type: none;
@@ -27,7 +49,7 @@
 
 /* Carousel base class */
 .carousel {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     background-color:lightgray;
 }
 
@@ -47,7 +69,7 @@
 }
 
 .carousel .item {
-    height: 280px;
+    height: 250px;
 }
 .carousel img {
     position: absolute;
@@ -59,10 +81,10 @@
 }
 
 .carousel-caption {
-    background-color: transparent;
+    background-color: rgba(40, 40, 40, 0.5);
     position: static;
     max-width: 550px;
-    padding: 0 70px;
+    padding: 10px 30px;
     margin-top: 50px;
 }
 .carousel-caption h1,
@@ -130,3 +152,4 @@ body {
 .search input[type=text] {
   width:90%;
 }
+

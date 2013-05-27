@@ -859,15 +859,7 @@ html_static_path = ['static']
 #html_sidebars = {}
 html_sidebars = {
         'index': ['globaltoc.html', 'searchbox.html'],
-        'docs/index': ['localtoc.html', 'searchbox.html']
-        ,'website/**': ['localtoc.html', 'searchbox.html']
-        ,'docs/gentle_gis_introduction/*/*': ['localtoc.html', 'searchbox.html']
-        ,'docs/gentle_gis_introduction/*': ['localtoc.html', 'searchbox.html']
-#        ,'docs/pyqgis_developer_cookbook/**': ['localtoc.html', 'searchbox.html']
-#        ,'docs/qgis_governance/**': ['localtoc.html', 'searchbox.html']
-        ,'docs/user_manual/**': ['localtoc.html', 'searchbox.html']
-#        ,'website/**': ['localtoc.html', 'searchbox.html']
-#      ,'using/windows': ['windowssidebar.html', 'sourcelink.html', 'searchbox.html']
+        '**': ['localtoc.html', 'searchbox.html', 'sourcelink.html']
       }
 
 # Additional templates that should be rendered to pages, maps page names to
