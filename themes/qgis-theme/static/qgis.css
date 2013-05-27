@@ -1,7 +1,26 @@
 /* adding qgis specific css here, overriding bootstrap or adding new classes */
 
 
-/* color for disclaimer (used when files need to be revised)*/
+/* some helper media queries for rules that are size dependent */
+@media (max-width: 767px){
+
+}
+@media (max-width: 480px) {
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+@media (max-width: 979px) {
+
+}
+
+/*
+    color for disclaimer (used when files need to be revised)
+*/
 .disclaimer {
   display:block;
   margin-top:5px;
@@ -10,16 +29,10 @@
   padding:5px 50px 5px 50px;
 
 }
-body {
-  padding-top: 75px;
-  padding-bottom: 40px;
-  font-size: 14px;
-}
 
-h3 {
-  font-size: 22px;
-}
-
+/* 
+    locales (flags) list 
+*/
 #locales li{
   float: left;
   list-style-type: none;
@@ -30,38 +43,113 @@ h3 {
   margin-left:2px;
   display:inline-block;
 }
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 30px;
+    background-color:lightgray;
+}
+
+.carousel .container {
+    position: relative;
+    z-index: 9;
+}
+
+.carousel-control {
+    height: 80px;
+    margin-top: 0;
+    font-size: 120px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    background-color: transparent;
+    border: 0;
+    z-index: 10;
+}
+
+.carousel .item {
+    height: 250px;
+}
+.carousel img {
+    position: absolute;
+    top: 0;
+    right: 0; /* align right, because the caption is on the left side, so we overflow to the left */
+    min-width: 100%;
+    max-width: 2000px; /* this makes us determine the size, otherwise bootstrap resizes the image */
+    height: 280px;
+}
+
+.carousel-caption {
+    background-color: rgba(40, 40, 40, 0.5);
+    position: static;
+    max-width: 550px;
+    padding: 10px 30px;
+    margin-top: 50px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+    margin: 0;
+    line-height: 1.25;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+    margin-top: 10px;
+}
+
+/*
+our sphinx :refs: become anchors. But linking to an anchor in top of the page
+makes it hide it beneath our header/menu.
+To jump a little lower (below header/menu), we use a negative margin hack, see
+http://nicolasgallagher.com/jump-links-and-viewport-positioning/
+and
+http://coding.smashingmagazine.com/2009/07/27/the-definitive-guide-to-using-negative-margins/
+*/
+div.section:before {
+   content:"";
+   display:block;
+   height:60px;
+   margin:-60px 0 0 0;      /*this is working for non frontpages*/
+}
+/* special case for marketing divs on frontpage */
+div.marketing div.section:before {
+   content:"";
+   display:block;
+   height:60px;
+   margin:0 0 -60px 0;  /*this is working for frontpage*/
+}
+/* span a little more difficult, hopefully this is unique enough 
+for the :ref: spans we use */
+div .section span:before {
+   content:"";
+   display:block;
+   height:60px;
+   margin:0 0 0 0;
+}
+
+/** 
+from for  bootstrap fluid.html
+to be included BEFORE the responsiveness css
+**/
+body {
+    padding-bottom: 40px;
+    padding-top: 60px;
+}
+.sidebar-nav {
+    padding-bottom: 9px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 9px;
+}
+.navbar-text.pull-right {
+    float: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* makes better responsive behaviour for search input */
 .search input[type=text] {
   width:90%;
 }
 
-.sidebar-nav {
-  padding: 9px 5px;
-}
-
-.navbar .brand {
-  background-image: url("http://plugins.qgis.org/static/images/blue/logo.png");
-  background-repeat: no-repeat;
-  padding-left: 60px;
-  height:42px;
-}
-
-.navbar .nav {
-  margin-top: 23px;
-}
-
-.navbar-inverse .navbar-inner {
-  background-image: url('http://plugins.qgis.org/static/images/blue/bg_logo.png');
-  background-repeat: repeat-x;
-  border:none;
-}
-
-.navbar-inverse .nav > li > a:focus,
-.navbar-inverse .nav > li > a:hover {
-  color: #000000;
-  background-color: transparent;
-}
-
-.navbar-inverse .brand:hover,
-.navbar-inverse .nav > li > a:hover {
-  color: #000000;
-}
