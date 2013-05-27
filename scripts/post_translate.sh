@@ -63,19 +63,19 @@ do
   echo "Building HTML for locale '${LOCALE}'..."
   ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
 
-  # Compile the latex docs for that locale
-  ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
-  # Compile the pdf docs for that locale
-  # we use texi2pdf since latexpdf target is not available via 
-  # sphinx-build which we need to use since we need to pass language flag
-  pushd .
-  cd ${BUILDDIR}/latex/${LOCALE}/
-  # need to build 3x to have proper toc and index
-  texi2pdf --quiet QGISUserGuide.tex
-  texi2pdf --quiet QGISUserGuide.tex
-  texi2pdf --quiet QGISUserGuide.tex
-  mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
-  popd
+#  # Compile the latex docs for that locale
+#  ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b latex source ${BUILDDIR}/latex/${LOCALE}
+#  # Compile the pdf docs for that locale
+#  # we use texi2pdf since latexpdf target is not available via 
+#  # sphinx-build which we need to use since we need to pass language flag
+#  pushd .
+#  cd ${BUILDDIR}/latex/${LOCALE}/
+#  # need to build 3x to have proper toc and index
+#  texi2pdf --quiet QGISUserGuide.tex
+#  texi2pdf --quiet QGISUserGuide.tex
+#  texi2pdf --quiet QGISUserGuide.tex
+#  mv QGISUserGuide.pdf ${PDFDIR}/QGIS-${VERSION}-UserGuide-${LOCALE}.pdf
+#  popd
 done
 
 rm -rf source/static
