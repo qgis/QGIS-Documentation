@@ -32,8 +32,6 @@ This block of text is normally translated, and can also be used (by the translat
 of a locale, to say something locale specific, like pointing to sites 
 which are only available in a certain language (like http://www.qgis.nl)
 
-Or another paragraph....
-
 
 
 .. carousel content !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -43,24 +41,26 @@ Or another paragraph....
 .. starting with a h1 with extra class item:
 
 
+.. |carouselimage1| image:: /static/common/lisboncarousel.jpg
+
+
+
 .. rst-class:: item
 
-QGIS Latest Version 1.8
-=======================
+Latest Version 1.8
+==================
 
 .. then an image
 
-.. image:: http://www.qgis.org/templates/qgis/images/blue/banner.jpg
+|carouselimage1|
 
 .. then some text
 
-Latest version of QGIS is 1.8
-
-You can read more about it in the 'Release notes 1.8'
+Latest release of QGIS is 1.8
 
 .. then a link (for the button text)
 
-`Show me <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
+`Show me the release notes <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
 
 
@@ -71,7 +71,7 @@ QGIS Case studies
 
 .. then an image
 
-.. image:: http://www.qgis.org/templates/qgis/images/blue/banner.jpg
+|carouselimage1|
 
 .. then some text
 

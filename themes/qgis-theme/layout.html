@@ -52,7 +52,7 @@
     <div class="container-fluid">
 
     <!-- normal pages == non frontpage -->
-    {%- if pagename != 'index' %}
+    {%- if pagename not in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
       <div class="row-fluid" >
         <div class="span3" >
           <div class="well sidebar-nav">
@@ -76,7 +76,7 @@
     {%- endif %}
 
     <!-- frontpage -->
-    {%- if pagename == 'index' %}
+    {%- if pagename in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
       <div class="row-fluid" >
         <!-- fake span for because bootstrap has a special style for first span...-->
         <div class="span9" style="min-height:0px;"></div>
@@ -158,6 +158,12 @@
         // 'restart' carousel
         $('.carousel').carousel('cycle');
 
+        // BUT if there are no items (like on other pages then real frontpage)
+        if ($('#qgiscarousel').find('.item').length==0){
+            // tehn hide the carousel
+            $('#qgiscarousel').hide()
+        }
+
         // jquery magic to put secions in marketing block
         $('.compound').remove();
         var currentrow;
@@ -182,7 +188,7 @@
 
 {%- block relbar2 %}
     {#% overriding relbar2: NO relbar2 on frontpage %#}
-    {%- if pagename != 'index' %}
+    {%- if pagename not in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
     {{ relbar() }}
     {%- endif %}
 
