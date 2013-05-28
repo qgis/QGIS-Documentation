@@ -1,10 +1,9 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 The SEXTANTE graphical modeler
 ==============================
-
-Introduction
-------------
 
 The *graphical modeler* allows to create complex models using a simple and
 easy-to-use interface. When working with a GIS, most analysis operations are not

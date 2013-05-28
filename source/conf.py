@@ -89,7 +89,7 @@ pygments_style = 'sphinx'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated for QGIS 1.8`
+.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated for QGIS 2.0`
 """
 
 rst_epilog = """
@@ -100,7 +100,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 1.8.0
+.. |CURRENT| replace:: 2.0.0
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
@@ -117,6 +117,108 @@ rst_epilog = """
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png
 .. |tab| image:: /static/common/tab.png
+.. |calendarwidget| image:: /static/common/calendarwidget.png
+   :width: 1.5em
+.. |color|  image:: /static/common/color.png
+   :width: 1.5em
+.. |colormap|  image:: /static/common/colormap.png
+   :width: 1.5em
+.. |columnview|  image:: /static/common/columnview.png
+   :width: 1.5em
+.. |combobox|  image:: /static/common/combobox.png
+   :width: 1.5em
+.. |commandlinkbutton|  image:: /static/common/commandlinkbutton.png
+   :width: 1.5em
+.. |dateedit|  image:: /static/common/dateedit.png
+   :width: 1.5em
+.. |datetimeedit|  image:: /static/common/datetimeedit.png
+   :width: 1.5em
+.. |dial| image:: /static/common/dial.png
+   :width: 1.5em
+.. |dialogbuttonbox|  image:: /static/common/dialogbuttonbox.png
+   :width: 1.5em
+.. |digitising|  image:: /static/common/digitising.png
+   :width: 1.5em
+.. |dockwidget| image:: /static/common/dockwidget.png
+   :width: 1.5em
+.. |doublespinbox|  image:: /static/common/doublespinbox.png
+   :width: 1.5em
+.. |fontcombobox|  image:: /static/common/fontcombobox.png
+   :width: 1.5em
+.. |frame|  image:: /static/common/frame.png
+   :width: 1.5em
+.. |graphicsview|  image:: /static/common/graphicsview.png
+   :width: 1.5em
+.. |grass_location|  image:: /static/common/grass_location.png
+   :width: 1.5em
+.. |groupbox|  image:: /static/common/groupbox.png
+   :width: 1.5em
+.. |groupboxcollapsible|  image:: /static/common/groupboxcollapsible.png
+   :width: 1.5em
+.. |histogram|  image:: /static/common/histogram.png
+   :width: 1.5em
+.. |hscrollbar|  image:: /static/common/hscrollbar.png
+   :width: 1.5em
+.. |hslider|  image:: /static/common/hslider.png
+   :width: 1.5em
+.. |hsplit|  image:: /static/common/hsplit.png
+   :width: 1.5em
+.. |iconAboutConsole|  image:: /static/common/iconAboutConsole.png
+   :width: 1.5em
+.. |iconClassBrowserConsole|  image:: /static/common/iconClassBrowserConsole.png
+   :width: 1.5em
+.. |iconClassConsole|  image:: /static/common/iconClassConsole.png
+   :width: 1.5em
+.. |iconClassTreeWidgetConsole|  image:: /static/common/iconClassTreeWidgetConsole.png
+   :width: 1.5em
+.. |iconClearConsole|  image:: /static/common/iconClearConsole.png
+   :width: 1.5em
+.. |iconCloseTabEditorConsole|  image:: /static/common/iconCloseTabEditorConsole.png
+   :width: 1.5em
+.. |iconCodepadConsole|  image:: /static/common/iconCodepadConsole.png
+   :width: 1.5em
+.. |iconCommentEditorConsole|  image:: /static/common/iconCommentEditorConsole.png
+   :width: 1.5em
+.. |iconCopyEditorConsole|  image:: /static/common/iconCopyEditorConsole.png
+   :width: 1.5em
+.. |iconCutEditorConsole|  image:: /static/common/iconCutEditorConsole.png
+   :width: 1.5em
+.. |iconFileTabsMenuConsole|  image:: /static/common/iconFileTabsMenuConsole.png
+   :width: 1.5em
+.. |iconFunctionTreeWidgetConsole|   image:: /static/common/iconFunctionTreeWidgetConsole.png
+   :width: 1.5em
+.. |iconHelpConsole|  image:: /static/common/iconHelpConsole.png
+   :width: 1.5em
+.. |iconHideToolConsole|  image:: /static/common/iconHideToolConsole.png
+   :width: 1.5em
+.. |iconIfaceConsole|  image:: /static/common/iconIfaceConsole.png
+   :width: 1.5em
+.. |iconMethodTreeWidgetConsole|  image:: /static/common/iconMethodTreeWidgetConsole.png
+   :width: 1.5em
+.. |iconNewTabEditorConsole|  image:: /static/common/iconNewTabEditorConsole.png
+   :width: 1.5em
+.. |iconOpenConsole|  image:: /static/common/iconOpenConsole.png
+   :width: 1.5em
+.. |iconPasteEditorConsole|  image:: /static/common/iconPasteEditorConsole.png
+   :width: 1.5em
+.. |iconQtCoreConsole|  image:: /static/common/iconQtCoreConsole.png
+   :width: 1.5em
+.. |iconQtGuiConsole|  image:: /static/common/iconQtGuiConsole.png
+   :width: 1.5em
+.. |iconRestoreTabsConsole|  image:: /static/common/iconRestoreTabsConsole.png
+   :width: 1.5em
+.. |iconRunConsole|  image:: /static/common/iconRunConsole.png
+   :width: 1.5em
+.. |iconRunScriptConsole|  image:: /static/common/iconRunScriptConsole.png
+   :width: 1.5em
+.. |iconSaveAsConsole|  image:: /static/common/iconSaveAsConsole.png
+   :width: 1.5em
+.. |iconSaveConsole|   image:: /static/common/iconSaveConsole.png
+   :width: 1.5em
+.. |iconScriptConsole|  image:: /static/common/iconScriptConsole.png
+   :width: 1.5em
+.. |iconSettingsConsole|  image:: /static/common/iconSettingsConsole.png
+   :width: 1.5em
 .. |dem_analysis| image:: /static/common/dem.png
    :width: 1.5em
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
@@ -184,6 +286,8 @@ rst_epilog = """
 .. |mActionFileSave| image:: /static/common/mActionFileSave.png
    :width: 1.5em
 .. |mActionFileSaveAs| image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |mActionAddImage|  image:: /static/common/mActionAddImage.png
    :width: 1.5em
 .. |mActionSaveMapAsImage| image:: /static/common/mActionSaveMapAsImage.png
    :width: 1.5em
@@ -754,15 +858,8 @@ html_static_path = ['static']
 # Custom sidebar templates, maps document names to template names.
 #html_sidebars = {}
 html_sidebars = {
-        'index': ['globaltoc.html', 'searchbox.html']
-        ,'docs/**': ['localtoc.html', 'searchbox.html']
-        ,'website/**': ['localtoc.html', 'searchbox.html']
-#        ,'docs/gentle_gis_introduction/**': ['localtoc.html', 'searchbox.html']
-#        ,'docs/pyqgis_developer_cookbook/**': ['localtoc.html', 'searchbox.html']
-#        ,'docs/qgis_governance/**': ['localtoc.html', 'searchbox.html']
-#        ,'docs/user_manual/**': ['localtoc.html', 'searchbox.html']
-#        ,'website/**': ['localtoc.html', 'searchbox.html']
-#      ,'using/windows': ['windowssidebar.html', 'sourcelink.html', 'searchbox.html']
+        'index': ['globaltoc.html', 'searchbox.html'],
+        '**': ['localtoc.html', 'searchbox.html', 'sourcelink.html']
       }
 
 # Additional templates that should be rendered to pages, maps page names to

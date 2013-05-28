@@ -1,10 +1,9 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 The SEXTANTE toolbox
 ====================
-
-Introduction
-------------
 
 The *Toolbox* is the main element of the SEXTANTE GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available

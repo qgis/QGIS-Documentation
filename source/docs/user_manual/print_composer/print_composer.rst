@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. index::
@@ -33,7 +35,7 @@ in another session. See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionFolder|          | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionExportMapServer| | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
+| |mActionSaveMapAsImage|  | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionSaveAsSVG|       | Export print composition to SVG       | |mActionFilePrint|         | Print or export as Postscript            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -43,7 +45,7 @@ in another session. See a list of tools in table_composer_1_:
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionUndo|            | Revert last change                    | |mActionRedo|              | Restore last change                      |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionSaveMapAsImage|    | Add image to print composition           |
+| |mActionAddMap|          | Add new map from QGIS map canvas      | |mActionAddImage|          | Add image to print composition           |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionLabel|           | Add label to print composition        | |mActionAddLegend|         | Add new legend to print composition      |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+

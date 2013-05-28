@@ -1,8 +1,8 @@
+|updatedisclaimer|
+ 
+
 The SEXTANTE Commander
 ============================
-
-Introduction
---------------------
 
 SEXTANTE includes a practical tool that allows you to run algorithms without having to use the toolbox, but just typing the name of the algorithm you want to run.
 

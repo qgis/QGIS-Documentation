@@ -1,10 +1,9 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 Configuring external applications
 =================================
-
-Introduction
-------------
 
 SEXTANTE can be extended using additional applications, calling them from within
 SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are supported, along

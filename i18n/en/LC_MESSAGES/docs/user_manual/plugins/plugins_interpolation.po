@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
+"POT-Creation-Date: 2013-05-27 12:02\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # 5b8e63cdbed4490083da49e35abc19ec
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:7
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:5
 msgid "|updatedisclaimer|"
 msgstr ""
 
@@ -28,7 +28,7 @@ msgid "Interpolation Plugin"
 msgstr ""
 
 # d99bd831fedd4e12b0d241f8376b1845
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:15
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:14
 msgid ""
 "The Interplation plugin can be used to generate a TIN or IDW interpolation "
 "of a point vector layer. It is very simple to handle and provides an "
@@ -37,48 +37,47 @@ msgid ""
 "to be specified before running:"
 msgstr ""
 
-# 5837d9ef6d754321abc924ef70bb6671
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:21
+# bb4e48a6be854136b0edcb9bf59b6320
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:19
 msgid ""
 "**Input vector layer**: Specify the input point vector layer(s) from a list "
 "of loaded point layers. If several layers are specified, then data from all "
 "layers is used for interpolation. Note: It is possible to insert lines or "
-"polygons as constraints for the triangulation, by specifying either "
-"\"structure lines\" or \"break lines\" in the :menuselection:`Type -->` "
-"dropdown menu."
+"polygons as constraints for the triangulation, by specifying either \"points"
+"\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` |"
+"selectstring| combobox."
 msgstr ""
 
 # b140962dbfcd477f90878aa484ae593d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:26
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:24
 msgid ""
 "**Interpolation attribute**: Select attribute column to be used for "
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox "
 "to use the layers stored Z values."
 msgstr ""
 
-# 5fb6dd159eb746f9807f4d690204722f
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:28
+# 314acf5115d84ac1afcb5f1c728126bf
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
 msgid ""
-"**Interpolation Method**: Select interpolation method. This can be either :"
-"guilabel:`Triangulated Irregular Network (TIN)` |selectstring| or :guilabel:"
-"`Inverse Distance Weighted (IDW)` |selectstring|."
+"**Interpolation Method**: Select interpolation method. This can be either "
+"'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'."
 msgstr ""
 
 # 843cba469a8d484c82f48ea0c210df67
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:29
 msgid ""
 "**Number of columns/rows**: Specify the number row and colums for the output "
 "raster file."
 msgstr ""
 
 # e212ad9b62bb43fd835892b206e7088d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:32
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:31
 msgid "**Output file**: Specify a name for the output raster file."
 msgstr ""
 
-# 64bdee1f47f44282b730356ab04372c8
+# 7928a39eeefe4fb7a2bde0e85390ff5c
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:49
-msgid "**Using the plugin**"
+msgid "Using the plugin"
 msgstr ""
 
 # d16f8797ae4f402d87e19707f1cd4271
@@ -86,50 +85,41 @@ msgstr ""
 msgid "Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr ""
 
-# 74a3834059104a248b8ba24091adbb13
+# a2659e74b1cd4ea5b04bc8a25e1539aa
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:52
 msgid ""
 "Load the Interpolation plugin in the Plugin Manager (see Section :ref:"
-"`load_core_plugin`) and click on the |interpolation| :sup:`Interpolation` "
-"icon which appears in the QGIS toolbar menu. The Interpolation plugin dialog "
-"appears as shown in Figure_interpolation_1_."
+"`load_core_plugin`) and click on the |raster-interpolate| :sup:"
+"`Interpolation` icon which appears in the QGIS toolbar menu. The "
+"Interpolation plugin dialog appears as shown in Figure_interpolation_1_."
 msgstr ""
 
 # 6cf80e8ac17a4e9cbaea6b0d832ccf81
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:55
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:56
 msgid ""
 "Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column (e."
 "g., ``ELEV``) for interpolation."
 msgstr ""
 
-# f745c1ca3a3d428fa205918cdca317a2
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:57
+# a285291bb5884822962a7efa5e8c860c
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:58
 msgid ""
-"Select an interpolation method (e.g. :guilabel:`Triangular interpolation` |"
-"selectstring|), and specify a cellsize of 5000 as well as the raster output "
-"filename (e.g., :file:`elevation\\_tin`)."
+"Select an interpolation method (e.g. 'Triangulated Irregular Network "
+"(TIN)'), and specify a cellsize of 5000 as well as the raster output "
+"filename (e.g., :file:`elevation_tin`)."
 msgstr ""
 
 # 77f17582982e4fabbd5f494190a7a449
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:59
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:61
 msgid "Click **[OK]**."
 msgstr ""
 
-# ea88387666b3452abcb76dfabed243e5
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:60
+# ecefc4fca4a94b2ba7001e4082768b16
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:62
 msgid ""
-"For the current example, double click :file:`elevation\\_tin` in the layer "
-"list to open the Raster Layer Properties dialog and select :guilabel:"
-"`Pseudocolor` |selectstring| as Color Map in the :guilabel:`Symbology` tab. "
-"Or you can define a new color table as described in section :ref:"
-"`working_with_raster`."
-msgstr ""
-
-# 001811bdd1814d6daf02a8e49b9a4a19
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:66
-msgid ""
-"In figure_interpolation_2_ you see the TIN interpolation result with a 998 "
-"cols x 812 rows (5 km) resolution for the :file:`elevp.csv` data visualized "
-"using the Pseudocolor color table. The processing only takes a few minutes, "
-"and covers the northern part of Alaska."
+"For the current example, double click :file:`elevation_tin` in the layer "
+"list to open the raster :guilabel:`Layer Properties` dialog and select "
+"'Pseudocolor' as :guilabel:`Color Map` |selectstring| in the :guilabel:"
+"`Symbology` tab. Or you can define a new color table as described in "
+"section :ref:`working_with_raster`."
 msgstr ""

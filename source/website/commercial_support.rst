@@ -1,3 +1,6 @@
+
+.. _QGIS-commercial_support:
+
 ==================
 Commercial support
 ==================
@@ -83,7 +86,7 @@ Contributors
 ----
 
 .. |camptocamp| image:: images/camptocamp.png
-   :width: 75 px
+   :width: 140 px
 
 |camptocamp| `Camptocamp <http://www.camptocamp.com/en/geospatial-solutions>`_ is an Open Source service company based in Europe offering training, support and development around QGIS, mobiles apps, 3D, geoportails and GeoBI using a high expertise.
 

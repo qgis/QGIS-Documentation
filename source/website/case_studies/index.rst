@@ -1,4 +1,6 @@
 
+.. _QGIS-case-studies:
+
 ============
 Case Studies
 ============

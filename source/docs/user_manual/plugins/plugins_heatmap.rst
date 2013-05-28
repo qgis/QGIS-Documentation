@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _heatmap_plugin:
@@ -5,80 +7,91 @@
 Heatmap Plugin
 ==============
 
-The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a point
-vector map. A heatmap is a raster map showing the density or magnitude of point
-related information. From the result "hotspots" can easily be identified.
+The `Heatmap` plugin uses Kernel Density Estimation to create a density (heatmap)
+raster of an input point vector layer.  The density is calculated based on the
+number of points in a location, with larger numbers of clustered points resulting
+in larger values. Heatmaps allow easy identification of "hotspots" and
+clustering of points.
 
 Activate the Heatmap plugin
 ---------------------------
 
 First this core plugin needs to be activated using the Plugin Manager (see
 Section :ref:`load_core_plugin`). After activation the heatmap icon |heatmap|
-can be found in the Raster Toolbar.
+can be found in the Raster Toolbar, and under the :menuselection:`Raster --> Heatmap`
+menu.
 
-Select from menu :menuselection:`View --> Toolbars --> Raster` to activate the
-Raster Toolbar when it is not yet activated.
+Select the menu :menuselection:`View --> Toolbars --> Raster` to show the
+Raster Toolbar if it is not visible.
 
 Using the Heatmap plugin
 ------------------------
 
-The |heatmap| :sup:`Heatmap` toolbutton starts the dialog of the Heatmap plugin
+Clicking the |heatmap| `Heatmap` toolbutton opens the Heatmap plugin dialog
 (see figure_heatmap_2_).
 
 The dialog has the following options:
 
-* **Output Raster**: Using the |browsebutton| button you select the folder and
-  the name of the output raster the Heatmap plugin will generate. It is not
-  necessary to give a file extension
-* **Output Format**: Selection of the output format. Although all formats supported
-  by GDAL can be choosen, GeoTIFF is most in cases the best format to choose.
-* **Radius**: can be used to give the radius in meters or mapunit. When the radius
-  is choosen too small you will not get a nice heatmap. In places where more
-  circles around points overlap eachother the brighter hotspots will occur!
-* **Decay Ratio**: is used to show with which ratio the heat dies out from the
-  center.
+* **Input point layer**: lists all the vector point layers in the current project
+  and is used to select the layer to be analysed.
+* **Output raster**: use the |browsebutton| button to select the folder and
+  file name for the output raster the Heatmap plugin generates. A file extension
+  is not required.
+* **Output format**: selects the output format. Although all formats supported
+  by GDAL can be choosen, in most cases GeoTIFF is the best format to choose.
+* **Radius**: used to specify the heatmap search radius (or kernel bandwidth) in meters
+  or map units. The radius specifies the distance around a point at which the influence
+  of the point will be felt. Larger values result in greater smoothing, but smaller
+  values may show finer details and variation in point density.
+  
+When the |checkbox| :guilabel:`Advanced` checkbox is checked additional options
+will be available:
 
-  - When 0 is given (=minimum) the heat will be concentrated in the centre of
+* **Rows** and **Columns**: used to change the dimensions of the output raster.
+  These values are also linked to the **Cell size X** and **Cell size Y** values. 
+  Increasing the number of rows or colums will decrease the cell size and increase the
+  file size of the output file. The values in Rows and Columns are also linked, so doubling
+  the number of rows will automatically double the number of columns and the cell sizes will
+  also be halved. The geographical area of the output raster will remain the same!
+* **Cell size X** and **Cell size Y**: control the geographic size of each pixel in the output
+  raster. Changing these values will also change the number of Rows and Columns in the output
+  raster. 
+ 
+* **Kernel shape**: The kernel shape controls the rate at which the influence of a point
+  decreases as the distance from the point increases. Different kernels decay at
+  different rates, so a triweight kernel gives features greater weight for distances closer
+  to the point then the Epanechnikov kernel does. Consequently, triweight results in "sharper"
+  hotspots, and Epanechnikov results in "smoother" hotspots. A number of standard kernel functions
+  are available in QGIS, which are described and illustrated on Wikipedia_. 
+ 
+* **Decay ratio**: can be used with Triangular kernels to futher control how heat from 
+  a feature decreases with distance from the feature.
+
+  - A value of 0 (=minimum) indicates that the heat will be concentrated in the centre of the
     given radius and be completely extinguished at the edge.
-  - When 10 is given (=maximum) the heat is concentrated at the edge and in the
-    centre it is completely extinguished. Higher given values are allowed but have
-    no effect.
-  - When 1 is given the heat is spread evenly over the whole circle.
-  - When a negative Decay Ratio is given you will create a Coolmap instead of a
-    Heatmap!
+  - A value of 0.5 indicates that pixels at the edge of the radius will be given half the heat
+    as pixels at the centre of the search radius.
+  - A value of 1 means the heat is spread evenly over the whole search radius circle. (This
+    is equivalent to the 'Uniform' kernel.)
+  - A value greater than 1 indicates that the heat is higher towards the edge of the search radius
+    then at the centre.
 
-When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give acces
-to additional advanced options.
+The input point layer may also have attribute fields which can affect how they influence
+the heatmap:
 
-* **Row** and **Column**, can be used to change the pixelsize of the output raster.
-  More rows and colums means a smaller pixelsize and the size of the output file
-  will become bigger and processing a bit slower. When doubling the number of rows
-  this will automatically double the size of Columns and the cell sizes will also
-  be halved. The area of the output raster will remain the same!
-* **Cell Size X** and **Cell Size Y** influence the pixelsize of the output raster
-  and will also change the rows and columns.
+* **Use radius from field**: sets the search radius for each feature from an attribute field in the input layer.
+* **Use weight from field**: allows input features to be weighted by an attribute field. This can be used to 
+  increase the influence certain features have on the resultant heatmap.
 
-The point vector layer may have attribute fields that can be used to create a
-heatmap:
+When an output raster file name is specified, the **[OK]** button can be used to create the
+heatmap.
 
-* **Use Radius from Field**: the radius set from an attribute field.
-* **Use Weight from field**: the weight factor set from an attribute field.
-
-When the output raster is given, the **[OK]** button can be used to create a
-heatmap. The first result is a grey surface that still needs to be given additional
-treatment to make it a heatmap.
-
-.. warning:: **Changing the raster size properties**
-
-   When changing the raster size properties, this also changes the resulting output.
-   The hotspot areas will become bigger.
-
-Creating a Heatmap
+Tutorial: Creating a Heatmap
 ------------------
 
-For the following example, we will use the ``airports`` vector point layer from
+For the following example we will use the ``airports`` vector point layer from
 the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent QGIS
-tutorial on making heatmaps can be found on `http://qgis.spatialthoughts.com
+tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
 <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
 In Figure_Heatmap_1_ the airports of Alaska are shown.
@@ -93,20 +106,19 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
    :width: 30em
    :align: center
 
-   Airports of Alaska |osx|
+   Airports of Alaska |nix|
 
 
-#. Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts
+#. Select the |heatmap| `Heatmap` toolbutton to open the Heatmap dialog
    (see Figure_Heatmap_2_).
-#. In field :guilabel:`Input Point Vector` |selectstring| select ``airpoirt``
-   from the list of  point layers loaded in current project.
-#. In field :guilabel:`Output Raster` give the name and location using the
-   |browsebutton| button of the output raster. Give the output raster file the
-   name ``heatmap_airports`` to give an file extension is not necessary.
-#. In field :guilabel:`Output Format` choose ``GeoTIFF``.
-#. In the field :guilabel:`Radius` give ``1000000`` meters.
-#. The original :guilabel:`Decay Ratio` of ``0.1`` is fine.
-#. Click on **[OK]**  to create and load the new raster map (see Figure_Heatmap_3_).
+#. In the :guilabel:`Input point layer` |selectstring| field select ``airports``
+   from the list of point layers loaded in current project.
+#. Specify an output file name by clicking the |browsebutton| button next to the 
+   :guilabel:`Output raster` field. Enter the file name ``heatmap_airports`` (no
+   file extension is necessary).
+#. Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``.
+#. Change the :guilabel:`Radius` to ``1000000`` meters.
+#. Click on **[OK]**  to create and load the airports heatmap (see Figure_Heatmap_3_).
 
 .. _figure_heatmap_2:
 
@@ -118,11 +130,11 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
    :width: 20em
    :align: center
 
-   The Heatmap Dialog |osx|
+   The Heatmap Dialog |nix|
 
-The result after loading the heatmap is probably not the result which was expected.
-It is still a grey even surface not showing any variation. First some additional
-configuration of this layer needs to be done to make the heatmap present itself.
+QGIS will generate the heatmap and add the results to your map window. By default, the heatmap
+is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
+can now be styled in QGIS to improve its appearance.
 
 .. _figure_heatmap_3:
 
@@ -134,18 +146,18 @@ configuration of this layer needs to be done to make the heatmap present itself.
    :width: 30em
    :align: center
 
-   The heatmap after loading looks like a grey surface |osx|
+   The heatmap after loading looks like a grey surface |nix|
 
 
-#. Open the properties dialog of layer ``heatmap_airports`` (select the layer
-   ``heatmap_airports``, open context menu with right mouse button and select
+#. Open the properties dialog of the ``heatmap_airports`` layer (select the layer
+   ``heatmap_airports``, open the context menu with the right mouse button and select
    :guilabel:`Properties`).
-#. Select the :guilabel:`Symbology` tab.
-#. Change :guilabel:`Color map` |selectstring| from 'Grayscale' to 'Pseudocolor'.
-#. Press the **[Apply]** button.
-#. Switch to the :guilabel:`Transparency` tab and set :guilabel:`Global transparency`
-   |slider| to 40%.
-#. Press **[OK]**
+#. Select the :guilabel:`Style` tab.
+#. Change the :guilabel:`Render type` |selectstring| to 'Singleband pseudocolor'.
+#. Select a suitable :guilabel:`Color map` |selectstring|, for instance ``YlOrRed``.
+#. Click the **[Load]** button to fetch the minimum and maximum values from the raster,
+   then click the **[Classify]** button.
+#. Press **[OK]** to update the layer.
 
 The final result is shown in Figure_Heatmap_4_.
 
@@ -159,4 +171,6 @@ The final result is shown in Figure_Heatmap_4_.
    :width: 30em
    :align: center
 
-   Final result of heatmap created of airports of Alaska |osx|
+   Styled heatmap of airports of Alaska |nix|
+   
+.. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use   

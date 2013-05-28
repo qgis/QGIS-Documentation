@@ -1,10 +1,9 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 Using SEXTANTE from the console
 ===============================
-
-Introduction
-------------
 
 The console allows advanced users to increase their productivity and perform
 complex operations that cannot be performed using any of the other elements of

@@ -1,6 +1,6 @@
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+|updatedisclaimer|
 
-.. index:: GRASS
+.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _sec_grass:
 
@@ -8,7 +8,7 @@
 GRASS GIS Integration
 *********************
 
-The GRASS plugin provides access to GRASS GIS (see GRASS-PROJECT
+The :index:`GRASS` plugin provides access to GRASS GIS (see GRASS-PROJECT
 :ref:`literature_and_web`) databases and functionalities. This includes
 visualization of GRASS raster and vector layers, digitizing vector layers,
 editing vector attributes, creating new vector layers and analysing GRASS 2D and
@@ -32,10 +32,6 @@ with the toolbar menu, when you start the GRASS plugin, as described in section
 
 .. *  |grass_shell| :sup:`Open GRASS Shell`
 
-
-.. index::
-   single:GRASS;Start Plugin
-
 .. _sec_starting_grass:
 
 Starting the GRASS plugin
@@ -57,9 +53,6 @@ analysis with the GRASS Toolbox (see section :ref:`subsec_grass_toolbox`).
 
 Loading GRASS raster and vector layers
 ======================================
-
-.. index::
-   single:GRASS;loading data
 
 With the GRASS plugin, you can load vector or raster layers using the appropriate
 button on the toolbar menu. As an example we use the QGIS alaska dataset (see
@@ -286,18 +279,9 @@ file :file:`lakes.gml` from the QGIS 'Alaska' dataset :ref:`label_sampledata`.
 The GRASS vector data model
 ===========================
 
-.. index::
-   single:GRASS;vector data model
-
-It is important to understand the GRASS vector data model prior to digitizing.
-
-.. index::
-   single:GRASS;digitizing
+It is important to understand the :index:`GRASS vector data model` prior to digitizing.
 
 In general, GRASS uses a topological vector model.
-
-.. index::
-   single:GRASS;topology
 
 This means that areas are not represented as closed polygons, but by one or more
 boundaries. A boundary between two adjacent areas is digitized only once, and it

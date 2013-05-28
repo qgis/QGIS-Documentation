@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _`label_qgismainwindow`:
@@ -10,7 +12,7 @@ QGIS GUI
     single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
-(the numbers 1 through 5 in yellow ovals refer to the six major areas of the
+(the numbers 1 through 5 in yellow circles refer to the six major areas of the
 interface as discussed below):
 
 .. _fig_startup:
@@ -63,22 +65,23 @@ The toolbar containing the tool is listed after each menu option as a checkbox
 entry. Some menu options only appear, if the corresponding plugin is loaded.
 For more information about tools and toolbars, see Section :ref:`label_toolbars`.
 
-File
+Project
 ....
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-|mActionFileNew| :guilabel:`New Project`                        :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`File`
-|mActionFileOpen| :guilabel:`Open Project`                      :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`File`
-:menuselection:`Open Recent Projects -->`                       \                     see :ref:`sec_projects`                     \
-|mActionFileSave| :guilabel:`Save Project`                      :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`File`
-|mActionFileSaveAs| :guilabel:`Save Project As`                 :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`File`
+|mActionFileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`Project`
+|mActionFileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`Project`
+:menuselection:`New from template -->`				\		      see :ref:`sec_projects`			  :guilabel:`Project`
+:menuselection:`Open Recent  -->`                               \                     see :ref:`sec_projects`                     \
+|mActionFileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
+|mActionFileSaveAs| :guilabel:`Save As`                         :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionSaveMapAsImage| :guilabel:`Save as Image`               \                     see :ref:`sec_output`                       \
-|mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`File`
-|mActionComposerManager| :guilabel:`Composer manager`           \                     see :ref:`label_printcomposer`              :guilabel:`File`
+|mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
+|mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \
-|mActionFileExit| :guilabel:`Exit`                              :kbd:`Ctrl+Q`         \                                           \
+|mActionFileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 Edit
@@ -95,6 +98,7 @@ Menu Option                                                     Shortcut        
 |mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionRotateFeature| :guilabel:`Rotate Feature(s)`            \                     see :ref:`sec_advanced_edit` 		  :guilabel:`Advanced Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddIsland| :guilabel:`Add Part`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -103,8 +107,8 @@ Menu Option                                                     Shortcut        
 |mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionOffsetCurve| :guilabel:`Offset Curves`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSplitFeatures| :guilabel:`Split Features`               \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mergeFeats| :guilabel:`Merge selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mergeFeats| :guilabel:`Merge attr. of selected Features`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mergeFeats| :guilabel:`Merge Selected Features`                \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mergeFeats| :guilabel:`Merge Attr. of Selected Features`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionNodeTool| :guilabel:`Node Tool`                         \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
@@ -152,7 +156,6 @@ Menu Option                                                     Shortcut        
 |mActionNewBookmark| :guilabel:`New Bookmark`                   :kbd:`Ctrl+B`         see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionShowBookmarks| :guilabel:`Show Bookmarks`               :kbd:`Ctrl+Shift+B`   see :ref:`sec_bookmarks`                    :guilabel:`Attributes`
 |mActionDraw| :guilabel:`Refresh`                               :kbd:`Ctrl+R`                                                     :guilabel:`Map Navigation`
-:menuselection:`Tile scale slider`                              \                     see :ref:`tilesets`                         :guilabel:`Tile scale`
 ==============================================================  ====================  ==========================================  ===============================
 
 Layer

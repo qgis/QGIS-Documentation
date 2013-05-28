@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 Editing
@@ -461,23 +463,23 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| Icon                    | Purpose                               | Icon                        | Purpose              |
-+=========================+=======================================+=============================+======================+
-| |mActionUndo|           | Undo                                  | |mActionRedo|               | Redo                 |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionSimplify|       | Simplify Feature                      | |mActionAddRing|            | Add Ring             |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionAddIsland|      | Add Part                              | |mActionDeleteRing|         | Delete Ring          |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionDeletePart|     | Delete Part                           | |mActionReshape|            | Reshape Features     |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionOffsetCurve|    | Offset Curve                          | |mActionSplitFeatures|      | Split Features       |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionMergeFeatures|  | Merge Selected Features               | |mActionRotatePointSymbols| | Rotate Point Symbols |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
-| |mActionMergeFeatures|  | Merge Attributes of Selected Features |                             |                      |
-+-------------------------+---------------------------------------+-----------------------------+----------------------+
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| Icon                        | Purpose              | Icon                    | Purpose                               |
++=============================+======================+=========================+=======================================+
+| |mActionUndo|               | Undo                 | |mActionRedo|           | Redo                                  |
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionAddRing|            | Add Ring             | |mActionAddIsland|      | Add Part                              |
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|     | Delete Part                           |
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|    | Offset Curve                          |
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|  | Merge Selected Features               | 
++-----------------------------+----------------------+-------------------------+---------------------------------------+
+| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatures|  | Merge Attributes of Selected Features |
++-------------------------+--------------------------+-------------------------+---------------------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -513,6 +515,19 @@ To use the undo/redo history widget simply click to select an operation in
 the history list; all features will be reverted to the state they were in
 after the selected operation.
 
+Rotate Feature(s)
+.................
+
+Use the |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
+selected features in the map canvas. You first need to selected the features
+and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
+centroid of the feature appears and will be the rotating point. If you selected
+multiple features the rotating point will be the common center of the features.
+It's also possible to create a user-defined center by which the feature will turn.
+Select the feature and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
+Press :kbd:`Strg` and move the mouse to the place where you want to rotate the feature.
+A new anchor appears in the map canvas and you can rotate the feature(s).
+ 
 Simplify Feature
 ................
 

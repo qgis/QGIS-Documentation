@@ -1,3 +1,5 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. `general_tools`:
@@ -5,6 +7,16 @@
 *************
 General Tools
 *************
+
+.. _`identify`:
+
+Identify features
+=================
+
+.. index::
+   single:Identify features
+
+
 
 .. _`shortcuts`:
 

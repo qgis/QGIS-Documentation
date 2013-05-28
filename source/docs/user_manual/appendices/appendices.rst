@@ -1,10 +1,9 @@
+|updatedisclaimer|
+
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 Appendix
 ========
-
-.. index::
-   single:license;GPL
 
 .. _gpl_appendix:
 
@@ -19,12 +18,12 @@ Copyright (C) 1989, 1991 Free Software Foundation, Inc.
 
 
 Everyone is permitted to copy and distribute verbatim copies
-of this license document, but changing it is not allowed.
+of this :index:`license document`, but changing it is not allowed.
 
 Preamble
 
 The licenses for most software are designed to take away your freedom to share
-and change it. By contrast, the GNU General Public License is intended to
+and change it. By contrast, the :index:`GNU General Public License` is intended to
 guarantee your freedom to share and change free software--to make sure the
 software is free for all its users. This General Public License applies to
 most of the Free Software Foundation's software and to any other program whose
