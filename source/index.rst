@@ -93,7 +93,7 @@ Screenshots
 
 Proofing of the pudding is seeing screenshots: :ref:`see them here<QGIS-screenshots>`.
 
-.. image:: /static/user_manual/introduction/startup.png
+.. image:: http://farm8.staticflickr.com/7358/8726673422_d8c83b634e_n.jpg
     :alt: screenshot
 
 
