@@ -125,6 +125,13 @@ Contributors
 Others
 ------------------
 
+.. |astun| image:: images/astun.jpg
+   :width: 120 px
+
+|astun| `Astun Technology <http://astuntechnology.com/>`_ (based in UK) provides training for Quantum GIS.
+
+----
+
 .. |agx| image:: images/agx.gif
    :width: 120 px
 
