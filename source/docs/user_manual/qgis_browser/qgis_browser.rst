@@ -46,6 +46,11 @@ to get your data into the Map view and the Map legend.
 #. Click on |mActionZoomFullExtent| :guilabel:`Zoom Full` to make the layers
    visible.
 
+From |qg| 2.0 there is a second browser available. Additional functions like the |icon x|:guilabel:`Filter` function were inserted. 
+
+#. Activate a second QGIS Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser (2)`
+#. Drag the panel into the legend window.
+#
 It's also possible to run QGIS Browser as a standalone application.
 
 **Start qgis browser**
