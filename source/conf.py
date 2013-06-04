@@ -518,6 +518,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconNew| image:: /static/common/mIconNew.png
    :width: 1.5em
+.. |mActionFilter| image:: /static/common/mActionFilter.png
+   :width: 1.5em
+.. |mActionAdd| image:: /static/common/mActionAdd.png
+   :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |copyright_label| image:: /static/common/copyright_label.png
