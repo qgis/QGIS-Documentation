@@ -46,6 +46,16 @@ to get your data into the Map view and the Map legend.
 #. Click on |mActionZoomFullExtent| :guilabel:`Zoom Full` to make the layers
    visible.
 
+From |qg| 2.0 there is a second browser available. Additional functions like the |mActionAdd|:sup:`Add Selected Layers` and the |mActionFilter|:sup:`Filter files` function were inserted. 
+
+#. Activate a second QGIS Browser: Right-click on the toolbar and click |checkbox|:guilabel:`Browser (2)` .
+#. Drag the panel into the legend window.
+#. Navigate to the :guilabel:`Browser (2)` tab and browse for a shapefile in your file system. 
+#. Select a file with the left mouse button. Now you can use the |mActionAdd|:sup:`Add Selected Layers` icon. Use the icon to be able to work with  a file in QGIS without much effort.
+
+QGIS automatically looks for the Coordinate Reference System (CRS) and zooms to the layer extent if you work in a blank QGIS project. If there are already files in your project the file just will be added and in case it has the same extent and CRS it will be visualized. If the file has got another CRS and layer extent you must first right-click on the layer and choose :guilabel:`Set Project CRS from Layer`. Then choose :guilabel:`Zoom to Layer Extent`.
+To work with the |mActionFilter|:sup:`Filter files` function ...
+
 It's also possible to run QGIS Browser as a standalone application.
 
 **Start qgis browser**
@@ -53,13 +63,7 @@ It's also possible to run QGIS Browser as a standalone application.
 * |nix| Type in "qbrowser" at a command prompt.
 * |win| Start QGIS browser using the Start menu or desktop shortcut, or 
   double click on a QGIS project file.
-* |osx| QGIS browser is not available yet from your your Applications folder.
-  However it can easily be made available. In Finder use
-  :menuselection:`Go --> Go to map...` and use it to find the folder
-  ``/Applications/QGIS.app/Contents/MacOS/bin``.
-  Use the key combination :kbd:`option - command` and drag **qbrowser.app** 
-  while holding down the left mouse button to the Applications folder. 
-  This will create a link that you can use to start QGIS browser.
+* |osx| QGIS browser is available from your your Applications folder.
 
 In figure_browser_standalone_metadata_ you can see the enhanced functionality
 of Qgis browser. The :guilabel:`Param` tab provides the details of your
