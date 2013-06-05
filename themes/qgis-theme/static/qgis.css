@@ -119,9 +119,10 @@ div.marketing div.section:before {
    height:60px;
    margin:0 0 -60px 0;  /*this is working for frontpage*/
 }
-/* span a little more difficult, hopefully this is unique enough 
-for the :ref: spans we use */
-div .section span:before {
+/* span achors are a little more difficult, 
+these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
+hopefully this is unique enough for the :ref: spans we use */
+div.section > span:before {
    content:"";
    display:block;
    height:60px;
