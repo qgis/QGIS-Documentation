@@ -30,7 +30,7 @@ Parts of this site are also translated. Try to click on the flags on top if avai
 
 This block of text is normally translated, and can also be used (by the translators
 of a locale, to say something locale specific, like pointing to sites 
-which are only available in a certain language (like http://www.qgis.nl)
+which are only available in a certain language (like http://www.qgis.nl).
 
 
 
