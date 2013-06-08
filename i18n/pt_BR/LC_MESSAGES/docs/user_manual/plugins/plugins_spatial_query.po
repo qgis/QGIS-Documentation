@@ -15,119 +15,166 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: pt_BR\n"
+"X-Source-Language: en\n"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:7
 # b3b86db816884b1b8cdd1b00a5120a5c
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:7
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:12
 # 27cdde2581044473b524aed391f67d94
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:12
 msgid "Spatial Query Plugin"
-msgstr ""
+msgstr "Plugin de Consulta Espacial"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:15
 # 7548f07d17714a358956256688ac445e
-msgid "The |spatialquery| :sup:`Spatial Query` plugin allows to make a spatial query (select features) in a target layer with reference to another layer. The functionality is based on the GEOS library and depends on the selected source feature layer."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:15
+msgid ""
+"The |spatialquery| :sup:`Spatial Query` plugin allows to make a spatial "
+"query (select features) in a target layer with reference to another layer. "
+"The functionality is based on the GEOS library and depends on the selected "
+"source feature layer."
 msgstr ""
+"O plugin de |spatialquery| :sup:`Consulta Espacial` permite fazer uma "
+"consulta espacial(selecionar feições) em uma camada com referência em outra. "
+"Este plugin é baseado na biblioteca GEOS e depende de ter uma camada fonte "
+"selecionada."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:20
 # ce70f394c6144a6e9f9a470dcfadc8fd
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:20
 msgid "Possible operators are:"
-msgstr ""
+msgstr "Operações possíveis:"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
 # 94925f66758c42778fc1d74ffbc4b08d
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
 msgid "Contains"
-msgstr ""
+msgstr "Contém"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
 # c9ce1558b9504fdbaf5e9379769aa4e0
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
 msgid "Equals"
-msgstr ""
+msgstr "Igual"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
 # c7712c6b5dbb45a69378200992152db1
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
 msgid "Overlap"
-msgstr ""
+msgstr "Sobrepõe"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
 # 6c6525fa859a4787aa33bdb905e6e498
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
 msgid "Crosses"
-msgstr ""
+msgstr "Cruza"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:26
 # 3b0484c1bb824139bb56dac2f24e5f11
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:26
 msgid "Intersects"
-msgstr ""
+msgstr "Intersecta"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:27
 # e00d479862b040b8bea1ff0022ef33da
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:27
 msgid "Is disjoint"
-msgstr ""
+msgstr "Disjunto"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:28
 # 8b4c15abfedf4ae6b26f2706e0d309b2
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:28
 msgid "Touches"
-msgstr ""
+msgstr "Toca"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:29
 # 42ea1c039bc14e818d157b8572235611
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:29
 msgid "Within"
-msgstr ""
+msgstr "Dentro"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:32
 # fb641ed04c03473a92e8be4be9b4e005
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:32
 msgid "How to use the plugin"
-msgstr ""
+msgstr "Como usar o plugin"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:34
 # f6a6eca69bdc4143a2765aa176f171c8
-msgid "As an example we want to find regions in the Alaska dataset that contain airports. Following steps are necessary:"
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:34
+msgid ""
+"As an example we want to find regions in the Alaska dataset that contain "
+"airports. Following steps are necessary:"
 msgstr ""
+"Como exemplo, queremos encontrar as feições da camada Alaska que contenham "
+"aeroportos. Os seguintes passos são necessários:"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:37
 # bbd005bb38524420bbfc4bc5cd8f662a
-msgid "Start QGIS and load the vector layers :file:`regions.shp` and :file:`airports.shp`."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:37
+msgid ""
+"Start QGIS and load the vector layers :file:`regions.shp` and "
+":file:`airports.shp`."
 msgstr ""
+"Inici o QGIS e abra os seguintes vetores:file:`regions.shp` e  "
+":file:`airports.shp`. "
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:39
 # 45f4a550314048bfa3ffa4d9de0a88c1
-msgid "Load the Spatial Query plugin in the Plugin Manager (see Section :ref:`load_core_plugin`) and click on the |spatialquery| :sup:`Spatial Query` icon which appears in the QGIS toolbar menu. The plugin dialog appears as shown in figure_spatial_query_1_."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:39
+msgid ""
+"Load the Spatial Query plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`) and click on the |spatialquery| :sup:`Spatial "
+"Query` icon which appears in the QGIS toolbar menu. The plugin dialog "
+"appears as shown in figure_spatial_query_1_."
 msgstr ""
+"Carregue o plugin de consulta espacial no gerenciador de plugins(Veja a "
+"seção:ref:`load_core_plugin`) e clique no icone |spatialquery| "
+":sup:`Consulta espacial` que aparecerá na barra de ferrementas do QGIS. A "
+"caixa de diálogo do plugin aparece como mostrado na figure_spatial_query_1_."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:43
 # 3d51d39f1c5548dd81beae8a85c1646f
-msgid "Select layer regions as source layer and airports as reference feature layer."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:43
+msgid ""
+"Select layer regions as source layer and airports as reference feature layer."
 msgstr ""
+"Selecione a camada regions como fonte e  a camada airports como referência."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:45
 # fc72863ccbd3472489da7f5647c22e7e
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:45
 msgid "Select 'Contains' as operator and click **[Apply]**."
-msgstr ""
+msgstr "Selecione a operação 'Contém' e clique em **[Apply]**."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:47
 # d2d543bb83e0425a9e9431cbf8a695a8
-msgid "Now you get a list of feature IDs from the query and you have several options."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:47
+msgid ""
+"Now you get a list of feature IDs from the query and you have several "
+"options."
 msgstr ""
+"Agora você tem a lista de IDs das feições que atendem à consulta evárias "
+"opções."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:50
 # 62a4058e63fa496584038683d588e646
-msgid "Click on the |selectesubsetlayer| :sup:`Create layer with list of items`"
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:50
+msgid ""
+"Click on the |selectesubsetlayer| :sup:`Create layer with list of items`"
 msgstr ""
+"Clique em |selectesubsetlayer| :sup:`Criar camada a partir dos itens "
+"selecionados`"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:52
 # bdac0510f88f406689b6c0dd4283e82d
-msgid "Select an ID from the list and click on |selectcreatelayer| :sup:`Create layer with selected`"
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:52
+msgid ""
+"Select an ID from the list and click on |selectcreatelayer| :sup:`Create "
+"layer with selected`"
 msgstr ""
+"Selecione um ID na lista e clique em |selectcreatelayer| :sup:`Criar camada "
+"a partir da seleção`"
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:54
 # e8c831b053834822b6070306951396d4
-msgid "Select the :guilabel:`Remove from current selection` in the field :guilabel:`And use the result to`."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:54
+msgid ""
+"Select the :guilabel:`Remove from current selection` in the field "
+":guilabel:`And use the result to`."
 msgstr ""
+"Selecione :guilabel:`Remover da seleção atual` no campo :guilabel:`Usar "
+"resultado para`."
 
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:56
 # fb3918b7f72e47b480d34bffe43b48a1
-msgid "Additionally you can |checkbox| :guilabel:`Zoom to item` or display |checkbox| :guilabel:`Log messages`."
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:56
+msgid ""
+"Additionally you can |checkbox| :guilabel:`Zoom to item` or display "
+"|checkbox| :guilabel:`Log messages`."
 msgstr ""
-
+"adicionalmente você pode |checkbox| :guilabel:`Aproximar do Item` ou exibir "
+"o |checkbox| :guilabel:`Registro de mensagens`."
