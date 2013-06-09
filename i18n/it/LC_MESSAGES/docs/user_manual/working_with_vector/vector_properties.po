@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-03 09:45\n"
+"POT-Creation-Date: 2013-05-21 16:51\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -2019,10 +2019,10 @@ msgid ""
 msgstr ""
 "In questo altro esempio viene illustrato come estrarre dati da un layer "
 "vettoriale per inserirli in un file usando la shell di sistema bash e il "
-"comando ``echo`` (dunque funzionerà solo su |nix|e forse su |osx|). Il layer "
-"in questione ha i seguenti campi nella tabella attributi: nome della specie "
-"``taxon_name``, latitudine ``lat`` e longitudine ``long``. Si vuole eseguire "
-"una selezione spaziale delle specie (taxon) presenti in determinate "
+"comando ``echo`` (dunque funzionerà solo su |nix| e forse su |osx|). Il "
+"layer in questione ha i seguenti campi nella tabella attributi: nome della "
+"specie ``taxon_name``, latitudine ``lat`` e longitudine ``long``. Si vuole "
+"eseguire una selezione spaziale delle specie (taxon) presenti in determinate "
 "posizioni esportando i risultati in un file di testo per le posizioni "
 "selezionate (evidenziate in giallo nella vista mappa di |qg|). L’azione in "
 "grado di assolvere lo scopo è la seguente:"
@@ -2133,26 +2133,23 @@ msgstr ""
 "Dall'elenco apparso scegliere :guilabel:`Cattura dell'output` |selectstring| "
 "select 'NAMES' e cliccare su **[Insert Field]**."
 
-# 2a17e0b5905f4844bcc8f3f42de5f31d
+# 88daa312dd9f4bb7ac9ba8a5584159f5
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1038
-msgid "Your action text now looks like this:"
-msgstr "Il testo dell’azione dovrebbe ora apparire come segue:"
-
-# 2e25ce5ac3ef4aaaa4071842cd061f0e
-# 119a3f589616424a9a00813d41bb2124
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1040
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1047
-msgid "``firefox http://google.com/search?q=\\%NAMES``"
-msgstr "``firefox http://google.com/search?q=\\%NAMES``"
+msgid ""
+"Your action text now looks like this: ``firefox "
+"http://google.com/search?q=%NAMES``"
+msgstr ""
+"A questo punto il testo nel campo :guilabel:`Azioni` dovrebbe apparire così: "
+"``firefox http://google.com/search?q=%NAMES`"
 
 # b31cb736cc4940a7b2907fbaec6bbe9d
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1041
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1039
 msgid "To finalize the action click the **[Insert action]** button."
 msgstr ""
 "Per completare l'azione cliccare sul pulsante **[Inserisci l'azione]**."
 
 # 5560a0b274e24cb39ec6fd161556b228
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1044
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1042
 msgid ""
 "This completes the action and it is ready to use. The final text of the "
 "action should look like this:"
@@ -2160,8 +2157,14 @@ msgstr ""
 "Questo completa la definizione dell’azione che è così pronta per essere "
 "usata. La formulazione finale dell’azione dovrebbe apparire così:"
 
+# 2e25ce5ac3ef4aaaa4071842cd061f0e
+# 119a3f589616424a9a00813d41bb2124
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1045
+msgid "``firefox http://google.com/search?q=%NAMES``"
+msgstr "``firefox http://google.com/search?q=%NAMES``"
+
 # e2fd6b5cf68046908378c44311500931
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1050
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1047
 msgid ""
 "We can now use the action. Close the :guilabel:`Layer Properties` dialog and "
 "zoom in to an area of interest. Make sure the ``lakes`` layer is active and "
@@ -2173,7 +2176,7 @@ msgstr ""
 "un lago. Nella finestra risultante dovrebbe essere visibile l’azione:"
 
 # fd0c7a76e4f14f23b3df26a7c1f5a119
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1066
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1063
 msgid ""
 "When we click on the action, it brings up Firefox and navigates to the URL "
 "http://www.google.com/search?q=Tustumena. It is also possible to add further "
@@ -2190,7 +2193,7 @@ msgstr ""
 "non c’è alcun altro campo sul quale avrebbe senso fare una ricerca."
 
 # d1c991056b684a4b8490e8af39a17a9e
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1073
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1070
 msgid ""
 "You can define multiple actions for a layer and each will show up in the "
 ":guilabel:`Identify Results` dialog."
@@ -2200,7 +2203,7 @@ msgstr ""
 ":guilabel:`Informazioni sui risultati`."
 
 # edb50a05d3fd4e44802fb2d37179c9e7
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1081
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1078
 msgid ""
 "You can think of all kinds of uses for actions. For example, if you have a "
 "point layer containing locations of images or photos along with a file name, "
@@ -2218,7 +2221,7 @@ msgstr ""
 "dell’esempio per la ricerca con Google."
 
 # c71624d2e37048ac9720023d5ff6f13b
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1088
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1085
 msgid ""
 "We can also make more complex examples, for instance on how to use "
 "**Python** actions."
@@ -2227,7 +2230,7 @@ msgstr ""
 "le azioni **Python**."
 
 # cf3dbcd8cf6449cda9c367b065f669ac
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1091
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1088
 msgid ""
 "Usually when we create an action to open a file with an external application "
 "we can use absolute paths, or eventually relative paths, in the second case "
@@ -2244,7 +2247,7 @@ msgstr ""
 "trucco:"
 
 # d0b1959cbe2d4bf7ac9cffa0f7660765
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1111
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1110
 msgid ""
 "we have to just remember that the action is one of type *Python* and to "
 "change the *command* and *imagerelpath* variables to fit our needs."
@@ -2253,7 +2256,7 @@ msgstr ""
 "necessario cambiare le variabili *command* e *imagerelpath*."
 
 # f2571056bb794d5a90e671392f084344
-#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1114
+#: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:1113
 msgid ""
 "But what about if the relative path need to be relative to the (saved) "
 "project file? The code of the Python action would be:"
@@ -2457,3 +2460,7 @@ msgstr ""
 "generico, mentra gli altri algoritmi usando le librerie PAL. Questi "
 "considerano gli oggetti dei diagrammi e le etichette in layer diversi. Per "
 "ulteriori informazioni guardare la sezone :ref:`diagram_overlay`.  "
+
+# 2a17e0b5905f4844bcc8f3f42de5f31d
+#~ msgid "Your action text now looks like this:"
+#~ msgstr "Il testo dell’azione dovrebbe ora apparire come segue:"
