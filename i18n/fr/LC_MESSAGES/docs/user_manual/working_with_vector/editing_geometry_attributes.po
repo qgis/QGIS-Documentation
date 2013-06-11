@@ -31,7 +31,7 @@ msgid ""
 "SpatiaLite vector layers."
 msgstr ""
 "|qg| dispose d'un support étendu de l':index:`édition` de données provenant "
-"de couches vectorielles OGR, PostGIS et Spatialite. "
+"de couches vectorielles OGR, PostGIS et Spatialite."
 
 # fb7c1b5d2c9c461691c94dc44a8bdf9c
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:14
@@ -307,7 +307,7 @@ msgid ""
 "avoids intersection of new polygons."
 msgstr ""
 "En plus des options d'accrochage pour chaque couche, la fenêtre des "
-":guilabel:`Options d'accrochage` du menu:menuselection:`Préférences` (ou "
+":guilabel:`Options d'accrochage` du menu :menuselection:`Préférences` (ou "
 ":menuselection:`Fichier`) propose quelques fonctionnalités topologiques. "
 "Vous pouvez |checkbox| :guilabel:`Activer l'édition topologique` et/ou "
 "cocher la case |checkbox| :guilabel:`Éviter Intersections` pour les couches "
@@ -1389,6 +1389,15 @@ msgid ""
 "line outside the polygon, adding vertices inside, and ending the line "
 "outside the polygon with a right click."
 msgstr ""
+"Par exemple vous pouvez modifier les limites d'un polygone avec cet outil. "
+"Tout d'abord cliquez à l'intérieur du polygone près de la zone où vous "
+"souhaitez ajouter un noeud. Franchissez ensuite la limite et positionnez les "
+"noeuds à extérieur du polygone. Pour terminer cliquez à nouveau à "
+"l'intérieur du polygone. L'outil ajoute automatiquement un noeud à l'endroit "
+"où la ligne intersecte le limite du polygone. Il est possible également de "
+"supprimer des morceaux de polygones en commençant à l'extérieur du polygone "
+"puis en ajoutant des noeuds à l'intérieur et en terminant à l'extérieur par "
+"un clic-droit."
 
 # 9426c39955524c47a06b001a3fd3e955
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:605
@@ -1407,7 +1416,7 @@ msgstr ""
 # 4f55790a5c2d458f81fd43111322efee
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:613
 msgid "Offset Curves"
-msgstr ""
+msgstr "Décalage X,Y"
 
 # c1dd62abbd084e60aeb67258955d9e14
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:615
@@ -1419,6 +1428,13 @@ msgid ""
 "layer). It is thus ideally suited for the creation of distance line "
 "layers.The displacement is shown at the bottom left of the taskbar."
 msgstr ""
+"L'outil |mActionOffsetCurve| :sup:`Déclage X,Y` est nouveau, il permet de "
+"décaler des lignes ou des anneaux de polygones. Cet outil fonctionne sur la "
+"couche en mode édition (dont les géométries sont modifiées) ou sur les "
+"autres couches présentes (crée une copie des lignes ou anneaux et les ajoute "
+"à la couche en mode édition). Cet outil convient parfaitement à la création "
+"de couches de lignes de distance. La distance du décalage s'affiche en bas à "
+"gauche de la barre d'état."
 
 # aa9ca32dbf3e48069f8b9ea87115086f
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:628
@@ -1427,6 +1443,9 @@ msgid ""
 "Features` icon on the toolbar. Just draw a line across the feature you want "
 "to split."
 msgstr ""
+"Vous pouvez diviser une entité en utilisant le bouton |mActionSplitFeatures| "
+":sup:`Couper Entités`. Pour couper, dessinez une ligne en travers de "
+"l'entité avec cet outil et terminez avec un clic droit."
 
 # 299eb984aca243e0a2934deceeb9c8b8
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:634
@@ -1503,7 +1522,7 @@ msgstr ""
 # 4e13a76695ab498791bc8d6a25cae244
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:690
 msgid "Creating a new Vector layer"
-msgstr ""
+msgstr "Créer une nouvelle couche vecteur"
 
 # 5e6564d87ceb430c954a3e5f402c37a6
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:692
@@ -1513,11 +1532,14 @@ msgid ""
 "refer to section :ref:`creating_new_grass_vectors` for more information on "
 "creating GRASS vector layers."
 msgstr ""
+"|qg| permet de créer de nouveaux Shapefile et couches Spatialite.La création "
+"de couches GRASS est gérée par l'extension GRASS. Référez-vous à la section "
+":ref:`creating_new_grass_vectors` pour plus d'informations sur ce sujet."
 
 # 4471c66df5e843e2921152b2e0891288
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:698
 msgid "Creating a new Shapefile layer"
-msgstr ""
+msgstr "Créer une nouvelle couche Shapefile"
 
 # 24c1f19ea54d4994a7f0a867089719c9
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:701
@@ -1528,6 +1550,13 @@ msgid ""
 "displayed as shown in Figure_edit_5_. Choose the type of layer (point, line "
 "or polygon) and the CRS (Coordinate Reference System)."
 msgstr ""
+"Pour créer une nouvelle couche Shapefile à éditer, allez dans le menu "
+":menuselection:`Nouveau -->` |mActionNewVectorLayer| "
+":menuselection:`Nouvelle couche Shapefile...` du menu "
+":menuselection:`Couche`. La fenêtre :guilabel:`Nouvelle couche vecteur` "
+"apparaitra telle que montrée dans Figure_edit_5_. Choisissez le type de "
+"géométrie de la couche (point, ligne ou polygone) et le SCR (Système de "
+"Coordonnées de Référence)."
 
 # 216017658b774a539ff65dc59aa151e6
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:707
@@ -1535,6 +1564,8 @@ msgid ""
 "Note that |qg| does not yet support creation of 2.5D features (i.e. features "
 "with X,Y,Z coordinates)."
 msgstr ""
+"Notez que QGIS ne gère pas encore la création d'entité 2.5D (c.-à-d. des "
+"entités avec des coordonnées X, Y, Z)."
 
 # 25d40a3d75d8406b8430fecbed0a44d0
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:722
@@ -1552,11 +1583,24 @@ msgid ""
 "be added to the map and you can edit it in the same way as described in "
 "Section :ref:`sec_edit_existing_layer` above."
 msgstr ""
+"Pour terminer la création de la nouvelle couche, ajouter les attributs "
+"désirés en cliquant sur le bouton **[Ajouter à la liste d'attributs]** après "
+"avoir spécifié le nom et le type de chaque attribut. Un attribut 'id' est "
+"proposé par défaut et peut être supprimé. Seuls les attributs de type "
+":guilabel:`Nombre décimal` |selectstring|, :guilabel:`Nombre entier` "
+"|selectstring|, and :guilabel:`Données texte` |selectstring| sont gérés. De "
+"plus, selon le type d'attribut vous pouvez définir la largeur et la "
+"précision de la nouvelle colonne. Une fois satisfait de vos attributs, "
+"cliquez sur **[OK]** et donnez un nom pour le shapefile. QGIS va "
+"automatiquement ajouter l'extension :file:`.shp` au nom que vous lui avez "
+"spécifié. Une fois la couche créée, elle sera ajoutée à la carte et vous "
+"pouvez l'éditer de la manière décrite dans la Section "
+"ref:`sec_edit_existing_layer` ci-dessus."
 
 # ebe5a25bfd01457d88068ee045e069ff
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:739
 msgid "Creating a new SpatiaLite layer"
-msgstr ""
+msgstr "Créer une nouvelle couche SpatiaLite"
 
 # 50e87fb70a624c379b644469575e6468
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:742
@@ -1566,6 +1610,11 @@ msgid ""
 "the :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog "
 "will be displayed as shown in Figure_edit_6_."
 msgstr ""
+"Pour créer une nouvelle couche SpatiaLite à éditer, allez dans "
+":menuselection:`Nouveau -->` |mActionNewVectorLayer| "
+":menuselection:`Nouvelle couche SpatiaLite...` depuis le menu "
+":menuselection:`Couche`. La fenêtre :guilabel:`Nouvelle couche SpatiaLite` "
+"apparaitra telle que montrée dans la figure Figure_edit_6_."
 
 # 7524e7fd48d74c2bb0c5dee6dcebee5d
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:759
@@ -1576,6 +1625,11 @@ msgid ""
 "define the layer type and the EPSG SRID. If desired you can select to "
 "|checkbox| :guilabel:`Create an autoincrementing primary key`."
 msgstr ""
+"La première étape est sélectionner une base SpatiaLite existante ou d'en "
+"créer une nouvelle en utilisant le bouton |browsebutton| à droite de la "
+"liste des bases de données. Donnez un nom à la nouvelle couche, choisissez "
+"un type puis un SCR. Si besoin, vous pouvez cocher |checkbox| "
+":guilabel:`Créer une clé primaire autoincrémentée`."
 
 # c926332659a945a9aebf1e9adbd2958d
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:765
@@ -1587,6 +1641,12 @@ msgid ""
 "legend and you can edit it in the same way as described in Section "
 ":ref:`sec_edit_existing_layer` above."
 msgstr ""
+"Pour défnir une table attributaire, ajoutez les noms des colonnes avec leur "
+"type de données et cliquez sur le bouton **[Ajouter à la liste "
+"d'attribut]**. Lorsque la liste d'attributs est terminée, cliquez sur "
+"**[OK]**. QGIS ajoutera automatiquement cette nouvelle couche à la légende "
+"où vous pourrez l'éditer comme indiquée dans la section "
+":ref:`sec_edit_existing_layer` ci-dessus."
 
 # 73528c4be36d492592f94e2969c822cc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:772
@@ -1594,11 +1654,13 @@ msgid ""
 "Further management of SpatiaLite-Layers can be done with the DB Manager see "
 ":ref:`dbmanager`."
 msgstr ""
+"D'autres opérations de gestion des couches SpatiaLite peuvent être "
+"effectuées via DB Manager, voir :ref:`dbmanager`."
 
 # 7d504f88b10a4ee998bce86c7f2d5a81
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:780
 msgid "Working with the Attribute Table"
-msgstr ""
+msgstr "Travailler avec la table d'attributs"
 
 # 18dc0507c1e3420591b84306d3bfb6dc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:783
@@ -1608,6 +1670,10 @@ msgid ""
 "particular piece of information about the feature. Features in the table can "
 "be searched, selected, moved or even edited."
 msgstr ""
+"La :index:`table d'attributs` affiche les entités de la couche sélectionnée. "
+"Chaque ligne représente une entité avec ses attributs répartis dans "
+"plusieurs colonnes. Chaque entité de la table peut être recherchée, "
+"sélectionnée, déplacée et éditée."
 
 # 2d0a0aef42314a689573e6d5d0413ccf
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:788
@@ -1619,6 +1685,12 @@ msgid ""
 "|mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown "
 "menu."
 msgstr ""
+"Pour ouvrir la table attributaire d'une couche vecteur, activez la couche en "
+"cliquant dessus depuis la zone de légende de la carte. Puis dans le menu "
+":menuselection:`Couche`, cliquez sur |mActionOpenTable| "
+":menuselection:`Ouvrir la table d'attributs`. Vous pouvez aussi y accéder "
+"avec un clic droit sur la couche puis en sélectionnant |mActionOpenTable| "
+":menuselection:`Ouvrir la table d'attributs`."
 
 # 023750ca8e854902855ca2d89768c7e0
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:794
@@ -1627,11 +1699,15 @@ msgid ""
 "layer (figure_attributes_1_). The number of features and the number of "
 "selected features are shown in the attribute table title."
 msgstr ""
+"Cela ouvrira une nouvelle fenêtre qui affiche les attributs de toutes les "
+"entités de la couche (voir figure_attributes_1_). Le nombre des entités et "
+"le nombre d'entités sélectionnées sont affichés dans la barre de titre de la "
+"table d'attributs."
 
 # 3de376b863aa41019b0d7a6d6e784f83
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:813
 msgid "Selecting features in an attribute table"
-msgstr ""
+msgstr "Sélectionner une entité depuis la table"
 
 # 133ce9c51d054fc0bb45d3171a1fd204
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:816
@@ -1642,6 +1718,11 @@ msgid ""
 "Likewise, if the set of rows selected in the attribute table is changed, the "
 "set of features selected in the main window will be updated."
 msgstr ""
+"**Chaque ligne sélectionnée** dans la table d'attributs correspond aux "
+"attributs d'une entité sélectionnée de la couche. Si la sélection est "
+"modifiée sur la carte, elle est également mise à jour dans la table "
+"d'attributs. De la même manière, une modification de la sélection dans la "
+"table est automatiquement répercutée sur la carte."
 
 # 856b403baee94c7abb7f20e625f60bea
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:822
@@ -1655,6 +1736,15 @@ msgid ""
 "does not change the row selection. Changing the selection in the main canvas "
 "does not move the cursor position in the attribute table."
 msgstr ""
+"Les lignes peuvent être sélectionnées en cliquant sur le numéro de ligne "
+"placé tout à gauche. **Plusieurs lignes** peuvent être sélectionnées en "
+"maintenant la touche :kbd:`Ctrl`.Une **sélection continue** s'effectue en "
+"gardant appuyée la touche :kbd:`Shift` et en cliquant sur une nouvelle "
+"ligne, toutes les lignes entre la première sélection et la dernière seront "
+"prises. Déplacer la position du curseur dans la table d'attributs en "
+"cliquant sur une cellule ne modifie pas la sélection des lignes. Modifier "
+"les entités sélectionnées depuis la carte ne modifie pas la position du "
+"curseur dans la table."
 
 # 12b31727338441508cdde841453ec688
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:831
@@ -1664,6 +1754,9 @@ msgid ""
 "values from the top row down, upward pointing means ascending values from "
 "the top row down)."
 msgstr ""
+"Vous pouvez faire un tri sur les colonnes en cliquant sur l'en-tête. Une "
+"petite flèche indique l'ordre de tri (une flèche pointant vers le bas "
+"indiquera un tri décroissant, une flèche vers le haut, un tri croissant)."
 
 # 7371b2188e21454a8ebb85eba31f690b
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:836
@@ -1677,6 +1770,14 @@ msgid ""
 "|browsebutton|, which will launch the Search Query Builder described in "
 "Section :ref:`vector_query_builder`."
 msgstr ""
+"Pour une **simple recherche par attribut** sur une seule colonne, le champ "
+":guilabel:`Chercher` peut être utilisé. Sélectionnez la colonne sur laquelle "
+"doit être opérée la recherche depuis la liste déroulante et appuyez sur le "
+"bouton **[Chercher]**. Les entités correspondantes seront sélectionnées et "
+"leur nombre total sera affiché dans le titre de la table ainsi que dans la "
+"barre d'état de la fenêtre principale. Pour des recherches plus complexes, "
+"passez par le bouton Recherche avancée |browsebutton|, qui lancera le "
+"Constructeur de requêtes décrit à la section :ref:`vector_query_builder`."
 
 # 361243cccee14cb38769e01af0ef4a49
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:845
@@ -1687,23 +1788,30 @@ msgid ""
 "checkbox allows to select case sensitive. The other buttons at the bottom "
 "left of the attribute table window provide following functionality:"
 msgstr ""
+"Pour afficher uniquement les enregistrements que vous avez sélectionnés, "
+"utiliser la case à cocher |checkbox| :guilabel:`Afficher sélection`. Pour "
+"limiter la recherche à la sélection, activer la case |checkbox| "
+":guilabel:`Ne recherche que dans la sélection` Les autres boutons disposés "
+"en bas à gauche de la fenêtre fournissent les fonctionnalités suivantes :"
 
 # cdaea03f445143f0a193b4184e27d0aa
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:854
 msgid "|mActionOpenTable| :sup:`Unselect all` also with :kbd:`Ctrl+U`"
-msgstr ""
+msgstr "|mActionOpenTable| :sup:`Tout désélectionner` ou :kbd:`Ctrl+U`"
 
 # b98f768b2d52401f9b11c6ab6fe12786
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:855
 msgid ""
 "|mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`"
 msgstr ""
+"|mActionSelectedToTop| :sup:`Déplacer la sélection au sommet` ou "
+":kbd:`Ctrl+T`"
 
 # a4580ce7e78740a9b395850ba760b250
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:856
 msgid ""
 "|mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+S`"
-msgstr ""
+msgstr "|mActionInvertSelection| :sup:`Inverser la sélection` ou :kbd:`Ctrl+S`"
 
 # 195fbb1810c84c83847bad468ab329fe
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:857
@@ -1711,6 +1819,8 @@ msgid ""
 "|mActionCopySelected| :sup:`Copy selected rows to clipboard` also with "
 ":kbd:`Ctrl+C`"
 msgstr ""
+"|mActionCopySelected| :sup:`Copier les lignes sélectionnées dans le presse "
+"papier` ou :kbd:`Ctrl+C`"
 
 # a19692aeba8941ed89aec37403eaa9a3
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:859
@@ -1718,12 +1828,16 @@ msgid ""
 "|mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with "
 ":kbd:`Ctrl+J`"
 msgstr ""
+"|mActionZoomToSelected| :sup:`Zoomer sur les lignes sélectionnées` ou "
+":kbd:`Ctrl+J`"
 
 # e4ed59b0fa174c9b9111ae016d167a9e
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:861
 msgid ""
 "|PanToSelected| :sup:`Pan map to the selected rows` also with :kbd:`Ctrl+P`"
 msgstr ""
+"|PanToSelected| :sup:`Déplacer la carte sur les lignes sélectionnées` ou "
+":kbd:`Ctrl+P`"
 
 # 5556eb5da237452794fcabe6a71815c6
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:862
@@ -1731,6 +1845,9 @@ msgid ""
 "|mActionToggleEditing| :sup:`Toggle editing mode` to edit single values and "
 "to enable functionalities described below also with :kbd:`Ctrl+E`"
 msgstr ""
+"|mActionToggleEditing| :sup:`Activer le mode édition` pour éditer les "
+"valeurs une à une et activer les fonctionnalités décrites ci-dessous ou "
+":kbd:`Ctrl+E`"
 
 # 3dc4e9a0b590477fb3eebccf08b9e1db
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:865
@@ -1738,6 +1855,8 @@ msgid ""
 "|mActionDeleteSelected| :sup:`Delete selected features` also with "
 ":kbd:`Ctrl+D`"
 msgstr ""
+"|mActionDeleteSelected| :sup:`Supprimer les entités sélectionnées` ou "
+":kbd:`Ctrl+D`"
 
 # 1e658ee55d0f4f9b8d47d85c276244e5
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:867
@@ -1745,6 +1864,8 @@ msgid ""
 "|mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR "
 "layers with GDAL version >= 1.6 also with :kbd:`Ctrl+W`"
 msgstr ""
+"|mActionNewAttribute| :sup:`Nouvelle colonne` pour les couches PostGIS et "
+"les couches gérées par OGR (GDAL version >= 1.6) ou :kbd:`Ctrl+W`"
 
 # 327367e928294b5db9372fb656c0f3da
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:869
@@ -1752,17 +1873,21 @@ msgid ""
 "|mActionDeleteAttribute| :sup:`Delete Column` for PostGIS layers and for OGR "
 "layers with GDAL version >= 1.9 also with :kbd:`Ctrl+L`"
 msgstr ""
+"|mActionDeleteAttribute| :sup:`Supprimer une colonne` pour les couches "
+"PostGIS et les couches gérées par OGR (GDAL version >= 1.9) ou :kbd:`Ctrl+L`"
 
 # a69aac16351a413194a8e4ae78f4a110
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:871
 msgid ""
 "|mActionCalculateField| :sup:`Open field calculator` also with :kbd:`Ctrl+I`"
 msgstr ""
+"|mActionCalculateField| :sup:`Ouvrir la calculatrice de champs` ou "
+":kbd:`Ctrl+I`"
 
 # 4d54273acaf745cabd9d0eadf1391178
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:873
 msgid "**Skip WKT geometry**"
-msgstr ""
+msgstr "**Éviter d'exporter la géométrie WKT**"
 
 # 5483e159375a46a8b55f51bccfbf25fc
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:875
@@ -1773,11 +1898,18 @@ msgid ""
 ":menuselection:`Settings --> Options -->` General tab |checkbox| "
 ":guilabel:`Copy geometry in WKT representation from attribute table`."
 msgstr ""
+"Si vous souhaitez utiliser les données attributaires dans un progamme "
+"externe (comme Excel), utilisez le bouton |mActionCopySelected| :sup:`Copier "
+"les lignes sélectionnées dans le presse papier`. Vous pouvez copier les "
+"données sans la géométrie si vous désactivez l'option "
+":menuselection:`Préférences --> Options -->` onglet Général |checkbox| "
+":guilabel:`Copier la représentation WKT de la géométrie depuis la table "
+"attributaire`."
 
 # 19d291db08b94cbab29bebe8ef24f6ee
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:883
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "Enregistrer les entités sélectionnées dans une nouvelle couche"
 
 # 35473f0e8b514301bc302556ff8b7502
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:886
@@ -1789,11 +1921,18 @@ msgid ""
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
 msgstr ""
+"Les entités sélectionnées peuvent être enregistrées dans un nouveau fichier "
+"(dans tout format supporté par OGR) et transformé dans n'importe quel autre "
+"système de coordonnéesde référence (SCR). Il suffit de faire un clic droit "
+"sur la couche contenant la sélection, de cliquer sur "
+":menuselection:`Sauvegarder la sélection sous...` pour définir le nom du "
+"fichier en sortie, le format et le SCR (voir section :ref:`label_legend`). "
+"Il est possible de définir des options de création OGR à cette étape."
 
 # c9abccd336b3466abc90824bba21a449
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:897
 msgid "Working with non spatial attribute tables"
-msgstr ""
+msgstr "Travailler avec tables non-spatialisées"
 
 # dbac745329a2430fa6d43fb992e49f21
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:899
@@ -1805,6 +1944,13 @@ msgid ""
 "can be opened e.g. with the |mActionOpenTable| :sup:`Open Attribute Table` "
 "tool and is then editable like any other layer attribute table."
 msgstr ""
+"QGIS permet de charger des tables n'ayant pas d'information spatiale, cela "
+"comprend les tables supportées par OGR, les fichers de texte délimité et les "
+"tables PostgreSQL. Les tables peuvent être utilisées pour regarder les "
+"champs, pour des requêtes ou pour de l'édition. Lorsque vous chargez une "
+"table de ce type, elle apparaîtra dans la liste des couches, elle peut être "
+"ouverte avec l'outil |mActionOpenTable| :sup:`Ouvrir la table d'attributs`. "
+"Elle est ensuite éditable comme n'importe qu'elle autre table attributaire."
 
 # 90965564d3694329a1f46a05f4b63bac
 #: ../../source/docs/user_manual/working_with_vector/editing_geometry_attributes.rst:906
@@ -1814,3 +1960,8 @@ msgid ""
 "specific vector layer during digitizing. Have a closer look at the edit "
 "widget in section :ref:`vector_attributes_tab` to find out more."
 msgstr ""
+"Par exemple vous pouvez utiliser ces colonnes pour définir des valeurs "
+"d'attributs ou un intervalle de valeurs qui sont autorisées à être ajoutées "
+"à une couche vectorielle spécifique durant une numérisation. Jetez un oeil "
+"du côté de l'outil d'édition pour en savoir plus (section "
+":ref:`vector_attributes_tab`)."
