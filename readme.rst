@@ -7,24 +7,24 @@ Where I can read this documentation
 It is possible to read the HTML version of the documentation for many languages
 here:
 
-* English: http://documentation.qgis.org/html/en/docs/user_manual/
-* French: http://documentation.qgis.org/html/fr/docs/user_manual/
-* German: http://documentation.qgis.org/html/de/docs/user_manual/
-* Italian: http://documentation.qgis.org/html/it/docs/user_manual/
-* Japanese: http://documentation.qgis.org/html/ja/docs/user_manual/
-* Portuguese: http://documentation.qgis.org/html/pt/docs/user_manual/
-* Russian: http://documentation.qgis.org/html/ru/docs/user_manual/
-* Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
-* Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
+* English: http://documentation.qgis.org/1.8/html/en/docs/user_manual/
+* French: http://documentation.qgis.org/1.8/html/fr/docs/user_manual/
+* German: http://documentation.qgis.org/1.8/html/de/docs/user_manual/
+* Italian: http://documentation.qgis.org/1.8/html/it/docs/user_manual/
+* Japanese: http://documentation.qgis.org/1.8/html/ja/docs/user_manual/
+* Portuguese: http://documentation.qgis.org/1.8/html/pt/docs/user_manual/
+* Russian: http://documentation.qgis.org/1.8/html/ru/docs/user_manual/
+* Spanish: http://documentation.qgis.org/1.8/html/es/docs/user_manual/
+* Dutch: http://documentation.qgis.org/1.8/html/nl/docs/user_manual/
 
 It is also available via the subdomain docs.qgis.org, for example for the German
 language:
-http://docs.qgis.org/html/de/docs/user_manual/
+http://docs.qgis.org/1.8/html/de/docs/user_manual/
 
 In the qgis.org site the documentation is scheduled to be built every 6 hours.
 
 Pdf versions of the manual are available here:
-http://documentation.qgis.org/pdf/
+http://documentation.qgis.org/1.8/pdf/
 
 
 
@@ -136,7 +136,7 @@ Howto for translators
 .....................
 
 A thorough explanation for translators is written here:
-http://docs.qgis.org/html/en/docs/documentation_guidelines/do_translations.html
+http://docs.qgis.org/1.8/html/en/docs/documentation_guidelines/do_translations.html
 
 
 .. temporarily commented the following part out:
