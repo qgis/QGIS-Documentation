@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr_FR\n"
+"X-Source-Language: C\n"
 
 # cbbacab7abf64844a1c160b2f80a9998
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:10
 msgid "Interpolation Plugin"
-msgstr ""
+msgstr "Extension Interpolation"
 
 # da783f6fc2174c89ba949fb2c6023cb9
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:12
@@ -31,6 +34,12 @@ msgid ""
 "(See Figure_interpolation_1_). The plugin requires the following parameters "
 "to be specified before running:"
 msgstr ""
+"L'extension Interpolation permet de générer une interpolation TIN ou IDW "
+"depuis une couche vectorielle de points. Cette extension est très simple à "
+"manipuler et fournit à l'utilisateur une interface graphique intuitive pour "
+"la création de couches matricielles interpolées (voir la Figure "
+"Figure_interpolation_1_). Avant son exécution, l'extension nécessite les "
+"réglages suivants:"
 
 # 64ca15a9fa9a460088d1236bbcc77ee4
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:17
@@ -38,10 +47,17 @@ msgid ""
 "**Input vector layer**: Specify the input point vector layer(s) from a list "
 "of loaded point layers. If several layers are specified, then data from all "
 "layers is used for interpolation. Note: It is possible to insert lines or "
-"polygons as constraints for the triangulation, by specifying either \"points"
-"\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` |"
-"selectstring| combobox."
+"polygons as constraints for the triangulation, by specifying either "
+"\"points\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` "
+"|selectstring| combobox."
 msgstr ""
+"**Couche vecteur d'entrée** : Spécifier une (ou plusieurs) couche "
+"vectorielle de points parmi la liste de couches vectorielles de points "
+"chargées. Si plusieurs couches sont sélectionnées, alors l'ensemble des "
+"données de toutes les couches est utilisé pour l'interpolation. Note: il est "
+"possible d'insérer des lignes ou des polygones comme contrainte pour la "
+"triangulation en spécifiant ``lignes de structure'' ou ``break lines'' dans "
+"la liste déroulante |selectstring| du sous-menu :guilabel:`Type`."
 
 # e0cdb78c0540439ebb85e633127c6baf
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:22
@@ -50,6 +66,10 @@ msgid ""
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox "
 "to use the layers stored Z values."
 msgstr ""
+"**Attribut d'interpolation** : Sélectionner une colonne attributaire à "
+"utiliser pour l'interpolation ou cocher la case |checkbox| "
+":guilabel:`Utiliser les coordonnées Z pour l'interpolation` afin d'utiliser "
+"une couche contenant des valeurs Z."
 
 # d9063740d851435bb8192ab1245137d8
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:25
@@ -57,6 +77,9 @@ msgid ""
 "**Interpolation Method**: Select interpolation method. This can be either "
 "'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'."
 msgstr ""
+"**Méthode d'interpolation** : Sélectionner une méthode d'interpolation. Cela "
+"peut être 'Interpolation Triangulaire (TIN)' ou'Pondération par Distance "
+"Inverse (IDW)'."
 
 # c922bb5ca8074040b206246ec8b86305
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
@@ -64,37 +87,49 @@ msgid ""
 "**Number of columns/rows**: Specify the number row and colums for the output "
 "raster file."
 msgstr ""
+"**Nombre de colonnes/cellules** : Définir le nombre de colonnes et de lignes "
+"du raster de sortie."
 
 # d5424bbc845840709590a6f3cb6d9396
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:29
 msgid "**Output file**: Specify a name for the output raster file."
-msgstr ""
+msgstr "**Fichier de sortie** : Attribuer un nom au fichier raster de sortie."
 
 # 7643e132c9274a31807af0a9c29e584e
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:47
 msgid "Using the plugin"
-msgstr ""
+msgstr "Mettre en oeuvre l'extension"
 
 # 77bed3a684c84c6791dbda407266dbd3
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:49
 msgid "Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr ""
+"Lancez QGIS et chargez une couche vectorielle de points (par exemple, "
+":file:`elevp.csv`). "
 
 # 37a817ca256546c8b645e5f726ace3f6
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:50
 msgid ""
-"Load the Interpolation plugin in the Plugin Manager (see Section :ref:"
-"`load_core_plugin`) and click on the |raster-interpolate| :sup:"
-"`Interpolation` icon which appears in the QGIS toolbar menu. The "
+"Load the Interpolation plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`) and click on the |raster-interpolate| "
+":sup:`Interpolation` icon which appears in the QGIS toolbar menu. The "
 "Interpolation plugin dialog appears as shown in Figure_interpolation_1_."
 msgstr ""
+"Activez l'extension Interpolation via le Gestionnaire d'Extensions (voir la "
+"Section :ref:`load_core_plugin`) puis appuyez sur l'icône "
+"|raster-interpolate| :sup:`Interpolation` qui apparaît alors dans la barre "
+"d'outils QGIS. La boîte de dialogue de l'extension Interpolation s'ouvre "
+"comme montrée dans la Figure Figure_interpolation_1_."
 
 # 5f59e553380740c78c2aaf879cb60b30
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:54
 msgid ""
-"Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column (e."
-"g., ``ELEV``) for interpolation."
+"Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column "
+"(e.g., ``ELEV``) for interpolation."
 msgstr ""
+"Dans le bloc Saisie, sélectionnez une couche vectorielle de départ (par "
+"exemple, :guilabel:`elevp` |selectstring|) ainsi qu'une colonne attributaire "
+"pour l'interpolation (par exemple, ``ELEV``)."
 
 # cb3b3912081e4dedaa2540f335cee9d6
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:56
@@ -103,18 +138,28 @@ msgid ""
 "(TIN)'), and specify a cellsize of 5000 as well as the raster output "
 "filename (e.g., :file:`elevation_tin`)."
 msgstr ""
+"Dans le bloc Rendu, sélectionnez une méthode d'interpolation (par "
+"exemple,'Interpolation Triangulaire'), puis définissez le nombre de colonnes "
+"et de cellules, par exemple, 5000 ainsi qu'un nom pour le fichier raster de "
+"sortie (par exemple, :file:`elevation_tin`)."
 
 # 0da99bb8f4be454aa70991b9d149e428
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:59
 msgid "Click **[OK]**."
-msgstr ""
+msgstr "Appuyez sur **[Ok]**."
 
 # 1f89db2a17534358ae0e13aeba8978dd
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:60
 msgid ""
 "For the current example, double click :file:`elevation_tin` in the layer "
 "list to open the raster :guilabel:`Layer Properties` dialog and select "
-"'Pseudocolor' as :guilabel:`Color Map` |selectstring| in the :guilabel:"
-"`Symbology` tab. Or you can define a new color table as described in "
-"section :ref:`working_with_raster`."
+"'Pseudocolor' as :guilabel:`Color Map` |selectstring| in the "
+":guilabel:`Symbology` tab. Or you can define a new color table as described "
+"in section :ref:`working_with_raster`."
 msgstr ""
+"Pour cet exemple, double cliquez sur :file:`elevation_tin` dans la liste des "
+"couches pour ouvrir la fenêtre de :guilabel:`propriétés` de la couche raster "
+"et sélectionnez :guilabel:`Pseudocouleur` comme couleur de la carte "
+"|selectstring| dans l'onglet :quilabel:`Symbologie`. Vous pouvez également "
+"définir une nouvelle table de couleurs comme décrit dans la Section "
+":ref:`working_with_raster`."
