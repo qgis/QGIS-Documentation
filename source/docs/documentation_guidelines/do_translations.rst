@@ -4,18 +4,27 @@
 Translation Guidelines
 **********************
 
-
 This manual is aiming to help the translator.
 First the general process of how technically a translation is done 
 is explained. Later the translation is explained from an actual English 
 rst document that is translated to Dutch.
 Finally a summary of "Rules of translation" is given.
 
+Foreword
+========
+
+**A first important note:** If you want to translate content within 
+the docs folder (not web), never do this in the master branch. For translations 
+there are always translation branches available, once a document is fully 
+updated in english for a certain version. As an example the branch to translate 
+the manual of QGIS 1.8, you have to use the manual_en_v1.8 branch. For questions, 
+please contact the qgis-community-team at http://lists.osgeo.org/mailman/listinfo/qgis-community-team.
+
+
 .. _translation_general:
 
 General information
 ===================
-
 
 To explain how translation works, we will use the heatmap plugin as an example. 
 In this example we will translate it from English to Dutch, but it will 
