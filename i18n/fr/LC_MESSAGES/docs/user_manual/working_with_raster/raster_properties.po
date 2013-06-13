@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-18 17:44\n"
-"PO-Revision-Date: 2013-06-13 10:02+0100\n"
+"PO-Revision-Date: 2013-06-13 14:26+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -222,16 +222,19 @@ msgid ""
 "of your rasterlayer. For example you could switch color-bands from the "
 "standard RGB-order to something else."
 msgstr ""
+"Ce choix vous offre une large gamme d'options pour modifier l'apparence de "
+"votre couche raster. Par exemple, vous pouvez passer les bandes de couleurs "
+"d'un ordre RVB standard à un autre."
 
 # 4e507f2d4de04e038abee6f66c1e052b
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:92
 msgid "Also scaling of colors are available."
-msgstr ""
+msgstr "L'échantillonnage des couleurs est également disponible."
 
 # f96f6e1909754975a345c01be1494308
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:94
 msgid "**Viewing a Single Band of a Multiband Raster**"
-msgstr ""
+msgstr "**Visualiser une seule bande d'un raster multibande**"
 
 # 5d38aa6686524cfebe842bacdc747e64
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:96
@@ -241,11 +244,17 @@ msgid ""
 "this is not the correct way. To display the Red band, set the image type to "
 "grayscale, then select Red as the band to use for Gray."
 msgstr ""
+"Si vous désirez visualiser une seule bande (par exemple la bande rouge) "
+"d'une image multibande, vous pouvez penser que vous pourriez définir les "
+"bandes Vertes et Bleue à  \"Non définie \". Mais ce n'est pas la manière "
+"correcte. Pour afficher la bande Rouge, définissez le type d'image à Bande "
+"grise unique, puis sélectionnez la bande Rouge comme bande à utiliser pour "
+"le gris."
 
 # 21deca18a7964c22a376abc8d69e5895
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:103
 msgid "**Contrast enhancement**"
-msgstr ""
+msgstr "**Amélioration de contraste**"
 
 # d2eb4c2bdcaa4474b7680332b4d833cc
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:106
@@ -254,6 +263,9 @@ msgid ""
 "set to automatically to *stretch to min max* regardless if the Quantum GIS "
 "general options this is set to another value."
 msgstr ""
+"Lors de l'ajout d'une couche raster GRASS, l'option *Amélioration de "
+"contraste* sera automatiquement *Etirer jusqu'au MinMax*, quelles que soient "
+"les options générales de QGIS définies pour cette option."
 
 # ba1ad58fbc994c7089e4c814d7b8ca0b
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:113
@@ -270,6 +282,13 @@ msgid ""
 "rasterlayer, e.g. a shaded relief map overlayed by a classified rastermap. "
 "This will make the look of the map more three dimensional."
 msgstr ""
+"QGIS permet d'afficher chaque raster à des niveaux de transparence "
+"différents. Utilisez le curseur de transparence pour indiquer dans quelle "
+"mesure les couches sous-jacentes (s'il y en a) pourront être visibles à "
+"travers cette couche raster. Cela est très utile, si vous désirez superposer "
+"plus d'une couche raster, par exemple une carte des reliefs ombrés "
+"superposée par une carte raster classifiée. Cela donnera un rendu proche "
+"d'un rendu en trois dimensions."
 
 # 61018d2c0efa4481bc8aa27f25e758f7
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:122
@@ -278,6 +297,9 @@ msgid ""
 "*NODATA*. This can be done manually or with the |mActionContextHelp| :sup:"
 "`Add values from display` icon."
 msgstr ""
+"De plus, vous pouvez entrer une valeur raster qui pourra être traitée comme "
+"*NODATA*. Cela peut être effectué manuellement ou en utilisant le bouton |"
+"mActionContextHelp| :sup:`Ajouter les valeurs depuis l'affichage`."
 
 # 717180eced31460ebcc64d4ab60629a9
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:126
@@ -286,6 +308,9 @@ msgid ""
 "guilabel:`Custom transparency options` section. The transparency of every "
 "pixel can be set here."
 msgstr ""
+"Un moyen encore plus flexible de personnaliser la transparence est "
+"d'utiliser la section :guilabel:`Options de transparence personnalisée`. La "
+"transparence de chaque pixel peut être définie dans cet onglet."
 
 # b1a587f0d25f4a1ea82370f92992e267
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:130
@@ -294,11 +319,13 @@ msgid ""
 "`landcover.tif` to a transparency of 20 %. The following steps are "
 "neccessary:"
 msgstr ""
+"Par exemple, pour donner une transparence de 20% à l'eau sur notre raster "
+"d'exemple :file:`landcover.tif`, les étapes suivantes sont nécessaires :"
 
 # 46e7aed6ced5473095954f005a676708
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:133
 msgid "Load the rasterfile :file:`landcover`."
-msgstr ""
+msgstr "Chargez le fichier raster :file:`landcover`."
 
 # 6cafeefd785142808c55cf8346fa6975
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:134
@@ -307,11 +334,14 @@ msgid ""
 "in the legend or by right-clicking and choosing :menuselection:`Properties` "
 "from the popup menu."
 msgstr ""
+"Ouvrez la boîte de dialogue :guilabel:`Propriétés de la couche` en double-"
+"cliquant sur le nom du raster dans la légende ou avec un clic droit et en "
+"choisissant :menuselection:`Propriétés` dans le menu qui apparaît."
 
 # 89a1246d7e3243dfb88f2a51f4c77a7c
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:137
 msgid "Select the :guilabel:`Transparency` tab"
-msgstr ""
+msgstr "Sélectionnez l'onglet :guilabel:`Transparence`."
 
 # 4ee14c42faee40718e5664b88a0ab630
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:138
@@ -319,17 +349,21 @@ msgid ""
 "Click the |mActionNewAttribute| :sup:`Add values manually` button. A new row "
 "will appear in the pixel-list."
 msgstr ""
+"Cliquez sur le bouton |mActionNewAttribute| :sup:`Ajouter des valeurs "
+"manuellement`. Une nouvelle ligne apparait dans la liste des pixels."
 
 # 608e22196ce146219161eb4d21b8f463
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:140
 msgid ""
 "Enter the raster-value (we use 0 here) and adjust the transparency to 20 %."
 msgstr ""
+"Entrez la valeur du raster (ici la valeur 0) et ajustez la transparence à "
+"20%."
 
 # 4739e09fe68845cb88ea982ed203074b
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:141
 msgid "Press the **[Apply]** button and have a look at the map."
-msgstr ""
+msgstr "Cliquez sur le bouton **[Appliquer]** et regardez la carte."
 
 # bb292889818f4f6981cb7fb678269827
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:143
@@ -337,6 +371,8 @@ msgid ""
 "You can repeat the steps 4 and 5 to adjust more values with custom "
 "transparency."
 msgstr ""
+"Vous pouvez répéter les étapes 4 et 5 pour personnaliser la transparence "
+"d'autres valeurs."
 
 # 158daf522f80460f86ca166b1f5c986d
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:145
@@ -347,6 +383,12 @@ msgid ""
 "mActionFolder| :sup:`Import from file` loads your transparency settings and "
 "applies them to the current raster layer."
 msgstr ""
+"Comme vous pouvez le voir, il est assez facile de définir une transparence "
+"personnalisée, mais cela peut prendre un peu de temps. Par conséquent, vous "
+"pouvez utiliser le bouton |mActionFileSave| :sup:`Exporter dans un fichier` "
+"pour sauver vos paramètres  de transparence dans un fichier. Le bouton |"
+"mActionFolder| :sup:`Importer à partir d'un fichier` charge vos paramètres "
+"de transparence et les applique à la couche raster actuelle."
 
 # a79a4fed780748738e5ab1dcecbfe0b0
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:159
@@ -355,26 +397,30 @@ msgid ""
 "singleband rendering within the :guilabel:`Style` tab (see :ref:"
 "`label_symbology`)."
 msgstr ""
+"L'onglet :guilabel:`Palette de couleur` n'est disponible que si vous avez "
+"sélectionné un rendu sur une seule bande en Palette de couleur dans "
+"l'onglet :guilabel:`Style` (voir :ref:`label_symbology`)."
 
 # 7dfb4a86041a4a388b5fe23c9131feb9
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:164
 msgid "Three ways of color interpolation are available:"
 msgstr ""
+"Trois manières de faire une interpolation de couleurs sont disponibles :"
 
 # 695d52866f234bd996831efd05509d31
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:166
 msgid "Discrete"
-msgstr ""
+msgstr "Discrète"
 
 # c8732f85cd6d4821b611c77654c448c7
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:167
 msgid "Linear"
-msgstr ""
+msgstr "Liénaire"
 
 # 5a40fc299823413d842b3b581f026e89
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:168
 msgid "Exact"
-msgstr ""
+msgstr "Exacte"
 
 # 000399ca20274585bd75680bab3243f7
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:171
@@ -388,6 +434,14 @@ msgid ""
 "that value. Further you can also add labels for each color but this value "
 "won't be displayed when you use the identify feature tool."
 msgstr ""
+"Le bouton **[Ajouter une entrée]** ajoute une couleur à la table de couleur "
+"individuelle. Le bouton **[Éffacer entrée]**, supprime une couleur de la "
+"table et **[Trier]** permet de classer selon la valeur des pixels. Double-"
+"cliquez sur une valeur entrée vous permet de la modifier. Double-cliquez sur "
+"une couleur, ouvre une fenêtre :guilabel:`Sélectionner une couleur` où vous "
+"pouvez sélectionner une autre couleur à appliquer sur cette valeur. Vous "
+"pouvez également ajouter des étiquette pour chaque couleur mais elles ne "
+"s'afficheront pas via l'outil d'identification des entités."
 
 # fe082421e83f483d833fd46382df28aa
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:180
@@ -398,6 +452,13 @@ msgid ""
 "|mActionFileSave| :sup:`Export color map to file` to load an existing color "
 "table or to save the defined color table for other sessions."
 msgstr ""
+"Alternativement, vous pouvez cliquer sur le bouton |mActionNewAttribute| :"
+"sup:`Charger une Palette de couleurs depuis la bande` qui tente de charger "
+"la table de couleur à partir d'une bande (si celle-ci en a une). Et vous "
+"pouvez utiliser les boutons |mActionFileOpen| :sup:`Charger une palette de "
+"couleur depuis un fichier` ou |mActionFileSave| :sup:`Exporter une palette "
+"de couleur vers un fichier` pour charger ou sauvegarder la palette dans un "
+"fichier pour des sessions utltérieures."
 
 # 68e1b65d0c1e4d55ae6bbe6165a9647a
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:186
@@ -408,6 +469,12 @@ msgid ""
 "only one :guilabel:`Classification mode` |selectstring| is supported - "
 "'Equal interval'"
 msgstr ""
+"Le bloc  :guilabel:`Générer une nouvelle palette de couleur` vous permet de "
+"créer de nouvelles palettes de couleurs par catégorie. Vous avez seulement "
+"besoin de sélectionner le :guilabel:`Nombre d'entrées` |selectnumber| dont "
+"vous avez besoin et d'appuyez sur le bouton :guilabel:`Classer`. "
+"Actuellement seul un :guilabel:`Mode de classification` |selectstring| est "
+"géré, 'Intervalles égaux'."
 
 # 50b925f24a7c41e3b82424dcd4735760
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:194
@@ -422,6 +489,10 @@ msgid ""
 "be modified). This tab also shows a thumbnail of the layer, its legend "
 "symbol, and the palette."
 msgstr ""
+"L'onglet :guilabel:`Général` affiche des informations basiques sur le raster "
+"sélectionné, dont la source de la couche et le nom affiché dans la légende "
+"(qui peut être modifié). Cet onglet montre aussi un aperçu de la couche, le "
+"symbole de la légende et la palette."
 
 # f4b2c4ebe40944f98c3cda4978706d3a
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:201
@@ -430,6 +501,9 @@ msgid ""
 "check the checkbox and set an appropriate scale where your data will be "
 "displayed in the map canvas."
 msgstr ""
+"La visibilité en fonction de l'échelle se définie également dans cet onglet. "
+"Vous devez activer la case à cocher et définir une échelle appropriée pour "
+"l'affichage de vos données sur la carte."
 
 # 6478c7c3d8f74a6ea3d9df221a48b4fc
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:205
@@ -437,6 +511,8 @@ msgid ""
 "Also the coordinate reference system (CRS) is printed here as a PROJ.4-"
 "string. This can be modified by hitting the **[Specify]** button."
 msgstr ""
+"Le système de coordonnées de référence (SCR) est également affiché ici. Il "
+"peut être modifié en cliquant sur le bouton **[Spécifier]**."
 
 # c98b2c661cde4bafb84fcc666658ede4
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:211
@@ -451,6 +527,11 @@ msgid ""
 "layer. Statistics are gathered on a 'need to know' basis, so it may well be "
 "that a given layers statistics have not yet been collected."
 msgstr ""
+"L'onglet :guilabel:`Métadonnées` affiche de nombreuses d'information sur la "
+"couche raster, dont les statistiques sur chaque bande de la couche raster. "
+"Les statistiques sont recueillies 'à la demande', de sorte qu'il est "
+"possible que les statistiques sur une couche n'aient pas été encore "
+"collectées."
 
 # 411aa9c7a6da436a889d6e2c5a5b1662
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:218
@@ -458,6 +539,8 @@ msgid ""
 "This tab is mainly for information. You cannot change any values printed "
 "inside this tab."
 msgstr ""
+"Cet onglet est principalement informatif. Vous ne pouvez pas modifier les "
+"valeurs qui y sont affichées."
 
 # 4bdc669312b74116b6c447dd621a6c4c
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:228
@@ -472,6 +555,11 @@ msgid ""
 "considerably improved as QGIS selects the most suitable resolution to use "
 "depending on the level of zoom."
 msgstr ""
+"Les couches raster à haute résolution peuvent ralentir la navigation dans "
+"QGIS. En créant des copies des données de plus basses résolutions (des "
+"pyramides), les performances peuvent être considérablement améliorées "
+"puisque QGIS sélectionne la résolution la plus pertinente à utiliser en "
+"fonction du niveau de zoom."
 
 # c153e34ef8f7483fa8e5d495fe5c2509
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:235
@@ -479,21 +567,25 @@ msgid ""
 "You must have write access in the directory where the original data is "
 "stored to build pyramids."
 msgstr ""
+"Vous devez avoir accès en écriture dans le répertoire où les données "
+"originelles sont stockées pour construire les pyramides."
 
 # 58410827452e486f944a18b9898eb690
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:238
 msgid "Several resampling methods can be used to calculate the pyramids:"
 msgstr ""
+"Plusieurs méthodes de reéchantillonage peuvent être utilisées pour calculer "
+"les pyramides :"
 
 # 16d492536356478a896f95bf7b1e81df
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:240
 msgid "Average"
-msgstr ""
+msgstr "Moyenne"
 
 # f523c8cbb04b4a86b20eb90e291beac7
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:241
 msgid "Nearest Neighbour"
-msgstr ""
+msgstr "Plus proche voisin"
 
 # 4c0687873bba40de80ffd3195d5e85a7
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:243
@@ -501,6 +593,9 @@ msgid ""
 "When checking the checkbox |checkbox| :guilabel:`Build pyramids internally "
 "if possible` QGIS tries to build pyramids internally."
 msgstr ""
+"Quand la case |checkbox| :guilabel:`Construire les pyramides de manière "
+"interne si possible` est cochée, QGIS tente de construire les pyramides au "
+"sein même du fichier image."
 
 # e83f81d3285b49588bc75585adfbc6ed
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:246
@@ -509,6 +604,10 @@ msgid ""
 "created they cannot be removed. If you wish to preserve a 'non-pyramided' "
 "version of your raster, make a backup copy prior to building pyramids."
 msgstr ""
+"Notez que construire des pyramides peut altérer le fichier original et, une "
+"fois créées, elles ne peuvent plus être supprimées. Si vous désirez "
+"préserver une version 'sans pyramide' de vos raster, réalisez une copie de "
+"sauvegarde avant de les construire."
 
 # 38e5af4c211c4ef296baa173955fae97
 #: ../../source/docs/user_manual/working_with_raster/raster_properties.rst:254
@@ -523,3 +622,8 @@ msgid ""
 "guilabel:`Histogram` tab. All existing bands will be displayed together. You "
 "can save the histogram as an image with the |mActionFileSave| button."
 msgstr ""
+"L'onglet :guilabel:`Histogramme` vous permet de visualiser la distribution "
+"des bandes ou des couleurs dans votre raster. Il se génère automatiquement "
+"quand vous accédez à l'onglet :guilabel:`Histogramme`. Toutes les bandes "
+"seront représentées ensemble. Vous pouvez exporter une image de "
+"l'histogramme grâce au bouton |mActionFileSave|."
