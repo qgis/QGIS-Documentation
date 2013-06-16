@@ -1,200 +1,150 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
-# This file is distributed under the same license as the QGIS User Guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS User Guide 1.7\n"
+"Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-12 17:11\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: 2013-03-22 11:27+0000\n"
+"Last-Translator: timlinux <tim@linfiniti.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Language: ru_RU\n"
-"X-Source-Language: C\n"
 
-# b8493928622b4a6685cb39d0a15b3a35
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:12
+# 19d94b71084647bcba3fc359509732ef
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:7
+msgid "|updatedisclaimer|"
+msgstr ""
+
+# 4db90081aa28484696e4f55d881baebe
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
 msgid "Query Builder"
 msgstr "Конструктор поисковых запросов"
 
-# f8e3f878f89c44469bc42aa1602fea04
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
+# 3a6701363b584bb181ab054796d58b81
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:16
 msgid ""
 "The Query Builder allows you to define a subset of a table using a SQL-like "
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
-msgstr ""
-"Конструктор поисковых запросов позволяет задать подмножество таблицы при "
-"помощи SQL-условия WHERE и отображать результаты в главном окне. Результаты "
-"запроса могут быть сохранены в качестве shape-файла."
+msgstr "Конструктор поисковых запросов позволяет задать подмножество таблицы при помощи SQL-условия WHERE и отображать результаты в главном окне. Результаты запроса могут быть сохранены в качестве shape-файла."
 
-# ab653b58d7474249b62c5eb57f10dbaa
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:19
+# afb64070e6a142fea2866aab499a0653
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:20
 msgid "Query"
 msgstr "Запрос"
 
-# fbdcdb81ca69449ba4c518f81271170f
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
+# f2740869dd25421dbf5bd78ccad4af90
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:22
 msgid ""
-"Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute "
-"Table` from the menu bar. Click on the **[Advanced Search]** button to open "
-"the :guilabel:`Query builder`. For example, if you have a ``towns`` layer "
-"with a ``population`` field you could select only larger towns by entering "
-"``population > 100000`` in the SQL box of the Query builder. "
-"Figure_attributes_2_ shows an example of the Query builder populated with "
+"Open the attribute table choosing |mActionOpenTable| :menuselection:`Open "
+"Attribute Table` from the menu bar. Click on the **[Advanced Search]** "
+"button to open the query builder. For example, if you have a ``towns`` layer"
+" with a ``population`` field you could select only larger towns by entering "
+"``population > 100000`` in the SQL box of the query builder. "
+"Figure_attributes_2_ shows an example of the query builder populated with "
 "data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
 "Values and Operators sections help the user to construct the SQL-like query."
 msgstr ""
-"Откройте таблицу атрибутов, нажав |mActionOpenTable| :sup:`Открыть таблицу "
-"атрибутов` на панели инструментов. Нажмите на кнопку **[Расширенный "
-"поиск]**, чтобы вызвать построитель запросов. Например, имеется слой "
-"``towns`` с полем ``population``, мы можем выбрать только крупные города, "
-"введя ``population > 100000`` в поле SQL-запроса «Конструктора поисковых "
-"запросов». Figure_attributes_2_ демонстрирует пример «Конструктора поисковых "
-"запросов», заполненного данными из слоя PostGIS, атрибуты которого хранятся "
-"в PostgreSQL. Секции «Поля», «Значения», «Операторы» облегчают пользователю "
-"задание SQL-условия WHERE в соответствующем поле."
 
-# 2e8c891160794d6ba176e20eb9752092
+# aba682980b1e4dfdbee43804e0344e3c
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
 msgid ""
-"The **Fields list** contains all attribute columns of the attribute table to "
-"be searched. To add an attribute column to the SQL where clause field, "
+"The **Fields list** contains all attribute columns of the attribute table to"
+" be searched. To add an attribute column to the SQL where clause field, "
 "double click its name in the Fields list. Generally you can use the various "
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
-msgstr ""
-"Список **Поля** содержит все атрибуты таблицы атрибутов. Для того, чтобы "
-"добавить атрибут в поле SQL-условия, сделайте двойной щелчок мышью по его "
-"имени в списке «Поля». Можно использовать различные поля, значения и "
-"операторы для составления запроса, а можно просто напечатать его в поле "
-"SQL-условия."
+msgstr "Список **Поля** содержит все атрибуты таблицы атрибутов. Для того, чтобы добавить атрибут в поле SQL-условия, сделайте двойной щелчок мышью по его имени в списке «Поля». Можно использовать различные поля, значения и операторы для составления запроса, а можно просто напечатать его в поле SQL-условия."
 
-# 97161690598940b5bf9aa238c809e776
+# 3a2e3411349d46198139fd1cf5e4ea22
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:47
 msgid ""
 "The **Values list** lists the values of an attribute table. To list all "
-"possible values of an attribute, select the attribute in the Fields list and "
-"click the **[all]** button. To list the first 25 unique values of an "
+"possible values of an attribute, select the attribute in the Fields list and"
+" click the **[all]** button. To list the first 25 unique values of an "
 "attribute column, select the attribute column in the Fields list and click "
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
-msgstr ""
-"Список **Значения** содержит значения атрибутов. Чтобы просмотреть все "
-"значения атрибута, выберите нужный атрибут в списке «Поля» и нажмите кнопку "
-"**[Все]**. Нажатие кнопки **[Образец]** после выбора нужного атрибута в "
-"списке «Поля» выводит до 25 значений данного атрибута. Чтобы добавить "
-"добавить конкретное значение в поле «SQL-условие WHERE», следует дважды "
-"щёлкнуть по нему в списке «Значения»."
+msgstr "Список **Значения** содержит значения атрибутов. Чтобы просмотреть все значения атрибута, выберите нужный атрибут в списке «Поля» и нажмите кнопку **[Все]**. Нажатие кнопки **[Образец]** после выбора нужного атрибута в списке «Поля» выводит до 25 значений данного атрибута. Чтобы добавить добавить конкретное значение в поле «SQL-условие WHERE», следует дважды щёлкнуть по нему в списке «Значения»."
 
-# 060e8c5caf3e44579b13ca9f92f69c4c
+# f8764e53d78f4d1fbabcaccb956119d8
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:54
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
 "to the SQL where clause field, click the appropriate button. Relational "
-"operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
-"logical operators (``AND``, ``OR``, ...) are available."
+"operators ( = , > , ...), string comparison operator ( LIKE ), logical "
+"operators ( AND , OR, ...) are available."
 msgstr ""
-"Секция **Операторы** содержит все допустимые операторы. Чтобы добавить "
-"оператор в поле «SQL-условие WHERE, нажмите нужную кнопку. Доступны: "
-"операторы отношения (``=`` , ``>`` ,...), оператор сравнения строк "
-"(``LIKE``), логические операторы (``AND``, ``OR``,...)."
 
-# 9cef45f5cc95484aaab2720d93572303
+# 73b4570de6f04ad5bfa1b3f28ca08668
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:59
 msgid ""
 "The **[Test]** button shows a message box with the number of features "
 "satisfying the current query, which is usable in the process of query "
-"construction. The **[Clear]** button clears the text in the SQL where clause "
-"text field. The **[Save]** and **[Load]** button allow to save and load SQL "
-"queries. The **[OK]** button closes the window and selects the features "
+"construction. The **[Clear]** button clears the text in the SQL where clause"
+" text field. The **[Save]** and **[Load]** button allow to save and load SQL"
+" queries. The **[OK]** button closes the window and selects the features "
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
-msgstr ""
-"Нажатие кнопки **[Проверить]** показывает окно сообщения с количеством "
-"записей, удовлетворяющих данному запросу, что бывает очень полезно в "
-"процессе построения запроса. Кнопка **[Очистить]** очищает поле «SQL-условие "
-"WHERE». Кнопки **[Сохранить]** и **[Загрузить]** позволяют сохранять запросы "
-"для дальнейшего использования и загружать готовые запросы. Кнопка **[OK]** "
-"закрывает окно «Конструктора запросов» и выбирает записи, удовлетворяющие "
-"запросу. Кнопка **[Отменить]** закрывает окно, при этом текущая выборка "
-"остаётся неизменной."
+msgstr "Нажатие кнопки **[Проверить]** показывает окно сообщения с количеством записей, удовлетворяющих данному запросу, что бывает очень полезно в процессе построения запроса. Кнопка **[Очистить]** очищает поле «SQL-условие WHERE». Кнопки **[Сохранить]** и **[Загрузить]** позволяют сохранять запросы для дальнейшего использования и загружать готовые запросы. Кнопка **[OK]** закрывает окно «Конструктора запросов» и выбирает записи, удовлетворяющие запросу. Кнопка **[Отменить]** закрывает окно, при этом текущая выборка остаётся неизменной."
 
-# bb9b9d226e3a46c7a82cdbde7ec3ca06
+# 38391df57a624f8882d5076d63a45549
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:70
 msgid "**Changing the Layer Definition**"
 msgstr "**Ограничение слоя**"
 
-# e79aaac32e0f45c480b2650131d90bca
+# 8126ab7654ee4b08b5c7a3f51a427eaf
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
 msgid ""
 "You can change the layer definition after it is loaded by altering the SQL "
-"query used to define the layer. To do this, open the vector :guilabel:`Layer "
-"Properties` dialog by double-clicking on the layer in the legend and click "
+"query used to define the layer. To do this, open the vector :guilabel:`Layer"
+" Properties` dialog by double-clicking on the layer in the legend and click "
 "on the **[Query Builder]** button on the :guilabel:`General` tab. See "
 "Section :ref:`vector_properties_dialog` for more information."
-msgstr ""
-"При помощи SQL-запроса можно задать ограничение слоя. Для этого откройте "
-"диалог :guilabel:`Свойства слоя` двойным щелчком по имени векторного слоя, и "
-"нажмите на кнопку **[Конструктор запросов]** во вкладке :guilabel:`Общие`. "
-"Дополнительную информацию можно найти в разделе "
-":ref:`vector_properties_dialog`."
+msgstr "При помощи SQL-запроса можно задать ограничение слоя. Для этого откройте диалог :guilabel:`Свойства слоя` двойным щелчком по имени векторного слоя, и нажмите на кнопку **[Конструктор запросов]** во вкладке :guilabel:`Общие`. Дополнительную информацию можно найти в разделе :ref:`vector_properties_dialog`."
 
-# 9daf0cc3963b4af5b1c3502caa974708
+# 1c1150aa2ccd497fbe47bc85e68085f4
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:84
 msgid "Selection"
 msgstr "Выделение при помощи запроса"
 
-# 3496ad9fdbb34b41916f40ab0ea42db1
+# e9f32693861f4aa8baeb591b52745d89
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:86
 msgid ""
 "With |qg| it is possible also to select features for visualisation using a "
-"similar query builder interface to that used in :ref:`vector_query_builder`. "
-"In the above section the purpose of the query builder is to highlight all "
+"similar query builder interface to that used in :ref:`vector_query_builder`."
+" In the above section the purpose of the query builder is to highlight all "
 "selected features meeting the filter criteria in yellow. The rest of the "
 "features do not change their appearance."
-msgstr ""
-"В |qg| возможно осуществлять выборку, используя тот же интерфейс, который "
-"описан в разделе :ref:`vector_query_builder`. Выше демонстрировалось\n"
-"использование «Конструктора поисковых запросов» только в целях выделения "
-"цветом записей, удовлетворяющих определённому критерию. Остальные объекты "
-"остаются неизменными."
+msgstr "В |qg| возможно осуществлять выборку, используя тот же интерфейс, который описан в разделе :ref:`vector_query_builder`. Выше демонстрировалось\nиспользование «Конструктора поисковых запросов» только в целях выделения цветом записей, удовлетворяющих определённому критерию. Остальные объекты остаются неизменными."
 
-# cb07fad9efe9473cb90fe8df33029bc3
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:92
+# 0beac2b4e395490e8c66f13db2224f63
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:91
 msgid ""
 "Another possibility is to make a selection by right clicking on a layer in "
 "the legend and choosing :guilabel:`Query ...`. If you perform a SQL query "
-"here only the selected features are displayed in the map view. Features that "
-"don't match the SQL query are not visualised in the map view. The same "
+"here only the selected features are displayed in the map view. Features that"
+" don't match the SQL query are not visualised in the map view. The same "
 "function is available from the :guilabel:`General` tab in the vector "
 ":guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
 "button right below. The selection described above can be used with all "
 "vector data providers."
-msgstr ""
-"Также можно создать выборку вызвав контекстное меню слоя и выбрав пункт "
-":guilabel:`Запрос...`. Если задать запрос таким образом, на карте будут "
-"отображены только объекы удовлетворяющие условию. Объекты, не "
-"удовлетворяющие условиям, отображаться не будут. Аналогичного эффекта можно "
-"добиться открыв вкладку :guilabel:`Общие` диалога :guilabel:`Свойства слоя`. "
-"Там тоже есть кнопка **[Конструктор запросов]**. Механизм ограничения слоя "
-"может применяться ко всем типам векторных данных."
+msgstr "Также можно создать выборку вызвав контекстное меню слоя и выбрав пункт :guilabel:`Запрос...`. Если задать запрос таким образом, на карте будут отображены только объекы удовлетворяющие условию. Объекты, не удовлетворяющие условиям, отображаться не будут. Аналогичного эффекта можно добиться открыв вкладку :guilabel:`Общие` диалога :guilabel:`Свойства слоя`. Там тоже есть кнопка **[Конструктор запросов]**. Механизм ограничения слоя может применяться ко всем типам векторных данных."
 
-# 1eef1e856ee347c7be2c4778c349ecce
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:101
+# 2f9d6b5ad019431f94237b796f81dd72
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:100
 msgid "Save selected features as new layer"
 msgstr "Сохранение выделенных объектов в качестве нового слоя"
 
-# f29f07bbbebd4c10bbd93b0394b39535
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:103
+# 3ac26dabd8cf4581aefed03cb3f6c7d7
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:102
 msgid ""
 "The selected features can be saved as any OGR supported vector format and "
 "also transformed into another Coordinate Reference System (CRS). Just open "
@@ -202,11 +152,4 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
-msgstr ""
-"Выделенные объекты можно сохранить в любом OGR-совместимом векторном формате "
-"и заодно преобразовать в другую систему координат. Для этого достаточно "
-"вызвать контекстное меню слоя нажав правую кнопку мыши и выбрав пункт "
-":menuselection:`Сохранить выделение как...`, затем необходимо указать имя "
-"итогового файла, его формат и желаемую систему координат (см. раздел "
-":ref:`label_legend`). Кроме того, в этом диалоге можно задать дополнительные "
-"параметры OGR."
+msgstr "Выделенные объекты можно сохранить в любом OGR-совместимом векторном формате и заодно преобразовать в другую систему координат. Для этого достаточно вызвать контекстное меню слоя нажав правую кнопку мыши и выбрав пункт :menuselection:`Сохранить выделение как...`, затем необходимо указать имя итогового файла, его формат и желаемую систему координат (см. раздел :ref:`label_legend`). Кроме того, в этом диалоге можно задать дополнительные параметры OGR."
