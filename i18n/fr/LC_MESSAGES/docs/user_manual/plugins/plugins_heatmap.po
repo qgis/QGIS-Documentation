@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr_FR\n"
+"X-Source-Language: C\n"
 
 # 8a5f2b3ef5ca42d5b60688164f5d517f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:10
 msgid "Heatmap Plugin"
-msgstr ""
+msgstr "Extension Carte de chaleur"
 
 # 6fcfa116b8314fcb8f8266a670b7f496
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:12
@@ -30,19 +33,26 @@ msgid ""
 "point related information. From the result \"hotspots\" can easily be "
 "identified."
 msgstr ""
+"L'extension |heatmap| :sup:`Carte de chaleur` permet de créer une carte de "
+"chaleur à partir d'un couche de ponctuels. Une carte de chaleur est une "
+"carte raster montrant la densité ou l'amplitude d'une information relative "
+"au point. Le résultat se visualise sous la forme de \"points chauds\"."
 
 # d72bd6f97f9840e583b3bb3a7c7bf8e1
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:18
 msgid "Activate the Heatmap plugin"
-msgstr ""
+msgstr "Activer l'extension Carte de chaleur"
 
 # 608c23b488c34d418da450c871967ad5
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:20
 msgid ""
 "First this core plugin needs to be activated using the Plugin Manager (see "
-"Section :ref:`load_core_plugin`). After activation the heatmap icon |"
-"heatmap| can be found in the Raster Toolbar."
+"Section :ref:`load_core_plugin`). After activation the heatmap icon "
+"|heatmap| can be found in the Raster Toolbar."
 msgstr ""
+"Tout d'abord, cette extension principale doit être activée dans le "
+"Gestionnaire d'extensions (voir la Rubrique :ref:`load_core_plugin`). "
+"L'extension |heatmap| se trouve ensuite dans le menu Raster."
 
 # 9253d377b7964d76bb95a7a314ec0ee1
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:24
@@ -50,11 +60,13 @@ msgid ""
 "Select from menu :menuselection:`View --> Toolbars --> Raster` to activate "
 "the Raster Toolbar when it is not yet activated."
 msgstr ""
+"Si la barre de menu Raster n'est pas affichée, sélectionnez le menu "
+":menuselection:`Vue -> Barres d'outils -> Raster`."
 
 # fdd09ce3064440f68d1b3d4051aa131f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:28
 msgid "Using the Heatmap plugin"
-msgstr ""
+msgstr "Utiliser l'extension Carte de chaleur"
 
 # 83a224cdf297413b98444e06cc92ab27
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:30
@@ -62,11 +74,13 @@ msgid ""
 "The |heatmap| :sup:`Heatmap` toolbutton starts the dialog of the Heatmap "
 "plugin (see figure_heatmap_2_)."
 msgstr ""
+"Le bouton |heatmap| :sup:`Carte de chaleur` ouvre une fenêtre de l'extension "
+"(voir figure figure_heatmap_2_)."
 
 # c1e88ed7c8004f4280e7ba368d7ddf27
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:33
 msgid "The dialog has the following options:"
-msgstr ""
+msgstr "Cette fenêtre a les options suivantes:"
 
 # b4bc015371284502a940f48e88fdd861
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:35
@@ -74,6 +88,8 @@ msgid ""
 "**Input Point Vector** dialog: Provides a selection of loaded point vector "
 "maps."
 msgstr ""
+"**Points en entrée** : Liste déroulante permettant le choix de la couche de "
+"points à traiter."
 
 # 59e446e606fa49b3a686e0bbe3b656cc
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:36
@@ -82,6 +98,9 @@ msgid ""
 "the name of the output raster the Heatmap plugin will generate. It is not "
 "necessary to give a file extension"
 msgstr ""
+"**Raster en sortie** : Utilisez le bouton |browsebutton| pour choisir le "
+"dossier et le nom du fichier raster à générer. Il n'est pas nécessaire de "
+"mettre une extension"
 
 # 405ec487e4344c5e9ed2f5451c58691a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:39
@@ -90,6 +109,9 @@ msgid ""
 "supported by GDAL can be choosen, GeoTIFF is most in cases the best format "
 "to choose."
 msgstr ""
+"**Format** : Choisissez ici le format de sortie. Bien que tous les formats "
+"reconnus par GDAL puissent être choisis, le format par défaut GeoTIFF est "
+"dans la plupart des cas celui le plus adapté."
 
 # 1698d166ae8c4890a2de8d4175ee7b9b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:41
@@ -99,6 +121,10 @@ msgid ""
 "more circles around points overlap eachother the brighter hotspots will "
 "occur!"
 msgstr ""
+"**Rayon** : peut être exprimé en mètres ou en unités de carte. Le rayon ne "
+"doit pas être choisi trop petit, le rendu d'une carte de chaleur est "
+"d'autant meilleur que les points se chevauchent et indiquent ainsi les "
+"points chauds!"
 
 # 86dc36e548044444a1461894b35fc890
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:44
@@ -106,6 +132,8 @@ msgid ""
 "**Decay Ratio**: is used to show with which ratio the heat dies out from the "
 "center."
 msgstr ""
+"**Ratio de corruption** : indique à quelle vitesse la chaleur diminue à "
+"partir du centre."
 
 # 071079cff2694eb9a6f9fdacfd75a58a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:47
@@ -113,6 +141,8 @@ msgid ""
 "When 0 is given (=minimum) the heat will be concentrated in the centre of "
 "given radius and be completely extinguished at the edge."
 msgstr ""
+"Quand la valeur est à 0(soit le minimum), la chaleur va être concentrée au "
+"centre du cercle et sera complète éteinte à son extrémité."
 
 # 976a5d30b3e24ee78ccd2e2d222fb99a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:49
@@ -121,11 +151,14 @@ msgid ""
 "centre it is completely extinguished. Higher given values are allowed but "
 "have no effect."
 msgstr ""
+"Quand la valeur est à 10 (valeur maximale), la chaleur sera concentrée  sur "
+"les bords du cercle et le centre sera complètement éteint. Des valeurs plus "
+"grandes sont autorisées, mais le rendu ne changera pas."
 
 # 9effe92711604804a6888715026c392b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:52
 msgid "When 1 is given the heat is spread evenly over the whole circle."
-msgstr ""
+msgstr "Quand la valeur est à 1, la chaleur est iuniforme sur tout le cercle."
 
 # 991f6d19c0254c40ba4dcf0e7adb7c0f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:53
@@ -133,6 +166,8 @@ msgid ""
 "When a negative Decay Ratio is given you will create a Coolmap instead of a "
 "Heatmap!"
 msgstr ""
+"Si le ratio est négatif, vous obtiendrez une carte de fraîcheur au lieu "
+"d'une carte de chaleur!"
 
 # d31a0e06526e46ac949dfe47337b1e7b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:56
@@ -140,6 +175,8 @@ msgid ""
 "When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give "
 "acces to additional advanced options."
 msgstr ""
+"Le case |checkbox| :guilabel:`Avancé` vous permet d'accéder à d'autres "
+"options."
 
 # 4446835eb66a42fd81aabf63dc99b1fd
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:59
@@ -151,6 +188,12 @@ msgid ""
 "the cell sizes will also be halved. The area of the output raster will "
 "remain the same!"
 msgstr ""
+"**Cellule** et **Colonne** permettent de changer la taille du pixel dans le "
+"raster créé. Un nombre plus important de lignes et de colonnes rendra les "
+"pixels plus petits et la taille du fichier en sortie sera plus importante. "
+"Le traitement sera plus long. A titre d'exemple, doubler le nombre de lignes "
+"double automatiquement le nombre de colonnes et la taille des cellules est "
+"divisée par 4, l'emprise du fichier raster créée restant constante!"
 
 # 0751ae6978474805aab35f75b1112b49
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:64
@@ -158,6 +201,9 @@ msgid ""
 "**Cell Size X** and **Cell Size Y** influence the pixelsize of the output "
 "raster and will also change the rows and columns."
 msgstr ""
+"**Taille en X** et **Taille en Y** détermine la taille du pixel dans le "
+"fichier raster en sortie et permet de changer le nombre de lignes et de "
+"colonnes."
 
 # 5bde457ab662426eb8ccd728ef64c1ad
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:67
@@ -165,17 +211,23 @@ msgid ""
 "The point vector layer may have attribute fields that can be used to create "
 "a heatmap:"
 msgstr ""
+"La couche de points en entrée peut avoir des attributs permettant de créer "
+"la carte de chaleur:"
 
 # f9a91afbf5fa4a98a3dbb41f3ac14042
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:70
 msgid "**Use Radius from Field**: the radius set from an attribute field."
 msgstr ""
+"**Utiliser le rayon depuis**: identifie le champ indiquant le rayon à "
+"prendre en compte."
 
 # d0aa1e5bf7b6475dacd1e3a3aded95af
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:71
 msgid ""
 "**Use Weight from field**: the weight factor set from an attribute field."
 msgstr ""
+"**Utiliser le poids depuis**: identifie le champ indiquant la pondération à "
+"utiliser."
 
 # ca8694a5c5474e4f8131166806066aa9
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:73
@@ -184,11 +236,15 @@ msgid ""
 "heatmap. The first result is a grey surface that still needs to be given "
 "additional treatment to make it a heatmap."
 msgstr ""
+"Quand la couche raster de sortie est renseignée, le bouton **[OK]** peut "
+"être actionné pour créer la carte de chaleur. Dans un premier temps, cette "
+"couche est uniformément grise et son style doit être modifié pour la "
+"transformée en carte de chaleur."
 
 # b3816fad54c74b9bb1298878aa02af83
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:77
 msgid "**Changing the raster size properties**"
-msgstr ""
+msgstr "**Changer les propriétés de taille du raster**"
 
 # 510203d9c8f7407b9496c5e6de67f991
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:79
@@ -196,26 +252,34 @@ msgid ""
 "When changing the raster size properties, this also changes the resulting "
 "output. The hotspot areas will become bigger."
 msgstr ""
+"Changer les propriétés de taille du raster modifie le résultat de "
+"l'extension. Les zones de chaleur deviennent plus grandes."
 
 # 54b1a2e44a274f0eaebb92beae990513
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:83
 msgid "Creating a Heatmap"
-msgstr ""
+msgstr "Créer une carte de chaleur"
 
 # f0d38cc110074928bda6652199b46473
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:85
 msgid ""
 "For the following example, we will use the ``airports`` vector point layer "
 "from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent "
-"QGIS tutorial on making heatmaps can be found on `http://qgis."
-"spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07/tutorial-making-"
-"heatmaps-using-qgis-and.html>`_."
+"QGIS tutorial on making heatmaps can be found on "
+"`http://qgis.spatialthoughts.com "
+"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
 msgstr ""
+"Pour l'exemple suivant, nous utiliserons la couche ``airports`` fournie dans "
+"l'échantillon de jeux de données de QGIS (voir :ref:`label_sampledata`). Un "
+"excellent tutoriel sur les cartes de chaleur est également disponible à "
+"l'adresse `http://qgis.spatialthoughts.com "
+"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
 
 # 3b4515a26ede475db5d701d388bca756
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:89
 msgid "In Figure_Heatmap_1_ the airports of Alaska are shown."
 msgstr ""
+"Dans la figure Figure_Heatmap_1_ sont affichés les aéroports de l'Alaska."
 
 # 38a89caf5b2840fc9dff1ca0cc123e91
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:104
@@ -223,6 +287,8 @@ msgid ""
 "Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts "
 "(see Figure_Heatmap_2_)."
 msgstr ""
+"Sélectionnez le bouton |heatmap| :sup:`Carte de chaleur`. La fenêtre de "
+"l'extension s'affiche (voir figure Figure_Heatmap_2_)."
 
 # dbaa891101bb4eca819149de786c4423
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:106
@@ -230,29 +296,38 @@ msgid ""
 "In field :guilabel:`Input Point Vector` |selectstring| select ``airpoirt`` "
 "from the list of  point layers loaded in current project."
 msgstr ""
+"Dans le champs :guilabel:`Points en entrée` |selectstring| sélectionner "
+"``airports`` à partir de la liste déroulante indiquant les couches de points "
+"présentes dans le projet."
 
 # 57a5edbec47c4f449c02e3b249023d79
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:108
 msgid ""
-"In field :guilabel:`Output Raster` give the name and location using the |"
-"browsebutton| button of the output raster. Give the output raster file the "
+"In field :guilabel:`Output Raster` give the name and location using the "
+"|browsebutton| button of the output raster. Give the output raster file the "
 "name ``heatmap_airports`` to give an file extension is not necessary."
 msgstr ""
+"Dans le champ :guilabel:``Raster en sortie``, choisissez le répertoire et le "
+"nom du fichier à créer en cliquant sur le bouton |browsebutton|, par exemple "
+"``chaleur_aeroports``. Il n'est pas nécessaire de mettre une extension de "
+"fichier."
 
 # 947445e249eb489abd29c030fb578805
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:111
 msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
-msgstr ""
+msgstr "Dans le champ :guilabel:`Format`, choisissez  ``GeoTIFF``."
 
 # 2db49076197c4cf3b78e18d0022279c3
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:112
 msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
-msgstr ""
+msgstr "Dans le champ :guilabel:`Rayon`, mettez ``1000000`` mètres."
 
 # 153f9f60760e4feba945a3efb0d4c5a0
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:113
 msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
 msgstr ""
+"Vous pouvez laisser le :guilabel:`Ratio de corruption` à sa valeur par "
+"défaut : ``0.1``."
 
 # 99b2aa93e4c24fc7b23bacdaa504b22b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:114
@@ -260,6 +335,8 @@ msgid ""
 "Click on **[OK]**  to create and load the new raster map (see "
 "Figure_Heatmap_3_)."
 msgstr ""
+"Cliquez sur **[OK]** pour créer et charger la nouvelle couche raster (voir "
+"figure Figure_Heatmap_3_)."
 
 # 0eb336e6460e4de88489026cf9cdc183
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:128
@@ -269,19 +346,26 @@ msgid ""
 "some additional configuration of this layer needs to be done to make the "
 "heatmap present itself."
 msgstr ""
+"Le résultat après chargement de la carte de chaleur n'est probablement pas "
+"le résultat auquel on peut s'attendre. La surface est uniformément grise et "
+"ne montre aucune variation. Il est nécessaire de modifier l'apparence de "
+"cette couche afin de distinguer la carte de chaleur."
 
 # e150898d6929463d8368d62a0aa79a7b
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:145
 msgid ""
 "Open the properties dialog of layer ``heatmap_airports`` (select the layer "
-"``heatmap_airports``, open context menu with right mouse button and select :"
-"guilabel:`Properties`)."
+"``heatmap_airports``, open context menu with right mouse button and select "
+":guilabel:`Properties`)."
 msgstr ""
+"Ouvrez les propriétés de la couche ``chaleur_aéroports`` (sélectionnez la "
+"couche ``chaleur_aeroports``, faites un clic-droit et dans le menu qui "
+"apparaît, sélectionnez :guilabel:`Propriétés`)."
 
 # 5015054c56fc462091607985d13e2c1f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:148
 msgid "Select the :guilabel:`Symbology` tab."
-msgstr ""
+msgstr "Sélectionnez l'onglet :guilabel:`Style`."
 
 # 4a2ea9c4349c42ac9e4cb877b545c58f
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:149
@@ -289,11 +373,13 @@ msgid ""
 "Change :guilabel:`Color map` |selectstring| from 'Grayscale' to "
 "'Pseudocolor'."
 msgstr ""
+"Changez la :guilabel:`Palette de couleur` |selectstring| de 'Dégradé de "
+"gris' à 'Pseudo-Couleurs'."
 
 # 20ffde074d874f7691435b47c47fe110
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:150
 msgid "Press the **[Apply]** button."
-msgstr ""
+msgstr "Appuyez sur **[Appliquer]**."
 
 # 0a693020bfe843c5adda79f7e4bbf255
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:151
@@ -301,13 +387,15 @@ msgid ""
 "Switch to the :guilabel:`Transparency` tab and set :guilabel:`Global "
 "transparency` |slider| to 40%."
 msgstr ""
+"Allez sur l'onglet :guilabel:`Transparence` et fixez la "
+":guilabel:`Tranparence globale` à 40%."
 
 # 60010176c49a4376aa5665a5e33d8bce
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:153
 msgid "Select **[OK]**"
-msgstr ""
+msgstr "Cliquez sur **[OK]**"
 
 # 9b2a5eb992f1418694dd4ee7f562d46a
 #: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:155
 msgid "The final result is shown in Figure_Heatmap_4_."
-msgstr ""
+msgstr "La figure Figure_Heatmap_4_ montre le résultat obtenu."
