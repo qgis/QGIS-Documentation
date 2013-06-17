@@ -110,18 +110,19 @@ Core Plugins
 #.  Interpolation plugin (interpolate based on vertices of a vector layer)
 #.  Mapserver Export (Export QGIS project file to a MapServer map file)
 #.  Offline Editing (Allow offline editing and synchronizing with database)
-#.  OpenStreetMap plugin (Viewer and editor for openstreetmap data)
 #.  Oracle Spatial GeoRaster support
 #.  Plugin Installer (Download and install QGIS python plugins)
 #.  Raster terrain analysis (Raster based terrain analysis)
 #.  Road graph plugin (Shortest Path network analysis)
 #.  SPIT (Import Shapefile to PostgreSQL/PostGIS)
 #.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
-#.  Zonal statictics plugin (Calculate count, sum, mean of raster for each polygon
+#.  Zonal statistics plugin (Calculate count, sum, mean of raster for each polygon
     of a vector layer)
 #.  Spatial Query plugin (Makes spatial queries on vector layers)
 #.  eVIS (Event Visualization Tool)
 #.  fTools (Tools for vector data analysis and management)
+#.  Open Layers plugin (OpenStreetMap, Google Maps, Bing Maps layers and more)
+#.  Topology Checker (Finding topological errors in vector layers)
 
 External Python Plugins
 ........................
@@ -143,13 +144,15 @@ that will be described in this manual.
 
 **QGIS Browser**
 
-A stand alone app and a new panel in QGIS. The browser lets you easily navigate
-your file system and connection based (PostGIS, WFS etc.) datasets, preview them
-and drag and drop items into the canvas.
+For the stand alone app and panel in QGIS there is now a second browser available. You can
+add selected layers and filter files now.
 
 **DB Manager**
 
-The DB manager is now officially part of QGIS core. You can drag layers from the
+The DB manager was extended with new functions. You can easily import and export files and layers
+into your database now.
+
+You can drag layers from the
 QGIS Browser into DB Manager and it will import your layer into your spatial
 database. Drag and drop tables between spatial databases and they will get
 imported. You can use the DB Manager to execute SQL queries against your spatial
