@@ -3,29 +3,31 @@
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-03-20 14:25\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2013-05-18 13:10+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Source-Language: C\n"
 
 # fb2ecbc928ce4fa492072738b27fce8a
 #: ../../source/docs/user_manual/sextante/batch.rst:8
 msgid "The SEXTANTE batch processing interface"
-msgstr ""
+msgstr "L'interfaccia di SEXTANTE per eseguire processi in modalità \"batch\""
 
 # 2d42314fe83f49f191a4cda5b87b48f5
 #: ../../source/docs/user_manual/sextante/batch.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "Introduzione"
 
 # d80335bf945b4c2eb15605ea73c13d8a
 #: ../../source/docs/user_manual/sextante/batch.rst:13
@@ -36,6 +38,12 @@ msgid ""
 "when processing large amounts of data, since it is not necessary to launch "
 "the algorithm many times from the toolbox."
 msgstr ""
+"Gli algoritmi di SEXTANTE (compresi i modelli) possono essere eseguiti come "
+"un processo batch. Questo significa che possono essere eseguiti usando non "
+"un singolo set di input ma anche più di uno, eseguendo l'algoritmo tutte le "
+"volte che è necessario. Ciò si rivela utile quando si ha bisogno di "
+"processare grandi quantità di dati, dal momento che non è necessario "
+"lanciare ogn volta l'algoritmo dalla toolbox."
 
 # c50145b48288417fbad05a63fafb9639
 #: ../../source/docs/user_manual/sextante/batch.rst:19
@@ -44,11 +52,14 @@ msgid ""
 "toolbox and select the :guilabel:`Execute as batch process` option in the "
 "pop-up menu that will appear."
 msgstr ""
+"Per eseguire un algoritmo come un processo batch, selezionarlo e col "
+"pulsante di destra del mouse scegliere la voce :guilabel:`Execute as batch "
+"process` dal menu che apparirà."
 
 # 310d4f31361040ad8f3d74bff3cb3bd2
 #: ../../source/docs/user_manual/sextante/batch.rst:36
 msgid "The parameters table"
-msgstr ""
+msgstr "La tabella dei parametri"
 
 # f5aa88052dfd45ad8b586789e466bf96
 #: ../../source/docs/user_manual/sextante/batch.rst:38
@@ -59,6 +70,12 @@ msgid ""
 "each time the algorithm has to be executed. Values are introduced using a "
 "table like the one shown next."
 msgstr ""
+"Eseguire un processo batch è un'operazione simile ad un'esecuzione singola "
+"di un algoritmo. Devono essere definiti i valori dei parametri, ma in questo "
+"caso, è necessario definire non solo un singolo valore per ciascunodi essi, "
+"ma invece un set di valori, uno per ogni volta che l'algoritmo deve essere "
+"eseguito. I valori sono introdotti per mezzo di una tabella del tipo di "
+"quella mostrata oltre."
 
 # c2d25c26e03e4009a39d84a2c06e16f0
 #: ../../source/docs/user_manual/sextante/batch.rst:56
@@ -68,13 +85,22 @@ msgid ""
 "parameters dialog that you see when executing an algorithm from the toolbox, "
 "but with a different arrangement."
 msgstr ""
+"Ogni riga di tale tabella rappresenta una sinola esecuzione dell'algoritmo "
+"ed ogni cella contiene il valore di uno dei parametri caratteristici "
+"dell'algoritmo. In un certo senso, è simile alla finestra di dialogo dei "
+"parametri utilizzata quando si lancia un algoritmo dalla toolbox, ma "
+"organizzata in maniera differente."
 
-# 46364748dd7c459abf34043e8f852c97
+# "Pulsanti" o "Bottoni" ?
+# pulsanti
 #: ../../source/docs/user_manual/sextante/batch.rst:61
 msgid ""
 "By default, the table contains just two rows. You can add or remove rows "
 "using the buttons on the lower part of the window."
 msgstr ""
+"Come impostazione predefinita, la tabella contiene solo due righe. E' "
+"possiile aggiungere o cancellare righe utilizzando i pulsanti posti nella "
+"parte inferiore della finestra."
 
 # 53d5f16134b34c079f8bed94a9286d07
 #: ../../source/docs/user_manual/sextante/batch.rst:64
@@ -82,11 +108,12 @@ msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values."
 msgstr ""
+"Una volta definita la dimensione della tabella, deve essere riempita coi "
+"valori desiderati."
 
-# 2f6601e1cdbf4db0976248a922b812e3
 #: ../../source/docs/user_manual/sextante/batch.rst:68
 msgid "Filling the parameters table"
-msgstr ""
+msgstr "Compilazione della tabella dei parametri"
 
 # 28ba6cfff049483c918c097c7a73bf8b
 #: ../../source/docs/user_manual/sextante/batch.rst:70
@@ -95,6 +122,9 @@ msgid ""
 "select it from the list of available options, depending on the parameter "
 "type."
 msgstr ""
+"Per la maggior parte dei parametri, scegliere il valore appropriato è "
+"banale. Basta semplicemente scrivere il valore o selezionarlo dalla lista "
+"delle opzioni disponibili, a seconda del tipo di parametro stesso."
 
 # 0006104352bd43c9af605448d0ceb6ed
 #: ../../source/docs/user_manual/sextante/batch.rst:73
@@ -107,6 +137,13 @@ msgid ""
 "even if no data objects at all are opened and the algorithm cannot be run "
 "from the toolbox."
 msgstr ""
+"Le principali differenze si hanno per parametri che sono layer o tabelle e "
+"per il percorso di salvataggio dei risultati. Per quanto riguarda input "
+"rappresentati da layer e tabelle, quando un algoritmo è eseguito come parte "
+"di un processo batch, i dati di input sono caricati direttemente da file e "
+"non a partire dai temi già aperti in QGIS. Per questo motivo, qualunque "
+"algoritmo può essere eseguito in modalità batch anche se nessun tema è stato "
+"ancora caricato e l'algoritmo non può essere lanciato dalla toolbox."
 
 # d64c2c98c5024ce8ba01b9cea9363310
 #: ../../source/docs/user_manual/sextante/batch.rst:80
@@ -119,6 +156,14 @@ msgid ""
 "needed. If it represents a multiple input, all the selected files will be "
 "added to a single cell, separated by semicolons (``;``)."
 msgstr ""
+"Il nome dei file per i dati di input può essere digitato direttamente "
+"oppure, meglio, cliccando sul pulsante sul lato destro della cella che apre "
+"una classica finestra di dialogo per la scelta di un file. Possono essere "
+"selezionati più file insieme. Se il parametro di input rappresenta un dato "
+"singolo e sono selezionati diversi file, ciascuno di essi sarà inserito in "
+"righe separate, aggiungendone di nuove se necessario. Se il parametro di "
+"input prevede più dati, tutti i file selezionati saranno aggiunti in "
+"un'unica cella, separati da punto e virgola (``;``)."
 
 # bc22c88fd1f044f88aec401fb2f50238
 #: ../../source/docs/user_manual/sextante/batch.rst:88
@@ -128,6 +173,11 @@ msgid ""
 "can type the name directly or use the file chooser dialog that appears when "
 "clicking on the accompanying button."
 msgstr ""
+"I risultati sono sempre salvati in un file permanente e, a differenza di "
+"quando un algoritmo è lanciato dalla toolbox, non è permesso il loro "
+"salvataggio in un file temporaneo. E' possibile digitare direttamente il "
+"nome del file di output oppure utilizzare la finestra di dialogo della "
+"scelta dei file che compare quando si clicca sul buttone di accompagnamento."
 
 # 6737608a76d246b3b29a9abd2caccb86
 #: ../../source/docs/user_manual/sextante/batch.rst:93
@@ -135,6 +185,9 @@ msgid ""
 "Once you select the file, a new dialog is shown to allow for autocompletion "
 "of other cells in the same column (same parameter)."
 msgstr ""
+"Una volta selezionato il file di output, appare una nuova finestra di "
+"dialogo che permette l'autocompletamento delle altre celle nella stessa "
+"colonna (stesso parametro)."
 
 # c0acf8bff42a4372b3154e941b4ba361
 #: ../../source/docs/user_manual/sextante/batch.rst:108
@@ -146,6 +199,12 @@ msgid ""
 "much easier to fill the table, and the batch process can be defined with "
 "less effort."
 msgstr ""
+"Se si mantiene il valore predefinito ('Do not autocomplete'), SEXTANTE "
+"metterà il nome del file selezionato nella cella selezionata dalla tabella "
+"dei parametri. Se viene selezionata una qualunque delle altre opzioni, tutte "
+"le celle sottostanti quella selezionata saranno riempite automaticamente "
+"basandosi sul criterio definito. In questo modo, è molto più agevole "
+"riempire la tabella e il processo batch può essere definito con meno sforzo."
 
 # 9b0c5673aa8e4d92b56b22f074c0faba
 #: ../../source/docs/user_manual/sextante/batch.rst:114
@@ -155,11 +214,15 @@ msgid ""
 "This is particularly useful for naming output data object according to input "
 "ones."
 msgstr ""
+"Il riempimento automatico può essere fatto semplicemente aggiungendo numeri "
+"correlati al percorso del file selezionato o aggiungendo il valore di un "
+"altro campo alla stessa riga. Ciò è particolarmente utile per dare un nome "
+"ai dati di output che sia in accordo con quello dei dati di input."
 
 # 1a076097c0ff4bf190206c9811daa4fe
 #: ../../source/docs/user_manual/sextante/batch.rst:132
 msgid "Executing the batch process"
-msgstr ""
+msgstr "Esecuzione di un processo batch"
 
 # 4d53f53b935546f6ad4c349f473bda78
 #: ../../source/docs/user_manual/sextante/batch.rst:134
@@ -168,3 +231,7 @@ msgid ""
 "values, just click on **[OK]**. SEXTANTE will show the progress of the "
 "global batch process in the progress bar in the lower part of the dialog."
 msgstr ""
+"Per eseguire un processo batch, una volta introdotti tutti i valori "
+"necessari, semplicemente cliccare su **[OK]**. SEXTANTE mostrerà "
+"l'avanzamento del processo di batch globale nella barra di avanzamento posta "
+"nella parte inferiore della finestra di dialogo."
