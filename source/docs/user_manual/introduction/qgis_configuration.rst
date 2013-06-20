@@ -93,11 +93,25 @@ General Tab
 
 Application
 
-* Select the :guilabel:`Style (QGIS restart required)`|selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
-* Define the :guilabel:`Icon theme`|selectstring|. Currently only 'default' is possible.
-* Define the :guilabel:`Icon size` |selectsring|.
-* Define the :guilabel:`Font. Choose between |radiobutton|:guilabel:`QT default` and a user-defined font.
-* Change the :guilabel:`Timeout for timed messages or dialogs`|selectstring|. 
+* Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
+* Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is possible.
+* Define the :guilabel:`Icon size` |selectstring|.
+* Define the :guilabel:`Font. Choose between :radiobuttonon:`QT default` and a user-defined font.
+* Change the :guilabel:`Timeout for timed messages or dialogs` |selectstring|. 
+* |checkbox| :guilabel:`Hide splash screen at startup`
+* |checkbox| :guilabel:`Show tips at startup`
+* |checkbox| :guilabel:`Bold group box titles`
+* |checkbox| :guilabel:`QGIS-styled group boxes`
+* |checkbox| :guilabel:`Use live-updating color chooser dialog`
+
+
+Project files
+
+* :guilabel:`Open project on launch` |selectstring| (choose between 'New'. 'Most recent' and 'Specific'. When choosing 'Specific' use the |browsebutton| to define a project)
+* |checkbox| :guilabel:`Create new project from default project`. You have the possibility to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`. You can browse through your files and define a directory where you find your user-defined project templates. There will be an entry in :menuselection:`Project --> New From Template` if you first activate |checkbox| :guilabel:`Create new project from default project` and then save a project in the project templates folder.
+* |checkbox| :guilabel:`Prompt to save project and data source changes when required`
+* |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
+* :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
 
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
