@@ -40,7 +40,7 @@ a QGIS Server. But for now we recommend to read one of the following URLs to get
 more information:
 
 * http://karlinapp.ethz.ch/qgis_wms/
-* http://www.qgis.org/wiki/QGIS_mapserver_tutorial
+* http://hub.qgis.org/projects/quantum-gis/wiki/QGIS_Server_Tutorial
 * http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/
 
 .. index:: apache, apache2, Debian_Squeeze
