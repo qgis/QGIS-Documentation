@@ -14,7 +14,9 @@ These rules check with spatial relations whether your features 'Equal', 'Contain
 you apply to your vector data. E.g. normally you won't accept overshoots in line layers but if they depict dead-end streets you 
 won't remove them from your vector layer.
 
-In |qg| it is very simple to create topology rules with the Topology Checker plugin.
+QGis has the built-in topological editing feature which is great for creating new features without errors. But existing data errors and user induced errors are hard to find out. This plugin helps find out such errors through a list of rules.
+
+It is very simple to create topology rules with the Topology Checker plugin.
 
 In figure_topology_rule_ you can see the topology rules which can be applied to a **line layer**:
 
@@ -27,7 +29,7 @@ In figure_topology_rule_ you can see the topology rules which can be applied to 
 
 On **polygon layers** the following rules are available:
 
-* **must contain**: Here you can use a points that should be inside the polygons.
+* **must contain**: Here you can use a points layer that should be inside the polygons.
 * **must not have duplicates**: Whenever a polygon feature is represented twice or more it will occur in the 'Error' field.
 * **must not have gaps**: 
 * **must not have invalid geometries**:
@@ -43,7 +45,3 @@ You can apply the following rules to **point layers**:
 * **must not have duplicates**: Whenever a point is represented twice or more it will occur in the 'Error' field.
 * **must not have invalid geometries**: 
 * **must not have multipart-geometries**:
-
-
-
-

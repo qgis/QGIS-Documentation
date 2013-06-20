@@ -91,6 +91,14 @@ options are:
 General Tab
 -----------
 
+Application
+
+* Select the :guilabel:`Style (QGIS restart required)`|selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
+* Define the :guilabel:`Icon theme`|selectstring|. Currently only 'default' is possible.
+* Define the :guilabel:`Icon size` |selectsring|.
+* Define the :guilabel:`Font. Choose between |radiobutton|:guilabel:`QT default` and a user-defined font.
+* Change the :guilabel:`Timeout for timed messages or dialogs`|selectstring|. 
+
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * Change Selection and Background color
