@@ -96,7 +96,7 @@ Application
 * Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
 * Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is possible.
 * Define the :guilabel:`Icon size` |selectstring|.
-* Define the :guilabel:`Font. Choose between :radiobuttonon:`QT default` and a user-defined font.
+* Define the :guilabel:`Font`. Choose between |radiobuttonon| :guilabel:`QT default` and a user-defined font.
 * Change the :guilabel:`Timeout for timed messages or dialogs` |selectstring|. 
 * |checkbox| :guilabel:`Hide splash screen at startup`
 * |checkbox| :guilabel:`Show tips at startup`
@@ -112,6 +112,7 @@ Project files
 * |checkbox| :guilabel:`Prompt to save project and data source changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
+
 
 * |checkbox| :guilabel:`Prompt to save project changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
