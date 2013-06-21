@@ -2,20 +2,28 @@
 QGIS Documentation
 ******************
 
-It is possible to read the HTML version of the documentation for many languages here:
+It is possible to read the HTML version of the documentation here:
 
-* English: http://documentation.qgis.org/html/en/docs/user_manual/
-* French: http://documentation.qgis.org/html/fr/docs/user_manual/
-* German: http://documentation.qgis.org/html/de/docs/user_manual/
-* Italian: http://documentation.qgis.org/html/it/docs/user_manual/
-* Japanese: http://documentation.qgis.org/html/ja/docs/user_manual/
-* Portuguese: http://documentation.qgis.org/html/pt/docs/user_manual/
-* Russian: http://documentation.qgis.org/html/ru/docs/user_manual/
-* Spanish: http://documentation.qgis.org/html/es/docs/user_manual/
-* Dutch: http://documentation.qgis.org/html/nl/docs/user_manual/
+* English: http://documentation.qgis.org/2.0/html/en/docs/user_manual/index.html
 
-In the qgis.org site the documentation is scheduled to be built every 8 hours.
-PDF versions of the manual are available here: http://documentation.qgis.org/pdf/
+From there you find the translations like:
+
+* French: http://documentation.qgis.org/2.0/html/fr/docs/user_manual/index.html
+* German: http://documentation.qgis.org/2.0/html/de/docs/user_manual/index.html
+* Hindi: http://documentation.qgis.org/2.0/html/hi/docs/user_manual/index.html
+* Italian: http://documentation.qgis.org/2.0/html/it/docs/user_manual/index.html
+* Japanese: http://documentation.qgis.org/2.0/html/ja/docs/user_manual/index.html
+* Portuguese: http://documentation.qgis.org/2.0/html/pt/docs/user_manual/index.html
+* Russian: http://documentation.qgis.org/2.0/html/ru/docs/user_manual/index.html
+* Spanish: http://documentation.qgis.org/2.0/html/es/docs/user_manual/index.html
+* Dutch: http://documentation.qgis.org/2.0/html/nl/docs/user_manual/index.html
+
+It is also available via the subdomain docs.qgis.org, 
+for example for the German language: http://docs.qgis.org/2.0/html/de/docs/user_manual/index.html
+
+In the docs.qgis.org site the documentation is scheduled to be built every 8 hours.
+
+PDF versions of the manual are available here: http://documentation.qgis.org/2.0/pdf/
 
 Tools you need to install, if you want to work on the documentation
 -------------------------------------------------------------------
