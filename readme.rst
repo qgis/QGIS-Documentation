@@ -31,16 +31,16 @@ Tools you need to install, if you want to work on the documentation
 If you plan to update or translate the manual locally, you will need to create a
 github account and install the following tools:
 
-* git (from packagemanager) to clone/download the source from Github.com
-* gettext (from packagemanager) for translation tools
-* texlive (from packagemanager: on Arch, it is texlive-core and texlive-bin)
-* texlive-fonts-recommended (Ubuntu: from packagemanager)
-* in debian you'll need 'texlive-latex-extra': sudo apt-get install
-  texlive-latex-extra (texlive-latexextra on Arch)
-* python-pip python installation (via sudo apt-get install python-pip)
-* sphinx (via 'sudo pip install sphinx'; on Arch install python-sphinx)
-* texi2pdf (from packagemanager: in Ubuntu it is in package 'texinfo')
-* dvi2png (from packagemanager: in Ubuntu it is in package 'dvi2png')
+* ``git`` (from packagemanager) to clone/download the source from Github.com
+* ``gettext`` (from packagemanager) for translation tools
+* ``texlive`` (from packagemanager: on Arch, it is texlive-core and texlive-bin)
+* ``texlive-fonts-recommended`` (Ubuntu: from packagemanager)
+* in debian you'll need ``texlive-latex-extra``:
+  ``sudo apt-get install texlive-latex-extra`` (``texlive-latexextra`` on Arch)
+* ``python-pip`` python installation (via ``sudo apt-get install python-pip``)
+* ``sphinx`` (via ``sudo pip install sphinx``; on Arch install ``python-sphinx``)
+* ``texi2pdf`` (from packagemanager: in Ubuntu it is in package ``texinfo``)
+* ``dvi2png`` (from packagemanager: in Ubuntu it is in package ``dvi2png``)
 
 *****************************************
 Working on the english QGIS Documentation
@@ -52,9 +52,9 @@ This section describes who to update/edit the english master documentation.
 * install required tools on your computer
 * login to github and create a fork of the QGIS-Documentation master branch
 * git clone your forked QGIS Documentation project to your computer
-* run './scripts/post_translate.sh en' locally to build the english docs
-* edit/update the rst files with the english documentation from ./source/docs/user_manual/
-* run './scripts/post_translate.sh en' locally again to check your changes
+* run ``./scripts/post_translate.sh en`` locally to build the english docs
+* edit/update the rst files with the english documentation from ``./source/docs/user_manual/``
+* run ``./scripts/post_translate.sh en`` locally again to check your changes
 * commit your changes to your forked repository
 * create a pull request to merge your changes into the official QGIS-Documentation
   repository
@@ -86,12 +86,12 @@ Run post_translate.sh script to build the documentation::
  cd QGIS-Documentation
  sh ./scripts/post_translate.sh en
 
-You can now edit the rst files in the folder ./source/docs/user_manual/, e.g.::
+You can now edit the rst files in the folder ``./source/docs/user_manual/``, e.g.::
 
  cd source/docs/user_manual/preamble/
  gedit foreword.rst
 
-After editing the rst file, run 'post_translate.sh en' again to build the english
+After editing the rst file, run ``post_translate.sh en`` again to build the english
 pdf and html files::
 
  cd QGIS-Documentation
@@ -129,7 +129,7 @@ Howto for language maintainers
 * get an account on github.com
 * install required tools on your computer
 * login to github and create a fork of the QGIS-Documentation translation branch,
-  e.g. 'manual_en_v1.8' that other translators can work with.
+  e.g. ``manual_en_v1.8`` that other translators can work with.
 
 Translators now can create their own fork from the forked repository of the
 maintainer, commit their translations to their own forked repository and send
@@ -140,14 +140,14 @@ the changes with the official QGIS Documentation repository.
 If the maintainer needs to add a new language workflow
 ------------------------------------------------------
 
-* add your locale code in the pre_translate.sh script in the line with 'LOCALE='
-* run 'scripts/pre_translate.sh'. There will be a new directory in the i18n
+* add your locale code in the pre_translate.sh script in the line with ``LOCALE=``
+* run ``scripts/pre_translate.sh``. There will be a new directory in the i18n
   directory for your language, containing the po-files for all source files
 * create an empty(!) directory in the resources directory for your language. The
   idea is to ONLY put images in exact the same directory structure if you want an
-  image to be 'translated'. As default the english one will be used from the 'en'
+  image to be 'translated'. As default the english one will be used from the ``en``
   directory, and only if there is an translated one it wil be found and used.
-* add your locale code in the post_translate.sh script in the line with 'LOCALE='
+* add your locale code in the post_translate.sh script in the line with ``LOCALE=``
 
 Howto for translators
 ---------------------
@@ -155,14 +155,14 @@ Howto for translators
 * get an account on github.com
 * install required tools on your computer
 * login to github and create a fork of the QGIS-Documentation translation branch,
-  e.g. 'manual_en_v1.8' from your language maintainer.
+  e.g. ``manual_en_v1.8`` from your language maintainer.
 * git clone your forked QGIS Documentation project to your computer
-* run './scripts/pre_translate.sh <language>' locally to build the translation
+* run ``./scripts/pre_translate.sh <language>`` locally to build the translation
   files
 * translate the .po files locally and use an offline editor. `QtLinguist
   <http://qt-apps.org/content/show.php/Qt+Linguist+Download?content=89360>`_ being
   the highly recommended choice.with the english documentation from ./source/docs/user_manual/
-* run './scripts/post_translate.sh <language>' locally again to check your translation
+* run ``./scripts/post_translate.sh <language>`` locally again to check your translation
 * files translated need to be "synchronized"  with the ones in the directory of
   the forked repo. Commit your changes to your private forked repository and
   create a pull request on github. It means that you send a request to the owners
@@ -177,8 +177,8 @@ Howto for translators
   the possibility of conflicts.
 
 The maintainer and translator should update and check the translations regularly.
-Therefore you should 'git pull' when you start to work and run the
-'scripts/pre_translate.sh <language>' and  'scripts/post_translate.sh <language>'
+Therefore you should ``git pull`` when you start to work and run the
+``scripts/pre_translate.sh <language>`` and  ``scripts/post_translate.sh <language>``
 script after every significant change in the documentation. This will generate
 and update the .po files needed for translations. If all is fine, take care, that
 the translation go into the repository of your language maintainer.
