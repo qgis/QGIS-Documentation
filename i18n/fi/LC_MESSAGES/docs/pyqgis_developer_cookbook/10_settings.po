@@ -1,124 +1,83 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-# 
-# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 16:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/qgis-documentation/language/fi/)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# 2ea95a8bd1b8465aab6eb24fef94d7da
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:11
+# d689e3e6df294f5d8642d2ce9b85d6db
 msgid "Reading And Storing Settings"
 msgstr ""
 
-# e0ebd122310a481f87589b8a3e3d1b15
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:13
-msgid ""
-"Many times it is useful for a plugin to save some variables so that the user"
-" does not have to enter or select them again next time the plugin is run."
+# 0f4c52475df440ef8a579ad07f0331a8
+msgid "Many times it is useful for a plugin to save some variables so that the user does not have to enter or select them again next time the plugin is run."
 msgstr ""
 
-# 5ee15e4c6e9048b0a5dbf2e34b8dd175
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:16
-msgid ""
-"These variables can be saved a retrieved with help of Qt and QGIS API. For "
-"each variable, you should pick a key that will be used to access the "
-"variable --- for user's favourite color you could use key "
-"\"favourite_color\" or any other meaningful string. It is recommended to "
-"give some structure to naming of keys."
+# addee96c30604bd1bf5c657174a3e7e2
+msgid "These variables can be saved a retrieved with help of Qt and QGIS API. For each variable, you should pick a key that will be used to access the variable --- for user's favourite color you could use key \"favourite_color\" or any other meaningful string. It is recommended to give some structure to naming of keys."
 msgstr ""
 
-# bb9bb12912014e25a9d02da42f851e35
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:21
+# fed3d8d3dd05455da94089274262d097
 msgid "We can make difference between several types of settings:"
 msgstr ""
 
-# 9155de6c55064cf7a6c7aff61f38b527
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:25
-msgid ""
-"**global settings** --- they are bound to the user at particular machine. "
-"QGIS itself stores a lot of global settings, for example, main window size "
-"or default snapping tolerance. This functionality is provided directly by Qt"
-" framework by the means of QSettings class. By default, this class stores "
-"settings in system's \"native\" way of storing settings, that is --- "
-"registry (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The"
-" `QSettings documentation <http://doc.qt.nokia.com/stable/qsettings.html>`_ "
-"is comprehensive, so we will provide just a simple example::"
+# e36a5ea9e5d640668ffeb187d6a4eee8
+msgid "**global settings** --- they are bound to the user at particular machine. QGIS itself stores a lot of global settings, for example, main window size or default snapping tolerance. This functionality is provided directly by Qt framework by the means of QSettings class. By default, this class stores settings in system's \"native\" way of storing settings, that is --- registry (on Windows), .plist file (on Mac OS X) or .ini file (on Unix). The `QSettings documentation <http://doc.qt.nokia.com/stable/qsettings.html>`_ is comprehensive, so we will provide just a simple example::"
 msgstr ""
 
-# 1d9de08e4f2048ad8e68f39599f5e6e3
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:46
-msgid ""
-"Qt uses QVariant instances for variable values in setValue() and value() "
-"methods. Your values are automagically converted from Python to QVariant "
-"instances, however the conversion from QVariant to Python is not automatic: "
-"that's why we use the to*() methods. Few more things to note here:"
+# 948f96cc318047ffaab34dba4e1579d9
+msgid "Qt uses QVariant instances for variable values in setValue() and value() methods. Your values are automagically converted from Python to QVariant instances, however the conversion from QVariant to Python is not automatic: that's why we use the to*() methods. Few more things to note here:"
 msgstr ""
 
-# 64eaa1d8a5884be09c98d59748874c07
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:51
-msgid ""
-"the second parameter to value() method is optional and states the default "
-"value if there is no previous value set"
+# cf2545a920bb4512830bd784dad13266
+msgid "the second parameter to value() method is optional and states the default value if there is no previous value set"
 msgstr ""
 
-# 88c9b508f29045d29cdf608308dc5267
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:53
+# b0105c74c8364b26877a8c07a16462b5
 msgid "toString() returns a QString instance, not a Python string"
 msgstr ""
 
-# 9acb06955418439da6c062e2a5e00546
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:54
-msgid ""
-"toInt() and toDouble() return tuples (value, ok) --- the second item "
-"indicates const:`True` if whether the conversion from QVariant to the number"
-" went fine --- in this example we ignore that indicator and only take the "
-"value."
+# 44eedf024dd54d0a8a5a874a6e7949ab
+msgid "toInt() and toDouble() return tuples (value, ok) --- the second item indicates const:`True` if whether the conversion from QVariant to the number went fine --- in this example we ignore that indicator and only take the value."
 msgstr ""
 
-# 424af6411cd44af1a4e21b037dd059bf
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:60
-msgid ""
-"**project settings** --- vary between different projects and therefore they "
-"are connected with a project file. Map canvas background or destination "
-"coordinate reference system (CRS) are examples --- white background and "
-"WGS84 might be suitable for one project, while yellow background and UTM "
-"projection for another one. An example of usage follows::"
+# 468f696f29e54a6f869fc4f00712c5ba
+msgid "**project settings** --- vary between different projects and therefore they are connected with a project file. Map canvas background or destination coordinate reference system (CRS) are examples --- white background and WGS84 might be suitable for one project, while yellow background and UTM projection for another one. An example of usage follows::"
 msgstr ""
 
-# 287b63c57299407c856d36dd7aaac2c2
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:76
-msgid ""
-"Hopefully the QgsProject class will be updated in future to provide API "
-"similar to the one of QSettings class. Due to some limitations of Python "
-"bindings, it is not possible to save floating point numbers."
+# d04766aa1b5344d8a33daf2444e3d995
+msgid "Hopefully the QgsProject class will be updated in future to provide API similar to the one of QSettings class. Due to some limitations of Python bindings, it is not possible to save floating point numbers."
 msgstr ""
 
-# a89661488e464ebf916cbb3af9b4e83d
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:82
-msgid ""
-"**map layer settings** --- these settings are related to a particular "
-"instance of a map layer with a project. They are *not* connected with "
-"underlying data source of a layer, so if you create two map layer instances "
-"of one shapefile, they will not share the settings. The settings are stored "
-"in project file, so if the user opens the project again, the layer-related "
-"settings will be there again. This functionality has been added in QGIS "
-"v1.4. The API is similar to QSettings --- it takes and returns QVariant "
-"instances::"
+# b8f015ba17344192860063e04d0e704f
+msgid "**map layer settings** --- these settings are related to a particular instance of a map layer with a project. They are *not* connected with underlying data source of a layer, so if you create two map layer instances of one shapefile, they will not share the settings. The settings are stored in project file, so if the user opens the project again, the layer-related settings will be there again. This functionality has been added in QGIS v1.4. The API is similar to QSettings --- it takes and returns QVariant instances::"
 msgstr ""
 
-# c2c117c48ca046f3afdb15bf0003ca6e
 #: ../../source/docs/pyqgis_developer_cookbook/10_settings.rst:98
+# b9f61c8143154773b0f4bd6302554b12
 msgid "Keys for settings that can be shared among plugins"
 msgstr ""
+

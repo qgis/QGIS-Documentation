@@ -1,28 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-# 
-# Translators:
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 15:13+0000\n"
+"POT-Creation-Date: 2012-11-21 22:43\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# 8db3ccaec149441a9fc6f9143d915a27
+# 068c4b24565a4ff79060b72ef74d25ec
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:11
 msgid "Using Map Canvas"
 msgstr ""
 
-# d2eb0664f31042239b49aede773ba93c
+# 71469899ac4b45a2bfb7bf9234634582
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:13
 msgid ""
 "The Map canvas widget is probably the most important widget within QGIS "
@@ -35,71 +35,71 @@ msgid ""
 "the available tools."
 msgstr ""
 
-# 6992abc291f84f15a90e8bd0e07691dc
+# 829ea672bba842f0a244b8b18c5ea146
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:22
 msgid ""
 "Map canvas is implemented as :class:`QgsMapCanvas` class in :mod:`qgis.gui` "
-"module.  The implementation is based on the Qt Graphics View framework. This"
-" framework generally provides a surface and a view where custom graphics "
+"module.  The implementation is based on the Qt Graphics View framework. This "
+"framework generally provides a surface and a view where custom graphics "
 "items are placed and user can interact with them.  We will assume that you "
 "are familiar enough with Qt to understand the concepts of the graphics "
-"scene, view and items. If not, please make sure to read the `overview of the"
-" framework <http://doc.qt.nokia.com/graphicsview.html>`_."
+"scene, view and items. If not, please make sure to read the `overview of the "
+"framework <http://doc.qt.nokia.com/graphicsview.html>`_."
 msgstr ""
 
-# ae39df64664340e3a09e7381d0098467
+# e1f1f24755cc455d8da67c6ec686afbb
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:30
 msgid ""
 "Whenever the map has been panned, zoomed in/out (or some other action "
 "triggers a refresh), the map is rendered again within the current extent. "
 "The layers are rendered to an image (using :class:`QgsMapRenderer` class) "
 "and that image is then displayed in the canvas. The graphics item (in terms "
-"of the Qt graphics view framework) responsible for showing the map is "
-":class:`QgsMapCanvasMap` class. This class also controls refreshing of the "
-"rendered map. Besides this item which acts as a background, there may be "
-"more **map canvas items**. Typical map canvas items are rubber bands (used "
-"for measuring, vector editing etc.) or vertex markers. The canvas items are "
+"of the Qt graphics view framework) responsible for showing the map is :class:"
+"`QgsMapCanvasMap` class. This class also controls refreshing of the rendered "
+"map. Besides this item which acts as a background, there may be more **map "
+"canvas items**. Typical map canvas items are rubber bands (used for "
+"measuring, vector editing etc.) or vertex markers. The canvas items are "
 "usually used to give some visual feedback for map tools, for example, when "
 "creating a new polygon, the map tool creates a rubber band canvas item that "
 "shows the current shape of the polygon. All map canvas items are subclasses "
-"of :class:`QgsMapCanvasItem` which adds some more functionality to the basic"
-" ``QGraphicsItem`` objects."
+"of :class:`QgsMapCanvasItem` which adds some more functionality to the basic "
+"``QGraphicsItem`` objects."
 msgstr ""
 
-# 3669938472634639bda50fcc7b6e312c
+# e52fdc4352414c0cac81cb4917028a4b
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:46
 msgid "To summarize, the map canvas architecture consists of three concepts:"
 msgstr ""
 
-# 3bb070266f9f47949d37ebd043162649
+# d204c0d4f7b34f348522f166e4109b96
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:48
 msgid "map canvas --- for viewing of the map"
 msgstr ""
 
-# bbaa45e830f14a0e94ecb4ba8b93cb46
+# b38699d3f1814fb7983043f8db0b7802
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:49
 msgid ""
 "map canvas items --- additional items that can be displayed in map canvas"
 msgstr ""
 
-# 6ab849641ef4408e8fe8b29666e2c325
+# deef568728704e839a9e6a0a228cdee2
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:50
 msgid "map tools --- for interaction with map canvas"
 msgstr ""
 
-# cb3124595ccd4ccda57c07905d656f1a
+# 52e4b7ab74ac4e89ae5d52fc6513f978
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:55
 msgid "Embedding Map Canvas"
 msgstr ""
 
-# b1e914f1216e439e8d8b53f3bd6aa206
+# 07198debe9324678b0f70ca69d2a6c94
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:57
 msgid ""
-"Map canvas is a widget like any other Qt widget, so using it is as simple as"
-" creating and showing it::"
+"Map canvas is a widget like any other Qt widget, so using it is as simple as "
+"creating and showing it::"
 msgstr ""
 
-# 3fa855824699423a9bc5fde5f96dc019
+# 0c43cf149fa342a6b2bc3a87baf681d2
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:63
 msgid ""
 "This produces a standalone window with map canvas. It can be also embedded "
@@ -107,104 +107,104 @@ msgid ""
 "place a ``QWidget`` on the form and promote it to a new class: set "
 "``QgsMapCanvas`` as class name and set ``qgis.gui`` as header file. The "
 "``pyuic4`` utility will take care of it. This is a very convenient way of "
-"embedding the canvas. The other possibility is to manually write the code to"
-" construct map canvas and other widgets (as children of a main window or "
+"embedding the canvas. The other possibility is to manually write the code to "
+"construct map canvas and other widgets (as children of a main window or "
 "dialog) and create a layout."
 msgstr ""
 
-# c4f62a67998a4c0ba9d619466cdbc95b
+# aa365712adff4c87a191f539d7aa91b1
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:71
 msgid ""
 "By default, map canvas has black background and does not use anti-aliasing. "
 "To set white background and enable anti-aliasing for smooth rendering::"
 msgstr ""
 
-# 480d99391f3645bda559276ce634e564
+# e3cab1c5160643158068d58ba4480e76
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:77
 msgid ""
 "(In case you are wondering, ``Qt`` comes from ``PyQt4.QtCore`` module and "
 "``Qt.white`` is one of the predefined ``QColor`` instances.)"
 msgstr ""
 
-# 11ec5d4fb3ff488f92a519cca082adc5
+# 4a63b2dea6ba46fab546c5c25d0db81e
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:80
 msgid ""
-"Now it is time to add some map layers. We will first open a layer and add it"
-" to the map layer registry.  Then we will set the canvas extent and set the "
+"Now it is time to add some map layers. We will first open a layer and add it "
+"to the map layer registry.  Then we will set the canvas extent and set the "
 "list of layers for canvas::"
 msgstr ""
 
-# f83e0dc0eeee4ab38e02dacdaa594e2e
+# 1522182713904a02b9200923ed36e22f
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:97
 msgid ""
 "After executing these commands, the canvas should show the layer you have "
 "loaded."
 msgstr ""
 
-# e1fe44c799924017b6a62b37fe33e021
+# 741a7083a2ed45c29978d843d74edfcf
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:102
 msgid "Using Map Tools with Canvas"
 msgstr ""
 
-# 9b49a5b142934a61ac66547a33a83185
+# 3b5053fb01e9400d8b17e71ba3ce0e0b
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:104
 msgid ""
 "The following example constructs a window that contains a map canvas and "
 "basic map tools for map panning and zooming.  Actions are created for "
 "activation of each tool: panning is done with :class:`QgsMapToolPan`, "
-"zooming in/out with a pair of :class:`QgsMapToolZoom` instances. The actions"
-" are set as checkable and later assigned to the tools to allow automatic "
+"zooming in/out with a pair of :class:`QgsMapToolZoom` instances. The actions "
+"are set as checkable and later assigned to the tools to allow automatic "
 "handling of checked/unchecked state of the actions -- when a map tool gets "
 "activated, its action is marked as selected and the action of the previous "
-"map tool is deselected. The map tools are activated using :func:`setMapTool`"
-" method."
+"map tool is deselected. The map tools are activated using :func:`setMapTool` "
+"method."
 msgstr ""
 
-# 9fbd5395e707409387ccbe2b076686bd
+# 917c4d1df9ea4dfcac5eb99c93a829d9
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:169
 msgid ""
 "You can put the above code to a file, e.g. ``mywnd.py`` and try it out in "
-"Python console within QGIS.  This code will put the currently selected layer"
-" into newly created canvas::"
+"Python console within QGIS.  This code will put the currently selected layer "
+"into newly created canvas::"
 msgstr ""
 
-# 8e981ae9218f423bb346bc335c6db2c5
+# 4adaabb492894235a59d2dd5a8f85cf1
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:177
 msgid ""
 "Just make sure that the ``mywnd.py`` file is located within Python search "
-"path (``sys.path``). If it isn't, you can simply add it: "
-"``sys.path.insert(0, '/my/path')`` --- otherwise the import statement will "
-"fail, not finding the module."
+"path (``sys.path``). If it isn't, you can simply add it: ``sys.path.insert"
+"(0, '/my/path')`` --- otherwise the import statement will fail, not finding "
+"the module."
 msgstr ""
 
-# 526c133016a64e1a888b5a7861b1ee3f
+# 1a467aa1515a4053865d37cab18783b4
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:185
 msgid "Rubber Bands and Vertex Markers"
 msgstr ""
 
-# 8198f99ce3ee4fb69460f06cdb465e5b
+# 1c8239d7c7b74243a96be4408c951bd1
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:187
 msgid ""
 "To show some additional data on top of the map in canvas, use map canvas "
 "items. It is possible to create custom canvas item classes (covered below), "
-"however there are two useful canvas item classes for convenience: "
-":class:`QgsRubberBand` for drawing polylines or polygons, and "
-":class:`QgsVertexMarker` for drawing points.  They both work with map "
-"coordinates, so the shape is moved/scaled automatically when the canvas is "
-"being panned or zoomed."
+"however there are two useful canvas item classes for convenience: :class:"
+"`QgsRubberBand` for drawing polylines or polygons, and :class:"
+"`QgsVertexMarker` for drawing points.  They both work with map coordinates, "
+"so the shape is moved/scaled automatically when the canvas is being panned "
+"or zoomed."
 msgstr ""
 
-# efc87be53a5146329b80e42ec2dbbabf
+# bddab29534a449338eced61f8aaf4d25
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:195
 msgid "To show a polyline::"
 msgstr ""
 
-# c186ce742fd0428bb1c297d35d57e20f
+# 0b144a6cf2694724ba817fe6ab7c37bc
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:201
 msgid "To show a polygon::"
 msgstr ""
 
-# eab5baf7e2234869a13cc4e4762e408c
+# df321eae11164e628ca787e81f9272b8
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:207
 msgid ""
 "Note that points for polygon is not a plain list: in fact, it is a list of "
@@ -212,14 +212,14 @@ msgid ""
 "border, further (optional) rings correspond to holes in the polygon."
 msgstr ""
 
-# 113c0408e3804727b3e3abdf9d74c502
+# 5f1fd34a8a254ed08a93ceae0c1920bc
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:211
 msgid ""
-"Rubber bands allow some customization, namely to change their color and line"
-" width::"
+"Rubber bands allow some customization, namely to change their color and line "
+"width::"
 msgstr ""
 
-# 9e212427c085470fbcce4a1b7b9b61b4
+# e88793676437462c957e848f2b3d1db4
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:217
 msgid ""
 "The canvas items are bound to the canvas scene. To temporarily hide them "
@@ -227,7 +227,7 @@ msgid ""
 "remove the item, you have to remove it from the scene of the canvas::"
 msgstr ""
 
-# 95903114709449d89ae312b3d5c3bfae
+# 79c3682e0bb84128af73f3b04f5bea0e
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:223
 msgid ""
 "(in C++ it's possible to just delete the item, however in Python ``del r`` "
@@ -235,45 +235,45 @@ msgid ""
 "owned by the canvas)"
 msgstr ""
 
-# 1a18faa29ec84a28b1e7101bcf0ec4aa
+# 6565f5d652d64fde81a92ead414f6ab7
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:227
 msgid ""
-"Rubber band can be also used for drawing points, however "
-":class:`QgsVertexMarker` class is better suited for this "
-"(:class:`QgsRubberBand` would only draw a rectangle around the desired "
-"point). How to use the vertex marker::"
+"Rubber band can be also used for drawing points, however :class:"
+"`QgsVertexMarker` class is better suited for this (:class:`QgsRubberBand` "
+"would only draw a rectangle around the desired point). How to use the vertex "
+"marker::"
 msgstr ""
 
-# c52a724212e24b7c81fc9b087622b097
+# 97c1d2b05ae24c169ff44bd041d5df45
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:235
 msgid ""
 "This will draw a red cross on position [0,0]. It is possible to customize "
 "the icon type, size, color and pen width::"
 msgstr ""
 
-# 1c69c2610eae428e89dda08dbd19dd25
+# 06126c3fe8c549ab8a0286114286de93
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:243
 msgid ""
 "For temprary hiding of vertex markers and removing them from canvas, the "
 "same applies as for the rubber bands."
 msgstr ""
 
-# c32ab7434e754a81816de7ca30db4543
+# c92d4c9955544f86ae3438a3f1d548de
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:249
 msgid "Writing Custom Map Tools"
 msgstr ""
 
-# 6c04d172f83e42bab55a8b6f8bee6795
+# 24c0bf4212f34956929554387daa92be
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:251
 msgid "**TODO:** how to create a map tool"
 msgstr ""
 
-# ff53a70974524d5c8f053798d7cb206d
+# fb382711bac640549946734cdea75d76
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:256
 msgid "Writing Custom Map Canvas Items"
 msgstr ""
 
-# c24b60a0dcd445b099e317e25c90c1ed
+# 33611f350a774d2e8b32361fba1ca4fa
 #: ../../source/docs/pyqgis_developer_cookbook/06_canvas.rst:258
 msgid "**TODO:** how to create a map canvas item"
 msgstr ""

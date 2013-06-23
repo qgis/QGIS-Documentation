@@ -1,120 +1,146 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
-# This file is distributed under the same license as the QGIS Documentation Project package.
-# 
-# Translators:
+# This file is distributed under the same license as the QGIS User Guide package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 10:47+0000\n"
-"Last-Translator: timlinux <tim@linfiniti.com>\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
+"POT-Creation-Date: 2013-03-18 20:40\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
-# dea333dfd3484eedb819e63b5f90e5c5
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:7
-msgid "|updatedisclaimer|"
-msgstr ""
-
-# fe239c12a1ed4f87a3158bcb2340a6a4
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
+# 76005eb81e7d42038a2814361e0bb327
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
 msgid "Road Graph Plugin"
 msgstr "Модуль «Road Graph»"
 
-# 8170bdd7309540378c9f12ccc7ef2046
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:14
+# 79ef2e1513d9449b82ecd26fbd0c8208
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
 msgid ""
-"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
-" path between two points on any polyline layer and plots this path over the "
+"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest "
+"path between two points on any polyline layer and plots this path over the "
 "road network."
-msgstr "Модуль «Road Graph» позволяет осуществлять поиск кратчайшего маршрута между двумя точками любого линейного векторного слоя и отображать этот маршрут на карте дорожной сети."
-
-# 177574d2c0e44f50bbb8cd91a3be491e
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:18
-msgid "**Main features**:"
 msgstr ""
+"Модуль «Road Graph» позволяет осуществлять поиск кратчайшего маршрута между "
+"двумя точками любого линейного векторного слоя и отображать этот маршрут на "
+"карте дорожной сети."
 
-# 89cf995449e44b878aeca420a8a165f2
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:20
+# a85fa968bd754441a3085380dba16cdb
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
+msgid "Main features:"
+msgstr "Основные возможности:"
+
+# 71661542ee0941fbb64a9a666b5dc2c6
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
 msgid "calculate path, it's length and travel time"
 msgstr "расчет маршрута, его протяженности и времени в пути"
 
-# bfb1fae852fb4524a73a33cbdcbfc691
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:21
+# 8a99aa20eee9482c8efae8f64799541a
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:30
 msgid "optimize by length or by travel time"
 msgstr "оптимизация по критерию расстояния или времени"
 
-# 142dba176b054c1fadd31c540461a69b
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:22
+# ebd05e6b3227432daa67a5e252af3739
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
 msgid "export path to a vector layer"
 msgstr "экспорт маршрута в векторный слой"
 
-# ae697bb3ae3d42c780981773fd5a796f
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:23
+# ddf0abe1604a413fbc9ec45afc9066d3
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:32
 msgid ""
 "highlight roads directions (this is slow and used mainly for debug purposes "
 "and for the settings testing)"
-msgstr "подсветка направления движения дорог (работает медленно, чаще всего используется в целях проверки настроек)"
+msgstr ""
+"подсветка направления движения дорог (работает медленно, чаще всего "
+"используется в целях проверки настроек)"
 
-# beccdd4f52c442a08a22ac34b040a6f5
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:26
-msgid ""
-"As a roads layer you can use any polyline vector layer in any QGIS supported"
-" format. Two lines with a common point are considered connected. Please "
-"note, it is required to use layer CRS as project CRS while editing roads "
-"layer. This is due to the fact that recalculation of the coordinates between"
-" different CRS introduce some errors that can result in discontinuities, "
-"even when 'snapping' is used."
-msgstr "В качестве слоя дорог можно использовать любой линейный векторый слой в формате, поддерживаемом QGIS. Две линии, имеющие общую точку считаются связанными между собой. **Внимание**: при редактировании слоя дорог в качестве СК проекта необходимо использовать СК слоя. Это вызвано тем, что при пересчете координат между разными СК возникают погрешности, что может приводить к появлению разрывов даже при включенном «прилипании»."
-
-# 328f25024c1d48b3a31a222145b86b5e
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:33
-msgid "In the layer attribute table the following fields can be used:"
-msgstr "В атрибутивной таблице слоя могут присутствовать и задействоваться следующие поля:"
-
-# 668ffe7177d741fd842c4951348a647f
+# dda7e472b5874eedad14980f59a63431
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
+msgid ""
+"As a roads layer you can use any polyline vector layer in any QGIS supported "
+"format. Two lines with a common point are considered connected. Please note, "
+"it is required to use layer CRS as project CRS while editing roads layer. "
+"This is due to the fact that recalculation of the coordinates between "
+"different CRS introduce some errors that can result in discontinuities, even "
+"when 'snapping' is used."
+msgstr ""
+"В качестве слоя дорог можно использовать любой линейный векторый слой в "
+"формате, поддерживаемом QGIS. Две линии, имеющие общую точку считаются "
+"связанными между собой. **Внимание**: при редактировании слоя дорог в "
+"качестве СК проекта необходимо использовать СК слоя. Это вызвано тем, что "
+"при пересчете координат между разными СК возникают погрешности, что может "
+"приводить к появлению разрывов даже при включенном «прилипании»."
+
+# 09273e44229143a9aa5801a7a1f73ea5
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:42
+msgid "In the layer attribute table the following fields can be used:"
+msgstr ""
+"В атрибутивной таблице слоя могут присутствовать и задействоваться следующие "
+"поля:"
+
+# 9ac0db7b37b2487cb39a53a297928f5c
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
 msgid "speed on road section --- numeric field;"
 msgstr "скорость движения по участку дороги --- числовое поле"
 
-# 6497b27811dc498d8a41e6382ebd0da8
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:36
+# 7cbe3bc8c69e49d7a2f9c64e6067ce92
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:45
 msgid ""
 "direction --- any type, that can be casted to string. Forward and reverse "
 "directions are correspond to the one-way road, both directions --- two-way "
-"road."
+"road"
 msgstr ""
+"направление движения --- любой тип, приводимый к строке. Прямое и обратное "
+"направления соответствуют односторонней дороге, оба направления --- "
+"двусторонней"
 
-# cac165bf5ecd475ab3b14675ff6bbd27
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:40
+# 7a0ebbfa82c8409e92f410b56f0a3f9e
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:48
 msgid ""
-"If some fields don't have any value or do not exists --- default values are "
+"If some fields don't have any value or do not exist --- default values are "
 "used. You can change defaults and some plugin settings in plugin settings "
 "dialog."
 msgstr ""
+"Если значение какого-либо поля не задано, или поле отсутсвует --- "
+"используется значение по умолчанию, изменить которое можно в настройках "
+"расширения."
 
-# 57ed4d193ddd4434b6023ed5107fcd09
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:45
-msgid "Usage"
-msgstr ""
+# 6e0e33ec802c4eb6baecd780ad59a067
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:52
+msgid "Using the plugin"
+msgstr "Использование модуля"
 
-# 10152371f32848bb896ac85adea5cf1d
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:48
+# b232dfe7ffd4454a8dc081fc9546f9e5
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
 msgid ""
-"After plugin activation you will see additional panel on the left side of "
-"the main QGIS window. Now make some definitions to the :guilabel:`Road graph"
-" settings` dialog in the menu :menuselection:`Plugins --> Road Graph`."
+"After plugin activation you will see an additional panel on the left side of "
+"the main QGIS window. Now make some definitions to the :guilabel:`Road graph "
+"plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`."
 msgstr ""
+"После активации расширения в левой части окна QGIS появится еще одна панель. "
+"Для изменения настроек модуля откройте окно :guilabel:`Параметры модуля "
+"RoadGraph` из меню :menuselection:`Вектор --> Road graph`."
 
-# f1e0016ba007453c9f390fa90ae6adde
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:64
+# 2df7ca01fcc540df991dc615689b86d9
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:58
 msgid ""
 "Select a Start and a Stop point in the road network layer and click on "
 "**[Calculate]**."
-msgstr "Укажите начальную и конечную точки маршрута и нажмите кнопку **[Рассчитать]**."
+msgstr ""
+"Укажите начальную и конечную точки маршрута и нажмите кнопку "
+"**[Рассчитать]**."
+
+# 0fe2b9eb8375452daa108f4409f47aa0
+#~ msgid "Usage"
+#~ msgstr "Работа с расширением"
