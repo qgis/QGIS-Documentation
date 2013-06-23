@@ -1,20 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
+"POT-Creation-Date: 2013-04-06 12:25\n"
 "PO-Revision-Date: 2013-03-22 16:44+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-"
+"documentation/language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 825b65ad24b34355a9b1686f0ff2dd38
@@ -25,9 +26,9 @@ msgstr ""
 # 7696483e2c9f4c6d903fb8addd70a44c
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:11
 msgid ""
-"Starting from revision `ee19294562 <https://github.com/qgis/Quantum-"
-"GIS/commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_ (QGIS >= 1.8) the new"
-" network analysis library was added to the QGIS core analysis library. The "
+"Starting from revision `ee19294562 <https://github.com/qgis/Quantum-GIS/"
+"commit/ee19294562b00c6ce957945f14c1727210cffdf7>`_ (QGIS >= 1.8) the new "
+"network analysis library was added to the QGIS core analysis library. The "
 "library:"
 msgstr ""
 
@@ -95,8 +96,8 @@ msgstr ""
 msgid ""
 "As a source we can use any polyline vector layer. Nodes of the polylines "
 "become graph vertices, and segments of the polylines are graph edges. If "
-"several nodes have the same coordinates then they are the same graph vertex."
-" So two lines that have a common node become connected to each other."
+"several nodes have the same coordinates then they are the same graph vertex. "
+"So two lines that have a common node become connected to each other."
 msgstr ""
 
 # d2d982aa79f4427e84823accbd02dbc5
@@ -118,18 +119,17 @@ msgstr ""
 # 8b5f6d60983843fe9be57876539fa9a9
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:52
 msgid ""
-"Converter from vector layer to graph is developed using `Builder "
-"<http://en.wikipedia.org/wiki/Builder_pattern>`_ programming pattern. For "
-"graph construction response so-called Director. There is only one Director "
-"for now: `QgsLineVectorLayerDirector "
-"<http://qgis.org/api/api/classQgsLineVectorLayerDirector.html>`_. The "
-"director sets the basic settings that will be used to construct a graph from"
-" a line vector layer, used by the builder to create graph. Currently, as in "
-"the case with the director, only one builder exists: `QgsGraphBuilder "
-"<http://qgis.org/api/api/classQgsGraphBuilder.html>`_, that creates "
-"`QgsGraph <http://qgis.org/api/api/classQgsGraph.html>`_ objects. You may "
-"want to implement your own builders that will build a graphs compatible with"
-" such libraries as `BGL "
+"Converter from vector layer to graph is developed using `Builder <http://en."
+"wikipedia.org/wiki/Builder_pattern>`_ programming pattern. For graph "
+"construction response so-called Director. There is only one Director for "
+"now: `QgsLineVectorLayerDirector <http://qgis.org/api/api/"
+"classQgsLineVectorLayerDirector.html>`_. The director sets the basic "
+"settings that will be used to construct a graph from a line vector layer, "
+"used by the builder to create graph. Currently, as in the case with the "
+"director, only one builder exists: `QgsGraphBuilder <http://qgis.org/api/api/"
+"classQgsGraphBuilder.html>`_, that creates `QgsGraph <http://qgis.org/api/"
+"api/classQgsGraph.html>`_ objects. You may want to implement your own "
+"builders that will build a graphs compatible with such libraries as `BGL "
 "<http://www.boost.org/doc/libs/1_48_0/libs/graph/doc/index.html>`_ or "
 "`NetworkX <http://networkx.lanl.gov/>`_."
 msgstr ""
@@ -137,14 +137,14 @@ msgstr ""
 # 7ebeef0803dd49b7bf17c419247b516d
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:63
 msgid ""
-"To calculate edge properties programming pattern `strategy "
-"<http://en.wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
-"`QgsDistanceArcProperter "
-"<http://qgis.org/api/api/classQgsDistanceArcProperter.html>`_ strategy is "
-"available, that takes into account the length of the route. You can "
-"implement your own strategy that will use all necessary parameters. For "
-"example, RoadGraph plugin uses strategy that compute travel time using edge "
-"length and speed value from attributes."
+"To calculate edge properties programming pattern `strategy <http://en."
+"wikipedia.org/wiki/Strategy_pattern>`_ is used. For now only "
+"`QgsDistanceArcProperter <http://qgis.org/api/api/"
+"classQgsDistanceArcProperter.html>`_ strategy is available, that takes into "
+"account the length of the route. You can implement your own strategy that "
+"will use all necessary parameters. For example, RoadGraph plugin uses "
+"strategy that compute travel time using edge length and speed value from "
+"attributes."
 msgstr ""
 
 # e5f2443b68754983ab76b652ffe27541
@@ -167,8 +167,8 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:89
 msgid ""
 "To construct a director  we should pass vector layer, that will be used as "
-"source for graph and information about allowed movement on each road segment"
-" (unilateral or bilateral movement, direct or reverse direction). Here is "
+"source for graph and information about allowed movement on each road segment "
+"(unilateral or bilateral movement, direct or reverse direction). Here is "
 "full list of this parameters:"
 msgstr ""
 
@@ -187,8 +187,8 @@ msgstr ""
 # eac5a24d38854eb9aa995c434d8823fb
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:97
 msgid ""
-"directDirectionValue --- field value for roads with direct direction (moving"
-" from first line point to last one)"
+"directDirectionValue --- field value for roads with direct direction (moving "
+"from first line point to last one)"
 msgstr ""
 
 # bbf13869a30f4f15a256600ad22ea048
@@ -239,8 +239,8 @@ msgstr ""
 # 4ec5514c62f44793b33d1f9c20bf020d
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:119
 msgid ""
-"otfEnabled --- use \"on the fly\" reprojection or no. By default "
-"const:`True` (use OTF)."
+"otfEnabled --- use \"on the fly\" reprojection or no. By default const:"
+"`True` (use OTF)."
 msgstr ""
 
 # f3baf367f51b437580c5a9b46fa7a5a0
@@ -327,11 +327,10 @@ msgstr ""
 # 0eafeafb841c4f1d9a60cce7c15f500e
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:169
 msgid ""
-"To get shortest path tree use methods Use methods :func:`shortestTree` and "
-":func:`dijkstra` of `QgsGraphAnalyzer "
-"<http://qgis.org/api/api/classQgsGraphAnalyzer.html>`_ class. It is "
-"recommended to use method :func:`dijkstra` because it works faster and uses "
-"memory more efficiently."
+"To get shortest path tree use methods Use methods :func:`shortestTree` and :"
+"func:`dijkstra` of `QgsGraphAnalyzer <http://qgis.org/api/api/"
+"classQgsGraphAnalyzer.html>`_ class. It is recommended to use method :func:"
+"`dijkstra` because it works faster and uses memory more efficiently."
 msgstr ""
 
 # 68f705ec31c043f190deac7006cec0e8
@@ -363,8 +362,8 @@ msgstr ""
 msgid ""
 "The :func:`dijkstra` method has the same arguments, but returns two arrays. "
 "In the first array element i contains index of the incoming edge or -1 if "
-"there are no incoming edges. In the second array element i contains distance"
-" from the root of the tree to vertex i or DOUBLE_MAX if vertex i is "
+"there are no incoming edges. In the second array element i contains distance "
+"from the root of the tree to vertex i or DOUBLE_MAX if vertex i is "
 "unreachable from the root."
 msgstr ""
 
@@ -372,11 +371,10 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:196
 msgid ""
 "Here is very simple code to display shortest path tree using graph created "
-"with :func:`shortestTree` method (select linestring layer in TOC and replace"
-" coordinates with yours one). **Warning**: use this code only as an example,"
-" it creates a lots of `QgsRubberBand "
-"<http://qgis.org/api/api/classQgsRubberBand.html>`_ objects and may be slow "
-"on large datasets."
+"with :func:`shortestTree` method (select linestring layer in TOC and replace "
+"coordinates with yours one). **Warning**: use this code only as an example, "
+"it creates a lots of `QgsRubberBand <http://qgis.org/api/api/"
+"classQgsRubberBand.html>`_ objects and may be slow on large datasets."
 msgstr ""
 
 # 3ef800eae14d451a9c4886f1b7c470d8
@@ -392,12 +390,12 @@ msgstr ""
 # a8f4ace817b74f80842b10b3f1dd269b
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:273
 msgid ""
-"To find optimal path between two points the following approach is used. Both"
-" points (start A and end B) are \"tied\" to graph when it builds. Than using"
-" methods :func:`shortestTree` or :func:`dijkstra` we build shortest tree "
-"with root in the start point A. In the same tree we also found end point B "
-"and start to walk through tree from point B to point A. Whole algorithm can "
-"be written as::"
+"To find optimal path between two points the following approach is used. Both "
+"points (start A and end B) are \"tied\" to graph when it builds. Than using "
+"methods :func:`shortestTree` or :func:`dijkstra` we build shortest tree with "
+"root in the start point A. In the same tree we also found end point B and "
+"start to walk through tree from point B to point A. Whole algorithm can be "
+"written as::"
 msgstr ""
 
 # 87aa117f5a944ac186bfabc5691a4626
@@ -412,8 +410,8 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:292
 msgid ""
 "Here is the sample code for QGIS Python Console (you will need to select "
-"linestring layer in TOC and replace coordinates in the code with yours) that"
-" uses method :func:`shortestTree`::"
+"linestring layer in TOC and replace coordinates in the code with yours) that "
+"uses method :func:`shortestTree`::"
 msgstr ""
 
 # 8f34d5550c2341f09da138465fd97628
@@ -437,19 +435,19 @@ msgstr ""
 # 164dcc0504294945a0f755cf5df382ea
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:398
 msgid ""
-"More clearly this can be shown with the following example: \"There is a fire"
-" station. What part of city fire command can reach in 5 minutes? 10 minutes?"
-" 15 minutes?\". Answers on this questions are fire station's areas of "
+"More clearly this can be shown with the following example: \"There is a fire "
+"station. What part of city fire command can reach in 5 minutes? 10 minutes? "
+"15 minutes?\". Answers on this questions are fire station's areas of "
 "availability."
 msgstr ""
 
 # a58f05e29001435cb8438457c9455b48
 #: ../../source/docs/pyqgis_developer_cookbook/12_network_analysis.rst:402
 msgid ""
-"To find areas of availablity we can use method :func:`dijksta` of the "
-":class:`QgsGraphAnalyzer` class. It is enough to compare elements of cost "
-"array with predefined value. If cost[ i ] is less or equal than predefined "
-"value, than vertex i is inside area of availability, otherwise --- outside."
+"To find areas of availablity we can use method :func:`dijksta` of the :class:"
+"`QgsGraphAnalyzer` class. It is enough to compare elements of cost array "
+"with predefined value. If cost[ i ] is less or equal than predefined value, "
+"than vertex i is inside area of availability, otherwise --- outside."
 msgstr ""
 
 # 69e3a497c47d46ec8246ad5a426421cb
@@ -458,8 +456,8 @@ msgid ""
 "More difficult it is to get borders of area of availablity. Bottom border "
 "--- is a set of vertices that are still accessible, and top border --- is a "
 "set of vertices which are not accesible. In fact this is simple: "
-"availability border passed on such edges of the shortest path tree for which"
-" start vertex is accessible and end vertex is not accessible."
+"availability border passed on such edges of the shortest path tree for which "
+"start vertex is accessible and end vertex is not accessible."
 msgstr ""
 
 # a8f2f1b13ad54a0382e99c77d084fa2d
