@@ -113,59 +113,105 @@ Project files
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 * :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
 
+System tab
+----------
 
-* |checkbox| :guilabel:`Prompt to save project changes when required`
-* |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
-* Change Selection and Background color
-* Change the QGIS Style
-* Change the icon theme (choose between 'default', 'classic' and 'gis')
-* Change icon size between 16, 24 and 32 pixel.
-* Change the menu size
-* Define double click action in legend (choose between 'open layer properties'
-  and 'open ') attribute table.
-* |checkbox| :guilabel:`Capitalize layer names in legend`
-* |checkbox| :guilabel:`Display classification attribute names in legend`
-* |checkbox| :guilabel:`Create raster icons in legend`
-* |checkbox| :guilabel:`Hide splash screen at startup`
-* |checkbox| :guilabel:`Show tips at startup`
-* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart
-  required)`
-* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart
-  required)`
-* |checkbox| :guilabel:`Open attribute table in a dock window`
-* |checkbox| :guilabel:`Add PostGIS layers with double click and select in extended mode`
-* |checkbox| :guilabel:`Add new layers to selected or current group`
+Environment
+
+* |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. You can :guilabel:`Add` and :guilabel:`Remove` variables.
+:menuselection:`Current environment variables -->` are displayed below and it's possible to |checkbox| :guilabel:`Show only QGIS-specific variables`.
+
+Plugin paths
+
+* :guilabel:`Add` or guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
+
+Data Sources tab
+----------------
+
+Feature attributes and table
+
+* |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
-* :guilabel:`Attribute table behavior` (choose between 'Show all features' (default), 'Show
-  selected features','Show features in current canvas')
-* :guilabel:`Attribute table row cache`
-* Define :guilabel:`Representation for NULL values`
-* :guilabel:`Prompt for raster sublayers` |selectstring|. Some rasters support
-  sublayers - they are called subdatasets in GDAL. An example is netcdf files -
-  if there are many netcdf variables, GDAL sees every variable as a subdataset.
-  The option is to control how to deal with sublayers when a file with sublayers
-  is opened. You have the following choices:
+* :guilabel:`Attribute table behaviour` |selectstring|. There are three possibilities: 'Show all features',
+'Show selected features' and 'Show features visible on map' .
+* :guilabel:`Attribute table row cache` |selectstring|. 
+* :guilabel:`Representation for NULL values` 
 
-  * 'Always': always ask (if there are existing sublayers)
-  * 'If needed': ask if layer has no bands, but has sublayers
-  * 'Never': never prompt, will not load anything
-  * 'Load all': never prompt, but load all sublayers
 
-* :guilabel:`Scan for valid items in the browser dock`  |selectstring|. The 'Check
-  extension' option was designed to speed up the loading of a directory, which
-  can be time-consuming when 'Check file contents' is activated and
-  there are many files (tens or hundreds).
-* :guilabel:`Scan for contents of compressed files (.zip) in browser dock` |selectstring|
-  This option was also designed to speed up the loading of a directory. You have
-  the following choices:
+Data source handling
 
-  * 'Basic Scan': checks that the extension is supported by one of the drivers
-  * 'Full Scan': opens every file to check it is valid
-  * 'Passthru': don't use this option it will be removed in the next QGIS version
+* :guilabel:`Scan for valid items in the browser dock` |selectstring|. You can choose between 'Check extension' and 'Check file contents'.
+* :guilabel:`Scan for contents of compresses files (.zip) in browser dock` |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
+* :guilabel:`Prompt for raster sublayers when opening`. Some rasters support sublayers - they are called subdatasets in GDAL. An example is netcdf files - if there are many netcdf variables, GDAL sees every variable as a subdataset. The option is to control how to deal with sublayers when a file with sublayers is opened. You have the following choices:
+
+    *‘Always’: always ask (if there are existing sublayers)
+    *‘If needed’: ask if layer has no bands, but has sublayers
+    *‘Never’: never prompt, will not load anything
+    *‘Load all’: never prompt, but load all sublayers
+* |checkbox| :guilabel:`Ignore shapefile encoding declaration`
+* |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode
+* |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode
+
+Rendering tab
+-------------
+
+Rendering quality
+
+* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing
+  performance`
+* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
+
+
+Rasters
+
+* with :guilabel:`RGB band selection` you can define the number for the Red, Green and Blue band.
+
+Contrast enhancement
+
+* :guilabel:`Single band gray` |selectstring|. A single band gray can have 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also 'Clip to MinMax'
+* :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
+* :guilabel:`Multi band color (>byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
+* :guilabel:`Limits (minimum/maximum) |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
+* :guilabel:`Cumulative pixel count cut limits`
+* :guilabel:`Standard deviation multiplier`
+
+
+Debugging
+
+* :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
+
+Canvas and legend
+-----------------
+
+Map canvas & legend
+
+Default map appearance (overridden by project properties)
+
+* Define a :guilabel:`Selection color` and a :guilabel:`Background color`.
+
+
+Layer legend
+
+* :guilabel:`Double click action in legend` |selectstring|. You can either 'Open layer properties' or 'Open attribute table' with the double click.
+* the following :guilabel:`Legend item styles` are possible
+	|checkbox| :guilabel:`Capitalise layer names`
+	|checkbox| :guilabel:`Bold layer names`
+	|checkbox| :guilabel:`Bold group names`
+	|checkbox| :guilabel:`Display classification attribute names`
+	|checkbox| :guilabel:`Create raster icons (may be slow)`
+	|checkbox| :guilabel:`Add new layers to selected or current group`
+
+Overlay position
+
+* Define :guilabel:`Placement algorithm` |selectstring| for labels, symbology and
+  diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
+  chain', 'Popmusic tabu' and 'Popmusic chain')
+
+
 
 GDAL tab
 --------
-
+ 
 GDAL is a data exchange library for raster files. In this tab you can define which
 GDAL driver to be used for a raster format as in some cases more than one GDAL driver
 is available.
