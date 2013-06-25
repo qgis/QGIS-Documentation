@@ -19,5 +19,3 @@ A Gentle Introduction to GIS
    10_spatial_analysis_interpolation
    11_authors_and_contributors
    12_gnu_free_documentation_license
-
-   

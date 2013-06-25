@@ -629,8 +629,8 @@ rst_epilog = """
 .. |grass| image:: /static/common/grasslogo.png
    :width: 1.5em
 .. |qgissplash| image:: /static/common/splash.png
-.. |gentlelogo| image:: /static/common/qgislogo.png
-   :width: 1.5em
+.. |gentlelogo| image:: /static/gentle_gis_introduction/gentlelogo.png
+   :width: 3em
 .. |grass_open_mapset| image:: /static/common/grass_open_mapset.png
    :width: 1.5em
 .. |grass_new_mapset| image:: /static/common/grass_new_mapset.png

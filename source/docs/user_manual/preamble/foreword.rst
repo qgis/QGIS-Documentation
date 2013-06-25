@@ -144,7 +144,7 @@ for storage purposes and cell size for analytical or mapping purposes.
 .. `label_vectordata`:
 
 Vector Data
-------------
+-----------
 
 Vector data is also used in geospatial applications. If you stayed awake
 during trigonometry and coordinate geometry classes, you will already be
