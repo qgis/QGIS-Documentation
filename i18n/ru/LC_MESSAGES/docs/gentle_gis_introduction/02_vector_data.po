@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # c447a0beaed24de89c84fb72e9810778
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:9
 msgid "Vector Data"
-msgstr ""
+msgstr "Векторные данные"
 
 # b202f9f4705547f18e5c8347243e0bb2
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:12
@@ -30,17 +33,17 @@ msgstr ""
 # 80a2c9de58a34439b617256a6642c0c2
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:12
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # 47499d70f42348e0995af8cec79d2b3e
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:12
 msgid "Understanding of vector data models as used in GIS."
-msgstr ""
+msgstr "Ознакомиться с моделями векторных данных, используемыми в ГИС."
 
 # dbe0bdb614db4f35aff2c04568accb16
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:14
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # c7083d1c0d994ced88f22e8b81724213
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:14
@@ -48,11 +51,13 @@ msgid ""
 "Vector, Point, Polyline, Polygon, Vertex, Geometry, Scale, Data Quality, "
 "Symbology, Data Sources"
 msgstr ""
+"вектор, точка, полилиния, полигон, вершина, геометрия, масштаб, качество "
+"данных, символика, источник данных"
 
 # fb2eaf3b29c9425186bb93628b2d9792
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:18
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # bc743643518e46898ce0bdcf18b73398
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:20
@@ -65,6 +70,13 @@ msgid ""
 "Application. Vector features have **attributes**, which consist of text or "
 "numerical information that **describe** the features."
 msgstr ""
+"**Векторные** данные используются для отображения **объектов** реального "
+"мира в ГИС. Объектом является всё, что мы видим вокруг. Представьте себе, "
+"что вы стоите на вершине холма. Глядя вниз вы можете видеть дома, дороги, "
+"деревья, реки и многое другое (см. рисунок figure_landscape_). Каждый из "
+"этих элементов может быть представлен в виде **объекта** в ГИС-приложении. "
+"Векторные объекты характеризуются **атрибутами**, которые состоят из "
+"текстовой и числовой информации, **описывающей** объект."
 
 # 9e2cd623b27d400eb4a62c28a0f67aef
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:38
@@ -82,6 +94,12 @@ msgid ""
 "Geometries which have vertices with a ``Z`` axis are often referred to as "
 "**2.5D** since they describe height or depth at each vertex, but not both."
 msgstr ""
+"Вид векторных объектов определяется их **геометрией**. Геометрия состоит из "
+"одной или нескольких соединённых между собой **вершин** или **узлов**. "
+"Каждая вершина описывает положение в пространстве с использованием координат "
+"**X**, **Y** и опционально **Z**. Геометрии с координатой ``Z`` часто "
+"называют **2.5D**-геометриями, так как они описывают высоту или глубину "
+"каждого объекта, но не оба эти измерения."
 
 # e6c2daa32ace410d8c088a83077098f9
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:47
@@ -94,6 +112,13 @@ msgid ""
 "last vertex is equal to the first, an enclosed **polygon** feature is formed "
 "(see illustration figure_geometry_polygon_)."
 msgstr ""
+"Если геометрия объекта состоит из одного узла, то это **точка** (см. рисунок "
+"figure_geometry_point_). Когда геометрия состоит из двух или более узлов, "
+"причем координаты первого и последнего узлов разные, получается "
+"**полилиния** (см. рисунок figure_geometry_polyline_). Если геометрия "
+"образована тремя или более узлам и координаты последнего узла совпадают с "
+"координатами первого --- образуется замкнутая геометрия или **полигон** (см. "
+"рисунок figure_geometry_polygon_)."
 
 # cbb4714d11974ae980baf8e0cec86985
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:64
@@ -123,6 +148,9 @@ msgid ""
 "should be able to see the different types of features in the way that a GIS "
 "represents them now (see illustration figure_geometry_landscape_)."
 msgstr ""
+"Возвращаясь к рисунку ландшафта, показаному выше, вы теперь должны суметь "
+"распознать на нем различные типы геометрий, используемых в ГИС (см. рисунок "
+"figure_geometry_landscape_)."
 
 # 519858dd7f6c4342b765f3c4f65199f6
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:107
@@ -135,7 +163,7 @@ msgstr ""
 # c64666877b3e4211a8b47ef39de147d3
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:112
 msgid "Point features in detail"
-msgstr ""
+msgstr "Точечные объекты в деталях"
 
 # 7dc633dbf95a483aad0f8658d87a0a43
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:114
@@ -147,6 +175,11 @@ msgid ""
 "using a point feature. However as you zoom in to the map, moving towards a "
 "larger scale, it makes more sense to show the city limits as a polygon."
 msgstr ""
+"Первое, что необходимо понять, когда речь идет о точечных объектах, что, их "
+"использование зависит от масштаба. Рассмотрим это на примере городов. Если у "
+"нас есть мелкомасштабная карта (которая охватывает большую область), города "
+"лучше обозначать точками. Однако, при увеличении карты и переходе к более "
+"крупным масштабам, границы городов лучше отображать как полиногы."
 
 # 8589018b5436490198c5193ff177a5f4
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:121
@@ -157,6 +190,11 @@ msgid ""
 "type of feature (some things like telephone poles just don't make sense to "
 "be stored as polygons)."
 msgstr ""
+"Выбор точек для представления объектов реального мира зависит от "
+"используемого масштаба (как далеко вы находитесь от объекта), удобства "
+"(создание точечных объектов занимает меньше времени) и типа объектов "
+"(некоторые вещи, например телефонные будки, нет смысла хранить в виде "
+"полигонов)."
 
 # c733941e1f3e4989badd007767524478
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:126
@@ -174,6 +212,17 @@ msgid ""
 "tree or a telephone pole and marked it on a map, you will have created a "
 "point feature."
 msgstr ""
+"Как было показано на рисунке figure_geometry_point_, точечный объект имеет "
+"координаты X, Y, и опционально Z. Координаты X и Y зависят от используемой "
+"**системы координат** (Coordinate Reference System, CRS). Системы координат "
+"будут рассмотрены немного позже. Сейчас для простоты будем считать, что "
+"система координат это способ точно указать где именно находится объект на "
+"поверхности земли. Одной из наиболее распространенных систем координат "
+"является **широта-долгота**. Линии долготы идут от Северного полюса к "
+"Южному. Линии широты идут с Востока на Запад. Вы можете точно описать свое "
+"местонахождение, сообщив кому-либо свою долготу (X) и широту (Y). Если "
+"сделать такие же измерения для дерева или телефонной будки, а затем отметить "
+"их на карте, вы получите точечный объект."
 
 # bf3f3c41f3f044cbbef9cc0335562536
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:138
@@ -181,11 +230,13 @@ msgid ""
 "Since we know the earth is not flat, it is often useful to add a Z value to "
 "a point feature. This describes how high above sea level you are."
 msgstr ""
+"Так как мы знаем, что Земля не плоская, полезно добавлять к точкам и "
+"координату Z. Она описывает высоту объекта над уровнем моря."
 
 # e18c8e686d4a4a7d8180fd74b3582fe9
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:142
 msgid "Polyline features in detail"
-msgstr ""
+msgstr "Полилинии в деталях"
 
 # 31911a12e3534b8d9e56a40f9a30d715
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:144
@@ -196,6 +247,11 @@ msgid ""
 "created. When more than two are joined, they form a 'line of lines', or "
 "**polyline**."
 msgstr ""
+"Точечный объект это один узел, **полилиния же состоит из двух и более "
+"узлов**. Полилиния это путь, проходящий через каждый узел, как показано на "
+"рисунке figure_geometry_polyline_. Когда соединяется два узла, создаётся "
+"линия. При соединении нескольких узлов, они образуют «линию линий» или "
+"**полилинию**."
 
 # 1a3e65768ff34f22a75e56866ef65f0d
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:149
@@ -209,6 +265,14 @@ msgid ""
 "these special rules for a feature type (e.g. roads) and the GIS will ensure "
 "that these polylines always comply to these rules."
 msgstr ""
+"Полилинии используются для отображения **линейных объектов**, таких как "
+"дороги, реки, горизонтали, тропинки, авиамаршруты и т.д. Иногда к полилиниям "
+"предъявляются дополнительные требования помимо основных требований к "
+"геометрии. Так, горизонтали могут соприкасаться (например, на скалах) но не "
+"должны пересекаться. Аналогично полилинии, используемые для хранения "
+"дорожной сети, должны быть соединены на перекрестках. В некоторых "
+"ГИС-приложениях вы можете задавать такие специальные правила для объектов и "
+"ГИС будет следить за тем, чтобы полилинии соответствовали им."
 
 # 51cf9215513149c589355be878584382
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:158
@@ -219,6 +283,11 @@ msgid ""
 "(captured into the computer) with distances between vertices that are small "
 "enough for the scale at which you want to use the data."
 msgstr ""
+"Если узлы изогнутой полилинии находятся на большом расстоянии друг от друга, "
+"она может выглядеть **зубчатой** или неровной в зависимости от масштаба (см. "
+"рисунок figure_polyline_jagged_). Поэтому важно выполнять оцифровку "
+"полилиний с расстоянием между узлами, которое будет достаточным для "
+"масштаба, в котором данные будут использоваться."
 
 # e241e63c3bca433891c6de3fa2ddb92f
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:174
@@ -237,11 +306,15 @@ msgid ""
 "street, and so on. The GIS can use these attributes to symbolise the "
 "polyline feature with a suitable colour or line style."
 msgstr ""
+"**Атрибуты** полилинии описывают её свойства или характеристики. Например, "
+"полилиния дороги может иметь атрибуты, описывающие тип поверхности, "
+"количество полос и направления движения и т.д. ГИС могут использовать эти "
+"атрибуты для отображения полилинии подходящим цветом или стилем."
 
 # 12acf72c3a5443a4afc2bfb1304eafe6
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:185
 msgid "Polygon features in detail"
-msgstr ""
+msgstr "Полигоны в деталях"
 
 # 7f56bd90934e4e05a92305f8ee23d393
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:187
@@ -253,9 +326,17 @@ msgid ""
 "vertices should always be at the same place! Polygons often have **shared "
 "geometry** –-- boundaries that are in common with a neighbouring polygon. "
 "Many GIS applications have the capability to ensure that the boundaries of "
-"neighbouring polygons exactly coincide. We will explore this in the :ref:"
-"`gentle_gis_topology` topic later in this tutorial."
+"neighbouring polygons exactly coincide. We will explore this in the "
+":ref:`gentle_gis_topology` topic later in this tutorial."
 msgstr ""
+"Полигональные объекты это **замкнутые области** такие как плотины, острова, "
+"границы стран и подобные. Как и полилинии, полигональные объекты создаются "
+"из ряда узлов, соединенных линией. Однако, так как полигон всегда описывает "
+"замкнутую область, первый и последний узел всегда должны совпадать! Полигоны "
+"часто имеют **общую геометрию** --- границы, общие для нескольких соседних "
+"полигонов. Многие ГИС-приложения могут следить за тем, чтобы границы смежных "
+"полигонов совпадали. Более подробно это рассматривается в разделе "
+":ref:`gentle_gis_topology` этого руководства."
 
 # a0b1e89b412b4027808db9a9e28a9395
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:196
@@ -264,11 +345,14 @@ msgid ""
 "describe each polygon. For example a dam may have attributes for depth and "
 "water quality."
 msgstr ""
+"Как точки и полилинии, полигоны имеют **атрибуты**. Атрибуты описывают "
+"каждый полигон. Например, плотина может иметь атрибуты со значениями глубины "
+"и качества воды."
 
 # 6742b6d8292047dfab69c8ba0650017a
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:201
 msgid "Vector data in layers"
-msgstr ""
+msgstr "Векторные данные в слоях"
 
 # 0731fa013f3d46f180c829ef151d4df7
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:203
@@ -284,11 +368,19 @@ msgid ""
 "allows you to hide or show all of the features for that layer in your GIS "
 "application with a single mouse click."
 msgstr ""
+"Мы разобрались что из себя представляют векторные данные, теперь посмотрим "
+"как они используются в ГИС. Большинство ГИС-приложений группирует векторные "
+"объекты в **слои**. Объекты в слое имеют одинаковый тип геометрии (например, "
+"все они являются точками) и общий набор атрибутов (например, название вида "
+"растения для слоя деревьев). Допустим, вы записали расположение всех "
+"пешеходных дорожек в вашей школе, все они будут храниться на жеском диске "
+"компьютера и отображаться в ГИС как один слой. Это очень удобно, т.к. "
+"позволяет показать или скрыть объекты этого слоя одним щелчком мыши."
 
 # 1797ebb88fcb46b881fe2437899db9c0
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:214
 msgid "Editing vector data"
-msgstr ""
+msgstr "Редактирование векторных данных"
 
 # 678d1cfd6993456ab853647893fb86c8
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:216
@@ -303,6 +395,14 @@ msgid ""
 "one vertex –-- remember in our discussion of lines above that all lines must "
 "have at least two vertices."
 msgstr ""
+"ГИС-приложения позволяют создавать и редактировать геометрии объектов слоя "
+"--- этот процесс называется **оцифровка** и будет подробно рассмотрен позже. "
+"Если слой содержит полигоны (например, здания), ГИС-приложение позволит вам "
+"создать новые полигоны в этом слое. Аналогично, если вы захотите изменить "
+"форму объекта, приложение разрешить сделать это только в том случае, если "
+"измененная геометрия будет оставаться корректной. К примеру, вы не сможете "
+"отредактировать линию так, чтобы она состояла только из одного узла --- "
+"вспомните предыдущий материал: линия должна иметь как миниму два узла."
 
 # 1722879dc6404b9bbe1dd174900ffa81
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:225
@@ -316,6 +416,13 @@ msgid ""
 "the river and digitise the places where you made these readings (as a point "
 "layer)."
 msgstr ""
+"Создание и редактирование векторных данных является важной функцией ГИС, "
+"т.к. это один из основных способов получить необходимые данные. Например, вы "
+"занимаетесь мониторингом загрязнений в речке. Вы можете использовать ГИС для "
+"оцифровки всех стоков ливневых вод (в виде точечного слоя). Также вы можете "
+"оцифровать саму речку (как линейный объект). И, наконец, можно снять "
+"показания уровня кислотности (pH) вдоль реки и нанести эти места на карту "
+"(тоже в виде точечного слоя)."
 
 # c0f2d24b31344d0eb4e436b4a68c3092
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:233
@@ -324,11 +431,14 @@ msgid ""
 "you can obtain and use. For example, you can obtain vector data that appears "
 "on the 1:50 000 map sheets from the Chief Directorate: Surveys and Mapping."
 msgstr ""
+"Помимо создания собственных данных можно использовать существующие свободные "
+"векторные данные. Так, вы можете получить данные, используемые на картах "
+"масштаба 1:50000 в Управлении геодезии и картографии."
 
 # 04485ce5723b4ad78bf161cad5e3779d
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:238
 msgid "Scale and vector data"
-msgstr ""
+msgstr "Масштаб и векторные данные"
 
 # 43f56c90e3084c6a8ef3dd62f3c5c96e
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:240
@@ -348,6 +458,20 @@ msgid ""
 "at 1:1000 000 might be just fine and will save you a lot of time and effort "
 "capturing the data."
 msgstr ""
+"**Масштаб** является важной характеристикой векторных данных при работе в "
+"ГИС. Данные обычно получают либо путем оцифровки существующих карт, либо "
+"обработкой данных от устройств системы глобального позиционирования. Карты "
+"имеют различные масштабы, поэтому при переносе векторных данных с карты в "
+"ГИС (например, путем оцифровки бумажной карты), цифровые данные будут иметь "
+"тот же масштаб, что и исходная карта. Этот эффект демонстрируется на "
+"рисунках figure_vector_small_scale_ и figure_vector_large_scale_. Выбор "
+"неправильного масштаба может стать источником многих проблем. Например, при "
+"использованиии векторных данных, показанных на рисунке "
+"figure_vector_small_scale_, в планировании мероприятий по охране "
+"водно-болотных угодий может привести к тому, что важные части болот просто "
+"не будут учтены! С другой стороны, если вы создаёте карту региона, "
+"использование данных оцифрованных в масштабе1:1000 000 будет разумным и "
+"поможет сэкономить время и силы при оцифровке."
 
 # 0bbdb278421545598c751d3cd48ca291
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:264
@@ -366,7 +490,7 @@ msgstr ""
 # 5d301cc2967f4f509e81f5802c020cbd
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:279
 msgid "Symbology"
-msgstr ""
+msgstr "Символика"
 
 # 7bd1a03045b14794b4f568968fc84a7b
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:281
@@ -382,6 +506,16 @@ msgid ""
 "Illustrations figure_vector_symbology_, figure_generic_symbology_ and "
 "figure_custom_symbology_)."
 msgstr ""
+"При добавлении векторных слоёв в ГИС они будут отображены базовыми символами "
+"со случайной расцветкой. Одно из преимуществе ГИС состоит в том, что вы "
+"легко можете создавать персонализованные карты. ГИС позволяет задать цвета, "
+"наилучшим образом отвечающие типу объектов (например, можно отображать "
+"водные объекты голубым цветом). Кроме того, ГИС позволяет задавать условные "
+"знаки. Так, если у вас есть точечный слой с информацией о деревьях, "
+"положение каждого дерева можно обозначить значком дерева, вместо "
+"стандартного кружка, который используется ГИС при первом открытии слоя (см. "
+"рисунки figure_vector_symbology_, figure_generic_symbology_ и "
+"figure_custom_symbology_)."
 
 # b90b41f096284b6591ca4a13d3f14fe0
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:301
@@ -408,15 +542,18 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:330
 msgid ""
 "Symbology is a powerful feature, making maps come to life and the data in "
-"your GIS easier to understand. In the topic that follows (:ref:"
-"`gentle_gis_attributes`) we will explore more deeply how symbology can help "
-"the user to understand vector data."
+"your GIS easier to understand. In the topic that follows "
+"(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can "
+"help the user to understand vector data."
 msgstr ""
+"Символика это удобный инструмент, делающий карты наглядными и упрощающий "
+"работу с ГИС-данными. В следующих главах ((:ref:`gentle_gis_attributes`) мы "
+"более подробно рассмотрим как символика может помочь в понимании ГИС-данных."
 
 # 8e4dd3a253364608b427e428679c3655
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:336
 msgid "What can we do with vector data in a GIS?"
-msgstr ""
+msgstr "Что можно делать в векторными данными в ГИС?"
 
 # 97cf3c8b85364388a7244c18ba319215
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:338
@@ -432,11 +569,20 @@ msgid ""
 "**spatial analysis**. In later topics of this tutorial we will look at "
 "spatial analysis in more detail."
 msgstr ""
+"В самом простом случае использовать векторные данные в ГИС можно точно так "
+"же, как и обычную топографическую карту. Настоящая сила ГИС проявляется "
+"когда нам потребуется получить ответы на вопросы вида: «какие дома попадали "
+"в зону затопления на протяжении 100 лет?», «где разместить больницу, чтобы "
+"она была доступна наибольшему числу пациентов?», «кто из учащихся проживает "
+"в заданном районе?». ГИС является отличным инструментом для получения "
+"ответов на подобные вопросы при помощи векторных данных. Обычно процесс "
+"получения ответов на такие вопросы называют **пространственным анализом**. В "
+"последующих разделах он будет рассмотрен подробнее."
 
 # 87108b1c0f58433d96b58c5b91877dc5
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:349
 msgid "Common problems with vector data"
-msgstr ""
+msgstr "Проблемы векторных данных"
 
 # 9094d11b2b884af09c3b3ee827af3f5e
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:351
@@ -449,6 +595,13 @@ msgid ""
 "aren't being careful, when time or money don't allow for enough detail in "
 "the collection process, and so on."
 msgstr ""
+"При работе с векторными данными могут возникать некоторые проблемы. Мы уже "
+"упоминали о проблемах, связаных с оцифровкой данных в различных масштабах. "
+"Кроме того, векторные данные требуют обслуживания и доработки, чтобы быть "
+"уверенными в их точности и надежности. Неточные векторные данные могут быть "
+"получены при использовании неправильно настроенных инструментов оцифровки; "
+"когда люди, выполняющие оцифровку, недостаточно аккуратны; когда на процесс "
+"сбора и подготовки данных выделено недостаточно средств и т.д."
 
 # e624e392326244d4a551e4f2a1f42f68
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:359
@@ -457,6 +610,9 @@ msgid ""
 "the data in a GIS. For example **slivers** can occur when the edges of two "
 "polygon areas don't meet properly (see figure_vector_slivers_)."
 msgstr ""
+"Если ваши векторные данные низкого качества, это часто заметно при просмотре "
+"данных в ГИС. Например, «щели» могут возникать в случае, если ребра двух "
+"соседних полигонов не соприкасаются (см. figure_vector_slivers_)."
 
 # 50d9b68b058e4e62b9db81c7082aa0a6
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:373
@@ -476,6 +632,11 @@ msgid ""
 "it should be connected. Figure figure_vector_overshoots_ demonstrates what "
 "undershoots and overshoots look like."
 msgstr ""
+"**Перехлест** возникает когда линейный объект, такой как дорога, не "
+"оканчивается точно в месте пересечения с другой дорогой. **Недовод** "
+"возникает когда линейный объект (например, река) не соприкасается с другим "
+"объектом, к которому он должен быть присоединен. Рисунок "
+"figure_vector_overshoots_ демонстрирует перехлесты и недоводы."
 
 # 7b7d7267b1cb427abf0c6ad9ec7fb7ec
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:394
@@ -492,21 +653,26 @@ msgid ""
 "carefully and accurately. In the upcoming topic on **topology**, we will "
 "examine some of these types of errors in more detail."
 msgstr ""
+"Чтобы подобные ошибки не возникали, важно выполнять оцифровку данных очень "
+"внимательно и аккуратно. В разделе, посвященном **топологии**, мы рассмотрим "
+"некоторые из этих ошибок более подробно."
 
 # 8de40260679e4ff2995cfd355a2776e5
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:403
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # 5e9045f61ad84f1f931d99870b6b6f7f
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:405
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # e630df85ce91414eaeab2d730a05c627
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:407
 msgid "**Vector data** is used to represent real world **features** in a GIS."
 msgstr ""
+"**Векторные данные** использутся для отображения **объектов** реального мира "
+"в ГИС."
 
 # 7eacb8edc1444f289b953f6b55a227a3
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:408
@@ -514,22 +680,25 @@ msgid ""
 "A vector feature can have a **geometry** type of **point**, **line** or a "
 "**polygon**."
 msgstr ""
+"Векторные объекты имеют **геометрию** одного из типов: **точка**, **линия** "
+"или **полигон**."
 
 # 2b0facc18ef44d9bab50e5310ad6db62
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:410
 msgid "Each vector feature has **attribute data** that describes it."
-msgstr ""
+msgstr "Каждый объект имеет **атрибуты**, описывающие его."
 
 # e042515558eb4e8fa9620e762e4f57a8
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:411
 msgid "Feature geometry is described in terms of **vertices.**"
-msgstr ""
+msgstr "Геометрия объекта состоит из набора **узлов**."
 
 # e43fb6d6fea4414daa899af91676d97f
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:412
 msgid ""
 "Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
 msgstr ""
+"Точечная геометрия состоит из **одного узла** (X, Y и, необязательно, Z)."
 
 # e084604eccf74f4eb93a53e236c96a98
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:413
@@ -537,6 +706,7 @@ msgid ""
 "Polyline geometries are made up of **two or more** vertices forming a "
 "connected line."
 msgstr ""
+"Линейная геометрия состоит из **двух и более** узлов, формирующих линию."
 
 # 2ffad906a8bf4e8b97c262e0654a5db5
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:415
@@ -544,6 +714,8 @@ msgid ""
 "Polygon geometries are made up of **at least four vertices** forming an "
 "enclosed area. The first and last vertices are always in the same place."
 msgstr ""
+"Полональная геометрия состоит **как минимум из четырёх узлов**, описывающих "
+"замкнутую область. Первый и последний узел всегда одинаковы."
 
 # 0488e2feba114d8ca7a86ccb3db45c8d
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:417
@@ -551,6 +723,8 @@ msgid ""
 "Choosing which geometry type to use depends on scale, convenience and what "
 "you want to do with the data in the GIS."
 msgstr ""
+"Выбор того или иного типа геомерии зависит от масштаба, удобства и целей "
+"использования данных в ГИС."
 
 # dba51f11605e4df59196c5a9a53f04d1
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:419
@@ -558,6 +732,8 @@ msgid ""
 "Most GIS applications do not allow you to mix more than one geometry type in "
 "a single layer."
 msgstr ""
+"Большинство ГИС-приложений не позволяют хранить различные типы геометрий в "
+"одном слое."
 
 # fb92dd5a507b4e2a988b03d3a459613b
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:421
@@ -565,6 +741,8 @@ msgid ""
 "Digitising is the process of creating digital vector data by drawing it in a "
 "GIS application."
 msgstr ""
+"Оцифровка это процесс создания цифровых векторных данных, путем их рисования "
+"в ГИС."
 
 # c5a9644a59fe404788c3921c66e1cb6f
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:423
@@ -572,6 +750,8 @@ msgid ""
 "Vector data can have quality issues such as **undershoots**, **overshoots** "
 "and **slivers** which you need to be aware of."
 msgstr ""
+"Векторные данные могут иметь проблемы с качеством, такие как **перехлесты**, "
+"**недоводы** и **щели**, о которых необходимо помнить."
 
 # 34ef422e0a694885a9306a00e672b9f8
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:425
@@ -579,13 +759,15 @@ msgid ""
 "Vector data can be used for **spatial analysis** in a GIS application, for "
 "example to find the nearest hospital to a school."
 msgstr ""
+"Векторые данные могут использоваться для **пространственного анализа** в "
+"ГИС, например, для поиска ближашей больницы или школы."
 
 # 9d93d96a1d044d16956c0a76d4bbc678
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:428
 msgid ""
 "We have summarised the GIS Vector Data concept in Figure "
 "figure_vector_summary_."
-msgstr ""
+msgstr "Концепция векторных данных показана на рисунке figure_vector_summary_."
 
 # 5838676daa8e4932821d1cdaa01f05eb
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:440
@@ -595,12 +777,12 @@ msgstr ""
 # 4f033731d4e64501a7132a83d19c126f
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:443
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # ee3e57d76cb549f5bce1fbd322701c6b
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:445
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # 390556d8c4154283884c55df89a85577
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:447
@@ -609,6 +791,9 @@ msgid ""
 "figure_sample_map_), see if your learners can identify examples of the "
 "different types of vector data by highlighting them on the map."
 msgstr ""
+"Используя топографическую карту района (похожий на рисунок "
+"figure_sample_map_), проверьте, что учащиеся могут идентифицировать "
+"различные типы векторных данных."
 
 # 8fc5f03adb5f4e1a8cdc5e76ccea92a9
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:450
@@ -619,6 +804,11 @@ msgid ""
 "would be best represented in the GIS as a point, line or polygon. See "
 "table_vector_1_ for an example."
 msgstr ""
+"Подумайте, как вы будете создавать векторные объекты, соответвствующие "
+"объектам школьного двора, в ГИС. Создайте таблицу различных объектов, "
+"расположенных вокруг школы и попросите учащихся определить какой тип "
+"геометрии лучше всего использовать для этих объектов в ГИС. В качестве "
+"примера используйте таблицу table_vector_1_."
 
 # 9dc92982c5a44d0fa0bfa42a0a1a4d50
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:466
@@ -629,37 +819,37 @@ msgstr ""
 # b6807aaeacfa4ff4b9c3578b520f83d5
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:472
 msgid "Real world feature"
-msgstr ""
+msgstr "Реальный объект"
 
 # f534928686aa42fab7580adae5a4fd35
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:472
 msgid "Suitable Geometry Type"
-msgstr ""
+msgstr "Подходящий тип геометрии"
 
 # 3b1dff2782504a3188cccf0e0636aa7e
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:474
 msgid "The school flagpole"
-msgstr ""
+msgstr "Флагшток"
 
 # 6129c3cd3bff4c2c8359fb964962830a
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:476
 msgid "The soccer field"
-msgstr ""
+msgstr "Футбольное поле"
 
 # 0be9fb8467b14844ae559ce8cb65ef7d
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:478
 msgid "The footpaths in and around the school"
-msgstr ""
+msgstr "Тропинки вокруг школы"
 
 # 26f9277e9beb439d8932de5b71dad376
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:480
 msgid "Places where taps are located"
-msgstr ""
+msgstr "Места расположения кранов"
 
 # 4e584566b73a408db2314866d2f13ef8
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:482
 msgid "Etc."
-msgstr ""
+msgstr "И т.д."
 
 # d52e4f60df124c53884b964d8cce1c67
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:485
@@ -667,11 +857,13 @@ msgid ""
 "Table Vector 1: Create a table like this (leaving the geometry type column "
 "empty) and ask your learners to decide on suitable geometry types."
 msgstr ""
+"Table Vector 1: Создайте аналогичную таблицу (оставив поле с типом геометрии "
+"пустым) и попросите учащихся определить подходящий тип геометрии."
 
 # 2a4749e3d8434c1c96465af1b16c1bad
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:489
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # 6bd58589576943a08a02996319ef9b14
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:491
@@ -679,11 +871,13 @@ msgid ""
 "If you don't have a computer available, you can use a toposheet and "
 "transparency sheets to show your learners about vector data."
 msgstr ""
+"Если у вас нет компьютера, можно использовать топографическую карту и "
+"прозрачную пленку, чтобы рассказать о векторных данных."
 
 # a0d9bcad0bd0429ba9a6f516a8692c32
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:495
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # 71c927337d1b4ae39d2f41874535a3e8
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:497
@@ -691,11 +885,13 @@ msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "vector data in QGIS."
 msgstr ""
+"Подробную информацию о работе с векторными данными в QGIS можно найти в "
+"Руководстве пользователя QGIS."
 
 # d95b8cb7a5eb4bc294b09e628cdaf851
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:501
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # 4a2047eecc1e4d52bdcb70f77bf66a4c
 #: ../../source/docs/gentle_gis_introduction/02_vector_data.rst:503
@@ -703,3 +899,5 @@ msgid ""
 "In the section that follows we will take a closer look at **attribute data** "
 "to see how it can be used to describe vector features."
 msgstr ""
+"В следующем разделе мы познакомимся с **атрибутивными данными** и узнаем как "
+"использовать их для описания векторных объектов."

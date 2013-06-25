@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # e651f2fc25454f3da190cc35f5aac93b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:8
 msgid "Coordinate Reference Systems"
-msgstr ""
+msgstr "Системы координат"
 
 # 4f6741a4f883408a9e236ff573b02ec4
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:11
@@ -30,17 +33,17 @@ msgstr ""
 # 4cba97ea83b5475cbe7cbe526a6e059b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:11
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # 283f4f24020c4faca27046dda95161fd
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:11
 msgid "Understanding of Coordinate Reference Systems."
-msgstr ""
+msgstr "Ознакомиться с системами координат."
 
 # 8562801f3adf46d599bc366721387eda
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:13
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # b87013fd56d148b7a38b268436217f6e
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:13
@@ -48,11 +51,13 @@ msgid ""
 "Coordinate Reference System (CRS), Map Projection, On the Fly Projection, "
 "Latitude, Longitude, Northing, Easting"
 msgstr ""
+"Система координат (CRS), проекция карты, перепроецирование «на лету», "
+"широта, долгота"
 
 # f578178000434345b32df02380b4a545
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # eca9c74cd3cb4060b4cb3b712025b8c0
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:19
@@ -65,11 +70,18 @@ msgid ""
 "system to use, depends on the regional extent of the area you want to work "
 "in, on the analysis you want to do and often on the availability of data."
 msgstr ""
+"**Проекция карты** это попытка отобразить поверхности Земли или её часть на "
+"плоском листе бумаги или экране компьютера. **Система координат** через "
+"координаты определяет как двумерные спроецированные карты в ГИС связаны с "
+"участками земной поверхности. Решение об использовании той или иной проекции "
+"и системы координат зависит от охвата области, с которой необходимо "
+"работать, типа анализа, который необходимо выполнить, и, очень часто, от "
+"наличия данных."
 
 # dca47e2b6a1f4300b1c241c02c9b4f0f
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:28
 msgid "Map Projection in detail"
-msgstr ""
+msgstr "Подробнее о проекциях"
 
 # 13cfb8180f4e4c9e91bf224760cb6018
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:30
@@ -81,6 +93,12 @@ msgid ""
 "pocket. They are also only convenient to use at extremely small scales (e.g. "
 "1:100 million)."
 msgstr ""
+"Традиционным способом отображения формы Земли являются глобусы. Однако "
+"использование этого подхода имеет свои недостатки. Хотя глобусы по большому "
+"счету сохраняют форму Земли и иллюстрируют пространственную конфигурацию "
+"объектов размером с континент, их весьма проблематично носить в кармане. "
+"Кроме того, они удобны в использовании исключительно при малых масштабах "
+"(например 1:100 миллионам)."
 
 # e69ad8ce6f9b40f299031559f2098cd8
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:36
@@ -93,6 +111,13 @@ msgid ""
 "projections** designed to show, with reasonable accuracy, the spherical "
 "earth in two-dimensions."
 msgstr ""
+"Большинство тематических карт, используемых в ГИС-приложениях, имеют гораздо "
+"больший масштаб. Обычно, наборы ГИС-данных имеют масштаб 1:250 000 или "
+"больше, в зависимости от уровня детализации. Глобус таких размеров будет "
+"дорогим и его использование будет очень сложным. Поэтому картографы "
+"разработали набор приемов, называемых **проекциями карты**, предназначенный "
+"для отображения сферической поверности Земли в двумерном пространстве с "
+"достаточной точностью."
 
 # 986a0f4a297448baa5f790dcbdd1feb7
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:43
@@ -112,11 +137,23 @@ msgid ""
 "large East-West extent, and some are better for mapping areas with a large "
 "North-South extent."
 msgstr ""
+"Если рассматривать Землю вблизи, её можно считать плоской. Однако, при "
+"взгляде из космоса видно, что её форма приближена к сферической. Карты, как "
+"будет показано в следующем разделе, отражают реальность. На них показаны не "
+"только объекты, но и их форма и пространственное расположение. Каждая "
+"проекция имеет **достоинства** и **недостатки**. Выбор наилучшей проекции "
+"для карты определяется её масштабом и назначением. Например, проекция может "
+"давать неприемлемые искажения в случае отображения всего африканского "
+"континента, но идеально подходить для создания **крупномасштабной "
+"(подробной) карты** страны. Свойства проекций также могут влиять на "
+"визуальные параметры карты. Так, некоторые проекции хорошо подходят для "
+"маленьких областей, другие хороши для отображения объектов, протяженных с "
+"запада на восток, третьи --- для объектов вытянутых с севера на юг."
 
 # 2619ac0e1a6f4fb5b56543d50fc129fd
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:58
 msgid "The three families of map projections"
-msgstr ""
+msgstr "Семейтва проекций"
 
 # 20400ad1944342cc978fa81fca79b2f0
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:60
@@ -131,6 +168,14 @@ msgid ""
 "of **cylindrical projections**, and another called **conical projections** "
 "(see figure_projection_families_)"
 msgstr ""
+"Процесс создания проекций можно представить так: внутри прозрачного глобуса "
+"с непрозрачными объектами на нём находится источник света. Тень объектов "
+"отбрасывается на плоский лист бумаги. Разные способы проецирования могут "
+"быть получены путем оборачивания глобуса листов в **цилиндр**, **конус** или "
+"просто **прикладыванием листа**. Каждый из этих методов образует **семейство "
+"картографических проекций**. Таким образом, существуют **планарные "
+"(плоскостные)**, **цилиндрические** и **конические** проекции (см. рисунок "
+"figure_projection_families_)."
 
 # 6cf0c72767ec496a8e49f10d953bd1ce
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:80
@@ -138,6 +183,8 @@ msgid ""
 "The three families of map projections. They can be represented by a) "
 "cylindrical projections, b) conical projections or c) planar projections."
 msgstr ""
+"Три семейства картографических проекций. Слева направо a) цилиндрические, b) "
+"конические, c) планарные."
 
 # 925ae2cb3788447c9003c6ac4da385cd
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:83
@@ -147,11 +194,14 @@ msgid ""
 "trigonometry. This recreates the physical projection of light through the "
 "globe."
 msgstr ""
+"В настоящее время процесс проецирования сферической Земли на бумагу "
+"выполняется с использованием математических преобразований и тригонометрии. "
+"Но в основе лежит все то же пропускание луча света через глобус."
 
 # ac7214eb378a492aa5125d6786a90109
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:88
 msgid "Accuracy of map projections"
-msgstr ""
+msgstr "Точность проекций"
 
 # 9137635661ee476ea5bfea69d7319512
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:90
@@ -165,6 +215,14 @@ msgid ""
 "Tripel projection** and the **Robinson projection** (see "
 "figure_robinson_projection_), which are often used for world maps."
 msgstr ""
+"Картографические проекции никогда не дают абсолютно точное отображение "
+"сферической поверхности. В результате проецирования, карта получает "
+"**искажения углов, площадей и расстояний**. Проекции могут давать как "
+"несколько типов искажений, так и достаточно приемлемый результат, в котором "
+"искажения углов, площадей и расстояний находятся в допустимых приделах. "
+"Примером таких компромисных проекций могут служить **тройная проекция "
+"Винкеля** и **проекция Робинсона**, часто используемые для карт мира (см. "
+"рисунок figure_robinson_projection_)."
 
 # 2327a3dc7c124112881f13a56bbcabad
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:109
@@ -172,6 +230,7 @@ msgid ""
 "The Robinson projection is a compromise where distortions of area, angular "
 "conformity and distance are acceptable."
 msgstr ""
+"Проекция Робинсона дает приемлемые искажения площади, расстояний и углов."
 
 # ec6e962beb1948ccb626f16e66fae9e7
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:112
@@ -183,11 +242,16 @@ msgid ""
 "distances on your map, you should try to use a map projection for your data "
 "that provides high accuracy for distances."
 msgstr ""
+"В большинстве случаев сохранить все характеристики исходных объектов при "
+"проецировании невозможно. Это значит, что когда вам требуется выполнить "
+"анализ, необходимо подбирать такую проекцию, которая даст наилучшие "
+"характеристики для анализа. Например, если требуется измерить расстояния, "
+"необходимо выбрать проекцию, которая обеспечит точные расстояния."
 
 # f086af79262f49569d81ae210112bbdd
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:120
 msgid "Map projections with angular conformity"
-msgstr ""
+msgstr "Равноугольные проекции"
 
 # 56da76b20f70477697cd0017b3bcbc65
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:122
@@ -199,6 +263,11 @@ msgid ""
 "projection as well. A map projection that retains this property of angular "
 "conformity is called a **conformal** or **orthomorphic projection**."
 msgstr ""
+"Когда мы работаем с глобусом, основные направления компаса (север, восток, "
+"юг и запад) всегда расположены под углом в 90 градусов друг к другу. Другими "
+"словами восток всегда будет находиться на 90 градусов от севера. Проекция "
+"может сохранять **угловые направления**, и такая проекция называется "
+"**конморфной** или **равноугольной**."
 
 # 754ada6186fe40e7be5bcd4312e0ae3c
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:129
@@ -215,6 +284,16 @@ msgid ""
 "The U.S. Geological Survey uses a conformal projection for many of its "
 "topographic maps."
 msgstr ""
+"Проекции **сохраняющие угловые величины** очень важны. Они широко "
+"используются для навигационных и метеорологических задач. Необходимо "
+"помнить, что сохранять правильные углы на карте большой площади трудно, "
+"поэтому применять такие проекции лучше к небольшим участкам поверхности. "
+"Конморфные проекции искажают площади, а значит измерения площадей, "
+"выполненные в такой проекции будут неправильными. Чем больше площадь, тем "
+"менее точными будут измерения. Примерами проекций могут служить **проекция "
+"Меркатора** (см. рисунок figure_mercator_projection_) и **равноугольная "
+"коническая проекция Ламберта**. Геоологическая служба США использует "
+"конморфные проекции для многих своих топографических карт."
 
 # ecaf8f98b83b43a7be11151ea757926f
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:150
@@ -222,11 +301,13 @@ msgid ""
 "The Mercator projection, for example, is used where angular relationships "
 "are important, but the relationship of areas are distorted."
 msgstr ""
+"Проекция Меркатора используется в тех случаях, когда важна правильность "
+"углов и допустимы искажения площади."
 
 # 1776f3fa10c340ba9ce5ab000d06adfc
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:154
 msgid "Map projections with equal distance"
-msgstr ""
+msgstr "Равнопромежуточные проекции"
 
 # 0c5423ac61c743a8bbb0d8c10e837260
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:156
@@ -245,6 +326,18 @@ msgid ""
 "for the emblem of the United Nations (see "
 "figure_azimuthal_equidistant_projection_)."
 msgstr ""
+"Если необходимо получить точные расстояния, то для карты выбирается "
+"проекция, хорошо передающая расстояния. Такие проекции, их называют "
+"**равнопромежуточными**, требуют, чтобы **масштаб** карты был "
+"**неизменным**. Карта будет равновеликой, когда она правильно передает "
+"расстояние от центра проекции до любой точки. **Равнопромежуточные** "
+"проекции обеспечивают точные расстояни от центра проекции или заданой линии. "
+"Такие проекции используются для сейсмических карт, а также для навигации. "
+"Хорошим примером равнопромежуточных проекций могут быть **равнопромежуточная "
+"цилиндрическая Плате-Карре** (см. рисунок figure_plate_caree_projection_) и "
+"**цилиндрическая равнопромежуточная**. На эмблеме ООН испльзуется "
+"**азимутальная равнопромежуточная проекция** (см. рисунок "
+"figure_azimuthal_equidistant_projection_)."
 
 # fa32b3e6c5794dc38af10cffe0a8b8b3
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:179
@@ -252,16 +345,18 @@ msgid ""
 "The Plate Carree Equidistant Cylindrical projection, for example, is used "
 "when accurate distance measurement is important."
 msgstr ""
+"Равнопромежуточная цилиндрическая проекция Плате-Карре используется, когда "
+"необходимо получить точные расстояния."
 
 # 85648cd599cc409a98d70b40de71ba93
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:192
 msgid "The United Nations Logo uses the Azimuthal Equidistant projection."
-msgstr ""
+msgstr "Логотип ООН использует азимутальную равнопромежуточную проекцию."
 
 # b2b32c0409564bde99da0ae107abbc34
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:195
 msgid "Projections with equal areas"
-msgstr ""
+msgstr "Равноплощадные проекции"
 
 # 23f39c3d67514eb5a4e03056e9ca169a
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:197
@@ -307,7 +402,7 @@ msgstr ""
 # f6758aa28a5d4c7b8c53c648e4fca72b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:235
 msgid "Coordinate Reference System (CRS) in detail"
-msgstr ""
+msgstr "Подробнее о системах координат"
 
 # b23114b20dd84cc69d015a1888bbd003
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:237
@@ -322,7 +417,7 @@ msgstr ""
 # 07b5bbce97a040dca1417e1fe783f639
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:244
 msgid "Geographic Coordinate Systems"
-msgstr ""
+msgstr "Географические системы координат"
 
 # 103f6f55b02a4a7aa93bd6d624080a0b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:246
@@ -399,7 +494,7 @@ msgstr ""
 # 1b07cef0690b47f7a7d2b3978cf23df9
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:302
 msgid "Projected coordinate reference systems"
-msgstr ""
+msgstr "Спроецированные системы координат"
 
 # e8bed2f0ba1d4b718994e760e9340bab
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:304
@@ -407,12 +502,12 @@ msgid ""
 "A two-dimensional coordinate reference system is commonly defined by two "
 "axes. At right angles to each other, they form a so called **XY-plane** (see "
 "figure_projected_crs_ on the left side). The horizontal axis is normally "
-"labelled **X**, and the vertical axis is normally labelled **Y**. In a three-"
-"dimensional coordinate reference system, another axis, normally labelled "
-"**Z**, is added. It is also at right angles to the **X** and **Y** axes. The "
-"**Z** axis provides the third dimension of space (see figure_projected_crs_ "
-"on the right side). Every point that is expressed in spherical coordinates "
-"can be expressed as an **X Y Z** coordinate."
+"labelled **X**, and the vertical axis is normally labelled **Y**. In a "
+"three-dimensional coordinate reference system, another axis, normally "
+"labelled **Z**, is added. It is also at right angles to the **X** and **Y** "
+"axes. The **Z** axis provides the third dimension of space (see "
+"figure_projected_crs_ on the right side). Every point that is expressed in "
+"spherical coordinates can be expressed as an **X Y Z** coordinate."
 msgstr ""
 
 # 070d0f397f9b4957bfb0e07e057bc5c9
@@ -425,8 +520,8 @@ msgstr ""
 msgid ""
 "A projected coordinate reference system in the southern hemisphere (south of "
 "the equator) normally has its origin on the equator at a specific "
-"**Longitude**. This means that the Y-values increase southwards and the X-"
-"values increase to the West. In the northern hemisphere (north of the "
+"**Longitude**. This means that the Y-values increase southwards and the "
+"X-values increase to the West. In the northern hemisphere (north of the "
 "equator) the origin is also the equator at a specific **Longitude**. "
 "However, now the Y-values increase northwards and the X-values increase to "
 "the East. In the following section, we describe a projected coordinate "
@@ -437,7 +532,7 @@ msgstr ""
 # acd167d372de4894a1c554cd04dcd3be
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:336
 msgid "Universal Transverse Mercator (UTM) CRS in detail"
-msgstr ""
+msgstr "Универсальная поперечная проекция Меркатора (UTM)"
 
 # 5a10872df65b44cf817ec8d41ce9f4d6
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:338
@@ -554,7 +649,7 @@ msgstr ""
 # 55719e0ebbc54efaa7949bb668de525b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:429
 msgid "On-The-Fly Projection"
-msgstr ""
+msgstr "Перепроецирование «на лету»"
 
 # a44da913072d4db1aedd3f974c9a05a9
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:431
@@ -571,19 +666,19 @@ msgstr ""
 # c1f38dd714744288a813b5dd8bc1b9ef
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:439
 msgid ""
-"To solve this problem, many GIS include a functionality called **оn-the-"
-"fly** projection. It means, that you can **define** a certain projection "
-"when you start the GIS and all layers that you then load, no matter what "
-"coordinate reference system they have, will be automatically displayed in "
-"the projection you defined. This functionality allows you to overlay layers "
-"within the map window of your GIS, even though they may be in **different** "
-"reference systems."
+"To solve this problem, many GIS include a functionality called "
+"**оn-the-fly** projection. It means, that you can **define** a certain "
+"projection when you start the GIS and all layers that you then load, no "
+"matter what coordinate reference system they have, will be automatically "
+"displayed in the projection you defined. This functionality allows you to "
+"overlay layers within the map window of your GIS, even though they may be in "
+"**different** reference systems."
 msgstr ""
 
 # fc48db5f3dc34030acd6894c731be5ac
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:447
 msgid "Common problems / things to be aware of"
-msgstr ""
+msgstr "Частые ошибки / о чем стоит помнить"
 
 # 14d25ffa489a45e793d8d62d65bbc837
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:449
@@ -601,12 +696,12 @@ msgstr ""
 # e3aeb671d2a643439588e84bd706335b
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:458
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # 13016587407d4317a8786e207f5d4049
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:460
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # 15b06cd6fb7c46c5aed1a629e5972410
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:462
@@ -657,12 +752,12 @@ msgstr ""
 # 550680da97d64855bce1c955d624663f
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:479
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # d9e68e95b08b42278138f5f5eca547cc
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:481
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # f81dc6d34d184d82a92e6058cb0fc457
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:483
@@ -671,8 +766,8 @@ msgid ""
 "projections and let your pupils find the coordinates of several places on "
 "the two layers. You can show them that it is not possible to overlay the two "
 "layers. Then define the coordinate reference system as Geographic/WGS 84 "
-"inside the :guilabel:`Project Properties` dialog and activate the checkbox |"
-"checkbox| :guilabel:`Enable on-the-fly CRS transformation`. Load the two "
+"inside the :guilabel:`Project Properties` dialog and activate the checkbox "
+"|checkbox| :guilabel:`Enable on-the-fly CRS transformation`. Load the two "
 "layers of the same area again and let your pupils see how on-the-fly "
 "projection works."
 msgstr ""
@@ -690,7 +785,7 @@ msgstr ""
 # e840c016d5fa4740b3be10422a68baef
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:496
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # 6aafeb740d2c4a4fafb96b9600238896
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:498
@@ -706,12 +801,12 @@ msgstr ""
 # b90325cc8f254f5493375f5bb5b12046
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:506
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # aad7de07bfbe47eeabf7e366d2c37969
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:508
 msgid "**Books**:"
-msgstr ""
+msgstr "**Книги**:"
 
 # 1351c52513c045f3b800ca90635d3d79
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:510
@@ -755,14 +850,15 @@ msgid ""
 "The QGIS User Guide also has more detailed information on working with map "
 "projections in QGIS."
 msgstr ""
+"Работа с проекциями в QGIS подробно описана в Руководстве пользователя QGIS."
 
 # dedb50ccef59461ea80ed66847d87822
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:526
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # 0b043801df5b4077b445f017db32b1f0
 #: ../../source/docs/gentle_gis_introduction/07_coordinate_reference_systems.rst:528
 msgid ""
 "In the section that follows we will take a closer look at **Map Production**."
-msgstr ""
+msgstr "Следующий раздел посвящен **созданию карт**."

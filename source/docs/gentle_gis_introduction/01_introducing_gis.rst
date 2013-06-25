@@ -31,7 +31,7 @@ spatial information to add to a map, create printed maps customised to your need
 and perform spatial analysis.
 
 Let's look at a little example of how GIS can be useful. Imagine you are a health
-worker and you make a note of the date and place of residence of every patient\
+worker and you make a note of the date and place of residence of every patient
 you treat.
 
 +-----------+-------------+-------------+------------+
@@ -266,7 +266,7 @@ like this:
 +-----------+-------------+---------+------------+
 | Longitude | Latitude    | Disease | Date       |
 +===========+=============+=========+============+
-| 26.870436 | \-31.909519 | Mumps   | 13/12/2008 |
+| 26.870436 | -31.909519  | Mumps   | 13/12/2008 |
 +-----------+-------------+---------+------------+
 
 The longitude and latitude columns hold **geographical data**. The disease and

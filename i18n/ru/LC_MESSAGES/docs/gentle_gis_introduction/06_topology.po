@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # b2d7d5a6bf794ed49406dce4744bf527
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:9
 msgid "Topology"
-msgstr ""
+msgstr "Топология"
 
 # e0376f05e62a46d6b4a1451c14e7bdda
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:12
@@ -30,17 +33,17 @@ msgstr ""
 # 48f56b4c8d63460d98244df47b89804c
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:12
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # 4e24467b67584839a8f1ac9629ce9ad5
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:12
 msgid "Understanding topology in vector data"
-msgstr ""
+msgstr "Познакомиться с топологией применимо к векторным данным"
 
 # 86018ce850024ec5af119a4a13ce6a34
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:14
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # ec73d9a7defd4a8896f4dca93ecf07cf
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:14
@@ -48,11 +51,13 @@ msgid ""
 "Vector, topology, topology rules, topology errors, search radius, snapping "
 "distance, simple feature"
 msgstr ""
+"Вектор, топология, правила топологии, ошибки топологии, радиус поиска, "
+"расстояние прилипания, простой объект"
 
 # c0a3569ef778447d85abd94948372e87
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:18
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # ddb5b75e4dd84b2b8a9deff6b096d3a7
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:20
@@ -64,6 +69,12 @@ msgid ""
 "perfectly at an intersection). Topology is necessary for carrying out some "
 "types of spatial analysis, such as network analysis."
 msgstr ""
+"**Топология** описывает простарнственные отношения между соединенными или "
+"прилегающими векторными объектами (точками, линия и полигонами) в ГИС. "
+"Топологические данные весьма полезны при поиске и исправлении ошибок "
+"оцифровки (например, две линии в слое дорог не соединены в точке "
+"пересечения). Топология необходима при проведении некоторых видов анализа, "
+"например, анализа сети."
 
 # 1f0994ca6b524a598ad7e29716c4eb14
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:27
@@ -77,6 +88,13 @@ msgid ""
 "underground, the topological relationships are illustrated by circles that "
 "show connectivity."
 msgstr ""
+"Представьте, что вы приехали в Лондон. Вы хотите посетить собор Св. Павла, а "
+"во второй половине дня поехать на Ковент-Гарден и купить сувениры. Поэтому "
+"вам необходимо на карте метро Лондона (см.рисунок figure_topology_london_) "
+"найти поезда, соединяющие собор Св. Павла и Ковент-Гарден. Для решение этой "
+"задачи нужна топологическая информация (данные) о том, где можно выполнить "
+"пересадку. На карте метро топологические взаимоотношения ообзначены "
+"окружностями."
 
 # 070555a7369247dca0e07c84bc8ef967
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:45
@@ -86,7 +104,7 @@ msgstr ""
 # cb1f7905595b481eb7c0c6fe31538fec
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:48
 msgid "Topology errors"
-msgstr ""
+msgstr "Ошибки топологии"
 
 # f43da06baeae45d99f7c397f31ef59af
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:50
@@ -100,6 +118,14 @@ msgid ""
 "if a gap exists between the lines, and an **overshoot** if a line ends "
 "beyond the line it should connect to (see figure_topology_errors_)."
 msgstr ""
+"Существует разные ошибки топологии, но все они делятся на группы в "
+"зависимости от того наблюдаются они на линиях или на полигонах. "
+"Топологические ошибки **полигональных** объектов включают незамкнутые "
+"полигоны, щели между смежными границами полигонов или наложение полигонов. "
+"Наиболее частая ошибка топологии **линейных** объектов --- отсутствие "
+"правильного пересечения в узле. Такие ошибки называют **недоводом**, если "
+"между линиями имеется щель, и **перехлест**, если концы линий выходят за "
+"пределы узла вместо соединения в нем (см. рисунок figure_topology_errors_)."
 
 # 9e2b5d9c55774fb0a656d1553cf2e126
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:69
@@ -117,6 +143,9 @@ msgid ""
 "at the end of the lines. Dangling nodes are acceptable in special cases, for "
 "example if they are attached to dead-end streets."
 msgstr ""
+"В результате недоводов и перехлестов на концах линий образуются так "
+"называемые «зависшие узлы». В некоторых случаях наличие зависших узлов "
+"допустимо, например, если они обозначают тупик."
 
 # 6e554af345854213b836ff74970d3add
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:78
@@ -134,6 +163,17 @@ msgid ""
 "municipality and you will not be able to define exactly, where the borders "
 "between the municipalities are."
 msgstr ""
+"Топологические ошибки нарушают взаимоотношения между объектами. Эти ошибки "
+"должны быть исправлены, чтобы можно векторные данные можно было использовать "
+"в анализе, таком как сетевой анализ (например, найти наилучший маршрут) или "
+"для измерений (например, вычислить длину реки). Помимо импользования данных "
+"в анализе существуют и другие причины, по которым стоит создавать или иметь "
+"данные с корректной топологией. Представьте, что вы выполняете оцифровеку "
+"границ районов или областей и полигоны перекрываются или между ними есть "
+"щели. В таком случае вы сможете использовать инструменты измерений, но "
+"полученный результат будет неправильным. Вы не будете знать правильную "
+"площать каждого муниципального образования и не сможете точно определить "
+"границу между ними."
 
 # 724aeadb6c7e42a8b4603e4829f6778f
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:90
@@ -142,11 +182,14 @@ msgid ""
 "topologically correct data, but also for people who you pass data on to. "
 "They will be expecting your data and analysis results to be correct!"
 msgstr ""
+"Наличие топологически корректных данных важно не только для вас самих, но и "
+"для других людей, которые пользуются вашими данными. Ведь они ожидают, что "
+"ваши данные и результаты ваших анализов правильны!"
 
 # 725fd060f6cb41aba0b8b822af910b8d
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:95
 msgid "Topology rules"
-msgstr ""
+msgstr "Правила топологии"
 
 # ba0b4d2243a74536afa8160244b31101
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:97
@@ -155,6 +198,8 @@ msgid ""
 "features can be prevented by topology rules that are implemented in many GIS "
 "applications."
 msgstr ""
+"К счастью, большинства распространенных ошибок при оцифровке можно избежать "
+"при помощи топологических правил, реализованых во многих ГИС."
 
 # 43facac491c5488b9b945deb15d8ba9d
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:100
@@ -164,6 +209,10 @@ msgid ""
 "rules and let the user choose the rules, if any, to be implemented in a "
 "vector layer."
 msgstr ""
+"За исключением некоторых специальных форматов ГИС-данных, по умолчанию "
+"проверка топологии не проводится. Многие ГИС, например QGIS, определяют "
+"топологию как набор определенных правил и позволяют пользователям выбрать те "
+"из них, которые будут применяться к слою."
 
 # c31b02031f8d4f97b998ceb92afd5b6f
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:104
@@ -171,16 +220,21 @@ msgid ""
 "The following list shows some examples of where topology rules can be "
 "defined for real world features in a vector map:"
 msgstr ""
+"Ниже приведены примеры того, как могут определяться правила топологии "
+"применительно к объектам реального мира на карте:"
 
 # ca895015ceb9467596da6bf27156df08
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:107
 msgid "Area edges of a municipality map must not overlap."
 msgstr ""
+"Полигоны на карте муниципальных районов не должны накладываться друг на "
+"друга."
 
 # c3ae061292d54476b79331c92f4f9f11
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:108
 msgid "Area edges of a municipality map must not have gaps (slivers)."
 msgstr ""
+"Полигоны на карте муниципальных районов не должны иметь разрывов (щелей)."
 
 # 1a13ccc1f05a47428c6c30c93919dedb
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:109
@@ -188,17 +242,19 @@ msgid ""
 "Polygons showing property boundaries must be closed. Undershoots or "
 "overshoots of the border lines are not allowed."
 msgstr ""
+"Полигоны, обозначающие границы, должны быть замкнуты. Недоводы или "
+"перехлесты линий, образующих границы, запрещены."
 
 # fe276d6488e84e78aae8887bbac0b673
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:111
 msgid ""
 "Contour lines in a vector line layer must not intersect (cross each other)."
-msgstr ""
+msgstr "Горизонтали в линейном слое не должны пересекаться."
 
 # cd1bd873476d46c5a1e8bd71eb90d1ac
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:114
 msgid "Topological tools"
-msgstr ""
+msgstr "Инструменты топологии"
 
 # 691458ce45544fa49a3ecd40d48741ea
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:116
@@ -210,6 +266,13 @@ msgid ""
 "edge vertex of one polygon boundary and QGIS will ensure the updating of the "
 "other polygon boundaries as shown in figure_topological_tools_ (1)."
 msgstr ""
+"Многие ГИС-приложения предоставляют инструменты для топологического "
+"редактирования. Так, в QGIS можно использовать активировать режим "
+"«Топологическое редактирование» чтобы сделать редактирование общих границ "
+"полигонов более удобным. Такие ГИС как QGIS «обнаруживает» общую границу "
+"полигонов, и при изменении вершины одного из полигонов автоматически "
+"обновляет границы остальных как показано на рисунке "
+"figure_topological_tools_ (1)."
 
 # 33dd7402aa9f4bf28e4654a1cfeab3fc
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:123
@@ -220,6 +283,10 @@ msgid ""
 "polygon so that both polygons overlap and QGIS then clips the second polygon "
 "to the common boundary."
 msgstr ""
+"Ещё одной возможностью является предотвращение **пересечений полигонов** в "
+"процессе офифровки (см. рисунок figure_topological_tools_ (2)). Если один "
+"полигон уже создан, можно нарисовать смежный полигон с «нахлестом» и QGIS "
+"автоматически произведет обрезку второго полигона по общей границе."
 
 # 795033bff9044d669f6fc615400a8c42
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:139
@@ -233,7 +300,7 @@ msgstr ""
 # b3f83d88bed14ac3863b0129ce3135cd
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:145
 msgid "Snapping distance"
-msgstr ""
+msgstr "Расстояние прилипания"
 
 # d99592c9cd2d4d1fb49c71b3713dff1c
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:147
@@ -246,6 +313,12 @@ msgid ""
 "snapping it to an existing vertex and / or segment (see "
 "figure_snapping_distance_)."
 msgstr ""
+"Расстояние прилипания это расстояние, используемое ГИС для поиска ближайшего "
+"узла и/или вершины, к которому можно присоединиться в процессе оцифровки. "
+"«Сегмент» --- это участок полигона или линии между двумя соседними узлами. "
+"Если вы не превысили расстояние прилипания, такая ГИС как QGIS оставит новый "
+"узел именно в том месте, где была нажата кнопка мыши, а не присоединит его к "
+"существующему узлу или сегменту (см. figure_snapping_distance_)."
 
 # c918eef2530941959c75ea2496bc46d7
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:164
@@ -257,7 +330,7 @@ msgstr ""
 # 261b81152b1d4defbbb916536bf8f1ef
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:168
 msgid "Search Radius"
-msgstr ""
+msgstr "Радиус поиска"
 
 # c96b0adb2f064f20a62334ef9a2e44e1
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:170
@@ -268,6 +341,10 @@ msgid ""
 "editing. In principle, it is quite similar to the snapping distance "
 "functionality."
 msgstr ""
+"Радиус поиска это расстояние, используемое ГИС для поиска ближайшей вершины, "
+"когда вы пытаетесь выделить и переместить узел. Если щелчок выполнен вне "
+"этого радиуса, ГИС не сможет выбрать узел для редактирования. Это очень "
+"похоже на расстояние прилипания."
 
 # ac64013b89594858a099a11068e3264b
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:175
@@ -279,11 +356,16 @@ msgid ""
 "the search radius too small the GIS application won't find any feature or "
 "vertex to move or edit."
 msgstr ""
+"И радиус поиска, и расстояние прилипания задаются в единицах карты, поэтому "
+"выбрать правильное значение можно экспериментально. Если задано слишком "
+"большое значение, возможен выбор неправильного узла, особенно если у объекта "
+"много близкорасположенных узлов. Если же указано слишком маленькое значение, "
+"ГИС не сможет найти объект или узел для редактирования."
 
 # ba52c35702994f2f8d5af0ba38a8407a
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:182
 msgid "Common problems / things to be aware of"
-msgstr ""
+msgstr "Основные ошибки / о чем стоит помнить"
 
 # 537da43553a9491ea8751155bad6ceee
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:184
@@ -293,38 +375,48 @@ msgid ""
 "Many GIS applications are able to show topological and simple feature data "
 "together and some can also create, edit and analyse both."
 msgstr ""
+"Большинство приложений ориентируется на простоту использования и быструю "
+"отрисовку, а не на анализ данных, который требует правильной топологии "
+"(например, поиск марштура на графе дорог). Многие ГИС-приложения могут "
+"отображать топологические и обычные данные одновременно, а некоторые кроме "
+"того позволяют редактировать и анализировать оба типа."
 
 # 452250acff304254b6b69d9da967acbe
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:190
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # f1dbf587a1c8464f8ba502ba7ddc941a
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:192
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # 7e261e969e8949f1aa2175368fd25085
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:194
 msgid ""
 "**Topology** shows the spatial relation of neighbouring vector features."
 msgstr ""
+"**Топология** описывает пространственные взаимотношения соседних векторных "
+"объектов."
 
 # 17e8b4eb83494cec969588ad71b9a0be
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:195
 msgid "Topology in GIS is provided by **topological tools**."
-msgstr ""
+msgstr "Топология в ГИС обеспечивается **интсрументами топологии**."
 
 # 77ef8fa87f7d4b748d25a563059a1d00
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:196
 msgid "Topology can be used to **detect and correct digitizing errors**."
 msgstr ""
+"Топология может использоваться для **поиска и исправления ошибок оцифровки**."
 
 # 62270d91899941cca59465ce48d06e17
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:197
 msgid ""
 "For some tools, such as **network analysis**, topological data is essential."
 msgstr ""
+"Топологические данные очень важны для неокторых инструментов, например "
+"**сетевого анализа**."
 
 # 6fd96a5fcf7441e19e6de68ab1efe737
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:198
@@ -332,6 +424,8 @@ msgid ""
 "**Snapping distance** and **search radius** help us to digitise "
 "topologically correct vector data."
 msgstr ""
+"**Рассстояние прилипания** и **радиус поиска** помогают создавать "
+"топологически корректные векторные данные."
 
 # 73112816903b49e5a8184012d290b7b8
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:200
@@ -339,16 +433,18 @@ msgid ""
 "**Simple feature** data is not a true topological data format but it is "
 "commonly used by GIS applications."
 msgstr ""
+"Данные вида **Simple feature** не являются настоящим топологически "
+"корректным форматом данных, но широко применяются в ГИС-приложениях."
 
 # 14ed6824c6f241658d05c0f250cd4358
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:204
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # ebdae58a44be41618c1b357e10aee675
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:206
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # 309af652a56d403a8f01d04ced921052
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:208
@@ -356,6 +452,8 @@ msgid ""
 "Mark your local bus stops on a toposheet map and then task your learners to "
 "find the shortest route between two stops."
 msgstr ""
+"Нанесите на топографическую карту автобусные остановки и попросите учащихся "
+"найти кратчайший маршрут между двумя остановками."
 
 # 49d387bbded8498987106457ac0575e4
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:210
@@ -365,11 +463,15 @@ msgid ""
 "and what tools can your learners use in QGIS to make sure that the new road "
 "layer is topologically correct?"
 msgstr ""
+"Подумайте, как вы будете создавать векторные объекты в ГИС, чтобы отобразить "
+"топологическую дорожную сеть города. Какие топологические правила важны в "
+"этом случае и какие инструменты QGIS могут использовать учащиеся, чтобы "
+"убедиться, что слой дорог топологически верен?"
 
 # 8abb9c4412724b55a6b58a729983f6a5
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:216
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # 7599a0b0ae16457f8c651ea4dc36eb8f
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:218
@@ -378,16 +480,19 @@ msgid ""
 "railway network and discuss the spatial relationships and topology with your "
 "learners."
 msgstr ""
+"Если у вас нет компьютера, можно использовать карту автобусных или "
+"железнодорожных маршрутов для обсуждения пространственных взаимоотношений и "
+"топологии."
 
 # 1725bd8745d4435e879177f0f44753f2
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:222
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # 1bc5667caea1448abb261662faf3b7d7
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:224
 msgid "**Books**:"
-msgstr ""
+msgstr "**Книги**:"
 
 # 77ef6d19ebcf4bc4b5b8645e0068c054
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:226
@@ -406,7 +511,7 @@ msgstr ""
 # 9f08e62ac6554d6cb5b902fdd8089263
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:231
 msgid "**Websites**:"
-msgstr ""
+msgstr "**Сайты**:"
 
 # 7477bc1c982d4b96bed4ff4c57f0a948
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:233
@@ -424,11 +529,13 @@ msgid ""
 "The QGIS User Guide also has more detailed information on topological "
 "editing provided in QGIS."
 msgstr ""
+"Руководство пользователя QGIS содержит подробную информацию о топологическом "
+"редактировании в QGIS."
 
 # dea340e02e444eec94b24ba435671555
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:240
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # 66098a484469474e988e5037528c439c
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:242
@@ -437,3 +544,5 @@ msgid ""
 "Reference Systems** to understand how we relate data from our spherical "
 "earth onto flat maps!"
 msgstr ""
+"В следующем разделе мы познакомимся с **системами координат** и разберемся "
+"как связаны данные на сферической поверхности Земли и плоских картах!"

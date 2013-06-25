@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 27d69a55f95243fab77018fc988cd38a
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:8
 msgid "Raster Data"
-msgstr ""
+msgstr "Растровые данные"
 
 # bf0714f3d0254aa3844aadffa55cf0e2
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:11
@@ -30,27 +33,29 @@ msgstr ""
 # ef1edda2ec36423b949f87acecdbf6b1
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:11
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # d08c6f74b9e04164aadf9ba64696b4ce
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:11
 msgid "Understand what raster data is and how it can be used in a GIS."
-msgstr ""
+msgstr "Ознакомиться с растровыми данными и их использованием в ГИС."
 
 # e6a6d88da07d4167a7b51a0749397cbe
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:13
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # 21b143ad68c44ad39244112c3e38fa5f
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:13
 msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
 msgstr ""
+"Растр. пиксел, дистанционное зондирование, спутник, изображение, "
+"географическая привязка"
 
 # f1361a17aacc4b10aacc64cb926d5cd5
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # 67b0676cf16d4154a47696184bc7d489
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:19
@@ -63,6 +68,14 @@ msgid ""
 "figure_raster_). In this topic we are going to take a closer look at raster "
 "data, when it is useful and when it makes more sense to use vector data."
 msgstr ""
+"В предыдущих разделах мы познакомились с векторными данными. В то время как "
+"векторные объекты используют геометрию (точки, линии, полигоны) для "
+"представления объектов реального мира, растровые данные применяют другой "
+"подход. Растр состоит из сетки пикселей (также называемых ячейками), каждый "
+"из которых содержит значение, описывающее состояние поверхности, "
+"охватываемой этой ячейкой (см. рисунок figure_raster_). В этом разделе мы "
+"более подробно рассмотрим растровые данные, узнаем когда они полезны, а "
+"когда лучше использовать векторные данные."
 
 # bb272f264fea422fbbecc1056a0089cc
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:37
@@ -76,7 +89,7 @@ msgstr ""
 # eec393f76715495ca0ea7208fa93e413
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:43
 msgid "Raster data in detail"
-msgstr ""
+msgstr "Подробно о растровых данных"
 
 # 2e4f3cbae1074a73b75fedd2ecce1f11
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:45
@@ -99,6 +112,21 @@ msgid ""
 "that approach is that it will take a huge amount of work in order to create "
 "a good vector dataset."
 msgstr ""
+"Растровые данные используются в ГИС когда необходимо отобразить непрерывное "
+"по площади явление, которое нельзя легко разбить на векторные объекты. Когда "
+"мы знакомились с векторными данными, был показан рисунок figure_landscape_. "
+"Точечные, линейные и полигональные объекты хорошо подходят для отображения "
+"некоторых объектов ладшафта, например деревьев, дорог и зданий. Другие "
+"объекты отобразить при помощи векторных объектов сложнее. Например, поля "
+"состоят из множества участков с разным цветом и плотностью покрытия. Можно "
+"было бы создать по одному полигону на каждое поле, но так мы потеряем "
+"большую часть информации из-за упрощения всех объектов в один полигон. Это "
+"происходит из-за того, что атрибуты векторного объекта применяются ко всему "
+"объекту, именно по этой причине вектор не лучший выбор для отображения "
+"разнородных (не идентичных) объектов. Другим решением была бы оцифровка "
+"каждого небольшого участка, отличающегося цветом травы и покрытием. "
+"Недостаток такого подхода в том, что потребуется очень много времени и сил "
+"для создания хорошего набора векторных данных."
 
 # ab7de235011b40bba914746ea34b47e2
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:72
@@ -126,6 +154,17 @@ msgid ""
 "cell in the raster represents a different value e.g. risk of fire on a scale "
 "of one to ten."
 msgstr ""
+"Решением этих проблем является использоваие растровых данных. Многие "
+"используют растровые данные в качестве **подложки** под векторные слои, "
+"чтобы улучшить восприятие содержащейся в них информации. Человеческий глаз "
+"очень хорошо распознает образы, поэтому использование изображения под "
+"векторными данными делает карты более понятными и удобочитаемыми. Растровые "
+"данные хорошо подходят не только для изображений реальной поверхности "
+"(например, спутниковые изображения или аэрофотосъемка), но и для отображения "
+"абстрактной информации. К примеру, растр может использоваться для "
+"визуализации тенденции осадкой на протяжении года, или для отображения "
+"вероятности пожара. В таких случаях каждая ячейка растра содержит некоторую "
+"величину, например вероятность возникновения пожара по десятибальной шкале."
 
 # eef398bc3da84650b08c060f2ae8b78c
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:90
@@ -134,6 +173,8 @@ msgid ""
 "satellite and one that shows calculated values can be seen in "
 "figure_raster_types_."
 msgstr ""
+"На рисунке figure_raster_types_ показано различие между изображением "
+"полученным со спутника и изображением, которое показывает результат расчетов."
 
 # 303f26c050c14986bdc19724f7a56bd1
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:103
@@ -148,7 +189,7 @@ msgstr ""
 # 5f23902e5738430bb84b0c99af562c5e
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:110
 msgid "Georeferencing"
-msgstr ""
+msgstr "Географическая привязка"
 
 # 4c7390c115f345bdb31eab92017e4230
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:112
@@ -166,11 +207,20 @@ msgid ""
 "information for a raster is often provided in a small text file accompanying "
 "the raster."
 msgstr ""
+"Географическая привязка это процесс определения точного расположения растра "
+"на поверхности Земли. Эта информация хранится вместе с самим изображением. "
+"Когда ГИС-приложение открывает снимок, информация о привязке используется "
+"для того, чтобы снимок отобразился на своем месте. Обычно привязка включает "
+"в себя координаты левого верхнего пикселя изображения, размер пикселей "
+"изображения по высоте и ширине, а также угле поворота (если он есть). "
+"ГИС-приложению достаточно этой информации чтобы обеспечить правильное "
+"отображение растровых данных. Часто информация о географической привязке "
+"содержится в небольшом текстовом файле, сопровождающем растр."
 
 # ea5e8981bec747e2adc3cf034eb864cf
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:125
 msgid "Sources of raster data"
-msgstr ""
+msgstr "Источники растровых данных"
 
 # 7f07314af1eb40f9b818504342ea8a84
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:127
@@ -186,6 +236,17 @@ msgid ""
 "figure_csir_station_. The process of capturing raster data from an aeroplane "
 "or satellite is called **remote sensing**."
 msgstr ""
+"Растровые данные могут быть получены различными путями. Два наиболее "
+"распространенных ---  аэрофотосъемка и спутниковые снимки. В случае "
+"аэрофотосъемки самолет со специальной камерой пролетает над некоторой "
+"областью. Затем фотографии загружаются на компьютер и выполняется их "
+"привязка. Спутниковые снимки получаются когда спутник, находящийся на орбите "
+"посредством специальных сенсоров получает изображение земной поверхности над "
+"которой он пролетает. После того как изображение получено, оно отсылается на "
+"Землю при помощи радиосигналов. Сигналы принимаются специализированными "
+"приемными станциями, одна из них показана на рисунке figure_csir_station_. "
+"Процесс получения растровых данных с самолета или спутника называют "
+"**дистанционным зондированием**."
 
 # e96e82f4fbb44eed9d972f566db4cf21
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:147
@@ -205,9 +266,18 @@ msgid ""
 "province level raster showing average temperature, rainfall and wind "
 "direction using data collected from weather stations (see "
 "figure_csir_station_). In these cases, they will often use raster analysis "
-"techniques such as interpolation (which we describe in Topic :ref:"
-"`spatial_analysys`)."
+"techniques such as interpolation (which we describe in Topic "
+":ref:`spatial_analysys`)."
 msgstr ""
+"Также растровые данные могут быть получены в результате вычислений. "
+"Например, страховая компания может взять статистику преступлений и создать "
+"растровую карту страны, показывающую уровень преступности в каждом регионе. "
+"Метеорологи (люди, изучающие погоду) могут создавать растры, показывающие "
+"среднюю температуру по региону, число осадко и преимущественное направление "
+"ветра, используя данные от погодных станций (см. рисунок "
+"figure_csir_station_). В этих случаях используются такие методы анализа "
+"растров как интерполяция (которая рассматривается в разделе "
+":ref:`spatial_analysys`)."
 
 # 30500fa6a87f4e40ab8970daba37f992
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:160
@@ -222,11 +292,21 @@ msgid ""
 "in raster format could be a bad choice because raster layers do not usually "
 "have any attribute data associated with them."
 msgstr ""
+"Иногда растровые данные создаются из векторных данных, т.к. владелец этих "
+"данных может захотеть распространять их в удобном для использования формате. "
+"К примеру, компания имеющая информацию об автодорогах, железной дороге и "
+"кадастровых участках в векторном виде, может создать растровую версию этих "
+"наборов, чтобы сотрудники могли просматривать их в веб-браузере. В "
+"большинстве случаев такой подход имеет смысл только если атрибуты, "
+"необходимые пользователям, могут быть отображены на самой карте в виде "
+"подписей или условных знаков. Если пользователю необходимо работать с "
+"атрибутами данных, использование растровых форматов не лучший выбор, т.к. "
+"растры в подавляющем большинстве случаев не имеют связанных с ними атрибутов."
 
 # 83a3090f0f7d453ebc3062a2791cb8f6
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:171
 msgid "Spatial Resolution"
-msgstr ""
+msgstr "Пространственное разрешение"
 
 # 7ed6fc9ced1e419086a1f89a8220ede6
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:173
@@ -236,6 +316,11 @@ msgid ""
 "image at a small scale (see figure_raster_small_scale_) and then zoom in to "
 "a large scale (see figure_raster_large_scale_)."
 msgstr ""
+"Каждый растровый слой в ГИС имеет пиксели (ячейки) фиксированного размера, "
+"которые и определяют его пространственное разрешение. Это хорошо заметно, "
+"если сначала посмотреть на изображение в мелком масштабе (см. "
+"figure_raster_small_scale_), а затем перейти крупному (см. "
+"figure_raster_large_scale_)."
 
 # 336473c503b643d38752780b6f453bbd
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:188
@@ -263,6 +348,18 @@ msgid ""
 "covering a large area are called '**low resolution**' images because the "
 "amount of detail the images show is low."
 msgstr ""
+"Пространственное разрешение определяется несколькими факторами. В случае "
+"данных дистанционного зондирования, пространственное разрешение обычно "
+"определяется возможностями сенсора, использовавшегося для получения "
+"изображения. Например, спутники SPOT могут выдавать изображения где каждому "
+"пикселю соответствуют участок размером 10 м x 10 м. Другие спутники, "
+"например MODIS, формируют изображения с разрешением 500 м на пиксель. При "
+"аэрофотосъемке, разрешение в 50 см. не такая уж и редкость. Изображения, у "
+"которых пикселям соответствует маленькие участки поверхности, называются "
+"**снимками высокого разрешения**, т.к. на них можно разглядеть больше "
+"деталей. Изображения, у которых пикселям соответствует большие участки "
+"поверхности называются **снимками низкого разрешения**, т.к. количество "
+"деталей на них весьма мало."
 
 # e1e3aec1d23d4516a3fa9e07d9c7f8a4
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:213
@@ -273,6 +370,11 @@ msgid ""
 "want to create a high resolution average rainfall map, you would ideally "
 "need many weather stations in close proximity to each other."
 msgstr ""
+"В случае растровых данных, полученных при помощи простарнственного анализа "
+"(как в упомянутой выше карте осадков), пространственное разрешение снимка "
+"определяется плотностью исходной информации. Так, если требуется создать "
+"карту осадков высокого разрешения, необходимо получить данные с большого "
+"числа близкорасположенных погодных станций."
 
 # 111285122d424a06925f2e51c3c61c3b
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:219
@@ -288,6 +390,15 @@ msgid ""
 "information. Making the pixel size smaller would greatly increase the amount "
 "of storage needed."
 msgstr ""
+"При использовании данных высокого разрешения необходимо учитывать требования "
+"к дисковому пространству. Представьте себе растр размером 3 x 3 пикселя, "
+"каждый из которых содержит число, отражающее уровень осадков. Для хранения "
+"этой информации нам необходимо сохранить в памяти компьютера 9 чисел. Теперь "
+"представьте, что вам нужен растр на территорию Южной Африки с разрешением 1 "
+"км на пиксель. Площадь Южной Африки примерно 1,219,090 km :sup:`2`. Это "
+"значит, что ваш компьютер должен сохранить более миллиона чисел на диске. "
+"Уменьшение размеров пикселя значительно увеличивает потребность в дисковом "
+"пространстве."
 
 # 6e71d996042e44428aa77f68859645ec
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:229
@@ -299,6 +410,11 @@ msgid ""
 "to one particular cloud in high resolution will not tell you very much about "
 "the upcoming weather!"
 msgstr ""
+"Изображения с низким разрешением могут быть полезны когда требуется работать "
+"с большими территориями и нет необходимости рассматривать какую-либо область "
+"в подробностях. Хорошим примером является карта облачности --- полезно "
+"увидеть распределение облаков по стране. А изучение одного облака при "
+"большом увеличении никак не поможет в прогнозировании погоды!"
 
 # b89a7ed86237473e8fe1e54fbafd6d7f
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:235
@@ -307,11 +423,14 @@ msgid ""
 "you are interested in a small region because you probably won't be able to "
 "make out any individual features from the image."
 msgstr ""
+"С другой стороны, использование низкодетальных растров может быть "
+"неоправданным, если вас интересует относительно небольшая область, т.к. в "
+"этом случае вы скорее всего не сможете рассмотреть отдельные объекты."
 
 # ca490e5b9ec24f04a0f6eb9310aa5ad8
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:240
 msgid "Spectral resolution"
-msgstr ""
+msgstr "Спектральное разрешение"
 
 # 1a760ab3ef164f809bb457f8a1fa4be0
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:242
@@ -323,6 +442,12 @@ msgid ""
 "eyes can interpret. While the information is still in digital format though, "
 "this RGB information is stored in separate colour **bands**."
 msgstr ""
+"Когда вы делаете снимок цифровой фотокамерой или камерой мобильного "
+"телефона, камера использует специальный сенсор для выделения красного, "
+"зеленого и синего цветов. При печати или выводе на экран, красная, зеленая и "
+"синяя (RGB) составляющие объединяются и вы видите изображение. Пока "
+"информация остаётся в цифровой форме, эти три составляющие хранятся в "
+"отдельных **каналах**."
 
 # c5be81389d4b42a68981eae65edd7028
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:249
@@ -337,6 +462,15 @@ msgid ""
 "spectrum can be very useful. For example, measuring infra-red light can be "
 "useful in identifying water bodies."
 msgstr ""
+"Хотя наш глаз может воспринимать только волны, с длиной соответвтвующей "
+"цветам RGB, электронные сенсоры камер способны улавливать излучения, "
+"невидимые глазу. Разумеется, обычной фотокамере нет необходимости сохранять "
+"информацию о **невидимой** части спектра, так как большинство людей просто "
+"хочет смотреть на фотографии своей собаки или что там у вас снято. Растровые "
+"изображения, содержащие данные о невидимой части спектра называются "
+"мультиспектральными изображениями. В ГИС использование невидимой части "
+"спектра находит широкое применение, например, использование инфракрасной "
+"части спектра полезно при идентификации водных объектов."
 
 # 7963180a38934e14bca1ec121a7ae5b5
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:258
@@ -348,6 +482,12 @@ msgid ""
 "number of bands in a raster image is referred to as its **spectral "
 "resolution**."
 msgstr ""
+"Так как растры с  несколькими каналами широко применяются в ГИС, растровые "
+"данные оченьчасто поставляются в виде многоканальных изображений. Каждый "
+"канал являтеся отдельным слоем. ГИС объединяет любые три канала и "
+"интерпретирует их как красный, зеленый и синий, так что человеческий глаз "
+"может их воспринимать. Число каналов растра также называют **спектральным "
+"разрешением**."
 
 # f241c0a0434b49369a3677a20b7375af
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:264
@@ -357,11 +497,15 @@ msgid ""
 "differences in values in the pixels more obvious. Images with false "
 "colouring applied are often referred to as **pseudocolour images**."
 msgstr ""
+"Если изображение состоит только из одного канала, говорят, что это "
+"**изображение в оттенках серого**. Такие растры можно «раскрашивать», чтобы "
+"подчеркнуть различия в значениях пикселей. Раскрашенные изображения обычно "
+"называют **псевдоцветными**."
 
 # 9be993109f3e49ffbbe8dfc07bbeb1fc
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:270
 msgid "Raster to vector conversion"
-msgstr ""
+msgstr "Преобразование растра в вектор"
 
 # b3a8ef4be1504ff8a3dc646b8c2bc49e
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:272
@@ -370,6 +514,9 @@ msgid ""
 "used as a backdrop layer, which is then used as a base from which vector "
 "features can be digitised."
 msgstr ""
+"Когда мы рассматривали векторные данные, было сказано, что растровые данные "
+"часто используются в качестве подложки, по которой затем выполняется "
+"оцифровка векторных объектов."
 
 # 1c9bca99783641d6bf463353f196018d
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:276
@@ -381,11 +528,17 @@ msgid ""
 "result. This kind of functionality is normally only available in very "
 "specialised (and often expensive) GIS software."
 msgstr ""
+"Другим подходом является использование специализированных компьютерных "
+"программ для автоматического распознавания объектов. Некоторые объекты на "
+"изображении, например дороги, характеризуются резким изменением цвета "
+"соседних пикселей. Программа анализирует такие изменения и в результате "
+"создаёт векторные объекты. Такой функционал, как правило, доступен в "
+"специализированных (и зачастую дорогих) ГИС-приложениях."
 
 # 4d12b1142a6b49f6927961af968c6793
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:284
 msgid "Vector to raster conversion"
-msgstr ""
+msgstr "Преобразование вектора в растр"
 
 # ea2a14b9338647d9a1dfe2a1474ac073
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:286
@@ -398,11 +551,18 @@ msgid ""
 "person you give the raster image to can simply view it as an image on their "
 "computer without needing any special GIS software."
 msgstr ""
+"Иногда бывает полезно преобразовать векторные данные в растр. Побочным "
+"эффектом такого действия будет потеря атрибутивной информации, связанной с "
+"исходными векторными данными. Преобразование векторных данных в растр может "
+"быть полезным в случае, когда необходимо предоставить ГИС-данные "
+"пользователю не имеющему ГИС. При использовании обычных растровых форматов, "
+"человек получивший изображение, сможет легко просмотреть его на своем "
+"компьютере без необходимости устанавливать специальное ПО ГИС."
 
 # a4fbfb1c8105476b8920bd47af91b65c
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:295
 msgid "Raster analysis"
-msgstr ""
+msgstr "Анализ растров"
 
 # 3c2406b8737b4333898890c37002a155
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:297
@@ -412,6 +572,10 @@ msgid ""
 "water flow over the land surface. This information can be used to calculate "
 "where watersheds and stream networks exist, based on the terrain."
 msgstr ""
+"Существует множество видов анализа, которые используют растровые данные и и "
+"не могут работать с векторными. К примеру, растры могут использоваться при "
+"моделировании потока воды по земле. А затем эта информация будет "
+"использована при построении водосборных бассейнов и сети потоков."
 
 # b6b68c8d16264b0ca8d2a1e9d8fd6252
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:302
@@ -422,6 +586,11 @@ msgid ""
 "information to apply more fertilizer on the affected areas only. Foresters "
 "use raster data to estimate how much timber can be harvested from an area."
 msgstr ""
+"Растровые данные широко применяются в сельском и лесном хозяйтсве для "
+"управления растениеводством. Например, спутниковое изображение полей фермера "
+"поможет идентифицировать области с бедной растительностью с тем чтобы потом "
+"удобрять их интенсивнее. Лесники используют растровые данные для "
+"прогнозирования числа древисины, которую можно собрать на участке."
 
 # 76b9887810a94db1b2fb7d557cb1d38f
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:308
@@ -432,11 +601,16 @@ msgid ""
 "to be flooded. This can then be used to target rescue and relief efforts to "
 "areas where it is needed the most."
 msgstr ""
+"Растровые данные также очень важны при борьбе со стихийными бедствиями. "
+"Анализ цифровой модели рельефа (разновидности растров. где каждый пиксель "
+"содержит высоту над уровнем моря) может использоваться для поиска районов, "
+"которые могут быть затоплены. Это может потребоваться для выполнения целевый "
+"операций спасения или при оказании помощи наиболее пострадавшим районам."
 
 # 56ab0ebbcc2b4d4b80cd286694a69355
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:315
 msgid "Common problems / things to be aware of"
-msgstr ""
+msgstr "Частые ошибки / о чем стоит помнить"
 
 # d24294e243884c048182df6be67261ad
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:317
@@ -444,31 +618,33 @@ msgid ""
 "As we have already mentioned, high resolution raster data can require large "
 "amounts of computer storage."
 msgstr ""
+"Как мы уже горорили, высокодетальные снимки требуют больше дискового "
+"пространства."
 
 # e91cc20b36274024ba8407bc9f2d110e
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:321
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # dc3fec70be4a462a92180d4539245336
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:323
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # 3858237c3d3349d1801c85fabdf0392d
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:325
 msgid "Raster data are a grid of regularly sized **pixels.**"
-msgstr ""
+msgstr "Растровые данные это сетка **пикселей** одинакового размера."
 
 # 355a7322ffd74bd0907e84ae41c88949
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:326
 msgid "Raster data are good for showing **continually varying information.**"
-msgstr ""
+msgstr "Растры хорошо подходят для отображения **непрерывных величин**."
 
 # 6f028e7a1fe248a3b8e601e61598bd6e
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:327
 msgid "The size of pixels in a raster determines its **spatial resolution.**"
-msgstr ""
+msgstr "Размер пикселя определяет **пространственное разрешение** растра."
 
 # 3e5e9388a7fa4cdfb970b90921993116
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:328
@@ -476,6 +652,8 @@ msgid ""
 "Raster images can contain one or more **bands**, each covering the same "
 "spatial area, but containing different information."
 msgstr ""
+"Растры могут состоять из нескольких **каналов**, охватывающих одну и ту же "
+"область, но содержащих разную информацию."
 
 # 589d14d003174e6fa6cb2076aa9e6cdb
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:330
@@ -483,6 +661,8 @@ msgid ""
 "When raster data contains bands from different parts of the electromagnetic "
 "spectrum, they are called **multi-spectral images**."
 msgstr ""
+"Если растр содержит каналы, соответствующие различным диапазонам спектра, он "
+"называется **мультиспектральным**."
 
 # c6a0fa1d04f147399b87e001054e6ef3
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:332
@@ -490,31 +670,36 @@ msgid ""
 "Three of the bands of a multi-spectral image can be shown in the colours "
 "Red, Green and Blue so that we can see them."
 msgstr ""
+"Три канала мультиспектрального изображения могут интерпретерироваться как "
+"красный, зеленый и синий канал."
 
 # 02cd1e0c0648407e84ce5f58394475dd
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:334
 msgid "Images with a single band are called grayscale images."
 msgstr ""
+"Одноканальные изображения называются изображением в **оттенках серого**."
 
 # e94af79bb7b148efa3ed89a9f21906ba
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:335
 msgid "Single band, grayscale images can be shown in pseudocolour by the GIS."
 msgstr ""
+"ГИС может отображать однокальные изображения в оттенках серого как "
+"псевдоцветные."
 
 # a01ec6910ef34ed78b21f4919d3c8273
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:336
 msgid "Raster images can consume a large amount of storage space."
-msgstr ""
+msgstr "Растры могут занимать много места на диске."
 
 # 20bee90e8d4c49318b1c2aa166d96f9c
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:339
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # 7edca00b01e5430392bf18627c7b5a8d
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:341
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # 0a5ebc3d222d4a3795326fce31dcf133
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:343
@@ -522,6 +707,8 @@ msgid ""
 "Discuss with your learners in which situations you would use raster data and "
 "in which you would use vector data."
 msgstr ""
+"Обсудите с учащимися в каких ситуациях вы будете использовать растровые "
+"данные, а когда векторные."
 
 # 79d98abe3936465387d10b88c1158c46
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:345
@@ -536,11 +723,20 @@ msgid ""
 "features worked well when represented as rasters? How did your choice in "
 "cell size affect your ability to represent different feature types?"
 msgstr ""
+"Попросите учеников создать растровую карту школы, используя листы прозрачной "
+"пленки формата А4 с нанесенной на них сеткой. Наложите прозрачную пленку на "
+"топографическую карту или распечатанный аэрофотоснимок школы. Затем пусть "
+"каждый ученик или группа учеников закрасит своим цветом ячейки, "
+"соответствующие определенному виду объектов, например, здания, игровые "
+"площадки, спортивные поля, деревья, тропинки и т.д. Когда все будет сделано, "
+"совместите все листы и посмотрите на получившуюся карту школы. Какие объекты "
+"лучше всего отобразились на растре? Как повлиял размер ячеек на возможность "
+"представления различных типов объектов?"
 
 # 206c1013d2cd40e090af7220f261d67f
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:356
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # 96ac973a2ef047b8a5bd4c60ee1e2b12
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:358
@@ -555,16 +751,25 @@ msgid ""
 "dark green. Value 1 should get coloured light green, and value 0 coloured in "
 "brown. When you finish, you should have a raster map of your soccer field!"
 msgstr ""
+"Если у вас нет компьютера, можно продемонстрировать растровые данные при "
+"помощи ручки и бумаги. Нарисуйте сетку квадратов на листе бумаги, чтобы "
+"представить футбольное поле. Заполните ячейки сетки числами, показывающими "
+"состояние травы на поле. Если участок лишен растительности, поставьте 0. "
+"Если частично покрыт травой --- задайте значение 1. Для полностью покрытых "
+"участков используйте значение 2. Теперь карандашами закрасьте ячейки, "
+"опираясь на их значения. Ячейки со значением два сделайте темно-зелеными, со "
+"значением 1 --- более светлыми, а со значением 0 --- закрасьте коричневым. "
+"Когда вы закончите, у школы будет растровая карта футбольного поля!"
 
 # f4071b9fe5524903bdd279de062abbfd
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:369
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # 6ff49f28cf9249df9a72f24557e1cf19
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:371
 msgid "**Book**:"
-msgstr ""
+msgstr "**Книги**:"
 
 # c070573fc69a47779b00f66fe9b4e15b
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:373
@@ -583,7 +788,7 @@ msgstr ""
 # 947dae6843d14b638893131178174aed
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:378
 msgid "**Website:** http://en.wikipedia.org/wiki/GIS#Raster"
-msgstr ""
+msgstr "**Сайт:** http://en.wikipedia.org/wiki/GIS#Raster"
 
 # dc6f30f373574349a9cfce062c9ad62f
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:380
@@ -591,11 +796,13 @@ msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "raster data in QGIS."
 msgstr ""
+"Работа с растровыми данными в QGIS подробно описана в Руководстве "
+"пользователя QGIS."
 
 # 4388c9698bf94d73a3f3894bb4095ffa
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:384
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # b1de3439c95949ccb497b795cc377d91
 #: ../../source/docs/gentle_gis_introduction/05_raster_data.rst:386
@@ -604,3 +811,6 @@ msgid ""
 "see how the relationship between vector features can be used to ensure the "
 "best data quality."
 msgstr ""
+"В следующем разделе мы разберемся с **топологией** и посмотрим как "
+"взаимоотношения между векторными объектами могут использоваться для "
+"получения высококачественных данных."

@@ -41,10 +41,10 @@ vertices with a ``Z`` axis are often referred to as **2.5D** since they describe
 height or depth at each vertex, but not both.
 
 When a feature's geometry consists of only a single vertex, it is referred to as
-a **point** feature (see Illustration figure_geometry_point_). Where the geometry
+a **point** feature (see illustration figure_geometry_point_). Where the geometry
 consists of two or more vertices and the first and last vertex are not equal, a
 **polyline** feature is formed (see illustration figure_geometry_polyline_). Where
-four or more vertices are present, and the last vertex is equal to the first, an
+three or more vertices are present, and the last vertex is equal to the first, an
 enclosed **polygon** feature is formed (see illustration figure_geometry_polygon_).
 
 .. _figure_geometry_point:
@@ -119,7 +119,7 @@ When you choose to use points to represent a feature is mostly a matter of scale
 effort to create point features than polygon features), and the type of feature
 (some things like telephone poles just don't make sense to be stored as polygons).
 
-As we show in Illustration figure_geometry_point_, a point feature has an X, Y
+As we show in illustration figure_geometry_point_, a point feature has an X, Y
 and optionally, Z value. The X and Y values will depend on the **Coordinate
 Reference System** (CRS) being used. We are going to go into more detail about
 Coordinate Reference Systems in a later tutorial. For now let's simply say that
@@ -139,7 +139,7 @@ Polyline features in detail
 
 Where a point feature is a single vertex, **a polyline has two or more vertices**.
 The polyline is a continuous path drawn through each vertex, as shown in
-figure_geometry_polyline_). When two vertices are joined, a line is created. When
+figure_geometry_polyline_. When two vertices are joined, a line is created. When
 more than two are joined, they form a 'line of lines', or **polyline**.
 
 A polyline is used to show the geometry of **linear features** such as roads,
@@ -152,10 +152,10 @@ feature type (e.g. roads) and the GIS will ensure that these polylines always
 comply to these rules.
 
 If a curved polyline has very large distances between vertices, it may appear
-**angular** or jagged, depending on the scale at which it is viewed (see  ).
-Because of this it is important that polylines are digitised (captured into the
-computer) with distances between vertices that are small enough for the scale at
-which you want to use the data.
+**angular** or jagged, depending on the scale at which it is viewed (see
+figure_polyline_jagged_). Because of this it is important that polylines are
+digitised (captured into the computer) with distances between vertices that are
+small enough for the scale at which you want to use the data.
 
 .. _figure_polyline_jagged:
 
@@ -239,9 +239,9 @@ taking information from surveyor records and global positioning system devices.
 Maps have different scales, so if you import vector data from a map into a GIS
 environment (for example by digitising paper maps), the digital vector data will
 have the same scale issues as the original map. This effect can be seen in
-Illustrations figure_vector_small_scale_ and figure_vector_large_scale_. Many
+illustrations figure_vector_small_scale_ and figure_vector_large_scale_. Many
 issues can arise from making a poor choice of map scale. For example using the
-vector data in Illustration figure_vector_small_scale_ to plan a wetland
+vector data in illustration figure_vector_small_scale_ to plan a wetland
 conservation area could result in important parts of the wetland being left out
 of the reserve! On the other hand if you are trying to create a regional map,
 using data captured at 1:1000 000 might be just fine and will save you a lot of
@@ -281,7 +281,7 @@ let you choose colours to suite the feature type (e.g. you can tell it to draw a
 water bodies vector layer in blue). The GIS will also let you adjust the symbol
 used. So if you have a trees point layer, you can show each tree position with a
 small picture of a tree, rather than the basic circle marker that the GIS uses
-when you first load the layer (see Illustrations figure_vector_symbology_,
+when you first load the layer (see illustrations figure_vector_symbology_,
 figure_generic_symbology_ and figure_custom_symbology_).
 
 .. _figure_vector_symbology:

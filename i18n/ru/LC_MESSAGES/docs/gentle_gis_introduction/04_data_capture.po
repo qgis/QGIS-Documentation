@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 2d94e84b129942788aa57a85c0168345
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:8
 msgid "Data Capture"
-msgstr ""
+msgstr "Создание данных"
 
 # 7ca1910aee7a43b7ad71214c7be223c7
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:11
@@ -30,27 +33,27 @@ msgstr ""
 # fda205463e634b85b7d763a9fa312249
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:11
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # 1f670b8ad1fa46528405cc244cb83b1a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:11
 msgid "Learn how to create and edit vector and attribute data."
-msgstr ""
+msgstr "Научиться создавать и редактировать векторные данные и их атрибуты."
 
 # d4213feab99c402cb47586ede1af72a8
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:13
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # 3736a827ad6549ddabe30bf9e1a5eb49
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:13
 msgid "Editing, data capture, heads-up, table, database."
-msgstr ""
+msgstr "Редактирование, оцифровка, heads-up, таблица, база данных."
 
 # 22e75e82a8254b7ea93aeb5dc70c7c78
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # 67e69bccb6544210abc3c4a3a84e412c
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:19
@@ -61,6 +64,11 @@ msgid ""
 "while the **attributes** of a vector feature describe its **properties** "
 "(colour, size, age etc.)."
 msgstr ""
+"В двух предыдущих разделах мы познакомились с векторными данными. Мы узнали, "
+"что векторные данные имеют две основных составляющих, а именно: "
+"**пеометрию** и **атрибуты**. Геометрия векторного объекта описывает его "
+"**форму** и **положение**, а **атрибуты** --- его **свойства** (цвет, "
+"размер, возраст, и т.д.)."
 
 # 69c64f0af0f14838bee0ebac00315ed5
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:25
@@ -68,11 +76,13 @@ msgid ""
 "In this section we will look more closely at the process of creating and "
 "editing vector data --– both the geometry and attributes of vector features."
 msgstr ""
+"Этот раздел посвящен процессам создания и редактирования векторных данных "
+"--- как геометрии, так и атрибутов объектов."
 
 # a6c94bdcb3fb4ecc9d987978b802d1af
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:29
 msgid "How does GIS digital data get stored?"
-msgstr ""
+msgstr "Как QGIS хранит данные?"
 
 # 7511d63256e44fd38ebd0fe50b2eaa71
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:31
@@ -84,6 +94,12 @@ msgid ""
 "save your document as an :file:`.odt` OpenDocument or :file:`.doc` Word "
 "Document, and so on."
 msgstr ""
+"Текстовые процессоры, электронные таблицы, графические пакеты это всё "
+"программы, позволяющие создавать и редактировать цифровые данные. Каждое "
+"приложение сохраняет данные в определенном формате. Например, графический "
+"редактрор позволяет сохранить ваш рисунок как :file:`.jpg` изображение JPEG, "
+"текстовый редактор --- как :file:`.odt` документ OpenDocument или "
+":file:`.doc` документ Word и т.д."
 
 # d1ef264c83314b93b1e5c22432c5b4c8
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:37
@@ -95,16 +111,23 @@ msgid ""
 "(singular), it actually consists of at least three different files that work "
 "together to store your digital vector data, as shown in table_shapefile_."
 msgstr ""
+"Как и все остальные приложения, ГИС-приложение может сохранять свои данные в "
+"файлы на диске. Существует множество различных форматов для ГИС-данных, но "
+"наиболее распростаненным, пожалуй, является shape-файл. Название немного "
+"странное, так как хотя мы и называем его shape-файлом (в единственном "
+"числе), на самом деле он состоит как минимум из трех разных файлов, которые "
+"и используются для хранения ваших векторных данных в цифровом виде, как "
+"показано в таблице table_shapefile_."
 
 # e858a220199d4b88af86f93692811d61
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:47
 msgid "Extension"
-msgstr ""
+msgstr "Расширение"
 
 # 6294be7ea105446da569e584d7b6356c
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:47
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 # b1328315123f423194c547f96ac01fdd
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:49
@@ -114,7 +137,7 @@ msgstr ""
 # e6cc8b950a3f43fabe7fd28f02598503
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:49
 msgid "The geometry of vector features are stored in this file"
-msgstr ""
+msgstr "В этом файле хранится геометрия векторных объектов"
 
 # 8ba137be179f4a29b22f39b02146cea3
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:51
@@ -124,7 +147,7 @@ msgstr ""
 # 53a2fe527e7848ad9b57f769a7c34112
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:51
 msgid "The attributes of vector features are stored in this file"
-msgstr ""
+msgstr "Файл содержит атрибуты объектов"
 
 # 93279bf325ae40689edb9a478ee74f4c
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:53
@@ -136,12 +159,12 @@ msgstr ""
 msgid ""
 "This file is an index that helps the GIS Application to find features more "
 "quickly."
-msgstr ""
+msgstr "Это индексный файл, помогающий ГИС-приложению находить объекты быстрее"
 
 # 5934b8ca014f4535b5eee5e556234b4e
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:56
 msgid "Table Shapefile 1: The basic files that together make up a 'shapefile'."
-msgstr ""
+msgstr "Table Shapefile 1: Основные файлы, образующие shape-файл."
 
 # ff9eba6d7dcc4de1af12364991cdef6c
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:58
@@ -150,10 +173,17 @@ msgid ""
 "disk, you will see something like figure_shapefile_. If you want to share "
 "vector data stored in shapefiles with another person, it is important to "
 "give them all of the files for that layer. So in the case of the trees layer "
-"shown in figure_shapefile_, you would need to give the person :file:`trees."
-"shp`, :file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` and :file:"
-"`trees.qml`."
+"shown in figure_shapefile_, you would need to give the person "
+":file:`trees.shp`, :file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` "
+"and :file:`trees.qml`."
 msgstr ""
+"Если вы посмотрите на файлы, образующие shape-файл, в файловом менеджере, вы "
+"увидите что-то похожее на рисунок figure_shapefile_. Если вам необходимо "
+"передать данные, хранящиеся в shape-файле другому человеку, обязательно "
+"убедитесь, что вы дали ему все эти файлы. Так, в случае трёх файлов, "
+"изображенных на рисунке figure_shapefile_, вы должны передать файлы "
+":file:`trees.shp`, :file:`trees.shx`, :file:`trees.dbf`, :file:`trees.prj` и "
+":file:`trees.qml`."
 
 # 917f49b88cdf40209801b230f82241b6
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:75
@@ -174,11 +204,19 @@ msgid ""
 "shapefiles, so for this topic we will focus on creating and editing "
 "shapefiles."
 msgstr ""
+"Многие ГИС-приложения также могут хранить данные в **базе данных**. В общем "
+"случае, хранение ГИС-данных в базе является хорошим решением, так как база "
+"может хранить **большие объемы** данных **эффективно** и может предоставлять "
+"их ГИС-приложению очень быстро. Использование базы данных также позволяет "
+"одновременную работу нескольких пользователей с одним и тем же векторным "
+"слоем. Настройка базы данных для хранения ГИС-данных сложнее использования "
+"shape-файлов, поэтому в пока мы будем рассматривать создание и "
+"редактирование shape-файлов."
 
 # 23b840dd3aba45e991ee486650d13349
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:87
 msgid "Planning before you begin"
-msgstr ""
+msgstr "Планирование"
 
 # 3a0a1350a99e49cd91537c7ebebc77e2
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:89
@@ -189,11 +227,15 @@ msgid ""
 "will be. Let's look at a few examples and it will become clearer how to go "
 "about doing this."
 msgstr ""
+"Прежде чем создать новый векторный слой (который будет храниться в "
+"shape-файле), необходимо определиться с типом геометрии слоя (точечный, "
+"линейный или полигональный), а также с набором атрибутов. Чтобы было "
+"понятнее, рассмотрим несколько примеров."
 
 # 931babbb2f334cdca6023828aa3efc3d
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:95
 msgid "Example 1: Creating a tourism map"
-msgstr ""
+msgstr "Пример 1: Создание туристической карты"
 
 # 29fe37ba2cbe4867a7e838d76ad70a1a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:97
@@ -209,6 +251,17 @@ msgid ""
 "to use polylines. If we have whole areas that are of tourism interest, such "
 "as a nature reserve or a cultural village, polygons might make a good choice."
 msgstr ""
+"Представьте, что вы решили создать хорошую туристическую карту вашего "
+"региона. Вы решили, что это должен быть лист топографической карты масштаба "
+"1:50000 с наложенными маркерами, отмечающими интересные туристам места. "
+"Сначала подумаем о геометрии. Мы знаем, что векторный слой может содержать "
+"точки, линии или полигоны. Что же выбрать для нашей туристической карты? "
+"Можно использовать точки, если мы хотим отмечать определеные места, "
+"например, обзорные площадки, мемориалы, места сражений и т.п. Если мы хотим "
+"провести туристов по маршруту, например живописному маршруту через горный "
+"перевал, возможно, стоит использовать полилинии. Ну а если необходимо "
+"показать целые области, представляющие интерес для туристов, такие как "
+"заповедники, то полигоны будут хорошим выбором."
 
 # 3939fcb6c0c1446b9b0578df5dacb51a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:108
@@ -223,6 +276,14 @@ msgid ""
 "figure_tourism_ we can see how our tourism layers might look on a map if we "
 "used all three geometry types."
 msgstr ""
+"Как видите, часто не так просто определить какой тип геометрии нам нужен. "
+"Общим подходом является использование одного слоя на каждый тип геометрии. "
+"Например, если посмотреть на данные предоставляемые Главным управлением "
+"геодезии и картографии Южной Африки, то видно, что они предоставляют данные "
+"по рекам в виде полигонального и линейного слоёв. Полигональный слой рек "
+"используется, чтобы показать широкие участки реки, а линейный слой --- для "
+"отображения узких участков. Рисунок figure_tourism_ показывает как может "
+"выглядеть туристическая карта с каждым из трех типов геометрии."
 
 # 9f5a178436994adc91712b8045f63b0b
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:127
@@ -235,7 +296,7 @@ msgstr ""
 # 08e3901256e447cdab4dc3fc4f3c171e
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:132
 msgid "Example 2: Creating a map of pollution levels along a river"
-msgstr ""
+msgstr "Пример 2: Создание карты загрязнений реки"
 
 # c8cb9829dbb848428c298e5811f52e0b
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:134
@@ -247,6 +308,12 @@ msgid ""
 "levels and pH. You would also need to make a map reading of your position or "
 "obtain your position using a GPS receiver."
 msgstr ""
+"Если вы хотите замерить уровень загрязнения вдоль реки, вы будете двигаться "
+"по реке на лодке или идти вдоль берегов. Через равные промежутки вы будете "
+"останавливаться и проводить различные измерения, такие как уровень "
+"растворенного кислорода, число бактерий кишечной палочки, уровень мутности и "
+"pH. Вам также необходимо отмечать своё положение на карте или записывать его "
+"с помощью приемника GPS."
 
 # e627f8174e984726bdec1c5e71c020e5
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:141
@@ -256,6 +323,9 @@ msgid ""
 "geometry makes sense here because each sample taken represents the "
 "conditions at a very specific place."
 msgstr ""
+"Для хранения, собранных таким образом, данных в ГИС-приложении вы скорее "
+"всего создатите точечный слой. Использование точек в данном случае имеет "
+"смысл, т.к. каждый образец был получен в определенном месте."
 
 # 75215e82dbe447a18029367b1328ba25
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:146
@@ -264,6 +334,9 @@ msgid ""
 "the sample site. So we may end up with an attribute table that looks "
 "something like table_river_attributes_."
 msgstr ""
+"Что касается атрибутов, то нам потребуется **поле** для каждого собранного "
+"параметра. Поэтому наша таблица атрибутов будет выглядеть примерно как "
+"таблица table_river_attributes_."
 
 # 8bfe40a5bc8a44c0890b6ca9ed2d134e
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:153
@@ -325,7 +398,7 @@ msgstr ""
 # d1662c3126aa47b0a57d55af05621fb5
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:155
 msgid "Low"
-msgstr ""
+msgstr "Низкая"
 
 # fbfbc30c87914a9a92b6718586313fbb
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:155
@@ -366,7 +439,7 @@ msgstr ""
 # cbf7c461e9aa470db8695dec9a5bb58f
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:157
 msgid "Medium"
-msgstr ""
+msgstr "Средняя"
 
 # 3ab4d5f470f6406392cf3ace1448711d
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:157
@@ -386,7 +459,7 @@ msgstr ""
 # 33d483dffa414dae85d4148d41718c34
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:159
 msgid "High"
-msgstr ""
+msgstr "Высокая"
 
 # 1c095e7516944c2883f893a9b523c18a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:159
@@ -401,11 +474,15 @@ msgid ""
 "need. Note that the geometry (positions where samples were taken) is not "
 "shown in the attribute table --– the GIS Application stores it separately!"
 msgstr ""
+"Table River Attributes 1: Рисование подобных таблиц перед созданием "
+"векторного слоя поможет вам определиться с набором необходимых атрибутов "
+"(столбцов). Обратите внимание, что геометрия (координаты места получения "
+"образцов) в таблице не отображается --– ГИС-приложение хранит их отдельно!"
 
 # 2d8d631a12f8465e94f497efbb86fefc
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:168
 msgid "Creating an empty shapefile"
-msgstr ""
+msgstr "Создание пустого shape-файла"
 
 # 30569dc0dffb402ca32627f616f1cf69
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:170
@@ -414,6 +491,9 @@ msgid ""
 "the geometry type and attributes that each feature should have, you can move "
 "on to the next step of creating an empty shapefile."
 msgstr ""
+"После того как вы определились с тем, какие объекты будут переноситься в "
+"ГИС, выбрали подходящий тип геометрии и набор атрибутов, можно переходить к "
+"следующему шагу --- созданию пустого shape-файла."
 
 # c7956181c6f14a9a83937ff9e36d1ee1
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:174
@@ -423,6 +503,10 @@ msgid ""
 "figure_new_shapefile_). As we covered in an earlier topic, this means "
 "choosing either point, polyline or polygon for the geometry."
 msgstr ""
+"Процесс обычно начинается с выбора «нового векторного слоя» в вашем "
+"ГИС-приложении и указании типа геометрии (см. рисунок "
+"figure_new_shapefile_). Как было сказано выше, это выбор между точками, "
+"линиями и полигонами."
 
 # d15e104c298d4a12ae2ffaf40798e8c0
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:189
@@ -442,6 +526,11 @@ msgid ""
 "field, you need to indicate how the information should be stored in that "
 "field –-- i.e. is it a number, a word or a sentence, or a date?"
 msgstr ""
+"Затем необходимо добавить поля таблицы атрибутов. Как правило, названия "
+"полей должны быть короткими, не содержать пробелов и отражать тип хранимой "
+"информации. Например, поля могут иметь имена «ph», «RoofColor», «RoadType» и "
+"т.д. Помимо имени поля необходимо также указать какая информация будет в нем "
+"храниться, т.е. это число, слово или предложение, или же дата."
 
 # 78dce345b0af438a8ac33d8febb64722
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:199
@@ -450,6 +539,9 @@ msgid ""
 "sentences '**strings**', so if you need to store something like a street "
 "name or the name of a river, you should use 'String' for the field type."
 msgstr ""
+"Компьютерные программы, как правило, называют информацию, состоящую из слов "
+"или предложений, **строками**. Поэтому, если вам необходимо хранить что-то "
+"вроде названия улицы или реки, выбирайте «String» в качестве типа данных."
 
 # 32dc5a7c2ce342f39c27fd5ceaedb943
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:203
@@ -459,6 +551,10 @@ msgid ""
 "–-- so you need to think before hand whether the numeric data you are going "
 "to capture will have decimal places or not."
 msgstr ""
+"Shape-файл позволяет хранить числовую информацию либо в виде целого числа "
+"(**integer**), либо в виде десятичного (**floating point**) --- так что "
+"перед выбором типа данных подумайте будут ли ваши числа содержать десятичную "
+"точку или нет."
 
 # 8d76e5c44eac4b4fac8430181a35ad00
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:208
@@ -468,6 +564,10 @@ msgid ""
 "be created. Once again it is a good idea to give the shapefile a short and "
 "meaningful name. Good examples are 'rivers', 'watersamples' and so on."
 msgstr ""
+"И наконец (как показано на рисунке figure_save_shapefile_), для создания "
+"shape-файла необходимо задать его имя и расположение на диске компьютера. "
+"Ещё раз напомним, что файлам следует давать короткие и значащие имена. "
+"Хорошие примеры: «rivers», «watersamples» и другие."
 
 # 045e5c54970c458a895d15eaff2759c7
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:223
@@ -485,11 +585,15 @@ msgid ""
 "the attribute table, and then you save the shapefile to the hard disk using "
 "an easy to recognise name. Easy as 1-2-3!"
 msgstr ""
+"Подведем итоги. Для создания shape-файла необходимо определиться с типом "
+"геометрии, затем создать одно или несколько полей атрибутивной таблицы и, "
+"наконец, сохранить файл на диске под понятным именем. Как два байта "
+"переслать!"
 
 # 0d6e2df042ba4b2abe9346581964afc8
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:232
 msgid "Adding data to your shapefile"
-msgstr ""
+msgstr "Добавление данных в shape-файл"
 
 # 7d2c51f670914c95a0df9510c21108d7
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:234
@@ -501,16 +605,22 @@ msgid ""
 "Next we need to start adding data. There are two steps we need to complete "
 "for each record we add to the shapefile:"
 msgstr ""
+"Пока мы создали только пустой shape-файл. Теперь начнем редактирование "
+"shape-файла, выбрав пункт «начать редактирование» в меню или нажав "
+"соответствующую кнопку на панели инструментов. Shape-файлы по умолчанию "
+"открываются в режиме «только чтение» чтобы предотвратить случайное изменение "
+"или удаление данных. После перехода в режим редактирования можно добавлять "
+"данные. Создание записи в shape-файле условно разбивается на два шага:"
 
 # 6e60828f60184d2c9b0b2fee34190a5f
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:241
 msgid "Capturing geometry"
-msgstr ""
+msgstr "создание геометрии"
 
 # 5f6d3d0b93d04270b39560fa316eccea
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:242
 msgid "Entering attributes"
-msgstr ""
+msgstr "ввод атрибутов"
 
 # 0b72b5db402b4787acd39bf6c837476d
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:244
@@ -518,6 +628,8 @@ msgid ""
 "The process of capturing geometry is different for points, polylines and "
 "polygons."
 msgstr ""
+"Процесс создания геометрии имеет свои особенности в зависимости от того, что "
+"создаётся: точки, линии или полигоны."
 
 # 5b4eb25ff0014eba8c1f8515e9b1e91b
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:246
@@ -533,6 +645,14 @@ msgid ""
 "leave a lot of fields blank it will be hard to make a useful map from your "
 "data!"
 msgstr ""
+"Для **создания точки** необходимо переместить карту и изменить масштаб так, "
+"чтобы видеть окрестности места, где должен находиться объект. Затем "
+"активируйте инструмент создания точек. Теперь поместите курсор в необходимое "
+"место карты и нажмите **левую кнопку мыши**. После нажатия появится окно "
+"ввода **атрибутивных данных** созданной только что точки (см. рисунок "
+"figure_attribute_dialog_). Если вы не знаете, что вносить в очередное поле, "
+"просто оставьте его пустым, но помните, если большая часть полей будет "
+"пустой --- вы не сможете создать полезной карты из таких данных!"
 
 # 1b4a2e93152742419bfea74f8b011512
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:266
@@ -548,15 +668,24 @@ msgid ""
 "To **capture a polyline** the process is similar to that of a point, in that "
 "you need to first use the pan and zoom tools to move the map in the map view "
 "to the correct geographical area. You should be zoomed in enough so that "
-"your new vector polyline feature will have an appropriate scale (see :ref:"
-"`gentle_gis_vector_data` for more details on scale issues). When you are "
-"ready, you can click the polyline capture icon in the tool bar and then "
+"your new vector polyline feature will have an appropriate scale (see "
+":ref:`gentle_gis_vector_data` for more details on scale issues). When you "
+"are ready, you can click the polyline capture icon in the tool bar and then "
 "start drawing your line by clicking on the map. After you make your first "
 "click, you will notice that the line stretches like an elastic band to "
 "follow the mouse cursor around as you move it. Each time you click with the "
 "**left mouse button**, a new vertex will be added to the map. This process "
 "is shown in figure_capture_polyline_."
 msgstr ""
+"Процесс **создания полилинии** похож на создание точки, вначале необходимо "
+"переместиться в окрестности нужного места. Кроме того необходимо выбрать "
+"достаточное приближение, чтобы создаваемая линия была в правильном масштабе "
+"(см. :ref:`gentle_gis_vector_data` для более подробной информации о "
+"проблемах масштаба). Когда всё буде готово, активируйте инструмент создания "
+"полилинии и начинайте рисовать, щелкая по карте. После первого щелчка вы "
+"должны увидеть, что отрезок тянется как резиновая нить и следует за курсором "
+"мыши. Каждый раз, когда выполняется щелчок **левой кнопкой мыши**, создаётся "
+"новый узел. Этот процесс показан на рисунке figure_capture_polyline_."
 
 # 21fb4c560d7c49e08a7c0e284a241e32
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:291
@@ -575,6 +704,9 @@ msgid ""
 "procedure for capturing a point feature, you will then be asked to enter in "
 "the attribute data for your new polyline feature."
 msgstr ""
+"Когда создание линии закончено, используйте **правую кнопку мыши**, чтобы "
+"завершить редактирование. Как и в случае создания точки, после этого "
+"появится диалог ввода атрибутов нового объекта."
 
 # 1ff8b16410e14c2cb65d4747fc6e8ba3
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:301
@@ -584,6 +716,10 @@ msgid ""
 "toolbar. Also, you will notice that when you draw your geometry on the "
 "screen, the GIS Application always creates an enclosed area."
 msgstr ""
+"**Создание полигона** во многом похоже на создание полилинии, за исключение "
+"того, что необходимо использовать инструмент создания полигона. В процессе "
+"создания полигона вы увидите, что ГИС-приложение всегда создаёт замкнутую "
+"область."
 
 # f282f6f227984becb35eb5092957e755
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:306
@@ -592,6 +728,8 @@ msgid ""
 "click again on the map with the point, polyline or polygon capture tool "
 "active and start to draw your next feature."
 msgstr ""
+"Для добавления нового объекта после первого, просто ещё раз щелкните по "
+"карте инструментом создания точки, линии или полигона и рисуйте новый объект."
 
 # d42a92c2b7fc48f4a66f491d2537ea72
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:310
@@ -600,11 +738,14 @@ msgid ""
 "editing' icon to toggle it off. The GIS Application will then save your "
 "newly created layer to the hard disk."
 msgstr ""
+"После того как все объекты созданы, убедитесь, что вы отключили режим "
+"редактирования нажатием на соответствующую кнопку панели инструментов. При "
+"этом ГИС-приложение сохранит созданные вами данные."
 
 # 23bdbdbd1ddb4f2d98e432e3c505ebbe
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:315
 msgid "Heads-up digitising"
-msgstr ""
+msgstr "Экранная оцифровка"
 
 # 84d1441db3104a248f6954d674313190
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:317
@@ -618,6 +759,14 @@ msgid ""
 "layer into your vector layer if they are visible. This process is known as "
 "'heads-up digitising' and is shown in figure_headsup_digitizing_."
 msgstr ""
+"Если вы выполняли описанные выше действия, то наверняка заметили, что "
+"создавать **пространственно правильные** объекты при отсутствии других "
+"объектов, которые можно использовать в качестве точек опоры, очень трудно. "
+"Одним из возможных решений этой проблемы является использование растрового "
+"слоя (например, аэрофотосъемки или спутникового изображения) в качестве "
+"подложки. Такой слой можно использовать как для контроля, так и обводить по "
+"нему объекты. Этот процесс называется экранной оцифровкой и показан на "
+"рисунке figure_headsup_digitizing_."
 
 # 11ecb40865f7449484e14e25375d336e
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:336
@@ -629,7 +778,7 @@ msgstr ""
 # ce7ee50257824e25b21800540399ad82
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:340
 msgid "Digitising using a digitising table"
-msgstr ""
+msgstr "Оцифровка с использованием графического планшета"
 
 # 9637364ce03645c1b4c760a79beacf6b
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:342
@@ -644,6 +793,16 @@ msgid ""
 "that is captured using the puck gets stored in the computer's memory. You "
 "can see what a digitising puck looks like in figure_digitizing_table_."
 msgstr ""
+"Другим сопособо создания векторных данных является использование "
+"графического планшета. Этот подход используется реже, применяется в основном "
+"ГИС-профессионалами и требует наличия дорогостоящего оборудования. Процесс "
+"оцифровки можно описать следующим образом. На поверхности планшета зажимами "
+"неподвижно закрепляется бумажная карта. Затем специальное устройство, "
+"называемое «шайба», используется для трассировки объектов с карты. Небольшое "
+"перекрестие в центре шайбы используется для контроля точности оцифровки "
+"линий и точек. Шайба подключается к компьютеру и каждый объект, оцифрованный "
+"с её помощью, сохраняется в памяти компьютера. Общий вид шайбы показан на "
+"рисунке figure_digitizing_table_."
 
 # 651c59fb8c264d5ab7623bd9baf5e3ee
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:362
@@ -655,7 +814,7 @@ msgstr ""
 # 4f62eaecefcd4a90bbad9cd485694286
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:366
 msgid "After your features are digitised..."
-msgstr ""
+msgstr "После оцифровки объектов..."
 
 # 41c88481cb704e94a28c6ac68b4c3d14
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:368
@@ -665,11 +824,14 @@ msgid ""
 "appropriate symbology will allow you to better understand the data you have "
 "captured when you look at the map."
 msgstr ""
+"После того, как все объекты оцифрованы, вы можете применить полученные ранее "
+"знания для настройки отображения слоёв. Выбор подходящего отображения данных "
+"поможет вам лучше понять их."
 
 # 89fbd972d2dc4135ad4fdc7d81d49282
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:374
 msgid "Common problems / things to be aware of"
-msgstr ""
+msgstr "Частые ошибки / о чем стоит помнить"
 
 # d1604340701d42699d5f12427d2a1266
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:376
@@ -681,6 +843,11 @@ msgid ""
 "model of the Earth. We can see the effect of a poorly georeferenced image in "
 "figure_georeference_issue_."
 msgstr ""
+"Если оцифровка выполняется с растрового слоя, например с аэрофотоснимка или "
+"спутникового изображения, необходимо убедиться, что растр имеет правильную "
+"привязку. Слой с правильной привязкой отображается в ГИС-приложении на своем "
+"рельаном месте. Результат использования некорректно привязанного изображения "
+"показан на рисунке figure_georeference_issue_."
 
 # e05f2209ae2c4b7aa31e97c20cf8a4de
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:393
@@ -702,16 +869,20 @@ msgid ""
 "when you are zoomed out to a scale of 1:1000 000 if you intend to use the "
 "data you capture at a scale of 1:50 000 later."
 msgstr ""
+"Также стоит помнить, что необходимо устанавливать правильный масштаб, чтобы "
+"получаемые векторные объекты можно было использовать. Как было показано в "
+"предыдущем разделе, выполнять оцифровку в масштабе 1:1000 000 для "
+"дальнейшего использования данных при масштабе 1:50 000 не самая лучшая идея."
 
 # 468d703b73654b23bb8a0a4937c666ea
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:407
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # 38327d7df2ce4dd6bb333f7d68068e2a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:409
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # 132b23c4e4ef4982b61d5178f104017b
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:411
@@ -720,11 +891,13 @@ msgid ""
 "**geometry** and **attributes** into a **digital format** stored on the "
 "computer's disk."
 msgstr ""
+"**Оцифровка** это процесс сохранения информации о **геометрии** и "
+"**атрибутах** объекта в **цифровом формате** на диске компьютера."
 
 # 39159bb375884c81b2985105ebf74f53
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:413
 msgid "GIS Data can be stored in a **database** or as **files**."
-msgstr ""
+msgstr "ГИС-данные могут храниться в **базе данных** или в **файлах**."
 
 # bfd5e229e43343c0b49ecc2a915bbfd1
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:414
@@ -732,6 +905,9 @@ msgid ""
 "One commonly used file format is the **shapefile** which is actually a group "
 "of three or more files (:file:`.shp`, :file:`.dbf` and :file:`.shx`)."
 msgstr ""
+"Наиболее распространенным форматом является **shape-файл**, который на самом "
+"деле состоит из трех и более файлов (:file:`.shp`, :file:`.dbf` and "
+":file:`.shx`)."
 
 # 130a38ce050d43acb603ed931054ddb6
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:416
@@ -739,11 +915,13 @@ msgid ""
 "Before you create a new vector layer you need to plan both what **geometry** "
 "type and **attribute** fields it will contain."
 msgstr ""
+"Перед созданием нового векторного слоя необходимо определиться с его "
+"**геометрией** и набором **атрибутов**."
 
 # d51e0fb392f14b908492d109b1e760cd
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:418
 msgid "Geometry can be point, polyline or polygon."
-msgstr ""
+msgstr "Геометрия может быть точечной, линейной или полигональной."
 
 # 04f91ed359a9472f97e3d352c48ec80d
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:419
@@ -751,6 +929,8 @@ msgid ""
 "Attributes can be **integers** (whole numbers), **floating points** (decimal "
 "numbers), **strings** (words) or **dates**."
 msgstr ""
+"Атрибуты могут иметь тип **integer** (целые числа), **floating point** "
+"(плавающая точка), **string** (строка) или **date** (дата)."
 
 # d88c2c3db94c497ab4519d28b9e60e28
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:421
@@ -758,6 +938,8 @@ msgid ""
 "The digitising process consists of **drawing** the geometry in the map view "
 "and then entering its attributes. This is repeated for each feature."
 msgstr ""
+"Процесс оцифровки можно разбить на **рисование** геометрии на карте и "
+"**ввод** атрибутов. Эти шаги повторяются для каждого объекта."
 
 # 2f39fdef7c4a46ee941cc49698704938
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:423
@@ -765,6 +947,8 @@ msgid ""
 "**Heads-up digitising** is often used to provide orientation during "
 "digitising by using a raster image in the background."
 msgstr ""
+"**Экранная оцифровка** часто используется для упрощения ориентирования при "
+"оцифровке и использует растр в качестве подложки."
 
 # 9d4fe3dad5cc46a298e4b336f93482c6
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:425
@@ -772,16 +956,18 @@ msgid ""
 "Professional GIS users sometimes use a **digitising table** to capture "
 "information from paper maps."
 msgstr ""
+"Профессиональные пользователи ГИС иногда используют **графический планшет** "
+"для получения данных с бумажных карт."
 
 # 6b5b6a42d76746d68b1a51fe46ac7ca9
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:429
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # 02508c22a76442e9887f0faaa3c9643c
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:431
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # 52588abeafdf4aacbead92c7f5c58ed0
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:433
@@ -794,6 +980,13 @@ msgid ""
 "layers so that they are more meaningful to look at. Combine the layers from "
 "all the groups to create a nice map of your school and its surroundings!"
 msgstr ""
+"Составьте список объектов вокруг школы, которые было бы интересно "
+"оцифровать. Например, граница школы, расположение пожарных щитов, кабинеты и "
+"т.д. Постарайтесь использовать различные типы геометрии. Затем разбейте "
+"учащихся на группы и каждой группе выдайте объекты для оцифровки. Попросите "
+"их настроить отображение полученных слоёв, чтобы они были более "
+"информативными. Используйте слои, подготовленные всеми группами, для "
+"создания карты школы и её окрестностей!"
 
 # 9f6bb3546e644bc99832d79b40acbfeb
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:440
@@ -805,11 +998,18 @@ msgid ""
 "samples with a suitable symbology. Could you identify any areas of concern? "
 "Was the GIS Application able to help you to identify these areas?"
 msgstr ""
+"Найдите речку и возьмите пробы воды вдоль её течения. Тщательно обозначьте "
+"места взятия проб при помощи GPS или отмечая положение на топографической "
+"карте. Для каждого образца измерьте ряд параметров, например pH, уровень "
+"растворенного кислорода и т.п. Внесите собранные данные в ГИС-приложение и "
+"создайте карту проб, используя подходящую символику. Можете ли вы определить "
+"по ней проблемные участки? Способствовало ли этому использование "
+"ГИС-приложения?"
 
 # f610521ad0c141a4abf9d37a54cd0cbf
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:448
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # 64e3fc3782094d3e829926b6abb54715
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:450
@@ -824,19 +1024,29 @@ msgid ""
 "in your table in your notebook, and then fill in all the additional "
 "information you want to record."
 msgstr ""
+"Если у вас нет компьютера, можно использовать прозрачную пленку и лист "
+"бумаги. Используйте распечатанный аэрофотоснимок, ортофото или спутниковое "
+"изображение в качестве подложки. На листе бумаги нарисуйте пустую таблицу и "
+"подпишите названия столбцов для каждого атрибута. Затем обрисуйте геоеметрии "
+"объекта на прозрачной пленке и пронумеруйте их. Теперь впишите эти номера в "
+"первый столбец вашей таблицы и заполните другие столбцы дополнительной "
+"информацией."
 
 # 6f2fed23739b4afa9d5a9965b81cab01
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:460
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # 60c1c9af233d43f697d8095eb9c3f35a
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:462
 msgid ""
-"**Website** http://www.k12science.org/curriculum/waterproj/S00project/"
-"miami2000/miamiriverfinal.html --- A school project to assess water quality "
-"in their local river."
+"**Website** "
+"http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal.html "
+"--- A school project to assess water quality in their local river."
 msgstr ""
+"**Сайт** "
+"http://www.k12science.org/curriculum/waterproj/S00project/miami2000/miamiriverfinal.html "
+"--- Школьный проект по оценке качества воды в местной реке."
 
 # 496c09267cb542ecb70263000f8c7985
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:465
@@ -844,11 +1054,13 @@ msgid ""
 "The QGIS User Guide also has more detailed information on digitising vector "
 "data in QGIS."
 msgstr ""
+"Дополнительную информацию по оцифровке в QGIS можно найти в Руководстве "
+"пользователя QGIS."
 
 # 07dcd341aaf34c328877847ae97d9959
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:469
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # f674a0ec38174f92a7c00440acc63a23
 #: ../../source/docs/gentle_gis_introduction/04_data_capture.rst:471
@@ -856,3 +1068,5 @@ msgid ""
 "In the section that follows we will take a closer look at **raster data** to "
 "learn all about how image data can be used in a GIS."
 msgstr ""
+"В следующем разделе мы познакомимся с **растровыми данными** и узнаем как "
+"они используются в ГИС."

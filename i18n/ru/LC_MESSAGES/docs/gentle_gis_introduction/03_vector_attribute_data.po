@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Language: ru_RU\n"
+"X-Source-Language: C\n"
 
 # 3e79f0534d7d4465b10713d2e579ed5b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:9
 msgid "Vector Attribute Data"
-msgstr ""
+msgstr "Атрибуты векторных данных"
 
 # 28f2837fbfa64b44baddb3564f68986e
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:12
@@ -30,7 +33,7 @@ msgstr ""
 # 94c3bfd59a3e4c4b8019ba4acfd2b007
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:12
 msgid "Objectives:"
-msgstr ""
+msgstr "Цель:"
 
 # 76def7355647463abe52ebaa42d50386
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:12
@@ -38,21 +41,24 @@ msgid ""
 "In this topic we describe how attribute data are associated with vector "
 "features and can be used to symbolise data."
 msgstr ""
+"Этот раздел рассказывает о том, что такое атрибутивные данные, как они "
+"связаны с векторными объектами и как их использовать для настройки "
+"отображения данных."
 
 # 2a0526286fee40eda6d6ef6bdbdf2704
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:14
 msgid "Keywords:"
-msgstr ""
+msgstr "Основные понятия:"
 
 # e53bc00f62e74d778bbc1107e8bab85c
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:14
 msgid "Attribute, database, fields, data, vector, symbology"
-msgstr ""
+msgstr "Атрибут, база данных, поля, данные, вектор, символика"
 
 # 0a966f8d33f7420a96a6605c194bf036
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:18
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 # f0256edb439346e0bb8b7c35905349a4
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:20
@@ -62,6 +68,9 @@ msgid ""
 "would also give us very little information. Take a look at "
 "figure_map_attributes_ for example."
 msgstr ""
+"Если все линии на карте будут иметь один и тот же цвет, одинаковую ширину и "
+"подпись, будет очень трудно понять что к чему. Такая карта будет "
+"малоинформативной. Взгляните на рисунок figure_map_attributes_."
 
 # d140a39577c64706bd3f889b75bafc81
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:34
@@ -80,6 +89,11 @@ msgid ""
 "briefly explained that **attribute data** are used to **describe vector "
 "features**. Take a look at the house pictures in figure_house_."
 msgstr ""
+"В этом разделе мы узнаем как атрибутивные данные помогают создавать "
+"интересные и информативные карты. В предыдущих разделах, посвященных "
+"векторным данным, мы кратко объясняли, что **атрибутивные данные** "
+"используются для **описания векторных объектов**. Посмотрите на изображенные "
+"на рисунке figure_house_ дома."
 
 # c8fc96e393714277a286076b5a4eb528
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:54
@@ -99,6 +113,13 @@ msgid ""
 "represent this feature type in a houses polygon layer, and the attributes in "
 "an attribute table (see figure_house_gis_)."
 msgstr ""
+"Геометрия этих объектов полигональная (соответствует плану дома), а в "
+"качестве атрибутов мы используем цвет крыши, наличие балкона и год "
+"постройки. Обратите внимание, что в качестве атрибутов не обязательно "
+"выступают видимые признаки --- также можно использовать любую известную "
+"информацию об объекте, например год постройки дома. В ГИС-приложении мы "
+"можем отобразить дома в виде полигонального слоя, а их атрибуты в виде "
+"таблицы атрибутов (см. figure_house_gis_)."
 
 # 208648629a0542419d9f2e1d435a05f4
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:74
@@ -118,6 +139,11 @@ msgid ""
 "figure_style_by_attribute_). The process of setting colours and drawing "
 "styles is often referred to as setting feature **symbology**."
 msgstr ""
+"Тот факт, что объекты в ГИС-приложении наряду с геометрией имеют и атрибуты, "
+"открывает широкие возможности. Например, мы может использовать значения "
+"атрибутов, чтобы задать цвет и стиль отрисовки объектов (см. рисунок "
+"figure_style_by_attribute_). Процесс настройки цветов и стилей отображения "
+"часто называется настройкой **символики**."
 
 # 0a27f69cf60549a8b95e5b98812eb9cb
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:95
@@ -135,6 +161,9 @@ msgid ""
 "Applications will have a facility to select an attribute that should be used "
 "to label each feature."
 msgstr ""
+"Атрибутивные данные также могут использоваться при создании **подписей**. "
+"Большинство ГИС-приложений позволяют указать атрибут, который будет "
+"использоваться для подписывания каждого объекта."
 
 # 58f028c919364896a193f87dd322748e
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:104
@@ -145,6 +174,10 @@ msgid ""
 "figure_search_by_attribute_ you can see an example of an attribute search in "
 "a GIS."
 msgstr ""
+"Если вы когда-либо **искали на карте** определенное место или объект, вы "
+"должны знать как много времени может уходить на это. Наличие атрибутивных "
+"данных может сделать поиск заданного объекта быстрым и легким. На рисунке "
+"figure_search_by_attribute_ показан процесс поиска по атрибутам в ГИС."
 
 # ca897a52c18a4ea8ae59fe1f8e30ebbb
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:119
@@ -169,12 +202,24 @@ msgid ""
 "entering into the stream. The possibilities are endless! In a later topic we "
 "will be exploring spatial analysis in more detail."
 msgstr ""
+"B наконец, атрибутивные даные могут быть весьма полезны при выполнении "
+"**пространственного анализа**. Пространственный анализ сочетает "
+"пространственную информацию, хранящуюся в геометрии объекта, с его "
+"атрибутами. Это позволяет нам изучать объекты и их взаимоотношения. "
+"Существует множество разновидностей пространственного анализа, например, вы "
+"можете использовать ГИС для того, чтобы узнать сколько домов с красными "
+"крышами находится в заданном районе. Если у вас есть слой деревьев, вы "
+"можете использовать ГИС для выяснения того, какие виды будут затронуты если "
+"будет разрабатываться определенных участок земель. Мы можем использовать "
+"атрибуты, содержащие пробы воды по течению реки, чтобы узнать где происходит "
+"загрязнение. Возможности бесконечны! Более подробно пространственный анализ "
+"рассмотрен в следующих разделах."
 
 # af4b6a052cf542d6b5c306ecee6ae375
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:134
 msgid ""
 "Before we move on to attribute data in more detail, let's take a quick recap."
-msgstr ""
+msgstr "Прежде чем мы двинемся дальше, подведем итоги."
 
 # c52ef78fd82f4cc89f0aa6f8fada9a9f
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:136
@@ -185,6 +230,10 @@ msgid ""
 "**attributes** (which describe the feature). This is shown in "
 "figure_features_at_glance_."
 msgstr ""
+"Объекты это предметы реального мира, такие как дороги, границы участков, "
+"подстанции и т.д. **Объект** имеет **геометрию** (которая может быть "
+"**точкой**, **линией** или **полигоном**) и **атрибуты** (которые описывают "
+"объект). Это показано на рисунке figure_features_at_glance_."
 
 # fc2af06b49a44e3c870329f12a12363a
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:151
@@ -194,7 +243,7 @@ msgstr ""
 # 094320170df54f4594d6a573dbf2167f
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:154
 msgid "Attributes in detail"
-msgstr ""
+msgstr "Подробнее об атрибутах"
 
 # 97f9e532303f4f7d913a07325bcc15ee
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:156
@@ -209,31 +258,39 @@ msgid ""
 "records in the table by selecting features on the map, and find features on "
 "the map by selecting features in the table."
 msgstr ""
+"Атрибуты векторных объектов хранятся в **таблице**. Каждый столбец таблицы "
+"назывется **полем**. Каждая строка --- **записью**. Таблица "
+"table_house_attributes_ является простейшим примером таблицы атрибутов в "
+"ГИС. Каждая запись таблицы атрибутов в ГИС соответсвует одному объекту. "
+"Обычно информация из таблицы атрибутов хранится в некоторой базе данных. "
+"ГИС-приложения связывают атрибутивные записи с геометрией объекта, так что "
+"вы можете найти запись в таблице выделив объект на карте и наоборот, найти "
+"объект на карте выбрав запись в таблице."
 
 # 5e57cd79f3ef4be8bb1f1114b8b32a85
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:169
 msgid "Attribute Table"
-msgstr ""
+msgstr "Таблица атрибутов"
 
 # 0e71badff6ba402a9a7a1638a13937ca
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:169
 msgid "Field 1 : YearBuilt"
-msgstr ""
+msgstr "Поле 1 : YearBuilt"
 
 # 505da19ad97d451bab42dc6550975761
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:169
 msgid "Field 2: RoofColour"
-msgstr ""
+msgstr "Поле 2: RoofColour"
 
 # 73ca73ac454b44808e99125dc30c5448
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:169
 msgid "Field 3: Balcony"
-msgstr ""
+msgstr "Поле 3: Balcony"
 
 # 707e32d82979455496bfa40167af71f5
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:171
 msgid "Record 1"
-msgstr ""
+msgstr "запись 1"
 
 # 81bd3247429245aab4ecb4b5228dd39b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:171
@@ -243,19 +300,19 @@ msgstr ""
 # bab0709b984f460e8e1e8596006baf39
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:171
 msgid "Red"
-msgstr ""
+msgstr "Красный"
 
 # f32cdb2b31a744a0adda84937a95a7c2
 # 4b47ea41ed244451b2072c5afa8140f2
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:171
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:175
 msgid "Yes"
-msgstr ""
+msgstr "Да"
 
 # 32c6eb472c12473583f2d5298f197d97
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:173
 msgid "Record 2"
-msgstr ""
+msgstr "Запись 2"
 
 # 348d31c9cf4a4b2ea530bb04c6b1bdb6
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:173
@@ -265,17 +322,17 @@ msgstr ""
 # cc011b5452bf4606aff86e9769552807
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:173
 msgid "Black"
-msgstr ""
+msgstr "Чёрный"
 
 # 6310af723a3246f5a198607264530e87
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:173
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 # 241773af521c459cbab12d04250d0d45
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:175
 msgid "Record 3"
-msgstr ""
+msgstr "Запись 3"
 
 # e50f08c7cdb245ce92163f88f0d34bce
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:175
@@ -285,7 +342,7 @@ msgstr ""
 # fea759148dba4ce283966f307db3cd2d
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:175
 msgid "Silver"
-msgstr ""
+msgstr "серебристый"
 
 # ef1717d207a64a98b056422270b18cf3
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:178
@@ -293,6 +350,8 @@ msgid ""
 "Table House Attributes 1: An attribute table has fields (columns) and "
 "records (in rows)."
 msgstr ""
+"Table House Attributes 1: Таблица атрибутов имеет поля (столбцы) и записи (в "
+"строках)."
 
 # 6b0566974eac4fff9d441cb1ea796afe
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:181
@@ -304,41 +363,46 @@ msgid ""
 "as attributes of interest. We could just as easily have chosen other aspects "
 "of a house such as:"
 msgstr ""
+"Каждое поле таблицы атрибутов имеет определенный тип данных --- текст, число "
+"или дата. Выбор типа данных для атрибута требует вдумчивого планирования. В "
+"нашем примере с домами, мы выбрали в качестве атрибутов цвет крыши, наличие "
+"балкона и год постройки. Мы также можем выбрать и другие параметры зданий "
+"такие как:"
 
 # 68384350f40d4161a5c7fd3009ab4daa
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:187
 msgid "number of levels"
-msgstr ""
+msgstr "количество этажей"
 
 # eed7c2de87684360b0f563c5dc8ef777
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:188
 msgid "number of rooms"
-msgstr ""
+msgstr "количество комнат"
 
 # 8b7311ff49b545f2b5b87b3cfcc8b1ef
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:189
 msgid "number of occupants"
-msgstr ""
+msgstr "число жильцов"
 
 # d40c20298eff4fd797e35a2538a99b10
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:190
 msgid "type of dwelling (RDP House, block of flats, shack, brick house, etc)"
-msgstr ""
+msgstr "тип здания (коттедж, кирпичный дом, многоэтажный и т.д.)"
 
 # aed6f52ba17a4fb488873cca2f7cc297
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:191
 msgid "year the house was built"
-msgstr ""
+msgstr "год постройки"
 
 # 7923019ca5714aef8cf15c0c1402f2cc
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:192
 msgid "area of floor space in the house"
-msgstr ""
+msgstr "жилая площадь"
 
 # fcf1c3214f974b7bb7852a6d513f3d82
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:193
 msgid "and so on...."
-msgstr ""
+msgstr "и другие..."
 
 # b665db228bea49e1ab78521cf50385e8
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:195
@@ -354,11 +418,21 @@ msgid ""
 "government. In these cases it is usually not possible to request specific "
 "attributes and we have to make do with what we get."
 msgstr ""
+"Как имея такой широкий выбор определить какие именно атрибуты должны быть у "
+"объекта? Обычно всё зависит от того, что вы собираетесь делать с данными. "
+"Если вы хотите создать карту на которой дома раскрашены в зависимости от "
+"возраста, стоит озадобиться наличием атрибута «Год постройки». Если вы "
+"абсолютно уверены, что никогда не будете нуждаться в подобной карте --- "
+"лучше не хранить эту информацию. Сбор и хранение избыточной информации "
+"плохая идея, т.к. это требует дополнительных материальных и временных "
+"ресурсов. Очень часто мы получаем векторные данные от организаций, друзей "
+"или правительства. Как правило, в таких случаях невозможно запросить "
+"определенные атрибуты и приходится работать с тем, что есть."
 
 # 6fd39eb428874546aa7738b70a4a715f
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:207
 msgid "Single Symbols"
-msgstr ""
+msgstr "Обычный знак"
 
 # 6ffa81fe1d654c15af5781d78609693f
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:209
@@ -371,6 +445,13 @@ msgid ""
 "**graduated**, **continuous** or **unique value** symbol. These are "
 "described in detail in the sections that follow."
 msgstr ""
+"Если объекты отображаются без использования значений атрибутивной таблицы, "
+"они могут быть отрисованы только обычным знаком. Например, для точечных "
+"объектов можно задать цвет и **маркер** (окружность, квадрат, звезда и т.д.) "
+"и это всё. Вы не можете заставить ГИС отрисовывать объекты, используя "
+"значения одного из атрибутов. Чтобы сделать это, необходимо использовать "
+"**градуированный**, **непрерывный** или **уникальный** знак. Все они описаны "
+"ниже."
 
 # bf930b45961f4705ad984d77a8138aae
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:217
@@ -386,6 +467,15 @@ msgid ""
 "polygon layers you also have the option of setting a **fill style** and "
 "color."
 msgstr ""
+"ГИС-приложение позволяет настроить внешний вид объектов слоя при помощи "
+"**диалога**, похожего на рисунок figure_single_symbol_1_. В этом диалоге "
+"можно указать используемые цвета и стили знаков. В зависимости от типа "
+"геометрии слоя, доступны разные настройки. Так, для точечных слоёв можно "
+"задать **тип маркера**. Для линейных и полигональных слоёв возможность "
+"настройки маркера отсутствует, но можно выбрать **тип линии** и **цвет**, "
+"например оранжевый пунктир для гравийных дорог, сплошная оранжевая для "
+"второстепенных дорог и т.д. (см. рисунок figure_single_symbol_2_). Для "
+"полигональных слоёв кроме того можно указать **тип заливки** и её цвет."
 
 # 3803fb8efad74346a52dd2beb0694e0b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:237
@@ -404,7 +494,7 @@ msgstr ""
 # f34a6d634e9d4264bb76982cc0ceb64e
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:254
 msgid "Graduated Symbols"
-msgstr ""
+msgstr "Градуированный знак"
 
 # b6af66482d844f7b8c4804ef9b4aa0c7
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:256
@@ -418,6 +508,13 @@ msgid ""
 "with one colour, mid-altitude areas with another and high-altitude areas "
 "with a third."
 msgstr ""
+"Иногда векторные объекты представляют вещи с изменяющимися цифровыми "
+"значениями. Хорошим примером могут служить горизонтали. Каждая горизонталь "
+"имеет атрибут, назывемый «высота», который содержит информацию о высоте над "
+"уровнем моря. Ранее в этом разделе мы показывали горизонтали, отрисованные "
+"одним цветом. Раскраска горизонталей в разные цвета поможет нам "
+"интерпретировать их значения. Например, мы можем отрисовать низинные области "
+"одним цветом, среднегорье --- другим, а высокогорные области --- третьим."
 
 # 870ccdb9ccd84ad0b1d000e725670970
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:274
@@ -445,6 +542,14 @@ msgid ""
 "number of classes you request, create groupings for you. This process is "
 "illustrated in table_graduated_1_."
 msgstr ""
+"В QGIS отрисовка в зависимости от дискретных групп значений атрибута "
+"называется градуированным знаком. Процесс настройки показан на рисунках "
+"figure_graduated_symbol_1_ и figure_graduated_symbol_2_. **Градуированный "
+"знак** наиболее полезен когда необходимо показать различие между объектами с "
+"различными диапазонами значений в атрибутах. ГИС-приложение анализирует "
+"атрибуты (например, высоту) и, основываясь на заданном количестве классов, "
+"группирует значения. Процесс можно проиллюстрировать при помощи таблицы "
+"table_graduated_1_."
 
 # 8f863706bd17493f8cf394425a1049b0
 # 15d138d822644740b8d46fbe7f43ce98
@@ -453,12 +558,12 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:339
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:419
 msgid "Attribute Value"
-msgstr ""
+msgstr "Значение атрибута"
 
 # a6a6113ded924f958d73ff86190c0458
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:302
 msgid "Class and Colour"
-msgstr ""
+msgstr "Класс и цвет"
 
 # 034cacf4b1bf494caf0b42700e4ac924
 # 01b9e86da60a4b3da83d415f4ee6bbfd
@@ -474,7 +579,7 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:306
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:308
 msgid "Class 1"
-msgstr ""
+msgstr "Класс 1"
 
 # e57cd147cd9c4ce9bcb41de9e59c05bb
 # f91d78da32a74ea88609ae7d8599f6e7
@@ -504,7 +609,7 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:312
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:314
 msgid "Class 2"
-msgstr ""
+msgstr "Класс 2"
 
 # c2e0715d427743e3ba344f3e6c37bcce
 # 4f60432538c74cb2a23edae971dcffca
@@ -534,7 +639,7 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:318
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:320
 msgid "Class 3"
-msgstr ""
+msgstr "Класс 3"
 
 # 5fb93fca6a4d4e7dbc37d8af7cda3b76
 # 2ba0b4e9c6bf42129d649e283a271e48
@@ -557,11 +662,13 @@ msgid ""
 "into the number of classes you select. Each class is represented by a "
 "different colour."
 msgstr ""
+"Table Graduaded 1: Градуированный знак разбивает значения атрибута на "
+"заданное количество классов. Каждый класс отображается своим цветом."
 
 # e85128dd3eae4251a3d25a3c935fcfd4
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:327
 msgid "Continuous Colour Symbols"
-msgstr ""
+msgstr "Непрерывный знак"
 
 # 39b6481c15564cfe832ee0d7a8716c67
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:329
@@ -574,11 +681,18 @@ msgid ""
 "use. Table table_continuous_1_ shows how the attribute value is used to "
 "define a continuous range of colours."
 msgstr ""
+"В предыдущем параграфе о градуированном знаке мы видели, что объекты можно "
+"отрисовать с разбивкой на группы классов. Иногда бывает необходимо "
+"отобразить объекты в виде **градиента** от одного цвета к другому. "
+"ГИС-приложение будет использовать числовой атрибут объекта (например, высоту "
+"или уровень загрязнения), чтобы выбрать цвет. Таблица table_continuous_1_ "
+"показывает как используются значения атрибутов для создания непрерывного "
+"диапазона цветов."
 
 # bfb788255ce34c1fbb4f2d8d9e7c78cc
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:339
 msgid "Colour (no classes or grouping)"
-msgstr ""
+msgstr "Цвет (классы или группировка отсутствуют)"
 
 # 50125193218d493abcd044d06e52727e
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:360
@@ -587,6 +701,9 @@ msgid ""
 "light orange shown here) and an end colour (e.g. dark brown shown here) and "
 "creates a series of shades between those colours."
 msgstr ""
+"Table Continuous 1: Непрерывный знак использет начальный цвет (например, "
+"светло-оранжевый, как показано здесь) и конечный цвет (например, "
+"темно-коричневый), а затем создаёт серию промежуточных цветов между ними."
 
 # 4190ba75946e42b4a8fd491d64b5ec47
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:364
@@ -596,6 +713,10 @@ msgid ""
 "starts by setting the layers properties to continuous colour using a dialog "
 "like the one shown in figure_continuos_symbol_1_."
 msgstr ""
+"Используя тот же пример с горизонталями, посмотрим как будет выглядеть "
+"карта, отрисованная непрерывным знаком. Процесс начинается с настройки "
+"свойств слоя при помощи диалога, показанного на рисунке "
+"figure_continuos_symbol_1_."
 
 # 3eb1361fd4b144c18b070c9844a45d43
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:379
@@ -619,6 +740,16 @@ msgid ""
 "near to 1000 m will be drawn close to orange (see "
 "figure_continuous_symbol_2_)."
 msgstr ""
+"После указания цветов, соответствующим минимальному и максимальному "
+"значениям, цвет объекта будет выбран в зависимости от того в каком месте "
+"диапазона между максимальным и минимальным значением находится значение "
+"атрибута. Например, если горизонтали начинаются с отметки 1000 м и "
+"заканчиваются на отметке 1400 м, диапазон значений будет простираться от "
+"1000 до 1400. Если для минимального значения выбран оранжевый цвет, а для "
+"максимального --- черный, горизонтали со значениями близкими к 1400 м будут "
+"отображаться цветом близким к черному. Аналогично, горизонтали со значениями "
+"близкими к 1000 м будут отображаться цветом близким к оранжевому (см. "
+"рисунок figure_continuous_symbol_2_)."
 
 # a99b8e538df64b159c130fe77d4d12f7
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:403
@@ -628,7 +759,7 @@ msgstr ""
 # 0e4c72273d7e4ae6a66b9006b1756304
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:406
 msgid "Unique Value Symbols"
-msgstr ""
+msgstr "Уникальный знак"
 
 # 73c34b86fc5643f2af919f98510c7f56
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:408
@@ -642,31 +773,39 @@ msgid ""
 "each drawn in the map view of the GIS with different colours or symbols. "
 "This is illustrated in table_unique_1_."
 msgstr ""
+"Иногда атрибуты объектов являются не числовыми, а **строковыми**. В "
+"компьютерном понимании «строка» это последовательность букв, цифр и других "
+"видимых символов. Строковые атрибуты часто используются для классификации "
+"объектов по имени. Мы можем заставить ГИС-приложение отображать каждое "
+"уникальное значение своим цветом и знаком. Дороги могут иметь разный тип "
+"(например, «улица», «второстепенная дорога», «главная дорога» и т.д.), "
+"каждый из которых будет отображаться на карте своим цветом и стилем. В "
+"качестве иллюстрации посмотрите на таблицу table_unique_1_."
 
 # e135f84c3f79433fb174f507bb8de37b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:419
 msgid "Colour class and symbol"
-msgstr ""
+msgstr "Цвет и символ"
 
 # a68fe51b38a144158cf7c3c72ffb0864
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:421
 msgid "Arterial route"
-msgstr ""
+msgstr "Автомагистраль"
 
 # ae2fb77d03584aada9c68c5db3454965
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:423
 msgid "Main road"
-msgstr ""
+msgstr "Главная дорога"
 
 # f2489d996cc342789999bcef722bed95
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:425
 msgid "Secondary road"
-msgstr ""
+msgstr "Второстпенная дорога"
 
 # d8674f5185bd4947ba13c92c1a3dcd0b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:427
 msgid "Street"
-msgstr ""
+msgstr "Пешеходная дорога"
 
 # 3d9f625dccdd45ab95a03837e403501c
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:430
@@ -674,6 +813,8 @@ msgid ""
 "Table Unique 1: Unique attribute values for a feature type (e.g. roads) can "
 "each have their own symbol."
 msgstr ""
+"Table Unique 1: Уникальные значения атрибута объекта (например, дорог) имеют "
+"свои собственные символы."
 
 # 6684d1b3bf784c7a961c9bb14e60cc31
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:433
@@ -684,6 +825,10 @@ msgid ""
 "unique value can then be assigned a colour and style. This is shown in "
 "figure_unique_symbol_1_."
 msgstr ""
+"ГИС-приложения позволяют использовать уникальный знак для слоя. ГИС "
+"просканирует все значения атрибута и создаст список уникальных строк или "
+"чисел. Затем каждому уникальному значению можно назначить цвет и символ, как "
+"показано на рисунке figure_unique_symbol_1_."
 
 # a98a72cec3e1417f86f9b537d595d4a5
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:448
@@ -699,6 +844,10 @@ msgid ""
 "line style (and fill style if its a polygon feature). This is shown in "
 "figure_unique_symbol_2_."
 msgstr ""
+"Когда ГИС выполняет визуализацию слоя, она смотрит на значение атрибута "
+"каждого объекта. В зависимости от значения атрибута, дорога будут отрисованы "
+"соответствующим цветом и символом (а полигональные объекты ещё и заливкой), "
+"как показано на рисунке figure_unique_symbol_2_."
 
 # 5aaeec13b5ea4ff69ed15006ae07bc0a
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:465
@@ -708,7 +857,7 @@ msgstr ""
 # ab1c24065dff4ebca34b6f2144571c29
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:468
 msgid "Things to be aware of"
-msgstr ""
+msgstr "Необходимо помнить"
 
 # 20bd41c3902f4f6589707694dc2595e9
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:470
@@ -724,52 +873,63 @@ msgid ""
 "and symbols you use. Because of this you should put a lot of thought into "
 "how you symbolise your maps in order to make them easy to understand."
 msgstr ""
+"Выбор необходимых атрибутов и стиля отображения требует тщательного "
+"обдумывания. Перед тем как собирать какие-либо **пространственные** данные, "
+"необходимо убедиться, что вы знаете какие атрибуты нужны и как данные будут "
+"отображаться. Если вы ошибетесь, будет довольно трудно вернуться назад и всё "
+"переделать. Помните, что цель сбора атрибутивных данных --- помочь в анализе "
+"и интерпретации пространственной информации. Как вы это сделаете, зависит от "
+"вопросов на которые нужно ответить. Символика это визуальный язык, "
+"помогающий людям понять атрибуты объектов, глядя на используемые цвета и "
+"символы. Поэтому необходимо хорошо подумать как именно отобразить объекты, "
+"чтобы карту можно было легко понять."
 
 # 300aecb8f37b432f9ce4f853cc1e59b0
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:482
 msgid "What have we learned?"
-msgstr ""
+msgstr "Что мы узнали?"
 
 # b00e3c48ee404211967bc06719adab0b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:484
 msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
+msgstr "Подведём итоги:"
 
 # 4178ac6d7f2d45aa80f160e775d02984
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:486
 msgid "Vector features have **attributes**"
-msgstr ""
+msgstr "Векторные объекты имеют **атрибуты**"
 
 # 5b00de15b8f44350a308eaafa4c29b5b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:487
 msgid "Attributes **describe** the **properties** of the feature"
-msgstr ""
+msgstr "Атрибуты **описывают свойства** объекта"
 
 # 91e68fe8a0c64a25b38577abd321e758
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:488
 msgid "The attributes are stored in a **table**"
-msgstr ""
+msgstr "Атрибуты хранятся в **таблице**"
 
 # 1e2c41fe536c4b67ab7cd86403d75d70
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:489
 msgid "Rows in the table are called **records**"
-msgstr ""
+msgstr "Строки таблицы называются **записями**"
 
 # a35e943eaf254cb0a662f2b12c2396cf
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:490
 msgid "There is **one record per feature** in the vector layer"
-msgstr ""
+msgstr "В векторном слое **одна запись соответстсвует одному объекту**"
 
 # 1ea7d0c94288410f8c5868089cfdbe96
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:491
 msgid "Columns in the table are called **fields**"
-msgstr ""
+msgstr "Столбцы таблицы называются **полями**"
 
 # 0444c056f8894c11b81f2a56a84ac9c7
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:492
 msgid ""
 "Fields represent **properties** of the feature e.g. height, roof colour etc."
 msgstr ""
+"Поля описывают **свойства** объекта, например высоту, цвет крыши и т.д."
 
 # c7035db096dc401fa7e069918a165805
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:493
@@ -777,25 +937,27 @@ msgid ""
 "Fields can contain **numerical**, **string** (any text) and **date** "
 "information"
 msgstr ""
+"Поля могут содержать **числовые**, **строковые** (любой текст) данные и "
+"**даты**"
 
 # 86b549b3681e474f9ba2f5df33d7c183
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:494
 msgid ""
 "The attribute data for a feature can be used to determine how it is "
 "**symbolised**"
-msgstr ""
+msgstr "Атрибуты объекта могут использоваться для настройки его ***символики**"
 
 # aa883de058ce4f8b86fd1e27bb8c5ea4
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:495
 msgid "**Graduated colour** symbology groups the data into discrete classes"
-msgstr ""
+msgstr "**Градуированный знак** группирует данные в дискретные классы"
 
 # 63400e7ed7d14fcfb4b1f3f1c493a847
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:496
 msgid ""
 "**Continuous colour** symbology assigns colours from a colour range to the "
 "features based on their attributes"
-msgstr ""
+msgstr "**Непрерывный знак** назначает цвет объекту из диапазона цветов"
 
 # a9fcfe0abfff41c0a38d3f64a0a0d9db
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:498
@@ -803,6 +965,8 @@ msgid ""
 "**Unique value** symbology associates each different value in the chosen "
 "attribute column with a different symbol (colour and style)"
 msgstr ""
+"**Уникальный знак** сопоставляет каждому уникальному значению атрибута свой "
+"знак (цвет и символ)"
 
 # 9559307d9cb741c0814cbc22b1849043
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:500
@@ -810,16 +974,18 @@ msgid ""
 "If the attribute of a vector layer is not used to determine its symbology, "
 "it is drawn using a **single symbol** only"
 msgstr ""
+"Если атрибуты слоя не используются при его отрисовке, он отображается "
+"**обычным знаком**"
 
 # 107eace981154feba048baa46f625af5
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:504
 msgid "Now you try!"
-msgstr ""
+msgstr "Попробуйте сами!"
 
 # 6252da80212a4f578d3a2c17ceed234b
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:506
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Вот некоторые идеи для заданий:"
 
 # 8199bf17bf78465faf55b7f7b027c692
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:508
@@ -829,6 +995,10 @@ msgid ""
 "identify which symbology type they would use (see table_example_symbols_1_ "
 "for an example)."
 msgstr ""
+"Используя таблицу, созданную в предыдущем разделе, добавьте новый столбец с "
+"названием знака, который будет использоваться для каждого объекта. Попросите "
+"учащихся решить какой знак они будет использовать (в качестве примера см. "
+"таблицу table_example_symbols_1_)."
 
 # 5e50f81f7fb24c8da5e1b38fdbccbb16
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:512
@@ -836,16 +1006,18 @@ msgid ""
 "Try to identify which symbology types you would use for the following types "
 "of vector features:"
 msgstr ""
+"Попробуйте определить какой знак будет использоваться для следующих типов "
+"объектов:"
 
 # bff40fd0ee2d4585a5d6ac4925ae4011
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:515
 msgid "points showing pH level of soil samples taken around your school"
-msgstr ""
+msgstr "точки, показывающие значение pH грунта, собранные вокруг школы"
 
 # 16b48ef88d2b44b585e11aca474046fe
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:516
 msgid "lines showing a road network in a city"
-msgstr ""
+msgstr "линии, отображающие сеть дорог города"
 
 # 5b5a1c311928454bbd6c8d7abf3bd4af
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:517
@@ -853,45 +1025,47 @@ msgid ""
 "polygons for houses with an attribute that shows whether it is made of "
 "brick, wood or 'other' material."
 msgstr ""
+"полигоны домов с атрибутом, указывающим на материал (кирпич, дерево или "
+"«другой»)"
 
 # b88d546aaa2c450e8afb3db8eb332307
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:523
 msgid "Real world feature"
-msgstr ""
+msgstr "Объект реального мира"
 
 # 38dd3ec882364a2986b57e0c6284e601
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:523
 msgid "Geometry Type"
-msgstr ""
+msgstr "Тип геометрии"
 
 # 63a875e1e2654b2bb374e49cc0752a47
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:523
 msgid "Symbology Type"
-msgstr ""
+msgstr "Знак"
 
 # 75231cfa031c4609a95a5c19325915eb
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:525
 msgid "The school flagpole"
-msgstr ""
+msgstr "Флагшток"
 
 # c8fee8cb68a44b3e902521fe50228f1f
 # 0e8822bfe2d9429c84c5c89b30e5ee29
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:525
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:531
 msgid "Point"
-msgstr ""
+msgstr "Точка"
 
 # f35ce5d21cb2481eb1ff98c560373b75
 # d458cb80adb34cde8fe04467a8afd9c0
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:525
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:527
 msgid "Single Symbol"
-msgstr ""
+msgstr "Обычный знак"
 
 # 78463ce994c347a0bdfd306e909711d9
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:527
 msgid "The soccer field"
-msgstr ""
+msgstr "Футбольное поле"
 
 # 1a096c8e474e48a5a88f2e42711bae9e
 # e409a11f078346c4a41e4b186d1a314b
@@ -900,19 +1074,19 @@ msgstr ""
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:533
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:537
 msgid "Polygon"
-msgstr ""
+msgstr "Полигон"
 
 # 12dfd021242540b0a6eaf2706eaa7d0d
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:529
 msgid "The footpaths in and around the school"
-msgstr ""
+msgstr "Тропинки вокруг школы"
 
 # a5a9a3fc8e08468f88dee47658f7086e
 # b0a08c259f7f4623b87b682d545d142e
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:529
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:535
 msgid "Polyline"
-msgstr ""
+msgstr "Полилиния"
 
 # 98b6b1f1e6264745ad522eaa4c6b5ce3
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:529
@@ -921,33 +1095,36 @@ msgid ""
 "hour before school and then use **graduated symbols** to show the popularity "
 "of each footpath"
 msgstr ""
+"Попросите учащихся подсчитать количество учеников на каждой тропинке перед "
+"началом занятий, а замет использовать **градуированный знак** чтобы показать "
+"популярность каждой дорожки"
 
 # 948e87f16a134c40905228c445211dc5
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:531
 msgid "Places where taps are located"
-msgstr ""
+msgstr "Места расположения кранов"
 
 # 38fd0aa216804cb1b212db71203b4124
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:531
 msgid "Single symbol"
-msgstr ""
+msgstr "Обычный знак"
 
 # 6dab08a958ea485298b4ce318cae82ac
 # d2e19a1a736a409e898e95ac80f31e69
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:533
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:537
 msgid "Classrooms"
-msgstr ""
+msgstr "Кабинеты"
 
 # db995a86aa42417480fe695868e20cee
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:533
 msgid "**Unique value** based on the grade of the learners in the classroom"
-msgstr ""
+msgstr "**Уникальные значения** в зависимости от возраста учащихся в классе"
 
 # 4e07abb5bd8c4bdda7fe2c3081bfb3cd
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:535
 msgid "Fence"
-msgstr ""
+msgstr "Забор"
 
 # 75ca394f82244685b96cb25c7285ad26
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:535
@@ -957,6 +1134,9 @@ msgid ""
 "based on its condition. Use **graduated symbols** to classify the condition "
 "attribute."
 msgstr ""
+"Попросите учащихся оценить состояние забора вокруг школы, разбив его на "
+"участки и оценив каждый участок по десятибальной шкале. Используйте "
+"**градуированный** знак чтобы отобразить состоение забора."
 
 # 1853efefdfaa491c95595a12671c2dcb
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:537
@@ -964,6 +1144,8 @@ msgid ""
 "Count the number of learners in each classroom and use a **continuous colour "
 "symbol** to define a range of colours from red to blue."
 msgstr ""
+"Подсчитайте количестве учеников в каждом кабинете и используйте "
+"**непрерывный знак** со шкалой от красного к синему."
 
 # 929ca20c5f21465a80eadf166999e4a6
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:540
@@ -971,11 +1153,13 @@ msgid ""
 "Table Example Symbols 1: An example of a table that defines the feature "
 "types and the kind of symbology you would use for each."
 msgstr ""
+"Table Example Symbols 1: Пример таблицы с описанием типов объектов и их "
+"символикой."
 
 # 3600565e517c4d2c8f4a4e2525779814
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:544
 msgid "Something to think about"
-msgstr ""
+msgstr "Стоит учесть"
 
 # e2d34f1503934e3ab5773a8e859555c0
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:546
@@ -987,16 +1171,22 @@ msgid ""
 "green all lines above or equal to 900 m. Can you think of how to reproduce "
 "other symbology types using the same technique?"
 msgstr ""
+"Если у вас нет компьютера, можно использовать прозрачную пленку и фрагмент "
+"карты масштаба 1:500000, чтобы показать различные типы символов. Например, "
+"совместите пленку и карту, и используя разноцветные фломастеры обведите "
+"красным все горизонтали ниже 900 м (или другой величины), а зеленым все "
+"горизонтали выше или равные 900м. Подумайте как показать другие типы знаков "
+"используя такую технику."
 
 # dad9bd7590fb41e282596d86a5a01530
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:554
 msgid "Further reading"
-msgstr ""
+msgstr "Дополнительная литература"
 
 # d6ba30d49543480c83f72a935b43bb14
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:556
 msgid "**Website:** http://en.wikipedia.org/wiki/Cartography#Map_symbology"
-msgstr ""
+msgstr "**Сайт:** http://en.wikipedia.org/wiki/Cartography#Map_symbology"
 
 # 445fa0eb712b45fb95a8bf9c11eca4b0
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:558
@@ -1004,11 +1194,13 @@ msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "attribute data and symbology in QGIS."
 msgstr ""
+"Подробную информацию о работе с атрибутами векторных данных в QGIS можно "
+"найти в Руководстве пользователя QGIS."
 
 # d5ae3ea7f17a4622bfed295652bb10d1
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:562
 msgid "What's next?"
-msgstr ""
+msgstr "Что дальше?"
 
 # f4f66e1b2754432bb6337ab5167be950
 #: ../../source/docs/gentle_gis_introduction/03_vector_attribute_data.rst:564
@@ -1017,3 +1209,5 @@ msgid ""
 "We will put the things we have learned about vector data and attributes into "
 "practice by creating new data."
 msgstr ""
+"Следующий раздел будет посвящен **оцифровке**. Мы на практике применим "
+"полученные знания о векторных объектах и их атрибутах, создавая новые даные."
