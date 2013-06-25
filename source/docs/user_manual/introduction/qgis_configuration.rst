@@ -123,7 +123,7 @@ Environment
 
 Plugin paths
 
-* :guilabel:`Add` or guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
+* :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
 
 Data Sources tab
 ----------------
@@ -143,14 +143,15 @@ Data source handling
 * :guilabel:`Scan for valid items in the browser dock` |selectstring|. You can choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compresses files (.zip) in browser dock` |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support sublayers - they are called subdatasets in GDAL. An example is netcdf files - if there are many netcdf variables, GDAL sees every variable as a subdataset. The option is to control how to deal with sublayers when a file with sublayers is opened. You have the following choices:
-
+   
     *‘Always’: always ask (if there are existing sublayers)
     *‘If needed’: ask if layer has no bands, but has sublayers
     *‘Never’: never prompt, will not load anything
     *‘Load all’: never prompt, but load all sublayers
+
 * |checkbox| :guilabel:`Ignore shapefile encoding declaration`
-* |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode
-* |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode
+* |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode`
+* |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode`
 
 Rendering tab
 -------------
@@ -171,7 +172,7 @@ Contrast enhancement
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also 'Clip to MinMax'
 * :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
 * :guilabel:`Multi band color (>byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-* :guilabel:`Limits (minimum/maximum) |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
+* :guilabel:`Limits (minimum/maximum)` |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
 
@@ -180,10 +181,8 @@ Debugging
 
 * :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
 
-Canvas and legend
------------------
-
-Map canvas & legend
+Canvas and legend tab
+---------------------
 
 Default map appearance (overridden by project properties)
 
@@ -206,6 +205,63 @@ Overlay position
 * Define :guilabel:`Placement algorithm` |selectstring| for labels, symbology and
   diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
   chain', 'Popmusic tabu' and 'Popmusic chain')
+
+Map tools tab
+-------------
+
+Identify
+
+* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`
+* The :guilabel:`Mode` setting determines which layers will be shown by the Identify
+  tool. By switching to 'Top down' or 'Top down, stop at first' instead of 'Current
+  layer' attributes for all identifiable layers (see the Project properties section
+  under: :ref:`sec_projects` to set which layers are identifiable) will be shown
+  with the Identify tool.
+* |checkbox| :guilabel:`Open feature form, if a single feature is identified`
+* Define :guilabel:`Search radius for identifying and displaying map tips as a
+  percentage of the map width`
+
+
+Measure tool
+
+* Define :guilabel:`Rubberband color` for measure tools
+* Define :guilabel:`Decimal places`
+* |checkbox| :guilabel:`Keep base unit`
+* :guilabel:`Preferred measurements units` |radiobuttonon| ('meters' or 'feet')`
+* :guilabel:`Preferred angle units` |radiobuttonon| ('Angle', 'Radians' or 'Gon')
+
+Panning and zooming
+
+Mouse wheel action
+
+* Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
+  'Zoom to mouse cursor', 'Nothing')
+* Define :guilabel:`Zoom factor` for wheel mouse
+
+Predefined scales
+
+Here you find a list a predefined scales. With the '+' and '-' buttons you can add or
+remove your particular scales.
+
+
+Digitizing tab
+--------------
+
+Feature creation
+
+* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
+* |checkbox| :guilabel:`Reuse last entered attribute values`
+* :guilabel:`Validate geometries`. Editing complex lines/polygons with many nodes can end up
+  with very slow rendering. This is because the default validation procedures in QGIS can use
+  a lot of time. To speed up rendering it is possible to select GEOS geometry validation
+  (starting from GEOS 3.3) or to switch it off. GEOS geometry validation is much faster,
+  but the disadvantage is that only the first geometry problem will be reported.
+
+Rubberband
+
+
+
+
 
 
 
@@ -263,6 +319,9 @@ Map tools Tab
 * Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
+
+
+
 
 Overlays Tab
 ------------
