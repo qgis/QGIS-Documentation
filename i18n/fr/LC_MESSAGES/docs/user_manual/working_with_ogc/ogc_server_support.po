@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr\n"
+"X-Source-Language: en\n"
 
 # 1ecf1075cc314346a95429928ce4277e
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:12
 msgid "QGIS Server"
-msgstr ""
+msgstr "Serveur QGIS"
 
 # 63092f97b2004ee1a0d07de698360b8e
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:14
@@ -32,6 +35,12 @@ msgid ""
 "It is funded by the EU projects Orchestra, Sany and the city of Uster in "
 "Switzerland."
 msgstr ""
+"Le Serveur QGIS est une implémentation open source du WMS 1.3 et WFS 1.0.0 "
+"qui propose de plus des fonctionnalités avancées de rendu cartographique. Il "
+"s'agit d'une application FastCGI/CGI (Common Gateway Interface) écrite en "
+"C++ qui tourne sur un serveur web (par exemple Apache ou Lighttpd). Il est "
+"financé par les projets Orchestra et Sany de l'Union Européenne et la ville "
+"d'Uster en Suisse."
 
 # 09e1bf23a148416abc29cc01ae5e9ed3
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:22
@@ -42,6 +51,12 @@ msgid ""
 "cartographic rules as a configuration language, both for the server "
 "configuration and for the user-defined cartographic rules."
 msgstr ""
+"Il utilise QGIS comme backend pour la logique des couches SIG et le rendu "
+"cartographique. La bibliothèque Qt est utilisée pour l'interface et la "
+"programmation multiplateforme en C++. À la différence des autres serveurs "
+"WMS, le Serveur QGIS utilise les règles de cartographie comme langage de "
+"configuration, à la fois pour la configuration du serveur et pour les règles "
+"cartographiques définie par l'utilisateur."
 
 # 4fbecd72af174feca72d42f34596c6a4
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:30
@@ -51,6 +66,10 @@ msgid ""
 "web project for QGIS Server (containing cartographic visualization rules "
 "expressed in SLD)."
 msgstr ""
+"De plus, le projet de Serveur QGIS fournit l'extention 'Publish to Web', une "
+"extention de QGIS desktop qui exporte les couches courantes et la symbologie "
+"dans un projet web pour le Serveur QGIS (contenant les règles de "
+"visualisation cartographiques au format SLD)."
 
 # 6e0c59ccd02f44a892bda810436cd875
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:34
@@ -59,11 +78,19 @@ msgid ""
 "maps that are published on the web look the same as in desktop GIS. The "
 "'Publish to Web' plugin currently supports basic symbolization, with more "
 "complex cartographic visualization rules introduced manually. As the "
-"configuration is performed with the `SLD standard <http://www.opengeospatial."
-"org/standards/sld>`_ and its documented extensions, there is only one "
-"standardised language to learn, which greatly simplifies the complexity of "
-"creating maps for the Web."
+"configuration is performed with the `SLD standard "
+"<http://www.opengeospatial.org/standards/sld>`_ and its documented "
+"extensions, there is only one standardised language to learn, which greatly "
+"simplifies the complexity of creating maps for the Web."
 msgstr ""
+"Les Serveur QGIS utilise les mêmes bibliothèques de visualisation que QGIS "
+"desktop : les cartes publiées sur le web ont le même rendu que celles de "
+"QGIS desktop. L'extention 'Publish to Web' gère pour le moment la sémiologie "
+"basique et des règles cartographiques plus complexes paramétrées "
+"manuellement. Comme la configuration se base sur le `standard SLD "
+"<http://www.opengeospatial.org/standards/sld>`_ et ses extensions, il n'y a "
+"qu'un seul langage standardisé à apprendre, ce qui simplifie grandement la "
+"complexité de création de cartes pour le web."
 
 # fa82d635b81d4991a17799998c6f807b
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:42
@@ -72,27 +99,31 @@ msgid ""
 "set up a QGIS Server. But for now we recommend to read one of the following "
 "URLs to get more information:"
 msgstr ""
+"Dans un prochain manuel de QGIS, nous fournirons un exemple de configuration "
+"pour mettre en place un Serveur QGIS. Pour le moment, nous vous recommandons "
+"de vous référer aux sites suivants pour obtenir plus d'informations :"
 
 # c9dbb287034f4cf68ab86a277a03c3bd
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:46
 msgid "http://karlinapp.ethz.ch/qgis_wms/"
-msgstr ""
+msgstr "http://karlinapp.ethz.ch/qgis_wms/"
 
 # 2d8865278f7c4246847bc7875f04e115
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:47
 msgid "http://www.qgis.org/wiki/QGIS_mapserver_tutorial"
-msgstr ""
+msgstr "http://www.qgis.org/wiki/QGIS_mapserver_tutorial"
 
 # 16e9188a1b3b4520bb236f3ddb4edbd0
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:48
 msgid ""
 "http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/"
 msgstr ""
+"http://linfiniti.com/2010/08/qgis-mapserver-a-wms-server-for-the-masses/"
 
 # 4c9ffb4f782b4c03a1730961d66fd937
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:53
 msgid "Sample installation on Debian Squeeze"
-msgstr ""
+msgstr "Installation test sur Debian Squeeze"
 
 # 596b3cf4adf542079ff275b4c979d314
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:55
@@ -101,6 +132,10 @@ msgid ""
 "Debian Squeeze. Many other OS provide packages for QGIS Server, too. If you "
 "have to build it all from source, please refer to the URLs above."
 msgstr ""
+"Nous fournissons ici que de courtes et simples explications sur "
+"l'installation sur Debian Squeeze. De nombreux autres systèmes "
+"d'exploitation proposent des paquets pour le Serveur QGIS. Si vous devez les "
+"compiler depuis le source, référez-vous aux URL ci-dessus."
 
 # d3f87ae46f6c439ebef3f409254c1c9c
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:59
@@ -113,6 +148,14 @@ msgid ""
 "browser and type URL: ``http://localhost``. If apache is up, you should see "
 "the message 'It works!'."
 msgstr ""
+"En plus de qgis et qgis-mapserver, vous avez besoin d'un serveur web, dans "
+"notre exemple apache2. Vous pouvez installer tous ces paquets et leurs "
+"dépendances nécessaires avec aptitude ou apt-get install. Après "
+"l'installation vous devez tester si le serveur web et le serveur QGIS "
+"fonctionnent comme prévu. Assurez vous que le serveur Apache tourne avec "
+"``/etc/init.d/apache2 start`. Ouvrez un navigateur web et tapez l'URL "
+"``http://localhost``. Si Apache fonctionne, vous devriez voir le message 'It "
+"works!'."
 
 # 6634f32504f244dfbf5c41c50b2a36e3
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:66
@@ -120,14 +163,20 @@ msgid ""
 "Now we test the qgis server installation. The :file:`qgis_mapserv.fcgi` is "
 "available at ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` and provides a standard "
 "wms that shows the state boundaries of Alaska. Add the WMS with the URL "
-"``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described in :ref:`ogc-wms-"
-"servers`."
+"``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described in "
+":ref:`ogc-wms-servers`."
 msgstr ""
+"Testons maintenant l'installation du serveur QGIS. Le fichier "
+":file:`qgis_mapserv.fcgi` est disponible dans "
+"``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` et fournit un WMS standard qui "
+"affiche les frontières de l'Alaska. Ajoutez le WMS via l'URL "
+"``http://localhost/cgi-bin/qgis_mapserv.fcgi`` comme expliqué dans "
+":ref:`ogc-wms-servers`."
 
 # 04f05e451c064dbc94f86611d5648ead
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:87
 msgid "Creating a WMS/WFS from a QGIS project"
-msgstr ""
+msgstr "Créer un WMS / WFS depuis un projet QGIS"
 
 # 49c99261026b4454bce21214ebff2d7f
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:89
@@ -137,6 +186,11 @@ msgid ""
 "qgis_sample_dataset. Define the colors and styles of the layers in QGIS and "
 "define the project CRS, if not already done."
 msgstr ""
+"Pour créer un nouveau serveur WMS/WFS, nous devons créer un fichier de "
+"projet QGIS avec quelques données. Nous utiliserons ici le shapefile "
+"'alaska' de l'échantillon de données test de QGIS. Définissez les couleurs "
+"et les styles des couches dans QGIS, ainsi que le SCR si ce n'est pas déjà "
+"fait."
 
 # 0de1bce27ce84de9b1cb8d7969be7b9e
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:106
@@ -148,16 +202,33 @@ msgid ""
 "checkbox |checkbox| :guilabel:`Add WKT geometry to feature into response` to "
 "make the layers queryable and add a 'Maximum width' and height that can be "
 "requested. For ``WFS Capabilities`` you only need to select the layers that "
-"you want to provide as WFS. Now save the session in a project file :file:"
-"`alaska.qgs`. To provide the project as a WMS/WFS, we create a new folder ``/"
-"usr/lib/cgi-bin/project`` with admin privileges and add the project file :"
-"file:`alaska.qgs` and a copy of the :file:`qgis_mapserv.fcgi` file - that's "
-"all."
+"you want to provide as WFS. Now save the session in a project file "
+":file:`alaska.qgs`. To provide the project as a WMS/WFS, we create a new "
+"folder ``/usr/lib/cgi-bin/project`` with admin privileges and add the "
+"project file :file:`alaska.qgs` and a copy of the :file:`qgis_mapserv.fcgi` "
+"file - that's all."
 msgstr ""
+"Ouvrez ensuite l'onglet ``Serveur OWS`` depuis le menu "
+":menuselection:`Préférences --> Propriétés du projet` et renseignez les "
+"champs concernant les 'Capacités du serveur'. Concernant les ``Capacités "
+"WMS``, précisez les 'Restrictions de système de coordonnées' et l'Emprise "
+"annoncée.Vous pouvez également cocher la case |checkbox| :guilabel:`Ajouter "
+"une géométrie WKT à la réponse de l'entité` pour que les couches soient "
+"interrogeables et imposer  une 'Largeur maximale' et une 'Hauteur maximale' "
+"sur les requêtes. Pour les ``Capacités WFS``, il suffit juste de "
+"sélectionner les couches que vous souhaiter publier en WFS. Sauvegardez le "
+"projet sous :file:`alaska.qgs`. Pour diffuser le projet en WMS/WFS, il reste "
+"à créer un nouveau répertoire ``/usr/lib/cgi-bin/project` avec les droits "
+"d'administration, y ajouter le fichier de projet :file:`alaska.qgs` et "
+"copier le fichier :file:`qgis_mapserv.fcgi` - c'est tout !"
 
 # 0a2a7ecd0b4c4be2929c23b55691b376
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:118
 msgid ""
-"Now we test our project WMS and WFS, add the WMS and WFS as described in :"
-"ref:`ogc-wms-layers` and :ref:`ogc-wfs` to QGIS and load the WMS. The URL is:"
+"Now we test our project WMS and WFS, add the WMS and WFS as described in "
+":ref:`ogc-wms-layers` and :ref:`ogc-wfs` to QGIS and load the WMS. The URL "
+"is:"
 msgstr ""
+"Nous pouvons maintenant tester notre projet WMS et WFS. Ajoutez le WMS et "
+"WFS dans QGIS tel que décrit dans :ref:`ogc-wms-layers` et :ref:`ogc-wfs` et "
+"chargez le WMS. L'URL est la suivante :"
