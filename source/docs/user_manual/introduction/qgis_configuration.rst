@@ -111,10 +111,13 @@ Project files
 * |checkbox| :guilabel:`Create new project from default project`. You have the possibility to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`. You can browse through your files and define a directory where you find your user-defined project templates. There will be an entry in :menuselection:`Project --> New From Template` if you first activate |checkbox| :guilabel:`Create new project from default project` and then save a project in the project templates folder.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
+
+.. FIXME: more information necessary
 * :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
 
-System tab
+System Tab
 ----------
+.. FIXME:more information necessary
 
 Environment
 
@@ -125,16 +128,19 @@ Plugin paths
 
 * :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
 
-Data Sources tab
+Data Sources Tab
 ----------------
 
 Feature attributes and table
 
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
+
+.. FIXME:more information necessary
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
 * :guilabel:`Attribute table behaviour` |selectstring|. There are three possibilities: 'Show all features',
-'Show selected features' and 'Show features visible on map' .
-* :guilabel:`Attribute table row cache` |selectstring|. 
+  'Show selected features' and 'Show features visible on map'
+.. FIXME: more information necessary
+* :guilabel:`Attribute table row cache` |selectstring|
 * :guilabel:`Representation for NULL values` 
 
 
@@ -144,16 +150,17 @@ Data source handling
 * :guilabel:`Scan for contents of compresses files (.zip) in browser dock` |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
 * :guilabel:`Prompt for raster sublayers when opening`. Some rasters support sublayers - they are called subdatasets in GDAL. An example is netcdf files - if there are many netcdf variables, GDAL sees every variable as a subdataset. The option is to control how to deal with sublayers when a file with sublayers is opened. You have the following choices:
    
-    *‘Always’: always ask (if there are existing sublayers)
-    *‘If needed’: ask if layer has no bands, but has sublayers
-    *‘Never’: never prompt, will not load anything
-    *‘Load all’: never prompt, but load all sublayers
+  * ‘Always’: always ask (if there are existing sublayers)
+  * ‘If needed’: ask if layer has no bands, but has sublayers
+  * ‘Never’: never prompt, will not load anything
+  * ‘Load all’: never prompt, but load all sublayers
 
+.. FIXME: more information necessary
 * |checkbox| :guilabel:`Ignore shapefile encoding declaration`
 * |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode`
 
-Rendering tab
+Rendering Tab
 -------------
 
 Rendering quality
@@ -171,6 +178,8 @@ Contrast enhancement
 
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also 'Clip to MinMax'
 * :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
+
+.. FIXME: more information necessary
 * :guilabel:`Multi band color (>byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
 * :guilabel:`Limits (minimum/maximum)` |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
 * :guilabel:`Cumulative pixel count cut limits`
@@ -181,7 +190,7 @@ Debugging
 
 * :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
 
-Canvas and legend tab
+Canvas and legend Tab
 ---------------------
 
 Default map appearance (overridden by project properties)
@@ -191,14 +200,16 @@ Default map appearance (overridden by project properties)
 
 Layer legend
 
-* :guilabel:`Double click action in legend` |selectstring|. You can either 'Open layer properties' or 'Open attribute table' with the double click.
+* :guilabel:`Double click action in legend` |selectstring|. You can either 'Open layer properties' or 'Open attribute table' with the double click
+
+.. FIXME: the following sentence shouldn't be in bold letters
 * the following :guilabel:`Legend item styles` are possible
-	|checkbox| :guilabel:`Capitalise layer names`
-	|checkbox| :guilabel:`Bold layer names`
-	|checkbox| :guilabel:`Bold group names`
-	|checkbox| :guilabel:`Display classification attribute names`
-	|checkbox| :guilabel:`Create raster icons (may be slow)`
-	|checkbox| :guilabel:`Add new layers to selected or current group`
+	* |checkbox| :guilabel:`Capitalise layer names`
+	* |checkbox| :guilabel:`Bold layer names`
+	* |checkbox| :guilabel:`Bold group names`
+	* |checkbox| :guilabel:`Display classification attribute names`
+	* |checkbox| :guilabel:`Create raster icons (may be slow)`
+	* |checkbox| :guilabel:`Add new layers to selected or current group`
 
 Overlay position
 
@@ -206,7 +217,7 @@ Overlay position
   diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
   chain', 'Popmusic tabu' and 'Popmusic chain')
 
-Map tools tab
+Map tools Tab
 -------------
 
 Identify
@@ -241,11 +252,12 @@ Mouse wheel action
 Predefined scales
 
 Here you find a list a predefined scales. With the '+' and '-' buttons you can add or
-remove your particular scales.
+remove your individual scales.
 
 
-Digitizing tab
+Digitizing Tab
 --------------
+
 
 Feature creation
 
@@ -257,97 +269,30 @@ Feature creation
   (starting from GEOS 3.3) or to switch it off. GEOS geometry validation is much faster,
   but the disadvantage is that only the first geometry problem will be reported.
 
+
 Rubberband
 
+* Define Rubberband :guilabel:`Line width` and :guilabel:`Line color`
 
-
-
-
-
-
-GDAL tab
---------
  
-GDAL is a data exchange library for raster files. In this tab you can define which
-GDAL driver to be used for a raster format as in some cases more than one GDAL driver
-is available.
+Snapping
 
-
-Plugins tab
------------
-
-* Add :guilabel:`Path(s) to search for additional C++ plugin libraries`.
-
-
-Rendering Tab
--------------
-
-* |checkbox| :guilabel:`By default new layers added to the map should be displayed`
-* Define :guilabel:`Number of features to draw before updating the display`.
-* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
-* |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing
-  performance`
-* |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
-* |checkbox| :guilabel:`Use new generation symbology for rendering`
-* Define the default Raster settings for visualisation: 'RGB band selection',
-  |checkbox| :guilabel:`Use standard deviation` and 'Contrast Enhancement'
-* Add/remove :guilabel:`Path(s) to search for Scalable Vector Graphics (SVG) symbols`
-
-
-Additionally you can define whether to save the path for svg textures
-absolute or relative in the :guilabel:`General` tab of the
-:menuselection:`Settings --> Project Properties` menu.
-
-Map tools Tab
--------------
-
-* The :guilabel:`Mode` setting determines which layers will be shown by the Identify
-  tool. By switching to 'Top down' or 'Top down, stop at first' instead of 'Current
-  layer' attributes for all identifiable layers (see the Project properties section
-  under: :ref:`sec_projects` to set which layers are identifiable) will be shown
-  with the Identify tool.
-* |checkbox| :guilabel:`Open feature form, if a single feature is identified`
-* Define :guilabel:`Search radius for identifying and displaying map tips as a
-  percentage of the map width`
-* Define :guilabel:`Ellipsoid for distance calculations`
-* Define :guilabel:`Rubberband color` for measure tools
-* Define :guilabel:`Decimal places`
-* |checkbox| :guilabel:`Keep base unit`
-* |radiobuttonon| :guilabel:`Define preferred measurement units ('meters' or 'feet')`
-* |radiobuttonon| :guilabel:`Define preferred angle units ('Degrees', 'Radians'
-  or 'Gon')`
-* Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
-  'Zoom to mouse cursor', 'Nothing')
-* Define :guilabel:`Zoom factor` for wheel mouse
-
-
-
-
-Overlays Tab
-------------
-
-* Define :guilabel:`Placement algorithm` |selectstring| for labels, symboly and
-  diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
-  chain', 'Popmusic tabu' and 'Popmusic chain')
-
-Digitizing Tab
---------------
-
-* Define Rubberband :guilabel:`Line color` and :guilabel:`Line width`
+* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
 * Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
-  'To vertex and segment')
+  'To vertex and segment', 'Off')
 * Define :guilabel:`Default snapping tolerance` in map units or pixel
-* Define search radius for vertex edits in 'map units' or 'pixel'
+* Define the :guilabel:`Search radius for vertex edits` in map units or pixels
+
+
+Vertex markers
+
 * |checkbox| :guilabel:`Show markers only for selected features`
 * Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), 'Semi
-  transparent circle' or 'None') and vertex :guilabel:`Marker size`.
-* |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
-* |checkbox| :guilabel:`Reuse last entered attribute values`
-* :guilabel:`Validate geometries` Editing complex lines/polygons with many nodes can end up
-  with very slow rendering. This is because the default validation procedures in QGIS can use
-  a lot of time. To speed up rendering it is possible to select GEOS geometry validation
-  (starting from GEOS 3.3) or to switch it off. GEOS geometry validation is much faster,
-  but the disadvantage is that only the first geometry problem will be reported.
+  transparent circle' or 'None')
+* Define vertex :guilabel:`Marker size`
+
+
+Curve offset tool
 
 The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool in :ref:`sec_advanced_edit`.
 Through the various settings, it is possible to influence the shape of the line offset. These options are
@@ -358,21 +303,32 @@ possible from GEOS 3.3 .
 * :guilabel:`Miter limit for curve offset`
 
 
+GDAL Tab
+--------
+ 
+GDAL is a data exchange library for raster files. In this tab you can :guilabel:`Edit create options`
+and :guilabel:`Edit Pyramids Options` of the raster formats. Define which GDAL driver to be used for
+a raster format as in some cases more than one GDAL driver is available.
+
 CRS Tab
 -------
 
-The CRS tab is divided in two areas. The first area allows to define the default
-CRS for new projects.
 
-* Select a CRS and :guilabel:`Always start new projects with this CRS`.
+Default CRS for new projects
+
+* |checkbox| :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`
 * |checkbox| :guilabel:`Enable on the fly re-projection by default`
+* Select a CRS and :guilabel:`Always start new projects with this CRS`
 
-The second area allows to define the action, when a new layer is created, or when
+
+CRS for new layers
+
+This area allows to define the action, when a new layer is created, or when
 a layer without CRS is loaded.
 
-* |radiobuttonoff| :guilabel:`Prompt for Coordinate Reference System (CRS)`
-* |radiobuttonoff| :guilabel:`Use project Coordinate Reference System (CRS)`
-* |radiobuttonon| :guilabel:`Use default Coordinate Reference System (CRS) displayed below`
+* |radiobuttonon| :guilabel:`Prompt for CRS`
+* |radiobuttonoff| :guilabel:`Use project CRS`
+* |radiobuttonoff| :guilabel:`Use default CRS displayed below`
 
 Locale Tab
 ----------
@@ -380,8 +336,17 @@ Locale Tab
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
+
 Network Tab
 -----------
+
+General
+
+* Define :guilabel:`WMS search address`, default is
+  ``http://geopole.org/wms/search?search=\%1\&type=rss``
+* Define :guilabel:`Timeout for network requests (ms)` - default is 60000
+* Define :guilabel:`Default expiration period for WMSC/WMTS tiles (hours)` - default is 24 
+
 
 .. _figure_network_tab:
 
@@ -394,6 +359,11 @@ Network Tab
    :width: 25em
 
    Proxy-settings in |qg|
+
+Cache settings
+
+Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
+
 
 * |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
   and 'Password'.
@@ -410,16 +380,8 @@ Network Tab
   * :menuselection:`FtpCachingProxy`: Implemented using an FTP proxy, it is
     useful only in the context of FTP requests
 
-* Define :guilabel:`Cache settings` (path and size)
-* Define :guilabel:`WMS search address`, default is
-  ``http://geopole.org/wms/search?search=\%1\&type=rss``
-* Define :guilabel:`Timeout for network requests (ms)` - deeingebundenfault is 60000
-
 Excluding some URLs can be added to the text box below the proxy-settings (see
-Figure_Network_Tab_) by pressing the **[Add]** button. After
-that double-click into the just created URL-field and enter the URL you would like
-to exclude from using the proxy. Obviously the button **[Remove]** removes
-the selected entry.
+Figure_Network_Tab_).
 
 If you need more detailed information about the different proxy-settings,
 please refer to the manual of the underlying QT-library-documentation at
