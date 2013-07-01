@@ -39,11 +39,8 @@ Style Tab
 .. index:: New_Symbology, Symbology_New
 
 |symbology| Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and
-finally replace the old symbology. |qg| 1.8 now uses the new symbology as
-default, which provides a variety of improvements and new features.
-
-A description of the old symbology is available in section
-:ref:`vector_old_symbology`.
+finally replace the old symbology. Since |qg| 2.0.0 the old symbology is no longer available.
+In this version the new symbology has been redesigned and revised. 
 
 There are three types of symbols: marker symbols (for points), line symbols
 (for lines) and fill and outline symbols (for polygons). Symbols can consist
