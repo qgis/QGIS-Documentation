@@ -38,116 +38,28 @@ Style Tab
 
 .. index:: New_Symbology, Symbology_New
 
-|symbology| Since |qg| 1.4.0 a new symbology was integrated in parallel to improve and
-finally replace the old symbology. Since |qg| 2.0.0 the old symbology is no longer available.
+Since |qg| 2.0.0 the old symbology is no longer available.
 In this version the new symbology has been redesigned and revised. 
-
-There are three types of symbols: marker symbols (for points), line symbols
-(for lines) and fill and outline symbols (for polygons). Symbols can consist
-of one or more symbol layers. It is possible to define the color of a symbol
-and this color is then defined for all symbol layers. Some layers may have
-the color locked - for those the color can not be altered. This is useful
-when you define the color of a multilayer symbol. Similarly, it is possible
-to define the width for line symbols, as well as size and rotation for
-marker symbols.
-
-.. index:: Font_Marker, Simple_Marker, SVG_Marker
-.. index:: Line_decoration, Marker_line, Simple_line
-.. index:: Centroid_fill, SVG_fill, Simple_fill
-
-.. _vector_symbol_types:
-
-**Available symbol layer types**
-
-
-* Point layers
-
-  - **Font marker**: Rendering with a font.
-  - **Simple marker**: Rendering with a hardcoded marker.
-  - **SVG marker**: Rendering with a SVG picture.
-  - **Ellipse marker**: Rendering with ellipse shapes derived from attributes.
-  - **Vector field marker**: Rendering with vector fields derived from attributes.
-
-* Line layers
-
-  - **Line decoration**: Add a line decoration, e.g an arrow to indicate
-    line direction.
-  - **Marker line**: A line rendered by repeating a marker symbol.
-  - **Simple line**: Usual rendering of a line (with specified width
-    color and pen style).
-
-* Polygon layers
-
-  - **Centroid fill**: Fill a polygon centroid with a hardcoded marker.
-  - **SVG fill**: Fill a polygon with a SVG symbol.
-  - **Simple fill**: Usual rendering of a polygon (with defined fill color,
-    fill pattern and outline).
-  - **Line pattern fill**: Fill a polygon with a line pattern.
-  - **Point pattern fill**: Fill a polygon with a point pattern.
-  - **Outline: Line decoration**: Add a line decoration, e.g an arrow to
-    indicate line direction.
-  - **Outline: Marker line**: Use a hardcoded marker as area outline.
-  - **Outline: Simple line**: Define width, color and pen style as area outline.
-
-.. index:: Color_ramps
-
-
-**Color ramps**
-
-Color ramps are used to define a range of colors that can be used during
-the creation of renderers. The symbol's color will be set from the color ramp.
-
-There are three types of color ramps:
-
-* **Gradient**: Linear gradient from one color to some other.
-* **Random**: Randomly generated colors from a specified area of color space.
-* **ColorBrewer**: Create color area from a color shema and a defined number
-  of color classes.
-
-Color ramps can be defined in the :guilabel:`Color ramp` tab of the
-:guilabel:`Style Manager` by clicking the **[Add]** button and then choosing
-a color ramp type (see section vector_style_manager_ ).
-
-**Styles**
-
-A style groups a set of various symbols and color ramps. You can define
-your prefered or frequently used symbols, and can use it without having
-to recreate it everytime. Style items (symbols and color ramps) have always
-a name by which they can be queried from the style. There is at least one
-default style in |qg| (modifiable) and the user can add further styles.
-In the lower part of the Style tab there are four buttons for managing styles:
-Use **[Restore Default Style]** to get back to your default settings, **[Save As Default]**
-to save your style as default, **[Load Style...]** to get to your own styles and
-**[Save Style]** to save your own styles. Layer styles can also be transferred
-from one layer to another layer. Activate a layer and choose :menuselection:`Layer -->`
-|mActionEditCopy| :guilabel:`Copy style` and switch to another layer. Then choose
-:menuselection:`Layer -->` |mActionEditPaste| :guilabel:`Paste style`.
-
-.. index:: Renderers
 
 **Renderers**
 
 The renderer is responsible for drawing a feature together with the correct
-symbol. There are four types of renderers: single symbol, categorized
-(called unique color in the old symbology), graduated and rule-based. There
-is no continuous color renderer, because it is in fact only a special case
+symbol. There are four types of renderers: single symbol, categorized, graduated and rule-based.
+There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderer can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
-appropriately.
+appropriately. For point layers there is a point displacement renderer available.
 
 .. _vector_new_symbology:
 
-**Working with the New Generation Symbology**
+**Working with the Symbology**
 
-
-In the :guilabel:`Style` tab you can choose one of the five renderers: single
+In the top menu of the :guilabel:`Style` tab you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each
 data type (points, lines and polygons) vector symbol layer types are available
-(see vector_symbol_types_). Depending on the chosen renderer, the symbology
-Depending on the chosen renderer, the :guilabel:`Style` tab provides different
-following sections. The new generation symbology dialog also provides a
-**[Style Manager]** button which gives access to the Style Manager (see Section
-:ref:`vector_style_manager`). The Style Manager allows you to edit and remove
+(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style tab` provides different
+following sections. The symbology dialog also provides a **[Style Manager]** button which gives access
+to the Style Manager (see Section :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
 
 
@@ -511,6 +423,92 @@ layers.
 .. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
 
 .. index:: Labeling_Engine, Labeling_New, Labeling_Old
+
+
+In the new menu you can see a :guilabel:`Symbol layers` window. Depending on the type of the vector layer
+you choose there are three types of :guilabel:`Symbol layer types`: marker symbols (for points), line symbols
+(for lines) and fill and outline symbols (for polygons)(see figure_symbology_1_).
+Symbols can consist of one or more :guilabel:`Symbol layers`. It is possible to define the color of a symbol
+and this color is then defined for all symbol layers. Some layers may have
+the color locked - for those the color can not be altered. This is useful
+when you define the color of a multilayer symbol. Similarly, it is possible
+to define the width for line symbols, as well as size and rotation for
+marker symbols.
+
+.. index:: Font_Marker, Simple_Marker, SVG_Marker
+.. index:: Line_decoration, Marker_line, Simple_line
+.. index:: Centroid_fill, SVG_fill, Simple_fill
+
+.. _vector_symbol_types:
+
+**Available symbol layer types**
+
+
+* Point layers
+
+  - **Font marker**: Rendering with a font.
+  - **Simple marker**: Rendering with a hardcoded marker.
+  - **SVG marker**: Rendering with a SVG picture.
+  - **Ellipse marker**: Rendering with ellipse shapes derived from attributes.
+  - **Vector field marker**: Rendering with vector fields derived from attributes.
+
+* Line layers
+
+  - **Line decoration**: Add a line decoration, e.g an arrow to indicate
+    line direction.
+  - **Marker line**: A line rendered by repeating a marker symbol.
+  - **Simple line**: Usual rendering of a line (with specified width
+    color and pen style).
+
+* Polygon layers
+
+  - **Centroid fill**: Fill a polygon centroid with a hardcoded marker.
+  - **SVG fill**: Fill a polygon with a SVG symbol.
+  - **Simple fill**: Usual rendering of a polygon (with defined fill color,
+    fill pattern and outline).
+  - **Line pattern fill**: Fill a polygon with a line pattern.
+  - **Point pattern fill**: Fill a polygon with a point pattern.
+  - **Outline: Line decoration**: Add a line decoration, e.g an arrow to
+    indicate line direction.
+  - **Outline: Marker line**: Use a hardcoded marker as area outline.
+  - **Outline: Simple line**: Define width, color and pen style as area outline.
+
+.. index:: Color_ramps
+
+
+**Color ramps**
+
+Color ramps are used to define a range of colors that can be used during
+the creation of renderers. The symbol's color will be set from the color ramp.
+
+There are three types of color ramps:
+
+* **Gradient**: Linear gradient from one color to some other.
+* **Random**: Randomly generated colors from a specified area of color space.
+* **ColorBrewer**: Create color area from a color shema and a defined number
+  of color classes.
+
+Color ramps can be defined in the :guilabel:`Color ramp` tab of the
+:guilabel:`Style Manager` by clicking the **[Add]** button and then choosing
+a color ramp type (see section vector_style_manager_ ).
+
+**Styles**
+
+A style groups a set of various symbols and color ramps. You can define
+your prefered or frequently used symbols, and can use it without having
+to recreate it everytime. Style items (symbols and color ramps) have always
+a name by which they can be queried from the style. There is at least one
+default style in |qg| (modifiable) and the user can add further styles.
+In the lower part of the Style tab there are four buttons for managing styles:
+Use **[Restore Default Style]** to get back to your default settings, **[Save As Default]**
+to save your style as default, **[Load Style...]** to get to your own styles and
+**[Save Style]** to save your own styles. Layer styles can also be transferred
+from one layer to another layer. Activate a layer and choose :menuselection:`Layer -->`
+|mActionEditCopy| :guilabel:`Copy style` and switch to another layer. Then choose
+:menuselection:`Layer -->` |mActionEditPaste| :guilabel:`Paste style`.
+
+.. index:: Renderers
+
 
 .. _vector_labels_tab:
 
