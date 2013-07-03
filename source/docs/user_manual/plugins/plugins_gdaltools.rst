@@ -80,7 +80,7 @@ Conversion
 |                                                        | formats. Note that the vector data must in the same   |
 |                                                        | coordinate system as the raster data; on the fly      |
 |                                                        | reprojection is not provided. For more information see|
-|                                                        | http://www.gdal.org/gdal-rasterize.html               |
+|                                                        | http://www.gdal.org/gdal_rasterize.html               |
 +--------------------------------------------------------+-------------------------------------------------------+
 | |gdal_polygonize| :guilabel:`Polygonize`               | This utility creates vector polygons for all connected|
 |                                                        | regions of pixels in the raster sharing a common pixel|
