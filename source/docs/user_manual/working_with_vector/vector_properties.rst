@@ -58,7 +58,7 @@ In the top menu of the :guilabel:`Style` tab you can choose one of the five rend
 symbol, categorized, graduated, rule-based and point displacement. For each
 data type (points, lines and polygons) vector symbol layer types are available
 (see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style tab` provides different
-following sections. The symbology dialog also provides a **[Style Manager]** button which gives access
+following sections. On the bottom right of the symbology dialog there is a **[Symbol]** button which gives access
 to the Style Manager (see Section :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
 
@@ -67,7 +67,7 @@ existing symbols and add new ones.
 
 .. tip:: **Select and change multiple symbols**
 
-   The New Generation Symbology allows to select multiple symbols and right
+   The Symbology allows to select multiple symbols and right
    click to change color, transparency, size, or width of selected
    entries.
 
@@ -78,13 +78,15 @@ existing symbols and add new ones.
 The Single Symbol Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, that can be adjusted in the
 ``Style`` tab, depend partially on the type of the layer, but all types share
-the following structure. In the top left part of the tab, there is a preview
-of the current symbol to be rendered. In the bottom part of the tab, there is
+the following structure. In the bottom left part of the tab, there is a preview
+of the current symbol to be rendered. In the right part of the tab, there is
 a list of symbols already defined for the current style, prepared to be used
 via selecting them from the list. The current symbol can be modified using
-the **[Change]** button below the preview, which opens a :guilabel:`Symbol
-Properties` dialog, or the **[Change]** button right of the preview, which
-opens an ordinary :guilabel:`Color` dialog.
+the menu on the right side. If you click on the first level in the 
+:guilabel:`Symbol layers` dialog on the left side it's possible to define basic
+parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
+and :guilabel:`Rotation`.
+
 
 .. _figure_symbology_1:
 
@@ -99,15 +101,14 @@ opens an ordinary :guilabel:`Color` dialog.
    Single symbol line properties |nix|
 
 In the :guilabel:`Style` tab you can apart from a general layer transparency
-also define to use millimeter or map units for the size scale. In the **[Advanced]** button
-next to the **[Save as style]** button you can use data-defined size scale and rotation.
-Here the :menuselection:`Symbol levels -->` menu allows to enable and define the order
-in which the symbol layers are rendered (if the symbol
-consists of more than one layer).
+also define to use millimeter or map units for the size scale. In the **[Advanced]** |selectstring| button
+next to the **[Symbol]** |selectstring| button you can use data-defined size scale and rotation.
+Here the :menuselection:`Symbol levels ...` menu allows to enable and define the order
+in which the symbol layers are rendered (if the symbol consists of more than one layer).
 
 After having done any needed changes, the symbol can be added to the list of
-current style symbols (using the **[Save as style]** button) and then easily
-be used in the future. Furthermore you can use the **[Save Style]** button to
+current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`
+and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
 save the symbol as a QGIS layer style file (.qml) or SLD file(.sld). Currently
 in version 1.8 SLDs can be exported from any type of renderer: single symbol,
 categorized, graduated or rule-based, but when importing an SLD, either a
