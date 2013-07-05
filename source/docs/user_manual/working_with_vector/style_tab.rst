@@ -1,7 +1,7 @@
-Style Tab
+Style Menu
 ---------
 
-The Style tab provides you with a comprehensive tool for rendering and symbolizing your 
+The Style menu provides you with a comprehensive tool for rendering and symbolizing your 
 vector data. You can use :menuselection:`Layer rendering -->` tools that are common to
 all vector data and special symbolizing tools that were designed for the different kinds
 of vector data. 
@@ -60,10 +60,10 @@ appropriately. For point layers there is a point displacement renderer available
 
 **Working with the Symbology**
 
-In the top menu of the :guilabel:`Style` tab you can choose one of the five renderers: single
+In the top menu of the :guilabel:`Style` menu you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each
 data type (points, lines and polygons) vector symbol layer types are available
-(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style tab` provides different
+(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style` tab provides different
 following sections. On the bottom right of the symbology dialog there is a **[Symbol]** button which gives access
 to the Style Manager (see Section :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
@@ -84,14 +84,14 @@ existing symbols and add new ones.
 The Single Symbol Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, that can be adjusted in the
 :guilabel:`Style` tab, depend partially on the type of the layer, but all types share
-the following structure. In the bottom left part of the tab, there is a preview
-of the current symbol to be rendered. In the right part of the tab, there is
+the following structure. In the top left part of the tab, there is a preview
+of the current symbol to be rendered. On the right part of the tab, there is
 a list of symbols already defined for the current style, prepared to be used
 via selecting them from the list. The current symbol can be modified using
-the menu on the right side. If you click on the first level in the 
-:guilabel:`Symbol layers` dialog on the left side it's possible to define basic
-parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
-and :guilabel:`Rotation`.
+the menu on the right side.
+If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
+side it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
+and :guilabel:`Rotation`. Here the layers are joined together.
 
 
 .. _figure_symbology_1:
@@ -106,12 +106,22 @@ and :guilabel:`Rotation`.
 
    Single symbol line properties |nix|
 
-In the :guilabel:`Style` tab you can apart from a general layer transparency
-also define to use millimeter or map units for the size scale. In the **[Advanced]** |selectstring| button
-next to the **[Symbol]** |selectstring| button you can use data-defined size scale and rotation.
-Here the :menuselection:`Symbol levels ...` menu allows to enable and define the order
-in which the symbol layers are rendered (if the symbol consists of more than one layer).
+More detailed settings can be made when clicking on the second level in the 
+:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
+combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
+The following settings are possible:
 
+* :guilabel:`Symbol layer type` You have the possibility to use Ellipse markers, Font markers, 
+  Simple markers, SVG markers and Vector Field markers
+* :guilabel:`Size`
+* :guilabel:`Angle`
+* :guilabel:`Colors`
+* :guilabel:`Border width`
+* :guilabel:`Offset X,Y` You can shift the symbol in x- or y-direction
+
+Note that once you have set the size in the lower levels the size of the whole symbol
+can be changed with the :guilabel:`Size` menu in the first level again. The size of
+the lower levels changes accordingly while the size ratio is maintained.
 After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`
 and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
@@ -124,6 +134,7 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it could be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
+
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 **Categorized Renderer**
@@ -131,7 +142,7 @@ converting styles to rule-based.
 
 The Categorized Renderer is used to render all features from a layer, using
 a single user-defined symbol, which color reflects the value of a selected
-feature's attribute. The :guilabel:`Style` tab allows you to select:
+feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
 * The attribute (using the Column listbox)
