@@ -113,26 +113,42 @@ The print composer provides four tabs:
 
 * The :guilabel:`Composition` tab allows you to set paper size, orientation, the
   print quality for the output file in dpi and to activate snapping to a grid of
-  a defined resolution. Please note, the |checkbox| :guilabel:`Snap to grid`
+  a defined resolution. You can also choose the :guilabel:`Number of pages` your composition will have.
+  Please note, the |checkbox| :guilabel:`Snap to grid`
   feature only works, if you define a grid resolution > 0. Furthermore you can
   also activate the |checkbox| :guilabel:`Print as raster` checkbox. This means
-  all elements will be rastered before printing or saving as Postscript of PDF.
+  all elements will be rastered before printing or saving as Postscript or PDF.
 * The :guilabel:`Item Properties` tab displays the properties for the selected
   map element. Click the |mActionSelectPan| :sup:`Select/Move item` icon to select
   an element (e.g. legend, scalebar or label) on the canvas. Then click the
   :guilabel:`Item Properties` tab and customize the settings for the selected
   element.
-* The :guilabel:`Command history` tab displays a history of all changes applied
+* The :guilabel:`Command history` tab (hidden by default) displays a history of all changes applied
   to the print composer layout. With a mouse click it is possible to undo and
   redo layout steps back and forth to a certain status.
 * The :guilabel:`Atlas generation` tab allows to enable the generation of an
   atlas for the current composer and gives access to its parameters.
 
 You can add multiple elements to the composer. It is also possible to have more
-than one map view or legend or scalebar in the print composer canvas. Each element
-has its own properties and in the case of the map, its own extent. If you want
-to remove any elements from the composer canvas you can do that with the
-:kbd:`Delete` or the :kbd:`Backspace` key.
+than one map view or legend or scalebar in the print composer canvas, on one or 
+several pages. Each element has its own properties and in the case of the map, 
+its own extent. If you want to remove any elements from the composer canvas you 
+can do that with the :kbd:`Delete` or the :kbd:`Backspace` key.
+
+Composition tab --- General composition setup
+=============================================
+
+In the :guilabel:`Composition` tab, you can define the global settings of your composition.
+
+* You can choose one of the :guilabel:`Presets` for your papersheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
+* Composition can now be parted on several pages. For instance, a first page can show a map canvas and a second 
+  page will show the attribute table associated to a layer. Set the :guilabel:`Number of pages` to the desired value. 
+* Choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`
+* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rastered before printing or saving as Postscript or PDF. 
+* :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid : 
+  **Dots**, **Solid** lines and **Crosses**. You can adjust :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`color` to your need.
+* :guilabel:`Selection tolerance` defines the maximum distance below which an item is snapped to the grid.
+* :guilabel:`Snap to alignements` shows helping lines when the borders or axis of two items are aligned.
 
 Adding a current QGIS map canvas to the Print Composer
 ======================================================
@@ -232,7 +248,7 @@ vector or raster properties, you can update the print composer view selecting
 the map element in the print composer and clicking the **[Update preview]** button
 in the map :guilabel:`Item Properties` tab (see Figure figure_composer_2_ a).
 
-Map item properties tab --- Grid and General options dialog
+Map item properties tab --- Grid and Overview dialog
 -----------------------------------------------------------
 
 .. index::
@@ -256,15 +272,32 @@ following functionalities (see Figure_composer_4_):
    Grid Dialog |nix|
 
 * The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the
-  map element. As grid type you can specify to use solid line or cross.
+  map element. As grid type you can specify to use solid line or cross. Symbology of 
+  the grid can be chosen. See Section :ref:`_vector_style_manager`.
   Furthermore you can define an interval in X and Y direction, an X and Y offset,
   and the width used for cross or line grid type.
 * The |checkbox| :guilabel:`Draw annotation` checkbox allows to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
-  vertical, or boundary direction. And finally you can define the grid color, the
+  vertical, or boundary direction. Units can be in meters or in degrees. Finally you can define the grid color, the
   annotation font, the annotation distance from the map frame and the precision
   of the drawn coordinates.
+
+**Overview dialog**
+
+If the composer has more than one map, you can choose to use a map to show the extents of a second map.
+The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows to customize the appearance of that feature.
+
+* The :guilabel:`Overview frame` combolist references the map item whose extents will be drawn on the present map item.
+* The :guilabel:`Overview Style` allows to change the frame color. See Section :ref:`_vector_style_manager`.
+* The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame.
+* If checked, the |checkbox| :guilabel:`Invert overview` creates a mask around the extents : the referenced map extents are shown clearly whereas everything else is blended with the frame color.
+
+Map item properties tab --- General options dialog
+-----------------------------------------------------------
+
+.. index::
+
 
 **General options dialog**
 
@@ -295,8 +328,8 @@ Adding other elements to the Print Composer
 ===========================================
 
 Besides adding a current QGIS map canvas to the Print Composer, it is also
-possible to add, position, move and customize legend, scalebar, images and label
-elements.
+possible to add, position, move and customize legend, scalebar, images, label
+elements and attribute tables.
 
 Label item properties tab - Label and General options dialog
 ------------------------------------------------------------
