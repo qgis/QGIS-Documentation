@@ -31,15 +31,56 @@ double-click on a layer in the legend or right-click on the layer and select
 
    Vector Layer Properties Dialog |nix|
 
-.. _vector_style_tab:
+.. _vector_style_menu:
 
-Style Tab
+Style Menu
 ---------
 
-.. index:: New_Symbology, Symbology_New
+The Style menu provides you with a comprehensive tool for rendering and symbolizing your 
+vector data. You can use :menuselection:`Layer rendering -->` tools that are common to
+all vector data and special symbolizing tools that were designed for the different kinds
+of vector data. 
+
+**Layer rendering**
+
+* :guilabel:`Layer transparency` |slider|: you can make the underlying layer in the map canvas
+  visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+* :guilabel:`Layer blending mode`: you can achieve special rendering effects with these tools that you 
+  previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
+  through the settings described below.
+
+	* Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the
+	  Pixel beneath it; the colors aren't mixed
+	* Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged
+	  and harsh.
+	* Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is
+ 	  most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
+	* Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels 
+          cause the saturation and brightness of the underlying pixels to increase. This works best if the top
+          pixels aren't too bright, otherwise the effect is too extreme.
+	* Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is
+          displayed. This mode is suitable for highlighting features.
+	* Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the 
+	  results tend to be jagged and harsh
+	* Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer.
+          The results are darker pictures.
+	* Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
+	* Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become
+          darker. 
+	* Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft
+          light onto an image.
+	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
+          black produces no change, as values for all colors are 0.
+	* Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
+  
+
+.. index:: Symbology
 
 Since |qg| 2.0.0 the old symbology is no longer available.
 In this version the new symbology has been redesigned and revised. 
+
 
 **Renderers**
 
@@ -54,10 +95,10 @@ appropriately. For point layers there is a point displacement renderer available
 
 **Working with the Symbology**
 
-In the top menu of the :guilabel:`Style` tab you can choose one of the five renderers: single
+In the top menu of the :guilabel:`Style` menu you can choose one of the five renderers: single
 symbol, categorized, graduated, rule-based and point displacement. For each
 data type (points, lines and polygons) vector symbol layer types are available
-(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style tab` provides different
+(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style` tab provides different
 following sections. On the bottom right of the symbology dialog there is a **[Symbol]** button which gives access
 to the Style Manager (see Section :ref:`vector_style_manager`). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
@@ -77,15 +118,15 @@ existing symbols and add new ones.
 
 The Single Symbol Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, that can be adjusted in the
-``Style`` tab, depend partially on the type of the layer, but all types share
-the following structure. In the bottom left part of the tab, there is a preview
-of the current symbol to be rendered. In the right part of the tab, there is
+:guilabel:`Style` menu, depend partially on the type of the layer, but all types share
+the following structure. In the top left part of the tab, there is a preview
+of the current symbol to be rendered. On the right part of the tab, there is
 a list of symbols already defined for the current style, prepared to be used
 via selecting them from the list. The current symbol can be modified using
-the menu on the right side. If you click on the first level in the 
-:guilabel:`Symbol layers` dialog on the left side it's possible to define basic
-parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
-and :guilabel:`Rotation`.
+the menu on the right side.
+If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
+side it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
+and :guilabel:`Rotation`. Here the layers are joined together.
 
 
 .. _figure_symbology_1:
@@ -100,14 +141,24 @@ and :guilabel:`Rotation`.
 
    Single symbol line properties |nix|
 
-In the :guilabel:`Style` tab you can apart from a general layer transparency
-also define to use millimeter or map units for the size scale. In the **[Advanced]** |selectstring| button
-next to the **[Symbol]** |selectstring| button you can use data-defined size scale and rotation.
-Here the :menuselection:`Symbol levels ...` menu allows to enable and define the order
-in which the symbol layers are rendered (if the symbol consists of more than one layer).
+More detailed settings can be made when clicking on the second level in the 
+:guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
+combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
+The following settings are possible:
 
+* :guilabel:`Symbol layer type` You have the possibility to use Ellipse markers, Font markers, 
+  Simple markers, SVG markers and Vector Field markers
+* :guilabel:`Size`
+* :guilabel:`Angle`
+* :guilabel:`Colors`
+* :guilabel:`Border width`
+* :guilabel:`Offset X,Y` You can shift the symbol in x- or y-direction
+
+Note that once you have set the size in the lower levels the size of the whole symbol
+can be changed with the :guilabel:`Size` menu in the first level again. The size of
+the lower levels changes accordingly while the size ratio is maintained.
 After having done any needed changes, the symbol can be added to the list of
-current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`
+current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`)
 and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
 save the symbol as a QGIS layer style file (.qml) or SLD file(.sld). Currently
 in version 1.8 SLDs can be exported from any type of renderer: single symbol,
@@ -118,6 +169,7 @@ If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it could be very handy sometimes to have this easy way of
 converting styles to rule-based.
 
+
 .. index:: Categorized_Renderer, Renderer_Categorized
 
 **Categorized Renderer**
@@ -125,7 +177,7 @@ converting styles to rule-based.
 
 The Categorized Renderer is used to render all features from a layer, using
 a single user-defined symbol, which color reflects the value of a selected
-feature's attribute. The :guilabel:`Style` tab allows you to select:
+feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
 * The attribute (using the Column listbox)
@@ -135,7 +187,7 @@ feature's attribute. The :guilabel:`Style` tab allows you to select:
 
 The **[Advanced]** button in the lower right corner of the dialog allows to
 set the fields containing rotation and size scale information.
-For convenience, the list in the bottom part of the tab lists the values of
+For convenience, the list in the center of the menu lists the values of
 all currently selected attributes together, including the symbols that will
 be rendered.
 
@@ -218,7 +270,7 @@ modes are:
 * Pretty Breaks
 
 
-The listbox in the bottom part of the :guilabel:`Style` tab lists the classes
+The listbox in the center part of the :guilabel:`Style` menu lists the classes
 together with their ranges, labels and symbols that will be rendered.
 
 The example in figure_symbology_4_ shows the graduated rendering dialog for
@@ -227,7 +279,6 @@ the rivers layer of the |qg| sample dataset.
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
 
 **Rule-based rendering**
-
 
 The rule-based renderer is used to render all the features from a layer, using
 rule based symbols, whose color reflects the classification of a selected
@@ -239,7 +290,7 @@ The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
 To create a rule, activate an existing row by clicking on it or click on '+' and
-click on the new rule. Then press the **[Edit]** button. In the :guilabel:`Rule
+click on the new rule. Then press the **[Edit rule]** button. In the :guilabel:`Rule
 properties` dialog you can define a label for the rule. Press the |browsebutton|
 button to open the Expression builder. In the **Function List**, click on
 :guilabel:`Fields and Values` to view all attributes of the attribute table to
@@ -282,239 +333,11 @@ placed on a displacement circle around a center symbol.
 
    Point displacement dialog |nix|
 
-.. index:: Symbol_Properties
-
-**Symbol Properties**
-
-The symbol properties dialog allows the user to specify different properties
-of the symbol to be rendered. In the bottom left part of the dialog, you find
-a preview of the current symbol as it will be displayed in the map canvas.
-Above the preview is the list of symbol layers. To start the :guilabel:`Symbol
-properties` dialog, click the **[** |mActionOptions| **Change...]** button in
-the :guilabel:`Style` tab of the :guilabel:`Layer Properties` dialog.
-
-The buttons allow adding or removing layers, changing the position of layers, or
-locking layers for color changes. In the right part of the dialog, there are
-shown the settings applicable to the single symbol layer selected in the symbol
-layer list. The most important is the :guilabel:`Symbol Layer Type` |selectstring|
-combobox, which allows you to choose the layer type. The available options depend
-on the layer type (Point, Line, Polygon). The symbol layer type options are
-described in section vector_symbol_types_. You can also change the symbol
-layer properties in the right part of the dialog. For example if you have chosen
-an SVG marker for a point layer it is now possible to change its color using
-:guilabel:`Color` button.
-
-.. _figure_symbology_7:
-
-.. only:: html
-
-   **Figure Symbology 7:**
-
-.. figure:: /static/user_manual/working_with_vector/symbolproperties1.png
-   :align: center
-   :width: 25em
-
-   Line composed from three simple lines |nix|
-
-.. _vector_style_manager:
-
-Style Manager
--------------
-
-The Style Manager is a small helper application, that lists symbols and color
-ramps available in a style. It also allows you to add and/or remove items.
-To launch the Style Manager, click on :menuselection:`Settings -->
-Style Manager` in the main menu. Alternatively, you can access it via the
-:guilabel:`Style` tab.
-
-.. _figure_symbology_10:
-
-.. only:: html
-
-   **Figure Symbology 10:**
-
-.. figure:: /static/user_manual/working_with_vector/stylemanager.png
-   :width: 25em
-   :align: center
-
-   Style Manager to manage symbols and color ramps |nix|
-
-
-.. index:: Old_Symbology, Symbology_Old
-
-.. _vector_old_symbology:
-
-Old Symbology
--------------
-
-.. note::
-   |qg| 1.8. still supports the usage of the old symbology, although it is
-   recommended to switch to the new symbology, described in section vector_new_symbology_,
-   because the old symbology will be removed in one of the next releases.
-
-If you want or need to switch back to the old symbology you can click on
-the **[Old symbology]** button in the :guilabel:`Style` tab of the
-:guilabel:`Layer Properties` dialog.
-
-You can also make the old symobolgy the default, deactivating |checkbox|
-:guilabel:`Use new generation symbology for rendering` in the
-:guilabel:`Rendering` tab under :menuselection:`Settings -->` |mActionOptions|
-:menuselection:`Options`.
-
-.. index:: Old_Symbology_Renderers, Renderers_Old_Symbology
-
-The old |qg| symbology supports the following renderers:
-
-
-* **Single symbol** - a single style is applied to every object in the layer.
-* **Graduated symbol** - objects within the layer are displayed with different
-  symbols classified by the values of a particular field.
-* **Continuous color** - objects within the layer are displayed with a spread of
-  colours classified by the numerical values within a specified field.
-* **Unique value** - objects are classified by the unique values within a
-  specified field with each value having a different symbol.
-
-
-To :index:`change the symbology` for a layer, simply double click on its legend
-entry and the vector :guilabel:`Layer Properties` dialog will be shown.
-
-
-.. index:: Fill_Style, Fill_Color, Outline_Options
-
-**Style Options**
-
-Within this dialog you can style your vector layer. Depending on the
-selected rendering option you have the possibility to also classify your
-map features.
-
-At least the following styling options apply for nearly all renderers:
-
-* **Fill style** - Style for filling. Beside the given brushes you can select
-  :guilabel:`Fill style:` |selectstring| 'Texture' and click the |browsebutton|
-  button for selecting your own texture file. Currently the fileformats
-  :file:`*.jpeg`, :file:`*.xpm`, and :file:`*.png` are supported.
-* **Fill color** - fill-color of your features.
-* **Outline options**
-
-  * Outline style - Pen-style for your outline of your feature.
-    You can also set this to 'no Pen'.
-  * Outline color - color of the ouline of your feature.
-  * Outline width - width of your features.
-
-Once you have styled your layer you also could save your layer-style to a
-separate file (ending with :file:`*.qml`).
-To do this, use the button **[Save Style...]**. No need to say that
-**[Load Style...]** loads your saved layer-style-file.
-
-If you wish to always use a particular style whenever the layer is loaded,
-use the **[Save As Default]** button to make your style the default. Also,
-if you make changes to the style that you are not happy with, use the
-**[Restore Default Style]** button to revert to your default style.
-
-.. index:: Vector_Transparency, Transparency_Vector
-
-
-**Vector transparency**
-
-|qg| allows to set a transparency for every vector layer. This can be done
-with the slider :guilabel:`Transparency` |slider| inside the
-:guilabel:`Style` tab. This is very useful for overlaying several vector
-layers.
-
-.. Index:: Style_Manager, Manage_Symbols, Manage_Color_Ramps
-
-.. index:: Labeling_Engine, Labeling_New, Labeling_Old
-
-
-In the new menu you can see a :guilabel:`Symbol layers` window. Depending on the type of the vector layer
-you choose there are three types of :guilabel:`Symbol layer types`: marker symbols (for points), line symbols
-(for lines) and fill and outline symbols (for polygons)(see figure_symbology_1_).
-Symbols can consist of one or more :guilabel:`Symbol layers`. It is possible to define the color of a symbol
-and this color is then defined for all symbol layers. Some layers may have
-the color locked - for those the color can not be altered. This is useful
-when you define the color of a multilayer symbol. Similarly, it is possible
-to define the width for line symbols, as well as size and rotation for
-marker symbols.
-
-.. index:: Font_Marker, Simple_Marker, SVG_Marker
-.. index:: Line_decoration, Marker_line, Simple_line
-.. index:: Centroid_fill, SVG_fill, Simple_fill
-
-.. _vector_symbol_types:
-
-**Available symbol layer types**
-
-
-* Point layers
-
-  - **Font marker**: Rendering with a font.
-  - **Simple marker**: Rendering with a hardcoded marker.
-  - **SVG marker**: Rendering with a SVG picture.
-  - **Ellipse marker**: Rendering with ellipse shapes derived from attributes.
-  - **Vector field marker**: Rendering with vector fields derived from attributes.
-
-* Line layers
-
-  - **Line decoration**: Add a line decoration, e.g an arrow to indicate
-    line direction.
-  - **Marker line**: A line rendered by repeating a marker symbol.
-  - **Simple line**: Usual rendering of a line (with specified width
-    color and pen style).
-
-* Polygon layers
-
-  - **Centroid fill**: Fill a polygon centroid with a hardcoded marker.
-  - **SVG fill**: Fill a polygon with a SVG symbol.
-  - **Simple fill**: Usual rendering of a polygon (with defined fill color,
-    fill pattern and outline).
-  - **Line pattern fill**: Fill a polygon with a line pattern.
-  - **Point pattern fill**: Fill a polygon with a point pattern.
-  - **Outline: Line decoration**: Add a line decoration, e.g an arrow to
-    indicate line direction.
-  - **Outline: Marker line**: Use a hardcoded marker as area outline.
-  - **Outline: Simple line**: Define width, color and pen style as area outline.
-
-.. index:: Color_ramps
-
-
-**Color ramps**
-
-Color ramps are used to define a range of colors that can be used during
-the creation of renderers. The symbol's color will be set from the color ramp.
-
-There are three types of color ramps:
-
-* **Gradient**: Linear gradient from one color to some other.
-* **Random**: Randomly generated colors from a specified area of color space.
-* **ColorBrewer**: Create color area from a color shema and a defined number
-  of color classes.
-
-Color ramps can be defined in the :guilabel:`Color ramp` tab of the
-:guilabel:`Style Manager` by clicking the **[Add]** button and then choosing
-a color ramp type (see section vector_style_manager_ ).
-
-**Styles**
-
-A style groups a set of various symbols and color ramps. You can define
-your prefered or frequently used symbols, and can use it without having
-to recreate it everytime. Style items (symbols and color ramps) have always
-a name by which they can be queried from the style. There is at least one
-default style in |qg| (modifiable) and the user can add further styles.
-In the lower part of the Style tab there are four buttons for managing styles:
-Use **[Restore Default Style]** to get back to your default settings, **[Save As Default]**
-to save your style as default, **[Load Style...]** to get to your own styles and
-**[Save Style]** to save your own styles. Layer styles can also be transferred
-from one layer to another layer. Activate a layer and choose :menuselection:`Layer -->`
-|mActionEditCopy| :guilabel:`Copy style` and switch to another layer. Then choose
-:menuselection:`Layer -->` |mActionEditPaste| :guilabel:`Paste style`.
-
-.. index:: Renderers
-
 
 .. _vector_labels_tab:
 
-Labels Tab
-----------
+Labels Menu
+-----------
 
 |labels| As for the symbology |qg| 1.8 currently provides an old and a new labeling
 engine in parallel. The :guilabel:`Labels` tab still contains the old labeling.
@@ -740,8 +563,8 @@ A combination of key words in one column also works, e.g.: ``base right`` or
 
 .. _vector_attributes_tab:
 
-Fields Tab
-----------
+Fields Menu
+-----------
 
 |attributes| Within the :guilabel:`Fields` tab the field attributes of the
 selected dataset can be manipulated. The buttons |mActionNewAttribute|
@@ -811,8 +634,8 @@ widgets. These widgets are:
 
 .. _vectorgeneraltab:
 
-General Tab
------------
+General Menu
+------------
 
 |general| The :guilabel:`General` tab is essentially like that of the raster dialog.
 There are several options available:
@@ -847,8 +670,8 @@ that will be visualized (also refer to section :ref:`sec_selection_query`).
 
 .. _vectormetadatatab:
 
-Metadata Tab
-------------
+Metadata Menu
+-------------
 
 |metadata| The :guilabel:`Metadata` tab contains general information about the layer,
 including specifics about the type and location, number of features, feature
@@ -873,8 +696,8 @@ and will be used for QGIS server.
 
    Metadata tab in vector layers properties dialog |nix|
 
-Actions Tab
------------
+Actions Menu
+------------
 
 |action| |qg| provides the ability to perform an action based on the attributes
 of a feature. This can be used to perform any number of actions, for example,
@@ -1144,8 +967,8 @@ To add a raster (a tif image in this example) it becomes:
 
 .. _`sec_joins`:
 
-Joins Tab
----------
+Joins Menu
+----------
 
 
 |join| The :guilabel:`Joins` tab allows you to :index:`join a loaded attribute table
@@ -1173,8 +996,8 @@ Additionally the add vector join dialog allows to:
 
 .. _`sec_diagram`:
 
-Diagrams Tab
-------------
+Diagrams Menu
+-------------
 
 |diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a
 vector layer (see figure_diagrams_1_).
