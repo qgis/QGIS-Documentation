@@ -25,7 +25,7 @@ double-click on a layer in the legend or right-click on the layer and select
 
 .. _figure_vector_properties_1:
 
-.. figure:: /static/user_manual/working_with_vector/vectorLayerSymbology.png
+.. figure:: /static/user_manual/working_with_vector/vector_general_tab.png
    :width: 25em
    :align: center
 
