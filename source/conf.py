@@ -516,6 +516,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFolder| image:: /static/common/mActionFolder.png
    :width: 1.5em
+.. |mActionmIconExpressionEditorOpen| image:: /static/common/mIconExpressionEditorOpen.png
+   :width: 1.5 em
 .. |mIconNew| image:: /static/common/mIconNew.png
    :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png

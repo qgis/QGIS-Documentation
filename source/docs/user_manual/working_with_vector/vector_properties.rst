@@ -156,7 +156,7 @@ After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`)
 and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
 save the symbol as a QGIS layer style file (.qml) or SLD file(.sld). Currently
-in version 1.8 SLDs can be exported from any type of renderer: single symbol,
+in version 2.0.0 SLDs can be exported from any type of renderer: single symbol,
 categorized, graduated or rule-based, but when importing an SLD, either a
 single symbol or rule-based renderer is created.
 That means that categorized or graduated styles are converted to rule-based.
@@ -204,7 +204,7 @@ for the rivers layer of the |qg| sample dataset.
 .. index:: Color_Ramp, Gradient_Color_Ramp, ColorBrewer, Custom_Color_Ramp
 
 You can create a custom color ramp choosing :menuselection:`New color ramp...`
-from the Color ramp dropdown menu. A dialog will prompt for the ramp type:
+from the :guilabel:`Color ramp` dropdown menu. A dialog will prompt for the ramp type:
 Gradient, Random, ColorBrewer, then each one has options for number of steps
 and/or multiple stops in the color ramp. See figure_symbology_3_ for an
 example of custom color ramp.
@@ -360,7 +360,7 @@ shapefile of the QGIS sample dataset:
 #. Check the |checkbox| :guilabel:`Display labels` checkbox to enable labeling
 #. Choose the field to label with. We will use
    :guilabel:`Field containing label` |selectstring| 'NAMES'
-#. Enter a default for lakes that have no name. The default label will be
+#. Enter a :guilabel:`Default label` for lakes that have no name. The default label will be
    used each time |qg| encounters a lake with no value in the 'NAMES' field.
 #. If you have labels extending over several lines, check
    |checkbox|:guilabel:`Multiline labels?`. |qg| will check for a true line
@@ -376,7 +376,7 @@ placed in relation to the marker symbol for the lakes.
 
 Select the :guilabel:`Font size` |selectstring| and use the **[Font]** and **[Color]** buttons to
 set the font and color. Define if your labels should be rendered in points or in map units.
-You can also change the angle and the placement of the text-label.
+You can also change the placement of the text-label.
 
 To change the position of the text relative to the feature:
 
@@ -405,7 +405,7 @@ lakes labels:
    buffer if you prefer.
 #. Click **[Apply]** to see if you like the changes.
 
-As a last define if the labels are shifted. Use the :guilabel:`Offset` settings and fill
+As a last define if the labels should be shifted. Use the :guilabel:`Offset` settings and fill
 in the 'X offset' and the 'Y offset' . Again, it is possible to define the :guilabel:`Offset` 'In points'
 or in 'In map units'.
 
@@ -415,12 +415,12 @@ clicking **[Apply]**.
 A buffer of 1 points seems to give a good result. Notice you can also specify
 the buffer size in map units if that works out better for you.
 
-The advanced entries inside the :guilabel:`Label` menu allow you control
+The advanced entries inside the :guilabel:`Advanced tab` allow you control
 the appearance of the labels using attributes stored in the layer. The
-entries beginning with ``Data defined`` allow you to set all the parameters
+entries beginning with 'Data defined' allow you to set all the parameters
 for the labels using fields in the layer.
 
-Note that the :guilabel:`Label` tab provides a ``preview-box`` where your
+Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
 selected label is shown.
 
 .. index:: New_Labeling, Smart_Labeling
@@ -430,7 +430,7 @@ selected label is shown.
 New Labeling
 ------------
 
-The new |mActionLabeling| :sup:`Labeling` core application provides smart
+The new |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers and only requires a
 few parameters. This new application will replace the current QGIS labeling,
 described in section :ref:`vector_labels_tab` and also supports on-the-fly
@@ -440,17 +440,16 @@ transformated layers.
 
 #. Start QGIS and load a vector point, line or polygon layer.
 #. Activate the layer in the legend and click on the |mActionLabeling|
-   :sup:`Labeling` icon in the QGIS toolbar menu.
+   :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
 
 **Labeling point layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
-and select an attribute column to use for labeling. Click |browsebutton| if you
+and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions. After that you can define the text
-style and the scale-based visibility in the :guilabel:`Label settings` tab (see
-Figure_labels_1_ ). Choose the :guilabel:`Advanced` tab for the label placement
-and the labeling priority. You can define if every part of a multipart feature
-is to be labeled here. With the wrap label on character function you can define
+style in the :guilabel:`Text` menu tab (see Figure_labels_1_ ). Choose the :guilabel:`Placement` 
+menu for the label placement and the labeling priority. In the :guilabel:`Rendering` menu you can define
+if every part of a multipart feature is to be labeled here. With the wrap label on character function you can define
 a character for a line break in the labels. The :guilabel:`Data defined settings`
 tab provides you with the attribute-based definition of Font properties, Buffer
 properties and Position.
