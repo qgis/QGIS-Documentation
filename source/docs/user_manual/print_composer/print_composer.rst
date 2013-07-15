@@ -16,13 +16,14 @@ Print Composer
 **************
 
 The print composer provides growing layout and printing capabilities. It allows
-you to add elements such as the QGIS map canvas, legend, scalebar, images, basic
-shapes, arrows and text labels. You can size, group, align and position each
+you to add elements such as the QGIS map canvas, text labels, images, legends, scalebars, basic
+shapes, arrows, attribute tables and HTML frames. You can size, group, align and position each
 element and adjust the properties to create your layout. The layout can be printed
 or exported to image formats, Postscript, PDF or to SVG (export to SVG is not
 working properly with some recent Qt4 versions. You should try and check
 individual on your system). You can save the layout as template and load it again
-in another session. See a list of tools in table_composer_1_:
+in another session. Finally, generating several maps based on a template can be done throught the Atlas generator
+See a list of tools in table_composer_1_:
 
 .. index::
    single: print_composer;tools
@@ -71,8 +72,7 @@ in another session. See a list of tools in table_composer_1_:
 Table Composer 1: Print Composer Tools
 
 All Print Composer tools are available in menus and as icons in a toolbar. The
-toolbar can be switched off and on using the right mouse button holding the mouse
-over the toolbar.
+toolbar can be switched off and on using the right mouse button over the toolbar.
 
 .. index::
    single:Composer_Template
@@ -83,8 +83,8 @@ Open a new Print Composer Template
 ==================================
 
 Before you start to work with the print composer, you need to load some raster
-and vector layers in the QGIS map canvas and adapt their properties to suite your
-own convenience. After everything is rendered and symbolized to your liking you
+and vector layers in the QGIS map canvas and adapt their properties to suit your
+own convenience. After everything is rendered and symbolized to your liking,
 click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
 choose :menuselection:`File --> New Print Composer`.
 
@@ -92,8 +92,8 @@ Using Print Composer
 ====================
 
 Opening the print composer provides you with a blank canvas to which you can add
-the current QGIS map canvas, legend, scalebar, images, basic shapes, arrows and
-text. Figure_composer_1_ shows the initial view of the print composer with an
+the current QGIS map canvas, text labels, images, legends, scalebars, basic
+shapes, arrows, attribute tables and HTML frames. Figure_composer_1_ shows the initial view of the print composer with an
 activated |checkbox| :guilabel:`Snap to grid` mode but before any elements are
 added.
 
@@ -142,19 +142,31 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
 
 * You can choose one of the :guilabel:`Presets` for your papersheet, or enter your custom :guilabel:`width` and :guilabel:`height`.
 * Composition can now be parted on several pages. For instance, a first page can show a map canvas and a second 
-  page will show the attribute table associated to a layer. Set the :guilabel:`Number of pages` to the desired value. 
+  page will show the attribute table associated to a layer while a third ons shows a HTML frame linking to your organization website. 
+  Set the :guilabel:`Number of pages` to the desired value. 
 * Choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`
-* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rastered before printing or saving as Postscript or PDF. 
+* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or PDF. 
 * :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid : 
   **Dots**, **Solid** lines and **Crosses**. You can adjust :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`color` to your need.
 * :guilabel:`Selection tolerance` defines the maximum distance below which an item is snapped to the grid.
 * :guilabel:`Snap to alignements` shows helping lines when the borders or axis of two items are aligned.
 
+Navigation tools
+================
+
+To navigate in the canvas layout, the print composer provides 4 general tools:
+
+* |mActionZoomIn| :sup:`Zoom in`
+* |mActionZoomOut| :sup:`Zoom out`
+* |mActionZoomFullExtent| :sup:`Zoom to full extend`
+* |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
+  state)
+
 Adding a current QGIS map canvas to the Print Composer
 ======================================================
 
 Click on the |mActionAddMap| :sup:`Add new map` toolbar button in the print
-composer toolbar, to add the QGIS map canvas. Now drag a rectangle on the composer
+composer toolbar to add the QGIS map canvas. Now drag a rectangle on the composer
 canvas with the left mouse button to add the map. To display the current map, you
 can choose between three different modes in the map :guilabel:`Item Properties`
 tab:
@@ -189,12 +201,10 @@ tab.
    composer, but it is not yet scaled correctly. So it might be necessary to
    switch back to the standard labeling in some cases.
 
-Map item properties tab --- Map and Extents dialog
---------------------------------------------------
+Main properties
+---------------
 
-**Map dialog**
-
-The :guilabel:`Map` dialog of the map :guilabel:`Item Properies` tab provides
+The :guilabel:`Main properties` dialog of the map :guilabel:`Item Properies` tab provides
 following functionalities (see figure_composer_2_):
 
 .. _Figure_composer_2:
@@ -210,20 +220,18 @@ following functionalities (see figure_composer_2_):
    Map Dialog |nix|
 
 * The **Preview** area allows to define the preview modes 'Rectangle', 'Cache'
-  and 'Render', as described above. Click on the **[Update preview]** button to
-  apply changes to the map view.
-* The **Map** area allows to resize the map element specifying the width and
-  height or the scale. The field :guilabel:`Rotation` |selectnumber| allows to
+  and 'Render', as described above. If you change the view on the QGIS map canvas by zooming or panning or changing
+  vector or raster properties, you can update the print composer view selecting the
+  map element in the print composer and clicking the **[Update preview]** button.
+* The field :guilabel:`Scale` |selectnumber| sets a manual scale.
+* The field :guilabel:`Rotation` |selectnumber| allows to
   rotate the map element content clockwise in degrees. Note, a coordinate frame
-  can only be added with the default value 0. Furthermore you can enable the
-  checkboxes |checkbox| :guilabel:`Lock layers for map items` and |checkbox|
-  :guilabel:`Draw map canvas items`.
+  can only be added with the default value 0.
+* The |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main QGIS window.
+* You can choose to lock the layers shown on a map item. Check the |checkbox| :guilabel:`Lock layers for map item`. Any layer that would be displayed or hidden in the main QGIS window after checked on won't appear or be hidden in the map item of the composer. But style and labels of a locked layer is still refreshed accordingly to the main QGIS interface.
 
-If you change the view on the QGIS map canvas by zooming or panning or changing
-vector or raster properties, you can update the print composer view selecting the
-map element in the print composer and clicking the **[Update preview]** button.
-
-**Extents dialog**
+Extents
+-------
 
 The :guilabel:`Extents` dialog of the map item tab provides following
 functionalities (see Figure figure_composer_3_):
@@ -248,13 +256,11 @@ vector or raster properties, you can update the print composer view selecting
 the map element in the print composer and clicking the **[Update preview]** button
 in the map :guilabel:`Item Properties` tab (see Figure figure_composer_2_ a).
 
-Map item properties tab --- Grid and Overview dialog
------------------------------------------------------------
-
 .. index::
    single: Grid;Map_Grid
 
-**Grid dialog**
+Grid
+----
 
 The :guilabel:`Grid` dialog of the map :guilabel:`Item Properties` tab provides
 following functionalities (see Figure_composer_4_):
@@ -276,93 +282,44 @@ following functionalities (see Figure_composer_4_):
   the grid can be chosen. See Section :ref:`_vector_style_manager`.
   Furthermore you can define an interval in X and Y direction, an X and Y offset,
   and the width used for cross or line grid type.
-* The |checkbox| :guilabel:`Draw annotation` checkbox allows to add coordinates
+* You can choose to paint the frame with a Zebra style. If not selected, general frame option is used (See Section :ref:`Frame_dialog`)
+  Advanced rendering mode is also available for grids. See Section :ref:`Rendering_mode`)
+* The |checkbox| :guilabel:`Draw coordinates` checkbox allows to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
-  vertical, or boundary direction. Units can be in meters or in degrees. Finally you can define the grid color, the
+  vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally you can define the grid color, the
   annotation font, the annotation distance from the map frame and the precision
   of the drawn coordinates.
 
-**Overview dialog**
+Overview
+--------
 
 If the composer has more than one map, you can choose to use a map to show the extents of a second map.
 The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows to customize the appearance of that feature.
 
 * The :guilabel:`Overview frame` combolist references the map item whose extents will be drawn on the present map item.
 * The :guilabel:`Overview Style` allows to change the frame color. See Section :ref:`_vector_style_manager`.
-* The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame.
+* The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame. See :ref:`Rendering_mode`
 * If checked, the |checkbox| :guilabel:`Invert overview` creates a mask around the extents : the referenced map extents are shown clearly whereas everything else is blended with the frame color.
 
-Map item properties tab --- General options dialog
+Position and size, Frame, Background, Item ID and Rendering
 -----------------------------------------------------------
 
-.. index::
+* The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the map item. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
+* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
+* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
+* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
 
 
-**General options dialog**
-
-The :guilabel:`General options` dialog of the map :guilabel:`Item Properties` tab
-provides following functionalities (see Figure_composer_5_):
-
-.. _Figure_composer_5:
-
-.. only:: html
-
-   **Figure Composer 5:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_map4.png
-   :align: center
-   :width: 20em
-
-   General Options Dialog |nix|
-
-* Here you can define color and outline width for the element frame, set a
-  background color and opacity for the map canvas. The **[Position and size]**
-  button opens the :guilabel:`Set item position` dialog and allows to set the
-  map canvas position using reference points or coordinates. Furthermore you can
-  select or unselect to display the element frame with the |checkbox|
-  :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` you can create a
-  relationship to the other print composer items.
-
-Adding other elements to the Print Composer
-===========================================
-
-Besides adding a current QGIS map canvas to the Print Composer, it is also
-possible to add, position, move and customize legend, scalebar, images, label
-elements and attribute tables.
-
-Label item properties tab - Label and General options dialog
-------------------------------------------------------------
+Adding a Label item to the Print Composer
+=========================================
 
 To add a label, click the |mActionLabel| :sup:`Add label` icon, place the element
 with the left mouse button on the print composer canvas and position and customize
-their appearance in the label :guilabel:`Item Properties` tab.
+its appearance in the label :guilabel:`Item Properties` tab.
 
-**Label dialog**
-
-The :guilabel:`Label` dialog of the label item tab provides following
-functionalities:
-
-.. _Figure_composer_6:
-
-.. only:: html
-
-   **Figure Composer 6:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label1.png
-   :align: center
-   :width: 20em
-
-   Label Options Dialog |nix|
-
-* The :guilabel:`Label` dialog offers to add text labels to the composer canvas.
-  You can define the horizontal and vertical alignment, select font and font color
-  for the text and it is possible to define a text margin in mm.
-
-**General options dialog**
-
-The :guilabel:`General options` dialog of the label :guilabel:`Item Properties`
-tab provides following functionalities:
+The :guilabel:`Item Properties` tab  of a Label item provides following functionalities:
 
 .. _Figure_composer_7:
 
@@ -376,27 +333,44 @@ tab provides following functionalities:
 
    General Options Dialog |nix|
 
-* Here you can define color and outline width for the element frame, set a
-  background color and opacity for the label. The :guilabel:`Position` button
-  opens the :guilabel:`Set items position` dialog and allows to set the map
-  canvas position using reference points or coordinates. Furthermore you can
-  select or unselect to display the element frame with the |checkbox|
-  :guilabel:`Show frame` checkbox. Use the :guilabel:`Item ID` to create a
-  relationship to other print composer items.
+Main properties
+---------------
 
-Image item properties tab - Picture options and General options dialog
-----------------------------------------------------------------------
+* The Main properties dialog is where is inserted the text (html or not) or the expression needed to fill the label added to the composer canvas.
+  Labels can be interpreted as html code: check the |checkbox| :guilabel:`Render as HTML`. You can now insert a url, an clickable image that link to a web page or something more complex.
+  You can also insert an expression. Click on the **[Insert an expression]** to open a new dialog. Build an expression by clicking the functions available in the left side of the panel. On the right side of the `Insert an expression dialog` is displayed the help file associated with the function selected. Two special categories can be useful, particularly associted with the Atlas functionnality : geometry functions and records functions. On the bottom side, a preview of the expression is shown.
+  Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons
 
-To add an image, click the |mActionSaveMapAsImage| :sup:`Add image` icon, place
-the element with the left mouse button on the print composer canvas and position
-and customize their appearance in the image :guilabel:`Item Properties` tab.
+Alignment
+---------
+
+* You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone
+
+Display
+-------
+
+* In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
+
+Position and size, Frame, Background, Item ID and Rendering
+-----------------------------------------------------------
+
+* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the label. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
+* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
+* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering mode chapter below.
+
+Adding an Image item to the Print Composer
+=========================================
+
+To add an image, click the |mActionImage| :sup:`Add image` icon, place the element
+with the left mouse button on the print composer canvas and position and customize
+its appearance in the image :guilabel:`Item Properties` tab.
 
 .. index::
    single:Picture_database
 .. index::
    single:Rotated_North_Arrow
-
-**Picture options dialog**
 
 The :guilabel:`Picture options` dialog of the image :guilabel:`Item Properties`
 tab provides following functionalities (see figure_composer_5_ a):
@@ -413,15 +387,25 @@ tab provides following functionalities (see figure_composer_5_ a):
 
    Picture Options Dialog Dialog |nix|
 
-* The **Preloaded Images** field then shows all pictures stored in the selected
-  directories.
+Main properties
+---------------
+
+* The **Main properties** dialog shows the current image that is displayed in the image item. 
+  Click on the **[...]** button to select a file on your computer.
+
+Search directories
+------------------
+* This dialog shows all pictures stored in the selected directories.
+* The **Search directories** area allows to add and remove directories with
+  images in SVG format to the picture database.
+
+Rotation
+--------
 * The **Options** area shows the current selected picture and allows to define
   width, height and clockwise rotation of the picture. It is also possible to
   add a user specific SVG path. Activating the |checkbox| :guilabel:`Sync with
   map` checkbox synchronizes the rotation of a picture in the QGIS map canvas
   (i.e. a rotated north arrow) with the appropriate print composer image.
-* The **Search directories** area allows to add and remove directories with
-  images in SVG format to the picture database.
 
 **General options dialog**
 
@@ -446,12 +430,14 @@ tab provides following functionalities:
   map canvas position using reference points or coordinates. Furthermore you can
   select or unselect to display the element frame with the |checkbox|
   :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` you can create
+* The :guilabel:`Rendering option` introduces the new overlay mode. You can choose how the label frame will be blend to the underlying elements.
+
+
+Adding a Legend item to the Print Composer
+==========================================
 
 .. index::
    single:Map_Legend
-
-Legend item properties tab - General, Legend items and Item option dialog
--------------------------------------------------------------------------
 
 To add a map legend, click the |mActionAddLegend| :sup:`Add new legend` icon,
 place the element with the left mouse button on the print composer canvas and
@@ -498,7 +484,7 @@ provides following functionalities (see figure_composer_11_):
    Legend Items Dialog |nix|
 
 * The legend items window lists all legend items and allows to change item order,
-  edit layer names, remove and restore items of the list. After changing the
+  edit layer names,group layers, remove and restore items of the list. After changing the
   symbology in the QGIS main window you can click on **[Update]** to adapt the
   changes in the legend element of the print composer. The item order can be
   changed using the **[Up]** and **[Down]** buttons or with 'drag and drop'
@@ -528,12 +514,13 @@ tab provides following functionalities (see figure_composer_12_):
   unselect to display the element frame with the |checkbox| :guilabel:`Show frame`
   checkbox. Use the :guilabel:`Item ID` to create a relationship to other print
   composer items.
+* The :guilabel:`Rendering option` introduces the new overlay mode. You can choose how the label frame will be blend to the underlying elements.
+
+Adding a Scalebar item to the Print Composer
+============================================
 
 .. index::
    single: Scalebar; Map_Scalebar
-
-Scalebar item properties tab - Scalebar and General options dialog
-------------------------------------------------------------------
 
 To add a scalebar, click the |mActionScaleBar| :sup:`Add new scalebar` icon, place
 the element with the left mouse button on the print composer canvas and position
@@ -588,113 +575,10 @@ tab provides following features (see figure_composer_7_ b):
   select or unselect to display the element frame with the |checkbox|
   :guilabel:`Show frame` checkbox. With the :guilabel:`Item ID` you can create
   a relationship to the other print composer items.
+* The :guilabel:`Rendering option` introduces the new overlay mode. You can choose how the label frame will be blend to the underlying elements.
 
-Atlas generation
-================
-
-The print composer includes generation functions that allow to create map books
-in an automated way. The concept is to use a coverage layer, which contains
-geometries and fields. For each geometry in the coverage layer, a new output
-will be generated where the content of some canvas maps will be moved to
-highlight the current geometry. Fields associated to this geometry can be used
-within text labels.
-
-There can only be one atlas map by print composer. To enable the generation
-of an atlas and access generation parameters, refer to the `Atlas generation`
-tab. This tab contains the following widgets (see Figure_composer_15_):
-
-.. _figure_composer_15:
-
-.. only:: html
-
-   **Figure Composer 15:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_atlas.png
-   :align: center
-   :width: 20em
-
-   Atlas generation tab |nix|
-
-* A combobox :guilabel:`Composer map to use` |selectstring| that allows to choose
-  which map item will be used as the atlas map, i.e. on which map geometries from
-  the coverage layer will be iterated over and displayed.
-* A combobox :guilabel:`Coverage layer` |selectstring| that allows to choose the
-  (vector) layer containing the geometries on which to iterate over.
-* An optional |checkbox| :guilabel:`Hidden coverage layer`, that if checked, will
-  hide the coverage layer (but not the other ones) during the generation.
-* An optional |checkbox| :guilabel:`Sort features` that, if checked, allows to
-  sort features of the coverage layer. The associated combobox allows to choose
-  which column will be used as the sorting key. Sort order (either ascending or
-  descending) is set by a two-state button that displays an up or a down arrow.
-* An optional :guilabel:`Feature filter` text area that allows to specify an
-  expression for filtering features from the coverage layer. If the expression
-  is not empty, only features that evaluate to ``True`` will be selected. The
-  button on the right allows to display the expression builder.
-* An input box :guilabel:`Margin around coverage` that allows to select the amount
-  of space added around each geometry within the allocated map. Its value is
-  meaningful only when using the autoscaling mode.
-* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
-  and fixed-scale mode. In fixed scale mode, the map will only be translated for
-  each geometry to be centered. In auto-scale mode, the map's extents are computed
-  in such a way that each geometry will appear in its whole.
-* An :guilabel:`Output filename expression` textbox that is used to generate a
-  filename for each geometry if needed. It is based on expressions. This field is
-  meaningful only for rendering to multiple files.
-* A |checkbox| :guilabel:`Single file export when possible` that allows to force
-  the generation of a single file if this is possible by the chosen output format
-  (PDF for instance). If this field is checked, the value of the
-  :guilabel:`Output filename expression` field is meaningless.
-
-Generation
-----------
-
-The atlas generation is done when the user asks for a print or an export. The
-behaviour of these functions will be slightly changed if an atlas map has been
-selected.
-
-For instance, when the user asks for an export to PDF, if an atlas map is defined,
-the user will be asked for a directory where to save all the generated PDF files
-(except if the |checkbox| :guilabel:`Single file export when possible` has been
-selected).
-
-Navigation tools
-================
-
-For map navigation the print composer provides 4 general tools:
-
-* |mActionZoomIn| :sup:`Zoom in`
-* |mActionZoomOut| :sup:`Zoom out`
-* |mActionZoomFullExtent| :sup:`Zoom to full extend`
-* |mActionDraw| :sup:`Refresh the view` (if you find the view in an inconsistent
-  state)
-
-.. index:: Revert_Layout_Actions
-
-Revert and Restore tools
-========================
-
-During the layout process it is possible to revert and restore changes. This can
-be done with the revert and restore tools:
-
-* |mActionUndo| :sup:`Revert last changes`
-* |mActionRedo| :sup:`Restore last changes`
-
-or by mouse click within the :guilabel:`Command history` tab (see figure_composer_9_).
-
-.. _figure_composer_16:
-
-.. only:: html
-
-   **Figure Composer 16:**
-
-.. figure:: /static/user_manual/print_composer/command_hist.png
-   :align: center
-   :width: 30 em
-
-   Command history in the Print Composer |nix|
-
-Add Basic shape and Arrow
-=========================
+Adding a Basic shape or Arrow item to the Print Composer
+========================================================
 
 It is possible to add basic shapes (Ellipse, Rectangle, Triangle) and arrows
 to the print composer canvas.
@@ -732,8 +616,10 @@ add a SVG start and end marker from a directory on your computer.
 
    Arrow Dialog |nix|
 
-Add attribute table values
-==========================
+.. index:: Attribute_Table
+
+Add attribute table values to the Print Composer
+================================================
 
 It is possible to add parts of a vector attribute table to the print composer
 canvas.
@@ -788,6 +674,15 @@ following functionalities (see figure_composer_21_):
   checkbox. Use the Item ID to create a relationship to the other print composer\
   items.
 
+.. index:: HTML_Frame
+
+Add a HTML frame to the Print Composer
+======================================
+
+It is possible to add a clickable frame, linked to an URL.
+
+.. index:: Elements_Alignment
+
 Raise, lower and align elements
 ===============================
 
@@ -801,6 +696,110 @@ There are several alignment functionalities available within the |mActionAlignLe
 alignment functionality , you first select some elements and then click on the
 matching alignment icon. All selected will then be aligned within to their common
 bounding box.
+
+.. index:: Revert_Layout_Actions
+
+Revert and Restore tools
+========================
+
+During the layout process it is possible to revert and restore changes. This can
+be done with the revert and restore tools:
+
+* |mActionUndo| :sup:`Revert last changes`
+* |mActionRedo| :sup:`Restore last changes`
+
+or by mouse click within the :guilabel:`Command history` tab (see figure_composer_9_).
+
+.. _figure_composer_16:
+
+.. only:: html
+
+   **Figure Composer 16:**
+
+.. figure:: /static/user_manual/print_composer/command_hist.png
+   :align: center
+   :width: 30 em
+
+   Command history in the Print Composer |nix|
+
+.. index:: Rendering_Mode
+
+Rendering mode
+==============
+
+|qg| now allow advanced rendering modes for composer items.
+
+.. index:: Atlas_Generation
+
+Atlas generation
+================
+
+The print composer includes generation functions that allow to create map books
+in an automated way. The concept is to use a coverage layer, which contains
+geometries and fields. For each geometry in the coverage layer, a new output
+will be generated where the content of some canvas maps will be moved to
+highlight the current geometry. Fields associated to this geometry can be used
+within text labels.
+
+There can only be one atlas map by print composer but this can contain multiple pages. 
+Every pages will be generated  with each feature. To enable the generation
+of an atlas and access generation parameters, refer to the `Atlas generation`
+tab. This tab contains the following widgets (see Figure_composer_15_):
+
+.. _figure_composer_15:
+
+.. only:: html
+
+   **Figure Composer 15:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_atlas.png
+   :align: center
+   :width: 20em
+
+   Atlas generation tab |nix|
+
+* A |checkbox| :guilabel:`Generate an atlas` enables or disables the atlas generation.
+* A combobox :guilabel:`Composer map` |selectstring| that allows to choose
+  which map item will be used as the atlas map, i.e. on which map geometries from
+  the coverage layer will be iterated over and displayed.
+* A combobox :guilabel:`Coverage layer` |selectstring| that allows to choose the
+  (vector) layer containing the geometries on which to iterate over.
+* An optional |checkbox| :guilabel:`Hidden coverage layer`, that if checked, will
+  hide the coverage layer (but not the other ones) during the generation.
+* An optional |checkbox| :guilabel:`Features sorting` that, if checked, allows to
+  sort features of the coverage layer. The associated combobox allows to choose
+  which column will be used as the sorting key. Sort order (either ascending or
+  descending) is set by a two-state button that displays an up or a down arrow.
+* An optional :guilabel:`Feature filtering` text area that allows to specify an
+  expression for filtering features from the coverage layer. If the expression
+  is not empty, only features that evaluate to ``True`` will be selected. The
+  button on the right allows to display the expression builder.
+* An input box :guilabel:`Scaling` that allows to select the amount
+  of space added around each geometry within the allocated map. Its value is
+  meaningful only when using the autoscaling mode.
+* A |checkbox| :guilabel:`Fixed scale` that allows to toggle between auto-scale
+  and fixed-scale mode. In fixed scale mode, the map will only be translated for
+  each geometry to be centered. In auto-scale mode, the map's extents are computed
+  in such a way that each geometry will appear in its whole.
+* An :guilabel:`Output filename expression` textbox that is used to generate a
+  filename for each geometry if needed. It is based on expressions. This field is
+  meaningful only for rendering to multiple files.
+* A |checkbox| :guilabel:`Single file export when possible` that allows to force
+  the generation of a single file if this is possible by the chosen output format
+  (PDF for instance). If this field is checked, the value of the
+  :guilabel:`Output filename expression` field is meaningless.
+
+Generation
+----------
+
+The atlas generation is done when the user asks for a print or an export. The
+behaviour of these functions will be slightly changed if an atlas map has been
+selected.
+
+For instance, when the user asks for an export to PDF, if an atlas map is defined,
+the user will be asked for a directory where to save all the generated PDF files
+(except if the |checkbox| :guilabel:`Single file export when possible` has been
+selected).
 
 .. index::
    single:Printing; Export_Map
@@ -842,6 +841,8 @@ to define the resolution (print quality) and paper size:
    Currently the SVG output is very basic. This is not a QGIS problem, but a
    problem of the underlaying Qt library. This will hopefully be sorted out in
    future versions.
+   Export big raster can sometimes fail, even if there seems to be enough memory. 
+   This is also a problem of the underlaying Qt management of raster. 
 
 .. index:: Composer_Manager
 
@@ -853,7 +854,7 @@ With the |mActionFileSaveAs| :sup:`Save as template` and |mActionFolder|
 session as a  :file:`.qpt` template and load the template again in another session.
 
 The  |mActionComposerManager| :sup:`Composer Manager` button in the QGIS toolbar
-and in :menuselection:`File --> Composer Manager` allows to add a new composer
+and in :menuselection:`Composer --> Composer Manager` allows to add a new composer
 template or to manage already existing templates.
 
 .. _figure_composer_23:
