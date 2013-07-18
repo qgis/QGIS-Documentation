@@ -93,22 +93,29 @@ SAGA
 
 SAGA algorithms can be run from SEXTANTE if you have SAGA installed in your system
 and you configure SEXTANTE properly so it can find SAGA executables. In particular,
-the SAGA command-line executable is needed to run SAGA algorithms. SAGA binaries
-are not included with SEXTANTE, so you have to download and install the software
-yourself. Please check the SAGA website at for more information. SAGA 2.0.8 is
-needed.
+the SAGA command-line executable is needed to run SAGA algorithms. 
 
-In case of running 
-Once SAGA is installed, and if you are running Windows, open the SEXTANTE
+
+In case of running Windows, the standalone installer or the OSGeo4W installer, both
+install SAGA along with QGIS, and the path is automatically configured, so there is
+no need to do anything else.
+
+If you have installed SAGA yourself (remember, you need version 2.1), the path to the
+SAGA executable must be configured. To do it, open the SEXTANTE
 configuration dialog. In the :guilabel:`SAGA` block you will find a setting named
 :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
 Close the configuration dialog and now you are ready to run SAGA algorithms from
 SEXTANTE.
 
-In case you are using Linux, there is no need to configure that, and you will not
+In case you are running linux, SAGA binaries
+are not included with SEXTANTE, so you have to download and install the software
+yourself. Please check the SAGA website for more information. SAGA 2.1 is
+needed.
+
+In this case there is no need to configure that, and you will not
 see those folders. Instead, you must make sure that SAGA is properly installed
 and its folder is added to the PATH environment variable. Just open a console and
-type ``saga_cmd`` to check that the system can found where SAGA binaries are
+type ``saga_cmd`` to check that the system can find where SAGA binaries are
 located.
 
 About SAGA grid system limitations
@@ -338,7 +345,16 @@ own ones.
    additional libraries that you might need have to be explicitly loaded. Just
    add the necessary commands at the beginning of your script. You also have to
    make sure that the corresponding packages are installed in the R distribution
-   used by SEXTANTE.
+   used by SEXTANTE. SEXTANTE will not take care of any package installation. If you 
+   run a script that requires an uninstalled package, the execution will fail, and
+   SEXTANTE will try to detect which packages are missing, showing you a dialog like
+   the one shown next
+
+   .. figure:: /static/user_manual/sextante/missing_r_packages.png
+      :align: center
+      :width: 15em
+
+  You must install those libraries manually before you can run the algorithm.
 
 GRASS
 -----
@@ -352,8 +368,8 @@ as well.
 By default, SEXTANTE tries to configure its GRASS connector to use the GRASS
 distribution that ships along with QGIS. This should work without problems in
 most systems, but if you experience problems, you might have to do it manually.
-Also, if you want to use a different GRASS version, you can change that setting
-and point to the folder where that other version is kept. GRASS 6.4 is needed
+Also, if you want to use a different GRASS installation, you can change that setting
+and point to the folder where that it is installed. GRASS 6.4 is needed
 for algorithms to work correctly.
 
 If you are running Linux, you just have to make sure that GRASS is correctly
@@ -365,10 +381,6 @@ automatically, taking the minimum extent that covers all the input layers used
 to execute the algorithm each time. If this is the behaviour you prefer, just
 check the :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
-
-GRASS includes help files describing each algorithm. If you set the
-:guilabel:`GRASS help folder` parameter, SEXTANTE will open them when you use the
-**[Show help]** button from the parameters window of the algorithm.
 
 The last parameter that has to be configured is related to the mapset. A mapset
 is needed to run GRASS, and SEXTANTE creates a temporary one for each execution.
@@ -385,24 +397,29 @@ Orfeo ToolBox
 -------------
 
 Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB installed
-in your system and configured SEXTANTE properly so it can find all necessary files
-(command-line tools and libraries). Please note that OTB binaries are not included
-in SEXTANTE, so you have to download and install the software yourself. Please
-check the OTB website for more information.
+in your system and you have configured SEXTANTE properly, so it can find all necessary files
+(command-line tools and libraries). 
+
+
+As in the case of SAGA OTB binaries are included in the standalone installer fro Windows,
+but are not included if you are runing Linux, so you have to download and install the software 
+yourself. Please check the OTB website for more information.
 
 Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog and
-configure OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
+configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
 block you will find all settings related to OTB. First ensure that algorithms are
 enabled.
 
-Then configure path to the folder where OTB command-line tools and libraries
+Then configure the path to the folder where OTB command--line tools and libraries
 are installed:
 
 * |nix| usually :guilabel:`OTB applications folder` point to ``/usr/lib/otb/applications``
   and :guilabel:`OTB command line tools folder` is ``/usr/bin``
 * |win| if you use OSGeo4W installer, than install ``otb-bin`` package and enter
   ``C:\OSGeo4W\apps\orfeotoolbox\applications`` as :guilabel:`OTB applications folder`
-  and ``C:\OSGeo4W\bin`` as :guilabel:`OTB command line tools folder`
+  and ``C:\OSGeo4W\bin`` as :guilabel:`OTB command line tools folder`. This values should be
+  configured by default, but if you have a different OTB installation, configure them
+  to the correspondig values in your system.
 
 TauDEM
 ------

@@ -115,7 +115,22 @@ table can be of one of the following types.
   selected, since they need to be open so as to retrieve the list of field names
   available.
 
-  You will see a button by each vector layer selector. If the algorithm contains
+  You will see a button by each vector layer selector, as shown in the figure below. 
+
+.. _figure_vector_iterator:
+
+.. only:: html
+
+   **Figure SEXTANTE 7:**
+
+.. figure:: /static/user_manual/sextante/vector_iterator.png
+   :align: center
+   :width: 25em
+
+   Vector iterator button |win|
+
+
+  If the algorithm contains
   several of them, you will be able to toggle just one of them. If the button
   corresponding to a vector input is toggled, the algorithm will be executed
   iteratively on each one of its features. We will see more about this kind of
@@ -239,7 +254,7 @@ table can be of one of the following types.
   Depending on the algorithm, the number of rows can be modified or not, using
   the buttons on the right side of the window.
 
-You will find a **[Help]** button in the lower part of the parameters dialog. If
+You will find a **[Help]** tab in the the parameters dialog. If
 a help file is available, it will be shown, giving you more information about the
 algorithms and detailed descriptions of what each parameter does. Unfortunately,
 most algorithms lack good documentation, but if you feel like contributing to the
