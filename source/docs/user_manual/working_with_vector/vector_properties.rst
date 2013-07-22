@@ -141,13 +141,13 @@ More detailed settings can be made when clicking on the second level in the
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
-* :guilabel:`Symbol layer type` You have the possibility to use Ellipse markers, Font markers, 
+* :guilabel:`Symbol layer type`: You have the possibility to use Ellipse markers, Font markers, 
   Simple markers, SVG markers and Vector Field markers
 * :guilabel:`Size`
 * :guilabel:`Angle`
 * :guilabel:`Colors`
 * :guilabel:`Border width`
-* :guilabel:`Offset X,Y` You can shift the symbol in x- or y-direction
+* :guilabel:`Offset X,Y`: You can shift the symbol in x- or y-direction
 
 Note that once you have set the size in the lower levels the size of the whole symbol
 can be changed with the :guilabel:`Size` menu in the first level again. The size of
@@ -428,31 +428,45 @@ selected label is shown.
 .. _vector_new_labeling:
 
 New Labeling
-------------
+............
 
 The new |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers and only requires a
 few parameters. This new application will replace the current QGIS labeling,
 described in section :ref:`vector_labels_tab` and also supports on-the-fly
-transformated layers.
+transformated layers. The core functions of the application have been redesigned. In QGIS 2.0.0. 
+there are now a number of other features which improve the labeling. The following menus
+have been created for labeling the vector layers:
 
-**Using new labeling**
+* Text
+* Formatting
+* Buffer
+* Background
+* Shadow
+* Placement
+* Rendering
+
+Let us see how the new menus can be used for various vector layers.
 
 #. Start QGIS and load a vector point, line or polygon layer.
 #. Activate the layer in the legend and click on the |mActionLabeling|
    :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
 
+
 **Labeling point layers**
 
-First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
+First step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
-want to define labels based on expressions. After that you can define the text
-style in the :guilabel:`Text` menu tab (see Figure_labels_1_ ). Choose the :guilabel:`Placement` 
-menu for the label placement and the labeling priority. In the :guilabel:`Rendering` menu you can define
-if every part of a multipart feature is to be labeled here. With the wrap label on character function you can define
-a character for a line break in the labels. The :guilabel:`Data defined settings`
-tab provides you with the attribute-based definition of Font properties, Buffer
-properties and Position.
+want to define labels based on expressions.
+The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions
+that are situated next to the drop-down menus.
+You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ).
+In the :guilabel:`Formatting` menu you can define a character for a line break in the labels with the wrap label on character function.
+:guilabel:`Buffer`
+:guilabel:`Background`
+:guilabel:`Shadow`
+Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. 
+In the :guilabel:`Rendering` menu you can define if every part of a multipart feature is to be labeled here. 
 
 
 .. features act as obstacles for labels or not .
