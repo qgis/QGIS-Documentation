@@ -1,22 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-#
+# 
 # Translators:
-# Takayuki Nuimura <nuimura@nagoya-u.jp>, 2013.
+# nuimura <nuimura@nagoya-u.jp>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-06 12:25\n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
 "PO-Revision-Date: 2013-03-24 05:12+0000\n"
 "Last-Translator: nuimura <nuimura@nagoya-u.jp>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-"
-"documentation/language/ja/)\n"
-"Language: ja\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 7bc9bce723f34b31823e898808993325
@@ -27,9 +26,7 @@ msgstr "ラスターレイヤを使う"
 # dd0d49499c244fd69e4f1fa78b9f197e
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:13
 msgid "This sections lists various operations you can do with raster layers."
-msgstr ""
-"このセクションではラスタレイヤに対して行える様々な操作について紹介していきま"
-"す."
+msgstr "このセクションではラスタレイヤに対して行える様々な操作について紹介していきます."
 
 # e0ab0a327d58451e83020dae150dcb89
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:18
@@ -41,18 +38,12 @@ msgstr "レイヤについて"
 msgid ""
 "A raster layer consists of one or more raster bands - it is referred to as "
 "either single band or multi band raster. One band represents a matrix of "
-"values. Usual color image (e.g. aerial photo) is a raster consisting of red, "
-"blue and green band. Single band layers typically represent either "
-"continuous variables (e.g. elevation) or discrete variables (e.g. land use). "
-"In some cases, a raster layer comes with a palette and raster values refer "
+"values. Usual color image (e.g. aerial photo) is a raster consisting of red,"
+" blue and green band. Single band layers typically represent either "
+"continuous variables (e.g. elevation) or discrete variables (e.g. land use)."
+" In some cases, a raster layer comes with a palette and raster values refer "
 "to colors stored in the palette."
-msgstr ""
-"ラスタレイヤは一つ以上のラスタバンドで構成され, シングルバンドラスタやマルチ"
-"バンドラスタと呼ばれます. 一つのバンドは値が行列上に並んだものです. 空中写真"
-"などの普通のカラー画像は, 赤・青・緑のバンドから構成されるラスタです. シング"
-"ルバンドは基本的に標高などの連続値や土地利用などの整数値からなります. ラスタ"
-"レイヤの中にはパレットデータを伴うものがあり, ラスタレイヤの値がパレットの色"
-"を指定ている場合があります."
+msgstr "ラスタレイヤは一つ以上のラスタバンドで構成され, シングルバンドラスタやマルチバンドラスタと呼ばれます. 一つのバンドは値が行列上に並んだものです. 空中写真などの普通のカラー画像は, 赤・青・緑のバンドから構成されるラスタです. シングルバンドは基本的に標高などの連続値や土地利用などの整数値からなります. ラスタレイヤの中にはパレットデータを伴うものがあり, ラスタレイヤの値がパレットの色を指定ている場合があります."
 
 # 540971acfed24084ab7a853caa578c84
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:44
@@ -65,10 +56,7 @@ msgid ""
 "When a raster layer is loaded, it gets a default drawing style based on its "
 "type. It can be altered either in raster layer properties or "
 "programmatically. The following drawing styles exist:"
-msgstr ""
-"ラスタレイヤが読み込まれるときの表示の仕方は, その種類によって異なってきま"
-"す. 表示方法はラスタレイヤプロパティやプログラムなどにより変更が可能です. 描"
-"画スタイルには以下のものがあります:"
+msgstr "ラスタレイヤが読み込まれるときの表示の仕方は, その種類によって異なってきます. 表示方法はラスタレイヤプロパティやプログラムなどにより変更が可能です. 描画スタイルには以下のものがあります:"
 
 # 6e267fc7444a48c0a3f7d5f4a7f7f16f
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:51
@@ -173,8 +161,8 @@ msgstr "マルチバンドグレースケール"
 # a517435de8b34b6b90c4695fe8513e61
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:58
 msgid ""
-"Layer containing 2 or more bands, but a single band drawn as a range of gray "
-"colors"
+"Layer containing 2 or more bands, but a single band drawn as a range of gray"
+" colors"
 msgstr "2バンド以上のレイヤをグレーカラーで表示"
 
 # bc139478ddab4128917aa65fcce8c031
@@ -223,12 +211,7 @@ msgid ""
 "can be additionally drawn using their palette. Multiband layers are "
 "typically drawn by mapping the bands to RGB colors. Other possibility is to "
 "use just one band for gray or pseudocolor drawing."
-msgstr ""
-"単バンドラスタレイヤはグレースケール(低い値=黒, 高い値=白)でも, 単バンドの値"
-"に色を割り当てたシュードカラーでも表示できます. また, 単バンドラスタはカラー"
-"マップでも表示できます. マルチバンドラスタは基本的にRGBカラーが割り当てて表示"
-"されますが, いずれかのバンドをグレースケールやシュードカラーで表示することも"
-"できます."
+msgstr "単バンドラスタレイヤはグレースケール(低い値=黒, 高い値=白)でも, 単バンドの値に色を割り当てたシュードカラーでも表示できます. また, 単バンドラスタはカラーマップでも表示できます. マルチバンドラスタは基本的にRGBカラーが割り当てて表示されますが, いずれかのバンドをグレースケールやシュードカラーで表示することもできます."
 
 # e7940b021c9a448d95b81d3cb569c175
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:75
@@ -236,19 +219,14 @@ msgid ""
 "The following sections explain how to query and modify the layer drawing "
 "style. After doing the changes, you might want to force update of map "
 "canvas, see :ref:`refresh-layer`."
-msgstr ""
-"続いてのセクションではどのようにレイヤの表示方法を探したり変更するのかを説明"
-"していきます. 設定変更後にマップキャンバスの表示も更新をしたい場合は, :ref:`"
-"レイヤの更新`を参考にしてください."
+msgstr "続いてのセクションではどのようにレイヤの表示方法を探したり変更するのかを説明していきます. 設定変更後にマップキャンバスの表示も更新をしたい場合は, :ref:`レイヤの更新`を参考にしてください."
 
 # 455786dc285c425e8365beaa86e3155a
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:79
 msgid ""
-"**TODO:** contrast enhancements, transparency (no data), user defined min/"
-"max, band statistics"
-msgstr ""
-"**TODO:** 特定の値の強調, 透過 (No Data), ユーザー定義の最大値・最小値, バン"
-"ド統計"
+"**TODO:** contrast enhancements, transparency (no data), user defined "
+"min/max, band statistics"
+msgstr "**TODO:** 特定の値の強調, 透過 (No Data), ユーザー定義の最大値・最小値, バンド統計"
 
 # f38382d1ae494211b495f6106b2a7c4f
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:84
@@ -260,9 +238,7 @@ msgstr "単バンドラスタ"
 msgid ""
 "They are rendered in gray colors by default. To change the drawing style to "
 "pseudocolor:"
-msgstr ""
-"デフォルトではグレースケールで表示されます. 表示方法をシュードカラーに帰る場"
-"合:"
+msgstr "デフォルトではグレースケールで表示されます. 表示方法をシュードカラーに帰る場合:"
 
 # bf0cf915cda640019f9db68ef5745e60
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:92
@@ -271,44 +247,35 @@ msgid ""
 "blue and high values in red. Another, ``FreakOutShader`` uses more fancy "
 "colors and according to the documentation, it will frighten your granny and "
 "make your dogs howl."
-msgstr ""
-"``シュードカラー`` は低い値を青, 高い値を赤に割り当てる基本的な表示方法の一つ"
-"です. ``フリークアウト`` はマニュアルにもあるように, より派手でけばけばしい色"
-"合いです."
+msgstr "``シュードカラー`` は低い値を青, 高い値を赤に割り当てる基本的な表示方法の一つです. ``フリークアウト`` はマニュアルにもあるように, より派手でけばけばしい色合いです."
 
 # a2f9f708ad2f43bcb5964ef563f064e1
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:97
 msgid ""
 "There is also ``ColorRampShader`` which maps the colors as specified by its "
 "color map. It has three modes of interpolation of values:"
-msgstr ""
-"``カラーマップ`` ではカラーマップにより色をわりあてることができます. 値の補間"
-"方法には以下の3種類があります:"
+msgstr "``カラーマップ`` ではカラーマップにより色をわりあてることができます. 値の補間方法には以下の3種類があります:"
 
 # d1e0919e8e3b46bb823c23c8c78e1742
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:100
 msgid ""
-"linear (``INTERPOLATED``): resulting color is linearly interpolated from the "
-"color map entries above and below the actual pixel value"
-msgstr ""
-"線形 (``補間``): カラーマップで色を指定した値とその間を線形補間により色を割り"
-"てます."
+"linear (``INTERPOLATED``): resulting color is linearly interpolated from the"
+" color map entries above and below the actual pixel value"
+msgstr "線形 (``補間``): カラーマップで色を指定した値とその間を線形補間により色を割りてます."
 
 # 981a8e82f9f14b7486ffe4661b40dd2f
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:102
 msgid ""
 "discrete (``DISCRETE``): color is used from the color map entry with equal "
 "or higher value"
-msgstr ""
-"(``離散的``): カラーマップで指定された値及びそれ以上の値を同じ色に設定します."
+msgstr "(``離散的``): カラーマップで指定された値及びそれ以上の値を同じ色に設定します."
 
 # b7aee8a0de514afcb8ed6172272df907
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:104
 msgid ""
 "exact (``EXACT``): color is not interpolated, only the pixels with value "
 "equal to color map entries are drawn"
-msgstr ""
-"(``厳密``): 色の補間を行わず, カラーマップで指定された値のみを表示します."
+msgstr "(``厳密``): 色の補間を行わず, カラーマップで指定された値のみを表示します."
 
 # bd435937bcbe43fc916615bed097cca5
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:107
@@ -330,14 +297,11 @@ msgstr "マルチバンドラスタ"
 # 2d5be468f52f4b8380b76fe637519042
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:125
 msgid ""
-"By default, QGIS maps the first three bands to red, green and blue values to "
-"create a color image (this is the ``MultiBandColor`` drawing style. In some "
-"cases you might want to override these setting. The following code "
+"By default, QGIS maps the first three bands to red, green and blue values to"
+" create a color image (this is the ``MultiBandColor`` drawing style. In some"
+" cases you might want to override these setting. The following code "
 "interchanges red band (1) and green band (2):"
-msgstr ""
-"QGISではデフォルトで最初の3バンドを赤・緑・青に割り当てます (これは ``マルチ"
-"バンドカラー`` と呼ばれる表示方法です. この設定を変更したい場合があるかもしれ"
-"ません. 以下のコードは赤バンド (1) と緑バンド (2) をい入れ替える例です:"
+msgstr "QGISではデフォルトで最初の3バンドを赤・緑・青に割り当てます (これは ``マルチバンドカラー`` と呼ばれる表示方法です. この設定を変更したい場合があるかもしれません. 以下のコードは赤バンド (1) と緑バンド (2) をい入れ替える例です:"
 
 # 01bb89f721584cc6903931b05aea423c
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:133
@@ -345,9 +309,7 @@ msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen --- either gray levels or pseudocolor, see "
 "previous section::"
-msgstr ""
-"グレースケールやシュードカラーを使って一つのバンドだけを表示することも可能で"
-"す. 前のセクション参照::"
+msgstr "グレースケールやシュードカラーを使って一つのバンドだけを表示することも可能です. 前のセクション参照::"
 
 # 89d5ca95438d491a89cbae8f9042e1e4
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:148
@@ -359,42 +321,33 @@ msgstr "レイヤの更新"
 msgid ""
 "If you do change layer symbology and would like ensure that the changes are "
 "immediately visible to the user, call these methods::"
-msgstr ""
-"レイヤの表示方法の変更をしてすぐ反映させたい場合は以下の方法を実行してくださ"
-"い::"
+msgstr "レイヤの表示方法の変更をしてすぐ反映させたい場合は以下の方法を実行してください::"
 
 # 001ec543a67141a4b937b3d48a765235
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:156
 msgid ""
-"The first call will ensure that the cached image of rendered layer is erased "
-"in case render caching is turned on. This functionality is available from "
-"QGIS 1.4, in previous versions this function does not exist --- to make sure "
-"that the code works with all versions of QGIS, we first check whether the "
+"The first call will ensure that the cached image of rendered layer is erased"
+" in case render caching is turned on. This functionality is available from "
+"QGIS 1.4, in previous versions this function does not exist --- to make sure"
+" that the code works with all versions of QGIS, we first check whether the "
 "method exists."
-msgstr ""
-"一つ目の方法は, キャッシュ表示をオンにした際に表示レイヤのキャッシュ画像を削"
-"除するやり方です. この機能はQGIS 1.4以降で使用可能になりました. "
+msgstr "一つ目の方法は, キャッシュ表示をオンにした際に表示レイヤのキャッシュ画像を削除するやり方です. この機能はQGIS 1.4以降で使用可能になりました. "
 
 # 04b33c95fdaa4a8b9d70b71113ad54b1
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:162
 msgid ""
 "The second call emits signal that will force any map canvas containing the "
 "layer to issue a refresh."
-msgstr ""
-"二つ目の方法は更新したいマップキャンバス上のレイヤを指定して除去するやり方で"
-"す."
+msgstr "二つ目の方法は更新したいマップキャンバス上のレイヤを指定して除去するやり方です."
 
 # 42fd9cddb2ff404fb801cec9eac1ba09
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:165
 msgid ""
 "In case you have changed layer symbology (see sections about raster and "
-"vector layers on how to do that), you might want to force QGIS to update the "
-"layer symbology in the layer list (legend) widget. This can be done as "
+"vector layers on how to do that), you might want to force QGIS to update the"
+" layer symbology in the layer list (legend) widget. This can be done as "
 "follows (``iface`` is an instance of QgisInterface)::"
-msgstr ""
-"レイヤの表示方法を変えた際 (ラスター及びベクターレイヤの変更方法のセクション"
-"参照), レイヤーリスト (凡例) の表示も更新したい場合は (QGISのインターフェース"
-"である``iface``) にて以下のようにすることで可能です::"
+msgstr "レイヤの表示方法を変えた際 (ラスター及びベクターレイヤの変更方法のセクション参照), レイヤーリスト (凡例) の表示も更新したい場合は (QGISのインターフェースである``iface``) にて以下のようにすることで可能です::"
 
 # 4e28bd53772440e99c73b4a339682894
 #: ../../source/docs/pyqgis_developer_cookbook/02_raster.rst:176
@@ -414,8 +367,4 @@ msgid ""
 "and a dictionary --- keys are band names, values are the values at chosen "
 "point. Both key and value are QString instances so to see actual value "
 "you'll need to convert them to python strings (as shown in code snippet)."
-msgstr ""
-"地物表示機能を使うと, クリックした場所のバンドの名前としてのキーと値を, True/"
-"False (成功か失敗) の返り値として表示します.  キーも値もQstringインスタンスと"
-"して返されるため、実際の値を得るにはpython 文字列に変換する (コードスニペット"
-"に示されるように) 必要があります."
+msgstr "地物表示機能を使うと, クリックした場所のバンドの名前としてのキーと値を, True/False (成功か失敗) の返り値として表示します.  キーも値もQstringインスタンスとして返されるため、実際の値を得るにはpython 文字列に変換する (コードスニペットに示されるように) 必要があります."

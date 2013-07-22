@@ -1,22 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
-#
+# 
 # Translators:
-#  <mukuo@mri.co.jp>, 2013.
+# yoichi <yoichi.kayama@gmail.com>, 2013
+# HiroM <mukuo@mri.co.jp>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-06 12:25\n"
-"PO-Revision-Date: 2013-03-28 09:28+0000\n"
-"Last-Translator: HiroM <mukuo@mri.co.jp>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-"
-"documentation/language/ja/)\n"
-"Language: ja\n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: 2013-06-16 18:27+0000\n"
+"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 13597b54dfe44c38aa7a6c5b10a82429
@@ -30,22 +30,17 @@ msgid ""
 "This document is intended to work both as a tutorial and a reference guide. "
 "While it does not list all possible use cases, it should give a good "
 "overview of the principal functionality."
-msgstr ""
+msgstr "この文書はチュートリアルとしてもリファレンスガイドとしても利用できます.全ての利用可能なユースケースをリストすることはできないので主要機能の概要が記述されています."
 
 # 896427716d3e46c2b12ae87929a209ec
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:15
 msgid ""
 "Starting from 0.9 release, QGIS has optional scripting support using Python "
 "language. We've decided for Python as it's one of the most favourite "
-"languages for scripting. PyQGIS bindings depend on SIP and PyQt4. The reason "
-"for using SIP instead of more widely used SWIG is that the whole QGIS code "
+"languages for scripting. PyQGIS bindings depend on SIP and PyQt4. The reason"
+" for using SIP instead of more widely used SWIG is that the whole QGIS code "
 "depends on Qt libraries. Python bindings for Qt (PyQt) are done also using "
 "SIP and this allows seamless integration of PyQGIS with PyQt."
-msgstr ""
-
-# 36a312aa2bd543e8bfb0f3c7966ce8a1
-#: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:25
-msgid "**TODO:**"
 msgstr ""
 
 # 4edb824deefd443b9ce489bdf4a1eede
@@ -86,11 +81,11 @@ msgstr ""
 # 5669c1ef72384d18ac18f42e1dbca5d0
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:40
 msgid ""
-"There are some resources about programming with PyQGIS on `QGIS blog <http://"
-"blog.qgis.org/>`_. See `QGIS tutorial ported to Python <http://blog.qgis."
-"org/?q=node/59>`_ for some examples of simple 3rd party apps. A good "
-"resource when dealing with plugins is to download some plugins from `plugin "
-"repository <http://plugins.qgis.org/>`_ and examine their code."
+"There are some resources about programming with PyQGIS on `QGIS blog "
+"<http://blog.qgis.org/>`_. See `QGIS tutorial ported to Python "
+"<http://blog.qgis.org/?q=node/59>`_ for some examples of simple 3rd party "
+"apps. A good resource when dealing with plugins is to download some plugins "
+"from `plugin repository <http://plugins.qgis.org/>`_ and examine their code."
 msgstr ""
 
 # e6b2cdc1019244d186ae453386393380
@@ -111,10 +106,10 @@ msgstr ""
 msgid ""
 "The screenshot above illustrates how to get the layer currntly selected in "
 "the layer list, show its ID and optionally, if it is a vector layer, show "
-"the feature count. For interaction with QGIS environment, there is :data:"
-"`qgis.utils.iface` variable, which is instance of :class:`QgisInterface`. "
-"This interface allows access to the map canvas, menus, toolbars and other "
-"parts of the QGIS application."
+"the feature count. For interaction with QGIS environment, there is "
+":data:`qgis.utils.iface` variable, which is instance of "
+":class:`QgisInterface`. This interface allows access to the map canvas, "
+"menus, toolbars and other parts of the QGIS application."
 msgstr ""
 
 # 3f62e27d9cca457682ccadd234afc7a5
@@ -143,9 +138,9 @@ msgstr ""
 msgid ""
 "Quantum GIS allows enhancement of its functionality using plugins. This was "
 "originally possible only with C++ language. With the addition of Python "
-"support to QGIS, it is also possible to use plugins written in Python. Great "
-"advantages over C++ plugins is the simplicity of distribution (no compiling "
-"for each platform needed) and easier development."
+"support to QGIS, it is also possible to use plugins written in Python. Great"
+" advantages over C++ plugins is the simplicity of distribution (no compiling"
+" for each platform needed) and easier development."
 msgstr ""
 
 # e4c6f5f6a0f04f48bc78d47c2e42489b
@@ -198,8 +193,8 @@ msgstr ""
 # 39c5e871ab434e81aa5cba07a54d665e
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:122
 msgid ""
-"Note: do *not* use :file:`qgis.py` as a name for your test script --- Python "
-"will not be able to import the bindings as the script's name will shadow "
+"Note: do *not* use :file:`qgis.py` as a name for your test script --- Python"
+" will not be able to import the bindings as the script's name will shadow "
 "them."
 msgstr ""
 
@@ -209,8 +204,8 @@ msgid ""
 "First of all you have to import qgis module, set QGIS path where to search "
 "for resources --- database of projections, providers etc. When you set "
 "prefix path with second argument set as :const:`True`, QGIS will initialize "
-"all paths with standard dir under the prefix directory. Calling :func:"
-"`initQgis` function is important to let QGIS search for the available "
+"all paths with standard dir under the prefix directory. Calling "
+":func:`initQgis` function is important to let QGIS search for the available "
 "providers."
 msgstr ""
 
@@ -225,8 +220,8 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:144
 msgid ""
 "When you are done with using QGIS library, call :func:`exitQgis` to make "
-"sure that everything is cleaned up (e.g. clear map layer registry and delete "
-"layers)::"
+"sure that everything is cleaned up (e.g. clear map layer registry and delete"
+" layers)::"
 msgstr ""
 
 # 850fdc23599c4aa893f9fcb7af026e2f
@@ -245,8 +240,8 @@ msgstr ""
 # f6776c7abc0e49a58cdd2fa2025de899
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:163
 msgid ""
-"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the "
-"following commands, ``qgispath`` should be replaced with your actual QGIS "
+"This can be fixed by setting the ``PYTHONPATH`` environment variable. In the"
+" following commands, ``qgispath`` should be replaced with your actual QGIS "
 "installation path:"
 msgstr ""
 
@@ -273,8 +268,8 @@ msgstr ""
 # a21f164142e14f03bb7718775ae6dcf9
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:178
 msgid ""
-"Fix this by adding the directories where the QGIS libraries reside to search "
-"path of the dynamic linker:"
+"Fix this by adding the directories where the QGIS libraries reside to search"
+" path of the dynamic linker:"
 msgstr ""
 
 # e91fa38122e645d2a001cdc36596b690
@@ -290,9 +285,9 @@ msgstr ""
 # 90244474aae74687808a2b12c972f6bd
 #: ../../source/docs/pyqgis_developer_cookbook/00_intro.rst:184
 msgid ""
-"These commands can be put into a bootstrap script that will take care of the "
-"startup. When deploying custom applications using PyQGIS, there are usually "
-"two possibilities:"
+"These commands can be put into a bootstrap script that will take care of the"
+" startup. When deploying custom applications using PyQGIS, there are usually"
+" two possibilities:"
 msgstr ""
 
 # 7f7e3ee83fe14258877fc242f3a5f052
