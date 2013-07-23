@@ -462,6 +462,7 @@ The following steps describe a simple labeling without using the :guilabel:`Data
 that are situated next to the drop-down menus.
 You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ).
 In the :guilabel:`Formatting` menu you can define a character for a line break in the labels with the wrap label on character function.
+Use the |checkbox| :guilabel:`Formatted numbers` option to implement 
 :guilabel:`Buffer`
 :guilabel:`Background`
 :guilabel:`Shadow`
