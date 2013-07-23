@@ -5,7 +5,7 @@
 <!-- we copied the bootstrap/jquery.js to the _static directory to override the
     sphinx jquery. The native
     jquery.js from sphinx is a 1.4 version, while bootstrap uses 1.8 version
-    and two versions together clash (besides the bootstrap stuff, also the 
+    and two versions together clash (besides the bootstrap stuff, also the
     sphinx search stuff)  -->
 {#% set script_files = script_files + ['_static/bootstrap/js/jquery.js'] %#}
 {% set script_files = script_files + ['_static/bootstrap/js/bootstrap.js'] %}
@@ -42,6 +42,17 @@
               <li xxclass="active"><a href="{{ pathto('docs/index') }}">Documentation</a></li>
               <li><a href="{{ pathto('website/community/index') }}">Community</a></li>
               <li><a href="{{ pathto('website/development/index') }}">Development</a></li>
+              <li>
+                <div id="searchbox">
+                  <form class="navbar-form pull-right" id="search" action="{{ pathto(master_doc) }}/../search.html" method="get">
+                  <input type="text" name="q" placeholder="Search"/>
+                  <input type="submit" value="Go" class="btn btn-warning btn-small"/>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                  </form>
+                </div>
+              <script type="text/javascript">$('#searchbox').show(0);</script>
+              </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -75,8 +86,9 @@
       </div><!--/.row-fluid-->
     {%- endif %}
 
-    <!-- frontpage -->
+    {# frontpage #}
     {%- if pagename in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
+
       <div class="row-fluid" >
         <!-- fake span for because bootstrap has a special style for first span...-->
         <div class="span9" style="min-height:0px;"></div>
@@ -177,6 +189,8 @@
             currentrow.append( $(this).addClass('span4').addClass('well') );
         });
       </script>
+
+
     {%- endif %}
 
     <hr>
