@@ -30,8 +30,8 @@
 
 }
 
-/* 
-    locales (flags) list 
+/*
+    locales (flags) list
 */
 #locales li{
   float: left;
@@ -119,7 +119,7 @@ div.marketing div.section:before {
    height:60px;
    margin:0 0 -60px 0;  /*this is working for frontpage*/
 }
-/* span achors are a little more difficult, 
+/* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
 hopefully this is unique enough for the :ref: spans we use */
 div.section > span:before {
@@ -129,7 +129,7 @@ div.section > span:before {
    margin:0 0 0 0;
 }
 
-/** 
+/**
 from for  bootstrap fluid.html
 to be included BEFORE the responsiveness css
 **/
@@ -154,3 +154,277 @@ body {
   width:90%;
 }
 
+.navbar-inner-qgis {
+  background-image: linear-gradient(to bottom, #217AEC, #217AEE);
+}
+
+/* Imported from InaSAFE theme */
+
+/* color for disclaimer (used when files need to be revised)*/
+.disclaimer {
+  display:block;
+  margin-top:5px;
+  color:red;
+  border:2px solid red;
+  padding:5px 50px 5px 50px;
+
+}
+body {
+  padding-top: 110px;
+  padding-bottom: 40px;
+  font-size: 14px;
+}
+
+h3 {
+  font-size: 22px;
+  color: #1f1f1f;
+}
+
+#locales li{
+  float: left;
+  list-style-type: none;
+  padding: 0 1px 1px 1px;
+}
+#locales {
+  margin-left:2px;
+}
+.search input[type=text] {
+  width:90%;
+}
+
+.sidebar-nav {
+  padding: 9px 5px;
+}
+
+.navbar .nav {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.85);;
+  padding-right: 15px;
+  border-radius: 6px;
+}
+/* adding background gradient on top - solid for old/not standard browsers*/
+.navbar-inverse .navbar-inner {
+background: #217AEC; /* Old browsers */
+background-image: linear-gradient(to bottom, #217AEC, #217AEE);
+background: -moz-linear-gradient(top, #217AEC 0%, #217AEC 9%, #217AEE 47%, #217AEE 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#217AEC), color-stop(9%,#217AEC), color-stop(47%,#217AEE), color-stop(100%,#217AEE)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #217AEC 0%,#217AEC 9%,#217AEE 47%,#217AEE 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #217AEC 0%,#217AEC 9%,#217AEE 47%,#217AEE 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #217AEC 0%,#217AEC 9%,#217AEE 47%,#217AEE 100%); /* IE10+ */
+background: linear-gradient(to bottom, #217AEC 0%,#217AEC 9%,#217AEE 47%,#217AEE 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#217AEC', endColorstr='#217AEE',GradientType=0 ); /* IE6-9 */
+}
+
+/*
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*/
+
+/* color for disclaimer (used when files need to be revised)*/
+tt.descname {
+    color: #217AEE;
+}
+.centered {text-align: center}​
+
+/** Themeing of sphinx markup now **/
+
+.section h1 {
+    font-size: 28.5px !important;
+    border-bottom: 1px gray solid;
+}
+
+.guilabel {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background: #eee;
+    color: #08C;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.menuselection {
+    font-weight: bold;
+    border: 1px dashed #ddd;
+    background: #eee;
+    color: #217AEC;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.kbd {
+    font-weight: bold;
+    border: 1px solid #ddd;
+    background: #eee;
+    color: #E22;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+/* Suppress anchor markers */
+.headerlink {display: none;}
+
+.admonition-title {
+    font-size: larger;
+    display: block;
+    border-bottom: 1px #ddd solid;
+    margin-left: 44px !important;
+}
+/* theming of warning boxes class=".admonition .warning" */
+.warning{
+    background-image: url("img/warning.png");
+    background-position: 22px 10px;
+    background-repeat: no-repeat;
+}
+/* theming of warning boxes class=".admonition .note" */
+.note {
+    background-image: url("img/note.png");
+    background-position: 22px 10px;
+    background-repeat: no-repeat;
+}
+
+.admonition, .bordered-block {
+    background-color: #fbfbfb;
+    border-bottom: 1px solid #dfdfdf;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-top: 1px solid #f5f5f5;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px #CCCCCC;
+}
+
+.admonition p img, .bordered-block p img {
+    float: left;
+    margin: 0 15px 0 0;
+}
+
+.item > img {
+    margin: 0 auto;
+}
+
+.hero-unit {
+    background-color: #217AEE;
+    padding: 5px;
+    text-align: center;
+}
+
+.hero-unit h1 {
+    text-align: left;
+}
+
+.pre {
+    font-variant: full-width;
+}
+
+span.qgis {
+   color: #217AEE !important;
+}
+
+.alert {
+text-shadow: none;
+}
+
+.alert-block {
+color: #1f1f1f;
+}
+
+.alert-info {
+color: #1f1f1f;
+background-color: #fee8d1;
+border-color: #217AEE;
+}
+
+.alert-danger {
+color: #FFFFFF;
+background-color: #E22;
+border-color: #FF0000;
+}
+
+a:hover {
+color: #1f1f1f;
+text-decoration: underline;
+}
+a:hover, a:active {
+outline: 0;
+}
+a {
+color: #217AEE;
+text-decoration: none;
+}
+
+.guilabel {
+color: #217AEE;
+}
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus {
+color: #ffffff;
+background-color: #217AEE;
+}
+
+.navbar-inverse .brand:hover,
+.navbar-inverse .nav > li > a:hover {
+  color: #217AEE;
+}
+
+.navbar-inverse .nav > li > a:focus,
+.navbar-inverse .nav > li > a:hover {
+  color: #217AEE;
+  background-color: transparent;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+color: #2c59ee;
+text-shadow: none;
+}
+
+
+/** Adapted from http://www.hongkiat.com/blog/breadcrumb-menu-css3/ **/
+
+#breadcrumbs {height: 29px;}
+
+.breadcrumb li.first { padding-left: 8px; }
+.breadcrumb li a, .crumbs li a:link, .crumbs li a:visited {
+  color: #666;
+  display: block;
+  float: left;
+  font-size: 12px;
+  margin-left: -13px;
+  padding: 7px 17px 11px 25px;
+  position: relative;
+  text-decoration: none;
+}
+
+.breadcrumb li a {
+  background-image: url('img/bg-crumbs.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  position: relative;
+}
+
+.breadcrumb li .right a {
+    background-image: none;
+}
+
+.breadcrumb li a:hover {
+  color: #333;
+  background-position: 100% -48px;
+  cursor: pointer;
+}
+
+.breadcrumb li a:active {
+  color: #333;
+  background-position: 100% -96px;
+}
+
+.breadcrumb li.first a span {
+  height: 29px;
+  width: 3px;
+  border-left: 1px solid #d9d9d9;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
