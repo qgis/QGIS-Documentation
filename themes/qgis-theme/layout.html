@@ -21,50 +21,78 @@
 
 {% block content %}
 
-    <!-- menu: bootstrap stuff from fluid.html example -->
+
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">QGIS</a>
-          <div class="nav-collapse collapse">
-            <p class="navbar-text pull-right">
-              <!-- to be used later? -->
-              <!--Logged in as <a href="#" class="navbar-link">Username</a>-->
-            </p>
-            <ul class="nav">
-              <li><a href="{{ pathto(master_doc) }}">QGIS Home</a></li>
-              <!-- <li><a href="http://download.qgis.org/">Download</a></li> -->
-              <li xxclass="active"><a href="{{ pathto('docs/index') }}">Documentation</a></li>
-              <li><a href="{{ pathto('website/community/index') }}">Community</a></li>
-              <li><a href="{{ pathto('website/development/index') }}">Development</a></li>
-              <li>
-                <div id="searchbox">
-                  <form class="navbar-form pull-right" id="search" action="{{ pathto(master_doc) }}/../search.html" method="get">
-                  <input type="text" name="q" placeholder="Search"/>
-                  <input type="submit" value="Go" class="btn btn-warning btn-small"/>
-                  <input type="hidden" name="check_keywords" value="yes" />
-                  <input type="hidden" name="area" value="default" />
-                  </form>
-                </div>
-              <script type="text/javascript">$('#searchbox').show(0);</script>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
+        <div class="navbar-inner">
+            <div class="container">
+                {# this is used to provide a menu toggle button on small screens #}
+                <a class="btn btn-navbar" data-toggle="collapse"
+                   data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="#"> </a>{# This is the main menu list #}
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li><a href="{{ pathto(master_doc) }}">QGIS Home</a></li>
+                        <!-- <li><a href="http://download.qgis.org/">Download</a></li> -->
+                        <li xxclass="active"><a href="{{ pathto('docs/index') }}">Documentation</a></li>
+                        <li><a href="{{ pathto('website/community/index') }}">Community</a></li>
+                        <li><a href="{{ pathto('website/development/index') }}">Development</a></li>
+                        <li><a href="{{ pathto(master_doc) }}/../irchat.html">Chat live!</a>
+                        </li>
+                        <li><div id="searchbox">
+                                <form class="navbar-form pull-right" id="search" action="{{ pathto(master_doc) }}/../search.html" method="get">
+                                <input type="text" name="q" placeholder="Search"/>
+                                <input type="submit" value="Go" class="btn btn-warning btn-small"/>
+                                <input type="hidden" name="check_keywords" value="yes" />
+                                <input type="hidden" name="area" value="default" />
+                                </form>
+                            </div>
+                        <script type="text/javascript">$('#searchbox').show(0);</script>
+                        </li>
+                    </ul>
+                </div>{# end of nav-collapse #}
+            </div>
         </div>
-      </div>
-    </div>
+        {# Manually implementing breadcrumbs because sphinx strips markup away when doing it in macro #}
+        <div class="related">
+            <ul class="breadcrumb" id="breadcrumbs">
+                {# These are the prev | next | index links to the right #}
+                {% for rellink in rellinks %}
+                <li class="right"
+                {% if loop.first %}style="margin-right: 10px"{% endif %} >
+                <a href="{{ pathto(rellink[0]) }}"
+                   title="{{ rellink[1]|striptags }}"
+                   style="z-index:{{ loop.counter }};"
+                {{ accesskey(rellink[2]) }}>{{ rellink[3] }}</a>
+                </li>
+                {% endfor %}
 
-    <!-- page: bootstrap stuff from fluid.html example -->
-    <div class="container-fluid">
+                {# Static breadcrumb first entry now #}
+                <li class="first">
+                    <a style="z-index:100;" href="{{ pathto(master_doc) }}"> {{
+                        shorttitle|e }} </a>
+                </li>
+                {# auto breadcrumbs on the left comes now #}
+                {% for parent in parents %}
+                <li>
+                    <a href="{{ parent.link|e }}"
+                       style="z-index: 1;" {# broken 4 z : {{ loop.revcounter }} #}
+                    {% if loop.last %}{{ accesskey("U") }}{% endif %}>
+                    {{ parent.title }}</a>
+                </li>
+                {% endfor %}
+                <li><a href="#">{{ title }}</a></li>
+            </ul>{# Breadcrumbs end #}
+        </div>{# Related div end #}
+    </div> {# Navbar ends #}
 
+    <div class="container">
     <!-- normal pages == non frontpage -->
     {%- if pagename not in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
-      <div class="row-fluid" >
+      <div class="row" >
         <div class="span3" >
           <div class="well sidebar-nav">
             <!-- sidebar -->
@@ -79,26 +107,25 @@
         </div><!--/span3-->
         <div class="span9">
           <div>
-            {% block qgisrelbar %}{{ relbar() }}{% endblock qgisrelbar %}
             {% block body4all %}  {{ contentbody() }} {% endblock %}
           </div>
         </div><!--/span9-->
-      </div><!--/.row-fluid-->
+      </div><!--/.row-->
     {%- endif %}
 
     {# frontpage #}
     {%- if pagename in ('index', 'docs/index', 'website/community/index', 'website/development/index') %}
 
-      <div class="row-fluid" >
+      <div class="row" >
         <!-- fake span for because bootstrap has a special style for first span...-->
         <div class="span9" style="min-height:0px;"></div>
 
         <div class="well sidebar-nav">
             {% block i18nflags2 %} {{ i18nflags() }} {% endblock %}
         </div><!--/.well -->
-      </div><!-- .row-fluid-->
+      </div><!-- .row-->
 
-      <div class="row-fluid">
+      <div class="row">
         <div id="qgiscarousel" class="carousel slide">
             <div class="carousel-inner">
 
@@ -121,22 +148,18 @@
          </div><!-- /.carousel -->
       </div><!-- .row-fluid-->
 
-      <div class="row-fluid">
-        <div id="introcontainer" class="section span8">
-            {#% this will be filled via javascript by finding the section with class frontpageintro from intro.rst %#}
+      <div class="row">
+        <div id="introcontainer" class="section span12">
+            {# this will be filled via javascript by finding the section #}
+            {# with class frontpageintro from index.rst %#}
         </div> <!-- /.container -->
-        <div class="section span4">
-            {%- include "searchbox.html" %}
-        </div> <!-- /.container -->
-      </div><!-- /.row-fluid-->
+      </div><!-- /.row-->
 
-      <div class="row-fluid">
+      <div class="row">
         <div class="removecontainer marketing">
-        <!--<div class="row">-->
             {% block body4frontpage %}  {{ contentbody() }} {% endblock %}
-        <!-- </div>/.row -->
         </div> <!-- /.container .marketing -->
-      </div><!-- /.row-fluid-->
+      </div><!-- /.row-->
 
       <script>
         // jquery magic to pull the frontpageintro section into the introcontainer
@@ -176,17 +199,17 @@
             $('#qgiscarousel').hide()
         }
 
-        // jquery magic to put secions in marketing block
+        // jquery magic to put sections in marketing block
         $('.compound').remove();
         var currentrow;
         // take all sections in marketing
         $('.marketing .section').each(function(index){
             // for every 3 sections create a row
             if (index%3==0){
-                currentrow = $('<div class="row-fluid"></div>').appendTo($('.marketing'));
+                currentrow = $('<div class="row"></div>').appendTo($('.marketing'));
             }
             // and append this now span4 item to it (and well)
-            currentrow.append( $(this).addClass('span4').addClass('well') );
+            currentrow.append( $(this).addClass('span4') );
         });
       </script>
 
@@ -196,7 +219,24 @@
     <hr>
 
     </div><!--/.fluid-container-->
-
+    {# Now our standard footer #}
+    <div class="container">
+        <div class="alert alert-info centered">
+            Contact
+            <a href="mailto:info@qgis.org?subject=[qgis-info]">
+            <b>info@qgis.org</b></a> for more information.
+            Source code for QGIS is available on
+            <a href="https://github.com/qgis/Quantum-GIS"><b>GitHub</b></a>!
+            Please <a href="http://hub.qgis.org/projects/quantum-gis/issues/new"><b>
+            file a ticket</b></a> if you have discovered an issue.<br>
+            This document is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/deed.en_GB">Creative Commons Attribution 3.0 Australia License.</a><br>
+            <a href="http://creativecommons.org/licenses/by/3.0/au/deed.en_GB"><b>CCByA</b></a>,
+            Copyright 2013, QGIS.org. Source materials for the QGIS documentation
+            project is available on
+            <a href="https://github.com/qgis/QGIS-Documentation"><b>GitHub</b></a>!
+        </div>
+    </div>
 {% endblock content %}
 
 

@@ -3,7 +3,7 @@
 {%- macro i18nflags() %}
 
 {#% we comment the not used yet flags out with sphinx comments instead of html
-comments, to not let all this comments showup in ALL pages %#}
+comments, to not let all these comments showup in ALL pages %#}
 <div>
 <ul id="locales">
 <li id="flag_en" onclick="gotoLang('en');"><img src="{{pathto('_static/img/flags/en.png', 1)}}" title="en" alt="en"></li>
@@ -88,19 +88,10 @@ comments, to not let all this comments showup in ALL pages %#}
             }
             langPlusPage = langPlusPage[0];
             currentLang = langPlusPage.replace(currentPage, '');
-            // code below is not going to work because we need the compile time run path to the images
-            //var allLanguages = ['af','ar','bg','ca_ES','cs_CZ','da_DK','de','el_GR','en','es','et_EE','eu_ES','fa','fi','fr','gl_ES','he', 'hi', 'hr_HR','hu','id','is','it','ja','ka_GE','ko_KR','lo','lt','lv','mn','nl','no','pl_PL','pt_BR','pt_PT','ro','ru','sk','sl_SI','sq_AL','sr_Cyrl','sr_Latn','sv','sw','ta','th','tr','uk','vi','xh','zh_CN','zh_TW'];
-            //var html = '';
-            //for (var i = 0; i<allLanguages.length; i++){
-            //    var lang = allLanguages[i];
-            //    html+='<li id="flag_'+lang+'" onclick="gotoLang(\''+lang+'\');"><img src="_static/img/flags/'+lang+'.png" title="'+lang+'" alt="'+lang+'"/></li>\n'
-            //}
-            // put the html (a list li-elements into the locale lu):
-            //$('#locales').html(html);
 
             // put some style around the current locale flag, we have to remove the '/' here
             $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
-        })
+        });
 
         // load current page in a different language
         function gotoLang(lang){
@@ -121,4 +112,25 @@ comments, to not let all this comments showup in ALL pages %#}
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    .navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner
+    {
+      padding : 0px;
+    }
+
+    .navbar .brand
+    {
+      background        : url("{{ pathto('_static/img/logo.png', 1)}}") no-repeat;
+      height            : 42px;
+      padding-left      : 30px;
+      margin-right      : 15px;
+    }
+
+    .navbar-inverse .navbar-inner
+    {
+        background-color : none;
+    }
+    </style>
 {% endblock extrahead %}
