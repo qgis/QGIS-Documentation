@@ -13,26 +13,43 @@
 
 .. rst-class:: frontpageintro
 
-QGIS
-====
+Welcome to the QGIS project!
+============================
 
 .. |frontpage_logo_small| image:: /static/common/qgislogo.png
     :width: 3 em
 
-|frontpage_logo_small| Quantum GIS (QGIS) is a user friendly Open Source Geographic Information System (GIS)
-licensed under the GNU General Public License. QGIS is an official project of 
-the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, 
-Windows and Android and supports numerous vector, raster, and database formats and functionalities.
+QGIS is a mature (started by `Gary Sherman <http://geoapt.com/>`_
+in 2002!), user friendly Open Source Geographic Information System (GIS)
+licensed under the GNU General Public License. You can use the software
+provided by this project to create, visualize, analyze and share geospatial
+data. QGIS is Free and Open Source Software (FOSS) published under the
+`GPL V2 <http://www.gnu.org/licenses/gpl-2.0.html>`_ or greater license. As
+such it is completely Free to use (see the download link below to download your
+free copy) - you can share it with others and adapt and modify according to
+your needs.
 
-It is translated in a lot of languages (all in one package). 
+QGIS is the product of the hard work of many dedicated contributors who have
+written documentation, translated text, filed bugs, drawn icons,
+helped other users, built this web site and of course, written lots of
+C++ and Python code! These contributors have donated their time and energy
+in order to realise the vision of building a great, free GIS for everyone. We
+are also the beneficiaries of financial support and sponsored development from
+many contributors - companies big and small, local and national governments and
+international agencies who all realise that they can capitalise on the
+platform we provide and give something back to the project. They provide
+benefit by making it better for everyone while at the same time reducing the
+funds they would have otherwise allocated to purchasing expensive proprietary
+GIS software.
 
-Parts of this site are also translated. Try to click on the flags on top if available.
-
-This block of text is normally translated, and can also be used (by the translators
-of a locale, to say something locale specific, like pointing to sites 
-which are only available in a certain language (like http://www.qgis.nl).
-
-
+QGIS is an official project of the `Open Source Geospatial Foundation (OSGeo)
+<http://osgeo.org/>`_. It runs on Linux, Unix, Mac OSX, Windows and Android
+and supports many vector and raster data formats. QGIS is built on top of
+many other great FOSS projects including `Qt <http://qt-project.org/>`_,
+`GDAL <http://www.gdal.org/>`_, `PostGIS <http://postgis.net/>`_,
+`Proj4 <http://trac.osgeo.org/proj/>`_, `Spatialite
+<http://www.gaia-gis.it/gaia-sins/>`_
+and many others.
 
 .. carousel content !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -47,8 +64,8 @@ which are only available in a certain language (like http://www.qgis.nl).
 
 .. rst-class:: item
 
-Latest Version 1.8
-==================
+Latest Version
+==============
 
 .. then an image
 
@@ -56,12 +73,12 @@ Latest Version 1.8
 
 .. then some text
 
-Latest release of QGIS is 1.8
+The latest release of QGIS is 2.0
 
 .. then a link (for the button text)
 
-`Show me the release notes <http://www.qgis.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
-
+`View the release notes <http://www.qgis
+.org/en/about-qgis/qgis-releases/149-qgis-18-release.html>`_
 
 
 .. rst-class:: item
@@ -75,7 +92,7 @@ QGIS Case studies
 
 .. then some text
 
-Have you seen our real world cases?
+Have you seen our real world case studies?
 
 .. then a link (for the button text (here a :ref: link)
 
@@ -85,23 +102,24 @@ Have you seen our real world cases?
 
 
 
-.. all following sections will be in marketing div, below carousel !!!!!!!!!!!!!!!!!
+.. all following sections will be in marketing div, below carousel !!!!!!!!!!!!
 
 
 Screenshots
 ===========
 
-Proofing of the pudding is seeing screenshots: :ref:`see them here<QGIS-screenshots>`.
+A picture is worth a thousand words - take a look at some screenshots!
+:ref:`View screenshots <QGIS-screenshots>`
 
 .. image:: http://farm8.staticflickr.com/7358/8726673422_d8c83b634e_n.jpg
-    :alt: screenshot
+
 
 
 
 Download
 ========
 
-The latest version of QGIS is 1.8, you can :ref:`download it from here <QGIS-download>`.
+You can download the latest version of QGIS :ref:`here <QGIS-download>`.
 
 
 |qgissplash|
@@ -110,66 +128,65 @@ The latest version of QGIS is 1.8, you can :ref:`download it from here <QGIS-dow
 News
 ====
 
-People are writing QGIS related blogs everywhere. 
-
-We collect them here: `Planet blog <http://plugins.qgis.org/planet/>`_.
-
+People are writing QGIS related blogs everywhere. We aggregate the
+content from a number of QGIS bloggers here:
+`Planet blog <http://plugins.qgis.org/planet/>`_.
 
 
 User Manual
 ===========
 
-The user manual for the stable version you can find here `QGIS Manual stable version (1.8) <http://docs.qgis.org/1.8/html/en/>`_.
+The user manual for the stable version can be found here: `QGIS Manual stable
+version (1.8) <http://docs.qgis.org/1.8/html/en/>`_.
 
-Please go to :ref:`The QGIS User Manual <QGIS-manual-index-reference>` to see the manual for current development version.
+Please go to :ref:`The QGIS User Manual <QGIS-manual-index-reference>` to
+see the manual for current development version.
 
 
 
 Case Studies
 ============
 
-QGIS is used all over the world in real-world situations. 
-
-Please :ref:`find some cases here <QGIS-case-studies>` from our users
+QGIS is used all over the world in real-world situations. You can read case
+studies submitted by a number of our users here: :ref:`find some cases here
+<QGIS-case-studies>` from our users
 
 
 
 Sponsorship
 ===========
 
-You want to help QGIS as an individual? Please consider a donation:
+Do you want to help QGIS by helping to fund its development? Please consider a
+donation (large or small contributions are welcome!):
 
 .. image:: https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif
 
-You want to help QGIS as a business?  Consider :ref:`sponsoring QGIS development<QGIS-sponsoring>`.
+If you would like to become and official sponsor,
+please consider participating in our :ref:`sponsorship programme<QGIS-sponsoring>`.
 
 
+Support
+=======
 
-Commercial support
-==================
-
-Find out who in the world you can find :ref:`commercial support <QGIS-commercial_support>` for QGIS
-
+There are many companies around the world providing commercial support for
+QGIS - you can find a detailed list here: :ref:`commercial
+support providers <QGIS-commercial_support>`.
 
 
 Bugs
 ====
 
-Found a bug in the program or translation?
+Have you found a bug in the software, documentation or a translation?
 
-Please go to http://hub.qgis.org/projects/quantum-gis
-
+Please go to http://hub.qgis.org/projects/quantum-gis and tell us about it!
 
 
 Development
 ===========
 
-A developer? You want to build QGIS yourself?
+If you are a developer and wish to build QGIS from source,
+detailed instructions are provided here in `the installation guide
+<https://github.com/qgis/Quantum-GIS/blob/master/INSTALL>`_.
 
-See https://github.com/qgis/Quantum-GIS/blob/master/INSTALL
-
-Interested in python plugin development, go here http://plugins.qgis.org
-
-
-
-
+If you are interested in python plugin development you can visit our QGIS
+python `plugins page <http://plugins>`_.
