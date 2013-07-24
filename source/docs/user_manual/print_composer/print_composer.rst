@@ -336,7 +336,7 @@ following functionalities (see Figure_composer_6_):
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 
 Adding a Label item to the Print Composer
@@ -427,7 +427,7 @@ following functionalities (see Figure_composer_10_):
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 
 Adding an Image item to the Print Composer
@@ -506,7 +506,7 @@ following functionalities (see Figure_composer_13_):
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the image. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 .. index::
    single:Map_Legend
@@ -631,7 +631,7 @@ following functionalities (see Figure_composer_17_):
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the legend. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 .. index::
    single: Scalebar; Map_Scalebar
@@ -749,7 +749,7 @@ following functionalities (see Figure_composer_22_):
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the scalebar. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 Adding a Basic shape or Arrow item to the Print Composer
 ========================================================
@@ -807,7 +807,7 @@ Position and size, Frame, Background, Item ID and Rendering
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the arrow. For basic shapes, this checkbox doesn't do anything. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties. For basic shapes, they adjust color and thickness of the shape borders.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field. Unlike other items, background color for a basic shape is the shape background and not the frame one.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 .. index:: Attribute_Table
 
@@ -865,7 +865,7 @@ Position and size, Frame, Background, Item ID and Rendering
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the attribute image. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 .. index:: HTML_Frame
 
@@ -906,7 +906,7 @@ Position and size, Frame, Background, Item ID and Rendering
 * The |checkbox| :guilabel:`Frame` shows or hides the frame around the HTML page. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
 * the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section :ref:`Rendering_mode`.
+* :guilabel:`Rendering` mode can be selected in the option field. See Section Rendering_mode_.
 
 .. index:: Elements_Alignment
 
@@ -971,7 +971,7 @@ or by mouse click within the :guilabel:`Command history` tab (see figure_compose
 Rendering mode
 **************
 
-|qg| now allow advanced rendering modes for composer items.
+|qg| now allow advanced rendering for composer items just like vector and raster layers.
 
 .. _figure_composer_29:
 
@@ -985,6 +985,37 @@ Rendering mode
 
    Rendering mode |nix|
 
+* :guilabel:`Transparency` |slider|: you can make the underlying item in the composer
+  visible with this tool. Use the slider to adapt the visibility of your item to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+* :guilabel:`Blending mode`: you can achieve special rendering effects with these tools that you 
+  previously only know from graphics programs. The pixels of your overlaying and underlaying items are mixed
+  through the settings described below.
+
+	* Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the
+	  Pixel beneath it; the colors aren't mixed
+	* Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged
+	  and harsh.
+	* Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is
+ 	  most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
+	* Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels 
+          cause the saturation and brightness of the underlying pixels to increase. This works best if the top
+          pixels aren't too bright, otherwise the effect is too extreme.
+	* Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is
+          displayed. This mode is suitable for highlighting features.
+	* Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the 
+	  results tend to be jagged and harsh
+	* Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer.
+          The results are darker pictures.
+	* Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
+	* Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become
+          darker. 
+	* Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft
+          light onto an image.
+	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
+          black produces no change, as values for all colors are 0.
+	* Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
 
 .. index:: Atlas_Generation
 
@@ -1046,6 +1077,15 @@ tab. This tab contains the following widgets (see Figure_composer_30_):
   the generation of a single file if this is possible by the chosen output format
   (PDF for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
+
+In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation `[%expression using field_name%]`.
+For example, with a city layer with fields CITY_NAME and ZIPCODE, you could insert this : 
+
+"`[% 'The area of ' || upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) || ' km2' %]`"
+
+And that would result in the generated atlas as 
+
+"`The area of PARIS,75001 is 1.94 km2`".
 
 Generation
 ----------
