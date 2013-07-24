@@ -47,6 +47,9 @@ Layer rendering
 * :guilabel:`Layer transparency` |slider|: you can make the underlying layer in the map canvas
   visible with this tool. Use the slider to adapt the visibility of your vector layer to your needs.
   You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+
+.. _blend_modes:
+
 * :guilabel:`Layer blending mode`: you can achieve special rendering effects with these tools that you 
   previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
   through the settings described below.
@@ -460,12 +463,29 @@ and select an attribute column to use for labeling. Click |mActionmIconExpressio
 want to define labels based on expressions.
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions
 that are situated next to the drop-down menus.
-You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ).
+
+You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). A new function is the
+:guilabel:`Type case` option where you can influence the text rendering. You have the possibility to render
+the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Also, a new function in QGIS 2.0.0
+is the use of blend modes (see blend_modes_).
+
 In the :guilabel:`Formatting` menu you can define a character for a line break in the labels with the wrap label on character function.
-Use the |checkbox| :guilabel:`Formatted numbers` option to implement 
-:guilabel:`Buffer`
-:guilabel:`Background`
+Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here 
+decimal places are inserted. If you enable this option three decimal places ist set by default. 
+
+To create a buffer just activate |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
+The buffer color is variable.
+.. FIXME: more information necessary
+Use the |checkbox| :guilabel:`Color buffer fill` checkbox to ...
+
+In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your buffer. 
+Use :guilabel:`Size type` to insert an additional 'Buffer' into your background. The buffer size one is set by default here.
+The background then consists of the buffer plus the background in :guilabel:`Size X` and :guilabel:`Size Y`.
+You can set a :guilabel:`Rotation` where you can choose between 'Sync with label', 'Offset of label' and 'Fixed'.
+Using 'Offset of label' and 'Fixed' you can rotate the background.
+
 :guilabel:`Shadow`
+
 Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. 
 In the :guilabel:`Rendering` menu you can define if every part of a multipart feature is to be labeled here. 
 
