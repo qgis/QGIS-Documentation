@@ -143,12 +143,8 @@ table can be of one of the following types.
 
    Vector iterator button |win|
 
+ If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features instead of just once for the whole layer, producing as many outputs as times the algorithm is executed. This allows for automating the process when all features in a layer have to be processed separately.
 
-  If the algorithm contains
-  several of them, you will be able to toggle just one of them. If the button
-  corresponding to a vector input is toggled, the algorithm will be executed
-  iteratively on each one of its features. We will see more about this kind of
-  execution at the end of this section.
 * A table, to select from a list of all the ones available in QGIS. Non-spatial
   tables are loaded into QGIS like vector layers, and in fact they are treated as
   such by the program. Currently, the list of available tables that you will see
@@ -298,7 +294,7 @@ disable this functionality in the SEXTANTE config dialog, unchecking the
 :guilabel:`Show CRS` option.
 
 If you try to execute an algorithm using as input two or more layers with
-unmatching CRS's, SEXTANTE will show you the following window:
+unmatching CRS's, SEXTANTE will show a warning dialog.
 
 You still can execute the algorithm, but be aware that in most cases that will
 produce wrong results, such as empty layers due to input layers not overlapping.
@@ -347,6 +343,8 @@ dialog (you can open it from the :menuselection:`Analysis` menu), and in the
 :guilabel:`General` group you will find a parameter named :guilabel:`Output folder`.
 This output folder is used as the default path in case you type just a filename
 with no path (i.e. :file:`myfile.shp`) when executing an algorithm.
+
+When running an algorithm that uses vector layer in iterative mode, the entered file path is used as the base path for all generated files, which are named using the base name and appending a number representing the index of the iteration. The file extension (and format) is used for all those generated files.
 
 Apart from raster layers and tables, SEXTANTE also generates graphics and texts
 as HTML files. These results are shown at the end of the algorithm execution in
