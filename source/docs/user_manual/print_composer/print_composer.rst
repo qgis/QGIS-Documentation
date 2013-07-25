@@ -88,7 +88,8 @@ Before you start to work with the print composer, you need to load some raster
 and vector layers in the QGIS map canvas and adapt their properties to suit your
 own convenience. After everything is rendered and symbolized to your liking,
 click the |mActionNewComposer| :sup:`New Print Composer` icon in the toolbar or
-choose :menuselection:`File --> New Print Composer`.
+choose :menuselection:`File --> New Print Composer`. You will be prompt to
+choose a title for the new composer.
 
 Using Print Composer
 ====================
@@ -210,7 +211,7 @@ Rendering mode
 
 .. figure:: /static/user_manual/print_composer/rendering_mode.png
    :align: center
-   :width: 30 em
+   :width: 20 em
 
    Rendering mode |nix|
 
@@ -289,7 +290,7 @@ following functionalities (see figure_composer_2_):
    :align: center
    :width: 20em
 
-   Map Dialog |nix|
+   Map Item properties Tab |nix|
 
 * The **Preview** area allows to define the preview modes 'Rectangle', 'Cache'
   and 'Render', as described above. If you change the view on the QGIS map canvas by zooming or panning or changing
@@ -320,7 +321,7 @@ functionalities (see Figure figure_composer_3_):
    :align: center
    :width: 20em
 
-   Extents Dialog |nix|
+   Map Extents Dialog |nix|
 
 * The **Map extent** area allow to specify the map extent using Y and X min/max
   values or clicking the **[Set to map canvas extent]** button.
@@ -349,7 +350,7 @@ following functionalities (see Figure_composer_4_):
    :align: center
    :width: 20em
 
-   Grid Dialog |nix|
+   Map Grid Dialog |nix|
 
 * The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the
   map element. As grid type you can specify to use solid line or cross. Symbology of 
@@ -380,7 +381,7 @@ following functionalities (see Figure_composer_5_):
    :align: center
    :width: 20em
 
-   Overview Dialog |nix|
+   Map Overview Dialog |nix|
 
 If the composer has more than one map, you can choose to use a map to show the extents of a second map.
 The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows to customize the appearance of that feature.
@@ -428,7 +429,7 @@ following functionalities (see Figure_composer_8_):
    :align: center
    :width: 20em
 
-   Main properties Dialog |nix|
+   Label Main properties Dialog |nix|
 
 * The Main properties dialog is where is inserted the text (html or not) or the expression needed to fill the label added to the composer 
   canvas. 
@@ -456,7 +457,7 @@ following functionalities (see Figure_composer_9_):
    :align: center
    :width: 20em
 
-   Alignment and Display Dialogs |nix|
+   Label Alignment and Display Dialogs |nix|
 
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone
 * In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
@@ -485,7 +486,7 @@ The image :guilabel:`Item Properties` tab provides following functionalities (se
    :align: center
    :width: 20em
 
-   Picture Options tab |nix|
+   Image Item properties Tab |nix|
 
 Main properties, Search directories and Rotation
 ------------------------------------------------
@@ -499,11 +500,11 @@ following functionalities (see Figure_composer_12_):
 
    **Figure Composer 12:**
 
-.. figure:: /static/user_manual/print_composer/print_composer_image1.png
+.. figure:: /static/user_manual/print_composer/print_composer_image2.png
    :align: center
    :width: 20em
 
-   Main properties, Search directories and Rotation Dialogs |nix|
+   Image Main properties, Search directories and Rotation Dialogs |nix|
 
 * The **Main properties** dialog shows the current image that is displayed in the image item. 
   Click on the **[...]** button to select a file on your computer.
@@ -539,7 +540,7 @@ functionalities (see figure_composer_14_):
    :align: center
    :width: 20em
 
-   Legend item properties Tab |nix|
+   Legend Item properties Tab |nix|
 
 Main properties
 ---------------
@@ -557,7 +558,7 @@ provides following functionalities (see figure_composer_15_):
    :align: center
    :width: 20em
 
-   Main properties Dialog |nix|
+   Legend Main properties Dialog |nix|
 
 * Here you can adapt the legend title. 
 * Choose which :guilabel:`Map` item the current legend will refer to in the select list.
@@ -579,7 +580,7 @@ provides following functionalities (see figure_composer_15b_):
    :align: center
    :width: 20em
 
-   Legend Items Dialog |nix|
+   Legend Legend Items Dialog |nix|
 
 * The legend items window lists all legend items and allows to change item order,
   group layers, remove and restore items of the list, edit layer names. After changing the
@@ -606,7 +607,7 @@ provide following functionalities (see figure_composer_16_):
    :align: center
    :width: 20em
 
-   Fonts, Columns, Symbol and Spacing Dialogs |nix|
+   Legend Fonts, Columns, Symbol and Spacing Dialogs |nix|
 
 * You can change the font of the legend title, group, subgroup and item (layer) in the legend item. Click on a category button to open a 
   **Select font** dialog.
@@ -682,7 +683,7 @@ provide following functionalities (see figure_composer_20_):
    :align: center
    :width: 20em
 
-   Scalebar Units and Segments Dialog |nix|
+   Scalebar Units and Segments Dialogs |nix|
 
 In those two dialogs, you can set how the scalebar will be represented.
 * Select the map units used. There's three possible choices : **Map Units** is the automated unit selection, **Meters** or **Feet** force 
@@ -706,7 +707,7 @@ The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scalebar
    :align: center
    :width: 20em
 
-   Scalebar Units and Segments Dialog |nix|
+   Scalebar Display, Fonts and colors Dialogs |nix|
 
 * You can define how the scalebar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders, 
   :guilabel:`Labels margin` between text and scalebar drawing and the :guilabel:`Line width` of the scalebar drawing.
@@ -735,7 +736,7 @@ outline width and a clockwise rotation.
    :align: center
    :width: 20em
 
-   Shape Dialog |nix|
+   Shape Item properties Tab |nix|
 
 The :guilabel:`Arrow` Item properties tab allows to draw an arrow in the print composer canvas.
 You can define color, outline and arrow width and it is possible to use a default
@@ -752,7 +753,7 @@ add a SVG start and end marker from a directory on your computer.
    :align: center
    :width: 20em
 
-   Arrow Dialog |nix|
+   Arrow Item properties Tab |nix|
 
 Main properties
 ---------------
@@ -808,9 +809,21 @@ provide following functionalities (see figure_composer_26_):
    :width: 20em
 
    Attribute table Main properties, Show grid and Fonts Dialog |nix|
+   
+   .. _Figure_composer_26b:
+
+.. only:: html
+
+   **Figure Composer 26b:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_attribute3.png
+   :align: center
+   :width: 20em
+
+   Attribute table Select attributes Dialog |nix|
 
 * The :guilabel:`Table` dialog allows to select the vector layer and columns of the attribute table. Attribute columns can be sorted and you
-  can define to show its values ascending or descending.
+  can define to show its values ascending or descending (see figure_composer_26b_).
 * You can choose to display only the attribute of features visibled on a map. Check |checkbox| :guilabel:`Show only visible features` and 
   select the corresponding :guilabel:`Composer map` to filter.
 * You can define the :guilabel:`Maximum number of rows` to be displayed and :guilabel:`margin` around text.
@@ -841,7 +854,7 @@ provides following functionalities (see figure_composer_26a_):
    :align: center
    :width: 20em
 
-   HTML frame Main properties Dialog |nix|
+   HTML frame Item properties Tab |nix|
 
 * Point the :guilabel:`URL` field to the URL or the HTML file you want to insert in the composer.
 * You can adjust the rendering of that page with the :guilabel:`Resize mode`.
@@ -904,7 +917,7 @@ or by mouse click within the :guilabel:`Command history` tab (see figure_compose
 
 .. figure:: /static/user_manual/print_composer/command_hist.png
    :align: center
-   :width: 30 em
+   :width: 20 em
 
    Command history in the Print Composer |nix|
 
