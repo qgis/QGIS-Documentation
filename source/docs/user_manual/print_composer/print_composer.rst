@@ -158,11 +158,86 @@ In the :guilabel:`Composition` tab, you can define the global settings of your c
   page will show the attribute table associated to a layer while a third ons shows a HTML frame linking to your organization website. 
   Set the :guilabel:`Number of pages` to the desired value. 
 * Choose the page :guilabel:`Orientation` and its :guilabel:`Exported resolution`
-* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or PDF. 
-* :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid : 
+* When checked, the |checkbox| :guilabel:`print as raster` means all elements will be rasterized before printing or saving as Postscript or 
+  PDF. 
+* :guilabel:`Snap to grid` and :guilabel:`Snap to alignements` tools make accomplishing some tasks much easier. There's three types of grid: 
   **Dots**, **Solid** lines and **Crosses**. You can adjust :guilabel:`spacings`, :guilabel:`offsets` and :guilabel:`color` to your need.
 * :guilabel:`Selection tolerance` defines the maximum distance below which an item is snapped to the grid.
 * :guilabel:`Snap to alignements` shows helping lines when the borders or axis of two items are aligned.
+
+Composer items general options
+==============================
+
+Composer items have a set of common properties you will find on the bottom of the :guilabel:`Item Properties` tab: Position and size, Frame,
+Background, Item ID and Rendering (See figure_composer_1b_)
+
+.. _Figure_composer_1b:
+
+.. only:: html
+
+   **Figure Composer 1b:**
+
+.. figure:: /static/user_manual/print_composer/print_composer_common_properties.png
+   :align: center
+   :width: 20em
+
+   Common Item properties Dialogs |nix|
+
+* The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. You can also choose
+  which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
+.. _Frame_Dialog:
+* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust
+  those properties.
+* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
+* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
+* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_ .
+
+.. _Rendering_Mode:
+
+.. index:: Rendering_Mode
+
+**************
+Rendering mode
+**************
+
+|qg| now allows advanced rendering for composer items just like vector and raster layers.
+
+.. _figure_composer_29:
+
+.. only:: html
+
+   **Figure Composer 29:**
+
+.. figure:: /static/user_manual/print_composer/rendering_mode.png
+   :align: center
+   :width: 30 em
+
+   Rendering mode |nix|
+
+* :guilabel:`Transparency` |slider|: you can make the underlying item in the composer
+  visible with this tool. Use the slider to adapt the visibility of your item to your needs.
+  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
+* :guilabel:`Blending mode`: you can achieve special rendering effects with these tools that you 
+  previously only know from graphics programs. The pixels of your overlaying and underlaying items are mixed
+  through the settings described below.
+
+	* Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the Pixel beneath it; the colors aren't mixed
+	* Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged and harsh.
+	* Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
+	* Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels cause the saturation and brightness of the underlying pixels to increase. This works best if the top pixels aren't too bright, otherwise the effect is too extreme.
+	* Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is displayed. This mode is suitable for highlighting features.
+	* Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the results tend to be jagged and harsh
+	* Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer. The results are darker pictures.
+	* Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
+	* Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become darker.
+	* Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft light onto an image.
+	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with black produces no change, as values for all colors are 0.
+	* Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
+
+**************
+Composer Items
+**************
 
 Adding a current QGIS map canvas to the Print Composer
 ======================================================
@@ -225,7 +300,9 @@ following functionalities (see figure_composer_2_):
   rotate the map element content clockwise in degrees. Note, a coordinate frame
   can only be added with the default value 0.
 * The |checkbox| :guilabel:`Draw map canvas items` lets you show annotations that may be placed on the map canvas in the main QGIS window.
-* You can choose to lock the layers shown on a map item. Check the |checkbox| :guilabel:`Lock layers for map item`. Any layer that would be displayed or hidden in the main QGIS window after checked on won't appear or be hidden in the map item of the composer. But style and labels of a locked layer is still refreshed accordingly to the main QGIS interface.
+* You can choose to lock the layers shown on a map item. Check the |checkbox| :guilabel:`Lock layers for map item`. Any layer that would be
+  displayed or hidden in the main QGIS window after checked on won't appear or be hidden in the map item of the composer. But style and 
+  labels of a locked layer is still refreshed accordingly to the main QGIS interface.
 
 Extents
 -------
@@ -276,17 +353,16 @@ following functionalities (see Figure_composer_4_):
 
 * The |checkbox| :guilabel:`Show grid` checkbox allows to overlay a grid to the
   map element. As grid type you can specify to use solid line or cross. Symbology of 
-  the grid can be chosen. See Section :ref:`new-symbology`.
+  the grid can be chosen. See Section Rendering_Mode_.
   Furthermore you can define an interval in X and Y direction, an X and Y offset,
   and the width used for cross or line grid type.
-* You can choose to paint the frame with a Zebra style. If not selected, general frame option is used (See Section :ref:`Frame_dialog`)
+* You can choose to paint the frame with a Zebra style. If not selected, general frame option is used (See Section Frame_dialog_)
   Advanced rendering mode is also available for grids. See Section Rendering_mode_)
 * The |checkbox| :guilabel:`Draw coordinates` checkbox allows to add coordinates
   to the map frame. The annotation can be drawn inside or outside the map frame.
   The annotation direction can be defined as horizontal, vertical, horizontal and
-  vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally you can define the grid color, the
-  annotation font, the annotation distance from the map frame and the precision
-  of the drawn coordinates.
+  vertical, or boundary direction, for each border individually. Units can be in meters or in degrees. Finally you can define the grid 
+  color, the annotation font, the annotation distance from the map frame and the precision of the drawn coordinates.
 
 Overview
 --------
@@ -310,34 +386,10 @@ If the composer has more than one map, you can choose to use a map to show the e
 The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows to customize the appearance of that feature.
 
 * The :guilabel:`Overview frame` combolist references the map item whose extents will be drawn on the present map item.
-* The :guilabel:`Overview Style` allows to change the frame color. See Section :ref:`_vector_style_manager`.
-* The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame. See :ref:`Rendering_mode`
-* If checked, the |checkbox| :guilabel:`Invert overview` creates a mask around the extents : the referenced map extents are shown clearly whereas everything else is blended with the frame color.
-
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-The :guilabel:`Position and size`, :guilabel:`Frame`, :guilabel:`Background`, :guilabel:`Item ID`, :guilabel:`Rendering` dialogs of the map :guilabel:`Item Properties` tab provide
-following functionalities (see Figure_composer_6_):
-
-.. _Figure_composer_6:
-
-.. only:: html
-
-   **Figure Composer 6:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_map5.png
-   :align: center
-   :width: 20em
-
-   Position and size, Frame, Background, Item ID and Rendering Dialogs |nix|
-
-* The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the map item. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
-
+* The :guilabel:`Overview Style` allows to change the frame color. See Section vector_style_manager_ .
+* The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame. See Rendering_Mode_
+* If checked, the |checkbox| :guilabel:`Invert overview` creates a mask around the extents : the referenced map extents are shown clearly 
+  whereas everything else is blended with the frame color.
 
 Adding a Label item to the Print Composer
 =========================================
@@ -378,10 +430,15 @@ following functionalities (see Figure_composer_8_):
 
    Main properties Dialog |nix|
 
-* The Main properties dialog is where is inserted the text (html or not) or the expression needed to fill the label added to the composer canvas.
-  Labels can be interpreted as html code: check the |checkbox| :guilabel:`Render as HTML`. You can now insert a url, an clickable image that link to a web page or something more complex.
-  You can also insert an expression. Click on the **[Insert an expression]** to open a new dialog. Build an expression by clicking the functions available in the left side of the panel. On the right side of the `Insert an expression dialog` is displayed the help file associated with the function selected. Two special categories can be useful, particularly associted with the Atlas functionnality : geometry functions and records functions. On the bottom side, a preview of the expression is shown.
-  Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons
+* The Main properties dialog is where is inserted the text (html or not) or the expression needed to fill the label added to the composer 
+  canvas. 
+* Labels can be interpreted as html code: check the |checkbox| :guilabel:`Render as HTML`. You can now insert a url, an clickable 
+  image that link to a web page or something more complex.
+* You can also insert an expression. Click on the **[Insert an expression]** to open a new dialog. Build an expression by clicking the 
+  functions available in the left side of the panel. On the right side of the `Insert an expression dialog` is displayed the help file 
+  associated with the function selected. Two special categories can be useful, particularly associted with the Atlas functionnality : 
+  geometry functions and records functions. On the bottom side, a preview of the expression is shown.
+* Define font and font color by clicking on the **[Font]** and **[Font color...]** buttons
 
 Alignment and Display
 ---------------------
@@ -401,37 +458,11 @@ following functionalities (see Figure_composer_9_):
 
    Alignment and Display Dialogs |nix|
 
-
 * You can define the horizontal and vertical alignment in the :guilabel:`Alignment` zone
 * In the **Display** tag, you can define a margin in mm and/or a rotation angle in degrees for the text.
 
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-The :guilabel:`Position and size`, :guilabel:`Frame`, :guilabel:`Background`, :guilabel:`Item ID`, :guilabel:`Rendering` dialogs of the label :guilabel:`Item Properties` tab provide
-following functionalities (see Figure_composer_10_):
-
-.. _Figure_composer_10:
-
-.. only:: html
-
-   **Figure Composer 10:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_label4.png
-   :align: center
-   :width: 20em
-
-   Position and size, Frame, Background, Item ID and Rendering Dialogs |nix|
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the label. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
-
-
 Adding an Image item to the Print Composer
-=========================================
+==========================================
 
 To add an image, click the |mActionImage| :sup:`Add image` icon, place the element
 with the left mouse button on the print composer canvas and position and customize
@@ -484,30 +515,6 @@ following functionalities (see Figure_composer_12_):
   map` checkbox synchronizes the rotation of a picture in the QGIS map canvas
   (i.e. a rotated north arrow) with the appropriate print composer image.
 
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-The :guilabel:`Position and size`, :guilabel:`Frame`, :guilabel:`Background`, :guilabel:`Item ID`, :guilabel:`Rendering` dialogs of the image :guilabel:`Item Properties` tab provide
-following functionalities (see Figure_composer_13_):
-
-.. _Figure_composer_13:
-
-.. only:: html
-
-   **Figure Composer 13:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_image2.png
-   :align: center
-   :width: 20em
-
-   Position and size, Frame, Background, Item ID and Rendering Dialogs |nix|
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the image. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the image. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
-
 .. index::
    single:Map_Legend
 
@@ -553,20 +560,20 @@ provides following functionalities (see figure_composer_15_):
    Main properties Dialog |nix|
 
 * Here you can adapt the legend title. 
-* Choose which :guilabel:`Map` item the current legend will refer to in the |selectlist|.
+* Choose which :guilabel:`Map` item the current legend will refer to in the select list.
 * Since QGIS 1.8, you can wrap the text of the legend title to a given character.
 
 Legend items
 ------------
 
 The :guilabel:`Legend items` dialog of the legend :guilabel:`Item Properties` tab
-provides following functionalities (see figure_composer_15_):
+provides following functionalities (see figure_composer_15b_):
 
-.. _Figure_composer_15:
+.. _Figure_composer_15b:
 
 .. only:: html
 
-   **Figure Composer 15:**
+   **Figure Composer 15b:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_legend3.png
    :align: center
@@ -601,37 +608,14 @@ provide following functionalities (see figure_composer_16_):
 
    Fonts, Columns, Symbol and Spacing Dialogs |nix|
 
-* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. Click on a category button to open a **Select font** dialog.
+* You can change the font of the legend title, group, subgroup and item (layer) in the legend item. Click on a category button to open a 
+  **Select font** dialog.
 * All those items will get the same **Color**
 * Legend items can be arranged in several columns. Select the correct value in the :guilabel:`Count` |selectnumber| field.
 * The |checkbox| :guilabel:`Equal columns widths` sets how legend columns should be adjusted.
 * The |checkbox| :guilabel:`Split layers` option allows a categorized or a graduated layer legend to be divided upon columns.
 * You can change width and height of the legend symbol in this dialog.
 * Spacing aroung title, group, subgroup, symbol, icon label, box space or column space can be customized throught that dialog.
-
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-The :guilabel:`Position and size`, :guilabel:`Frame`, :guilabel:`Background`, :guilabel:`Item ID`, :guilabel:`Rendering` dialogs of the legend :guilabel:`Item Properties` tab provide
-following functionalities (see Figure_composer_17_):
-
-.. _Figure_composer_17:
-
-.. only:: html
-
-   **Figure Composer 17:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_legend5.png
-   :align: center
-   :width: 20em
-
-   Position and size, Frame, Background, Item ID and Rendering Dialogs |nix|
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the legend. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the legend. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
 
 .. index::
    single: Scalebar; Map_Scalebar
@@ -701,7 +685,8 @@ provide following functionalities (see figure_composer_20_):
    Scalebar Units and Segments Dialog |nix|
 
 In those two dialogs, you can set how the scalebar will be represented.
-* Select the map units used. There's three possible choices : **Map Units** is the automated unit selection, **Meters** or **Feet** force unit conversions.
+* Select the map units used. There's three possible choices : **Map Units** is the automated unit selection, **Meters** or **Feet** force 
+      unit conversions.
 * The :guilabel:`Label` field defines the text used to describe the unit of the scalebar.
 * The :guilabel:`Map units per bar unit` allows to fix the ratio between a map unit and its representation in the scalebar.
 * You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scalebar, and how long will be each segment (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
@@ -709,8 +694,7 @@ In those two dialogs, you can set how the scalebar will be represented.
 Display, Fonts and colors
 -------------------------
 
-The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scalebar :guilabel:`Item Properties` tab
-provide following functionalities (see figure_composer_21_):
+The :guilabel:`Display` and :guilabel:`Fonts and colors` dialogs of the scalebar :guilabel:`Item Properties` tab provide following functionalities (see figure_composer_21_):
 
 .. _Figure_composer_21:
 
@@ -724,32 +708,10 @@ provide following functionalities (see figure_composer_21_):
 
    Scalebar Units and Segments Dialog |nix|
 
-* You can define how the scalebar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders, :guilabel:`Labels margin` between text and scalebar drawing and the :guilabel:`Line width` of the scalebar drawing.
-* The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to :guilabel:`Numeric` styled scalebars and puts text on the left, middle or right side of the frame.
-
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-The :guilabel:`Position and size`, :guilabel:`Frame`, :guilabel:`Background`, :guilabel:`Item ID`, :guilabel:`Rendering` dialogs of the scalebar :guilabel:`Item Properties` tab provide
-following functionalities (see Figure_composer_22_):
-
-.. _Figure_composer_22:
-
-.. only:: html
-
-   **Figure Composer 22:**
-
-.. figure:: /static/user_manual/print_composer/print_composer_scalebar5.png
-   :align: center
-   :width: 20em
-
-   Position and size, Frame, Background, Item ID and Rendering Dialogs |nix|
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the scalebar. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the scalebar. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
+* You can define how the scalebar will be displayed in its frame. Adjust the :guilabel:`Box margin` between text and frame borders, 
+  :guilabel:`Labels margin` between text and scalebar drawing and the :guilabel:`Line width` of the scalebar drawing.
+* The :guilabel:`Alignment` in the :guilabel:`Display` dialog only applies to :guilabel:`Numeric` styled scalebars and puts text on the 
+  left, middle or right side of the frame.
 
 Adding a Basic shape or Arrow item to the Print Composer
 ========================================================
@@ -796,18 +758,14 @@ Main properties
 ---------------
 
 * For Basic shapes, this dialog allows you to choose a **Ellipse**, **Rectangle** or **Triangle** shape and its rotation.
-* Unlike the other items, line style, line color and background color of a basic shape are adjusted with the Frame and Background dialog. No frame is drawn.
+* Unlike the other items, line style, line color and background color of a basic shape are adjusted with the Frame and Background dialog. 
+  No frame is drawn.
 * For arrows, you can define here the line style : :guilabel:`Color`, :guilabel:`Line width` and :guilabel:`Arrow head width`.
-* :guilabel:`Arrows markers` can be adjusted. If you want to set a SVG :guilabel:`Start marker` and/or :guilabel:`End marker`, browse to your SVG file by clicking on the **[...]** button after selecting :guilabel:`SVG` radio button.
+* :guilabel:`Arrows markers` can be adjusted. If you want to set a SVG :guilabel:`Start marker` and/or :guilabel:`End marker`, browse to 
+  your SVG file by clicking on the **[...]** button after selecting :guilabel:`SVG` radio button.
 
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the basic shape or the arrow item. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the arrow. For basic shapes, this checkbox doesn't do anything. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties. For basic shapes, they adjust color and thickness of the shape borders.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field. Unlike other items, background color for a basic shape is the shape background and not the frame one.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
+.. note::
+   Unlike other items, background color for a basic shape is the shape background and not the frame one.
 
 .. index:: Attribute_Table
 
@@ -815,7 +773,8 @@ Add attribute table values to the Print Composer
 ================================================
 
 It is possible to add parts of a vector attribute table to the print composer
-canvas : click the |mActionOpenTable| :sup:`Add attribute table` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the :guilabel:`Item Properties` tab.
+canvas : click the |mActionOpenTable| :sup:`Add attribute table` icon, place the element with the left mouse button on the print composer 
+canvas and position and customize their appearance in the :guilabel:`Item Properties` tab.
 
 The :guilabel:`Item properties` of a attribute table item tab provides following
 functionalities (see figure_composer_25_):
@@ -850,41 +809,33 @@ provide following functionalities (see figure_composer_26_):
 
    Attribute table Main properties, Show grid and Fonts Dialog |nix|
 
-* The :guilabel:`Table` dialog allows to select the vector layer and columns of
-  the attribute table. Attribute columns can be sorted and you can define to show
-  its values ascending or descending.
-* You can choose to display only the attribute of features visibled on a map. Check |checkbox| :guilabel:`Show only visible features` and select the corresponding :guilabel:`Composer map` to filter.
+* The :guilabel:`Table` dialog allows to select the vector layer and columns of the attribute table. Attribute columns can be sorted and you
+  can define to show its values ascending or descending.
+* You can choose to display only the attribute of features visibled on a map. Check |checkbox| :guilabel:`Show only visible features` and 
+  select the corresponding :guilabel:`Composer map` to filter.
 * You can define the :guilabel:`Maximum number of rows` to be displayed and :guilabel:`margin` around text.
-* Additionally you can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) and the header
-  and content font.
-
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the attribute table. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the attribute image. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Rendering_mode_.
+* Additionally you can define the grid characteristics of the table (:guilabel:`Stroke width` and :guilabel:`Color` of the grid) and the 
+  header and content font.
 
 .. index:: HTML_Frame
 
 Add a HTML frame to the Print Composer
 ======================================
 
-It is possible to add a clickable frame, linked to an URL : click the |mActionAddHtml| :sup:`Add html frame` icon, place the element with the left mouse button on the print composer canvas and position and customize their appearance in the :guilabel:`Item Properties` tab.
+It is possible to add a clickable frame, linked to an URL : click the |mActionAddHtml| :sup:`Add html frame` icon, place the element with 
+the left mouse button on the print composer canvas and position and customize their appearance in the :guilabel:`Item Properties` tab.
 
 Main properties
 ---------------
 
 The :guilabel:`Main properties` dialog of the HTML frame :guilabel:`Item Properties` tab
-provides following functionalities (see figure_composer_26_):
+provides following functionalities (see figure_composer_26a_):
 
-.. _Figure_composer_26:
+.. _Figure_composer_26a:
 
 .. only:: html
 
-   **Figure Composer 26:**
+   **Figure Composer 26a:**
 
 .. figure:: /static/user_manual/print_composer/print_composer_html.png
    :align: center
@@ -895,18 +846,12 @@ provides following functionalities (see figure_composer_26_):
 * Point the :guilabel:`URL` field to the URL or the HTML file you want to insert in the composer.
 * You can adjust the rendering of that page with the :guilabel:`Resize mode`.
 * **Use existing frames** constraints the page inside its first frame or in the frame created with the next settings.
-* **Extent to next page** will create as many frames (and their pages) as necessary to render the height of the webpage. Each frame can be moved around on the layout. If you resize a frame, the webpage will be divided up upon the other frames. The last frame will be trimmed to fit the webpage.
+* **Extent to next page** will create as many frames (and their pages) as necessary to render the height of the webpage. Each frame can be 
+  moved around on the layout. If you resize a frame, the webpage will be divided up upon the other frames. The last frame will be trimmed to
+  fit the webpage.
 * **Repeat on every page** will first repeat the upper left of the webpage on every page, in same sized frames.
-* **Repeat until finished** will also create as many frames as the **Extend to next page** option, except All frames will have the same size.
-
-Position and size, Frame, Background, Item ID and Rendering
------------------------------------------------------------
-
-* The :guilabel:`Position and size` area lets you define size and position of the frame that contains the HTML page. You can also choose which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the HTML page. Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
-* :guilabel:`Rendering` mode can be selected in the option field. See Section Rendering_mode_.
+* **Repeat until finished** will also create as many frames as the **Extend to next page** option, except All frames will have the same 
+  size.
 
 .. index:: Elements_Alignment
 
@@ -962,60 +907,6 @@ or by mouse click within the :guilabel:`Command history` tab (see figure_compose
    :width: 30 em
 
    Command history in the Print Composer |nix|
-
-.. _Rendering_Mode:
-
-.. index:: Rendering_Mode
-
-**************
-Rendering mode
-**************
-
-|qg| now allow advanced rendering for composer items just like vector and raster layers.
-
-.. _figure_composer_29:
-
-.. only:: html
-
-   **Figure Composer 29:**
-
-.. figure:: /static/user_manual/print_composer/rendering_mode.png
-   :align: center
-   :width: 30 em
-
-   Rendering mode |nix|
-
-* :guilabel:`Transparency` |slider|: you can make the underlying item in the composer
-  visible with this tool. Use the slider to adapt the visibility of your item to your needs.
-  You can also make a precise definition of the percentage of visibility in the the menu beside the slider.
-* :guilabel:`Blending mode`: you can achieve special rendering effects with these tools that you 
-  previously only know from graphics programs. The pixels of your overlaying and underlaying items are mixed
-  through the settings described below.
-
-	* Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the
-	  Pixel beneath it; the colors aren't mixed
-	* Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged
-	  and harsh.
-	* Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is
- 	  most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
-	* Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels 
-          cause the saturation and brightness of the underlying pixels to increase. This works best if the top
-          pixels aren't too bright, otherwise the effect is too extreme.
-	* Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is
-          displayed. This mode is suitable for highlighting features.
-	* Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the 
-	  results tend to be jagged and harsh
-	* Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer.
-          The results are darker pictures.
-	* Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
-	* Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become
-          darker. 
-	* Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft
-          light onto an image.
-	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
-          black produces no change, as values for all colors are 0.
-	* Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
 
 .. index:: Atlas_Generation
 
@@ -1078,7 +969,8 @@ tab. This tab contains the following widgets (see Figure_composer_30_):
   (PDF for instance). If this field is checked, the value of the
   :guilabel:`Output filename expression` field is meaningless.
 
-In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation `[%expression using field_name%]`.
+In order to adapt labels to the feature the atlas plugin iterates over, use a label with this special notation 
+`[%expression using field_name%]`.
 For example, with a city layer with fields CITY_NAME and ZIPCODE, you could insert this : 
 
 "`[% 'The area of ' || upper(CITY_NAME) || ',' || ZIPCODE || ' is ' format_number($area/1000000,2) || ' km2' %]`"
@@ -1090,14 +982,7 @@ And that would result in the generated atlas as
 Generation
 ----------
 
-The atlas generation is done when the user asks for a print or an export. The
-behaviour of these functions will be slightly changed if an atlas map has been
-selected.
-
-For instance, when the user asks for an export to PDF, if an atlas map is defined,
-the user will be asked for a directory where to save all the generated PDF files
-(except if the |checkbox| :guilabel:`Single file export when possible` has been
-selected).
+The atlas generation is done when the user asks for a print or an export. The behaviour of these functions will be slightly changed if an atlas map has been selected. For instance, when the user asks for an export to PDF, if an atlas map is defined, the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
 
 .. index::
    single:Printing; Export_Map
