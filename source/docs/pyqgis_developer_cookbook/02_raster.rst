@@ -158,6 +158,12 @@ method exists.
 The second call emits signal that will force any map canvas containing the
 layer to issue a refresh.
 
+With WMS raster layers, these commands do not work. In this case, you have
+to do it explicitily::
+
+  layer.dataProvider().reloadData()
+  layer.triggerRepaint()
+
 In case you have changed layer symbology (see sections about raster and vector
 layers on how to do that), you might want to force QGIS to update the layer
 symbology in the layer list (legend) widget. This can be done as follows
