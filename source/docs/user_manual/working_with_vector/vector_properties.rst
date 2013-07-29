@@ -451,16 +451,14 @@ have been created for labeling the vector layers:
 
 Let us see how the new menus can be used for various vector layers.
 
-#. Start QGIS and load a vector point, line or polygon layer.
-#. Activate the layer in the legend and click on the |mActionLabeling|
-   :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
-
-
 **Labeling point layers**
 
+Start QGIS and load a vector point, line or polygon layer.
+Activate the layer in the legend and click on the |mActionLabeling| :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
 First step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions.
+
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions
 that are situated next to the drop-down menus.
 
@@ -474,20 +472,37 @@ Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in
 decimal places are inserted. If you enable this option three decimal places ist set by default. 
 
 To create a buffer just activate |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
-The buffer color is variable.
+The buffer color is variable. Also, a new function in QGIS 2.0.0 is the user of blend modes (see blend_modes_).
 .. FIXME: more information necessary
 Use the |checkbox| :guilabel:`Color buffer fill` checkbox to ...
 
-In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your buffer. 
+In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background. 
 Use :guilabel:`Size type` to insert an additional 'Buffer' into your background. The buffer size one is set by default here.
 The background then consists of the buffer plus the background in :guilabel:`Size X` and :guilabel:`Size Y`.
 You can set a :guilabel:`Rotation` where you can choose between 'Sync with label', 'Offset of label' and 'Fixed'.
-Using 'Offset of label' and 'Fixed' you can rotate the background.
+Using 'Offset of label' and 'Fixed' you can rotate the background. Define an :guilabel:`Offset X,Y` with X and Y values and the background 
+will be shifted. When applying :guilabel:`Radius X,Y` the background gets rounded corners. 
+Again, it is possible to mix the background with the underlying layers in the map canvas using the :guilabel:`Blend mode`
+(see blend_modes_).
 
-:guilabel:`Shadow`
+Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`. The drawing of the background is very variable. 
+Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'. The :guilabel:`Offset` angle depends on the orientation
+of the label. If you choose the |checkbox| :guilabel:`Use global shadow` checkbox then the zero point of the angle is
+always oriented to the north and doesn't depend on the orientation of the label. Influence the appearance of the shadow
+with the :guilabel:`Blur radius`. The higher the number, the softer the shadows. 
+.. FIXME: more information necessary
+Using the |checkbox| :guilabel:`Blur only alpha pixels` checkbox the shadow will ...
+The appearance of the drop shadow can also be altered by choosing a blend mode (see blend_modes_).
 
-Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. 
-In the :guilabel:`Rendering` menu you can define if every part of a multipart feature is to be labeled here. 
+Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. Using the 
+|radiobuttonon| :guilabel:`Offset from point` setting you now have the possibility to use :guilabel:`Quadrants`
+to place your label. Additionally you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
+Thus, a placement in a certain quadrant with a certain rotation is possible.
+
+In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options` 
+you can prevent QGIS from rendering only selected labels with the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`
+checkbox. In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In QGIS 2.0.0 now it's possible to define 
+if the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
 
 .. features act as obstacles for labels or not .
