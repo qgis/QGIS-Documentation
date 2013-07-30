@@ -337,94 +337,13 @@ placed on a displacement circle around a center symbol.
 Labels Menu
 -----------
 
-|labels| |qg| 2.0.0 currently provides an old and a deprecated labeling
-engine in parallel. The :guilabel:`Labels` tab still contains the old labeling.
+|labels| |qg| 2.0.0 currently provides a new and a deprecated labeling
+engine in parallel. The :guilabel:`Layer Properties` still contains the :guilabel:`Labels (deprecated)`.
 The new labeling is implemented as a core application and will replace the features
-of the old labels tab in one of the next versions.
+of the :guilabel:`Labels (deprecated)` menu in one of the next versions.
 
 We recommend to switch to the new labeling, described in section
 :ref:`vector_new_labeling`.
-
-Labels (deprecated)
-...................
-
-The deprecated labeling in the :guilabel:`Labels` tab allows you to enable labeling
-features and control a number of options related to fonts, placement, style,
-alignment and buffering. We will illustrate this by labeling the lakes
-shapefile of the QGIS sample dataset:
-
-
-#. Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml`
-   in |qg|
-#. Zoom in a bit to your favorite area with some lake
-#. Make the 'lakes' layer active
-#. Open the :guilabel:`Layer Properties` dialog
-#. In the :guilabel:`Layers (deprecated)` menu click on the :guilabel:`Label Properties` tab.
-#. Check the |checkbox| :guilabel:`Display labels` checkbox to enable labeling
-#. Choose the field to label with. We will use
-   :guilabel:`Field containing label` |selectstring| 'NAMES'
-#. Enter a :guilabel:`Default label` for lakes that have no name. The default label will be
-   used each time |qg| encounters a lake with no value in the 'NAMES' field.
-#. If you have labels extending over several lines, check
-   |checkbox|:guilabel:`Multiline labels?`. |qg| will check for a true line
-   return in your label field and insert the line breaks accordingly.
-   A true line return is a **single** character ``\n``, (not two separate
-   characters, like a backlash ``\`` followed by the character ``n``).  To insert
-   line returns in an attribute field configure the edit widget to be text
-   edit (not line edit).
-#. Click **[Apply]**.
-
-Now we have labels. How do they look? They are probably too big and poorly
-placed in relation to the marker symbol for the lakes.
-
-Select the :guilabel:`Font size` |selectstring| and use the **[Font]** and **[Color]** buttons to
-set the font and color. Define if your labels should be rendered in points or in map units.
-You can also change the placement of the text-label.
-
-To change the position of the text relative to the feature:
-
-#. Beneath the Basic label options change the placement by selecting one of the
-   radio buttons in the :guilabel:`Placement` group. To fix our labels, choose
-   the |radiobuttonon| :guilabel:`Right` radio button.
-#. Click **[Apply]** to see your changes without closing the dialog.
-
-Things are looking better, but the labels are still too close to the marker.
-To fix this we can use the options on the ``Offset`` entry which is on the bottom
-of the menu. Here we can add offsets for the X and Y directions. Adding an X
-offset of 5 will move our labels off the marker and make them more readable. Of
-course if your marker symbol or font is larger, more of an offset will be required.
-
-The last adjustment we'll make is to 'Buffer' the labels. This just means
-putting a backdrop around them to make them stand out better. To buffer the
-lakes labels:
-
-#. Click the |checkbox| :guilabel:`Buffer Labels` checkbox to enable
-   buffering.
-#. Choose a size for the buffer using the spin box |selectnumber|.
-#. The :guilabel:`Buffer size` menu also allows you to select between
-   'In Points' or 'In Map units'.
-#. Choose a color by clicking on **[Color]** and choosing your favorite
-   from the color selector. You can also set some transparency for the
-   buffer if you prefer.
-#. Click **[Apply]** to see if you like the changes.
-
-As a last define if the labels should be shifted. Use the :guilabel:`Offset` settings and fill
-in the 'X offset' and the 'Y offset' . Again, it is possible to define the :guilabel:`Offset` 'In points'
-or in 'In map units'.
-
-If you aren't happy with the results, tweak the settings and then test again by
-clicking **[Apply]**.
-
-A buffer of 1 points seems to give a good result. Notice you can also specify
-the buffer size in map units if that works out better for you.
-
-The advanced entries inside the :guilabel:`Advanced tab` allow you control
-the appearance of the labels using attributes stored in the layer. The
-entries beginning with 'Data defined' allow you to set all the parameters
-for the labels using fields in the layer.
-
-Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
-selected label is shown.
 
 .. index:: New_Labeling, Smart_Labeling
 
@@ -451,10 +370,13 @@ have been created for labeling the vector layers:
 
 Let us see how the new menus can be used for various vector layers.
 
+.. _labeling_point_layers:
+
 **Labeling point layers**
 
-Start QGIS and load a vector point, line or polygon layer.
-Activate the layer in the legend and click on the |mActionLabeling| :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
+Start QGIS and load a vector point layer. Activate the layer in the legend and click on the 
+|mActionLabeling| :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
+
 First step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions.
@@ -523,8 +445,29 @@ if the number of features to be labeled is limited and to |checkbox| :guilabel:`
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 in the :guilabel:`Label settings` tab and select an attribute column to use for
-labeling. Here you can also define labels based on expressions. After that you
-can define the text style and the scale-based visibility. Further labeling options
+labeling. Here you can also define labels based on expressions.
+
+After that you can define the text style in the :guilabel:`Text` menu. Here the
+same settings as for point layers are possible.
+
+Also in the :guilabel:`Formatting` menu the same settings as for point layers are possible.
+
+The :guilabel:`Buffer` menu has the same functions as described in section labeling_point_layers_ .
+
+The :guilabel:`Background` menu has the same entries as described in section labeling_point_layers_ .
+
+Also the :guilabel:`Shadow` menu has the same entries as described in section labeling_point_layers_ .
+
+In the :guilabel:`Placement` menu you find special settings for line layers. The label can be placed
+|radiobuttonon| :guilabel:`Parallel`, |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
+With the |radiobuttonoff| :guilabel:`Curved` option come the following settings:
+You can define the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`
+and |checkbox| :guilabel:`Below line`. It's possible to select several options at once. 
+QGIS will look for the optimal position of the label then. Remember that here you can 
+also use the line orientation for the position of the label. Additionally you can define
+a :guilabel:`Maximum angle between curved characters` 
+
+ and the scale-based visibility. Further labeling options
 are available through the :guilabel:`Advanced` tab. You can define the label
 placement and label distance, a line orientation dependend position and the
 labeling priority here. Furthermore you can define if every part of a multipart
@@ -611,6 +554,87 @@ of labels in defined attribute columns.
 
 A combination of key words in one column also works, e.g.: ``base right`` or
 ``bottom left``.
+
+Labels (deprecated)
+...................
+
+The deprecated labeling in the :guilabel:`Labels` tab allows you to enable labeling
+features and control a number of options related to fonts, placement, style,
+alignment and buffering. We will illustrate this by labeling the lakes
+shapefile of the QGIS sample dataset:
+
+
+#. Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml`
+   in |qg|
+#. Zoom in a bit to your favorite area with some lake
+#. Make the 'lakes' layer active
+#. Open the :guilabel:`Layer Properties` dialog
+#. In the :guilabel:`Layers (deprecated)` menu click on the :guilabel:`Label Properties` tab.
+#. Check the |checkbox| :guilabel:`Display labels` checkbox to enable labeling
+#. Choose the field to label with. We will use
+   :guilabel:`Field containing label` |selectstring| 'NAMES'
+#. Enter a :guilabel:`Default label` for lakes that have no name. The default label will be
+   used each time |qg| encounters a lake with no value in the 'NAMES' field.
+#. If you have labels extending over several lines, check
+   |checkbox|:guilabel:`Multiline labels?`. |qg| will check for a true line
+   return in your label field and insert the line breaks accordingly.
+   A true line return is a **single** character ``\n``, (not two separate
+   characters, like a backlash ``\`` followed by the character ``n``).  To insert
+   line returns in an attribute field configure the edit widget to be text
+   edit (not line edit).
+#. Click **[Apply]**.
+
+Now we have labels. How do they look? They are probably too big and poorly
+placed in relation to the marker symbol for the lakes.
+
+Select the :guilabel:`Font size` |selectstring| and use the **[Font]** and **[Color]** buttons to
+set the font and color. Define if your labels should be rendered in points or in map units.
+You can also change the placement of the text-label.
+
+To change the position of the text relative to the feature:
+
+#. Beneath the Basic label options change the placement by selecting one of the
+   radio buttons in the :guilabel:`Placement` group. To fix our labels, choose
+   the |radiobuttonon| :guilabel:`Right` radio button.
+#. Click **[Apply]** to see your changes without closing the dialog.
+
+Things are looking better, but the labels are still too close to the marker.
+To fix this we can use the options on the ``Offset`` entry which is on the bottom
+of the menu. Here we can add offsets for the X and Y directions. Adding an X
+offset of 5 will move our labels off the marker and make them more readable. Of
+course if your marker symbol or font is larger, more of an offset will be required.
+
+The last adjustment we'll make is to 'Buffer' the labels. This just means
+putting a backdrop around them to make them stand out better. To buffer the
+lakes labels:
+
+#. Click the |checkbox| :guilabel:`Buffer Labels` checkbox to enable
+   buffering.
+#. Choose a size for the buffer using the spin box |selectnumber|.
+#. The :guilabel:`Buffer size` menu also allows you to select between
+   'In Points' or 'In Map units'.
+#. Choose a color by clicking on **[Color]** and choosing your favorite
+   from the color selector. You can also set some transparency for the
+   buffer if you prefer.
+#. Click **[Apply]** to see if you like the changes.
+
+As a last define if the labels should be shifted. Use the :guilabel:`Offset` settings and fill
+in the 'X offset' and the 'Y offset' . Again, it is possible to define the :guilabel:`Offset` 'In points'
+or in 'In map units'.
+
+If you aren't happy with the results, tweak the settings and then test again by
+clicking **[Apply]**.
+
+A buffer of 1 points seems to give a good result. Notice you can also specify
+the buffer size in map units if that works out better for you.
+
+The advanced entries inside the :guilabel:`Advanced tab` allow you control
+the appearance of the labels using attributes stored in the layer. The
+entries beginning with 'Data defined' allow you to set all the parameters
+for the labels using fields in the layer.
+
+Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
+selected label is shown.
 
 .. _vector_attributes_tab:
 
