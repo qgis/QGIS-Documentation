@@ -422,8 +422,9 @@ to place your label. Additionally you can alter the angle of the label placement
 Thus, a placement in a certain quadrant with a certain rotation is possible.
 
 In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options` 
-you can prevent QGIS from rendering only selected labels with the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`
-checkbox. In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In QGIS 2.0.0 now it's possible to define 
+you find the scale-based visibility setting now. You can prevent QGIS from rendering only selected labels with
+the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`checkbox. 
+In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In QGIS 2.0.0 now it's possible to define 
 if the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
 
@@ -445,7 +446,8 @@ if the number of features to be labeled is limited and to |checkbox| :guilabel:`
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 in the :guilabel:`Label settings` tab and select an attribute column to use for
-labeling. Here you can also define labels based on expressions.
+labeling. Click |mActionmIconExpressionEditorOpen| if you
+want to define labels based on expressions.
 
 After that you can define the text style in the :guilabel:`Text` menu. Here the
 same settings as for point layers are possible.
@@ -460,21 +462,18 @@ Also the :guilabel:`Shadow` menu has the same entries as described in section la
 
 In the :guilabel:`Placement` menu you find special settings for line layers. The label can be placed
 |radiobuttonon| :guilabel:`Parallel`, |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
-With the |radiobuttonoff| :guilabel:`Curved` option come the following settings:
+With the |radiobuttonon| :guilabel:`Parallel` and |radiobuttonoff| :guilabel:`Curved` option come the following settings:
 You can define the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`
 and |checkbox| :guilabel:`Below line`. It's possible to select several options at once. 
 QGIS will look for the optimal position of the label then. Remember that here you can 
-also use the line orientation for the position of the label. Additionally you can define
-a :guilabel:`Maximum angle between curved characters` 
+also use the line orientation for the position of the label. 
+.. FIXME: more information necessary
+Additionally you can define a :guilabel:`Maximum angle between curved characters` when
+selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
- and the scale-based visibility. Further labeling options
-are available through the :guilabel:`Advanced` tab. You can define the label
-placement and label distance, a line orientation dependend position and the
-labeling priority here. Furthermore you can define if every part of a multipart
-line is to be labeled, if lines shall be merged to avoid duplicate labels and if
-a direction symbol is added (see Figure_labels_2_ ). It is also possible to
-supress labeling of features and wrap lables on characters. Use :guilabel:`Data
-defined settings` for attribute-based or database-connection-based settings.
+The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
+:guilabel:`Feature options` you can now :guilabel:`Suppress labeling of features smaller than`. 
+ 
 
 .. if features act as obstacles for labels or not.
 
@@ -494,8 +493,40 @@ defined settings` for attribute-based or database-connection-based settings.
 **Labeling polygon layers**
 
 First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
-and select an attribute column to use for labeling. Here you can also define
-labels based on expressions. In :guilabel:`Label settings` define the text style
+and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
+want to define labels based on expressions.
+
+In :guilabel:`Text` menu define the text style. The entries are the same as for point 
+and line layers.
+
+The :guilabel:`Formatting` menu allows you to format multiple lines like for point and line layers.
+
+As with point and line layers you can create a text buffer in the :guilabel:`Buffer` menu.
+
+Use the :guilabel:`Background` menu to create a complex user-defined background for the polygon layer.
+You can use the menu as well as for the point and line layers.
+
+The entries in the :guilabel:`Shadow` menu are the same as for point and line layers.
+
+In the :guilabel:`Placement` menu you find special settings for polygon layers. 
+|radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
+|radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
+|radiobuttonoff| :guilabel:`Using perimeter` are possible.
+
+	In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
+	is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
+	That means that either the centroid is used for the polygon you can see on the map or the centroid is
+	used for the whole polygon, no matter if you can see the whole feature on the map.
+	You can place your label with the quadrants here and define offset and rotation.
+
+	The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
+	around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon` 
+	or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+
+	With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
+	a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
+	|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
+
 and the scale-based visibility (see Figure_labels_3_ ). Use the :guilabel:`Advanced`
 tab for label placement, label distance and labeling priority. Define if every
 part of a multipart feature is to be labeled, suppress labeling of features and
