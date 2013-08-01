@@ -421,6 +421,8 @@ Choose the :guilabel:`Placement` menu for the label placement and the labeling p
 to place your label. Additionally you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
 Thus, a placement in a certain quadrant with a certain rotation is possible.
 
+.. index:: Colliding_labels
+
 In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options` 
 you find the scale-based visibility setting now. You can prevent QGIS from rendering only selected labels with
 the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`checkbox. 
@@ -508,30 +510,25 @@ You can use the menu as well as for the point and line layers.
 
 The entries in the :guilabel:`Shadow` menu are the same as for point and line layers.
 
-In the :guilabel:`Placement` menu you find special settings for polygon layers. 
+In the :guilabel:`Placement` menu you find special settings for polygon layers (see Figure_labels_3_ ). 
 |radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
 |radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
 |radiobuttonoff| :guilabel:`Using perimeter` are possible.
-
 	In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
 	is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
 	That means that either the centroid is used for the polygon you can see on the map or the centroid is
 	used for the whole polygon, no matter if you can see the whole feature on the map.
 	You can place your label with the quadrants here and define offset and rotation.
-
 	The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
 	around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon` 
 	or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
-
 	With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
 	a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
 	|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
 
-and the scale-based visibility (see Figure_labels_3_ ). Use the :guilabel:`Advanced`
-tab for label placement, label distance and labeling priority. Define if every
-part of a multipart feature is to be labeled, suppress labeling of features and
-wrap labels on characters here. Use :guilabel:`Data defined settings` for
-attribute-based or database-connection-based settings.
+The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
+:guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
+
 
 .. if features act as obstacles for labels or not
 
@@ -547,8 +544,26 @@ attribute-based or database-connection-based settings.
 
    Smart labeling of vector polygon layers |nix|
 
-.. index:: Label_Engine_Settings, Colliding_Labels
-.. index:: Popmusic_Tabu, Popmusic_Chain, Chain, Popmusic_Tabu_Chain, FALP
+**Using data-defined override for labeling**
+
+With the data-defined override functions the settings for the labeling
+are overwritten by entries in the attribute table.
+You can activate/deactivate the function with the right-mouse button.
+Hover over the symbol and you see the information about the data-defined override,
+including the current definition field.
+We now describe an example how to use the data-defined override function for the 
+|mActionMoveLabel|:guilabel:`Move label` function.
+#. Import the lakes.shp from the QGIS sample dataset.
+#. Double-klick the layer to open the Layer Properties. Klick on :guilabel:`Labels`
+   and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
+#. Look for the :guilabel:`Data defined` entries. Klick the |mIconDataDefine| -Icon to
+   define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X and 'ylabel'
+   for Y. The Icons are now highlighted in yellow.
+#. Zoom into a lake. 
+#. Go to the Label toolbar and klick the |mActionMoveLabel| Icon. Now you can shift the label
+   manually to another position. The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the 
+   attribute table. 
+
 
 **Change engine settings**
 
@@ -568,23 +583,6 @@ Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
    Dialog to change label engine settings |nix|
 
-Furthermore the number of candidates can be defined for point, line and
-polygon features, and you can define whether to show all labels (including
-colliding labels) and label candidates for debugging.
-
-**Keywords to use in attribute columns for labeling**
-
-There is a list of supported key words, that can be used for the placement
-of labels in defined attribute columns.
-
-
-* **For horizontal alignment**: ``left``, ``center``, ``right``
-* **For vertical alignment**: ``bottom``, ``base``, ``half``, ``top``
-* **Colors can be specified in svg notation**, e.g. \#ff0000
-* **for bold, underlined, strikeout and italic**: 0 = false 1 = true
-
-A combination of key words in one column also works, e.g.: ``base right`` or
-``bottom left``.
 
 Labels (deprecated)
 ...................

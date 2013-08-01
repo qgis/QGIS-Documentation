@@ -522,7 +522,11 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png
    :width: 1.5em
+.. |mActionMoveLabel| image:: /static/common/mActionMoveLabel.png
+   :width: 1.5em
 .. |mActionAdd| image:: /static/common/mActionAdd.png
+   :width: 1.5em
+.. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
