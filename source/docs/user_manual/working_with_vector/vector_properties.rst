@@ -552,7 +552,8 @@ You can activate/deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
 We now describe an example how to use the data-defined override function for the 
-|mActionMoveLabel|:guilabel:`Move label` function.
+|mActionMoveLabel|:sup:`Move label` function (see figure_labels_4_ ).
+
 #. Import the lakes.shp from the QGIS sample dataset.
 #. Double-klick the layer to open the Layer Properties. Klick on :guilabel:`Labels`
    and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
@@ -561,15 +562,8 @@ We now describe an example how to use the data-defined override function for the
    for Y. The Icons are now highlighted in yellow.
 #. Zoom into a lake. 
 #. Go to the Label toolbar and klick the |mActionMoveLabel| Icon. Now you can shift the label
-   manually to another position. The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the 
+   manually to another position (see figure_labels_5_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the 
    attribute table. 
-
-
-**Change engine settings**
-
-Additionally you can click the **[Engine settings]** button and select
-the search method, used to find the best label placement. Available is
-Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
 
 .. _figure_labels_4:
 
@@ -582,6 +576,19 @@ Chain, Popmusic Tabu, Popmusic Chain, Popmusic Tabu Chain and FALP.
    :align: center
 
    Dialog to change label engine settings |nix|
+
+
+.. _figure_labels_5:
+
+.. only:: html
+
+   **Figure Labels 5:**
+
+.. figure:: /static/user_manual/working_with_vector/move_label.png
+   :width:  15em
+   :align: center
+
+   Move labels |nix|
 
 
 Labels (deprecated)
@@ -670,14 +677,10 @@ selected label is shown.
 Fields Menu
 -----------
 
-|attributes| Within the :guilabel:`Fields` tab the field attributes of the
+|attributes| Within the :guilabel:`Fields` menu the field attributes of the
 selected dataset can be manipulated. The buttons |mActionNewAttribute|
 :sup:`New Column` and |mActionDeleteAttribute| :sup:`Delete Column`
 can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
-
-At the moment only columns from PostGIS layers can be removed and added. The
-OGR library supports to add and remove columns, if you have a GDAL version >= 1.9
-installed.
 
 **Edit Widget**
 
@@ -699,7 +702,7 @@ installed.
 
    Dialog to select an edit widget for an attribute column |nix|
 
-Within the :guilabel:`Fields` tab you also find an ``edit widget`` column.
+Within the :guilabel:`Fields` menu you also find an ``edit widget`` column.
 This column can be used to define values or a range of values that are allowed
 to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
@@ -735,6 +738,9 @@ widgets. These widgets are:
   select layer, key column and value column.
 * **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
   field, if empty.
+* **Photo**:
+* **Webview**:
+* **Color**:
 
 .. _vectorgeneraltab:
 
