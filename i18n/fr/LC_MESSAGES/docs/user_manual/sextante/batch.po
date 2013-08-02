@@ -11,13 +11,14 @@ msgstr ""
 "POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: yjacolin <yjacolin@free.fr>\n"
-"Language-Team: French "
-"<http://www.transifex.com/projects/p/qgis-documentation/language/fr/>\n"
+"Language-Team: French <http://www.transifex.com/projects/p/qgis-documentation/language/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Source-Language: C\n"
 
 # fb2ecbc928ce4fa492072738b27fce8a
 #: ../../source/docs/user_manual/sextante/batch.rst:8
@@ -52,11 +53,14 @@ msgid ""
 "toolbox and select the :guilabel:`Execute as batch process` option in the "
 "pop-up menu that will appear."
 msgstr ""
+"Pour exécuter un algorithme en traitement par lots, cliquez avec le bouton "
+"droit sur son nom dans la boîte à outis et sélectionnez l'option "
+":guilabel:`Exécution par lots` dans le menu contextuel qui apparaît."
 
 # 310d4f31361040ad8f3d74bff3cb3bd2
 #: ../../source/docs/user_manual/sextante/batch.rst:36
 msgid "The parameters table"
-msgstr ""
+msgstr "La table des paramètres"
 
 # f5aa88052dfd45ad8b586789e466bf96
 #: ../../source/docs/user_manual/sextante/batch.rst:38
@@ -67,6 +71,10 @@ msgid ""
 "each time the algorithm has to be executed. Values are introduced using a "
 "table like the one shown next."
 msgstr ""
+"L'exécution d'un traitement par lots est semblable à l'exécution simple d'un "
+"algorithme. Les valeurs des paramètres peuvent être définies, mais dans le "
+"cas présent, il est nécessaire de définir les valeurs pour chaque exécution "
+"de l'algorithme. Ces valeurs sont à donner dans la table suivante."
 
 # c2d25c26e03e4009a39d84a2c06e16f0
 #: ../../source/docs/user_manual/sextante/batch.rst:56
@@ -76,6 +84,9 @@ msgid ""
 "parameters dialog that you see when executing an algorithm from the toolbox, "
 "but with a different arrangement."
 msgstr ""
+"Chaque ligne de la table correspond à une itération de l'algorithme et "
+"chaque cellule contient la valeur de chaque paramètre. Ce sont les mêmes "
+"paramètres que dans la boîte à outils, mais présentés différemment."
 
 # 46364748dd7c459abf34043e8f852c97
 #: ../../source/docs/user_manual/sextante/batch.rst:61
@@ -83,6 +94,8 @@ msgid ""
 "By default, the table contains just two rows. You can add or remove rows "
 "using the buttons on the lower part of the window."
 msgstr ""
+"Par défaut, la table contient seulement deux lignes. Vous pouvez ajouter ou "
+"retirer des lignes en utilisant les boutons situés en bas de la fenêtre."
 
 # 53d5f16134b34c079f8bed94a9286d07
 #: ../../source/docs/user_manual/sextante/batch.rst:64
@@ -90,11 +103,13 @@ msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values."
 msgstr ""
+"Une fois le nombre de lignes souhaitées atteint, vous pouvez remplir les "
+"paramètres avec les valeurs correspondantes."
 
 # 2f6601e1cdbf4db0976248a922b812e3
 #: ../../source/docs/user_manual/sextante/batch.rst:68
 msgid "Filling the parameters table"
-msgstr ""
+msgstr "Remplir la table de paramètres"
 
 # 28ba6cfff049483c918c097c7a73bf8b
 #: ../../source/docs/user_manual/sextante/batch.rst:70
@@ -103,6 +118,9 @@ msgid ""
 "select it from the list of available options, depending on the parameter "
 "type."
 msgstr ""
+"Pour la plupart des paramètres, la valeur à fixer est triviale. Selon le "
+"type de paramètre, entrez simplement la valeur ou sélectionnez l'option "
+"adéquate dans la liste de choix."
 
 # 0006104352bd43c9af605448d0ceb6ed
 #: ../../source/docs/user_manual/sextante/batch.rst:73
@@ -115,6 +133,12 @@ msgid ""
 "even if no data objects at all are opened and the algorithm cannot be run "
 "from the toolbox."
 msgstr ""
+"La principale différence réside dans les couches et les tables en entrées et "
+"les fichiers de sortie des algorithmes. Les couches et tables en entrée d'un "
+"algorithme en mode batch sont lues directement à partir de fichiers et non à "
+"partir de couches déjà chargées dans QGIS. C'est pourquoi tout algorithme "
+"peut être exécuté en traitement par lots, même si aucun objet n'est ouvert, "
+"mais que le traitement par lot ne peut être exécuté depuis la boîte à outils."
 
 # d64c2c98c5024ce8ba01b9cea9363310
 #: ../../source/docs/user_manual/sextante/batch.rst:80
@@ -127,6 +151,14 @@ msgid ""
 "needed. If it represents a multiple input, all the selected files will be "
 "added to a single cell, separated by semicolons (``;``)."
 msgstr ""
+"Les noms de fichiers pour les données en entrée peuvent être directement "
+"entrés au clavier ou, pour simplifier, en cliquant sur le bouton situé à "
+"droite de la cellule, ouvrant un explorateur de fichiers. Plusieurs fichiers "
+"peuvent être sélectionnés simultanément. Si le paramètre d'entrée ne "
+"représente qu'une seule donnée et que plusieurs fichiers ont été "
+"sélectionnés, alors autant de lignes que nécessaires seront remplis. Si le "
+"paramètre représente une liste d'objets en entrée, alors les fichiers seront "
+"ajoutés dans une seule cellule, séparés par un point-virgule (``;``)."
 
 # bc22c88fd1f044f88aec401fb2f50238
 #: ../../source/docs/user_manual/sextante/batch.rst:88
@@ -136,6 +168,11 @@ msgid ""
 "can type the name directly or use the file chooser dialog that appears when "
 "clicking on the accompanying button."
 msgstr ""
+"Les données en sortie sont toujours sauvegardées dans un fichier et, "
+"contrairement à son exécution à partir de la boîte à outils, la sauvegarde "
+"dans un fichier temporaire n'est pas permise. Vous pouvez entrer le nom "
+"directement ou utiliser l'explorateur de fichiers en cliquant sur le bouton "
+"adéquat."
 
 # 6737608a76d246b3b29a9abd2caccb86
 #: ../../source/docs/user_manual/sextante/batch.rst:93
@@ -143,6 +180,9 @@ msgid ""
 "Once you select the file, a new dialog is shown to allow for autocompletion "
 "of other cells in the same column (same parameter)."
 msgstr ""
+"Une fois le fichier choisi,, une nouvelle fenêtre apparaît permettant le "
+"remplissage automatique des autres cellules d'une même colonne (même "
+"paramètre)."
 
 # c0acf8bff42a4372b3154e941b4ba361
 #: ../../source/docs/user_manual/sextante/batch.rst:108
@@ -154,6 +194,11 @@ msgid ""
 "much easier to fill the table, and the batch process can be defined with "
 "less effort."
 msgstr ""
+"Si la valeur par défaut ('Ne pas autocompléter') est choisie, SEXTANTE ne "
+"remplira que la cellule correspondant au nom de fichier. Dans le cas "
+"contraire, toutes les cellules sous la ligne sélectionnée seront remplies à "
+"partir de la valeur choisie. Ainsi, il est aisée de remplir la table de "
+"paramètres et le traitement par lots s'en trouve facilité."
 
 # 9b0c5673aa8e4d92b56b22f074c0faba
 #: ../../source/docs/user_manual/sextante/batch.rst:114
@@ -163,11 +208,15 @@ msgid ""
 "This is particularly useful for naming output data object according to input "
 "ones."
 msgstr ""
+"Le remplissage automatique peut également effectué en concaténant un "
+"compteur au nom de fichier, ou en ajoutant un champ à un autre dans la même "
+"ligne. Cela peut être utile pour nommer un résultat en fonction de la donnée "
+"d'entrée."
 
 # 1a076097c0ff4bf190206c9811daa4fe
 #: ../../source/docs/user_manual/sextante/batch.rst:132
 msgid "Executing the batch process"
-msgstr ""
+msgstr "Exécuter le traitement par lots"
 
 # 4d53f53b935546f6ad4c349f473bda78
 #: ../../source/docs/user_manual/sextante/batch.rst:134
@@ -176,3 +225,6 @@ msgid ""
 "values, just click on **[OK]**. SEXTANTE will show the progress of the "
 "global batch process in the progress bar in the lower part of the dialog."
 msgstr ""
+"Pour exécuter un traitement par lots une fois définies toutes les valeurs "
+"nécessaires, cliquez simplement sur le bouton **[OK]**. SEXTANTE affichera "
+"alors la progression du traitement dans la partie basse de la fenêtre."
