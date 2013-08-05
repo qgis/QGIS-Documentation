@@ -672,7 +672,7 @@ for the labels using fields in the layer.
 Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
 selected label is shown.
 
-.. _vector_attributes_tab:
+.. _vector_attributes_menu:
 
 Fields Menu
 -----------
@@ -742,7 +742,27 @@ widgets. These widgets are:
 * **Webview**:
 * **Color**:
 
-.. _vectorgeneraltab:
+With the **Attribute editor layout** you can now define builtin forms for data entry jobs.
+Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to create
+a category that then will be shown during the digitizing session (see figure_fields_2_). Next step will be to
+assign the relevant attribute columns to the category with the |mActionArrowRight| Icon. You can create
+more categories and use the same attribute columns again. When creating a new category QGIS
+will insert a new tab for the category.
+
+.. _figure_fields_2:
+
+.. only:: html
+
+   **Figure Fields 2:**
+
+.. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
+   :width: 25 em
+   :align: center
+
+   Dialog to create categories with the **Attribute editor layout**
+
+
+.. _vectorgeneralmenu:
 
 General Menu
 ------------

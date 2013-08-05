@@ -526,6 +526,18 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAdd| image:: /static/common/mActionAdd.png
    :width: 1.5em
+.. |mActionSignPlus| image:: /static/common/mActionSignPlus.png
+   :width: 1.5em
+.. |mActionSignMinus| image:: /static/common/mActionSignMinus.png
+   :width: 1.5em
+.. |mActionArrowDown| image:: /static/common/mActionArrowDown.png
+   :width: 1.5em
+.. |mActionArrowLeft| image:: /static/common/mActionArrowLeft.png
+   :width: 1.5em
+.. |mActionArrowRight| image:: /static/common/mActionArrowRight.png
+   :width: 1.5em
+.. |mActionArrowUp| image:: /static/common/mActionArrowUp.png
+   :width: 1.5em
 .. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
