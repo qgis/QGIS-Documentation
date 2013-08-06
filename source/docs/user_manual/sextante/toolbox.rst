@@ -23,7 +23,8 @@ of a same algorithm on different sets of inputs.
 
    SEXTANTE Toolbox |win|
 
-The toolbox contains all the available algorithms, divided into predefined groups. All these groups are found under a single tree entry named *Geoalgorithms*.
+The toolbox contains all the available algorithms, divided into predefined groups.
+All these groups are found under a single tree entry named *Geoalgorithms*.
 
 Additionally, two more entries are found, namely 'Models' and 'Scripts'.
 These include user-created algorithms, and allow you to define your own
@@ -35,7 +36,9 @@ you can enter any word or phrase on the text box. Notice that, as you type, the
 number of algorithms in the toolbox is reduced to just those which contain the
 text you have entered in their names.
 
-In the lower part you will find a box that allows you to switch between the simplified algorithm list (the one explained above), and the advanced list. If you change to the advanced mode, the toolbox will look like this:
+In the lower part you will find a box that allows you to switch between the
+simplified algorithm list (the one explained above), and the advanced list. If
+you change to the advanced mode, the toolbox will look like this:
 
 .. _figure_toolbox_advanced:
 
@@ -55,22 +58,33 @@ from the same source, for instance, from a third-party application with
 geoprocessing capabilities. Some of this groups represent algorithms from one of
 such third-party applications (like SAGA, GRASS or R), while other contain
 algorithms directly coded along with SEXTANTE elements, not relying on any
-additional software. 
+additional software.
 
-This view is recommended to those users that have a certain knowledge of the applications that are backing those algorithms, since they will be shown with their original names and groups.
+This view is recommended to those users that have a certain knowledge of the
+applications that are backing those algorithms, since they will be shown with
+their original names and groups.
 
-Also, some additional algorithms are available in the advanced view, such as LiDAR tools or scripts based on the R statistical computing software, among others. Independent QGIS plugins that add new algorithms to SEXTANTE will only be shown in the advanced view.
+Also, some additional algorithms are available in the advanced view, such as
+LiDAR tools or scripts based on the R statistical computing software, among
+others. Independent QGIS plugins that add new algorithms to SEXTANTE will only
+be shown in the advanced view.
 
-In particular, the simplified view contains algorithms from the following providers,
+In particular, the simplified view contains algorithms from the following providers:
 
-- GRASS
-- SAGA
-- OTB
-- Native QGIS algorithms
+* GRASS
+* SAGA
+* OTB
+* Native QGIS algorithms
 
- In the particular case of runnign QGIS under Windows. These algorithms are fully-functional in a fresh installation of QGIS and they can be run without requiring any additional installation. Also running them requires no prior knowledge of the external applications they use, making them more accesible for first-time users.
+In the particular case of runnign QGIS under Windows. These algorithms are
+fully-functional in a fresh installation of QGIS and they can be run without
+requiring any additional installation. Also running them requires no prior
+knowledge of the external applications they use, making them more accesible for
+first-time users.
 
- If you want to use an algorithm not provided by the any of above providers, switch to the advanced mode by selecting the corresponding option at the bottom of the toolbox.
+If you want to use an algorithm not provided by the any of above providers,
+switch to the advanced mode by selecting the corresponding option at the bottom
+of the toolbox.
 
 To execute an algorithm, just double-click on its name in the toolbox.
 
@@ -115,7 +129,7 @@ table can be of one of the following types.
   selected, since they need to be open so as to retrieve the list of field names
   available.
 
-  You will see a button by each vector layer selector, as shown in the figure below. 
+  You will see a button by each vector layer selector, as shown in the figure below.
 
 .. _figure_vector_iterator:
 

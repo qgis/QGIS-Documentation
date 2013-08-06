@@ -191,23 +191,35 @@ the handy methods provided by SEXTANTE for such task.
 
 The ``runalg`` method returns a dictionary with the output names (the
 ones shown in the algorithm description) as keys and the filepaths of
-those outputs as values. You can load those layers by passing its 
+those outputs as values. You can load those layers by passing its
 filepath to the ``load()`` method.
 
 Additional functions for handling data
--------------------------------------
+--------------------------------------
 
-Apart from the functions used to call SEXTANTE algorithms, importing the ``sextante`` package will also import some additional functions that make it easier to work with data, particularly vector data. They are just convenience functions that wrap some functionality from the QGIS API, usually with a less complex syntax. These functions should be used when developing new algorithms, as they make it easier to operate with input data.
+Apart from the functions used to call SEXTANTE algorithms, importing the
+``sextante`` package will also import some additional functions that make it
+easier to work with data, particularly vector data. They are just convenience
+functions that wrap some functionality from the QGIS API, usually with a less
+complex syntax. These functions should be used when developing new algorithms,
+as they make it easier to operate with input data.
 
-Below is a list of some of this commands. More information can be found in the classes under the ``sextante/tools`` package, and aso in the example scripts provided with SEXTANTE.
+Below is a list of some of this commands. More information can be found in the
+classes under the ``sextante/tools`` package, and aso in the example scripts
+provided with SEXTANTE.
 
-- ``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed object, which can be a filename or the name of the object in the QGIS Table of Contents.
-
-- ``values(layer, fields)``: Returns the values in the attributes table of a vector layer, for the passed fields. Fields can be passed as field names or as zero-based field indices. Returns a dict of lists, with the passed field identifiers as keys. It considers the existing selection 
-
-- ``getfeatures(layer)``: Returns an iterator over the features of a vector layer, considering the existing selection.
-
-- ``uniquelabels(layer, field)``: Returns a list of unique values for a given attribute.  Attribute can be passed as a field name or a zero-based field index. It considers the existing selection
+* ``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed
+  object, which can be a filename or the name of the object in the QGIS Table of
+  Contents.
+* ``values(layer, fields)``: Returns the values in the attributes table of a
+  vector layer, for the passed fields. Fields can be passed as field names or as
+  zero-based field indices. Returns a dict of lists, with the passed field
+  identifiers as keys. It considers the existing selection
+* ``getfeatures(layer)``: Returns an iterator over the features of a vector
+  layer, considering the existing selection.
+* ``uniquelabels(layer, field)``: Returns a list of unique values for a given
+  attribute.  Attribute can be passed as a field name or a zero-based field
+  index. It considers the existing selection
 
 Creating scripts and running them from the toolbox
 --------------------------------------------------

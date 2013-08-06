@@ -34,9 +34,16 @@ to be installed in your system.
 A note for Windows users
 ........................
 
-If you are not an advanced user and you are running QGIS on windows, you might not be interested in reading the rest of this chapter. Make sure you install QGIS in your system using the OSGeo4W application. That will automatically install SAGA, GRASS and OTB in your system, and configure them so they can be run from SEXTANTE. All the algorithms in the simplified view of the toolbox will be ready to be run, without needing any further configuration.
+If you are not an advanced user and you are running QGIS on windows, you might
+not be interested in reading the rest of this chapter. Make sure you install
+QGIS in your system using the OSGeo4W application. That will automatically
+install SAGA, GRASS and OTB in your system, and configure them so they can be
+run from SEXTANTE. All the algorithms in the simplified view of the toolbox will
+be ready to be run, without needing any further configuration.
 
-If you want to know more about how these providers work, or want to use some algorithms not included in the simplified toolbox (such as R scripts), keep on reading.
+If you want to know more about how these providers work, or want to use some
+algorithms not included in the simplified toolbox (such as R scripts), keep on
+reading.
 
 A note on file formats
 ......................
@@ -93,7 +100,7 @@ SAGA
 
 SAGA algorithms can be run from SEXTANTE if you have SAGA installed in your system
 and you configure SEXTANTE properly so it can find SAGA executables. In particular,
-the SAGA command-line executable is needed to run SAGA algorithms. 
+the SAGA command-line executable is needed to run SAGA algorithms.
 
 
 In case of running Windows, the standalone installer or the OSGeo4W installer, both
@@ -345,7 +352,7 @@ own ones.
    additional libraries that you might need have to be explicitly loaded. Just
    add the necessary commands at the beginning of your script. You also have to
    make sure that the corresponding packages are installed in the R distribution
-   used by SEXTANTE. SEXTANTE will not take care of any package installation. If you 
+   used by SEXTANTE. SEXTANTE will not take care of any package installation. If you
    run a script that requires an uninstalled package, the execution will fail, and
    SEXTANTE will try to detect which packages are missing, showing you a dialog like
    the one shown next
@@ -397,13 +404,14 @@ Orfeo ToolBox
 -------------
 
 Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB installed
-in your system and you have configured SEXTANTE properly, so it can find all necessary files
-(command-line tools and libraries). 
+in your system and you have configured SEXTANTE properly, so it can find all
+necessary files (command-line tools and libraries).
 
 
-As in the case of SAGA OTB binaries are included in the standalone installer fro Windows,
-but are not included if you are runing Linux, so you have to download and install the software 
-yourself. Please check the OTB website for more information.
+As in the case of SAGA OTB binaries are included in the standalone installer for
+Windows, but are not included if you are runing Linux, so you have to download
+and install the software yourself. Please check the OTB website for more
+information.
 
 Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog and
 configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
