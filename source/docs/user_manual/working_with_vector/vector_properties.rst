@@ -425,7 +425,7 @@ Thus, a placement in a certain quadrant with a certain rotation is possible.
 
 In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options` 
 you find the scale-based visibility setting now. You can prevent QGIS from rendering only selected labels with
-the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)`checkbox. 
+the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox. 
 In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In QGIS 2.0.0 now it's possible to define 
 if the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
@@ -702,7 +702,7 @@ can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
 
    Dialog to select an edit widget for an attribute column |nix|
 
-Within the :guilabel:`Fields` menu you also find an ``edit widget`` column.
+Within the :guilabel:`Fields` menu you also find an **edit widget** column.
 This column can be used to define values or a range of values that are allowed
 to be added to the specific attribute table column. If you click on the
 **[edit widget]** button, a dialog opens, where you can define different
@@ -738,15 +738,16 @@ widgets. These widgets are:
   select layer, key column and value column.
 * **UUID Generator**: Generates a read-only UUID (Universally Unique Identifiers)
   field, if empty.
-* **Photo**:
-* **Webview**:
-* **Color**:
+* **Photo**: Field contains a filename for a picture. The width and height of the field can be defined.
+* **Webview**: Field contains an URL. The width and height of the field is variable.
+* **Color**: A field which allows to enter color codes. During data entry the color is visible through a color bar
+  included in the field.
 
 With the **Attribute editor layout** you can now define builtin forms for data entry jobs.
-Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to create
+Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to transfer
 a category that then will be shown during the digitizing session (see figure_fields_2_). Next step will be to
-assign the relevant attribute columns to the category with the |mActionArrowRight| Icon. You can create
-more categories and use the same attribute columns again. When creating a new category QGIS
+assign the relevant fields to the category with the |mActionArrowRight| Icon. You can create
+more categories and use the same fields again. When creating a new category QGIS
 will insert a new tab for the category.
 
 .. _figure_fields_2:
