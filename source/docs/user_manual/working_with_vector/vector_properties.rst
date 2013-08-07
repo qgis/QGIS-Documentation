@@ -748,7 +748,22 @@ Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlu
 a category that then will be shown during the digitizing session (see figure_fields_2_). Next step will be to
 assign the relevant fields to the category with the |mActionArrowRight| Icon. You can create
 more categories and use the same fields again. When creating a new category QGIS
-will insert a new tab for the category.
+will insert a new tab for the category in the built in form.
+
+Other options in the dialog are 'Autogenerate' and 'Provide ui-file'. 'Autogenerate' just creates Editors for all fields
+and tabulates them.
+The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer. Using an UI-file allows
+a large freedom in creating a dialog. For detailed information see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/ .
+
+QGIS dialogs can have a python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
+An example is (in module MyForms.py):
+::
+  def open(dialog,layer,feature):
+  geom = feature.geometry()
+  control = dialog.findChild(QWidged,"My line edit")
+
+Reference in Python Init Function like so: MyForms.open
+MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
 
 .. _figure_fields_2:
 
@@ -768,10 +783,10 @@ will insert a new tab for the category.
 General Menu
 ------------
 
-|general| The :guilabel:`General` tab is essentially like that of the raster dialog.
+|general| The :guilabel:`General` menu is essentially like that of the raster dialog.
 There are several options available:
 
-* Change the display name of the layer
+* Change the display name of the layer in :guilabel:`displayed as`
 * Set a display field to be used for the :guilabel:`Identify Results` dialog
 * Define a certain Edit User Interface for the vector layer written with the Qt
   Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/
