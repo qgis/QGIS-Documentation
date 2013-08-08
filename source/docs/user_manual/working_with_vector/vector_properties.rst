@@ -571,11 +571,11 @@ We now describe an example how to use the data-defined override function for the
 
    **Figure Labels 4:**
 
-.. figure:: /static/user_manual/working_with_vector/label_engine.png
-   :width: 15em
+.. figure:: /static/user_manual/working_with_vector/label_data_defined.png
+   :width: 30em
    :align: center
 
-   Dialog to change label engine settings |nix|
+   Labeling of vector polygon layers with data-defined override |nix|
 
 
 .. _figure_labels_5:
