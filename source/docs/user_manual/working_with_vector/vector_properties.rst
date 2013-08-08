@@ -763,6 +763,7 @@ An example is (in module MyForms.py):
   control = dialog.findChild(QWidged,"My line edit")
 
 Reference in Python Init Function like so: MyForms.open
+
 MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
 
 .. _figure_fields_2:
@@ -783,24 +784,30 @@ MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
 General Menu
 ------------
 
-|general| The :guilabel:`General` menu is essentially like that of the raster dialog.
+|general| Use this menu to make general settings for the vector layer.
 There are several options available:
 
+Layer Info
 * Change the display name of the layer in :guilabel:`displayed as`
-* Set a display field to be used for the :guilabel:`Identify Results` dialog
-* Define a certain Edit User Interface for the vector layer written with the Qt
-  Creator IDE and tools at http://qt.digia.com/Product/Developer-Tools/
+* Define the guilabel:`Layer source` of the vector layer
+* Define the :guilabel:`Data source encoding` to define provider specific option and to 
+  be able to read the file
+
+Coordinate Reference System
+* :guilabel:`Specify` the Coordinate Reference System. Here you
+  can view or change the projection of the specific vector layer.
 * Create a :guilabel:`Spatial Index` (only for OGR supported formats)
-* Add an :guilabel:`Init function` for the layer. They will overwrite existing
-  QGIS widget initializations, if applied
 * :guilabel:`Update Extents` information for a layer
 * View or change the projection of the specific vector layer, clicking on
   :guilabel:`Specify CRS`
 
-Furthermore you can activate and set |checkbox| :guilabel:`Use scale
-dependent rendering`, define provider specific options (e.g. encoding) and with the
-**[Query Builder]** button you can create a subset of the features in the layer
-that will be visualized (also refer to section :ref:`sec_selection_query`).
+|checkbox| guilabel:`Scale dependent visibility`
+* You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)
+  scale. The scale can also be set by the **[Current]** buttons
+
+Feature subset
+* With the **[Query Builder]** button you can create a subset of the features in the layer
+  that will be visualized (also refer to section :ref:`sec_selection_query`).
 
 .. _figure_general_vect:
 
@@ -808,25 +815,30 @@ that will be visualized (also refer to section :ref:`sec_selection_query`).
 
    **Figure General 1:**
 
-.. figure:: /static/user_manual/working_with_vector/vector_general_tab.png
+.. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
    :width: 25 em
    :align: center
 
-   General tab in vector layers properties dialog |nix|
+   General menu in vector layers properties dialog |nix|
 
-.. _vectormetadatatab:
+.. _vectormetadatamenu:
 
 Metadata Menu
 -------------
 
-|metadata| The :guilabel:`Metadata` tab contains general information about the layer,
-including specifics about the type and location, number of features, feature
-type, and the editing capabilities. The :guilabel:`Extents` section, providing
-layer extent information, and the :guilabel:`Layer Spatial Reference System`
-section, providing information about the CRS of the layer. This is a quick way
+|metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`, 
+:guilabel:`Attribution, :guilabel:`MetadataURL` and `Properties` section.
+
+In the :guilabel:`Properties` section you get general information about the layer,
+including specifics about the type and location, number of features, feature type, 
+and the editing capabilities in the :guilabel:`Properties` section. The :guilabel:`Extents`
+table provides you with layer extent information, and the :guilabel:`Layer Spatial Reference System`
+information, providing information about the CRS of the layer. This is a quick way
 to get information about the layer.
 
-Additionally you can add/edit a title for the layer and some abtract information.
+Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description.
+Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
+metadata catalogue.
 These information will be saved in the QGIS project file for following sessions
 and will be used for QGIS server.
 
