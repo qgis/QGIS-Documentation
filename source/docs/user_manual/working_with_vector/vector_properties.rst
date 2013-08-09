@@ -788,12 +788,14 @@ General Menu
 There are several options available:
 
 Layer Info
+
 * Change the display name of the layer in :guilabel:`displayed as`
-* Define the guilabel:`Layer source` of the vector layer
+* Define the :guilabel:`Layer source` of the vector layer
 * Define the :guilabel:`Data source encoding` to define provider specific option and to 
   be able to read the file
 
 Coordinate Reference System
+
 * :guilabel:`Specify` the Coordinate Reference System. Here you
   can view or change the projection of the specific vector layer.
 * Create a :guilabel:`Spatial Index` (only for OGR supported formats)
@@ -801,11 +803,13 @@ Coordinate Reference System
 * View or change the projection of the specific vector layer, clicking on
   :guilabel:`Specify CRS`
 
-|checkbox| guilabel:`Scale dependent visibility`
-* You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)
+|checkbox| :guilabel:`Scale dependent visibility`
+
+* You can set the :guilabel:`Maximum (inclusive)` and :guilabel:`Minimum (exclusive)`
   scale. The scale can also be set by the **[Current]** buttons
 
 Feature subset
+
 * With the **[Query Builder]** button you can create a subset of the features in the layer
   that will be visualized (also refer to section :ref:`sec_selection_query`).
 
@@ -827,7 +831,7 @@ Metadata Menu
 -------------
 
 |metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`, 
-:guilabel:`Attribution, :guilabel:`MetadataURL` and `Properties` section.
+:guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` section.
 
 In the :guilabel:`Properties` section you get general information about the layer,
 including specifics about the type and location, number of features, feature type, 
@@ -836,7 +840,7 @@ table provides you with layer extent information, and the :guilabel:`Layer Spati
 information, providing information about the CRS of the layer. This is a quick way
 to get information about the layer.
 
-Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description.
+Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description`.
 Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
 metadata catalogue.
 These information will be saved in the QGIS project file for following sessions
@@ -895,7 +899,7 @@ attribute value. This concept is used in the following discussion.
 
 Attribute actions are defined from the vector :guilabel:`Layer Properties`
 dialog. To :index:`define an action`, open the vector :guilabel:`Layer Properties`
-dialog and click on the :guilabel:`Actions` tab. Select 'Generic' as type and
+dialog and click on the :guilabel:`Actions` menu. Select 'Generic' as type and
 provide a descriptive name for the action. The action itself must contain
 the name of the application that will be executed when the action is invoked.
 You can add one or more attribute field values as arguments to the application.
