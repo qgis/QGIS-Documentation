@@ -842,7 +842,10 @@ to get information about the layer.
 
 Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description`.
 Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
-metadata catalogue.
+metadata catalogue. If you want to use a title from an XML metadata file you have to fill in 
+a link in the :guilabel:`DataUrl` field.
+Use :guilabel:`Attribution` to get Atrribute data from an XML metadata catalogue.
+In :guilabel:`MetadataUrl` you can define the general path to the XML metadata catalogue.
 These information will be saved in the QGIS project file for following sessions
 and will be used for QGIS server.
 
@@ -899,8 +902,8 @@ attribute value. This concept is used in the following discussion.
 
 Attribute actions are defined from the vector :guilabel:`Layer Properties`
 dialog. To :index:`define an action`, open the vector :guilabel:`Layer Properties`
-dialog and click on the :guilabel:`Actions` menu. Select 'Generic' as type and
-provide a descriptive name for the action. The action itself must contain
+dialog and click on the :guilabel:`Actions` menu. Go to the :guilabel:`Action properties`.
+Select 'Generic' as type and provide a descriptive name for the action. The action itself must contain
 the name of the application that will be executed when the action is invoked.
 You can add one or more attribute field values as arguments to the application.
 When the action is invoked any set of characters that start with a ``%``
@@ -1001,7 +1004,7 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
 #. Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    layer in the legend or right-click and choose :guilabel:`Properties`
    from the popup menu.
-#. Click on the :guilabel:`Actions` tab.
+#. Click on the :guilabel:`Actions` menu.
 #. Enter a name for the action, for example ``Google Search``.
 #. For the action, we need to provide the name of the external program to run.
    In this case, we can use Firefox. If the program is not in your path, you
@@ -1013,12 +1016,11 @@ where ``QGIS`` is the search term. Armed with this information, we can proceed:
    ``firefox http://google.com/search?q=``
 #. Click on the drop-down box containing the field names for the ``lakes``
    layer. It's located just to the left of the **[Insert Field]** button.
-#. From the drop-down box :guilabel:`The valid attribute names for this layer`
-   |selectstring| select 'NAMES' and click **[Insert Field]**.
+#. From the drop-down box select 'NAMES' and click **[Insert Field]**.
 #. Your action text now looks like this:
 
    ``firefox http://google.com/search?q=%NAMES``
-#. To finalize the action click the **[Insert action]** button.
+#. To finalize the action click the **[Add to action list]** button.
 
 
 This completes the action and it is ready to use. The final text of the
@@ -1078,7 +1080,6 @@ do the trick:
 
 ::
 
-
   command = "firefox";
   imagerelpath = "images_test/test_image.jpg";
   layer = qgis.utils.iface.activeLayer();
@@ -1096,7 +1097,6 @@ But what about if the relative path need to be relative to the (saved)
 project file? The code of the Python action would be:
 
 ::
-
 
   command="firefox";
   imagerelpath="images/test_image.jpg";
