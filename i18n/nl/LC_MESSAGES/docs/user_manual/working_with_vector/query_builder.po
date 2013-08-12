@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: nl_NL\n"
+"X-Source-Language: C\n"
 
 # b8493928622b4a6685cb39d0a15b3a35
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:12
 msgid "Query Builder"
-msgstr ""
+msgstr "Zoekopdrachtbouwer"
 
 # f8e3f878f89c44469bc42aa1602fea04
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
@@ -29,11 +32,15 @@ msgid ""
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
 msgstr ""
+"De zoekopdrachtbouwer geeft de mogelijkheid om van een tabel een subset te "
+"maken gebruik makende van een soort SQL WHERE opdracht waarbij het resultaat "
+"wordt getoond in het hoofdscherm. Het resultaat van de zoekopdracht, kan "
+"opgeslagen worden als een nieuwe vectorlaag."
 
 # ab653b58d7474249b62c5eb57f10dbaa
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:19
 msgid "Query"
-msgstr ""
+msgstr "Zoekopdracht"
 
 # 05beb43261af41d7a53a3d808caceb5d
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
@@ -47,6 +54,16 @@ msgid ""
 "data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
 "Values and Operators sections help the user to construct the SQL-like query."
 msgstr ""
+"Open de dialoog van de attributentabel via het icoon |mActionOpenTable| "
+":sup:`Open Attributentabel` van de werkbalk. Klik op de knop **[Geavanceerd "
+"Zoeken]** om de :guilabel:`Zoekopdrachtbouwer` te openen. Bijvoorbeeld "
+"wanneer je een laag ``woonplaatsen`` met een veld ``aantal_inwoners`` hebt "
+"kun je de grotere woonplaatsen eruit selecteren door ``aantal_inwoners > "
+"100000`` in te vullen in het SQL where tekstinvoer gedeelte van de "
+"zoekopdrachtbouwer. Figure_attributes_2_ toont een voorbeeld van de "
+"zoekopdrachtbouwer met gegevens van een PosGIS laag met attributen afkomstig "
+"van een PostgreSQL database. De onderdelen velden, waarden en operatoren "
+"helpen de gebruiker met het opbouwen van een SQL-achtige zoekopdracht."
 
 # 2e8c891160794d6ba176e20eb9752092
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
@@ -57,6 +74,12 @@ msgid ""
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
 msgstr ""
+"**Velden** bevat een lijst van alle attribuutvelden van de vectorlaag uit de "
+"attributentabel. Om een attributenveld toe te voegen aan de SQL where "
+"tekstinvoer gedeelte, dubbelklik op de naam in de lijst van veldnamen. Je "
+"kunt normaal gesproken verschillende velden, waarden en operators gebruiken "
+"om een zoekopdracht op te bouwen maar je kunt deze ook rechtsstreeks in het "
+"SQL where tekstinvoer gedeelte intypen."
 
 # 97161690598940b5bf9aa238c809e776
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:47
@@ -68,6 +91,14 @@ msgid ""
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
 msgstr ""
+"**Waarden** geeft een lijst van de waarden van een attributentabel. Om lijst "
+"te verkrijgen van alle mogelijke waarden van een attribuut, selecteer eerst "
+"het attribuut in de lijst Velden en druk vervolgens op de knop **[Alles]**. "
+"Om een lijst op te bouwen met de 25 eerste unieke waarden van een "
+"attribuutveld, selecteer eerst het atribuut in de lijst Velden en druk "
+"vervolgens op de knop **[Voorbeeld]**. Om een waarde toe te voegen aan het "
+"SQL where tekstinvoer gedeelte, dubbelklik op de waarde in de lijst van "
+"waarden."
 
 # e8ad11710ec84faf843e9b64733900a3
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:54
@@ -77,6 +108,11 @@ msgid ""
 "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
 "logical operators (``AND``, ``OR``, ...) are available."
 msgstr ""
+"**Operatoren** bevat alle operatoren die gebruikt kunnen worden. Om een "
+"operator toe te voegen aan het SQL where tekstinvoer gedeelte druk op de "
+"bijbehorende knop. Beschikbaar zijn relationele operatoren ( ``=`` , ``>`` , "
+"...), de tekstvergelijkingsoperator (``LIKE``) en logische operatoren "
+"(``AND``, ``OR``, ...)."
 
 # 9cef45f5cc95484aaab2720d93572303
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:59
@@ -89,11 +125,20 @@ msgid ""
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
 msgstr ""
+"De knop **[Test]** toont een melding met het aantal objecten die het "
+"resultaat zullen zijn van gegeven zoekopdracht, wat erg handig is tijdens "
+"het proces van het opbouwen van een zoekopdracht. De knop **[Leegmaken]** "
+"zal de inhoud van het SQL where invoertekst gedeelte leegmaken. De knop "
+"**[Opslaan...]** en de knop **[Laden...]** kunnen gebruikt worden om een de "
+"huidige zoekopdracht op te slaan en om deze later weer te laden. Met de knop "
+"**[OK]** worden de objecten die voldoen aan de zoekopdracht geselecteerd en "
+"het venster gesloten. De knop **[Cancel]** sluit het venster zonder de "
+"huidige selectie te veranderen."
 
 # bb9b9d226e3a46c7a82cdbde7ec3ca06
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:70
 msgid "**Changing the Layer Definition**"
-msgstr ""
+msgstr "**Wijzigen van de Laag Definitie**"
 
 # e79aaac32e0f45c480b2650131d90bca
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
@@ -104,11 +149,17 @@ msgid ""
 "on the **[Query Builder]** button on the :guilabel:`General` tab. See "
 "Section :ref:`vector_properties_dialog` for more information."
 msgstr ""
+"Je kunt de laag definitie zelf veranderen door de SQL zoekopdracht te "
+"wijzigen zodat er een subset vanuit objecten wordt geladen. Om dit te doen, "
+"open de dialoog :guilabel:`Laag Eigenschappen` door in de legende te "
+"dubbelklikken op de vectorlaag en dan vervolgens in het tabblad "
+":guilabel:`Algemeen` met de knop **[Query bouwer]** de zoekopdrachtbouwer te "
+"starten. Zie :ref:`vector_properties_dialog` voor meer informatie."
 
 # 9daf0cc3963b4af5b1c3502caa974708
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:84
 msgid "Selection"
-msgstr ""
+msgstr "Selectie"
 
 # 3496ad9fdbb34b41916f40ab0ea42db1
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:86
@@ -119,6 +170,12 @@ msgid ""
 "selected features meeting the filter criteria in yellow. The rest of the "
 "features do not change their appearance."
 msgstr ""
+"Met |qg| is het mogelijk om de selectie visueel zichtbaar te maken gebruik "
+"makende van een vergelijkbare interface die gebruikt is in "
+":ref:`vector_query_builder`. In hierboven geschreven deel het doel van de "
+"zoekopdrachtbouwer is om alle geselecteerde objecten die voldoen aan de "
+"selectiecriteria in de selectiekleur geel weer te geven. De weergave van de "
+"overige objecten wijzigt niet."
 
 # cb07fad9efe9473cb90fe8df33029bc3
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:92
@@ -127,16 +184,24 @@ msgid ""
 "the legend and choosing :guilabel:`Query ...`. If you perform a SQL query "
 "here only the selected features are displayed in the map view. Features that "
 "don't match the SQL query are not visualised in the map view. The same "
-"function is available from the :guilabel:`General` tab in the vector :"
-"guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
+"function is available from the :guilabel:`General` tab in the vector "
+":guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
 "button right below. The selection described above can be used with all "
 "vector data providers."
 msgstr ""
+"Een andere mogelijkheid om een selectie te maken is door met de "
+"rechtermuisknop een laag te selecteren en vervolgens in het snelmenu "
+":guilabel:`Query ...` te kiezen. Hiermee worden alleen die objecten die "
+"voldoen aan de gemaakte zoekopdracht getoond in het kaartbeeld. Objecten die "
+"niet voldoen aan de zoekopdracht worden niet getoont. Dit is dezelfde "
+"functie die achter de knop **[Query bouwer]** zit die je kunt vinden in het "
+"tabblad :guilabel:`Algemeen` van de Dialoog :guilabel:`Laag Eigenschappen`. "
+"Deze werkt voor alle door QGIS ondersteunde vectorformaten."
 
 # 1eef1e856ee347c7be2c4778c349ecce
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:101
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "Opslaan van geselecteerde objecten als een nieuwe laag"
 
 # f29f07bbbebd4c10bbd93b0394b39535
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:103
@@ -148,3 +213,10 @@ msgid ""
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
 msgstr ""
+"De geselecteerde objecten kunnen opgeslagen worden in elk door de OGR driver "
+"ondersteund vectorformaat en ook getransformeerd naar een ander Coördinaten "
+"Referentie Systeem (CRS) indien gewenst. Met de rechtermuis open het "
+"snelmenu van de laag en selecteer daarin :menuselection:`Selectie opslaan "
+"als ... -->` om een naam, een vectorformaat en een CRS te kiezen (zie "
+":ref:`label_legend`). Het is ook mogelijk om OGR creatie opties mee te geven "
+"via de dialoog."
