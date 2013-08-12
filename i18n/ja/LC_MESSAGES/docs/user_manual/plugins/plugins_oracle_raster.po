@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 11:01+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-08-04 10:38+0000\n"
+"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +21,12 @@ msgstr ""
 # cfade3dad3a441f995c3ab46c3e5c094
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:7
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 # f8cf2d15639a458abf29d391f190c40b
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:12
 msgid "Oracle GeoRaster Plugin"
-msgstr ""
+msgstr "Oracle GeoRaster プラグイン"
 
 # 86b359a384cb4b73bc46bada796bea58
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:15
@@ -37,19 +38,19 @@ msgid ""
 "is proprietary software, they provide their software free for development "
 "and testing purposes. Here is one simple example of how to load raster "
 "images to GeoRaster:"
-msgstr ""
+msgstr "Oracleデータベースでは、ラスタデータをOracle Spatialのエクステンションとして利用可能であるSDO\\_GEORASTERオブジェクトに保存することができます。QGISでは|oracle_raster| :sup:`OracleGeoRasterプラグイン` がGDALによってサポートされており、あなたのマシンにインストール・動作するOracleデータベース製品に依存します。Oracleはプロプライエタリなソフトウェアですが、このソフトウェアは開発およびテスト目的で無料で提供されています。ここではラスタイメージをGeoRasterに読み込む１つの簡単な例を示します。"
 
 # 6f7cf5b077f7437aa59acd090fb80cde
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:28
 msgid ""
 "This will load the raster into the default GDAL\\_IMPORT table, as a column "
 "named RASTER."
-msgstr ""
+msgstr "これはRASTERという列として、デフォルトのGDAL\\_importテーブルにラスタをロードします。"
 
 # 2a4dfe34217542fc849d85f5aee9a21b
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:31
 msgid "Managing connections"
-msgstr ""
+msgstr "接続の管理"
 
 # 725cd8ffea40433b80c984c21e716747
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:34
@@ -61,33 +62,33 @@ msgid ""
 ":sup:`Select GeoRaster` toolbar button, it will open the Select Oracle "
 "Spatial GeoRaster dialog window. Click on **[New]** to open the dialog "
 "window, and specify the connection parameters (See Figure_oracle_raster_1_):"
-msgstr ""
+msgstr "まず、プラグインマネージャ (セクション :ref:`load_core_plugin` を参照)を用いてOracle GeoRaster プラグインを有効にする必要があります。初めてQGISにGeoRasterをロードする際、データを含むRracleデータベースとの接続を行う必要があります。これを行うには、|oracle_raster| :sup:`Oracleジオラスタレイヤの追加`ツールバーボタンをクリックすることで開始し、Oracle Spatial GeoRaster を選択するウィンドウを表示します。**[新規]**ボタンをクリックしてダイアログウィンドウを表示し、接続パラメータを特定します ( Figure_oracle_raster_1_ を参照):"
 
 # bedca0e7fbe046e58393019ae49b9dce
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:42
 msgid "**Name**: Enter a name for the database connection."
-msgstr ""
+msgstr "**名称**:データベース接続の名称を入力します。"
 
 # fdee3278227c491ba6e4a5f9dec44be6
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:43
 msgid ""
 "**Database instance**: Enter the name of the database that you will connect "
 "to."
-msgstr ""
+msgstr "**データベースインスタンス**:接続するデータベースの名称を入力します。 "
 
 # 3a027122c970424b9dcd0a999861533e
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:44
 msgid ""
 "**Username**: Specify your own username that you will use to access the "
 "database."
-msgstr ""
+msgstr "**ユーザ名**: データベースのアクセスに使用するユーザ名を指定します。"
 
 # 2828ff529819436fa4b9ddab974d6d2e
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:45
 msgid ""
 "**Password**: The password associated with your username that is required to"
 " access the database."
-msgstr ""
+msgstr "**パスワード**: データベースのアクセスに必要な、ユーザ名と関連するパスワードです。"
 
 # 9d7f1897d27d405db4cba12bb758f3e2
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:61
@@ -98,12 +99,12 @@ msgid ""
 "**[Edit]** the connection by opening the previous dialog and making changes "
 "to the connection information, or use the **[Delete]** button to remove the "
 "connection from the drop-down list."
-msgstr ""
+msgstr "さて、メインのOracle Spatial GeoRaster ダイアログ（ Figure_oracle_raster_2_ を参照）に戻り、ドロップダウンリストを使用して接続を選択し、**[接続]**ボタンを使用して接続を確立します。 **[編集]**で前のダイアログを開き接続情報を変更します。 **[削除]**ボタンを使用してドロップダウンリストから接続を削除します。"
 
 # ccc188e0f0f748d1949c9d6a561e9c66
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:68
 msgid "Selecting a GeoRaster"
-msgstr ""
+msgstr " GeoRaster の選択"
 
 # fc6eea2c3d4c403cb693577204f25cc2
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:71
@@ -111,7 +112,7 @@ msgid ""
 "Once a connection has been established, the sub-datasets window will show "
 "the names of all the tables that contains GeoRaster columns in that database"
 " in the format of a GDAL subdataset name."
-msgstr ""
+msgstr "いったん接続が確立されると、サブデータセットウィンドウにはGDALサブデータセット名の形式でデータベースにGeoRasterカラムを含むすべてのテーブルの名称が表示されます。"
 
 # 6643cddc40c84e31b5f9eafc4d2a7a4d
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:75
@@ -121,7 +122,7 @@ msgid ""
 "names of GeoRaster columns on that table. This is usually a short list, "
 "since most users will not have more than one or two GeoRaster columns on the"
 " same table."
-msgstr ""
+msgstr "リストアップされたサブデータセットのいずれかをクリックし、 **[選択]**をクリックしてテーブル名を選択します。 今サブデータセットの別のリストは、そのテーブルのGeoRaster列の名称で表示されています。ほとんどのユーザは同じテーブルに１つまたは２つ以上のGeoRaster列を持たないため、これはたいてい短いリストです。"
 
 # 0cf0aae7970944cab89c22889e4b442a
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:80
@@ -130,7 +131,7 @@ msgid ""
 "choose one of the the table/column combination. The dialog will now show all"
 " the rows that contains GeoRaster objects. Note that the subdataset list "
 "will now show the Raster Data Table and Raster Id's pairs."
-msgstr ""
+msgstr "リストアップされたサブデータセットをクリックし、テーブル/列の組み合わせの１つを選択するために**[選択]**をクリックします。ダイアログではGeoRasterを含むすべての行を表示します。サブデータセットリストは Raster Data Table とRasterIDのペアが表示される点に注意してください。"
 
 # 5cb34f4357d14f7e995ecd428133e18c
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:85
@@ -138,7 +139,7 @@ msgid ""
 "At anytime the Selection entry can be edited in order to go directly to a "
 "known GeoRaster or to go back to the beginning and select another table "
 "name."
-msgstr ""
+msgstr "いつでも選択エントリは既知のGeoRasterに直接移動するか、最初に戻って、別のテーブル名を選択するために編集することができます。"
 
 # 4567742611be4baca676298bfa7eca9f
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:101
@@ -147,19 +148,19 @@ msgid ""
 " of the identification string, e.g. "
 "``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. See "
 "http://www.gdal.org/frmt_georaster.html for more information."
-msgstr ""
+msgstr "選択データエントリは、例えば``geor:scott/tiger@orcl,gdal_import,raster,geoid=``のように識別文字列の末尾にWhere句を入力するために使用することができます。詳細についてはhttp://www.gdal.org/frmt_georaster.htmlを参照してください。"
 
 # b569439c5436425bae1659c557185465
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:106
 msgid "Displaying GeoRaster"
-msgstr ""
+msgstr "GeoRasterの表示"
 
 # f82b93c7a75d4aeb804a2111f169dbe3
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:109
 msgid ""
 "Finally, by selecting a GeoRaster from the list of Raster Data Table and "
 "Raster Id's, the raster image will be loaded into QGIS."
-msgstr ""
+msgstr "最終的に、ラスタデータテーブルとRasterIDのリストからGeoRasterとを選択することによって、ラスタイメージがQGISにロードされます。"
 
 # f320b16d793a421ebfa01a16173d4e23
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:112
@@ -168,26 +169,26 @@ msgid ""
 " time it opens it will keep the same connection, and will show the same "
 "previous list of subdataset making it very easy to open up another image "
 "from the same context."
-msgstr ""
+msgstr "Oracle Spatial GeoRasterの選択ダイアログウィンドウを閉じ、次にそれを開いても同じ接続を保持できます。以前のサブデータセットのリストと同じものを表示し、同じコンテキストから別のイメージを開くことが簡単にできます。"
 
 # 9b5b1046ea6e43bf9b50eb67acf55704
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:116
 msgid "**Note:**"
-msgstr ""
+msgstr "**注意:**"
 
 # 8782b92cd42d4643931b8de8b3c2a46f
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:118
 msgid ""
 "GeoRasters that contains pyramids will display much faster but the pyramids "
 "need to be generated outside of QGIS using Oracle PL/SQL or gdaladdo."
-msgstr ""
+msgstr "ピラミッドを含むGeoRasterはより速く表示できますが、ピラミッドはOracle PL/SQL またはgdaladdoを使用してQGISの外部から生成する必要があります。"
 
 # f8af91816d6e43788f1c58f7f306963a
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:121
 msgid "The following is example using gdaladdo: ::"
-msgstr ""
+msgstr "gdaladdoを使用した例は次のとおりです: ::"
 
 # db6c6a9fb3954f8b944bf00c6530d492
 #: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:127
 msgid "This is an example using PL/SQL: cd .. ::"
-msgstr ""
+msgstr "これがPL/SQLを使用した例です：cd .. ::"

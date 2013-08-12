@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 10:32+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2013-08-10 06:49+0000\n"
+"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +21,12 @@ msgstr ""
 # 2b552eceeb3b401a8aac0dbea03d61d8
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:7
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 # 09433aa373aa48fa808b17742b36d073
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:13
 msgid "Working with Projections"
-msgstr ""
+msgstr "投影法の利用方法"
 
 # 7d276f7f8417421f9a265873461476b3
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:17
@@ -35,12 +36,12 @@ msgid ""
 "user to define custom coordinate reference systems and supports on-the-fly "
 "(OTF) projection of vector and raster layers. All these features allow the "
 "user to display layers with different CRS and have them overlay properly."
-msgstr ""
+msgstr "QGISでは、定義済みでないCRS(Coordinate Reference System=空間参照系)を持つレイヤのために、グローバルかつプロジェクトワイドなCRSを定義することができます。 また、カスタム空間参照系を定義できますし、実行時でのベクタレイヤの投影(オンザフライプロジェクション)をサポートしています。 これらの機能によって、異なるCRSを持つレイヤを表示させ、確実にオーバレイさせることができるようになります。"
 
 # 5f95698663ef4edbb7c525bfd5e9096e
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:27
 msgid "Overview of Projection Support"
-msgstr ""
+msgstr "投影法サポート概要"
 
 # 07635361829743d48b457f5e55caca32
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:29
@@ -51,7 +52,7 @@ msgid ""
 " so may cause projection support to fail. Custom CRS are stored in a user "
 "database. See Section :ref:`sec_custom_projections` for information on "
 "managing your custom coordinate reference systems."
-msgstr ""
+msgstr "QGISは、約2700のCRSをサポートしています。 これらCRSの個々の定義は、QGISとともにインストールされているSQLiteデータベースに格納されています。 通常、データベースを直接操作する必要はありません。 実際にそういうことを行うと、投影法サポートが失敗することになりかねません。 カスタムCRSはユーザデータベースに格納されます。 カスタム空間参照系の管理に関する情報は :ref:`sec_custom_projections`の章を参照してください。"
 
 # 79b3e32acb1b4c5db0a3cd9f1eadb48d
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:39
@@ -61,7 +62,7 @@ msgid ""
 "France (IGNF) and are largely abstracted from the spatial reference tables "
 "used in GDAL. EPSG identifiers are present in the database and can be used "
 "to specify a CRS in QGIS."
-msgstr ""
+msgstr "QGISで使用可能なCRSは、 European Petroleum Search Group (EPSG) とInstitut Geographique National de France (IGNF)  が定義したEPSG の定義をもとにし、GDALで使用されたspatial_references テーブルから多く抽出しました。EPSG IDはデータベース内にあり、QGISでCRSを指定する際に使うことができます。"
 
 # 72c3393fa5b44fd1acd53ba97f986330
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:45
@@ -76,7 +77,7 @@ msgid ""
 "same base name as the shapefile and a prj extension. For example, a "
 "shapefile named :file:`alaska.shp` would have a corresponding projection "
 "file named :file:`alaska.prj`."
-msgstr ""
+msgstr "オンザフライ投影を使用するには、 使用するデータに空間参照系情報が含まれている必要があり、 含まれていない場合にはグローバルなCRS、レイヤに対して指定したCRS、またはプロジェクトに対して指定したCRSかを定義しなければなりません。 QGISが使用するPostGISレイヤは、レイヤが生成される時に指定されていた空間参照系IDを使用します。 OGRデータでは、QGISは、フォーマットごとに特有になっているCRSを設定する手段が存在することを前提としています。 シェープファイルの場合は、Well Known Text (:index:`WKT`) でのCRS設定を含むファイルを意味します。 投影法ファイルは同じシェープファイルと同じベース名を持ち、拡張子がprjです。 たとえば、:`alaska.shp` というシェープファイルに対しては、投影法ファイルは :file:`alaska.prj`という名前になります。"
 
 # ed48d8339d184715be0963a2ddf179dd
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:56
@@ -85,12 +86,12 @@ msgid ""
 "changed in the :guilabel:`General` tab of the |mActionOptions| "
 ":guilabel:`Project Properties` dialog under the :guilabel:`Edit` (Gnome, "
 "OSX) or :guilabel:`Settings` (KDE, Windows) menu."
-msgstr ""
+msgstr "新しいCRSを選択した時、レイヤで利用される単位は  :guilabel:`編集` (Gnome, OSX)または:guilabel:`設定` (KDE, Windows) メニューにある|mActionOptions| :guilabel:`プロジェクトのプロパティ`ダイアログの:guilabel:`一般情報`タブで自動的に変更されます。"
 
 # cbb03534882642d98e75a16053ce5dc8
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:65
 msgid "Specifying a Projection"
-msgstr ""
+msgstr "投影法の指定"
 
 # 094775e2826445c4b95ba08d49c4f2dc
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:67
@@ -102,7 +103,7 @@ msgid ""
 "Default Coordinate Reference System to use when starting new projects, as "
 "shown in figure_projection_1_. This choice will be saved for use in "
 "subsequent QGIS sessions."
-msgstr ""
+msgstr "QGISは新規プロジェクトにおいてグローバルなデフォルト投影法を使って起動します。グローバルデフォルトCRSはPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) で、QGISで事前に定義されています。このデフォルトは 図１が示す通り、新規プロジェクトを開始した際、デフォルトの座標参照系を定義するのに使用された最初のセクションで**[選択...]** ボタンをクリックして変更できます。この選択は、その後のQGISセッションで使用するために保存されます。"
 
 # 923f5086721f4308b514441ba00579af
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:87
@@ -112,27 +113,27 @@ msgid ""
 ":guilabel:`CRS` tab under :menuselection:`Edit -->` |mActionOptions| "
 ":guilabel:`Options` (Gnome, OSX) or :menuselection:`Settings -->`  "
 "|mActionOptions| :guilabel:`Options` (KDE, Windows)."
-msgstr ""
+msgstr "CRSのを持っていないレイヤを使用する歳、どうやってQGISがこれらのレイヤに応答するかを定義しなければいけません。これは:menuselection:`編集 -->` |mActionOptions| :guilabel:`オプション` (Gnome, OSX) または :menuselection:`設定 -->` |mActionOptions| :guilabel:`オプション` (KDE, Windows)を実行し:guilabel:`CRS`タブでグローバルまたはプロジェクト全体に実行されます。"
 
 # f4761a7136084b3ebdf4ba96cf1b4447
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:93
 msgid "The options shown in figure_projection_2_ are:"
-msgstr ""
+msgstr "figure_projection_2_ で示されたこのオプション："
 
 # 7a3e56d073f84446937e949ea64c7382
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:95
 msgid "|checkbox| :guilabel:`Prompt for CRS`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`CRSを確認する`"
 
 # ec8337e5a6ec466bb91dbd8e6b46545d
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:96
 msgid "|checkbox| :guilabel:`Use project CRS`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`プロジェクトのCRSを利用する`"
 
 # 793403a6b7234acb98c49c30df558bbe
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:97
 msgid "|checkbox| :guilabel:`Use default CRS displayed below`"
-msgstr ""
+msgstr "|checkbox| :guilabel:`以下に表示されているデフォルトCRSを利用する`"
 
 # c37c9865069a4902a6d118858e0f5620
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:99
@@ -143,19 +144,19 @@ msgid ""
 ":ref:`vectorgeneraltab`) properties dialog. If your layer already has a CRS "
 "defined, it will be displayed as shown in :ref:`figure_vector_properties_1` "
 "."
-msgstr ""
+msgstr "CRSの情報なしに特定のレイヤの座標参照系を定義したい場合はラスタ ( :ref:`label_generaltab` を参照) およびベクタ( :ref:`vectorgeneraltab` を参照) プロパティダイアログの:guilabel:`一般情報`タブで行うことができます。すでにレイヤでCRSが定義されている場合は、:ref:`figure_vector_properties_1`で示すように表示されます。"
 
 # fbb733ec91124d99abdedd6aa6965d0c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:105
 msgid "**CRS in the Map Legend**"
-msgstr ""
+msgstr "**マップ凡例のCRS**"
 
 # f1f874a40a30498ba647491fb470920c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:107
 msgid ""
 "Right clicking on a layer in the Map Legend (Section :ref:`label_legend`) "
 "provides two CRS short cuts."
-msgstr ""
+msgstr "マップ凡例( :ref:`label_legend`を参照)のレイヤを右クリックすると２つのCRSののショートカットが提供されます。 "
 
 # 63e2e1bce58246c9a8eae080c6b60254
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:110
@@ -164,19 +165,19 @@ msgid ""
 "System Selector dialog (see figure_projection_2_). Which you also get to by "
 "the **[Select]** button on the :guilabel:`General` tab of the layer "
 "properties dialog."
-msgstr ""
+msgstr ":guilabel:`レイヤCRSを設定する`は直接座標参照系選択ダイアログを表示します（figure_projection_2_ を参照）。レイヤプロパティダイアログの:guilabel:`一般情報`タブにある **[選択]**ボタンを押すことでも同様の操作ができます。"
 
 # 3ceb3e12ad0144e2aa77f572e4c7e4c1
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:114
 msgid ""
 ":guilabel:`Set project CRS from Layer` redefines the project CRS using the "
 "layer's CRS"
-msgstr ""
+msgstr ":guilabel:`レイヤのCRSをプロジェクトに設定する`では、レイヤのCRSを使ってプロジェクトCRSをを再定義します。 "
 
 # 339ae2952b5f453f86aba9df8d9d08c7
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:134
 msgid "Define On The Fly (OTF) Projection"
-msgstr ""
+msgstr "オンザフライ（OTF）プロジェクションの定義"
 
 # af6839a93de24a32b3be82aebbf01799
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:136
@@ -186,12 +187,12 @@ msgid ""
 "the |checkbox| :guilabel:`Enable on the fly projection` checkbox in the "
 ":guilabel:`CRS` tab of the |mActionProjectProperties| "
 ":menuselection:`Project Properties` dialog."
-msgstr ""
+msgstr "QGISではラスタとベクタの両方でオンザフライプロジェクションがサポートされています。しかしながらオンザフライプロジェクションはデフォルトでは有効になっていません。オンザフライプロジェクションを使用するには  |mActionProjectProperties| :menuselection:`プロジェクトのプロパティ`ダイアログの:guilabel:`CRS`タブにある|checkbox| :guilabel:`オンザフライ'CRS変換を有効にする` を有効にしなければいけません。"
 
 # 3707328da6994ff997441c5eabec3441
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:142
 msgid "There are three ways to achieve this end:"
-msgstr ""
+msgstr "これを達成する方法は３つあります："
 
 # c3f0803845774456b238dde0d9bd68e0
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:144
@@ -199,14 +200,14 @@ msgid ""
 "Select |mActionOptions| :menuselection:`Project Properties` from the "
 ":menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
 "Windows) menu."
-msgstr ""
+msgstr " :menuselection:`編集` (Gnome, OSX) or :menuselection:`設定` (KDE, Windows)メニューから  |mActionOptions| :menuselection:`プロジェクトのプロパティ`を選択します。"
 
 # 53748ff5c5ac48b5889d68dea86c3a5a
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:147
 msgid ""
 "Click on the |geographic| :sup:`CRS status` icon in the lower right-hand "
 "corner of the statusbar."
-msgstr ""
+msgstr "ステータスバーの右下角にある|geographic| :sup:`CRS ステータス`アイコンをクリックします。"
 
 # 67bb3e67626e46b99f63f0e34b684965
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:149
@@ -214,7 +215,7 @@ msgid ""
 "Turn OTF on by default, by selecting the :guilabel:`CRS` tab of the "
 ":guilabel:`Options` dialog and selecting |checkbox| :guilabel:`Enable 'on "
 "the fly' reprojection by default`"
-msgstr ""
+msgstr " デフォルトをオンザフライプロジェクションに切り替えるには :guilabel:`オプション`ダイアログの:guilabel:`CRS`タブを選択し、 |checkbox| :guilabel:`オンザフライ再投影をデフォルトを有効にする`を選択します。"
 
 # 302b1b2d180a40d0996b3cc5df1e62ed
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:154
@@ -225,7 +226,7 @@ msgid ""
 "|checkbox| :guilabel:`Enable on the fly projection` checkbox. The "
 "|geographic| :sup:`CRS status` icon will no longer be greyed-out and all "
 "layers will be OTF projected to the CRS shown next to the icon."
-msgstr ""
+msgstr "既にレイヤをロードしていて、オンザフライプロジェクションを有効にしたい場合は、:guilabel:`プロジェクトのプロパティ`ダイアログの :guilabel:`座標参照系`タブを開いてCRSを選択後|checkbox| :guilabel:`オンザフライプロジェクションを有効にする`チェックボックスを有効にするのが最良の方法です。  |geographic| :sup:`CRSステータス`アイコンがグレーアウトされ、すべてのレイヤが、アイコンの隣に表示されたCRSにオンザフライで投影変換されます。"
 
 # f6c919f066204207b2c41b4248aee644
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:161
@@ -233,7 +234,7 @@ msgid ""
 "The :guilabel:`Coordinate Reference System` tab of the :guilabel:`Project "
 "Properties` dialog contains five important components as shown in "
 "Figure_projection_3_ and described below."
-msgstr ""
+msgstr ":guilabel:`プロジェクトのプロパティ`ダイアログのThe :guilabel:`座標参照系(CRS)`タブはFigure_projection_3_   に示され、下記に説明している５つの重要なコンポーネントがあります。"
 
 # 0db54ec0107a46aba314718803ec0fed
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:182
@@ -242,7 +243,7 @@ msgid ""
 "disable OTF projection. When off, each layer is drawn using the coordinates "
 "as read from the data source. When on, the coordinates in each layer are "
 "projected to the coordinate reference system defined for the map canvas."
-msgstr ""
+msgstr "**オンザフライ投影法を有効にする** -このチェックボックスはオンザフライ投影法の有効と無効を切り替えるのに使います。オフにすると、それぞれのレイヤは、データソースから読み取った座標を使って描画されます。オンにすると、それぞれのレイヤの座標は、マップキャンバスで定義された座標参照系で投影されます。"
 
 # d465b18ed5a74acfb8900dd25d6c6c89
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:187
@@ -251,14 +252,14 @@ msgid ""
 "QGIS, including Geographic, Projected and Custom coordinate reference "
 "systems. To use a CRS, select it from the list by expanding the appropriate "
 "node and selecting the CRS. The active CRS is preselected."
-msgstr ""
+msgstr "**座標参照系**- QGISでサポートされている地理座標系、投影座標系、カスタム座標系の、全てのCRSの一覧です。CRSを使うには、適切なノードを展開してこのリストから選択します。"
 
 # fefc3537685a49469c73086f8ef2ba5c
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:191
 msgid ""
 "**Proj4 text** - this is the CRS string used by the Proj4 projection engine."
 " This text is read-only and provided for informational purposes."
-msgstr ""
+msgstr "**Proj4 text** - 投影変換エンジンであるProj4で使われる文字列です。この文字列は読み取り専用で、情報提供のために提供されます。"
 
 # 88840c58d6e149e4916b25158f43d682
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:194
@@ -268,7 +269,7 @@ msgid ""
 "Enter the identifier and click on **[Find]**. Use the |checkbox| "
 ":guilabel:`Hide deprecated CRSs` checkbox to show only the currently valid "
 "projections."
-msgstr ""
+msgstr "**検索** -  EPSG ID またはCRSの名称を知っている場合にここで検索します。IDまたは名称を入力して 　　　　**[Find ]**ボタンをクリックします。  |checkbox| :guilabel:`一致しない座標参照系を隠す` チェックボックスを使うと現在有効な投影法のみが表示されます。"
 
 # cf0f9595f1f04edfb7b34b2a589839d5
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:199
@@ -277,12 +278,12 @@ msgid ""
 "your everyday GIS work, these will be displayed in the table at the bottom "
 "of the Projection Dialog. Click on one of these buttons to select the "
 "associated CRS."
-msgstr ""
+msgstr "**最近利用した座標参照系** - 日常のGISでの作業でよく使うCRSがあるなら、ダイアログの下部に「クイックアクセス」ボタンとして表示されます。これらのひとつをクリックすると、CRSを選択できます。"
 
 # e747e273958d4caeab5054485dc77a60
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:205
 msgid "**Project Properties Dialog**"
-msgstr ""
+msgstr "**プロジェクトプロパティダイアログ**"
 
 # 7c1cb0803a824db8b57a87bbb367ae8b
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:207
@@ -291,7 +292,7 @@ msgid ""
 ":menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
 "Windows) menu, you must click on the :guilabel:`Coordinate Reference System`"
 " tab to view the CRS settings."
-msgstr ""
+msgstr ":menuselection:`編集` (Gnome, OSX) または :menuselection:`設定` (KDE, Windows)メニューから:guilabel:`プロジェクトのプロパティ`ダイアログを開いた場合は、 :guilabel:`座標参照系`タブをクリックし、CRS設定を表示します。"
 
 # 6ad4f1ded4594b199e96f941d3526172
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:212
@@ -299,12 +300,12 @@ msgid ""
 "Opening the dialog from the |geographic| :guilabel:`CRS status` icon will "
 "automatically bring the :guilabel:`Coordinate Reference System` tab to the "
 "front."
-msgstr ""
+msgstr " |geographic| :guilabel:`CRS ステータス`アイコンからダイアログを開くと自動的に  :guilabel:`座標参照系`タブが前面に表示されます。"
 
 # d6ce4bd5a7904213b9f1cf06c7864343
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:219
 msgid "Custom Coordinate Reference System"
-msgstr ""
+msgstr "カスタム空間参照システム"
 
 # e97c0fb405f74756877bb504c24f7ccb
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:223
@@ -315,7 +316,7 @@ msgid ""
 ":menuselection:`Settings` (KDE, Windows) menu.  Custom CRS are stored in "
 "your QGIS user database. In addition to your custom CRS, this database also "
 "contains your spatial bookmarks and other custom data."
-msgstr ""
+msgstr "QGISが使用しなければならないCRSを提供していない場合は、カスタムCRSを定義できます。 CRSを定義するには:menuselection:`編集` (Gnome, OSX) または :menuselection:`設定` (KDE, Windows)  メニューから  |mIconNew|:guilabel:`カスタム CRS` を選択します。 カスタムCRSはQGISのユーザデータベースに格納されます。 また、このデータベースには、カスタムCRSだけでなく、空間ブックマークと他のカスタムデータが格納されます。"
 
 # b49ab2fa42c547ceaa256f8cdd295381
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:244
@@ -325,7 +326,7 @@ msgid ""
 "Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, "
 "U.S. Geological Survey Open-File Report 90-284, 1990 (available at "
 "ftp://ftp.remotesensing.org/proj/OF90-284.pdf."
-msgstr ""
+msgstr "QGISでカスタムCRSを定義する際には、投影変換ライブラリであるProj4を十分に理解する必要があります。 はじめに、 the Cartographic Projection Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990 (available at ftp://ftp.remotesensing.org/proj/OF90-284.pdf) を参照してください。 "
 
 # 105bc15a3e9143ec9763900eacb6c7b6
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:250
@@ -333,24 +334,24 @@ msgid ""
 "This manual describes the use of the ``proj.4`` and related command line "
 "utilities. The cartographic parameters used with ``proj.4`` are described in"
 " the user manual and are the same as those used by QGIS."
-msgstr ""
+msgstr "このマニュアルでは``proj.4``の利用と関連のコマンドラインユーティリティについて記述されています。この地図作成パラメータはこのユーザマニュアルで記述された``proj.4``で使用されておりQGISで使っていたものと同じです。"
 
 # d911dfbe1cb343ac99ca011b723bc649
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:254
 msgid ""
 "The :guilabel:`Custom Coordinate Reference System Definition` dialog "
 "requires only two parameters to define a user CRS:"
-msgstr ""
+msgstr " :guilabel:`カスタム空間参照システム定義`ダイアログでは、CRSを定義するために２つのパラメータを必要とします。"
 
 # 1d9ec20a6fda46fd8ffcf7d37d812f59
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:257
 msgid "a descriptive name and"
-msgstr ""
+msgstr "記述可能な名称"
 
 # 7d46b8a9527d47c7867d82d12fa3b5ba
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:258
 msgid "the cartographic parameters in PROJ.4 format."
-msgstr ""
+msgstr "Proj4書式による地図作成パラメータ."
 
 # 3d130602f0104ccc8a7c206025ce9a3b
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:260
@@ -358,14 +359,14 @@ msgid ""
 "To create a new CRS, click the |mIconNew| :sup:`New` button and enter a "
 "descriptive name and the CRS parameters. After that you can save your CRS by"
 " clicking the |mActionFileSave| :sup:`Save` button."
-msgstr ""
+msgstr "新しいCRSを作成するには |mIconNew| :sup:`新規` ボタンをクリックして、 名称とCRSパラメータを入力します。 その後   |mActionFileSave| :sup:`保存`  ボタンをクリックしてCRSを保存します。"
 
 # 93c1fd7ed8074d8a935a7fc8b7c3ca00
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:264
 msgid ""
 "Note that the :guilabel:`Parameters` must begin with a ``+proj=``-block, to "
 "represent the new coordinate reference system."
-msgstr ""
+msgstr "注 新しいCRSを表現するには、 パラメータは ``+proj=`` -ブロックで開始されていなければいけません。"
 
 # 21d5b962aff74e058ff366eca7aab2f7
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:267
@@ -376,4 +377,4 @@ msgid ""
 "enter known WGS 84 latitude and longitude values in :guilabel:`North` and "
 ":guilabel:`East` fields respectively. Click on **[Calculate]** and compare "
 "the results with the known values in your coordinate reference system."
-msgstr ""
+msgstr ":guilabel:`テスト`ブロック内の**[計算]** ボタンをクリックし、CRSパラメータを:guilabel:`パラメータ`フィールドにペーストして、 まともな結果が得られるかを見ることで、CRSパラメータをテストできます。 知っているWGS84緯度経度の値を:guilabel:`North`、 :guilabel:`East`フィールドにそれぞれ入力します。 **[計算 ]** をクリックして、出てきた結果と、定義したCRSでの知っている値とを比較します。"

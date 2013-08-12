@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-18 14:17+0000\n"
+"PO-Revision-Date: 2013-07-27 11:55+0000\n"
 "Last-Translator: choro <u.ko.kubot@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -75,24 +75,24 @@ msgstr "Virtual Raster の作成"
 msgid ""
 "This program builds a VRT (Virtual Dataset) that is a mosaic of the list of "
 "input gdal datasets."
-msgstr ""
+msgstr "このプログラムは入力GDALデータセットのモザイクであるVRT (Virtual Dataset)で作成されています。 "
 
 # 1da1b21146104c5e86daa61d089b7ec3
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:47
 msgid "Contour"
-msgstr ""
+msgstr "等高線"
 
 # cdd7df44783b4e598046a493685c5102
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:47
 msgid ""
 "This program generates a vector contour file from the input raster elevation"
 " model (DEM)."
-msgstr ""
+msgstr "このプログラムはラスタの標高モデル（DEM)からベクタの等高線ファイルを生成します。"
 
 # aafa46e7b9c64a45800a4b2793d85b55
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:50
 msgid "Rasterize"
-msgstr ""
+msgstr "ラスタ化"
 
 # fb7f45fbe86941a5982c4e08878d3940
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:50
@@ -101,12 +101,12 @@ msgid ""
 "raster band(s) of a raster image. Vectors are read from OGR supported vector"
 " formats. Note that the vector data must in the same coordinate system as "
 "the raster data; on the fly reprojection is not provided."
-msgstr ""
+msgstr "このプログラムはベクタジオメトリ（ポイント、ライン、ポリゴン）をラスタイメージのラスタバンド（群）として焼き付けます。ベクタはOGRがサポートしたベクタフォーマットを読み込みます。ベクタデータはラスタデータと同じ座標系であることに注意してください。オンザフライの再投影は条件としません。"
 
 # fe8eb9b9c24747238a3f9b570fe6f95b
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:57
 msgid "Polygonize"
-msgstr ""
+msgstr "ポリゴン化"
 
 # 8f16f5e9d5384f3fa5af94d63bf13f62
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:57
@@ -116,12 +116,12 @@ msgid ""
 "attribute indicating the pixel value of that polygon.  The utility will "
 "create the output vector datasource if it does not already exist, defaulting"
 " to ESRI shapefile format."
-msgstr ""
+msgstr "このユーティリティは、一般的なピクセル値を共有するラスタのピクセルの接続されたすべてのエリアのベクタポリゴンを作成します。各ポリゴンは、そのポリゴンのピクセル値を示す属性を使用して作成されます。ユーティリティは、それが既に存在していない場合、デフォルトでESRIシェープファイル形式として出力ベクトルデータソースを作成します。"
 
 # 38ea8b570c4d494fb0c2bdcec4b784c0
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:65
 msgid "Merge"
-msgstr ""
+msgstr "マージ"
 
 # 13b3477dfe8f42d4abd99dfae0b412f4
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:65
@@ -130,12 +130,12 @@ msgid ""
 "be in the same coordinate system and have a matching number of bands, but "
 "they may be overlapping, and at different resolutions. In areas of overlap, "
 "the last image will be copied over earlier ones."
-msgstr ""
+msgstr "このユーティリティは一連のイメージをモザイク化します。すべてのイメージは同じ座標系内にあり一致したバンド数を持っている必要があります。ただしそれらは重複して良いし異なる解像度を持っていても構いません。重複するエリアでは、最後のイメージは以前のものにコピーされます。"
 
 # d8ca7becdfa546d1bf5c45b7fa993d81
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:72
 msgid "Sieve"
-msgstr ""
+msgstr "Sieve"
 
 # f90b480287d746cf994130bd634f547c
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:72
@@ -144,12 +144,12 @@ msgid ""
 "(in pixels) and replaces replaces them with the pixel value of the largest "
 "neighbor polygon. The result can be written back to the existing raster "
 "band, or copied into a new file."
-msgstr ""
+msgstr "このユーティリティは　与えられたしきい値サイズ（ピクセル単位）より小さいラスタポリゴンを削除し　近隣ポリゴンの最大ピクセル値に置き換えます。この結果、既存のラスタバンドに描き戻しまたは新しいファイルとしてコピーすることができます。"
 
 # c9b71ebb253b4d739034acc49923f82c
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:78
 msgid "Proximity"
-msgstr ""
+msgstr "Proximity"
 
 # 8cda9cf50ac0481a8bf9ba369df3d13d
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:78
@@ -158,12 +158,12 @@ msgid ""
 "the center of each pixel to the center of the nearest pixel identified as a "
 "target pixel. Target pixels are those in the source raster for which the "
 "raster pixel value is in the set of target pixel values."
-msgstr ""
+msgstr "このユーティリティは、各ピクセルの中心から　ターゲットピクセルとして特定された最も近いピクセルの中心までの中心を距離として示すラスタ近接マップを生成します。対象ピクセルは、ラスタのピクセル値が、ターゲットピクセル値の集合であるソースラスタ内のものです。"
 
 # afcc42439d12492d932db05624bfc27c
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:85
 msgid "Near Black"
-msgstr ""
+msgstr "Near Black"
 
 # 95ad370b4f4d46ed9edf8e020a4ddbed
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:85
@@ -172,12 +172,12 @@ msgid ""
 "black (or nearly white) around the edge to exactly black (or white). This is"
 " often used to \"fix up\" lossy compressed aerial photos so that color "
 "pixels can be treated as transparent when mosaicing."
-msgstr ""
+msgstr "このユーティリティは画像をスキャンして 黒に近い（または白に近い）すべてのピクセルに対し、エッジ周りに正確に黒（または白）を設定しようとします。これは多くの場合は モザイク時のカラーピクセルを透明として扱うことができるようにするため、非可逆圧縮された航空写真\"を修正\"するために使用されます。"
 
 # 9e3ad54ff77e425e844e5bb65d9ee992
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:92
 msgid "Warp"
-msgstr ""
+msgstr "Warp"
 
 # 51b537a962d24a8a8af241a484a98af0
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:92
@@ -185,12 +185,12 @@ msgid ""
 "This utility is an image mosaicing, reprojection and warping utility. The "
 "program can reproject to any supported projection, and can also apply GCPs "
 "stored with the image if the image is \"raw\" with control information."
-msgstr ""
+msgstr "このユーティリティはイメージモザイク、再投影とゆがみのユーティリティです。このプログラムはサポートされている任意の投影法に再投影でき、イメージが\"raw\"の制御情報であれば、画像とともに保存すGCPを適用することができます。"
 
 # f0cc2c49a72b4565968905cab51932a8
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:98
 msgid "Grid"
-msgstr ""
+msgstr "Grid"
 
 # a29104c0a27e4697acddc326c2d8035c
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:98
@@ -198,12 +198,12 @@ msgid ""
 "This utility creates regular grid (raster) from the scattered data read from"
 " the OGR datasource. Input data will be interpolated to fill grid nodes with"
 " values, you can choose from various interpolation methods."
-msgstr ""
+msgstr "このユーティリティは、QGRデータソースから読み取る散乱データから、規則的なグリッド（ラスタ）を作成します。入力データはグリッド・ノードを値で埋めるために補完され、様々な補間方法から選択することができます。"
 
 # b8f9bc06f39f4002b6412ca4cf9060c7
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:104
 msgid "Translate"
-msgstr ""
+msgstr "Translate"
 
 # fffca9376d3c426a866a553793ddc400
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:104
@@ -211,24 +211,24 @@ msgid ""
 "This utility can be used to convert raster data between different formats, "
 "potentially performing some operations like subsettings, resampling, and "
 "rescaling pixels in the process."
-msgstr ""
+msgstr "このユーティリティは、潜在的にプロセスにおいてピクセルのサブセット、リサンプリング、リスケーリングのようないくつかの動作を実行し、異なるフォーマットへのラスタデータの変換に使用されます。"
 
 # 924e162bed4444cfb458519522b43135
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:109
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 # 583f1297b6314eefbcb891821152c100
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:109
 msgid ""
 "This utility lists various information about a GDAL supported raster "
 "dataset."
-msgstr ""
+msgstr "このユーティリティはGDALがサポートするラスタデータセットについて様々な情報をリスト表示します。"
 
 # b4912c5bc79b468c94416b33c72416ef
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:112
 msgid "Assign Projection"
-msgstr ""
+msgstr "投影法の割り当て"
 
 # ba5f600e5ec04283aa92d54cf7dc82ba
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:112
@@ -245,24 +245,24 @@ msgid ""
 "supported by the OGRSpatialReference.SetFromUserInput() call, which includes"
 " EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the "
 "name of a .prf file containing well known text."
-msgstr ""
+msgstr "この ユーティリティはイメージモザイク,再投影と変形を行うユーティリティです。このプログラムはサポートされている任意の投影法に再投影を行うことができ,またコントロールデータが”生\"のイメージデータに GCPを格納することができます。``-s_srs srs_def``: ソース空間参照セットです。利用できる座標システムは OGRSpatialReference.SetFromUserInput() でサポートされています。これには EPSG PCS と GCSes (例えば　EPSG:4296),PROJ.4 記法 (上記のように),.prf ファイルに含まれる well known textの名前を含みます。この座標参照系はOGRSpatialReference.SetFromUserInput() コールでサポートされているものは利用できます。これには EPSG PCS と GCSes (例えば　EPSG:4296), PROJ.4 記法 (上記のように), または .prf ファイルに含まれる well known textの名前を含みます。"
 
 # d78fe7863ced4396afedceaf201c1f17
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:130
 msgid "Build Overviews"
-msgstr ""
+msgstr "オーバービューの作成 "
 
 # 1dbee844f7d64f6fbb9b2a0366d9729b
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:130
 msgid ""
 "The gdaladdo utility can be used to build or rebuild overview images for "
 "most supported file formats with one of several downsampling algorithms."
-msgstr ""
+msgstr "gdaladdoユーティリティではオーバービューイメージの作成、または再作成を行えます。サポートされている画像形式の ほとんどは多くのダウンサンプリングアルゴリズムを利用できます。"
 
 # 0ef0101f6dd2462c82f3fe754240aa37
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:134
 msgid "Clipper"
-msgstr ""
+msgstr "クリッパー"
 
 # 9759480a042f4809baa9a18816a33564
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:134
@@ -273,12 +273,12 @@ msgid ""
 "the last image will be copied over earlier ones.  ``-ul_lr ulx uly lrx "
 "lry``: The extents of the output file. If not specified the aggregate "
 "extents of all input files will be used."
-msgstr ""
+msgstr "このユーティリティは画像のセットを自動的にモザイクにします。すべてのイメージは 同一の座標システムでバンド数が同じでなければいけません。しかしそれらは重なりあったり異なる解像度だったりします。 重なりがある領域では後から表示されるイメージが先に表示されたイメージを上書きします。``-ul_lr ulx uly lrx lry``: 出力ファイルの領域を指定します。 全体の領域が指定されていない場合はすべての入力ファイルが利用されます。"
 
 # 2bef298e5a5541ea9353efc71ea6ff53
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:143
 msgid "RGB to PCT"
-msgstr ""
+msgstr "RGBをPCTに変換する"
 
 # d83c9675076340fc8b97be6e1026a7ad
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:143
@@ -288,24 +288,24 @@ msgid ""
 "converts the image into a pseudo-colored image using the color table. This "
 "conversion utilizes Floyd-Steinberg dithering (error diffusion) to maximize "
 "output image visual quality."
-msgstr ""
+msgstr "RGBイメージから擬似カラーパレットイメージへ変換します。 最適な擬似カラーテーブルは、中央値カットアルゴリズムを用いて計算されます。 この変換は、Floyd-Steinberg dithering (誤差拡散)により出力イメージの視覚品質を向上させるために利用されます。"
 
 # 025a291abf9249239a914f6466fe2790
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:151
 msgid "PCT to RGB"
-msgstr ""
+msgstr "PCTをRGBに変換する"
 
 # 4afda9c792c64a589f9af7afa3a55722
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:151
 msgid ""
 "This utility will convert a pseudocolor band on the input file into an "
 "output RGB file of the desired format."
-msgstr ""
+msgstr "入力された疑似カラーパレットイメージを指定したファイル形式のRGBイメージを出力します。"
 
 # eddd065acd3b4717815d2bf0588442de
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:155
 msgid "Tile Index"
-msgstr ""
+msgstr "タイルインデックス"
 
 # d335eab3c12b42da852690e06c0d8e3b
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:155
@@ -313,12 +313,12 @@ msgid ""
 "This utility builds a shapefile with a record for each input raster file, an"
 " attribute containing the filename, and a polygon geometry outlining the "
 "raster."
-msgstr ""
+msgstr "このユーティリティは各入力ラスタファイル、ファイル名を含む属性、ラスタのアウトラインとなるポリゴンジオメトリをレコードとして持つShapeファイルを生成します。"
 
 # 339eb2febdc2451bb2f443300535b3fa
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:159
 msgid "DEM terrain models"
-msgstr ""
+msgstr "DEM地形モデル"
 
 # b0b7ac30b365467c829f0245cc02deb5
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:159
@@ -326,49 +326,49 @@ msgid ""
 "Tools to analyze and visualize DEMs. It can create a shaded relief, a slope,"
 " an aspect, a color relief, a Terrain Ruggedness Index, a Topographic "
 "Position Index and a roughness map from any GDAL-supported elevation raster."
-msgstr ""
+msgstr "DEMを分析し可視化するためのツールです。GDALでサポートされている標高ラスタから陰影起伏、斜面、側面、カラーレリーフ、地形耐久インデックス、地形位置インデックスと粗さマップを作成することができます。"
 
 # c9edf742d49e4f96b9216b0ba38254b3
 # 7883e6b835fc4503bb161409134f7d5f
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:168
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:170
 msgid "\\"
-msgstr ""
+msgstr "\\"
 
 # 28f5386b9d9a41f3a00075c981508997
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:187
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 # ce349136c12d408ea9cdc38c85c14463
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:189
 msgid "Below are some examples of use of the tools."
-msgstr ""
+msgstr "下記のツールの使用例をいくつか示します。"
 
 # d2a4979f4ac5499ca6156c5402761ed7
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:191
 msgid "**Getting information about a raster**"
-msgstr ""
+msgstr "**ラスタの情報を取得する**"
 
 # 6e1e3796524947dda186129b1924a7eb
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:205
 msgid "**Creating contour lines**"
-msgstr ""
+msgstr "**等高線を作成する**"
 
 # 2357159e8fd441368810a80975e0abbf
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:207
 msgid "This example will create contour lines from an SRTM elevation tile."
-msgstr ""
+msgstr "この例ではSRTM標高タイルから等高線を作成します。"
 
 # 8239818635de448c9da74d43f64741e4
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:221
 msgid "and the result:"
-msgstr ""
+msgstr "そして結果は:"
 
 # 9000217e5bab46b58a9e50f5edad4081
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:235
 msgid "**Using GDALwarp to reproject a raster**"
-msgstr ""
+msgstr "**GDALwarp を使ってラスタを再投影する**"
 
 # fdbcc338845443339a53cf0a29fac706
 #: ../../source/docs/user_manual/plugins/plugins_gdaltools.rst:237
@@ -376,4 +376,4 @@ msgid ""
 "Here's the dialog window for reprojecting a landcover image, originally in "
 "the Albers Equal Area projection for Alaska (from the QGIS sample dataset) "
 "into Lon/Lat WGS84 (EPSG:4326)."
-msgstr ""
+msgstr "このダイアログウィンドウではAlaskaの Albers Equal Area projection の土地被覆イメージデータ(QGISサンプルデータセットのもの)をWGS84 (EPSG:4326)の緯度/経度に再投影かけます。"
