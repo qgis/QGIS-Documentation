@@ -468,7 +468,7 @@ Advanced digitizing
 +=============================+======================+=========================+=======================================+
 | |mActionUndo|               | Undo                 | |mActionRedo|           | Redo                                  |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
+| |mActionRotatePointSymbols| | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
 | |mActionAddRing|            | Add Ring             | |mActionAddIsland|      | Add Part                              |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
@@ -518,13 +518,13 @@ after the selected operation.
 Rotate Feature(s)
 .................
 
-Use the |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
+Use the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` to rotate one or multiple
 selected features in the map canvas. You first need to selected the features
-and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
+and then press the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Icon. Then the
 centroid of the feature appears and will be the rotating point. If you selected
 multiple features the rotating point will be the common center of the features.
 It's also possible to create a user-defined center by which the feature will turn.
-Select the feature and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
+Select the feature and activate the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Tool.
 Press :kbd:`Strg` and move the mouse to the place where you want to rotate the feature.
 A new anchor appears in the map canvas and you can rotate the feature(s).
  
