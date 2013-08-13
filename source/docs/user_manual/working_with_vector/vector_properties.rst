@@ -514,6 +514,7 @@ In the :guilabel:`Placement` menu you find special settings for polygon layers (
 |radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
 |radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
 |radiobuttonoff| :guilabel:`Using perimeter` are possible.
+
 	In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
 	is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
 	That means that either the centroid is used for the polygon you can see on the map or the centroid is
@@ -757,7 +758,9 @@ a large freedom in creating a dialog. For detailed information see http://nathan
 
 QGIS dialogs can have a python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
 An example is (in module MyForms.py):
+
 ::
+
   def open(dialog,layer,feature):
   geom = feature.geometry()
   control = dialog.findChild(QWidged,"My line edit")
