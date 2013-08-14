@@ -744,9 +744,9 @@ widgets. These widgets are:
 * **Color**: A field which allows to enter color codes. During data entry the color is visible through a color bar
   included in the field.
 
-With the **Attribute editor layout** you can now define builtin forms for data entry jobs.
-Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to transfer
-a category that then will be shown during the digitizing session (see figure_fields_2_). Next step will be to
+With the **Attribute editor layout** you can now define builtin forms for data entry jobs (see figure_fields_2_).
+Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to create
+a category that then will be shown during the digitizing session (see figure_fields_3_). Next step will be to
 assign the relevant fields to the category with the |mActionArrowRight| Icon. You can create
 more categories and use the same fields again. When creating a new category QGIS
 will insert a new tab for the category in the built in form.
@@ -781,6 +781,17 @@ MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
 
    Dialog to create categories with the **Attribute editor layout**
 
+.. _figure_fields_3:
+
+.. only:: html
+
+   **Figure Fields 3:**
+
+.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
+   :width: 25 em
+   :align: center
+
+   Resulting feature form in a data entry session
 
 .. _vectorgeneralmenu:
 
