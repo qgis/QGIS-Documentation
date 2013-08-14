@@ -586,7 +586,7 @@ We now describe an example how to use the data-defined override function for the
    **Figure Labels 5:**
 
 .. figure:: /static/user_manual/working_with_vector/move_label.png
-   :width:  15em
+   :width: 15em
    :align: center
 
    Move labels |nix|
@@ -791,7 +791,7 @@ MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
    :width: 25 em
    :align: center
 
-   Resulting feature form in a data entry session
+   Resulting built in form in a data entry session
 
 .. _vectorgeneralmenu:
 
