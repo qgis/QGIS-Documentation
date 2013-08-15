@@ -422,7 +422,7 @@ To add a scale bar:
    ScaleBar and Copyright will be saved in the project and restored
    the next time you load the project.
 
-.. _`sec_annotations`:
+.. _sec_annotations:
 
 .. index::
    single: annotation
