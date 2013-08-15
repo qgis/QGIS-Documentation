@@ -110,23 +110,25 @@ The two types of WMTS interfaces that QGIS supports are via Key-Value-Pairs
 them to QGIS differently.
 
 1) In order to access a **WMTS KVP** service, a QGIS user opens the WMS/WMTS interface 
-and adds the string “?SERVICE=WMTS&REQUEST=GetCapabilities” to the URL of the 
+and adds the string "?SERVICE=WMTS&REQUEST=GetCapabilities" to the URL of the 
 WMTS tile service. An example of this type of address is: 
 
 ::
 
-	http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
+  http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
   
-* For testing the topo2 layer in this WMTS works nicely
-* Adding this string indicates that a WMTS web service is to be used instead of a WMS service
-		
+  For testing the topo2 layer in this WMTS works nicely
+  Adding this string indicates that a WMTS web service is to be used instead of a WMS service
+	
 2) The **RESTful WMTS** service takes a different form, it is a straightforward URL, 
 the format recommended by the OGC is: {WMTSBaseURL}/1.0.0/WMTSCapabilities.xml 
 this format helps you to recognize that it is a RESTful address. A RESTful 
 WMTS is accessed in QGIS by simply adding its address in the WMS setup in the 
 URL field of the form. An example for an Austrian basemap of this type of address is:			    
 
-http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml				    
+::
+
+  http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml				    
 
 .. _`ogc-wms-servers`:
 
