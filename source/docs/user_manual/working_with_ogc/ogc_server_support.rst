@@ -107,22 +107,26 @@ For ``WMS Capabilities`` define 'Coordinate System Restrictions' and 'Advertised
 Extend'.
 If you want to exclude any layer or layer group from being published by the 
 OWS, check |checkbox| :guilabel:`Exclude Layers` and click the 
-|mActionSignPlus| button below. This opens the :guilabel:`Select restricted 
-layers and groups` dialog which allows you to choose the layers and groups that 
-you don't want to be published. Use the shift or control key if you want to 
-select multiple entries at once.
-If you wish you can check |checkbox| :guilabel:`Add WKT geometry to feature info 
-response`. This will include in the GetFeatureInfo response the geometry of the 
-features in a text format.
+|mActionSignPlus| button below.
+This opens the :guilabel:`Select restricted layers and groups` dialog which 
+allows you to choose the layers and groups that you don't want to be published.
+Use the shift or control key if you want to select multiple entries at once.
+If you wish you can check |checkbox| :guilabel:`Add WKT geometry to feature 
+info response`.
+This will include in the GetFeatureInfo response the geometries of the features 
+in a text format.
 If you want QGIS Server to advertise specific request URLs in the WMS 
 GetCapabilities response, enter the corresponding URL in the 
 :guilabel:`Advertised URL` field.
 Furthermore you can restrict the maximum size of the maps returned by the 
 GetMap request by entering the maximum width and height into the respective 
 fields under :guilabel:`Maximums for GetMap request`.
-In the :guilabel:`WFS Capabilities` area you can select the layers that you 
-want to provide as WFS, and you can specify if they will allow the update, 
-insert and delete operations.
+In the :guilabel:`WFS capabilities` area you can select the layers that you 
+want to provide as WFS, and specify if they will allow the update, insert and 
+delete operations.
+If you enter a URL in the :guilabel:`Advertised URL` field of the 
+:guilabel:`WFS capabilities` section, QGIS Server will advertise this specific 
+URL in the WFS GetCapabilities response.
 
 Now save the
 session in a project file :file:`alaska.qgs`. To provide the project as a WMS/WFS,
@@ -140,16 +144,44 @@ Now we test our project WMS and WFS, add the WMS and WFS as described in
 Fine tuning your OWS
 .....................
 
-For vector layers, the :guilabel:`Fields` tab of the :menuselection:`Layer --> Properties` dialog allows you to define for each attribute if it will be published or not. By default all the attributes are published by your WMS and WFS. If you want a specific attribute not to be published, uncheck the corresponding check box in the :guilabel:`WMS` or :guilabel:`WFS` column.
+For vector layers, the :guilabel:`Fields` menu of the 
+:menuselection:`Layer --> Properties` dialog allows you to define for each 
+attribute if it will be published or not.
+By default all the attributes are published by your WMS and WFS.
+If you want a specific attribute not to be published, uncheck the corresponding 
+check box in the :guilabel:`WMS` or :guilabel:`WFS` column.
 
-You can overlay watermarks over the maps produced by your WMS by adding text annotations or SVG annotations to the project file. See :ref:`sec_annotations` for instructions on creating annotations. For annotations to be displayed as watermarks on the WMS output, the :guilabel:`Fixed map position` check box in the :guilabel:`Annotation text` dialog must be unchecked. This can be accessed by double clicking the annotation while one of the annotation tools is active. For SVG annotations you will need to set the project to save absolute paths (on the :guilabel:`General` tab of the :menuselection:`Project --> Project Properties` dialog) or to manually modify the path to the SVG image in a way that it represents a valid relative path.
+You can overlay watermarks over the maps produced by your WMS by adding text 
+annotations or SVG annotations to the project file.
+See :ref:`sec_annotations` for instructions on creating annotations.
+For annotations to be displayed as watermarks on the WMS output, the 
+:guilabel:`Fixed map position` check box in the :guilabel:`Annotation text` 
+dialog must be unchecked.
+This can be accessed by double clicking the annotation while one of the 
+annotation tools is active.
+For SVG annotations you will either need to set the project to save absolute 
+paths (in the :guilabel:`General` menu of the 
+:menuselection:`Project --> Project Properties` dialog) or to manually modify 
+the path to the SVG image in a way that it represents a valid relative path.
 
 Extra parameters supported by the WMS GetMap request
 ....................................................
 
-Concerning the WMS GetMap request, QGIS Server accepts a couple of extra parameters in addition to the standard parameters according to the OCG WMS 1.3 specification:
+Concerning the WMS GetMap request, QGIS Server accepts a couple of extra 
+parameters in addition to the standard parameters according to the OCG WMS 1.3 
+specification:
 
-* **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to specify the path to the QGIS project file. You can specify an absolute path or a path relative to the location of the server executable (qgis_mapserv.fcgi). If not specified, QGIS Server searches for .qgs files in the directory where the server executable is located. Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...``
-* **DPI** parameter: The ``DPI`` parameter can be used to specify the requested output resolution. Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...``
-* **OPACITIES** parameter: Opacity can be set on layer or group level. Allowed values range from 0 (fully transparent) to 255 (fully opaque). Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...``
+* **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to 
+  specify the path to the QGIS project file. You can specify an absolute path 
+  or a path relative to the location of the server executable 
+  (qgis_mapserv.fcgi). 
+  If not specified, QGIS Server searches for .qgs files in the directory where 
+  the server executable is located. 
+  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...``
+* **DPI** parameter: The ``DPI`` parameter can be used to specify the requested 
+  output resolution. 
+  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...``
+* **OPACITIES** parameter: Opacity can be set on layer or group level. 
+  Allowed values range from 0 (fully transparent) to 255 (fully opaque). 
+  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...``
 
