@@ -1147,7 +1147,7 @@ Joins Menu
 ----------
 
 
-|join| The :guilabel:`Joins` tab allows you to :index:`join a loaded attribute table
+|join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
 to a loaded vector layer`. As key columns you have to define a :index:`join
 layer`, a join field and a target field. QGIS currently supports to join non
 spatial table formats supported by OGR, delimited text and the PostgreSQL
