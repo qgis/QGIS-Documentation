@@ -514,6 +514,7 @@ In the :guilabel:`Placement` menu you find special settings for polygon layers (
 |radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
 |radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
 |radiobuttonoff| :guilabel:`Using perimeter` are possible.
+
 	In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
 	is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
 	That means that either the centroid is used for the polygon you can see on the map or the centroid is
@@ -585,7 +586,7 @@ We now describe an example how to use the data-defined override function for the
    **Figure Labels 5:**
 
 .. figure:: /static/user_manual/working_with_vector/move_label.png
-   :width:  15em
+   :width: 15em
    :align: center
 
    Move labels |nix|
@@ -743,9 +744,9 @@ widgets. These widgets are:
 * **Color**: A field which allows to enter color codes. During data entry the color is visible through a color bar
   included in the field.
 
-With the **Attribute editor layout** you can now define builtin forms for data entry jobs.
-Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to transfer
-a category that then will be shown during the digitizing session (see figure_fields_2_). Next step will be to
+With the **Attribute editor layout** you can now define builtin forms for data entry jobs (see figure_fields_2_).
+Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to create
+a category that then will be shown during the digitizing session (see figure_fields_3_). Next step will be to
 assign the relevant fields to the category with the |mActionArrowRight| Icon. You can create
 more categories and use the same fields again. When creating a new category QGIS
 will insert a new tab for the category in the built in form.
@@ -757,7 +758,9 @@ a large freedom in creating a dialog. For detailed information see http://nathan
 
 QGIS dialogs can have a python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
 An example is (in module MyForms.py):
+
 ::
+
   def open(dialog,layer,feature):
   geom = feature.geometry()
   control = dialog.findChild(QWidged,"My line edit")
@@ -778,6 +781,17 @@ MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
 
    Dialog to create categories with the **Attribute editor layout**
 
+.. _figure_fields_3:
+
+.. only:: html
+
+   **Figure Fields 3:**
+
+.. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
+   :width: 25 em
+   :align: center
+
+   Resulting built in form in a data entry session
 
 .. _vectorgeneralmenu:
 

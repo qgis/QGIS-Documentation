@@ -98,7 +98,7 @@ Menu Option                                                     Shortcut        
 |mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionRotateFeature| :guilabel:`Rotate Feature(s)`            \                     see :ref:`sec_advanced_edit` 		  :guilabel:`Advanced Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit` 		  :guilabel:`Advanced Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddIsland| :guilabel:`Add Part`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`

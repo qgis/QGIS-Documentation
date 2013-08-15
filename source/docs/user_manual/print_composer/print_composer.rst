@@ -184,12 +184,15 @@ Background, Item ID and Rendering (See figure_composer_1b_)
 
    Common Item properties Dialogs |nix|
 
+.. _Frame_Dialog:
+
 * The :guilabel:`Position and size` dialog lets you define size and position of the frame that contains the item. You can also choose
   which :guilabel:`Reference point` will be set at the **X** and **Y** coordinates previously defined.
-.. _Frame_Dialog:
-* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. Click on the **[Color]** and **[Thickness]** buttons to adjust
-  those properties.
-* the |checkbox| :guilabel:`Background` enables or disables a background color. Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. Transparency can also be adjusted throught the **alpha** field.
+* The |checkbox| :guilabel:`Frame` shows or hides the frame around the label. 
+  Click on the **[Color]** and **[Thickness]** buttons to adjust those properties.
+* the |checkbox| :guilabel:`Background` enables or disables a background color. 
+  Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting. 
+  Transparency can also be adjusted throught the **alpha** field.
 * Use the :guilabel:`Item ID` to create a relationship to other print composer items.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_ .
 
@@ -387,7 +390,7 @@ If the composer has more than one map, you can choose to use a map to show the e
 The :guilabel:`Overview` dialog of the map :guilabel:`Item Properties` tab allows to customize the appearance of that feature.
 
 * The :guilabel:`Overview frame` combolist references the map item whose extents will be drawn on the present map item.
-* The :guilabel:`Overview Style` allows to change the frame color. See Section vector_style_manager_ .
+* The :guilabel:`Overview Style` allows to change the frame color. See Section vector_style_manager .
 * The :guilabel:`Overview Blend mode` allows different transparency blend modes, to enhance visibility of the frame. See Rendering_Mode_
 * If checked, the |checkbox| :guilabel:`Invert overview` creates a mask around the extents : the referenced map extents are shown clearly 
   whereas everything else is blended with the frame color.
@@ -686,11 +689,13 @@ provide following functionalities (see figure_composer_20_):
    Scalebar Units and Segments Dialogs |nix|
 
 In those two dialogs, you can set how the scalebar will be represented.
-* Select the map units used. There's three possible choices : **Map Units** is the automated unit selection, **Meters** or **Feet** force 
-      unit conversions.
+
+* Select the map units used. There's three possible choices : **Map Units** is the automated unit 
+  selection, **Meters** or **Feet** force unit conversions.
 * The :guilabel:`Label` field defines the text used to describe the unit of the scalebar.
 * The :guilabel:`Map units per bar unit` allows to fix the ratio between a map unit and its representation in the scalebar.
-* You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scalebar, and how long will be each segment (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
+* You can define how many :guilabel:`Segments` will be drawn on the left and on the right side of the scalebar, 
+  and how long will be each segment (:guilabel:`Size` field). :guilabel:`Height` can also be defined.
 
 Display, Fonts and colors
 -------------------------
@@ -993,7 +998,7 @@ And that would result in the generated atlas as
 "`The area of PARIS,75001 is 1.94 km2`".
 
 Generation
-----------
+==========
 
 The atlas generation is done when the user asks for a print or an export. The behaviour of these functions will be slightly changed if an atlas map has been selected. For instance, when the user asks for an export to PDF, if an atlas map is defined, the user will be asked for a directory where to save all the generated PDF files (except if the |checkbox| :guilabel:`Single file export when possible` has been selected).
 

@@ -18,7 +18,7 @@ QGis has the built-in topological editing feature which is great for creating ne
 
 It is very simple to create topology rules with the Topology Checker plugin.
 
-In figure_topology_rule_ you can see the topology rules which can be applied to a **line layer**:
+In figure_topology_rule you can see the topology rules which can be applied to a **line layer**:
 
 * **end points must be covered by**: Here you can select a point layer from your project. 
 * **must not have dangles**: This will show the overshoots in the line layer.

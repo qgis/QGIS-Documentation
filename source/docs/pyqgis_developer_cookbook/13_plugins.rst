@@ -466,7 +466,7 @@ And when the application hits your breakpoint you can type in the console!
 
 .. index:: plugins; testing
 
-.. todo::
+.. note::
     Add testing informations
 
 .. index:: plugins; releasing
@@ -495,7 +495,7 @@ In order to use the official repository you must obtain an OSGEO ID from the `OS
 
 Once you have uploaded your plugin it will be approved by a staff member and you will be notified.
 
-.. todo::
+.. note::
    Insert a link to the governance document
 
 .. index:: plugins; official python plugin repository
