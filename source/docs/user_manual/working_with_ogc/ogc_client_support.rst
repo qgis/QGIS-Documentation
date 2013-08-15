@@ -30,6 +30,7 @@ can be found under http://www.opengeospatial.org/.
 Important OGC specifications are:
 
 * **WMS** --- Web Map Service
+* **WMTS** --- Web Map Tile Service
 * **WFS** --- Web Feature Service
 * **WCS** --- Web Coverage Service
 * **CAT** --- Web Catalog Service
@@ -43,11 +44,11 @@ data provider, see Section :ref:`label_postgis`), WFS and WMS as a client.
 
 .. _`ogc-wms`:
 
-WMS Client
-==========
+WMS/WMTS Client
+===============
 
 .. index:: WMS_client
-
+.. index:: WMTS_client
 
 .. _`ogc-wms-about`:
 
@@ -75,10 +76,62 @@ WMS layers can be added quite simply, as long as you know the URL to access
 the WMS server, you have a serviceable connection to that server, and the
 server understands HTTP as the data transport mechanism.
 
+Overview of WMTS Support
+------------------------
+
+QGIS can also act as a WMTS client. WMTS is an OGC standard for distributing 
+tile sets of geospatial data. This is a faster and a more efficient way of 
+distributing data than WMS because with WMTS the tile sets are pre-generated 
+and the client only requests the transmission of the tiles and not their 
+production. A WMS request typically involves both the generation and 
+transmission of the data. A well known example of a non-OGC standard for 
+viewing tiled geospatial data is Google Maps.
+
+In order to display the data at a variety of scales close to what the user 
+might want, the WMTS tile sets are produced at several different scale levels 
+and are made available for the GIS client to request them.
+
+This diagram illustrates the concept of tile sets:
+
+.. _figure_wmts_1:
+
+.. only:: html
+
+   **Figure WMTS 1:**
+
+.. figure:: /static/user_manual/working_with_ogc/concept_wmts.png
+   :align: center
+   :width: 15em
+
+   Concept of WMTS tile sets
+
+The two types of WMTS interfaces that QGIS supports are via Key-Value-Pairs 
+(KVP) and RESTful. These two interfaces are different and you need to specify 
+them to QGIS differently.
+
+1) In order to access a **WMTS KVP** service, a QGIS user opens the WMS/WMTS interface 
+and adds the string “?SERVICE=WMTS&REQUEST=GetCapabilities” to the URL of the 
+WMTS tile service. An example of this type of address is: 
+
+::
+
+	http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
+  
+* For testing the topo2 layer in this WMTS works nicely
+* Adding this string indicates that a WMTS web service is to be used instead of a WMS service
+		
+2) The **RESTful WMTS** service takes a different form, it is a straightforward URL, 
+the format recommended by the OGC is: {WMTSBaseURL}/1.0.0/WMTSCapabilities.xml 
+this format helps you to recognize that it is a RESTful address. A RESTful 
+WMTS is accessed in QGIS by simply adding its address in the WMS setup in the 
+URL field of the form. An example for an Austrian basemap of this type of address is:			    
+
+http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml				    
+
 .. _`ogc-wms-servers`:
 
-Selecting WMS Servers
----------------------
+Selecting WMS/WMTS Servers
+--------------------------
 
 The first time you use the WMS feature, there are no servers defined.
 
@@ -140,8 +193,8 @@ future QGIS sessions.
 
 .. _`ogc-wms-layers`:
 
-Loading WMS Layers
--------------------
+Loading WMS/WMTS Layers
+-----------------------
 
 Once you have successfully filled in your parameters you can use the
 **[Connect]** button to retrieve the capabilities of the selected server. This
