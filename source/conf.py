@@ -310,6 +310,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddLegend| image:: /static/common/mActionAddLegend.png
    :width: 1.5em
+.. |mActionAddHtml| image:: /static/common/mActionAddHtml.png
+   :width: 1.5em
 .. |mActionAddMap| image:: /static/common/mActionAddMap.png
    :width: 1.5em
 .. |mActionLabel| image:: /static/common/mActionLabel.png
