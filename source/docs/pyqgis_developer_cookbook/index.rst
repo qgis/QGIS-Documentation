@@ -16,8 +16,12 @@ PyQGIS Developer Cookbook
    06_canvas
    07_composer
    08_expressions
-   09_measure
    10_settings
+   communicating      
+   plugins
+   ide_debugging   
    11_pluginlayer
+   compatibility
+   releasing
+   snippets
    12_network_analysis
-   13_plugins

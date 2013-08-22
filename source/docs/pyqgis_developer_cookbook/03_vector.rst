@@ -13,21 +13,13 @@ This section summarizes various actions that can be done with vector layers.
 Iterating over Vector Layer
 ===========================
 
-Below is an example how to go through the features of the layer. To read
-features from layer, initialize the retieval with :func:`select` and then use
-:func:`nextFeature` calls::
+Iterating over the features in a vector layer is one of the most common tasks. Below is an example of the simple basic code to perform this task and showing some information about each feature. the ``layer`` variable is assumed to have a QgsVectorLayer object
 
-  provider = vlayer.dataProvider()
+::
 
-  feat = QgsFeature()
-  allAttrs = provider.attributeIndexes()
-
-  # start data retreival: fetch geometry and all attributes for each feature
-  provider.select(allAttrs)
-
+iter = layer.getFeatures:
+for feature in iter:
   # retreive every feature with its geometry and attributes
-  while provider.nextFeature(feat):
-
     # fetch geometry
     geom = feat.geometry()
     print "Feature ID %d: " % feat.id() ,
@@ -43,53 +35,71 @@ features from layer, initialize the retieval with :func:`select` and then use
       x = geom.asPolygon()
       numPts = 0
       for ring in x:
-	numPts += len(ring)
+	     numPts += len(ring)
       print "Polygon: %d rings with %d points" % (len(x), numPts)
     else:
       print "Unknown"
 
-    # fetch map of attributes
-    attrs = feat.attributeMap()
+    # fetch attributes
+    attrs = feat.attributes()
     
     # attrs is a dictionary: key = field index, value = QgsFeatureAttribute
     # show all attributes and their values
     for (k,attr) in attrs.iteritems():
       print "%d: %s" % (k, attr.toString())
 
+Attributes can be refered by name or by index.
 
-:func:`select` gives you flexibility in what data will be fetched. It can get
-4 arguments, all of them are optional:
+This code
 
-1. fetchAttributes
-	List of attributes which should be fetched. Default: empty list
-2. rect
-	Spatial filter. If empty rect is given (:obj:`QgsRectangle()`), all features
-	are fetched. Default: empty rect
-3. fetchGeometry
-	Whether geometry of the feature should be fetched. Default: :const:`True`
-4. useIntersect
-	When using spatial filter, this argument says whether accurate test for
-	intersection should be done or whether test on bounding box suffices.
-	This is needed e.g. for feature identification or selection. Default:
-	:const:`False`
+::
 
-Some examples::
+  idx = layer.fieldNameIndex('name')
+  print feature.attributes()[idx]
 
-  # fetch features with geometry and only first two fields
-  provider.select([0,1])
+Has the same effect as this one:
 
-  # fetch features with geometry which are in specified rect, attributes won't be retreived
-  provider.select([], QgsRectangle(23.5, -10, 24.2, -7))
+  print feature.attributes()['name']
 
-  # fetch features without geometry, with all attributes
-  allAtt = provider.attributeIndexes()
-  provider.select(allAtt, QgsRectangle(), False)
 
-To obtain field index from its name, use provider's :func:`fieldNameIndex` function::
+Iterating over selected features
 
-  fldDesc = provider.fieldNameIndex("DESCRIPTION")
-  if fldDesc == -1:
-    print "Field not found!"
+
+
+
+Convenience methods
+--------------------
+
+For the above cases, and in case you need to consider selection in a vector layer in case it exist, you can use the :func:`getfeatures` method from the buil-in processing plugin, as follows:
+
+::
+
+  import processing
+  features = processing.getfeatures(layer)
+  for feature in features:
+    #Do whatever you need with the feature
+
+This will iterate over all the features in the layer, in case there is no selection, or over the selected features otherwise. 
+
+Iterating over a subset of features
+-------------------------------------
+
+If you want to iterate over a given subset of features in a layer, such as those within a given area, you have to add a :obj:`QgsFeatureRequest`object to the :func:`getFeatures()` call. Here's an example
+
+::
+
+  request=QgsFeatureRequest()
+  request.setFilterRect(areaOfInterest)
+    for f in layer.getFeatures(request):
+      ...
+
+The request can be used to define the data retrieved for each feature, so the iterator returns all features, but return partial data for each of them.
+
+::
+
+  request.setSubsetOfFields([0,2])                  # Only return selected fields
+  request.setSubsetOfFields(['name','id'],layer.fields())  # More user friendly version
+  request.setFlags( QgsFeatureRequest.NoGeometry )  # Don't return geometry objects
 
 
 .. index:: vector layers; editing
@@ -234,8 +244,11 @@ by the user.
 Using Spatial Index
 ===================
 
-**TODO:**
-   Intro to spatial indexing
+Spatial indexes can dramatically improve the performance of your code if you need to do frequent queries to a vector layer. Imagin, for instance, that you are writing an interpolation algorithm, and that for a given location you need to know the 10 closest point from a points layer,, in order to use those point for calculating the interpolated value. Without a spatial index, the only way for QGIS to find those 10 points is to compute the distance from each and every point to the specified location and then compare those distances. This can be a very time consuming task, specilly if it needs to be repeated fro several locations. If a spatial index exists for the layer, the operation is much more effective.
+
+Think of a layer withou a spatial index as a telephone book in which telephone number are not orderer or indexed. The only way to find the telephone number of a given person is to read from the beginning until you find it.
+
+Spatial indexes are not created by default for a QGIS vector layer, but you can create them easily. This is what you have to do.
 
 1. create spatial index --- the following code creates an empty index::
 
@@ -278,15 +291,15 @@ There are two possibilities how to export a vector layer:
     if error == QgsVectorFileWriter.NoError:
       print "success again!"
 
-  Third parameter specifies output text encoding. Only some drivers need this
+  The third parameter specifies output text encoding. Only some drivers need this
   for correct operation - shapefiles are one of those --- however in case you
   are not using international characters you do not have to care much about
-  the encoding. The fourth parameter that we left as None may specify
+  the encoding. The fourth parameter that we left as ``None`` may specify
   destination CRS --- if a valid instance of :class:`QgsCoordinateReferenceSystem`
   is passed, the layer is transformed to that CRS.
 
   For valid driver names please consult the `supported formats by OGR`_ --- you
-  should pass the value in "Code" column as the driver name. Optionally you can
+  should pass the value in `the "Code" column as the driver name. Optionally you can
   set whether to export only selected features, pass further driver-specific
   options for creation or tell the writer not to create attributes --- look
   into the documentation for full syntax.
@@ -296,11 +309,11 @@ There are two possibilities how to export a vector layer:
 
 * directly from features::
 
-    # define fields for feature attributes
-    fields = { 0 : QgsField("first", QVariant.Int),
-               1 : QgsField("second", QVariant.String) }
+    # define fields for feature attributes. A list of QgsField objects is needed
+    fields = [QgsField("first", QVariant.Int),
+              QgsField("second", QVariant.String) ]
 
-    # create an instance of vector file writer, it will create the vector file. Arguments:
+    # create an instance of vector file writer, which will create the vector file. Arguments:
     # 1. path to new file (will fail if exists already)
     # 2. encoding of the attributes
     # 3. field map
@@ -312,11 +325,10 @@ There are two possibilities how to export a vector layer:
     if writer.hasError() != QgsVectorFileWriter.NoError:
       print "Error when creating shapefile: ", writer.hasError()
 
-    # add some features
+    # add a feature
     fet = QgsFeature()
     fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
-    fet.addAttribute(0, QVariant(1))
-    fet.addAttribute(1, QVariant("text")) 
+    fet.setAttributes([1, "text"])    
     writer.addFeature(fet)
 
     # delete the writer to flush features to disk (optional)
@@ -346,7 +358,7 @@ The constructor also takes a URI defining the geometry type of the layer,
 one of: ``"Point"``, ``"LineString"``, ``"Polygon"``, ``"MultiPoint"``,
 ``"MultiLineString"``, or ``"MultiPolygon"``.
 
-From QGIS version 1.7 the URI can also specify the coordinate reference system,
+The URI can also specify the coordinate reference system,
 fields, and indexing of the memory provider in the URI. The syntax is:
 
 crs=definition
@@ -379,10 +391,8 @@ The following example code illustrates creating and populating a memory provider
   # add a feature
   fet = QgsFeature()
   fet.setGeometry( QgsGeometry.fromPoint(QgsPoint(10,10)) )
-  fet.setAttributeMap( { 0 : QVariant("Johny"), 
-                         1 : QVariant(20), 
-                         2 : QVariant(0.3) } )
-  pr.addFeatures( [ fet ] )
+  fet.setAttributes(["Johny", 2, 0.3])
+  pr.addFeatures([fet])
 
   # update layer's extent when new features have been added
   # because change of extent in provider is not propagated to the layer
@@ -391,16 +401,16 @@ The following example code illustrates creating and populating a memory provider
 Finally, let's check whether everything went well::
 
   # show some stats
-  print "fields:", pr.fieldCount()
+  print "fields:", len(pr.fields())
   print "features:", pr.featureCount()
-  e = pr.extent()
+  e = layer.extent()
   print "extent:", e.xMin(),e.yMin(),e.xMax(),e.yMax()
 
   # iterate over features
   f = QgsFeature()
-  pr.select()
-  while pr.nextFeature(f):
-    print "F:",f.id(), f.attributeMap(), f.geometry().asPoint()
+  features = vl.getFeatures()
+  for f in features:
+    print "F:",f.id(), f.attributes(), f.geometry().asPoint()
 
 .. index:: vector layers; symbology
 
@@ -412,44 +422,13 @@ When a vector layer is being rendered, the appearance of the data is given by
 which take care of drawing of visual representation of features, while
 renderers determine what symbol will be used for a particular feature.
 
-In QGIS v1,4 a new vector rendering stack has been introduced in order to
-overcome the limitations of the original implementation. We refer to it as new
-symbology or symbology-ng (new generation), the original rendering stack is
-also called old symbology. Each vector layer uses either new symbology or old
-symbology, but never both at once or neither of them. It's not a global setting
-for all layers, so some layers might use new symbology while others still use
-old symbology. In QGIS options the user can specify what symbology should be
-used by default when layers are loaded.  The old symbology will be kept in
-further QGIS v1.x releases for compatibility and we plan to remove it in QGIS
-v2.0.
+The renderer for a given layer can obtained as shown below:
 
-How to find out which implementation is currently in use::
+::
 
-  if layer.isUsingRendererV2():
-    # new symbology - subclass of QgsFeatureRendererV2 class
-    rendererV2 = layer.rendererV2()
-  else:
-    # old symbology - subclass of QgsRenderer class
-    renderer = layer.renderer()
-
-
-Note: if you plan to support also earlier versions (i.e. QGIS < 1.4), you
-should first check whether the :func:`isUsingRendererV2` method exists
---- if not, only old symbology is available::
-
-  if not hasattr(layer, 'isUsingRendererV2'):
-    print "You have an old version of QGIS"
-
-We are going to focus primarily on new symbology because it has better
-capabilities are more options for customization.
-
-.. index:: symbology; new
-
-New Symbology
--------------
-
-Now that we have a reference to a renderer from the previous section, let us
-explore it a bit::
+  renderer = layer.rendererV2()
+  
+And with that reference, let us explore it a bit::
 
   print "Type:", rendererV2.type()
 
@@ -913,97 +892,3 @@ Further Topics
 
 .. index:: symbology; old
 
-Old Symbology
--------------
-
-A symbol determines color, size and other properties of the feature. Renderer
-associated with the layer decides what symbol will be used for particular
-feature. There are four available renderers:
-
-* single symbol renderer (:class:`QgsSingleSymbolRenderer`) --- all features
-  are rendererd with the same symbol.
-* unique value renderer (:class:`QgsUniqueValueRenderer`) --- symbol for each
-  feature is choosen from attribute value.
-* graduated symbol renderer (:class:`QgsGraduatedSymbolRenderer`) --- a symbol
-  is applied to a subgroup (class) of features, which is calculated on a
-  numeric field
-* continuous color renderer (:class:`QgsContinuousSymbolRenderer`)
-
-How to create a point symbol::
-
-  sym = QgsSymbol(QGis.Point)
-  sym.setColor(Qt.black)
-  sym.setFillColor(Qt.green)
-  sym.setFillStyle(Qt.SolidPattern)
-  sym.setLineWidth(0.3)
-  sym.setPointSize(3)
-  sym.setNamedPointSymbol("hard:triangle")
-
-The :func:`setNamedPointSymbol` method determines the shape of the symbol.
-There are two classes: hardcoded symbols (prefixed ``hard:``) and SVG symbols
-(prefixed ``svg:``). The following hardcoded symbols are available: ``circle``,
-``rectangle``, ``diamond``, ``pentagon``, ``cross``, ``cross2``, ``triangle``,
-``equilateral_triangle``, ``star``, ``regular_star``, ``arrow``.
-
-How to create an SVG symbol::
-
-  sym = QgsSymbol(QGis.Point)
-  sym.setNamedPointSymbol("svg:Star1.svg")
-  sym.setPointSize(3)
-
-SVG symbols do not support setting colors, fill and line styles.
-
-How to create a line symbol::
-
-  TODO
-
-How to create a fill symbol::
-
-  TODO
-
-Create a single symbol renderer::
-
-  sr = QgsSingleSymbolRenderer(QGis.Point)
-  sr.addSymbol(sym)
-
-Assign the renderer to a layer::
-
-  layer.setRenderer(sr)
-
-Create unique value renderer::
-
-  TODO
-
-Create graduated symbol renderer::
-
-    # Set the numeric field and the number of classes to be generated
-    fieldName = "My_Field"
-    numberOfClasses = 5
-    
-    # Get the field index based on the field name
-    fieldIndex = layer.fieldNameIndex(fieldName)
-
-    # Create the renderer object to be associated to the layer later
-    renderer = QgsGraduatedSymbolRenderer( layer.geometryType() )
-
-    # Here you may choose the renderer mode from EqualInterval/Quantile/Empty
-    renderer.setMode( QgsGraduatedSymbolRenderer.EqualInterval ) 
-
-    # Define classes (lower and upper value as well as a label for each class)
-    provider = layer.dataProvider()
-    minimum = provider.minimumValue( fieldIndex ).toDouble()[ 0 ]
-    maximum = provider.maximumValue( fieldIndex ).toDouble()[ 0 ]
-
-    for i in range( numberOfClasses ):
-        # Switch if attribute is int or double
-        lower = ('%.*f' % (2, minimum + ( maximum - minimum ) / numberOfClasses * i ) )
-        upper = ('%.*f' % (2, minimum + ( maximum - minimum ) / numberOfClasses * ( i + 1 ) ) )
-        label = "%s - %s" % (lower, upper)
-        color = QColor(255*i/numberOfClasses, 0, 255-255*i/numberOfClasses)
-        sym = QgsSymbol( layer.geometryType(), lower, upper, label, color )
-        renderer.addSymbol( sym )
-
-    # Set the field index to classify and set the created renderer object to the layer
-    renderer.setClassificationField( fieldIndex )
-
-    layer.setRenderer( renderer )

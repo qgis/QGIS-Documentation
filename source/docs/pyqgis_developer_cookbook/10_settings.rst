@@ -35,43 +35,34 @@ We can make difference between several types of settings:
 
     def read():
       s = QSettings()
-      mytext = s.value("myplugin/mytext", "default text").toString()
-      myint  = s.value("myplugin/myint", 123).toInt()[0]
-      myreal = s.value("myplugin/myreal", 2.71).toDouble()[0]
+      mytext = s.value("myplugin/mytext", "default text")
+      myint  = s.value("myplugin/myint", 123)
+      myreal = s.value("myplugin/myreal", 2.71)
   
-  Qt uses QVariant instances for variable values in setValue() and value()
-  methods. Your values are automagically converted from Python to QVariant
-  instances, however the conversion from QVariant to Python is not automatic:
-  that's why we use the to*() methods. Few more things to note here:
 
-  * the second parameter to value() method is optional and states the default
-    value if there is no previous value set
-  * toString() returns a QString instance, not a Python string
-  * toInt() and toDouble() return tuples (value, ok) --- the second item indicates
-    const:`True` if whether the conversion from QVariant to the number went
-    fine --- in this example we ignore that indicator and only take the value.
+The second parameter of the :func:`value()` method is optional and specifies the default value if there is no previous value set for the passed setting name.
   
 .. index:: settings; project
 
 * **project settings** --- vary between different projects and therefore they
-  are connected with a project file. Map canvas background or destination
+  are connected with a project file. Map canvas background color or destination
   coordinate reference system (CRS) are examples --- white background and WGS84
   might be suitable for one project, while yellow background and UTM projection
-  for another one. An example of usage follows::
+  are better for another one. An example of usage follows::
 
     proj = QgsProject.instance()
 
     # store values
     proj.writeEntry("myplugin", "mytext", "hello world")
     proj.writeEntry("myplugin", "myint", 10)
+    proj.writeEntry("myplugin", "mydouble", 0.01)
+    proj.writeEntry("myplugin", "mybool", True)
 
     # read values
     mytext = proj.readEntry("myplugin", "mytext", "default text")[0]
     myint = proj.readNumEntry("myplugin", "myint", 123)[0]
 
-  Hopefully the QgsProject class will be updated in future to provide API
-  similar to the one of QSettings class. Due to some limitations of Python
-  bindings, it is not possible to save floating point numbers.
+As you can see, the :func:`writeEntry` method is used for all data types, but several methods exist for reading the setting value back, and the corresponding one has to be selected for each data type.
 
 .. index:: settings; map layer
 
@@ -87,8 +78,5 @@ We can make difference between several types of settings:
    layer.setCustomProperty("mytext", "hello world")
 
    # read the value again
-   mytext = layer.customProperty("mytext", "default text").toString()
+   mytext = layer.customProperty("mytext", "default text")
 
-
-**TODO:**
-   Keys for settings that can be shared among plugins

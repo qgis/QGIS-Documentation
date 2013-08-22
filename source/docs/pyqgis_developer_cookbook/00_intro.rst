@@ -37,7 +37,9 @@ There are some resources about programming with PyQGIS on `QGIS blog <http://blo
 See `QGIS tutorial ported to Python <http://blog.qgis.org/?q=node/59>`_
 for some examples of simple 3rd party apps. A good resource when dealing
 with plugins is to download some plugins from `plugin repository <http://plugins.qgis.org/>`_
-and examine their code.
+and examine their code. Also, the ``python/plugins/`` folder in your QGIS installation contains
+some plugin that you can use to learn how to develop such plugin and how to perform some
+of the most common tasks
 
 .. index::
   pair: Python; console
@@ -57,8 +59,8 @@ The console opens as a non-modal utility window:
 
 The screenshot above illustrates how to get the layer currently selected
 in the layer list, show its ID and optionally, if it is a vector layer,
-show the feature count. For interaction with QGIS environment, there is
-:data:`qgis.utils.iface` variable, which is instance of :class:`QgisInterface`.
+show the feature count. For interaction with QGIS environment, there is a
+:data:`iface` variable, which is an instance of :class:`QgisInterface`.
 This interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application.
 
@@ -81,12 +83,12 @@ Python Plugins
 QGIS allows enhancement of its functionality using plugins. This
 was originally possible only with C++ language. With the addition of Python
 support to QGIS, it is also possible to use plugins written in Python.
-Great advantages over C++ plugins is the simplicity of distribution (no
+The main advantage over C++ plugins is its simplicity of distribution (no
 compiling for each platform needed) and easier development.
 
 Many plugins covering various functionality have been written since the
-introduction of Python support. Plugin installer allows users to easily
-fetch, upgrade and remove Python plugins. See `Python Plugin Repositories
+introduction of Python support. The plugin installer allows users to easily
+fetch, upgrade and remove Python plugins. See the `Python Plugin Repositories
 <http://www.qgis.org/wiki/Python_Plugin_Repositories>`_ page for various
 sources of plugins.
 

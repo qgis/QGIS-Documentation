@@ -6,13 +6,13 @@
 Geometry Handling
 *****************
 
-Points, linestrings, polygons that represent a spatial feature are commonly
-referred to as geometries. In QGIS they are represented with :class:`QgsGeometry`
+Points, linestrings and polygons that represent a spatial feature are commonly
+referred to as geometries. In QGIS they are represented with the :class:`QgsGeometry`
 class. All possible geometry types are nicely shown in `JTS discussion page
 <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_.
 
 Sometimes one geometry is actually a collection of simple (single-part)
-geometries. Such a geometry is called multi-part geometry. If it contains just
+geometries. Such a geometry is called a multi-part geometry. If it contains just
 one type of simple geometry, we call it multi-point, multi-linestring or
 multi-polygon. For example, a country consisting of multiple islands can be
 represented as a multi-polygon.
@@ -26,7 +26,7 @@ coordinates in CRS of the layer.
 Geometry Construction
 =====================
 
-There are several options how to create a geometry:
+There are several options for creating a geometry:
 
 * from coordinates::
 
@@ -98,11 +98,32 @@ Geometry Predicates and Operations
 
 QGIS uses GEOS library for advanced geometry operations such as geometry
 predicates (:func:`contains`, :func:`intersects`, ...) and set operations
-(:func:`union`, :func:`difference`, ...)
+(:func:`union`, :func:`difference`, ...). It can also compute geometric properties of geometries, such as area (in the case of polygons) or lengths (for polygons and lines)
+
+Here you have a small example that combines iterating over the features in a given layer and perfoming some geometric computations based on their geometries.
+
+::
 
 
-**TODO:**
+  #we assume that 'layer' is a polygon layer
+  features = layer.getFeatures()
+  for f in features:
+    geom = f.geometry()
+    print "Area:", geom.area()
+    print "Perimeter:", geom.length()
 
-* :func:`area`, :func:`length`, :func:`distance`
-* :func:`transform`
-* available predicates and set operations
+Areas and perimeters don't take CRS into account when computed using these methods from the :class:`QgsGeometry` class. For a more powerful area and distance calculation, the :class:`QgsDistanceArea` class can be used. If projections are turned off, calculations will be planar, otherwise they'll be done on the ellipsoid. When an ellipsoid is not set explicitly, WGS84 parameters are used for calculations. 
+
+::
+
+  d = QgsDistanceArea()
+  d.setProjectionsEnabled(True)
+  
+  print "distance in meters: ", d.measureLine(QgsPoint(10,10),QgsPoint(11,11))
+
+You can find many example of algorithms that are included in QGIS and use these methods to analyze and transform vector data. Here are some links to the code of a few of them.
+
+- Geometry transformation: `Reproject algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_
+- Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_
+- `Multi-part to single-part algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_
+

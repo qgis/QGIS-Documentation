@@ -115,6 +115,29 @@ providers:
 
 .. index:: 
   pair: raster layers; loading
+
+* WFS connection:. the connection is defined with a URI and using the ``WFS`` provider
+  ::
+
+    uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
+    vlayer = QgsVectorLayer("my_wfs_layer", "WFS")
+
+  The uri can be created using the standard ``urllib`` library.
+
+  ::
+
+    params = {
+        'service': 'WFS',
+        'version': '1.0.0',
+        'request': 'GetFeature',
+        'typename': 'union',
+        'srsname': "EPSG:23030"
+    }                        
+    uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
+
+  And you can also use the 
+
+
   
 Raster Layers
 =============
@@ -134,6 +157,17 @@ by default). To load a raster from a file, specify its file name and base name
 
 .. index::
   pair: loading; WMS raster
+
+Raster layers can also be created from a WCS service.
+
+::
+
+    layer_name = 'elevation'
+    uri = QgsDataSourceURI()                    
+    uri.setParam ('url', 'http://localhost:8080/geoserver/wcs')    
+    uri.setParam ( "identifier", layer_name)
+    rlayer = QgsRasterLayer(uri, 'my_wcs_layer', 'wcs')     
+
 
 Alternatively you can load a raster layer from WMS server. However currently
 it's not possible to access GetCapabilities response from API --- you have to

@@ -27,15 +27,13 @@ The following operations are available:
 * geometry functions: ``$area``, ``$length``
 * conversion functions: ``to int``, ``to real``, ``to string``
 
-And following predicates are supported:
+And the following predicates are supported:
 
 * comparison: ``=``, ``!=``, ``>``, ``>=``, ``<``, ``<=``
 * pattern matching: ``LIKE`` (using % and _), ``~`` (regular expressions)
 * logical predicates: ``AND``, ``OR``, ``NOT``
 * NULL value checking: ``IS NULL``, ``IS NOT NULL``
 
-**Compatibility note:** mathematical, geometry, conversion functions and power
-operator ``^`` are available from QGIS 1.4.
 
 Examples of predicates:
 
@@ -78,33 +76,33 @@ Basic Expressions
 
   >>> exp = QgsExpression('1 + 1 = 2')
   >>> value = exp.evaluate()
-  >>> value.toInt()
-  (1, True)
+  >>> value
+  1
 
 Expressions with features
 --------------------------
 
-The following example will evaluate the given expression against a feature.  "Column" is a name of the field in the layer. 
+The following example will evaluate the given expression against a feature.  "Column" is the name of the field in the layer. 
 
 ::
 
   >>> exp = QgsExpression('Column = 99')
   >>> value = exp.evaluate(feature, layer.pendingFields())
-  >>> value.toBool()
+  >>> bool(value)
   True
 
-You can also use :func:`QgsExpression.prepare()` if you need check more then one feature.  Using :func:`QgsExpression.prepare()` will increase the speed that evaluate takes to run.
+You can also use :func:`QgsExpression.prepare()` if you need check more than one feature.  Using :func:`QgsExpression.prepare()` will increase the speed that evaluate takes to run.
 
 ::
 
   >>> exp = QgsExpression('Column = 99')
   >>> exp.prepare(layer.pendingFields())
   >>> value = exp.evaluate(feature)
-  >>> value.toBool()
+  >>> bool(value)
   True
  
 
-Hanlding errors
+Handling errors
 ---------------
 
 ::
@@ -117,7 +115,7 @@ Hanlding errors
   if exp.hasEvalError(): 
     raise ValueError(exp.evalErrorString())
 
-  value.toInt()
+  print value
 
 Examples
 ========
@@ -132,13 +130,11 @@ The following example can be used to filter a layer and return any feature that 
     if exp.hasParserError():
       raise Expection(exp.parserErrorString())
     exp.prepare(layer.pendingFields())
-    feature = QgsFeature()
-    layer.select(layer.pendingAllAttributesList())
-    while layer.nextFeature(feature):
+    for feature in layer.getFeatures():
       value = exp.evaluate(feature)
-    if exp.hasEvalError(): 
-      raise ValueError(exp.evalErrorString())
-      if value.toBool():
+      if exp.hasEvalError(): 
+        raise ValueError(exp.evalErrorString())
+      if bool(value):
         yield feature
 
   layer = qgis.utils.iface.activeLayer()

@@ -23,14 +23,14 @@ stored in the palette.
 
   >>> rlayer.width(), rlayer.height()
   (812, 301)
-  >>> rlayer.extent().toString()
-  PyQt4.QtCore.QString(u'12.095833,48.552777 : 18.863888,51.056944')
+  >>> rlayer.extent()
+  u'12.095833,48.552777 : 18.863888,51.056944'
   >>> rlayer.rasterType()
   2  # 0 = GrayOrUndefined (single band), 1 = Palette (single band), 2 = Multiband
   >>> rlayer.bandCount()
   3
   >>> rlayer.metadata()
-  PyQt4.QtCore.QString(u'<p class="glossy">Driver:</p>...')
+  u'<p class="glossy">Driver:</p>...'
   >>> rlayer.hasPyramids()
   False
 
@@ -179,11 +179,15 @@ Query Values
 
 To do a query on value of bands of raster layer at some specified point::
 
-  res, ident = rlayer.identify(QgsPoint(15.30,40.98))
-  for (k,v) in ident.iteritems():
-    print str(k),":",str(v)
+::
 
-The identify function returns True/False (to indicate succeess or failure) and
-a dictionary --- keys are band names, values are the values at chosen point.
-Both key and value are QString instances so to see actual value you'll need to
-convert them to python strings (as shown in code snippet).
+  ident = rlayer.dataProvider().identify(QgsPoint(15.30,40.98), QgsRaster.IdentifyFormatValue)
+  if ident.isValid():
+    print ident.results()
+  
+  The ``results`` method in this case returs a dictionary, with band indices as keys, and band values as values.
+
+::
+
+  {1: 17, 2: 220}
+
