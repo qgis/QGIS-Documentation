@@ -1148,10 +1148,10 @@ Joins Menu
 
 
 |join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
-to a loaded vector layer. After pressing |mActionSignPlus| the :guilabel:`Add vector join` dialog appears.
-As key columns you have to define a :index:`join layer`, a join field and a target field here. 
-QGIS currently supports to join non spatial table formats supported by OGR, delimited text and the PostgreSQL
-provider (see figure_joins_1_).
+to a loaded vector layer. After clicking |mActionSignPlus| the :guilabel:`Add vector join` dialog appears.
+As key columns you have to define a :index:`join layer` you want to connect with the target vector layer , a join field that corresponds to an attribute column in the target layer and a target field you find in the attribute table of the target vector layer here. As a result, all information of the join layer and the target layer are displayed in the attribute table of the target layer as joined information.
+ 
+QGIS currently supports to join non spatial table formats supported by OGR (e.g. CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
@@ -1178,11 +1178,13 @@ Diagrams Menu
 |diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a
 vector layer (see figure_diagrams_1_).
 
-The current core implementation of diagrams provides support for piecharts
-and text diagrams. Text values ​​of different data columns are displayed one
-below the other with a circle or a box and dividers. Diagram size is based
-on a fixed size or on linear scaling according to a classification attribute.
-The placement of the diagrams interacts with the new labeling, so position
+The current core implementation of diagrams provides support for piecharts, text diagrams
+and histograms.
+
+The menu is divided into four tabs now: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Postion` and :guilabel:`Options`.
+
+In the case of the text diagram and piechart text values ​​of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab diagram size is based on a fixed size or on linear scaling according to a classification attribute.
+The placement of the diagrams which is done in the :guilabel:`Position` tab interacts with the new labeling, so position
 conflicts between diagrams and labels are detected and solved. In addition
 to chart positions can be fixed by the users hand.
 
@@ -1208,7 +1210,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab, activate :guilabel:`Display diagrams`
+#. Click on the :guilabel:`Diagrams` menu, activate :guilabel:`Display diagrams`
    and from :guilabel:`Diagram type` |selectstring| combobox select 'Text diagram'
 #. As Background color we choose a light blue and set a fixed size to 18 mm.
 #. Placement could be set to AroundPoint.
