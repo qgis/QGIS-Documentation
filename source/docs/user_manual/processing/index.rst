@@ -3,11 +3,11 @@
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 
-.. _label_sextante:
+.. _label_processing:
 
-********
-SEXTANTE
-********
+***************************
+QGIs processing framework
+***************************
 
 .. toctree::
 	:maxdepth: 2

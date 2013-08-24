@@ -2,40 +2,40 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-Using SEXTANTE from the console
-===============================
+Using processing algorithms from the console
+==============================================
 
 The console allows advanced users to increase their productivity and perform
-complex operations that cannot be performed using any of the other elements of
-the SEXTANTE GUI. Models involving several algorithms can be defined using the
+complex operations that cannot be performed using any of the other GUI elements of
+the processing framework GUI. Models involving several algorithms can be defined using the
 command-line interface, and additional operations such as loops and conditional
 sentences can be added to create more flexible and powerful workflows.
 
-There is not a SEXTANTE console in QGIS, but all SEXTANTE commands are available
+There is not a proccesing console in QGIS, but all processing commands are available
 instead from the QGIS built-in Python console. That means that you can incorporate
-those command to your console work and connect SEXTANTE algorithms to all the
+those command to your console work and connect processing algorithms to all the
 other features (including methods from the QGIS API) available from there.
 
 The code that you can execute from the Python console, even if it does not call
-any SEXTANTE method, can be converted into a new SEXTANTE algorithm that you can
-later call from the toolbox, the graphical modeler or any other SEXTANTE component,
-just like you do with any other SEXTANTE algorithm. In fact, some algorithms that
+any specific processing method, can be converted into a new algorithm that you can
+later call from the toolbox, the graphical modeler or any other component,
+just like you do with any other algorithm. In fact, some algorithms that
 you can find in the toolbox are simple scripts.
 
-In this chapter we will see how to use SEXTANTE from the QGIS Python console,
+In this chapter we will see how to use processing algorithms from the QGIS Python console,
 and also how to write your own algorithms using Python.
 
-Calling SEXTANTE from the Python console
+Calling algorithms from the Python console
 ----------------------------------------
 
-The first thing you have to do is to import the SEXTANTE functions with the
+The first thing you have to do is to import the processing functions with the
 following line:
 
 ::
 
-    >>> import sextante
+    >>> import processing
 
-Now, there is basically just one (interesting) thing you can do with SEXTANTE
+Now, there is basically just one (interesting) thing you can do with that
 from the console: to execute an algorithm. That is done using the ``runalg()``
 method, which takes the name of the algorithm to execute as its first parameter,
 and then a variable number of additional parameter depending on the requirements
@@ -46,7 +46,7 @@ command–line name. To find the right name for your algorithm, you can use the
 
 ::
 
-    >>> sextante.alglist()
+    >>> processing.alglist()
 
 You will see something like this.
 
@@ -97,7 +97,7 @@ name, in this case ``saga:slopeaspectcurvature``.
 Once you know the command-line name of the algorithm, the next thing to do is to
 know the right syntax to execute it. That means knowing which parameters are
 needed and the order in which they have to be passed when calling the ``runalg()``
-method. SEXTANTE has a method to describe an algorithm in detail, which can be
+method. There is a method to describe an algorithm in detail, which can be
 used to get a list of the parameters that an algorithms require and the outputs
 that it will generate. To do it, you can use the ``alghelp(name_of_the_algorithm)``
 method. Use the command-line name of the algorithm, not the full descriptive name.
@@ -107,7 +107,7 @@ following description.
 
 ::
 
-    >>> sextante.alghelp("saga:slopeaspectcurvature")
+    >>> processing.alghelp("saga:slopeaspectcurvature")
     ALGORITHM: Slope, Aspect, Curvature
        ELEVATION <ParameterRaster>
        METHOD <ParameterSelection>
@@ -123,7 +123,7 @@ Its syntax is as follows:
 
 ::
 
-    >>> sextante.runalg(name_of_the_algorithm, param1, param2, ..., paramN,
+    >>> processing.runalg(name_of_the_algorithm, param1, param2, ..., paramN,
              Output1, Output2, ..., OutputN)
 
 The list of parameters and outputs to add depends on the algorithm you want to
@@ -146,7 +146,7 @@ one is a quick review of how to introduce values for each type of input paramete
 
   ::
 
-      >>> sextante.algoptions("saga:slopeaspectcurvature")
+      >>> processing.algoptions("saga:slopeaspectcurvature")
       METHOD(Method)
           0 - [0] Maximum Slope (Travis et al. 1975)
           1 - [1] Maximum Triangle Slope (Tarboton 1997)
@@ -187,7 +187,7 @@ Unlike when an algorithm is executed from the toolbox, outputs are not added to
 the map canvas if you execute that same algorithm from the Python Console. If you
 want to add an output to it, you have to do it yourself after running the
 algorithm. To do so, you can use QGIS API commands, or, even easier, use one of
-the handy methods provided by SEXTANTE for such task.
+the handy methods provided for such task.
 
 The ``runalg`` method returns a dictionary with the output names (the
 ones shown in the algorithm description) as keys and the filepaths of
@@ -197,16 +197,16 @@ filepath to the ``load()`` method.
 Additional functions for handling data
 --------------------------------------
 
-Apart from the functions used to call SEXTANTE algorithms, importing the
-``sextante`` package will also import some additional functions that make it
+Apart from the functions used to call algorithms, importing the
+``processing`` package will also import some additional functions that make it
 easier to work with data, particularly vector data. They are just convenience
 functions that wrap some functionality from the QGIS API, usually with a less
 complex syntax. These functions should be used when developing new algorithms,
 as they make it easier to operate with input data.
 
 Below is a list of some of this commands. More information can be found in the
-classes under the ``sextante/tools`` package, and aso in the example scripts
-provided with SEXTANTE.
+classes under the ``processing/tools`` package, and aso in the example scripts
+provided with QGIS.
 
 * ``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed
   object, which can be a filename or the name of the object in the QGIS Table of
@@ -225,7 +225,7 @@ Creating scripts and running them from the toolbox
 --------------------------------------------------
 
 You can create your own algorithms by writing the corresponding Python code and
-adding a few extra lines to supply additional information needed by SEXTANTE.
+adding a few extra lines to supply additional information needed to define the semantics of the algorithm.
 You can find a :guilabel:`Create new script` menu under the :guilabel:`Tools`
 group in the :guilabel:`Script` algorithms block of the toolbox. Double-click on
 it to open the script edition dialog. That's where you should type your code.
@@ -243,11 +243,11 @@ Let's have the following code, which calculates the Topographic Wetness Index
 
     ##dem=raster
     ##twi=output
-    ret_slope = sextante.runalg("saga:slopeaspectcurvature", dem, 0, None,
+    ret_slope = processing.runalg("saga:slopeaspectcurvature", dem, 0, None,
                     None, None, None, None)
-    ret_area = sextante.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
+    ret_area = processing.runalg("saga:catchmentarea(mass-fluxmethod)", dem,
                     0, False, False, False, False, None, None, None, None, None)
-    sextante.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
+    processing.runalg("saga:topographicwetnessindex(twi), ret_slope['SLOPE'],
                     ret_area['AREA'], None, 1, 0, twi)
 
 As you can see, it involves 3 algorithms, all of them coming from SAGA. The last
@@ -257,9 +257,9 @@ calling the corresponding SAGA algorithms.
 
 The part of the code where this processing takes place is not difficult to
 understand if you have read the previous sections in this chapter. The first
-lines, however, need some additional explanation. They provide SEXTANTE the
-information it needs to turn your code into an algorithm that can be run from any
-of its components, like the toolbox or the graphical modeler.
+lines, however, need some additional explanation. They provide the
+information that is needed to turn your code into an algorithm that can be run from any
+of the GUI components, like the toolbox or the graphical modeler.
 
 These lines start with a double Python comment symbol (``##``) and have the
 following structure
@@ -268,7 +268,7 @@ following structure
 
     [parameter_name]=[parameter_type] [optional_values]
 
-Here is a list of all the parameter types that SEXTANTE supports in its scripts,
+Here is a list of all the parameter types that are supported in processign scripts,
 their syntax and some examples.
 
 * ``raster``. A raster layer
@@ -293,13 +293,13 @@ The parameter name is the name that will be shown to the user when executing the
 algorithm, and also the variable name to use in the script code. The value entered
 by the user for that parameter will be assigned to a variable with that name.
 
-When showing the name of the parameter to the user, SEXTANTE will edit it to
+When showing the name of the parameter to the user, the name will be edited it to
 improve its appearance, replacing low hyphens with spaces. So, for instance,
 if you want the user to see a parameter named ``A numerical value``, you can use
 the variable name ``A_numerical_value``.
 
 Layers and tables values are strings containing the filepath of the corresponding
-object. To turn them into a QGIS object, you can use the ``sextante.getObjectFromUri()``
+object. To turn them into a QGIS object, you can use the ``processing.getObjectFromUri()``
 function. Multiple inputs also have a string value, which contains the filepaths
 to all selected object, separated by semicolons (``;``).
 
@@ -317,7 +317,7 @@ The value assigned to the output variables is always a string with a filepath.
 It will correspond to a temporary filepath in case the user has not entered any
 output filename.
 
-When you declare an output, SEXTANTE will try to add it to QGIS once the algorithm
+When you declare an output, the algorithm will try to add it to QGIS once it
 is finished. That is the reason why, although the ``runalg()`` method does not
 load the layers it produces, the final TWI layer will be loaded, since it is saved
 to the file entered by the user, which is the value of the corresponding output.
@@ -351,8 +351,8 @@ user. You have a global named ``progress`` available, with two available methods
 ``setText(text)`` and ``setPercentage(percent)`` to modify the progress text and
 the progress bar.
 
-Several examples are provided with SEXTANTE. Please, check them to see real
-examples of how to create algorithms using this feature of SEXTANTE. You can
+Several examples are provided. Please, check them to see real
+examples of how to create algorithms using the processing framework classes. You can
 right-click on any script algorithm and select :guilabel:`Edit script` to edit
 its code or just to see it.
 
@@ -375,15 +375,15 @@ filename, saving is done automatically.
 Pre- and post-execution script hooks
 ------------------------------------
 
-Script can also be used to set pre- and post-execution hooks that are run before
+Scripts can also be used to set pre- and post-execution hooks that are run before
 and after an algorithm is run. This can be used to automate tasks that should be
-performed whenever a SEXTANTE algorithm is executed.
+performed whenever an algorithm is executed.
 
 The syntax is identical to the syntax explained above, but an additional global
 variable named ``alg`` is available, representing the algorithm that has just
 been (or is about to be) executed.
 
-In the :guilabel:`General` group of the SEXTANTE config dialog you will find two
+In the :guilabel:`General` group of the processing config dialog you will find two
 entries named :guilabel:`Pre-execution script file` and :guilabel:`Post-execution
 script file` where the filename of the scripts to be run in each case can be
 entered.
