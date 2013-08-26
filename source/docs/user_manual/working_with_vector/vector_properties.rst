@@ -839,41 +839,10 @@ Feature subset
 
    General menu in vector layers properties dialog |nix|
 
-.. _vectormetadatamenu:
+Display Menu
+------------
 
-Metadata Menu
--------------
-
-|metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`, 
-:guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` section.
-
-In the :guilabel:`Properties` section you get general information about the layer,
-including specifics about the type and location, number of features, feature type, 
-and the editing capabilities in the :guilabel:`Properties` section. The :guilabel:`Extents`
-table provides you with layer extent information, and the :guilabel:`Layer Spatial Reference System`
-information, providing information about the CRS of the layer. This is a quick way
-to get information about the layer.
-
-Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description`.
-Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
-metadata catalogue. If you want to use a title from an XML metadata file you have to fill in 
-a link in the :guilabel:`DataUrl` field.
-Use :guilabel:`Attribution` to get Atrribute data from an XML metadata catalogue.
-In :guilabel:`MetadataUrl` you can define the general path to the XML metadata catalogue.
-These information will be saved in the QGIS project file for following sessions
-and will be used for QGIS server.
-
-.. _figure_metadata_vect:
-
-.. only:: html
-
-   **Figure Metadata 1:**
-
-.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
-   :width: 25 em
-   :align: center
-
-   Metadata tab in vector layers properties dialog |nix|
+|| 
 
 Actions Menu
 ------------
@@ -1140,7 +1109,6 @@ To add a raster (a tif image in this example) it becomes:
 
   qgis.utils.iface.addRasterLayer('/yourpath/[% "filename" %].tif','[% "layername" %]')
 
-
 .. _`sec_joins`:
 
 Joins Menu
@@ -1242,3 +1210,39 @@ Both vector layers are part of the |qg| sample dataset (see Section
 Remember that in the :guilabel:`Position` tab a |checkbox| :guilabel:`Data defined position`
 of the diagrams is possible. Here you can use attributes to define the position of the diagram.
 Also, a scale dependent visibility that you can find in the :guilabel:`Appearance` tab is possible.
+
+.. _vectormetadatamenu:
+
+Metadata Menu
+-------------
+
+|metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`, 
+:guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` section.
+
+In the :guilabel:`Properties` section you get general information about the layer,
+including specifics about the type and location, number of features, feature type, 
+and the editing capabilities in the :guilabel:`Properties` section. The :guilabel:`Extents`
+table provides you with layer extent information, and the :guilabel:`Layer Spatial Reference System`
+information, providing information about the CRS of the layer. This is a quick way
+to get information about the layer.
+
+Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description`.
+Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
+metadata catalogue. If you want to use a title from an XML metadata file you have to fill in 
+a link in the :guilabel:`DataUrl` field.
+Use :guilabel:`Attribution` to get Atrribute data from an XML metadata catalogue.
+In :guilabel:`MetadataUrl` you can define the general path to the XML metadata catalogue.
+These information will be saved in the QGIS project file for following sessions
+and will be used for QGIS server.
+
+.. _figure_metadata_vect:
+
+.. only:: html
+
+   **Figure Metadata 1:**
+
+.. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
+   :width: 25 em
+   :align: center
+
+   Metadata tab in vector layers properties dialog |nix|
