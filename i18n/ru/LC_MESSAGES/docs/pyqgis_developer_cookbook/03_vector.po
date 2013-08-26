@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,10 +59,20 @@ msgstr ""
 ":func:`select` позволяет получать только необходимые данные. Функция может "
 "принимать 4 необязательных аргумента:"
 
+# 40f1f5bf48474b308aabc30961631f1e
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:67
+msgid "fetchAttributes"
+msgstr ""
+
 # dcb9301e795c495dbf5385a11fb220b6
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:68
 msgid "List of attributes which should be fetched. Default: empty list"
 msgstr "Список атрибутов, которые нужно получать. По умолчанию: пустой список"
+
+# 68fe9722083544ae9d5eec0c588cc82e
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:70
+msgid "rect"
+msgstr ""
 
 # b91b23f1f9254392859675c9a6054cb4
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:70
@@ -74,11 +84,21 @@ msgstr ""
 "`QgsRectangle()`), запрашиваются все объекты. По умолчанию: пустой "
 "прямоугольник"
 
+# 1ff00c409cd44a7097ac2a95f1524918
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:72
+msgid "fetchGeometry"
+msgstr ""
+
 # c1a8a526f3a449a091a888eee2f73023
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:73
 msgid ""
 "Whether geometry of the feature should be fetched. Default: :const:`True`"
 msgstr "Нужно ли запрашивать геометрию. По умолчанию: :const:`True`"
+
+# b43d83263cae4900b96ddc0d4e1d56c2
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:78
+msgid "useIntersect"
+msgstr ""
 
 # 75ec2fee9b0d410b96c7a675da472c8c
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:75
@@ -292,6 +312,13 @@ msgstr ""
 msgid "Using Spatial Index"
 msgstr "Использование пространственного индекса"
 
+# df8caea1bd674762864c92c50469461b
+# 60136dda0e61424393108d6576bdd5ac
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:242
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:916
+msgid "**TODO:**"
+msgstr ""
+
 # b8220f9766af42d98f05597cebe2e610
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:242
 msgid "Intro to spatial indexing"
@@ -459,6 +486,11 @@ msgstr ""
 "описание полей и включать пространственное индексирование. Используется "
 "следующий синтаксис:"
 
+# ab90a1ecf1924e70ac8af73609e7314a
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:358
+msgid "crs=definition"
+msgstr ""
+
 # f14c08d709b34e3ba76863dabad6ddea
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:357
 msgid ""
@@ -468,10 +500,20 @@ msgstr ""
 "Задает используемую систему координат, definition может принимать любой вид, "
 "совместимый с :func:`QgsCoordinateReferenceSystem.createFromString`"
 
+# f99d868d8ac44733bbe8d9b1c71c0457
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:361
+msgid "index=yes"
+msgstr ""
+
 # d8a1a32fabbf425da562e70889148418
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:361
 msgid "Specifies that the provider will use a spatial index"
 msgstr "Определяет будет ли провайдер использовать пространственный индекс"
+
+# 2229ef78cacb4fdba8da47f316e2c6a9
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:366
+msgid "field=name:type(length,precision)"
+msgstr ""
 
 # df4dee4216874a52b629f087691f6e89
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:364
@@ -1007,8 +1049,8 @@ msgid ""
 "On every change of attributes, the widget should emit :func:`changed()` "
 "signal to let the properties dialog update the symbol preview."
 msgstr ""
-"При каждом изменении атрибутов виджет должен посылать сигнал :func:`changed()"
-"`, чтобы диалог свойств мог обновить предпросмотр символа."
+"При каждом изменении атрибутов виджет должен посылать сигнал :func:"
+"`changed()`, чтобы диалог свойств мог обновить предпросмотр символа."
 
 # 97764c1c16ea42f49d2dccf7f54c2659
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:755
@@ -1336,3 +1378,130 @@ msgstr "Рендер уникальным значением::"
 #: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:981
 msgid "Create graduated symbol renderer::"
 msgstr "Рендер градуированным значением::"
+
+# f7c37d4c52354796946db34f14a0a0f8
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:14
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:99
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:263
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:409
+#, fuzzy
+msgid "vector layers"
+msgstr "Работа с векторными слоями"
+
+# 3c3fec513d47423eb3325d7acd22c706
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:14
+msgid "iterating"
+msgstr ""
+
+# d981cd8df3f9496592701f83a622d68c
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:14
+#, fuzzy
+msgid "features"
+msgstr "Добавление объектов"
+
+# ae1a7840a33e4039b744e090f49763a3
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:99
+msgid "editing"
+msgstr ""
+
+# 7d112d2666784683996318d3d236b52d
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:236
+#, fuzzy
+msgid "spatial index"
+msgstr "Использование пространственного индекса"
+
+# 324c30533fe44de183a2a1bf687b37c5
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:236
+msgid "using"
+msgstr ""
+
+# 5d83870a9ec94c3dba3361b7c4102b4c
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:263
+msgid "writing"
+msgstr ""
+
+# 0c13fcd1e0f64d1a92833aecda6e68a0
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:329
+#, fuzzy
+msgid "memory provider"
+msgstr "Memory провайдер"
+
+# 1969500bcbfd45d18a690d192b9d8fd8
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:409
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:450
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:479
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:488
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:508
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:918
+#, fuzzy
+msgid "symbology"
+msgstr "Новая символика"
+
+# 97372f83e252430090f31bb8ad050649
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:450
+msgid "new"
+msgstr ""
+
+# c77c6f77bec64bd69caecedc397fad40
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:479
+#, fuzzy
+msgid "single symbol renderer"
+msgstr "Рендер обычным знаком"
+
+# eb55db59047e4a15ba30b132722c471c
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:488
+#, fuzzy
+msgid "categorized symbology renderer"
+msgstr "Рендер уникальными значениями"
+
+# eb55db59047e4a15ba30b132722c471c
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:488
+#, fuzzy
+msgid "categorized symbol renderer"
+msgstr "Рендер уникальными значениями"
+
+# 2c3bada390194337acfc0afea2e4d5f9
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:508
+#, fuzzy
+msgid "graduated symbol renderer"
+msgstr "Рендер градуированным знаком"
+
+# fb9b4418f8a24c22a2abe446e673fb47
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:586
+msgid "symbols"
+msgstr ""
+
+# e099f2abf4bf428d8f490637a0d9b751
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:586
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:618
+#, fuzzy
+msgid "working with"
+msgstr "Работа с символами"
+
+# 4a24b72cc83d4800a0372357cc9afd82
+# 7f7cce60b73c46faa651525346264dd7
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:618
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:657
+msgid "symbol layers"
+msgstr ""
+
+# fcd8a861955a4362837f30ca6827f05a
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:657
+#, fuzzy
+msgid "creating custom types"
+msgstr "Создание пользовательских рендеров"
+
+# fd6869e0f6644d959070b42f4d8d5bb9
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:786
+msgid "custom"
+msgstr ""
+
+# fd6869e0f6644d959070b42f4d8d5bb9
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:786
+msgid "renderers"
+msgstr ""
+
+# fc89b8b60247480fba1d6f2cc4cf3524
+#: ../../source/docs/pyqgis_developer_cookbook/03_vector.rst:918
+msgid "old"
+msgstr ""

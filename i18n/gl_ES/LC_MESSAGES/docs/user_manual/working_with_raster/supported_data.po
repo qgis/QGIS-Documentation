@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # a056b108abbe4e68b919519fe06d7586
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:7
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:5
 msgid "|updatedisclaimer|"
 msgstr ""
 
@@ -27,47 +27,49 @@ msgstr ""
 msgid "Working with Raster Data"
 msgstr ""
 
-# eb0e4ab4c4cc47e0b59acc1f25305793
+# ed6084ba318d447295122f5590cd951a
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:22
 msgid ""
 "This Section describes how to visualize and set raster layer properties. |"
-"qg| uses the :index:`GDAL` library to read and write raster data formats [#]"
-"_, including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas "
-"Imagine and many more."
+"qg| uses the :index:`GDAL` library to read and write raster data formats, "
+"including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine "
+"and many more. GRASS raster support is supplied by a native QGIS data "
+"provider plugin. The raster data can also be loaded in read mode from zip "
+"and gzip archives into QGIS."
 msgstr ""
 
 # 5e89d04872d34f8ea68d0bc7b658393c
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:27
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:29
 msgid ""
 "At the date of this document, more than 100 raster formats are supported by "
 "the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A "
 "complete list is available at http://www.gdal.org/formats_list.html."
 msgstr ""
 
-# e6ef2122c3c64371aefcef0957ae9071
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:31
+# e32168cba4bf48eda395bd8397dd17c2
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:34
 msgid ""
-"**Note** Not all of the listed formats may work in QGIS for various reasons. "
-"For example, some require external commercial libraries or the GDAL "
-"installation of your OS was not built to support the format you want to use. "
-"Only those formats that have been well tested will appear in the list of "
-"file types when loading a raster into QGIS. Other untested formats can be "
-"loaded by selecting *.*."
+"Not all of the listed formats may work in QGIS for various reasons. For "
+"example, some require external commercial libraries or the GDAL installation "
+"of your OS was not built to support the format you want to use. Only those "
+"formats that have been well tested will appear in the list of file types "
+"when loading a raster into QGIS. Other untested formats can be loaded by "
+"selecting the ``[GDAL] All files (*)`` filter."
 msgstr ""
 
 # d944415e6a6c4c9d9c16d0af57cde5d3
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:38
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:41
 msgid ""
 "Working with GRASS raster data is described in Section :ref:`sec_grass`."
 msgstr ""
 
 # a9c23997d0564e5b8fc092f8989ba6d9
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:42
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:45
 msgid "What is raster data?"
 msgstr ""
 
 # 8a3fd546784e4c64ab2502a2636703fb
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:44
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:47
 msgid ""
 "Raster data in GIS are matrices of discrete cells that represent features "
 "on, above or below the earth's surface. Each cell in the raster grid is the "
@@ -78,7 +80,7 @@ msgid ""
 msgstr ""
 
 # a49afaa965504d08afbfc60629c67fc9
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:51
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:54
 msgid ""
 "Unlike vector data, raster data typically do not have an associated database "
 "record for each cell. They are geocoded by its pixel resolution and the x/y "
@@ -87,7 +89,7 @@ msgid ""
 msgstr ""
 
 # 300a7845229444fa9d245bce212153de
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:56
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:59
 msgid ""
 "QGIS makes use of georeference information inside the raster layer (e.g. :"
 "index:`GeoTiff`) or in an appropriate world file to properly display the "
@@ -95,15 +97,15 @@ msgid ""
 msgstr ""
 
 # 83d3f13ee9fa44c182188b146ed029ab
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:64
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:67
 msgid "Loading raster data in QGIS"
 msgstr ""
 
-# aa1ae6d29ca649f8a99d1d767c117c69
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:66
+# 770441cc725b4b26913cb62860c6db2f
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:69
 msgid ""
 "Raster layers are loaded either by clicking on the |mActionAddRasterLayer| :"
-"sup:`Load Raster` icon or by selecting the :menuselection:`View -->` |"
+"sup:`Load Raster` icon or by selecting the :menuselection:`Layer -->` |"
 "mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
 "one layer can be loaded at the same time by holding down the :kbd:`Control` "
 "or :kbd:`Shift` key and clicking on multiple items in the dialog :guilabel:"
@@ -111,7 +113,7 @@ msgid ""
 msgstr ""
 
 # 3946ecc5e527474b8ad018c20b5bfe62
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:74
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:77
 msgid ""
 "Once a raster layer is loaded in the map legend you can click on the layer "
 "name with the right mouse button to select and activate layer specific "
@@ -119,66 +121,101 @@ msgid ""
 msgstr ""
 
 # adae95f8127a438c849c29ace56935a2
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:78
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:81
 msgid "**Right mouse button menu for raster layers**"
 msgstr ""
 
 # 06bff292b3ee4ff993acbb8731309808
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:82
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
 msgid ":menuselection:`Zoom to layer extent`"
 msgstr ""
 
-# be6068910a154baa96cfb7c4d10aacb2
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
-msgid ":menuselection:`Zoom to best scale (100\\%)`"
+# 77006019b3a84098853d800fcc51199a
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:84
+msgid ":menuselection:`Zoom to Best Scale (100\\%)`"
 msgstr ""
 
-# 5702e33d3b04472da203e0ca15f005b2
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:84
-msgid ":menuselection:`Show in overview`"
+# a8c345558f07401386289995e5e50dd0
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:85
+msgid ":menuselection:`Show in Overview`"
 msgstr ""
 
 # 5777811243a04d8590e4c35eb7c85b23
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:85
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
 msgid ":menuselection:`Remove`"
 msgstr ""
 
-# 554531ecb45e49e69e85534c1eb51ae7
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
-msgid ":menuselection:`Set layer CRS -->`"
-msgstr ""
-
-# 18ce21ceb0ce4df2ab4b1dceda206489
+# 642b7da1784c4aaeac18f16c6dd64a1f
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:87
-msgid ":menuselection:`Set project CRS from layer`"
+msgid ":menuselection:`Set Layer CRS`"
 msgstr ""
 
-# cc999006d4024538b9f18622ea3dfe54
+# b3e4e2d43e3948fdb6f13b6e95626953
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:88
-msgid ":menuselection:`Properties -->`"
+msgid ":menuselection:`Set Project CRS from Layer`"
 msgstr ""
 
-# 9892763716b34b4ea55876a6cd4d7229
+# 7edaa5606e954fb8972fbd17d5c7fc03
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:89
-msgid ":menuselection:`Rename -->`"
+msgid ":menuselection:`Properties`"
 msgstr ""
 
-# b6c78ada06c841c88a2f92e073ece482
+# 0e364cd005df4878bfea170ac2879393
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:90
-msgid ":menuselection:`Add Group`"
+msgid ":menuselection:`Rename`"
+msgstr ""
+
+# fe6179158cb848bfa2a1b76a1c3a348f
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+msgid ":menuselection:`Copy Style`"
+msgstr ""
+
+# 1ff5a420a3234c0d82d048323532cac8
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
+msgid ":menuselection:`Add New Group`"
 msgstr ""
 
 # 36f23616e23a42358c3fdb9b75a98d02
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:93
 msgid ":menuselection:`Expand all`"
 msgstr ""
 
 # 016517da2f44432c987bb5edee2033c0
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:94
 msgid ":menuselection:`Collapse all`"
 msgstr ""
 
-# de9644f38aeb49e3ac1726a8bbdd1775
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:96
-msgid "GRASS raster support is supplied by a native QGIS data provider plugin."
+# 3f8ce6cebaf748daa5b2094405d35e8c
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:95
+msgid ":menuselection:`Update Drawing Order`"
+msgstr ""
+
+# f9e29eabe503454bb204137862bbe03a
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:9
+msgid "Raster"
+msgstr ""
+
+# dbbbe154075548bbb1989cc13e3d1a01
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
+msgid "Arc/Info_Binary_Grid"
+msgstr ""
+
+# dbbbe154075548bbb1989cc13e3d1a01
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
+msgid "Arc/Info_ASCII_Grid"
+msgstr ""
+
+# dbbbe154075548bbb1989cc13e3d1a01
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
+msgid "GeoTIFF"
+msgstr ""
+
+# 0dff648af3b340bd98712f7839643085
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:11
+msgid "Erdas Imagine"
+msgstr ""
+
+# 22647989238c4c8c9bb3081de35bcb5a
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:62
+msgid "loading_raster"
 msgstr ""

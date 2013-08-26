@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # abeddfa8196a44cd82deca837b6aae3d
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:7
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:5
 msgid "|updatedisclaimer|"
 msgstr ""
 
@@ -278,22 +278,27 @@ msgid ""
 "Georeferencer Plugin dialog appears as shown in figure_georeferencer_1_."
 msgstr ""
 
-# e095130bb43b4442b537ca40f1df5024
+# f20e519c83ac4223bfbfc514057511eb
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:78
 msgid ""
 "For this example, we are using a topo sheet of South Dakota from SDGS. It "
-"can later be visualized together with the data from the GRASS spearfish60 "
-"location. You can download the topo sheet here: http://grass.osgeo.org/"
-"sampledata/spearfish\\_toposheet.tar.gz ."
+"can later be visualized together with the data from the GRASS :file:"
+"`spearfish60` location. You can download the topo sheet here: http://grass."
+"osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+msgstr ""
+
+# ebd3f44150ad48f6a50e1ecafb11f99c
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:93
+msgid "Georeferencer Plugin Dialog |nix|"
 msgstr ""
 
 # effeaa89d122444dbab6079a9480cad9
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:98
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:99
 msgid "Entering ground control points (GCPs)"
 msgstr ""
 
 # 9dbdc7f347d64f56ba5dfa4ad83ff626
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:100
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:101
 msgid ""
 "To start georeferencing an unreferenced raster, we must load it using the |"
 "mActionAddRasterLayer| button. The raster will show up in the main working "
@@ -301,23 +306,23 @@ msgid ""
 "reference points."
 msgstr ""
 
-# a5eeea393461443b810bd4ee1272ba1b
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:104
+# 7bd7baa929ce4c0cb4e02c163873460e
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:105
 msgid ""
 "Using the |mActionCapturePoint| :sup:`Add Point` button, add points to the "
 "main working area and enter their coordinates (see Figure "
-"figure_georeferencer_2_). For this procedure you have two options:"
+"figure_georeferencer_2_). For this procedure you have three options:"
 msgstr ""
 
 # 5ea87a3ddd224f64b7b18a3f3ee61a57
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:108
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:109
 msgid ""
 "Click on a point in the raster image and enter the X and Y coordinates "
 "manually."
 msgstr ""
 
 # 6e161d3d96d645fc88b28c0a5e364fc6
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:110
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:111
 msgid ""
 "Click on a point in the raster image and choose the button |pencil| :sup:"
 "`from map canvas` to add the X and Y coordinates with the help of a "
@@ -332,7 +337,7 @@ msgid ""
 msgstr ""
 
 # 825424dbfae44844b0fabc569c3d0c85
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:116
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:117
 msgid ""
 "Continue entering points. You should have at least 4 points, and the more "
 "coordinates you can provide, the better the result will be. There are "
@@ -340,39 +345,47 @@ msgid ""
 "order to locate a relevant set of GCP points."
 msgstr ""
 
-# d9d5ffc090fb4b4b81c845967f688b56
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:134
+# f1c9da234aa54c639d63a49eb25fe19c
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:132
+msgid "Add points to the raster image |nix|"
+msgstr ""
+
+# e630d2f811a248dfb4363840393a9ae6
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:135
 msgid ""
 "The points that are added to the map will be stored in a separate text file "
 "(:file:`[filename].points`) usually together with the raster image. This "
 "allows us to reopen the Georeferencer plugin at a later date and add new "
 "points or delete existing ones to optimize the result. The points file "
-"contains values of the form: mapX, mapY, pixelX, pixelY. You can use the |"
-"mActionFileOpen| :sup:`Load GCP Points` and |mActionFileSave| :sup:`Save GCP "
-"Points` buttons to manage the files. Within the GCP table you can click on a "
-"column header and therewith enable e.g. numerical sorting. The GCP list is "
-"automatically updated."
+"contains values of the form: ``mapX, mapY, pixelX, pixelY``. You can use the "
+"|mActionFileOpen| :sup:`Load GCP Points` and |mActionFileSave| :sup:`Save "
+"GCP Points` buttons to manage the files."
 msgstr ""
 
 # 5116b4bdc09a428c9576ea36ff23bcac
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:147
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:146
 msgid "Defining the transformation settings"
 msgstr ""
 
 # 8ed5c21afe404458accb7cc399be8edf
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:149
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:148
 msgid ""
 "After you have added your GCPs to the raster image, you need to define the "
 "transformation settings for the georeferencing process."
 msgstr ""
 
+# 289800f41bd74f89bcbc64a56f2f09d4
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:161
+msgid "Defining the georeferencer transformation settings |nix|"
+msgstr ""
+
 # b313bfc88a1a40188adf845e11f029a2
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:166
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:165
 msgid "Available Transformation algorithms"
 msgstr ""
 
 # 8522a965e4d74f828dba158403433da4
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:168
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:167
 msgid ""
 "Depending on how many ground control point you have captured, you may want "
 "to use different transformation algorithms. Choice of transformation "
@@ -382,12 +395,12 @@ msgid ""
 msgstr ""
 
 # 0ad9d3daf1404dfd827a9b8285cd55b9
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:174
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:173
 msgid "Currently, following algorithms are available:"
 msgstr ""
 
 # dab1a705a2534c39854376f5ff162168
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:176
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:175
 msgid ""
 "The **Linear algorithm** is used to create a world-file, and is different "
 "from the other algorithms, as it does not actually transform the raster. "
@@ -396,17 +409,16 @@ msgid ""
 msgstr ""
 
 # a96098242587499592dcb29acc932229
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:180
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:179
 msgid ""
 "The **Helmert transformation** performs simple scaling and rotation "
 "transformations."
 msgstr ""
 
-# 3ad67744f9ba442c8f569a3647e4e32d
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:182
+# 2da29b3ca7e346e5837295939daf87c5
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:181
 msgid ""
 "The **Polynomial algorithms** 1-3 are among the most widely used algorithms "
-"for georeferencing, and each one differs by the degree of distortion "
 "introduced to match source and destination ground control points. The most "
 "widely used polynomial algorithm is the second order polynomial "
 "transformation, which allows some curvature. First order polynomial "
@@ -415,7 +427,7 @@ msgid ""
 msgstr ""
 
 # e0b1491e91dc4406886b6c1ae3affe1f
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:189
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:186
 msgid ""
 "The **Thin plate spline (TPS) algorithm** is a more modern georeferencing "
 "method, which is able to introduce local deformations in the data. This "
@@ -423,95 +435,96 @@ msgid ""
 msgstr ""
 
 # 987ab2f1ef9243419175cd44a72a8605
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:192
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:189
 msgid ""
 "The **Projective transformation** is a linear rotation and translation of "
 "coordinates."
 msgstr ""
 
 # 2b0d333aace24b958600d707ac42c6ac
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:196
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:193
 msgid "Define the Resampling method"
 msgstr ""
 
-# 06551c7022df45be82f39a135a67a936
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:198
+# 25446441c2f84bfe83a17e27c53f460f
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:195
 msgid ""
 "The type of resampling you choose will likely depending on your input data "
 "and the ultimate objective of the exercise. If you don't want to change "
-"statistics of the image, you might want to choose Nearest neighbour, whereas "
-"a Cubic resampling will likely provide a more smoothed result."
+"statistics of the image, you might want to choose 'Nearest neighbour', "
+"whereas a 'Cubic resampling' will likely provide a more smoothed result."
 msgstr ""
 
 # 903a5689d0a147f292841bfe65914fb1
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:203
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:200
 msgid "It is prossible to choose between five different resampling methods."
 msgstr ""
 
 # 1cb2da9efc8e4f6285fc9a347014f6a3
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:205
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:202
 msgid "Nearest neighbour"
 msgstr ""
 
 # 655a6c1365b047db93b9895bd406526d
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:206
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:203
 msgid "Linear"
 msgstr ""
 
 # d8682f480069419c9bc14205eb48a2c2
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:207
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:204
 msgid "Cubic"
 msgstr ""
 
 # fea251e7e8194e20bfdee40db9a614b3
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:208
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:205
 msgid "Cubic Spline"
 msgstr ""
 
 # ae9128c00e0b44ae99606ce2163c2b46
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:209
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:206
 msgid "Lanczos"
 msgstr ""
 
 # 2ec71aaf57de477cba7a17449c1f3734
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:212
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:209
 msgid "Define the transformation settings"
 msgstr ""
 
 # de2e5c69150c4d3bb979570e92264951
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:214
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:211
 msgid ""
 "There are several options that need to be defined for the georeferenced "
 "output raster."
 msgstr ""
 
-# bc4b2fbf8d134777a93c1e1f1af74844
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:217
+# 248e6604ba324edfb0cf01f0fe82f4c1
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:214
 msgid ""
 "The checkbox |checkbox| :guilabel:`Create world file` is only available, if "
 "you decide to use the linear transformation type, because this means that "
-"the raster image actually won't be transformed. In this case, the field "
-"Output raster is not activated, because only a new world-file will be "
-"created."
+"the raster image actually won't be transformed. In this case, the field :"
+"guilabel:`Output raster` is not activated, because only a new world-file "
+"will be created."
 msgstr ""
 
-# dcc522c70bf44dcb94c329e97dba5bce
+# 445a0f97655f45feb0825157579fc5e5
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:219
+msgid ""
+"For all other transformation type you have to define an :guilabel:`Output "
+"raster`. As default a new file ([filename]_modified) will be created in the "
+"same folder together with the original raster image."
+msgstr ""
+
+# f879ad838c1645559203d9dd1fb2be3e
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:222
 msgid ""
-"For all other transformation type you have to define an **Output raster**. "
-"As default a new file ([filename]_modified) will be created in the same "
-"folder together with the original raster image."
-msgstr ""
-
-# e98da3e5c0fa42abb15458581939d0ed
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:225
-msgid ""
-"As a next step you have to define the **Target SRS** (Spatial Reference "
-"System) for the georeferenced raster (see section :ref:`label_projections`)."
+"As a next step you have to define the :guilabel:`Target SRS` (Spatial "
+"Reference System) for the georeferenced raster (see section :ref:"
+"`label_projections`)."
 msgstr ""
 
 # e52b73682fd14f1983ac39f92e0cfe81
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:227
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:224
 msgid ""
 "If you like, you can **generate a pdf map** and also **a pdf report**. The "
 "report includes information about the used transformation parameters. An "
@@ -519,7 +532,7 @@ msgid ""
 msgstr ""
 
 # 61e53d2783854fc58cb384e19bf6e1b4
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:230
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:227
 msgid ""
 "Furthermore you can activate the |checkbox| :guilabel:`Set Target "
 "Resolution` checkbox and define pixel resolution of the output raster. "
@@ -527,7 +540,7 @@ msgid ""
 msgstr ""
 
 # c183ce09b83a41408d77840185590bfc
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:233
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:230
 msgid ""
 "The |checkbox| :guilabel:`Use 0 for transparency when needed` can be "
 "activated, if pixels with the value 0 shall be visualized transparent. In "
@@ -535,7 +548,7 @@ msgid ""
 msgstr ""
 
 # 5ee96c385efe43518e6a5b2dbf1f0f5c
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:236
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:233
 msgid ""
 "Finally |checkbox| :guilabel:`Load in QGIS when done` loads the output "
 "raster automatically into the QGIS map canvas when the transformation is "
@@ -543,12 +556,12 @@ msgid ""
 msgstr ""
 
 # 939dd41f68e543fb9c60725c2fa6271e
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:240
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:237
 msgid "Show and adapt raster properties"
 msgstr ""
 
 # 7232b3b4917c4ca286fd222c8ec0b26f
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:243
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:239
 msgid ""
 "Clicking on the :guilabel:`Raster properties` dialog in the :guilabel:"
 "`Settings` menu opens the raster properties of the layer that you want to "
@@ -556,43 +569,48 @@ msgid ""
 msgstr ""
 
 # 9d5af79ab85e44d0bc75f3938254beaf
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:247
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:243
 msgid "Configure the georeferencer"
 msgstr ""
 
 # 3d5a6005e8444a2782fd11b3e73f4444
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:250
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:245
 msgid "You can define if you want to show GCP coordiniates and/or IDs."
 msgstr ""
 
 # 729c7a50c2a14157b14e342cd3c9d157
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:251
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:246
 msgid "As residual units pixels and map units can be chosen."
 msgstr ""
 
 # ad441edc58724cd4ba9b56f3f96e4aa5
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:252
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:247
 msgid ""
 "For the PDF report a left and right margin can be defined and you can also "
 "set the paper size for the PDF map."
 msgstr ""
 
 # 736e794e24e34856bae83d1317a889cc
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:254
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:249
 msgid ""
 "Finally you can activate to |checkbox| :guilabel:`show georeferencer window "
 "docked`."
 msgstr ""
 
 # 02d7ac9c1ae340afbe5b539e98c17e84
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:259
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:254
 msgid "Running the transformation"
 msgstr ""
 
 # eda49f84c8ad43ba82c020cb1b383fd2
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:262
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:256
 msgid ""
 "After all GCPs have been collected and all transformation settings are "
 "defined, just press the button |mActionStartGeoref| :sup:`Start "
 "georeferencing` to create the new georeferenced raster."
+msgstr ""
+
+# 0a3a153b3d3541519dc80063ef85aba0
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:22
+msgid "Georeferencer tools"
 msgstr ""

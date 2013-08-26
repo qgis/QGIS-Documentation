@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-21 22:43\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # f7e67f4299724f3e926cd14072012fd1
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:7
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:5
 msgid "|updatedisclaimer|"
 msgstr ""
 
@@ -27,22 +27,27 @@ msgstr ""
 msgid "Raster Calculator"
 msgstr ""
 
-# 1ae19bf875ab460997838724932e96ca
+# 52f7b9ada4d94e79a3607ac0ba0ba053
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:16
 msgid ""
-"The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
 "(see figure_raster_2_) allows to perform calculations on basis of existing "
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
 
-# d5d9305cfb8a44048cbdf23f0f5ca4c2
+# 812f486e6d5247de9834edb3f083cbd5
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:31
+msgid "Raster Calculator |nix|"
+msgstr ""
+
+# 91e7edd5a9d34194ae6315eb3072a29b
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:34
 msgid ""
-"The **Fields list** contains all loaded raster layers that can be used. To "
-"add a raster to the raster calculator expression field, double click its "
-"name in the Fields list. You can then use the operators to construct "
-"calculation expressions or you can just type it into the box."
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions or you can just type it into the box."
 msgstr ""
 
 # 85477bec7334487390625441323c2464
@@ -55,18 +60,61 @@ msgid ""
 "resolution, the values will be resampled with nearest neighbor algorithm."
 msgstr ""
 
-# 1a689b24429249a385b157e55e359850
+# a66799fcfd0a4bb1ae41d03ffc44585f
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:45
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
 "to the raster calculator expression box, click the appropriate button. "
-"Mathematical calculations ( + , - , * , ... ) and trigonometric functions "
-"( sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
+"Mathematical calculations (``+``, ``-``, ``*``, ... ) and trigonometric "
+"functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for "
+"more operators to come!"
 msgstr ""
 
-# d86712d5252b440b859c47aeb14370cc
+# c753b3ed812c4555905238276fbea7ef
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:50
 msgid ""
-"With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
-"will automatically added to the legend area and can be visualized."
+"With the |checkbox| :guilabel:`Add result to project` checkbox the result "
+"layer will automatically added to the legend area and can be visualized."
+msgstr ""
+
+# 3a1ad37fd66940c48725089fee52d997
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
+msgid "Examples"
+msgstr ""
+
+# 7727a869dbe14a878c9de7b3ba5e6ee3
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
+msgid "**Convert elevation values from meter to feet**"
+msgstr ""
+
+# 7fb048a440a54042afd2c7742fcb9ff5
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:59
+msgid ""
+"Creating an elevation raster feet from a raster in meter, you need to use "
+"the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+
+# 25526d997217408589d4185f23523458
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
+msgid "**Using a mask**"
+msgstr ""
+
+# 2fd80bee7604431dbd6dab9d588e0303
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:68
+msgid ""
+"If you want to mask out parts of a raster, because you are only interested "
+"in elevations above 0 meter, you can use following expression to create a "
+"mask and apply the result to a raster in one step."
+msgstr ""
+
+# 9f403f0fcf0942b1bbb6d3ad7fa09378
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:76
+msgid ""
+"For every cell greater than or equal to 0, set its value to 1, otherwise set "
+"it to 0. This creates the mask on the fly."
+msgstr ""
+
+# 8436b804efc147d295af561a0a790a43
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
+msgid "Raster_Calculator"
 msgstr ""
