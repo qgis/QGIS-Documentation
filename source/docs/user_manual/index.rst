@@ -27,7 +27,7 @@ QGIS User Guide
 	working_with_gps/index
 	grass_integration/grass_integration
         osm/openstreetmap
-        sextante/index
+        processing/index
 	print_composer/print_composer
 	plugins/plugins_index
 	preamble/help_and_support

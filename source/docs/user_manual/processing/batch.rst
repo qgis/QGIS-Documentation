@@ -2,13 +2,13 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-The SEXTANTE batch processing interface
+The batch processing interface
 =======================================
 
 Introduction
 ------------
 
-SEXTANTE algorithms (including models) can be executed as a batch process. That
+All algorithms (including models) can be executed as a batch process. That
 is, they can be executed using not a single set of inputs, but several of them,
 executing the algorithm as many times as needed. This is useful when processing
 large amounts of data, since it is not necessary to launch the algorithm many
@@ -18,13 +18,13 @@ To execute an algorithm as a batch process, right-click on its name in the toolb
 and select the :guilabel:`Execute as batch process` option in the pop-up menu
 that will appear.
 
-.. _figure_sextante_1:
+.. _figure_processing_1:
 
 .. only:: html
 
-   **Figure SEXANTE 24:**
+   **Figure Processing 26:**
 
-.. figure:: /static/user_manual/sextante/batch_processing_right_click.png
+.. figure:: /static/user_manual/processing/batch_processing_right_click.png
    :align: center
    :width: 20em
 
@@ -39,13 +39,13 @@ a single value for each parameter, but a set of them instead, one for each time
 the algorithm has to be executed. Values are introduced using a table like the
 one shown next.
 
-.. _figure_sextante_2:
+.. _figure_processing_2:
 
 .. only:: html
 
-   **Figure SEXANTE 25:**
+   **Figure Processing 27:**
 
-.. figure:: /static/user_manual/sextante/batch_processing.png
+.. figure:: /static/user_manual/processing/batch_processing.png
    :align: center
    :width: 30em
 
@@ -91,19 +91,19 @@ on the accompanying button.
 Once you select the file, a new dialog is shown to allow for autocompletion of
 other cells in the same column (same parameter).
 
-.. _figure_sextante_3:
+.. _figure_processing_3:
 
 .. only:: html
 
-   **Figure SEXANTE 26:**
+   **Figure Processing 28:**
 
-.. figure:: /static/user_manual/sextante/batch_processing_save.png
+.. figure:: /static/user_manual/processing/batch_processing_save.png
    :align: center
    :width: 20em
 
    Batch Processing Save
 
-If the default value ('Do not autocomplete') is selected, SEXTANTE will just put
+If the default value ('Do not autocomplete') is selected, it will just put
 the selected filename in the selected cell from the parameters table. If any of
 the other options is selected, all the cells below the selected one will be
 automatically filled based on a defined criteria. This way, it is much easier to
@@ -113,13 +113,13 @@ Automatic filling can be done simply adding correlative numbers to the selected
 filepath, or appending the value of another field at the same row. This is
 particularly useful for naming output data object according to input ones.
 
-.. _figure_sextante_4:
+.. _figure_processing_4:
 
 .. only:: html
 
-   **Figure SEXANTE 27:**
+   **Figure Processing 29:**
 
-.. figure:: /static/user_manual/sextante/batch_processing_filepath.png
+.. figure:: /static/user_manual/processing/batch_processing_filepath.png
    :align: center
    :width: 20em
 
@@ -130,5 +130,5 @@ Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on **[OK]**. SEXTANTE will show the progress of the global batch
-process in the progress bar in the lower part of the dialog.
+just click on **[OK]**. Progress of the global batch task will be shown in the 
+progress bar in the lower part of the dialog.

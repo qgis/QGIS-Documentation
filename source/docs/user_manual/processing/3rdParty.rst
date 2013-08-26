@@ -5,29 +5,29 @@
 Configuring external applications
 =================================
 
-SEXTANTE can be extended using additional applications, calling them from within
-SEXTANTE. Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are supported, along
+The processign framework can be extended using additional applications. 
+Currently, SAGA, GRASS, OTB(Orfeo Toolbox) and R are supported, along
 with some other command-line applications that provide spatial data analysis
 functionalities. Algorithms relying on an external application are managed by
 their own algorithm provider.
 
-This chapter will show you how to configure SEXTANTE to include these additional
+This chapter will show you how to configure the processing framework to include these additional
 applications, and will explain some particular features of the algorithm based
 on them. Once you have correctly configured the system, you will be able to
-execute external algorithms from any SEXTANTE component like the toolbox or the
-graphical modeler, just like you do with any other SEXTANTE geoalgorithm.
+execute external algorithms from any component like the toolbox or the
+graphical modeler, just like you do with any other geoalgorithm.
 
 By default, all algorithms that rely on an external appplication not shipped with
-QGIS are not enabled. You can enable them in the SEXTANTE configuration dialog.
+QGIS are not enabled. You can enable them in the configuration dialog.
 Make sure that the corresponding application is already installed in your system.
 Enabling an algorithm provider without installing the application it needs will
 cause the algorithms to appear in the toolbox, but an error will be thrown when
 you try to execute them.
 
 This is because the algorithm descriptions (needed to create the parameters dialog
-and give SEXTANTE the information it needs about the algorithm) are not included
-with each appllication, but with SEXTANTE instead. That is,they are part of
-SEXTANTE, so you have them in your installation even if you have not installed
+and provide the information needed about the algorithm) are not included
+with each application, but with QGIS instead. That is,they are part of
+QGIS, so you have them in your installation even if you have not installed
 any other software. Running the algorithm, however, needs the application binaries
 to be installed in your system.
 
@@ -38,7 +38,7 @@ If you are not an advanced user and you are running QGIS on windows, you might
 not be interested in reading the rest of this chapter. Make sure you install
 QGIS in your system using the OSGeo4W application. That will automatically
 install SAGA, GRASS and OTB in your system, and configure them so they can be
-run from SEXTANTE. All the algorithms in the simplified view of the toolbox will
+run from QGIS. All the algorithms in the simplified view of the toolbox will
 be ready to be run, without needing any further configuration.
 
 If you want to know more about how these providers work, or want to use some
@@ -59,9 +59,9 @@ you are sure that are understood by both programs, and check to console output
 Using GRASS raster layers is, for instance, one case in which you might have
 trouble and not be able to complete your work if you call an external algorithm
 using such a layer as input. For this reason, these layers will not appear as
-available to SEXTANTE algorithms.
+available to algorithms.
 
-You should, however, find no problems at all with vector layers, since SEXTANTE
+You should, however, find no problems at all with vector layers, since QGIS
 automatically converts from the original file format to one accepted by the
 external application before passing the layer to it. This adds an extra processing
 time, which might be significant if the layer has a large size, so do not be
@@ -89,7 +89,7 @@ External applications are also aware of the selection that exist in vector layer
 within QGIS. However, that requires rewritting all input vector layers, just as
 if they were originally in a format not supported by the external application.
 Only when no selection exist, or the *Use only selected features* option is not
-enabled in the SEXTANTE general configuration, a layer can be directly passed to
+enabled in the processing general configuration, a layer can be directly passed to
 an external application.
 
 In other cases, exporting only selected features is needed, which causes execution
@@ -98,8 +98,8 @@ times to be longer.
 SAGA
 ----
 
-SAGA algorithms can be run from SEXTANTE if you have SAGA installed in your system
-and you configure SEXTANTE properly so it can find SAGA executables. In particular,
+SAGA algorithms can be run from QGIS if you have SAGA installed in your system
+and you configure the processing framework properly so it can find SAGA executables. In particular,
 the SAGA command-line executable is needed to run SAGA algorithms.
 
 
@@ -108,11 +108,11 @@ install SAGA along with QGIS, and the path is automatically configured, so there
 no need to do anything else.
 
 If you have installed SAGA yourself (remember, you need version 2.1), the path to the
-SAGA executable must be configured. To do it, open the SEXTANTE
+SAGA executable must be configured. To do it, open the 
 configuration dialog. In the :guilabel:`SAGA` block you will find a setting named
 :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is installed.
 Close the configuration dialog and now you are ready to run SAGA algorithms from
-SEXTANTE.
+QGIS.
 
 In case you are running linux, SAGA binaries
 are not included with SEXTANTE, so you have to download and install the software
@@ -131,9 +131,9 @@ About SAGA grid system limitations
 Most of SAGA algorithms that require several input raster layers, require them to
 have the same grid system. That is, to cover the same geographic area and have
 the same cellsize, so their corresponding grids match. When calling SAGA
-algorithms from SEXTANTE, you can use any layer, regardless of its cellsize and
+algorithms from QGIS, you can use any layer, regardless of its cellsize and
 extent. When multiple raster layers are used as input for a SAGA algorithm,
-SEXTANTE resamples them to a common grid system and then passes them to SAGA
+QGIS resamples them to a common grid system and then passes them to SAGA
 (unless the SAGA algorithm can operate with layers from different grid systems).
 
 The definition of that common grid system is controlled by the user, and you will
@@ -149,7 +149,7 @@ are two ways of setting the target grid system:
   - :guilabel:`Resampling max Y`
   - :guilabel:`Resampling cellsize`
 
-  Notice that SEXTANTE will resample input layers to that extent, even if they
+  Notice that QGIS will resample input layers to that extent, even if they
   do not overlap with it.
 * Setting it automatically from input layers. To select this option, just check
   the :guilabel:`Use min covering grid system for resampling` option. All the
@@ -176,42 +176,42 @@ Limitations in cellsize
 SAGA assumes that raster layers have the same cellsize in the X and Y axis. If
 you are working with a layer with different values for its horizontal and vertical
 cellsizes, you might get unexcepted results. In this case, a warning will be added
-to the SEXTANTE log, indicating that an input layer might not be suitable to be
+to the processing log, indicating that an input layer might not be suitable to be
 processed by SAGA.
 
 Logging
 .......
 
-When SEXTANTE calls SAGA, it does it using its command-line interface, thus
+When QGIS calls SAGA, it does it using its command-line interface, thus
 passing a set of commands to perform all the required operation. SAGA show its
 progress by writing information to the console, which includes the percentage
 of processing already done, along with additional content. This output is
-filtered by SEXTANTE and used to update the progress bar while the algorithm
+filtered and used to update the progress bar while the algorithm
 is running.
 
-Both the commands sent by SEXTANTE and the additional information printed by
-SAGA can be logged along with other SEXTANTE log messages, and you might find
-them useful to track in detailed what is going on when SEXTANTE runs a SAGA
+Both the commands sent by QGIS and the additional information printed by
+SAGA can be logged along with other processing log messages, and you might find
+them useful to track in detailed what is going on when QGIS runs a SAGA
 algorithm. you will find two settings, namely :guilabel:`Log console output` and
 :guilabel:`Log execution commands` to activate that logging mechanism.
 
 Most other providers that use an external application and call it through the
 command-line have similar options, so you will find them as well in other places
-in the SEXTANTE settings list.
+in the processing settings list.
 
 R. Creating R scripts
 ---------------------
 
-R integration in SEXTANTE is different from that of SAGA in that there is not a
+R integration in QGIS is different from that of SAGA in that there is not a
 predefined set of algorithms you can run (except for a few examples). Instead,
 you should write your scripts and call R commands, much like you would do from R,
-and in a very similar manner to what we saw in the chapter dedicated to SEXTANTE
+and in a very similar manner to what we saw in the chapter dedicated to processing
 scripts. This chapter shows you the syntax to use to call those R commands from
-SEXTANTE and how to use SEXTANTE objects (layers, tables) in them.
+QGIS and how to use QGIS objects (layers, tables) in them.
 
-The first thing you have to do, as we saw in the case of SAGA, is to tell SEXTANTE
+The first thing you have to do, as we saw in the case of SAGA, is to tell QGIS
 where you R binaries are located. You can do so using the :guilabel:`R folder`
-entry in the SEXTANTE configuration dialog. Once you have set that parameter,
+entry in the processing configuration dialog. Once you have set that parameter,
 you can start creating your own R scripts and executing them.
 
 Once again, this is different in Linux, and you just have to make sure that the
@@ -219,20 +219,20 @@ R folder is included in the PATH environment variable. If you can start R just
 typing ``R`` in a console, then you are ready to go.
 
 To add a new algorithm that calls an R function (or a more complex R script that
-you have developed and you would like to have available from SEXTANTE), you have
-to create a script file that tells SEXTANTE how to perform that operation and the
+you have developed and you would like to have available from QGIS), you have
+to create a script file that tells the processing framework how to perform that operation and the
 corresponding R commands to do so.
 
 Script files have the extension :file:`.rsx` and creating them is pretty easy
 if you just have a basic knowledge of R syntax and R scripting. They should be
 stored in the R-scripts folder. You can set this folder in the :guilabel:`R`
-settings group (available from the SEXTANTE settings dialog), just like you do
-with the folder for regular SEXTANTE scripts.
+settings group (available from the processing settings dialog), just like you do
+with the folder for regular processing scripts.
 
 Let’s have a look at a very simple file script file, which calls the R method
 ``spsample`` to create a random grid within the boundary of the polygons in a
 given polygon layer. This method belong to the ``maptools`` package. Since almost
-all the algorithms that you might like to incorporate into SEXTANTE will use or
+all the algorithms that you might like to incorporate into QGIS will use or
 generate spatial data, knowledge of spatial packages like ``maptools`` and,
 specially, ``sp``, is mandatory.
 
@@ -246,25 +246,25 @@ specially, ``sp``, is mandatory.
     output=SpatialPointsDataFrame(pts, as.data.frame(pts))
 
 The first lines, which start with a double Python comment sign (``##``), tell
-SEXTANTE the inputs of the algorithm described in the file and the outputs that
+QGIS the inputs of the algorithm described in the file and the outputs that
 it will generate. They work exactly with the same syntax as the SEXTANTE scripts
 that we have already seen, so they will not be described here again. Check the
-:ref:`sextante_scripts` section for more information.
+:ref:`processing_scripts` section for more information.
 
-When you declare an input parameter, SEXTANTE uses that information for two
+When you declare an input parameter, QGIS uses that information for two
 things: creating the user interface to ask the user for the value of that
 parameter and creating a corresponding R variable that can be later used as input
 for R commands.
 
 In the above example, we are declaring an input of type ``vector`` named ``polyg``.
-When executing the algorithm, SEXTANTE will open in R the layer selected by the
+When executing the algorithm, QGIS will open in R the layer selected by the
 user and store it in a variable also named ``polyg``. So the name of a parameter
 is also the name of the variable that we can use in R for accesing the value of
 that parameter (thus, you should avoid using reserved R words as parameter names).
 
 Spatial elements such as vector and raster layers are read using the ``readOGR()``
 and ``brick()`` commands (you do not have to worry about adding those commands
-to your description file, SEXTANTE will do it) and stored as ``Spatial*DataFrame``
+to your description file, QGIS will do it) and stored as ``Spatial*DataFrame``
 objects. Table fields are stored as strings containing the name of the selected
 field.
 
@@ -274,8 +274,8 @@ user is not in CSV format, it will be converted prior to importing it in R.
 Additionally, raster files can be read using the ``readGDAL()`` command instead
 of ``brick()``, by using the ``##usereadgdal``.
 
-If you are an advanced user and do not want SEXTANTE to create the object
-representing the layer, you can use the ``##passfilename`` tag to tell SEXTANTE
+If you are an advanced user and do not want QGIS to create the object
+representing the layer, you can use the ``##passfilename`` tag to indicate
 that you prefer a string with the filename instead. In this case, it is up to you
 to open the file before performing any operation on the data it contains.
 
@@ -298,7 +298,7 @@ same name that you used to declare it, and contains a suitable value.
 
 In this case, the result obtained from the ``spsample`` method has to be converted
 explicitly into a ``SpatialPointsDataFrame`` object, since it is itself an object
-of class ``ppp``, which is not a suitable class to be returned to SEXTANTE.
+of class ``ppp``, which is not a suitable class to be returned to QGIS.
 
 If your algorithm generates raster layers, the way they are saved will depend on
 whether you have used or not the ``#dontuserasterpackage`` option. In you have
@@ -310,7 +310,7 @@ If you have used the ``#passfilename`` option, outputs are generated using the
 inputs.
 
 If you algorithm does not generate any layer, but a text result in the console
-instead, you have to tell SEXTANTE that you want the console to be shown once the
+instead, you have to indicate that you want the console to be shown once the
 execution is finished. To do so, just start the command lines that produce the
 results you want to print with the ``>`` ('greater') sign. The output of all other
 lines will not be shown. For instance, here is the description file of an
@@ -326,7 +326,7 @@ attributes of a vector layer:
     >lillie.test(layer[[field]])
 
 The output ot the last line is printed, but the output of the first is not (and
-neither are the outputs from other command lines added automatically by SEXTANTE).
+neither are the outputs from other command lines added automatically by QGIS).
 
 If your algorithm creates any kind of graphics (using the ``plot()`` method), add
 the following line:
@@ -335,10 +335,10 @@ the following line:
 
     ##showplots
 
-This will cause SEXTANTE to redirect all R graphical outputs to a temporary file,
+This will cause QGIS to redirect all R graphical outputs to a temporary file,
 which will be later opened once R execution has finished.
 
-Both graphics and console results will be shown in the SEXTANTE results manager.
+Both graphics and console results will be shown in the processing results manager.
 
 For more information, please check the script files provided with SEXTANTE. Most
 of them are rather simple and will greatly help you understand how to create your
@@ -352,12 +352,12 @@ own ones.
    additional libraries that you might need have to be explicitly loaded. Just
    add the necessary commands at the beginning of your script. You also have to
    make sure that the corresponding packages are installed in the R distribution
-   used by SEXTANTE. SEXTANTE will not take care of any package installation. If you
+   used by QGIS. The processing framework will not take care of any package installation. If you
    run a script that requires an uninstalled package, the execution will fail, and
    SEXTANTE will try to detect which packages are missing, showing you a dialog like
    the one shown next
 
-   .. figure:: /static/user_manual/sextante/missing_r_packages.png
+   .. figure:: /static/user_manual/processing/missing_r_packages.png
       :align: center
       :width: 15em
 
@@ -372,7 +372,7 @@ Additionaly, a shell interpreter (usually :file:`msys.exe`, which can be found
 in most GRASS for Windows distributions) has to be defined and its path set up
 as well.
 
-By default, SEXTANTE tries to configure its GRASS connector to use the GRASS
+By default, the processign framework tries to configure its GRASS connector to use the GRASS
 distribution that ships along with QGIS. This should work without problems in
 most systems, but if you experience problems, you might have to do it manually.
 Also, if you want to use a different GRASS installation, you can change that setting
@@ -390,21 +390,21 @@ check the :guilabel:`Use min covering region` option in the GRASS configuration
 parameters.
 
 The last parameter that has to be configured is related to the mapset. A mapset
-is needed to run GRASS, and SEXTANTE creates a temporary one for each execution.
-You have to tell SEXTANTE if the data you are working with uses geographical
+is needed to run GRASS, and the  processing frmaework creates a temporary one for each execution.
+You have to specify if the data you are working with uses geographical
 (lat/lon) coordinates or projected ones.
 
 GDAL
 ----
 
 No additional configuration is needed to run GDAL algorithms, since it is already
-incorporated to QGIS and SEXTANTE can infere its configuration from it.
+incorporated to QGIS and algorithms can infere its configuration from it.
 
 Orfeo ToolBox
 -------------
 
-Orfeo ToolBox (OTB) algorithms can be run from SEXTANTE if you have OTB installed
-in your system and you have configured SEXTANTE properly, so it can find all
+Orfeo ToolBox (OTB) algorithms can be run from QGIS if you have OTB installed
+in your system and you have configured QGIS properly, so it can find all
 necessary files (command-line tools and libraries).
 
 
@@ -413,7 +413,7 @@ Windows, but are not included if you are runing Linux, so you have to download
 and install the software yourself. Please check the OTB website for more
 information.
 
-Once OTB is installed, start QGIS, open the SEXTANTE configuration dialog and
+Once OTB is installed, start QGIS, open the processing configuration dialog and
 configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox (image analysis)`
 block you will find all settings related to OTB. First ensure that algorithms are
 enabled.
@@ -439,7 +439,7 @@ Windows
 
 Please visit `TauDEM homepage <http://hydrology.usu.edu/taudem/taudem5.0/downloads.html>`_
 for installation instructions and precompiled binaries for 32bit and 64bit systems.
-**IMPORTANT**: you need TauDEM 5.0.6 executables, version 5.2 currently not
+**IMPORTANT**: you need TauDEM 5.0.6 executables, version 5.2 is currently not
 supported.
 
 Linux

@@ -2,10 +2,10 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-The SEXTANTE toolbox
+The toolbox
 ====================
 
-The *Toolbox* is the main element of the SEXTANTE GUI, and the one that you are
+The *Toolbox* is the main element of the processing GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available
 algorithms grouped in different blocks, and is the access point to run them
 whether as a single process or as a batch process involving several executions
@@ -15,18 +15,18 @@ of a same algorithm on different sets of inputs.
 
 .. only:: html
 
-   **Figure SEXTANTE 5:**
+   **Figure Processing 5:**
 
-.. figure:: /static/user_manual/sextante/toolbox_simple.png
+.. figure:: /static/user_manual/processing/toolbox_simple.png
    :align: center
    :width: 15em
 
-   SEXTANTE Toolbox |win|
+   Processing Toolbox |win|
 
 The toolbox contains all the available algorithms, divided into predefined groups.
 All these groups are found under a single tree entry named *Geoalgorithms*.
 
-Additionally, two more entries are found, namely 'Models' and 'Scripts'.
+Additionally, two more entries are found, namely *Models* and *Scripts*.
 These include user-created algorithms, and allow you to define your own
 workflows and processing tasks. We will devote a full section to them a bit later.
 
@@ -44,29 +44,29 @@ you change to the advanced mode, the toolbox will look like this:
 
 .. only:: html
 
-   **Figure SEXTANTE 5:**
+   **Figure Processing 6:**
 
-.. figure:: /static/user_manual/sextante/toolbox_advanced.png
+.. figure:: /static/user_manual/processing/toolbox_advanced.png
    :align: center
    :width: 15em
 
-   SEXTANTE Toolbox (advanced mode) |win|
+   Processing Toolbox (advanced mode) |win|
 
 In the advanced view, each group
 represents a so-called 'algorithm provider', which is a set of algorithms coming
 from the same source, for instance, from a third-party application with
 geoprocessing capabilities. Some of this groups represent algorithms from one of
 such third-party applications (like SAGA, GRASS or R), while other contain
-algorithms directly coded along with SEXTANTE elements, not relying on any
+algorithms directly coded as part of the processing plugin, not relying on any
 additional software.
 
 This view is recommended to those users that have a certain knowledge of the
 applications that are backing those algorithms, since they will be shown with
 their original names and groups.
 
-Also, some additional algorithms are available in the advanced view, such as
+Also, some additional algorithms are available only in the advanced view, such as
 LiDAR tools or scripts based on the R statistical computing software, among
-others. Independent QGIS plugins that add new algorithms to SEXTANTE will only
+others. Independent QGIS plugins that add new algorithms to the toolbox will only
 be shown in the advanced view.
 
 In particular, the simplified view contains algorithms from the following providers:
@@ -76,7 +76,7 @@ In particular, the simplified view contains algorithms from the following provid
 * OTB
 * Native QGIS algorithms
 
-In the particular case of runnign QGIS under Windows. These algorithms are
+In the particular case of running QGIS under Windows, these algorithms are
 fully-functional in a fresh installation of QGIS and they can be run without
 requiring any additional installation. Also running them requires no prior
 knowledge of the external applications they use, making them more accesible for
@@ -99,9 +99,9 @@ the SAGA 'Convergence index' algorithm).
 
 .. only:: html
 
-   **Figure SEXTANTE 6:**
+   **Figure Processing 7:**
 
-.. figure:: /static/user_manual/sextante/parameters_dialog.png
+.. figure:: /static/user_manual/processing/parameters_dialog.png
    :align: center
    :width: 30em
 
@@ -135,24 +135,20 @@ table can be of one of the following types.
 
 .. only:: html
 
-   **Figure SEXTANTE 7:**
+   **Figure Processing 8:**
 
-.. figure:: /static/user_manual/sextante/vector_iterator.png
+.. figure:: /static/user_manual/processing/vector_iterator.png
    :align: center
    :width: 25em
 
    Vector iterator button |win|
 
+ If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features instead of just once for the whole layer, producing as many outputs as times the algorithm is executed. This allows for automating the process when all features in a layer have to be processed separately.
 
-  If the algorithm contains
-  several of them, you will be able to toggle just one of them. If the button
-  corresponding to a vector input is toggled, the algorithm will be executed
-  iteratively on each one of its features. We will see more about this kind of
-  execution at the end of this section.
 * A table, to select from a list of all the ones available in QGIS. Non-spatial
   tables are loaded into QGIS like vector layers, and in fact they are treated as
   such by the program. Currently, the list of available tables that you will see
-  when executing a SEXTANTE algorithm that needs one of them is restricted to
+  when executing an algorithm that needs one of them is restricted to
   tables coming from files in DBase (:file:`.dbf`) or Comma-Separated Values
   (:file:`.csv`) formats.
 * An option, to choose from a selection list of possible options.
@@ -167,9 +163,9 @@ table can be of one of the following types.
 
 .. only:: html
 
-   **Figure SEXTANTE 7:**
+   **Figure Processing 9:**
 
-.. figure:: /static/user_manual/sextante/number_selector.png
+.. figure:: /static/user_manual/processing/number_selector.png
    :align: center
    :width: 30em
 
@@ -192,13 +188,13 @@ table can be of one of the following types.
 
   .. only:: html
 
-     **Figure SEXTANTE 8**
+     **Figure Processing 10**
 
-  .. figure:: /static/user_manual/sextante/extent.png
+  .. figure:: /static/user_manual/processing/extent.png
      :align: center
      :width: 20em
 
-     SEXTANTE Extent |win|
+     Extent selector |win|
 
   If you select the first option, you will see a window like the next one.
 
@@ -206,13 +202,13 @@ table can be of one of the following types.
 
   .. only:: html
 
-     **Figure SEXTANTE 9**
+     **Figure Processing 11**
 
-  .. figure:: /static/user_manual/sextante/extent_list.png
+  .. figure:: /static/user_manual/processing/extent_list.png
      :align: center
      :width: 20em
 
-     SEXTANTE Extent List |win|
+     Extent List |win|
 
   If you select the second one, the parameters window will hide itself, so you
   can click and drag onto the canvas. Once you have defined the selected
@@ -223,9 +219,9 @@ table can be of one of the following types.
 
   .. only:: html
 
-     **Figure SEXTANTE 10:**
+     **Figure Processing 12:**
 
-  .. figure:: /static/user_manual/sextante/extent_drag.png
+  .. figure:: /static/user_manual/processing/extent_drag.png
      :align: center
      :width: 20em
 
@@ -240,9 +236,9 @@ table can be of one of the following types.
 
   .. only:: html
 
-     **Figure SEXTANTE 11:**
+     **Figure Processing 13:**
 
-  .. figure:: /static/user_manual/sextante/multiple_selection.png
+  .. figure:: /static/user_manual/processing/multiple_selection.png
      :align: center
      :width: 20em
 
@@ -257,9 +253,9 @@ table can be of one of the following types.
 
   .. only:: html
 
-     **Figure SEXTANTE 12:**
+     **Figure Processing 14:**
 
-  .. figure:: /static/user_manual/sextante/fixed_table.png
+  .. figure:: /static/user_manual/processing/fixed_table.png
      :align: center
      :width: 20em
 
@@ -277,8 +273,8 @@ project, this would be a good place to start.
 A note on projections
 .....................
 
-SEXTANTE --- and also most of the external applications whose algorithms are
-available from SEXTANTE --- does not perform any reprojection on input layers and
+Algorithms run from the processing framework --- and also most of the external applications whose algorithms are
+exposed through it --- do not perform any reprojection on input layers and
 assumes that all of them are already in a common coordinate system and ready to
 be analized. Whenever you use more than one layer as input to an algorithm,
 whether vector or raster, it is up to you to make sure that they are all in the
@@ -288,25 +284,25 @@ Note that, due to QGIS's on-the-fly reprojecting capabilities, although two laye
 might seem to overlap and match, that might not be true if their original
 coordinates are used without reprojecting them onto a common coordinate system.
 That reprojection should be done manually and then use the resulting files as
-input to SEXTANTE. Also note that the reprojection process can be performed with
-SEXTANTE, which incorporates tools to do so.
+input to the algorithm. Also note that the reprojection process can be performed with
+the algorithms that are available in the processing framework itself.
 
-By default, SEXTANTE will show a description of the CRS of each layer along with
+By default, the parameters dialog will show a description of the CRS of each layer along with
 its name, making it easy to select layers that share the same CRS to be used as
 input layers. If you do not want to see this additional information, you can
-disable this functionality in the SEXTANTE config dialog, unchecking the
+disable this functionality in the processing config dialog, unchecking the
 :guilabel:`Show CRS` option.
 
 If you try to execute an algorithm using as input two or more layers with
-unmatching CRS's, SEXTANTE will show you the following window:
+unmatching CRS's, a warning dialog will be shown.
 
 You still can execute the algorithm, but be aware that in most cases that will
 produce wrong results, such as empty layers due to input layers not overlapping.
 
-Data objects generated by SEXTANTE algorithms
+Data objects generated by algorithms
 ---------------------------------------------
 
-Data objects generated by SEXTANTE can be of any of the following types:
+Data objects generated by an algorithm can be of any of the following types:
 
 * A raster layer
 * A vector layer
@@ -317,10 +313,10 @@ They are all saved to disk (there are no in-memory results), and the parameters
 table will contain a text box corresponding to each one of these outputs, where
 you can type the output channel to use for saving it. An output channel contains
 the information needed to save the resulting object somewhere. In the most usual
-case, you will save it to a file, but the architecture of SEXTANTE allows for any
+case, you will save it to a file, but the architecture allows for any
 other way of storing it. For instance, a vector layer can be stored in a database
 or even uploaded to a remote server using a WFS-T service. Although solutions
-like these are not yet implemented, SEXTANTE is prepared to handle them, and we
+like these are not yet implemented, the processing framework is prepared to handle them, and we
 expect to add new kinds of output channels in a near feature.
 
 To select an output channel, just click on the button on the right side of the
@@ -343,48 +339,50 @@ QGIS (take care with that in case you save your project and it contains temporar
 layers).
 
 You can set a default folder for output data objects. Go to the configuration
-dialog (you can open it from the :menuselection:`Analysis` menu), and in the
+dialog (you can open it from the :menuselection:`Processing` menu), and in the
 :guilabel:`General` group you will find a parameter named :guilabel:`Output folder`.
 This output folder is used as the default path in case you type just a filename
 with no path (i.e. :file:`myfile.shp`) when executing an algorithm.
 
-Apart from raster layers and tables, SEXTANTE also generates graphics and texts
+When running an algorithm that uses vector layer in iterative mode, the entered file path is used as the base path for all generated files, which are named using the base name and appending a number representing the index of the iteration. The file extension (and format) is used for all those generated files.
+
+Apart from raster layers and tables, algorithms also generates graphics and texts
 as HTML files. These results are shown at the end of the algorithm execution in
-a new dialog. This dialog will keep the results produced by SEXTANTE during the
+a new dialog. This dialog will keep the results produced by any algorithm during the
 current session, and can be shown at any time by selecting the
-:menuselection:`Analysis --> SEXTANTE results viewer` from QGIS main menu.
+:menuselection:`Processing --> Results viewer` from QGIS main menu.
 
 Some external applications might have files (with no particular extension
 restrictions) as output, but they do not belong to any of the categories above.
-Those outut files will not be processed by QGIS (opened or included into the
+Those output files will not be processed by QGIS (opened or included into the
 current QGIS project), since most of the times correspond to file formats or
 elements not supported by QGIS. This is, for instance, the case with LAS files
 used for LiDAR data. The files get created, but you won't see anything new in
 your QGIS working session.
 
 For all the other types of outputs, you will find a check box that you can use
-to tell SEXTANTE not whether to load the file once it is generated by the
+to tell the algorithm whether to load the file once it is generated by the
 algorithm or not. By default, all files are opened.
 
-SEXTANTE does not support optional outputs, so all outputs are created, but you
+Optional outputs are not supported, so all outputs are created, but you
 can uncheck the corresponding check box if you are not interested in a given
 output, which virtually makes it behave like an optional output (although the
 layer is created anyway, but if you leave the text box empty, it will be saved
 to a temporary file and deleted once you exit QGIS)
 
-Configuring SEXTANTE
---------------------
+Configuring the processing framework
+-------------------------------------
 
 As it has been mentioned, the configuration menu gives access to a new dialog
-where you can configure how SEXTANTE works. Configuration parameters are
+where you can configure how algorithms work. Configuration parameters are
 structured in separate blocks that you can select on the left-hand side of the
 dialog.
 
 Along with the aforementioned :guilabel:`Output folder` entry, the
 :guilabel:`General` block contains parameters for setting the default rendering
-style for SEXTANTE layers (that is, layers generated by using algorithms from
-any of the SEXTANTE components). Just create the style you want using QGIS, save
-it to a file, and then enter the path to that file in the settings so SEXTANTE
+style for output layers (that is, layers generated by using algorithms from
+any of the framework GUI components). Just create the style you want using QGIS, save
+it to a file, and then enter the path to that file in the settings so the algorithms
 can use it. Whenever a layer is loaded by SEXTANTE and added to the QGIS canvas,
 it will be rendered with that style.
 
@@ -397,9 +395,9 @@ next.
 
 .. only:: html
 
-   **Figure SEXTANTE 13:**
+   **Figure Processing 15:**
 
-.. figure:: /static/user_manual/sextante/rendering_styles.png
+.. figure:: /static/user_manual/processing/rendering_styles.png
    :align: center
    :width: 30em
 
@@ -412,7 +410,7 @@ Other configuration parameters in the :guilabel:`General` group are the followin
 ones:
 
 * :guilabel:`Use filename as layer name`. The name of each resulting layer created
-  by SEXTANTE is defined by the algorithm generating it. In some cases, a fixed
+  by an algorithm is defined by the algorithm itself. In some cases, a fixed
   name might be used, that meaning that the same name will be used, no matter
   which input layer is used. In other cases, the name might depend on the name
   of the input layer or some of the parameters used to run the algorithm. If this
@@ -424,9 +422,9 @@ ones:
   vector layer is used as input for an algorithm, only its selected features will
   be used. If the layer has no selected features, all of them will be used.
 * :guilabel:`Pre-execution script file` and :guilabel:`Post-execution script file`.
-  This parameters refer to scripts written using the SEXTANTE scripting
+  This parameters refer to scripts written using the processing scripting
   functionality, and are explained in the section covering scripting and the
-  SEXTANTE console.
+  console.
 
 Apart from the :guilabel:`General` block in the settings dialog, you will also
 find one for each algorithm provider. They contain an :guilabel:`Activate` item

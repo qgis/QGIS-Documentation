@@ -2,20 +2,20 @@
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
-The SEXTANTE history manager
+The history manager
 ============================
 
-The SEXTANTE history
---------------------
+The processing history
+------------------------
 
-Every time you execute a SEXTANTE algorithm, information about the process is
-stored in the SEXTANTE history manager. Along with the parameters used, the date
+Every time you execute an algorithm, information about the process is
+stored in the history manager. Along with the parameters used, the date
 and time of the execution are also saved.
 
 This way, it is easy to track the and control all the work that has been developed
-using SEXTANTE, and easily reproduce it.
+using the processing framework, and easily reproduce it.
 
-The SEXTANTE history manager is a set of registry entries grouped according to
+The  history manager is a set of registry entries grouped according to
 their date of execution, making it easier to find information about an algorithm
 executed at any particular moment.
 
@@ -23,9 +23,9 @@ executed at any particular moment.
 
 .. only:: html
 
-   **Figure SEXANTE 28:**
+   **Figure Processing 30:**
 
-.. figure:: /static/user_manual/sextante/history.png
+.. figure:: /static/user_manual/processing/history.png
    :align: center
    :width: 25em
 
@@ -40,11 +40,11 @@ be called from the command line.
 Apart from browsing the entries in the registry, processes can be re-executed,
 simply double-clicking on the corresponding entry.
 
-Along with algorithm executions, SEXTANTE communicates with the user using the
+Along with algorithm executions, the processing framework communicates with the user using the
 other groups of the registry, namely :guilabel:`Errors`, :guilabel:`Warnings` and
 :guilabel:`Information`. In case something is not working properly, having a look
 at the :guilabel:`Errors` might help you to see what is happening. If you get in
-contact with a SEXTANTE developer to report a bug or error, the information in
+contact with a developer to report a bug or error, the information in
 that group will be very useful for him to find out what is going wrong.
 
 When executing third party algorithms, this is usually done calling their

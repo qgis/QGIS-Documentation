@@ -1148,10 +1148,10 @@ Joins Menu
 
 
 |join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
-to a loaded vector layer`. As key columns you have to define a :index:`join
-layer`, a join field and a target field. QGIS currently supports to join non
-spatial table formats supported by OGR, delimited text and the PostgreSQL
-provider (see figure_joins_1_).
+to a loaded vector layer. After clicking |mActionSignPlus| the :guilabel:`Add vector join` dialog appears.
+As key columns you have to define a :index:`join layer` you want to connect with the target vector layer , a join field that corresponds to an attribute column in the target layer and a target field you find in the attribute table of the target vector layer here. As a result, all information of the join layer and the target layer are displayed in the attribute table of the target layer as joined information.
+ 
+QGIS currently supports to join non spatial table formats supported by OGR (e.g. CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
@@ -1178,11 +1178,13 @@ Diagrams Menu
 |diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a
 vector layer (see figure_diagrams_1_).
 
-The current core implementation of diagrams provides support for piecharts
-and text diagrams. Text values ​​of different data columns are displayed one
-below the other with a circle or a box and dividers. Diagram size is based
-on a fixed size or on linear scaling according to a classification attribute.
-The placement of the diagrams interacts with the new labeling, so position
+The current core implementation of diagrams provides support for piecharts, text diagrams
+and histograms.
+
+The menu is divided into four tabs now: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Postion` and :guilabel:`Options`.
+
+In the case of the text diagram and piechart text values ​​of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab diagram size is based on a fixed size or on linear scaling according to a classification attribute.
+The placement of the diagrams which is done in the :guilabel:`Position` tab interacts with the new labeling, so position
 conflicts between diagrams and labels are detected and solved. In addition
 to chart positions can be fixed by the users hand.
 
@@ -1208,18 +1210,21 @@ Both vector layers are part of the |qg| sample dataset (see Section
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` tab, activate :guilabel:`Display diagrams`
+#. Click on the :guilabel:`Diagrams` menu, activate :guilabel:`Display diagrams`
    and from :guilabel:`Diagram type` |selectstring| combobox select 'Text diagram'
-#. As Background color we choose a light blue and set a fixed size to 18 mm.
-#. Placement could be set to AroundPoint.
+#. In the :guilabel:`Appearance` tab we choose a light blue as Background color and 
+   in the :guilabel:`Size` tab we set a fixed size to 18 mm.
+#. In the :guilabel:`Position` tab Placement could be set to AroundPoint.
 #. In the diagram we want to display the values of the three columns
    ``T_F_JAN``, ``T_F_JUL`` and ``T_F_MEAN``. First select ``T_F_JAN`` as
-   Attributes and click the green **[\+]** button, then ``T_F_JUL`` and
+   :guilabel:`Attributes` and click the |mActionSignPlus| button, then ``T_F_JUL`` and
    finally ``T_F_MEAN``.
 #. Now click **[Apply]** to display the diagram in the |qg| main window.
-#. You can now adapt the chart size, or change the attribute colors by double
-   clicking on the color values in the attribute field. Figure_diagrams_2_
-   gives an impression.
+#. You can now adapt the chart size in the :guilabel:`Size` tab. Deactivate the |checkbox| :guilabel:`Fixed size` and set 
+   the size of the diagrams on the basis of an Attribute with the **[Find maximum value]** button and the
+   :guilabel:`Size` menu. If diagrams appear too small on the screen you can activate the |checkbox| :guilabel:`Increase
+   size of small diagrams` checkbox and define the Minimum size of the diagrams.
+#. Change the Attribute Colors by double clicking on the color values in the :guilabel:`Assigned attributes` field.   Figure_diagrams_2_ gives an impression.
 #. Finally click **[Ok]**.
 
 .. _figure_diagrams_2:
@@ -1234,9 +1239,6 @@ Both vector layers are part of the |qg| sample dataset (see Section
 
    Diagram from temperature data overlayed on a map |nix|
 
-Additionally in the :menuselection:`Settings --> Options` dialog, there is a
-``Overlay`` tab where it is possible to select the placement algorithm of the diagrams.
-The central point method is a generic one, the others use algorithms of the PAL library.
-They also consider diagram objects and labels in different layers. Also see section
-:ref:`diagram_overlay` for additional diagram features.
-
+Remember that in the :guilabel:`Position` tab a |checkbox| :guilabel:`Data defined position`
+of the diagrams is possible. Here you can use attributes to define the position of the diagram.
+Also, a scale dependent visibility that you can find in the :guilabel:`Appearance` tab is possible.
