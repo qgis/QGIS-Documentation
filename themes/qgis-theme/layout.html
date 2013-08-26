@@ -35,11 +35,11 @@
                 <a class="brand" href="#"> </a>{# This is the main menu list #}
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li><a href="{{ pathto(master_doc) }}">QGIS Home</a></li>
+                        <li><a href="{{ pathto(master_doc) }}">{{ _('QGIS Home') }}</a></li>
                         <!-- <li><a href="http://download.qgis.org/">Download</a></li> -->
-                        <li xxclass="active"><a href="{{ pathto('docs/index') }}">Documentation</a></li>
-                        <li><a href="{{ pathto('website/community/index') }}">Community</a></li>
-                        <li><a href="{{ pathto('website/development/index') }}">Development</a></li>
+                        <li xxclass="active"><a href="{{ pathto('docs/index') }}">{{ _('Documentation') }}</a></li>
+                        <li><a href="{{ pathto('website/community/index') }}">{{ _('Community') }}</a></li>
+                        <li><a href="{{ pathto('website/development/index') }}">{{ _('Development') }}</a></li>
                         <li><a href="{{ pathto(master_doc) }}/../irchat.html">Chat live!</a>
                         </li>
                         <li><div id="searchbox">
@@ -222,19 +222,18 @@
     {# Now our standard footer #}
     <div class="container">
         <div class="alert alert-info centered">
-            Contact
+            {{ _('Contact') }}
             <a href="mailto:info@qgis.org?subject=[qgis-info]">
-            <b>info@qgis.org</b></a> for more information.
-            Source code for QGIS is available on
+            <b>info@qgis.org</b></a> {{_('for more information. Source code for QGIS is available on')}}
             <a href="https://github.com/qgis/Quantum-GIS"><b>GitHub</b></a>!
-            Please <a href="http://hub.qgis.org/projects/quantum-gis/issues/new"><b>
+            {{_('Please <a href="http://hub.qgis.org/projects/quantum-gis/issues/new"><b>
             file a ticket</b></a> if you have discovered an issue.<br>
             This document is licensed under a
             <a rel="license" href="http://creativecommons.org/licenses/by/3.0/au/deed.en_GB">Creative Commons Attribution 3.0 Australia License.</a><br>
             <a href="http://creativecommons.org/licenses/by/3.0/au/deed.en_GB"><b>CCByA</b></a>,
             Copyright 2013, QGIS.org. Source materials for the QGIS documentation
             project is available on
-            <a href="https://github.com/qgis/QGIS-Documentation"><b>GitHub</b></a>!
+            <a href="https://github.com/qgis/QGIS-Documentation"><b>GitHub</b></a>!')}}
         </div>
     </div>
 {% endblock content %}

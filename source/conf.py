@@ -25,8 +25,7 @@ import sys, os
 extensions = ['sphinx.ext.pngmath']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../templates']
-
+templates_path = ['../themes/qgis-theme']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
