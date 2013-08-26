@@ -842,7 +842,36 @@ Feature subset
 Display Menu
 ------------
 
-|| 
+|mActionMapTips| In |qg| 2.0.0 there is now an own menu for the map tips. It includes a new feature:
+Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field` 
+to be displayed when hovering over a feature on the map it is now possible to insert HTML code that creates a complex
+display when hovering over a feature. Figure Display 1 shows an example of HTML code.
+
+.. _figure_display_1:
+
+.. only:: html
+
+   **Figure Display 1:**
+
+.. figure:: /static/user_manual/working_with_vector/display_html.png
+   :width: 25 em
+   :align: center
+
+   HTML code for map tip |nix|
+
+
+.. _figure_display_2:
+
+.. only:: html
+
+   **Figure Display 2:**
+
+.. figure:: /static/user_manual/working_with_vector/map_tip.png
+   :width: 25 em
+   :align: center
+
+   Map tip made with HTML code |nix|
+
 
 Actions Menu
 ------------
@@ -1166,7 +1195,7 @@ to chart positions can be fixed by the users hand.
    :width: 25em
    :align: center
 
-   Vector properties dialog with diagram tab |nix|
+   Vector properties dialog with diagram menu |nix|
 
 We will demonstrate an example and overlay the alaska boundary layer a
 text diagram showing some temperature data from a climate vector layer.
@@ -1245,4 +1274,4 @@ and will be used for QGIS server.
    :width: 25 em
    :align: center
 
-   Metadata tab in vector layers properties dialog |nix|
+   Metadata menu in vector layers properties dialog |nix|
