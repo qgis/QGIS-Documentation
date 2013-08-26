@@ -8,96 +8,163 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-29 19:57\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../source/website/case_studies/italy_vicenza.rst:5
 # 2b57b6be6b134daaa5725ab0a0ce6435
-msgid "Using QGIS for urban planning in the municipality of Montecchio Maggiore, Vicenza, Italy Montecchio Maggiore is a small town in the middle west of Vicenza (about 24.000 population). And as many other italian municipality it manages the town planning; in particular the urban planning and what we call “recovery plan” aka PDR - Piani Di Recupero. This urbanistic tool is dedicated to the historical area in the center of the town and it requires a specific study: building state of conservation, intended use, particular historical notice via survey and restitution to produce planimetric and prospectus graphics. For this purpose it has used QGIS in addition to Postgresql/Postgis database, PHP code and Libreoffice suite, QCAD (LibreCAD)."
+#: ../../source/website/case_studies/italy_vicenza.rst:5
+msgid ""
+"Using QGIS for urban planning in the municipality of Montecchio Maggiore, "
+"Vicenza, Italy Montecchio Maggiore is a small town in the middle west of "
+"Vicenza (about 24.000 population). And as many other italian municipality it "
+"manages the town planning; in particular the urban planning and what we call "
+"“recovery plan” aka PDR - Piani Di Recupero. This urbanistic tool is "
+"dedicated to the historical area in the center of the town and it requires a "
+"specific study: building state of conservation, intended use, particular "
+"historical notice via survey and restitution to produce planimetric and "
+"prospectus graphics. For this purpose it has used QGIS in addition to "
+"Postgresql/Postgis database, PHP code and Libreoffice suite, QCAD (LibreCAD)."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:9
 # 6d6c48d548ee4af09f2a4b34d79bcd95
+#: ../../source/website/case_studies/italy_vicenza.rst:9
 msgid "The task"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:18
+# 48458446e84a44e39bf339db25b2de3b
+#: ../../source/website/case_studies/italy_vicenza.rst:16
+msgid "Workflow Schema"
+msgstr ""
+
 # 8e2c10b221bd4bde831b7856f04c6a77
+#: ../../source/website/case_studies/italy_vicenza.rst:18
 msgid "A schema will clarify the workflow:"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:20
 # 246a1971d7dc473e95bebe4f58152848
-msgid "Every building data was retrieved via survey and written in paper schedule. Once in office the data were inputed into the Postgresql/Postgis database via PHP form using canonical web browser (Firefox, Iceweasel as well). In a second moment the shape of every building was draw with QGIS and linked to the survey table via id key field (PostgreSQL/Postgis view)."
+#: ../../source/website/case_studies/italy_vicenza.rst:20
+msgid ""
+"Every building data was retrieved via survey and written in paper schedule. "
+"Once in office the data were inputed into the Postgresql/Postgis database "
+"via PHP form using canonical web browser (Firefox, Iceweasel as well). In a "
+"second moment the shape of every building was draw with QGIS and linked to "
+"the survey table via id key field (PostgreSQL/Postgis view)."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:22
 # 442512fcb26b4b05b296aff14e3cba05
-msgid "At the same time the facades of buildings were designed using QCAD (LibreCAD)."
+#: ../../source/website/case_studies/italy_vicenza.rst:22
+msgid ""
+"At the same time the facades of buildings were designed using QCAD "
+"(LibreCAD)."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:24
 # 9fef65f1a2fa457f905ec1f502013067
-msgid "The PDR (piani di recupero) must follow strict rules that require specific graphics:"
+#: ../../source/website/case_studies/italy_vicenza.rst:24
+msgid ""
+"The PDR (piani di recupero) must follow strict rules that require specific "
+"graphics:"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:26
 # c2be6e5e31e14de6bb1ef2e29071d6f6
+#: ../../source/website/case_studies/italy_vicenza.rst:26
 msgid "Present state"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:27
 # a563759e1b144932a0d380be462e1f4e
+#: ../../source/website/case_studies/italy_vicenza.rst:27
 msgid "Project state"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:28
 # 4e14102018de428f87db350020844de8
+#: ../../source/website/case_studies/italy_vicenza.rst:28
 msgid "Intended use (present)"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:29
 # 6d4514cf657b44c08d77c4481829560b
+#: ../../source/website/case_studies/italy_vicenza.rst:29
 msgid "Intended use (project)"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:30
 # 3380eb9aaaf24c77aa0be6be5de4000a
+#: ../../source/website/case_studies/italy_vicenza.rst:30
 msgid "*Type of intervention admitted"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:32
 # bd3e2e38ab954eeca2c0ed8c29cbad97
-msgid "For every graphic thematic maps were produced using the attribute and data retrieve during the survey (for the present state) and data modified during the study and design fase. Thus a photo was linked to every building facilitating the design and analisys in the gis project (using the “action” feature). The SQL tools (pgquery, postgis manager, dbmanager et al.) allowed to obtain very sophisticated query immediately viewable in the map canvas such as: volume calculation split by building intended use, standards area calculation in percentage of the total planning area and other minor queries. All useful items for the design and planning study otherwise not possible without a very strength tool like gis (and QGIS in particular)."
+#: ../../source/website/case_studies/italy_vicenza.rst:32
+msgid ""
+"For every graphic thematic maps were produced using the attribute and data "
+"retrieve during the survey (for the present state) and data modified during "
+"the study and design fase. Thus a photo was linked to every building "
+"facilitating the design and analisys in the gis project (using the “action” "
+"feature). The SQL tools (pgquery, postgis manager, dbmanager et al.) allowed "
+"to obtain very sophisticated query immediately viewable in the map canvas "
+"such as: volume calculation split by building intended use, standards area "
+"calculation in percentage of the total planning area and other minor "
+"queries. All useful items for the design and planning study otherwise not "
+"possible without a very strength tool like gis (and QGIS in particular)."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:42
+# 75f061fa2ede467d98b6bb52436b5742
+#: ../../source/website/case_studies/italy_vicenza.rst:40
+msgid "QGIS project with building data viewing"
+msgstr ""
+
 # 728c1937f58743a6bc003b5e8bf351be
-msgid "Finally a synthesis report for every building were produced using libreoffice suite. The report consists in a schedule summarise with photo, cartography extract which localize the building in the contest and data of the present state."
+#: ../../source/website/case_studies/italy_vicenza.rst:42
+msgid ""
+"Finally a synthesis report for every building were produced using "
+"libreoffice suite. The report consists in a schedule summarise with photo, "
+"cartography extract which localize the building in the contest and data of "
+"the present state."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:52
+# f3fdc5fc5d7b4196abe16a0ab8d5b2c8
+#: ../../source/website/case_studies/italy_vicenza.rst:49
+msgid "QGIS print composer for final graphic layout"
+msgstr ""
+
 # db2ec419c8e34892a54c7ea4e729d16b
+#: ../../source/website/case_studies/italy_vicenza.rst:52
 msgid "Conclusion"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:54
 # 8889a5801be249d79ab195da03a810bc
-msgid "The strength of QGIS is the very user friendly interface coupled with the several tools it offers. The connection with vary data formats (shape files, spatialite db, postgresql/postgis db,...) facilitates and increases the interoperability between different worlds. And thus the freedom offered by the free software (QGIS, PHP, Libreoffice, QCAD) stimulates and open new horizons. And last but not least: we worked on different platform (Windows 7 64 bit, Windows xp 32 bit, Debian server and Debian client) but we never encountered insurmountable problems."
+#: ../../source/website/case_studies/italy_vicenza.rst:54
+msgid ""
+"The strength of QGIS is the very user friendly interface coupled with the "
+"several tools it offers. The connection with vary data formats (shape files, "
+"spatialite db, postgresql/postgis db,...) facilitates and increases the "
+"interoperability between different worlds. And thus the freedom offered by "
+"the free software (QGIS, PHP, Libreoffice, QCAD) stimulates and open new "
+"horizons. And last but not least: we worked on different platform (Windows 7 "
+"64 bit, Windows xp 32 bit, Debian server and Debian client) but we never "
+"encountered insurmountable problems."
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:58
 # 5be3f96dd1e04659ba63b96e30073f4f
+#: ../../source/website/case_studies/italy_vicenza.rst:58
 msgid "Author"
 msgstr ""
 
-#: ../../source/website/case_studies/italy_vicenza.rst:67
-# 7fdf69345da04671872a2f4ce7c67bb4
-msgid "This article was contributed May 2012 by Flavio Rigolon. He lives in Vicenza (Italy) and works in Montecchio Maggiore municipality as SIT manager. He has migrated almost all the gis data from proprietary to free platform (QGIS, Postgresql/Postgis, Spatialite). He is a member of GFOSS.it (Associazione Italiana per l'Informazione Geografica Libera) since 2007 and was a member of the GFOSS.it board from 2010 to 2012."
+# c8b307d1ca6d43a5b0514732ad778587
+#: ../../source/website/case_studies/italy_vicenza.rst:65
+msgid "Flavio Rigolon"
 msgstr ""
 
+# 7fdf69345da04671872a2f4ce7c67bb4
+#: ../../source/website/case_studies/italy_vicenza.rst:67
+msgid ""
+"This article was contributed May 2012 by Flavio Rigolon. He lives in Vicenza "
+"(Italy) and works in Montecchio Maggiore municipality as SIT manager. He has "
+"migrated almost all the gis data from proprietary to free platform (QGIS, "
+"Postgresql/Postgis, Spatialite). He is a member of GFOSS.it (Associazione "
+"Italiana per l'Informazione Geografica Libera) since 2007 and was a member "
+"of the GFOSS.it board from 2010 to 2012."
+msgstr ""

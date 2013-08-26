@@ -25,8 +25,7 @@ import sys, os
 extensions = ['sphinx.ext.pngmath']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../templates']
-
+templates_path = ['../themes/qgis-theme']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -864,7 +863,7 @@ html_short_title = None
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['static']
+html_static_path = ['../themes/qgis-theme/static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -885,8 +884,9 @@ html_sidebars = {
 # template names.
 #html_additional_pages = {}
 html_additional_pages = {
-    'index': 'index.html',
-    'irchat': 'irchat.html'}
+#    'index': 'index.html',
+#    'irchat': 'irchat.html'
+}
 
 # If false, no module index is generated.
 #html_use_modindex = True

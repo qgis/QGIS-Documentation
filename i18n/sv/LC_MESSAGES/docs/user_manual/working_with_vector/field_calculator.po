@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # 47d3e9ff53a14fa3ac5dd16ad3987731
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:7
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:5
 msgid "|updatedisclaimer|"
 msgstr ""
 
@@ -47,12 +47,17 @@ msgid ""
 "will be added or update an existing field."
 msgstr ""
 
-# 5002af17a54347918be6e9b29146c27d
+# 1c1ae55a566f449d854cd9b8da74ca2a
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:38
+msgid "Field Calculator |nix|"
+msgstr ""
+
+# 29bd79bbf85b40afa86d9fa078706024
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:40
 msgid ""
 "If you choose to add a new field, you need to enter a field name, a field "
 "type (integer, real or string), the total field width, and the field "
-"precision (see figure_attributes_3_) . For example, if you choose a field "
+"precision (see figure_attributes_3_). For example, if you choose a field "
 "width of 10 and a field precision of 3 it means you have 6 signs before the "
 "dot, then the dot and another 3 signs for the precision."
 msgstr ""
@@ -66,658 +71,115 @@ msgid ""
 "most commonly used operators, see **Operators**."
 msgstr ""
 
-# fca8b654feea4387aead9b047930e7e1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:48
+# 9f30992af0b947f3b42dbae185062c2f
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:51
 msgid ""
-"In the **Function List**, click on :guilabel:`>-Fields and Values` to view "
-"all attributes of the attribute table to be searched. To add an attribute to "
-"the Field calculator **Expression** field, double click its name in the :"
-"guilabel:`>-Fields and Values` list. Generally you can use the various "
-"fields, values and functions to construct the calculation expression or you "
-"can just type it into the box. To display the values ​​of a field, you just "
-"right click on the appropriate field. You can choose between :guilabel:`Load "
-"top 10 unique values` and :guilabel:`Load all unique values`. On the right "
-"side opens the **Field Values** list with the unique values. To add a value "
-"to the Field calculator **Expression** box, double click its name in the "
+"In the **Function List**, click on :guilabel:`Fields and Values` to view all "
+"attributes of the attribute table to be searched. To add an attribute to the "
+"Field calculator **Expression** field, double click its name in the :"
+"guilabel:`Fields and Values` list. Generally you can use the various fields, "
+"values and functions to construct the calculation expression or you can just "
+"type it into the box. To display the values ​​of a field, you just right click "
+"on the appropriate field. You can choose between :guilabel:`Load top 10 "
+"unique values` and :guilabel:`Load all unique values`. On the right side "
+"opens the **Field Values** list with the unique values. To add a value to "
+"the Field calculator **Expression** box, double click its name in the "
 "**Field Values** list."
 msgstr ""
 
-# 9e317016e4564c7889757e7c5a65ff3e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:59
+# 85c58385696a40efa97503b705c24e47
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:62
 msgid ""
-"The :guilabel:`>-Operators`, :guilabel:`>-Math`, :guilabel:`>-Conversions`, :"
-"guilabel:`>-String`, :guilabel:`>-Geometry` and :guilabel:`>-Record` menu "
-"provides several functions. In :guilabel:`>-Operators` you find mathematical "
-"operators. Find :guilabel:`>-Math` for mathematical functions. The :guilabel:"
-"`>-Conversions` group contains functions that convert one data type to "
-"another. The :guilabel:`>-String` group provides functions for data strings. "
-"In the :guilabel:`>-Geometry` group you find functions for geometry objects. "
-"With :guilabel:`>-Record` group functions you can add a numeration to your "
+"The :guilabel:`Operators`, :guilabel:`Math`, :guilabel:`Conversions`, :"
+"guilabel:`String`, :guilabel:`Geometry` and :guilabel:`Record` groups "
+"provides several functions. In :guilabel:`Operators` you find mathematical "
+"operators. Find :guilabel:`Math` for mathematical functions. The :guilabel:"
+"`Conversions` group contains functions that convert one data type to "
+"another. The :guilabel:`String` group provides functions for data strings. "
+"In the :guilabel:`Geometry` group you find functions for geometry objects. "
+"With :guilabel:`Record` group functions you can add a numeration to your "
 "data set. To add a function to the Field calculator **Expression** box, "
-"click on the > and then double klick the function."
+"click on the > and then doubleclick the function."
 msgstr ""
 
-# 6a96158dd4394092ba424e0a0e383ecd
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:68
-msgid ""
-"A short example illustrates how the field calculator works. We want to "
-"calculate the length of the ``railroads`` layer from the :file:"
-"`QGIS_example_dataset`:"
-msgstr ""
-
-# edd9d830657d4826afc5a30f4687d1b2
+# 66dce3e92b0b4fb8aed573b6f55340cf
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:72
 msgid ""
-"Load the Shapefile *railroads.shp* in |qg| and press |mActionOpenTable| :"
-"menuselection:`Open Attribute Table`."
+"A short example illustrates how the field calculator works. We want to "
+"calculate the length of the ``railroads`` layer from the QGIS sample dataset:"
+msgstr ""
+
+# 340e15cb147c4c9cb1678c30cc7e4054
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:75
+msgid ""
+"Load the Shapefile :file:`railroads.shp` in |qg| and press |"
+"mActionOpenTable| :sup:`Open Attribute Table`."
 msgstr ""
 
 # b0e220d69cb94be68a7f087c05851e74
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:73
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:77
 msgid ""
 "Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the |"
 "mActionCalculateField| :sup:`Field Calculator` dialog."
 msgstr ""
 
 # 7231a097290f4404a9f1859eea19f5f7
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:75
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:79
 msgid ""
 "Select the |checkbox| :guilabel:`Create a new field` checkbox to safe the "
 "calculations into a new field."
 msgstr ""
 
 # af201e66fff64ed387bc1389465b0fd3
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:76
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:81
 msgid ""
 "Add ``length`` as Output field name, ``real`` as Output field type and "
 "define Output field width 10 and a Precision of 3."
 msgstr ""
 
-# f93e45caf54d4f9f9a9349b87380d4ab
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:78
+# ef276a9c094842958864dc6659c11796
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:83
 msgid ""
-"Now click on function ``length`` in the :guilabel:`>-Geometry` group to add "
-"it as \\$length into the field calculator expression box and click **[Ok]**."
+"Now click on function ``length`` in the :guilabel:`Geometry` group to add it "
+"as ``$length`` into the Field calculator expression box and click **[Ok]**."
 msgstr ""
 
 # 45e797673dd5460c81c16f5bba7f217e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:80
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:85
 msgid "You can now find a new column ``length`` in the attribute table."
 msgstr ""
 
-# 8155347f5cd44f62afee221d596d4083
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:83
-msgid "The available functions are listed in the following table."
-msgstr ""
-
-# 7b9322fffddb4cb6a11f7cbd182bc145
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:88
-msgid "List of functions supported by the field calculator"
-msgstr ""
-
-# fdf231be7eab4107972e8bae4e575ecd
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:90
-msgid "String"
-msgstr ""
-
-# 50e0899e358c4f1dac4aaff682194429
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:90
-msgid "Literal string value"
-msgstr ""
-
-# 439a0544dd874bab86467748940cecf2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:92
-msgid "column name \"column name\""
-msgstr ""
-
-# e1b7d2a6284841b088fd420c5ba6ca62
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:92
-msgid "value of the field column name"
-msgstr ""
-
-# 83017a4ef8f144f8ba03b22b2b9ed6c3
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:93
-msgid "'string'"
-msgstr ""
-
-# 1105f2c9b69f48499a78b0d5f7cb3f63
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:93
-msgid "a string value"
-msgstr ""
-
-# e8f4d3e2f96342f59fb0718926e43a3e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:94
-msgid "NULL"
-msgstr ""
-
-# d8d32c1ca06d4802986275cc6b89ff91
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:94
-msgid "null value"
-msgstr ""
-
-# 7a816d1c267b4e04b96f5ed174d1efa2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:95
-msgid "*a* IS NULL"
-msgstr ""
-
-# 29a14b11f18440c382afe9d88fcee1fb
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:95
-msgid "*a* has no value"
-msgstr ""
-
-# 23ad6f31d712462b8f227055bf05161d
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:96
-msgid "*a* IS NOT NULL"
-msgstr ""
-
-# 1e4398e7b94f4ac787e68ab58603cbed
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:96
-msgid "*a* has a value"
-msgstr ""
-
-# 9ba8e92e7ff9400fb5a957a44d35371e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:97
-msgid "*a* IN (value[,value])"
-msgstr ""
-
-# a98977e7d3124197be449e8479541e38
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:97
-msgid "*a* is below the values listed"
-msgstr ""
-
-# ac8dfe5fc69b4abcbf18c68cf1dc4e0a
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:98
-msgid "*a* NOT IN (value[,value])"
-msgstr ""
-
-# 720009d499c84446aa54be239208705f
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:98
-msgid "*a* is not below the values listed"
-msgstr ""
-
-# a26973259e714d0f8c38652269e73b02
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:99
-msgid "*a* OR *b*"
-msgstr ""
-
-# b5d5de8839714d208a0d15e07f4e02b2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:99
-msgid "*a* or *b* is true"
-msgstr ""
-
-# e4de7483e4974d6da87337a6bfd2b8e2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:100
-msgid "*a* AND *b*"
-msgstr ""
-
-# 2949d58decf24936b5113fefaea7a462
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:100
-msgid "*a* and *b* is true"
-msgstr ""
-
-# 68f2a777a19049c3a2ed039588123c75
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:101
-msgid "NOT *a*"
-msgstr ""
-
-# e669564423cc480ebd9ad5e34043da9b
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:101
-msgid "inverted truth value of a"
-msgstr ""
-
-# 5a8b47bf2a284332be530345dd0271a0
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:102
-msgid "sqrt(*a*)"
-msgstr ""
-
-# 88a4c41de38640189f633770cc10f53a
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:102
-msgid "square root of *a*"
-msgstr ""
-
-# c427e34c0e1b4f49831e5d38d9fad0b1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:103
-msgid "sin(*a*)"
-msgstr ""
-
-# e942aaae938e4116b6e7214c3e2c9ead
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:103
-msgid "sinus of *a*"
-msgstr ""
-
-# 46251bd7b5a44be8a660ddf592e73dec
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:104
-msgid "cos(*a*)"
-msgstr ""
-
-# 234fe894d6fa4e498a7bb8ae08b2cb2f
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:104
-msgid "cosinus of *b*"
-msgstr ""
-
-# 544a84ef2d8c4e49a6460406bc1d2e9e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:105
-msgid "tan(*a*)"
-msgstr ""
-
-# 7b013f798df24f529f7dd6ffd3ad3859
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:105
-msgid "tangens of *a*"
-msgstr ""
-
-# 31a15fe0ceb648fb91f26096b1acae9f
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:106
-msgid "asin(*a*)"
-msgstr ""
-
-# e24da5e774e94365bac3cb6c155d6def
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:106
-msgid "arcussinus of *a*"
-msgstr ""
-
-# efa6593893464b90994749d9fc1eae47
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:107
-msgid "acos(*a*)"
-msgstr ""
-
-# 72746508f85d40c49abe1150f26643fe
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:107
-msgid "arcuscosinus of *a*"
-msgstr ""
-
-# dff7dd1123b24265bef2ab7f2b1bf2a1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:108
-msgid "atan(*a*)"
-msgstr ""
-
-# deafc8fc47e04a1a80389b7367266c68
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:108
-msgid "arcustangens of *a*"
-msgstr ""
-
-# a56e7284db6d4205bb1850702fbbae00
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:109
-msgid "to int(*a*)"
-msgstr ""
-
-# bd26a9697b194214b83bf15b8c190e42
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:109
-msgid "convert string *a* to integer"
-msgstr ""
-
-# 77239a89b57b4da79c5c293098de7d91
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:110
-msgid "to real(*a*)"
-msgstr ""
-
-# 80b556a7e11d42ad9426b74efdd4a5f1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:110
-msgid "convert string *a* to real"
-msgstr ""
-
-# 1047444374fc4134840ff6ef49ba40df
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:111
-msgid "to string(*a*)"
-msgstr ""
-
-# 2caf72ff42184ae0bd57535378288039
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:111
-msgid "convert number *a* to string"
-msgstr ""
-
-# 82736577c1b04187a0d274c86ad6d434
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:112
-msgid "lower(*a*)"
-msgstr ""
-
-# f2a544ee84ec48c4b690cf5fad04ad9b
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:112
-msgid "convert string *a* to lower case"
-msgstr ""
-
-# 3ea7a7ab7b8943e4a1668e82d0e99208
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:113
-msgid "upper(*a*)"
-msgstr ""
-
-# e52dfe5303a44e9ea64a6bf4a3d50a3e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:113
-msgid "convert string *a* to upper case"
-msgstr ""
-
-# 09d5e9d798394af594a26fc6db4590d1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:114
-msgid "length(*a*)"
-msgstr ""
-
-# 3715e0a0dca2484395a6bc4cbe970cf1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:114
-msgid "length of string *a*"
-msgstr ""
-
-# 38fd6aeec8d24dd8966d74ed86ed5eb0
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:115
-msgid "atan2(y,x)"
-msgstr ""
-
-# df33d22db43045f395fb872ca19fe5d4
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:115
-msgid ""
-"arcustangens of y/x using the signs of the two arguments to determine the "
-"quadrant of the result"
-msgstr ""
-
-# e868dbd49af748478c8de4e5f598d0e8
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:117
-msgid "replace(*a*, replacethis, withthat)"
-msgstr ""
-
-# 66c0a2507e6c4ee89c8aa4d53bfb6fe6
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:117
-msgid "replace *this* with *that* in string *a*"
-msgstr ""
-
-# aad59d2718294c3fbd286f21b4a30ad5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:118
-msgid "regexp_replace(a,this,that)"
-msgstr ""
-
-# b452abe5776644a2b48a12dbacbd5b43
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:118
-msgid "replace the regular expression *this* with *that*"
-msgstr ""
-
-# 86d8524f1a554264a562fb41fb31e24b
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:119
-msgid "substr(*a*,from,len)"
-msgstr ""
-
-# 66386fb584704e54937ddb935377c8c7
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:119
-msgid ""
-"len characters of string *a* starting from from (first character index is 1)"
-msgstr ""
-
-# 31795a8731044be38f24024be7246fb5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:121
-msgid "*a* || *b*"
-msgstr ""
-
-# 487d47c80aa24e5a9bb1f992edefabd5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:121
-msgid "concatenate strings *a* and *b*"
-msgstr ""
-
-# 94a42efcc51a4317ac5163a9ad1a1cf3
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:122
-msgid "\\$rownum"
-msgstr ""
-
-# 4b6347e1abbc41a3bb1eaba6ee1ecc57
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:122
-msgid "number current row"
-msgstr ""
-
-# d7e05586ec4e4bd0913548aba19f73f2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:123
-msgid "\\$area"
-msgstr ""
-
-# 3bbcf7d81f7f4547b81e51bf8d5ba293
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:123
-msgid "area of polygon"
-msgstr ""
-
-# 741a3135894d43569ed64cc897aa0a2b
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:124
-msgid "\\$perimeter"
-msgstr ""
-
-# 2600e6fd63f14de69eda8a7f46f1c66d
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:124
-msgid "perimeter of polygon"
-msgstr ""
-
-# 0fcebe9cdf4a46b782653753e8af2cb2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:125
-msgid "\\$length"
-msgstr ""
-
-# ff1e70e089104136a90e5ff81d373224
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:125
-msgid "length of line"
-msgstr ""
-
-# 8fba1dd885884d8897b70300821d0d11
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:126
-msgid "\\$id"
-msgstr ""
-
-# 4f426416c3c64b6fb2a9d6c401f981b0
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:126
-msgid "feature id"
-msgstr ""
-
-# 04c870049e71440ea2e7649113860f6a
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:127
-msgid "\\$x"
-msgstr ""
-
-# adf3105bf55544da90996e6f23b0a370
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:127
-msgid "x coordinate of point"
-msgstr ""
-
-# 36f30ca1bedc44bb87df7d1cc111ee89
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:128
-msgid "\\$y"
-msgstr ""
-
-# 9f156e7ac8c44dfeab379e3a92dd8437
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:128
-msgid "y coordinate of point"
-msgstr ""
-
-# 92897caff76643c8b5b552111a8f51f1
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:129
-msgid "xat(n)"
-msgstr ""
-
-# 2edb1ba070a0471aa8fddbe7dccdfa54
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:129
-msgid ""
-"X coordinate of the point of an n-th line (indeces start at 0; negative "
-"values refer to the line end)"
-msgstr ""
-
-# 65b32d622e2b4dd2b2184ce79a646565
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:131
-msgid "yat(n)"
-msgstr ""
-
-# a8d7a49778be43d3bd46d4e6c65c3777
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:131
-msgid ""
-"y coordinate of the point of an n-th line (indeces start at 0; negative "
-"values refer to the line end)"
-msgstr ""
-
-# f0272ee87ddc4f2a9fb48f44fccd4b53
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:133
-msgid "*a*=*b*"
-msgstr ""
-
-# e47fd4b021834be6ba5e99215b551e1f
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:133
-msgid "*a* and *b* are equal"
-msgstr ""
-
-# 5aae65ff23994f12a126c44c2894a616
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:134
-msgid "*a*!=*b*"
-msgstr ""
-
-# 734a42178821491a82be04491d6f6e8b
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:134
-msgid "*a* and *b* are not equal"
-msgstr ""
-
-# 02583b8efa0f46e2a6fecc49e3c29cd2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:135
-msgid "*a*<>*b*"
-msgstr ""
-
-# 7d5dc17bb5f64050aa80f0fef4f67724
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:136
-msgid "*a*>=*b*"
-msgstr ""
-
-# e38b12d32bda4f0b9f2c8fd553f3dae5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:136
-msgid "*a* is larger than or equal to *b*"
-msgstr ""
-
-# 38075ccad61946dca5498760fd8c3f61
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:137
-msgid "*a*<=*b*"
-msgstr ""
-
-# 0f0cfd0d0d1541bd976926959a19aaf5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:137
-msgid "*a* is less than or equal to *b*"
-msgstr ""
-
-# 846d390a0c584157b0dfaae6ba2504d5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:138
-msgid "*a*>*b*"
-msgstr ""
-
-# b1f0aed69b7046f8a896d806e8b2a174
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:138
-msgid "*a* is larger than *b*"
-msgstr ""
-
-# 761b7c3db1794526943206184cd6cced
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:139
-msgid "*a*<*b*"
-msgstr ""
-
-# 9c2f170560044919a30c63a4e9b7cec2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:139
-msgid "*a* is smaller than *b*"
-msgstr ""
-
-# bfd5ba7053fd4dfa8fe899f4cc162ae2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:140
-msgid "*a*~*b*"
-msgstr ""
-
-# dfb85feb624645fe83aabca3ee3c762e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:140
-msgid "*a* matches the regular expression *b*"
-msgstr ""
-
-# 0d25208c73454cb08b3aacb13c273801
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:141
-msgid "*a* LIKE *b*"
-msgstr ""
-
-# 391c2562144b40debbbae9a0264a5287
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:141
-msgid "*a* equals *b*"
-msgstr ""
-
-# 8532c0fc58d344b0a2f6257d14adecc5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:142
-msgid "*a* ILIKE *b*"
-msgstr ""
-
-# 6c686591d826444387f0fcf967d6c66c
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:142
-msgid "*a* equals *b* (without regard to case-sensitive)"
-msgstr ""
-
-# 36d76533dbab4ed899984f4921de4de2
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:143
-msgid "*a* |wedge| *b*"
-msgstr ""
-
-# a991ce43cfce4a6497e4d6b1036da79f
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:143
-msgid "*a* raised to the power of *b*"
-msgstr ""
-
-# 843a0d168a094df99fc5fb0f646c6a01
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:144
-msgid "*a* \\* *b*"
-msgstr ""
-
-# 3e818997687f441492ee7af694b0da98
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:144
-msgid "*a* multiplied by *b*"
-msgstr ""
-
-# 18328f0ebd4949e09e98bd2bf7e7c09a
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:145
-msgid "*a* / *b*"
-msgstr ""
-
-# 7481ff3cadb54d54bef380ed0e21741a
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:145
-msgid "*a* divided by *b*"
-msgstr ""
-
-# d39342ea2b7e4e4893ef0d66fa1f9660
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:146
-msgid "*a* + *b*"
-msgstr ""
-
-# 77a1a7a2faad4045ae5778f8563bf98c
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:146
-msgid "*a* plus *b*"
-msgstr ""
-
-# f176e2b2a1ac48fbb3c5c78c44948623
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:147
-msgid "*a* - *b*"
-msgstr ""
-
-# 1d627f66c56a4304a654d02f4f55d5df
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:147
-msgid "*a* minus *b*"
-msgstr ""
-
-# ccbdba2825da4e35a9de83b5cb9a4c2e
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:148
-msgid "\\+ *a*"
-msgstr ""
-
-# 5a1212c48af94bddb0dee403683d4985
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:148
-msgid "positive sign"
-msgstr ""
-
-# 4dda25222f86402ead08782e34767233
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:149
-msgid "\\- *a*"
-msgstr ""
-
-# 8ffc9c35af5e49229d57b9b9c8e3ebc3
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:149
-msgid "negative value of *a*"
-msgstr ""
-
-# 3b94c874d0d440bf84eea647f86ddbf5
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:152
-msgid "List of functions for the field calculator"
+# f2de4dc204174b12a11c5270ff69cb34
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:87
+msgid "The available functions are listed below."
 msgstr ""
 
 # 0435b36e8b5b460a83d9b441899fd131
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:154
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:153
 msgid ""
 "The field calculator **Function list** with the **Selected Function Help** , "
 "**Operators** and **Expression** menu are also available through the rule-"
 "based rendering in the Style tab of the Layer properties and the expression "
 "based labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core "
 "application."
+msgstr ""
+
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Field_Calculator"
+msgstr ""
+
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Calculator_Field"
+msgstr ""
+
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Derived_Fields"
+msgstr ""
+
+# fba5a12d375d4252a11fb97a3a28a80c
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:89
+msgid "Field_Calculator_Functions"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,13 +18,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # 5039da192d394ef0806aaddf69b811d5
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:8
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:10
 msgid "Spatial Analysis (Interpolation)"
-msgstr ""
-
-# 92f944601cfc4066b27e202fd9dba643
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:11
-msgid "GIS for Educators"
 msgstr ""
 
 # 98eaa3f37c884b6786161635f67f35f1
@@ -54,25 +49,20 @@ msgid ""
 "Irregular Network"
 msgstr ""
 
-# 7114870f7ff74b2ea806d5e694bfea53
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:18
-msgid "Overview:"
+# d0a654e18350422b8c69db5c16333b2d
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:19
+msgid "Overview"
 msgstr ""
 
-# 7988c9ddbf8141529949bbdeda2bf3e3
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:20
+# 0287fac68d57459fbff7a5d23ba4ba1a
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:21
 msgid ""
 "**Spatial analysis** is the process of manipulating spatial information to "
 "extract new information and meaning from the original data. Usually spatial "
 "analysis is carried out with a Geographic Information System (GIS). A GIS "
 "usually provides spatial analysis tools for calculating feature statistics "
-"and carrying out"
-msgstr ""
-
-# 8583ed48eb934c02882b9b733d6bd133
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:24
-msgid ""
-"In hydrology, users will likely emphasize the importance of terrain analysis "
+"and carrying out geoprocessing activities as data interpolation. In "
+"hydrology, users will likely emphasize the importance of terrain analysis "
 "and hydrological modelling (modelling the movement of water over and in the "
 "earth). In wildlife management, users are interested in analytical functions "
 "dealing with wildlife point locations and their relationship to the "
@@ -80,19 +70,33 @@ msgid ""
 "depending on the kind of work they do."
 msgstr ""
 
-# d3d8e6c7e2954324817da8102d753463
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:32
+# c12f936cc1b548fba321285607e09775
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:33
+msgid "Spatial interpolation in detail"
+msgstr ""
+
+# cc419f86c05f47fcb22d85ab080aecf5
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:35
 msgid ""
 "Spatial interpolation is the process of using points with known values to "
-"temperatures at locations without recorded data by using known temperature "
-"readings at nearby weather stations (see  ). This type of interpolated "
-"surface is often called a statistical surface. Elevation data, "
-"precipitation, snow accumulation, water table and population density are "
-"other types of data that can be computed using interpolation."
+"estimate values at other unknown points. For example, to make a "
+"precipitation (rainfall) map for your country, you will not find enough "
+"evenly spread weather stations to cover the entire region. Spatial "
+"interpolation can estimate the temperatures at locations without recorded "
+"data by using known temperature readings at nearby weather stations (see "
+"figure_temperature_map_). This type of interpolated surface is often called "
+"a **statistical surface**. Elevation data, precipitation, snow accumulation, "
+"water table and population density are other types of data that can be "
+"computed using interpolation."
+msgstr ""
+
+# fe026245f2b4463db3c51c9917b0f9dd
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:55
+msgid "Temperature map interpolated from South African Weather Stations."
 msgstr ""
 
 # aa54034a361a4dfa9d33bcfd10cf3573
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:36
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:57
 msgid ""
 "Because of high cost and limited resources, data collection is usually "
 "conducted only in a limited number of selected point locations. In GIS, "
@@ -101,7 +105,7 @@ msgid ""
 msgstr ""
 
 # 1c340be0df9a4178a50129b035a14487
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:40
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:62
 msgid ""
 "In order to generate a continuous map, for example, a digital elevation map "
 "from elevation points measured with a GPS device, a suitable interpolation "
@@ -111,31 +115,40 @@ msgid ""
 "area and for modelling."
 msgstr ""
 
-# 63337205f441494cb179c478cf0b7df9
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:44
+# c701afd98a764400862397592af573f6
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:68
 msgid ""
 "There are many interpolation methods. In this introduction we will present "
 "two widely used interpolation methods called **Inverse Distance Weighting** "
 "(IDW) and **Triangulated Irregular Networks** (TIN). If you are looking for "
-"additional interpolation methods, please refer to the further reading "
+"additional interpolation methods, please refer to the 'Further Reading' "
 "section at the end of this topic."
 msgstr ""
 
 # fae1e99e34744770986bf0f15dccef7f
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:49
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:75
 msgid "Inverse Distance Weighted (IDW)"
 msgstr ""
 
-# a55321f1033e488c84a61deefe30a2be
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:51
+# 55e036892c044b3f838fa94bbc69b31a
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:77
 msgid ""
 "In the IDW interpolation method, the sample points are weighted during "
 "interpolation such that the influence of one point relative to another "
-"declines with distance from the unknown point you want to create (see  )."
+"declines with distance from the unknown point you want to create (see "
+"figure_idw_interpolation_)."
+msgstr ""
+
+# e8e4c6119d004a7e981eeb4d631d8817
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:92
+msgid ""
+"Inverse Distance Weighted interpolation based on weighted sample point "
+"distance (left). Interpolated IDW surface from elevation vector points "
+"(right). Image Source: Mitas, L., Mitasova, H. (1999)."
 msgstr ""
 
 # c1374c0e27b641f0aa5fa42a1411c59b
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:58
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:96
 msgid ""
 "Weighting is assigned to sample points through the use of a weighting "
 "coefficient that controls how the weighting influence will drop off as the "
@@ -145,34 +158,59 @@ msgid ""
 "the unknown point approaches the value of the nearest observational point."
 msgstr ""
 
-# 0970166160f64b95b862807d5ab9d30c
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:63
+# 4516c4194ad74e40917d89288365dda7
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:103
 msgid ""
 "It is important to notice that the IDW interpolation method also has some "
-"disadvantages: The quality of the interpolation result can decrease, if the "
+"disadvantages: the quality of the interpolation result can decrease, if the "
 "distribution of sample data points is uneven. Furthermore, maximum and "
 "minimum values in the interpolated surface can only occur at sample data "
 "points. This often results in small peaks and pits around the sample data "
-"points as shown in  ."
+"points as shown in figure_idw_interpolation_."
+msgstr ""
+
+# e8989f337f214b3a9f8f31a4abb5c906
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:110
+msgid ""
+"In GIS, interpolation results are usually shown as a 2 dimensional raster "
+"layer. In figure_idw_result_, you can see a typical IDW interpolation "
+"result, based on elevation sample points collected in the field with a GPS "
+"device."
+msgstr ""
+
+# c4fbbf49a4bf41e8a361a136d39ea3fa
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:124
+msgid ""
+"IDW interpolation result from irregularly collected elevation sample points "
+"(shown as black crosses)."
 msgstr ""
 
 # 9cc91a5502d24f9fad4cb927984f7926
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:71
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:128
 msgid "Triangulated Irregular Network (TIN)"
 msgstr ""
 
-# 444e16c49552417eb6f91dd59f759aa1
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:73
+# ccdec32af2f44b7a9a7580187353dbec
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:130
 msgid ""
 "TIN interpolation is another popular tool in GIS. A common TIN algorithm is "
-"called **Delaunay** triangulation. It tries to create a surface formed by "
+"called **Delaunay triangulation**. It tries to create a surface formed by "
 "triangles of nearest neighbour points. To do this, circumcircles around "
 "selected sample points are created and their intersections are connected to "
-"a network of non overlapping and as compact as possible triangles (see  )."
+"a network of non overlapping and as compact as possible triangles (see "
+"figure_tin_interpolation_)."
+msgstr ""
+
+# 4ad02f139261421680a643e1f5d538bf
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:146
+msgid ""
+"Delaunay triangulation with circumcircles around the red sample data. The "
+"resulting interpolated TIN surface created from elevation vector points is "
+"shown on the right. Image Source: Mitas, L., Mitasova, H. (1999)."
 msgstr ""
 
 # 62ef1e32f6724f8bb38b86ce82c46982
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:82
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:150
 msgid ""
 "The main disadvantage of the TIN interpolation is that the surfaces are not "
 "smooth and may give a jagged appearance. This is caused by discontinuous "
@@ -181,13 +219,20 @@ msgid ""
 "with collected sample data points (see  )."
 msgstr ""
 
-# 742ed85357694edea238341bd2cd80d9
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:90
-msgid "Common problems / things to be aware of:"
+# 1d3dfdb2df904f0c87bdfd560b6b80ed
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:166
+msgid ""
+"Delaunay TIN interpolation result from irregularly collected rainfall sample "
+"points (blue circles)"
+msgstr ""
+
+# a875bb3d9c9643269d5554ae5bf97402
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:170
+msgid "Common problems / things to be aware of"
 msgstr ""
 
 # 428483c64fdc44b1bdd6dbe587e9f83d
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:92
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:172
 msgid ""
 "It is important to remember that there is no single interpolation method "
 "that can be applied to all situations. Some are more exact and useful than "
@@ -199,14 +244,14 @@ msgid ""
 msgstr ""
 
 # 041ca430d10543bcb5287f793043523c
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:98
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:179
 msgid ""
 "Evaluate the sample data. Do this to get an idea on how data are distributed "
 "in the area, as this may provide hints on which interpolation method to use."
 msgstr ""
 
 # fed2a27469814a03b3c420561ff2e7d9
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:102
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:181
 msgid ""
 "Apply an interpolation method which is most suitable to both the sample data "
 "and the study objectives. When you are in doubt, try several methods, if "
@@ -214,7 +259,7 @@ msgid ""
 msgstr ""
 
 # c59815488d7c45d8a563f810662aaa84
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:106
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:184
 msgid ""
 "Compare the results and find the best result and the most suitable method. "
 "This may look like a time consuming process at the beginning. However, as "
@@ -223,44 +268,51 @@ msgid ""
 "reduced."
 msgstr ""
 
-# 90f9711162ad414998f3e9626a36f2bc
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:111
+# 6de0b51eef7d46fdad67720d2016ac7f
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:190
+msgid "Other interpolation methods"
+msgstr ""
+
+# 8bea6926053547b6bc4affb8128a4181
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:192
 msgid ""
-"Other interpolation methodsinterpolation. See the additional reading section "
-"below for a web link."
+"Although we concentrated on IDW and TIN interpolation methods in this "
+"worksheet, there are more spatial interpolation methods provided in GIS, "
+"such as Regularized Splines with Tension (RST), Kriging or Trend Surface "
+"interpolation. See the additional reading section below for a web link."
 msgstr ""
 
 # 3ed693e3cd6f4a72acb3711a6b4e7f75
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:115
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:198
 msgid "What have we learned?"
 msgstr ""
 
 # e4c12f46d96c4847abbc7847338b583a
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:117
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:200
 msgid "Let's wrap up what we covered in this worksheet:"
 msgstr ""
 
 # d65e8af1a2c6416dbc6d0176194b3ace
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:119
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:202
 msgid ""
 "**Interpolation** uses vector points with known values to estimate values at "
 "unknown locations to create a raster surface covering an entire area."
 msgstr ""
 
 # 1d0ecfc748f643b6ac1fe95759e793e0
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:121
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:204
 msgid "The interpolation result is typically a **raster** layer."
 msgstr ""
 
 # b1136e3fdd654198a42fb2492ec473c0
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:123
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:205
 msgid ""
 "It is important to **find a suitable interpolation method** to optimally "
 "estimate values for unknown locations."
 msgstr ""
 
 # 1040c91341114a8ebdbcdd2447b27542
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:125
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:207
 msgid ""
 "**IDW interpolation** gives weights to sample points, such that the "
 "influence of one point on another declines with distance from the new point "
@@ -268,24 +320,24 @@ msgid ""
 msgstr ""
 
 # 01d3f7bdcb014755b4aa24295cf9d712
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:127
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:210
 msgid ""
 "**TIN interpolation** uses sample points to create a surface formed by "
 "triangles based on nearest neighbour point information."
 msgstr ""
 
 # acc18573395c43bfb964b38ab1ecd911
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:129
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:214
 msgid "Now you try!"
 msgstr ""
 
 # 411586f0cd664bfbaa52f335f5a1bc80
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:131
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:216
 msgid "Here are some ideas for you to try with your learners:"
 msgstr ""
 
 # 1d43714b9f924319b0a3fade6618fa65
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:133
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:218
 msgid ""
 "The Department of Agriculture plans to cultivate new land in your area but "
 "apart from the character of the soils, they want to know if the rainfall is "
@@ -296,7 +348,7 @@ msgid ""
 msgstr ""
 
 # 5a92798c1328489888dcd665cbb5ec94
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:137
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:223
 msgid ""
 "The tourist office wants to publish information about the weather conditions "
 "in January and February. They have temperature, rainfall and wind strength "
@@ -306,13 +358,13 @@ msgid ""
 "that meet these criteria?"
 msgstr ""
 
-# 498616c23bb74aa5b349cf4072ae7b1e
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:141
-msgid "Something to think about:"
+# a5dd0fff8eee4d20a7d19c72a4ae1004
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:231
+msgid "Something to think about"
 msgstr ""
 
 # 9a82a743825a48d2aa6b5ab303c90ece
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:143
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:233
 msgid ""
 "If you don't have a computer available, you can use a toposheet and a ruler "
 "to estimate elevation values between contour lines or rainfall values "
@@ -322,57 +374,72 @@ msgid ""
 "and B is 70 mm."
 msgstr ""
 
-# 1a3bdafe935e4f948efa72a88a9ef39e
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:146
-msgid "Further reading:"
+# 9cc9928951fe4848915401a09380824b
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:240
+msgid "Further reading"
 msgstr ""
 
-# 9ad1ace071654a55947b585044ff6b24
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:148
-msgid "**Books:**"
+# 1b7b48b4dcf742388a7844c27c5eb663
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:242
+msgid "**Books**:"
 msgstr ""
 
-# 04de16eadf1f4a338d1023703d612458
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:150
+# 2e896a1e87554edcb97e2fc13aa280ce
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:244
 msgid ""
-"Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems. "
-"3rd Edition. w Hill. (ISBN 0070658986)"
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
 msgstr ""
 
-# 1086884810c245b3a819c4ea33750eba
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:155
+# 607f83ab08ba4768b2525196d6606642
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:246
 msgid ""
 "DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. "
-"3rd Edition. Wiley. (ISBN 9814126195)"
+"3rd Edition. Wiley. ISBN: 9814126195"
 msgstr ""
 
-# 2a9ac5bd0aef4eafa3cc6871c3d9b640
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:160
+# f34a92e9ad484f1896f04490e4d5e1d3
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:248
 msgid ""
-"Mitas, L., Mitasova, H. (1999): Spatial Interpolation. In: P.Longley, M.F. "
+"Mitas, L., Mitasova, H. (1999). Spatial Interpolation. In: P.Longley, M.F. "
 "Goodchild, D.J. Maguire, D.W.Rhind (Eds.), Geographical Information Systems: "
 "Principles, Techniques, Management and Applications, Wiley."
 msgstr ""
 
-# 863864543a7749e8817b96c752fb7980
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:164
-msgid "Websites:"
+# d38ee3ae27b04d2ab9b9bf9841acbd55
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:252
+msgid "**Websites**:"
+msgstr ""
+
+# 0d5b6258389146dea0a01cf07ef2320a
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:254
+msgid "http://en.wikipedia.org/wiki/Interpolation"
+msgstr ""
+
+# 1dbb2749cbe740269c164ae4ca30366c
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:255
+msgid "http://en.wikipedia.org/wiki/Delaunay_triangulation"
+msgstr ""
+
+# c31dd5a5969b463a8e8a39b89e5ba47e
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:256
+msgid "http://www.agt.bme.hu/public_e/funcint/funcint.html"
 msgstr ""
 
 # 5e9dd7ff7c0a473cbb8282eca2578f09
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:166
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:258
 msgid ""
 "The QGIS User Guide also has more detailed information on interpolation "
 "tools provided in QGIS."
 msgstr ""
 
 # 9436a5464acf477bbb2173c893dcb56c
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:168
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:262
 msgid "What's next?"
 msgstr ""
 
 # 914ec20a6eef4923bdd21f6f5a5654ce
-#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:170
+#: ../../source/docs/gentle_gis_introduction/10_spatial_analysis_interpolation.rst:264
 msgid ""
 "This is the final worksheet in this series. We encourage you to explore QGIS "
 "and use the accompanying QGIS manual to discover all the other things you "

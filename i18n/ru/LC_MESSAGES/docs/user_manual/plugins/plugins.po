@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-11 13:09\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,6 +106,11 @@ msgstr ""
 "Загрузка основных модулей QGIS осуществляется из главного меню :"
 "menuselection:`Модули -->` |mActionShowPluginManager| :menuselection:"
 "`Управление модулями...`."
+
+# 985e8a741f6a42b892ad52fab2f38935
+#: ../../source/docs/user_manual/plugins/plugins.rst:69
+msgid "Plugin Manager |nix|"
+msgstr ""
 
 # 68f2cf15291c4975bd8e0cfe5d269974
 #: ../../source/docs/user_manual/plugins/plugins.rst:71
@@ -324,6 +329,11 @@ msgstr ""
 "со вкладкой :guilabel:`Модули`, в которой отображается список всех "
 "установленных модулей, а также список доступных для загрузки внешних модулей."
 
+# 00d9dcd6cd2146e5a91aeb93dcae453e
+#: ../../source/docs/user_manual/plugins/plugins.rst:181
+msgid "Installing external python plugins |nix|"
+msgstr ""
+
 # 578b4cf268c3436ca5765ec19407e63a
 #: ../../source/docs/user_manual/plugins/plugins.rst:184
 msgid "Each plugin can be either:"
@@ -353,20 +363,20 @@ msgid ""
 "be enabled. If the available version is older than the installed version, "
 "the **[Downgrade plugin]** button will appear instead."
 msgstr ""
-"**установлен** --- модуль уже установлен. Также будет активна кнопка **"
-"[Переустановить модуль]**. Если доступна более старая версия установленного "
-"плагина, то появится кнопка **[Понизить версию]**."
+"**установлен** --- модуль уже установлен. Также будет активна кнопка "
+"**[Переустановить модуль]**. Если доступна более старая версия "
+"установленного плагина, то появится кнопка **[Понизить версию]**."
 
 # e5c3b4b67d4541e4938bd4ec62f94915
 #: ../../source/docs/user_manual/plugins/plugins.rst:194
 msgid ""
 "**upgradeable** - this means that the plugin is installed, but there is an "
-"updated version available. In this case, the **[Upgrade plugin]** and **"
-"[Upgrade all]** buttons will be enabled."
+"updated version available. In this case, the **[Upgrade plugin]** and "
+"**[Upgrade all]** buttons will be enabled."
 msgstr ""
 "**обновляемый** --- модуль установлен, доступно обновление. В этом случае "
-"будет активна кнопка **[Обновить модуль]**, а также кнопка **[Обновить все]"
-"**."
+"будет активна кнопка **[Обновить модуль]**, а также кнопка **[Обновить "
+"все]**."
 
 # 7545fc3643c245e7b985ac45478f5ba4
 #: ../../source/docs/user_manual/plugins/plugins.rst:197
@@ -385,11 +395,12 @@ msgstr "**Вкладка Модули**"
 # 1f70a8e4ae5d4608bf46e548479d28c2
 #: ../../source/docs/user_manual/plugins/plugins.rst:202
 msgid ""
-"To install a plugin, select it from the list and click the **[Install plugin]"
-"** button. The plugin is then activated and installed in its own directory."
+"To install a plugin, select it from the list and click the **[Install "
+"plugin]** button. The plugin is then activated and installed in its own "
+"directory."
 msgstr ""
-"Для установки модуля необходимо выбрать его из списка и нажать кнопку **"
-"[Установить модуль]**. Он будет активирован и установлен в соответствующую "
+"Для установки модуля необходимо выбрать его из списка и нажать кнопку "
+"**[Установить модуль]**. Он будет активирован и установлен в соответствующую "
 "директорию."
 
 # b9b5b7a827644d678809a79510fc035e
@@ -506,13 +517,13 @@ msgid ""
 msgstr ""
 "Вкладка :guilabel:`Репозитории` содержит список источников для новых "
 "модулей. По умолчанию включен только официальный репозиторий QGIS. Также "
-"можно добавить и другие репозитории, воспользовавшись кнопкой **[Добавить...]"
-"**. Сторонние репозитории содержат большое количество полезных модулей, но "
-"не поддерживаются командой разработчиков QGIS. Соответственно, мы не можем "
-"отвечать за их качество и состояние. Также можно вручную управлять списком "
-"репозиториев, добавляя, удаляя и редактируя записи. Временно отключить "
-"репозиторий можно, нажав на кнопку **[Изменить...]** и сняв флажок |"
-"checkbox| :guilabel:`Активен`."
+"можно добавить и другие репозитории, воспользовавшись кнопкой "
+"**[Добавить...]**. Сторонние репозитории содержат большое количество "
+"полезных модулей, но не поддерживаются командой разработчиков QGIS. "
+"Соответственно, мы не можем отвечать за их качество и состояние. Также можно "
+"вручную управлять списком репозиториев, добавляя, удаляя и редактируя "
+"записи. Временно отключить репозиторий можно, нажав на кнопку "
+"**[Изменить...]** и сняв флажок |checkbox| :guilabel:`Активен`."
 
 # 1f5da3fbf5ec4c4891fb26c8086e3748
 #: ../../source/docs/user_manual/plugins/plugins.rst:253
@@ -645,6 +656,54 @@ msgstr ""
 "Модули провайдеров данных подключаются автоматически при каждом запуске "
 "QGIS. Они не управляются из Менеджера модулей и включаются тогда, когда слой "
 "добавляется в QGIS."
+
+# f730a75cf8d3443f9b32b2d76e89b86d
+#: ../../source/docs/user_manual/plugins/plugins.rst:9
+#: ../../source/docs/user_manual/plugins/plugins.rst:22
+#: ../../source/docs/user_manual/plugins/plugins.rst:56
+#: ../../source/docs/user_manual/plugins/plugins.rst:158
+#: ../../source/docs/user_manual/plugins/plugins.rst:160
+#: ../../source/docs/user_manual/plugins/plugins.rst:162
+#, fuzzy
+msgid "plugins"
+msgstr "Модули QGIS"
+
+# a1d5d8b5a1384d658c705a585bb50a31
+#: ../../source/docs/user_manual/plugins/plugins.rst:22
+msgid "types"
+msgstr ""
+
+# 1652a74e00ce4dc5a0808bc09ed25a1d
+#: ../../source/docs/user_manual/plugins/plugins.rst:56
+msgid "manager"
+msgstr ""
+
+# 070a63be42564e3790fb01b1926dd66f
+#: ../../source/docs/user_manual/plugins/plugins.rst:83
+msgid "crashes"
+msgstr ""
+
+# 9f7bde34492e433b90f878e9671dab37
+#: ../../source/docs/user_manual/plugins/plugins.rst:158
+msgid "installing"
+msgstr ""
+
+# d1b759dd6fb0471a97742f320f66ec5d
+#: ../../source/docs/user_manual/plugins/plugins.rst:160
+#, fuzzy
+msgid "Python Plugin Installer"
+msgstr "Использование Установщика модулей QGIS"
+
+# a46b776c6ca743398e44f2a6a34d4621
+#: ../../source/docs/user_manual/plugins/plugins.rst:162
+msgid "upgrading"
+msgstr ""
+
+# 1b5a4a92634442668f0d318ab1e02b5b
+#: ../../source/docs/user_manual/plugins/plugins.rst:288
+#, fuzzy
+msgid "data providers"
+msgstr "Провайдеры данных"
 
 # 9809bd87d31a473494d8a07fb161eb35
 #~ msgid ""
