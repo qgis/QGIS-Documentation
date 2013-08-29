@@ -47,7 +47,7 @@ The snapping tolerance setting affects all tools which work with tolerance.
    |mActionOptions| :menuselection:`Options`. In the :guilabel:`Digitizing`
    tab you can select between to vertex, to segment or to vertex and segment
    as default snap mode. You can also define a default snapping tolerance and
-   a search radius for vertex edits. The tolerance an be set either in map
+   a search radius for vertex edits. The tolerance can be set either in map
    units or in pixels. The advantage of choosing pixels, is that the snapping
    tolerance doesn't have to be changed after zoom operations. In our small
    digitizing project (working with the Alaska dataset), we define the
@@ -172,6 +172,15 @@ to digitise the second one such that both intersect and |qg| then cuts the
 second polygon to the common boundary. The advantage is that users don't
 have to digitize all vertices of the common boundary.
 
+.. Index:: Snapping_On_Intersections
+
+Enable snapping on intersections
+.................................
+Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
+It allows to snap on an intersection of background layers, even if there's no vertex on 
+the intersection.
+
+
 .. index:: Digitizing
 
 .. _sec_edit_existing_layer:
@@ -193,21 +202,21 @@ Using the basic digitizing tools you can perform the following functions:
 
 .. _table_editing:
 
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| Icon                    | Purpose                       | Icon                    | Purpose                          |
-+=========================+===============================+=========================+==================================+
-| |mActionToggleEditing|  | Toggle editing                | |mActionCapturePoint|   | Adding Features: Capture Point   |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| |mActionCaptureLine|    | Adding Features: Capture Line | |mActionCapturePolygon| | Adding Features: Capture Polygon |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| |mActionMoveFeature|    | Move Feature                  | |mActionNodeTool|       | Node Tool                        |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| |mActionDeleteSelected| | Delete Selected               | |mActionEditCut|        | Cut Features                     |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| |mActionEditCopy|       | Copy Features                 | |mActionEditPaste|      | Paste Features                   |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
-| |mActionFileSave|       | Save edits and continue       |                         |                                  |
-+-------------------------+-------------------------------+-------------------------+----------------------------------+
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| Icon                    | Purpose                          | Icon                    | Purpose                          |
++=========================+==================================+=========================+==================================+
+| |mActionAllEdits|       | Current edits                    | |mActionToggleEditing|  | Toggle editing                   |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| |mActionCapturePoint|   | Adding Features: Capture Point   | |mActionCaptureLine|    | Adding Features: Capture Line    |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| |mActionCapturePolygon| | Adding Features: Capture Polygon | |mActionMoveFeature|    | Move Feature                     |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| |mActionNodeTool|       | Node Tool                        | |mActionDeleteSelected| | Delete Selected                  |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| |mActionEditCut|        | Cut Features                     | |mActionEditCopy|       | Copy Features                    |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
+| |mActionEditPaste|      | Paste Features                   | |mActionFileSave|       | Save edits and continue          |
++-------------------------+----------------------------------+-------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
 

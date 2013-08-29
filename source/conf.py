@@ -539,6 +539,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionArrowUp| image:: /static/common/mActionArrowUp.png
    :width: 1.5em
+.. |mActionAllEdits| image:: /static/common/mActionAllEdits.png
+   :width: 1.5em
 .. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png

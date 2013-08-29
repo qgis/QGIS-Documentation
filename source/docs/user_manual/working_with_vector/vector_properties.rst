@@ -815,7 +815,7 @@ Coordinate Reference System
 * Create a :guilabel:`Spatial Index` (only for OGR supported formats)
 * :guilabel:`Update Extents` information for a layer
 * View or change the projection of the specific vector layer, clicking on
-  :guilabel:`Specify ...`
+  :guilabel:`Specify ... `
 
 |checkbox| :guilabel:`Scale dependent visibility`
 
