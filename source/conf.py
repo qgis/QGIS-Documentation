@@ -543,6 +543,12 @@ rst_epilog = """
    :width: 1.5em
 .. |mIconDataDefine| image:: /static/common/mIconDataDefine.png
    :width: 1.5em
+.. |mActionFileSaveAs|  image:: /static/common/mActionFileSaveAs.png
+   :width: 1.5em
+.. |mActionRollbackEdits| image:: /static/common/mActionRollbackEdits.png
+   :width: 1.5em
+.. |mActionCancelEdits| image:: /static/common/mActionCancelEdits.png
+   :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |copyright_label| image:: /static/common/copyright_label.png

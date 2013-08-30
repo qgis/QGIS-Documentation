@@ -288,6 +288,19 @@ move existing features.
    versa. If you need to do so, you should edit the attributes in a second
    step within the :guilabel:`Attribute table` dialog.
 
+.. index:: Current_Edits
+
+Current Edits
+.............
+
+This new feature allows the digitization of multiple layers. Choose 
+|mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you 
+made in multiple layers. You also have the opportunity to 
+|mActionRollbackEdits| :guilabel:`Rollback for Selected Layers` so that the
+digitization is then withdrawn for all layers. 
+If you want to stop editing the selected layers the |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
+is an easy way.
+
 .. index:: Node_Tool
 
 Node Tool
