@@ -143,7 +143,7 @@ table can be of one of the following types.
 
    Vector iterator button |win|
 
- If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features instead of just once for the whole layer, producing as many outputs as times the algorithm is executed. This allows for automating the process when all features in a layer have to be processed separately.
+If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features instead of just once for the whole layer, producing as many outputs as times the algorithm is executed. This allows for automating the process when all features in a layer have to be processed separately.
 
 * A table, to select from a list of all the ones available in QGIS. Non-spatial
   tables are loaded into QGIS like vector layers, and in fact they are treated as
