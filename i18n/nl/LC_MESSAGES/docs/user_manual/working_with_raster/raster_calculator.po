@@ -16,11 +16,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: nl_NL\n"
+"X-Source-Language: C\n"
 
 # 405f443be2024e75a06667b7b6326636
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:10
 msgid "Raster Calculator"
-msgstr ""
+msgstr "Rasterberekeningen"
 
 # 2b67ab5e9ed9406eb8f3d561d356e308
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
@@ -30,6 +33,11 @@ msgid ""
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
+":menuselection:`Rasterberekeningen`, welke men kan vinden in het menu "
+":menuselection:`Raster` (zie figure_raster_2_).is een menu waarmee "
+"berekeningen kan uitvoren met bestaande raster pixel waarden. De resultaten "
+"kan men opslaan in een nieuw raster in een formaat dat wordt ondersteund "
+"door GDAL."
 
 # 54857b91dcca4848a32e564a0e303a44
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:32
@@ -39,6 +47,11 @@ msgid ""
 "click its name in the Fields list. You can then use the operators to "
 "construct calculation expressions or you can just type it into the box."
 msgstr ""
+"De lijst **Raster banden** bevat all geladen rasterlagen die kunnen worden "
+"gebruikt. Dubbelklik op de rasterlaag in de lijst om een raster toe te "
+"voegen aan het tekstvak Rasterberekeningen Expressie. Je kunt vervolgens de "
+"operatoren gebruiken om een berekening expressie op te bouwen of je kunt "
+"deze rechtsstreeks typen in het tekstvak."
 
 # 85477bec7334487390625441323c2464
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:37
@@ -49,6 +62,12 @@ msgid ""
 "resolution of the output layer. If the input layer has a different "
 "resolution, the values will be resampled with nearest neighbor algorithm."
 msgstr ""
+"In het deel **Resultaatlaag** kun je instellingen geven voor de resulterende "
+"rasterlaag. Je kunt voor de grootte van het te berekenen gebied een "
+"rasterlaag of X,Y coördinaten en Rijen en Kolommen gebruiken om de resolutie "
+"te bepalen voor de te schrijven laag. Wanneer de te verwerken laag een "
+"andere resolutie heeft, dan zullen de waarden worden bepaald met het "
+"'Nearest neigbor' Algoritme."
 
 # 26ba7e3916554e15838d8f9e252d03f7
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:43
@@ -59,6 +78,10 @@ msgid ""
 "functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for "
 "more operators to come!"
 msgstr ""
+"Het onderdeel **Operatoren** bevat alle operatoren die gebruikt kunnen "
+"worden. Dubbelklik op een operator om deze toe te voegen aan het tekstvak "
+"Rasterberekening expressie. Zowel wiskundige (``+``, ``-``, ``*``, ... ) als "
+"trigonometrische functies (``sin``, ``cos``, ``tan``, ... ) zijn beschikbaar."
 
 # 8f130a611d8342d9afa18e0bb47fe88e
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:48
@@ -66,16 +89,19 @@ msgid ""
 "With the |checkbox| :guilabel:`Add result to project` checkbox the result "
 "layer will automatically added to the legend area and can be visualized."
 msgstr ""
+"Door het aanvinkvak |checkbox| :guilabel:`Voeg resultaat toe aan project' "
+"zal de resultaatlaag automatisch worden toegevoegd aan de legenda en kan "
+"deze zichtbaar worden gemaakt."
 
 # 8bf3879b24344136be819768754a4fed
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:53
 msgid "Examples"
-msgstr ""
+msgstr "Voorbeelden"
 
 # 60b0a925da1b45d6af69942ce0b64c39
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
 msgid "**Convert elevation values from meter to feet**"
-msgstr ""
+msgstr "**Omzetten hoogtewaarden van meter naar voet**"
 
 # 828c63b0cd2b4bf08f76f01d35a3ae85
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
@@ -83,11 +109,13 @@ msgid ""
 "Creating an elevation raster feet from a raster in meter, you need to use "
 "the conversion factor for meters to feet: 3.28. The expression is:"
 msgstr ""
+"Voor het omzetten van een hoogteraster van meters naar voet kun je de "
+"omrekeningsfaktor 3.28 gebruiken. De expressie is:"
 
 # eff9332c484f41a598dd74856b5c4591
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:64
 msgid "**Using a mask**"
-msgstr ""
+msgstr "**Een uitknipmasker gebruiken**"
 
 # d4182c6155dc418780cf9a4fc48a4ee0
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
@@ -96,6 +124,10 @@ msgid ""
 "in elevations above 0 meter, you can use following expression to create a "
 "mask and apply the result to a raster in one step."
 msgstr ""
+"Wanneer van een hoogte rasterkaart, dat deel wilt uitknippen dat boven 0 "
+"meter hoogte ligt, kunt je de volgende expressie gebruiken om in één keer "
+"een uitknipmasker te maken en het resultaat te schrijven naar een nieuwe "
+"rasterkaart."
 
 # 5e51086257f94e30b556e06cff69a072
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:74
@@ -103,3 +135,5 @@ msgid ""
 "For every cell greater than or equal to 0, set its value to 1, otherwise set "
 "it to 0. This creates the mask on the fly."
 msgstr ""
+"Voor elke pixel met een waarde groter of gelijk aan 0, wordt de waarde 1 "
+"anders 0. Daarmee maak je een uitknipmasker."
