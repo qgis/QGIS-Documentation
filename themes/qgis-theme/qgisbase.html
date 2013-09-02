@@ -77,18 +77,24 @@ comments, to not let all these comments showup in ALL pages %#}
         $(document).ready(function(){
             var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
             var langPlusPage = window.location.href.match(search);
+            // it's possible this is the index.html page called without 'index.html', try without the currentPage
             if (langPlusPage==undefined){
-                // it's possible this is a index.html page called without 'index.html', try without the currentPage
                 search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
                 langPlusPage = window.location.href.match(search);
             }
+            // it's possible this is an index.html page called without 'index.html', try removing index.html
+            if (langPlusPage==undefined){
+                currentPage = currentPage.replace('index.html','')
+                search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+                langPlusPage = window.location.href.match(search);
+            }
+            // still no langPlugPage: stop, because the language swicher will misbehave
             if (langPlusPage == undefined || langPlusPage.length != 1){
                 alert('This is an documentation error, please report back to QGIS devs.');
                 return;
             }
             langPlusPage = langPlusPage[0];
             currentLang = langPlusPage.replace(currentPage, '');
-
             // put some style around the current locale flag, we have to remove the '/' here
             $('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
         });
