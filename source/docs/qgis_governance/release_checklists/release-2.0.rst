@@ -239,17 +239,17 @@ be sent out to encourage translators to get there work submitted.::
 
 Branching and Tagging Details 
 .............................
-
-Tag the release::
-   
-   git tag final-1_8_0
-   git push qgis final-1_8_0
-
 Branch the release using syntax below (update this with the actual commands you
-used to tag).::
+used to branch).::
    
-   git branch release-1_8
-   git push qgis release-1_8
+   git branch release-2_0
+   git push origin release-2_0
+
+Tag the release using a signed tag::
+   
+   git tag -s final-2_0_0 -m "Version 2.0.0"
+   git push origin final-1_8_0
+
 
 Bug Tracker System 
 ...................
