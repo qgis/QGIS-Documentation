@@ -84,10 +84,10 @@ the state boundaries of Alaska. Add the WMS with the URL
 Creating a WMS/WFS from a QGIS project
 --------------------------------------
 
-To provide a new qgis wms/wfs server we have to create a qgis project file with
-some data. Here we use the 'alaska' shapefile from the qgis_sample_dataset. Define
-the colors and styles of the layers in QGIS and define the project CRS, if not
-already done.
+To provide a new QGIS Server WMS or WFS we have to create a QGIS project file with
+some data. Here we use the 'alaska' shapefile from the QGIS Sample Dataset. 
+Define the colors and styles of the layers in QGIS and define the project CRS, 
+if not already done.
 
 .. _figure_server_2:
 
@@ -99,18 +99,47 @@ already done.
    :align: center
    :width: 20 em
 
-   Definitions for a qgis project WMS/WFS server (KDE)
+   Definitions for a QGIS Server WMS/WFS project (KDE)
 
-Then open the ``OWS Server`` tab in the menu :menuselection:`Settings -->
-Project Properties` and define the general fields under 'Service Capabilities'.
-For ``WMS Capabilities`` define 'Coordinate System Restrictions' and 'Advertised
-Extend'.
+Then go to the :guilabel:`OWS Server` menu of the 
+:menuselection:`Project --> Project Properties` dialog and give 
+some information about the OWS in the fields under 
+:guilabel:`Service Capabilities`.
+This will appear in the GetCapabilities response of the WMS or WFS.
+If you don't check |checkbox| :guilabel:`Service capabilities` 
+QGIS Server will use the information given in the :file:`wms_metadata.xml` file 
+located in the :file:`cgi-bin` folder.
+
+In the :guilabel:`WMS capabilities` section you can define 
+the extent advertised in the WMS GetCapabilities response by entering 
+the minimum and maximum X and Y values in the fields under 
+:guilabel:`Advertised extent`.
+Clicking :guilabel:`Use Current Canvas Extent` sets these values to the 
+extent currently displayed in the QGIS map canvas.
+By checking |checkbox| :guilabel:`CRS restrictions` you can restrict 
+in which coordinate reference systems (CRS) QGIS Server will offer 
+to render maps.
+Use the |mActionSignPlus| button below to select those CRS 
+from the Coordinate Reference System Selector, or click :guilabel:`Used` 
+to add the CRS used in the QGIS project to the list.
+
+If you have print composers defined in your project they will be listed in the 
+GetCapabilities response, and they can be used by the GetPrint request to 
+create prints, using one of the print composer layouts as a template.
+This is a QGIS specific extension to the WMS 1.3.0 specification.
+If you want to exclude any print composer from being published by the WMS, 
+check |checkbox| :guilabel:`Exclude composers` and click the 
+|mActionSignPlus| button below.
+Then select a print composer from the :guilabel:`Select print composer` dialog 
+in order to add it to the excluded composers list.
+
 If you want to exclude any layer or layer group from being published by the 
-OWS, check |checkbox| :guilabel:`Exclude Layers` and click the 
+WMS, check |checkbox| :guilabel:`Exclude Layers` and click the 
 |mActionSignPlus| button below.
 This opens the :guilabel:`Select restricted layers and groups` dialog which 
 allows you to choose the layers and groups that you don't want to be published.
 Use the shift or control key if you want to select multiple entries at once.
+
 If you wish you can check |checkbox| :guilabel:`Add WKT geometry to feature 
 info response`.
 This will include in the GetFeatureInfo response the geometries of the features 
@@ -121,6 +150,7 @@ GetCapabilities response, enter the corresponding URL in the
 Furthermore you can restrict the maximum size of the maps returned by the 
 GetMap request by entering the maximum width and height into the respective 
 fields under :guilabel:`Maximums for GetMap request`.
+
 In the :guilabel:`WFS capabilities` area you can select the layers that you 
 want to provide as WFS, and specify if they will allow the update, insert and 
 delete operations.
@@ -167,21 +197,24 @@ the path to the SVG image in a way that it represents a valid relative path.
 Extra parameters supported by the WMS GetMap request
 ....................................................
 
-Concerning the WMS GetMap request, QGIS Server accepts a couple of extra 
-parameters in addition to the standard parameters according to the OCG WMS 1.3 
-specification:
+In the WMS GetMap request QGIS Server accepts a couple of extra 
+parameters in addition to the standard parameters according to the 
+OCG WMS 1.3.0 specification:
 
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to 
   specify the path to the QGIS project file. You can specify an absolute path 
   or a path relative to the location of the server executable 
-  (qgis_mapserv.fcgi). 
+  (:file:`qgis_mapserv.fcgi`). 
   If not specified, QGIS Server searches for .qgs files in the directory where 
   the server executable is located. 
-  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...``
+  Example::
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
 * **DPI** parameter: The ``DPI`` parameter can be used to specify the requested 
   output resolution. 
-  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...``
+  Example::
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...
 * **OPACITIES** parameter: Opacity can be set on layer or group level. 
   Allowed values range from 0 (fully transparent) to 255 (fully opaque). 
-  Example: ``http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...``
+  Example::
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...
 
