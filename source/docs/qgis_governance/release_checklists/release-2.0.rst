@@ -271,7 +271,7 @@ Create the source tarball
 This is best achieved by running this little script::
 
   cd ~/Quantum-GIS
-  git archive --format=tar --prefix=qgis-2.0.0/ final-2.0.0 | \
+  git archive --format=tar --prefix=qgis-2.0.0/ final-2_0_0 | \
   bzip2 > /var/www/downloads/qgis-2.0.0.tar.bz2
   md5sum /var/www/downloads/qgis-2.0.0.tar.bz2 > \
   /var/www/downloads/qgis-2.0.0.tar.bz2.md5
@@ -303,8 +303,8 @@ mail::
  this (as a tracking branch)
  
  git clone git://github.com/qgis/Quantum-GIS.git
- git branch --track release-1_8 origin/release-1_8
- git checkout release-1_8
+ git branch --track release-2_0 origin/release-2_0
+ git checkout release-2_0
  
  Or (to check out the tag made immediately before branching)
  
