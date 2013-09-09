@@ -490,7 +490,7 @@ Advanced digitizing
 +=============================+======================+=========================+=======================================+
 | |mActionUndo|               | Undo                 | |mActionRedo|           | Redo                                  |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotatePointSymbols| | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
+| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
 | |mActionAddRing|            | Add Ring             | |mActionAddIsland|      | Add Part                              |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
@@ -501,7 +501,7 @@ Advanced digitizing
 | |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|  | Merge Selected Features               | 
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
 | |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatures|  | Merge Attributes of Selected Features |
-+-------------------------+--------------------------+-------------------------+---------------------------------------+
++-----------------------------+----------------------+-------------------------+---------------------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -541,14 +541,20 @@ Rotate Feature(s)
 .................
 
 Use the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` to rotate one or multiple
-selected features in the map canvas. You first need to selected the features
+selected features in the map canvas. You first need to select the features
 and then press the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Icon. Then the
-centroid of the feature appears and will be the rotating point. If you selected
-multiple features the rotating point will be the common center of the features.
-It's also possible to create a user-defined center by which the feature will turn.
-Select the feature and activate the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Tool.
-Press :kbd:`Strg` and move the mouse to the place where you want to rotate the feature.
-A new anchor appears in the map canvas and you can rotate the feature(s).
+centroid of the feature appears and will be the rotation anchor point. If you selected
+multiple features the rotation anchor point will be the common center of the features.
+Press and drag the left mouse button in the desired direction to rotate the 
+selected features.
+
+
+It's also possible to create a user-defined rotation anchor point by which the selected feature will rotate.
+Select the features to rotate and activate the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Tool.
+Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
+to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button 
+when the desired rotation anchor point is reached. Now press and drag the left mouse button
+in the desired direction to rotate the selected feature(s).
  
 Simplify Feature
 ................

@@ -488,6 +488,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAnnotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
+.. |mActionRotateFeature| image:: /static/common/mActionRotateFeature.png
+   :width: 1.5em
 .. |mIconStopRendering| image:: /static/common/mIconStopRendering.png
    :width: 1.5em
 .. |mIconProjectionDisabled| image:: /static/common/mIconProjectionDisabled.png
