@@ -551,6 +551,10 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionCancelEdits| image:: /static/common/mActionCancelEdits.png
    :width: 1.5em
+.. |mActionSaveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |mActionAddPart| image:: /static/common/mActionAddPart.png
+   :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |copyright_label| image:: /static/common/copyright_label.png

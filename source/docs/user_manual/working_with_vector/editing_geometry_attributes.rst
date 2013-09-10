@@ -215,7 +215,7 @@ Using the basic digitizing tools you can perform the following functions:
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
 | |mActionEditCut|        | Cut Features                     | |mActionEditCopy|       | Copy Features                    |
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionEditPaste|      | Paste Features                   | |mActionFileSave|       | Save edits and continue          |
+| |mActionEditPaste|      | Paste Features                   | |mActionSaveEdits|      | Save layer edits                 |
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
@@ -235,7 +235,7 @@ available.
 
 .. tip:: **Save Regularly**
 
-   Remember to |mActionFileSave| :sup:`Save Edits` regularly. This will also
+   Remember to |mActionSaveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
 Adding Features
@@ -297,9 +297,11 @@ This new feature allows the digitization of multiple layers. Choose
 |mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you 
 made in multiple layers. You also have the opportunity to 
 |mActionRollbackEdits| :guilabel:`Rollback for Selected Layers` so that the
-digitization is then withdrawn for all layers. 
+digitization is then withdrawn for all selected layers. 
 If you want to stop editing the selected layers the |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
 is an easy way.
+
+The same functions for editing all layers of the project are available.
 
 .. index:: Node_Tool
 
@@ -455,8 +457,8 @@ Saving Edited Layers
 When a layer is in editing mode, any changes remain in the memory of |qg|.
 Therefore they are not committed/saved immediately to the data source or disk.
 If you want to save edits to the current layer but want to continue editing
-without leaving the editing mode, you can click the |mActionFileSave|
-:sup:`Save Edits` button. When you turn editing mode off with the
+without leaving the editing mode, you can click the |mActionSaveEdits|
+:sup:`Save Layer Edits` button. When you turn editing mode off with the
 |mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for that matter),
 you are also asked if you want to save your changes or discard them.
 
@@ -492,7 +494,7 @@ Advanced digitizing
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
 | |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionAddRing|            | Add Ring             | |mActionAddIsland|      | Add Part                              |
+| |mActionAddRing|            | Add Ring             | |mActionAddPart|        | Add Part                              |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
 | |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|     | Delete Part                           |
 +-----------------------------+----------------------+-------------------------+---------------------------------------+
@@ -540,9 +542,9 @@ after the selected operation.
 Rotate Feature(s)
 .................
 
-Use the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` to rotate one or multiple
+Use the |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
 selected features in the map canvas. You first need to select the features
-and then press the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Icon. Then the
+and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
 centroid of the feature appears and will be the rotation anchor point. If you selected
 multiple features the rotation anchor point will be the common center of the features.
 Press and drag the left mouse button in the desired direction to rotate the 
@@ -550,7 +552,7 @@ selected features.
 
 
 It's also possible to create a user-defined rotation anchor point by which the selected feature will rotate.
-Select the features to rotate and activate the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Tool.
+Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
 Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
 to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button 
 when the desired rotation anchor point is reached. Now press and drag the left mouse button
@@ -579,7 +581,7 @@ as a ring polygon.
 Add Part
 ........
 
-You can |mActionAddIsland| :sup:`add part` polygons to a selected
+You can |mActionAddPart| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon has to be digitized outside
 the selected multipolygon.
 
