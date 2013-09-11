@@ -105,17 +105,6 @@ Have you seen our real world case studies?
 .. all following sections will be in marketing div, below carousel !!!!!!!!!!!!
 
 
-Screenshots
-===========
-
-A picture is worth a thousand words - take a look at some screenshots!
-:ref:`View screenshots <QGIS-screenshots>`
-
-.. image:: http://farm8.staticflickr.com/7358/8726673422_d8c83b634e_n.jpg
-
-
-
-
 Download
 ========
 
@@ -123,14 +112,6 @@ You can download the latest version of QGIS :ref:`here <QGIS-download>`.
 
 
 |qgissplash|
-
-
-News
-====
-
-People are writing QGIS related blogs everywhere. We aggregate the
-content from a number of QGIS bloggers here:
-`Planet blog <http://plugins.qgis.org/planet/>`_.
 
 
 User Manual
@@ -142,51 +123,7 @@ version (1.8) <http://docs.qgis.org/1.8/html/en/>`_.
 Please go to :ref:`The QGIS User Manual <QGIS-manual-index-reference>` to
 see the manual for current development version.
 
+Documentation
+=============
 
-
-Case Studies
-============
-
-QGIS is used all over the world in real-world situations. You can read case
-studies submitted by a number of our users here: :ref:`find some cases here
-<QGIS-case-studies>` from our users
-
-
-
-Sponsorship
-===========
-
-Do you want to help QGIS by helping to fund its development? Please consider a
-donation (large or small contributions are welcome!):
-
-.. image:: https://www.paypalobjects.com/en_US/NL/i/btn/btn_donateCC_LG.gif
-
-If you would like to become and official sponsor,
-please consider participating in our :ref:`sponsorship programme<QGIS-sponsoring>`.
-
-
-Support
-=======
-
-There are many companies around the world providing commercial support for
-QGIS - you can find a detailed list here: :ref:`commercial
-support providers <QGIS-commercial_support>`.
-
-
-Bugs
-====
-
-Have you found a bug in the software, documentation or a translation?
-
-Please go to http://hub.qgis.org/projects/quantum-gis and tell us about it!
-
-
-Development
-===========
-
-If you are a developer and wish to build QGIS from source,
-detailed instructions are provided here in `the installation guide
-<https://github.com/qgis/Quantum-GIS/blob/master/INSTALL>`_.
-
-If you are interested in python plugin development you can visit our QGIS
-python `plugins page <http://plugins>`_.
+Other docs can be found on the :ref:`Documenation site <docs/index>`
