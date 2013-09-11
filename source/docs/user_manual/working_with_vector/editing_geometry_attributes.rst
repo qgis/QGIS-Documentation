@@ -215,7 +215,7 @@ Using the basic digitizing tools you can perform the following functions:
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
 | |mActionEditCut|        | Cut Features                     | |mActionEditCopy|       | Copy Features                    |
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
-| |mActionEditPaste|      | Paste Features                   | |mActionFileSave|       | Save edits and continue          |
+| |mActionEditPaste|      | Paste Features                   | |mActionSaveEdits|      | Save layer edits                 |
 +-------------------------+----------------------------------+-------------------------+----------------------------------+
 
 Table Editing: Vector layer basic editing toolbar
@@ -235,7 +235,7 @@ available.
 
 .. tip:: **Save Regularly**
 
-   Remember to |mActionFileSave| :sup:`Save Edits` regularly. This will also
+   Remember to |mActionSaveEdits| :sup:`Save Layer Edits` regularly. This will also
    check that your data source can accept all the changes.
 
 Adding Features
@@ -297,9 +297,11 @@ This new feature allows the digitization of multiple layers. Choose
 |mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you 
 made in multiple layers. You also have the opportunity to 
 |mActionRollbackEdits| :guilabel:`Rollback for Selected Layers` so that the
-digitization is then withdrawn for all layers. 
+digitization is then withdrawn for all selected layers. 
 If you want to stop editing the selected layers the |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
 is an easy way.
+
+The same functions for editing all layers of the project are available.
 
 .. index:: Node_Tool
 
@@ -455,8 +457,8 @@ Saving Edited Layers
 When a layer is in editing mode, any changes remain in the memory of |qg|.
 Therefore they are not committed/saved immediately to the data source or disk.
 If you want to save edits to the current layer but want to continue editing
-without leaving the editing mode, you can click the |mActionFileSave|
-:sup:`Save Edits` button. When you turn editing mode off with the
+without leaving the editing mode, you can click the |mActionSaveEdits|
+:sup:`Save Layer Edits` button. When you turn editing mode off with the
 |mActionToggleEditing| :sup:`Toggle editing` (or quit |qg| for that matter),
 you are also asked if you want to save your changes or discard them.
 
@@ -485,23 +487,23 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| Icon                        | Purpose              | Icon                    | Purpose                               |
-+=============================+======================+=========================+=======================================+
-| |mActionUndo|               | Undo                 | |mActionRedo|           | Redo                                  |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotatePointSymbols| | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionAddRing|            | Add Ring             | |mActionAddIsland|      | Add Part                              |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|     | Delete Part                           |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|    | Offset Curve                          |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|  | Merge Selected Features               | 
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatures|  | Merge Attributes of Selected Features |
-+-------------------------+--------------------------+-------------------------+---------------------------------------+
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| Icon                        | Purpose              | Icon                            | Purpose                               |
++=============================+======================+=================================+=======================================+
+| |mActionUndo|               | Undo                 | |mActionRedo|                   | Redo                                  |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|               | Simplify Feature                      |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionAddRing|            | Add Ring             | |mActionAddPart|                | Add Part                              |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|             | Delete Part                           |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|            | Offset Curve                          |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|          | Merge Selected Features               | 
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatureAttributes| | Merge Attributes of Selected Features |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -540,15 +542,21 @@ after the selected operation.
 Rotate Feature(s)
 .................
 
-Use the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` to rotate one or multiple
-selected features in the map canvas. You first need to selected the features
-and then press the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Icon. Then the
-centroid of the feature appears and will be the rotating point. If you selected
-multiple features the rotating point will be the common center of the features.
-It's also possible to create a user-defined center by which the feature will turn.
-Select the feature and activate the |mActionRotatePointSymbols|:sup:`Rotate Feature(s)` Tool.
-Press :kbd:`Strg` and move the mouse to the place where you want to rotate the feature.
-A new anchor appears in the map canvas and you can rotate the feature(s).
+Use the |mActionRotateFeature|:sup:`Rotate Feature(s)` to rotate one or multiple
+selected features in the map canvas. You first need to select the features
+and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
+centroid of the feature appears and will be the rotation anchor point. If you selected
+multiple features the rotation anchor point will be the common center of the features.
+Press and drag the left mouse button in the desired direction to rotate the 
+selected features.
+
+
+It's also possible to create a user-defined rotation anchor point by which the selected feature will rotate.
+Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
+Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
+to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button 
+when the desired rotation anchor point is reached. Now press and drag the left mouse button
+in the desired direction to rotate the selected feature(s).
  
 Simplify Feature
 ................
@@ -573,7 +581,7 @@ as a ring polygon.
 Add Part
 ........
 
-You can |mActionAddIsland| :sup:`add part` polygons to a selected
+You can |mActionAddPart| :sup:`add part` polygons to a selected
 :index:`multipolygon`. The new part polygon has to be digitized outside
 the selected multipolygon.
 
@@ -625,12 +633,16 @@ the polygon with a right click.
 Offset Curves
 .............
 
-The |mActionOffsetCurve| :sup:`Offset Curve` tool is a new editing tool. It
-creates parallel shifts of lines and polygon rings. The tool can be applied to
-the edited layer (the geometries are modified) or also to background layers
-(creates copies of the lines / rings and adds it to the the edited layer). It is
-thus ideally suited for the creation of distance line layers.The displacement is
+The |mActionOffsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
+The tool can be applied to the edited layer (the geometries are modified)
+or also to background layers (creates copies of the lines / rings and adds it to the the edited layer).
+It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
+To create a shift of a line layer you have to go into editing mode and then
+select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag 
+the cross to the desired distance. Your changes then can be saved with the
+|mActionSaveEdits|:sup:`Save Layer Edits` tool.
+
 
 .. index:: Split_Features
 
@@ -653,9 +665,13 @@ features that have common boundaries and the same attributes.
 Merge attributes of selected features
 .....................................
 
-The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool
+The |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
+You can merge the attributes when selecting several features at once. Then 
+press the |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` button.
+Now QGIS offers you which attributes are to be applied to all selected objects.
+As a result, all objects have the same attribute entries.
 
 .. index:: Rotate_Point_symbols
 
@@ -667,7 +683,7 @@ Rotate Point Symbols
 The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` tool is currently
 only supported by the old symbology engine. It allows to change the rotation
 of point symbols in the map canvas, if you have defined a rotation column
-from the attribute table of the point layer in the :guilabel:`Style` tab of
+from the attribute table of the point layer in the :guilabel:`Style` menu of
 the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
 
 .. _figure_edit_4:
@@ -728,7 +744,7 @@ with X,Y,Z coordinates).
    Creating a new Shapefile layer Dialog |nix|
 
 To complete the creation of the new Shapefile layer, add the desired attributes
-by clicking on the **[Add]** button and specifying a name and type for the
+by clicking on the **[Add to attributes list]** button and specifying a name and type for the
 attribute. A first 'id' column is added as default but can be removed, if not
 wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
 |selectstring|, and :guilabel:`Type: string` |selectstring| attributes are
@@ -747,7 +763,7 @@ Creating a new SpatiaLite layer
 ...............................
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
-|mActionNewVectorLayer| :menuselection:`New SpatiaLite Layer...` from the
+|mActionNewSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
 be displayed as shown in Figure_edit_6_.
 

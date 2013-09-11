@@ -99,7 +99,7 @@ One week before - branch & call for packaging Date here
   notes below).
 * |checkbox_unchecked| Branch GIT and *call for packaging* (see branching notes
   below) and record revision here: XXXXXX
-* |checkbox_unchecked| Edit build_debian_package.sh and set @dch -v 1.8.0@ to
+* |checkbox_unchecked| Edit build_debian_package.sh and set @dch -v 2.0.0@ to
   the apropriate version number.
 * |checkbox_unchecked| Update the NSIS installer (win_build/qgis.nsis) to
   reflect the correct version.
@@ -223,7 +223,7 @@ be sent out to encourage translators to get there work submitted.::
    release, so please submit what you have by then even if it is not complete.
    
    As always you can track the release plans via the checklist at:
-   http://www.qgis.org/wiki/Release_Checklist_1.8.0
+   http://www.qgis.org/wiki/Release_Checklist_2.0.0
 
    If you have any questions about the translation process, please see the
    following page which includes instructions on how to generate a .ts file for a
@@ -239,17 +239,17 @@ be sent out to encourage translators to get there work submitted.::
 
 Branching and Tagging Details 
 .............................
-
-Tag the release::
-   
-   git tag final-1_8_0
-   git push qgis final-1_8_0
-
 Branch the release using syntax below (update this with the actual commands you
-used to tag).::
+used to branch).::
    
-   git branch release-1_8
-   git push qgis release-1_8
+   git branch release-2_0
+   git push origin release-2_0
+
+Tag the release using a signed tag::
+   
+   git tag -s final-2_0_0 -m "Version 2.0.0"
+   git push origin final-2.0.0
+
 
 Bug Tracker System 
 ...................
@@ -258,8 +258,8 @@ All bugs that are intended to have been fixed in this release should have been
 marked as closed. All other bugs on the release branch should be marked for a
 future release. To do this:
 
-* create a new milestone and version e.g. we are releasing 1.8.0 now so create
-  a new milestone in redmine for 1.8.0. Create the milestone here:
+* create a new milestone and version e.g. we are releasing 2.0.0 now so create
+  a new milestone in redmine for 2.0.0. Create the milestone here:
 
 * Now you need to update each open bug on the branch and reset its milestone for
   the next release in the future. This can be done easily doing a batch update in redmine.
@@ -271,10 +271,10 @@ Create the source tarball
 This is best achieved by running this little script::
 
   cd ~/Quantum-GIS
-  git archive --format=tar --prefix=qgis-1.8.0/ final-1_8_0 | \
-  bzip2 > /var/www/downloads/qgis-1.8.0.tar.bz2
-  md5sum /var/www/downloads/qgis-1.8.0.tar.bz2 > \
-  /var/www/downloads/qgis-1.8.0.tar.bz2.md5
+  git archive --format=tar --prefix=qgis-2.0.0/ final-2_0_0 | \
+  bzip2 > /var/www/downloads/qgis-2.0.0.tar.bz2
+  md5sum /var/www/downloads/qgis-2.0.0.tar.bz2 > \
+  /var/www/downloads/qgis-2.0.0.tar.bz2.md5
 
 
 Generate the changelog 
@@ -299,31 +299,28 @@ mail::
  
  --- End note ---
  
- I have branched QGIS 1.8.0 for release. The branch can be checked out like 
+ I have branched QGIS 2.0.0 for release. The branch can be checked out like 
  this (as a tracking branch)
  
  git clone git://github.com/qgis/Quantum-GIS.git
- git branch --track release-1_8 origin/release-1_8
- git checkout release-1_8
+ git branch --track release-2_0 origin/release-2_0
+ git checkout release-2_0
  
  Or (to check out the tag made immediately before branching)
  
  git fetch
- git checkout final-1_8_0
+ git checkout final-2.0.0
  
  
  Source tarballs can be obtained from here:
  
- http://qgis.org/downloads/qgis-1.8.0.tar.bz2
- http://qgis.org/downloads/qgis-1.8.0.tar.bz2.md5
+ http://qgis.org/downloads/qgis-2.0.0.tar.bz2
+ http://qgis.org/downloads/qgis-2.0.0.tar.bz2.md5
  
  Some notes:
  
  - Please do not commit anything to the release branch except packaging related
    tweaks.
- - we will be focussing our efforts on master towards an upcoming 2.0 release.
-   There are no 1.8.x point releases planned except in the case of highly
-   critical bugfixes being needed.
  - If you make a package please be so kind as to update the download wiki page at 
    http://www.qgis.org/wiki/Download with the details of your package.
  - If you are able to make packages for unlisted platforms / distros please
@@ -342,8 +339,10 @@ mail::
  together visual changelog (link below), press announcements etc. ready for the
  release date? I will send you an email when the packages are ready and you can
  start broadcasting announcements.
- 
- Visual Changelog Wiki Page: http://hub.qgis.org/wiki/quantum-gis/Release_VisualGuide_18
+  
+ Visual Changelog Wiki Page: http://changelog.linfiniti.com/version/1/ (this is
+ the site for drafting the release, the final release content will be on the
+ official QGIS web site).
  
  Best regards
 
@@ -354,12 +353,12 @@ Windows Binary upload
 Put the binary onto the server::
 
  cd /osgeo/download/qgis/win32/
- wget http://linfiniti.com/downloads/QGIS-1.8.0-0-No-GrassSetup.exe
- md5sum QGIS-1.8.0-0-No-GrassSetup.exe > QGIS-1.8.0-0-No-GrassSetup.exe.md5
+ wget http://linfiniti.com/downloads/QGIS-2.0.0-0-No-GrassSetup.exe
+ md5sum QGIS-2.0.0-0-No-GrassSetup.exe > QGIS-2.0.0-0-No-GrassSetup.exe.md5
 
 Now do a virus check on it. First make a note of the url:
   
-  http://download.osgeo.org/qgis/win32/QGIS-1.8.0-0-No-GrassSetup.exe
+  http://download.osgeo.org/qgis/win32/QGIS-2.0.0-0-No-GrassSetup.exe
 
 Now go to GarysHood online virus checker or similar to double check the binary
 is virus free:
@@ -371,7 +370,7 @@ Announcing the release
 ----------------------
 
 Note you can get stats for the previous release like with "awstats": 
-  http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-1.8.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
+  http://www.qgis.org/cgi-bin/awstats.pl?urlfilter=%2Fdownloads%2FQGIS-OSGeo4W-2.0.0-.*-Setup.exe&urlfilterex=&output=urldetail&config=qgis&framename=mainright&month=all&year=2011
 
 IRC TOPIC update
 ................
@@ -397,7 +396,7 @@ An announcement template will save you retypping the same text at the various pl
 A Generic release subject 
 +++++++++++++++++++++++++
 
-Announcing the release of QGIS 1.8.0 (unstable release).
+Announcing the release of QGIS 2.0.0 (unstable release).
 
 
 A generic 20 word summary 
@@ -409,13 +408,13 @@ Quantum GIS is a user friendly Open Source Geographic Information System that ru
 A mailing list announcement 
 +++++++++++++++++++++++++++
 
-We are very pleased to announce the release of QGIS 1.8.0 'Lisboa'. This release contains new features and extends the programmatic interface over QGIS 1.0.x and QGIS 1.7.x
+We are very pleased to announce the release of QGIS 2.0.0 'Lisboa'. This release contains new features and extends the programmatic interface over QGIS 1.0.x and QGIS 1.7.x
 
 Binary and source code packages are available at:
 
 http://download.qgis.org
 
-If there is not yet a package for your platform on the above page, please check back regularly as packagers are still pushing out their work and they will update the download page to reflect the new packages. Along with the release of QGIS 1.8.0, the QGIS Community Team is hard at work on an updated QGIS Users' Guide version 1.8.0. The guide will be available in the near future - we will post announcements when it is available.
+If there is not yet a package for your platform on the above page, please check back regularly as packagers are still pushing out their work and they will update the download page to reflect the new packages. Along with the release of QGIS 2.0.0, the QGIS Community Team is hard at work on an updated QGIS Users' Guide version 2.0.0. The guide will be available in the near future - we will post announcements when it is available.
 
 A word of thanks to our contributors, donors and sponsors
 .........................................................

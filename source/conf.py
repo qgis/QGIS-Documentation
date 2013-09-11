@@ -384,6 +384,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mergeFeats| image:: /static/common/mActionMergeFeatures.png
    :width: 1.5em
+.. |mActionMergeFeatureAttributes| image:: /static/common/mActionMergeFeatureAttributes.png
+   :width: 1.5em
 .. |mActionNodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
 .. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
@@ -423,6 +425,8 @@ rst_epilog = """
 .. |mActionIdentify| image:: /static/common/mActionIdentify.png
    :width: 1.5em
 .. |mActionNewVectorLayer| image:: /static/common/mActionNewVectorLayer.png
+   :width: 1.5em
+.. |mActionNewSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLite.png
    :width: 1.5em
 .. |mActionZoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
@@ -488,6 +492,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAnnotation| image:: /static/common/mActionAnnotation.png
    :width: 1.5em
+.. |mActionRotateFeature| image:: /static/common/mActionRotateFeature.png
+   :width: 1.5em
 .. |mIconStopRendering| image:: /static/common/mIconStopRendering.png
    :width: 1.5em
 .. |mIconProjectionDisabled| image:: /static/common/mIconProjectionDisabled.png
@@ -548,6 +554,10 @@ rst_epilog = """
 .. |mActionRollbackEdits| image:: /static/common/mActionRollbackEdits.png
    :width: 1.5em
 .. |mActionCancelEdits| image:: /static/common/mActionCancelEdits.png
+   :width: 1.5em
+.. |mActionSaveEdits| image:: /static/common/mActionSaveEdits.png
+   :width: 1.5em
+.. |mActionAddPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em

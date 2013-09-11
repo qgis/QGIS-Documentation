@@ -336,27 +336,10 @@ placed on a displacement circle around a center symbol.
 
 Labels Menu
 -----------
-
-|labels| |qg| 2.0.0 currently provides a new and a deprecated labeling
-engine in parallel. The :guilabel:`Layer Properties` still contains the :guilabel:`Labels (deprecated)`.
-The new labeling is implemented as a core application and will replace the features
-of the :guilabel:`Labels (deprecated)` menu in one of the next versions.
-
-We recommend to switch to the new labeling, described in section
-:ref:`vector_new_labeling`.
-
-.. index:: New_Labeling, Smart_Labeling
-
-.. _vector_new_labeling:
-
-New Labeling
-............
-
-The new |mActionLabeling| :sup:`Labels` core application provides smart
+The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers and only requires a
-few parameters. This new application will replace the current QGIS labeling,
-described in section :ref:`vector_labels_tab` and also supports on-the-fly
-transformated layers. The core functions of the application have been redesigned. In QGIS 2.0.0. 
+few parameters. This new application also supports on-the-fly transformated layers.
+The core functions of the application have been redesigned. In QGIS 2.0.0. 
 there are now a number of other features which improve the labeling. The following menus
 have been created for labeling the vector layers:
 

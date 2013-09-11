@@ -8,10 +8,13 @@ consists of 5 members (with their individual responsibilities listed in
 brackets):
 
 * Gary Sherman (Chair)
-* Marco Hugentobler (Technical)
-* Tim Sutton (Release Management)
-* Otto Dassau (Community)
-* Paolo Cavallini (Finance)
+* Marco Hugentobler (Technical Advisor)
+* Tim Sutton (Testing/QA Manager)
+* Otto Dassau (Community Advisor)
+* Paolo Cavallini (Financial and Marketing Advisor)
+* Anita Graser (Design Advisor)
+* Richard Duivenvoord (Infrastructure Manager)
+* Jürgen Fischer (Release Manager)
 
 Term of PSC members
 ===================
@@ -23,7 +26,7 @@ remaining PSC members.
 Member's roles withing the PSC
 ==============================
 
-The PSC consists of 5 identified roles as follows:
+The PSC consists of 8 identified roles as follows:
 
 * **Chair**
    To support the activities and present a public face to the
@@ -52,7 +55,19 @@ The PSC consists of 5 identified roles as follows:
    the various supported platforms. To recruit and support build managers to
    create packages for supported platforms. To oversee the maintenance of the trac
    bug tracking system.
-
+* **Design Advisor**
+   To oversee activities related to QGIS branding, including logo, user experience,
+   icons, and other graphic elements common to both the application and the project's
+   web presence.
+* **Infrastructure Manager**
+   Manage and oversee the QGIS project infrastructure, including servers, websites, 
+   source control, and issue tracking.
+   Make recommendations for improvements, expansion, and consolidation of services.
+   Guide and direct volunteers
+* **Release Manager**
+   Oversee timely, regular, stable releases of QGIS on the various supported platforms.
+   With the PSC, determine timelines for freezes, releases, and general release and maintenance policies.
+   Recruit and support build managers to create packages for supported platforms.
 
 Candidacy for the PSC
 =====================
