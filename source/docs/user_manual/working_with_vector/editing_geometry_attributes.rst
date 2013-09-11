@@ -487,23 +487,23 @@ Advanced digitizing
 
 .. _table_advanced_editing:
 
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| Icon                        | Purpose              | Icon                    | Purpose                               |
-+=============================+======================+=========================+=======================================+
-| |mActionUndo|               | Undo                 | |mActionRedo|           | Redo                                  |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|       | Simplify Feature                      |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionAddRing|            | Add Ring             | |mActionAddPart|        | Add Part                              |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|     | Delete Part                           |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|    | Offset Curve                          |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|  | Merge Selected Features               | 
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
-| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatures|  | Merge Attributes of Selected Features |
-+-----------------------------+----------------------+-------------------------+---------------------------------------+
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| Icon                        | Purpose              | Icon                            | Purpose                               |
++=============================+======================+=================================+=======================================+
+| |mActionUndo|               | Undo                 | |mActionRedo|                   | Redo                                  |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionRotateFeature|      | Rotate Feature(s)    | |mActionSimplify|               | Simplify Feature                      |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionAddRing|            | Add Ring             | |mActionAddPart|                | Add Part                              |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionDeleteRing|         | Delete Ring          | |mActionDeletePart|             | Delete Part                           |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|            | Offset Curve                          |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|          | Merge Selected Features               | 
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
+| |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatureAttributes| | Merge Attributes of Selected Features |
++-----------------------------+----------------------+---------------------------------+---------------------------------------+
 
 Table Advanced Editing: Vector layer advanced editing toolbar
 
@@ -633,12 +633,16 @@ the polygon with a right click.
 Offset Curves
 .............
 
-The |mActionOffsetCurve| :sup:`Offset Curve` tool is a new editing tool. It
-creates parallel shifts of lines and polygon rings. The tool can be applied to
-the edited layer (the geometries are modified) or also to background layers
-(creates copies of the lines / rings and adds it to the the edited layer). It is
-thus ideally suited for the creation of distance line layers.The displacement is
+The |mActionOffsetCurve| :sup:`Offset Curve` tool creates parallel shifts of line layers.
+The tool can be applied to the edited layer (the geometries are modified)
+or also to background layers (creates copies of the lines / rings and adds it to the the edited layer).
+It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
+To create a shift of a line layer you have to go into editing mode and then
+select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag 
+the cross to the desired distance. Your changes then can be saved with the
+|mActionSaveEdits|:sup:`Save Layer Edits` tool.
+
 
 .. index:: Split_Features
 
@@ -661,9 +665,13 @@ features that have common boundaries and the same attributes.
 Merge attributes of selected features
 .....................................
 
-The |mActionMergeFeatures| :sup:`Merge Attributes of Selected Features` tool
+The |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
+You can merge the attributes when selecting several features at once. Then 
+press the |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` button.
+Now QGIS offers you which attributes are to be applied to all selected objects.
+As a result, all objects have the same attribute entries.
 
 .. index:: Rotate_Point_symbols
 
@@ -675,7 +683,7 @@ Rotate Point Symbols
 The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` tool is currently
 only supported by the old symbology engine. It allows to change the rotation
 of point symbols in the map canvas, if you have defined a rotation column
-from the attribute table of the point layer in the :guilabel:`Style` tab of
+from the attribute table of the point layer in the :guilabel:`Style` menu of
 the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
 
 .. _figure_edit_4:
@@ -736,7 +744,7 @@ with X,Y,Z coordinates).
    Creating a new Shapefile layer Dialog |nix|
 
 To complete the creation of the new Shapefile layer, add the desired attributes
-by clicking on the **[Add]** button and specifying a name and type for the
+by clicking on the **[Add to attributes list]** button and specifying a name and type for the
 attribute. A first 'id' column is added as default but can be removed, if not
 wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
 |selectstring|, and :guilabel:`Type: string` |selectstring| attributes are
@@ -755,7 +763,7 @@ Creating a new SpatiaLite layer
 ...............................
 
 To create a new SpatiaLite layer for editing, choose :menuselection:`New -->`
-|mActionNewVectorLayer| :menuselection:`New SpatiaLite Layer...` from the
+|mActionNewSpatiaLiteLayer| :menuselection:`New SpatiaLite Layer...` from the
 :menuselection:`Layer` menu. The :guilabel:`New SpatiaLite Layer` dialog will
 be displayed as shown in Figure_edit_6_.
 
