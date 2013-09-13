@@ -631,7 +631,7 @@ rst_epilog = """
    :width: 1.5em
 .. |buffer| image:: /static/common/buffer.png
    :width: 1.5em
-.. |buffer| image:: /static/common/eliminate.png
+.. |eliminate| image:: /static/common/eliminate.png
    :width: 1.5em
 .. |intersect| image:: /static/common/intersect.png
    :width: 1.5em
