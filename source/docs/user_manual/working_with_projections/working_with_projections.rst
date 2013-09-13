@@ -52,7 +52,7 @@ file named :file:`alaska.prj`.
 Whenever you select a new CRS, the used layer units will automatically be
 changed in the :guilabel:`General` tab of the
 |mActionOptions| :guilabel:`Project Properties` dialog under the
-:guilabel:`Edit` (Gnome, OSX) or :guilabel:`Settings` (KDE, Windows)
+:guilabel:`Project` (Gnome, OSX) or :guilabel:`Settings` (KDE, Windows)
 menu.
 
 .. index:: default_CRS
@@ -83,9 +83,8 @@ saved for use in subsequent QGIS sessions.
 
 When you use layers that do not have a CRS, you need to define how
 QGIS responds to these layers. This can be done globally or
-project-wide in the :guilabel:`CRS` tab under :menuselection:`Edit -->` |mActionOptions|
-:guilabel:`Options` (Gnome, OSX) or :menuselection:`Settings -->` |mActionOptions|
-:guilabel:`Options` (KDE, Windows).
+project-wide in the :guilabel:`CRS` tab under :menuselection:`Settings -->` 
+|mActionOptions| :guilabel:`Options`.
 
 The options shown in figure_projection_1_ are:
 
@@ -95,7 +94,7 @@ The options shown in figure_projection_1_ are:
 
 If you want to define the coordinate reference system for a certain layer without
 CRS information, you can also do that in the :guilabel:`General` tab of the raster
-(see :ref:`label_generaltab`) and vector (see :ref:`vectorgeneraltab`) properties
+(see :ref:`label_generaltab`) and vector (see :ref:`vectorgeneralmenu`) properties
 dialog. If your layer already has a CRS defined, it will be displayed as shown in
 :ref:`figure_vector_properties_1` .
 
@@ -118,7 +117,7 @@ tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog
 There are three ways to achieve this end:
 
 #. Select |mActionOptions| :menuselection:`Project Properties` from the
-   :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows)
+   :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows)
    menu.
 #. Click on the |geographic| :sup:`CRS status` icon in the lower
    right-hand corner of the statusbar.
@@ -158,11 +157,11 @@ shown in Figure_projection_2_ and described below.
 #. **Enable on the fly CRS transformation** -
    this checkbox is used to enable or disable OTF projection. When off, each
    layer is drawn using the coordinates as read from the data source and the
-   components described below are inactive.When on, the coordinates in each
+   components described below are inactive. When on, the coordinates in each
    layer are projected to the coordinate reference system defined for the map canvas.
 #. **Coordinate Reference System** - this is a list of all CRS
    supported by QGIS, including Geographic, Projected and Custom coordinate
-   reference systems. To define a CRS,  select it from the list by expanding
+   reference systems. To define a CRS, select it from the list by expanding
    the appropriate node and selecting the CRS. The active CRS is preselected.
 #. **Proj4 text** - this is the CRS string used by the Proj4
    projection engine. This text is read-only and provided for informational
@@ -178,7 +177,7 @@ shown in Figure_projection_2_ and described below.
 .. tip:: **Project Properties Dialog**
 
    If you open the :guilabel:`Project Properties` dialog from the
-   :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings`
+   :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings`
    (KDE, Windows) menu, you must click on the
    :guilabel:`Coordinate Reference System` tab to view the CRS settings.
 
@@ -195,10 +194,9 @@ Custom Coordinate Reference System
 
 If QGIS does not provide the coordinate reference system you need, you
 can define a custom CRS. To define a CRS, select |mIconNew|:guilabel:`Custom CRS`
-from the :menuselection:`Edit` (Gnome, OSX) or :menuselection:`Settings` (KDE,
-Windows) menu.  Custom CRS are stored in your QGIS user database. In addition to
-your custom CRS, this database also contains your spatial bookmarks and other
-custom data.
+from the :menuselection:`Settings` menu. Custom CRS are stored in your QGIS 
+user database. In addition to your custom CRS, this database also contains 
+your spatial bookmarks and other custom data.
 
 
 .. _figure_projection_3:
