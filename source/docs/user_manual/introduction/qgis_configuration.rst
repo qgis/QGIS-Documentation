@@ -211,12 +211,6 @@ Layer legend
 	* |checkbox| :guilabel:`Create raster icons (may be slow)`
 	* |checkbox| :guilabel:`Add new layers to selected or current group`
 
-Overlay position
-
-* Define :guilabel:`Placement algorithm` |selectstring| for labels, symbology and
-  diagrams (choose between 'Central point' (standard), 'Chain', 'Popmusic tabu
-  chain', 'Popmusic tabu' and 'Popmusic chain')
-
 Map tools Tab
 -------------
 
