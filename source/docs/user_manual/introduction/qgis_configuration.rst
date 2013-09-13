@@ -200,16 +200,17 @@ Default map appearance (overridden by project properties)
 
 Layer legend
 
-* :guilabel:`Double click action in legend` |selectstring|. You can either 'Open layer properties' or 'Open attribute table' with the double click
+* :guilabel:`Double click action in legend` |selectstring|. You can either 
+  'Open layer properties' or 'Open attribute table' with the double click.
 
-.. FIXME: the following sentence shouldn't be in bold letters
 * the following :guilabel:`Legend item styles` are possible
-	* |checkbox| :guilabel:`Capitalise layer names`
-	* |checkbox| :guilabel:`Bold layer names`
-	* |checkbox| :guilabel:`Bold group names`
-	* |checkbox| :guilabel:`Display classification attribute names`
-	* |checkbox| :guilabel:`Create raster icons (may be slow)`
-	* |checkbox| :guilabel:`Add new layers to selected or current group`
+
+  * |checkbox| :guilabel:`Capitalise layer names`
+  * |checkbox| :guilabel:`Bold layer names`
+  * |checkbox| :guilabel:`Bold group names`
+  * |checkbox| :guilabel:`Display classification attribute names`
+  * |checkbox| :guilabel:`Create raster icons (may be slow)`
+  * |checkbox| :guilabel:`Add new layers to selected or current group`
 
 Overlay position
 
