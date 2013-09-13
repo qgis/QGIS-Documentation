@@ -12,7 +12,7 @@ QGIS GUI
     single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
-(the numbers 1 through 5 in yellow circles refer to the six major areas of the
+(the numbers 1 through 5 in yellow circles refer to the five major areas of the
 interface as discussed below):
 
 .. _fig_startup:
@@ -60,13 +60,13 @@ section are the defaults), using the [**Configure Shortcuts**] tool under
 :menuselection:`Settings`.
 
 Although most menu options have a corresponding tool and vice-versa,
-the menus are not organized quite like the toolbars.
+the menus are not organized quiet like the toolbars.
 The toolbar containing the tool is listed after each menu option as a checkbox
-entry. Some menu options only appear, if the corresponding plugin is loaded.
+entry. Some menu options only appear if the corresponding plugin is loaded.
 For more information about tools and toolbars, see Section :ref:`label_toolbars`.
 
 Project
-....
+........
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
@@ -305,12 +305,12 @@ Menu Option                                                     Shortcut        
 
 \
 
-Please not that for Linux |nix| the Menu Bar items listed above are the default ones
-in KDE window manager. In GNOME, Settings menu is missing and its items are to be
+Please note that for Linux |nix| the Menu Bar items listed above are the default ones
+in KDE window manager. In GNOME, Settings menu has different content and its items have to be
 found here:
 
 +-----------------------------------------------------------------------+------------------------+
-| |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`File`       |
+| |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`Project`    |
 +-----------------------------------------------------------------------+------------------------+
 | |mActionOptions| :guilabel:`Options`                                  | :guilabel:`Edit`       |
 +-----------------------------------------------------------------------+------------------------+
@@ -382,6 +382,8 @@ A layer can be selected and dragged up or down in the legend to change the
 z-ordering. Z-ordering means that layers listed nearer the top of the legend are
 drawn over layers listed lower down in the legend.
 
+.. note:: This behaviours can be overridden by 'Layer order' panel.
+
 Layers in the legend window can be organised into groups. There are two ways to do so:
 
 #. Right click in the legend window and choose :menuselection:`Add Group`. Type in a
@@ -404,12 +406,16 @@ legend item is a raster or a vector layer. For GRASS vector layers
 **Right mouse button menu for raster layers**
 
 * :menuselection:`Zoom to layer extent`
-* :menuselection:`Zoom to best scale (100 %)`
+* :menuselection:`Zoom to Best Scale (100%)`
+* :menuselection:`Stretch Using Current Extent`
 * :menuselection:`Show in overview`
 * :menuselection:`Remove`
+* :menuselection:`Duplicate`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Save as ...`
 * :menuselection:`Properties`
+* :menuselection:`Make to Toplevel Item`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
 * :menuselection:`Add New Group`
@@ -431,13 +437,14 @@ Additionally, according to layer position and selection
 * :menuselection:`Zoom to layer extent`
 * :menuselection:`Show in overview`
 * :menuselection:`Remove`
+* :menuselection:`Duplicate`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
-* :menuselection:`Open attribute table`
-* :menuselection:`Toggle editing` (not available for GRASS layers)
-* :menuselection:`Save as`
-* :menuselection:`Save selection as`
-* :menuselection:`Query`
+* :menuselection:`Open Attribute Table`
+* :menuselection:`Toggle Editing` (not available for GRASS layers)
+* :menuselection:`Save As`
+* :menuselection:`Save Selection As`
+* :menuselection:`Filter`
 * :menuselection:`Show Feature Count`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
@@ -458,9 +465,9 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for layer groups**
 
-* :menuselection:`Zoom to group`
+* :menuselection:`Zoom to Group`
 * :menuselection:`Remove`
-* :menuselection:`Set group CRS`
+* :menuselection:`Set Group CRS`
 * :menuselection:`Rename`
 * :menuselection:`Add New Group`
 * :menuselection:`Expand all`
@@ -479,7 +486,7 @@ the same time.
 
 You are also able to delete more than one Layer or Group at once by selecting
 several Layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
-This way all selected Layers or groups will be removed from the layerlist.
+This way all selected Layers or groups will be removed from the layer's list.
 
 Working with the Legend independent layer order
 ...............................................
@@ -542,8 +549,8 @@ changes you make in the legend area.
    You can use the arrow keys to pan in the map. Place the mouse cursor
    inside the map area and click on the right arrow key to pan East, left arrow
    key to pan West, up arrow key to pan North and down arrow key to pan South.
-   You can also pan the map using the space bar: just move the mouse while
-   holding down space bar.
+   You can also pan the map using the space bar or the click on mouse wheel: 
+   just move the mouse while holding down space bar or click on mouse wheel.
 
 .. _`label_mapoverview`:
 
