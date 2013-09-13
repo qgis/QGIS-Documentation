@@ -144,6 +144,11 @@ Geoprocessing tools
 |                     |                 | values are combined to form one      |
 |                     |                 | single feature.                      |
 +---------------------+-----------------+--------------------------------------+
+| |eliminate|         | Eliminate sliver| Merges selected features with the    |
+|                     | polygons        | neighbouring polygon with the        |
+|                     |                 | largest area or largest common       |
+|                     |                 | boundary.                            |
++---------------------+-----------------+--------------------------------------+
 
 Table Ftools 3: fTools Geoprocessing tools
 

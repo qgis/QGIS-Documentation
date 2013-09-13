@@ -74,7 +74,7 @@ supported formats using the fTools Python plugin. QGIS currently offers
 vector analysis, sampling, geoprocessing, geometry and database management
 tools. You can also use the integrated GRASS tools, which
 include the complete GRASS functionality of more than 400 modules (See Section
-:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful a geospatial
+:ref:`sec_grass`). Or you work with SEXTANTE, which provides powerful geospatial
 analysis framework to call native and third party algorithms from QGIS, such as
 GDAL, SAGA, GRASS, fTools and more (see section :ref:`label_sextante`).
 
@@ -82,7 +82,7 @@ Publish maps on the Internet
 ----------------------------
 
 QGIS can be used to export data to a mapfile and to publish them on the
-Internet using a webserver with UMN MapServer installed. QGIS can also
+Internet using a webserver with MapServer installed. QGIS can also
 be used as a WMS, WMS-C or WFS and WFS-T client, and as WMS or WFS server
 (see section :ref:`sec_ogc`).
 
