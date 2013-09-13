@@ -331,6 +331,14 @@ placed on a displacement circle around a center symbol.
 
    Point displacement dialog |nix|
 
+.. tip:: **Export vector symbology**
+   
+   You have the possibility to export vector symbology from QGIS into the Google *.kml, *.dxf
+   and MapInfo*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
+   as -->` to define the name of the output file and its format.
+   Use the :guilabel:`Symbology export` menu to save the symbology either as
+   :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`. 
+   If you have used symbol layers it is recommended to use the second setting.
 
 .. _vector_labels_tab:
 

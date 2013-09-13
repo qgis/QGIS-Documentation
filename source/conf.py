@@ -388,6 +388,24 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionNodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |mActionInvertSelection| image:: /static/common/mActionInvertSelection.png
@@ -426,7 +444,7 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionNewVectorLayer| image:: /static/common/mActionNewVectorLayer.png
    :width: 1.5em
-.. |mActionNewSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLite.png
+.. |mActionNewSpatiaLiteLayer| image:: /static/common/mActionNewSpatiaLiteLayer.png
    :width: 1.5em
 .. |mActionZoomFullExtent| image:: /static/common/mActionZoomFullExtent.png
    :width: 1.5em
