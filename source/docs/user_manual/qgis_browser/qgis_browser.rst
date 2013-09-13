@@ -13,10 +13,11 @@
 QGIS Browser
 ************
 
-The QGIS Browser is a new panel in QGIS that lets you easily navigate in your
+The QGIS Browser is a panel in QGIS that lets you easily navigate in your
 database. You can have access to common vector files (e.g. ESRI shapefile or
-MapInfo files), databases (e.g.PostGIS or MSSQL Spatial) and WMS/WFS connections.
-You can also view your GRASS data (to get the data into QGIS see :ref:`sec_grass`).
+MapInfo files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial) 
+and WMS/WFS connections. You can also view your GRASS data (to get the data 
+into QGIS see :ref:`sec_grass`).
 
 .. _figure_browser_standalone_metadata:
 
@@ -28,7 +29,7 @@ You can also view your GRASS data (to get the data into QGIS see :ref:`sec_grass
    :align: center
    :width: 35em
 
-   Qgis browser as a standalone application to view metadata, preview and attributes |nix|
+   QGIS browser as a standalone application to view metadata, preview and attributes |nix|
 
 Use QGIS Browser to preview your data. The drag and drop function makes it easy
 to get your data into the Map view and the Map legend.
@@ -37,16 +38,18 @@ to get your data into the Map view and the Map legend.
 
 #. Activate QGIS Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser`.
 #. Drag the panel into the legend window.
-#. Klick on the :guilabel:`Browser` tab.
+#. Click on the :guilabel:`Browser` tab.
 #. Browse in your database and choose the shapefile folder from qgis_sample_data.
-#. Press the :kbd:`Shift` key and klick on airports.shp and alaska.shp .  
+#. Press the :kbd:`Shift` key and click on airports.shp and alaska.shp .  
 #. Press the left mouse button then drag and drop the files into the map canvas.
 #. Right-click on a layer and choose :guilabel:`Set project CRS from layer`.
    For more information see :ref:`label_projections`.
 #. Click on |mActionZoomFullExtent| :guilabel:`Zoom Full` to make the layers
    visible.
 
-From |qg| 2.0 there is a second browser available. Additional functions like the |mActionAdd|:sup:`Add Selected Layers` and the |mActionFilter|:sup:`Filter files` function were inserted. 
+From |qg| 2.0 there is a second browser available. Additional functions like 
+the |mActionAdd|:sup:`Add Selected Layers` and the |mActionFilter|:sup:`Filter files` 
+function were inserted. 
 
 #. Activate a second QGIS Browser: Right-click on the toolbar and click |checkbox|:guilabel:`Browser (2)` .
 #. Drag the panel into the legend window.
@@ -68,7 +71,7 @@ It's also possible to run QGIS Browser as a standalone application.
 In figure_browser_standalone_metadata_ you can see the enhanced functionality
 of Qgis browser. The :guilabel:`Param` tab provides the details of your
 connection based datasets like PostGIS or MSSQL Spatial. The :guilabel:`Metadata`
-tab contains general information about the file (see :ref:`vectormetadatatab`).
+tab contains general information about the file (see :ref:`vectormetadatamenu`).
 With the :guilabel:`Preview` tab you can have a look at your files without
 importing them into your QGIS project. It's also possible to preview the 
 attributes of your files in the :guilabel:`Attributes` tab.
