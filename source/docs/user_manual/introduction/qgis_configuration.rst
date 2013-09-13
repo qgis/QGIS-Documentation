@@ -66,7 +66,8 @@ include:
 * In the :guilabel:`General` tab the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
   layers can be defined. You can define the layer units (only used when CRS
-  transformation is disabled) and the precision of decimal places to use.
+  transformation is disabled) and the precision of decimal places to use. You 
+  also can define a project scale list, that overrides the global predefined scales.
 * The :guilabel:`CRS Coordinate Reference System` tab enables you to choose
   the CRS for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
