@@ -251,7 +251,7 @@ Mouse wheel action
 
 Predefined scales
 
-Here you find a list a predefined scales. With the '+' and '-' buttons you can add or
+Here you find a list of predefined scales. With the '+' and '-' buttons you can add or
 remove your individual scales.
 
 
@@ -280,7 +280,7 @@ Snapping
 * |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
 * Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
   'To vertex and segment', 'Off')
-* Define :guilabel:`Default snapping tolerance` in map units or pixel
+* Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
 
 
@@ -299,7 +299,7 @@ Through the various settings, it is possible to influence the shape of the line 
 possible from GEOS 3.3 .
 
 * :guilabel:`Join style for curve offset`
-* :guilabel:`Quadrantsegments for curve offset`
+* :guilabel:`Quadrant segments for curve offset`
 * :guilabel:`Miter limit for curve offset`
 
 
