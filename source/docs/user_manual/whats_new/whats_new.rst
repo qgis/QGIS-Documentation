@@ -54,15 +54,14 @@ The system font used for the application's user interface can now be set. Any C+
 
 The generated QGIS GUI application stylesheet for the current platform can be accessed after launching with (in PyQGIS):
 
+::
+	qgis.utils.iface.mainWindow().styleSheet()
+
 .. only:: html
 
 .. figure:: /static/user_manual/whats_new/app_custom_font.png
    :align: center
    :width: 30em
-
-::
-
-	qgis.utils.iface.mainWindow().styleSheet()
 
 Live color chooser dialogs and buttons
 ......................................
@@ -459,7 +458,7 @@ The new Python console gives you even more power. Now the with auto complete sup
 
 .. figure:: /static/user_manual/whats_new/python_console.png
    :align: center
-   :width: 30em
+   :width: 40em
 
 Even more expression functions
 ..............................
