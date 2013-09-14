@@ -4,17 +4,18 @@
 
 .. index:: Query_Builder
 
-.. _vector_query_builder:
+.. _select_by_expression:
 
-Query Builder
-=============
+Select by expression
+====================
 
-The Query Builder allows you to define a subset of a table using a SQL-like WHERE
-clause and display the result in the main window. The query result then can be
-saved as a new vector layer.
+The |mIconExpressionSelect| :sup:`Select features using an Expression` allows you
+to define a subset of a table using a :guilabel:`Function List` like in the 
+|mActionCalculateField| :sup:`Field Calculator` (see vector_field_calculator_).
+The query result then can be saved as a new vector layer.
 
-Query
------
+Query and selection
+-------------------
 
 Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute Table`
 from the menu bar. Click on the **[Advanced Search]** button to open the :guilabel:`Query builder`.
