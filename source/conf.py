@@ -99,7 +99,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.0.0
+.. |CURRENT| replace:: 2.0
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
