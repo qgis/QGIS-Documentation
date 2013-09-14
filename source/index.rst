@@ -4,9 +4,7 @@
     :maxdepth: 2
     :hidden:
 
-    website/download
     docs/index
-    website/community/index
 
 
 .. frontpage intro text !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
