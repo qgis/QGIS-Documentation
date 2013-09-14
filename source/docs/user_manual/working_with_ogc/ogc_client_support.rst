@@ -133,6 +133,14 @@ accessed in QGIS by simply adding its address in the WMS setup in the URL field 
 the form. An example for an Austrian basemap of this type of address is 
 http://maps.wien.gv.at/basemap/1.0.0/WMTSCapabilities.xml				    
 
+.. note:: You can find some old service call WMS-C. Thoses services are quiet similar 
+   to WMTS service same purpose but working a little bit differently). You can manage 
+   them as the same way you do it for WMTS services. Just add ?tiled=true at the end 
+   of the url. See http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification for more 
+   information about this specification.
+
+   When you read WMTS you can often think WMS-C also.
+
 .. _`ogc-wms-servers`:
 
 Selecting WMS/WMTS Servers
@@ -344,13 +352,15 @@ Basically this option is a frontend to the API of http://geopole.org.
 Tilesets
 --------
 
-.. index:: WMS_tiles, WMS-C
+.. index:: WMS_tiles, WMS-C, WMTS
 
-When using WMS-C (Cached WMS) Services like http://labs.metacarta.com/wms-c/Basic.py
+When using WMTS (Cached WMS) Services like 
+http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
 you are able to browse through the tab :guilabel:`Tilesets` given by the server.
 Additional information like tile size, formats and supported CRS are listed in
 this table. In combination with this feature you can use the tile scale slider
-from the :menuselection:`View --> Tile scale slider`, which gives you the
+from the :menuselection:`Settings --> Panels` (KDE and Windows) or :menuselection:`View --> Panels` 
+(Gnome and MacOSX) then choose `Tile scale`, which gives you the
 available scales from the tileserver with nice slider docked in.
 
 .. _`ogc-wms-identify`:
