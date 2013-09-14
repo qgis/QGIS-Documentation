@@ -470,6 +470,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddWmsLayer| image:: /static/common/mActionAddWmsLayer.png
    :width: 1.5em
+.. |mActionAddOracleLayer| image:: /static/common/mActionAddOracleLayer.png
+   :width: 1.5em
 .. |mActionOpenTable| image:: /static/common/mActionOpenTable.png
    :width: 1.5em
 .. |mActionRemoveLayer| image:: /static/common/mActionRemoveLayer.png

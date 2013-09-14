@@ -604,3 +604,12 @@ MSSQL Spatial Layers
 |mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` is part of the new toolbar
 button or available in the MS SQL node in the QBrowser tree, providing drag and
 drop import support.
+
+
+ORACLE Spatial Layers
+--------------------
+
+|mActionAddOracleLayer| QGIS also provides native ORACLE Spatial support. The
+|mActionAddOracleLayer| :sup:`Add ORACLE Spatial Layer` is part of the new toolbar
+button or available in the ORACLE node in the QBrowser tree, providing drag and
+drop import support. 
