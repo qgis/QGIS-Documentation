@@ -55,6 +55,7 @@ The system font used for the application's user interface can now be set. Any C+
 The generated QGIS GUI application stylesheet for the current platform can be accessed after launching with (in PyQGIS):
 
 ::
+	
 	qgis.utils.iface.mainWindow().styleSheet()
 
 .. only:: html
