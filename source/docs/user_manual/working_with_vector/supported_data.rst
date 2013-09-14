@@ -607,7 +607,7 @@ drop import support.
 
 
 ORACLE Spatial Layers
---------------------
+---------------------
 
 |mActionAddOracleLayer| QGIS also provides native ORACLE Spatial support. The
 |mActionAddOracleLayer| :sup:`Add ORACLE Spatial Layer` is part of the new toolbar

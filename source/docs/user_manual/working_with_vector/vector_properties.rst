@@ -34,7 +34,7 @@ double-click on a layer in the legend or right-click on the layer and select
 .. _vector_style_menu:
 
 Style Menu
----------
+----------
 
 The Style menu provides you with a comprehensive tool for rendering and symbolizing your 
 vector data. You can use :menuselection:`Layer rendering -->` tools that are common to

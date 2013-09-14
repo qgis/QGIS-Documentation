@@ -26,7 +26,7 @@ In this chapter we will see how to use processing algorithms from the QGIS Pytho
 and also how to write your own algorithms using Python.
 
 Calling algorithms from the Python console
-----------------------------------------
+------------------------------------------
 
 The first thing you have to do is to import the processing functions with the
 following line:

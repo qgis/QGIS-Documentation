@@ -87,7 +87,7 @@ When an output raster file name is specified, the **[OK]** button can be used to
 heatmap.
 
 Tutorial: Creating a Heatmap
-------------------
+----------------------------
 
 For the following example we will use the ``airports`` vector point layer from
 the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent QGIS
