@@ -82,51 +82,18 @@ calculate the length of the ``railroads`` layer from the QGIS sample dataset:
 
 The available functions are listed below.
 
+The field calculator **Function list** with the **Selected Function Help** ,
+**Operators** and **Expression** menu are also available through the rule-based
+rendering in the Style tab of the Layer properties and the expression based
+labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application.
+
+
 .. index:: Field_Calculator_Functions
+
+Operators
 
 ::
 
- column name "column name"            value of the field column name
- 'string'                             a string value
- NULL                                 null value
- a IS NULL                            a has no value
- a IS NOT NULL                        a has a value
- a IN (value[,value])                 a is below the values listed
- a NOT IN (value[,value])             a is not below the values listed
- a OR b                               a or *b* is true
- a AND b                              a and *b* is true
- NOT a                                inverted truth value of a
- sqrt(a)                              square root of a
- sin(a)                               sinus of a
- cos(a)                               cosinus of b
- tan(a)             tangens of a
- asin(a)            arcussinus of a
- acos(a)            arcuscosinus of a
- atan(a)            arcustangens of a
- to int(a)            convert string a to integer
- to real(a)             convert string a to real
- to string(a)           convert number a to string
- lower(a)               convert string a to lower case
- upper(a)           convert string a to upper case
- length(a)            length of string a
- atan2(y,x)             arcustangens of y/x using the signs of the two
-                                      arguments to determine the quadrant of the result
- replace(*a*, replacethis, withthat)  replace this with that in string a
- regexp_replace(a,this,that)          replace the regular expression this with that
- substr(*a*,from,len)                 len characters of string *a* starting from from
-                                      (first character index is 1)
- a || b                               concatenate strings a and b
- $rownum                number current row
- $area              area of polygon
- $perimeter           perimeter of polygon
- $length              length of line
- $id                feature id
- $x               x coordinate of point
- $y               y coordinate of point
- xat(n)                               X coordinate of the point of an n-th line (indeces
-                                      start at 0; negative values refer to the line end)
- yat(n)                               y coordinate of the point of an n-th line (indeces
-                                      start at 0; negative values refer to the line end)
  a = b                                a and b are equal
  a != b                               a and b are not equal
  a <> b
@@ -146,7 +113,193 @@ The available functions are listed below.
  - a                      negative value of a
 
 
-The field calculator **Function list** with the **Selected Function Help** ,
-**Operators** and **Expression** menu are also available through the rule-based
-rendering in the Style tab of the Layer properties and the expression based
-labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application.
+ column name "column name"     value of the field column name
+ 'string'                      a string value
+ NULL                          null value
+ a IS NULL                     a has no value
+ a IS NOT NULL                 a has a value
+ a IN (value[,value])          a is below the values listed
+ a NOT IN (value[,value])      a is not below the values listed
+ a OR b                        a or *b* is true
+ a AND b                       a and *b* is true
+ NOT a                         inverted truth value of a
+
+Conditionals
+
+::
+ CASE                          evaluates multiple expressions and return a result
+ CASE ELSE                     evaluates multiple expressions and return a result
+ coalesce                      returns the first non-NULL value from the expression list
+ regexp_match                  returns true if any part of a string matches the supplied regular expression
+
+Mathematical Functions
+
+::
+
+ sqrt(a)                       square root of a
+ abs                           returns the absolute value of a number.
+ sin(a)                        sinus of a
+ cos(a)                        cosinus of a
+ tan(a)                        tangens of a
+ asin(a)                       arcussinus of a
+ acos(a)                       arcuscosinus of a
+ atan(a)                       arcustangens of a
+ atan2(y,x)                    arcustangens of y/x using the signs of the two arguments 
+                               to determine the quadrant of the result
+ exp                           exponential of an value
+ ln                            value of the natural logarithm of the passed expression
+ log10                         value of the base 10 logarithm of the passed expression
+ log                           value of the logarithm of the passed value and base
+ round                         number to number of decimal places
+ rand                          random integer within the range specified by the minimum 
+                               and maximum argument (inclusive)
+ randf                         random float within the range specified by the minimum 
+                               and maximum argument (inclusive)
+ max                           largest value in a set of values
+ min                           smallest value in a set of values
+ clamp                         restricts an input value to a specified range
+ scale_linear                  transforms a given value from an input domain to an output 
+                               range using linear interpolation
+ scale_exp                     transforms a given value from an input domain to an output 
+                               range using an exponential curve
+ floor                         rounds a number downwards
+ ceil                          rounds a number upwards
+ $pi                           pi as value for calculations
+
+Conversions
+
+::
+
+ toint                        converts a string to integer number
+ toreal                       converts a string to real number
+ tostring                     convert number to string
+ todatetime                   convert a string into Qt data time type
+ todate                       convert a string into Qt data type 
+ totime                       convert a string into Qt time type
+ tointerval                   converts a string to a interval type. Can be used to take days, 
+                              hours, month, etc off a date
+
+Date and Time Functions
+
+::
+
+ $now                         current date and time
+ age                          difference between two dates
+ year                         extract the year part from a date, or the number of years from a Interval 
+ month                        extract the month part from a date, or the number of months from a Interval 
+ week                         extract the week number from a date, or the number of weeks from a Interval 
+ day                          extract the day from a date, or the number of days from a Interval
+ hour                         extract the hour from a datetime or time, or the number of hours from a Interval
+ minute                       extract the minute from a datetime or time, or the number of minutes from a Interval
+ second                       extract the second from a datetime or time, or the number of minutes from a Interval
+
+
+String Functions
+
+::
+
+ lower                        convert string a to lower case
+ upper                        convert string a to upper case
+ title                        converts all words of a string to title case (all words lower case 
+                              with leading capital letter)
+ trim                         removes all leading and trailing whitespace (spaces, tabs, etc) from a string
+ length                       length of string a
+ replace                      returns a string with the the supplied string replaced
+ regexp_replace(a,this,that)  returns a string with the supplied regular expression replaced
+ regexp_substr                returns the portion of a string which matches a supplied regular expression
+ substr(*a*,from,len)         returns a part of a string
+ concat                       concatenates several strings to one
+ strpos                       returns the index of a regular expression in a string
+ left                         returns a substring that contains the n leftmost characters of the string
+ right                        returns a substring that contains the n rightmost characters of the string
+ rpad                         returns a string with supplied width padded using the fill character
+ lpad                         returns a string with supplied width padded using the fill character
+ format                       formats a string using supplied arguments
+ format_number                returns a number formatted with the locale separator for thousands. 
+                              Also truncates the number to the number of supplied places
+ format_date                  formats a date type or string into a custom string format
+
+Color Functions
+
+::
+
+ color_rgb                    returns a string representation of a color based on its red, green, and blue components                        
+ color_rgba                   returns a string representation of a color based on its red, green, blue, and alpha (transparency) components
+ ramp_color                   returns a string representing a color from a color ramp
+ color_hsl                    returns a string representation of a color based on its hue, saturation, and lightness attributes 
+ color_hsla                   returns a string representation of a color based on its hue, saturation, 
+                              lightness and alpha (transparency) attributes
+ color_hsv                    returns a string representation of a color based on its hue, saturation, and value attributes
+ color_hsva                   returns a string representation of a color based on its hue, saturation, 
+                              value and alpha (transparency) attributes 
+ color_cmyk                   returns a string representation of a color based on its cyan, magenta, 
+                              yellow and black components
+ color_cmyka                  returns a string representation of a color based on its cyan, magenta,
+                              yellow, black and alpha (transparency) components 
+  
+Geometry Functions
+
+::
+ 
+ xat                          retrieves a x coordinate of the current feature                 
+ yat                          retrieves a y coordinate of the current feature
+ $area                        returns the area size of the current feature
+ $length                      returns the area size of the current feature
+ $perimeter                   returns the perimeter length of the current feature
+ $x                           returns the x coordinate of the current feature
+ $y                           returns the y coordinate of the current feature
+ $geometry                    
+ geomFromWKT
+ geomFromGML
+ bbox
+ disjoint
+ intersects
+ touches
+ crosses
+ contains
+ overlaps
+ within
+ buffer
+ centroid
+ convexHull
+ difference
+ distance
+ intersection
+ symDifference
+ combine
+ union
+ geomToWKT
+
+                            
+
+Record Functions
+
+::
+
+ $rownum                      returns the number of the current row
+ $id                          returns the feature id of the current row
+ $scale                       returns the current scale of the map canvas
+
+
+Fields and Values
+
+::
+
+ access the fields of your features
+
+
+ a || b                               concatenate strings a and b
+ $rownum                number current row
+ $area              area of polygon
+ $perimeter           perimeter of polygon
+ $length              length of line
+ $id                feature id
+ $x               x coordinate of point
+ $y               y coordinate of point
+ xat(n)                               X coordinate of the point of an n-th line (indeces
+                                      start at 0; negative values refer to the line end)
+ yat(n)                               y coordinate of the point of an n-th line (indeces
+                                      start at 0; negative values refer to the line end)
+ 
+
+
