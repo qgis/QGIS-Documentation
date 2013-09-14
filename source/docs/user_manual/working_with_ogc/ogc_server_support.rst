@@ -219,13 +219,20 @@ OCG WMS 1.3.0 specification:
   the server executable is located.
 
   Example::
+
     http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
+
 * **DPI** parameter: The ``DPI`` parameter can be used to specify the requested 
   output resolution. 
+
   Example::
+
     http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&DPI=300&...
+
 * **OPACITIES** parameter: Opacity can be set on layer or group level. 
   Allowed values range from 0 (fully transparent) to 255 (fully opaque). 
+
   Example::
+
     http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...
 
