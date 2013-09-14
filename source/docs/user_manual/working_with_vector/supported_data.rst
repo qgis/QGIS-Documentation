@@ -352,6 +352,10 @@ If this occurs, the solution is to alter the view so that it does include
 a suitable column (a type of int4 and either a primary key or with a
 unique constraint, preferably indexed).
 
+QGIS offers a checkbox **Select at id** that is activated by default. This option
+gets the ids without the attributes is faster in most cases. It can make sense
+to disable this option when you use views.
+
 .. %FIXME: Add missing information
 .. % When dealing with views, |qg| parses the view definition and
 
