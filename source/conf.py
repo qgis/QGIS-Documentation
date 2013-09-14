@@ -388,24 +388,6 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionNodeTool| image:: /static/common/mActionNodeTool.png
    :width: 1.5em
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .. |mActionSelectedToTop| image:: /static/common/mActionSelectedToTop.png
    :width: 1.5em
 .. |mActionInvertSelection| image:: /static/common/mActionInvertSelection.png
@@ -546,6 +528,8 @@ rst_epilog = """
 .. |mActionmIconExpressionEditorOpen| image:: /static/common/mIconExpressionEditorOpen.png
    :width: 1.5 em
 .. |mIconNew| image:: /static/common/mIconNew.png
+   :width: 1.5em
+.. |mIconExpressionSelect| image:: /static/common/mIconExpressionSelect.png
    :width: 1.5em
 .. |mActionFilter| image:: /static/common/mActionFilter.png
    :width: 1.5em

@@ -782,8 +782,8 @@ be displayed as shown in Figure_edit_6_.
 First step is to select an existing SpatiaLite database or to create a new
 SpatiaLite database. This can be done with the browse button |browsebutton| to
 the right of the database field. Then add a name for the new layer and define
-the layer type and the EPSG SRID. If desired you can select to |checkbox|
-:guilabel:`Create an autoincrementing primary key`.
+the layer type and specify the Coordinate Reference System with **[Specify CRS]**.
+If desired you can select to |checkbox| :guilabel:`Create an autoincrementing primary key`.
 
 To define an attribute table for the new SpatiaLite layer, add the names of
 the attribute columns you want to create with the according column type and
@@ -811,7 +811,9 @@ To open the attribute table for a vector layer, make the layer active by
 clicking on it in the map legend area. Then from the main menu
 :menuselection:`Layer` choose |mActionOpenTable| :menuselection:`Open Attribute
 Table`. It is also possible to rightclick on the layer and choose
-|mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown menu.
+|mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown menu
+and to click on the |mActionOpenTable| :guilabel:`Open Attribute Table` button 
+in the Attributes toolbar. 
 
 This will open a new window which displays the feature attributes in the
 layer (figure_attributes_1_). The number of features and the number of
@@ -854,9 +856,16 @@ small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
 
-For a **simple search by attributes** on only one column the :guilabel:`Look for`
-field can be used. Select the field (column) from which the search should be
-performed from the dropdown menu and hit the **[Search]** button. The
+For a **simple search by attributes** on only one column choose the 
+:menuselection:`Column filter -->` from the menu in the bottom left corner.
+Select the field (column) from which the search should be
+performed from the dropdown menu and hit the **[Apply]** button. Then only
+the matching features are shown in the Attribute table.
+
+To make a selection you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression` 
+icon on top of the Attribute table (see :ref:`select_by_expression`).
+ 
+ The
 matching rows will be selected and the total number of matching rows will
 appear in the title bar of the attribute table, and in the status bar of
 the main window. For more complex searches use the Advanced search button
