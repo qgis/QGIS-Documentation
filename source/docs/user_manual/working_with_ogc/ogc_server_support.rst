@@ -140,10 +140,14 @@ This opens the :guilabel:`Select restricted layers and groups` dialog which
 allows you to choose the layers and groups that you don't want to be published.
 Use the shift or control key if you want to select multiple entries at once.
 
+.. FIXME QGIS 2.1: From |qg| 2.1 you can requested GetFeatureInfo in different outputformat: plain text, XML and GML.
+.. FIXME QGIS 2.1: guilabel has been changed to `Add geometry to feature response`
+.. FIXME QGIS 2.1: text or GML format depending the outpurformat choosen for the GetFeatureInfo request.
+
 If you wish you can check |checkbox| :guilabel:`Add WKT geometry to feature 
 info response`.
 This will include in the GetFeatureInfo response the geometries of the features 
-in a text format.
+in a text format. 
 If you want QGIS Server to advertise specific request URLs in the WMS 
 GetCapabilities response, enter the corresponding URL in the 
 :guilabel:`Advertised URL` field.
@@ -201,12 +205,19 @@ In the WMS GetMap request QGIS Server accepts a couple of extra
 parameters in addition to the standard parameters according to the 
 OCG WMS 1.3.0 specification:
 
+.. FIXME QGIS 2.1: You can define a QGIS_PROJECT_FILE as an environment variable to tell 
+    server executable where to find the |qg| project file. This variable will 
+	be the location where |qg| will look for the project file. If not defined 
+	it will use the MAP parameter in the request and finally look at the server 
+	executable directory.
+
 * **MAP** parameter: Similar to MapServer, the ``MAP`` parameter can be used to 
   specify the path to the QGIS project file. You can specify an absolute path 
   or a path relative to the location of the server executable 
-  (:file:`qgis_mapserv.fcgi`). 
+  (:file:`qgis_mapserv.fcgi`).
   If not specified, QGIS Server searches for .qgs files in the directory where 
-  the server executable is located. 
+  the server executable is located.
+
   Example::
     http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
 * **DPI** parameter: The ``DPI`` parameter can be used to specify the requested 
