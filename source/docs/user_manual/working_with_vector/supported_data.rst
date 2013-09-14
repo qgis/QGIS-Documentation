@@ -312,7 +312,7 @@ To load a layer from PostGIS, perform the following steps:
 
 .. tip:: **PostGIS Layers**
 
-   Normally a PostGIS layer is defined by an entry in the geometry_columns
+   Normally a PostGIS layer is defined by an entry in the geometry_columns 
    table. From version 0.9.0 on, |qg| can load layers that do not have an
    entry in the geometry_columns table. This includes both tables and views.
    Defining a spatial view provides a powerful means to visualize your data.

@@ -212,6 +212,7 @@ The usage statement for QGIS is:
                 [--nocustomization]             don't apply GUI customization
                 [--optionspath path]            use the given QSettings path
                 [--configpath path]             use the given path for all user configuration
+                [--code path]   				run the given python file on load
                 [--help]                        this text
 
           FILES:
