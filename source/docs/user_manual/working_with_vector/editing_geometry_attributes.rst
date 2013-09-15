@@ -883,25 +883,24 @@ appear in the title bar of the attribute table, and in the status bar of
 the main window. For searches that display only selected features on the map
 use the Query Builder described in Section :ref:`vector_query_builder`.
 
-To show selected records only, use the checkbox |checkbox|
-:guilabel:`Show selected only`.
-To search selected records only, use the checkbox |checkbox|
-:guilabel:`Search selected only`. The |checkbox| :guilabel:`Case sensitive`
-checkbox allows to select case sensitive.
-The other buttons at the bottom left of the attribute table window provide
+To show selected records only, use :guilabel:`Show Selected Features` from the menu
+at the bottom left.
+
+The other buttons at the top of the attribute table window provide
 following functionality:
 
-* |mActionOpenTable| :sup:`Unselect all` also with :kbd:`Ctrl+U`
+* |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
+  and to enable functionalities described below also with
+  :kbd:`Ctrl+E`v
+* |mActionSaveEdits| :sup:`Save Edits` also with :kbd:`Ctrl+S`
+* |mActionUnselectAttributes| :sup:`Unselect all` also with :kbd:`Ctrl+U`
 * |mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`
-* |mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+S`
+* |mActionInvertSelection| :sup:`Invert selection` also with :kbd:`Ctrl+R`
 * |mActionCopySelected| :sup:`Copy selected rows to clipboard` also with
   :kbd:`Ctrl+C`
 * |mActionZoomToSelected| :sup:`Zoom map to the selected rows` also with
   :kbd:`Ctrl+J`
 * |PanToSelected| :sup:`Pan map to the selected rows` also with :kbd:`Ctrl+P`
-* |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
-  and to enable functionalities described below also with
-  :kbd:`Ctrl+E`
 * |mActionDeleteSelected| :sup:`Delete selected features` also with
   :kbd:`Ctrl+D`
 * |mActionNewAttribute| :sup:`New Column` for PostGIS layers and for OGR
@@ -915,7 +914,7 @@ following functionality:
    If you want to use attribute data in external programs (such as Excel) use the
    |mActionCopySelected| :sup:`Copy selected rows to clipboard` button.
    You can copy the information without vector geometries if you deactivate
-   :menuselection:`Settings --> Options -->` General tab |checkbox|
+   :menuselection:`Settings --> Options -->` Data sources menu |checkbox|
    :guilabel:`Copy geometry in WKT representation from attribute table`.
 
 Save selected features as new layer
