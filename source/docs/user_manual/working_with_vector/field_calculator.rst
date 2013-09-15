@@ -104,7 +104,7 @@ This group contains operators e.g + - *
 
  a / b              a divided by b
  a % b              a modulo b f.e 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
- a ^ b              a power b f.e. 2^2=4 or 2^3=8
+ a ^ b              a power b for example 2^2=4 or 2^3=8
  a = b              a and b are equal
  a > b              a is larger than b
  a < b              a is smaller than b
@@ -113,7 +113,6 @@ This group contains operators e.g + - *
  a <= b             a is less than or equal to b
  a >= b             a is larger than or equal to b
  a ~ b              a matches the regular expression b
- a |wedge| b        a raised to the power of b
  + a                positive sign
  - a                negative value of a
  ||                 joins two values together into a string 'Hello' || ' world'

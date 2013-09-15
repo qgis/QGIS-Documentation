@@ -103,7 +103,6 @@ rst_epilog = """
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
-.. |wedge| unicode:: 0x005e
 .. |checkbox| image:: /static/common/checkbox.png
 .. |checkbox_checked| image:: /static/common/checkbox.png
 .. |checkbox_unchecked| image:: /static/common/checkbox_unchecked.png
