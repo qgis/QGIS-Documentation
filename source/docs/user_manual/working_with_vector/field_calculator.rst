@@ -90,29 +90,40 @@ labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core applicatio
 
 .. index:: Field_Calculator_Functions
 
-Operators
+
+
+**Operators**
+
+This group contains operators e.g + - * 
 
 ::
 
- a = b                                a and b are equal
- a != b                               a and b are not equal
- a <> b
- a >= b                               a is larger than or equal to b
- a <= b                               a is less than or equal to b
- a > b                                a is larger than b
- a < b                                a is smaller than b
- a ~ b                                a matches the regular expression b
- a LIKE b                             a equals b
- a ILIKE b                            a equals b (without regard to case-sensitive)
- a |wedge| b                    a raised to the power of b
- a * b                          a multiplied by b
- a / b              a divided by b
  a + b              a plus b
  a - b              a minus b
+ a * b                          a multiplied by b
+
+ a / b              a divided by b
+ a % b              a modulo b f.e 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
+ a ^ b              a power b f.e. 2^2=4 or 2^3=8
+ a = b              a and b are equal
+ a > b              a is larger than b
+ a < b              a is smaller than b
+ a <> b             a and b are not equal
+ a != b             a and b are not equal
+ a <= b             a is less than or equal to b
+ a >= b             a is larger than or equal to b
+ a ~ b              a matches the regular expression b
+ a |wedge| b        a raised to the power of b
  + a                positive sign
- - a                      negative value of a
-
-
+ - a                negative value of a
+ ||                 joins two values together into a string 'Hello' || ' world'
+ LIKE               returns 1 if the string matches the supplied pattern
+ ILIKE              returns 1 if the string matches case-insensitive the supplied 
+                    pattern. ILIKE can be used instead of LIKE to make the match case-insensitive
+ IS                 returns 1 if a is the same as b
+ OR                 returns 1 when condition a or b is true
+ AND                returns 1 when condition a and b are true
+ NOT                returns 1 if a is not the same as b
  column name "column name"     value of the field column name
  'string'                      a string value
  NULL                          null value
@@ -120,19 +131,26 @@ Operators
  a IS NOT NULL                 a has a value
  a IN (value[,value])          a is below the values listed
  a NOT IN (value[,value])      a is not below the values listed
- a OR b                        a or *b* is true
- a AND b                       a and *b* is true
- NOT a                         inverted truth value of a
 
-Conditionals
+
+
+**Conditionals**
+
+This group contains functions to handle conditional checks in expressions. 
 
 ::
+
  CASE                          evaluates multiple expressions and return a result
  CASE ELSE                     evaluates multiple expressions and return a result
  coalesce                      returns the first non-NULL value from the expression list
- regexp_match                  returns true if any part of a string matches the supplied regular expression
+ regexp_match                  returns true if any part of a string matches
+                               the supplied regular expression
 
-Mathematical Functions
+
+
+**Mathematical Functions**
+
+This group contains math functions e.g square root, sin and cos 
 
 ::
 
@@ -166,7 +184,11 @@ Mathematical Functions
  ceil                          rounds a number upwards
  $pi                           pi as value for calculations
 
-Conversions
+
+
+**Conversions**
+
+This group contains functions to convert on data type to another e.g string to integer, integer to string.
 
 ::
 
@@ -179,7 +201,11 @@ Conversions
  tointerval                   converts a string to a interval type. Can be used to take days, 
                               hours, month, etc off a date
 
-Date and Time Functions
+
+
+**Date and Time Functions**
+
+This group contains functions for handling date and time data. 
 
 ::
 
@@ -189,12 +215,18 @@ Date and Time Functions
  month                        extract the month part from a date, or the number of months from a Interval 
  week                         extract the week number from a date, or the number of weeks from a Interval 
  day                          extract the day from a date, or the number of days from a Interval
- hour                         extract the hour from a datetime or time, or the number of hours from a Interval
- minute                       extract the minute from a datetime or time, or the number of minutes from a Interval
- second                       extract the second from a datetime or time, or the number of minutes from a Interval
+ hour                         extract the hour from a datetime or time, or the number
+                              of hours from a Interval
+ minute                       extract the minute from a datetime or time, or the number 
+                              of minutes from a Interval
+ second                       extract the second from a datetime or time, or the number
+                              of minutes from a Interval
 
 
-String Functions
+
+**String Functions**
+
+This group contains functions that operate on strings e.g replace, convert to upper case. 
 
 ::
 
@@ -219,25 +251,36 @@ String Functions
                               Also truncates the number to the number of supplied places
  format_date                  formats a date type or string into a custom string format
 
-Color Functions
+
+
+**Color Functions**
+
+This group contains functions for manipulating colors. 
 
 ::
 
- color_rgb                    returns a string representation of a color based on its red, green, and blue components                        
- color_rgba                   returns a string representation of a color based on its red, green, blue, and alpha (transparency) components
+ color_rgb                    returns a string representation of a color based on its red, green, 
+                              and blue components                        
+ color_rgba                   returns a string representation of a color based on its red, green, 
+                              blue, and alpha (transparency) components
  ramp_color                   returns a string representing a color from a color ramp
- color_hsl                    returns a string representation of a color based on its hue, saturation, and lightness attributes 
+ color_hsl                    returns a string representation of a color based on its hue, 
+                              saturation, and lightness attributes 
  color_hsla                   returns a string representation of a color based on its hue, saturation, 
                               lightness and alpha (transparency) attributes
- color_hsv                    returns a string representation of a color based on its hue, saturation, and value attributes
+ color_hsv                    returns a string representation of a color based on its hue,
+                              saturation, and value attributes
  color_hsva                   returns a string representation of a color based on its hue, saturation, 
                               value and alpha (transparency) attributes 
  color_cmyk                   returns a string representation of a color based on its cyan, magenta, 
                               yellow and black components
  color_cmyka                  returns a string representation of a color based on its cyan, magenta,
                               yellow, black and alpha (transparency) components 
+
   
-Geometry Functions
+**Geometry Functions**
+
+This group contains functions that operate on geometry objects e.g length, area. 
 
 ::
  
@@ -248,31 +291,46 @@ Geometry Functions
  $perimeter                   returns the perimeter length of the current feature
  $x                           returns the x coordinate of the current feature
  $y                           returns the y coordinate of the current feature
- $geometry                    
- geomFromWKT
- geomFromGML
+ $geometry                    returns the geometry of the current feature. Can be used 
+                              for processing with other functions.
+ geomFromWKT                  returns a geometry created from a Well-Known Text (WKT) representation.   
+ geomFromGML                  returns a geometry from a GML representation of geometry
  bbox
- disjoint
- intersects
- touches
- crosses
- contains
- overlaps
- within
- buffer
- centroid
- convexHull
- difference
- distance
- intersection
- symDifference
- combine
- union
- geomToWKT
+ disjoint                     returns 1 if the Geometries do not share any space together 
+ intersects                   returns 1 if the geometries spatially intersect 
+                              (share any portion of space) and 0 if they don't
+ touches                      returns 1 if the geometries have at least one point in common, 
+                              but their interiors do not intersect
+ crosses                      returns 1 if the supplied geometries have some, but not all,
+                              interior points in common.
+ contains                     returns true if and only if no points of b lie in the exterior of a, 
+                              and at least one point of the interior of b lies in the interior of a 
+ overlaps                     returns 1 if the Geometries share space, are of the same dimension, 
+                              but are not completely contained by each other.
+ within                       returns 1 if the geometry a is completely inside geometry b
+ buffer                       returns a geometry that represents all points whose distance 
+                              from this geometry is less than or equal to distance
+ centroid                     returns the geometric center of a geometry
+ convexHull                   returns the convex hull of a geometry. It represents the 
+                              minimum convex geometry that encloses all geometries within the set
+ difference                   returns a geometry that represents that part of geometry a that
+                              does not intersect with geometry a
+ distance                     returns the minimum distance (based on spatial ref) between 
+                              two geometries in projected units
+ intersection                 returns a geometry that represents the shared portion 
+                              of geometry a and geometry b
+ symDifference                returns a geometry that represents the portions of a and b 
+                              that do not intersect
+ combine                      returns the combination of geometry a and geometry b
+ union                        returns a geometry that represents the point set union of the geometries
+ geomToWKT                    returns the Well-Known Text (WKT) representation of the 
+                              geometry without SRID metadata
 
                             
 
-Record Functions
+**Record Functions**
+
+This group contains functions that operate on record identifiers. 
 
 ::
 
@@ -281,25 +339,10 @@ Record Functions
  $scale                       returns the current scale of the map canvas
 
 
-Fields and Values
+**Fields and Values**
 
-::
+Contains a list of fields from the layer. Sample values can also be accessed via right-click. 
 
- access the fields of your features
-
-
- a || b                               concatenate strings a and b
- $rownum                number current row
- $area              area of polygon
- $perimeter           perimeter of polygon
- $length              length of line
- $id                feature id
- $x               x coordinate of point
- $y               y coordinate of point
- xat(n)                               X coordinate of the point of an n-th line (indeces
-                                      start at 0; negative values refer to the line end)
- yat(n)                               y coordinate of the point of an n-th line (indeces
-                                      start at 0; negative values refer to the line end)
- 
+Select the field name from the list then right-click to access context menu with options to load sample values from the selected field. 
 
 
