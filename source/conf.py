@@ -561,6 +561,16 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
+.. |mActionIdentifyExpand| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
+.. |mActionIdentifyCollapse| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
+.. |mActionIdentifyDefaultExpand| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
+.. |mActionIdentifyCopyAttributes| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
+.. |mActionIdentifyPrint| image:: /static/common/mActionUngroupItems.png
+   :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |copyright_label| image:: /static/common/copyright_label.png
