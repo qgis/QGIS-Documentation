@@ -100,10 +100,9 @@ This group contains operators e.g + - *
 
  a + b              a plus b
  a - b              a minus b
- a * b                          a multiplied by b
-
+ a * b              a multiplied by b
  a / b              a divided by b
- a % b              a modulo b f.e 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
+ a % b              a modulo b for example 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
  a ^ b              a power b for example 2^2=4 or 2^3=8
  a = b              a and b are equal
  a > b              a is larger than b
