@@ -11,15 +11,14 @@ from the context menu:
 
 This will open the :guilabel:`Raster Layer Properties` dialog, (see figure_raster_1_).
 
-There are several tabs on the dialog:
+There are several menus in the dialog:
 
+* :guilabel:`General`
 * :guilabel:`Style`
 * :guilabel:`Transparency`
-* :guilabel:`Colormap`
-* :guilabel:`General`
-* :guilabel:`Metadata`
 * :guilabel:`Pyramids`
 * :guilabel:`Histogram`
+* :guilabel:`Metadata`
 
 
 .. _figure_raster_1:
@@ -38,8 +37,8 @@ There are several tabs on the dialog:
 
 .. _label_symbology:
 
-Style Tab
----------
+Style Menu
+----------
 
 QGIS can render raster layers in two different ways:
 
