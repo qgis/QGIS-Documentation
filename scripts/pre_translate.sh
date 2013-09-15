@@ -20,7 +20,7 @@ rm -rf ${BUILDDIR}
 mkdir -p ${BUILDDIR}
 
 # copy english resources to static to be able to do a proper sphinx-build
-cp -r resources/en/* source/static/
+cp -r resources/en/docs/* source/static/
 
 ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -b gettext source i18n/pot/
 
@@ -34,7 +34,7 @@ do
   # cleanup images from static (different locales can have different localized images)
   rm -rf source/static/*
   # Clone the en resources and then overwrite with any localised versions of the same files.
-  cp -r resources/en/* source/static/
+  cp -r resources/en/docs/* source/static/
   PODIR=resources/${LOCALE}
   if [ -d $PODIR ];
   then

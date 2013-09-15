@@ -56,9 +56,9 @@ do
   rm -rf source/static
   mkdir -p source/static
   # copy english (base) resources to the static dir
-  cp -r resources/en/* source/static
+  cp -r resources/en/docs/* source/static
   # now overwrite possible available (localised) resources over the english ones
-  cp -r resources/${LOCALE}/* source/static
+  cp -r resources/${LOCALE}/docs/* source/static
 
   echo "Building HTML for locale '${LOCALE}'..."
   ${SPHINXBUILD} -d ${BUILDDIR}/doctrees -D language=${LOCALE} -b html source ${HTMLDIR}/${LOCALE}
