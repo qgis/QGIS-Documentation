@@ -863,14 +863,25 @@ performed from the dropdown menu and hit the **[Apply]** button. Then only
 the matching features are shown in the Attribute table.
 
 To make a selection you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression` 
-icon on top of the Attribute table (see :ref:`select_by_expression`).
+icon on top of the Attribute table.
+The |mIconExpressionSelect| :sup:`Select features using an Expression` allows you
+to define a subset of a table using a :guilabel:`Function List` like in the 
+|mActionCalculateField| :sup:`Field Calculator` (see vector_field_calculator_).
+The query result then can be saved as a new vector layer.
+For example if you want to find regions that are boroughs from the regions.shp 
+of the QGIS sample data you have to open the :guilabel:`>Fields and Values` menu
+and choose the field that you want to query. Double-klick the field 'TYPE_2' and also
+**[Load all unique values]** . From list choose and double-klick 'Borough'.
+In the :guilabel:`Expression` field the following query appears:
+
+::
  
- The
-matching rows will be selected and the total number of matching rows will
+ "TYPE_2"  =  'Borough' 
+ 
+The matching rows will be selected and the total number of matching rows will
 appear in the title bar of the attribute table, and in the status bar of
-the main window. For more complex searches use the Advanced search button
-|browsebutton|, which will launch the Search Query Builder described in
-Section :ref:`vector_query_builder`.
+the main window. For searches that display only selected features on the map
+use the Query Builder described in Section :ref:`vector_query_builder`.
 
 To show selected records only, use the checkbox |checkbox|
 :guilabel:`Show selected only`.
