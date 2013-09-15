@@ -16,8 +16,8 @@ saved as a new vector layer.
 Query
 -----
 
-Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute Table`
-from the menu bar. Click on the **[Advanced Search]** button to open the :guilabel:`Query builder`.
+Open the attribute table by opening the Layer Properties and go to the :guilabel:`General` menu.
+Under :guilabel:`Feature subset` click on the **[Query Builder]** button to open the :guilabel:`Query builder`.
 For example, if you have a ``towns`` layer with a ``population`` field you could
 select only larger towns by entering ``population > 100000`` in the SQL box of
 the Query builder. Figure_attributes_2_ shows an example of the Query builder
@@ -57,22 +57,9 @@ operators (``AND``, ``OR``, ...) are available.
 The **[Test]** button shows a message box with the number of features
 satisfying the current query, which is usable in the process of query
 construction. The **[Clear]** button clears the text in the SQL where
-clause text field. The **[Save]** and **[Load]** button allow to save
-and load SQL queries. The **[OK]** button closes the window and selects
+clause text field. The **[OK]** button closes the window and selects
 the features satisfying the query. The **[Cancel]** button closes the
 window without changing the current selection.
-
-
-.. _tip_sql_layer_definition:
-
-.. tip:: **Changing the Layer Definition**
-
-   You can change the layer definition after it is loaded by altering the
-   SQL query used to define the layer. To do this, open the vector
-   :guilabel:`Layer Properties` dialog by double-clicking on the layer in
-   the legend and click on the **[Query Builder]** button on the
-   :guilabel:`General` tab. See Section :ref:`vector_properties_dialog` for
-   more information.
 
 .. index:: Select_using_Query
 
@@ -82,17 +69,11 @@ Selection
 ---------
 
 With |qg| it is possible also to select features for visualisation using a similar
-query builder interface to that used in :ref:`vector_query_builder`. In the above
-section the purpose of the query builder is to highlight all selected features
-meeting the filter criteria in yellow. The rest of the features do not change
-their appearance.
-
-Another possibility is to make a selection by right clicking on a layer in the
-legend and choosing :guilabel:`Query ...`. If you perform a SQL query here only
+query builder interface to that used in :ref:`vector_query_builder`. 
+You can make a selection by right clicking on a layer in the
+legend and choosing :guilabel:`Query ...`. If you perform a SQL query here also only
 the selected features are displayed in the map view. Features that don't match
-the SQL query are not visualised in the map view. The same function is available
-from the :guilabel:`General` tab in the vector :guilabel:`Layer Properties` dialog.
-You can find a **[Query builder]** button right below. The selection described
+the SQL query are not visualised in the map view. The selection described
 above can be used with all vector data providers.
 
 Save selected features as new layer

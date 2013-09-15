@@ -890,8 +890,7 @@ The other buttons at the top of the attribute table window provide
 following functionality:
 
 * |mActionToggleEditing| :sup:`Toggle editing mode` to edit single values
-  and to enable functionalities described below also with
-  :kbd:`Ctrl+E`v
+  and to enable functionalities described below also with :kbd:`Ctrl+E`
 * |mActionSaveEdits| :sup:`Save Edits` also with :kbd:`Ctrl+S`
 * |mActionUnselectAttributes| :sup:`Unselect all` also with :kbd:`Ctrl+U`
 * |mActionSelectedToTop| :sup:`Move selected to top` also with :kbd:`Ctrl+T`
