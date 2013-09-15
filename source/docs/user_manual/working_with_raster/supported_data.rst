@@ -80,8 +80,10 @@ open a dialog to set raster properties for the layer.
 * :menuselection:`Zoom to Best Scale (100\%)`
 * :menuselection:`Show in Overview`
 * :menuselection:`Remove`
+* :menuselection:`Duplicate`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
+* :menuselection:`Save as ...`
 * :menuselection:`Properties`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
