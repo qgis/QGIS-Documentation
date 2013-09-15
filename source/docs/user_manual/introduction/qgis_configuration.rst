@@ -114,16 +114,20 @@ Project files
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 
 .. FIXME: more information necessary
+
 * :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
 
 System Tab
 ----------
+
 .. FIXME:more information necessary
 
 Environment
 
-* |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. You can :guilabel:`Add` and :guilabel:`Remove` variables.
-:menuselection:`Current environment variables -->` are displayed below and it's possible to |checkbox| :guilabel:`Show only QGIS-specific variables`.
+* |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. 
+  You can :guilabel:`Add` and :guilabel:`Remove` variables.
+  :menuselection:`Current environment variables -->` are displayed below and it's possible 
+  to |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 Plugin paths
 
@@ -137,10 +141,13 @@ Feature attributes and table
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
 
 .. FIXME:more information necessary
+
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
 * :guilabel:`Attribute table behaviour` |selectstring|. There are three possibilities: 'Show all features',
   'Show selected features' and 'Show features visible on map'
+
 .. FIXME: more information necessary
+
 * :guilabel:`Attribute table row cache` |selectstring|
 * :guilabel:`Representation for NULL values` 
 
@@ -157,6 +164,7 @@ Data source handling
   * ‘Load all’: never prompt, but load all sublayers
 
 .. FIXME: more information necessary
+
 * |checkbox| :guilabel:`Ignore shapefile encoding declaration`
 * |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode`
@@ -181,6 +189,7 @@ Contrast enhancement
 * :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
 
 .. FIXME: more information necessary
+
 * :guilabel:`Multi band color (>byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
 * :guilabel:`Limits (minimum/maximum)` |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
 * :guilabel:`Cumulative pixel count cut limits`

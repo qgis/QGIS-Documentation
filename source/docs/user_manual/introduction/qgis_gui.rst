@@ -177,8 +177,8 @@ Menu Option                                                     Shortcut        
 |oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
 |icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
 |wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Manage Layers`
-|mActionEditCopy| :guilabel:`Copy style`                        \                     see :ref:`vector_style_tab`                 \
-|mActionEditPaste| :guilabel:`Paste style`                      \                     see :ref:`vector_style_tab`                 \
+|mActionEditCopy| :guilabel:`Copy style`                        \                     see :ref:`vector_style_menu`                 \
+|mActionEditPaste| :guilabel:`Paste style`                      \                     see :ref:`vector_style_menu`                 \
 |mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
 |mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
 |mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
