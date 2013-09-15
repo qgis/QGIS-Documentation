@@ -16,6 +16,55 @@ Identify features
 .. index::
    single:Identify features
 
+Identify features allow to interact with map canvas to get data attribut on a 
+pop-up windows. To identify feature use :menuselection:`View --> Identify features` 
+or Ctrl+Shift+I, or click on the :guilabel:`Identify features` icons in the 
+toolbar.
+
+If you click on several feature, this pop-up will list all data 
+attributes of all features. The first item is the number of the item in the 
+list of result followed by layer name. Then its first child will be the name of 
+a field with its value. Finally all informations of the feature is displayed.
+
+This windows can be customized to display custom fields but by default it will 
+display three kind of information:
+
+* Actions: actions can be added to the identify feature windows. When clicking 
+  on the action label, action will be run. By default only one action is added 
+  to View feature form for editing.
+* Derived: those informations are calculated or derived from other information. 
+  You can find clicked coordinate, X and Y coordinates, area in map unit and
+  perimeter in map unit for polygon, length in map unit for line and feature 
+  id. 
+* Data attributes: this is the list of attributs fields from data.
+
+At the bottom of the windows, you have five icons:
+
+.. FIXME: create screenshot and modify conf.py l.564 and following
+
+* |mActionIdentifyExpand| Expand tree
+* |mActionIdentifyCollapse| Collapse tree
+* |mActionIdentifyDefaultExpand| Default behaviour
+* |mActionIdentifyCopyAttributes| Copy attributes
+* |mActionIdentifyPrint| Print selected HTML response
+
+More feature can be found in the menu display with a right click of the mouse 
+somewhere in the response tree.
+
+This menu allow to:
+
+* View Feature form
+* Zoom to feature
+* Copy Feature: copy all feature ie geometry and attributes;
+* Copy attribute value: copy only the value of the attribut you click on;
+* Copy feature attributes: copy only attributes;
+* Clear result: result in the window are removed
+* Clear highlights: features highlight on the map are removed
+* Highlight all
+* Highlight layer
+* Layer properties: open layer properties window
+* Expand all
+* Collapse all
 
 
 .. _`shortcuts`:
@@ -42,7 +91,7 @@ features.
    :align: center
    :width: 20em
 
-   Define shortcut options |nix| (KDE)
+   Define shortcut options |nix| (Gnome)
 
 Configuration is very simple. Just select a feature from the list and click
 on **[Change]**, **[Set none]** or **[Set default]**. Once you
@@ -241,7 +290,7 @@ measuring click your right mouse button.
    :align: center
    :width: 15em
 
-   Measure Distance |nix| (KDE)
+   Measure Distance |nix| (Gnome)
 
 |mActionMeasureArea| Areas can also be measured.  In the measure window the
 accumulated area size appears. In addition, the measuring tool will snap to the
@@ -261,7 +310,7 @@ then select the layer. Now, when using the measuring tools, each mouse click
    :align: center
    :width: 15em
 
-   Measure Area |nix| (KDE)
+   Measure Area |nix| (Gnome)
 
 |mActionMeasureAngle| You can also measure angles, selecting Measure Angle tool.
 The cursor becomes cross-shaped. Click to draw the first segment of the angle you
@@ -278,7 +327,7 @@ is displayed in a popup dialog.
    :align: center
    :width: 15em
 
-   Measure Angle |nix| (KDE)
+   Measure Angle |nix| (Gnome)
 
 .. _`sec_selection`:
 
