@@ -829,7 +829,7 @@ selected features are shown in the attribute table title.
    :width: 30em
    :align: center
 
-   Attribute Table for Alaska layer |nix|
+   Attribute Table for regions layer |nix|
 
 .. index:: Attribute_Table_Selection
 
