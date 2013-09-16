@@ -9,7 +9,8 @@ it contains new features and extends the programmatic interface over QGIS 1.8.0.
 We recommend that you use this version over previous releases.
 
 This release includes hundreds of bug fixes and many new features and enhancements
-that will be described in this manual.
+that will be described in this manual. Also compare with the visual changelog at 
+http://changelog.linfiniti.com/version/1/
 
 User Interface
 --------------
@@ -73,8 +74,7 @@ Labelling
 
   * Deprecated labelling tab is removed from vector layer properties dialog for new projects or older opened projects that don't use that labelling engine.
   * Deprecated tab remains active for older opened projects, if any layer uses them, and does not go away even if saving the project with no layers having the older labelling engine enabled.
-
-Deprecated labelling tab can be enabled/disabled for the current project, via Python console commands. Please note: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of QGIS. Please migrate older projects.
+  * Deprecated labelling tab can be enabled/disabled for the current project, via Python console commands. Please note: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of QGIS. Please migrate older projects.
 
 Programmability
 ---------------
@@ -110,7 +110,7 @@ General
 Layer Legend
 ------------
 
-* **Legend visual feedback and options
+* **Legend visual feedback and options**
 
   * Total count for features in layer, as well as per symbol
   * Vector layers in edit mode now have a red pencil to indicate uncommitted (unsaved) edits
@@ -138,6 +138,4 @@ Browser
   * Icons now sorted by item group type (filesystem, databases, map servers)
   * Layer Properties now have better visual layout
 
-.. FIXME: Will the URL change?
-For more information, please see the visual changelog at http://changelog.linfiniti.com/version/1/
 
