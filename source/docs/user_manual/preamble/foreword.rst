@@ -10,16 +10,16 @@ Foreword
 
 Welcome to the wonderful world of Geographical Information Systems (GIS)!
 
-Quantum GIS (QGIS) is an Open Source Geographic Information System. The project
+|qg| is an Open Source Geographic Information System. The project
 was born in May of 2002 and was established as a project on SourceForge in June
 of the same year. We've worked hard to make GIS software (which is traditionally
 expensive proprietary software) a viable prospect for anyone with basic access
-to a Personal Computer. QGIS currently runs on most Unix platforms, Windows, and
+to a Personal Computer. |qg| currently runs on most Unix platforms, Windows, and
 OS X. QGIS is developed using the Qt toolkit (http://qt.digia.com)
 and C++. This means that QGIS feels snappy to use and has a pleasing,
 easy-to-use graphical user interface (GUI).
 
-QGIS aims to be an easy-to-use GIS, providing common functions and features.
+|qg| aims to be an easy-to-use GIS, providing common functions and features.
 The initial goal was to provide a GIS data viewer. QGIS has reached the point
 in its evolution where it is being used by many for their daily GIS data viewing
 needs. QGIS supports a number of raster and vector data formats, with new

@@ -78,7 +78,7 @@ shortcuts...`)
 Python Plugins
 ==============
 
-Quantum GIS allows enhancement of its functionality using plugins. This
+QGIS allows enhancement of its functionality using plugins. This
 was originally possible only with C++ language. With the addition of Python
 support to QGIS, it is also possible to use plugins written in Python.
 Great advantages over C++ plugins is the simplicity of distribution (no

@@ -103,7 +103,7 @@ Also scaling of colors are available.
 .. note::
    When adding GRASS rasters the option *Contrast enhancement* will be
    always set to automatically to *stretch to min max* regardless if
-   the Quantum GIS general options this is set to another value.
+   the QGIS general options this is set to another value.
 
 .. index:: Transparency
 

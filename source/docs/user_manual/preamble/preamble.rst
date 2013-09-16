@@ -8,11 +8,11 @@
 Preamble
 ********
 
-This document is the original user guide of the described software Quantum GIS.
+This document is the original user guide of the described software |qg|.
 The software and hardware described in this document are in most cases registered
-trademarks and are therefore subject to the legal requirements. Quantum GIS is
-subject to the GNU General Public License. Find more information on the Quantum
-GIS Homepage http://www.qgis.org.
+trademarks and are therefore subject to the legal requirements. |qg| is
+subject to the GNU General Public License. Find more information on the |qg| 
+Homepage http://www.qgis.org.
 
 The details, data, results etc. in this document have been written and verified
 to the best of knowledge and responsibility of the authors and editors.

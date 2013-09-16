@@ -314,7 +314,7 @@ feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them alltogether.
 The node tool also works with 'on the fly' projection turned on and supports
 the topological editing feature. This tool is, unlike other tools in
-Quantum GIS, persistent, so when some operation is done, selection stays
+|qg|, persistent, so when some operation is done, selection stays
 active for this feature and tool. If the node tool couldn't find any
 features, a warning will be displayed.
 
