@@ -7,7 +7,6 @@
 Topology Checker Plugin
 =======================
 
-::FIXME: Please add a figure
 .. _figure_topology_checker_1:
 
 .. only:: html
