@@ -15,7 +15,7 @@ QGIS User Guide
         preamble/conventions
         preamble/foreword
         preamble/features
-	whats_new/whats_new
+        preamble/whats_new
         introduction/getting_started
         introduction/qgis_gui
         introduction/general_tools
