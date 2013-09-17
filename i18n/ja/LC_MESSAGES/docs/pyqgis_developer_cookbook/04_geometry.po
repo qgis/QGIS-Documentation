@@ -31,7 +31,7 @@ msgid ""
 ":class:`QgsGeometry` class. All possible geometry types are nicely shown in "
 "`JTS discussion page "
 "<http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_."
-msgstr ""
+msgstr "空間のフィーチャとして表現されるポイントとラインストリング、ポリゴンは一般的にジオメトリと呼びます。QGISではこれらは :class:`QgsGeometry` クラスとして表現されます。可能な全てのジオメトリの種類は `JTS discussion page <http://www.vividsolutions.com/jts/discussion.htm#spatialDataModel>`_ によくまとめられています。"
 
 # 61783192b5284003870609b4107e9edc
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:18
@@ -41,7 +41,7 @@ msgid ""
 "just one type of simple geometry, we call it multi-point, multi-linestring "
 "or multi-polygon. For example, a country consisting of multiple islands can "
 "be represented as a multi-polygon."
-msgstr ""
+msgstr "あるジオメトリは実際はシンプルな(単一の)ジオメトリの集合ということもたびたびあります。そのようなジオメトリをマルチパートジオメトリと呼びます。もしシンプルなジオメトリの種類を一つでも含んでいれば、私達はそれをマルチポイント、マルチラインストリングまたはマルチポリゴンと呼びます。たとえば、ある国がいくつかの島で構成されていたらマルチポリゴンで表現ができるでしょう。"
 
 # 89d86df8e56540fa94a6d89e13f97a50
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:24
@@ -49,7 +49,7 @@ msgid ""
 "The coordinates of geometries can be in any coordinate reference system "
 "(CRS). When fetching features from a layer, associated geometries will have "
 "coordinates in CRS of the layer."
-msgstr ""
+msgstr "ジオメトリの座標値はどの座標参照系(CSR)も利用できます。レイヤーからフィーチャを持ってきたときに、ジオメトリの座標値はレイヤーのCSRのものを持つでしょう。"
 
 # f89a1da77de0472c8ba0d8ee39e7040b
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:31
@@ -69,7 +69,7 @@ msgstr "座標値から::"
 # 1d14bdd35e2349d7b8f567f6126b17f9
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:41
 msgid "Coordinates are given using :class:`QgsPoint` class."
-msgstr ""
+msgstr "座標値は :class:`QgsPoint` クラスを使って与えられます。"
 
 # b76bb647d9cf44e786480ad224dbc057
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:43
@@ -78,7 +78,7 @@ msgid ""
 "represented by a list of linear rings (i.e. closed linestrings). First ring "
 "is outer ring (boundary), optional subsequent rings are holes in the "
 "polygon."
-msgstr ""
+msgstr "ポリライン(ラインストリング)はポイントのリストで表現されます。ポリゴンは線形の輪(すなわち閉じたラインストリング)のリストで表現されます。最初の輪は外輪(境界)で、オプションとして続く輪がポリゴン内の穴となります。"
 
 # a048609ca3074fe5b6c746dedfaf4f17
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:47
@@ -86,29 +86,29 @@ msgid ""
 "Multi-part geometries go one level further: multi-point is a list of points,"
 " multi-linestring is a list of linestrings and multi-polygon is a list of "
 "polygons."
-msgstr ""
+msgstr "マルチパートジオメトリはさらに上のレベルです: マルチポイントはポイントのリストで、マルチラインストリングはラインストリングのリストで、マルチポリゴンはポリゴンのリストです。"
 
 # 7b6e6e25df1c4c4db89e1aa820f2ab35
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:51
 msgid "from well-known text (WKT)::"
-msgstr ""
+msgstr "well-known text (WKT) から::"
 
 # faa9f05f959a4fc4b4fb63d7e02ff154
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:55
 msgid "from well-known binary (WKB)::"
-msgstr ""
+msgstr "well-known binary (WKB) から::"
 
 # e5de6a9788d5481282b6a015f4ea0f60
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:64
 msgid "Access to Geometry"
-msgstr ""
+msgstr "ジオメトリにアクセス"
 
 # 5447d43ecf6c439dbca420a86125a040
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:66
 msgid ""
 "First, you should find out geometry type, :func:`wkbType` method is the one "
 "to use --- it returns a value from QGis.WkbType enumeration::"
-msgstr ""
+msgstr "まずはじめにジオメトリの種類を調べましょう、 :func:`wkbType` メソッドは一つの方法です --- これは QGis.WkbType 列挙型から一つの値を返します::"
 
 # 89e945d925f14bcabcc743805dd21adb
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:78
@@ -116,33 +116,33 @@ msgid ""
 "As an alternative, one can use :func:`type` method which returns a value "
 "from QGis.GeometryType enumeration. There is also a helper function "
 ":func:`isMultipart` to find out whether a geometry is multipart or not."
-msgstr ""
+msgstr "他の手段として、 QGis.GeometryType 列挙型から一つの値を返す :func:`type` メソッドも使えます。さらに :func:`isMultipart` というジオメトリがマルチパートなのかどうかを調べてくれるヘルパー関数もあります。"
 
 # 25e60c9296f2465da9bbd59fd9e7e8ac
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:82
 msgid ""
 "To extract information from geometry there are accessor functions for every "
 "vector type. How to use accessors::"
-msgstr ""
+msgstr "全てのベクタータイプにジオメトリから情報を展開するのに使えるアクセサ関数があります。アクセサはこのように使います::"
 
 # 2563de628e2c4c40a2bb59449ce5219e
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:92
 msgid ""
 "Note: the tuples (x,y) are not real tuples, they are :class:`QgsPoint` "
 "objects, the values are accessible with :func:`x` and :func:`y` methods."
-msgstr ""
+msgstr "注意: このタプル (x, y) は本当のタプルではなく、これらは :class:`QgsPoint` のオブジェクトで、この値は :func:`x` メソッド及び :func:`y` メソッドでアクセスできるようになっています。"
 
 # 2c899dff5754486684b017c02b058678
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:95
 msgid ""
 "For multipart geometries there are similar accessor functions: "
 ":func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()`."
-msgstr ""
+msgstr "マルチパートジオメトリ同士で似たようなアクセサ関数があります: :func:`asMultiPoint`, :func:`asMultiPolyline`, :func:`asMultiPolygon()` です。"
 
 # cd35e781585247eeb45598a75e529ce3
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:101
 msgid "Geometry Predicates and Operations"
-msgstr ""
+msgstr "ジオメトリの述語と操作"
 
 # b1efa0c7e0bd4eb8899740d483e4a6ba
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:103
@@ -150,24 +150,24 @@ msgid ""
 "QGIS uses GEOS library for advanced geometry operations such as geometry "
 "predicates (:func:`contains`, :func:`intersects`, ...) and set operations "
 "(:func:`union`, :func:`difference`, ...)"
-msgstr ""
+msgstr "QGISはジオメトリの述語 (:func:`contains`, :func:`intersects`, ...) や集合への操作 (:func:`union`, :func:`difference`, ...) のような応用的なジオメトリの操作のために GEOS ライブラリを使っています。"
 
 # c5535fd7160b4a90b63867c7e46ece56
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:108
 msgid "**TODO:**"
-msgstr ""
+msgstr "**TODO:**"
 
 # 736d555fc0b14467bc09fa98494fb1b0
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:110
 msgid ":func:`area`, :func:`length`, :func:`distance`"
-msgstr ""
+msgstr ":func:`area`, :func:`length`, :func:`distance`"
 
 # fc8f17a8e3474fa987a7162a6401b31b
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:111
 msgid ":func:`transform`"
-msgstr ""
+msgstr ":func:`transform`"
 
 # a99c28a280ea460788110185f7bffa68
 #: ../../source/docs/pyqgis_developer_cookbook/04_geometry.rst:112
 msgid "available predicates and set operations"
-msgstr ""
+msgstr "利用可能な述語と集合の操作"
