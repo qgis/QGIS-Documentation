@@ -560,15 +560,15 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddPart| image:: /static/common/mActionAddPart.png
    :width: 1.5em
-.. |mActionIdentifyExpand| image:: /static/common/mActionUngroupItems.png
+.. |mActionIdentifyExpand| image:: /static/common/mActionExpandTree.png
    :width: 1.5em
-.. |mActionIdentifyCollapse| image:: /static/common/mActionUngroupItems.png
+.. |mActionIdentifyCollapse| image:: /static/common/mActionCollapseTree.png
    :width: 1.5em
-.. |mActionIdentifyDefaultExpand| image:: /static/common/mActionUngroupItems.png
+.. |mActionIdentifyDefaultExpand| image:: /static/common/mActionExpandNewTree.png
    :width: 1.5em
-.. |mActionIdentifyCopyAttributes| image:: /static/common/mActionUngroupItems.png
+.. |mActionIdentifyCopyAttributes| image:: /static/common/mActionEditCopy.png
    :width: 1.5em
-.. |mActionIdentifyPrint| image:: /static/common/mActionUngroupItems.png
+.. |mActionIdentifyPrint| image:: /static/common/mActionFilePrint.png
    :width: 1.5em
 .. |mActionUnselectAttributes| image:: /static/common/mActionUnselectAttributes.png
    :width: 1.5em
