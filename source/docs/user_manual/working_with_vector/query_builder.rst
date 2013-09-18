@@ -16,7 +16,7 @@ saved as a new vector layer.
 Query
 -----
 
-Open the attribute table by opening the Layer Properties and go to the :guilabel:`General` menu.
+Open the **Query Builder** by opening the Layer Properties and go to the :guilabel:`General` menu.
 Under :guilabel:`Feature subset` click on the **[Query Builder]** button to open the :guilabel:`Query builder`.
 For example, if you have a ``regions`` layer with a ``TYPE_2`` field you could
 select only regions that are ``borough`` in the :guilabel:`Provider specific filter expression`
