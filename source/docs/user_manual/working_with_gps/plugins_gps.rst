@@ -72,8 +72,8 @@ Each feature type will be loaded in a separate layer when you click
 .. note::
    GPS units allow to store data in different coordinate systems. When
    downloading a GPX file (from your GPS unit or a web site) and then loading it
-   in Quantum GIS, be sure that the data stored in the GPX file uses WGS84
-   (latitude/longitude). Quantum GIS expects this and it is the official GPX
+   in QGIS, be sure that the data stored in the GPX file uses WGS84
+   (latitude/longitude). QGIS expects this and it is the official GPX
    specification. See http://www.topografix.com/GPX/1/1/
 
 GPSBabel

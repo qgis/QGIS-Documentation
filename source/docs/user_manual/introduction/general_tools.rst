@@ -38,9 +38,19 @@ display three kind of information:
   id. 
 * Data attributes: this is the list of attributs fields from data.
 
-At the bottom of the windows, you have five icons:
+.. _figure_identify:
 
-.. FIXME: create screenshot and modify conf.py l.564 and following
+.. only:: html
+
+   **Figure Identify 1:**
+
+.. figure:: /static/user_manual/introduction/identify_features.png
+   :align: center
+   :width: 15em
+
+   Identify feaures dialog |nix| (Gnome)
+
+At the bottom of the windows, you have five icons:
 
 * |mActionIdentifyExpand| Expand tree
 * |mActionIdentifyCollapse| Collapse tree

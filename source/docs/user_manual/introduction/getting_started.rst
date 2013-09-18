@@ -32,7 +32,7 @@ Installation from source
 If you need to build |qg| from source, please refer to the installation
 instructions. They are distributed with the |qg| source code in a file
 called 'INSTALL'. You can also find it online at
-https://github.com/qgis/Quantum-GIS/blob/master/INSTALL
+https://github.com/qgis/QGIS/blob/master/INSTALL
 
 Installation on external media
 ..............................
@@ -196,10 +196,9 @@ The usage statement for QGIS is:
 ::
 
         qgis --help
-        Quantum GIS - 1.8.0-Lisboa 'Lisboa' (exported)
-        Quantum GIS (QGIS) is a viewer for spatial data sets, including
-        raster and vector data.
-        Usage: qgis [options] [FILES]
+        QGIS - 2.0.1-Dufour 'Dufour' (exported)
+	QGIS is a user friendly Open Source Geographic Information System.
+        Usage: qgis [OPTION] [FILE]
           options:
                 [--snapshot filename]           emit snapshot of loaded datasets to given file
                 [--width width]                 width of snapshot to emit

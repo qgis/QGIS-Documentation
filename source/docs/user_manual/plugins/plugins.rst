@@ -87,7 +87,7 @@ loaded.
    the plugin values to ``false`` to prevent them from loading.
 
    |nix| For example, to prevent the 'Delimited text' plugin from loading, the
-   entry in ``$HOME/.config/QuantumGIS/qgis.conf`` on Linux should look like
+   entry in ``$HOME/.config/QGIS/qgis.conf`` on Linux should look like
    this: ``Add Delimited Text Layer=false``.
 
    Do this for each plugin in the [Plugins] section. You can then start QGIS and
@@ -230,7 +230,7 @@ If you are using a proxy, you may need to configure it under
 The **[Uninstall plugin]** button is enabled only if the selected plugin is
 installed and is not a core plugin. Note that if you have installed an update to
 a core plugin, you can uninstall this update with the **[Uninstall plugin]** and
-revert to the version shipped with Quantum GIS. This default version however,
+revert to the version shipped with QGIS. This default version however,
 cannot be uninstalled.
 
 **Repositories tab**

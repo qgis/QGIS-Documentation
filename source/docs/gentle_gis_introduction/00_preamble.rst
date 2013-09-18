@@ -7,7 +7,7 @@ Preamble
 
 A Gentle Introduction to GIS
 
-Brought to you with Quantum GIS, a Free and Open Source Software GIS Application
+Brought to you with QGIS, a Free and Open Source Software GIS Application
 for everyone.
 
 .. image:: /static/gentle_gis_introduction/preamble/qgis_logo.png
@@ -66,7 +66,7 @@ they will be reluctant to learn other packages. When learners leave school they
 will go into the workplace and buy the commercial software, never knowing that
 there are free alternatives that they could be using.
 
-With Quantum GIS, we offer an alternative --- software that is free of cost and
+With QGIS, we offer an alternative --- software that is free of cost and
 free in a social sense. You can make as many copies as you like. When learners
 leave school one day they can use this software to build their skills, solve
 problems at work and make the world a better place.

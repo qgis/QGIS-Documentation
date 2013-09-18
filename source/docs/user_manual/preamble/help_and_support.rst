@@ -92,7 +92,7 @@ qgis-psc
 --------
 
 This list is used to discuss Steering Committee issues related to overall
-management and direction of Quantum GIS. You can subscribe to this list
+management and direction of |qg|. You can subscribe to this list
 at: http://lists.osgeo.org/mailman/listinfo/qgis-psc
 
 You are welcome to subscribe to any of the lists. Please remember to

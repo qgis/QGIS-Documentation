@@ -586,11 +586,14 @@ We now describe an example how to use the data-defined override function for the
 Labels (deprecated)
 ...................
 
-The deprecated labeling in the :guilabel:`Labels` tab allows you to enable labeling
-features and control a number of options related to fonts, placement, style,
-alignment and buffering. We will illustrate this by labeling the lakes
-shapefile of the QGIS sample dataset:
+Use of the deprecated labelling engine available in QGIS <= 1.8 is now discouraged, but has not been removed. This is to allow users to migrate existing projects from the old to new labelling engine. The following guidelines for working with the older engine in QGIS 2.0 apply:
 
+* Deprecated labelling tab is removed from vector layer properties dialog for new projects or older opened projects that don't use that labelling engine. 
+* Deprecated tab remains active for older opened projects, if any layer uses them, and does not go away even if saving the project with no layers having the older labelling engine enabled.
+
+**NOTE**: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of QGIS. Please migrate older projects.
+
+We will illustrate how it works by labeling the lakes shapefile of the QGIS sample dataset:
 
 #. Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml`
    in |qg|
@@ -663,6 +666,15 @@ for the labels using fields in the layer.
 
 Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
 selected label is shown.
+
+**Enabled/Disabled deprecated labelling via Python**
+
+The deprecated labelling tab can also be enabled/disabled for the current project, via Python console commands, e.g.:
+
+:: 
+
+	QgsProject.instance().writeEntry('DeprecatedLabels', '/Enabled', True | False)
+	QgsProject.instance().removeEntry('DeprecatedLabels', '/')
 
 .. _vector_attributes_menu:
 
