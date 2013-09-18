@@ -33,6 +33,22 @@ There are several menus in the dialog:
 
    Raster Layers Properties Dialog |nix|
 
+
+General Menu
+-------------
+
+The :guilabel:`General` menu displays basic information about the selected raster,
+including the layer source and display name in the legend (which can be
+modified). This tab also shows a thumbnail of the layer, its legend symbol,
+and the palette.
+
+Additionally scale-dependent visibility can be set in this tab. You need to
+check the checkbox and set an appropriate scale where your data will be
+displayed in the map canvas.
+
+Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
+This can be modified by hitting the **[Specify]** button.
+
 .. index:: Symbology, Single_Band_Raster, Three_Band_Color_Raster, Multi_Band_Raster
 
 .. _label_symbology:
@@ -40,13 +56,18 @@ There are several menus in the dialog:
 Style Menu
 ----------
 
-QGIS can render raster layers in two different ways:
+Band rendering
+..............
 
-#. Single band - one band of the image will be rendered as gray or in pseudocolor
-   or a freak out.
-#. Three band color - three bands from the image will be rendered, each band
+QGIS can render raster layers in three different ways:
+
+#. Multi band color - three bands from the image will be rendered, each band
    representing the red, green or blue component that will be used to create
-   a color image.
+   a color image. You can choose several :guilabel:`Contrast enhancement` methods:
+   'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'
+#. Paletted - entweder es gibt bereits eine Farbpalette sonst mit kann der Rasterlayer nicht dargestellt werden  
+#. Single band gray- one band of the image will be rendered as gray 
+#. Single band pseudocolour - 
 
 Within both render types you can invert the color output using the
 |checkbox| :guilabel:`Invert color map` checkbox.
@@ -187,20 +208,6 @@ only one :guilabel:`Classification mode` |selectstring| is supported - 'Equal in
 
 .. _label_generaltab:
 
-General Tab
--------------
-
-The :guilabel:`General` tab displays basic information about the selected raster,
-including the layer source and display name in the legend (which can be
-modified). This tab also shows a thumbnail of the layer, its legend symbol,
-and the palette.
-
-Additionally scale-dependent visibility can be set in this tab. You need to
-check the checkbox and set an appropriate scale where your data will be
-displayed in the map canvas.
-
-Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
-This can be modified by hitting the **[Specify]** button.
 
 .. index:: Metadata
 
