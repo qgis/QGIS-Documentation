@@ -88,7 +88,7 @@ pygments_style = 'sphinx'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This section of the user guide has not yet been updated for QGIS 2.0`
+.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This part of the documentation has not yet been fully updated for QGIS 2.0`
 """
 
 rst_epilog = """
