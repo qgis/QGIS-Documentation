@@ -18,10 +18,10 @@ Query
 
 Open the attribute table by opening the Layer Properties and go to the :guilabel:`General` menu.
 Under :guilabel:`Feature subset` click on the **[Query Builder]** button to open the :guilabel:`Query builder`.
-For example, if you have a ``towns`` layer with a ``population`` field you could
-select only larger towns by entering ``population > 100000`` in the SQL box of
-the Query builder. Figure_attributes_2_ shows an example of the Query builder
-populated with data from a PostGIS layer with attributes stored in PostgreSQL.
+For example, if you have a ``regions`` layer with a ``TYPE_2`` field you could
+select only regions that are ``borough`` in the :guilabel:`Provider specific filter expression`
+box of the Query builder. Figure_attributes_2_ shows an example of the Query builder
+populated with the regions.shp layer from the QGIS sample data.
 The Fields, Values and Operators sections help the user to construct the SQL-like
 query.
 
@@ -65,16 +65,6 @@ window without changing the current selection.
 
 .. _sec_selection_query:
 
-Selection
----------
-
-With |qg| it is possible also to select features for visualisation using a similar
-query builder interface to that used in :ref:`vector_query_builder`. 
-You can make a selection by right clicking on a layer in the
-legend and choosing :guilabel:`Query ...`. If you perform a SQL query here also only
-the selected features are displayed in the map view. Features that don't match
-the SQL query are not visualised in the map view. The selection described
-above can be used with all vector data providers.
 
 Save selected features as new layer
 -----------------------------------
