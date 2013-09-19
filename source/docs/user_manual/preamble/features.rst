@@ -135,7 +135,7 @@ can be easily installed using the Python Plugin Installer (See Section
 Python Console
 ---------------
 
-For scripting, it is possible to take advantage of integrated Python console. 
+For scripting, it is possible to take advantage of an integrated Python console. 
 It can be opened from menu: :menuselection:`Plugins --> Python Console`. The console 
 opens as a non-modal utility window. For interaction with the QGIS environment, there is
 the :data:`qgis.utils.iface` variable, which is an instance of :class:`QgisInterface`.
