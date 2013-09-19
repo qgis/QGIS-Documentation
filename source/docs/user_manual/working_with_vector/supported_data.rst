@@ -667,7 +667,7 @@ Once all parameters and options are set, you can test the connection by clicking
 .. _vector_loading_ORACLE Spatial:
 
 Loading a ORACLE Spatial Layer
-.......................
+..............................
 
 |mActionAddOracleLayer| Once you have one or more connections defined, you can load
 layers from the ORACLE database. Of course this requires having data in

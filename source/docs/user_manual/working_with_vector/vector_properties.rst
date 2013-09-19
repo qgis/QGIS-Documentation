@@ -77,7 +77,7 @@ Layer rendering
 	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
 	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
           black produces no change, as values for all colors are 0.
-	* Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
+	* Subtract: This blend mode simply subtracts pixel values of one layer with tshe other. In case of negative values, black is displayed.
   
 
 .. index:: Symbology
@@ -208,9 +208,9 @@ for the rivers layer of the |qg| sample dataset.
 
 You can create a custom color ramp choosing :menuselection:`New color ramp...`
 from the :guilabel:`Color ramp` dropdown menu. A dialog will prompt for the ramp type:
-Gradient, Random, ColorBrewer, then each one has options for number of steps
+Gradient, Random, ColorBrewer, and cpt-city. The first three have options for number of steps
 and/or multiple stops in the color ramp. See figure_symbology_3_ for an
-example of custom color ramp.
+example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
 .. _figure_symbology_3:
 
@@ -223,6 +223,20 @@ example of custom color ramp.
    :width: 12em
 
    Example of custom gradient color ramp with multiple stops |nix|
+
+The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.   
+
+.. _figure_symbology_3a:
+
+.. only:: html
+
+   **Figure Symbology 3a:**
+
+.. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
+   :align: center
+   :width: 12em
+
+   cpt-city dialog with hundreds of color ramps |nix|
 
 .. index:: Graduated_Renderer, Renderer_Graduated
 .. index:: Natural_Breaks_(Jenks), Pretty_Breaks, Equal_Interval, Quantile
