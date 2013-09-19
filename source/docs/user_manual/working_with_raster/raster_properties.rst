@@ -65,7 +65,7 @@ QGIS can render raster layers in three different ways:
    representing the red, green or blue component that will be used to create
    a color image. You can choose several :guilabel:`Contrast enhancement` methods:
    'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'
-#. Paletted - entweder es gibt bereits eine Farbpalette sonst mit kann der Rasterlayer nicht dargestellt werden  
+#. Paletted - 
 #. Single band gray- one band of the image will be rendered as gray 
 #. Single band pseudocolour - 
 
