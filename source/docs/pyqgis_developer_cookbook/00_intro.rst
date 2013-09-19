@@ -55,7 +55,7 @@ The console opens as a non-modal utility window:
 
    QGIS Python console
 
-The screenshot above illustrates how to get the layer currntly selected
+The screenshot above illustrates how to get the layer currently selected
 in the layer list, show its ID and optionally, if it is a vector layer,
 show the feature count. For interaction with QGIS environment, there is
 :data:`qgis.utils.iface` variable, which is instance of :class:`QgisInterface`.

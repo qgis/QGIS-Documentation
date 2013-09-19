@@ -132,3 +132,18 @@ the community. These plugins reside in the official plugins repository, and
 can be easily installed using the Python Plugin Installer (See Section
 :ref:`load_external_plugin`).
 
+Python Console
+---------------
+
+For scripting, it is possible to take advantage of integrated Python console. 
+It can be opened from menu: :menuselection:`Plugins --> Python Console`. The console 
+opens as a non-modal utility window. For interaction with the QGIS environment, there is
+the :data:`qgis.utils.iface` variable, which is an instance of :class:`QgisInterface`.
+This interface allows access to the map canvas, menus, toolbars and other
+parts of the QGIS application.
+
+For further information about working with the Python Console and Programming 
+PyQGIS plugins and applications, please refer to 
+http://new.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
+
+
