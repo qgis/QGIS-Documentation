@@ -17,7 +17,7 @@ Iterating over the features in a vector layer is one of the most common tasks. B
 
 ::
 
-iter = layer.getFeatures:
+iter = layer.getFeatures()
 for feature in iter:
   # retreive every feature with its geometry and attributes
     # fetch geometry
