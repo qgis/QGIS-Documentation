@@ -23,7 +23,7 @@ and their consequences. Your are always welcome to indicate possible mistakes.
 
 This document has been typeset with reStructuredText. It is available as reST
 source code via `github <https://github.com/qgis/QGIS-Documentation>`_ and
-online as HTML and PDF via http://documentation.qgis.org. Translated versions of
+online as HTML and PDF via http://www.qgis.org/en/docs/. Translated versions of
 this document can be downloaded in several formats via the documentation area of
 the |qg| project as well. For more information about contributing to this
 document and about translating it, please visit: http://www.qgis.org/wiki/.
@@ -54,7 +54,7 @@ handles both identically.
 | Astrid Emde        | Yves Jacolin        | Alexandre Neto       | Andy Schmid          | Hien Tran-Quang      |
 +--------------------+---------------------+----------------------+----------------------+----------------------+
 
-Copyright (c) 2004 - 2013 QGIS Development Team
+Copyright (c) 2004 - 2013 |qg| Development Team
 
 **Internet:** http://www.qgis.org
 
