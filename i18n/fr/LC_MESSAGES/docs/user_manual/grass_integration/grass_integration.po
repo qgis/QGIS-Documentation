@@ -1258,18 +1258,22 @@ msgid ""
 "The :guilabel:`Category` tab allows you to define the way in which the "
 "category values will be assigned to a new geometry element."
 msgstr ""
+"L'onglet :guilabel:`Categorie` vous permet de définir la manière dont les "
+"valeurs du champ category sont assignées au nouvel élément géométrique."
 
 # b62a102ce74f4d988b8d55e020d0f76c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:478
 msgid ""
 "**Mode**: what category value shall be applied to new geometry elements."
-msgstr ""
+msgstr "**Mode** : quelle catégorie sera appliquée aux nouveaux éléments."
 
 # 2aa575a07b134e61a4448c0329ef6312
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:480
 msgid ""
 "Next not used - apply next not yet used category value to geometry element."
 msgstr ""
+"Prochain non utilisé - applique la valeur suivante non utilisée du champ "
+"category à l'élément géométrique."
 
 # 55ee58e8e87d422c88df7180831404ac
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:481
@@ -1277,6 +1281,8 @@ msgid ""
 "Manual entry - manually define the category value for the geometry element "
 "in the 'Category'-entry field."
 msgstr ""
+"Saisie manuelle - saisir manuellement la valeur du champ category pour "
+"l'élément géométrique."
 
 # ccabb88bcb6f4e108d08d70136903841
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:483
@@ -1285,6 +1291,9 @@ msgid ""
 "e.g. used for area boundaries, because the category values are connected via "
 "the centroid."
 msgstr ""
+"Pas de catégorie - ne pas remplir le champ category. C'est par exemple "
+"utilisé pour les surfaces, car les valeurs de catégorie sont stockées via le "
+"centroïde."
 
 # 3e835e1443db425989d4140c17944333
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:487
@@ -1292,6 +1301,8 @@ msgid ""
 "**Category** - A number (ID) is attached to each digitized geometry element. "
 "It is used to connect each geometry element with its attributes."
 msgstr ""
+"**Categorie** : un identifiant (ID) est attaché à chaque objet numérisé. Il "
+"est utilisé pour connecter les objets géométriques avec ces attributs."
 
 # 70f792fd47d94b6c917621c121237ca1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:489
@@ -1300,11 +1311,14 @@ msgid ""
 "attribute tables using different GRASS geometry layers. Default layer number "
 "is 1."
 msgstr ""
+"**Couche** : Chaque objet peut être connecté à différentes tables "
+"attributaires au travers des différentes sous-couches. Le numéro de "
+"sous-couche par défaut est 1."
 
 # 11869e4ef95b465eb245a70237490d8c
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:494
 msgid "**Creating an additional GRASS 'layer' with QGIS**"
-msgstr ""
+msgstr "**Création d'une 'sous-couche' supplémentaire avec QGIS**"
 
 # 2c93d6cdeb4646a79ebc502f0e4d4043
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:496
@@ -1313,11 +1327,15 @@ msgid ""
 "in the 'Field (layer)' entry box and press return. In the Table tab you can "
 "create your new table connected to your new layer."
 msgstr ""
+"i vous souhaitez avoir plusieurs sous-couches dans votre couche vectorielle, "
+"ajouter simplement un nouveau chiffre dans la zone de saisie 'Couche' et "
+"appuyez sur entrée. Dans l'onglet Table, vous pouvez créer de nouvelles "
+"tables attributaires connectées à votre nouvelle sous-couche."
 
 # f441c48dfb4243cbaca9c3e0e07e0d1b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:502
 msgid "**Settings Tab**"
-msgstr ""
+msgstr "**Onglet Paramètres**"
 
 # f977172806bb4c149780e45591f994b8
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:507
@@ -1327,11 +1345,17 @@ msgid ""
 "snapped to existing nodes. This helps to prevent gaps or dangles between "
 "boundaries. The default is set to 10 pixels."
 msgstr ""
+"L'onglet :guilabel:`Paramètres` vous permet de définir la tolérance "
+"d'accrochage en pixels-écrans. Le seuil définit à partir de quelle distance "
+"les nouveaux points ou les nouvelles lignes sont accrochées automatiquement "
+"à des noeuds existants. Cela aide à éviter de créer des trous ou des "
+"superpositions entre les contours. La valeur par défaut est fixée à 10 "
+"pixels."
 
 # 26ecd34310c94279ac3c15bc73927349
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:524
 msgid "**Symbology Tab**"
-msgstr ""
+msgstr "**Onglet Convention des signes**"
 
 # 9e785bb522f141bbb2df699cd64b4b14
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:529
@@ -1340,11 +1364,14 @@ msgid ""
 "settings for various geometry types and their topological status (e.g. "
 "closed / opened boundary)."
 msgstr ""
+"L'onglet :guilabel:`Convention des signes` vous permet d'afficher et "
+"modifier la symbologie, la couleur des différentes formes géométriques ainsi "
+"que leur statut topologique (par exemple : contour ouvert / fermé)."
 
 # d21dfbe482104ce9b6bbe122f744b582
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:546
 msgid "**Table Tab**"
-msgstr ""
+msgstr "**Onglet Table**"
 
 # a3ab2ad692874496b7c68c20f3fed981
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:551
@@ -1354,11 +1381,16 @@ msgid ""
 "table, or create a new database table for a new GRASS vector layer (see "
 "Section :ref:`creating_new_grass_vectors`)."
 msgstr ""
+"L'onglet :guilabel:`Table` donne des informations sur la table attributaire "
+"d'une 'sous-couche' donnée. C'est ici que vous pouvez ajouter des colonnes à "
+"une table attributaire existante ou créer une nouvelle table attributaire "
+"pour une nouvelle couche vectorielle GRASS (voir Section "
+":ref:`creating_new_grass_vectors`)."
 
 # 9c0785ed49514e959bf84e2af0115c37
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:568
 msgid "**GRASS Edit Permissions**"
-msgstr ""
+msgstr "**Droits d'édition GRASS**"
 
 # ecf9541ce718469792304e2c84e2ec4d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:570
@@ -1367,11 +1399,14 @@ msgid ""
 "impossible to edit data layers in a :file:`MAPSET` that is not yours, even "
 "if you have write permissions."
 msgstr ""
+"Vous devez être propriétaire du :file:`Jeu de données` que vous voulez "
+"éditer. Il est impossible de modifier des informations d'un :file:`Jeu de "
+"données` qui n'est pas à vous, même si vous avez des droits en écriture."
 
 # fc9264def6ff46269479658b6ae5f4bb
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:578
 msgid "The GRASS region tool"
-msgstr ""
+msgstr "L'outil région GRASS"
 
 # 467c128d047342f59f1cd37569fc80da
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:582
@@ -1385,6 +1420,15 @@ msgid ""
 "file, and it defines north, south, east and west bounds, number of columns "
 "and rows, horizontal and vertical spatial resolution."
 msgstr ""
+"La définition d'une région (définir une emprise spatiale de travail) dans "
+"GRASS est très importante pour travailler avec des couches rasters. Le "
+"travail d'analyse vecteur n'est, par défaut, pas limitée à une région "
+"définie. Mais, tous les rasters nouvellement créés auront l'emprise spatiale "
+"et la résolution de la région GRASS en cours d'utilisation, indépendamment "
+"de leur emprise et résolution d'origine. La région courante GRASS est "
+"stockée dans le fichier :file:`\\$SECTEUR/\\$Jeu de donnée/WIND`, et "
+"celui-ci définit les limites Nord, Sud, Est et Ouest, le nombre de lignes et "
+"de colonnes ainsi que la résolution spatiale horizontale et verticale."
 
 # 2cd862904b1447c6a8cb94f907f0d12d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:590
@@ -1393,6 +1437,9 @@ msgid ""
 "QGIS canvas using the |grass_region| :sup:`Display current GRASS region` "
 "button."
 msgstr ""
+"Il est possible d'afficher ou de masquer l'emprise de la région GRASS dans "
+"QGIS à l'aide du bouton |grass_region| :sup:`Afficher la région courante "
+"GRASS`."
 
 # 401457d122c947cf9b7ba25e5c3829c5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:596
@@ -1405,6 +1452,14 @@ msgid ""
 "left mouse button in the QGIS canvas, open a rectangle, close it using the "
 "left mouse button again and click **[OK]**."
 msgstr ""
+"A l'aide du bouton |grass_region_edit| :sup:`Éditer la région courante "
+"GRASS` vous avez accès à une fenêtre qui vous permet de modifier la région "
+"courante ainsi que sa symbologie. Entrez les nouvelles limites et résolution "
+"et cliquez sur **[OK]**. Cette fenêtre vous permet aussi de définir une "
+"nouvelle région interactivement à l'aide de la souris. Pour définir ce "
+"rectangle d'emprise, cliquez avec le bouton gauche de la souris et "
+"définissez un rectangle que vous terminerez en cliquant de nouveau sur le "
+"bouton gauche de la souris et cliquez sur **[OK]**."
 
 # e80d31b7edb64146b9b36d6cb9bb46c3
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:607
@@ -1414,11 +1469,15 @@ msgid ""
 "use these parameters with the GRASS Toolbox, described in Section "
 ":ref:`subsec_grass_toolbox`."
 msgstr ""
+"Le module GRASS :file:`g.region` propose un grand nombre de paramètres pour "
+"définir de façon appropriée les limites et la résolution d'une région pour "
+"faire de l'analyse raster. Vous pouvez vous servir de ces paramètres dans la "
+"boîte à outils GRASS décrite dans la Section :ref:`subsec_grass_toolbox`."
 
 # 9098e7e383024a4b82900d02314bbeb0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:614
 msgid "The GRASS toolbox"
-msgstr ""
+msgstr "La boîte à outils GRASS"
 
 # 06c4935d3bf0455ea4cd27bf1272a3d9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:618
@@ -1431,6 +1490,14 @@ msgid ""
 "raster or vector layers created during analysis need to be written to the "
 "currently selected :file:`LOCATION` and :file:`MAPSET`."
 msgstr ""
+"La fenêtre |grass_tools| :sup:`Ouvrir les outils GRASS` donne accès aux "
+"fonctionnalités GRASS qui permettent de travailler sur les données d'un "
+":file:`SECTEUR` et d'un :file:`Jeu de données`. Pour utiliser les outils "
+"GRASS, vous devez ouvrir un :file:`SECTEUR` et un :file:`Jeu de données` sur "
+"lequel vous avez des droits d'écriture (que vous avez normalement si vous "
+"avez créé le :file:`Jeu de données`). Cela est nécessaire car les rasters et "
+"les vecteurs nouvellement créés lors des analyses doivent être écrits dans "
+"le :file:`SECTEUR` et :file:`Jeu de données` courant."
 
 # 620689dc7c9342019de7749b8f5db2bc
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:637
@@ -1441,11 +1508,15 @@ msgid ""
 "and functionalities are also provided by graphical dialogs within the GRASS "
 "plugin Toolbox."
 msgstr ""
+"La console de la boîte à outils GRASS vous donne accès à pratiquement tous "
+"les modules GRASS (près de 330) en ligne de commande. Afin d'offrir un "
+"environnement de travail plus agréable, environ 200 d'entre eux sont "
+"disponibles via l'interface graphique de la boîte à outils GRASS."
 
 # 21647efea441432088933d8fd178da5a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:645
 msgid "Working with GRASS modules"
-msgstr ""
+msgstr "Travailler avec les modules GRASS"
 
 # 7d22485a8f294db0aeeab11aeaef47d7
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:647
@@ -1455,6 +1526,10 @@ msgid ""
 "friendly working environment, about 200 of the available GRASS modules and "
 "functionalities are also provided by graphical dialogs."
 msgstr ""
+"La console de la boîte à outils GRASS vous donne accès à pratiquement tous "
+"les modules GRASS (près de 330) en ligne de commande. Afin d'offrir un "
+"environnement de travail plus agréable, environ 200 d'entre eux sont "
+"disponibles via l'interface graphique de la boîte à outils GRASS."
 
 # e62d1a3c70f643c290a3e727cbf3995e
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:652
@@ -1463,6 +1538,9 @@ msgid ""
 "version 1.8.0 is available in the GRASS wiki ( "
 "http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list)."
 msgstr ""
+"La liste des modules GRASS disponibles via la boîte à outils de la version "
+"1.8.0 de QGIS est détaillée sur le wiki de GRASS ( "
+"http://grass.osgeo.org/wiki/GRASS-QGIS_relevant_module_list)."
 
 # 5b7076cbaedc4099861c3c5c25fbd0e1
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:655
@@ -1470,6 +1548,8 @@ msgid ""
 "It is also possible to customize the GRASS Toolbox content. This procedure "
 "is described in Section :ref:`sec_toolbox-customizing`."
 msgstr ""
+"Il est aussi possible de personnaliser le contenu de la boîte à outils "
+"GRASS. Ceci est décrit dans la Section :ref:`sec_toolbox-customizing`."
 
 # 86268a197995433ca6272552d81c5aa3
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:658
