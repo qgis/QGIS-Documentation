@@ -234,7 +234,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
-   :width: 12em
+   :width: 25em
 
    cpt-city dialog with hundreds of color ramps |nix|
 
