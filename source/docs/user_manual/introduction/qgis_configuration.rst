@@ -71,13 +71,20 @@ include:
 * The :guilabel:`CRS Coordinate Reference System` tab enables you to choose
   the CRS for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
-* With the third :guilabel:`Identifiable layers` tab you set (or disable)
+* With the third :guilabel:`Identify layers` tab you set (or disable)
   which layers will respond to the identify tool. (See the Map tools paragraph from
   the :ref:`gui_options` section to enable identifying of multiple layers.)
+* The tab :guilabel:`Default Styles` lets you control how new layers will be drawn when they 
+  do not have an existing .qml style defined. You can also set the default transparency level 
+  for new layers and whether symbols should have random colours assigned to them.
 * The tab :guilabel:`OWS Server` allows to define information about the QGIS
   mapserver Service Capabilities, the Extent and the CRS Restrictions as well as
-  the WFS Capabilities. Activating the |checkbox| :guilabel:`Add WKT geometry to feature info response`
-  will allow to query the WMS layers.
+  the WFS Capabilities. Activating the |checkbox| :guilabel:`Add WKT geometry to feature info  
+  response` will allow to query the WMS layers.
+* The tab :guilabel:`Macros` to create a Python module, saved into a project.qgs file to be
+  loaded and have specific functions run on the following project events: openProject(),   
+  saveProject() and closeProject().
+
 
 .. _gui_options:
 
