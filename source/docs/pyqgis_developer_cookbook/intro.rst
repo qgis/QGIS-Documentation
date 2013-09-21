@@ -60,7 +60,7 @@ The console opens as a non-modal utility window:
 The screenshot above illustrates how to get the layer currently selected
 in the layer list, show its ID and optionally, if it is a vector layer,
 show the feature count. For interaction with QGIS environment, there is a
-:data:`iface` variable, which is an instance of :class:`QgisInterface`.
+:data:`iface` variable, which is an instance of :class:`QgsInterface`.
 This interface allows access to the map canvas, menus, toolbars and other
 parts of the QGIS application.
 
