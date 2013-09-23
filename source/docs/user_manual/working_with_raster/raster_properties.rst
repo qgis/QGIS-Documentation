@@ -33,6 +33,7 @@ There are several menus in the dialog:
 
    Raster Layers Properties Dialog |nix|
 
+.. _label_generaltab:
 
 General Menu
 -------------
@@ -127,19 +128,18 @@ Also scaling of colors are available.
 
 .. index:: Transparency
 
-Transparency Tab
-----------------
+Transparency Menu
+-----------------
 
 QGIS has the ability to display each raster layer at varying transparency levels.
-Use the transparency slider to indicate to what extent the underlying layers
+Use the transparency slider |slider| to indicate to what extent the underlying layers
 (if any) should be visible though the current raster layer. This is very useful,
 if you like to overlay more than one rasterlayer, e.g. a shaded relief map
 overlayed by a classified rastermap. This will make the look of the map more
 three dimensional.
 
-Additionally you can enter a rastervalue, which should be treated as *NODATA*.
-This can be done manually or with the |mActionContextHelp| :sup:`Add values from
-display` icon.
+Additionally you can enter a rastervalue, which should be treated as *NODATA* in
+the :guilabel:`Additional no data value` menu.
 
 An even more flexible way to customize the transparency can be done in the
 :guilabel:`Custom transparency options` section. The transparency of every pixel
@@ -152,18 +152,19 @@ to a transparency of 20 %. The following steps are neccessary:
 #. Open the :guilabel:`Properties` dialog by double-clicking on the raster
    name in the legend or by right-clicking and choosing :menuselection:`Properties`
    from the popup menu.
-#. Select the :guilabel:`Transparency` tab
-#. Click the |mActionNewAttribute| :sup:`Add values manually`
+#. Select the :guilabel:`Transparency` menu
+#. From the :guilabel:`Transparency band` menu choose 'None'.
+#. Click the |mActionSignPlus| :sup:`Add values manually`
    button. A new row will appear in the pixel-list.
-#. Enter the raster-value (we use 0 here) and adjust the transparency to 20 %.
+#. Enter the raster-value (we use 0 here) in the 'From' and 'To' column and adjust the transparency to 20 %.
 #. Press the **[Apply]** button and have a look at the map.
 
-You can repeat the steps 4 and 5 to adjust more values with custom transparency.
+You can repeat the steps 5 and 6 to adjust more values with custom transparency.
 
 As you can see this is quite easy to set custom transparency, but it can be
 quite a lot of work. Therefore you can use the button |mActionFileSave|
 :sup:`Export to file` to save your transparency list to a file. The button
-|mActionFolder| :sup:`Import from file` loads your transparency settings and
+|mActionFileOpen| :sup:`Import from file` loads your transparency settings and
 applies them to the current raster layer.
 
 
@@ -174,7 +175,7 @@ Colormap
 
 .. index:: Colormap
 
-The :guilabel:`Colormap` tab is only available, when you have selected a singleband
+The :guilabel:`Colormap` menu is only available, when you have selected a singleband
 rendering within the :guilabel:`Style` tab (see :ref:`label_symbology`).
 
 .. index:: Color_interpolation, Discrete
@@ -206,7 +207,47 @@ categorized colormaps. You only need to select the :guilabel:`number of entries`
 |selectnumber| and press the button :guilabel:`Classify`. Currently
 only one :guilabel:`Classification mode` |selectstring| is supported - 'Equal interval'
 
-.. _label_generaltab:
+.. index:: Pyramids
+
+Pyramids Menu
+-------------
+
+Large resolution raster layers can slow navigation in QGIS. By creating lower
+resolution copies of the data (pyramids), performance can be considerably
+improved as QGIS selects the most suitable resolution to use depending on the
+level of zoom.
+
+You must have write access in the directory where the original data is stored
+to build pyramids.
+
+Several resampling methods can be used to calculate the pyramids:
+
+* Nearest Neighbour
+* Average
+* Gauss
+* Cubic
+* Mode
+* None
+
+If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu 
+QGIS tries to build pyramids internally. You can also choose 'External' and 
+'External (Erdas Imagine)'.
+
+Please note that building pyramids may alter the original data file and once
+created they cannot be removed. If you wish to preserve a 'non-pyramided'
+version of your raster, make a backup copy prior to building pyramids.
+
+.. _label_histogram:
+
+Histogram Menu
+---------------
+
+.. index:: Histogram
+
+The :guilabel:`Histogram` menu allows you to view the distribution of the bands
+or colors in your raster. It is generated automatically when you open
+:guilabel:`Histogram` menu. All existing bands will be displayed together. You can
+save the histogram as an image with the |mActionFileSave| button.
 
 
 .. index:: Metadata
@@ -225,41 +266,3 @@ inside this tab.
 .. To update the statistics you need to change to tab
    :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
    (see :ref:`label_histogram`).
-
-.. index:: Pyramids
-
-Pyramids Tab
--------------
-
-Large resolution raster layers can slow navigation in QGIS. By creating lower
-resolution copies of the data (pyramids), performance can be considerably
-improved as QGIS selects the most suitable resolution to use depending on the
-level of zoom.
-
-You must have write access in the directory where the original data is stored
-to build pyramids.
-
-Several resampling methods can be used to calculate the pyramids:
-
-* Average
-* Nearest Neighbour
-
-When checking the checkbox |checkbox| :guilabel:`Build pyramids internally if possible`
-QGIS tries to build pyramids internally.
-
-Please note that building pyramids may alter the original data file and once
-created they cannot be removed. If you wish to preserve a 'non-pyramided'
-version of your raster, make a backup copy prior to building pyramids.
-
-
-.. _label_histogram:
-
-Histogram Tab
----------------
-
-.. index:: Histogram
-
-The :guilabel:`Histogram` tab allows you to view the distribution of the bands
-or colors in your raster. It is generated automaticaly when you open
-:guilabel:`Histogram` tab. All existing bands will be displayed together. You can
-save the histogram as an image with the |mActionFileSave| button.
