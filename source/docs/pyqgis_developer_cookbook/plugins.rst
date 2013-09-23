@@ -271,6 +271,8 @@ All of them have the same syntax as the :func:`addPluginToMenu` method.
 
 Adding your plugin menu to one of those predefined method is recommended to keep consistency in how plugin entries are organized. However, you can add your custom menu group directly to the menu bar, as the next example demonstrates:
 
+::
+
     def initGui(self):        
         self.menu = QMenu(self.iface.mainWindow())
         self.menu.setTitle("MyMenu")
@@ -294,6 +296,8 @@ Resource File
 
 You can see that in ``initGui()`` we've used an icon from the resource file
 (called :file:`resources.qrc` in our case)::
+
+::
 
   <RCC>
     <qresource prefix="/plugins/testplug" >
