@@ -127,6 +127,7 @@ Browser
 -------
 
 * **Improvements to in-app browser panel**:
+  
   * Directories can be filtered by wildcard or regex expressions
   * New Project home (parent directory of current project)
   * View Properties of the selected directory in a dialog
