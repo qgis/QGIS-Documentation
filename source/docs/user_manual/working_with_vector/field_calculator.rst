@@ -66,7 +66,7 @@ can add a numeration to your data set. To add a function to the Field calculator
 **Expression** box, click on the > and then doubleclick the function.
 
 A short example illustrates how the field calculator works. We want to
-calculate the length of the ``railroads`` layer from the QGIS sample dataset:
+calculate the length in km of the ``railroads`` layer from the QGIS sample dataset:
 
 #. Load the Shapefile :file:`railroads.shp` in |qg| and press |mActionOpenTable|
    :sup:`Open Attribute Table`.
@@ -76,8 +76,9 @@ calculate the length of the ``railroads`` layer from the QGIS sample dataset:
    calculations into a new field.
 #. Add ``length`` as Output field name, ``real`` as Output field type and
    define Output field width 10 and a Precision of 3.
-#. Now click on function ``length`` in the :guilabel:`Geometry` group to add it
-   as ``$length`` into the Field calculator expression box and click **[Ok]**.
+#. Now doubleclick on function ``$length`` in the :guilabel:`Geometry` group to add it
+   into the Field calculator expression box.
+#. Complete the expression by typing ''/ 1000'' in the Field calculator expression box and click **[Ok]**.
 #. You can now find a new column ``length`` in the attribute table.
 
 The available functions are listed below.
@@ -90,7 +91,7 @@ labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core applicatio
 
 .. index:: Field_Calculator_Functions
 
-
+.. % FIXME update, operators list must be updated for 2.0
 
 **Operators**
 
