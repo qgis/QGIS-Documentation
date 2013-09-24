@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-05-18 17:44\n"
-"PO-Revision-Date: 2013-09-23 17:35+0100\n"
+"PO-Revision-Date: 2013-09-24 13:50+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -2125,6 +2125,9 @@ msgid ""
 "imported trees map to make it a complete GRASS area vector (including both "
 "boundaries and centroids)."
 msgstr ""
+"Un étape intermédiaire est nécessaire : des centroïdes doivent importés afin "
+"d'avoir une couche GRASS vecteur complète (incluant les contours et les "
+"centroïdes)."
 
 # 6f245b835ebb42b7b3b51f6acc4531b6
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:925
@@ -2132,12 +2135,16 @@ msgid ""
 "From the toolbox choose :menuselection:`Vector --> Manage features`, and "
 "open the module **v.centroids**."
 msgstr ""
+"Dans la boite à outils choisissez :menuselection:`Vecteur -> Gestion des "
+"entités` et ouvrez le module **v.centroids**."
 
 # 6f7b388c9a4f44d4944dcce601caaab9
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:927
 msgid ""
 "Enter as the :guilabel:`output vector map` 'forest_areas' and run the module."
 msgstr ""
+"Entrez 'forest_areas' comme  :guilabel:`nom de couche en sortie` et lancez "
+"le module."
 
 # fa26b01524b744459cedde8981817425
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:928
@@ -2149,6 +2156,13 @@ msgid ""
 "`Classification field` to 'VEGDESC'. (Refer to the explanation of the "
 "symbology tab :ref:sec_symbology in the vector section)."
 msgstr ""
+"Maintenant ouvrez la couche vectorielle ``forest_areas`` et affichez les "
+"types de forêts avec différentes couleurs : caduques, persistentes, "
+"mélangées. Dans la fenêtre :guilabel:`Propriétés`, onglet  :guilabel:"
+"`symbologie` , choisissez le :guilabel:`Type de légende` |selectstring| "
+"'Valeur unique' et le champ 'VEGDESC' comme champ de classification. "
+"(Reportez vous aux explications de l'onglet Symbologie :ref:sec_symbology "
+"dans la section vecteur)."
 
 # 67f3e1eb4307488bb81df747f7d5be1b
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:934
@@ -2156,6 +2170,8 @@ msgid ""
 "Next reopen the GRASS toolbox and open :menuselection:`Vector --> Vector "
 "update` by other maps."
 msgstr ""
+"Réouvrez la boîte à outils GRASS et ouvrez :menuselection:`Vecteur -> Mise à "
+"jour vectorielle via d'autres cartes`."
 
 # 544118370c58444db9ca1bd13d4f66bf
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:936
@@ -2163,6 +2179,8 @@ msgid ""
 "Click on the **v.rast.stats** module. Enter ``gtopo30``, and "
 "``forest_areas``."
 msgstr ""
+"Cliquez sur le module **v.rast.stats**. Saisissez ``gtopo30`` et "
+"``forest_areas``."
 
 # 1b4a6a0c8bb44006bfe07ff3eba708d5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:937
@@ -2171,6 +2189,9 @@ msgid ""
 "``elev``, and click **[run]**. This is a computationally heavy operation "
 "which will run for a long time (probably up to two hours)."
 msgstr ""
+"Un seul paramètre additionnel est requis : Entrez ``elev`` pour le :guilabel:"
+"`column prefix`, et cliquez sur le bouton **[Lancer]**. C'est un opération "
+"lourde qui peut durer longtemps (jusqu'à deux heures)."
 
 # e3f88f547a9f4159a7d3dd9b7503af5d
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:940
@@ -2179,6 +2200,9 @@ msgid ""
 "new columns have been added including ``elev_min``, ``elev_max``, "
 "``elev_mean`` etc. for each forest polygon."
 msgstr ""
+"Pour finir, ouvrez la table attributaire de ``forest_areas``, et vérifiez "
+"que plusieurs nouvelles colonnes ont étés ajoutées dont ``elev_min``, "
+"``elev_max``, ``elev_mean``, etc. pour chaque polygone de forêt."
 
 # 10c96b559a22458f81896bd6b69f80b5
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:946
@@ -2192,6 +2216,9 @@ msgid ""
 "`LOCATION` browser. In figure_grass_module_7_ you can see the current "
 "working :file:`LOCATION` with its :file:`MAPSETs`."
 msgstr ""
+"Une autre fonctionnalité utile de la boîte à outils GRASS est le navigateur "
+"de :file:`SECTEUR` GRASS. Sur la figure figure_grass_module_7_ vous pouvez "
+"voir le :file:`SECTEUR` en cours avec ses :file:`Jeux de données`."
 
 # 3348ad8ecfaf43d4a3036f6e42b5826a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:954
@@ -2202,6 +2229,11 @@ msgid ""
 "bounding box, data source, connected attribute table for vector data and a "
 "command history."
 msgstr ""
+"Dans la partie gauche de la fenêtre vous pouvez naviguer dans tous les :file:"
+"`Jeux de données` du :file:`SECTEUR` courant. La partie droite de la fenêtre "
+"affiche des informations sur le raster ou le vecteur sélectionné, tel que la "
+"résolution, l'emprise, la source des données, les tables attributaires pour "
+"les vecteurs et un historique des commandes."
 
 # 25b066695ad0493688e5699520586fcd
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:972
@@ -2252,11 +2284,16 @@ msgid ""
 "your currently selected :file:`MAPSET`. All other tools also work with "
 "raster and vector layers in another :file:`MAPSET`."
 msgstr ""
+"Les commandes |grass_rename_map| :guilabel:`Renommer la carte sélectionnée` "
+"et |grass_delete_map| :guilabel:`Effacer la carte sélectionnée` ne "
+"fonctionnent qu'avec les cartes présentes dans votre :file:`Jeu de données` "
+"sélectionné. Tous les autres outils fonctionnent aussi avec les autres :file:"
+"`Jeux de données`."
 
 # 55927d645a804af4952630733bae8705
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:990
 msgid "Customizing the GRASS Toolbox"
-msgstr ""
+msgstr "Paramètrer la boîte à outils GRASS"
 
 # 5b63b8a1dd424191afff5f96c8aafb5a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:995
@@ -2265,6 +2302,10 @@ msgid ""
 "is provided to parse the pretty simple XML files which configures the "
 "modules appearance and parameters inside the toolbox."
 msgstr ""
+"Pratiquement tous les modules GRASS peuvent être ajoutés à la boîte à "
+"outils. Une interface XML est fournie pour analyser les fichiers XML très "
+"simples qui configurent l'apparence et les paramètres des modules dans la "
+"boîte à outils."
 
 # b8f0339c199e4b9ea6c8691a7cafe2ed
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:999
@@ -2272,6 +2313,8 @@ msgid ""
 "A sample XML file for generating the module ``v.buffer`` (v.buffer.qgm) "
 "looks like this:"
 msgstr ""
+"Un exemple de fichier XML pour le module ``v.buffer`` (v.buffer.qgm) est "
+"donné ci-dessous :"
 
 # a411c604a606483684900a97512676a0
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:1014
@@ -2282,3 +2325,8 @@ msgid ""
 "http://hub.qgis.org/projects/quantum-gis/wiki/"
 "Adding_New_Tools_to_the_GRASS_Toolbox"
 msgstr ""
+"L'analyseur lit cette définition et crée un nouvel onglet à l'intérieur de "
+"la boîte à outils lorsque vous sélectionnez le module. Une description plus "
+"détaillée pour ajouter des modules, changer les groupes de modules, etc. est "
+"disponible sur le wiki QGIS à l'adresse http://hub.qgis.org/projects/quantum-"
+"gis/wiki/Adding_New_Tools_to_the_GRASS_Toolbox"
