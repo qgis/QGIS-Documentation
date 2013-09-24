@@ -66,12 +66,29 @@ QGIS can render raster layers in three different ways:
    representing the red, green or blue component that will be used to create
    a color image. You can choose several :guilabel:`Contrast enhancement` methods:
    'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'
-#. Paletted - 
+#. Paletted - here you can create individual colormaps for the raster file
 #. Single band gray- one band of the image will be rendered as gray 
 #. Single band pseudocolour - 
 
 Within both render types you can invert the color output using the
 |checkbox| :guilabel:`Invert color map` checkbox.
+
+
+**Multi band color**
+
+This selection offers you a wide range of options to modify the appearance
+of your rasterlayer. For example you could switch color-bands from the
+standard RGB-order to something else.
+
+Also scaling of colors are available.
+
+.. tip:: **Viewing a Single Band of a Multiband Raster**
+
+   If you want to view a single band (for example Red) of a multiband
+   image, you might think you would set the Green and Blue bands to
+   "Not Set". But this is not the correct way. To display the Red band,
+   set the image type to grayscale, then select Red as the band to use for Gray.
+
 
 **Single Band Rendering**
 
@@ -102,20 +119,47 @@ This is useful when you have one or two cells with abnormally high values in
 a raster grid that are having a negative impact on the rendering of the raster.
 This option is only available for pseudocolor and freak out images.
 
-**Three band color**
 
-This selection offers you a wide range of options to modify the appearance
-of your rasterlayer. For example you could switch color-bands from the
-standard RGB-order to something else.
+.. _label_colormaptab:
 
-Also scaling of colors are available.
+.. index:: Colormap
 
-.. tip:: **Viewing a Single Band of a Multiband Raster**
+The :guilabel:`Colormap` settings are available through the 'Singleband pseudocolor' 
+:guilabel:`Render type`
 
-   If you want to view a single band (for example Red) of a multiband
-   image, you might think you would set the Green and Blue bands to
-   "Not Set". But this is not the correct way. To display the Red band,
-   set the image type to grayscale, then select Red as the band to use for Gray.
+.. index:: Color_interpolation, Discrete
+
+Three ways of color interpolation are available:
+
+#. Discrete
+#. Linear
+#. Exact
+
+
+The button **[Add Entry]** adds a color to the individual color table. Button
+**[Delete Entry]** deletes a color from the individual color table and the
+**[Sort]** button sorts the color table according to the pixel values in the
+value column. Double clicking on the value-column lets you insert a specific
+value. Double clicking on the color-column opens the dialog :guilabel:`Select color`
+where you can select a color to apply on that value. Further you can also add
+labels for each color but this value won't be displayed when you use the identify
+feature tool.
+
+You can also click on the button |mActionNewAttribute| :sup:`Load color map from band`,
+which tries to load the table from the band (if it has any). And you can use the
+buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSave|
+:sup:`Export color map to file` to load an existing color table or to save the
+defined color table for other sessions.
+
+The block :guilabel:`Generate new color map` allows you to create newly
+categorized colormaps. You only need to select the :guilabel:`number of entries`
+|selectnumber| and press the button :guilabel:`Classify`. Currently
+only one :guilabel:`Classification mode` |selectstring| is supported - 'Equal interval'
+
+--> invert
+
+Color rendering
+...............
 
 .. index:: Contrast_enhancement
 
@@ -125,6 +169,11 @@ Also scaling of colors are available.
    When adding GRASS rasters the option *Contrast enhancement* will be
    always set to automatically to *stretch to min max* regardless if
    the QGIS general options this is set to another value.
+
+
+Resampling
+..........
+
 
 .. index:: Transparency
 
@@ -167,45 +216,6 @@ quite a lot of work. Therefore you can use the button |mActionFileSave|
 |mActionFileOpen| :sup:`Import from file` loads your transparency settings and
 applies them to the current raster layer.
 
-
-.. _label_colormaptab:
-
-Colormap
---------
-
-.. index:: Colormap
-
-The :guilabel:`Colormap` menu is only available, when you have selected a singleband
-rendering within the :guilabel:`Style` tab (see :ref:`label_symbology`).
-
-.. index:: Color_interpolation, Discrete
-
-Three ways of color interpolation are available:
-
-#. Discrete
-#. Linear
-#. Exact
-
-
-The button **[Add Entry]** adds a color to the individual color table. Button
-**[Delete Entry]** deletes a color from the individual color table and the
-**[Sort]** button sorts the color table according to the pixel values in the
-value column. Double clicking on the value-column lets you insert a specific
-value. Double clicking on the color-column opens the dialog :guilabel:`Select color`
-where you can select a color to apply on that value. Further you can also add
-labels for each color but this value won't be displayed when you use the identify
-feature tool.
-
-You can also click on the button |mActionNewAttribute| :sup:`Load color map from band`,
-which tries to load the table from the band (if it has any). And you can use the
-buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSave|
-:sup:`Export color map to file` to load an existing color table or to save the
-defined color table for other sessions.
-
-The block :guilabel:`Generate new color map` allows you to create newly
-categorized colormaps. You only need to select the :guilabel:`number of entries`
-|selectnumber| and press the button :guilabel:`Classify`. Currently
-only one :guilabel:`Classification mode` |selectstring| is supported - 'Equal interval'
 
 .. index:: Pyramids
 
@@ -252,7 +262,7 @@ save the histogram as an image with the |mActionFileSave| button.
 
 .. index:: Metadata
 
-Metadata Tab
+Metadata Menu
 -------------
 
 The :guilabel:`Metadata` tab displays a wealth of information about the raster layer,
@@ -260,7 +270,7 @@ including statistics about each band in the current raster layer. Statistics
 are gathered on a 'need to know' basis, so it may well be that a given layers
 statistics have not yet been collected.
 
-This tab is mainly for information. You cannot change any values printed
+This menu is mainly for information. You cannot change any values printed
 inside this tab. 
 
 .. To update the statistics you need to change to tab
