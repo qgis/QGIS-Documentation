@@ -59,6 +59,8 @@ This code
 
 Has the same effect as this one:
 
+::
+
   print feature.attributes()['name']
 
 
