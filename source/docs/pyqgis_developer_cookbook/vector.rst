@@ -86,7 +86,7 @@ This will iterate over all the features in the layer, in case there is no select
 Iterating over a subset of features
 -------------------------------------
 
-If you want to iterate over a given subset of features in a layer, such as those within a given area, you have to add a :obj:`QgsFeatureRequest`object to the :func:`getFeatures()` call. Here's an example
+If you want to iterate over a given subset of features in a layer, such as those within a given area, you have to add a :obj:`QgsFeatureRequest` object to the :func:`getFeatures()` call. Here's an example
 
 ::
 
