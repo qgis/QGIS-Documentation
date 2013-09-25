@@ -60,24 +60,27 @@ Style Menu
 Band rendering
 ..............
 
-QGIS can render raster layers in three different ways:
+QGIS renders raster layers -dependent on the datatype- in four different ways:
 
-#. Multi band color - three bands from the image will be rendered, each band
-   representing the red, green or blue component that will be used to create
-   a color image. You can choose several :guilabel:`Contrast enhancement` methods:
-   'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'
-#. Paletted - here you can create individual colormaps for the raster file
-#. Single band gray- one band of the image will be rendered as gray 
-#. Single band pseudocolour - 
-
-Within both render types you can invert the color output using the
-|checkbox| :guilabel:`Invert color map` checkbox.
+#. Multiband color - if the file comes as a multi band with several bands (e.g. a satellite image 
+   with several bands)
+#. Paletted - if a single band file comes with an indexed palette (e.g. a ...)
+#. Singleband gray- (one band of) the image will be rendered as gray, QGIS will choose this renderer 
+   if the file neither has multi bands, nor has an indexed palette nor has a continous palette 
+   (e.g. a ...)
+#. Singleband pseudocolor - this renderer is for files with a continuous palette, e.g. the file
+   has got a color map (e.g. a ...)
 
 
-**Multi band color**
+**Multiband color**
 
+three bands from the image will be rendered, each band
+representing the red, green or blue component that will be used to create
+a color image. You can choose several :guilabel:`Contrast enhancement` methods:
+'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
 This selection offers you a wide range of options to modify the appearance
-of your rasterlayer. For example you could switch color-bands from the
+of your rasterlayer. Within both render types you can invert the color output using the
+|checkbox| :guilabel:`Invert color map` checkbox.For example you could switch color-bands from the
 standard RGB-order to something else.
 
 Also scaling of colors are available.
@@ -89,28 +92,16 @@ Also scaling of colors are available.
    "Not Set". But this is not the correct way. To display the Red band,
    set the image type to grayscale, then select Red as the band to use for Gray.
 
+**Paletted**
 
-**Single Band Rendering**
 
-This selection offers you two possibilites to choose. At first you can
-select which band you like to use for rendering (if the dataset has more than
+**Singleband gray **
+
+This selection allows you to render a single band with a :guilabel:`Color gradient`
+'Black to white' or 'White to black'.
+At first you can select which band you like to use for rendering (if the dataset has more than
 one band).
-
-The second option offers a selection of available colortables for rendering.
-
-The following settings are available through the dropdownbox
-:guilabel:`Color map` |selectstring|
-
-.. index:: Pseudocolor, Freak_out, Grayscale
-
-* Grayscale (default)
-* Pseudocolor
-* Freak Out
-* Colormap
-
-When selecting the entry 'Colormap' from :guilabel:`Color map` |selectstring|
-combobox, the tab :guilabel:`Colormap` becomes available. For more information
-see :ref:`label_colormaptab`.
+You can define a :guilabel:`Min` and a :guilabel:`Max` value
 
 QGIS can restrict the data displayed to only show cells whose values are
 within a given number of standard deviations of the mean for the layer.
@@ -119,13 +110,14 @@ This is useful when you have one or two cells with abnormally high values in
 a raster grid that are having a negative impact on the rendering of the raster.
 This option is only available for pseudocolor and freak out images.
 
+**Singleband pseudocolor**
+
+Though this is the standard for single band files including a continous palette  
+you can also create individual colormaps for the single bands here.
 
 .. _label_colormaptab:
 
 .. index:: Colormap
-
-The :guilabel:`Colormap` settings are available through the 'Singleband pseudocolor' 
-:guilabel:`Render type`
 
 .. index:: Color_interpolation, Discrete
 
@@ -136,27 +128,29 @@ Three ways of color interpolation are available:
 #. Exact
 
 
-The button **[Add Entry]** adds a color to the individual color table. Button
-**[Delete Entry]** deletes a color from the individual color table and the
-**[Sort]** button sorts the color table according to the pixel values in the
-value column. Double clicking on the value-column lets you insert a specific
-value. Double clicking on the color-column opens the dialog :guilabel:`Select color`
-where you can select a color to apply on that value. Further you can also add
-labels for each color but this value won't be displayed when you use the identify
+The button |mActionSignPlus| :sup:`Add values manually` adds a value to the
+individual color table. Button |mActionSignMinus| :sup:`Remove selected row` 
+deletes a value from the individual color table and the
+|mActionArrowDown| :sup:`Sort colormap items` button sorts the color table according
+to the pixel values in the value column. Double clicking on the value-column lets 
+you insert a specific value. Double clicking on the color-column opens the dialog
+:guilabel:`Change color` where you can select a color to apply on that value. Further
+you can also add labels for each color but this value won't be displayed when you use the identify
 feature tool.
 
-You can also click on the button |mActionNewAttribute| :sup:`Load color map from band`,
+You can also click on the button |mActionDraw| :sup:`Load color map from band`,
 which tries to load the table from the band (if it has any). And you can use the
-buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSave|
+buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSaveAs|
 :sup:`Export color map to file` to load an existing color table or to save the
 defined color table for other sessions.
 
 The block :guilabel:`Generate new color map` allows you to create newly
 categorized colormaps. You only need to select the :guilabel:`number of entries`
 |selectnumber| and press the button :guilabel:`Classify`. Currently
-only one :guilabel:`Classification mode` |selectstring| is supported - 'Equal interval'
+as :guilabel:`Classification mode` |selectstring| 'Continous' and 'Equal interval' 
+are possible. 
 
---> invert
+--> invert color !
 
 Color rendering
 ...............
