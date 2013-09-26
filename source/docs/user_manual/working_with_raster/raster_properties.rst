@@ -74,7 +74,19 @@ QGIS renders raster layers -dependent on the datatype- in four different ways:
 
 **Multiband color**
 
-three bands from the image will be rendered, each band
+.. _figure_raster_2:
+
+.. only:: html
+
+   **Figure Raster 2:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterMultibandColor.png
+   :align: center
+   :width: 30em
+
+   Raster Renderer - Multiband color |nix|
+
+Three bands from the image will be rendered, each band
 representing the red, green or blue component that will be used to create
 a color image. You can choose several :guilabel:`Contrast enhancement` methods:
 'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
@@ -92,8 +104,31 @@ Also scaling of colors are available.
 
 **Paletted**
 
+.. _figure_raster_3:
+
+.. only:: html
+
+   **Figure Raster 3:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterPaletted.png
+   :align: center
+   :width: 30em
+
+   Raster Renderer - Paletted |nix|
 
 **Singleband gray**
+
+.. _figure_raster_4:
+
+.. only:: html
+
+   **Figure Raster 4:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterSingleBandGray.png
+   :align: center
+   :width: 30em
+
+   Raster Renderer - Singleband gray |nix|
 
 This selection allows you to render a single band with a :guilabel:`Color gradient`
 'Black to white' or 'White to black'.
@@ -109,6 +144,18 @@ a raster grid that are having a negative impact on the rendering of the raster.
 This option is only available for pseudocolor and freak out images.
 
 **Singleband pseudocolor**
+
+.. _figure_raster_5:
+
+.. only:: html
+
+   **Figure Raster 5:**
+
+.. figure:: /static/user_manual/working_with_raster/rasterSingleBandPseudocolor.png
+   :align: center
+   :width: 30em
+
+   Raster Renderer - Singleband pseudocolor |nix|
 
 Though this is the standard for single band files including a continous palette  
 you can also create individual colormaps for the single bands here.
