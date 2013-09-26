@@ -60,7 +60,8 @@ Style Menu
 Band rendering
 ..............
 
-QGIS renders raster layers -dependent on the datatype- in four different ways:
+QGIS offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
+data type.
 
 #. Multiband color - if the file comes as a multi band with several bands (e.g. a satellite image 
    with several bands)
@@ -92,9 +93,26 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
    Raster Renderer - Multiband color |nix|
 
 This selection offers you a wide range of options to modify the appearance
-of your rasterlayer.
+of your rasterlayer. First of all you have to get the data range from your
+image. This can be done by choosing the :guilabel:`Extent` and pressing 
+**[Load]**. QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the 
+:guilabel:`Min` and :guilabel:`Max` values of the bands or use the
+|radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
-Also scaling of colors are available.
+Now you can scale the colors with the help of :guilabel:`Load min/max values`.
+A lot of images have few very low and high data. These outliers can be eliminated
+using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set 
+from 2% until 98% of the data values and can be adapted manually. With this
+setting the gray character of the image can disappear.
+With the scaling option |radiobuttonoff| :guilabel:`Min/max` QGIS creates a color table with 
+the whole data included in the original image. E.g. QGIS creates a color table
+with 256 values, given the fact that you have 8bit bands. 
+You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
+Then only the values within the standard deviation or multiple standard deviations 
+are considered for the color table. This is useful if ...
+
+All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` extend.
+
 
 .. tip:: **Viewing a Single Band of a Multiband Raster**
 
