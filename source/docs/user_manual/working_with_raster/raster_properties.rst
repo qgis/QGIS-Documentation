@@ -74,6 +74,11 @@ QGIS renders raster layers -dependent on the datatype- in four different ways:
 
 **Multiband color**
 
+With the multiband color renderer three selected bands from the image will be rendered, each band
+representing the red, green or blue component that will be used to create a color image. You can 
+choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stretch to MinMax', 
+'Stretch and clip to MinMax' and 'Clip to min max'.
+
 .. _figure_raster_2:
 
 .. only:: html
@@ -86,10 +91,6 @@ QGIS renders raster layers -dependent on the datatype- in four different ways:
 
    Raster Renderer - Multiband color |nix|
 
-Three bands from the image will be rendered, each band
-representing the red, green or blue component that will be used to create
-a color image. You can choose several :guilabel:`Contrast enhancement` methods:
-'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
 This selection offers you a wide range of options to modify the appearance
 of your rasterlayer.
 
@@ -118,6 +119,10 @@ Also scaling of colors are available.
 
 **Singleband gray**
 
+This renderer allows you to render a single band with a :guilabel:`Color gradient` 'Black to white' 
+or 'White to black'. At first you can select which band you like to use for rendering (if the 
+dataset has more than one band). You can define a :guilabel:`Min` and a :guilabel:`Max` value.
+
 .. _figure_raster_4:
 
 .. only:: html
@@ -130,12 +135,6 @@ Also scaling of colors are available.
 
    Raster Renderer - Singleband gray |nix|
 
-This selection allows you to render a single band with a :guilabel:`Color gradient`
-'Black to white' or 'White to black'.
-At first you can select which band you like to use for rendering (if the dataset has more than
-one band).
-You can define a :guilabel:`Min` and a :guilabel:`Max` value
-
 QGIS can restrict the data displayed to only show cells whose values are
 within a given number of standard deviations of the mean for the layer.
 
@@ -144,6 +143,9 @@ a raster grid that are having a negative impact on the rendering of the raster.
 This option is only available for pseudocolor and freak out images.
 
 **Singleband pseudocolor**
+
+Though this is the standard for single band files including a continous palette  
+you can also create individual colormaps for the single bands here.
 
 .. _figure_raster_5:
 
@@ -156,9 +158,6 @@ This option is only available for pseudocolor and freak out images.
    :width: 30em
 
    Raster Renderer - Singleband pseudocolor |nix|
-
-Though this is the standard for single band files including a continous palette  
-you can also create individual colormaps for the single bands here.
 
 .. _label_colormaptab:
 
