@@ -79,9 +79,7 @@ representing the red, green or blue component that will be used to create
 a color image. You can choose several :guilabel:`Contrast enhancement` methods:
 'No enhancement', 'Stretch to MinMax', 'Stretch and clip to MinMax' and 'Clip to min max'.
 This selection offers you a wide range of options to modify the appearance
-of your rasterlayer. Within both render types you can invert the color output using the
-|checkbox| :guilabel:`Invert color map` checkbox.For example you could switch color-bands from the
-standard RGB-order to something else.
+of your rasterlayer.
 
 Also scaling of colors are available.
 
@@ -95,7 +93,7 @@ Also scaling of colors are available.
 **Paletted**
 
 
-**Singleband gray **
+**Singleband gray**
 
 This selection allows you to render a single band with a :guilabel:`Color gradient`
 'Black to white' or 'White to black'.
@@ -145,10 +143,11 @@ buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSaveAs|
 defined color table for other sessions.
 
 The block :guilabel:`Generate new color map` allows you to create newly
-categorized colormaps. You only need to select the :guilabel:`number of entries`
-|selectnumber| and press the button :guilabel:`Classify`. Currently
-as :guilabel:`Classification mode` |selectstring| 'Continous' and 'Equal interval' 
-are possible. 
+categorized colormaps. For the :guilabel:`Classification mode` |selectstring| 'Equal interval'
+you only need to select the :guilabel:`number of entries`
+|selectnumber| and press the button :guilabel:`Classify`. In case of the 
+:guilabel:`Classification mode` |selectstring| 'Continous' QGIS creates
+classes depending on the :guilabel:`Min` and :guilabel:`Max` automatically.
 
 --> invert color !
 
