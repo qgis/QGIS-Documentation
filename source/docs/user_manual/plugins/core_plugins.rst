@@ -23,7 +23,6 @@ Icon                    Plugin                    Description                   
 |delimited_text|        Add Delimited Text Layer  Loads text files containing x,y coordinates             :ref:`label_dltext`
 |coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |icon_dbmanager|        DB Manager                Manage your databases within QGIS                       :ref:`dbmanager`
-\                       Diagram Overlay           Add Diagrams for vectors                                :ref:`diagram_overlay`
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                    :ref:`dxf2shape`
 |event_id|              eVis                      Event Visualization Tool                                :ref:`evis`
 |ftools|                fTools                    A suite of vector tools                                 :ref:`ftools`
