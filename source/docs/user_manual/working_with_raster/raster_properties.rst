@@ -65,13 +65,14 @@ data type.
 
 #. Multiband color - if the file comes as a multi band with several bands (e.g. a satellite image 
    with several bands)
-#. Paletted - if a single band file comes with an indexed palette (e.g. a ...)
+#. Paletted - if a single band file comes with an indexed palette (e.g. a digital topographic map)
 #. Singleband gray- (one band of) the image will be rendered as gray, QGIS will choose this renderer 
    if the file neither has multi bands, nor has an indexed palette nor has a continous palette 
    (e.g. a ...)
 #. Singleband pseudocolor - this renderer is for files with a continuous palette, e.g. the file
    has got a color map (e.g. a ...)
 
+.. _multiband_color:
 
 **Multiband color**
 
@@ -99,7 +100,7 @@ image. This can be done by choosing the :guilabel:`Extent` and pressing
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
-Now you can scale the colors with the help of :guilabel:`Load min/max values`.
+Now you can scale the colors with the help of the :guilabel:`Load min/max values` section.
 A lot of images have few very low and high data. These outliers can be eliminated
 using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set 
 from 2% until 98% of the data values and can be adapted manually. With this
@@ -108,7 +109,7 @@ With the scaling option |radiobuttonoff| :guilabel:`Min/max` QGIS creates a colo
 the whole data included in the original image. E.g. QGIS creates a color table
 with 256 values, given the fact that you have 8bit bands. 
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
-Then only the values within the standard deviation or multiple standard deviations 
+Then only the values within the standard deviation or within multiple standard deviations 
 are considered for the color table. This is useful if ...
 
 All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` extend.
@@ -119,9 +120,14 @@ All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` ex
    If you want to view a single band (for example Red) of a multiband
    image, you might think you would set the Green and Blue bands to
    "Not Set". But this is not the correct way. To display the Red band,
-   set the image type to grayscale, then select Red as the band to use for Gray.
+   set the image type to 'Singleband gray', then select Red as the band to use for Gray.
 
 **Paletted**
+
+This is the standard renderer for singleband files that already include a color table, 
+where each pixel value is assigned to a certain color. In that case, the palette is 
+rendered automatically. If you want to change colors assigned to certain values, just double-click
+on the color and the :guilabel:`Select color` dialog appears. 
 
 .. _figure_raster_3:
 
@@ -137,9 +143,12 @@ All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` ex
 
 **Singleband gray**
 
-This renderer allows you to render a single band with a :guilabel:`Color gradient` 'Black to white' 
-or 'White to black'. At first you can select which band you like to use for rendering (if the 
-dataset has more than one band). You can define a :guilabel:`Min` and a :guilabel:`Max` value.
+This renderer allows you to render a single band layer with a :guilabel:`Color gradient`
+'Black to white' or 'White to black'. You can define a :guilabel:`Min` 
+and a :guilabel:`Max` value with choosing the :guilabel:`Extend` first and
+then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the 
+:guilabel:`Min` and :guilabel:`Max` values of the bands or use the
+|radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
 .. _figure_raster_4:
 
@@ -153,17 +162,24 @@ dataset has more than one band). You can define a :guilabel:`Min` and a :guilabe
 
    Raster Renderer - Singleband gray |nix|
 
-QGIS can restrict the data displayed to only show cells whose values are
-within a given number of standard deviations of the mean for the layer.
 
+With the :guilabel:`Load min/max values` section scaling of the color table 
+is possible. Outliers can be eliminated using the |radiobuttonon| :guilabel:`Cumulative count cut` setting.
+The standard data range is set from 2% until 98% of the data values and can
+be adapted manually. With this setting the gray character of the image can disappear.
+Further settings can be made with |radiobuttonoff| :guilabel:`Min/max` and 
+|radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
+While the first one creates a color table with the whole data included in the 
+original image the second creates a colortable that only considers values
+within the standard deviation or within multiple standard deviations.
 This is useful when you have one or two cells with abnormally high values in
 a raster grid that are having a negative impact on the rendering of the raster.
-This option is only available for pseudocolor and freak out images.
+
 
 **Singleband pseudocolor**
 
-Though this is the standard for single band files including a continous palette  
-you can also create individual colormaps for the single bands here.
+This is the standard for single band files including a continous palette.  
+You can also create individual color maps for the single bands here.
 
 .. _figure_raster_5:
 
@@ -183,14 +199,14 @@ you can also create individual colormaps for the single bands here.
 
 .. index:: Color_interpolation, Discrete
 
-Three ways of color interpolation are available:
+Three types of color interpolation are available:
 
 #. Discrete
 #. Linear
 #. Exact
 
 
-The button |mActionSignPlus| :sup:`Add values manually` adds a value to the
+In the left block the button |mActionSignPlus| :sup:`Add values manually` adds a value to the
 individual color table. Button |mActionSignMinus| :sup:`Remove selected row` 
 deletes a value from the individual color table and the
 |mActionArrowDown| :sup:`Sort colormap items` button sorts the color table according
@@ -199,21 +215,32 @@ you insert a specific value. Double clicking on the color-column opens the dialo
 :guilabel:`Change color` where you can select a color to apply on that value. Further
 you can also add labels for each color but this value won't be displayed when you use the identify
 feature tool.
-
 You can also click on the button |mActionDraw| :sup:`Load color map from band`,
 which tries to load the table from the band (if it has any). And you can use the
 buttons |mActionFileOpen| :sup:`Load color map from file` or |mActionFileSaveAs|
 :sup:`Export color map to file` to load an existing color table or to save the
 defined color table for other sessions.
 
-The block :guilabel:`Generate new color map` allows you to create newly
-categorized colormaps. For the :guilabel:`Classification mode` |selectstring| 'Equal interval'
-you only need to select the :guilabel:`number of entries`
-|selectnumber| and press the button :guilabel:`Classify`. In case of the 
-:guilabel:`Classification mode` |selectstring| 'Continous' QGIS creates
-classes depending on the :guilabel:`Min` and :guilabel:`Max` automatically.
 
---> invert color !
+In the right block :guilabel:`Generate new color map` allows you to create newly
+categorized colormaps. For the :guilabel:`Classification mode` |selectstring| 'Equal interval'
+you only need to select the :guilabel:`number of classes`
+|selectnumber| and press the button :guilabel:`Classify`. You can invert the colors
+of the the color map by clicking the |checkbox| :guilabel:`Invert` 
+checkbox. In case of the :guilabel:`Mode` |selectstring| 'Continous' QGIS creates
+classes depending on the :guilabel:`Min` and :guilabel:`Max` automatically.
+Defining :guilabel:`Min/Max` values can be done with the help of :guilabel:`Load min/max values` section.
+A lot of images have few very low and high data. These outliers can be eliminated
+using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set 
+from 2% until 98% of the data values and can be adapted manually. With this
+setting the gray character of the image can disappear.
+With the scaling option |radiobuttonoff| :guilabel:`Min/max` QGIS creates a color table with 
+the whole data included in the original image. E.g. QGIS creates a color table
+with 256 values, given the fact that you have 8bit bands. 
+You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
+Then only the values within the standard deviation or within multiple standard deviations 
+are considered for the color table.
+
 
 Color rendering
 ...............
