@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -165,14 +165,14 @@ Analysis
 |                                                        | of target pixel values. For more information see      |
 |                                                        | http://www.gdal.org/gdal_proximity.html .             |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_grid| :guilabel:`Grid`                           | This utility creates regular grid (raster) from the   |
+| |gdal_grid| :guilabel:`Grid (Interpolation)`           | This utility creates regular grid (raster) from the   |
 |                                                        | scattered data read from the OGR datasource. Input    |
 |                                                        | data will be interpolated to fill grid nodes with     |
 |                                                        | values, you can choose from various interpolation     |
 |                                                        | methods. The utility is also described on the GDAL    |
 |                                                        | website http://www.gdal.org/gdal_grid.html .          |
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_dem| :guilabel:`DEM terrain models`              | Tools to analyze and visualize DEMs. It can create a  |
+| |gdal_dem| :guilabel:`DEM (Terrain models)`            | Tools to analyze and visualize DEMs. It can create a  |
 |                                                        | shaded relief, a slope, an aspect, a color relief, a  |
 |                                                        | Terrain Ruggedness Index, a Topographic Position Index|
 |                                                        | and a roughness map from any GDAL-supported elevation |
@@ -185,7 +185,7 @@ Analysis
 Miscellaneous
 .............
 +--------------------------------------------------------+-------------------------------------------------------+
-| |gdal_vrt| :guilabel:`Build Virtual Raster`            | This program builds a VRT (Virtual Dataset) that is a |
+| |gdal_vrt| :guilabel:`Build Virtual Raster (Catalog)`  | This program builds a VRT (Virtual Dataset) that is a |
 |                                                        | mosaic of the list of input gdal datasets. See also   |
 |                                                        | http://www.gdal.org/gdalbuildvrt.html .               |
 +--------------------------------------------------------+-------------------------------------------------------+

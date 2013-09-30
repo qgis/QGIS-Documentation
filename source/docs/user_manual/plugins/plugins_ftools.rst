@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -158,7 +158,7 @@ Geometry tools
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
 | |check_geometry|    | Check geometry  | Check polygons for intersections,    |
-|                     |                 | closed-holes, and fix node ordering. |
+|                     | validity        | closed-holes, and fix node ordering. |
 +---------------------+-----------------+--------------------------------------+
 | |export_geometry|   | Export/Add      | Add vector layer geometry info to    |
 |                     | geometry columns| point (XCOORD, YCOORD), line         |
@@ -217,7 +217,7 @@ Data management tools
 +---------------------+-----------------+--------------------------------------+
 | **Icon**            | **Tool**        | **Purpose**                          |
 +=====================+=================+======================================+
-| |define_projection| | Define          | Specify the CRS for shapefiles whose |
+| |define_projection| | Define current  | Specify the CRS for shapefiles whose |
 |                     | projection      | CRS has not been defined.            |
 +---------------------+-----------------+--------------------------------------+
 | |join_location|     | Join attributes | Join additional attributes to vector |

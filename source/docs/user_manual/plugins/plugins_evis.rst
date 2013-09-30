@@ -95,8 +95,6 @@ E. **Attribute information window**: All of the attribute information for the
    data will be displayed in green.
 F. **Navigation buttons**: Use the Previous and Next buttons to load the previous
    or next feature when more than one feature is selected.
-G. **Feature indicator**: This heading indicates which feature is being displayed
-   and how many features are available for display.
 
 .. _`evis_options_window`:
 
@@ -121,11 +119,11 @@ A. **File path**: A dropdown list to specify the attribute field that contains
    clicked. The base path for a relative path can be entered in the :guilabel:`Base
    Path` text box below. Information about the different options for specifying
    the file location are noted in the section :ref:`evis_specifying` below.
-B. **Compass bearing display field**: A dropdown list to specify the attribute
+B. **Compass bearing**: A dropdown list to specify the attribute
    field that contains the compass bearing associated with the photograph being
    displayed. If compass bearing information is available it is necessary to
    click the checkbox to the left of the dropdown menu title.
-C. **Compass offset setting**: Compass offsets can be used to compensate for
+C. **Compass offset**: Compass offsets can be used to compensate for
    declination (adjust bearings collected using magnetic bearings to true north
    bearings). Click the |radiobuttonon| :guilabel:`Manual` radiobutton to enter
    the offset in the text box or click the |radiobuttonon|
@@ -268,7 +266,7 @@ Launch the Event ID module
 ..........................
 
 To launch the 'Event ID' module either click on the |event_id| :sup:`Event ID`
-icon or click on :menuselection:`Plugins --> eVis --> Event ID Tool`. This will
+icon or click on :menuselection:`Database --> eVis --> Event ID Tool`. This will
 cause the cursor to change to an arrow with an 'i' on top of it signifying that
 the ID tool is active.
 
@@ -289,10 +287,10 @@ Database connection
 The 'Database Connection' module provides tools to connect to and query a
 database or other ODBC resource, such as a spreadsheet.
 
-eVis can directly connect to four types of databases: Microsoft Access,
-PostgreSQL, MySQL, SQLite, and can also read from ODBC connections. When
-reading from an ODBC database (such as an Excel spreadsheet) it is necessary
-to configure your ODBC driver for the operating system you are using.
+eVis can directly connect to four types of databases:PostgreSQL, MySQL, SQLite,
+and can also read from ODBC connections (e.g.MS Access). When reading from an
+ODBC database (such as an Excel spreadsheet) it is necessary to configure your
+ODBC driver for the operating system you are using.
 
 .. _`evis_launch_database`:
 
@@ -300,7 +298,7 @@ Launch the Database Connection module
 .....................................
 
 To launch the 'Database Connection' module either click on the appropriate icon
-|evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Plugins -->
+|evis_connect| :sup:`eVis Database Connection` or click on :menuselection:`Database -->
 eVis --> Database Connection`. This will launch the :guilabel:`Database Connection`
 window. The window has three tabs: :guilabel:`Predefined Queries`,
 :guilabel:`Database Connection`, and :guilabel:`SQL Query`. The :guilabel:`Output
@@ -466,7 +464,7 @@ appear in the :guilabel:`Output Console` window.
 
    The *eVis* Predefined queries tab |win|
 
-A. **Open Query File**: Launches the "Open File" file browser to search for
+A. **Open File**: Launches the "Open File" file browser to search for
    the XML file holding the predefined queries.
 B. **Predefined Queries**: A dropdown list with all of the queries defined by
    the predefined queries XML file.

@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -33,7 +33,9 @@ coordinates on the map canvas for two selected Coordinate Reference Systems (CRS
    :ref:`load_core_plugin`) and ensure that the dialog is visible by going to
    :menuselection:`View --> Panels` and ensuring that |checkbox|
    :guilabel:`Coordinate Capture` is enabled. The coordinate capture dialog
-   appears as shown in Figure figure_coordinate_capture_1_.
+   appears as shown in Figure figure_coordinate_capture_1_. Alternatively,
+   you can also go to :menuselection:`Vector --> Coordinate Capture` and see
+   if |checkbox| :guilabel:`Coordinate Capture` is enabled.
 #. Click on the |geographic| :sup:`Click to the select the CRS to use for
    coordinate display` icon and select a different CRS from the one you selected
    above.

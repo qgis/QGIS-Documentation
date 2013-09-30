@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -8,7 +8,7 @@ DB Manager Plugin
 =================
 
 The DB Manager Plugin is officially part of |qg| core and intends to replace the
-SPIT Plugin and the PostGIS Manager Plugin and additionally to integrate all other
+SPIT Plugin and additionally to integrate all other
 database formats supported by |qg| in one user interface. The |icon_dbmanager|
 :sup:`DB Manager` Plugin provides several features. You can drag layers from the
 QGIS Browser into the DB Manager and it will import your layer into your spatial
