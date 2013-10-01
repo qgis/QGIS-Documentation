@@ -166,23 +166,23 @@ algorithm is also dependent on the type and quality of input data and the
 amount of geometric distortion that you are willing to introduce to final
 result.
 
-Currently, following algorithms are available:
+Currently, following :guilabel:`Transformation types` are available:
 
-*  The **Linear algorithm** is used to create a world-file, and is different
+*  The **Linear** algorithm is used to create a world-file, and is different
    from the other algorithms, as it does not actually transform the raster.
    This algorithm likely won't be sufficient if you are dealing with scanned
    material.
-*  The **Helmert transformation** performs simple scaling and rotation
+*  The **Helmert** transformation performs simple scaling and rotation
    transformations.
-*  The **Polynomial algorithms** 1-3 are among the most widely used algorithms
+*  The **Polynomial** algorithms 1-3 are among the most widely used algorithms
    introduced to match source and destination ground control points. The most
    widely used polynomial algorithm is the second order polynomial transformation,
    which allows some curvature. First order polynomial transformation (affine)
    preserves colliniarity and allows scaling, translation and rotation only.
-*  The **Thin plate spline (TPS) algorithm** is a more modern georeferencing
+*  The **Thin Plate Spline** (TPS) algorithm is a more modern georeferencing
    method, which is able to introduce local deformations in the data. This
    algorithm is useful when very low quality originals are being georeferenced.
-*  The **Projective transformation** is a linear rotation and translation
+*  The **Projective** transformation is a linear rotation and translation
    of coordinates.
 
 Define the Resampling method

@@ -677,8 +677,9 @@ Some items of note about the text file are:
 Using the function
 ------------------
 
-Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` to
-open the :guilabel:`Create a Layer from a Delimited Text File` dialog as shown in figure_delimited_text_1_.
+Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in the 
+:guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
+Delimited Text File` dialog as shown in figure_delimited_text_1_.
 
 .. _figure_delimited_text_1:
 
