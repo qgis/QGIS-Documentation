@@ -24,8 +24,9 @@ in QGIS are actually implemented as either **core** or **external plugins**.
   Section :ref:`core_plugins`
 * **External Plugins** are currently all written in Python. They are stored in
   external repositories and maintained by the individual authors. They can be
-  added to QGIS using the :guilabel:`Python Plugin Installer`. More information
-  about external plugins is provided in Section :ref:`load_external_plugin`.
+  added to QGIS in the |mActionShowPluginManager| :guilabel:`Get more` section
+  the of :guilabel:`Plugin Manager`. More information about external plugins is
+  provided in Section :ref:`load_external_plugin`.
 
 .. :index::
     single:plugins;managing
