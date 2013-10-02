@@ -179,13 +179,11 @@ Query Values
 
 To do a query on value of bands of raster layer at some specified point::
 
-::
-
   ident = rlayer.dataProvider().identify(QgsPoint(15.30,40.98), QgsRaster.IdentifyFormatValue)
   if ident.isValid():
     print ident.results()
-  
-  The ``results`` method in this case returs a dictionary, with band indices as keys, and band values as values.
+
+The ``results`` method in this case returs a dictionary, with band indices as keys, and band values as values.
 
 ::
 

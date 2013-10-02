@@ -297,8 +297,6 @@ Resource File
 You can see that in ``initGui()`` we've used an icon from the resource file
 (called :file:`resources.qrc` in our case)::
 
-::
-
   <RCC>
     <qresource prefix="/plugins/testplug" >
        <file>icon.png</file>
