@@ -161,6 +161,10 @@ rst_epilog = """
    :width: 1.5em
 .. |hsplit|  image:: /static/common/hsplit.png
    :width: 1.5em
+.. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
+   :width: 1.5em
 .. |iconAboutConsole|  image:: /static/common/iconAboutConsole.png
    :width: 1.5em
 .. |iconClassBrowserConsole|  image:: /static/common/iconClassBrowserConsole.png
@@ -269,6 +273,8 @@ rst_epilog = """
    :width: 1.5em
 .. |interpolation| image:: /static/common/interpolation.png
    :width: 1.5em
+.. |mGeorefRun| image:: /static/common/mGeorefRun.png
+   :width: 1.5em
 .. |mAction| image:: /static/common/mAction.png
    :width: 1.5em
 .. |mActionAddRasterLayer| image:: /static/common/mActionAddRasterLayer.png
@@ -292,6 +298,20 @@ rst_epilog = """
 .. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
+   :width: 1.5em
+.. |mActionOpenRaster| image:: /static/common/mActionOpenRaster.png
+   :width: 1.5em
+.. |mActionLoadGCPpoints| image:: /static/common/mActionLoadGCPpoints.png
+   :width: 1.5em
+.. |mActionSaveGCPpointsAs| image:: /static/common/mActionSaveGCPpointsAs.png
+   :width: 1.5em
+.. |mActionTransformSettings| image:: /static/common/mActionTransformSettings.png
+   :width: 1.5em
+.. |mActionAddGCPPoint| image:: /static/common/mActionAddGCPPoint.png
+   :width: 1.5em
+.. |mActionDeleteGCPPoint| image:: /static/common/mActionDeleteGCPPoint.png
+   :width: 1.5em
+.. |mActionMoveGCPPoint| image:: /static/common/mActionMoveGCPPoint.png
    :width: 1.5em
 .. |mapserver_export| image:: /static/common/mapserver_export.png
 .. |mActionExportMapServer| image:: /static/common/mActionExportMapServer.png

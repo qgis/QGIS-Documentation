@@ -20,7 +20,6 @@ Using QGIS Core Plugins
 ======================  ========================  ======================================================  ===============================
 Icon                    Plugin                    Description                                             Manual Reference
 ======================  ========================  ======================================================  ===============================
-|delimited_text|        Add Delimited Text Layer  Loads text files containing x,y coordinates             :ref:`label_dltext`
 |coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS               :ref:`coordcapt`
 |icon_dbmanager|        DB Manager                Manage your databases within QGIS                       :ref:`dbmanager`
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                    :ref:`dxf2shape`

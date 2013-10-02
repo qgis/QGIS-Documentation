@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -20,28 +20,28 @@ you can accurately determine their coordinates.
 
 .. _table_georeferencer_1:
 
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| Icon                      | Purpose                    | Icon                      | Purpose                    |
-+===========================+============================+===========================+============================+
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionAddRasterLayer|   | Open raster                | |mActionStartGeoref|      | Start georeferencing       |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionGDALScript|       | Generate GDAL Script       | |mActionFileOpen|         | Load GCP Points            |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionFileSave|         | Save GCP Points As         | |mActionOptions|          | Transformation settings    |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionCapturePoint|     | Add Point                  | |mActionDeleteSelected|   | Delete Point               |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionMoveFeature|      | Move GCP Point             | |mActionPan|              | Pan                        |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionZoomIn|           | Zoom In                    | |mActionZoomOut|          | Zoom Out                   |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionZoomToLayer|      | Zoom To Layer              | |mActionZoomLast|         | Zoom Last                  |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionZoomNext|         | Zoom Next                  | |mActionLinkGeorefToQGis| | Link Georeferencer to QGIS |
-+---------------------------+----------------------------+---------------------------+----------------------------+
-| |mActionLinkQGisToGeoref| | Link QGIS to Georeferencer |                           |                            |
-+---------------------------+----------------------------+---------------------------+----------------------------+
++---------------------------+----------------------------+----------------------------+----------------------------+
+| Icon                      | Purpose                    | Icon                       | Purpose                    |
++===========================+============================+============================+============================+
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionOpenRaster|       | Open raster                | |mActionStartGeoref|       | Start georeferencing       |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionGDALScript|       | Generate GDAL Script       | |mActionloadGCPpoints|     | Load GCP Points            |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionSaveGCPpointsAs|  | Save GCP Points As         | |mActionTransformSettings| | Transformation settings    |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionAddGCPPoint|      | Add Point                  | |mActionDeleteGCPPoint|    | Delete Point               |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionMoveGCPPoint|     | Move GCP Point             | |mActionPan|               | Pan                        |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionZoomIn|           | Zoom In                    | |mActionZoomOut|           | Zoom Out                   |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionZoomToLayer|      | Zoom To Layer              | |mActionZoomLast|          | Zoom Last                  |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionZoomNext|         | Zoom Next                  | |mActionLinkGeorefToQGis|  | Link Georeferencer to QGIS |
++---------------------------+----------------------------+----------------------------+----------------------------+
+| |mActionLinkQGisToGeoref| | Link QGIS to Georeferencer |                            |                            |
++---------------------------+----------------------------+----------------------------+----------------------------+
 
 Table Georeferencer 1: Georeferencer Tools
 
@@ -67,7 +67,7 @@ compute the world file parameters. The more coordinates you provide, the better
 the result will be.
 
 The first step is to start QGIS, load the Georeferencer Plugin (see Section
-:ref:`load_core_plugin`) and click on the |georeferencer| :sup:`Georeferencer`
+:ref:`load_core_plugin`) and click on the |mGeorefRun| :sup:`Georeferencer`
 icon which appears in the QGIS toolbar menu. The Georeferencer Plugin dialog
 appears as shown in figure_georeferencer_1_.
 
@@ -95,10 +95,10 @@ Entering ground control points (GCPs)
 ......................................
 
 #. To start georeferencing an unreferenced raster, we must load it using the
-   |mActionAddRasterLayer| button. The raster will show up in the main working
+   |mActionOpenRaster| button. The raster will show up in the main working
    area of the dialog. Once the raster is loaded, we can start to enter reference
    points.
-#. Using the |mActionCapturePoint| :sup:`Add Point` button, add points to the
+#. Using the |mActionAddGCPPoint| :sup:`Add Point` button, add points to the
    main working area and enter their coordinates (see Figure figure_georeferencer_2_).
    For this procedure you have three options:
 
@@ -107,7 +107,7 @@ Entering ground control points (GCPs)
    - Click on a point in the raster image and choose the button |pencil|
      :sup:`from map canvas` to add the X and Y coordinates with the help of a
      georeferenced map already loaded in the QGIS map canvas.
-   - With the |mActionMoveFeature| button, you can move the GCPs in both windows,
+   - With the |mActionMoveGCPPoint| button, you can move the GCPs in both windows,
      if they are at the wrong place.
 
 #. Continue entering points. You should have at least 4 points, and the more
@@ -132,8 +132,8 @@ The points that are added to the map will be stored in a separate text file
 (:file:`[filename].points`) usually together with the raster image. This allows
 us to reopen the Georeferencer plugin at a later date and add new points or delete
 existing ones to optimize the result. The points file contains values of the
-form: ``mapX, mapY, pixelX, pixelY``. You can use the |mActionFileOpen|
-:sup:`Load GCP Points` and |mActionFileSave| :sup:`Save GCP Points` buttons to
+form: ``mapX, mapY, pixelX, pixelY``. You can use the |mActionloadGCPpoints| 
+:sup:`Load GCP points` and |mActionSaveGCPPointsAs| :sup:`Save GCP points as` buttons to
 manage the files.
 
 .. _`georeferencer_transformation`:
