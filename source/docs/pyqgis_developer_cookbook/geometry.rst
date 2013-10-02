@@ -123,7 +123,7 @@ Areas and perimeters don't take CRS into account when computed using these metho
 
 You can find many example of algorithms that are included in QGIS and use these methods to analyze and transform vector data. Here are some links to the code of a few of them.
 
-- Geometry transformation: `Reproject algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_
-- Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_
-- `Multi-part to single-part algorithm<https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_
+- Geometry transformation: `Reproject algorithm <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/ReprojectLayer.py>`_
+- Distance and area using the :class:`QgsDistanceArea` class: `Distance matrix algorithm <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/PointDistance.py>`_
+- `Multi-part to single-part algorithm <https://raw.github.com/qgis/Quantum-GIS/release-2_0/python/plugins/processing/algs/ftools/MultipartToSingleparts.py>`_
 

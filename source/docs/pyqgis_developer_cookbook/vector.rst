@@ -17,36 +17,36 @@ Iterating over the features in a vector layer is one of the most common tasks. B
 
 ::
 
-iter = layer.getFeatures()
-for feature in iter:
-  # retreive every feature with its geometry and attributes
-    # fetch geometry
-    geom = feat.geometry()
-    print "Feature ID %d: " % feat.id() ,
+  iter = layer.getFeatures()
+  for feature in iter:
+    # retreive every feature with its geometry and attributes
+      # fetch geometry
+      geom = feat.geometry()
+      print "Feature ID %d: " % feat.id() ,
 
-    # show some information about the feature
-    if geom.vectorType() == QGis.Point:
-      x = geom.asPoint()
-      print "Point: " + str(x)
-    elif geom.vectorType() == QGis.Line:
-      x = geom.asPolyline()
-      print "Line: %d points" % len(x)
-    elif geom.vectorType() == QGis.Polygon:
-      x = geom.asPolygon()
-      numPts = 0
-      for ring in x:
-	     numPts += len(ring)
-      print "Polygon: %d rings with %d points" % (len(x), numPts)
-    else:
-      print "Unknown"
+      # show some information about the feature
+      if geom.vectorType() == QGis.Point:
+        x = geom.asPoint()
+        print "Point: " + str(x)
+      elif geom.vectorType() == QGis.Line:
+        x = geom.asPolyline()
+        print "Line: %d points" % len(x)
+      elif geom.vectorType() == QGis.Polygon:
+        x = geom.asPolygon()
+        numPts = 0
+        for ring in x:
+          numPts += len(ring)
+        print "Polygon: %d rings with %d points" % (len(x), numPts)
+      else:
+        print "Unknown"
 
-    # fetch attributes
-    attrs = feat.attributes()
-    
-    # attrs is a dictionary: key = field index, value = QgsFeatureAttribute
-    # show all attributes and their values
-    for (k,attr) in attrs.iteritems():
-      print "%d: %s" % (k, attr.toString())
+      # fetch attributes
+      attrs = feat.attributes()
+
+      # attrs is a dictionary: key = field index, value = QgsFeatureAttribute
+      # show all attributes and their values
+      for (k,attr) in attrs.iteritems():
+        print "%d: %s" % (k, attr.toString())
 
 Attributes can be refered by name or by index.
 
@@ -58,6 +58,8 @@ This code
   print feature.attributes()[idx]
 
 Has the same effect as this one:
+
+::
 
   print feature.attributes()['name']
 
@@ -84,7 +86,7 @@ This will iterate over all the features in the layer, in case there is no select
 Iterating over a subset of features
 -------------------------------------
 
-If you want to iterate over a given subset of features in a layer, such as those within a given area, you have to add a :obj:`QgsFeatureRequest`object to the :func:`getFeatures()` call. Here's an example
+If you want to iterate over a given subset of features in a layer, such as those within a given area, you have to add a :obj:`QgsFeatureRequest` object to the :func:`getFeatures()` call. Here's an example
 
 ::
 
