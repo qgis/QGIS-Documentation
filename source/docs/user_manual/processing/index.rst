@@ -6,7 +6,7 @@
 .. _label_processing:
 
 ***************************
-QGIs processing framework
+QGIS processing framework
 ***************************
 
 .. toctree::
