@@ -295,7 +295,9 @@ importing data into the database.
 To load a layer from PostGIS, perform the following steps:
 
 *  If the :guilabel:`Add PostGIS layers` dialog is not already open,
-   click on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button.
+   selecting the |mActionAddLayer| :menuselection:`Add PostGIS Layer...` option 
+   from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D` opens the 
+   dialog.
 *  Choose the connection from the drop-down list and click **[Connect]**.
 *  Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`
 *  Optionally use some |checkbox| :guilabel:`Search Options` to define
