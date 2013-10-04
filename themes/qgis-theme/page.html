@@ -1,0 +1,124 @@
+{% extends "layout.html" %}
+
+{% set favicon = '../../../favicon.ico?1322140996' %}
+
+{% set css_files = css_files + [
+  '_static/qgis-style.css'
+  ]
+%}
+{% set script_files = script_files + ['_static/qgis-site.js']%}
+
+
+{# Add some extra stuff before and use exiting with 'super()' call. #}
+{% block footer %}
+  <footer class="footer">
+    <div class="container">
+        <div>
+          <ul class="unstyled inline" id="social">
+            <li id="twitter"><a href="http://twitter.com/qgis" class="external"><div></div></a></li>
+            <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
+            <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
+            <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+          </ul>
+        </div>
+
+        <p class="credit">{{ _('All content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a>.') }}</p>
+    </div>
+    <div class="container">
+      <p class="credit">{{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>.') }}</p>
+    </div>
+    {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
+    {%- endif %}
+  </footer>
+{% endblock %}
+
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
+
+{%- set qgis_bs_content_span = render_sidebar and "span8" or "span12"%}
+
+{%- block content %}
+{# calling our own navbar macro !#}
+    {{ qgis_navBar() }}
+{# including html files (from template directory) in case of certain pagenames 
+        this makes it possible for us to use those templates as translatable
+        static html pages #}
+{# this is actually a little 'hack', see: 
+http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-specific-sphinx-document #}
+    {% if pagename == 'site/index' %}
+        {% include 'index.html' %}
+    {% elif pagename == 'site/forusers/download' %}
+        {% include 'forusers_download.html' %}
+    {% else %}
+        <div class="container">
+            <div class="row">
+                {%- block sidebar1 %}{{ qgis_bsidebar() }}{% endblock %}
+                <div class="{{ qgis_bs_content_span }}">
+                    {% block body %}
+                        {% if pagename == 'site/forusers/index' %}
+                            {% include 'forusers_index.html' %}
+                        {% elif pagename == 'site/getinvolved/index' %}
+                            {% include 'getinvolved_index.html' %}
+                        {% elif pagename == 'site/getinvolved/donations' %}
+                            {% include 'getinvolved_donations.html' %}
+                        {% elif pagename == 'site/about/index' %}
+                            {% include 'about_index.html' %}
+                        {% else %}
+                            {{ body }}
+                        {% endif %}
+                    {% endblock %}
+                </div>
+                {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
+            </div>
+        </div>
+    {% endif %}
+
+    <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+{%- endblock %}
+
+{# qgis_navBar macro: adding our menu and language switcher#}
+{% macro qgis_navBar() %}
+  <div id="navbar" class="{{ theme_navbar_class }} {% if theme_navbar_fixed_top == 'true' -%} navbar-fixed-top{%- endif -%}">
+    <div class="navbar-inner">
+      <div class="container">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="brand" href="{{ pathto(master_doc) }}">{% if theme_navbar_title -%}{{ theme_navbar_title|e }}{%- else -%}{{ project|e }}{%- endif -%}</a>
+        <span class="navbar-text pull-left"><b>{{ version|e }}</b></span>
+        {% block languageswitch %}
+          {% include "languageswitch.html" %}
+        {% endblock %}
+        <div class="nav-collapse collapse">
+          <ul class="unstyled nav main-menu">
+            <!--<li><a href="{{ pathto('site/about/index') }}">{{_("Discover QGIS") }}</a></li>
+            <li><a href="{{ pathto('site/forusers/index') }}">{{_("For Users") }}</a></li>
+            <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>-->
+            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation testing master") }}</a></li>
+            <li>{% block sidebarsearch %}
+          {% include "searchbox.html" %}
+        {% endblock %}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endmacro %}
+
+{# qgis_bsidebar macro: make sidebar span4 and sroll instead of affix #}
+{%- macro qgis_bsidebar() %}
+      {%- if render_sidebar %}
+      <div class="span4">
+        <div id="sidebar" class="bs-sidenav well" data-spy="scroll">
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+{%- endmacro %}
+
