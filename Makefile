@@ -2,7 +2,8 @@
 #
 
 # You can set these variables from the command line
-LANGUAGES     = en `ls i18n`
+#LANGUAGES     = en `ls i18n`
+LANGUAGES     = en ca_ES  da_DK  de  es  fi  fr  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -100,8 +101,8 @@ localizeresources: clean
 		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
 	fi
 
-pulldocsources:
-	scripts/pulldocsources.sh $(LANGUAGES)
+#pulldocsources:
+#	scripts/pulldocsources.sh $(LANGUAGES)
 
 html: localizeresources
 	$(SPHINXINTL) build -l $(LANG) -c $(SOURCEDIR)/conf.py
@@ -109,18 +110,18 @@ html: localizeresources
 	@echo
 	@echo "Build finished. The HTML pages for '$(LANG)' are in $(BUILDDIR)."
 
-fullhtml: pulldocsources html
+#fullhtml: pulldocsources html
 
 world: all
 
-all: pulldocsources
+all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
 	@echo
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
-		make LANG=$$LANG fullhtml; \
-		mkdir -p live/html; \
+		make LANG=$$LANG html; \
+		mkdir -p live/html/$$LANG; \
 		mv live/html/$$LANG live/html/$$LANG.old; \
 		mv output/html/$$LANG live/html/; \
 		rm -rf live/html/$$LANG.old; \
