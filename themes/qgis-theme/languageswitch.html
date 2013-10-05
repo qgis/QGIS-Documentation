@@ -1,0 +1,70 @@
+<select id="languages">
+  <option value="en">{{ _('English') }}</option>
+  <option value="ca_ES">{{ _('Catalan') }}</option>
+  <option value="da_DK">{{ _('Danish') }}</option>
+  <option value="de">{{ _('German') }}</option>
+  <option value="es">{{ _('Spanish') }}</option>
+  <option value="fi">{{ _('Finnish') }}</option>
+  <option value="fr">{{ _('French') }}</option>
+  <option value="it">{{ _('Italian') }}</option>
+  <option value="ja">{{ _('Japanese') }}</option>
+  <option value="ko_KR">{{ _('Korean') }}</option>
+  <option value="nl">{{ _('Nederlands') }}</option>
+  <option value="pt_PT">{{ _('Portuguese') }}</option>
+  <option value="ro">{{ _('Romanian') }}</option>
+  <option value="ru">{{ _('Russian') }}</option>
+  <option value="zh_CN">{{ _('Chinese (China)') }}</option>
+  <option value="zh_TW">{{ _('Chinese (Taiwan)') }}</option>
+</select>
+
+<script>
+    var currentPage = '{{current_page_name}}.html'; // coming from sphinx, always without starting '/'
+    var currentLang = 'en';
+    // split index.html if currentUrl is ended by '/'
+    var currentUrl = window.location.href;
+    if (currentUrl.slice(-1) == '/' && currentPage.slice(-1) != '/'){
+      var pages = currentPage.split('/');
+      pages.pop();
+      currentPage = pages.join('/') + '/';
+    }
+    $(document).ready(function(){
+        var search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+        var langPlusPage = window.location.href.match(search);
+        // it's possible this is the index.html page called without 'index.html', try without the currentPage
+        if (langPlusPage==undefined){
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/$', 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // it's possible this is an index.html page called without 'index.html', try removing index.html
+        if (langPlusPage==undefined){
+            currentPage = currentPage.replace('index.html','')
+            search = new RegExp('\/[a-zA-Z_]{2,8}\/'+ currentPage, 'gi');
+            langPlusPage = window.location.href.match(search);
+        }
+        // still no langPlugPage: stop, because the language swicher will misbehave
+        if (langPlusPage == undefined || langPlusPage.length != 1){
+            alert('This is an documentation error, please report back to QGIS devs.');
+            return;
+        }
+        langPlusPage = langPlusPage[0];
+        currentLang = langPlusPage.replace(currentPage, '');
+        // put some style around the current locale flag, we have to remove the '/' here
+        // this is for the flags:
+        //$('#flag_'+currentLang.replace(/\//g,'')).css('background-color', '#cccccc');
+        // set language select to current lang
+
+        $("#languages").val(currentLang.replace(/\//g,'')); // currentLang is something like '/nl/'
+
+        $("#languages").change(function() {
+            gotoLang($(this).val());
+        });
+
+    });
+
+    // load current page in a different language
+    function gotoLang(lang){
+        var currentUrl = window.location.href;
+        var newUrl = currentUrl.replace(currentLang, '/'+lang+'/');
+        window.location.href = newUrl;
+    }
+</script>
