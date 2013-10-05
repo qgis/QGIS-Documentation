@@ -1,7 +1,7 @@
 
 
-Documentation for QGIS Testing
-------------------------------
+Documentation for QGIS |version|
+--------------------------------
 
 QGIS has a lot of documentation, partly translated. 
 

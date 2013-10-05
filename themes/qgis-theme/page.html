@@ -98,7 +98,7 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
             <!--<li><a href="{{ pathto('site/about/index') }}">{{_("Discover QGIS") }}</a></li>
             <li><a href="{{ pathto('site/forusers/index') }}">{{_("For Users") }}</a></li>
             <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>-->
-            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS testing") }}</a></li>
+            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS ") }}{{ version|e }}</a></li>
             <li>{% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}</li>
