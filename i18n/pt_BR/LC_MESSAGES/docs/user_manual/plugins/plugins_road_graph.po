@@ -8,24 +8,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: pt_BR\n"
+"X-Source-Language: C\n"
 
 # 191e8c89bea94bbca98249cc78a351fc
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:5
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:7
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
 # 334bea3c55b9422c8fcab550e8d937df
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
 msgid "Road Graph Plugin"
-msgstr ""
+msgstr "Compemento Caminho Mais Curto"
 
 # 51f03dd46443480082c6000a5c70adce
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:14
@@ -34,41 +36,41 @@ msgid ""
 "path between two points on any polyline layer and plots this path over the "
 "road network."
 msgstr ""
+"O complemento Caminho Mais Curto é um complemento C++ para o QGIS, que "
+"calcula o caminho mais curto entre dois pontos em qualquer camada de "
+"polilinha e desenha este caminho sobre a rede rodoviária."
 
-# f7eeb293a29440af9997fcc40149f71d
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
-msgid "Road Graph Plugin |nix|"
-msgstr ""
-
-# 3c07f3fd20014f8b96b382ca7dbc17de
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
-msgid "Main features:"
-msgstr ""
+# 43aafe08dd8f40fa90c218e5f8dc0dd0
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:18
+msgid "**Main features**:"
+msgstr "**Principais Características**:"
 
 # 7adf321cfd5844429fb3171a7dddbfaa
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:20
 msgid "calculate path, it's length and travel time"
-msgstr ""
+msgstr "calcular o caminho, seu comprimento e a duração das viagens"
 
 # 6f8522447b1f44f09a6f7e45bcc48789
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:32
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:21
 msgid "optimize by length or by travel time"
-msgstr ""
+msgstr "otimizar pelo comprimento ou pelo tempo de viagem"
 
 # a4ed161bfa31481b96d25a4ebf402a69
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:33
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:22
 msgid "export path to a vector layer"
-msgstr ""
+msgstr "exportar caminho para uma camada vetorial"
 
 # 5babe777cc1c45aaac5de4263571fa62
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:34
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:23
 msgid ""
 "highlight roads directions (this is slow and used mainly for debug purposes "
 "and for the settings testing)"
 msgstr ""
+"destaque direções de estradas (isso é lento e utilizado principalmente para "
+"fins de depuração e para o teste de configurações)"
 
 # 47ea52c5888744e39012007b962fd4c8
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:37
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:26
 msgid ""
 "As a roads layer you can use any polyline vector layer in any QGIS supported "
 "format. Two lines with a common point are considered connected. Please note, "
@@ -77,49 +79,69 @@ msgid ""
 "different CRS introduce some errors that can result in discontinuities, even "
 "when 'snapping' is used."
 msgstr ""
+"Como uma camada de estradas que você pode usar qualquer camada de vetor "
+"polilinha em qualquer formato suportado pelo QGIS. Duas linhas com um ponto "
+"em comum são consideradas conectadas. Por favor, note que é necessário para "
+"usar SRC da camada como SRC do projeto durante a edição de camada de "
+"estradas. Isto é devido ao fato de recalcular as coordenadas entre "
+"diferentes SRC ​​introduzir alguns erros que podem resultar em "
+"descontinuidades, mesmo quando \"atração\" é usado."
 
 # 977a038da2fc4d11ba80615c219ba389
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:33
 msgid "In the layer attribute table the following fields can be used:"
 msgstr ""
+"Na tabela de atributos da camada os campos que se seguem podem ser usados:"
 
 # 9abf1eab3df742b988b0c284023dc7c9
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:46
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
 msgid "speed on road section --- numeric field;"
-msgstr ""
+msgstr "velocidade no trecho de estrada --- campo numérico;"
 
-# 476d11df63074d419dba2527ba1fb8be
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
+# ef09b09a198544eaaf7a88d3e0e465b9
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:36
 msgid ""
 "direction --- any type, that can be casted to string. Forward and reverse "
 "directions are correspond to the one-way road, both directions --- two-way "
-"road"
+"road."
 msgstr ""
+"direção --- qualquer tipo, que pode ser escalado como texto. Sentidos frente "
+"e reverso são correspondentes à estrada de sentido único, ambos os sentidos "
+"--- dois sentidos da estrada."
 
-# b46a78ad43a640a3875eb034277c6b19
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:50
+# 2f26a754d18b4dbabff5ac0166e5811c
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:40
 msgid ""
-"If some fields don't have any value or do not exist --- default values are "
+"If some fields don't have any value or do not exists --- default values are "
 "used. You can change defaults and some plugin settings in plugin settings "
 "dialog."
 msgstr ""
+"Se alguns campos não têm qualquer valor ou não existe --- valores padrões "
+"são usados. Você pode alterar os padrões e algumas configurações de "
+"complementos no diálogo de configurações de complementos."
 
-# 9c03a023640d4bf5b230dbaa5c40dd88
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
-msgid "Using the plugin"
-msgstr ""
+# 42de57be69c046a0b7f0b98c4bb7aabb
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:45
+msgid "Usage"
+msgstr "Uso"
 
-# a490e5f981734f519c930e2572eaa775
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:56
+# b130a30236254552a8638340653fa163
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:48
 msgid ""
-"After plugin activation you will see an additional panel on the left side of "
+"After plugin activation you will see additional panel on the left side of "
 "the main QGIS window. Now make some definitions to the :guilabel:`Road graph "
-"plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`."
+"settings` dialog in the menu :menuselection:`Plugins --> Road Graph`."
 msgstr ""
+"Após a ativação do complemento você verá o painel adicional no lado esquerdo "
+"da janela principal do QGIS. Agora faça algumas definições para a guilabel:  "
+"`Configurações Caminho mais curto` diálogo no menu: menuseleção: "
+"`Complementos -> Caminho Mais Curto`."
 
 # dfe0de733f854a64a841ad0f2e2c8bae
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:60
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:64
 msgid ""
 "Select a Start and a Stop point in the road network layer and click on "
 "**[Calculate]**."
 msgstr ""
+"Selecione um ponto inicial e um final na camada da rede viária e clique em "
+"** [Calcular] **."
