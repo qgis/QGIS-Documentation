@@ -2,30 +2,28 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# c41adc459f0b461782e103c634d15cee
-#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr_FR\n"
+"X-Source-Language: C\n"
 
 # 3fc658ca0c3c4ef7bbae587f1a20c18b
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:12
 msgid "Raster Terrain Analysis Plugin"
-msgstr ""
+msgstr "Extension d'Analyse Raster de Terrain"
 
 # 90d567925e914cf790df8a38ac7fe899
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:14
@@ -36,11 +34,16 @@ msgid ""
 "intuitive graphical user interface for creating new raster layers (See "
 "Figure_raster_terrain_1_)."
 msgstr ""
+"L'extension d'analyse de terrain basée sur les rasters peut être utilisée "
+"pour calculer la pente, l'aspect, l'ombrage, le relief et la rugosité d'un "
+"modèle numérique d'élévation (DEM). Sa facilité d'utilisation et son "
+"interface graphique intuitive permettent de créer de nouvelles couches "
+"raster (voir figure Figure_raster_terrain_1_)."
 
 # f6eafcffb2704566b54d8fd32b56d9cf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:19
 msgid "Description of the analysis:"
-msgstr ""
+msgstr "Description de l'analyse:"
 
 # 5bb21f7d840e402db87b712ac2102219
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:21
@@ -48,6 +51,8 @@ msgid ""
 "**Slope**: Calculates slope angle for each cell in degrees (based on first "
 "order derivative estimation)."
 msgstr ""
+"**Pente** : Calcule l'angle de la pente pour chaque cellule (en degrés, en "
+"se basant sur une estimation dérivée de 1er ordre)."
 
 # 06fa4e4f3e0e4c8f9f072a3e709d903d
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:23
@@ -55,6 +60,8 @@ msgid ""
 "**Aspect**: Exposition (starting with 0 for north direction, in degrees "
 "counterclockwise)."
 msgstr ""
+"**Aspect**: Calcule l'exposition (en degrés dans le sens horaire inverse et "
+"en commençant par 0 pour une direction nord)."
 
 # b85a93202f3a461db3d50b5c9a122dd1
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:25
@@ -62,14 +69,19 @@ msgid ""
 "**Hillshade**: Create shaded map using light and shadow to provide a more "
 "three-dimensional appearance for a shaded relief map."
 msgstr ""
+"**Ombrage** : crée une carte ombrée pour simulée l'apparence "
+"tridimensionnelle d'une carte en relief."
 
 # 07ea5d58cb8248bca157f86c2837286a
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:27
 msgid ""
-"**Ruggedness Index**: A quantitative measurement of terrain heterogeneity as "
-"described by Riley et al. (1999). It is calculated for every location, by "
+"**Ruggedness Index**: A quantitative measurement of terrain heterogeneity as"
+" described by Riley et al. (1999). It is calculated for every location, by "
 "summarizing the change in elevation within the 3x3 pixel grid."
 msgstr ""
+"Facteur de rugosité : Une mesure quantitative de l'hétérogénéité du terrain,"
+" tel que décrit par Riley et al. (1999). Elle est calculée en tout point en "
+"mesurant les changement d'élévation dans une grille de 3 par 3 pixels."
 
 # fce4dd3539f8404e882f55c47ebe480f
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:30
@@ -78,45 +90,58 @@ msgid ""
 "Implemented is a method to choose the elevation colors analysing the "
 "frequency distribution."
 msgstr ""
-
-# 0a59722c50494031a5216a79d57ed917
-#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:44
-msgid "Raster Terrain Modelling Plugin (slope calculation)"
-msgstr ""
+"**Relief** : crée une carte ombrée en relief à partir des données "
+"d'élévation. La méthode utilisée permet de choisir les couleurs de "
+"l'élévation en analyse la fréquence de distribution."
 
 # 6e0b9ddde7b64e8591f7f81d3beeb960
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:49
 msgid "Using the plugin"
-msgstr ""
+msgstr "Mettre en oeuvre l'extension"
 
-# af40cecea90c43df87ad1ef2fc14daf2
+# 83c9d1d5c2474aa39f58b7b2468904c5
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:51
 msgid ""
 "Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample "
 "location."
 msgstr ""
+"Démarrez QGIS et charger un fichier raster :file:`gtopo30` depuis la zone "
+"exemple de GRASS."
 
-# 4d156a5e09024aef95574cce31473c54
+# 2ce2bec1fb8a4c8597060192f4128daf
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:53
 msgid ""
-"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section :"
-"ref:`load_core_plugin`)"
+"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`)"
 msgstr ""
+"Chargez l'extension via le gestionnaire d'extension (voir section "
+":ref:`load_core_plugin`)"
 
-# bbfce83b0f0c402d9aeb55b0263a87c3
+# ee6fbecca5af48cc918522436d4c5fe9
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:55
 msgid ""
-"Select an analysis method from menu (e.g. :menuselection:`Raster --> Terrain "
-"Analysis --> Slope`). The :guilabel:`Slope` dialog appears as shown in "
+"Select an analysis method from menu (e.g. :menuselection:`Raster --> Terrain"
+" Analysis --> Slope`). The :guilabel:`Slope` dialog appears as shown in "
 "Figure_raster_terrain_1_."
 msgstr ""
+"Sélectionnez une méthode d'analyse (p. ex. :menuselection:`Raster --> "
+"Analyse de Terrain --> Pente`). La fenêtre :guilabel:`Pente` apparaît comme "
+"indiqué figure Figure_raster_terrain_1_."
 
 # b0c292487b02476895c1fa83adf499a3
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:57
 msgid "Specify an output file path, and an output file type."
-msgstr ""
+msgstr "Spécifiez un chemin de sortie et le type de fichier produit."
 
 # fac8700fe99f4cecab6197b09a248c00
 #: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:58
 msgid "Click **[OK]**."
+msgstr "Cliquez sur le bouton **[OK]**."
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:44
+msgid "Raster Terrain Modelling Plugin (slope calculation)"
 msgstr ""

@@ -2,30 +2,28 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# d0a429b2db95489182e6492c4bb61860
-#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr_FR\n"
+"X-Source-Language: C\n"
 
 # 5044592d4d7f4856b61f6dc89f6bfcc1
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:12
 msgid "Offline Editing Plugin"
-msgstr ""
+msgstr "Extension d'Édition hors-ligne"
 
 # 28ff8bfb329445fd9dda6ce211389e5c
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:14
@@ -37,8 +35,15 @@ msgid ""
 "datasets, it is difficult to merge the edits by hand, even if people don’t "
 "change the same features."
 msgstr ""
+"Pour les collectes de données, il est commun d'aller sur le terrain avec un "
+"ordinateur ou un téléphone portable. De retour sur le réseau, les "
+"modifications doivent être synchronisées avec la source de données initiale,"
+" par exemple une base de données PostGIS. Si plusieurs personnes travaillent"
+" ensembles sur les mêmes jeux de données, il est difficile de fusionner les "
+"éditions à la main, même si les utilisateurs ne changent pas les mêmes "
+"entités."
 
-# b4ff98c31f4f4cd180f62084bf58d261
+# d6e1d05746a74a169465e1bc55f49ea5
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:20
 msgid ""
 "The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the "
@@ -47,43 +52,59 @@ msgid ""
 "tables. After being connected to the network again, it is possible to apply "
 "the offline edits to the master dataset."
 msgstr ""
+"L'extension |offline_editing_copy|:sup:`Édition offline` automatise la "
+"synchronisation en copiant le contenu d'une source de données "
+"(habituellement PostGIS or WFS-T) vers une base Spatialite et en stockant "
+"les éditions offlines dans des tables dédiées. Après s'être connecté de "
+"nouveau au réseau, il est possible d'appliquer les éditions offline aux jeux"
+" de données sources."
 
-# 0130a4ff4b4744a7a23e032139f67a95
+# b5cc8ed2eb7843b6ad300d36b659013f
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:27
 msgid "Using the plugin"
-msgstr ""
+msgstr "Utiliser l'extension"
 
 # d1b5d7c4dcc74a418b7d3b07f6d0ab7d
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:29
 msgid "Open some vector layers, e.g. from a PostGIS or WFS-T datasource"
 msgstr ""
+"Ouvrez des couches vecteurs, par exemple d'une source de données PostGIS ou "
+"WFS-T"
 
 # 2d8b46dbb51141149bff4959a7573992
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:30
 msgid "Save it as a project"
-msgstr ""
+msgstr "Sauvez-les dans un projet"
 
-# 6605265cf0dd4fa0827cde6e1dc39748
+# 3dec96f6697b4603baf1c1f668ff7895
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:31
 msgid ""
 "Press the |offline_editing_copy|:sup:`Convert to offline project` icon and "
 "select the layers to save. The content of the layers is saved to SpatiaLite "
 "tables."
 msgstr ""
+"Pressez le bouton  |offline_editing_copy|:sup:`Convertir en projet offline` "
+"et sélectionnez les couches à sauver. Le contenu des couches est sauvé dans "
+"des tables Spatialite."
 
 # 4418812d3cf748ef862d425cee9269c9
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:34
 msgid "Edit the layers offline."
-msgstr ""
+msgstr "Éditez les couches hors-ligne."
 
-# 79b9eeeb70f94547813cf849157540b7
+# d02a94e516e749a29b0e9bdb5bdb8de3
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:35
 msgid ""
-"After being connected again, upload the changes with the |"
-"offline_editing_sync| :sup:`Synchronize` button."
+"After being connected again, upload the changes with the "
+"|offline_editing_sync| :sup:`Synchronize` button."
+msgstr ""
+"Après vous être connecté de nouveau au réseau, uploadez les modifications "
+"avec le bouton  |offline_editing_sync| :sup:`Synchroniser`."
+
+#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:5
+msgid "|updatedisclaimer|"
 msgstr ""
 
-# cafad368ae454e80a8cedb60edaccb0f
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:49
 msgid "Create an offline project from PostGIS or WFS layers"
 msgstr ""

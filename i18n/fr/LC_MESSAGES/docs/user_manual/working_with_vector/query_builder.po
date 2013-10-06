@@ -2,30 +2,28 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
+"POT-Creation-Date: 2013-03-18 20:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# f7aeef8203c74f7597aa039d0be93ee4
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr\n"
+"X-Source-Language: C\n"
 
 # b8493928622b4a6685cb39d0a15b3a35
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:14
 msgid "Query Builder"
-msgstr ""
+msgstr "Constructeur de requêtes"
 
 # f8e3f878f89c44469bc42aa1602fea04
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:16
@@ -34,52 +32,49 @@ msgid ""
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
 msgstr ""
+"Le constructeur de requêtes qui vous permet de définir un sous-ensemble de "
+"la table en utilisant une clause SQL de type WHERE et de l'afficher dans "
+"QGIS. Le résultat de la requête peut être sauvegardé comme une nouvelle "
+"couche."
 
 # ab653b58d7474249b62c5eb57f10dbaa
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
 msgid "Query"
-msgstr ""
-
-# 08821abf332740889a516c9cb623cb65
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:23
-msgid ""
-"Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute "
-"Table` from the menu bar. Click on the **[Advanced Search]** button to open "
-"the :guilabel:`Query builder`. For example, if you have a ``towns`` layer "
-"with a ``population`` field you could select only larger towns by entering "
-"``population > 100000`` in the SQL box of the Query builder. "
-"Figure_attributes_2_ shows an example of the Query builder populated with "
-"data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
-"Values and Operators sections help the user to construct the SQL-like query."
-msgstr ""
-
-# 4be845827e8c4d659787754e28c9a232
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
-msgid "Query Builder |nix|"
-msgstr ""
+msgstr "Requête"
 
 # 2e8c891160794d6ba176e20eb9752092
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:44
 msgid ""
-"The **Fields list** contains all attribute columns of the attribute table to "
-"be searched. To add an attribute column to the SQL where clause field, "
+"The **Fields list** contains all attribute columns of the attribute table to"
+" be searched. To add an attribute column to the SQL where clause field, "
 "double click its name in the Fields list. Generally you can use the various "
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
 msgstr ""
+"La **liste des champs** contient tous les attributs de la table d'attributs "
+"pouvant être parcourus par la recherche. Pour ajouter un attribut à la "
+"clause WHERE, double-cliquez sur son nom dans la  liste. Vous pouvez cliquez"
+" sur les différents champs, valeurs et opérateurs qui composent votre "
+"requête ou bien les écrire directement."
 
 # 97161690598940b5bf9aa238c809e776
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:49
 msgid ""
 "The **Values list** lists the values of an attribute table. To list all "
-"possible values of an attribute, select the attribute in the Fields list and "
-"click the **[all]** button. To list the first 25 unique values of an "
+"possible values of an attribute, select the attribute in the Fields list and"
+" click the **[all]** button. To list the first 25 unique values of an "
 "attribute column, select the attribute column in the Fields list and click "
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
 msgstr ""
+"La **liste des valeurs** recense toutes les valeurs d'un attribut. Pour en "
+"lister la totalité, sélectionnez l'attribut dans la liste de champs puis "
+"cliquez sur le bouton **[Tout]**. Pour lister uniquement les 25 premières "
+"valeurs, sélectionnez l'attribut puis cliquez sur **[Échantillon]**. Pour "
+"ajouter une valeur à la requête, il vous suffit de faire un double-clic "
+"dessus."
 
-# 9f91db267bc34d7bad4d692dafafca46
+# a5603d72050c4e3ab3985950b2aed446
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:56
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
@@ -87,69 +82,19 @@ msgid ""
 "operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
 "logical operators (``AND``, ``OR``, ...) are available."
 msgstr ""
-
-# 9cef45f5cc95484aaab2720d93572303
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:61
-msgid ""
-"The **[Test]** button shows a message box with the number of features "
-"satisfying the current query, which is usable in the process of query "
-"construction. The **[Clear]** button clears the text in the SQL where clause "
-"text field. The **[Save]** and **[Load]** button allow to save and load SQL "
-"queries. The **[OK]** button closes the window and selects the features "
-"satisfying the query. The **[Cancel]** button closes the window without "
-"changing the current selection."
-msgstr ""
-
-# bb9b9d226e3a46c7a82cdbde7ec3ca06
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:72
-msgid "**Changing the Layer Definition**"
-msgstr ""
-
-# e79aaac32e0f45c480b2650131d90bca
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:74
-msgid ""
-"You can change the layer definition after it is loaded by altering the SQL "
-"query used to define the layer. To do this, open the vector :guilabel:`Layer "
-"Properties` dialog by double-clicking on the layer in the legend and click "
-"on the **[Query Builder]** button on the :guilabel:`General` tab. See "
-"Section :ref:`vector_properties_dialog` for more information."
-msgstr ""
-
-# 9daf0cc3963b4af5b1c3502caa974708
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:86
-msgid "Selection"
-msgstr ""
-
-# 3496ad9fdbb34b41916f40ab0ea42db1
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:88
-msgid ""
-"With |qg| it is possible also to select features for visualisation using a "
-"similar query builder interface to that used in :ref:`vector_query_builder`. "
-"In the above section the purpose of the query builder is to highlight all "
-"selected features meeting the filter criteria in yellow. The rest of the "
-"features do not change their appearance."
-msgstr ""
-
-# cb07fad9efe9473cb90fe8df33029bc3
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:94
-msgid ""
-"Another possibility is to make a selection by right clicking on a layer in "
-"the legend and choosing :guilabel:`Query ...`. If you perform a SQL query "
-"here only the selected features are displayed in the map view. Features that "
-"don't match the SQL query are not visualised in the map view. The same "
-"function is available from the :guilabel:`General` tab in the vector :"
-"guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
-"button right below. The selection described above can be used with all "
-"vector data providers."
-msgstr ""
+"La **liste des opérateurs** contient toutes les opérations effectuables sur "
+"une recherche. Pour ajouter un opérateur à la requête SQL, cliquez sur le "
+"bouton approprié. Les opérateurs relationnels ( ``=`` , ``>`` , ...), les "
+"opérateurs de comparaison (``LIKE``), les opérateurs logiques (``AND``, "
+"``OR``, ...) sont disponibles."
 
 # 1eef1e856ee347c7be2c4778c349ecce
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:103
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:74
 msgid "Save selected features as new layer"
-msgstr ""
+msgstr "Sauvegarder la sélection dans une nouvelle couche"
 
 # f29f07bbbebd4c10bbd93b0394b39535
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:105
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:76
 msgid ""
 "The selected features can be saved as any OGR supported vector format and "
 "also transformed into another Coordinate Reference System (CRS). Just open "
@@ -158,13 +103,140 @@ msgid ""
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
 msgstr ""
+"Les entités sélectionnées peuvent être sauvegardées dans n'importe quel "
+"format vecteur géré par OGR et transformées dans un autre système de "
+"coordonnées de référence (SCR). Faites un clic-droit sur le nom de la couche"
+" puis choisissez :menuselection:`Sauvegarder la sélection sous...` pour "
+"donner un nom au fichier, son format et son SCR (voir section "
+":ref:`label_legend`). Il est possible de définir des options de création OGR"
+" à cette étape. "
 
-# 0cc8d9d1b7d2479eb71cf16c87866daa
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:23
+msgid ""
+"Open the **Query Builder** by opening the Layer Properties and go to the "
+":guilabel:`General` menu. Under :guilabel:`Feature subset` click on the "
+"**[Query Builder]** button to open the :guilabel:`Query builder`. For "
+"example, if you have a ``regions`` layer with a ``TYPE_2`` field you could "
+"select only regions that are ``borough`` in the :guilabel:`Provider specific"
+" filter expression` box of the Query builder. Figure_attributes_2_ shows an "
+"example of the Query builder populated with the regions.shp layer from the "
+"QGIS sample data. The Fields, Values and Operators sections help the user to"
+" construct the SQL-like query."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
+msgid "Query Builder |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:61
+msgid ""
+"The **[Test]** button shows a message box with the number of features "
+"satisfying the current query, which is usable in the process of query "
+"construction. The **[Clear]** button clears the text in the SQL where clause"
+" text field. The **[OK]** button closes the window and selects the features "
+"satisfying the query. The **[Cancel]** button closes the window without "
+"changing the current selection."
+msgstr ""
+
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:9
 msgid "Query_Builder"
 msgstr ""
 
-# a47d1251f82e43e79bd5595ca52bbebe
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:81
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:68
 msgid "Select_using_Query"
 msgstr ""
+
+#~ msgid ""
+#~ "Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute "
+#~ "Table` from the menu bar. Click on the **[Advanced Search]** button to open "
+#~ "the :guilabel:`Query builder`. For example, if you have a ``towns`` layer "
+#~ "with a ``population`` field you could select only larger towns by entering "
+#~ "``population > 100000`` in the SQL box of the Query builder. "
+#~ "Figure_attributes_2_ shows an example of the Query builder populated with "
+#~ "data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
+#~ "Values and Operators sections help the user to construct the SQL-like query."
+#~ msgstr ""
+#~ "Ouvrez la table d'attributs depuis le menu |mActionOpenTable| :sup:`Ouvrir "
+#~ "la table d'attributs`. Cliquez sur le bouton **[Recherche avancée]** pour "
+#~ "ouvrir le :guilabel:`Constructeur de requête`. Par exemple si vous avez une "
+#~ "couche ``towns`` avec un champ ``population``, vous pouvez sélectionner les "
+#~ "plus grandes villes en entrant ``population > 100000`` dans la clause SQL "
+#~ "WHERE du Constructeur de requête. Figure_attributes_2_ montre un exemple de "
+#~ "requête sur une couche PostGIS dont les attributs sont stockés dans "
+#~ "PostgreSQL. Les listes des Champs, Valeurs et Opérateurs aident à la "
+#~ "construction de la requête SQL."
+
+#~ msgid ""
+#~ "The **[Test]** button shows a message box with the number of features "
+#~ "satisfying the current query, which is usable in the process of query "
+#~ "construction. The **[Clear]** button clears the text in the SQL where clause"
+#~ " text field. The **[Save]** and **[Load]** button allow to save and load SQL"
+#~ " queries. The **[OK]** button closes the window and selects the features "
+#~ "satisfying the query. The **[Cancel]** button closes the window without "
+#~ "changing the current selection."
+#~ msgstr ""
+#~ "Le **[Test]** affiche une fenêtre comptabilisant le nombre d'entités "
+#~ "correspondant à votre requête, vous permettant de savoir si votre requête "
+#~ "fonctionne au fil de sa construction. Le bouton **[Effacer]** nettoye le "
+#~ "texte de la clause SQL where. Les boutons **[Sauvegarder]** et **[Charger]**"
+#~ " permettent d'enregistrer et de charger des requêtes. Le bouton **[OK]** "
+#~ "ferme la fenêtre et effectue la sélection en fonction de la recherche "
+#~ "définie. Le bouton **[Annuler]** clôt la fenêtre, sans modifier la sélection"
+#~ " en cours."
+
+#~ msgid "**Changing the Layer Definition**"
+#~ msgstr "**Changer la définition d'une couche**"
+
+#~ msgid ""
+#~ "You can change the layer definition after it is loaded by altering the SQL "
+#~ "query used to define the layer. To do this, open the vector :guilabel:`Layer"
+#~ " Properties` dialog by double-clicking on the layer in the legend and click "
+#~ "on the **[Query Builder]** button on the :guilabel:`General` tab. See "
+#~ "Section :ref:`vector_properties_dialog` for more information."
+#~ msgstr ""
+#~ "Vous pouvez changer la définition d'une couche après son chargement en "
+#~ "modifiant la requête SQL utilisée pour définir la couche. Pour faire cela, "
+#~ "ouvrez la fenêtre :guilabel:`Propriétés de la couche` en double-cliquant sur"
+#~ " la couche dans la légende puis cliquez sur le bouton **[Constructeur de "
+#~ "requête]** dans l'onglet :guilabel:`Général`. Voir Section "
+#~ ":ref:`vector_properties_dialog`."
+
+#~ msgid "Selection"
+#~ msgstr "Sélection"
+
+#~ msgid ""
+#~ "With |qg| it is possible also to select features for visualisation using a "
+#~ "similar query builder interface to that used in :ref:`vector_query_builder`."
+#~ " In the above section the purpose of the query builder is to highlight all "
+#~ "selected features meeting the filter criteria in yellow. The rest of the "
+#~ "features do not change their appearance."
+#~ msgstr ""
+#~ "Dans QGIS, il est possible également de sélectionner des entités en "
+#~ "utilisant une interface similaire à celle du constructeur de requêtes "
+#~ "utilisé dans :ref:`vector_query_builder`. Dans la section ci-dessus, le but "
+#~ "du constructeur de requêtes était seulement de surligner en jaune les "
+#~ "entités répondant aux critères, les autres entités ne changeant pas "
+#~ "d'apparence."
+
+#~ msgid ""
+#~ "Another possibility is to make a selection by right clicking on a layer in "
+#~ "the legend and choosing :guilabel:`Query ...`. If you perform a SQL query "
+#~ "here only the selected features are displayed in the map view. Features that"
+#~ " don't match the SQL query are not visualised in the map view. The same "
+#~ "function is available from the :guilabel:`General` tab in the vector "
+#~ ":guilabel:`Layer Properties` dialog. You can find a **[Query builder]** "
+#~ "button right below. The selection described above can be used with all "
+#~ "vector data providers."
+#~ msgstr ""
+#~ "Une autre possibilité est de réaliser une sélection par un clic-droit sur "
+#~ "une couche de la légende et de choisir :guilabel:`Requête`. Si vous "
+#~ "effectuez une requête SQL ici, seules les entités correspondant à la requête"
+#~ " seront affichées sur la carte. Les autres entités n'apparaissent plus sur "
+#~ "la carte. La même fonctionnalité est disponible via l'onglet "
+#~ ":guilabel:`Général` de la fenêtre  :guilabel:`Propriétés de la couche`. Vous"
+#~ " y trouverez un bouton **[Constructeur de requête]**. Ce type de sélection "
+#~ "est opérationnel pour tous les formats de données vecteurs."

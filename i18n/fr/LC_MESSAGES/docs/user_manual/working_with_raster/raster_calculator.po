@@ -2,32 +2,30 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
+"POT-Creation-Date: 2013-03-18 20:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# 457b908a6f5f48e69cd0f72556c7fa4c
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Language: fr\n"
+"X-Source-Language: C\n"
 
 # 405f443be2024e75a06667b7b6326636
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:12
 msgid "Raster Calculator"
-msgstr ""
+msgstr "Calculatrice Raster"
 
-# eb3004924ea14d48b6583755ec872b66
+# 84f053e253584b39902d3a42434138cf
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:16
 msgid ""
 "The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
@@ -35,13 +33,12 @@ msgid ""
 "raster pixel values. The results are written to a new raster layer with a "
 "GDAL supported format."
 msgstr ""
+"La :menuselection:`Calculatrice Raster` du menu :menuselection:`Raster` "
+"(voir figure_raster_2_) permet d'opérer des calculs sur la base des valeurs "
+"des pixels d'un raster existant. Le résultat est écrit dans un nouveau "
+"raster dans un des formats gérés par GDAL."
 
-# 812f486e6d5247de9834edb3f083cbd5
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:31
-msgid "Raster Calculator |nix|"
-msgstr ""
-
-# 1ed7a5a6054648f692eb322a23a4ce1e
+# 81b0a41506df4afc9aa766be8ed5c21e
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:34
 msgid ""
 "The **Raster bands** list contains all loaded raster layers that can be "
@@ -49,6 +46,11 @@ msgid ""
 "click its name in the Fields list. You can then use the operators to "
 "construct calculation expressions or you can just type it into the box."
 msgstr ""
+"La liste **Bandes raster** contient toutes les couches rasters actuellement "
+"chargées pouvant être utilisées. Pour ajouter un raster à la formule de "
+"calcul, faites un double-clic sur son nom dans la liste. Vous pouvez alors "
+"utiliser les opérateurs pour construire une formule ou bien les taper "
+"directement dans la zone de saisie."
 
 # 85477bec7334487390625441323c2464
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:39
@@ -59,8 +61,14 @@ msgid ""
 "resolution of the output layer. If the input layer has a different "
 "resolution, the values will be resampled with nearest neighbor algorithm."
 msgstr ""
+"Dans la partie **Couche de résultat**, vous devez définir la couche en "
+"sortie. Vous pouvez préciser l'étendue de la zone de calcul en vous basant "
+"sur une des couches raster utilisées ou en spécifiant des coordonnées X et Y"
+" ainsi que les nombres de lignes et de colonnes pour indiquer la résolution."
+" Si la couche en entrée a une résolution différente, les valeurs seront "
+"interpolées avec l'algorithme du plus proche voisin."
 
-# 4bd2ffb061654f5188f826168ceaf3af
+# 7a5cbc6f60834b4ba2986af3e5bb3802
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:45
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
@@ -69,23 +77,31 @@ msgid ""
 "functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for "
 "more operators to come!"
 msgstr ""
+"La partie **Opérateurs** contient tous les opérateurs utilisables. Pour "
+"ajouter un opérateur à la formule, cliquez sur le bouton approprié. Les "
+"opérateurs mathématiques (``+``, ``-``, ``*``, ... ) et les fonctions "
+"trigonométriques (``sin``, ``cos``, ``tan``, ... ) sont disponibles, "
+"d'autres feront leur apparition !"
 
-# f563e34eb8b14cc4b124faeb3982618d
+# 60c833697ad94c77a4634c04d8981352
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:50
 msgid ""
 "With the |checkbox| :guilabel:`Add result to project` checkbox the result "
 "layer will automatically added to the legend area and can be visualized."
 msgstr ""
+"Le fait de cocher |checkbox| :guilabel:`Ajouter le résultat au projet` "
+"chargera automatiquement le raster de résultat dans la légende du projet en "
+"courant."
 
 # ffb1c3cb85bc42eeaece7ba63c8cbb9a
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
 msgid "Examples"
-msgstr ""
+msgstr "Exemples"
 
 # f338c37f6fb3461f850b083341cca75b
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
 msgid "**Convert elevation values from meter to feet**"
-msgstr ""
+msgstr "**Conversion en pieds de données d'élévation en mètres**"
 
 # 429e4a0f857a4349bb963ff3118c1141
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:59
@@ -93,28 +109,40 @@ msgid ""
 "Creating an elevation raster feet from a raster in meter, you need to use "
 "the conversion factor for meters to feet: 3.28. The expression is:"
 msgstr ""
+"Pour créer un raster d'élévation en pieds à partir d'un raster en mètres, "
+"vous devez utiliser le facteur de conversion 3,28. La formule est la "
+"suivante :"
 
 # 20229000ac0e4c45aec43bbcb4428c4b
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
 msgid "**Using a mask**"
-msgstr ""
+msgstr "**Utilisation d'un masque**"
 
-# 865f896a8b524c2bade41ec9761ecba0
+# ef0840d852aa4315bf0ee3feac1e8b85
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:68
 msgid ""
 "If you want to mask out parts of a raster, because you are only interested "
 "in elevations above 0 meter, you can use following expression to create a "
 "mask and apply the result to a raster in one step."
 msgstr ""
+"Si vous souhaitez masquer certaines zones d'un raster, par exemple si vous "
+"vous intéressez uniquement aux altitudes supérieures à 0, vous pouvez "
+"utiliser la formule suivante qui crée un masque et l'applique au raster en "
+"une seule étape :"
 
 # 954ce31afe634c0bbcaead1ea6d9e014
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:76
 msgid ""
-"For every cell greater than or equal to 0, set its value to 1, otherwise set "
-"it to 0. This creates the mask on the fly."
+"For every cell greater than or equal to 0, set its value to 1, otherwise set"
+" it to 0. This creates the mask on the fly."
+msgstr ""
+"Les pixels de valeur supérieure ou égale à 0 prennent la valeur 1, les "
+"autres la valeur 0. Ceci permet de créer le masque à la volée."
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:31
+msgid "Raster Calculator |nix|"
 msgstr ""
 
-# 8436b804efc147d295af561a0a790a43
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
 msgid "Raster_Calculator"
 msgstr ""
