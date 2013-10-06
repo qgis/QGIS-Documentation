@@ -141,8 +141,6 @@ pretranslate: gettext
 gettext:
 	# something in i18n/pot dir creates havoc when using gettext: remove it
 	rm -rf i18n/pot
-	# be sure to remove possible available docs sources:
-	rm -rf $(SOURCEDIR)/docs/*/
 	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS)
 	@echo
 	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
