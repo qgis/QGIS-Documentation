@@ -1,74 +1,57 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
-# This file is distributed under the same license as the QGIS User Guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# choro <u.ko.kubot@gmail.com>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS User Guide 1.7\n"
+"Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: 2013-06-26 23:23+0000\n"
+"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-# b58107bf837b4c79bb6de60576ce0247
+# 723f56e4a5a6422fbaaec6be60a5a0b6
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
-# 63f786582e274ae1ace734acd764a20e
+# 40cfdaa3951c46c690ea3df9e77f23eb
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:15
 msgid "Working with Raster Data"
-msgstr ""
+msgstr "ラスターデータの操作"
 
-# d268e7001330424da6e0743bf2e2fe79
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:22
-msgid ""
-"This Section describes how to visualize and set raster layer properties. |"
-"qg| uses the :index:`GDAL` library to read and write raster data formats, "
-"including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine "
-"and many more. GRASS raster support is supplied by a native QGIS data "
-"provider plugin. The raster data can also be loaded in read mode from zip "
-"and gzip archives into QGIS."
-msgstr ""
-
-# c70cc2694a52460291b79849ac9ad0b6
+# b4184099969d4b2c95432abf199b91ff
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:29
 msgid ""
 "At the date of this document, more than 100 raster formats are supported by "
 "the GDAL library (see GDAL-SOFTWARE-SUITE :ref:`literature_and_web`). A "
 "complete list is available at http://www.gdal.org/formats_list.html."
 msgstr ""
+"この文書の日付において、GDALライブラリでは100以上のラスターフォーマットがサポートされています（:ref:`literature_and_web`"
+"  のGDAL-SOFTWARE-SUITEを参照）。完全なリストはhttp://www.gdal.org/formats_list.html "
+"で利用可能です。"
 
-# c2c7cf78643140aaa88a4d8b3f3e4adc
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:34
-msgid ""
-"Not all of the listed formats may work in QGIS for various reasons. For "
-"example, some require external commercial libraries or the GDAL installation "
-"of your OS was not built to support the format you want to use. Only those "
-"formats that have been well tested will appear in the list of file types "
-"when loading a raster into QGIS. Other untested formats can be loaded by "
-"selecting the ``[GDAL] All files (*)`` filter."
-msgstr ""
-
-# bd55ae4a971f4202a31c1254b5fd5766
+# dd18fb257e2f48579cbcf59ee5b1ca84
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:41
 msgid ""
 "Working with GRASS raster data is described in Section :ref:`sec_grass`."
-msgstr ""
+msgstr "GRASSラスターデータの操作についてはref:`sec_grass`のセクションで説明されています。"
 
-# 5892fcc21acd4b4d8824a12391991587
+# 52d16f427ad749b692888317100121f6
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:45
 msgid "What is raster data?"
-msgstr ""
+msgstr "ラスターデータとは？"
 
-# 1a2b512266be496aa6221bb9c8cc54b0
+# ba1ece8c2f334202aaa67da77ffd5347
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:47
 msgid ""
 "Raster data in GIS are matrices of discrete cells that represent features "
@@ -78,144 +61,221 @@ msgid ""
 "aerial photography or satellite imagery and modelled data such as an "
 "elevation matrix."
 msgstr ""
+"GISにおけるラスターデータは地球上表面での上下の特徴を表す個別のセルの行列です。ラスターグリッドの各セルは同じサイズであり、セルはたいてい長方形です（QGISでは、それらは常に矩形でしょう）。典型的なラスターデータセットは航空写真や衛星画像のようなリモートセンシングデータ、標高マトリクスとしてモデル化されたデータを含みます。"
 
-# 4ce6609b92f34631b0f02a2f66bdc57e
+# 2646927d437a45929ef4f0ae24961219
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:54
 msgid ""
-"Unlike vector data, raster data typically do not have an associated database "
-"record for each cell. They are geocoded by its pixel resolution and the x/y "
-"coordinate of a corner pixel of the raster layer. This allows QGIS to "
+"Unlike vector data, raster data typically do not have an associated database"
+" record for each cell. They are geocoded by its pixel resolution and the x/y"
+" coordinate of a corner pixel of the raster layer. This allows QGIS to "
 "position the data correctly in the map canvas."
 msgstr ""
+"ベクターデータとは異なり、ラスターデータは、典型的には、各セルに関連付けられたデータベースレコードを持っていません。それらは、そのピクセルの解像度とラスタレイヤの角ピクセルのX/"
+" Y座標によってジオコーディングします。これによりQGISのマップキャンバスに正しくデータを配置することができます。"
 
-# 6b71e3718b674743b7fa7e245dc9b92f
+# 91f0268998e240a29e98f295bdbda330
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:59
 msgid ""
-"QGIS makes use of georeference information inside the raster layer (e.g. :"
-"index:`GeoTiff`) or in an appropriate world file to properly display the "
+"QGIS makes use of georeference information inside the raster layer (e.g. "
+":index:`GeoTiff`) or in an appropriate world file to properly display the "
 "data."
 msgstr ""
+"QGISはラスタレイヤ内部ジオリファレンス情報（例：index:`GeoTiff`）を利用するか、適切なワールドファイルで正しくデータを表示します。"
 
-# 7fd958a00dac42448764e97c82c872d0
+# 18f4fa39ad8541ca869f4d9e893125f2
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:67
 msgid "Loading raster data in QGIS"
-msgstr ""
+msgstr "QGISにラスタデータをロードする"
 
-# bd7d0b7e3b0144bd84fd36f067126a17
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:69
-msgid ""
-"Raster layers are loaded either by clicking on the |mActionAddRasterLayer| :"
-"sup:`Load Raster` icon or by selecting the :menuselection:`Layer -->` |"
-"mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
-"one layer can be loaded at the same time by holding down the :kbd:`Control` "
-"or :kbd:`Shift` key and clicking on multiple items in the dialog :guilabel:"
-"`Open a GDAL Supported Raster Data Source`."
-msgstr ""
-
-# a3a801b5368645e89bdea820aff3ce9c
+# ee03088b60564db289f7eb6c682c49fe
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:77
 msgid ""
 "Once a raster layer is loaded in the map legend you can click on the layer "
 "name with the right mouse button to select and activate layer specific "
 "features or to open a dialog to set raster properties for the layer."
 msgstr ""
+"ラスタレイヤをマップの凡例にロードしたら、マウスの右ボタンでレイヤ名上をクリックし、アクティブレイヤの特定の地物を選択したり、レイヤのラスタプロパティを設定するためのダイアログを開くことができます。"
 
-# ab19b2953ed545fba55b7b2064f22c2f
+# 95520cd4ef424a32bff4c08fe2a00121
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:81
 msgid "**Right mouse button menu for raster layers**"
-msgstr ""
+msgstr "**ラスタレイヤの右マウスボタンメニュー**"
 
-# 66a338014efd4cf58d2897bcc702a6fe
+# dd0f24aefc7a4277b13adefdf8cc791e
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:83
 msgid ":menuselection:`Zoom to layer extent`"
+msgstr ":menuselection:`レイヤの領域にズーム`"
+
+# a7836d0f20894b8cafcef9a6715bec32
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
+msgid ":menuselection:`Remove`"
+msgstr ":menuselection:`削除`"
+
+# 313e201cdcd74b7c87a7697b22bd8317
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:95
+msgid ":menuselection:`Expand all`"
+msgstr ":menuselection:`すべてを展開する`"
+
+# 9e249d6c0c9946f3a115a27ae8641435
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:96
+msgid ":menuselection:`Collapse all`"
+msgstr ":menuselection:`すべてを折りたたむ`"
+
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:22
+msgid ""
+"This Section describes how to visualize and set raster layer properties. "
+"|qg| uses the :index:`GDAL` library to read and write raster data formats, "
+"including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas Imagine "
+"and many more. GRASS raster support is supplied by a native QGIS data "
+"provider plugin. The raster data can also be loaded in read mode from zip "
+"and gzip archives into QGIS."
 msgstr ""
 
-# 5bd2198f399649619a82aa51dc5b7a37
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:34
+msgid ""
+"Not all of the listed formats may work in QGIS for various reasons. For "
+"example, some require external commercial libraries or the GDAL installation"
+" of your OS was not built to support the format you want to use. Only those "
+"formats that have been well tested will appear in the list of file types "
+"when loading a raster into QGIS. Other untested formats can be loaded by "
+"selecting the ``[GDAL] All files (*)`` filter."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:69
+msgid ""
+"Raster layers are loaded either by clicking on the |mActionAddRasterLayer| "
+":sup:`Add Raster Layer` icon or by selecting the :menuselection:`Layer -->` "
+"|mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
+"one layer can be loaded at the same time by holding down the :kbd:`Control` "
+"or :kbd:`Shift` key and clicking on multiple items in the dialog "
+":guilabel:`Open a GDAL Supported Raster Data Source`."
+msgstr ""
+
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:84
 msgid ":menuselection:`Zoom to Best Scale (100\\%)`"
 msgstr ""
 
-# ecec6ec2860341be83bb9a27de6d8801
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:85
 msgid ":menuselection:`Show in Overview`"
 msgstr ""
 
-# 7f5053f5056f485ca0523c6c64dbb62f
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:86
-msgid ":menuselection:`Remove`"
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:87
+msgid ":menuselection:`Duplicate`"
 msgstr ""
 
-# 1e7d3551885a4276be7179db5f9e36a5
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:87
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:88
 msgid ":menuselection:`Set Layer CRS`"
 msgstr ""
 
-# ff92c5aefb784240b1f14841fae0f2a5
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:88
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:89
 msgid ":menuselection:`Set Project CRS from Layer`"
 msgstr ""
 
-# 523c617b79a74556bc6e64963923c3c9
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:89
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:90
+msgid ":menuselection:`Save as ...`"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
 msgid ":menuselection:`Properties`"
 msgstr ""
 
-# 5677e281c5bb434eb778811d7dcdbf8b
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:90
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
 msgid ":menuselection:`Rename`"
 msgstr ""
 
-# 203b832672094400ba1f54e8a63f63ee
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:91
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:93
 msgid ":menuselection:`Copy Style`"
 msgstr ""
 
-# b5d2763099cc4ffa80d665e9ec8a7329
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:92
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:94
 msgid ":menuselection:`Add New Group`"
 msgstr ""
 
-# a79f0943ee2648d4977aa269ea897222
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:93
-msgid ":menuselection:`Expand all`"
-msgstr ""
-
-# 06c7064c8b8547b2bb654b9536d21d5c
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:94
-msgid ":menuselection:`Collapse all`"
-msgstr ""
-
-# 3f3c352d0dd1451a9dd0926d6b3f2701
-#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:95
+#: ../../source/docs/user_manual/working_with_raster/supported_data.rst:97
 msgid ":menuselection:`Update Drawing Order`"
 msgstr ""
 
-# f9e29eabe503454bb204137862bbe03a
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:9
 msgid "Raster"
 msgstr ""
 
-# dbbbe154075548bbb1989cc13e3d1a01
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
 msgid "Arc/Info_Binary_Grid"
 msgstr ""
 
-# dbbbe154075548bbb1989cc13e3d1a01
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
 msgid "Arc/Info_ASCII_Grid"
 msgstr ""
 
-# dbbbe154075548bbb1989cc13e3d1a01
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:10
 msgid "GeoTIFF"
 msgstr ""
 
-# 0dff648af3b340bd98712f7839643085
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:11
 msgid "Erdas Imagine"
 msgstr ""
 
-# 22647989238c4c8c9bb3081de35bcb5a
 #: ../../source/docs/user_manual/working_with_raster/supported_data.rst:62
 msgid "loading_raster"
 msgstr ""
+
+#~ msgid ""
+#~ "This Section describes how to visualize and set raster layer properties. "
+#~ "|qg| uses the :index:`GDAL` library to read and write raster data formats "
+#~ "[#]_, including Arc/Info Binary Grid, Arc/Info ASCII Grid, GeoTIFF, Erdas "
+#~ "Imagine and many more."
+#~ msgstr ""
+#~ "このセクションではラスターレイヤープロパティの可視化と設定方法について説明します。|qg|はindex:`GDAL` "
+#~ "ライブラリを使用して、ラスターデータ（Arc/Info Binary Grid、Arc/Info ASCII Grid、 GeoTIFF、 Erdas "
+#~ "Imagineなどを含む多数）の読み書きを行います。"
+
+#~ msgid ""
+#~ "**Note** Not all of the listed formats may work in QGIS for various reasons."
+#~ " For example, some require external commercial libraries or the GDAL "
+#~ "installation of your OS was not built to support the format you want to use."
+#~ " Only those formats that have been well tested will appear in the list of "
+#~ "file types when loading a raster into QGIS. Other untested formats can be "
+#~ "loaded by selecting *.*."
+#~ msgstr ""
+#~ "様々な理由により、リストアップされたすべてのフォーマットがQGISで機能するわけではないかもしれません。例えば、いくつかは外部の商用ライブラリを必要としますし、OSのGDALのインストールは、使用したいフォーマットをサポートするために構築されていませんでした。QGISにラスターをロードすると、十分テストされたフォーマットがファイルの種類のリストに表示されます。他のテストされていないフォーマットについては"
+#~ " *.*を選択することによロードすることができます。ができます*。"
+
+#~ msgid ""
+#~ "Raster layers are loaded either by clicking on the |mActionAddRasterLayer| "
+#~ ":sup:`Load Raster` icon or by selecting the :menuselection:`View -->` "
+#~ "|mActionAddRasterLayer| :guilabel:`Add Raster Layer` menu option. More than "
+#~ "one layer can be loaded at the same time by holding down the :kbd:`Control` "
+#~ "or :kbd:`Shift` key and clicking on multiple items in the dialog "
+#~ ":guilabel:`Open a GDAL Supported Raster Data Source`."
+#~ msgstr ""
+#~ "ラスタレイヤは |mActionAddRasterLayer| :sup:`ラスターのロード`あるいは メニューの`表示 -->` "
+#~ "|mActionAddRasterLayer| "
+#~ ":guilabel:`ラスタレイヤの追加`で読み込むことができます。guilabel:`GDALのサポートするラスタデータソースを開く`ダイアログで "
+#~ "kbd:`Control` または :kbd:`Shift` "
+#~ "キーを押しながら同時に複数の項目をクリックすると、同時に複数のレイヤをロードすることができます。"
+
+#~ msgid ":menuselection:`Zoom to best scale (100\\%)`"
+#~ msgstr ":menuselection:`最適スケール（100％）にズームする`"
+
+#~ msgid ":menuselection:`Show in overview`"
+#~ msgstr ":menuselection:`全体図に表示`"
+
+#~ msgid ":menuselection:`Set layer CRS -->`"
+#~ msgstr ":menuselection:`レイヤのCRSを設定する -->`"
+
+#~ msgid ":menuselection:`Set project CRS from layer`"
+#~ msgstr ":menuselection:`レイヤのCRSをプロジェクトに設定する`"
+
+#~ msgid ":menuselection:`Properties -->`"
+#~ msgstr ":menuselection:`プロパティ -->`"
+
+#~ msgid ":menuselection:`Rename -->`"
+#~ msgstr ":menuselection:`改名 -->`"
+
+#~ msgid ":menuselection:`Add Group`"
+#~ msgstr ":menuselection:`グループ追加`"
+
+#~ msgid ""
+#~ "GRASS raster support is supplied by a native QGIS data provider plugin."
+#~ msgstr "GRASSラスタのサポートはネイティブのQGISデータプロバイダプラグインによって提供されています。"

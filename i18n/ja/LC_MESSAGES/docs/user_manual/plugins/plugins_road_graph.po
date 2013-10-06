@@ -1,94 +1,102 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
-# This file is distributed under the same license as the QGIS User Guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
+# This file is distributed under the same license as the QGIS Documentation Project package.
+# 
+# Translators:
+# choro <u.ko.kubot@gmail.com>, 2013
+# HiroM <mukuo@mri.co.jp>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS User Guide 1.7\n"
+"Project-Id-Version: qgis-documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-12-10 23:17\n"
+"PO-Revision-Date: 2013-06-09 10:28+0000\n"
+"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
-# 46dbd5146afc4d11b05fe6c8870bf04b
+# dea333dfd3484eedb819e63b5f90e5c5
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:5
 msgid "|updatedisclaimer|"
-msgstr ""
+msgstr "|updatedisclaimer|"
 
-# 76005eb81e7d42038a2814361e0bb327
+# fe239c12a1ed4f87a3158bcb2340a6a4
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
 msgid "Road Graph Plugin"
-msgstr ""
+msgstr "道路グラフプラグイン"
 
-# 79ef2e1513d9449b82ecd26fbd0c8208
+# 8170bdd7309540378c9f12ccc7ef2046
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:14
 msgid ""
-"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest "
-"path between two points on any polyline layer and plots this path over the "
+"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
+" path between two points on any polyline layer and plots this path over the "
 "road network."
 msgstr ""
+"道路グラグプラグインはC++で書かれたQGIS用のプラグインで,ポリライン上の任意の2地点間の最短経路を計算し,道路ネットワーク上にポリラインとプロットを作成し出力します"
 
-# f7eeb293a29440af9997fcc40149f71d
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
-msgid "Road Graph Plugin |nix|"
-msgstr ""
-
-# 3c07f3fd20014f8b96b382ca7dbc17de
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
-msgid "Main features:"
-msgstr ""
-
-# 71661542ee0941fbb64a9a666b5dc2c6
+# 89cf995449e44b878aeca420a8a165f2
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
 msgid "calculate path, it's length and travel time"
-msgstr ""
+msgstr "経路,距離,旅行時間を計算する"
 
-# 8a99aa20eee9482c8efae8f64799541a
+# bfb1fae852fb4524a73a33cbdcbfc691
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:32
 msgid "optimize by length or by travel time"
-msgstr ""
+msgstr "距離または旅行時間で最適化する"
 
-# ebd05e6b3227432daa67a5e252af3739
+# 142dba176b054c1fadd31c540461a69b
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:33
 msgid "export path to a vector layer"
-msgstr ""
+msgstr "経路をベクタレイヤとして出力する"
 
-# ddf0abe1604a413fbc9ec45afc9066d3
+# ae697bb3ae3d42c780981773fd5a796f
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:34
 msgid ""
 "highlight roads directions (this is slow and used mainly for debug purposes "
 "and for the settings testing)"
-msgstr ""
+msgstr "道路の方向にハイライトを入れる(動作が遅いため,主にデバッグや設定確認目的に利用します)"
 
-# dda7e472b5874eedad14980f59a63431
+# beccdd4f52c442a08a22ac34b040a6f5
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:37
 msgid ""
-"As a roads layer you can use any polyline vector layer in any QGIS supported "
-"format. Two lines with a common point are considered connected. Please note, "
-"it is required to use layer CRS as project CRS while editing roads layer. "
-"This is due to the fact that recalculation of the coordinates between "
-"different CRS introduce some errors that can result in discontinuities, even "
-"when 'snapping' is used."
+"As a roads layer you can use any polyline vector layer in any QGIS supported"
+" format. Two lines with a common point are considered connected. Please "
+"note, it is required to use layer CRS as project CRS while editing roads "
+"layer. This is due to the fact that recalculation of the coordinates between"
+" different CRS introduce some errors that can result in discontinuities, "
+"even when 'snapping' is used."
 msgstr ""
+"QGISがサポートしているフォーマットでは、どんなポリラインのベクターレイヤでも道路のレイヤーとして使用することができます。共通のポイントを持つ２本のラインは接続していると見なされます。注意点は、道路レイヤーを編集中にレイヤーのCRSをプロジェクトのCRSとして使用する必要があります。これは、異なるCRS間の座標の再計算が、スナップを用いた場合でさえも不連続性をもたらし、エラーを引き起こす事実によるものです。"
 
-# 09273e44229143a9aa5801a7a1f73ea5
+# 328f25024c1d48b3a31a222145b86b5e
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
 msgid "In the layer attribute table the following fields can be used:"
-msgstr ""
+msgstr "次に示すレイヤ属性テーブルのフィールドが利用可能です"
 
-# 9ac0db7b37b2487cb39a53a297928f5c
+# 668ffe7177d741fd842c4951348a647f
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:46
 msgid "speed on road section --- numeric field;"
+msgstr "道路の速度 --- 数値フィールド;"
+
+# f1e0016ba007453c9f390fa90ae6adde
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:60
+msgid ""
+"Select a Start and a Stop point in the road network layer and click on "
+"**[Calculate]**."
+msgstr "道路ネットワークレイヤ上に始点と終点を設定し,**[計算]**をクリックしてください"
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
+msgid "Road Graph Plugin |nix|"
 msgstr ""
 
-# 476d11df63074d419dba2527ba1fb8be
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
+msgid "Main features:"
+msgstr ""
+
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
 msgid ""
 "direction --- any type, that can be casted to string. Forward and reverse "
@@ -96,7 +104,6 @@ msgid ""
 "road"
 msgstr ""
 
-# 9ff6813641564ba985a44e6163a0ee3b
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:50
 msgid ""
 "If some fields don't have any value or do not exist --- default values are "
@@ -104,22 +111,43 @@ msgid ""
 "dialog."
 msgstr ""
 
-# 9c03a023640d4bf5b230dbaa5c40dd88
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
 msgid "Using the plugin"
 msgstr ""
 
-# a490e5f981734f519c930e2572eaa775
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:56
 msgid ""
-"After plugin activation you will see an additional panel on the left side of "
-"the main QGIS window. Now make some definitions to the :guilabel:`Road graph "
-"plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`."
+"After plugin activation you will see an additional panel on the left side of"
+" the main QGIS window. Now make some definitions to the :guilabel:`Road "
+"graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+"Graph`."
 msgstr ""
 
-# 2df7ca01fcc540df991dc615689b86d9
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:60
-msgid ""
-"Select a Start and a Stop point in the road network layer and click on "
-"**[Calculate]**."
-msgstr ""
+#~ msgid "**Main features**:"
+#~ msgstr "**主な機能**:"
+
+#~ msgid ""
+#~ "direction --- any type, that can be casted to string. Forward and reverse "
+#~ "directions are correspond to the one-way road, both directions --- two-way "
+#~ "road."
+#~ msgstr ""
+#~ "方向 --- any type, that can be casted to string. "
+#~ "一方通行の道路においては,前方向及び逆方向の定義ができます.また相互通行の定義もできます."
+
+#~ msgid ""
+#~ "If some fields don't have any value or do not exists --- default values are "
+#~ "used. You can change defaults and some plugin settings in plugin settings "
+#~ "dialog."
+#~ msgstr ""
+#~ "いくつかのフィールドは全く値を持たないか存在しません。デフォルト値が用いられます。デフォルト値は変更でき、プラグインによっては設定ダイアログで設定できます。"
+
+#~ msgid "Usage"
+#~ msgstr "利用方法"
+
+#~ msgid ""
+#~ "After plugin activation you will see additional panel on the left side of "
+#~ "the main QGIS window. Now make some definitions to the :guilabel:`Road graph"
+#~ " settings` dialog in the menu :menuselection:`Plugins --> Road Graph`."
+#~ msgstr ""
+#~ "プラグインを有効にした後、QGISのメインウィンドウの左側にパネルが追加表示されます。それから、メニューの`Plugins --> Road "
+#~ "Graph`を実行し、guilabel:`Road graph settings` ダイアログでいくつかの定義をします。"
