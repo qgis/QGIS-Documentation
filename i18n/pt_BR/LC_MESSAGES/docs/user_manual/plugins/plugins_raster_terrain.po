@@ -1,3 +1,4 @@
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -12,53 +13,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Language: pt_BR\n"
 
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:5
 msgid "|updatedisclaimer|"
 msgstr "|updatedisclaimer|"
 
-msgid "Raster Terrain Modelling Plugin"
-msgstr "Complemento de Modelagem de Terreno Raster"
-
-msgid ""
-"The Raster Terrain Modelling plugin can be used to calculate the slope, "
-"aspect, ruggedness, and total curvature for digital elevation models (DEM). "
-"It is very simple to handle and provides an intuitive graphical user "
-"interface for creating new raster layers (See Figure_raster_terrain_1_). The "
-"plugin requires the following parameters to be specified before running:"
-msgstr ""
-"O complemento de Modelagem de Terreno Raster pode ser utilizado para "
-"calcular o declive, aspecto, irregularidade e curvatura total para modelos "
-"digitais de elevação (MDE). É muito simples de lidar e fornece uma interface "
-"gráfica de usuário intuitiva para criar novas camadas raster (Ver "
-"Figure_raster_terrain_1_). O complemento exige que os seguintes parâmetros "
-"sejam especificados antes da execução:"
-
-msgid ""
-"**Analysis**: Can be one of slope, aspect, ruggedness, or total curvature."
-msgstr ""
-"**Análise**: Pode ser um declive, aspecto, irregularidade ou curvatura total."
-
-msgid ""
-"**Input layer**: Specify the input raster from a list of loaded raster "
-"layers."
-msgstr ""
-"**Camada de entrada**: Especifique o raster de entrada de uma lista de "
-"camadas de raster carregada."
-
-msgid "**Output layer**: Specify a name and path for the output raster file."
-msgstr ""
-"**Camada de saída**: Especifique um nome e um caminho para o arquivo raster "
-"de saída."
-
-msgid ""
-"**Output format**: Specify a format type for the output raster file. "
-"(Default is GeoTiff)."
-msgstr ""
-"**Formato de saída**: Especifique um tipo de formato para o arquivo raster "
-"de saída. (Padrão é GeoTiff)."
-
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:19
 msgid "Description of the analysis:"
 msgstr "Descrição da análise:"
 
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:21
 msgid ""
 "**Slope**: Calculates slope angle for each cell in degrees (based on first "
 "order derivative estimation)."
@@ -66,6 +29,7 @@ msgstr ""
 "**Declive**: Calcula o ângulo de declive para cada célula em graus (baseado "
 "na estimativa da derivada de primeira ordem)."
 
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:23
 msgid ""
 "**Aspect**: Exposition (starting with 0 for north direction, in degrees "
 "counterclockwise)."
@@ -73,44 +37,146 @@ msgstr ""
 "**Aspecto**: Exposição (começando de 0 na direção norte, em graus "
 "antihorário)."
 
-msgid ""
-"**Ruggedness factor**: A quantitative measurement of terrain heterogeneity."
-msgstr ""
-"**Fator de irregularidade**: Uma medida quantitativa da heterogeneidade do "
-"terreno."
-
-msgid ""
-"**Total curvature**: A curvature measure that combines plan- and profile "
-"curvature."
-msgstr ""
-"**Curvatura total**: Uma medida de curvatura que combina a curvatura do "
-"plano e do perfil."
-
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:49
 msgid "Using the plugin"
 msgstr "Usando o complemento"
 
-msgid "Start QGIS and load a DEM raster layer."
-msgstr "Iniciar QGIS e carregar uma camada raster MDE."
-
-msgid ""
-"Load the Raster Terrain Modelling plugin in the Plugin Manager see Section "
-":ref:`load_core_plugin` and click on the |raster_terrain| :sup:`Raster "
-"Terrain Modelling` icon which appears in the QGIS toolbar menu. The Raster "
-"Terrain Modelling plugin dialog appears as shown in Figure_raster_terrain_1_."
-msgstr ""
-"Carregar o complemento de Modelagem de Terreno Raster no Gerenciador de "
-"Complemento ver Seção:ref:`load_core_plugin` e clique no |raster_terrain| "
-":sup: ícone de `Modelagem de Terreno Raster` o qual aparece na barra de "
-"ferramentas do menu QGIS. O plugin da janela de Modelagem de Terreno Raster "
-"aparece como mostrado na Figure_raster_terrain_1_."
-
-msgid "Select an analysis method (e.g. :menuselection:`Slope -->`)."
-msgstr "Selecione um método de análise (e.g.:menuselection:`Declive -->`)."
-
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:57
 msgid "Specify an output file path, and an output file type."
 msgstr ""
 "Especifique um caminho para o arquivo de saída, e um tipo de arquivo de "
 "saída."
 
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:58
 msgid "Click **[OK]**."
 msgstr "Clique **[OK]**."
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:12
+msgid "Raster Terrain Analysis Plugin"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:14
+msgid ""
+"|dem_analysis| The Raster Terrain Analysis Plugin can be used to calculate "
+"the slope, aspect, hillshade, ruggedness index and relief for digital "
+"elevation models (DEM). It is very simple to handle and provides an "
+"intuitive graphical user interface for creating new raster layers (See "
+"Figure_raster_terrain_1_)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:25
+msgid ""
+"**Hillshade**: Create shaded map using light and shadow to provide a more "
+"three-dimensional appearance for a shaded relief map."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:27
+msgid ""
+"**Ruggedness Index**: A quantitative measurement of terrain heterogeneity as"
+" described by Riley et al. (1999). It is calculated for every location, by "
+"summarizing the change in elevation within the 3x3 pixel grid."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:30
+msgid ""
+"**Relief**: Creating a shaded relief map from digital elevation data. "
+"Implemented is a method to choose the elevation colors analysing the "
+"frequency distribution."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:44
+msgid "Raster Terrain Modelling Plugin (slope calculation)"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:51
+msgid ""
+"Start QGIS and load the :file:`gtopo30` raster layer from the GRASS sample "
+"location."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:53
+msgid ""
+"Load the Raster Terrain Analysis plugin in the Plugin Manager (see Section "
+":ref:`load_core_plugin`)"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_raster_terrain.rst:55
+msgid ""
+"Select an analysis method from menu (e.g. :menuselection:`Raster --> Terrain"
+" Analysis --> Slope`). The :guilabel:`Slope` dialog appears as shown in "
+"Figure_raster_terrain_1_."
+msgstr ""
+
+#~ msgid "Raster Terrain Modelling Plugin"
+#~ msgstr "Complemento de Modelagem de Terreno Raster"
+
+#~ msgid ""
+#~ "The Raster Terrain Modelling plugin can be used to calculate the slope, "
+#~ "aspect, ruggedness, and total curvature for digital elevation models (DEM). "
+#~ "It is very simple to handle and provides an intuitive graphical user "
+#~ "interface for creating new raster layers (See Figure_raster_terrain_1_). The"
+#~ " plugin requires the following parameters to be specified before running:"
+#~ msgstr ""
+#~ "O complemento de Modelagem de Terreno Raster pode ser utilizado para "
+#~ "calcular o declive, aspecto, irregularidade e curvatura total para modelos "
+#~ "digitais de elevação (MDE). É muito simples de lidar e fornece uma interface"
+#~ " gráfica de usuário intuitiva para criar novas camadas raster (Ver "
+#~ "Figure_raster_terrain_1_). O complemento exige que os seguintes parâmetros "
+#~ "sejam especificados antes da execução:"
+
+#~ msgid ""
+#~ "**Analysis**: Can be one of slope, aspect, ruggedness, or total curvature."
+#~ msgstr ""
+#~ "**Análise**: Pode ser um declive, aspecto, irregularidade ou curvatura "
+#~ "total."
+
+#~ msgid ""
+#~ "**Input layer**: Specify the input raster from a list of loaded raster "
+#~ "layers."
+#~ msgstr ""
+#~ "**Camada de entrada**: Especifique o raster de entrada de uma lista de "
+#~ "camadas de raster carregada."
+
+#~ msgid "**Output layer**: Specify a name and path for the output raster file."
+#~ msgstr ""
+#~ "**Camada de saída**: Especifique um nome e um caminho para o arquivo raster "
+#~ "de saída."
+
+#~ msgid ""
+#~ "**Output format**: Specify a format type for the output raster file. "
+#~ "(Default is GeoTiff)."
+#~ msgstr ""
+#~ "**Formato de saída**: Especifique um tipo de formato para o arquivo raster "
+#~ "de saída. (Padrão é GeoTiff)."
+
+#~ msgid ""
+#~ "**Ruggedness factor**: A quantitative measurement of terrain heterogeneity."
+#~ msgstr ""
+#~ "**Fator de irregularidade**: Uma medida quantitativa da heterogeneidade do "
+#~ "terreno."
+
+#~ msgid ""
+#~ "**Total curvature**: A curvature measure that combines plan- and profile "
+#~ "curvature."
+#~ msgstr ""
+#~ "**Curvatura total**: Uma medida de curvatura que combina a curvatura do "
+#~ "plano e do perfil."
+
+#~ msgid "Start QGIS and load a DEM raster layer."
+#~ msgstr "Iniciar QGIS e carregar uma camada raster MDE."
+
+#~ msgid ""
+#~ "Load the Raster Terrain Modelling plugin in the Plugin Manager see Section "
+#~ ":ref:`load_core_plugin` and click on the |raster_terrain| :sup:`Raster "
+#~ "Terrain Modelling` icon which appears in the QGIS toolbar menu. The Raster "
+#~ "Terrain Modelling plugin dialog appears as shown in "
+#~ "Figure_raster_terrain_1_."
+#~ msgstr ""
+#~ "Carregar o complemento de Modelagem de Terreno Raster no Gerenciador de "
+#~ "Complemento ver Seção:ref:`load_core_plugin` e clique no |raster_terrain| "
+#~ ":sup: ícone de `Modelagem de Terreno Raster` o qual aparece na barra de "
+#~ "ferramentas do menu QGIS. O plugin da janela de Modelagem de Terreno Raster "
+#~ "aparece como mostrado na Figure_raster_terrain_1_."
+
+#~ msgid "Select an analysis method (e.g. :menuselection:`Slope -->`)."
+#~ msgstr "Selecione um método de análise (e.g.:menuselection:`Declive -->`)."

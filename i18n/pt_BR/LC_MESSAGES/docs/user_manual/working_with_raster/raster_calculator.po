@@ -2,7 +2,7 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -19,42 +19,10 @@ msgstr ""
 "X-Language: pt_BR\n"
 "X-Source-Language: C\n"
 
-# 38890cf608fd4660bc21338adb8ac84d
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:7
-msgid "|updatedisclaimer|"
-msgstr "|updatedisclaimer|"
-
 # a8b8452d67be456eaa160921984df8a5
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:12
 msgid "Raster Calculator"
 msgstr "Calculadora Raster"
-
-# cbb011effee840e2a7e8c8c4f8b7898c
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:16
-msgid ""
-"The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
-"(see figure_raster_2_) allows to perform calculations on basis of existing "
-"raster pixel values. The results are written to a new raster layer with a "
-"GDAL supported format."
-msgstr ""
-"O :menuselection:`Calculadora Raster` no :menuselection: menu`Camada` (see "
-"figure_raster_2_) permite realizar cálculos com base em valores de pixels "
-"raster existentes. Os resultados são gravados em uma nova camada que suporta "
-"o formato GDAL."
-
-# 363de172288a406d91662194123c0637
-#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:34
-msgid ""
-"The **Fields list** contains all loaded raster layers that can be used. To "
-"add a raster to the raster calculator expression field, double click its "
-"name in the Fields list. You can then use the operators to construct "
-"calculation expressions or you can just type it into the box."
-msgstr ""
-"A **Fields list** contem todas camadas raster carregadas que podem ser "
-"usadas. Para adicionar uma imagem para o campo de expressão calculadora "
-"raster, clique duas vezes em seu nome na lista Campos. Você pode então usar "
-"os operadores para construir expressões de cálculo ou você pode simplesmente "
-"pode digitá-lo na caixa."
 
 # 3091b4da2767454eae0ba4bd54933a84
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:39
@@ -67,31 +35,123 @@ msgid ""
 msgstr ""
 "Na seção **Result layer** é necessário definir a camada de saída. Em "
 "seguida, pode definir a extensão da área de cálculo com base em uma camada "
-"raster de entrada ou com base em coordenadas X, Y e em colunas e linhas para "
-"definir a resolução da camada de saída. Se a camada de entrada tem uma "
+"raster de entrada ou com base em coordenadas X, Y e em colunas e linhas para"
+" definir a resolução da camada de saída. Se a camada de entrada tem uma "
 "resolução diferente, os valores serão redefinidos com o algoritmo vizinho "
 "mais próximo."
 
-# 765ce5aeb2bf4fecb1c05836cbd7797c
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:16
+msgid ""
+"The :menuselection:`Raster Calculator` in the :menuselection:`Raster` menu "
+"(see figure_raster_2_) allows to perform calculations on basis of existing "
+"raster pixel values. The results are written to a new raster layer with a "
+"GDAL supported format."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:31
+msgid "Raster Calculator |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:34
+msgid ""
+"The **Raster bands** list contains all loaded raster layers that can be "
+"used. To add a raster to the raster calculator expression field, double "
+"click its name in the Fields list. You can then use the operators to "
+"construct calculation expressions or you can just type it into the box."
+msgstr ""
+
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:45
 msgid ""
 "The **Operators section** contains all usable operators. To add an operator "
 "to the raster calculator expression box, click the appropriate button. "
-"Mathematical calculations ( + , - , * , ... ) and trigonometric functions ( "
-"sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
+"Mathematical calculations (``+``, ``-``, ``*``, ... ) and trigonometric "
+"functions (``sin``, ``cos``, ``tan``, ... ) are available. Stay tuned for "
+"more operators to come!"
 msgstr ""
-"A **Operators section**contém todos operadores disponíveis. Para adicionar "
-"um operador na caixa de expressão da calculadora raster. clique no botão "
-"apropriado. Calculos matemáticos ( + , - , * , ... ) e funções "
-"trigonométricas (sen, cos, tan, ... ) estão disponíveis. Fique atente pois "
-"mais operadores podem surgir!"
 
-# 99a821bd7b0a4cd08bb44711b5baab84
 #: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:50
 msgid ""
-"With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
-"will automatically added to the legend area and can be visualized."
+"With the |checkbox| :guilabel:`Add result to project` checkbox the result "
+"layer will automatically added to the legend area and can be visualized."
 msgstr ""
-"Com o |checkbox| :guilabel:`Result to project` caixa de seleção a camada "
-"resultante será automaticamente adicionada à área de legenda e poderá ser "
-"visualizada."
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:55
+msgid "Examples"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:57
+msgid "**Convert elevation values from meter to feet**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:59
+msgid ""
+"Creating an elevation raster feet from a raster in meter, you need to use "
+"the conversion factor for meters to feet: 3.28. The expression is:"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:66
+msgid "**Using a mask**"
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:68
+msgid ""
+"If you want to mask out parts of a raster, because you are only interested "
+"in elevations above 0 meter, you can use following expression to create a "
+"mask and apply the result to a raster in one step."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:76
+msgid ""
+"For every cell greater than or equal to 0, set its value to 1, otherwise set"
+" it to 0. This creates the mask on the fly."
+msgstr ""
+
+#: ../../source/docs/user_manual/working_with_raster/raster_calculator.rst:14
+msgid "Raster_Calculator"
+msgstr ""
+
+#~ msgid "|updatedisclaimer|"
+#~ msgstr "|updatedisclaimer|"
+
+#~ msgid ""
+#~ "The :menuselection:`Raster Calculator` in the :menuselection:`Layer` menu "
+#~ "(see figure_raster_2_) allows to perform calculations on basis of existing "
+#~ "raster pixel values. The results are written to a new raster layer with a "
+#~ "GDAL supported format."
+#~ msgstr ""
+#~ "O :menuselection:`Calculadora Raster` no :menuselection: menu`Camada` (see "
+#~ "figure_raster_2_) permite realizar cálculos com base em valores de pixels "
+#~ "raster existentes. Os resultados são gravados em uma nova camada que suporta"
+#~ " o formato GDAL."
+
+#~ msgid ""
+#~ "The **Fields list** contains all loaded raster layers that can be used. To "
+#~ "add a raster to the raster calculator expression field, double click its "
+#~ "name in the Fields list. You can then use the operators to construct "
+#~ "calculation expressions or you can just type it into the box."
+#~ msgstr ""
+#~ "A **Fields list** contem todas camadas raster carregadas que podem ser "
+#~ "usadas. Para adicionar uma imagem para o campo de expressão calculadora "
+#~ "raster, clique duas vezes em seu nome na lista Campos. Você pode então usar "
+#~ "os operadores para construir expressões de cálculo ou você pode simplesmente"
+#~ " pode digitá-lo na caixa."
+
+#~ msgid ""
+#~ "The **Operators section** contains all usable operators. To add an operator "
+#~ "to the raster calculator expression box, click the appropriate button. "
+#~ "Mathematical calculations ( + , - , * , ... ) and trigonometric functions ( "
+#~ "sin, cos, tan, ... ) are available. Stay tuned for more operators to come!"
+#~ msgstr ""
+#~ "A **Operators section**contém todos operadores disponíveis. Para adicionar "
+#~ "um operador na caixa de expressão da calculadora raster. clique no botão "
+#~ "apropriado. Calculos matemáticos ( + , - , * , ... ) e funções "
+#~ "trigonométricas (sen, cos, tan, ... ) estão disponíveis. Fique atente pois "
+#~ "mais operadores podem surgir!"
+
+#~ msgid ""
+#~ "With the |checkbox| :guilabel:`Result to project` checkbox the result layer "
+#~ "will automatically added to the legend area and can be visualized."
+#~ msgstr ""
+#~ "Com o |checkbox| :guilabel:`Result to project` caixa de seleção a camada "
+#~ "resultante será automaticamente adicionada à área de legenda e poderá ser "
+#~ "visualizada."

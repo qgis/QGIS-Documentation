@@ -2,7 +2,7 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation Project 1.8\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Language: pt_BR\n"
 
 # 11f4de457cb849828c8f189a0cfdae08
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:7
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:5
 msgid "|updatedisclaimer|"
 msgstr "|updatedisclaimer|"
 
@@ -26,132 +26,35 @@ msgstr "|updatedisclaimer|"
 msgid "Oracle GeoRaster Plugin"
 msgstr "Complemento Oracle GeoRaster"
 
-# fbef3750f98547458b6b4e0eba3cc8fd
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:15
-msgid ""
-"In Oracle databases, raster data can be stored in SDO\\_GEORASTER objects "
-"available with the Oracle Spatial extension. In QGIS, the |oracle_raster| "
-":sup:`OracleGeoRasterPlugin` is supported by GDAL, and depends on Oracle's "
-"Database product being installed and working on your machine. While Oracle "
-"is proprietary software, they provide their software free for development "
-"and testing purposes. Here is one simple example of how to load raster "
-"images to GeoRaster:"
-msgstr ""
-"Em banco de dados Oracle, dados raster podem ser armazenados em objetos "
-"SDO\\_GEORASTER disponíveis com a extensão Oracle Spatial . Em QGIS, o "
-"|oracle_raster| :sup:`OracleGeoRasterPlugin` é sustentado por GDAL e depende "
-"que o banco de dados Oracle seja instalado e funcione em sua máquina. "
-"Enquanto Oracle é um software proprietário, eles fornecem o software livre "
-"deles para desenvolver e testar propostas. Aqui está um exemplo simples de "
-"como carregar imagens raster para o GeoRaster:"
-
-# 92243f69ddc448e2838d18aece620da3
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:28
-msgid ""
-"This will load the raster into the default GDAL\\_IMPORT table, as a column "
-"named RASTER."
-msgstr ""
-"Isso vai carregar o raster no padrão de tabela GDAL\\_IMPORT, como uma "
-"coluna chamada RASTER."
-
 # b19aa623e91e47a8837c1085f801ffe7
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:30
 msgid "Managing connections"
 msgstr "Gerenciando conexões"
 
-# 6fba1bcf7df04189be000d38734fe1c8
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:34
-msgid ""
-"Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin "
-"Manager (see Section :ref:`load_core_plugin`). The first time you load a "
-"GeoRaster in QGIS, you must create a connection to the Oracle database that "
-"contains the data. To do this, begin by clicking on the |oracle_raster| "
-":sup:`Select GeoRaster` toolbar button, it will open the Select Oracle "
-"Spatial GeoRaster dialog window. Click on **[New]** to open the dialog "
-"window, and specify the connection parameters (See Figure_oracle_raster_1_):"
-msgstr ""
-"Primeiro, o Complemento Oracle Georaster deve ser habilitado usando o "
-"Gerenciador de Complemento (ver Seção :ref:`load_core_plugin`). A primeira "
-"vez que você carrega um GeoRaster no QGIS, você deve criar uma conexão para "
-"o banco de dados Oracle que contenha os dados. Para fazer isso, comece "
-"clicando em |oracle_raster| :sup: botão da barra de ferramentas `Select "
-"GeoRaster`, ele abrirá a janela de diálogo Select Oracle Spatial GeoRaster. "
-"Clique em **[Novo]** para abrir a janela de diálogo e especifique os "
-"parâmetros de conexão (Ver Figure_oracle_raster_1_):"
-
-# 64389a938fb346bd92084322dad4c231
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:42
-msgid "**Name**: Enter a name for the database connection."
-msgstr "**Nome**: Insira um nome para a conexão do banco de dados."
-
-# af6ef0d463a044979cda53a47bf4981c
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:43
-msgid ""
-"**Database instance**: Enter the name of the database that you will connect "
-"to."
-msgstr ""
-"**Instância de banco de dados**: Insira o nome do banco de dados que você "
-"vai conectar."
-
-# c8a1624ad2914a05a653a431f8af15b6
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:44
-msgid ""
-"**Username**: Specify your own username that you will use to access the "
-"database."
-msgstr ""
-"**Nome de usuário**: Especifique seu próprio nome de usuário que você usará "
-"para acessar o banco de dados."
-
-# acc3f936c9cc4dd5a6c2217f48e6478d
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:45
-msgid ""
-"**Password**: The password associated with your username that is required to "
-"access the database."
-msgstr ""
-"**Senha**: A senha associada ao seu nome de usuário que será exigida para "
-"acessar o banco de dados."
-
-# a9e91c0e07b9401ab2477c8ae2523300
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:61
-msgid ""
-"Now, back on the main Oracle Spatial GeoRaster dialog window (See "
-"Figure_oracle_raster_2_), use the drop-down list to choose one connection, "
-"and use the **[Connect]** button to establish a connection. You may also "
-"**[Edit]** the connection by opening the previous dialog and making changes "
-"to the connection information, or use the **[Delete]** button to remove the "
-"connection from the drop-down list."
-msgstr ""
-"Agora, de volta à principal janela de diálogo Oracle Spatial GeoRaster (Ver "
-"Figure_oracle_raster_2_), utilize a lista suspensa para escolher uma conexão "
-"e use o botão **[Conecte]** para estabelecer uma conexão. Você pode também "
-"**[Editar]** a conexão abrindo a janela anterior e fazendo mudanças para "
-"informação de conexão, ou usar o botão **[Delete]** para remover a conexão "
-"da lista suspensa."
-
 # ff638c8499bf452386c7e2e22bdf6501
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:68
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:66
 msgid "Selecting a GeoRaster"
 msgstr "Selecionando um GeoRaster"
 
 # b91731a8b34d45bc9a6b43f43f55f662
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:71
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:68
 msgid ""
 "Once a connection has been established, the sub-datasets window will show "
-"the names of all the tables that contains GeoRaster columns in that database "
-"in the format of a GDAL subdataset name."
+"the names of all the tables that contains GeoRaster columns in that database"
+" in the format of a GDAL subdataset name."
 msgstr ""
 "Uma vez a conexão estabelecida, a janela de subconjunto de dados mostra os "
 "nomes de todas as tabelas que contêm colunas GeoRaster naquele banco de "
 "dados no formato de um nome de subconjunto de dados GDAL."
 
 # a12841acef9e4f0a801782aeca3c044e
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:75
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:72
 msgid ""
 "Click on one of the listed subdatasets and then click on **[Select]** to "
 "choose the table name. Now another list of subdatasets will show with the "
 "names of GeoRaster columns on that table. This is usually a short list, "
-"since most users will not have more than one or two GeoRaster columns on the "
-"same table."
+"since most users will not have more than one or two GeoRaster columns on the"
+" same table."
 msgstr ""
 "Clique em um dos subconjuntos de dados listados e em seguida clique em "
 "**[Selecione]** para escolher um nome de tabela. Agora outra lista de "
@@ -160,12 +63,12 @@ msgstr ""
 "usuários não terá mais do que uma ou duas colunas GeoRaster na mesma tabela."
 
 # 91c50bf7e7904ef4b8bc11a0e79078ff
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:80
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:77
 msgid ""
 "Click on one of the listed subdatasets and then click on **[Select]** to "
-"choose one of the the table/column combination. The dialog will now show all "
-"the rows that contains GeoRaster objects. Note that the subdataset list will "
-"now show the Raster Data Table and Raster Id's pairs."
+"choose one of the the table/column combination. The dialog will now show all"
+" the rows that contains GeoRaster objects. Note that the subdataset list "
+"will now show the Raster Data Table and Raster Id's pairs."
 msgstr ""
 "Clique em um dos subconjuntos de dados e aí clique em **[Selecione]** para "
 "escolher uma das combinações da tabela/coluna. A janela não mostrará todas "
@@ -173,35 +76,23 @@ msgstr ""
 "dados não mostrará a Tabela de Dados Raster e pares de Raster Id's."
 
 # d07fe857b83e4aa59cd33f23f6f58c1c
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:85
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:82
 msgid ""
 "At anytime the Selection entry can be edited in order to go directly to a "
-"known GeoRaster or to go back to the beginning and select another table name."
+"known GeoRaster or to go back to the beginning and select another table "
+"name."
 msgstr ""
 "A qualquer momento a entrada de Seleção pode ser editada a fim de ir "
 "diretamente a um GeoRaster conhecido ou voltar ao início e selecionar outro "
 "nome de tabela."
 
-# 85b1c923e67e4258a3bc2f8e29c6c207
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:101
-msgid ""
-"The Selection data entry can also be used to enter a Where clause at the end "
-"of the identification string, e.g. "
-"``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. See "
-"http://www.gdal.org/frmt_georaster.html for more information."
-msgstr ""
-"A entrada dos dados de Seleção pode ser também utilizada para introduzir uma "
-"cláusula onde no fim da série de identificação, e.g. "
-"``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. Ver "
-"http://www.gdal.org/frmt_georaster.html para mais informações."
-
 # 0e97721ab9b645b8a3f50971d40c9d25
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:106
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:103
 msgid "Displaying GeoRaster"
 msgstr "Mostrando GeoRaster"
 
 # ddfe60f16e474d1f8c9e53ab703bda05
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:109
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:105
 msgid ""
 "Finally, by selecting a GeoRaster from the list of Raster Data Table and "
 "Raster Id's, the raster image will be loaded into QGIS."
@@ -209,26 +100,8 @@ msgstr ""
 "Finalmente, selecionando um GeoRaster da lista de Tabela de Dados Raster e "
 "Raster Id's, a imagem raster vai carregar no QGIS."
 
-# 34f71f025cfa4b55a27f44d951b6e3a4
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:112
-msgid ""
-"The Select Oracle Spatial GeoRaster dialog window can be closed now and next "
-"time it opens it will keep the same connection, and will show the same "
-"previous list of subdataset making it very easy to open up another image "
-"from the same context."
-msgstr ""
-"A janela de diálogo Select Oracle Spatial GeoRaster pode ser fechada e "
-"próxima vez que for aberta, manterá a mesma conexão, e mostrará a mesma "
-"lista anterior de subconjunto de dados facilitando abrir outra imagem do "
-"mesmo contexto."
-
-# 049ac6fa675a43cdb30a99e36f1226ef
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:116
-msgid "**Note:**"
-msgstr "**Nota:**"
-
 # fc8e330fab7b49ad9b291ba797b7df13
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:118
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:115
 msgid ""
 "GeoRasters that contains pyramids will display much faster but the pyramids "
 "need to be generated outside of QGIS using Oracle PL/SQL or gdaladdo."
@@ -237,12 +110,207 @@ msgstr ""
 "pirâmides precisam ser geradas fora do uso de QGIS usando Oracle PL/SQL ou "
 "gdaladdo."
 
-# afa27cd36d8042f2929bc8693e80991e
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:121
-msgid "The following is example using gdaladdo: ::"
-msgstr "O seguinte é um exemplo utilizando gdaladdo: ::"
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:14
+msgid ""
+"In Oracle databases, raster data can be stored in SDO_GEORASTER objects "
+"available with the Oracle Spatial extension. In QGIS, the |oracle_raster| "
+":sup:`OracleGeoRasterPlugin` is supported by GDAL, and depends on Oracle's "
+"database product being installed and working on your machine. While Oracle "
+"is proprietary software, they provide their software free for development "
+"and testing purposes. Here is one simple example of how to load raster "
+"images to GeoRaster:"
+msgstr ""
 
-# d5dedec9429c40fea2d447462e420634
-#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:127
-msgid "This is an example using PL/SQL: cd .. ::"
-msgstr "Isso é um exemplo utilizando PL/SQL: cd .. ::"
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:26
+msgid ""
+"This will load the raster into the default GDAL\\_IMPORT table, as a column "
+"named ``RASTER``."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:32
+msgid ""
+"Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin "
+"Manager (see Section :ref:`load_core_plugin`). The first time you load a "
+"GeoRaster in QGIS, you must create a connection to the Oracle database that "
+"contains the data. To do this, begin by clicking on the |oracle_raster| "
+":sup:`Select GeoRaster` toolbar button, it will open the :guilabel:`Select "
+"Oracle Spatial GeoRaster` dialog window. Click on **[New]** to open the "
+"dialog window, and specify the connection parameters (See "
+"Figure_oracle_raster_1_):"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:40
+msgid "**Name**: Enter a name for the database connection"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:41
+msgid ""
+"**Database instance**: Enter the name of the database that you will connect "
+"to"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:42
+msgid ""
+"**Username**: Specify your own username that you will use to access the "
+"database"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:43
+msgid ""
+"**Password**: The password associated with your username that is required to"
+" access the database"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:56
+msgid "Create Oracle connection dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:58
+msgid ""
+"Now, back on the main :guilabel:`Oracle Spatial GeoRaster` dialog window "
+"(see Figure_oracle_raster_2_), use the drop-down list to choose one "
+"connection, and use the **[Connect]** button to establish a connection. You "
+"may also **[Edit]** the connection by opening the previous dialog and making"
+" changes to the connection information, or use the **[Delete]** button to "
+"remove the connection from the drop-down list."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:95
+msgid "Select Oracle GeoRaster dialog"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:98
+msgid ""
+"The Selection data entry can also be used to enter a ``WHERE`` clause at the"
+" end of the identification string, e.g. "
+"``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. See "
+"http://www.gdal.org/frmt_georaster.html for more information."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:108
+msgid ""
+"The :guilabel:`Select Oracle Spatial GeoRaster` dialog can be closed now and"
+" next time it opens it will keep the same connection, and will show the same"
+" previous list of subdataset making it very easy to open up another image "
+"from the same context."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:118
+msgid "The following is example using ``gdaladdo``:"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_oracle_raster.rst:125
+msgid "This is an example using PL/SQL:"
+msgstr ""
+
+#~ msgid ""
+#~ "In Oracle databases, raster data can be stored in SDO\\_GEORASTER objects "
+#~ "available with the Oracle Spatial extension. In QGIS, the |oracle_raster| "
+#~ ":sup:`OracleGeoRasterPlugin` is supported by GDAL, and depends on Oracle's "
+#~ "Database product being installed and working on your machine. While Oracle "
+#~ "is proprietary software, they provide their software free for development "
+#~ "and testing purposes. Here is one simple example of how to load raster "
+#~ "images to GeoRaster:"
+#~ msgstr ""
+#~ "Em banco de dados Oracle, dados raster podem ser armazenados em objetos "
+#~ "SDO\\_GEORASTER disponíveis com a extensão Oracle Spatial . Em QGIS, o "
+#~ "|oracle_raster| :sup:`OracleGeoRasterPlugin` é sustentado por GDAL e depende"
+#~ " que o banco de dados Oracle seja instalado e funcione em sua máquina. "
+#~ "Enquanto Oracle é um software proprietário, eles fornecem o software livre "
+#~ "deles para desenvolver e testar propostas. Aqui está um exemplo simples de "
+#~ "como carregar imagens raster para o GeoRaster:"
+
+#~ msgid ""
+#~ "This will load the raster into the default GDAL\\_IMPORT table, as a column "
+#~ "named RASTER."
+#~ msgstr ""
+#~ "Isso vai carregar o raster no padrão de tabela GDAL\\_IMPORT, como uma "
+#~ "coluna chamada RASTER."
+
+#~ msgid ""
+#~ "Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin "
+#~ "Manager (see Section :ref:`load_core_plugin`). The first time you load a "
+#~ "GeoRaster in QGIS, you must create a connection to the Oracle database that "
+#~ "contains the data. To do this, begin by clicking on the |oracle_raster| "
+#~ ":sup:`Select GeoRaster` toolbar button, it will open the Select Oracle "
+#~ "Spatial GeoRaster dialog window. Click on **[New]** to open the dialog "
+#~ "window, and specify the connection parameters (See Figure_oracle_raster_1_):"
+#~ msgstr ""
+#~ "Primeiro, o Complemento Oracle Georaster deve ser habilitado usando o "
+#~ "Gerenciador de Complemento (ver Seção :ref:`load_core_plugin`). A primeira "
+#~ "vez que você carrega um GeoRaster no QGIS, você deve criar uma conexão para "
+#~ "o banco de dados Oracle que contenha os dados. Para fazer isso, comece "
+#~ "clicando em |oracle_raster| :sup: botão da barra de ferramentas `Select "
+#~ "GeoRaster`, ele abrirá a janela de diálogo Select Oracle Spatial GeoRaster. "
+#~ "Clique em **[Novo]** para abrir a janela de diálogo e especifique os "
+#~ "parâmetros de conexão (Ver Figure_oracle_raster_1_):"
+
+#~ msgid "**Name**: Enter a name for the database connection."
+#~ msgstr "**Nome**: Insira um nome para a conexão do banco de dados."
+
+#~ msgid ""
+#~ "**Database instance**: Enter the name of the database that you will connect "
+#~ "to."
+#~ msgstr ""
+#~ "**Instância de banco de dados**: Insira o nome do banco de dados que você "
+#~ "vai conectar."
+
+#~ msgid ""
+#~ "**Username**: Specify your own username that you will use to access the "
+#~ "database."
+#~ msgstr ""
+#~ "**Nome de usuário**: Especifique seu próprio nome de usuário que você usará "
+#~ "para acessar o banco de dados."
+
+#~ msgid ""
+#~ "**Password**: The password associated with your username that is required to"
+#~ " access the database."
+#~ msgstr ""
+#~ "**Senha**: A senha associada ao seu nome de usuário que será exigida para "
+#~ "acessar o banco de dados."
+
+#~ msgid ""
+#~ "Now, back on the main Oracle Spatial GeoRaster dialog window (See "
+#~ "Figure_oracle_raster_2_), use the drop-down list to choose one connection, "
+#~ "and use the **[Connect]** button to establish a connection. You may also "
+#~ "**[Edit]** the connection by opening the previous dialog and making changes "
+#~ "to the connection information, or use the **[Delete]** button to remove the "
+#~ "connection from the drop-down list."
+#~ msgstr ""
+#~ "Agora, de volta à principal janela de diálogo Oracle Spatial GeoRaster (Ver "
+#~ "Figure_oracle_raster_2_), utilize a lista suspensa para escolher uma conexão"
+#~ " e use o botão **[Conecte]** para estabelecer uma conexão. Você pode também "
+#~ "**[Editar]** a conexão abrindo a janela anterior e fazendo mudanças para "
+#~ "informação de conexão, ou usar o botão **[Delete]** para remover a conexão "
+#~ "da lista suspensa."
+
+#~ msgid ""
+#~ "The Selection data entry can also be used to enter a Where clause at the end"
+#~ " of the identification string, e.g. "
+#~ "``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. See "
+#~ "http://www.gdal.org/frmt_georaster.html for more information."
+#~ msgstr ""
+#~ "A entrada dos dados de Seleção pode ser também utilizada para introduzir uma"
+#~ " cláusula onde no fim da série de identificação, e.g. "
+#~ "``geor:scott/tiger@orcl,gdal_import,raster,geoid=``. Ver "
+#~ "http://www.gdal.org/frmt_georaster.html para mais informações."
+
+#~ msgid ""
+#~ "The Select Oracle Spatial GeoRaster dialog window can be closed now and next"
+#~ " time it opens it will keep the same connection, and will show the same "
+#~ "previous list of subdataset making it very easy to open up another image "
+#~ "from the same context."
+#~ msgstr ""
+#~ "A janela de diálogo Select Oracle Spatial GeoRaster pode ser fechada e "
+#~ "próxima vez que for aberta, manterá a mesma conexão, e mostrará a mesma "
+#~ "lista anterior de subconjunto de dados facilitando abrir outra imagem do "
+#~ "mesmo contexto."
+
+#~ msgid "**Note:**"
+#~ msgstr "**Nota:**"
+
+#~ msgid "The following is example using gdaladdo: ::"
+#~ msgstr "O seguinte é um exemplo utilizando gdaladdo: ::"
+
+#~ msgid "This is an example using PL/SQL: cd .. ::"
+#~ msgstr "Isso é um exemplo utilizando PL/SQL: cd .. ::"
