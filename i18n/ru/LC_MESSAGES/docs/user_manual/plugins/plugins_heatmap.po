@@ -2,7 +2,7 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -12,387 +12,567 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
 # 8a5f2b3ef5ca42d5b60688164f5d517f
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:10
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:12
 msgid "Heatmap Plugin"
 msgstr "Модуль «Теплокарта»"
 
-# 6fcfa116b8314fcb8f8266a670b7f496
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:12
-msgid ""
-"The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a point "
-"vector map. A heatmap is a raster map showing the density or magnitude of "
-"point related information. From the result \"hotspots\" can easily be "
-"identified."
-msgstr ""
-"Модуль |heatmap| :sup:`Теплокарта` позволяет создавать растровые тепловые "
-"карты из точечных векторных данных. Тепловая карта --- это растровая карта, "
-"которая показывает плотность или magnitude точечных данных. По ней легко "
-"определять расположение «хотспотов» или «горячих» точек."
-
 # d72bd6f97f9840e583b3bb3a7c7bf8e1
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:18
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:21
 msgid "Activate the Heatmap plugin"
 msgstr "Активация модуля"
 
-# 608c23b488c34d418da450c871967ad5
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:20
-msgid ""
-"First this core plugin needs to be activated using the Plugin Manager (see "
-"Section :ref:`load_core_plugin`). After activation the heatmap icon "
-"|heatmap| can be found in the Raster Toolbar."
-msgstr ""
-"Перед началом работы модуль необходимо активировать при помощи Менеджера "
-"модулей (см. раздел :ref:`load_core_plugin`). После активации на панели "
-"инструментов «Растр» появится кнопка |heatmap| :sup:`Теплокарта`."
-
-# 36cd6c9d95aa45d08de61bf920e6dcb5
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:24
-msgid ""
-"Select from menu :menuselection:`View --> Toolbars --> Raster` to activate "
-"the Raster Toolbar when it is not yet activated."
-msgstr ""
-"Если кнопки не видно, возможно, у вас отключена соответствующая панель "
-"инструментов. Включить её можно из меню :menuselection:`Вид --> Панели "
-"инструментов --> Растр`."
-
 # fdd09ce3064440f68d1b3d4051aa131f
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:28
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:32
 msgid "Using the Heatmap plugin"
 msgstr "Использование модуля"
 
-# 415885329a894b98a42634120058393e
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:30
-msgid ""
-"The |heatmap| :sup:`Heatmap` toolbutton starts the dialog of the Heatmap "
-"plugin (see figure_heatmap_2_)."
-msgstr ""
-"Нажатие на кнопку |heatmap| :sup:`Теплокарта` открывает главное окно модуля "
-"(см. рисунок figure_heatmap_2_)."
-
 # c1e88ed7c8004f4280e7ba368d7ddf27
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:33
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:37
 msgid "The dialog has the following options:"
 msgstr "Для построения теплокарты необходимо задать следующие параметры:"
 
-# 9ca430d691574fd6b9bc1a447040cdf6
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:35
-msgid ""
-"**Input Point Vector** dialog: Provides a selection of loaded point vector "
-"maps."
-msgstr ""
-"**Исходный векторный слой**: позволяет выбрать точечный слой по которому "
-"будет построена теплокарта."
-
-# 63e48f35135b4503a32d6429cebb6f63
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:36
-msgid ""
-"**Output Raster**: Using the |browsebutton| button you select the folder and "
-"the name of the output raster the Heatmap plugin will generate. It is not "
-"necessary to give a file extension"
-msgstr ""
-"**Целевой растр**: при помощи кнопки |browsebutton| указывается каталог и "
-"имя итогового растра. Указывать расширение файла не обязательно."
-
-# 77b5c8257be543c9b2b89b0be15b2e20
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:39
-msgid ""
-"**Output Format**: Selection of the output format. Although all formats "
-"supported by GDAL can be choosen, GeoTIFF is most in cases the best format "
-"to choose."
-msgstr ""
-"**Формат вывода**: позволяет указать формат итогового растра. Хотя можно "
-"выбрать любой, из поддерживаемых GDAL форматов, GeoTiff в большинстве "
-"случаев является оптимальным выбором."
-
-# 1698d166ae8c4890a2de8d4175ee7b9b
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:41
-msgid ""
-"**Radius**: can be used to give the radius in meters or mapunit. When the "
-"radius is choosen too small you will not get a nice heatmap. In places where "
-"more circles around points overlap eachother the brighter hotspots will "
-"occur!"
-msgstr ""
-"**Радиус**:  указывается радиус буферной зоны вокруг точки, в качестве "
-"единиц измерения могут использоваться метры и единицы карты. Если радиус "
-"слишком мал, теплокарта получится некрасивой. В местах, где пересекается "
-"несколько буферных зон будет просто одна более яркая точка."
-
-# 86dc36e548044444a1461894b35fc890
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:44
-msgid ""
-"**Decay Ratio**: is used to show with which ratio the heat dies out from the "
-"center."
-msgstr ""
-"**Коэффициент уменьшения**: показывает как сильно уменьшается яркость от "
-"центра к краям."
-
-# 04ba317c426d4891a1d3060efa786389
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:47
-msgid ""
-"When 0 is given (=minimum) the heat will be concentrated in the centre of "
-"given radius and be completely extinguished at the edge."
-msgstr ""
-"Если радиус уменьшения равен 0 (минимально возможное значение), наибольшая "
-"температура будет в центре буферной зоны и отсутствовать на её краях."
-
-# 976a5d30b3e24ee78ccd2e2d222fb99a
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:49
-msgid ""
-"When 10 is given (=maximum) the heat is concentrated at the edge and in the "
-"centre it is completely extinguished. Higher given values are allowed but "
-"have no effect."
-msgstr ""
-"Если установить коэффициент равный 10 (максимально возможное значение), то "
-"края буферной зоны будут наиболее горячими, в то время как в центре "
-"температура будет минимальной. Допускается указание и больших значений, "
-"однако эффекта от этого не будет."
-
-# a5a671571a9a4ca2a34861670b9f77f3
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:52
-msgid "When 1 is given the heat is spread evenly over the whole circle."
-msgstr ""
-"Если указано значение 1, распределение температуры будет равномерным по всей "
-"буферной зоне."
-
-# 991f6d19c0254c40ba4dcf0e7adb7c0f
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:53
-msgid ""
-"When a negative Decay Ratio is given you will create a Coolmap instead of a "
-"Heatmap!"
-msgstr ""
-"Если указать отрицательное значение коэффициента, то получим карту холода, а "
-"не теплокарту."
-
-# d31a0e06526e46ac949dfe47337b1e7b
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:56
-msgid ""
-"When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give "
-"acces to additional advanced options."
-msgstr ""
-"Активация флажка |checkbox| :guilabel:`Дополнительно` позволяет выполнить "
-"более тонкую настройку процесса генерации теплокарты."
-
-# 4446835eb66a42fd81aabf63dc99b1fd
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:59
-msgid ""
-"**Row** and **Column**, can be used to change the pixelsize of the output "
-"raster. More rows and colums means a smaller pixelsize and the size of the "
-"output file will become bigger and processing a bit slower. When doubling "
-"the number of rows this will automatically double the size of Columns and "
-"the cell sizes will also be halved. The area of the output raster will "
-"remain the same!"
-msgstr ""
-"Поля **Строка** и **Столбец** используются для изменения размера пикселя "
-"итогового растра. Чем больше столбцов и строк, тем меньше размер пикселя, а "
-"размер растра и время обработки увеличиваются. При увеличении числа строк в "
-"два раза, в два раза будет увеличено и число столбцов, а размер ячейки "
-"уменьшится на половину. Площадь, занятая растром, останется той же."
-
-# 0751ae6978474805aab35f75b1112b49
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:64
-msgid ""
-"**Cell Size X** and **Cell Size Y** influence the pixelsize of the output "
-"raster and will also change the rows and columns."
-msgstr ""
-"Поля **Ширина ячейки** и **Высота ячейки** используются для изменения "
-"размера пикселя итогового растра, и меняют число строк и столбцов."
-
-# 5bde457ab662426eb8ccd728ef64c1ad
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:67
-msgid ""
-"The point vector layer may have attribute fields that can be used to create "
-"a heatmap:"
-msgstr ""
-"Исходный точечный слой может содержать поля, которые можно использоваться "
-"при построении теплокарты:"
-
-# f9a91afbf5fa4a98a3dbb41f3ac14042
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:70
-msgid "**Use Radius from Field**: the radius set from an attribute field."
-msgstr ""
-"**Поле радиуса**: позволяет указать поле, с данными о радиусе буферной зоны."
-
-# d0aa1e5bf7b6475dacd1e3a3aded95af
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:71
-msgid ""
-"**Use Weight from field**: the weight factor set from an attribute field."
-msgstr "**Поле взвешивания**: брать коэффициент уменьшения из заданного поля."
-
-# ca8694a5c5474e4f8131166806066aa9
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:73
-msgid ""
-"When the output raster is given, the **[OK]** button can be used to create a "
-"heatmap. The first result is a grey surface that still needs to be given "
-"additional treatment to make it a heatmap."
-msgstr ""
-"Когда все параметры указаны, нажмите кнопку **[OK]**, чтобы запустить "
-"процесс создания теплокарты. Результатом работы будет растр в оттенках "
-"серого цвета, который затем необходимо отобразить с использованием "
-"правильного стиля."
-
-# b3816fad54c74b9bb1298878aa02af83
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:77
-msgid "**Changing the raster size properties**"
-msgstr "**Изменение размеров итогового растра**"
-
-# 510203d9c8f7407b9496c5e6de67f991
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:79
-msgid ""
-"When changing the raster size properties, this also changes the resulting "
-"output. The hotspot areas will become bigger."
-msgstr ""
-"При изменении размеров итогового растра также меняется и результат. Горячие "
-"точки становятся больше."
-
-# 54b1a2e44a274f0eaebb92beae990513
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:83
-msgid "Creating a Heatmap"
-msgstr "Создание теплокарты"
-
-# f0d38cc110074928bda6652199b46473
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:85
-msgid ""
-"For the following example, we will use the ``airports`` vector point layer "
-"from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent "
-"QGIS tutorial on making heatmaps can be found on "
-"`http://qgis.spatialthoughts.com "
-"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
-msgstr ""
-"В этом примере будет использован векторный слой :file:`airports.shp` из "
-"демонстрационного набора данных QGIS (см. раздел :ref:`label_sampledata`). "
-"Ещё один хороший пример создания теплокарт можно найти на сайте "
-"`http://qgis.spatialthoughts.com "
-"<http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_."
-
 # 3b4515a26ede475db5d701d388bca756
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:89
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:101
 msgid "In Figure_Heatmap_1_ the airports of Alaska are shown."
 msgstr "На рисунке Figure_Heatmap_1_ показаны аэропорты Аляски."
 
-# 38a89caf5b2840fc9dff1ca0cc123e91
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:104
-msgid ""
-"Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts "
-"(see Figure_Heatmap_2_)."
-msgstr ""
-"Нажмите кнопку |heatmap| :sup:`Теплокарта`. Откроется главное окно модуля "
-"(см. рисунок Figure_Heatmap_2_)."
-
-# 16a302959d054a3bab2e2f345dd50855
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:106
-msgid ""
-"In field :guilabel:`Input Point Vector` |selectstring| select ``airpoirt`` "
-"from the list of  point layers loaded in current project."
-msgstr ""
-"В выпадающем списке :guilabel:`Исходный векторный слой` |selectstring| "
-"выберите ``airports``."
-
-# 438d993fab834abb9fcc1f715022209a
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:108
-msgid ""
-"In field :guilabel:`Output Raster` give the name and location using the "
-"|browsebutton| button of the output raster. Give the output raster file the "
-"name ``heatmap_airports`` to give an file extension is not necessary."
-msgstr ""
-"В поле :guilabel:`Целевой растр` укажите расположение итогового растра. Для "
-"облегчения навигации по каталогам можно воспользоваться кнопкой "
-"|browsebutton|. В качестве имени файла укажите ``heatmap_airports``, "
-"указывать расширение не обязательно."
-
-# 947445e249eb489abd29c030fb578805
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:111
-msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
-msgstr ""
-"В выпадающем списке :guilabel:`Формат вывода` |selectstring| выберите "
-"``GeoTiff``."
-
-# 2db49076197c4cf3b78e18d0022279c3
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:112
-msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
-msgstr "Установите в поле :guilabel:`Радиус` значение ``1000000`` метров."
-
-# 153f9f60760e4feba945a3efb0d4c5a0
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:113
-msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
-msgstr ""
-"Предлагаемое по умолчанию значение ``0.1`` в поле :guilabel:`Коэффициент "
-"уменьшения` оставляем без изменений."
-
-# 99b2aa93e4c24fc7b23bacdaa504b22b
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:114
-msgid ""
-"Click on **[OK]**  to create and load the new raster map (see "
-"Figure_Heatmap_3_)."
-msgstr ""
-"Нажмите кнопку **[OK]** чтобы создать и загрузить в QGIS теплокарту (см. "
-"рисунок Figure_Heatmap_3_)."
-
-# 0eb336e6460e4de88489026cf9cdc183
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:128
-msgid ""
-"The result after loading the heatmap is probably not the result which was "
-"expected. It is still a grey even surface not showing any variation. First "
-"some additional configuration of this layer needs to be done to make the "
-"heatmap present itself."
-msgstr ""
-"Загруженный растр выглядит малоинформативным: это просто серый "
-"прямоугольник. Чтобы слой отображался как теплокарта необходимо произвести "
-"настройку отображения."
-
-# b7ab2a4386ff4eb0a0f9bb00a6599c9e
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:145
-msgid ""
-"Open the properties dialog of layer ``heatmap_airports`` (select the layer "
-"``heatmap_airports``, open context menu with right mouse button and select "
-":guilabel:`Properties`)."
-msgstr ""
-"Откройте свойства слоя ``heatmap_airports``. Для этого выберите слой в "
-"списке слоёв проекта, вызовите контекстное меню по правой клавише мыши и "
-"выберите пункт :guilabel:`Свойства`."
-
-# a167ae562d3b4e3ba3c14987a2a020b9
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:148
-msgid "Select the :guilabel:`Symbology` tab."
-msgstr "Перейдите на вкладку :guilabel:`Стиль`."
-
-# df0bf1ffadb04f4ca0a3c60934018137
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:149
-msgid ""
-"Change :guilabel:`Color map` |selectstring| from 'Grayscale' to "
-"'Pseudocolor'."
-msgstr ""
-"Измените стиль отрисовки  в поле :guilabel:`Цветовая карта` |selectstring| с "
-"«Оттенки серого» на «Псевдоцвет»."
-
-# 6131033def5d4458865b723c52a36635
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:150
-msgid "Press the **[Apply]** button."
-msgstr "Нажмите кнопку **[Применить]**."
-
-# 558cc0e38d824e91801c4c25c6dbafda
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:151
-msgid ""
-"Switch to the :guilabel:`Transparency` tab and set :guilabel:`Global "
-"transparency` |slider| to 40%."
-msgstr ""
-"Перейдите на вкладку :guilabel:`Прозрачность` и установите ползунок "
-":guilabel:`Прозрачность` |slider| в положение 40%."
-
-# 60010176c49a4376aa5665a5e33d8bce
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:153
-msgid "Select **[OK]**"
-msgstr "Нажмите **[OK]**."
-
 # 9b2a5eb992f1418694dd4ee7f562d46a
-#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:155
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:166
 msgid "The final result is shown in Figure_Heatmap_4_."
 msgstr "Конечный результат показан на рисунке Figure_Heatmap_4_."
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:14
+msgid ""
+"The `Heatmap` plugin uses Kernel Density Estimation to create a density "
+"(heatmap) raster of an input point vector layer.  The density is calculated "
+"based on the number of points in a location, with larger numbers of "
+"clustered points resulting in larger values. Heatmaps allow easy "
+"identification of \"hotspots\" and clustering of points."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:23
+msgid ""
+"First this core plugin needs to be activated using the Plugin Manager (see "
+"Section :ref:`load_core_plugin`). After activation the heatmap icon "
+"|heatmap| can be found in the Raster Toolbar, and under the "
+":menuselection:`Raster --> Heatmap` menu."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:28
+msgid ""
+"Select the menu :menuselection:`View --> Toolbars --> Raster` to show the "
+"Raster Toolbar if it is not visible."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:34
+msgid ""
+"Clicking the |heatmap| `Heatmap` toolbutton opens the Heatmap plugin dialog "
+"(see figure_heatmap_2_)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:39
+msgid ""
+"**Input point layer**: lists all the vector point layers in the current "
+"project and is used to select the layer to be analysed."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:41
+msgid ""
+"**Output raster**: use the |browsebutton| button to select the folder and "
+"file name for the output raster the Heatmap plugin generates. A file "
+"extension is not required."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:44
+msgid ""
+"**Output format**: selects the output format. Although all formats supported"
+" by GDAL can be choosen, in most cases GeoTIFF is the best format to choose."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:46
+msgid ""
+"**Radius**: used to specify the heatmap search radius (or kernel bandwidth) "
+"in meters or map units. The radius specifies the distance around a point at "
+"which the influence of the point will be felt. Larger values result in "
+"greater smoothing, but smaller values may show finer details and variation "
+"in point density."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:51
+msgid ""
+"When the |checkbox| :guilabel:`Advanced` checkbox is checked additional "
+"options will be available:"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:54
+msgid ""
+"**Rows** and **Columns**: used to change the dimensions of the output "
+"raster. These values are also linked to the **Cell size X** and **Cell size "
+"Y** values. Increasing the number of rows or colums will decrease the cell "
+"size and increase the file size of the output file. The values in Rows and "
+"Columns are also linked, so doubling the number of rows will automatically "
+"double the number of columns and the cell sizes will also be halved. The "
+"geographical area of the output raster will remain the same!"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:60
+msgid ""
+"**Cell size X** and **Cell size Y**: control the geographic size of each "
+"pixel in the output raster. Changing these values will also change the "
+"number of Rows and Columns in the output raster."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:64
+msgid ""
+"**Kernel shape**: The kernel shape controls the rate at which the influence "
+"of a point decreases as the distance from the point increases. Different "
+"kernels decay at different rates, so a triweight kernel gives features "
+"greater weight for distances closer to the point then the Epanechnikov "
+"kernel does. Consequently, triweight results in \"sharper\" hotspots, and "
+"Epanechnikov results in \"smoother\" hotspots. A number of standard kernel "
+"functions are available in QGIS, which are described and illustrated on "
+"Wikipedia_."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:71
+msgid ""
+"**Decay ratio**: can be used with Triangular kernels to futher control how "
+"heat from a feature decreases with distance from the feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:74
+msgid ""
+"A value of 0 (=minimum) indicates that the heat will be concentrated in the "
+"centre of the given radius and be completely extinguished at the edge."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:76
+msgid ""
+"A value of 0.5 indicates that pixels at the edge of the radius will be given"
+" half the heat as pixels at the centre of the search radius."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:78
+msgid ""
+"A value of 1 means the heat is spread evenly over the whole search radius "
+"circle. (This is equivalent to the 'Uniform' kernel.)"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:80
+msgid ""
+"A value greater than 1 indicates that the heat is higher towards the edge of"
+" the search radius then at the centre."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:83
+msgid ""
+"The input point layer may also have attribute fields which can affect how "
+"they influence the heatmap:"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:86
+msgid ""
+"**Use radius from field**: sets the search radius for each feature from an "
+"attribute field in the input layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:87
+msgid ""
+"**Use weight from field**: allows input features to be weighted by an "
+"attribute field. This can be used to increase the influence certain features"
+" have on the resultant heatmap."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:90
+msgid ""
+"When an output raster file name is specified, the **[OK]** button can be "
+"used to create the heatmap."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:94
+msgid "Tutorial: Creating a Heatmap"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:96
+msgid ""
+"For the following example we will use the ``airports`` vector point layer "
+"from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent"
+" QGIS tutorial on making heatmaps can be found at "
+"`http://qgis.spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07"
+"/tutorial-making-heatmaps-using-qgis-and.html>`_."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:113
+msgid "Airports of Alaska |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:116
+msgid ""
+"Select the |heatmap| `Heatmap` toolbutton to open the Heatmap dialog (see "
+"Figure_Heatmap_2_)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:118
+msgid ""
+"In the :guilabel:`Input point layer` |selectstring| field select "
+"``airports`` from the list of point layers loaded in current project."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:120
+msgid ""
+"Specify an output file name by clicking the |browsebutton| button next to "
+"the :guilabel:`Output raster` field. Enter the file name "
+"``heatmap_airports`` (no file extension is necessary)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:123
+msgid ""
+"Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:124
+msgid "Change the :guilabel:`Radius` to ``1000000`` meters."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:125
+msgid ""
+"Click on **[OK]**  to create and load the airports heatmap (see "
+"Figure_Heatmap_3_)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:137
+msgid "The Heatmap Dialog |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:139
+msgid ""
+"QGIS will generate the heatmap and add the results to your map window. By "
+"default, the heatmap is shaded in greyscale, with lighter areas showing "
+"higher concentrations of airports. The heatmap can now be styled in QGIS to "
+"improve its appearance."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:153
+msgid "The heatmap after loading looks like a grey surface |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:156
+msgid ""
+"Open the properties dialog of the ``heatmap_airports`` layer (select the "
+"layer ``heatmap_airports``, open the context menu with the right mouse "
+"button and select :guilabel:`Properties`)."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:159
+msgid "Select the :guilabel:`Style` tab."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:160
+msgid ""
+"Change the :guilabel:`Render type` |selectstring| to 'Singleband "
+"pseudocolor'."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:161
+msgid ""
+"Select a suitable :guilabel:`Color map` |selectstring|, for instance "
+"``YlOrRed``."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:162
+msgid ""
+"Click the **[Load]** button to fetch the minimum and maximum values from the"
+" raster, then click the **[Classify]** button."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:164
+msgid "Press **[OK]** to update the layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_heatmap.rst:178
+msgid "Styled heatmap of airports of Alaska |nix|"
+msgstr ""
+
+#~ msgid ""
+#~ "The |heatmap| :sup:`Heatmap` plugin allows to create a heatmap from a point "
+#~ "vector map. A heatmap is a raster map showing the density or magnitude of "
+#~ "point related information. From the result \"hotspots\" can easily be "
+#~ "identified."
+#~ msgstr ""
+#~ "Модуль |heatmap| :sup:`Теплокарта` позволяет создавать растровые тепловые "
+#~ "карты из точечных векторных данных. Тепловая карта --- это растровая карта, "
+#~ "которая показывает плотность или magnitude точечных данных. По ней легко "
+#~ "определять расположение «хотспотов» или «горячих» точек."
+
+#~ msgid ""
+#~ "First this core plugin needs to be activated using the Plugin Manager (see "
+#~ "Section :ref:`load_core_plugin`). After activation the heatmap icon "
+#~ "|heatmap| can be found in the Raster Toolbar."
+#~ msgstr ""
+#~ "Перед началом работы модуль необходимо активировать при помощи Менеджера "
+#~ "модулей (см. раздел :ref:`load_core_plugin`). После активации на панели "
+#~ "инструментов «Растр» появится кнопка |heatmap| :sup:`Теплокарта`."
+
+#~ msgid ""
+#~ "Select from menu :menuselection:`View --> Toolbars --> Raster` to activate "
+#~ "the Raster Toolbar when it is not yet activated."
+#~ msgstr ""
+#~ "Если кнопки не видно, возможно, у вас отключена соответствующая панель "
+#~ "инструментов. Включить её можно из меню :menuselection:`Вид --> Панели "
+#~ "инструментов --> Растр`."
+
+#~ msgid ""
+#~ "The |heatmap| :sup:`Heatmap` toolbutton starts the dialog of the Heatmap "
+#~ "plugin (see figure_heatmap_2_)."
+#~ msgstr ""
+#~ "Нажатие на кнопку |heatmap| :sup:`Теплокарта` открывает главное окно модуля "
+#~ "(см. рисунок figure_heatmap_2_)."
+
+#~ msgid ""
+#~ "**Input Point Vector** dialog: Provides a selection of loaded point vector "
+#~ "maps."
+#~ msgstr ""
+#~ "**Исходный векторный слой**: позволяет выбрать точечный слой по которому "
+#~ "будет построена теплокарта."
+
+#~ msgid ""
+#~ "**Output Raster**: Using the |browsebutton| button you select the folder and"
+#~ " the name of the output raster the Heatmap plugin will generate. It is not "
+#~ "necessary to give a file extension"
+#~ msgstr ""
+#~ "**Целевой растр**: при помощи кнопки |browsebutton| указывается каталог и "
+#~ "имя итогового растра. Указывать расширение файла не обязательно."
+
+#~ msgid ""
+#~ "**Output Format**: Selection of the output format. Although all formats "
+#~ "supported by GDAL can be choosen, GeoTIFF is most in cases the best format "
+#~ "to choose."
+#~ msgstr ""
+#~ "**Формат вывода**: позволяет указать формат итогового растра. Хотя можно "
+#~ "выбрать любой, из поддерживаемых GDAL форматов, GeoTiff в большинстве "
+#~ "случаев является оптимальным выбором."
+
+#~ msgid ""
+#~ "**Radius**: can be used to give the radius in meters or mapunit. When the "
+#~ "radius is choosen too small you will not get a nice heatmap. In places where"
+#~ " more circles around points overlap eachother the brighter hotspots will "
+#~ "occur!"
+#~ msgstr ""
+#~ "**Радиус**:  указывается радиус буферной зоны вокруг точки, в качестве "
+#~ "единиц измерения могут использоваться метры и единицы карты. Если радиус "
+#~ "слишком мал, теплокарта получится некрасивой. В местах, где пересекается "
+#~ "несколько буферных зон будет просто одна более яркая точка."
+
+#~ msgid ""
+#~ "**Decay Ratio**: is used to show with which ratio the heat dies out from the"
+#~ " center."
+#~ msgstr ""
+#~ "**Коэффициент уменьшения**: показывает как сильно уменьшается яркость от "
+#~ "центра к краям."
+
+#~ msgid ""
+#~ "When 0 is given (=minimum) the heat will be concentrated in the centre of "
+#~ "given radius and be completely extinguished at the edge."
+#~ msgstr ""
+#~ "Если радиус уменьшения равен 0 (минимально возможное значение), наибольшая "
+#~ "температура будет в центре буферной зоны и отсутствовать на её краях."
+
+#~ msgid ""
+#~ "When 10 is given (=maximum) the heat is concentrated at the edge and in the "
+#~ "centre it is completely extinguished. Higher given values are allowed but "
+#~ "have no effect."
+#~ msgstr ""
+#~ "Если установить коэффициент равный 10 (максимально возможное значение), то "
+#~ "края буферной зоны будут наиболее горячими, в то время как в центре "
+#~ "температура будет минимальной. Допускается указание и больших значений, "
+#~ "однако эффекта от этого не будет."
+
+#~ msgid "When 1 is given the heat is spread evenly over the whole circle."
+#~ msgstr ""
+#~ "Если указано значение 1, распределение температуры будет равномерным по всей"
+#~ " буферной зоне."
+
+#~ msgid ""
+#~ "When a negative Decay Ratio is given you will create a Coolmap instead of a "
+#~ "Heatmap!"
+#~ msgstr ""
+#~ "Если указать отрицательное значение коэффициента, то получим карту холода, а"
+#~ " не теплокарту."
+
+#~ msgid ""
+#~ "When the |checkbox| :guilabel:`Advanced` checkbox is checked it will give "
+#~ "acces to additional advanced options."
+#~ msgstr ""
+#~ "Активация флажка |checkbox| :guilabel:`Дополнительно` позволяет выполнить "
+#~ "более тонкую настройку процесса генерации теплокарты."
+
+#~ msgid ""
+#~ "**Row** and **Column**, can be used to change the pixelsize of the output "
+#~ "raster. More rows and colums means a smaller pixelsize and the size of the "
+#~ "output file will become bigger and processing a bit slower. When doubling "
+#~ "the number of rows this will automatically double the size of Columns and "
+#~ "the cell sizes will also be halved. The area of the output raster will "
+#~ "remain the same!"
+#~ msgstr ""
+#~ "Поля **Строка** и **Столбец** используются для изменения размера пикселя "
+#~ "итогового растра. Чем больше столбцов и строк, тем меньше размер пикселя, а "
+#~ "размер растра и время обработки увеличиваются. При увеличении числа строк в "
+#~ "два раза, в два раза будет увеличено и число столбцов, а размер ячейки "
+#~ "уменьшится на половину. Площадь, занятая растром, останется той же."
+
+#~ msgid ""
+#~ "**Cell Size X** and **Cell Size Y** influence the pixelsize of the output "
+#~ "raster and will also change the rows and columns."
+#~ msgstr ""
+#~ "Поля **Ширина ячейки** и **Высота ячейки** используются для изменения "
+#~ "размера пикселя итогового растра, и меняют число строк и столбцов."
+
+#~ msgid ""
+#~ "The point vector layer may have attribute fields that can be used to create "
+#~ "a heatmap:"
+#~ msgstr ""
+#~ "Исходный точечный слой может содержать поля, которые можно использоваться "
+#~ "при построении теплокарты:"
+
+#~ msgid "**Use Radius from Field**: the radius set from an attribute field."
+#~ msgstr ""
+#~ "**Поле радиуса**: позволяет указать поле, с данными о радиусе буферной зоны."
+
+#~ msgid ""
+#~ "**Use Weight from field**: the weight factor set from an attribute field."
+#~ msgstr "**Поле взвешивания**: брать коэффициент уменьшения из заданного поля."
+
+#~ msgid ""
+#~ "When the output raster is given, the **[OK]** button can be used to create a"
+#~ " heatmap. The first result is a grey surface that still needs to be given "
+#~ "additional treatment to make it a heatmap."
+#~ msgstr ""
+#~ "Когда все параметры указаны, нажмите кнопку **[OK]**, чтобы запустить "
+#~ "процесс создания теплокарты. Результатом работы будет растр в оттенках "
+#~ "серого цвета, который затем необходимо отобразить с использованием "
+#~ "правильного стиля."
+
+#~ msgid "**Changing the raster size properties**"
+#~ msgstr "**Изменение размеров итогового растра**"
+
+#~ msgid ""
+#~ "When changing the raster size properties, this also changes the resulting "
+#~ "output. The hotspot areas will become bigger."
+#~ msgstr ""
+#~ "При изменении размеров итогового растра также меняется и результат. Горячие "
+#~ "точки становятся больше."
+
+#~ msgid "Creating a Heatmap"
+#~ msgstr "Создание теплокарты"
+
+#~ msgid ""
+#~ "For the following example, we will use the ``airports`` vector point layer "
+#~ "from the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent"
+#~ " QGIS tutorial on making heatmaps can be found on "
+#~ "`http://qgis.spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07"
+#~ "/tutorial-making-heatmaps-using-qgis-and.html>`_."
+#~ msgstr ""
+#~ "В этом примере будет использован векторный слой :file:`airports.shp` из "
+#~ "демонстрационного набора данных QGIS (см. раздел :ref:`label_sampledata`). "
+#~ "Ещё один хороший пример создания теплокарт можно найти на сайте "
+#~ "`http://qgis.spatialthoughts.com <http://qgis.spatialthoughts.com/2012/07"
+#~ "/tutorial-making-heatmaps-using-qgis-and.html>`_."
+
+#~ msgid ""
+#~ "Select the |heatmap| :sup:`Heatmap` toolbutton. The heatmap dialog starts "
+#~ "(see Figure_Heatmap_2_)."
+#~ msgstr ""
+#~ "Нажмите кнопку |heatmap| :sup:`Теплокарта`. Откроется главное окно модуля "
+#~ "(см. рисунок Figure_Heatmap_2_)."
+
+#~ msgid ""
+#~ "In field :guilabel:`Input Point Vector` |selectstring| select ``airpoirt`` "
+#~ "from the list of  point layers loaded in current project."
+#~ msgstr ""
+#~ "В выпадающем списке :guilabel:`Исходный векторный слой` |selectstring| "
+#~ "выберите ``airports``."
+
+#~ msgid ""
+#~ "In field :guilabel:`Output Raster` give the name and location using the "
+#~ "|browsebutton| button of the output raster. Give the output raster file the "
+#~ "name ``heatmap_airports`` to give an file extension is not necessary."
+#~ msgstr ""
+#~ "В поле :guilabel:`Целевой растр` укажите расположение итогового растра. Для "
+#~ "облегчения навигации по каталогам можно воспользоваться кнопкой "
+#~ "|browsebutton|. В качестве имени файла укажите ``heatmap_airports``, "
+#~ "указывать расширение не обязательно."
+
+#~ msgid "In field :guilabel:`Output Format` choose ``GeoTIFF``."
+#~ msgstr ""
+#~ "В выпадающем списке :guilabel:`Формат вывода` |selectstring| выберите "
+#~ "``GeoTiff``."
+
+#~ msgid "In the field :guilabel:`Radius` give ``1000000`` meters."
+#~ msgstr "Установите в поле :guilabel:`Радиус` значение ``1000000`` метров."
+
+#~ msgid "The original :guilabel:`Decay Ratio` of ``0.1`` is fine."
+#~ msgstr ""
+#~ "Предлагаемое по умолчанию значение ``0.1`` в поле :guilabel:`Коэффициент "
+#~ "уменьшения` оставляем без изменений."
+
+#~ msgid ""
+#~ "Click on **[OK]**  to create and load the new raster map (see "
+#~ "Figure_Heatmap_3_)."
+#~ msgstr ""
+#~ "Нажмите кнопку **[OK]** чтобы создать и загрузить в QGIS теплокарту (см. "
+#~ "рисунок Figure_Heatmap_3_)."
+
+#~ msgid ""
+#~ "The result after loading the heatmap is probably not the result which was "
+#~ "expected. It is still a grey even surface not showing any variation. First "
+#~ "some additional configuration of this layer needs to be done to make the "
+#~ "heatmap present itself."
+#~ msgstr ""
+#~ "Загруженный растр выглядит малоинформативным: это просто серый "
+#~ "прямоугольник. Чтобы слой отображался как теплокарта необходимо произвести "
+#~ "настройку отображения."
+
+#~ msgid ""
+#~ "Open the properties dialog of layer ``heatmap_airports`` (select the layer "
+#~ "``heatmap_airports``, open context menu with right mouse button and select "
+#~ ":guilabel:`Properties`)."
+#~ msgstr ""
+#~ "Откройте свойства слоя ``heatmap_airports``. Для этого выберите слой в "
+#~ "списке слоёв проекта, вызовите контекстное меню по правой клавише мыши и "
+#~ "выберите пункт :guilabel:`Свойства`."
+
+#~ msgid "Select the :guilabel:`Symbology` tab."
+#~ msgstr "Перейдите на вкладку :guilabel:`Стиль`."
+
+#~ msgid ""
+#~ "Change :guilabel:`Color map` |selectstring| from 'Grayscale' to "
+#~ "'Pseudocolor'."
+#~ msgstr ""
+#~ "Измените стиль отрисовки  в поле :guilabel:`Цветовая карта` |selectstring| с"
+#~ " «Оттенки серого» на «Псевдоцвет»."
+
+#~ msgid "Press the **[Apply]** button."
+#~ msgstr "Нажмите кнопку **[Применить]**."
+
+#~ msgid ""
+#~ "Switch to the :guilabel:`Transparency` tab and set :guilabel:`Global "
+#~ "transparency` |slider| to 40%."
+#~ msgstr ""
+#~ "Перейдите на вкладку :guilabel:`Прозрачность` и установите ползунок "
+#~ ":guilabel:`Прозрачность` |slider| в положение 40%."
+
+#~ msgid "Select **[OK]**"
+#~ msgstr "Нажмите **[OK]**."

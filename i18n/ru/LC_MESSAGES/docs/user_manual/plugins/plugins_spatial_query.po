@@ -2,7 +2,7 @@
 # Copyright (C) 2012, QGIS project
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -12,21 +12,21 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Language: ru_RU\n"
 "X-Source-Language: C\n"
 
 # d2213704e9a6417291f069b11673ad18
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:10
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:12
 msgid "Spatial Query Plugin"
 msgstr "Модуль «Пространственные запросы»"
 
 # 523b2290d2f64351ae2c1fcd91187b8f
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:14
 msgid ""
 "The |spatialquery| :sup:`Spatial Query` plugin allows to make a spatial "
 "query (select features) in a target layer with reference to another layer. "
@@ -39,65 +39,66 @@ msgstr ""
 "GEOS (Geometry Engine --- Open Source)."
 
 # e1bcf06eb2d0404d8cf684880a6c29d5
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:17
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:19
 msgid "Possible operators are:"
 msgstr "Поддерживаются следующие операторы:"
 
 # 92028b1282b34c63b6f28d5e6238369a
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:19
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:21
 msgid "Contains"
 msgstr "Содержит"
 
 # 0aef87cd2e9149dfa15527df84a5d01b
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:20
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
 msgid "Equals"
 msgstr "Совпадает"
 
 # 60c15c2fcf76486a891057e2af9ec893
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:21
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
 msgid "Overlap"
 msgstr "Накладывается"
 
 # bdc402407c47472dac65a407ae5b4522
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:22
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
 msgid "Crosses"
 msgstr "Пересекает кривой"
 
 # d0346043f0cc46ab871f787f2b1c3e85
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:23
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
 msgid "Intersects"
 msgstr "Пересекает"
 
 # bef0280b181740fe8b9af8733b6b986c
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:24
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:26
 msgid "Is disjoint"
 msgstr "Не пересекает"
 
 # e3480d21cad94abcac845017dd355785
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:25
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:27
 msgid "Touches"
 msgstr "Касается"
 
 # f91aadd4a1d04454964bf538fceb481b
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:26
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:28
 msgid "Within"
 msgstr "Находится внутри"
 
 # aec717e10dfb41048b10714684b77dfe
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:29
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:31
 msgid "Using the plugin"
 msgstr "Использование модуля"
 
 # 769374dfa735404e831e4184e584f324
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:33
 msgid ""
 "As an example we want to find regions in the Alaska dataset that contain "
 "airports. Following steps are necessary:"
 msgstr ""
-"В качестве примера найдем регионы Аляски, в которых есть аэропорт. Для этого:"
+"В качестве примера найдем регионы Аляски, в которых есть аэропорт. Для "
+"этого:"
 
 # e418b41408f142999015204b1ed759f5
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:34
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:36
 msgid ""
 "Start QGIS and load the vector layers :file:`regions.shp` and "
 ":file:`airports.shp`."
@@ -105,7 +106,7 @@ msgstr ""
 "Запустите QGIS и загрузите слои :file:`regions.shp` и :file:`airports.shp`."
 
 # ae57ca3139224138ab821ab04f4bc817
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:36
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:38
 msgid ""
 "Load the Spatial Query plugin in the Plugin Manager (see Section "
 ":ref:`load_core_plugin`) and click on the |spatialquery| :sup:`Spatial "
@@ -117,21 +118,13 @@ msgstr ""
 ":sup:`Пространственные запросы` на панели инструментов. Откроется главное "
 "окно модуля."
 
-# 60f5933256514b2fa010d226a93564ae
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:40
-msgid ""
-"Select layer regions as source layer and airports as reference feature layer."
-msgstr ""
-"Укажите слой regions в качестве исходного слоя, а слой в airports как "
-"опорный слой."
-
 # 486bdd032ab34b24ac335adbf8db1c76
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:41
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:44
 msgid "Select 'Contains' as operator and click **[Apply]**."
 msgstr "Выберите оператор «Содержит» и нажмите **[Применить]**."
 
 # 676b383e665f4a5a8a546dece691588a
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:43
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:46
 msgid ""
 "Now you get a list of feature IDs from the query and you have several "
 "options as shown in figure_spatial_query_1_."
@@ -140,13 +133,13 @@ msgstr ""
 "условию и можем (см. рисунок figure_spatial_query_1_)."
 
 # 292ac031e50e4142b43a007f6ad0adb8
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:46
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:49
 msgid ""
 "Click on the |selectesubsetlayer| :sup:`Create layer with list of items`"
 msgstr "|selectesubsetlayer| :sup:`Создать слой из выделенных объектов`"
 
 # b35b48a203d747fabf5c35c05fc50787
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:47
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:50
 msgid ""
 "Select an ID from the list and click on |selectcreatelayer| :sup:`Create "
 "layer with selected`"
@@ -155,7 +148,7 @@ msgstr ""
 ":sup:`Создать слой из выделенных объектов`"
 
 # 9ad883273a3b401c86bce876257d09af
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:49
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:52
 msgid ""
 "Select the 'Remove from current selection' in the field :guilabel:`And use "
 "the result to` |selectstring|."
@@ -164,10 +157,31 @@ msgstr ""
 ":guilabel:`Результат запроса` |selectstring|."
 
 # 244c778489f0474b937a6d2720c19e2a
-#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:51
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:54
 msgid ""
 "Additionally you can |checkbox| :guilabel:`Zoom to item` or display "
 "|checkbox| :guilabel:`Log messages`."
 msgstr ""
 "Активировать флажок |checkbox| :guilabel:`Увеличить до объекта` или "
 "|checkbox| :guilabel:`Отладочные сообщения`."
+
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:5
+msgid "|updatedisclaimer|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:42
+msgid ""
+"Select layer ``regions`` as source layer and ``airports`` as reference "
+"feature layer."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_spatial_query.rst:67
+msgid "Spatial Query analysis - regions contain airports |nix|"
+msgstr ""
+
+#~ msgid ""
+#~ "Select layer regions as source layer and airports as reference feature "
+#~ "layer."
+#~ msgstr ""
+#~ "Укажите слой regions в качестве исходного слоя, а слой в airports как "
+#~ "опорный слой."
