@@ -3,31 +3,35 @@
 # This file is distributed under the same license as the QGIS User Guide package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-17 22:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
+"PO-Revision-Date: 2013-05-30 04:14+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Language: it_IT\n"
+"X-Source-Language: C\n"
 
-# 181492f7a1c34db3a6a48c2735e72699
+# Il dubbio è su "console".
+# Ho usato in maniera pressochè uguale "console" e "riga di comando"
 #: ../../source/docs/user_manual/sextante/console.rst:8
 msgid "Using SEXTANTE from the console"
-msgstr ""
+msgstr "Uso di SEXTANTE dalla console"
 
 # cd17464ea0b849d184a933e9021ef233
 #: ../../source/docs/user_manual/sextante/console.rst:11
 msgid "Introduction"
-msgstr ""
+msgstr "Introduzione"
 
-# eb8bf46db2534ca1a5f4bd3f31acb267
+# - In questo contesto non so se sia meglio usare "console" o "riga di comando"
+# - "conditional sentences": frasi condizionali???
 #: ../../source/docs/user_manual/sextante/console.rst:13
 msgid ""
 "The console allows advanced users to increase their productivity and perform "
@@ -37,48 +41,72 @@ msgid ""
 "and conditional sentences can be added to create more flexible and powerful "
 "workflows."
 msgstr ""
+"La console permette ad utenti esperti di aumentare la propria produttività e "
+"di eseguire operazioni complesse che non possono essere eseguite utilizzando "
+"uno qualsiasi degli altri elementi dell'interfaccia grafica di SEXTANTE. I "
+"modelli che richiamano diversi algoritmi possono essere definiti utilizzando "
+"l'interfaccia della riga di comando, e le operazioni aggiuntive, come i loop "
+"e le frasi condizionali possono essere aggiunte per creare flussi di lavoro "
+"più flessibili e potenti. "
 
-# 2dde2e1050c046f1bf19aacb53bebbb0
-#: ../../source/docs/user_manual/sextante/console.rst:20
+# 28ede5c5b18a4713a2b5a6ad6b62f8b5
+#: ../../source/docs/user_manual/sextante/console.rst:19
 msgid ""
 "There is not a SEXTANTE console in QGIS, but all SEXTANTE commands are "
-"available instead from the QGIS built-in Python console. That means that you "
-"can incorporate those command to your console work and connect SEXTANTE "
+"available instead from QGIS built-in Python console. That means that you can "
+"incorporate those command to your console work and connect SEXTANTE "
 "algorithms to all the other features (including methods from the QGIS API) "
 "available from there."
 msgstr ""
+"Non c'è una console di SEXTANTE in QGIS, ma tutti i comandi di SEXTANTE sono "
+"disponibili invece dalla console Python interna presente in QGIS. Ciò "
+"significa che è possibile incorporare quei comandi nella console di lavoro e "
+"connettere gli algoritmi di SEXTANTE a tutte le altre funzioni (compresi i "
+"metodi derivanti dalle API di QGIS) da lì disponibili."
 
-# 994101bdd2e44271bc30e79b7db13cd3
-#: ../../source/docs/user_manual/sextante/console.rst:26
+# Toolbox = finestra degli strumenti
+#: ../../source/docs/user_manual/sextante/console.rst:24
 msgid ""
-"The code that you can execute from the Python console, even if it does not "
-"call any SEXTANTE method, can be converted into a new SEXTANTE algorithm "
-"that you can later call from the toolbox, the graphical modeler or any other "
-"SEXTANTE component, just like you do with any other SEXTANTE algorithm. In "
-"fact, some algorithms that you can find in the toolbox are simple scripts."
+"The code that you can execute from the Python console, even if it does call "
+"any SEXTANTE method, can be converted into a new SEXTANTE algorithm that you "
+"can later call from the toolbox, the graphical modeler or any other SEXTANTE "
+"component, just like you do with any other SEXTANTE algorithm. In fact, some "
+"algorithms that you can find in the toolbox, like all the ones in the "
+":guilabel:`mmqgis` group, are simple scripts."
 msgstr ""
+"Il codice che è possibile eseguire dalla console Python, anche se chiama un "
+"qualsiasi modulo di SEXTANTE, può essere convertito in un nuovo algoritmo di "
+"SEXTANTE che in seguito sarà possibile chiamare dalla finestra degli "
+"strumenti, il modellatore grafico o qualsiasi altro componente di SEXTANTE, "
+"proprio come si fa con qualunque algoritmo di SEXTANTE. Infatti, alcuni "
+"algoritmi che si possono trovare nella casella degli strumenti, come tutti "
+"quelli del gruppo :guilabel:`mmqgis`, sono semplici script."
 
 # 47e5bb70e2a04735a25aa54332e019f3
-#: ../../source/docs/user_manual/sextante/console.rst:32
+#: ../../source/docs/user_manual/sextante/console.rst:31
 msgid ""
 "In this chapter we will see how to use SEXTANTE from the QGIS Python "
 "console, and also how to write your own algorithms using Python."
 msgstr ""
+"In questo capitolo si spiegherà come utilizzare SEXTANTE dalla console "
+"Python di QGIS ed anche come scrivere un algoritmo in Python."
 
 # c38eccc3595c42ca8b26c8b83829c07f
-#: ../../source/docs/user_manual/sextante/console.rst:36
+#: ../../source/docs/user_manual/sextante/console.rst:35
 msgid "Calling SEXTANTE from the Python console"
-msgstr ""
+msgstr "Chiamata di SEXTANTE dalla console Python"
 
 # 91731dd483924cbd9a3a9f16d385850d
-#: ../../source/docs/user_manual/sextante/console.rst:38
+#: ../../source/docs/user_manual/sextante/console.rst:37
 msgid ""
 "The first thing you have to do is to import the SEXTANTE functions with the "
 "following line:"
 msgstr ""
+"La prima cosa da fare è importare le funzioni di SEXTANTE con la seguente "
+"istruzione:"
 
-# f6c72314d8e343c49d382ddd98308d09
-#: ../../source/docs/user_manual/sextante/console.rst:45
+# Ho tradotto method con comando
+#: ../../source/docs/user_manual/sextante/console.rst:44
 msgid ""
 "Now, there is basically just one (interesting) thing you can do with "
 "SEXTANTE from the console: to execute an algorithm. That is done using the "
@@ -90,43 +118,65 @@ msgid ""
 "name for your algorithm, you can use the ``algslist()`` method. Type the "
 "following line in you console:"
 msgstr ""
+"Fondamentalmente, c'è solo una cosa (interessante) che si può fare con "
+"SEXTANTE dalla console: eseguire un algoritmo. Ciò viene fatto usando il "
+"comando `` runalg () `` , che prende il nome dell'algoritmo da eseguire come "
+"primo parametro, e poi un numero variabile di parametri aggiuntivi che "
+"dipendono da ciò che è richiesto dall'algoritmo. Quindi la prima cosa da "
+"sapere è il nome dell'algoritmo da eseguire. Questo non è il nome che è "
+"riportato nella finestra degli strumenti, ma un nome univoco da richiamare "
+"nella da riga di comando. Per trovare il nome corretto dell'algoritmo, è "
+"possibile utilizzare il comando  `` algslist () ``. Digitare la seguente "
+"istruzione:"
 
 # 84c72af8887c49148306426a6d1e0b82
-#: ../../source/docs/user_manual/sextante/console.rst:55
+#: ../../source/docs/user_manual/sextante/console.rst:57
 msgid "You will see something like this."
-msgstr ""
+msgstr "Il risultato dovrebbe essere."
 
 # 01ec7bf9ab374cceb6fa19b50561a3f2
-#: ../../source/docs/user_manual/sextante/console.rst:81
+#: ../../source/docs/user_manual/sextante/console.rst:80
 msgid ""
 "That's a list of all the available algorithms, alphabetically ordered, along "
 "with their corresponding command-line names."
 msgstr ""
+"Questa è la lista di tutti gli algoritmi disponibili in ordine alfabetico, "
+"con il corrispondente nome da utilizzare nella riga di comando."
 
 # c4fa3ef213af4029969d3e37bea402bb
-#: ../../source/docs/user_manual/sextante/console.rst:84
+#: ../../source/docs/user_manual/sextante/console.rst:83
 msgid ""
 "You can use a string as a parameter for this method. Instead of returning "
 "the full list of algorithm, it will only display those that include that "
 "string. If, for instance, you are looking for an algorithm to calculate "
 "slope from a DEM, type ``alglist(\"slope\")`` to get the following result:"
 msgstr ""
+"È possibile utilizzare una stringa come parametro per questo comando. Invece "
+"di restituire l'elenco completo degli algoritmi, verranno visualizzati solo "
+"quelli che includono tale stringa. Se, per esempio, si sta cercando un "
+"algoritmo per calcolare la pendenza da un DEM, si digiti  ``alglist "
+"(\"slope\") \" per ottenere il seguente risultato:"
 
 # 3a381fadf1e04603beb13bc51a405e03
-#: ../../source/docs/user_manual/sextante/console.rst:100
+#: ../../source/docs/user_manual/sextante/console.rst:98
 msgid ""
 "This result might change depending on the algorithms you have available."
 msgstr ""
+"Il risultato potrebbe cambiare a seconda degli algoritmi che sono "
+"disponibili."
 
-# beae09d83c9445b7ae70edf73cd3f03a
-#: ../../source/docs/user_manual/sextante/console.rst:102
+# ee5aaf789df54afe916252989d12103e
+#: ../../source/docs/user_manual/sextante/console.rst:100
 msgid ""
-"It is easier now to find the algorithm you are looking for and its command-"
-"line name, in this case *saga:slopeaspectcurvature*"
+"It is easier now to find the algorithm you are looking for and its "
+"command-line name, in this case ``saga:slopeaspectcurvature``."
 msgstr ""
+"È più facile ora trovare l'algoritmo che si sta cercando e il suo nome da "
+"utilizzare nella riga di comando, in questo caso `` saga: "
+"slopeaspectcurvature ``."
 
-# f5c8599463d0480599247e6e5db865bf
-#: ../../source/docs/user_manual/sextante/console.rst:105
+# ho tradotto l'argomento della funzione alghelp, essendo un esempio
+#: ../../source/docs/user_manual/sextante/console.rst:103
 msgid ""
 "Once you know the command-line name of the algorithm, the next thing to do "
 "is to know the right syntax to execute it. That means knowing which "
@@ -137,40 +187,62 @@ msgid ""
 "can use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line "
 "name of the algorithm, not the full descriptive name."
 msgstr ""
+"Una volta che si conosce il nome dell'algoritmo da utilizzare nella riga di "
+"comando, la prossima cosa da fare è conoscere la giusta sintassi per "
+"eseguirlo. Ciò significa conoscere quali sono i parametri necessari e "
+"l'ordine in cui essi devono essere dichiarati quando si esegue il comando `` "
+"runalg () `` . SEXTANTE ha un comando per descrivere un algoritmo in "
+"dettaglio, che può essere usato per ottenere un elenco dei parametri che un "
+"algoritmo richiede e gli output che genererà. È possibile utilizzare il "
+"comando  `` alghelp (nome_algoritmo) ``. Utilizzare il nome dell'algoritmo "
+"nella riga di comando, non il nome descrittivo completo."
 
 # 0a3b6837a4dd43cf8bb6d2c3c18b3bff
-#: ../../source/docs/user_manual/sextante/console.rst:114
+#: ../../source/docs/user_manual/sextante/console.rst:111
 msgid ""
 "Calling the method with ``saga:slopeaspectcurvature`` as parameter, you get "
 "the following description."
 msgstr ""
+"Chiamando la funzione ``saga:slopeaspectcurvature`` come parametro, si "
+"otterrà la seguente descrizione."
 
-# 4b2f5d50a24742f28c41211b849a0d16
-#: ../../source/docs/user_manual/sextante/console.rst:129
+# 96a4fe59da48400e8190177793c00c6f
+#: ../../source/docs/user_manual/sextante/console.rst:126
 msgid ""
 "Now you have everything you need to run any algorithm. As we have already "
 "mentioned, there is only one single command to execute algorithms: "
-"``runalg``. Its syntax is as follows:"
+"``runalg()``. Its syntax is as follows:"
 msgstr ""
+"Ora si ha tutto il necessario per eseguire qualsiasi algoritmo. Come già "
+"accennato, vi è solo un unico comando per eseguire algoritmi: `` runalg () "
+"``. La sua sintassi è la seguente:"
 
-# 0d4efbd972834974bc803088121adcea
-#: ../../source/docs/user_manual/sextante/console.rst:138
+# cecc4df985a142dd9b556d7083735609
+#: ../../source/docs/user_manual/sextante/console.rst:135
 msgid ""
 "The list of parameters and outputs to add depends on the algorithm you want "
-"to run, and is exactly the list that the ``describealg`` method gives you, "
-"in the same order as shown."
+"to run, and is exactly the list that the ``alghelp()`` method gives you, in "
+"the same order as shown."
 msgstr ""
+"L'elenco dei parametri e degli output da aggiungere dipende dall'algoritmo "
+"che si desidera eseguire, ed è esattamente la lista che il comando `` "
+"alghelp () `` restituisce, nello stesso ordine, come mostrato."
 
 # c345580c2c5b4e8585e271505c8b23af
-#: ../../source/docs/user_manual/sextante/console.rst:142
+#: ../../source/docs/user_manual/sextante/console.rst:139
 msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next one is a quick review of how to introduce values for each type of input "
 "parameter"
 msgstr ""
+"A seconda del tipo di parametro, i valori vengono introdotti in modo "
+"diverso. Di seguito, una rapida rassegna di come introdurre i valori per "
+"ciascun tipo di parametro di input"
 
-# ceff6cef199d494cb15e512404b156e4
-#: ../../source/docs/user_manual/sextante/console.rst:146
+# Non ho trovato nel "wiki traduzione" come tradurre layer.
+# Nel manuale di QGIS 1.7 è lasciato così, quindi mi sono adeguato.
+# TOC = vedo che nel manuale di QGIS 1.7 è tradotta "Area di legenda"
+#: ../../source/docs/user_manual/sextante/console.rst:142
 msgid ""
 "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
 "identifies the data object to use (the name it has in the QGIS Table of "
@@ -180,74 +252,106 @@ msgid ""
 "the input is optional and you do not want to use any data object, use "
 "``None``."
 msgstr ""
+"Layer raster, layer vettoriale o tabella. Basta usare una stringa con il "
+"nome che identifica l'oggetto da utilizzare (il nome che ha nell'area di "
+"legenda di QGIS ) o il nome di un file (se il layer corrispondente non è "
+"aperto, sarà aperto, ma non aggiunto alla mappa ). Se si dispone di "
+"un'istanza di un oggetto di QGIS che rappresenta il layer, è anche possibile "
+"utilizzarla come parametro. Se l'input è opzionale e non si desidera "
+"utilizzare alcun dato, utilizzare ``None ``."
 
 # af46cd7b919f4e3fb3590c423fee5fa7
-#: ../../source/docs/user_manual/sextante/console.rst:154
+#: ../../source/docs/user_manual/sextante/console.rst:148
 msgid ""
 "Selection. If an algorithm has a selection parameter, the value of that "
 "parameter should be entered using an integer value. To know the available "
 "options, you can use the ``algoptions`` command, as shown in the following "
 "example:"
 msgstr ""
+"Selezione. Se un algoritmo ha un parametro di selezione, il valore di tale "
+"parametro deve essere inserito come valore intero. Per conoscere le opzioni "
+"disponibili, è possibile utilizzare il comando ``algoptions ``, come "
+"mostrato nel seguente esempio:"
 
 # 711d9f007d6941b7948fcb790a6dfcd1
-#: ../../source/docs/user_manual/sextante/console.rst:171
+#: ../../source/docs/user_manual/sextante/console.rst:165
 msgid ""
 "In this case, the algorithm has one of such such parameters, with 7 options. "
 "Notice that ordering is zero-based."
 msgstr ""
+"In questo caso, l'algoritmo ha uno di questi parametri con 7 opzioni, "
+"ordinate a partire da zero."
 
 # 3a896203535d4f19b4b1179fa60d3fb4
-#: ../../source/docs/user_manual/sextante/console.rst:174
+#: ../../source/docs/user_manual/sextante/console.rst:167
 msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons. As in the case of single layers or tables, each input descriptor "
 "can be the data object name, or its filepath."
 msgstr ""
+"Input multipli. Il valore è una stringa con i descrittori degli input "
+"separati da virgola. Come nel caso di singoli layer o tabelle, ogni "
+"descrittore di input ingresso può essere il nome dell'oggetto, o il suo "
+"percorso sul disco."
 
 # dd80f1493ef74702b6a99da46508e2ea
-#: ../../source/docs/user_manual/sextante/console.rst:178
+#: ../../source/docs/user_manual/sextante/console.rst:170
 msgid ""
 "Table Field from XXX. Use a string with the name of the field to use. This "
 "parameter is case-sensitive."
 msgstr ""
+"Campo di una Tabella da XXX. Inserire una stringa con il nome del campo da "
+"utilizzare. Il parametro è sensibile alle lettere maiuscole"
 
-# ecb17941eab045a7b2ae52a7eef79126
-#: ../../source/docs/user_manual/sextante/console.rst:181
+# ce6213cec4e549efbcd70b1a803f2714
+#: ../../source/docs/user_manual/sextante/console.rst:172
 msgid ""
 "Fixed Table. Type the list of all table values separated by commas and "
 "enclosed between quotes. Values start on the upper row and go from left to "
-"right. You can also use a 2D array of values representing the table."
+"right. You can also use a 2D array of value representing the table."
 msgstr ""
+"Tabella fissa. Digitare l'elenco di tutti i valori della tabella, separati "
+"da virgole e racchiusi tra virgolette. I valori iniziano dalla riga "
+"superiore e vanno da sinistra a destra. È inoltre possibile utilizzare una "
+"matrice 2D dei valori che rappresenta la tabella."
 
-# 272b6665f1b148d7ba6e8b1e5e872977
-#: ../../source/docs/user_manual/sextante/console.rst:186
-msgid "CRS: Enter the EPSG code number of the desired CRS"
+# 90b90001394d47c2a331184bf603ed43
+#: ../../source/docs/user_manual/sextante/console.rst:175
+msgid "CRS. Enter the EPSG code number of the desired CRS."
 msgstr ""
+"Sistema di Riferimento per le Coordinate (Coordinate Reference System, CRS). "
+"Inserire il codice EPSG per indicare il sistema di riferimento desiderato."
 
-# dd330926d1c84520b568c6187805e0e6
-#: ../../source/docs/user_manual/sextante/console.rst:188
+# af9ac1315902483e9c9ad801336c30c7
+#: ../../source/docs/user_manual/sextante/console.rst:176
 msgid ""
-"Extent: You must use a string with xmin,xmax,ymin and ymax values separated "
-"by commas"
+"Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax`` "
+"values separated by commas."
 msgstr ""
+"Estensione. È necessario utilizzare una stringa con i valori di ``xmin``, "
+"``xmax``, ``ymin`` e ``ymax`` separati da virgole."
 
 # e2771f5f2c134a3bbe2b6abdaed165e6
-#: ../../source/docs/user_manual/sextante/console.rst:191
+#: ../../source/docs/user_manual/sextante/console.rst:179
 msgid ""
 "Boolean, file, string and numerical parameters do not need any additional "
 "explanations."
 msgstr ""
+"Parametri booleani, di file, di stringa e numerici non hanno bisogno di "
+"ulteriori spiegazioni."
 
 # 493d743a1bd64e7781c24b9a5f705047
-#: ../../source/docs/user_manual/sextante/console.rst:194
+#: ../../source/docs/user_manual/sextante/console.rst:182
 msgid ""
 "Input parameters such as strings booleans or numerical values have default "
 "values. To use them, use ``None`` in the corresponding parameter entry."
 msgstr ""
+"I parametri di input, come stringhe o valori numerici o booleani hanno "
+"valori di default. Per utilizzarli, usare ``None ``nella voce del parametro "
+"corrispondente."
 
 # f143c70978a64d2ea34388e95dabfb6b
-#: ../../source/docs/user_manual/sextante/console.rst:197
+#: ../../source/docs/user_manual/sextante/console.rst:185
 msgid ""
 "For output data objects, type the filepath to be used to save it, just as it "
 "is done from the toolbox. If you want to save the result to a temporary "
@@ -256,9 +360,16 @@ msgid ""
 "algorithm, the default file format for that output type will be used, and "
 "its corresponding extension appended to the given filepath."
 msgstr ""
+"Per per salvare i dati di output, digitare il percorso del file da "
+"utilizzare, così come viene fatto nella finestra degli strumenti. Se si "
+"desidera salvare il risultato in un file temporaneo, utilizzare ``None ``. "
+"L'estensione del file determina il formato del file. Se si immette "
+"un'estensione del file non inclusa tra quelle supportate dall'algoritmo, "
+"verrà utilizzato il formato di file predefinito per il tipo di output e sarà "
+"aggiunta al percorso del file specificato la sua estensione corrispondente ."
 
 # 3476a8ed6eeb4cdc9d93bdeee152d63d
-#: ../../source/docs/user_manual/sextante/console.rst:205
+#: ../../source/docs/user_manual/sextante/console.rst:192
 msgid ""
 "Unlike when an algorithm is executed from the toolbox, outputs are not added "
 "to the map canvas if you execute that same algorithm from the Python "
@@ -266,61 +377,92 @@ msgid ""
 "after running the algorithm. To do so, you can use QGIS API commands, or, "
 "even easier, use one of the handy methods provided by SEXTANTE for such task."
 msgstr ""
+"A differenza di quando un algoritmo viene eseguito dalla finestra degli "
+"strumenti, se si esegue lo stesso algoritmo dalla console Python, gli output "
+"non vengono aggiunti alla vista mappa. Se si desidera aggiungere un output "
+"alla vista, bisogna farlo dopo l'esecuzione dell'algoritmo. Per fare ciò, è "
+"possibile utilizzare i comandi API QGIS, o, ancora più semplicemente, "
+"utilizzare uno dei comandi forniti da SEXTANTE per tale compito."
 
-# 37c07a0ff5a54e1e88bd073cc6386c4f
-#: ../../source/docs/user_manual/sextante/console.rst:212
+# 97a9d1db2db840c09a17a32b952a1b3f
+#: ../../source/docs/user_manual/sextante/console.rst:198
 msgid ""
-"The ``runalg`` method returns a dictionary with the output names (the ones "
+"The ``runalg()`` method returns a dictionary with the output names (the ones "
 "shown in the algorithm description) as keys and the filepaths of those "
 "outputs as values. To add all the outputs generated by an algorithm, pass "
 "that dictionary to the ``loadFromAlg()`` method. You can also load an "
 "individual layer passing its filepath to the ``load()`` method."
 msgstr ""
+"Il comando `` runalg () `` restituisce un dizionario con i nomi di output "
+"(quelli indicati nella descrizione dell'algoritmo) come chiavi e i percorsi "
+"dei file di quegli output come valori. Per aggiungere tutti gli output "
+"generati da un algoritmo, si può utilizzare il comando `` loadFromAlg () `` "
+"che processa il dizionario. È anche possibile caricare un singolo layer "
+"passando il suo percorso del file al comando `` load() ``."
 
 # 10e1c907f4be432e95cbd5dc69894c79
-#: ../../source/docs/user_manual/sextante/console.rst:220
+#: ../../source/docs/user_manual/sextante/console.rst:205
 msgid "Creating scripts and running them from the toolbox"
-msgstr ""
+msgstr "Creare script e lanciarli dalla finestra degli strumenti "
 
-# 814250a58e0b47d5a01a9a5c309330d8
-#: ../../source/docs/user_manual/sextante/console.rst:222
+# 032fe2cbca484b0689aa439223aca329
+#: ../../source/docs/user_manual/sextante/console.rst:207
 msgid ""
 "You can create your own algorithms by writing the corresponding Python code "
 "and adding a few extra lines to supply additional information needed by "
-"SEXTANTE. You can find a *Create new script* menu under the *tools* group in "
-"the script algorithms block of the toolbox. Double-click on it to open the "
-"script edition dialog. That's where you should type your code. Saving the "
-"script from there in the scripts folder (the default one when you open the "
-"save file dialog), with ``.py`` extension, will automatically create the "
-"corresponding algorithm."
+"SEXTANTE. You can find a :guilabel:`Create new script` under the tools group "
+"in the script algorithms block of the toolbox. Double click on it to open "
+"the script edition dialog. That's where you should type your code. Saving "
+"the script from there in the :file:`scripts` folder (the default one when "
+"you open the save file dialog), with :file:`.py` extension, will "
+"automatically create the corresponding algorithm."
 msgstr ""
+"È possibile creare i propri algoritmi, scrivendo il relativo codice Python e "
+"aggiungendo qualche riga in più per fornire ulteriori informazioni "
+"necessarie a SEXTANTE. Il comando :guilabel:`Create new script` si trova "
+"sotto il  gruppo strumenti nel blocco degli Script, nella finestra degli "
+"strumenti. Fare doppio clic su di esso per aprire la finestra di dialogo "
+"dell'editor di script. È lì che si deve digitare il codice. Salvando lo "
+"script nella cartella :file:`scripts` (è quella di default quando si apre la "
+"finestra di dialogo Salva file), con estensione :file:`.py` , "
+"automaticamente si creerà l'algoritmo corrispondente."
 
 # 255e76864d3144daab8b00ad80c0e74c
-#: ../../source/docs/user_manual/sextante/console.rst:231
+#: ../../source/docs/user_manual/sextante/console.rst:215
 msgid ""
 "The name of the algorithm (the one you will see in the toolbox) is created "
 "from the filename, removing its extension and replacing low hyphens with "
 "blank spaces."
 msgstr ""
+"Il nome dell'algoritmo (quello si vedrà nella finestra degli strumenti) "
+"viene creato dal nome del file, rimuovendo la sua estensione e sostituendoi "
+"trattini bassi con spazi vuoti."
 
-# abbe738044f940fd8e01ebc5d3e9943b
-#: ../../source/docs/user_manual/sextante/console.rst:235
+# 586669e871c44502bc26d95a7f942f98
+#: ../../source/docs/user_manual/sextante/console.rst:218
 msgid ""
-"Let's have the following code, which calculates the Topographic Wetness Index"
-"(TWI) directly from a DEM"
+"Let's have the following code, which calculates the Topographic Wetness "
+"Index (TWI) directly from a DEM"
 msgstr ""
+"Ad esempio, quello seguente è il codice che calcola l'Indice di Umidità "
+"Topografica (Topographic Wetness Index, TWI) direttamente da un DEM"
 
 # 76a267c619a2460e896acb0029ea819f
-#: ../../source/docs/user_manual/sextante/console.rst:249
+#: ../../source/docs/user_manual/sextante/console.rst:232
 msgid ""
 "As you can see, it involves 3 algorithms, all of them coming from SAGA. The "
 "last one of them calculates de TWI, but it needs a slope layer and a flow "
 "accumulation layer. We do not have these ones, but since we have the DEM, we "
 "can calculate them calling the corresponding SAGA algorithms."
 msgstr ""
+"Come si può vedere, si tratta di tre algoritmi, tutti provenienti da SAGA. "
+"L'ultimo calcola il TWI, ma ha bisogno del layer dell'inclinazioe e del "
+"layer della flow accumulation. Non essendo disponibili direttamente ed "
+"avendo a disposizione il DEM, possono essere calcolati richiamando i "
+"corrispondenti algoritmi di SAGA."
 
 # ee3e44d29e2a4caea96faec8a2ff15ff
-#: ../../source/docs/user_manual/sextante/console.rst:255
+#: ../../source/docs/user_manual/sextante/console.rst:237
 msgid ""
 "The part of the code where this processing takes place is not difficult to "
 "understand if you have read the previous sections in this chapter. The first "
@@ -328,101 +470,137 @@ msgid ""
 "information it needs to turn your code into an algorithm that can be run "
 "from any of its components, like the toolbox or the graphical modeler."
 msgstr ""
+"La parte del codice in cui avviene questo processo non è difficile da "
+"capire, una volta lette le sezioni precedenti di questo capitolo. Le prime "
+"linee, tuttavia, hanno bisogno di qualche spiegazione aggiuntiva. Esse "
+"forniscono a SEXTANTE le informazioni di cui ha bisogno per trasformare il "
+"codice in un algoritmo che può essere eseguito da uno dei suoi componenti, "
+"come la finestra degli strumenti  o il modellatore grafico."
 
-# 97b108aee5fe402388ac631eb7e846f0
-#: ../../source/docs/user_manual/sextante/console.rst:262
+# 251cdc8077e84cfe88e9c3c579e4383a
+#: ../../source/docs/user_manual/sextante/console.rst:243
 msgid ""
 "These lines start with a double Python comment symbol and have the following "
-"structure: *[parameter_name]=[parameter_type] [optional_values]*. Here is a "
-"list of all the parameter types that SEXTANTE supports in its scripts, their "
-"syntax and some examples."
+"structure:"
 msgstr ""
+"Queste linee iniziano con un doppio simbolo di commento Python ed hanno la "
+"seguente struttura:"
+
+# cbedd7d05e4f42a1a8ec208f481b5f3d
+#: ../../source/docs/user_manual/sextante/console.rst:250
+msgid ""
+"Here is a list of all the parameter types that SEXTANTE supports in its "
+"scripts, their syntax and some examples."
+msgstr ""
+"Ecco un elenco di tutti i tipi di parametri che SEXTANTE supporta nei suoi "
+"scrpt, la loro sintassi ed alcuni esempi."
 
 # fa09e93849c64b83a34468cfbfcf597d
-#: ../../source/docs/user_manual/sextante/console.rst:267
+#: ../../source/docs/user_manual/sextante/console.rst:253
 msgid "``raster``. A raster layer"
-msgstr ""
+msgstr "``raster``. Un layer raster "
 
 # 4b4f9249238e468db707213f03890a88
-#: ../../source/docs/user_manual/sextante/console.rst:269
+#: ../../source/docs/user_manual/sextante/console.rst:254
 msgid "``vector``. A vector layer"
-msgstr ""
+msgstr "``vector``. Un layer vettoriale"
 
 # 27f2d8e8a1744fc1babbba4bd72acac9
-#: ../../source/docs/user_manual/sextante/console.rst:271
+#: ../../source/docs/user_manual/sextante/console.rst:255
 msgid "``table``. A table"
-msgstr ""
+msgstr "``table``. Una tabella"
 
 # d6fcb2a3fb5c4eed8b1078a550f5a88b
-#: ../../source/docs/user_manual/sextante/console.rst:273
+#: ../../source/docs/user_manual/sextante/console.rst:256
 msgid ""
 "``number``. A numerical value. A default value must be provided. For "
 "instance, ``depth=number 2.4``"
 msgstr ""
+"``number``. Un valore numerico. Deve essere indicato un valore di default. "
+"Ad esempio, ``depth=number 2.4``"
 
 # 7f4ba9270a5d48738b29239ca467942a
-#: ../../source/docs/user_manual/sextante/console.rst:276
+#: ../../source/docs/user_manual/sextante/console.rst:258
 msgid ""
 "``string``. A text string. As in the case of numerical values, a default "
 "value must be added. For instance, ``name=string Victor``"
 msgstr ""
+"``string``. Una stringa di testo. Come nel caso dei valori numerici, deve "
+"essere indicato un valore di default. Ad esempio, ``name=string "
+"Victor````number``"
 
 # 6cdfce9fba4d4feda6efed6ff2d9c67a
-#: ../../source/docs/user_manual/sextante/console.rst:279
+#: ../../source/docs/user_manual/sextante/console.rst:260
 msgid ""
 "``boolean``. A boolean value. Add ``True`` or ``False`` after it to set the "
 "default value. For example, ``verbose=boolean True``"
 msgstr ""
+"``boolean``. Un valore booleano. Aggiungere ``True`` o ``False`` dopo di "
+"esso per indicare il valore di default. Ad esempio, ``verbose=boolean True``"
 
 # 840a63259a2d4a909808f3b3d689fe36
-#: ../../source/docs/user_manual/sextante/console.rst:282
+#: ../../source/docs/user_manual/sextante/console.rst:262
 msgid "``multiple raster``. A set of input raster layers."
-msgstr ""
+msgstr "``multiple raster``. Un insieme di layer raster di input. "
 
 # 3250ab57ee3d4e658a7c23dab5f1fe2f
-#: ../../source/docs/user_manual/sextante/console.rst:284
+#: ../../source/docs/user_manual/sextante/console.rst:263
 msgid "``multiple vector``. A set of input vector layers."
-msgstr ""
+msgstr " ``multiple vector``. Un insieme di layer vettoriali di input. "
 
 # 69319e88d22442dfb7876caac574455e
-#: ../../source/docs/user_manual/sextante/console.rst:286
+#: ../../source/docs/user_manual/sextante/console.rst:264
 msgid ""
 "``field``. A field in the attributes table of a vector layer. The name of "
 "the layer has to be added after the ``field`` tag. For instance, if you have "
 "declared a vector input with ``mylayer=vector``, you could use "
 "``myfield=field mylayer`` to add a field from that layer as parameter."
 msgstr ""
+"``field``. Un campo nella tabella degli attributi di un layer vettoriale. Il "
+"nome del layer deve essere aggiunto dopo il tag ``field``.  Ad esempio, una "
+"volta dichiarato il layer vettoriale di input con ``mylayer=vector``, si può "
+"usare ``myfield=field mylayer`` per aggiungere come parametro un campo di "
+"quel layer."
 
 # 6607e2a35ad7456e86e432300b9d34ef
-#: ../../source/docs/user_manual/sextante/console.rst:292
+#: ../../source/docs/user_manual/sextante/console.rst:268
 msgid "``folder``. A folder"
-msgstr ""
+msgstr "``folder``. Una cartella"
 
 # 633aa05ecc1a4b7faec262ca83e74f13
-#: ../../source/docs/user_manual/sextante/console.rst:294
+#: ../../source/docs/user_manual/sextante/console.rst:269
 msgid "``file``. A filename"
-msgstr ""
+msgstr "``file``. Un nome di un file"
 
 # 512270ff26f8440b92dae00f1af4c149
-#: ../../source/docs/user_manual/sextante/console.rst:296
+#: ../../source/docs/user_manual/sextante/console.rst:271
 msgid ""
 "The parameter name is the name that will be shown to the user when executing "
 "the algorithm, and also the variable name to use in the script code. The "
 "value entered by the user for that parameter will be assigned to a variable "
 "with that name."
 msgstr ""
+"Il nome del parametro è il nome che verrà mostrato all'utente durante "
+"l'esecuzione dell'algoritmo, ed è anche il nome della variabile da "
+"utilizzare nel codice dello script. Il valore immesso dall'utente per quel "
+"parametro sarà assegnato a una variabile con quel nome."
 
-# a66e1bc7febb41449741545f407d69b1
-#: ../../source/docs/user_manual/sextante/console.rst:301
+# 8fdbe222d87e440a952fc94d98120e7b
+#: ../../source/docs/user_manual/sextante/console.rst:275
 msgid ""
 "When showing the name of the parameter to the user, SEXTANTE will edit it to "
 "improve its appearance, replacing low hyphens with blankspaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
-"value``, you can use the variable name ``A_numerical_value``"
+"value``, you can use the variable name ``A_numerical_value``."
 msgstr ""
+"Quando mostra all'utente il nome del parametro, SEXTANTE lo modifica per "
+"migliorare il suo aspetto, sostituendo i trattini bassi con spazi vuoti. "
+"Così, per esempio, se si desidera che l'utente visualizzi un parametro "
+"denominato `` Un valore numerico``, è possibile utilizzare il nome della "
+"variabile `` Un_valore_numerico ``."
 
 # 966b35938927426baeed4d2b40ceea5f
-#: ../../source/docs/user_manual/sextante/console.rst:306
+#: ../../source/docs/user_manual/sextante/console.rst:280
 msgid ""
 "Layers and tables values are strings containing the filepath of the "
 "corresponding object. To turn them into a QGIS object, you can use the "
@@ -430,57 +608,65 @@ msgid ""
 "value, which contains the filepaths to all selected object, separated by "
 "semicolons."
 msgstr ""
+"I valori dei layer e delle tabelle sono stringhe contenenti il percorso del "
+"file dell'oggetto corrispondente. Per trasformarle in un oggetto di QGIS, è "
+"possibile utilizzare la funzione ``sextante.getObjectFromUri () `` funzione. "
+"Anche input multipli hanno un valore della stringa, che contiene il percorso "
+"di gli oggetti selezionati, separati da punto e virgola."
 
 # 34e1c4b69df94a1e82de50bf0a38495c
-#: ../../source/docs/user_manual/sextante/console.rst:312
+#: ../../source/docs/user_manual/sextante/console.rst:286
 msgid "Outputs are defined in a similar manner, using the following tags:"
-msgstr ""
+msgstr "Gli output sono definiti in maniera simile, usando i seguenti tag:"
 
 # 5ff99b13193b4ab395d3302225fa3ee4
-#: ../../source/docs/user_manual/sextante/console.rst:314
+#: ../../source/docs/user_manual/sextante/console.rst:288
 msgid "``output raster``"
-msgstr ""
+msgstr "``output raster``"
 
 # 114a6ff4e512483db81b5580f1cf60f3
-#: ../../source/docs/user_manual/sextante/console.rst:316
+#: ../../source/docs/user_manual/sextante/console.rst:289
 msgid "``output vector``"
-msgstr ""
+msgstr "``output vector``"
 
 # ef282b505eec46318b7ea6f22eb60642
-#: ../../source/docs/user_manual/sextante/console.rst:318
+#: ../../source/docs/user_manual/sextante/console.rst:290
 msgid "``output table``"
-msgstr ""
+msgstr "``output table``"
 
 # 797bd40228934607a0f7226d4df6085e
-#: ../../source/docs/user_manual/sextante/console.rst:320
+#: ../../source/docs/user_manual/sextante/console.rst:291
 msgid "``output html``"
-msgstr ""
+msgstr "``output html``"
 
 # f49fb1684ec34ca0b03adc59d224ccdf
-#: ../../source/docs/user_manual/sextante/console.rst:322
+#: ../../source/docs/user_manual/sextante/console.rst:292
 msgid "``output file``"
-msgstr ""
+msgstr "``output file``"
 
 # e27178a816fb46e9a4d58e1be74bcf6f
-#: ../../source/docs/user_manual/sextante/console.rst:324
+#: ../../source/docs/user_manual/sextante/console.rst:293
 msgid "``output number``"
-msgstr ""
+msgstr "``output number``"
 
 # 5449a4321d9f47579414ccd087a31b15
-#: ../../source/docs/user_manual/sextante/console.rst:326
+#: ../../source/docs/user_manual/sextante/console.rst:294
 msgid "``output string``"
-msgstr ""
+msgstr "``output string``"
 
-# 025448ebf06b47639599cb2c23de9c13
-#: ../../source/docs/user_manual/sextante/console.rst:328
+# 0ada830c1945489fa2302871e93fc60a
+#: ../../source/docs/user_manual/sextante/console.rst:296
 msgid ""
 "The value assigned to the output variables is always a string with a "
-"filepath. It will correspond to a temporary filepath in case the user has "
-"not entered any output filename."
+"filepath. It will correspond to a temporary filepath in case the use has not "
+"entered any output filename."
 msgstr ""
+"Il valore assegnato alle variabili di otput è sempre una stringa con un "
+"percorso file. Esso corrisponde al percorso di un file temporaneo nel caso "
+"in cui l'utente non ha specificato alcun file di output."
 
 # 4b99137623fc419993901230a76f0471
-#: ../../source/docs/user_manual/sextante/console.rst:332
+#: ../../source/docs/user_manual/sextante/console.rst:300
 msgid ""
 "When you declare an output, SEXTANTE will try to add it to QGIS once the "
 "algorithm is finished. That is the reason why, although the ``runalg()`` "
@@ -488,9 +674,14 @@ msgid ""
 "loaded, since it is saved to the file entered by the user, which is the "
 "value of the corresponding output."
 msgstr ""
+"Quando si dichiara un output, SEXTANTE cercherà di aggiungerlo QGIS una "
+"volta che l'algoritmo è finito. Questa è la ragione per cui, anche se il "
+"comando `` runalg () `` non carica i layer che produce, il layer finale del "
+"TWI verrà caricato, poiché è salvato nel file scelto dall'utente, che è il "
+"valore dell'output corrispondente."
 
 # e48ca6d9c0564dcd8a037360feb78c86
-#: ../../source/docs/user_manual/sextante/console.rst:338
+#: ../../source/docs/user_manual/sextante/console.rst:305
 msgid ""
 "Do not use the ``load()`` method in your script algorithms, but just when "
 "working with the console line. If a layer is created as output of an "
@@ -498,109 +689,102 @@ msgid ""
 "properly use the algorithm in the modeler, since its syntax (as defined by "
 "the tags explained above) will not match what the algorithm really creates."
 msgstr ""
+"Non usare il comando `` load() `` negli algoritmi di script, ma solo quando "
+"si lavora con la linea di comando. Se un layer viene creato come output di "
+"un algoritmo, esso dovrebbe essere dichiarato come tale. In caso contrario,  "
+"l'algoritmo nel modellatore non potrà essere utilizzato correttamente, dal "
+"momento che la sua sintassi (come definita dai tag spiegato sopra) non "
+"corrisponde a ciò che l'algoritmo in realtà crea."
 
 # cfcedc9f127043c6bbf27318bd706134
-#: ../../source/docs/user_manual/sextante/console.rst:345
+#: ../../source/docs/user_manual/sextante/console.rst:311
 msgid ""
 "Hidden outputs (numbers and strings) do not have a value. Instead, it is you "
 "who has to assign a value to them. To do so, just set the value of a "
 "variable with the name you used to declare that output. For instance, if you "
 "have used this declaration,"
 msgstr ""
+"Output nascosti (numeri e stringhe) non hanno un valore. È invece l'utente "
+"che deve assegnare loro un valore. Per farlo, è sufficiente impostare il "
+"valore di una variabile con il nome utilizzato per dichiarare quell'output. "
+"Per esempio, se è stata usata questa dichiarazione,"
 
 # f3fd283176e240da986b6ec9b72ab49e
-#: ../../source/docs/user_manual/sextante/console.rst:354
+#: ../../source/docs/user_manual/sextante/console.rst:320
 msgid "the following line will set the value of the output to 5:"
-msgstr ""
+msgstr "la riga seguente imposterà il valore dell'output a 5:"
 
 # 678c348d2ebc4cd081e6b9d614d1da6c
-#: ../../source/docs/user_manual/sextante/console.rst:360
+#: ../../source/docs/user_manual/sextante/console.rst:326
 msgid ""
 "In addition to the tags for parameters and outputs, you can also define the "
 "group under which the algorithm will be shown, using the ``group`` tag."
 msgstr ""
+"Oltre ai tag per i parametri e gli output, è anche possibile definire il "
+"gruppo in cui verrà mostrato l'algoritmo, utilizzando il tag `` group ``."
 
 # 0a17ecf2161b41869b1628fb8b701cbd
-#: ../../source/docs/user_manual/sextante/console.rst:364
+#: ../../source/docs/user_manual/sextante/console.rst:329
 msgid ""
 "If you algorithm takes a long time to process, it is a good idea to inform "
 "the user. You have a global named ``progress`` available, with two available "
 "methods: ``setText(text)`` and ``setPercentage(percent)`` to modify the "
 "progress text and the progress bar."
 msgstr ""
+"Se l'algoritmo impiega molto tempo per elaborare, è una buona idea informare "
+"l'utente. Si dispone di due comandi globali denominati ``progress ``con due "
+"metodi disponibile : `` setText (testo) `` e `` setPercentage (percent) `` "
+"per modificare il testo e la barra di avanzamento."
 
-# b7b8f2f8336b4f81ab6b1f9d5e98a3d5
-#: ../../source/docs/user_manual/sextante/console.rst:369
+# f304de1b201b479195aaa0fdee92b219
+#: ../../source/docs/user_manual/sextante/console.rst:334
 msgid ""
 "Several examples are provided with SEXTANTE. Please, check them to see real "
 "examples of how to create algorithms using this feature of SEXTANTE. You can "
-"right-click on any script algorithm and select *Edit script* to edit its "
-"code or just to see it."
+"right-click on any script algorithm and select :guilabel:`Edit script` to "
+"edit its code or just to see it."
 msgstr ""
+"Con SEXTANTE sono forniti diversi esempi. Si prega di controllarli per "
+"vedere alcuni esempi reali di come creare algoritmi che utilizzano questa "
+"funzione di SEXTANTE. È possibile fare clic destro su un qualsiasi algoritmo "
+"di script e selezionare select :guilabel:`Edit script` per modificare il "
+"codice o solo per vederlo."
 
 # cd8f16f074634214ad2d4f9c285116c4
-#: ../../source/docs/user_manual/sextante/console.rst:375
+#: ../../source/docs/user_manual/sextante/console.rst:340
 msgid "Documenting your scripts"
-msgstr ""
+msgstr "Documentare gli script"
 
-# 8d3266fea83946a5a049e860b51b8efe
-#: ../../source/docs/user_manual/sextante/console.rst:377
+# 65b33d9bdfc241e2a1f2af22464a5b48
+#: ../../source/docs/user_manual/sextante/console.rst:342
 msgid ""
 "As in the case of models, you can create additional documentation for your "
 "script, to explain what they do and how to use them. In the script editing "
-"dialog you will find a *Edit script help* button. Click on it and it will "
-"take you to the help editing dialog. Check the chapter about the graphical "
-"modeler to know more about this dialog and how to use it."
+"dialog you will find a **[Edit script help]** button. Click on it and it "
+"will take you to the help editing dialog. Check the chapter about the "
+"graphical modeler to know more about this dialog and how to use it."
 msgstr ""
+"Come nel caso dei modelli, è possibile creare una documentazione aggiuntiva "
+"per gli script, per spiegare che cosa fanno e come usarli. Nella finestra di "
+"modifica dello script si trova un pulsante **[Edit script help]**. Fare clic "
+"su di esso e si aprirà una finestra di editing dell'help. Controllare il "
+"capitolo sul modellatore grafico per sapere di più su questa finestra di "
+"dialogo e come usarla."
 
-# be82b520b09942d98f47537ab3189fad
-#: ../../source/docs/user_manual/sextante/console.rst:383
+# e99bdc0406364b0ca0c5c6feec297831
+#: ../../source/docs/user_manual/sextante/console.rst:348
 msgid ""
-"Help files are saved in the same folder as the script itself, adding the *."
-"help* extension to the filename. Notice that you can edit your script's help "
-"before saving it for the first time. If you later close the script editing "
-"dialog without saving the script (i.e. you discard it), the help content you "
-"wrote will be lost. If your script was already saved and is associated to a "
-"filename, saving is done automatically."
+"Help files are saved in the same folder as the script itself, adding the "
+":file:`.help` extension to the filename. Notice that you can edit your "
+"script's help before saving it for the first time. If you later close the "
+"script editing dialog without saving the script (i.e. you discard it), the "
+"help content you wrote will be lost. If your script was already saved and is "
+"associated to a filename, saving is done automatically."
 msgstr ""
-
-# 5e634d4ae53845a8ada982a07b339c07
-#: ../../source/docs/user_manual/sextante/console.rst:391
-msgid "Pre- and post-execution script hooks"
-msgstr ""
-
-# 8ba32be974814a5ba3f2fdbd0dd82d06
-#: ../../source/docs/user_manual/sextante/console.rst:393
-msgid ""
-"Script can also be used to set pre- and post-execution hooks that are run "
-"before and after an algorithm is run. This can be used to automate tasks "
-"that should be performed whenever a SEXTANTE algorithm is executed."
-msgstr ""
-
-# 2bf837ba556e4f65bcce5cc62b74a133
-#: ../../source/docs/user_manual/sextante/console.rst:395
-msgid ""
-"The syntax is identical to the syntax explained above, but an additional "
-"global variable named ``alg`` is available, representing the algorithm that "
-"has just been (or is about to be) executed."
-msgstr ""
-
-# 0004e2d3876041308bb89abdcfd0a1fc
-#: ../../source/docs/user_manual/sextante/console.rst:397
-msgid ""
-"In the *General* group of the SEXTANTE config dialog you will find two "
-"entries named *Pre-execution script file* and *Post-execution script file* "
-"where the filename of the scripts to be run in each case can be entered."
-msgstr ""
-
-# 340a0d6d65074b5ca65e92b4e99b3495
-#: ../../source/docs/user_manual/sextante/console.rst:399
-msgid ""
-"The following script is an example of a post-execution hook that, whenever "
-"an algorithm generates a raster layer, adds overviews (pyramids) to it."
-msgstr ""
-
-# fe39876d8e384263a1edc1123ab4b6e4
-#: ../../source/docs/user_manual/sextante/console.rst:402
-msgid "XXXXXXXXXXXXXXXXXXXX"
-msgstr ""
+"I file della guida vengono salvati nella stessa cartella dello stesso "
+"script, aggiungendo l'estensione :file:`.help` al nome del file. Si noti che "
+"è possibile modificare la guida dello script prima di salvarlo per la prima "
+"volta. Se in seguito si chiude la finestra di modifica dello script senza "
+"salvare lo script (cioè la si scarta), il contenuto già scritto della guida "
+"verrà perso. Se lo script è già stato salvato ed è associato ad un nome di "
+"file, il salvataggio è fatto automaticamente."
