@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: QGIS User Guide 1.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-24 21:19\n"
+"POT-Creation-Date: 2013-03-20 14:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,23 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# 7968e7be31754fd1915a6114733a51e7
-#: ../../source/docs/user_manual/sextante/batch.rst:5
-msgid "|updatedisclaimer|"
-msgstr ""
-
 # fb2ecbc928ce4fa492072738b27fce8a
-#: ../../source/docs/user_manual/sextante/batch.rst:10
+#: ../../source/docs/user_manual/sextante/batch.rst:8
 msgid "The SEXTANTE batch processing interface"
 msgstr ""
 
 # 2d42314fe83f49f191a4cda5b87b48f5
-#: ../../source/docs/user_manual/sextante/batch.rst:13
+#: ../../source/docs/user_manual/sextante/batch.rst:11
 msgid "Introduction"
 msgstr ""
 
 # d80335bf945b4c2eb15605ea73c13d8a
-#: ../../source/docs/user_manual/sextante/batch.rst:15
+#: ../../source/docs/user_manual/sextante/batch.rst:13
 msgid ""
 "SEXTANTE algorithms (including models) can be executed as a batch process. "
 "That is, they can be executed using not a single set of inputs, but several "
@@ -42,8 +37,8 @@ msgid ""
 "the algorithm many times from the toolbox."
 msgstr ""
 
-# be68dd47785a4bb899300147351f1079
-#: ../../source/docs/user_manual/sextante/batch.rst:21
+# c50145b48288417fbad05a63fafb9639
+#: ../../source/docs/user_manual/sextante/batch.rst:19
 msgid ""
 "To execute an algorithm as a batch process, right-click on its name in the "
 "toolbox and select the :guilabel:`Execute as batch process` option in the "
@@ -51,12 +46,12 @@ msgid ""
 msgstr ""
 
 # 310d4f31361040ad8f3d74bff3cb3bd2
-#: ../../source/docs/user_manual/sextante/batch.rst:38
+#: ../../source/docs/user_manual/sextante/batch.rst:36
 msgid "The parameters table"
 msgstr ""
 
 # f5aa88052dfd45ad8b586789e466bf96
-#: ../../source/docs/user_manual/sextante/batch.rst:40
+#: ../../source/docs/user_manual/sextante/batch.rst:38
 msgid ""
 "Executing a batch process is similar to performing a single execution of an "
 "algorithm. Parameter values have to be defined, but in this case we need not "
@@ -66,7 +61,7 @@ msgid ""
 msgstr ""
 
 # c2d25c26e03e4009a39d84a2c06e16f0
-#: ../../source/docs/user_manual/sextante/batch.rst:58
+#: ../../source/docs/user_manual/sextante/batch.rst:56
 msgid ""
 "Each line of this table represents a single execution of the algorithm, and "
 "each cell contains the value of one of the parameters. It is similar to the "
@@ -75,26 +70,26 @@ msgid ""
 msgstr ""
 
 # 46364748dd7c459abf34043e8f852c97
-#: ../../source/docs/user_manual/sextante/batch.rst:63
+#: ../../source/docs/user_manual/sextante/batch.rst:61
 msgid ""
 "By default, the table contains just two rows. You can add or remove rows "
 "using the buttons on the lower part of the window."
 msgstr ""
 
-# 04af84a96580426186663e22ce9efb87
-#: ../../source/docs/user_manual/sextante/batch.rst:66
+# 53d5f16134b34c079f8bed94a9286d07
+#: ../../source/docs/user_manual/sextante/batch.rst:64
 msgid ""
 "Once the size of the table has been set, it has to be filled with the "
 "desired values."
 msgstr ""
 
 # 2f6601e1cdbf4db0976248a922b812e3
-#: ../../source/docs/user_manual/sextante/batch.rst:70
+#: ../../source/docs/user_manual/sextante/batch.rst:68
 msgid "Filling the parameters table"
 msgstr ""
 
 # 28ba6cfff049483c918c097c7a73bf8b
-#: ../../source/docs/user_manual/sextante/batch.rst:72
+#: ../../source/docs/user_manual/sextante/batch.rst:70
 msgid ""
 "For most parameters, setting its value is trivial. Just type the value or "
 "select it from the list of available options, depending on the parameter "
@@ -102,7 +97,7 @@ msgid ""
 msgstr ""
 
 # 0006104352bd43c9af605448d0ceb6ed
-#: ../../source/docs/user_manual/sextante/batch.rst:75
+#: ../../source/docs/user_manual/sextante/batch.rst:73
 msgid ""
 "The main differences are found for parameters representing layers or tables, "
 "and for output filepaths. Regarding input layers and tables, when an "
@@ -113,21 +108,20 @@ msgid ""
 "from the toolbox."
 msgstr ""
 
-# 6aeca45f99c34265a67a9298b2018c6b
-#: ../../source/docs/user_manual/sextante/batch.rst:82
+# d64c2c98c5024ce8ba01b9cea9363310
+#: ../../source/docs/user_manual/sextante/batch.rst:80
 msgid ""
 "Filenames for input data objects are introduced directly typing or, more "
-"conveniently, clicking on the |browsebutton| button on the right hand of the "
-"cell, which shows a typical file chooser dialog. Multiple files can be "
-"selected at once. If the input parameter represents a single data object and "
-"several files are selected, each one of them will be put in a separate row, "
-"adding new ones if needed. If it represents a multiple input, all the "
-"selected files will be added to a single cell, separated by semicolons (``;"
-"``)."
+"conveniently, clicking on the button on the right hand of the cell, which "
+"shows a typical file chooser dialog. Multiple files can be selected at once. "
+"If the input parameter represents a single data object and several files are "
+"selected, each one of them will be put in a separate row, adding new ones if "
+"needed. If it represents a multiple input, all the selected files will be "
+"added to a single cell, separated by semicolons (``;``)."
 msgstr ""
 
 # bc22c88fd1f044f88aec401fb2f50238
-#: ../../source/docs/user_manual/sextante/batch.rst:90
+#: ../../source/docs/user_manual/sextante/batch.rst:88
 msgid ""
 "Output data objects are always saved to a file and, unlike when executing an "
 "algorithm from the toolbox, saving to a temporary one is not permitted. You "
@@ -136,14 +130,14 @@ msgid ""
 msgstr ""
 
 # 6737608a76d246b3b29a9abd2caccb86
-#: ../../source/docs/user_manual/sextante/batch.rst:95
+#: ../../source/docs/user_manual/sextante/batch.rst:93
 msgid ""
 "Once you select the file, a new dialog is shown to allow for autocompletion "
 "of other cells in the same column (same parameter)."
 msgstr ""
 
-# 9f54dbc9052643728d4a7036f26fecc4
-#: ../../source/docs/user_manual/sextante/batch.rst:110
+# c0acf8bff42a4372b3154e941b4ba361
+#: ../../source/docs/user_manual/sextante/batch.rst:108
 msgid ""
 "If the default value ('Do not autocomplete') is selected, SEXTANTE will just "
 "put the selected filename in the selected cell from the parameters table. If "
@@ -154,7 +148,7 @@ msgid ""
 msgstr ""
 
 # 9b0c5673aa8e4d92b56b22f074c0faba
-#: ../../source/docs/user_manual/sextante/batch.rst:116
+#: ../../source/docs/user_manual/sextante/batch.rst:114
 msgid ""
 "Automatic filling can be done simply adding correlative numbers to the "
 "selected filepath, or appending the value of another field at the same row. "
@@ -163,12 +157,12 @@ msgid ""
 msgstr ""
 
 # 1a076097c0ff4bf190206c9811daa4fe
-#: ../../source/docs/user_manual/sextante/batch.rst:134
+#: ../../source/docs/user_manual/sextante/batch.rst:132
 msgid "Executing the batch process"
 msgstr ""
 
-# a6ce8199215243cb925500f19663d47d
-#: ../../source/docs/user_manual/sextante/batch.rst:136
+# 4d53f53b935546f6ad4c349f473bda78
+#: ../../source/docs/user_manual/sextante/batch.rst:134
 msgid ""
 "To execute the batch process once you have introduced all the necessary "
 "values, just click on **[OK]**. SEXTANTE will show the progress of the "
