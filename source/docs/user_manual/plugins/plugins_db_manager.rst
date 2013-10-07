@@ -27,7 +27,7 @@ results to QGIS as a query layer.
    :align: center
    :width: 30 em
 
-   DB Manager dialog (KDE) |nix|
+   DB Manager dialog |nix|
 
 
 The :menuselection:`Database` menu allows to connect to an existing database, to
