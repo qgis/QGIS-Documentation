@@ -174,14 +174,10 @@ it's not possible to access GetCapabilities response from API --- you have to
 know what layers you want
 ::
 
-  url = 'http://wms.jpl.nasa.gov/wms.cgi'
-  layers = [ 'global_mosaic' ]
-  styles = [ 'pseudo' ]
-  format = 'image/jpeg'
-  crs = 'EPSG:4326'
-  rlayer = QgsRasterLayer(0, url, 'some layer name', 'wms', layers, styles, format, crs)
-  if not rlayer.isValid():
-    print "Layer failed to load!"
+    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&styles=pseudo&format=image/jpeg&crs=EPSG:4326'
+    rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
+    if not rlayer.isValid():
+      print "Layer failed to load!"
 
 .. index:: map layer registry
 
