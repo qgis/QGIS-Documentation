@@ -202,17 +202,17 @@ button. The plugin is then activated and installed in its own directory.
 * |nix| Linux and other unices
 
   - ``/share/qgis/python/plugins``
-  - ``$HOME/.qgis/python/plugins``
+  - ``$HOME/.qgis2/python/plugins``
 
 * |osx| Mac OS X
 
   - ``/Contents/MacOS/share/qgis/python/plugins``
-  - ``$HOME/.qgis/python/plugins``
+  - ``$HOME/.qgis2/python/plugins``
 
 * |win| Windows
 
   - ``C:\Program Files\QGIS\python\plugins``
-  - ``C:\Documents and Settings\$USERNAME\.qgis\python\plugins``
+  - ``C:\Documents and Settings\$USERNAME\.qgis2\python\plugins``
 
 If the installation is successful, a confirmation message will appear.
 
