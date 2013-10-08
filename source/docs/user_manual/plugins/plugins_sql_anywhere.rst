@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -23,7 +23,7 @@ etc. and built in functions to export to KML, GML and SVG formats.
 
    SQL Anywhere dialog (KDE) |nix|
 
-The |icon_sqlanywhere| :sup:`SQL Anywhere` allows to connect to spatialy enabled
+The |icon_sqlanywhere| :sup:`SQL Anywhere` allows to connect to spatially enabled
 SQL Anywhere databases. The :guilabel:`Add SQL Anywhere layer` dialog is similar
 in functionality to the dialogs for PostGIS and SpatiaLite.
 

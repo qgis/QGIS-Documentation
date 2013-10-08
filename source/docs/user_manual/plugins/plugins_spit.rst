@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -12,8 +12,8 @@ SPIT Plugin
 |qg| comes with a plugin named SPIT (Shapefile to PostGIS Import Tool). SPIT can
 be used to load multiple shapefiles at one time and includes support for schemas.
 To use SPIT, open the Plugin Manager from the :menuselection:`Plugins` menu,
-check the box next to the |checkbox| :guilabel:`SPIT plugin` and click **[OK]**.
-The SPIT icon will be added to the plugin toolbar.
+in the |plugin| :guilabel:`Installed` menu check the box next to the |checkbox| :guilabel:`SPIT plugin`
+and click **[OK]**. The SPIT icon will be added to the plugin toolbar.
 
 To import a shapefile, click on the |spiticon| :sup:`SPIT` tool in the toolbar
 to open the :guilabel:`SPIT - Shapefile to PostGIS Import Tool` dialog. Select
@@ -36,11 +36,3 @@ errors/warnings will be displayed as each shapefile is processed.
    Using SPIT Plugin to import Shape files to PostGIS |nix|
 
 .. _tip_importing_shapefiles:
-
-.. tip:: **Importing Shapefiles Containing PostgreSQL Reserved Words**
-
-   If a shapefile is added to the queue containing fields that are reserved
-   words in the PostgreSQL database a dialog will popup showing the status of
-   each field. You can edit the field names prior to import and change any that
-   are reserved words (or change any other field names as desired). Attempting
-   to import a shapefile with reserved words as field names will likely fail.
