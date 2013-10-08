@@ -21,7 +21,6 @@ Plugins
    plugins_gdaltools
    plugins_georeferencer
    plugins_interpolation
-   plugins_mapserver_export
    plugins_offline_editing
    plugins_oracle_raster
    plugins_raster_terrain
