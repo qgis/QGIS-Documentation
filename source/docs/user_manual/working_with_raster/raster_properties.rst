@@ -110,7 +110,9 @@ the whole data included in the original image. E.g. QGIS creates a color table
 with 256 values, given the fact that you have 8bit bands. 
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
 Then only the values within the standard deviation or within multiple standard deviations 
-are considered for the color table. This is useful if ...
+are considered for the color table. This is useful when you have one or two cells 
+with abnormally high values in a raster grid that are having a negative impact on
+the rendering of the raster.
 
 All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` extend.
 
@@ -140,6 +142,16 @@ on the color and the :guilabel:`Select color` dialog appears.
    :width: 30em
 
    Raster Renderer - Paletted |nix|
+
+.. index:: Contrast_enhancement
+
+**Contrast enhancement**
+
+.. note::
+   When adding GRASS rasters the option *Contrast enhancement* will be
+   always set to automatically to *stretch to min max* regardless if
+   the QGIS general options this is set to another value.
+
 
 **Singleband gray**
 
@@ -245,19 +257,29 @@ are considered for the color table.
 Color rendering
 ...............
 
-.. index:: Contrast_enhancement
+For every :guilabel:`Band rendering` a :guilabel:`Color rendering` is possible.
 
-**Contrast enhancement**
+You can achieve special rendering effects for your raster file(s) using one one
+of the blending modes (see blend_modes_).
 
-.. note::
-   When adding GRASS rasters the option *Contrast enhancement* will be
-   always set to automatically to *stretch to min max* regardless if
-   the QGIS general options this is set to another value.
-
+Further settings can be made in modifiying the :guilabel:`Brightness`, the
+:guilabel:`Saturation` and the :guilabel:`Contrast`. You can use a :guilabel:`Grayscale`
+option where you can choose between 'By lightness', 'By luminosity' and 'By average'.
+For one hue in the color table you can modiy the 'Strength'.
 
 Resampling
 ..........
 
+The :guilabel:`Resampling` option makes it appearance when you zoom in and out of the 
+image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
+matrix through a geometric transformation.
+
+While applying the 'Nearest neighbour' method the map can have a pixelated structure
+when zooming in. This appearance can be improved by using the 'Bilinear' method. Sharp features 
+are caused to be blurred now. The effect is a smoother image. The method can be applied to digital
+topographic raster maps.
+
+The 'Cubic' method can be applied to ...
 
 .. index:: Transparency
 
