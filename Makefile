@@ -3,8 +3,7 @@
 
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
-#LANGUAGES     = en ca_ES  da_DK  de  es  fi  fr  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
-LANGUAGES     = en nl de
+LANGUAGES     = en ca_ES  da_DK  de  es  fi  fr  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -72,12 +71,12 @@ localizeresources: clean
 	mkdir $(SOURCEDIR)/static
 	# historically the images for the docs sub project are not in a separate docs folder
 	# that is why we copy into root in separate steps
-	@if [ -d "$(RESOURCEDIR)/en/docs" ]; then \
-		cp -r $(RESOURCEDIR)/en/docs/* $(SOURCEDIR)/static; \
+	@if [ -d "$(RESOURCEDIR)/en" ]; then \
+		cp -r $(RESOURCEDIR)/en/* $(SOURCEDIR)/static; \
 	fi
 	@echo "Copy localized '$(LANG)' static content to $(SOURCEDIR)/static."
-	@if [ -d "$(RESOURCEDIR)/$(LANG)/docs" ]; then \
-		cp -r $(RESOURCEDIR)/$(LANG)/docs/* $(SOURCEDIR)/static; \
+	@if [ -d "$(RESOURCEDIR)/$(LANG)" ]; then \
+		cp -r $(RESOURCEDIR)/$(LANG)/* $(SOURCEDIR)/static; \
 	fi
 
 html: localizeresources
