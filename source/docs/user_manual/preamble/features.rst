@@ -22,6 +22,8 @@ formats include:
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
    Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
+*  QGIS processing framework to call hundreds of native and third party 
+   algorithms from QGIS, see section :ref:`sec_processing_intro`.
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, such as (WMS, WMTS, WCS, 
