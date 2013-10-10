@@ -19,15 +19,6 @@ import sphinx_bootstrap_theme
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('.'))
 
-# IF THERE IS A docs.conf.py available import it FIRST
-# so we will be taking the config for docs first, and after override
-# those with ours
-# CEVEAT: conflicting vars??
-try:
-    from docs_conf import *
-except ImportError:
-    print "docs_conf.py not available, building website without documentation part"
-
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
