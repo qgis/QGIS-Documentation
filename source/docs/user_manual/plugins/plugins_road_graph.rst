@@ -51,7 +51,8 @@ Using the plugin
 
 After plugin activation you will see an additional panel on the left side of
 the main QGIS window. Now make some definitions to the :guilabel:`Road graph
-plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph` (see figure_road_graph_2_).
+plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph` 
+(see figure_road_graph_2_).
 
 .. _figure_road_graph_2:
 

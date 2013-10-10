@@ -49,7 +49,7 @@ attributes of the attribute table to be searched. To add an attribute to the
 Field calculator **Expression** field, double click its name in the
 :guilabel:`Fields and Values` list. Generally you can use the various fields,
 values and functions to construct the calculation expression or you can just type
-it into the box. To display the values ​​of a field, you just right click on the
+it into the box. To display the values of a field, you just right click on the
 appropriate field. You can choose between :guilabel:`Load top 10 unique values`
 and :guilabel:`Load all unique values`. On the right side opens the **Field Values**
 list with the unique values. To add a value to the Field calculator **Expression**

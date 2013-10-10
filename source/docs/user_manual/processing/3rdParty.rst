@@ -354,14 +354,8 @@ own ones.
    make sure that the corresponding packages are installed in the R distribution
    used by QGIS. The processing framework will not take care of any package installation. If you
    run a script that requires an uninstalled package, the execution will fail, and
-   SEXTANTE will try to detect which packages are missing, showing you a dialog like
-   the one shown next
-
-   .. figure:: /static/user_manual/processing/missing_r_packages.png
-      :align: center
-      :width: 15em
-
-  You must install those libraries manually before you can run the algorithm.
+   SEXTANTE will try to detect which packages are missing. You must install those 
+   missing libraries manually before you can run the algorithm.
 
 GRASS
 -----

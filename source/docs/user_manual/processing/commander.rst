@@ -17,7 +17,7 @@ box with autocompletion where you type the command you want to run.
 
    **Figure SEXTANTE 28:**
 
-.. figure:: /static/user_manual/sextante/commander.png
+.. figure:: /static/user_manual/processing/commander.png
    :align: center
    :width: 25em
 

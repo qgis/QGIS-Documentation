@@ -1197,7 +1197,7 @@ and histograms.
 
 The menu is divided into four tabs now: :guilabel:`Appearance`, :guilabel:`Size`, :guilabel:`Postion` and :guilabel:`Options`.
 
-In the case of the text diagram and piechart text values ​​of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab diagram size is based on a fixed size or on linear scaling according to a classification attribute.
+In the case of the text diagram and piechart text values of different data columns are displayed one below the other with a circle or a box and dividers. In the :guilabel:`Size` tab diagram size is based on a fixed size or on linear scaling according to a classification attribute.
 The placement of the diagrams which is done in the :guilabel:`Position` tab interacts with the new labeling, so position
 conflicts between diagrams and labels are detected and solved. In addition
 to chart positions can be fixed by the users hand.
