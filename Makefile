@@ -91,14 +91,15 @@ pdf: html
 	# Compile the pdf docs for that locale
 	# we use texi2pdf since latexpdf target is not available via
 	# sphinx-build which we need to use since we need to pass language flag
-	mkdir -p $(BUILDDIR)/pdf
+	mkdir -p $(BUILDDIR)/pdf/$(LANG)
 	# need to build 3x to have proper toc and index
 	# currently texi2pdf has bad exit status. Please ignore errors!!
 	# prepending the texi2pdf command with - keeps make going instead of quitting
-	-texi2pdf --quiet --build-dir=$(BUILDDIR)/latex/$(LANG)/ $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.tex
-	-texi2pdf --quiet --build-dir=$(BUILDDIR)/latex/$(LANG)/ $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.tex
-	-texi2pdf --clean --quiet --build-dir=$(BUILDDIR)/latex/$(LANG)/ $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.tex
-	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.t2d/pdf/build/QGISUserGuide.pdf $(BUILDDIR)/pdf/QGIS-$(VERSION)-UserGuide-$(LANG).pdf
+	-cd $(BUILDDIR)/latex/$(LANG); \
+	texi2pdf --quiet QGISUserGuide.tex; \
+	texi2pdf --quiet QGISUserGuide.tex; \
+	texi2pdf --quiet QGISUserGuide.tex;
+	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf
 
 world: all
 
@@ -112,7 +113,7 @@ all:
 		mkdir -p live/html/$$LANG; \
 		mv live/html/$$LANG live/html/$$LANG.old; \
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
-		cp $(BUILDDIR)/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf live/html/$$LANG/;  \
+		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/$$LANG/;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
