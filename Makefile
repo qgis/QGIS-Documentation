@@ -107,13 +107,14 @@ all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
 	@echo
+	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
 		make LANG=$$LANG pdf; \
 		mkdir -p live/html/$$LANG; \
 		mv live/html/$$LANG live/html/$$LANG.old; \
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
-		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/$$LANG/;  \
+		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
