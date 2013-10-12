@@ -33,9 +33,8 @@ Icon                    Plugin                    Description                   
 |interpolation|         Interpolation plugin      Interpolation on base of vertices of a vector layer     :ref:`interpol`
 |mapserver_export|      MapServer Export Plugin   Export a QGIS project file to a MapServer map file      :ref:`mapserver_export`
 |offline_editing_copy|  Offline Editing           Offline editing and synchronizing with database         :ref:`offlinedit`
-|osm_load|              OpenStreetMap             Access OpenStreetMap                                    :ref:`plugins_osm`
 |oracle_raster|         Oracle Spatial Georaster  Access Oracle Spatial GeoRasters                        :ref:`oracle_raster`
-|plugin_installer|      Plugin Installer          Download and install python plugins                     :ref:`python_plugin_installer`
+|plugin_installer|      Plugin Manager            Download and install python plugins                     :ref:`python_plugin_installer`
 |raster_terrain|        Raster Terrain Analysis   Compute geomorphological features from DEMs             :ref:`rasterrain`
 |roadgraph|             Road Graph Plugin         Shortest path analysis                                  :ref:`roadgraph`
 |spiticon|              SPIT                      Shapefile to PostGIS Import Tool                        :ref:`loading_postgis_data`
