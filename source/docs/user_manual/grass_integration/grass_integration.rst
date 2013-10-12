@@ -1,7 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _sec_grass:
 
 *********************
@@ -12,7 +9,7 @@ The :index:`GRASS` plugin provides access to GRASS GIS (see GRASS-PROJECT
 :ref:`literature_and_web`) databases and functionalities. This includes
 visualization of GRASS raster and vector layers, digitizing vector layers,
 editing vector attributes, creating new vector layers and analysing GRASS 2D and
-3D data with more than 300 GRASS modules.
+3D data with more than 400 GRASS modules.
 
 In this Section we'll introduce the plugin functionalities and give some examples
 on managing and working with GRASS data. Following main features are provided
@@ -30,10 +27,7 @@ with the toolbar menu, when you start the GRASS plugin, as described in section
 * |grass_region| :sup:`Display current GRASS region`
 * |grass_region_edit| :sup:`Edit current GRASS region`
 
-.. *  |grass_shell| :sup:`Open GRASS Shell`
-
 .. _sec_starting_grass:
-
 Starting the GRASS plugin
 =========================
 
@@ -50,7 +44,6 @@ some raster and vector data (see Section :ref:`sec_import_loc_data`) for further
 analysis with the GRASS Toolbox (see section :ref:`subsec_grass_toolbox`).
 
 .. _sec_load_grassdata:
-
 Loading GRASS raster and vector layers
 ======================================
 
@@ -124,7 +117,7 @@ GRASS, this functionality will not be described here.).
 
 .. figure:: /static/user_manual/grass_integration/grass_location.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    GRASS data in the alaska LOCATION
 
@@ -159,7 +152,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
    know that it is represented by the EPSG ID 2964, we enter it in the search box.
    (Note: If you want to repeat this process for another :file:`LOCATION` and
    projection and haven't memorized the EPSG ID, click on the |mIconProjectionEnabled|
-   :sup:`projector` icon in the lower right-hand corner of the status bar (see
+   :sup:`CRS Status` icon in the lower right-hand corner of the status bar (see
    Section :ref:`label_projections`)).
 #. In :guilabel:`Filter` insert 2964 to select the projection.
 #. Click **[Next]**.
@@ -189,7 +182,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
 
 .. figure:: /static/user_manual/grass_integration/create_grass_location.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
@@ -394,7 +387,7 @@ functionalities.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_toolbar.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Digitizing Toolbar
 
@@ -447,7 +440,7 @@ values will be assigned to a new geometry element.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_category.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Digitizing Category Tab
 
@@ -492,7 +485,7 @@ default is set to 10 pixels.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_settings.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Digitizing Settings Tab
 
@@ -513,7 +506,7 @@ settings for various geometry types and their topological status (e.g. closed
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_symbology.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Digitizing Symbolog Tab
 
@@ -536,7 +529,7 @@ create a new database table for a new GRASS vector layer (see Section
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_table.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Digitizing Table Tab
 
@@ -605,7 +598,7 @@ need to be written to the currently selected :file:`LOCATION` and :file:`MAPSET`
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_moduletree.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Toolbox and Module Tree |nix|
 
@@ -652,7 +645,7 @@ further module specific parameters to run the module.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_option.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Toolbox Module Options |nix|
 
@@ -678,7 +671,7 @@ to switch to the GRASS Shell.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_output.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Toolbox Module Output |nix|
 
@@ -697,7 +690,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_manual.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS Toolbox Module Manual |nix|
 
@@ -855,7 +848,7 @@ parameters. This example demonstrates the use of an additional option in the
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shell.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    The GRASS shell, r.shaded.relief module |nix|
 
@@ -917,8 +910,6 @@ of statistics for each polygon in a vector map.
   columns have been added including ``elev_min``, ``elev_max``, ``elev_mean``
   etc. for each forest polygon.
 
-
-
 Working with the GRASS LOCATION browser
 ---------------------------------------
 .. index::
@@ -941,10 +932,9 @@ connected attribute table for vector data and a command history.
 
 .. figure:: /static/user_manual/grass_integration/grass_mapset_browser.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    GRASS LOCATION browser |nix|
-
 
 The toolbar inside the :guilabel:`Browser` tab offers following tools to manage
 the selected :file:`LOCATION`:
@@ -967,7 +957,6 @@ Customizing the GRASS Toolbox
 ------------------------------
 .. index::
    single:GRASS toolbox;customize
-
 
 Nearly all GRASS modules can be added to the GRASS toolbox. A XML interface is
 provided to parse the pretty simple XML files which configures the modules
