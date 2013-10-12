@@ -401,6 +401,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
+.. |mActionAddPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
+   :width: 1.5em
 .. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |mActionFileNew| image:: /static/common/mActionFileNew.png

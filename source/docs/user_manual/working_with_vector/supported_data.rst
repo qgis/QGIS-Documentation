@@ -1,8 +1,5 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
-
 Supported Data Formats
 ======================
 
@@ -32,12 +29,10 @@ This is by design and includes the identify, select, labeling and
 attributes functions.
 
 .. index:: ESRI, Shapefile, OGR
-
 .. _vector_shapefiles:
 
 ESRI Shapefiles
 ---------------
-
 
 The standard vector file format used in |qg| is the ESRI Shapefile.
 Support is provided by the :index:`OGR Simple Feature Library`
@@ -56,14 +51,12 @@ details see the ESRI technical specification at:
 http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 
 .. _vector_load_shapefile:
-
 Loading a Shapefile
 ...................
 
-|mActionAddNonDbLayer| To :index:`load a shapefile`, start |qg| and click on the
-|mActionAddNonDbLayer| :sup:`Add Vector Layer` toolbar button or simply type
+|mActionAddOgrLayer| To :index:`load a shapefile`, start |qg| and click on the
+|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button or simply type
 :kbd:`Ctrl+Shift+V`. This will bring up a new window (see figure_vector_1_).
-
 
 .. _figure_vector_1:
 
@@ -85,7 +78,6 @@ you to preselect some OGR supported file formats.
 
 You can also select the Encoding type for the shapefile if desired.
 
-
 .. _figure_vector_2:
 
 .. only:: html
@@ -101,7 +93,6 @@ You can also select the Encoding type for the shapefile if desired.
 Selecting a shapefile from the list and clicking **[Open]** loads it into |qg|.
 Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 
-
 .. _figure_vector_3:
 
 .. only:: html
@@ -110,11 +101,9 @@ Figure_vector_3_ shows |qg| after loading the :file:`alaska.shp` file.
 
 .. figure:: /static/user_manual/working_with_vector/shapefileloaded.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    |qg| with Shapefile of Alaska loaded |nix|
-
-.. _tip_layer_colors:
 
 .. tip:: **Layer Colors**
 
@@ -139,8 +128,6 @@ symbology of vector layers.
    As a workaround you can type '/Volumes' in the File name box and press
    :kbd:`return`. Then you can navigate to external drives and network mounts.
 
-.. _vector_improving_performance_shape:
-
 Improving Performance Shape
 ...........................
 
@@ -150,14 +137,12 @@ Spatial indexes used by |qg| have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-
-*  Load a shapefile.
+*  Load a shapefile, clicking on the |mActionAddOgrLayer| :sup:`Add Vector Layer` 
+   toolbar button or type :kbd:`Ctrl+Shift+V`.
 *  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
    :menuselection:`Properties` from the popup menu.
 *  In the tab :guilabel:`General` click the **[Create Spatial Index]** button.
-
-.. _vector_shape_problem_loading:
 
 Problem loading a shape .prj file
 .................................
@@ -177,26 +162,23 @@ providing the complete parameters of the used CRS. Whenever |qg| finds
 a :file:`.qpj` file, it will be used instead of the :file:`.prj`.
 
 .. index:: MapInfo
-
 .. _vector_loading_mapinfo:
 
 Loading a MapInfo Layer
 -----------------------
 
-|mActionAddNonDbLayer| To load a MapInfo layer, click on the |mActionAddNonDbLayer|
+|mActionAddOgrLayer| To load a MapInfo layer, click on the |mActionAddOgrLayer|
 :sup:`Add Vector Layer` toolbar button or type :kbd:`Ctrl+Shift+V`, change the
 file type filter :guilabel:`Filter` |selectstring|: to 'Mapinfo File [OGR]' and
 select the MapInfo layer you want to load.
 
-.. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format
-.. index:: US_Census_Bureau
-
+.. index:: ArcInfo_Binary_Coverage, Tiger_Format, UK_National_Transfer_Format, US_Census_Bureau
 .. _vector_loading_arcinfo_coverage:
 
 Loading an ArcInfo Binary Coverage
 ----------------------------------
 
-|mActionAddNonDbLayer| To load an ArcInfo binary coverage, click on the |mActionAddNonDbLayer|
+|mActionAddOgrLayer| To load an ArcInfo binary coverage, click on the |mActionAddOgrLayer|
 :sup:`Add Vector Layer` toolbar button or press :kbd:`Ctrl+Shift+V` to open the
 :guilabel:`Add Vector Layer` dialog. Select |radiobuttonon| :guilabel:`Directory`.
 Change to :guilabel:`Filter` |selectstring| to 'Arc/Info Binary Coverage'.
@@ -212,12 +194,11 @@ Loading OpenStreetMap Vectors
 
 |qg| integrates Openstreetmap import as a core functionnality. 
 
-* To connect to the OSM server and download data, open the menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Load data`. You can skip this step if you already got a .osm XML file using josm or overpass or any other source.
-* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Import topology from an XML file` will convert your .osm file into a spatialite database, and create a db connection.
-* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Export topology to Spatialite` then allows you to open the database connection, select the type of data you want (points, lines, or polygons) and choose tags to import. This creates a spatialite geometry layer that you can then add to your project by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar button or by selecting the |mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option from the :menuselection:`Layer` menu, see Section :ref:`label_spatialite`.
+* To connect to the OSM server and download data, open the menu :menuselection:`Vector --> Openstreetmap --> Load data`. You can skip this step if you already got a .osm XML file using josm or overpass or any other source.
+* The menu :menuselection:`Vector --> Openstreetmap --> Import topology from an XML file` will convert your .osm file into a spatialite database, and create a db connection.
+* The menu :menuselection:`Vector --> Openstreetmap --> Export topology to Spatialite` then allows you to open the database connection, select the type of data you want (points, lines, or polygons) and choose tags to import. This creates a spatialite geometry layer that you can then add to your project by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar button or by selecting the |mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option from the :menuselection:`Layer` menu, see Section :ref:`label_spatialite`.
 
 .. index:: PostGIS, PostgreSQL
-
 .. _label_postgis:
 
 PostGIS Layers
@@ -228,17 +209,15 @@ the spatial indexing, filtering and query capabilities it provides. Using PostGI
 vector functions such as select and identify work more accurately than with OGR
 layers in |qg|.
 
-.. index:: Connection_Manager
-
 .. _vector_create_stored_connection:
 
 Creating a stored Connection
 ............................
 
-|mActionAddLayer| The first time you use a PostGIS data source, you must create
+|mActionAddPostgisLayer| The first time you use a PostGIS data source, you must create
 a connection to the PostgreSQL database that contains the data. Begin by clicking
-on the |mActionAddLayer| :sup:`Add PostGIS Layer` toolbar button, selecting the
-|mActionAddLayer| :menuselection:`Add PostGIS Layer...` option from the
+on the |mActionAddPostgisLayer| :sup:`Add PostGIS Layer` toolbar button, selecting the
+|mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...` option from the
 :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D`. You can also open the
 :guilabel:`Add Vector Layer` dialog and select |radiobuttonon| :guilabel:`Database`.
 The :guilabel:`Add PostGIS Table(s)` dialog will be displayed. To access the
@@ -268,7 +247,6 @@ a connection are:
 * **Username**: User name used to login to the database.
 * **Password**: Password used with *Username* to connect to the database.
 
-
 Optional you can activate following checkboxes:
 
 *  |checkbox| :guilabel:`Save Username`
@@ -277,7 +255,6 @@ Optional you can activate following checkboxes:
 *  |checkbox| :guilabel:`Only look in the 'public' schema`
 *  |checkbox| :guilabel:`Also list tables with no geometry`
 *  |checkbox| :guilabel:`Use estimated table metadata`
-
 
 Once all parameters and options are set, you can test the connection
 by clicking on the **[Test Connect]** button.
@@ -298,7 +275,7 @@ by clicking on the **[Test Connect]** button.
 Loading a PostGIS Layer
 .......................
 
-|mActionAddLayer| Once you have one or more connections defined, you can load
+|mActionAddPostgisLayer| Once you have one or more connections defined, you can load
 layers from the PostgreSQL database. Of course this requires having data in
 PostgreSQL. See Section :ref:`vector_import_data_in_postgis` for a discussion on
 importing data into the database.
@@ -306,7 +283,7 @@ importing data into the database.
 To load a layer from PostGIS, perform the following steps:
 
 *  If the :guilabel:`Add PostGIS layers` dialog is not already open,
-   selecting the |mActionAddLayer| :menuselection:`Add PostGIS Layer...` option 
+   selecting the |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...` option 
    from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D` opens the 
    dialog.
 *  Choose the connection from the drop-down list and click **[Connect]**.
@@ -368,9 +345,6 @@ to disable this option when you use expensive views.
 .. % When dealing with views, |qg| parses the view definition and
 
 .. index:: shp2pgsql
-
-.. _loading_postgis_data:
-
 .. _vector_import_data_in_postgis:
 
 Importing Data into PostgreSQL
@@ -379,15 +353,12 @@ Importing Data into PostgreSQL
 Data can be imported into PostgreSQL/PostGIS using several tools, such as the SPIT
 plugin or the command line tools shp2pgsql or ogr2ogr.
 
-.. _spit_plugin:
+DB Manager
+..........
 
-SPIT Plugin
-...........
-
-|qg| comes with a core plugin named |spiticon| :sup:`SPIT` (Shapefile to
-PostGIS Import Tool). SPIT can be used to load multiple shapefiles at
-one time and includes support for schemas. See Section :ref:`label_spit` for
-more information.
+|qg| comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can be used to 
+load shapefiles and other data formats and includes support for schemas. See Section 
+:ref:`dbmanager` for more information.
 
 shp2pgsql
 ...........
@@ -416,8 +387,6 @@ reference systems and projections.
    PostGIS-datasets as shapefiles: **pgsql2shp**. This is shipped within
    your PostGIS distribution.
 
-
-
 .. index:: ogr2ogr
 
 ogr2ogr
@@ -431,7 +400,6 @@ To import a shapefile into PostGIS, do the following:
 
   ogr2ogr -f "PostgreSQL" PG:"dbname=postgis host=myhost.de user=postgres \
   password=topsecret" alaska.shp
-
 
 This will import the shapefile :file:`alaska.shp` into the PostGIS-database
 *postgis* using the user *postgres* with the password *topsecret* on host
@@ -449,16 +417,12 @@ If you like to use PostgreSQL's **COPY** \ -command instead of the default
 (at least available on |nix| and |osx|):
 ::
 
-
   export PG_USE_COPY=YES
-
 
 **ogr2ogr** does not create spatial indexes like **shp2pgsl** does. You
 need to create them manually using the normal SQL-command **CREATE INDEX**
 afterwards as an extra step (as described in the next section
 :ref:`vector_improving_performance`).
-
-.. _label_improve:
 
 .. _vector_improving_performance:
 
@@ -486,7 +450,6 @@ documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more information.
 
 The following is an example of creating a GiST index:
 ::
-
 
   gsherman@madison:~/current$ psql gis_data
   Welcome to psql 8.3.0, the PostgreSQL interactive terminal.
@@ -525,18 +488,16 @@ New Zealand main islands.
    **Figure Vector 4:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
-   :width: 30em
+   :width: 60em
    :align: center
 
    Map in lat/lon crossing the 180 |degrees| longitude line |nix|
-
 
 A workaround is to transform the longitude values using PostGIS and the
 **ST_Shift_Longitude** function  This function reads every point/vertex in every
 component of every feature in a geometry, and if the longitude coordinate is
 < 0 |degrees| adds 360 |degrees| to it. The result would be a 0 |degrees| - 360 |degrees|
 version of the data to be plotted in a 180 |degrees| centric map.
-
 
 .. _figure_vector_5:
 
@@ -565,7 +526,6 @@ Usage
    map and see the difference (Figure_vector_5_)
 
 .. index:: Spatialite, SQLite
-
 .. _label_spatialite:
 
 SpatiaLite Layers
@@ -608,6 +568,7 @@ If you want to create a new SpatiaLite layer, please refer to section
    can be downloaded and installed with the Plugin Installer.
 
 .. _label_mssql:
+.. index:: MSSQL Spatial
 
 MSSQL Spatial Layers
 --------------------
@@ -617,6 +578,8 @@ MSSQL Spatial Layers
 button or available in the MS SQL node in the QBrowser tree, providing drag and
 drop import support.
 
+.. _label_oracle_spatial:
+.. index:: Oracle Spatial
 
 ORACLE Spatial Layers
 ---------------------
@@ -625,11 +588,6 @@ ORACLE Spatial Layers
 |mActionAddOracleLayer| :sup:`Add ORACLE Spatial Layer` is part of the new toolbar
 button or available in the ORACLE node in the QBrowser tree, providing drag and
 drop import support. ORACLE Spatial layers are stored in an ORACLE database. 
-
-
-.. index:: Connection_Manager
-
-.. _vector_create_stored_oracle_connection:
 
 Creating a stored Connection
 ............................
@@ -677,8 +635,6 @@ Once all parameters and options are set, you can test the connection by clicking
    * |nix|, the settings are stored in your home directory in :file:`.config/QGIS/QGIS2.conf`.
    * |win|, the settings are stored in the registry.
 
-.. _vector_loading_ORACLE Spatial:
-
 Loading a ORACLE Spatial Layer
 ..............................
 
@@ -709,5 +665,4 @@ To load a layer from ORACLE Spatial, perform the following steps:
    Normally an ORACLE Spatial layer is defined by an entry in the **USER_SDO_METADATA** 
    table.
 
-.. _sec_ORACLE Spatial_details:
 
