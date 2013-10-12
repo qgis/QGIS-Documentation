@@ -1,17 +1,10 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-.. index::
-   single:Create_Maps
-.. index::
-   single:Layout_Maps
-.. index::
-   single:Compose_Maps
+.. |updatedisclaimer|
 .. _`label_printcomposer`:
 
 **************
 Print Composer
 **************
+.. index:: Create_Maps, Layout_Maps, Compose_Maps
 
 The print composer provides growing layout and printing capabilities. It allows
 you to add elements such as the QGIS map canvas, text labels, images, legends, scalebars, basic
