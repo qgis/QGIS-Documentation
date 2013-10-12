@@ -107,6 +107,10 @@ all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
 	@echo
+	@echo Starting with pulling all translations from transifex
+	# --minimum-perc=1 so only files which have at least 1% translation are pulled
+	# -f to force, --skip to not stop with errors
+	tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
