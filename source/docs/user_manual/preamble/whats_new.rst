@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 ****************************
 What's new in QGIS |CURRENT|
