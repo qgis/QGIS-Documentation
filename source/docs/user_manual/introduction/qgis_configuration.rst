@@ -1,8 +1,5 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
-
 ******************
 QGIS Configuration
 ******************
@@ -10,7 +7,7 @@ QGIS Configuration
 QGIS is highly configurable through the :menuselection:`Settings` menu.
 Choose between Panels, Toolbars, Project properties, Options and Customization.
 
-..  please add more introduction here
+..  FIXME: please add more introduction here
 
 .. _sec_panels_and_toolbars:
 
@@ -68,8 +65,8 @@ include:
   layers can be defined. You can define the layer units (only used when CRS
   transformation is disabled) and the precision of decimal places to use. You 
   also can define a project scale list, that overrides the global predefined scales.
-* The :guilabel:`CRS Coordinate Reference System` tab enables you to choose
-  the CRS for this project, and to enable on-the-fly re-projection of raster and
+* The :guilabel:`CRS` tab enables you to choose
+  the Coordinate Reference System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
 * With the third :guilabel:`Identify layers` tab you set (or disable)
   which layers will respond to the identify tool. (See the Map tools paragraph from
@@ -78,13 +75,10 @@ include:
   do not have an existing .qml style defined. You can also set the default transparency level 
   for new layers and whether symbols should have random colours assigned to them.
 * The tab :guilabel:`OWS Server` allows to define information about the QGIS
-  mapserver Service Capabilities, the Extent and the CRS Restrictions as well as
-  the WFS Capabilities. Activating the |checkbox| :guilabel:`Add WKT geometry to feature info  
-  response` will allow to query the WMS layers.
+  Server WMS and WFS Capabilities, the Extent and the CRS Restrictions.
 * The tab :guilabel:`Macros` to create a Python module, saved into a project.qgs file to be
   loaded and have specific functions run on the following project events: openProject(),   
   saveProject() and closeProject().
-
 
 .. _gui_options:
 
@@ -99,7 +93,7 @@ options are:
 General Tab
 -----------
 
-Application
+**Application**
 
 * Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
 * Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is possible.
@@ -113,7 +107,7 @@ Application
 * |checkbox| :guilabel:`Use live-updating color chooser dialog`
 
 
-Project files
+**Project files**
 
 * :guilabel:`Open project on launch` |selectstring| (choose between 'New'. 'Most recent' and 'Specific'. When choosing 'Specific' use the |browsebutton| to define a project)
 * |checkbox| :guilabel:`Create new project from default project`. You have the possibility to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`. You can browse through your files and define a directory where you find your user-defined project templates. There will be an entry in :menuselection:`Project --> New From Template` if you first activate |checkbox| :guilabel:`Create new project from default project` and then save a project in the project templates folder.
@@ -129,21 +123,21 @@ System Tab
 
 .. FIXME:more information necessary
 
-Environment
+**Environment**
 
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. 
   You can :guilabel:`Add` and :guilabel:`Remove` variables.
   :menuselection:`Current environment variables -->` are displayed below and it's possible 
   to |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
-Plugin paths
+**Plugin paths**
 
 * :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
 
 Data Sources Tab
 ----------------
 
-Feature attributes and table
+**Feature attributes and table**
 
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
 
@@ -159,7 +153,7 @@ Feature attributes and table
 * :guilabel:`Representation for NULL values` 
 
 
-Data source handling
+**Data source handling**
 
 * :guilabel:`Scan for valid items in the browser dock` |selectstring|. You can choose between 'Check extension' and 'Check file contents'.
 * :guilabel:`Scan for contents of compresses files (.zip) in browser dock` |selectstring|. 'No', 'Basic scan' and 'Full scan' are possible.
@@ -179,18 +173,18 @@ Data source handling
 Rendering Tab
 -------------
 
-Rendering quality
+**Rendering quality**
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some drawing
   performance`
 * |checkbox| :guilabel:`Fix problems with incorrectly filled polygons`
 
 
-Rasters
+**Rasters**
 
 * with :guilabel:`RGB band selection` you can define the number for the Red, Green and Blue band.
 
-Contrast enhancement
+**Contrast enhancement**
 
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also 'Clip to MinMax'
 * :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
@@ -202,20 +196,18 @@ Contrast enhancement
 * :guilabel:`Cumulative pixel count cut limits`
 * :guilabel:`Standard deviation multiplier`
 
-
-Debugging
+**Debugging**
 
 * :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
 
 Canvas and legend Tab
 ---------------------
 
-Default map appearance (overridden by project properties)
+**Default map appearance (overridden by project properties)**
 
 * Define a :guilabel:`Selection color` and a :guilabel:`Background color`.
 
-
-Layer legend
+**Layer legend**
 
 * :guilabel:`Double click action in legend` |selectstring|. You can either 
   'Open layer properties' or 'Open attribute table' with the double click.
@@ -232,7 +224,7 @@ Layer legend
 Map tools Tab
 -------------
 
-Identify
+**Identify**
 
 * |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`
 * The :guilabel:`Mode` setting determines which layers will be shown by the Identify
@@ -244,8 +236,7 @@ Identify
 * Define :guilabel:`Search radius for identifying and displaying map tips as a
   percentage of the map width`
 
-
-Measure tool
+**Measure tool**
 
 * Define :guilabel:`Rubberband color` for measure tools
 * Define :guilabel:`Decimal places`
@@ -253,15 +244,13 @@ Measure tool
 * :guilabel:`Preferred measurements units` |radiobuttonon| ('meters' or 'feet')`
 * :guilabel:`Preferred angle units` |radiobuttonon| ('Angle', 'Radians' or 'Gon')
 
-Panning and zooming
-
-Mouse wheel action
+**Panning and zooming**
 
 * Define :guilabel:`Mouse wheel action` |selectstring| ('Zoom', 'Zoom and recenter',
   'Zoom to mouse cursor', 'Nothing')
 * Define :guilabel:`Zoom factor` for wheel mouse
 
-Predefined scales
+**Predefined scales**
 
 Here you find a list of predefined scales. With the '+' and '-' buttons you can add or
 remove your individual scales.
@@ -270,8 +259,7 @@ remove your individual scales.
 Digitizing Tab
 --------------
 
-
-Feature creation
+**Feature creation**
 
 * |checkbox| :guilabel:`Suppress attributes pop-up windows after each created feature`
 * |checkbox| :guilabel:`Reuse last entered attribute values`
@@ -282,12 +270,12 @@ Feature creation
   but the disadvantage is that only the first geometry problem will be reported.
 
 
-Rubberband
+**Rubberband**
 
 * Define Rubberband :guilabel:`Line width` and :guilabel:`Line color`
 
  
-Snapping
+**Snapping**
 
 * |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
 * Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
@@ -295,16 +283,14 @@ Snapping
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
 * Define the :guilabel:`Search radius for vertex edits` in map units or pixels
 
-
-Vertex markers
+**Vertex markers**
 
 * |checkbox| :guilabel:`Show markers only for selected features`
 * Define vertex :guilabel:`Marker style` |selectstring| ('Cross' (default), 'Semi
   transparent circle' or 'None')
 * Define vertex :guilabel:`Marker size`
 
-
-Curve offset tool
+**Curve offset tool**
 
 The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool in :ref:`sec_advanced_edit`.
 Through the various settings, it is possible to influence the shape of the line offset. These options are
@@ -325,15 +311,13 @@ a raster format as in some cases more than one GDAL driver is available.
 CRS Tab
 -------
 
-
-Default CRS for new projects
+**Default CRS for new projects**
 
 * |checkbox| :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`
 * |checkbox| :guilabel:`Enable on the fly re-projection by default`
 * Select a CRS and :guilabel:`Always start new projects with this CRS`
 
-
-CRS for new layers
+**CRS for new layers**
 
 This area allows to define the action, when a new layer is created, or when
 a layer without CRS is loaded.
@@ -352,7 +336,7 @@ Locale Tab
 Network Tab
 -----------
 
-General
+**General**
 
 * Define :guilabel:`WMS search address`, default is
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
@@ -368,14 +352,13 @@ General
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
-   :width: 25em
+   :width: 30em
 
    Proxy-settings in |qg|
 
-Cache settings
+**Cache settings**
 
 Define the :guilabel:`Directory` and a :guilabel:`Size` for the cache.
-
 
 * |checkbox| :guilabel:`Use proxy for web access` and define 'Host', 'Port', 'User',
   and 'Password'.
@@ -429,7 +412,7 @@ a lot of plug-ins installed that you never use and that are filling your screen.
 
 .. figure:: /static/user_manual/introduction/customization.png
    :align: center
-   :width: 25em
+   :width: 30em
 
    The Customization dialog |nix|
 
@@ -442,7 +425,7 @@ like the coordinate information can be daectivated. In |checkbox| :guilabel:`Too
 you can (de)activate the toolbar icons of QGIS and in |checkbox| :guilabel:`Widgets`
 you can (de)activate dialogs as well as their buttons.
 
-With |mActionSelect| :guilabel:`Switch to catching widgets in main application`
+With |mActionSelect| :sup:`Switch to catching widgets in main application`
 you can click on elements in QGIS you want to be hidden and find the corresponding entry
 in Customization (see figure_customization_). You can also save your various different
 setups for different use cases as well. Before your changes are applied, you need to

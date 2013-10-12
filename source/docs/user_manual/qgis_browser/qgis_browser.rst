@@ -1,12 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
-.. index::
-   single:Browse_Maps
-.. index::
-   single:Import_Maps
-
+.. |updatedisclaimer|
 .. _`label_qgis_browser`:
 
 ************
@@ -19,6 +11,8 @@ MapInfo files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
 and WMS/WFS connections. You can also view your GRASS data (to get the data 
 into QGIS see :ref:`sec_grass`).
 
+.. index:: Browse_Maps, Import_Maps
+
 .. _figure_browser_standalone_metadata:
 
 .. only:: html
@@ -27,16 +21,17 @@ into QGIS see :ref:`sec_grass`).
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
-   :width: 35em
+   :width: 40em
 
-   QGIS browser as a standalone application to view metadata, preview and attributes |nix|
+   QGIS browser as a standalone application |nix|
 
 Use QGIS Browser to preview your data. The drag and drop function makes it easy
 to get your data into the Map view and the Map legend.
 
 .. here we can mention the possibility to drag&drop data into the db-manager!
 
-#. Activate QGIS Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser`.
+#. Activate QGIS Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser` 
+   or select from :menuselection:`Settings --> Panels`.
 #. Drag the panel into the legend window.
 #. Click on the :guilabel:`Browser` tab.
 #. Browse in your database and choose the shapefile folder from qgis_sample_data.
@@ -44,11 +39,11 @@ to get your data into the Map view and the Map legend.
 #. Press the left mouse button then drag and drop the files into the map canvas.
 #. Right-click on a layer and choose :guilabel:`Set project CRS from layer`.
    For more information see :ref:`label_projections`.
-#. Click on |mActionZoomFullExtent| :guilabel:`Zoom Full` to make the layers
+#. Click on |mActionZoomFullExtent| :sup:`Zoom Full` to make the layers
    visible.
 
-From |qg| 2.0 there is a second browser available. Additional functions like 
-the |mActionAdd|:sup:`Add Selected Layers` and the |mActionFilter|:sup:`Filter files` 
+There is a second browser available under :menuselection:`Settings --> Panels`. Additional 
+functions like the |mActionAdd|:sup:`Add Selected Layers` and the |mActionFilter|:sup:`Filter files` 
 function were inserted. 
 
 #. Activate a second QGIS Browser: Right-click on the toolbar and click |checkbox|:guilabel:`Browser (2)` .
