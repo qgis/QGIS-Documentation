@@ -44,7 +44,7 @@ this chapter).
 
 .. only:: html
 
-   **Figure Sextante 2:**
+   **Figure Processing 2:**
 
 .. _figure_model:
 
