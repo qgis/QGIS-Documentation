@@ -1,10 +1,9 @@
 .. |updatedisclaimer|
+.. _`label_helpsupport`:
 
 ****************
 Help and Support
 ****************
-
-.. _`label_helpsupport`:
 
 Mailing lists
 =============
