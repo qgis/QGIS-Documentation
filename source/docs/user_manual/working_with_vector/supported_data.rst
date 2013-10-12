@@ -214,7 +214,7 @@ Loading OpenStreetMap Vectors
 
 * To connect to the OSM server and download data, open the menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Load data`. You can skip this step if you already got a .osm XML file using josm or overpass or any other source.
 * The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Import topology from an XML file` will convert your .osm file into a spatialite database, and create a db connection.
-* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Export topology to Spatialite` then allows you to open the database connection, select the type of data you want (points, lines, or polygons) and choose tags to import. This creates a spatialite geometry layer that you can then add to your project via the "add a spatialite layer" menu, see Section :ref:`label_spatialite`.
+* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Export topology to Spatialite` then allows you to open the database connection, select the type of data you want (points, lines, or polygons) and choose tags to import. This creates a spatialite geometry layer that you can then add to your project by clicking on the |mActionAddSpatiaLiteLayer| :sup:`Add SpatiaLite Layer` toolbar button or by selecting the |mActionAddSpatiaLiteLayer| :menuselection:`Add SpatiaLite Layer...` option from the :menuselection:`Layer` menu, see Section :ref:`label_spatialite`.
 
 .. index:: PostGIS, PostgreSQL
 
