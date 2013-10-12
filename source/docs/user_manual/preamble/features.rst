@@ -1,4 +1,6 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
+
+.. _qgis.documentation.features:
 
 *********
 Features
@@ -23,7 +25,7 @@ formats include:
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
    Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
 *  QGIS processing framework to call hundreds of native and third party 
-   algorithms from QGIS, see section :ref:`sec_processing_intro`.
+   algorithms from QGIS, see section Processing :ref:`sec_processing_intro`.
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, such as (WMS, WMTS, WCS, 
@@ -65,15 +67,14 @@ You can create, edit, manage and export vector and raster layers in several form
 *  Visualize and edit OpenStreetMap data
 *  Create spatial database tables from shapefiles with DB Manager plugin
 *  Improved handling of spatial database tables
-*  Manage vector attribute tables with the new attribute table (see section
-   :ref:`sec_attribute_table`) or Table Manager plugin
+*  Manage vector attribute tables
 *  Save screenshots as georeferenced images
 
 Analyse data
 ------------
 
 You can perform spatial data analysis on spatial databases and other OGR
-supported formats. |qg| currently offers vector analysis, sampling, geoprocessing, geometry and database management tools. You can also use the integrated GRASS tools, which include the complete GRASS functionality of more than 400 modules (See Section :ref:`sec_grass`). Or you work with the Processing Plugin, which provides powerful geospatial analysis framework to call native and third party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools and more (see section :ref:`label_sextante`).
+supported formats. |qg| currently offers vector analysis, sampling, geoprocessing, geometry and database management tools. You can also use the integrated GRASS tools, which include the complete GRASS functionality of more than 400 modules (See Section :ref:`sec_grass`). Or you work with the Processing Plugin, which provides powerful geospatial analysis framework to call native and third party algorithms from |qg|, such as GDAL, SAGA, GRASS, fTools and more (see section :ref:`sec_processing_intro`).
 
 Publish maps on the Internet
 ----------------------------

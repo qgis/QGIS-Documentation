@@ -3,7 +3,7 @@
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 The toolbox
-====================
+============
 
 The *Toolbox* is the main element of the processing GUI, and the one that you are
 more likely to use in your daily work. It shows the list of all available

@@ -1,6 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. |updatedisclaimer|
 
 ****************
 Help and Support
@@ -120,7 +118,7 @@ BugTracker
 While the qgis-users mailing list is useful for general 'how do I do XYZ
 in QGIS' type questions, you may wish to notify us about bugs in QGIS.
 You can submit bug reports using the QGIS bug tracker at
-http://hub.qgis.org/projects/quantum-gis/issues. When creating a new
+http://hub.qgis.org/projects/quantum-gis/Bugreports. When creating a new
 ticket for a bug, please provide an email address where we can request
 additional information.
 
@@ -134,7 +132,7 @@ as for bugs. Please make sure to select the type ``Feature``.
 
 If you have found a bug and fixed it yourself you can submit this patch
 also. Again, the lovely redmine ticketsystem at
-http://hub.qgis.org/projects/quantum-gis/issues has this type as well.
+http://hub.qgis.org/projects/quantum-gis/Bugreports has this type as well.
 Check ``Patch supplied`` checkbox and attach your patch before submitting
 bug. Someone of the developers will review it and apply it to QGIS. Please
 don't be alarmed if your patch is not applied straight away --- developers
@@ -143,7 +141,7 @@ may be tied up with other committments.
 Blog
 ====
 
-The QGIS-community also runs a weblog at http://www.qgis.org/planet
+The QGIS-community also runs a weblog at http://planet.qgis.org/planet/
 which has some interesting articles for users and developers as well provided
 by other blogs in the community. You are invited to contribute your own QGIS
 blog!
