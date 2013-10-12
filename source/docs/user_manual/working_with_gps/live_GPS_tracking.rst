@@ -1,13 +1,10 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _`sec_gpstracking`:
 
 Live GPS tracking
 ==================
 
-To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings -->`
+To activate Live GPS tracking in QGIS you need to select :menuselection:`Settings --> Panels`
 |checkbox| :guilabel:`GPS information`. You will get a new docked window on the
 left side of the canvas.
 
@@ -46,7 +43,7 @@ attributes.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_main.png
    :align: center
-   :width: 10em
+   :width: 15em
 
    GPS tracking position and additional attributes |nix|
 
@@ -64,7 +61,7 @@ are receiving signals from.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_stren.png
    :align: center
-   :width: 10em
+   :width: 20em
 
    GPS tracking signal strength |nix|
 
@@ -84,7 +81,7 @@ ID numbers of the satellites you are receiving signals from.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_polar.png
    :align: center
-   :width: 10em
+   :width: 20em
 
    GPS tracking polar window |nix|
 
@@ -109,7 +106,7 @@ A click on **[Connect]** again initiates the connection to the GPS receiver.
 
 .. figure:: /static/user_manual/working_with_gps/gpstrack_options.png
    :align: center
-   :width: 10em
+   :width: 20em
 
    GPS tracking options window |nix|
 

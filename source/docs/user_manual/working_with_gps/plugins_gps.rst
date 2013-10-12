@@ -1,7 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _plugin_gps:
 
 GPS Plugin
@@ -17,14 +14,13 @@ anyone with a GPS receiver to find their exact position anywhere in the world.
 It is used as an aid in navigation, for example in airplanes, in boats and by
 hikers. The GPS receiver uses the signals from the satellites to calculate its
 latitude, longitude and (sometimes) elevation. Most receivers also have the
-capability to store locations (known as *waypoints*), sequences of locations
-that make up a planned *route* and a tracklog or *track* of the receivers
+capability to store locations (known as **waypoints**), sequences of locations
+that make up a planned **route** and a tracklog or **track** of the receivers
 movement over time. Waypoints, routes and tracks are the three basic feature
 types in GPS data. QGIS displays waypoints in point layers while routes and
 tracks are displayed in linestring layers.
 
 .. _`label_loadgps`:
-
 Loading GPS data from a file
 ----------------------------
 
@@ -47,7 +43,8 @@ For working with GPS data we provide an example GPX file available in the QGIS
 sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 :ref:`label_sampledata` for more information about the sample data.
 
-#. Click on the |gps_importer| :sup:`GPS Tools` icon and open the
+#. Select :menuselection:`Vector --> GPS --> GPS Tools` or click the 
+   |gps_importer| :sup:`GPS Tools` icon in the toolbar and open the
    :guilabel:`Load GPX file` tab (see figure_GPS_1_).
 #. Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file
    :file:`national_monuments.gpx` and click **[Open]**.
@@ -60,7 +57,7 @@ sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. See Section
 
 .. figure:: /static/user_manual/working_with_gps/loadgpx.png
    :align: center
-   :width: 25em
+   :width: 40em
 
    The *GPS Tools* dialog window |nix|
 
@@ -117,7 +114,7 @@ name of the new layer.
 
 .. figure::  /static/user_manual/working_with_gps/download.png
    :align: center
-   :width: 25em
+   :width: 40em
 
    The download tool
 
