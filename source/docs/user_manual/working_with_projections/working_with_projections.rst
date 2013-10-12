@@ -1,6 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. |updatedisclaimer|
 
 .. _`label_projections`:
 
@@ -17,7 +15,7 @@ on-the-fly (OTF) projection of vector and raster layers. All these
 features allow the user to display layers with different CRS and have
 them overlay properly.
 
-.. _`label_projoverview`:
+.. index:: EPSG, IGNF, European_Petroleom_Search_Group, Institut_Geographique_National_de_France
 
 Overview of Projection Support
 ===============================
@@ -28,9 +26,6 @@ QGIS. Normally you do not need to manipulate the database directly. In fact,
 doing so may cause projection support to fail. Custom CRS are stored in a
 user database. See Section :ref:`sec_custom_projections` for
 information on managing your custom coordinate reference systems.
-
-.. index:: EPSG, IGNF, European_Petroleom_Search_Group
-.. index:: Institut_Geographique_National_de_France
 
 The CRS available in QGIS are based on those defined by the European
 Petroleum Search Group (EPSG) and the Institut Geographique
@@ -57,13 +52,12 @@ menu.
 
 .. index:: default_CRS
 
-Specifying a Projection
-=======================
+Global Projection Specification
+===============================
 
-QGIS starts each new project using the global default projection.The
-global default CRS is EPSG:4326 - WGS 84
-(``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) and comes predefined in
-QGIS. This default can be changed using the **[Select...]** button in the first
+QGIS starts each new project using the global default projection. The global 
+default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) 
+and comes predefined in |qg|. This default can be changed using the **[Select...]** button in the first
 section, used to defining the Default Coordinate Reference System to use when
 starting new projects, as shown in figure_projection_1_. This choice will be
 saved for use in subsequent QGIS sessions.
@@ -76,10 +70,9 @@ saved for use in subsequent QGIS sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
-   :width: 30em
+   :width: 40em
 
-   CRS tab in the QGIS Options Dialog |osx|
-
+   CRS tab in the QGIS Options Dialog |nix|
 
 When you use layers that do not have a CRS, you need to define how
 QGIS responds to these layers. This can be done globally or
@@ -114,7 +107,7 @@ not activated by default. To use OTF projection, you must activate the |checkbox
 :guilabel:`Enable on the fly CRS transformation` checkbox in the :guilabel:`CRS`
 tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog.
 
-There are three ways to achieve this end:
+**There are three ways to achieve this end:**
 
 #. Select |mActionOptions| :menuselection:`Project Properties` from the
    :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings` (KDE, Windows)
@@ -125,7 +118,6 @@ There are three ways to achieve this end:
    :guilabel:`Options` dialog and selecting |checkbox|
    :guilabel:`Enable 'on the fly' reprojection by default`.
 
-
 If you have already loaded a layer, and want to enable OTF projection, the
 best practice is to open the :guilabel:`Coordinate Reference System`
 tab of the :guilabel:`Project Properties` dialog, select a CRS, and
@@ -135,9 +127,6 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 .. index:: Proj4, Proj4_text
 
-.. following picture has an external reference from working with ogc, so
-   the reference of this figure needs a capture!
-
 .. only:: html
 
    **Figure Projection 2:**
@@ -146,9 +135,9 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
-   :width: 30em
+   :width: 40em
 
-   Projection Dialog |win|
+   Project Properties Dialog |nix|
 
 The :guilabel:`Coordinate Reference System` tab of the
 :guilabel:`Project Properties` dialog contains five important components as
@@ -179,11 +168,10 @@ shown in Figure_projection_2_ and described below.
    If you open the :guilabel:`Project Properties` dialog from the
    :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings`
    (KDE, Windows) menu, you must click on the
-   :guilabel:`Coordinate Reference System` tab to view the CRS settings.
+   :guilabel:`CRS` tab to view the Coordinate Reference System settings.
 
-   Opening the dialog from the |geographic| :guilabel:`CRS status` icon
-   will automatically bring the :guilabel:`Coordinate Reference System`
-   tab to the front.
+   The |geographic| :sup:`CRS status` icon will also automatically bring 
+   the :guilabel:`CRS` tab to the front.
 
 .. _sec_custom_projections:
 
@@ -193,7 +181,7 @@ Custom Coordinate Reference System
 .. index:: Custom_CRS
 
 If QGIS does not provide the coordinate reference system you need, you
-can define a custom CRS. To define a CRS, select |mIconNew|:guilabel:`Custom CRS`
+can define a custom CRS. To define a CRS, select |mActionCustomProjection| :guilabel:`Custom CRS`
 from the :menuselection:`Settings` menu. Custom CRS are stored in your QGIS 
 user database. In addition to your custom CRS, this database also contains 
 your spatial bookmarks and other custom data.
@@ -207,7 +195,7 @@ your spatial bookmarks and other custom data.
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    Custom CRS Dialog |nix|
 
