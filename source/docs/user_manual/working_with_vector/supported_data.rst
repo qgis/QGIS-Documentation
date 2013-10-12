@@ -205,6 +205,17 @@ Navigate to the directory that contains the coverage files and select it.
 Similarly, you can load directory based vector files in the UK National Transfer
 Format as well as the raw TIGER Format of the US Census Bureau.
 
+.. index:: OSM, OpenStreetMap
+
+Loading OpenStreetMap Vectors
+-----------------------------
+
+|qg| integrates Openstreetmap import as a core functionnality. 
+
+* To connect to the OSM server and download data, open the menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Load data`. You can skip this step if you already got a .osm XML file using josm or overpass or any other source.
+* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Import topology from an XML file` will convert your .osm file into a spatialite database, and create a db connection.
+* The menu :menuselection:`Vector` -> :menuselection:`Openstreetmap` -> :menuselection:`Export topology to Spatialite` then allows you to open the database connection, select the type of data you want (points, lines, or polygons) and choose tags to import. This creates a spatialite geometry layer that you can then add to your project via the "add a spatialite layer" menu, see Section :ref:`label_spatialite`.
+
 .. index:: PostGIS, PostgreSQL
 
 .. _label_postgis:
