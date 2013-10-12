@@ -109,7 +109,7 @@ available. Check the website http://qgis.org/en/commercial-support.html
 for more information.
 
 If you missed a discussion on IRC, not a problem! We log all discussion
-so you can easily catch up. Just go to http://logs.qgis.org and read the
+so you can easily catch up. Just go to http://qgis.org/irclogs and read the
 IRC-logs.
 
 BugTracker
