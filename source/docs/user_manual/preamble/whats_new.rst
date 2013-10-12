@@ -1,5 +1,7 @@
 .. |updatedisclaimer|
 
+.. _qgis.documentation.whatsnew:
+
 ****************************
 What's new in QGIS |CURRENT|
 ****************************

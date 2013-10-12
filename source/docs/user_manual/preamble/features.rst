@@ -1,5 +1,7 @@
 .. |updatedisclaimer|
 
+.. _qgis.documentation.features:
+
 *********
 Features
 *********
