@@ -1,7 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _`label.getstarted`:
 
 ***************
@@ -15,7 +12,7 @@ visualizing raster and vector layers.
 .. _`label_installation`:
 
 Installation
-=============
+============
 
 .. :index::
     single:installation
@@ -60,7 +57,7 @@ If you did not select the checkbox to install the sample dataset
 during the initial |qg| installation, you can either
 
 * use GIS data that you already have;
-* download the sample data from the qgis website at http://download.qgis.org; or
+* download sample data from the qgis website at http://download.qgis.org/qgis/data/; or
 * uninstall |qg| and reinstall with the data download option checked, only if
   the above solutions are unsuccessful.
 
@@ -147,10 +144,10 @@ Load raster and vector layers from the sample dataset
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:`Display lables`
-   checkbox to enable labeling. Choose NAMES field as field containing label.
+#. Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:`Label this layer with`
+   checkbox to enable labeling and choose NAMES field as field containing labels.
 #. To improve readability of labels, you can add a white buffer around them,
-   by clicking "Buffer" in the list on the left, checking |checkbox| :guilabel:`Buffer labels?`
+   by clicking "Buffer" in the list on the left, checking |checkbox| :guilabel:`Draw text buffer`
    and choosing 3 as buffer size.
 #. Click **[Apply]**, check if the result looks good and finally
    click **[OK]**.
@@ -200,19 +197,19 @@ The usage statement for QGIS is:
 	QGIS is a user friendly Open Source Geographic Information System.
         Usage: qgis [OPTION] [FILE]
           options:
-                [--snapshot filename]           emit snapshot of loaded datasets to given file
-                [--width width]                 width of snapshot to emit
-                [--height height]               height of snapshot to emit
-                [--lang language]               use language for interface text
-                [--project projectfile]         load the given QGIS project
-                [--extent xmin,ymin,xmax,ymax]  set initial map extent
-                [--nologo]                      hide splash screen
-                [--noplugins]                   don't restore plugins on startup
-                [--nocustomization]             don't apply GUI customization
-                [--optionspath path]            use the given QSettings path
-                [--configpath path]             use the given path for all user configuration
-                [--code path]   				run the given python file on load
-                [--help]                        this text
+            [--snapshot filename]           emit snapshot of loaded datasets to given file
+            [--width width]                 width of snapshot to emit
+            [--height height]               height of snapshot to emit
+            [--lang language]               use language for interface text
+            [--project projectfile]         load the given QGIS project
+            [--extent xmin,ymin,xmax,ymax]  set initial map extent
+            [--nologo]                      hide splash screen
+            [--noplugins]                   don't restore plugins on startup
+            [--nocustomization]             don't apply GUI customization
+            [--optionspath path]            use the given QSettings path
+            [--configpath path]             use the given path for all user configuration
+            [--code path]   		run the given python file on load
+            [--help]                        this text
 
           FILES:
             Files specified on the command line can include rasters,
@@ -337,7 +334,7 @@ from older QGIS versions may not work properly anymore. To be made aware of this
 in the :guilabel:`General` tab under :menuselection:`Settings --> Options`
 you can select:
 
-|checkbox| :guilabel:`Prompt to save project changes when required`
+|checkbox| :guilabel:`Prompt to save project and data source changes when required`
 
 |checkbox| :guilabel:`Warn when opening a project file saved with an older
 version of QGIS`

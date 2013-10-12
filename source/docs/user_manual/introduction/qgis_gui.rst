@@ -1,15 +1,12 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _`label_qgismainwindow`:
 
 ********
 QGIS GUI
 ********
 
-.. :index::
-    single:main window
+.. index::
+   single:main window
 
 When QGIS starts, you are presented with the GUI as shown below
 (the numbers 1 through 5 in yellow circles refer to the five major areas of the
@@ -23,7 +20,7 @@ interface as discussed below):
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    QGIS GUI with Alaska sample data |nix|
 
@@ -415,7 +412,6 @@ legend item is a raster or a vector layer. For GRASS vector layers
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Save as ...`
 * :menuselection:`Properties`
-* :menuselection:`Make to Toplevel Item`
 * :menuselection:`Rename`
 * :menuselection:`Copy Style`
 * :menuselection:`Add New Group`
@@ -507,7 +503,7 @@ will cause a revert to default behavior.
 
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
-    :width: 30em
+    :width: 40em
 
     Define a legend independent layer order |nix|
 

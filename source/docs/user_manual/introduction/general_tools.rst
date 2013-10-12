@@ -18,8 +18,8 @@ Identify features
 
 Identify features allow to interact with map canvas to get data attribut on a 
 pop-up windows. To identify feature use :menuselection:`View --> Identify features` 
-or Ctrl+Shift+I, or click on the :guilabel:`Identify features` icons in the 
-toolbar.
+or Ctrl+Shift+I, or click on the |mActionIdentify| :sup:`Identify features` icon 
+in the toolbar.
 
 If you click on several feature, this pop-up will list all data 
 attributes of all features. The first item is the number of the item in the 
@@ -46,17 +46,17 @@ display three kind of information:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
-   :width: 15em
+   :width: 30em
 
    Identify feaures dialog |nix| (Gnome)
 
 At the bottom of the windows, you have five icons:
 
-* |mActionIdentifyExpand| Expand tree
-* |mActionIdentifyCollapse| Collapse tree
-* |mActionIdentifyDefaultExpand| Default behaviour
-* |mActionIdentifyCopyAttributes| Copy attributes
-* |mActionIdentifyPrint| Print selected HTML response
+* |mActionIdentifyExpand| :sup:`Expand tree`
+* |mActionIdentifyCollapse| :sup:`Collapse tree`
+* |mActionIdentifyDefaultExpand| :sup:`Default behaviour`
+* |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
+* |mActionIdentifyPrint| :sup:`Print selected HTML response`
 
 More feature can be found in the menu display with a right click of the mouse 
 somewhere in the response tree.
@@ -99,7 +99,7 @@ features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    Define shortcut options |nix| (Gnome)
 
@@ -281,7 +281,7 @@ Measure length, areas and angles
 .. index::
    single:measure;angles
 
-|mActionMeasure| QGIS is able to measure real distances between given points
+|mActionMeasure| :sup:`Measure Line`: |qg| is able to measure real distances between given points
 according to a defined ellipsoid. To configure this, choose menu option
 :menuselection:`Settings --> Options`, click on the :guilabel:`Map tools` tab and
 choose the appropriate ellipsoid. There you can also define a rubberband color
@@ -298,11 +298,11 @@ measuring click your right mouse button.
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
-   :width: 15em
+   :width: 30em
 
    Measure Distance |nix| (Gnome)
 
-|mActionMeasureArea| Areas can also be measured.  In the measure window the
+|mActionMeasureArea| :sup:`Measure Area`: Areas can also be measured.  In the measure window the
 accumulated area size appears. In addition, the measuring tool will snap to the
 currently selected layer, provided that layer has its snapping tolerance set.
 (See Section :ref:`snapping_tolerance`).  So if you want to measure exactly along
@@ -318,12 +318,12 @@ then select the layer. Now, when using the measuring tools, each mouse click
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
-   :width: 15em
+   :width: 30em
 
    Measure Area |nix| (Gnome)
 
-|mActionMeasureAngle| You can also measure angles, selecting Measure Angle tool.
-The cursor becomes cross-shaped. Click to draw the first segment of the angle you
+|mActionMeasureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor 
+becomes cross-shaped. Click to draw the first segment of the angle you
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
 
@@ -335,7 +335,7 @@ is displayed in a popup dialog.
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
-   :width: 15em
+   :width: 30em
 
    Measure Angle |nix| (Gnome)
 
@@ -376,8 +376,7 @@ elements.
 Copyright Label
 ---------------
 
-
-|copyright_label| :guilabel:`Copyright label` adds a Copyright label
+|copyright_label| :sup:`Copyright label` adds a Copyright label
 using the text you prefer to the map.
 
 .. _figure_decorations_1:
@@ -388,7 +387,7 @@ using the text you prefer to the map.
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
-   :width: 15em
+   :width: 30em
 
    The copyright Dialog |nix|
 
@@ -412,7 +411,7 @@ North Arrow
 -----------
 
 
-|north_arrow| :guilabel:`North Arrow` places a simple north arrow on the
+|north_arrow| :sup:`North Arrow` places a simple north arrow on the
 map canvas. At present there is only one style available. You can adjust the
 angle of the arrow or let QGIS set the direction automatically. If you choose
 to let QGIS determine the direction, it makes its best guess as to how the
@@ -427,7 +426,7 @@ corresponding to the four corners of the map canvas.
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    The North Arrow Dialog |nix|
 
@@ -436,7 +435,7 @@ Scale Bar
 ---------
 
 
-|scale_bar| :guilabel:`Scale Bar` adds a simple scale bar to the map
+|scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map
 canvas. You control the style and placement, as well as the labeling of the bar.
 
 .. _figure_decorations_3:
@@ -447,7 +446,7 @@ canvas. You control the style and placement, as well as the labeling of the bar.
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    The Scale Bar Dialog |nix|
 
@@ -492,7 +491,7 @@ Annotation Tools
 ================
 
 
-The |mActionTextAnnotation| :guilabel:`Text Annotation` tools in the attribute toolbar
+The |mActionTextAnnotation| :sup:`Text Annotation` tools in the attribute toolbar
 provides the possibility to place formatted text in a balloon on the QGIS map
 canvas. Use the :guilabel:`Text Annotation` tool and click into the map canvas.
 
@@ -504,7 +503,7 @@ canvas. Use the :guilabel:`Text Annotation` tool and click into the map canvas.
 
 .. figure:: /static/user_manual/introduction/annotation.png
    :align: center
-   :width: 25em
+   :width: 30em
 
    Annotation text dialog |nix|
 
@@ -516,7 +515,7 @@ to the map). The item can be moved by map position (drag the map marker)
 or by moving only the balloon. The icons are part of GIS theme, and are used
 by default in the other themes too.
 
-The |mActionAnnotation| :guilabel:`Move Annotation` tool allows to move the annotation on the
+The |mActionAnnotation| :sup:`Move Annotation` tool allows to move the annotation on the
 map canvas.
 
 Form annotations
@@ -526,7 +525,7 @@ Form annotations
 .. index::`form annotation|\see{annotations}`
 
 Additionally you can also create your own annotation forms. The
-|mActionFormAnnotation| :guilabel:`Form Annotation` tool is useful to display attributes of
+|mActionFormAnnotation| :sup:`Form Annotation` tool is useful to display attributes of
 a vector layer in a customized qt designer form (see figure_custom_annotation_). It is similar to the
 designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
@@ -540,7 +539,7 @@ Also see QGIS blog http://blog.qgis.org/node/143 for more information.
 
 .. figure:: /static/user_manual/introduction/custom_annotation.png
    :align: center
-   :width: 25em
+   :width: 30em
 
    Customized qt designer annotation form |nix|
 
@@ -625,7 +624,7 @@ The following dialog allows you to embed layers from other projects:
 
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
-   :width: 20em
+   :width: 30em
 
    Select layers and groups to embed |nix|
 
@@ -633,7 +632,7 @@ While the embedded layers are editable you can't change it's properties like Sty
 
 **Removing embedded layers**
 
-Right-click on the embedded layer and choose |mActionRemoveLayer| :menuselection:`Remove` .
+Right-click on the embedded layer and choose |mActionRemoveLayer| :sup:`Remove`.
 
 .. _label_dltext:
 
@@ -689,7 +688,7 @@ Delimited Text File` dialog as shown in figure_delimited_text_1_.
 
 .. figure:: /static/user_manual/plugins/delimited_text_dialog.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    Delimited Text Dialog |nix|
 
