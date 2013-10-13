@@ -98,7 +98,7 @@ pdf: html
 	# japanese and russion have problems, when build with texi2pdf
 	# as alternative we can use platex
 	# on Debian available in package 'texlive-lang-cjk'
-	@-if [ $(LANG) = "ja" ] || [ $(LANG) = "ru" ]; then \
+	@-if [ $(LANG) = "ja" ]; then \
 		cd $(BUILDDIR)/latex/$(LANG); \
 		find -name "*.png" -exec ebb -x {} \; \
 		platex -interaction=batchmode QGISUserGuide.tex; \
