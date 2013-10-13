@@ -95,10 +95,22 @@ pdf: html
 	# need to build 3x to have proper toc and index
 	# currently texi2pdf has bad exit status. Please ignore errors!!
 	# prepending the texi2pdf command with - keeps make going instead of quitting
-	-cd $(BUILDDIR)/latex/$(LANG); \
-	texi2pdf --quiet QGISUserGuide.tex; \
-	texi2pdf --quiet QGISUserGuide.tex; \
-	texi2pdf --quiet QGISUserGuide.tex;
+	# japanese pdf has problems, when build with texi2pdf
+	# as alternative we can use platex
+	# on Debian available in package 'texlive-lang-cjk'
+	# for russian pdf you need package 'texlive-lang-cyrillic' installed
+	@-if [ $(LANG) = "ja" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		find -name "*.png" -exec ebb -x {} \; \
+		platex -interaction=batchmode QGISUserGuide.tex; \
+		platex -interaction=batchmode QGISUserGuide.tex; \
+		dvipdfmx QGISUserGuide.dvi; \
+	else \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		texi2pdf --quiet QGISUserGuide.tex; \
+		texi2pdf --quiet QGISUserGuide.tex; \
+		texi2pdf --quiet QGISUserGuide.tex; \
+	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf
 
 world: all
