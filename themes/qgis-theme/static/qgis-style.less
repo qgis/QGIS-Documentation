@@ -121,6 +121,7 @@ h5 {
 }
 p,
 li,
+table,
 .button {
   font-size: .9rem;
   line-height: 1.4rem;
@@ -274,12 +275,12 @@ select#languages option {
 .footer {
   background: #1c2028;
   color: white;
-  padding: 50px 0 !important;
+  padding: 40px 0 !important;
   text-align: center;
   border: 0 !important;
 }
 .footer .credit {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .footer #social > li > a > div {
   margin-right: 20px;
@@ -331,12 +332,15 @@ div.section:before {
 /* span achors are a little more difficult,
 these are for internal refs, eg: en/docs/user_manual/working_with_vector/editing_geometry_attributes.html#sec-advanced-edit
 hopefully this is unique enough for the :ref: spans we use */
-div.section > span:before {
+/* RD: no, this makes normal spans 60px high, so a lot of whitespace in 
+normal pages. So while working for som internal refs, disable it now till
+somebody comes up with a better idea */
+/*div.section > span:before {
   content: "";
   display: block;
   height: 60px;
   margin: 0 0 0 0;
-}
+}*/
 /*** LANDING ***/
 #carouselBox {
   margin-top: 20px;
@@ -637,6 +641,8 @@ section.content h4 {
 }
 #downloads .accordion-inner a {
   text-decoration: none;
+  display: block;
+  margin-right: 10%;
 }
 #downloads .accordion-inner .icon-large {
   font-size: 18px;
