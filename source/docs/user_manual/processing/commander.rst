@@ -1,5 +1,4 @@
-|updatedisclaimer|
-
+.. |updatedisclaimer|
 
 The SEXTANTE Commander
 ======================
