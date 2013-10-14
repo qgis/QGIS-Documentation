@@ -63,14 +63,15 @@ Band rendering
 QGIS offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
 data type.
 
-#. Multiband color - if the file comes as a multi band with several bands (e.g. a satellite image 
+#. Multiband color - if the file comes as a multi band with several bands (e.g. used with a satellite image 
    with several bands)
-#. Paletted - if a single band file comes with an indexed palette (e.g. a digital topographic map)
+#. Paletted - if a single band file comes with an indexed palette (e.g. used with a digital topographic map)
 #. Singleband gray- (one band of) the image will be rendered as gray, QGIS will choose this renderer 
    if the file neither has multi bands, nor has an indexed palette nor has a continous palette 
-   (e.g. a ...)
-#. Singleband pseudocolor - this renderer is for files with a continuous palette, e.g. the file
-   has got a color map (e.g. a ...)
+   (e.g. used with a shaded relief map)
+#. Singleband pseudocolor - this renderer is possible for files with a continuous palette, e.g. the file
+   has got a color map (e.g. used with an elevation map)
+
 
 .. _multiband_color:
 
@@ -126,7 +127,7 @@ All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` ex
 
 **Paletted**
 
-This is the standard renderer for singleband files that already include a color table, 
+This is the standard render option for singleband files that already include a color table, 
 where each pixel value is assigned to a certain color. In that case, the palette is 
 rendered automatically. If you want to change colors assigned to certain values, just double-click
 on the color and the :guilabel:`Select color` dialog appears. 
@@ -190,7 +191,7 @@ a raster grid that are having a negative impact on the rendering of the raster.
 
 **Singleband pseudocolor**
 
-This is the standard for single band files including a continous palette.  
+This is a render option for single band files including a continous palette.  
 You can also create individual color maps for the single bands here.
 
 .. _figure_raster_5:
@@ -275,11 +276,9 @@ image. Resampling modes can optimize the appearance of the map. They calculate a
 matrix through a geometric transformation.
 
 While applying the 'Nearest neighbour' method the map can have a pixelated structure
-when zooming in. This appearance can be improved by using the 'Bilinear' method. Sharp features 
-are caused to be blurred now. The effect is a smoother image. The method can be applied to digital
+when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method. Sharp features 
+are caused to be blurred now. The effect is a smoother image. The method can be applied e.g. to digital
 topographic raster maps.
-
-The 'Cubic' method can be applied to ...
 
 .. index:: Transparency
 
