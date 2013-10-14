@@ -1,6 +1,4 @@
-|updatedisclaimer|
-
-
+.. |updatedisclaimer|
 .. _dbmanager:
 
 DB Manager Plugin
@@ -30,13 +28,22 @@ results to QGIS as a query layer.
 
 
 The :menuselection:`Database` menu allows to connect to an existing database, to
-start the SQL-window and to exit the DB Manager Plugin. The :menuselection:`Schema`
-menu includes tools to create and delete (empty) schemas and, if topology is
-available (e.g. PostGIS 2) to start a :guilabel:`TopoViewer`. The menu
-:menuselection:`Table` allows to create and edit tables and to delete tables and
-views. It is also possible to empty tables and to move tables from one to another
-schema. Finally you can also run Vacuum Analyze and add Versioning Support to a
-table.
+start the SQL-window and to exit the DB Manager Plugin. One you are connected to 
+an existing database, the menus :menuselection:`Schema` and :menuselection:`Table` 
+additionally appear.
+
+The :menuselection:`Schema` menu includes tools to create and delete (empty) 
+schemas and, if topology is available (e.g. PostGIS 2) to start a 
+:guilabel:`TopoViewer`. 
+
+The menu :menuselection:`Table` allows to create and edit tables and to 
+delete tables and views. It is also possible to empty tables and to move tables 
+from one to another schema. As further functionality you can perform a VACUUM and 
+then an ANALYZE for each selected table. Plain VACUUM simply reclaims space and 
+makes it available for re-use and ANALYZE updates statistics to determine the 
+most efficient way to execute a query. Finally you can import layers/files, if they 
+are loaded in QGIS or exist in the file system. And you can export database tables 
+to Shape with the Export file feature.
 
 The :guilabel:`Tree` window lists all existing databases supported by |qg|. With
 a double-click you can connect to the database. With the right-mouse button you
@@ -50,4 +57,3 @@ allows to run Vacuum Analyze and to create a spatial index on a selected table,
 if not already done. The :guilabel:`Table` tab shows all attributes and the
 :guilabel:`Preview` tab renders the geometries as preview.
 
-.. FIXME: the buttons 'Import layer/file' and 'Export file' have to be described
