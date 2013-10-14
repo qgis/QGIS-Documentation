@@ -1,7 +1,5 @@
 .. |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _zonal_statistics:
 
 Zonal Statistics Plugin

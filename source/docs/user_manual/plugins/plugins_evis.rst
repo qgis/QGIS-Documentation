@@ -1,7 +1,5 @@
 |updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
 .. _`evis`:
 
 eVis Plugin
@@ -216,8 +214,8 @@ manage the web pages (see Table `evis_examples`_).
 
 .. _`evis_using_browser`:
 
-Using the Generic Event Browser
--------------------------------
+Using the Event Browser
+-----------------------
 
 When the :guilabel:`Event Browser` window opens a photograph will appear in the
 display window if the document referenced in the vector file attribute table is
@@ -562,3 +560,5 @@ A complete sample XML file with three queries is displayed below:
       <autoconnect>false</autoconnect>
     </query>
    </doc>
+
+.. FIXME: new screenshots have to be made by Alexandre

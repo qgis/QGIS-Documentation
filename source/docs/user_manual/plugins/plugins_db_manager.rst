@@ -1,6 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
 
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
 .. _dbmanager:
 
@@ -50,3 +49,5 @@ geometry as well as about existing Fields, Constraints and Indexes. It also
 allows to run Vacuum Analyze and to create a spatial index on a selected table,
 if not already done. The :guilabel:`Table` tab shows all attributes and the
 :guilabel:`Preview` tab renders the geometries as preview.
+
+.. FIXME: the buttons 'Import layer/file' and 'Export file' have to be described
