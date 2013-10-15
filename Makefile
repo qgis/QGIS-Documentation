@@ -120,7 +120,7 @@ all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
 	@echo
-	@echo NOT pulling all translations from transifex (as only current stable is translated)
+	@echo NOT pulling all translations from transifex, as only current stable is translated
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
 	# tx pull --minimum-perc=1 --skip -f
