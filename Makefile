@@ -97,13 +97,14 @@ pdf: html
 	# prepending the texi2pdf command with - keeps make going instead of quitting
 	# japanese pdf has problems, when build with texi2pdf
 	# as alternative we can use platex
-	# on Debian available in package 'texlive-lang-cjk'
 	# for russian pdf you need package 'texlive-lang-cyrillic' installed
+	# for japanese pdf you need: 'cmap-adobe-japan1 cmap-adobe-japan2 latex-cjk-all nkf okumura-clsfiles ptex-base ptex-bin texlive-fonts-extra'
 	@-if [ $(LANG) = "ja" ]; then \
 		cd $(BUILDDIR)/latex/$(LANG); \
-		find -name "*.png" -exec ebb -x {} \; \
-		platex -interaction=batchmode QGISUserGuide.tex; \
-		platex -interaction=batchmode QGISUserGuide.tex; \
+		nkf -W -e --overwrite QGISUserGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISUserGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISUserGuide.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape QGISUserGuide.tex; \
 		dvipdfmx QGISUserGuide.dvi; \
 	else \
 		cd $(BUILDDIR)/latex/$(LANG); \
@@ -119,10 +120,10 @@ all:
 	@echo
 	@echo Building html for the following languages: $(LANGUAGES)
 	@echo
-	@echo Starting with pulling all translations from transifex
+	@echo NOT pulling all translations from transifex (as only current stable is translated)
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	tx pull --minimum-perc=1 --skip -f
+	# tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
