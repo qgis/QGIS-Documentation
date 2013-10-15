@@ -360,10 +360,10 @@ Histogram Menu
 .. index:: Histogram
 
 The :guilabel:`Histogram` menu allows you to view the distribution of the bands
-or colors in your raster. It is generated automatically when you open
+or colors in your raster. It is generated automatically when you open the
 :guilabel:`Histogram` menu. All existing bands will be displayed together. You can
 save the histogram as an image with the |mActionFileSave| button.
-
+Further settings can be made with the || :sup:`Prefs/Actions` menu.  
 
 .. index:: Metadata
 
