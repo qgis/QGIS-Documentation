@@ -6,11 +6,11 @@
 # choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-01 19:19+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:17+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,9 +36,18 @@ msgid ""
 "intuitive graphical user interface for creating interpolated raster layers "
 "(See Figure_interpolation_1_). The plugin requires the following parameters "
 "to be specified before running:"
+msgstr "この補間プラグインは、ポイントベクタレイヤのTINまたはIDW補間を生成するために使用されます。これは扱いがとてもシンプルで、内挿されたラスタレイヤを作成するための直感的なグラフィカルユーザ・インタフェースを提供します( Figure_interpolation_1_ を参照すること)。プラグインは、実行前に次のパラメータを必要とします。"
+
+# bb4e48a6be854136b0edcb9bf59b6320
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:19
+msgid ""
+"**Input vector layer**: Specify the input point vector layer(s) from a list "
+"of loaded point layers. If several layers are specified, then data from all "
+"layers is used for interpolation. Note: It is possible to insert lines or "
+"polygons as constraints for the triangulation, by specifying either "
+"\"points\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` "
+"|selectstring| combobox."
 msgstr ""
-"この補間プラグインは、ポイントベクタレイヤのTINまたはIDW補間を生成するために使用されます。これは扱いがとてもシンプルで、内挿されたラスタレイヤを作成するための直感的なグラフィカルユーザ・インタフェースを提供します("
-" Figure_interpolation_1_ を参照すること)。プラグインは、実行前に次のパラメータを必要とします。"
 
 # b140962dbfcd477f90878aa484ae593d
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:24
@@ -46,9 +55,14 @@ msgid ""
 "**Interpolation attribute**: Select attribute column to be used for "
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox"
 " to use the layers stored Z values."
+msgstr "**補間する属性**:補間に使用する属性カラムを選択するか 、格納されたZ値を使用するには|checkbox| :guilabel:`Z座標を使用する`チェックを有効にします。"
+
+# 314acf5115d84ac1afcb5f1c728126bf
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
+msgid ""
+"**Interpolation Method**: Select interpolation method. This can be either "
+"'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'."
 msgstr ""
-"**補間する属性**:補間に使用する属性カラムを選択するか 、格納されたZ値を使用するには|checkbox| "
-":guilabel:`Z座標を使用する`チェックを有効にします。"
 
 # 843cba469a8d484c82f48ea0c210df67
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:29
@@ -62,49 +76,22 @@ msgstr "**カラム/行の数**:出力するラスタファイルの 行また�
 msgid "**Output file**: Specify a name for the output raster file."
 msgstr "**出力ファイル**: 出力するラスタファイルの名称を指定します。"
 
+# c2e80f0107f74204a5ab206f6a70daaf
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
+msgid "Interpolation Plugin |nix|"
+msgstr ""
+
+# 7928a39eeefe4fb7a2bde0e85390ff5c
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:49
+msgid "Using the plugin"
+msgstr ""
+
 # d16f8797ae4f402d87e19707f1cd4271
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:51
 msgid "Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr "QGISを起動し、ポイントベクタレイヤ（e.g., :file:`elevp.csv`）をロードします。"
 
-# 6cf80e8ac17a4e9cbaea6b0d832ccf81
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:56
-msgid ""
-"Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column "
-"(e.g., ``ELEV``) for interpolation."
-msgstr ""
-"補間のための入力レイヤ (e.g., :guilabel:`elevp` |selectstring|) とカラム (e.g., "
-"``ELEV``)を選択します。"
-
-# 77f17582982e4fabbd5f494190a7a449
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:61
-msgid "Click **[OK]**."
-msgstr "**[OK]**をクリックします。"
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:19
-msgid ""
-"**Input vector layer**: Specify the input point vector layer(s) from a list "
-"of loaded point layers. If several layers are specified, then data from all "
-"layers is used for interpolation. Note: It is possible to insert lines or "
-"polygons as constraints for the triangulation, by specifying either "
-"\"points\", \"structure lines\" or \"break lines\" in the :guilabel:`Type` "
-"|selectstring| combobox."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
-msgid ""
-"**Interpolation Method**: Select interpolation method. This can be either "
-"'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:43
-msgid "Interpolation Plugin |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:49
-msgid "Using the plugin"
-msgstr ""
-
+# a2659e74b1cd4ea5b04bc8a25e1539aa
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:52
 msgid ""
 "Load the Interpolation plugin in the Plugin Manager (see Section "
@@ -113,6 +100,14 @@ msgid ""
 "Interpolation plugin dialog appears as shown in Figure_interpolation_1_."
 msgstr ""
 
+# 6cf80e8ac17a4e9cbaea6b0d832ccf81
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:56
+msgid ""
+"Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column "
+"(e.g., ``ELEV``) for interpolation."
+msgstr "補間のための入力レイヤ (e.g., :guilabel:`elevp` |selectstring|) とカラム (e.g., ``ELEV``)を選択します。"
+
+# a285291bb5884822962a7efa5e8c860c
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:58
 msgid ""
 "Select an interpolation method (e.g. 'Triangulated Irregular Network "
@@ -120,6 +115,12 @@ msgid ""
 "filename (e.g., :file:`elevation_tin`)."
 msgstr ""
 
+# 77f17582982e4fabbd5f494190a7a449
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:61
+msgid "Click **[OK]**."
+msgstr "**[OK]**をクリックします。"
+
+# ecefc4fca4a94b2ba7001e4082768b16
 #: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:62
 msgid ""
 "For the current example, double click :file:`elevation_tin` in the layer "
@@ -128,67 +129,3 @@ msgid ""
 ":guilabel:`Symbology` tab. Or you can define a new color table as described "
 "in section :ref:`working_with_raster`."
 msgstr ""
-
-#~ msgid ""
-#~ "**Input vector layer**: Specify the input point vector layer(s) from a list "
-#~ "of loaded point layers. If several layers are specified, then data from all "
-#~ "layers is used for interpolation. Note: It is possible to insert lines or "
-#~ "polygons as constraints for the triangulation, by specifying either "
-#~ "\"structure lines\" or \"break lines\" in the :menuselection:`Type -->` "
-#~ "dropdown menu."
-#~ msgstr ""
-#~ "**入力ベクタレイヤ**: "
-#~ "ロードしたポイントレイヤのリストから、入力ポイントベクタレイヤ（複数可）を特定します。複数のレイヤを指定した場合、すべてのレイヤのデータが、補間に使用されます。注意："
-#~ " :menuselection:`Type -->` ドロップダウンメニューの\"structure lines\" または \"break "
-#~ "lines\"を指定することで、三角形分割の制約としてラインまたはポリゴンを挿入することが可能です。"
-
-#~ msgid ""
-#~ "**Interpolation Method**: Select interpolation method. This can be either "
-#~ ":guilabel:`Triangulated Irregular Network (TIN)` |selectstring| or "
-#~ ":guilabel:`Inverse Distance Weighted (IDW)` |selectstring|."
-#~ msgstr ""
-#~ "**補間法**: 補間法を選択します。:guilabel:`三角形分割補間 (TIN)` |selectstring| または "
-#~ ":guilabel:`逆距離加重補間 (IDW)` |selectstring|のいずれかを選択出来ます。"
-
-#~ msgid "**Using the plugin**"
-#~ msgstr "**プラグインの使用**"
-
-#~ msgid ""
-#~ "Load the Interpolation plugin in the Plugin Manager (see Section "
-#~ ":ref:`load_core_plugin`) and click on the |interpolation| "
-#~ ":sup:`Interpolation` icon which appears in the QGIS toolbar menu. The "
-#~ "Interpolation plugin dialog appears as shown in Figure_interpolation_1_."
-#~ msgstr ""
-#~ "プラグインマネージャーで補間プラグインをロードして（参照：ref： `load_core_plugin`のセクション） "
-#~ "QGISツールバーメニューに表示された|interpolation| "
-#~ ":sup:`補間`アイコンをクリックします。Figure_interpolation_1_ のように、補間プラグインダイアログが表示されます。"
-
-#~ msgid ""
-#~ "Select an interpolation method (e.g. :guilabel:`Triangular interpolation` "
-#~ "|selectstring|), and specify a cellsize of 5000 as well as the raster output"
-#~ " filename (e.g., :file:`elevation\\_tin`)."
-#~ msgstr ""
-#~ "補間法 (e.g. :guilabel:`Triangular interpolation` "
-#~ "|selectstring|)を選択し、ラスタ出力ファイル名(e.g., "
-#~ ":file:`elevation\\_tin`)だけでなく、5000のセルサイズを指定します。"
-
-#~ msgid ""
-#~ "For the current example, double click :file:`elevation\\_tin` in the layer "
-#~ "list to open the Raster Layer Properties dialog and select "
-#~ ":guilabel:`Pseudocolor` |selectstring| as Color Map in the "
-#~ ":guilabel:`Symbology` tab. Or you can define a new color table as described "
-#~ "in section :ref:`working_with_raster`."
-#~ msgstr ""
-#~ "現在の例のように、 "
-#~ ":file:`elevation\\_tin`をダブルクリックして、ラスタレイヤプロパティダイアログを表示します。そして:guilabel:`シンボロジー`"
-#~ " タブの  :guilabel:`Pseudocolor` |selectstring|をカラーマップとして選択します。"
-
-#~ msgid ""
-#~ "In figure_interpolation_2_ you see the TIN interpolation result with a 998 "
-#~ "cols x 812 rows (5 km) resolution for the :file:`elevp.csv` data visualized "
-#~ "using the Pseudocolor color table. The processing only takes a few minutes, "
-#~ "and covers the northern part of Alaska."
-#~ msgstr ""
-#~ "figure_interpolation_2_　では、 :file:`elevp.csv`データを Pseudocolor color "
-#~ "tableで可視化した998列×812行 (5 km) 解像度の "
-#~ "TINの補間結果を見ることができます。そのプロセスは数分しかかからず、アラスカの北部をカバーしています。"

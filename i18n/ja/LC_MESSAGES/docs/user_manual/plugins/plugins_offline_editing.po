@@ -6,11 +6,11 @@
 # choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-03 13:31+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:18+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,9 +37,22 @@ msgid ""
 "database. If several persons are working simultaneously on the same "
 "datasets, it is difficult to merge the edits by hand, even if people don’t "
 "change the same features."
+msgstr "データ収集のために、ノートパソコンやフィールドでオフラインの携帯電話で作業するのは一般的な状況です。\nネットワークへの復帰後、変更内容はマスターデータソース（e.g. a PostGIS データベース）と同期する必要があります。複数の人が同じデータセットを同時に作業している場合、それは人々が同じ地物を変更していない場合でも、手作業で編集内容をマージするのは困難です。"
+
+# aba3701a5ed5427297440a751a3e6a0f
+#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:20
+msgid ""
+"The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the "
+"synchronisation by copying the content of a datasource (usually PostGIS or "
+"WFS-T) to a SpatiaLite database and storing the offline edits to dedicated "
+"tables. After being connected to the network again, it is possible to apply "
+"the offline edits to the master dataset."
 msgstr ""
-"データ収集のために、ノートパソコンやフィールドでオフラインの携帯電話で作業するのは一般的な状況です。\n"
-"ネットワークへの復帰後、変更内容はマスターデータソース（e.g. a PostGIS データベース）と同期する必要があります。複数の人が同じデータセットを同時に作業している場合、それは人々が同じ地物を変更していない場合でも、手作業で編集内容をマージするのは困難です。"
+
+# 3116f378a4804c1b9df8701ca94b0d27
+#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:27
+msgid "Using the plugin"
+msgstr ""
 
 # 4057e00d4be64ad38aecb394a3956bf2
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:29
@@ -51,24 +64,7 @@ msgstr "ベクタレイヤ（e.g.  PostGIS or WFS-T データソース 由来）
 msgid "Save it as a project"
 msgstr "プロジェクトとして保存します。"
 
-# a3da183d74ba46df839c10b8c077dd2b
-#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:34
-msgid "Edit the layers offline."
-msgstr "オフラインでレイヤを編集します。"
-
-#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:20
-msgid ""
-"The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the "
-"synchronisation by copying the content of a datasource (usually PostGIS or "
-"WFS-T) to a SpatiaLite database and storing the offline edits to dedicated "
-"tables. After being connected to the network again, it is possible to apply "
-"the offline edits to the master dataset."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:27
-msgid "Using the plugin"
-msgstr ""
-
+# 8cb36d0955cb41fba2f0e30228ad3204
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:31
 msgid ""
 "Press the |offline_editing_copy|:sup:`Convert to offline project` icon and "
@@ -76,36 +72,19 @@ msgid ""
 "tables."
 msgstr ""
 
+# a3da183d74ba46df839c10b8c077dd2b
+#: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:34
+msgid "Edit the layers offline."
+msgstr "オフラインでレイヤを編集します。"
+
+# 807a0fada2e14a619eb2d4b53a7aa332
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:35
 msgid ""
 "After being connected again, upload the changes with the "
 "|offline_editing_sync| :sup:`Synchronize` button."
 msgstr ""
 
+# cafad368ae454e80a8cedb60edaccb0f
 #: ../../source/docs/user_manual/plugins/plugins_offline_editing.rst:49
 msgid "Create an offline project from PostGIS or WFS layers"
 msgstr ""
-
-#~ msgid ""
-#~ "The |offline_editing_copy|:sup:`Offline Editing` Plugin automates the "
-#~ "synchronisation by copying the content of a datasource (usually PostGIS or "
-#~ "WFS-T) to a spatialite database and storing the offline edits to dedicated "
-#~ "tables. After being connected to the network again, it is possible to apply "
-#~ "the offline edits to the master dataset."
-#~ msgstr ""
-#~ "|offline_editing_copy|:sup:`オフライン編集`プラグインは "
-#~ "spatialiteデータベースにデータソースの内容（通常はPostGISまたはWFS-T）をコピーし、オフライン専用のテーブルに編集を格納することにより、同期を自動化します。再びネットワークに接続された後、マスターデータセットにオフラインでの編集内容を適用することが可能です。"
-
-#~ msgid "**Using the plugin**"
-#~ msgstr "**プラグインの利用方法**"
-
-#~ msgid ""
-#~ "Press the 'Convert to offline project' button and select the layers to save."
-#~ " The content of the layers is saved to spatialite tables."
-#~ msgstr ""
-#~ " 'オフラインプロジェクトに変換'ボタンをクリックして保存対象のレイヤを選択します。レイヤの内容がspatialiteテーブルに保存されます。 "
-
-#~ msgid ""
-#~ "After being connected again, upload the changes with the 'Synchronize' "
-#~ "button."
-#~ msgstr "インターネットに再接続したら、 '同期' ボタンで変更内容をアップロードします。"

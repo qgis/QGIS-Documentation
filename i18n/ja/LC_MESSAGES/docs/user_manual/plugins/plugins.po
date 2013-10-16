@@ -4,15 +4,15 @@
 # 
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
-# yoichi <yoichi.kayama@gmail.com>, 2013
 # HiroM <mukuo@mri.co.jp>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-03 01:34+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:18+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,9 +37,7 @@ msgid ""
 "features/functions to be easily added to the application. Many of the "
 "features in QGIS are actually implemented as either **core** or **external "
 "plugins**."
-msgstr ""
-"QGIS はプラグインアーキテクチャで設計されています.これによって新しい特徴や機能をアプリケーションに簡単に追加することが可能です. "
-"実際にQGISの多くの機能は **コア** または**外部プラグイン** によって実装されています."
+msgstr "QGIS はプラグインアーキテクチャで設計されています.これによって新しい特徴や機能をアプリケーションに簡単に追加することが可能です. 実際にQGISの多くの機能は **コア** または**外部プラグイン** によって実装されています."
 
 # 264ad891bde34de0abe1157bca7fa22a
 #: ../../source/docs/user_manual/plugins/plugins.rst:25
@@ -48,10 +46,7 @@ msgid ""
 "automatically part of every QGIS distribution. They are written in one of "
 "two languages: C++ or Python. More information about core plugins are "
 "provided in Section :ref:`core_plugins`"
-msgstr ""
-"**コアプラグイン** はQGIS開発チームによって保守されていてQGISのディストリビューションの一部を構成しています.これらは C++ "
-"またはPythonという2種類の言語で書かれています. コアプラグインについての詳細な情報はセクション :ref:`core_plugins` "
-"に記述されています"
+msgstr "**コアプラグイン** はQGIS開発チームによって保守されていてQGISのディストリビューションの一部を構成しています.これらは C++ またはPythonという2種類の言語で書かれています. コアプラグインについての詳細な情報はセクション :ref:`core_plugins` に記述されています"
 
 # 0c051d61713e44459a33ddcd7317a302
 #: ../../source/docs/user_manual/plugins/plugins.rst:41
@@ -66,14 +61,37 @@ msgid ""
 "activated or uninstalled using the :guilabel:`Python Plugin Installer`. To "
 "deactivate and reactivate external plugins, the :guilabel:`Plugin Manager` "
 "is used again."
-msgstr ""
-"プラグインの管理とは:guilabel:`プラグインマネージャ`を使ってプラグインを読み込んだり削除したりすることです.外部プラグインはPythonプラグインインストーラを使ってインストールして有効化でき,またアンインストールできます.外部プラグインを無効化したり再度有効化するためには:guilabel:`プラグインマネージャ`"
-" を再度利用します."
+msgstr "プラグインの管理とは:guilabel:`プラグインマネージャ`を使ってプラグインを読み込んだり削除したりすることです.外部プラグインはPythonプラグインインストーラを使ってインストールして有効化でき,またアンインストールできます.外部プラグインを無効化したり再度有効化するためには:guilabel:`プラグインマネージャ` を再度利用します."
 
 # f7bb23eae1354b6185faaff334253ce5
 #: ../../source/docs/user_manual/plugins/plugins.rst:52
 msgid "Loading a QGIS Core Plugin"
 msgstr "QGISコアプラグインをロードする"
+
+# 6d4552df00484fd986dd1547ff243777
+#: ../../source/docs/user_manual/plugins/plugins.rst:54
+msgid ""
+"Loading a QGIS Core Plugin is done from the main menu "
+":menuselection:`Plugins -->' |mActionShowPluginManager| "
+":menuselection:`Manage Plugins`."
+msgstr ""
+
+# 985e8a741f6a42b892ad52fab2f38935
+#: ../../source/docs/user_manual/plugins/plugins.rst:70
+msgid "Plugin Manager |nix|"
+msgstr ""
+
+# c344e1a2024546a8a251611906ee4193
+#: ../../source/docs/user_manual/plugins/plugins.rst:72
+msgid ""
+"The :guilabel:`Plugin Manager` lists all the available plugins and their "
+"status (loaded or unloaded), including all core plugins and all external "
+"plugins that have been installed and automatically activated using the "
+":guilabel:`Python Plugin Installer` (see Section "
+":ref:`load_external_plugin`). Those plugins that are already loaded have a "
+"check mark to the left of their name. Figure_plugins_1_ shows the "
+":guilabel:`Plugin Manager` dialog."
+msgstr ""
 
 # 0a4efdf7f3d047f1a49c210b9b064426
 #: ../../source/docs/user_manual/plugins/plugins.rst:79
@@ -82,23 +100,105 @@ msgid ""
 "plugin name, and click **[OK]**. When you exit the application, a list of "
 "loaded plugins is retained, and the next time you run QGIS these plugins are"
 " automatically loaded."
-msgstr ""
-"特定のプラグインを有効にするには、プラグイン名の左側にあるチェックボックスをクリックし、**[OK]**をクリックします。アプリケーションを終了すると、ロードされたプラグインのリストが保持され、次回QGISを実行した場合に、これらのプラグインが自動的にロードされます。"
+msgstr "特定のプラグインを有効にするには、プラグイン名の左側にあるチェックボックスをクリックし、**[OK]**をクリックします。アプリケーションを終了すると、ロードされたプラグインのリストが保持され、次回QGISを実行した場合に、これらのプラグインが自動的にロードされます。"
 
 # d153e5b31d244c4598c7e140cdc3116c
 #: ../../source/docs/user_manual/plugins/plugins.rst:87
 msgid "**Crashing Plugins**"
 msgstr "**プラグインのクラッシュ**"
 
+# 40c85cdfb1724e6f94ad608742dc70e1
+#: ../../source/docs/user_manual/plugins/plugins.rst:89
+msgid ""
+"If you find that QGIS crashes on startup, a plugin may be at fault. You can "
+"stop all plugins from loading by editing your stored settings file (see "
+":ref:`gui_options` for location). Locate the plugins settings and change all"
+" the plugin values to ``false`` to prevent them from loading."
+msgstr ""
+
+# 1f3ec93416dc4c1fb843019a4b50b49c
+#: ../../source/docs/user_manual/plugins/plugins.rst:98
+msgid ""
+"Do this for each plugin in the [Plugins] section. You can then start QGIS "
+"and add the plugins one at a time from the :guilabel:`Plugin Manager` to "
+"determine which plugin is causing the problem."
+msgstr ""
+
 # a7f6abc4e8ef4ccfbd81baa5e19c2ab2
 #: ../../source/docs/user_manual/plugins/plugins.rst:105
 msgid "Loading an external QGIS Plugin"
 msgstr "QGIS外部プラグインをロードする"
 
+# 2605f02959b841f0b85003f3c19dbc74
+#: ../../source/docs/user_manual/plugins/plugins.rst:107
+msgid ""
+"External QGIS plugins are written in Python. They are by default stored in "
+"either the 'Official' QGIS Repository, or in various other external "
+"repositories maintained by individual authors. The 'Official' QGIS "
+"Repository is added by default in :guilabel:`Python Plugin installer`."
+msgstr ""
+
+# 2b3b559d1b7d438c83674af1f4f15621
+#: ../../source/docs/user_manual/plugins/plugins.rst:112
+msgid ""
+"Detailed documentation about the usage, minimum QGIS version, homepage, "
+"authors, and other important information are provided for the 'Official' "
+"QGIS Repository at http://plugins.qgis.org/plugins/. For other external "
+"repositories, they might be available with the external plugins themselves. "
+"In general it is not included in this manual."
+msgstr ""
+
+# 11844020cc974947938dd240529cc322
+#: ../../source/docs/user_manual/plugins/plugins.rst:119
+msgid ""
+"Updates of core python plugins may be available in this repository as "
+"external overlays."
+msgstr ""
+
+# a9ca3ab32c1c4fd5a9dd712e08588373
+#: ../../source/docs/user_manual/plugins/plugins.rst:123
+msgid ""
+"fTools, Mapserver Export, and the Plugin Installer are Python plugins, but "
+"they are also part of the QGIS sources, and are automatically loaded and "
+"enabled inside the QGIS Plugin Manager (see Section "
+":ref:`load_external_plugin`)."
+msgstr "fTools、 Mapserver Export、プラグインインストーラは Python プラグインであるが、それらはQGISのソースの一部であり、自動的にロードされQGISプラグインマネージャ内で有効です(:ref:`load_external_plugin` のセクションを参照すること)。"
+
+# c727d71bea4e479b86626d01a47e4352
+#: ../../source/docs/user_manual/plugins/plugins.rst:127
+msgid ""
+"Currently there are over 150 external plugins available from the 'Official' "
+"QGIS Repository. Some of these plugins offer functionality that will be "
+"required by many users (for example: providing the user with the ability to "
+"view and edit OpenStreetMap data, or to add GoogleMap layers) while others "
+"offer very specialized functions (for example: Calculate economic pipe "
+"diameters for water supply networks)."
+msgstr ""
+
+# 83a638196dc8450e96ad058cd8ff48e8
+#: ../../source/docs/user_manual/plugins/plugins.rst:134
+msgid ""
+"It is, however, quite straightforward to search through all the available "
+"external plugins by providing keywords, choosing a named repository and/or "
+"filtering on the status of plugins (currently installed or uninstalled in "
+"your system). Searching and filtering is done from the QGIS Python Plugin "
+"Installer"
+msgstr ""
+
 # 9dd67c97e751461bbc84e482fe5f396a
 #: ../../source/docs/user_manual/plugins/plugins.rst:139
 msgid "**Add more repositories**"
 msgstr "**リポジトリを追加する**"
+
+# 1e06fe6fb0ca43c5856fc8c35a145029
+#: ../../source/docs/user_manual/plugins/plugins.rst:141
+msgid ""
+"To add external author repositories, open the Plugin Installer "
+"(:menuselection:`Plugins --> Fetch Python Plugins`), go to the tab "
+":guilabel:`Repositories`, and click **[Add]**. If you do not want one or "
+"more of the added repositories, they can be disabled via the **[Edit...]** "
+"button, or completely removed with the **[Delete]** button."
+msgstr ""
 
 # cb8b00c1e9984bf4a552fef427bab028
 #: ../../source/docs/user_manual/plugins/plugins.rst:147
@@ -113,15 +213,28 @@ msgid ""
 "Plugin Installer` (see :ref:`python_plugin_installer`). The new external "
 "plugin will be added to the list of available plugins in the "
 ":guilabel:`Plugin Manager` and is automatically loaded."
-msgstr ""
-"guilabel:`Python プラグインインストーラー` （ ref:`python_plugin_installer`を参照)を使用してリポジトリから外部プラグインをダウンロードします。新しい外部プラグインはguilabel:`プラグインマネージャ`の利用可能なプラグインのリストに追加され、自動的にロードされます。 \n"
-"\n"
-"guilabel： `のPythonプラグインインストーラ`（詳しくは：ref： `python_plugin_installer`）使用して、リポジトリからの外部プラグインをダウンロードしてください。新しい外部プラグインで利用可能なプラグインのリストに追加されます：guilabel： `プラグインマネージャは、`、自動的にロードされます。"
+msgstr "guilabel:`Python プラグインインストーラー` （ ref:`python_plugin_installer`を参照)を使用してリポジトリから外部プラグインをダウンロードします。新しい外部プラグインはguilabel:`プラグインマネージャ`の利用可能なプラグインのリストに追加され、自動的にロードされます。 \n\nguilabel： `のPythonプラグインインストーラ`（詳しくは：ref： `python_plugin_installer`）使用して、リポジトリからの外部プラグインをダウンロードしてください。新しい外部プラグインで利用可能なプラグインのリストに追加されます：guilabel： `プラグインマネージャは、`、自動的にロードされます。"
 
 # 0aa54e3d902c470a9eb66987d30a37a5
 #: ../../source/docs/user_manual/plugins/plugins.rst:157
 msgid "Using the QGIS Python Plugin Installer"
 msgstr "QGIS Pythonプラグインインストーラの利用"
+
+# 6f1a7ef161cb4493ba00f0bc21001104
+#: ../../source/docs/user_manual/plugins/plugins.rst:166
+msgid ""
+"In order to download and install an external Python plugin, go to "
+":menuselection:`Plugins -->` |plugin_installer| :menuselection:`Fetch Python"
+" Plugins`. The :guilabel:`Plugin Installer` window will appear "
+"(figure_plugins_2_) with the tab :guilabel:`Plugins`, containing a list of "
+"all locally installed Python plugins, as well as plugin available in remote "
+"repositories."
+msgstr ""
+
+# 00d9dcd6cd2146e5a91aeb93dcae453e
+#: ../../source/docs/user_manual/plugins/plugins.rst:182
+msgid "Installing external python plugins |nix|"
+msgstr ""
 
 # 167b06484fd246338b2612015fbf10ba
 #: ../../source/docs/user_manual/plugins/plugins.rst:185
@@ -134,10 +247,7 @@ msgid ""
 "**not installed** - this means the plugin is available in the repository, "
 "but is not installed yet. In order to install it, select the plugin from the"
 " list and click the button **[Install plugin]**."
-msgstr ""
-"**未インストール** "
-"-これはリポジトリに利用可能なプラグインがあるが、まだインストールされていないことを意味します。それをインストールするにはリストからプラグインを選択して**[Install"
-" plugin]**ボタンをクリックします。"
+msgstr "**未インストール** -これはリポジトリに利用可能なプラグインがあるが、まだインストールされていないことを意味します。それをインストールするにはリストからプラグインを選択して**[Install plugin]**ボタンをクリックします。"
 
 # 1c85a19b6f23483fa64aeb6f0881ea4e
 #: ../../source/docs/user_manual/plugins/plugins.rst:190
@@ -152,9 +262,7 @@ msgid ""
 "is also available in any repository the **[Reinstall plugin]** button will "
 "be enabled. If the available version is older than the installed version, "
 "the **[Downgrade plugin]** button will appear instead."
-msgstr ""
-"**インストール済** "
-"-これはそのプラグインがすでにインストールされていることを示します。任意のリポジトリでも利用可能な場合**[プラグインの再インストール]**ボタンが有効になります。利用可能なバージョンがインストールされたもののバージョンよりも古い場合、**[プラグインのダウングレード]**ボタンが代わりに表示されます。"
+msgstr "**インストール済** -これはそのプラグインがすでにインストールされていることを示します。任意のリポジトリでも利用可能な場合**[プラグインの再インストール]**ボタンが有効になります。利用可能なバージョンがインストールされたもののバージョンよりも古い場合、**[プラグインのダウングレード]**ボタンが代わりに表示されます。"
 
 # 3e36145edf5f434a8fc22e5b144c9b8e
 #: ../../source/docs/user_manual/plugins/plugins.rst:195
@@ -162,18 +270,14 @@ msgid ""
 "**upgradeable** - this means that the plugin is installed, but there is an "
 "updated version available. In this case, the **[Upgrade plugin]** and "
 "**[Upgrade all]** buttons will be enabled."
-msgstr ""
-"**アップグレード可** -これはプラグインがインストールされているが、利用可能な最新のバージョンがない "
-"ことを意味します。この場合**[プラグインのアップグレード]**と**[すべてアップグレード]**ボタンが使えます。"
+msgstr "**アップグレード可** -これはプラグインがインストールされているが、利用可能な最新のバージョンがない ことを意味します。この場合**[プラグインのアップグレード]**と**[すべてアップグレード]**ボタンが使えます。"
 
 # 07d2c05f40cf488fad3c930d29b12be6
 #: ../../source/docs/user_manual/plugins/plugins.rst:198
 msgid ""
 "**invalid** - this means that the plugin is installed, but is unavailable or"
 " broken. The reason will be explained in the plugin description field."
-msgstr ""
-"**無効** - "
-"これはプラグインがインストールされているが、利用できないか壊れていることを示す。その理由はプラグインの説明フィールドで説明されるでしょう。"
+msgstr "**無効** - これはプラグインがインストールされているが、利用できないか壊れていることを示す。その理由はプラグインの説明フィールドで説明されるでしょう。"
 
 # 619e72ed6d0d4cd1a8b963d4b8bda304
 #: ../../source/docs/user_manual/plugins/plugins.rst:201
@@ -186,18 +290,94 @@ msgid ""
 "To install a plugin, select it from the list and click the **[Install "
 "plugin]** button. The plugin is then activated and installed in its own "
 "directory."
+msgstr "プラグインをインストールするには,リストで選択をした後に**[プラグインをインストール]**ボタンをクリックして下さい.選択したプラグインが有効になり,各OS毎に定められたディレクトリにインストールされます."
+
+# 570b439b2d9c49ee8016e718f2ce84ed
+#: ../../source/docs/user_manual/plugins/plugins.rst:206
+msgid "|nix| Linux and other unices"
 msgstr ""
-"プラグインをインストールするには,リストで選択をした後に**[プラグインをインストール]**ボタンをクリックして下さい.選択したプラグインが有効になり,各OS毎に定められたディレクトリにインストールされます."
+
+# eddbccffb6304f18a6ad733b71f6fea7
+#: ../../source/docs/user_manual/plugins/plugins.rst:208
+msgid "``/share/qgis/python/plugins``"
+msgstr ""
+
+# d6b04590155b4df290c8aca3f77264fb
+# 8cc004db4bd54e2e8419b3f134bc86d2
+#: ../../source/docs/user_manual/plugins/plugins.rst:209
+#: ../../source/docs/user_manual/plugins/plugins.rst:214
+msgid "``$HOME/.qgis/python/plugins``"
+msgstr ""
+
+# 301dee92f3774ac89892fe55ba5c188d
+#: ../../source/docs/user_manual/plugins/plugins.rst:211
+msgid "|osx| Mac OS X"
+msgstr ""
+
+# 1ba8ed18209740c68ef42e4bb0ac896d
+#: ../../source/docs/user_manual/plugins/plugins.rst:213
+msgid "``/Contents/MacOS/share/qgis/python/plugins``"
+msgstr ""
+
+# 34f9b4cdc6234d10a9e4747affa578d1
+#: ../../source/docs/user_manual/plugins/plugins.rst:216
+msgid "|win| Windows"
+msgstr ""
+
+# 8e26e84c03c240a9921b1de11f641e1d
+#: ../../source/docs/user_manual/plugins/plugins.rst:218
+msgid "``C:\\Program Files\\QGIS\\python\\plugins``"
+msgstr ""
+
+# 8f42466d4ab0404aa69c02b49e6f84cc
+#: ../../source/docs/user_manual/plugins/plugins.rst:219
+msgid "``C:\\Documents and Settings\\$USERNAME\\.qgis\\python\\plugins``"
+msgstr ""
 
 # b9978ae10ce3466896a650b3c1077183
 #: ../../source/docs/user_manual/plugins/plugins.rst:221
 msgid "If the installation is successful, a confirmation message will appear."
 msgstr "インストールが成功した場合,確認メッセージが表示されます"
 
+# 7f1563c81f664a65b5235d0ad4f4dd2f
+#: ../../source/docs/user_manual/plugins/plugins.rst:223
+msgid ""
+"If the installation fails, the reason for the failure will be displayed in a"
+" warning dialog. Most often, errors are the result of connection problems "
+"and/or missing Python modules. In the former case you will likely need to "
+"wait before trying the install again, in the latter case, you should install"
+" the missing modules relevant to your operating system prior to using the "
+"plugin. For Linux, most required modules should be available via a package "
+"manager. For install instructions in Windows visit the module home page."
+msgstr ""
+
+# 030f771628964893b75e87bfbd32c21b
+#: ../../source/docs/user_manual/plugins/plugins.rst:231
+msgid ""
+"If you are using a proxy, you may need to configure it under "
+":menuselection:`Edit --> Options` (Gnome, OSX) or :menuselection:`Settings "
+"--> Options` (KDE, Windows)` on the :guilabel:`Proxy` tab."
+msgstr ""
+
 # ae7e09dd0fab413c990c62943b462e4a
 #: ../../source/docs/user_manual/plugins/plugins.rst:241
 msgid "**Repositories tab**"
 msgstr "**リポジトリタブ**"
+
+# 9a2d194022e6411887b9f2d87a952501
+#: ../../source/docs/user_manual/plugins/plugins.rst:243
+msgid ""
+"The second tab :guilabel:`Repositories`, contains a list of plugin "
+"repositories available for the :guilabel:`Plugin Installer`. By default, "
+"only the QGIS Official Repository is enabled. You can add several user-"
+"contributed repositories, including the central QGIS Contributed Repository "
+"and other external repositories by clicking the **[Add ...]** button. The "
+"added repositories contain a large number of useful plugins which are not "
+"maintained by the QGIS Development Team. As such, we cannot take any "
+"responsibility for them. You can also manage the repository list manually, "
+"that is add, remove, and edit the entries. Temporarily disabling a "
+"particular repository is possible by clicking the **[Edit ...]** button."
+msgstr ""
 
 # 5d10b37184a64d2099522f9ea3665449
 #: ../../source/docs/user_manual/plugins/plugins.rst:254
@@ -218,11 +398,7 @@ msgid ""
 "installed plugins, a notification will appear in the Status Bar. If the "
 "checkbox is disabled, looking for updates and news is performed only when "
 "the :guilabel:`Plugin Installer` is manually launched from the menu."
-msgstr ""
-":guilabel:`Options` タブでは、 :guilabel:`プラグインインストーラ`の設定を行うことができます。|checkbox| "
-":guilabel:`起動時にアップデートをチェックする`のチェックで、QGISはプラグインの更新とニュースを自動的に探します。デフォルドでは、この昨日はすべてのリポジトリリストで有効であり、"
-" "
-":guilabel:`リポジトリ`タブではアップデートをチェックするたびにプログラムが起動します。更新チェックの頻度は、ドロップダウン·メニューを使用して調整することができ、1日に１回から１日に１回まで調節できます新しいプラグインや更新分はインストールプラグインんの１つとして利用可能であり、ステータスバーに通知が表示されます。そのチェックボックスが無効の場合、更新とニュースの探知は:guilabel:`プラグインインストーラ`で手動で行った場合のみ実行されます。"
+msgstr ":guilabel:`Options` タブでは、 :guilabel:`プラグインインストーラ`の設定を行うことができます。|checkbox| :guilabel:`起動時にアップデートをチェックする`のチェックで、QGISはプラグインの更新とニュースを自動的に探します。デフォルドでは、この昨日はすべてのリポジトリリストで有効であり、 :guilabel:`リポジトリ`タブではアップデートをチェックするたびにプログラムが起動します。更新チェックの頻度は、ドロップダウン·メニューを使用して調整することができ、1日に１回から１日に１回まで調節できます新しいプラグインや更新分はインストールプラグインんの１つとして利用可能であり、ステータスバーに通知が表示されます。そのチェックボックスが無効の場合、更新とニュースの探知は:guilabel:`プラグインインストーラ`で手動で行った場合のみ実行されます。"
 
 # 7c8cb53e817f495f90cef873a7367565
 #: ../../source/docs/user_manual/plugins/plugins.rst:268
@@ -233,8 +409,7 @@ msgid ""
 "plugins...* indicator will remain visible in the Status Bar during your "
 "entire QGIS session, and may cause a program crash when exiting. In this "
 "case please disable the checkbox."
-msgstr ""
-"プラグインインストーラは80とは異なるポートを扱うことができますが、自動的に更新をチェックするのを試みた場合に、インターネットの接続で問題を行う場合があります。これらの場合、*新しいプラグインを探す...*インジケーターが全体のQGISセッション中にステータスバーで表示されたままになり、終了時にプログラムがクラッシュを引き起こす可能性があります。この場合、チェックボックスを無効にしてください。"
+msgstr "プラグインインストーラは80とは異なるポートを扱うことができますが、自動的に更新をチェックするのを試みた場合に、インターネットの接続で問題を行う場合があります。これらの場合、*新しいプラグインを探す...*インジケーターが全体のQGISセッション中にステータスバーで表示されたままになり、終了時にプログラムがクラッシュを引き起こす可能性があります。この場合、チェックボックスを無効にしてください。"
 
 # 9ca14332ab964bea8983f2258d59cca2
 #: ../../source/docs/user_manual/plugins/plugins.rst:274
@@ -242,9 +417,27 @@ msgid ""
 "In addition, you may specify the type of plugins that are displayed by the "
 ":guilabel:`Python Plugin Installer`. Under *Allowed plugins*, you can "
 "specify whether you would like to:"
+msgstr "それに加えて、 :guilabel:`Python プラグインインストーラ`によって表示されるプラグインのタイプを指定することができます。*許可されたプラグイン*では、あなたが表示したいプラグインを指定できます。"
+
+# 6e4ffe5c768a462b8bd9d96f8a4ce091
+#: ../../source/docs/user_manual/plugins/plugins.rst:278
+msgid ""
+"|radiobuttonon| :guilabel:`Only show plugins from the official repository`"
 msgstr ""
-"それに加えて、 :guilabel:`Python "
-"プラグインインストーラ`によって表示されるプラグインのタイプを指定することができます。*許可されたプラグイン*では、あなたが表示したいプラグインを指定できます。"
+
+# 61784f90984446708754e620baf98ac2
+#: ../../source/docs/user_manual/plugins/plugins.rst:279
+msgid ""
+"|radiobuttonoff| :guilabel:`Show all plugins except those marked as "
+"experimental`"
+msgstr ""
+
+# 4198208f28fb40e385e9e4f5a8363a52
+#: ../../source/docs/user_manual/plugins/plugins.rst:280
+msgid ""
+"|radiobuttonoff| :guilabel:`Show all plugins, even those marked as "
+"experimental`"
+msgstr ""
 
 # e1fb4c77e9ca44b7b9868ff08cbd0b8d
 #: ../../source/docs/user_manual/plugins/plugins.rst:282
@@ -259,13 +452,21 @@ msgid ""
 "'incomplete' or 'proof of concept' tools. The QGIS development team does not"
 " recommend installing these plugins unless you intend to use them for "
 "testing purposes."
-msgstr ""
-"実験的なプラグインは、制作での利用には一般的に不適当である。これらのプラグインは開発の初期段階にあり'不完全'または’コンセプトの証明’のツールであることを考慮されなければならない。テスト目的のためにそれらを使用する場合を除き、QGISの開発チームはこれらのプラグインをインストールすることをお勧めしません。"
+msgstr "実験的なプラグインは、制作での利用には一般的に不適当である。これらのプラグインは開発の初期段階にあり'不完全'または’コンセプトの証明’のツールであることを考慮されなければならない。テスト目的のためにそれらを使用する場合を除き、QGISの開発チームはこれらのプラグインをインストールすることをお勧めしません。"
 
 # ea32fabd1e8f42f799342a337f8f0c21
 #: ../../source/docs/user_manual/plugins/plugins.rst:293
 msgid "Data Providers"
 msgstr "データプロバイダ"
+
+# c7c4fa1f64c040f88869d7c2d645ec24
+#: ../../source/docs/user_manual/plugins/plugins.rst:295
+msgid ""
+"Data Providers are 'special' plugins that provides access to a data store. "
+"By default, QGIS supports PostGIS layers and disk-based data stores "
+"supported by the GDAL/OGR library. A Data Provider plugin extends the "
+"ability of QGIS to use other data sources."
+msgstr ""
 
 # bed11475633a459b9d9c583cfa5cb1e5
 #: ../../source/docs/user_manual/plugins/plugins.rst:300
@@ -273,20 +474,57 @@ msgid ""
 "Data Provider plugins are registered automatically by QGIS at startup. They "
 "are not managed by the Plugin Manager but used behind the scenes when a data"
 " type is added as a layer in QGIS."
-msgstr ""
-"データプロバイダプラグインは起動時にQGISによって自動的に登録されています。これらは、プラグインマネージャで管理されておらず、QGISでデータタイプがレイヤとして追加される背景で使われます。"
+msgstr "データプロバイダプラグインは起動時にQGISによって自動的に登録されています。これらは、プラグインマネージャで管理されておらず、QGISでデータタイプがレイヤとして追加される背景で使われます。"
 
-# a9ca3ab32c1c4fd5a9dd712e08588373
-#: ../../source/docs/user_manual/plugins/plugins.rst:123
-msgid ""
-"fTools, Mapserver Export, and the Plugin Installer are Python plugins, but "
-"they are also part of the QGIS sources, and are automatically loaded and "
-"enabled inside the QGIS Plugin Manager (see Section "
-":ref:`load_external_plugin`)."
+# 906c6ec49c6b4eb58a5323cd7df58bb0
+# a1d5d8b5a1384d658c705a585bb50a31
+# 1652a74e00ce4dc5a0808bc09ed25a1d
+# 9f7bde34492e433b90f878e9671dab37
+# 1990bada9830481c9cd668bded0fee45
+# a46b776c6ca743398e44f2a6a34d4621
+#: ../../source/docs/user_manual/plugins/plugins.rst:9
+#: ../../source/docs/user_manual/plugins/plugins.rst:22
+#: ../../source/docs/user_manual/plugins/plugins.rst:57
+#: ../../source/docs/user_manual/plugins/plugins.rst:159
+#: ../../source/docs/user_manual/plugins/plugins.rst:161
+#: ../../source/docs/user_manual/plugins/plugins.rst:163
+msgid "plugins"
 msgstr ""
-"fTools、 Mapserver Export、プラグインインストーラは Python "
-"プラグインであるが、それらはQGISのソースの一部であり、自動的にロードされQGISプラグインマネージャ内で有効です(:ref:`load_external_plugin`"
-" のセクションを参照すること)。"
+
+# a1d5d8b5a1384d658c705a585bb50a31
+#: ../../source/docs/user_manual/plugins/plugins.rst:22
+msgid "types"
+msgstr ""
+
+# 1652a74e00ce4dc5a0808bc09ed25a1d
+#: ../../source/docs/user_manual/plugins/plugins.rst:57
+msgid "manager"
+msgstr ""
+
+# 070a63be42564e3790fb01b1926dd66f
+#: ../../source/docs/user_manual/plugins/plugins.rst:84
+msgid "crashes"
+msgstr ""
+
+# 9f7bde34492e433b90f878e9671dab37
+#: ../../source/docs/user_manual/plugins/plugins.rst:159
+msgid "installing"
+msgstr ""
+
+# 1990bada9830481c9cd668bded0fee45
+#: ../../source/docs/user_manual/plugins/plugins.rst:161
+msgid "Python Plugin Installer"
+msgstr ""
+
+# a46b776c6ca743398e44f2a6a34d4621
+#: ../../source/docs/user_manual/plugins/plugins.rst:163
+msgid "upgrading"
+msgstr ""
+
+# 5b77db51249b4abe9bd84a6c701a6164
+#: ../../source/docs/user_manual/plugins/plugins.rst:289
+msgid "data providers"
+msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:29
 msgid ""
@@ -297,164 +535,11 @@ msgid ""
 "plugins is provided in Section :ref:`load_external_plugin`."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:54
-msgid ""
-"Loading a QGIS Core Plugin is done from the main menu "
-":menuselection:`Plugins -->' |mActionShowPluginManager| "
-":menuselection:`Manage Plugins`."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:70
-msgid "Plugin Manager |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:72
-msgid ""
-"The :guilabel:`Plugin Manager` lists all the available plugins and their "
-"status (loaded or unloaded), including all core plugins and all external "
-"plugins that have been installed and automatically activated using the "
-":guilabel:`Python Plugin Installer` (see Section "
-":ref:`load_external_plugin`). Those plugins that are already loaded have a "
-"check mark to the left of their name. Figure_plugins_1_ shows the "
-":guilabel:`Plugin Manager` dialog."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:89
-msgid ""
-"If you find that QGIS crashes on startup, a plugin may be at fault. You can "
-"stop all plugins from loading by editing your stored settings file (see "
-":ref:`gui_options` for location). Locate the plugins settings and change all"
-" the plugin values to ``false`` to prevent them from loading."
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins.rst:94
 msgid ""
 "|nix| For example, to prevent the 'Delimited text' plugin from loading, the "
 "entry in ``$HOME/.config/QGIS/qgis.conf`` on Linux should look like this: "
 "``Add Delimited Text Layer=false``."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:98
-msgid ""
-"Do this for each plugin in the [Plugins] section. You can then start QGIS "
-"and add the plugins one at a time from the :guilabel:`Plugin Manager` to "
-"determine which plugin is causing the problem."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:107
-msgid ""
-"External QGIS plugins are written in Python. They are by default stored in "
-"either the 'Official' QGIS Repository, or in various other external "
-"repositories maintained by individual authors. The 'Official' QGIS "
-"Repository is added by default in :guilabel:`Python Plugin installer`."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:112
-msgid ""
-"Detailed documentation about the usage, minimum QGIS version, homepage, "
-"authors, and other important information are provided for the 'Official' "
-"QGIS Repository at http://plugins.qgis.org/plugins/. For other external "
-"repositories, they might be available with the external plugins themselves. "
-"In general it is not included in this manual."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:119
-msgid ""
-"Updates of core python plugins may be available in this repository as "
-"external overlays."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:127
-msgid ""
-"Currently there are over 150 external plugins available from the 'Official' "
-"QGIS Repository. Some of these plugins offer functionality that will be "
-"required by many users (for example: providing the user with the ability to "
-"view and edit OpenStreetMap data, or to add GoogleMap layers) while others "
-"offer very specialized functions (for example: Calculate economic pipe "
-"diameters for water supply networks)."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:134
-msgid ""
-"It is, however, quite straightforward to search through all the available "
-"external plugins by providing keywords, choosing a named repository and/or "
-"filtering on the status of plugins (currently installed or uninstalled in "
-"your system). Searching and filtering is done from the QGIS Python Plugin "
-"Installer"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:141
-msgid ""
-"To add external author repositories, open the Plugin Installer "
-"(:menuselection:`Plugins --> Fetch Python Plugins`), go to the tab "
-":guilabel:`Repositories`, and click **[Add]**. If you do not want one or "
-"more of the added repositories, they can be disabled via the **[Edit...]** "
-"button, or completely removed with the **[Delete]** button."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:166
-msgid ""
-"In order to download and install an external Python plugin, go to "
-":menuselection:`Plugins -->` |plugin_installer| :menuselection:`Fetch Python"
-" Plugins`. The :guilabel:`Plugin Installer` window will appear "
-"(figure_plugins_2_) with the tab :guilabel:`Plugins`, containing a list of "
-"all locally installed Python plugins, as well as plugin available in remote "
-"repositories."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:182
-msgid "Installing external python plugins |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:206
-msgid "|nix| Linux and other unices"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:208
-msgid "``/share/qgis/python/plugins``"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:209
-#: ../../source/docs/user_manual/plugins/plugins.rst:214
-msgid "``$HOME/.qgis/python/plugins``"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:211
-msgid "|osx| Mac OS X"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:213
-msgid "``/Contents/MacOS/share/qgis/python/plugins``"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:216
-msgid "|win| Windows"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:218
-msgid "``C:\\Program Files\\QGIS\\python\\plugins``"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:219
-msgid "``C:\\Documents and Settings\\$USERNAME\\.qgis\\python\\plugins``"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:223
-msgid ""
-"If the installation fails, the reason for the failure will be displayed in a"
-" warning dialog. Most often, errors are the result of connection problems "
-"and/or missing Python modules. In the former case you will likely need to "
-"wait before trying the install again, in the latter case, you should install"
-" the missing modules relevant to your operating system prior to using the "
-"plugin. For Linux, most required modules should be available via a package "
-"manager. For install instructions in Windows visit the module home page."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:231
-msgid ""
-"If you are using a proxy, you may need to configure it under "
-":menuselection:`Edit --> Options` (Gnome, OSX) or :menuselection:`Settings "
-"--> Options` (KDE, Windows)` on the :guilabel:`Proxy` tab."
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins.rst:235
@@ -466,82 +551,6 @@ msgid ""
 " however, cannot be uninstalled."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins.rst:243
-msgid ""
-"The second tab :guilabel:`Repositories`, contains a list of plugin "
-"repositories available for the :guilabel:`Plugin Installer`. By default, "
-"only the QGIS Official Repository is enabled. You can add several user-"
-"contributed repositories, including the central QGIS Contributed Repository "
-"and other external repositories by clicking the **[Add ...]** button. The "
-"added repositories contain a large number of useful plugins which are not "
-"maintained by the QGIS Development Team. As such, we cannot take any "
-"responsibility for them. You can also manage the repository list manually, "
-"that is add, remove, and edit the entries. Temporarily disabling a "
-"particular repository is possible by clicking the **[Edit ...]** button."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:278
-msgid ""
-"|radiobuttonon| :guilabel:`Only show plugins from the official repository`"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:279
-msgid ""
-"|radiobuttonoff| :guilabel:`Show all plugins except those marked as "
-"experimental`"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:280
-msgid ""
-"|radiobuttonoff| :guilabel:`Show all plugins, even those marked as "
-"experimental`"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:295
-msgid ""
-"Data Providers are 'special' plugins that provides access to a data store. "
-"By default, QGIS supports PostGIS layers and disk-based data stores "
-"supported by the GDAL/OGR library. A Data Provider plugin extends the "
-"ability of QGIS to use other data sources."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:9
-#: ../../source/docs/user_manual/plugins/plugins.rst:22
-#: ../../source/docs/user_manual/plugins/plugins.rst:57
-#: ../../source/docs/user_manual/plugins/plugins.rst:159
-#: ../../source/docs/user_manual/plugins/plugins.rst:161
-#: ../../source/docs/user_manual/plugins/plugins.rst:163
-msgid "plugins"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:22
-msgid "types"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:57
-msgid "manager"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:84
-msgid "crashes"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:159
-msgid "installing"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:161
-msgid "Python Plugin Installer"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:163
-msgid "upgrading"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins.rst:289
-msgid "data providers"
-msgstr ""
-
 #~ msgid ""
 #~ "**External Plugins** are currently all written in Python. They are stored in"
 #~ " external repositories and maintained by the individual authors. They can be"
@@ -549,149 +558,12 @@ msgstr ""
 #~ "information about external plugins is provided in Section "
 #~ ":ref:`load_external_plugin`."
 #~ msgstr ""
-#~ "**外部プラグイン**は現在のところすべて Python "
-#~ "で書かれています.外部プラグインは,外部のリポジトリに保存されており,各製作者によってメンテナンスされています.外部プラグインは,プラグインインストーラーで"
-#~ " QGIS に追加することができます. 外部プラグインについての詳細は, :ref:`外部プラグインの読み込み`セクションを参照してください."
 
 #~ msgid ""
-#~ "Loading a QGIS Core Plugin is done from the main menu "
-#~ ":menuselection:`Plugins --> Manage Plugins`"
+#~ "|nix| For example, to prevent the 'Delimited text' plugin from loading, the "
+#~ "entry in ``$HOME/.config/QuantumGIS/qgis.conf`` on Linux should look like "
+#~ "this: ``Add Delimited Text Layer=false``."
 #~ msgstr ""
-#~ "QGIS コアプラグインはメインメニューの:menuselection:`プラグイン --> プラグインの管理`を起動すると読み込むことができます."
-
-#~ msgid ""
-#~ "The :guilabel:`Plugin Manager` lists all the available plugins and their "
-#~ "status (loaded or unloaded), including all core plugins and all external "
-#~ "plugins that have been installed and automatically activated using the "
-#~ ":guilabel:`Python Plugin Installer` (see Section "
-#~ ":ref:`load_external_plugin`). Those plugins that are already loaded have a "
-#~ "check mark to the left of their name. Figure_plugins_1_ shows the Plugin "
-#~ "Manager dialog."
-#~ msgstr ""
-#~ "guilabel： "
-#~ "`プラグインマネージャ`ではすべての利用なプラグインとその状態（ロードされているかどうか）がリスト表示されます。すべてのコアプラグインと、guilabel:`Python"
-#~ " Plugin "
-#~ "Installer`を使用するインストールされて自動的に有効となった外部プラグイン（ref:`load_external_plugin`のセクションを参照すること）を含みます。ロードされたそれらのプラグインは、名称の左側にチェックマークが入っています。Figure_plugins_1_"
-#~ " は、プラグインマネージャダイアログを示しています。"
-
-#~ msgid ""
-#~ "If you find that QGIS crashes on startup, a plugin may be at fault. You can "
-#~ "stop all plugins from loading by editing your stored settings file (see "
-#~ ":ref:`gui_options` for location). Locate the plugins settings and change all"
-#~ " the plugin values to false to prevent them from loading. |nix| For example,"
-#~ " to prevent the Delimited text plugin from loading, the entry in "
-#~ "\\$HOME/.config/QuantumGIS/qgis.conf on Linux should look like this: ``Add "
-#~ "Delimited Text Layer=false``. Do this for each plugin in the [Plugins] "
-#~ "section. You can then start QGIS and add the plugins one at a time from the "
-#~ ":guilabel:`Plugin Manager` to determine which plugin is causing the problem."
-#~ msgstr ""
-#~ "QGIS起動時にクラッシュする場合プラグインがおかしい場合があります.設定ファイルを編集することで全てプラグインの起動を停止することができます。 (:ref:`GUIオプション`参照). プラグイン設定をある場所を探し,すべてのプラグインをロードしないように,値をfalseに変更して下さい.|nix|\n"
-#~ "たとえばデリミテッドテキストプラグインの読み込みを停止する場合,Linuxの場合 $HOME/.config/QuantumGIS/qgis.conf というファイルに``Add Delimited Text Layer=false`` のように設定します.\n"
-#~ "それぞれのプラグインについては [Plugins] セクションについて同様に設定します.\n"
-#~ "その後にQGISを起動して,プラグインマネージャでプラグインを1個づつ追加する事により,どのプラグインに問題があるか特定することができます."
-
-#~ msgid ""
-#~ "External QGIS plugins are written in Python. They are by default stored in "
-#~ "either the 'Official' or 'User contributed' QGIS Repositories, or in various"
-#~ " other external repositories maintained by individual authors. These lists "
-#~ "are available automatically from the :guilabel:`Python Plugin installer` via"
-#~ " :menuselection:`Fetch Python Plugins...`."
-#~ msgstr ""
-#~ "外部QGISプラグインはPythonで書かれています。それらはデフォルトで 'Official' か'User contributed' "
-#~ "のQGISリポジトリ、あるいは、個々の作者によって維持された様々な他の外部リポジトリで格納されています。これらのリストはメニューの`Pythonプラグインを呼び出す`を実行すると表示されるguilabel:`Python"
-#~ " プラグインインストーラー`から自動的に利用可能です。"
-
-#~ msgid ""
-#~ "Detailed documentation about the usage, minimum QGIS version, homepage, "
-#~ "authors, and other important information are provided with the external "
-#~ "plugins themselves and is not included in this manual [#]_ [#]_."
-#~ msgstr ""
-#~ "用法、QGISの最小バージョン、ホームページ、作成者、およびその他の重要な情報についての詳細なドキュメントは外部ブラグインそのものとともに提供され、このマニュアル"
-#~ " [#]_ [#]_の中には含まれていません。"
-
-#~ msgid ""
-#~ "Currently (at the time of testing version 1.8 of QGIS) there are over 90 "
-#~ "external plugins available from thirteen listed repositories. Some of these "
-#~ "plugins offer functionality that will be required by many users (for "
-#~ "example: providing the user with the ability to view and edit OpenStreetMap "
-#~ "data, or to add GoogleMap layers) while others offer very specialized "
-#~ "functions (for example: Calculate economic pipe diameters for water supply "
-#~ "networks)."
-#~ msgstr ""
-#~ "現在（QGISバージョン1.8のテスト時）、13のリストアップされたリポジトリから90以降の外部ブラグインが利用可能です。これらのプラグインの幾つかは、多くのユーザ（例えば：OpenStreetMap"
-#~ " "
-#~ "を見たり編集する能力を持ったり、GoogleMapレイヤを追加するユーザ）によって要求され、機能的に提供されます。それ以外では、特別な機能(例えば：給水ネットワークのための経済的なパイプ径を計算する)を提供ます。"
-
-#~ msgid ""
-#~ "It is, however, quite straightforward to search through all the available "
-#~ "external plugins by providing keywords, choosing a named repository and/or "
-#~ "filtering on the status of plugins (currently installed or uninstalled in "
-#~ "your system). Searching and filtering is done from the QGIS Python Plugin "
-#~ "Installer (see figure_plugins_2_)."
-#~ msgstr ""
-#~ "しかしながら、提供されたキーワードや名前のリポジトリかつ/またはプラグインの状態（現在システムにインストールされているいない）でフィルタリングすることを用いて、すべての利用可能なプラグインから検索するのは容易なことです。検索とフィルタリングはQGIS"
-#~ " Pythonプラグインインストーラー（ figure_plugins_2_ を参照）から行います。"
-
-#~ msgid ""
-#~ "To add the 'User contributed' repository and/or several external author "
-#~ "repositories, open the Plugin Installer (:menuselection:`Plugins --> Fetch "
-#~ "Python Plugins`), go to the tab :guilabel:`Repositories`, and click **[Add "
-#~ "3rd party repositories]**. If you do not want one or more of the added "
-#~ "repositories, they can be disabled via the **[Edit...]** button, or "
-#~ "completely removed with the **[Delete]** button."
-#~ msgstr ""
-#~ "'User "
-#~ "contributed'レポジトリおよび/または複数の外部の作者のリポジトリを追加するには、プラグインインストーラー（menuselection:`プラグイン-->"
-#~ " Python プラグインを呼び出す`）を開き、guilabel:`リポジトリ`タブを表示してから "
-#~ "**[サードパーティーのリポジトリを追加]**をクリックします。もし追加したリポジトリのうち１つ以上を追加したくない場合は、**[編集...]**ボタンを経由して無効にすることができ、**[削除]**ボタンで完全に削除することができます。"
-
-#~ msgid ""
-#~ "In order to download and install an external Python plugin, click the menu "
-#~ ":menuselection:`Plugins --> Fetch Python Plugins`. The :guilabel:`Plugin "
-#~ "Installer` window will appear (figure_plugins_2_) with the tab "
-#~ ":guilabel:`Plugins`, containing a list of all locally installed Python "
-#~ "plugins, as well as plugins available in remote repositories."
-#~ msgstr ""
-#~ "外部のPythonプラグインをダウンロードしてインストールするには、メニューの`プラグイン --> Python "
-#~ "プラグインを呼び出す`をクリックします。guilabel:`プラグインインストーラー`ウィンドウ（figure_plugins_2_）が現れ、リモートリポジトリで利用可能なプラグインだけでなく、ローカルにインストールされたPythonプラグインのリストも含んだ"
-#~ " guilabel:`Plugins`タブが表示されます。"
-
-#~ msgid "``./share/qgis/python/plugins``"
-#~ msgstr "``./share/qgis/python/plugins``"
-
-#~ msgid "``/home/\\$USERNAME/.qgis/python/plugins``"
-#~ msgstr "``/home/\\$USERNAME/.qgis/python/plugins``"
-
-#~ msgid "``./Contents/MacOS/share/qgis/python/plugins``"
-#~ msgstr "``./Contents/MacOS/share/qgis/python/plugins``"
-
-#~ msgid "``/Users/$USERNAME/.qgis/python/plugins``"
-#~ msgstr "``/Users/$USERNAME/.qgis/python/plugins``"
-
-#~ msgid "``C:\\text\\Program Files\\QGIS\\python\\plugins``"
-#~ msgstr "``C:\\text\\Program Files\\QGIS\\python\\plugins``"
-
-#~ msgid "``C:\\text\\Documents and Settings\\$USERNAME\\.qgis\\python\\plugins``"
-#~ msgstr "``C:\\text\\Documents and Settings\\$USERNAME\\.qgis\\python\\plugins``"
-
-#~ msgid ""
-#~ "If the installation fails, the reason for the failure will be displayed in a"
-#~ " warning dialog. Most often, errors are the result of connection problems "
-#~ "and/or missing Python modules. In the former case you will likely need to "
-#~ "wait before trying the install again, in the latter case, you should install"
-#~ " the missing modules relevant to your operating system prior to using the "
-#~ "plugin. For Linux, most required modules should be available via a package "
-#~ "manager. For install instructions in Windows|win| visit the module home "
-#~ "page. If you are using a proxy, you may need to configure it under "
-#~ ":menuselection:`Edit --> Options (Gnome, OSX)` or :menuselection:`Settings "
-#~ "--> Options (KDE, Windows)` on the :guilabel:`Proxy` tab."
-#~ msgstr ""
-#~ "インストールが失敗した場合,警告ダイアログボックスに失敗理由が表示されます.発生するエラーは,多くの場合,インターネット接続の問題かPythonモジュールの欠損です.\n"
-#~ "前者の場合再インストールをする前に少し待ったほうがいいでしょう.\n"
-#~ "後者の場合,まずプラグインのインストールの前に,欠損しているモジュールをオペレーティングシステムにインストールする必要があります.\n"
-#~ "Linuxの場合,大多数の必要とされるモジュールはパッケージマネージャを使ってインストールできます.\n"
-#~ "Windows|win|の場合,必要な各モジュールのホームページを参照してください.\n"
-#~ "あなたのネットワーク環境がプロキシを利用している場合, :guilabel:`プロキシ` タブの中にある,:menuselection:`編集 --> オプション (Gnome, OSX)`か:menuselection:`設定 --> オプション (KDE, Windows)` で設定が必要な可能性があります"
 
 #~ msgid ""
 #~ "The **[Uninstall plugin]** button is enabled only if the selected plugin is "
@@ -700,45 +572,3 @@ msgstr ""
 #~ " plugin]** and revert to the version shipped with Quantum GIS. This default "
 #~ "version however, cannot be uninstalled."
 #~ msgstr ""
-#~ "**[プラグインのアンインストール]**ボタンは,選択されているプラグインがインストールされていてコアプラグインではない場合に利用可能です.\n"
-#~ "ただし,コアプラグインをアップデートしている場合, **[プラグインのアンインストール]**で,アップデートしたプラグインをQGISのリリース時のバージョンに戻すことができます. QGISのリリース時のバージョンである場合,コアプラグインはアンインストールできません."
-
-#~ msgid ""
-#~ "The second tab :guilabel:`Repositories`, contains a list of plugin "
-#~ "repositories available for the :guilabel:`Plugin Installer`. By default, "
-#~ "only the QGIS Official Repository is enabled. You can add several user-"
-#~ "contributed repositories, including the central QGIS Contributed Repository "
-#~ "and other external repositories by clicking the **[Add 3rd party "
-#~ "repositories]** button. The added repositories contain a large number of "
-#~ "useful plugins which are not maintained by the QGIS Development Team. As "
-#~ "such, we cannot take any responsibility for them. You can also manage the "
-#~ "repository list manually, that is add, remove, and edit the entries. "
-#~ "Temporarily disabling a particular repository is possible by clicking the "
-#~ "**[Edit]** button."
-#~ msgstr ""
-#~ "２番目のタブ "
-#~ ":guilabel:`リポジトリ`では:guilabel:`プラグインインストーラ`で利用可能なプラグインリポジトリのリストが含まれています。デフォルトでは、QGISの公式リポジトリのみが利用可能です。あなたは、**[サードパーティーのリポジトリを追加する]**ボタンをクリックして、主要なQGIS貢献リポジトリを含むユーザ貢献のリポジトリや他の外部プラグインを追加することができます。追加されたリポジトリは大量の役立つプラグインが含まれていますが、QGIS開発チームによってメンテンスされていません。そのため、我々はそれらの責任を負うことができません。また、エントリーを追加・削除・編集することで手動でリポジトリリストを管理することができます。"
-#~ " **[編集]**ボタンをクリックすることで、一時的に特定のリポジトリを無効にすることができます。"
-
-#~ msgid "Only show plugins from the official repository,"
-#~ msgstr "公式リポジトリ由来のプラグインのみ表示する."
-
-#~ msgid "Show all plugins except those marked as experimental,"
-#~ msgstr "実験としてマークされたものを除き、すべてのプラグインを表示する,"
-
-#~ msgid "or Show all plugins, even those marked as experimental."
-#~ msgstr "あるいは、実験としてマークされたものでも、すべてのプラグインを表示する。"
-
-#~ msgid ""
-#~ "Data Providers are \"special\" plugins that provides access to a data store."
-#~ " By default, QGIS supports PostGIS layers and disk-based data stores "
-#~ "supported by the GDAL/OGR library. A Data Provider plugin extends the "
-#~ "ability of QGIS to use other data sources."
-#~ msgstr ""
-#~ "データプロバイダはデータストアへのアクセスを提供する”特別な”プラグインです。デフォルトでは、QGISはPostGISレイヤをサポートしており、ディスクに基づいたデータストアはGDAL/OGR"
-#~ " ライブラリによってサポートされています。データプロバイダプラグインは、他のデータソースを使用するQGISの能力を拡張します。"
-
-#~ msgid ""
-#~ "Updates of core plugins may be available in this repository as external "
-#~ "overlays."
-#~ msgstr "コアプラグインの更新は外部オーバーレイとしてリポジトリ内で可能です。"

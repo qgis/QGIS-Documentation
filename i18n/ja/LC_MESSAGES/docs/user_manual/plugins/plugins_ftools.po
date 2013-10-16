@@ -4,14 +4,16 @@
 # 
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
+# Yasuto Furukawa <furushare@gmail.com>, 2013
 # HiroM <mukuo@mri.co.jp>, 2013
+# y.takahashi <youji-takahashi@aeroasahi.co.jp>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-05-24 16:03+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-14 14:17+0000\n"
+"Last-Translator: Yasuto Furukawa <furushare@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,9 +34,24 @@ msgid ""
 "software, libraries, or complex workarounds. It provides a growing suite of "
 "spatial data management and analysis functions that are both fast and "
 "functional."
+msgstr "fToolプラグインの目的は、追加のソフトウェアやライブラリ、複雑な手順を必要とせず、ベクタデータに関する多くの解析や調査、演算を処理することです.\nそのために必要な、一連の地理空間データの解析や調査機能を提供しています."
+
+# 9cba571e922840fbb2549bafb944118b
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:19
+msgid ""
+"fTools is now automatically installed and enabled in new versions of QGIS, "
+"and as with all plugins, it can be disabled and enabled using the Plugin "
+"Manager (See Section :ref:`load_core_plugin`). When enabled, the fTools "
+"plugin adds a :menuselection:`Vector` menu to QGIS, providing functions "
+"ranging from Analysis and Research Tools to Geometry and Geoprocessing "
+"Tools, as well as several useful Data Management Tools."
 msgstr ""
-"fToolプラグインの目的は、追加のソフトウェアやライブラリ、複雑な手順を必要とせず、ベクタデータに関する多くの解析や調査、演算を処理することです.\n"
-"そのために必要な、一連の地理空間データの解析や調査機能を提供しています."
+
+# 38c6d847722b4c01b7d557f5ce47cf51
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:34
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:28
+msgid "Analysis tools"
+msgstr "解析ツール"
 
 # 1433434031764ecdb8ff66d571a7851f
 # 8e483f2a6a6042aca2eb7ce06107f6e2
@@ -91,8 +108,7 @@ msgid ""
 "Measure distances between two point layers, and output results as a) Square "
 "distance matrix, b) Linear distance matrix, or c) Summary of distances. Can "
 "limit distances to the k nearest features."
-msgstr ""
-"2つの点レイヤ間の距離を計測し、a)距離行列、b)線形距離行列、c)距離統計行列といった出力が可能です。また、最近傍点（k）の点群のみに限定して計測することも可能です。"
+msgstr "2つの点レイヤ間の距離を計測し、a)距離行列、b)線形距離行列、c)距離統計行列といった出力が可能です。また、最近傍点（k）の点群のみに限定して計測することも可能です。"
 
 # 72e7c908b9ca43bdb07fe6864b8aaa0c
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:45
@@ -209,13 +225,18 @@ msgid ""
 "Locate intersections between lines, and output results as a point shapefile."
 "  Useful for locating road or stream intersections, ignores line "
 "intersections with length > 0."
-msgstr ""
-"ラインとラインの交差を特定し,ポイントとしてShapefile型式で出力します。道路や軌跡の交差の特定に利用できます.線長が0のラインは無視されます."
+msgstr "ラインとラインの交差を特定し,ポイントとしてShapefile型式で出力します。道路や軌跡の交差の特定に利用できます.線長が0のラインは無視されます."
 
 # 365a60aa09b041e5b40ddff3aab6bcaa
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:75
 msgid "Table Ftools 1: fTools Analysis tools"
 msgstr "Table Ftools 1: fTools解析ツール"
+
+# 85aa0bdbf73347069ff5cedd94b93342
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:82
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:77
+msgid "Research tools"
+msgstr "調査ツール"
 
 # 74e149779296493aa2c1b1b46da400ee
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:86
@@ -332,6 +353,11 @@ msgstr "指定したラスタまたはベクタレイヤの領域から,新た�
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:112
 msgid "Table Ftools 2: fTools Research tools"
 msgstr "Table Ftools 2: fTools調査ツール"
+
+# 5b7f3ca25ec94b36988249df2a60f753
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:115
+msgid "Geoprocessing tools"
+msgstr "ジオプロセッシングツール"
 
 # c807f482d3944fe7aea508e71d88ee60
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:119
@@ -463,14 +489,17 @@ msgstr "融合"
 msgid ""
 "Merge features based on input field. All features with identical input "
 "values are combined to form one single feature."
-msgstr ""
-"指定フィールドの値に基づいて地物を結合します.\n"
-" 全ての地物から同じ値の指定属性値のものが選ばれて1個の地物に結合され,Shapefileとして出力します"
+msgstr "指定フィールドの値に基づいて地物を結合します.\n 全ての地物から同じ値の指定属性値のものが選ばれて1個の地物に結合され,Shapefileとして出力します"
 
 # cdcf5e743634409a9901b5853bb9612f
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:157
 msgid "Table Ftools 3: fTools Geoprocessing tools"
 msgstr "Table Ftools 3: fTools ジオミトリツール"
+
+# c6633428be3f499b87011014b1e5893e
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:160
+msgid "Geometry tools"
+msgstr "ジオメトリツール"
 
 # fd644656e52f48e0820c75d4f44718c7
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:164
@@ -557,6 +586,16 @@ msgstr "ジオミトリを簡素化する"
 msgid ""
 "Generalize lines or polygons with a modified Douglas-Peucker algorithm."
 msgstr "Douglas-Peuckerアルゴリズムでラインまたはポリゴンを間引いて簡素化します"
+
+# 4636c6c2d97a4085853339ad5cab46ca
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:186
+msgid "Densify geometry"
+msgstr ""
+
+# e8d3657b3fbd4525936876c3232b2fe2
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:186
+msgid "Densify lines or polygons by adding vertices"
+msgstr ""
 
 # b37490e732b041bcafd2cc3a64a211d7
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:189
@@ -647,8 +686,12 @@ msgid ""
 "The *Simplify geometry* tool can be used to remove duplicate nodes in line "
 "and polygon geometries, just set the *Simplify tolerance* parameter to 0 and"
 " this will do the trick."
-msgstr ""
-"Simplify geometry　ツールは、ラインやポリゴンの重複ノードを削除します。単純化の許容値を0に設定するだけでその操作を行います。"
+msgstr "Simplify geometry　ツールは、ラインやポリゴンの重複ノードを削除します。単純化の許容値を0に設定するだけでその操作を行います。"
+
+# 1f71e25d0a3a4fb886f6fa04ff14b437
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:220
+msgid "Data management tools"
+msgstr "データマネジメントツール"
 
 # b08ff51b0df64fd0a91e175e9da98601
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:224
@@ -676,9 +719,7 @@ msgid ""
 "Join additional attributes to vector layer based on spatial relationship. "
 "Attributes from one vector layer are appended to the attribute table of "
 "another layer and exported as a shapefile."
-msgstr ""
-"属性をベクタに結合し,追加します.\n"
-"ベクタレイヤの属性と他の属性テーブルを結合し,Shapefileとして出力します"
+msgstr "属性をベクタに結合し,追加します.\nベクタレイヤの属性と他の属性テーブルを結合し,Shapefileとして出力します"
 
 # 55e3377bb33b4ec6b56645a17365504f
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:234
@@ -700,42 +741,40 @@ msgstr "ベクタレイヤを指定したフィールドに基づいて複数の
 msgid "|merge_shapes|"
 msgstr "|merge_shapes|"
 
+# eb5369a156fb4533a4e42df575b924c0
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:237
+msgid "Merge shapefiles to one"
+msgstr "複数のシェープファイルを一つに結合する"
+
+# d491c2855f294be2a29495d22fb7e035
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:237
+msgid ""
+"Merge several shapefiles within a folder into a new shapefile based on the "
+"layer type (point, line, area)."
+msgstr ""
+
+# 9726c6811e7144bb97b642a6fefed6bb
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:241
+msgid "Create spatial index"
+msgstr "空間インデックスを作成する"
+
+# 25fc2dd7636948a386c26ac78f5d21e2
+#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:241
+msgid "Create a spatial index for OGR supported formats."
+msgstr ""
+
 # 01d954783fb44566b4fc1d67a2a1f5b6
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:245
 msgid "Table Ftools 5: fTools Data management tools"
 msgstr "Table Ftools 5: fTools データマネジメントツール"
 
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:19
-msgid ""
-"fTools is now automatically installed and enabled in new versions of QGIS, "
-"and as with all plugins, it can be disabled and enabled using the Plugin "
-"Manager (See Section :ref:`load_core_plugin`). When enabled, the fTools "
-"plugin adds a :menuselection:`Vector` menu to QGIS, providing functions "
-"ranging from Analysis and Research Tools to Geometry and Geoprocessing "
-"Tools, as well as several useful Data Management Tools."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:34
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:28
-msgid "Analysis tools"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:82
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:77
-msgid "Research tools"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:115
-msgid "Geoprocessing tools"
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:151
 msgid "|eliminate|"
-msgstr ""
+msgstr "|eliminate|"
 
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:151
 msgid "Eliminate sliver polygons"
-msgstr ""
+msgstr "微小ポリゴンの除去"
 
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:151
 msgid ""
@@ -743,107 +782,19 @@ msgid ""
 " or largest common boundary."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:160
-msgid "Geometry tools"
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:164
 msgid "Check geometry validity"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:186
-msgid "Densify geometry"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:186
-msgid "Densify lines or polygons by adding vertices"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:220
-msgid "Data management tools"
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins_ftools.rst:224
 msgid "Define current projection"
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:237
-msgid "Merge shapefiles to one"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:237
-msgid ""
-"Merge several shapefiles within a folder into a new shapefile based on the "
-"layer type (point, line, area)."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:241
-msgid "Create spatial index"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_ftools.rst:241
-msgid "Create a spatial index for OGR supported formats."
-msgstr ""
-
 #~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"
-
-#~ msgid ""
-#~ "fTools is now automatically installed and enabled in new versions of QGIS, "
-#~ "and as with all plugins, it can be disabled and enabled using the Plugin "
-#~ "Manager (See Section :ref:`load_core_plugin`).  When enabled, the fTools "
-#~ "plugin adds a :menuselection:`Vector` menu to QGIS, providing functions "
-#~ "ranging from Analysis and Research Tools to Geometry and Geoprocessing "
-#~ "Tools, as well as several useful Data Management Tools."
 #~ msgstr ""
-#~ "全てのfToolsプラグインは、現行バージョンには自動インストールされており、プラグインマネージャ(参照 :ref:`load_core_plugin`)から機能のオン／オフを設定することができます。\n"
-#~ "fToolsプラグインをオンにしている場合、プラグインは、:menuselection:`ベクタ`メニューの中にあり、分析や調査ツールの他、各種有用なデータ管理ツールが利用可能です。"
-
-#~ msgid "**fTools functions**"
-#~ msgstr "**fToolsの機能**"
-
-#~ msgid ""
-#~ "table_ftools_1_ through table_ftools_5_ list the functions available via the"
-#~ " fTools plugin, along with a brief description of each function."
-#~ msgstr ""
-#~ "fToolsプラグインでは、table_ftools_1_ から table_ftools_5_ "
-#~ "までの機能一覧に示した機能が利用可能です。各機能について簡単に説明しています。"
-
-#~ msgid "**Analysis tools available via the fTools plugin**"
-#~ msgstr "**fToolsプラグインで利用可能な解析ツール**"
-
-#~ msgid "**Research tools available via the fTools plugin**"
-#~ msgstr "**fToolsプラグインで利用可能な調査ツール**"
-
-#~ msgid "**Geoprocessing tools available via the fTools plugin**"
-#~ msgstr "**fToolsプラグインで利用可能な空間演算ツール**"
-
-#~ msgid "**Geometry tools available via the fTools plugin**"
-#~ msgstr "**fToolsプラグインで可能なジオミトリツール**"
 
 #~ msgid "Check geometry"
-#~ msgstr "ジオミトリの整合性をチェック"
-
-#~ msgid "Data management tools available via the fTools plugin**"
-#~ msgstr "fToolsプラグインで利用可能なデータマネジメントツール**"
-
-#~ msgid "|export_projection|"
-#~ msgstr "|export_projection|"
-
-#~ msgid "Export to projection"
-#~ msgstr "新しい投影法へエクスポートする"
-
-#~ msgid "Project features to new CRS and export as new shapefile."
-#~ msgstr "指定したベクタレイヤを新しいCRSに投影し,Shapefileとして出力します"
+#~ msgstr ""
 
 #~ msgid "Define projection"
-#~ msgstr "投影法の定義"
-
-#~ msgid "Merge shapefiles"
-#~ msgstr "Shapeファイルの結合"
-
-#~ msgid ""
-#~ "Merge several shapefiles within a folder into a new shapefile based on the "
-#~ "layer type (point, line, area)"
 #~ msgstr ""
-#~ "指定したフォルダ内の複数のShapefileを,レイヤタイプ(ポイント,ライン,ポリゴン)に基づいて結合し,新たなShapefileとして出力します"

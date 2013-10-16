@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2012, QGIS project
-# This file is distributed under the same license as the QGIS User Guide package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# This file is distributed under the same license as the QGIS Documentation Project package.
 # 
-#, fuzzy
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: QGIS User Guide 1.7\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-23 17:48\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-10 17:34+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
+"Language: ru\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Language: ru_RU\n"
-"X-Source-Language: C\n"
 
-# 8c6025f3c55444e4974321285a9343c7
+# 4384a05ed4f84a718208a8a4704f2569
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:5
+msgid "|updatedisclaimer|"
+msgstr "|updatedisclaimer|"
+
+# c3bf9406bdda4b249853a8e9a16f6eec
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:14
 msgid "Field Calculator"
 msgstr "Калькулятор полей"
 
-# afbcecd6ce54406a92d2e89c8b8896d4
+# aef781f3ba46427c95dc4582755c8e21
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:16
 msgid ""
 "The |mActionCalculateField| :sup:`Field Calculator` button in the attribute "
@@ -33,14 +35,9 @@ msgid ""
 "or defined functions, e.g to calculate length or area of geometry features. "
 "The results can be written to a new attribute column or it can be used to "
 "update values in an already existing column."
-msgstr ""
-"Кнопка |mActionCalculateField| :sup:`Калькулятор полей` в таблице атрибутов "
-"позволяет осуществлять расчёты на основе существующих значений атрибутов или"
-" заданных функций, например для расчёта длины или площади геометрических "
-"объектов. Результаты могут быть записаны в новую колонку атрибутов или "
-"использоваться для обновления значений существующей колонки."
+msgstr "Кнопка |mActionCalculateField| :sup:`Калькулятор полей` в таблице атрибутов позволяет осуществлять расчёты на основе существующих значений атрибутов или заданных функций, например для расчёта длины или площади геометрических объектов. Результаты могут быть записаны в новую колонку атрибутов или использоваться для обновления значений существующей колонки."
 
-# 80ea3823fbe041eab36a40ac5656800b
+# 533ecbf1ae784ab590f82723778a5dca
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:22
 msgid ""
 "You have to bring the vector layer in editing mode, before you can click on "
@@ -48,14 +45,14 @@ msgid ""
 "the dialog you first have to select whether you want to only update selected"
 " features, create a new attribute field where the results of the calculation"
 " will be added or update an existing field."
-msgstr ""
-"Прежде чем нажать иконку «Калькулятора полей» (см. figure_attributes_3_), "
-"необходимо перевести слой в режим редактирования. В появившемся диалоговом "
-"окне сначала необходимо выбрать одну из опций: «Обновить существующее поле»,"
-" «Обновить только выбранные объекты» или создать «Новое поле» таблицы "
-"атрибутов, куда будут добавлены результаты вычислений."
+msgstr "Прежде чем нажать иконку «Калькулятора полей» (см. figure_attributes_3_), необходимо перевести слой в режим редактирования. В появившемся диалоговом окне сначала необходимо выбрать одну из опций: «Обновить существующее поле», «Обновить только выбранные объекты» или создать «Новое поле» таблицы атрибутов, куда будут добавлены результаты вычислений."
 
-# 19f33e50410a41069d62c8ea9ca3c4a4
+# 1c1ae55a566f449d854cd9b8da74ca2a
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:38
+msgid "Field Calculator |nix|"
+msgstr ""
+
+# cc237d41ab924c559aa4b4bbcffe4ee8
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:40
 msgid ""
 "If you choose to add a new field, you need to enter a field name, a field "
@@ -63,29 +60,18 @@ msgid ""
 "precision (see figure_attributes_3_). For example, if you choose a field "
 "width of 10 and a field precision of 3 it means you have 6 signs before the "
 "dot, then the dot and another 3 signs for the precision."
-msgstr ""
-"Чтобы добавить новое поле, необходимо указать его имя, тип (целое число "
-"(integer), десятичное (real) или текст (string)), размер, и точность (только"
-" для десятичного числа), см. figure_attributes_3_. Например, если задать "
-"размер поля, равный 10, а точность 3, то это будет означать, что в поле "
-"может быть записано шестизначное число, десятичная запятая и 3 знака после "
-"запятой, определяющие точность."
+msgstr "Чтобы добавить новое поле, необходимо указать его имя, тип (целое число (integer), десятичное (real) или текст (string)), размер, и точность (только для десятичного числа), см. figure_attributes_3_. Например, если задать размер поля, равный 10, а точность 3, то это будет означать, что в поле может быть записано шестизначное число, десятичная запятая и 3 знака после запятой, определяющие точность."
 
-# 21e242f739704afc8542bd839f1359c1
+# 5e6d9703f578481294628a105c44f53e
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:46
 msgid ""
 "The **Function List** contains functions as well as fields and values. View "
 "the help function in the **Selected Function Help**. In **Expression** you "
 "see the calculation expressions you create with the **Function List**. The "
 "most commonly used operators, see **Operators**."
-msgstr ""
-"Секция **Функции** содержит все доступные операторы, а также поля и "
-"значения. Описание функции отображается в поле **Описание функции**. В поле "
-"**Выражение** отображается выражение, составленое из элементов группы "
-"**Функции**. Наиболее часто используемые операторы вынесены на отдельную "
-"панель **Операторы**."
+msgstr "Секция **Функции** содержит все доступные операторы, а также поля и значения. Описание функции отображается в поле **Описание функции**. В поле **Выражение** отображается выражение, составленое из элементов группы **Функции**. Наиболее часто используемые операторы вынесены на отдельную панель **Операторы**."
 
-# 239945bb876c499b802a3aa2b0199e4c
+# cf3c3593d6264b3c89ac1ae76911d8e6
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:51
 msgid ""
 "In the **Function List**, click on :guilabel:`Fields and Values` to view all"
@@ -99,19 +85,9 @@ msgid ""
 "side opens the **Field Values** list with the unique values. To add a value "
 "to the Field calculator **Expression** box, double click its name in the "
 "**Field Values** list."
-msgstr ""
-"Выберите раздел :guilabel:`Поля и значения` в списке **Функции** чтобы "
-"увидеть список имеющихся атрибутов. Для добавления атрибута в поле "
-"**Выражение** дважды щелкните по его имени в списке :guilabel:`Поля и "
-"значения`. В общем случае вы можете использовать разные поля, функции и "
-"величины при составлении выражения. Чтобы просмотреть все имеющиеся "
-"значения, выделите поле в списке, затем воспользуйтесь одной из кнопок "
-"**[Загрузить все уникальные значения]** или **[Загрузить 10 значений]**. "
-"Справа появится поле **Значения полей**, заполненное значениями. Чтобы "
-"добавить значение в поле **Выражения**, сделайте двойной щелчок по нему в "
-"списке **Значения полей**."
+msgstr "Выберите раздел :guilabel:`Поля и значения` в списке **Функции** чтобы увидеть список имеющихся атрибутов. Для добавления атрибута в поле **Выражение** дважды щелкните по его имени в списке :guilabel:`Поля и значения`. В общем случае вы можете использовать разные поля, функции и величины при составлении выражения. Чтобы просмотреть все имеющиеся значения, выделите поле в списке, затем воспользуйтесь одной из кнопок **[Загрузить все уникальные значения]** или **[Загрузить 10 значений]**. Справа появится поле **Значения полей**, заполненное значениями. Чтобы добавить значение в поле **Выражения**, сделайте двойной щелчок по нему в списке **Значения полей**."
 
-# 0408935a8a8540e089f622864d57e998
+# 9474e11dc28c42cbb15b4925124e0d2c
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:62
 msgid ""
 "The :guilabel:`Operators`, :guilabel:`Math`, :guilabel:`Conversions`, "
@@ -124,68 +100,47 @@ msgid ""
 "objects. With :guilabel:`Record` group functions you can add a numeration to"
 " your data set. To add a function to the Field calculator **Expression** "
 "box, click on the > and then doubleclick the function."
-msgstr ""
-"Группы :guilabel:`Операторы`, :guilabel:`Функции`, "
-":guilabel:`Преобразования`, :guilabel:`Строковые`, "
-":guilabel:`Геометрические` и :guilabel:`Записи` предоставляют различные "
-"функции. В группе :guilabel:`Операторы` находятся арифметические и "
-"логические операторы. В :guilabel:`Функции` --- математические функции. "
-"Группа :guilabel:`Преобразования` содержит функции преобразования типов "
-"данных друг в друга. Раздел :guilabel:`Строковые` предоставляет функции "
-"обработки строк, а группа :guilabel:`Геометрические` --- функции для работы "
-"с геометрией объекта. И, наконец, группа :guilabel:`Записи` содержит функции"
-" для нумерации записей таблицы. Чтобы добавить функцию в поле **Выражение** "
-"дважды щелкните по её имени в списке."
+msgstr "Группы :guilabel:`Операторы`, :guilabel:`Функции`, :guilabel:`Преобразования`, :guilabel:`Строковые`, :guilabel:`Геометрические` и :guilabel:`Записи` предоставляют различные функции. В группе :guilabel:`Операторы` находятся арифметические и логические операторы. В :guilabel:`Функции` --- математические функции. Группа :guilabel:`Преобразования` содержит функции преобразования типов данных друг в друга. Раздел :guilabel:`Строковые` предоставляет функции обработки строк, а группа :guilabel:`Геометрические` --- функции для работы с геометрией объекта. И, наконец, группа :guilabel:`Записи` содержит функции для нумерации записей таблицы. Чтобы добавить функцию в поле **Выражение** дважды щелкните по её имени в списке."
 
-# 215865fd471e4f18bb93b12f18259b4d
+# 4620083e5d3940a5b496199491496faf
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:75
 msgid ""
 "Load the Shapefile :file:`railroads.shp` in |qg| and press "
 "|mActionOpenTable| :sup:`Open Attribute Table`."
-msgstr ""
-"Добавьте shape-файл :file:`railroads.shp` в |qg| и нажмите кнопку "
-"|mActionOpenTable| :sup:`Открыть таблицу атрибутов`."
+msgstr "Добавьте shape-файл :file:`railroads.shp` в |qg| и нажмите кнопку |mActionOpenTable| :sup:`Открыть таблицу атрибутов`."
 
-# bab0ad5090be4ba88c24c5f83eff3494
+# d633b72383274ea1b9291970d384d0cb
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:77
 msgid ""
 "Click on |mActionToggleEditing| :sup:`Toggle editing mode` and open the "
 "|mActionCalculateField| :sup:`Field Calculator` dialog."
-msgstr ""
-"Включите |mActionToggleEditing| :sup:`Режим редактирования` и вызовите "
-"|mActionCalculateField| :sup:`Калькулятор полей`."
+msgstr "Включите |mActionToggleEditing| :sup:`Режим редактирования` и вызовите |mActionCalculateField| :sup:`Калькулятор полей`."
 
-# a72a6126f90041e883a5dda9f9ac3bfc
+# bb8817812164422eb7cfc501b4b37540
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:79
 msgid ""
 "Select the |checkbox| :guilabel:`Create a new field` checkbox to safe the "
 "calculations into a new field."
-msgstr ""
-"Активируйте флажок |checkbox| :guilabel:`Создать новое поле`, чтобы записать"
-" результаты расчетов в новое поле."
+msgstr "Активируйте флажок |checkbox| :guilabel:`Создать новое поле`, чтобы записать результаты расчетов в новое поле."
 
-# c443afab30d14a269779218e4969c987
+# d99c8195d2804041b903b181aacb6694
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:81
 msgid ""
 "Add ``length`` as Output field name, ``real`` as Output field type and "
 "define Output field width 10 and a Precision of 3."
-msgstr ""
-"Задайте ``length`` в качестве имени результирующего поля, «Десятичное число "
-"(real)» в качестве типа поля, укажите «Размер» поля 10 и «Точность» 3."
+msgstr "Задайте ``length`` в качестве имени результирующего поля, «Десятичное число (real)» в качестве типа поля, укажите «Размер» поля 10 и «Точность» 3."
 
-# 6475f03f0d654ab6a65d72ead69e5ea7
+# 295121342fbb49f0826245cb3f409a91
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:86
 msgid "You can now find a new column ``length`` in the attribute table."
-msgstr ""
-"В таблице атрибутов теперь можно видеть новое поле ``length`` со значениями "
-"длин объектов."
+msgstr "В таблице атрибутов теперь можно видеть новое поле ``length`` со значениями длин объектов."
 
-# 8e161824a1aa4049837bdb050920e5cf
+# 34ba782be327410397dc1ccbf7d7055f
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:88
 msgid "The available functions are listed below."
 msgstr "Список всех доступных функций находится ниже."
 
-# d456311c773645f59424b3cba0ed43a7
+# 2a8f4ad949d344fa8463b1b884467c3e
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:90
 msgid ""
 "The field calculator **Function list** with the **Selected Function Help** ,"
@@ -193,17 +148,26 @@ msgid ""
 "based rendering in the Style tab of the Layer properties and the expression "
 "based labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core "
 "application."
-msgstr ""
-"Список **Функции**, а также группы **Описание функции**, **Операторы** и "
-"**Выражение** используюся также при создании правил для отрисовки по "
-"правилам и при создании подписей на основе выражений."
+msgstr "Список **Функции**, а также группы **Описание функции**, **Операторы** и **Выражение** используюся также при создании правил для отрисовки по правилам и при создании подписей на основе выражений."
 
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:5
-msgid "|updatedisclaimer|"
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Field_Calculator"
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:38
-msgid "Field Calculator |nix|"
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Calculator_Field"
+msgstr ""
+
+# 5264283f7759483f879d46b1a3fa5b0b
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
+msgid "Derived_Fields"
+msgstr ""
+
+# fba5a12d375d4252a11fb97a3a28a80c
+#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:96
+msgid "Field_Calculator_Functions"
 msgstr ""
 
 #: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:72
@@ -320,35 +284,13 @@ msgid ""
 "with options to load sample values from the selected field."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
-msgid "Field_Calculator"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
-msgid "Calculator_Field"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:9
-msgid "Derived_Fields"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/field_calculator.rst:96
-msgid "Field_Calculator_Functions"
-msgstr ""
-
 #~ msgid ""
 #~ "A short example illustrates how the field calculator works. We want to "
 #~ "calculate the length of the ``railroads`` layer from the QGIS sample "
 #~ "dataset:"
 #~ msgstr ""
-#~ "Приведём небольшой пример использования «Калькулятора полей». Рассмотрим "
-#~ "процесс расчёта длины объектов слоя ``railroads`` из демонстрационного "
-#~ "набора данных QGIS:"
 
 #~ msgid ""
 #~ "Now click on function ``length`` in the :guilabel:`Geometry` group to add it"
 #~ " as ``$length`` into the Field calculator expression box and click **[Ok]**."
 #~ msgstr ""
-#~ "Теперь найдите в группе :guilabel:`Геометрические` оператор ``$length`` и "
-#~ "дважды щелкните по нему. Функция появится в поле **Выражение**. Теперь "
-#~ "нажмите **[OK]**."
