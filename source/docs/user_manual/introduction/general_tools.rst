@@ -700,7 +700,8 @@ delimiter. To change the delimiter to tab use ``\t`` (this is a regular expressi
 for the tab character).
 
 Once the file is parsed, choose the ``X`` and ``Y`` fields from the dropdown
-lists and if available also the WKT field for the CRS information. Finally enter
+lists. Make a :guilabel:`Geometry definition` and define the 'Geometry field' 
+if |radiobuttonoff| :guilabel:`Well know text (WKT)` is available. Finally enter
 a Layer name (e.g., :file:`elevp` ) as shown in figure_delimited_text_1_ . To
 add the layer to the map, click **[OK]**. The delimited text file now behaves as
 any other map layer in QGIS.
