@@ -5,11 +5,11 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-03-22 15:05+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:17+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -49,6 +49,11 @@ msgid ""
 "distance, simple feature"
 msgstr ""
 
+# 61ca55cef0c4455cb8a5a5811220977c
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:18
+msgid "Overview"
+msgstr ""
+
 # 1733eb26ded841ad8012206e6c2a45ea
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:20
 msgid ""
@@ -60,9 +65,49 @@ msgid ""
 "types of spatial analysis, such as network analysis."
 msgstr ""
 
+# 93d28a0daae54a2989ac47fcfea6f15a
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:27
+msgid ""
+"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
+"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
+"souvenirs. Looking at the Underground map of London (see "
+"figure_topology_london_) you have to find connecting trains to get from "
+"Covent Garden to St. Paul's. This requires topological information (data) "
+"about where it is possible to change trains. Looking at a map of the "
+"underground, the topological relationships are illustrated by circles that "
+"show connectivity."
+msgstr ""
+
+# 070555a7369247dca0e07c84bc8ef967
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:45
+msgid "Topology of London Underground Network."
+msgstr ""
+
 # 0a9cc77b5b114e7c9745aba01622af72
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:48
 msgid "Topology errors"
+msgstr ""
+
+# 9049d16e38b34fecbc5ab18c0aa3beb9
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:50
+msgid ""
+"There are different types of topological errors and they can be grouped "
+"according to whether the vector feature types are polygons or polylines. "
+"Topological errors with **polygon** features can include unclosed polygons, "
+"gaps between polygon borders or overlapping polygon borders. A common "
+"topological error with **polyline** features is that they do not meet "
+"perfectly at a point (node). This type of error is called an **undershoot** "
+"if a gap exists between the lines, and an **overshoot** if a line ends "
+"beyond the line it should connect to (see figure_topology_errors_)."
+msgstr ""
+
+# 9e2b5d9c55774fb0a656d1553cf2e126
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:69
+msgid ""
+"Undershoots (1) occur when digitised vector lines that should connect to "
+"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
+"the line it should connect to. Slivers (3) occur when the vertices of two "
+"polygons do not match up on their borders."
 msgstr ""
 
 # e3e5edddd97341af8ecb05ced4d4fc3d
@@ -120,6 +165,13 @@ msgid ""
 "vector layer."
 msgstr ""
 
+# 7f1c4f0894604973a815c408111098b7
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:104
+msgid ""
+"The following list shows some examples of where topology rules can be "
+"defined for real world features in a vector map:"
+msgstr ""
+
 # bb5d4cb275a146d585e518ff16d24a65
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:107
 msgid "Area edges of a municipality map must not overlap."
@@ -143,9 +195,63 @@ msgid ""
 "Contour lines in a vector line layer must not intersect (cross each other)."
 msgstr ""
 
+# 3a69dff7a8b246a0a9255fcb1ef85440
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:114
+msgid "Topological tools"
+msgstr ""
+
+# 86d03fcca6c445da83abe348c960f494
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:116
+msgid ""
+"Many GIS applications provide tools for topological editing. For example in "
+"QGIS you can **enable topological editing** to improve editing and "
+"maintaining common boundaries in polygon layers. A GIS such as QGIS "
+"'detects' a shared boundary in a polygon map so you only have to move the "
+"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
+" other polygon boundaries as shown in figure_topological_tools_ (1)."
+msgstr ""
+
+# 93a1b59530454b2f8ce5607cea207d7f
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:123
+msgid ""
+"Another topological option allows you to prevent** polygon overlaps** during"
+" digitising (see figure_topological_tools_ (2)). If you already have one "
+"polygon, it is possible with this option to digitise a second adjacent "
+"polygon so that both polygons overlap and QGIS then clips the second polygon"
+" to the common boundary."
+msgstr ""
+
+# 795033bff9044d669f6fc615400a8c42
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:139
+msgid ""
+"(1) Topological editing to detect shared boundaries, when moving vertices. "
+"When moving a vertex, all features that share that vertex are updated. (2) "
+"To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
+" is clipped to avoid overlapping neighbouring areas."
+msgstr ""
+
 # d3fe2b210ce64c0395a76e34b643c2b8
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:145
 msgid "Snapping distance"
+msgstr ""
+
+# 8e234ced4e3746d19a63f57319f4ad65
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:147
+msgid ""
+"Snapping distance is the distance a GIS uses to search for the closest "
+"vertex and / or segment you are trying to connect when you digitise. A "
+"**segment** is a straight line formed between two vertices in a polygon or "
+"polyline geometry. If you aren't within the snapping distance, a GIS such as"
+" QGIS will leave the vertex where you release the mouse button, instead of "
+"snapping it to an existing vertex and / or segment (see "
+"figure_snapping_distance_)."
+msgstr ""
+
+# c918eef2530941959c75ea2496bc46d7
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:164
+msgid ""
+"The snapping distance (black circle) is defined in map units (e.g. decimal "
+"degrees) for snapping to either vertices or segments."
 msgstr ""
 
 # 3ca192a5bd184c9b96d7037dbf4b2699
@@ -174,6 +280,11 @@ msgid ""
 "vertex to move or edit."
 msgstr ""
 
+# ad1612fc70874fcab3c7e06caa735f46
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:182
+msgid "Common problems / things to be aware of"
+msgstr ""
+
 # 79818146d7444e8aa3c643371ad81055
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:184
 msgid ""
@@ -186,6 +297,11 @@ msgstr ""
 # ef31773d66a443af9f3d17447e229d45
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:190
 msgid "What have we learned?"
+msgstr ""
+
+# 38fe0f458a244cdd99e9618a3b64cfea
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:192
+msgid "Let's wrap up what we covered in this worksheet:"
 msgstr ""
 
 # 494920809ece4ce8b0a9d785285140f0
@@ -250,12 +366,56 @@ msgid ""
 "layer is topologically correct?"
 msgstr ""
 
+# 04fb951518db48d3bae728950ec030be
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:216
+msgid "Something to think about"
+msgstr ""
+
 # 9a5b21f0f31c4d1d856965d877096f1a
 #: ../../source/docs/gentle_gis_introduction/06_topology.rst:218
 msgid ""
 "If you don't have a computer available, you can use a map of a bus or "
 "railway network and discuss the spatial relationships and topology with your"
 " learners."
+msgstr ""
+
+# 3d6268206cbf48419ebb03df21bf28d7
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:222
+msgid "Further reading"
+msgstr ""
+
+# 1094ad4a50e7473baeded3597fe77e7f
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:224
+msgid "**Books**:"
+msgstr ""
+
+# 8d8e6338ab7b4199b8296941010580b8
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:226
+msgid ""
+"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
+"3rd Edition. McGraw Hill. ISBN: 0070658986"
+msgstr ""
+
+# 25c199075a174a4c95013d128f6a6edf
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:228
+msgid ""
+"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
+"3rd Edition. Wiley. ISBN: 9814126195"
+msgstr ""
+
+# 6cb0458fdb4d4f0e90075a8c7708a13a
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:231
+msgid "**Websites**:"
+msgstr ""
+
+# a7b68008c60d4c84ab727bb6fb3d3fc6
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:233
+msgid "http://www.innovativegis.com/basis/primer/concepts.html"
+msgstr ""
+
+# dd0976da79af43d2b2186a8d14871c30
+#: ../../source/docs/gentle_gis_introduction/06_topology.rst:234
+msgid "http://en.wikipedia.org/wiki/Geospatial_topology"
 msgstr ""
 
 # 63de3da7c85740f2a4b4e4e4aaaaa369
@@ -277,229 +437,3 @@ msgid ""
 "Reference Systems** to understand how we relate data from our spherical "
 "earth onto flat maps!"
 msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:18
-msgid "Overview"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:27
-msgid ""
-"Imagine you travel to London. On a sightseeing tour you plan to visit St. "
-"Paul's Cathedral first and in the afternoon Covent Garden Market for some "
-"souvenirs. Looking at the Underground map of London (see "
-"figure_topology_london_) you have to find connecting trains to get from "
-"Covent Garden to St. Paul's. This requires topological information (data) "
-"about where it is possible to change trains. Looking at a map of the "
-"underground, the topological relationships are illustrated by circles that "
-"show connectivity."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:45
-msgid "Topology of London Underground Network."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:50
-msgid ""
-"There are different types of topological errors and they can be grouped "
-"according to whether the vector feature types are polygons or polylines. "
-"Topological errors with **polygon** features can include unclosed polygons, "
-"gaps between polygon borders or overlapping polygon borders. A common "
-"topological error with **polyline** features is that they do not meet "
-"perfectly at a point (node). This type of error is called an **undershoot** "
-"if a gap exists between the lines, and an **overshoot** if a line ends "
-"beyond the line it should connect to (see figure_topology_errors_)."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:69
-msgid ""
-"Undershoots (1) occur when digitised vector lines that should connect to "
-"each other don’t quite touch. Overshoots (2) happen if a line ends beyond "
-"the line it should connect to. Slivers (3) occur when the vertices of two "
-"polygons do not match up on their borders."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:104
-msgid ""
-"The following list shows some examples of where topology rules can be "
-"defined for real world features in a vector map:"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:114
-msgid "Topological tools"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:116
-msgid ""
-"Many GIS applications provide tools for topological editing. For example in "
-"QGIS you can **enable topological editing** to improve editing and "
-"maintaining common boundaries in polygon layers. A GIS such as QGIS "
-"'detects' a shared boundary in a polygon map so you only have to move the "
-"edge vertex of one polygon boundary and QGIS will ensure the updating of the"
-" other polygon boundaries as shown in figure_topological_tools_ (1)."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:123
-msgid ""
-"Another topological option allows you to prevent** polygon overlaps** during"
-" digitising (see figure_topological_tools_ (2)). If you already have one "
-"polygon, it is possible with this option to digitise a second adjacent "
-"polygon so that both polygons overlap and QGIS then clips the second polygon"
-" to the common boundary."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:139
-msgid ""
-"(1) Topological editing to detect shared boundaries, when moving vertices. "
-"When moving a vertex, all features that share that vertex are updated. (2) "
-"To avoid polygon overlaps, when a new polygon is digitised (shown in red) it"
-" is clipped to avoid overlapping neighbouring areas."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:147
-msgid ""
-"Snapping distance is the distance a GIS uses to search for the closest "
-"vertex and / or segment you are trying to connect when you digitise. A "
-"**segment** is a straight line formed between two vertices in a polygon or "
-"polyline geometry. If you aren't within the snapping distance, a GIS such as"
-" QGIS will leave the vertex where you release the mouse button, instead of "
-"snapping it to an existing vertex and / or segment (see "
-"figure_snapping_distance_)."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:164
-msgid ""
-"The snapping distance (black circle) is defined in map units (e.g. decimal "
-"degrees) for snapping to either vertices or segments."
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:182
-msgid "Common problems / things to be aware of"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:192
-msgid "Let's wrap up what we covered in this worksheet:"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:216
-msgid "Something to think about"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:222
-msgid "Further reading"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:224
-msgid "**Books**:"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:226
-msgid ""
-"Chang, Kang-Tsung (2006). Introduction to Geographic Information Systems. "
-"3rd Edition. McGraw Hill. ISBN: 0070658986"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:228
-msgid ""
-"DeMers, Michael N. (2005). Fundamentals of Geographic Information Systems. "
-"3rd Edition. Wiley. ISBN: 9814126195"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:231
-msgid "**Websites**:"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:233
-msgid "http://www.innovativegis.com/basis/primer/concepts.html"
-msgstr ""
-
-#: ../../source/docs/gentle_gis_introduction/06_topology.rst:234
-msgid "http://en.wikipedia.org/wiki/Geospatial_topology"
-msgstr ""
-
-#~ msgid "GIS for Educators"
-#~ msgstr ""
-
-#~ msgid "Overview:"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Imagine you travel to London. On a sightseeing tour you plan to visit St. "
-#~ "Paul's Cathedral first and in the afternoon Covent Garden Market for some "
-#~ "souvenirs. Looking at the Underground map of London (see  ) you have to find"
-#~ " connecting trains to get from Covent Garden to St. Paul's. This requires "
-#~ "topological information (data) about where it is possible to change trains. "
-#~ "Looking at a map of the underground, the topological relationships are "
-#~ "illustrated by circles that show connectivity."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "There are different types of topological errors and they can be grouped "
-#~ "according to whether the vector feature types are polygons or polylines. "
-#~ "Topological errors with **polygon** features can include unclosed polygons, "
-#~ "gaps between polygon borders or overlapping polygon borders. A common "
-#~ "topological error with **polyline** features is that they do not meet "
-#~ "perfectly at a point (node). This type of error is called an **undershoot** "
-#~ "if a gap exists between the lines, and an **overshoot** if a line ends "
-#~ "beyond the line it should connect to (see  )."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The following list shows some examples of where topology rules can be "
-#~ "defined for real world features in a vector map."
-#~ msgstr ""
-
-#~ msgid "**Topological tools**"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Many GIS applications provide tools for topological editing. For example in "
-#~ "QGIS you can **enable topological editing** to improve editing and "
-#~ "maintaining common boundaries in polygon layers. A GIS such as QGIS "
-#~ "'detects' a shared boundary in a polygon map so you only have to move the "
-#~ "edge vertex of one polygon boundary and QGIS will ensure the updating of the"
-#~ " other polygon boundaries as shown in (1) ."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Another topological option allows you to prevent** polygon overlaps** during"
-#~ " digitising (see (2) ). If you already have one polygon, it is possible with"
-#~ " this option to digitise a second adjacent polygon so that both polygons "
-#~ "overlap and QGIS then clips the second polygon to the common boundary."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Snapping distance is the distance a GIS uses to search for the closest "
-#~ "vertex and / or segment you are trying to connect when you digitise. A "
-#~ "**segment** is a straight line formed between two vertices in a polygon or "
-#~ "polyline geometry. If you aren't within the snapping distance, a GIS such as"
-#~ " QGIS will leave the vertex where you release the mouse button, instead of "
-#~ "snapping it to an existing vertex and / or segment (see  )."
-#~ msgstr ""
-
-#~ msgid "**Common problems / things to be aware of**"
-#~ msgstr ""
-
-#~ msgid "Let\\'s wrap up what we covered in this worksheet:"
-#~ msgstr ""
-
-#~ msgid "Something to think about:"
-#~ msgstr ""
-
-#~ msgid "Further reading:"
-#~ msgstr ""
-
-#~ msgid "**Books:**"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Chang, Kang-Tsung (2006): Introduction to Geographic Information Systems. "
-#~ "3rd Edition. w Hill. (ISBN 0070658986)"
-#~ msgstr ""
-
-#~ msgid ""
-#~ "DeMers, Michael N. (2005): Fundamentals of Geographic Information Systems. "
-#~ "3rd Edition. Wiley. (ISBN 9814126195)"
-#~ msgstr ""
-
-#~ msgid "Websites:"
-#~ msgstr ""

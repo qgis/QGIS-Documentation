@@ -6,11 +6,11 @@
 # choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-08-10 11:53+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:17+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -232,6 +232,20 @@ msgid ""
 "better the result will be."
 msgstr ""
 
+# 9730de3e6be040eab1cfde7ff5fc05ab
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:78
+msgid ""
+"For this example, we are using a topo sheet of South Dakota from SDGS. It "
+"can later be visualized together with the data from the GRASS "
+":file:`spearfish60` location. You can download the topo sheet here: "
+"http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
+msgstr ""
+
+# ebd3f44150ad48f6a50e1ecafb11f99c
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:93
+msgid "Georeferencer Plugin Dialog |nix|"
+msgstr ""
+
 # c6ff682e8e13419d89cb8ceb0efd4225
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:99
 msgid "Entering ground control points (GCPs)"
@@ -261,6 +275,11 @@ msgid ""
 "order to locate a relevant set of GCP points."
 msgstr ""
 
+# f1c9da234aa54c639d63a49eb25fe19c
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:132
+msgid "Add points to the raster image |nix|"
+msgstr ""
+
 # b090433eec964c15982115221669c9c2
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:146
 msgid "Defining the transformation settings"
@@ -271,6 +290,11 @@ msgstr ""
 msgid ""
 "After you have added your GCPs to the raster image, you need to define the "
 "transformation settings for the georeferencing process."
+msgstr ""
+
+# 289800f41bd74f89bcbc64a56f2f09d4
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:161
+msgid "Defining the georeferencer transformation settings |nix|"
 msgstr ""
 
 # 21a64a9b286b49fd82d5246e5e2f8d7e
@@ -291,6 +315,15 @@ msgstr ""
 # da701970438f4a988749675901dd859c
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:193
 msgid "Define the Resampling method"
+msgstr ""
+
+# 243787d7391b45ea936bc9b4f69d619e
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:195
+msgid ""
+"The type of resampling you choose will likely depending on your input data "
+"and the ultimate objective of the exercise. If you don't want to change "
+"statistics of the image, you might want to choose 'Nearest neighbour', "
+"whereas a 'Cubic resampling' will likely provide a more smoothed result."
 msgstr ""
 
 # fd6a26244ef24e8dbc235aac2e2ced72
@@ -333,6 +366,32 @@ msgstr ""
 msgid ""
 "There are several options that need to be defined for the georeferenced "
 "output raster."
+msgstr ""
+
+# fe7bc44c05a84ba49d9fb41da711222f
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:214
+msgid ""
+"The checkbox |checkbox| :guilabel:`Create world file` is only available, if "
+"you decide to use the linear transformation type, because this means that "
+"the raster image actually won't be transformed. In this case, the field "
+":guilabel:`Output raster` is not activated, because only a new world-file "
+"will be created."
+msgstr ""
+
+# d4710c7ec6d14b849e161d587c8ef2f6
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:219
+msgid ""
+"For all other transformation type you have to define an :guilabel:`Output "
+"raster`. As default a new file ([filename]_modified) will be created in the "
+"same folder together with the original raster image."
+msgstr ""
+
+# 8718488a2cae4c16ac1000f3a41759a0
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:222
+msgid ""
+"As a next step you have to define the :guilabel:`Target SRS` (Spatial "
+"Reference System) for the georeferenced raster (see section "
+":ref:`label_projections`)."
 msgstr ""
 
 # 98fff4920e1b43e9ad0aa4af11c4a2d9
@@ -422,6 +481,11 @@ msgid ""
 "georeferencing` to create the new georeferenced raster."
 msgstr ""
 
+# 0a3a153b3d3541519dc80063ef85aba0
+#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:22
+msgid "Georeferencer tools"
+msgstr ""
+
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:31
 msgid "|mActionOpenRaster|"
 msgstr ""
@@ -458,18 +522,6 @@ msgid ""
 " appears as shown in figure_georeferencer_1_."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:78
-msgid ""
-"For this example, we are using a topo sheet of South Dakota from SDGS. It "
-"can later be visualized together with the data from the GRASS "
-":file:`spearfish60` location. You can download the topo sheet here: "
-"http://grass.osgeo.org/sampledata/spearfish_toposheet.tar.gz."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:93
-msgid "Georeferencer Plugin Dialog |nix|"
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:101
 msgid ""
 "To start georeferencing an unreferenced raster, we must load it using the "
@@ -491,10 +543,6 @@ msgid ""
 "windows, if they are at the wrong place."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:132
-msgid "Add points to the raster image |nix|"
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:135
 msgid ""
 "The points that are added to the map will be stored in a separate text file "
@@ -504,10 +552,6 @@ msgid ""
 "contains values of the form: ``mapX, mapY, pixelX, pixelY``. You can use the"
 " |mActionloadGCPpoints| :sup:`Load GCP points` and |mActionSaveGCPPointsAs| "
 ":sup:`Save GCP points as` buttons to manage the files."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:161
-msgid "Defining the georeferencer transformation settings |nix|"
 msgstr ""
 
 #: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:173
@@ -551,43 +595,8 @@ msgid ""
 "coordinates."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:195
-msgid ""
-"The type of resampling you choose will likely depending on your input data "
-"and the ultimate objective of the exercise. If you don't want to change "
-"statistics of the image, you might want to choose 'Nearest neighbour', "
-"whereas a 'Cubic resampling' will likely provide a more smoothed result."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:214
-msgid ""
-"The checkbox |checkbox| :guilabel:`Create world file` is only available, if "
-"you decide to use the linear transformation type, because this means that "
-"the raster image actually won't be transformed. In this case, the field "
-":guilabel:`Output raster` is not activated, because only a new world-file "
-"will be created."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:219
-msgid ""
-"For all other transformation type you have to define an :guilabel:`Output "
-"raster`. As default a new file ([filename]_modified) will be created in the "
-"same folder together with the original raster image."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:222
-msgid ""
-"As a next step you have to define the :guilabel:`Target SRS` (Spatial "
-"Reference System) for the georeferenced raster (see section "
-":ref:`label_projections`)."
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_georeferencer.rst:22
-msgid "Georeferencer tools"
-msgstr ""
-
 #~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"
+#~ msgstr ""
 
 #~ msgid "|mActionAddRasterLayer|"
 #~ msgstr ""
@@ -618,13 +627,6 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid ""
-#~ "For this example, we are using a topo sheet of South Dakota from SDGS. It "
-#~ "can later be visualized together with the data from the GRASS spearfish60 "
-#~ "location. You can download the topo sheet here: "
-#~ "http://grass.osgeo.org/sampledata/spearfish\\_toposheet.tar.gz ."
-#~ msgstr ""
-
-#~ msgid ""
 #~ "To start georeferencing an unreferenced raster, we must load it using the "
 #~ "|mActionAddRasterLayer| button. The raster will show up in the main working "
 #~ "area of the dialog. Once the raster is loaded, we can start to enter "
@@ -634,7 +636,7 @@ msgstr ""
 #~ msgid ""
 #~ "Using the |mActionCapturePoint| :sup:`Add Point` button, add points to the "
 #~ "main working area and enter their coordinates (see Figure "
-#~ "figure_georeferencer_2_). For this procedure you have two options:"
+#~ "figure_georeferencer_2_). For this procedure you have three options:"
 #~ msgstr ""
 
 #~ msgid ""
@@ -647,11 +649,9 @@ msgstr ""
 #~ "(:file:`[filename].points`) usually together with the raster image. This "
 #~ "allows us to reopen the Georeferencer plugin at a later date and add new "
 #~ "points or delete existing ones to optimize the result. The points file "
-#~ "contains values of the form: mapX, mapY, pixelX, pixelY. You can use the "
-#~ "|mActionFileOpen| :sup:`Load GCP Points` and |mActionFileSave| :sup:`Save "
-#~ "GCP Points` buttons to manage the files. Within the GCP table you can click "
-#~ "on a column header and therewith enable e.g. numerical sorting. The GCP list"
-#~ " is automatically updated."
+#~ "contains values of the form: ``mapX, mapY, pixelX, pixelY``. You can use the"
+#~ " |mActionFileOpen| :sup:`Load GCP Points` and |mActionFileSave| :sup:`Save "
+#~ "GCP Points` buttons to manage the files."
 #~ msgstr ""
 
 #~ msgid "Currently, following algorithms are available:"
@@ -671,7 +671,6 @@ msgstr ""
 
 #~ msgid ""
 #~ "The **Polynomial algorithms** 1-3 are among the most widely used algorithms "
-#~ "for georeferencing, and each one differs by the degree of distortion "
 #~ "introduced to match source and destination ground control points. The most "
 #~ "widely used polynomial algorithm is the second order polynomial "
 #~ "transformation, which allows some curvature. First order polynomial "
@@ -688,30 +687,4 @@ msgstr ""
 #~ msgid ""
 #~ "The **Projective transformation** is a linear rotation and translation of "
 #~ "coordinates."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The type of resampling you choose will likely depending on your input data "
-#~ "and the ultimate objective of the exercise. If you don't want to change "
-#~ "statistics of the image, you might want to choose Nearest neighbour, whereas"
-#~ " a Cubic resampling will likely provide a more smoothed result."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "The checkbox |checkbox| :guilabel:`Create world file` is only available, if "
-#~ "you decide to use the linear transformation type, because this means that "
-#~ "the raster image actually won't be transformed. In this case, the field "
-#~ "Output raster is not activated, because only a new world-file will be "
-#~ "created."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "For all other transformation type you have to define an **Output raster**. "
-#~ "As default a new file ([filename]_modified) will be created in the same "
-#~ "folder together with the original raster image."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "As a next step you have to define the **Target SRS** (Spatial Reference "
-#~ "System) for the georeferenced raster (see section :ref:`label_projections`)."
 #~ msgstr ""

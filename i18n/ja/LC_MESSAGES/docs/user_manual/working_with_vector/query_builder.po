@@ -4,13 +4,15 @@
 # 
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
+# choro <u.ko.kubot@gmail.com>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-03 02:59+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-15 12:12+0000\n"
+"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,13 +36,17 @@ msgid ""
 "The Query Builder allows you to define a subset of a table using a SQL-like "
 "WHERE clause and display the result in the main window. The query result "
 "then can be saved as a new vector layer."
-msgstr ""
-"クエリビルダーはSQLのWHERE句を使用してテーブルのサブセットを定義し、メインウィンドウに結果を表示することを可能とします。そのクエリ結果は、新しいベクタレイヤとして保存することができます。"
+msgstr "クエリビルダーはSQLのWHERE句を使用してテーブルのサブセットを定義し、メインウィンドウに結果を表示することを可能とします。そのクエリ結果は、新しいベクタレイヤとして保存することができます。"
 
 # afb64070e6a142fea2866aab499a0653
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:21
 msgid "Query"
 msgstr "クエリ"
+
+# 4be845827e8c4d659787754e28c9a232
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
+msgid "Query Builder |nix|"
+msgstr "クエリビルダー |nix|"
 
 # aba682980b1e4dfdbee43804e0344e3c
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:44
@@ -50,10 +56,7 @@ msgid ""
 "double click its name in the Fields list. Generally you can use the various "
 "fields, values and operators to construct the query or you can just type it "
 "into the SQL box."
-msgstr ""
-" **フィールドリスト**では検索された属性テーブルのすべての属性カラムが含まれます。SQL "
-"where句フィールドに属性カラムを追加するには、フィールドリストで、そのカラム名をダブルクリックします。 "
-"一般的に、様々なフィールド、値、演算子を使ってクエリを作成したり、SQLボックスに直接入力することができます。"
+msgstr " **フィールドリスト**では検索された属性テーブルのすべての属性カラムが含まれます。SQL where句フィールドに属性カラムを追加するには、フィールドリストで、そのカラム名をダブルクリックします。 一般的に、様々なフィールド、値、演算子を使ってクエリを作成したり、SQLボックスに直接入力することができます。"
 
 # 3a2e3411349d46198139fd1cf5e4ea22
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:49
@@ -64,10 +67,16 @@ msgid ""
 "attribute column, select the attribute column in the Fields list and click "
 "the **[Sample]** button. To add a value to the SQL where clause field, "
 "double click its name in the Values list."
+msgstr " **値リスト**では 属性テーブルの値をリスト表示します。すべての存在する属性値をリストアップするには**フィールドリストで属性を選択し[全ての]**ボタンをクリックします。フィールドリストから属性カラムを選択し**[サンプル]**ボタンをクリックすると、属性カラムの先頭25個のユニーク値がリスト表示されます。 SQL where 句フィールドに値を追加するには、値リストでその値をダブルクリックします。"
+
+# 740de509f84a482bbae9d98ac4651a1a
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:56
+msgid ""
+"The **Operators section** contains all usable operators. To add an operator "
+"to the SQL where clause field, click the appropriate button. Relational "
+"operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
+"logical operators (``AND``, ``OR``, ...) are available."
 msgstr ""
-" **値リスト**では "
-"属性テーブルの値をリスト表示します。すべての存在する属性値をリストアップするには**フィールドリストで属性を選択し[全ての]**ボタンをクリックします。フィールドリストから属性カラムを選択し**[サンプル]**ボタンをクリックすると、属性カラムの先頭25個のユニーク値がリスト表示されます。"
-" SQL where 句フィールドに値を追加するには、値リストでその値をダブルクリックします。"
 
 # 2f9d6b5ad019431f94237b796f81dd72
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:74
@@ -83,10 +92,17 @@ msgid ""
 "selection as -->` to define the name of the output file, its format and CRS "
 "(see Section :ref:`label_legend`). It is also possible to specify OGR "
 "creation options within the dialog."
+msgstr "選択した地物は任意のOGRがサポートしたベクタフォーマットとして保存され、別の座標参照系（CRS）に変換することができます。レイヤのコンテキストメニューを開き :menuselection:`選択を名前をつけて保存 -->` をクリック後、出力ファイルの名称、フォーマット、CRSを定義します。（ :ref:`label_legend`のセクションを参照）。ダイアログ内でOGR作成オプションを指定することも可能です。"
+
+# 0cc8d9d1b7d2479eb71cf16c87866daa
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:9
+msgid "Query_Builder"
+msgstr "クエリビルダ"
+
+# a47d1251f82e43e79bd5595ca52bbebe
+#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:68
+msgid "Select_using_Query"
 msgstr ""
-"選択した地物は任意のOGRがサポートしたベクタフォーマットとして保存され、別の座標参照系（CRS）に変換することができます。レイヤのコンテキストメニューを開き"
-" :menuselection:`選択を名前をつけて保存 -->` をクリック後、出力ファイルの名称、フォーマット、CRSを定義します。（ "
-":ref:`label_legend`のセクションを参照）。ダイアログ内でOGR作成オプションを指定することも可能です。"
 
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:23
 msgid ""
@@ -101,18 +117,6 @@ msgid ""
 " construct the SQL-like query."
 msgstr ""
 
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:42
-msgid "Query Builder |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:56
-msgid ""
-"The **Operators section** contains all usable operators. To add an operator "
-"to the SQL where clause field, click the appropriate button. Relational "
-"operators ( ``=`` , ``>`` , ...), string comparison operator (``LIKE``), "
-"logical operators (``AND``, ``OR``, ...) are available."
-msgstr ""
-
 #: ../../source/docs/user_manual/working_with_vector/query_builder.rst:61
 msgid ""
 "The **[Test]** button shows a message box with the number of features "
@@ -121,40 +125,18 @@ msgid ""
 " text field. The **[OK]** button closes the window and selects the features "
 "satisfying the query. The **[Cancel]** button closes the window without "
 "changing the current selection."
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:9
-msgid "Query_Builder"
-msgstr ""
-
-#: ../../source/docs/user_manual/working_with_vector/query_builder.rst:68
-msgid "Select_using_Query"
-msgstr ""
+msgstr " **[Test]**  ボタンをクリックするとカレントクエリの条件を満たす地物の数が表示されます, この機能はクエリ構成のためには便利です.  **[Clear]** ボタンはテキストフィールドのSQLテキストをクリアします.  **[OK]** ボタンはウィンドウを閉じてクエリの条件を満たす地物を選択します.  **[Cancel]** ボタンは現状の選択状態を変えずにウィンドウを閉じます."
 
 #~ msgid ""
-#~ "Open the attribute table choosing |mActionOpenTable| :menuselection:`Open "
-#~ "Attribute Table` from the menu bar. Click on the **[Advanced Search]** "
-#~ "button to open the query builder. For example, if you have a ``towns`` layer"
-#~ " with a ``population`` field you could select only larger towns by entering "
-#~ "``population > 100000`` in the SQL box of the query builder. "
-#~ "Figure_attributes_2_ shows an example of the query builder populated with "
+#~ "Open the attribute table choosing |mActionOpenTable| :sup:`Open Attribute "
+#~ "Table` from the menu bar. Click on the **[Advanced Search]** button to open "
+#~ "the :guilabel:`Query builder`. For example, if you have a ``towns`` layer "
+#~ "with a ``population`` field you could select only larger towns by entering "
+#~ "``population > 100000`` in the SQL box of the Query builder. "
+#~ "Figure_attributes_2_ shows an example of the Query builder populated with "
 #~ "data from a PostGIS layer with attributes stored in PostgreSQL. The Fields, "
 #~ "Values and Operators sections help the user to construct the SQL-like query."
 #~ msgstr ""
-#~ "メニューバーから|mActionOpenTable| :menuselection:`属性テーブルを開く`を選択し、属性テーブルを開きます。 "
-#~ "**[アドバンストサーチ]**ボタンをクリックしクエリビルダーを開きます。例えば ``population`` "
-#~ "フィールドを持つ``towns``レイヤがあるなら、クエリビルダーのSQLボックスに``population > "
-#~ "100000``と入力することでより大きな街のみ選択することができます。Figure_attributes_2_ では、PostgreSQL "
-#~ "に保存された属性付きのPostGISレイヤ由来の居住データを使ったクエリビルダーの例です。"
-
-#~ msgid ""
-#~ "The **Operators section** contains all usable operators. To add an operator "
-#~ "to the SQL where clause field, click the appropriate button. Relational "
-#~ "operators ( = , > , ...), string comparison operator ( LIKE ), logical "
-#~ "operators ( AND , OR, ...) are available."
-#~ msgstr ""
-#~ "**演算子セクション**にはすべての利用できる演算子が含まれます。  SQL where "
-#~ "句フィールドに演算子を追加するには、適当なボタンをクリックします。関係演算子（=、>、...）、文字列の比較演算子は（LIKE）、論理演算子（AND、OR、...）が利用可能です。"
 
 #~ msgid ""
 #~ "The **[Test]** button shows a message box with the number of features "
@@ -165,13 +147,9 @@ msgstr ""
 #~ "satisfying the query. The **[Cancel]** button closes the window without "
 #~ "changing the current selection."
 #~ msgstr ""
-#~ " **[テスト]**ボタンは、クエリの構築段階で利用可能であり、現在のクエリを満たす地物の数をメッセージボックスで表示します。 "
-#~ "**[クリア]**ボタンはSQL where句のテキストフィールドの文字を消去します。 **[保存]**および "
-#~ "**[ロード]**ボタンはそれぞれSQLクエリの保存とロードに使います。 **[OK]** ボタンはウィンドウを閉じクエリを満たす地物を選択します。 "
-#~ "**[キャンセル]**ボタンは、現在の選択状態を変更せずウィンドウを閉じます。"
 
 #~ msgid "**Changing the Layer Definition**"
-#~ msgstr " **レイヤ定義の変更** "
+#~ msgstr ""
 
 #~ msgid ""
 #~ "You can change the layer definition after it is loaded by altering the SQL "
@@ -180,13 +158,9 @@ msgstr ""
 #~ "on the **[Query Builder]** button on the :guilabel:`General` tab. See "
 #~ "Section :ref:`vector_properties_dialog` for more information."
 #~ msgstr ""
-#~ "レイヤを定義するのに使われたSQLクエリを変更することでロードされた後に、レイヤ定義を変更することができます。これを行うには、 "
-#~ "凡例上でレイヤをダブルクリックしベクタの:guilabel:`レイヤのプロパティ`ダイアログ を開いてから :guilabel:`一般情報` "
-#~ "タブの**[クエリビルダ]**ボタンをクリックします。詳細については:ref:`vector_properties_dialog` "
-#~ "のセクションを参照してください。"
 
 #~ msgid "Selection"
-#~ msgstr "選択"
+#~ msgstr ""
 
 #~ msgid ""
 #~ "With |qg| it is possible also to select features for visualisation using a "
@@ -195,8 +169,6 @@ msgstr ""
 #~ "selected features meeting the filter criteria in yellow. The rest of the "
 #~ "features do not change their appearance."
 #~ msgstr ""
-#~ " :ref:`vector_query_builder`で使用されたクエリビルダインタフェースに類似したものを利用して可視化するため、 |qg| "
-#~ "では地物を選択することも可能です。上記のセクションでは、クエリビルダの目的は黄色のフィルタ基準を満たす地物をすべて選択しハイライト表示することでした。残りの地物は見た目が変わりません。"
 
 #~ msgid ""
 #~ "Another possibility is to make a selection by right clicking on a layer in "
@@ -208,7 +180,3 @@ msgstr ""
 #~ "button right below. The selection described above can be used with all "
 #~ "vector data providers."
 #~ msgstr ""
-#~ "もう１つの方法は "
-#~ "凡例内のレイヤを右クリックで選択し:guilabel:`検索...`を選択することです。ここでSQLクエリを実行すると選択された地物のみがマップビューで表示されます。SQLクエリにマッチしなかった地物はマップビューで表示されません。同様の機能ｊは:guilabel:`レイヤプロパティ`ダイアログの"
-#~ "  "
-#~ ":guilabel:`一般情報`タブからも利用可能です。右下で**[クエリビルダ]**ボタンを見つけることができるでしょう。前述の選択は、すべてのベクタデータプロバイダで使用することができます。"

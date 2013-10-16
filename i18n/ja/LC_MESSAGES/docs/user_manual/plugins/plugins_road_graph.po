@@ -5,13 +5,14 @@
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
 # HiroM <mukuo@mri.co.jp>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-06-09 10:28+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-16 01:20+0000\n"
+"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,8 +36,17 @@ msgid ""
 "The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
 " path between two points on any polyline layer and plots this path over the "
 "road network."
-msgstr ""
-"道路グラグプラグインはC++で書かれたQGIS用のプラグインで,ポリライン上の任意の2地点間の最短経路を計算し,道路ネットワーク上にポリラインとプロットを作成し出力します"
+msgstr "道路グラグプラグインはC++で書かれたQGIS用のプラグインで,ポリライン上の任意の2地点間の最短経路を計算し,道路ネットワーク上にポリラインとプロットを作成し出力します"
+
+# f7eeb293a29440af9997fcc40149f71d
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
+msgid "Road Graph Plugin |nix|"
+msgstr "ロードグラフプラグイン |nix|"
+
+# 95ae448adde64b3a86b4bcd1f7062a8f
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
+msgid "Main features:"
+msgstr "主な機能:"
 
 # 89cf995449e44b878aeca420a8a165f2
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:31
@@ -69,8 +79,7 @@ msgid ""
 "layer. This is due to the fact that recalculation of the coordinates between"
 " different CRS introduce some errors that can result in discontinuities, "
 "even when 'snapping' is used."
-msgstr ""
-"QGISがサポートしているフォーマットでは、どんなポリラインのベクターレイヤでも道路のレイヤーとして使用することができます。共通のポイントを持つ２本のラインは接続していると見なされます。注意点は、道路レイヤーを編集中にレイヤーのCRSをプロジェクトのCRSとして使用する必要があります。これは、異なるCRS間の座標の再計算が、スナップを用いた場合でさえも不連続性をもたらし、エラーを引き起こす事実によるものです。"
+msgstr "QGISがサポートしているフォーマットでは、どんなポリラインのベクターレイヤでも道路のレイヤーとして使用することができます。共通のポイントを持つ２本のラインは接続していると見なされます。注意点は、道路レイヤーを編集中にレイヤーのCRSをプロジェクトのCRSとして使用する必要があります。これは、異なるCRS間の座標の再計算が、スナップを用いた場合でさえも不連続性をもたらし、エラーを引き起こす事実によるものです。"
 
 # 328f25024c1d48b3a31a222145b86b5e
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:44
@@ -82,28 +91,15 @@ msgstr "次に示すレイヤ属性テーブルのフィールドが利用可能
 msgid "speed on road section --- numeric field;"
 msgstr "道路の速度 --- 数値フィールド;"
 
-# f1e0016ba007453c9f390fa90ae6adde
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:60
-msgid ""
-"Select a Start and a Stop point in the road network layer and click on "
-"**[Calculate]**."
-msgstr "道路ネットワークレイヤ上に始点と終点を設定し,**[計算]**をクリックしてください"
-
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:27
-msgid "Road Graph Plugin |nix|"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:29
-msgid "Main features:"
-msgstr ""
-
+# 58a020d3289741dba834cea8325ccacf
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:47
 msgid ""
 "direction --- any type, that can be casted to string. Forward and reverse "
 "directions are correspond to the one-way road, both directions --- two-way "
 "road"
-msgstr ""
+msgstr "方向 --- 文字列にキャストできる任意の方. 一方通行の道路は前方向と逆方向があります, 両方向 --- 両方向の道路"
 
+# 3d7416df14d94604985ec395101a4670
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:50
 msgid ""
 "If some fields don't have any value or do not exist --- default values are "
@@ -111,10 +107,12 @@ msgid ""
 "dialog."
 msgstr ""
 
+# b40de58fedf2445dbe2556642416ad36
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
 msgid "Using the plugin"
-msgstr ""
+msgstr "プラグインの利用"
 
+# 131f0257359b4ef785e9441ec6f65179
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:56
 msgid ""
 "After plugin activation you will see an additional panel on the left side of"
@@ -123,31 +121,9 @@ msgid ""
 "Graph`."
 msgstr ""
 
-#~ msgid "**Main features**:"
-#~ msgstr "**主な機能**:"
-
-#~ msgid ""
-#~ "direction --- any type, that can be casted to string. Forward and reverse "
-#~ "directions are correspond to the one-way road, both directions --- two-way "
-#~ "road."
-#~ msgstr ""
-#~ "方向 --- any type, that can be casted to string. "
-#~ "一方通行の道路においては,前方向及び逆方向の定義ができます.また相互通行の定義もできます."
-
-#~ msgid ""
-#~ "If some fields don't have any value or do not exists --- default values are "
-#~ "used. You can change defaults and some plugin settings in plugin settings "
-#~ "dialog."
-#~ msgstr ""
-#~ "いくつかのフィールドは全く値を持たないか存在しません。デフォルト値が用いられます。デフォルト値は変更でき、プラグインによっては設定ダイアログで設定できます。"
-
-#~ msgid "Usage"
-#~ msgstr "利用方法"
-
-#~ msgid ""
-#~ "After plugin activation you will see additional panel on the left side of "
-#~ "the main QGIS window. Now make some definitions to the :guilabel:`Road graph"
-#~ " settings` dialog in the menu :menuselection:`Plugins --> Road Graph`."
-#~ msgstr ""
-#~ "プラグインを有効にした後、QGISのメインウィンドウの左側にパネルが追加表示されます。それから、メニューの`Plugins --> Road "
-#~ "Graph`を実行し、guilabel:`Road graph settings` ダイアログでいくつかの定義をします。"
+# f1e0016ba007453c9f390fa90ae6adde
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:60
+msgid ""
+"Select a Start and a Stop point in the road network layer and click on "
+"**[Calculate]**."
+msgstr "道路ネットワークレイヤ上に始点と終点を設定し,**[計算]**をクリックしてください"

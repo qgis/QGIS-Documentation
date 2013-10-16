@@ -6,11 +6,11 @@
 # choro <u.ko.kubot@gmail.com>, 2013
 msgid ""
 msgstr ""
-"Project-Id-Version: qgis-documentation\n"
+"Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-10 23:17\n"
-"PO-Revision-Date: 2013-07-09 16:39+0000\n"
-"Last-Translator: choro <u.ko.kubot@gmail.com>\n"
+"POT-Creation-Date: 2013-08-26 14:10\n"
+"PO-Revision-Date: 2013-10-06 14:18+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,6 +31,11 @@ msgid ""
 "before running:"
 msgstr "コンバータープラグインはベクタデータをDXFからShapefile形式に変換します。変換を実行する際に以下のパラメータが要求されます:"
 
+# 19250348962145799f9d89bfb4b3d3af
+#: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:28
+msgid "Dxf2Shape Converter Plugin"
+msgstr ""
+
 # 3daf6665b9c34732ae003d5ba480c9fc
 #: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:30
 msgid "**Input DXF file**: Enter path to the DXF file to be converted"
@@ -46,9 +51,7 @@ msgstr "**出力Shp file**: 作成されるShapefileの名前を入力して下�
 msgid ""
 "**Output file type**: Specify the geometry type of the output Shapefile. "
 "Currently supported types are polyline, polygon, and point."
-msgstr ""
-"**出力ファイルタイプ**: "
-"出力Shapefileのジオメトリタイプを指定して下さい。現在サポートされているタイプはポリライン、ポリゴンとポイントです。"
+msgstr "**出力ファイルタイプ**: 出力Shapefileのジオメトリタイプを指定して下さい。現在サポートされているタイプはポリライン、ポリゴンとポイントです。"
 
 # 8e2e103dbbe1442f9aaad6f843bbef2e
 #: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:34
@@ -57,9 +60,12 @@ msgid ""
 "Shapefile point layer will be created, and the associated dbf table will "
 "contain information about the \"TEXT\" fields found in the dxf file, and the"
 " text strings themselves."
+msgstr "**テキストラベルをエクスポートする**: このチェックボックスが有効な場合、追加でShapefileのポイントレイヤが作成されます。 そして関連のdbfテーブルには\"TEXT\"フィールドに関する情報が含まれ、テキスト文字列そのものもファイルの中にできます。"
+
+# 90ed0d8982494ddfb8dfb5e791672df4
+#: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:40
+msgid "Using the Plugin"
 msgstr ""
-"**テキストラベルをエクスポートする**: このチェックボックスが有効な場合、追加でShapefileのポイントレイヤが作成されます。 "
-"そして関連のdbfテーブルには\"TEXT\"フィールドに関する情報が含まれ、テキスト文字列そのものもファイルの中にできます。"
 
 # ea8cb549278a467cbf9c21f391fa43ec
 #: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:42
@@ -68,11 +74,7 @@ msgid ""
 ":ref:`load_core_plugin`) and click on the |dxf2shp_converter| "
 ":sup:`Dxf2Shape Converter` icon which appears in the QGIS toolbar menu. The "
 "Dxf2Shape plugin dialog appears as shown in Figure_dxf2shape_1_."
-msgstr ""
-"QGISを起動して, ([プラグイン]メニューにある)[プラグインの管理]でDxf2Shapeを有効にして下さい(セクション "
-":ref:`load_core_plugin` 参照)。そしてQGISツールバーメニューにある |dxf2shp_converter| "
-":sup:`Dxf2Shape Converter`アイコンをクリックして下さい。 Dxfインポーター ダイアログが "
-"Figure_dxf2shape_1_ のように表示されます。"
+msgstr "QGISを起動して, ([プラグイン]メニューにある)[プラグインの管理]でDxf2Shapeを有効にして下さい(セクション :ref:`load_core_plugin` 参照)。そしてQGISツールバーメニューにある |dxf2shp_converter| :sup:`Dxf2Shape Converter`アイコンをクリックして下さい。 Dxfインポーター ダイアログが Figure_dxf2shape_1_ のように表示されます。"
 
 # a83e734b17fd4bd5b2c9986497b90009
 #: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:46
@@ -86,25 +88,12 @@ msgstr "DXFファイル、出力ファイルの名前、Shapefile のタイプ�
 msgid ""
 "Enable the |checkbox| :guilabel:`Export text labels` checkbox if you want to"
 " create an extra point layer with labels."
-msgstr ""
-"レイヤのラベル表示のためのポイントレイヤを追加で作成する場合は、 |checkbox| "
-":guilabel:`テキストラベルの出力`チェックボックスを有効にして下さい。"
+msgstr "レイヤのラベル表示のためのポイントレイヤを追加で作成する場合は、 |checkbox| :guilabel:`テキストラベルの出力`チェックボックスを有効にして下さい。"
 
 # 3c6a613dba45469c8020c4d89de00a68
 #: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:49
 msgid "Click **[OK]**."
 msgstr "**[OK]**をクリックします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:28
-msgid "Dxf2Shape Converter Plugin"
-msgstr ""
-
-#: ../../source/docs/user_manual/plugins/plugins_dxf2shape_converter.rst:40
-msgid "Using the Plugin"
-msgstr ""
-
 #~ msgid "|updatedisclaimer|"
-#~ msgstr "|updatedisclaimer|"
-
-#~ msgid "**Using the Plugin**"
-#~ msgstr "**プラグインの利用方法**"
+#~ msgstr ""
