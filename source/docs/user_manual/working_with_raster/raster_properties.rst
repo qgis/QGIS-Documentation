@@ -376,14 +376,11 @@ you have chosen the :guilabel:`Min/max options`.
 Metadata Menu
 -------------
 
-The :guilabel:`Metadata` tab displays a wealth of information about the raster layer,
-including statistics about each band in the current raster layer. Statistics
-are gathered on a 'need to know' basis, so it may well be that a given layers
-statistics have not yet been collected.
+The :guilabel:`Metadata` menu displays a wealth of information about the raster layer,
+including statistics about each band in the current raster layer. From this menu entries are
+made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and 
+:guilabel:`Properties`. In :guilabel:`Properties` statistics are gathered on a 'need to know'
+basis, so it may well be that a given layers statistics have not yet been collected.
 
 This menu is mainly for information. You cannot change any values printed
-inside this tab. 
-
-.. To update the statistics you need to change to tab
-   :guilabel:`Histogram` and press the button **[Refresh]** on the bottom right,
-   (see :ref:`label_histogram`).
+inside this menu. 
