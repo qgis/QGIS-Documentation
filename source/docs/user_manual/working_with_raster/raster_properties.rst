@@ -363,7 +363,7 @@ The :guilabel:`Histogram` menu allows you to view the distribution of the bands
 or colors in your raster. It is generated automatically when you open the
 :guilabel:`Histogram` menu. All existing bands will be displayed together. You can
 save the histogram as an image with the |mActionFileSave| button.
-With the :guilabel:`Visibility` option in the || :guilabel:`Prefs/Actions` menu 
+With the :guilabel:`Visibility` option in the |mAction| :guilabel:`Prefs/Actions` menu 
 you can display histograms of the individual bands. You will need to select the option
 |radiobuttonoff| :guilabel:`Show selected band`.
 The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom 
