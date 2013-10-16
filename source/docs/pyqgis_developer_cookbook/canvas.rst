@@ -304,7 +304,8 @@ Here is an example of a map tool that allows to define a rectangular extent by c
     def rectangle(self):
         if self.startPoint is None or self.endPoint is None:
           return None
-        elif self.startPoint.x() == self.endPoint.x() or self.startPoint.y() == self.endPoint.y():
+        elif self.startPoint.x() == self.endPoint.x() or self.startPoint.y() == \
+          self.endPoint.y():
           return None
 
         return QgsRectangle(self.startPoint, self.endPoint)

@@ -16,7 +16,8 @@ Here is an example for `Raster` menu::
 
     def initGui(self):
       # create action that will start plugin configuration
-      self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", self.iface.mainWindow())
+      self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", \
+        self.iface.mainWindow())
       self.action.setWhatsThis("Configuration for test plugin")
       self.action.setStatusTip("This is status tip")
       QObject.connect(self.action, SIGNAL("triggered()"), self.run)
@@ -32,7 +33,8 @@ Here is an example for `Raster` menu::
         self.iface.addPluginToMenu("&Test plugins", self.action)
 
       # connect to signal renderComplete which is emitted when canvas rendering is done
-      QObject.connect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), self.renderTest)
+      QObject.connect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), \
+        self.renderTest)
 
     def unload(self):
       # check if Raster menu available and remove our buttons from appropriate
@@ -45,5 +47,6 @@ Here is an example for `Raster` menu::
         self.iface.removeToolBarIcon(self.action)
 
       # disconnect from signal of the canvas
-      QObject.disconnect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), self.renderTest)
+      QObject.disconnect(self.iface.mapCanvas(), SIGNAL("renderComplete(QPainter *)"), \
+        self.renderTest)
 

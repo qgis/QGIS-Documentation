@@ -12,7 +12,7 @@ How to call a method by a key shortcut
 In the plug-in add to the ``initGui()``::
 
   self.keyAction = QAction("Test Plugin", self.iface.mainWindow())
-  self.iface.registerMainWindowAction(self.keyAction, "F7") # action1 is triggered by the F7 key
+  self.iface.registerMainWindowAction(self.keyAction, "F7") # action1 triggered by F7 key
   self.iface.addPluginToMenu("&Test plugins", self.keyAction)
   QObject.connect(self.keyAction, SIGNAL("triggered()"),self.keyActionF7)
 
@@ -66,7 +66,8 @@ How to access attribute table of selected features
         layer.changeAttributeValue(int(ob[0]),1,b) # 1 being the second column
       layer.commitChanges()
       else:
-        QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at least one feature from current layer")
+        QMessageBox.critical(self.iface.mainWindow(),"Error", "Please select at \
+          least one feature from current layer")
     else:
       QMessageBox.critical(self.iface.mainWindow(),"Error","Please select a layer")
 

@@ -104,7 +104,8 @@ To set an interpolated color ramp shader ranging from green to yellow color
 (for pixel values from 0 to 255)::
 
   >>> rlayer.setColorShadingAlgorithm(QgsRasterLayer.ColorRampShader)
-  >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
+  >>> lst = [ QgsColorRampShader.ColorRampItem(0, QColor(0,255,0)), \
+      QgsColorRampShader.ColorRampItem(255, QColor(255,255,0)) ]
   >>> fcn = rlayer.rasterShader().rasterShaderFunction()
   >>> fcn.setColorRampType(QgsColorRampShader.INTERPOLATED)
   >>> fcn.setColorRampItemList(lst)
@@ -179,7 +180,8 @@ Query Values
 
 To do a query on value of bands of raster layer at some specified point::
 
-  ident = rlayer.dataProvider().identify(QgsPoint(15.30,40.98), QgsRaster.IdentifyFormatValue)
+  ident = rlayer.dataProvider().identify(QgsPoint(15.30,40.98), \
+    QgsRaster.IdentifyFormatValue)
   if ident.isValid():
     print ident.results()
 

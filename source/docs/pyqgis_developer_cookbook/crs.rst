@@ -16,7 +16,8 @@ created by several different ways:
 * specify CRS by its ID::
 
     # PostGIS SRID 4326 is allocated for WGS84
-    crs = QgsCoordinateReferenceSystem(4326, QgsCoordinateReferenceSystem.PostgisCrsId)
+    crs = QgsCoordinateReferenceSystem(4326, \
+      QgsCoordinateReferenceSystem.PostgisCrsId)
 
   QGIS uses three different IDs for every reference system:
 
@@ -28,7 +29,8 @@ created by several different ways:
 
 * specify CRS by its well-known text (WKT)::
 
-    wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, 298.257223563]],\
+    wkt = 'GEOGCS["WGS84", DATUM["WGS84", SPHEROID["WGS84", 6378137.0, \
+           298.257223563]],\
            PRIMEM["Greenwich", 0.0], UNIT["degree",0.017453292519943295],\
            AXIS["Longitude",EAST], AXIS["Latitude",NORTH]]'
     crs = QgsCoordinateReferenceSystem(wkt)

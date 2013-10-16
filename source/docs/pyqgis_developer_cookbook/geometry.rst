@@ -32,7 +32,8 @@ There are several options for creating a geometry:
 
     gPnt = QgsGeometry.fromPoint(QgsPoint(1,1))
     gLine = QgsGeometry.fromPolyline( [ QgsPoint(1,1), QgsPoint(2,2) ] )
-    gPolygon = QgsGeometry.fromPolygon( [ [ QgsPoint(1,1), QgsPoint(2,2), QgsPoint(2,1) ] ] )
+    gPolygon = QgsGeometry.fromPolygon( [ [ QgsPoint(1,1), QgsPoint(2,2), \
+      QgsPoint(2,1) ] ] )
 
   Coordinates are given using :class:`QgsPoint` class.
 

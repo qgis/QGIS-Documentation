@@ -36,7 +36,8 @@ providers:
   path to the file
   ::
 
-    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", "layer_name_you_like", "ogr")
+    vlayer = QgsVectorLayer("/path/to/shapefile/file.shp", \
+      "layer_name_you_like", "ogr")
 
 .. index:: 
   pair: loading; PostGIS layers
@@ -50,7 +51,8 @@ providers:
     uri = QgsDataSourceURI()
     # set host name, port, database name, username and password
     uri.setConnection("localhost", "5432", "dbname", "johny", "xxx")
-    # set database schema, table name, geometry column and optionaly subset (WHERE clause)
+    # set database schema, table name, geometry column and optionaly 
+    # subset (WHERE clause)
     uri.setDataSource("public", "roads", "the_geom", "cityid = 2643")
 
     vlayer = QgsVectorLayer(uri.uri(), "layer_name_you_like", "postgres")
@@ -72,7 +74,8 @@ providers:
   the coordinate reference system to be specified. For example
   ::
 
-    uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" % (";", "shape")
+    uri = "file:///some/path/file.csv?delimiter=%s&crs=epsg:4723&wktField=%s" \
+      % (";", "shape")
 
 .. index::
   pair: loading; GPX files
@@ -110,7 +113,8 @@ providers:
   string to the table
   ::
     
-    uri = "MySQL:dbname,host=localhost,port=3306,user=root,password=xxx|layername=my_table"
+    uri = "MySQL:dbname,host=localhost,port=3306,user=root,password=xxx|\
+      layername=my_table"
     vlayer = QgsVectorLayer( uri, "my_table", "ogr" )
 
 .. index:: 
@@ -119,7 +123,8 @@ providers:
 * WFS connection:. the connection is defined with a URI and using the ``WFS`` provider
   ::
 
-    uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=union&version=1.0.0&request=GetFeature&service=WFS",
+    uri = "http://localhost:8080/geoserver/wfs?srsname=EPSG:23030&typename=\
+      union&version=1.0.0&request=GetFeature&service=WFS",
     vlayer = QgsVectorLayer("my_wfs_layer", "WFS")
 
   The uri can be created using the standard ``urllib`` library.
@@ -133,7 +138,8 @@ providers:
         'typename': 'union',
         'srsname': "EPSG:23030"
     }                        
-    uri = 'http://localhost:8080/geoserver/wfs?' + urllib.unquote(urllib.urlencode(params))
+    uri = 'http://localhost:8080/geoserver/wfs?' + \
+      urllib.unquote(urllib.urlencode(params))
 
   And you can also use the 
 
@@ -174,7 +180,8 @@ it's not possible to access GetCapabilities response from API --- you have to
 know what layers you want
 ::
 
-    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&styles=pseudo&format=image/jpeg&crs=EPSG:4326'
+    urlWithParams = 'url=http://wms.jpl.nasa.gov/wms.cgi&layers=global_mosaic&\
+      styles=pseudo&format=image/jpeg&crs=EPSG:4326'
     rlayer = QgsRasterLayer(urlWithParams, 'some layer name', 'wms')
     if not rlayer.isValid():
       print "Layer failed to load!"

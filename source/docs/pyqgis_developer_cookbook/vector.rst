@@ -169,7 +169,8 @@ For deletion of fields just provide a list of field indexes.
 ::
 
   if caps & QgsVectorDataProvider.AddAttributes:
-    res = layer.dataProvider().addAttributes( [ QgsField("mytext", QVariant.String), QgsField("myint", QVariant.Int) ] )
+    res = layer.dataProvider().addAttributes( [ QgsField("mytext", \
+      QVariant.String), QgsField("myint", QVariant.Int) ] )
 
   if caps & QgsVectorDataProvider.DeleteAttributes:
     res = layer.dataProvider().deleteAttributes( [ 0 ] )
@@ -284,12 +285,14 @@ There are two possibilities how to export a vector layer:
 
 * from an instance of :class:`QgsVectorLayer`::
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", "CP1250", None, "ESRI Shapefile")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_shapes.shp", \
+      "CP1250", None, "ESRI Shapefile")
 
     if error == QgsVectorFileWriter.NoError:
       print "success!"
 
-    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", "utf-8", None, "GeoJSON")
+    error = QgsVectorFileWriter.writeAsVectorFormat(layer, "my_json.json", \
+      "utf-8", None, "GeoJSON")
     if error == QgsVectorFileWriter.NoError:
       print "success again!"
 
@@ -315,14 +318,17 @@ There are two possibilities how to export a vector layer:
     fields = [QgsField("first", QVariant.Int),
               QgsField("second", QVariant.String) ]
 
-    # create an instance of vector file writer, which will create the vector file. Arguments:
+    # create an instance of vector file writer, which will create the vector file. 
+    # Arguments:
     # 1. path to new file (will fail if exists already)
     # 2. encoding of the attributes
     # 3. field map
     # 4. geometry type - from WKBTYPE enum
-    # 5. layer's spatial reference (instance of QgsCoordinateReferenceSystem) - optional
+    # 5. layer's spatial reference (instance of 
+    #    QgsCoordinateReferenceSystem) - optional
     # 6. driver name for the output file
-    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, QGis.WKBPoint, None, "ESRI Shapefile")
+    writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, \
+      QGis.WKBPoint, None, "ESRI Shapefile")
 
     if writer.hasError() != QgsVectorFileWriter.NoError:
       print "Error when creating shapefile: ", writer.hasError()
@@ -703,7 +709,8 @@ widget::
       self.hbox.addWidget(self.label)
       self.hbox.addWidget(self.spinRadius)
       self.setLayout(self.hbox)
-      self.connect( self.spinRadius, SIGNAL("valueChanged(double)"), self.radiusChanged)
+      self.connect( self.spinRadius, SIGNAL("valueChanged(double)"), \
+        self.radiusChanged)
  
     def setSymbolLayer(self, layer):
       if layer.layerType() != "FooMarker":
@@ -779,7 +786,8 @@ symbols and chooses randomly one of them for every feature::
   class RandomRenderer(QgsFeatureRendererV2):
     def __init__(self, syms=None):
       QgsFeatureRendererV2.__init__(self, "RandomRenderer")
-      self.syms = syms if syms else [ QgsSymbolV2.defaultSymbol(QGis.Point), QgsSymbolV2.defaultSymbol(QGis.Point) ]
+      self.syms = syms if syms else [ QgsSymbolV2.defaultSymbol(QGis.Point), \
+        QgsSymbolV2.defaultSymbol(QGis.Point) ]
   
     def symbolForFeature(self, feature):
       return random.choice(self.syms)

@@ -25,7 +25,8 @@ excerpt of the `Watermark example plugin <http://github.com/sourcepole/qgis-wate
     LAYER_TYPE="watermark"
 
     def __init__(self):
-      QgsPluginLayer.__init__(self, WatermarkPluginLayer.LAYER_TYPE, "Watermark plugin layer")
+      QgsPluginLayer.__init__(self, WatermarkPluginLayer.LAYER_TYPE, \
+        "Watermark plugin layer")
       self.setValid(True)
 
     def draw(self, rendererContext):

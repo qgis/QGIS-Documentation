@@ -14,7 +14,8 @@ Using the reference to the QGIS interface object, you can show a message in the 
 
 ::
 
-	iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't do that", level=QgsMessageBar.CRITICAL)
+	iface.messageBar().pushMessage("Error", "I'm sorry Dave, I'm afraid I can't \
+	  do that", level=QgsMessageBar.CRITICAL)
 
 
 .. figure:: /static/pyqgis_developer_cookbook/errorbar.png
@@ -27,7 +28,8 @@ You can set a duration to show it for a limited time.
 
 ::
 
-	iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as it should", level=QgsMessageBar.CRITICAL, duration=3)
+	iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as \
+          it should", level=QgsMessageBar.CRITICAL, duration=3)
 
 
 .. figure:: /static/pyqgis_developer_cookbook/errorbar-timed.png
@@ -140,6 +142,9 @@ You can use the QGIS logging system to log all the information that you want to 
 
 ::
 
-	QgsMessageLog.logMessage("Your plugin code has been executed correctly", QgsMessageLog.INFO)
-	QgsMessageLog.logMessage("Your plugin code might have some problems", QgsMessageLog.WARNING)
-	QgsMessageLog.logMessage("Your plugin code has crashed!", QgsMessageLog.CRITICAL)
+	QgsMessageLog.logMessage("Your plugin code has been executed correctly", \
+          QgsMessageLog.INFO)
+	QgsMessageLog.logMessage("Your plugin code might have some problems", \
+          QgsMessageLog.WARNING)
+	QgsMessageLog.logMessage("Your plugin code has crashed!", \
+          QgsMessageLog.CRITICAL)
