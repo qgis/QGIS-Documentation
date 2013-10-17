@@ -79,6 +79,18 @@ include:
 * The tab :guilabel:`Macros` to create a Python module, saved into a project.qgs file to be
   loaded and have specific functions run on the following project events: openProject(),   
   saveProject() and closeProject().
+  
+.. _figure_macro_menu:
+
+.. only:: html
+
+   **Figure Macro Menu:**
+
+.. figure:: /static/user_manual/introduction/macro.png
+   :align: center
+   :width: 30em
+
+   Macro settings in |qg|
 
 .. _gui_options:
 
