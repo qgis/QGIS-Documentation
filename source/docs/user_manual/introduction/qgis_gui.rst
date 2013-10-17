@@ -97,8 +97,8 @@ Menu Option                                                     Shortcut        
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit` 		  :guilabel:`Advanced Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionAddIsland| :guilabel:`Add Part`                         \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
+|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing` 
+|mActionAddPart| :guilabel:`Add Part`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionReshape| :guilabel:`Reshape Features`                   \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -158,41 +158,41 @@ Menu Option                                                     Shortcut        
 Layer
 .....
 
-==============================================================  ====================  ==========================================  ===============================
-Menu Option                                                     Shortcut              Reference                                   Toolbar
-==============================================================  ====================  ==========================================  ===============================
-:menuselection:`New -->`                                        \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
-:guilabel:`Embed Layers and Groups ...`                         \                     see :ref:`nesting_projects`                 \
-|mActionAddNonDbLayer| :guilabel:`Add Vector Layer`             :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
-|mActionAddRasterLayer| :guilabel:`Add Raster Layer`            :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
-|mActionAddLayer| :guilabel:`Add PostGIS Layer`                 :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
-|mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`    :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
-|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`      :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
-|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
-|delimited_text| :guilabel:`Add Delimited Text Layer`           \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
-|gps_importer| :guilabel:`Create new GPX layer`                 \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
-|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`          \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
-|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`           \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
-|wfs| :guilabel:`Add WFS Layer`                                 \                     \                                           :guilabel:`Manage Layers`
-|mActionEditCopy| :guilabel:`Copy style`                        \                     see :ref:`vector_style_menu`                 \
-|mActionEditPaste| :guilabel:`Paste style`                      \                     see :ref:`vector_style_menu`                 \
-|mActionOpenTable| :guilabel:`Open Attribute Table`             \                     \                                           :guilabel:`Attributes`
-|mActionFileSave| :guilabel:`Save edits`                        \                     \                                           :guilabel:`Digitizing`
-|mActionToggleEditing| :guilabel:`Toggle editing`               \                     \                                           :guilabel:`Digitizing`
-:menuselection:`Save as...`                                     \                     \                                           \
-:menuselection:`Save selection as vector file...`               \                     See :ref:`sec_attribute_table`              \
-|mActionRemoveLayer| :guilabel:`Remove Layer`                   :kbd:`Ctrl+D`         \                                           \
-:menuselection:`Set CRS of Layer(s)`                            :kbd:`Ctrl+Shift+C`   \                                           \
-:menuselection:`Set project CRS from Layer`                     \                     \                                           \
-:menuselection:`Properties`                                     \                     \                                           \
-:menuselection:`Query...`                                       \                     \                                           \
-|mActionLabeling| :guilabel:`Labeling`                          \                     \                                           \
-|mActionInOverview| :guilabel:`Add to Overview`                 :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
-|mActionAddAllToOverview| :guilabel:`Add All To Overview`       \                     \                                           \
-|RemoveAllOverview| :guilabel:`Remove All From Overview`        \                     \                                           \
-|mActionShowAllLayers| :guilabel:`Show All Layers`              :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
-|mActionHideAllLayers| :guilabel:`Hide All Layers`              :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
-==============================================================  ====================  ==========================================  ===============================
+==================================================================  ====================  ==========================================  ===============================
+Menu Option                                                         Shortcut              Reference                                   Toolbar
+==================================================================  ====================  ==========================================  ===============================
+:menuselection:`New -->`                                             \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
+:guilabel:`Embed Layers and Groups ...`                              \                     see :ref:`nesting_projects`                 \
+|mActionAddNonDbLayer| :guilabel:`Add Vector Layer`                  :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
+|mActionAddRasterLayer| :guilabel:`Add Raster Layer`                 :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
+|mActionAddLayer| :guilabel:`Add PostGIS Layer`                      :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
+|mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`         :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
+|mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`           :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
+|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                       :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
+|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
+|gps_importer| :guilabel:`Create new GPX layer`                      \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
+|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`               \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
+|icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`                \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
+|wfs| :guilabel:`Add WFS Layer`                                      \                     \                                           :guilabel:`Manage Layers`
+|mActionEditCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                 \
+|mActionEditPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                 \
+|mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     \                                           :guilabel:`Attributes`
+|mActionFileSave| :guilabel:`Save edits`                             \                     \                                           :guilabel:`Digitizing`
+|mActionToggleEditing| :guilabel:`Toggle editing`                    \                     \                                           :guilabel:`Digitizing`
+:menuselection:`Save as...`                                          \                     \                                           \
+:menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
+|mActionRemoveLayer| :guilabel:`Remove Layer`                        :kbd:`Ctrl+D`         \                                           \
+:menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
+:menuselection:`Set project CRS from Layer`                          \                     \                                           \
+:menuselection:`Properties`                                          \                     \                                           \
+:menuselection:`Query...`                                            \                     \                                           \
+|mActionLabeling| :guilabel:`Labeling`                               \                     \                                           \
+|mActionInOverview| :guilabel:`Add to Overview`                      :kbd:`Ctrl+Shift+O`   \                                           :guilabel:`Manage Layers`
+|mActionAddAllToOverview| :guilabel:`Add All To Overview`            \                     \                                           \
+|RemoveAllOverview| :guilabel:`Remove All From Overview`             \                     \                                           \
+|mActionShowAllLayers| :guilabel:`Show All Layers`                   :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
+|mActionHideAllLayers| :guilabel:`Hide All Layers`                   :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
+==================================================================  ====================  ==========================================  ===============================
 
 Settings
 ........

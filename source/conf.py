@@ -714,6 +714,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionUnselectAttributes| image:: /static/common/mActionUnselectAttributes.png
    :width: 1.5em
+.. |mActionAddDelimitedTextLayer| image:: /static/common/mActionAddDelimitedTextLayer.png
+   :width: 1.5em
 .. |raster-info| image:: /static/common/raster-info.png
    :width: 1.5em
 .. |copyright_label| image:: /static/common/copyright_label.png

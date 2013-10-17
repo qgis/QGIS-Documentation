@@ -46,7 +46,7 @@ and off icon groups in the QGIS toolbar (see figure_panels_toolbars_).
 
 .. tip:: **Show Log Messages**
 
-   Since QGIS 1.8 it's possible to track the QGIS messages. You can activate
+   It's possible to track the QGIS messages. You can activate
    |checkbox|:guilabel:`Log Messages` in the menu
    :menuselection:`Settings --> Panels` and follow the messages
    in the :guilabel:`General` and :guilabel:`Plugin` tab during loading and operation.
@@ -60,23 +60,23 @@ Project Properties` or |win| :menuselection:`Settings -->
 Project Properties` you set project specific options. These
 include:
 
-* In the :guilabel:`General` tab the project title, selection and background
+* In the :guilabel:`General` menu the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
   layers can be defined. You can define the layer units (only used when CRS
   transformation is disabled) and the precision of decimal places to use. You 
   also can define a project scale list, that overrides the global predefined scales.
-* The :guilabel:`CRS` tab enables you to choose
+* The :guilabel:`CRS` menu enables you to choose
   the Coordinate Reference System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
-* With the third :guilabel:`Identify layers` tab you set (or disable)
+* With the third :guilabel:`Identify layers` menu you set (or disable)
   which layers will respond to the identify tool. (See the Map tools paragraph from
   the :ref:`gui_options` section to enable identifying of multiple layers.)
-* The tab :guilabel:`Default Styles` lets you control how new layers will be drawn when they 
+* The menu :guilabel:`Default Styles` lets you control how new layers will be drawn when they 
   do not have an existing .qml style defined. You can also set the default transparency level 
   for new layers and whether symbols should have random colours assigned to them.
 * The tab :guilabel:`OWS Server` allows to define information about the QGIS
   Server WMS and WFS Capabilities, the Extent and the CRS Restrictions.
-* The tab :guilabel:`Macros` to create a Python module, saved into a project.qgs file to be
+* The menu :guilabel:`Macros` is to create a Python module, saved into a project.qgs file to be
   loaded and have specific functions run on the following project events: openProject(),   
   saveProject() and closeProject().
   
@@ -99,7 +99,7 @@ Options
 
 |mActionOptions| Some basic options for QGIS can be selected using the
 :guilabel:`Options` dialog. Select the menu option :menuselection:`Settings -->`
-|mActionOptions| :menuselection:`Options`. The tabs where you can optimize your
+|mActionOptions| :menuselection:`Options`. The menus where you can optimize your
 options are:
 
 General Tab
@@ -126,12 +126,11 @@ General Tab
 * |checkbox| :guilabel:`Prompt to save project and data source changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of QGIS`
 
-.. FIXME: more information necessary
+* :guilabel:`Enable macros` |selectstring|. This option was created to handle macros which are written to perform an action
+   on project events. You can chosse between 'Never', 'Ask', 'For this session only'  and 'Always (not recommended)'.
 
-* :guilabel:`Enable macros` |selectstring| . This option was created to handle macros which are written to ... . If you use 'Never' ... In case of 'Ask' ... . 'For this session only' ... and 'Always (not recommended)' ... .
-
-System Tab
-----------
+System Menu
+-----------
 
 .. FIXME:more information necessary
 
@@ -146,8 +145,8 @@ System Tab
 
 * :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
 
-Data Sources Tab
-----------------
+Data Sources menu
+-----------------
 
 **Feature attributes and table**
 
