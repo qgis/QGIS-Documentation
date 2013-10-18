@@ -158,9 +158,9 @@ Menu Option                                                     Shortcut        
 Layer
 .....
 
-==================================================================  ====================  ==========================================  ===============================
-Menu Option                                                         Shortcut              Reference                                   Toolbar
-==================================================================  ====================  ==========================================  ===============================
+===================================================================  ====================  ==========================================  ===============================
+Menu Option                                                          Shortcut              Reference                                   Toolbar
+===================================================================  ====================  ==========================================  ===============================
 :menuselection:`New -->`                                             \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
 :guilabel:`Embed Layers and Groups ...`                              \                     see :ref:`nesting_projects`                 \
 |mActionAddNonDbLayer| :guilabel:`Add Vector Layer`                  :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
@@ -192,7 +192,7 @@ Menu Option                                                         Shortcut    
 |RemoveAllOverview| :guilabel:`Remove All From Overview`             \                     \                                           \
 |mActionShowAllLayers| :guilabel:`Show All Layers`                   :kbd:`Ctrl+Shift+U`   \                                           :guilabel:`Manage Layers`
 |mActionHideAllLayers| :guilabel:`Hide All Layers`                   :kbd:`Ctrl+Shift+H`   \                                           :guilabel:`Manage Layers`
-==================================================================  ====================  ==========================================  ===============================
+===================================================================  ====================  ==========================================  ===============================
 
 Settings
 ........
