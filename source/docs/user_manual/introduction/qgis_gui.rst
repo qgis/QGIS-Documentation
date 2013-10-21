@@ -215,14 +215,13 @@ Menu Option                                                     Shortcut        
 Plugins
 .......
 
-==============================================================  ====================  ==========================================  ===============================
-Menu Option                                                     Shortcut              Reference                                   Toolbar
-==============================================================  ====================  ==========================================  ===============================
-|plugin_installer| :guilabel:`Fetch Python Plugins`             \                     see :ref:`plugins`                          \
-|mActionShowPluginManager| :guilabel:`Manage Plugins`           \                     see :ref:`managing_plugins`                 \
-:menuselection:`Python Console`                                 \                     \                                           \
-:menuselection:`GRASS -->`                                      \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
-==============================================================  ====================  ==========================================  ===============================
+=================================================================  ====================  ==========================================  ===============================
+Menu Option                                                        Shortcut              Reference                                   Toolbar
+=================================================================  ====================  ==========================================  ===============================
+|mActionShowPluginManager| :guilabel:`Manage and Install Plugins`  \                     see :ref:`managing_plugins`                 \
+:menuselection:`Python Console`                                    \                     \                                           \
+:menuselection:`GRASS -->`                                         \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
+=================================================================  ====================  ==========================================  ===============================
 
 Vector
 ......
@@ -231,17 +230,15 @@ Vector
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`Analysis Tools -->`                             \                     see :ref:`ftools`                           \
-:menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        \
-:menuselection:`Data Management Tools -->`                      \                     see :ref:`ftools`                           \
+:menuselection:`Coordinate Capture -->`                         \                     see :ref:`coordcapt`                        :guilabel:`Vector`
 :menuselection:`Dxf2Shp -->`                                    \                     see :ref:`dxf2shape`                        :guilabel:`Vector`
-:menuselection:`Geometry Tools -->`                             \                     see :ref:`ftools`                           \
-:menuselection:`Geoprocessing Tools -->`                        \                     see :ref:`ftools`                           \
 :menuselection:`GPS -->`                                        \                     see :ref:`plugin_gps`                       :guilabel:`Vector`
-:menuselection:`Research Tools -->`                             \                     see :ref:`ftools`                           \
+:menuselection:`Open Street Map -->`                            \                     see :ref:`open_street_map`                  \
 :menuselection:`Road Graph -->`                                 \                     see :ref:`roadgraph`                        \
 :menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Vector`
 ==============================================================  ====================  ==========================================  ===============================
+
+When starting QGIS for the first time not all core plugins are loaded.
 
 Raster
 ......
@@ -253,15 +250,10 @@ Menu Option                                                     Shortcut        
 :menuselection:`Georeferencer -->`                              \                     see :ref:`georef`                           :guilabel:`Raster`
 :menuselection:`Heatmap -->`                                    \                     see :ref:`heatmap_plugin`                   :guilabel:`Raster`
 :menuselection:`Interpolation -->`                              \                     see :ref:`interpol`                         :guilabel:`Raster`
-|dem_analysis| :guilabel:`Terrain Analysis`                     \                     see :ref:`rasterrain`                       \
 :menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal_statistics`                 :guilabel:`Raster`
-:menuselection:`Projections -->`                                \                     see :ref:`label_plugingdaltools`            \
-:menuselection:`Conversion -->`                                 \                     see :ref:`label_plugingdaltools`            \
-:menuselection:`Extraction -->`                                 \                     see :ref:`label_plugingdaltools`            \
-:menuselection:`Analysis -->`                                   \                     see :ref:`label_plugingdaltools`            \
-:menuselection:`Miscellaneous -->`                              \                     see :ref:`label_plugingdaltools`            \
-:guilabel:`GdalTools settings`                                  \                     see :ref:`label_plugingdaltools`            \
 ==============================================================  ====================  ==========================================  ===============================
+
+When starting QGIS for the first time not all core plugins are loaded.
 
 Database
 ........
@@ -269,21 +261,11 @@ Database
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
 ==============================================================  ====================  ==========================================  ===============================
-:menuselection:`DB manager -->`                                 \                     see :ref:`dbmanager`                        :guilabel:`Database`
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
-:menuselection:`Offline Editing -->`                            \                     see :ref:`offlinedit`                       :guilabel:`Database`
 :menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
-Web
-...
-
-==============================================================  ====================  ==========================================  ===============================
-Menu Option                                                     Shortcut              Reference                                   Toolbar
-==============================================================  ====================  ==========================================  ===============================
-:menuselection:`MapServer Export ... -->`                       \                     see :ref:`mapserver_export`                 :guilabel:`Web`
-:menuselection:`OpenStreetMap -->`                              \                     see :ref:`plugins_osm`                      :guilabel:`OpenStreetMap`
-==============================================================  ====================  ==========================================  ===============================
+When starting QGIS for the first time not all core plugins are loaded.
 
 Help
 ....
@@ -294,6 +276,7 @@ Menu Option                                                     Shortcut        
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
+:menuselection:`Need support ?`                                 \                     \                                           \
 |mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \

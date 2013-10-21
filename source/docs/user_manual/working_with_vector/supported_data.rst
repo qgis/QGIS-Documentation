@@ -189,6 +189,8 @@ Format as well as the raw TIGER Format of the US Census Bureau.
 
 .. index:: OSM, OpenStreetMap
 
+.. _open_street_map:
+
 Loading OpenStreetMap Vectors
 -----------------------------
 
