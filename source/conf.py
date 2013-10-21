@@ -261,6 +261,8 @@ rst_epilog = """
    :width: 1.5em
 .. |doublespinbox|  image:: /static/common/doublespinbox.png
    :width: 1.5em
+.. |edit| image:: /static/common/edit.png
+   :width: 1.5em
 .. |fontcombobox|  image:: /static/common/fontcombobox.png
    :width: 1.5em
 .. |frame|  image:: /static/common/frame.png
@@ -282,6 +284,8 @@ rst_epilog = """
 .. |hsplit|  image:: /static/common/hsplit.png
    :width: 1.5em
 .. |plugin| image:: /static/common/plugin.png
+   :width: 1.5em
+.. |user|  image:: /static/common/user.png
    :width: 1.5em
 .. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em

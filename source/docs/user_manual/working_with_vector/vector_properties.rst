@@ -122,6 +122,9 @@ of the current symbol to be rendered. On the right part of the tab, there is
 a list of symbols already defined for the current style, prepared to be used
 via selecting them from the list. The current symbol can be modified using
 the menu on the right side.
+
+.. _defining_symbols:
+
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
 side it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
 and :guilabel:`Rotation`. Here the layers are joined together.
@@ -166,6 +169,12 @@ That means that categorized or graduated styles are converted to rule-based.
 If you want to preserve those renderers, you have to stick to the QML format.
 On the other hand, it could be very handy sometimes to have this easy way of
 converting styles to rule-based.
+
+.. _vector_style_manager:
+
+With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can |mActionSignPlus| :sup:`add item`,
+|edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item` and |user| :sup:`share item. 'Marker' symbols, 'Line' symbols,
+'Fill' patterns and 'Color ramps' can be used to create the symbols (see defining_symbols_). The symbols are assigned to 'All Symbols', 'Groups' or 'Smart groups' then. 
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
