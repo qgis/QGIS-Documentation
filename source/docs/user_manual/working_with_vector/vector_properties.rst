@@ -172,9 +172,10 @@ converting styles to rule-based.
 
 .. _vector_style_manager:
 
-With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can |mActionSignPlus| :sup:`add item`,
-|edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item` and |user| :sup:`share item. 'Marker' symbols, 'Line' symbols,
-'Fill' patterns and 'Color ramps' can be used to create the symbols (see defining_symbols_). The symbols are assigned to 'All Symbols', 'Groups' or 'Smart groups' then. 
+With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administrate your
+symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item`
+and |user| :sup:`share item. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'Color ramps' 
+can be used to create the symbols (see defining_symbols_). The symbols are assigned to 'All Symbols', 'Groups' or 'Smart groups' then. 
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
