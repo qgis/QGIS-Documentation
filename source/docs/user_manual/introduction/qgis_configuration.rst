@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 ******************
 QGIS Configuration
@@ -132,13 +132,11 @@ General Tab
 System Menu
 -----------
 
-.. FIXME:more information necessary
-
 **Environment**
 
 System environment variables can now be viewed and many configured in the **Environment** menu
-(see figure_environment_variables_).
-
+(see figure_environment_variables_). This is useful for platforms, such as Mac, where a GUI application
+does not necessarily inherit the user's shell environment. 
 
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. 
   You can :guilabel:`Add` and :guilabel:`Remove` variables.
@@ -170,16 +168,14 @@ Data Sources menu
 
 * |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
 
-.. FIXME:more information necessary
-
-* |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`
+* |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`. When using
+  |mActionCopySelected|:sup:`Copy selected rows to clipboard` from the :guilabel:`Attribute table` menu
+  then this has the result that also the coordinates of points or vertices are copied to the clipboard.
 * :guilabel:`Attribute table behaviour` |selectstring|. There are three possibilities: 'Show all features',
   'Show selected features' and 'Show features visible on map'
-
-.. FIXME: more information necessary
-
-* :guilabel:`Attribute table row cache` |selectstring|
-* :guilabel:`Representation for NULL values` 
+* :guilabel:`Attribute table row cache` |selectstring|. This row cache makes it possible to save the last
+  loaded x attribute rows so that working with the attribute table will be quicker. The cache will be deleted when closing the attribute table. 
+* :guilabel:`Representation for NULL values` Here you can define a value for data fields containing a NULL value.
 
 
 **Data source handling**
@@ -193,14 +189,12 @@ Data Sources menu
   * ‘Never’: never prompt, will not load anything
   * ‘Load all’: never prompt, but load all sublayers
 
-.. FIXME: more information necessary
-
-* |checkbox| :guilabel:`Ignore shapefile encoding declaration`
+* |checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile has encoding information this will be ignored by QGIS.
 * |checkbox| :guilabel:`Add PostGIS layer with double click and select in extended mode`
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in extended mode`
 
-Rendering Tab
--------------
+Rendering Menu
+---------------
 
 **Rendering quality**
 
@@ -216,10 +210,7 @@ Rendering Tab
 **Contrast enhancement**
 
 * :guilabel:`Single band gray` |selectstring|. A single band gray can have 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and also 'Clip to MinMax'
-* :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
-
-.. FIXME: more information necessary
-
+* :guilabel:`Multi band color (byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'. 
 * :guilabel:`Multi band color (>byte/band)` |selectstring|. 'No stretch', 'Stretch to MinMax', 'Stretch and Clip to MinMax' and 'Clip to MinMax'.
 * :guilabel:`Limits (minimum/maximum)` |selectstring|. 'Cumulative pixel count cut', 'Minimum/Maximum', 'Mean +/- standard deviation'
 * :guilabel:`Cumulative pixel count cut limits`
@@ -229,8 +220,8 @@ Rendering Tab
 
 * :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
 
-Canvas and legend Tab
----------------------
+Canvas and legend Menu
+----------------------
 
 **Default map appearance (overridden by project properties)**
 
@@ -250,8 +241,8 @@ Canvas and legend Tab
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
   * |checkbox| :guilabel:`Add new layers to selected or current group`
 
-Map tools Tab
--------------
+Map tools Menu
+--------------
 
 **Identify**
 
@@ -285,8 +276,8 @@ Here you find a list of predefined scales. With the '+' and '-' buttons you can 
 remove your individual scales.
 
 
-Digitizing Tab
---------------
+Digitizing Menu
+----------------
 
 **Feature creation**
 
@@ -330,15 +321,15 @@ possible from GEOS 3.3 .
 * :guilabel:`Miter limit for curve offset`
 
 
-GDAL Tab
---------
+GDAL Menu
+---------
  
 GDAL is a data exchange library for raster files. In this tab you can :guilabel:`Edit create options`
 and :guilabel:`Edit Pyramids Options` of the raster formats. Define which GDAL driver to be used for
 a raster format as in some cases more than one GDAL driver is available.
 
-CRS Tab
--------
+CRS Menu
+--------
 
 **Default CRS for new projects**
 
@@ -429,9 +420,9 @@ require a restart of QGIS before they will be effective.
 Customization
 =============
 
-The customization tool is a new development in QGIS 1.8.. It lets you (de)activate
-almost every element in the QGIS user interface. This can get very useful if you have
-a lot of plug-ins installed that you never use and that are filling your screen.
+The customization tool lets you (de)activate almost every element in the QGIS user interface.
+This can get very useful if you have a lot of plug-ins installed that you never use and that
+are filling your screen.
 
 .. _figure_customization:
 
@@ -450,7 +441,7 @@ find the dock windows. Dock windows are applications that can be started and use
 a floating, top-level window or embedded to the QGIS main window as a docked widget
 (see also :ref:`sec_panels_and_toolbars`). In |checkbox| :guilabel:`Menus` you
 can hide entries in the Menu bar. In the |checkbox| :guilabel:`Status Bar` features
-like the coordinate information can be daectivated. In |checkbox| :guilabel:`Toolbars`
+like the coordinate information can be deactivated. In |checkbox| :guilabel:`Toolbars`
 you can (de)activate the toolbar icons of QGIS and in |checkbox| :guilabel:`Widgets`
 you can (de)activate dialogs as well as their buttons.
 
