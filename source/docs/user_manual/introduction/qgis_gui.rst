@@ -320,6 +320,7 @@ Toolbar
 -------
 
 .. index::
+
    single:toolbar
 
 The toolbar provides access to most of the same functions as the menus,
@@ -387,7 +388,6 @@ legend item is a raster or a vector layer. For GRASS vector layers
 
 * :menuselection:`Zoom to layer extent`
 * :menuselection:`Zoom to Best Scale (100%)`
-* :menuselection:`Stretch Using Current Extent`
 * :menuselection:`Show in overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
@@ -413,15 +413,15 @@ Additionally, according to layer position and selection
 
 **Right mouse button menu for vector layers**
 
-* :menuselection:`Zoom to layer extent`
-* :menuselection:`Show in overview`
+* :menuselection:`Zoom to Layer Extent`
+* :menuselection:`Show in Overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
 * :menuselection:`Set Layer CRS`
 * :menuselection:`Set Project CRS from Layer`
 * :menuselection:`Open Attribute Table`
 * :menuselection:`Toggle Editing` (not available for GRASS layers)
-* :menuselection:`Save As`
+* :menuselection:`Save As ...`
 * :menuselection:`Save Selection As`
 * :menuselection:`Filter`
 * :menuselection:`Show Feature Count`
@@ -470,12 +470,12 @@ This way all selected Layers or groups will be removed from the layer's list.
 Working with the Legend independent layer order
 ...............................................
 
-Since QGIS 1.8 there is a widget that allows to define a legend independent
-drawing order. You can activate it in the menu :menuselection:`Settings --> Panels`.
+There is a widget that allows to define a legend independent drawing order.
+You can activate it in the menu :menuselection:`Settings --> Panels`.
 Determine the drawing order of the layers in the map view here. Doing so makes
 it possible to order your layers in order of importance, for example, but to
 still display them in the correct order (see figure_layer_order_). Checking the
-|checkbox| :guilabel:`control rendering order` box underneath the list of layers
+|checkbox| :guilabel:`Control rendering order` box underneath the list of layers
 will cause a revert to default behavior.
 
 .. _figure_layer_order:
@@ -516,7 +516,7 @@ changes you make in the legend area.
    the mouse cursor inside the map area and roll the wheel forward (away from
    you) to zoom in and backwards (towards you) to zoom out. The mouse cursor
    position is the center where the zoom occurs. You can customize the behavior
-   of the mouse wheel zoom using the :guilabel:`Map tools` tab under
+   of the mouse wheel zoom using the :guilabel:`Map tools` menu under
    the :menuselection:`Settings --> Options` menu.
 
 .. tip::
@@ -546,8 +546,8 @@ will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
 Next to the coordinate display you find the scale display. It shows the scale of
-the map view. If you zoom in or out QGIS shows you the current scale. Since QGIS 1.8
-there is a scale selector which allows you to choose between predefined scales
+the map view. If you zoom in or out QGIS shows you the current scale. 
+There is a scale selector which allows you to choose between predefined scales
 from 1:500 until 1:1000000.
 
 A progress bar in the status bar shows progress of rendering
@@ -556,7 +556,7 @@ of statistics in raster layers, the progress bar will be used to show the
 status of lengthy operations.
 
 If a new plugin or a plugin update is available, you will see a message at the
-far right of the status bar. On the right side of the status bar is a small
+far left of the status bar. On the right side of the status bar is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering|
 immediately stops the current map rendering process.
