@@ -136,14 +136,32 @@ System Menu
 
 **Environment**
 
+System environment variables can now be viewed and many configured in the **Environment** menu
+(see figure_environment_variables_).
+
+
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`. 
   You can :guilabel:`Add` and :guilabel:`Remove` variables.
   :menuselection:`Current environment variables -->` are displayed below and it's possible 
   to |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
+.. _figure_environment_variables:
+
+.. only:: html
+
+   **Figure System Environment:**
+
+.. figure:: /static/user_manual/introduction/sys-env-options.png
+   :align: center
+   :width: 30em
+
+   System environment variables in |qg|
+
+
 **Plugin paths**
 
 * :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
+
 
 Data Sources menu
 -----------------
