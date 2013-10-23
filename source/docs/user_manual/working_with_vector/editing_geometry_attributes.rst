@@ -5,8 +5,8 @@
 Editing
 =======
 
-|qg| supports various capabilities for :index:`editing` OGR, PostGIS and
-SpatiaLite vector layers.
+|qg| supports various capabilities for :index:`editing` OGR, 
+SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables. 
 
 .. note::
    The procedure for editing GRASS layers is different - see Section
@@ -192,8 +192,7 @@ By default, |qg| loads layers read-only: This is a safeguard to avoid
 accidentally editing a layer if there is a slip of the mouse.
 However, you can choose to edit any layer as long as the data provider
 supports it, and the underlying data source is writable (i.e. its files are
-not read-only). Layer editing is most versatile when used on PostgreSQL/PostGIS
-data sources.
+not read-only).
 
 In general, editing vector layers is divided into a digitizing and an advanced
 digitizing toolbar, described in Section :ref:`sec_advanced_edit`. You can
@@ -308,7 +307,7 @@ The same functions for editing all layers of the project are available.
 Node Tool
 .........
 
-For both PostgreSQL/PostGIS and shapefile-based layers, the
+For shapefile-based layers as well as SpatialLite,PostgreSQL/PostGIS, MSSQL Spatial and Oracle Spatial tables the
 |mActionNodeTool| :sup:`Node Tool` provides manipulation capabilites of
 feature vertices similar to CAD programs. It is possible to simply select
 multiple vertices at once and to move, add or delete them alltogether.
@@ -442,14 +441,6 @@ also places it on a "spatial clipboard". So we cut the feature to delete.
 We could then use the |mActionEditPaste| :sup:`Paste Features` tool to put it back,
 giving us a one-level undo capability. Cut, copy, and paste work on the
 currently selected features, meaning we can operate on more than one at a time.
-
-.. _tip_deleting_features:
-
-.. tip:: **Feature Deletion Support**
-
-   When editing ESRI shapefiles, the deletion of features only works if |qg| is
-   linked to a GDAL version 1.3.2 or greater. The OS X and Windows versions of
-   |qg| available from the download site are built using GDAL 1.3.2 or higher.
 
 Saving Edited Layers
 ....................

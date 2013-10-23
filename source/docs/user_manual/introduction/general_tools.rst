@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -26,7 +26,7 @@ attributes of all features. The first item is the number of the item in the
 list of result followed by layer name. Then its first child will be the name of 
 a field with its value. Finally all informations of the feature is displayed.
 
-This windows can be customized to display custom fields but by default it will 
+This window can be customized to display custom fields but by default it will 
 display three kind of information:
 
 * Actions: actions can be added to the identify feature windows. When clicking 
@@ -36,7 +36,7 @@ display three kind of information:
   You can find clicked coordinate, X and Y coordinates, area in map unit and
   perimeter in map unit for polygon, length in map unit for line and feature 
   id. 
-* Data attributes: this is the list of attributs fields from data.
+* Data attributes: this is the list of attribute fields from data.
 
 .. _figure_identify:
 
@@ -61,7 +61,7 @@ At the bottom of the windows, you have five icons:
 More feature can be found in the menu display with a right click of the mouse 
 somewhere in the response tree.
 
-This menu allow to:
+This menu allows to:
 
 * View Feature form
 * Zoom to feature
@@ -198,7 +198,7 @@ You can set an option to always load new layers without drawing them. This
 means the layer will be added to the map, but its visibility checkbox in the
 legend will be unchecked by default. To set this option, choose
 menu option :menuselection:`Settings --> Options -->` and click on the
-:guilabel:`Rendering` tab. Uncheck the |checkbox| :guilabel:`By default new layers
+:guilabel:`Rendering` menu. Uncheck the |checkbox| :guilabel:`By default new layers
 added to the map should be displayed` checkbox. Any layer added to the map will
 be off (invisible) by default.
 
@@ -230,7 +230,7 @@ You can set an option to update the map display as features are drawn. By
 default, QGIS does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
 datastore, choose menu option :menuselection:`Settings --> Options`
-click on the :guilabel:`Rendering` tab. Set the feature count to an
+click on the :guilabel:`Rendering` menu. Set the feature count to an
 appropriate value to update the display during rendering. Setting a value of 0
 disables update during drawing (this is the default). Setting a value too low
 will result in poor performance as the map canvas is continually updated
@@ -246,7 +246,7 @@ Influence Rendering Quality
 
 To influence the rendering quality of the map you have 2 options. Choose menu
 option :menuselection:`Settings --> Options` click on the :guilabel:`Rendering`
-tab and select or deselect following checkboxes.
+menu and select or deselect following checkboxes.
 
 
 * |checkbox| :guilabel:`Make lines appear less jagged at the expense of some
@@ -367,10 +367,6 @@ Decorations
 The Decorations of QGIS includes the Copyright Label, the North Arrow and
 the Scale Bar. They are used to 'decorate' the map by adding cartographic
 elements.
-
-.. note::
-   Before QGIS 1.8 the same functionality was provided by the Decoration
-   Plugin.
 
 
 Copyright Label
@@ -699,10 +695,8 @@ attempts to parse the file using the last used delimiter, in this case a semicol
 delimiter. To change the delimiter to tab use ``\t`` (this is a regular expression
 for the tab character).
 
-Once the file is parsed, choose the ``X`` and ``Y`` fields from the dropdown
-lists. Make a :guilabel:`Geometry definition` and define the 'Geometry field' 
-if |radiobuttonoff| :guilabel:`Well know text (WKT)` is available. Finally enter
-a Layer name (e.g., :file:`elevp` ) as shown in figure_delimited_text_1_ . To
-add the layer to the map, click **[OK]**. The delimited text file now behaves as
+Once the file is parsed, make a :guilabel:`Geometry definition` |radiobuttonon|:guilabel:`Point coordinates`
+and choose the ``X`` and ``Y`` fields from the dropdown lists. Finally enter a Layer name (e.g., :file:`elevp`)
+as shown in figure_delimited_text_1_ . To add the layer to the map, click **[OK]**. The delimited text file now behaves as
 any other map layer in QGIS.
 
