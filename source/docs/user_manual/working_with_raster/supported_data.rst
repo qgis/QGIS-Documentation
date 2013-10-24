@@ -1,6 +1,4 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
+.. |updatedisclaimer|
 
 .. index:: Raster
 .. index:: Arc/Info_Binary_Grid, Arc/Info_ASCII_Grid, GeoTIFF

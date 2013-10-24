@@ -671,11 +671,13 @@ Rotate Point Symbols
 
 .. % FIXME change, if support in new symbology is available, too
 
-The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` tool is currently
-only supported by the old symbology engine. It allows to change the rotation
-of point symbols in the map canvas, if you have defined a rotation column
-from the attribute table of the point layer in the :guilabel:`Style` menu of
-the :guilabel:`Layer Properties`. Otherwise the tool is inactive.
+The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` allows to change the rotation
+of point symbols in the map canvas. You have to define a rotation column
+from the attribute table of the point layer in the :guilabel:`Advanced` menu of the
+:guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also you have to
+go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`. 
+Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field. 
+Without these settings the tool is inactive.
 
 .. _figure_edit_4:
 
@@ -738,8 +740,8 @@ To complete the creation of the new Shapefile layer, add the desired attributes
 by clicking on the **[Add to attributes list]** button and specifying a name and type for the
 attribute. A first 'id' column is added as default but can be removed, if not
 wanted. Only :guilabel:`Type: real` |selectstring|, :guilabel:`Type: integer`
-|selectstring|, and :guilabel:`Type: string` |selectstring| attributes are
-supported. Additionally and according to the attribute type you can also define
+|selectstring|, :guilabel:`Type: string` |selectstring| and :guilabel:`Type:date` |selectstring|
+attributes are supported. Additionally and according to the attribute type you can also define
 the width and precision of the new attribute column. Once you are happy with
 the attributes, click **[OK]** and provide a name for the shapefile. |qg| will
 automatically add a :file:`.shp` extension to the name you specify. Once the
