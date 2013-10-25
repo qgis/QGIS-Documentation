@@ -1,17 +1,9 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
+.. |updatedisclaimer|
 .. _working_with_ogc:
 
-*********************
-Working with OGC Data
-*********************
-
-QGIS supports WMS and WFS as data sources.
-
-What is OGC Data
-================
+***********************
+QGIS as OGC Data Client
+***********************
 
 .. index:: Open_Geospatial_Consortium, OGC
 
@@ -27,20 +19,20 @@ can be found under http://www.opengeospatial.org/.
 
 .. index:: WMS, WFS, WCS, CAT, SFS, GML
 
-Important OGC specifications are:
+Important OGC specifications supported by |qg| are:
 
-* **WMS** --- Web Map Service
-* **WMTS** --- Web Map Tile Service
-* **WFS** --- Web Feature Service
-* **WCS** --- Web Coverage Service
-* **CAT** --- Web Catalog Service
-* **SFS** --- Simple Features for SQL
+* **WMS** --- Web Map Service (:ref:`ogc-wms`)
+* **WMTS** --- Web Map Tile Service (:ref:`ogc-wms`)
+* **WFS** --- Web Feature Service (:ref:`ogc-wfs`)
+* **WFS-T** --- Web Feature Service - Transactional (:ref:`ogc-wfs`)
+* **WCS** --- Web Coverage Service (:ref:`ogc-wcs`)
+* **SFS** --- Simple Features for SQL (:ref:`label_postgis`)
 * **GML** --- Geography Markup Language
 
 OGC services are increasingly being used to exchange geospatial data between
-different GIS implementations and data stores. QGIS can now deal with three of
-the above specifications, being SFS (through support of the PostgreSQL / PostGIS
-data provider, see Section :ref:`label_postgis`), WFS and WMS as a client.
+different GIS implementations and data stores. QGIS can deal with the above 
+specifications as a client, being **SFS** (through support of the PostgreSQL 
+/ PostGIS data provider, see Section :ref:`label_postgis`).
 
 .. _`ogc-wms`:
 
@@ -514,6 +506,21 @@ details.
    From Version 1.7.0 QGIS has its own implementation of a WMS 1.3.0 Mapserver.
    Read more about this at chapter :ref:`label_qgisserver`.
 
+.. _`ogc-wcs`:
+
+WCS Client
+==========
+
+.. index:: WCS, Web Coverage Service
+
+|wcs| A Web Coverage Service (WCS) provides access to raster data in forms that are useful 
+for client-side rendering, as input into scientific models, and for other clients. 
+The WCS may be compared to the WFS and the WMS. As WMS and WFS service instances, a 
+WCS allows clients to choose portions of a server's information holdings based on 
+spatial constraints and other query criteria.
+
+|qg| provides Web Coverage Service (WCS) 1.0 support based on GDAL WCS driver. 
+
 .. _`ogc-wfs`:
 
 WFS and WFS-T Client
@@ -529,7 +536,6 @@ In general adding a WFS layer is very similar to the procedure used with WMS.
 The difference is there are no default servers defined, so we have to add our own.
 
 **Loading a WFS Layer**
-
 
 As an example we use the DM Solutions WFS server and display a layer.
 The URL is: http://www2.dmsolutions.ca/cgi-bin/mswfs_gmap

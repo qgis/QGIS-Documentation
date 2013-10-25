@@ -29,7 +29,7 @@ formats include:
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
 *  Online spatial data served as OGC Web Services, such as (WMS, WMTS, WCS, 
-   WFS, WFS-T, ...), see section :ref:`working_with_ogc`.
+   WFS, WFS-T, ...), see section :ref:`sec_ogc`.
 *  OpenStreetMap data, see section :ref:`plugins_osm`.
 
 Explore data and compose maps

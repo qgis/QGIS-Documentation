@@ -1,13 +1,8 @@
-|updatedisclaimer|
-
-.. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
-
-.. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
-
+.. |updatedisclaimer|
 .. _`label_qgisserver`:
 
-QGIS Server
-===========
+QGIS as OGC Data Server
+=======================
 
 QGIS Server is an open source WMS 1.3 and WFS 1.0.0 implementation which, in addition,
 implements advanced cartographic features for thematic mapping. The QGIS Server
@@ -16,6 +11,7 @@ together with a webserver (e.g. Apache, Lighttpd). It is funded by the EU projec
 Orchestra, Sany and the city of Uster in Switzerland.
 
 .. index:: SLD, SLD/SE
+.. index:: QGIS_Server, FastCGI, CGI, Common_Gateway_Interface
 
 It uses QGIS as backend for the GIS logic and for map rendering. Furthermore the
 Qt library is used for graphics and for platform independent C++ programming. In

@@ -736,7 +736,9 @@ rst_epilog = """
    :width: 1.5em
 .. |gps_importer| image:: /static/common/gps_importer.png
    :width: 1.5em
-.. |wfs| image:: /static/common/wfs.png
+.. |wfs| image:: /static/common/mActionAddWfsLayer.png
+   :width: 1.5em
+.. |wcs| image:: /static/common/mActionAddWcsLayer.png
    :width: 1.5em
 .. |ftools| image:: /static/common/ftools_logo.png
    :width: 1.5em
