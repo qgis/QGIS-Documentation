@@ -236,15 +236,15 @@ msgid ""
 "(for pixel values from 0 to 255)::"
 msgstr "色を緑から黄色の補間で設定する場合 (グリッドの値は0から255)::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:116
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:117
 msgid "To return back to default gray levels, use:"
 msgstr "デフォルトのグレースケールに戻す場合は:"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:123
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:124
 msgid "Multi Band Rasters"
 msgstr "マルチバンドラスタ"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:125
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:126
 msgid ""
 "By default, QGIS maps the first three bands to red, green and blue values to"
 " create a color image (this is the ``MultiBandColor`` drawing style. In some"
@@ -252,24 +252,24 @@ msgid ""
 "interchanges red band (1) and green band (2):"
 msgstr "QGISではデフォルトで最初の3バンドを赤・緑・青に割り当てます (これは ``マルチバンドカラー`` と呼ばれる表示方法です. この設定を変更したい場合があるかもしれません. 以下のコードは赤バンド (1) と緑バンド (2) をい入れ替える例です:"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:133
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:134
 msgid ""
 "In case only one band is necessary for visualization of the raster, single "
 "band drawing can be chosen --- either gray levels or pseudocolor, see "
 "previous section::"
 msgstr "グレースケールやシュードカラーを使って一つのバンドだけを表示することも可能です. 前のセクション参照::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:148
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:149
 msgid "Refreshing Layers"
 msgstr "レイヤの更新"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:150
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:151
 msgid ""
 "If you do change layer symbology and would like ensure that the changes are "
 "immediately visible to the user, call these methods::"
 msgstr "レイヤの表示方法の変更をしてすぐ反映させたい場合は以下の方法を実行してください::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:156
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:157
 msgid ""
 "The first call will ensure that the cached image of rendered layer is erased"
 " in case render caching is turned on. This functionality is available from "
@@ -278,19 +278,19 @@ msgid ""
 "method exists."
 msgstr "一つ目の方法は, キャッシュ表示をオンにした際に表示レイヤのキャッシュ画像を削除するやり方です. この機能はQGIS 1.4以降で使用可能になりました. "
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:162
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:163
 msgid ""
 "The second call emits signal that will force any map canvas containing the "
 "layer to issue a refresh."
 msgstr "二つ目の方法は更新したいマップキャンバス上のレイヤを指定して除去するやり方です."
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:165
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:166
 msgid ""
 "With WMS raster layers, these commands do not work. In this case, you have "
 "to do it explicitily::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:171
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:172
 msgid ""
 "In case you have changed layer symbology (see sections about raster and "
 "vector layers on how to do that), you might want to force QGIS to update the"
@@ -298,16 +298,16 @@ msgid ""
 "follows (``iface`` is an instance of QgisInterface)::"
 msgstr "レイヤの表示方法を変えた際 (ラスター及びベクターレイヤの変更方法のセクション参照), レイヤーリスト (凡例) の表示も更新したい場合は (QGISのインターフェースである``iface``) にて以下のようにすることで可能です::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:182
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:183
 msgid "Query Values"
 msgstr "値の検索"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:184
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:185
 msgid ""
 "To do a query on value of bands of raster layer at some specified point::"
 msgstr "ラスターレイヤの指定の場所の値を調べる方法::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:190
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:192
 msgid ""
 "The ``results`` method in this case returs a dictionary, with band indices "
 "as keys, and band values as values."
@@ -316,8 +316,8 @@ msgstr ""
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:7
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:15
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:41
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:142
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:178
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:143
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:179
 msgid "raster layers"
 msgstr ""
 
@@ -334,7 +334,7 @@ msgid "drawing style"
 msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/raster.rst:81
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:120
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
 msgid "rasters"
 msgstr ""
 
@@ -342,14 +342,14 @@ msgstr ""
 msgid "single band"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:120
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:121
 msgid "multi band"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:142
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:143
 msgid "refreshing"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:178
+#: ../../source/docs/pyqgis_developer_cookbook/raster.rst:179
 msgid "querying"
 msgstr ""

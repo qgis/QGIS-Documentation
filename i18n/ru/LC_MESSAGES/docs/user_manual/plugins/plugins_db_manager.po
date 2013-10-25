@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-06 11:54+0000\n"
+"PO-Revision-Date: 2013-10-16 07:08+0000\n"
 "Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -18,30 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 # a79e4b6f56b34f77944f6aa91b76586d
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:9
 msgid "DB Manager Plugin"
 msgstr "Модуль «DB Manager»"
 
-# f92f7c2fe9fd4b729b8801931cbd617c
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:34
-msgid "DB Manager dialog (KDE) |nix|"
-msgstr ""
-
-# 75662991258544a8a36221aa629ebec3
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:37
-msgid ""
-"The :menuselection:`Database` menu allows to connect to an existing "
-"database, to start the SQL-window and to exit the DB Manager Plugin. The "
-":menuselection:`Schema` menu includes tools to create and delete (empty) "
-"schemas and, if topology is available (e.g. PostGIS 2) to start a "
-":guilabel:`TopoViewer`. The menu :menuselection:`Table` allows to create and"
-" edit tables and to delete tables and views. It is also possible to empty "
-"tables and to move tables from one to another schema. Finally you can also "
-"run Vacuum Analyze and add Versioning Support to a table."
-msgstr "Меню :menuselection:`Database` позволяет подключиться к сущестсвующей базе денных, открыть окно создания SQL-запросов и закрыть DB Manager. Меню :menuselection:`Schema` предоставляет инструменты для создания и удаления (очистки) схем, и, если база данных имеет поддержку топологии (например, PostGIS 2.0) открыть окно TopoViewer. Меню :menuselection:`Table` позволяет создавать и редактировать таблицы, а также удалять таблицы и представления. Поддерживается очистка таблиц и перенос из схемы в схему. Наконец, можно запустить процедуру «Vacuum Analyze» и добавить поддержку версионирования к таблице."
-
 # b7e01d63c0654d02885b1b8571e8d033
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:46
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:52
 msgid ""
 "The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
 "With a double-click you can connect to the database. With the right-mouse "
@@ -50,7 +32,7 @@ msgid ""
 msgstr "В правой части окна находится древовидный список баз данных, поддерживаемых |qg|. Двойной щелчок по элементу списка выполняет подключение к соответствующей базе. Из контектсного меню, вызываемого по щелчку правой кнопки мыши, можно переименовать и удалить текущую схему и таблицы. Также из контектстного меню выполняется добавление таблиц к карте."
 
 # 1439af89090a48c4ae884f765ce0ea06
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:51
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:57
 msgid ""
 "If connected to a database, the **main** window of the DB Manager offers "
 "three tabs. The :guilabel:`Info` tab provides information about the table "
@@ -61,7 +43,7 @@ msgid ""
 "preview."
 msgstr "После подключения к базе данных в главном окне модуля становятся доступными три вкладки. Вкладка :guilabel:`Info` содержит информацию о таблице, типе геометрии, а таже о полях, ограничениях и индексах. Отсюда также можно запустить процедуру «Vacuum Analyze», а также построить пространственный индекс, если он отсутствует. Вкладка :guilabel:`Table` отображает данные в табличном виде, а вкладка :guilabel:`Preview` используется для предпросмотра пространственной составляющей."
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:14
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:11
 msgid ""
 "The DB Manager Plugin is officially part of |qg| core and intends to replace"
 " the SPIT Plugin and additionally to integrate all other database formats "
@@ -73,6 +55,52 @@ msgid ""
 "against your spatial database and then view the spatial output for queries "
 "by adding the results to QGIS as a query layer."
 msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:31
+msgid "DB Manager dialog |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:34
+msgid ""
+"The :menuselection:`Database` menu allows to connect to an existing "
+"database, to start the SQL-window and to exit the DB Manager Plugin. One you"
+" are connected to an existing database, the menus :menuselection:`Schema` "
+"and :menuselection:`Table` additionally appear."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:39
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete (empty)"
+" schemas and, if topology is available (e.g. PostGIS 2) to start a "
+":guilabel:`TopoViewer`."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:43
+msgid ""
+"The menu :menuselection:`Table` allows to create and edit tables and to "
+"delete tables and views. It is also possible to empty tables and to move "
+"tables from one to another schema. As further functionality you can perform "
+"a VACUUM and then an ANALYZE for each selected table. Plain VACUUM simply "
+"reclaims space and makes it available for re-use and ANALYZE updates "
+"statistics to determine the most efficient way to execute a query. Finally "
+"you can import layers/files, if they are loaded in QGIS or exist in the file"
+" system. And you can export database tables to Shape with the Export file "
+"feature."
+msgstr ""
+
+#~ msgid "DB Manager dialog (KDE) |nix|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :menuselection:`Database` menu allows to connect to an existing "
+#~ "database, to start the SQL-window and to exit the DB Manager Plugin. The "
+#~ ":menuselection:`Schema` menu includes tools to create and delete (empty) "
+#~ "schemas and, if topology is available (e.g. PostGIS 2) to start a "
+#~ ":guilabel:`TopoViewer`. The menu :menuselection:`Table` allows to create and"
+#~ " edit tables and to delete tables and views. It is also possible to empty "
+#~ "tables and to move tables from one to another schema. Finally you can also "
+#~ "run Vacuum Analyze and add Versioning Support to a table."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

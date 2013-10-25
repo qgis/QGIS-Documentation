@@ -56,7 +56,7 @@ msgid ""
 "path to the file ::"
 msgstr "OGRライブラリ(shapefilesと多くの他の形式)---データソースはファイルパスです ::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:48
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:49
 msgid ""
 "PostGIS database --- data source is a string with all information needed to "
 "create a connection to PostgreSQL database. :class:`QgsDataSourceURI` class "
@@ -64,14 +64,14 @@ msgid ""
 "Postgres support, otherwise this provider isn't available. ::"
 msgstr "PostGISデータベース --- データソースはPostｇreSQLデータベースへの接続を作るために必要な文字列です.この文字列を使って:class:`QgsDataSourceURI` クラスを作ることができます.ただしQGISがPostgresサポートつきでコンパイルされていないと利用できません.::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:65
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:67
 msgid ""
 "CSV or other delimited text files --- to open a file with a semicolon as a "
 "delimiter, with field \"x\" for x-coordinate and field \"y\" with "
 "y-coordinate you would use something like this ::"
 msgstr "CSVまたは他のデリミテッドテキストファイル -- 区切り文字としてセミコロン,x座標フィールドが \"x\" でy座標フィールドが \"y\"のファイルを開く手順はこのとおりです::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:73
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:75
 msgid ""
 "Note: from QGIS version 1.7 the provider string is structured as a URL, so "
 "the path must be prefixed with *file://*. Also it allows WKT (well known "
@@ -79,45 +79,45 @@ msgid ""
 "allows the coordinate reference system to be specified. For example ::"
 msgstr "注:QGISバージョン1.7からプロバイダの文字列はURL形式になりました,ですからパスは *file://*　という記述になります.またジオメトリの記述に\"x\"と”ｙ”のフィールドの他にWKT(well known text)形式も利用できるようになりました,さらに空間参照系も指定できるようになりました.例は次のとおりです::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:87
 msgid ""
 "GPX files --- the \"gpx\" data provider reads tracks, routes and waypoints "
 "from gpx files. To open a file, the type (track/route/waypoint) needs to be "
 "specified as part of the url ::"
 msgstr "GPX files ---  \"gpx\" データプロバイダを使うとgpxファイルからtracks,routes, waypointsを読み出すことができます. ファイルを開く場合Tタイプ(track/route/waypoint) の指定がurlの一部として必要です::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:98
 msgid ""
 "SpatiaLite database --- supported from QGIS v1.1. Similarly to PostGIS "
 "databases, :class:`QgsDataSourceURI` can be used for generation of data "
 "source identifier ::"
 msgstr "SpatiaLite データベース ---  QGIS v1.1以降サポートされています. SPostGIS データベースと同じように, :class:`QgsDataSourceURI` を使ってデータソース識別子を作成できます ::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:116
 msgid ""
 "MySQL WKB-based geometries, through OGR --- data source is the connection "
 "string to the table ::"
 msgstr "MySQL OGR経由でアクセスするWKB-を使ったジオメトリ--- データソースはテーブルに対する接続文字列 ::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:123
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:127
 msgid ""
 "WFS connection:. the connection is defined with a URI and using the ``WFS`` "
 "provider ::"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:129
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:134
 msgid "The uri can be created using the standard ``urllib`` library."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:142
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:148
 msgid "And you can also use the"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:147
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:153
 msgid "Raster Layers"
 msgstr "ラスタレイヤ"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:149
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:155
 msgid ""
 "For accessing raster files, GDAL library is used. It supports a wide range "
 "of file formats. In case you have troubles with opening some files, check "
@@ -126,22 +126,22 @@ msgid ""
 "and base name ::"
 msgstr "ラスタファイルのアクセスにはGDALライブラリが使われています.このライブラリは幅広い形式をサポートしています.なにかのファイルのオープンにトラブルがある場合はGDALがサポートしている形式をチェックしてください(デフォルトですべての形式がサポートされているわけではありません).ラスタをファイルからロードする場合ファイル名とベース名を指定して下さい::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:165
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:171
 msgid "Raster layers can also be created from a WCS service."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:176
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:182
 msgid ""
 "Alternatively you can load a raster layer from WMS server. However currently"
 " it's not possible to access GetCapabilities response from API --- you have "
 "to know what layers you want ::"
 msgstr "それとは別にWMSサーバからラスタをロードできます.現状ではGetCapabilitiesレスポンスをAPIから取得できません---どのレイヤが必要かはあなたが知らなければいけません::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:193
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:196
 msgid "Map Layer Registry"
 msgstr "マップレイヤレジストリ"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:195
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:198
 msgid ""
 "If you would like to use the opened layers for rendering, do not forget to "
 "add them to map layer registry. The map layer registry takes ownership of "
@@ -150,21 +150,21 @@ msgid ""
 "deleted, too."
 msgstr "もしあなたが開かれているレイヤを描画に利用したい場合はそれらをマップレイヤレジストリに追加することを忘れないで下さい.マップレイヤレジストリはレイヤのオーナーシップを取得して後でアプリケーションのいろいろな場所でユニークIDを使ってアクセスできるようになります.レイヤがマップレイヤレジストリから削除された削除された時にそれも削除されます."
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:202
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:205
 msgid "Adding a layer to the registry::"
 msgstr "レイヤをレジストリに追加する::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:206
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:209
 msgid ""
 "Layers are destroyed automatically on exit, however if you want to delete "
 "the layer explicitly, use::"
 msgstr "終了時にレイヤは廃棄されます,もしあなたがレイヤを明示的に削除したい場合は利用しましょう::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:214
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:217
 msgid "**TODO:**"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:213
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:216
 msgid "More about map layer registry?"
 msgstr "マップレイヤレジストリのさらに詳細な情報が必要ですか？"
 
@@ -174,13 +174,13 @@ msgstr ""
 
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:15
 #: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:36
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:45
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:62
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:81
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:92
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:110
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:120
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:162
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:64
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
 msgid "loading"
 msgstr ""
 
@@ -188,39 +188,39 @@ msgstr ""
 msgid "OGR layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:45
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:46
 msgid "PostGIS layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:62
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:64
 msgid "delimited text layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:81
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:84
 msgid "GPX files"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:92
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:95
 msgid "SpatiaLite layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:110
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:113
 msgid "MySQL geometries"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:120
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:124
 msgid "raster layers"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:162
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:168
 msgid "WMS raster"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:190
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:200
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:193
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
 msgid "map layer registry"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:200
+#: ../../source/docs/pyqgis_developer_cookbook/loadlayer.rst:203
 msgid "adding a layer"
 msgstr ""

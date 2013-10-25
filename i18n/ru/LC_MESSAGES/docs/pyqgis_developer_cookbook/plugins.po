@@ -407,14 +407,14 @@ msgid ""
 ":file:`testplugin.py`)::"
 msgstr "Стоит сказать несколько слов о функции ``classFactory()``, которая вызывается когда расширение загружается в QGIS. Она получает ссылку на экземпляр класса :class:`QgisInterface` и должна вернуть экземпляр класса вашего расширения --- в нашем случае этот класс называется``TestPlugin``. Ниже показано он должен выглядеть (например, :file:`testplugin.py`)::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:264
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:268
 msgid ""
 "The only plugin functions that must exist are ``initGui()`` and "
 "``unload()``. These functions are called when the plugin is loaded and "
 "unloaded."
 msgstr "В расширении обязательно должны присутствовать функции ``initGui()`` и ``unload()``. Эти функции вызываются когда расширение загружается и выгружается."
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:267
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:271
 msgid ""
 "You can see that in the above example, the :func:`addPluginMenu` is used. "
 "This will add the corresponding menu action to the *Plugins* menu. "
@@ -422,28 +422,28 @@ msgid ""
 "list of those methods:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:269
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:273
 msgid ":func:`addPluginToRasterMenu()`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:270
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:274
 msgid ":func:`addPluginToVectorMenu()`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:271
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:275
 msgid ":func:`addPluginToDatabaseMenu()`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:272
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:276
 msgid ":func:`addPluginToWebMenu()`"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:274
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:278
 msgid ""
 "All of them have the same syntax as the :func:`addPluginToMenu` method."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:276
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:280
 msgid ""
 "Adding your plugin menu to one of those predefined method is recommended to "
 "keep consistency in how plugin entries are organized. However, you can add "
@@ -451,17 +451,17 @@ msgid ""
 "demonstrates:"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:299
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:304
 msgid "Resource File"
 msgstr "Файл ресурсов"
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:301
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:306
 msgid ""
 "You can see that in ``initGui()`` we've used an icon from the resource file "
 "(called :file:`resources.qrc` in our case)::"
 msgstr "Как видно в примере выше, в ``initGui()`` мы использовали иконку из файла ресурсов (в нашем случае он называется :file:`resources.qrc`)::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:310
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:315
 msgid ""
 "It is good to use a prefix that will not collide with other plugins or any "
 "parts of QGIS, otherwise you might get resources you did not want. Now you "
@@ -469,7 +469,7 @@ msgid ""
 "done with :command:`pyrcc4` command::"
 msgstr "Хорошим тоном считается использование префикса, это позволит избежать конфликтов с другими расширениями или с частями QGIS. Если префикс не задан, можно получить не те ресурсы, которые нужны. Теперь сгенерируем файл ресурсов на Python. Это делается командой :command:`pyrcc4`::"
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:317
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:322
 msgid ""
 "And that's all... nothing complicated :) If you've done everything correctly"
 " you should be able to find and load your plugin in the plugin manager and "
@@ -477,25 +477,25 @@ msgid ""
 "selected."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:322
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:327
 msgid ""
 "When working on a real plugin it's wise to write the plugin in another "
 "(working) directory and create a makefile which will generate UI + resource "
 "files and install the plugin to your QGIS installation."
 msgstr "При работе над реальным расширением удобно вести разработку в другом (рабочем) каталоге и создать makefile, который будет генерировать файлы интерфейса и ресурсов, а также выполнять копирование расширения в каталог QGIS."
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:329
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:334
 msgid "Documentation"
 msgstr "Документация"
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:331
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:336
 msgid ""
 "The documentation for the plugin can be written as HTML help files. The "
 ":mod:`qgis.utils` module provides a function, :func:`showPluginHelp` which "
 "will open the help file browser, in the same way as other QGIS help."
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:335
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:340
 msgid ""
 "The :func:`showPluginHelp`` function looks for help files in the same "
 "directory as the calling module. It will look for, in turn, :file:`index-"
@@ -505,7 +505,7 @@ msgid ""
 "documentation to be included with the plugin."
 msgstr "Функция :func:`showPluginHelp`` ищет файлы справки в том же каталоге, где находится вызвавший её модуль. Она по очереди будет искать файлы :file:`index-ll_cc.html`, :file:`index-ll.html`, :file:`index-en.html`, :file:`index-en_us.html` и :file:`index.html`, и отобразит первый найденный. Здесь ``ll_cc`` --- язык интерфейса QGIS. Это позволяет включать в состав\nрасширения документацию на разных языках."
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:342
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:347
 msgid ""
 "The :func:`showPluginHelp` function can also take parameters packageName, "
 "which identifies a specific plugin for which the help will be displayed, "
@@ -519,10 +519,10 @@ msgstr "Кроме того, функция :func:`showPluginHelp` может п
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:106
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:113
 #: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:206
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:296
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:326
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:326
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:348
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:301
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:331
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:331
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:353
 msgid "plugins"
 msgstr ""
 
@@ -556,22 +556,22 @@ msgstr ""
 msgid "metadata"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:296
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:301
 msgid "resource file"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:296
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:301
 msgid "resources.qrc"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:326
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:331
 msgid "documentation"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:326
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:331
 msgid "implementing help"
 msgstr ""
 
-#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:348
+#: ../../source/docs/pyqgis_developer_cookbook/plugins.rst:353
 msgid "code snippets"
 msgstr ""
