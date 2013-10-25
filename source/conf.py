@@ -349,6 +349,8 @@ rst_epilog = """
    :width: 1.5em
 .. |icon_sqlanywhere| image:: /static/common/sqlanywhere.png
    :width: 1.5em
+.. |icon_newgpx| image:: /static/common/create_gpx.png
+   :width: 1.5em
 .. |icon_dbmanager| image:: /static/common/dbmanager.png
    :width: 1.5em
 .. |icon_zonal_statistics| image:: /static/common/raster-stats.png
@@ -989,7 +991,6 @@ rst_epilog = """
    :width: 1.5em
 .. |gdal_vrt| image:: /static/common/vrt.png
    :width: 1.5em
-
 .. |mActionAddMssqlLayer| image:: /static/common/mActionAddMssqlLayer.png
    :width: 1.5em
 .. |fullCumulativeStretch| image:: /static/common/mActionFullCumulativeCutStretch.png
@@ -1009,6 +1010,18 @@ rst_epilog = """
 .. |raster-stats| image:: /static/common/raster-stats.png
    :width: 1.5em
 .. |roadgraph| image:: /static/common/roadgraph.png
+   :width: 1.5em
+.. |proc_toolbox| image:: /static/common/alg.png
+   :width: 1.5em
+.. |proc_model| image:: /static/common/model.png
+   :width: 1.5em
+.. |proc_history| image:: /static/common/history.png
+   :width: 2em
+.. |proc_option| image:: /static/common/config.png
+   :width: 1.5em
+.. |proc_result| image:: /static/common/results.png
+   :width: 1.5em
+.. |proc_commander| image:: /static/common/commander.png
    :width: 1.5em
 """
 

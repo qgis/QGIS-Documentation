@@ -161,27 +161,28 @@ Layer
 ===================================================================  ====================  ==========================================  ===============================
 Menu Option                                                          Shortcut              Reference                                   Toolbar
 ===================================================================  ====================  ==========================================  ===============================
-:menuselection:`New -->`                                             \                     see :ref:`sec_create_shape`                 :guilabel:`Manage Layers`
+:menuselection:`New -->`                                             \                     see :ref:`sec_create_vector`                :guilabel:`Manage Layers`
 :guilabel:`Embed Layers and Groups ...`                              \                     see :ref:`nesting_projects`                 \
-|mActionAddNonDbLayer| :guilabel:`Add Vector Layer`                  :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
+|mActionAddOgrLayer| :guilabel:`Add Vector Layer`                    :kbd:`Ctrl+Shift+V`   see :ref:`label_workingvector`              :guilabel:`Manage Layers`
 |mActionAddRasterLayer| :guilabel:`Add Raster Layer`                 :kbd:`Ctrl+Shift+R`   see :ref:`load_raster`                      :guilabel:`Manage Layers`
-|mActionAddLayer| :guilabel:`Add PostGIS Layer`                      :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
+|mActionAddPostgisLayer| :guilabel:`Add PostGIS Layer`               :kbd:`Ctrl+Shift+D`   see :ref:`label_postgis`                    :guilabel:`Manage Layers`
 |mActionAddSpatiaLiteLayer| :guilabel:`Add SpatiaLite Layer`         :kbd:`Ctrl+Shift+L`   see :ref:`label_spatialite`                 :guilabel:`Manage Layers`
 |mActionAddMssqlLayer| :guilabel:`Add MSSQL Spatial Layer`           :kbd:`Ctrl+Shift+M`   see :ref:`label_mssql`                      :guilabel:`Manage Layers`
-|mActionAddWmsLayer| :guilabel:`Add WMS Layer`                       :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
-|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
-|gps_importer| :guilabel:`Create new GPX layer`                      \                     see :ref:`plugin_gps`                       :guilabel:`Manage Layers`
-|oracle_raster| :guilabel:`Add Oracle GeoRaster layer`               \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
+|oracle_raster| :guilabel:`Add Oracle GeoRaster Layer`               \                     see :ref:`oracle_raster`                    :guilabel:`Manage Layers`
 |icon_sqlanywhere| :guilabel:`Add SQL Anywhere Layer`                \                     see :ref:`sqlanywhere`                      :guilabel:`Manage Layers`
-|wfs| :guilabel:`Add WFS Layer`                                      \                     \                                           :guilabel:`Manage Layers`
-|mActionEditCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                 \
-|mActionEditPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                 \
-|mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     \                                           :guilabel:`Attributes`
-|mActionFileSave| :guilabel:`Save edits`                             \                     \                                           :guilabel:`Digitizing`
-|mActionToggleEditing| :guilabel:`Toggle editing`                    \                     \                                           :guilabel:`Digitizing`
+|mActionAddWmsLayer| :guilabel:`Add WMS/WMTS Layer`                  :kbd:`Ctrl+Shift+W`   see :ref:`ogc-wms`                          :guilabel:`Manage Layers`
+|wcs| :guilabel:`Add WCS Layer`                                      \                     see :ref:`ogc-wcs`                          :guilabel:`Manage Layers`
+|wfs| :guilabel:`Add WFS Layer`                                      \                     see :ref:`ogc-wfs`                          :guilabel:`Manage Layers`
+|mActionAddDelimitedTextLayer| :guilabel:`Add Delimited Text Layer`  \                     see :ref:`label_dltext`                     :guilabel:`Manage Layers`
+|mActionEditCopy| :guilabel:`Copy style`                             \                     see :ref:`vector_style_menu`                \
+|mActionEditPaste| :guilabel:`Paste style`                           \                     see :ref:`vector_style_menu`                \
+|mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
+|mActionToggleEditing| :guilabel:`Toggle Editing`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionFileSave| :guilabel:`Save Layer Edits`                       \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionAllEdits| :menuselection:`Current Edits -->`		     \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 :menuselection:`Save as...`                                          \                     \                                           \
 :menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
-|mActionRemoveLayer| :guilabel:`Remove Layer`                        :kbd:`Ctrl+D`         \                                           \
+|mActionRemoveLayer| :guilabel:`Remove Layer(s)`                     :kbd:`Ctrl+D`         \                                           \
 :menuselection:`Set CRS of Layer(s)`                                 :kbd:`Ctrl+Shift+C`   \                                           \
 :menuselection:`Set project CRS from Layer`                          \                     \                                           \
 :menuselection:`Properties`                                          \                     \                                           \
@@ -223,9 +224,10 @@ Menu Option                                                        Shortcut     
 :menuselection:`GRASS -->`                                         \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
 =================================================================  ====================  ==========================================  ===============================
 
+When starting QGIS for the first time not all core plugins are loaded.
+
 Vector
 ......
-
 
 ==============================================================  ====================  ==========================================  ===============================
 Menu Option                                                     Shortcut              Reference                                   Toolbar
@@ -263,6 +265,22 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 :menuselection:`eVis -->`                                       \                     see :ref:`evis`                             :guilabel:`Database`
 :menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
+==============================================================  ====================  ==========================================  ===============================
+
+When starting QGIS for the first time not all core plugins are loaded.
+
+Processing
+..........
+
+==============================================================  ====================  ==========================================  ===============================
+Menu Option                                                     Shortcut              Reference                                   Toolbar
+==============================================================  ====================  ==========================================  ===============================
+|proc_toolbox| :guilabel:`Toolbox`                              \                     see :ref:`processing.toolbox`               :guilabel:`Toolbox`
+|proc_model| :guilabel:`Graphical Modeler`                      \                     see :ref:`processing.modeler`               \
+|proc_history| :guilabel:`History and Logs`                     \                     see :ref:`processing.history`               \
+|proc_option| :guilabel:`Options and configuration`             \                     see :ref:`processing.options`               \
+|proc_result| :guilabel:`Results viewer`                        \                     see :ref:`processing.results`               \
+|proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
 When starting QGIS for the first time not all core plugins are loaded.
@@ -388,6 +406,7 @@ legend item is a raster or a vector layer. For GRASS vector layers
 
 * :menuselection:`Zoom to layer extent`
 * :menuselection:`Zoom to Best Scale (100%)`
+* :menuselection:`Stretch Using Current Extent`
 * :menuselection:`Show in overview`
 * :menuselection:`Remove`
 * :menuselection:`Duplicate`
@@ -471,7 +490,7 @@ Working with the Legend independent layer order
 ...............................................
 
 There is a widget that allows to define a legend independent drawing order.
-You can activate it in the menu :menuselection:`Settings --> Panels`.
+You can activate it in the menu :menuselection:`Settings --> Panels --> Layer order`.
 Determine the drawing order of the layers in the map view here. Doing so makes
 it possible to order your layers in order of importance, for example, but to
 still display them in the correct order (see figure_layer_order_). Checking the

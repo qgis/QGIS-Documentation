@@ -700,17 +700,17 @@ button again, the value will be updated in the attribute table.
    If you hold the :kbd:`Ctrl` key pressed, the rotation will be done in 15
    degree steps.
 
-.. index:: Create_New_Layers, New_Shapefile_Layer
+.. index:: Create_New_Layers, New_Shapefile_Layer, New_SpatiaLite_Layer, New_GPX_Layer
 
-.. _sec_create_shape:
+.. _sec_create_vector:
 
-Creating a new Vector layer
----------------------------
+Creating new Vector layers
+--------------------------
 
-|qg| allows to create new Shapefile layers and new SpatiaLite layers. Creation
-of a new GRASS layer is supported within the GRASS-plugin. Please refer to
-section :ref:`creating_new_grass_vectors` for more information on creating
-GRASS vector layers.
+|qg| allows to create new Shapefile layers, new SpatiaLite layers, and new 
+GPX Layers. Creation of a new GRASS layer is supported within the GRASS-plugin. 
+Please refer to section :ref:`creating_new_grass_vectors` for more information 
+on creating GRASS vector layers.
 
 Creating a new Shapefile layer
 ..............................
@@ -788,8 +788,22 @@ legend and you can edit it in the same way as described in Section
 Further management of SpatiaLite-Layers can be done with the DB Manager see 
 :ref:`dbmanager`.
 
-.. index:: Work_with_Attribute_Table
+.. index:: New_GPX_Layer
+.. _vector_create_gpx:
 
+Creating a new GPX layer
+.........................
+
+To create a new GPX file you need to load the GPS plugin first. :menuselection:`Plugins -->` 
+|mActionShowPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
+Activate the |checkbox| :guilabel:`GPS Tools` checkbox. 
+
+When this plugin is loaded choose :menuselection:`New -->` |icon_newgpx| 
+:menuselection:`Create new GPX Layer...` from the :menuselection:`Layer`. 
+In the :guilabel:`Save new GPX file as` dialog you can choose where to save the 
+new GPX layer.
+
+.. index:: Work_with_Attribute_Table
 .. _sec_attribute_table:
 
 Working with the Attribute Table

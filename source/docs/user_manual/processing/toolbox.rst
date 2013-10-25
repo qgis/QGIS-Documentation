@@ -1,4 +1,5 @@
 .. |updatedisclaimer|
+.. _`processing.toolbox`:
 
 The toolbox
 ============
@@ -342,7 +343,10 @@ dialog (you can open it from the :menuselection:`Processing` menu), and in the
 This output folder is used as the default path in case you type just a filename
 with no path (i.e. :file:`myfile.shp`) when executing an algorithm.
 
-When running an algorithm that uses vector layer in iterative mode, the entered file path is used as the base path for all generated files, which are named using the base name and appending a number representing the index of the iteration. The file extension (and format) is used for all those generated files.
+When running an algorithm that uses vector layer in iterative mode, the entered 
+file path is used as the base path for all generated files, which are named using 
+the base name and appending a number representing the index of the iteration. 
+The file extension (and format) is used for all those generated files.
 
 Apart from raster layers and tables, algorithms also generates graphics and texts
 as HTML files. These results are shown at the end of the algorithm execution in
@@ -367,6 +371,8 @@ can uncheck the corresponding check box if you are not interested in a given
 output, which virtually makes it behave like an optional output (although the
 layer is created anyway, but if you leave the text box empty, it will be saved
 to a temporary file and deleted once you exit QGIS)
+
+.. _`processing.options`:
 
 Configuring the processing framework
 -------------------------------------

@@ -1,4 +1,5 @@
 .. |updatedisclaimer|
+.. _`processing.results`:
 
 Configuring external applications
 =================================

@@ -1,4 +1,5 @@
 .. |updatedisclaimer|
+.. _`processing.history`:
 
 The history manager
 ============================

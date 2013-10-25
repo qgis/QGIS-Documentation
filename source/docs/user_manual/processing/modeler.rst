@@ -1,4 +1,5 @@
 .. |updatedisclaimer|
+.. _`processing.modeler`:
 
 The graphical modeler
 ==============================
