@@ -143,8 +143,8 @@ Load raster and vector layers from the sample dataset
 #. Zoom in a bit to your favorite area with some lakes.
 #. Double click the :file:`lakes` layer in the map legend to open the
    :guilabel:`Properties` dialog.
-#. Click on the :guilabel:`Style` tab and select a blue as fill color.
-#. Click on the :guilabel:`Labels` tab and check the |checkbox| :guilabel:`Label this layer with`
+#. Click on the :guilabel:`Style` menu and select a blue as fill color.
+#. Click on the :guilabel:`Labels` menu and check the |checkbox| :guilabel:`Label this layer with`
    checkbox to enable labeling and choose NAMES field as field containing labels.
 #. To improve readability of labels, you can add a white buffer around them,
    by clicking "Buffer" in the list on the left, checking |checkbox| :guilabel:`Draw text buffer`

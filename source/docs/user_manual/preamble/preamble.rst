@@ -19,7 +19,7 @@ Nevertheless, mistakes concerning the content are possible.
 
 Therefore, all data are not liable to any duties or guarantees. The authors,
 editors and publishers do not take any responsibility or liability for failures
-and their consequences. Your are always welcome to indicate possible mistakes.
+and their consequences. You are always welcome to indicate possible mistakes.
 
 This document has been typeset with reStructuredText. It is available as reST
 source code via `github <https://github.com/qgis/QGIS-Documentation>`_ and

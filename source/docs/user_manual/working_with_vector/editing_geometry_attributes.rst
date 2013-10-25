@@ -1,4 +1,4 @@
-|updatedisclaimer|
+.. |updatedisclaimer|
 
 .. comment out this Section (by putting '|updatedisclaimer|' on top) if file is not uptodate with release
 
@@ -925,8 +925,8 @@ Working with non spatial attribute tables
 .........................................
 
 QGIS allows also to load non spatial tables. This includes currently tables
-supported by OGR, delimited text and the PostgreSQL provider. The tables can
-be used for field lookups or just generally browsed and edited using the table
+supported by OGR, delimited text as well as the PostgreSQL, MSSQL and Oracle provider. 
+The tables can be used for field lookups or just generally browsed and edited using the table
 view. When you load the table you will see it in the legend field. It can be
 opened e.g. with the |mActionOpenTable| :sup:`Open Attribute Table` tool and
 is then editable like any other layer attribute table.
