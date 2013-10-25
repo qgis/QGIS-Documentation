@@ -129,6 +129,8 @@ General Tab
 * :guilabel:`Enable macros` |selectstring|. This option was created to handle macros which are written to perform an action
    on project events. You can chosse between 'Never', 'Ask', 'For this session only'  and 'Always (not recommended)'.
 
+.. _`env_options`:
+
 System Menu
 -----------
 

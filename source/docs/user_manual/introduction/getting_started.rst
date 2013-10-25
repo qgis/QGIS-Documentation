@@ -35,9 +35,9 @@ Installation on external media
 ..............................
 
 QGIS allows to define a ``--configpath`` option that overrides the default path
-(e.g. ~/.qgis under Linux) for user configuration and forces QSettings to use
+(e.g. ~/.qgis2 under Linux) for user configuration and forces QSettings to use
 this directory, too. This allows users to e.g. carry a QGIS installation on a
-flash drive together with all plugins and settings.
+flash drive together with all plugins and settings. Also compare with section :ref:`env_options`.
 
 .. _label_sampledata:
 
@@ -57,14 +57,14 @@ If you did not select the checkbox to install the sample dataset
 during the initial |qg| installation, you can either
 
 * use GIS data that you already have;
-* download sample data from the qgis website at http://download.qgis.org/qgis/data/; or
+* download sample data from at http://download.osgeo.org/qgis/data/qgis_sample_data.zip; or
 * uninstall |qg| and reinstall with the data download option checked, only if
   the above solutions are unsuccessful.
 
 |nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation
 packages available as rpm, deb or dmg. To use the sample dataset download the
-file :file:`qgis_sample_data` as ZIP or TAR archive from
-http://download.osgeo.org/qgis/data/ and unzip or untar the archive on
+file :file:`qgis_sample_data` as ZIP archive from
+http://download.osgeo.org/qgis/data/qgis_sample_data.zip and unzip the archive on
 your system. The Alaska dataset includes all GIS data that are used as
 examples and screenshots in the user guide, and also includes a small GRASS
 database. The projection for the qgis sample dataset is Alaska Albers Equal
@@ -95,7 +95,7 @@ Area with unit feet. The EPSG code is 2964.
 
 If you intend to use |qg| as graphical frontend for GRASS, you can find a
 selection of sample locations (e.g. Spearfish or South Dakota) at the
-official GRASS GIS website http://grass.osgeo.org/download/data.php.
+official GRASS GIS website http://grass.osgeo.org/download/sample-data/.
 
 .. _samplesession:
 
@@ -145,7 +145,7 @@ Load raster and vector layers from the sample dataset
    :guilabel:`Properties` dialog.
 #. Click on the :guilabel:`Style` menu and select a blue as fill color.
 #. Click on the :guilabel:`Labels` menu and check the |checkbox| :guilabel:`Label this layer with`
-   checkbox to enable labeling and choose NAMES field as field containing labels.
+   checkbox to enable labeling and choose "NAMES" field as field containing labels.
 #. To improve readability of labels, you can add a white buffer around them,
    by clicking "Buffer" in the list on the left, checking |checkbox| :guilabel:`Draw text buffer`
    and choosing 3 as buffer size.
