@@ -131,7 +131,7 @@ as for bugs. Please make sure to select the type ``Feature``.
 
 If you have found a bug and fixed it yourself you can submit this patch
 also. Again, the lovely redmine ticketsystem at
-http://hub.qgis.org/projects/quantum-gis/Bugreports has this type as well.
+http://hub.qgis.org/wiki/quantum-gis/Bugreports has this type as well.
 Check ``Patch supplied`` checkbox and attach your patch before submitting
 bug. Someone of the developers will review it and apply it to QGIS. Please
 don't be alarmed if your patch is not applied straight away --- developers

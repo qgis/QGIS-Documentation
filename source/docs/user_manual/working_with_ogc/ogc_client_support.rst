@@ -519,7 +519,14 @@ The WCS may be compared to the WFS and the WMS. As WMS and WFS service instances
 WCS allows clients to choose portions of a server's information holdings based on 
 spatial constraints and other query criteria.
 
-|qg| provides Web Coverage Service (WCS) 1.0 support based on GDAL WCS driver. 
+|qg| has a native WCS provider and supports both version 1.0 and 1.1 (which are significantly 
+different), but currently it prefers 1.0, because 1.1 has many issues, each server implements it 
+in different way with various particularities.
+
+The native WCS provider handles all network requests and uses all standard |qg| 
+network settings (especially proxy). It is also possible select cache mode 
+(always cache, prefer cache, prefer network, always network) and the provider also 
+supports selection of time position if temporal domain is offered by server.
 
 .. _`ogc-wfs`:
 

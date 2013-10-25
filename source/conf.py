@@ -353,7 +353,7 @@ rst_epilog = """
    :width: 1.5em
 .. |icon_zonal_statistics| image:: /static/common/raster-stats.png
    :width: 1.5em
-.. |oracle_raster| image:: /static/common/oracle_raster.png
+.. |oracle_raster| image:: /static/common/oracleraster.png
    :width: 1.5em
 .. |raster_terrain| image:: /static/common/raster_terrain.png
    :width: 1.5em
