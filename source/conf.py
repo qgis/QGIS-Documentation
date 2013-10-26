@@ -1038,8 +1038,8 @@ latex_paper_size = 'a4'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide',
-   u'QGIS Project', 'manual'),
+  ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide', u'QGIS Project', 'manual'),
+  ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', u'PyQGIS developer cookbook', u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

@@ -86,22 +86,8 @@
             <p class="muted">{{ _('Version 2.0 Dufour') }}</p>
         </div>
         <div class="span5">
-            <div>
-                <h5>{{ _('Support QGIS!') }}</h5>
-                    <div class="bannergroup">
-                        <div class="bannerheader">
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="27GAYFKF4U5EE">
-                            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
-                                border="0" name="submit" alt="{{ _('Donate via PayPal.com') }}">
-                            <input type="hidden" name="lc" value="us">
-                            <img alt="" border="0" align="center" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                            <!--<a href="http://www.qgis.org/en/sponsorship.html"><div style="margin-left:7px">more information</div></a>-->
-                            </form>
-                        </div>
-                    </div>
-            </div>
+            <p><a href="{{ pathto('site/getinvolved/donations') }}" class="btn btn-large btn-success btn-flat">{{ _('Support QGIS') }}</a></p>
+            <p class="muted">{{ _('Donate now!') }}</p>        
         </div>
     </div>
 </section>

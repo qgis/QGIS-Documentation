@@ -4,6 +4,7 @@
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
 LANGUAGES     = en ca_ES  da_DK  de  es  fi  fr  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
+LANGUAGES     = de
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -113,6 +114,21 @@ pdf: html
 		texi2pdf --quiet QGISUserGuide.tex; \
 	fi
 	mv $(BUILDDIR)/latex/$(LANG)/QGISUserGuide.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-UserGuide.pdf
+	# pyqgis developer cookbook
+	@-if [ $(LANG) = "ja" ]; then \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		nkf -W -e --overwrite PyQGISDeveloperCookbook.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape PyQGISDeveloperCookbook.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape PyQGISDeveloperCookbook.tex; \
+		platex -interaction=batchmode -kanji=euc -shell-escape PyQGISDeveloperCookbook.tex; \
+		dvipdfmx PyQGISDeveloperCookbook.dvi; \
+	else \
+		cd $(BUILDDIR)/latex/$(LANG); \
+		texi2pdf --quiet PyQGISDeveloperCookbook.tex; \
+		texi2pdf --quiet PyQGISDeveloperCookbook.tex; \
+		texi2pdf --quiet PyQGISDeveloperCookbook.tex; \
+	fi
+	mv $(BUILDDIR)/latex/$(LANG)/PyQGISDeveloperCookbook.pdf $(BUILDDIR)/pdf/$(LANG)/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf
 
 world: all
 
@@ -123,7 +139,7 @@ all:
 	@echo Starting with pulling all translations from transifex
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	tx pull --minimum-perc=1 --skip -f
+	#tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
@@ -132,6 +148,7 @@ all:
 		mv live/html/$$LANG live/html/$$LANG.old; \
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
 		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
+		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
