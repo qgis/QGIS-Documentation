@@ -255,6 +255,8 @@ rst_epilog = """
    :width: 1.5em
 .. |dialogbuttonbox|  image:: /static/common/dialogbuttonbox.png
    :width: 1.5em
+.. |transformed|  image:: /static/common/transformed.png
+   :width: 1.5em
 .. |digitising|  image:: /static/common/digitising.png
    :width: 1.5em
 .. |dockwidget| image:: /static/common/dockwidget.png

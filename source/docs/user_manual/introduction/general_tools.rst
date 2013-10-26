@@ -65,7 +65,7 @@ This menu allows to:
 
 * View Feature form
 * Zoom to feature
-* Copy Feature: copy all feature ie geometry and attributes;
+* Copy feature: copy all feature ie geometry and attributes;
 * Copy attribute value: copy only the value of the attribut you click on;
 * Copy feature attributes: copy only attributes;
 * Clear result: result in the window are removed
@@ -201,6 +201,15 @@ menu option :menuselection:`Settings --> Options -->` and click on the
 :guilabel:`Rendering` menu. Uncheck the |checkbox| :guilabel:`By default new layers
 added to the map should be displayed` checkbox. Any layer added to the map will
 be off (invisible) by default.
+
+Another option in :menuselection:`Settings --> Options -->` :guilabel:`Rendering` 
+menu is the |checkbox| :guilabel:`Enable back buffer` checkbox. It provides better 
+graphics performance at the cost of loosing the possibility to cancel rendering and 
+incremental feature drawing. If it is unchecked, you can set the 'Number of features 
+to draw before updating the display', otherwise it is inactive. 
+
+Finally you can activate the |checkbox| :guilabel:`Use render caching where possible 
+to speed up redraws` checkbox.
 
 Stopping Rendering
 ..................
@@ -348,11 +357,11 @@ The QGIS toolbar provides several tools to select features in the map canvas.
 To select one or several features just click on
 |mActionSelect| and select your tool:
 
-* |mActionSelect| :sup:`Select single feature`
-* |mActionSelectRectangle| :sup:`Select features by rectangle`
-* |mActionSelectPolygon| :sup:`Select features by polygon`
-* |mActionSelectFreehand| :sup:`Select features by freehand`
-* |mActionSelectRadius| :sup:`Select features by radius`
+* |mActionSelect| :sup:`Select Single Feature`
+* |mActionSelectRectangle| :sup:`Select Features by Rectangle`
+* |mActionSelectPolygon| :sup:`Select Features by Polygon`
+* |mActionSelectFreehand| :sup:`Select Features by Freehand`
+* |mActionSelectRadius| :sup:`Select Features by Radius`
 
 To deselect all selected features click on |mActionDeselectAll| :sup:`Deselect
 features from all layers`.
@@ -364,9 +373,37 @@ Decorations
 ===========
 
 
-The Decorations of QGIS includes the Copyright Label, the North Arrow and
+The Decorations of QGIS includes the Grid, Copyright Label, the North Arrow and
 the Scale Bar. They are used to 'decorate' the map by adding cartographic
 elements.
+
+
+Grid
+----
+
+|transformed| :sup:`Grid` allows to add a coordinate grid and 
+coordinate annotations to the map canvas.
+
+.. _figure_decorations_1:
+
+.. only:: html
+
+   **Figure Decorations 1:**
+
+.. figure:: /static/user_manual/introduction/grid_dialog.png
+   :align: center
+   :width: 30em
+
+   The Grid Dialog |nix|
+
+#.  Select from menu :menuselection:`View --> Decorations --> Grid`.
+    The dialog starts (see figure_decorations_1_).
+#.  Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid 
+    definitions according to the layers loaded in the map canvas.
+#.  Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set 
+    annotation definitions according to the layers loaded in the map canvas.
+#.  Click **[Apply]** to check, if it looks as expected.
+#.  Click **[OK]** to close the dialog.
 
 
 Copyright Label
@@ -375,11 +412,11 @@ Copyright Label
 |copyright_label| :sup:`Copyright label` adds a Copyright label
 using the text you prefer to the map.
 
-.. _figure_decorations_1:
+.. _figure_decorations_2:
 
 .. only:: html
 
-   **Figure Decorations 1:**
+   **Figure Decorations 2:**
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
@@ -389,7 +426,7 @@ using the text you prefer to the map.
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Copyright Label`.
-    The dialog starts (see figure_decorations_1_).
+    The dialog starts (see figure_decorations_2_).
 #.  Enter the text you want to place on the map. You can use HTML as
     shown in the example
 #.  Choose the placement of the label from the :guilabel:`Placement`
@@ -414,11 +451,11 @@ to let QGIS determine the direction, it makes its best guess as to how the
 arrow should be oriented. For placement of the arrow you have four options,
 corresponding to the four corners of the map canvas.
 
-.. _figure_decorations_2:
+.. _figure_decorations_3:
 
 .. only:: html
 
-   **Figure Decorations 2:**
+   **Figure Decorations 3:**
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
@@ -434,11 +471,11 @@ Scale Bar
 |scale_bar| :sup:`Scale Bar` adds a simple scale bar to the map
 canvas. You control the style and placement, as well as the labeling of the bar.
 
-.. _figure_decorations_3:
+.. _figure_decorations_4:
 
 .. only:: html
 
-   **Figure Decorations 3:**
+   **Figure Decorations 4:**
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
@@ -456,7 +493,7 @@ To add a scale bar:
 
 
 #.  Select from menu :menuselection:`View --> Decorations --> Scale Bar`
-    The dialog starts (see figure_decorations_3_)
+    The dialog starts (see figure_decorations_4_)
 #.  Choose the placement from the :guilabel:`Placement` 'Bottom Left'
     drop-down list
 #.  Choose the style from the :guilabel:`Scale bar style` 'Tick Down' list
@@ -474,7 +511,7 @@ To add a scale bar:
 
    **Settings of Decorations**
 
-   When you save a .qgs project, any changes you have made to NorthArrow,
+   When you save a .qgs project, any changes you have made to Grid, NorthArrow,
    ScaleBar and Copyright will be saved in the project and restored
    the next time you load the project.
 
@@ -485,7 +522,6 @@ To add a scale bar:
 
 Annotation Tools
 ================
-
 
 The |mActionTextAnnotation| :sup:`Text Annotation` tools in the attribute toolbar
 provides the possibility to place formatted text in a balloon on the QGIS map
@@ -513,6 +549,22 @@ by default in the other themes too.
 
 The |mActionAnnotation| :sup:`Move Annotation` tool allows to move the annotation on the
 map canvas.
+
+Html annotations
+----------------
+
+The |mActionFormAnnotation| :sup:`Html Annotation` tools in the attribute toolbar
+provides the possibility to place the content of a html file in a balloon on the 
+QGIS map canvas. Use the :guilabel:`Html Annotation` tool, click into the map 
+canvas and add the path to the html file into the dialog.
+
+SVG annotations
+----------------
+
+The |mActionSaveAsSVG| :sup:`SVG Annotation` tools in the attribute toolbar
+provides the possibility to place a SVG Symbol in a balloon on the QGIS map canvas. 
+Use the :guilabel:`SVG Annotation` tool, click into the map canvas and add the 
+path to the SVG file into the dialog.
 
 Form annotations
 ----------------
