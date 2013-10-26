@@ -12,7 +12,9 @@ PAPER         =
 SOURCEDIR     = source
 RESOURCEDIR   = resources
 BUILDDIR      = output
-SPHINXOPTS    = -D language='$(LANG)' $(SOURCEDIR)
+# using the -A flag, we create a python variable named 'language', which
+# we then can use in html templates to create language dependent switches
+SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
 VERSION       = testing
 
 # User-friendly check for sphinx-build
