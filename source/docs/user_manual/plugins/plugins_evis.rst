@@ -75,7 +75,7 @@ to view geocoded photographs and their associated attribute data.
    :align: center
    :width: 25em
 
-   The *eVis* display window |win|
+   The *eVis* display window
 
 A. **Display window**: A window where the photograph will appear.
 B. **Zoom in button**: Zoom in to see more detail. If the entire image cannot be
@@ -109,7 +109,7 @@ Understanding the Options window
    :align: center
    :width: 25em
 
-   The *eVis* Options window |win|
+   The *eVis* Options window
 
 A. **File path**: A dropdown list to specify the attribute field that contains
    the directory path or URL for the photographs or other documents being
@@ -120,7 +120,7 @@ A. **File path**: A dropdown list to specify the attribute field that contains
 B. **Compass bearing**: A dropdown list to specify the attribute
    field that contains the compass bearing associated with the photograph being
    displayed. If compass bearing information is available it is necessary to
-   click the checkbox to the left of the dropdown menu title.
+   click the checkbox below the dropdown menu title.
 C. **Compass offset**: Compass offsets can be used to compensate for
    declination (adjust bearings collected using magnetic bearings to true north
    bearings). Click the |radiobuttonon| :guilabel:`Manual` radiobutton to enter
@@ -137,11 +137,11 @@ F. **Apply rule to all documents**: If checked, the same path rules that are
    defined for photographs will be used for non-image documents such as movies,
    text documents, and sound files. If not checked the path rules will only
    apply to photographs and other documents will ignore the Base Path parameter.
-G. **Save settings**: If the checkbox is checked the values for the associated
+G. **Remember settings**: If the checkbox is checked the values for the associated
    parameters will be saved for the next session when the window is closed or
    when the **[Save]** button below is pressed.
 H. **Reset values**: Resets the values on this line to the default setting.
-I. **Restore faults**: This will reset all of the fields to their default
+I. **Restore defaults**: This will reset all of the fields to their default
    settings. It has the same effect as clicking all of the **[Reset]** buttons.
 J. **Save**: This will save the settings without closing the :guilabel:`Options`
    pane.
@@ -161,7 +161,7 @@ Understanding the Configure External Applications window
    :align: center
    :width: 25em
 
-   The *eVis* External Applications window |win|
+   The *eVis* External Applications window
 
 
 A. **File reference table**: A table containing file types that can be opened
@@ -337,7 +337,7 @@ above.
    :align: center
    :width: 25em
 
-   The *eVis* Database connection window |win|
+   The *eVis* Database connection window
 
 
 A. **Database Type**: A dropdown list to specify the type of database that will
@@ -390,7 +390,7 @@ Layer` textbox.
    :align: center
    :width: 25em
 
-   The eVis SQL query tab |win|
+   The eVis SQL query tab
 
 A. **SQL Query Text Window**: A screen to type SQL queries.
 B. **Run Query**: Button to execute the query entered in the :guilabel:`SQL Query
@@ -460,7 +460,7 @@ appear in the :guilabel:`Output Console` window.
    :align: center
    :width: 25em
 
-   The *eVis* Predefined queries tab |win|
+   The *eVis* Predefined queries tab
 
 A. **Open File**: Launches the "Open File" file browser to search for
    the XML file holding the predefined queries.
@@ -560,5 +560,3 @@ A complete sample XML file with three queries is displayed below:
       <autoconnect>false</autoconnect>
     </query>
    </doc>
-
-.. FIXME: new screenshots have to be made by Alexandre
