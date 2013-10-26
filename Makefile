@@ -11,7 +11,9 @@ PAPER         =
 SOURCEDIR     = source
 RESOURCEDIR   = resources
 BUILDDIR      = output
-SPHINXOPTS    = -D language='$(LANG)' $(SOURCEDIR)
+# using the -A flag, we create a python variable named 'language', which
+# we then can use in html templates to create language dependent switches
+SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
 VERSION       = 1.8
 
 # User-friendly check for sphinx-build
@@ -123,7 +125,7 @@ all:
 	@echo NOT pulling all translations from transifex, as only current stable is translated
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	# tx pull --minimum-perc=1 --skip -f
+	#tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \

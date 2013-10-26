@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
-{% set favicon = '../../../favicon.ico?1322140996' %}
+{% set favicon = 'images/favicon.ico?1322140996' %}
 
-{% set css_files = css_files + [
-  '_static/qgis-style.css'
-  ]
-%}
+{% set css_files = css_files + [ '_static/qgis-style.css' ] %}
+{# 'language' as variable comes in via '-A language=xx', a sphinx-build option 
+we then can use this language to build language dependent switches #}
+{% if language in ["fa"] %}
+{% set css_files = css_files + [ '_static/qgis-style-rtl.css' ] %}
+{%- endif %}
 {% set script_files = script_files + ['_static/qgis-site.js']%}
 
 
@@ -19,17 +21,20 @@
             <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
             <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
             <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            <li id="aboutcontact"><a href="http://www.qgis.org/{{language}}/site/getinvolved/about.html"><div></div></a></li>
           </ul>
         </div>
 
-        <p class="credit">{{ _('All content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a>.') }}</p>
+        <p class="credit">{{ _('If not stated otherwise, all content is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0 licence (CC BY-SA)</a>') }}</p>
     </div>
     <div class="container">
-      <p class="credit">{{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>.') }}</p>
+      <p class="credit">
+        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }} - 
+        {%- if last_updated %}
+        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
+        {%- endif %}
+      </p>
     </div>
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
-    {%- endif %}
   </footer>
 {% endblock %}
 
@@ -97,8 +102,9 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
           <ul class="unstyled nav main-menu">
             <!--<li><a href="{{ pathto('site/about/index') }}">{{_("Discover QGIS") }}</a></li>
             <li><a href="{{ pathto('site/forusers/index') }}">{{_("For Users") }}</a></li>
-            <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>-->
-            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS ") }}{{ version|e }}</a></li>
+            <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>
+            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation") }}</a></li>-->
+             <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS ") }}{{ version|e }}</a></li>
             <li>{% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}</li>
