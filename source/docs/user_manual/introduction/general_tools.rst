@@ -687,12 +687,7 @@ Right-click on the embedded layer and choose |mActionRemoveLayer| :sup:`Remove`.
 Add Delimited Text Layer
 ========================
 
-This function allows you to load a delimited text file as a layer in |qg|.
-
-Requirements
-------------
-
-To view a delimited text file as layer, the text file should contain:
+This function allows you to load a delimited text file as a layer in |qg|. Following settings need to be defined:
 
 #. The **File format** usually is |radiobuttonon| :guilabel:`CSV (comma separated values)`. If another delimiter is used, activate the |radiobuttonon| :guilabel:`custom delimiter` radiobutton and if each line in the file is split using a regular expression, please activate the |radiobuttonon| :guilabel:`Regular expression delimiter` radiobutton.
 #. As **Record options** a text file usually provides a delimited header row of field names. This is usually the first line in the text file. If there is no header row available, deactivate the |checkbox| :guilabel:`first records have field names` checkbox. And if the header row isn't the first line of the text file, define the number of header lines to discard. 
