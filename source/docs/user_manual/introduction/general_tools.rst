@@ -692,13 +692,13 @@ This function allows you to load a delimited text file as a layer in |qg|.
 Requirements
 ------------
 
-To view a delimited text file as layer, the text file must contain:
+To view a delimited text file as layer, the text file should contain:
 
-#. A delimited header row of field names. This must be the first line in the text
-   file.
-#. The header row must contain an X and Y field. These fields can have any name.
-#. The x and y coordinates must be specified as a number. The coordinate system
-   is not important.
+#. The **File format** usually is |radiobuttonon| :guilabel:`CSV (comma separated values)`. If another delimiter is used, activate the |radiobuttonon| :guilabel:`custom delimiter` radiobutton and if each line in the file is split using a regular expression, please activate the |radiobuttonon| :guilabel:`Regular expression delimiter` radiobutton.
+#. As **Record options** a text file usually provides a delimited header row of field names. This is usually the first line in the text file. If there is no header row available, deactivate the |checkbox| :guilabel:`first records have field names` checkbox. And if the header row isn't the first line of the text file, define the number of header lines to discard. 
+#. As **Field options** you can trim leading and trailing spaces from fields activating the |checkbox| :guilabel:`Trim fields` checkbox. You can |checkbox| :guilabel:`Discard empty fields` in each record and you can define that the |checkbox| :guilabel:`Decimal separator is comma`. Otherwise it will be point.
+#. As **Geometry definitions** a typical text file provides |radiobuttonon| :guilabel:`Point coordinates`. This means there must be an 'X' and 'Y' field with coordinate values. If the text file provides a |radiobuttonon| :guilabel:`Well Known Text` field, there must be a 'WKT' field with geometry information for point, line or polygon objects. These fields can have any name. Otherwise for attribute tables define |radiobuttonon| :guilabel:`no geometry`. The x and y coordinates must be specified as a number. The coordinate system is not important. If they are defined in degree/minutes/seconds, activate the |checkbox| :guilabel:`DMS coordinates` checkbox.
+#. As **Layer settings** you can activate |checkbox| :guilabel:`Use spatial index` to improve performance of displaying and spatially selecting features. You can define to |checkbox| :guilabel:`Use Subset index` and to |checkbox| :guilabel:`Watch file` to watch for changes to the file by other applications, while QGIS is running.
 
 As an example of a valid text file we import the elevation point data file
 :file:`elevp.csv` coming with the |qg| sample dataset (See Section
