@@ -17,18 +17,18 @@ You can view and overlay vector and raster data in different formats and
 projections without conversion to an internal or common format. Supported
 formats include:
 
-*  Spatially-enabled tables and views using PostGIS, SpatiaLite and MSSQL   
-   Spatial, Oracle Spatial, vector formats supported by the installed OGR  
+*  Spatially-enabled tables and views using PostGIS, SpatiaLite and MSSQL
+   Spatial, Oracle Spatial, vector formats supported by the installed OGR
    library, including ESRI shapefiles,
    MapInfo, SDTS, GML and many more, see section :ref:`label_workingvector`.
 *  Raster and imagery formats supported by the installed GDAL (Geospatial
    Data Abstraction Library) library, such as GeoTiff, Erdas Img., ArcInfo Ascii
    Grid, JPEG, PNG and many more, see section :ref:`working_with_raster`.
-*  QGIS processing framework to call hundreds of native and third party 
-   algorithms from QGIS, see section Processing :ref:`sec_processing_intro`.
+*  |qg| processing framework to call hundreds of native and third party
+   algorithms from |qg|, see section Processing :ref:`sec_processing_intro`.
 *  GRASS raster and vector data from GRASS databases (location/mapset),
    see section :ref:`sec_grass`.
-*  Online spatial data served as OGC Web Services, such as (WMS, WMTS, WCS, 
+*  Online spatial data served as OGC Web Services, such as (WMS, WMTS, WCS,
    WFS, WFS-T, ...), see section :ref:`sec_ogc`.
 *  OpenStreetMap data, see section :ref:`plugins_osm`.
 
@@ -80,7 +80,7 @@ Publish maps on the Internet
 ----------------------------
 
 |qg| can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as WMS or WFS server (see section :ref:`sec_ogc`). Additionally you can export data publish them on the Internet using a webserver with UMN MapServer or GeoServer installed.
- 
+
 Extend |qg| functionality through plugins
 -----------------------------------------
 
@@ -107,10 +107,10 @@ Core Plugins
 #.  Offline Editing (Allow offline editing and synchronizing with database)
 #.  Open Layers plugin (OpenStreetMap, Google Maps, Bing Maps layers and more)
 #.  Oracle Spatial GeoRaster
-#.	Processing (formerly SEXTANTE)
+#.  Processing (formerly SEXTANTE)
 #.  Raster terrain analysis (Raster based terrain analysis)
 #.  Road graph plugin (Shortest Path network analysis)
-#. 	Spatial Query Plugin
+#.  Spatial Query Plugin
 #.  SPIT (Import Shapefile to PostgreSQL/PostGIS)
 #.  SQL Anywhere Plugin (Store vector layers within a SQL Anywhere database)
 #.  Topology Checker (Finding topological errors in vector layers)
@@ -129,15 +129,15 @@ can be easily installed using the Python Plugin Installer (See Section
 Python Console
 ---------------
 
-For scripting, it is possible to take advantage of an integrated Python console. 
-It can be opened from menu: :menuselection:`Plugins --> Python Console`. The console 
+For scripting, it is possible to take advantage of an integrated Python console.
+It can be opened from menu: :menuselection:`Plugins --> Python Console`. The console
 opens as a non-modal utility window. For interaction with the |qg| environment, there is
 the :data:`qgis.utils.iface` variable, which is an instance of :class:`QgsInterface`.
 This interface allows access to the map canvas, menus, toolbars and other
 parts of the |qg| application.
 
-For further information about working with the Python Console and Programming 
-Py|qg| plugins and applications, please refer to 
+For further information about working with the Python Console and Programming
+Py|qg| plugins and applications, please refer to
 http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
 

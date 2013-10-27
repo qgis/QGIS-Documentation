@@ -19,7 +19,7 @@ Under :guilabel:`Feature subset` click on the **[Query Builder]** button to open
 For example, if you have a ``regions`` layer with a ``TYPE_2`` field you could
 select only regions that are ``borough`` in the :guilabel:`Provider specific filter expression`
 box of the Query builder. Figure_attributes_2_ shows an example of the Query builder
-populated with the regions.shp layer from the QGIS sample data.
+populated with the regions.shp layer from the |qg| sample data.
 The Fields, Values and Operators sections help the user to construct the SQL-like
 query.
 

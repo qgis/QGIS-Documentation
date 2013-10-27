@@ -6,23 +6,23 @@
 .. _plugins:
 
 ************
-QGIS Plugins
+|qg| Plugins
 ************
 
-QGIS has been designed with a plugin architecture. This allows many new
+|qg| has been designed with a plugin architecture. This allows many new
 features/functions to be easily added to the application. Many of the features
-in QGIS are actually implemented as either **core** or **external plugins**.
+in |qg| are actually implemented as either **core** or **external plugins**.
 
 .. index::
    single:plugins;types
 
-* **Core Plugins** are maintained by the QGIS Development Team and are
-  automatically part of every QGIS distribution. They are written in one of two
+* **Core Plugins** are maintained by the |qg| Development Team and are
+  automatically part of every |qg| distribution. They are written in one of two
   languages: C++ or Python. More information about core plugins are provided in
   Section :ref:`core_plugins`
 * **External Plugins** are currently all written in Python. They are stored in
   external repositories and maintained by the individual authors. They can be
-  added to QGIS in the |mActionShowPluginManager| :guilabel:`Get more` section
+  added to |qg| in the |mActionShowPluginManager| :guilabel:`Get more` section
   the of :guilabel:`Plugin Manager`. More information about external plugins is
   provided in Section :ref:`load_external_plugin`.
 
@@ -40,10 +40,10 @@ the :guilabel:`Plugin Manager` is used again.
 
 .. _load_core_plugin:
 
-Loading a QGIS Core Plugin
+Loading a |qg| Core Plugin
 --------------------------
 
-Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins -->`
+Loading a |qg| Core Plugin is done from the main menu :menuselection:`Plugins -->`
 |mActionShowPluginManager| :menuselection:`Manage and Install Plugins`.
 
 .. index::
@@ -64,9 +64,9 @@ Loading a QGIS Core Plugin is done from the main menu :menuselection:`Plugins --
 The |plugin| :guilabel:`Installed` menu of the :guilabel:`Plugin Manager` lists all the
 available plugins and their status (loaded or unloaded), including all core plugins
 and all external plugins that have been installed and automatically activated using
-the |mActionShowPluginManager| :guilabel:`Get more` menu (see Section :ref:`load_external_plugin`). 
+the |mActionShowPluginManager| :guilabel:`Get more` menu (see Section :ref:`load_external_plugin`).
 Those plugins that are already loaded have a check mark to the left of their name.
-Figure_plugins_1_ shows the |plugin| :guilabel:`Installed` dialog. 
+Figure_plugins_1_ shows the |plugin| :guilabel:`Installed` dialog.
 
 To enable a particular core plugin, click on the checkbox to the left of the plugin
 name, and click **[OK]**. When you exit the application, a list of loaded plugins
@@ -74,25 +74,25 @@ is retained, and the plugins are automatically loaded.
 
 .. _load_external_plugin:
 
-Loading an external QGIS Plugin
+Loading an external |qg| Plugin
 -------------------------------
 
-External QGIS plugins are written in Python. They are by default stored in either
-the 'Official' QGIS Repository, or in various other external repositories
-maintained by individual authors. You can find the external plugins in the 
+External |qg| plugins are written in Python. They are by default stored in either
+the 'Official' |qg| Repository, or in various other external repositories
+maintained by individual authors. You can find the external plugins in the
 |mActionShowPluginManager| :guilabel:`Get more` menu.
 
 In the |plugin| :guilabel:`Installed` menu you can see the path if it is an external plugin.
 External plugins are only installed in your home directory while core plugins
-are stored in ``/usr`` . 
+are stored in ``/usr`` .
 
-Detailed documentation about the usage, minimum QGIS version, homepage, authors,
-and other important information are provided for the 'Official' QGIS Repository
+Detailed documentation about the usage, minimum |qg| version, homepage, authors,
+and other important information are provided for the 'Official' |qg| Repository
 at http://plugins.qgis.org/plugins/. For other external repositories, they might
 be available with the external plugins themselves. In general it is not included
 in this manual.
 
-Currently there are over 150 external plugins available from the 'Official' QGIS
+Currently there are over 150 external plugins available from the 'Official' |qg|
 Repository. Some of these plugins offer functionality that will be required by
 many users (for example: providing the user with the ability to view and edit
 OpenStreetMap data, or to add GoogleMap layers) while others offer very
@@ -102,7 +102,7 @@ supply networks).
 It is, however, quite straightforward to search through all the available external
 plugins by providing keywords, choosing a named repository and/or filtering on
 the status of plugins (currently installed or uninstalled in your system).
-Searching and filtering is done from the QGIS Python Plugin Installer
+Searching and filtering is done from the |qg| Python Plugin Installer
 
 .. tip:: **Add more repositories**
 
@@ -131,7 +131,7 @@ button.
 
 .. tip:: **Check for updates**
 
-   You can stay informed about plugins. Activate the checkbox |checkbox| 
+   You can stay informed about plugins. Activate the checkbox |checkbox|
    :guilabel:`Check for updates on startup` from the|mActionTransformSettings|
-   :guilabel:`Settings` menu. QGIS will inform you whenever a plugin or plugin
+   :guilabel:`Settings` menu. |qg| will inform you whenever a plugin or plugin
    update is available.

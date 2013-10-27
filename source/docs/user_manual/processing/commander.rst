@@ -25,14 +25,14 @@ box with autocompletion where you type the command you want to run.
 
 The commander is started from the *Analysis* menu or, more practically, pressing
 :kbd:`Shift + Ctrl + M` (you can change that default keyboard shortcut in the
-QGIS configuration if you prefer a different one). Apart from executing SEXTANTE
-algorithms, the commander gives you access to most of the functionality in QGIS,
-which means that it gives you a practical and efficient way of running QGIS
-tasks, and allows you to control QGIS reducing the usage of buttons and menus.
+|qg| configuration if you prefer a different one). Apart from executing SEXTANTE
+algorithms, the commander gives you access to most of the functionality in |qg|,
+which means that it gives you a practical and efficient way of running |qg|
+tasks, and allows you to control |qg| reducing the usage of buttons and menus.
 
 Moreover, the commander is configurable and you can add your custom commands and
 have them just a few keystrokes away, making it a powerful tool to become more
-productive in your daily work with QGIS
+productive in your daily work with |qg|
 
 Available commands
 ------------------
@@ -41,7 +41,7 @@ The commands available in the commander fall in the following categories:
 
 * SEXTANTE algorithms. They are shown as ``SEXTANTE algorithm: <name of the algorithm>``.
 * Menu items. They are shown as ``Menu item: <menu entry text>``. All menus items
-  available from the QGIS interface are available, even if they are included in
+  available from the |qg| interface are available, even if they are included in
   a submenu.
 * Python functions. You can create short Python functions that will be then
   included in the list of available commands. They are shown as

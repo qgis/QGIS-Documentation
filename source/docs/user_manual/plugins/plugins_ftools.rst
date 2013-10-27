@@ -12,10 +12,10 @@ common vector-based GIS tasks, without the need for additional software,
 libraries, or complex workarounds. It provides a growing suite of spatial data
 management and analysis functions that are both fast and functional.
 
-fTools is now automatically installed and enabled in new versions of QGIS, and
+fTools is now automatically installed and enabled in new versions of |qg|, and
 as with all plugins, it can be disabled and enabled using the Plugin Manager
 (See Section :ref:`load_core_plugin`). When enabled, the fTools plugin adds a
-:menuselection:`Vector` menu to QGIS, providing functions ranging from Analysis
+:menuselection:`Vector` menu to |qg|, providing functions ranging from Analysis
 and Research Tools to Geometry and Geoprocessing Tools, as well as several useful
 Data Management Tools.
 

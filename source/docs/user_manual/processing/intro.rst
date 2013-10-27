@@ -4,14 +4,14 @@
 Introduction
 ============
 
-This chapter introduces the QGIS processing framework, a geoprocessing environment 
-that can be used to call native and third party algorithms from QGIS, making your 
+This chapter introduces the |qg| processing framework, a geoprocessing environment
+that can be used to call native and third party algorithms from |qg|, making your
 spatial analysis tasks more productive and easy to accomplish.
 
 In the following sections we will review how to use the graphical elements of
 this framework and take the most out of each one of them.
 
-There are four basic elements in the framework GUI, which are used to run 
+There are four basic elements in the framework GUI, which are used to run
 algorithms for different purposes. Choosing one tool or another will depend on
 the kind of analysis that is to be performed and the particular characteristics
 of each user and project. All of them (except for the batch processing interface,

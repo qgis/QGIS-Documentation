@@ -34,9 +34,9 @@ https://github.com/qgis/QGIS/blob/master/INSTALL
 Installation on external media
 ..............................
 
-QGIS allows to define a ``--configpath`` option that overrides the default path
+|qg| allows to define a ``--configpath`` option that overrides the default path
 (e.g. ~/.qgis2 under Linux) for user configuration and forces QSettings to use
-this directory, too. This allows users to e.g. carry a QGIS installation on a
+this directory, too. This allows users to e.g. carry a |qg| installation on a
 flash drive together with all plugins and settings. Also compare with section :ref:`env_options`.
 
 .. _label_sampledata:
@@ -67,7 +67,7 @@ file :file:`qgis_sample_data` as ZIP archive from
 http://download.osgeo.org/qgis/data/qgis_sample_data.zip and unzip the archive on
 your system. The Alaska dataset includes all GIS data that are used as
 examples and screenshots in the user guide, and also includes a small GRASS
-database. The projection for the qgis sample dataset is Alaska Albers Equal
+database. The projection for the |qg| sample dataset is Alaska Albers Equal
 Area with unit feet. The EPSG code is 2964.
 
 ::
@@ -194,7 +194,7 @@ The usage statement for QGIS is:
 
         qgis --help
         QGIS - 2.0.1-Dufour 'Dufour' (exported)
-	QGIS is a user friendly Open Source Geographic Information System.
+    QGIS is a user friendly Open Source Geographic Information System.
         Usage: qgis [OPTION] [FILE]
           options:
             [--snapshot filename]           emit snapshot of loaded datasets to given file
@@ -208,7 +208,7 @@ The usage statement for QGIS is:
             [--nocustomization]             don't apply GUI customization
             [--optionspath path]            use the given QSettings path
             [--configpath path]             use the given path for all user configuration
-            [--code path]   		run the given python file on load
+            [--code path]           run the given python file on load
             [--help]                        this text
 
           FILES:
@@ -312,7 +312,7 @@ workspace into a project file using the menu options
 or :menuselection:`Project -->` |mActionFileSaveAs| :menuselection:`Save As`.
 
 Load saved projects into a QGIS session using
-:menuselection:`Project -->` |mActionFileOpen| :menuselection:`Open ...`, :menuselection:`Project --> New from template` or 
+:menuselection:`Project -->` |mActionFileOpen| :menuselection:`Open ...`, :menuselection:`Project --> New from template` or
 :menuselection:`Project --> Open Recent`.
 
 If you wish to clear your session and start fresh, choose

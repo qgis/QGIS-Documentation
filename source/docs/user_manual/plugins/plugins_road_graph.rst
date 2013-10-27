@@ -5,7 +5,7 @@
 Road Graph Plugin
 =================
 
-The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest path
+The Road Graph Plugin is a C++ plugin for |qg|, that calculates the shortest path
 between two points on any polyline layer and plots this path over the road network.
 
 .. _figure_road_graph_1:
@@ -28,7 +28,7 @@ Main features:
 * highlight roads directions (this is slow and used mainly for debug purposes
   and for the settings testing)
 
-As a roads layer you can use any polyline vector layer in any QGIS supported
+As a roads layer you can use any polyline vector layer in any |qg| supported
 format. Two lines with a common point are considered connected. Please note, it
 is required to use layer CRS as project CRS while editing roads layer. This is
 due to the fact that recalculation of the coordinates between different CRS
@@ -48,8 +48,8 @@ Using the plugin
 ----------------
 
 After plugin activation you will see an additional panel on the left side of
-the main QGIS window. Now make some definitions to the :guilabel:`Road graph
-plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph` 
+the main |qg| window. Now make some definitions to the :guilabel:`Road graph
+plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`
 (see figure_road_graph_2_).
 
 .. _figure_road_graph_2:
@@ -64,7 +64,7 @@ plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`
 
    Road graph plugin settings |nix|
 
-After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and 
+After setting the :guilabel:`Time unit`, :guilabel:`Distance unit` and
 :guilabel:`Topology tolerance` you can choose the vector layer in the
 :guilabel:`Transportation layer` tab. Here you can also choose the
 :guilabel:`Direction field` and :guilabel:`Speed field`.

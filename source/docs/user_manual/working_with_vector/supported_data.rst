@@ -4,10 +4,10 @@ Supported Data Formats
 ======================
 
 |qg| uses the OGR library to read and write vector data formats (GRASS vector and
-PostgreSQL support is supplied by native QGIS data provider plugins), including
+PostgreSQL support is supplied by native |qg| data provider plugins), including
 ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS, SpatiaLite,
 Oracle Spatial databases and many more. The vector data can also be loaded in
-read mode from zip and gzip archives into QGIS. At the date of this document, 69
+read mode from zip and gzip archives into |qg|. At the date of this document, 69
 vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
 The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
 
@@ -137,7 +137,7 @@ Spatial indexes used by |qg| have a :file:`.qix` extension.
 
 Use these steps to create the index:
 
-*  Load a shapefile, clicking on the |mActionAddOgrLayer| :sup:`Add Vector Layer` 
+*  Load a shapefile, clicking on the |mActionAddOgrLayer| :sup:`Add Vector Layer`
    toolbar button or type :kbd:`Ctrl+Shift+V`.
 *  Open the :guilabel:`Layer Properties` dialog by double-clicking on the
    shapefile name in the legend or by right-clicking and choosing
@@ -194,7 +194,7 @@ Format as well as the raw TIGER Format of the US Census Bureau.
 Loading OpenStreetMap Vectors
 -----------------------------
 
-|qg| integrates Openstreetmap import as a core functionnality. 
+|qg| integrates Openstreetmap import as a core functionnality.
 
 * To connect to the OSM server and download data, open the menu :menuselection:`Vector --> Openstreetmap --> Load data`. You can skip this step if you already got a .osm XML file using josm or overpass or any other source.
 * The menu :menuselection:`Vector --> Openstreetmap --> Import topology from an XML file` will convert your .osm file into a spatialite database, and create a db connection.
@@ -263,13 +263,13 @@ by clicking on the **[Test Connect]** button.
 
 .. _tip_settings_security:
 
-.. tip:: **QGIS User Settings and Security**
+.. tip:: **|qg| User Settings and Security**
 
    Depending on your computing environment, storing passwords in your |qg|
    settings may be a security risk. Your customized settings for |qg| are
    stored based on the operating system:
 
-   * |nix|, the settings are stored in your home directory in :file:`.qgis/`.
+   * |nix|, the settings are stored in your home directory in :file:`.qgis2/`.
    * |win|, the settings are stored in the registry.
 
 .. _vector_loading_postgis:
@@ -285,8 +285,8 @@ importing data into the database.
 To load a layer from PostGIS, perform the following steps:
 
 *  If the :guilabel:`Add PostGIS layers` dialog is not already open,
-   selecting the |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...` option 
-   from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D` opens the 
+   selecting the |mActionAddPostgisLayer| :menuselection:`Add PostGIS Layer...` option
+   from the :menuselection:`Layer` menu or typing :kbd:`Ctrl+Shift+D` opens the
    dialog.
 *  Choose the connection from the drop-down list and click **[Connect]**.
 *  Select or unselect |checkbox| :guilabel:`Also list tables with no geometry`
@@ -304,7 +304,7 @@ To load a layer from PostGIS, perform the following steps:
 
 .. tip:: **PostGIS Layers**
 
-   Normally a PostGIS layer is defined by an entry in the geometry_columns 
+   Normally a PostGIS layer is defined by an entry in the geometry_columns
    table. From version 0.9.0 on, |qg| can load layers that do not have an
    entry in the geometry_columns table. This includes both tables and views.
    Defining a spatial view provides a powerful means to visualize your data.
@@ -332,14 +332,14 @@ improved if the column is indexed (note that primary keys are automatically
 indexed in PostgreSQL).
 
 If the PostgreSQL layer is a view, the same requirement exists, but views
-do not have primary keys or columns with unique constraints on them. You have to 
-define a primary key field (has to be integer) in the QGIS dialog before you can load the view.
+do not have primary keys or columns with unique constraints on them. You have to
+define a primary key field (has to be integer) in the |qg| dialog before you can load the view.
 If a suitable column cannot does not exist in the view, |qg| will not load the layer.
 If this occurs, the solution is to alter the view so that it does include
 a suitable column (a type of integer and either a primary key or with a
 unique constraint, preferably indexed).
 
-QGIS offers a checkbox **Select at id** that is activated by default. This option
+|qg| offers a checkbox **Select at id** that is activated by default. This option
 gets the ids without the attributes which is faster in most cases. It can make sense
 to disable this option when you use expensive views.
 
@@ -358,8 +358,8 @@ plugin or the command line tools shp2pgsql or ogr2ogr.
 DB Manager
 ..........
 
-|qg| comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can be used to 
-load shapefiles and other data formats and includes support for schemas. See Section 
+|qg| comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It can be used to
+load shapefiles and other data formats and includes support for schemas. See Section
 :ref:`dbmanager` for more information.
 
 shp2pgsql
@@ -551,7 +551,7 @@ Also you can select 'SQLite' as format, and then add ``SPATIALITE=YES`` in the
 OGR data source creation option field. This tells OGR to create a SpatiaLite
 database. See also http://www.gdal.org/ogr/drv_sqlite.html.
 
-QGIS also supports editable views in SpatiaLite.
+|qg| also supports editable views in SpatiaLite.
 
 Creating a new SpatiaLite layer
 ...............................
@@ -575,7 +575,7 @@ If you want to create a new SpatiaLite layer, please refer to section
 MSSQL Spatial Layers
 --------------------
 
-|mActionAddMssqlLayer| QGIS also provides native MS SQL 2008 support. The
+|mActionAddMssqlLayer| |qg| also provides native MS SQL 2008 support. The
 |mActionAddMssqlLayer| :sup:`Add MSSQL Spatial Layer` is part of the new toolbar
 button or available in the MS SQL node in the QBrowser tree, providing drag and
 drop import support.
@@ -586,10 +586,10 @@ drop import support.
 ORACLE Spatial Layers
 ---------------------
 
-|mActionAddOracleLayer| QGIS also provides native ORACLE Locator/Spatial support. The
+|mActionAddOracleLayer| |qg| also provides native ORACLE Locator/Spatial support. The
 |mActionAddOracleLayer| :sup:`Add ORACLE Spatial Layer` is part of the new toolbar
 button or available in the ORACLE node in the QBrowser tree, providing drag and
-drop import support. ORACLE Spatial layers are stored in an ORACLE database. 
+drop import support. ORACLE Spatial layers are stored in an ORACLE database.
 
 Creating a stored Connection
 ............................
@@ -627,10 +627,10 @@ Once all parameters and options are set, you can test the connection by clicking
 
 .. _tip_settings_security:
 
-.. tip:: **QGIS User Settings and Security**
+.. tip:: **|qg| User Settings and Security**
 
    Depending on your computing environment, storing passwords in your |qg|
-   settings may be a security risk. Passwords are saved in clear text in the 
+   settings may be a security risk. Passwords are saved in clear text in the
    system configuration and in the project files!
    Your customized settings for |qg| are stored based on the operating system:
 
@@ -664,7 +664,7 @@ To load a layer from ORACLE Spatial, perform the following steps:
 
 .. tip:: **ORACLE Spatial Layers**
 
-   Normally an ORACLE Spatial layer is defined by an entry in the **USER_SDO_METADATA** 
+   Normally an ORACLE Spatial layer is defined by an entry in the **USER_SDO_METADATA**
    table.
 
 

@@ -22,7 +22,7 @@ coordinates on the map canvas for two selected Coordinate Reference Systems (CRS
 
    Coordinate Capture Plugin |nix|
 
-#. Start QGIS, select |mActionOptions| :guilabel:`Project Properties` from the
+#. Start |qg|, select |mActionOptions| :guilabel:`Project Properties` from the
    :guilabel:`Settings` (KDE, Windows) or :guilabel:`File` (Gnome, OSX) menu
    and click on the :guilabel:`Projection` tab. As an alternative you can also
    click on the |mIconProjectionEnabled| :sup:`CRS status` icon in the lower

@@ -8,7 +8,7 @@ Working with Projections
 
 .. index:: Projections, CRS, Coordinate_Reference_System
 
-QGIS allows users to define a global and project-wide CRS (Coordinate
+|qg| allows users to define a global and project-wide CRS (Coordinate
 Reference System) for layers without a pre-defined CRS. It also allows
 the user to define custom coordinate reference systems and supports
 on-the-fly (OTF) projection of vector and raster layers. All these
@@ -20,24 +20,24 @@ them overlay properly.
 Overview of Projection Support
 ===============================
 
-QGIS has support for approximately 2,700 known CRS. Definitions for
+|qg| has support for approximately 2,700 known CRS. Definitions for
 each of these CRS are stored in a SQLite database that is installed with
-QGIS. Normally you do not need to manipulate the database directly. In fact,
+|qg|. Normally you do not need to manipulate the database directly. In fact,
 doing so may cause projection support to fail. Custom CRS are stored in a
 user database. See Section :ref:`sec_custom_projections` for
 information on managing your custom coordinate reference systems.
 
-The CRS available in QGIS are based on those defined by the European
+The CRS available in |qg| are based on those defined by the European
 Petroleum Search Group (EPSG) and the Institut Geographique
 National de France (IGNF) and are largely abstracted
 from the spatial reference tables used in GDAL. EPSG identifiers
-are present in the database and can be used to specify a CRS in QGIS.
+are present in the database and can be used to specify a CRS in |qg|.
 
 In order to use OTF projection, your data must contain information about its
 coordinate reference system or you have to define a global, layer or
-project-wide CRS. For PostGIS layers QGIS uses the spatial reference
+project-wide CRS. For PostGIS layers |qg| uses the spatial reference
 identifier that was specified when the layer was created. For data supported
-by OGR, QGIS relies on the presence of a recognized means of specifying
+by OGR, |qg| relies on the presence of a recognized means of specifying
 the CRS. In the case of shapefiles, this means a file containing the Well
 Known Text (:index:`WKT`) specification of the CRS. This projection file
 has the same base name as the shapefile and a prj extension. For example, a
@@ -55,12 +55,12 @@ menu.
 Global Projection Specification
 ===============================
 
-QGIS starts each new project using the global default projection. The global 
-default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) 
+|qg| starts each new project using the global default projection. The global
+default CRS is EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``)
 and comes predefined in |qg|. This default can be changed using the **[Select...]** button in the first
 section, used to defining the Default Coordinate Reference System to use when
 starting new projects, as shown in figure_projection_1_. This choice will be
-saved for use in subsequent QGIS sessions.
+saved for use in subsequent |qg| sessions.
 
 .. _figure_projection_1:
 
@@ -72,11 +72,11 @@ saved for use in subsequent QGIS sessions.
    :align: center
    :width: 40em
 
-   CRS tab in the QGIS Options Dialog |nix|
+   CRS tab in the |qg| Options Dialog |nix|
 
 When you use layers that do not have a CRS, you need to define how
-QGIS responds to these layers. This can be done globally or
-project-wide in the :guilabel:`CRS` tab under :menuselection:`Settings -->` 
+|qg| responds to these layers. This can be done globally or
+project-wide in the :guilabel:`CRS` tab under :menuselection:`Settings -->`
 |mActionOptions| :guilabel:`Options`.
 
 The options shown in figure_projection_1_ are:
@@ -102,7 +102,7 @@ dialog. If your layer already has a CRS defined, it will be displayed as shown i
 Define On The Fly (OTF) Reprojection
 ====================================
 
-QGIS supports OTF reprojection for both raster and vector data. However, OTF is
+|qg| supports OTF reprojection for both raster and vector data. However, OTF is
 not activated by default. To use OTF projection, you must activate the |checkbox|
 :guilabel:`Enable on the fly CRS transformation` checkbox in the :guilabel:`CRS`
 tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog.
@@ -149,7 +149,7 @@ shown in Figure_projection_2_ and described below.
    components described below are inactive. When on, the coordinates in each
    layer are projected to the coordinate reference system defined for the map canvas.
 #. **Coordinate Reference System** - this is a list of all CRS
-   supported by QGIS, including Geographic, Projected and Custom coordinate
+   supported by |qg|, including Geographic, Projected and Custom coordinate
    reference systems. To define a CRS, select it from the list by expanding
    the appropriate node and selecting the CRS. The active CRS is preselected.
 #. **Proj4 text** - this is the CRS string used by the Proj4
@@ -170,7 +170,7 @@ shown in Figure_projection_2_ and described below.
    (KDE, Windows) menu, you must click on the
    :guilabel:`CRS` tab to view the Coordinate Reference System settings.
 
-   The |geographic| :sup:`CRS status` icon will also automatically bring 
+   The |geographic| :sup:`CRS status` icon will also automatically bring
    the :guilabel:`CRS` tab to the front.
 
 .. _sec_custom_projections:
@@ -180,10 +180,10 @@ Custom Coordinate Reference System
 
 .. index:: Custom_CRS
 
-If QGIS does not provide the coordinate reference system you need, you
+If |qg| does not provide the coordinate reference system you need, you
 can define a custom CRS. To define a CRS, select |mActionCustomProjection| :guilabel:`Custom CRS`
-from the :menuselection:`Settings` menu. Custom CRS are stored in your QGIS 
-user database. In addition to your custom CRS, this database also contains 
+from the :menuselection:`Settings` menu. Custom CRS are stored in your |qg|
+user database. In addition to your custom CRS, this database also contains
 your spatial bookmarks and other custom data.
 
 
@@ -201,7 +201,7 @@ your spatial bookmarks and other custom data.
 
 .. index:: Proj.4
 
-Defining a custom CRS in QGIS requires a good understanding of the Proj.4
+Defining a custom CRS in |qg| requires a good understanding of the Proj.4
 projection library. To begin, refer to the Cartographic Projection Procedures
 for the UNIX Environment - A User's Manual by Gerald I. Evenden, U.S.
 Geological Survey Open-File Report 90-284, 1990 (available at
@@ -209,7 +209,7 @@ ftp://ftp.remotesensing.org/proj/OF90-284.pdf ).
 
 This manual describes the use of the ``proj.4`` and related command line
 utilities. The cartographic parameters used with ``proj.4`` are
-described in the user manual and are the same as those used by QGIS.
+described in the user manual and are the same as those used by |qg|.
 
 The :guilabel:`Custom Coordinate Reference System Definition` dialog requires
 only two parameters to define a user CRS:

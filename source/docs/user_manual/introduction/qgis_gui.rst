@@ -2,13 +2,13 @@
 .. _`label_qgismainwindow`:
 
 ********
-QGIS GUI
+|qg| GUI
 ********
 
 .. index::
    single:main window
 
-When QGIS starts, you are presented with the GUI as shown below
+When |qg| starts, you are presented with the GUI as shown below
 (the numbers 1 through 5 in yellow circles refer to the five major areas of the
 interface as discussed below):
 
@@ -22,13 +22,13 @@ interface as discussed below):
    :align: center
    :width: 40em
 
-   QGIS GUI with Alaska sample data |nix|
+   |qg| GUI with Alaska sample data |nix|
 
 .. note::
    Your window decorations (title bar, etc.) may appear different depending on
    your operating system and window manager.
 
-The QGIS GUI is divided into five areas:
+The |qg| GUI is divided into five areas:
 
 #. Menu Bar
 #. Tool Bar
@@ -36,7 +36,7 @@ The QGIS GUI is divided into five areas:
 #. Map View
 #. Status Bar
 
-These five components of the QGIS interface are described in more detail in
+These five components of the |qg| interface are described in more detail in
 the following sections. Two more sections present keyboard shortcuts and
 context help.
 
@@ -48,7 +48,7 @@ Menu Bar
 .. index::
    single:menus
 
-The menu bar provides access to various QGIS features using a standard
+The menu bar provides access to various |qg| features using a standard
 hierarchical menu. The top-level menus and a summary of some of the
 menu options are listed below, together with the icons of the corresponding
 tools as they appear on the toolbar, as well as keyboard shortcuts. Keyboard
@@ -70,7 +70,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 |mActionFileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionFileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`Project`
-:menuselection:`New from template -->`				\		      see :ref:`sec_projects`			  :guilabel:`Project`
+:menuselection:`New from template -->`              \             see :ref:`sec_projects`             :guilabel:`Project`
 :menuselection:`Open Recent  -->`                               \                     see :ref:`sec_projects`                     \
 |mActionFileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionFileSaveAs| :guilabel:`Save As`                         :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
@@ -78,7 +78,7 @@ Menu Option                                                     Shortcut        
 |mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
 |mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \
-|mActionFileExit| :guilabel:`Exit QGIS`                         :kbd:`Ctrl+Q`         \                                           \
+|mActionFileExit| :guilabel:`Exit |qg|`                         :kbd:`Ctrl+Q`         \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 Edit
@@ -95,9 +95,9 @@ Menu Option                                                     Shortcut        
 |mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit` 		  :guilabel:`Advanced Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit`        :guilabel:`Advanced Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
-|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing` 
+|mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddPart| :guilabel:`Add Part`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeleteRing| :guilabel:`Delete Ring`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionDeletePart| :guilabel:`Delete Part`                     \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -179,7 +179,7 @@ Menu Option                                                          Shortcut   
 |mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
 |mActionToggleEditing| :guilabel:`Toggle Editing`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionFileSave| :guilabel:`Save Layer Edits`                       \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionAllEdits| :menuselection:`Current Edits -->`		     \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionAllEdits| :menuselection:`Current Edits -->`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 :menuselection:`Save as...`                                          \                     \                                           \
 :menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
 |mActionRemoveLayer| :guilabel:`Remove Layer(s)`                     :kbd:`Ctrl+D`         \                                           \
@@ -224,7 +224,7 @@ Menu Option                                                        Shortcut     
 :menuselection:`GRASS -->`                                         \                     see :ref:`sec_grass`                        :guilabel:`GRASS`
 =================================================================  ====================  ==========================================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
+When starting |qg| for the first time not all core plugins are loaded.
 
 Vector
 ......
@@ -240,7 +240,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`Spatial Query -->`                              \                     see :ref:`spatial_query`                    :guilabel:`Vector`
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
+When starting |qg| for the first time not all core plugins are loaded.
 
 Raster
 ......
@@ -255,7 +255,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`Zonal Statistics -->`                           \                     see :ref:`zonal_statistics`                 :guilabel:`Raster`
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
+When starting |qg| for the first time not all core plugins are loaded.
 
 Database
 ........
@@ -267,7 +267,7 @@ Menu Option                                                     Shortcut        
 :menuselection:`Spit -->`                                       \                     see :ref:`label_spit`                       :guilabel:`Database`
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
+When starting |qg| for the first time not all core plugins are loaded.
 
 Processing
 ..........
@@ -283,7 +283,7 @@ Menu Option                                                     Shortcut        
 |proc_commander| :guilabel:`Commander`                          :kbd:`Ctrl+Alt+M`     see :ref:`processing.commander`             \
 ==============================================================  ====================  ==========================================  ===============================
 
-When starting QGIS for the first time not all core plugins are loaded.
+When starting |qg| for the first time not all core plugins are loaded.
 
 Help
 ....
@@ -295,10 +295,10 @@ Menu Option                                                     Shortcut        
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
 :menuselection:`Need support ?`                                 \                     \                                           \
-|mActionQgisHomePage| :guilabel:`QGIS Home Page`                :kbd:`Ctrl+H`         \                                           \
-|mActionCheckQgisVersion| :guilabel:`Check QGIS Version`        \                     \                                           \
+|mActionQgisHomePage| :guilabel:`|qg| Home Page`                :kbd:`Ctrl+H`         \                                           \
+|mActionCheckQgisVersion| :guilabel:`Check |qg| Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \
-|mActionHelpSponsors| :guilabel:`QGIS Sponsors`                 \                     \                                           \
+|mActionHelpSponsors| :guilabel:`|qg| Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
 \
@@ -359,8 +359,8 @@ the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
         If you have accidentally hidden all your toolbars, you can get them
         back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
         If a toolbar disappears under Windows, which seems to be a problem in
-        QGIS from time to time, you have to remove ``\HKEY_CURRENT_USER\Software\QuantumGIS\qgis\UI\state``
-        in the registry. When you restart QGIS, the key is written again with the
+        |qg| from time to time, you have to remove ``\HKEY_CURRENT_USER\Software\QGIS\qgis\UI\state``
+        in the registry. When you restart |qg|, the key is written again with the
         default state, and all toolbars are visible again.
 
 .. _`label_legend`:
@@ -516,7 +516,7 @@ Map View
 
 .. index::`map view`
 
-This is the "business end" of QGIS - maps are displayed in this area! The
+This is the "business end" of |qg| - maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
 have chosen to load (see sections that follow for more information on how to
 load layers). The map view can be panned (shifting the focus of the map display
@@ -547,7 +547,7 @@ changes you make in the legend area.
    You can use the arrow keys to pan in the map. Place the mouse cursor
    inside the map area and click on the right arrow key to pan East, left arrow
    key to pan West, up arrow key to pan North and down arrow key to pan South.
-   You can also pan the map using the space bar or the click on mouse wheel: 
+   You can also pan the map using the space bar or the click on mouse wheel:
    just move the mouse while holding down space bar or click on mouse wheel.
 
 .. _`label_mapoverview`:
@@ -565,7 +565,7 @@ will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
 Next to the coordinate display you find the scale display. It shows the scale of
-the map view. If you zoom in or out QGIS shows you the current scale. 
+the map view. If you zoom in or out |qg| shows you the current scale.
 There is a scale selector which allows you to choose between predefined scales
 from 1:500 until 1:1000000.
 
@@ -591,7 +591,7 @@ for the current project.
    .. index::
       single:scale calculate
 
-   When you start QGIS, degrees is the default unit, and it tells QGIS
+   When you start |qg|, degrees is the default unit, and it tells |qg|
    that any coordinate in your layer is in degrees. To get correct scale values,
    you can either change this to meter manually in the :guilabel:`General` tab
    under :menuselection:`Settings --> Project Properties` or you can select a

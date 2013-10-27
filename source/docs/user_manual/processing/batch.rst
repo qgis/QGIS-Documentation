@@ -69,7 +69,7 @@ it from the list of available options, depending on the parameter type.
 The main differences are found for parameters representing layers or tables, and
 for output filepaths. Regarding input layers and tables, when an algorithm is
 executed as part of a batch process those input data objects are taken directly
-from files, and not from the set of them already opened in QGIS. For this reason,
+from files, and not from the set of them already opened in |qg|. For this reason,
 any algorithm can be executed as a batch process even if no data objects at all
 are opened and the algorithm cannot be run from the toolbox.
 
@@ -128,5 +128,5 @@ Executing the batch process
 ---------------------------
 
 To execute the batch process once you have introduced all the necessary values,
-just click on **[OK]**. Progress of the global batch task will be shown in the 
+just click on **[OK]**. Progress of the global batch task will be shown in the
 progress bar in the lower part of the dialog.

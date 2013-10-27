@@ -59,14 +59,14 @@ Style Menu
 Band rendering
 ..............
 
-QGIS offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
+|qg| offers four different :guilabel:`Render types`. The renderer chosen is dependent on the
 data type.
 
-#. Multiband color - if the file comes as a multi band with several bands (e.g. used with a satellite image 
+#. Multiband color - if the file comes as a multi band with several bands (e.g. used with a satellite image
    with several bands)
 #. Paletted - if a single band file comes with an indexed palette (e.g. used with a digital topographic map)
-#. Singleband gray- (one band of) the image will be rendered as gray, QGIS will choose this renderer 
-   if the file neither has multi bands, nor has an indexed palette nor has a continous palette 
+#. Singleband gray- (one band of) the image will be rendered as gray, |qg| will choose this renderer
+   if the file neither has multi bands, nor has an indexed palette nor has a continous palette
    (e.g. used with a shaded relief map)
 #. Singleband pseudocolor - this renderer is possible for files with a continuous palette, e.g. the file
    has got a color map (e.g. used with an elevation map)
@@ -77,8 +77,8 @@ data type.
 **Multiband color**
 
 With the multiband color renderer three selected bands from the image will be rendered, each band
-representing the red, green or blue component that will be used to create a color image. You can 
-choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stretch to MinMax', 
+representing the red, green or blue component that will be used to create a color image. You can
+choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stretch to MinMax',
 'Stretch and clip to MinMax' and 'Clip to min max'.
 
 .. _figure_raster_2:
@@ -95,22 +95,22 @@ choose several :guilabel:`Contrast enhancement` methods: 'No enhancement', 'Stre
 
 This selection offers you a wide range of options to modify the appearance
 of your rasterlayer. First of all you have to get the data range from your
-image. This can be done by choosing the :guilabel:`Extent` and pressing 
-**[Load]**. QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the 
+image. This can be done by choosing the :guilabel:`Extent` and pressing
+**[Load]**. |qg| can |radiobuttonon| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
 Now you can scale the colors with the help of the :guilabel:`Load min/max values` section.
 A lot of images have few very low and high data. These outliers can be eliminated
-using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set 
+using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% until 98% of the data values and can be adapted manually. With this
 setting the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max` QGIS creates a color table with 
-the whole data included in the original image. E.g. QGIS creates a color table
-with 256 values, given the fact that you have 8bit bands. 
+With the scaling option |radiobuttonoff| :guilabel:`Min/max` |qg| creates a color table with
+the whole data included in the original image. E.g. |qg| creates a color table
+with 256 values, given the fact that you have 8bit bands.
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
-Then only the values within the standard deviation or within multiple standard deviations 
-are considered for the color table. This is useful when you have one or two cells 
+Then only the values within the standard deviation or within multiple standard deviations
+are considered for the color table. This is useful when you have one or two cells
 with abnormally high values in a raster grid that are having a negative impact on
 the rendering of the raster.
 
@@ -126,10 +126,10 @@ All calculation can also be made for the |radiobuttonoff| :guilabel:`Current` ex
 
 **Paletted**
 
-This is the standard render option for singleband files that already include a color table, 
-where each pixel value is assigned to a certain color. In that case, the palette is 
+This is the standard render option for singleband files that already include a color table,
+where each pixel value is assigned to a certain color. In that case, the palette is
 rendered automatically. If you want to change colors assigned to certain values, just double-click
-on the color and the :guilabel:`Select color` dialog appears. 
+on the color and the :guilabel:`Select color` dialog appears.
 
 .. _figure_raster_3:
 
@@ -150,15 +150,15 @@ on the color and the :guilabel:`Select color` dialog appears.
 .. note::
    When adding GRASS rasters the option *Contrast enhancement* will be
    always set to automatically to *stretch to min max* regardless if
-   the QGIS general options this is set to another value.
+   the |qg| general options this is set to another value.
 
 
 **Singleband gray**
 
 This renderer allows you to render a single band layer with a :guilabel:`Color gradient`
-'Black to white' or 'White to black'. You can define a :guilabel:`Min` 
+'Black to white' or 'White to black'. You can define a :guilabel:`Min`
 and a :guilabel:`Max` value with choosing the :guilabel:`Extend` first and
-then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)` the 
+then pressing **[Load]**.  |qg| can |radiobuttonon| :guilabel:`Estimate (faster)` the
 :guilabel:`Min` and :guilabel:`Max` values of the bands or use the
 |radiobuttonoff| :guilabel:`Actual (slower)` :guilabel:`Accuracy`.
 
@@ -175,13 +175,13 @@ then pressing **[Load]**.  QGIS can |radiobuttonon| :guilabel:`Estimate (faster)
    Raster Renderer - Singleband gray |nix|
 
 
-With the :guilabel:`Load min/max values` section scaling of the color table 
+With the :guilabel:`Load min/max values` section scaling of the color table
 is possible. Outliers can be eliminated using the |radiobuttonon| :guilabel:`Cumulative count cut` setting.
 The standard data range is set from 2% until 98% of the data values and can
 be adapted manually. With this setting the gray character of the image can disappear.
-Further settings can be made with |radiobuttonoff| :guilabel:`Min/max` and 
+Further settings can be made with |radiobuttonoff| :guilabel:`Min/max` and
 |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber|.
-While the first one creates a color table with the whole data included in the 
+While the first one creates a color table with the whole data included in the
 original image the second creates a colortable that only considers values
 within the standard deviation or within multiple standard deviations.
 This is useful when you have one or two cells with abnormally high values in
@@ -190,7 +190,7 @@ a raster grid that are having a negative impact on the rendering of the raster.
 
 **Singleband pseudocolor**
 
-This is a render option for single band files including a continous palette.  
+This is a render option for single band files including a continous palette.
 You can also create individual color maps for the single bands here.
 
 .. _figure_raster_5:
@@ -219,10 +219,10 @@ Three types of color interpolation are available:
 
 
 In the left block the button |mActionSignPlus| :sup:`Add values manually` adds a value to the
-individual color table. Button |mActionSignMinus| :sup:`Remove selected row` 
+individual color table. Button |mActionSignMinus| :sup:`Remove selected row`
 deletes a value from the individual color table and the
 |mActionArrowDown| :sup:`Sort colormap items` button sorts the color table according
-to the pixel values in the value column. Double clicking on the value-column lets 
+to the pixel values in the value column. Double clicking on the value-column lets
 you insert a specific value. Double clicking on the color-column opens the dialog
 :guilabel:`Change color` where you can select a color to apply on that value. Further
 you can also add labels for each color but this value won't be displayed when you use the identify
@@ -238,19 +238,19 @@ In the right block :guilabel:`Generate new color map` allows you to create newly
 categorized colormaps. For the :guilabel:`Classification mode` |selectstring| 'Equal interval'
 you only need to select the :guilabel:`number of classes`
 |selectnumber| and press the button :guilabel:`Classify`. You can invert the colors
-of the the color map by clicking the |checkbox| :guilabel:`Invert` 
-checkbox. In case of the :guilabel:`Mode` |selectstring| 'Continous' QGIS creates
+of the the color map by clicking the |checkbox| :guilabel:`Invert`
+checkbox. In case of the :guilabel:`Mode` |selectstring| 'Continous' |qg| creates
 classes depending on the :guilabel:`Min` and :guilabel:`Max` automatically.
 Defining :guilabel:`Min/Max` values can be done with the help of :guilabel:`Load min/max values` section.
 A lot of images have few very low and high data. These outliers can be eliminated
-using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set 
+using the |radiobuttonon| :guilabel:`Cumulative count cut` setting. The standard data range is set
 from 2% until 98% of the data values and can be adapted manually. With this
 setting the gray character of the image can disappear.
-With the scaling option |radiobuttonoff| :guilabel:`Min/max` QGIS creates a color table with 
-the whole data included in the original image. E.g. QGIS creates a color table
-with 256 values, given the fact that you have 8bit bands. 
+With the scaling option |radiobuttonoff| :guilabel:`Min/max` |qg| creates a color table with
+the whole data included in the original image. E.g. |qg| creates a color table
+with 256 values, given the fact that you have 8bit bands.
 You can also calculate your color table using the |radiobuttonoff| :guilabel:`Mean +/- standard deviation x` |selectnumber| .
-Then only the values within the standard deviation or within multiple standard deviations 
+Then only the values within the standard deviation or within multiple standard deviations
 are considered for the color table.
 
 
@@ -270,12 +270,12 @@ For one hue in the color table you can modiy the 'Strength'.
 Resampling
 ..........
 
-The :guilabel:`Resampling` option makes it appearance when you zoom in and out of the 
+The :guilabel:`Resampling` option makes it appearance when you zoom in and out of the
 image. Resampling modes can optimize the appearance of the map. They calculate a new gray value
 matrix through a geometric transformation.
 
 While applying the 'Nearest neighbour' method the map can have a pixelated structure
-when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method. Sharp features 
+when zooming in. This appearance can be improved by using the 'Bilinear' or 'Cubic' method. Sharp features
 are caused to be blurred now. The effect is a smoother image. The method can be applied e.g. to digital
 topographic raster maps.
 
@@ -284,7 +284,7 @@ topographic raster maps.
 Transparency Menu
 -----------------
 
-QGIS has the ability to display each raster layer at varying transparency levels.
+|qg| has the ability to display each raster layer at varying transparency levels.
 Use the transparency slider |slider| to indicate to what extent the underlying layers
 (if any) should be visible though the current raster layer. This is very useful,
 if you like to overlay more than one rasterlayer, e.g. a shaded relief map
@@ -326,9 +326,9 @@ applies them to the current raster layer.
 Pyramids Menu
 -------------
 
-Large resolution raster layers can slow navigation in QGIS. By creating lower
+Large resolution raster layers can slow navigation in |qg|. By creating lower
 resolution copies of the data (pyramids), performance can be considerably
-improved as QGIS selects the most suitable resolution to use depending on the
+improved as |qg| selects the most suitable resolution to use depending on the
 level of zoom.
 
 You must have write access in the directory where the original data is stored
@@ -343,8 +343,8 @@ Several resampling methods can be used to calculate the pyramids:
 * Mode
 * None
 
-If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu 
-QGIS tries to build pyramids internally. You can also choose 'External' and 
+If you choose 'Internal (if possible)' from the :guilabel:`Overview format` menu
+|qg| tries to build pyramids internally. You can also choose 'External' and
 'External (Erdas Imagine)'.
 
 Please note that building pyramids may alter the original data file and once
@@ -362,10 +362,10 @@ The :guilabel:`Histogram` menu allows you to view the distribution of the bands
 or colors in your raster. It is generated automatically when you open the
 :guilabel:`Histogram` menu. All existing bands will be displayed together. You can
 save the histogram as an image with the |mActionFileSave| button.
-With the :guilabel:`Visibility` option in the |mAction| :guilabel:`Prefs/Actions` menu 
+With the :guilabel:`Visibility` option in the |mAction| :guilabel:`Prefs/Actions` menu
 you can display histograms of the individual bands. You will need to select the option
 |radiobuttonoff| :guilabel:`Show selected band`.
-The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom 
+The :guilabel:`Min/max options` allow you to 'Always show min/max markers', to 'Zoom
 to min/max' and to 'Update style to min/max'.
 With the :guilabel:`Actions` option you can 'Reset' and 'Recompute histogram' after
 you have chosen the :guilabel:`Min/max options`.
@@ -377,9 +377,9 @@ Metadata Menu
 
 The :guilabel:`Metadata` menu displays a wealth of information about the raster layer,
 including statistics about each band in the current raster layer. From this menu entries are
-made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and 
+made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and
 :guilabel:`Properties`. In :guilabel:`Properties` statistics are gathered on a 'need to know'
 basis, so it may well be that a given layers statistics have not yet been collected.
 
 This menu is mainly for information. You cannot change any values printed
-inside this menu. 
+inside this menu.

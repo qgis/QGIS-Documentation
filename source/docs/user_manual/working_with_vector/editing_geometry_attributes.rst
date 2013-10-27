@@ -5,8 +5,8 @@
 Editing
 =======
 
-|qg| supports various capabilities for :index:`editing` OGR, 
-SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables. 
+|qg| supports various capabilities for :index:`editing` OGR,
+SpatiaLite, PostGIS, MSSQL Spatial and Oracle Spatial vector layers and tables.
 
 .. note::
    The procedure for editing GRASS layers is different - see Section
@@ -155,7 +155,7 @@ Enable topological editing
 ..........................
 
 The option |checkbox| :guilabel:`Enable topological editing` is for editing
-and maintaining common boundaries in polygon mosaics. QGIS 'detects' a
+and maintaining common boundaries in polygon mosaics. |qg| 'detects' a
 shared boundary in a polygon mosaic and you only have to move the vertex
 once and |qg| will take care about updating the other boundary.
 
@@ -177,7 +177,7 @@ have to digitize all vertices of the common boundary.
 Enable snapping on intersections
 .................................
 Another option is to use |checkbox| :guilabel:`Enable snapping on intersection`.
-It allows to snap on an intersection of background layers, even if there's no vertex on 
+It allows to snap on an intersection of background layers, even if there's no vertex on
 the intersection.
 
 
@@ -292,11 +292,11 @@ move existing features.
 Current Edits
 .............
 
-This new feature allows the digitization of multiple layers. Choose 
-|mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you 
-made in multiple layers. You also have the opportunity to 
+This new feature allows the digitization of multiple layers. Choose
+|mActionFileSaveAs| :guilabel:`Save for Selected Layers` to save all changes you
+made in multiple layers. You also have the opportunity to
 |mActionRollbackEdits| :guilabel:`Rollback for Selected Layers` so that the
-digitization is then withdrawn for all selected layers. 
+digitization is then withdrawn for all selected layers.
 If you want to stop editing the selected layers the |mActionCancelEdits| :guilabel:`Cancel for Selected Layer(s)`
 is an easy way.
 
@@ -491,7 +491,7 @@ Advanced digitizing
 +-----------------------------+----------------------+---------------------------------+---------------------------------------+
 | |mActionReshape|            | Reshape Features     | |mActionOffsetCurve|            | Offset Curve                          |
 +-----------------------------+----------------------+---------------------------------+---------------------------------------+
-| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|          | Merge Selected Features               | 
+| |mActionSplitFeatures|      | Split Features       | |mActionMergeFeatures|          | Merge Selected Features               |
 +-----------------------------+----------------------+---------------------------------+---------------------------------------+
 | |mActionRotatePointSymbols| | Rotate Point Symbols | |mActionMergeFeatureAttributes| | Merge Attributes of Selected Features |
 +-----------------------------+----------------------+---------------------------------+---------------------------------------+
@@ -538,17 +538,17 @@ selected features in the map canvas. You first need to select the features
 and then press the |mActionRotateFeature|:sup:`Rotate Feature(s)` Icon. Then the
 centroid of the feature appears and will be the rotation anchor point. If you selected
 multiple features the rotation anchor point will be the common center of the features.
-Press and drag the left mouse button in the desired direction to rotate the 
+Press and drag the left mouse button in the desired direction to rotate the
 selected features.
 
 
 It's also possible to create a user-defined rotation anchor point by which the selected feature will rotate.
 Select the features to rotate and activate the |mActionRotateFeature|:sup:`Rotate Feature(s)` Tool.
 Press and hold the :kbd:`Ctrl` button and move the mouse pointer (without pressing the mouse button)
-to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button 
+to the place where you want the rotation anchor to be moved. Release the :kbd:`Ctrl` button
 when the desired rotation anchor point is reached. Now press and drag the left mouse button
 in the desired direction to rotate the selected feature(s).
- 
+
 Simplify Feature
 ................
 
@@ -630,7 +630,7 @@ or also to background layers (creates copies of the lines / rings and adds it to
 It is thus ideally suited for the creation of distance line layers. The displacement is
 shown at the bottom left of the taskbar.
 To create a shift of a line layer you have to go into editing mode and then
-select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag 
+select the feature. You can make the |mActionOffsetCurve| :sup:`Offset Curve` tool active and drag
 the cross to the desired distance. Your changes then can be saved with the
 |mActionSaveEdits|:sup:`Save Layer Edits` tool.
 
@@ -659,9 +659,9 @@ Merge attributes of selected features
 The |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` tool
 allows to :index:`merge attributes of features` with common boundaries and
 attributes without merging their boundaries.
-You can merge the attributes when selecting several features at once. Then 
+You can merge the attributes when selecting several features at once. Then
 press the |mActionMergeFeatureAttributes| :sup:`Merge Attributes of Selected Features` button.
-Now QGIS offers you which attributes are to be applied to all selected objects.
+Now |qg| offers you which attributes are to be applied to all selected objects.
 As a result, all objects have the same attribute entries.
 
 .. index:: Rotate_Point_symbols
@@ -675,8 +675,8 @@ The |mActionRotatePointSymbols| :sup:`Rotate Point Symbols` allows to change the
 of point symbols in the map canvas. You have to define a rotation column
 from the attribute table of the point layer in the :guilabel:`Advanced` menu of the
 :guilabel:`Style` menu of the :guilabel:`Layer Properties`. Also you have to
-go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`. 
-Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field. 
+go into the 'SVG marker' and choose :guilabel:`Data defined properties ...`.
+Activate |checkbox| :guilabel:`Angle` and choose 'rotation' as field.
 Without these settings the tool is inactive.
 
 .. _figure_edit_4:
@@ -707,9 +707,9 @@ button again, the value will be updated in the attribute table.
 Creating new Vector layers
 --------------------------
 
-|qg| allows to create new Shapefile layers, new SpatiaLite layers, and new 
-GPX Layers. Creation of a new GRASS layer is supported within the GRASS-plugin. 
-Please refer to section :ref:`creating_new_grass_vectors` for more information 
+|qg| allows to create new Shapefile layers, new SpatiaLite layers, and new
+GPX Layers. Creation of a new GRASS layer is supported within the GRASS-plugin.
+Please refer to section :ref:`creating_new_grass_vectors` for more information
 on creating GRASS vector layers.
 
 Creating a new Shapefile layer
@@ -785,7 +785,7 @@ attributes, click **[OK]**. |qg| will automatically add the new layer to the
 legend and you can edit it in the same way as described in Section
 :ref:`sec_edit_existing_layer` above.
 
-Further management of SpatiaLite-Layers can be done with the DB Manager see 
+Further management of SpatiaLite-Layers can be done with the DB Manager see
 :ref:`dbmanager`.
 
 .. index:: New_GPX_Layer
@@ -794,13 +794,13 @@ Further management of SpatiaLite-Layers can be done with the DB Manager see
 Creating a new GPX layer
 .........................
 
-To create a new GPX file you need to load the GPS plugin first. :menuselection:`Plugins -->` 
+To create a new GPX file you need to load the GPS plugin first. :menuselection:`Plugins -->`
 |mActionShowPluginManager| :menuselection:`Plugin Manager...` opens the Plugin Manager Dialog.
-Activate the |checkbox| :guilabel:`GPS Tools` checkbox. 
+Activate the |checkbox| :guilabel:`GPS Tools` checkbox.
 
-When this plugin is loaded choose :menuselection:`New -->` |icon_newgpx| 
-:menuselection:`Create new GPX Layer...` from the :menuselection:`Layer`. 
-In the :guilabel:`Save new GPX file as` dialog you can choose where to save the 
+When this plugin is loaded choose :menuselection:`New -->` |icon_newgpx|
+:menuselection:`Create new GPX Layer...` from the :menuselection:`Layer`.
+In the :guilabel:`Save new GPX file as` dialog you can choose where to save the
 new GPX layer.
 
 .. index:: Work_with_Attribute_Table
@@ -819,8 +819,8 @@ clicking on it in the map legend area. Then from the main menu
 :menuselection:`Layer` choose |mActionOpenTable| :menuselection:`Open Attribute
 Table`. It is also possible to rightclick on the layer and choose
 |mActionOpenTable| :menuselection:`Open Attribute Table` from the dropdown menu
-and to click on the |mActionOpenTable| :guilabel:`Open Attribute Table` button 
-in the Attributes toolbar. 
+and to click on the |mActionOpenTable| :guilabel:`Open Attribute Table` button
+in the Attributes toolbar.
 
 This will open a new window which displays the feature attributes in the
 layer (figure_attributes_1_). The number of features and the number of
@@ -863,28 +863,28 @@ small arrow indicates the sort order (downward pointing means descending
 values from the top row down, upward pointing means ascending values from
 the top row down).
 
-For a **simple search by attributes** on only one column choose the 
+For a **simple search by attributes** on only one column choose the
 :menuselection:`Column filter -->` from the menu in the bottom left corner.
 Select the field (column) from which the search should be
 performed from the dropdown menu and hit the **[Apply]** button. Then only
 the matching features are shown in the Attribute table.
 
-To make a selection you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression` 
+To make a selection you have to use the |mIconExpressionSelect| :sup:`Select features using an Expression`
 icon on top of the Attribute table.
 The |mIconExpressionSelect| :sup:`Select features using an Expression` allows you
-to define a subset of a table using a :guilabel:`Function List` like in the 
+to define a subset of a table using a :guilabel:`Function List` like in the
 |mActionCalculateField| :sup:`Field Calculator` (see vector_field_calculator_).
 The query result then can be saved as a new vector layer.
-For example if you want to find regions that are boroughs from the regions.shp 
-of the QGIS sample data you have to open the :guilabel:`>Fields and Values` menu
+For example if you want to find regions that are boroughs from the regions.shp
+of the |qg| sample data you have to open the :guilabel:`>Fields and Values` menu
 and choose the field that you want to query. Double-klick the field 'TYPE_2' and also
 **[Load all unique values]** . From list choose and double-klick 'Borough'.
 In the :guilabel:`Expression` field the following query appears:
 
 ::
- 
- "TYPE_2"  =  'Borough' 
- 
+
+ "TYPE_2"  =  'Borough'
+
 The matching rows will be selected and the total number of matching rows will
 appear in the title bar of the attribute table, and in the status bar of
 the main window. For searches that display only selected features on the map
@@ -938,8 +938,8 @@ within the dialog.
 Working with non spatial attribute tables
 .........................................
 
-QGIS allows also to load non spatial tables. This includes currently tables
-supported by OGR, delimited text as well as the PostgreSQL, MSSQL and Oracle provider. 
+|qg| allows also to load non spatial tables. This includes currently tables
+supported by OGR, delimited text as well as the PostgreSQL, MSSQL and Oracle provider.
 The tables can be used for field lookups or just generally browsed and edited using the table
 view. When you load the table you will see it in the legend field. It can be
 opened e.g. with the |mActionOpenTable| :sup:`Open Attribute Table` tool and

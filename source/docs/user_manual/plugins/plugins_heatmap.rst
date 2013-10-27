@@ -43,28 +43,28 @@ The dialog has the following options:
   or map units. The radius specifies the distance around a point at which the influence
   of the point will be felt. Larger values result in greater smoothing, but smaller
   values may show finer details and variation in point density.
-  
+
 When the |checkbox| :guilabel:`Advanced` checkbox is checked additional options
 will be available:
 
 * **Rows** and **Columns**: used to change the dimensions of the output raster.
-  These values are also linked to the **Cell size X** and **Cell size Y** values. 
+  These values are also linked to the **Cell size X** and **Cell size Y** values.
   Increasing the number of rows or colums will decrease the cell size and increase the
   file size of the output file. The values in Rows and Columns are also linked, so doubling
   the number of rows will automatically double the number of columns and the cell sizes will
   also be halved. The geographical area of the output raster will remain the same!
 * **Cell size X** and **Cell size Y**: control the geographic size of each pixel in the output
   raster. Changing these values will also change the number of Rows and Columns in the output
-  raster. 
- 
+  raster.
+
 * **Kernel shape**: The kernel shape controls the rate at which the influence of a point
   decreases as the distance from the point increases. Different kernels decay at
   different rates, so a triweight kernel gives features greater weight for distances closer
   to the point then the Epanechnikov kernel does. Consequently, triweight results in "sharper"
   hotspots, and Epanechnikov results in "smoother" hotspots. A number of standard kernel functions
-  are available in QGIS, which are described and illustrated on Wikipedia_. 
- 
-* **Decay ratio**: can be used with Triangular kernels to futher control how heat from 
+  are available in |qg|, which are described and illustrated on Wikipedia_.
+
+* **Decay ratio**: can be used with Triangular kernels to futher control how heat from
   a feature decreases with distance from the feature.
 
   - A value of 0 (=minimum) indicates that the heat will be concentrated in the centre of the
@@ -80,7 +80,7 @@ The input point layer may also have attribute fields which can affect how they i
 the heatmap:
 
 * **Use radius from field**: sets the search radius for each feature from an attribute field in the input layer.
-* **Use weight from field**: allows input features to be weighted by an attribute field. This can be used to 
+* **Use weight from field**: allows input features to be weighted by an attribute field. This can be used to
   increase the influence certain features have on the resultant heatmap.
 
 When an output raster file name is specified, the **[OK]** button can be used to create the
@@ -90,7 +90,7 @@ Tutorial: Creating a Heatmap
 ----------------------------
 
 For the following example we will use the ``airports`` vector point layer from
-the QGIS sample dataset (see :ref:`label_sampledata`). Another exellent QGIS
+the |qg| sample dataset (see :ref:`label_sampledata`). Another exellent |qg|
 tutorial on making heatmaps can be found at `http://qgis.spatialthoughts.com
 <http://qgis.spatialthoughts.com/2012/07/tutorial-making-heatmaps-using-qgis-and.html>`_.
 
@@ -113,7 +113,7 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
    (see Figure_Heatmap_2_).
 #. In the :guilabel:`Input point layer` |selectstring| field select ``airports``
    from the list of point layers loaded in current project.
-#. Specify an output file name by clicking the |browsebutton| button next to the 
+#. Specify an output file name by clicking the |browsebutton| button next to the
    :guilabel:`Output raster` field. Enter the file name ``heatmap_airports`` (no
    file extension is necessary).
 #. Leave the :guilabel:`Output format` as the default format, ``GeoTIFF``.
@@ -132,9 +132,9 @@ In Figure_Heatmap_1_ the airports of Alaska are shown.
 
    The Heatmap Dialog |nix|
 
-QGIS will generate the heatmap and add the results to your map window. By default, the heatmap
+|qg| will generate the heatmap and add the results to your map window. By default, the heatmap
 is shaded in greyscale, with lighter areas showing higher concentrations of airports. The heatmap
-can now be styled in QGIS to improve its appearance.
+can now be styled in |qg| to improve its appearance.
 
 .. _figure_heatmap_3:
 
@@ -172,5 +172,5 @@ The final result is shown in Figure_Heatmap_4_.
    :align: center
 
    Styled heatmap of airports of Alaska |nix|
-   
-.. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use   
+
+.. _Wikipedia: http://en.wikipedia.org/wiki/Kernel_(statistics)#Kernel_functions_in_common_use

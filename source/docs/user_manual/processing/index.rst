@@ -2,19 +2,19 @@
 .. _label_processing:
 
 ***************************
-QGIS processing framework
+|qg| processing framework
 ***************************
 
 .. toctree::
-	:maxdepth: 2
+    :maxdepth: 2
 
-	intro
-	toolbox
-	modeler
-	batch
-	console
-	history
-	3rdParty
-	commander
+    intro
+    toolbox
+    modeler
+    batch
+    console
+    history
+    3rdParty
+    commander
 
 

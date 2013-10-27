@@ -5,7 +5,7 @@ Oracle GeoRaster Plugin
 =======================
 
 In Oracle databases, raster data can be stored in SDO_GEORASTER objects available
-with the Oracle Spatial extension. In QGIS, the |oracle_raster|
+with the Oracle Spatial extension. In |qg|, the |oracle_raster|
 :sup:`OracleGeoRasterPlugin` is supported by GDAL, and depends on Oracle's
 database product being installed and working on your machine. While Oracle is
 proprietary software, they provide their software free for development and testing
@@ -24,7 +24,7 @@ Managing connections
 
 Firstly, the Oracle GeoRaster Plugin must be enabled using the Plugin Manager
 (see Section :ref:`load_core_plugin`). The first time you load a GeoRaster in
-QGIS, you must create a connection to the Oracle database that contains the data.
+|qg|, you must create a connection to the Oracle database that contains the data.
 To do this, begin by clicking on the |oracle_raster| :sup:`Select GeoRaster`
 toolbar button, it will open the :guilabel:`Select Oracle Spatial GeoRaster`
 dialog window. Click on **[New]** to open the dialog window, and specify
@@ -96,7 +96,7 @@ Displaying GeoRaster
 --------------------
 
 Finally, by selecting a GeoRaster from the list of Raster Data Table and Raster
-Id's, the raster image will be loaded into QGIS.
+Id's, the raster image will be loaded into |qg|.
 
 The :guilabel:`Select Oracle Spatial GeoRaster` dialog can be closed now and next
 time it opens it will keep the same connection, and will show the same previous
@@ -106,7 +106,7 @@ context.
 .. note::
 
    GeoRasters that contains pyramids will display much faster but the pyramids
-   need to be generated outside of QGIS using Oracle PL/SQL or gdaladdo.
+   need to be generated outside of |qg| using Oracle PL/SQL or gdaladdo.
 
 The following is example using ``gdaladdo``:
 

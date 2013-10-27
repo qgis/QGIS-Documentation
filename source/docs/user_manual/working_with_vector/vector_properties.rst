@@ -36,10 +36,10 @@ double-click on a layer in the legend or right-click on the layer and select
 Style Menu
 ----------
 
-The Style menu provides you with a comprehensive tool for rendering and symbolizing your 
+The Style menu provides you with a comprehensive tool for rendering and symbolizing your
 vector data. You can use :menuselection:`Layer rendering -->` tools that are common to
 all vector data and special symbolizing tools that were designed for the different kinds
-of vector data. 
+of vector data.
 
 Layer rendering
 ...............
@@ -50,40 +50,40 @@ Layer rendering
 
 .. _blend_modes:
 
-* :guilabel:`Layer blending mode`: you can achieve special rendering effects with these tools that you 
+* :guilabel:`Layer blending mode`: you can achieve special rendering effects with these tools that you
   previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
   through the settings described below.
 
-	* Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the
-	  Pixel beneath it; the colors aren't mixed
-	* Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged
-	  and harsh.
-	* Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is
- 	  most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
-	* Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels 
+    * Normal: This is the standard blend mode which uses the alpha channel of the top pixel to blend with the
+      Pixel beneath it; the colors aren't mixed
+    * Lighten: It selects the maximum of each component from the foreground and background pixels. Be aware that the results tend to be jagged
+      and harsh.
+    * Screen: Light pixels from the source are painted over the destination, while dark pixels are not. This mode is
+      most useful for mixing the texture of one layer with another layer. E.g. you can use a hillshade to texture another layer
+    * Dodge: Dodge will brighten and saturate underlying pixels based on the lightness of the top pixel. So brighter top pixels
           cause the saturation and brightness of the underlying pixels to increase. This works best if the top
           pixels aren't too bright, otherwise the effect is too extreme.
-	* Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is
+    * Addition: This blend mode simply adds pixel values of one layer with the other. In case of values above 1 (in the case of RGB), white is
           displayed. This mode is suitable for highlighting features.
-	* Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the 
-	  results tend to be jagged and harsh
-	* Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer.
+    * Darken: Creates a resultant pixel that retains the smallest components of the foreground and background pixels. Like lighten, the
+      results tend to be jagged and harsh
+    * Multiply: It multiplies the numbers for each pixel of the top layer with the corresponding pixel for the bottom layer.
           The results are darker pictures.
-	* Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
-	* Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become
-          darker. 
-	* Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft
+    * Burn: Darker colors in the top layer causes the underlying layers to darken. Can be used to tweak and colorise underlying layers.
+    * Overlay: Combines multiply and screen blending modes. In the resulting picture light parts of the picture become lighter and dark parts become
+          darker.
+    * Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft
           light onto an image.
-	* Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
-	* Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
+    * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
+    * Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with
           black produces no change, as values for all colors are 0.
-	* Subtract: This blend mode simply subtracts pixel values of one layer with tshe other. In case of negative values, black is displayed.
-  
+    * Subtract: This blend mode simply subtracts pixel values of one layer with tshe other. In case of negative values, black is displayed.
+
 
 .. index:: Symbology
 
-Since |qg| 2.0.0 the old symbology is no longer available.
-In this version the new symbology has been redesigned and revised. 
+Since |qg| 2.0 the old symbology is no longer available.
+In this version the new symbology has been redesigned and revised.
 
 
 Renderers
@@ -126,7 +126,7 @@ the menu on the right side.
 .. _defining_symbols:
 
 If you click on the first level in the :guilabel:`Symbol layers` dialog on the left
-side it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color` 
+side it's possible to define basic parameters like :guilabel:`Size`, :guilabel:`Transparency`, :guilabel:`Color`
 and :guilabel:`Rotation`. Here the layers are joined together.
 
 
@@ -142,12 +142,12 @@ and :guilabel:`Rotation`. Here the layers are joined together.
 
    Single symbol line properties |nix|
 
-More detailed settings can be made when clicking on the second level in the 
+More detailed settings can be made when clicking on the second level in the
 :guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` that are
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
-* :guilabel:`Symbol layer type`: You have the possibility to use Ellipse markers, Font markers, 
+* :guilabel:`Symbol layer type`: You have the possibility to use Ellipse markers, Font markers,
   Simple markers, SVG markers and Vector Field markers
 * :guilabel:`Size`
 * :guilabel:`Angle`
@@ -161,8 +161,8 @@ the lower levels changes accordingly while the size ratio is maintained.
 After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`)
 and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
-save the symbol as a QGIS layer style file (.qml) or SLD file(.sld). Currently
-in version 2.0.0 SLDs can be exported from any type of renderer: single symbol,
+save the symbol as a |qg| layer style file (.qml) or SLD file(.sld). Currently
+in version 2.0 SLDs can be exported from any type of renderer: single symbol,
 categorized, graduated or rule-based, but when importing an SLD, either a
 single symbol or rule-based renderer is created.
 That means that categorized or graduated styles are converted to rule-based.
@@ -174,9 +174,9 @@ converting styles to rule-based.
 
 With the :guilabel:`Style manager` from the **[Symbol]** |selectstring| menu you can administrate your
 symbols. You can |mActionSignPlus| :sup:`add item`, |edit|:sup:`edit item`, |mActionSignMinus| :sup:`remove item`
-and |user| :sup:`share item. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'Color ramps' 
+and |user| :sup:`share item. 'Marker' symbols, 'Line' symbols, 'Fill' patterns and 'Color ramps'
 can be used to create the symbols (see defining_symbols_). The symbols are assigned to 'All Symbols',
-'Groups' or 'Smart groups' then. 
+'Groups' or 'Smart groups' then.
 
 
 .. index:: Categorized_Renderer, Renderer_Categorized
@@ -235,7 +235,7 @@ example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
    Example of custom gradient color ramp with multiple stops |nix|
 
-The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.   
+The cpt-city option opens a new dialog with hundreds of themes included 'out of the box'.
 
 .. _figure_symbology_3a:
 
@@ -357,12 +357,12 @@ placed on a displacement circle around a center symbol.
    Point displacement dialog |nix|
 
 .. tip:: **Export vector symbology**
-   
-   You have the possibility to export vector symbology from QGIS into the Google *.kml, *.dxf
+
+   You have the possibility to export vector symbology from |qg| into the Google *.kml, *.dxf
    and MapInfo*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
    as -->` to define the name of the output file and its format.
    Use the :guilabel:`Symbology export` menu to save the symbology either as
-   :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`. 
+   :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers it is recommended to use the second setting.
 
 .. _vector_labels_tab:
@@ -372,7 +372,7 @@ Labels Menu
 The |mActionLabeling| :sup:`Labels` core application provides smart
 labeling for vector point, line and polygon layers and only requires a
 few parameters. This new application also supports on-the-fly transformated layers.
-The core functions of the application have been redesigned. In QGIS 2.0.0. 
+The core functions of the application have been redesigned. In |qg| 2.0.
 there are now a number of other features which improve the labeling. The following menus
 have been created for labeling the vector layers:
 
@@ -390,8 +390,8 @@ Let us see how the new menus can be used for various vector layers.
 
 **Labeling point layers**
 
-Start QGIS and load a vector point layer. Activate the layer in the legend and click on the 
-|mActionLabeling| :sup:`Layer Labeling Options` icon in the QGIS toolbar menu.
+Start |qg| and load a vector point layer. Activate the layer in the legend and click on the
+|mActionLabeling| :sup:`Layer Labeling Options` icon in the |qg| toolbar menu.
 
 First step is to activate the |checkbox| :guilabel:`Label this layer with` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
@@ -402,47 +402,47 @@ that are situated next to the drop-down menus.
 
 You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). A new function is the
 :guilabel:`Type case` option where you can influence the text rendering. You have the possibility to render
-the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Also, a new function in QGIS 2.0.0
+the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Also, a new function in |qg| 2.0
 is the use of blend modes (see blend_modes_).
 
 In the :guilabel:`Formatting` menu you can define a character for a line break in the labels with the wrap label on character function.
-Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here 
-decimal places are inserted. If you enable this option three decimal places ist set by default. 
+Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here
+decimal places are inserted. If you enable this option three decimal places ist set by default.
 
 To create a buffer just activate |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
-The buffer color is variable. Also, a new function in QGIS 2.0.0 is the user of blend modes (see blend_modes_).
+The buffer color is variable. Also, a new function in |qg| 2.0 is the user of blend modes (see blend_modes_).
 .. FIXME: more information necessary
 Use the |checkbox| :guilabel:`Color buffer fill` checkbox to ...
 
-In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background. 
+In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
 Use :guilabel:`Size type` to insert an additional 'Buffer' into your background. The buffer size one is set by default here.
 The background then consists of the buffer plus the background in :guilabel:`Size X` and :guilabel:`Size Y`.
 You can set a :guilabel:`Rotation` where you can choose between 'Sync with label', 'Offset of label' and 'Fixed'.
-Using 'Offset of label' and 'Fixed' you can rotate the background. Define an :guilabel:`Offset X,Y` with X and Y values and the background 
-will be shifted. When applying :guilabel:`Radius X,Y` the background gets rounded corners. 
+Using 'Offset of label' and 'Fixed' you can rotate the background. Define an :guilabel:`Offset X,Y` with X and Y values and the background
+will be shifted. When applying :guilabel:`Radius X,Y` the background gets rounded corners.
 Again, it is possible to mix the background with the underlying layers in the map canvas using the :guilabel:`Blend mode`
 (see blend_modes_).
 
-Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`. The drawing of the background is very variable. 
+Use the :guilabel:`Shadow` menu for a user-defined :guilabel:`Drop shadow`. The drawing of the background is very variable.
 Choose between 'Lowest label component', 'Text', 'Buffer' and 'Background'. The :guilabel:`Offset` angle depends on the orientation
 of the label. If you choose the |checkbox| :guilabel:`Use global shadow` checkbox then the zero point of the angle is
 always oriented to the north and doesn't depend on the orientation of the label. Influence the appearance of the shadow
-with the :guilabel:`Blur radius`. The higher the number, the softer the shadows. 
+with the :guilabel:`Blur radius`. The higher the number, the softer the shadows.
 .. FIXME: more information necessary
 Using the |checkbox| :guilabel:`Blur only alpha pixels` checkbox the shadow will ...
 The appearance of the drop shadow can also be altered by choosing a blend mode (see blend_modes_).
 
-Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. Using the 
+Choose the :guilabel:`Placement` menu for the label placement and the labeling priority. Using the
 |radiobuttonon| :guilabel:`Offset from point` setting you now have the possibility to use :guilabel:`Quadrants`
 to place your label. Additionally you can alter the angle of the label placement with the :guilabel:`Rotation` setting.
 Thus, a placement in a certain quadrant with a certain rotation is possible.
 
 .. index:: Colliding_labels
 
-In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options` 
-you find the scale-based visibility setting now. You can prevent QGIS from rendering only selected labels with
-the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox. 
-In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In QGIS 2.0.0 now it's possible to define 
+In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options`
+you find the scale-based visibility setting now. You can prevent |qg| from rendering only selected labels with
+the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox.
+In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In |qg| 2.0 now it's possible to define
 if the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
 
@@ -482,16 +482,16 @@ In the :guilabel:`Placement` menu you find special settings for line layers. The
 |radiobuttonon| :guilabel:`Parallel`, |radiobuttonoff| :guilabel:`Curved` or |radiobuttonoff| :guilabel:`Horizontal`.
 With the |radiobuttonon| :guilabel:`Parallel` and |radiobuttonoff| :guilabel:`Curved` option come the following settings:
 You can define the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`
-and |checkbox| :guilabel:`Below line`. It's possible to select several options at once. 
-QGIS will look for the optimal position of the label then. Remember that here you can 
-also use the line orientation for the position of the label. 
+and |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
+|qg| will look for the optimal position of the label then. Remember that here you can
+also use the line orientation for the position of the label.
 .. FIXME: more information necessary
 Additionally you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
 The :guilabel:`Rendering` menu has nearly the same entries as for point layers. In the
-:guilabel:`Feature options` you can now :guilabel:`Suppress labeling of features smaller than`. 
- 
+:guilabel:`Feature options` you can now :guilabel:`Suppress labeling of features smaller than`.
+
 
 .. if features act as obstacles for labels or not.
 
@@ -514,7 +514,7 @@ First step is to activate the |checkbox| :guilabel:`Label this layer` checkbox
 and select an attribute column to use for labeling. Click |mActionmIconExpressionEditorOpen| if you
 want to define labels based on expressions.
 
-In :guilabel:`Text` menu define the text style. The entries are the same as for point 
+In :guilabel:`Text` menu define the text style. The entries are the same as for point
 and line layers.
 
 The :guilabel:`Formatting` menu allows you to format multiple lines like for point and line layers.
@@ -526,22 +526,22 @@ You can use the menu as well as for the point and line layers.
 
 The entries in the :guilabel:`Shadow` menu are the same as for point and line layers.
 
-In the :guilabel:`Placement` menu you find special settings for polygon layers (see Figure_labels_3_ ). 
+In the :guilabel:`Placement` menu you find special settings for polygon layers (see Figure_labels_3_ ).
 |radiobuttonon| :guilabel:`Offset from centroid`, |radiobuttonoff| :guilabel:`Horizontal (slow)`,
 |radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
 |radiobuttonoff| :guilabel:`Using perimeter` are possible.
 
-	In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
-	is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
-	That means that either the centroid is used for the polygon you can see on the map or the centroid is
-	used for the whole polygon, no matter if you can see the whole feature on the map.
-	You can place your label with the quadrants here and define offset and rotation.
-	The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
-	around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon` 
-	or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
-	With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
-	a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
-	|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
+    In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
+    is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
+    That means that either the centroid is used for the polygon you can see on the map or the centroid is
+    used for the whole polygon, no matter if you can see the whole feature on the map.
+    You can place your label with the quadrants here and define offset and rotation.
+    The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
+    around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon`
+    or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+    With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
+    a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
+    |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
@@ -568,19 +568,19 @@ are overwritten by entries in the attribute table.
 You can activate/deactivate the function with the right-mouse button.
 Hover over the symbol and you see the information about the data-defined override,
 including the current definition field.
-We now describe an example how to use the data-defined override function for the 
+We now describe an example how to use the data-defined override function for the
 |mActionMoveLabel|:sup:`Move label` function (see figure_labels_4_ ).
 
-#. Import the lakes.shp from the QGIS sample dataset.
+#. Import the lakes.shp from the |qg| sample dataset.
 #. Double-klick the layer to open the Layer Properties. Klick on :guilabel:`Labels`
    and :guilabel:`Placement`. Select |radiobuttonon| :guilabel:`Offset from centroid`.
 #. Look for the :guilabel:`Data defined` entries. Klick the |mIconDataDefine| -Icon to
    define the field type for the :guilabel:`Coordinate`. Choose 'xlabel' for X and 'ylabel'
    for Y. The Icons are now highlighted in yellow.
-#. Zoom into a lake. 
+#. Zoom into a lake.
 #. Go to the Label toolbar and klick the |mActionMoveLabel| Icon. Now you can shift the label
-   manually to another position (see figure_labels_5_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the 
-   attribute table. 
+   manually to another position (see figure_labels_5_ ). The new position of the label is saved in the 'xlabel' and 'ylabel' columns of the
+   attribute table.
 
 .. _figure_labels_4:
 
@@ -611,14 +611,14 @@ We now describe an example how to use the data-defined override function for the
 Labels (deprecated)
 ...................
 
-Use of the deprecated labelling engine available in QGIS <= 1.8 is now discouraged, but has not been removed. This is to allow users to migrate existing projects from the old to new labelling engine. The following guidelines for working with the older engine in QGIS 2.0 apply:
+Use of the deprecated labelling engine available in |qg| <= 1.8 is now discouraged, but has not been removed. This is to allow users to migrate existing projects from the old to new labelling engine. The following guidelines for working with the older engine in |qg| 2.0 apply:
 
-* Deprecated labelling tab is removed from vector layer properties dialog for new projects or older opened projects that don't use that labelling engine. 
+* Deprecated labelling tab is removed from vector layer properties dialog for new projects or older opened projects that don't use that labelling engine.
 * Deprecated tab remains active for older opened projects, if any layer uses them, and does not go away even if saving the project with no layers having the older labelling engine enabled.
 
-**NOTE**: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of QGIS. Please migrate older projects.
+**NOTE**: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of |qg|. Please migrate older projects.
 
-We will illustrate how it works by labeling the lakes shapefile of the QGIS sample dataset:
+We will illustrate how it works by labeling the lakes shapefile of the |qg| sample dataset:
 
 #. Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml`
    in |qg|
@@ -696,10 +696,10 @@ selected label is shown.
 
 The deprecated labelling tab can also be enabled/disabled for the current project, via Python console commands, e.g.:
 
-:: 
+::
 
-	QgsProject.instance().writeEntry('DeprecatedLabels', '/Enabled', True | False)
-	QgsProject.instance().removeEntry('DeprecatedLabels', '/')
+    QgsProject.instance().writeEntry('DeprecatedLabels', '/Enabled', True | False)
+    QgsProject.instance().removeEntry('DeprecatedLabels', '/')
 
 .. _vector_attributes_menu:
 
@@ -776,7 +776,7 @@ With the **Attribute editor layout** you can now define builtin forms for data e
 Choose 'Drag and drop designer' and an attribute column. Use the |mActionSignPlus| Icon to create
 a category that then will be shown during the digitizing session (see figure_fields_3_). Next step will be to
 assign the relevant fields to the category with the |mActionArrowRight| Icon. You can create
-more categories and use the same fields again. When creating a new category QGIS
+more categories and use the same fields again. When creating a new category |qg|
 will insert a new tab for the category in the built in form.
 
 Other options in the dialog are 'Autogenerate' and 'Provide ui-file'. 'Autogenerate' just creates Editors for all fields
@@ -784,7 +784,7 @@ and tabulates them.
 The 'Provide ui-file' option allows you to use complex dialogs made with the Qt-Designer. Using an UI-file allows
 a large freedom in creating a dialog. For detailed information see http://nathanw.net/2011/09/05/qgis-tips-custom-feature-forms-with-python-logic/ .
 
-QGIS dialogs can have a python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
+|qg| dialogs can have a python function that is called when the dialog is opened. Use this function to add extra logic to your dialogs.
 An example is (in module MyForms.py):
 
 ::
@@ -795,7 +795,7 @@ An example is (in module MyForms.py):
 
 Reference in Python Init Function like so: MyForms.open
 
-MyForms.py must live on PYTHONPATH, .qgis/python, or inside the project folder
+MyForms.py must live on PYTHONPATH, .qgis2/python, or inside the project folder
 
 .. _figure_fields_2:
 
@@ -833,7 +833,7 @@ Layer Info
 
 * Change the display name of the layer in :guilabel:`displayed as`
 * Define the :guilabel:`Layer source` of the vector layer
-* Define the :guilabel:`Data source encoding` to define provider specific option and to 
+* Define the :guilabel:`Data source encoding` to define provider specific option and to
   be able to read the file
 
 Coordinate Reference System
@@ -870,8 +870,8 @@ Feature subset
 Display Menu
 ------------
 
-|mActionMapTips| In |qg| 2.0.0 there is now an own menu for the map tips. It includes a new feature:
-Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field` 
+|mActionMapTips| In |qg| 2.0 there is now an own menu for the map tips. It includes a new feature:
+Map Tip display text in HTML. While you can still choose a |radiobuttonoff| :guilabel:`Field`
 to be displayed when hovering over a feature on the map it is now possible to insert HTML code that creates a complex
 display when hovering over a feature. To activate Map Tips, select the menu option :menuselection:`View --> MapTips`.Figure Display 1 shows an example of HTML code.
 
@@ -1175,8 +1175,8 @@ Joins Menu
 |join| The :guilabel:`Joins` menu allows you to :index:`join` a loaded attribute table
 to a loaded vector layer. After clicking |mActionSignPlus| the :guilabel:`Add vector join` dialog appears.
 As key columns you have to define a :index:`join layer` you want to connect with the target vector layer , a join field that corresponds to an attribute column in the target layer and a target field you find in the attribute table of the target vector layer here. As a result, all information of the join layer and the target layer are displayed in the attribute table of the target layer as joined information.
- 
-QGIS currently supports to join non spatial table formats supported by OGR (e.g. CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
+
+|qg| currently supports to join non spatial table formats supported by OGR (e.g. CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
 
 .. _figure_joins_1:
 
@@ -1237,7 +1237,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
    :guilabel:`Layer Properties` dialog.
 #. Click on the :guilabel:`Diagrams` menu, activate :guilabel:`Display diagrams`
    and from :guilabel:`Diagram type` |selectstring| combobox select 'Text diagram'
-#. In the :guilabel:`Appearance` tab we choose a light blue as Background color and 
+#. In the :guilabel:`Appearance` tab we choose a light blue as Background color and
    in the :guilabel:`Size` tab we set a fixed size to 18 mm.
 #. In the :guilabel:`Position` tab Placement could be set to AroundPoint.
 #. In the diagram we want to display the values of the three columns
@@ -1245,7 +1245,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
    :guilabel:`Attributes` and click the |mActionSignPlus| button, then ``T_F_JUL`` and
    finally ``T_F_MEAN``.
 #. Now click **[Apply]** to display the diagram in the |qg| main window.
-#. You can now adapt the chart size in the :guilabel:`Size` tab. Deactivate the |checkbox| :guilabel:`Fixed size` and set 
+#. You can now adapt the chart size in the :guilabel:`Size` tab. Deactivate the |checkbox| :guilabel:`Fixed size` and set
    the size of the diagrams on the basis of an Attribute with the **[Find maximum value]** button and the
    :guilabel:`Size` menu. If diagrams appear too small on the screen you can activate the |checkbox| :guilabel:`Increase
    size of small diagrams` checkbox and define the Minimum size of the diagrams.
@@ -1273,24 +1273,24 @@ Also, a scale dependent visibility that you can find in the :guilabel:`Appearanc
 Metadata Menu
 -------------
 
-|metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`, 
+|metadata| The :guilabel:`Metadata` menu consists of a :guilabel:`Description`,
 :guilabel:`Attribution`, :guilabel:`MetadataURL` and :guilabel:`Properties` section.
 
 In the :guilabel:`Properties` section you get general information about the layer,
-including specifics about the type and location, number of features, feature type, 
+including specifics about the type and location, number of features, feature type,
 and the editing capabilities in the :guilabel:`Properties` section. The :guilabel:`Extents`
 table provides you with layer extent information, and the :guilabel:`Layer Spatial Reference System`
 information, providing information about the CRS of the layer. This is a quick way
 to get information about the layer.
 
 Additionally you can add/edit a title for the layer and some abstract information in the :guilabel:`Description`.
-Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a 
-metadata catalogue. If you want to use a title from an XML metadata file you have to fill in 
+Also, it's possible to define a :guilabel:`Keyword list` here. These keyword lists can be used in a
+metadata catalogue. If you want to use a title from an XML metadata file you have to fill in
 a link in the :guilabel:`DataUrl` field.
 Use :guilabel:`Attribution` to get Atrribute data from an XML metadata catalogue.
 In :guilabel:`MetadataUrl` you can define the general path to the XML metadata catalogue.
-These information will be saved in the QGIS project file for following sessions
-and will be used for QGIS server.
+These information will be saved in the |qg| project file for following sessions
+and will be used for |qg| server.
 
 .. _figure_metadata_vect:
 

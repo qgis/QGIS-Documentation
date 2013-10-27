@@ -44,10 +44,10 @@ The plugin requires the following parameters to be specified before running:
 Using the plugin
 ----------------
 
-#. Start QGIS and load a point vector layer (e.g., :file:`elevp.csv`).
+#. Start |qg| and load a point vector layer (e.g., :file:`elevp.csv`).
 #. Load the Interpolation plugin in the Plugin Manager (see Section
    :ref:`load_core_plugin`) and click on the |raster-interpolate| :sup:`Interpolation`
-   icon which appears in the QGIS toolbar menu. The Interpolation plugin dialog
+   icon which appears in the |qg| toolbar menu. The Interpolation plugin dialog
    appears as shown in Figure_interpolation_1_.
 #. Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column
    (e.g., ``ELEV``) for interpolation.

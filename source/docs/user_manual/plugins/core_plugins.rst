@@ -6,7 +6,7 @@
 .. _core_plugins:
 
 -----------------------
-Using QGIS Core Plugins
+Using |qg| Core Plugins
 -----------------------
 
 \
@@ -19,7 +19,7 @@ Using QGIS Core Plugins
 Icon                    Plugin                    Description                                             Manual Reference
 ======================  ========================  ======================================================  ===============================
 |coordinate_capture|    Coordinate Capture        Capture mouse coordinate in different CRS               :ref:`coordcapt`
-|icon_dbmanager|        DB Manager                Manage your databases within QGIS                       :ref:`dbmanager`
+|icon_dbmanager|        DB Manager                Manage your databases within |qg|                       :ref:`dbmanager`
 |dxf2shp_converter|     DXF2Shape Converter       Converts from DXF to SHP file format                    :ref:`dxf2shape`
 |event_id|              eVis                      Event Visualization Tool                                :ref:`evis`
 |ftools|                fTools                    A suite of vector tools                                 :ref:`ftools`

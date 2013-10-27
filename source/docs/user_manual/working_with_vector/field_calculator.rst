@@ -64,7 +64,7 @@ can add a numeration to your data set. To add a function to the Field calculator
 **Expression** box, click on the > and then doubleclick the function.
 
 A short example illustrates how the field calculator works. We want to
-calculate the length in km of the ``railroads`` layer from the QGIS sample dataset:
+calculate the length in km of the ``railroads`` layer from the |qg| sample dataset:
 
 #. Load the Shapefile :file:`railroads.shp` in |qg| and press |mActionOpenTable|
    :sup:`Open Attribute Table`.
@@ -93,7 +93,7 @@ labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core applicatio
 
 **Operators**
 
-This group contains operators e.g + - * 
+This group contains operators e.g + - *
 
 ::
 
@@ -115,7 +115,7 @@ This group contains operators e.g + - *
  - a                negative value of a
  ||                 joins two values together into a string 'Hello' || ' world'
  LIKE               returns 1 if the string matches the supplied pattern
- ILIKE              returns 1 if the string matches case-insensitive the supplied 
+ ILIKE              returns 1 if the string matches case-insensitive the supplied
                     pattern. ILIKE can be used instead of LIKE to make the match case-insensitive
  IS                 returns 1 if a is the same as b
  OR                 returns 1 when condition a or b is true
@@ -133,7 +133,7 @@ This group contains operators e.g + - *
 
 **Conditionals**
 
-This group contains functions to handle conditional checks in expressions. 
+This group contains functions to handle conditional checks in expressions.
 
 ::
 
@@ -147,7 +147,7 @@ This group contains functions to handle conditional checks in expressions.
 
 **Mathematical Functions**
 
-This group contains math functions e.g square root, sin and cos 
+This group contains math functions e.g square root, sin and cos
 
 ::
 
@@ -159,23 +159,23 @@ This group contains math functions e.g square root, sin and cos
  asin(a)                       arcussinus of a
  acos(a)                       arcuscosinus of a
  atan(a)                       arcustangens of a
- atan2(y,x)                    arcustangens of y/x using the signs of the two arguments 
+ atan2(y,x)                    arcustangens of y/x using the signs of the two arguments
                                to determine the quadrant of the result
  exp                           exponential of an value
  ln                            value of the natural logarithm of the passed expression
  log10                         value of the base 10 logarithm of the passed expression
  log                           value of the logarithm of the passed value and base
  round                         number to number of decimal places
- rand                          random integer within the range specified by the minimum 
+ rand                          random integer within the range specified by the minimum
                                and maximum argument (inclusive)
- randf                         random float within the range specified by the minimum 
+ randf                         random float within the range specified by the minimum
                                and maximum argument (inclusive)
  max                           largest value in a set of values
  min                           smallest value in a set of values
  clamp                         restricts an input value to a specified range
- scale_linear                  transforms a given value from an input domain to an output 
+ scale_linear                  transforms a given value from an input domain to an output
                                range using linear interpolation
- scale_exp                     transforms a given value from an input domain to an output 
+ scale_exp                     transforms a given value from an input domain to an output
                                range using an exponential curve
  floor                         rounds a number downwards
  ceil                          rounds a number upwards
@@ -193,28 +193,28 @@ This group contains functions to convert on data type to another e.g string to i
  toreal                       converts a string to real number
  tostring                     convert number to string
  todatetime                   convert a string into Qt data time type
- todate                       convert a string into Qt data type 
+ todate                       convert a string into Qt data type
  totime                       convert a string into Qt time type
- tointerval                   converts a string to a interval type. Can be used to take days, 
+ tointerval                   converts a string to a interval type. Can be used to take days,
                               hours, month, etc off a date
 
 
 
 **Date and Time Functions**
 
-This group contains functions for handling date and time data. 
+This group contains functions for handling date and time data.
 
 ::
 
  $now                         current date and time
  age                          difference between two dates
- year                         extract the year part from a date, or the number of years from a Interval 
- month                        extract the month part from a date, or the number of months from a Interval 
- week                         extract the week number from a date, or the number of weeks from a Interval 
+ year                         extract the year part from a date, or the number of years from a Interval
+ month                        extract the month part from a date, or the number of months from a Interval
+ week                         extract the week number from a date, or the number of weeks from a Interval
  day                          extract the day from a date, or the number of days from a Interval
  hour                         extract the hour from a datetime or time, or the number
                               of hours from a Interval
- minute                       extract the minute from a datetime or time, or the number 
+ minute                       extract the minute from a datetime or time, or the number
                               of minutes from a Interval
  second                       extract the second from a datetime or time, or the number
                               of minutes from a Interval
@@ -223,13 +223,13 @@ This group contains functions for handling date and time data.
 
 **String Functions**
 
-This group contains functions that operate on strings e.g replace, convert to upper case. 
+This group contains functions that operate on strings e.g replace, convert to upper case.
 
 ::
 
  lower                        convert string a to lower case
  upper                        convert string a to upper case
- title                        converts all words of a string to title case (all words lower case 
+ title                        converts all words of a string to title case (all words lower case
                               with leading capital letter)
  trim                         removes all leading and trailing whitespace (spaces, tabs, etc) from a string
  length                       length of string a
@@ -244,7 +244,7 @@ This group contains functions that operate on strings e.g replace, convert to up
  rpad                         returns a string with supplied width padded using the fill character
  lpad                         returns a string with supplied width padded using the fill character
  format                       formats a string using supplied arguments
- format_number                returns a number formatted with the locale separator for thousands. 
+ format_number                returns a number formatted with the locale separator for thousands.
                               Also truncates the number to the number of supplied places
  format_date                  formats a date type or string into a custom string format
 
@@ -252,82 +252,82 @@ This group contains functions that operate on strings e.g replace, convert to up
 
 **Color Functions**
 
-This group contains functions for manipulating colors. 
+This group contains functions for manipulating colors.
 
 ::
 
- color_rgb                    returns a string representation of a color based on its red, green, 
-                              and blue components                        
- color_rgba                   returns a string representation of a color based on its red, green, 
+ color_rgb                    returns a string representation of a color based on its red, green,
+                              and blue components
+ color_rgba                   returns a string representation of a color based on its red, green,
                               blue, and alpha (transparency) components
  ramp_color                   returns a string representing a color from a color ramp
- color_hsl                    returns a string representation of a color based on its hue, 
-                              saturation, and lightness attributes 
- color_hsla                   returns a string representation of a color based on its hue, saturation, 
+ color_hsl                    returns a string representation of a color based on its hue,
+                              saturation, and lightness attributes
+ color_hsla                   returns a string representation of a color based on its hue, saturation,
                               lightness and alpha (transparency) attributes
  color_hsv                    returns a string representation of a color based on its hue,
                               saturation, and value attributes
- color_hsva                   returns a string representation of a color based on its hue, saturation, 
-                              value and alpha (transparency) attributes 
- color_cmyk                   returns a string representation of a color based on its cyan, magenta, 
+ color_hsva                   returns a string representation of a color based on its hue, saturation,
+                              value and alpha (transparency) attributes
+ color_cmyk                   returns a string representation of a color based on its cyan, magenta,
                               yellow and black components
  color_cmyka                  returns a string representation of a color based on its cyan, magenta,
-                              yellow, black and alpha (transparency) components 
+                              yellow, black and alpha (transparency) components
 
-  
+
 **Geometry Functions**
 
-This group contains functions that operate on geometry objects e.g length, area. 
+This group contains functions that operate on geometry objects e.g length, area.
 
 ::
- 
- xat                          retrieves a x coordinate of the current feature                 
+
+ xat                          retrieves a x coordinate of the current feature
  yat                          retrieves a y coordinate of the current feature
  $area                        returns the area size of the current feature
  $length                      returns the area size of the current feature
  $perimeter                   returns the perimeter length of the current feature
  $x                           returns the x coordinate of the current feature
  $y                           returns the y coordinate of the current feature
- $geometry                    returns the geometry of the current feature. Can be used 
+ $geometry                    returns the geometry of the current feature. Can be used
                               for processing with other functions.
- geomFromWKT                  returns a geometry created from a Well-Known Text (WKT) representation.   
+ geomFromWKT                  returns a geometry created from a Well-Known Text (WKT) representation.
  geomFromGML                  returns a geometry from a GML representation of geometry
  bbox
- disjoint                     returns 1 if the Geometries do not share any space together 
- intersects                   returns 1 if the geometries spatially intersect 
+ disjoint                     returns 1 if the Geometries do not share any space together
+ intersects                   returns 1 if the geometries spatially intersect
                               (share any portion of space) and 0 if they don't
- touches                      returns 1 if the geometries have at least one point in common, 
+ touches                      returns 1 if the geometries have at least one point in common,
                               but their interiors do not intersect
  crosses                      returns 1 if the supplied geometries have some, but not all,
                               interior points in common.
- contains                     returns true if and only if no points of b lie in the exterior of a, 
-                              and at least one point of the interior of b lies in the interior of a 
- overlaps                     returns 1 if the Geometries share space, are of the same dimension, 
+ contains                     returns true if and only if no points of b lie in the exterior of a,
+                              and at least one point of the interior of b lies in the interior of a
+ overlaps                     returns 1 if the Geometries share space, are of the same dimension,
                               but are not completely contained by each other.
  within                       returns 1 if the geometry a is completely inside geometry b
- buffer                       returns a geometry that represents all points whose distance 
+ buffer                       returns a geometry that represents all points whose distance
                               from this geometry is less than or equal to distance
  centroid                     returns the geometric center of a geometry
- convexHull                   returns the convex hull of a geometry. It represents the 
+ convexHull                   returns the convex hull of a geometry. It represents the
                               minimum convex geometry that encloses all geometries within the set
  difference                   returns a geometry that represents that part of geometry a that
                               does not intersect with geometry a
- distance                     returns the minimum distance (based on spatial ref) between 
+ distance                     returns the minimum distance (based on spatial ref) between
                               two geometries in projected units
- intersection                 returns a geometry that represents the shared portion 
+ intersection                 returns a geometry that represents the shared portion
                               of geometry a and geometry b
- symDifference                returns a geometry that represents the portions of a and b 
+ symDifference                returns a geometry that represents the portions of a and b
                               that do not intersect
  combine                      returns the combination of geometry a and geometry b
  union                        returns a geometry that represents the point set union of the geometries
- geomToWKT                    returns the Well-Known Text (WKT) representation of the 
+ geomToWKT                    returns the Well-Known Text (WKT) representation of the
                               geometry without SRID metadata
 
-                            
+
 
 **Record Functions**
 
-This group contains functions that operate on record identifiers. 
+This group contains functions that operate on record identifiers.
 
 ::
 
@@ -338,8 +338,8 @@ This group contains functions that operate on record identifiers.
 
 **Fields and Values**
 
-Contains a list of fields from the layer. Sample values can also be accessed via right-click. 
+Contains a list of fields from the layer. Sample values can also be accessed via right-click.
 
-Select the field name from the list then right-click to access context menu with options to load sample values from the selected field. 
+Select the field name from the list then right-click to access context menu with options to load sample values from the selected field.
 
 

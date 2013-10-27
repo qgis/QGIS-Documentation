@@ -16,26 +16,26 @@ Identify features
 .. index::
    single:Identify features
 
-Identify features allow to interact with map canvas to get data attribut on a 
-pop-up windows. To identify feature use :menuselection:`View --> Identify features` 
-or Ctrl+Shift+I, or click on the |mActionIdentify| :sup:`Identify features` icon 
+Identify features allow to interact with map canvas to get data attribut on a
+pop-up windows. To identify feature use :menuselection:`View --> Identify features`
+or Ctrl+Shift+I, or click on the |mActionIdentify| :sup:`Identify features` icon
 in the toolbar.
 
-If you click on several feature, this pop-up will list all data 
-attributes of all features. The first item is the number of the item in the 
-list of result followed by layer name. Then its first child will be the name of 
+If you click on several feature, this pop-up will list all data
+attributes of all features. The first item is the number of the item in the
+list of result followed by layer name. Then its first child will be the name of
 a field with its value. Finally all informations of the feature is displayed.
 
-This window can be customized to display custom fields but by default it will 
+This window can be customized to display custom fields but by default it will
 display three kind of information:
 
-* Actions: actions can be added to the identify feature windows. When clicking 
-  on the action label, action will be run. By default only one action is added 
+* Actions: actions can be added to the identify feature windows. When clicking
+  on the action label, action will be run. By default only one action is added
   to View feature form for editing.
-* Derived: those informations are calculated or derived from other information. 
+* Derived: those informations are calculated or derived from other information.
   You can find clicked coordinate, X and Y coordinates, area in map unit and
-  perimeter in map unit for polygon, length in map unit for line and feature 
-  id. 
+  perimeter in map unit for polygon, length in map unit for line and feature
+  id.
 * Data attributes: this is the list of attribute fields from data.
 
 .. _figure_identify:
@@ -58,7 +58,7 @@ At the bottom of the windows, you have five icons:
 * |mActionIdentifyCopyAttributes| :sup:`Copy attributes`
 * |mActionIdentifyPrint| :sup:`Print selected HTML response`
 
-More feature can be found in the menu display with a right click of the mouse 
+More feature can be found in the menu display with a right click of the mouse
 somewhere in the response tree.
 
 This menu allows to:
@@ -85,10 +85,10 @@ Keyboard shortcuts
 .. index::
    single:Keyboard shortcuts
 
-QGIS provides default keyboard shortcuts for many features. You find them in
+|qg| provides default keyboard shortcuts for many features. You find them in
 Section :ref:`label_menubar`. Additionally the menu option
 :menuselection:`Settings --> Configure Shortcuts` allows to
-change the default keyboard shortcuts and to add new keyboard shortcuts to QGIS
+change the default keyboard shortcuts and to add new keyboard shortcuts to |qg|
 features.
 
 .. _figure_shortcuts:
@@ -106,7 +106,7 @@ features.
 Configuration is very simple. Just select a feature from the list and click
 on **[Change]**, **[Set none]** or **[Set default]**. Once you
 have found your configuration, you can save it as XML file and load it to another
-QGIS installation.
+|qg| installation.
 
 .. _`context_help`:
 
@@ -127,15 +127,15 @@ Rendering
 .. index::
    single:Rendering
 
-By default, QGIS renders all visible layers whenever the map canvas must be
+By default, |qg| renders all visible layers whenever the map canvas must be
 refreshed. The events that trigger a refresh of the map canvas include:
 
 *  Adding a layer
 *  Panning or zooming
-*  Resizing the QGIS window
+*  Resizing the |qg| window
 *  Changing the visibility of a layer or layers
 
-QGIS allows you to control the rendering process in a number of ways.
+|qg| allows you to control the rendering process in a number of ways.
 
 .. `label_scaledepend`:
 
@@ -147,13 +147,13 @@ Scale Dependent Rendering
 Scale dependent rendering allows you to specify the minimum and maximum
 scales at which a layer will be visible.  To set scale dependency rendering,
 open the :guilabel:`Properties` dialog by double-clicking on the layer in the
-legend. On the :guilabel:`General` tab, click on the 
-|checkbox|:guilabel:`Use scale dependent rendering` checkbox to activate 
+legend. On the :guilabel:`General` tab, click on the
+|checkbox|:guilabel:`Use scale dependent rendering` checkbox to activate
 the feature then set the minimum and maximum scale values.
 .
 
 You can determine the scale values by first zooming to the level you want
-to use and noting the scale value in the QGIS status bar.
+to use and noting the scale value in the |qg| status bar.
 
 .. index::
    single:Scale
@@ -172,11 +172,11 @@ Suspending Rendering
 
 .. index::`rendering!suspending`
 
-To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the lower right
-corner of the statusbar. When the |checkbox| :guilabel:`Render` checkbox is not checked, QGIS
-does not redraw the canvas in response to any of the events described in
-Section :ref:`redraw_events`. Examples of when you might want to suspend
-rendering include:
+To suspend rendering, click the |checkbox| :guilabel:`Render` checkbox in the
+lower right corner of the statusbar. When the |checkbox| :guilabel:`Render`
+checkbox is not checked, |qg| does not redraw the canvas in response to any of
+the events described in Section :ref:`redraw_events`. Examples of when you
+might want to suspend rendering include:
 
 * Add many layers and symbolize them prior to drawing
 * Add one or more large layers and set scale dependency before drawing
@@ -202,13 +202,13 @@ menu option :menuselection:`Settings --> Options -->` and click on the
 added to the map should be displayed` checkbox. Any layer added to the map will
 be off (invisible) by default.
 
-Another option in :menuselection:`Settings --> Options -->` :guilabel:`Rendering` 
-menu is the |checkbox| :guilabel:`Enable back buffer` checkbox. It provides better 
-graphics performance at the cost of loosing the possibility to cancel rendering and 
-incremental feature drawing. If it is unchecked, you can set the 'Number of features 
-to draw before updating the display', otherwise it is inactive. 
+Another option in :menuselection:`Settings --> Options -->` :guilabel:`Rendering`
+menu is the |checkbox| :guilabel:`Enable back buffer` checkbox. It provides better
+graphics performance at the cost of loosing the possibility to cancel rendering and
+incremental feature drawing. If it is unchecked, you can set the 'Number of features
+to draw before updating the display', otherwise it is inactive.
 
-Finally you can activate the |checkbox| :guilabel:`Use render caching where possible 
+Finally you can activate the |checkbox| :guilabel:`Use render caching where possible
 to speed up redraws` checkbox.
 
 Stopping Rendering
@@ -236,7 +236,7 @@ Updating the Map Display During Rendering
    single:rendering update during drawing
 
 You can set an option to update the map display as features are drawn. By
-default, QGIS does not display any features for a layer until the entire
+default, |qg| does not display any features for a layer until the entire
 layer has been rendered. To update the display as features are read from the
 datastore, choose menu option :menuselection:`Settings --> Options`
 click on the :guilabel:`Rendering` menu. Set the feature count to an
@@ -331,7 +331,7 @@ then select the layer. Now, when using the measuring tools, each mouse click
 
    Measure Area |nix| (Gnome)
 
-|mActionMeasureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor 
+|mActionMeasureAngle| :sup:`Measure Angle`: You can also measure angles. The cursor
 becomes cross-shaped. Click to draw the first segment of the angle you
 wish to measure, then move the the cursor to draw the desired angle. The measure
 is displayed in a popup dialog.
@@ -353,7 +353,7 @@ is displayed in a popup dialog.
 Select and deselect features
 ----------------------------
 
-The QGIS toolbar provides several tools to select features in the map canvas.
+The |qg| toolbar provides several tools to select features in the map canvas.
 To select one or several features just click on
 |mActionSelect| and select your tool:
 
@@ -373,7 +373,7 @@ Decorations
 ===========
 
 
-The Decorations of QGIS includes the Grid, Copyright Label, the North Arrow and
+The Decorations of |qg| includes the Grid, Copyright Label, the North Arrow and
 the Scale Bar. They are used to 'decorate' the map by adding cartographic
 elements.
 
@@ -381,7 +381,7 @@ elements.
 Grid
 ----
 
-|transformed| :sup:`Grid` allows to add a coordinate grid and 
+|transformed| :sup:`Grid` allows to add a coordinate grid and
 coordinate annotations to the map canvas.
 
 .. _figure_decorations_1:
@@ -398,9 +398,9 @@ coordinate annotations to the map canvas.
 
 #.  Select from menu :menuselection:`View --> Decorations --> Grid`.
     The dialog starts (see figure_decorations_1_).
-#.  Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid 
+#.  Activate the |checkbox| :guilabel:`Enable grid` checkbox and set grid
     definitions according to the layers loaded in the map canvas.
-#.  Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set 
+#.  Activate the |checkbox| :guilabel:`Draw annotations` checkbox and set
     annotation definitions according to the layers loaded in the map canvas.
 #.  Click **[Apply]** to check, if it looks as expected.
 #.  Click **[OK]** to close the dialog.
@@ -436,7 +436,7 @@ using the text you prefer to the map.
 #.  Click **[OK]**
 
 
-In the example above (default) QGIS places a copyright symbol followed by the
+In the example above (default) |qg| places a copyright symbol followed by the
 date in the lower right hand corner of the map canvas.
 
 
@@ -446,8 +446,8 @@ North Arrow
 
 |north_arrow| :sup:`North Arrow` places a simple north arrow on the
 map canvas. At present there is only one style available. You can adjust the
-angle of the arrow or let QGIS set the direction automatically. If you choose
-to let QGIS determine the direction, it makes its best guess as to how the
+angle of the arrow or let |qg| set the direction automatically. If you choose
+to let |qg| determine the direction, it makes its best guess as to how the
 arrow should be oriented. For placement of the arrow you have four options,
 corresponding to the four corners of the map canvas.
 
@@ -484,7 +484,7 @@ canvas. You control the style and placement, as well as the labeling of the bar.
    The Scale Bar Dialog |nix|
 
 
-QGIS only supports displaying the scale in the same units as your map frame.
+|qg| only supports displaying the scale in the same units as your map frame.
 So if the units of your layers are in meters, you can't create a scale bar in
 feet. Likewise if you are using decimal degrees, you can't create a scale
 bar to display distance in meters.
@@ -524,7 +524,7 @@ Annotation Tools
 ================
 
 The |mActionTextAnnotation| :sup:`Text Annotation` tools in the attribute toolbar
-provides the possibility to place formatted text in a balloon on the QGIS map
+provides the possibility to place formatted text in a balloon on the |qg| map
 canvas. Use the :guilabel:`Text Annotation` tool and click into the map canvas.
 
 .. _annotation:
@@ -554,16 +554,16 @@ Html annotations
 ----------------
 
 The |mActionFormAnnotation| :sup:`Html Annotation` tools in the attribute toolbar
-provides the possibility to place the content of a html file in a balloon on the 
-QGIS map canvas. Use the :guilabel:`Html Annotation` tool, click into the map 
+provides the possibility to place the content of a html file in a balloon on the
+|qg| map canvas. Use the :guilabel:`Html Annotation` tool, click into the map
 canvas and add the path to the html file into the dialog.
 
 SVG annotations
 ----------------
 
 The |mActionSaveAsSVG| :sup:`SVG Annotation` tools in the attribute toolbar
-provides the possibility to place a SVG Symbol in a balloon on the QGIS map canvas. 
-Use the :guilabel:`SVG Annotation` tool, click into the map canvas and add the 
+provides the possibility to place a SVG Symbol in a balloon on the |qg| map canvas.
+Use the :guilabel:`SVG Annotation` tool, click into the map canvas and add the
 path to the SVG file into the dialog.
 
 Form annotations
@@ -577,7 +577,7 @@ Additionally you can also create your own annotation forms. The
 a vector layer in a customized qt designer form (see figure_custom_annotation_). It is similar to the
 designer forms for the
 :guilabel:`Identify features` tool, but displayed in an annotation item.
-Also see QGIS blog http://blog.qgis.org/node/143 for more information.
+Also see |qg| blog http://blog.qgis.org/node/143 for more information.
 
 .. _figure_custom_annotation:
 
@@ -687,7 +687,7 @@ Right-click on the embedded layer and choose |mActionRemoveLayer| :sup:`Remove`.
 Add Delimited Text Layer
 ========================
 
-This function allows you to load a delimited text file as a layer in QGIS.
+This function allows you to load a delimited text file as a layer in |qg|.
 
 Requirements
 ------------
@@ -701,7 +701,7 @@ To view a delimited text file as layer, the text file must contain:
    is not important.
 
 As an example of a valid text file we import the elevation point data file
-:file:`elevp.csv` coming with the QGIS sample dataset (See Section
+:file:`elevp.csv` coming with the |qg| sample dataset (See Section
 :ref:`label_sampledata`):
 
 ::
@@ -724,7 +724,7 @@ Some items of note about the text file are:
 Using the function
 ------------------
 
-Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in the 
+Click the toolbar icon |delimited_text| :sup:`Add Delimited Text Layer` in the
 :guilabel:`Manage layers` toolbar to open the :guilabel:`Create a Layer from a
 Delimited Text File` dialog as shown in figure_delimited_text_1_.
 
@@ -750,5 +750,5 @@ for the tab character).
 Once the file is parsed, make a :guilabel:`Geometry definition` |radiobuttonon|:guilabel:`Point coordinates`
 and choose the ``X`` and ``Y`` fields from the dropdown lists. Finally enter a Layer name (e.g., :file:`elevp`)
 as shown in figure_delimited_text_1_ . To add the layer to the map, click **[OK]**. The delimited text file now behaves as
-any other map layer in QGIS.
+any other map layer in |qg|.
 

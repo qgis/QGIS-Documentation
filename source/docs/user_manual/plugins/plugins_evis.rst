@@ -14,9 +14,9 @@ has developed the Event Visualization Tool (eVis), another software tool to add
 to the suite of conservation monitoring and decision support tools for guiding
 protected area and landscape planning. This plugin enables users to easily link
 geocoded (i.e., referenced with latitude and longitude or X and Y coordinates)
-photographs, and other supporting documents, to vector data in QGIS.
+photographs, and other supporting documents, to vector data in |qg|.
 
-eVis is now automatically installed and enabled in new versions of QGIS, and as
+eVis is now automatically installed and enabled in new versions of |qg|, and as
 with all plugins, it can be disabled and enabled using the Plugin Manager
 (See :ref:`managing_plugins`).
 
@@ -31,13 +31,13 @@ Event Browser
 -------------
 
 The Event Browser module provides the functionality to display geocoded
-photographs that are linked to vector features displayed in the QGIS map window.
-Point data, for example, can be from a vector file that can be input using QGIS
+photographs that are linked to vector features displayed in the |qg| map window.
+Point data, for example, can be from a vector file that can be input using |qg|
 or it can be from the result of a database query. The vector feature must have
 attribute information associated with it to describe the location and name of
 the file containing the photograph and, optionally, the compass direction the
 camera was pointed when the image was acquired. Your vector layer must be loaded
-into QGIS before running the Event Browser.
+into |qg| before running the Event Browser.
 
 .. _`evis_launch_browser`:
 
@@ -252,10 +252,10 @@ Event ID Tool
 -------------
 
 The 'Event ID' module allows you to display a photograph by clicking on a feature
-displayed in the QGIS map window. The vector feature must have attribute
+displayed in the |qg| map window. The vector feature must have attribute
 information associated with it to describe the location and name of the file
 containing the photograph and optionally the compass direction the camera was
-pointed when the image was acquired. This layer must be loaded into QGIS before
+pointed when the image was acquired. This layer must be loaded into |qg| before
 running the 'Event ID' tool.
 
 .. _`evis_launch_id`:
@@ -269,7 +269,7 @@ cause the cursor to change to an arrow with an 'i' on top of it signifying that
 the ID tool is active.
 
 To view the photographs linked to vector features in the active vector layer
-displayed in the QGIS map window, move the Event ID cursor over the feature and
+displayed in the |qg| map window, move the Event ID cursor over the feature and
 then click the mouse. After clicking on the feature, the :guilabel:`Generic Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
@@ -364,7 +364,7 @@ Running SQL queries
 ...................
 
 SQL queries are used to extract information from a database or ODBC resource.
-In eVis the output from these queries is a vector layer added to the QGIS map
+In eVis the output from these queries is a vector layer added to the |qg| map
 window. Click on the :guilabel:`SQL Query` tab to display the SQL query
 interface. SQL commands can be entered in this text window. A helpful tutorial
 on SQL commands is available at http://www.w3schools.com/sql. For example, to
@@ -404,10 +404,10 @@ Use the :guilabel:`X Coordinate` |selectstring| and :guilabel:`Y Coordinate`
 |selectstring| comboboxes to select the field from the database that store the
 ``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on the **[OK]**
 button causes the vector layer created from the SQL query to be displayed in the
-QGIS map window.
+|qg| map window.
 
-To save this vector file for future use, you can use the QGIS 'Save as...'
-command that is accessed by right clicking on the layer name in the QGIS map
+To save this vector file for future use, you can use the |qg| 'Save as...'
+command that is accessed by right clicking on the layer name in the |qg| map
 legend and then selecting 'Save as...'
 
 .. tip:: **Creating a vector layer from a Microsoft Excel Worksheet**
@@ -416,7 +416,7 @@ legend and then selecting 'Save as...'
    that unwanted zeros ("0") have been inserted in the attribute table rows
    beneath valid data.This can be caused by deleting the values for these cells
    in Excel using the :kbd:`Backspace` key. To correct this problem you need to
-   open the Excel file (you'll need to close QGIS if there if you are connected
+   open the Excel file (you'll need to close |qg| if there if you are connected
    to the file to allow you to edit the file) and then use
    :menuselection:`Edit --> Delete` to remove the blank rows from the file. To
    avoid this problem you can simply delete several rows in the Excel Worksheet

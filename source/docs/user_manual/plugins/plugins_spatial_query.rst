@@ -29,11 +29,11 @@ Using the plugin
 As an example we want to find regions in the Alaska dataset that contain airports.
 Following steps are necessary:
 
-#. Start QGIS and load the vector layers :file:`regions.shp` and
+#. Start |qg| and load the vector layers :file:`regions.shp` and
    :file:`airports.shp`.
 #. Load the Spatial Query plugin in the Plugin Manager (see Section
    :ref:`load_core_plugin`) and click on the |spatialquery|
-   :sup:`Spatial Query` icon which appears in the QGIS toolbar menu. The plugin
+   :sup:`Spatial Query` icon which appears in the |qg| toolbar menu. The plugin
    dialog appears.
 #. Select layer ``regions`` as source layer and ``airports`` as reference feature
    layer.

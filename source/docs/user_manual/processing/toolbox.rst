@@ -65,7 +65,7 @@ their original names and groups.
 
 Also, some additional algorithms are available only in the advanced view, such as
 LiDAR tools or scripts based on the R statistical computing software, among
-others. Independent QGIS plugins that add new algorithms to the toolbox will only
+others. Independent |qg| plugins that add new algorithms to the toolbox will only
 be shown in the advanced view.
 
 In particular, the simplified view contains algorithms from the following providers:
@@ -73,10 +73,10 @@ In particular, the simplified view contains algorithms from the following provid
 * GRASS
 * SAGA
 * OTB
-* Native QGIS algorithms
+* Native |qg| algorithms
 
-In the particular case of running QGIS under Windows, these algorithms are
-fully-functional in a fresh installation of QGIS and they can be run without
+In the particular case of running |qg| under Windows, these algorithms are
+fully-functional in a fresh installation of |qg| and they can be run without
 requiring any additional installation. Also running them requires no prior
 knowledge of the external applications they use, making them more accesible for
 first-time users.
@@ -119,10 +119,10 @@ algorithm, the structure is similar for all of them. The parameters found on the
 table can be of one of the following types.
 
 * A raster layer, to select from a list of all the ones available (currently
-  opened) in QGIS. The selector contains as well a button on its right-hand side,
-  to let you select filenames that represent layers currently not loaded in QGIS.
-* A vector layer, to select from a list of all the ones available in the QGIS.
-  Layers not loaded in QGIS can be selected as well, as in the case of raster
+  opened) in |qg|. The selector contains as well a button on its right-hand side,
+  to let you select filenames that represent layers currently not loaded in |qg|.
+* A vector layer, to select from a list of all the ones available in the |qg|.
+  Layers not loaded in |qg| can be selected as well, as in the case of raster
   layers, but only if the algorithm does not require a table field selected from
   the attributes table of the layer. In that case, only opened layers can be
   selected, since they need to be open so as to retrieve the list of field names
@@ -144,8 +144,8 @@ table can be of one of the following types.
 
 If the algorithm contains several of them, you will be able to toggle just one of them. If the button corresponding to a vector input is toggled, the algorithm will be executed iteratively on each one of its features instead of just once for the whole layer, producing as many outputs as times the algorithm is executed. This allows for automating the process when all features in a layer have to be processed separately.
 
-* A table, to select from a list of all the ones available in QGIS. Non-spatial
-  tables are loaded into QGIS like vector layers, and in fact they are treated as
+* A table, to select from a list of all the ones available in |qg|. Non-spatial
+  tables are loaded into |qg| like vector layers, and in fact they are treated as
   such by the program. Currently, the list of available tables that you will see
   when executing an algorithm that needs one of them is restricted to
   tables coming from files in DBase (:file:`.dbf`) or Comma-Separated Values
@@ -154,7 +154,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
 * A numerical value, to be introduced in a text box. You will find a button by
   its side. Clicking on it you will see a dialog that allows you to enter a
   mathematical expression, so you can use it as a handy calculator. Some useful
-  variables related to data loaded into QGIS can be added to your expression, so
+  variables related to data loaded into |qg| can be added to your expression, so
   you can select a value derived from any of this variables such as the cellsize
   of a layer or the northern most coordinate of another one.
 
@@ -227,7 +227,7 @@ If the algorithm contains several of them, you will be able to toggle just one o
      Extent Drag |win|
 
 * A list of elements (whether raster layers, vector ones or tables), to select
-  from the list of the ones available in QGIS. To make the selection, click on
+  from the list of the ones available in |qg|. To make the selection, click on
   the small button on the left side of the corresponding row to see a dialog like
   the following one.
 
@@ -279,7 +279,7 @@ be analized. Whenever you use more than one layer as input to an algorithm,
 whether vector or raster, it is up to you to make sure that they are all in the
 same coordinate system.
 
-Note that, due to QGIS's on-the-fly reprojecting capabilities, although two layers
+Note that, due to |qg|'s on-the-fly reprojecting capabilities, although two layers
 might seem to overlap and match, that might not be true if their original
 coordinates are used without reprojecting them onto a common coordinate system.
 That reprojection should be done manually and then use the resulting files as
@@ -334,7 +334,7 @@ be used to save the layer or table.
 
 If you do not enter any filename, the result will be saved as a temporary file
 and in the corresponding default file format, and will be deleted once you exit
-QGIS (take care with that in case you save your project and it contains temporary
+|qg| (take care with that in case you save your project and it contains temporary
 layers).
 
 You can set a default folder for output data objects. Go to the configuration
@@ -343,24 +343,24 @@ dialog (you can open it from the :menuselection:`Processing` menu), and in the
 This output folder is used as the default path in case you type just a filename
 with no path (i.e. :file:`myfile.shp`) when executing an algorithm.
 
-When running an algorithm that uses vector layer in iterative mode, the entered 
-file path is used as the base path for all generated files, which are named using 
-the base name and appending a number representing the index of the iteration. 
+When running an algorithm that uses vector layer in iterative mode, the entered
+file path is used as the base path for all generated files, which are named using
+the base name and appending a number representing the index of the iteration.
 The file extension (and format) is used for all those generated files.
 
 Apart from raster layers and tables, algorithms also generates graphics and texts
 as HTML files. These results are shown at the end of the algorithm execution in
 a new dialog. This dialog will keep the results produced by any algorithm during the
 current session, and can be shown at any time by selecting the
-:menuselection:`Processing --> Results viewer` from QGIS main menu.
+:menuselection:`Processing --> Results viewer` from |qg| main menu.
 
 Some external applications might have files (with no particular extension
 restrictions) as output, but they do not belong to any of the categories above.
-Those output files will not be processed by QGIS (opened or included into the
-current QGIS project), since most of the times correspond to file formats or
-elements not supported by QGIS. This is, for instance, the case with LAS files
+Those output files will not be processed by |qg| (opened or included into the
+current |qg| project), since most of the times correspond to file formats or
+elements not supported by |qg|. This is, for instance, the case with LAS files
 used for LiDAR data. The files get created, but you won't see anything new in
-your QGIS working session.
+your |qg| working session.
 
 For all the other types of outputs, you will find a check box that you can use
 to tell the algorithm whether to load the file once it is generated by the
@@ -370,7 +370,7 @@ Optional outputs are not supported, so all outputs are created, but you
 can uncheck the corresponding check box if you are not interested in a given
 output, which virtually makes it behave like an optional output (although the
 layer is created anyway, but if you leave the text box empty, it will be saved
-to a temporary file and deleted once you exit QGIS)
+to a temporary file and deleted once you exit |qg|)
 
 .. _`processing.options`:
 
@@ -385,9 +385,9 @@ dialog.
 Along with the aforementioned :guilabel:`Output folder` entry, the
 :guilabel:`General` block contains parameters for setting the default rendering
 style for output layers (that is, layers generated by using algorithms from
-any of the framework GUI components). Just create the style you want using QGIS, save
+any of the framework GUI components). Just create the style you want using |qg|, save
 it to a file, and then enter the path to that file in the settings so the algorithms
-can use it. Whenever a layer is loaded by SEXTANTE and added to the QGIS canvas,
+can use it. Whenever a layer is loaded by SEXTANTE and added to the |qg| canvas,
 it will be rendered with that style.
 
 Rendering styles can be configured individually for each algorithm and each one

@@ -35,9 +35,9 @@ running:
 Using the Plugin
 ----------------
 
-#. Start QGIS, load the Dxf2Shape plugin in the Plugin Manager (see Section
+#. Start |qg|, load the Dxf2Shape plugin in the Plugin Manager (see Section
    :ref:`load_core_plugin`) and click on the |dxf2shp_converter| :sup:`Dxf2Shape
-   Converter` icon which appears in the QGIS toolbar menu. The Dxf2Shape plugin
+   Converter` icon which appears in the |qg| toolbar menu. The Dxf2Shape plugin
    dialog appears as shown in Figure_dxf2shape_1_.
 #. Enter input DXF file, a name for the output Shapefile and the Shapefile type.
 #. Enable the |checkbox| :guilabel:`Export text labels` checkbox if you want
