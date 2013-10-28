@@ -70,7 +70,7 @@ Menu Option                                                     Shortcut        
 ==============================================================  ====================  ==========================================  ===============================
 |mActionFileNew| :guilabel:`New`                                :kbd:`Ctrl+N`         see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionFileOpen| :guilabel:`Open`                              :kbd:`Ctrl+O`         see :ref:`sec_projects`                     :guilabel:`Project`
-:menuselection:`New from template -->`              \             see :ref:`sec_projects`             :guilabel:`Project`
+:menuselection:`New from template -->`                          \                     see :ref:`sec_projects`                     :guilabel:`Project`
 :menuselection:`Open Recent  -->`                               \                     see :ref:`sec_projects`                     \
 |mActionFileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionFileSaveAs| :guilabel:`Save As`                         :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
@@ -95,7 +95,7 @@ Menu Option                                                     Shortcut        
 |mActionCapturePoint| :guilabel:`Add Feature`                   :kbd:`Ctrl+.`         see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionMoveFeature| :guilabel:`Move Feature(s)`                \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionDeleteSelected| :guilabel:`Delete Selected`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit`        :guilabel:`Advanced Digitizing`
+|mActionRotatePointSymbols| :guilabel:`Rotate Feature(s)`       \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionSimplify| :guilabel:`Simplify Feature`                  \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddRing| :guilabel:`Add Ring`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 |mActionAddPart| :guilabel:`Add Part`                           \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
@@ -109,6 +109,8 @@ Menu Option                                                     Shortcut        
 |mActionNodeTool| :guilabel:`Node Tool`                         \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
+
+
 
 \
 
@@ -179,7 +181,7 @@ Menu Option                                                          Shortcut   
 |mActionOpenTable| :guilabel:`Open Attribute Table`                  \                     see :ref:`sec_attribute_table`              :guilabel:`Attributes`
 |mActionToggleEditing| :guilabel:`Toggle Editing`                    \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 |mActionFileSave| :guilabel:`Save Layer Edits`                       \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
-|mActionAllEdits| :menuselection:`Current Edits -->`             \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
+|mActionAllEdits| :menuselection:`Current Edits -->`                 \                     see :ref:`sec_edit_existing_layer`          :guilabel:`Digitizing`
 :menuselection:`Save as...`                                          \                     \                                           \
 :menuselection:`Save selection as vector file...`                    \                     See :ref:`sec_attribute_table`              \
 |mActionRemoveLayer| :guilabel:`Remove Layer(s)`                     :kbd:`Ctrl+D`         \                                           \
