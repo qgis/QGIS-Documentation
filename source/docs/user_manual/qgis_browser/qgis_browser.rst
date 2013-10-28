@@ -28,9 +28,7 @@ into |qg| see :ref:`sec_grass`).
 Use |qg| Browser to preview your data. The drag and drop function makes it easy
 to get your data into the Map view and the Map legend.
 
-.. here we can mention the possibility to drag&drop data into the db-manager!
-
-#. Activate |ag| Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser`
+#. Activate |qg| Browser: Right-click on the tool bar and click |checkbox|:guilabel:`Browser`
    or select from :menuselection:`Settings --> Panels`.
 #. Drag the panel into the legend window.
 #. Click on the :guilabel:`Browser` tab.
@@ -52,11 +50,14 @@ function were inserted.
 #. Select a file with the left mouse button. Now you can use the |mActionAdd|:sup:`Add Selected Layers` icon. Use the icon to be able to work with  a file in |qg| without much effort.
 
 |qg| automatically looks for the Coordinate Reference System (CRS) and zooms to the layer extent if you work in a blank |qg| project. If there are already files in your project the file just will be added and in case it has the same extent and CRS it will be visualized. If the file has got another CRS and layer extent you must first right-click on the layer and choose :guilabel:`Set Project CRS from Layer`. Then choose :guilabel:`Zoom to Layer Extent`.
-To work with the |mActionFilter|:sup:`Filter files` function ...
+
+The |mActionFilter|:sup:`Filter files` function works on a directory level. Browse to the folder where you want to
+filter files and give in a search word or a wildcard. The browser only shows matching filenames then, other data won't be
+displayed then.
 
 It's also possible to run |qg| Browser as a standalone application.
 
-**Start |qg| browser**
+**Start QGIS browser**
 
 * |nix| Type in "qbrowser" at a command prompt.
 * |win| Start |qg| browser using the Start menu or desktop shortcut, or

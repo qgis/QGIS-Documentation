@@ -33,7 +33,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 .. index::
    single:Map overview
 
-.. tip:: **Activating the |qg| Overview**
+.. tip:: **Activating the QGIS Overview**
 
    In |qg| you can use an overview panel that provides a full extent view of layers added to it.
    It can be selected under the menu :menuselection:`Settings --> Panels`.
@@ -62,7 +62,8 @@ include:
 
 * In the :guilabel:`General` menu the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
-  layers can be defined. You can define the layer units (only used when CRS
+  layers can be defined. If the CRS transformation is on you can choose an ellipsoid
+  for distance calculations. You can define the canvas units (only used when CRS
   transformation is disabled) and the precision of decimal places to use. You
   also can define a project scale list, that overrides the global predefined scales.
 * The :guilabel:`CRS` menu enables you to choose
@@ -102,12 +103,12 @@ Options
 |mActionOptions| :menuselection:`Options`. The menus where you can optimize your
 options are:
 
-General Tab
------------
+General Menu
+------------
 
 **Application**
 
-* Select the :guilabel:`Style (|qg| restart required)` |selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
+* Select the :guilabel:`Style (QGIS restart required)` |selectstring| and choose between 'Oxygen','Windows','Motif','CDE', 'Plastique' and  'Cleanlux' (|nix|).
 * Define the :guilabel:`Icon theme` |selectstring|. Currently only 'default' is possible.
 * Define the :guilabel:`Icon size` |selectstring|.
 * Define the :guilabel:`Font`. Choose between |radiobuttonon| :guilabel:`QT default` and a user-defined font.
@@ -115,7 +116,7 @@ General Tab
 * |checkbox| :guilabel:`Hide splash screen at startup`
 * |checkbox| :guilabel:`Show tips at startup`
 * |checkbox| :guilabel:`Bold group box titles`
-* |checkbox| :guilabel:`|qg|-styled group boxes`
+* |checkbox| :guilabel:`QGIS-styled group boxes`
 * |checkbox| :guilabel:`Use live-updating color chooser dialog`
 
 
@@ -125,9 +126,8 @@ General Tab
 * |checkbox| :guilabel:`Create new project from default project`. You have the possibility to press on :guilabel:`Set current project as default` or on :guilabel:`Reset default`. You can browse through your files and define a directory where you find your user-defined project templates. There will be an entry in :menuselection:`Project --> New From Template` if you first activate |checkbox| :guilabel:`Create new project from default project` and then save a project in the project templates folder.
 * |checkbox| :guilabel:`Prompt to save project and data source changes when required`
 * |checkbox| :guilabel:`Warn when opening a project file saved with an older version of |qg|`
-
 * :guilabel:`Enable macros` |selectstring|. This option was created to handle macros which are written to perform an action
-   on project events. You can chosse between 'Never', 'Ask', 'For this session only'  and 'Always (not recommended)'.
+on project events. You can chosse between 'Never', 'Ask', 'For this session only'  and 'Always (not recommended)'.
 
 .. _`env_options`:
 
@@ -138,12 +138,14 @@ System Menu
 
 System environment variables can now be viewed and many configured in the **Environment** menu
 (see figure_environment_variables_). This is useful for platforms, such as Mac, where a GUI application
-does not necessarily inherit the user's shell environment.
+does not necessarily inherit the user's shell environment. It's also useful for setting/viewing environment variables
+for the external tool sets controlled by the processing toolbox, e.g. SAGA, GRASS; and, for turning on debugging
+output for specific sections of the source code.
 
 * |checkbox| :guilabel:`Use custom variables (restart required - include separators)`.
   You can :guilabel:`Add` and :guilabel:`Remove` variables.
   :menuselection:`Current environment variables -->` are displayed below and it's possible
-  to |checkbox| :guilabel:`Show only |qg|-specific variables`.
+  to |checkbox| :guilabel:`Show only QGIS-specific variables`.
 
 .. _figure_environment_variables:
 
@@ -163,12 +165,12 @@ does not necessarily inherit the user's shell environment.
 * :guilabel:`Add` or :guilabel:`Remove` :guilabel:`Path(s) to search for additional C++ plugin libraries`
 
 
-Data Sources menu
+Data Sources Menu
 -----------------
 
 **Feature attributes and table**
 
-* |checkbox| :guilabel:`Open attribute table in a dock window (|qg| restart required)`
+* |checkbox| :guilabel:`Open attribute table in a dock window (QGIS restart required)`
 
 * |checkbox| :guilabel:`Copy geometry in WKT representation from attribute table`. When using
   |mActionCopySelected|:sup:`Copy selected rows to clipboard` from the :guilabel:`Attribute table` menu
@@ -222,7 +224,7 @@ Rendering Menu
 
 * :guilabel:`Show these events in the Log Message panel (under rendering tab):` |checkbox| :guilabel:`Map canvas refresh`
 
-Canvas and legend Menu
+Canvas and Legend Menu
 ----------------------
 
 **Default map appearance (overridden by project properties)**
@@ -248,7 +250,7 @@ Map tools Menu
 
 **Identify**
 
-* |checkbox| :guilabel:`Open identify results in a dock window (|qg| restart required)`
+* |checkbox| :guilabel:`Open identify results in a dock window (QGIS restart required)`
 * The :guilabel:`Mode` setting determines which layers will be shown by the Identify
   tool. By switching to 'Top down' or 'Top down, stop at first' instead of 'Current
   layer' attributes for all identifiable layers (see the Project properties section
@@ -299,7 +301,7 @@ Digitizing Menu
 
 **Snapping**
 
-* |checkbox| :guilabel:`Open snapping options in a dock window (|qg| restart required)`
+* |checkbox| :guilabel:`Open snapping options in a dock window (QGIS restart required)`
 * Define :guilabel:`Default snap mode` |selectstring| ('To vertex', 'To segment',
   'To vertex and segment', 'Off')
 * Define :guilabel:`Default snapping tolerance` in map units or pixels
@@ -438,11 +440,11 @@ are filling your screen.
 
    The Customization dialog |nix|
 
-|qg| Customization is divided into five groups. In |checkbox| :guilabel:`Docks` you
-find the dock windows. Dock windows are applications that can be started and used as
+|qg| Customization is divided into five groups.  In |checkbox| :guilabel:`Menus` you
+can hide entries in the Menu bar. In |checkbox| :guilabel:`Panel` you
+find the panel windows. Panel windows are applications that can be started and used as
 a floating, top-level window or embedded to the |qg| main window as a docked widget
-(see also :ref:`sec_panels_and_toolbars`). In |checkbox| :guilabel:`Menus` you
-can hide entries in the Menu bar. In the |checkbox| :guilabel:`Status Bar` features
+(see also :ref:`sec_panels_and_toolbars`). In the |checkbox| :guilabel:`Status Bar` features
 like the coordinate information can be deactivated. In |checkbox| :guilabel:`Toolbars`
 you can (de)activate the toolbar icons of |qg| and in |checkbox| :guilabel:`Widgets`
 you can (de)activate dialogs as well as their buttons.

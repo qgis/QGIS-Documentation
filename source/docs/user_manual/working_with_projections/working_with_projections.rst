@@ -45,7 +45,7 @@ shapefile named :file:`alaska.shp` would have a corresponding projection
 file named :file:`alaska.prj`.
 
 Whenever you select a new CRS, the used layer units will automatically be
-changed in the :guilabel:`General` tab of the
+changed in the :guilabel:`General` menu of the
 |mActionOptions| :guilabel:`Project Properties` dialog under the
 :guilabel:`Project` (Gnome, OSX) or :guilabel:`Settings` (KDE, Windows)
 menu.
@@ -76,7 +76,7 @@ saved for use in subsequent |qg| sessions.
 
 When you use layers that do not have a CRS, you need to define how
 |qg| responds to these layers. This can be done globally or
-project-wide in the :guilabel:`CRS` tab under :menuselection:`Settings -->`
+project-wide in the :guilabel:`CRS` menu under :menuselection:`Settings -->`
 |mActionOptions| :guilabel:`Options`.
 
 The options shown in figure_projection_1_ are:
@@ -86,7 +86,7 @@ The options shown in figure_projection_1_ are:
 * |radiobuttonon| :guilabel:`Use default CRS displayed below`
 
 If you want to define the coordinate reference system for a certain layer without
-CRS information, you can also do that in the :guilabel:`General` tab of the raster
+CRS information, you can also do that in the :guilabel:`General` menu of the raster
 (see :ref:`label_generaltab`) and vector (see :ref:`vectorgeneralmenu`) properties
 dialog. If your layer already has a CRS defined, it will be displayed as shown in
 :ref:`figure_vector_properties_1` .
@@ -105,7 +105,7 @@ Define On The Fly (OTF) Reprojection
 |qg| supports OTF reprojection for both raster and vector data. However, OTF is
 not activated by default. To use OTF projection, you must activate the |checkbox|
 :guilabel:`Enable on the fly CRS transformation` checkbox in the :guilabel:`CRS`
-tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog.
+menu of the |mActionProjectProperties| :menuselection:`Project Properties` dialog.
 
 **There are three ways to achieve this end:**
 
@@ -120,7 +120,7 @@ tab of the |mActionProjectProperties| :menuselection:`Project Properties` dialog
 
 If you have already loaded a layer, and want to enable OTF projection, the
 best practice is to open the :guilabel:`Coordinate Reference System`
-tab of the :guilabel:`Project Properties` dialog, select a CRS, and
+menu of the :guilabel:`Project Properties` dialog, select a CRS, and
 activate the |checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox.
 The |geographic| :sup:`CRS status` icon will no longer be greyed-out
 and all layers will be OTF projected to the CRS shown next to the icon.
@@ -139,7 +139,7 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
    Project Properties Dialog |nix|
 
-The :guilabel:`Coordinate Reference System` tab of the
+The :guilabel:`Coordinate Reference System` menu of the
 :guilabel:`Project Properties` dialog contains five important components as
 shown in Figure_projection_2_ and described below.
 
@@ -168,10 +168,10 @@ shown in Figure_projection_2_ and described below.
    If you open the :guilabel:`Project Properties` dialog from the
    :menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings`
    (KDE, Windows) menu, you must click on the
-   :guilabel:`CRS` tab to view the Coordinate Reference System settings.
+   :guilabel:`CRS` menu to view the Coordinate Reference System settings.
 
    The |geographic| :sup:`CRS status` icon will also automatically bring
-   the :guilabel:`CRS` tab to the front.
+   the :guilabel:`CRS` menu to the front.
 
 .. _sec_custom_projections:
 
