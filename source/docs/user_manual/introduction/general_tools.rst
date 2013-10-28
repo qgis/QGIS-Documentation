@@ -46,7 +46,7 @@ display three kind of information:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Identify feaures dialog |nix| (Gnome)
 
@@ -99,7 +99,7 @@ features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    Define shortcut options |nix| (Gnome)
 
