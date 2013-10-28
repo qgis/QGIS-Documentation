@@ -3,13 +3,14 @@
 Supported Data Formats
 ======================
 
-|qg| uses the OGR library to read and write vector data formats (GRASS vector and
-PostgreSQL support is supplied by native |qg| data provider plugins), including
-ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS, SpatiaLite,
-Oracle Spatial databases and many more. The vector data can also be loaded in
-read mode from zip and gzip archives into |qg|. At the date of this document, 69
-vector formats are supported by the OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`).
-The complete list is available at http://www.gdal.org/ogr/ogr_formats.html.
+|qg| uses the OGR library to read and write vector data formats including
+ESRI Shapefiles, MapInfo, Microstation file formats and many more. GRASS vector, 
+PostGIS, MSSQL Spatial and Oracle Spatial support is supplied by native |qg| data 
+providers. Vector data can also be loaded in read mode from zip and gzip archives 
+into |qg|. At the date of this document, 69 vector formats are supported by the 
+OGR library (see OGR-SOFTWARE-SUITE :ref:`literature_and_web`). The complete list of 
+supported vector data formats by the OGR library (see OGR-SOFTWARE-SUITE 
+:ref:`literature_and_web`) is available at http://www.gdal.org/ogr/ogr_formats.html.
 
 .. note::
 
@@ -54,9 +55,9 @@ http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf.
 Loading a Shapefile
 ...................
 
-|mActionAddOgrLayer| To :index:`load a shapefile`, start |qg| and click on the
-|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button or simply type
-:kbd:`Ctrl+Shift+V`. This will bring up a new window (see figure_vector_1_).
+To :index:`load a shapefile`, start |qg| and click on the |mActionAddOgrLayer| 
+:sup:`Add Vector Layer` toolbar button or simply type :kbd:`Ctrl+Shift+V`. 
+This will bring up a new window (see figure_vector_1_).
 
 .. _figure_vector_1:
 
@@ -115,7 +116,7 @@ Once loaded, you can zoom around the shapefile using the map navigation tools.
 To change the style of a layer, open the :guilabel:`Layer Properties` dialog
 by double clicking on the layer name or by right-clicking on the name in the
 legend and choosing :menuselection:`Properties` from the popup menu.
-See Section :ref:`vector_style_tab` for more information on setting
+See Section :ref:`vector_style_menu` for more information on setting
 symbology of vector layers.
 
 .. _tip_load_from_external_drive_OSX:
@@ -128,8 +129,8 @@ symbology of vector layers.
    As a workaround you can type '/Volumes' in the File name box and press
    :kbd:`return`. Then you can navigate to external drives and network mounts.
 
-Improving Performance Shape
-...........................
+Improving Performance for Shapefiles
+....................................
 
 To improve the performance of drawing a shapefile, you can create a spatial
 index. A spatial index will improve the speed of both zooming and panning.
@@ -150,8 +151,8 @@ Problem loading a shape .prj file
 If you load a shapefile with :file:`.prj` file and |qg| is not able to read
 the coordinate reference system from that file, you have to define the
 proper projection manually within the :guilabel:`General` tab of the
-:guilabel:`Layer Properties` dialog of the layer.
-This is due to the fact, that :file:`.prj` files often do not provide the
+:guilabel:`Layer Properties` dialog of the layer by clicking the **[Specify...]** 
+button. This is due to the fact, that :file:`.prj` files often do not provide the
 complete projection parameters, as used in |qg| and listed in the
 :guilabel:`CRS` dialog.
 
@@ -254,6 +255,7 @@ Optional you can activate following checkboxes:
 *  |checkbox| :guilabel:`Save Username`
 *  |checkbox| :guilabel:`Save Password`
 *  |checkbox| :guilabel:`Only look in the geometry_columns table`
+*  |checkbox| :guilabel:`Don't resolve type of unrestricted columns (GEOMETRY)`
 *  |checkbox| :guilabel:`Only look in the 'public' schema`
 *  |checkbox| :guilabel:`Also list tables with no geometry`
 *  |checkbox| :guilabel:`Use estimated table metadata`
@@ -263,7 +265,7 @@ by clicking on the **[Test Connect]** button.
 
 .. _tip_settings_security:
 
-.. tip:: **|qg| User Settings and Security**
+.. tip:: **QGIS User Settings and Security**
 
    Depending on your computing environment, storing passwords in your |qg|
    settings may be a security risk. Your customized settings for |qg| are
@@ -394,7 +396,7 @@ reference systems and projections.
 ogr2ogr
 .......
 
-Beside **shp2pgsql** and **SPIT** there is another tool for feeding geodata
+Beside **shp2pgsql** and **DB Manager** there is another tool for feeding geodata
 in PostGIS: **ogr2ogr**. This is part of your GDAL installation.
 
 To import a shapefile into PostGIS, do the following:
@@ -518,7 +520,7 @@ Usage
 .....
 
 *  Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using
-   for example the PostGIS Manager plugin or the SPIT plugin
+   for example the DB Manager plugin.
 *  Use the PostGIS command line interface to issue the following command
    (this is an example where "TABLE" is the actual name of your PostGIS table)
 
@@ -627,7 +629,7 @@ Once all parameters and options are set, you can test the connection by clicking
 
 .. _tip_settings_security:
 
-.. tip:: **|qg| User Settings and Security**
+.. tip:: **QGIS User Settings and Security**
 
    Depending on your computing environment, storing passwords in your |qg|
    settings may be a security risk. Passwords are saved in clear text in the
