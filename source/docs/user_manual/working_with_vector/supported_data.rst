@@ -24,7 +24,7 @@ supported vector data formats by the OGR library (see OGR-SOFTWARE-SUITE
 Working with GRASS vector data is described in Section :ref:`sec_grass`.
 
 This section describes how to work with several common formats: ESRI
-Shapefiles, PostGIS layers and SpatiaLite layers. Many of the features
+Shapefiles, PostGIS layers, SpatiaLite layers, OpenStreetMap vectors etc. Many of the features
 available in |qg| work the same, regardless of the vector data source.
 This is by design and includes the identify, select, labeling and
 attributes functions.

@@ -105,8 +105,8 @@ existing symbols and add new ones.
 The Single Symbol Renderer is used to render all features of the layer using
 a single user-defined symbol. The properties, that can be adjusted in the
 :guilabel:`Style` menu, depend partially on the type of the layer, but all types share
-the following structure. In the top left part of the tab, there is a preview
-of the current symbol to be rendered. On the right part of the tab, there is
+the following structure. In the top left part of the menu, there is a preview
+of the current symbol to be rendered. On the right part of the menu, there is
 a list of symbols already defined for the current style, prepared to be used
 via selecting them from the list. The current symbol can be modified using
 the menu on the right side.
@@ -398,9 +398,11 @@ Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in
 decimal places are inserted. If you enable this option three decimal places ist set by default.
 
 To create a buffer just activate |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
-The buffer color is variable. Also, a new function in |qg| 2.0 is the user of blend modes (see blend_modes_).
-.. FIXME: more information necessary
-Use the |checkbox| :guilabel:`Color buffer fill` checkbox to ...
+The buffer color is variable. Also, a new function in |qg| 2.0 is the use of blend modes (see blend_modes_).
+
+If the |checkbox| :guilabel:`Color buffer's fill` checkbox is activated, it will interact with partially transparent
+text and give mixed color transparency results. Turning off the buffer fill fixes that issue (except where the interior
+aspect of the buffer's stroke intersects with the text's fill) and also allows the user to make outlined text.
 
 In the :guilabel:`Background` menu you can define with :guilabel:`Size X` and :guilabel:`Size Y` the shape of your background.
 Use :guilabel:`Size type` to insert an additional 'Buffer' into your background. The buffer size one is set by default here.
