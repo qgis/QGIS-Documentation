@@ -37,17 +37,28 @@ There are several menus in the dialog:
 General Menu
 -------------
 
-The :guilabel:`General` menu displays basic information about the selected raster,
-including the layer source and display name in the legend (which can be
-modified). This tab also shows a thumbnail of the layer, its legend symbol,
-and the palette.
+Layer Info
+..........
 
-Additionally scale-dependent visibility can be set in this tab. You need to
+The :guilabel:`General` menu displays basic information about the selected raster,
+including the layer source path, the display name in the legend (which can be
+modified) and the number of columns, rows and No-Data Values of the raster. 
+
+Coordinate reference system
+...........................
+
+Below you find the coordinate reference system (CRS) information printed as a 
+PROJ.4-string. If this setting is not correct, it can be modified by clicking 
+the **[Specify]** button.
+
+Scale Dependent visibility
+..........................
+
+Additionally Scale Dependent visibility can be set in this tab. You need to
 check the checkbox and set an appropriate scale where your data will be
 displayed in the map canvas.
 
-Also the coordinate reference system (CRS) is printed here as a PROJ.4-string.
-This can be modified by hitting the **[Specify]** button.
+At the bottom you can see a thumbnail of the layer, its legend symbol, and the palette.
 
 .. index:: Symbology, Single_Band_Raster, Three_Band_Color_Raster, Multi_Band_Raster
 
@@ -380,6 +391,3 @@ including statistics about each band in the current raster layer. From this menu
 made for the :guilabel:`Description`, :guilabel:`Attribution`, :guilabel:`MetadataUrl` and
 :guilabel:`Properties`. In :guilabel:`Properties` statistics are gathered on a 'need to know'
 basis, so it may well be that a given layers statistics have not yet been collected.
-
-This menu is mainly for information. You cannot change any values printed
-inside this menu.

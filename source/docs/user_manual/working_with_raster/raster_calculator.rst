@@ -36,7 +36,7 @@ based on X,Y coordinates and on Columns and Rows to set the resolution of the
 output layer. If the input layer has a different resolution, the values will be
 resampled with nearest neighbor algorithm.
 
-The **Operators section** contains all usable operators. To add an operator
+The **Operators** section contains all usable operators. To add an operator
 to the raster calculator expression box, click the appropriate button. Mathematical
 calculations (``+``, ``-``, ``*``, ... ) and trigonometric functions (``sin``,
 ``cos``, ``tan``, ... ) are available. Stay tuned for more operators to come!
