@@ -80,8 +80,8 @@ with 3 vector layers and 1 raster elevation map.
 
 As you see, it is very simple to load GRASS raster and vector layers in QGIS.
 See following sections for editing GRASS data and creating a new :file:`LOCATION`.
-More sample GRASS :file:`LOCATIONs` are available at the GRASS website at
-http://grass.osgeo.org/download/data.php.
+More sample GRASS :file:`LOCATIONs` are available at the GRASS website at 
+http://grass.osgeo.org/download/sample-data/.
 
 .. tip:: **GRASS Data Loading**
 
@@ -320,7 +320,7 @@ used as the link to one key column in the database table.
 
    The best way to learn the GRASS vector model and its capabilities is to
    download one of the many GRASS tutorials where the vector model is described
-   more deeply. See http://grass.osgeo.org/gdp/manuals.php for more information,
+   more deeply. See http://grass.osgeo.org/documentation/manuals/ for more information,
    books and tutorials in several languages.
 
 .. index::
@@ -340,7 +340,7 @@ In GRASS it is possible to organize all sort of geometry types (point, line and
 area) in one layer, because GRASS uses a topological vector model, so you don't
 need to select the geometry type when creating a new GRASS vector. This is
 different from Shapefile creation with QGIS, because Shapefiles use the Simple
-Feature vector model (see Section :ref:`sec_create_shape`).
+Feature vector model (see Section :ref:`sec_create_vector`).
 
 .. tip:: **Creating an attribute table for a new GRASS vector layer**
 
@@ -654,7 +654,7 @@ The provided module parameters are often not complete to keep the dialog clear.
 If you want to use further module parameters and flags, you need to start the
 GRASS Shell and run the module in the command line.
 
-A new feature in QGIS 1.8.0 is the support for a :guilabel:`show advanced options`
+A new feature since QGIS 1.8 is the support for a :guilabel:`show advanced options`
 button below the simplified module dialog in the :guilabel:`Options` tab. At the
 moment it is only added to the module v.in.ascii as an example use, but will
 probably be part of more / all modules in the GRASS toolbox in future versions
