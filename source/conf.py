@@ -427,6 +427,8 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionNewComposer| image:: /static/common/mActionNewComposer.png
    :width: 1.5em
+.. |mActionDupComposer| image:: /static/common/mActionDuplicateComposer.png
+   :width: 1.5em
 .. |mActionComposerManager| image:: /static/common/mActionComposerManager.png
    :width: 1.5em
 .. |mActionOpenRaster| image:: /static/common/mActionOpenRaster.png

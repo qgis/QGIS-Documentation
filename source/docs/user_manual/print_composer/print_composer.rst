@@ -25,7 +25,11 @@ See a list of tools in table_composer_1_:
 | Icon                     | Purpose                               | Icon                       | Purpose                                  |
 +==========================+=======================================+============================+==========================================+
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
-| |mActionOpenFolder|      | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
+| |mActionFileSave|        | Save Project                          | |mActionNewComposer|       | New Composer                             |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionDupComposer|     | Duplicate Composer                    | |mActionComposerManager|   | Composer Manager                         |
++--------------------------+---------------------------------------+----------------------------+------------------------------------------+
+| |mActionFileOpen|        | Load from template                    | |mActionFileSaveAs|        | Save as template                         |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
 | |mActionSaveMapAsImage|  | Export to an image format             | |mActionSaveAsPDF|         | Export as PDF                            |
 +--------------------------+---------------------------------------+----------------------------+------------------------------------------+
@@ -1037,16 +1041,17 @@ to define the resolution (print quality) and paper size:
 
 .. index:: Composer_Manager
 
-Composer Manager
-================
+Manage the Composer
+===================
 
-With the |mActionFileSaveAs| :sup:`Save as template` and |mActionFolder|
+With the |mActionFileSaveAs| :sup:`Save as template` and |mActionFileOpen|
 :sup:`Load from template` icons you can save the current state of a print composer
 session as a  :file:`.qpt` template and load the template again in another session.
 
 The  |mActionComposerManager| :sup:`Composer Manager` button in the |qg| toolbar
 and in :menuselection:`Composer --> Composer Manager` allows to add a new composer
-template, create a new composition based on a previously saved template or to manage already existing templates.
+template, create a new composition based on a previously saved template or to manage 
+already existing templates.
 
 .. _figure_composer_31:
 
@@ -1061,3 +1066,14 @@ template, create a new composition based on a previously saved template or to ma
    The Print Composer Manager |nix|
 
 By default, the composer manager searches for user templates in ~/.qgis2/composer_template.
+
+The |mActionNewComposer| :sup:`New Composer` and |mActionDupComposer| :sup:`Duplicate Composer` 
+buttons in the |qg| toolbar and in :menuselection:`Composer --> New Composer` and  
+:menuselection:`Composer --> Duplicate Composer` allow to open a new composer dialog, or to 
+duplicate an existing composition from a previously created one.
+
+Finally you can save your print composition with the |mActionFileSave| :sup:`Save Project` button. 
+This is the same feature as in the QGIS main window. All changes will be saved in a QGIS project 
+file.  
+
+
