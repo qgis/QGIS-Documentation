@@ -168,7 +168,7 @@ The second topological option in the |checkbox| :guilabel:`Avoid Int.`
 column, called :guilabel:`Avoid intersections of new polygons` avoids
 overlaps in polygon mosaics. It is for quicker digitizing of adjacent
 polygons. If you already have one polygon, it is possible with this option
-to digitise the second one such that both intersect and |qg| then cuts the
+to digitize the second one such that both intersect and |qg| then cuts the
 second polygon to the common boundary. The advantage is that users don't
 have to digitize all vertices of the common boundary.
 
@@ -256,7 +256,7 @@ feature.
 
 The attribute window will appear, allowing you to enter the information for
 the new feature. Figure_edit_2_ shows setting attributes for a fictitious new
-river in Alaska. In the :guilabel:`Digitizing` tab under the
+river in Alaska. In the :guilabel:`Digitizing` menu under the
 :menuselection:`Settings --> Options` menu, you can also activate |checkbox|
 :guilabel:`Suppress attributes pop-up windows after each created feature`
 |checkbox| :guilabel:`Reuse last entered attribute values`.
@@ -948,4 +948,4 @@ is then editable like any other layer attribute table.
 As an example you can use columns of the non spatial table to define attribute
 values or a range of values that are allowed to be added to a specific vector
 layer during digitizing. Have a closer look at the edit widget in section
-:ref:`vector_attributes_tab` to find out more.
+:ref:`vector_attributes_menu` to find out more.

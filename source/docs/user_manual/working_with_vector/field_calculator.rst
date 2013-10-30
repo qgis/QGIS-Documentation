@@ -83,7 +83,7 @@ The available functions are listed below.
 
 The field calculator **Function list** with the **Selected Function Help** ,
 **Operators** and **Expression** menu are also available through the rule-based
-rendering in the Style tab of the Layer properties and the expression based
+rendering in the Style menu of the Layer properties and the expression based
 labeling |browsebutton| in the |mActionLabeling| :sup:`Labeling` core application.
 
 

@@ -475,7 +475,6 @@ You can define the position |checkbox| :guilabel:`Above line`, |checkbox| :guila
 and |checkbox| :guilabel:`Below line`. It's possible to select several options at once.
 |qg| will look for the optimal position of the label then. Remember that here you can
 also use the line orientation for the position of the label.
-.. FIXME: more information necessary
 Additionally you can define a :guilabel:`Maximum angle between curved characters` when
 selecting the |radiobuttonoff| :guilabel:`Curved` option (see Figure_labels_2_ ).
 
@@ -521,17 +520,17 @@ In the :guilabel:`Placement` menu you find special settings for polygon layers (
 |radiobuttonoff| :guilabel:`Around centroid`, |radiobuttonoff| :guilabel:`Free` and
 |radiobuttonoff| :guilabel:`Using perimeter` are possible.
 
-    In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
-    is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
-    That means that either the centroid is used for the polygon you can see on the map or the centroid is
-    used for the whole polygon, no matter if you can see the whole feature on the map.
-    You can place your label with the quadrants here and define offset and rotation.
-    The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
-    around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon`
-    or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
-    With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
-    a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
-    |checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
+In the |radiobuttonon| :guilabel:`Offset from centroid` settings you can define if the centroid
+is |radiobuttonon| :guilabel:`visible polygon` or |radiobuttonoff| :guilabel:`whole polygon`.
+That means that either the centroid is used for the polygon you can see on the map or the centroid is
+used for the whole polygon, no matter if you can see the whole feature on the map.
+You can place your label with the quadrants here and define offset and rotation.
+The |radiobuttonoff| :guilabel:`Around centroid` setting makes it possible to place the label
+around the centroid with a certain distance. Again, you can define |radiobuttonon| :guilabel:`visible polygon`
+or |radiobuttonoff| :guilabel:`whole polygon` for the centroid.
+With the |radiobuttonoff| :guilabel:`Using perimeter` settings you can define a position and
+a distance for the label. For the position |checkbox| :guilabel:`Above line`, |checkbox| :guilabel:`On line`,
+|checkbox| :guilabel:`Below line` and |checkbox| :guilabel:`Line orientation dependend position` are possible.
 
 The entries in the :guilabel:`Rendering` menu are the same as for line layers. You can also use
 :guilabel:`Suppress labeling of features smaller than` in the :guilabel:`Feature options`.
@@ -598,99 +597,6 @@ We now describe an example how to use the data-defined override function for the
    Move labels |nix|
 
 
-Labels (deprecated)
-...................
-
-Use of the deprecated labelling engine available in |qg| <= 1.8 is now discouraged, but has not been removed. This is to allow users to migrate existing projects from the old to new labelling engine. The following guidelines for working with the older engine in |qg| 2.0 apply:
-
-* Deprecated labelling tab is removed from vector layer properties dialog for new projects or older opened projects that don't use that labelling engine.
-* Deprecated tab remains active for older opened projects, if any layer uses them, and does not go away even if saving the project with no layers having the older labelling engine enabled.
-
-**NOTE**: There is a very high likelihood the deprecated labelling engine will be completely removed prior to the next stable release of |qg|. Please migrate older projects.
-
-We will illustrate how it works by labeling the lakes shapefile of the |qg| sample dataset:
-
-#. Load the Shapefile :file:`alaska.shp` and GML file :file:`lakes.gml`
-   in |qg|
-#. Zoom in a bit to your favorite area with some lake
-#. Make the 'lakes' layer active
-#. Open the :guilabel:`Layer Properties` dialog
-#. In the :guilabel:`Layers (deprecated)` menu click on the :guilabel:`Label Properties` tab.
-#. Check the |checkbox| :guilabel:`Display labels` checkbox to enable labeling
-#. Choose the field to label with. We will use
-   :guilabel:`Field containing label` |selectstring| 'NAMES'
-#. Enter a :guilabel:`Default label` for lakes that have no name. The default label will be
-   used each time |qg| encounters a lake with no value in the 'NAMES' field.
-#. If you have labels extending over several lines, check
-   |checkbox|:guilabel:`Multiline labels?`. |qg| will check for a true line
-   return in your label field and insert the line breaks accordingly.
-   A true line return is a **single** character ``\n``, (not two separate
-   characters, like a backlash ``\`` followed by the character ``n``).  To insert
-   line returns in an attribute field configure the edit widget to be text
-   edit (not line edit).
-#. Click **[Apply]**.
-
-Now we have labels. How do they look? They are probably too big and poorly
-placed in relation to the marker symbol for the lakes.
-
-Select the :guilabel:`Font size` |selectstring| and use the **[Font]** and **[Color]** buttons to
-set the font and color. Define if your labels should be rendered in points or in map units.
-You can also change the placement of the text-label.
-
-To change the position of the text relative to the feature:
-
-#. Beneath the Basic label options change the placement by selecting one of the
-   radio buttons in the :guilabel:`Placement` group. To fix our labels, choose
-   the |radiobuttonon| :guilabel:`Right` radio button.
-#. Click **[Apply]** to see your changes without closing the dialog.
-
-Things are looking better, but the labels are still too close to the marker.
-To fix this we can use the options on the ``Offset`` entry which is on the bottom
-of the menu. Here we can add offsets for the X and Y directions. Adding an X
-offset of 5 will move our labels off the marker and make them more readable. Of
-course if your marker symbol or font is larger, more of an offset will be required.
-
-The last adjustment we'll make is to 'Buffer' the labels. This just means
-putting a backdrop around them to make them stand out better. To buffer the
-lakes labels:
-
-#. Click the |checkbox| :guilabel:`Buffer Labels` checkbox to enable
-   buffering.
-#. Choose a size for the buffer using the spin box |selectnumber|.
-#. The :guilabel:`Buffer size` menu also allows you to select between
-   'In Points' or 'In Map units'.
-#. Choose a color by clicking on **[Color]** and choosing your favorite
-   from the color selector. You can also set some transparency for the
-   buffer if you prefer.
-#. Click **[Apply]** to see if you like the changes.
-
-As a last define if the labels should be shifted. Use the :guilabel:`Offset` settings and fill
-in the 'X offset' and the 'Y offset' . Again, it is possible to define the :guilabel:`Offset` 'In points'
-or in 'In map units'.
-
-If you aren't happy with the results, tweak the settings and then test again by
-clicking **[Apply]**.
-
-A buffer of 1 points seems to give a good result. Notice you can also specify
-the buffer size in map units if that works out better for you.
-
-The advanced entries inside the :guilabel:`Advanced tab` allow you control
-the appearance of the labels using attributes stored in the layer. The
-entries beginning with 'Data defined' allow you to set all the parameters
-for the labels using fields in the layer.
-
-Note that the :guilabel:`Label Properties` tab provides a 'preview-box' where your
-selected label is shown.
-
-**Enabled/Disabled deprecated labelling via Python**
-
-The deprecated labelling tab can also be enabled/disabled for the current project, via Python console commands, e.g.:
-
-::
-
-    QgsProject.instance().writeEntry('DeprecatedLabels', '/Enabled', True | False)
-    QgsProject.instance().removeEntry('DeprecatedLabels', '/')
-
 .. _vector_attributes_menu:
 
 Fields Menu
@@ -731,7 +637,7 @@ widgets. These widgets are:
   (or restrict to numbers for numeric attributes).
 * **Classification**: Displays a combo box with the values used for
   classification, if you have chosen 'unique value' as legend type in
-  the :guilabel:`Style` tab of the properties dialog.
+  the :guilabel:`Style` menu of the properties dialog.
 * **Range**: Allows to set numeric values from a specific range. The edit
   widget can be either a slider or a spin box.
 * **Unique values**: The user can select one of the values already used in
@@ -833,7 +739,7 @@ Coordinate Reference System
 * Create a :guilabel:`Spatial Index` (only for OGR supported formats)
 * :guilabel:`Update Extents` information for a layer
 * View or change the projection of the specific vector layer, clicking on
-  :guilabel:`Specify ... `
+  :guilabel:`Specify ...`
 
 |checkbox| :guilabel:`Scale dependent visibility`
 
@@ -1166,6 +1072,8 @@ Joins Menu
 to a loaded vector layer. After clicking |mActionSignPlus| the :guilabel:`Add vector join` dialog appears.
 As key columns you have to define a :index:`join layer` you want to connect with the target vector layer , a join field that corresponds to an attribute column in the target layer and a target field you find in the attribute table of the target vector layer here. As a result, all information of the join layer and the target layer are displayed in the attribute table of the target layer as joined information.
 
+.. FIXME: are table joins also possible with MSSQL and ORACLE tables?
+
 |qg| currently supports to join non spatial table formats supported by OGR (e.g. CSV, DBF and Excel), delimited text and the PostgreSQL provider (see figure_joins_1_).
 
 .. _figure_joins_1:
@@ -1190,7 +1098,7 @@ Additionally the add vector join dialog allows to:
 Diagrams Menu
 -------------
 
-|diagram| The :guilabel:`Diagrams` tab allows you to add a graphic overlay to a
+|diagram| The :guilabel:`Diagrams` menu allows you to add a graphic overlay to a
 vector layer (see figure_diagrams_1_).
 
 The current core implementation of diagrams provides support for piecharts, text diagrams
@@ -1225,7 +1133,7 @@ Both vector layers are part of the |qg| sample dataset (see Section
    :file:`alaska.shp` and :file:`climate.shp`.
 #. Double click the ``climate`` layer in the map legend to open the
    :guilabel:`Layer Properties` dialog.
-#. Click on the :guilabel:`Diagrams` menu, activate :guilabel:`Display diagrams`
+#. Click on the :guilabel:`Diagrams` menu, activate |checkbox|:guilabel:`Display diagrams`
    and from :guilabel:`Diagram type` |selectstring| combobox select 'Text diagram'
 #. In the :guilabel:`Appearance` tab we choose a light blue as Background color and
    in the :guilabel:`Size` tab we set a fixed size to 18 mm.
