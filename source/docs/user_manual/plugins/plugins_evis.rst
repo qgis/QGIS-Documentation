@@ -48,7 +48,7 @@ To launch the Event browser module either click on the |event_browser|
 :sup:`eVis Event Browser` icon or click on :menuselection:`Database --> eVis -->
 eVis Event Browser`. This will open the :guilabel:`Generic Event Browser` window.
 
-The :guilabel:`Generic Event Browser` window has three tabs displayed at the top
+The :guilabel:`Event Browser` window has three tabs displayed at the top
 of the window. The :guilabel:`Display` tab is used to view the photograph and its
 associated attribute data. The :guilabel:`Options` tab provides a number of
 settings that can be adjusted to control the behavior of the eVis plugin. Lastly,
@@ -62,7 +62,7 @@ Understanding the Display window
 ................................
 
 To see the :guilabel:`Display` window click on the :guilabel:`Display` tab in the
-:guilabel:`Generic Event Browser` window. The :guilabel:`Display` window is used
+:guilabel:`Event Browser` window. The :guilabel:`Display` window is used
 to view geocoded photographs and their associated attribute data.
 
 .. _figure_eVis_1:
@@ -240,10 +240,10 @@ If no compass bearing is provided in the :guilabel:`Options` window a red asteri
 will be displayed on top of the vector feature that is associated with the
 photograph being displayed. If a compass bearing is provided then an arrow will
 appear pointing in the direction indicated by the value in the compass bearing
-display field in the :guilabel:`Generic Event Browser` window. The arrow will be
+display field in the :guilabel:`Event Browser` window. The arrow will be
 centered over the point that is associated with the photograph or other document.
 
-To close the :guilabel:`Generic Event Browser` window click on the **[Close]**
+To close the :guilabel:`Event Browser` window click on the **[Close]**
 button from the :guilabel:`Display` window.
 
 .. _`evis_id_tool`:
@@ -270,7 +270,7 @@ the ID tool is active.
 
 To view the photographs linked to vector features in the active vector layer
 displayed in the |qg| map window, move the Event ID cursor over the feature and
-then click the mouse. After clicking on the feature, the :guilabel:`Generic Event
+then click the mouse. After clicking on the feature, the :guilabel:`Event
 Browser` window is opened and the photographs on or near the clicked locality are
 available for display in the browser. If more than one photograph is available,
 you can cycle through the different features using the **[Previous]** and
