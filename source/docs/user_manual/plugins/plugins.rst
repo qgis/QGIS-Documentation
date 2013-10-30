@@ -132,6 +132,6 @@ button.
 .. tip:: **Check for updates**
 
    You can stay informed about plugins. Activate the checkbox |checkbox|
-   :guilabel:`Check for updates on startup` from the|mActionTransformSettings|
+   :guilabel:`Check for updates on startup` from the |mActionTransformSettings|
    :guilabel:`Settings` menu. |qg| will inform you whenever a plugin or plugin
    update is available.
