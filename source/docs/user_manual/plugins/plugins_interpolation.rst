@@ -25,6 +25,7 @@ The plugin requires the following parameters to be specified before running:
 * **Number of columns/rows**: Specify the number row and colums for the output
   raster file.
 * **Output file**: Specify a name for the output raster file.
+* |checkbox| :guilabel:`Add result to project` to load the result into the map canvas.
 
 .. _figure_interpolation_1:
 
