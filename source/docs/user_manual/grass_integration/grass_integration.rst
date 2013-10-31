@@ -182,7 +182,7 @@ useful to download and install the dataset on your computer :ref:`label_sampleda
 
 .. figure:: /static/user_manual/grass_integration/create_grass_location.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Creating a new GRASS LOCATION or a new MAPSET in |QG|
 
@@ -387,7 +387,7 @@ functionalities.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_toolbar.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Digitizing Toolbar
 
@@ -440,7 +440,7 @@ values will be assigned to a new geometry element.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_category.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Digitizing Category Tab
 
@@ -485,7 +485,7 @@ default is set to 10 pixels.
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_settings.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Digitizing Settings Tab
 
@@ -506,7 +506,7 @@ settings for various geometry types and their topological status (e.g. closed
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_symbology.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Digitizing Symbolog Tab
 
@@ -529,7 +529,7 @@ create a new database table for a new GRASS vector layer (see Section
 
 .. figure:: /static/user_manual/grass_integration/grass_digitizing_table.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Digitizing Table Tab
 
@@ -645,7 +645,7 @@ further module specific parameters to run the module.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_option.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Toolbox Module Options |nix|
 
@@ -671,7 +671,7 @@ to switch to the GRASS Shell.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_output.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Toolbox Module Output |nix|
 
@@ -690,7 +690,7 @@ all works well, you will finally see a ``Successfully finished`` message.
 
 .. figure:: /static/user_manual/grass_integration/grass_module_manual.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS Toolbox Module Manual |nix|
 
@@ -788,7 +788,7 @@ causing it to load even more slowly.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_vgeneralize.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    GRASS module v.generalize to smooth a vector map |nix|
 
@@ -875,7 +875,7 @@ effect is even more pronounced.
 
 .. figure:: /static/user_manual/grass_integration/grass_toolbox_shadedrelief.png
    :align: center
-   :width: 30em
+   :width: 40em
 
    Displaying shaded relief created with the GRASS module r.shaded.relief |nix|
 
@@ -932,7 +932,7 @@ connected attribute table for vector data and a command history.
 
 .. figure:: /static/user_manual/grass_integration/grass_mapset_browser.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    GRASS LOCATION browser |nix|
 
