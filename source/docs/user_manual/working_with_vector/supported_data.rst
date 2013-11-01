@@ -492,7 +492,6 @@ New Zealand main islands.
    **Figure Vector 4:**
 
 .. figure:: /static/user_manual/working_with_vector/vectorNotWrapping.png
-   :width: 60em
    :align: center
 
    Map in lat/lon crossing the 180 |degrees| longitude line |nix|
@@ -514,7 +513,7 @@ version of the data to be plotted in a 180 |degrees| centric map.
    :align: center
 
    Crossing 180 |degrees| longitude applying the **ST_Shift_Longitude**
-   function |nix|
+   function
 
 Usage
 .....

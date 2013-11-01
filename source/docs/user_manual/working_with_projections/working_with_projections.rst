@@ -70,7 +70,6 @@ saved for use in subsequent |qg| sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
-   :width: 40em
 
    CRS tab in the |qg| Options Dialog |nix|
 
@@ -195,7 +194,7 @@ your spatial bookmarks and other custom data.
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Custom CRS Dialog |nix|
 

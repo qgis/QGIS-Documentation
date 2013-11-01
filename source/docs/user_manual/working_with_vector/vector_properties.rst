@@ -26,7 +26,6 @@ double-click on a layer in the legend or right-click on the layer and select
 .. _figure_vector_properties_1:
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
-   :width: 25em
    :align: center
 
    Vector Layer Properties Dialog |nix|
@@ -126,7 +125,6 @@ and :guilabel:`Rotation`. Here the layers are joined together.
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
-   :width: 20em
 
    Single symbol line properties |nix|
 
@@ -198,7 +196,6 @@ for the rivers layer of the |qg| sample dataset.
    **Figure Symbology 2:**
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
-   :width: 25em
    :align: center
 
    Categorized Symbolizing options |nix|
@@ -219,7 +216,7 @@ example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
 .. figure:: /static/user_manual/working_with_vector/customColorRampGradient.png
    :align: center
-   :width: 12em
+   :width: 20em
 
    Example of custom gradient color ramp with multiple stops |nix|
 
@@ -233,7 +230,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
-   :width: 25em
+   :width: 35em
 
    cpt-city dialog with hundreds of color ramps |nix|
 
@@ -254,7 +251,7 @@ selected feature's attribute to a class.
    **Figure Symbology 4:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
-   :width: 25em
+   :width: 40em
    :align: center
 
    Graduated Symbolizing options |nix|
@@ -318,7 +315,7 @@ expression or you can just type it into the box (see :ref:`vector_field_calculat
    **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
-   :width: 25em
+   :width: 40em
    :align: center
 
    Rule-based Symbolizing options |nix|
@@ -339,7 +336,7 @@ placed on a displacement circle around a center symbol.
    **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
-   :width: 25em
+   :width: 40em
    :align: center
 
    Point displacement dialog |nix|
@@ -461,7 +458,6 @@ if the number of features to be labeled is limited and to |checkbox| :guilabel:`
    **Figure Labels 1:**
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
-   :width: 30em
    :align: center
 
    Smart labeling of vector point layers |nix|
@@ -507,7 +503,6 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
    **Figure Labels 2:**
 
 .. figure:: /static/user_manual/working_with_vector/label_line.png
-   :width: 30em
    :align: center
 
    Smart labeling of vector line layers |nix|
@@ -561,7 +556,6 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
    **Figure Labels 3:**
 
 .. figure:: /static/user_manual/working_with_vector/label_area.png
-   :width: 30em
    :align: center
 
    Smart labeling of vector polygon layers |nix|
@@ -594,7 +588,6 @@ We now describe an example how to use the data-defined override function for the
    **Figure Labels 4:**
 
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
-   :width: 30em
    :align: center
 
    Labeling of vector polygon layers with data-defined override |nix|
@@ -607,7 +600,7 @@ We now describe an example how to use the data-defined override function for the
    **Figure Labels 5:**
 
 .. figure:: /static/user_manual/working_with_vector/move_label.png
-   :width: 15em
+   :width: 20em
    :align: center
 
    Move labels |nix|
@@ -638,7 +631,6 @@ can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
    **Figure Fields 1:**
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
-   :width: 25 em
    :align: center
 
    Dialog to select an edit widget for an attribute column |nix|
@@ -716,7 +708,7 @@ MyForms.py must live on PYTHONPATH, .qgis2/python, or inside the project folder
    **Figure Fields 2:**
 
 .. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
-   :width: 25 em
+   :width: 40 em
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
@@ -728,7 +720,7 @@ MyForms.py must live on PYTHONPATH, .qgis2/python, or inside the project folder
    **Figure Fields 3:**
 
 .. figure:: /static/user_manual/working_with_vector/resulting_feature_form.png
-   :width: 25 em
+   :width: 15 em
    :align: center
 
    Resulting built in form in a data entry session
@@ -774,7 +766,7 @@ Feature subset
    **Figure General 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
-   :width: 25 em
+   :width: 40 em
    :align: center
 
    General menu in vector layers properties dialog |nix|
@@ -794,7 +786,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
    **Figure Display 1:**
 
 .. figure:: /static/user_manual/working_with_vector/display_html.png
-   :width: 25 em
+   :width: 40 em
    :align: center
 
    HTML code for map tip |nix|
@@ -807,7 +799,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
    **Figure Display 2:**
 
 .. figure:: /static/user_manual/working_with_vector/map_tip.png
-   :width: 15 em
+   :width: 20 em
    :align: center
 
    Map tip made with HTML code |nix|
@@ -828,7 +820,7 @@ passing parameters to a web reporting tool.
    **Figure Actions 1:**
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
-   :width: 25 em
+   :width: 40 em
    :align: center
 
    Overview action dialog with some sample actions |nix|
@@ -994,7 +986,7 @@ identify a lake. In the result box you'll now see that our action is visible:
 
 .. figure:: /static/user_manual/working_with_vector/action_identifyaction.png
    :align: center
-   :width: 15em
+   :width: 20em
 
    Select feature and choose action |nix|
 
@@ -1099,7 +1091,7 @@ As key columns you have to define a :index:`join layer` you want to connect with
    **Figure Joins 1:**
 
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
-   :width: 25em
+   :width: 40em
    :align: center
 
    Join an attribute table to an existing vector layer |nix|
@@ -1134,7 +1126,7 @@ to chart positions can be fixed by the users hand.
    **Figure Diagrams 1:**
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
-   :width: 25em
+   :width: 40em
    :align: center
 
    Vector properties dialog with diagram menu |nix|
@@ -1213,7 +1205,7 @@ and will be used for |qg| server.
    **Figure Metadata 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
-   :width: 25 em
+   :width: 40 em
    :align: center
 
    Metadata menu in vector layers properties dialog |nix|
