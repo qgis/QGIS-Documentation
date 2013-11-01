@@ -20,7 +20,6 @@ interface as discussed below):
 
 .. figure:: /static/user_manual/introduction/startup.png
    :align: center
-   :width: 40em
 
    |qg| GUI with Alaska sample data |nix|
 
@@ -507,7 +506,7 @@ will cause a revert to default behavior.
 
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
-    :width: 40em
+    :width: 35em
 
     Define a legend independent layer order |nix|
 

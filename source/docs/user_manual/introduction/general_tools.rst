@@ -46,7 +46,7 @@ display three kind of information:
 
 .. figure:: /static/user_manual/introduction/identify_features.png
    :align: center
-   :width: 30em
+   :width: 15em
 
    Identify feaures dialog |nix| (Gnome)
 
@@ -99,7 +99,7 @@ features.
 
 .. figure:: /static/user_manual/introduction/shortcuts.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Define shortcut options |nix| (Gnome)
 
@@ -307,7 +307,7 @@ measuring click your right mouse button.
 
 .. figure:: /static/user_manual/introduction/measure_line.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Measure Distance |nix| (Gnome)
 
@@ -327,7 +327,7 @@ then select the layer. Now, when using the measuring tools, each mouse click
 
 .. figure:: /static/user_manual/introduction/measure_area.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Measure Area |nix| (Gnome)
 
@@ -344,7 +344,7 @@ is displayed in a popup dialog.
 
 .. figure:: /static/user_manual/introduction/measure_angle.png
    :align: center
-   :width: 30em
+   :width: 15em
 
    Measure Angle |nix| (Gnome)
 
@@ -420,7 +420,7 @@ using the text you prefer to the map.
 
 .. figure:: /static/user_manual/introduction/copyright.png
    :align: center
-   :width: 30em
+   :width: 15em
 
    The copyright Dialog |nix|
 
@@ -459,7 +459,7 @@ corresponding to the four corners of the map canvas.
 
 .. figure:: /static/user_manual/introduction/north_arrow_dialog.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    The North Arrow Dialog |nix|
 
@@ -479,7 +479,7 @@ canvas. You control the style and placement, as well as the labeling of the bar.
 
 .. figure:: /static/user_manual/introduction/scale_bar_dialog.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    The Scale Bar Dialog |nix|
 
@@ -672,7 +672,7 @@ The following dialog allows you to embed layers from other projects:
 
 .. figure:: /static/user_manual/introduction/embed_dialog.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    Select layers and groups to embed |nix|
 
@@ -729,9 +729,8 @@ Delimited Text File` dialog as shown in figure_delimited_text_1_.
 
    **Figure Delimited Text 1:**
 
-.. figure:: /static/user_manual/plugins/delimited_text_dialog.png
+.. figure:: /static/user_manual/introduction/delimited_text_dialog.png
    :align: center
-   :width: 40em
 
    Delimited Text Dialog |nix|
 
