@@ -187,11 +187,13 @@ of the different approaches are listed in Table `evis_examples`_.
 
 ::
 
-  X        Y        FILE                                                                  BEARING
-  780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG                       275
-  780596   1784017  /groundphotos/DSC_0169.JPG                                            80
-  780819   1784015  http://biodiversityinformatics.amnh.org/evis_testdata/DSC_0170.JPG    10
-  780596   1784017  pdf:http://www.testsite.com/attachments.php?attachment_id-12          76
+  X        Y        FILE                                                BEARING
+  780596   1784017  C:\Workshop\eVis_Data\groundphotos\DSC_0168.JPG     275
+  780596   1784017  /groundphotos/DSC_0169.JPG                          80
+  780819   1784015  http://biodiversityinformatics.amnh.org/\
+                    evis_testdata/DSC_0170.JPG                          10
+  780596   1784017  pdf:http://www.testsite.com/attachments.php?\
+                    attachment_id-12                                    76
 
 
 .. _`evis_location`:

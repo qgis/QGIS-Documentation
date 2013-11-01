@@ -108,7 +108,12 @@ and adds the following string to the URL of the WMTS tile service:
 
   "?SERVICE=WMTS&REQUEST=GetCapabilities"
 
-An example of this type of address is http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
+An example of this type of address is
+
+::
+ 
+   http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
+     service=WMTS&request=GetCapabilities
 
 For testing the topo2 layer in this WMTS works nicely. Adding this string indicates
 that a WMTS web service is to be used instead of a WMS service
@@ -347,7 +352,12 @@ Tilesets
 .. index:: WMS_tiles, WMS-C, WMTS
 
 When using WMTS (Cached WMS) Services like
-http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?service=WMTS&request=GetCapabilities
+
+::
+
+  http://opencache.statkart.no/gatekeeper/gk/gk.open_wmts?\
+    service=WMTS&request=GetCapabilities
+
 you are able to browse through the tab :guilabel:`Tilesets` given by the server.
 Additional information like tile size, formats and supported CRS are listed in
 this table. In combination with this feature you can use the tile scale slider

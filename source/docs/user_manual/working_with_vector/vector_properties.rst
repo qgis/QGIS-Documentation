@@ -82,8 +82,8 @@ There is no continuous color renderer, because it is in fact only a special case
 of the graduated renderer. The categorized and graduated renderer can be created
 by specifying a symbol and a color ramp - they will set the colors for symbols
 appropriately. For point layers there is a point displacement renderer available.
-For each data type (points, lines and polygons) vector symbol layer types are available
-(see vector_symbol_types_). Depending on the chosen renderer, the :guilabel:`Style` menu provides different
+For each data type (points, lines and polygons) vector symbol layer types are available. 
+Depending on the chosen renderer, the :guilabel:`Style` menu provides different
 following sections. On the bottom right of the symbology dialog there is a **[Symbol]** button which gives access
 to the Style Manager (see Section vector_style_manager_). The Style Manager allows you to edit and remove
 existing symbols and add new ones.
@@ -1028,7 +1028,9 @@ do the trick:
   imagerelpath = "images_test/test_image.jpg";
   layer = qgis.utils.iface.activeLayer();
   import os.path;
-  layerpath = layer.source() if layer.providerType() == 'ogr' else (qgis.core.QgsDataSourceURI(layer.source()).database() if layer.providerType() == 'spatialite' else None);
+  layerpath = layer.source() if layer.providerType() == 'ogr' \
+    else (qgis.core.QgsDataSourceURI(layer.source()).database() \
+    if layer.providerType() == 'spatialite' else None);
   path = os.path.dirname(str(layerpath));
   image = os.path.join(path,imagerelpath);
   import subprocess;
@@ -1060,7 +1062,8 @@ the action was created):
 ::
 
 
-  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]', 'ogr')
+  qgis.utils.iface.addVectorLayer('/yourpath/[% "filename" %].shp','[% "layername" %]',\
+    'ogr')
 
 
 To add a raster (a tif image in this example) it becomes:

@@ -216,7 +216,8 @@ OCG WMS 1.3.0 specification:
 
   Example::
 
-    http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?\
+      REQUEST=GetMap&MAP=/home/qgis/mymap.qgs&...
 
 * **DPI** parameter: The ``DPI`` parameter can be used to specify the requested
   output resolution.
@@ -230,5 +231,6 @@ OCG WMS 1.3.0 specification:
 
   Example::
 
-    http://localhost/cgi-bin/qgis_mapserv.fcgi?REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...
+    http://localhost/cgi-bin/qgis_mapserv.fcgi?\
+      REQUEST=GetMap&LAYERS=mylayer1,mylayer2&OPACITIES=125,200&...
 

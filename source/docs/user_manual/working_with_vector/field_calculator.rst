@@ -97,30 +97,30 @@ This group contains operators e.g + - *
 
 ::
 
- a + b              a plus b
- a - b              a minus b
- a * b              a multiplied by b
- a / b              a divided by b
- a % b              a modulo b for example 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
- a ^ b              a power b for example 2^2=4 or 2^3=8
- a = b              a and b are equal
- a > b              a is larger than b
- a < b              a is smaller than b
- a <> b             a and b are not equal
- a != b             a and b are not equal
- a <= b             a is less than or equal to b
- a >= b             a is larger than or equal to b
- a ~ b              a matches the regular expression b
- + a                positive sign
- - a                negative value of a
- ||                 joins two values together into a string 'Hello' || ' world'
- LIKE               returns 1 if the string matches the supplied pattern
- ILIKE              returns 1 if the string matches case-insensitive the supplied
-                    pattern. ILIKE can be used instead of LIKE to make the match case-insensitive
- IS                 returns 1 if a is the same as b
- OR                 returns 1 when condition a or b is true
- AND                returns 1 when condition a and b are true
- NOT                returns 1 if a is not the same as b
+ a + b      a plus b
+ a - b      a minus b
+ a * b      a multiplied by b
+ a / b      a divided by b
+ a % b      a modulo b for example 7 % 2 = 1 -> 2 fits into 7 three times rest is 1
+ a ^ b      a power b for example 2^2=4 or 2^3=8
+ a = b      a and b are equal
+ a > b      a is larger than b
+ a < b      a is smaller than b
+ a <> b     a and b are not equal
+ a != b     a and b are not equal
+ a <= b     a is less than or equal to b
+ a >= b     a is larger than or equal to b
+ a ~ b      a matches the regular expression b
+ + a        positive sign
+ - a        negative value of a
+ ||         joins two values together into a string 'Hello' || ' world'
+ LIKE       returns 1 if the string matches the supplied pattern
+ ILIKE      returns 1 if the string matches case-insensitive the supplied
+            pattern. ILIKE can be used instead of LIKE to make the match case-insensitive
+ IS         returns 1 if a is the same as b
+ OR         returns 1 when condition a or b is true
+ AND        returns 1 when condition a and b are true
+ NOT        returns 1 if a is not the same as b
  column name "column name"     value of the field column name
  'string'                      a string value
  NULL                          null value
@@ -199,26 +199,24 @@ This group contains functions to convert on data type to another e.g string to i
                               hours, month, etc off a date
 
 
-
 **Date and Time Functions**
 
 This group contains functions for handling date and time data.
 
 ::
 
- $now                         current date and time
- age                          difference between two dates
- year                         extract the year part from a date, or the number of years from a Interval
- month                        extract the month part from a date, or the number of months from a Interval
- week                         extract the week number from a date, or the number of weeks from a Interval
- day                          extract the day from a date, or the number of days from a Interval
- hour                         extract the hour from a datetime or time, or the number
-                              of hours from a Interval
- minute                       extract the minute from a datetime or time, or the number
-                              of minutes from a Interval
- second                       extract the second from a datetime or time, or the number
-                              of minutes from a Interval
-
+ $now       current date and time
+ age        difference between two dates
+ year       extract the year part from a date, or the number of years from a Interval
+ month      extract the month part from a date, or the number of months from a Interval
+ week       extract the week number from a date, or the number of weeks from a Interval
+ day        extract the day from a date, or the number of days from a Interval
+ hour       extract the hour from a datetime or time, or the number
+            of hours from a Interval
+ minute     extract the minute from a datetime or time, or the number
+            of minutes from a Interval
+ second     extract the second from a datetime or time, or the number
+            of minutes from a Interval
 
 
 **String Functions**
@@ -227,26 +225,26 @@ This group contains functions that operate on strings e.g replace, convert to up
 
 ::
 
- lower                        convert string a to lower case
- upper                        convert string a to upper case
- title                        converts all words of a string to title case (all words lower case
-                              with leading capital letter)
- trim                         removes all leading and trailing whitespace (spaces, tabs, etc) from a string
- length                       length of string a
- replace                      returns a string with the the supplied string replaced
+ lower         convert string a to lower case
+ upper         convert string a to upper case
+ title         converts all words of a string to title case (all words lower case
+               with leading capital letter)
+ trim          removes all leading and trailing whitespace (spaces, tabs, etc) from a string
+ length        length of string a
+ replace       returns a string with the the supplied string replaced
  regexp_replace(a,this,that)  returns a string with the supplied regular expression replaced
- regexp_substr                returns the portion of a string which matches a supplied regular expression
+ regexp_substr    returns the portion of a string which matches a supplied regular expression
  substr(*a*,from,len)         returns a part of a string
- concat                       concatenates several strings to one
- strpos                       returns the index of a regular expression in a string
- left                         returns a substring that contains the n leftmost characters of the string
- right                        returns a substring that contains the n rightmost characters of the string
- rpad                         returns a string with supplied width padded using the fill character
- lpad                         returns a string with supplied width padded using the fill character
- format                       formats a string using supplied arguments
- format_number                returns a number formatted with the locale separator for thousands.
-                              Also truncates the number to the number of supplied places
- format_date                  formats a date type or string into a custom string format
+ concat        concatenates several strings to one
+ strpos        returns the index of a regular expression in a string
+ left          returns a substring that contains the n leftmost characters of the string
+ right         returns a substring that contains the n rightmost characters of the string
+ rpad          returns a string with supplied width padded using the fill character
+ lpad          returns a string with supplied width padded using the fill character
+ format        formats a string using supplied arguments
+ format_number   returns a number formatted with the locale separator for thousands.
+                 Also truncates the number to the number of supplied places
+ format_date   formats a date type or string into a custom string format
 
 
 
@@ -256,23 +254,23 @@ This group contains functions for manipulating colors.
 
 ::
 
- color_rgb                    returns a string representation of a color based on its red, green,
-                              and blue components
- color_rgba                   returns a string representation of a color based on its red, green,
-                              blue, and alpha (transparency) components
- ramp_color                   returns a string representing a color from a color ramp
- color_hsl                    returns a string representation of a color based on its hue,
-                              saturation, and lightness attributes
- color_hsla                   returns a string representation of a color based on its hue, saturation,
-                              lightness and alpha (transparency) attributes
- color_hsv                    returns a string representation of a color based on its hue,
-                              saturation, and value attributes
- color_hsva                   returns a string representation of a color based on its hue, saturation,
-                              value and alpha (transparency) attributes
- color_cmyk                   returns a string representation of a color based on its cyan, magenta,
-                              yellow and black components
- color_cmyka                  returns a string representation of a color based on its cyan, magenta,
-                              yellow, black and alpha (transparency) components
+ color_rgb       returns a string representation of a color based on its red, green,
+                 and blue components
+ color_rgba      returns a string representation of a color based on its red, green,
+                 blue, and alpha (transparency) components
+ ramp_color      returns a string representing a color from a color ramp
+ color_hsl       returns a string representation of a color based on its hue,
+                 saturation, and lightness attributes
+ color_hsla      returns a string representation of a color based on its hue, saturation,
+                 lightness and alpha (transparency) attributes
+ color_hsv       returns a string representation of a color based on its hue,
+                 saturation, and value attributes
+ color_hsva      returns a string representation of a color based on its hue, saturation,
+                 value and alpha (transparency) attributes
+ color_cmyk      returns a string representation of a color based on its cyan, magenta,
+                 yellow and black components
+ color_cmyka     returns a string representation of a color based on its cyan, magenta,
+                 yellow, black and alpha (transparency) components
 
 
 **Geometry Functions**
@@ -281,47 +279,47 @@ This group contains functions that operate on geometry objects e.g length, area.
 
 ::
 
- xat                          retrieves a x coordinate of the current feature
- yat                          retrieves a y coordinate of the current feature
- $area                        returns the area size of the current feature
- $length                      returns the area size of the current feature
- $perimeter                   returns the perimeter length of the current feature
- $x                           returns the x coordinate of the current feature
- $y                           returns the y coordinate of the current feature
- $geometry                    returns the geometry of the current feature. Can be used
-                              for processing with other functions.
- geomFromWKT                  returns a geometry created from a Well-Known Text (WKT) representation.
- geomFromGML                  returns a geometry from a GML representation of geometry
+ xat              retrieves a x coordinate of the current feature
+ yat              retrieves a y coordinate of the current feature
+ $area            returns the area size of the current feature
+ $length          returns the area size of the current feature
+ $perimeter       returns the perimeter length of the current feature
+ $x               returns the x coordinate of the current feature
+ $y               returns the y coordinate of the current feature
+ $geometry        returns the geometry of the current feature. Can be used
+                  for processing with other functions.
+ geomFromWKT      returns a geometry created from a Well-Known Text (WKT) representation.
+ geomFromGML      returns a geometry from a GML representation of geometry
  bbox
- disjoint                     returns 1 if the Geometries do not share any space together
- intersects                   returns 1 if the geometries spatially intersect
-                              (share any portion of space) and 0 if they don't
- touches                      returns 1 if the geometries have at least one point in common,
-                              but their interiors do not intersect
- crosses                      returns 1 if the supplied geometries have some, but not all,
-                              interior points in common.
- contains                     returns true if and only if no points of b lie in the exterior of a,
-                              and at least one point of the interior of b lies in the interior of a
- overlaps                     returns 1 if the Geometries share space, are of the same dimension,
-                              but are not completely contained by each other.
- within                       returns 1 if the geometry a is completely inside geometry b
- buffer                       returns a geometry that represents all points whose distance
-                              from this geometry is less than or equal to distance
- centroid                     returns the geometric center of a geometry
- convexHull                   returns the convex hull of a geometry. It represents the
-                              minimum convex geometry that encloses all geometries within the set
- difference                   returns a geometry that represents that part of geometry a that
-                              does not intersect with geometry a
- distance                     returns the minimum distance (based on spatial ref) between
-                              two geometries in projected units
- intersection                 returns a geometry that represents the shared portion
-                              of geometry a and geometry b
- symDifference                returns a geometry that represents the portions of a and b
-                              that do not intersect
- combine                      returns the combination of geometry a and geometry b
- union                        returns a geometry that represents the point set union of the geometries
- geomToWKT                    returns the Well-Known Text (WKT) representation of the
-                              geometry without SRID metadata
+ disjoint         returns 1 if the Geometries do not share any space together
+ intersects       returns 1 if the geometries spatially intersect
+                  (share any portion of space) and 0 if they don't
+ touches          returns 1 if the geometries have at least one point in common,
+                  but their interiors do not intersect
+ crosses          returns 1 if the supplied geometries have some, but not all,
+                  interior points in common.
+ contains         returns true if and only if no points of b lie in the exterior of a,
+                  and at least one point of the interior of b lies in the interior of a
+ overlaps         returns 1 if the Geometries share space, are of the same dimension,
+                  but are not completely contained by each other.
+ within           returns 1 if the geometry a is completely inside geometry b
+ buffer           returns a geometry that represents all points whose distance
+                  from this geometry is less than or equal to distance
+ centroid         returns the geometric center of a geometry
+ convexHull       returns the convex hull of a geometry. It represents the
+                  minimum convex geometry that encloses all geometries within the set
+ difference       returns a geometry that represents that part of geometry a that
+                  does not intersect with geometry a
+ distance         returns the minimum distance (based on spatial ref) between
+                  two geometries in projected units
+ intersection     returns a geometry that represents the shared portion
+                  of geometry a and geometry b
+ symDifference    returns a geometry that represents the portions of a and b
+                  that do not intersect
+ combine          returns the combination of geometry a and geometry b
+ union            returns a geometry that represents the point set union of the geometries
+ geomToWKT        returns the Well-Known Text (WKT) representation of the
+                  geometry without SRID metadata
 
 
 
