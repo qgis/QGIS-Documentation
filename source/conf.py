@@ -224,8 +224,11 @@ rst_epilog = """
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
 .. |checkbox| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |checkbox_checked| image:: /static/common/checkbox.png
+   :width: 1.3em
 .. |checkbox_unchecked| image:: /static/common/checkbox_unchecked.png
+   :width: 1.3em
 .. |radiobuttonon| image:: /static/common/radiobuttonon.png
 .. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
 .. |selectnumber| image:: /static/common/selectnumber.png
