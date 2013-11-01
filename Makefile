@@ -156,10 +156,12 @@ all:
 
 createlang: springclean
 	@echo Creating a new Language: $(LANG)
-	mkdir -p i18n/${LANG}
-	mkdir -p resources/${LANG}
+	mkdir -p resources/${LANG}/docs
 	cp resources/en/README resources/${LANG}
+	cp resources/en/README resources/${LANG}/docs
+	mkdir -p i18n/${LANG}/LC_MESSAGES/docs
 	cp i18n/en/README i18n/${LANG}
+	cp i18n/en/README i18n/${LANG}/LC_MESSAGES/docs
 
 pretranslate: gettext
 	@echo "Generating the pot files for the QGIS-Documentation project"
