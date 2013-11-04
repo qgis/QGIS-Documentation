@@ -21,7 +21,7 @@ into |qg| see :ref:`sec_grass`).
 
 .. figure:: /static/user_manual/qgis_browser/browser_standalone_metadata.png
    :align: center
-   :width: 35em
+   :width: 30em
 
    |qg| browser as a standalone application |nix|
 

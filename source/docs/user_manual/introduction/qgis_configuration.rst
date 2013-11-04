@@ -26,7 +26,7 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. figure:: /static/user_manual/introduction/panels_and_toolbars.png
    :align: center
-   :width: 30em
+   :width: 20em
 
    The Panels and Toolbars menu |nix|
 
@@ -89,7 +89,7 @@ include:
 
 .. figure:: /static/user_manual/introduction/macro.png
    :align: center
-   :width: 35em
+   :width: 30em
 
    Macro settings in |qg|
 
@@ -376,7 +376,7 @@ Network Tab
 
 .. figure:: /static/user_manual/introduction/proxy-settings.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Proxy-settings in |qg|
 

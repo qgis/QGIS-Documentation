@@ -464,7 +464,7 @@ following functionalities (see Figure_composer_10_):
 Adding an Image item to the Print Composer
 ------------------------------------------
 
-To add an image, click the |mActionImage| :sup:`Add image` icon, place the element
+To add an image, click the |mActionAddImage| :sup:`Add image` icon, place the element
 with the left mouse button on the print composer canvas and position and customize
 its appearance in the image :guilabel:`Item Properties` tab.
 
@@ -483,7 +483,7 @@ The image :guilabel:`Item Properties` tab provides following functionalities (se
 
 .. figure:: /static/user_manual/print_composer/print_composer_image1.png
    :align: center
-   :width: 20em
+   :width: 15em
 
    Image Item properties Tab |nix|
 
@@ -819,7 +819,7 @@ provide following functionalities (see figure_composer_24_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_attribute3.png
    :align: center
-   :width: 20em
+   :width: 15em
 
    Attribute table Select attributes Dialog |nix|
 
@@ -946,7 +946,7 @@ tab. This tab contains the following widgets (see Figure_composer_29_):
 
 .. figure:: /static/user_manual/print_composer/print_composer_atlas.png
    :align: center
-   :width: 20em
+   :width: 15em
 
    Atlas generation tab |nix|
 
@@ -1013,7 +1013,7 @@ including each type of map element described in the sections above.
 
 .. figure:: /static/user_manual/print_composer/print_composer_complete.png
    :align: center
-   :width: 40 em
+   :width: 35 em
 
    Print Composer with map view, legend, image, scalebar, coordinates , text and HTML frame added |nix|
 

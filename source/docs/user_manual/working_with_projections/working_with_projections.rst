@@ -70,6 +70,7 @@ saved for use in subsequent |qg| sessions.
 
 .. figure:: /static/user_manual/working_with_projections/crsdialog.png
    :align: center
+   :width: 30em
 
    CRS tab in the |qg| Options Dialog |nix|
 
@@ -134,7 +135,7 @@ and all layers will be OTF projected to the CRS shown next to the icon.
 
 .. figure:: /static/user_manual/working_with_projections/projectionDialog.png
    :align: center
-   :width: 40em
+   :width: 30em
 
    Project Properties Dialog |nix|
 
@@ -194,7 +195,7 @@ your spatial bookmarks and other custom data.
 
 .. figure:: /static/user_manual/working_with_projections/customProjectionDialog.png
    :align: center
-   :width: 30em
+   :width: 25em
 
    Custom CRS Dialog |nix|
 

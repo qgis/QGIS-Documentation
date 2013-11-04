@@ -232,8 +232,11 @@ rst_epilog = """
 .. |radiobuttonon| image:: /static/common/radiobuttonon.png
 .. |radiobuttonoff| image:: /static/common/radiobuttonoff.png
 .. |selectnumber| image:: /static/common/selectnumber.png
+   :width: 2.8em
 .. |selectstring| image:: /static/common/selectstring.png
+   :width: 2.5em
 .. |browsebutton| image:: /static/common/browsebutton.png
+   :width: 2.3em
 .. |selectcolor| image:: /static/common/selectcolor.png
 .. |slider| image:: /static/common/slider.png
 .. |inputtext| image:: /static/common/inputtext.png

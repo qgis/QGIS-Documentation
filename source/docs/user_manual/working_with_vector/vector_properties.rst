@@ -27,6 +27,7 @@ double-click on a layer in the legend or right-click on the layer and select
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
    :align: center
+   :width: 30em
 
    Vector Layer Properties Dialog |nix|
 
@@ -125,6 +126,7 @@ and :guilabel:`Rotation`. Here the layers are joined together.
 
 .. figure:: /static/user_manual/working_with_vector/singlesymbol_ng_line.png
    :align: center
+   :width: 30em
 
    Single symbol line properties |nix|
 
@@ -197,6 +199,7 @@ for the rivers layer of the |qg| sample dataset.
 
 .. figure:: /static/user_manual/working_with_vector/categorysymbol_ng_line.png
    :align: center
+   :width: 30em
 
    Categorized Symbolizing options |nix|
 
@@ -230,7 +233,7 @@ The cpt-city option opens a new dialog with hundreds of themes included 'out of 
 
 .. figure:: /static/user_manual/working_with_vector/cpt-cityColorRamps.png
    :align: center
-   :width: 35em
+   :width: 30em
 
    cpt-city dialog with hundreds of color ramps |nix|
 
@@ -251,7 +254,7 @@ selected feature's attribute to a class.
    **Figure Symbology 4:**
 
 .. figure:: /static/user_manual/working_with_vector/graduatesymbol_ng_line.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Graduated Symbolizing options |nix|
@@ -315,7 +318,7 @@ expression or you can just type it into the box (see :ref:`vector_field_calculat
    **Figure Symbology 5:**
 
 .. figure:: /static/user_manual/working_with_vector/rulesymbol_ng_line.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Rule-based Symbolizing options |nix|
@@ -336,7 +339,7 @@ placed on a displacement circle around a center symbol.
    **Figure Symbology 6:**
 
 .. figure:: /static/user_manual/working_with_vector/poi_displacement.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Point displacement dialog |nix|
@@ -459,6 +462,7 @@ if the number of features to be labeled is limited and to |checkbox| :guilabel:`
 
 .. figure:: /static/user_manual/working_with_vector/label_points.png
    :align: center
+   :width: 30em
 
    Smart labeling of vector point layers |nix|
 
@@ -504,6 +508,7 @@ The :guilabel:`Rendering` menu has nearly the same entries as for point layers. 
 
 .. figure:: /static/user_manual/working_with_vector/label_line.png
    :align: center
+   :width: 30em
 
    Smart labeling of vector line layers |nix|
 
@@ -557,6 +562,7 @@ The entries in the :guilabel:`Rendering` menu are the same as for line layers. Y
 
 .. figure:: /static/user_manual/working_with_vector/label_area.png
    :align: center
+   :width: 30em
 
    Smart labeling of vector polygon layers |nix|
 
@@ -589,6 +595,7 @@ We now describe an example how to use the data-defined override function for the
 
 .. figure:: /static/user_manual/working_with_vector/label_data_defined.png
    :align: center
+   :width: 30em
 
    Labeling of vector polygon layers with data-defined override |nix|
 
@@ -632,6 +639,7 @@ can be used, when the dataset is |mActionToggleEditing| :sup:`Editing mode`.
 
 .. figure:: /static/user_manual/working_with_vector/editwidgetsdialog.png
    :align: center
+   :width: 30em
 
    Dialog to select an edit widget for an attribute column |nix|
 
@@ -708,7 +716,7 @@ MyForms.py must live on PYTHONPATH, .qgis2/python, or inside the project folder
    **Figure Fields 2:**
 
 .. figure:: /static/user_manual/working_with_vector/attribute_editor_layout.png
-   :width: 40 em
+   :width: 30 em
    :align: center
 
    Dialog to create categories with the **Attribute editor layout**
@@ -766,7 +774,7 @@ Feature subset
    **Figure General 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_general_menu.png
-   :width: 40 em
+   :width: 30 em
    :align: center
 
    General menu in vector layers properties dialog |nix|
@@ -786,7 +794,7 @@ display when hovering over a feature. To activate Map Tips, select the menu opti
    **Figure Display 1:**
 
 .. figure:: /static/user_manual/working_with_vector/display_html.png
-   :width: 40 em
+   :width: 30 em
    :align: center
 
    HTML code for map tip |nix|
@@ -820,7 +828,7 @@ passing parameters to a web reporting tool.
    **Figure Actions 1:**
 
 .. figure:: /static/user_manual/working_with_vector/action_dialog.png
-   :width: 40 em
+   :width: 30 em
    :align: center
 
    Overview action dialog with some sample actions |nix|
@@ -1094,7 +1102,7 @@ As key columns you have to define a :index:`join layer` you want to connect with
    **Figure Joins 1:**
 
 .. figure:: /static/user_manual/working_with_vector/join_attributes.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Join an attribute table to an existing vector layer |nix|
@@ -1129,7 +1137,7 @@ to chart positions can be fixed by the users hand.
    **Figure Diagrams 1:**
 
 .. figure:: /static/user_manual/working_with_vector/diagram_tab.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Vector properties dialog with diagram menu |nix|
@@ -1208,7 +1216,7 @@ and will be used for |qg| server.
    **Figure Metadata 1:**
 
 .. figure:: /static/user_manual/working_with_vector/vector_metadata_tab.png
-   :width: 40 em
+   :width: 30 em
    :align: center
 
    Metadata menu in vector layers properties dialog |nix|

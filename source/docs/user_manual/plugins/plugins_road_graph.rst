@@ -60,7 +60,7 @@ plugin settings` dialog in the menu :menuselection:`Vector --> Road Graph`
 
 .. figure:: /static/user_manual/plugins/roadgraph_plugin_settings.png
    :align: center
-   :width: 30 em
+   :width: 20 em
 
    Road graph plugin settings |nix|
 

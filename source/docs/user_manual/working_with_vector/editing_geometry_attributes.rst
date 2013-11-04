@@ -74,7 +74,7 @@ So be sure to mark the checkbox for those layers that you need to snap to.
    **Figure Edit 1:**
 
 .. figure:: /static/user_manual/working_with_vector/editProjectSnapping.png
-   :width: 40em
+   :width: 30em
    :align: center
 
    Edit snapping options on a layer basis |nix|
@@ -873,7 +873,7 @@ To make a selection you have to use the |mIconExpressionSelect| :sup:`Select fea
 icon on top of the Attribute table.
 The |mIconExpressionSelect| :sup:`Select features using an Expression` allows you
 to define a subset of a table using a :guilabel:`Function List` like in the
-|mActionCalculateField| :sup:`Field Calculator` (see :rerf:`vector_field_calculator`).
+|mActionCalculateField| :sup:`Field Calculator` (see :ref:`vector_field_calculator`).
 The query result then can be saved as a new vector layer.
 For example if you want to find regions that are boroughs from the regions.shp
 of the |qg| sample data you have to open the :guilabel:`>Fields and Values` menu

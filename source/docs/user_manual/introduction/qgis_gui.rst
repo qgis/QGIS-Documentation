@@ -506,7 +506,7 @@ will cause a revert to default behavior.
 
 .. figure:: /static/user_manual/introduction/layer_order.png
     :align: center
-    :width: 35em
+    :width: 30em
 
     Define a legend independent layer order |nix|
 
