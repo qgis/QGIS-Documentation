@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-16 09:38+0000\n"
+"PO-Revision-Date: 2013-11-05 13:53+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -197,15 +197,6 @@ msgid ""
 "Also load the other two vector layers :file:`rivers` and :file:`airports` "
 "and adapt their properties."
 msgstr "Chargez également les deux autres couches vecteur :file:`rivers` et :file:`airports` et modifiez leurs propriétés."
-
-# de1bf4c367874df5abad951ff42c738c
-#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:85
-msgid ""
-"As you see, it is very simple to load GRASS raster and vector layers in "
-"QGIS. See following sections for editing GRASS data and creating a new "
-":file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the "
-"GRASS website at http://grass.osgeo.org/download/data.php."
-msgstr "Comme vous pouvez le constater, il est très facile d'afficher des données GRASS raster et vecteur dans QGIS.  Dans les sections suivantes, nous allons voir comment éditer des données GRASS et créer un nouveau :file:`SECTEUR`.  Vous trouverez sur le site GRASS (http://grass.osgeo.org/download/data.php) d'autres exemples de :file:`SECTEURs`."
 
 # 83b91b9b802342ac87c3e3e836f06c4a
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:90
@@ -639,15 +630,6 @@ msgstr "'Category' (clé, ID) est un entier attaché à la géométrie, et il es
 msgid "**Learning the GRASS Vector Model**"
 msgstr "**Apprendre le modèle vecteur de GRASS**"
 
-# b0542ae2786e4492991937ad444384fc
-#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:325
-msgid ""
-"The best way to learn the GRASS vector model and its capabilities is to "
-"download one of the many GRASS tutorials where the vector model is described"
-" more deeply. See http://grass.osgeo.org/gdp/manuals.php for more "
-"information, books and tutorials in several languages."
-msgstr "Le meilleur moyen d'apprendre le modèle vecteur de GRASS et ses possibilités est de télécharger un des nombreux tutoriels GRASS où le modèle vecteur est décrit plus précisément. Voir http://grass.osgeo.org/gdp/manuals.php pour des informations complémentaires, des livres et des tutoriels dans différentes langues."
-
 # 2123788160ab411889defcfe0d213f23
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:336
 msgid "Creating a new GRASS vector layer"
@@ -662,16 +644,6 @@ msgid ""
 "geometries, following the procedure described in Section "
 ":ref:`grass_digitizing`."
 msgstr "Pour créer une nouvelle couche vectorielle GRASS à l'aide de l'extension GRASS, cliquez sur  |grass_new_vector_layer| :sup:`Créez une nouvelle couche vectorielle GRASS` dans la barre d'outils. Entrez le nom de la couche dans la fenêtre et vous pouvez commencer à digitaliser un point, une ligne ou un polygone en suivant les instructions de la section :ref:`grass_digitizing`."
-
-# c2c3407b0ab5496a82c0e1ada15dc59b
-#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:343
-msgid ""
-"In GRASS it is possible to organize all sort of geometry types (point, line "
-"and area) in one layer, because GRASS uses a topological vector model, so "
-"you don't need to select the geometry type when creating a new GRASS vector."
-" This is different from Shapefile creation with QGIS, because Shapefiles use"
-" the Simple Feature vector model (see Section :ref:`sec_create_shape`)."
-msgstr "Dans GRASS, il est possible de gérer plusieurs types de géométrie (point, ligne et surface) dans une seule couche d'information, car GRASS utilise un modèle vecteur topologique. Vous n'avez donc pas besoin de sélectionner un type de géométrie quand vous créez une couche vectorielle GRASS. C'est différent de la création de shapefile avec QGIS, car les shapefiles utilisent un modèle vecteur d'entité simple (Simple Feature vector model) (voir Section :ref:`sec_create_shape`)."
 
 # 6a0b8480d0e0492387c067f52e717625
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:349
@@ -1231,18 +1203,6 @@ msgid ""
 "clear. If you want to use further module parameters and flags, you need to "
 "start the GRASS Shell and run the module in the command line."
 msgstr "Tous les paramètres du module ne sont généralement pas fournis afin de simplifier les fenêtres. Pour utiliser des paramètres qui ne se trouvent pas dans la fenêtre, vous devez utiliser la console GRASS et lancer les modules en lignes de commande."
-
-# 9d92dc6e805341f08d23ea19f0cdb124
-#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:661
-msgid ""
-"A new feature in QGIS 1.8.0 is the support for a :guilabel:`show advanced "
-"options` button below the simplified module dialog in the "
-":guilabel:`Options` tab. At the moment it is only added to the module "
-"v.in.ascii as an example use, but will probably be part of more / all "
-"modules in the GRASS toolbox in future versions of QGIS. This allows to use "
-"the complete GRASS module options without the need to switch to the GRASS "
-"Shell."
-msgstr "Une nouvelle fonctionnalité de QGIS 1.8.0 est l'ajout d'un bouton :guilabel:`afficher les options avancées >>` en-dessous de la fenêtre simplifiée de l'onglet :guilabel:`Options`. Pour l'instant seul le module v.in.ascii a été adapté afin de servir d'exemple d'utilisation mais d'autres le seront dans les prochaines versions de QGIS. La finalité est de pouvoir recourir à toutes les options de GRASS sans devoir ouvrir la console GRASS."
 
 # e40d9b0fd1574301a1657fd054f3eb94
 #: ../../source/docs/user_manual/grass_integration/grass_integration.rst:668
@@ -1935,6 +1895,74 @@ msgid ""
 "|mIconProjectionEnabled| :sup:`CRS Status` icon in the lower right-hand "
 "corner of the status bar (see Section :ref:`label_projections`))."
 msgstr "Nous utilisons la projection Albers Equal Area Alaska (pieds). Étant donné que nous savons qu'elle correspond au code EPSG 2964, nous le saisissons dans le champ de recherche. (Note : Si vous souhaitez reproduire la manipulation pour un autre :file:`SECTEUR` et une autre projection dont vous ne connaissez pas le code EPSG, cliquez sur |mIconProjectionEnabled| :sup:`Statut de la projection` dans le coin inférieur droit de la barre d'état de QGIS (voir Section :ref:`label_projections`))."
+
+#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:85
+msgid ""
+"As you see, it is very simple to load GRASS raster and vector layers in "
+"QGIS. See following sections for editing GRASS data and creating a new "
+":file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the "
+"GRASS website at http://grass.osgeo.org/download/sample-data/."
+msgstr ""
+
+#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:325
+msgid ""
+"The best way to learn the GRASS vector model and its capabilities is to "
+"download one of the many GRASS tutorials where the vector model is described"
+" more deeply. See http://grass.osgeo.org/documentation/manuals/ for more "
+"information, books and tutorials in several languages."
+msgstr ""
+
+#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:343
+msgid ""
+"In GRASS it is possible to organize all sort of geometry types (point, line "
+"and area) in one layer, because GRASS uses a topological vector model, so "
+"you don't need to select the geometry type when creating a new GRASS vector."
+" This is different from Shapefile creation with QGIS, because Shapefiles use"
+" the Simple Feature vector model (see Section :ref:`sec_create_vector`)."
+msgstr ""
+
+#: ../../source/docs/user_manual/grass_integration/grass_integration.rst:661
+msgid ""
+"A new feature since QGIS 1.8 is the support for a :guilabel:`show advanced "
+"options` button below the simplified module dialog in the "
+":guilabel:`Options` tab. At the moment it is only added to the module "
+"v.in.ascii as an example use, but will probably be part of more / all "
+"modules in the GRASS toolbox in future versions of QGIS. This allows to use "
+"the complete GRASS module options without the need to switch to the GRASS "
+"Shell."
+msgstr "Une nouvelle fonctionnalité depuis QGIS 1.8.0 est l'ajout d'un bouton :guilabel:`afficher les options avancées >>` en-dessous de la fenêtre simplifiée de l'onglet :guilabel:`Options`. Pour l'instant seul le module v.in.ascii a été adapté afin de servir d'exemple d'utilisation mais d'autres le seront dans les prochaines versions de QGIS. La finalité est de pouvoir recourir à toutes les options de GRASS sans devoir ouvrir la console GRASS."
+
+#~ msgid ""
+#~ "As you see, it is very simple to load GRASS raster and vector layers in "
+#~ "QGIS. See following sections for editing GRASS data and creating a new "
+#~ ":file:`LOCATION`. More sample GRASS :file:`LOCATIONs` are available at the "
+#~ "GRASS website at http://grass.osgeo.org/download/data.php."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The best way to learn the GRASS vector model and its capabilities is to "
+#~ "download one of the many GRASS tutorials where the vector model is described"
+#~ " more deeply. See http://grass.osgeo.org/gdp/manuals.php for more "
+#~ "information, books and tutorials in several languages."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In GRASS it is possible to organize all sort of geometry types (point, line "
+#~ "and area) in one layer, because GRASS uses a topological vector model, so "
+#~ "you don't need to select the geometry type when creating a new GRASS vector."
+#~ " This is different from Shapefile creation with QGIS, because Shapefiles use"
+#~ " the Simple Feature vector model (see Section :ref:`sec_create_shape`)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A new feature in QGIS 1.8.0 is the support for a :guilabel:`show advanced "
+#~ "options` button below the simplified module dialog in the "
+#~ ":guilabel:`Options` tab. At the moment it is only added to the module "
+#~ "v.in.ascii as an example use, but will probably be part of more / all "
+#~ "modules in the GRASS toolbox in future versions of QGIS. This allows to use "
+#~ "the complete GRASS module options without the need to switch to the GRASS "
+#~ "Shell."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

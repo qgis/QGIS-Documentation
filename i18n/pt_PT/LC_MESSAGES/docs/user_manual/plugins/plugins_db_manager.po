@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# jonny_forest <joao.f.r.gaspar@gmail.com>, 2013
+# João Gaspar <joao.f.r.gaspar@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-19 15:01+0000\n"
-"Last-Translator: jonny_forest <joao.f.r.gaspar@gmail.com>\n"
+"PO-Revision-Date: 2013-11-04 10:35+0000\n"
+"Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,15 +23,6 @@ msgstr ""
 msgid "DB Manager Plugin"
 msgstr "Módulo Gestor BD"
 
-# b7e01d63c0654d02885b1b8571e8d033
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:52
-msgid ""
-"The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
-"With a double-click you can connect to the database. With the right-mouse "
-"button you can rename and delete existing schemas and tables. Tables can "
-"also be added to the QGIS canvas with the context menu."
-msgstr "A janela :guilabel:`Árvore` lista todas as bases de dados existentes suportadas pelo |qg|. Com o duplo clique pode ligar à base de dado. Com o botão direito do rato pode renomear e apagar esquemas e tabelas existentes. As tabelas também podem ser adicionadas ao enquadramento do QGIS com o menu de contexto."
-
 # 1439af89090a48c4ae884f765ce0ea06
 #: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:57
 msgid ""
@@ -43,19 +34,6 @@ msgid ""
 "attributes and the :guilabel:`Preview` tab renders the geometries as "
 "preview."
 msgstr "Se estiver ligado à base de dados, a janela **principal** do Gestor DB oferece três separadores. O separador :guilabel:`Informação` fornecem informação sobre a tabela e a sua geometria assim como os campos existentes, restrições e indíces. Permite também correr a Análise de Vácuo e criar um índice espacial na tabela seleccionada, se não estiver actualmente feita. O separador :guilabel:`Tabela` mostra todos os atributos e o separador :guilabel:`Pré-visualização` renderiza as geometrias como pré-visualização."
-
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:11
-msgid ""
-"The DB Manager Plugin is officially part of |qg| core and intends to replace"
-" the SPIT Plugin and additionally to integrate all other database formats "
-"supported by |qg| in one user interface. The |icon_dbmanager| :sup:`DB "
-"Manager` Plugin provides several features. You can drag layers from the QGIS"
-" Browser into the DB Manager and it will import your layer into your spatial"
-" database. You can drag and drop tables between spatial databases and they "
-"will get imported. You can also use the DB Manager to execute SQL queries "
-"against your spatial database and then view the spatial output for queries "
-"by adding the results to QGIS as a query layer."
-msgstr "O módulo Gestor DB é uma parte oficial do núcleo do |QGIS| e pretende substituir o Módulo SPIT e adicionalmente integrar todas as outros formatos de base de dados suportados pelo |qg| numa única interface para o utilizador. O módulo |icon_dbmanager| :sup:`Gestor BD` fornece várias características. Pode arrastar camadas do QGIS Browser para o Gestor BD e irá importar a sua camada para a sua base de dados espacial. Pode arrastar e largar tabelas entre bases de dados espaciais e elas serão importadas. Pode também usar o Gestor DB para executar interrogações SQL em relação a sua base de dados espacial e de seguida ver a saída espacial para as interrogações adicionando os resultados ao QGIS como uma camada de interrogação. "
 
 #: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:31
 msgid "DB Manager dialog |nix|"
@@ -76,6 +54,19 @@ msgid ""
 ":guilabel:`TopoViewer`."
 msgstr "O menu :menuselection:`Esquema` inclui ferramentas para criar e apagar esquemas (vazios) e, se estiver topologia  disponível (ex.: PostGIS 2) para iniciar o :guilabel:`TopoViewer`."
 
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:11
+msgid ""
+"The DB Manager Plugin is officially part of |qg| core and intends to replace"
+" the SPIT Plugin and additionally to integrate all other database formats "
+"supported by |qg| in one user interface. The |icon_dbmanager| :sup:`DB "
+"Manager` Plugin provides several features. You can drag layers from the |qg|"
+" Browser into the DB Manager and it will import your layer into your spatial"
+" database. You can drag and drop tables between spatial databases and they "
+"will get imported. You can also use the DB Manager to execute SQL queries "
+"against your spatial database and then view the spatial output for queries "
+"by adding the results to |qg| as a query layer."
+msgstr "O módulo Gestor DB é uma parte oficial do núcleo do |qg| e pretende substituir o Módulo SPIT e adicionalmente integrar todas as outros formatos de base de dados suportados pelo |qg| numa única interface para o utilizador. O módulo |icon_dbmanager| :sup:`Gestor BD` fornece várias características. Pode arrastar camadas do QGIS Browser para o Gestor BD e irá importar a sua camada para a sua base de dados espacial. Pode arrastar e largar tabelas entre bases de dados espaciais e elas serão importadas. Pode também usar o Gestor DB para executar interrogações SQL em relação a sua base de dados espacial e de seguida ver a saída espacial para as interrogações adicionando os resultados ao |qg| como uma camada de interrogação. "
+
 #: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:43
 msgid ""
 "The menu :menuselection:`Table` allows to create and edit tables and to "
@@ -84,10 +75,49 @@ msgid ""
 "a VACUUM and then an ANALYZE for each selected table. Plain VACUUM simply "
 "reclaims space and makes it available for re-use and ANALYZE updates "
 "statistics to determine the most efficient way to execute a query. Finally "
-"you can import layers/files, if they are loaded in QGIS or exist in the file"
+"you can import layers/files, if they are loaded in |qg| or exist in the file"
 " system. And you can export database tables to Shape with the Export file "
 "feature."
-msgstr "O menu :menuselection:`Tabela` permite criar e editar tabelas e apagar as tabelas e as vistas. É também possível esvaziar tabelas e mover tabelas de um esquema para outro. Como mais uma funcionalidade pode executar o comando VÁCUO e depois o comando ANÁLISE para cada tabela seleccionada. O VÁCUO recupera simplesmente o espaço e torna-o disponível para re-utilizar e ANÁLISE de actualização de estatísticas para determinar o uma maneira mais eficiente de executar uma interrogação. Finalmente, pode importar camadas / ficheiros, se eles forem carregados no QGIS ou existente no sistema de ficheiros. E pode exportar as suas tabelas das base de dados para Shape com a característica de Exportação de ficheiro."
+msgstr "O menu :menuselection:`Tabela` permite criar e editar tabelas e apagar as tabelas e as vistas. É também possível esvaziar tabelas e mover tabelas de um esquema para outro. Como mais uma funcionalidade pode executar o comando VÁCUO e depois o comando ANÁLISE para cada tabela seleccionada. O VÁCUO recupera simplesmente o espaço e torna-o disponível para re-utilizar e ANÁLISE de actualização de estatísticas para determinar o uma maneira mais eficiente de executar uma interrogação. Finalmente, pode importar camadas / ficheiros, se eles forem carregados no |qg| ou existente no sistema de ficheiros. E pode exportar as suas tabelas das base de dados para Shape com a característica de Exportação de ficheiro."
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:52
+msgid ""
+"The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
+"With a double-click you can connect to the database. With the right-mouse "
+"button you can rename and delete existing schemas and tables. Tables can "
+"also be added to the |qg| canvas with the context menu."
+msgstr "A janela :guilabel:`Árvore` lista todas as bases de dados existentes suportadas pelo |qg|. Com o duplo clique pode ligar à base de dado. Com o botão direito do rato pode renomear e apagar esquemas e tabelas existentes. As tabelas também podem ser adicionadas ao enquadramento do |qg| com o menu de contexto."
+
+#~ msgid ""
+#~ "The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
+#~ "With a double-click you can connect to the database. With the right-mouse "
+#~ "button you can rename and delete existing schemas and tables. Tables can "
+#~ "also be added to the QGIS canvas with the context menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The DB Manager Plugin is officially part of |qg| core and intends to replace"
+#~ " the SPIT Plugin and additionally to integrate all other database formats "
+#~ "supported by |qg| in one user interface. The |icon_dbmanager| :sup:`DB "
+#~ "Manager` Plugin provides several features. You can drag layers from the QGIS"
+#~ " Browser into the DB Manager and it will import your layer into your spatial"
+#~ " database. You can drag and drop tables between spatial databases and they "
+#~ "will get imported. You can also use the DB Manager to execute SQL queries "
+#~ "against your spatial database and then view the spatial output for queries "
+#~ "by adding the results to QGIS as a query layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The menu :menuselection:`Table` allows to create and edit tables and to "
+#~ "delete tables and views. It is also possible to empty tables and to move "
+#~ "tables from one to another schema. As further functionality you can perform "
+#~ "a VACUUM and then an ANALYZE for each selected table. Plain VACUUM simply "
+#~ "reclaims space and makes it available for re-use and ANALYZE updates "
+#~ "statistics to determine the most efficient way to execute a query. Finally "
+#~ "you can import layers/files, if they are loaded in QGIS or exist in the file"
+#~ " system. And you can export database tables to Shape with the Export file "
+#~ "feature."
+#~ msgstr ""
 
 #~ msgid "DB Manager dialog (KDE) |nix|"
 #~ msgstr ""

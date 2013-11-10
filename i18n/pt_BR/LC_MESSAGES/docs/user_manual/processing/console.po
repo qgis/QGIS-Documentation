@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-16 07:05+0000\n"
+"PO-Revision-Date: 2013-11-04 09:48+0000\n"
 "Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -33,16 +33,6 @@ msgid ""
 "more flexible and powerful workflows."
 msgstr ""
 
-# c0fc4ddd67cb4d4a8218a2bc588c5b60
-#: ../../source/docs/user_manual/processing/console.rst:16
-msgid ""
-"There is not a proccesing console in QGIS, but all processing commands are "
-"available instead from the QGIS built-in Python console. That means that you"
-" can incorporate those command to your console work and connect processing "
-"algorithms to all the other features (including methods from the QGIS API) "
-"available from there."
-msgstr ""
-
 # 450a9219215447178b0a02dd9f255a58
 #: ../../source/docs/user_manual/processing/console.rst:21
 msgid ""
@@ -51,13 +41,6 @@ msgid ""
 "that you can later call from the toolbox, the graphical modeler or any other"
 " component, just like you do with any other algorithm. In fact, some "
 "algorithms that you can find in the toolbox are simple scripts."
-msgstr ""
-
-# 417f5ad239c34d7a95f94d6d0e509243
-#: ../../source/docs/user_manual/processing/console.rst:27
-msgid ""
-"In this chapter we will see how to use processing algorithms from the QGIS "
-"Python console, and also how to write your own algorithms using Python."
 msgstr ""
 
 # f81eeabbb6424ee0afc7fedf3c6159ae
@@ -164,18 +147,6 @@ msgid ""
 " parameter:"
 msgstr ""
 
-# 6a147a96541e4101bab6972170441ca7
-#: ../../source/docs/user_manual/processing/console.rst:138
-msgid ""
-"Raster Layer, Vector Layer or Table. Simply use a string with the name that "
-"identifies the data object to use (the name it has in the QGIS Table of "
-"Contents) or a filename (if the corresponding layer is not opened, it will "
-"be opened, but not added to the map canvas). If you have an instance of a "
-"QGIS object representing the layer, you can also pass it as parameter. If "
-"the input is optional and you do not want to use any data object, use "
-"``None``."
-msgstr "Para usar camadas raster, vetoriais ou tabelas. Basta usar um campo de texto com o nome que identifica o objeto de dados (o nome que tem na lista de camadas do projeto em execução QGIS) ou o nome do arquivo (se a camada correspondente não estiver aberta no QGIS, ela será aberta, mas não adicionada à tela do mapa). Se você tiver uma instância de um objeto que representa a camada QGIS, você também pode passá-lo como parâmetro. Se a entrada for opcional e você não desejar usar qualquer objeto de dados, use ``None``."
-
 # f4717d4423f84f4ba804e9604caf2cf8
 #: ../../source/docs/user_manual/processing/console.rst:144
 msgid ""
@@ -253,16 +224,6 @@ msgid ""
 "its corresponding extension appended to the given filepath."
 msgstr "Para objetos de saída de dados, digite o caminho de arquivo a ser utilizado para salvá-lo, da mesma forma que é feito a partir da caixa de ferramentas. Se você quiser salvar o resultado em um arquivo temporário, use ``None``. A extensão do arquivo determina o formato do arquivo. Se você digitar uma extensão de arquivo não incluída entre as que são suportados pelo algoritmo, será utilizado o formato de arquivo padrão para esse tipo de saída, bem como à sua extensão correspondente anexado ao conjunto de arquivos de dados."
 
-# b52ba11f12444a7eb257191d9d0eac7d
-#: ../../source/docs/user_manual/processing/console.rst:188
-msgid ""
-"Unlike when an algorithm is executed from the toolbox, outputs are not added"
-" to the map canvas if you execute that same algorithm from the Python "
-"Console. If you want to add an output to it, you have to do it yourself "
-"after running the algorithm. To do so, you can use QGIS API commands, or, "
-"even easier, use one of the handy methods provided for such task."
-msgstr ""
-
 # 58e2bdb43e1944ddad0e0be16f4e025c
 #: ../../source/docs/user_manual/processing/console.rst:194
 msgid ""
@@ -275,34 +236,6 @@ msgstr ""
 # 8478edf297ea4a018f558e84a3cfa73a
 #: ../../source/docs/user_manual/processing/console.rst:200
 msgid "Additional functions for handling data"
-msgstr ""
-
-# 795f9923814b4ae28b836a78070fb944
-#: ../../source/docs/user_manual/processing/console.rst:202
-msgid ""
-"Apart from the functions used to call algorithms, importing the "
-"``processing`` package will also import some additional functions that make "
-"it easier to work with data, particularly vector data. They are just "
-"convenience functions that wrap some functionality from the QGIS API, "
-"usually with a less complex syntax. These functions should be used when "
-"developing new algorithms, as they make it easier to operate with input "
-"data."
-msgstr ""
-
-# 4ba00f3aa6f64bc4a3b9e2b3fdb4e2d1
-#: ../../source/docs/user_manual/processing/console.rst:209
-msgid ""
-"Below is a list of some of this commands. More information can be found in "
-"the classes under the ``processing/tools`` package, and aso in the example "
-"scripts provided with QGIS."
-msgstr ""
-
-# 5c4e5928d9d64966a3aa223928286646
-#: ../../source/docs/user_manual/processing/console.rst:213
-msgid ""
-"``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed"
-" object, which can be a filename or the name of the object in the QGIS Table"
-" of Contents."
 msgstr ""
 
 # 46cd1bd8b9db49f58694ea4fdc90f14b
@@ -480,16 +413,6 @@ msgid ""
 "value``, you can use the variable name ``A_numerical_value``."
 msgstr ""
 
-# 0e26b20879eb457d927cbf7b54bed0df
-#: ../../source/docs/user_manual/processing/console.rst:303
-msgid ""
-"Layers and tables values are strings containing the filepath of the "
-"corresponding object. To turn them into a QGIS object, you can use the "
-"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
-"string value, which contains the filepaths to all selected object, separated"
-" by semicolons (``;``)."
-msgstr ""
-
 # b3f5083bc8ae4468adb452562346d4e4
 #: ../../source/docs/user_manual/processing/console.rst:308
 msgid "Outputs are defined in a similar manner, using the following tags:"
@@ -537,16 +460,6 @@ msgid ""
 "filepath. It will correspond to a temporary filepath in case the user has "
 "not entered any output filename."
 msgstr "O valor atribuído às variáveis ​​de saída sempre são conjuntos de caracteres que representam o caminho dos arquivos. Caso o usuário não entrar com nenhum caminho, corresponderá a um caminho de arquivos temporários."
-
-# 4ad3562a236f434b95a4461141a044a0
-#: ../../source/docs/user_manual/processing/console.rst:322
-msgid ""
-"When you declare an output, the algorithm will try to add it to QGIS once it"
-" is finished. That is the reason why, although the ``runalg()`` method does "
-"not load the layers it produces, the final TWI layer will be loaded, since "
-"it is saved to the file entered by the user, which is the value of the "
-"corresponding output."
-msgstr ""
 
 # 7df23c3be7024a0aa3e897e7dfb4b764
 #: ../../source/docs/user_manual/processing/console.rst:327
@@ -652,6 +565,153 @@ msgid ""
 ":`Post-execution script file` where the filename of the scripts to be run in"
 " each case can be entered."
 msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:16
+msgid ""
+"There is not a proccesing console in |qg|, but all processing commands are "
+"available instead from the |qg| built-in Python console. That means that you"
+" can incorporate those command to your console work and connect processing "
+"algorithms to all the other features (including methods from the |qg| API) "
+"available from there."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:27
+msgid ""
+"In this chapter we will see how to use processing algorithms from the |qg| "
+"Python console, and also how to write your own algorithms using Python."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:138
+msgid ""
+"Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+"identifies the data object to use (the name it has in the |qg| Table of "
+"Contents) or a filename (if the corresponding layer is not opened, it will "
+"be opened, but not added to the map canvas). If you have an instance of a "
+"|qg| object representing the layer, you can also pass it as parameter. If "
+"the input is optional and you do not want to use any data object, use "
+"``None``."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:188
+msgid ""
+"Unlike when an algorithm is executed from the toolbox, outputs are not added"
+" to the map canvas if you execute that same algorithm from the Python "
+"Console. If you want to add an output to it, you have to do it yourself "
+"after running the algorithm. To do so, you can use |qg| API commands, or, "
+"even easier, use one of the handy methods provided for such task."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:202
+msgid ""
+"Apart from the functions used to call algorithms, importing the "
+"``processing`` package will also import some additional functions that make "
+"it easier to work with data, particularly vector data. They are just "
+"convenience functions that wrap some functionality from the |qg| API, "
+"usually with a less complex syntax. These functions should be used when "
+"developing new algorithms, as they make it easier to operate with input "
+"data."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:209
+msgid ""
+"Below is a list of some of this commands. More information can be found in "
+"the classes under the ``processing/tools`` package, and aso in the example "
+"scripts provided with |qg|."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:213
+msgid ""
+"``getobject(obj)``: Returns a |qg| object (a layer or table) from the passed"
+" object, which can be a filename or the name of the object in the |qg| Table"
+" of Contents."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:303
+msgid ""
+"Layers and tables values are strings containing the filepath of the "
+"corresponding object. To turn them into a |qg| object, you can use the "
+"``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+"string value, which contains the filepaths to all selected object, separated"
+" by semicolons (``;``)."
+msgstr ""
+
+#: ../../source/docs/user_manual/processing/console.rst:322
+msgid ""
+"When you declare an output, the algorithm will try to add it to |qg| once it"
+" is finished. That is the reason why, although the ``runalg()`` method does "
+"not load the layers it produces, the final TWI layer will be loaded, since "
+"it is saved to the file entered by the user, which is the value of the "
+"corresponding output."
+msgstr ""
+
+#~ msgid ""
+#~ "There is not a proccesing console in QGIS, but all processing commands are "
+#~ "available instead from the QGIS built-in Python console. That means that you"
+#~ " can incorporate those command to your console work and connect processing "
+#~ "algorithms to all the other features (including methods from the QGIS API) "
+#~ "available from there."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "In this chapter we will see how to use processing algorithms from the QGIS "
+#~ "Python console, and also how to write your own algorithms using Python."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raster Layer, Vector Layer or Table. Simply use a string with the name that "
+#~ "identifies the data object to use (the name it has in the QGIS Table of "
+#~ "Contents) or a filename (if the corresponding layer is not opened, it will "
+#~ "be opened, but not added to the map canvas). If you have an instance of a "
+#~ "QGIS object representing the layer, you can also pass it as parameter. If "
+#~ "the input is optional and you do not want to use any data object, use "
+#~ "``None``."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Unlike when an algorithm is executed from the toolbox, outputs are not added"
+#~ " to the map canvas if you execute that same algorithm from the Python "
+#~ "Console. If you want to add an output to it, you have to do it yourself "
+#~ "after running the algorithm. To do so, you can use QGIS API commands, or, "
+#~ "even easier, use one of the handy methods provided for such task."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Apart from the functions used to call algorithms, importing the "
+#~ "``processing`` package will also import some additional functions that make "
+#~ "it easier to work with data, particularly vector data. They are just "
+#~ "convenience functions that wrap some functionality from the QGIS API, "
+#~ "usually with a less complex syntax. These functions should be used when "
+#~ "developing new algorithms, as they make it easier to operate with input "
+#~ "data."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Below is a list of some of this commands. More information can be found in "
+#~ "the classes under the ``processing/tools`` package, and aso in the example "
+#~ "scripts provided with QGIS."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "``getobject(obj)``: Returns a QGIS object (a layer or table) from the passed"
+#~ " object, which can be a filename or the name of the object in the QGIS Table"
+#~ " of Contents."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Layers and tables values are strings containing the filepath of the "
+#~ "corresponding object. To turn them into a QGIS object, you can use the "
+#~ "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
+#~ "string value, which contains the filepaths to all selected object, separated"
+#~ " by semicolons (``;``)."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "When you declare an output, the algorithm will try to add it to QGIS once it"
+#~ " is finished. That is the reason why, although the ``runalg()`` method does "
+#~ "not load the layers it produces, the final TWI layer will be loaded, since "
+#~ "it is saved to the file entered by the user, which is the value of the "
+#~ "corresponding output."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

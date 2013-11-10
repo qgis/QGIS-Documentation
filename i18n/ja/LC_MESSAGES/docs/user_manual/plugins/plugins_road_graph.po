@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-18 14:43+0000\n"
-"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
+"PO-Revision-Date: 2013-11-04 09:46+0000\n"
+"Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,14 +24,6 @@ msgstr ""
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
 msgid "Road Graph Plugin"
 msgstr "道路グラフプラグイン"
-
-# 8170bdd7309540378c9f12ccc7ef2046
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
-msgid ""
-"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
-" path between two points on any polyline layer and plots this path over the "
-"road network."
-msgstr "道路グラグプラグインはC++で書かれたQGIS用のプラグインで,ポリライン上の任意の2地点間の最短経路を計算し,道路ネットワーク上にポリラインとプロットを作成し出力します"
 
 # f7eeb293a29440af9997fcc40149f71d
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:25
@@ -65,17 +57,6 @@ msgid ""
 "and for the settings testing)"
 msgstr "道路の方向にハイライトを入れる(動作が遅いため,主にデバッグや設定確認目的に利用します)"
 
-# beccdd4f52c442a08a22ac34b040a6f5
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
-msgid ""
-"As a roads layer you can use any polyline vector layer in any QGIS supported"
-" format. Two lines with a common point are considered connected. Please "
-"note, it is required to use layer CRS as project CRS while editing roads "
-"layer. This is due to the fact that recalculation of the coordinates between"
-" different CRS introduce some errors that can result in discontinuities, "
-"even when 'snapping' is used."
-msgstr "QGISがサポートしているフォーマットでは、どんなポリラインのベクターレイヤでも道路のレイヤーとして使用することができます。共通のポイントを持つ２本のラインは接続していると見なされます。注意点は、道路レイヤーを編集中にレイヤーのCRSをプロジェクトのCRSとして使用する必要があります。これは、異なるCRS間の座標の再計算が、スナップを用いた場合でさえも不連続性をもたらし、エラーを引き起こす事実によるものです。"
-
 # 328f25024c1d48b3a31a222145b86b5e
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:42
 msgid "In the layer attribute table the following fields can be used:"
@@ -107,14 +88,6 @@ msgstr "もしいくつかのフィールドが値を持っていないか存在
 msgid "Using the plugin"
 msgstr "プラグインの利用"
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
-msgid ""
-"After plugin activation you will see an additional panel on the left side of"
-" the main QGIS window. Now make some definitions to the :guilabel:`Road "
-"graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
-"Graph` (see figure_road_graph_2_)."
-msgstr ""
-
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:69
 msgid "Road graph plugin settings |nix|"
 msgstr "ロードグラフプラグインの設定 |nix|"
@@ -134,6 +107,53 @@ msgid ""
 "Finally in the :guilabel:`Shortest Path` panel select a Start and a Stop "
 "point in the road network layer and click on **[Calculate]**."
 msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
+msgid ""
+"The Road Graph Plugin is a C++ plugin for |qg|, that calculates the shortest"
+" path between two points on any polyline layer and plots this path over the "
+"road network."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
+msgid ""
+"As a roads layer you can use any polyline vector layer in any |qg| supported"
+" format. Two lines with a common point are considered connected. Please "
+"note, it is required to use layer CRS as project CRS while editing roads "
+"layer. This is due to the fact that recalculation of the coordinates between"
+" different CRS introduce some errors that can result in discontinuities, "
+"even when 'snapping' is used."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
+msgid ""
+"After plugin activation you will see an additional panel on the left side of"
+" the main |qg| window. Now make some definitions to the :guilabel:`Road "
+"graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+"Graph` (see figure_road_graph_2_)."
+msgstr ""
+
+#~ msgid ""
+#~ "The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
+#~ " path between two points on any polyline layer and plots this path over the "
+#~ "road network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a roads layer you can use any polyline vector layer in any QGIS supported"
+#~ " format. Two lines with a common point are considered connected. Please "
+#~ "note, it is required to use layer CRS as project CRS while editing roads "
+#~ "layer. This is due to the fact that recalculation of the coordinates between"
+#~ " different CRS introduce some errors that can result in discontinuities, "
+#~ "even when 'snapping' is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After plugin activation you will see an additional panel on the left side of"
+#~ " the main QGIS window. Now make some definitions to the :guilabel:`Road "
+#~ "graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+#~ "Graph` (see figure_road_graph_2_)."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

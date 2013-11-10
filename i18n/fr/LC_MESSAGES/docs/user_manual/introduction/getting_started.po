@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-16 16:04+0000\n"
+"PO-Revision-Date: 2013-11-05 17:02+0000\n"
 "Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -58,15 +58,6 @@ msgstr "Installation à partir des sources"
 msgid "Installation on external media"
 msgstr "Installation sur un support amovible"
 
-# 8fcc195bb9814bdaa75ffce83c09d7c7
-#: ../../source/docs/user_manual/introduction/getting_started.rst:41
-msgid ""
-"QGIS allows to define a ``--configpath`` option that overrides the default "
-"path (e.g. ~/.qgis under Linux) for user configuration and forces QSettings "
-"to use this directory, too. This allows users to e.g. carry a QGIS "
-"installation on a flash drive together with all plugins and settings."
-msgstr "QGIS vous permet de définir une option ``--configpath`` qui remplace le chemin par défaut (par exemple ~/.qgis pour Linux) pour la configuration utilisateur et oblige QSettings à l'utiliser. Cela permet à l'utilisateur de transporter son installation de QGIS sur une clé USB avec ses extensions et paramètres."
-
 # fcf550c399db4d8aaf9111bcccdce44e
 #: ../../source/docs/user_manual/introduction/getting_started.rst:49
 msgid "Sample Data"
@@ -99,27 +90,6 @@ msgid ""
 "uninstall |qg| and reinstall with the data download option checked, only if "
 "the above solutions are unsuccessful."
 msgstr "désinstaller et réinstaller |qg| en cochant, cette fois, la case de téléchargement."
-
-# 5f84497570224d98a4df96457b2778ff
-#: ../../source/docs/user_manual/introduction/getting_started.rst:68
-msgid ""
-"|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation"
-" packages available as rpm, deb or dmg. To use the sample dataset download "
-"the file :file:`qgis_sample_data` as ZIP or TAR archive from "
-"http://download.osgeo.org/qgis/data/ and unzip or untar the archive on your "
-"system. The Alaska dataset includes all GIS data that are used as examples "
-"and screenshots in the user guide, and also includes a small GRASS database."
-" The projection for the qgis sample dataset is Alaska Albers Equal Area with"
-" unit feet. The EPSG code is 2964."
-msgstr "|nix| |osx| Pour les systèmes GNU/Linux et Mac OSX il n'y a pas encore de paquets disponibles sous forme de rpm, deb ou dmg. Pour utiliser l'échantillon de données, téléchargez le fichier :file:`qgis_sample_data` compressé au format ZIP ou archive TAR depuis http://download.osgeo.org/qgis/data/ et décompressez-le à l'endroit de votre choix. Le jeu de données sur l'Alaska comporte toutes les données SIG qui ont servi à la préparation des captures d'écran et des exemples qui figurent dans ce manuel et inclu également un petit jeu de données GRASS. La projection est l'Alaska Albers Equal Area qui a pour unité le pied et dont le code EPSG est le 2964."
-
-# f633cb24f77842a299c873e587b1f671
-#: ../../source/docs/user_manual/introduction/getting_started.rst:100
-msgid ""
-"If you intend to use |qg| as graphical frontend for GRASS, you can find a "
-"selection of sample locations (e.g. Spearfish or South Dakota) at the "
-"official GRASS GIS website http://grass.osgeo.org/download/data.php."
-msgstr "Si vous désirez utiliser |qg| comme interface graphique de GRASS, vous trouverez une sélection d'échantillons de secteurs (e.g. Spearfish ou South Dakota) sur le site officiel de GRASS http://grass.osgeo.org/download/data.php."
 
 # 901f74f8499b4613b57986bb32c51b43
 #: ../../source/docs/user_manual/introduction/getting_started.rst:107
@@ -217,11 +187,6 @@ msgid ""
 "Double click the :file:`lakes` layer in the map legend to open the "
 ":guilabel:`Properties` dialog."
 msgstr "Double-cliquez sur la couche :file:`lakes` dans la liste des couches pour ouvrir la fenêtre:guilabel:`Propriété des couches`."
-
-# a6bb1fc91e54472aa0850f6abaa6f0cd
-#: ../../source/docs/user_manual/introduction/getting_started.rst:150
-msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
-msgstr "Cliquez sur l'onglet :guilabel:`Style` et sélectionnez le bleu comme couleur de remplissage."
 
 # ce78af72203045b4903fa97376ddb7e0
 #: ../../source/docs/user_manual/introduction/getting_started.rst:156
@@ -562,19 +527,6 @@ msgid ""
 "https://github.com/qgis/QGIS/blob/master/INSTALL"
 msgstr "Si vous désirez installer |qg| à partir des sources, référez-vous aux instructions d'installation. Elles sont diffusées avec le code source de |qg| dans un fichier nommé 'INSTALL'. Vous pouvez  également les trouver en ligne sur https://github.com/qgis/QGIS/blob/master/INSTALL"
 
-#: ../../source/docs/user_manual/introduction/getting_started.rst:64
-msgid ""
-"download sample data from the qgis website at "
-"http://download.qgis.org/qgis/data/; or"
-msgstr "télécharger l'échantillon de données sur le site de |qg| http://download.qgis.org/qgis/data/ ou"
-
-#: ../../source/docs/user_manual/introduction/getting_started.rst:151
-msgid ""
-"Click on the :guilabel:`Labels` tab and check the |checkbox| "
-":guilabel:`Label this layer with` checkbox to enable labeling and choose "
-"NAMES field as field containing labels."
-msgstr "Cliquez sur l'onglet :guilabel:`Étiquettes` et cochez la case |checkbox| :guilabel:`Étiqueter cette couche avec` pour permettre l'étiquetage des entités. Choisissez le champ intitulé NAMES comme champ d'étiquetage."
-
 #: ../../source/docs/user_manual/introduction/getting_started.rst:153
 msgid ""
 "To improve readability of labels, you can add a white buffer around them, by"
@@ -587,6 +539,89 @@ msgid ""
 "|checkbox| :guilabel:`Prompt to save project and data source changes when "
 "required`"
 msgstr "|checkbox| :guilabel:`Demander de sauver le projet et les sources de données quand nécessaire`"
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:41
+msgid ""
+"|qg| allows to define a ``--configpath`` option that overrides the default "
+"path (e.g. ~/.qgis2 under Linux) for user configuration and forces QSettings"
+" to use this directory, too. This allows users to e.g. carry a |qg| "
+"installation on a flash drive together with all plugins and settings. Also "
+"compare with section :ref:`env_options`."
+msgstr ""
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:64
+msgid ""
+"download sample data from at "
+"http://download.osgeo.org/qgis/data/qgis_sample_data.zip; or"
+msgstr ""
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:68
+msgid ""
+"|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation"
+" packages available as rpm, deb or dmg. To use the sample dataset download "
+"the file :file:`qgis_sample_data` as ZIP archive from "
+"http://download.osgeo.org/qgis/data/qgis_sample_data.zip and unzip the "
+"archive on your system. The Alaska dataset includes all GIS data that are "
+"used as examples and screenshots in the user guide, and also includes a "
+"small GRASS database. The projection for the |qg| sample dataset is Alaska "
+"Albers Equal Area with unit feet. The EPSG code is 2964."
+msgstr ""
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:100
+msgid ""
+"If you intend to use |qg| as graphical frontend for GRASS, you can find a "
+"selection of sample locations (e.g. Spearfish or South Dakota) at the "
+"official GRASS GIS website http://grass.osgeo.org/download/sample-data/."
+msgstr ""
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:150
+msgid "Click on the :guilabel:`Style` menu and select a blue as fill color."
+msgstr "Cliquez sur l'onglet :guilabel:`Style` et sélectionnez le bleu comme couleur de remplissage."
+
+#: ../../source/docs/user_manual/introduction/getting_started.rst:151
+msgid ""
+"Click on the :guilabel:`Labels` menu and check the |checkbox| "
+":guilabel:`Label this layer with` checkbox to enable labeling and choose "
+"\"NAMES\" field as field containing labels."
+msgstr "Cliquez sur l'onglet :guilabel:`Étiquettes` et cochez la case |checkbox| :guilabel:`Étiqueter cette couche avec` pour permettre l'étiquetage des entités. Choisissez le champ intitulé NAMES comme champ d'étiquetage."
+
+#~ msgid ""
+#~ "QGIS allows to define a ``--configpath`` option that overrides the default "
+#~ "path (e.g. ~/.qgis under Linux) for user configuration and forces QSettings "
+#~ "to use this directory, too. This allows users to e.g. carry a QGIS "
+#~ "installation on a flash drive together with all plugins and settings."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "|nix| |osx| For GNU/Linux and Mac OSX there are not yet dataset installation"
+#~ " packages available as rpm, deb or dmg. To use the sample dataset download "
+#~ "the file :file:`qgis_sample_data` as ZIP or TAR archive from "
+#~ "http://download.osgeo.org/qgis/data/ and unzip or untar the archive on your "
+#~ "system. The Alaska dataset includes all GIS data that are used as examples "
+#~ "and screenshots in the user guide, and also includes a small GRASS database."
+#~ " The projection for the qgis sample dataset is Alaska Albers Equal Area with"
+#~ " unit feet. The EPSG code is 2964."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you intend to use |qg| as graphical frontend for GRASS, you can find a "
+#~ "selection of sample locations (e.g. Spearfish or South Dakota) at the "
+#~ "official GRASS GIS website http://grass.osgeo.org/download/data.php."
+#~ msgstr ""
+
+#~ msgid "Click on the :guilabel:`Style` tab and select a blue as fill color."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "download sample data from the qgis website at "
+#~ "http://download.qgis.org/qgis/data/; or"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Click on the :guilabel:`Labels` tab and check the |checkbox| "
+#~ ":guilabel:`Label this layer with` checkbox to enable labeling and choose "
+#~ "NAMES field as field containing labels."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

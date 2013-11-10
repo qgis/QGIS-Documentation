@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# jonny_forest <joao.f.r.gaspar@gmail.com>, 2013
+# João Gaspar <joao.f.r.gaspar@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-17 17:22+0000\n"
-"Last-Translator: jonny_forest <joao.f.r.gaspar@gmail.com>\n"
+"PO-Revision-Date: 2013-11-04 10:01+0000\n"
+"Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,14 +22,6 @@ msgstr ""
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:10
 msgid "Road Graph Plugin"
 msgstr "Módulo de Cálculo de Rotas"
-
-# 8170bdd7309540378c9f12ccc7ef2046
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
-msgid ""
-"The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
-" path between two points on any polyline layer and plots this path over the "
-"road network."
-msgstr "O módulo de Cálculo de Rotas é um módulo C++ para o QGIS, que calcula o caminho mais curto entre dois pontos em qualquer camada poli-linha e exibe esse caminho sobre a rede viária."
 
 # f7eeb293a29440af9997fcc40149f71d
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:25
@@ -63,17 +55,6 @@ msgid ""
 "and for the settings testing)"
 msgstr "destaca as direcções na estrada (isto é lento e usado principalmente para fins de depuração e para testes de configuração)"
 
-# beccdd4f52c442a08a22ac34b040a6f5
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
-msgid ""
-"As a roads layer you can use any polyline vector layer in any QGIS supported"
-" format. Two lines with a common point are considered connected. Please "
-"note, it is required to use layer CRS as project CRS while editing roads "
-"layer. This is due to the fact that recalculation of the coordinates between"
-" different CRS introduce some errors that can result in discontinuities, "
-"even when 'snapping' is used."
-msgstr "Como camada vectorial de rede viária, esta pode ser usada em qualquer formato de camada vectorial poli-linha suportado pelo QGIS. Duas linhas ligadas por um ponto em comum são considerados ligados. Por favor repare, que é necessário usar o SRC da camada como SRC do projecto enquanto edita as camadas de rede viária. Isto é deve-se ao facto da necessidade de recalcular as coordenadas entre diferentes SRC introduzindo alguns erros que podem resultar descontinuidades, mesmo quando a 'atracção' é usada."
-
 # 328f25024c1d48b3a31a222145b86b5e
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:42
 msgid "In the layer attribute table the following fields can be used:"
@@ -105,14 +86,6 @@ msgstr "Se alguns campos não tiverem qualquer valor ou não existam --- serão 
 msgid "Using the plugin"
 msgstr "Usando o módulo"
 
-#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
-msgid ""
-"After plugin activation you will see an additional panel on the left side of"
-" the main QGIS window. Now make some definitions to the :guilabel:`Road "
-"graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
-"Graph` (see figure_road_graph_2_)."
-msgstr "Depois da activação do módulo, irá ver um painel adicional no lado esquerdo da janela principal do QGIS. Agora faça algumas definições na janela :guilabel:`Configuração da Análise de Redes` no menu :menuselection:`Vector --> Análise de Redes` (veja figure_road_graph_2)."
-
 #: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:69
 msgid "Road graph plugin settings |nix|"
 msgstr "Configurações do módulo de Cálculo de Rotas |nix|"
@@ -132,6 +105,53 @@ msgid ""
 "Finally in the :guilabel:`Shortest Path` panel select a Start and a Stop "
 "point in the road network layer and click on **[Calculate]**."
 msgstr "Finalmente no painel :guilabel:`Caminho mais curto`seleccione um ponto de Iniciar e Parar na camada de rede viária e clique em **[Calcular]**."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:12
+msgid ""
+"The Road Graph Plugin is a C++ plugin for |qg|, that calculates the shortest"
+" path between two points on any polyline layer and plots this path over the "
+"road network."
+msgstr "O módulo de Análise de Redes é um módulo C++ para o |qg|, que calcula o caminho mais curto entre dois pontos em qualquer camada poli-linha e exibe esse caminho sobre a rede viária."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:35
+msgid ""
+"As a roads layer you can use any polyline vector layer in any |qg| supported"
+" format. Two lines with a common point are considered connected. Please "
+"note, it is required to use layer CRS as project CRS while editing roads "
+"layer. This is due to the fact that recalculation of the coordinates between"
+" different CRS introduce some errors that can result in discontinuities, "
+"even when 'snapping' is used."
+msgstr "Como camada vectorial de rede viária pode ser usada em qualquer formato de camada vectorial poli-linha suportado pelo |qg|. Duas linhas ligadas por um ponto em comum são considerados ligados. Por favor repare, que é necessário usar o SRC da camada como SRC do projecto enquanto edita as camadas de rede viária. Isto é deve-se ao facto da necessidade de recalcular as coordenadas entre diferentes SRC introduzindo alguns erros que podem resultar descontinuidades, mesmo quando a 'atracção' é usada."
+
+#: ../../source/docs/user_manual/plugins/plugins_road_graph.rst:54
+msgid ""
+"After plugin activation you will see an additional panel on the left side of"
+" the main |qg| window. Now make some definitions to the :guilabel:`Road "
+"graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+"Graph` (see figure_road_graph_2_)."
+msgstr "Depois da activação do módulo, irá ver um painel adicional no lado esquerdo da janela principal do |qg|. Agora faça algumas definições na janela :guilabel:`Configuração da Análise de Redes` no menu :menuselection:`Vector --> Análise de Redes` (veja figure_road_graph_2)."
+
+#~ msgid ""
+#~ "The Road Graph Plugin is a C++ plugin for QGIS, that calculates the shortest"
+#~ " path between two points on any polyline layer and plots this path over the "
+#~ "road network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "As a roads layer you can use any polyline vector layer in any QGIS supported"
+#~ " format. Two lines with a common point are considered connected. Please "
+#~ "note, it is required to use layer CRS as project CRS while editing roads "
+#~ "layer. This is due to the fact that recalculation of the coordinates between"
+#~ " different CRS introduce some errors that can result in discontinuities, "
+#~ "even when 'snapping' is used."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "After plugin activation you will see an additional panel on the left side of"
+#~ " the main QGIS window. Now make some definitions to the :guilabel:`Road "
+#~ "graph plugin settings` dialog in the menu :menuselection:`Vector --> Road "
+#~ "Graph` (see figure_road_graph_2_)."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""
