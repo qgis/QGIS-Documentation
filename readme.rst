@@ -1,7 +1,9 @@
-QGIS Documentation
-******************
+QGIS Testing Documentation
+***************************
 
-QGIS Documentation is build from corresponding branches.
+QGIS Testing Documentation is build from corresponding branche and NOT translated.
+
+Only the current stable branch is translated.
 
 Stable documentation is on http://docs.qgis.org/2.0
 
@@ -84,6 +86,8 @@ Translating the english QGIS Documentation
 ******************************************
 
 Translating of the Documentation is handled via transifex: http://www.transifex.com
+
+ONLY the current stable branch is translated. 
 
 If you want to help translating: create an account and join one of the translation
 teams of the qgis project: https://www.transifex.com/organization/qgis
