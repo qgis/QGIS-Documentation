@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-10-07 04:41+0000\n"
+"PO-Revision-Date: 2013-11-04 09:46+0000\n"
 "Last-Translator: rduivenvoorde <richard@duif.net>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/qgis-documentation/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
@@ -18,39 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # a79e4b6f56b34f77944f6aa91b76586d
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:9
 msgid "DB Manager Plugin"
 msgstr ""
 
-# f92f7c2fe9fd4b729b8801931cbd617c
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:34
-msgid "DB Manager dialog (KDE) |nix|"
-msgstr ""
-
-# 75662991258544a8a36221aa629ebec3
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:37
-msgid ""
-"The :menuselection:`Database` menu allows to connect to an existing "
-"database, to start the SQL-window and to exit the DB Manager Plugin. The "
-":menuselection:`Schema` menu includes tools to create and delete (empty) "
-"schemas and, if topology is available (e.g. PostGIS 2) to start a "
-":guilabel:`TopoViewer`. The menu :menuselection:`Table` allows to create and"
-" edit tables and to delete tables and views. It is also possible to empty "
-"tables and to move tables from one to another schema. Finally you can also "
-"run Vacuum Analyze and add Versioning Support to a table."
-msgstr ""
-
-# b7e01d63c0654d02885b1b8571e8d033
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:46
-msgid ""
-"The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
-"With a double-click you can connect to the database. With the right-mouse "
-"button you can rename and delete existing schemas and tables. Tables can "
-"also be added to the QGIS canvas with the context menu."
-msgstr ""
-
 # 1439af89090a48c4ae884f765ce0ea06
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:51
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:57
 msgid ""
 "If connected to a database, the **main** window of the DB Manager offers "
 "three tabs. The :guilabel:`Info` tab provides information about the table "
@@ -61,18 +34,103 @@ msgid ""
 "preview."
 msgstr ""
 
-#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:14
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:31
+msgid "DB Manager dialog |nix|"
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:34
+msgid ""
+"The :menuselection:`Database` menu allows to connect to an existing "
+"database, to start the SQL-window and to exit the DB Manager Plugin. One you"
+" are connected to an existing database, the menus :menuselection:`Schema` "
+"and :menuselection:`Table` additionally appear."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:39
+msgid ""
+"The :menuselection:`Schema` menu includes tools to create and delete (empty)"
+" schemas and, if topology is available (e.g. PostGIS 2) to start a "
+":guilabel:`TopoViewer`."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:11
 msgid ""
 "The DB Manager Plugin is officially part of |qg| core and intends to replace"
 " the SPIT Plugin and additionally to integrate all other database formats "
 "supported by |qg| in one user interface. The |icon_dbmanager| :sup:`DB "
-"Manager` Plugin provides several features. You can drag layers from the QGIS"
+"Manager` Plugin provides several features. You can drag layers from the |qg|"
 " Browser into the DB Manager and it will import your layer into your spatial"
 " database. You can drag and drop tables between spatial databases and they "
 "will get imported. You can also use the DB Manager to execute SQL queries "
 "against your spatial database and then view the spatial output for queries "
-"by adding the results to QGIS as a query layer."
+"by adding the results to |qg| as a query layer."
 msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:43
+msgid ""
+"The menu :menuselection:`Table` allows to create and edit tables and to "
+"delete tables and views. It is also possible to empty tables and to move "
+"tables from one to another schema. As further functionality you can perform "
+"a VACUUM and then an ANALYZE for each selected table. Plain VACUUM simply "
+"reclaims space and makes it available for re-use and ANALYZE updates "
+"statistics to determine the most efficient way to execute a query. Finally "
+"you can import layers/files, if they are loaded in |qg| or exist in the file"
+" system. And you can export database tables to Shape with the Export file "
+"feature."
+msgstr ""
+
+#: ../../source/docs/user_manual/plugins/plugins_db_manager.rst:52
+msgid ""
+"The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
+"With a double-click you can connect to the database. With the right-mouse "
+"button you can rename and delete existing schemas and tables. Tables can "
+"also be added to the |qg| canvas with the context menu."
+msgstr ""
+
+#~ msgid ""
+#~ "The :guilabel:`Tree` window lists all existing databases supported by |qg|. "
+#~ "With a double-click you can connect to the database. With the right-mouse "
+#~ "button you can rename and delete existing schemas and tables. Tables can "
+#~ "also be added to the QGIS canvas with the context menu."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The DB Manager Plugin is officially part of |qg| core and intends to replace"
+#~ " the SPIT Plugin and additionally to integrate all other database formats "
+#~ "supported by |qg| in one user interface. The |icon_dbmanager| :sup:`DB "
+#~ "Manager` Plugin provides several features. You can drag layers from the QGIS"
+#~ " Browser into the DB Manager and it will import your layer into your spatial"
+#~ " database. You can drag and drop tables between spatial databases and they "
+#~ "will get imported. You can also use the DB Manager to execute SQL queries "
+#~ "against your spatial database and then view the spatial output for queries "
+#~ "by adding the results to QGIS as a query layer."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The menu :menuselection:`Table` allows to create and edit tables and to "
+#~ "delete tables and views. It is also possible to empty tables and to move "
+#~ "tables from one to another schema. As further functionality you can perform "
+#~ "a VACUUM and then an ANALYZE for each selected table. Plain VACUUM simply "
+#~ "reclaims space and makes it available for re-use and ANALYZE updates "
+#~ "statistics to determine the most efficient way to execute a query. Finally "
+#~ "you can import layers/files, if they are loaded in QGIS or exist in the file"
+#~ " system. And you can export database tables to Shape with the Export file "
+#~ "feature."
+#~ msgstr ""
+
+#~ msgid "DB Manager dialog (KDE) |nix|"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The :menuselection:`Database` menu allows to connect to an existing "
+#~ "database, to start the SQL-window and to exit the DB Manager Plugin. The "
+#~ ":menuselection:`Schema` menu includes tools to create and delete (empty) "
+#~ "schemas and, if topology is available (e.g. PostGIS 2) to start a "
+#~ ":guilabel:`TopoViewer`. The menu :menuselection:`Table` allows to create and"
+#~ " edit tables and to delete tables and views. It is also possible to empty "
+#~ "tables and to move tables from one to another schema. Finally you can also "
+#~ "run Vacuum Analyze and add Versioning Support to a table."
+#~ msgstr ""
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""
