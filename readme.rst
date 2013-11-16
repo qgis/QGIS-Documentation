@@ -1,4 +1,3 @@
-
 QGIS Documentation
 ******************
 
@@ -52,7 +51,7 @@ Now always activate your environment before building. To deactivate, you can do:
 
     deactivate
 
-You can install all tools in on go via the REQUIREMENTS.txt here in root of this repo:
+You can install all tools in one go via the REQUIREMENTS.txt here in the root of this repo:
 
     pip install -r REQUIREMENTS.txt
 
@@ -66,7 +65,7 @@ Alternatively do it one by one:
 
 Then build:
 
-    make html (to build the english languag)
+    make html (to build the english language)
     
 Or a translation
 
@@ -78,7 +77,7 @@ Then build your language
 
     make html LANG=nl 
     
-to build the dutch version. Currently available: ca_ES  da_DK  de  en  es  fa  fi  fr  hi  id  it  ja  km_KH  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW)
+to build the dutch version. Currently available: ca_ES  da_DK  de  en  es  fa  fi  fr  hi  id  it  ja  km_KH  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 
 
 Translating the english QGIS Documentation
