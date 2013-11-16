@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _`processing.commander`:
 
 The SEXTANTE Commander

@@ -1,4 +1,4 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
 
 .. index:: SPIT, Shapefile_to_Postgis_Import_Tool
 

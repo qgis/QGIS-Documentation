@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _dbmanager:
 
 DB Manager Plugin

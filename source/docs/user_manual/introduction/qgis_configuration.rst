@@ -1,4 +1,4 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
 
 ******************
 |qg| Configuration

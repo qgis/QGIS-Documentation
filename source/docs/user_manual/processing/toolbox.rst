@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _`processing.toolbox`:
 
 The toolbox

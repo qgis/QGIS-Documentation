@@ -1,4 +1,4 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
 
 The batch processing interface
 =======================================

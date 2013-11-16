@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _`sec_gpstracking`:
 
 Live GPS tracking

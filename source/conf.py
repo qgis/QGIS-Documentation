@@ -208,7 +208,7 @@ htmlhelp_basename = 'QGISWebsitedoc'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This part of the documentation has not yet been fully updated for QGIS 2.0`
+.. |updatedisclaimer| replace:: :disclaimer:`This is documentation for 'QGIS testing'. Visit http://docs.qgis.org for 'QGIS 2.0' docs.`
 """
 
 rst_epilog = """

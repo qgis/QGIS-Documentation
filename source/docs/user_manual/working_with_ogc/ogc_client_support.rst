@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _working_with_ogc:
 
 ***********************
