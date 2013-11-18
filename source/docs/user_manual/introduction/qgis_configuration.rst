@@ -35,12 +35,14 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
 .. tip:: **Activating the QGIS Overview**
 
-   In |qg| you can use an overview panel that provides a full extent view of layers added to it.
-   It can be selected under the menu :menuselection:`Settings --> Panels`.
-   Within the view is a rectangle showing the current map extent. This allows
-   you to quickly determine which area of the map you are currently viewing. Note
-   that labels are not rendered to the map overview even if the layers in the
-   map overview have been set up for labeling.
+   In |qg| you can use an overview panel that provides a full extent view of
+   layers added to it.
+   It can be selected under the menu :menuselection:`View --> Panels`.
+   Within the view is a rectangle showing the current map extent.
+   This allows you to quickly determine which area of the map you are
+   currently viewing.
+   Note that labels are not rendered to the map overview even if the layers
+   in the map overview have been set up for labeling.
    If you click and drag the red rectangle in the overview that shows your
    current extent, the main map view will update accordingly.
 
@@ -55,10 +57,11 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 Project Properties
 ==================
 
-In the properties window for the project under |nix| :menuselection:`Settings -->
-Project Properties` or |win| :menuselection:`Settings -->
-Project Properties` you set project specific options. These
-include:
+In the properties window for the project under |nix|
+:menuselection:`Project --> Project Properties` or |win|
+:menuselection:`Project --> Project Properties` you set project specific
+options.
+These include:
 
 * In the :guilabel:`General` menu the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
