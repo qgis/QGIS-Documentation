@@ -141,7 +141,8 @@ all:
 	@echo Starting with pulling all translations from transifex
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	tx pull --minimum-perc=1 --skip -f
+	#tx pull --minimum-perc=1 --skip -f
+	# ^^^ SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
@@ -181,7 +182,9 @@ gettext:
 # 1) make springclean (removing all building cruft)
 # 2) make pretranslate (getting all strings from sources and create new pot files)
 # 3) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
-transifex_push:
-	make springclean
-	make pretranslate
-	tx push -f -s --no-interactive
+#
+# SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
+#transifex_push:
+#	make springclean
+#	make pretranslate
+#	tx push -f -s --no-interactive
