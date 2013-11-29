@@ -1,0 +1,715 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Linfiniti Consulting CC
+# This file is distributed under the same license as the The Free Quantum GIS Training Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: The Free Quantum GIS Training Manual 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-10 00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Language: id_ID\n"
+
+# 81e32edd66d046e5ba328260d14b6d7c
+#: ../../grass/grass_setup.rst:2
+msgid "|LS| GRASS Setup"
+msgstr "Pelajaran :Pengaturan GRASS"
+
+# 032c2a00abad481d8ea310a69240f885
+#: ../../grass/grass_setup.rst:4
+msgid ""
+"Using GRASS in QGIS requires you to think of the interface in a slightly "
+"different way. Remember that you're not working in QGIS directly, but "
+"working in GRASS *via* QGIS."
+msgstr ""
+"Menggunakan GRASS di QGIS mengharuskan Anda untuk memikirkan antarmuka "
+"dengan cara yang sedikit berbeda. Anda tidak bekerja di QGIS langsung, "
+"tetapi bekerja dalam GRASS *melalui* QGIS."
+
+# 850cfaa8c34c455bb04b3e4ba78eb5ce
+#: ../../grass/grass_setup.rst:8
+msgid "**The goal for this lesson:** To begin a GRASS project in QGIS."
+msgstr ""
+"**Tujuan untuk pelajaran ini**: untuk memulai sebuah proyek GRASS di QGIS."
+
+# 4c31d595bdea4975a8121a5eb1d354f6
+#: ../../grass/grass_setup.rst:11
+msgid "|basic| |FA| Start a New GRASS Project"
+msgstr "|basic| Ikuti bersama: Mulai Proyek GRASS Baru"
+
+# bc161f36fe4f412c8098d193f688b002
+#: ../../grass/grass_setup.rst:13
+msgid ""
+"To launch GRASS from within QGIS, you need to activate it as with any other "
+"plugin."
+msgstr ""
+"Untuk menjalankan GRASS dari dalam QGIS, Anda perlu mengaktifkannya seperti "
+"dengan *plugin* yang lain."
+
+# 3b6e2ea3989b41fa9fa02467c5dfa430
+#: ../../grass/grass_setup.rst:16
+msgid ""
+"In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:"
+msgstr ""
+"Dalam  :guilabel:`Plugin Manager`, aktifkan  :guilabel:`GRASS` yang ada "
+"dalam daftar:"
+
+# cf892300fde0423fbb0721bc6a09c797
+#: ../../grass/grass_setup.rst:21
+msgid "The GRASS toolbar will appear:"
+msgstr "*Toolbar* GRASS akan muncul:"
+
+# 14c05c5c0e2c4a90ba2488d51d7bd780
+#: ../../grass/grass_setup.rst:26
+msgid ""
+"Before you can use GRASS, you need to create a **mapset**. GRASS always "
+"works in a database environment, which means that you need to import all the "
+"data you want to use into a GRASS database."
+msgstr ""
+"Sebelum Anda dapat menggunakan GRASS, Anda perlu membuat sebuah **mapset**. "
+"GRASS selalu bekerja dalam lingkungan basis data, yang berarti Anda perlu "
+"mengimpor semua data yang ingin Anda gunakan ke dalam basis data GRASS."
+
+# a70a7617df7f499085999423bb337716
+#: ../../grass/grass_setup.rst:30
+msgid "Click on the :guilabel:`New mapset` button:"
+msgstr "Untuk memulai, klik tombol  :guilabel:`New mapset`:"
+
+# 2473903209ae4be294f3bdc97eeecb8d
+#: ../../grass/grass_setup.rst:35
+msgid "You'll see a dialog explaining the structure of a GRASS mapset."
+msgstr ""
+"Anda akan melihat dialog seperti di bawah, yang menjelaskan struktur dari "
+"mapset GRASS."
+
+# 4242c4b59ae542128eeea1f0e7b628e6
+#: ../../grass/grass_setup.rst:36
+msgid ""
+"Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`."
+msgstr ""
+"Buat direktori baru bernama  :kbd:`grass_db` di folder :guilabel:"
+"`exercise_data`."
+
+# 3bf3062094314e8f85cd893cdb04f941
+#: ../../grass/grass_setup.rst:37
+msgid ""
+"Set it as the directory that will be used by GRASS to set up its database:"
+msgstr ""
+"atur sebagai direktori yang akan digunakan oleh GRASS untuk membuat basis "
+"data:"
+
+# 89acff187e4a41a48e8b39f4a8eee400
+#: ../../grass/grass_setup.rst:42
+msgid ""
+"GRASS needs to create a \"location\", which describes the maximum extents of "
+"the geographic area you'll be working in."
+msgstr ""
+"GRASS perlu membuat \"lokasi\", yang menggambarkan luasan maksimum daerah "
+"geografis dimana Anda akan bekerja di dalamanya."
+
+# 7bea70c2b50546c590033695aafc10f5
+#: ../../grass/grass_setup.rst:45
+msgid "Call the new location :kbd:`South_Africa`:"
+msgstr "Sebut lokasi baru tersebut sebagai :kbd:`South_Africa`:"
+
+# d88fefb238ec4c04b24f75fe9b985b89
+#: ../../grass/grass_setup.rst:50
+msgid "We'll be working with :kbd:`WGS 84`, so search for and select this CRS:"
+msgstr "Kita akan bekerja dengan WGS 84, jadi cari dan pilih CRS ini:"
+
+# a076fb7845e04f50ab5875780f8fe7f1
+#: ../../grass/grass_setup.rst:55
+msgid ""
+"Now select the region :guilabel:`South Africa`, which is already defined in "
+"GRASS:"
+msgstr ""
+"Sekarang pilih wilayah  :guilabel:`South Africa` , yang sudah didefinisikan "
+"dalam GRASS:"
+
+# 7ac22c6161774fb980e9b0356399462d
+#: ../../grass/grass_setup.rst:61
+msgid "Create a mapset, which is the map file that you'll be working with."
+msgstr "Buat mapset, yang merupakan file peta yang akan Anda kerjakan."
+
+# bbf9589030b04c6484f3e8b67a7e0a70
+#: ../../grass/grass_setup.rst:66
+msgid ""
+"Once you're done, you'll see a dialog asking you to confirm that the "
+"settings it displays are correct."
+msgstr ""
+"Setelah Anda selesai, Anda akan melihat kotak dialog yang meminta Anda untuk "
+"mengkonfirmasi bahwa pengaturan tampilan ini sudah benar."
+
+# 101fe3acab884dfeaff09f8e17fdb6d0
+#: ../../grass/grass_setup.rst:69
+msgid "Click :guilabel:`Finish`."
+msgstr "Klik  :guilabel:`Finish`."
+
+# bf06fb2799a54ba7b521be93fc3b6990
+#: ../../grass/grass_setup.rst:70
+msgid "Click :guilabel:`OK` on the success dialog."
+msgstr "kemudian klik :guilabel:`OK` pada dialog sukses."
+
+# 6ef7431a0eb34081aab84753f4bd325d
+#: ../../grass/grass_setup.rst:73
+msgid "|basic| |FA| Loading Vector Data into GRASS"
+msgstr "|basic| Ikuti bersama : Memuat Data Vektor ke dalam GRASS"
+
+# 67805f2bb8f34062999cdadc944deebe
+#: ../../grass/grass_setup.rst:75
+msgid ""
+"You'll now have a blank map. To load data into GRASS, you need to follow a "
+"two-step process."
+msgstr ""
+"Sekarang Anda akan memiliki peta kosong. Untuk memuat data ke dalam GRASS, "
+"Anda perlu mengikuti proses dua langkah. "
+
+# c1e57caca2814b15b33db0ed157a5561
+#: ../../grass/grass_setup.rst:78
+msgid ""
+"Load data into QGIS as usual. Use the :kbd:`streets.shp` dataset (found "
+"under :kbd:`exercise_data/`) for now."
+msgstr ""
+"Pertama, muat data ke QGIS seperti biasa. Untuk saat ini gunakan *dataset*  :"
+"kbd:`streets.shp` (temukan di dalam folder  :kbd:`exercise_data/`). "
+
+# 13fb6297e56740fca4bde0deecc8063d
+#: ../../grass/grass_setup.rst:80
+msgid "As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:"
+msgstr ""
+"Segera setelah data tersebut dimuat, klik tombol :guilabel:`GRASS Tools`:"
+
+# a3cd9646c2a24d3ebd2347d867911803
+#: ../../grass/grass_setup.rst:85
+msgid ""
+"Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in "
+"the :guilabel:`Filter` field of the dialog that has appeared."
+msgstr ""
+"Temukan *tool* untuk mengimpor vektor dengan memasukkan … berikut:  :kbd:`v."
+"in.ogr.qgis` dalam pilihan :guilabel:`Filter` dari kotak dialog yang muncul."
+
+# 5f790b95013c487ca38f4b6dcc7e0979
+#: ../../grass/grass_setup.rst:88
+msgid ""
+"The :kbd:`v` stands for \"vector\", :kbd:`in` means its a function to import "
+"data into the GRASS database, :kbd:`ogr` is the software library used to "
+"read vector data, and :kbd:`qgis` means that the tool will look for a vector "
+"from among the vectors already loaded into QGIS."
+msgstr ""
+":kbd:`v` merupakan singkatan dari “vector”, :kbd:`in` merupakan fungsi untuk "
+"mengimpor data ke dalam basis data GRASS,  :kbd:`ogr` merupakan *library* "
+"perangkat lunak yang digunakan untuk membaca data vektor, dan  :kbd:`qgis` "
+"merupakan *tool* untuk melihat data vektor diantara data vektor yang telah "
+"disimpan dalam QGIS."
+
+# 26b40e5e878741d6b035ba8f1b53c154
+#: ../../grass/grass_setup.rst:93
+msgid "Once you've found this tool, click on it to bring up the tool itself:"
+msgstr ""
+"Setelah menemukan *tool* ini, klik pada *tool* tersebut sehingga  akan "
+"muncul:"
+
+# 20e1106af3b4484fadb8a4a4f4e7192a
+#: ../../grass/grass_setup.rst:98
+msgid ""
+"Set the loaded layer to :guilabel:`streets` and its GRASS version's name to :"
+"kbd:`g_streets` to prevent confusion."
+msgstr ""
+"Atur  layer yang  dimuat ke dalam   :guilabel:`streets` dan ubah nama file "
+"versi GRASS menjadi  :kbd:`g_streets`s untuk menghindari kebingungan."
+
+# 09ce4a47619640f1aefac829623cc4c6
+#: ../../grass/grass_setup.rst:108
+msgid "Click :guilabel:`Run` to begin the import."
+msgstr "Klik  :guilabel:`Run` untuk memulai *import*. "
+
+# 99d909737513472aa1ca758c767acb4d
+#: ../../grass/grass_setup.rst:109
+msgid ""
+"When it's done, click the :guilabel:`View output` button to see the newly "
+"imported GRASS layer in the map."
+msgstr ""
+"Setelah selesai, klik tombol  :guilabel:`View output`  untuk melihat "
+"*layer*  GRASS yang baru diimpor ke dalam peta. "
+
+# a6de4fabb7114d4dbd00b8a1d79cad81
+#: ../../grass/grass_setup.rst:111
+msgid ""
+"Close first the import tool itself (click the :guilabel:`Close` button to "
+"the immediate right of :guilabel:`View output`), then close the :guilabel:"
+"`GDAL Tools` window."
+msgstr ""
+"Tutup terlebih dahulu import *tool* tersebut (klik tombol  :guilabel:`Close` "
+"di sebelah kanan  :guilabel:`View output`), kemudian tutup jendela :guilabel:"
+"`GDAL Tools`. "
+
+# 5dc1f002c65d45088d4643644b71a346
+#: ../../grass/grass_setup.rst:114
+msgid "Remove the original :guilabel:`roads_33S` layer."
+msgstr "Hapus layer awal   :guilabel:`roads_33S`."
+
+# d5603b0916794d628d2a2722635ea60c
+#: ../../grass/grass_setup.rst:116
+msgid ""
+"Now you are left with only the imported GRASS layer as displayed in your "
+"QGIS map."
+msgstr ""
+"Sekarang yang tersisa hanya *layer* GRASS yang telah diimpor seperti yang "
+"ditampilkan dalam peta QGIS Anda."
+
+# bda272337b5242739e90778d52feffcf
+#: ../../grass/grass_setup.rst:120
+msgid "|basic| |FA| Loading Raster Data into GRASS"
+msgstr "|basic| Ikuti bersama: Memuat Data Raster ke dalam GRASS "
+
+# 469a99d8564540e3b5150f9f85234b30
+#: ../../grass/grass_setup.rst:122
+msgid ""
+"Recall that our DEM is in the Projected CRS :kbd:`UTM 33S / WGS 84`, but our "
+"GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's reproject the "
+"DEM first."
+msgstr ""
+"DEM yang kita gunakan memiliki sistem proyeksi CRS  :kbd:`UTM 33S / WGS 84`, "
+"sedangkan projek GRASS kita menggunakan sistem proyeksi Geographic CRS :kbd:"
+"`WGS 84`. Jadi mari kita lakukan proyeksi ulang DEM terlebih dahulu. "
+
+# 811b0e43054b4cba9505d2e11d431fc6
+#: ../../grass/grass_setup.rst:126
+msgid ""
+"Load the :kbd:`srtm_41_19.tif` dataset (found under :kbd:`exercise_data/"
+"raster/SRTM/`) into the QGIS map as usual, using QGIS' :guilabel:`Add Raster "
+"Layer` tool."
+msgstr ""
+"Muat *dataset* :kbd:`srtm_41_19.tif` (data disimpan dalam folder :kbd:"
+"`exercise_data/raster/SRTM/`) ke dalam peta QGIS seperti biasa, menggunakan "
+"*tool* :guilabel:`Add Raster Layer`. "
+
+# baad1c34cee34739a492528c9dbf78bb
+#: ../../grass/grass_setup.rst:129
+msgid ""
+"Reproject it using GDAL Warp tool (:menuselection:`Raster --> Projections --"
+"> Warp (Reproject)`), setting it up as shown:"
+msgstr ""
+"Lakukan proyeksi ulang menggunakan tool GDAL Warp (:menuselection:`Raster --"
+"> Projections --> Warp (Reproject)`). Cara pengaturannya ditunjukkan dalam "
+"kotak dialog berikut:"
+
+# a68b29e62397405c82779e892a09b240
+#: ../../grass/grass_setup.rst:135
+msgid ""
+"Save the raster under the same folder as the original, but with the file "
+"name :kbd:`DEM_WGS84.tif`. Once it appears in your map, remove the :kbd:"
+"`srtm_41_19.tif` dataset from your :guilabel:`Layers list`."
+msgstr ""
+"Simpan data raster di dalam folder yang sama seperti aslinya, tetapi dengan "
+"nama file :kbd:`DEM_WGS84.tif`. Setelah muncul di peta, hapus *dataset* :kbd:"
+"`srtm_41_19.tif` dari :guilabel:`Layers list` Anda."
+
+# 19c00bb17b244976beacb09b55d3f06f
+#: ../../grass/grass_setup.rst:139
+msgid "Now that it's reprojected, you can load it into your GRASS database."
+msgstr ""
+"Sekarang lakukan proyeksi ulang, anda dapat memuat ke dalam basis data GRASS "
+"Anda."
+
+# 1ee2706bf42345539f538a78d9073591
+#: ../../grass/grass_setup.rst:141
+msgid "Open the :guilabel:`GRASS Tools` dialog again."
+msgstr "Buka kotak dialog  :guilabel:`GRASS Tools` lagi."
+
+# 1999374e917740cfbee646c16e85783f
+#: ../../grass/grass_setup.rst:142
+msgid "Click on the :guilabel:`Modules List` tab."
+msgstr "Klik pada tab  :guilabel:`Modules List` ."
+
+# d6af0458da704f2181d898a171e7ce83
+#: ../../grass/grass_setup.rst:143
+msgid "Search for :kbd:`r.in.gdal.qgis`:"
+msgstr "Cari  :kbd:`r.in.gdal.qgis`:"
+
+# 1c4c4257d1d84bddb9df82a66c491597
+#: ../../grass/grass_setup.rst:148
+msgid "Which gives you this tool:"
+msgstr "Yang memberi Anda *tool* ini:"
+
+# 7b761ce5500d4fa39d7eb4288508f46d
+#: ../../grass/grass_setup.rst:153
+msgid ""
+"Set it up as shown (input layer is :guilabel:`DEM_WGS84`, output is :kbd:"
+"`g_dem`)."
+msgstr ""
+"Lakukan pengaturan seperti ditunjukkan (layer input  :guilabel:`DEM_WGS84`, "
+"hasilnya :kbd:`g_dem`)."
+
+# b0ec6179c6c44f4fbe143faaa86c05fc
+#: ../../grass/grass_setup.rst:155
+msgid "Click :guilabel:`Run`."
+msgstr "Klik :guilabel:`Run`."
+
+# 93de0b1fcf434460b97c8d95210fb98b
+#: ../../grass/grass_setup.rst:156
+msgid "When the process is done, click :guilabel:`View output`."
+msgstr "Ketika proses selesai, klik  :guilabel:`View output`."
+
+# cb616eb8ad894de087aa86826295271e
+#: ../../grass/grass_setup.rst:157
+msgid ""
+":guilabel:`Close` the current tab, and then :guilabel:`Close` the whole "
+"dialog."
+msgstr ""
+"Selanjutnya :guilabel:`Close` tab saat ini  dan  :guilabel:`Close` kotak "
+"dialog keseluruhan ."
+
+# 013748c35cd849e3a75714a813a63a82
+#: ../../grass/grass_setup.rst:163
+msgid "You may now remove the original :guilabel:`DEM_WGS84` layer."
+msgstr "Sekarang Anda dapat menghapus *layer* awal   :guilabel:`DEM_WGS84`."
+
+# 0aff5b0b57b347b889766755e199fed5
+# f8cdf60f07c64b15be6549a872b47895
+#: ../../grass/grass_setup.rst:166 ../../grass/grass_tools.rst:119
+msgid "|IC|"
+msgstr "Kesimpulan"
+
+# fe1a39ca930c4490b8efb99a328758e4
+#: ../../grass/grass_setup.rst:168
+msgid ""
+"The GRASS workflow for ingesting data is somewhat different from the QGIS "
+"method, because GRASS loads its data into a spatial database structure. "
+"However, by using QGIS as a frontend, you can make the setup of a GRASS "
+"mapset easier by using existing layers in QGIS as data sources for GRASS."
+msgstr ""
+"Alur kerja GRASS untuk mengolah data  agak berbeda dari metode QGIS, karena "
+"GRASS memuat data ke dalam struktur basis data spasial. Namun, dengan "
+"menggunakan QGIS sebagai antar muka, Anda dapat membuat pengaturan dari "
+"mapset GRASS lebih mudah dengan menggunakan *layer* yang ada di QGIS sebagai "
+"sumber data untuk GRASS."
+
+# 736042dd1f7548279664b8807502fdcc
+#: ../../grass/grass_setup.rst:174
+msgid "|WN|"
+msgstr "Apa Selanjutnya?"
+
+# ab5d817210d54131955c39139430d5b3
+#: ../../grass/grass_setup.rst:176
+msgid ""
+"Now that the data is imported into GRASS, we can look at the advanced "
+"analysis operations that GRASS offers."
+msgstr ""
+"Sekarang  data yang diimpor ke dalam GRASS, kita dapat melihat operasi "
+"analisis tingkat lanjut yang disediakan oleh GRASS."
+
+# da9c473b8eb240a4bc08bc4f6e88607f
+#: ../../grass/grass_tools.rst:2
+msgid "|LS| GRASS Tools"
+msgstr "Pelajaran:  *Tool- Tool* GRASS"
+
+# 3bd980e9be5340438f18dbfb86dc72e7
+#: ../../grass/grass_tools.rst:4
+msgid ""
+"In this lesson we will present a selection of tools to give you an idea of "
+"the capabilities of GRASS."
+msgstr ""
+"Dalam pelajaran ini kita akan menyajikan pilihan *tool* untuk memberikan "
+"gambaran tentang kemampuan GRASS."
+
+# 3510880fb39142038f1b1aeb5db36853
+#: ../../grass/grass_tools.rst:8
+msgid "|basic| |FA| Set Raster Colors"
+msgstr "|basic| Ikuti bersama: Mengatur Warna Raster"
+
+# e7a09abd46b0498a91efd54b4a31549c
+#: ../../grass/grass_tools.rst:10
+msgid "Open the :guilabel:`GRASS Tools` dialog."
+msgstr "Buka kotak dialog  :guilabel:`GRASS Tools` ."
+
+# 529e6c70bee84b2b8ac30eb7e7e19733
+#: ../../grass/grass_tools.rst:11
+msgid ""
+"Look for the :kbd:`r.colors.table` module by searching for it in the :"
+"guilabel:`Filter` field of the :guilabel:`Modules List` tab."
+msgstr ""
+"Cari modul  :kbd:`r.colors.table` di kolom  :guilabel:`Filter` dari tab  :"
+"guilabel:`Modules List`."
+
+# 261c7cd9b1db4301988aa0cb3ed010e2
+#: ../../grass/grass_tools.rst:13
+msgid "Open the tool and set it up like this:"
+msgstr "Buka *tool* tersebut dan atur sebagai berikut:"
+
+# 1cccc649054a4eefb57c1ea707bf125f
+#: ../../grass/grass_tools.rst:18
+msgid "When you run the tool, it will recolor your raster:"
+msgstr ""
+"Ketika Anda menjalankan *tool* ini, tool ini akan mewarnai kembali peta "
+"raster Anda:"
+
+# 42acf48859184b6eb8f1870f1a05213a
+#: ../../grass/grass_tools.rst:24
+msgid "|basic| |FA| Visualize Data in 3D"
+msgstr "|basic| Ikuti bersama : Visualisasi Data dalam 3D"
+
+# a99f77f7a59b4c40a30288e1bbe919d0
+#: ../../grass/grass_tools.rst:26
+msgid ""
+"GRASS allows you to use a DEM to visualize your data in three dimensions. "
+"The tool you'll use for this operates on the GRASS Region, which at the "
+"moment is set to the whole extent of South Africa, as you set it up before."
+msgstr ""
+"GRASS dapat digunakan untuk memvisualisasikan data DEM Anda dalam tiga "
+"dimensi. *Tool* yang akan Anda gunakan untuk beroperasi pada Daerah GRASS, "
+"yang saat ini diatur ke seluruh Afrika Selatan, sebagaimana telah Anda "
+"tetapkan diatas sebelumnya. "
+
+# 21272d0952fb4c2fb455135727a64d04
+#: ../../grass/grass_tools.rst:30
+msgid ""
+"To redefine the extent to cover only our raster dataset, click this button:"
+msgstr "Untuk mendefinisikan kembali cakupan dataset raster, klik tombol ini:"
+
+# 96fcb284af8d4fc6acec0bb3b0cbbb06
+#: ../../grass/grass_tools.rst:35
+msgid ""
+"When this tool is activated, your cursor will turn into a cross whe over the "
+"QGIS map canvas."
+msgstr ""
+"Ketika *tool* ini diaktifkan, kursor anda akan berubah menjadi tanda silang "
+"ketika digerakkan di atas peta QGIS. "
+
+# 47eb5a0eca304e94a971b087428bafcb
+#: ../../grass/grass_tools.rst:38
+msgid ""
+"Using this tool, click and drag a rectangle around the edges of the GRASS "
+"raster."
+msgstr ""
+"Dengan menggunakan *tool* ini, buatlah kotak persegi panjang sekitar tepi "
+"raster GRASS  ."
+
+# 4d54657b7cb34dc583bfee5181f0057e
+#: ../../grass/grass_tools.rst:40
+msgid ""
+"Click :guilabel:`OK` in the :guilabel:`GRASS Region Settings` dialog when "
+"done."
+msgstr ""
+"Klik :guilabel:`OK` pada kotak dialog  :guilabel:`GRASS Region Settings` "
+"ketika telah selesai."
+
+# c7a74debb3d14e61ac9dc7ad39deb2ed
+#: ../../grass/grass_tools.rst:42
+msgid "Search for the :kbd:`nviz` tool:"
+msgstr "Cari *tool*  :kbd:`nviz`:"
+
+# 229bd90cc8cd47c2990b70a1ee227120
+#: ../../grass/grass_tools.rst:47
+msgid "Set it up as shown:"
+msgstr "Atur seperti yang ditunjukkan berikut:"
+
+# b6dbeab519614b3fa5e4a86590afd421
+#: ../../grass/grass_tools.rst:52
+msgid ""
+"Remember to enable both :guilabel:`Use region of this map` buttons to the "
+"right of the two raster selection dropdown menus. This will allow NVIZ to "
+"correctly assess the resolution of the rasters."
+msgstr ""
+"Jangan lupa untuk mengaktifkan kedua tombol  :guilabel:`Use region of this "
+"map` di bagian kanan dari menu pilihan raster. Hal ini akan memungkinkan "
+"NVIZ untuk menilai resolusi raster secara benar."
+
+# 1c6ee932906e445885b7860238660d46
+#: ../../grass/grass_tools.rst:55
+msgid "Click the :guilabel:`Run` button."
+msgstr "Klik tombol  :guilabel:`Run`."
+
+# 32fc2c802249454c955e9311cd5ff958
+#: ../../grass/grass_tools.rst:57
+msgid ""
+"NVIZ will set up a 3D environment using the raster and vector selected. This "
+"may take some time, depending on your hardware. When it's done, you will see "
+"the map rendered in 3D in a new window:"
+msgstr ""
+"NVIZ akan membuat gambaran 3D menggunakan data raster dan vektor terpilih. "
+"Proses ini mungkin membutuhkan waktu yang lama, tergantung pada spesifikasi "
+"perangkat keras yang digunakan. Ketika selesai, Anda akan melihat peta "
+"ditampilkan dalam 3D di jendela baru:"
+
+# f3589f05c97d477e86f69ae2d62357ad
+#: ../../grass/grass_tools.rst:64
+msgid ""
+"Experiment with the :guilabel:`height`, :guilabel:`z-exag`, and :guilabel:"
+"`View method` settings to change your view of the data. The navigation "
+"methods may take some getting used to."
+msgstr ""
+"Cobalah untuk melakukan pengaturan  :guilabel:`height`, :guilabel:`z-exag`, "
+"dan  :guilabel:`View method` untuk melihat data dari sudut pandang yang "
+"lain.  Anda membutuhkan waktu yang cukup untuk terbiasa dengan metode "
+"navigasi yang digunakan. "
+
+# b10194d2f319429aac1831642a29e08d
+#: ../../grass/grass_tools.rst:69
+msgid "|moderate| |FA| The Mapcalc Tool"
+msgstr "|moderate| Ikuti bersama:Perangkat Mapcalc"
+
+# fe9701834a4c4da29f22cd96cc277e85
+#: ../../grass/grass_tools.rst:71
+msgid ""
+"Open the :guilabel:`GRASS Tools` dialog's :guilabel:`Modules List` tab and "
+"search for :kbd:`calc`."
+msgstr ""
+"Buka kotak dialog  :guilabel:`GRASS Tools` tab :guilabel:`Modules List` "
+"dialog dan cari :kbd:`calc`."
+
+# 0c2a8355fd2a4a6394c319edfbf523b6
+#: ../../grass/grass_tools.rst:73
+msgid ""
+"From the list of modules, select :guilabel:`r.mapcalc` (not :guilabel:`r."
+"mapcalculator`, which is more basic)."
+msgstr ""
+"Dari *Module list* , pilih  :guilabel:`r.mapcalc` (jangan sampai keliru "
+"dengan :guilabel:`r.mapcalculator`)."
+
+# e8ec9548f65e49c6819e9a6f342ed2aa
+#: ../../grass/grass_tools.rst:75
+msgid "Start the tool."
+msgstr "Jalankan *tool*  ini ."
+
+# ef3edbf6e28148879edf7cc6d7d75d3a
+#: ../../grass/grass_tools.rst:77
+msgid ""
+"The Mapcalc dialog allows you to construct a sequence of analyses to be "
+"performed on a raster, or collection of rasters. You will use these tools to "
+"do so:"
+msgstr ""
+"Dialog Mapcalc memungkinkan Anda untuk menjalankan analisis yang berurutan "
+"pada peta raster, atau sekumpulan peta raster. Anda akan menggunakan *tool* "
+"ini untuk melakukannya:"
+
+# ea4ce2661ed9409697cac01a178f37a7
+#: ../../grass/grass_tools.rst:84
+msgid "In order, they are:"
+msgstr "*Tool-tool* yang akan digunakan adalah:"
+
+# 9043ff5fc5764972bd8c96a3d92a904e
+#: ../../grass/grass_tools.rst:86
+msgid ":kbd:`Add map`: Add a raster file from your current GRASS mapset."
+msgstr ""
+":kbd:`Add map`: menambahkan file raster dari mapset GRASS Anda saat ini."
+
+# b56de03e63814c14ba4cdc1cc3841fdc
+#: ../../grass/grass_tools.rst:87
+msgid ""
+":kbd:`Add constant value`: Add a constant value to be used in functions."
+msgstr ""
+":kbd:`Add constant value`:menambahkan nilai konstan yang akan digunakan "
+"dalam fungsi."
+
+# 19d41e1719784a30a90e1dd3f547b373
+#: ../../grass/grass_tools.rst:88
+msgid ""
+":kbd:`Add operator or function`: Add an operator or function to be connected "
+"to inputs and outputs."
+msgstr ""
+":kbd:`Add operator or function`: menambahkan operator atau fungsi untuk "
+"dihubungkan ke masukan dan keluaran."
+
+# b5381ba1bf014afdb7a6cc217322ac76
+#: ../../grass/grass_tools.rst:90
+msgid ""
+":kbd:`Add connection`: Connect elements. Using this tool, click and drag "
+"from the red dot on one item to the red dot on another item. Dots that are "
+"correctly connected to a connector line will turn gray. If the line or dot "
+"is red, it is not properly connected!"
+msgstr ""
+":kbd:`Add connection`: menghubungkan elemen-elemen. Dengan menggunakan tool "
+"ini, klik dan seret  dari titik merah pada salah satu item ke titik merah "
+"pada item lain. Titik-titik  yang terhubung secara benar ke saluran "
+"konektor, akan berubah abu-abu. Jika garis atau titik berwarna merah, "
+"berarti titik-titik tersebut tidak terhubung dengan benar!"
+
+# 7d00e4b8fe634016aa337dd9f9f556d3
+#: ../../grass/grass_tools.rst:94
+msgid ":kbd:`Select item`: Select an item and move selected items."
+msgstr ":kbd:`Select item`:Memilih item dan memindahkan item yang dipilih."
+
+# 3aaabe27f813403988404765648ae56e
+#: ../../grass/grass_tools.rst:95
+msgid ""
+":kbd:`Delete selected item`: Removes the selected item from the current "
+"mapcalc sheet, but not from the mapset (if it is an existing raster)."
+msgstr ""
+":kbd:`Delete selected item`: Menghapus item yang dipilih dari lembar mapcalc "
+"saat ini, tetapi bukan dari mapset (jika itu adalah raster yang ada)."
+
+# 09470f4d285c45eebdb533c003003345
+#: ../../grass/grass_tools.rst:98
+msgid "Using these tools:"
+msgstr "Dengan menggunakan *tool* ini: "
+
+# 7959089d8f684ed4891307655db99445
+#: ../../grass/grass_tools.rst:100
+msgid "Construct the following algorithm:"
+msgstr "buatlah algoritma berikut:"
+
+# 340220ed7c784d00b8ede18ac9dc343f
+#: ../../grass/grass_tools.rst:105
+msgid "When you click :guilabel:`Run`, your output should look like this:"
+msgstr ""
+"Ketika Anda mengklik  :guilabel:`Run`, hasil yang diperoleh seharusnya "
+"terlihat seperti berikut:"
+
+# 7a9ac2d0186a468dbc16ef4fc4e4c31b
+#: ../../grass/grass_tools.rst:110
+msgid "Click :guilabel:`View output` to see the output displayed in your map:"
+msgstr ""
+"Klik  :guilabel:`View output` untuk melihat hasil operasi ditampilkan dalam "
+"peta:"
+
+# d3a2301d700a4148a7528f9d281c7890
+#: ../../grass/grass_tools.rst:115
+msgid ""
+"This shows all the areas where the terrain is lower than 500 meters or "
+"higher than 1000 meters."
+msgstr ""
+"Hasil ini menunjukkan semua area yang memiliki ketinggian kurang dari dari "
+"500 meter atau lebih dari 1000 meter."
+
+# 4457d3ee632b461db427c644dd3f32b6
+#: ../../grass/grass_tools.rst:121
+msgid ""
+"In this lesson, we have covered only a few of the many tools GRASS offers. "
+"To explore the capabilities of GRASS for yourself, open the :guilabel:`GRASS "
+"Tools` dialog and scroll down the :guilabel:`Modules List`. Or for a more "
+"structured approach, look under the :guilabel:`Modules Tree` tab, which "
+"organizes tools by type."
+msgstr ""
+"Dalam pelajaran ini, kita hanya membahas beberapa tool yang disediakan "
+"GRASS. Untuk mengeksplorasi sendiri kemampuan GRASS, buka dialog  :guilabel:"
+"`GRASS Tools` dan cari  :guilabel:`Modules List`. Cara yang lain, lihat di "
+"bawah tab  :guilabel:`Modules Tree`, yang mangatur tool sesuai dengan "
+"jenisnya."
+
+# 520caeee48be4f25b80df0463688cb4a
+#: ../../grass/index.rst:3
+msgid "|MOD| GRASS"
+msgstr "Modul : Grass"
+
+# b4c399ae651a43688fdee03f09863650
+#: ../../grass/index.rst:5
+msgid ""
+"GRASS (Geographic Resources Analysis Support System) is a well-known open "
+"source GIS with a wide array of useful GIS functions. It was first released "
+"in 1984, and has seen much improvement and additional functionality since "
+"then. QGIS allows you to make use of GRASS' powerful GIS tools directly."
+msgstr ""
+"GRASS (Geographic Resources Analysis Support System) merupakan perangkat "
+"lunak SIG open source yang memiliki banyak fungsi SIG dan sudah dikenal "
+"dengan baik. GRASS dirilis pertama kali tahun 1984, dan sejak itu mengalami "
+"banyak perbaikan dan penambahan fungsi. QGIS memungkinkan Anda untuk "
+"memanfaatkan tool-tool GRASS secara langsung."

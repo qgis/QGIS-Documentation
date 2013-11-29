@@ -1,0 +1,1527 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Linfiniti Consulting CC
+# This file is distributed under the same license as the The Free Quantum GIS Training Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: The Free Quantum GIS Training Manual 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-10 00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Language: id_ID\n"
+
+# 14c5b5a93b6c42ca83fdca2ce6877229
+#: ../../rasters/changing_symbology.rst:2
+msgid "|LS| Changing Raster Symbology"
+msgstr "Pelajaran: Mengubah Simbologi raster"
+
+# 6a0899590ea542fe96cb8d4e982a4afe
+#: ../../rasters/changing_symbology.rst:4
+msgid ""
+"Not all raster data consists of aerial photographs. There are many other "
+"forms of raster data, and in many of those cases, it's essential to "
+"symbolize the data properly so that it becomes properly visible and useful."
+msgstr ""
+"Tidak semua data raster terdiri dari beberapa foto udara. Ada banyak bentuk "
+"data raster yang lain, dan dalam banyak kasus tersebut, adalah penting untuk "
+"melakukan simbolisasi data dengan baik sehingga akan terlihat dengan baik "
+"dan berguna."
+
+# 857c49f224e84503934c1c1f5f2123f9
+#: ../../rasters/changing_symbology.rst:8
+msgid ""
+"**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr "**Tujuan dari pelajaran ini:** untuk mengubah simbologi layer raster."
+
+# 30a50788dd154d0ca8db798973f4bdb4
+#: ../../rasters/changing_symbology.rst:11
+msgid "|basic| |TY|"
+msgstr "|basic| Coba sendiri..."
+
+# 323e6edfc1a4479fb180333a055e064c
+#: ../../rasters/changing_symbology.rst:13
+msgid ""
+"Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr ""
+"Gunakan tombol :guilabel:`Add Raster Layer` untuk menampilkan *dataset* "
+"raster yang baru."
+
+# d7e0a365e4794145876ea0e5157f9fac
+#: ../../rasters/changing_symbology.rst:14
+msgid ""
+"Into your current map (which, following from the previous lesson, should be :"
+"kbd:`analysis.qgs`) load the dataset :kbd:`srtm_41_19.tif`, found under the "
+"directory :kbd:`exercise_data/raster/SRTM/`."
+msgstr ""
+"Muat *dataset* :kbd:`srtm_41_19.tif` ke dalam peta Anda (yang melanjutkan "
+"dari pelajaran sebelumnya, seharusnya  :kbd:`analysis.qgs`), panggil set "
+"data srtm_41_19.tif yang dapat ditemukan di dalam direktori  :kbd:"
+"`exercise_data/raster/SRTM/`."
+
+# 6a436d61236346a3b0fcae12790ae31e
+#: ../../rasters/changing_symbology.rst:17
+msgid ""
+"Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr "Setelah muncul dalam  :guilabel:`Layers list`, namailah  :kbd:`DEM`."
+
+# 8b97a326532e4b31966beca76da8a6c2
+#: ../../rasters/changing_symbology.rst:19
+msgid ""
+"This dataset is a *Digital Elevation Model (DEM)*. It's a map of the "
+"elevation (altitude) of the terrain, allowing us to see where the mountains "
+"and valleys are, for example."
+msgstr ""
+"Set data ini adalah sebuah Model elevasi digital (DEM). DEM adalah peta dari "
+"elevasi (ketinggian) terain, yang memungkinkan kita untuk melihat, misalnya, "
+"dimana letak pegunungan dan lembah."
+
+# a7bca19529054604b12ae0f12fb5a6ff
+#: ../../rasters/changing_symbology.rst:23
+msgid ""
+"Once it's loaded, you'll notice that it's basically a gray rectangle. It's "
+"seen here with the vector layers on top:"
+msgstr ""
+"Setelah DEM itu terpanggil, Anda akan melihat bahwa pada dasarnya DEM adalah "
+"sebuah kotak berwarna abu-abu. DEM tersebut dapat dilihat disini  bersama "
+"dengan *layer-layer* vektor di atasnya:"
+
+# e7163cd1979449b89d9e66cfb7b57a54
+#: ../../rasters/changing_symbology.rst:29
+msgid ""
+"That's because its symbology hasn't been customized. In a color aerial "
+"photograph, everything is already defined. But if you load a raster and it's "
+"just a gray rectangle, then you know there's no symbology for it yet. It "
+"still needs to be defined. So that's what you should do next."
+msgstr ""
+"Hal tersebut karena simbologinya belum disesuaikan. Pada foto udara yang "
+"berwarna, semuanya telah didefinisikan. Tetapi jika Anda memuat sebuah data "
+"raster dan hanya sebuah kotak berwarna abu-abu, kemudian Anda mengetahui "
+"belum ada simbologinya. Simbologi untuk raster tersebut masih perlu "
+"didefinisikan. Itulah yang harus Anda lakukan selanjutnya."
+
+# 9897ab8401b44e39bd4dfa26e9d4eafa
+#: ../../rasters/changing_symbology.rst:35
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|basic| Ikuti bersama: Mengubah simbologi layer raster"
+
+# 80e5bfe3cd274443b7a9f60fd6c18141
+#: ../../rasters/changing_symbology.rst:37
+msgid ""
+"Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer."
+msgstr "Buka kotak dialog :guilabel:`Layer Properties` layer :guilabel:`SRTM`."
+
+# a9c1f804529045b793873ade4a24f98e
+#: ../../rasters/changing_symbology.rst:38
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr "Ganti ke tab  :guilabel:`Style`."
+
+# 1616462da1ab4104a44b3ec454d25849
+#: ../../rasters/changing_symbology.rst:40
+msgid ""
+"These are the current settings, and as we've seen, they don't give us much "
+"information on the layer. Does it even have any data in it? Let's see."
+msgstr ""
+"Itu adalah pengaturan yang terkini dan kita telah melihatnya, mereka tidak "
+"memberi kita banyak informasi tentang pada layer tersebut. Apakah ada data "
+"di dalamnya? Mari kita lihat."
+
+# 25faf971c080410ab58eb28ec0cb8502
+#: ../../rasters/changing_symbology.rst:43
+msgid "Change the :guilabel:`Color map` to :guilabel:`Pseudocolor`:"
+msgstr "Ubah :guilabel:`Color map` menjadi  :guilabel:`Pseudocolor`:"
+
+# fd6c0877ff274543851b15dd310be3dc
+# c4347ea8c7f14276a9780f878d93261c
+# 1907b5253b534d1ea7c36b4e005ee09c
+#: ../../rasters/changing_symbology.rst:48
+#: ../../rasters/changing_symbology.rst:96
+#: ../../rasters/data_manipulation.rst:47
+msgid "Click :guilabel:`OK`."
+msgstr "Klik  :guilabel:`OK`."
+
+# b6440946633d4e7ebde0c11417985a91
+#: ../../rasters/changing_symbology.rst:50
+msgid "You'll see the raster looking like this:"
+msgstr "Anda akan melihat tampilan raster seperti ini:"
+
+# acc37a9baa474aafa8c0bbbc42a5d6de
+#: ../../rasters/changing_symbology.rst:55
+msgid ""
+"That does tell us what we need to know. There is data in this layer. But "
+"maybe we don't want to symbolize it using these colors."
+msgstr ""
+"Tampilan tersebut memberitahu kita tentang apa yang perlu kita ketahui. Ada "
+"data dalam layer tersebut. Tetapi mungkin kita tidak ingin melakukan "
+"simbolisasi tampilan tersebut menggunakan warna-warna itu."
+
+# d0ca427478ae42deb3579609964bb0a4
+#: ../../rasters/changing_symbology.rst:58
+msgid "Open :guilabel:`Layer Properties` again."
+msgstr "Buka  :guilabel:`Layer Properties` lagi."
+
+# 15f828ce964847daa99d8ea1433cd215
+#: ../../rasters/changing_symbology.rst:59
+msgid "Switch the :guilabel:`Color map` back to :guilabel:`Grayscale`."
+msgstr "Ganti :guilabel:`Color map` kembali menjadi  :guilabel:`Grayscale`."
+
+# 2511d76bda72489d93909afbecc80485
+#: ../../rasters/changing_symbology.rst:61
+msgid ""
+"But this time, to prevent it from becoming a gray rectangle again, let's "
+"tell QGIS to \"stretch\" the color values. This will make QGIS use all of "
+"the available colors (in :guilabel:`Grayscale`, this is black, white and all "
+"shades of gray in between)."
+msgstr ""
+"Tapi kali ini, untuk menghindari layer tersebut menjadi kotak berwarna abu-"
+"abu lagi, mari kita  perintahkan QGIS untuk “memperlebar” nilai-nilai "
+"warnanya. Ini akan membuat QGIS menggunakan semua warna yang tersedia "
+"(dalam :guilabel:`Grayscale`, ada hitam, putih dan semua corak antara warna "
+"abu-abu diantaranya)."
+
+# 443dc8628f44410b90a60e441eb4b516
+#: ../../rasters/changing_symbology.rst:66
+msgid "Tell it to use :guilabel:`Custom min / max values`:"
+msgstr ""
+"Perintahkan QGIS untuk menggunakan  :guilabel:`Custom min / max values`:"
+
+# 35b6f0c1839e4ed7a3a0cc21cdc530ab
+#: ../../rasters/changing_symbology.rst:71
+msgid ""
+"Set the value :guilabel:`Current` of :guilabel:`Contrast enhancement` to :"
+"guilabel:`Stretch To MinMax`:"
+msgstr ""
+"Atur nilai  :guilabel:`Current` dari  :guilabel:`Contrast "
+"enhancement`menjadi :guilabel:`Stretch To MinMax`"
+
+# 0da3d8bad8be400db3a4ab695619f0e6
+#: ../../rasters/changing_symbology.rst:77
+msgid ""
+"But what are the minimum and maximum values that should be used for the "
+"stretch? The ones that are currently under :guilabel:`Custom min / max "
+"values` are the same values that just gave us a gray rectangle before. "
+"Instead, we should be using the minimum and maximum values that are actually "
+"in the image, right? Fortunately, you can determine those values easily by "
+"loading the minimum and maximum values of the raster."
+msgstr ""
+"Akan tetapi berapa nilai minimal dan maksimal yang harus digunakan untuk "
+"pelebaran ini? Nilai-nilai tersebut yang saat ini berada dalam :guilabel:"
+"`Custom min / max values` adalah nilai-nilai yang sama yang hanya memberikan "
+"kita sebuah kotak  abu-abu sebelumnya. Sebaliknya, kita harus menggunakan "
+"nilai minimum dan maksimum yang sebenarnya dalam citra, bukan? Untungnya, "
+"Anda dapat menentukan nilai-nilai tersebut dengan mudah dengan memanggil "
+"nilai-nilai minimum dan maksimum dari raster tersebut."
+
+# b0dc0dec88de444382427eb9c2e4db40
+#: ../../rasters/changing_symbology.rst:84
+msgid ""
+"Under :guilabel:`Load min / max values from band`, select :guilabel:"
+"`Estimate (faster)`."
+msgstr ""
+"Dalam  :guilabel:`Load min / max values from band` pilih  :guilabel:"
+"`Estimate (faster)`."
+
+# 6f4301f489db4e78950b81092aaa552c
+#: ../../rasters/changing_symbology.rst:86
+msgid "Click the :guilabel:`Load` button:"
+msgstr "Klik tombol :guilabel:`Load`:"
+
+# f6cdd11dba0447cca23091fac4d2747c
+#: ../../rasters/changing_symbology.rst:91
+msgid "Notice how the :guilabel:`Custom min / max values` have changed:"
+msgstr ""
+"Perhatikan bagaimana  :guilabel:`Custom min / max values` telah berubah:"
+
+# aa73abfbdbf3440a906de12b294b66b4
+#: ../../rasters/changing_symbology.rst:98
+msgid ""
+"You'll see the values of the raster properly displayed, with the darker "
+"colors representing valleys and the lighter ones, mountains:"
+msgstr ""
+"Anda akan melihat nilai-nilai dari raster ditampilkan dengan baik, dengan "
+"warna yang lebih gelap merepresentasikan lembah, dan warna-warna yang lebih "
+"terang merepresentasikan pegunungan:"
+
+# 4256204a8eed415eac5f6e38ff9d3fca
+#: ../../rasters/changing_symbology.rst:105
+msgid "But isn't there a quicker way?"
+msgstr "Tetapi bukankah ada cara yang lebih cepat?"
+
+# db48298e04af487a9359456cb147bdda
+#: ../../rasters/changing_symbology.rst:107
+msgid ""
+"Yes, there is! Now that you understand what needs to be done, you'll be glad "
+"to know that there's a tool for doing all of this easily."
+msgstr ""
+"Ya, ada! Sekarang Anda mengerti apa yang harus dilakukan, Anda akan senang "
+"mengetahui bahwa ada tool untuk melakukan semuanya dengan mudah."
+
+# faffdc4301ff4f4bb4cea06bc3ed7826
+#: ../../rasters/changing_symbology.rst:110
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr "Hapus DEM yang terkini dari  :guilabel:`Layers list`."
+
+# 14237a369390448881f0dac8665dc797
+#: ../../rasters/changing_symbology.rst:111
+msgid ""
+"Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray "
+"rectangle again..."
+msgstr ""
+"Panggil data raster itu lagi, beri nama rater tersebut dengan  :kbd:`DEM` "
+"seperti sebelumnya. DEM tersebut berupa kotak berwarna abu-abu lagi..."
+
+# c65b0e0a9b1c4373bf5299bb5c15202e
+#: ../../rasters/changing_symbology.rst:113
+msgid ""
+"Enable the tool you'll need by enabling :menuselection:`View --> Toolbars --"
+"> Raster`. These icons will appear in the interface:"
+msgstr ""
+"Aktifkan tool yang akan Anda butuhkan dengan mengaktifkan  :menuselection:"
+"`View --> Toolbars --> Raster`.  Ikon-ikon berikut akan muncul dalam "
+"antarmuka:"
+
+# 54abceb910d64d02b481b5d28af42f69
+#: ../../rasters/changing_symbology.rst:119
+msgid ""
+"The button on the right will stretch the minimum and maximum values to give "
+"you the best contrast in the local area that you're zoomed into. It's useful "
+"for large datasets. The button on the left will stretch  the minimum and "
+"maximum values to constant values across the whole image."
+msgstr ""
+"Tombol pada sisi kanan akan melebarkan nilai minimal dan maksimal untuk "
+"memberikan Anda kontras yang terbaik dalam wilayah lokal yang Anda perbesar "
+"(*zoom*). Hal tersebut berguna untuk dataset yang luas. Tombol pada sisi "
+"kiri akan melebarkan nilai minimal dan maksimal untuk membuat nilai-nilai "
+"pada seluruh citra menjadi konstan."
+
+# cfa2cb27c7c0418a9fe234738f4c1efe
+#: ../../rasters/changing_symbology.rst:124
+msgid ""
+"Click the button on the left (:guilabel:`Stretch Histogram to Full "
+"Dataset`). You'll see the data is now correctly represented as before!"
+msgstr ""
+"Klik tombol pada sisi kiri (:guilabel:`Stretch Histogram to Full Dataset`). "
+"Anda akan melihat  bahwa sekarang data telah direpresentasikan dengan benar "
+"seperti sebelumnya!"
+
+# 44e9efecc64041109f87b3c1b79f2967
+# efbbd0678a1a49cb8094ef231d115bb6
+# f2c8cb6d31fa41b58746cec135310c97
+#: ../../rasters/changing_symbology.rst:128
+#: ../../rasters/data_manipulation.rst:136
+#: ../../rasters/terrain_analysis.rst:286
+msgid "|IC|"
+msgstr "Kesimpulan"
+
+# 40dd1c0dc8f444d795efb3f2547de83c
+#: ../../rasters/changing_symbology.rst:130
+msgid ""
+"These are only the basic functions to get you started with raster symbology. "
+"QGIS also allows you many other options, such as symbolizing a layer using "
+"standard deviations, or representing different bands with different colors "
+"in a multispectral image."
+msgstr ""
+"Fungsi-fungsi di atas hanya merupakan fungsi-fungsi dasar bagi anda untuk "
+"memulai simbologi raster. QGIS juga menyediakan Anda banyak pilihan lain, "
+"seperti melakukan simbolisasi layer menggunakan standar deviasi, atau "
+"merepresentasikan band-band dengan warna-warna yang  berbeda dalam sebuah "
+"citra multispektral. "
+
+# 43e2390dc80b409f8e4f1cfae77c45e4
+#: ../../rasters/changing_symbology.rst:136
+msgid "Reference"
+msgstr "Referensi"
+
+# 122569e2513846659d17cc221cf260fe
+#: ../../rasters/changing_symbology.rst:138
+msgid ""
+"The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ <http://srtm."
+"csi.cgiar.org/>`_"
+msgstr ""
+"Dataset SRTM diperoleh dari `http://srtm.csi.cgiar.org/ <http://srtm.csi."
+"cgiar.org/>`_"
+
+# deee273e361a480687d44401562d39c3
+# c11760dd9a7c4be8a58b11898d276609
+# 4d31dd0e0cb84307ad27865aff614d8f
+#: ../../rasters/changing_symbology.rst:142
+#: ../../rasters/data_manipulation.rst:141
+#: ../../rasters/terrain_analysis.rst:293
+msgid "|WN|"
+msgstr "Apa selanjutnya?"
+
+# cbd5d95ee0a84eca83e46f809e79c00a
+#: ../../rasters/changing_symbology.rst:144
+msgid ""
+"Now that we can see our data displayed properly, let's investigate how we "
+"can analyze it further."
+msgstr ""
+"Sekarang kita akan melihat data kita telah ditampilkan dengan baik, mari "
+"teliti bagaimana kita dapat menganalisisnya lebih jauh."
+
+# 35885eef8ba4478e94ef6b3a1907cbe3
+#: ../../rasters/data_manipulation.rst:2
+msgid "|LS| Working with Raster Data"
+msgstr "Pelajaran: Bekerja dengan Data Raster"
+
+# 7f453d13c0044b9289e85cae2fbde432
+#: ../../rasters/data_manipulation.rst:4
+msgid ""
+"Raster data is quite different from vector data. Vector data has discrete "
+"features constructed out of vertices, and perhaps connected with lines and/"
+"or areas. Raster data, however, is like any image. Although it may portray "
+"various properties of objects in the real world, these objects don't exist "
+"as separate objects; rather, they are represented using pixels of various "
+"different color values."
+msgstr ""
+"Data raster sangat berbeda dari data vektor. Data vektor memiliki fitur  "
+"diskrit yang dibuat dari simpul (vertex), dan mungkin terhubung dengan garis "
+"dan  atau luasan. Meskipun begitu, data raster, adalah seperti gambar yang "
+"lain.  Meskipun raster dapat menggambarkan berbagai properti  dari objek di "
+"dunia nyata, objek-objek tersebut  bukan merupakan objek-objek yang "
+"terpisah, melainkan, mereka direpresentasikan  menggunakan pixel dari "
+"berbagai nilai warna yang berbeda."
+
+# 231bc450b29c47fc9cf92e75de7702ec
+#: ../../rasters/data_manipulation.rst:11
+msgid ""
+"During this module you're going to use raster data to supplement your "
+"existing GIS analysis."
+msgstr ""
+"Selama bekerja dengan modul ini, Anda akan menggunakan data raster untuk "
+"melengkapi analisis SIG yang ada."
+
+# 5eb153cf21c6489f8b3117405902f7a9
+#: ../../rasters/data_manipulation.rst:14
+msgid ""
+"**The goal for this lesson:** To learn how to work with raster data in the "
+"QGIS environment."
+msgstr ""
+"**Tujuan pelajaran ini:** Untuk mempelajari cara bekerja dengan data raster "
+"dalam QGIS."
+
+# eb80a7f2ed174643a2cea21ec9cd978d
+#: ../../rasters/data_manipulation.rst:18
+msgid "|basic| |FA| Loading Raster Data"
+msgstr "|basic| Ikuti bersama: Memuat Data Raster"
+
+# 923760ec1cb94ebfbca59086c1903589
+#: ../../rasters/data_manipulation.rst:20
+msgid "Open your :kbd:`analysis.qgs` map."
+msgstr "Buka peta :kbd:`analysis.qgs` Anda."
+
+# 0bd40a840b12454fb4597337d233b807
+#: ../../rasters/data_manipulation.rst:21
+msgid ""
+"Deactivate all the layers except the :guilabel:`solution` and :guilabel:"
+"`important_roads` layers."
+msgstr ""
+"Non-aktifkan semua layer kecuali layer  :guilabel:`solution` dan :guilabel:"
+"`important_roads`"
+
+# 850c188df7464c33ac437c444ac4b4a6
+#: ../../rasters/data_manipulation.rst:23
+msgid "Click on the :guilabel:`Load Raster Layer` button:"
+msgstr "Klik tombol  :guilabel:`Load Raster Layer` :"
+
+# 8d2715111ac94028bda5cccbf8e0385e
+#: ../../rasters/data_manipulation.rst:28
+msgid ""
+"The :guilabel:`Load Raster Layer` dialog will open. The data for this "
+"project is in :kbd:`exercise_data/rasters`."
+msgstr ""
+"Dialog  :guilabel:`Load Raster Layer` akan terbuka. Data untuk proyek ini "
+"berada dalam folder  :kbd:`exercise_data/rasters`."
+
+# 8ac14d3e637944c1942059e9da3a1149
+#: ../../rasters/data_manipulation.rst:31
+msgid ""
+"Either load them all in separately, or hold down :kbd:`ctrl` and click on "
+"all four of them in turn, then open them at the same time."
+msgstr ""
+"Muat data-data tersebut secara terpisah, atau tekan   :kbd:`ctrl` dan klik "
+"pada keempat data tersebut secara bergiliran, kemudian buka pada waktu yang "
+"bersamaan."
+
+# 7ff6d02b8d0b420784c3798e6e0e53e8
+#: ../../rasters/data_manipulation.rst:34
+msgid ""
+"The first thing you'll notice is that nothing seems to be happening in your "
+"map. Are the rasters not loading? Well, there they are in the :guilabel:"
+"`Layers list`, so obviously they did load. The problem is that they're not "
+"in the same projection. Luckily, we've already seen what to do in this "
+"situation."
+msgstr ""
+"Hal pertama yang akan Anda lihat adalah bahwa tidak ada yang tampak terjadi "
+"pada  peta Anda. Apakah raster tersebut tidak tampak di layar? Ya, data "
+"raster tersebut  berada di  :guilabel:`Layers list`, jadi jelas data "
+"tersebut telah terpanggil. Masalahnya adalah bahwa data raster tersebut  "
+"tidak dalam proyeksi yang sama. Untungnya, kita sudah mengerti  apa yang "
+"harus dilakukan dalam situasi ini."
+
+# 9b73f1926161400283fb5ddfa8b566e4
+#: ../../rasters/data_manipulation.rst:39
+msgid "Click on the :guilabel:`CRS Status` button:"
+msgstr "Klik pada tombol  :guilabel:`CRS Status`:"
+
+# c1f8a18f58464defbb997179bd53810e
+#: ../../rasters/data_manipulation.rst:44
+msgid "Enable \"on the fly\" reprojection."
+msgstr "Aktifkan proyeksi ulang \"on the fly\"."
+
+# 76ad809441904f42b3cc455544dea007
+#: ../../rasters/data_manipulation.rst:45
+msgid ""
+"Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM "
+"zone 33S`)."
+msgstr ""
+"Atur data raster tersebut dengan proyeksi yang sama seperti data Anda "
+"sebelumnya  (:kbd:`WGS 84 / UTM zone 33S`)."
+
+# 965b75f6803e42c89fd9b9077c1e6c7f
+#: ../../rasters/data_manipulation.rst:49
+msgid "The rasters should fit nicely:"
+msgstr "Data-data raster tersebut akan saling bersesuaian dengan baik:"
+
+# b0d40d8ceb224c0fbaf0b237817fb407
+#: ../../rasters/data_manipulation.rst:54
+msgid ""
+"There we have it - four aerial photographs covering our whole study area."
+msgstr ""
+"Kita telah memiliki 4 foto udara yang mancakup seluruh area study kita."
+
+# 83bbba2c873f4d21892e9c87258c8452
+#: ../../rasters/data_manipulation.rst:57
+msgid "|basic| |FA| Create a Virtual Raster"
+msgstr "|basic| Ikuti bersama :Membuat Raster virtual"
+
+# 4fca18d377194b4a8ae3431472799432
+#: ../../rasters/data_manipulation.rst:59
+msgid ""
+"Now as you can see from this, your solution layer lies across all four "
+"photographs. What this means is that you're going to have to work with four "
+"rasters all the time. That's not ideal; it would be better to have one file "
+"for one (composite) image, right?"
+msgstr ""
+"Sekarang seperti yang dapat Anda lihat, layer hasil kerja Anda terletak di "
+"keempat foto. Ini berarti bahwa Anda akan harus bekerja dengan empat raster "
+"sepanjang waktu. Hal tersebut  tidak ideal, akan lebih baik untuk memiliki "
+"satu file untuk satu (komposit) citra, bukan?"
+
+# 8f063e29ffa643f68459b4304af1291b
+#: ../../rasters/data_manipulation.rst:64
+msgid ""
+"Luckily, QGIS allows you to do exactly this, and without needing to actually "
+"create a new raster file, which could take up a lot of space. Instead, you "
+"can create a *Virtual Raster*. This is also often called a *Catalog*, which "
+"explains its function. It's not really a new raster. Rather, it's a way to "
+"organize your existing rasters into one catalog: one file for easy access."
+msgstr ""
+"Untungnya, QGIS memungkinkan Anda untuk melakukan hal tersebut, dan tanpa "
+"perlu untuk membuat file raster baru, yang dapat mengambil banyak ruang "
+"memori. Alternatif lain, Anda dapat membuat sebuah *raster virtual*. Yang  "
+"juga sering disebut *Catalog*, yang menjelaskan fungsinya. Catalog bukan "
+"benar-benar sebuah raster baru. Tetapi, ini adalah cara untuk mengatur "
+"raster yang ada ke dalam satu katalog: satu file untuk akses yang mudah."
+
+# 2a6a0352fa41404cb871f0f0e0b91cdc
+#: ../../rasters/data_manipulation.rst:70
+msgid "To make a catalog:"
+msgstr "Untuk membuat katalog:"
+
+# b17097beefff4adc91c7b857e6a3c249
+#: ../../rasters/data_manipulation.rst:72
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Miscellaneous --> Build "
+"Virtual Raster (Catalog)`."
+msgstr ""
+"Klik pada menu  :menuselection:`Raster --> Miscellaneous --> Build Virtual "
+"Raster (Catalog)`."
+
+# 0d15838f7a0d4239ad7dcae2c7de1dd3
+#: ../../rasters/data_manipulation.rst:74
+msgid ""
+"In the dialog that appears, check the box next to :guilabel:`Use visible "
+"raster layers for input`."
+msgstr ""
+"Pada dialog yang muncul, tekan tombol kotak di sebelah :guilabel:`Use "
+"visible raster layers for input`."
+
+# 6ce86db8d4e84065adb6a0aa524beea6
+#: ../../rasters/data_manipulation.rst:76
+msgid ""
+"Anter :kbd:`exercise_data/residential_development` as the output location."
+msgstr ""
+"Pilih  :kbd:`exercise_data/residential_development` sebagai lokasi "
+"penyimpanan hasil."
+
+# a6a00b57c9544fa28a4d0bf22ca0741f
+#: ../../rasters/data_manipulation.rst:77
+msgid "Enter :kbd:`aerial_photos.vrt` as the file name."
+msgstr "Pilih :kbd:`aerial_photos.vrt` sebagai nama filenya."
+
+# b363e246fc1848e185f75043a17fe867
+#: ../../rasters/data_manipulation.rst:78
+msgid "Check the :guilabel:`Load into canvas when finished` button."
+msgstr "Tekan tombol :guilabel:`Load into canvas when finished`."
+
+# 73a0dcd6b6da46ca81e20a9849bff26b
+#: ../../rasters/data_manipulation.rst:80
+msgid ""
+"Notice the text field below. What this dialog is actually doing is that it's "
+"writing that text for you. It's a long command that QGIS is going to run."
+msgstr ""
+"Perhatikan field teks di bawah. Apa yang dilakukan oleh dialog ini adalah "
+"menulis teks untuk Anda. Hal tersebut merupakan perintah yang panjang yang "
+"akan dikerjakan oleh QGIS."
+
+# 76ef4f96dc4444edb4be4f34ffb6b54b
+#: ../../rasters/data_manipulation.rst:83
+msgid ""
+"|hard| Keep in mind that the command text is editable, so you can customize "
+"the command further if preferred. Search online for the initial command (in "
+"this case, :kbd:`gdalbuildvrt`) for help on the syntax."
+msgstr ""
+"|hard| Ingatlah bahwa teks perintah dapat diedit, jadi Anda dapat "
+"mengkustomisasi  perintah lebih jauh jika diinginkan. Carilah perintah awal "
+"( pada kasus ini, :kbd:`gdalbuildvrt`) untuk membantu dalam syntax secara "
+"online."
+
+# 91a3d69064014fbf9f659f1787069c8b
+#: ../../rasters/data_manipulation.rst:87
+msgid "Click :guilabel:`OK` to run the command."
+msgstr "Klik  :guilabel:`OK` untuk menjalankan perintah."
+
+# cef1ee7b5e584c61bf5139da9db283d1
+#: ../../rasters/data_manipulation.rst:89
+msgid ""
+"It may take a while to complete. When it's done, it will tell you so with a "
+"message box."
+msgstr ""
+"Perlu beberapa waktu untuk menyelesaikan itu. Ketika sudah selesai, Anda "
+"akan memperoleh sebuah kotak pesan."
+
+# 1707588cafda42b7ba4706a1212633f8
+#: ../../rasters/data_manipulation.rst:92
+msgid "Click :guilabel:`OK` to chase the message away."
+msgstr "Klik  :guilabel:`OK` untuk menutup pesan ini."
+
+# b6c293a1f4cf4274b127878e6f6fc076
+#: ../../rasters/data_manipulation.rst:93
+msgid ""
+"Click :guilabel:`Close` on the :guilabel:`Build Virtual Raster (Catalog)` "
+"dialog.  (Don't click :guilabel:`OK` again, otherwise it's going to start "
+"running that command again!)"
+msgstr ""
+"Klik  :guilabel:`Close` pada dialog :guilabel:`Build Virtual Raster (Catalog)"
+"`. (Jangan mengklik  :guilabel:`OK` lagi, karena hal tersebut akan "
+"menjalankan perintah itu lagi!)"
+
+# 7a232786226248e6975183e05388d336
+#: ../../rasters/data_manipulation.rst:96
+msgid ""
+"You can now remove the original four rasters from the :guilabel:`Layers "
+"list`."
+msgstr ""
+"Sekarang Anda dapat menghapus 4 raster asli dari  :guilabel:`Layers list`."
+
+# e4614a23007b4e0db509811cd22f1c36
+#: ../../rasters/data_manipulation.rst:98
+msgid ""
+"If necessary, click and drag the new :guilabel:`aerial_photos` raster "
+"catalog layer to the bottom of the :guilabel:`Layers list` so that the other "
+"activated layers become visible."
+msgstr ""
+"Jika perlu, klik dan geser layer katalog raster  :guilabel:`aerial_photos` "
+"yang baru ke bagian bawah dari :guilabel:`Layers list` sehingga* layer-"
+"layer* lain yang aktif dapat terlihat."
+
+# 158c1fab8f2d43eb97fe32e86d39c545
+#: ../../rasters/data_manipulation.rst:103
+msgid "|hard| Transforming Raster Data"
+msgstr "|hard| Mentransformasi Data Raster"
+
+# a84fde266cc945d98206cb40e468dee8
+#: ../../rasters/data_manipulation.rst:105
+msgid ""
+"The above methods allow you to virtually merge datasets using a catalog, and "
+"to reproject them \"on the fly\". However, if you are setting up data that "
+"you'll be using for quite a while, it may be more efficient to create new "
+"rasters that are already merged and reprojected. This improves performance "
+"while using the rasters in a map, but it may take some time to set up "
+"initially."
+msgstr ""
+"Metode-metode di atas memungkinkan Anda untuk menggabungkan dataset secara "
+"virtual menggunakan sebuah katalog, dan melakukan proyeksi ulang “*on the "
+"fly*”. Meskipun begitu, jika Anda mengatur data yang akan Anda gunakan untuk "
+"beberapa waktu, akan lebih efisien jika membuat raster baru yang telah "
+"tergabung dan terproyeksi. Hal tersebut akan meningkatkan performa ketika "
+"sedang menggunakan data raster dalam sebuah peta, tetapi mungkin membutuhkan "
+"beberapa waktu untuk pengaturan awal. "
+
+# 0a61899f18fe4dac9e00e50d32b04a2e
+#: ../../rasters/data_manipulation.rst:112
+msgid "Reprojecting rasters"
+msgstr "Melakukan proyeksi ulang data raster"
+
+# c6cb93379acf408a9b875bba95f422c4
+#: ../../rasters/data_manipulation.rst:114
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Projection --> Warp "
+"(Reproject)`."
+msgstr ""
+"Klik item menu  :menuselection:`Raster --> Projection --> Warp (Reproject)`."
+
+# 6a918fd77bec4556abd39a0bc1200dc0
+#: ../../rasters/data_manipulation.rst:117
+msgid ""
+"Note that this tool features a handy batch option for reprojecting the "
+"contents of whole directories. You can also reproject virtual rasters "
+"(catalogs), as well as enabling a multithreaded processing mode."
+msgstr ""
+"Catatlah bahwa tool ini merupakan sebuah opsi perintah yang mudah untuk "
+"melakukan proyeksi ulang isi dari seluruh direktori. Anda juga dapat "
+"melakukan proyeksi ulang raster virtual (katalog), begitu juga dapat "
+"dilakukannya mode pemrosesan berjenjang."
+
+# 8c82a82d6df242b39b54b200ccdcfcdd
+#: ../../rasters/data_manipulation.rst:122
+msgid "Merging rasters"
+msgstr "Menggabungkan data raster"
+
+# 9ab60b32d69c4d679360ce5f7b87be31
+#: ../../rasters/data_manipulation.rst:124
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Miscellaneous --> Merge`."
+msgstr "Klik item menu  :menuselection:`Raster --> Miscellaneous --> Merge`."
+
+# 34a4814061774ce985f863e34e96c1e3
+#: ../../rasters/data_manipulation.rst:126
+msgid ""
+"You can choose to process entire directories instead of single files, giving "
+"you a very useful built-in batch processing capability. You can specify a "
+"virtual raster as input file, too, and all of the rasters that it consists "
+"of will be processed."
+msgstr ""
+"Anda dapat memilih untuk memproses seluruh direktori daripada hanya file-"
+"file tunggal, yang memberikan Anda kemampuan paket batch processing yang "
+"sangat berguna. Anda juga dapat menentukan raster virtual sebagai file "
+"input, dan semua raster yang ada akan diproses."
+
+# 054a0cb1f50046e8afe2ba1bc997d904
+#: ../../rasters/data_manipulation.rst:131
+msgid ""
+"You can also add your own command line options using the :guilabel:`Creation "
+"Options` checkbox and list. This only applies if you have knowledge of the "
+"GDAL library's operation."
+msgstr ""
+"Anda juga dapat menambahkan pilihan perintah Anda sendiri menggunakan "
+"checkbox dan daftar :guilabel:`Creation Options` . Hal tersebut hanya bisa "
+"diterpkan jika Anda mempunyai pengetahuan operasi *GDAL Library*. "
+
+# 0e4b9ff461a446b5a8b2e9242f6fd800
+#: ../../rasters/data_manipulation.rst:138
+msgid "QGIS makes it easy to include raster data into your existing projects."
+msgstr ""
+"QGIS mempermudah untuk memasukkan data raster ke dalam proyek yang sudah ada."
+
+# 5bb9c25ad1f74dfab82458dc7f502fae
+#: ../../rasters/data_manipulation.rst:143
+msgid ""
+"Next, we'll use raster data that isn't aerial imagery, and see how "
+"symbolization is useful in the case of rasters as well!"
+msgstr ""
+"Selanjutnya, kita akan menggunakan data raster yang bukan foto udara, dan "
+"melihat bagaimana simbolisasi berguna pada kasus data raster juga!"
+
+# c70d894200b54466b3ee214c5bc0dc70
+#: ../../rasters/index.rst:3
+msgid "|MOD| Rasters"
+msgstr "Modul: Raster"
+
+# 7b0304bf0d2a4297967974afd01ef617
+#: ../../rasters/index.rst:5
+msgid ""
+"We've used rasters for digitizing before, but raster data can also be used "
+"directly. In this module, you'll see how it's done in QGIS."
+msgstr ""
+"Kita telah menggunakan raster untuk digitasi sebelumnya, tetapi data raster "
+"juga bisa digunakan secara langsung. Dalam modul ini, Anda akan melihat "
+"bagaimana hal tersebut dapat dilakukan dalam QGIS."
+
+# 208c0669d3d440b6afc6939d8a8bc2ae
+#: ../../rasters/terrain_analysis.rst:2
+msgid "|LS| Terrain Analysis"
+msgstr "Pelajaran: Analisis Terain"
+
+# 8767200b27be4c579c559f2d8d582114
+#: ../../rasters/terrain_analysis.rst:4
+msgid ""
+"Certain types of rasters allow you to gain more insight into the terrain "
+"that they represent. Digital Elevation Models (DEMs) are particularly useful "
+"in this regard. In this lesson you will use terrain analysis tools to find "
+"out more about the study area for the proposed residential development from "
+"earlier."
+msgstr ""
+"Beberapa jenis raster tertentu memungkinkan Anda untuk mendapatkan "
+"informasi  yang lebih baik mengenai terain yang direpresentasikannya. Model "
+"Elevasi Digital (DEM) sangat berguna dalam hal ini. Dalam pelajaran ini Anda "
+"akan menggunakan tool Terrain Analysis untuk mengetahui lebih lanjut tentang "
+"area  studi untuk pengembangan perumahan yang diusulkan dari sebelumnya."
+
+# 3639786b223e4d1eb4b246403d4235d4
+#: ../../rasters/terrain_analysis.rst:9
+msgid ""
+"**The goal for this lesson:** To use terrain analysis tools for more "
+"information on terrain."
+msgstr ""
+"**Tujuan untuk pelajaran ini:** Untuk menggunakan *tool analysis terrain*  "
+"untuk informasi lebih lanjut tentang terain."
+
+# 2c5adfda22fd4d0e921bababde92ed4e
+#: ../../rasters/terrain_analysis.rst:13
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|basic| Ikuti bersama :Menghitung Hillshade"
+
+# c2c3c0cef1b94741a487a06d244f01fa
+#: ../../rasters/terrain_analysis.rst:15
+msgid ""
+"The DEM you have on your map right now does show you the elevation of the "
+"terrain, but it can sometimes seem a little abstract. It contains all the 3D "
+"information about the terrain that you need, but it doesn't look like a 3D "
+"object. To get a better look at the terrain, it is possible to calculate a "
+"*hillshade*, which is a raster that maps the terrain using light and shadow "
+"to create a 3D-looking image."
+msgstr ""
+"DEM yang Anda miliki dalam peta Anda sekarang menunjukkan elevasi dari "
+"terain, tetapi Dem tersebut kadang juga terlihat sedikit abstrak. DEM "
+"mengandung semua informasi 3D tentang terain yang Anda butuhkan, tetapi DEM "
+"tersebut tidak tampak seperti obyek 3D. Untuk mendapatkan tampilan DEM yang "
+"lebih baik, hal ini dapat dimungkinkan dengan menghitung *hillshade*, "
+"merupakan data raster yang memetakan terain menggunakan sinar dan bayangan "
+"yang menghasilkan gambar kenampakan 3D."
+
+# 8de81cf81b1649c1be61e26bdb3eacef
+#: ../../rasters/terrain_analysis.rst:22
+msgid ""
+"To work with DEMs, you should use QGIS' all-in-one :guilabel:`DEM (Terrain "
+"models)` analysis tool."
+msgstr ""
+"Untuk bekerja dengan DEM, Anda harus menggunakan tool analisis :guilabel:"
+"`DEM (Terrain models)` di QGIS."
+
+# c52b8235360c41c18c81b84b5bd79aaf
+#: ../../rasters/terrain_analysis.rst:25
+msgid ""
+"Click on the menu item :menuselection:`Raster --> Analysis --> DEM (Terrain "
+"models)`."
+msgstr ""
+"Klik item menu  :menuselection:`Raster --> Analysis --> DEM (Terrain models)"
+"`."
+
+# 751eaa093f774c9ea16ccb8e08c1a61b
+#: ../../rasters/terrain_analysis.rst:27
+msgid ""
+"In the dialog that appears, ensure that the :guilabel:`Input file` is the :"
+"guilabel:`DEM` layer."
+msgstr ""
+"Pada kotak dialog yang akan muncul, pastikan bahwa :guilabel:`Input file` "
+"nya adalah layer  :guilabel:`DEM`."
+
+# b0f4eb868262410f9d55fcb0e69cf168
+#: ../../rasters/terrain_analysis.rst:29
+msgid ""
+"Set the :guilabel:`Output file` to :kbd:`hillshade.tif` in the directory :"
+"kbd:`exercise_data/residential_development`."
+msgstr ""
+"Atur  :guilabel:`Output file` menjadi :kbd:`hillshade.tif` pada direktori  :"
+"kbd:`exercise_data/residential_development`."
+
+# d2c7cff1c2ea4cb69b0ea904dde58506
+#: ../../rasters/terrain_analysis.rst:31
+msgid "Check the box next to :guilabel:`Load into canvas when finished`."
+msgstr "Pilih kotak di sebelah :guilabel:`Load into canvas when finished`."
+
+# bc12f571e5c145a1a46191c46f699150
+#: ../../rasters/terrain_analysis.rst:32
+msgid "You may leave all the other options unchanged."
+msgstr "Anda boleh mengabaikan semua pilihan lain tanpa merubahnya."
+
+# 10ca8b2283c941ddadabbf9568d55669
+#: ../../rasters/terrain_analysis.rst:33
+msgid "Click :guilabel:`OK` to generate the hillshade."
+msgstr "Klik :guilabel:`OK` untuk membentuk hillshade."
+
+# 5ea6b0bcad5e45b3b35dd650ad4e8c31
+#: ../../rasters/terrain_analysis.rst:34
+msgid ""
+"When it tells you that processing is completed, click :guilabel:`OK` on the "
+"message to get rid of it."
+msgstr ""
+"Ketika dialog memberitahu Anda bahwa prosesnya telah selesai, klik  :"
+"guilabel:`OK` pada pesan untuk mengabaikannya. "
+
+# 26f0f6ae1337473496a26b0fe77556dd
+#: ../../rasters/terrain_analysis.rst:36
+msgid ""
+"Click :guilabel:`Close` on the main :guilabel:`DEM (Terrain models)` dialog."
+msgstr ""
+"Klik  :guilabel:`Close` pada kotak dialog  :guilabel:`DEM (Terrain models)`."
+
+# 279daad2178640bba047e9ad8f0d2782
+#: ../../rasters/terrain_analysis.rst:38
+msgid ""
+"You will now have a new layer called :guilabel:`hillshade` that looks like "
+"this:"
+msgstr ""
+"Sekarang Anda telah mempunyai layer baru yang bernama  :guilabel:`hillshade` "
+"dengan tampilan seperti ini:"
+
+# a11e3dbf66374a5986601d3dbc06b0d0
+#: ../../rasters/terrain_analysis.rst:44
+msgid ""
+"That looks nice and 3D, but can we improve on this? On its own, the "
+"hillshade looks like a plaster cast. Can't we use it together with our "
+"other, more colorful rasters somehow? Of course we can, by using the "
+"hillshade as an overlay."
+msgstr ""
+"Tampilannya terlihat bagus dan 3D, tetapi apakah kita bisa membuatnya lebih "
+"baik lagi? Hillshade itu sendiri tampak seperti sebuah gips. Tidak bisakah "
+"kita menggunakannya bersama-sama dengan data kita yang lain, misalnya raster "
+"yang lebih berwarna-warni? Tentu saja kita bisa, dengan menggunakan "
+"hillshade sebagai overlay."
+
+# 5308deee978e41359faff181b361fa35
+#: ../../rasters/terrain_analysis.rst:50
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr "|basic| Ikuti bersama :Menggunakan Hillshade sebagai Overlay"
+
+# 5736885b72e54d97b301678d3a3b7343
+#: ../../rasters/terrain_analysis.rst:52
+msgid ""
+"A hillshade can provide very useful information about the sunlight at a "
+"given time of day. But it can also be used for aesthetic purposes, to make "
+"the map look better. The key to this is setting the hillshade to being "
+"mostly transparent."
+msgstr ""
+"Hillshade dapat memberikan informasi yang sangat berguna tentang sinar "
+"matahari pada waktu tertentu dalam sehari. Tetapi juga dapat digunakan untuk "
+"tujuan estetika, untuk membuat peta terlihat lebih baik. Kuncinya adalah "
+"dengan mengatur  hillshade agar lebih transparan."
+
+# 0b3c0ccf241146ca9f379cd9b729cdb9
+#: ../../rasters/terrain_analysis.rst:57
+msgid ""
+"Change the symbology of the original :guilabel:`DEM` to use the :guilabel:"
+"`Pseudocolor` scheme."
+msgstr ""
+"Ubah simbologi dari  :guilabel:`DEM`  asli dengan menggunakan skema :"
+"guilabel:`Pseudocolor`."
+
+# 81c13d982231401b953803f4fcad190f
+#: ../../rasters/terrain_analysis.rst:59
+msgid ""
+"Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade` "
+"layers."
+msgstr ""
+"Sembunyikan semua layer kecuali layer  :guilabel:`DEM` dan layer  :guilabel:"
+"`hillshade`."
+
+# a9d7cbe63fb245d5a5f433bbb7691668
+#: ../../rasters/terrain_analysis.rst:61
+msgid ""
+"Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade` "
+"layer in the :guilabel:`Layers list`. :guilabel:`Control rendering order` "
+"(beneath the list) should be checked as well."
+msgstr ""
+"Klik dan geser  :guilabel:`DEM` ke bawah layer :guilabel:`hillshade` dalam  :"
+"guilabel:`Layers list`. :guilabel:`Control rendering order` (di bawah "
+"daftar) harus dipilih juga."
+
+# f5c0b86dbb4e4de9b7f271ad55283ff0
+#: ../../rasters/terrain_analysis.rst:64
+msgid "Set the :guilabel:`hillshade` layer to be transparent."
+msgstr "Atur layer  :guilabel:`hillshade` menjadi transparan."
+
+# 820300b1b8b24d5f8edbc3e7b2913189
+#: ../../rasters/terrain_analysis.rst:65
+msgid ""
+"Open its :guilabel:`Layer Properties` and go to the :guilabel:`Transparency` "
+"tab."
+msgstr ""
+"Buka  :guilabel:`Layer Properties` dan klik pada tab :guilabel:"
+"`Transparency`."
+
+# 73e357610ae94fe492ac5b6aef0500ef
+#: ../../rasters/terrain_analysis.rst:67
+msgid "Set the :guilabel:`Global transparency` to :kbd:`50%`:"
+msgstr "Atur :guilabel:`Global transparency` menjadi  to :kbd:`50%` :"
+
+# 84877a11b32c4f8cb3459eeca0f2a420
+#: ../../rasters/terrain_analysis.rst:68
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get "
+"a result like this:"
+msgstr ""
+"Klik OK pada dialog  :guilabel:`Layer Properties`. Anda akan mendapatkan "
+"hasil seperti ini:"
+
+# b2369c52ab37455b88689fd17005603e
+#: ../../rasters/terrain_analysis.rst:74
+msgid ""
+"Switch the :guilabel:`hillshade` layer off and back on in the :guilabel:"
+"`Layers list` to see the difference it makes."
+msgstr ""
+"Tukarlah layer  :guilabel:`hillshade` bolak balik antara aktif dan tidak "
+"aktif dalam  :guilabel:`Layers list` untuk melihat perbedaan yang dihasilkan."
+
+# 2a06f92fde1243c09502e8460188644a
+#: ../../rasters/terrain_analysis.rst:77
+msgid ""
+"Using a hillshade in this way, it's possible to enhance the topography of "
+"the landscape. If the effect doesn't seem strong enough to you, you can "
+"change the transparency of the :guilabel:`hillshade` layer; but of course, "
+"the brighter the hillshade becomes, the dimmer the colors behind it will be. "
+"You will need to find a balance that works for you."
+msgstr ""
+"Dengan menggunakan hillshade dengan cara ini, akan memungkinkan untuk "
+"meningkatkan topografi dari bentang alam. Jika pengaruhnya tidak terlihat "
+"cukup kuat bagi Anda,  Anda dapat mengubah transparansi dari layer  :"
+"guilabel:`hillshade`; tetapi tentu saja semakin terang hillshade, maka warna "
+"di belakangnya akan semakin redup. Anda harus  menemukan keseimbangan yang "
+"pas untuk Anda. "
+
+# 21c45f05171b4e61a0cacde8435c45cb
+#: ../../rasters/terrain_analysis.rst:83
+msgid "Remember to save your map when you are done."
+msgstr "Ingat untuk menyimpan peta Anda ketika telah selesai."
+
+# f4b27dc2c77d4962b900da54e1dd99c9
+#: ../../rasters/terrain_analysis.rst:92
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderate| Ikuti bersama: Menghitung Slope"
+
+# 327638c8646f4f80bc73893d365e0d11
+#: ../../rasters/terrain_analysis.rst:94
+msgid ""
+"Another useful thing to know about the terrain is how steep it is. If, as in "
+"our analysis, you want to build houses on the land there, then you need land "
+"that is relatively flat."
+msgstr ""
+"Hal lain yang berguna untuk diketahui tentang terain adalah seberapa curam "
+"sebuah terain. Jika, sebagai analisis kita, Anda ingin membangun rumah pada "
+"tanah di atas terain, maka Anda membutuhkan tanah yang relatif datar."
+
+# 9cc65aa75ce049e19e2400e36191e09e
+#: ../../rasters/terrain_analysis.rst:98
+msgid ""
+"To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM "
+"(Terain models)` tool."
+msgstr ""
+"Untuk melakukannya, Anda perlu menggunakan mode  :guilabel:`Slope` pada "
+"tool :guilabel:`DEM (Terain models)`."
+
+# 52cb32133d634a9d882ad6ef8235c635
+#: ../../rasters/terrain_analysis.rst:101
+msgid "Open the tool as before."
+msgstr "Buka tool seperti sebelumnya."
+
+# 49577f520ec14c92b65990381201d068
+#: ../../rasters/terrain_analysis.rst:102
+msgid "Select the :guilabel:`Mode` option :guilabel:`Slope`:"
+msgstr "Pilih  :guilabel:`Mode` pilih  :guilabel:`Slope`:"
+
+# aa2326c00a74478a981732a45e04529e
+#: ../../rasters/terrain_analysis.rst:107
+msgid ""
+"Set the save location to :kbd:`exercise_data/residential_development/slope."
+"tif`"
+msgstr ""
+"Atur lokasi penyimpanan ke dalam folder :kbd:`exercise_data/"
+"residential_development/slope.tif`"
+
+# 04a45cad2f204b48b4e40cf112783df0
+#: ../../rasters/terrain_analysis.rst:109
+msgid "Enable the :guilabel:`Load into canvas...` checkbox."
+msgstr "Aktifkan kotak centang  :guilabel:`Load into canvas...` ."
+
+# 16e6fffda7b64673b70189278b9f104b
+#: ../../rasters/terrain_analysis.rst:110
+msgid ""
+"Click :guilabel:`OK` and close the dialog when processing is complete. "
+"You'll see a new raster loaded into your map."
+msgstr ""
+"Klik  :guilabel:`OK` dan tutup dialog ketika proses telah selesai. Anda akan "
+"melihat raster baru yang dimuat ke dalam peta Anda. "
+
+# 5b3b600e709e47d1922aed37653d9056
+#: ../../rasters/terrain_analysis.rst:112
+msgid ""
+"With the new raster selected in the :guilabel:`Layers list`, click the :"
+"guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the "
+"slope of the terrain, with black pixels being flat terrain and white pixels, "
+"steep terrain:"
+msgstr ""
+"Dengan raster baru yang terpilih dalam  :guilabel:`Layers list`, klik "
+"tombol :guilabel:`Stretch Histogram to Full Dataset` . Sekarang Anda akan "
+"melihat slope dari terain, dengan piksel yang berwarna hitam yang "
+"menggambarkan  terain yang datar dan piksel berwarna putih menggambarkan "
+"terain yang curam:"
+
+# 6e474e5414b44e9cb3ff112a515cdfc5
+#: ../../rasters/terrain_analysis.rst:123
+msgid "|moderate| |TY| calculating the aspect"
+msgstr "|moderate| Coba sendiri... Menghitung Aspect"
+
+# 5f2a6f452a4544ed9e617cb195562a4b
+#: ../../rasters/terrain_analysis.rst:125
+msgid ""
+"The *aspect* of terrain refers to the direction it's facing in. Since this "
+"study is taking place in the Southern Hemisphere, properties should ideally "
+"be built on a north-facing slope so that they can remain in the sunlight."
+msgstr ""
+"*Aspect* dari terain mengacu kepada ke mana terrain tersebut menghadap. "
+"Karena studi ini berlokasi di lintang selatan, bangunan idealnya harus "
+"dibangun pada slope yang menghadap ke utara sehingga mereka dapat memperoleh "
+"sinar matahari."
+
+# 8dcd435bf2c14a11bbd2cd16fd8e7152
+#: ../../rasters/terrain_analysis.rst:129
+msgid ""
+"Use the :guilabel:`Aspect` mode of the :guilabel:`DEM (Terain models)` tool "
+"to calculate the aspect of the terrain."
+msgstr ""
+"Gunakan mode  :guilabel:`Aspect` dalam *tool*  :guilabel:`DEM (Terain models)"
+"` untuk menghting aspect dari terain."
+
+# d05f6d93d9904a1189a98e29a00deeb9
+#: ../../rasters/terrain_analysis.rst:132
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`Periksa hasil Anda  <raster-analysis-1>`"
+
+# 862da5152d2046a49c0cea7f3495b427
+#: ../../rasters/terrain_analysis.rst:135
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderate| Ikuti bersama : Menggunakan raster calculator"
+
+# ef66030db6794d758c1930a75f6ec498
+#: ../../rasters/terrain_analysis.rst:137
+msgid ""
+"Think back to the residential property development problem, which we last "
+"addressed in the *Vector Analysis* lesson. So far, you've identified several "
+"farms that would be suitable, but without taking the terrain into account. "
+"Let's say that an ideal farm for development needs to have areas on it that "
+"are north-facing, and with a slope of less than five degrees. But if the "
+"slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr ""
+"Berpikirlah kembali ke permasalahan pengembangan properti perumahan, yang "
+"terakhir kita bahas dalam pelajaran *Analisis Vector*. Sejauh ini, Anda "
+"telah mengidentifikasi beberapa pertanian  yang akan cocok, tapi tanpa "
+"mempertimbangkan terain ke dalam kriteria. Katakanlah sebuah pertanian yang  "
+"ideal untuk pembangunan perlu memiliki area di atasnya yang menghadap utara, "
+"dan dengan kemiringan (slope) kurang dari lima derajat. Tetapi jika lereng "
+"kurang dari 2 derajat, maka factor aspek tidak menjadi masalah."
+
+# adddd7fa3b2d4923a9e6d299167353a1
+#: ../../rasters/terrain_analysis.rst:144
+msgid ""
+"Fortunately, you already have rasters showing you the slope as well as the "
+"aspect, but you have no way of knowing where both conditions are satisfied "
+"at once. How could this analysis be done?"
+msgstr ""
+"Untungnya, Anda sudah memiliki raster yang menunjukkan kepada Anda sebuah "
+"slope serta aspek, tetapi Anda tidak memiliki cara untuk mengetahui lokasi "
+"di mana kedua kondisi tersebut dapat terpenuhi semuanya. Bagaimana analisis "
+"ini dapat dilakukan?"
+
+# b46303de7e504738983d4b9358871956
+#: ../../rasters/terrain_analysis.rst:148
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "Jawabannya adalah degan :guilabel:`Raster calculator`."
+
+# 22f548b71b92407cbd659dbbb92a6c47
+#: ../../rasters/terrain_analysis.rst:150
+msgid ""
+"Click on :menuselection:`Raster > Raster calculator...` to start this tool."
+msgstr ""
+"Klik  :menuselection:`Raster > Raster calculator...` untuk memulai tool ini."
+
+# ec45a321905e445a8b65a4a2f5643475
+#: ../../rasters/terrain_analysis.rst:151
+msgid ""
+"To make use of the :guilabel:`aspect` dataset, double-click on the item :"
+"guilabel:`aspect@1` in the :guilabel:`Raster bands` list on the left. It "
+"will appear in the :guilabel:`Raster calculator expression` text field below."
+msgstr ""
+"Untuk memanfaatkan dataset  :guilabel:`aspect`, klik dua kali pada item  :"
+"guilabel:`aspect@1` pada daftar :guilabel:`Raster bands` pada sisi kiri. "
+"Maka akan muncul field teks  :guilabel:`Raster calculator expression` di "
+"bawah."
+
+# 26e572d3f644403d85357a767463da9c
+#: ../../rasters/terrain_analysis.rst:155
+msgid ""
+"North is at 0 (zero) degrees, so for the terrain to face north, its aspect "
+"needs to be greater than 270 degrees and less than 90 degrees."
+msgstr ""
+"Utara berada pada 0 derajat, sehingga untuk terain yang menghadap utara, "
+"aspeknya harus lebih besar dari 270 derajat dan kurang dari 90 derajat."
+
+# a3ff5303118e4805b13b3211fabac26d
+#: ../../rasters/terrain_analysis.rst:158
+msgid ""
+"In the :guilabel:`Raster calculator expression` field, enter this expression:"
+msgstr ""
+"Dalam field  :guilabel:`Raster calculator expression`, masukkan ekspresi "
+"berikut:"
+
+# df89fc05583b490cbc97459745d0074c
+#: ../../rasters/terrain_analysis.rst:160
+msgid ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+msgstr ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+
+# 97c867b755934cfdb643ba39364f36f0
+#: ../../rasters/terrain_analysis.rst:162
+msgid ""
+"Set the output file to :kbd:`aspect_north.tif` in the directory :kbd:"
+"`exercise_data/residential_development/`."
+msgstr ""
+"Atur file hasilnya dengan nama  :kbd:`aspect_north.tif` pada direktori  :kbd:"
+"`exercise_data/residential_development/`."
+
+# 02e564e7782d43f5851979a581f9a0c4
+#: ../../rasters/terrain_analysis.rst:164
+msgid "Ensure that the box :guilabel:`Add result to project` is checked."
+msgstr "Pastikan kotak  :guilabel:`Add result to project` sudah terpilih."
+
+# 30bf98c5041649ebb71479d2f8541f79
+#: ../../rasters/terrain_analysis.rst:165
+msgid "Click :guilabel:`OK` to begin processing."
+msgstr "Klik  :guilabel:`OK` untuk memulai proses."
+
+# 1a4e555d48ec4d58a0ac9c9893046a26
+#: ../../rasters/terrain_analysis.rst:170
+msgid "Your result will be this:"
+msgstr "Hasil Anda akan seperti berikut:"
+
+# 32e2dd196f3041a0918e0f95717cd21a
+#: ../../rasters/terrain_analysis.rst:179
+msgid "|moderate| |TY|"
+msgstr "|moderate| Coba sendiri..."
+
+# c47eef9e46fc461c8cc259e355ee7ad8
+#: ../../rasters/terrain_analysis.rst:181
+msgid ""
+"Now that you've done the aspect, create two separate new analyses of the :"
+"guilabel:`DEM` layer."
+msgstr ""
+"Sekarang Anda telah selesai dengan aspect, buatlah dua analisis baru yang "
+"terpisah dari layer  :guilabel:`DEM`."
+
+# 4c281a10b4ce48d0b9230d7fb68eb25f
+#: ../../rasters/terrain_analysis.rst:184
+msgid ""
+"The first will be to identify all areas where the slope is less than or "
+"equal to :kbd:`2` degrees."
+msgstr ""
+"Analisis pertama adalah untuk mengidentifikasi semua area dimana kemiringan "
+"(slope) kurang dari atau sema dengan  :kbd:`2` derajat."
+
+# 23673d7a38944a378342584e9191a8c8
+#: ../../rasters/terrain_analysis.rst:186
+msgid ""
+"The second is similar, but the slope should be less than or equal to :kbd:"
+"`5` degrees."
+msgstr ""
+"Analisis yang kedua sama, tetapi slopenya harus kurang dari atau sama "
+"dengan :kbd:`5` derajat."
+
+# 67160490b4704206b733478768a8f010
+#: ../../rasters/terrain_analysis.rst:188
+msgid ""
+"Save them under :kbd:`exercise_data/residential_development/` as :kbd:"
+"`slope_lte2.tif` and :kbd:`slope_lte5.tif`."
+msgstr ""
+"Simpan dua analisis tersebut dalam folder   :kbd:`exercise_data/"
+"residential_development/`  sebagai  :kbd:`slope_lte2.tif` and :kbd:"
+"`slope_lte5.tif`."
+
+# b67b43af6e524266a0ed0dc2011c15ea
+#: ../../rasters/terrain_analysis.rst:191
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`Periksa hasil Anda  <raster-analysis-2>`"
+
+# 9fddb12294974e47be3b296962c2519d
+#: ../../rasters/terrain_analysis.rst:195
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderate| Ikuti Bersama : Mengkombinasikan  hasil analisis raster"
+
+# 92ab37d9bc4349bc9e137edb91a7a8f9
+#: ../../rasters/terrain_analysis.rst:197
+msgid "Now you have three new analysis rasters of the :guilabel:`DEM` layer:"
+msgstr ""
+"Sekarang Anda memiliki tiga raster analisis dari layer  :guilabel:`DEM`:"
+
+# 24c9643bc85348cda0a641487dd82ffa
+#: ../../rasters/terrain_analysis.rst:199
+msgid ":guilabel:`aspect_north`: the terrain faces north"
+msgstr ":guilabel:`aspect_north`: terain menghadap utara"
+
+# 7aa2ce4e28154a61babfc5154818d7e5
+#: ../../rasters/terrain_analysis.rst:200
+msgid ":guilabel:`slope_lte2`: the slope is at or below 2 degrees"
+msgstr ":guilabel:`slope_lte2`:slope pada atau di bawah 2 derajat"
+
+# 45a0cef04080425b8c5b345f4b606a74
+#: ../../rasters/terrain_analysis.rst:201
+msgid ":guilabel:`slope_lte5`: the slope is at or below 5 degrees"
+msgstr ":guilabel:`slope_lte5`: slope pada atau di bawah 5 derajat"
+
+# 5689de67a6f54ce8b365950b7ad041a5
+#: ../../rasters/terrain_analysis.rst:203
+msgid ""
+"Where the conditions of these layers are met, they are equal to :kbd:`1`. "
+"Elsewhere, they are equal to :kbd:`0`. Therefore, if you multiply one of "
+"these rasters by another one, you will get the areas where both of them are "
+"equal to :kbd:`1`."
+msgstr ""
+"Jika kondisi layer-layer tersebut terpenuhi, hasilnya  adalah sama dengan  :"
+"kbd:`1`. Dalam kondisi  lain, mereka sama dengan  :kbd:`0`. Karena itu, jika "
+"Anda mengalikan salah satu raster dengan yang lain, Anda akan mendapatkan "
+"daerah di mana keduanya adalah sama dengan :kbd:`1`."
+
+# 7b34ef45df4a475dae5e24502a0f3277
+#: ../../rasters/terrain_analysis.rst:208
+msgid ""
+"The conditions to be met are: at or below 5 degrees of slope, the terrain "
+"must face north; but at or below 2 degrees of slope, the direction that the "
+"terrain faces in does not matter."
+msgstr ""
+"Kondisi yang harus dipenuhi adalah: slope pada atau di bawah 5 derajat, "
+"terain harus menghadapi utara, tetapi slope pada atau di bawah 2 derajat, "
+"arah hadap terain  tidak menjadi masalah."
+
+# 6b94a618ee014dddb20a8fa048e0fffb
+#: ../../rasters/terrain_analysis.rst:212
+msgid ""
+"Therefore, you need to find areas where the slope is at or below 5 degrees :"
+"kbd:`AND` the terrain is facing north; :kbd:`OR` the slope is at or below 2 "
+"degrees. Such terrain would be suitable for development."
+msgstr ""
+"Oleh karena itu, Anda perlu menemukan area dimana slope  berada pada atau "
+"dibawah 5 derajat :kbd:`AND` terain  menghadap utara; :kbd:`OR` slope berada "
+"pada atau di bawah 2 derajat. Daerah tersebut akan cocok untuk pembangunan."
+
+# f6362081a89c4f1d919cd5b9954d7a25
+#: ../../rasters/terrain_analysis.rst:216
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "Untuk menghitung daerah yang memenuhi kriteria tersebut:"
+
+# 42c632c831a9497b95ae07b791e5686e
+#: ../../rasters/terrain_analysis.rst:218
+msgid "Open your :guilabel:`Raster calculator` again."
+msgstr "Buka  :guilabel:`Raster calculator` Anda lagi."
+
+# 342728c19285481fa3c1ec35afc9f095
+#: ../../rasters/terrain_analysis.rst:219
+msgid ""
+"Use the :guilabel:`Raster bands` list, the :guilabel:`Operators` buttons, "
+"and your keyboard to build this expression in the :guilabel:`Raster "
+"calculator expression` text area:"
+msgstr ""
+"Gunakan daftar  :guilabel:`Raster bands`, tombol  :guilabel:`Operators`, dan "
+"keyboard Anda untuk membuat ekspresi pada tempat teks  :guilabel:`Raster "
+"calculator expression`:"
+
+# fbe64a67ac3e4d58ac30211ef815fdcb
+#: ../../rasters/terrain_analysis.rst:223
+msgid ":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+msgstr ""
+":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+
+# 7dea3c396ce249a499478e23b0c98757
+#: ../../rasters/terrain_analysis.rst:225
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as :kbd:"
+"`all_conditions.tif`."
+msgstr ""
+"Simpan hasilnya di dalam folder  :kbd:`exercise_data/residential_development/"
+"` sebagai  :kbd:`all_conditions.tif`."
+
+# 9313444f25c544e0b77c9a5c1604e211
+#: ../../rasters/terrain_analysis.rst:227
+msgid ""
+"Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:"
+msgstr "Klik  :guilabel:`OK`  pada  :guilabel:`Raster calculator`. Hasilnya:"
+
+# cf7633e8d0334221a221f8c7f3c6fc02
+#: ../../rasters/terrain_analysis.rst:234
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderate| Ikuti bersama : Menyederhanakan Raster"
+
+# 6e2e94bac14e42e99da221f063336f40
+#: ../../rasters/terrain_analysis.rst:236
+msgid ""
+"As you can see from the image above, the combined analysis has left us with "
+"many, very small areas where the conditions are met. But these aren't really "
+"useful for our analysis, since they're too small to build anything on. Let's "
+"get rid of all these tiny unusable areas."
+msgstr ""
+"Seperti yang Anda lihat dari gambar di atas, kombinasi analisis tersebut "
+"telah menghasilkan bagi kita banyak luasan   yang sangat kecil yang memenuhi "
+"kondisi analisis. Tapi luasan tersebut tidak berguna untuk analisis kita, "
+"karena daerah tersebut  terlalu kecil untuk dibangun apa pun di atasnya. "
+"Mari kita menghapus semua area kecil yang  tidak berguna."
+
+# bb9c2937905c447fbc32fa6bf733bb0e
+#: ../../rasters/terrain_analysis.rst:241
+msgid ""
+"Open the :guilabel:`Sieve` tool (:menuselection:`Raster --> Analysis --> "
+"Sieve`)."
+msgstr ""
+"Buka *tool* :guilabel:`Sieve`  (:menuselection:`Raster --> Analysis --> "
+"Sieve`)."
+
+# a381852be9224ce8934a9709c2628ae3
+#: ../../rasters/terrain_analysis.rst:243
+msgid ""
+"Set the :guilabel:`Input file` to :kbd:`all_conditions`, and the :guilabel:"
+"`Output file` to :kbd:`all_conditions_sieve.tif` (under :kbd:`exercise_data/"
+"residential_development/`)."
+msgstr ""
+"Atur :guilabel:`Input file`ke dalam  :kbd:`all_conditions`, dan :guilabel:"
+"`Output file` ke dalam  :kbd:`all_conditions_sieve.tif` (dalam folder :kbd:"
+"`exercise_data/residential_development/`)."
+
+# af7a6e06139b437aaca68f262d0b51ee
+#: ../../rasters/terrain_analysis.rst:246
+msgid ""
+"Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values "
+"to :kbd:`8`, then run the tool."
+msgstr ""
+"Atur kedua nilai  :guilabel:`Threshold` dan  :guilabel:`Pixel connections` "
+"menjadi :kbd:`8`,kemudian jalankan *tool* tersebut."
+
+# 5a6382a29f23410cb126537ad4fae7b4
+#: ../../rasters/terrain_analysis.rst:249
+msgid ""
+"Once processing is done, the new layer will load into the canvas. But when "
+"you try to use the histogram stretch tool to view the data, this happens:"
+msgstr ""
+"Setelah proses ini selesai, layer baru akan dimuat ke dalam bidang peta. "
+"Tetapi ketika Anda mencoba untuk menggunakan *tool histogram stretch* untuk "
+"melihat data, akan terjadi:"
+
+# a05f5a432f2b4586bd793f1a940f229d
+#: ../../rasters/terrain_analysis.rst:255
+msgid "What's going on? The answer lies in the new raster file's metadata."
+msgstr ""
+"Apa yang terjadi? Jawabannya berada pada metadata file raster yang baru."
+
+# b9e9d81d9e0b4864846a7babe9128b27
+#: ../../rasters/terrain_analysis.rst:257
+msgid ""
+"View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer "
+"Properties` dialog."
+msgstr ""
+"Lihat metadata dalam tab :guilabel:`Metadata` dari dialog  :guilabel:`Layer "
+"Properties`."
+
+# 91017b7cac65494fb8762b8c233a8362
+#: ../../rasters/terrain_analysis.rst:260
+msgid ""
+"Whereas this raster, like the one it's derived from, should only feature the "
+"values :kbd:`1` and :kbd:`0`, it has the :kbd:`STATISTICS_MINIMUM` value of "
+"a very large negative number. Investigation of the data shows that this "
+"number acts as a null value. Since we're only after areas that weren't "
+"filtered out, let's set these null values to zero."
+msgstr ""
+"Pada raster ini, seperti raster yang asalnya, mestinya hanya menampilkan "
+"nilai  :kbd:`1` dan  :kbd:`0`, raster tersebut memiliki nilai :kbd:"
+"`STATISTICS_MINIMUM` dari angka negatif yang besar. Penyelidikan pada data "
+"menunjukkan bahwa angka ini bertindak sebagai nilai null. Karena kita hanya "
+"memanfaatkan area yang terseleksi, mari kita menetapkan nilai-nilai null "
+"untuk nol."
+
+# 079eb535e1894a3897dbb316477b3094
+#: ../../rasters/terrain_analysis.rst:266
+msgid ""
+"Open the :guilabel:`Raster Calculator` again, and build this expression:"
+msgstr "Buka  :guilabel:`Raster Calculator` lagi, dan buat ekspresi berikut: "
+
+# ffe594d106dc448dba1df0249b02150d
+#: ../../rasters/terrain_analysis.rst:268
+msgid ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+msgstr ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+
+# 73234005c65a40078b38996220b4d169
+#: ../../rasters/terrain_analysis.rst:270
+msgid ""
+"This will maintain all existing zero values, while also setting the negative "
+"numbers to zero; which will leave all the areas with value :kbd:`1` intact."
+msgstr ""
+"Hal tersebut akan mempertahankan semua nilai nol yang ada, sementara juga "
+"mengatur nilai negatif menjadi nol, serta mempertahankan semua area yang "
+"memiliki nilai :kbd:`1` yang utuh. "
+
+# 7e18115b66754daf8a9ecbbff9b40dd6
+#: ../../rasters/terrain_analysis.rst:272
+msgid ""
+"Save the output under :kbd:`exercise_data/residential_development/` as :kbd:"
+"`all_conditions_simple.tif`."
+msgstr ""
+"Simpan hasilnya di dalam folder   :kbd:`exercise_data/"
+"residential_development/` sebagai  :kbd:`all_conditions_simple.tif`."
+
+# ad5cbeffbda541f0a5f6253f1b8b49da
+#: ../../rasters/terrain_analysis.rst:275
+msgid "Your output looks like this:"
+msgstr "Hasil Anda akan tampak seperti berikut:"
+
+# c5ea423f3fba4e55be9f21d7af449bf3
+#: ../../rasters/terrain_analysis.rst:280
+msgid ""
+"This is what was expected: a simplified version of the earlier results. "
+"Remember that if the results you get from a tool aren't what you expected, "
+"viewing the metadata (and vector attributes, if applicable) can prove "
+"essential to solving the problem."
+msgstr ""
+"Inilah yang diharapkan : versi yang disederhanakan dari hasil sebelumnya. "
+"Ingat bahwa jika hasil yang Anda peroleh dari tool tidak seperti yang Anda "
+"harapkan, lihat metadata ( dan atribut vektor, jika dapat digunakan)dapat "
+"membuktikan permasalahan yang penting untuk menyelesaikan permasalahan."
+
+# b11aacad2e0341259c906747acdc63c7
+#: ../../rasters/terrain_analysis.rst:288
+msgid ""
+"You've seen how to derive all kinds of analysis products from a DEM. These "
+"include hillshade, slope and aspect calculations. You've also seen how to "
+"use the raster calculator to further analyze and combine these results."
+msgstr ""
+"Anda telah melihat bagaimana untuk memperoleh semua jenis hasil analisis "
+"dari sebuah DEM. Hasil- hasil tersebut mencakup hillshade, perhitungan slope "
+"dan aspect. Anda juga telah melihat bagaimana menggunakan raster calculator "
+"untuk analisis lebih lanjut dan mengkombinasikan hasil-hasil tersebut."
+
+# b4de1e7297a9413e872b482f98978ddd
+#: ../../rasters/terrain_analysis.rst:295
+msgid ""
+"Now you have two analyses: the vector analysis which shows you the "
+"potentially suitable farms, and the raster analysis that shows you the "
+"potentially suitable terrain. How can these be combined to arrive at a final "
+"result for this problem? That's the topic for the next lesson, starting in "
+"the next module."
+msgstr ""
+"Sekarang Anda telah memiliki dua analisis: analisis vektor yang menunjukan "
+"Anda pertanian yang yang berpotensi sesuai, dan analisis raster yang "
+"menunjukan Anda terain yang berpotensi sesuai. Bagaimana analisis-analisis "
+"tersebut dapat dikombinasikan untuk menghasilkan hasil akhir dari "
+"permasalahan tersebut? Hal tersebut akan menjadi topik untuk pelajaran "
+"selanjutnya, dimulai dari modul selanjutnya. "

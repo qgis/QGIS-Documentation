@@ -1,0 +1,3384 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Linfiniti Consulting CC
+# This file is distributed under the same license as the The Free Quantum GIS Training Manual package.
+# root <tudorbarascu@yahoo.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: The Free Quantum GIS Training Manual 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-10 00:00\n"
+"PO-Revision-Date: 2013-06-23 17:38+0300\n"
+"Last-Translator: root <tudorbarascu@yahoo.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.6.1\n"
+"X-Language: ro_RO\n"
+
+# 73295841657a42de9437ca2a008cb717
+#: ../../vector_analysis/basic_analysis.rst:2
+msgid "|LS| Vector Analysis"
+msgstr "|LS| Analiza vectoriala"
+
+# b99207ccfac244e688c8d85f6e6791c2
+#: ../../vector_analysis/basic_analysis.rst:4
+msgid ""
+"Vector data can also be analyzed to reveal how different features interact "
+"with each other in space. There are many different analysis-related "
+"functions in GIS, so we won't go through them all. Rather, we'll pose a "
+"question and try to solve it using the tools that QGIS provides."
+msgstr ""
+"Datele sub format vectorial pot de asemenea sa fie analizate pentru a arata "
+"cum diverse feature-uri (elemente geografice) pot interactiona intre ele in "
+"spatiu. Exista o multitudine de functii analitice care se ocupa cu aceasta "
+"in GIS si este natural sa nu le acoperim pe toate aici. Vom incerca sa "
+"folosim functiile pe care QGIS le are ca sa dam raspunsul la anumite "
+"intrebari."
+
+# 4c9b98118a984227bce49299be83313b
+#: ../../vector_analysis/basic_analysis.rst:9
+msgid ""
+"**The goal for this lesson:** To ask a question and solve it using analysis "
+"tools."
+msgstr ""
+"**Scopul acestei lectii:** Sa punem o intrebare si sa o rezolvam folosind "
+"unelte de analiza."
+
+# 84a3ff81a85f479c8fcb92ed31ea68ea
+#: ../../vector_analysis/basic_analysis.rst:14
+msgid "|basic| The GIS Process"
+msgstr "|baza| Procesul GIS"
+
+# 78b90a36fa7143eb93b1e267ee70ab3e
+#: ../../vector_analysis/basic_analysis.rst:16
+msgid ""
+"Before we start, it would be useful to give a brief overview of a process "
+"that can be used to solve any GIS problem. The way to go about it is:"
+msgstr ""
+"Inainte sa incepem, este folositor sa facem o mica analiza asupra procesului "
+"care poate rezolva orice problema GIS. Felul in care trebuie sa decurga "
+"acesta este:"
+
+# 2cbfc173edbe47b48b1e1e3c880ac6ee
+#: ../../vector_analysis/basic_analysis.rst:19
+msgid "State the Problem"
+msgstr "Specificarea Problemei"
+
+# 1a949aea9b5b45a4ba094eea8eead444
+#: ../../vector_analysis/basic_analysis.rst:20
+msgid "Get the Data"
+msgstr "Gasirea datelor"
+
+# 312d90cf16ad418b92a9b026dabf59fe
+#: ../../vector_analysis/basic_analysis.rst:21
+msgid "Analyze the Problem"
+msgstr "Analiza datelor"
+
+# 549fb2de4b254bdb9efc7a3a3eecc8b1
+#: ../../vector_analysis/basic_analysis.rst:22
+msgid "Present the Results"
+msgstr "Prezentarea Rezultatelor"
+
+# 3b04f18996bd4b2585fee6d842c5cc55
+#: ../../vector_analysis/basic_analysis.rst:25
+msgid "|basic| The problem"
+msgstr ""
+"|baza|\n"
+"|baza| Problema"
+
+# 272faab2383b47a08678be2fec1febb4
+#: ../../vector_analysis/basic_analysis.rst:27
+msgid ""
+"Let's start off the process by deciding on a problem to solve. Let's say "
+"you're a property developer, and you need to buy a farm to build a new "
+"residential development for people who have had enough of Cape Town and "
+"Johannesburg. You've done some market research, and you've come up with the "
+"following requirements that a farm needs to satisfy:"
+msgstr ""
+"Incepem procesul prin definirea unei probleme de rezolvat. Sa spunem ca "
+"sunteti un dezvoltator imobiliar si doriti sa cumparati o ferma in Africa de "
+"Sud pentru a construi un complex rezidential pentru persoane care s-au "
+"saturat de Cape Town si Johannesburg. In urma unui studiu de piata ati "
+"definit cerintele pe care ferma trebuie sa le satisfaca:"
+
+# 8404c869a9214c41a3d703ecddd26186
+#: ../../vector_analysis/basic_analysis.rst:33
+msgid "It needs to be in Swellendam."
+msgstr "Trebuie sa fie in Swellendam."
+
+# 18cda950283441a087163c2bc9d67356
+#: ../../vector_analysis/basic_analysis.rst:34
+msgid ""
+"You don't want to have to build a long access road (maximum distance 500 "
+"meters), and it has to be easily accessible from main routes."
+msgstr ""
+"Nu doriti sa construti un drum de acces lung asa ca acesta va trebui sa aibe "
+"o distanta maxima de 500 metri si sa fie accesibil din drumurile principale."
+
+# dfb725b2bf81486cb03efa1cb7beb2fa
+#: ../../vector_analysis/basic_analysis.rst:36
+msgid ""
+"The people who make up the target market will probably have children, so it "
+"must be within a reasonable distance (by car) from a school."
+msgstr ""
+"Oamenii care sunt tintiti de studiul de piata au probabil copii, asa ca "
+"locatia va trebui sa fie la o distanta rezonabila (cu masina) fata de o "
+"scoala."
+
+# 8ff34d83507d4455a75972b3a33f2cb6
+#: ../../vector_analysis/basic_analysis.rst:38
+msgid "The farm must be between 100 and 150 hectares in area."
+msgstr "Ferma trebuei sa aibe intre 100 si 150 hectare."
+
+# 4628c7eee7274caba2044d3409a022ce
+#: ../../vector_analysis/basic_analysis.rst:41
+msgid "|basic| The data"
+msgstr "|baza| Datele"
+
+# 242feb997c2345f18011bdfa7f4931a9
+#: ../../vector_analysis/basic_analysis.rst:43
+msgid "To answer these questions, we're going to need the following data:"
+msgstr ""
+"Pentru a raspunde acestor intrebari, vom avea nevoie de datele urmatoare:"
+
+# e0be71aa28324c5985129dc1cdb403f0
+#: ../../vector_analysis/basic_analysis.rst:45
+msgid "The farms we're going to be choosing from."
+msgstr "Date cu fermele de unde vom alege."
+
+# 0e0cf70d7bbb4024bab24fa392e9c7f4
+#: ../../vector_analysis/basic_analysis.rst:46
+msgid "The roads that need to be running through these farms."
+msgstr "Date cu drumurile care duc la sau prin aceste ferme."
+
+# 300279a9aa74426e8cb2581650351745
+#: ../../vector_analysis/basic_analysis.rst:47
+msgid "The location of schools."
+msgstr "Date cu locatia scolilor."
+
+# 2d608deb7bdc4460a5af0f17be65a005
+#: ../../vector_analysis/basic_analysis.rst:49
+msgid ""
+"For this exercise the data has been provided already, but in reality you may "
+"need to find a provider for the datasets in question. In South Africa, the "
+"Surveyor-General's Office is a good source of the kind of data you'd find on "
+"1: 50 000 topographic map sheets, which includes all of the data we need for "
+"this particular problem."
+msgstr ""
+"Pentru acest exercitiu datele sunt deja date dar in realitate s-ar putea sa "
+"fie nevoie sa le luati de la cineva."
+
+# 5b8b223326df4bf6a77213b9774e2317
+#: ../../vector_analysis/basic_analysis.rst:56
+msgid "|basic| |FA| Start a Project"
+msgstr "|basic| |FA| Porniti un proiect"
+
+# cebe841e7f6e448ab500c47a102907f8
+#: ../../vector_analysis/basic_analysis.rst:58
+msgid "So now that we know what we want to do, let's start doing it!"
+msgstr "Acum ca stim ce vrem sa facem, haideti sa trecem la treaba!"
+
+# 2a9f73fc98294b8d82f34e3433bc8eb5
+#: ../../vector_analysis/basic_analysis.rst:60
+#, fuzzy
+msgid "Start a new QGIS project."
+msgstr "Porniti un nou proiect QGIS."
+
+# cc4feec473654f15956a6f302eae832b
+#: ../../vector_analysis/basic_analysis.rst:61
+#, fuzzy
+msgid ""
+"Start adding new layers. They're all to be found in the "
+":kbd:`exercise_data/projected_data` folder."
+msgstr ""
+"Incepeti prin adaugarea de layere (straturi). Le puteti gasi pe toate in "
+"folderul :kbd:`exercise_data/projected_data`."
+
+# 2a3582f65e6c44e2b28fa3238d1c31d2
+#: ../../vector_analysis/basic_analysis.rst:63
+#, fuzzy
+msgid ""
+"Add the :kbd:`schools_33S`, :kbd:`roads_33S` and :kbd:`farms_33S` layers."
+msgstr ""
+"Adaugati layerele :kbd:`schools_33S`, :kbd:`roads_33S` si :kbd:`farms_33S`."
+
+# ae0f50b49f27480db215241aaff70295
+#: ../../vector_analysis/basic_analysis.rst:65
+msgid ""
+"They'll probably look very familiar. They're the same data we've been "
+"working with all along, except that they're now in a Projected Coordinate "
+"System. This is necessary for analysis, for reasons we've covered in the "
+"previous lesson. (We want to be able to calculate distances in meters and "
+"areas in hectares, not in degrees.)"
+msgstr ""
+"Datele sunt gata de a fi analizate ele fiind intr-un sistem de coordonate "
+"proiectat. Dorim sa putem calcula distantele in metri si aria in hectare, nu "
+"in grade."
+
+# 963410f91bd7422e97fac7a08dc1c70a
+#: ../../vector_analysis/basic_analysis.rst:71
+msgid "Once you've got these layers in your :guilabel:`Layers list`:"
+msgstr "Odata ce aveti aceste layere in :guilabel:`Layers list`:"
+
+# 1c36735846eb438f91259f9772c9ea0f
+#: ../../vector_analysis/basic_analysis.rst:73
+msgid ""
+"Rename the layers by right-clicking on them and selecting the "
+":guilabel:`Rename` option."
+msgstr ""
+"Redenumiti layerele (straturile) facand click dreapta pe ele si selectand "
+"optiunea :guilabel:`Rename`"
+
+# c0277f6bbbbd4e98bbaaaf451c4f9bbc
+#: ../../vector_analysis/basic_analysis.rst:75
+msgid ""
+"Give them the new, less messy names :kbd:`roads`, :kbd:`schools` and "
+":kbd:`farms`."
+msgstr ""
+"Redenumiti-le in nume mai cunoscute cum ar fi: :kbd:`roads`, :kbd:`schools` "
+"and :kbd:`farms`."
+
+# 703949c0f8ba4340a2e8b8a91cf73a41
+#: ../../vector_analysis/basic_analysis.rst:77
+msgid "Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs`."
+msgstr ""
+"Salvati harta/proiectul sub :guilabel:`exercise_data`, as "
+":kbd:`analysis.qgs`."
+
+# fd5b38616e7d41f1b38f6126d56585d5
+#: ../../vector_analysis/basic_analysis.rst:78
+msgid ""
+"In your operating system's file manager, create a new folder under "
+":guilabel:`exercise_data` and call it :kbd:`residential_development`. This "
+"is where you'll save the datasets that will be the results of the analysis "
+"functions."
+msgstr ""
+"In managerul de fisiere al sistemului de operare (Explorer in Windows etc.) "
+"creati un nou folder sub :guilabel:`exercise_data` si denumiti-l "
+":kbd:`residential_development`. Aici veti salva seturile de date care vor "
+"rezulta in urma analizelor ce le veti face."
+
+# d09e1c51811040289e9af9e1f1394ae8
+#: ../../vector_analysis/basic_analysis.rst:83
+msgid "Now that we've got the data, let's analyze the problem!"
+msgstr "Acum ca avem datele sa trecem la analiza."
+
+# a5de3b1a688f41fb9974e4a4fd3c0479
+#: ../../vector_analysis/basic_analysis.rst:86
+msgid "|basic| |FA| Analyzing the Problem: Farms in Swellendam"
+msgstr "|basic| |FA| Analizarea problemei: Ferme in Swellendam"
+
+# a03a5ee7c3c44257bcebd22c4dddd1f5
+#: ../../vector_analysis/basic_analysis.rst:88
+msgid ""
+"The first criterion we're facing is that the farm needs to be in Swellendam. "
+"So let's tell QGIS to only show us the farms that are, in fact, in "
+"Swellendam!"
+msgstr ""
+"Primul criteriu care trebuie indeplinit: fermele trebuie sa fie in "
+"Swellendam. Asa ca trebuie sa ii spunem \tQGIS-uluri sa ne are numai fermele "
+"din Swellendam."
+
+# 290fcd92a78c407da71434cdfe5cc781
+#: ../../vector_analysis/basic_analysis.rst:91
+msgid ""
+"Right-click on the :guilabel:`farms` layer in the :guilabel:`Layers list`."
+msgstr ""
+"Click dreapta pe layerul (stratul) :guilabel:`farms` in :guilabel:`Layers "
+"list`."
+
+# 03af853fd0b04918a2333bdde009db2d
+#: ../../vector_analysis/basic_analysis.rst:92
+msgid ""
+"Select the option :guilabel:`Query...`. This gives you a new "
+":guilabel:`Query Builder` dialog."
+msgstr ""
+"Selectati optiunea :guilabel:`Query...`. Aceasta va va conduce la dialogul "
+"de interogare :guilabel:`Query Builder`"
+
+# b8c88de5dbaf4b4da40e45c70caff760
+#: ../../vector_analysis/basic_analysis.rst:94
+msgid ""
+"Scroll down in the :guilabel:`Fields` list on the left of this dialog until "
+"you see the field :kbd:`TOWN`."
+msgstr ""
+"Folositi functia de scroll in campul :guilabel:`Fields` in stanga dialogului "
+"pana cand veti vedea campul :kbd:`TOWN`."
+
+# ca6482ab8fdd4c5b89baf001edd57c4d
+#: ../../vector_analysis/basic_analysis.rst:96
+msgid "Click on it once."
+msgstr "Faceti un click pe el."
+
+# 5e1ca9b1930d4be38bf0a3afb5b9f741
+#: ../../vector_analysis/basic_analysis.rst:97
+msgid ""
+"Click the :guilabel:`All` button underneath the :guilabel:`Values` list:"
+msgstr ""
+"Faceti click pe butonul :guilabel:`All` de sub :guilabel:`Values` list:"
+
+# 87be6967548e45b8b98cefaf91b780ac
+#: ../../vector_analysis/basic_analysis.rst:102
+msgid ""
+"Now we need to tell QGIS to only show us the farms where the value of "
+":kbd:`TOWN` is equal to :kbd:`Swellendam`."
+msgstr ""
+"Acum trebuie sa ii spunem QGIS-ului sa ne arate numai fermele unde valoarea "
+"lui :kbd:`TOWN` este egala cu valoarea lui :kbd:`Swellendam`."
+
+# 69cef77376944daab3a3c4977406f330
+#: ../../vector_analysis/basic_analysis.rst:105
+msgid "Double-click the word :kbd:`TOWN` in the :guilabel:`Fields` list."
+msgstr "Dublu-click pe cuvantul :kbd:`TOWN` din lista  the :guilabel:`Fields`."
+
+# d7b28e9096e046fcbe7a4f821b074b73
+#: ../../vector_analysis/basic_analysis.rst:106
+msgid "Watch what happens in the :guilabel:`SQL where clause` field below:"
+msgstr "Fiti atenti ce se intampla in :guilabel:`cauza SQL where` "
+
+# 239abda6b1ec4bb3a5a8674ea291ffd5
+#: ../../vector_analysis/basic_analysis.rst:111
+msgid "The word :kbd:`\"TOWN\"` has appeared! To build the rest of the query:"
+msgstr ""
+"Cuvantul :kbd:`\"TOWN\"` a aparut! Pentru a construi si restul interogarii "
+"(query-ului):"
+
+# 94775dc663314f0d80cfd07ad6238ec2
+#: ../../vector_analysis/basic_analysis.rst:113
+msgid "Click the :guilabel:`=` button (under :guilabel:`Operators`)."
+msgstr "Click pe :guilabel:`=` button (sub :guilabel:`Operators`)"
+
+# 8ba0272838e74a2eaf1a04d62f826faa
+#: ../../vector_analysis/basic_analysis.rst:114
+msgid ""
+"Double-click the value :kbd:`Swellendam` in the :guilabel:`Values` list."
+msgstr ""
+"Dublu-click pe cuvantul :kbd:`Swellendam`din lista  :guilabel:`Values`."
+
+# 2b070b361d34490dbacffe89c36f53ed
+#: ../../vector_analysis/basic_analysis.rst:116
+msgid "Your query is this:"
+msgstr "Interogarea (query-ul) este:"
+
+# 7767840060c7474da836c8b93f33808a
+#: ../../vector_analysis/basic_analysis.rst:121
+msgid "And now your :guilabel:`farms` layer looks like this:"
+msgstr "Stratul (layerul) :guilabel:`farms` arata asa acum:"
+
+# f774a91a84b04f4f8c2f88c749ce71ca
+#: ../../vector_analysis/basic_analysis.rst:126
+msgid ""
+"For further analysis, it's better if we've got these farms as a separate "
+"layer."
+msgstr ""
+"E bine sa avem aceste ferme ca un layer separat pentru analiza ulterioara."
+
+# 00b8533f95cc46048e16d5d7074fef0b
+#: ../../vector_analysis/basic_analysis.rst:128
+msgid ""
+"Right-click on the :guilabel:`farms` layer and click :guilabel:`Save As...`."
+msgstr ""
+"Click dreapta pe layerul (stratul) :guilabel:`farms`si click  "
+":guilabel:`Save As...`."
+
+# 224210ca84d8415db7588017fb0495c3
+#: ../../vector_analysis/basic_analysis.rst:129
+msgid ""
+"Next to the :guilabel:`Save as` field in the dialog that appears, click the "
+":guilabel:`Browse` button."
+msgstr ""
+"Click pe butonul :guilabel:`Browse` langa campul :guilabel:`Save as` din "
+"dialogul ce apare"
+
+# 84d69df057e64c5d800d43508bcf42a3
+#: ../../vector_analysis/basic_analysis.rst:131
+msgid ""
+"Save the layer under :kbd:`exercise_data/residential_development/`, as "
+":kbd:`swellendam_farms.shp`."
+msgstr ""
+"Salvati layerul sub :kbd:`exercise_data/residential_development/`, ca "
+":kbd:`swellendam_farms.shp`."
+
+# 5c8eb4d7ac2c4ec78365cad3c758d261
+#: ../../vector_analysis/basic_analysis.rst:133
+msgid ""
+"Check the :guilabel:`Add saved file to map` box in the :guilabel:`Save "
+"vector layer as...` dialog."
+msgstr ""
+"Bifati :guilabel:`Add saved file to map` in dialogul :guilabel:`Save vector "
+"layer as...`"
+
+# 320ad0800769449cbfb6c13cc8b98b8d
+#: ../../vector_analysis/basic_analysis.rst:135
+msgid ""
+"Click :guilabel:`OK`. It will tell you that :kbd:`Export to vector file has "
+"been completed`."
+msgstr ""
+"Click :guilabel:`OK`. Va va spune ca :kbd:`Export to vector file has been "
+"completed`. adica \"exportul de vectori e gata\"."
+
+# d55c3d1fafda4c1084724d3b429b58d5
+# c1aa6abbc8c947969db7e9d902f73eff
+# 0f6843f09ac242bfb71e9ac4493d1b9b
+# 9888673f204c4a3db5282f3154b1e07f
+# 8812dcdffdac4820b7701ee67e6e82d9
+# 330d303265954be2a7d036f9fc11d444
+# 608eaffe088645b080ccb8a8f99a29c5
+# 21c8c56f8fe144dfb0b45f79b6200e33
+#: ../../vector_analysis/basic_analysis.rst:137
+#: ../../vector_analysis/basic_analysis.rst:230
+#: ../../vector_analysis/basic_analysis.rst:309
+#: ../../vector_analysis/basic_analysis.rst:340
+#: ../../vector_analysis/reproject_transform.rst:162
+#: ../../vector_analysis/reproject_transform.rst:174
+#: ../../vector_analysis/reproject_transform.rst:236
+#: ../../vector_analysis/spatial_statistics.rst:217
+msgid "Click :guilabel:`OK`."
+msgstr "Click :guilabel:`OK`."
+
+# 395bad6c8f9c4e62bf1249b8e88f0171
+#: ../../vector_analysis/basic_analysis.rst:139
+msgid ""
+"Now we've got the :guilabel:`farms` twice, but we only need the one we just "
+"created."
+msgstr ""
+"Acum avem de doua ori :guilabel:`farms` dar nu avem nevoie decat de cel "
+"creat."
+
+# f4a4d3c38ad548d59633b5a8b8b7af35
+#: ../../vector_analysis/basic_analysis.rst:142
+msgid "Right-click on the old :guilabel:`farms` layer and remove it."
+msgstr ""
+"Click dreapta pe layerul :guilabel:`farms` vechi si eliminati-l (remove)."
+
+# 1cba39566b1d4b2482a8e7e7b2046651
+#: ../../vector_analysis/basic_analysis.rst:148
+msgid "|basic| |TY| find important roads"
+msgstr "|basic| |TY| Gasiti drumurile importante"
+
+# e0dad583f7774e5789543f586c081fe3
+#: ../../vector_analysis/basic_analysis.rst:150
+msgid ""
+"We have a similar problem with the roads; the only roads we're taking into "
+"account are the main ones."
+msgstr ""
+"Avem o problema similara cu drumurile; singurele drumuri care le luam in "
+"considerare sunt cele principale."
+
+# c9ba8db9708a41d3b1d5b368e1f565e5
+#: ../../vector_analysis/basic_analysis.rst:153
+msgid ""
+"Build a query for the :guilabel:`roads` layer, like you did above for the "
+":guilabel:`farms` layer. You want only the types :kbd:`primary`, "
+":kbd:`secondary`, :kbd:`tertiary` and :kbd:`trunk`, so you need to build "
+"this query:"
+msgstr ""
+"Faceti o interogare in layerul :guilabel:`roads`, la fel cum ati facut mai "
+"sus pentru layerul :guilabel:`farms`. Vreti numai tipurile :kbd:`primary`, "
+":kbd:`secondary`, :kbd:`tertiary` si :kbd:`trunk`, asa ca trebuie sa creeati "
+"aceasta interogare (query)."
+
+# 2d08ae28a4284816b5d9db56bdd6d766
+#: ../../vector_analysis/basic_analysis.rst:158
+msgid ""
+":kbd:`\"TYPE\" = 'primary' OR \"TYPE\" = 'secondary' OR \"TYPE\" = "
+"'tertiary' OR \"TYPE\" = 'trunk'`"
+msgstr ""
+":kbd:`\"TYPE\" = 'primary' OR \"TYPE\" = 'secondary' OR \"TYPE\" = "
+"'tertiary' OR \"TYPE\" = 'trunk'`"
+
+# b11c89a72b0946a79bc8da5283dd3651
+#: ../../vector_analysis/basic_analysis.rst:161
+msgid ""
+"You can either use the approach above, where you double-clicked values and "
+"clicked buttons, or you can copy and paste the command above."
+msgstr ""
+"Puteti sa folositi abordarea de mai sus (dublu click pe valori etc.) sau "
+"puteti da copy si paste la comanda de mai sus."
+
+# 4a75f9ba28ac4730aa931198fa0d0d41
+#: ../../vector_analysis/basic_analysis.rst:164
+msgid ":ref:`Check your results <vector-analysis-basic-1>`"
+msgstr ":ref:`Verificati rezultatele <vector-analysis-basic-1>`"
+
+# 578f0e64982749369d4ff47fe501daee
+#: ../../vector_analysis/basic_analysis.rst:167
+msgid "|basic| |TY| find high schools"
+msgstr "|basic| |TY| Gasiti scolile"
+
+# d8d2415b6aa4461e9f907092b4d17988
+#: ../../vector_analysis/basic_analysis.rst:169
+msgid "Your future customers will want to send their children to high schools."
+msgstr "Viitori clienti vor dori sa-si trimita copiii la liceu."
+
+# c971289ca6944e1f8a5d94eae9aba3c5
+#: ../../vector_analysis/basic_analysis.rst:171
+msgid ""
+"Use the same approach as before and build this query for the "
+":guilabel:`schools` layer:"
+msgstr ""
+"Folositi aceeasi abordare de mai sus si creeati interogarea (queryul) pentru "
+"layerul :guilabel:`schools` layer:"
+
+# 0d529d8690ec4883a251f5214781bc12
+#: ../../vector_analysis/basic_analysis.rst:174
+msgid ":kbd:`\"has_high_s\" = 'y'`"
+msgstr ":kbd:`\"has_high_s\" = 'y'`"
+
+# 219e815a123540feb7938ac615f79847
+#: ../../vector_analysis/basic_analysis.rst:176
+msgid "You should have only 3 out of the 4 original schools left."
+msgstr "Ar trebui sa va ramana numai 3 din cele 4 scoli initiale"
+
+# 73c9356eccd144819a252130d5072c2f
+#: ../../vector_analysis/basic_analysis.rst:178
+msgid ""
+"Save the resulting layer under :kbd:`exercise_data/residential_development/` "
+"as :kbd:`high_schools.shp`."
+msgstr ""
+"Salvati layerul rezultat sub :kbd:`exercise_data/residential_development/` "
+"ca :kbd:`high_schools.shp`."
+
+# 4dc38fbbc7cf40bf9c118c3a8e3cc938
+#: ../../vector_analysis/basic_analysis.rst:183
+msgid "|basic| |FA| Analyzing the Problem: Distances From Schools and Roads"
+msgstr ""
+"|basic| |FA| Analiza Problemei:\n"
+"Distantele dintre Scoli si Drumuri"
+
+# 63a93bf1933d40aba586be20280f30cf
+#: ../../vector_analysis/basic_analysis.rst:185
+msgid "QGIS allows you to calculate distances from any vector object."
+msgstr "QGIS permite calcularea distantelor de la orice vector."
+
+# 07efb6caa17541a88764f2e0b4d9cb5d
+#: ../../vector_analysis/basic_analysis.rst:187
+msgid ""
+"Make sure that only the :guilabel:`important_roads` and "
+":guilabel:`swellendam_farms` layers are visible, to simplify the map while "
+"you're working."
+msgstr ""
+"Aveti grija ca numai layerele :guilabel:`important_roads` si  "
+":guilabel:`swellendam_farms` sunt vizibile pentru a simplifica harta pentru "
+"lucru."
+
+# b692cca728fd42d288b9c2a91b441811
+#: ../../vector_analysis/basic_analysis.rst:190
+msgid ""
+"Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` "
+"tool:"
+msgstr ""
+"Click pe :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)` tool:"
+
+# 27f6a09b17944b8b930976976e8f1aa5
+#: ../../vector_analysis/basic_analysis.rst:196
+msgid "This gives you a new dialog."
+msgstr "Va da un nou dialog:"
+
+# 0b6328fd539447e2980e26019b8d4868
+# fbf7a183db35440093393020a9e942c2
+# e4287bd00e624cc5b23370d2bc0b9c34
+# 77dbec46e65e438e9464df0cff2018d0
+#: ../../vector_analysis/basic_analysis.rst:198
+#: ../../vector_analysis/basic_analysis.rst:288
+#: ../../vector_analysis/basic_analysis.rst:330
+#: ../../vector_analysis/spatial_statistics.rst:179
+msgid "Set it up like this:"
+msgstr "Configurati-l asa:"
+
+# b826e43cbea146848635bee1fa4fd7a1
+#: ../../vector_analysis/basic_analysis.rst:203
+msgid ""
+"The :guilabel:`Buffer distance` is in meters because our input dataset is in "
+"a Projected Coordinate System. This is why we needed to use projected data!"
+msgstr ""
+":guilabel:`Buffer distance` este in metri pentru ca setul de date folosit ca "
+"input (intrare) este intr-un sistem de coordonate proiectat."
+
+# 774e7d3dbd4c451aaee8f7666e5d68cb
+#: ../../vector_analysis/basic_analysis.rst:206
+msgid ""
+"Save the resulting layer under :kbd:`exercise_data/residential_development/` "
+"as :kbd:`important_roads_buffer_500m.shp`."
+msgstr ""
+"Salvati layerul rezultat sub :kbd:`exercise_data/residential_development/` "
+"ca :kbd:`important_roads_buffer_500m.shp`."
+
+# f3db94ff0d304591b9a84c411587e2c2
+#: ../../vector_analysis/basic_analysis.rst:208
+msgid "Click :guilabel:`OK` and it will create the buffer."
+msgstr "Click :guilabel:`OK` si bufferul va fi creeat."
+
+# e47facd2b490453bb734580b45bd05e8
+#: ../../vector_analysis/basic_analysis.rst:209
+msgid ""
+"When it asks you if it should \"add the new layer to the TOC\", click "
+":guilabel:`Yes`. (\"TOC\" stands for \"Table of Contents\", by which it "
+"means the :guilabel:`Layers list`)."
+msgstr ""
+"Cand va intreaba daca vreti sa adaugati layerul la TOC (\"add the new layer "
+"to the TOC\") click :guilabel:`Yes`. (\"TOC\" vine de la \"Table of "
+"Contents\", si inseamna :guilabel:`Lista de layere`)."
+
+# 951a3fa1bbaf4153815bd42f07871980
+#: ../../vector_analysis/basic_analysis.rst:213
+msgid "Now you've got this:"
+msgstr "Acum aveti aceasta:"
+
+# d0416409fa9e4dbf9ce9ae4fcb74b3cb
+#: ../../vector_analysis/basic_analysis.rst:218
+msgid ""
+"OK, that looks interesting! Those are all the areas that are within 500 "
+"meters of an important road."
+msgstr ""
+"OK, pare interesant deja! Acestea sunt toate ariile care sunt la o distanta "
+"de pana la 500 metri de un drum important."
+
+# dc97016260da4f9fb4ba655a4ad52d12
+#: ../../vector_analysis/basic_analysis.rst:221
+msgid ""
+"But look closer: it looks like there are joins between different sections of "
+"road! That's not nice. Remove that layer and let's try again:"
+msgstr ""
+"Uitati-va mai indeaproape: se pare ca sunt join-uri intre sectiuni diferite "
+"ale drumurilor! Asta nu e deloc frumos. Stergeti layerul ala si incercati "
+"din nou."
+
+# 77fb5849ba1e4d04bd0a0fc630a2cd68
+#: ../../vector_analysis/basic_analysis.rst:227
+msgid ""
+"Note that we're now checking the :guilabel:`Dissolve buffer results` box."
+msgstr "Atentie ca acum folosim caseta :guilabel:`Dissolve buffer results` "
+
+# 064262d90fe54e39ad7d57982144d517
+#: ../../vector_analysis/basic_analysis.rst:228
+msgid ""
+"Save the output under the same name as before (click :guilabel:`Yes` when it "
+"asks your permission to overwrite the old one)."
+msgstr ""
+"Salvati output-ul (ce iese) sub acelasi nume ca mai inainte (click "
+":guilabel:`Yes` cand va intreaba daca vreti sa scrieti deasupra celui vechi)."
+
+# e9ebc328e62f48b0add54f614790655e
+#: ../../vector_analysis/basic_analysis.rst:232
+msgid ""
+"Once you've added the layer to the :guilabel:`Layers list`, it will look "
+"like this:"
+msgstr ""
+"Acum ca ati adaugat layerul la :guilabel:`lista Layere `, va arata asa:"
+
+# 21818c7199d544f3b8a96eeec4e8663e
+#: ../../vector_analysis/basic_analysis.rst:238
+msgid "That's more like it! Now there are no unnecessary subdivisions."
+msgstr "Asa mai merge! Acum nu mai sunt subdiviziuni nenecesare."
+
+# 0e16a5dc41ae4141806dc35270f1b4da
+#: ../../vector_analysis/basic_analysis.rst:243
+msgid "|basic| |TY| distance from high schools"
+msgstr "|basic| |TY| Distanta de la scoli/licee"
+
+# e8eb8a1d08e34fe5b87c6f7e74898649
+#: ../../vector_analysis/basic_analysis.rst:245
+msgid "Use the same approach as above and create a buffer for your schools."
+msgstr ""
+"Folositi aceeasi abordare de mai sus si creeati un buffer pentru scoli."
+
+# 4377f605452e4b21beabb5169b66bf17
+#: ../../vector_analysis/basic_analysis.rst:247
+msgid ""
+"It needs to be :kbd:`10 km` in radius, and saved under the usual directory "
+"as :kbd:`high_schools_buffer_10km.shp`."
+msgstr ""
+"Trebuie sa aibe raza de :kbd:`10 km` si salvat unde salvam de obicei ca "
+":kbd:`high_schools_buffer_10km.shp`."
+
+# cf527e56490f40d082b9561fab01da32
+#: ../../vector_analysis/basic_analysis.rst:250
+msgid ":ref:`Check your results <vector-analysis-basic-2>`"
+msgstr ":ref:`Verificati rezultatele <vector-analysis-basic-2>`"
+
+# c954690493eb4ea488c5d683c2aaaa94
+#: ../../vector_analysis/basic_analysis.rst:253
+msgid "|basic| |FA| Overlapping Areas"
+msgstr "|basic| |FA| Arii care se suprapun"
+
+# ef8a75aca0c24f33aa26326b1f6e4160
+#: ../../vector_analysis/basic_analysis.rst:255
+msgid ""
+"Now we have areas where the road in 500 meters away and there's a school "
+"within 10 km (as the crow flies). But obviously, we only want the areas "
+"where both of these criteria are satisfied at once! To do that, we'll need "
+"to use the :guilabel:`Intersect` tool. Find it under :menuselection:`Vector "
+"--> Geoprocessing Tools --> Intersect`. Set it up like this:"
+msgstr ""
+"Acum avem ariile unde drumul e in distanta de 500 m si cele unde este o "
+"scoala in distanta de 10 km. Dar, bineinteles ca vreo doar ariile care "
+"satisfac amandoua criteriile. Pentru a le gasi pe acestea, vom folosi "
+":guilabel:`Intersect`. O puteti gasi sub  :menuselection:`Vector --> "
+"Geoprocessing Tools --> Intersect`. Configurati tool-ul asa:"
+
+# e5323ae913ff48d49dc1955e59573d2e
+#: ../../vector_analysis/basic_analysis.rst:264
+msgid ""
+"The two input layers are the two buffers; the save location is as usual; and "
+"the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up "
+"like this, click :guilabel:`OK` and add the layer to the :guilabel:`Layers "
+"list` when prompted."
+msgstr ""
+"Cele doua layere de input sunt cei doi bufferi creeati anterior; locatia "
+"unde salvam este cea de pana acum; numele fisierului este "
+":kbd:`road_school_buffers_intersect.shp`. Cand avem totul configurat asa, "
+"click :guilabel:`OK` si adaugati layerul la :guilabel:`Layers list` cand va "
+"este cerut."
+
+# 79c2e258c5fd4cdc89397f7896d7e0bd
+#: ../../vector_analysis/basic_analysis.rst:269
+msgid ""
+"In the image below, the blue areas show us where both distance criteria are "
+"satisfied at once!"
+msgstr ""
+"In imaginea de mai jos, ariile cu albastru arata zonele in care ambele "
+"criterii sunt satisfacute."
+
+# d5470b48ee8d45e9956577ab344cdc17
+#: ../../vector_analysis/basic_analysis.rst:275
+msgid ""
+"You may remove the two buffer layers and only keep the one that shows where "
+"they overlap, since that's what we really wanted to know in the first place."
+msgstr ""
+"Puteti sterge layerele de buffer care nu va trebuie si sa ramaneti astfel "
+"numai cu acela unde se intrepatrund (suprapun). "
+
+# ca019db1b6d54013838b5d0025c9e8e7
+#: ../../vector_analysis/basic_analysis.rst:281
+msgid "|basic| |FA| Select the Farms"
+msgstr "|basic| |FA| Selecteaza fermele"
+
+# 042d9efc23fa4f01a2a05fe440634326
+#: ../../vector_analysis/basic_analysis.rst:283
+msgid ""
+"Now you've got the area that the farms must overlap. Next, you want to "
+"select the farms in that area."
+msgstr ""
+"Acum aveti ariile cu care trebuie sa se suprapuna fermele. Bineinteles, acum "
+"vreti sa selectati fermele din acele zone."
+
+# 24c3960bbb904ed095b137b401ab8335
+#: ../../vector_analysis/basic_analysis.rst:286
+msgid ""
+"Click on the menu entry :menuselection:`Vector --> Research Tools --> Select "
+"by location`. A dialog will appear."
+msgstr ""
+"Click pe intrarea din menu :menuselection:`Vector --> Research Tools --> "
+"Select by location`. O casuta de dialog va aparea."
+
+# 03af1716c0e94fa7aeb67a36e9d1b618
+#: ../../vector_analysis/basic_analysis.rst:293
+msgid "Click :guilabel:`OK` and you'll see the results:"
+msgstr "Click :guilabel:`OK`  si veti vedea rezultatele."
+
+# 63bdd6a30ffa46c98f3a70a1e7543685
+#: ../../vector_analysis/basic_analysis.rst:298
+msgid "The yellow farms are the selected ones. Let's save them as a new layer."
+msgstr ""
+"Fermele galbene sunt cele selectate.\n"
+"Sa le salvam intr-un nou layer."
+
+# af0e608b1e1f4245a87a719bb79324a1
+#: ../../vector_analysis/basic_analysis.rst:300
+msgid ""
+"Right-click on the :guilabel:`swellendam_farms` layer in the "
+":guilabel:`Layers list`."
+msgstr ""
+"Click dreapta pe layerul :guilabel:`swellendam_farms` in :guilabel:`Layers "
+"list`."
+
+# 6f607f4e44c044368b04ca62360d0d37
+#: ../../vector_analysis/basic_analysis.rst:302
+msgid "Select :guilabel:`Save Selection As...`."
+msgstr "Selectati :guilabel:`Save Selection As...`."
+
+# 9dd6e54a8e804cea886d6a015fac2728
+#: ../../vector_analysis/basic_analysis.rst:303
+msgid "Set the dialog up like this:"
+msgstr "Configurati dialogul asa:"
+
+# 62063529213e402ea2b34fd2378c03cf
+#: ../../vector_analysis/basic_analysis.rst:308
+msgid "The file name is :kbd:`well_located_farms.shp`."
+msgstr "Numele fisierului este :kbd:`well_located_farms.shp`."
+
+# cca38b370f194de18a14fb7e4b0f3168
+#: ../../vector_analysis/basic_analysis.rst:311
+msgid "Now you have the selection as a separate layer."
+msgstr "Acum aveti selectia ca un layer separat."
+
+# 40df9b3078cb427a988ed6f7c4aaa95a
+#: ../../vector_analysis/basic_analysis.rst:314
+msgid "|basic| |FA| Select Farms of the Right Size"
+msgstr "|basic| |FA| Selectarea Fermelor de marime potrivita"
+
+# 8d1fc4a0e4144ae5b4020d8b40d13272
+#: ../../vector_analysis/basic_analysis.rst:316
+msgid ""
+"To see which farms are the right area (between 100 and 150 ha), we first "
+"need to calculate their areas in hectares."
+msgstr ""
+"Pentru a vedea care ferme sunt in aria care trebuie (intre 100 si 150 "
+"hectare) mai intai vom calcula ariile lor in hectare."
+
+# c74aac91e702464f98570b0df8e5a32b
+#: ../../vector_analysis/basic_analysis.rst:319
+msgid "Open the attribute table for the :guilabel:`well_located_farms` layer."
+msgstr ""
+"Deschiteti tabela de atribute (attribute table) din layerul "
+":guilabel:`well_located_farms`"
+
+# 85a16dc664474a5d94619eb83cba609d
+#: ../../vector_analysis/basic_analysis.rst:320
+msgid "Enter edit mode:"
+msgstr "Porniti modul editare:"
+
+# e881c240e9d0486e86f597b07532feab
+#: ../../vector_analysis/basic_analysis.rst:325
+msgid "Start the field calculator:"
+msgstr "Porniti \"field calculator\" calculatorul de campuri."
+
+# d4ab7e9079634d5a8ed8883fc388dc7f
+#: ../../vector_analysis/basic_analysis.rst:335
+msgid "If you can't find :guilabel:`AREA` in the list, try this instead:"
+msgstr "Daca nu puteti gasi :guilabel:`AREA` in lista, incercati asa:"
+
+# 137ad81616504057819e3f8723da9567
+#: ../../vector_analysis/basic_analysis.rst:341
+msgid ""
+"Scroll to the right of the attribute table; your :kbd:`AREA` field now has "
+"areas in hectares for all the farms in your :guilabel:`well_located_farms` "
+"layer."
+msgstr ""
+"Faceti scroll in dreapta tabelei de atribute; campul :kbd:`AREA` are aria in "
+"hectare pentru toate fermele din :guilabel:`well_located_farms`"
+
+# b41e31dbee114b7ebc9a578a3301dead
+#: ../../vector_analysis/basic_analysis.rst:344
+msgid ""
+"Click the edit mode button again as above, and save your edits when prompted."
+msgstr ""
+"Click pe butonul de edit pentru a schimba modul de editare si salvati "
+"editarile cand va este cerut."
+
+# bdb997aa2af547a7afb543db291dbf96
+#: ../../vector_analysis/basic_analysis.rst:345
+msgid "Do a query:"
+msgstr "Executati o interogare (query):"
+
+# 08063c4881fa4493b9603b5c0de37483
+#: ../../vector_analysis/basic_analysis.rst:350
+msgid "Click :guilabel:`OK`. Your results should look like this:"
+msgstr "Click :guilabel:`OK`. Rezultatele ar trebui sa arate asa:"
+
+# 3952e516ba22477f892753489f85e7f7
+#: ../../vector_analysis/basic_analysis.rst:355
+msgid ""
+"That's it! Those red farms are the ones satisfying your criteria. Well done!"
+msgstr "Asta este! Fermele rosii sunt cele care satisfac criteriile. Bravo!"
+
+# a8a389fe59ea4dfdafc152808c8f0e74
+#: ../../vector_analysis/basic_analysis.rst:358
+msgid "|basic| |TY|"
+msgstr "|basic| |TY|"
+
+# e5c8302cd95f474cbd4f0c2a67122f4b
+#: ../../vector_analysis/basic_analysis.rst:360
+msgid ""
+"Save your solution as a new layer, using the approach you learned above for "
+"doing so. The file should be saved under the usual directory, with the name "
+":kbd:`solution.shp`."
+msgstr ""
+"Salvati solutia ca un layer nou folosind abordarea invatata anterior. "
+"Fisierul ar trebui salvat in directorul obisnuit cu numele "
+":kbd:`solution.shp`."
+
+# 65945ab228904270a81feea0a86d093f
+# 19c86a00e5d7404ba7c5bd647be1bff0
+# 806b96bdc11a452e87bda8d18e7b39d8
+# e5f7cbd6b7e846c3845d03f258cd21a2
+#: ../../vector_analysis/basic_analysis.rst:365
+#: ../../vector_analysis/network_analysis.rst:229
+#: ../../vector_analysis/reproject_transform.rst:246
+#: ../../vector_analysis/spatial_statistics.rst:444
+msgid "|IC|"
+msgstr "|IC|"
+
+# 99bc8926451f4a6ba9d255847220794c
+#: ../../vector_analysis/basic_analysis.rst:367
+msgid ""
+"Using the GIS problem-solving approach together with QGIS vector analysis "
+"tools, you were able to solve a problem with multiple criteria quickly and "
+"easily."
+msgstr ""
+"Folosind abordarea baza a unei probleme GIS cu ajutorul analizei vectoriale "
+"din QGIS ati fost in stare sa rezolvati o problema cu multiple criterii "
+"repede si eficient."
+
+# a6567a7646dd451cb31d6522e5bba7cb
+# 171d0834e41442dcaed7179e1ff8eb7e
+# 273a2c0e2d814ead857b06e676b9c374
+# 2844e3ed704244d0a35953e224fb85c0
+#: ../../vector_analysis/basic_analysis.rst:372
+#: ../../vector_analysis/network_analysis.rst:235
+#: ../../vector_analysis/reproject_transform.rst:262
+#: ../../vector_analysis/spatial_statistics.rst:450
+msgid "|WN|"
+msgstr "|WN|"
+
+# 74a16aa26b6d458bb0402f1c6af56bd0
+#: ../../vector_analysis/basic_analysis.rst:374
+#, fuzzy
+msgid ""
+"In the next lesson, we'll look at how to calculate the shortest distance "
+"along the road from one point to another."
+msgstr ""
+"In urmatoarea lectie, ne vom uita cum se calculeaza cea mai mica distanta "
+"dealungul unui drum dintr-un punct catre altul."
+
+# 9e248c4387ae45f99fc3fd2419575cb7
+#: ../../vector_analysis/index.rst:3
+msgid "|MOD| Vector Analysis"
+msgstr "|MOD| Analiza Vectoriala"
+
+# eba02f955e0343bab8a6885dcf672d4e
+#: ../../vector_analysis/index.rst:5
+msgid ""
+"Now that you have edited a few features, you must want to know what else one "
+"can do with them. Having features with attributes is nice, but when all is "
+"said and done, this doesn't really tell you anything that a normal, non-GIS "
+"map can't."
+msgstr ""
+"Acum ca ati editat cateva feature-uri, trebuie sa invatati ce mai puteti face "
+"cu ele pentru a ajunge sa reprezinte intr-adevar o harta GIS."
+
+# cbc5c343916b47b5b873cdab19040f31
+#: ../../vector_analysis/index.rst:10
+msgid "The key advantage of a GIS is this: *a GIS can answer questions.*"
+msgstr ""
+"Avantajul cheie al unui GIS este ca acesta poate sa raspunda la intrebari."
+
+# c02e960ec5e44cb7a67a5ce67711622e
+#: ../../vector_analysis/index.rst:12
+msgid ""
+"For the next three modules, we'll endeavor to answer a *research question* "
+"using GIS functions. Suppose you are a property developer, and you want to "
+"build a new residential development. You need to buy a farm to build it on. "
+"Your market research has given you the following criteria. The farm must:"
+msgstr ""
+"In urmatoarele trei module ne vom aventura sa raspundem unei intrebari "
+"avansate (de prospectare) folosind functii GIS. Sa zicem ca sunteti un "
+"dezvoltator imobiliar care vrea sa construiasca un cartier rezidential. Aveti "
+"nevoie pentru aceasta sa cumparati o locatie (ferma) unde sa construiti. "
+"Locatia trebuie sa aibe urmatoarele criterii:"
+
+# 199ca6963196426bbdf6bafeb56b830f
+#: ../../vector_analysis/index.rst:17
+msgid "be at least a certain area in size;"
+msgstr "sa aibe o anume marime ca arie"
+
+# 58f6692f2a4f42cdb86497f512d2090c
+#: ../../vector_analysis/index.rst:18
+msgid "be within the Swellendam town region;"
+msgstr "sa fie in regiunea Swellendam"
+
+# a22bc83450eb4605a7413a101a24c640
+#: ../../vector_analysis/index.rst:19
+msgid "have a road running through it for easy access;"
+msgstr "Sa aibe un drum care trece prin ea pentru un acces facil."
+
+# 3554fc62ce1b4c549c7409b1acfdcdae
+#: ../../vector_analysis/index.rst:20
+msgid "be within a certain distance from a school;"
+msgstr "sa fie intr-o distanta buna fata de o scoala/liceu."
+
+# ecf33d031f104431a95d180bc40675d2
+#: ../../vector_analysis/index.rst:21
+msgid "be on a flat surface for easy construction of new buildings; and"
+msgstr ""
+"sa fie pe o suprafata plana ca sa permita ridicarea cu usurinta a noi "
+"constructii; precum si"
+
+# 2e0b4116748740d191d3035b4d8cc753
+#: ../../vector_analysis/index.rst:22
+msgid "stay out of the shadow of the mountains in winter."
+msgstr "sa nu fie umbrita de munti pe anotimp de iarna."
+
+# f8355051a76c4591a1adf50925b7c74b
+#: ../../vector_analysis/index.rst:24
+msgid ""
+"Within the next few modules, we'll harness the power of GIS analysis tools "
+"to locate suitable farm properties for this new residential development."
+msgstr ""
+"In urmatoarele cateva module vom folosi puterea de analiza a QGIS-ului pentru "
+"a gasi locatiile care se preteaza la cerintele noastre."
+
+# 5eb62716ad574f9a80e6ae4d9597e0e7
+#: ../../vector_analysis/network_analysis.rst:2
+msgid "|LS| Network Analysis"
+msgstr "|LS| Analiza de retea (network)"
+
+# 3636bb963f5e4763a041c65cf03f72fb
+#: ../../vector_analysis/network_analysis.rst:4
+msgid ""
+"Calculating the shortest distance between two points is a commonly cited use "
+"for GIS. QGIS ships with this tool, but it's not visible by default. In this "
+"brief lesson, we'll show you what you need to get started."
+msgstr ""
+"Calcularea cele mai mici distante intre doua puncte este unul din lucrurile "
+"cele mai des intalnite in lucrarile despre GIS. QGIS are o unealta care "
+"permite aceasta dar nu este vizibila implicit (by default)."
+
+# 1280096effea493cab86c1c7aaaaf3ab
+#: ../../vector_analysis/network_analysis.rst:8
+msgid ""
+"**The goal for this lesson:** To activate, configure and use the "
+":guilabel:`Road Graph` plugin."
+msgstr ""
+"**Scopul acestei lectii:** Sa activati, configurati si sa utilizati pluginul "
+":guilabel:`Road Graph`."
+
+# c5faaa8800974373a1e3c57b2a63f407
+#: ../../vector_analysis/network_analysis.rst:12
+msgid "|basic| |FA| Activate the Tool"
+msgstr "|basic| |FA| Activarea uneltei"
+
+# 431e446502184961af71cbc3ccf9333e
+#: ../../vector_analysis/network_analysis.rst:14
+msgid ""
+"QGIS has many plugins that add to its basic functions. Many of these plugins "
+"are so useful that they ship along with the program straight out of the box. "
+"They're still hidden by default, though. So in order to use them, you need "
+"to activate them first."
+msgstr ""
+"QGIS are multe extensii (pluginuri) care se pot adauga peste functiile baza. "
+"Multe din aceste pluginuri sunt atat de folositoare ca sunt gasite direct in "
+"pachetul baza de QGIS. Totusi, initial acestea sunt ascunse. Prin urmare va "
+"trebui sa le activati pentru a le putea folosi."
+
+# b50e0363ea1e44f5b6d5eae1cf416f82
+#: ../../vector_analysis/network_analysis.rst:19
+msgid "To activate the :guilabel:`Road Graph` plugin:"
+msgstr "Ca sa activati pluginul :guilabel:`Road Graph`:"
+
+# d691e98f523540e0998baf87d411c8ce
+#: ../../vector_analysis/network_analysis.rst:21
+msgid ""
+"Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's "
+"menu item :menuselection:`Plugins --> Manage Plugins`. A dialog appears."
+msgstr ""
+"Porniti :guilabel:`Plugin Manager` facand click pe itemul din fereastra "
+"principala QGIS :menuselection:`Plugins --> Manage Plugins`. Un nou dialog "
+"apare."
+
+# 562258a19f1d442a965b6aa880433f3e
+#: ../../vector_analysis/network_analysis.rst:23
+msgid "Select the plugin like this:"
+msgstr "Selectati pluginul asa:"
+
+# f636cc196bd446ca81230190f01cdc5a
+#: ../../vector_analysis/network_analysis.rst:28
+msgid "Click :guilabel:`OK` on the :guilabel:`Plugin Manager` dialog."
+msgstr "Click :guilabel:`OK` in dialogul :guilabel:`Plugin Manager`"
+
+# 99a92c0cf40d454d872a9ef73034bcac
+#: ../../vector_analysis/network_analysis.rst:29
+msgid ""
+"To see the plugin in your interface, go to :menuselection:`View --> Panels` "
+"and ensure that :guilabel:`Shortest path` has a check mark next to it."
+msgstr ""
+"Pentru a vedea pluginul in interfata, mergeti la :menuselection:`View --> "
+"Panels` si asigurati-va ca :guilabel:`Shortest path` este bifata."
+
+# 0d1d42d224b047b58ccaa566f562e59f
+#: ../../vector_analysis/network_analysis.rst:32
+msgid "This panel will appear in your interface:"
+msgstr "Acest panou va aparea in interfata:"
+
+# fe41e1de3ebc445692efad00e0032e17
+#: ../../vector_analysis/network_analysis.rst:39
+msgid "|basic| |FA| Configure the Tool"
+msgstr "|basic| |FA| Configurarea uneltei (tool-ului)"
+
+# 66711e0f4e0e4235bf0d8507fda36ff7
+#: ../../vector_analysis/network_analysis.rst:41
+msgid ""
+"To have a layer to calculate on, first save your current map. Then create a "
+"new map and load the layer "
+":guilabel:`exercise_data/projected_data/roads_33S.shp`."
+msgstr ""
+"Pentru a avea un layer (strat) pe care sa calculati, salvati harta in primul "
+"rand. Dupa aceasta creeati o noua harta si incarcati layerul "
+":guilabel:`exercise_data/projected_data/roads_33S.shp`."
+
+# 0042ff46a27b4ec786f12da4cbcb9bc8
+#: ../../vector_analysis/network_analysis.rst:44
+msgid ""
+"Since so many different configurations are possible when analyzing networks, "
+"the plugin doesn't assume anything before you've set it up. Unfortunately, "
+"this means that it won't do anything at all if you don't set it up first."
+msgstr ""
+"Cum diferite configuratii sunt posibile la analizarea retelelor (networks), "
+"pluginul nu vine cu setari initiale asa ca trebuie configurat. Din pacate, "
+"asta inseamna ca daca nu il configurati el nu va produce nimic."
+
+# 5960f6453e6b46f1894fd107329d56b4
+#: ../../vector_analysis/network_analysis.rst:48
+msgid ""
+"Click on the menu item :menuselection:`Plugins --> Road graph --> Road graph "
+"settings`. A dialog will appear."
+msgstr ""
+"Click pe itemul de menu: :menuselection:`Plugins --> Road graph --> Road "
+"graph settings`. Un dialog va aparea:"
+
+# e176084888934de2ad338c5d3a89fdca
+#: ../../vector_analysis/network_analysis.rst:50
+msgid ""
+"Make sure it's set up like this (use defaults unless otherwise specified):"
+msgstr ""
+"Asigurati-va ca este configurat asa (folositi setarile initiale (defaults) "
+"daca nu este specificat altfel):"
+
+# 5682a9c4987d4bc6b6849e1e717aaa58
+#: ../../vector_analysis/network_analysis.rst:55
+msgid ":guilabel:`Time unit`: :guilabel:`hour`"
+msgstr ":guilabel:`Unitatea de timp`: :guilabel:`ora/hour`"
+
+# 207ed02d8cbc490785815bf264922633
+#: ../../vector_analysis/network_analysis.rst:56
+msgid ":guilabel:`Distance unit`: :guilabel:`kilometer`"
+msgstr ":guilabel:`Unitatea de distanta`: :guilabel:`kilometer`"
+
+# e677f9944b2146eeb2168a8e55fc1351
+#: ../../vector_analysis/network_analysis.rst:57
+msgid ":guilabel:`Layer`: :guilabel:`roads_33S`"
+msgstr ":guilabel:`Layer`: :guilabel:`roads_33S`"
+
+# 4456e573d06c462c85ff81b831b54b51
+#: ../../vector_analysis/network_analysis.rst:58
+msgid ""
+":guilabel:`Speed field`: :guilabel:`Always use default` / :guilabel:`km/h`"
+msgstr ":guilabel:`Viteza`: :guilabel:`Always use default` / \n:guilabel:`km/h`"
+
+# 7aa2c92fa7914ec1910ec2224bfa1213
+#: ../../vector_analysis/network_analysis.rst:63
+msgid ":guilabel:`Direction`: :guilabel:`Two-way direction`"
+msgstr ":guilabel:`Directia`: :guilabel:`Two-way direction, in ambele sensuri`"
+
+# e4aa2e94c38d480887184aac5e176040
+#: ../../vector_analysis/network_analysis.rst:64
+msgid ":guilabel:`Speed`: :guilabel:`60`"
+msgstr ":guilabel:`Viteza`: :guilabel:`60`"
+
+# a173f644724b4be485ea5d84f12eb946
+#: ../../vector_analysis/network_analysis.rst:68
+msgid "|basic| |FA| Use the Tool"
+msgstr "|basic| |FA| Folosirea uneltei (tool-ului)"
+
+# b68f20e6232a45eeb82698a8d36908f2
+#: ../../vector_analysis/network_analysis.rst:70
+msgid "Let's say you want to get from Barrydale to Bonnievale:"
+msgstr "Sa presupunem ca vrei sa mergeti din Barrydale la Bonnievale:"
+
+# 2365f7716f07479e9317bd37764e016f
+#: ../../vector_analysis/network_analysis.rst:75
+msgid ""
+"In the plugin panel, click on the :guilabel:`Capture Point` button next to "
+"the :guilabel:`Start` field:"
+msgstr ""
+"In panoul de pluginuri, click pe butonul :guilabel:`Capture Point` de langa "
+"campul :guilabel:`Start`:"
+
+# 17500a6834924bdfa0605c34574b72b3
+#: ../../vector_analysis/network_analysis.rst:81
+msgid "Click somewhere in Barrydale."
+msgstr "Click undeva in Barrydale."
+
+# 47e07de0359549069938448870a98c3b
+#: ../../vector_analysis/network_analysis.rst:82
+msgid ""
+"Use the :guilabel:`Capture Point` button next to the :guilabel:`Stop` field "
+"and capture a point somewhere in Bonnievale."
+msgstr ""
+"Folositi butonul :guilabel:`Capture Point` de langa camoul :guilabel:`Stop` "
+"si luati un punct undeva in Bonnievale."
+
+# d791d84315024f68ae56e9feaa47a997
+#: ../../vector_analysis/network_analysis.rst:84
+msgid "Click on the :guilabel:`Calculate` button to see the solution:"
+msgstr "Click pe butonul :guilabel:`Calculate` ca sa vedeti solutia:"
+
+# f8e6a25043cd48a1ab0af230a8c9a979
+#: ../../vector_analysis/network_analysis.rst:93
+msgid "|moderate| |FA| Using Criteria"
+msgstr "|moderate| |FA| Folosirea Criteriilor"
+
+# 6c90038f35e849a797a51b212a2d5c72
+#: ../../vector_analysis/network_analysis.rst:95
+msgid ""
+"Section developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+"Sectiune dezvoltata de Linfiniti si S Motala (Cape Peninsula University of "
+"Technology)"
+
+# a8668d24b242445199b572c506d51174
+#: ../../vector_analysis/network_analysis.rst:98
+msgid "Add the layer :guilabel:`exercise_data/projected_data/places_33S.shp`."
+msgstr ""
+"Adaugati layerul :guilabel:`exercise_data/projected_data/places_33S.shp`."
+
+# 8ecf111b6def4131b1b59fcdc85d7a42
+#: ../../vector_analysis/network_analysis.rst:99
+msgid "Add the aerial photographs under :guilabel:`exercise_data/raster/`."
+msgstr "Adaugati fotografiile aeriene sub :guilabel:`exercise_data/raster/`."
+
+# 2367f7e437a8443b8e6ace60d308fda4
+#: ../../vector_analysis/network_analysis.rst:100
+msgid ""
+"Zoom to the Swellendam area (the town / cluster of roads in the center of "
+"the map)."
+msgstr ""
+"Zoomati la zona unde se afla Swellendam (orasul/drumurile din cetrul hartii)."
+
+# 4171dffa63884968895891754a5117b0
+#: ../../vector_analysis/network_analysis.rst:102
+msgid ""
+"Select only the roads that are in the categories :kbd:`trunk`, "
+":kbd:`primary` or :kbd:`tertiary` by running this attribute selection query "
+"on the road layer:"
+msgstr ""
+"Selectati numai drumurile care sunt in categoriile :kbd:`trunk`, "
+":kbd:`primary` sau :kbd:`tertiary` facand o interogare/query pe layerul de "
+"drumuri (road):"
+
+# eadf4470381947108e8c040d9433bc03
+#: ../../vector_analysis/network_analysis.rst:110
+msgid ""
+"Right-click on the :guilabel:`roads_33S` layer in the :guilabel:`Layers "
+"list`."
+msgstr ""
+"Faceti click-ddreapta pe layerul :guilabel:`roads_33S`in :guilabel:`Layers "
+"list`."
+
+# 437e2ab58a4048969acfabe5e550c047
+#: ../../vector_analysis/network_analysis.rst:111
+msgid ""
+"Save it out to a new file, :kbd:`roads_subset`. Only the currently visible "
+"features will be saved."
+msgstr ""
+"Salvati intr-un nou fisier, :kbd:`roads_subset`. Numai feature-urile care "
+"sunt vizibile vor fi salvate."
+
+# eef308dcf12f4229a98f597fd2e874d3
+#: ../../vector_analysis/network_analysis.rst:113
+msgid ""
+"Remove the original :guilabel:`roads_33S` layer from the :guilabel:`Layers "
+"list`."
+msgstr "Stergeti layerul :guilabel:`roads_33S` din :guilabel:`Layers list`."
+
+# db39d07709f849779f060a8f4bd6d2fb
+#: ../../vector_analysis/network_analysis.rst:115
+msgid ""
+"Open the attribute table for the :guilabel:`roads_subset` layer and enter "
+"edit mode:"
+msgstr ""
+"Deschideti tabela de atribute din layeryk :guilabel:`roads_subset` si porniti "
+"modul de editare."
+
+# 26a9939455164ea590d612b422289fbc
+#: ../../vector_analysis/network_analysis.rst:121
+msgid "Add a new column:"
+msgstr "Adaugati o coloana noua:"
+
+# f3b27e3b26fd43e485b6a7eb9dd6a78e
+#: ../../vector_analysis/network_analysis.rst:126
+msgid ""
+"Call this new column :kbd:`SPEED`, and give it the type :guilabel:`Whole "
+"number (integer)` with a width of :kbd:`3`."
+msgstr ""
+"Denumiti aceasta coloana :kbd:`SPEED` si faceti-o de tipul :guilabel:`Whole "
+"number (integer)` cu un width (marime) de :kbd:`3`."
+
+# 6b43c8e9877941dd9a90ed1043d99c4f
+#: ../../vector_analysis/network_analysis.rst:128
+msgid ""
+"In the main window, activate the :guilabel:`Select Features by Rectangle` "
+"tool:"
+msgstr ""
+"In fereastra principala, activati unealta guilabel:`Select Features by "
+"Rectangle`:"
+
+# 2ff6d63458254797822462e95275f6b4
+#: ../../vector_analysis/network_analysis.rst:134
+msgid "Select these roads:"
+msgstr "Selectati aceste drumuri:"
+
+# 298d095509474f1f936c780ba2543a13
+#: ../../vector_analysis/network_analysis.rst:139
+msgid ""
+"(To select more than one road, hold the :kbd:`ctrl` button and drag a box "
+"across any road that you want to include in the selection.)"
+msgstr ""
+"Pentru a selecta mai mult de un drum, tineti apasat butonul :kbd:`ctrl` si "
+"descrieti o zona dreptunghiulara cu mouseul deasupra drumurilor care le vreti "
+"incluse in selectie."
+
+# d7ac8e204c0d46ec98631e2c2d1056ed
+#: ../../vector_analysis/network_analysis.rst:142
+msgid ""
+"In the attribute table, click on the :guilabel:`Show selected only` box."
+msgstr "In tabela de atribute, faceti click pe :guilabel:`Show selected only`."
+
+# d4ba8acc577548bb8a9d229775b33002
+#: ../../vector_analysis/network_analysis.rst:143
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`60`:"
+msgstr ""
+"Introduceti in :kbd:`SPEED` - (viteza) valoarea pentru toate strazile, si "
+"anume :kbd:`60`:"
+
+# d9c660904f74401ea337aec617154cab
+#: ../../vector_analysis/network_analysis.rst:148
+msgid ""
+"In context, this means that you're setting the speed limit on those roads to "
+":kbd:`60 km/h`."
+msgstr ""
+"Asta inseamna ca setati limita de viteza pe aceste drumuri la :kbd:`60 km/h`."
+
+# 5695f7bbbd51403eaa4c939c87833ad5
+#: ../../vector_analysis/network_analysis.rst:151
+msgid "Select the highway outside of town:"
+msgstr "Selectati autostrada din afara orasului."
+
+# dac18dd60fd843929b89b8a605528aee
+#: ../../vector_analysis/network_analysis.rst:156
+msgid "Set the :kbd:`SPEED` value for all the selected streets to :kbd:`120`."
+msgstr "Setati valoarea vitezei :kbd:`SPEED` la :kbd:`120`."
+
+# 3ff3c8807fa245f2a0f3b508e295fe7b
+#: ../../vector_analysis/network_analysis.rst:157
+msgid "Close the attribute table, save your edits, and exit edit mode."
+msgstr ""
+"Inchideti tabela de atribute, salvati modificarile (editarile) si iesiti din "
+"modul de editare."
+
+# 1fe2a0af2e6e4a3fad5dec795339742e
+#: ../../vector_analysis/network_analysis.rst:158
+msgid ""
+"Check the :menuselection:`Vector --> Road graph --> Road graph settings` to "
+"ensure that it's set up as explained previously in this lesson, but with the "
+":guilabel:`Speed` value set to the :kbd:`SPEED` field you just created."
+msgstr ""
+"Asigurati-va ca :menuselection:`Vector --> Road graph --> Road graph "
+"settings` este configurat la fel ca mai sus dar cu valoarea :guilabel:`Speed` "
+"la campul\n:kbd:`SPEED` ce tocmai l-ati creat. "
+
+# f7f585f4264e45bfac3a3283b9552d48
+#: ../../vector_analysis/network_analysis.rst:161
+msgid ""
+"In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point` "
+"button."
+msgstr ""
+"In ecranul :guilabel:`Shortest path`, faceti click pe butonul "
+":guilabel:`Start point`."
+
+# 0a2a131e749a4d74b177db1a245dc2ec
+#: ../../vector_analysis/network_analysis.rst:163
+msgid ""
+"Set the starting point to where the dirt road meets the on/off-rqamp at the "
+"edge of town on the east."
+msgstr ""
+"Setati punctul de start in punctul in care drumul se intalneste cu "
+"on/off-rqamp de la marginea estica a orasului."
+
+# 0fb5f695ec3c4b3bbd25a65952bba227
+#: ../../vector_analysis/network_analysis.rst:165
+msgid "Set the end point to the T-junction west of town."
+msgstr "Setati punctul final in intersectia de tip T din vestul orasului."
+
+# c2c02923d7f34cb8a61c66de709772de
+#: ../../vector_analysis/network_analysis.rst:170
+msgid ""
+"In the :guilabel:`Criterion` drop-down list in the :guilabel:`Shortest path` "
+"panel, select :guilabel:`Length`."
+msgstr ""
+"In lista drop-down :guilabel:`Criterion` a meniului :guilabel:`Shortest "
+"path`, selectati :guilabel:`Length`."
+
+# a797c0e099cc4c82bd8dd52c3e9aaec9
+#: ../../vector_analysis/network_analysis.rst:172
+msgid ""
+"Click :guilabel:`Calculate`. The route will be calculated for the shortest "
+"distance:"
+msgstr ""
+"Apasati click pe :guilabel:`Calculate`. Ruta va fi calculata pentru cea mai "
+"mica distanta:"
+
+# ad280c382748476ea9d5b395560ee985
+#: ../../vector_analysis/network_analysis.rst:178
+msgid ""
+"Notice the values of :guilabel:`Length` and :guilabel:`Time` in the "
+":guilabel:`Shortest path` panel."
+msgstr ""
+"Observati valorile :guilabel:`Length` si :guilabel:`Time` in panoul "
+":guilabel:`Shortest path`."
+
+# 3dd33821ca404cc9890a79587d2c0138
+#: ../../vector_analysis/network_analysis.rst:181
+msgid "Set the :guilabel:`Criterion` to :guilabel:`Time`."
+msgstr "Setati :guilabel:`Criterion` pe :guilabel:`Time`."
+
+# 6c9447f0679e4000b64222241161661f
+#: ../../vector_analysis/network_analysis.rst:182
+msgid ""
+"Click :guilabel:`Calculate` again. The route will be calculated for the "
+"shortest time:"
+msgstr ""
+"Apasati click pe :guilabel:`Calculate` din nou. Ruta va fi calculata pentru "
+"cel mai scurt timp."
+
+# a1f835e5e9f943d2a00ac9c38739ced4
+#: ../../vector_analysis/network_analysis.rst:188
+msgid ""
+"You can switch back and forth between these criteria, recalculating each "
+"time, and note the changes in the :guilabel:`Length` and :guilabel:`Time` "
+"taken. Remember that the assumption being made to arrive at the time taken "
+"to travel a route does not account for acceleration, and assumes that you "
+"will be traveling at the speed limit at all times. In a real situation, you "
+"may want to split roads into smaller sections and note the average or "
+"expected speed in each section, rather than the speed limit."
+msgstr ""
+"Puteti comuta intre critetii, recalculand de fiecare data, si puteti observa "
+"modificarile in :guilabel:`Length` si :guilabel:`Time`. Trebuie retinut "
+"faptul ca estimarea de a ajunge la ora stabilita nu ia in considerare "
+"acceleratia, si considera ca tot timpul va veti deplasa cu viteza maxima "
+"legala. Intr-o situatie reala, puteti imparti drumurile in segmente mai mici "
+"si sa notati viteza medie pe fiecare segment decat viteza maxima legala."
+
+# 48c879237ab54d83a922095c29f2c2b3
+# b314003c961345699a049ea505e48f5a
+#: ../../vector_analysis/network_analysis.rst:197
+#: ../../vector_analysis/spatial_statistics.rst:306
+msgid "|moderate| |TY|"
+msgstr "|moderate| |TY|"
+
+# 9ee1664c6a4c433dae31f4ebcd6e641b
+#: ../../vector_analysis/network_analysis.rst:199
+msgid "Digitize the roads in Railton."
+msgstr "Digitizarea drumurilor in Railton."
+
+# f3b2aa470061440c972763ef7404b7ce
+#: ../../vector_analysis/network_analysis.rst:201
+msgid "These are the main roads, type :guilabel:`tertiary`, speed :kbd:`60`:"
+msgstr ""
+"Acestea sunt drumurile principale, type :guilabel:`tertiary`, speed :kbd:`60`:"
+
+# 16986742088741fe9564a6d929f228f6
+#: ../../vector_analysis/network_analysis.rst:206
+msgid ""
+"And these are the smaller streets, type :guilabel:`residential`, speed "
+":kbd:`40`:"
+msgstr ""
+"Acestea sunt strazile secundare, type :guilabel:`residential`, speed "
+":kbd:`40`:"
+
+# 760c4f920a4d4a2eaaca05af9cc4d80d
+#: ../../vector_analysis/network_analysis.rst:212
+msgid ""
+"Use the :guilabel:`Shortest path` tool to calculate the shortest and fastest "
+"ways to get from the southern extreme of town to the highway."
+msgstr ""
+"Folositi instrumentul :guilabel:`Shortest path` pentru a calcula cea mai "
+"rapida si cea mai scurta cale de a ajunge din marginea sudica a orasului, pe "
+"autostrada."
+
+# cc0a4efe36f0434ab57c2e011bef769d
+#: ../../vector_analysis/network_analysis.rst:215
+msgid ""
+"If, on clicking :guilabel:`Calculate`, you're getting an error stating that "
+"a path could not be found, then make sure that the roads you digitized "
+"actually meet each other. If they're not quite touching, either fix them by "
+"modifying the features, or set the :guilabel:`Topology tolerance` "
+"(:guilabel:`Road graph plugin settings`). If they're passing over each other "
+"without intersecting, use the :guilabel:`Split features` tool to \"split\" "
+"roads at their intersections:"
+msgstr ""
+"Daca in momentul in care ati dat click pe :guilabel:`Calculate`, primiti o "
+"eroare care spune ca nu a putut fi gasita nici o ruta, asigurati-va ca "
+"drumurile care au fost digitizate, se intalnesc intr-un punct comun. Daca "
+"acest punct nu exista, reparati-le sau setati :guilabel:`Topology tolerance` "
+"(:guilabel:`Road graph plugin settings`). Daca trec unul pe deasupra "
+"celuilalt, fara sa se intersecteze, folositi instrumentul :guilabel:`Split "
+"features` pentru a diviza drumurile la intersectii."
+
+# fea9688d0d034e249efcae9755efad4d
+#: ../../vector_analysis/network_analysis.rst:225
+msgid ""
+"Remember that the :guilabel:`Split features` tool only works in edit mode on "
+"selected features, though!"
+msgstr ""
+"Retineti ca instrumentul :guilabel:`Split features` functioneaza doar in "
+"modul de editare, pe obiectele selectate!"
+
+# bca4771ea05a40a4bb33444d405868c9
+#: ../../vector_analysis/network_analysis.rst:231
+msgid ""
+"Now you know how to use the :guilabel:`Road Graph` plugin to solve "
+"shortest-path problems."
+msgstr ""
+"Acum stiti cum sa folositi plugin-ul :guilabel:`Road Graph` pentru a rezolva "
+"problemele care tin de ruta cea mai scurta."
+
+# 89922bd5960d473980bce16647e44ab1
+#: ../../vector_analysis/network_analysis.rst:237
+msgid ""
+"Next you'll see how to run spatial statistics algorithms on vector datasets."
+msgstr ""
+"In continuare, vom vedea cum se folosesc algoritmii de statistica spatiala pe "
+"dataset-urile de vectori."
+
+# 41775dbc19b84551a60b02c9f2466f94
+#: ../../vector_analysis/reproject_transform.rst:2
+msgid "|LS| Reprojecting and Transforming Data"
+msgstr "|LS| Reproiectarea si Transformarea Datelor"
+
+# cdbc0e1bdad54c659b8a4c7f08b7799a
+#: ../../vector_analysis/reproject_transform.rst:4
+msgid ""
+"Let's talk about Coordinate Reference Systems (CRSs) again. We've touched on "
+"this briefly before, but haven't discussed what it means practically."
+msgstr ""
+"Sa vorbim despre Sistemele de Referinta a Coordonatelor (CRS), din nou. Am "
+"mai atins subiectul, dar nu am discutat practic, ce reprezinta."
+
+# a6e2c3f319de46838b2704fefdcf13ae
+#: ../../vector_analysis/reproject_transform.rst:7
+msgid ""
+"**The goal for this lesson:** To reproject and transform vector datasets."
+msgstr ""
+"**Scopul acestei lectii:** Reproiectarea si transformarea dataset-urilor."
+
+# 73c26dbb63c84cc09072cb89af7fc3e6
+#: ../../vector_analysis/reproject_transform.rst:10
+msgid "|basic| |FA| Projections"
+msgstr "|basic| |FA| Proiectii"
+
+# efc13f44977e48c2a2737ce5ce1e6f60
+#: ../../vector_analysis/reproject_transform.rst:12
+msgid ""
+"The CRS that all the data as well as the map itself are in right now is "
+"called WGS84. This is a very common Geographic Coordinate System (GCS) for "
+"representing data. But there's a problem, as we will see."
+msgstr ""
+"CRS-ul pe care este setata harta si datele este denumit WGS84. Este un Sistem "
+"de Coordonate Geografice (GCS) foarte des folosit, pentru reprezentarea "
+"datelor. Totusi, exista o problema, asa cum vom vedea."
+
+# ddda2e13647a41af98790925fd29611c
+#: ../../vector_analysis/reproject_transform.rst:16
+msgid "Save your current map."
+msgstr "Salvati harta curenta."
+
+# 3c4bc39ef55d4b82ac516a54e94c8eff
+#: ../../vector_analysis/reproject_transform.rst:17
+msgid ""
+"Then open the map of the world which you'll find under "
+":kbd:`exercise_data/world/world.qgs`."
+msgstr ""
+"Deschideti harta lumii pe care o veti gasi in "
+":kbd:`exercise_data/world/world.qgs`."
+
+# c0f165f70deb4bb19debac8344b9309a
+#: ../../vector_analysis/reproject_transform.rst:19
+msgid "Zoom in to South Africa by using the :guilabel:`Zoom In` tool."
+msgstr "Zoom in pe Africa de Sud folosind :guilabel:`Zoom In`."
+
+# 04121af5606b4a2e86f0a06e1e7f147c
+#: ../../vector_analysis/reproject_transform.rst:20
+msgid ""
+"Try setting a scale in the :guilabel:`Scale` field, which is in the "
+":guilabel:`Status Bar` along the bottom of the screen. While over South "
+"Africa, set this value to :kbd:`1:5000000` (one to five million)."
+msgstr ""
+"Setati scara in campul :guilabel:`Scale`, care se afla in bara "
+":guilabel:`Status Bar`, de-a lungul partii de jos a ecranului. Deasupra "
+"Africii, setati valoarea la :kbd:`1:5000000` (unu la cinci milioane)."
+
+# 3933a992a3234006b29e827b2144c0b7
+#: ../../vector_analysis/reproject_transform.rst:23
+msgid "Pan around the map while keeping an eye on the :guilabel:`Scale` field."
+msgstr "Deplasati-va pe harta, observand campul :guilabel:`Scale`."
+
+# 4c482378bc564b3fae79ddbb69ac8fd4
+#: ../../vector_analysis/reproject_transform.rst:25
+msgid ""
+"Notice the scale changing? That's because you're moving away from the one "
+"point that you zoomed into at :kbd:`1:5000000`, which was at the center of "
+"your screen. All around that point, the scale is different."
+msgstr ""
+"Observati cum se modifica scara? Acest lucru se intampla pentru ca va miscati "
+"fata de singurul punct pe care ati dat zoom in la :kbd:`1:5000000`, care "
+"reprezenta centrul ecranului. In jurul acelui punct, scara este diferita."
+
+# fb7bda9c022e4bf281eb72784068822b
+#: ../../vector_analysis/reproject_transform.rst:29
+msgid ""
+"To understand why, think about a globe of the Earth. It has lines running "
+"along it from North to South. These longitude lines are far apart at the "
+"equator, but they meet at the poles."
+msgstr ""
+"Pentru a intelege de ce, ganditi-va la globul Pamantesc. Are linii de la Nord "
+"la Sud. Aceste linii longitudinale sunt departate la Ecuator, dar se "
+"intalnesc la poli."
+
+# 27e086c0473444e4aef098ffe54f617b
+#: ../../vector_analysis/reproject_transform.rst:33
+msgid ""
+"In a GCS, you're working on this sphere, but your screen is flat. When you "
+"try to represent the sphere on a flat surface, distortion occurs, similar to "
+"what would happen if you cut open a tennis ball and tried to flatten it out. "
+"What this means on a map is that the longitude lines stay equally far apart "
+"from each other, even at the poles (where they are supposed to meet). This "
+"means that, as you travel away from the equator on your map, the scale of "
+"the objects that you see gets larger and larger. What this means for us, "
+"practically, is that there is no constant scale on our map!"
+msgstr ""
+"Intr-un CGS, lucrati cu aceasta sfera, dar ecranul este plat. In momentul in "
+"care incerci sa reprezinti o sfera pe o suprafata plata, apar distorsiuni, "
+"similare celor care ar aparea daca ai incerca sa tai o minge de tenis si ai "
+"incerca sa o aplatizezi. Asta inseamna ca pe o harta, liniile longitudinale "
+"vor ramane paralele, chiar si la poli (unde in mod normal trebuie sa se "
+"intalneasca). Pe masura ce te deplasezi spre Ecuator, scara la care se afla "
+"obiectele pe care le vezi, creste. Practic, asta inseamna ca nu exista o "
+"scara constanta pe harta!"
+
+# 9b00d7b4c25c41179a06e16648d51641
+#: ../../vector_analysis/reproject_transform.rst:42
+msgid ""
+"To solve this, let's use a Projected Coordinate System (PCS) instead. A PCS "
+"\"projects\" or converts the data in a way that makes allowance for the "
+"scale change and corrects it. Therefore, to keep the scale constant, we "
+"should reproject our data to use a PCS."
+msgstr ""
+"Pentru a solutiona acest lucru, vom folosi un Sistem de Coordonate Proiectate "
+"(PCS). Un PCS, proiecteaza sau transforma datele intr-un mod care permite "
+"modificarile de scara si le corecteaza. Astfel, pentru a mentine scara "
+"constanta, ar trebui sa reproiectam informatiile folosind un PCS."
+
+# d2a8ca79ec654e9788c2fc3d5779e092
+#: ../../vector_analysis/reproject_transform.rst:48
+msgid "|basic| |FA| \"On the Fly\" Reprojection"
+msgstr "|basic| |FA| Reproiectare \"On the Fly\" "
+
+# cc134d54458d4458996d5b649748c14b
+#: ../../vector_analysis/reproject_transform.rst:50
+msgid ""
+"QGIS allows you to reproject data \"on the fly\". What this means is that "
+"even if the data itself is in another CRS, QGIS can project it as if it were "
+"in a CRS of your choice."
+msgstr ""
+"QGIS permite reproiectarea datelor \"on the fly\". Acest lucru inseamna ca "
+"desi datele se afla intr-un CRS diferit, QGIS le poate proiecta ca si cum "
+"s-ar afla in CRS-ul dorit."
+
+# 1105bf90646c41cc911adbe23a6f0d8a
+#: ../../vector_analysis/reproject_transform.rst:54
+msgid ""
+"To enable \"on the fly\" projection, click on the :guilabel:`CRS Status` "
+"button in the :guilabel:`Status Bar` along the bottom of the QGIS window:"
+msgstr ""
+"Pentru a activa proiectarea \"on the fly\", dati click pe butonul "
+":guilabel:`CRS Status` in bara :guilabel:`Status Bar` care se afla de-a "
+"lungul partii de jos a ferestrei QGIS:"
+
+# 462f6957006441a0b50aac90aea91336
+#: ../../vector_analysis/reproject_transform.rst:60
+msgid ""
+"In the dialog that appears, check the box next to :guilabel:`Enable 'on the "
+"fly' CRS transformation`."
+msgstr ""
+"In caseta de dialog care apare, bifati casuta :guilabel:`Enable 'on the fly' "
+"CRS transformation`."
+
+# 34bc88613a3e4f2ab533c57d35ea00df
+#: ../../vector_analysis/reproject_transform.rst:62
+msgid ""
+"Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS "
+"(:guilabel:`NSIDC EASE-Grid Global`) will appear in the list below."
+msgstr ""
+"Tastati cuvantul :kbd:`global` in campul :guilabel:`Filter`. CRS-ul "
+"(:guilabel:`NSIDC EASE-Grid Global`), va aparea in lista de mai jos. "
+
+# 9f2149cf3278491697aa2295f6a4ab45
+#: ../../vector_analysis/reproject_transform.rst:64
+msgid "Click on it to select it, then click :kbd:`OK`."
+msgstr ""
+"Apasati click pe el pentru selectare, si apoi apasati click pe :kbd:`OK`."
+
+# 100e34ce459c44809d67ec71cc03c06e
+#: ../../vector_analysis/reproject_transform.rst:66
+msgid ""
+"Notice how the shape of South Africa changes. All projections work by "
+"changing the apparent shapes of objects on Earth."
+msgstr ""
+"Observati cum forma Africii de Sud se modifica. Toate proiectiile modifica "
+"forma aparenta a obiectelor pe Pamant."
+
+# ee5aa43cd2004ab480407c74c4e7aec7
+#: ../../vector_analysis/reproject_transform.rst:68
+msgid "Zoom in to a scale of :kbd:`1:5000000` again, as before."
+msgstr "Faceti zoom in la scara :kbd:`1:5000000`, din nou. "
+
+# a09c0fada0cd451c934ecb6420042b84
+#: ../../vector_analysis/reproject_transform.rst:69
+msgid "Pan around the map."
+msgstr "Miscati harta."
+
+# 3e8c0f1cbfc14f74a5da362de5e4853d
+#: ../../vector_analysis/reproject_transform.rst:70
+msgid "Notice how the scale stays the same!"
+msgstr "Observati cum scara ramane aceiasi."
+
+# b2b6350c5fb6496cbd60ff6d8e653ca4
+#: ../../vector_analysis/reproject_transform.rst:72
+msgid ""
+"\"On the fly\" reprojection is also used for combining datasets that are in "
+"different CRSs."
+msgstr ""
+"Reproiectarea \"On the fly\" este deasemenea folosita pentru imbinarea "
+"dataset-urilor care se afla in CRS-uri diferite."
+
+# 25546314850d45b6b9df906ceff58947
+#: ../../vector_analysis/reproject_transform.rst:75
+msgid "Deactivate \"on the fly\" reprojection again:"
+msgstr "Acum, dezactivati reproiectarea \"on the fly\":"
+
+# aa76e083c4d945aa9d341b462c44d41f
+#: ../../vector_analysis/reproject_transform.rst:77
+msgid "Click on the :guilabel:`CRS Status` button again."
+msgstr "Apasati click pe :guilabel:`CRS Status`, din nou."
+
+# 829a843fbade45edaab895e7aff7e835
+#: ../../vector_analysis/reproject_transform.rst:78
+msgid "Uncheck the :guilabel:`Enable 'on the fly' CRS transformation` box."
+msgstr "Debifati casuta :guilabel:`Enable 'on the fly' CRS transformation`."
+
+# d6b739255f524851afdc043c93207b63
+#: ../../vector_analysis/reproject_transform.rst:79
+msgid "Clicking :guilabel:`OK`."
+msgstr "Apasati :guilabel:`OK`."
+
+# 1e4cb682cc6545f697f54bdba09ba840
+#: ../../vector_analysis/reproject_transform.rst:81
+msgid ""
+"Add another vector layer to your map which has the data for South Africa "
+"only.  You'll find it as :kbd:`exercise_data/world/RSA.shp`."
+msgstr ""
+"Adaugati un alt layer pe harta care are datele pentru Africa de Sud. Il veti "
+"gasi in :kbd:`exercise_data/world/RSA.shp`."
+
+# 86a1518bb4aa44cc9c17151119100e95
+#: ../../vector_analysis/reproject_transform.rst:84
+msgid "What do you notice?"
+msgstr "Ce observati?"
+
+# 9be591649466449fa79999a0a603aaa2
+#: ../../vector_analysis/reproject_transform.rst:86
+msgid "The layer isn't visible! But that's easy to fix, right?"
+msgstr "Layer-ul nu este vizibil. Dar acest lucru este usor de rezolvat, nu?"
+
+# 1e0f08f8ecae437a8d5ff037ff7cd7e3
+#: ../../vector_analysis/reproject_transform.rst:88
+msgid "Right-click on the layer in the :guilabel:`Layers list`."
+msgstr "Apasati click-dreapta pe :guilabel:`Layers list`."
+
+# 4f3428fb176d4854836879a9b29553a2
+#: ../../vector_analysis/reproject_transform.rst:89
+msgid "Select :guilabel:`Zoom to Layer Extent`."
+msgstr "Selectati :guilabel:`Zoom to Layer Extent`."
+
+# 66c7026253d44ac0bb158e67baf9199b
+#: ../../vector_analysis/reproject_transform.rst:91
+msgid "OK, so now we see South Africa... but where is the rest of the world?"
+msgstr "Acum vedem Africa de Sud, dar unde este restul lumii?"
+
+# 6801e97178a04fce9c65ce72ed519c0f
+#: ../../vector_analysis/reproject_transform.rst:93
+msgid ""
+"It turns out that we can zoom between these two layers, but we can't ever "
+"see them at the same time. That's because their Coordinate Reference Systems "
+"are so different. The :guilabel:`continents` dataset is in *degrees*, but "
+"the :guilabel:`RSA` dataset is in *meters*. So, let's say that a given point "
+"in Cape Town in the :guilabel:`RSA` dataset is about :kbd:`4 100 000` meters "
+"away from the equator. But in the :guilabel:`continents` dataset, that same "
+"point is about :kbd:`33.9` degrees away from the equator."
+msgstr ""
+"Se pare ca putem vedea aceste layere, dar nu le putem vedea in acelasi timp. "
+"Acest lucru se intampla pentru ca se afla in CRS-uri diferite. Dataset-ul "
+":guilabel:`continents` este in *degrees*, dar dataset-ul :guilabel:`RSA` este "
+"in *meters*. Sa spunem ca un punct din Cape Town in dataset-ul "
+":guilabel:`RSA` se afla la :kbd:`4 100 000` de metri de Ecuator. In "
+"dataset-ul :guilabel:`continents`, acelasi punct se afla la :kbd:`33.9` de "
+"grade fata de Ecuator."
+
+# a1fb437d0fef4ec6b18d3c0ffa38a4e0
+#: ../../vector_analysis/reproject_transform.rst:101
+msgid ""
+"This is the same distance - but QGIS doesn't know that! You haven't told it "
+"to reproject the data. So as far as it's concerned, the version of South "
+"Africa that we see in the :guilabel:`RSA` dataset has Cape Town at the "
+"correct distance of :kbd:`4 100 000` meters from the equator. But in the "
+":guilabel:`continents` dataset, Cape Town is only :kbd:`33.9` *meters* away "
+"from the equator! You can see why this is a problem."
+msgstr ""
+"Distanta este aceiasi dar QGIS nu stie acest lucru pentru ca nu i-a fost spus "
+"sa reproiecteze datele. Din punctul lui de vedere, versiunea Africii de Sud "
+"pe care o vedem in dataset-ul :guilabel:`RSA`, are orasul Cape Town la "
+"distanta corecta de :kbd:`4 100 000` fata de Ecuator, dar in dataset-ul "
+":guilabel:`continents`, Cape Town este la doar kbd:`33.9` *meters* fata de "
+"Ecuator. Acum puteti observa de ce acest lucru poate fi o problema."
+
+# fba3785633694fbebea22003b8633f55
+#: ../../vector_analysis/reproject_transform.rst:108
+msgid ""
+"QGIS doesn't know where Cape Town is *supposed* to be - that's what the data "
+"should be telling it. If the data tells QGIS that Cape Town is :kbd:`34` "
+"meters away from the equator and that South Africa is only about :kbd:`12` "
+"meters from north to south, then that is what QGIS will draw."
+msgstr ""
+"QGIS nu stie unde ar trebui sa se afle Cape Town - din acest motiv are nevoie "
+"de date care sa-i spuna acest lucru. Daca datele din QGIS spun ca Cape Town "
+"se afla la :kbd:`34` de metri fata de Ecuator si ca Africa de Sud este la "
+":kbd:`12` de metri de la nord spre sud, atunci QGIS, asta va desena."
+
+# d01fedb76d554d7ea8b93882b4f71027
+#: ../../vector_analysis/reproject_transform.rst:113
+msgid "To correct this:"
+msgstr "Pentru a corecta acest lucru:"
+
+# bdf7b19c91554ccabcb2f0faa2b81600
+#: ../../vector_analysis/reproject_transform.rst:115
+msgid ""
+"Switch :guilabel:`Enable 'on the fly' CRS transformation` on again as before."
+msgstr ""
+"Porniti :guilabel:`Enable 'on the fly' CRS transformation` cum am facut "
+"inainte."
+
+# 52e0b35051eb4a98b360d46dfff4c457
+#: ../../vector_analysis/reproject_transform.rst:116
+msgid "Zoom to the extents of the :guilabel:`RSA` dataset."
+msgstr "Dati zoom pe limitele dataset-ului :guilabel:`RSA`."
+
+# 675027c54a5d419982dd06aa1ee6ec0e
+#: ../../vector_analysis/reproject_transform.rst:118
+msgid ""
+"Now, because they're made to project in the same CRS, the two datasets fit "
+"perfectly:"
+msgstr ""
+"Acum, pentru ca datele sunt proiectate in acelasi CRS, cele doua dataset-uri "
+"se potrivesc perfect:"
+
+# 346a7343ba5245158d472fc719eb81a6
+#: ../../vector_analysis/reproject_transform.rst:124
+msgid ""
+"When combining data from different sources, it's important to remember that "
+"they might not be in the same CRS. \"On the fly\" reprojection helps you to "
+"display them together."
+msgstr ""
+"Cand combinati date din diferite surse, este important de retinut faptul ca "
+"exista posibilitatea ca datele sa nu se afle in acelasi CRS. Reproiectarea "
+"\"on the fly\" ajuta la vizualizarea lor simultana."
+
+# 1bc798d4dceb47ec87fcb86780f39494
+#: ../../vector_analysis/reproject_transform.rst:129
+msgid "|moderate| |FA| Saving a Dataset to Another CRS"
+msgstr "|moderate| |FA| Salvarea unui dataset intr-un alt CRS"
+
+# 534e3ae9a5904c0e92cf1707d18602a5
+#: ../../vector_analysis/reproject_transform.rst:131
+msgid ""
+"Remember when you calculated areas for the farms in the "
+":guilabel:`Classification` lesson? You did it so that you could classify the "
+"farms according to area."
+msgstr ""
+"Va aduceti aminte cand am calculat suprafetele pentru ferme din lectia "
+":guilabel:`Classification`? Am facut acest lucru pentru a clasifica fermele "
+"in functie de zona. "
+
+# 9da23409e29e480ea97b02b26262d4cc
+#: ../../vector_analysis/reproject_transform.rst:135
+msgid "Open your usual map again (containing the Swellendam data)."
+msgstr "Deschideti harta din nou (care contine datele Swellendam)."
+
+# 780553d393854f9da4ff1298e6f591b6
+#: ../../vector_analysis/reproject_transform.rst:136
+msgid "Open the attribute table for the :guilabel:`rural` layer."
+msgstr "Deschideti tabela de atribute pentru layer-ul :guilabel:`rural`."
+
+# b17ff78919b546b98ec4c822b6fef670
+#: ../../vector_analysis/reproject_transform.rst:137
+msgid "Scroll to the right until you see the :kbd:`AREA` field."
+msgstr "Derulati pagina pana cand gasiti campul :kbd:`AREA`."
+
+# 7d7fca4095814d0a8e2ecb070a2e2291
+#: ../../vector_analysis/reproject_transform.rst:139
+msgid ""
+"Notice how the areas are all very small; basically zero. This is because "
+"these areas are given in degrees - the data isn't in a Projected Coordinate "
+"System. In order to calculate the area for the farms in square meters, the "
+"data has to be in square meters as well. So, we'll need to reproject it."
+msgstr ""
+"Observati cum toate suprafetele sunt foarte mici; aproape zero. Acest lucru "
+"este din cauza ca suprafetele sunt oferite in grade - datele nu sunt intr-un "
+"PCS. Pentru a calcula suprafetele fermelor in metri patrati, datele trebuie "
+"sa fie tot in metri patrati. Va trebui sa le reproiectam."
+
+# 8d71c03748324c1898a7971ab99dec6d
+#: ../../vector_analysis/reproject_transform.rst:144
+msgid ""
+"But it won't help to just use \"on the fly\" reprojection. \"On the fly\" "
+"does what it says - it doesn't change the data, it just reprojects the "
+"layers as they appear on the map. To truly reproject the data itself, you "
+"need to export it to a new file using a new projection."
+msgstr ""
+"Reproiectarea \"on the fly\" nu va fi de ajuns. \"On the fly\" face exact ce "
+"inseamna - nu modifica datele ci doar reproiecteaza layerele care apar pe "
+"harta. Pentru a reproiecta datele, trebuie exportate intr-un fisier nou, "
+"folosind o noua proiectie."
+
+# bc1dacc4310446b69664ec5514b9e85c
+#: ../../vector_analysis/reproject_transform.rst:149
+msgid ""
+"Right-click on the :guilabel:`rural` layer in the :guilabel:`Layers list`."
+msgstr ""
+"Click-dreapta pe layerul :guilabel:`rural` in lista :guilabel:`Layers list`."
+
+# f5b2b1fe78c74d01a6ca6b97101650fc
+#: ../../vector_analysis/reproject_transform.rst:150
+msgid ""
+"Select :guilabel:`Save As...` in the menu that appears. You will be shown "
+"the :guilabel:`Save vector layer as...` dialog."
+msgstr ""
+"Selectati :guilabel:`Save As...` in meniul care apare. Va aparea caseta de "
+"dialog :guilabel:`Save vector layer as...`."
+
+# ca2eca5b45fd4e719cd7dc56e34d77c3
+#: ../../vector_analysis/reproject_transform.rst:152
+msgid ""
+"Click on the :guilabel:`Browse` button next to the :guilabel:`Save as` field."
+msgstr ""
+"Click pe butonul :guilabel:`Browse` care se afla langa campul :guilabel:`Save "
+"as`."
+
+# fcfcbe20b7e54ff79b579d238db27aa4
+#: ../../vector_analysis/reproject_transform.rst:153
+msgid ""
+"Navigate to :kbd:`exercise_data/` and specify the name of the new layer as "
+":kbd:`rural_reprojected.shp`."
+msgstr ""
+"Selectati folderul :kbd:`exercise_data/` si specificati numele noului layer "
+"ca si :kbd:`rural_reprojected.shp`."
+
+# f1eef9a930c04b788240b3f60ad67f31
+#: ../../vector_analysis/reproject_transform.rst:155
+msgid "Leave the :guilabel:`Encoding` unchanged."
+msgstr "Lasati :guilabel:`Encoding` nemodificat."
+
+# 3820fb399bab493cb68abf8c5222427b
+#: ../../vector_analysis/reproject_transform.rst:156
+msgid ""
+"Change the value of the :guilabel:`Layer CRS` dropdown to "
+":guilabel:`Selected CRS`."
+msgstr ""
+"Schimbati valoarea meniului :guilabel:`Layer CRS` in :guilabel:`Selected CRS`."
+
+# 76e1b7226ad2499d9df07587f7aa539e
+#: ../../vector_analysis/reproject_transform.rst:158
+msgid "Click the :guilabel:`Browse` button beneath the dropdown."
+msgstr "Click pe butonul :guilabel:`Browse` din meniul dropdown."
+
+# abf22dc33da14fa3a0652e2ff5b4bc8a
+#: ../../vector_analysis/reproject_transform.rst:159
+msgid "The :guilabel:`CRS Selector` dialog will now appear."
+msgstr "Caseta de dialog :guilabel:`CRS Selector` va aparea."
+
+# 6e54a798c52e4219bf5ccf6eaf99fcc9
+#: ../../vector_analysis/reproject_transform.rst:160
+msgid "In its :guilabel:`Filter` field, search for :kbd:`33S`."
+msgstr "In campul :guilabel:`Filter`, cautati :kbd:`33S`."
+
+# b36a5b59e70c4fff84d2ab4f6fdbd499
+#: ../../vector_analysis/reproject_transform.rst:161
+msgid "Choose :guilabel:`WGS 84 / UTM zone 33S` from the list."
+msgstr "Alegeti :guilabel:`WGS 84 / UTM zone 33S` din lista."
+
+# 33da3cba169a492580703e186ea5e074
+#: ../../vector_analysis/reproject_transform.rst:164
+msgid "The :guilabel:`Save vector layer as...` dialog now looks like this:"
+msgstr "Caseta de dialog :guilabel:`Save vector layer as...` arata astfel:"
+
+# 9cfc50eb1ecd487e81f787f27e213e95
+#: ../../vector_analysis/reproject_transform.rst:169
+msgid ""
+"Click :guilabel:`OK` and after an instant, you should be presented with:"
+msgstr "Click :guilabel:`OK` si va aparea:"
+
+# be691b25d1b14499bbd5d8c96e33c0a9
+#: ../../vector_analysis/reproject_transform.rst:175
+msgid "Start a new map:"
+msgstr "Deschideti o noua harta:"
+
+# afd771b1505e42b8b1e4136e9afaefae
+#: ../../vector_analysis/reproject_transform.rst:180
+msgid ""
+"Refer back to the lesson on :guilabel:`Classification` to remember how you "
+"calculated areas."
+msgstr ""
+"Reveniti la lectia :guilabel:`Classification` pentru a va reaminti cum sunt "
+"calculate suprafetele."
+
+# 9978dee5da0444598af3f3abeda0a645
+#: ../../vector_analysis/reproject_transform.rst:183
+msgid "Update the :kbd:`AREAS` field by running the same expression as before:"
+msgstr ""
+"Actualizati campul :kbd:`AREAS` folosind aceiasi expresie ca si inainte."
+
+# dcc90db9d431429aa5b205d3b8f7abfe
+#: ../../vector_analysis/reproject_transform.rst:188
+msgid ""
+"This will update the :kbd:`AREAS` field with the areas of the farms in "
+"square meters."
+msgstr ""
+"Acest lucru va actualiza campul :kbd:`AREAS` cu suprafetele fermelor in metri "
+"patrati."
+
+# a9308c5aceaa47e39f6b6194e72705b8
+#: ../../vector_analysis/reproject_transform.rst:191
+msgid "To calculate the area in hectares, do this:"
+msgstr "Pentru a calcula suprafata in hectare, urmariti pasii:"
+
+# 32ff5070d2dd46aeb3bef76f6eed9eb9
+#: ../../vector_analysis/reproject_transform.rst:196
+msgid ""
+"Look at the new values in your attribute table. This is much more useful, as "
+"people actually quote property areas in hectares, not in degrees. And "
+"projecting the data in an appropriate projection before calculating the area "
+"will actually give you the area in hectares. This is why it's a good idea to "
+"reproject your data, if necessary, before calculating areas, distances, and "
+"other values that are dependent on the spatial properties of the layer."
+msgstr ""
+"Uitati-va la noile valori in tabela de atribute. Acest lucru este mai util "
+"pentru ca oamenii de obicei prezinta suprafetele proprietatilorin hectare, nu "
+"in grade. Proiectand datele intr-o proiectie potrivita inainte de a calcula "
+"suprafata, veti avea suprafata in hectare. Din acest motiv, este o idee buna "
+"sa reproiectezi datele, daca este necesar, inainte de a calcula suprafete, "
+"distante, si alte valori care sunt dependente de proprietatile spatiale ale "
+"layer-ului."
+
+# f51ec54cd9ff435d8ba283e926006679
+#: ../../vector_analysis/reproject_transform.rst:204
+msgid "|hard| |FA| Creating Your Own Projection"
+msgstr "|hard| |FA| Crearea propriei proiectii"
+
+# f689bfeaefde421bb6fbb68d8265ea27
+#: ../../vector_analysis/reproject_transform.rst:206
+msgid ""
+"There are many more projections than just those included in QGIS by default. "
+"You can also create your own projections."
+msgstr ""
+"Exista mai multe proiectii decat cele incluse in QGIS. Deasemenea iti poti "
+"crea propriile proiectii."
+
+# 9594c52fa2344f17a2e28f37a632a00e
+#: ../../vector_analysis/reproject_transform.rst:209
+msgid "Start a new map."
+msgstr "Deschideti o noua harta"
+
+# 266c296d360a469680a30895cb008326
+#: ../../vector_analysis/reproject_transform.rst:210
+msgid "Load the :kbd:`world/oceans.shp` dataset."
+msgstr "Incarcati dataset-ul :kbd:`world/oceans.shp`."
+
+# 54695270a81f447d914d99216cfa94a3
+#: ../../vector_analysis/reproject_transform.rst:211
+msgid ""
+"Go to :menuselection:`Settings --> Custom CRS...` and you'll see this dialog:"
+msgstr ""
+"Duceti-va in meniul :menuselection:`Settings --> Custom CRS...` si veti vedea "
+"caseta de dialog:"
+
+# ab142f874a9d4cc38137b73a0b98e146
+#: ../../vector_analysis/reproject_transform.rst:216
+msgid ""
+"Click on the button with the star icon to create a new projection. You'll "
+"notice that the name and parameters are now blank."
+msgstr ""
+"Apasati click pe butonul cu iconita sub forma unei stele pentru a crea o noua "
+"proiectie. Veti observa ca numele si parametrii sunt campuri goale."
+
+# 6606b3ceb63e4b19b21fd92cf2389f72
+#: ../../vector_analysis/reproject_transform.rst:219
+msgid "An interesting projection to use is called :kbd:`Van der Grinten I`."
+msgstr "O proiectie interesanta de folosit este :kbd:`Van der Grinten I`."
+
+# bd95c21f5b374388850f68a24b5d7932
+#: ../../vector_analysis/reproject_transform.rst:221
+msgid "Enter its name in the :guilabel:`Name` field."
+msgstr "Introduceti numele in campul :guilabel:`Name`."
+
+# d6529c8dbecb4d58bf6e61862f2e9e9e
+#: ../../vector_analysis/reproject_transform.rst:223
+msgid ""
+"This projection represents the Earth on a circular field instead of a "
+"rectangular one, as most other projections do."
+msgstr ""
+"Aceasta proiectie reprezinta Pamantul pe un camp circular, fata de unul "
+"dreptunghiular, asa cum fac majoritatea celorlalte proiectii."
+
+# c7c38cc1e74a43c1bdfb74167a1146ae
+#: ../../vector_analysis/reproject_transform.rst:226
+msgid "For its parameters, use the following string:"
+msgstr "Pentru parametrii, folositi urmatorul string:"
+
+# 021a7168a2a54e038480ba4e6a64d3a7
+#: ../../vector_analysis/reproject_transform.rst:228
+msgid ""
+":kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m "
+"+no_defs`"
+msgstr ""
+":kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m "
+"+no_defs`"
+
+# 0c06545e291a4794a5e64ecc67d78f0d
+#: ../../vector_analysis/reproject_transform.rst:231
+msgid "Click the :guilabel:`Save` button:"
+msgstr "Apasati butonul :guilabel:`Save`:"
+
+# 6c964f22d12f44418f8de876dd3cc6ba
+#: ../../vector_analysis/reproject_transform.rst:237
+msgid "Enable \"on the fly\" reprojection."
+msgstr "Activati reproiectarea \"on the fly\"."
+
+# 81f380bf743c4323bafb36be70ef0f7f
+#: ../../vector_analysis/reproject_transform.rst:238
+msgid ""
+"Choose your newly defined projection (search for its name in the "
+":guilabel:`Filter` field)."
+msgstr ""
+"Alegeti proiectia proaspat definita (cautati numele ei in campul "
+":guilabel:`Filter`)."
+
+# fdf7345f282241b3af85bdd36ff38a6f
+#: ../../vector_analysis/reproject_transform.rst:240
+msgid "On applying this projection, the map will be reprojected thus:"
+msgstr "In momentul aplicarii proiectiei, harta va fi reproiectata astfel:"
+
+# 57005978a71f4aa989b73536c9a02dec
+#: ../../vector_analysis/reproject_transform.rst:248
+msgid ""
+"Different projections are useful for different purposes. By choosing the "
+"correct projection, you can ensure that the features on your map are being "
+"represented accurately."
+msgstr ""
+"Proiectii diferite, sunt folositoare pentru scopuri diferite. Folosind "
+"proiectia corecta, va puteti asigura ca obiectele de pe harta sunt "
+"reprezentate corect."
+
+# 1697d08a655f485497ba3f2bc1b5ae09
+#: ../../vector_analysis/reproject_transform.rst:253
+msgid "|FR|"
+msgstr "|FR|"
+
+# 548641f53e684569bd17774b4d9342fa
+#: ../../vector_analysis/reproject_transform.rst:255
+msgid ""
+"Materials for the *Advanced* section of this lesson were taken from `this "
+"article <http://tinyurl.com/75b92np>`_."
+msgstr ""
+"Materialele pentru sectiunea *Advanced* a acestei lectii au fost luate din "
+"acest articol <http://tinyurl.com/75b92np>`_."
+
+# 360fe57ac35b4f0284019a78fe2449be
+#: ../../vector_analysis/reproject_transform.rst:258
+msgid ""
+"Further information on Coordinate Reference Systems is available `here "
+"<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
+msgstr ""
+"Mai multe informatii despre CRS-uri pot fi gasite aici "
+"<http://linfiniti.com/dla/worksheets/7_CRS.pdf>`_."
+
+# db7b8dbe9fd2494593cabbb07fd87dca
+#: ../../vector_analysis/reproject_transform.rst:264
+msgid ""
+"In the next lesson you'll learn how to analyze vector data using QGIS' "
+"various vector analysis tools."
+msgstr ""
+"In urmatoarea lectie, vom invata cum sa analizam datele vectoriale folosind "
+"diversele instrumente de analiza vectoriala a QGIS-ului."
+
+# a76126d90aea4c26b97be8b17f18df6a
+#: ../../vector_analysis/spatial_statistics.rst:2
+msgid "|LS| Spatial Statistics"
+msgstr "|LS| Statistici spatiale"
+
+# 654191e3cef94bc5937de2cbcdf9e583
+#: ../../vector_analysis/spatial_statistics.rst:4
+msgid ""
+"Lesson developed by Linfiniti and S Motala (Cape Peninsula University of "
+"Technology)"
+msgstr ""
+"Lectie scrisa de Linfiniti si S Motala (Cape Peninsula University of "
+"Technology)"
+
+# de4bbb3af65e489e852668527f53b6f6
+#: ../../vector_analysis/spatial_statistics.rst:7
+msgid ""
+"Spatial statistics allow you to analyze and understand what is going on in a "
+"given vector dataset. QGIS includes several standard tools for statistical "
+"analysis which prove useful in this regard."
+msgstr ""
+"Statisticile spatiale permit analizarea si intelegerea continutului unui "
+"dataset. QGIS contine cateva instrumente standard de analiza spatiala care se "
+"pot dovedi utile in acest sens."
+
+# 306cd6006cf946b1ba45d9de8840e784
+#: ../../vector_analysis/spatial_statistics.rst:11
+msgid ""
+"**The goal for this lesson:** To know how to use QGIS' spatial statistics "
+"tools."
+msgstr ""
+"**Scopul Lectiei:** Sa stim cum se folosesc instrumentele QGIS de analiza "
+"spatiala."
+
+# 2a56849330004da097ad90bfff02eccd
+#: ../../vector_analysis/spatial_statistics.rst:15
+msgid "|basic| |FA| Create a Test Dataset"
+msgstr "|basic| |FA| Crearea unui Dataset de Test"
+
+# 7b177442be6e4499a1b7fbcf9a1ee81d
+#: ../../vector_analysis/spatial_statistics.rst:17
+msgid ""
+"In order to get a point dataset to work with, we'll need a point dataset. In "
+"order to mimic a real dataset, let's create a random set of points."
+msgstr ""
+"Pentru a avea un dataset de puncte cu care sa lucram, vom avea nevoie de un "
+"dataset de puncte. Pentru a recrea un dataset real, vom crea un set aleator "
+"de puncte. "
+
+# f51830c3e6524bd6b99b3b3617b2af86
+#: ../../vector_analysis/spatial_statistics.rst:20
+msgid ""
+"To do so, you'll need a polygon dataset defining the extents of the area you "
+"want to create the points in."
+msgstr ""
+"Pentru a face acest lucru, vom avea nevoie de un dataset de poligoane care "
+"vor defini suprafata in care vom crea punctele."
+
+# a7d32e2052a948a58e080b28f0218024
+#: ../../vector_analysis/spatial_statistics.rst:23
+msgid "We'll use the area covered by streets."
+msgstr "Vom folosi suprafata acoperita de strazi."
+
+# e81846cda4fd4904b1c52d583b60fab4
+#: ../../vector_analysis/spatial_statistics.rst:25
+msgid "Create a new empty map."
+msgstr "Creati o harta noua."
+
+# ee16369ab9cc419baac9523d84d1ba5e
+#: ../../vector_analysis/spatial_statistics.rst:26
+msgid ""
+"Add the :kbd:`roads_33S` layer from the :kbd:`exercise_data/projected_data` "
+"directory, as well as the :kbd:`srtm_41_19.tif` raster found in "
+":kbd:`exercise_data/raster/SRTM/`."
+msgstr ""
+"Adaugati layerele :kbd:`roads_33S` din directorul "
+":kbd:`exercise_data/projected_data`, si rasterul  :kbd:`srtm_41_19.tif` din "
+"directorul :kbd:`exercise_data/raster/SRTM/`."
+
+# 3bd06fa7e489496bb1cec8d8eacdf055
+#: ../../vector_analysis/spatial_statistics.rst:29
+msgid ""
+"Use the :guilabel:`Convex hull(s)` tool (available under "
+":menuselection:`Vector --> Geoprocessing Tools`) to generate an area "
+"enclosing all the roads:"
+msgstr ""
+"Folositi instrumentul :guilabel:`Convex hull(s)` (poate fi gasit in meniul "
+":menuselection:`Vector --> Geoprocessing Tools`) pentru a genera o zona care "
+"contine toate drumurile:"
+
+# 0b441fb60b11411cae9d1f17148e114b
+#: ../../vector_analysis/spatial_statistics.rst:36
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`roads_hull.shp`."
+msgstr ""
+"Salvati rezultatul in :kbd:`exercise_data/spatial_statistics/` ca si "
+":kbd:`roads_hull.shp`."
+
+# 2584a3e58fad4ff4a48c6a7cdc5a3dcc
+# 8cac85ce0ce94d6b875fab1be09484c8
+#: ../../vector_analysis/spatial_statistics.rst:38
+#: ../../vector_analysis/spatial_statistics.rst:77
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted."
+msgstr "Adaugati-l in TOC (:guilabel:`Layers list`) cand vi se solicita."
+
+# b6acdc43d90344258ffc7073e6ec1431
+#: ../../vector_analysis/spatial_statistics.rst:41
+msgid "Creating random points"
+msgstr "Crearea de puncte aleatorii."
+
+# c8b790f9a34a4948a9eb543816cec078
+#: ../../vector_analysis/spatial_statistics.rst:43
+msgid ""
+"Create random points in this area using the tool at :menuselection:`Vector "
+"--> Research Tools --> Random points`:"
+msgstr ""
+"Creati puncte aleatorii in zona respectiva folosind instrumentul "
+":menuselection:`Vector --> Research Tools --> Random points`:"
+
+# c5eb8c5100a14eb1833004d1c42680a8
+#: ../../vector_analysis/spatial_statistics.rst:49
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_points.shp`."
+msgstr ""
+"Salvati rezultatul in directorul :kbd:`exercise_data/spatial_statistics/` ca "
+"si :kbd:`random_points.shp`."
+
+# 56cfaad6ecf24ba8b843495b2a7ef5a8
+#: ../../vector_analysis/spatial_statistics.rst:51
+msgid "Add it to the TOC (:guilabel:`Layers list`) when prompted:"
+msgstr "Adaugati-l in TOC (:guilabel:`Layers list`) cand vi se solicita:"
+
+# 21c772c808d64179ada5811a5a42db88
+#: ../../vector_analysis/spatial_statistics.rst:57
+msgid "Sampling the data"
+msgstr "Prelevarea datelor"
+
+# 697cb7e0a5904db89bce93ab25d7e557
+#: ../../vector_analysis/spatial_statistics.rst:59
+msgid ""
+"To create a sample dataset from the raster, you'll need to use the "
+":guilabel:`Point sampling tool` plugin."
+msgstr ""
+"Pentru a crea un dataset simplu, dintr-un raster, va trebui sa folositi "
+"plugin-ul :guilabel:`Point sampling tool`."
+
+# c63f82a6076c4426a96722edcfe650d5
+#: ../../vector_analysis/spatial_statistics.rst:61
+msgid "Refer ahead to the module on plugins if necessary."
+msgstr "Cititi modulul despre plugin-uri daca este necesar."
+
+# c7dc5fc45bcd4c4ba840bba42141e838
+#: ../../vector_analysis/spatial_statistics.rst:62
+msgid ""
+"Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin "
+"Installer` and you will find the plugin."
+msgstr ""
+"Cautati fraza :kbd:`point sampling` in installer-ul :guilabel:`Plugin "
+"Installer` si veti gasi plugin-ul."
+
+# 2b2d424c616242dc8a02e8a78e5aa537
+#: ../../vector_analysis/spatial_statistics.rst:64
+msgid ""
+"Note that it is in a third-party repository at time of writing, so you'll "
+"need to have third-party repositories enabled."
+msgstr ""
+"De retinut faptul ca plugin-ul se afla intr-un depozit third-party la "
+"momentul scrierii, deci va trebui sa activati depozitele third-party de "
+"plugin-uri."
+
+# cd170c14bc4748d6866ca3f32b1fa37d
+#: ../../vector_analysis/spatial_statistics.rst:66
+msgid ""
+"As soon as it has been activated with the :guilabel:`Plugin Manager`, you "
+"will find the tool under :menuselection:`Plugins --> Analyses --> Point "
+"sampling tool`:"
+msgstr ""
+"Imediat ce ati activat :guilabel:`Plugin Manager`, veti gasi instrumentul in "
+"meniul :menuselection:`Plugins --> Analyses --> Point sampling tool`:"
+
+# c3ba705df2144947a49623bedfb6655a
+#: ../../vector_analysis/spatial_statistics.rst:73
+msgid ""
+"Select :guilabel:`random_points` as the layer containing sampling points, "
+"and the SRTM raster as the band to get values from."
+msgstr ""
+"Selectati layerul :guilabel:`random_points` care contine punctele prelevate, "
+"si rasterul SRTM ca fiind banda de valori."
+
+# 4867104ea5d54be2a0c37b225db671b4
+#: ../../vector_analysis/spatial_statistics.rst:75
+msgid ""
+"Save the output under :kbd:`exercise_data/spatial_statistics/` as "
+":kbd:`random_samples.shp`."
+msgstr ""
+"Salvati rezultatul in directorul :kbd:`exercise_data/spatial_statistics/` ca "
+"si :kbd:`random_samples.shp`."
+
+# 43c548fd89c142ccb6e87fbc3b7a30a9
+#: ../../vector_analysis/spatial_statistics.rst:79
+msgid "A possible sample layer is shown here:"
+msgstr "Un layer exemplu este prezentat aici:"
+
+# 152df9f283544719a093473a100e1008
+#: ../../vector_analysis/spatial_statistics.rst:84
+msgid ""
+"The sample points are classified by their value such that darker points are "
+"at a lower altitude."
+msgstr ""
+"Punctele exemplu, sunt clasificate in functie de valori, astfel incat "
+"culorile mai inchise se afla la o altitudine mai mica."
+
+# b0388dee4f57468089dca0fbc6bcc937
+#: ../../vector_analysis/spatial_statistics.rst:87
+msgid ""
+"You'll be using this sample layer for the rest of the statistical exercises."
+msgstr "Veti folosi acest layer de proba pentru restul exercitiilor statistice."
+
+# bd5d741dab2a4aaabc4e5191b9be9d91
+#: ../../vector_analysis/spatial_statistics.rst:90
+msgid "|basic| |FA| Basic Statistics"
+msgstr "|basic| |FA| Statistici de baza"
+
+# 7bebd70ac33b4fd89d5a56f8faab6948
+#: ../../vector_analysis/spatial_statistics.rst:92
+msgid "Now get the basic statistics for this layer."
+msgstr "Acum, sa obtinem statisticile de baza pentru acest layer."
+
+# b8272ba632fe4fbfbfb3ee985e48e6f7
+#: ../../vector_analysis/spatial_statistics.rst:94
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Basic statistics` "
+"menu entry."
+msgstr ""
+"Apasati click pe meniul :menuselection:`Vector --> Analysis Tools --> Basic "
+"statistics`."
+
+# 3091c1ca7d374bdf9bde750a35818085
+#: ../../vector_analysis/spatial_statistics.rst:96
+msgid ""
+"In the dialog that appears, specify the :guilabel:`random_samples` layer as "
+"the source."
+msgstr ""
+"In caseta de dialog care apare, specificati :guilabel:`random_samples` ca si "
+"sursa."
+
+# 295d462a10b847f0944bdd877b436937
+#: ../../vector_analysis/spatial_statistics.rst:98
+msgid "Click :guilabel:`OK`. You'll get results like this:"
+msgstr "Apasati click pe :guilabel:`OK`. Rezultatul ar trebui sa arate asa:"
+
+# b5ba5e395aa040b2b775ce761ef15c18
+# 2e4532fc50604b0eaac3770074bab010
+#: ../../vector_analysis/spatial_statistics.rst:103
+#: ../../vector_analysis/spatial_statistics.rst:204
+msgid ""
+"You can copy and paste the results into a spreadsheet. The data uses a "
+"(colon :kbd:`:`) separator."
+msgstr ""
+"Puteti copia rezultatele intr-un tabel. Datele folosesc un separator (colon "
+":kbd:`:`)."
+
+# b94a290b9272424989d6e9dbb7b98780
+#: ../../vector_analysis/spatial_statistics.rst:109
+msgid "Close the plugin dialog when done."
+msgstr "Inchideti caseta de dialog pentru plugin-uri cand ati terminat."
+
+# 916843fc88524ad683254b894dcf7005
+#: ../../vector_analysis/spatial_statistics.rst:111
+msgid "To understand the statistics above, refer to this definition list:"
+msgstr "Pentru a intelege statisticile de mai sus, cititi lista de definitii:"
+
+# ae2df02fcffc4317a3d7ab27c0566712
+#: ../../vector_analysis/spatial_statistics.rst:114
+msgid ""
+"The mean (average) value is simply the sum of the values divided by the "
+"amount of values."
+msgstr ""
+"Valoarea medie reprezinta suma totala a valorilor, impartita la numarul de "
+"valori."
+
+# da6928c2273f48118e78600b07ba7e4c
+#: ../../vector_analysis/spatial_statistics.rst:118
+msgid ""
+"The standard deviation. Gives an indication of how closely the values are "
+"clustered around the mean. The smaller the standard deviation, the closer "
+"values tend to be to the mean."
+msgstr ""
+"Abaterea standard. Ofera un indicator cat de apropiate sunt valorile in jurul "
+"mediei. Cu cat este mai mica abaterea standard, cu atat valorile vor fi mai "
+"apropiate."
+
+# 23ed6fc55dec4c69861e4d05f922f531
+#: ../../vector_analysis/spatial_statistics.rst:123
+msgid "All the values added together."
+msgstr "Toate valorile sunt adunate."
+
+# 55c876ca231044409d254dfafb18425d
+#: ../../vector_analysis/spatial_statistics.rst:126
+msgid "The minimum value."
+msgstr "Valoarea minima."
+
+# d9ad842aa9284f4380815ce47d7bf307
+#: ../../vector_analysis/spatial_statistics.rst:129
+msgid "The maximum value."
+msgstr "Valoarea maxima."
+
+# a2f6260439ec4c2f8895f1a2242b09aa
+#: ../../vector_analysis/spatial_statistics.rst:132
+msgid "The amount of samples/values."
+msgstr "Numarul de exemple/valori."
+
+# 5a8bf3d05a434ec18759292b4241552e
+#: ../../vector_analysis/spatial_statistics.rst:135
+msgid ""
+"The `spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance "
+"<http://en.wikipedia.org/wiki/Covariance>`_ of the dataset."
+msgstr ""
+"`spatial <http://en.wikipedia.org/wiki/Spatial_covariance>`_ `covariance "
+"<http://en.wikipedia.org/wiki/Covariance>`_ of the dataset."
+
+# dde552063c8243aba20dabf1c194ad24
+#: ../../vector_analysis/spatial_statistics.rst:139
+msgid ""
+"The number of values that are unique across this dataset. If there are 90 "
+"unique values in a dataset with N=100, then the 10 remaining values are the "
+"same as one or more of each other."
+msgstr ""
+"Numarul de valori care sunt unice in dataset. Daca exista 90 de valori unice "
+"in dataset, cu N=100, atunci cele 10 valori care au mai ramas sunt la fel ca "
+"una sau mai multe dintre celalalte."
+
+# 1d35ce2718ab4de3a6558c8ef02fcb38
+#: ../../vector_analysis/spatial_statistics.rst:144
+msgid "The difference between the minimum and maximum values."
+msgstr "Diferenta dintre valorile minime si maxime."
+
+# f99f76b557834be590abc8d5a54c3658
+#: ../../vector_analysis/spatial_statistics.rst:147
+msgid ""
+"If you arrange all the values from least to greatest, the middle value (or "
+"the average of the two middle values, if N is an even number) is the median "
+"of the values."
+msgstr ""
+"Daca luati toate valorile de la cea mai mica la cea mai mare, valoarea "
+"mijlocie este media valorilor."
+
+# 585655def8994a8c97dead03a241cc59
+#: ../../vector_analysis/spatial_statistics.rst:152
+msgid "|basic| |FA| Compute a Distance Matrix"
+msgstr "|basic| |FA| Calcularea Matricei de Distante"
+
+# 23543f2a7ee6498d94053fa02575a14a
+#: ../../vector_analysis/spatial_statistics.rst:154
+msgid ""
+"Create a new point layer in the same projection as the other datasets "
+"(:kbd:`WGS 84 / UTM 33S`)."
+msgstr ""
+"Creati un layer nou cu aceiasi proiectie ca si celalalte dataseturi "
+"(:kbd:`WGS 84 / UTM 33S`)."
+
+# 7cb9e4c231d54614a37867584bfbabe0
+#: ../../vector_analysis/spatial_statistics.rst:156
+msgid ""
+"Enter edit mode and digitize three point somewhere among the other points."
+msgstr ""
+"Activati modul de editare si digitizati cele trei puncte langa celalalte "
+"puncte."
+
+# 674af0c4f67d4b64a0a1c976425f961a
+#: ../../vector_analysis/spatial_statistics.rst:157
+msgid ""
+"Alternatively, use the same random point generation method as before, but "
+"specify only three points."
+msgstr ""
+"Puteti folosi aceiasi metoda de generare de puncte ca mai devreme, dar "
+"plasati doar trei puncte."
+
+# 82f9a0a5244641968cdaee1fb3e2b681
+#: ../../vector_analysis/spatial_statistics.rst:159
+msgid "Save your new layer as :kbd:`distance_points.shp`."
+msgstr "Salvati noul layer ca si :kbd:`distance_points.shp`."
+
+# cffc4e704e2e4577899185ee066d10f7
+#: ../../vector_analysis/spatial_statistics.rst:161
+msgid ""
+"In order to compare layers using statistical tools, a layer needs to have a "
+"unique ID field. Let's create one for your :guilabel:`random_samples` layer."
+msgstr ""
+"Pentru a compara layerele folosind instrumente statistice, un layer are "
+"nevoie de un camp ID unic. Sa cream unul nou pentru layerul "
+":guilabel:`random_samples`."
+
+# c614b879cfff4df49b4db268952007e7
+#: ../../vector_analysis/spatial_statistics.rst:164
+msgid "Open the attribute table for this layer."
+msgstr "Deschideti tabela de atribute pentru acest layer."
+
+# 50dd1785958545478392d8c8b91356f7
+#: ../../vector_analysis/spatial_statistics.rst:165
+msgid "Enter edit mode."
+msgstr "Activati modul de editare."
+
+# d7ebec56727a4f859ed8d37293408fb2
+#: ../../vector_analysis/spatial_statistics.rst:166
+msgid "Open the raster calculator."
+msgstr "Deschideti calculatorul raster."
+
+# 29dda5cfc1b5438f9cc024076d27f7d5
+#: ../../vector_analysis/spatial_statistics.rst:167
+msgid ""
+"Create a new field called :kbd:`id`, with an integer field type and a width "
+"of :kbd:`3`."
+msgstr ""
+"Creati un camp nou numit :kbd:`id`, cu un camp de tip integer si cu o latime "
+"de :kbd:`3`."
+
+# 8fda89de06bc401fa1e54adbbde3c5c1
+#: ../../vector_analysis/spatial_statistics.rst:169
+msgid ""
+"Look in the :guilabel:`Function list` under the category :guilabel:`Record`, "
+"and double-click on the item :guilabel:`$id`, so that it appears in the "
+":guilabel:`Expression` field below."
+msgstr ""
+"Verificati :guilabel:`Function list` in categoria :guilabel:`Record`, si "
+"faceti dublu-click pe :guilabel:`$id` astfel incat sa apara in campul "
+":guilabel:`Expression` de mai jos."
+
+# 02f474d9f1fe4243a51acd946a5c6c39
+#: ../../vector_analysis/spatial_statistics.rst:172
+msgid "Click :guilabel:`OK` to generate a unique ID for this layer."
+msgstr ""
+"Apasati click pe :guilabel:`OK` pentru a genera un ID unic pentru layer."
+
+# 1cf2411a94e74877a65a698f2e73a2e6
+#: ../../vector_analysis/spatial_statistics.rst:174
+msgid "To generate a distance matrix using these points:"
+msgstr "Pentru a genera o matrice de distante folosind aceste puncte:"
+
+# a664a83c4c51461c9f07e08858694f23
+#: ../../vector_analysis/spatial_statistics.rst:176
+msgid ""
+"Open the tool :menuselection:`Vector --> Analysis Tools --> Distance matrix`."
+msgstr ""
+"Deschideti innstrumentul :menuselection:`Vector --> Analysis Tools --> "
+"Distance matrix`."
+
+# f951e7f9e2bb414fa69968a9bcf7bad8
+#: ../../vector_analysis/spatial_statistics.rst:177
+msgid ""
+"Select the :guilabel:`distance_points` layer as the input layer, and the "
+":guilabel:`random_samples` layer as the target layer."
+msgstr ""
+"Selectati layerul :guilabel:`distance_points` ca si layer de input si layerul "
+":guilabel:`random_samples` ca si layer final."
+
+# 1c04d07851ac4a7abc19d433d08a95f2
+#: ../../vector_analysis/spatial_statistics.rst:184
+msgid "Click :guilabel:`OK` to generate the distance matrix."
+msgstr "Apasati click pe :guilabel:`OK` pentru a genera matricea de distante."
+
+# 6e6356617c2044a099a0da96c14a83f1
+#: ../../vector_analysis/spatial_statistics.rst:185
+msgid ""
+"Open it in a spreadsheet program to see the results. Here is an example:"
+msgstr ""
+"Deschideti-o intr-un tabel pentru a vizualiza rezultatele. Aici este un "
+"exemplu:"
+
+# f55565db68ba4986a11a4ea373f163e9
+#: ../../vector_analysis/spatial_statistics.rst:191
+msgid "|basic| |FA| Nearest Neighbor Analysis"
+msgstr "|basic| |FA| Analiza \"Cel mai apropiat vecin\""
+
+# 1ae1c0dce51a4288964fe4f51f3badf5
+#: ../../vector_analysis/spatial_statistics.rst:193
+msgid "To do a nearest neighbor analysis:"
+msgstr "Pentru a face o astfel de analiza:"
+
+# 13460452970c4256ab63960018b9b8c1
+#: ../../vector_analysis/spatial_statistics.rst:195
+msgid ""
+"Click on the menu item :menuselection:`Vector --> Analysis Tools --> Nearest "
+"neighbor analysis`."
+msgstr ""
+"Apasati click pe :menuselection:`Vector --> Analysis Tools --> Nearest "
+"neighbor analysis`."
+
+# 253a222edb7440b08fe9a6315b743c5f
+#: ../../vector_analysis/spatial_statistics.rst:197
+msgid ""
+"In the dialog that appears, select the :guilabel:`random_samples` layer and "
+"click :guilabel:`OK`."
+msgstr ""
+"In caseta de dialog care apare, selectati layerul :guilabel:`random_samples` "
+"si apasati click pe :guilabel:`OK`."
+
+# b37f8780020949ee96006bd40312f1cd
+#: ../../vector_analysis/spatial_statistics.rst:199
+msgid "The results will appear in the dialog's text window, for example:"
+msgstr "Rezultatele vor aparea in caseta de dialog. Exemplu:"
+
+# 8b59546766d249ebb7385e88eda77f38
+#: ../../vector_analysis/spatial_statistics.rst:208
+msgid "|basic| |FA| Mean Coordinates"
+msgstr "|basic| |FA| Coordonate Medii"
+
+# c2ec1568261643cda26623626020cc33
+#: ../../vector_analysis/spatial_statistics.rst:210
+msgid "To get the mean coordinates of a dataset:"
+msgstr "Pentru a obtine coordonatele medii ale unui dataset:"
+
+# f4ce186b4dcf46d5bc5c47e20d90315d
+#: ../../vector_analysis/spatial_statistics.rst:212
+msgid ""
+"Click on the :menuselection:`Vector --> Analysis Tools --> Mean "
+"coordinate(s)` menu item."
+msgstr ""
+"Apasati click pe optiunea :menuselection:`Vector --> Analysis Tools --> Mean "
+"coordinate(s)` a meniului."
+
+# e15d75e074bc4f43aa0b8598d7ff16fd
+#: ../../vector_analysis/spatial_statistics.rst:214
+msgid ""
+"In the dialog that appears, specify :guilabel:`random_samples` as the input "
+"layer, but leave the optional choices unchanged."
+msgstr ""
+"In caseta de dialog care apare, specificati :guilabel:`random_samples` ca si "
+"layer de input, dar lasati setarile optionale neschimbate."
+
+# 336941b1ef6f4facaaef89805d0fb869
+#: ../../vector_analysis/spatial_statistics.rst:216
+msgid "Specify the output layer as :kbd:`mean_coords.shp`."
+msgstr "Specificati layerul final ca si :kbd:`mean_coords.shp`."
+
+# bebe91ea7304441b987956f78f7d5918
+#: ../../vector_analysis/spatial_statistics.rst:218
+msgid "Add the layer to the :guilabel:`Layers list` when prompted."
+msgstr "Adaugati layerul in :guilabel:`Layers list` cand vi se cere."
+
+# 4bf9e813f3174993b12602892b63ba97
+#: ../../vector_analysis/spatial_statistics.rst:220
+msgid ""
+"Let's compare this to the central coordinate of the polygon that was used to "
+"create the random sample."
+msgstr ""
+"Comparati cu coordonatele centrale ale poligonului care a fost folosit pentru "
+"a crea exemplul."
+
+# 0fa66b660016430eafc5ff6f3efa7f72
+#: ../../vector_analysis/spatial_statistics.rst:223
+msgid ""
+"Click on the :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` menu item."
+msgstr ""
+"Apasati click pe :menuselection:`Vector --> Geometry Tools --> Polygon "
+"centroids` in meniu."
+
+# 0b1b6aa66d134b1eb734f8452c6b7ac4
+#: ../../vector_analysis/spatial_statistics.rst:225
+msgid ""
+"In the dialog that appears, select :guilabel:`roads_hull` as the input layer."
+msgstr ""
+"In caseta de dialog care apare, selectati :guilabel:`roads_hull` ca si layer "
+"de input."
+
+# 1bdaf02a6c5e457c8880bca72f7e1009
+#: ../../vector_analysis/spatial_statistics.rst:226
+msgid "Save the result as :kbd:`center_point`."
+msgstr "Salvati rezultatul ca si :kbd:`center_point`."
+
+# f6a396745ade4092bd8097d703acd558
+#: ../../vector_analysis/spatial_statistics.rst:227
+msgid "Add it to the :guilabel:`Layers list` when prompted."
+msgstr "Adaugati-l la lista :guilabel:`Layers list` cand vi se cere."
+
+# ee9ffc813f1342c9a4312fde9a77ffe6
+#: ../../vector_analysis/spatial_statistics.rst:229
+msgid ""
+"As you can see from the example below, the mean coordinates and the center "
+"of the study area (in orange) don't necessarily coincide:"
+msgstr ""
+"Dupa cum puteti observa in exemplul de mai jos, coordonatele medii si centru "
+"ariei de studiu (in portocaliu) nu coincid neaparat:"
+
+# a00ab051cc1d41119dbe2800a3f621e6
+#: ../../vector_analysis/spatial_statistics.rst:236
+msgid "|basic| |FA| Image Histograms"
+msgstr "|basic| |FA| Histograma Imaginii"
+
+# 5259624eaba0478eb3c22ff7a2ef7853
+#: ../../vector_analysis/spatial_statistics.rst:238
+msgid ""
+"The histogram of a dataset shows the distribution of its values. The "
+"simplest way to demonstrate this in QGIS is via the image histogram, "
+"available in the :guilabel:`Layer Properties` dialog of any image layer."
+msgstr ""
+"Histograma datasetului arata distributia valorilor. Cea mai simpla cale de a "
+"demonstra acest lucru in QGIS este cu ajutorul histogramei imaginii, care "
+"este disponibila in :guilabel:`Layer Properties` a layerului."
+
+# 0b4cb2f966424ac9b573f2acc4930164
+#: ../../vector_analysis/spatial_statistics.rst:242
+msgid "In your :guilabel:`Layers list`, right-click on the SRTM DEM layer."
+msgstr ""
+"In lista :guilabel:`Layers list`, apasati click-dreapta pe layerul SRTM DEM."
+
+# b7f3b930d9124ba1a97c2f64920dcd66
+#: ../../vector_analysis/spatial_statistics.rst:243
+msgid "Select :menuselection:`Layer Properties`."
+msgstr "Selectati :menuselection:`Layer Properties`."
+
+# 6a786ebbaa534accaaf21aa80962933f
+#: ../../vector_analysis/spatial_statistics.rst:244
+msgid ""
+"Choose the tab :guilabel:`Histogram`. You will see a graph describing the "
+"frequency of values in the image."
+msgstr ""
+"Alegeti tab-ul :guilabel:`Histogram`. Veti vedea un grafic care descrie "
+"frecventa valorilor din imagine."
+
+# 2b67c9f772b248f4b70a338dbb72c4a3
+#: ../../vector_analysis/spatial_statistics.rst:246
+msgid "You can export it as an image:"
+msgstr "Poate fi exportata ca si imagine:"
+
+# 3cf78f2982bf42f89008aa92f788a8aa
+#: ../../vector_analysis/spatial_statistics.rst:251
+msgid ""
+"Look at the metadata for this layer (under the :guilabel:`Metadata` tab)."
+msgstr ""
+"Verficiati metadatele pentru acest layer (in tab-ul :guilabel:`Metadata`)."
+
+# 934f104715914d6ab636e6433069f547
+#: ../../vector_analysis/spatial_statistics.rst:253
+msgid ""
+"The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But "
+"those values don't show up on the histogram. Why not? It's because there are "
+"so few of them, compared to the abundance of pixels with values below the "
+"mean. That's also why the histogram extends so far to the right, even though "
+"there is no visible red line marking the frequency of values higher than "
+"about :kbd:`250`."
+msgstr ""
+"Valoarea medie este :kbd:`332.8`, si valoarea maxima este :kbd:`1699`! Dar "
+"aceste valori nu apar pe histograma. De ce? Pentru ca sunt foarte putine, "
+"comparate cu numarul mare de pixeli ai caror valori sunt sub medie. Tocmai "
+"din acest motiv histograma se extinde foarte mult spre dreapta, desi acolo nu "
+"sunt marcaje rosii vizibile care arata frecventa valorilor mai mari de "
+":kbd:`250`."
+
+# aaf8ccc9738f489c91bd5b4683c75f36
+#: ../../vector_analysis/spatial_statistics.rst:259
+msgid ""
+"Therefore, keep in mind that a histogram shows you the distribution of "
+"values, and not all values are necessarily visible on the graph."
+msgstr ""
+"Astfel, retineti ca histograma va arata distributia valorilor, si nu este "
+"necesar ca toate valorile sa fie prezente pe grafic."
+
+# 90c1db1c460b41a89bc2d338e6e60d0c
+#: ../../vector_analysis/spatial_statistics.rst:262
+msgid "(You may now close :guilabel:`Layer Properties`.)"
+msgstr "(Puteti inchide :guilabel:`Layer Properties`.)"
+
+# dfd6804ba9e943a38890d9711b71c5c9
+#: ../../vector_analysis/spatial_statistics.rst:265
+msgid "|basic| |FA| Spatial Interpolation"
+msgstr "|basic| |FA| Interpolare Spatiala"
+
+# 9b1e51294c344504a964fabcaa336ef6
+#: ../../vector_analysis/spatial_statistics.rst:267
+msgid ""
+"Let's say you have a collection of sample points from which you would like "
+"to extrapolate data. For example, you might have access to the "
+":guilabel:`random_samples` dataset we created earlier, and would like to "
+"have some idea of what the terrain looks like."
+msgstr ""
+"Sa spunem ca aveti o colectie de puncte din care vreti sa extrapolati date. "
+"De exemplu, poate aveti acces la datasetul :guilabel:`random_samples` creat "
+"mai devreme, si doriti sa aveti o idee despre cum arata terenul."
+
+# cd93959ec079438b90938d1b9dd4308e
+#: ../../vector_analysis/spatial_statistics.rst:272
+msgid ""
+"To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on "
+"the :menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item."
+msgstr ""
+"Pentru a incepe, deschideti instrumentul :guilabel:`Grid (Interpolation)` "
+"apasand click pe optiunea :menuselection:`Raster --> Analysis --> Grid "
+"(Interpolation)` din meniu."
+
+# 7d8f841c8bd243bea0f453b7514bab2f
+#: ../../vector_analysis/spatial_statistics.rst:275
+msgid "In the :guilabel:`Input file` field, select :kbd:`random_samples`."
+msgstr "In campul :guilabel:`Input file`, selectati :kbd:`random_samples`."
+
+# 48d84c7a958d4b40854d2b56fe9ebe42
+#: ../../vector_analysis/spatial_statistics.rst:276
+msgid ""
+"Check the :guilabel:`Z Field` box, and select the value field (not the "
+":kbd:`id` field)."
+msgstr ""
+"Verificati caseta :guilabel:`Z Field`, si selectati campul de valori (nu "
+"campul :kbd:`id`)."
+
+# 109a09f0487442b680fa3060d6eb90f1
+#: ../../vector_analysis/spatial_statistics.rst:278
+msgid ""
+"Set the :guilabel:`Output file` location to "
+":kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+msgstr ""
+"Setati :guilabel:`Output file` ca si locatie pentru "
+":kbd:`exercise_data/spatial_statistics/interpolation.tif`."
+
+# e416ce8745764b77afc1ebbc3c9f5759
+#: ../../vector_analysis/spatial_statistics.rst:280
+msgid ""
+"Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance "
+"to a power`."
+msgstr ""
+"Verificati caseta :guilabel:`Algorithm` si selectati :guilabel:`Inverse "
+"distance to a power`."
+
+# d42bcbe7c7624f369ee9d4d6c5eac720
+#: ../../vector_analysis/spatial_statistics.rst:282
+msgid ""
+"Set the :guilabel:`Power` to :kbd:`5.0` and the :guilabel:`Smoothing` to "
+":kbd:`2.0`. Leave the other values as-is."
+msgstr ""
+"Setati :guilabel:`Power` la valoarea :kbd:`5.0` si :guilabel:`Smoothing` la "
+"valoarea :kbd:`2.0`. Lasati celalalte valori asa cum sunt."
+
+# 689880594fee437796ccc2aa3f1d1797
+#: ../../vector_analysis/spatial_statistics.rst:284
+msgid ""
+"Check the :guilabel:`Load into canvas when finished` box and click "
+":guilabel:`OK`."
+msgstr ""
+"Verificati caseta :guilabel:`Load into canvas when finished` si apasati click "
+"pe :guilabel:`OK`."
+
+# 93fdccaf71a44691b65673c2950d5c42
+#: ../../vector_analysis/spatial_statistics.rst:286
+msgid ""
+"When it's done, click :guilabel:`OK` on the dialog that says :kbd:`Process "
+"completed`, click :guilabel:`OK` on the dialog showing feedback information "
+"(if it has appeared), and click :guilabel:`Close` on the :guilabel:`Grid "
+"(Interpolation)` dialog."
+msgstr ""
+"Cand este gata, apasati click pe :guilabel:`OK` pe caseta de dialog care "
+"spune :kbd:`Process completed`, apasati click pe :guilabel:`OK` in caseta de "
+"dialog care ofera feedback, si apasati click pe :guilabel:`Close` in caseta "
+"de dialog :guilabel:`Grid (Interpolation)`."
+
+# 7cc9cd4858bb41e79688367afe66f2d3
+#: ../../vector_analysis/spatial_statistics.rst:291
+msgid ""
+"Here's a comparison of the original dataset (left) to the one constructed "
+"from our sample points (right). Yours may look different due to the random "
+"nature of the location of the sample points."
+msgstr ""
+"Aici aveti o comparatie intre dataset-ul original (stanga) si cel construit "
+"cu ajutorul punctelor exemplu (dreapta). Cele facute pot arata diferit din "
+"cauza pozitionarii aleatoare a punctelor."
+
+# e2ee1c129d20400386626f7453670241
+#: ../../vector_analysis/spatial_statistics.rst:298
+msgid ""
+"As you can see, 100 sample points aren't really enough to get a detailed "
+"impression of the terrain. It gives a very general idea, but it can be "
+"misleading as well. For example, in the image above, it is not clear that "
+"there is a high, unbroken mountain running from east to west; rather, the "
+"image seems to show a valley, with high peaks to the west. Just using visual "
+"inspection, we can see that the sample dataset is not representative of the "
+"terrain."
+msgstr ""
+"Dupa cum vedeti, 100 de puncte de exemplu nu sunt destule pentru a avea o "
+"reprezentare detaliata a terenului. Ofera o idee generala, dar poate fi "
+"inselatoare. De exemplu, in imaginea de mai sus, nu este clar ca exista un "
+"lant muntos da la est la vest; ci in imagine pare sa fie o vale cu varfuri "
+"inalte spre vest. Facand doar o inspectie vizuala, putem observa ca "
+"dataset-ul exemplu nu este o reprezentare ideala a terenului."
+
+# 9a322ac7a8d34bf2b6704f10e7822a9c
+#: ../../vector_analysis/spatial_statistics.rst:308
+msgid ""
+"Use the processes shown above to create a new set of :kbd:`1000` random "
+"points."
+msgstr ""
+"Folosind metodele prezentate mai sus, creati un nou set de :kbd:`1000` de "
+"puncte aleatorii."
+
+# f42d140582414a75b4524e615064fe01
+#: ../../vector_analysis/spatial_statistics.rst:309
+msgid "Use these points to sample the original DEM."
+msgstr "Folositi aceste puncte pentru a crea DEM-ul original."
+
+# 2c01b47a71d64c158427b94452dc9dd2
+#: ../../vector_analysis/spatial_statistics.rst:310
+msgid ""
+"Use the :guilabel:`Spatial Interpolation` tool on this new dataset as above."
+msgstr ""
+"Folositi instrumentul :guilabel:`Spatial Interpolation` pe dataset-ul nou ca "
+"mai sus."
+
+# b3999c0beb82482b80837b01c489f919
+#: ../../vector_analysis/spatial_statistics.rst:311
+msgid ""
+"Set the output filename to :kbd:`interpolation_1000.tif`, with "
+":guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and "
+":kbd:`2.0`, respectively."
+msgstr ""
+"Setati numele fisierului final ca :kbd:`interpolation_1000.tif`, cu "
+":guilabel:`Power` si :guilabel:`Smoothing` setate la :kbd:`5.0`, respectiv "
+":kbd:`2.0`."
+
+# deb4108c96574e20abc8392cfc5fc054
+#: ../../vector_analysis/spatial_statistics.rst:315
+msgid ""
+"The results (depending on the positioning of your random points) will look "
+"more or less like this:"
+msgstr ""
+"Rezultatele (in functie de pozitionarea punctelor), vor arata mai mult sau "
+"mai putin asa:"
+
+# 3f34d1d701f8483f9c50e256d687dac4
+#: ../../vector_analysis/spatial_statistics.rst:321
+msgid ""
+"The border shows the :guilabel:`roads_hull` layer (which represents the "
+"boundary of the random sample points) to explain the sudden lack of detail "
+"beyond its edges. This is a much better representation of the terrain, due "
+"to the much greater density of sample points."
+msgstr ""
+"Marginea arata layer-ul :guilabel:`roads_hull` (care reprezinta limita "
+"punctelor) pentru a explica lipsa completa de detalii in afara granitelor. "
+"Astfel se va crea o mai buna reprezentare a terenului cu ajutorul unei "
+"densitati mai mari a punctelor. "
+
+# b1ee939b5642446793483ab051327fcd
+#: ../../vector_analysis/spatial_statistics.rst:326
+msgid ""
+"Here is an example of what it looks like with :kbd:`10 000` sample points:"
+msgstr ""
+"Aici aveti un exemplu, cum va arata dataset-ul cu :kbd:`10 000` de puncte:"
+
+# f16f344b29624934abece3c262b11b76
+#: ../../vector_analysis/spatial_statistics.rst:331
+msgid ""
+"It's not recommended that you try doing this with 10 000 sample points if "
+"you are not working on a fast computer, as the size of the sample dataset "
+"requires a lot of processing time."
+msgstr ""
+"Nu este recomandat sa incercati sa faceti acest lucru folosind 10.000 de "
+"puncte daca nu puteti lucra pe un computer puternic, deoarece dimensiunea "
+"dataset-ului necesita mult timp de procesare."
+
+# 9440559c974b4fe184c7143f566ae1cc
+#: ../../vector_analysis/spatial_statistics.rst:336
+msgid "|moderate| |FA| Installing SEXTANTE"
+msgstr "|moderate| |FA| Instalarea SEXTANTE"
+
+# e826f6a15fac463bab12e807dec7148e
+#: ../../vector_analysis/spatial_statistics.rst:338
+msgid ""
+"The SEXTANTE plugin allows you to access various plugin tools from within a "
+"single interface. It is standard in QGIS starting with version 1.8. If "
+"you're unsure whether you have SEXTANTE, check if it's marked as installed "
+"in your :guilabel:`Plugin Installer`."
+msgstr ""
+"Plugin-ul SEXTANTE permite accesarea diferitelor instrumente ale plugin-ului "
+"din cadrul unei singure interfete. Optiunea este standard in QGIS incepand de "
+"la versiunea 1.8.x. Daca nu sunteti sigur daca aveti instalat SEXTANTE, "
+"verificati daca este marcat ca optiune instalata in :guilabel:`Plugin "
+"Installer`."
+
+# 0ef6e7fc951f4c51bdd6345369676256
+#: ../../vector_analysis/spatial_statistics.rst:343
+msgid ""
+"Assuming you have it installed (and enabled in the :guilabel:`Plugin "
+"Manager`):"
+msgstr ""
+"Presupunand ca este instalat (si activat in :guilabel:`Plugin Manager`):"
+
+# aefb1d58a9064fb1af3e0f48d6e5d9cc
+#: ../../vector_analysis/spatial_statistics.rst:345
+msgid ""
+"Activate SEXTANTE by enabling the :menuselection:`View --> Panels --> "
+"SEXTANTE Toolbox` menu entry. The toolbox looks like this:"
+msgstr ""
+"Activati SEXTANTE bifand :menuselection:`View --> Panels --> SEXTANTE "
+"Toolbox` in meniu. Bara de instrumente ar trebui sa arate asa:"
+
+# 1187577b10c94bf9a4c24e692a42b1e6
+#: ../../vector_analysis/spatial_statistics.rst:351
+msgid ""
+"You will probably see it docked in QGIS to the right of the map. Note that "
+"the tools listed here are links to the actual tools. SEXTANTE doesn't have "
+"many tools of its own. To have access to spatial statistics tools, you will "
+"need to install the SAGA GIS program."
+msgstr ""
+"Probabil o veti vedea in partea dreapta a ecranului QGIS. De retinut faptul "
+"ca instrumentele prezente acolo, sunt link-uri catre instrumentele efective. "
+"SEXTANTE nu are multe instrumente proprii. Pentru a avea acces la "
+"instrumentele de statistica spatiala, va trebui sa instalati programul SAGA "
+"GIS."
+
+# dcea580fe05a40a682c31001576ff144
+#: ../../vector_analysis/spatial_statistics.rst:357
+msgid "|moderate| |FA| Installing SAGA"
+msgstr "|moderate| |FA| Instalarea SAGA"
+
+# 18008da2877743c5ad95e5a926ce3213
+#: ../../vector_analysis/spatial_statistics.rst:359
+msgid ""
+"SAGA is a GIS program with many useful analysis functions. To make use of "
+"these functions in QGIS via SEXTANTE, you need to install SAGA first."
+msgstr ""
+"SAGA este un program GIS cu multe functii folositoare de analiza. Pentru a "
+"folosi aceste functii in QGIS via SEXTANTE, va trebui sa instalati prima oara "
+"SAGA."
+
+# 406795a36b194179a2eaf650499174a8
+#: ../../vector_analysis/spatial_statistics.rst:363
+msgid "On Windows"
+msgstr "Pentru Windows"
+
+# f53c70e91c1642cd93b0f5564db58caa
+#: ../../vector_analysis/spatial_statistics.rst:365
+msgid ""
+"Included in your course materials you will find the SAGA installer for "
+"Windows."
+msgstr ""
+"Inclus, in materialele de curs veti gasi installer-ul SAGA pentru Windows."
+
+# 271c90470bd742859a17a2a50ae2a368
+#: ../../vector_analysis/spatial_statistics.rst:367
+msgid ""
+"Start the program and follow its instructions to install SAGA on your "
+"Windows system. Take note of the path you are installing it under!"
+msgstr ""
+"Deschideti programul si urmariti instructiunile de instalare SAGA pentru "
+"sistemul Windows. Fiti atenti la calea de instalare (instalation path)!"
+
+# 2b928bc8d587442e8c4a002e81dc49f8
+#: ../../vector_analysis/spatial_statistics.rst:370
+msgid ""
+"Once you have installed SAGA, you'll need to configure SEXTANTE to find the "
+"path it was installed under."
+msgstr ""
+"Dupa ce ati instalat SAGA, va trebui sa configurati SEXTANTE pentru a gasi "
+"calea de instalare."
+
+# 9e64b1e001144f48b24c343317f663b9
+#: ../../vector_analysis/spatial_statistics.rst:373
+msgid ""
+"Click on the menu entry :menuselection:`Analysis --> SAGA options and "
+"configuration`."
+msgstr ""
+"Apasati click pe optiunea de meniu :menuselection:`Analysis --> SAGA options "
+"and configuration`."
+
+# d22307016dd0446f819729d32ab52077
+#: ../../vector_analysis/spatial_statistics.rst:375
+msgid ""
+"In the dialog that appears, expand the :guilabel:`SAGA` item and look for "
+":guilabel:`SAGA folder`. Its value will be blank."
+msgstr ""
+"In caseta de dialog care apare, extindeti :guilabel:`SAGA` si cautati "
+"directorul :guilabel:`SAGA folder`. Valoarea scrisa va fi goala."
+
+# d8a3bde6d9ea431da3b3c650eeb42d37
+#: ../../vector_analysis/spatial_statistics.rst:377
+msgid "In this space, insert the path where you installed SAGA."
+msgstr "In acest spatiu, introduceti calea de instalare unde ati instalat SAGA."
+
+# be5d491381444fafb7781dd907fecd22
+#: ../../vector_analysis/spatial_statistics.rst:380
+msgid "On Ubuntu"
+msgstr "Pe Ubuntu"
+
+# bb9cf2d30de346cd841ed4d125b91525
+#: ../../vector_analysis/spatial_statistics.rst:382
+msgid ""
+"Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter "
+"the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may "
+"first need to add a SAGA repository to your sources.)"
+msgstr ""
+"Cautati :guilabel:`SAGA GIS` in :guilabel:`Software Center` sau, introduceti "
+"fraza :kbd:`sudo apt-get install saga-gis` in terminal. (Exista posibilitatea "
+"ca mai intai sa fie necesara adaugarea depozitului (repository) SAGA in lista "
+"de surse)"
+
+# 6aeb6a752d8b4086bc51bfa3c42b3c20
+#: ../../vector_analysis/spatial_statistics.rst:385
+msgid ""
+"QGIS will find SAGA automatically, although you may need to restart QGIS if "
+"it doesn't work straight away."
+msgstr ""
+"QGIS va gasi SAGA automat, desi s-ar putea sa fiti nevoit sa restartati QGIS "
+"daca nu functioneaza corect."
+
+# 0697daded2c14b0e824e8295db3de743
+#: ../../vector_analysis/spatial_statistics.rst:389
+msgid "After installing"
+msgstr "Dupa instalare"
+
+# 9fb8416c56fa410fbbe3a3c8d6aa1688
+#: ../../vector_analysis/spatial_statistics.rst:391
+msgid ""
+"Now that you have installed and configured SAGA, its functions will become "
+"accessible to you."
+msgstr ""
+"Acum ca ati instalat si configurat SAGA, functiile vor deveni disponibile."
+
+# 33aa9a28ccff449f98862aa605e4245f
+#: ../../vector_analysis/spatial_statistics.rst:395
+msgid "|moderate| |FA| Spatial Point Pattern Analysis"
+msgstr "|moderate| |FA| Analiza Tiparelor Punctelor Spatiale"
+
+# a8b7e7e2bae54c59a23b85255c8a69e4
+#: ../../vector_analysis/spatial_statistics.rst:397
+msgid ""
+"For a simple indication of the spatial distribution of points in the "
+":guilabel:`random_samples` dataset, we can make use of SAGA's "
+":guilabel:`Spatial Point Pattern Analysis` tool."
+msgstr ""
+"Pentru un indicativ simplu a distributiei spatiale a punctelor in dataset-ul "
+":guilabel:`random_samples`, ne putem folosi de instrumentul "
+":guilabel:`Spatial Point Pattern Analysis`."
+
+# 2b267ffefff3462d865cb6b796bf5db3
+#: ../../vector_analysis/spatial_statistics.rst:401
+msgid ""
+"In the :guilabel:`SEXTANTE Toolbox`, find this tool under "
+":menuselection:`SAGA --> Geostatistics --> Spatial Point Pattern Analysis`."
+msgstr ""
+"In :guilabel:`SEXTANTE Toolbox`, gasiti unealta in meniul "
+":menuselection:`SAGA --> Geostatistics --> Spatial Point Pattern Analysis`."
+
+# ed587eef7f134d7881c3ab2b61946f8e
+#: ../../vector_analysis/spatial_statistics.rst:403
+msgid "Double-click on it to open its dialog."
+msgstr "Apasati dublu-click pentru a deschide caseta de dialog."
+
+# f4b372d2afb44473af83078b1504bd0a
+#: ../../vector_analysis/spatial_statistics.rst:404
+msgid "It produces three outputs, and so will require three output paths."
+msgstr ""
+"Vor fi create trei fisiere (output), deci vor fi necesare trei fisiere de "
+"iesire (output paths)."
+
+# 33f03144aede4a3594214b5e891fa646
+#: ../../vector_analysis/spatial_statistics.rst:405
+msgid ""
+"Save these three outputs under :kbd:`exercise_data/spatial_statistics/`, "
+"using whatever file names you find appropriate."
+msgstr ""
+"Salvati aceste trei fisiere in :kbd:`exercise_data/spatial_statistics/`, "
+"folosind denumirile pe care le considerati corecte."
+
+# c8ce3594df6d41cbb653234aec1b61b6
+#: ../../vector_analysis/spatial_statistics.rst:411
+msgid ""
+"The output will look like this (the symbology was changed for this example):"
+msgstr ""
+"Output-ul va arata asa (simbologia a fost modificata pentru acest exemplu):"
+
+# 720cbb9e0ba34949b6f33b21e7bae8f0
+#: ../../vector_analysis/spatial_statistics.rst:416
+msgid ""
+"The red dot is the mean center; the large circle is the standard distance, "
+"which gives an indication of how closely the points are distributed around "
+"the mean center; and the rectangle is the bounding box, describing the "
+"smallest possible rectangle which will still enclose all the points."
+msgstr ""
+"Punctul rosu reprezinta centrul mediilor; cercul reprezinta distanta standard "
+"care ofera ajutor vizual cu privire la modul de distribuire a punctelor in "
+"jurul centrului; dreptunghiul reprezinta granitele care vor desena cea mai "
+"mica suprafata in care pot fi cuprinse toate punctele."
+
+# bdc341dea2014021a92747b8bbb9459d
+#: ../../vector_analysis/spatial_statistics.rst:422
+msgid "|moderate| |FA| Minimum Distance Analysis"
+msgstr "|moderate| |FA| Analiza distantei minime"
+
+# 70c084a50835489eb9644c1c57203b1d
+#: ../../vector_analysis/spatial_statistics.rst:424
+msgid ""
+"Often, the output of an algorithm will not be a shapefile, but rather a "
+"table summarizing the statistical properties of a dataset. One of these is "
+"the :guilabel:`Minimum Distance Analysis` tool."
+msgstr ""
+"De obicei, output-ul unui algoritm nu va fi un fisier .shp (shapefile), ci un "
+"tabel care insumeaza proprietatile statistice ale unui dataset. Unul din "
+"aceste cazuri este dat de instrumentul :guilabel:`Minimum Distance Analysis`."
+
+# e08c84c373c44c94ae18e507dadc8cdb
+#: ../../vector_analysis/spatial_statistics.rst:428
+msgid ""
+"Find this tool in the :guilabel:`SEXTANTE Toolbox` as :menuselection:`SAGA "
+"--> Geostatistics --> Minimum Distance Analysis`."
+msgstr ""
+"Gasiti acest instrument in :guilabel:`SEXTANTE Toolbox` ca si "
+":menuselection:`SAGA --> Geostatistics --> Minimum Distance Analysis`."
+
+# 7d4ae9b3d06c44ecaac5a0f65e41577b
+#: ../../vector_analysis/spatial_statistics.rst:431
+msgid ""
+"It does not require any other input besides specifying the vector point "
+"dataset to be analyzed."
+msgstr ""
+"Nu este necesar alt input in afara de specificarea dataset-ului de vectori "
+"care trebuie analizat."
+
+# b63e18a0532845c298298acc2602c72d
+#: ../../vector_analysis/spatial_statistics.rst:434
+msgid "Choose the :guilabel:`random_points` dataset."
+msgstr "Alegeti datasetul :guilabel:`random_points`."
+
+# 69500d81cd224c3b8a617ab038ad2d91
+#: ../../vector_analysis/spatial_statistics.rst:435
+msgid ""
+"Click :guilabel:`OK`. On completion, a DBF table will appear in the "
+":guilabel:`Layers list`."
+msgstr ""
+"Apasati click pe :guilabel:`OK`. Dupa completare, un tabel .dbf va aparea in "
+"lista :guilabel:`Layers list`."
+
+# 73d3bee9b490447181f6aa7772c57438
+#: ../../vector_analysis/spatial_statistics.rst:437
+msgid ""
+"Select it, then open its attribute table. Although the figures may vary, "
+"your results will be in this format:"
+msgstr ""
+"Selectati-l, si dechideti tabela de atribute. Desi continutul poate fi "
+"diferit, rezultatele vor fi prezentate in acest format: "
+
+# 63e197880c184c29b086a19b8f2bbee6
+#: ../../vector_analysis/spatial_statistics.rst:446
+msgid ""
+"QGIS allows many possibilities for analyzing the spatial statistical "
+"properties of datasets."
+msgstr ""
+"QGIS permite multe posibilitati de a analiza proprietatile de analiza "
+"statistica a dataset-urilor."
+
+# 2a572a98713a4ef19a47a06792d10292
+#: ../../vector_analysis/spatial_statistics.rst:452
+msgid ""
+"Now that we've covered vector analysis, why not see what can be done with "
+"rasters? That's what we'll do in the next module!"
+msgstr ""
+"Acum ca am acoperit analiza vectoriala, sa vedem ce putem face cu raster-ele. "
+"Asta vom face in urmatorul modul!"
