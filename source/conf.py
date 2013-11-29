@@ -1033,6 +1033,19 @@ rst_epilog = """
    :width: 1.5em
 .. |proc_commander| image:: /static/common/commander.png
    :width: 1.5em
+
+.. |basic| image:: ../_static/global/basic.png
+.. |moderate| image:: ../_static/global/moderate.png
+.. |hard| image:: ../_static/global/hard.png
+.. |note| image:: ../_static/global/comment.png
+.. |MOD| replace:: Module:
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try yourself...
+.. |FA| replace:: Follow along:
+.. |RF| replace:: Results for
+.. |WN| replace:: What's next?
+.. |FR| replace:: Further reading
+.. |IC| replace:: In conclusion
 """
 
 # -- Options for LaTeX output --------------------------------------------------
