@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:48+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2013-11-28 11:37+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,7 +104,7 @@ msgid ""
 " folder is added to the PATH environment variable. Just open a console and "
 "type ``saga_cmd`` to check that the system can find where SAGA binaries are "
 "located."
-msgstr ""
+msgstr "Dans ce cas, il n'est pas nécessaire de configurer tout ceci et vous ne verrez pas ces répertoires. Vérifiez que SAGA est correctement installé et que le chemin d'installation figure dans la variable d'environnement PATH. Pour vérifier que les fichiers binaires de SAGA sont accessibles, ouvrez une console et tapez ``saga_cmd``."
 
 # fcc4c015a4264fef99aa60ff19f715a6
 #: ../../source/docs/user_manual/processing/3rdParty.rst:132
@@ -129,27 +129,27 @@ msgstr "La configuration manuelle. Vous définissez les valeurs de l'emprise:"
 # e00c2838fef94e9d89f2dc9e30cda597
 #: ../../source/docs/user_manual/processing/3rdParty.rst:149
 msgid ":guilabel:`Resampling min X`"
-msgstr ""
+msgstr ":guilabel:`Rééchantillonner la valeur minimum de X`"
 
 # 595cce41f54741e0921cea90004911a9
 #: ../../source/docs/user_manual/processing/3rdParty.rst:150
 msgid ":guilabel:`Resampling max X`"
-msgstr ""
+msgstr ":guilabel:`Rééchantillonner la valeur maximum de X`"
 
 # 6f804106a0e24dc6a44648b266a4eba7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:151
 msgid ":guilabel:`Resampling min Y`"
-msgstr ""
+msgstr ":guilabel:`Rééchantillonner la valeur minimum de Y`"
 
 # 743abc94f34c4ef6b88a0f43cf9a8c0f
 #: ../../source/docs/user_manual/processing/3rdParty.rst:152
 msgid ":guilabel:`Resampling max Y`"
-msgstr ""
+msgstr ":guilabel:`Rééchantillonner la valeur maximum de Y`"
 
 # 8dbbf7fb813a4370a0fd75def9c8c3c7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:153
 msgid ":guilabel:`Resampling cellsize`"
-msgstr ""
+msgstr ":guilabel:`Rééchantillonner la taille de la cellule`"
 
 # be353a69c8394b6b834197fc3c4835fc
 #: ../../source/docs/user_manual/processing/3rdParty.rst:157
@@ -223,7 +223,7 @@ msgid ""
 "should be stored in the R-scripts folder. You can set this folder in the "
 ":guilabel:`R` settings group (available from the processing settings "
 "dialog), just like you do with the folder for regular processing scripts."
-msgstr ""
+msgstr "Les fichiers de scripts ont une extension de fichier :file:`.rsx` et leur création est relativement simple si vous connaissez la syntaxe et le langage de script de R. Ils seront sauvegardés dans le répertoire de scripts de R. Vous pouvez configurer ce répertoire dans le groupe de configuration de :guilabel:`R`, dans la fenêtre de configuration du Module de traitements, comme vous le feriez pour un script ordinaire."
 
 # fb04a7dc3b744690a5d9c179a990139b
 #: ../../source/docs/user_manual/processing/3rdParty.rst:274
@@ -238,7 +238,7 @@ msgstr "Les tables sont chargées par la commande ``read.csv()``. Si la table à
 msgid ""
 "Additionally, raster files can be read using the ``readGDAL()`` command "
 "instead of ``brick()``, by using the ``##usereadgdal``."
-msgstr ""
+msgstr "De plus, les couches raster peuvent être lues avec la commande ``readGDAL()`` au lieu de ``brick()``, en utilisant ``##usereadgdal``."
 
 # eb8e5c1439e8493aae30112e7027d4d7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:285
@@ -294,7 +294,7 @@ msgid ""
 "output of all other lines will not be shown. For instance, here is the "
 "description file of an algorithm that performs a normality test on a given "
 "field (column) of the attributes of a vector layer:"
-msgstr ""
+msgstr "Si votre algorithme ne renvoie pas de couche, mais un résultat texte dans la console, vous devez précise que la console doit s'afficher à la fin de son exécution. Pour cela commencez les lignes qui doivent renvoyer les résultats par le signe ``>``. Les sorties des autres lignes seront masquées. Par exemple, voici la description d'un algorithme qui réalise un test de normalisation sur un champ donné (ou une colonne) de la table d'attributs d'une couche vectorielle :"
 
 # 7f6f5cd6567545e7bc0e1922c86d2a64
 #: ../../source/docs/user_manual/processing/3rdParty.rst:334
@@ -384,7 +384,7 @@ msgstr ""
 msgid ""
 "Then configure the path to the folder where OTB command--line tools and "
 "libraries are installed:"
-msgstr ""
+msgstr "Ensuite configurez l'emplacement des exécutables et des librairies OTB :"
 
 # 422919cfdc394c35b9e602d1e4f72ef4
 #: ../../source/docs/user_manual/processing/3rdParty.rst:421
@@ -403,7 +403,7 @@ msgid ""
 " tools folder`. This values should be configured by default, but if you have"
 " a different OTB installation, configure them to the correspondig values in "
 "your system."
-msgstr ""
+msgstr "|win| si vous avez utilisé l'installateur OSGeo4W pour installer le paquet ``otb-bin``, entrez respectivement ``C:\\OSGeo4W\\apps\\orfeotoolbox\\applications`` et ``C:\\OSGeo4W\\bin`` pour les répertoires  :guilabel:`OTB applications` et :guilabel:`OTB command line tools folder`. Ces valeurs sont les configurations par défaut mais si vous avez une installation différente d'OTB, modifiez les en conséquence."
 
 # 675fb65e19e74f9ab90928f0a23bfc14
 #: ../../source/docs/user_manual/processing/3rdParty.rst:430
@@ -502,7 +502,7 @@ msgid ""
 "system. Enabling an algorithm provider without installing the application it"
 " needs will cause the algorithms to appear in the toolbox, but an error will"
 " be thrown when you try to execute them."
-msgstr ""
+msgstr "Par défaut, tous les algorithmes qui reposent sur une application tierce non fournie avec |qg| sont désactivés. Vous pouvez les activer dans la fenêtre de configuration. Vérifiez que l'application correspondante est préalablement installée sur votre ordinateur. Activer un fournisseur d'algorithmes non installé résultera en une erreur à l'exécution, bien que les algorithmes soient présent dans la boîte à outils."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:30
 msgid ""
@@ -512,7 +512,7 @@ msgid ""
 " of |qg|, so you have them in your installation even if you have not "
 "installed any other software. Running the algorithm, however, needs the "
 "application binaries to be installed in your system."
-msgstr ""
+msgstr "La raison est que les descriptions des algorithmes (nécessaires pour créer la fenêtre de paramètres et donner les informations sur l'algorithme) ne sont pas fournies avec les applications mais sont inclues dans |qg|. C'est à dire que |qg| les inclut d'office, même si vous ne les avez pas installé. Exécuter un algorithme nécessite évidemment que l'application tierce soit installée au préalable."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:40
 msgid ""
@@ -535,7 +535,7 @@ msgid ""
 "try to use well known file formats that you are sure that are understood by "
 "both programs, and check to console output (in the history and log dialog) "
 "for knowing more about what is going wrong."
-msgstr ""
+msgstr "Le fait d'ouvrir un fichier dans |qg| ne garantit pas que ce fichier pourra être ouvert et traité par l'application tierce. Dans la plupart des cas, celui-ci pourra lire ce que vous avez ouvert dans |qg|, mais parfois, cela ne sera pas le cas. C'est particulièrement le cas des connections aux bases de données et les fichiers peu communs, aussi bien raster que vectoriels, qui pourront présenter des problèmes. Si cela arrivait, essayez de convertir vos données dans un format usuel reconnu par l'application tierce et vérifiez dans la console (historique et messages) le résultat du traitement pour analyser l'origine des erreurs."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:67
 msgid ""
@@ -545,13 +545,13 @@ msgid ""
 "processing time, which might be significant if the layer has a large size, "
 "so do not be surprised if it takes more to process a layer from a DB "
 "connection that one of a similar size stored in a shapefile."
-msgstr ""
+msgstr "Pour les couches vectorielles, vous ne devriez pas rencontrer de problème : |qg| les convertit automatiquement dans un format reconnu par l'application tierce avant de lui transmettre. Cela aboutit à un temps de traitement plus long, particulièrement si la couche comprend beaucoup d'objets. Ne vous étonnez donc pas si le traitement d'un couche prévenant d'un base de données est plus long que celui d'un shapefile de taille équivalente."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:74
 msgid ""
 "Providers not using external applications can process any layer that you can"
 " open in |qg|, since they open it for analysis through |qg|."
-msgstr ""
+msgstr "Les algorithmes n'utilisant pas d'application tierce peuvent traiter toutes les couches qui peuvent s'ouvrir dans|qg| puisque qu'ils sont lancés depuis QGIS."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:77
 msgid ""
@@ -560,7 +560,7 @@ msgid ""
 "certain formats, but all can export to common formats raster layers that can"
 " be later transformed by |qg| automatically. As in the case of input layers,"
 " if this conversion is needed, that might increase the processing time."
-msgstr ""
+msgstr "Concernant les formats de sortie, tous les formats gérés par |qg| peuvent être utilisés en sortie, à la fois pour les couches raster et vecteur. Certains formats ne sont pas gérés par certaines applications tierces mais celles-ci permettent toutes d'exporter dans des formats raster courants qui peuvent ensuite être convertis automatiquement par |qg|. Comme pour les couches d'entrée, si une conversion est opérée, le temps de traitement peut être allongé."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:83
 msgid ""
@@ -616,13 +616,13 @@ msgid ""
 "SAGA algorithm, |qg| resamples them to a common grid system and then passes "
 "them to SAGA (unless the SAGA algorithm can operate with layers from "
 "different grid systems)."
-msgstr ""
+msgstr "La plupart des algorithmes SAGA nécessitent habituellement des couches Raster en entrée sur la même emprise et la même grille, couvrant la même emprise et ayant la même résolution. A l'appel d'un algorithme SAGA depuis |qg|, vous pouvez cependant utiliser n'importe quelle couche, quelles que soient leur emprise et leur résolution. Quand plusieurs couches raster son indiquées en entré d'un algorithme SAGA, |qg| les rééchantillonne sur une grille commune avant de les transmettre à SAGA (à moins que l'algorithme SAGA manipule directement des couches dans des grilles différentes)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:155
 msgid ""
 "Notice that |qg| will resample input layers to that extent, even if they do "
 "not overlap with it."
-msgstr ""
+msgstr "Veuillez noter que |qg| rééchantillonnera les couches en entrées sur cette emprise, même si elles ne la recoupent pas."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:170
 msgid ""
@@ -642,7 +642,7 @@ msgid ""
 "percentage of processing already done, along with additional content. This "
 "output is filtered and used to update the progress bar while the algorithm "
 "is running."
-msgstr ""
+msgstr "Lorsque |qg| appelle SAGA, il le fait par son interface en lignes de commandes pour effectuer l'opération demandée. SAGA transmet son état d'avancement dans la console ainsi que d'autres informations. Ces messages sont filtrés et utilisés pour afficher la barre d'avancement pendant l'exécution de l'algorithme."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:195
 msgid ""
@@ -663,7 +663,7 @@ msgid ""
 "dedicated to processing scripts. This chapter shows you the syntax to use to"
 " call those R commands from |qg| and how to use |qg| objects (layers, "
 "tables) in them."
-msgstr ""
+msgstr "L'intégration de R est légèrement différente de celle de SAGA, dans la mesure où il n'y a pas d'ensemble prédéfini d'algorithmes à exécuter, hormis quelques exemples. Au lieu de cela, c'est à vous d'écrire les scripts à transmettre à R, comme vous le feriez depuis R. Un peu comme dans le chapitre sur les scripts. Ce chapitre va vous montrer comment appeler les commandes R à partir de |qg| et comment leur transmettre les objets |qg| (couches et tables)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:215
 msgid ""
@@ -671,7 +671,7 @@ msgid ""
 "|qg| where you R binaries are located. You can do so using the :guilabel:`R "
 "folder` entry in the processing configuration dialog. Once you have set that"
 " parameter, you can start creating your own R scripts and executing them."
-msgstr ""
+msgstr "La première chose à faire, comme nous l'avons vu pour SAGA, est de dire à |qg| où se situent les fichiers exécutables de R. Paramétrez l'entrée :guilabel:`Répertoire R` dans la fenêtre de configuration du module de traitements. Une fois cela fait, vous pouvez commencer à créer vos scripts R et à les exécuter."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:224
 msgid ""
@@ -679,7 +679,7 @@ msgid ""
 "that you have developed and you would like to have available from |qg|), you"
 " have to create a script file that tells the processing framework how to "
 "perform that operation and the corresponding R commands to do so."
-msgstr ""
+msgstr "Pour ajouter un nouvel algorithme qui appelle une fonction R (ou un script R plus complexe que vous auriez développé et que vous souhaiteriez utiliser dans |qg|), vous devez créer un fichier de script qui va indiquer au module de traitements comment effectuer l'opération et les commandes R correspondantes."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:235
 msgid ""
@@ -689,7 +689,7 @@ msgid ""
 "package. Since almost all the algorithms that you might like to incorporate "
 "into |qg| will use or generate spatial data, knowledge of spatial packages "
 "like ``maptools`` and, specially, ``sp``, is mandatory."
-msgstr ""
+msgstr "Voyons un simple script, qui appelle la méthode ``spsample`` de R, pour créer une grille aléatoire à l'intérieur de l'emprise d'un ensemble de polygones d'une couche donnée. Cette fonction appartient au paquet ``maptools``. Comme la plupart des algorithmes que vous aurez à intégrer dans |qg| utilisent ou génèrent des données spatiales, la connaissance des paquets spatiaux comme ``maptools`` et surtout ``sp`` est un prérequis."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:251
 msgid ""
@@ -707,7 +707,7 @@ msgid ""
 "things: creating the user interface to ask the user for the value of that "
 "parameter and creating a corresponding R variable that can be later used as "
 "input for R commands."
-msgstr ""
+msgstr "Quand vous déclarez un paramètre d'entrée, |qg| utilise cette information pour deux choses : créer le formulaire pour demander à l'utilisateur la valeur de ce paramètre et créer la variable R correspondante qui sera ensuite utilisée dans les commandes R."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:262
 msgid ""
@@ -717,7 +717,7 @@ msgid ""
 " name of a parameter is also the name of the variable that we can use in R "
 "for accesing the value of that parameter (thus, you should avoid using "
 "reserved R words as parameter names)."
-msgstr ""
+msgstr "Dans l'exemple ci-dessus, nous avons déclaré une entrée de type ``vecteur`` appelée ``polyg``. A l'exécution de l'algorithme, |qg| ouvrira la couche sélectionnée par l'utilisateur dans R et la stockera dans une variable nommée ``polyg``. Ainsi le nom du paramètre est également le nom de la variable à utiliser dans R pour accéder à son contenu (par conséquent, évitez d'utiliser des mots réservés R comme noms de paramètre)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:268
 msgid ""
@@ -743,20 +743,20 @@ msgid ""
 "converted explicitly into a ``SpatialPointsDataFrame`` object, since it is "
 "itself an object of class ``ppp``, which is not a suitable class to be "
 "returned to |qg|."
-msgstr ""
+msgstr "Dans notre exemple, le résultat de la méthode ``spsample`` doit être converti explicitement en objet ``SpatialPointsDataFrame``, dans la mesure où c'est un objet de la classe ``ppp`` qui ne peut être retransmis à |qg|."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:331
 msgid ""
 "The output ot the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by"
 " |qg|)."
-msgstr ""
+msgstr "La sortie de la dernière ligne est affichée, mais la sortie de la première ne l'est pas (ni celles des commandes ajoutées automatiquement par |qg|)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:341
 msgid ""
 "This will cause |qg| to redirect all R graphical outputs to a temporary "
 "file, which will be later opened once R execution has finished."
-msgstr ""
+msgstr "Ceci va indiquer à |qg| de rediriger toutes les sorties graphiques de R vers un fichier temporaire qui sera chargé une fois l'exécution de R terminée."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:352
 msgid ""
@@ -788,14 +788,14 @@ msgid ""
 "No additional configuration is needed to run GDAL algorithms, since it is "
 "already incorporated to |qg| and algorithms can infere its configuration "
 "from it."
-msgstr ""
+msgstr "Les algorithmes GDAL ne nécessitent pas de configuration particulière, dans la mesure où ils sont déjà intégrés dans |qg| et ils y récupèrent donc leurs configurations."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:403
 msgid ""
 "Orfeo ToolBox (OTB) algorithms can be run from |qg| if you have OTB "
 "installed in your system and you have configured |qg| properly, so it can "
 "find all necessary files (command-line tools and libraries)."
-msgstr ""
+msgstr "Les algorithmes de la boîte à outils Orfeo (OTB) peuvent être exécutés depuis |qg| si OTB est installé sur votre ordinateur et que |qg| est configuré correctement pour trouver les fichiers nécessaires (outils en ligne de commande et librairies)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:413
 msgid ""
@@ -803,7 +803,7 @@ msgid ""
 "and configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox "
 "(image analysis)` block you will find all settings related to OTB. First "
 "ensure that algorithms are enabled."
-msgstr ""
+msgstr "Une fois OTB installé, démarrez |qg|, ouvrez la fenêtre de configuration du module de Traitements et configurez le fournisseur OTB. Dans le groupe :guilabel:`Orfeo Toolbox (image analysis)`, vous retrouverez tous les réglages relatifs à OTB. Vérifiez que les algorithmes sont activés."
 
 #~ msgid ""
 #~ "By default, all algorithms that rely on an external appplication not shipped"

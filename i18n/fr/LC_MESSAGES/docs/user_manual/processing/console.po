@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:48+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2013-11-29 10:59+0000\n"
+"Last-Translator: MarieSilvestre <marie.silvestre@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,7 +32,7 @@ msgid ""
 "algorithms can be defined using the command-line interface, and additional "
 "operations such as loops and conditional sentences can be added to create "
 "more flexible and powerful workflows."
-msgstr ""
+msgstr "La console permet aux utilisateurs confirmés d'accroître leur productivité en réalisant des opérations complexes qui ne pourraient par être réalisées à partir de l'interface graphique du module de Traitements. Les modèles impliquant plusieurs algorithmes peuvent être définis à partir de l'interface en lignes de commandes et des opérations additionnelles comme les boucles ou les branchements conditionnels permettent de créer des flux de traitements plus puissants et plus flexibles."
 
 # 450a9219215447178b0a02dd9f255a58
 #: ../../source/docs/user_manual/processing/console.rst:21
@@ -42,19 +42,19 @@ msgid ""
 "that you can later call from the toolbox, the graphical modeler or any other"
 " component, just like you do with any other algorithm. In fact, some "
 "algorithms that you can find in the toolbox are simple scripts."
-msgstr ""
+msgstr "Le code exécuté à partir de la console Python, même s'il n'utilise pas de méthodes de traitements particulières, peut être converti en un nouveau algorithme pour être réutilisé dans la boîte à outils, le modeleur ou dans un autre flux de traitements, comme tout autre algorithme. Ainsi certains algorithmes que vous pouvez trouver dans la boîte à outils sont en fait de simples scripts."
 
 # f81eeabbb6424ee0afc7fedf3c6159ae
 #: ../../source/docs/user_manual/processing/console.rst:31
 msgid "Calling algorithms from the Python console"
-msgstr ""
+msgstr "Appeler de algorithmes depuis la console Python"
 
 # 8da1efcdb76c44278f885fedaa3fa94f
 #: ../../source/docs/user_manual/processing/console.rst:33
 msgid ""
 "The first thing you have to do is to import the processing functions with "
 "the following line:"
-msgstr ""
+msgstr "La première chose à faire est d'importer les fonctions de traitement à l'aide de l'instruction suivante:"
 
 # c9d257cead3a4bb5ad7c39f9cf5cfbbf
 #: ../../source/docs/user_manual/processing/console.rst:40
@@ -68,7 +68,7 @@ msgid ""
 "see in the toolbox, but rather a unique command–line name. To find the right"
 " name for your algorithm, you can use the ``algslist()`` method. Type the "
 "following line in you console:"
-msgstr ""
+msgstr "A présent, la seule instruction (intéressante) à faire est d'exécuter un algorithme. Cela est effectué en utilisant la méthode ``runalg()``, qui prend en premier paramètre le nom de l'algorithme à lancer, puis tous les paramètres nécessaires à son exécution. Vous devez donc connaître le nom de commande de l'algorithme, qui peut être différent de celui affiché dans la boîte à outils. Pour le trouver, tapez ``alglist()`` dans la console :"
 
 # 790008553c664701b7957d56e6e6312b
 #: ../../source/docs/user_manual/processing/console.rst:53
@@ -115,7 +115,7 @@ msgid ""
 "algorithms require and the outputs that it will generate. To do it, you can "
 "use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line name"
 " of the algorithm, not the full descriptive name."
-msgstr ""
+msgstr "Une fois trouvé le nom de commande de l'algorithme, il s'agit de connaître la bonne syntaxe pour l'exécuter. Cela comprend la liste et l'ordre des paramètres à fournir à l'appel de la méthode ``runalg()``. Une méthode est destinée à décrire en détail un algorithme et renvoie la liste des paramètres nécessaires et le type de sorties générées : il s'agit de la méthode ``alghelp(nom_de_l_algorithme)``. Veillez à bien utiliser le nom de commande et non le nom descriptif."
 
 # 0c7c77fdd2754027b3d8151928bac65a
 #: ../../source/docs/user_manual/processing/console.rst:107
@@ -146,7 +146,7 @@ msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next one is a quick review of how to introduce values for each type of input"
 " parameter:"
-msgstr ""
+msgstr "Selon le type de paramètre, les valeurs peuvent être fournies selon plusieurs manières. Une rapide description de ces possibilités est donnée pour chaque type de paramètre d'entrée :"
 
 # f4717d4423f84f4ba804e9604caf2cf8
 #: ../../source/docs/user_manual/processing/console.rst:144
@@ -155,7 +155,7 @@ msgid ""
 "parameter should be entered using an integer value. To know the available "
 "options, you can use the ``algoptions()`` command, as shown in the following"
 " example:"
-msgstr ""
+msgstr "Sélection. Si un algorithme  possède un paramètre sélection, cette valeur doit être une valeur entière. Pour connaître les options possibles, vous pouvez utilisez la commande ``algoptions()``, comme dans l'exemple suivant :"
 
 # a65b831d44074ded8ccecf69a2ce134a
 #: ../../source/docs/user_manual/processing/console.rst:161
@@ -170,7 +170,7 @@ msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
 "descriptor can be the data object name, or its filepath."
-msgstr ""
+msgstr "Entrées multiples. La valeur est une chaîne de caractères, avec les entrées séparées par des points-virgules  (``;``). Comme pour les couches simples et les tables, chaque élément d'entrée peut être le nom d'une variable objet ou un nom de fichier."
 
 # 200eadd944114022960da57e11aafbf2
 #: ../../source/docs/user_manual/processing/console.rst:166
@@ -186,7 +186,7 @@ msgid ""
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
 "from left to right. You can also use a 2D array of values representing the "
 "table."
-msgstr ""
+msgstr "Table fixée. Entrez la liste de toutes les valeurs, séparées par des virgules (``,``) et entre guillemets (``\"``). Les valeurs commencent par la première ligne et se lisent de gauche à droite. Vous pouvez aussi utiliser un tableau à deux dimensions pour représenter la table."
 
 # 57fb7029ca3442f3bf0450a295806058
 #: ../../source/docs/user_manual/processing/console.rst:171
@@ -198,7 +198,7 @@ msgstr "SCR. Entrez le code EPSG du système de coordonnées désiré."
 msgid ""
 "Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
 " values separated by commas (``,``)."
-msgstr ""
+msgstr "Étendue. Vous devez fournir une chaîne de caractères avec les valeurs ``xmin``, ``xmax``, ``ymin`` et ``ymax`` séparées par des virgules (``,``)."
 
 # 4c1a0b56041b49bda8834df8666ebc7e
 #: ../../source/docs/user_manual/processing/console.rst:175
@@ -232,12 +232,12 @@ msgid ""
 "shown in the algorithm description) as keys and the filepaths of those "
 "outputs as values. You can load those layers by passing its filepath to the "
 "``load()`` method."
-msgstr ""
+msgstr "La méthode ``runalg`` renvoie un dictionnaire Python avec pour clés les noms des sorties (correspondant à la description des éléments de l'algorithme) et pour valeurs les chemins des résultats. Vous pouvez charger ces couches de résultat en passant leur chemin à la méthode ``load()``."
 
 # 8478edf297ea4a018f558e84a3cfa73a
 #: ../../source/docs/user_manual/processing/console.rst:200
 msgid "Additional functions for handling data"
-msgstr ""
+msgstr "Fonctions supplémentaires pour gérer des données"
 
 # 46cd1bd8b9db49f58694ea4fdc90f14b
 #: ../../source/docs/user_manual/processing/console.rst:216
@@ -304,7 +304,7 @@ msgid ""
 "last one of them calculates the TWI, but it needs a slope layer and a flow "
 "accumulation layer. We do not have these ones, but since we have the DEM, we"
 " can calculate them calling the corresponding SAGA algorithms."
-msgstr ""
+msgstr "Comme vous pouvez le voir, il utilise 3 algorithmes, provenant de SAGA. Le dernier calcule le TWI, mais nécessite de une couche représentant la pente et une autre d'accumulation des flux. Dans la mesure où ces deux couches n'existent pas mais que nous disposons d'un MNT, nous allons les calculer en faisant appel aux algorithmes SAGA adéquats."
 
 # 1cf52f535ad349e49c724b6cb9a5dc41
 #: ../../source/docs/user_manual/processing/console.rst:260
@@ -315,21 +315,21 @@ msgid ""
 "information that is needed to turn your code into an algorithm that can be "
 "run from any of the GUI components, like the toolbox or the graphical "
 "modeler."
-msgstr ""
+msgstr "Le bout de code où le traitement est effectué n'est pas compliqué à comprendre si vous avez lu les sections précédentes. Cependant, les premières lignes nécessitent quelques explications. Elles fournissent les informations nécessaires pour convertir votre code en un algorithme utilisable à partir d'autres contextes, comme la boîte à outils ou le modeleur graphique."
 
 # 7272ada0779142a5a92baa8fd18febb5
 #: ../../source/docs/user_manual/processing/console.rst:266
 msgid ""
 "These lines start with a double Python comment symbol (``##``) and have the "
 "following structure"
-msgstr ""
+msgstr "Ces lignes débutent par deux symboles de commentaire Python (``##``) et présentent la structure suivante :"
 
 # d1394215af224a3f8b2b23f0ee9ffc5b
 #: ../../source/docs/user_manual/processing/console.rst:273
 msgid ""
 "Here is a list of all the parameter types that are supported in processign "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "Voici la liste des types de paramètres gérés par les scripts de traitement, leur syntaxe ainsi que quelques exemples."
 
 # 9bdbfa6b714542e59ac2884f70551e0f
 #: ../../source/docs/user_manual/processing/console.rst:276
@@ -412,7 +412,7 @@ msgid ""
 "it to improve its appearance, replacing low hyphens with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "A l'affichage du nom de paramètre, les underscores ('_') sont convertis en espaces pour améliorer la lisibilité. Ainsi, par exemple, si vous souhaitez que l'utilisateur saisisse une valeur appelée 'Valeur numérique', vous devez utiliser une variable nommée ``Valeur_numérique``."
 
 # b3f5083bc8ae4468adb452562346d4e4
 #: ../../source/docs/user_manual/processing/console.rst:308
@@ -460,7 +460,7 @@ msgid ""
 "The value assigned to the output variables is always a string with a "
 "filepath. It will correspond to a temporary filepath in case the user has "
 "not entered any output filename."
-msgstr ""
+msgstr "La valeur attribuée à une variable de sortie est toujours une chaîne de caractères contenant le chemin de l'objet. Si le nom est vide, un fichier temporaire sera créé."
 
 # 7df23c3be7024a0aa3e897e7dfb4b764
 #: ../../source/docs/user_manual/processing/console.rst:327
@@ -509,7 +509,7 @@ msgid ""
 "how to create algorithms using the processing framework classes. You can "
 "right-click on any script algorithm and select :guilabel:`Edit script` to "
 "edit its code or just to see it."
-msgstr ""
+msgstr "Plusieurs exemples sont fournis. Veuillez vous y reporter pour servir d'exemples. Cliquez avec le bouton droit sur un script et choisissez ``Éditer le script`` pour voir et éditer le code correspondant."
 
 # 2e67e747e09a46868ab6618541e61be3
 #: ../../source/docs/user_manual/processing/console.rst:362
@@ -580,7 +580,7 @@ msgstr ""
 msgid ""
 "In this chapter we will see how to use processing algorithms from the |qg| "
 "Python console, and also how to write your own algorithms using Python."
-msgstr ""
+msgstr "Dans ces chapitre, nous allons voir comme utiliser des algorithme issus du module de Traitements à partir de la console Python de |qg| et également comment écrire vos propres algorithmes en Python."
 
 #: ../../source/docs/user_manual/processing/console.rst:138
 msgid ""
@@ -591,7 +591,7 @@ msgid ""
 "|qg| object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "Les couches raster, vectorielles ou les tables. Indiquez simplement le nom identifiant la donnée (le nom dans la liste de couches de |qg|) ou un nom de fichier (si la couche n'a pas encore été ouverte, elle sera chargée mais pas ajoutée au canevas). Si vous avez une instance d'un objet |qg| représentant une couche, vous pouvez également la transmettre en paramètre. Si l'entrée est optionnelle et que vous ne souhaitez pas fournir de données particulières, utilisez la valeur ``None``."
 
 #: ../../source/docs/user_manual/processing/console.rst:188
 msgid ""
@@ -643,7 +643,7 @@ msgid ""
 "not load the layers it produces, the final TWI layer will be loaded, since "
 "it is saved to the file entered by the user, which is the value of the "
 "corresponding output."
-msgstr ""
+msgstr "Si un résultat est défini, l'algorithme tentera de l'ajouter à |qg| à l'issue de son exécution. C'est la raison pour laquelle la couche résultat TWI, nommée explicitement par l'utilisateur, sera chargée, même si la méthode ``runalg()`` ne le fait pas."
 
 #~ msgid ""
 #~ "There is not a proccesing console in QGIS, but all processing commands are "

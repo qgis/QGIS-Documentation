@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:47+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2013-11-26 17:10+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -295,7 +295,7 @@ msgid ""
 "Enter the database host in the :guilabel:`Database Host` textbox. This "
 "option is not available if you selected 'MS Access' as the database type. If"
 " the database resides on your desktop you should enter \"localhost\"."
-msgstr ""
+msgstr "В поле :guilabel:`Сервер БД` укажите адрес сервера БД. Данная возможность недоступна, если выбран тип базы данных «MSAccess». Если база данных размещается локально, то в качестве адреса следует указать «localhost»."
 
 # d335221b1c6d4097bbf165bea4fd649d
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:327
@@ -303,7 +303,7 @@ msgid ""
 "Enter the name of the database in the :guilabel:`Database Name` textbox. If "
 "you selected 'ODBC' as the database type, you need to enter the data source "
 "name."
-msgstr ""
+msgstr "В поле :guilabel:`База данных` укажите имя базы данных. Если выбран тип «ODBC», то укажите здесь имя источника данных."
 
 # 82d575b1b8ef44cfafdaea92b4abd617
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:330
@@ -658,7 +658,7 @@ msgid ""
 "containing the offsets. For both of these options east declinations should "
 "be entered using positive values and west declinations should use negative "
 "values."
-msgstr ""
+msgstr "**Магнитное склонение**: Сдвиг компаса можно использовать для компенсации магнитного склонения (позволяет адаптировать магнитные азимуты для определения истинных географических). Отметьте пункт |radiobuttonon| :guilabel:`Вручную`, чтобы задать значение сдвига компаса самостоятельно в соответствующем текстовом поле или выберите пункт |radiobuttonon| :guilabel:`Из атрибута` для определения поля, содержащего данное значение. В обоих случаях для восточных склонений следует использовать положительные величины, а для западных --- отрицательные."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:272
 msgid ""
@@ -666,7 +666,7 @@ msgid ""
 "ID` icon or click on :menuselection:`Database --> eVis --> Event ID Tool`. "
 "This will cause the cursor to change to an arrow with an 'i' on top of it "
 "signifying that the ID tool is active."
-msgstr ""
+msgstr "Для запуска модуля «Определить события» нажмите кнопку |event_id| :sup:`Определить события eVis` или выберите :menuselection:`База данных --> eVis --> Определить события eVis`. После чего вид курсора изменится на стрелку с символом «i», что свидетельствует о том, что инструмент определения события включён."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:294
 msgid ""
@@ -674,7 +674,7 @@ msgid ""
 "SQLite, and can also read from ODBC connections (e.g.MS Access). When "
 "reading from an ODBC database (such as an Excel spreadsheet) it is necessary"
 " to configure your ODBC driver for the operating system you are using."
-msgstr ""
+msgstr "eVis может напрямую соединяться с базами данных четырёх типов: Microsoft Access, PostgreSQL, MySQL, SQLite, а также считывать данные через ODBC-соединения. При считывании данных через ODBC-соединение (например, из электронных таблиц MS Excel) необходимо нужным образом сконфигурировать ODBC-драйвер в соответствии с типом используемой операционной системы."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:304
 msgid ""
@@ -686,17 +686,17 @@ msgid ""
 ":guilabel:`SQL Query`. The :guilabel:`Output Console` window at the bottom "
 "of the window displays the status of actions initiated by the different "
 "sections of this module."
-msgstr ""
+msgstr "Для запуска модуля содинения с базой данных нажмите кнопку |evis_connect| :sup:`Подключить базу данных eVis` или выберите :menuselection:`База данных --> eVis --> Подключить базу данных eVis`. После чего откроется окно :guilabel:`Соединение с БД`. Данное окно имеет три вкладки: :guilabel:`Предопределённые запросы`, :guilabel:`Соединение с БД` и :guilabel:`SQL-запрос`. Поле :guilabel:`Консоль вывода`, расположенное внизу окна, отображает статус действий, вызванных различными разделами данного модуля."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:471
 msgid ""
 "**Open File**: Launches the \"Open File\" file browser to search for the XML"
 " file holding the predefined queries."
-msgstr ""
+msgstr "**Открыть файл**: Вызов окна :guilabel:`Открыть файл` для поиска XML-файла, содержащего предопределённые запросы."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:224
 msgid "Using the Event Browser"
-msgstr ""
+msgstr "Обозреватель событий"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:12
 msgid ""
@@ -711,14 +711,14 @@ msgid ""
 "planning. This plugin enables users to easily link geocoded (i.e., "
 "referenced with latitude and longitude or X and Y coordinates) photographs, "
 "and other supporting documents, to vector data in |qg|."
-msgstr ""
+msgstr "Управлением информатики биоразнообразия в Центре охраны природных ресурсов и биоразнообразия (CBC) (раздел взят из Руководства пользователя eVis (v1.1.0), Horning, N., K. Koy, P. Ersts. 2009. Американский музей естественной истории, Центр охраны биоразнообразия и природных ресурсов. Данный документ доступен по адресу http://biodiversityinformatics.amnh.org/ и выпущен под лицензией GNU FDL.) Американского музея естественной истории (AVNH) было разработано расширение Event Visualization Tool (eVis), программное обеспечение, расширяющее набор инструментов, используемых для мониторинга окружающей среды и поддержки принятия решений в области, связанной с охраняемыми природными территориями и ландшафтным планированием. Данное расширение позволяет легко связывать геокодированные (то есть, привязанные к координатам широты и долготы и\\nли X и Y) фотографии и прочие документы поддерживаемых форматов с векторными данными в |qg|."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:23
 msgid ""
 "eVis is now automatically installed and enabled in new versions of |qg|, and"
 " as with all plugins, it can be disabled and enabled using the Plugin "
 "Manager (See :ref:`managing_plugins`)."
-msgstr ""
+msgstr "В новых версиях |qg| расширение eVis устанавливается и включается автоматически. И по аналогии с остальными расширениями может быть отключено или включено в Менеджере модулей (см. раздел :ref:`managing_plugins`)."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:37
 msgid ""
@@ -730,7 +730,7 @@ msgid ""
 "location and name of the file containing the photograph and, optionally, the"
 " compass direction the camera was pointed when the image was acquired. Your "
 "vector layer must be loaded into |qg| before running the Event Browser."
-msgstr ""
+msgstr "Модуль «Обозреватель событий» предназначен для отображения геокодированных фотографий, ссылающихся на векторные объекты карты, открытой в |qg|. Например, на точечные данные, загруженные в проект из векторного файла или в результате запроса к базе данных. Такие векторные объекты должны содержать атрибутивную информацию, описывающую местоположение, имя файла фотографии и (не обязательно) направление компаса камеры в момент съёмки. Векторный слой должен быть загружен в |qg| до запуска модуля «Обозреватель событий»."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:55
 msgid ""
@@ -741,22 +741,22 @@ msgid ""
 "plugin. Lastly, the :guilabel:`Configure External Applications` tab is used "
 "to maintain a table of file extensions and their associated application to "
 "allow eVis to display documents other than images."
-msgstr ""
+msgstr "Окно :guilabel:`Обозреватель событий` состоит из трёх вкладок, расположенных сверху. Вкладка :guilabel:`Вывод` используется для просмотра фотографий и связанной с ними атрибутивной информации. Вкладка :guilabel:`Параметры` содержит набор настроек, позволяющих управлять поведением расширения eVis. И, наконец, вкладка :guilabel:`Внешние приложения` используется для сопоставления расширений файлов, отличных от изображений, и приложений, используемых в eVis для их отображения."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:68
 msgid ""
 "To see the :guilabel:`Display` window click on the :guilabel:`Display` tab "
 "in the :guilabel:`Event Browser` window. The :guilabel:`Display` window is "
 "used to view geocoded photographs and their associated attribute data."
-msgstr ""
+msgstr "Для просмотра окна :guilabel:`Вывод` щёлкните на вкладке :guilabel:`Вывод` в окне :guilabel:`Обозреватель событий`. Данное окно предназначено для просмотра геокодированных фотографий и связанной с ними атрибутивной информации."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:82
 msgid "The *eVis* display window"
-msgstr ""
+msgstr "Окно «Вывод» расширения eVis"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:116
 msgid "The *eVis* Options window"
-msgstr ""
+msgstr "Окно «Параметры» расширения eVis"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:124
 msgid ""
@@ -764,24 +764,24 @@ msgid ""
 "contains the compass bearing associated with the photograph being displayed."
 " If compass bearing information is available it is necessary to click the "
 "checkbox below the dropdown menu title."
-msgstr ""
+msgstr "**Магнитный азимут**: Выпадающий список для определения атрибутивного поля, содержащего значение магнитного азимута, связанное с отображаемой фотографией. Если значение магнитного азимута присутствует в атрибутике слоя, то необходимо отметить пункт |checkbox| :guilabel:`Показывать азимут`."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:144
 msgid ""
 "**Remember settings**: If the checkbox is checked the values for the "
 "associated parameters will be saved for the next session when the window is "
 "closed or when the **[Save]** button below is pressed."
-msgstr ""
+msgstr "**Сохранить параметр**: Если отмечен этот пункт, то после закрытия окна или нажатия кнопки **[Сохранить]**, значение соответствующего параметра будет сохранено для последующих сессий."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:148
 msgid ""
 "**Restore defaults**: This will reset all of the fields to their default "
 "settings. It has the same effect as clicking all of the **[Reset]** buttons."
-msgstr ""
+msgstr "**Восстановить по умолчанию**: Сбросить значения всех полей и установить в значения по умолчанию. Данная операция эквивалентна последовательному нажатию кнопок **[Восстановить]** возле каждого параметра."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:168
 msgid "The *eVis* External Applications window"
-msgstr ""
+msgstr "Окно «Внешние приложения» расширения eVis"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:245
 msgid ""
@@ -792,13 +792,13 @@ msgid ""
 " compass bearing display field in the :guilabel:`Event Browser` window. The "
 "arrow will be centered over the point that is associated with the photograph"
 " or other document."
-msgstr ""
+msgstr "Если отображение азимута отключено во вкладке :guilabel:`Параметры`, то векторный объект, для которого открыта фотография, будет отмечен красной звёздочкой. Если отображение азимута включено, то появится стрелка, указыающая в направлении, соответствующем значению магнитного азимута. Стрелка будет отцентрирована относительно объекта с которым связана фотография или иной объект."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:252
 msgid ""
 "To close the :guilabel:`Event Browser` window click on the **[Close]** "
 "button from the :guilabel:`Display` window."
-msgstr ""
+msgstr "Чтобы закрыть окно :guilabel:`Обозреватель событий`, нажмите кнопку **[Закрыть]** во вкладке :guilabel:`Вывод`."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:260
 msgid ""
@@ -808,7 +808,7 @@ msgid ""
 "of the file containing the photograph and optionally the compass direction "
 "the camera was pointed when the image was acquired. This layer must be "
 "loaded into |qg| before running the 'Event ID' tool."
-msgstr ""
+msgstr "Модуль «Определить события eVis» позволяет отображать фотографии путём щелчка на объектах карты, открытой в |qg|. Такие векторные объекты должны содержать атрибутивную информацию, описывающую местоположение, имя файла фотографии и (не обязательно) направление компаса камеры в момент съёмки. Такой слой должен быть загружен в QGIS до запуска модуля определителя \"событий."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:277
 msgid ""
@@ -820,11 +820,11 @@ msgid ""
 "one photograph is available, you can cycle through the different features "
 "using the **[Previous]** and **[Next]** buttons. The other controls are "
 "described in the ref:`evis_browser` section of this guide."
-msgstr ""
+msgstr "Для просмотра фотографий, связанных с объектами активного векторного слоя, открытого в |qg|, поместите курсор на объект и щёлкните мышкой. После щелчка на объекте откроется окно :guilabel:`Обозреватель событий` и фотография, доступная для отображения в обозревателе, на месте щелчка или около него. Если доступно несколько фотографий, то для перемещения между различными объектами используйте кнопки **[Предыдущее]** и **[Следующее]**. Остальные управляющие элементы описаны в разделе :ref:`evis_browser` данного руководства."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:346
 msgid "The *eVis* Database connection window"
-msgstr ""
+msgstr "Окно «Соединение с БД» расширения eVis"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:372
 msgid ""
@@ -836,11 +836,11 @@ msgid ""
 "http://www.w3schools.com/sql. For example, to extract all of the data from a"
 " worksheet in an Excel file, ``select * from [sheet1$]`` where ``sheet1`` is"
 " the name of the worksheet."
-msgstr ""
+msgstr "SQL-запросы используются для извлечения информации из базы данных или ODBC-ресурса. В eVis результатом выполнения таких запросов является векторный слой, добавляемый в окно карты |qg|. Перейдите во вкладку :guilabel:`SQL-запрос` для отображения интерфейса создания SQL-запросов. SQL-команды можно вводить прямо в открывшемся текстовом окне. Полезное руководство по использованию SQL-команд доступно по адресу http://www.w3schools.com/sql/. Например, для извлечения всех данных из рабочего листа таблицы Excel используется команда ``select * from [sheet1$]``, где ``sheet1`` --- имя рабочего листа."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:399
 msgid "The eVis SQL query tab"
-msgstr ""
+msgstr "Вкладка «SQL-запрос» расширения eVis"
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:409
 msgid ""
@@ -849,14 +849,14 @@ msgid ""
 "the ``X`` (or longitude) and ``Y`` (or latitude) coordinates. Clicking on "
 "the **[OK]** button causes the vector layer created from the SQL query to be"
 " displayed in the |qg| map window."
-msgstr ""
+msgstr "Используйте выпадающие меню :guilabel:`X-координата` |selectstring| и :guilabel:`Y-координата` |selectstring| для выбора полей базы данных, в которых хранится информация о координатах ``X`` (или долготе) и ``Y`` (или широте). После нажатия кнопки **[OK]** на основе результатов SQL-запроса создаётся векторный слой и добавляется в главное окно |qg|."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:415
 msgid ""
 "To save this vector file for future use, you can use the |qg| 'Save as...' "
 "command that is accessed by right clicking on the layer name in the |qg| map"
 " legend and then selecting 'Save as...'"
-msgstr ""
+msgstr "Чтобы сохранить векторный файл для будущего использования, примените команду «Сохранить как...», доступную через правый щелчок на имени слоя в списке слоёв |qg|."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:421
 msgid ""
@@ -869,11 +869,11 @@ msgid ""
 ":menuselection:`Edit --> Delete` to remove the blank rows from the file. To "
 "avoid this problem you can simply delete several rows in the Excel Worksheet"
 " using :menuselection:`Edit --> Delete` before saving the file."
-msgstr ""
+msgstr "При создании векторного слоя из листа Microsoft Excel могут появиться строки с нежелательными нулями («0»), вставленные в таблицу атрибутов после корректных данных. Причиной может быть удаление значений этих ячеек в Excel клавишей :kbd:`Backspace`. Для исправления проблемы необходимо открыть файл Excel (предварительно закрыв |qg|, если данный файл открыт на редактирование) и, используя инструмент :menuselection:`Edit --> Delete`, удалить пустые строки из файла. Во избежании такой проблемы, перед сохранением файла следует просто удалять пустые строки в Excel, используя инструмент :menuselection:`Edit --> Delete`."
 
 #: ../../source/docs/user_manual/plugins/plugins_evis.rst:469
 msgid "The *eVis* Predefined queries tab"
-msgstr ""
+msgstr "Вкладка «Предопределённые запросы» расширения eVis"
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-08 19:02+0000\n"
+"PO-Revision-Date: 2013-11-18 11:17+0000\n"
 "Last-Translator: DelazJ <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgid ""
 ":menuselection:`Settings --> Project Properties` or |win| "
 ":menuselection:`Settings --> Project Properties` you set project specific "
 "options. These include:"
-msgstr "Dans la fenêtre de propriétés du projet du menu |nix| :menuselection:`Préférences --> Propriétés du projet` or |win| :menuselection:`Préférences --> Propriétés du projet` vous pouvez définir les options spécifiques à un projet. Cela inclut :"
+msgstr "Dans la fenêtre de propriétés du projet du menu |nix| :menuselection:`Préférences --> Propriétés du projet` or |win| :menuselection:`Projet --> Propriétés du projet` vous pouvez définir les options spécifiques à un projet. Cela inclut :"
 
 # 000afdffa82e4c9abe28f1e280182cbe
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:103
@@ -416,7 +416,7 @@ msgstr "|checkbox| :guilabel:`Réutiliser la dernière caleur attributaire saisi
 # 38181d3ad16d472c9ab09406294592d1
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:303
 msgid "Define Rubberband :guilabel:`Line width` and :guilabel:`Line color`"
-msgstr ""
+msgstr "Définissez la :guilabel:`Largeur de ligne` et la :guilabel:`Couleur de ligne` du trait lors de l'édition."
 
 # ebea1f2e60f140f1a7e376fb68e700cd
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:308
@@ -704,7 +704,7 @@ msgid ""
 "The :guilabel:`CRS` menu enables you to choose the Coordinate Reference "
 "System for this project, and to enable on-the-fly re-projection of raster "
 "and vector layers when displaying layers from a different CRS."
-msgstr "Le menu :guilabel:`SCR`vous permet de choisir le Système de Coordonnées de Référence pour le projet, et d'activer la projection à la volée de couches raster et vecteur définies dans un SCR différent."
+msgstr "Le menu :guilabel:`SCR` vous permet de choisir le Système de Coordonnées de Référence pour le projet, et d'activer la projection à la volée de couches raster et vecteur définies dans un SCR différent."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:76
 msgid ""
@@ -726,7 +726,7 @@ msgid ""
 "The menu :guilabel:`Macros` is to create a Python module, saved into a "
 "project.qgs file to be loaded and have specific functions run on the "
 "following project events: openProject(), saveProject() and closeProject()."
-msgstr ""
+msgstr "Le menu :guilabel:`Macros`permet de créer un module Python, sauvegardé dans le fichier de projet .qgs à charger et disposant de fonctions spécifiques sur les événements suivants : openProject(), saveProject() et closeProject()."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:98
 msgid "Macro settings in |qg|"
@@ -750,7 +750,7 @@ msgstr ":guilabel:`Activer les macros` |selectstring|. Cette option a été cré
 msgid ""
 "on project events. You can chosse between 'Never', 'Ask', 'For this session "
 "only'  and 'Always (not recommended)'."
-msgstr ""
+msgstr "sur les événements du projet. Vous pouvez choisir entre 'Jamais', 'Demander', 'Uniquement pour cette session' et 'Toujours (non recommandé)'."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:139
 msgid "System Menu"
@@ -896,7 +896,7 @@ msgid ""
 "used when CRS transformation is disabled) and the precision of decimal "
 "places to use. You also can define a project scale list, that overrides the "
 "global predefined scales."
-msgstr ""
+msgstr "Dans le menu :guilabel:`Général`, le titre du projet, la couleur de la sélection et du fond, les unités des couches et leur précision, ainsi que la possibilité de sauvegarder les chemins des couches en relatif peuvent être définis. Si la transformation du SCR est activée, vous pouvez choisir l'ellipsoïde pour la mesure des distances. Vous pouvez définir les unités de la carte (utilisé seulement si la transformation de SCR est désactivé) et la précision des décimaux. Vous pouvez également définir une liste d'échelles de projet, qui se substitue aux échelles prédéfinies globalement."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:82
 msgid ""
@@ -931,11 +931,11 @@ msgid ""
 "environment variables for the external tool sets controlled by the "
 "processing toolbox, e.g. SAGA, GRASS; and, for turning on debugging output "
 "for specific sections of the source code."
-msgstr ""
+msgstr "Les variables d'environnement Système peuvent maintenant être visualisées et configuré pour certains dans le menu **Environnement** (voir figure_environment_variables_). Ceci est pratique sur certaines plateformes, notamment sur Mac, ou une application avec interface graphique n'hérite pas nécessairement des paramètres de l'environnement en ligne de commande de l'utilisateur. Ceci est aussi utile pour paramétrer/visualiser les variables d'environnement des outils externes contrôlés par la boîte à outils de traitement, par exemple SAGA, GRASS et pour activer les sorties de débogage pour des sections spécifiques du code source."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:164
 msgid "System environment variables in |qg|"
-msgstr ""
+msgstr "Variables d'environnement Système dans |qg|"
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:173
 msgid "Data Sources Menu"
@@ -948,7 +948,7 @@ msgid ""
 "clipboard` from the :guilabel:`Attribute table` menu then this has the "
 "result that also the coordinates of points or vertices are copied to the "
 "clipboard."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Copier la représentation WKT de la géométrie depuis la table attributaire`. Lorsque vous utilisez |mActionCopySelected|:sup:`Copier les lignes choisies dans le presse-papier` depuis la fenêtre :guilabel:`Table attributaire`, cette option permet de recopier aussi les coordonnées des points ou des vertex dans le presse-papier."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:184
 msgid ""
@@ -956,19 +956,19 @@ msgid ""
 "it possible to save the last loaded x attribute rows so that working with "
 "the attribute table will be quicker. The cache will be deleted when closing "
 "the attribute table."
-msgstr ""
+msgstr ":guilabel:`Cache de la table attributaire` |selectstring|. Ce cache permet de garder en mémoire les x dernières lignes d'attributs chargées afin de rendre l'utilisation de la table attributaire plus réactive. Le cache est supprimé à la fermeture de la table attributaire."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:186
 msgid ""
 ":guilabel:`Representation for NULL values` Here you can define a value for "
 "data fields containing a NULL value."
-msgstr ""
+msgstr ":guilabel:`Representation des valeurs NULL`permet de définir une valeur par défaut pour les champs contenant la valeur NULL."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:200
 msgid ""
 "|checkbox| :guilabel:`Ignore shapefile encoding declaration`. If a shapefile"
 " has encoding information this will be ignored by |qg|."
-msgstr ""
+msgstr "|checkbox| :guilabel:`Ignorer la déclaration interne d'encodage des shapefiles`. Si une couche shapefile a un encodage déjà renseigné, cette information sera ignorée par |qg|."
 
 #: ../../source/docs/user_manual/introduction/qgis_configuration.rst:205
 msgid "Rendering Menu"

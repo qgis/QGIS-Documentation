@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:49+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2013-11-18 11:10+0000\n"
+"Last-Translator: BJ Jang <qgis.tr.kr@gmail.com>\n"
 "Language-Team: Korean (Korea) (http://www.transifex.com/projects/p/qgis-documentation/language/ko_KR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -260,7 +260,7 @@ msgid ""
 "user to define custom coordinate reference systems and supports on-the-fly "
 "(OTF) projection of vector and raster layers. All these features allow the "
 "user to display layers with different CRS and have them overlay properly."
-msgstr ""
+msgstr "|qg| 에서는 미리 좌표계가 지정되지 않은 레이어를 위해, 전체적으로 사용하거나 혹은 프로젝트 내에서만 사용할 수 있는 좌표계 (Coordinate Reference System = 좌표계)를 정의할 수 있습니다. 아울러 사용자가 마음대로 좌표계를 정의할 수 있으며 벡터와 래스터에 실시간(OTF: On The Fly) 투영을 지원합니다. 이러한 기능들을 활용하여 좌표계가 다른 레이어를 적절히 겹쳐 정확하게 렌더링할 수 있습니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:27
 msgid ""
@@ -270,7 +270,7 @@ msgid ""
 " so may cause projection support to fail. Custom CRS are stored in a user "
 "database. See Section :ref:`sec_custom_projections` for information on "
 "managing your custom coordinate reference systems."
-msgstr ""
+msgstr "|qg| 는 약 2700개의 알려진 좌표계를 지원합니다. 이런 좌표계의 정의는 |qg| 와 함께 설치되는 SQLite 데이터베이스에 저장되어 있습니다. 일반적으로 이 데이터베이스를 직접 조작할 필요가 없습니다. 사실, 사용자가 데이터베이스를 조작하면 좌표계 변환이 잘못될 경우가 많습니다. 사용자 정의 좌표계 는 사용자 데이터베이스에 저장됩니다. 사용자 정의 좌표계 관리에 대한 정보는 다음 섹션을 참조하십시오. :ref:`sec_custom_projections`"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:34
 msgid ""
@@ -279,7 +279,7 @@ msgid ""
 "France (IGNF) and are largely abstracted from the spatial reference tables "
 "used in GDAL. EPSG identifiers are present in the database and can be used "
 "to specify a CRS in |qg|."
-msgstr ""
+msgstr "|qg| 에서 사용 가능한 좌표계는 EPSG(European Petroleum Group)와 IGNF(Institut Geographique National of France)의 정의를 바탕으로 하는데, 주로 GDAL에서 사용하고 있는 좌표계 테이블에서 추출하였습니다. EPSG 식별자는 데이터베이스에 있으며 |qg| 에서 좌표계를 지정할 때 사용할 수 있습니다. "
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:40
 msgid ""
@@ -293,7 +293,7 @@ msgid ""
 "same base name as the shapefile and a prj extension. For example, a "
 "shapefile named :file:`alaska.shp` would have a corresponding projection "
 "file named :file:`alaska.prj`."
-msgstr ""
+msgstr "실시간 투영-OTF-을 사용하려면, 데이터에 좌표계 정보가 포함되어 있거나, 사용자가 전역 혹은 레이어, 프로젝트 범위로 좌표계를 정의해야 합니다. PostGIS 레이어의 경우에는 |qg| 가 레이어를 생성할 때 지정된 좌표계 ID를 사용합니다. OGR이 지원하는 데이터의 경우에는, |qg| 는 좌표계 식별수단이 존재하는 것을 전제로 합니다. 예를 들어 Shape 파일의 경우, 식별수단은 좌표계정의를 WKT(Well Known Text, :index:`WKT`) 정의에 따라 담고 있는 파일입니다. 이 투영법 파일은 Shape파일과 이름이 동일하며 확장자는 .prj입니다. 예를 들면, shape 파일의 이름이 :file:`alaska.shp` 라면 대응하는 투영법 파일은 :file:`alaska.prj`라는 이름을 가져야 합니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:51
 msgid ""
@@ -301,7 +301,7 @@ msgid ""
 "changed in the :guilabel:`General` menu of the |mActionOptions| "
 ":guilabel:`Project Properties` dialog under the :guilabel:`Project` (Gnome, "
 "OSX) or :guilabel:`Settings` (KDE, Windows) menu."
-msgstr ""
+msgstr "사용자가 새 좌표계를 선택할 때 마다, :guilabel:`Project` (Gnome, OSX) 혹은 :guilabel:`Settings` (KDE, Windows) 메뉴의 |mActionOptions| :guilabel:`Project Properties` 대화상자의 :guilabel:`General` 메뉴에 있는 사용중인 레이어 단위가 자동적으로 변경됩니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:62
 msgid ""
@@ -312,11 +312,11 @@ msgid ""
 "Default Coordinate Reference System to use when starting new projects, as "
 "shown in figure_projection_1_. This choice will be saved for use in "
 "subsequent |qg| sessions."
-msgstr ""
+msgstr "|qg| 는 각각의 새 프로젝트를 전지구 기본 투영법을 이용하여 시작합니다. 전지구 기본 좌표계는 EPSG:4326 - WGS 84 (``proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs``) 이며 |qg|에 미리 정의되어 있습니다. 이 기본 값은 첫 섹션의 **[Select...]** 버튼을 이용하여 변경할 수 있으며, figure_projection_1_ 에서 볼 수 있듯이 프로젝트 시작시의 기본 좌표계로 정의되어 이용됩니다. 이 선택은 이후의 QGIS 세션에서 이용할 수 있도록 저장됩니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:79
 msgid "CRS tab in the |qg| Options Dialog |nix|"
-msgstr ""
+msgstr "|qg| Options 대화상자의 CRS 탭 |nix|"
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:81
 msgid ""
@@ -324,7 +324,7 @@ msgid ""
 "responds to these layers. This can be done globally or project-wide in the "
 ":guilabel:`CRS` menu under :menuselection:`Settings -->` |mActionOptions| "
 ":guilabel:`Options`."
-msgstr ""
+msgstr "만약 레이어가 좌표계를 가지고 있지 않다면, 사용자는 |qg| 가 이 레이어에 어찌 반응할지 정의할 필요가 있습니다.  이 것이 전역적일지, 프로젝트 범위일지는 :menuselection:`Settings -->` |mActionOptions| :guilabel:`Options`의  :guilabel:`CRS` 탭에서 설정할 수 있습니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:92
 msgid ""
@@ -334,7 +334,7 @@ msgid ""
 ":ref:`vectorgeneralmenu`) properties dialog. If your layer already has a CRS"
 " defined, it will be displayed as shown in :ref:`figure_vector_properties_1`"
 " ."
-msgstr ""
+msgstr "만약 사용자가 CRS 정보가 없는 어떤 레이어에 대해 좌표계를 정의하고 싶다면,  래스터 (:ref:`label_generaltab` 참조) 및 벡터 (:ref:`vectorgeneralmenu` 참조) 속성 대화상자의  :guilabel:`General` 메뉴에서 할 수 있습니다. 만약 사용자의 레이어가 이미 좌표계 정의를 가지고 있다면,  이는 :ref:`figure_vector_properties_1`처럼 나타나게 됩니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:109
 msgid ""
@@ -343,7 +343,7 @@ msgid ""
 "|checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox in the "
 ":guilabel:`CRS` menu of the |mActionProjectProperties| "
 ":menuselection:`Project Properties` dialog."
-msgstr ""
+msgstr "|qg| 는 래스터와 벡터 데이터에 대해 실시간 투영을 지원합니다. 그러나, 실시간 투영은 기본적으로 활성화되어 있지 않습니다. 실시간 프로젝션을 사용하시려면, 사용자가 |mActionProjectProperties| :menuselection:`Project Properties` 대화상자의 :guilabel:`CRS` 탭에 있는 |checkbox| :guilabel:`Enable on the fly CRS transformation` 체크박스를 활성화 하셔야만 합니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:125
 msgid ""
@@ -353,14 +353,14 @@ msgid ""
 "|checkbox| :guilabel:`Enable on the fly CRS transformation` checkbox. The "
 "|geographic| :sup:`CRS status` icon will no longer be greyed-out and all "
 "layers will be OTF projected to the CRS shown next to the icon."
-msgstr ""
+msgstr "미리 로드된 레이이가 있고, 실시간 좌표계 변환을 켜고 싶다면, 가장 좋은 방법은 :guilabel:`Project Properties` 대화상자의  :guilabel:`Coordinate Reference System` 메뉴를 열어서, 좌표계를 선택하고, |checkbox| :guilabel:`Enable on the fly CRS transformation` 체크박스를 활성화 하는 것입니다. |geographic| :sup:`CRS status` 아이콘이 더 이상 회색이 아니게 되고, 아이콘 다음에 보이는 좌표계로 모든 레이어들이 실시간 좌표계변환 됩니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:146
 msgid ""
 "The :guilabel:`Coordinate Reference System` menu of the :guilabel:`Project "
 "Properties` dialog contains five important components as shown in "
 "Figure_projection_2_ and described below."
-msgstr ""
+msgstr ":guilabel:`Project Properties` 대화상자의 :guilabel:`Coordinate Reference System` 메뉴에는 Figure_projection_2_ 에서 보여지고 다음에서 설명된 바와 같이 다섯 개의 중요한 요소가 포함되어 있습니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:155
 msgid ""
@@ -368,7 +368,7 @@ msgid ""
 "|qg|, including Geographic, Projected and Custom coordinate reference "
 "systems. To define a CRS, select it from the list by expanding the "
 "appropriate node and selecting the CRS. The active CRS is preselected."
-msgstr ""
+msgstr "**Coordinate Reference System** - 경위도좌표계, 직각좌표계, 사용자정의좌표계를 포함하여 |qg|에서 지원되는 모든 좌표계 목록이 표시됩니다. 원하는 좌표계를 설정하려면 해당 노드를 확장하고 좌표계를 클릭합니다. 기존에 설정된 좌표계는 미리 선택되어 있습니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:172
 msgid ""
@@ -376,13 +376,13 @@ msgid ""
 ":menuselection:`Project` (Gnome, OSX) or :menuselection:`Settings` (KDE, "
 "Windows) menu, you must click on the :guilabel:`CRS` menu to view the "
 "Coordinate Reference System settings."
-msgstr ""
+msgstr "만약 사용자가  :menuselection:`Project` (Gnome, OSX) 혹은 :menuselection:`Settings` (KDE, Windows) 메뉴에서 :guilabel:`Project Properties` 대화상자를 열었다면, 좌표계 설정을 보기 위해 :guilabel:`CRS` 메뉴를 클릭해야만 합니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:177
 msgid ""
 "The |geographic| :sup:`CRS status` icon will also automatically bring the "
 ":guilabel:`CRS` menu to the front."
-msgstr ""
+msgstr "|geographic| :sup:`CRS status` 아이콘 역시 :guilabel:`CRS` 메뉴를 자동적으로 제일 앞으로 가져옵니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:187
 msgid ""
@@ -391,7 +391,7 @@ msgid ""
 ":guilabel:`Custom CRS` from the :menuselection:`Settings` menu. Custom CRS "
 "are stored in your |qg| user database. In addition to your custom CRS, this "
 "database also contains your spatial bookmarks and other custom data."
-msgstr ""
+msgstr "만약 |qg| 가 사용자가 필요로 하는 좌표계를 지원하지 않는다면, 직접 사용자정의 좌표계를 정의할 수 있습니다. 좌표계를 정의하기 위해서 :menuselection:`Settings` 메뉴에서 |mActionCustomProjection| :guilabel:`Custom CRS`를 선택합니다. 사용자 정의 좌표계는 사용자의 |qg|사용자 데이터베이스에 저장됩니다. 이 데이터베이스에는 사용자정의 좌표계 이외에, 지리적 북마크 및 기타 사용자정의 데이터들도 저장됩니다."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:208
 msgid ""
@@ -400,14 +400,14 @@ msgid ""
 "Procedures for the UNIX Environment - A User's Manual by Gerald I. Evenden, "
 "U.S. Geological Survey Open-File Report 90-284, 1990 (available at "
 "ftp://ftp.remotesensing.org/proj/OF90-284.pdf )."
-msgstr ""
+msgstr "|qg| 에서 사용자 정의 좌표계를 정의하기 위해서는 Proj.4 프로젝션 라이브러리에 대한 이해가 필요합니다. 먼저, 유닉스 환경에서의 지도학적 투영 과정인 - A User's Manual by Gerald I. Evenden, U.S. Geological Survey Open-File Report 90-284, 1990 (ftp://ftp.remotesensing.org/proj/OF90-284.pdf 에 있음)를 참고 하십시오."
 
 #: ../../source/docs/user_manual/working_with_projections/working_with_projections.rst:214
 msgid ""
 "This manual describes the use of the ``proj.4`` and related command line "
 "utilities. The cartographic parameters used with ``proj.4`` are described in"
 " the user manual and are the same as those used by |qg|."
-msgstr ""
+msgstr "설명서에는 ``proj.4``와 관련 명령줄 유틸리티 사용법이 설명되어 있습니다. 여기에는 ``proj.4``에서 사용되는 지도학적 파라미터가 기술되어 있는데, 이는 |qg| 에서 사용되는 것과 동일합니다. "
 
 #~ msgid ""
 #~ "QGIS allows users to define a global and project-wide CRS (Coordinate "
