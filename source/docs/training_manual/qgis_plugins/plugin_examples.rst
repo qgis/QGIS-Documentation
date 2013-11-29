@@ -22,14 +22,14 @@ don't need to install it separately.
 * Open the :guilabel:`Plugin Manager` and check that the Raster Terrain
   Analysis plugin is enabled:
 
-  .. image:: ../_static/qgis_plugins/026.png
+  .. image:: /static/training_manual/qgis_plugins/026.png
      :align: center
 
 * Open the :menuselection:`Raster` menu. You should see a
   :menuselection:`Terrain analysis` submenu.
 * Click on :menuselection:`Terrain analysis --> Relief` to open this dialog:
 
-  .. image:: ../_static/qgis_plugins/027.png
+  .. image:: /static/training_manual/qgis_plugins/027.png
      :align: center
 
 * Save the new file under :kbd:`exercise_data/plugins/relief.tif` (create a new
@@ -39,18 +39,18 @@ don't need to install it separately.
 * Click the :guilabel:`Create automatically` button. The list below will be
   populated:
 
-  .. image:: ../_static/qgis_plugins/028.png
+  .. image:: /static/training_manual/qgis_plugins/028.png
      :align: center
 
   These are the colors that the plugin will use to create the relief.
 * If you like, you can change these colors now. For example:
 
-  .. image:: ../_static/qgis_plugins/029.png
+  .. image:: /static/training_manual/qgis_plugins/029.png
      :align: center
 
 * Click :guilabel:`OK` and the relief will be created:
 
-  .. image:: ../_static/qgis_plugins/030.png
+  .. image:: /static/training_manual/qgis_plugins/030.png
      :align: center
 
 This achieves a similar effect to when you used the semi-transparent hillshade
@@ -66,7 +66,7 @@ it creates this effect using only one layer.
   :kbd:`Google` in the :guilabel:`Filter` field.
 * Select the Google Layers plugin from the filtered list:
 
-  .. image:: ../_static/qgis_plugins/020.png
+  .. image:: /static/training_manual/qgis_plugins/020.png
      :align: center
 
 * Click the :guilabel:`Install plugin` button to install.
@@ -74,7 +74,7 @@ it creates this effect using only one layer.
 * Open the :guilabel:`Plugin Manager`.
 * Enable the new plugin:
 
-  .. image:: ../_static/qgis_plugins/021.png
+  .. image:: /static/training_manual/qgis_plugins/021.png
      :align: center
 
 * Check the box beside it.
@@ -89,7 +89,7 @@ properly:
   "Hybrid" type map, but you can choose any others if you want.
 * Enable "on the fly" projection and use the Google Mercator projection:
 
-  .. image:: ../_static/qgis_plugins/023.png
+  .. image:: /static/training_manual/qgis_plugins/023.png
      :align: center
 
 * Now use the plugin to give you a Google map of the area! You can click on
@@ -97,14 +97,14 @@ properly:
   if you have the :guilabel:`Plugins` toolbar enabled, you can click on its
   icon:
 
-  .. image:: ../_static/qgis_plugins/025.png
+  .. image:: /static/training_manual/qgis_plugins/025.png
      :align: center
 
 This will load a new raster image in from Google that you can use as a
 backdrop, or to help you find out where you are on the map. Here is such a
 layer, with our own vector road layer as overlay:
 
-.. image:: ../_static/qgis_plugins/024.png
+.. image:: /static/training_manual/qgis_plugins/024.png
    :align: center
 
 |moderate| |FA| The OpenStreetMap Plugin
@@ -117,7 +117,7 @@ download and edit this kind of data easily.
 * First, ensure that you have the plugin installed by opening the
   :guilabel:`Plugin Installer` and filtering on the word :kbd:`street`:
 
-  .. image:: ../_static/qgis_plugins/006.png
+  .. image:: /static/training_manual/qgis_plugins/006.png
      :align: center
 
 * The :guilabel:`OpenStreetMap plugin` should be installed by default, but if
@@ -125,7 +125,7 @@ download and edit this kind of data easily.
 * Once it's installed, activate it via the :guilabel:`Plugin Manager`.
 * A new panel and new buttons will be added to your interface:
 
-  .. image:: ../_static/qgis_plugins/007.png
+  .. image:: /static/training_manual/qgis_plugins/007.png
      :align: center
 
 Let's download data for Swellendam. The plugin will download data for the area
@@ -134,7 +134,7 @@ currently on your map.
 * Zoom in to the Swellendam area.
 * To add data, click on the :guilabel:`Download OSM data` button:
 
-  .. image:: ../_static/qgis_plugins/008.png
+  .. image:: /static/training_manual/qgis_plugins/008.png
      :align: center
 
 .. note:: You may see a message stating that the latitude, longitude, or both
@@ -149,7 +149,7 @@ currently on your map.
 * After a while, the data will be downloaded, and will be shown in your map
   automatically. Here's an example:
 
-  .. image:: ../_static/qgis_plugins/011.png
+  .. image:: /static/training_manual/qgis_plugins/011.png
      :align: center
 
   (The labels are added from our local data for identification purposes.)
@@ -157,7 +157,7 @@ currently on your map.
 With any of the OSM layers selected in your :guilabel:`Layers list`, the
 buttons in the plugin's dock panel will become active:
 
-.. image:: ../_static/qgis_plugins/012.png
+.. image:: /static/training_manual/qgis_plugins/012.png
    :align: center
 
 * Using the plugin's own :guilabel:`Identify feature` tool (at the far left of
@@ -165,30 +165,30 @@ buttons in the plugin's dock panel will become active:
   data and see it displayed in the plugin interface. For example, clicking on
   the river that runs through town gives you this:
 
-  .. image:: ../_static/qgis_plugins/013.png
+  .. image:: /static/training_manual/qgis_plugins/013.png
      :align: center
 
 * You can create new features (point, lines, polygons) as well as edit a
   feature that you have identified. For example, using the plugin's
   :guilabel:`Identify feature` tool as before, you can click on this street:
 
-  .. image:: ../_static/qgis_plugins/014.png
+  .. image:: /static/training_manual/qgis_plugins/014.png
      :align: center
 
   Looking at its attributes, it doesn't have a name:
 
-  .. image:: ../_static/qgis_plugins/015.png
+  .. image:: /static/training_manual/qgis_plugins/015.png
      :align: center
 
 * Double-click in the :guilabel:`<new tag here>` field.
 * Select a new tag (attribute) from a list. Let's choose :guilabel:`name`:
 
-  .. image:: ../_static/qgis_plugins/016.png
+  .. image:: /static/training_manual/qgis_plugins/016.png
      :align: center
 
 * Double-click in the :guilabel:`Value` field:
 
-  .. image:: ../_static/qgis_plugins/017.png
+  .. image:: /static/training_manual/qgis_plugins/017.png
      :align: center
 
 You can save your changes to the original source data, too. This makes the
@@ -196,7 +196,7 @@ changes available internationally on the OSM server.
 
 * Click the :guilabel:`Upload OSM data` button:
 
-  .. image:: ../_static/qgis_plugins/018.png
+  .. image:: /static/training_manual/qgis_plugins/018.png
      :align: center
 
   This gives you a dialog, which you can fill in as needed.

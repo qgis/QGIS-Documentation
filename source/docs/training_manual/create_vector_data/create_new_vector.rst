@@ -23,7 +23,7 @@ to define a new layer.
 
 You'll be presented with the following dialog:
 
-.. image:: ../_static/create_vector_data/001.png
+.. image:: /static/training_manual/create_vector_data/001.png
    :align: center
 
 It's important to decide which kind of dataset you want at this stage. Each
@@ -35,7 +35,7 @@ areas. For such features, you'll need to create a polygon dataset.
 
 * Click on the :guilabel:`Polygon` radio button:
 
-.. image:: ../_static/create_vector_data/002.png
+.. image:: /static/training_manual/create_vector_data/002.png
    :align: center
 
 This has no impact on the rest of the dialog, but it will cause the correct
@@ -46,7 +46,7 @@ CRS specifies how to describe a point on Earth in terms of coordinates, and
 because there are many different ways to do this, there are many different CRSs.
 The CRS of this project is WGS84, so it's already correct by default:
 
-.. image:: ../_static/create_vector_data/003.png
+.. image:: /static/training_manual/create_vector_data/003.png
    :align: center
 
 Next there is a collection of fields grouped under :guilabel:`New attribute`.
@@ -59,12 +59,12 @@ will be enough to add one field called :kbd:`name`.
 * Replicate the setup below, then click the :guilabel:`Add to attributes list`
   button:
 
-.. image:: ../_static/create_vector_data/004.png
+.. image:: /static/training_manual/create_vector_data/004.png
    :align: center
 
 * Check that your dialog now looks like this:
 
-.. image:: ../_static/create_vector_data/005.png
+.. image:: /static/training_manual/create_vector_data/005.png
    :align: center
 
 * Click :guilabel:`OK`. A save dialog will appear.
@@ -92,7 +92,7 @@ are provided, so you'll need to import them as necessary.
 
 * Click on the :guilabel:`Add Raster Layer` button:
 
-.. image:: ../_static/create_vector_data/006.png
+.. image:: /static/training_manual/create_vector_data/006.png
    :align: center
 
 * Navigate to :kbd:`exercise_data/raster/`.
@@ -103,12 +103,12 @@ are provided, so you'll need to import them as necessary.
   other layers.
 * Find and zoom to this area:
 
-.. image:: ../_static/create_vector_data/007.png
+.. image:: /static/training_manual/create_vector_data/007.png
    :align: center
 
 You'll be digitizing these three fields:
 
-.. image:: ../_static/create_vector_data/014.png
+.. image:: /static/training_manual/create_vector_data/014.png
    :align: center
 
 * Hide all the layers except the raster and the :guilabel:`school_property`
@@ -125,7 +125,7 @@ To enter edit mode for the :guilabel:`school_property` layer:
   layer!)
 * Click on the :guilabel:`Toggle Editing` button:
 
-.. image:: ../_static/create_vector_data/008.png
+.. image:: /static/training_manual/create_vector_data/008.png
    :align: center
 
 If you can't find this button, check that the :guilabel:`Digitizing` toolbar is
@@ -135,7 +135,7 @@ Toolbars --> Digitizing` menu entry.
 As soon as you are in edit mode, you'll see the digitizing tools are now
 active:
 
-.. image:: ../_static/create_vector_data/009.png
+.. image:: /static/training_manual/create_vector_data/009.png
    :align: center
 
 From left to right on the image above, they are:
@@ -167,7 +167,7 @@ and dragging around in the map.
 
 The first feature you'll be digitizing is the athletics field:
 
-.. image:: ../_static/create_vector_data/010.png
+.. image:: /static/training_manual/create_vector_data/010.png
    :align: center
 
 * Start digitizing by clicking on a point somewhere along the edge of the
@@ -178,7 +178,7 @@ The first feature you'll be digitizing is the athletics field:
   finalize the feature and show you the :guilabel:`Attributes` dialog.
 * Fill in the values as below:
 
-.. image:: ../_static/create_vector_data/013.png
+.. image:: /static/training_manual/create_vector_data/013.png
    :align: center
 
 * Click :guilabel:`OK` and you've created a new feature!
@@ -189,7 +189,7 @@ digitizing until you're done creating the feature as above. Then:
 
 * Select the feature with the :guilabel:`Select Single Feature` tool:
 
-.. image:: ../_static/create_vector_data/012.png
+.. image:: /static/training_manual/create_vector_data/012.png
    :align: center
 
 You can use:
@@ -207,7 +207,7 @@ You can use:
 
 * Digitize the school itself and the upper field. Use this image to assist you:
 
-.. image:: ../_static/create_vector_data/014.png
+.. image:: /static/training_manual/create_vector_data/014.png
    :align: center
 
 Remember that each new feature needs to have a unique :kbd:`id` value!
@@ -226,12 +226,12 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 
 Start where the sandy riverbanks first become visible:
 
-.. image:: ../_static/create_vector_data/015.png
+.. image:: /static/training_manual/create_vector_data/015.png
    :align: center
 
 And stop when our river joins another river:
 
-.. image:: ../_static/create_vector_data/016.png
+.. image:: /static/training_manual/create_vector_data/016.png
    :align: center
 
 It's not always clear where the river runs. In such cases, use your better

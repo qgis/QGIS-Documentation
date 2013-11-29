@@ -37,24 +37,24 @@ property yet. First we'll create a field for this purpose.
 * Click on the :guilabel:`Fields` tab.
 * Toggle editing mode:
 
-.. image:: ../_static/create_vector_data/037.png
+.. image:: /static/training_manual/create_vector_data/037.png
    :align: center
 
 * Add a new column:
 
-.. image:: ../_static/create_vector_data/038.png
+.. image:: /static/training_manual/create_vector_data/038.png
    :align: center
 
 * Enter the values below:
 
-.. image:: ../_static/create_vector_data/039.png
+.. image:: /static/training_manual/create_vector_data/039.png
    :align: center
 
 * After the field has been created, click on the :guilabel:`Line edit` button
   next to the new field.
 * Set it up for a :guilabel:`File name`:
 
-.. image:: ../_static/create_vector_data/040.png
+.. image:: /static/training_manual/create_vector_data/040.png
    :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -64,7 +64,7 @@ property yet. First we'll create a field for this purpose.
 Since you're still in edit mode, the dialog should be active and look like
 this:
 
-.. image:: ../_static/create_vector_data/041.png
+.. image:: /static/training_manual/create_vector_data/041.png
    :align: center
 
 * Click on the browse button (the :guilabel:`...` next to the :guilabel:`image`
@@ -76,7 +76,7 @@ this:
 * Associate all of the images with the correct features using this method.
 * Save your edits and exit edit mode.
 
-.. image:: ../_static/create_vector_data/072.png
+.. image:: /static/training_manual/create_vector_data/072.png
    :align: center
 
 |basic| |FA| Creating an Action
@@ -86,7 +86,7 @@ this:
   as explained above for the :guilabel:`rural` layer.
 * Enter the words :kbd:`Show Image` into the :guilabel:`Name` field:
 
-.. image:: ../_static/create_vector_data/042.png
+.. image:: /static/training_manual/create_vector_data/042.png
    :align: center
 
 What to do next varies according to your operating system, so choose the
@@ -120,7 +120,7 @@ is.
 
 * Select :guilabel:`image` from the list:
 
-.. image:: ../_static/create_vector_data/043.png
+.. image:: /static/training_manual/create_vector_data/043.png
    :align: center
 
 * Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%
@@ -135,7 +135,7 @@ Now to test the new action!
 * Find the :guilabel:`Run feature action` button (on the same toolbar as the
   :guilabel:`Open Attribute Table` button):
 
-.. image:: ../_static/create_vector_data/036.png
+.. image:: /static/training_manual/create_vector_data/036.png
    :align: center
 
 * Click on the down arrow to the right of this button. There's only one action
@@ -215,12 +215,12 @@ QGIS lets you do this easily.
 * Select the :guilabel:`SGADMIN` field.
 * Click :guilabel:`Insert field`:
 
-.. image:: ../_static/create_vector_data/034.png
+.. image:: /static/training_manual/create_vector_data/034.png
    :align: center
 
 This will tell QGIS to add the phrase next:
 
-.. image:: ../_static/create_vector_data/035.png
+.. image:: /static/training_manual/create_vector_data/035.png
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the

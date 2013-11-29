@@ -1034,10 +1034,10 @@ rst_epilog = """
 .. |proc_commander| image:: /static/common/commander.png
    :width: 1.5em
 
-.. |basic| image:: ../_static/global/basic.png
-.. |moderate| image:: ../_static/global/moderate.png
-.. |hard| image:: ../_static/global/hard.png
-.. |note| image:: ../_static/global/comment.png
+.. |basic| image:: /static/training_manual/global/basic.png
+.. |moderate| image:: /static/training_manual/global/moderate.png
+.. |hard| image:: /static/training_manual/global/hard.png
+.. |note| image:: /static/training_manual/global/comment.png
 .. |MOD| replace:: Module:
 .. |LS| replace:: Lesson:
 .. |TY| replace:: Try yourself...

@@ -30,7 +30,7 @@ We'll use the area covered by streets.
   :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
   enclosing all the roads:
 
-.. image:: ../_static/vector_analysis/059.png
+.. image:: /static/training_manual/vector_analysis/059.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
@@ -43,14 +43,14 @@ Creating random points
 * Create random points in this area using the tool at :menuselection:`Vector
   --> Research Tools --> Random points`:
 
-.. image:: ../_static/vector_analysis/060.png
+.. image:: /static/training_manual/vector_analysis/060.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
 * Add it to the TOC (:guilabel:`Layers list`) when prompted:
 
-.. image:: ../_static/vector_analysis/061.png
+.. image:: /static/training_manual/vector_analysis/061.png
    :align: center
 
 Sampling the data
@@ -67,7 +67,7 @@ Sampling the data
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
   sampling tool`:
 
-.. image:: ../_static/vector_analysis/063.png
+.. image:: /static/training_manual/vector_analysis/063.png
    :align: center
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
@@ -78,7 +78,7 @@ Sampling the data
 
 A possible sample layer is shown here:
 
-.. image:: ../_static/vector_analysis/064.png
+.. image:: /static/training_manual/vector_analysis/064.png
    :align: center
 
 The sample points are classified by their value such that darker points are at
@@ -97,13 +97,13 @@ Now get the basic statistics for this layer.
   the source.
 * Click :guilabel:`OK`. You'll get results like this:
 
-.. image:: ../_static/vector_analysis/062.png
+.. image:: /static/training_manual/vector_analysis/062.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
    a (colon :kbd:`:`) separator.
 
-.. image:: ../_static/vector_analysis/065.png
+.. image:: /static/training_manual/vector_analysis/065.png
    :align: center
 
 * Close the plugin dialog when done.
@@ -178,13 +178,13 @@ To generate a distance matrix using these points:
   :guilabel:`random_samples` layer as the target layer.
 * Set it up like this:
 
-.. image:: ../_static/spatial_statistics/005.png
+.. image:: /static/training_manual/spatial_statistics/005.png
    :align: center
 
 * Click :guilabel:`OK` to generate the distance matrix.
 * Open it in a spreadsheet program to see the results. Here is an example:
 
-.. image:: ../_static/spatial_statistics/006.png
+.. image:: /static/training_manual/spatial_statistics/006.png
    :align: center
 
 |basic| |FA| Nearest Neighbor Analysis
@@ -198,7 +198,7 @@ To do a nearest neighbor analysis:
   click :guilabel:`OK`.
 * The results will appear in the dialog's text window, for example:
 
-.. image:: ../_static/spatial_statistics/007.png
+.. image:: /static/training_manual/spatial_statistics/007.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
@@ -229,7 +229,7 @@ create the random sample.
 As you can see from the example below, the mean coordinates and the center of
 the study area (in orange) don't necessarily coincide:
 
-.. image:: ../_static/vector_analysis/067.png
+.. image:: /static/training_manual/vector_analysis/067.png
    :align: center
 
 |basic| |FA| Image Histograms
@@ -245,7 +245,7 @@ way to demonstrate this in QGIS is via the image histogram, available in the
   frequency of values in the image.
 * You can export it as an image:
 
-.. image:: ../_static/spatial_statistics/008.png
+.. image:: /static/training_manual/spatial_statistics/008.png
    :align: center
 
 * Look at the metadata for this layer (under the :guilabel:`Metadata` tab).
@@ -292,7 +292,7 @@ Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
 the location of the sample points.
 
-.. image:: ../_static/spatial_statistics/009.png
+.. image:: /static/training_manual/spatial_statistics/009.png
    :align: center
 
 As you can see, 100 sample points aren't really enough to get a detailed
@@ -315,7 +315,7 @@ can see that the sample dataset is not representative of the terrain.
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: ../_static/spatial_statistics/010.png
+.. image:: /static/training_manual/spatial_statistics/010.png
    :align: center
 
 The border shows the :guilabel:`roads_hull` layer (which represents the
@@ -325,7 +325,7 @@ the much greater density of sample points.
 
 Here is an example of what it looks like with :kbd:`10 000` sample points:
 
-.. image:: ../_static/spatial_statistics/011.png
+.. image:: /static/training_manual/spatial_statistics/011.png
    :align: center
 
 .. note:: It's not recommended that you try doing this with 10 000 sample
@@ -345,7 +345,7 @@ Assuming you have it installed (and enabled in the :guilabel:`Plugin Manager`):
 * Activate SEXTANTE by enabling the :menuselection:`View --> Panels -->
   SEXTANTE Toolbox` menu entry. The toolbox looks like this:
 
-.. image:: ../_static/spatial_statistics/001.png
+.. image:: /static/training_manual/spatial_statistics/001.png
    :align: center
 
 You will probably see it docked in QGIS to the right of the map. Note that the
@@ -405,12 +405,12 @@ For a simple indication of the spatial distribution of points in the
 * Save these three outputs under :kbd:`exercise_data/spatial_statistics/`,
   using whatever file names you find appropriate.
 
-.. image:: ../_static/spatial_statistics/002.png
+.. image:: /static/training_manual/spatial_statistics/002.png
    :align: center
 
 The output will look like this (the symbology was changed for this example):
 
-.. image:: ../_static/spatial_statistics/003.png
+.. image:: /static/training_manual/spatial_statistics/003.png
    :align: center
 
 The red dot is the mean center; the large circle is the standard distance,
@@ -437,7 +437,7 @@ to be analyzed.
 * Select it, then open its attribute table. Although the figures may vary, your
   results will be in this format:
 
-.. image:: ../_static/spatial_statistics/004.png
+.. image:: /static/training_manual/spatial_statistics/004.png
    :align: center
 
 |IC|

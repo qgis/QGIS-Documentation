@@ -28,7 +28,7 @@ suitable farms.
 
 You should now have a layer with these farms as your solution:
 
-.. image:: ../_static/complete_analysis/004.png
+.. image:: /static/training_manual/complete_analysis/004.png
    :align: center
 
 

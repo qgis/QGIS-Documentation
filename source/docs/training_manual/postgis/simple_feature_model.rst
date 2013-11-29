@@ -24,7 +24,7 @@ The Simple Feature for SQL (SFS) Model is a *non-topological* way to store
 geospatial data in a database and defines functions for accessing, operating,
 and constructing these data.
 
-.. image:: ../_static/postgis/ogc_sfs.png
+.. image:: /static/training_manual/postgis/ogc_sfs.png
    :align: center
 
 The model defines geospatial data from Point, Linestring, and Polygon types
@@ -191,17 +191,17 @@ performing select queries in the database to see how the data has changed.
 To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add PostGIS
 Layers` menu option or toolbar button:
 
-.. image:: ../_static/postgis/001.png
+.. image:: /static/training_manual/postgis/001.png
    :align: center
 
 This will open the dialog:
 
-.. image:: ../_static/postgis/002.png
+.. image:: /static/training_manual/postgis/002.png
    :align: center
 
 Click on the :guilabel:`New` button to open this dialog:
 
-.. image:: ../_static/postgis/003.png
+.. image:: /static/training_manual/postgis/003.png
    :align: center
 
 Then define a new connection, e.g.:

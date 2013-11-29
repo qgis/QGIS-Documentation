@@ -21,7 +21,7 @@ be used to complete the analysis.
   Vector)`. The tool dialog will appear.
 * Set it up like this:
 
-  .. image:: ../_static/complete_analysis/001.png
+  .. image:: /static/training_manual/complete_analysis/001.png
      :align: center
 
 * Change the field name (describing the values of the raster) to
@@ -56,7 +56,7 @@ opposite conversion from the one performed above.
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
 
-.. image:: ../_static/complete_analysis/003.png
+.. image:: /static/training_manual/complete_analysis/003.png
    :align: center
 
 * :guilabel:`Input file` is :guilabel:`all_terrain`;

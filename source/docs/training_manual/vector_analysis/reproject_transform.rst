@@ -54,7 +54,7 @@ of your choice.
 * To enable "on the fly" projection, click on the :guilabel:`CRS Status` button
   in the :guilabel:`Status Bar` along the bottom of the QGIS window:
 
-.. image:: ../_static/vector_analysis/001.png
+.. image:: /static/training_manual/vector_analysis/001.png
    :align: center
 
 * In the dialog that appears, check the box next to :guilabel:`Enable 'on the
@@ -118,7 +118,7 @@ To correct this:
 Now, because they're made to project in the same CRS, the two datasets fit
 perfectly:
 
-.. image:: ../_static/vector_analysis/002.png
+.. image:: /static/training_manual/vector_analysis/002.png
    :align: center
 
 When combining data from different sources, it's important to remember that
@@ -163,18 +163,18 @@ a new file using a new projection.
   
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
-.. image:: ../_static/vector_analysis/004.png
+.. image:: /static/training_manual/vector_analysis/004.png
    :align: center
 
 * Click :guilabel:`OK` and after an instant, you should be presented with:
 
-.. image:: ../_static/vector_analysis/005.png
+.. image:: /static/training_manual/vector_analysis/005.png
    :align: center
 
 * Click :guilabel:`OK`.
 * Start a new map:
 
-.. image:: ../_static/vector_analysis/006.png
+.. image:: /static/training_manual/vector_analysis/006.png
    :align: center
 
 Refer back to the lesson on :guilabel:`Classification` to remember how you
@@ -182,7 +182,7 @@ calculated areas.
 
 * Update the :kbd:`AREAS` field by running the same expression as before:
 
-.. image:: ../_static/vector_analysis/007.png
+.. image:: /static/training_manual/vector_analysis/007.png
    :align: center
 
 This will update the :kbd:`AREAS` field with the areas of the farms in square
@@ -190,7 +190,7 @@ meters.
 
 * To calculate the area in hectares, do this:
 
-.. image:: ../_static/vector_analysis/008.png
+.. image:: /static/training_manual/vector_analysis/008.png
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
@@ -210,7 +210,7 @@ You can also create your own projections.
 * Load the :kbd:`world/oceans.shp` dataset.
 * Go to :menuselection:`Settings --> Custom CRS...` and you'll see this dialog:
 
-.. image:: ../_static/vector_analysis/009.png
+.. image:: /static/training_manual/vector_analysis/009.png
    :align: center
 
 * Click on the button with the star icon to create a new projection. You'll
@@ -230,7 +230,7 @@ rectangular one, as most other projections do.
 
 * Click the :guilabel:`Save` button:
 
-.. image:: ../_static/vector_analysis/010.png
+.. image:: /static/training_manual/vector_analysis/010.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -239,7 +239,7 @@ rectangular one, as most other projections do.
   :guilabel:`Filter` field).
 * On applying this projection, the map will be reprojected thus:
 
-.. image:: ../_static/vector_analysis/011.png
+.. image:: /static/training_manual/vector_analysis/011.png
    :align: center
 
 |IC|

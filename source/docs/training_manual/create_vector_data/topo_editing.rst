@@ -21,7 +21,7 @@ snapping options:
 * Navigate to the menu entry :menuselection:`Settings --> Snapping Options...`.
 * Set up your :guilabel:`Snapping options` dialog as shown:
 
-.. image:: ../_static/create_vector_data/044.png
+.. image:: /static/training_manual/create_vector_data/044.png
    :align: center
 
 * Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
@@ -32,12 +32,12 @@ snapping options:
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
 
-.. image:: ../_static/create_vector_data/045.png
+.. image:: /static/training_manual/create_vector_data/045.png
    :align: center
 
 * Digitize this new (fictional) farm:
 
-.. image:: ../_static/create_vector_data/047.png
+.. image:: /static/training_manual/create_vector_data/047.png
    :align: center
 
 * When prompted, give it an :guilabel:`id` of :kbd:`999`, but feel free to
@@ -49,7 +49,7 @@ farm and the existing farms adjacent to it.
 
 * Note the undo/redo tools in the :guilabel:`Advanced Digitizing` toolbar:
 
-.. image:: ../_static/create_vector_data/046.png
+.. image:: /static/training_manual/create_vector_data/046.png
    :align: center
 
 Those buttons will become your best friends...
@@ -59,7 +59,7 @@ Those buttons will become your best friends...
 
 You've probably noticed some large holes in the :guilabel:`rural` dataset:
 
-.. image:: ../_static/create_vector_data/067.png
+.. image:: /static/training_manual/create_vector_data/067.png
    :align: center
 
 The white gaps among the farms, which are not filled by grey urban areas,
@@ -73,7 +73,7 @@ topology enabled, it's possible to very quickly close a hole without even
 worrying about accuracy, and the topology will take care of the rest. For
 example, let's say you want to digitize a new farm to close up this gap:
 
-.. image:: ../_static/create_vector_data/068.png
+.. image:: /static/training_manual/create_vector_data/068.png
    :align: center
 
 If you had to do this without help from the topology, you'd be digitizing that
@@ -82,7 +82,7 @@ for a while. But at the moment, as per the directions above, you have
 :guilabel:`rural` layer. This tells QGIS to use the topology to prevent
 overlap. So you can digitize even a very rough shape:
 
-.. image:: ../_static/create_vector_data/069.png
+.. image:: /static/training_manual/create_vector_data/069.png
    :align: center
 
 (Use an :guilabel:`id` value of somewhere in the hundreds range to avoid a
@@ -90,7 +90,7 @@ conflict with existing features.)
 
 But when you select the feature ...
 
-.. image:: ../_static/create_vector_data/070.png
+.. image:: /static/training_manual/create_vector_data/070.png
    :align: center
 
 ... you'll see that QGIS has automatically added all the detailed vertices and
@@ -125,7 +125,7 @@ Topology errors aren't always immediately visible. Let's change the
 * Set its :guilabel:`Transparency` slider to :kbd:`50%`.
 * You should see results like these:
 
-.. image:: ../_static/create_vector_data/048.png
+.. image:: /static/training_manual/create_vector_data/048.png
    :align: center
 
 There are several things to notice here. First, the new farm you added is
@@ -146,17 +146,17 @@ Let's correct this!
 * Click on one of the corners of the problematic farm. This will select that
   farm for editing and you'll see all the nodes appear:
 
-.. image:: ../_static/create_vector_data/049.png
+.. image:: /static/training_manual/create_vector_data/049.png
    :align: center
 
 * Click and drag the nodes until they snap into place.
 
-.. image:: ../_static/create_vector_data/050.png
+.. image:: /static/training_manual/create_vector_data/050.png
    :align: center
 
 The topologically correct border looks like this:
 
-.. image:: ../_static/create_vector_data/051.png
+.. image:: /static/training_manual/create_vector_data/051.png
    :align: center
 
 |moderate| |FA| Tool: Simplify Feature
@@ -164,19 +164,19 @@ The topologically correct border looks like this:
 
 This is the :guilabel:`Simplify Feature` tool:
 
-.. image:: ../_static/create_vector_data/052.png
+.. image:: /static/training_manual/create_vector_data/052.png
    :align: center
 
 * Click on it to activate it.
 * Click on the new farm you created previously. You'll be presented with this
   dialog:
 
-.. image:: ../_static/create_vector_data/053.png
+.. image:: /static/training_manual/create_vector_data/053.png
    :align: center
 
 * Move the slider from side to side and watch what happens:
 
-.. image:: ../_static/create_vector_data/054.png
+.. image:: /static/training_manual/create_vector_data/054.png
    :align: center
 
 This allows you to recude the amount of nodes in complex features. However,
@@ -199,7 +199,7 @@ Before you go on, get the farm back in its previous state. Either:
 
 This is the :guilabel:`Add Ring` tool:
 
-.. image:: ../_static/create_vector_data/055.png
+.. image:: /static/training_manual/create_vector_data/055.png
    :align: center
 
 It allows you to take a hole out of a feature, as long as the hole is bounded
@@ -220,7 +220,7 @@ this tool.
 
 This is the :guilabel:`Add Part` tool:
 
-.. image:: ../_static/create_vector_data/057.png
+.. image:: /static/training_manual/create_vector_data/057.png
    :align: center
 
 It allows you to create an extra part of the feature, not directly connected to
@@ -240,7 +240,7 @@ this tool to create them.
 These are the :guilabel:`Delete Ring` and :guilabel:`Delete Part` tools,
 respectively:
 
-.. image:: ../_static/create_vector_data/060.png
+.. image:: /static/training_manual/create_vector_data/060.png
    :align: center
 
 Their functions should be obvious.
@@ -256,7 +256,7 @@ Their functions should be obvious.
 
 This is the :guilabel:`Reshape Features` tool:
 
-.. image:: ../_static/create_vector_data/061.png
+.. image:: /static/training_manual/create_vector_data/061.png
    :align: center
 
 It can add a bump to an existing feature. With this tool selected:
@@ -265,12 +265,12 @@ It can add a bump to an existing feature. With this tool selected:
 * Add an extra piece of land.
 * Right-click back inside the farm:
 
-.. image:: ../_static/create_vector_data/062.png
+.. image:: /static/training_manual/create_vector_data/062.png
    :align: center
 
 The result of the above:
 
-.. image:: ../_static/create_vector_data/063.png
+.. image:: /static/training_manual/create_vector_data/063.png
    :align: center
 
 You can do the opposite, too:
@@ -279,12 +279,12 @@ You can do the opposite, too:
 * Take a bite out of it.
 * Right-click outside the farm again:
 
-.. image:: ../_static/create_vector_data/064.png
+.. image:: /static/training_manual/create_vector_data/064.png
    :align: center
 
 The result of the above:
 
-.. image:: ../_static/create_vector_data/065.png
+.. image:: /static/training_manual/create_vector_data/065.png
    :align: center
 
 
@@ -306,7 +306,7 @@ them both.
 
 * Find and select these farms:
 
-.. image:: ../_static/create_vector_data/073.png
+.. image:: /static/training_manual/create_vector_data/073.png
    :align: center
 
 * Use the :guilabel:`Merge Selected Features` and :guilabel:`Merge Attributes

@@ -15,7 +15,7 @@ WMS.
 * Ensure that "on the fly" reprojection is switched off.
 * Click the :guilabel:`Add WFS Layer` button:
 
-  .. image:: ../_static/online_resources/017.png
+  .. image:: /static/training_manual/online_resources/017.png
      :align: center
 
 * Click the :guilabel:`New` button.
@@ -23,20 +23,20 @@ WMS.
   and the :guilabel:`URL` as
   :kbd:`http://nsidc.org/cgi-bin/atlas_south?version=1.1.0`.
 
-  .. image:: ../_static/online_resources/019.png
+  .. image:: /static/training_manual/online_resources/019.png
      :align: center
 
 * Click :guilabel:`OK`, and the new connection will appear in your
   :guilabel:`Server connections`.
 * Click the :guilabel:`Connect`. A list of the available layers will appear:
 
-  .. image:: ../_static/online_resources/020.png
+  .. image:: /static/training_manual/online_resources/020.png
      :align: center
 
 * Find the layer :guilabel:`south_poles_wfs`.
 * Click on the layer to select it:
 
-  .. image:: ../_static/online_resources/021.png
+  .. image:: /static/training_manual/online_resources/021.png
      :align: center
 
 * Click :guilabel:`Apply`.
@@ -45,7 +45,7 @@ It may take a while to load the layer. When it has loaded, it will appear in
 the map. Here it is over the outlines of Antarctica (available on the same
 server, and by the name of :guilabel:`antarctica_country_border`):
 
-.. image:: ../_static/online_resources/022.png
+.. image:: /static/training_manual/online_resources/022.png
    :align: center
 
 How is this different from having a WMS layer? That will become obvious when
@@ -54,13 +54,13 @@ you see the layers' attributes.
 * Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see
   this:
 
-.. image:: ../_static/online_resources/023.png
+.. image:: /static/training_manual/online_resources/023.png
    :align: center
 
 Since the points have attributes, doesn't that mean we can label them? Yes we
 can, as well as changing their symbology. Here's an example:
 
-.. image:: ../_static/online_resources/024.png
+.. image:: /static/training_manual/online_resources/024.png
    :align: center
 
 * Add labels to your layer to take advantage of the attribute data in this
@@ -104,25 +104,25 @@ from the server.
 * Double-click next to the :guilabel:`countries ...` layer in the
   :guilabel:`Filter` field:
 
-  .. image:: ../_static/online_resources/025.png
+  .. image:: /static/training_manual/online_resources/025.png
      :align: center
 
 * In the dialog that appears, build the query :kbd:`"Countryeng" = 'South
   Africa'`:
 
-  .. image:: ../_static/online_resources/026.png
+  .. image:: /static/training_manual/online_resources/026.png
      :align: center
 
 * It will appear as the :guilabel:`Filter` value:
 
-  .. image:: ../_static/online_resources/027.png
+  .. image:: /static/training_manual/online_resources/027.png
      :align: center
 
 * Click :guilabel:`Apply` with the :guilabel:`countries` layer selected as
   above. Only the country with the :kbd:`Countryeng` value of :kbd:`South
   Africa` will load from that layer:
 
-  .. image:: ../_static/online_resources/028.png
+  .. image:: /static/training_manual/online_resources/028.png
      :align: center
 
 You don't have to, but if you tried both methods, you'll notice that this is a

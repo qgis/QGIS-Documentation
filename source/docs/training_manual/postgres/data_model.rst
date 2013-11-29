@@ -176,7 +176,7 @@ To get help on a specific command, type (for example):
 
   \help create table
 
-See also the `Psql cheat sheet <../_static/postgres/psql_cheatsheet.pdf>`_ -
+See also the `Psql cheat sheet </static/training_manual/postgres/psql_cheatsheet.pdf>`_ -
 available online `here
 <http://www.postgresonline.com/special_feature.php?sf_name=postgresql83_psql_cheatsheet&outputformat=html>`_.
 
@@ -330,7 +330,7 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: ../_static/postgres/er-beispiel.png
+.. image:: /static/training_manual/postgres/er-beispiel.png
    :align: center
 
 There are two ways to do this: 

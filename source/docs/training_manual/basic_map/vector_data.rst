@@ -25,7 +25,7 @@ To see all the data available to you:
 
 * Click on this button:
 
-.. image:: ../_static/vector/004.png
+.. image:: /static/training_manual/vector/004.png
    :align: center
 
 It will show you a table with more data about the :guilabel:`streets` layer.
@@ -72,7 +72,7 @@ spatial data.
 
 * Click on this icon:
 
-.. image:: ../_static/vector/005.png
+.. image:: /static/training_manual/vector/005.png
    :align: center
 
 (If you're sure you can't see it at all, check that the :guilabel:`Manage
@@ -91,7 +91,7 @@ database file on your computer.
 * Click the :guilabel:`Connect` button. You should see this in the previously
   empty box:
 
-.. image:: ../_static/vector/007.png
+.. image:: /static/training_manual/vector/007.png
    :align: center
 
 * Click on the first layer to select it, then use :kbd:`shift+click` to select
@@ -125,7 +125,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: ../_static/vector/002.png
+.. image:: /static/training_manual/vector/002.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -136,7 +136,7 @@ To resolve this problem:
 * Click and drag on a layer in the Layers list.
 * Reorder them to look like this:
 
-.. image:: ../_static/vector/003.png
+.. image:: /static/training_manual/vector/003.png
    :align: center
 
 |IC|

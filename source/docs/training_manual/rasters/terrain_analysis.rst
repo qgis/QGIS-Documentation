@@ -38,7 +38,7 @@ models)` analysis tool.
 You will now have a new layer called :guilabel:`hillshade` that looks like
 this:
 
-.. image:: ../_static/rasters/020.png
+.. image:: /static/training_manual/rasters/020.png
    :align: center
 
 That looks nice and 3D, but can we improve on this? On its own, the hillshade
@@ -68,7 +68,7 @@ transparent.
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get a
   result like this:
 
-  .. image:: ../_static/rasters/023.png
+  .. image:: /static/training_manual/rasters/023.png
      :align: center
 
 * Switch the :guilabel:`hillshade` layer off and back on in the
@@ -101,7 +101,7 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
 * Open the tool as before.
 * Select the :guilabel:`Mode` option :guilabel:`Slope`:
 
-  .. image:: ../_static/rasters/024.png
+  .. image:: /static/training_manual/rasters/024.png
      :align: center
 
 * Set the save location to
@@ -114,7 +114,7 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
   slope of the terrain, with black pixels being flat terrain and white pixels,
   steep terrain:
 
-  .. image:: ../_static/rasters/025.png
+  .. image:: /static/training_manual/rasters/025.png
      :align: center
 
 .. _backlink-raster-analysis-1:
@@ -164,12 +164,12 @@ needs to be greater than 270 degrees and less than 90 degrees.
 * Ensure that the box :guilabel:`Add result to project` is checked.
 * Click :guilabel:`OK` to begin processing.
 
-.. image:: ../_static/rasters/029.png
+.. image:: /static/training_manual/rasters/029.png
    :align: center
 
 Your result will be this:
 
-.. image:: ../_static/rasters/030.png
+.. image:: /static/training_manual/rasters/030.png
    :align: center
 
 
@@ -226,7 +226,7 @@ To calculate the areas that satisfy these criteria:
   :kbd:`all_conditions.tif`.
 * Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:
 
-  .. image:: ../_static/rasters/034.png
+  .. image:: /static/training_manual/rasters/034.png
      :align: center
 
 
@@ -249,7 +249,7 @@ get rid of all these tiny unusable areas.
 Once processing is done, the new layer will load into the canvas. But when you
 try to use the histogram stretch tool to view the data, this happens:
 
-.. image:: ../_static/rasters/036.png
+.. image:: /static/training_manual/rasters/036.png
    :align: center
 
 What's going on? The answer lies in the new raster file's metadata.
@@ -274,7 +274,7 @@ filtered out, let's set these null values to zero.
 
 Your output looks like this:
 
-.. image:: ../_static/rasters/037.png
+.. image:: /static/training_manual/rasters/037.png
    :align: center
 
 This is what was expected: a simplified version of the earlier results.

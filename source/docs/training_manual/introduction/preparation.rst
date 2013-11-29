@@ -29,12 +29,12 @@ Let's get started right away!
 
 * Look for the :guilabel:`Add Vector Layer` button:
 
-.. image:: ../_static/interface/002.png
+.. image:: /static/training_manual/interface/002.png
    :align: center
 
 * Click on it to open the following dialog:
 
-.. image:: ../_static/interface/003.png
+.. image:: /static/training_manual/interface/003.png
    :align: center
 
 * Click on the :guilabel:`Browse` button and navigate to the file
@@ -48,7 +48,7 @@ your work.
 
 * Click on the :guilabel:`Save As` button:
 
-.. image:: ../_static/interface/004.png
+.. image:: /static/training_manual/interface/004.png
    :align: center
 
 * Save the map under :kbd:`exercise_data/` and call it :kbd:`basic_map.qgs`.

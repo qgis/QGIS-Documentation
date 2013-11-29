@@ -96,7 +96,7 @@ So let's tell QGIS to only show us the farms that are, in fact, in Swellendam!
 * Click on it once.
 * Click the :guilabel:`All` button underneath the :guilabel:`Values` list:
 
-.. image:: ../_static/vector_analysis/013.png
+.. image:: /static/training_manual/vector_analysis/013.png
    :align: center
 
 Now we need to tell QGIS to only show us the farms where the value of
@@ -105,7 +105,7 @@ Now we need to tell QGIS to only show us the farms where the value of
 * Double-click the word :kbd:`TOWN` in the :guilabel:`Fields` list.
 * Watch what happens in the :guilabel:`SQL where clause` field below:
 
-.. image:: ../_static/vector_analysis/014.png
+.. image:: /static/training_manual/vector_analysis/014.png
    :align: center
 
 The word :kbd:`"TOWN"` has appeared! To build the rest of the query:
@@ -115,12 +115,12 @@ The word :kbd:`"TOWN"` has appeared! To build the rest of the query:
 
 Your query is this:
 
-.. image:: ../_static/vector_analysis/015.png
+.. image:: /static/training_manual/vector_analysis/015.png
    :align: center
 
 And now your :guilabel:`farms` layer looks like this:
 
-.. image:: ../_static/vector_analysis/016.png
+.. image:: /static/training_manual/vector_analysis/016.png
    :align: center
 
 For further analysis, it's better if we've got these farms as a separate layer.
@@ -190,14 +190,14 @@ QGIS allows you to calculate distances from any vector object.
 * Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
   tool:
 
-.. image:: ../_static/vector_analysis/018.png
+.. image:: /static/training_manual/vector_analysis/018.png
    :align: center
 
 This gives you a new dialog.
 
 * Set it up like this:
 
-.. image:: ../_static/vector_analysis/020.png
+.. image:: /static/training_manual/vector_analysis/020.png
    :align: center
 
 The :guilabel:`Buffer distance` is in meters because our input dataset is in a
@@ -212,7 +212,7 @@ Projected Coordinate System. This is why we needed to use projected data!
 
 Now you've got this:
 
-.. image:: ../_static/vector_analysis/021.png
+.. image:: /static/training_manual/vector_analysis/021.png
    :align: center
 
 OK, that looks interesting! Those are all the areas that are within 500 meters
@@ -221,7 +221,7 @@ of an important road.
 But look closer: it looks like there are joins between different sections of
 road! That's not nice. Remove that layer and let's try again:
 
-.. image:: ../_static/vector_analysis/022.png
+.. image:: /static/training_manual/vector_analysis/022.png
    :align: center
 
 * Note that we're now checking the :guilabel:`Dissolve buffer results` box.
@@ -232,7 +232,7 @@ road! That's not nice. Remove that layer and let's try again:
 Once you've added the layer to the :guilabel:`Layers list`, it will look like
 this:
 
-.. image:: ../_static/vector_analysis/023.png
+.. image:: /static/training_manual/vector_analysis/023.png
    :align: center
 
 That's more like it! Now there are no unnecessary subdivisions.
@@ -258,7 +258,7 @@ these criteria are satisfied at once! To do that, we'll need to use the
 :guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->
 Geoprocessing Tools --> Intersect`. Set it up like this:
 
-.. image:: ../_static/vector_analysis/027.png
+.. image:: /static/training_manual/vector_analysis/027.png
    :align: center
 
 The two input layers are the two buffers; the save location is as usual; and
@@ -269,7 +269,7 @@ list` when prompted.
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
 
-.. image:: ../_static/vector_analysis/028.png
+.. image:: /static/training_manual/vector_analysis/028.png
    :align: center
 
 You may remove the two buffer layers and only keep the one that shows where
@@ -287,12 +287,12 @@ the farms in that area.
   by location`. A dialog will appear.
 * Set it up like this:
 
-.. image:: ../_static/vector_analysis/030.png
+.. image:: /static/training_manual/vector_analysis/030.png
    :align: center
 
 * Click :guilabel:`OK` and you'll see the results:
 
-.. image:: ../_static/vector_analysis/031.png
+.. image:: /static/training_manual/vector_analysis/031.png
    :align: center
 
 The yellow farms are the selected ones. Let's save them as a new layer.
@@ -302,7 +302,7 @@ The yellow farms are the selected ones. Let's save them as a new layer.
 * Select :guilabel:`Save Selection As...`.
 * Set the dialog up like this:
 
-.. image:: ../_static/vector_analysis/032.png
+.. image:: /static/training_manual/vector_analysis/032.png
    :align: center
 
 * The file name is :kbd:`well_located_farms.shp`.
@@ -319,22 +319,22 @@ to calculate their areas in hectares.
 * Open the attribute table for the :guilabel:`well_located_farms` layer.
 * Enter edit mode:
 
-.. image:: ../_static/vector_analysis/033.png
+.. image:: /static/training_manual/vector_analysis/033.png
    :align: center
 
 * Start the field calculator:
 
-.. image:: ../_static/vector_analysis/034.png
+.. image:: /static/training_manual/vector_analysis/034.png
    :align: center
 
 * Set it up like this:
 
-.. image:: ../_static/vector_analysis/035.png
+.. image:: /static/training_manual/vector_analysis/035.png
    :align: center
 
 * If you can't find :guilabel:`AREA` in the list, try this instead:
 
-.. image:: ../_static/vector_analysis/036.png
+.. image:: /static/training_manual/vector_analysis/036.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -344,12 +344,12 @@ to calculate their areas in hectares.
 * Click the edit mode button again as above, and save your edits when prompted.
 * Do a query:
 
-.. image:: ../_static/vector_analysis/037.png
+.. image:: /static/training_manual/vector_analysis/037.png
    :align: center
 
 * Click :guilabel:`OK`. Your results should look like this:
 
-.. image:: ../_static/vector_analysis/038.png
+.. image:: /static/training_manual/vector_analysis/038.png
    :align: center
 
 That's it! Those red farms are the ones satisfying your criteria. Well done!

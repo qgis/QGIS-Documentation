@@ -23,7 +23,7 @@ are, for example.
 Once it's loaded, you'll notice that it's basically a gray rectangle. It's seen
 here with the vector layers on top:
 
-.. image:: ../_static/rasters/009.png
+.. image:: /static/training_manual/rasters/009.png
    :align: center
 
 That's because its symbology hasn't been customized. In a color aerial
@@ -42,14 +42,14 @@ information on the layer. Does it even have any data in it? Let's see.
 
 * Change the :guilabel:`Color map` to :guilabel:`Pseudocolor`:
 
-.. image:: ../_static/rasters/011.png
+.. image:: /static/training_manual/rasters/011.png
    :align: center
 
 * Click :guilabel:`OK`.
 
 You'll see the raster looking like this:
 
-.. image:: ../_static/rasters/012.png
+.. image:: /static/training_manual/rasters/012.png
    :align: center
 
 That does tell us what we need to know. There is data in this layer. But maybe
@@ -65,13 +65,13 @@ of gray in between).
 
 * Tell it to use :guilabel:`Custom min / max values`:
 
-.. image:: ../_static/rasters/015.png
+.. image:: /static/training_manual/rasters/015.png
    :align: center
 
 * Set the value :guilabel:`Current` of :guilabel:`Contrast enhancement` to
   :guilabel:`Stretch To MinMax`:
 
-.. image:: ../_static/rasters/013.png
+.. image:: /static/training_manual/rasters/013.png
    :align: center
 
 But what are the minimum and maximum values that should be used for the
@@ -85,12 +85,12 @@ minimum and maximum values of the raster.
   (faster)`.
 * Click the :guilabel:`Load` button:
 
-.. image:: ../_static/rasters/014.png
+.. image:: /static/training_manual/rasters/014.png
    :align: center
 
 Notice how the :guilabel:`Custom min / max values` have changed:
 
-.. image:: ../_static/rasters/016.png
+.. image:: /static/training_manual/rasters/016.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -98,7 +98,7 @@ Notice how the :guilabel:`Custom min / max values` have changed:
 You'll see the values of the raster properly displayed, with the darker colors
 representing valleys and the lighter ones, mountains:
 
-.. image:: ../_static/rasters/017.png
+.. image:: /static/training_manual/rasters/017.png
    :align: center
 
 But isn't there a quicker way?
@@ -113,7 +113,7 @@ know that there's a tool for doing all of this easily.
 * Enable the tool you'll need by enabling :menuselection:`View --> Toolbars -->
   Raster`. These icons will appear in the interface:
 
-  .. image:: ../_static/rasters/018.png
+  .. image:: /static/training_manual/rasters/018.png
      :align: center
 
 The button on the right will stretch the minimum and maximum values to give you

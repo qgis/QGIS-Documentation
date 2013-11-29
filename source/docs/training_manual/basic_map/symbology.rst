@@ -35,7 +35,7 @@ In the :guilabel:`Properties` window:
 
 * Select the :guilabel:`Style` tab at the extreme left:
 
-.. image:: ../_static/symbology/052.png
+.. image:: /static/training_manual/symbology/052.png
    :align: center
 
 * Click the :guilabel:`Change` button next to the :guilabel:`Color` label.
@@ -46,7 +46,7 @@ A standard color dialog will appear.
 * Click :guilabel:`OK` again in the :guilabel:`Layer Properties` window, and
   you will see the color change being applied to the layer.
 
-.. image:: ../_static/symbology/019.png
+.. image:: /static/training_manual/symbology/019.png
    :align: center
 
 
@@ -77,7 +77,7 @@ color.
 
 * Click on the :guilabel:`Change...` button below the color display:
 
-.. image:: ../_static/symbology/053.png
+.. image:: /static/training_manual/symbology/053.png
    :align: center
 
 The :guilabel:`Symbol properties` dialog will appear.
@@ -121,7 +121,7 @@ dataset at inappropriate scales.
 In our case, we may decide to hide the streets from view at small scales. This
 map, for example ...
 
-.. image:: ../_static/symbology/049.png
+.. image:: /static/training_manual/symbology/049.png
    :align: center
 
 ... is not very useful. The streets are just a blob at that scale.
@@ -134,7 +134,7 @@ To enable scale-based rendering:
 * Enable scale-based rendering by clicking on the checkbox labeled
   :guilabel:`Use scale dependent rendering`:
 
-.. image:: ../_static/symbology/050.png
+.. image:: /static/training_manual/symbology/050.png
    :align: center
 
 * Change the :guilabel:`Maximum` value to :kbd:`100000`.
@@ -146,7 +146,7 @@ Test the effects of this by zooming in and out in your map, noting when the
 .. note::  You can use your mouse wheel to zoom in increments.
    Alternatively, use the zoom tools to zoom to a window:
    
-   .. image:: ../_static/symbology/051.png
+   .. image:: /static/training_manual/symbology/051.png
       :align: center
 
 |moderate| |FA| Adding symbol layers
@@ -162,14 +162,14 @@ layers.
 In this example, the current symbol has no outline (i.e., it uses the
 :guilabel:`No Pen` border style).
 
-.. image:: ../_static/symbology/054.png
+.. image:: /static/training_manual/symbology/054.png
    :align: center
 
 Note the highlighted button.
 
 * Click on it and the dialog will change to look somewhat like this:
 
-.. image:: ../_static/symbology/010.png
+.. image:: /static/training_manual/symbology/010.png
    :align: center
 
 (It may appear somewhat different in color, for example, but you're going to
@@ -189,7 +189,7 @@ Line` border style, which we don't want. Clearly this symbol has to be changed.
 * Change the fill style to something other than :guilabel:`Solid` or
   :guilabel:`No brush`. For example:
 
-.. image:: ../_static/symbology/011.png
+.. image:: /static/training_manual/symbology/011.png
    :align: center
 
 * Click :guilabel:`OK` in this dialog and :guilabel:`Apply` in the one after
@@ -198,7 +198,7 @@ Line` border style, which we don't want. Clearly this symbol has to be changed.
 You can even add multiple extra symbol layers and create a kind of texture for
 your layer that way.
 
-.. image:: ../_static/symbology/012.png
+.. image:: /static/training_manual/symbology/012.png
    :align: center
 
 It's fun! But it probably has too many colors to use in a real map...
@@ -228,7 +228,7 @@ having many symbol layers in one symbol can cause unexpected results.
 
 You'll notice that this happens:
 
-.. image:: ../_static/symbology/014.png
+.. image:: /static/training_manual/symbology/014.png
    :align: center
 
 Well that's not what we want at all!
@@ -239,21 +239,21 @@ control the order in which the different symbol layers are rendered.
 * In the :guilabel:`Layer Properties` dialog, click on :menuselection:`Advanced
   --> Symbol levels`:
 
-.. image:: ../_static/symbology/055.png
+.. image:: /static/training_manual/symbology/055.png
    :align: center
 
 The :guilabel:`Symbol Levels` dialog will appear.
 
 * Alter its values to match this example:
 
-.. image:: ../_static/symbology/016.png
+.. image:: /static/training_manual/symbology/016.png
    :align: center
 
 * Click :guilabel:`OK`, then :guilabel:`OK` again.
 
 The map will now look like this:
 
-.. image:: ../_static/symbology/017.png
+.. image:: /static/training_manual/symbology/017.png
    :align: center
 
 When you're done, remember to save the symbol itself so as not to lose your
@@ -276,7 +276,7 @@ lost.
 The roads must be dark gray or black, with a thin yellow outline, and a dashed
 white line running in the middle to make them resemble a real road.
 
-.. image:: ../_static/symbology/027.png
+.. image:: /static/training_manual/symbology/027.png
    :align: center
 
 :ref:`Check your results <symbology-levels-1>`
@@ -298,7 +298,7 @@ rudimentary preclassified data.
 * Using symbol layers, ensure that the outlines of layers flow into one another
   as per the image below:
 
-.. image:: ../_static/symbology/025.png
+.. image:: /static/training_manual/symbology/025.png
    :align: center
 
 :ref:`Check your results <symbology-levels-2>`
@@ -320,12 +320,12 @@ Point symbol layer types
 
 * Change the symbol properties for the :guilabel:`places` layer:
 
-.. image:: ../_static/symbology/028.png
+.. image:: /static/training_manual/symbology/028.png
    :align: center
 
 * You can access the various symbol layer types here:
 
-.. image:: ../_static/symbology/029.png
+.. image:: /static/training_manual/symbology/029.png
    :align: center
 
 * Investigate the various options available to you, and choose a symbol layer
@@ -342,18 +342,18 @@ To see the various options available for line data:
 * Change the symbol layer type for the :guilabel:`street` layer's topmost
   symbol layer:
 
-.. image:: ../_static/symbology/030.png
+.. image:: /static/training_manual/symbology/030.png
    :align: center
 
 * Click on the :guilabel:`Change` button next to the :guilabel:`Marker` label.
 * Change the symbol properties to match this dialog:
 
-.. image:: ../_static/symbology/031.png
+.. image:: /static/training_manual/symbology/031.png
    :align: center
 
 * Change the interval to :kbd:`2,00`:
 
-.. image:: ../_static/symbology/032.png
+.. image:: /static/training_manual/symbology/032.png
    :align: center
 
 * Ensure that the symbol levels are correct before applying the style.
@@ -376,10 +376,10 @@ To see the various options available for polygon data:
 * If in doubt, use the :guilabel:`Point pattern fill` with the following
   options:
 
-.. image:: ../_static/symbology/033.png
+.. image:: /static/training_manual/symbology/033.png
    :align: center
 
-.. image:: ../_static/symbology/034.png
+.. image:: /static/training_manual/symbology/034.png
    :align: center
 
 * Add a new symbol layer with a normal :guilabel:`Simple fill`.
@@ -387,7 +387,7 @@ To see the various options available for polygon data:
 * Move it underneath the point pattern symbol layer with the :guilabel:`Move
   down` button:
 
-.. image:: ../_static/symbology/035.png
+.. image:: /static/training_manual/symbology/035.png
    :align: center
 
 As a result, you have a textured symbol for the urban layer, with the added
@@ -404,7 +404,7 @@ that make up the texture.
 
 You will see the following interface:
 
-.. image:: ../_static/symbology/036.png
+.. image:: /static/training_manual/symbology/036.png
    :align: center
 
 You should find this familiar if you have used other vector image editing
@@ -420,7 +420,7 @@ programs, like Corel.
   page you are working with.
 * Select the :guilabel:`Circle` tool:
 
-.. image:: ../_static/symbology/038.png
+.. image:: /static/training_manual/symbology/038.png
    :align: center
 
 * Click and drag on the page to draw an ellipse. To make the ellipse turn into
@@ -428,22 +428,22 @@ programs, like Corel.
 * Right-click on the circle you just created and open its :guilabel:`Fill and
   Stroke`:
 
-.. image:: ../_static/symbology/039.png
+.. image:: /static/training_manual/symbology/039.png
    :align: center
 
 * Change the :guilabel:`Stroke paint` to green:
 
-.. image:: ../_static/symbology/040.png
+.. image:: /static/training_manual/symbology/040.png
    :align: center
 
 * Change the :guilabel:`Stroke style` to a thicker line:
 
-.. image:: ../_static/symbology/041.png
+.. image:: /static/training_manual/symbology/041.png
    :align: center
 
 * Draw a line using the :guilabel:`Line` tool:
 
-.. image:: ../_static/symbology/042.png
+.. image:: /static/training_manual/symbology/042.png
    :align: center
 
 * Click once to start the line. Hold :kbd:`ctrl` to make it snap to increments
@@ -452,7 +452,7 @@ programs, like Corel.
 * Change its color and width as before and move it around as necessary, so that
   you end up with a symbol like this one:
 
-.. image:: ../_static/symbology/044.png
+.. image:: /static/training_manual/symbology/044.png
    :align: center
 
 * Save it under the directory that the course is in, under
@@ -463,22 +463,22 @@ In QGIS:
 * Open the :guilabel:`Layer Properties` for the :guilabel:`rural` layer.
 * Change the symbol structure to the following:
 
-.. image:: ../_static/symbology/045.png
+.. image:: /static/training_manual/symbology/045.png
    :align: center
 
 * Find your SVG image via the :guilabel:`Browse` button:
 
-.. image:: ../_static/symbology/046.png
+.. image:: /static/training_manual/symbology/046.png
    :align: center
 
 * Change the settings as shown:
 
-.. image:: ../_static/symbology/047.png
+.. image:: /static/training_manual/symbology/047.png
    :align: center
 
 Your rural layer should now have a texture like the one on this map:
 
-.. image:: ../_static/symbology/048.png
+.. image:: /static/training_manual/symbology/048.png
    :align: center
 
 |IC|

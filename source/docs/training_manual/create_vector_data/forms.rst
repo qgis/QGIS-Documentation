@@ -31,20 +31,20 @@ Table` all the time.
 * In the dialog that appears, select the :guilabel:`Map Tools` tab.
 * Check the :guilabel:`Open feature form ...` checkbox:
 
-.. image:: ../_static/create_vector_data/023.png
+.. image:: /static/training_manual/create_vector_data/023.png
    :align: center
 
 * Close the :guilabel:`Settings` dialog.
 * Select the :guilabel:`streets` layer in the :guilabel:`Layers list`.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
-.. image:: ../_static/create_vector_data/024.png
+.. image:: /static/training_manual/create_vector_data/024.png
    :align: center
 
 Instead of the normal :guilabel:`Identify` dialog, you'll see the now-familiar
 form instead:
 
-.. image:: ../_static/create_vector_data/026.png
+.. image:: /static/training_manual/create_vector_data/026.png
    :align: center
 
 |basic| |TY| Using the Form to Edit Values
@@ -56,7 +56,7 @@ If you are in edit mode, you can use this form to edit a feature's attributes!
 * Using the :guilabel:`Identify` tool, click on the main street running through
   Swellendam:
 
-.. image:: ../_static/create_vector_data/025.png
+.. image:: /static/training_manual/create_vector_data/025.png
    :align: center
 
 * Edit its :guilabel:`LANES` value to the correct value of :kbd:`2`.
@@ -78,19 +78,19 @@ allow you to edit data in various different ways.
 * Open the :guilabel:`streets` layer's :guilabel:`Layer Properties`.
 * Switch to the :guilabel:`Fields` tab. You'll see this:
 
-.. image:: ../_static/create_vector_data/027.png
+.. image:: /static/training_manual/create_vector_data/027.png
    :align: center
 
 * Click on the :guilabel:`Line edit` button in the same row as
   :guilabel:`LANES` and you'll be given a new dialog.
 * In its only dropdown list, set the value to :guilabel:`Range`:
 
-.. image:: ../_static/create_vector_data/028.png
+.. image:: /static/training_manual/create_vector_data/028.png
    :align: center
 
 * Set the values to this:
 
-.. image:: ../_static/create_vector_data/029.png
+.. image:: /static/training_manual/create_vector_data/029.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -124,7 +124,7 @@ You can also design your own custom form completely from scratch.
   * Name (text)
   * Age (text)
 
-.. image:: ../_static/create_vector_data/018.png
+.. image:: /static/training_manual/create_vector_data/018.png
    :align: center
 
 * Capture a couple of points to your new layer using the digitizing tools so
@@ -132,7 +132,7 @@ You can also design your own custom form completely from scratch.
   default QGIS generated attribute capture form each time you capture a new
   point.
 
-.. image:: ../_static/create_vector_data/019.png
+.. image:: /static/training_manual/create_vector_data/019.png
    :align: center
 
 |hard| |FA| Creating a New Form
@@ -153,7 +153,7 @@ another OS. In Ubuntu, do the following in the terminal:
   approach is appropriate in your OS).
 * In the dialog that appears, create a new dialog:
 
-.. image:: ../_static/create_vector_data/020.png
+.. image:: /static/training_manual/create_vector_data/020.png
    :align: center
 
 * Look for the :guilabel:`Widget Box` along the left of your screen (default).
@@ -163,7 +163,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * With the new line edit element selected, you'll see its *properties* along
   the side of your screen (on the right by default):
 
-.. image:: ../_static/create_vector_data/021.png
+.. image:: /static/training_manual/create_vector_data/021.png
    :align: center
 
 * Set its name to :kbd:`Name`.
@@ -176,7 +176,7 @@ another OS. In Ubuntu, do the following in the terminal:
 * Find the :guilabel:`Lay Out Vertically` button (in a toolbar along the top
   edge of the screen, by default). This lays out your dialog automatically.
 
-.. image:: ../_static/create_vector_data/022.png
+.. image:: /static/training_manual/create_vector_data/022.png
    :align: center
 
 * Set the dialog's maximum size (in its properties) to :kbd:`200` (width) by

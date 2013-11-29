@@ -32,7 +32,7 @@ reason, it has a tool called the :guilabel:`Composer Manager`.
 (You could also close the dialog and navigate to a composer via the
 :menuselection:`File --> Print Composers` menus, as in the image below.)
 
-.. image:: ../_static/map_composer/003.png
+.. image:: /static/training_manual/map_composer/003.png
    :align: center
 
 Whichever route you take to get there, you will now see the :guilabel:`Print
@@ -56,26 +56,26 @@ blank. It clearly lacks a map. Let's fix that!
 
 * Click on the :guilabel:`Add New Map` button:
 
-.. image:: ../_static/map_composer/005.png
+.. image:: /static/training_manual/map_composer/005.png
    :align: center
 
 With this tool activated, you'll be able to place a map on the page.
 
 * Click and drag a box on the blank page:
 
-.. image:: ../_static/map_composer/006.png
+.. image:: /static/training_manual/map_composer/006.png
    :align: center
 
 The map will appear on the page.
 
 * Move the map by clicking and dragging it around:
 
-.. image:: ../_static/map_composer/007.png
+.. image:: /static/training_manual/map_composer/007.png
    :align: center
 
 * Resize it by clicking and dragging the boxes in the corners:
 
-.. image:: ../_static/map_composer/008.png
+.. image:: /static/training_manual/map_composer/008.png
    :align: center
 
 .. note::  Your map may look a lot different, of course! This depends on how
@@ -86,18 +86,18 @@ The map will appear on the page.
 * Be sure to leave margins along the edges, and a space along the top for the
   title:
 
-.. image:: ../_static/map_composer/009.png
+.. image:: /static/training_manual/map_composer/009.png
    :align: center
 
 * Zoom in and out on the page (but not the map!) by using these buttons:
 
-.. image:: ../_static/map_composer/010.png
+.. image:: /static/training_manual/map_composer/010.png
    :align: center
 
 * Zoom and pan the map in the main QGIS window. You can also pan the map using
   the :guilabel:`Move item content` tool:
 
-.. image:: ../_static/map_composer/023.png
+.. image:: /static/training_manual/map_composer/023.png
    :align: center
 
 When zooming in, the map view will not refresh by itself. This is so that it
@@ -107,7 +107,7 @@ be at the wrong resolution and will look ugly or unreadable.
 
 * Force the map to refresh by clicking this button:
 
-.. image:: ../_static/map_composer/011.png
+.. image:: /static/training_manual/map_composer/011.png
    :align: center
 
 Remember that the size and position you've given the map doesn't need to be
@@ -127,18 +127,18 @@ them by adding map elements. First, let's add a title.
 
 * Click on this button:
 
-.. image:: ../_static/map_composer/012.png
+.. image:: /static/training_manual/map_composer/012.png
    :align: center
 
 * Click on the page, and a label will appear:
 
-.. image:: ../_static/map_composer/013.png
+.. image:: /static/training_manual/map_composer/013.png
    :align: center
 
 * Resize it and place it in the top center of the page. It can be resized and
   moved in the same way that you resized and moved the map.
 
-.. image:: ../_static/map_composer/014.png
+.. image:: /static/training_manual/map_composer/014.png
    :align: center
 
 But if you tried it, you'll see that it's difficult to align the label to be
@@ -148,13 +148,13 @@ completely centered to the map! Luckily, there's a tool for that.
 * Hold in :kbd:`shift` on your keyboard and click on the label.
 * Look for this tool (but don't click it yet):
 
-.. image:: ../_static/map_composer/015.png
+.. image:: /static/training_manual/map_composer/015.png
    :align: center
 
 * Click on the downwards arrow next to the button. 
 * Click :guilabel:`Align center`:
 
-.. image:: ../_static/map_composer/016.png
+.. image:: /static/training_manual/map_composer/016.png
    :align: center
 
 To make sure that you don't accidentally move these elements around now that
@@ -174,12 +174,12 @@ contents of the label:
   :guilabel:`Composer` window.
 * Change the text of the label to "Swellendam":
 
-.. image:: ../_static/map_composer/017.png
+.. image:: /static/training_manual/map_composer/017.png
    :align: center
 
 * Use this interface to set the font and alignment options:
 
-.. image:: ../_static/map_composer/018.png
+.. image:: /static/training_manual/map_composer/018.png
    :align: center
 
 * Choose a large but sensible font (the example will use the default font with
@@ -192,13 +192,13 @@ be looking at the heading instead of reading the map!
 * Set the :guilabel:`Horizontal Alignment` to :guilabel:`Center`, so that the
   heading is properly centered within the label.
 
-.. image:: ../_static/map_composer/019.png
+.. image:: /static/training_manual/map_composer/019.png
    :align: center
 
 This is progressing nicely, but the label still has an unnecessary frame around
 it:
 
-.. image:: ../_static/map_composer/020.png
+.. image:: /static/training_manual/map_composer/020.png
    :align: center
 
 Let's get rid of it.
@@ -208,12 +208,12 @@ Let's get rid of it.
   will see a new interface.
 * Click the :guilabel:`Show frame` checkbox to disable the frame:
 
-.. image:: ../_static/map_composer/021.png
+.. image:: /static/training_manual/map_composer/021.png
    :align: center
 
 Here is our page so far:
 
-.. image:: ../_static/map_composer/022.png
+.. image:: /static/training_manual/map_composer/022.png
    :align: center
 
 |basic| |FA| Adding a Legend
@@ -226,12 +226,12 @@ add a new legend.
 
 * Click on this button:
 
-.. image:: ../_static/map_composer/024.png
+.. image:: /static/training_manual/map_composer/024.png
    :align: center
 
 * Click on the page to place the legend, and move it to where you want it:
 
-.. image:: ../_static/map_composer/025.png
+.. image:: /static/training_manual/map_composer/025.png
    :align: center
 
 |moderate| |FA| Customizing Legend Items
@@ -243,7 +243,7 @@ Not everything on the legend is necessary, so let's remove some unwanted items.
 * Select the :guilabel:`places` entry.
 * Delete it from the legend by clicking the :guilabel:`minus` button:
 
-.. image:: ../_static/map_composer/026.png
+.. image:: /static/training_manual/map_composer/026.png
    :align: center
 
 You can also rename items.
@@ -251,7 +251,7 @@ You can also rename items.
 * Select a layer from the same list.
 * Click the :guilabel:`Edit` button:
 
-.. image:: ../_static/map_composer/027.png
+.. image:: /static/training_manual/map_composer/027.png
    :align: center
 
 * Rename the layers to :kbd:`Roads and Streets`, :kbd:`Surface Water`,
@@ -268,7 +268,7 @@ the middle :kbd:`moderate area` and the rest blanked out.
 
 This is the result:
 
-.. image:: ../_static/map_composer/028.png
+.. image:: /static/training_manual/map_composer/028.png
    :align: center
 
 |basic| |FA| Exporting Your Map
@@ -279,7 +279,7 @@ This is the result:
 Finally the map is ready for export! You'll see the export buttons near the top
 left corner of the :guilabel:`Composer` window:
 
-.. image:: ../_static/map_composer/029.png
+.. image:: /static/training_manual/map_composer/029.png
    :align: center
 
 The button on the right is the :guilabel:`Print` button, which interfaces with
@@ -314,7 +314,7 @@ For our purposes, we're going to use PDF.
 
 * Click the :guilabel:`Export as PDF` button:
 
-.. image:: ../_static/map_composer/030.png
+.. image:: /static/training_manual/map_composer/030.png
    :align: center
 
 * Choose a save location and a file name as usual.

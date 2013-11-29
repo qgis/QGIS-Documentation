@@ -15,12 +15,12 @@ plugin.
 
 * In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
-  .. image:: ../_static/grass/001.png
+  .. image:: /static/training_manual/grass/001.png
      :align: center
 
 The GRASS toolbar will appear:
 
-.. image:: ../_static/grass/002.png
+.. image:: /static/training_manual/grass/002.png
    :align: center
 
 Before you can use GRASS, you need to create a **mapset**. GRASS always works
@@ -29,14 +29,14 @@ data you want to use into a GRASS database.
 
 * Click on the :guilabel:`New mapset` button:
 
-  .. image:: ../_static/grass/004.png
+  .. image:: /static/training_manual/grass/004.png
      :align: center
 
   You'll see a dialog explaining the structure of a GRASS mapset.
 * Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`.
 * Set it as the directory that will be used by GRASS to set up its database:
 
-  .. image:: ../_static/grass/005.png
+  .. image:: /static/training_manual/grass/005.png
      :align: center
 
 GRASS needs to create a "location", which describes the maximum extents of the
@@ -44,23 +44,23 @@ geographic area you'll be working in.
 
 * Call the new location :kbd:`South_Africa`:
 
-  .. image:: ../_static/grass/006.png
+  .. image:: /static/training_manual/grass/006.png
      :align: center
 
 * We'll be working with :kbd:`WGS 84`, so search for and select this CRS:
 
-  .. image:: ../_static/grass/007.png
+  .. image:: /static/training_manual/grass/007.png
      :align: center
 
 * Now select the region :guilabel:`South Africa`, which is already defined in
   GRASS:
 
-  .. image:: ../_static/grass/008.png
+  .. image:: /static/training_manual/grass/008.png
      :align: center
 
 * Create a mapset, which is the map file that you'll be working with.
 
-  .. image:: ../_static/grass/009.png
+  .. image:: /static/training_manual/grass/009.png
      :align: center
 
 Once you're done, you'll see a dialog asking you to confirm that the settings
@@ -79,7 +79,7 @@ two-step process.
   :kbd:`exercise_data/`) for now.
 * As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:
 
-  .. image:: ../_static/grass/013.png
+  .. image:: /static/training_manual/grass/013.png
      :align: center
 
 * Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the
@@ -92,13 +92,13 @@ vectors already loaded into QGIS.
 
 * Once you've found this tool, click on it to bring up the tool itself:
 
-  .. image:: ../_static/grass/014.png
+  .. image:: /static/training_manual/grass/014.png
      :align: center
 
 * Set the loaded layer to :guilabel:`streets` and its GRASS version's name to
   :kbd:`g_streets` to prevent confusion.
 
-  .. image:: ../_static/grass/015.png
+  .. image:: /static/training_manual/grass/015.png
      :align: center
 
 .. note::  |hard| Note the extra import options provided under
@@ -129,7 +129,7 @@ DEM first.
 * Reproject it using GDAL Warp tool (:menuselection:`Raster --> Projections -->
   Warp (Reproject)`), setting it up as shown:
 
-  .. image:: ../_static/grass/017.png
+  .. image:: /static/training_manual/grass/017.png
      :align: center
 
 * Save the raster under the same folder as the original, but with the file name
@@ -142,12 +142,12 @@ Now that it's reprojected, you can load it into your GRASS database.
 * Click on the :guilabel:`Modules List` tab.
 * Search for :kbd:`r.in.gdal.qgis`:
 
-  .. image:: ../_static/grass/016.png
+  .. image:: /static/training_manual/grass/016.png
      :align: center
 
   Which gives you this tool:
 
-  .. image:: ../_static/grass/018.png
+  .. image:: /static/training_manual/grass/018.png
      :align: center
 
 * Set it up as shown (input layer is :guilabel:`DEM_WGS84`, output is
@@ -157,7 +157,7 @@ Now that it's reprojected, you can load it into your GRASS database.
 * :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
   dialog.
 
-  .. image:: ../_static/grass/019.png
+  .. image:: /static/training_manual/grass/019.png
      :align: center
 
 * You may now remove the original :guilabel:`DEM_WGS84` layer.

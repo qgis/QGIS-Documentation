@@ -14,7 +14,7 @@ and :guilabel:`Plugin Manager`.
   :menuselection:`Plugins --> Manage Plugins`.
 * In the dialog that opens, find the :guilabel:`GdalTools` plugin:
 
-  .. image:: ../_static/qgis_plugins/005.png
+  .. image:: /static/training_manual/qgis_plugins/005.png
      :align: center
 
 * Click in the box next to this plugin and uncheck it.
@@ -55,14 +55,14 @@ you want to check in all available repositories. To do this:
 * Open the :guilabel:`Repositories` tab on the :guilabel:`Plugin Installer`
   dialog:
   
-  .. image:: ../_static/qgis_plugins/002.png
+  .. image:: /static/training_manual/qgis_plugins/002.png
      :align: center
 
 * Click the :guilabel:`Add 3rd party repositories` button. A disclaimer will
   appear.
 * Click :guilabel:`OK` to find and add these extra repositories:
 
-  .. image:: ../_static/qgis_plugins/003.png
+  .. image:: /static/training_manual/qgis_plugins/003.png
      :align: center
 
 However, even with these extra repositories enabled, you won't see the plugins
@@ -70,7 +70,7 @@ that they contain, unless you allow these plugins to be displayed.
 
 * Open the :guilabel:`Options` tab:
 
-  .. image:: ../_static/qgis_plugins/004.png
+  .. image:: /static/training_manual/qgis_plugins/004.png
      :align: center
 
 * Select the option :guilabel:`Show all plugins except those marked as

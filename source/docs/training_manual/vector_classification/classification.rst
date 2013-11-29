@@ -6,7 +6,7 @@ individual places, but they can't be used for everything. For example, let's
 say that someone wants to know which area the farms are in. Using labels, you'd
 get this:
 
-.. image:: ../_static/classification/001.png
+.. image:: /static/training_manual/classification/001.png
    :align: center
 
 Obviously this is not ideal, so we need another solution. That's what this
@@ -21,31 +21,31 @@ lesson is about!
 * Go to the :guilabel:`Style` tab.
 * Click on the dropdown that says :guilabel:`Single Symbol`:
 
-.. image:: ../_static/classification/002.png
+.. image:: /static/training_manual/classification/002.png
    :align: center
 
 * Change it to :guilabel:`Categorized` and the interface will change:
 
-.. image:: ../_static/classification/003.png
+.. image:: /static/training_manual/classification/003.png
    :align: center
 
 * Change the :guilabel:`Column` to :guilabel:`TOWN` and the :guilabel:`Color
   ramp` to :guilabel:`random`:
 
-.. image:: ../_static/classification/004.png
+.. image:: /static/training_manual/classification/004.png
    :align: center
 
 * Click the button labeled :guilabel:`Classify` and then click :guilabel:`OK`.
 
 You'll see something like this:
 
-.. image:: ../_static/classification/005.png
+.. image:: /static/training_manual/classification/005.png
    :align: center
 
 * Click the arrow (or plus sign) next to :guilabel:`rural` in the
   :guilabel:`Layer list`, you'll see the categories explained:
 
-.. image:: ../_static/classification/006.png
+.. image:: /static/training_manual/classification/006.png
    :align: center
 
 So, this is useful! But it hurts your eyes to look at it, so let's see what we
@@ -54,7 +54,7 @@ can do about that.
 * Open :guilabel:`Layer Properties` and go to the :guilabel:`Style` tab again.
 * Change the symbol:
 
-.. image:: ../_static/classification/007.png
+.. image:: /static/training_manual/classification/007.png
    :align: center
 
 * Get rid of the outline the same way you did before, and click :guilabel:`OK`.
@@ -62,7 +62,7 @@ can do about that.
   it's done.)
 * Click the :guilabel:`Delete all` button:
 
-.. image:: ../_static/classification/008.png
+.. image:: /static/training_manual/classification/008.png
    :align: center
 
 This gets rid of the ugly classes so you can try again.
@@ -75,26 +75,26 @@ removed the outlines!
 * Change the color for each town by double-clicking on the colored block
   representing its symbol:
 
-.. image:: ../_static/classification/009.png
+.. image:: /static/training_manual/classification/009.png
    :align: center
 
 Use your own colors, but make sure they're not too bright, so that the
 resulting map isn't as ugly as the old one. In the example, we'll use these
 colors:
 
-.. image:: ../_static/classification/011.png
+.. image:: /static/training_manual/classification/011.png
    :align: center
 
 This gives us a nice map:
 
-.. image:: ../_static/classification/010.png
+.. image:: /static/training_manual/classification/010.png
    :align: center
 
 (Only :guilabel:`rural` and :guilabel:`water` are switched on here.)
 
 By the way, there's one category that's empty:
 
-.. image:: ../_static/classification/012.png
+.. image:: /static/training_manual/classification/012.png
    :align: center
 
 * Select the empty category.
@@ -153,17 +153,17 @@ an area field! We'll have to make one.
 
 * Enter edit mode by clicking this button:
 
-.. image:: ../_static/classification/013.png
+.. image:: /static/training_manual/classification/013.png
    :align: center
 
 * Add a new column with this button:
 
-.. image:: ../_static/classification/014.png
+.. image:: /static/training_manual/classification/014.png
    :align: center
 
 * Set up the dialog that appears, like this:
 
-.. image:: ../_static/classification/015.png
+.. image:: /static/training_manual/classification/015.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -176,22 +176,22 @@ To solve this problem, we'll need to calculate the areas.
 
 * Open the field calculator:
 
-.. image:: ../_static/classification/016.png
+.. image:: /static/training_manual/classification/016.png
    :align: center
 
 You'll get this dialog:
 
-.. image:: ../_static/classification/018.png
+.. image:: /static/training_manual/classification/018.png
    :align: center
 
 * Change the values at the top of the dialog to look like this:
 
-.. image:: ../_static/classification/017.png
+.. image:: /static/training_manual/classification/017.png
    :align: center
 
 * In the :guilabel:`Function List`, select :menuselection:`Geometry --> $area`:
 
-.. image:: ../_static/classification/019.png
+.. image:: /static/training_manual/classification/019.png
    :align: center
 
 * Double-click on it so that it appears in the :guilabel:`Expression` field.
@@ -207,24 +207,24 @@ the attribute table.
 * Change the classification style from :guilabel:`Classified` to
   :guilabel:`Graduated`:
 
-.. image:: ../_static/classification/020.png
+.. image:: /static/training_manual/classification/020.png
    :align: center
 
 * Change the :guilabel:`Column` to :guilabel:`AREA`:
 
-.. image:: ../_static/classification/021.png
+.. image:: /static/training_manual/classification/021.png
    :align: center
 
 * Under :guilabel:`Color ramp`, choose the option :guilabel:`New color ramp...`
   to get this dialog:
 
-.. image:: ../_static/classification/022.png
+.. image:: /static/training_manual/classification/022.png
    :align: center
 
 * Choose :guilabel:`Gradient` (if it's not selected already) and click
   :guilabel:`OK`. You'll see this:
 
-.. image:: ../_static/classification/023.png
+.. image:: /static/training_manual/classification/023.png
    :align: center
 
 You'll be using this to denote area, with small areas as :guilabel:`Color 1`
@@ -234,7 +234,7 @@ and large areas as :guilabel:`Color 2`.
   
 In the example, the result looks like this:
 
-.. image:: ../_static/classification/024.png
+.. image:: /static/training_manual/classification/024.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -243,14 +243,14 @@ In the example, the result looks like this:
   
 Now you'll have something like this:
 
-.. image:: ../_static/classification/025.png
+.. image:: /static/training_manual/classification/025.png
    :align: center
 
 Leave everything as-is.
 
 * Click :guilabel:`Apply`:
 
-.. image:: ../_static/classification/026.png
+.. image:: /static/training_manual/classification/026.png
    :align: center
 
 
@@ -276,7 +276,7 @@ That's where rule-based classification comes in handy.
 * Switch to the :guilabel:`Style` tab.
 * Switch the classification style to :guilabel:`Rule-based`. You'll get this:
 
-.. image:: ../_static/classification/029.png
+.. image:: /static/training_manual/classification/029.png
    :align: center
 
 * Click the :guilabel:`Add` button.
@@ -292,14 +292,14 @@ That's where rule-based classification comes in handy.
 
 Your dialog should look like this:
 
-.. image:: ../_static/classification/030.png
+.. image:: /static/training_manual/classification/030.png
    :align: center
 
 * Apply this symbology.
 
 Your map will look like this:
 
-.. image:: ../_static/classification/031.png
+.. image:: /static/training_manual/classification/031.png
    :align: center
 
 Now you have two area classes, with the farms in the Swellendam Rural area

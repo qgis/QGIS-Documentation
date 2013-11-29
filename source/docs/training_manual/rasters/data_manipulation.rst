@@ -22,7 +22,7 @@ environment.
   :guilabel:`important_roads` layers.
 * Click on the :guilabel:`Load Raster Layer` button:
 
-  .. image:: ../_static/rasters/040.png
+  .. image:: /static/training_manual/rasters/040.png
      :align: center
 
 The :guilabel:`Load Raster Layer` dialog will open. The data for this project
@@ -38,7 +38,7 @@ projection. Luckily, we've already seen what to do in this situation.
 
 * Click on the :guilabel:`CRS Status` button:
 
-  .. image:: ../_static/rasters/003.png
+  .. image:: /static/training_manual/rasters/003.png
      :align: center
 
 * Enable "on the fly" reprojection.
@@ -48,7 +48,7 @@ projection. Luckily, we've already seen what to do in this situation.
 
 The rasters should fit nicely:
 
-.. image:: ../_static/rasters/039.png
+.. image:: /static/training_manual/rasters/039.png
    :align: center
 
 There we have it - four aerial photographs covering our whole study area.
