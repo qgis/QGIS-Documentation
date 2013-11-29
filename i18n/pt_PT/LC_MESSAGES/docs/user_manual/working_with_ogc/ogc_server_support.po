@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-15 15:21+0000\n"
+"PO-Revision-Date: 2013-11-16 19:39+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -191,7 +191,7 @@ msgid ""
 "plugin for |qg| desktop which exports the current layers and symbology as a "
 "web project for |qg| Server (containing cartographic visualization rules "
 "expressed in SLD)."
-msgstr ""
+msgstr "Além disso, o projecto do Servidor |qg|   fornece um módulo de 'Publicar na Web', um módulo para o |qg| desktop que exporta as camadas actuais e a simbologia como projecto web para o Servidor |qg| (contendo regras de visualização cartográfica descritas em SLD)."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:32
 msgid ""
@@ -203,7 +203,7 @@ msgid ""
 "<http://www.opengeospatial.org/standards/sld>`_ and its documented "
 "extensions, there is only one standardised language to learn, which greatly "
 "simplifies the complexity of creating maps for the Web."
-msgstr ""
+msgstr "O |qg| desktop e o Servidor |qg| usam as mesmas bibliotecas de visualização, os mapas que são publicados na internet ficam iguais como no SIG desktop. O módulo 'Publicar na Web' actualmente suporta simbolizações básicas, com regras mais complexas de visualização cartográfica que são introduzidas manualmente. Como a configuração é executada com o `SLD padrão <http://www.opengeospatial.org/standards/sld>`_ e as suas extensões estão documentadas, só existe uma forma padronizada para aprender, que simplifica a complexidade de criar mapas na Web."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:40
 msgid ""
@@ -228,7 +228,7 @@ msgid ""
 " is running with ``/etc/init.d/apache2 start``. Open a web browser and type "
 "URL: ``http://localhost``. If apache is up, you should see the message 'It "
 "works!'."
-msgstr ""
+msgstr "Além do |qg| e Servidor |qg| necessita de um Servidor web, no nosso caso o apache2. Pode instalar todos os pacotes  aptitude ou apt-get install juntos com outros pacotes necessários dependentens. Depois da instalação deve testar, se o servidor web e o Servidor |qg| funcionam como esperado. Certifique-se que o servidor apache está a correr como ``/etc/init.d/apache2 start``. Abra o browser da internet e digite o URL: ``http://localhost``. Se apache estiver a funcionar, deverá ver a mensagem 'It works!'."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:64
 msgid ""
@@ -237,7 +237,7 @@ msgid ""
 "wms that shows the state boundaries of Alaska. Add the WMS with the URL "
 "``http://localhost/cgi-bin/qgis_mapserv.fcgi`` as described in :ref:`ogc-"
 "wms-servers`."
-msgstr ""
+msgstr "Agora testamos a instalação do |qg| Servidor. O :file:`qgis_mapserv.fcgi` está disponível em ``/usr/lib/cgi-bin/qgis_mapserv.fcgi`` e fornece um wms padrão que mostra os limites do estado do Alaska. Adicione o WMS com o URL ``http://localhost/cgi-bin/qgis_mapserv.fcgi`` como está descrito no :ref:`ogc-wms-servers`."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:79
 msgid ""
@@ -254,7 +254,7 @@ msgid ""
 "file with some data. Here we use the 'alaska' shapefile from the |qg| sample"
 " dataset. Define the colors and styles of the layers in |qg| and define the "
 "project CRS, if not already done."
-msgstr ""
+msgstr "Para fornecer um novo Servidor |qg| ou WFS nós tivemos de criar um ficheiro de projecto |qg| com alguns dados. Aqui usámos a shapefile 'alaska' do conjunto de dados amostra do |qg|. Defina as cores e estilo das camadas no |qg| e defina o SRC do projecto, se não estiver definido."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:102
 msgid "Definitions for a |qg| Server WMS/WFS project (KDE)"
@@ -268,7 +268,7 @@ msgid ""
 "GetCapabilities response of the WMS or WFS. If you don't check |checkbox| "
 ":guilabel:`Service capabilities` |qg| Server will use the information given "
 "in the :file:`wms_metadata.xml` file located in the :file:`cgi-bin` folder."
-msgstr ""
+msgstr "De seguida vá ao menu :guilabel:`Servidor OWS` da janela :menuselection:`Projecto --> Propriedades do Projecto ` e dê alguma informação sobre o OWS nos campos das :guilabel:`Capacidades do Serviço`. Isto irá aparecer na resposta GetCapabilities do WMS ou WFS. Se não activar a |checkbox| :guilabel:`Capacidades do Serviço` o  Servidor|qg| irá usar a informação dada no ficheiro :file:`wms_metadata.xml` localizado na pasta :file:`cgi-bin` ."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:113
 msgid ""
@@ -282,7 +282,7 @@ msgid ""
 "|mActionSignPlus| button below to select those CRS from the Coordinate "
 "Reference System Selector, or click :guilabel:`Used` to add the CRS used in "
 "the |qg| project to the list."
-msgstr ""
+msgstr "Na secção :guilabel:`Capacidades WMS` pode definir a extensão aconselhada na respota GetCapabilities do WMS ao introduzir os valores mínimos e máximos de X e Y nos campos da :guilabel:`Extensão aconselhável`. Clicando :guilabel:`Usar Extensão actual do Mapa` define estes valores para a extensão actualmente exibida no enquadramento do mapa |qg|. Ao activar |checkbox| :guilabel:`Restrições SRC` pode restringir os sistemas de coordenas referência (SRC) que o Servidor |qg| poderá oferecer para renderizar mapas. Use o botão |mActionSignPlus| em baixo para seleccionar os SRC a partir do Seleccionador de Sistemas de Coordenadas Referência, ou clique :guilabel:`Usado` para adicionar o SRC usado no projecto |qg| à lista."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:126
 msgid ""
@@ -322,14 +322,14 @@ msgid ""
 "Now we test our project WMS and WFS, add the WMS and WFS as described in "
 ":ref:`ogc-wms-layers` and :ref:`ogc-wfs` to |qg| and load the WMS. The URL "
 "is:"
-msgstr ""
+msgstr "Agora testamos o nosso projecto WMS ou WFS, adicione o WMS e WFS como está descrito em :ref:`ogc-wms-layers` e :ref:`ogc-wfs` ao |qg| e carregue o WMS. O URL é:"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:204
 msgid ""
 "In the WMS GetMap request |qg| Server accepts a couple of extra parameters "
 "in addition to the standard parameters according to the OCG WMS 1.3.0 "
 "specification:"
-msgstr ""
+msgstr "No pedido GetMap WMS o Servidor |qg| aceita um par de parâmetros extra em adição aos parâmetros padrão correspondendo à especificação da OGC WMS 1.3.0:"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_server_support.rst:214
 msgid ""
@@ -338,7 +338,7 @@ msgid ""
 "path or a path relative to the location of the server executable "
 "(:file:`qgis_mapserv.fcgi`). If not specified, |qg| Server searches for .qgs"
 " files in the directory where the server executable is located."
-msgstr ""
+msgstr "Parâmetro **MAPA**: Semelhante ao MapServer, o parâmetro ``MAPA`` pode ser usado para especificar o caminho para o ficheiro de projecto |qg|. Pode especificar um caminho absoluto ou relativo para a localização do executável do servidor (:file:`qgis_mapserv.fcgi`). Se não estiver especificado, o Servidor |qg| procura por ficheiros .qgs no directório onde o executável do servidor está localizado."
 
 #~ msgid "|updatedisclaimer|"
 #~ msgstr ""
