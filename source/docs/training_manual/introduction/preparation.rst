@@ -12,11 +12,11 @@ exercises.
 Launch QGIS from its desktop shortcut, menu item, etc., depending on how you
 configured its installation.
 
-.. note::  The screenshots for this course were taken in QGIS 1.8 running on
-   Ubuntu 11.10 and Windows XP. Depending on your setup, the screens you
+.. note::  The screenshots for this course were taken in QGIS 2.0 running on
+   MacOS. Depending on your setup, the screens you
    encounter may well appear somewhat different. However, all the same buttons
    will still be available, and the instructions will work on any OS. You will
-   need QGIS 1.8 (the latest version at time of writing) to use this course.
+   need QGIS 2.0 (the latest version at time of writing) to use this course.
 
 Let's get started right away!
 
@@ -27,18 +27,15 @@ Let's get started right away!
 
 * Open QGIS. You will have a new, blank map.
 
-* Look for the :guilabel:`Add Vector Layer` button:
-
-.. image:: /static/training_manual/interface/002.png
-   :align: center
+* Look for the :guilabel:`Add Vector Layer` button: |mActionNewVectorLayer|
 
 * Click on it to open the following dialog:
 
-.. image:: /static/training_manual/interface/003.png
+.. image:: /static/training_manual/interface/add_vector_dialog.png
    :align: center
 
 * Click on the :guilabel:`Browse` button and navigate to the file
-  :kbd:`exercise_data/streets.shp` (in your course directory). With this file
+  :kbd:`exercise_data/streets_en.shp` (in your course directory). With this file
   selected, click :guilabel:`Open`. You will see the original dialog, but with
   the file path filled in. Click :guilabel:`Open` here as well. The data you
   specified will now load.
@@ -46,10 +43,8 @@ Let's get started right away!
 Congratulations! You now have a basic map. Now would be a good time to save
 your work.
 
-* Click on the :guilabel:`Save As` button:
+* Click on the :guilabel:`Save As` button: |mActionFileSaveAs|
 
-.. image:: /static/training_manual/interface/004.png
-   :align: center
 
 * Save the map under :kbd:`exercise_data/` and call it :kbd:`basic_map.qgs`.
 

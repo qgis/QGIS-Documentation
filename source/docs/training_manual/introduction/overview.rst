@@ -8,18 +8,19 @@ the interface.
 **The goal for this lesson:** To understand the basics of the QGIS user
 interface.
 
-|basic| |TY|: The Basics 
+|basic| |TY|: The Basics
 -------------------------------------------------------------------------------
 
-.. image:: /static/training_manual/interface/001-diagram.png
+.. image:: /static/training_manual/interface/gui_numbered.png
    :align: center
 
 The elements identified in the figure above are:
 
-#. Layers list
+#. Layers List / Browser Panel
 #. Toolbars
 #. Map canvas
 #. Status bar
+#. Side Toolbar
 
 .. Don't reorder these list items! They refer to elements as numbered on an
    image.
@@ -43,6 +44,14 @@ it is present, ensure that it's checked for now.
 .. note::  A vector layer is a dataset, usually of a specific kind of object,
    such as roads, trees, etc. A vector layer can consist of either points,
    lines or polygons.
+
+|basic| The Browser Panel
+...............................................................................
+
+The QGIS Browser is a panel in QGIS that lets you easily navigate in your
+database. You can have access to common vector files (e.g. ESRI shapefile
+or MapInfo files), databases (e.g.PostGIS, Oracle, Spatialite or MSSQL Spatial)
+and WMS/WFS connections. You can also view your GRASS data.
 
 |basic| Toolbars
 ...............................................................................
@@ -91,20 +100,15 @@ the coming days.
 
 Try to find each of these tools on your screen. What is their purpose?
 
-1. .. image:: /static/training_manual/interface/004.png
-      :align: center
+1. |mActionFileSaveAs|
 
-2. .. image:: /static/training_manual/interface/005.png
-      :align: center
+2. |mActionZoomToLayer|
 
-3. .. image:: /static/training_manual/interface/006.png
-      :align: center
+3. |mActionWhatsThis|
 
-4. .. image:: /static/training_manual/interface/007.png
-      :align: center
-   
-5. .. image:: /static/training_manual/interface/008.png
-      :align: center
+4. .. image:: /static/training_manual/interface/toggle_render.png
+
+5. |mActionMeasure|
 
 .. hint:: If any of these tools is not visible on the screen, try enabling
    some toolbars that are currently hidden. Also keep in mind that if there
