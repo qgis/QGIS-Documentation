@@ -21,8 +21,8 @@ Iterating over the features in a vector layer is one of the most common tasks. B
   for feature in iter:
     # retreive every feature with its geometry and attributes
       # fetch geometry
-      geom = feat.geometry()
-      print "Feature ID %d: " % feat.id() ,
+      geom = feature.geometry()
+      print "Feature ID %d: " % feature.id() ,
 
       # show some information about the feature
       if geom.vectorType() == QGis.Point:
@@ -41,7 +41,7 @@ Iterating over the features in a vector layer is one of the most common tasks. B
         print "Unknown"
 
       # fetch attributes
-      attrs = feat.attributes()
+      attrs = feature.attributes()
 
       # attrs is a dictionary: key = field index, value = QgsFeatureAttribute
       # show all attributes and their values
