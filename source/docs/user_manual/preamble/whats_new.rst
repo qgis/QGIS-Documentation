@@ -1,4 +1,4 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
 
 .. _qgis.documentation.whatsnew:
 

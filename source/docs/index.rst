@@ -15,3 +15,4 @@ Please have a look into one of the documents below.
    PyQGIS cookbook (QGIS 2.0) <pyqgis_developer_cookbook/index>
    Documentation Guidelines <documentation_guidelines/index>
    A gentle introduction in GIS <gentle_gis_introduction/index>
+   Trainings manual <training_manual/index>

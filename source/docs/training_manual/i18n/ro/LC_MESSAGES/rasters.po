@@ -1,0 +1,1202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Linfiniti Consulting CC
+# This file is distributed under the same license as the The Free Quantum GIS Training Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: The Free Quantum GIS Training Manual 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-10 00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../rasters/changing_symbology.rst:2
+# 670ceb4ecaa6443b944a4865aa98ef88
+msgid "|LS| Changing Raster Symbology"
+msgstr "|LS| Modificarea Simbologiei unui Raster"
+
+#: ../../rasters/changing_symbology.rst:4
+# d4878543d738455c91b8240a746b9429
+msgid "Not all raster data consists of aerial photographs. There are many other forms of raster data, and in many of those cases, it's essential to symbolize the data properly so that it becomes properly visible and useful."
+msgstr ""
+"Nu toate rasterele sunt fotografii aeriene. Exista multe alte forme de "
+"rastere, si in multe din cazuri, este esential sa simbolizati datele corect "
+"pentru a deveni vizibile si utile."
+
+#: ../../rasters/changing_symbology.rst:8
+# e98c80db96154fc7a65d2f59b6c2b3ab
+msgid "**The goal for this lesson:** To change the symbology for a raster layer."
+msgstr ""
+"**Obiectivul acestei lectii:** Modificarea simbologiei pentru un layer raster."
+
+#: ../../rasters/changing_symbology.rst:11
+# b939d0fffe624a2b96237a06861a76ac
+msgid "|basic| |TY|"
+msgstr "|introductiv| |TY|"
+
+#: ../../rasters/changing_symbology.rst:13
+# 5a7f6c1c238d49d3b1e80e7cf107e3a3
+msgid "Use the :guilabel:`Add Raster Layer` button to load the new raster dataset."
+msgstr ""
+"Folositi butonul :guilabel:`Add Raster Layer` pentru a incarca noul dataset "
+"raster."
+
+#: ../../rasters/changing_symbology.rst:14
+# 7574d28c758741bc86568925860761e8
+msgid "Into your current map (which, following from the previous lesson, should be :kbd:`analysis.qgs`) load the dataset :kbd:`srtm_41_19.tif`, found under the directory :kbd:`exercise_data/raster/SRTM/`."
+msgstr ""
+"In harta curenta (care, urmarind lectiile trecute, ar trebui sa fie "
+":kbd:`analysis.qgs`) incarcati datasetul :kbd:`srtm_41_19.tif` gasit in "
+"directorul :kbd:`exercise_data/raster/SRTM/`."
+
+#: ../../rasters/changing_symbology.rst:17
+# aa7e415bb54d48cb919eb0e7573eaf07
+msgid "Once it appears in the :guilabel:`Layers list`, rename it to :kbd:`DEM`."
+msgstr ""
+"Dupa ce apare in ista :guilabel:`Layers list`, redenumiti-l in :kbd:`DEM`."
+
+#: ../../rasters/changing_symbology.rst:19
+# f4c79151d5f844f59649726edb312409
+msgid "This dataset is a *Digital Elevation Model (DEM)*. It's a map of the elevation (altitude) of the terrain, allowing us to see where the mountains and valleys are, for example."
+msgstr ""
+"Acest dataset este un *Digital Elevation Model (DEM)* (Model Digital de "
+"Elevatie). Este o harta a altitudinii terenului, permitandu-ne sa vedem unde "
+"se afla vaile si muntii."
+
+#: ../../rasters/changing_symbology.rst:23
+# 186d8e8c9b62459289aebd3da3087043
+msgid "Once it's loaded, you'll notice that it's basically a gray rectangle. It's seen here with the vector layers on top:"
+msgstr ""
+"Odata incarcata, veti vedea ca este un dreptunghi gri. Poate fi vazut aici cu "
+"layerele vectoriale deasupra:"
+
+#: ../../rasters/changing_symbology.rst:29
+# 8140107e587d445980e0f8ea57362aa6
+msgid "That's because its symbology hasn't been customized. In a color aerial photograph, everything is already defined. But if you load a raster and it's just a gray rectangle, then you know there's no symbology for it yet. It still needs to be defined. So that's what you should do next."
+msgstr ""
+"Acest lucru se intampla pentru ca simbologia nu a fost inca personalizata. "
+"Intr-o fotografie aeriana color, totul este deja definit. Daca incarcati un "
+"raster si este doar un dreptunghi gri, stiti ca nu exista simbologie pentru "
+"el. Inca trebuie definit, si acest lucru il vom face in continuare."
+
+#: ../../rasters/changing_symbology.rst:35
+# 8df53b0556c64bafaf3d6cfecfa058df
+msgid "|basic| |FA| Changing Raster Layer Symbology"
+msgstr "|introductiv| |FA| Modificarea Simbologiei Layerului Raster"
+
+#: ../../rasters/changing_symbology.rst:37
+# 923765a0ce3b49999467ad342848f0f2
+msgid "Open the :guilabel:`Layer Properties` dialog for the :guilabel:`SRTM` layer."
+msgstr ""
+"Deschideti caseta de dialog :guilabel:`Layer Properties` pentru layerul "
+":guilabel:`SRTM`."
+
+#: ../../rasters/changing_symbology.rst:38
+# 4d7c529b28514c2687fc41ae87b5c68a
+msgid "Switch to the :guilabel:`Style` tab."
+msgstr "Deschideti tabul :guilabel:`Style`."
+
+#: ../../rasters/changing_symbology.rst:40
+# f7f2b1af41f24439a10f6f4d5cd41e33
+msgid "These are the current settings, and as we've seen, they don't give us much information on the layer. Does it even have any data in it? Let's see."
+msgstr ""
+"Acestea sunt setarile curente, si asa cum am vazut, nu ne ofera prea multe "
+"informatii despre layer. Contine macar date? Sa vedem."
+
+#: ../../rasters/changing_symbology.rst:43
+# 22196a367efa4c9f97e18b3ec2797a98
+msgid "Change the :guilabel:`Color map` to :guilabel:`Pseudocolor`:"
+msgstr "Modificati :guilabel:`Color map` in :guilabel:`Pseudocolor`:"
+
+#: ../../rasters/changing_symbology.rst:48
+#: ../../rasters/changing_symbology.rst:96
+#: ../../rasters/data_manipulation.rst:47
+# b67b8946e68243a582bbf1e3c909700b
+# d20e5b9a07c441f3bc11fde876516529
+# a6488ed0eed04dcbac6d32d0dc87633b
+msgid "Click :guilabel:`OK`."
+msgstr "Click :guilabel:`OK`."
+
+#: ../../rasters/changing_symbology.rst:50
+# 6cb3093eab3f490594b810cc621d6565
+msgid "You'll see the raster looking like this:"
+msgstr "Veti vedea rasterul asa:"
+
+#: ../../rasters/changing_symbology.rst:55
+# 95da096ab23d407493903de9f94f6c73
+msgid "That does tell us what we need to know. There is data in this layer. But maybe we don't want to symbolize it using these colors."
+msgstr ""
+"Acum ne spune ce vrem sa stim. Exista informatii in layer. Dar poate nu vrem "
+"sa fie simbolizat cu aceste culori."
+
+#: ../../rasters/changing_symbology.rst:58
+# 946baeb3720c44aeb0338e0ecd5dbd17
+msgid "Open :guilabel:`Layer Properties` again."
+msgstr "Deschideti :guilabel:`Layer Properties` din nou."
+
+#: ../../rasters/changing_symbology.rst:59
+# 3df3bb25524e4e15a36ece973561a098
+msgid "Switch the :guilabel:`Color map` back to :guilabel:`Grayscale`."
+msgstr "Modificati :guilabel:`Color map` in :guilabel:`Grayscale`."
+
+#: ../../rasters/changing_symbology.rst:61
+# d4aa392219fd47aca5e25e186f4d134d
+msgid "But this time, to prevent it from becoming a gray rectangle again, let's tell QGIS to \"stretch\" the color values. This will make QGIS use all of the available colors (in :guilabel:`Grayscale`, this is black, white and all shades of gray in between)."
+msgstr ""
+"De aceasta data, pentru a evita transformarea intr-un dreptunghi gri, ii vom "
+"spune QGIS-ului sa \"intinda\" valorile culorii. Astfel QGIS va folosi toate "
+"culorile disponibile (in :guilabel:`Grayscale`, este negru, alb si toate "
+"nuantele de gri dintre cele doua culori)."
+
+#: ../../rasters/changing_symbology.rst:66
+# 55e23318cdc3470d8b66c6abc8650ca8
+msgid "Tell it to use :guilabel:`Custom min / max values`:"
+msgstr "Sa foloseasca :guilabel:`Custom min / max values`:"
+
+#: ../../rasters/changing_symbology.rst:71
+# c2e218f16ed740e897c180f182a21476
+msgid "Set the value :guilabel:`Current` of :guilabel:`Contrast enhancement` to :guilabel:`Stretch To MinMax`:"
+msgstr ""
+"Setati valoarea :guilabel:`Custom min / max values`: a :guilabel:`Contrast "
+"enhancement` la :guilabel:`Stretch To MinMax`:"
+
+#: ../../rasters/changing_symbology.rst:77
+# 36bd40e9ba6c49c3b798a4747605883f
+msgid "But what are the minimum and maximum values that should be used for the stretch? The ones that are currently under :guilabel:`Custom min / max values` are the same values that just gave us a gray rectangle before. Instead, we should be using the minimum and maximum values that are actually in the image, right? Fortunately, you can determine those values easily by loading the minimum and maximum values of the raster."
+msgstr ""
+"Dar care sunt valorile minime si maxime care ar trebui folosite pentru "
+"intindere? Valorile care se afla in gama guilabel:`Custom min / max values`, "
+"sunt aceleasi care ne-au creat dreptunghiul gri mai devreme. Ar trebui sa "
+"folosim valorile minime si maxime care exista de fapt in imagine, nu? Din "
+"fericire, putem determina usor valorile, incarcand valorile minime si maxime "
+"ale rasterului. "
+
+#: ../../rasters/changing_symbology.rst:84
+# 6088b9ad69b1421eb114df95c91067bb
+msgid "Under :guilabel:`Load min / max values from band`, select :guilabel:`Estimate (faster)`."
+msgstr ""
+"In :guilabel:`Load min / max values from band`, selectati :guilabel:`Estimate "
+"(faster)`."
+
+#: ../../rasters/changing_symbology.rst:86
+# 8bb1215547f840269da3f0108f04dbce
+msgid "Click the :guilabel:`Load` button:"
+msgstr "Click pe butonul :guilabel:`Load`:"
+
+#: ../../rasters/changing_symbology.rst:91
+# 584798517a614cdeb0ebee135fa5f09d
+msgid "Notice how the :guilabel:`Custom min / max values` have changed:"
+msgstr ""
+"Observati cum valorile :guilabel:`Custom min / max values` s-au modificat:"
+
+#: ../../rasters/changing_symbology.rst:98
+# 0c02b54750cd4f548dfeb564ecfd0173
+msgid "You'll see the values of the raster properly displayed, with the darker colors representing valleys and the lighter ones, mountains:"
+msgstr ""
+"Veti vedea valorile rasterului afisate corect, culorile mai inchise "
+"reprezentand vaile iar cele mai deschise reprezentand muntii:"
+
+#: ../../rasters/changing_symbology.rst:105
+# f300535116e440798c3f148739e838cb
+msgid "But isn't there a quicker way?"
+msgstr "Dar nu exista o cale mai rapida?"
+
+#: ../../rasters/changing_symbology.rst:107
+# 8e9c12981be847ca94f3a42fdc131ce9
+msgid "Yes, there is! Now that you understand what needs to be done, you'll be glad to know that there's a tool for doing all of this easily."
+msgstr ""
+"Ba da! Acum ca ati inteles ce trebuie facut, va veti bucura sa aflati ca "
+"exista un instrument pentru a face toti acesti pasi, cu usurinta."
+
+#: ../../rasters/changing_symbology.rst:110
+# 64c77b0814ca45a1b036f54429520bf8
+msgid "Remove the current DEM from the :guilabel:`Layers list`."
+msgstr "Indepartati DEM-ul curent din :guilabel:`Layers list`."
+
+#: ../../rasters/changing_symbology.rst:111
+# b49472c8e8e4463ab356940e61fb5005
+msgid "Load the raster in again, renaming it to :kbd:`DEM` as before. It's a gray rectangle again..."
+msgstr ""
+"Incarcati rasterul din nou, redenumindu-l :kbd:`DEM` ca mai devreme. Este un "
+"dreptunghi gri, din nou..."
+
+#: ../../rasters/changing_symbology.rst:113
+# 42e31c35ae6d468e822b12d222298724
+msgid "Enable the tool you'll need by enabling :menuselection:`View --> Toolbars --> Raster`. These icons will appear in the interface:"
+msgstr ""
+"Activati instrumentul necesar din :menuselection:`View --> Toolbars --> "
+"Raster`. Aceste iconite vor aparea in interfata:"
+
+#: ../../rasters/changing_symbology.rst:119
+# ed0fee7b00184e6b9677a5dc027b0a86
+msgid "The button on the right will stretch the minimum and maximum values to give you the best contrast in the local area that you're zoomed into. It's useful for large datasets. The button on the left will stretch  the minimum and maximum values to constant values across the whole image."
+msgstr ""
+"Butonul din dreapta va intinde valorile minime si maxime pentru a va oferi "
+"cel mai bun contrast in zona locala pe care ati facut zoom. Este util pentru "
+"dataseturi mari. Butonul din stanga va intinde valorile minime si maxime ca "
+"si valori constante pentru toata imaginea."
+
+#: ../../rasters/changing_symbology.rst:124
+# 399bf007a4a94b5a946996878fe8bd90
+msgid "Click the button on the left (:guilabel:`Stretch Histogram to Full Dataset`). You'll see the data is now correctly represented as before!"
+msgstr ""
+"Click pe butonul din stanga (:guilabel:`Stretch Histogram to Full Dataset`). "
+"Acum veti vedea ca datele sunt reprezentate corect!"
+
+#: ../../rasters/changing_symbology.rst:128
+#: ../../rasters/data_manipulation.rst:136
+#: ../../rasters/terrain_analysis.rst:286
+# 439f796c2a37406893faf52c20455e92
+# 737e0deb2aca4dd2a696f164ee1241d1
+# 9edc6712471544a8af9a619878f2793f
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../rasters/changing_symbology.rst:130
+# 4cb4c35299f44b8388f17b11fd45b853
+msgid "These are only the basic functions to get you started with raster symbology. QGIS also allows you many other options, such as symbolizing a layer using standard deviations, or representing different bands with different colors in a multispectral image."
+msgstr ""
+"Acestea sunt doar functii de baza pentru a incepe sa lucrati cu simbologia "
+"unui raster. QGIS are multe alte optiuni, cum ar fi simbolizarea unui layer "
+"folosind deviatii standard, sau reprezentarea benzilor de culoare diferite "
+"intr-o imagine multispectrala."
+
+#: ../../rasters/changing_symbology.rst:136
+# 9dd146308ca241d6855805b6142bfbbb
+msgid "Reference"
+msgstr "Referinta"
+
+#: ../../rasters/changing_symbology.rst:138
+# 81010ee0bf62415c8c78f354658969a3
+msgid "The SRTM dataset was obtained from `http://srtm.csi.cgiar.org/ <http://srtm.csi.cgiar.org/>`_"
+msgstr ""
+"Datasetul SRTM a fost obtinut de la `http://srtm.csi.cgiar.org/ "
+"<http://srtm.csi.cgiar.org/>`_"
+
+#: ../../rasters/changing_symbology.rst:142
+#: ../../rasters/data_manipulation.rst:141
+#: ../../rasters/terrain_analysis.rst:293
+# ca0b691322744df29bf07918a58588a7
+# 81f7e5fa67f0449a8dac35448da96db2
+# b5999eb10a0c45cbb7c823c98b803c8f
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../rasters/changing_symbology.rst:144
+# f9cae7ec23c242ec9693d2f7b3307f02
+msgid "Now that we can see our data displayed properly, let's investigate how we can analyze it further."
+msgstr ""
+"Acum ca putem vizualiza datele corect, sa vedem cum le putem analiza in "
+"continuare."
+
+#: ../../rasters/data_manipulation.rst:2
+# 87f66dab42714277a2c2b6eda3e22bfb
+msgid "|LS| Working with Raster Data"
+msgstr "|LS| Lucrul cu Date Raster"
+
+#: ../../rasters/data_manipulation.rst:4
+# 4b0889bad6974cc2be9a2bdae7e0af9d
+msgid "Raster data is quite different from vector data. Vector data has discrete features constructed out of vertices, and perhaps connected with lines and/or areas. Raster data, however, is like any image. Although it may portray various properties of objects in the real world, these objects don't exist as separate objects; rather, they are represented using pixels of various different color values."
+msgstr ""
+"Datele raster sunt destul de diferite de datele vectoriale. Datele vectoriale "
+"au trasaturi discrete contruite din vertecsi (puncte), si poate conectati cu "
+"linii si/sau suprafete. Datele raster sunt la fel ca orice imagine. Desi "
+"portretizeaza diverse proprietati ale obiectelor din lumea reala, aceste "
+"obiecte nu exista ca si elemente separate; sunt reprezentate folosind pixeli "
+"cu valori de culoare diferite."
+
+#: ../../rasters/data_manipulation.rst:11
+# d08d2afcb8344d158083729af637b6d8
+msgid "During this module you're going to use raster data to supplement your existing GIS analysis."
+msgstr ""
+"In acest modul veti folosi date raster pentru a suplimenta analiza GIS "
+"existenta."
+
+#: ../../rasters/data_manipulation.rst:14
+# f9f42b42c89e4eedb6e15c14d61f9bc0
+msgid "**The goal for this lesson:** To learn how to work with raster data in the QGIS environment."
+msgstr ""
+"**Obiectivul acestei lectii:** Sa invatam sa lucram cu date raster in mediul "
+"QGIS"
+
+#: ../../rasters/data_manipulation.rst:18
+# fc1d3bf6ceca49cc8ccdf39773c11835
+msgid "|basic| |FA| Loading Raster Data"
+msgstr "|introductiv| |FA| Incarcarea datelor raster"
+
+#: ../../rasters/data_manipulation.rst:20
+# 2170d673840f453191fdbeb84f4796b0
+msgid "Open your :kbd:`analysis.qgs` map."
+msgstr "Deschideti harta :kbd:`analysis.qgs`."
+
+#: ../../rasters/data_manipulation.rst:21
+# 4a91ca69f88d4d33b024fbbbe14d488d
+msgid "Deactivate all the layers except the :guilabel:`solution` and :guilabel:`important_roads` layers."
+msgstr ""
+"Dezactivati toate layerele, mai putin :guilabel:`solution` si "
+":guilabel:`important_roads`."
+
+#: ../../rasters/data_manipulation.rst:23
+# 7e5feada74f9417fa0cbff2d8cbdd624
+msgid "Click on the :guilabel:`Load Raster Layer` button:"
+msgstr "Click pe butonul :guilabel:`Load Raster Layer`."
+
+#: ../../rasters/data_manipulation.rst:28
+# 54c737eb024c4b879ba21ec097bd9143
+msgid "The :guilabel:`Load Raster Layer` dialog will open. The data for this project is in :kbd:`exercise_data/rasters`."
+msgstr ""
+"Caseta de dialog :guilabel:`Load Raster Layer` se va deschide. Datele pentru "
+"acest proiect sunt in :kbd:`exercise_data/rasters`."
+
+#: ../../rasters/data_manipulation.rst:31
+# e883e918f42d49d9ba43d8ce85dfb67c
+msgid "Either load them all in separately, or hold down :kbd:`ctrl` and click on all four of them in turn, then open them at the same time."
+msgstr ""
+"Le puteti incarca separat sau puteti apasa :kbd:`ctrl` si apasa click pe "
+"toate patru pentru a le deschide in acelasi timp."
+
+#: ../../rasters/data_manipulation.rst:34
+# 448de0200cc84c76a3f6e556e0da9d6a
+msgid "The first thing you'll notice is that nothing seems to be happening in your map. Are the rasters not loading? Well, there they are in the :guilabel:`Layers list`, so obviously they did load. The problem is that they're not in the same projection. Luckily, we've already seen what to do in this situation."
+msgstr ""
+"Primul lucru pe care il veti observa este ca nimic nu pare sa se intample pe "
+"harta. Nu se incarca rasterele? Exista in :guilabel:`Layers list`, deci s-au "
+"incarcat. Problema este ca nu sunt in aceiasi proiectie. Din fericire am "
+"vazut deja ce este de facut in aceasta situatie."
+
+#: ../../rasters/data_manipulation.rst:39
+# ca1d2f03f1644150ba11f8e0a98a5c59
+msgid "Click on the :guilabel:`CRS Status` button:"
+msgstr "Click pe butonul :guilabel:`CRS Status`:"
+
+#: ../../rasters/data_manipulation.rst:44
+# d80b52cf2d1e45a59e90e0ec21993685
+msgid "Enable \"on the fly\" reprojection."
+msgstr "Activati reproiectarea \"din mers\" (\"on the fly\" reprojection)."
+
+#: ../../rasters/data_manipulation.rst:45
+# 4f2f62771b17484abeda68caed012d99
+msgid "Set it to the same projection as the rest of your data (:kbd:`WGS 84 / UTM zone 33S`)."
+msgstr ""
+"Setati-o in aceiasi proiectie ca si restul datelor (:kbd:`WGS 84 / UTM zone "
+"33S`)."
+
+#: ../../rasters/data_manipulation.rst:49
+# 0deb322bbcc14f85922f8e24cf1b4aff
+msgid "The rasters should fit nicely:"
+msgstr "Rasterele ar trebui sa se potriveasca perfect:"
+
+#: ../../rasters/data_manipulation.rst:54
+# 12f0ca1bb3384867bb4c5fc2b31f4c64
+msgid "There we have it - four aerial photographs covering our whole study area."
+msgstr ""
+"Astea sunt - patru fotografii aeriene care acopera intreaga zona de studiu."
+
+#: ../../rasters/data_manipulation.rst:57
+# 23e5d100fdef4f11af115d6f391d615d
+msgid "|basic| |FA| Create a Virtual Raster"
+msgstr "|introductiv| |FA| Crearea unui raster virtual"
+
+#: ../../rasters/data_manipulation.rst:59
+# 4aaa6fff377143f9983e2c3e6531eadd
+msgid "Now as you can see from this, your solution layer lies across all four photographs. What this means is that you're going to have to work with four rasters all the time. That's not ideal; it would be better to have one file for one (composite) image, right?"
+msgstr ""
+"Asa cum vedeti, layerul-solutie se afla imprastiat pe patru fotografii. Asta "
+"inseamna ca veti fi nevoit sa lucrati cu patru rastere in acelasi timp. Acest "
+"lucru nu este ideal; ar fi mult mai bine daca am avea un singur fisier pentru "
+"o singura imagine, nu?"
+
+#: ../../rasters/data_manipulation.rst:64
+# b76f70b6307e4b34ac8a0641e1c6b7f9
+msgid "Luckily, QGIS allows you to do exactly this, and without needing to actually create a new raster file, which could take up a lot of space. Instead, you can create a *Virtual Raster*. This is also often called a *Catalog*, which explains its function. It's not really a new raster. Rather, it's a way to organize your existing rasters into one catalog: one file for easy access."
+msgstr ""
+"Din fericire, QGIS permite exact acest lucru, si fara sa fie nevoie sa cream "
+"un nou fisier raster, care ar putea ocupa mult spatiu. In schimb, puteti crea "
+"un *Raster Virtual*. Acesta este de obicei denumit *Catalog*, care ii si "
+"explica functia. Nu este chiar un raster nou. De fapt, este un mod de "
+"organizare a rasterelor existente intr-un singur catalog: un singur fisier "
+"pentru acces."
+
+#: ../../rasters/data_manipulation.rst:70
+# 47a2cb852787415a84021a127fbfd4a1
+msgid "To make a catalog:"
+msgstr "Pentru a face un catalog:"
+
+#: ../../rasters/data_manipulation.rst:72
+# 54e35445548046eb84724d0e5fb1592d
+msgid "Click on the menu item :menuselection:`Raster --> Miscellaneous --> Build Virtual Raster (Catalog)`."
+msgstr ""
+"Click pe :menuselection:`Raster --> Miscellaneous --> Build Virtual Raster "
+"(Catalog)`."
+
+#: ../../rasters/data_manipulation.rst:74
+# b27a6938a3d14241bdf52bb4007c5fda
+msgid "In the dialog that appears, check the box next to :guilabel:`Use visible raster layers for input`."
+msgstr ""
+"In caseta de dialog care apare, bifati casuta de langa :guilabel:`Use visible "
+"raster layers for input`."
+
+#: ../../rasters/data_manipulation.rst:76
+# 192b414b22b247f2a3902f4a220e3149
+msgid "Anter :kbd:`exercise_data/residential_development` as the output location."
+msgstr ""
+"Introduceti :kbd:`exercise_data/residential_development` ca si locatie de "
+"output."
+
+#: ../../rasters/data_manipulation.rst:77
+# 0677b11393af4793bb21d37fafb120d3
+msgid "Enter :kbd:`aerial_photos.vrt` as the file name."
+msgstr "Introduceti :kbd:`aerial_photos.vrt` ca si nume de fisier."
+
+#: ../../rasters/data_manipulation.rst:78
+# 745acc5eabd54a66a46adc014db458e9
+msgid "Check the :guilabel:`Load into canvas when finished` button."
+msgstr "Bifati casuta :guilabel:`Load into canvas when finished`."
+
+#: ../../rasters/data_manipulation.rst:80
+# eac5ead624254555817c6b9ebb0584dd
+msgid "Notice the text field below. What this dialog is actually doing is that it's writing that text for you. It's a long command that QGIS is going to run."
+msgstr ""
+"Observati campul de text de mai jos. Ce face aceasta fereastra este ca "
+"ruleaza textul pentru dumneavoastra. Este o comanda lunga pe care QGIS o va "
+"rula."
+
+#: ../../rasters/data_manipulation.rst:83
+# d67f1fa71fa34f80894df8b3e6efca8e
+msgid "|hard| Keep in mind that the command text is editable, so you can customize the command further if preferred. Search online for the initial command (in this case, :kbd:`gdalbuildvrt`) for help on the syntax."
+msgstr ""
+"|dificil| Nu uitati ca textul comanda poate fi editat, pentru a va putea "
+"personaliza comanda, daca este necesar. Cautati online comanda initiala (in "
+"acest caz, :kbd:`gdalbuildvrt`) pentru ajutor cu sintaxa."
+
+#: ../../rasters/data_manipulation.rst:87
+# f3bcd315ba334698be29dba479b6f15b
+msgid "Click :guilabel:`OK` to run the command."
+msgstr "Click :guilabel:`OK` pentru a rula comanda."
+
+#: ../../rasters/data_manipulation.rst:89
+# 2119baffcfa549c08d302910c96003cf
+msgid "It may take a while to complete. When it's done, it will tell you so with a message box."
+msgstr ""
+"Poate dura ceva timp pana termina. Cand totul este gata, veti fi anuntat "
+"printr-o caseta de dialog."
+
+#: ../../rasters/data_manipulation.rst:92
+# 02297d2da28a47239a48ad292f78ad81
+msgid "Click :guilabel:`OK` to chase the message away."
+msgstr "Click :guilabel:`OK` pentru a indeparta mesajul."
+
+#: ../../rasters/data_manipulation.rst:93
+# d096e607649a4255a9c9643301f48ee8
+msgid "Click :guilabel:`Close` on the :guilabel:`Build Virtual Raster (Catalog)` dialog.  (Don't click :guilabel:`OK` again, otherwise it's going to start running that command again!)"
+msgstr ""
+"Click pe :guilabel:`Close` din caseta de dialog :guilabel:`Build Virtual "
+"Raster (Catalog)`. (Nu apasati :guilabel:`OK` din nou, altfel va reincepe sa "
+"ruleze comanda!)"
+
+#: ../../rasters/data_manipulation.rst:96
+# c329d1240f404807b0b2fa21ae74e6cc
+msgid "You can now remove the original four rasters from the :guilabel:`Layers list`."
+msgstr ""
+"Acum puteti indeparta cele patru rastere originale din :guilabel:`Layers "
+"list`."
+
+#: ../../rasters/data_manipulation.rst:98
+# 3a228cca25ba45cbb2bb4f6eeeb2bcca
+msgid "If necessary, click and drag the new :guilabel:`aerial_photos` raster catalog layer to the bottom of the :guilabel:`Layers list` so that the other activated layers become visible."
+msgstr ""
+"Daca este nevoie, click si trageti de noul :guilabel:`aerial_photos` layer "
+"catalog de raster la baza :guilabel:`Layers list` pentru a putea face "
+"vizibile celalalte layere active."
+
+#: ../../rasters/data_manipulation.rst:103
+# 15843b37b9f0470eb841a21e862c27b8
+msgid "|hard| Transforming Raster Data"
+msgstr "|dificil| Transformarea Datelor Raster"
+
+#: ../../rasters/data_manipulation.rst:105
+# 9246f62482394095a4343a12e579b060
+msgid "The above methods allow you to virtually merge datasets using a catalog, and to reproject them \"on the fly\". However, if you are setting up data that you'll be using for quite a while, it may be more efficient to create new rasters that are already merged and reprojected. This improves performance while using the rasters in a map, but it may take some time to set up initially."
+msgstr ""
+"Metodele de mai sus va permit sa combinati dataseturi folosind un catalog, si "
+"sa le reproiectati din mers. Daca pregatiti date pe care le veti folosi ceva "
+"timp, s-ar putea sa fie mult mai eficient daca creati rastere noi care sunt "
+"deja combinate si reproiectate. Acest lucru creste performanta in timpul "
+"utilizarii lor pe harta, dar consuma ceva timp pentru a fi pregatite."
+
+#: ../../rasters/data_manipulation.rst:112
+# d0f3b69989624981b4372381a31fa1d0
+msgid "Reprojecting rasters"
+msgstr "Reproiectarea rasterelor"
+
+#: ../../rasters/data_manipulation.rst:114
+# 18684bde68c84e7ca6bf83be53c044a4
+msgid "Click on the menu item :menuselection:`Raster --> Projection --> Warp (Reproject)`."
+msgstr "Click pe :menuselection:`Raster --> Projection --> Warp (Reproject)`."
+
+#: ../../rasters/data_manipulation.rst:117
+# 05f5efdc222a472ea17c66615b663741
+msgid "Note that this tool features a handy batch option for reprojecting the contents of whole directories. You can also reproject virtual rasters (catalogs), as well as enabling a multithreaded processing mode."
+msgstr ""
+"Observati ca acest instrument contine multe optiuni pentru reproiectarea "
+"continutului directoarelor. Puteti reproiecta rastere virtuale (cataloage), "
+"si puteti activa modul de procesare multithreading."
+
+#: ../../rasters/data_manipulation.rst:122
+# f9afc3ccb18c45ecbcc596bbecce0a79
+msgid "Merging rasters"
+msgstr "Combinarea rasterelor"
+
+#: ../../rasters/data_manipulation.rst:124
+# 7e0b5984cdda445d85c0307b014ab399
+msgid "Click on the menu item :menuselection:`Raster --> Miscellaneous --> Merge`."
+msgstr "Click pe :menuselection:`Raster --> Miscellaneous --> Merge`. "
+
+#: ../../rasters/data_manipulation.rst:126
+# 7affe35cee0c406ab23b513aa2abad3b
+msgid "You can choose to process entire directories instead of single files, giving you a very useful built-in batch processing capability. You can specify a virtual raster as input file, too, and all of the rasters that it consists of will be processed."
+msgstr ""
+"Puteti alege sa procesati directoare intregi in loc de a procesa fisierele pe "
+"rand, oferind o capacitate de procesare a grupelor de fisiere. Puteti "
+"specifica un raster virtual ca si fisier de input si toate rasterele care le "
+"contine, vor fi procesate."
+
+#: ../../rasters/data_manipulation.rst:131
+# 25dbaaea7ece4f198eda629c3bec5a66
+msgid "You can also add your own command line options using the :guilabel:`Creation Options` checkbox and list. This only applies if you have knowledge of the GDAL library's operation."
+msgstr ""
+"Pot fi adaugate linii de comanda proprii folosind :guilabel:`Creation "
+"Options`. Aceasta optiune poate fi folosita daca aveti cunostinte despre "
+"operatiile bibliotecilor GDAL."
+
+#: ../../rasters/data_manipulation.rst:138
+# 2c0f4e4704a04fd38152ad8b554b97c5
+msgid "QGIS makes it easy to include raster data into your existing projects."
+msgstr ""
+"QGIS permite introducerea usoara a datelor raster in proiectele existente."
+
+#: ../../rasters/data_manipulation.rst:143
+# 5124cb6d778743cf885c53cb05d32ddf
+msgid "Next, we'll use raster data that isn't aerial imagery, and see how symbolization is useful in the case of rasters as well!"
+msgstr ""
+"In continuare, vom folosi date raster care nu sunt imagini aeriene, si vom "
+"vedea cum simbolizarea este utila si in cazul rasterelor!"
+
+#: ../../rasters/index.rst:3
+# 2efa17a2aed34c879da9714f5e0c8500
+msgid "|MOD| Rasters"
+msgstr "|MOD| Rastere"
+
+#: ../../rasters/index.rst:5
+# efbff22ef5e9444cad70eed6933dff1f
+msgid "We've used rasters for digitizing before, but raster data can also be used directly. In this module, you'll see how it's done in QGIS."
+msgstr ""
+"Am folosit rastere pentru digitizare, dar datele raster pot fi folosite si "
+"direct. In acest modul vom vedea cum este facut acest lucru in QGIS."
+
+#: ../../rasters/terrain_analysis.rst:2
+# 7e1a55d1fd2e47fcadfb65ef5b67e01d
+msgid "|LS| Terrain Analysis"
+msgstr "|LS| Analiza Terenului"
+
+#: ../../rasters/terrain_analysis.rst:4
+# 73172c5691b5466eaabc35b0ee2ca87f
+msgid "Certain types of rasters allow you to gain more insight into the terrain that they represent. Digital Elevation Models (DEMs) are particularly useful in this regard. In this lesson you will use terrain analysis tools to find out more about the study area for the proposed residential development from earlier."
+msgstr ""
+"Anumite tipuri de rastere va permit sa culegeti mai multe informatii despre "
+"terenul care il reprezinta. Modelele Digitale de Elevatie (DEM) sunt utile in "
+"acest sens. In aceasta lectie vom folosi instrumente de analiza a terenului "
+"pentru a afla mai multe despre zona de studiu propusa pentru dezvoltarea "
+"rezidentiala de mai devreme."
+
+#: ../../rasters/terrain_analysis.rst:9
+# e2f128bd6dca44d5b5aef2d65325f10e
+msgid "**The goal for this lesson:** To use terrain analysis tools for more information on terrain."
+msgstr ""
+"**Obiectivul acestei lectii:** Utilizarea instrumentelor de analiza pentru "
+"mai multe informatii despre teren."
+
+#: ../../rasters/terrain_analysis.rst:13
+# 08407b7502c540a7b2c5ec1b4cd8dd0a
+msgid "|basic| |FA| Calculating a Hillshade"
+msgstr "|introductiv| |FA| Calcularea Hillshade"
+
+#: ../../rasters/terrain_analysis.rst:15
+# 2a515bfad15046729835d3f994a23ee3
+msgid "The DEM you have on your map right now does show you the elevation of the terrain, but it can sometimes seem a little abstract. It contains all the 3D information about the terrain that you need, but it doesn't look like a 3D object. To get a better look at the terrain, it is possible to calculate a *hillshade*, which is a raster that maps the terrain using light and shadow to create a 3D-looking image."
+msgstr ""
+"DEM-ul care il avem pe harta acum, arata elevatia terenului dar cateodata "
+"poate fi putin abstracta. Contine toate informatiile 3D care sunt necesare "
+"dar nu arata ca un obiect 3D. Pentru a putea vedea mai bine terenul, este "
+"posibila calcularea *hillshade* (umbra dealurilor), care este un raster care "
+"cartografiaza terenul folosind lumini si umbre pentru a crea o imagine 3D."
+
+#: ../../rasters/terrain_analysis.rst:22
+# f1e8532c9b434c35911852b2126d6d0f
+msgid "To work with DEMs, you should use QGIS' all-in-one :guilabel:`DEM (Terrain models)` analysis tool."
+msgstr ""
+"Pentru a lucra cu DEM-uri, ar trebui sa folositi instrumentele QGIS "
+":guilabel:`DEM (Terrain models)` all-in-one de analiza a terenului."
+
+#: ../../rasters/terrain_analysis.rst:25
+# e097195b94a34e3a8368051b894348f0
+msgid "Click on the menu item :menuselection:`Raster --> Analysis --> DEM (Terrain models)`."
+msgstr "Click pe :menuselection:`Raster --> Analysis --> DEM (Terrain models)`."
+
+#: ../../rasters/terrain_analysis.rst:27
+# 4d8bd8b0574e49528c6017d98b1f320a
+msgid "In the dialog that appears, ensure that the :guilabel:`Input file` is the :guilabel:`DEM` layer."
+msgstr ""
+"In caseta de dialog care apare, asigurati-va ca :guilabel:`Input file` este "
+"layerul :guilabel:`DEM`."
+
+#: ../../rasters/terrain_analysis.rst:29
+# d1efb8edf04e4d1c8364ba4e2f8da766
+msgid "Set the :guilabel:`Output file` to :kbd:`hillshade.tif` in the directory :kbd:`exercise_data/residential_development`."
+msgstr ""
+"Setati :guilabel:`Output file` ca si :kbd:`hillshade.tif` in directorul "
+":kbd:`exercise_data/residential_development`."
+
+#: ../../rasters/terrain_analysis.rst:31
+# 8ae42f373f8e4cd386df86184d2e449a
+msgid "Check the box next to :guilabel:`Load into canvas when finished`."
+msgstr "Bifati casuta de langa :guilabel:`Load into canvas when finished`."
+
+#: ../../rasters/terrain_analysis.rst:32
+# ee10c1d521d645bd933814bf662ce99b
+msgid "You may leave all the other options unchanged."
+msgstr "Puteti lasa celalalte optiuni neschimbate."
+
+#: ../../rasters/terrain_analysis.rst:33
+# 13892f16f4754f02bb5c209ea04a7311
+msgid "Click :guilabel:`OK` to generate the hillshade."
+msgstr "Click :guilabel:`OK` pentru a genera hillshade-ul."
+
+#: ../../rasters/terrain_analysis.rst:34
+# 2f30bd92ad7d43218249c44a22e4aac7
+msgid "When it tells you that processing is completed, click :guilabel:`OK` on the message to get rid of it."
+msgstr ""
+"Cand primiti mesajul ca procesarea este completa click pe :guilabel:`OK` "
+"pentru a face mesajul sa dispara."
+
+#: ../../rasters/terrain_analysis.rst:36
+# 5ebcc6b336c749dab9ad71e79573d294
+msgid "Click :guilabel:`Close` on the main :guilabel:`DEM (Terrain models)` dialog."
+msgstr ""
+"Click :guilabel:`Close` pe fereastra principala :guilabel:`DEM (Terrain "
+"models)` dialog."
+
+#: ../../rasters/terrain_analysis.rst:38
+# 899faf160a8645b5b8da24d3e1ba8c02
+msgid "You will now have a new layer called :guilabel:`hillshade` that looks like this:"
+msgstr "Acum aveti un nou layer denumit :guilabel:`hillshade` care arata asa:"
+
+#: ../../rasters/terrain_analysis.rst:44
+# 8ade8137dcfd487985f7244c12200c11
+msgid "That looks nice and 3D, but can we improve on this? On its own, the hillshade looks like a plaster cast. Can't we use it together with our other, more colorful rasters somehow? Of course we can, by using the hillshade as an overlay."
+msgstr ""
+"Arata frumos si 3D, dar il putem imbunatati? De unul singur, hillshade-ul "
+"arata ca un mulaj de ghips. Nu il putem folosi impreuna cu celalalte rastere "
+"mai colorate? Desigur ca putem, folosind hillshade-ul, suprapus."
+
+#: ../../rasters/terrain_analysis.rst:50
+# a21e92840485461bb60a0f0ca34b2533
+msgid "|basic| |FA| Using a Hillshade as an Overlay"
+msgstr "|introductiv| |FA| Utilizarea unui Hillshade suprapus"
+
+#: ../../rasters/terrain_analysis.rst:52
+# be87984887fa41b1bf5234910dc7424c
+msgid "A hillshade can provide very useful information about the sunlight at a given time of day. But it can also be used for aesthetic purposes, to make the map look better. The key to this is setting the hillshade to being mostly transparent."
+msgstr ""
+"Un hillshade poate oferi informatii utile despre lumina intr-un anumit moment "
+"al zilei. Dar poate fi folosit si cu scop estetic, pentru a face harta sa "
+"arate mai frumos. Cheia este de a face hillshade-ul sa fie transparent."
+
+#: ../../rasters/terrain_analysis.rst:57
+# eb29d247975143108850801877437aa6
+msgid "Change the symbology of the original :guilabel:`DEM` to use the :guilabel:`Pseudocolor` scheme."
+msgstr ""
+"Modificati simbologia :guilabel:`DEM` original pentru a folosi schema "
+":guilabel:`Pseudocolor`."
+
+#: ../../rasters/terrain_analysis.rst:59
+# f60dab62599d4e4ea4ac8ed8690537fd
+msgid "Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade` layers."
+msgstr ""
+"Dezactivati toate layerele mai putin :guilabel:`DEM` si :guilabel:`hillshade`."
+
+#: ../../rasters/terrain_analysis.rst:61
+# cfc1717890dd4e43ba0b2dd9627550ff
+msgid "Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade` layer in the :guilabel:`Layers list`. :guilabel:`Control rendering order` (beneath the list) should be checked as well."
+msgstr ""
+"Click si trageti de :guilabel:`DEM` pentru a il plasa sub "
+":guilabel:`hillshade` in :guilabel:`Layers list`. :guilabel:`Control "
+"rendering order` sa fie deasemenea bifata."
+
+#: ../../rasters/terrain_analysis.rst:64
+# ed7cac9a5b184a3389407cabc5320684
+msgid "Set the :guilabel:`hillshade` layer to be transparent."
+msgstr "Setati layerul :guilabel:`hillshade` sa fie transparent."
+
+#: ../../rasters/terrain_analysis.rst:65
+# 14d79c598b5d4be08f172cb42e18be18
+msgid "Open its :guilabel:`Layer Properties` and go to the :guilabel:`Transparency` tab."
+msgstr ""
+"Deschideti :guilabel:`Layer Properties` si deschideti tabul "
+":guilabel:`Transparency`."
+
+#: ../../rasters/terrain_analysis.rst:67
+# e63440b2bf5a4a5c932a9b910d7ed253
+msgid "Set the :guilabel:`Global transparency` to :kbd:`50%`:"
+msgstr "Setati :guilabel:`Global transparency` la :kbd:`50%`:"
+
+#: ../../rasters/terrain_analysis.rst:68
+# 6ad142061ffb4007b71d43729be10294
+msgid "Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get a result like this:"
+msgstr ""
+"Click :guilabel:`OK` in caseta de dialog :guilabel:`Layer Properties`. "
+"Rezultatul va arata asa:"
+
+#: ../../rasters/terrain_analysis.rst:74
+# ac67141c1f12469595e3e6f28ace00e7
+msgid "Switch the :guilabel:`hillshade` layer off and back on in the :guilabel:`Layers list` to see the difference it makes."
+msgstr ""
+"Dezactivati layerul :guilabel:`hillshade` si reactivati-l in "
+":guilabel:`Layers list` pentru a vedea ce diferenta face."
+
+#: ../../rasters/terrain_analysis.rst:77
+# 3987c2978866464abaa10610f97eceb4
+msgid "Using a hillshade in this way, it's possible to enhance the topography of the landscape. If the effect doesn't seem strong enough to you, you can change the transparency of the :guilabel:`hillshade` layer; but of course, the brighter the hillshade becomes, the dimmer the colors behind it will be. You will need to find a balance that works for you."
+msgstr ""
+"Folosind un hillshade astfel, este posibil sa imbunatatiti topografia "
+"terenului. Daca efectul nu pare destul de puternic, puteti modifica "
+"transparenta layerului :guilabel:`hillshade`; desigur, cu cat devine "
+"hillshade-ul mai puternic, cu atat par culorile din spate mai sterse. Va "
+"trebui sa gasiti un echilibru care va satisface."
+
+#: ../../rasters/terrain_analysis.rst:83
+# dc3116099ae3483b9ac67bf9620c813d
+msgid "Remember to save your map when you are done."
+msgstr "Nu uitati sa salvati harta cand ati terminat."
+
+#: ../../rasters/terrain_analysis.rst:92
+# 4f83d6937e744ba4b7092a9d2fad3d06
+msgid "|moderate| |FA| Calculating the Slope"
+msgstr "|moderat| |FA| Calcularea Pantei"
+
+#: ../../rasters/terrain_analysis.rst:94
+# 26eb5e27a63a4e188382d5ce21bee5e3
+msgid "Another useful thing to know about the terrain is how steep it is. If, as in our analysis, you want to build houses on the land there, then you need land that is relatively flat."
+msgstr ""
+"Un alt lucru important care trebuie stiut despre teren este inclinatia. Ca si "
+"in analiza, daca vreti sa construiti case pe o suprafata, trebuie aflat daca "
+"solul este relativ plat."
+
+#: ../../rasters/terrain_analysis.rst:98
+# 971872247b5d44f197b956e93dc1dc59
+msgid "To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM (Terain models)` tool."
+msgstr ""
+"Pentru a face acest lucru, folositi modul :guilabel:`Slope` al instrumentului "
+":guilabel:`DEM (Terain models)`."
+
+#: ../../rasters/terrain_analysis.rst:101
+# 3cd29e46543b4192bc2b3bc49145fadf
+msgid "Open the tool as before."
+msgstr "Deschideti instrumentul ca mai devreme."
+
+#: ../../rasters/terrain_analysis.rst:102
+# 5b7b920edb484fe3a385c7d756aada79
+msgid "Select the :guilabel:`Mode` option :guilabel:`Slope`:"
+msgstr "Selectati :guilabel:`Mode` option :guilabel:`Slope`:"
+
+#: ../../rasters/terrain_analysis.rst:107
+# d595d9a53216447582b9a2e7158c26e0
+msgid "Set the save location to :kbd:`exercise_data/residential_development/slope.tif`"
+msgstr ""
+"Setati locatia de salvare in :kbd:`exercise_data/residential_development/slope"
+".tif`"
+
+#: ../../rasters/terrain_analysis.rst:109
+# bda236e6fb6441b3bcd513ea05395359
+msgid "Enable the :guilabel:`Load into canvas...` checkbox."
+msgstr "Bifati casuta :guilabel:`Load into canvas...`."
+
+#: ../../rasters/terrain_analysis.rst:110
+# eca30ee1393345a78e5694f157c57208
+msgid "Click :guilabel:`OK` and close the dialog when processing is complete. You'll see a new raster loaded into your map."
+msgstr ""
+"Click :guilabel:`OK` si inchideti caseta de dialog cand procesarea este "
+"completa. Veti vedea un nou raster incarcat pe harta."
+
+#: ../../rasters/terrain_analysis.rst:112
+# 7b8d2f6af8c849fc88cf3c451e64c71e
+msgid "With the new raster selected in the :guilabel:`Layers list`, click the :guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the slope of the terrain, with black pixels being flat terrain and white pixels, steep terrain:"
+msgstr ""
+"Cu noul raster selectat in :guilabel:`Layers list`, click pe butonul "
+":guilabel:`Stretch Histogram to Full Dataset`. Acum veti vedea inclinatia "
+"terenului, cu pixeli negri care reprezinta teren drept si pixeli albi care "
+"reprezinta teren abrupt:"
+
+#: ../../rasters/terrain_analysis.rst:123
+# 27ef29d5467945cb9d0a1c1cb76c50e7
+msgid "|moderate| |TY| calculating the aspect"
+msgstr "|moderat| |TY| Calcularea Aspectului"
+
+#: ../../rasters/terrain_analysis.rst:125
+# 2b8aa1c4c64a4c379eae55953742ff40
+msgid "The *aspect* of terrain refers to the direction it's facing in. Since this study is taking place in the Southern Hemisphere, properties should ideally be built on a north-facing slope so that they can remain in the sunlight."
+msgstr ""
+"*Aspectul* terenului face referire la directia de orientare. Din moment ce "
+"acest studiu are loc in emisfera sudica, proprietatile ar trebui construite "
+"ideal, pe o panta orientata spre nord, astfel incat sa ramana in soare."
+
+#: ../../rasters/terrain_analysis.rst:129
+# c9a652dca4de402d8a5699689f1873df
+msgid "Use the :guilabel:`Aspect` mode of the :guilabel:`DEM (Terain models)` tool to calculate the aspect of the terrain."
+msgstr ""
+"Folositi modul :guilabel:`Aspect` al instrumentului :guilabel:`DEM (Terain "
+"models)` pentru a calcula aspectul terenului."
+
+#: ../../rasters/terrain_analysis.rst:132
+# 54add29dca624f5198805d7dce5d1499
+msgid ":ref:`Check your results <raster-analysis-1>`"
+msgstr ":ref:`Check your results <raster-analysis-1>`"
+
+#: ../../rasters/terrain_analysis.rst:135
+# 38a33218ff3941f499928a8fa7b2b139
+msgid "|moderate| |FA| Using the Raster Calculator"
+msgstr "|moderat| |FA| Utilizarea Calculatorului de Raster"
+
+#: ../../rasters/terrain_analysis.rst:137
+# d0f6accd310d45859d294be173bbfdad
+msgid "Think back to the residential property development problem, which we last addressed in the *Vector Analysis* lesson. So far, you've identified several farms that would be suitable, but without taking the terrain into account. Let's say that an ideal farm for development needs to have areas on it that are north-facing, and with a slope of less than five degrees. But if the slope is less than 2 degrees, then the aspect doesn't matter."
+msgstr ""
+"Ganditi-va la problema dezvoltarii proprietatilor rezidentiale, pe care am "
+"rezolvat-o in lectia *Analiza Vectoriala*. Pana acum am identificat cateva "
+"ferme care ar fi potrivite, fara a lua terenul in considerare. Sa spunem ca o "
+"ferma ideala pentru dezvoltare are nevoie de suprafete care sunt orientate "
+"spre nord, si cu o inclinatie de mai putin de cinci grade. Daca inclinatia "
+"este mai mica de 2 grade, atunci aspectul nu mai conteaza."
+
+#: ../../rasters/terrain_analysis.rst:144
+# ab047ac6aba94cbd9546e9635a98cea6
+msgid "Fortunately, you already have rasters showing you the slope as well as the aspect, but you have no way of knowing where both conditions are satisfied at once. How could this analysis be done?"
+msgstr ""
+"Din fericire, deja avem rastere care ne arata inclinatia si aspectul, dar nu "
+"avem cum sa stim unde sunt indeplinite ambele conditii in acelasi timp. Cum "
+"ar putea fi facuta aceasta analiza?"
+
+#: ../../rasters/terrain_analysis.rst:148
+# cbacc1d2517d4cd7924a56d3f21ad23c
+msgid "The answer lies with the :guilabel:`Raster calculator`."
+msgstr "Raspunsul se afla in :guilabel:`Raster calculator`."
+
+#: ../../rasters/terrain_analysis.rst:150
+# b28d2aa59d4a4a69a3b9104b8bc81190
+msgid "Click on :menuselection:`Raster > Raster calculator...` to start this tool."
+msgstr ""
+"Click pe :menuselection:`Raster > Raster calculator...` pentru a porni "
+"instrumentul."
+
+#: ../../rasters/terrain_analysis.rst:151
+# d29ed3cf5472417b98bfdcacb7d7f5f9
+msgid "To make use of the :guilabel:`aspect` dataset, double-click on the item :guilabel:`aspect@1` in the :guilabel:`Raster bands` list on the left. It will appear in the :guilabel:`Raster calculator expression` text field below."
+msgstr ""
+"Pentru a folosi datasetul :guilabel:`aspect`, dublu-click pe "
+":guilabel:`aspect@1` din lista din stanga :guilabel:`Raster bands`. Va aparea "
+"in expresia campului din :guilabel:`Raster calculator expression`."
+
+#: ../../rasters/terrain_analysis.rst:155
+# f7d80bae41b14437a8f74a6ed4d6d725
+msgid "North is at 0 (zero) degrees, so for the terrain to face north, its aspect needs to be greater than 270 degrees and less than 90 degrees."
+msgstr ""
+"Nordul este la 0 grade (zero), asa ca pentru terenul care este orientat spre "
+"nord, aspectul trebuie sa fie mai mare de 270 de grade sau mai mic de 90 de "
+"grade."
+
+#: ../../rasters/terrain_analysis.rst:158
+# 0a15e35a8e544fcf9227c6cf2d7d4054
+msgid "In the :guilabel:`Raster calculator expression` field, enter this expression:"
+msgstr ""
+"In campul :guilabel:`Raster calculator expression`, introduceti aceasta "
+"expresie:"
+
+#: ../../rasters/terrain_analysis.rst:160
+# 7005333e7312468f8218305d0fad4443
+msgid ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+msgstr ":kbd:`aspect@1 <= 90 OR aspect@1 >= 270`"
+
+#: ../../rasters/terrain_analysis.rst:162
+# e4b01cf1310542b9b01a6b72f28d6943
+msgid "Set the output file to :kbd:`aspect_north.tif` in the directory :kbd:`exercise_data/residential_development/`."
+msgstr ""
+"Setati fisierul de output :kbd:`aspect_north.tif` in directorul "
+":kbd:`exercise_data/residential_development/`."
+
+#: ../../rasters/terrain_analysis.rst:164
+# 01b7d989b6ac490d8d9c9b606a789db1
+msgid "Ensure that the box :guilabel:`Add result to project` is checked."
+msgstr "Asigurati-va ca este bifata casuta :guilabel:`Add result to project`."
+
+#: ../../rasters/terrain_analysis.rst:165
+# df980db939614387949c434741d0dea9
+msgid "Click :guilabel:`OK` to begin processing."
+msgstr "Click :guilabel:`OK` pentru a incepe procesarea."
+
+#: ../../rasters/terrain_analysis.rst:170
+# 7db6a2f95c9f4dae98851b36f05b06ca
+msgid "Your result will be this:"
+msgstr "Rezultatul va fi acesta:"
+
+#: ../../rasters/terrain_analysis.rst:179
+# 6efbfce0406c4a0abf8cd57f46dfb491
+msgid "|moderate| |TY|"
+msgstr "|moderat| |TY|"
+
+#: ../../rasters/terrain_analysis.rst:181
+# 4cff658689324daead2622f4d73265f3
+msgid "Now that you've done the aspect, create two separate new analyses of the :guilabel:`DEM` layer."
+msgstr ""
+"Acum ca ati realizat aspectul, creati doua analize separate ale layerului "
+":guilabel:`DEM`."
+
+#: ../../rasters/terrain_analysis.rst:184
+# a40a700c998b441b97a09f96ec04e1d1
+msgid "The first will be to identify all areas where the slope is less than or equal to :kbd:`2` degrees."
+msgstr ""
+"Prima va fi pentru identificarea tuturor zonelor a caror panta este mai mica "
+"sau egala cu 2 grade."
+
+#: ../../rasters/terrain_analysis.rst:186
+# 99cb294b294048e892441fa8b30d54cd
+msgid "The second is similar, but the slope should be less than or equal to :kbd:`5` degrees."
+msgstr ""
+"A doua este asemanatoare, dar inclinatia treubie sa fie mai mica sau egala cu "
+":kbd:`5` grade."
+
+#: ../../rasters/terrain_analysis.rst:188
+# fe08e6f2606949cbae9cb0c888c134b9
+msgid "Save them under :kbd:`exercise_data/residential_development/` as :kbd:`slope_lte2.tif` and :kbd:`slope_lte5.tif`."
+msgstr ""
+"Salvati-le in :kbd:`exercise_data/residential_development/` ca si "
+":kbd:`slope_lte2.tif` si :kbd:`slope_lte5.tif`."
+
+#: ../../rasters/terrain_analysis.rst:191
+# 82ea297ec97a476184fd9e43e905a92d
+msgid ":ref:`Check your results <raster-analysis-2>`"
+msgstr ":ref:`Check your results <raster-analysis-2>`"
+
+#: ../../rasters/terrain_analysis.rst:195
+# a595a147b5184c30b152d73350713e50
+msgid "|moderate| |FA| Combining Raster Analysis Results"
+msgstr "|moderat| |FA| Combinarea Resultatelor de Analiza a Rasterelor"
+
+#: ../../rasters/terrain_analysis.rst:197
+# 20e16c1dd61d43cf8c5bf1ad5a8f2733
+msgid "Now you have three new analysis rasters of the :guilabel:`DEM` layer:"
+msgstr "Acum aveti trei rastere de analiza pentru layerul :guilabel:`DEM`:"
+
+#: ../../rasters/terrain_analysis.rst:199
+# 3aac4329aadc4de18668d2cd87991b3e
+msgid ":guilabel:`aspect_north`: the terrain faces north"
+msgstr ":guilabel:`aspect_north`: terenul este orientat spre nord"
+
+#: ../../rasters/terrain_analysis.rst:200
+# 19a789a9d23c412dbe789d5c0645f571
+msgid ":guilabel:`slope_lte2`: the slope is at or below 2 degrees"
+msgstr ":guilabel:`slope_lte2`: inclinatia este la 2 grade sau mai putin"
+
+#: ../../rasters/terrain_analysis.rst:201
+# e862ba4db1fc4a4aa52d94bc9a200f39
+msgid ":guilabel:`slope_lte5`: the slope is at or below 5 degrees"
+msgstr ":guilabel:`slope_lte5`: inclinatia este la 5 grade sau mai putin"
+
+#: ../../rasters/terrain_analysis.rst:203
+# f76f893218084fc495e734f2d736ee84
+msgid "Where the conditions of these layers are met, they are equal to :kbd:`1`. Elsewhere, they are equal to :kbd:`0`. Therefore, if you multiply one of these rasters by another one, you will get the areas where both of them are equal to :kbd:`1`."
+msgstr ""
+"Unde conditiile acestor layere sunt indeplinite, sunt egale cu :kbd:`1`. In "
+"celalalte zone sunt egale cu :kbd:`0`. Astfel, daca multiplicati unul din "
+"aceste layere cu celalalt, veti obtine zonele in care amandoua sunt egale cu "
+":kbd:`1`."
+
+#: ../../rasters/terrain_analysis.rst:208
+# 26eeb28a6ae74c14babac30edc66f7d7
+msgid "The conditions to be met are: at or below 5 degrees of slope, the terrain must face north; but at or below 2 degrees of slope, the direction that the terrain faces in does not matter."
+msgstr ""
+"Conditiile care trebuie indeplinite sunt: la o inclinatie de 5 sau mai putine "
+"grade, terenul trebuie sa fie orientat spre nord; dar la o inclinatie mai "
+"mica sau egala de 2 grade, directia terenului nu conteaza."
+
+#: ../../rasters/terrain_analysis.rst:212
+# 283d64c02a2c469d9e529ff39b1d880c
+msgid "Therefore, you need to find areas where the slope is at or below 5 degrees :kbd:`AND` the terrain is facing north; :kbd:`OR` the slope is at or below 2 degrees. Such terrain would be suitable for development."
+msgstr ""
+"Astfel, trebuie gasite zone unde inclinatia este la 5 grade sau mai putin SI "
+"terenul este orientat spre nord; SAU inclinatia este la 2 grade sau mai "
+"putin. Acesta este terenul potrivit pentru dezvoltare."
+
+#: ../../rasters/terrain_analysis.rst:216
+# 9fc9da6421974f349e5192b484ad554d
+msgid "To calculate the areas that satisfy these criteria:"
+msgstr "Pentru a calcula suprafetele care satisfac criteriile:"
+
+#: ../../rasters/terrain_analysis.rst:218
+# 72c6b28382a4437aa2223b2f06340763
+msgid "Open your :guilabel:`Raster calculator` again."
+msgstr "Deschideti :guilabel:`Raster calculator` din nou."
+
+#: ../../rasters/terrain_analysis.rst:219
+# 2c219f5d25d6442f844d69a839ccc881
+msgid "Use the :guilabel:`Raster bands` list, the :guilabel:`Operators` buttons, and your keyboard to build this expression in the :guilabel:`Raster calculator expression` text area:"
+msgstr ""
+"Folositi lista :guilabel:`Raster bands`, butoanele :guilabel:`Operators`, si "
+"tastatura pentru a construi expresia in campul de text  :guilabel:`Raster "
+"calculator expression`:"
+
+#: ../../rasters/terrain_analysis.rst:223
+# c1cf2cb0453e4cbf8b4829bd473cf007
+msgid ":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+msgstr ":kbd:`( aspect_north@1 = 1 AND slope_lte5@1 = 1 )  OR slope_lte2@1 = 1`"
+
+#: ../../rasters/terrain_analysis.rst:225
+# f5d2055242dd4c5f958ebf5aa110f09a
+msgid "Save the output under :kbd:`exercise_data/residential_development/` as :kbd:`all_conditions.tif`."
+msgstr ""
+"Salvati rezultatul in :kbd:`exercise_data/residential_development/` ca si "
+":kbd:`all_conditions.tif`."
+
+#: ../../rasters/terrain_analysis.rst:227
+# 761003c3fb6844b0a05e4d2ff0746d91
+msgid "Click :guilabel:`OK` on the :guilabel:`Raster calculator`. Your results:"
+msgstr "Click :guilabel:`OK` in :guilabel:`Raster calculator`. Rezultatele:"
+
+#: ../../rasters/terrain_analysis.rst:234
+# dd40718408e14e0aa5df1be3856f26ed
+msgid "|moderate| |FA| Simplifying the Raster"
+msgstr "|moderat| |FA| Simplificarea Rasterului"
+
+#: ../../rasters/terrain_analysis.rst:236
+# 4d283113e36d445b935d5876fb075821
+msgid "As you can see from the image above, the combined analysis has left us with many, very small areas where the conditions are met. But these aren't really useful for our analysis, since they're too small to build anything on. Let's get rid of all these tiny unusable areas."
+msgstr ""
+"Asa cum vedeti din imaginea de mai sus, analiza combinata ne-a lasat cu multe "
+"zone mici in care sunt indeplinite conditiile. Dar acestea nu sunt foarte "
+"utile pentru analiza, din moment ce sunt prea mici pentru a construi ceva. Sa "
+"scapam de toate zonele acestea care nu pot fi folosite."
+
+#: ../../rasters/terrain_analysis.rst:241
+# b0fd431b0b234fdfb7eeef1c99240b25
+msgid "Open the :guilabel:`Sieve` tool (:menuselection:`Raster --> Analysis --> Sieve`)."
+msgstr ""
+"Deschideti :guilabel:`Sieve` tool (:menuselection:`Raster --> Analysis --> "
+"Sieve`)."
+
+#: ../../rasters/terrain_analysis.rst:243
+# c3bfd90fe8ee42ce880fdb900d7dc797
+msgid "Set the :guilabel:`Input file` to :kbd:`all_conditions`, and the :guilabel:`Output file` to :kbd:`all_conditions_sieve.tif` (under :kbd:`exercise_data/residential_development/`)."
+msgstr ""
+"Setati :guilabel:`Input file` din :kbd:`all_conditions`, si :guilabel:`Output "
+"file` in :kbd:`all_conditions_sieve.tif` (totul in directorul "
+":kbd:`exercise_data/residential_development/`)."
+
+#: ../../rasters/terrain_analysis.rst:246
+# dac24d2aa71a4ce38244fb79f50e3d3d
+msgid "Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values to :kbd:`8`, then run the tool."
+msgstr ""
+"Setati valorile :guilabel:`Threshold` si :guilabel:`Pixel connections` la "
+":kbd:`8`, si folositi instrumentul."
+
+#: ../../rasters/terrain_analysis.rst:249
+# 0ec7c9cecc3e4de5b30f8de382eeff95
+msgid "Once processing is done, the new layer will load into the canvas. But when you try to use the histogram stretch tool to view the data, this happens:"
+msgstr ""
+"Cand procesarea a luat sfarsit, noul layer se va incarca. Dar cand veti "
+"incerca sa folositi instrumentul de \"intindere\" a histogramei pentru a "
+"vizualiza datele, asta se intampla:"
+
+#: ../../rasters/terrain_analysis.rst:255
+# 6f4e9742a37e44159d45bfea0a50f902
+msgid "What's going on? The answer lies in the new raster file's metadata."
+msgstr "Ce se intampla? Raspunsul este in metadatele noului raster."
+
+#: ../../rasters/terrain_analysis.rst:257
+# 802df21023b74d7d8b8892633310badd
+msgid "View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer Properties` dialog."
+msgstr ""
+"Vizualizati metadatele din tabul :guilabel:`Metadata` al ferestrei de dialog "
+":guilabel:`Layer Properties`."
+
+#: ../../rasters/terrain_analysis.rst:260
+# cffc091eb595423095ecb2bf54b3cd34
+msgid "Whereas this raster, like the one it's derived from, should only feature the values :kbd:`1` and :kbd:`0`, it has the :kbd:`STATISTICS_MINIMUM` value of a very large negative number. Investigation of the data shows that this number acts as a null value. Since we're only after areas that weren't filtered out, let's set these null values to zero."
+msgstr ""
+"Desi acest raster, ca si cel din care este derivat, ar trebui sa contina doar "
+"valorile :kbd:`1` si :kbd:`0`, are valoarea :kbd:`STATISTICS_MINIMUM` unui "
+"numar negativ foarte mare. Cercetarea datelor arata ca acest numar se "
+"comporta ca o valoare nula. Din moment ce cautam doar zonele care nu au fost "
+"filtrate, sa setam aceste valori nule la zero."
+
+#: ../../rasters/terrain_analysis.rst:266
+# ed330eb73284422b822e944d527f0c10
+msgid "Open the :guilabel:`Raster Calculator` again, and build this expression:"
+msgstr ""
+"Deschideti :guilabel:`Raster Calculator` din nou, si construiti expresia:"
+
+#: ../../rasters/terrain_analysis.rst:268
+# f5869ee201f24d408032c43d303c4cc1
+msgid ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+msgstr ":kbd:`(all_conditions_sieve@1 <= 0) = 0`"
+
+#: ../../rasters/terrain_analysis.rst:270
+# 1ff00642dfcf45a8be40fd9b1f871bc1
+msgid "This will maintain all existing zero values, while also setting the negative numbers to zero; which will leave all the areas with value :kbd:`1` intact."
+msgstr ""
+"Acest lucru va pastra toate valorile existente la zero, in timp ce valorile "
+"negative sunt setate la zero; ceea ce va lasa valorile cu :kbd:`1` intacte."
+
+#: ../../rasters/terrain_analysis.rst:272
+# 1cf132a670ae4b159dac02a83ce61343
+msgid "Save the output under :kbd:`exercise_data/residential_development/` as :kbd:`all_conditions_simple.tif`."
+msgstr ""
+"Salvati rezultatul in :kbd:`exercise_data/residential_development/` cu numele "
+":kbd:`all_conditions_simple.tif`."
+
+#: ../../rasters/terrain_analysis.rst:275
+# e1e68b4742944c5297a9c1b3d7ad4da2
+msgid "Your output looks like this:"
+msgstr "Rezultatul ar trebui sa arate asa:"
+
+#: ../../rasters/terrain_analysis.rst:280
+# 1bf6df16edff4e60a9b4707ca5d5ec0c
+msgid "This is what was expected: a simplified version of the earlier results. Remember that if the results you get from a tool aren't what you expected, viewing the metadata (and vector attributes, if applicable) can prove essential to solving the problem."
+msgstr ""
+"La asta ne asteptam: o versiune simplificata a rezultatelor anterioare. "
+"Retineti ca daca rezultatele obtinute folosind un instrument nu sunt cele la "
+"care va asteptati, citirea metadatelor (si atributele vectorilor, daca este "
+"nevoie) se poate dovedi esentiala pentru rezolvarea problemei."
+
+#: ../../rasters/terrain_analysis.rst:288
+# d9340c42da4943f281570413dad678dc
+msgid "You've seen how to derive all kinds of analysis products from a DEM. These include hillshade, slope and aspect calculations. You've also seen how to use the raster calculator to further analyze and combine these results."
+msgstr ""
+"Ati vazut cum sa derivati diferite tipuri de analiza dintr-un DEM. Acestea "
+"includ calcule pentru hillshade, panta si aspect. Ati vazut si cum se "
+"foloseste Raster Calculator pentru continuarea si combinarea rezultatelor."
+
+#: ../../rasters/terrain_analysis.rst:295
+# f78134dbe7434881a211cd8b7edf3c7e
+msgid "Now you have two analyses: the vector analysis which shows you the potentially suitable farms, and the raster analysis that shows you the potentially suitable terrain. How can these be combined to arrive at a final result for this problem? That's the topic for the next lesson, starting in the next module."
+msgstr ""
+"Acum aveti doua analize: analiza vectoriala care va arata potentialele ferme "
+"potrivite, si analiza raster care arata potentialul teren potrivit. Cum pot "
+"fi acestea combinate pentru a ajunge la o concluzie finala pentru aceasta "
+"problema? Acesta este subiectul urmatoarei lectii, incepand cu urmatorul "
+"modul."
+

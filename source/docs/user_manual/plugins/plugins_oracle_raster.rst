@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _oracle_raster:
 
 Oracle GeoRaster Plugin

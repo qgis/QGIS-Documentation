@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _`label.getstarted`:
 
 ***************
@@ -29,7 +30,7 @@ Installation from source
 If you need to build |qg| from source, please refer to the installation
 instructions. They are distributed with the |qg| source code in a file
 called 'INSTALL'. You can also find it online at
-https://github.com/qgis/QGIS/blob/master/INSTALL
+http://htmlpreview.github.io/?https://raw.github.com/qgis/QGIS/master/doc/INSTALL.html
 
 Installation on external media
 ..............................

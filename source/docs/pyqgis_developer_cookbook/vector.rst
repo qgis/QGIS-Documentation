@@ -175,6 +175,11 @@ For deletion of fields just provide a list of field indexes.
   if caps & QgsVectorDataProvider.DeleteAttributes:
     res = layer.dataProvider().deleteAttributes( [ 0 ] )
 
+After adding or removing fields in the data provider the layer's fields need
+to be updated because the changes are not automatically propagated.
+::
+
+  layer.updateFields()
 
 .. _editing-buffer:
 

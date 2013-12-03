@@ -1,4 +1,5 @@
-.. |updatedisclaimer|
+|updatedisclaimer|
+
 .. _`label_qgisserver`:
 
 |qg| as OGC Data Server

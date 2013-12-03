@@ -1,4 +1,3 @@
-
 **************
 Map Production
 **************
@@ -155,7 +154,7 @@ For example, if we want to measure a distance of 100mm on a map with a scale of
 
    100 mm x 25,000 = 2,500,000 mm
 
-This means that 100 mm on the map is equivalent to 2,500,000 mm (250 m) in the
+This means that 100 mm on the map is equivalent to 2,500,000 mm (2500 m) in the
 real word.
 
 Another interesting aspect of a map scale, is that the lower the map scale, the

@@ -1,0 +1,1385 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012, Linfiniti Consulting CC
+# This file is distributed under the same license as the The Free Quantum GIS Training Manual package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: The Free Quantum GIS Training Manual 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-10 00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../postgis/geometry.rst:2
+# 1a4b34780937437e82cc3ced0d7cf3a2
+msgid "|LS| Geometry Construction"
+msgstr "|LS| Constructia Geometriei"
+
+#: ../../postgis/geometry.rst:4
+# 859f8f114eae4d5d86e7c7e47071295c
+msgid "In this section we are going to delve a little deeper into how simple geometries are constructed in SQL. In reality, you will probably use a GIS like QGIS to create complex geometries using their digitising tools; however, understanding how they are formulated can be handy for writing queries and understanding how the database is assembled."
+msgstr ""
+"In aceasta sectiune vom arunca o privire amanuntita asupra modului in care "
+"pot fi construite structuri geometrice simple in SQL. In realitate, probabil "
+"veti folosi un GIS ca si QGIS pentru a crea geometrii complexe, folosind "
+"instrumentele de digitizare; totusi, intelegand cum sunt formulate poate fi "
+"un lucru util pentru scrierea query-urilor si intelegerea modului in care "
+"este asamblata o baza de date."
+
+#: ../../postgis/geometry.rst:10
+# cfbe69c78ba0497c894f16f0dfd525ee
+msgid "**The goal of this lesson:** To better understand how to create spatial entities directly in PostgreSQL/PostGIS."
+msgstr ""
+"**Obiectivul acestei lectii:** Sa intelegem mai bine cum sa cream entitati "
+"spatiale direct in PostgreSQL/PostGIS."
+
+#: ../../postgis/geometry.rst:16
+# fca3e75dfcc64d758b4c2b358cd9d480
+msgid "Creating Linestrings"
+msgstr "Crearea liniilor (linestrings)"
+
+#: ../../postgis/geometry.rst:18
+# 4f2558f3fb79490285f57abb125f7a5c
+msgid "Before we start, let's get our streets table matching the others; i.e., having a constraint on the geometry, an index and an entry in the geometry_columns table."
+msgstr ""
+"Inainte de a incepe, sa facem tabelul cu strazi sa se potriveasca cu "
+"celalalte; sa avem o constrangere geometrica, un index si o intrare in "
+"coloana de geometrie a tabelului."
+
+#: ../../postgis/geometry.rst:22
+# 5868564fce8246e9965ab457e7791eaf
+msgid "Exercise:"
+msgstr "Exercitiu:"
+
+#: ../../postgis/geometry.rst:24
+# 156ef594a9244ffb8048514dec786a04
+msgid "Modify the streets table so that it has a geometry column of type ST_LineString."
+msgstr ""
+"Modificati tabelul strazilor astfel incat sa aiba o coloana de gemoetrie de "
+"tipul ST_LineString."
+
+#: ../../postgis/geometry.rst:26
+# b1911ca474d942319bf105fc54e20cc5
+msgid "Don't forget to do the accompanying update to the geometry columns table!"
+msgstr ""
+"Nu uitati sa faceti update-ul ce insoteste coloana de geometrie a tabelului!"
+
+#: ../../postgis/geometry.rst:28
+# 024f380eefb74d2d89fa30bc42650e3e
+msgid "Also add a constraint to prevent any geometries being added that are not LINESTRINGS or null."
+msgstr ""
+"Deasemenea, adaugati o conditie care sa previna adaugarea geometriilor care "
+"nu sunt LINESTRINGS sau null."
+
+#: ../../postgis/geometry.rst:30
+# c007126801fa4f02918429ff265e69df
+msgid "Create a spatial index on the new geometry column"
+msgstr "Creati un index spatial pe noua coloana de geometrie."
+
+#: ../../postgis/geometry.rst:57
+# 4650ba69f52342b59ceba10bc5331e9f
+msgid ":ref:`Check your results <geometry-1>`"
+msgstr ":ref:`Check your results <geometry-1>`"
+
+#: ../../postgis/geometry.rst:59
+# 8d47e9f3e9f24a63ab4af2fa6077e928
+msgid "Now let's insert a linestring into our streets table. In this case I am going to update an existing street record:"
+msgstr ""
+"Acum sa introducem o linie (linestring) in tabelul cu strazi. In acest caz, "
+"vom face un update pe o intrare deja existenta in tabel."
+
+#: ../../postgis/geometry.rst:67
+# eeb6c023fe6a49ff81a44995003a89d8
+msgid "Take a look at the results in QGIS. (You may need to right-click on the streets layer in the 'Layers' panel, and choose 'Zoom to layer extent'.)"
+msgstr ""
+"Observati rezultatele in QGIS. (Exista posibilitatea sa fie necesar "
+"click-dreapta pe layerul strazilor din panoul de layere, si sa selectati "
+"optiunea 'Zoom to layer extent')"
+
+#: ../../postgis/geometry.rst:70
+# 98d570d9f8074560ba6d3a0bf4cad15c
+msgid "Now create some more streets entries - some in QGIS and some from the command line."
+msgstr ""
+"Acum adaugati mai multe strazi - unele din QGIS si altele din linia de "
+"comanda."
+
+#: ../../postgis/geometry.rst:75
+# bc30984fbaa74b4bb80e13834d3d7dd9
+msgid "Creating Polygons"
+msgstr "Crearea poligoanelor"
+
+#: ../../postgis/geometry.rst:77
+# f968df825546464a9a368cd65d97ee7a
+msgid "Creating polygons is just as easy. One thing to remember is that by definition, polygons have at least four vertices, with the last and first being co-located."
+msgstr ""
+"Crearea poligoanelor este la fel de usoara. Un lucru care trebuie retinut "
+"este ca prin definitie, poligoanele au cel putin patru vertecsi, cu primul si "
+"ultimul fiind co-localizati."
+
+#: ../../postgis/geometry.rst:85
+# ada92b38049f49f8bf4eff87d3dfee50
+msgid "A polygon requires double brackets around its coordinate list; this is to allow you to add complex polygons with multiple unconnected areas. For instance:"
+msgstr ""
+"Un poligon are nevoie de paranteze duble pentru lista de coordonate; acest "
+"lucru este pentru a oferi posibilitatea de a crea poligoane complexe cu zone "
+"neconectate multiple. De exemplu:"
+
+#: ../../postgis/geometry.rst:95
+# f9bebe2b8d6f412ca8a95c48d7acbad0
+msgid "If you followed this step, you can check what it did by loading the cities dataset into QGIS, opening its attribute table, and selecting the new entry. Note how the two new polygons behave like one polygon."
+msgstr ""
+"Daca ati urmarit acest pas, puteti verifica ce a facut, incarcand datasetul "
+"oraselor in QGIS, deschizand tabela de atribute si selectand noile intrari. "
+"Observati cum cele doua poligoane noi se comporta ca un singur poligon."
+
+#: ../../postgis/geometry.rst:103
+# 6ae93f1e60264846869d8a5a15f9e634
+msgid "Exercise: Linking Cities to People"
+msgstr "Exercitiu: Conectarea Oraselor cu Oamenii"
+
+#: ../../postgis/geometry.rst:105
+# ee24028b8aec4da792eaac24277f6a41
+msgid "For this exercise you should do the following:"
+msgstr "Pentru acest exercitiu ar trebui sa faceti urmatoarele:"
+
+#: ../../postgis/geometry.rst:107
+# 9cb6c8cebe41495389e7b432e31a9a69
+msgid "Delete all data from your people table. Add a foreign key column to people that references the primary key of the cities table. Use QGIS to capture some cities. Use SQL to insert some new people records, ensuring that each has an associated street and city."
+msgstr ""
+"Stergeti toate datele din tabelul cu oameni. Adaugati o coloana cheie "
+"\"straina\" in tabelul oamenilor care face referire la cheia primara a "
+"tabelului cu orase. Folositi QGIS pentru a prinde cateva orase. Folositi SQL "
+"pentru a insera cateva inregistrari noi cu oameni, asigurandu-va ca fiecare "
+"are o strada si un oras asociat."
+
+#: ../../postgis/geometry.rst:114
+# 3c1610429c94436498ab0ee601aa8a86
+msgid "Your updated people schema should look something like this:"
+msgstr "Schema pentru oameni, revizuita, ar trebui sa arate asa:"
+
+#: ../../postgis/geometry.rst:171
+# b66b1f945cb44893b618a2522a732ea3
+msgid ":ref:`Check your results <geometry-2>`"
+msgstr ":ref:`Check your results <geometry-2>`"
+
+#: ../../postgis/geometry.rst:175
+# f043a1b1558d437f96bab827b30ea025
+msgid "Looking at our schema"
+msgstr "Observarea schemei"
+
+#: ../../postgis/geometry.rst:177
+# 3b86859cd90746f99300dd74c37edea5
+msgid "By now our schema should be looking like this:"
+msgstr "Pana acum, schema ar trebui sa arate asa:"
+
+#: ../../postgis/geometry.rst:196
+# a85c5fc4125c448292f6abc545d755a8
+msgid "Access Subobjects"
+msgstr "Accesarea Sub-obiectelor"
+
+#: ../../postgis/geometry.rst:198
+# 78a8b61631a943cf8acbd38b4fd73770
+msgid "With the SFS-Model functions, you have a wide variety of options to access subobjects of SFS Geometries. When you want to select the first vertex point of every polygon geometry in the table myPolygonTable, you have to do this in this way:"
+msgstr ""
+"Cu functiile SFS-Model, aveti o gama foarte variata de optiuni cu care sa "
+"accesati sub-obiectele geometriilor SFS. Cand vreti sa selectati primul "
+"vertex al fiecarui poligon in tabelul myPolygonTable, trebuie sa faceti acest "
+"lucru, in acest mod:"
+
+#: ../../postgis/geometry.rst:203
+# e459c1aba14f49f898cc849e6ecf171a
+msgid "Transform the polygon boundary to a linestring:"
+msgstr "Transformati limitele poligonului intr-un linestring (linie):"
+
+#: ../../postgis/geometry.rst:209
+# c5629244e223400ab706d08bbc935189
+msgid "select the first vertex point of the resultant linestring:"
+msgstr "Selectati primul vertex al linestring-ului rezultat:"
+
+#: ../../postgis/geometry.rst:219
+# 3d44e53be227408f856cb263fbb4d3c6
+msgid "Data Processing"
+msgstr "Procesarea Datelor"
+
+#: ../../postgis/geometry.rst:221
+# f209dbeed75348c584c315f9cbf758f4
+msgid "PostGIS supports all OGC SFS/MM standard conform functions. All these functions start with ``ST_``."
+msgstr ""
+"PostGIS suporta toate standardele pentru functii OGC SFS/MM. Toate aceste "
+"functii incep cu ``ST_``."
+
+#: ../../postgis/geometry.rst:225
+# a6a6ca8ade8345a8830bf984b06a6a87
+msgid "Clipping"
+msgstr "Decuparea"
+
+#: ../../postgis/geometry.rst:227
+# 3667c3e98a234987b6ac79764c4b5421
+msgid "To clip a subpart of your data you can use the :kbd:`ST_INTERSECT()` function. To avoid empty geometries, use:"
+msgstr ""
+"Pentru a decupa o sub-parte a datelor, puteti folosi functia "
+":kbd:`ST_INTERSECT()`. Pentru a evita geometriile goale, folositi:"
+
+#: ../../postgis/geometry.rst:248
+# b6da6cba7f0e45e0872523adecd6e5a7
+msgid "Building Geometries from Other Geometries"
+msgstr "Constructia geometriilor din geometrii mai vechi"
+
+#: ../../postgis/geometry.rst:250
+# 6d6a399c9df44a6ea6f6438aca2ea729
+msgid "From a given point table, you want to generate a linestring. The order of the points is defined by their :kbd:`id`. Another ordering method could be a timestamp, such as the one you get when you capture waypoints with a GPS receiver."
+msgstr ""
+"Dintr-un tabel de puncte, vreti sa generati un linestring. Ordinea acestor "
+"puncte este definita de :kbd:`id`. O alta metoda de ordonare ar putea fi dupa "
+"\"timestamp\" (data capturata, ex: in momentul crearii punctelor cu GPS) "
+
+#: ../../postgis/geometry.rst:258
+# f038b5cfe0b94168acc55f1294fdf712
+msgid "To create a linestring from a new point layer called 'points', you can run the following command:"
+msgstr ""
+"Pentru a crea un linestring dintr-un layer de puncte, denumit \"points\", "
+"puteti rula urmatoarea comanda:"
+
+#: ../../postgis/geometry.rst:270
+# 367b20e4df904905b8c927aee9e05130
+msgid "To see how it works without creating a new layer, you could also run this command on the 'people' layer, although of course it would make little real-world sense to do this."
+msgstr ""
+"Pentru a vedea cum functioneaza fara a crea un nou layer, puteti rula aceasta "
+"comanda pe layerul \"people\", desi, in realitate aceasta procedura nu ar "
+"avea logica."
+
+#: ../../postgis/geometry.rst:278
+# 21a91fb61869495c9c7e1d10222ea268
+msgid "Geometry Cleaning"
+msgstr "Curatarea geometriilor"
+
+#: ../../postgis/geometry.rst:280
+# 5950e0579f724058bedae7bd63bb7147
+msgid "You can get more information for this topic in `this blog entry <http://linfiniti.com/?s=cleangeometry>`_."
+msgstr ""
+"Pentru mai multe informatii despre acest subiect, `acest blog. "
+"<http://linfiniti.com/?s=cleangeometry>`_."
+
+#: ../../postgis/geometry.rst:284
+# bfefec1f2e9846a9b1c2eb246f32450c
+msgid "Differences between tables"
+msgstr "Diferentele dintre tabele"
+
+#: ../../postgis/geometry.rst:286
+# 41d5e908c941495a9848dfd98728e022
+msgid "To detect the difference between two tables with the same structure, you can use the PostgreSQL keyword :kbd:`EXCEPT`."
+msgstr ""
+"Pentru a detecta diferenta dintre doua tabele cu aceiasi structura, puteti "
+"folosi cuvantul cheie PostgreSQL :kbd:`EXCEPT`."
+
+#: ../../postgis/geometry.rst:295
+# 14fd230f10234440a10b2e4ad05c1bb1
+msgid "As the result, you will get all records from table_a which are not stored in table_b."
+msgstr ""
+"Ca si rezultat, veti obtine toate intrarile din table_a care nu sunt stocate "
+"in table_b."
+
+#: ../../postgis/geometry.rst:299
+# af66b8eb9303416db675b2aa38595554
+msgid "Tablespaces"
+msgstr "Tablespaces (spatii de tabele)"
+
+#: ../../postgis/geometry.rst:301
+# 4b79cead09f34b7fb3366290324d55ba
+msgid "You can define where postgres should store its data on disk by creating tablespaces."
+msgstr ""
+"Puteti defini unde ar trebui Postgres sa stocheze datele, creand un "
+"tablespace (spatiu de tabel)."
+
+#: ../../postgis/geometry.rst:308
+# e9205792a5e9480caddfae37ab919395
+msgid "When you create a database, you can then specify which tablespace to use e.g.:"
+msgstr ""
+"Cand creati o baza de date, puteti specifica care tablespace sa fie folosit, "
+"de exemplu:"
+
+#: ../../postgis/geometry.rst:315
+#: ../../postgis/import_export.rst:91
+#: ../../postgis/simple_feature_model.rst:251
+#: ../../postgis/spatial_functions.rst:243
+#: ../../postgis/spatial_queries.rst:392
+# e674a04a69d845caa0d0bfaf2049343e
+# 226daed890b2450f8c43b6c4132a5ebe
+# 44abe22e575d4d00b2821473ae96c07e
+# e099c239fc924a19b965771fe055659c
+# 7ad23690254f46e7ab5d3a982ea0b0e1
+msgid "|IC|"
+msgstr "|IC|"
+
+#: ../../postgis/geometry.rst:317
+# 93413c82210441e38c6275af2bb04827
+msgid "You've learned how to create more complex geometries using PostGIS statements. Keep in mind that this is mostly to improve your tacit knowledge when working with geo-enabled databases through a GIS frontend. You usually won't need to actually enter these statements manually, but having a general idea of their structure will help you when using a GIS, especially if you encounter errors that would otherwise seem cryptic."
+msgstr ""
+"Ati invatat cum sa creati geometrii complexe folosind comenzi PostGIS. "
+"Retineti ca acest lucru este mai mult pentru a va imbunatati cunostintele, "
+"cand lucrati cu baze de date geografice, printr-o interfata GIS. De obicei nu "
+"este nevoie sa introduceti aceste comenzi manual, dar este bine sa aveti "
+"cunostinte generale despre structura, deoarece va vor ajuta cand veti folosi "
+"un GIS, in special daca intalniti erori care la o prima vedere pot parea "
+"criptice."
+
+#: ../../postgis/import_export.rst:2
+# 923b042dc17649a2bf9d2e7d641d8201
+msgid "|LS| Import and Export"
+msgstr "|LS| Import si Export"
+
+#: ../../postgis/import_export.rst:4
+# 65a2552be20e4d73be9c898cbd9eede0
+msgid "Of course, a database with no easy way to migrate data into it and out of it would be no fun. Even more so for spatial data! Fortunately, there are a number of tools that will let you easily move data into and out of PostGIS."
+msgstr ""
+"Desigur, o baza de date care nu ar avea capacitati de migrare a "
+"informatiilor, ar fi inutila. Cu atat mai mult, pentru informatii spatiale! "
+"Din fericire, exista cateva instrumente care permit miscarea informatiilor."
+
+#: ../../postgis/import_export.rst:9
+# 2c46ccde001242f9b3123602737d7c4a
+msgid "shp2pgsql"
+msgstr "shp2pgsql"
+
+#: ../../postgis/import_export.rst:11
+# 673f72c610c842aa803b3ffefac10c28
+msgid "shp2pgsql is a commandline tool to import ESRI shapefiles to the database. Under Unix, you can use the following command for importing a new PostGIS table:"
+msgstr ""
+"shp2pgsql este un instrument de linie de comanda pentru importarea "
+"shapefile-urilor ESRI in baza de date. In Unix, puteti folosi urmatoarea "
+"comanda pentru a importa un nou tabel PostGIS:"
+
+#: ../../postgis/import_export.rst:20
+# 30e6f8227add4aafbc45627bf5365b62
+msgid "Under Windows, you have to perform the import process in two steps:"
+msgstr "In Windows, trebuie sa faceti procedura de importare, in doi pasi:"
+
+#: ../../postgis/import_export.rst:27
+# 9f57078520aa4785bd03c19cbb85318b
+msgid "You may encounter this error:"
+msgstr "Puteti intalni aceasta eroare:"
+
+#: ../../postgis/import_export.rst:34
+# 2605876c0ccd405b985b683b1c82c4d1
+msgid "This is a known issue regarding the creation *in situ* of a spatial index for the data you're importing. To avoid the error, exclude the :kbd:`-I` parameter. This will mean that no spatial index is being created directly, and you'll need to create it in the database after the data have been imported. (The creation of a spatial index will be covered in the next lesson.)"
+msgstr ""
+"Este o problema cunoscuta legata de crearea *in situ* a unui index spatial "
+"pentru datele care sunt importate. Pentru a evita eroarea, excludeti "
+"parametrul :kbd:`-I`. Asta inseamna ca nu este creat nici un index spatial "
+"direct, si va trebui sa il creati in baza de date dupa ce datele au fost "
+"importate. (Crearea indexului spatial va fi acoperita in urmatoarea lectie.)"
+
+#: ../../postgis/import_export.rst:41
+# 8fc5e8a7355b4d8d9467329ce77d4996
+msgid "pgsql2shp"
+msgstr "pgsql2shp"
+
+#: ../../postgis/import_export.rst:43
+# e66305a378444e5eb0c0df2deb1fe6de
+msgid "pgsql2shp is a commandline tool to export PostGIS Tables, Views or SQL select queries. To do this under Unix:"
+msgstr ""
+"pgsql2shp este un instrument de linie de comanda pentru exportarea tabelelor "
+"PostGIS, Vizualizarilor sau Query-urilor de selectare SQL. Pentru a face "
+"acest lucru in Unix:"
+
+#: ../../postgis/import_export.rst:51
+# 99ce55424f1646b592a858b189049d9a
+msgid "To export the data using a query:"
+msgstr "Pentru a exporta datele folosind un query:"
+
+#: ../../postgis/import_export.rst:59
+# 5c1dd2ba4f6243f5922fd757f41db8ab
+msgid "ogr2ogr"
+msgstr "ogr2ogr"
+
+#: ../../postgis/import_export.rst:61
+# aab69bbef8e740689aca7c41a988fbbe
+msgid "ogr2ogr is a very powerful tool to convert data into and from postgis to many data formats. ogr2ogr is part of the GDAL/OGR Software and has to be installed separately. To export a table from PostGIS to GML, you can use this command:"
+msgstr ""
+"ogr2ogr este un instrument foarte puternic pentru conversia datelor din "
+"format postgis in multe alte formate, si invers. ogr2ogr este parte din "
+"software-ul GDAL/OGR si trebuie instalat separat. Pentru a exporta un tabel "
+"din PostGIS in GML, puteti folosi aceasta comanda:"
+
+#: ../../postgis/import_export.rst:71
+# a1bff5a25059428c916be4b02d3f4fa4
+msgid "SPIT"
+msgstr "SPIT"
+
+#: ../../postgis/import_export.rst:73
+# 5051251531964394a22263b6d5df2045
+msgid "SPIT is a QGIS plugin which is delivered with QGIS. You can use SPIT for uploading ESRI shapefiles to PostGIS."
+msgstr ""
+"SPIT este un plugin QGIS care este instalat automat cu QGIS. Puteti folosi "
+"SPIT pentru incarcarea fisierelor shapefile ESRI in PostGIS."
+
+#: ../../postgis/import_export.rst:76
+# 25d4c8c81f01460fbc581d4634e2544e
+msgid "Once you've added the SPIT plugin via the :guilabel:`Plugin Manager`, look for this button:"
+msgstr ""
+"Cand ati adaugat plugin-ul SPIT din :guilabel:`Plugin Manager`, cautati acest "
+"buton:"
+
+#: ../../postgis/import_export.rst:82
+# 8e625f0c6d834f0f945fd98eb877130b
+msgid "Clicking on it will give you the SPIT dialog:"
+msgstr "Apasand click pe el, veti primi aceasta caseta de dialog: "
+
+#: ../../postgis/import_export.rst:87
+# c6ab66ab87424525bc1d59122096434f
+msgid "You can add shapefiles to the database by clicking the :guilabel:`Add` button, which will give you a file browser window."
+msgstr ""
+"Puteti adauga shapefile-uri in baza de date apasand click pe butonul "
+":guilabel:`Add`, ceea ce va deschide o fereastra de cautare."
+
+#: ../../postgis/import_export.rst:93
+# d179d562c0f74d1f89cf4c93e53c1b8a
+msgid "Importing and exporting data to and from the database can be done in many various ways. Especially when using disparate data sources, you will probably use these functions (or others like them) on a regular basis."
+msgstr ""
+"Importarea si exportarea datelor poate fi facuta in multe feluri. In special "
+"cand sunt folosite surse de date diferite, veti folosi aceste functii (sau "
+"altele asemanatoare) in mod regulat."
+
+#: ../../postgis/import_export.rst:98
+#: ../../postgis/simple_feature_model.rst:257
+#: ../../postgis/spatial_functions.rst:249
+#: ../../postgis/spatial_queries.rst:398
+# b0073a354ab4452f8fa70694b51f57a0
+# 481504e3dcb643ec8eb8410e97c747b7
+# e2a10d93d3754d3f96c4096128fdb766
+# 4677f8e37206478f9a3e003b5ff8d664
+msgid "|WN|"
+msgstr "|WN|"
+
+#: ../../postgis/import_export.rst:100
+# fee65888ce8c4039b6a15e7eb9bf5b04
+msgid "Next we'll look at how to query the data we've created before."
+msgstr ""
+"In continuare ne vom uita cum sa facem un query pentru datele pe care le-am "
+"creat inainte."
+
+#: ../../postgis/index.rst:3
+# 9339b53aa6484f68b4f0f0e9a7ca6f62
+msgid "|MOD| PostGIS"
+msgstr "|MOD| PostGIS"
+
+#: ../../postgis/index.rst:5
+# fd63b18239d3479db6e69366eb818c48
+msgid "PostGIS is an extension to PostgreSQL which allows it to handle and process geographic data. In this module, we'll learn how to set up and use the geographic functions that PostGIS offers."
+msgstr ""
+"PostGIS este o extensie a PostgreSQL care ii permite sa manipuleze si sa "
+"proceseze date geografice. In acest modul, vom invata cum sa setam si sa "
+"utilizam functiile geografice oferite de PostGIS."
+
+#: ../../postgis/index.rst:9
+# 76032bcf65d14ea992c0c7266bba1433
+msgid "While working through this section, you may want to keep a copy of the `PostGIS cheat sheet <../_static/postgis/postgis_cheatsheet.pdf>`_ available at `Boston GIS user group <http://www.bostongis.com/postgis_quickguide.bqg>`_. Another good friend is the `online <http://postgis.refractions.net/documentation/manual-1.5/>`_ PostGIS documentation."
+msgstr ""
+"Cat timp trecem prin aceasta sectiune, pastrati la indemana o copie "
+"<../_static/postgis/postgis_cheatsheet.pdf>`_ disponibila la `Boston GIS user "
+"group <http://www.bostongis.com/postgis_quickguide.bqg>`_. Un alt ajutor "
+"important este documentatia PostGIS `online "
+"<http://postgis.refractions.net/documentation/manual-1.5/>`_."
+
+#: ../../postgis/index.rst:16
+# 783db971571d48ce96b76c1a407554e3
+msgid "See also `PostGIS online <http://postgisonline.org/>`_."
+msgstr "Deasemenea, vedeti `PostGIS online <http://postgisonline.org/>`_."
+
+#: ../../postgis/simple_feature_model.rst:2
+# a625c835998843c69870806fdd4c6f91
+msgid "|LS| Simple Feature Model"
+msgstr "|LS| Model de Obiecte Simple"
+
+#: ../../postgis/simple_feature_model.rst:4
+# 7b1b45ab1616452789c7c6e6b485553e
+msgid "How can we store and represent geographic features in a database? In this lesson we'll cover one approach, the Simple Feature Model as defined by the OGC."
+msgstr ""
+"Cum putem stoca si reprezenta obiectele geografice intr-o baza de date? In "
+"aceasta lectie vom acoperi o abordare, modelul de obiecte simple asa cum este "
+"definit de OGC."
+
+#: ../../postgis/simple_feature_model.rst:8
+# 378d26ef1d8940659547024400a9dc9b
+msgid "**The goal for this lesson:** To learn what the SFS Model is and how to use it."
+msgstr ""
+"**Obiectivul acestei lectii:** Sa invatam ce este Modelul SFS si cum sa il "
+"folosim."
+
+#: ../../postgis/simple_feature_model.rst:11
+# 7bc58aa7dbf6427a8129d4a00dc45c24
+msgid "What is OGC"
+msgstr "Ce este OGC"
+
+#: ../../postgis/simple_feature_model.rst:13
+# cbc15e8d430847a08d91854f6f40dd82
+msgid "The Open Geospatial Consortium (OGC), an international voluntary consensus standards organization, originated in 1994. In the OGC, more than 370+ commercial, governmental, nonprofit and research organizations worldwide collaborate in an open consensus process encouraging development and implementation of standards for geospatial content and services, GIS data processing and data sharing. *- Wikipedia*"
+msgstr ""
+"Open Geospatial Consortium (OGC), organizatie voluntara internationala pentru "
+"standarde, ce a luat nastere in 1994. In OGC, mai mult de 370+ organizatii "
+"comerciale, guvernamentale, non-profit si de cercetare din intreaga lume "
+"colaboreaza in consens, incurajand dezvoltarea si implementarea standardelor "
+"pentru continut geospatial si servicii, procesarea datelor GIS si partajarea. "
+"* -Wikipedia*"
+
+#: ../../postgis/simple_feature_model.rst:21
+# 7cad5f26e25346488b6e6c4c05455eb2
+msgid "What is the SFS Model"
+msgstr "Ce este Modelul SFS"
+
+#: ../../postgis/simple_feature_model.rst:23
+# a6cca2a4f49a496193ac53ba61b78c49
+msgid "The Simple Feature for SQL (SFS) Model is a *non-topological* way to store geospatial data in a database and defines functions for accessing, operating, and constructing these data."
+msgstr ""
+"Modelul pentru Obiecte Simple pentru SQL este o metoda *non-topologica* de a "
+"stoca date geospatiale intr-o baza de date si defineste functiile pentru "
+"accesarea, operarea si constructia acestor date."
+
+#: ../../postgis/simple_feature_model.rst:30
+# 8d706ee0dc654f6597d8bc4763bf4ca1
+msgid "The model defines geospatial data from Point, Linestring, and Polygon types (and aggregations of them to Multi objects)."
+msgstr ""
+"Modelul defineste date geospatiale ca si puncte, linestring si poligoane (si "
+"combinatii intre ele ca si multi-obiecte)."
+
+#: ../../postgis/simple_feature_model.rst:33
+# 1e9288b4ce1c48919d7905c69db34727
+msgid "For further information, have a look at the `OGC Simple Feature for SQL <http://www.opengeospatial.org/standards/sfs>`_ standard."
+msgstr ""
+"Pentru mai multe informatii, vedeti standardul `OGC Simple Feature for SQL "
+"<http://www.opengeospatial.org/standards/sfs>`_"
+
+#: ../../postgis/simple_feature_model.rst:37
+# 28975de2e14e49bd8ae0a95ff421d5ec
+msgid "Add a geometry field to table"
+msgstr "Adaugarea campului de geometrie intr-un tabel"
+
+#: ../../postgis/simple_feature_model.rst:39
+# 3aa02d00025a495e98c49d8c721a3f09
+msgid "Let's add a point field to our people table:"
+msgstr "Sa adaugam un camp de puncte pentru tabelul cu oameni:"
+
+#: ../../postgis/simple_feature_model.rst:49
+# 74bcdbbdfbe540c797863b015c768dfe
+msgid "Add a constraint based on geometry type"
+msgstr "Adaugati o conditie bazata pe tipul de geometrie"
+
+#: ../../postgis/simple_feature_model.rst:51
+# c83ac374b3604e009dfca4953760eec8
+msgid "You will notice that the geometry field type does not implicitly specify what *type* of geometry for the field - for that we need a constraint."
+msgstr ""
+"Tipul campului de geometrie nu specifica implicit ce *tip* de geometrie este "
+"pentru camp - pentru asta vom avea nevoie de o conditie."
+
+#: ../../postgis/simple_feature_model.rst:60
+# 438b4227d1bd494c81332310ed3b8113
+msgid "What does that do? It adds a constraint to the table that prevents anything except a point geometry or a null."
+msgstr ""
+"Ce face acest lucru? Adauga conditia ca tabelul sa nu completeze campul "
+"respectiv cu altceva decat un punct sau null."
+
+#: ../../postgis/simple_feature_model.rst:63
+# 82312453283b47129fc13649663bd3d1
+msgid "Now you try:"
+msgstr "Acum incercati:"
+
+#: ../../postgis/simple_feature_model.rst:65
+# ad9a06cb54974d919f41ee7f4506ef89
+msgid "Create a new table called cities and give it some appropriate columns, including a geometry field for storing polygons (the city boundaries). Make sure it has a constraint enforcing geometries to be polygons."
+msgstr ""
+"Creati un nou tabel numit orase si dati-i coloane corespunzatoare, inclusiv "
+"campul de geometrie pentru stocarea poligoanelor (limitele oraselor). "
+"Asigurati-va ca are o conditie care sa spuna ca geometria trebuie sa fie sub "
+"forma unor poligoane."
+
+#: ../../postgis/simple_feature_model.rst:98
+# cd846b5a47594c9785d205f4318e1b67
+msgid ":ref:`Check your results <simple-feature-1>`"
+msgstr ":ref:`Check your results <simple-feature-1>`"
+
+#: ../../postgis/simple_feature_model.rst:104
+# bc974a12477f4870916aaf47f3352a47
+msgid "Populate geometry_columns table"
+msgstr "Populati tabelul geometry_columns"
+
+#: ../../postgis/simple_feature_model.rst:106
+# e13d7d754e6d40c98ad89b0574ef2856
+msgid "At this point you should also add an entry into the :kbd:`geometry_columns` table:"
+msgstr ""
+"In acest punct ar trebui sa adaugati si o intrare in tabelul "
+":kbd:`geometry_columns`:"
+
+#: ../../postgis/simple_feature_model.rst:114
+# d5352b0efde34a0f9a269270303296f5
+msgid "Why? :kbd:`geometry_columns` is used by certain applications to be aware of which tables in the database contain geometry data."
+msgstr ""
+"De ce? :kbd:`geometry_columns` este folosit de anumite aplicatii pentru a "
+"stii care tabel din baza de date contine datele geometrice."
+
+#: ../../postgis/simple_feature_model.rst:117
+# 02731744976849089a1f4f06d0f8b2e3
+msgid "If the above :kbd:`INSERT` statement causes a complaint, run this query first:"
+msgstr ""
+"Daca comanda :kbd:`INSERT` de mai sus creeaza o eroare, rulati mai intai "
+"acest query:"
+
+#: ../../postgis/simple_feature_model.rst:124
+# c2656f9319284308bd9c7d59c4ba8775
+msgid "If the column :kbd:`f_table_name` contains the value :kbd:`people`, then this table has already been registered and you don't need to do anything more."
+msgstr ""
+"Daca coloana :kbd:`f_table_name` contine valoarea :kbd:`people`, atunci acest "
+"tabel a fost deja inregistrat si nu veti avea nevoie sa faceti nimic altceva."
+
+#: ../../postgis/simple_feature_model.rst:128
+# 86821a602ccc4ceaadffb440b5662664
+msgid "The value :kbd:`2` refers to the number of dimensions; in this case, two: **x** and **y**."
+msgstr ""
+"Valoarea :kbd:`2` face referire la numarul de dimensiuni; in acest caz, doua: "
+"**x** si **y**."
+
+#: ../../postgis/simple_feature_model.rst:131
+# 62c5f1a2a44a4f5386cf4f86952a98fc
+msgid "The value :kbd:`4326` refers to the projection we are using; in this case, WGS 84, which is referred to by the number 4326 (refer to the earlier discussion about the EPSG)."
+msgstr ""
+"Valoarea :kbd:`4326` face referire la proiectia folosita; in acest caz, "
+"WGS84, la care se face referire prin numarul 4326 (vedeti discutia de mai "
+"devreme legata de EPSG)."
+
+#: ../../postgis/simple_feature_model.rst:135
+# a294afdb243247cc8258b5476ec5c45a
+msgid "Add an appropriate geometry_columns entry for your new cities layer"
+msgstr ""
+"Adaugati o inregistrare corespunzatoare pentru  geometry_columns, pentru noul "
+"layer cu orase."
+
+#: ../../postgis/simple_feature_model.rst:156
+# a429d9a5889c43b0a78700f6876fe8fd
+msgid ":ref:`Check your results <simple-feature-2>`"
+msgstr ":ref:`Check your results <simple-feature-2>`"
+
+#: ../../postgis/simple_feature_model.rst:162
+# f891f43c5bc7495eb9f40ed7b3e9c235
+msgid "Add geometry record to table using SQL"
+msgstr "Adaugati inregistrarea geometriei in tabel folosind SQL"
+
+#: ../../postgis/simple_feature_model.rst:164
+# 6589b00b3ab345ab81b097f480454e9d
+msgid "Now that our tables are geo-enabled, we can store geometries in them!"
+msgstr "Acum ca tabelele sunt compatibile geo, putem stoca geometri!"
+
+#: ../../postgis/simple_feature_model.rst:175
+# 434c0f3e2ee54b0b914de979db21a7db
+msgid "In the new entry above, you will need to specify which projection (SRID) you want to use. This is because you entered the geometry of the new point using a plain string of text, which does not automatically add the correct projection information. Obviously, the new point needs to use the same SRID as the dataset it is being added to, so you need to specify it."
+msgstr ""
+"In noua intrare de mai sus, va trebui sa specificati care proiectie (SRID) "
+"vreti sa fie folosita. Acest lucru este din caza ca ati introdus geometria "
+"noului punct folosind doar o linie de text, care nu adauga automat "
+"informatiile despre proiectie. Desigur, noul punct trebuie sa foloseasca "
+"acelasi SRID ca si datasetul la care este adaugat, asa ca va trebui sa fie "
+"specificat."
+
+#: ../../postgis/simple_feature_model.rst:181
+# 85557b6be9a14cf386116225e0fb8e04
+msgid "If at this point you were using a graphical interface, for example, specifying the projection for each point would be automatic. In other words, you usually won't need to worry about using the correct projection for every point you want to add if you've already specified it for that dataset, as we did earlier."
+msgstr ""
+"Daca pana acum foloseati o interfata grafica, de exemplu, specificarea "
+"proiectiei pentru fiecare punct ar fi automata. Cu alte cuvinte, de obicei nu "
+"trebuie sa va faceti griji despre folosirea proiectiei corecte pentru fiecare "
+"punct care vreti sa-l adaugati pentru acel dataset, asa cum am facut mai "
+"devreme."
+
+#: ../../postgis/simple_feature_model.rst:187
+# 0dd66783188048888c529032b667f7b6
+msgid "Now is probably a good time to fire up QGIS and try to view your :kbd:`people` table. Also, we should try editing / adding / deleting records and then performing select queries in the database to see how the data has changed."
+msgstr ""
+"Acum este probabil un moment potrivit sa pornim QGIS si sa incercam sa "
+"vizualizam tabelul :kbd:`people`. Deasemenea, ar trebui sa incercam "
+"editarea/adaugarea/stergerea inregistrarilor si apoi sa facem query-uri in "
+"baza de date pentru a vedea cum s-au modificat datele."
+
+#: ../../postgis/simple_feature_model.rst:191
+# f3c9da77d1be44fe82b35671a0a4eb26
+msgid "To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add PostGIS Layers` menu option or toolbar button:"
+msgstr ""
+"Pentru a incarca in layer PostGIS in QGIS, folositi :menuselection:`Layer --> "
+"Add PostGIS Layers` menu option or toolbar button:"
+
+#: ../../postgis/simple_feature_model.rst:197
+# f3746e04d2254ecaa24075ec5e0914e1
+msgid "This will open the dialog:"
+msgstr "Asta va deschide fereastra:"
+
+#: ../../postgis/simple_feature_model.rst:202
+# ff27509ce4fc4833b0ebfd91d59c37df
+msgid "Click on the :guilabel:`New` button to open this dialog:"
+msgstr "Click pe butonul :guilabel:`New` pentru a deschide caseta de dialog:"
+
+#: ../../postgis/simple_feature_model.rst:207
+# 302136a637cf412c8dfc5e5fb8f423b2
+msgid "Then define a new connection, e.g.:"
+msgstr "Apoi definiti o noua conexiune, ex.:"
+
+#: ../../postgis/simple_feature_model.rst:219
+# e61326d029d64b2687c2d428ff527553
+msgid "To see whether QGIS has found the :kbd:`address` database and that your username and password are correct, click :guilabel:`Test Connect`. If it works, check the boxes next to :guilabel:`Save Username` and :guilabel:`Save Password`. Then click :guilabel:`OK` to create this connection."
+msgstr ""
+"Pentru a vedea daca QGIS a gasit :kbd:`address` bazei de date si daca "
+"username-ul si parola sunt corecte, click :guilabel:`Test Connect`. Daca "
+"totul merge ok, bifati casutele de langa  :guilabel:`Save Username` si "
+":guilabel:`Save Password`. Apoi apasati click pe :guilabel:`OK` pentru a crea "
+"aceasta conexiune."
+
+#: ../../postgis/simple_feature_model.rst:224
+# 37e0f71975ad458cabe869a05e6aec29
+msgid "Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect` and add layers to your project as usual."
+msgstr ""
+"In caseta de dialog :guilabel:`Add PostGIS Layers`, click pe  "
+":guilabel:`Connect` si adaugati layerele in proiect."
+
+#: ../../postgis/simple_feature_model.rst:227
+# be5ba8c2cee44a10901ba7012d019db7
+msgid "Formulate a query that shows a person's name, street name and position (from the the_geom column) as plain text."
+msgstr ""
+"Formulati un query care arata numele persoanei, numele strazii si pozitia "
+"(din the_geom column) ca si text."
+
+#: ../../postgis/simple_feature_model.rst:248
+# 9a1210b49c764bfe9814e8811aae3bbe
+msgid ":ref:`Check your results <simple-feature-3>`"
+msgstr ":ref:`Check your results <simple-feature-3>`"
+
+#: ../../postgis/simple_feature_model.rst:253
+# af0c01d6e14c4d83b36cc677b7d8707c
+msgid "You have seen how to add spatial objects to your database and view them in GIS software."
+msgstr ""
+"Ati vazut cum se adauga obiecte spatiale in baza de date si cum le putem "
+"vedea in software GIS."
+
+#: ../../postgis/simple_feature_model.rst:259
+# 494da92e52e14bc998c546d6ab9eb98f
+msgid "Next you'll see how to import data into, and export data from, your database."
+msgstr ""
+"In continuare veti vedea cum sa importati si sa exportati datele din baza de "
+"date."
+
+#: ../../postgis/spatial_functions.rst:2
+# 8a5a63762a0e47ccbe684287633492f3
+msgid "|LS| PostGIS Setup"
+msgstr "|LS| Setarea PostGIS"
+
+#: ../../postgis/spatial_functions.rst:4
+# 88d0b9f585f045a3a0b7db4ad695515e
+msgid "Setting up PostGIS functions will allow you to access spatial functions from within PostgreSQL."
+msgstr ""
+"Setarea functiilor PostGIS va permite sa accesati functii spatiale din "
+"PostgreSQL."
+
+#: ../../postgis/spatial_functions.rst:7
+# 6f275751cfa948c894be6447cc83cbbe
+msgid "**The goal for this lesson:** To install spatial functions and briefly demo their effects."
+msgstr ""
+"**Obiectivul acestei lectii:** Instalarea functiilor spatiale si demonstrarea "
+"scurta a efectelor lor."
+
+#: ../../postgis/spatial_functions.rst:11
+# c2cee268db2842fcb287ce283cbffa4a
+msgid "Installing under Ubuntu"
+msgstr "Instalarea in Ubuntu"
+
+#: ../../postgis/spatial_functions.rst:13
+# 3fe18d9ad191456e870f647147ca5290
+msgid "Postgis is easily installed from apt."
+msgstr "PostGIS este usor de instalat din apt."
+
+#: ../../postgis/spatial_functions.rst:20
+# f34faf51d637461097e137247694e75d
+msgid "Really, it's that easy..."
+msgstr "Serios, este foarte usor..."
+
+#: ../../postgis/spatial_functions.rst:23
+# da5a6ae193c04ba8a7d519a44fae90c9
+msgid "Installing under Windows"
+msgstr "Instalarea in Windows"
+
+#: ../../postgis/spatial_functions.rst:25
+# ac4488909352405b95cd46378a3af1f5
+msgid "Visit `the download page <http://www.postgresql.org/download/>`_."
+msgstr "Vizitati `pagina de download <http://www.postgresql.org/download/>`_."
+
+#: ../../postgis/spatial_functions.rst:27
+# 826f4da3c7ca441abd7bcf217bc105bd
+msgid "Now follow `this guide <http://www.bostongis.com/PrinterFriendly.aspx?content_name=postgis_tut01>`_."
+msgstr ""
+"Acum urmariti `acest ghid <http://www.bostongis.com/PrinterFriendly.aspx?conte"
+"nt_name=postgis_tut01>`_."
+
+#: ../../postgis/spatial_functions.rst:30
+# d4f860e566014b939bab8589d9cbbe92
+msgid "A little more complicated, but still not hard. Note that you need to be online to install the postgis stack."
+msgstr ""
+"Putin mai complicat, dar nu este greu. Va trebui sa aveti o conexiune la "
+"internet pentru a instala stack-ul PostGIS."
+
+#: ../../postgis/spatial_functions.rst:34
+# 3a81ac6a9075421b947b06ba5341c38d
+msgid "Install plpgsql"
+msgstr "Instalati plpgsql"
+
+#: ../../postgis/spatial_functions.rst:36
+# 7b060e5b4a9842ee8bd3580a4b569a12
+msgid "You can ensure that any database created on your system automatically gets these spatial extensions by running these commands (from this and the next two sections) on the :kbd:`template1` system database *before* you create any of your own databases."
+msgstr ""
+"Va puteti asigura ca orice baza de date creata pe sistem, primeste automat "
+"aceste extensii, ruland aceste comenzi (din aceasta sectiune, si urmatoarea) "
+"pe baza de date :kbd:`template1` *inainte* de a crea o baza de date personala."
+
+#: ../../postgis/spatial_functions.rst:41
+# 587787de9bd44394b47e5c55bb850375
+msgid "PostgreSQL can use various procedural languages. What is a procedural language? It is an 'in database' language that can be used to extend the functionality of the database. For example you can write database functions that are called when events happen - such as when a record is inserted into the database. (Recall when this was done in the previous module.)"
+msgstr ""
+"PostgreSQL poate folosi mai multe limbaje de procedura. Ce este un limbaj de "
+"procedura? Este un limbaj \"in baza de date\" care poate fi folosit pentru a "
+"extinde functionalitatea bazelor de date. De exemplu puteti scrie functii "
+"pentru baza de date care sunt activate cand anumite evenimente iau loc - cand "
+"o inregistrare este introdusa in baza de date. (Va aduceti aminte cand am "
+"facut acest lucru in modulul trecut.)"
+
+#: ../../postgis/spatial_functions.rst:47
+# fe6258e903a243c5bfc0137490fe5ef8
+msgid "PostGIS requires the PLPGSQL procedural language to be installed. So do this:"
+msgstr ""
+"PostGIS are nevoie ca limbajul de procedura PLPGSQL, sa fie instalat. Faceti "
+"asta:"
+
+#: ../../postgis/spatial_functions.rst:55
+# 1d976e8c10b346bd9a13bb12e8a03ed4
+msgid "Where the third argument is the name of the database that the procedural language should be installed into."
+msgstr ""
+"Unde al treilea argument este numele bazei de date, acolo trebuie instalat "
+"limbajul de procedura."
+
+#: ../../postgis/spatial_functions.rst:58
+# a2055f5aed6645f1bf1abb310ae105b6
+msgid "You will need administrative permissions for your database to be able to do this."
+msgstr ""
+"Veti avea nevoie de drepturi de administrator pentru ca baza de date sa poata "
+"face asta."
+
+#: ../../postgis/spatial_functions.rst:62
+# 3e3ea0f50ebe4e5c9371f4249cb4189b
+msgid "Install postgis.sql"
+msgstr "Instalati postgis.sql"
+
+#: ../../postgis/spatial_functions.rst:64
+# 8587e61ddc0b42c2be2f42ff1b93387e
+msgid "PostGIS can be thought of as a collection of in database functions that extend the core capabilities of PostgreSQL so that it can deal with spatial data. By 'deal with', we mean store, retrieve, query and manipulate. In order to do this, a number of functions are installed into the database. Do this:"
+msgstr ""
+"PostGIS poate fi considerat o colectie de functii pentru baze de date care "
+"extind capacitatile de baza PostgreSQL astfel incat sa poata folosi date "
+"spatiale. Cand spunem \"folosi\", ne referim la stocare, accesare, query si "
+"manipulare. Pentru a face acest lucru, un numar de functii sunt instalate in "
+"baza de date. Faceti asta:"
+
+#: ../../postgis/spatial_functions.rst:73
+# e8022d48a9fb43a89c49010c345ed041
+msgid "or"
+msgstr "sau"
+
+#: ../../postgis/spatial_functions.rst:79
+# c9927ac8e25f439a9aeb4690c067271f
+msgid "depending on which PostGIS version you have installed. Now do:"
+msgstr "In functie de versiunea PostGIS care este instalata. Acum faceti asta:"
+
+#: ../../postgis/spatial_functions.rst:85
+# df11cd7c1af241549bb8613fed03a47c
+msgid "and, once you're in the psql prompt:"
+msgstr "si, cand sunteti in linia de comanda psql:"
+
+#: ../../postgis/spatial_functions.rst:91
+# 518f28b280324a54afdb5be1a482acf9
+msgid "We will discuss these functions in more detail as we proceed with this course."
+msgstr ""
+"vom discuta aceste functii in detaliu pe masura ce progresam prin acest curs."
+
+#: ../../postgis/spatial_functions.rst:94
+# febc37a9b72a47a7a955ba514fd781ae
+msgid "Install spatial_refsys.sql"
+msgstr "Instalati spatial_refsys.sql"
+
+#: ../../postgis/spatial_functions.rst:96
+# 0049cd6fde394826b04a858d919571d3
+msgid "In addition to the PostGIS functions, a second helper SQL script needs to be run that will load the database with a collection of spatial reference system (SRS) definitions as defined by the European Petroleum Survey Group (EPSG). These are used during operations such as coordinate reference system (CRS) conversions."
+msgstr ""
+"Pe langa functiile PostGIS, un script secundar SQL ajutator trebuie rulat, "
+"pentru a incarca baza de date cu o colectie de definitii pentru sisteme "
+"spatiale de referinta (SRS) asa cum sunt ele definite de European Petroleum "
+"Survey Group (EPSG). Acestea sunt folosite pentru operatii cum ar fi "
+"conversiile CRS-urilor."
+
+#: ../../postgis/spatial_functions.rst:102
+# 4ac45fb1247547aea61d3fed4f21b2d2
+msgid "You can add more to the SRS list later if needed, but the list provided should cover just about every SRS you will need (Google Mercator and lo are notable exceptions)."
+msgstr ""
+"Puteti completa lista SRS mai tarziu daca este necesar, dar lista oferita ar "
+"trebui sa acopere toate SRS-urile de care veti avea nevoie (Google Mercator "
+"si lo sunt exceptii notabile)."
+
+#: ../../postgis/spatial_functions.rst:106
+# 62bcb7c8e35b4a95b0e1f0062558fcc4
+msgid "To load the SRS table, first ensure that you're at a normal prompt (i.e., quit the database first with :kbd:`\\q`), then do this:"
+msgstr ""
+"Pentru a incarca tabelul SRS, mai intai asigurati-va ca sunteti intr-un "
+"prompt normal (mai intai parasiti baza de date cu comanda :kbd:`\\q`), apoi "
+"faceti asta:"
+
+#: ../../postgis/spatial_functions.rst:113
+# dc108c402272455391f36d611d17679d
+msgid "replacing :kbd:`1.5` with :kbd:`2.0` if necessary."
+msgstr "inlocuiti :kbd:`1.5` cu :kbd:`2.0`, daca este nevoie."
+
+#: ../../postgis/spatial_functions.rst:115
+# 1ef253503daf4325b48bff1a97f63ee5
+msgid "The above command adds a table to our database. We can see the schema of this table by entering the following command in the psql prompt:"
+msgstr ""
+"Comanda de mai sus adauga un tabel in baza de date. Putem vedea schema "
+"acestui tabel tastand urmatoarea comanda in prompt-ul psql:"
+
+#: ../../postgis/spatial_functions.rst:122
+# 7989e84f1ffd4e79b6c518a016574fc5
+msgid "The result should be this:"
+msgstr "Rezultatul ar trebui sa fi asta:"
+
+#: ../../postgis/spatial_functions.rst:137
+# 0ed7c0f0a7f44dad86f2bd513d5ddec4
+msgid "You can use standard SQL queries (as we have learned from our introductory sections), to view and manipulate this table - though we suggest you do not update or delete any records unless you know what you are doing."
+msgstr ""
+"Puteti folosi query-uri SQL standard (asa cum am invatat in sectiunile "
+"introductive), pentru a vizualiza si manipula acest tabel - desi va sugeram "
+"sa nu adaugati sau sa stergeti din inregistrari daca nu stiti ce faceti."
+
+#: ../../postgis/spatial_functions.rst:141
+# c76016557e084d6fac238b430ed36d4f
+msgid "One SRID you may be interested in is EPSG:4326 - the geographic / lat lon reference system using the WGS 84 ellipsoid. Let's take a look at it:"
+msgstr ""
+"Un SRID de care ati putea fi interesat este EPSG:4326 - sistemul de referinta "
+"longitudinal / latitudinal ce foloseste elipsoidul WGS 84. Sa aruncam o "
+"privire:"
+
+#: ../../postgis/spatial_functions.rst:148
+# 0f2785b10c124387ae4b573af732ceba
+msgid "Result"
+msgstr "Rezultatul"
+
+#: ../../postgis/spatial_functions.rst:162
+# 2063316bc5944afbad06635c3fdcda8a
+msgid "The srtext is the projection definition in well known text (you may recognise this from .prj files in your shapefile collection)."
+msgstr ""
+"Srtext-ul este definitia proiectiei sub forma de text (puteti recunoaste asta "
+"din fisierele .prj din colectia de fisiere shapefile)."
+
+#: ../../postgis/spatial_functions.rst:166
+# 2a0c9ac7ac9a4dd7ba332a12ab40f293
+msgid "Looking at the installed PostGIS functions"
+msgstr "Functiile PostGIS instalate"
+
+#: ../../postgis/spatial_functions.rst:168
+# 9a775ff803934516adc25fc5f5f41d83
+msgid "Good - our PostgreSQL database is now geospatially enabled, thanks to PostGIS. We are going to delve a lot deeper into this in the coming days, but let's give you a quick little taster. Let's say we want to create a point from text. First we use the psql command to find functions relating to point:"
+msgstr ""
+"Bun - baza de date PostgreSQL este acum geospatiala, multumita PostGIS-ului. "
+"Vom intra in detalii in urmatoarele zle, dar sa aruncam totusi o privire. Sa "
+"spunem ca vrem sa cream un punct, cu linii de comanda. Mai intai folosim "
+"comanda psql pentru a gasi functii care au legatura cu acest punct:"
+
+#: ../../postgis/spatial_functions.rst:177
+# fe23a2e47d11441680bfe528fe6354fa
+msgid "Here is one that caught my eye: :kbd:`st_pointfromtext`"
+msgstr "Aici este unul care mi-a atras atentia: :kbd:`st_pointfromtext`"
+
+#: ../../postgis/spatial_functions.rst:179
+# 0d898c9b0d45420fb4a2671beb7347c1
+msgid "So let's give that a try:"
+msgstr "Sa facem o incercare:"
+
+#: ../../postgis/spatial_functions.rst:185
+#: ../../postgis/spatial_functions.rst:219
+#: ../../postgis/spatial_queries.rst:25
+#: ../../postgis/spatial_queries.rst:58
+#: ../../postgis/spatial_queries.rst:179
+#: ../../postgis/spatial_queries.rst:219
+#: ../../postgis/spatial_queries.rst:320
+# 955f6539108c40cd905804926604341c
+# 503a6aa2697a4923b0b4d7eb7570a70c
+# a337d4ca607542709d1750ddc9708cfa
+# 8219917bff6645738ca5e43434231a38
+# fe4b256297e44b20ae296d3334f424b4
+# 1214cd9bba594630802079e1ad1326ee
+# cf86ccd16e2c43f4af3560facb4cf546
+msgid "Result:"
+msgstr "Rezultatul:"
+
+#: ../../postgis/spatial_functions.rst:194
+# 6b5bef5e3b3a489aaeb2c29ea481beba
+msgid "So there are a couple of interesting things going on here:"
+msgstr "Sunt cateva lucruri interesante care se intampla aici:"
+
+#: ../../postgis/spatial_functions.rst:196
+# c825a67394cb4faf856f877f46db8149
+msgid "we defined a point at position 1,1 (EPSG:4326 is assumed) using :kbd:`POINT(1 1)`"
+msgstr ""
+"Am definit un punct la positia 1,1 (EPSG:4326 este folosit) folosind "
+":kbd:`POINT(1 1)`"
+
+#: ../../postgis/spatial_functions.rst:198
+# 1849fe6bf4104fefa9119f307490b412
+msgid "we ran an sql statement, but not on any table, just on data entered from the SQL prompt"
+msgstr ""
+"Am rulat o comanda sql, dar nu pe orice tabel, doar pe datele introduse din "
+"linia de comanda sql."
+
+#: ../../postgis/spatial_functions.rst:200
+# 4c63dc2d2712481d87758b0842f86ae2
+msgid "the resulting row looks kinda strange"
+msgstr "Rezultatul acum arata cam ciudat"
+
+#: ../../postgis/spatial_functions.rst:202
+# 668ed4591d164db9b7c03a4d6014789a
+msgid "The resulting row is looking strange because its in the OGC format called 'Well Known Binary' (WKB) - more on that coming in the next section."
+msgstr ""
+"Randul rezultat arata ciudat pentru ca este in formatul OGC, denumit \"Well "
+"Known Binary\" (WKB) - mai multe despre asta in sectiunea urmatoare."
+
+#: ../../postgis/spatial_functions.rst:205
+# e40dfeda01af4de2b070eb7fb57f209a
+msgid "To get the results back as text, I do a quick scan through the function list for something that returns text:"
+msgstr ""
+"Pentru a obtine rezultatele ca si text, facem o scurta scanare prin lista de "
+"functii pentru ceva care contine text:"
+
+#: ../../postgis/spatial_functions.rst:212
+# 80b89db697df4b8e91420592160a5bbd
+msgid "One that catches my eye is :kbd:`st_astext`. Let's combine it with the previous query:"
+msgstr ""
+"Una care imi atrage atentia este :kbd:`st_astext`. Sa o combinam cu query-ul "
+"anterior:"
+
+#: ../../postgis/spatial_functions.rst:228
+# ef2df7cefdff4526b917eef6321b18c0
+msgid "So what's happened here? We entered the string :kbd:`POINT(1,1)`, turned it into a point using :kbd:`st_pointfromtext()`, and turned it back into a human-readable form with :kbd:`st_astext()`, which gave us back our original string."
+msgstr ""
+"Ce s-a intamplat aici? Am introdus string-ul :kbd:`POINT(1,1)`, l-am "
+"transformat intr-un punct folosind :kbd:`st_pointfromtext()`, si l-am "
+"transformat intr-o forma ce poate fi citita cu :kbd:`st_astext()`, care ne-a "
+"dat inapoi string-ul original."
+
+#: ../../postgis/spatial_functions.rst:233
+# 67186155313244c38d3854bd4497fdb1
+msgid "One last example before we really get into the detail of using PostGIS:"
+msgstr ""
+"Un ultim exemplu inainte de a incepe sa intram in detaliu, folosind PostGIS:"
+
+#: ../../postgis/spatial_functions.rst:239
+# 0a0a1b22e7ad46109b8fcf74cbcadf90
+msgid "What did that do? It created a buffer of 1 degree around our point, and returned it as text. Nifty hey?"
+msgstr ""
+"Ce a facut acel lucru? A creat un buffer de 1 grad in jurul punctului, si l-a "
+"intors ca si text. Interesant, nu?"
+
+#: ../../postgis/spatial_functions.rst:245
+# ea7b046c5ced47fda05dc6fdd365d679
+msgid "You now have PostGIS functions installed in your copy of PostgreSQL. With this you'll be able to make use of PostGIS' extensive spatial functions."
+msgstr ""
+"Acum aveti functii PostGIS instalate in copia PostgreSQL. Cu aceasta veti "
+"putea folosi functiile spatiale PostGIS."
+
+#: ../../postgis/spatial_functions.rst:251
+# d42506b9daf54a02ab17f30abfddaa0a
+msgid "Next you'll learn how spatial features are represented in a database."
+msgstr ""
+"In continuare vom invata cum sunt reprezentate elementele spatiale intr-o "
+"baza de date."
+
+#: ../../postgis/spatial_queries.rst:2
+# 857781e0cfc945abb887396de7157e74
+msgid "|LS| Spatial Queries"
+msgstr "|LS| Query-urile spatiale"
+
+#: ../../postgis/spatial_queries.rst:4
+# 6fc5198dd16e4f2380500233f90fdcb3
+msgid "Spatial queries are no different from other database queries. You can use the geometry column like any other database column. With the installation of PostGIS in our database, we have additional functions to query our database."
+msgstr ""
+"Query-urile spatiale nu sunt diferite de alte query-uri ale bazelor de date. "
+"Puteti folosi coloana de geometrie ca orice alta coloana a bazei de date. "
+"Dupa instalarea PostGIS, avem functii aditionale de query a bazei de date."
+
+#: ../../postgis/spatial_queries.rst:8
+# b342566775d142e9bb73cf666de08ed0
+msgid "**The goal for this lesson:** To see how spatial functions are implemented similarly to \"normal\" non-spatial functions."
+msgstr ""
+"**Obiectivul acestei lectii:** Sa vedem cum functiile spatiale sunt "
+"implementate, similar celor \"normale\" non-spatiale."
+
+#: ../../postgis/spatial_queries.rst:14
+# 050fe8a33c4848fdadcb58578cce72ef
+msgid "Spatial Operators"
+msgstr "Operatori Spatiali"
+
+#: ../../postgis/spatial_queries.rst:16
+# 0c771f32e39148728ab52358ce40dafc
+msgid "When you want to know which points are within a distance of 2 degrees to a point(X,Y) you can do this with:"
+msgstr ""
+"Cand vreti sa stiti care punct se afla la o distanta de 2 grade fata de un "
+"punct (X, Y), puteti face acest lucru cu:"
+
+#: ../../postgis/spatial_queries.rst:34
+# 3d0cbbcf21ad4e95964cf4884b718268
+msgid "the_geom value above was truncated for space on this page. If you want to see the point in human-readable coordinates, try something similar to what you did in the section \"View a point as WKT\", above."
+msgstr ""
+"Valoarea the_geom de deasupra a fost redusa pentru a economisi spatiu pe "
+"pagina. Daca vreti sa vedeti punctele intr-un mod ce poate fi citit, "
+"incercati ceva asemanator cu ce ati facut in sectiunea \"Vizualizarea unui "
+"punct ca si WKT\", de mai sus."
+
+#: ../../postgis/spatial_queries.rst:38
+# 85b04ef0e3564dc2a29dadf8931bee71
+msgid "How do we know that the query above returns all the points within 2 *degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
+msgstr ""
+"Cum stim daca query-ul de mai sus da rezultatele pentru punctele care se afla "
+"la 2 *grade*? De ce nu 2 *metri*? Sau orice alta unitate de masura?"
+
+#: ../../postgis/spatial_queries.rst:41
+# d2de54cf428b4840bcde9960d9bc6e85
+msgid ":ref:`Check your results <spatial-queries-1>`"
+msgstr ":ref:`Check your results <spatial-queries-1>`"
+
+#: ../../postgis/spatial_queries.rst:46
+# d65d81d0532e460ca438259c16289f27
+msgid "Spatial Indexes"
+msgstr "Indecsi Spatiali "
+
+#: ../../postgis/spatial_queries.rst:48
+# 8cef7f5fbcd5482daf203272133212f5
+msgid "We also can define spatial indexes. A spatial index makes your spatial queries much faster. To create a spatial index on the geometry column use:"
+msgstr ""
+"Putem defini indecsii spatiali. Un index spatial face query-urile spatiale "
+"mult mai rapid. Pentru a crea un index spatial pe coloana de geometrie, "
+"folositi: "
+
+#: ../../postgis/spatial_queries.rst:85
+# 927703f289894cd89cafe26e773d09d2
+msgid "Now you try - modify the cities table so its geometry column is spatially indexed."
+msgstr ""
+"Acum incercati - modificati tabelul de orase astfel incat coloana de "
+"geometrie sa fie indexata spatial."
+
+#: ../../postgis/spatial_queries.rst:115
+# 156571d73c704a09b40b1f00c305e4b3
+msgid ":ref:`Check your results <spatial-queries-2>`"
+msgstr ":ref:`Check your results <spatial-queries-2>`"
+
+#: ../../postgis/spatial_queries.rst:119
+# 0032e2cd713b4c33af1f52bd937f1dd0
+msgid "PostGIS Spatial Functions Demo"
+msgstr "Demonstratie a Functiilor Spatiale PostGIS"
+
+#: ../../postgis/spatial_queries.rst:121
+# e414168088e84ace8271f2d1d861d4eb
+msgid "In order to demo PostGIS spatial functions, we'll create a new database containing some (fictional) data."
+msgstr ""
+"Pentru a demonstra functiile spatiale PostGIS, vom crea o noua baza de date "
+"care va contine date (fictive)."
+
+#: ../../postgis/spatial_queries.rst:124
+# 990ce7f8ccf94bdc9402b702369f74e7
+msgid "To start, create a new database:"
+msgstr "Pentru a incepe, creati o noua baza de date:"
+
+#: ../../postgis/spatial_queries.rst:130
+# c20d27cab4da46febe740195a1b5619d
+msgid "Remember to install PLPGSQL:"
+msgstr "Nu uitati sa instalati PLPGSQL:"
+
+#: ../../postgis/spatial_queries.rst:136
+# dcb6af97a4df4393ada35e591b6cdc2e
+msgid "Then install the PostGIS functions and the spatial reference system. For example, on Linux with PostgreSQL 9.1 and PostGIS 1.5:"
+msgstr ""
+"Apoi instalati functiile PostGIS si sistemul de referinta spatiala. De "
+"exemplu, pe Linux cu PostgreSQL 9.1 si PostGIS 1.5:"
+
+#: ../../postgis/spatial_queries.rst:144
+# 9247086e08a84e6fa8ea18e7c520ecf3
+msgid "Next, import the data provided in the :kbd:`exercise_data/postgis/` directory. Refer back to the previous lesson for instructions. You can import from the terminal or via SPIT. Import the files into the following database tables:"
+msgstr ""
+"In continuare, importati datele oferite in directorul "
+":kbd:`exercise_data/postgis/`. Recititi lectiile trecute pentru instructiuni. "
+"Puteti importa din linia de comanda prin SPIT. Importati fisierele in "
+"urmatoarele tabele ale bazei de date:"
+
+#: ../../postgis/spatial_queries.rst:148
+# d3c738f9a67b4717a86883a9a18606da
+msgid ":kbd:`points.shp` = :kbd:`building`"
+msgstr ":kbd:`points.shp` = :kbd:`building`"
+
+#: ../../postgis/spatial_queries.rst:149
+# 721e9441ad3c4d18a1e9fc3309a6d01b
+msgid ":kbd:`lines.shp` = :kbd:`road`"
+msgstr ":kbd:`lines.shp` = :kbd:`road`"
+
+#: ../../postgis/spatial_queries.rst:150
+# 877d2c9facb04f2ea6d7176062d88abb
+msgid ":kbd:`polygons.shp` = :kbd:`region`"
+msgstr ":kbd:`polygons.shp` = :kbd:`region`"
+
+#: ../../postgis/spatial_queries.rst:152
+# a9a368d98b034b8095f7dd754afae614
+msgid "Load these three database layers into QGIS via the :guilabel:`Add PostGIS Layers` dialog, as usual. When you open their attribute tables, you'll note that they have both an :kbd:`id` field and a :kbd:`gid` field created by the PostGIS import."
+msgstr ""
+"Incarcati aceste trei layere ale bazei de date in QGIS prin fereastra "
+":guilabel:`Add PostGIS Layers`. Cand deschideti tabela de atribute, veti "
+"observa ca amandoua au un camp :kbd:`id` si :kbd:`gid` create la momentul "
+"importarii PostGIS."
+
+#: ../../postgis/spatial_queries.rst:157
+# 44602669031549a0b9d5a7f958701698
+msgid "Now that the tables are imported, we can use PostGIS to query the data. Go back to your terminal (command line) and enter the psql prompt by doing:"
+msgstr ""
+"Acum ca tabelele sunt importate, putem folosi PostGIS pentru a face un query "
+"de date. Intorceti-va in linia de comanda si introduceti comanda psql:"
+
+#: ../../postgis/spatial_queries.rst:164
+# 4e662dc5f19b4d1f976a1ff0ddd4be52
+msgid "We'll demo some of these select statements by creating views from them, so that you can open them in QGIS and see the results."
+msgstr ""
+"Vom demonstra cateva din aceste comenzi de selectare, creand vizualizari cu "
+"ajutorul lor, astfel incat sa le putem deschide in QGIS si sa vizualizam "
+"rezultatele."
+
+#: ../../postgis/spatial_queries.rst:168
+# dc10ff1bc8b048f98dd50dce48e1c760
+msgid "Select by location"
+msgstr "Selectarea in functie de locatie"
+
+#: ../../postgis/spatial_queries.rst:170
+# 44472f8274a549f3a7db7a9f185973b7
+msgid "Get all the buildings in the KwaZulu region."
+msgstr "Obtineti toate cladirile din regiunea KwaZulu."
+
+#: ../../postgis/spatial_queries.rst:192
+# 7bb611ef471449ec80ec9c08e9160c7d
+msgid "Or, if we create a view from it:"
+msgstr "Sau, daca cream o vizualizare din:"
+
+#: ../../postgis/spatial_queries.rst:202
+# 3ac443c62dfb4ce4bde447871f9a9642
+msgid "And view it in QGIS:"
+msgstr "Si sa o vedem in QGIS:"
+
+#: ../../postgis/spatial_queries.rst:208
+# 3f23d22957ae466fb59105ab3de3792f
+msgid "Select neighbors"
+msgstr "Selectati vecinii"
+
+#: ../../postgis/spatial_queries.rst:210
+# f3abe7e89fbc4dffb539a71d81c5c28d
+msgid "Show a list of all the names of regions adjoining the Hokkaido region."
+msgstr ""
+"Aratati o lista a tuturor numelor regiunilor adiacente regiunii Hokkaido."
+
+#: ../../postgis/spatial_queries.rst:230
+# e27ca143d2bd4a37a8ee2cca37f8b13e
+msgid "As a view:"
+msgstr "Ca si vizualizare:"
+
+#: ../../postgis/spatial_queries.rst:240
+#: ../../postgis/spatial_queries.rst:285
+# 6e29be2f6fb042c9829e4295ad919291
+# 33a083adf2a34e709047295593ef08fb
+msgid "In QGIS:"
+msgstr "In QGIS:"
+
+#: ../../postgis/spatial_queries.rst:245
+# d8cb791aaa5f49ffa1127a7c4dc3176d
+msgid "Note the missing region (Queensland). This may be due to a topology error. Artifacts such as this can alert us to potential problems in the data. To solve this enigma without getting caught up in the anomalies the data may have, we could use a buffer intersect instead:"
+msgstr ""
+"Observati regiunea ce lipseste (Queensland). Acest lucru se poate intampla "
+"dintr-o eroare de topologie. Artefactele ca acesta ne pot avertiza fata de "
+"posibile probleme din date. Pentru a rezolva aceasta enigma fara a fi prinsi "
+"in anomaliile care le-ar putea contine datele, am putea folosi un buffer de "
+"intersectare:"
+
+#: ../../postgis/spatial_queries.rst:257
+# ae49945f849b496f88d6c36ef35eda13
+msgid "This creates a buffer of 100 meters around the region Hokkaido."
+msgstr "Aceasta creeaza un buffer de 100 de metri in jurul regiunii Hokkaido."
+
+#: ../../postgis/spatial_queries.rst:259
+# 14c95f76398e4e3d91f115603337d062
+msgid "The darker area is the buffer:"
+msgstr "Zona mai intunecata este buffer-ul:"
+
+#: ../../postgis/spatial_queries.rst:264
+# fd180ee2c8e3498599903fea3a29f604
+msgid "Select using the buffer:"
+msgstr "Selectati folosind buffer-ul:"
+
+#: ../../postgis/spatial_queries.rst:279
+# 116e6e9ce3ed4fb69bcc42846a4aa129
+msgid "In this query, the original buffer view is used as any other table would be. It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, is used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) that intersects it. However, Hokkaido itself is excluded from this select statement, because we don't want it; we only want the regions adjoining it."
+msgstr ""
+"In acest query, buffer-ul orignial este folosit ca orice alt tabel. Primeste "
+"alias-ul :kbd:`a`, si campul de geometrie :kbd:`a.the_geom`, este folosit "
+"pentru a selecta orice poligon din tabelul :kbd:`region` (alias :kbd:`b`) cu "
+"care se intersecteaza. Dar, Hokkaido este exclus din comanda de selectare, "
+"pentru ca nu il vrem; avem nevoie doar de zonele invecinate."
+
+#: ../../postgis/spatial_queries.rst:290
+# e8b485d246304887946b39fb9ff8d2cf
+msgid "It is also possible to select all objects within a given distance, without the extra step of creating a buffer:"
+msgstr ""
+"Este posibila selectarea tuturor obiectelor intr-o anumita distanta, fara "
+"pasul suplimentar de a crea un buffer:"
+
+#: ../../postgis/spatial_queries.rst:302
+# 9a5404f2a91748f2ac846291387cd85f
+msgid "This achieves the same result, without need for the interim buffer step:"
+msgstr ""
+"Aceasta atinge acelasi rezultat, fara a fi nevoie de pasul intermediar de a "
+"crea un buffer:"
+
+#: ../../postgis/spatial_queries.rst:309
+# 3b56d8d5584a46909b0481c9e41cb922
+msgid "Select uniques"
+msgstr "Selectarea valorilor unice"
+
+#: ../../postgis/spatial_queries.rst:311
+# 7acea4354a2b4d4891106f1d0bb0ec9b
+msgid "Show a list of unique town names for all buildings in the Queensland region."
+msgstr ""
+"Aratati o lista a numelor oraselor unice pentru toate cladirile din regiunea "
+"Queensland."
+
+#: ../../postgis/spatial_queries.rst:333
+# cec900524a1b47c188c9b798839b70bd
+msgid "Further examples ..."
+msgstr "Mai multe exemple..."
+
+#: ../../postgis/spatial_queries.rst:394
+# e8b04e0fd3a74a6cb789f2af52200fa8
+msgid "You have seen how to query spatial objects using the new database functions from PostGIS."
+msgstr ""
+"Ati vazut cum se fac query-uri spatiale pentru obiecte, folosind noile "
+"functii ale bazei de date din PostGIS."
+
+#: ../../postgis/spatial_queries.rst:400
+# 8fb4beaa86db44c0a9670149d707137f
+msgid "Next we're going to investigate the structures of more complex geometries and how to create them using PostGIS."
+msgstr ""
+"In continuare vom investiga structura geometriilor mai complexe, si cum sa le "
+"cream folosind PostGIS."
+

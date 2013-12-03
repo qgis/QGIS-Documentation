@@ -133,7 +133,7 @@ html_title = ""
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = '../resources/en/common/logo.png' 
+html_logo = '../resources/en/common/logo.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -208,7 +208,7 @@ htmlhelp_basename = 'QGISWebsitedoc'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`DISCLAIMER: This part of the documentation has not yet been fully updated for QGIS 2.0`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.0 docs and translations.`
 """
 
 rst_epilog = """
@@ -416,8 +416,6 @@ rst_epilog = """
 .. |mActionAddOgrLayer| image:: /static/common/mActionAddOgrLayer.png
    :width: 1.5em
 .. |mActionAddPostgisLayer| image:: /static/common/mActionAddPostgisLayer.png
-   :width: 1.5em
-.. |mActionShowPluginManager| image:: /static/common/mActionShowPluginManager.png
    :width: 1.5em
 .. |mActionFileNew| image:: /static/common/mActionFileNew.png
    :width: 1.5em
@@ -919,8 +917,6 @@ rst_epilog = """
    :width: 1.5em
 .. |tracking| image:: /static/common/tracking.png
    :width: 1.5em
-.. |plugin| image:: /static/common/plugin.png
-   :width: 1.5em
 .. |spatialquery| image:: /static/common/spatialquery.png
    :width: 1.5em
 .. |selectesubsetlayer| image:: /static/common/selectesubsetlayer.png
@@ -1033,6 +1029,19 @@ rst_epilog = """
    :width: 1.5em
 .. |proc_commander| image:: /static/common/commander.png
    :width: 1.5em
+
+.. |basic| image:: /static/training_manual/global/basic.png
+.. |moderate| image:: /static/training_manual/global/moderate.png
+.. |hard| image:: /static/training_manual/global/hard.png
+.. |note| image:: /static/training_manual/global/comment.png
+.. |MOD| replace:: Module:
+.. |LS| replace:: Lesson:
+.. |TY| replace:: Try Yourself
+.. |FA| replace:: Follow Along:
+.. |RF| replace:: Results For
+.. |WN| replace:: What's Next?
+.. |FR| replace:: Further Reading
+.. |IC| replace:: In Conclusion
 """
 
 # -- Options for LaTeX output --------------------------------------------------
