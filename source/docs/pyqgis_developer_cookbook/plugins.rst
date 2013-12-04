@@ -229,6 +229,7 @@ case it's called ``TestPlugin``. This is how should this class look like
       # create action that will start plugin configuration
       self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", \
         self.iface.mainWindow())
+      self.action.setObjectName("testAction")
       self.action.setWhatsThis("Configuration for test plugin")
       self.action.setStatusTip("This is status tip")
       QObject.connect(self.action, SIGNAL("triggered()"), self.run)
@@ -279,10 +280,12 @@ Adding your plugin menu to one of those predefined method is recommended to keep
 
     def initGui(self):        
         self.menu = QMenu(self.iface.mainWindow())
+        self.menu.setObjectName("testMenu")
         self.menu.setTitle("MyMenu")
 
         self.action = QAction(QIcon(":/plugins/testplug/icon.png"), "Test plugin", \
           self.iface.mainWindow())
+        self.action.setObjectName("testAction")
         self.action.setWhatsThis("Configuration for test plugin")
         self.action.setStatusTip("This is status tip")
         QObject.connect(self.action, SIGNAL("triggered()"), self.run)
@@ -293,6 +296,9 @@ Adding your plugin menu to one of those predefined method is recommended to keep
 
     def unload(self):        
         self.menu.deleteLater()        
+
+Don't forget to set QAction and QMenu objectName to a name specific to your plugin 
+so that it can be customized.
 
 .. index:: plugins; resource file, resources.qrc
 
