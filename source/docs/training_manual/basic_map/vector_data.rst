@@ -9,7 +9,7 @@ connected into lines and polygons. Every object in a vector dataset is called a
 **The goal for this lesson:** To learn about the structure of vector data, and
 how to load vector datasets into a map.
 
-|basic| |FA| Viewing layer attributes
+|basic| |FA| Viewing Layer Attributes
 -------------------------------------------------------------------------------
 
 It's important to know that the data you will be working with does not only
@@ -21,12 +21,10 @@ loaded in your map. What you can see right now is merely the position of the
 roads.
 
 
-To see all the data available to you:
+To see all the data available to you, with the :guilabel:`streets` layer
+selected in the Layers panel:
 
-* Click on this button:
-
-.. image:: /static/training_manual/vector/004.png
-   :align: center
+* Click on this button: |attributes|
 
 It will show you a table with more data about the :guilabel:`streets` layer.
 This extra data is called *attribute data*. The lines that you can see on your
@@ -43,7 +41,7 @@ city blocks.
 
 .. _backlink-vector-load-shapefiles-1:
 
-|basic| |FA| Loading vector data from shapefiles
+|basic| |FA| Loading Vector Data From Shapefiles
 -------------------------------------------------------------------------------
 
 The Shapefile is a specific file format that allows you to store GIS data in an
@@ -61,7 +59,7 @@ instructions on how to add vector layers.
 
 .. _backlink-vector-load-from-database-1:
 
-|basic| |FA| Loading vector data from a database
+|basic| |FA| Loading Vector Data From a Database
 -------------------------------------------------------------------------------
 
 Databases allow you to store a large volume of associated data in one file. You
@@ -70,10 +68,7 @@ Microsoft Access. GIS applications can also make use of databases. GIS-specific
 DBMSes (such as PostGIS) have extra functions, because they need to handle
 spatial data.
 
-* Click on this icon:
-
-.. image:: /static/training_manual/vector/005.png
-   :align: center
+* Click on this icon: |mActionNewSpatiaLiteLayer|
 
 (If you're sure you can't see it at all, check that the :guilabel:`Manage
 Layers` toolbar is enabled.)
@@ -91,7 +86,7 @@ database file on your computer.
 * Click the :guilabel:`Connect` button. You should see this in the previously
   empty box:
 
-.. image:: /static/training_manual/vector/007.png
+.. image:: /static/training_manual/vector/spatiallite_dialog_connected.png
    :align: center
 
 * Click on the first layer to select it, then use :kbd:`shift+click` to select
@@ -104,7 +99,7 @@ database file on your computer.
 :ref:`Check your results <vector-load-from-database-1>`
 
 
-|FA| Reordering the layers
+|FA| Reordering the Layers
 -------------------------------------------------------------------------------
 
 The layers in your Layers list are drawn on the map in a certain order. The
@@ -125,7 +120,7 @@ because other layers are on top of it.
 
 For example, this layer order...
 
-.. image:: /static/training_manual/vector/002.png
+.. image:: /static/training_manual/vector/incorrect_layer_order.png
    :align: center
 
 ... would result in roads and places being hidden as they run *underneath*
@@ -136,7 +131,7 @@ To resolve this problem:
 * Click and drag on a layer in the Layers list.
 * Reorder them to look like this:
 
-.. image:: /static/training_manual/vector/003.png
+.. image:: /static/training_manual/vector/correct_layer_order.png
    :align: center
 
 |IC|
