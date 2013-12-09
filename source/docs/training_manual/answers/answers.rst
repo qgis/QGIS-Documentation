@@ -208,9 +208,11 @@ fields with no value).
 |moderate| *Label Customization* (Part 1)
 ...............................................................................
 
-Your map should look like this:
+Your map should now show the marker points and the labels should be offset by
+:kbd:`2.0 mm`: The style of the markers and labels should allow both to be
+clearly visible on the map:
 
-.. image:: /static/training_manual/labels/010.png
+.. image:: /static/training_manual/labels/customised_labels_one.png
    :align: center
 
 :ref:`Back to text <backlink-label-tool-1>`
@@ -223,17 +225,19 @@ Your map should look like this:
 
 One possible solution has this final product:
 
-.. image:: /static/training_manual/labels/015.png
+.. image:: /static/training_manual/labels/possible_outcome_map.png
    :align: center
 
 To arrive at this result:
 
-* Use the font type :kbd:`Arial` of size :kbd:`10` and a :guilabel:`Label
-  distance` of :kbd:`1,5 mm`.
+* Use the font type :kbd:`Arial` of size :kbd:`10`, a :guilabel:`Label
+  distance` of :kbd:`1,5 mm`, :guilabel:`Symbol width` and
+  :guilabel:`Symbol height` of :kbd:`2.0 mm` and an :guilabel:`Outline width` of
+  :kbd:`1.5 mm`.
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
-  .. image:: /static/training_manual/labels/016.png
+  .. image:: /static/training_manual/labels/wrap_character_settings.png
      :align: center
 
 * Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
@@ -275,14 +279,14 @@ To arrive at this result:
 * Use the same method as in the first exercise of the lesson to get rid of the
   lines:
 
-  .. image:: /static/training_manual/classification/027.png
+  .. image:: /static/training_manual/classification/gradient_map_no_pen.png
      :align: center
 
 The settings you used might not be the same, but with the values
 :guilabel:`Classes` = :kbd:`7` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
-.. image:: /static/training_manual/classification/028.png
+.. image:: /static/training_manual/classification/gradient_map_new_mode.png
    :align: center
 
 :ref:`Back to text <backlink-classification-refine-1>`
@@ -720,7 +724,7 @@ that you expect.
 
 ::
 
-  CREATE INDEX cities_geo_idx  
+  CREATE INDEX cities_geo_idx
     ON cities
     USING gist (the_geom);
 
@@ -739,13 +743,13 @@ that you expect.
 ::
 
   alter table streets add column the_geom geometry;
-  alter table streets add constraint streets_geom_point_chk check 
+  alter table streets add constraint streets_geom_point_chk check
        (st_geometrytype(the_geom) = 'ST_LineString'::text OR the_geom IS NULL);
   insert into geometry_columns values ('','public','streets','the_geom',2,4326,
        'LINESTRING');
   create index streets_geo_idx
     on streets
-    using gist                                         
+    using gist
     (the_geom);
 
 :ref:`Back to text <backlink-geometry-1>`
@@ -769,7 +773,7 @@ that you expect.
      values ('Faulty Towers',
              34,
              3,
-             '072 812 31 28', 
+             '072 812 31 28',
              1,
              'SRID=4326;POINT(33 33)');
 
@@ -777,7 +781,7 @@ that you expect.
      values ('IP Knightly',
              32,
              1,
-             '071 812 31 28', 
+             '071 812 31 28',
              1,
              'SRID=4326;POINT(32 -34)');
 
@@ -785,7 +789,7 @@ that you expect.
      values ('Rusty Bedsprings',
              39,
              1,
-             '071 822 31 28', 
+             '071 822 31 28',
              1,
              'SRID=4326;POINT(34 -34)');
 
@@ -814,11 +818,11 @@ check the entries in your cities table and use any :kbd:`id` which exists.
 
 ::
 
-  create table cities (id serial not null primary key, 
-                       name varchar(50), 
+  create table cities (id serial not null primary key,
+                       name varchar(50),
                        the_geom geometry not null);
-   alter table cities 
-   add constraint cities_geom_point_chk 
+   alter table cities
+   add constraint cities_geom_point_chk
    check (st_geometrytype(the_geom) = 'ST_Polygon'::text );
 
 :ref:`Back to text <backlink-simple-feature-1>`
@@ -831,7 +835,7 @@ check the entries in your cities table and use any :kbd:`id` which exists.
 
 ::
 
-  insert into geometry_columns values 
+  insert into geometry_columns values
         ('','public','cities','the_geom',2,4326,'POLYGON');
 
 :ref:`Back to text <backlink-simple-feature-2>`
@@ -844,10 +848,10 @@ check the entries in your cities table and use any :kbd:`id` which exists.
 
 ::
 
-  select people.name, 
-         streets.name as street_name, 
+  select people.name,
+         streets.name as street_name,
          st_astext(people.the_geom) as geometry
-  from   streets, people 
+  from   streets, people
   where  people.street_id=streets.id;
 
 Result:
@@ -856,10 +860,10 @@ Result:
 
          name       |   street_name   |    geometry
   ------------------+-----------------+---------------
-   Rusty Bedsprings | High street     | 
-   QGIS Geek        | High street     | 
-   Joe Bloggs       | New Main Street | 
-   IP Knightly      | QGIS Road       | 
+   Rusty Bedsprings | High street     |
+   QGIS Geek        | High street     |
+   Joe Bloggs       | New Main Street |
+   IP Knightly      | QGIS Road       |
    Fault Towers     | QGIS Road       | POINT(33 -33)
   (5 rows)
 

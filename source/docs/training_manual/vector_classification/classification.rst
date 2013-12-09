@@ -6,7 +6,7 @@ individual places, but they can't be used for everything. For example, let's
 say that someone wants to know which area the farms are in. Using labels, you'd
 get this:
 
-.. image:: /static/training_manual/classification/001.png
+.. image:: /static/training_manual/classification/bad_farm_labels.png
    :align: center
 
 Obviously this is not ideal, so we need another solution. That's what this
@@ -14,106 +14,87 @@ lesson is about!
 
 **The goal for this lesson:** To learn how to classify vector data effectively.
 
-|basic| |FA| Classifying nominal data
+|basic| |FA| Classifying Nominal Data
 -------------------------------------------------------------------------------
 
-* Open :guilabel:`Layer Properties`.
+* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`rural` layer.
 * Go to the :guilabel:`Style` tab.
-* Click on the dropdown that says :guilabel:`Single Symbol`:
+* Click on the dropdown that says :guilabel:`Single Symbol` and change it to
+:guilabel:`Categorized`:
 
-.. image:: /static/training_manual/classification/002.png
+.. image:: /static/training_manual/classification/categorized_styles.png
    :align: center
 
-* Change it to :guilabel:`Categorized` and the interface will change:
+* In the new panel, change the :guilabel:`Column` to :guilabel:`TOWN`
+  and the :guilabel:`Color ramp` to :guilabel:`Spectral`:
 
-.. image:: /static/training_manual/classification/003.png
-   :align: center
-
-* Change the :guilabel:`Column` to :guilabel:`TOWN` and the :guilabel:`Color
-  ramp` to :guilabel:`random`:
-
-.. image:: /static/training_manual/classification/004.png
+.. image:: /static/training_manual/classification/categorized_style_settings.png
    :align: center
 
 * Click the button labeled :guilabel:`Classify` and then click :guilabel:`OK`.
 
 You'll see something like this:
 
-.. image:: /static/training_manual/classification/005.png
+.. image:: /static/training_manual/classification/spectral_categorisation_result.png
    :align: center
 
 * Click the arrow (or plus sign) next to :guilabel:`rural` in the
   :guilabel:`Layer list`, you'll see the categories explained:
 
-.. image:: /static/training_manual/classification/006.png
+.. image:: /static/training_manual/classification/categories_explained.png
    :align: center
 
 So, this is useful! But it hurts your eyes to look at it, so let's see what we
 can do about that.
 
 * Open :guilabel:`Layer Properties` and go to the :guilabel:`Style` tab again.
-* Change the symbol:
+* Change the symbol by removing the border from the :guilabel:`Simple Fill`
+  layer and click :guilabel:`OK`. (If you need to, go back to the lesson where
+  we covered this to remember how it's done.)
 
-.. image:: /static/training_manual/classification/007.png
-   :align: center
+You'll see that the farm outlines have been removed, leaving just our new
+fill colours for each categorisation.
 
-* Get rid of the outline the same way you did before, and click :guilabel:`OK`.
-  (If you need to, go back to the lesson where we covered this to remember how
-  it's done.)
-* Click the :guilabel:`Delete all` button:
-
-.. image:: /static/training_manual/classification/008.png
-   :align: center
-
-This gets rid of the ugly classes so you can try again.
-
-* Click :guilabel:`Classify` again, and the new symbols will appear.
-  
-You'll notice they don't have outlines. This is because you just
-removed the outlines!
-
-* Change the color for each town by double-clicking on the colored block
+* Change the color for each municipality by double-clicking on the colored block
   representing its symbol:
 
-.. image:: /static/training_manual/classification/009.png
+.. image:: /static/training_manual/classification/change_layer_colour.png
    :align: center
 
 Use your own colors, but make sure they're not too bright, so that the
-resulting map isn't as ugly as the old one. In the example, we'll use these
-colors:
+resulting map isn't as bright and distracting as the old one.
+In the example, we'll use these colors:
 
-.. image:: /static/training_manual/classification/011.png
+.. image:: /static/training_manual/classification/new_colours.png
    :align: center
 
 This gives us a nice map:
 
-.. image:: /static/training_manual/classification/010.png
+.. image:: /static/training_manual/classification/new_colours_map.png
    :align: center
-
-(Only :guilabel:`rural` and :guilabel:`water` are switched on here.)
 
 By the way, there's one category that's empty:
 
-.. image:: /static/training_manual/classification/012.png
+.. image:: /static/training_manual/classification/empty_category.png
    :align: center
 
 * Select the empty category.
 * Click the :guilabel:`Delete` button.
 
-This only gets rid of the symbol, not the data, so don't worry about messing
-up; you're not actually deleting anything that you can't recover.
+This only gets rid of the symbol, not the data, so don't worry about
+deleting anything that you can't recover.
 
 Remember to save your map now so that you don't lose all your hard-earned
 changes!
 
-|basic| |TY| More classification
+|basic| |TY| More Classification
 -------------------------------------------------------------------------------
 
 If you're only following the basic-level content, use the knowledge you gained
 above to classify the :guilabel:`urban` areas. Use darker colors to set them
 apart from the farms.
 
-|moderate| |FA| Ratio classification
+|moderate| |FA| Ratio Classification
 -------------------------------------------------------------------------------
 
 There are four types of classification: *nominal*, *ordinal*, *interval* and
@@ -131,7 +112,7 @@ and zero values. For example: height above/below sea level, temperature
 above/below freezing (0 degrees Celsius), etc.
 
 In ratio classification, the numbers are on a scale with only positive and zero
-values. For example: temparature above absolute zero (0 degrees Kelvin),
+values. For example: temperature above absolute zero (0 degrees Kelvin),
 distance from a point, the average amount of traffic on a given street per
 month, etc.
 
@@ -146,28 +127,27 @@ We're going to reclassify the layer, so existing classes will be lost if not
 saved.
 
 * Close the :guilabel:`Style` dialog.
-* Open the layer attributes for the :guilabel:`rural` layer.
-  
+* Open the Attributes Table for the :guilabel:`rural` layer.
+
 We want to classify these farms by area, but there's a problem: they don't have
 an area field! We'll have to make one.
 
 * Enter edit mode by clicking this button:
 
-.. image:: /static/training_manual/classification/013.png
-   :align: center
+|edit|
 
 * Add a new column with this button:
 
-.. image:: /static/training_manual/classification/014.png
+.. image:: /static/training_manual/labels/add_column_button.png
    :align: center
 
 * Set up the dialog that appears, like this:
 
-.. image:: /static/training_manual/classification/015.png
+.. image:: /static/training_manual/classification/add_area_column.png
    :align: center
 
 * Click :guilabel:`OK`.
-  
+
 The new field will be added (at the far right of the table; you may need to
 scroll horizontally to see it). However, at the moment it is not populated, it
 just has a lot of :kbd:`NULL` values.
@@ -176,22 +156,21 @@ To solve this problem, we'll need to calculate the areas.
 
 * Open the field calculator:
 
-.. image:: /static/training_manual/classification/016.png
-   :align: center
+|mActionCalculateField|
 
 You'll get this dialog:
 
-.. image:: /static/training_manual/classification/018.png
+.. image:: /static/training_manual/classification/calculate_field_dialog.png
    :align: center
 
 * Change the values at the top of the dialog to look like this:
 
-.. image:: /static/training_manual/classification/017.png
+.. image:: /static/training_manual/classification/field_calculator_top.png
    :align: center
 
 * In the :guilabel:`Function List`, select :menuselection:`Geometry --> $area`:
 
-.. image:: /static/training_manual/classification/019.png
+.. image:: /static/training_manual/classification/geometry_area_select.png
    :align: center
 
 * Double-click on it so that it appears in the :guilabel:`Expression` field.
@@ -207,56 +186,53 @@ the attribute table.
 * Change the classification style from :guilabel:`Classified` to
   :guilabel:`Graduated`:
 
-.. image:: /static/training_manual/classification/020.png
+.. image:: /static/training_manual/classification/graduated_layer_properties.png
    :align: center
 
 * Change the :guilabel:`Column` to :guilabel:`AREA`:
 
-.. image:: /static/training_manual/classification/021.png
-   :align: center
-
 * Under :guilabel:`Color ramp`, choose the option :guilabel:`New color ramp...`
   to get this dialog:
 
-.. image:: /static/training_manual/classification/022.png
+.. image:: /static/training_manual/classification/area_gradient_select.png
    :align: center
 
 * Choose :guilabel:`Gradient` (if it's not selected already) and click
   :guilabel:`OK`. You'll see this:
 
-.. image:: /static/training_manual/classification/023.png
+.. image:: /static/training_manual/classification/gradient_color_select.png
    :align: center
 
 You'll be using this to denote area, with small areas as :guilabel:`Color 1`
 and large areas as :guilabel:`Color 2`.
 
 * Choose appropriate colors.
-  
+
 In the example, the result looks like this:
 
-.. image:: /static/training_manual/classification/024.png
+.. image:: /static/training_manual/classification/gradient_color_example.png
    :align: center
 
 * Click :guilabel:`OK`.
 * Choose a suitable name for the new color ramp.
 * Click :guilabel:`OK` after filling in the name.
-  
+
 Now you'll have something like this:
 
-.. image:: /static/training_manual/classification/025.png
+.. image:: /static/training_manual/classification/farm_gradient_selected.png
    :align: center
 
-Leave everything as-is.
+Leave everything else as-is.
 
-* Click :guilabel:`Apply`:
+* Click :guilabel:`Ok`:
 
-.. image:: /static/training_manual/classification/026.png
+.. image:: /static/training_manual/classification/gradient_result_map.png
    :align: center
 
 
 .. _backlink-classification-refine-1:
 
-|moderate| |TY| Refine the classification
+|moderate| |TY| Refine the Classification
 -------------------------------------------------------------------------------
 
 * Get rid of the lines between the classes.
@@ -265,7 +241,7 @@ Leave everything as-is.
 
 :ref:`Check your results <classification-refine-1>`
 
-|hard| |FA| Rule-based classification
+|hard| |FA| Rule-based Classification
 -------------------------------------------------------------------------------
 
 It's often useful to combine multiple criteria for a classification, but
@@ -276,30 +252,36 @@ That's where rule-based classification comes in handy.
 * Switch to the :guilabel:`Style` tab.
 * Switch the classification style to :guilabel:`Rule-based`. You'll get this:
 
-.. image:: /static/training_manual/classification/029.png
+.. image:: /static/training_manual/classification/rule_based_classification.png
    :align: center
 
-* Click the :guilabel:`Add` button.
-* A new dialog that appears.
+* Click the :guilabel:`Add rule` button: |mActionSignPlus|.
+* A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion :kbd:`AREA >=
-  0.00085` and choose a dark color for it.
+  0.00085`, click :guilabel:`Ok` and choose a dark color for it:
+
+.. image:: /static/training_manual/classification/query_builder_example.png
+   :align: center
+
+.. image:: /static/training_manual/classification/rule_style_result.png
+   :align: center
+
 * Add the criterion :kbd:`AREA <= 0.00085` and choose a light color.
 * Add the criterion :kbd:`TOWN != 'Swellendam Rural'` and assign it the color
   black, with transparency at :kbd:`85%`.
-* Click on the :kbd:`TOWN ...` criterion in the list of rules, and then on
-  :guilabel:`Increase priority`.
+* Click and drag the :kbd:`TOWN` criterion to the top of the list.
 
 Your dialog should look like this:
 
-.. image:: /static/training_manual/classification/030.png
+.. image:: /static/training_manual/classification/criterion_refined_list.png
    :align: center
 
 * Apply this symbology.
 
-Your map will look like this:
+Your map will look comething like this:
 
-.. image:: /static/training_manual/classification/031.png
+.. image:: /static/training_manual/classification/rule_based_map_result.png
    :align: center
 
 Now you have two area classes, with the farms in the Swellendam Rural area

@@ -690,6 +690,16 @@ rst_epilog = """
    :width: 1.5em
 .. |mActionMoveLabel| image:: /static/common/mActionMoveLabel.png
    :width: 1.5em
+.. |mActionPinLabels| image:: /static/common/mActionPinLabels.png
+   :width: 1.5em
+.. |mActionShowPinnedLabels| image:: /static/common/mActionShowPinnedLabels.png
+   :width: 1.5em
+.. |mActionShowHideLabels| image:: /static/common/mActionShowHideLabels.png
+   :width: 1.5em
+.. |mActionRotateLabel| image:: /static/common/mActionRotateLabel.png
+   :width: 1.5em
+.. |mActionChangeLabelProperties| image:: /static/common/mActionChangeLabelProperties.png
+   :width: 1.5em
 .. |mActionAdd| image:: /static/common/mActionAdd.png
    :width: 1.5em
 .. |mActionSignPlus| image:: /static/common/mActionSignPlus.png
