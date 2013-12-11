@@ -21,7 +21,7 @@ snapping options:
 * Navigate to the menu entry :menuselection:`Settings --> Snapping Options...`.
 * Set up your :guilabel:`Snapping options` dialog as shown:
 
-.. image:: /static/training_manual/create_vector_data/044.png
+.. image:: /static/training_manual/create_vector_data/set_snapping_options.png
    :align: center
 
 * Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
@@ -32,7 +32,7 @@ snapping options:
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
 
-.. image:: /static/training_manual/create_vector_data/045.png
+.. image:: /static/training_manual/create_vector_data/zoom_to.png
    :align: center
 
 * Digitize this new (fictional) farm:
@@ -40,7 +40,7 @@ snapping options:
 .. image:: /static/training_manual/create_vector_data/047.png
    :align: center
 
-* When prompted, give it an :guilabel:`id` of :kbd:`999`, but feel free to
+* When prompted, give it a :guilabel:`PKUID` of :kbd:`999`, but feel free to
   leave the other values unchanged.
 
 If you're careful while digitizing and allow the cursor to snap to the vertices

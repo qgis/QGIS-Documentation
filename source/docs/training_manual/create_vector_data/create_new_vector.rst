@@ -23,7 +23,7 @@ to define a new layer.
 
 You'll be presented with the following dialog:
 
-.. image:: /static/training_manual/create_vector_data/001.png
+.. image:: /static/training_manual/create_vector_data/create_vector_layer.png
    :align: center
 
 It's important to decide which kind of dataset you want at this stage. Each
@@ -35,7 +35,7 @@ areas. For such features, you'll need to create a polygon dataset.
 
 * Click on the :guilabel:`Polygon` radio button:
 
-.. image:: /static/training_manual/create_vector_data/002.png
+.. image:: /static/training_manual/create_vector_data/polygon_selected.png
    :align: center
 
 This has no impact on the rest of the dialog, but it will cause the correct
@@ -46,25 +46,25 @@ CRS specifies how to describe a point on Earth in terms of coordinates, and
 because there are many different ways to do this, there are many different CRSs.
 The CRS of this project is WGS84, so it's already correct by default:
 
-.. image:: /static/training_manual/create_vector_data/003.png
+.. image:: /static/training_manual/create_vector_data/default_crs.png
    :align: center
 
 Next there is a collection of fields grouped under :guilabel:`New attribute`.
 By default, a new layer has only one attribute, the :kbd:`id` field (which you
 should see in the :guilabel:`Attributes list`) below. However, in order for the
 data you create to be useful, you actually need to say something about the
-features you'll be creating in this new layer! For our current purposes, it
+features you'll be creating in this new layer. For our current purposes, it
 will be enough to add one field called :kbd:`name`.
 
 * Replicate the setup below, then click the :guilabel:`Add to attributes list`
   button:
 
-.. image:: /static/training_manual/create_vector_data/004.png
+.. image:: /static/training_manual/create_vector_data/new_attribute.png
    :align: center
 
 * Check that your dialog now looks like this:
 
-.. image:: /static/training_manual/create_vector_data/005.png
+.. image:: /static/training_manual/create_vector_data/new_attribute_added.png
    :align: center
 
 * Click :guilabel:`OK`. A save dialog will appear.
@@ -73,7 +73,7 @@ will be enough to add one field called :kbd:`name`.
 
 The new layer should appear in your :guilabel:`Layers list`.
 
-|basic| |FA| Data sources
+|basic| |FA| Data Sources
 -------------------------------------------------------------------------------
 
 When you create new data, it obviously has to be about objects that really
@@ -82,18 +82,15 @@ somewhere.
 
 There are many different ways to obtain data about objects. For example, you
 could use a GPS to capture points in the real world, then import the data into
-QGS afterwards. Or you could survey points using a theodolite, and enter the
+QGIS afterwards. Or you could survey points using a theodolite, and enter the
 coordinates manually to create new features. Or you could use the digitizing
-process to trace objects off of remote sensing data, such as satellite imagery
+process to trace objects from remote sensing data, such as satellite imagery
 or aerial photography.
 
 For our example, you'll be using the digitizing approach. Sample raster datasets
 are provided, so you'll need to import them as necessary.
 
-* Click on the :guilabel:`Add Raster Layer` button:
-
-.. image:: /static/training_manual/create_vector_data/006.png
-   :align: center
+* Click on the :guilabel:`Add Raster Layer` button: |mActionAddRasterLayer|
 
 * Navigate to :kbd:`exercise_data/raster/`.
 * Select the file :kbd:`3420C_2010_327_RGB_LATLNG.tif`.
@@ -103,16 +100,18 @@ are provided, so you'll need to import them as necessary.
   other layers.
 * Find and zoom to this area:
 
-.. image:: /static/training_manual/create_vector_data/007.png
+.. image:: /static/training_manual/create_vector_data/map_area_zoom.png
    :align: center
+
+.. note:: If your :guilabel:`urban` layer symbology is covering part or all of the
+   raster layer, you can temporarily disable the layer by deselecting it in the
+   :guilabel:`Layers panel`. You may also wish to hide the
+   :guilabel:`Roads` symbology if you find it distracting.
 
 You'll be digitizing these three fields:
 
-.. image:: /static/training_manual/create_vector_data/014.png
+.. image:: /static/training_manual/create_vector_data/field_outlines.png
    :align: center
-
-* Hide all the layers except the raster and the :guilabel:`school_property`
-  layer.
 
 In order to begin digitizing, you'll need to enter **edit mode**. GIS software
 commonly requires this to prevent you from accidentally editing or deleting
@@ -123,10 +122,7 @@ To enter edit mode for the :guilabel:`school_property` layer:
 * Click on the layer in the :guilabel:`Layer list` to select it. (Make very
   sure that the correct layer is selected, otherwise you'll edit the wrong
   layer!)
-* Click on the :guilabel:`Toggle Editing` button:
-
-.. image:: /static/training_manual/create_vector_data/008.png
-   :align: center
+* Click on the :guilabel:`Toggle Editing` button: |edit|
 
 If you can't find this button, check that the :guilabel:`Digitizing` toolbar is
 enabled. There should be a check mark next to the :menuselection:`View -->
@@ -135,29 +131,29 @@ Toolbars --> Digitizing` menu entry.
 As soon as you are in edit mode, you'll see the digitizing tools are now
 active:
 
-.. image:: /static/training_manual/create_vector_data/009.png
-   :align: center
+  |mActionCapturePolygon| |mActionMoveFeature| |mActionNodeTool|
 
-From left to right on the image above, they are:
+Four other relevant buttons are still inactive, but will become active when we
+start interacting with our new data:
 
-- :guilabel:`Toggle Edit`: activates / deactivates edit mode.
+  |mActionSaveEdits| |mActionDeleteSelected| |mActionEditCut| |mActionEditCopy|
+  |mActionEditPaste|
+
+From left to right on the toolbar, they are:
+
 - :guilabel:`Save Edits`: saves changes made to the layer.
 - :guilabel:`Add Feature`: start digitizing a new feature.
 - :guilabel:`Move Feature(s)`: move an entire feature around.
 - :guilabel:`Node Tool`: move only one part of a feature.
-- :guilabel:`Delete Selected`: delete the selected feature (only active if a
-  feature is selected).
-- :guilabel:`Cut Features`: cut the selected feature (only active if a feature
-  is selected).
-- :guilabel:`Copy Features`: copy the selected feature (only active if a
-  feature is selected).
-- :guilabel:`Paste Features`: paste a cut or copied feature back into the map
-  (only active if a feature has been cut or copied).
+- :guilabel:`Delete Selected`: delete the selected feature.
+- :guilabel:`Cut Features`: cut the selected feature.
+- :guilabel:`Copy Features`: copy the selected feature.
+- :guilabel:`Paste Features`: paste a cut or copied feature back into the map.
 
 You want to add a new feature.
 
-* Click on the :guilabel:`Add Feature` button now to begin digitizing right
-  away!
+* Click on the :guilabel:`Add Feature` button now to begin digitizing our school
+  fields.
 
 You'll notice that your mouse cursor has become a crosshair. This allows you to
 more accurately place the points you'll be digitizing. Remember that even as
@@ -167,18 +163,18 @@ and dragging around in the map.
 
 The first feature you'll be digitizing is the athletics field:
 
-.. image:: /static/training_manual/create_vector_data/010.png
+.. image:: /static/training_manual/create_vector_data/athletics_field.png
    :align: center
 
 * Start digitizing by clicking on a point somewhere along the edge of the
   field.
 * Place more points by clicking further along the edge, until the shape you're
   drawing completely covers the field.
-* To place your last point, *right-click* where you want it to be. This will
-  finalize the feature and show you the :guilabel:`Attributes` dialog.
+* After placing your last point, *right-click* to finish drawing the polygon.
+  This will finalize the feature and show you the :guilabel:`Attributes` dialog.
 * Fill in the values as below:
 
-.. image:: /static/training_manual/create_vector_data/013.png
+.. image:: /static/training_manual/create_vector_data/athletics_field_attributes.png
    :align: center
 
 * Click :guilabel:`OK` and you've created a new feature!
@@ -189,14 +185,14 @@ digitizing until you're done creating the feature as above. Then:
 
 * Select the feature with the :guilabel:`Select Single Feature` tool:
 
-.. image:: /static/training_manual/create_vector_data/012.png
+.. image:: /static/training_manual/create_vector_data/single_feature_select.png
    :align: center
 
 You can use:
 
 * the :guilabel:`Move Feature(s)` tool to move the entire feature,
 * the :guilabel:`Node Tool` to move only one point where you may have
-  misclicked,
+  miss-clicked,
 * :guilabel:`Delete Selected` to get rid of the feature entirely so you can try
   again, and
 * the :menuselection:`Edit --> Undo` menu item or the :kbd:`ctrl + z` keyboard
@@ -207,13 +203,17 @@ You can use:
 
 * Digitize the school itself and the upper field. Use this image to assist you:
 
-.. image:: /static/training_manual/create_vector_data/014.png
+.. image:: /static/training_manual/create_vector_data/field_outlines.png
    :align: center
 
 Remember that each new feature needs to have a unique :kbd:`id` value!
 
 .. note::  When you're done adding features to a layer, remember to save your
    edits and then exit edit mode.
+
+.. note:: You can style the fill, outline and label placement and formatting
+   of the :guilabel:`school_property` using techniques learnt in earlier
+   lessons. If you symbology does not match the example symbology, update it now.
 
 .. _backlink-create-vector-digitize-1:
 
@@ -222,16 +222,19 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 
 * Create a new line feature called :kbd:`river.shp` with attributes :kbd:`id`
   and :kbd:`type`. (Use the approach above to guide you.)
-* Digitize the river that runs through town.
+* Digitize the river that runs through town by left-clicking to add points along
+  the river's course. When you reach the end point, right-click to finalise the
+  line.
 
-Start where the sandy riverbanks first become visible:
+Start where the sandy riverbanks first become visible (you may need to hide the
+rural layer):
 
-.. image:: /static/training_manual/create_vector_data/015.png
+.. image:: /static/training_manual/create_vector_data/river_start.png
    :align: center
 
 And stop when our river joins another river:
 
-.. image:: /static/training_manual/create_vector_data/016.png
+.. image:: /static/training_manual/create_vector_data/river_end.png
    :align: center
 
 It's not always clear where the river runs. In such cases, use your better
@@ -241,6 +244,12 @@ let the line become too straight or make the corners too sharp!
 
 When creating the feature, give it the :kbd:`type` attribute value of
 ":kbd:`stream`".
+
+You'll probably find that only the points are marked; use the
+:guilabel:`Layer Properties` dialog to add the preset :kdb:`Stream` style to
+your line.
+
+Save your edits and toggle :guilabel:`Edit` mode.
 
 :ref:`Check your results <create-vector-digitize-1>`
 

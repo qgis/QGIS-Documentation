@@ -303,7 +303,7 @@ The settings you used might not be the same, but with the values
 The symbology doesn't matter, but the results should look more or less like
 this:
 
-.. image:: /static/training_manual/create_vector_data/017.png
+.. image:: /static/training_manual/create_vector_data/river_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-create-vector-digitize-1>`

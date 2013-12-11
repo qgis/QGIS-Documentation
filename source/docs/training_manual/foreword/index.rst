@@ -7,3 +7,4 @@ Course Introduction
    :numbered:
 
    foreword
+   preparing_data
