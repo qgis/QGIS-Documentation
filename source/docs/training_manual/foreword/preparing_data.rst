@@ -83,7 +83,7 @@ course:
 * Right-click the :guilabel:`multipolygons` layer and select
   :guilabel:`Save As...`
 * Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your
-  new :kbd:`exercise_data` directory, under a directory called :kbd:`buildings`.
+  new :kbd:`exercise_data` directory, under a directory called "epsg4326".
 * Make sure :guilabel:`No Symbology` is selected (we'll add symbology as part of
   the course later on).
 * You can also select :guilabel:`Add saved file to map`.
@@ -100,7 +100,7 @@ expressions:
 * :kbd:`natural`: "natural = 'water'"
 * :kbd:`leisure`: "leisure != 'NULL'"
 
-Each resulting data set should be saved under a separate directory in your new
+Each resulting data set should be saved in the "epsg4326" directory in your new
 :kbd:`exercise_data` directory (i.e. "water", "leisure").
 
 You should then extract and save the following fields from the :kbd:`lines` and
