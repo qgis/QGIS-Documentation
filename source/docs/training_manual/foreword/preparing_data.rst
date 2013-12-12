@@ -56,10 +56,10 @@ throughout the Training Manual:
 
 * :kbd:`building`
 * :kbd:`natural` (specifically, water)
-* :kbd:`leisure`
+* :kbd:`landuse`
 
 You can sample the data your region contains in order to see what kind of
-results your region will yield. If you find that "leisure" returns no result,
+results your region will yield. If you find that "landuse" returns no result,
 then feel free to exclude it.
 
 You'll need to write filter expressions for each field to extract the data we
@@ -84,12 +84,12 @@ course:
   :guilabel:`Save As...`
 * Make sure the file type is :kbd:`ESRI Shapefile` and save the file in your
   new :kbd:`exercise_data` directory, under a directory called "epsg4326".
-* Make sure :guilabel:`No Symbology` is selected (we'll add symbology as part of
-  the course later on).
+* Make sure :menuselection:`No Symbology` is selected (we'll add symbology as
+  part of the course later on).
 * You can also select :guilabel:`Add saved file to map`.
 
 Once the :guilabel:`buildings` layer has been added to the map, you can repeat
-the process for the :kbd:`natural` and :kbd:`leisure` fields using the following
+the process for the :kbd:`natural` and :kbd:`landuse` fields using the following
 expressions:
 
 .. note:: Make sure you clear the previous filter (via the
@@ -98,10 +98,10 @@ expressions:
    expression!
 
 * :kbd:`natural`: "natural = 'water'"
-* :kbd:`leisure`: "leisure != 'NULL'"
+* :kbd:`landuse`: "landuse != 'NULL'"
 
 Each resulting data set should be saved in the "epsg4326" directory in your new
-:kbd:`exercise_data` directory (i.e. "water", "leisure").
+:kbd:`exercise_data` directory (i.e. "water", "landuse").
 
 You should then extract and save the following fields from the :kbd:`lines` and
 :kbd:`points` layers to their corresponding directories:
@@ -110,7 +110,7 @@ You should then extract and save the following fields from the :kbd:`lines` and
   "highway != 'NULL'" to :kbd:`roads`, and
   "waterway != 'NULL'" to :kbd:`rivers`
 * :kbd:`points`:
-  "place != 'NULL'" to :kbd:`towns`
+  "place != 'NULL'" to :kbd:`places`
 
 Once you have finished extracting the above data, you can remove the
 :guilabel:`multipolygons`, :guilabel:`lines` and :guilabel:`points` layers.
@@ -123,3 +123,11 @@ certainly be very different, but that is fine):
 
 The important thing is that you have 6 layers matching those show above and that
 all those layers have some data.
+
+The last step is to create a spatiallite file from the :kbd:`landuse` layer for
+use during the course:
+
+* Right-click the :kbd:`landuse` layer and select :menuselection:`Save as...`
+* Select :menuselection:`SpatialLite` as the format and save the file as
+  :kbd:`landuse` under the "epsg4326" directory.
+* Click :menuselection:`Ok`.

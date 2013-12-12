@@ -23,9 +23,9 @@ any vector layer.
 -------------------------------------------------------------------------------
 
 To change a layer's symbology, open its :guilabel:`Layer Properties`. Let's
-begin by changing the color of the :guilabel:`urban` layer.
+begin by changing the color of the :guilabel:`landuse` layer.
 
-* Right-click on the :guilabel:`urban` layer in the Layers list.
+* Right-click on the :guilabel:`landuse` layer in the Layers list.
 * Select the menu item :guilabel:`Properties` in the menu that appears.
 
 .. note:: By default, you can also access a layer's properties by
@@ -49,15 +49,22 @@ A standard color dialog will appear.
 .. _backlink-symbology-colors-1:
 
 
+|basic| |TY|
+-------------------------------------------------------------------------------
+
+Change the :guilabel:`water` layer to a light blue color.
+
+:ref:`Check your results <symbology-colors-1>`
+
+
 |basic| |FA| Changing Symbol Structure
 -------------------------------------------------------------------------------
 
 This is good stuff so far, but there's more to a layer's symbology than just
-its color. Next we want to change the color of the farms (the :guilabel:`rural`
-layer), but we also want to eliminate the lines between the different farms so
-as to make the map less visually cluttered.
+its color. Next we want to eliminate the lines between the different land use
+areas so as to make the map less visually cluttered.
 
-* Open the :guilabel:`Layer Properties` window for the :guilabel:`rural`
+* Open the :guilabel:`Layer Properties` window for the :guilabel:`landuse`
   layer.
 
 Under the :guilabel:`Style` tab, you will see the same kind of dialog as
@@ -70,18 +77,12 @@ color.
 .. image:: /static/training_manual/symbology/simple_fill_selected.png
    :align: center
 
-* Change the color inside the polygons in the layer by clicking the button next
-  to the :guilabel:`Colors -> Fill` label.
-* In the dialog that appears, choose a new color (that seems to suit a farm).
-
-Next, we want to get rid of the lines between all the farms.
-
 * Click on the :guilabel:`Border style` dropdown. At the moment, it should be
   showing a short line and the words :guilabel:`Solid Line`.
 * Change this to :guilabel:`No Pen`.
 * Click :guilabel:`OK`.
 
-Now the :guilabel:`rural` layer won't have any lines between farms.
+Now the :guilabel:`landuse` layer won't have any lines between areas.
 
 
 .. _backlink-symbology-structure-1:
@@ -89,10 +90,10 @@ Now the :guilabel:`rural` layer won't have any lines between farms.
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Change the :guilabel:`urban` layer's symbology so that it is gray and without
-  outlines.
-* Change the :guilabel:`rural` layer again so that it has dotted outlines which
-  are just a bit darker than the fill color for that layer.
+* Change the :guilabel:`water` layer's symbology again so that it is has a
+  darker blue outline.
+* Change the :guilabel:`rivers` layer's symbology to a sensible representation
+  of waterways.
 
 :ref:`Check your results <symbology-structure-1>`
 
@@ -104,17 +105,17 @@ example, a dataset of all the continents may have low detail, and not be very
 accurate at street level. When that happens, you want to be able to hide the
 dataset at inappropriate scales.
 
-In our case, we may decide to hide the streets from view at small scales. This
+In our case, we may decide to hide the buildings from view at small scales. This
 map, for example ...
 
-.. image:: /static/training_manual/symbology/streets_small_scale.png
+.. image:: /static/training_manual/symbology/buildings_small_scale.png
    :align: center
 
-... is not very useful. The streets are hard to distinguish at that scale.
+... is not very useful. The buildings are hard to distinguish at that scale.
 
 To enable scale-based rendering:
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`Streets`
+* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`buildings`
   layer.
 * Activate the :guilabel:`General` tab.
 * Enable scale-based rendering by clicking on the checkbox labeled
@@ -123,11 +124,11 @@ To enable scale-based rendering:
 .. image:: /static/training_manual/symbology/scale_dependent_visibility.png
    :align: center
 
-* Change the :guilabel:`Maximum` value to :kbd:`1:100000`.
+* Change the :guilabel:`Maximum` value to :kbd:`1:10000`.
 * Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
-:guilabel:`Streets` layer disappears and reappears.
+:guilabel:`buildings` layer disappears and reappears.
 
 .. note::  You can use your mouse wheel to zoom in increments.
    Alternatively, use the zoom tools to zoom to a window:
@@ -141,7 +142,7 @@ Now that you know how to change simple symbology for layers, the next step is
 to create more complex symbology. QGIS allows you to do this using symbol
 layers.
 
-* Go back to the :guilabel:`rural` layer's symbol properties panel (by clicking
+* Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
 :guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
 
 In this example, the current symbol has no outline (i.e., it uses the
@@ -195,8 +196,8 @@ It's fun! But it probably has too many colors to use in a real map...
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-* Create a simple, but not distracting texture for the :guilabel:`rural` layer
-  using the methods above.
+* Remembering to zoom in if necessary, create a simple, but not distracting
+  texture for the :guilabel:`buildings` layer using the methods above.
 
 :ref:`Check your results <symbology-layers-1>`
 
@@ -208,15 +209,12 @@ When symbol layers are rendered, they are also rendered in a sequence, similar
 to the way the different map layers are rendered. This means that in some cases,
 having many symbol layers in one symbol can cause unexpected results.
 
-* Give the :guilabel:`Streets` layer an extra symbol layer (using the method
+* Give the :guilabel:`roads` layer an extra symbol layer (using the method
   for adding symbol layers demonstrated above).
-* Give the base line a :guilabel:`Pen width` of :kbd:`0.5`, a white color
- and select :guilabel:`Dashed Line` from the :guilabel:`Pen Style` dropdown.
-* Give the new, uppermost layer a thickness of :kbd:`2.5` and ensure that it is
-a :guilabel:`Solid Line`.
-
-If necessary, zoom in to a larger scale so that the :guilabel:`Streets` layer is
-shown on the map.
+* Give the base line a :guilabel:`Pen width` of :kbd:`0.3`, a white color
+  and select :guilabel:`Dashed Line` from the :guilabel:`Pen Style` dropdown.
+* Give the new, uppermost layer a thickness of :kbd:`1.3` and ensure that it is
+  a :guilabel:`Solid Line`.
 
 You'll notice that this happens:
 
@@ -228,7 +226,7 @@ Well that's not what we want at all!
 To prevent this from happening, you can sort the symbol levels and thereby
 control the order in which the different symbol layers are rendered.
 
-To change the order of the symbol layers, select the :guilabel:`Lines` layer in
+To change the order of the symbol layers, select the :guilabel:`Line` layer in
 the :guilabel:`Symbol layers` panel, then click
 :guilabel:`Advanced -> Symbol levels...` in the
 bottom right-hand corner of the window. This will open a dialog like this:
@@ -273,10 +271,11 @@ replacing will be lost.
 |moderate| |TY|
 -------------------------------------------------------------------------------
 
-* Change the appearance of the :guilabel:`Streets` layer again.
+* Change the appearance of the :guilabel:`roads` layer again.
 
-The roads must be dark gray or black, with a thin yellow outline, and a dashed
-white line running in the middle to make them resemble a real road.
+The roads must be narrow and mid-gray, with a thin, pale yellow outline. Remember
+that you may need to change the layer rendering order via the
+:menuselection:`Advanced -> Symbol levels...` dialog.
 
 .. image:: /static/training_manual/symbology/target_road_symbology.png
    :align: center
@@ -293,8 +292,9 @@ Symbol levels also work for classified layers (i.e., layers having multiple
 symbols).  Since we haven't covered classification yet, you will work with some
 rudimentary pre-classified data.
 
-* Create a new map and add only the :guilabel:`Streets` dataset.
-* Apply the style :kbd:`advanced_levels_demo.qml` provided in :kbd:`exercise_data/styles`.
+* Create a new map and add only the :guilabel:`roads` dataset.
+* Apply the style :kbd:`advanced_levels_demo.qml` provided in
+  :kbd:`exercise_data/styles`.
 * Zoom to the Swellendam area (the cluster of roads near the center of the
   layer).
 * Using symbol layers, ensure that the outlines of layers flow into one another
@@ -333,18 +333,18 @@ click the :guilabel:`Symbol layer type` dropdown:
 .. image:: /static/training_manual/symbology/marker_type_dropdown.png
    :align: center
 
-* Investigate the various options available to you, and choose a symbol layer
-  type other than the default :guilabel:`Simple Marker`.
-* If in doubt, use an :guilabel:`Ellipse Marker`.
-* Choose a white outline and black fill, with a :guilabel:`symbol width` of
-  :kbd:`2,00` and :guilabel:`symbol height` of :kbd:`4,00`.
+* Investigate the various options available to you, and choose a symbol with
+  styling you think is appropriate.
+* If in doubt, use a round :guilabel:`Simple marker` with a white border and
+  pale green fill, with a :guilabel:`size` of :kbd:`3,00` and an
+  :guilabel:`Outline width` of :kbd:`0.5`.
 
 Line Symbol Layer Types
 ...............................................................................
 
 To see the various options available for line data:
 
-* Change the symbol layer type for the :guilabel:`street` layer's topmost
+* Change the symbol layer type for the :guilabel:`roads` layer's topmost
   symbol layer to :guilabel:`Marker line`:
 
 .. image:: /static/training_manual/symbology/change_to_marker_line.png
@@ -356,7 +356,7 @@ panel. Change the symbol properties to match this dialog:
 .. image:: /static/training_manual/symbology/simple_marker_line_properties.png
    :align: center
 
-* Change the interval to :kbd:`2,00`:
+* Change the interval to :kbd:`1,00`:
 
 .. image:: /static/training_manual/symbology/marker_line_interval.png
    :align: center
@@ -376,7 +376,7 @@ Polygon Symbol Layer Types
 
 To see the various options available for polygon data:
 
-* Change the symbol layer type for the :guilabel:`urban` layer, as before for
+* Change the symbol layer type for the :guilabel:`water` layer, as before for
   the other layers.
 * Investigate what the different options on the list can do.
 * Choose one of them that you find suitable.
@@ -390,14 +390,14 @@ To see the various options available for polygon data:
    :align: center
 
 * Add a new symbol layer with a normal :guilabel:`Simple fill`.
-* Make it gray with no outlines.
+* Make it the same light blue with a darker blue border.
 * Move it underneath the point pattern symbol layer with the :guilabel:`Move
   down` button:
 
 .. image:: /static/training_manual/symbology/simple_fill_move_down.png
    :align: center
 
-As a result, you have a textured symbol for the urban layer, with the added
+As a result, you have a textured symbol for the water layer, with the added
 benefit that you can change the size, shape and distance of the individual dots
 that make up the texture.
 
@@ -436,14 +436,10 @@ First, we'll change the canvas to a size appropriate for a small texture.
 * Right-click on the circle you just created and open its :guilabel:`Fill and
   Stroke`:
 
-* Change the :guilabel:`Stroke paint` to green:
+* Change the :guilabel:`Stroke paint` to a pale grey-blue and the
+  :guilabel:`Stroke style` to a darker color with thin stroke:
 
-.. image:: /static/training_manual/symbology/stroke_paint_green.png
-   :align: center
-
-* Change the :guilabel:`Stroke style` to a thicker line:
-
-.. image:: /static/training_manual/symbology/thick_stroke.png
+.. image:: /static/training_manual/symbology/inkscape_stroke_fill.png
    :align: center
 
 * Draw a line using the :guilabel:`Line` tool:
@@ -451,26 +447,27 @@ First, we'll change the canvas to a size appropriate for a small texture.
 * Click once to start the line. Hold :kbd:`ctrl` to make it snap to increments
   of 15 degrees.
 * Click once to end the line segment, then right-click to finalize the line.
-* Change its color and width as before and move it around as necessary, so that
-  you end up with a symbol like this one:
+* Change its color and width to match the circle's stroke and move it around as
+  necessary, so that you end up with a symbol like this one:
 
-.. image:: /static/training_manual/symbology/final_symbol.png
+.. image:: /static/training_manual/symbology/inkscape_final_symbol.png
    :align: center
 
-* Save it as :guilabel:`orchard` under the directory that the course is in, under
-  :kbd:`exercise_data/symbols`, as an SVG file.
+* Save it as :guilabel:`landuse_symbol` under the directory that the course is
+  in, under :kbd:`exercise_data/symbols`, as an SVG file.
 
 In QGIS:
 
-* Open the :guilabel:`Layer Properties` for the :guilabel:`rural` layer.
-* Change the symbol structure to the following:
+* Open the :guilabel:`Layer Properties` for the :guilabel:`landuse` layer.
+* Change the symbol structure to the following and find your SVG image via the
+  :guilabel:`Browse` button:
 
 .. image:: /static/training_manual/symbology/svg_symbol_settings.png
    :align: center
 
-* Find your SVG image via the :guilabel:`Browse` button:
+You may also wish to update the svg layer's border:
 
-.. image:: /static/training_manual/symbology/browse_for_svg.png
+.. image:: /static/training_manual/symbology/svg_layer_border.png
    :align: center
 
 Your rural layer should now have a texture like the one on this map:

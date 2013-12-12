@@ -84,10 +84,10 @@ nice yet:
 ...............................................................................
 
 * Verify that the colors are changing as you expect them to change.
-* It is enough to change only the :guilabel:`rural` layer for now. An example
+* It is enough to change only the :guilabel:`water` layer for now. An example
   is below, but may look different depending on the color you chose.
 
-.. image:: /static/training_manual/symbology/018.png
+.. image:: /static/training_manual/symbology/answer_water_blue.png
    :align: center
 
 .. note::  If you want to work on only one layer at a time and don't want the
@@ -103,9 +103,9 @@ nice yet:
 |basic| *Symbol Structure*
 ...............................................................................
 
-Seen together, your rural and urban layers should look more or less like this:
+Your map should now look like this:
 
-.. image:: /static/training_manual/symbology/020.png
+.. image:: /static/training_manual/symbology/answer_symbology1.png
    :align: center
 
 If you are a Beginner-level user, you may stop here.
@@ -125,12 +125,12 @@ If you are a Beginner-level user, you may stop here.
 |moderate| *Symbol Layers*
 ...............................................................................
 
-* Customize your layers as you like, but remember that it has to be easy to
-  tell different layers apart on the map.
+* Customize your :guilabel:`buildings` layer as you like, but remember that it
+  has to be easy to tell different layers apart on the map.
 
 Here's an example:
 
-.. image:: /static/training_manual/symbology/013.png
+.. image:: /static/training_manual/symbology/answer_building_symbology.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-layers-1>`
@@ -141,29 +141,23 @@ Here's an example:
 |moderate| *Symbol Levels*
 ...............................................................................
 
-To make the required symbol, you need at least three symbol layers:
+To make the required symbol, you need two symbol layers:
 
-.. image:: /static/training_manual/symbology/021.png
+.. image:: /static/training_manual/symbology/answer_road_symbology.png
    :align: center
 
 The lowest symbol layer is a broad, solid yellow line. On top of it there is a
-slightly thinner solid dark gray or black line. The symbol layer on top is a
-thin white dashed line.
+slightly thinner solid gray line.
 
 * If your symbol layers resemble the above but you're not getting the result
   you want, check that your symbol levels look something like this:
 
-  .. image:: /static/training_manual/symbology/022.png
+  .. image:: /static/training_manual/symbology/answer_road_symbol_levels.png
      :align: center
 
-* Now your symbol should look like this:
+* Now your map should look like this:
 
-  .. image:: /static/training_manual/symbology/023.png
-     :align: center
-
-* Which, on the map, gives you this kind of effect:
-
-  .. image:: /static/training_manual/symbology/024.png
+  .. image:: /static/training_manual/symbology/target_road_symbology.png
      :align: center
 
 :ref:`Back to text <backlink-symbology-levels-1>`
@@ -176,7 +170,7 @@ thin white dashed line.
 
 * Adjust your symbol levels to these values:
 
-.. image:: /static/training_manual/symbology/026.png
+.. image:: /static/training_manual/symbology/answer_road_symbol_layers.png
    :align: center
 
 * Experiment with different values to get different results.

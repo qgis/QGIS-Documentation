@@ -35,9 +35,9 @@ Let's get started right away!
    :align: center
 
 * Click on the :guilabel:`Browse` button and navigate to the file
-  :kbd:`exercise_data/streets_en.shp` (in your course directory). With this file
-  selected, click :guilabel:`Open`. You will see the original dialog, but with
-  the file path filled in. Click :guilabel:`Open` here as well. The data you
+  :kbd:`exercise_data/epsg4326/roads.shp` (in your course directory). With this
+  file selected, click :guilabel:`Open`. You will see the original dialog, but
+  with the file path filled in. Click :guilabel:`Open` here as well. The data you
   specified will now load.
 
 Congratulations! You now have a basic map. Now would be a good time to save
