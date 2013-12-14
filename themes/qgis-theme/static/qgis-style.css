@@ -608,7 +608,7 @@ section.content h4 {
 #core-contributors > p,
 #contributors > p,
 #others > p {
-  min-height: 60px;
+  min-height: 90px;
 }
 /********* Downloads by OS *********/
 #downloads {
@@ -799,10 +799,18 @@ section.menu nav.subnav ul li a:hover {
 /* color for qgis version disclaimer (used when files need to be revised) */
 .disclaimer {
   display: block;
-  margin-top: 15px;
-  color: red;
-  border: 2px solid red;
-  padding: 5px 30px 5px 20px;
+  color: black;
+  margin-top: 17px;
+  padding: 9px 30px 14px 50px;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #dfdfdf;
+  border-left: 1px solid #ececec;
+  border-right: 1px solid #ececec;
+  border-top: 1px solid #f5f5f5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px #CCCCCC;
 }
 /* (Sphinx) admonition changes, as used in documentation */
 .admonition-title {
@@ -812,7 +820,8 @@ section.menu nav.subnav ul li a:hover {
   margin-left: 44px !important;
 }
 /* theming of warning boxes class=".admonition .warning" */
-.warning {
+.warning,
+.disclaimer {
   background-image: url("images/warning.png");
   background-position: 15px 8px;
   background-repeat: no-repeat;
