@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-26 21:53+0000\n"
+"PO-Revision-Date: 2013-12-05 20:49+0000\n"
 "Last-Translator: João Gaspar <joao.f.r.gaspar@gmail.com>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/qgis-documentation/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -906,7 +906,7 @@ msgid ""
 "that |qg| uses internally. This can be useful for troubleshooting, as there "
 "are several brands of WMS servers in the market and they all have their own "
 "interpretation of the WMS standard."
-msgstr ""
+msgstr "WMS é um serviço REST genérico (Estado de Transferência Representativo) mais que um Serviço Web completamente fundido.Como tal, pode realmente obter os URLs gerados pelo |qg| e usá-los num navegador da web para recuperar as mesmas imagens que o |qg| usa internamente. Isto pode ser útil para resolver problemas, uma vez que existem várias marcas de servidores WMS no mercado e todos eles têm a sua própria interpretação da norma WMS."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:78
 msgid ""
@@ -917,7 +917,7 @@ msgid ""
 "production. A WMS request typically involves both the generation and "
 "transmission of the data. A well known example of a non-OGC standard for "
 "viewing tiled geospatial data is Google Maps."
-msgstr ""
+msgstr "O |qg| pode também agir como um cliente WMTS. O WMTS é um padrão OGC para a distribuição de conjuntos de mosaicos de dados geoespaciais. Isto é uma forma mais rápida e mais eficiente para distribuir dados que o WMS porque com o WMTS os conuntos de mosaicos são pré-gerados e o cliente apenas faz pedidos de transmissão dos mosaicos e não os produz. Um pedido típico do WMS  envolve a geração e transmissão de dados. Um exemplo conhecido de um padrão não-OGC para a visualização de mosaicos de dados geoespaciais é o Google Maps."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:104
 msgid ""
@@ -991,7 +991,7 @@ msgid ""
 "need to request the list of layers by clicking the **[Connect]** button. "
 "This option is quite handy when you want to search maps by specific "
 "keywords."
-msgstr ""
+msgstr "Como pode ver é possível introduzir uma cadeia de texto de pesquisa no campo de texto e pressionar o botão **[Pesquisar]**. Após pouco tempo o resultado da pesquisa será preenchido na lista debaixo do campo de texto. Procure a lista de resultados dentro da tabela. Para visualizar os resultados, seleccione uma entrada da tabela, prima o botão **[Adicionar a linha seleccionada à lista WMS]** e mude para o separador  :guilabel:`Camadas`. O |qg| automaticamente actualiza a sua lista de servidores e o resultado seleccionado da pesquisa está disponível na lista de servidores WMS guardados no separador :guilabel:`Camadas`. Apenas precisará de pedir a lista de camadas clicando no botão **[Ligar]**. Esta opção é especialmente útil quando quer pesquisar mapas por palavras-chave específicas."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:358
 msgid "When using WMTS (Cached WMS) Services like"
@@ -1006,7 +1006,7 @@ msgid ""
 "Windows) or :menuselection:`View --> Panels` (Gnome and MacOSX) then choose "
 "`Tile scale`, which gives you the available scales from the tileserver with "
 "nice slider docked in."
-msgstr ""
+msgstr "pode procurar através do separador :guilabel:`Mosaicos` dados pelo servidor. Informação adicional como o tamanho do mosaico, formatos e SRC suportados estão na lista desta tabela. Em combinação com esta característica pode usar a escala da quadrícula do  :menuselection:`Configurações --> Painéis` (KDE e Windows) ou :menuselection:`Ver --> Painéis` (Gnome e MacOSX) e de seguida escolha `Escala da quadrícula`, que dá escalas disponíveis do servidor de mosaicos com uma barra de deslizamento acoplada."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:395
 msgid ""
@@ -1018,7 +1018,7 @@ msgid ""
 "the map and it can be copied to clipboard and pasted to another vector "
 "layer. See example setup of UMN Mapserver below to support GetFeatureInfo "
 "GML format."
-msgstr ""
+msgstr "A ferramenta |mActionIdentify| :sup:`Identificar` suporta respostas do Servidor WMS (GetFeatureInfo) no formato GML (é chamado de Elemento no GUI do|qg| neste contexto). Se o formato \"Elemento\" for suportado pelo servidor e seleccionado, os resultados da ferramenta Identificar são elementos vectoriais como normais camadas vectoriais. Quando um elemento é seleccionado na árvore, é destacada no mapa e pode ser copiada para a área de transferência e colada noutra camada vectorial. Veja o exemplo da instalação em baixo do UMN Mapserver para suportar o formato GML GetFeatureInfo."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:447
 msgid ""
@@ -1026,41 +1026,41 @@ msgid ""
 "when drawing the map. |qg| supports whatever formats the underlying Qt "
 "libraries were built with, which is typically at least ``image/png`` and "
 "``image/jpeg``."
-msgstr ""
+msgstr "**Formatos de Imagem** --- A lista de MIME-types que o servidor pode responder com o desenho do mapa. O |qg| formata qualquer que seja as bibliotecas Qt subjacentes que foram construídas, que é pelo menos tipicamente a ``image/png`` e ``image/jpeg``."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:451
 msgid ""
 "**Identity Formats** --- The list of MIME-types the server can respond with "
 "when you use the Identify tool. Currently |qg| supports the ``text-plain`` "
 "type."
-msgstr ""
+msgstr "**Formatos de Identidade** --- A lista dos MIME-types do servidor pode responder quando usa a ferramenta identificar. Actualmente o |qg| suporta o tipo ``text-plain``."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:459
 msgid ""
 "**Visible** --- Whether or not this layer is selected as visible in the "
 "legend. (Not yet used in this version of |qg|.)"
-msgstr ""
+msgstr "**Visível** --- Seja ou não essa camada esta é selecionada como visível na legenda. (Ainda não é usado nesta versão do |qg|.)"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:463
 msgid ""
 "**Can be Transparent** --- Whether or not this layer can be rendered with "
 "transparency. This version of |qg| will always use transparency if this is "
 "``Yes`` and the image encoding supports transparency"
-msgstr ""
+msgstr "**Pode ser Transparente** --- Quando uma camada pode ou não pode ser renderizada com transparência. Esta versão do |qg| irá sempre usar a transparência se esta é ``Sim`` e a codificação da imagem suportar transparência"
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:466
 msgid ""
 "**Can Zoom In** --- Whether or not this layer can be zoomed in by the "
 "server. This version of |qg| assumes all WMS layers have this set to "
 "``Yes``. Deficient layers may be rendered strangely."
-msgstr ""
+msgstr "**Permite Aproximar** --- Quando uma camada pode ou não pode ser ampliada neste servidor. Esta versão do |qg| assume que todas as camadas WMS têm esta definida como ``Sim``. Camadas deficientes podem ser renderizadas de forma estranha."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:472
 msgid ""
 "**Fixed Width, Fixed Height** --- Whether or not this layer has fixed source"
 " pixel dimensions. This version of |qg| assumes all WMS layers have this set"
 " to nothing. Deficient layers may be rendered strangely."
-msgstr ""
+msgstr "**Largura Fixa, Altura Fixa** --- Quando uma camada pode ou não pode ter dimensões de pixeis da fonte fixadas. Esta versão |qg| assume que todas as camadas WMS têm esta definição como nada. Camadas deficientes podem ser renderizadas de forma estranha."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:475
 msgid ""
@@ -1071,7 +1071,7 @@ msgid ""
 " WMS webmaster should be informed of this error, which they may know as the "
 "WMS XML elements ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` or the "
 "CRS:84 ``BoundingBox``."
-msgstr ""
+msgstr "**Caixa de Enquadramento WGS 84** --- A caixa de enquadramento desta camada, nas coordenadas WGS 84. Alguns servidores WMS não configuram esta situação correctamente (ex.: usam as coordenadas UTM). Se for esse o caso, então a vista inicial desta camada pode ser renderizada com uma aparência 'afastada' pelo |qg|. O webmaster do WMS deve informar deste erro, que pode ser conhecido como elementos WMS XML ``LatLonBoundingBox``, ``EX_GeographicBoundingBox`` ou CRS:84 ``BoundingBox``."
 
 #: ../../source/docs/user_manual/working_with_ogc/ogc_client_support.rst:491
 msgid ""

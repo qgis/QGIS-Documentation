@@ -5,7 +5,7 @@
 #LANGUAGES     = en `ls i18n`
 LANGUAGES     = en ca_ES  da_DK  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 # as long as this branch is testing, we only build for english:
-# LANGUAGES     = en 
+# LANGUAGES     = en
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -16,7 +16,7 @@ BUILDDIR      = output
 # using the -A flag, we create a python variable named 'language', which
 # we then can use in html templates to create language dependent switches
 SPHINXOPTS    = -D language=$(LANG) -A language=$(LANG) $(SOURCEDIR)
-VERSION       = testing
+VERSION       = 2.0
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
