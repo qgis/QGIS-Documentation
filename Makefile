@@ -3,9 +3,9 @@
 
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
-#LANGUAGES     = en ca_ES  da_DK  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
+LANGUAGES     = en ca_ES  da_DK  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 # as long as this branch is testing, we only build for english:
-LANGUAGES     = en 
+# LANGUAGES     = en 
 LANG          = en
 SPHINXBUILD   = sphinx-build
 SPHINXINTL    = sphinx-intl
@@ -142,8 +142,7 @@ all:
 	@echo Starting with pulling all translations from transifex
 	# --minimum-perc=1 so only files which have at least 1% translation are pulled
 	# -f to force, --skip to not stop with errors
-	#tx pull --minimum-perc=1 --skip -f
-	# ^^^ SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
+	tx pull --minimum-perc=1 --skip -f
 	mkdir -p live/html/pdf
 	# after build quickly rename old live dir, mv output to live dir and then remove old dir
 	@for LANG in $(LANGUAGES) ; do \
