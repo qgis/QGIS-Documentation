@@ -1,11 +1,11 @@
 *****************************
-Communicating with the user
+Communicating with the User
 *****************************
 
 This section shows some methods and elements that should be used to communicate with the user, in order to keep consistency in the User Interface.
 
-Showing messages. The QgsMessageBar class.
-==========================================
+Showing messages
+================
 
 Using mesages boxes can be a bad idea from a user experience point of view. For showing a small info line or a warning/error messages, the QGIS message bar is usually a better option
 
@@ -22,13 +22,13 @@ Using the reference to the QGIS interface object, you can show a message in the 
    :align: center
    :width: 40em
 
-   QGIS Message bar
+   QGIS message bar
 
 You can set a duration to show it for a limited time.
 
 ::
 
-	iface.messageBar().pushMessage("Error", ""Ooops, the plugin is not working as \
+	iface.messageBar().pushMessage("Error", "Ooops, the plugin is not working as \
           it should", level=QgsMessageBar.CRITICAL, duration=3)
 
 
@@ -36,7 +36,7 @@ You can set a duration to show it for a limited time.
    :align: center
    :width: 40em
 
-   QGIS Message bar with timer
+   QGIS message bar with timer
 
 
 The examples above show an error bar, but the ``level`` parameter can be used to creating warning messages or info messages, using the ``QgsMessageBar.WARNING`` and ``QgsMessageBar.INFO`` constants repectively.
@@ -45,21 +45,21 @@ The examples above show an error bar, but the ``level`` parameter can be used to
    :align: center
    :width: 40em
 
-   QGIS Message bar (warning)
+   QGIS message bar (warning)
 
 .. figure:: /static/pyqgis_developer_cookbook/infobar.png
    :align: center
    :width: 40em
 
-   QGIS Message bar (info)
+   QGIS message bar (info)
 
 
-Widgets can be added to the message bar, like for instance a button to show more info
+Widgets can be added to the message bar, like for instance a button to show more info.
 
 ::
 
 	def showError():
-    	pass
+	    pass
 
 	widget = iface.messageBar().createMessage("Missing Layers", "Show Me")
 	button = QPushButton(widget)
@@ -68,11 +68,11 @@ Widgets can be added to the message bar, like for instance a button to show more
 	widget.layout().addWidget(button)
 	iface.messageBar().pushWidget(widget, QgsMessageBar.WARNING)
 
-.. figure:: /static/pyqgis_developer_cookbook/button-bar.png
+.. figure:: /static/pyqgis_developer_cookbook/bar-button.png
    :align: center
    :width: 40em
 
-   QGIS Message bar with a button
+   QGIS message bar with a button
 
 You can even use a message bar in your own dialog so you don't have to show a message box, or if it doesn't make sense to show it in the main QGIS window.
 
@@ -97,12 +97,12 @@ You can even use a message bar in your own dialog so you don't have to show a me
    :align: center
    :width: 40em
 
-   QGIS Message bar in custom dialog
+   QGIS message bar in custom dialog
 
 
 
 Showing progress
-=================
+================
 
 Progress bars can also be put in the QGIS message bar, since, as we have seen, it accepts widgets. Here is an example that you can try in the console.
 
@@ -122,21 +122,27 @@ Progress bars can also be put in the QGIS message bar, since, as we have seen, i
 		progress.setValue(i + 1)
 	iface.messageBar().clearWidgets()        	
 
+.. figure:: /static/pyqgis_developer_cookbook/infowithprogress.png
+   :align: center
+   :width: 40em
 
+   QGIS message bar with progress bar
 
 Also, you can use the built-in status bar to report progress, as in the next example.
 
 ::
+
 	count = layers.featureCount()
 	for i, feature in enumerate(features):
-		#do something time-consuming here
-		...
+		# do something time-consuming here ...
+
 		percent = i / float(count) * 100
-		iface.mainWindow().statusBar().showMessage("Processed {} %".format(int(percent)))
+		iface.mainWindow().statusBar().showMessage( \
+		    "Processed {} %".format(int(percent)))
 	iface.mainWindow().statusBar().clearMessage()
 
 Logging
-========
+=======
 
 You can use the QGIS logging system to log all the information that you want to save about the execution of your code.
 
@@ -148,3 +154,18 @@ You can use the QGIS logging system to log all the information that you want to 
           QgsMessageLog.WARNING)
 	QgsMessageLog.logMessage("Your plugin code has crashed!", \
           QgsMessageLog.CRITICAL)
+
+Messages will be logged in the General tab of the Log Messages panel. Messages can be logged in another tab by specifying the ``tag`` argument.
+
+::
+
+	QgsMessageLog.logMessage("This message is somewhere else.", \
+	        tag="Somewhere Else", level=QgsMessageLog.INFO)
+
+Note the logging a large number of messages in quick sucession can make the application unresponsive. Use the message log sparingly for debugging purposes.
+
+.. figure:: /static/pyqgis_developer_cookbook/message-log.png
+   :align: center
+   :width: 40em
+
+   QGIS Message Log
