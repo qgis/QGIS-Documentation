@@ -2,13 +2,13 @@
 ===============================================================================
 
 Up to now, none of the changes we have made to the map have been influenced by
-the objects that are being shown. In other words, all the farms look alike, and
-all the roads look alike. When looking at the map, the viewers don't know
-anything about the roads they are seeing; only that there is a road of a
+the objects that are being shown. In other words, all the land use areas look
+alike, and all the roads look alike. When looking at the map, the viewers don't
+know anything about the roads they are seeing; only that there is a road of a
 certain shape in a certain area.
 
 But the whole strength of GIS is that all the objects that are visible on the
-map, also have attributes. Maps in a GIS aren't just pictures. They represent
+map also have attributes. Maps in a GIS aren't just pictures. They represent
 not only objects in locations, but also information about those objects.
 
 **The goal of this lesson:** To explore the attribute data of an object and

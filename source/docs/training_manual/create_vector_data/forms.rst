@@ -15,102 +15,90 @@ lesson shows you how.
 |basic| |FA| Using QGIS' Form Design Functionality
 -------------------------------------------------------------------------------
 
-* Select the :guilabel:`streets` layer in the :guilabel:`Layers list`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
 * Enter :guilabel:`Edit Mode` as before.
 * Open its :guilabel:`Attribute Table`.
 * Right-click on any cell in the table. A short menu will appear, with the only
   entry being :guilabel:`Open form`.
-* Click on it to see the form that QGIS generates for this layer. 
+* Click on it to see the form that QGIS generates for this layer.
 
 Obviously it would be nice to be able to do this while looking at the map,
 rather than needing to search for a specific street in the :guilabel:`Attribute
 Table` all the time.
 
-* Go to the :menuselection:`Settings --> Options` menu (in the same row as the
-  :menuselection:`File` menu, etc.).
+* Go to the :menuselection:`Settings --> Options` menu.
 * In the dialog that appears, select the :guilabel:`Map Tools` tab.
 * Check the :guilabel:`Open feature form ...` checkbox:
 
-.. image:: /static/training_manual/create_vector_data/023.png
+.. image:: /static/training_manual/create_vector_data/open_feature_form.png
    :align: center
 
-* Close the :guilabel:`Settings` dialog.
-* Select the :guilabel:`streets` layer in the :guilabel:`Layers list`.
+* Click :guilabel:`Ok`.
+* Select the :guilabel:`roads` layer in the :guilabel:`Layers list`.
 * Using the :guilabel:`Identify` tool, click on any street in the map.
 
-.. image:: /static/training_manual/create_vector_data/024.png
-   :align: center
+  |mActionIdentify|
 
 Instead of the normal :guilabel:`Identify` dialog, you'll see the now-familiar
 form instead:
 
-.. image:: /static/training_manual/create_vector_data/026.png
+.. image:: /static/training_manual/create_vector_data/roads_form.png
    :align: center
 
 |basic| |TY| Using the Form to Edit Values
 -------------------------------------------------------------------------------
 
-If you are in edit mode, you can use this form to edit a feature's attributes!
+If you are in edit mode, you can use this form to edit a feature's attributes.
 
-* Activate edit mode.
+* Activate edit mode (if it isn't already activated).
 * Using the :guilabel:`Identify` tool, click on the main street running through
-  Swellendam:
+  Swellendam (or a major road in your town):
 
-.. image:: /static/training_manual/create_vector_data/025.png
+.. image:: /static/training_manual/create_vector_data/main_street_selected.png
    :align: center
 
-* Edit its :guilabel:`LANES` value to the correct value of :kbd:`2`.
+* Edit its :guilabel:`highway` value to be :kbd:`secondary`.
 * Save your edits.
 * Exit edit mode.
-* Open the :guilabel:`Attribute Table` and see your edit there!
+* Open the :guilabel:`Attribute Table` and note that the value has been updated
+  in the attributes table and therefore in the source data.
 
-Note that there is more than one road on this map called
-:guilabel:`Voortrekker`. The one you edited had a :kbd:`TYPE` of
-:kbd:`tertiary`.
+.. Note:: There is more than one road on this map called :kbd:`Voortrek Street`.
 
 |moderate| |FA| Setting Form Field Types
 -------------------------------------------------------------------------------
 
 It's nice to edit things using a form, but you still have to enter everything
-by hand. Fortunately, forms have different kinds of so-called *"widgets"* that
+by hand. Fortunately, forms have different kinds of so-called *widgets* that
 allow you to edit data in various different ways.
 
-* Open the :guilabel:`streets` layer's :guilabel:`Layer Properties`.
+* Open the :guilabel:`roads` layer's :guilabel:`Layer Properties`.
 * Switch to the :guilabel:`Fields` tab. You'll see this:
 
-.. image:: /static/training_manual/create_vector_data/027.png
+.. image:: /static/training_manual/create_vector_data/fields_panel.png
    :align: center
 
 * Click on the :guilabel:`Line edit` button in the same row as
-  :guilabel:`LANES` and you'll be given a new dialog.
-* In its only dropdown list, set the value to :guilabel:`Range`:
+  :guilabel:`man_made` and you'll be given a new dialog.
+* Select :guilabel:`Checkbox` in the list of options:
 
-.. image:: /static/training_manual/create_vector_data/028.png
-   :align: center
-
-* Set the values to this:
-
-.. image:: /static/training_manual/create_vector_data/029.png
+.. image:: /static/training_manual/create_vector_data/checkbox_selected.png
    :align: center
 
 * Click :guilabel:`OK`.
-* Apply the changes to the :guilabel:`Layer Properties`.
-* Enter edit mode.
+* Enter edit mode (if the :guilabel:`roads` layer is not already in edit mode.
 * Click on the :guilabel:`Identify` tool.
-* Click on :guilabel:`Voortrekker` road.
+* Click on the same main road you chose earlier.
 
-Now instead of entering values manually, you can use the up and down arrows
-next to the :guilabel:`LANES` field to edit its values!
+You'll now see that the :guilabel:`man_made` attribute has a checkbox next to it
+denoting :kbd:`True` (checked) or :kbd:`False` (unchecked).
 
 .. _backlink-create-vector-forms-1:
 
-|moderate| |TY|
+|hard| |TY|
 -------------------------------------------------------------------------------
 
-Set new, more appropriate form widgets for these fields:
-
-* :guilabel:`TYPE`
-* :guilabel:`ONEWAY`
+Set a more appropriate form widget for the :guilabel:`highway` field.
 
 :ref:`Check your results <create-vector-forms-1>`
 
@@ -119,20 +107,22 @@ Set new, more appropriate form widgets for these fields:
 
 You can also design your own custom form completely from scratch.
 
-* Create a simple point layer with two attributes:
+* Create a simple point layer named :kdb:`test-data` with two attributes:
 
   * Name (text)
   * Age (text)
 
-.. image:: /static/training_manual/create_vector_data/018.png
+.. image:: /static/training_manual/create_vector_data/new_point_layer.png
    :align: center
 
-* Capture a couple of points to your new layer using the digitizing tools so
+* Capture a few points on your new layer using the digitizing tools so
   that you have a little data to play with. You should be presented with the
   default QGIS generated attribute capture form each time you capture a new
   point.
 
-.. image:: /static/training_manual/create_vector_data/019.png
+.. note:: You may need to disable Snapping if still enabled from earlier tasks.
+
+.. image:: /static/training_manual/create_vector_data/new_point_entry.png
    :align: center
 
 |hard| |FA| Creating a New Form

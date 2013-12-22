@@ -470,7 +470,7 @@ You may also wish to update the svg layer's border:
 .. image:: /static/training_manual/symbology/svg_layer_border.png
    :align: center
 
-Your rural layer should now have a texture like the one on this map:
+Your landuse layer should now have a texture like the one on this map:
 
 .. image:: /static/training_manual/symbology/svg_symbol_result.png
    :align: center

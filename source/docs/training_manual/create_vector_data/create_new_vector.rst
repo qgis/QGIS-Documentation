@@ -103,10 +103,10 @@ are provided, so you'll need to import them as necessary.
 .. image:: /static/training_manual/create_vector_data/map_area_zoom.png
    :align: center
 
-.. note:: If your :guilabel:`urban` layer symbology is covering part or all of the
+.. note:: If your :guilabel:`buildings` layer symbology is covering part or all of the
    raster layer, you can temporarily disable the layer by deselecting it in the
    :guilabel:`Layers panel`. You may also wish to hide the
-   :guilabel:`Roads` symbology if you find it distracting.
+   :guilabel:`roads` symbology if you find it distracting.
 
 You'll be digitizing these three fields:
 
@@ -213,41 +213,40 @@ Remember that each new feature needs to have a unique :kbd:`id` value!
 
 .. note:: You can style the fill, outline and label placement and formatting
    of the :guilabel:`school_property` using techniques learnt in earlier
-   lessons. If you symbology does not match the example symbology, update it now.
+   lessons. In our example, we will use a dashed outline of light purple color
+   with no fill.
 
 .. _backlink-create-vector-digitize-1:
 
 |basic| |TY|
 -------------------------------------------------------------------------------
 
-* Create a new line feature called :kbd:`river.shp` with attributes :kbd:`id`
+* Create a new line feature called :kbd:`routes.shp` with attributes :kbd:`id`
   and :kbd:`type`. (Use the approach above to guide you.)
-* Digitize the river that runs through town by left-clicking to add points along
-  the river's course. When you reach the end point, right-click to finalise the
-  line.
+* We're going to digitize two routes which are not already marked on the roads
+  layer; one is a path, the other is a track.
 
-Start where the sandy riverbanks first become visible (you may need to hide the
-rural layer):
+Our path runs along the southern edge of the suburb of Railton, starting and
+ending at marked roads:
 
-.. image:: /static/training_manual/create_vector_data/river_start.png
+.. image:: /static/training_manual/create_vector_data/path_start_end.png
    :align: center
 
-And stop when our river joins another river:
+Our track is a little further to the south:
 
-.. image:: /static/training_manual/create_vector_data/river_end.png
+.. image:: /static/training_manual/create_vector_data/track_start_end.png
    :align: center
 
-It's not always clear where the river runs. In such cases, use your better
-judgment and estimate where the river goes. Remember that you're capturing the
-river at a large scale, so try to follow it in detail. Take some time, don't
-let the line become too straight or make the corners too sharp!
+One at a time, digitize the path and the track on the :guilabel:`routes` layer.
+Try to follow the routes as accurately as possible, using points (left-click) at
+any corners or turns.
 
-When creating the feature, give it the :kbd:`type` attribute value of
-":kbd:`stream`".
+When creating each route, give them the :kbd:`type` attribute value of
+:kbd:`path` or :kbd:`track`.
 
 You'll probably find that only the points are marked; use the
-:guilabel:`Layer Properties` dialog to add the preset :kdb:`Stream` style to
-your line.
+:guilabel:`Layer Properties` dialog to add styling to your routes. Feel free to
+give different styles to the path and track.
 
 Save your edits and toggle :guilabel:`Edit` mode.
 

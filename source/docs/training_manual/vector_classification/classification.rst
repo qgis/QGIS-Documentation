@@ -3,86 +3,76 @@
 
 Labels are a good way to communicate information such as the names of
 individual places, but they can't be used for everything. For example, let's
-say that someone wants to know which area the farms are in. Using labels, you'd
-get this:
+say that someone wants to know what each :guilabel:`landuse` area is used for.
+Using labels, you'd get this:
 
-.. image:: /static/training_manual/classification/bad_farm_labels.png
+.. image:: /static/training_manual/classification/bad_landuse_labels.png
    :align: center
 
-Obviously this is not ideal, so we need another solution. That's what this
-lesson is about!
+This makes the map's labeling difficult to read and even overwhelming if there
+are numerous different landuse areas on the map.
 
 **The goal for this lesson:** To learn how to classify vector data effectively.
 
 |basic| |FA| Classifying Nominal Data
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`rural` layer.
+* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
 * Go to the :guilabel:`Style` tab.
 * Click on the dropdown that says :guilabel:`Single Symbol` and change it to
 :guilabel:`Categorized`:
 
-.. image:: /static/training_manual/classification/categorized_styles.png
+.. image:: /static/training_manual/classification/categorised_styles.png
    :align: center
 
-* In the new panel, change the :guilabel:`Column` to :guilabel:`TOWN`
-  and the :guilabel:`Color ramp` to :guilabel:`Spectral`:
+* In the new panel, change the :guilabel:`Column` to :guilabel:`landuse`
+  and the :guilabel:`Color ramp` to :guilabel:`Greens`:
 
-.. image:: /static/training_manual/classification/categorized_style_settings.png
+.. image:: /static/training_manual/classification/categorised_style_settings.png
    :align: center
 
 * Click the button labeled :guilabel:`Classify` and then click :guilabel:`OK`.
 
 You'll see something like this:
 
-.. image:: /static/training_manual/classification/spectral_categorisation_result.png
+.. image:: /static/training_manual/classification/categorisation_result.png
    :align: center
 
-* Click the arrow (or plus sign) next to :guilabel:`rural` in the
+* Click the arrow (or plus sign) next to :guilabel:`landuse` in the
   :guilabel:`Layer list`, you'll see the categories explained:
 
 .. image:: /static/training_manual/classification/categories_explained.png
    :align: center
 
-So, this is useful! But it hurts your eyes to look at it, so let's see what we
-can do about that.
+Now our landuse polygons are appropriately colored and are classified so that
+areas with the same land use are the same color. You may wish to remove the
+black border from the :guilabel:`landuse` layer:
 
-* Open :guilabel:`Layer Properties` and go to the :guilabel:`Style` tab again.
+* Open :guilabel:`Layer Properties`, go to the :guilabel:`Style` tab and select
+  :guilabel:`Symbol`.
 * Change the symbol by removing the border from the :guilabel:`Simple Fill`
-  layer and click :guilabel:`OK`. (If you need to, go back to the lesson where
-  we covered this to remember how it's done.)
+  layer and click :guilabel:`OK`.
 
-You'll see that the farm outlines have been removed, leaving just our new
+You'll see that the landuse polygon outlines have been removed, leaving just our new
 fill colours for each categorisation.
 
-* Change the color for each municipality by double-clicking on the colored block
-  representing its symbol:
+* If you wish to, you can change the fill color for each landuse area by
+  double-clicking the relevant color block:
 
-.. image:: /static/training_manual/classification/change_layer_colour.png
+.. image:: /static/training_manual/classification/change_layer_color.png
    :align: center
 
-Use your own colors, but make sure they're not too bright, so that the
-resulting map isn't as bright and distracting as the old one.
-In the example, we'll use these colors:
-
-.. image:: /static/training_manual/classification/new_colours.png
-   :align: center
-
-This gives us a nice map:
-
-.. image:: /static/training_manual/classification/new_colours_map.png
-   :align: center
-
-By the way, there's one category that's empty:
+Notice that there is one category that's empty:
 
 .. image:: /static/training_manual/classification/empty_category.png
    :align: center
 
-* Select the empty category.
-* Click the :guilabel:`Delete` button.
+This empty category is used to color any objects which do not have a landuse
+value defined or which have a *NULL* value. It is important to keep this empty
+category so that areas with a *NULL* value are still represented on the map. You
+make like to change the color to more obviously represent a blank or *NULL* value.
 
-This only gets rid of the symbol, not the data, so don't worry about
-deleting anything that you can't recover.
+In our example, we have given the empty category a pale red color.
 
 Remember to save your map now so that you don't lose all your hard-earned
 changes!
@@ -91,8 +81,10 @@ changes!
 -------------------------------------------------------------------------------
 
 If you're only following the basic-level content, use the knowledge you gained
-above to classify the :guilabel:`urban` areas. Use darker colors to set them
-apart from the farms.
+above to classify the :guilabel:`buildings` layer. Set the categorisation against
+the :guilabel:`building` column and use the :guilabel:`Spectral` color ramp.
+
+.. note:: Remember to zoom into an urban area to see the results.
 
 |moderate| |FA| Ratio Classification
 -------------------------------------------------------------------------------
@@ -120,17 +112,17 @@ In the example above, we used nominal classification to assign each farm to the
 town that it is administered by. Now we will use ratio classification to
 classify the farms by area.
 
-* Save your rural symbology (if you want to keep it) by clicking on the
+* Save your landuse symbology (if you want to keep it) by clicking on the
   :guilabel:`Save Style ...` button in the :guilabel:`Style` dialog.
 
 We're going to reclassify the layer, so existing classes will be lost if not
 saved.
 
 * Close the :guilabel:`Style` dialog.
-* Open the Attributes Table for the :guilabel:`rural` layer.
+* Open the Attributes Table for the :guilabel:`landuse` layer.
 
-We want to classify these farms by area, but there's a problem: they don't have
-an area field! We'll have to make one.
+We want to classify the landuse areas by size, but there's a problem: they don't
+have a size field, so we'll have to make one.
 
 * Enter edit mode by clicking this button:
 
@@ -176,18 +168,15 @@ You'll get this dialog:
 * Double-click on it so that it appears in the :guilabel:`Expression` field.
 * Click :guilabel:`OK`.
 
-Now your :kbd:`AREA` field is populated with values! Admire them, then close
-the attribute table.
+Now your :kbd:`AREA` field is populated with values (you may need to click the
+column header to refresh the data). Save the edits and click :guilabel:`Ok`.
 
-.. note::  These areas are in degrees area. Later, we will compute them in
+.. note::  These areas are in degrees. Later, we will compute them in
    square meters.
 
 * Open the :guilabel:`Layer properties` dialog's :guilabel:`Style` tab.
-* Change the classification style from :guilabel:`Classified` to
-  :guilabel:`Graduated`:
-
-.. image:: /static/training_manual/classification/graduated_layer_properties.png
-   :align: center
+* Change the classification style from :guilabel:`Categorized` to
+  :guilabel:`Graduated`.
 
 * Change the :guilabel:`Column` to :guilabel:`AREA`:
 
@@ -219,7 +208,7 @@ In the example, the result looks like this:
 
 Now you'll have something like this:
 
-.. image:: /static/training_manual/classification/farm_gradient_selected.png
+.. image:: /static/training_manual/classification/landuse_gradient_selected.png
    :align: center
 
 Leave everything else as-is.
@@ -248,7 +237,7 @@ It's often useful to combine multiple criteria for a classification, but
 unfortunately normal classification only takes one attribute into account.
 That's where rule-based classification comes in handy.
 
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`rural` layer.
+* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`landuse` layer.
 * Switch to the :guilabel:`Style` tab.
 * Switch the classification style to :guilabel:`Rule-based`. You'll get this:
 
@@ -258,8 +247,10 @@ That's where rule-based classification comes in handy.
 * Click the :guilabel:`Add rule` button: |mActionSignPlus|.
 * A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
-* Using the query builder that appears, enter the criterion :kbd:`AREA >=
-  0.00085`, click :guilabel:`Ok` and choose a dark color for it:
+* Using the query builder that appears, enter the criterion
+  :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'` ,
+  click :guilabel:`Ok` and choose a pale blue-grey for it and
+  remove the border:
 
 .. image:: /static/training_manual/classification/query_builder_example.png
    :align: center
@@ -267,32 +258,43 @@ That's where rule-based classification comes in handy.
 .. image:: /static/training_manual/classification/rule_style_result.png
    :align: center
 
-* Add the criterion :kbd:`AREA <= 0.00085` and choose a light color.
-* Add the criterion :kbd:`TOWN != 'Swellendam Rural'` and assign it the color
-  black, with transparency at :kbd:`85%`.
-* Click and drag the :kbd:`TOWN` criterion to the top of the list.
+* Add a new criterion :kbd:`"landuse" != 'residential' AND AREA >= 0.00005`
+  and choose a mid-green color.
+* Add another new criterion :kbd:`"name"  =  'Swellendam'` (or the name of the
+  most important town in your dataset) and assign it a
+  darker grey-blue color in order to indicate the town's importance in the
+  region.
+* Click and drag this criterion to the top of the list.
 
-Your dialog should look like this:
+These filters are exclusive, in that they collectively exclude some areas on the
+map (i.e. those which are smaller that 0.00005, are not residential and are not
+'Swellendam'). This means that the exlucded polygons take the style of the
+default :guilabel:`(no filter)` category.
+
+We know that the excluded polygons on our map cannot be residential areas, so
+give the default category a suitable pale green color.
+
+Your dialog should now look like this:
 
 .. image:: /static/training_manual/classification/criterion_refined_list.png
    :align: center
 
 * Apply this symbology.
 
-Your map will look comething like this:
+Your map will look something like this:
 
 .. image:: /static/training_manual/classification/rule_based_map_result.png
    :align: center
 
-Now you have two area classes, with the farms in the Swellendam Rural area
-emphasized.
+Now you have a map with Swellendam the most prominent residential area and other
+non-residential areas colored according to their size.
 
 |IC|
 -------------------------------------------------------------------------------
 
 Symbology allows us to represent the attributes of a layer in an easy-to-read
 way. It allows us as well as the map reader to understand the significance of
-features, using any relevat attributes that we choose. Depending on the
+features, using any relevant attributes that we choose. Depending on the
 problems you face, you'll apply different classification techniques to solve
 them.
 

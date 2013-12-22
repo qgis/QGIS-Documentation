@@ -27,7 +27,7 @@ snapping options:
 * Ensure that the box in the :guilabel:`Avoid Int.` column is checked (set to
   true).
 * Click :guilabel:`OK` to save your changes and leave the dialog.
-* Enter edit mode with the :guilabel:`rural` layer selected.
+* Enter edit mode with the :guilabel:`landuse` layer selected.
 * Check under :menuselection:`View --> Toolbars` to make sure that your
   :guilabel:`Advanced Digitizing` toolbar is enabled.
 * Zoom to this area (enable layers and labels if necessary):
@@ -35,12 +35,12 @@ snapping options:
 .. image:: /static/training_manual/create_vector_data/zoom_to.png
    :align: center
 
-* Digitize this new (fictional) farm:
+* Digitize this new (fictional) are of the Bontebok National Park:
 
-.. image:: /static/training_manual/create_vector_data/047.png
+.. image:: /static/training_manual/create_vector_data/new_park_area.png
    :align: center
 
-* When prompted, give it a :guilabel:`PKUID` of :kbd:`999`, but feel free to
+* When prompted, give it a :guilabel:`OGC_FID` of :kbd:`999`, but feel free to
   leave the other values unchanged.
 
 If you're careful while digitizing and allow the cursor to snap to the vertices
@@ -49,148 +49,79 @@ farm and the existing farms adjacent to it.
 
 * Note the undo/redo tools in the :guilabel:`Advanced Digitizing` toolbar:
 
-.. image:: /static/training_manual/create_vector_data/046.png
-   :align: center
+  |mActionRedo| |mActionUndo|
 
-Those buttons will become your best friends...
 
-|moderate| |FA| Closing the Gaps
+|moderate| |FA| Correct Topological Features
 -------------------------------------------------------------------------------
 
-You've probably noticed some large holes in the :guilabel:`rural` dataset:
+Topology features can sometimes need to be updated. In our example, the
+:guilabel:`landuse` layer has some complex forest areas which have recently been
+joined to form one area:
 
-.. image:: /static/training_manual/create_vector_data/067.png
+.. image:: /static/training_manual/create_vector_data/forest_area_example.png
    :align: center
 
-The white gaps among the farms, which are not filled by grey urban areas,
-represent missing farms.  Let's say you want to close these gaps. If you were
-adding features normally, you'd have to be very accurate to avoid gaps and
-overlap. In fact, even if you're very accurate, without vertex snapping (which
-you activated above), digitizing features without such errors is impossible.
-
-However, we have another tool to use for this situation. Since we already have
-topology enabled, it's possible to very quickly close a hole without even
-worrying about accuracy, and the topology will take care of the rest. For
-example, let's say you want to digitize a new farm to close up this gap:
-
-.. image:: /static/training_manual/create_vector_data/068.png
-   :align: center
-
-If you had to do this without help from the topology, you'd be digitizing that
-for a while. But at the moment, as per the directions above, you have
-:guilabel:`Avoid Int.` ("Avoid Intersections") enabled for the
-:guilabel:`rural` layer. This tells QGIS to use the topology to prevent
-overlap. So you can digitize even a very rough shape:
-
-.. image:: /static/training_manual/create_vector_data/069.png
-   :align: center
-
-(Use an :guilabel:`id` value of somewhere in the hundreds range to avoid a
-conflict with existing features.)
-
-But when you select the feature ...
-
-.. image:: /static/training_manual/create_vector_data/070.png
-   :align: center
-
-... you'll see that QGIS has automatically added all the detailed vertices and
-made sure that there was no overlap!
-
-* Try doing this now.
-
-.. note::  The "Avoid Intersections" option only works to eliminate overlap
-   (intersections). Obviously, if you leave a gap, that will not be filled,
-   because you might not actually want the gap to be filled!
-
-.. _backlink-create-vector-topology-3:
-
-|moderate| |TY|
--------------------------------------------------------------------------------
-
-* Close the remaining gaps using the approach above, but make sure not to
-  create farms over urban areas.
-* Remember to save your edits, and if necessary, to exit edit mode.
-
-:ref:`Check your results <create-vector-topology-3>`
-
-
-|moderate| |FA| Correct topology errors
--------------------------------------------------------------------------------
-
-Topology errors aren't always immediately visible. Let's change the
-:guilabel:`rural` layer's symbology to see some of them.
-
-* Set the symbology for the :guilabel:`rural` layer to a single (preferably
-  dark) color.
-* Set its :guilabel:`Transparency` slider to :kbd:`50%`.
-* You should see results like these:
-
-.. image:: /static/training_manual/create_vector_data/048.png
-   :align: center
-
-There are several things to notice here. First, the new farm you added is
-lighter than the others. This is because in this dataset, there are several
-"levels" of farms: large farms and their subdivisions were digitized
-separately. So there is a large farm and its subdivisions resting on top of
-each other, which makes the color darker because you're seeing the lower one
-through the upper one. That's a feature of the dataset, not a problem.
-
-But you can also notice a definite problem: one of the farms is going
-underneath another one!  Obviously this is a mistake, because in the real world
-farms don't overlap, and two farms don't share the same subdivision.
-
-Let's correct this!
+Instead of creating new polygons to join the forest areas, we're going to use
+the :guilabel:`Node Tool` to edit the existing polygons and join them.
 
 * Enter edit mode, if it isn't active already.
 * Select the :guilabel:`Node Tool`.
-* Click on one of the corners of the problematic farm. This will select that
-  farm for editing and you'll see all the nodes appear:
+* Pick an area of forest, select a corner and move it to an adjoining corner so
+  two forest sections meet:
 
-.. image:: /static/training_manual/create_vector_data/049.png
+.. image:: /static/training_manual/create_vector_data/corner_selected.png
    :align: center
 
 * Click and drag the nodes until they snap into place.
 
-.. image:: /static/training_manual/create_vector_data/050.png
+.. image:: /static/training_manual/create_vector_data/corner_selected_move.png
    :align: center
 
 The topologically correct border looks like this:
 
-.. image:: /static/training_manual/create_vector_data/051.png
+.. image:: /static/training_manual/create_vector_data/areas_joined.png
    :align: center
+
+Go ahead and join a few more areas using the :guilabel:`Node Tool`. You can also
+use the :guilabel:`Add Feature` tool if it is appropriate. If you are using our
+example data, you should have a forest area looking something like this:
+
+.. image:: /static/training_manual/create_vector_data/node_example_result.png
+   :align: center
+
+Don't worry if you have joined more, less or different areas of forest.
 
 |moderate| |FA| Tool: Simplify Feature
 -------------------------------------------------------------------------------
 
 This is the :guilabel:`Simplify Feature` tool:
 
-.. image:: /static/training_manual/create_vector_data/052.png
-   :align: center
+  |mActionSimplify|
 
 * Click on it to activate it.
-* Click on the new farm you created previously. You'll be presented with this
-  dialog:
+* Click on one of the areas which you joined using either the
+  :guilabel:`Node Tool` or :guilabel:`Add Feature` tool. You'll see this dialog:
 
-.. image:: /static/training_manual/create_vector_data/053.png
+.. image:: /static/training_manual/create_vector_data/simplify_line_dialog.png
    :align: center
 
 * Move the slider from side to side and watch what happens:
 
-.. image:: /static/training_manual/create_vector_data/054.png
+.. image:: /static/training_manual/create_vector_data/simplify_line_example.png
    :align: center
 
-This allows you to recude the amount of nodes in complex features. However,
-notice what it does to the topology! The simplified farm is now no longer
-touching the adjacent farms as it should. That's how you know that this tool is
+This allows you to reduce the amount of nodes in complex features.
+
+* Click :guilabel:`Ok`
+
+Notice what the tool does to the topology. The simplified polygon is now no longer
+touching the adjacent polygons as it should. This shows that this tool is
 better suited to generalizing stand-alone features. The advantage is that it
-provides you with a simple, intuitive interface for generalization, and allows
-you to see what the effects would be before you even implement them.
+provides you with a simple, intuitive interface for generalization.
 
-Before you go on, get the farm back in its previous state. Either:
-
-* cancel the :guilabel:`Simplify Feature` dialog, or
-* if you already clicked :guilabel:`OK`, just undo the last change.
-
+Before you go on, set the polygon back to its original state by undoing the last
+change.
 
 .. _backlink-create-vector-topology-1:
 
@@ -199,16 +130,27 @@ Before you go on, get the farm back in its previous state. Either:
 
 This is the :guilabel:`Add Ring` tool:
 
-.. image:: /static/training_manual/create_vector_data/055.png
-   :align: center
+ |mActionAddRing|
 
 It allows you to take a hole out of a feature, as long as the hole is bounded
 on all side by the feature. For example, if you've digitized the outer
 boundaries of South Africa and you need to add a hole for Lesotho, you'd use
 this tool.
 
-* Try using this tool to create a gap in the middle of your farm.
-* Undo the edit when you are done.
+If you experiment with this tool, you'll notice that the current snapping
+options prevent you from creating a ring in the middle of the polygon. This
+would be fine if the area you wished to exclude linked to the polygon's
+boundaries.
+
+* Disable snapping for the landuse layer via the dialog you used earlier.
+* Now try using the :guilabel:`Add Ring` tool tool to create a gap in the
+  middle of the Bontebok National Park (or a landuse polygon of large area in
+  your dataset).
+* Delete your new feature by using the :guilabel:`Delete Ring` tool:
+
+  |mActionDeleteRing|
+
+.. Note:: You need to select a corner of the ring in order to delete it.
 
 :ref:`Check your results <create-vector-topology-1>`
 
@@ -220,71 +162,63 @@ this tool.
 
 This is the :guilabel:`Add Part` tool:
 
-.. image:: /static/training_manual/create_vector_data/057.png
-   :align: center
+  |mActionAddIsland|
 
 It allows you to create an extra part of the feature, not directly connected to
 the main feature. For example, if you've digitized the boundaries of mainland
 South Africa but you haven't yet added the Prince Edward Islands, you'd use
 this tool to create them.
 
-* Try using this tool to add an outlying property to your farm.
-* Undo the edit when you are done.
+* To use this tool, you must first select the polygon to which you wish to add
+  the part by using the :guilabel:`Select Single Feature` tool:
+
+  |mActionSelect|
+
+* Now try using the :guilabel:`Add Part` tool to add an outlying area to the
+  Bontebok National Park.
+* Delete your new feature by using the :guilabel:`Delete Part` tool:
+
+  |mActionDeletePart|
+
+.. Note:: You need to select a corner of the part in order to delete it.
 
 :ref:`Check your results <create-vector-topology-2>`
-
-
-|moderate| |TY| Tools: Delete Ring and Delete Part
--------------------------------------------------------------------------------
-
-These are the :guilabel:`Delete Ring` and :guilabel:`Delete Part` tools,
-respectively:
-
-.. image:: /static/training_manual/create_vector_data/060.png
-   :align: center
-
-Their functions should be obvious.
-
-* Create new parts and rings as above and delete them to try see how these
-  tools work.
-* You need to click close to a node (corner) of a part or ring in order to
-  delete it.
-
 
 |moderate| |FA| Tool: Reshape Features
 -------------------------------------------------------------------------------
 
 This is the :guilabel:`Reshape Features` tool:
 
-.. image:: /static/training_manual/create_vector_data/061.png
-   :align: center
+  |mActionReshape|
 
 It can add a bump to an existing feature. With this tool selected:
 
-* Click inside your farm.
-* Add an extra piece of land.
-* Right-click back inside the farm:
+* Left-click inside the Bontebok National Park (or your landuse area) to start
+  drawing a polygon.
+* Draw a polygon with three corners, the last of which should be back inside the
+  original polygon, forming an open-sided rectangle.
+* Right-click to finish marking points:
 
-.. image:: /static/training_manual/create_vector_data/062.png
+.. image:: /static/training_manual/create_vector_data/reshape_step_one.png
    :align: center
 
-The result of the above:
+This will give a result similar to:
 
-.. image:: /static/training_manual/create_vector_data/063.png
+.. image:: /static/training_manual/create_vector_data/reshape_result.png
    :align: center
 
 You can do the opposite, too:
 
-* Click outside the feature.
-* Take a bite out of it.
-* Right-click outside the farm again:
+* Click outside the polygon.
+* Draw a rectangle into the polygon.
+* Right-click outside the polygon again:
 
-.. image:: /static/training_manual/create_vector_data/064.png
+.. image:: /static/training_manual/create_vector_data/reshape_inverse_example.png
    :align: center
 
 The result of the above:
 
-.. image:: /static/training_manual/create_vector_data/065.png
+.. image:: /static/training_manual/create_vector_data/reshape_inverse_result.png
    :align: center
 
 
@@ -295,22 +229,38 @@ The :guilabel:`Split Features` tool is similar to how you took part of the farm
 away, except that it doesn't delete either of the two parts. Instead, it keeps
 them both.
 
-* Try it and see!
-* Undo your edit before continuing with the exercise for the next tool.
+  |mActionSplitFeatures|
 
+* First, re-enable snapping for the :guilabel:`landuse` layer.
+
+We will use the tool to split a corner from the Bontebok National Park (or a
+landuse polygon of your choice).
+
+* Select the :guilabel:`Split Features` tool and click on a vertex to begin
+  drawing a line. Click the vertex on the opposite side of the corner you wish
+  to split and right-click to complete the line:
+
+.. image:: /static/training_manual/create_vector_data/split_feature_example.png
+   :align: center
+
+* At this point, it may seem as if nothing has happened. But remember that your
+  symbology for the :kbd:`landuse` layer does not have any border, so the new
+  division line will not be shown.
+* Use the :guilabel:`Select Single Feature` tool to select the corner you just
+  split; the new feature will now be highlighted:
+
+.. image:: /static/training_manual/create_vector_data/new_corner_selected.png
+   :align: center
 
 .. _backlink-create-vector-topology-4:
 
 |hard| |TY| Tool: Merge Features
 -------------------------------------------------------------------------------
 
-* Find and select these farms:
+Now we will re-join the feature you just created to the original polygon:
 
-.. image:: /static/training_manual/create_vector_data/073.png
-   :align: center
-
-* Use the :guilabel:`Merge Selected Features` and :guilabel:`Merge Attributes
-  of Selected Features` tools.
+* Experiment with  the :guilabel:`Merge Selected Features` and
+  :guilabel:`Merge Attributes of Selected Features` tools.
 * Note the differences.
 
 :ref:`Check your results <create-vector-topology-4>`

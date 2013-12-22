@@ -2,7 +2,7 @@
 ===============================================================================
 
 Now that you've got a map, you need to be able to print it or to export it to a
-document. The reason is, a GIS map file is not an image! Rather, it saves the
+document. The reason is, a GIS map file is not an image. Rather, it saves the
 state of the GIS program, with references to all the layers, their labels,
 colors, etc. So for someone who doesn't have the data or the same GIS program
 (such as QGIS), the map file will be useless. Luckily, QGIS can export its map
@@ -19,13 +19,10 @@ map with all the required settings.
 QGIS allows you to create multiple maps using the same map file. For this
 reason, it has a tool called the :guilabel:`Composer Manager`.
 
-* Click on the :menuselection:`File --> Composer Manager` menu entry to open
+* Click on the :menuselection:`Project --> Composer Manager` menu entry to open
   this tool.  You'll see a blank :guilabel:`Composer manager` dialog appear.
-* Click the :guilabel:`Add` button and a new composer will be added called
-  :guilabel:`Composer 1` (it may be another number if you have tried using the
-  :guilabel:`Composer Manager` before now).
-* With your new composer selected, click on the :guilabel:`Rename` button and
-  rename it to :kbd:`Swellendam`.
+* Click the :guilabel:`Add` button and give the new composer the name of
+  :kbd:`Swellendam` (or the major town in your dataset).
 * Click :guilabel:`OK`.
 * Click the :guilabel:`Show` button.
 
@@ -121,16 +118,11 @@ for them by adding map elements. First, let's add a title.
 
 * Click on this button: |mActionLabel|
 
-* Click on the page, above the map, and a label will appear:
-
-.. image:: /static/training_manual/map_composer/add_label.png
-   :align: center
+* Click on the page, above the map, and a label will appear at the top of the
+  map.
 
 * Resize it and place it in the top center of the page. It can be resized and
   moved in the same way that you resized and moved the map.
-
-.. image:: /static/training_manual/map_composer/resize_label.png
-   :align: center
 
 As you move the title, you'll notice that guidelines appear to help you
 position the title in the center of the page.
@@ -159,9 +151,6 @@ A small lock icon will appear in the corner to tell you that an element can't
 be dragged right now. You can always right-click on an element again to unlock
 it, though.
 
-.. image:: /static/training_manual/map_composer/title_map_locked.png
-   :align: center
-
 Now the label is centered to the map, but not the contents. To center the
 contents of the label:
 
@@ -176,7 +165,7 @@ contents of the label:
    :align: center
 
 * Choose a large but sensible font (the example will use the default font with
-  a size of :kbd:`48`) and set the :guilabel:`Horizontal Alignment` to
+  a size of :kbd:`36`) and set the :guilabel:`Horizontal Alignment` to
   :guilabel:`Center`.
 
 You can also change the font color, but it's probably best to keep it black as
@@ -217,7 +206,7 @@ Not everything on the legend is necessary, so let's remove some unwanted items.
 
 * In the :guilabel:`Item Properties` tab, you'll find the
   :guilabel:`Legend items` panel.
-* Select the :guilabel:`places` entry.
+* Select the :guilabel:`buildings` entry.
 * Delete it from the legend by clicking the :guilabel:`minus` button:
   |mActionSignMinus|
 
@@ -226,17 +215,13 @@ You can also rename items.
 * Select a layer from the same list.
 * Click the :guilabel:`Edit` button: |edit|
 
-* Rename the layers to :kbd:`Roads and Streets`, :kbd:`Surface Water`,
-  :kbd:`Urban Areas`, and :kbd:`Farms`.
-* Click the down arrow next to any item with multiple classes to rename the
-  classes (using the same method as above).
+* Rename the layers to :kbd:`Places`, :kbd:`Roads and Streets`,
+  :kbd:`Surafce Water`, and :kbd:`Rivers`.
+* Set :knd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
+  each category to name them on the legend. You can also reorder the items:
 
-In the example, the :guilabel:`Farms` layer's areas were computed in units that
-aren't easy to convert to land area directly.  If your farms are classified by
-area or some other criteria, you should rename those classes to something that
-would make sense to the map reader. In the example, we renamed the smallest
-class :kbd:`Small Area` and the largest one :kbd:`Large Area`, with the one in
-the middle :kbd:`Moderate Area`.
+.. image:: /static/training_manual/map_composer/categories_reordered.png
+   :align: center
 
 As the legend will likely be widened by the new layer names, you may wish to
 move and resize the legend and or map. This is the result:

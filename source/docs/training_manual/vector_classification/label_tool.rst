@@ -34,7 +34,7 @@ You'll need to choose which field in the attributes will be used for the
 labels. In the previous lesson, you decided that the :kbd:`NAME` field was the
 most suitable one for this purpose.
 
-* Select :guilabel:`NAME` from the list:
+* Select :guilabel:`name` from the list:
 
 .. image:: /static/training_manual/labels/select_label_with.png
    :align: center
@@ -50,8 +50,8 @@ The map should now have labels like this:
 -------------------------------------------------------------------------------
 
 Depending on the styles you chose for your map in earlier lessons, you'll
-probably find that the labels are hard to read, too small and overlap the point
-markers. Let's fix these problems!
+might find that the labels are not appropriately formatted and either overlap or
+are too far away from their point markers.
 
 * Open the :guilabel:`Label tool` again by clicking on its button as before.
 * Make sure :guilable:`Text` is selected in the left-hand options list, then
@@ -80,13 +80,14 @@ them easier to pick out on the map:
 .. image:: /static/training_manual/labels/buffer_results.png
    :align: center
 
-Back to the problem of the labels that overlap points.
+Now we can address the positioning of the labels in relation to their point
+markers.
 
 * In the :guilabel:`Label tool` dialog, go to the :guilabel:`Placement` tab.
 * Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that
 :guilabel:`Around point` is selected:
 
-.. image:: /static/training_manual/labels/placement_options.png
+.. image:: /static/training_manual/labels/offset_placement_options.png
    :align: center
 
 * Click :guilabel:`Apply`.
@@ -123,7 +124,7 @@ This will reveal the :guilabel:`Quadrant` options which you can use to set the
 position of the label in relation to the point marker. In this case, we want the
 label to be centered on the point, so choose the center quadrant:
 
-.. image:: /static/training_manual/labels/offset_placement_settings.png
+.. image:: /static/training_manual/labels/quadrant_placement_settings.png
    :align: center
 
 * Hide the point symbols by editing the layer style as usual, and setting the
@@ -137,8 +138,9 @@ label to be centered on the point, so choose the center quadrant:
 .. image:: /static/training_manual/labels/hide_point_marker_results.png
    :align: center
 
-As you can see, some of the labels are now missing to prevent overlap (at this
-scale). Sometimes this is what you want when dealing with datasets that have
+If you were to zoom out on the map, you would see that some of the labels
+disappear at larger scales to avoid overlapping. Sometimes this is what you
+want when dealing with datasets that have
 many points, but at other times you will lose useful information this way.
 There is another possibility for handling cases like this, which we'll cover in
 a later exercise in this lesson.
@@ -149,12 +151,13 @@ a later exercise in this lesson.
 |moderate| |TY| Customize the Labels
 -------------------------------------------------------------------------------
 
-* Return the label and symbol settings to the way they were before. You might
-  like to adjust the formatting to suit your needs.
+* Return the label and symbol settings to have a point marker and a label offset
+  of :kbd:`2.00mm`. You may like to adjust the styling of the point marker or
+  labels at this stage.
 
 :ref:`Check your results <label-tool-1>`
 
-* Set the map to the scale :kbd:`1:50000`. You can do this by typing it into
+* Set the map to the scale :kbd:`1:100000`. You can do this by typing it into
   the :guilabel:`Scale` box in the :guilabel:`Status Bar`.
 * Modify your labels to be suitable for viewing at this scale.
 
@@ -171,12 +174,13 @@ way as the points, your results would look like this:
 .. image:: /static/training_manual/labels/bad_street_labels.png
    :align: center
 
-This is not very useful! To make line labels behave, we'll need to edit some options.
+We will now reformat the :guilabel:`roads` layer labels so that they are easy to
+understand.
 
 * Hide the :guilabel:`Places` layer so that it doesn't distract you.
 * Activate labels for the :guilabel:`streets` layer as before.
-* Set the font :guilabel:`Size` to :kbd:`9` so that you can see more labels.
-* Zoom in on the Swellendam town area.
+* Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels.
+* Zoom in on the Swellendam town area (or the most built-up area of your dataset).
 * In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the
   following settings:
 
@@ -184,17 +188,16 @@ This is not very useful! To make line labels behave, we'll need to edit some opt
    :align: center
 
 You'll probably find that the text styling has used default values and the
-labels are consequently very hard to read. Go ahead and set the label text style
-to be the same as the :guilabel:`Places` layer labels, but with a white fill.
+labels are consequently very hard to read. Set the label text format to have a
+dark-grey or black :kbd:`Color` and a light-yellow :kbd:`buffer`.
 
 The map will look somewhat like this, depending on scale:
 
 .. image:: /static/training_manual/labels/street_label_formatted.png
    :align: center
 
-It's better than before, but still not ideal. For starters, some of the names
-appear more than once, and that's not always necessary. To prevent that from
-happening:
+You'll see that some of the road names appear more than once and that's not
+always necessary. To prevent this from happening:
 
 * In the :guilabel:`Label labelling settings` dialog, choose the
   :guilabel:`Rendering` option and select the
@@ -236,18 +239,22 @@ on what you think seems more useful or what looks better.
 * Reactivate labeling for the :guilabel:`Places` layer.
 * Open the attribute table for :guilabel:`Places` via the |attributes| button.
 
-It has two fields that are of interest to us now: :kbd:`ADDR_CITY` and
-:kbd:`IN_SWD`. :kbd:`ADDR_CITY` is the city that the feature is in.
-:kbd:`IN_SWD` is derived from it, and tells you whether or not that feature is
-in Swellendam (:kbd:`1` if it is, :kbd:`0` if not). We can use this data to
-influence the label styles.
+It has one fields which is of interest to us now: :kbd:`place` which defines the
+type of urban area for each object. We can use this data to influence the label
+styles.
 
-* Navigate to the :guilabel:`Text` panel in the :guilabel:`Places`
-  :guilabel:`Layer Attributes` panel.
-* In the :guilabel:`Italic` dropdown, select :kbd:`IN_SWD` in the
-  :guilabel:`Field type` list and click :guilabel:`Apply`:
+* Navigate to the :guilabel:`Text` panel in the :guilabel:`places`
+  :guilabel:`Labels` panel.
+* In the :guilabel:`Italic` dropdown, select :kbd:`Edit...` to open the
+  :guilabel:`Expression string builder`:
 
-.. image:: /static/training_manual/labels/label_field_override.png
+.. image:: /static/training_manual/labels/expression_string_builder.png
+   :align: center
+
+In the text input, type: :kbd:`"place"  =  'town'` and click :guilabel:`Ok`
+twice:
+
+.. image:: /static/training_manual/labels/expression_builder_settings.png
    :align: center
 
 Notice its effects:
@@ -266,7 +273,7 @@ Notice its effects:
    following means. If you don't, feel free to leave out this section and come
    back later when you've covered the requisite materials.
 
-* Open the Attribute Table for :guilabel:`Places`.
+* Open the Attribute Table for :guilabel:`places`.
 * Enter edit mode by clicking this button: |edit|
 
 * Add a new column:
