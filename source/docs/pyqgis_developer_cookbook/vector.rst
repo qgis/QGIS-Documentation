@@ -42,6 +42,8 @@ Iterating over the features in a vector layer is one of the most common tasks. B
 
       # fetch attributes
       attrs = feature.attributes()
+
+      # attrs is a list. It contains all the attribute values of this feature
       print attrs
 
 
