@@ -7,7 +7,7 @@ Using Vector Layers
 This section summarizes various actions that can be done with vector layers.
 
 
-.. index:: 
+.. index::
   triple: vector layers; iterating; features
 
 Iterating over Vector Layer
@@ -22,7 +22,7 @@ Iterating over the features in a vector layer is one of the most common tasks. B
     # retreive every feature with its geometry and attributes
       # fetch geometry
       geom = feature.geometry()
-      print "Feature ID %d: " % feature.id() ,
+      print "Feature ID %d: " % feature.id()
 
       # show some information about the feature
       if geom.vectorType() == QGis.Point:
@@ -42,32 +42,20 @@ Iterating over the features in a vector layer is one of the most common tasks. B
 
       # fetch attributes
       attrs = feature.attributes()
+      print attrs
 
-      # attrs is a dictionary: key = field index, value = QgsFeatureAttribute
-      # show all attributes and their values
-      for (k,attr) in attrs.iteritems():
-        print "%d: %s" % (k, attr.toString())
 
-Attributes can be refered by name or by index.
-
-This code
+Attributes can be refered by index.
 
 ::
 
   idx = layer.fieldNameIndex('name')
   print feature.attributes()[idx]
 
-Has the same effect as this one:
-
-::
-
-  print feature.attributes()['name']
 
 
 Iterating over selected features
-
-
-
+---------------------------------
 
 Convenience methods
 --------------------
@@ -81,7 +69,7 @@ For the above cases, and in case you need to consider selection in a vector laye
   for feature in features:
     #Do whatever you need with the feature
 
-This will iterate over all the features in the layer, in case there is no selection, or over the selected features otherwise. 
+This will iterate over all the features in the layer, in case there is no selection, or over the selected features otherwise.
 
 Iterating over a subset of features
 -------------------------------------
@@ -134,7 +122,7 @@ list of added features (their ID is set by the data store)::
     feat.addAttribute(0,"hello")
     feat.setGeometry(QgsGeometry.fromPoint(QgsPoint(123,456)))
     (res, outFeats) = layer.dataProvider().addFeatures( [ feat ] )
-    
+
 
 Delete Features
 ---------------
@@ -152,11 +140,11 @@ The following example first changes values of attributes with index 0 and 1,
 then it changes the feature's geometry::
 
   fid = 100   # ID of the feature we will modify
-  
+
   if caps & QgsVectorDataProvider.ChangeAttributeValues:
-    attrs = { 0 : QVariant("hello"), 1 : QVariant(123) }
+    attrs = { 0 : "hello", 1 : 123 }
     layer.dataProvider().changeAttributeValues({ fid : attrs })
-  
+
   if caps & QgsVectorDataProvider.ChangeGeometries:
     geom = QgsGeometry.fromPoint(QgsPoint(111,222))
     layer.dataProvider().changeGeometryValues({ fid : geom })
@@ -223,15 +211,15 @@ have the changes stored immediately, then you will have easier work by
 ::
 
   layer.beginEditCommand("Feature triangulation")
-  
+
   # ... call layer's editing methods ...
-  
+
   if problem_occurred:
     layer.destroyEditCommand()
     return
-  
+
   # ... more editing ...
-  
+
   layer.endEditCommand()
 
 The :func:`beginEndCommand` will create an internal "active" command and will
@@ -323,13 +311,13 @@ There are two possibilities how to export a vector layer:
     fields = [QgsField("first", QVariant.Int),
               QgsField("second", QVariant.String) ]
 
-    # create an instance of vector file writer, which will create the vector file. 
+    # create an instance of vector file writer, which will create the vector file.
     # Arguments:
     # 1. path to new file (will fail if exists already)
     # 2. encoding of the attributes
     # 3. field map
     # 4. geometry type - from WKBTYPE enum
-    # 5. layer's spatial reference (instance of 
+    # 5. layer's spatial reference (instance of
     #    QgsCoordinateReferenceSystem) - optional
     # 6. driver name for the output file
     writer = QgsVectorFileWriter("my_shapes.shp", "CP1250", fields, \
@@ -341,7 +329,7 @@ There are two possibilities how to export a vector layer:
     # add a feature
     fet = QgsFeature()
     fet.setGeometry(QgsGeometry.fromPoint(QgsPoint(10,10)))
-    fet.setAttributes([1, "text"])    
+    fet.setAttributes([1, "text"])
     writer.addFeature(fet)
 
     # delete the writer to flush features to disk (optional)
@@ -362,12 +350,12 @@ The memory provider also supports spatial indexing, which is enabled by calling
 the provider's :func:`createSpatialIndex` function. Once the spatial index is
 created you will be able to iterate over features within smaller regions faster
 (since it's not necessary to traverse all the features, only those in specified
-rectangle). 
+rectangle).
 
 A memory provider is created by passing ``"memory"`` as the provider string to
 the :class:`QgsVectorLayer` constructor.
 
-The constructor also takes a URI defining the geometry type of the layer, 
+The constructor also takes a URI defining the geometry type of the layer,
 one of: ``"Point"``, ``"LineString"``, ``"Polygon"``, ``"MultiPoint"``,
 ``"MultiLineString"``, or ``"MultiPolygon"``.
 
@@ -382,7 +370,7 @@ index=yes
     Specifies that the provider will use a spatial index
 
 field=name:type(length,precision)
-    Specifies an attribute of the layer.  The attribute has a name, and 
+    Specifies an attribute of the layer.  The attribute has a name, and
     optionally a type (integer, double, or string), length, and precision.
     There may be multiple field definitions.
 
@@ -396,9 +384,9 @@ The following example code illustrates creating and populating a memory provider
   vl = QgsVectorLayer("Point", "temporary_points", "memory")
   pr = vl.dataProvider()
 
-  # add fields 
-  pr.addAttributes( [ QgsField("name", QVariant.String), 
-                      QgsField("age",  QVariant.Int), 
+  # add fields
+  pr.addAttributes( [ QgsField("name", QVariant.String),
+                      QgsField("age",  QVariant.Int),
                       QgsField("size", QVariant.Double) ] )
 
   # add a feature
@@ -440,7 +428,7 @@ The renderer for a given layer can obtained as shown below:
 ::
 
   renderer = layer.rendererV2()
-  
+
 And with that reference, let us explore it a bit::
 
   print "Type:", rendererV2.type()
@@ -506,9 +494,9 @@ To find out more about ranges used in the renderer::
 
   for ran in rendererV2.ranges():
     print "%f - %f: %s %s" % (
-        ran.lowerValue(), 
-        ran.upperValue(), 
-        ran.label(), 
+        ran.lowerValue(),
+        ran.upperValue(),
+        ran.label(),
         str(ran.symbol())
         )
 
@@ -517,7 +505,7 @@ name, :func:`sourceSymbol` and :func:`sourceColorRamp` methods.  Additionally
 there is :func:`mode` method which determines how the ranges were created:
 using equal intervals, quantiles or some other method.
 
-If you wish to create your own graduated symbol renderer you can do so as 
+If you wish to create your own graduated symbol renderer you can do so as
 illustrated in the example snippet below (which creates a simple two class
 arrangement)::
 
@@ -621,7 +609,7 @@ given symbol layer class like this::
   from qgis.core import QgsSymbolLayerV2Registry
   myRegistry = QgsSymbolLayerV2Registry.instance()
   myMetadata = myRegistry.symbolLayerMetadata("SimpleFill")
-  for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker): 
+  for item in myRegistry.symbolLayersForType(QgsSymbolV2.Marker):
     print item
 
 Output::
@@ -653,31 +641,31 @@ wish. Here is an example of a marker that draws red circles with specified
 radius::
 
   class FooSymbolLayer(QgsMarkerSymbolLayerV2):
- 
+
     def __init__(self, radius=4.0):
       QgsMarkerSymbolLayerV2.__init__(self)
       self.radius = radius
       self.color = QColor(255,0,0)
- 
+
     def layerType(self):
       return "FooMarker"
- 
+
     def properties(self):
       return { "radius" : str(self.radius) }
- 
+
     def startRender(self, context):
       pass
- 
+
     def stopRender(self, context):
       pass
- 
+
     def renderPoint(self, point, context):
       # Rendering depends on whether the symbol is selected (Qgis >= 1.5)
       color = context.selectionColor() if context.selected() else self.color
       p = context.renderContext().painter()
       p.setPen(color)
       p.drawEllipse(point, self.radius, self.radius)
- 
+
     def clone(self):
       return FooSymbolLayer(self.radius)
 
@@ -704,9 +692,9 @@ widget::
   class FooSymbolLayerWidget(QgsSymbolLayerV2Widget):
     def __init__(self, parent=None):
       QgsSymbolLayerV2Widget.__init__(self, parent)
- 
+
       self.layer = None
- 
+
       # setup a simple UI
       self.label = QLabel("Radius:")
       self.spinRadius = QDoubleSpinBox()
@@ -716,16 +704,16 @@ widget::
       self.setLayout(self.hbox)
       self.connect( self.spinRadius, SIGNAL("valueChanged(double)"), \
         self.radiusChanged)
- 
+
     def setSymbolLayer(self, layer):
       if layer.layerType() != "FooMarker":
         return
       self.layer = layer
       self.spinRadius.setValue(layer.radius)
-    
+
     def symbolLayer(self):
       return self.layer
- 
+
     def radiusChanged(self, value):
       self.layer.radius = value
       self.emit(SIGNAL("changed()"))
@@ -750,17 +738,17 @@ inability to edit the layer's attributes in GUI.
 We will have to create metadata for the symbol layer::
 
   class FooSymbolLayerMetadata(QgsSymbolLayerV2AbstractMetadata):
- 
+
     def __init__(self):
       QgsSymbolLayerV2AbstractMetadata.__init__(self, "FooMarker", QgsSymbolV2.Marker)
- 
+
     def createSymbolLayer(self, props):
       radius = float(props[QString("radius")]) if QString("radius") in props else 4.0
       return FooSymbolLayer(radius)
- 
+
     def createSymbolLayerWidget(self):
       return FooSymbolLayerWidget()
- 
+
   QgsSymbolLayerV2Registry.instance().addSymbolLayerType( FooSymbolLayerMetadata() )
 
 You should pass layer type (the same as returned by the layer) and symbol type
@@ -772,7 +760,7 @@ settings widget for this symbol layer type.
 
 The last step is to add this symbol layer to the registry --- and we are done.
 
-.. index:: 
+.. index::
   pair: custom; renderers
 
 Creating Custom Renderers
@@ -787,27 +775,27 @@ The following code shows a simple custom renderer that creates two marker
 symbols and chooses randomly one of them for every feature::
 
   import random
- 
+
   class RandomRenderer(QgsFeatureRendererV2):
     def __init__(self, syms=None):
       QgsFeatureRendererV2.__init__(self, "RandomRenderer")
       self.syms = syms if syms else [ QgsSymbolV2.defaultSymbol(QGis.Point), \
         QgsSymbolV2.defaultSymbol(QGis.Point) ]
-  
+
     def symbolForFeature(self, feature):
       return random.choice(self.syms)
- 
+
     def startRender(self, context, vlayer):
       for s in self.syms:
         s.startRender(context)
- 
+
     def stopRender(self, context):
       for s in self.syms:
         s.stopRender(context)
- 
+
     def usedAttributes(self):
       return []
- 
+
     def clone(self):
       return RandomRenderer(self.syms)
 
@@ -838,13 +826,13 @@ first symbol::
       self.vbox.addWidget(self.btn1)
       self.setLayout(self.vbox)
       self.connect(self.btn1, SIGNAL("clicked()"), self.setColor1)
- 
+
     def setColor1(self):
       color = QColorDialog.getColor( self.r.syms[0].color(), self)
       if not color.isValid(): return
       self.r.syms[0].setColor( color );
       self.btn1.setColor(self.r.syms[0].color())
- 
+
     def renderer(self):
       return self.r
 
@@ -865,12 +853,12 @@ RandomRenderer example::
   class RandomRendererMetadata(QgsRendererV2AbstractMetadata):
     def __init__(self):
       QgsRendererV2AbstractMetadata.__init__(self, "RandomRenderer", "Random renderer")
- 
+
     def createRenderer(self, element):
       return RandomRenderer()
     def createRendererWidget(self, layer, style, renderer):
       return RandomRendererWidget(layer, style, renderer)
- 
+
   QgsRendererV2Registry.instance().addRenderer(RandomRendererMetadata())
 
 Similarly as with symbol layers, abstract metadata constructor awaits renderer
@@ -885,8 +873,8 @@ To associate an icon with the renderer you can assign it in
 argument --- the base class constructor in the RandomRendererMetadata :func:`__init__`
 function becomes::
 
-     QgsRendererV2AbstractMetadata.__init__(self, 
-         "RandomRenderer", 
+     QgsRendererV2AbstractMetadata.__init__(self,
+         "RandomRenderer",
          "Random renderer",
          QIcon(QPixmap("RandomRendererIcon.png", "png")) )
 
