@@ -145,8 +145,14 @@ category               False     one of `Raster`, `Vector`, `Database` and `Web`
 =====================  ========  =======================================
 
 
-By default, plugins are placed in the `Plugins` menu (we will see in the next section how to add a menu entry for your plugin) but they can also be placed the into `Raster`, `Vector`, `Database` and `Web` menus. A corresponding "category" metadata entry exists to specify that, so the plugin can be classified accordingly. This metadata entry is used as tip for users and tells them where (in which menu) the plugin can be found. Allowed
-values for "category" are: Vector, Raster, Database, Web and Layers. For
+By default, plugins are placed in the `Plugins` menu (we will see in the next section 
+how to add a menu entry for your plugin) but they can also be placed the 
+into `Raster`, `Vector`, `Database` and `Web` menus. 
+
+A corresponding "category" metadata entry exists to specify that, 
+so the plugin can be classified accordingly. This metadata entry is used as tip for 
+users and tells them where (in which menu) the plugin can be found. Allowed
+values for "category" are: Vector, Raster, Database or Web. For
 example, if your plugin will be available from `Raster` menu, add this to
 :file:`metadata.txt`::
 
