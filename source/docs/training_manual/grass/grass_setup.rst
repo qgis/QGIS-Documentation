@@ -11,16 +11,16 @@ in GRASS *via* QGIS.
 -------------------------------------------------------------------------------
 
 To launch GRASS from within QGIS, you need to activate it as with any other
-plugin.
+plugin. First, open a new QGIS project.
 
 * In the :guilabel:`Plugin Manager`, enable :guilabel:`GRASS` in the list:
 
-  .. image:: /static/training_manual/grass/001.png
+  .. image:: /static/training_manual/grass/enable_grass.png
      :align: center
 
 The GRASS toolbar will appear:
 
-.. image:: /static/training_manual/grass/002.png
+.. image:: /static/training_manual/grass/grass_toolbar.png
    :align: center
 
 Before you can use GRASS, you need to create a **mapset**. GRASS always works
@@ -29,38 +29,43 @@ data you want to use into a GRASS database.
 
 * Click on the :guilabel:`New mapset` button:
 
-  .. image:: /static/training_manual/grass/004.png
-     :align: center
+  |grass_new_mapset|
 
   You'll see a dialog explaining the structure of a GRASS mapset.
+
 * Create a new directory called :kbd:`grass_db` in :guilabel:`exercise_data`.
 * Set it as the directory that will be used by GRASS to set up its database:
 
-  .. image:: /static/training_manual/grass/005.png
+  .. image:: /static/training_manual/grass/grass_folder.png
      :align: center
+
+* Click :guilabel:`Next`.
 
 GRASS needs to create a "location", which describes the maximum extents of the
 geographic area you'll be working in.
 
 * Call the new location :kbd:`South_Africa`:
 
-  .. image:: /static/training_manual/grass/006.png
+  .. image:: /static/training_manual/grass/new_location.png
      :align: center
 
+* Click :guilabel:`Next`.
 * We'll be working with :kbd:`WGS 84`, so search for and select this CRS:
 
-  .. image:: /static/training_manual/grass/007.png
+  .. image:: /static/training_manual/grass/wgs_84_selected.png
      :align: center
 
-* Now select the region :guilabel:`South Africa`, which is already defined in
-  GRASS:
+* Click :guilabel:`Next`.
+* Now select the region :guilabel:`South Africa` from the dropdown and click
+  :guilabel:`Set`:
 
-  .. image:: /static/training_manual/grass/008.png
+  .. image:: /static/training_manual/grass/set_south_africa.png
      :align: center
 
+* Click :guilabel:`Next`.
 * Create a mapset, which is the map file that you'll be working with.
 
-  .. image:: /static/training_manual/grass/009.png
+  .. image:: /static/training_manual/grass/grass_mapset.png
      :align: center
 
 Once you're done, you'll see a dialog asking you to confirm that the settings
@@ -75,15 +80,15 @@ it displays are correct.
 You'll now have a blank map. To load data into GRASS, you need to follow a
 two-step process.
 
-* Load data into QGIS as usual. Use the :kbd:`streets.shp` dataset (found under
-  :kbd:`exercise_data/`) for now.
+* Load data into QGIS as usual. Use the :kbd:`roads.shp` dataset (found under
+  :kbd:`exercise_data/epsg4326/`) for now.
 * As soon as it's loaded, click on the :guilabel:`GRASS Tools` button:
 
-  .. image:: /static/training_manual/grass/013.png
-     :align: center
+  |grass_tools|
 
+* In the new dialog, select :guilabel:`Modules list`.
 * Find the vector import tool by entering the term :kbd:`v.in.ogr.qgis` in the
-  :guilabel:`Filter` field of the dialog that has appeared.
+  :guilabel:`Filter` field.
 
 The :kbd:`v` stands for "vector", :kbd:`in` means its a function to import data
 into the GRASS database, :kbd:`ogr` is the software library used to read vector
@@ -92,13 +97,13 @@ vectors already loaded into QGIS.
 
 * Once you've found this tool, click on it to bring up the tool itself:
 
-  .. image:: /static/training_manual/grass/014.png
+  .. image:: /static/training_manual/grass/grass_tool_selected.png
      :align: center
 
-* Set the loaded layer to :guilabel:`streets` and its GRASS version's name to
-  :kbd:`g_streets` to prevent confusion.
+* Set the loaded layer to :guilabel:`roads` and its GRASS version's name to
+  :kbd:`g_roads` to prevent confusion.
 
-  .. image:: /static/training_manual/grass/015.png
+  .. image:: /static/training_manual/grass/g_roads_selected.png
      :align: center
 
 .. note::  |hard| Note the extra import options provided under
@@ -108,10 +113,10 @@ vectors already loaded into QGIS.
 * Click :guilabel:`Run` to begin the import.
 * When it's done, click the :guilabel:`View output` button to see the newly
   imported GRASS layer in the map.
-* Close first the import tool itself (click the :guilabel:`Close` button to the
+* Close first the import tool (click the :guilabel:`Close` button to the
   immediate right of :guilabel:`View output`), then close the :guilabel:`GDAL
   Tools` window.
-* Remove the original :guilabel:`roads_33S` layer.
+* Remove the original :guilabel:`roads` layer.
 
 Now you are left with only the imported GRASS layer as displayed in your QGIS
 map.
@@ -120,16 +125,16 @@ map.
 -------------------------------------------------------------------------------
 
 Recall that our DEM is in the Projected CRS :kbd:`UTM 33S / WGS 84`, but our
-GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's reproject the
+GRASS project is in the Geographic CRS :kbd:`WGS 84`. So let's re-project the
 DEM first.
 
 * Load the :kbd:`srtm_41_19.tif` dataset (found under
   :kbd:`exercise_data/raster/SRTM/`) into the QGIS map as usual, using QGIS'
   :guilabel:`Add Raster Layer` tool.
-* Reproject it using GDAL Warp tool (:menuselection:`Raster --> Projections -->
+* Re-project it using GDAL Warp tool (:menuselection:`Raster --> Projections -->
   Warp (Reproject)`), setting it up as shown:
 
-  .. image:: /static/training_manual/grass/017.png
+  .. image:: /static/training_manual/grass/warp_settings.png
      :align: center
 
 * Save the raster under the same folder as the original, but with the file name
@@ -140,24 +145,20 @@ Now that it's reprojected, you can load it into your GRASS database.
 
 * Open the :guilabel:`GRASS Tools` dialog again.
 * Click on the :guilabel:`Modules List` tab.
-* Search for :kbd:`r.in.gdal.qgis`:
+* Search for :kbd:`r.in.gdal.qgis` and double click the tool to open the tool's
+  dialog.
+* Set it up so that the input layer is :guilabel:`DEM_WGS84` and the output is
+  :kbd:`g_dem`.
 
-  .. image:: /static/training_manual/grass/016.png
+  .. image:: /static/training_manual/grass/g_dem_settings.png
      :align: center
 
-  Which gives you this tool:
-
-  .. image:: /static/training_manual/grass/018.png
-     :align: center
-
-* Set it up as shown (input layer is :guilabel:`DEM_WGS84`, output is
-  :kbd:`g_dem`).
 * Click :guilabel:`Run`.
 * When the process is done, click :guilabel:`View output`.
 * :guilabel:`Close` the current tab, and then :guilabel:`Close` the whole
   dialog.
 
-  .. image:: /static/training_manual/grass/019.png
+  .. image:: /static/training_manual/grass/g_roads_g_dem_result.png
      :align: center
 
 * You may now remove the original :guilabel:`DEM_WGS84` layer.
@@ -166,7 +167,7 @@ Now that it's reprojected, you can load it into your GRASS database.
 -------------------------------------------------------------------------------
 
 The GRASS workflow for ingesting data is somewhat different from the QGIS
-method, because GRASS loads its data into a spatial database structure.
+method because GRASS loads its data into a spatial database structure.
 However, by using QGIS as a frontend, you can make the setup of a GRASS mapset
 easier by using existing layers in QGIS as data sources for GRASS.
 
