@@ -184,7 +184,7 @@ gettext:
 # 3) tx push -fs --no-interactive (push the source (-f) files forcing (-f) overwriting the ones their without asking (--no-interactive)
 #
 # SHOULD NOT BE DONE ON TESTING/MASTER BRANCH! ONLY ON STABLE==TRANSLATING BRANCH
-#transifex_push:
-#	make springclean
-#	make pretranslate
-#	tx push -f -s --no-interactive
+transifex_push:
+	make springclean
+	make pretranslate
+	tx push -f -s --no-interactive
