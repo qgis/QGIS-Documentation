@@ -12,12 +12,12 @@ capabilities of GRASS.
   :guilabel:`Filter` field of the :guilabel:`Modules List` tab.
 * Open the tool and set it up like this:
 
-  .. image:: /static/training_manual/grass/020.png
+  .. image:: /static/training_manual/grass/colors_table_setup.png
      :align: center
 
 When you run the tool, it will recolor your raster:
 
-.. image:: /static/training_manual/grass/021.png
+.. image:: /static/training_manual/grass/colors_table_result.png
    :align: center
 
 |basic| |FA| Visualize Data in 3D
@@ -29,8 +29,7 @@ set to the whole extent of South Africa, as you set it up before.
 
 * To redefine the extent to cover only our raster dataset, click this button:
 
-  .. image:: /static/training_manual/grass/024.png
-     :align: center
+  |grass_region_edit|
 
 When this tool is activated, your cursor will turn into a cross whe over the
 QGIS map canvas.
@@ -41,29 +40,31 @@ QGIS map canvas.
   done.
 * Search for the :kbd:`nviz` tool:
 
-  .. image:: /static/training_manual/grass/022.png
+  .. image:: /static/training_manual/grass/nviz_search.png
      :align: center
 
 * Set it up as shown:
 
-  .. image:: /static/training_manual/grass/023.png
+  .. image:: /static/training_manual/grass/nviz_setup.png
      :align: center
 
 * Remember to enable both :guilabel:`Use region of this map` buttons to the
   right of the two raster selection dropdown menus. This will allow NVIZ to
   correctly assess the resolution of the rasters.
 * Click the :guilabel:`Run` button.
-  
+
 NVIZ will set up a 3D environment using the raster and vector selected. This
 may take some time, depending on your hardware. When it's done, you will see
 the map rendered in 3D in a new window:
 
-.. image:: /static/training_manual/grass/025.png
+.. image:: /static/training_manual/grass/nviz_result.png
    :align: center
 
 Experiment with the :guilabel:`height`, :guilabel:`z-exag`, and :guilabel:`View
 method` settings to change your view of the data. The navigation methods may
 take some getting used to.
+
+After experimenting, close the :kbd:`NVIZ` window.
 
 |moderate| |FA| The Mapcalc Tool
 -------------------------------------------------------------------------------
@@ -78,7 +79,7 @@ The Mapcalc dialog allows you to construct a sequence of analyses to be
 performed on a raster, or collection of rasters. You will use these tools to do
 so:
 
-.. image:: /static/training_manual/grass/027.png
+.. image:: /static/training_manual/grass/map_calc_tools.png
    :align: center
 
 In order, they are:
@@ -99,17 +100,17 @@ Using these tools:
 
 * Construct the following algorithm:
 
-  .. image:: /static/training_manual/grass/028.png
+  .. image:: /static/training_manual/grass/altitude_range_settings.png
      :align: center
 
 * When you click :guilabel:`Run`, your output should look like this:
 
-  .. image:: /static/training_manual/grass/029.png
+  .. image:: /static/training_manual/grass/altitude_range_result.png
      :align: center
 
 * Click :guilabel:`View output` to see the output displayed in your map:
 
-  .. image:: /static/training_manual/grass/030.png
+  .. image:: /static/training_manual/grass/altitude_range_output.png
      :align: center
 
 This shows all the areas where the terrain is lower than 500 meters or higher

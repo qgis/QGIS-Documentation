@@ -9,14 +9,6 @@ can add a whole new dimension to your map!
 
 **The goal for this lesson:** To learn how to add custom actions.
 
-|basic| |FA| The Actions Tab
--------------------------------------------------------------------------------
-
-* Open the :guilabel:`Layer Properties` dialog for the :guilabel:`rural` layer.
-* Click on the :guilabel:`Actions` tab to see its contents.
-
-Seems intimidating! But it doesn't need to be. Let's see how it works by adding
-a new action.
 
 |basic| |FA| Open an Image
 -------------------------------------------------------------------------------
@@ -37,24 +29,24 @@ property yet. First we'll create a field for this purpose.
 * Click on the :guilabel:`Fields` tab.
 * Toggle editing mode:
 
-.. image:: /static/training_manual/create_vector_data/037.png
+.. image:: /static/training_manual/create_vector_data/toggle_editing_mode.png
    :align: center
 
 * Add a new column:
 
-.. image:: /static/training_manual/create_vector_data/038.png
+.. image:: /static/training_manual/create_vector_data/add_new_column.png
    :align: center
 
 * Enter the values below:
 
-.. image:: /static/training_manual/create_vector_data/039.png
+.. image:: /static/training_manual/create_vector_data/column_settings.png
    :align: center
 
 * After the field has been created, click on the :guilabel:`Line edit` button
   next to the new field.
 * Set it up for a :guilabel:`File name`:
 
-.. image:: /static/training_manual/create_vector_data/040.png
+.. image:: /static/training_manual/create_vector_data/select_file_name.png
    :align: center
 
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
@@ -64,11 +56,11 @@ property yet. First we'll create a field for this purpose.
 Since you're still in edit mode, the dialog should be active and look like
 this:
 
-.. image:: /static/training_manual/create_vector_data/041.png
+.. image:: /static/training_manual/create_vector_data/school_property_no_image.png
    :align: center
 
 * Click on the browse button (the :guilabel:`...` next to the :guilabel:`image`
-  field). 
+  field).
 * Select the path for your image. The images are in
   :kbd:`exercise_data/school_property_photos/` and are named the same as the
   features they should be associated with.
@@ -76,17 +68,15 @@ this:
 * Associate all of the images with the correct features using this method.
 * Save your edits and exit edit mode.
 
-.. image:: /static/training_manual/create_vector_data/072.png
-   :align: center
 
 |basic| |FA| Creating an Action
 -------------------------------------------------------------------------------
 
-* Open the :guilabel:`Actions` form for the :guilabel:`school_property` layer,
-  as explained above for the :guilabel:`rural` layer.
-* Enter the words :kbd:`Show Image` into the :guilabel:`Name` field:
+* Open the :guilabel:`Actions` form for the :guilabel:`school_property` layer.
+* In the :kbd:`Action properties` panel, enter the words :kbd:`Show Image` into
+  the :guilabel:`Name` field:
 
-.. image:: /static/training_manual/create_vector_data/042.png
+.. image:: /static/training_manual/create_vector_data/show_image_action.png
    :align: center
 
 What to do next varies according to your operating system, so choose the
@@ -108,19 +98,19 @@ MacOS
 ...............................................................................
 
 * Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`.
-* Under :guilabel:`Action`, write :kbd:`open`. Remember to put a space after
+* Under :guilabel:`Action`, write :kbd:`open `. Remember to put a space after
   the command!
 
 Continue writing the command
 ...............................................................................
 
-The next part is easy! You want to open the image, and QGIS knows where the
+You want to open the image, and QGIS knows where the
 image is. All it needs to do is to tell the :guilabel:`Action` where the image
 is.
 
 * Select :guilabel:`image` from the list:
 
-.. image:: /static/training_manual/create_vector_data/043.png
+.. image:: /static/training_manual/create_vector_data/select_image.png
    :align: center
 
 * Click the :guilabel:`Insert field` button. QGIS will add the phrase :kbd:`[%
@@ -128,21 +118,20 @@ is.
 * Click the :guilabel:`Add to action list` button.
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
 
-Now to test the new action!
+Now we will test the new Action:
 
 * Click on the :guilabel:`school_property` layer in the :guilabel:`Layers list`
   so that it is highlighted.
 * Find the :guilabel:`Run feature action` button (on the same toolbar as the
   :guilabel:`Open Attribute Table` button):
 
-.. image:: /static/training_manual/create_vector_data/036.png
-   :align: center
+  |mAction|
 
 * Click on the down arrow to the right of this button. There's only one action
   defined for this layer so far, which is the one you just created.
 * Click the button itself to activate the tool.
 * Using this tool, click on any of the three school properties.
-* The image for that property will now open. Congratulations!
+* The image for that property will now open.
 
 |moderate| |FA| Searching the Internet
 -------------------------------------------------------------------------------
@@ -153,14 +142,10 @@ general information about it. Your first impulse, considering that you're using
 a computer right now, would probably be to Google the name of the area. So
 let's tell QGIS to do that automatically for us!
 
-* Open the attribute table for the :guilabel:`rural` layer (you may need to
-  close :guilabel:`Layer Properties` first).
+* Open the attribute table for the :guilabel:`landuse` layer.
 
-There are several fields with
-names of the area that the farms are in, but many of them contain some rather
-strange names. The one field that contains names that are easy to search for on
-Google is the :guilabel:`SGADMIN` field. So we'll be using that field for our
-searches.
+We'll be using the :kbd:`name` field for each of our landuse areas to search
+Google.
 
 * Close the attribute table.
 * Go back to :guilabel:`Actions` in :guilabel:`Layer Properties`.
@@ -209,40 +194,42 @@ phrase).
   initial command before writing this in!
 
 Now you want QGIS to tell the browser to tell Google to search for the value of
-:kbd:`SGADMIN` for any feature that you could click on. Sounds complicated, but
-QGIS lets you do this easily.
+:kbd:`name` for any feature that you could click on.
 
-* Select the :guilabel:`SGADMIN` field.
+* Select the :guilabel:`name` field.
 * Click :guilabel:`Insert field`:
 
-.. image:: /static/training_manual/create_vector_data/034.png
+.. image:: /static/training_manual/create_vector_data/google_search_action.png
    :align: center
 
 This will tell QGIS to add the phrase next:
 
-.. image:: /static/training_manual/create_vector_data/035.png
+.. image:: /static/training_manual/create_vector_data/google_search_entry.png
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
-address :kbd:`http://www.google.co.za/search?q=[% "SGADMIN" %]`. But :kbd:`[%
-"SGADMIN" %]` tells QGIS to use the contents of the :kbd:`SGADMIN` field as the
-phrase to search for. So if, for example, the farm you clicked on is in the
-:kbd:`Montagu` area, then QGIS is going to send the browser to
-:kbd:`http://www.google.co.za/search?q=Montagu`, which will cause the browser
-to visit Google, which will in turn search for the word "Montagu".
+address :kbd:`http://www.google.co.za/search?q=[% "name" %]`. But :kbd:`[%
+"name" %]` tells QGIS to use the contents of the :kbd:`name` field as the
+phrase to search for.
+
+So if, for example, the landuse area you click on is named
+:kbd:`Marloth Nature Reserve`, then QGIS is going to send the browser to
+:kbd:`http://www.google.co.za/search?q=Marloth%20Nature%20Reserve`, which will
+cause your browser to visit Google, which will in turn search for
+"Marloth Nature Reserve".
 
 * If you haven't done so already, set everything up as explained above.
 * Click the :guilabel:`Add to action list` button. The new action will appear
   in the list above.
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
 
-Now to test the new action!
+Now to test the new action.
 
-* With the :guilabel:`rural` layer active in the :guilabel:`Layers list`, click
-  on the :guilabel:`Run feature action`.
-* Click on any farm you can see on the map. Your browser will now open, and
+* With the :guilabel:`landuse` layer active in the :guilabel:`Layers list`, click
+  on the :guilabel:`Run feature action` button.
+* Click on any landuse area you can see on the map. Your browser will now open, and
   will automatically start a Google search for the town that is recorded as
-  that farm's :kbd:`SGADMIN` value.
+  that area's :kbd:`name` value.
 
 .. note::  If your action doesn't work, check that everything was entered
    correctly; typos are common with this kind of work!
@@ -256,12 +243,11 @@ the end-user have the software required to execute the action on their system?
 As you've seen, they don't necessarily even have the same kind of base command
 for the same kind of action, if you don't know which OS they'll be using. With
 some OS versions, the above commands to open the browser might not work at all.
-It looks like quite the insurmountable problem.
+This could be an insurmountable problem.
 
 However, QGIS sits on top of the incredibly powerful and versatile Qt4 library.
-All that goodness is just a heartbeat away with a Python line or two. Also,
-QGIS actions can be arbitrary, tokenized (i.e. using variable information based
-on the contents of a field attribute) Python commands!
+Also, QGIS actions can be arbitrary, tokenized (i.e. using variable information
+based on the contents of a field attribute) Python commands!
 
 Now you'll see how to use a python action to show a web page. It's the same
 general idea as opening a site in an external browser, but it requires no
@@ -280,13 +266,17 @@ To create the layer action:
 * Set up a new action using the following properties for the action:
   * :guilabel:`Type`: :kbd:`Python`
   * :guilabel:`Name`: :kbd:`Wikipedia`
-  * :guilabel:`Action` (all on one line): :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% "SGADMIN" %]')); myWV.show()`
+  * :guilabel:`Action` (all on one line):
+    :kbd:`from PyQt4.QtCore import QUrl; from PyQt4.QtWebKit import QWebView;  myWV = QWebView(None); myWV.load(QUrl('http://wikipedia.org/wiki/[% "name" %]')); myWV.show()`
+
+.. image:: /static/training_manual/create_vector_data/python_action_example.png
+   :align: center
 
 There are a couple of things going on here:
 
 * All the python code is in a single line with semi-colons separating commands
   (instead of newlines, the usual way of separating Python commands).
-* :kbd:`[% "SGADMIN" %]` will be replaced by the actual attribute value when
+* :kbd:`[% "name" %]` will be replaced by the actual attribute value when
   the action is invoked (as before).
 * The code simply creates a new :kbd:`QWebView` instance, sets its URL, and
   then calls :kbd:`show()` on it to make it visible as a window on the user’s
@@ -300,6 +290,9 @@ parameter.
 
 You could equally use the approach to display an image without requiring that
 the user has a particular image viewer on their system.
+
+* Try using the methods described above to load a Wikipedia page using the
+  Wikipedia action you just created.
 
 |IC|
 -------------------------------------------------------------------------------

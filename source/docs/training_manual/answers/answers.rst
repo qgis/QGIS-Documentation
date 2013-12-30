@@ -188,8 +188,9 @@ slightly thinner solid gray line.
 ...............................................................................
 
 The *NAME* field is the most useful to show as labels. This is because all its
-values are unique for every object, and it contains no "null" values (i.e.,
-fields with no value).
+values are unique for every object and are very unlikely to contain *NULL*
+values. If your data contains some *NULL* values, do not worry as long as most
+of your places have names.
 
 :ref:`Back to text <backlink-labels-attribute-data-1>`
 
@@ -224,10 +225,9 @@ One possible solution has this final product:
 
 To arrive at this result:
 
-* Use the font type :kbd:`Arial` of size :kbd:`10`, a :guilabel:`Label
+* Use a font size of :kbd:`10`, a :guilabel:`Label
   distance` of :kbd:`1,5 mm`, :guilabel:`Symbol width` and
-  :guilabel:`Symbol height` of :kbd:`2.0 mm` and an :guilabel:`Outline width` of
-  :kbd:`1.5 mm`.
+  :guilabel:`Symbol size` of :kbd:`3.0 mm`.
 * In addition, this example uses the :guilabel:`Wrap label on character`
   option:
 
@@ -235,7 +235,9 @@ To arrive at this result:
      :align: center
 
 * Enter a :kbd:`space` in this field and click :guilabel:`Apply` to achieve the
-  same effect.
+  same effect. In our case, some of the place names are very long, resulting in
+  names with multiple lines which is not very user friendly. You might find this
+  setting to be more appropriate for your map.
 
 :ref:`Back to text <backlink-label-tool-1>`
 
@@ -246,17 +248,19 @@ To arrive at this result:
 ...............................................................................
 
 * Still in edit mode, set the :kbd:`FONT_SIZE` values to whatever you prefer.
-  The example uses :kbd:`12` for towns, :kbd:`10` for suburbs and villages, and
-  :kbd:`8` for the null entries.
+  The example uses :kbd:`16` for towns, :kbd:`14` for suburbs, :kbd:`12` for
+  localities and :kbd:`10` for hamlets.
 * Remember to save changes and exit edit mode.
-* In :guilabel:`Data defined settings`, do this:
+* Return to the :guilabel:`Text` formatting options for the :guilabel:`places`
+  layer and select :kbd:`FONT_SIZE` in the :guilabel:`Attribute field` of the
+  font size data override dropdown:
 
-  .. image:: /static/training_manual/labels/026.png
+  .. image:: /static/training_manual/labels/font_size_override.png
      :align: center
 
   Your results, if using the above values, should be this:
 
-  .. image:: /static/training_manual/labels/027.png
+  .. image:: /static/training_manual/labels/font_override_results.png
      :align: center
 
 :ref:`Back to text <backlink-label-data-defined-1>`
@@ -271,13 +275,13 @@ To arrive at this result:
 ...............................................................................
 
 * Use the same method as in the first exercise of the lesson to get rid of the
-  lines:
+  borders:
 
   .. image:: /static/training_manual/classification/gradient_map_no_pen.png
      :align: center
 
 The settings you used might not be the same, but with the values
-:guilabel:`Classes` = :kbd:`7` and :guilabel:`Mode` = :guilabel:`Natural Breaks
+:guilabel:`Classes` = :kbd:`6` and :guilabel:`Mode` = :guilabel:`Natural Breaks
 (Jenks)` (and using the same colors, of course), the map will look like this:
 
 .. image:: /static/training_manual/classification/gradient_map_new_mode.png
@@ -297,7 +301,7 @@ The settings you used might not be the same, but with the values
 The symbology doesn't matter, but the results should look more or less like
 this:
 
-.. image:: /static/training_manual/create_vector_data/river_layer_result.png
+.. image:: /static/training_manual/create_vector_data/routes_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-create-vector-digitize-1>`
@@ -305,26 +309,13 @@ this:
 
 .. _create-vector-topology-3:
 
-|moderate| *Topology: Avoid Intersections*
-...............................................................................
-
-Your map should look like this:
-
-.. image:: /static/training_manual/create_vector_data/071.png
-   :align: center
-
-:ref:`Back to text <backlink-create-vector-topology-3>`
-
-
-.. _create-vector-topology-1:
-
 |moderate| *Topology: Add Ring Tool*
 ...............................................................................
 
-The exact shape doesn't matter, but you should be getting a hole in your
-feature, like this one:
+The exact shape doesn't matter, but you should be getting a hole in the middle
+of your feature, like this one:
 
-.. image:: /static/training_manual/create_vector_data/056.png
+.. image:: /static/training_manual/create_vector_data/ring_tool_result.png
    :align: center
 
 * Undo your edit before continuing with the exercise for the next tool.
@@ -337,18 +328,16 @@ feature, like this one:
 |moderate| *Topology: Add Part Tool*
 ...............................................................................
 
-The exact shape and location doesn't matter, but you should be getting an extra
-part on your feature, like this one:
+* First select the Bontebok National Park:
 
-.. image:: /static/training_manual/create_vector_data/058.png
+.. image:: /static/training_manual/create_vector_data/park_selected.png
    :align: center
 
-* Note that you first need to select the farm with the selection tool ...
+* Now add your new part:
 
-  .. image:: /static/training_manual/create_vector_data/059.png
-     :align: center
+.. image:: /static/training_manual/create_vector_data/new_part.png
+   :align: center
 
-  ... so that QGIS knows which feature to add the new part to.
 * Undo your edit before continuing with the exercise for the next tool.
 
 :ref:`Back to text <backlink-create-vector-topology-2>`
@@ -359,21 +348,21 @@ part on your feature, like this one:
 |hard| *Merge Features*
 ...............................................................................
 
-* Use the feature with the :guilabel:`id` of :kbd:`1237` as the source of your
+* Use the :guilabel:`Merge Selected Features` tool, making sure to first select
+  both of the polygons you wish to merge.
+* Use the feature with the :guilabel:`OGC_FID` of :kbd:`1` as the source of your
   attributes (click on its entry in the dialog, then click the :guilabel:`Take
   attributes from selected feature` button):
 
-  .. image:: /static/training_manual/create_vector_data/074.png
+.. note:: If you're using a different dataset, it is highly likely that your
+   original polygon's :guilabel:`OGC_FID` will not be :kbd:`1`. Just choose the
+   feature which has an :guilabel:`OGC_FID`.
+
+  .. image:: /static/training_manual/create_vector_data/merge_feature_dialog.png
      :align: center
 
-* Using :guilabel:`Merge Selected Features` will merge the attributes as well
-  as the geometries:
-
-   .. image:: /static/training_manual/create_vector_data/075.png
-     :align: center
-
-  Whereas :guilabel:`Merge Attributes of Selected Features` will keep the
-  geometries distinct, but give them the same attributes.
+.. Note:: Using the :guilabel:`Merge Attributes of Selected Features` tool
+  will keep the geometries distinct, but give them the same attributes.
 
 :ref:`Back to text <backlink-create-vector-topology-4>`
 
@@ -387,28 +376,20 @@ For the :guilabel:`TYPE`, there is obviously a limited amount of types that a
 road can be, and if you check the attribute table for this layer, you'll see
 that they are predefined.
 
-* Set the widget to :guilabel:`Unique values` and leave :guilabel:`Editable` as
-  :kbd:`False`:
+* Set the widget to :guilabel:`Value Map` and click
+  :guilabel:`Load Data from Layer`.
+* Select :guilabel:`roads` in the :guilabel:`Label` dropdown and
+  :guilabel:`highway` for both the :guilabel:`Value` and :guilabel:`Description`
+  options:
 
-  .. image:: /static/training_manual/create_vector_data/030.png
+  .. image:: /static/training_manual/create_vector_data/value_map_settings.png
      :align: center
 
-* A road is either a one-way or it isn't, so :guilabel:`ONEWAY` should be a
-  :guilabel:`Checkbox`.
-
-Looking at the attribute table for :guilabel:`streets`, the value for when it's
-not a one-way seems to be :guilabel:`NULL`, and when it is, it's
-:guilabel:`yes`.
-
-* Set those values:
-
-  .. image:: /static/training_manual/create_vector_data/031.png
-     :align: center
-
+* Click :guilabel:`Ok` three times.
 * If you use the :guilabel:`Identify` tool on a street now while edit mode is
   active, the dialog you get should look like this:
 
-  .. image:: /static/training_manual/create_vector_data/032.png
+  .. image:: /static/training_manual/create_vector_data/highway_as_value_map.png
      :align: center
 
 :ref:`Back to text <backlink-create-vector-forms-1>`
