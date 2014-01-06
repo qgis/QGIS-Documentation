@@ -17,7 +17,7 @@ and :guilabel:`Plugin Manager`.
   .. image:: /static/training_manual/qgis_plugins/001.png
      :align: center
 
-* Click in the box next to this plugin and uncheck it.
+* Click in the box next to this plugin and uncheck it to uninstall it.
 * Click :guilabel:`Close`.
 * Looking at the menu, you will notice that the :guilabel:`Processing` menu is
   is now gone. This means that many of the processing
@@ -29,13 +29,12 @@ and :guilabel:`Plugin Manager`.
   :guilabel:`Close`..
 * The :guilabel:`Processing` menu should be available again.
 
-Importantly, however, the list of plugins that you can activate and deactivate
-only draws from the plugins that you currently have installed. To install new
-plugins, you need to use the :guilabel:`Get More` option in the
-:guilabel:`Plugin Manager` dialog.
 
 |basic| |FA| Installing New Plugins
 -------------------------------------------------------------------------------
+
+The list of plugins that you can activate and deactivate draws from the plugins
+that you currently have installed. 
 
 * To install new plugins, select the :guilabel:`Get More` option in the 
   :guilabel:`Plugin Manager` dialog. The plugins available for you to install
@@ -45,11 +44,17 @@ plugins, you need to use the :guilabel:`Get More` option in the
   .. image:: /static/training_manual/qgis_plugins/002.png
      :align: center
 
-You can find information about each plugin by selecting it in the list of
-plugins displayed.
+* You can find information about each plugin by selecting it in the list of
+  plugins displayed.
 
   .. image:: /static/training_manual/qgis_plugins/003.png
      :align: center
+
+* A plugin can be installed by clicking the :guilabel:`Install Plugin` button
+  below the plugin information panel.
+
+|basic| |FA| Configuring Additional Plugin Repositories 
+-------------------------------------------------------------------------------
 
 The plugins that are available to you for installation depend on which
 plugin *repositories* you are configured to use.
@@ -59,36 +64,41 @@ repositories are active, meaning that you can only access official plugins.
 These are usually the first plugins you want, because they have been tested
 thoroughly and are often included in QGIS by default.
 
-
-
 It is possible, however, to try out more plugins than the default ones. First,
-you want to check in all available repositories. To do this:
+you want to configure additional repositories. To do this:
 
-* Open the :guilabel:`Repositories` tab on the :guilabel:`Plugin Installer`
+* Open the :guilabel:`Settings` tab in the :guilabel:`Plugin Manager`
   dialog:
   
-  .. image:: /static/training_manual/qgis_plugins/002.png
-     :align: center
-
-* Click the :guilabel:`Add 3rd party repositories` button. A disclaimer will
-  appear.
-* Click :guilabel:`OK` to find and add these extra repositories:
-
-  .. image:: /static/training_manual/qgis_plugins/003.png
-     :align: center
-
-However, even with these extra repositories enabled, you won't see the plugins
-that they contain, unless you allow these plugins to be displayed.
-
-* Open the :guilabel:`Options` tab:
-
   .. image:: /static/training_manual/qgis_plugins/004.png
      :align: center
 
-* Select the option :guilabel:`Show all plugins except those marked as
-  experimental`.
-* If you now switch back to the :guilabel:`Plugins` tab, you will see that many
-  more plugins are now available for installation.
+* Click :guilabel:`Add` to find and add a new repository.
+
+* Provide a Name and URL for the new repository you want to configure and make
+  sure the :guilabel:`Enabled` checkbox is selected. 
+
+  .. image:: /static/training_manual/qgis_plugins/005.png
+     :align: center
+
+* You will now see the new plugin repo listed in the list of configured
+  Plugin Repositories
+
+  .. image:: /static/training_manual/qgis_plugins/006.png
+     :align: center
+
+* You can also select the option to display Experimental Plugins by selecting
+  the :guilabel:`Show also experimental plugins` checkbox.
+
+  .. image:: /static/training_manual/qgis_plugins/007.png
+     :align: center
+
+* If you now switch back to the :guilabel:`Get More` tab, you will see that
+  additional plugins are now available for installation.
+
+  .. image:: /static/training_manual/qgis_plugins/008.png
+     :align: center
+
 * To install a plugin, simply click on it in the list and then click the
   :guilabel:`Install plugin` button.
 
