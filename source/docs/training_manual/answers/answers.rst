@@ -624,9 +624,9 @@ The farms that meet the revised criteria are here:
 |basic| *Adding Another WMS Layer*
 ...............................................................................
 
-Your map should look like this:
+Your map should look like this (you may need to re-order the layers):
 
-.. image:: /static/training_manual/online_resources/012.png
+.. image:: /static/training_manual/online_resources/geology_layer_result.png
    :align: center
 
 :ref:`Back to text <backlink-wms-1>`
@@ -640,16 +640,16 @@ Your map should look like this:
 * Use the same approach as before to add the new server and the appropriate
   layer as hosted on that server:
 
-  .. image:: /static/training_manual/online_resources/013.png
+  .. image:: /static/training_manual/online_resources/add_ogc_server.png
      :align: center
 
-  .. image:: /static/training_manual/online_resources/014.png
+  .. image:: /static/training_manual/online_resources/add_bluemarble_layer.png
      :align: center
 
 * If you zoom into the Swellendam area, you'll notice that this dataset has a
   low resolution:
 
-.. image:: /static/training_manual/online_resources/015.png
+.. image:: /static/training_manual/online_resources/low_resolution_dataset.png
    :align: center
 
 Therefore, it's better not to use this data for the current map. The Blue

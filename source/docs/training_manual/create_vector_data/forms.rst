@@ -134,6 +134,10 @@ person who creates the forms). It should be provided as part of your course
 materials, if you're using Windows. You may need to look for it if you're using
 another OS. In Ubuntu, do the following in the terminal:
 
+.. note:: At the time of writing, Qt5 is the latest version available. However,
+  this process specifically requires Qt4 and is not necessarily compatible with
+  Qt5.
+
 :kbd:`sudo apt-get install qt4-designer`
 
 ... and it should install automatically. Otherwise, look for it in the
@@ -143,17 +147,17 @@ another OS. In Ubuntu, do the following in the terminal:
   approach is appropriate in your OS).
 * In the dialog that appears, create a new dialog:
 
-.. image:: /static/training_manual/create_vector_data/020.png
+.. image:: /static/training_manual/create_vector_data/qt4_new_dialog.png
    :align: center
 
 * Look for the :guilabel:`Widget Box` along the left of your screen (default).
   It contains an item called :guilabel:`Line Edit`.
-* Click and drag this item into your form. This creats a new :guilabel:`Line
+* Click and drag this item into your form. This creates a new :guilabel:`Line
   Edit` in the form.
 * With the new line edit element selected, you'll see its *properties* along
   the side of your screen (on the right by default):
 
-.. image:: /static/training_manual/create_vector_data/021.png
+.. image:: /static/training_manual/create_vector_data/qt4_line_edit.png
    :align: center
 
 * Set its name to :kbd:`Name`.
@@ -165,10 +169,6 @@ another OS. In Ubuntu, do the following in the terminal:
 * Click anywhere in your dialog.
 * Find the :guilabel:`Lay Out Vertically` button (in a toolbar along the top
   edge of the screen, by default). This lays out your dialog automatically.
-
-.. image:: /static/training_manual/create_vector_data/022.png
-   :align: center
-
 * Set the dialog's maximum size (in its properties) to :kbd:`200` (width) by
   :kbd:`100` (height).
 * Save your new form as :kbd:`exercise_data/forms/add_people.ui`.
@@ -178,10 +178,17 @@ another OS. In Ubuntu, do the following in the terminal:
 -------------------------------------------------------------------------------
 
 * Go back to QGIS.
-* Double click the layer in the legend to access its properties.
-* Click on the :guilabel:`General` tab in the :guilabel:`Layer Properties`
+* Double click the :guilabel:`test-data` layer in the legend to access its properties.
+* Click on the :guilabel:`Fields` tab in the :guilabel:`Layer Properties`
   dialog.
-* Specify the path to your ui file in the :guilabel:`Edit UI` field.
+* In the :guilabel:`Attribute editor layout` dropdown, select
+  :guilabel:`Provide ui-file`.
+* Click the ellipsis button and choose the :kbd:`add_people.ui` file you just
+  created:
+
+.. image:: /static/training_manual/create_vector_data/provide_ui_file.png
+  :align: center
+
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog.
 * Enter edit mode and capture a new point.
 * When you do so, you will be presented with your custom dialog (instead of the

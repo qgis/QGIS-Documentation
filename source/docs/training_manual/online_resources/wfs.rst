@@ -15,31 +15,30 @@ WMS.
 * Ensure that "on the fly" reprojection is switched off.
 * Click the :guilabel:`Add WFS Layer` button:
 
-  .. image:: /static/training_manual/online_resources/017.png
-     :align: center
+  |wfs|
 
 * Click the :guilabel:`New` button.
 * In the dialog that appears, enter the :guilabel:`Name` as :kbd:`nsidc.org`
   and the :guilabel:`URL` as
   :kbd:`http://nsidc.org/cgi-bin/atlas_south?version=1.1.0`.
 
-  .. image:: /static/training_manual/online_resources/019.png
+  .. image:: /static/training_manual/online_resources/new_wfs_connection.png
      :align: center
 
 * Click :guilabel:`OK`, and the new connection will appear in your
   :guilabel:`Server connections`.
 * Click the :guilabel:`Connect`. A list of the available layers will appear:
 
-  .. image:: /static/training_manual/online_resources/020.png
+  .. image:: /static/training_manual/online_resources/wfs_connection_layers.png
      :align: center
 
 * Find the layer :guilabel:`south_poles_wfs`.
 * Click on the layer to select it:
 
-  .. image:: /static/training_manual/online_resources/021.png
+  .. image:: /static/training_manual/online_resources/south_poles_wfs.png
      :align: center
 
-* Click :guilabel:`Apply`.
+* Click :guilabel:`Add`.
 
 It may take a while to load the layer. When it has loaded, it will appear in
 the map. Here it is over the outlines of Antarctica (available on the same
