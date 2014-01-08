@@ -6,8 +6,8 @@ they represent. Digital Elevation Models (DEMs) are particularly useful in this
 regard. In this lesson you will use terrain analysis tools to find out more
 about the study area for the proposed residential development from earlier.
 
-**The goal for this lesson:** To use terrain analysis tools for more
-information on terrain.
+**The goal for this lesson:** To use terrain analysis tools to derive more
+information about the terrain.
 
 |basic| |FA| Calculating a Hillshade
 -------------------------------------------------------------------------------
@@ -28,6 +28,8 @@ models)` analysis tool.
   :guilabel:`DEM` layer.
 * Set the :guilabel:`Output file` to :kbd:`hillshade.tif` in the directory
   :kbd:`exercise_data/residential_development`.
+* Also make sure that the :guilabel:`Mode` option has :guilabel:`Hillshade`
+  selected.
 * Check the box next to :guilabel:`Load into canvas when finished`.
 * You may leave all the other options unchanged.
 * Click :guilabel:`OK` to generate the hillshade.
@@ -55,14 +57,13 @@ look better. The key to this is setting the hillshade to being mostly
 transparent.
 
 * Change the symbology of the original :guilabel:`DEM` to use the
-  :guilabel:`Pseudocolor` scheme.
+  :guilabel:`Pseudocolor` scheme as in the previous exercise.
 * Hide all the layers except the :guilabel:`DEM` and :guilabel:`hillshade`
   layers.
 * Click and drag the :guilabel:`DEM` to be beneath the :guilabel:`hillshade`
-  layer in the :guilabel:`Layers list`. :guilabel:`Control rendering order`
-  (beneath the list) should be checked as well.
-* Set the :guilabel:`hillshade` layer to be transparent.
-* Open its :guilabel:`Layer Properties` and go to the :guilabel:`Transparency`
+  layer in the :guilabel:`Layers list`. 
+* Set the :guilabel:`hillshade` layer to be transparent by opening its 
+  :guilabel:`Layer Properties` and go to the :guilabel:`Transparency`
   tab.
 * Set the :guilabel:`Global transparency` to :kbd:`50%`:
 * Click :guilabel:`OK` on the :guilabel:`Layer Properties` dialog. You'll get a
@@ -107,7 +108,8 @@ To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
 * Set the save location to
   :kbd:`exercise_data/residential_development/slope.tif`
 * Enable the :guilabel:`Load into canvas...` checkbox.
-* Click :guilabel:`OK` and close the dialog when processing is complete. You'll
+* Click :guilabel:`OK` and close the dialogs when processing is complete, and
+  click :guilabel:`Close` to close the dialog. You'll
   see a new raster loaded into your map.
 * With the new raster selected in the :guilabel:`Layers list`, click the
   :guilabel:`Stretch Histogram to Full Dataset` button. Now you'll see the
@@ -246,6 +248,9 @@ get rid of all these tiny unusable areas.
 * Set both the :guilabel:`Threshold` and :guilabel:`Pixel connections` values
   to :kbd:`8`, then run the tool.
 
+.. image:: /static/training_manual/rasters/035.png
+   :align: center
+
 Once processing is done, the new layer will load into the canvas. But when you
 try to use the histogram stretch tool to view the data, this happens:
 
@@ -255,7 +260,10 @@ try to use the histogram stretch tool to view the data, this happens:
 What's going on? The answer lies in the new raster file's metadata.
 
 * View the metadata under the :guilabel:`Metadata` tab of the :guilabel:`Layer
-  Properties` dialog.
+  Properties` dialog. Look in the :guilabel:`Properties` section at the bottom.
+
+.. image:: /static/training_manual/rasters/044.png
+   :align: center
 
 Whereas this raster, like the one it's derived from, should only
 feature the values :kbd:`1` and :kbd:`0`, it has the :kbd:`STATISTICS_MINIMUM`
