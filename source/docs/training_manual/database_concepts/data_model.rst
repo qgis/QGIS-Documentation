@@ -330,7 +330,7 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: /static/training_manual/postgres/er-beispiel.png
+.. image:: /static/training_manual/database_concepts/er-beispiel.png
    :align: center
 
 There are two ways to do this: 

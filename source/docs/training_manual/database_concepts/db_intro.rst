@@ -329,7 +329,7 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: /static/training_manual/postgres/er-beispiel.png
+.. image:: /static/training_manual/database_concepts/er-beispiel.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case
