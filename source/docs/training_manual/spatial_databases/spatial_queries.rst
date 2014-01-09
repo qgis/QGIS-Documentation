@@ -127,19 +127,11 @@ To start, create a new database:
   
   createdb postgis_demo
 
-Remember to install PLPGSQL:
+Remember to install the postgis extensions:
 
 ::
 
-  createlang plpgsql postgis_demo
-
-Then install the PostGIS functions and the spatial reference system. For
-example, on Linux with PostgreSQL 9.1 and PostGIS 1.5:
-
-::
-
-  psql postgis_demo < /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
-  psql postgis_demo < /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
+  psql -d postgis_demo -c "CREATE EXTENSION postgis;"
 
 Next, import the data provided in the :kbd:`exercise_data/postgis/` directory.
 Refer back to the previous lesson for instructions. You can import from the
@@ -199,7 +191,7 @@ Or, if we create a view from it:
         WHERE WITHIN(a.the_geom, b.the_geom)
         AND b.name = 'KwaZulu';
 
-And view it in QGIS:
+Add the view as a layer and view it in QGIS:
 
 .. image:: /static/training_manual/spatial_databases/010.png
    :align: center
