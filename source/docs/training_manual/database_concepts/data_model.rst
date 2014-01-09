@@ -21,7 +21,7 @@ You should get a message like this:
 
 ::
 
-  [sudo] password for timlinux: 
+  [sudo] password for qgis: 
   Reading package lists... Done
   Building dependency tree       
   Reading state information... Done
@@ -66,7 +66,7 @@ user.
 
 ::
 
-  createuser -d -E -i -l -P -r -s timlinux
+  createuser -d -E -i -l -P -r -s qgis 
 
 Enter a password when prompted. I normally use a different password to my usual
 unix login.
@@ -101,7 +101,7 @@ Should return something like this:
 
 ::
 
-  timlinux@linfiniti:~$ psql -l
+  $ psql -l
   List of databases
   Name      |  Owner   | Encoding | Collation  |   Ctype    |   
   ----------+----------+----------+------------+------------+
@@ -135,7 +135,7 @@ Which should return something like this:
   List of databases
   Name      |  Owner   | Encoding | Collation  |   Ctype    |   Access privileges   
   ----------+----------+----------+------------+------------+-----------------------
-  address   | timlinux | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
+  address   | qgis     | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
   postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
   template0 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
   template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
@@ -465,12 +465,12 @@ This time it works fine! Why? Are people less important than streets?
    table, now would be a good time to rebuild it, as you will need it in the
    next exercises.
 
-A word on PG Admin III
+A word on pgAdmin III
 -------------------------------------------------------------------------------
 
 We are showing you the SQL commands from the psql prompt because it's a very
 useful way to learn about databases. However, there are quicker and easier ways
-to do a lot of what we are showing you. Install PGAdminIII and you can create,
+to do a lot of what we are showing you. Install pgAdminIII and you can create,
 drop, alter etc tables using 'point and click' operations in a GUI.
 
 Under Ubuntu, you can install it like this:
@@ -478,6 +478,8 @@ Under Ubuntu, you can install it like this:
 ::
 
   sudo apt-get install pgadmin3
+
+pgAdmin III will be convered in more detail in another module.
 
 |IC|
 -------------------------------------------------------------------------------
