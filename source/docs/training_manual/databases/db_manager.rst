@@ -26,6 +26,9 @@ Database Administration
  - Vaccum Analyze
  - Versioning
 
+Managing Spatialite Databases with DB Manager
+-------------------------------------------------------------------------------
+
 Executing SQL Queries with DB Manager
 -------------------------------------------------------------------------------
 

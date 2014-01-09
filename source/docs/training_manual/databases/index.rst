@@ -14,4 +14,3 @@ spatial database implementations including spatialite.
 
    db_intro
    db_manager
-   pgadmin
