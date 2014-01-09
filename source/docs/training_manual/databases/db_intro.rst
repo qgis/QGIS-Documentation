@@ -1,4 +1,4 @@
-|LS| Using Spatial Databases with QGIS 
+|LS| Adding data from databases to a QGIS Map 
 ===============================================================================
 
 In the previous 2 modules we looked at the basic concepts, features and 
