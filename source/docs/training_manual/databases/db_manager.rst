@@ -26,7 +26,7 @@ tables we have worked with in previous sections.
 The first thing you may notice is that you can now see some metadata about the
 Schemas contained in your database. 
 
-.. image:: /static/training_manual/databases/007.png
+.. image:: /static/training_manual/databases/008.png
    :align: center
 
 Schemas are a way of grouping data tables and other objects in a PostgreSQL 
@@ -44,7 +44,7 @@ but now lets look at how to do this in DB Manager.
 First, its useful to just look at a tables metadata by clicking on its name in
 tree and looking in the :guilabel:`Info` tab.
 
-.. image:: /static/training_manual/databases/007.png
+.. image:: /static/training_manual/databases/009.png
    :align: center
 
 In this panel you can see the :guilabel:`General Info` about the table as well
@@ -55,12 +55,15 @@ If you scroll down in the :guilabel:`Info` tab, you can see more information
 about the :guilabel:`Fields`, :guilabel:`Constraints` and :guilabel:`Indexes`
 for the table you are viewing.
 
+.. image:: /static/training_manual/databases/010.png
+   :align: center
+
 Its also very useful to use DB Manager to simply look at the records in the
 database in much the same way you might do this by viewing the attribute table
 of a layer in the Layer Tree. You can browse the data by selecting the 
 :guilabel:`Table` tab.
 
-.. image:: /static/training_manual/databases/007.png
+.. image:: /static/training_manual/databases/011.png
    :align: center
 
 There is also a :guilabel:`Preview` tab which will show you the layer data in
@@ -77,19 +80,22 @@ perhaps? DB Manager allows you to do this directly.
 * Select :guilabel:`Table --> Edit Table` from the menu to open the :guilabel:`
   Table Properties` dialog.
 
+.. image:: /static/training_manual/databases/012.png
+   :align: center
+
 You can use this dialog to Add Columns, Add geometry columns, edit existing
 columns or to remove a column completely.
 
 Using the :guilabel:`Constraints` tab, you can manage which fields are used as
 the primary key or to drop existing constraints.
 
-.. image:: /static/training_manual/databases/007.png
+.. image:: /static/training_manual/databases/013.png
    :align: center
 
 The :guilabel`Indexes` tab can be used to add and delete both spatial and normal
 indexes.
 
-.. image:: /static/training_manual/databases/007.png
+.. image:: /static/training_manual/databases/014.png
    :align: center
  
 Follow Along: Creating a New Table
