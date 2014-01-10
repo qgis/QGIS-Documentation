@@ -9,7 +9,7 @@ tools.
 **The goal for this lesson:** To learn how to interact with spatial databases 
 using the QGIS DB Manager. 
 
-Managing PostGIS Databases with DB Manager
+|basic| |FA| Managing PostGIS Databases with DB Manager
 -------------------------------------------------------------------------------
 
 You should first open the DB Manager interface by selecting :guilabel:`Database
@@ -98,19 +98,101 @@ indexes.
 .. image:: /static/training_manual/databases/014.png
    :align: center
  
-Follow Along: Creating a New Table
+|basic| |FA| Creating a New Table
 -------------------------------------------------------------------------------
 
-Database Administration
+Now that we have gone through the process of working with existing tables in 
+our database, let's use DB Manager to create a new table.
 
- - Vaccum Analyze
- - Versioning
+* If it is not already open, open the DB Manager window, and expand the tree
+  until you see the list of tables already in your databse.
+* From the menu select :guilabel:`Table --> Create Table` to bring up the 
+  Create Table dialog.
+* Use the default :kbd:`Public` schema and name the table :kbd:`places`.
+* Add the :kbd:`id`, :kbd:`place_name`, and :kbd:`elevation` fields as shown
+  below
+* Make sure the :kbd:`id` field is set as the primary key.
+* Click the checkbox to :guilabel:`Create geometry column` and make sure it is
+  set to a :kbd:`POINT` type and leave it named :kbd:`geom` and specify
+  :kbd:`4326` as the :guilabel:`SRID`.
+* Click the checkbox to :guilabel:`Create spatial index` and click
+  :guilabel:`Create` to create the table.
 
-Managing Spatialite Databases with DB Manager
+.. image:: /static/training_manual/databases/015.png
+   :align: center
+ 
+* Dismiss the dialog letting you know that the table was created and click
+  :guilabel:`Close` to close the Create Table Dialog.
+
+You can now inspect your table in the DB Manager and you will of course find
+that there is no data in it. From here you can :guilabel:`Toggle Editing` on
+the layer menu and begin to add places to your table.
+
+|basic| |FA| Basic Database Administration
 -------------------------------------------------------------------------------
 
-Executing SQL Queries with DB Manager
+The DB Manager will also let you do some basic Database Administration tasks. 
+It is certainly not a substitute for a more complete Database Administration
+tool, but it does provide some functionality that you can use to maintain your
+database. 
+
+Database tables can often become quite large and tables which are being
+modified frequently can end up leaving around remnants of records that are no 
+longer needed by PostgreSQL. The *VACUUM* command takes care of doing a kind of
+garbage collection to compact and optionall analyze your tables for better
+performance.
+
+Lets take a look at how we can perform a *VACUUM ANALYZE* command from within
+DB Manager. 
+
+* Select one of your tables in the DB Manager Tree.
+* Select :guilabel:`Table --> Run Vacuum Analyze` from the menu.
+
+Thats it! PostgreSQL will perform the operation. Depending on how big your
+table is, this may take some time to complete.
+
+You can find more information about the VACUUM ANALYZE process in the
+`PostgreSQL Documentation 
+<http://www.postgresql.org/docs/9.1/static/sql-vacuum.html>`_ 
+
+|basic| |FA| Executing SQL Queries with DB Manager
 -------------------------------------------------------------------------------
+
+DB Manager also provides a way for you to write queries against your database
+tables and to view the results. We have already seen this type of functionality
+in the :guilabel:`Browser` panel, but lets look at it again here with DB
+Manager.
+
+* Select the :kbd:`roads` table in the tree.
+* Select the :guilabel:`SQL window` button in the DB Manager toolbar.
+
+.. image:: /static/training_manual/databases/016.png
+   :align: center
+
+* Compose the following :guilabel:`SQL query` in the space provided.
+
+::
+
+   select * from roads where highway = 'primary';
+
+* Click the :guilabel:`Execute (F5)` button to run the query.
+* You should now see the records that match in the :guilabel:`Result` panel.
+
+.. image:: /static/training_manual/databases/017.png
+   :align: center
+
+* Click the checkbox for :guilabel:`Load as new layer` to add the results to your map.
+* Select the :kbd:`id` column as the :guilabel:`Column with unique integer
+  values` and the :kbd:`geom` colum as the :guilabel:`Geometry column`.
+* Enter :kbd:`roads_primary` as the :guilabel:`Layer name (prefix)`.
+* Click :guilabel:`Load now!` to load the results as a new layer into your map.
+ 
+.. image:: /static/training_manual/databases/018.png
+   :align: center
+
+The layers that matched your query are now displayed on your map. You can of
+course use this query tool to execute any arbitrary SQL command including many
+of the ones we looked at in previous modules and sections.
 
 Importing Data into a Database with DB Manager
 -------------------------------------------------------------------------------

@@ -9,7 +9,7 @@ section will dive deeper into how to effectively use spatial databases in QGIS.
 **The goal for this lesson:** To learn how to interact with spatial databases 
 in the QGIS interface. 
 
-Adding Database Tables to QGIS using the Browser
+|basic| |FA| Adding Database Tables to QGIS using the Browser
 -------------------------------------------------------------------------------
 
 We have already briefly looked at how to add tables from a database as QGIS 
@@ -42,7 +42,7 @@ interface.
    on the PostGIS entry in the tree will allow you to specify connection
    paramaters for a new connection.
 
-Creating a Spatialite database with the Browser
+|basic| |FA| Creating a Spatialite database with the Browser
 -------------------------------------------------------------------------------
 
 While PostGIS is generally used on a server to provide spatial database
@@ -96,7 +96,7 @@ From here you can start an editing session and start adding data to your new
 database directly. We will learn about importing data into databases using 
 the DB Manager in a section coming up.
 
-Adding a filtered set of records as a Layer
+|basic| |FA| Adding a filtered set of records as a Layer
 -------------------------------------------------------------------------------
 
 Now that we have seen how to add an entire table as a QGIS layer it might be
