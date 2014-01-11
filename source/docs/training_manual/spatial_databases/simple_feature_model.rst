@@ -53,8 +53,8 @@ You will notice that the geometry field type does not implicitly specify what
 
 ::
 
-  alter table people 
-  add constraint people_geom_point_chk 
+  alter table people
+  add constraint people_geom_point_chk
       check(st_geometrytype(the_geom) = 'ST_Point'::text OR the_geom IS NULL);
 
 What does that do? It adds a constraint to the table that prevents anything
@@ -108,7 +108,7 @@ table:
 
 ::
 
-  insert into geometry_columns values 
+  insert into geometry_columns values
     ('','public','people','the_geom',2,4326,'POINT');
 
 Why? :kbd:`geometry_columns` is used by certain applications to be aware of
@@ -165,11 +165,11 @@ Now that our tables are geo-enabled, we can store geometries in them!
 
 ::
 
-  insert into people (name,house_no, street_id, phone_no, the_geom) 
+  insert into people (name,house_no, street_id, phone_no, the_geom)
           values ('Fault Towers',
                    34,
                    3,
-                   '072 812 31 28', 
+                   '072 812 31 28',
                    'SRID=4326;POINT(33 -33)');
 
 .. note::  In the new entry above, you will need to specify which projection
@@ -191,17 +191,16 @@ performing select queries in the database to see how the data has changed.
 To load a PostGIS layer in QGIS, use the :menuselection:`Layer --> Add PostGIS
 Layers` menu option or toolbar button:
 
-.. image:: /static/training_manual/spatial_databases/001.png
-   :align: center
+  |mActionAddPostgisLayer|
 
 This will open the dialog:
 
-.. image:: /static/training_manual/spatial_databases/002.png
+.. image:: /static/training_manual/spatial_databases/add_postgis_layer_dialog.png
    :align: center
 
 Click on the :guilabel:`New` button to open this dialog:
 
-.. image:: /static/training_manual/spatial_databases/003.png
+.. image:: /static/training_manual/spatial_databases/new_postgis_connection.png
    :align: center
 
 Then define a new connection, e.g.:
@@ -223,8 +222,8 @@ Password`. Then click :guilabel:`OK` to create this connection.
 
 Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.
- 
-  Formulate a query that shows a person's name, street name and position 
+
+  Formulate a query that shows a person's name, street name and position
   (from the the_geom column) as plain text.
 
   |

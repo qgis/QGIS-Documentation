@@ -48,7 +48,7 @@ queries. To do this under Unix:
   pgsql2shp -f <path to new shapefile> -g <geometry column name> \
     -h <hostname> -U <username> <databasename> <table | view>
 
-To export the data using a query:    
+To export the data using a query:
 
 ::
 
@@ -79,10 +79,10 @@ this button:
 .. image:: /static/training_manual/spatial_databases/008.png
    :align: center
 
-Clicking on it or selecting :guilabel:`Database --> Spit --> Import Shapefiles 
+Clicking on it or selecting :guilabel:`Database --> Spit --> Import Shapefiles
 to PostgreSQL` from the menu will give you the SPIT dialog:
 
-.. image:: /static/training_manual/spatial_databases/009.png
+.. image:: /static/training_manual/spatial_databases/spit_dialog.png
    :align: center
 
 You can add shapefiles to the database by clicking the :guilabel:`Add` button,
@@ -92,11 +92,11 @@ DB Manager
 -------------------------------------------------------------------------------
 
 You may have noticed another option in the :guilabel:`Database` menu labeled
-:guilabel:`DB Manager`. This is a new tool in QGIS 2.0 that provides a 
+:guilabel:`DB Manager`. This is a new tool in QGIS 2.0 that provides a
 unified interface for interacting with spatial databases including PostGIS. It
 also allows you to import and export from databases to other formats. Since the
 next module is largely devoted to using this tool, we will only briefly mention
-it here. 
+it here.
 
 
 |IC|

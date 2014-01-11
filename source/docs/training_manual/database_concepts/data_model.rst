@@ -11,6 +11,14 @@ implement our example database.
 Install PostgreSQL
 -------------------------------------------------------------------------------
 
+.. note:: Although outside the scope of this document, Mac users can install
+  PostgreSQL using
+  `Homebrew <http://russbrooks.com/2010/11/25/install-postgresql-9-on-os-x>`_.
+  Windows users can use the
+  graphical installer located here: `<http://www.postgresql.org/download/windows/>`_.
+  Please note that the documentation will assume users are running QGIS under
+  Ubuntu.
+
 Under Ubuntu:
 
 ::
@@ -21,9 +29,9 @@ You should get a message like this:
 
 ::
 
-  [sudo] password for qgis: 
+  [sudo] password for qgis:
   Reading package lists... Done
-  Building dependency tree       
+  Building dependency tree
   Reading state information... Done
   The following extra packages will be installed:
   postgresql-client-9.1 postgresql-client-common postgresql-common
@@ -34,7 +42,7 @@ You should get a message like this:
   0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
   Need to get 5,012kB of archives.
   After this operation, 19.0MB of additional disk space will be used.
-  Do you want to continue [Y/n]? 
+  Do you want to continue [Y/n]?
 
 Press :kbd:`Y` and :kbd:`Enter` and wait for the download and installation to
 finish.
@@ -43,7 +51,7 @@ Help
 -------------------------------------------------------------------------------
 
 PostgreSQL has very good `online
-<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation. 
+<http://www.postgresql.org/docs/9.1/static/index.html>`_ documentation.
 
 Create a database user
 -------------------------------------------------------------------------------
@@ -66,10 +74,10 @@ user.
 
 ::
 
-  createuser -d -E -i -l -P -r -s qgis 
+  createuser -d -E -i -l -P -r -s qgis
 
-Enter a password when prompted. I normally use a different password to my usual
-unix login.
+Enter a password when prompted. You should use a different password to your login
+password.
 
 What do those options mean?
 
@@ -103,9 +111,9 @@ Should return something like this:
 
   $ psql -l
   List of databases
-  Name      |  Owner   | Encoding | Collation  |   Ctype    |   
+  Name      |  Owner   | Encoding | Collation  |   Ctype    |
   ----------+----------+----------+------------+------------+
-  postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
+  postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
   template0 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
   template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
   (3 rows)
@@ -120,7 +128,7 @@ from the bash shell prompt.
 
 ::
 
-  createdb address
+  createdb address -O qgis
 
 You can verify the existence of your new database by using this command:
 
@@ -133,10 +141,10 @@ Which should return something like this:
 ::
 
   List of databases
-  Name      |  Owner   | Encoding | Collation  |   Ctype    |   Access privileges   
+  Name      |  Owner   | Encoding | Collation  |   Ctype    |   Access privileges
   ----------+----------+----------+------------+------------+-----------------------
-  address   | qgis     | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
-  postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | 
+  address   | qgis     | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
+  postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
   template0 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
   template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 | =c/postgres: postgres=CTc/postgres
   (4 rows)
@@ -184,22 +192,22 @@ Make Tables in SQL
 -------------------------------------------------------------------------------
 
 Let's start making some tables! We will use our ER Diagram as a guide. First,
-let's create a streets table:
+connect to the address db::
 
-::
+  psql address
+
+Then create a :kbd:`streets` table::
 
   create table streets (id serial not null primary key, name varchar(50));
 
 :kbd:`serial` and :kbd:`varchar` are **data types**. :kbd:`serial` tells
-PostgreSQL to start an integer sequence (autonumber) to populate the :kbd:`id`
+PostgreSQL to start an integer sequence (auto-number) to populate the :kbd:`id`
 automatically for every new record. :kbd:`varchar(50)` tells PostgreSQL to
-create a character field of 50 characters in length. 
+create a character field of 50 characters in length.
 
 You will notice that the command ends with a :kbd:`;` - all SQL commands should
 be terminated this way. When you press enter, psql will report something like
-this:
-
-::
+this::
 
   NOTICE:  CREATE TABLE will create implicit sequence "streets_id_seq" for
            serial column "streets.id"
@@ -214,43 +222,37 @@ Note: If you hit return without entering a :kbd:`;`, then you will get a prompt 
 this: :kbd:`address-#`. This is because PG is expecting you to enter more. Enter
 :kbd:`;` to run your command.
 
-To view your table schema, you can do this:
-
-::
+To view your table schema, you can do this::
 
   \d streets
 
-Which should show something like this:
-
-::
+Which should show something like this::
 
   Table "public.streets"
-   Column |         Type          |            Modifiers                       
+   Column |         Type          |            Modifiers
   --------+-----------------------+--------------------------------------
-   id     | integer               | not null default 
+   id     | integer               | not null default
           |                       | nextval('streets_id_seq'::regclass)
-   name   | character varying(50) | 
+   name   | character varying(50) |
   Indexes:
     "streets_pkey" PRIMARY KEY, btree (id)
 
-To view your table contents, you can do this:
-
-::
+To view your table contents, you can do this::
 
   select * from streets;
 
-Which should show something like this:
+Which should show something like this::
 
-::
-
-   id | name 
+   id | name
    ---+------
    (0 rows)
 
 As you can see, our table is empty!
 
 Use the approach shown above to make a table called people:
-Add fields such as phone number, home address, name, etc. (these aren't all valid names: change them to make them valid).
+Add fields such as phone number, home address, name, etc. (these aren't all
+valid names: change them to make them valid). Make sure you give the table an
+ID column with the same data-types as above.
 
   Write the SQL you create here:
 
@@ -293,29 +295,25 @@ Add fields such as phone number, home address, name, etc. (these aren't all vali
   |
   |
 
-Solution:
+Solution::
 
-::
-
-  create table people (id serial not null primary key, 
-                       name varchar(50), 
-                       house_no int not null, 
-                       street_id int not null, 
+  create table people (id serial not null primary key,
+                       name varchar(50),
+                       house_no int not null,
+                       street_id int not null,
                        phone_no varchar null );
 
-The schema for the table (enter :kbd:`\\d people`) looks like this:
-
-::
+The schema for the table (enter :kbd:`\d people`) looks like this::
 
   Table "public.people"
-  Column     |         Type          |                      Modifiers                      
+  Column     |         Type          |                      Modifiers
   -----------+-----------------------+-------------------------------------
-  id         | integer               | not null default 
+  id         | integer               | not null default
              |                       | nextval('people_id_seq'::regclass)
-  name       | character varying(50) | 
+  name       | character varying(50) |
   house_no   | integer               | not null
   street_id  | integer               | not null
-  phone_no   | character varying     | 
+  phone_no   | character varying     |
   Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
 
@@ -333,45 +331,39 @@ table.
 .. image:: /static/training_manual/database_concepts/er-beispiel.png
    :align: center
 
-There are two ways to do this: 
+There are two ways to do this:
  - adding the key after the table has been created
  - defining the key at time of table creation
 
-Our table has already been created, so let's do it the first way:
+Our table has already been created, so let's do it the first way::
 
-::
-
-  alter table people 
+  alter table people
     add constraint people_streets_fk foreign key (street_id) references streets(id);
 
 
 That tells the :kbd:`people` table that its :kbd:`street_id` fields must match
 a valid street :kbd:`id` from the :kbd:`streets` table.
 
-The more usual way to create a constraint is to do it when you create the table:
+The more usual way to create a constraint is to do it when you create the table::
 
-::
-
-  create table people (id serial not null primary key, 
-                       name varchar(50), 
-                       house_no int not null, 
-                       street_id int references streets(id) not null, 
+  create table people (id serial not null primary key,
+                       name varchar(50),
+                       house_no int not null,
+                       street_id int references streets(id) not null,
                        phone_no varchar null);
 
-After adding the constraint, our table schema looks like this now:
-
-::
+After adding the constraint, our table schema looks like this now::
 
   \d people
   Table "public.people"
-    Column   |         Type          |            Modifiers                      
+    Column   |         Type          |            Modifiers
   -----------+-----------------------+---------------------------------
-   id        | integer               | not null default 
+   id        | integer               | not null default
              |                       | nextval('people_id_seq'::regclass)
-   name      | character varying(50) | 
+   name      | character varying(50) |
    house_no  | integer               | not null
    street_id | integer               | not null
-   phone_no  | character varying     | 
+   phone_no  | character varying     |
   Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
   Foreign-key constraints:
@@ -381,24 +373,22 @@ Create Indexes in SQL
 -------------------------------------------------------------------------------
 
 We want lightning fast searches on peoples names. To provide for this, we can
-create an index on the name column of our people table:
-
-::
+create an index on the name column of our people table::
 
   create index people_name_idx on people(name);
 
-::
+Which results in::
 
   address=# \d people
   Table "public.people"
-    Column   |         Type          |                      Modifiers                      
+    Column   |         Type          |                      Modifiers
   -----------+-----------------------+-----------------------------------
    id        | integer               | not null default nextval
              |                       | ('people_id_seq'::regclass)
-   name      | character varying(50) | 
+   name      | character varying(50) |
    house_no  | integer               | not null
    street_id | integer               | not null
-   phone_no  | character varying     | 
+   phone_no  | character varying     |
   Indexes:
    "people_pkey" PRIMARY KEY, btree (id)
    "people_name_idx" btree (name)    <-- new index added!
@@ -408,12 +398,9 @@ create an index on the name column of our people table:
 Dropping Tables in SQL
 -------------------------------------------------------------------------------
 
-If you want to get rid of a table you can use the :kbd:`drop` command:
-
-::
+If you want to get rid of a table you can use the :kbd:`drop` command::
 
   drop table streets;
-
 
 In our example, this would not work - why?
 
@@ -433,17 +420,12 @@ In our example, this would not work - why?
   |
   |
 
-Sometimes you just can't stand having a table any more. Maybe you are sick of
-all your friends. How can you get rid of them all in one easy step? Drop the
-table of course! Of course, right now too much hard work has gone into our
-table to get rid of it on a whim, but if you really hate your friends that
-much, nothing's stopping you from ridding yourself of them forever:
-
-::
+If you used the same :kbd:`drop table` command on the `people` table, it would
+be successful::
 
   drop table people;
 
-This time it works fine! Why? Are people less important than streets?
+Why?
 
   Some thoughts on why you could drop people:
 
@@ -468,18 +450,16 @@ This time it works fine! Why? Are people less important than streets?
 A word on pgAdmin III
 -------------------------------------------------------------------------------
 
-We are showing you the SQL commands from the psql prompt because it's a very
+We are showing you the SQL commands from the `psql` prompt because it's a very
 useful way to learn about databases. However, there are quicker and easier ways
 to do a lot of what we are showing you. Install pgAdminIII and you can create,
 drop, alter etc tables using 'point and click' operations in a GUI.
 
-Under Ubuntu, you can install it like this:
-
-::
+Under Ubuntu, you can install it like this::
 
   sudo apt-get install pgadmin3
 
-pgAdmin III will be convered in more detail in another module.
+pgAdmin III will be covered in more detail in another module.
 
 |IC|
 -------------------------------------------------------------------------------
