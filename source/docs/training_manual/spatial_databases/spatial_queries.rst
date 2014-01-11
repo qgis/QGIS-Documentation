@@ -18,7 +18,7 @@ point(X,Y) you can do this with:
 
 ::
 
-  select * 
+  select *
   from people
   where st_distance(the_geom,'SRID=4326;POINT(33 -34)') < 2;
 
@@ -26,7 +26,7 @@ Result:
 
 ::
 
-   id |     name     | house_no | street_id |   phone_no    |   the_geom                  
+   id |     name     | house_no | street_id |   phone_no    |   the_geom
   ----+--------------+----------+-----------+---------------+-----------------
     6 | Fault Towers |       34 |         3 | 072 812 31 28 | 01010008040C0
   (1 row)
@@ -46,30 +46,27 @@ Spatial Indexes
 -------------------------------------------------------------------------------
 
 We also can define spatial indexes. A spatial index makes your spatial queries
-much faster. To create a spatial index on the geometry column use:
-
-::
+much faster. To create a spatial index on the geometry column use::
 
   CREATE INDEX people_geo_idx
     ON people
     USING gist
     (the_geom);
 
-Result:
+  \d people
 
-::
+Result::
 
-  address=# \d people
   Table "public.people"
-     Column   |         Type          |                Modifiers                      
+     Column   |         Type          |                Modifiers
    -----------+-----------------------+----------------------------------------
     id        | integer               | not null default
               |                       | nextval('people_id_seq'::regclass)
-    name      | character varying(50) | 
+    name      | character varying(50) |
     house_no  | integer               | not null
     street_id | integer               | not null
-    phone_no  | character varying     | 
-    the_geom  | geometry              | 
+    phone_no  | character varying     |
+    the_geom  | geometry              |
   Indexes:
     "people_pkey" PRIMARY KEY, btree (id)
     "people_geo_idx" gist (the_geom)  <-- new spatial key added
@@ -80,37 +77,10 @@ Result:
   Foreign-key constraints:
     "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
 
-..
 
-  Now you try - modify the cities table so its geometry
-  column is spatially indexed.
-
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+|TY| |moderate|
+-------------------------------------------------------------------------------
+Modify the cities table so its geometry column is spatially indexed.
 
 :ref:`Check your results <spatial-queries-2>`
 
@@ -121,25 +91,23 @@ PostGIS Spatial Functions Demo
 In order to demo PostGIS spatial functions, we'll create a new database
 containing some (fictional) data.
 
-To start, create a new database:
+To start, create a new database (exit the psql shell first)::
 
-::
-  
   createdb postgis_demo
 
-Remember to install the postgis extensions:
-
-::
+Remember to install the postgis extensions::
 
   psql -d postgis_demo -c "CREATE EXTENSION postgis;"
 
 Next, import the data provided in the :kbd:`exercise_data/postgis/` directory.
-Refer back to the previous lesson for instructions. You can import from the
-terminal or via SPIT. Import the files into the following database tables:
+Refer back to the previous lesson for instructions, but remember that you'll
+need to create a new PostGIS connection to the new database. You can import \
+from the terminal or via SPIT. Import the files into the following database
+tables:
 
-- :kbd:`points.shp` = :kbd:`building`
-- :kbd:`lines.shp` = :kbd:`road`
-- :kbd:`polygons.shp` = :kbd:`region`
+- :kbd:`points.shp` into :kbd:`building`
+- :kbd:`lines.shp` into :kbd:`road`
+- :kbd:`polygons.shp` into :kbd:`region`
 
 Load these three database layers into QGIS via the :guilabel:`Add PostGIS
 Layers` dialog, as usual. When you open their attribute tables, you'll note
@@ -147,9 +115,7 @@ that they have both an :kbd:`id` field and a :kbd:`gid` field created by the
 PostGIS import.
 
 Now that the tables are imported, we can use PostGIS to query the data. Go back
-to your terminal (command line) and enter the psql prompt by doing:
-
-::
+to your terminal (command line) and enter the psql prompt by running::
 
   psql postgis_demo
 
@@ -159,20 +125,18 @@ you can open them in QGIS and see the results.
 Select by location
 ...............................................................................
 
-Get all the buildings in the KwaZulu region.
-
-::
+Get all the buildings in the KwaZulu region::
 
   SELECT a.id, a.name, st_astext(a.the_geom) as point
     FROM building a, region b
-      WHERE WITHIN(a.the_geom, b.the_geom)
+      WHERE st_within(a.the_geom, b.the_geom)
       AND b.name = 'KwaZulu';
 
 Result:
 
-::     
+::
 
-   id | name |                  point                 
+   id | name |                  point
   ----+------+------------------------------------------
    30 | York | POINT(1622345.23785063 6940490.65844485)
    33 | York | POINT(1622495.65620524 6940403.87862489)
@@ -181,47 +145,39 @@ Result:
    40 | York | POINT(1621888.19746548 6940508.01440885)
   (5 rows)
 
-Or, if we create a view from it:
-
-::
+Or, if we create a view from it::
 
   CREATE VIEW vw_select_location AS
     SELECT a.gid, a.name, a.the_geom
       FROM building a, region b
-        WHERE WITHIN(a.the_geom, b.the_geom)
+        WHERE st_within(a.the_geom, b.the_geom)
         AND b.name = 'KwaZulu';
 
 Add the view as a layer and view it in QGIS:
 
-.. image:: /static/training_manual/spatial_databases/010.png
+.. image:: /static/training_manual/spatial_databases/kwazulu_view_result.png
    :align: center
 
 Select neighbors
 ...............................................................................
 
-Show a list of all the names of regions adjoining the Hokkaido region.
-
-::
+Show a list of all the names of regions adjoining the Hokkaido region::
 
   SELECT b.name
     FROM region a, region b
-      WHERE TOUCHES(a.the_geom, b.the_geom)
+      WHERE st_touches(a.the_geom, b.the_geom)
       AND a.name = 'Hokkaido';
 
-Result:
+Result::
 
-::
-
-      name     
+      name
   --------------
    Missouri
    Saskatchewan
    Wales
   (3 rows)
 
-As a view:
-
-::
+As a view::
 
   CREATE VIEW vw_regions_adjoining_hokkaido AS
     SELECT b.gid, b.name, b.the_geom
@@ -231,15 +187,13 @@ As a view:
 
 In QGIS:
 
-.. image:: /static/training_manual/spatial_databases/011.png
+.. image:: /static/training_manual/spatial_databases/adjoining_result.png
    :align: center
 
 Note the missing region (Queensland). This may be due to a topology error.
 Artifacts such as this can alert us to potential problems in the data. To solve
 this enigma without getting caught up in the anomalies the data may have, we
-could use a buffer intersect instead:
-
-::
+could use a buffer intersect instead::
 
   CREATE VIEW vw_hokkaido_buffer AS
     SELECT gid, ST_BUFFER(the_geom, 100) as the_geom
@@ -250,12 +204,10 @@ This creates a buffer of 100 meters around the region Hokkaido.
 
 The darker area is the buffer:
 
-.. image:: /static/training_manual/spatial_databases/012.png
+.. image:: /static/training_manual/spatial_databases/hokkaido_buffer.png
    :align: center
 
-Select using the buffer:
-
-::
+Select using the buffer::
 
   CREATE VIEW vw_hokkaido_buffer_select AS
     SELECT b.gid, b.name, b.the_geom
@@ -276,13 +228,11 @@ because we don't want it; we only want the regions adjoining it.
 
 In QGIS:
 
-.. image:: /static/training_manual/spatial_databases/013.png
+.. image:: /static/training_manual/spatial_databases/hokkaido_buffer_select.png
    :align: center
 
 It is also possible to select all objects within a given distance, without the
-extra step of creating a buffer:
-
-::
+extra step of creating a buffer::
 
   CREATE VIEW vw_hokkaido_distance_select AS
     SELECT b.gid, b.name, b.the_geom
@@ -293,27 +243,23 @@ extra step of creating a buffer:
 
 This achieves the same result, without need for the interim buffer step:
 
-.. image:: /static/training_manual/spatial_databases/014.png
+.. image:: /static/training_manual/spatial_databases/hokkaido_distance_select.png
    :align: center
 
 
-Select uniques
+Select unique values
 ...............................................................................
 
-Show a list of unique town names for all buildings in the Queensland region.
-
-::
+Show a list of unique town names for all buildings in the Queensland region::
 
   SELECT DISTINCT a.name
     FROM building a, region b
-      WHERE WITHIN (a.the_geom, b.the_geom)
+      WHERE st_within(a.the_geom, b.the_geom)
       AND b.name = 'Queensland';
 
-Result:
+Result::
 
-::
-
-    name   
+    name
   ---------
    Beijing
    Berlin
@@ -339,7 +285,7 @@ Further examples ...
         WHERE a.id=5 AND b.id=22;
 
 ::
-  
+
   CREATE VIEW vw_road_centroid AS
     SELECT a.gid as gid, ST_CENTROID(a.the_geom) as the_geom
       FROM road a
@@ -361,7 +307,7 @@ Further examples ...
       WHERE a.name='Queensland';
 
 ::
-  
+
   CREATE VIEW vw_simplify AS
     SELECT gid, ST_Simplify(the_geom, 20) AS the_geom
       FROM road;

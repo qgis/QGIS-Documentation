@@ -829,18 +829,16 @@ check the entries in your cities table and use any :kbd:`id` which exists.
   from   streets, people
   where  people.street_id=streets.id;
 
-Result:
+Result::
 
-::
-
-         name       |   street_name   |    geometry
-  ------------------+-----------------+---------------
-   Rusty Bedsprings | High street     |
-   QGIS Geek        | High street     |
-   Joe Bloggs       | New Main Street |
-   IP Knightly      | QGIS Road       |
-   Fault Towers     | QGIS Road       | POINT(33 -33)
-  (5 rows)
+         name     | street_name |   geometry
+    --------------+-------------+---------------
+     Roger Jones  | High street |
+     Sally Norman | High street |
+     Jane Smith   | Main Road   |
+     Joe Bloggs   | Low Street  |
+     Fault Towers | Main Road   | POINT(33 -33)
+    (5 rows)
 
 As you can see, our constraint allows nulls to be added into the database.
 

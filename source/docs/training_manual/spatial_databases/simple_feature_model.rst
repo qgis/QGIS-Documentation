@@ -10,12 +10,12 @@ OGC.
 What is OGC
 -------------------------------------------------------------------------------
 
-  The Open Geospatial Consortium (OGC), an international voluntary consensus
-  standards organization, originated in 1994. In the OGC, more than 370+
-  commercial, governmental, nonprofit and research organizations worldwide
-  collaborate in an open consensus process encouraging development and
-  implementation of standards for geospatial content and services, GIS data
-  processing and data sharing. *- Wikipedia*
+The Open Geospatial Consortium (OGC), an international voluntary consensus
+standards organization, originated in 1994. In the OGC, more than 370+
+commercial, governmental, nonprofit and research organizations worldwide
+collaborate in an open consensus process encouraging development and
+implementation of standards for geospatial content and services, GIS data
+processing and data sharing. *- Wikipedia*
 
 What is the SFS Model
 -------------------------------------------------------------------------------
@@ -36,12 +36,9 @@ For further information, have a look at the `OGC Simple Feature for SQL
 Add a geometry field to table
 -------------------------------------------------------------------------------
 
-Let's add a point field to our people table:
-
-::
+Let's add a point field to our people table::
 
   alter table people add column the_geom geometry;
-
 
 .. _backlink-simple-feature-1:
 
@@ -49,18 +46,17 @@ Add a constraint based on geometry type
 -------------------------------------------------------------------------------
 
 You will notice that the geometry field type does not implicitly specify what
-*type* of geometry for the field - for that we need a constraint.
-
-::
+*type* of geometry for the field - for that we need a constraint::
 
   alter table people
   add constraint people_geom_point_chk
       check(st_geometrytype(the_geom) = 'ST_Point'::text OR the_geom IS NULL);
 
-What does that do? It adds a constraint to the table that prevents anything
-except a point geometry or a null.
+This adds a constraint to the table so that it will only accept a point geometry
+or a null value.
 
-Now you try:
+|TY| |hard|
+-------------------------------------------------------------------------------
 
   Create a new table called cities and give it some appropriate columns,
   including a geometry field for storing polygons (the city boundaries). Make
@@ -104,9 +100,7 @@ Populate geometry_columns table
 -------------------------------------------------------------------------------
 
 At this point you should also add an entry into the :kbd:`geometry_columns`
-table:
-
-::
+table::
 
   insert into geometry_columns values
     ('','public','people','the_geom',2,4326,'POINT');
@@ -114,10 +108,8 @@ table:
 Why? :kbd:`geometry_columns` is used by certain applications to be aware of
 which tables in the database contain geometry data.
 
-.. note::  If the above :kbd:`INSERT` statement causes a complaint, run this
-   query first:
-
-   ::
+.. note::  If the above :kbd:`INSERT` statement causes an error, run this
+   query first::
 
      select * from geometry_columns;
 
@@ -161,9 +153,7 @@ about the EPSG).
 Add geometry record to table using SQL
 -------------------------------------------------------------------------------
 
-Now that our tables are geo-enabled, we can store geometries in them!
-
-::
+Now that our tables are geo-enabled, we can store geometries in them::
 
   insert into people (name,house_no, street_id, phone_no, the_geom)
           values ('Fault Towers',
@@ -176,15 +166,15 @@ Now that our tables are geo-enabled, we can store geometries in them!
    (SRID) you want to use. This is because you entered the geometry of the new
    point using a plain string of text, which does not automatically add the
    correct projection information. Obviously, the new point needs to use the
-   same SRID as the dataset it is being added to, so you need to specify it.
+   same SRID as the data-set it is being added to, so you need to specify it.
 
    If at this point you were using a graphical interface, for example,
    specifying the projection for each point would be automatic. In other words,
    you usually won't need to worry about using the correct projection for every
-   point you want to add if you've already specified it for that dataset, as we
+   point you want to add if you've already specified it for that data-set, as we
    did earlier.
 
-Now is probably a good time to fire up QGIS and try to view your :kbd:`people`
+Now is probably a good time to open QGIS and try to view your :kbd:`people`
 table. Also, we should try editing / adding / deleting records and then
 performing select queries in the database to see how the data has changed.
 
@@ -203,9 +193,7 @@ Click on the :guilabel:`New` button to open this dialog:
 .. image:: /static/training_manual/spatial_databases/new_postgis_connection.png
    :align: center
 
-Then define a new connection, e.g.:
-
-::
+Then define a new connection, e.g.::
 
   Name: myPG
   Service:

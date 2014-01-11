@@ -15,51 +15,25 @@ entities directly in PostgreSQL/PostGIS.
 Creating Linestrings
 -------------------------------------------------------------------------------
 
-Before we start, let's get our streets table matching the others; i.e., having
-a constraint on the geometry, an index and an entry in the geometry_columns
-table.
+Going back to our :kbd:`address` database, let's get our streets table matching
+the others; i.e., having a constraint on the geometry, an index and an entry in
+the geometry_columns table.
 
-  Exercise: 
+|TY| |moderate|
+-------------------------------------------------------------------------------
 
-  - Modify the streets table so that it has a geometry column of type
-    ST_LineString. 
-  - Don't forget to do the accompanying update to the geometry columns
-    table! 
-  - Also add a constraint to prevent any geometries being added that are 
+  * Modify the :kbd:`streets` table so that it has a geometry column of type
+    ST_LineString.
+  * Don't forget to do the accompanying update to the geometry columns
+    table!
+  * Also add a constraint to prevent any geometries being added that are
     not LINESTRINGS or null.
-  - Create a spatial index on the new geometry column 
-
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+  * Create a spatial index on the new geometry column
 
 :ref:`Check your results <geometry-1>`
 
-Now let's insert a linestring into our streets table. In this case I am going
-to update an existing street record:
-
-::
+Now let's insert a linestring into our streets table. In this case we will
+update an existing street record::
 
   update streets set the_geom = 'SRID=4326;LINESTRING(20 -33, 21 -34, 24 -33)'
   where streets.id=2;
@@ -75,18 +49,14 @@ Creating Polygons
 -------------------------------------------------------------------------------
 
 Creating polygons is just as easy. One thing to remember is that by definition,
-polygons have at least four vertices, with the last and first being co-located.
-
-::
+polygons have at least four vertices, with the last and first being co-located::
 
   insert into cities (name, the_geom)
   values ('Tokyo', 'SRID=4326;POLYGON((10 -10, 5 -32, 30 -27, 10 -10))');
 
 .. note::  A polygon requires double brackets around its coordinate list; this
    is to allow you to add complex polygons with multiple unconnected areas. For
-   instance:
-
-::
+   instance::
 
   insert into cities (name, the_geom)
   values ('Tokyo Outer Wards', 'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
@@ -96,7 +66,6 @@ If you followed this step, you can check what it did by loading the cities
 dataset into QGIS, opening its attribute table, and selecting the new entry.
 Note how the two new polygons behave like one polygon.
 
-
 .. _backlink-geometry-2:
 
 Exercise: Linking Cities to People
@@ -105,73 +74,42 @@ Exercise: Linking Cities to People
 For this exercise you should do the following:
 
   Delete all data from your people table.
-  Add a foreign key column to people that references the primary key of 
+  Add a foreign key column to people that references the primary key of
   the cities table.
   Use QGIS to capture some cities.
-  Use SQL to insert some new people records, ensuring that each has 
+  Use SQL to insert some new people records, ensuring that each has
   an associated street and city.
 
-  Your updated people schema should look something like this:
+  Your updated people schema should look something like this::
 
-  ::
-  
     \d people
+
     Table "public.people"
-       Column   |         Type          |                      Modifiers                      
+       Column   |         Type          |                      Modifiers
      -----------+-----------------------+--------------------------------------------
-      id        | integer               | not null 
+      id        | integer               | not null
                 |                       | default nextval('people_id_seq'::regclass)
-      name      | character varying(50) | 
+      name      | character varying(50) |
       house_no  | integer               | not null
       street_id | integer               | not null
-      phone_no  | character varying     | 
-      the_geom  | geometry              | 
+      phone_no  | character varying     |
+      the_geom  | geometry              |
       city_id   | integer               | not null
     Indexes:
       "people_pkey" PRIMARY KEY, btree (id)
       "people_name_idx" btree (name)
     Check constraints:
-      "people_geom_point_chk" CHECK (st_geometrytype(the_geom) = 
+      "people_geom_point_chk" CHECK (st_geometrytype(the_geom) =
                            'ST_Point'::text OR the_geom IS NULL)
     Foreign-key constraints:
       "people_city_id_fkey" FOREIGN KEY (city_id) REFERENCES cities(id)
       "people_street_id_fkey" FOREIGN KEY (street_id) REFERENCES streets(id)
-    
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+
 
 :ref:`Check your results <geometry-2>`
 
 
-Looking at our schema
+Looking at Our Schema
 -------------------------------------------------------------------------------
 
 By now our schema should be looking like this:
@@ -180,54 +118,43 @@ By now our schema should be looking like this:
    :align: center
 
 
-.. Exercise
-   ----------------------------------------------------------------------------
+|TY| |hard|
+-------------------------------------------------------------------------------
 
-   Create city boundaries by computing the minimum convex hull of all addresses
-   for that city and computing a buffer around that area.
-
-   Issue: the sections below don't follow directly and logically from the
-   preceding sections. Perhaps in future the last few sections can be
-   modified to make use of the work that has already been done up to this
-   point.
+Create city boundaries by computing the minimum convex hull of all addresses
+for that city and computing a buffer around that area.
 
 
-Access Subobjects
+Access Sub-Objects
 -------------------------------------------------------------------------------
 
 With the SFS-Model functions, you have a wide variety of options to access
-subobjects of SFS Geometries. When you want to select the first vertex point of
+sub-objects of SFS Geometries. When you want to select the first vertex point of
 every polygon geometry in the table myPolygonTable, you have to do this in this
 way:
 
-- Transform the polygon boundary to a linestring: 
-
-::
+* Transform the polygon boundary to a linestring::
 
   select st_boundary(geometry) from myPolygonTable;
 
-- select the first vertex point of the resultant linestring:
+* Select the first vertex point of the resultant linestring::
 
-::
-
-  select st_startpoint(myGeometry) 
+  select st_startpoint(myGeometry)
   from (
-    select st_boundary(geometry) as myGeometry 
+    select st_boundary(geometry) as myGeometry
     from myPolygonTable) as foo;
 
 Data Processing
 -------------------------------------------------------------------------------
 
 PostGIS supports all OGC SFS/MM standard conform functions. All these functions
-start with ``ST_``. 
+start with ``ST_``.
 
 Clipping
 -------------------------------------------------------------------------------
 
 To clip a subpart of your data you can use the :kbd:`ST_INTERSECT()` function.
-To avoid empty geometries, use:
-
-::
+To avoid empty geometries, use::
 
   where not st_isempty(st_intersection(a.the_geom, b.the_geom))
 
@@ -256,9 +183,7 @@ receiver.
    :align: center
 
 To create a linestring from a new point layer called 'points', you can run the
-following command:
-
-::
+following command::
 
   select ST_LineFromMultiPoint(st_collect(the_geom)), 1 as id
   from (
@@ -284,9 +209,7 @@ Differences between tables
 -------------------------------------------------------------------------------
 
 To detect the difference between two tables with the same structure, you can
-use the PostgreSQL keyword :kbd:`EXCEPT`. 
-
-::
+use the PostgreSQL keyword :kbd:`EXCEPT`::
 
   select * from table_a
   except
@@ -299,15 +222,11 @@ Tablespaces
 -------------------------------------------------------------------------------
 
 You can define where postgres should store its data on disk by creating
-tablespaces.
-
-::
+tablespaces::
 
   CREATE TABLESPACE homespace LOCATION '/home/pg';
 
-When you create a database, you can then specify which tablespace to use e.g.:
-
-::
+When you create a database, you can then specify which tablespace to use e.g.::
 
   createdb --tablespace=homespace t4a
 
