@@ -127,19 +127,11 @@ To start, create a new database:
   
   createdb postgis_demo
 
-Remember to install PLPGSQL:
+Remember to install the postgis extensions:
 
 ::
 
-  createlang plpgsql postgis_demo
-
-Then install the PostGIS functions and the spatial reference system. For
-example, on Linux with PostgreSQL 9.1 and PostGIS 1.5:
-
-::
-
-  psql postgis_demo < /usr/share/postgresql/9.1/contrib/postgis-1.5/postgis.sql
-  psql postgis_demo < /usr/share/postgresql/9.1/contrib/postgis-1.5/spatial_ref_sys.sql
+  psql -d postgis_demo -c "CREATE EXTENSION postgis;"
 
 Next, import the data provided in the :kbd:`exercise_data/postgis/` directory.
 Refer back to the previous lesson for instructions. You can import from the
@@ -199,9 +191,9 @@ Or, if we create a view from it:
         WHERE WITHIN(a.the_geom, b.the_geom)
         AND b.name = 'KwaZulu';
 
-And view it in QGIS:
+Add the view as a layer and view it in QGIS:
 
-.. image:: /static/training_manual/postgis/010.png
+.. image:: /static/training_manual/spatial_databases/010.png
    :align: center
 
 Select neighbors
@@ -239,7 +231,7 @@ As a view:
 
 In QGIS:
 
-.. image:: /static/training_manual/postgis/011.png
+.. image:: /static/training_manual/spatial_databases/011.png
    :align: center
 
 Note the missing region (Queensland). This may be due to a topology error.
@@ -258,7 +250,7 @@ This creates a buffer of 100 meters around the region Hokkaido.
 
 The darker area is the buffer:
 
-.. image:: /static/training_manual/postgis/012.png
+.. image:: /static/training_manual/spatial_databases/012.png
    :align: center
 
 Select using the buffer:
@@ -284,7 +276,7 @@ because we don't want it; we only want the regions adjoining it.
 
 In QGIS:
 
-.. image:: /static/training_manual/postgis/013.png
+.. image:: /static/training_manual/spatial_databases/013.png
    :align: center
 
 It is also possible to select all objects within a given distance, without the
@@ -301,7 +293,7 @@ extra step of creating a buffer:
 
 This achieves the same result, without need for the interim buffer step:
 
-.. image:: /static/training_manual/postgis/014.png
+.. image:: /static/training_manual/spatial_databases/014.png
    :align: center
 
 
