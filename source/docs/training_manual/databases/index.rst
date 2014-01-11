@@ -12,5 +12,6 @@ spatial database implementations including spatialite.
    :maxdepth: 2
    :numbered:
 
-   db_intro
+   db_browser
    db_manager
+   spatialite

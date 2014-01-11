@@ -77,8 +77,8 @@ metadata, but what if we wanted to alter the table to add an additional column
 perhaps? DB Manager allows you to do this directly. 
 
 * Select the table you want to edit in the tree
-* Select :guilabel:`Table --> Edit Table` from the menu to open the :guilabel:`
-  Table Properties` dialog.
+* Select :guilabel:`Table --> Edit Table` from the menu to open the 
+  :guilabel:`Table Properties` dialog.
 
 .. image:: /static/training_manual/databases/012.png
    :align: center
@@ -92,7 +92,7 @@ the primary key or to drop existing constraints.
 .. image:: /static/training_manual/databases/013.png
    :align: center
 
-The :guilabel`Indexes` tab can be used to add and delete both spatial and normal
+The :guilabel:`Indexes` tab can be used to add and delete both spatial and normal
 indexes.
 
 .. image:: /static/training_manual/databases/014.png
@@ -197,12 +197,79 @@ of the ones we looked at in previous modules and sections.
 Importing Data into a Database with DB Manager
 -------------------------------------------------------------------------------
 
+We have already looked at how to import data into a spatial database using 
+command line tools and also looked at how to use the SPIT plugin, so now lets
+learn how to use DB Manager to do imports.
+
+* Click the :guilabel:`Import layer/file` button on the toolbar in the DB
+  Manager dialog.
+
+.. image:: /static/training_manual/databases/019.png
+   :align: center
+
+* Select the :kbd:`urban_33S.shp` file from :kbd:`exercise_data/projected_data`
+  as the input dataset.
+* Click the :guilabel:`Update Options` button to prefill some of the form
+  values.
+* Make sure that the :guilabel:`Create new table` option is selected
+* Specify the :guilabel:`Source SRID` as :kbd:`32722` and the :guilabel:`Target
+  SRID` as :kbd:`4326`.
+* Enable the checkbox to :guilabel:`Create Spatial Index`
+* Click :guilabel:`OK` to perform the import.
+
+.. image:: /static/training_manual/databases/020.png
+   :align: center
+
+* Dismiss the dialog letting you know that the import was successful
+* Click the :guilabel:`Refresh` button on the DB Manager Toolbar.
+
+You can now inspect the table in your database by clicking on it in the Tree.
+Verify that the data has been reprojected by checking that the
+:guilabel:`Spatial ref:` is listed as :kbd:`WGS 84 (4326)`
+
+.. image:: /static/training_manual/databases/021.png
+   :align: center
+
+Right clicking on the table in the Tree and a selecting :guilabel:`Add to
+Canvas` will add the table as a layer in your map. 
+
+.. image:: /static/training_manual/databases/022.png
+   :align: center
+
 Exporting Data from a Database with DB Manager
 -------------------------------------------------------------------------------
+
+Of course DB Manager can also be used to export data from your spatial
+databases, so lets take a look at how that is done.
+
+* Select the :kbd:`roads` layer in the Tree and click the :guilabel:`Export to
+  File` button on the toolbar to open the :guilabel:`Export to vector file`
+  dialog.
+* Click the :guilabel:`...` button to select the :guilabel:`Output file` and
+  save the data to your :kbd:`exercise_data` directory as :kbd:`urban_4326`.
+* Click :guilabel:`OK` to initialize the export.
+
+.. image:: /static/training_manual/databases/024.png
+   :align: center
+
+* Dismiss the dialog letting you know the export was successful and close the
+  DB Manager.
+
+You can now inspect the shapefile you created with the Browser panel.
+
+.. image:: /static/training_manual/databases/025.png
+   :align: center
 
 |IC|
 -------------------------------------------------------------------------------
 
+You have now seen how to use the DB Manager interface in QGIS to Manage your 
+spatial databases, to execute sql queries against your data and how to import
+and export data.
+
 |WN|
 -------------------------------------------------------------------------------
+
+Next, we will look at how to use many of these same techniques with
+*spatialite* databases.
 
