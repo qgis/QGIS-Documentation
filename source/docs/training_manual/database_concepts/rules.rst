@@ -1,8 +1,8 @@
 |LS| Rules
 ===============================================================================
 
-  Rules allow the "query tree" of an incoming query to be rewritten. One common
-  usage is to implement views, including updatable view. *- Wikipedia*
+Rules allow the "query tree" of an incoming query to be rewritten. One common
+usage is to implement views, including updatable view. *- Wikipedia*
 
 **The goal for this lesson:** To learn how to create new rules for the
 database.
@@ -63,5 +63,5 @@ changes in other parts of the database.
 |WN|
 -------------------------------------------------------------------------------
 
-The next module will introduce you to PostGIS, which takes these database
-concepts and applies them to GIS data.
+The next module will introduce you to Spatial Database using PostGIS, 
+which takes these database concepts and applies them to GIS data.

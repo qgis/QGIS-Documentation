@@ -10,24 +10,24 @@ there for illustration purposes.
 What is a Database? 
 -------------------------------------------------------------------------------
 
-  A database consists of an organized collection of data for one or more uses,
-  typically in digital form. *- Wikipedia*
+A database consists of an organized collection of data for one or more uses,
+typically in digital form. *- Wikipedia*
 
 ..
 
-  A database management system (DBMS) consists of software that operates
-  databases, providing storage, access, security, backup and other facilities.
-  *- Wikipedia*
+A database management system (DBMS) consists of software that operates
+databases, providing storage, access, security, backup and other facilities.
+*- Wikipedia*
 
 Tables
 -------------------------------------------------------------------------------
 
-  In relational databases and flat file databases, a table is a set of data
-  elements (values) that is organized using a model of vertical columns (which
-  are identified by their name) and horizontal rows. A table has a specified
-  number of columns, but can have any number of rows. Each row is identified
-  by the values appearing in a particular column subset which has been
-  identified as a candidate key. *- Wikipedia*
+In relational databases and flat file databases, a table is a set of data
+elements (values) that is organized using a model of vertical columns (which
+are identified by their name) and horizontal rows. A table has a specified
+number of columns, but can have any number of rows. Each row is identified
+by the values appearing in a particular column subset which has been
+identified as a candidate key. *- Wikipedia*
 
 ::
 
@@ -42,12 +42,12 @@ In SQL databases a table is also known as a **relation.**
 Columns / Fields
 -------------------------------------------------------------------------------
 
-  A column is a set of data values of a particular simple type, one for each
-  row of the table. The columns provide the structure according to which the
-  rows are composed. The term field is often used interchangeably with column,
-  although many consider it more correct to use field (or field value) to refer
-  specifically to the single item that exists at the intersection between one
-  row and one column. *- Wikipedia*
+A column is a set of data values of a particular simple type, one for each
+row of the table. The columns provide the structure according to which the
+rows are composed. The term field is often used interchangeably with column,
+although many consider it more correct to use field (or field value) to refer
+specifically to the single item that exists at the intersection between one
+row and one column. *- Wikipedia*
 
 A column:
 
@@ -77,8 +77,8 @@ field for each of the columns in the table.
 Datatypes
 -------------------------------------------------------------------------------
 
-  Datatypes restrict the kind of information that can be stored in a column.
-  *- Tim and Horst*
+Datatypes restrict the kind of information that can be stored in a column.
+*- Tim and Horst*
 
 There are many kinds of datatypes. Let's focus on the most common:
 
@@ -168,10 +168,10 @@ Normalisation
 One of the main ideas in a database is to avoid data duplication / redundancy.
 The process of removing redundancy from a database is called Normalisation.
 
-  Normalization is a systematic way of ensuring that a database structure is
-  suitable for general-purpose querying and free of certain undesirable
-  characteristics - insertion, update, and deletion anomalies - that could lead
-  to a loss of data integrity. *- Wikipedia*
+Normalization is a systematic way of ensuring that a database structure is
+suitable for general-purpose querying and free of certain undesirable
+characteristics - insertion, update, and deletion anomalies - that could lead
+to a loss of data integrity. *- Wikipedia*
 
 There are different kinds of normalisation 'forms'. 
 
@@ -240,8 +240,8 @@ You can read more about database normalisation `here
 Indexes
 -------------------------------------------------------------------------------
 
-  A database index is a data structure that improves the speed of data
-  retrieval operations on a database table. *- Wikipedia*
+A database index is a data structure that improves the speed of data
+retrieval operations on a database table. *- Wikipedia*
 
 Imagine you are reading a textbook and looking for the explanation of a concept
 - and the textbook has no index! You will have to start reading at one cover
@@ -329,7 +329,7 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: /static/training_manual/postgres/er-beispiel.png
+.. image:: /static/training_manual/database_concepts/er-beispiel.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case

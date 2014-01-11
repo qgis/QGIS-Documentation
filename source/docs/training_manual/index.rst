@@ -23,8 +23,9 @@ QGIS Training Manual
    online_resources/index
    grass/index
    assessment/index
-   postgres/index
-   postgis/index
+   database_concepts/index
+   spatial_databases/index
+   databases/index
    appendix/contribute
 
    answers/answers
