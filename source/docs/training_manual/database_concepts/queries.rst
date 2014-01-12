@@ -10,15 +10,17 @@ useful information.
 .. note:: If you did not do so in the previous lesson, add the following people
   objects to your :kbd:`people` table. If you receive any errors related to
   foreign key constraints, you will need to add the 'Main Road' object to your
-  streets table first::
+  streets table first
 
-  insert into people (name,house_no, street_id, phone_no)
+::
+
+    insert into people (name,house_no, street_id, phone_no)
               values ('Joe Bloggs',3,2,'072 887 23 45');
-  insert into people (name,house_no, street_id, phone_no)
+    insert into people (name,house_no, street_id, phone_no)
               values ('Jane Smith',55,3,'072 837 33 35');
-  insert into people (name,house_no, street_id, phone_no)
+    insert into people (name,house_no, street_id, phone_no)
               values ('Roger Jones',33,1,'072 832 31 38');
-  insert into people (name,house_no, street_id, phone_no)
+    insert into people (name,house_no, street_id, phone_no)
               values ('Sally Norman',83,1,'072 932 31 32');
 
 
@@ -230,46 +232,15 @@ Result::
 .. note::  Because we have not used an :kbd:`ORDER BY` clause, the order of your
   results may not match what is shown here.
 
-Exercise:
+|TY| |moderate|
+...............................................................................
 
-  Summarise the people by street name and show the actual street names instead of
-  the street_id's
+Summarise the people by street name and show the actual street names instead
+of the street_ids.
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+:ref:`Check your results <database-concepts-8>`
 
-Solution::
-
-  select count(people.name), streets.name
-  from people, streets
-  where people.street_id=streets.id
-  group by streets.name;
-
-Result::
-
-     count |    name
-    -------+-------------
-         1 | Low Street
-         2 | High street
-         1 | Main Road
-    (3 rows)
-
-.. note::  You will notice that we have prefixed field names with table names
-   (e.g. people.name and streets.name). This needs to be done whenever the
-   field name is ambiguous (i.e. not unique across all tables in the database).
+.. _backlink-database-concepts-8:
 
 |IC|
 -------------------------------------------------------------------------------

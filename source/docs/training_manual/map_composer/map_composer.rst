@@ -217,7 +217,7 @@ You can also rename items.
 
 * Rename the layers to :kbd:`Places`, :kbd:`Roads and Streets`,
   :kbd:`Surafce Water`, and :kbd:`Rivers`.
-* Set :knd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
+* Set :kbd:`landuse` to :guilabel:`Hidden`, then click the down arrow and edit
   each category to name them on the legend. You can also reorder the items:
 
 .. image:: /static/training_manual/map_composer/categories_reordered.png

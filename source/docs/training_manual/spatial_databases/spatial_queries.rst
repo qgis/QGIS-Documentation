@@ -132,9 +132,7 @@ Get all the buildings in the KwaZulu region::
       WHERE st_within(a.the_geom, b.the_geom)
       AND b.name = 'KwaZulu';
 
-Result:
-
-::
+Result::
 
    id | name |                  point
   ----+------+------------------------------------------

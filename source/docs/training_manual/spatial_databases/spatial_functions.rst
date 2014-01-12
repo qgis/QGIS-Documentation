@@ -75,13 +75,11 @@ previous exercise.
 
 .. note:: If you are using PostGIS 1.5 and a version of PostgreSQL lower than
    9.1, you will need to follow a different set of steps in order to install
-   the postgis extensions for your database. Please consult the `PostGIS
-   Documentation
-   <http://postgis.net/docs/postgis_installation.html#create_new_db>`_ for
-   instructions on how to do this. There are also some instructions in the
-   `previous version
-   <http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-plpgsql>
-   `_ of this manual.
+   the postgis extensions for your database. Please consult the
+   `PostGIS Documentation <http://postgis.net/docs/postgis_installation.html#create_new_db>`_
+   for instructions on how to do this. There are also some instructions in the
+   `previous version <http://manual.linfiniti.com/en/postgis/spatial_functions.html#install-plpgsql>`_
+   of this manual.
 
 Looking at the installed PostGIS functions
 -------------------------------------------------------------------------------

@@ -82,10 +82,12 @@ this:
 What to do next varies according to your operating system, so choose the
 appropriate course to follow:
 
+
 Windows
 ...............................................................................
 
 * Click on the :guilabel:`Type` dropdown and choose :guilabel:`Open`.
+
 
 Ubuntu Linux
 ...............................................................................
@@ -94,12 +96,14 @@ Ubuntu Linux
   write :kbd:`display` to use *ImageMagick*. Remember to put a space after the
   command!
 
+
 MacOS
 ...............................................................................
 
 * Click on the :guilabel:`Type` dropdown and choose :guilabel:`Mac`.
 * Under :guilabel:`Action`, write :kbd:`open `. Remember to put a space after
   the command!
+
 
 Continue writing the command
 ...............................................................................

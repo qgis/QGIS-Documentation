@@ -33,7 +33,7 @@ table::
 
   select * from streets;
 
-result::
+Result::
 
   select * from streets;
    id |    name
@@ -42,22 +42,15 @@ result::
   (1 row)
 
 
- * Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
+|TY| |basic|
+...............................................................................
 
-  Write the sql you used here:
+Use the :kbd:`INSERT` command to add a new street to the :kbd:`streets` table.
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+:ref:`Check your results <database-concepts-6>`
+
+.. _backlink-database-concepts-6:
+
 
 Sequencing Data Addition According to Constraints
 -------------------------------------------------------------------------------
@@ -75,56 +68,24 @@ Try to add a person object to the :kbd:`people` table with the following details
 .. note:: Recall that in this example, we defined phone numbers as strings, not
     integers.
 
-  What problems did you encounter?
+At this point, you should have an error report if you try to do this without
+first creating a record for Main Street in the :kbd:`streets` table.
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+You should have also noticed that:
 
-You should have an error report if you try to do this without first creating a
-record for Main Street in the :kbd:`streets` table.
-
-What error did you get?
-
-You should have noticed that:
- - You can't add the street using its name
- - You can't add a street using a street :kbd:`id` before first creating the
+ * You can't add the street using its name
+ * You can't add a street using a street :kbd:`id` before first creating the
    street record on the streets table
 
 Remember that our two tables are linked via a Primary/Foreign Key pair. This
 means that no valid person can be created without there also being a valid
 corresponding street record.
 
-Here is the correct SQL statement::
+Using the above knowledge, add the new person to the database.
 
-  insert into streets (name) values('Main Road');
-  insert into people (name,house_no, street_id, phone_no)
-    values ('Joe Smith',55,2,'072 882 33 21');
+:ref:`Check your results <database-concepts-7>`
 
-If you look at the streets table again (using a select statement as before),
-you'll see that the :kbd:`id` for the :kbd:`Main Road` entry is :kbd:`2`.
-That's why we could merely enter the number :kbd:`2` above. Even though we're
-not seeing :kbd:`Main Road` written out fully in the entry above, the
-database will be able to associate that with the :kbd:`street_id` value of
-:kbd:`2`.
-
-.. note:: If you have already added a new :kbd:`street` object, you might find
-  that the new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`.
+.. _backlink-database-concepts-7:
 
 Select data
 -------------------------------------------------------------------------------

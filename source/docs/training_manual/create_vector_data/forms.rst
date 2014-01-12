@@ -107,7 +107,7 @@ Set a more appropriate form widget for the :guilabel:`highway` field.
 
 You can also design your own custom form completely from scratch.
 
-* Create a simple point layer named :kdb:`test-data` with two attributes:
+* Create a simple point layer named :kbd:`test-data` with two attributes:
 
   * Name (text)
   * Age (text)

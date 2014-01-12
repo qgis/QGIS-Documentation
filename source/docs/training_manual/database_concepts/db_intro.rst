@@ -7,7 +7,7 @@ there for illustration purposes.
 
 **The goal for this lesson:** To understand fundamental database concepts.
 
-What is a Database? 
+What is a Database?
 -------------------------------------------------------------------------------
 
 A database consists of an organized collection of data for one or more uses,
@@ -31,7 +31,7 @@ identified as a candidate key. *- Wikipedia*
 
 ::
 
-   id | name  | age 
+   id | name  | age
   ----+-------+-----
     1 | Tim   |  20
     2 | Horst |  88
@@ -90,23 +90,20 @@ There are many kinds of datatypes. Let's focus on the most common:
 
 You can tell the database to allow you to also store nothing in a field. If
 there is nothing in a field, then the field content is referred to as a
-**'null' value**. 
-
-::
+**'null' value**::
 
   insert into person (age) values (40);
 
+  select * from person;
 
-::
+Result::
 
-  INSERT 0 1
-  test=# select * from person;
-    id | name  | age 
-   ----+-------+-----
+    id | name  | age
+    ----+-------+-----
      1 | Tim   |  20
      2 | Horst |  88
      4 |       |  40  <-- null for name
-  (3 rows)
+    (3 rows)
 
 There are many more datatypes you can use - `check the PostgreSQL manual!
 <http://www.postgresql.org/docs/current/static/datatype.html>`_
@@ -115,42 +112,20 @@ Modelling an Address Database
 -------------------------------------------------------------------------------
 
 Let's use a simple case study to see how a database is constructed. We want to
-create an address database. What kind of information should we store?
+create an address database.
 
-  Write some address properties in the space provided:
-  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
-  |  
+|TY| |basic|
+...............................................................................
+
+Write down the properties which make up a simple address and which we would want
+to store in our database.
+
+:ref:`Check your results <database-concepts-1>`
+
+.. _backlink-database-concepts-1:
+
+Address Structure
+...............................................................................
 
 The properties that describe an address are the columns. The type of
 information stored in each column is its datatype. In the next section we will
@@ -173,28 +148,28 @@ suitable for general-purpose querying and free of certain undesirable
 characteristics - insertion, update, and deletion anomalies - that could lead
 to a loss of data integrity. *- Wikipedia*
 
-There are different kinds of normalisation 'forms'. 
+There are different kinds of normalisation 'forms'.
 
-Let's take a look at a simple example:
-
-::
+Let's take a look at a simple example::
 
   Table "public.people"
-    Column  |          Type          |                Modifiers                       
+
+    Column  |          Type          |                Modifiers
   ----------+------------------------+-----------------------------------------
-   id       | integer                | not null default 
+   id       | integer                | not null default
             |                        | nextval('people_id_seq'::regclass)
-            |                        | 
-   name     | character varying(50)  | 
+            |                        |
+   name     | character varying(50)  |
    address  | character varying(200) | not null
-   phone_no | character varying      | 
+   phone_no | character varying      |
   Indexes:
    "people_pkey" PRIMARY KEY, btree (id)
 
 ::
 
   select * from people;
-  id |     name      |           address           |  phone_no   
+
+  id |     name      |           address           |  phone_no
    --+---------------+-----------------------------+-------------
    1 | Tim Sutton    | 3 Buirski Plein, Swellendam | 071 123 123
    2 | Horst Duester | 4 Avenue du Roix, Geneva    | 072 121 122
@@ -202,40 +177,19 @@ Let's take a look at a simple example:
 
 Imagine you have many friends with the same street name or city. Every time
 this data is duplicated, it consumes space. Worse still, if a city name
-changes,  you have to do a lot of work to update your database.
+changes, you have to do a lot of work to update your database.
 
-  Try to redesign our people table to reduce duplication:
-
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+|TY| |basic|
+-------------------------------------------------------------------------------
+Redesign the theoretical `people` table above to reduce duplication and to
+normalise the data structure.
 
 You can read more about database normalisation `here
 <http://en.wikipedia.org/wiki/Database_normalization>`_
+
+:ref:`Check your results <database-concepts-2>`
+
+.. _backlink-database-concepts-2:
 
 Indexes
 -------------------------------------------------------------------------------
@@ -247,25 +201,22 @@ Imagine you are reading a textbook and looking for the explanation of a concept
 - and the textbook has no index! You will have to start reading at one cover
 and work your way through the entire book until you find the information you
 need. The index at the back of a book helps you to jump quickly to the page
-with the relevant information.
-
-::
+with the relevant information::
 
   create index person_name_idx on people (name);
 
-Now searches on name will be faster:
-
-::
+Now searches on name will be faster::
 
   Table "public.people"
-    Column  |          Type          |               Modifiers                       
+
+    Column  |          Type          |               Modifiers
   ----------+------------------------+-----------------------------------------
-   id       | integer                | not null default 
+   id       | integer                | not null default
             |                        | nextval('people_id_seq'::regclass)
-            |                        | 
-   name     | character varying(50)  | 
+            |                        |
+   name     | character varying(50)  |
    address  | character varying(200) | not null
-   phone_no | character varying      | 
+   phone_no | character varying      |
   Indexes:
    "people_pkey" PRIMARY KEY, btree (id)
    "person_name_idx" btree (name)
@@ -277,11 +228,9 @@ A sequence is a unique number generator. It is normally used to create a unique
 identifier for a column in a table.
 
 In this example, id is a sequence - the number is incremented each time a
-record is added to the table:
+record is added to the table::
 
-::
-
-   id |     name     |           address           |  phone_no   
+   id |     name     |           address           |  phone_no
    ---+--------------+-----------------------------+-------------
     1 | Tim Sutton   | 3 Buirski Plein, Swellendam | 071 123 123
     2 | Horst Duster | 4 Avenue du Roix, Geneva    | 072 121 122
@@ -291,34 +240,32 @@ Entity Relationship Diagramming
 
 In a normalised database, you typically have many relations (tables). The
 entity-relationship diagram (ER Diagram) is used to design the logical
-dependencies between the relations. Remember our un-normalised people table? 
+dependencies between the relations. Consider our non-normalised `people` table
+from earlier in the lesson::
 
-::
+  select * from people;
 
-  test=# select * from people;
-   id |     name     |           address           |  phone_no   
+   id |     name     |           address           |  phone_no
   ----+--------------+-----------------------------+-------------
    1  | Tim Sutton   | 3 Buirski Plein, Swellendam | 071 123 123
    2  | Horst Duster | 4 Avenue du Roix, Geneva    | 072 121 122
   (2 rows)
 
 With a little work we can split it into two tables, removing the need to repeat
-the street name for individuals who live in the same street:
+the street name for individuals who live in the same street::
 
-::
+  select * from streets;
 
-  test=# select * from streets;
-   id |     name     
+   id |     name
   ----+--------------
    1  | Plein Street
   (1 row)
 
-and
+and::
 
-::
+  select * from people;
 
-  test=# select * from people;
-   id |     name     | house_no | street_id |  phone_no   
+   id |     name     | house_no | street_id |  phone_no
   ----+--------------+----------+-----------+-------------
     1 | Horst Duster |        4 |         1 | 072 121 122
   (1 row)
@@ -329,42 +276,21 @@ We can then link the two tables using the 'keys' :kbd:`streets.id` and
 If we draw an ER Diagram for these two tables it would look something like
 this:
 
-.. image:: /static/training_manual/database_concepts/er-beispiel.png
+.. image:: /static/training_manual/database_concepts/er-people-streets.png
    :align: center
 
 The ER Diagram helps us to express 'one to many' relationships. In this case
 the arrow symbol show that one street can have many people living on it.
 
-Our people model still has some normalisation issues - try to see if you can
+|TY| |moderate|
+...............................................................................
+
+Our `people` model still has some normalisation issues - try to see if you can
 normalise it further and show your thoughts by means of an ER Diagram.
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+:ref:`Check your results <database-concepts-3>`
+
+.. _backlink-database-concepts-3:
 
 Constraints, Primary Keys and Foreign Keys
 -------------------------------------------------------------------------------
@@ -375,7 +301,7 @@ your postal code could ensure that the number falls between :kbd:`1000` and
 :kbd:`9999`.
 
 A Primary key is one or more field values that make a record unique. Usually
-the primary key is called id and is a sequence. 
+the primary key is called id and is a sequence.
 
 A Foreign key is used to refer to a unique record on another table (using that
 other table's primary key).
@@ -384,19 +310,18 @@ In ER Diagramming, the linkage between tables is normally based on Foreign keys
 linking to Primary keys.
 
 If we look at our people example, the table definition shows that the street
-column is a foreign key that references the primary key on the streets table:
-
-::
+column is a foreign key that references the primary key on the streets table::
 
   Table "public.people"
-    Column   |         Type          |  Modifiers                       
+
+    Column   |         Type          |  Modifiers
   -----------+-----------------------+--------------------------------------
-   id        | integer               | not null default 
+   id        | integer               | not null default
              |                       | nextval('people_id_seq'::regclass)
-   name      | character varying(50) | 
+   name      | character varying(50) |
    house_no  | integer               | not null
    street_id | integer               | not null
-   phone_no  | character varying     | 
+   phone_no  | character varying     |
   Indexes:
   "people_pkey" PRIMARY KEY, btree (id)
   Foreign-key constraints:
