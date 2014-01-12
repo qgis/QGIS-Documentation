@@ -454,12 +454,12 @@ Your layer should now have these roads:
 
 * Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/026.png
+  .. image:: /static/training_manual/rasters/answer_dem_aspect.png
      :align: center
 
 Your result:
 
-.. image:: /static/training_manual/rasters/027.png
+.. image:: /static/training_manual/rasters/answer_aspect_result.png
    :align: center
 
 :ref:`Back to text <backlink-raster-analysis-1>`
@@ -472,7 +472,7 @@ Your result:
 
 * Set your :guilabel:`Raster calculator` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/031.png
+  .. image:: /static/training_manual/rasters/answer_raster_calculator_slope.png
      :align: center
 
 * For the 5 degree version, replace the :kbd:`2` in the expression and file
@@ -482,12 +482,12 @@ Your results:
 
 * 2 degrees:
 
-  .. image:: /static/training_manual/rasters/032.png
+  .. image:: /static/training_manual/rasters/answer_2degree_result.png
      :align: center
 
 * 5 degrees:
 
-  .. image:: /static/training_manual/rasters/033.png
+  .. image:: /static/training_manual/rasters/answer_5degree_result.png
      :align: center
 
 :ref:`Back to text <backlink-raster-analysis-2>`
