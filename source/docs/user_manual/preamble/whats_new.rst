@@ -12,7 +12,7 @@ We recommend that you use this version over previous releases.
 
 This release includes hundreds of bug fixes and many new features and enhancements
 that will be described in this manual. Also compare with the visual changelog at
-http://changelog.linfiniti.com/version/1/
+http://changelog.linfiniti.com/version/21/
 
 User Interface
 --------------
