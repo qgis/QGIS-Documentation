@@ -140,4 +140,36 @@ For further information about working with the Python Console and Programming
 Py|qg| plugins and applications, please refer to
 http://www.qgis.org/html/en/docs/pyqgis_developer_cookbook/index.html.
 
+Known Issues
+------------
+Number of open files limitation
+...............................
 
+If you are opening a large QGIS project, and you are sure that are valid layers but there are some layers flagged as bad layers, probably you are faced with this issue.
+Linux (and other OSes, likewise) has a limit of opened files by process. Resource limits are per-process, and inherited.
+The ulimit command (which is a shell built-in) changes the limits only for the current shell process; the new limit will be inherited by any child processes.
+
+You can see all current ulimit info typing::
+
+	user@host:~$ ulimit -aS
+
+You can see the current allowed number of opened files per proccess with the following command on a console::
+
+	user@host:~$ ulimit -Sn
+
+To change the limits for an **existing session**, you may be able to use something like::
+
+	user@host:~$ ulimit -Sn #number_of_allowed_open_files
+	user@host:~$ ulimit -Sn
+	user@host:~$ qgis
+
+**To fix it forever:**
+
+On most Linux systems, resource limits are set on login by the pam_limits module according to the settings contained in **/etc/security/limits.conf** or **/etc/security/limits.d/``*``.conf**.
+
+You should be able to edit those files if you have root privilege (also via sudo), but you will need to log in again before any changes take effect.
+
+More info:
+
+`http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/`_
+`http://linuxaria.com/article/open-files-in-linux?lang=en`_
