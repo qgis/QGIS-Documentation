@@ -171,5 +171,5 @@ You should be able to edit those files if you have root privilege (also via sudo
 
 More info:
 
-`http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/`_
-`http://linuxaria.com/article/open-files-in-linux?lang=en`_
+http://www.cyberciti.biz/faq/linux-increase-the-maximum-number-of-open-files/
+http://linuxaria.com/article/open-files-in-linux?lang=en
