@@ -79,7 +79,7 @@ Then build your language
 
     make html LANG=nl 
     
-to build the dutch version. Currently available: ca_ES  da_DK  de  en  es  fa  fi  fr  hi  id  it  ja  km_KH  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
+to build the dutch version. Currently available languages are: ca_ES  da_DK  de  en  es  fa  fi  fr  hi  id  it  ja  km_KH  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 
 
 Translating the english QGIS Documentation
