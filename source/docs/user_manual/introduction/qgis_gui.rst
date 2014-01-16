@@ -9,9 +9,9 @@
 .. index::
    single:main window
 
-When |qg| starts, you are presented with the GUI as shown below
-(the numbers 1 through 5 in yellow circles refer to the five major areas of the
-interface as discussed below):
+When |qg| starts, you are presented with the GUI as shown below (the numbers 1
+through 5 in yellow circles refer to the five major areas of the interface as
+discussed below):
 
 .. _fig_startup:
 
@@ -43,24 +43,24 @@ context help.
 .. _label_menubar:
 
 Menu Bar
----------
+--------
 
 .. index::
    single:menus
 
 The menu bar provides access to various |qg| features using a standard
-hierarchical menu. The top-level menus and a summary of some of the
-menu options are listed below, together with the icons of the corresponding
-tools as they appear on the toolbar, as well as keyboard shortcuts. Keyboard
-shortcuts can also be configured manually (shortcuts presented in this
-section are the defaults), using the [**Configure Shortcuts**] tool under
-:menuselection:`Settings`.
+hierarchical menu. The top-level menus and a summary of some of the menu
+options are listed below, together with the icons of the corresponding tools as
+they appear on the toolbar, as well as keyboard shortcuts. Keyboard shortcuts
+can also be configured manually (shortcuts presented in this section are the
+defaults), using the :guilabel:`Configure shortcuts` dialog, opend from
+:menuselection:`Settings --> Configure Shortcuts...`.
 
-Although most menu options have a corresponding tool and vice-versa,
-the menus are not organized quiet like the toolbars.
-The toolbar containing the tool is listed after each menu option as a checkbox
-entry. Some menu options only appear if the corresponding plugin is loaded.
-For more information about tools and toolbars, see Section :ref:`label_toolbars`.
+Although most menu options have a corresponding tool and vice-versa, the menus
+are not organized quiet like the toolbars. The toolbar containing the tool is
+listed after each menu option as a checkbox entry. Some menu options only
+appear if the corresponding plugin is loaded. For more information about tools
+and toolbars, see Section :ref:`label_toolbars`.
 
 Project
 ........
@@ -73,8 +73,8 @@ Menu Option                                                     Shortcut        
 :menuselection:`New from template -->`                          \                     see :ref:`sec_projects`                     :guilabel:`Project`
 :menuselection:`Open Recent  -->`                               \                     see :ref:`sec_projects`                     \
 |mActionFileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
-|mActionFileSaveAs| :guilabel:`Save As`                         :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
-|mActionSaveMapAsImage| :guilabel:`Save as Image`               \                     see :ref:`sec_output`                       \
+|mActionFileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
+|mActionSaveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
 |mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
 |mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \
@@ -110,15 +110,9 @@ Menu Option                                                     Shortcut        
 |mActionRotatePointSymbols| :guilabel:`Rotate Point Symbols`    \                     see :ref:`sec_advanced_edit`                :guilabel:`Advanced Digitizing`
 ==============================================================  ====================  ==========================================  ===============================
 
-
-
-\
-
-\
-
-After activating |mActionToggleEditing| :sup:`Toggle editing` mode
-for a layer, you will find the ``Add Feature`` icon in the :menuselection:`Edit`
-menu depending on the layer type (point, line or polygon).
+After activating |mActionToggleEditing| :sup:`Toggle editing` mode for a layer,
+you will find the ``Add Feature`` icon in the :menuselection:`Edit` menu
+depending on the layer type (point, line or polygon).
 
 Edit (extra)
 ............
@@ -296,18 +290,16 @@ Menu Option                                                     Shortcut        
 |mActionHelpContents| :guilabel:`Help Contents`                 :kbd:`F1`             \                                           :guilabel:`Help`
 |mActionWhatsThis| :guilabel:`What's This?`                     :kbd:`Shift+F1`       \                                           :guilabel:`Help`
 :menuselection:`API Documentation`                              \                     \                                           \
-:menuselection:`Need support ?`                                 \                     \                                           \
+:menuselection:`Need support?`                                  \                     \                                           \
 |mActionQgisHomePage| :guilabel:`|qg| Home Page`                :kbd:`Ctrl+H`         \                                           \
 |mActionCheckQgisVersion| :guilabel:`Check |qg| Version`        \                     \                                           \
 |mActionHelpAbout| :guilabel:`About`                            \                     \                                           \
 |mActionHelpSponsors| :guilabel:`|qg| Sponsors`                 \                     \                                           \
 ==============================================================  ====================  ==========================================  ===============================
 
-\
-
-Please note that for Linux |nix| the Menu Bar items listed above are the default ones
-in KDE window manager. In GNOME, Settings menu has different content and its items have to be
-found here:
+Please note that for Linux |nix| the menu bar items listed above are the
+default ones in KDE window manager. In GNOME, :menuselection:`Settings` menu
+has different content and its items have to be found here:
 
 +-----------------------------------------------------------------------+------------------------+
 | |mActionProjectProperties| :guilabel:`Project Properties`             | :guilabel:`Project`    |
@@ -331,7 +323,6 @@ found here:
 | :guilabel:`Live GPS tracking`                                         | :guilabel:`View`       |
 +-----------------------------------------------------------------------+------------------------+
 
-
 .. See Appendix :ref:`app_menu` for complete descriptions of the menu items.
 
 .. _`label_toolbars`:
@@ -343,10 +334,10 @@ Toolbar
 
    single:toolbar
 
-The toolbar provides access to most of the same functions as the menus,
-plus additional tools for interacting with the map. Each toolbar item has
-popup help available. Hold your mouse over the item and a short description of
-the tool's purpose will be displayed.
+The toolbar provides access to most of the same functions as the menus, plus
+additional tools for interacting with the map. Each toolbar item has popup help
+available. Hold your mouse over the item and a short description of the tool's
+purpose will be displayed.
 
 Every menubar can be moved around according to your needs. Additionally every
 menubar can be switched off using your right mouse button context menu holding
@@ -361,9 +352,10 @@ the mouse over the toolbars (read also :ref:`sec_panels_and_toolbars`).
         If you have accidentally hidden all your toolbars, you can get them
         back by choosing menu option :menuselection:`Settings --> Toolbars -->`.
         If a toolbar disappears under Windows, which seems to be a problem in
-        |qg| from time to time, you have to remove ``\HKEY_CURRENT_USER\Software\QGIS\qgis\UI\state``
-        in the registry. When you restart |qg|, the key is written again with the
-        default state, and all toolbars are visible again.
+        |qg| from time to time, you have to remove key
+        ``\HKEY_CURRENT_USER\Software\QGIS\qgis\UI\state`` in the registry.
+        When you restart |qg|, the key is written again with the default state,
+        and all toolbars are visible again.
 
 .. _`label_legend`:
 
@@ -380,27 +372,30 @@ legend entry can be used to show or hide the layer.
    single:layer visibility
 
 A layer can be selected and dragged up or down in the legend to change the
-z-ordering. Z-ordering means that layers listed nearer the top of the legend are
-drawn over layers listed lower down in the legend.
+Z-ordering. Z-ordering means that layers listed nearer the top of the legend
+are drawn over layers listed lower down in the legend.
 
 .. note:: This behaviours can be overridden by 'Layer order' panel.
 
-Layers in the legend window can be organised into groups. There are two ways to do so:
+Layers in the legend window can be organised into groups. There are two ways to
+do so:
 
-#. Right click in the legend window and choose :menuselection:`Add Group`. Type in a
-   name for the group and press :kbd:`Enter`. Now click on an existing layer and drag it
-   onto the group.
-#. Select some layers, right click in the legend window and choose :menuselection:`Group Selected`.
-   The selected layers will automatically be placed in a new group.
+#. Right click in the legend window and choose :guilabel:`Add Group`. Type in a
+   name for the group and press :kbd:`Enter`. Now click on an existing layer
+   and drag it onto the group.
+#. Select some layers, right click in the legend window and choose
+   :guilabel:`Group Selected`. The selected layers will automatically be placed
+   in a new group.
 
 To bring a layer out of a group you can drag it out, or right click on it and
-choose :menuselection:`Make to toplevel item`. Groups can be nested inside other groups.
+choose :guilabel:`Make to toplevel item`. Groups can be nested inside other
+groups.
 
 The checkbox for a group will show or hide all the layers in the group
 with one click.
 
-The content of the right mouse button context menu depends on whether the selected
-legend item is a raster or a vector layer. For GRASS vector layers
+The content of the right mouse button context menu depends on whether the
+selected legend item is a raster or a vector layer. For GRASS vector layers
 |mActionToggleEditing| :sup:`Toggle editing` is not available. See section
 :ref:`grass_digitizing` for information on editing GRASS vector layers.
 
@@ -429,8 +424,6 @@ Additionally, according to layer position and selection
 * :menuselection:`Group Selected`
 
 ..   * :menuselection:`Show file groups`
-
-\
 
 **Right mouse button menu for vector layers**
 
@@ -461,8 +454,6 @@ Additionally, according to layer position and selection
 
 ..   * :menuselection:`Show file groups`
 
-\
-
 **Right mouse button menu for layer groups**
 
 * :menuselection:`Zoom to Group`
@@ -479,25 +470,24 @@ Additionally, according to layer position and selection
 ..   *  :menuselection:`Show file groups`
 
 
-It is possible to select more than one layer or group at the same time
-by holding down the :kbd:`Ctrl` key while selecting the layers with the
-left mouse button. You can then move all selected layers to a new group at
-the same time.
+It is possible to select more than one layer or group at the same time by
+holding down the :kbd:`Ctrl` key while selecting the layers with the left mouse
+button. You can then move all selected layers to a new group at the same time.
 
 You are also able to delete more than one Layer or Group at once by selecting
-several Layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
+several layers with the :kbd:`Ctrl` key and pressing :kbd:`Ctrl+D` afterwards.
 This way all selected Layers or groups will be removed from the layer's list.
 
 Working with the Legend independent layer order
 ...............................................
 
-There is a widget that allows to define a legend independent drawing order.
-You can activate it in the menu :menuselection:`Settings --> Panels --> Layer order`.
-Determine the drawing order of the layers in the map view here. Doing so makes
-it possible to order your layers in order of importance, for example, but to
-still display them in the correct order (see figure_layer_order_). Checking the
-|checkbox| :guilabel:`Control rendering order` box underneath the list of layers
-will cause a revert to default behavior.
+There is a panel that allows to define a legend independent drawing order.
+You can activate it in the menu :menuselection:`Settings --> Panels --> Layer
+order`. Determine the drawing order of the layers in the map view here. Doing
+so makes it possible to order your layers in order of importance, for example,
+but to still display them in the correct order (see figure_layer_order_).
+Checking the |checkbox| :guilabel:`Control rendering order` box underneath the
+list of layers will cause a revert to default behavior.
 
 .. _figure_layer_order:
 
@@ -518,13 +508,13 @@ Map View
 
 .. index::`map view`
 
-This is the "business end" of |qg| - maps are displayed in this area! The
+This is the "business end" of |qg| --- maps are displayed in this area! The
 map displayed in this window will depend on the vector and raster layers you
 have chosen to load (see sections that follow for more information on how to
 load layers). The map view can be panned (shifting the focus of the map display
 to another region) and zoomed in and out. Various other operations can be
-performed on the map as described in the toolbar description above.  The map
-view and the legend are tightly bound to each other - the maps in view reflect
+performed on the map as described in the toolbar description above. The map
+view and the legend are tightly bound to each other --- the maps in view reflect
 changes you make in the legend area.
 
 .. index::
@@ -533,12 +523,12 @@ changes you make in the legend area.
 .. tip::
    **Zooming the Map with the Mouse Wheel**
 
-   You can use the mouse wheel to zoom in and out on the map. Place
-   the mouse cursor inside the map area and roll the wheel forward (away from
-   you) to zoom in and backwards (towards you) to zoom out. The mouse cursor
-   position is the center where the zoom occurs. You can customize the behavior
-   of the mouse wheel zoom using the :guilabel:`Map tools` menu under
-   the :menuselection:`Settings --> Options` menu.
+   You can use the mouse wheel to zoom in and out on the map. Place the mouse
+   cursor inside the map area and roll the wheel forward (away from you) to
+   zoom in and backwards (towards you) to zoom out. The mouse cursor position
+   is the center where the zoom occurs. You can customize the behavior of the
+   mouse wheel zoom using the :guilabel:`Map tools` tab under the
+   :menuselection:`Settings --> Options` menu.
 
 .. tip::
    **Panning the Map with the Arrow Keys and Space Bar**
@@ -546,11 +536,11 @@ changes you make in the legend area.
    .. index::
       single:pan arrow keys
 
-   You can use the arrow keys to pan in the map. Place the mouse cursor
-   inside the map area and click on the right arrow key to pan East, left arrow
-   key to pan West, up arrow key to pan North and down arrow key to pan South.
-   You can also pan the map using the space bar or the click on mouse wheel:
-   just move the mouse while holding down space bar or click on mouse wheel.
+   You can use the arrow keys to pan in the map. Place the mouse cursor inside
+   the map area and click on the right arrow key to pan East, left arrow key to
+   pan West, up arrow key to pan North and down arrow key to pan South. You can
+   also pan the map using the space bar or the click on mouse wheel: just move
+   the mouse while holding down space bar or click on mouse wheel.
 
 .. _`label_mapoverview`:
 
@@ -567,24 +557,24 @@ will toggle between showing coordinate position or the view extents of the
 map view as you pan and zoom in and out.
 
 Next to the coordinate display you find the scale display. It shows the scale of
-the map view. If you zoom in or out |qg| shows you the current scale.
-There is a scale selector which allows you to choose between predefined scales
-from 1:500 until 1:1000000.
+the map view. If you zoom in or out |qg| shows you the current scale. There is
+a scale selector which allows you to choose between predefined scales from
+1:500 until 1:1000000.
 
-A progress bar in the status bar shows progress of rendering
-as each layer is drawn to the map view. In some cases, such as the gathering
-of statistics in raster layers, the progress bar will be used to show the
-status of lengthy operations.
+A progress bar in the status bar shows progress of rendering as each layer is
+drawn to the map view. In some cases, such as the gathering of statistics in
+raster layers, the progress bar will be used to show the status of lengthy
+operations.
 
 If a new plugin or a plugin update is available, you will see a message at the
-far left of the status bar. On the right side of the status bar is a small
+far left of the status bar. On the right side of the status bar there is a small
 checkbox which can be used to temporarily prevent layers being rendered to the
 map view (see Section :ref:`redraw_events` below). The icon |mIconStopRendering|
 immediately stops the current map rendering process.
 
 To the right of the render functions you find the EPSG code of the current
-project CRS and a projector icon. Clicking on this opens the projection properties
-for the current project.
+project CRS and a projector icon. Clicking on this opens the projection
+properties for the current project.
 
 
 .. tip::
@@ -593,12 +583,12 @@ for the current project.
    .. index::
       single:scale calculate
 
-   When you start |qg|, degrees is the default unit, and it tells |qg|
-   that any coordinate in your layer is in degrees. To get correct scale values,
-   you can either change this to meter manually in the :guilabel:`General` tab
+   When you start |qg|, degrees is the default unit, and it tells |qg| that any
+   coordinate in your layer is in degrees. To get correct scale values, you can
+   either change this to meter manually in the :guilabel:`General` tab
    under :menuselection:`Settings --> Project Properties` or you can select a
-   project Coordinate Reference System (CRS) clicking on the |mIconProjectionDisabled|
-   :sup:`CRS status` icon in the lower right-hand corner of the statusbar. In
-   the last case, the units are set to what the project projection specifies,
-   e.g. '+units=m'.
+   project Coordinate Reference System (CRS) clicking on the
+   |mIconProjectionDisabled| :sup:`CRS status` icon in the lower right-hand
+   corner of the statusbar. In the last case, the units are set to what the
+   project projection specifies, e.g. '+units=m'.
 
