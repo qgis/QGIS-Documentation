@@ -14,7 +14,8 @@ GUI Conventions
 
 The GUI convention styles are intended to mimic the appearance of the GUI. In
 general, the objective is to use the non-hover appearance, so a user can
-visually scan the GUI to find something that looks like the instruction in the manual.
+visually scan the GUI to find something that looks like the instruction in the
+manual.
 
 *  Menu Options: :menuselection:`Layer --> Add a Raster Layer` or
    :menuselection:`Settings --> Toolbars --> Digitizing`
@@ -23,11 +24,12 @@ visually scan the GUI to find something that looks like the instruction in the m
 *  Dialog Box Title: :guilabel:`Layer Properties`
 *  Tab: :guilabel:`General`
 *  Checkbox: |checkbox| :guilabel:`Render`
-*  Radio Button:  |radiobuttonon| :guilabel:`Postgis SRID` |radiobuttonoff| :guilabel:`EPSG ID`
-*  Select a Number: |selectnumber|
-*  Select a String: |selectstring|
-*  Browse for a File: |browsebutton|
-*  Select a Color: |selectcolor|
+*  Radio Button:  |radiobuttonon| :guilabel:`Postgis SRID`
+   |radiobuttonoff| :guilabel:`EPSG ID`
+*  Select a number: |selectnumber|
+*  Select a string: |selectstring|
+*  Browse for a file: |browsebutton|
+*  Select a color: |selectcolor|
 *  Slider: |slider|
 *  Input Text: |inputtext|
 
@@ -68,12 +70,13 @@ Platform-specific instructions
 ------------------------------
 
 GUI sequences and small amounts of text can be formatted inline: Click
-|nix| |win| :menuselection:`File` |osx| :menuselection:`QGIS  --> Quit to close QGIS`.
+|nix| |win| :menuselection:`File` |osx|
+:menuselection:`QGIS  --> Quit to close QGIS`.
 
 This indicates that on Linux, Unix and Windows platforms, click the File menu
-option first, then Quit from the dropdown menu, while on Macintosh OSX platforms,
-click the |qg| menu option first, then Quit from the dropdown menu. Larger
-amounts of text may be formatted as a list:
+option first, then Quit from the dropdown menu, while on Macintosh OS X
+platforms, click the |qg| menu option first, then Quit from the dropdown menu.
+Larger amounts of text may be formatted as a list:
 
 *  |nix| do this;
 *  |win| do that;

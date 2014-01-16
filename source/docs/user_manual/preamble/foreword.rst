@@ -13,9 +13,9 @@ was born in May of 2002 and was established as a project on SourceForge in June
 of the same year. We've worked hard to make GIS software (which is traditionally
 expensive proprietary software) a viable prospect for anyone with basic access
 to a Personal Computer. |qg| currently runs on most Unix platforms, Windows, and
-OS X. |qg| is developed using the Qt toolkit (http://qt.digia.com)
-and C++. This means that |qg| feels snappy to use and has a pleasing,
-easy-to-use graphical user interface (GUI).
+OS X. |qg| is developed using the Qt toolkit (http://qt.digia.com) and C++.
+This means that |qg| feels snappy to use and has a pleasing, easy-to-use
+graphical user interface (GUI).
 
 |qg| aims to be an easy-to-use GIS, providing common functions and features.
 The initial goal was to provide a GIS data viewer. |qg| has reached the point
@@ -35,6 +35,6 @@ find it in Appendix :ref:`gpl_appendix`.
 .. tip::
         **Up-to-date Documentation**
 
-        The latest version of this document can always be found in the documentation
-        area of the |qg| website at http://www.qgis.org/en/docs/
+        The latest version of this document can always be found in the
+        documentation area of the |qg| website at http://www.qgis.org/en/docs/
 

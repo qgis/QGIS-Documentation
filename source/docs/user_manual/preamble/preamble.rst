@@ -8,11 +8,11 @@
 Preamble
 ********
 
-This document is the original user guide of the described software |qg|.
-The software and hardware described in this document are in most cases registered
+This document is the original user guide of the described software |qg|. The
+software and hardware described in this document are in most cases registered
 trademarks and are therefore subject to the legal requirements. |qg| is
-subject to the GNU General Public License. Find more information on the |qg| 
-Homepage http://www.qgis.org.
+subject to the GNU General Public License. Find more information on the |qg|
+homepage http://www.qgis.org.
 
 The details, data, results etc. in this document have been written and verified
 to the best of knowledge and responsibility of the authors and editors.
@@ -25,8 +25,8 @@ and their consequences. You are always welcome to indicate possible mistakes.
 This document has been typeset with reStructuredText. It is available as reST
 source code via `github <https://github.com/qgis/QGIS-Documentation>`_ and
 online as HTML and PDF via http://www.qgis.org/en/docs/. Translated versions of
-this document can be downloaded in several formats via the documentation area of
-the |qg| project as well. For more information about contributing to this
+this document can be downloaded in several formats via the documentation area
+of the |qg| project as well. For more information about contributing to this
 document and about translating it, please visit: http://www.qgis.org/wiki/.
 
 **Links in this Document**
