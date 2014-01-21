@@ -88,9 +88,11 @@ Now that we've got the data, let's analyze the problem!
 The first criterion we're facing is that the farm needs to be in Swellendam.
 So let's tell QGIS to only show us the farms that are, in fact, in Swellendam!
 
-* Right-click on the :guilabel:`farms` layer in the :guilabel:`Layers list`.
-* Select the option :guilabel:`Query...`. This gives you a new :guilabel:`Query
-  Builder` dialog.
+* Right-click on the :guilabel:`farms` layer in the :guilabel:`Layers list` and
+open the :guilabel:`Layer Properties`.
+* Go to the :guilabel:`General` menu.
+*Under :guilabel:`Feature subset` click on the **[Query Builder]** button to 
+open the :guilabel:`Query builder` dialog.
 * Scroll down in the :guilabel:`Fields` list on the left of this dialog until
   you see the field :kbd:`TOWN`.
 * Click on it once.
@@ -103,7 +105,8 @@ Now we need to tell QGIS to only show us the farms where the value of
 :kbd:`TOWN` is equal to :kbd:`Swellendam`.
 
 * Double-click the word :kbd:`TOWN` in the :guilabel:`Fields` list.
-* Watch what happens in the :guilabel:`SQL where clause` field below:
+* Watch what happens in the :guilabel:`Provider specific filter expression` 
+field below:
 
 .. image:: /static/training_manual/vector_analysis/014.png
    :align: center
@@ -118,6 +121,10 @@ Your query is this:
 .. image:: /static/training_manual/vector_analysis/015.png
    :align: center
 
+* Click :guilabel:`OK` and note that your query is now in the 
+:guilabel:`Feature subset` window 
+* Click :guilabel:`OK` to exit the :guilabel:`Layer Properties` dialog.
+
 And now your :guilabel:`farms` layer looks like this:
 
 .. image:: /static/training_manual/vector_analysis/016.png
@@ -130,10 +137,7 @@ For further analysis, it's better if we've got these farms as a separate layer.
   :guilabel:`Browse` button.
 * Save the layer under :kbd:`exercise_data/residential_development/`, as
   :kbd:`swellendam_farms.shp`.
-* Check the :guilabel:`Add saved file to map` box in the :guilabel:`Save vector
-  layer as...` dialog.
-* Click :guilabel:`OK`. It will tell you that :kbd:`Export to vector file has
-  been completed`.
+* Check the :guilabel:`Add saved file to map` box.
 * Click :guilabel:`OK`.
 
 Now we've got the :guilabel:`farms` twice, but we only need the one we just
@@ -209,6 +213,7 @@ Projected Coordinate System. This is why we needed to use projected data!
 * When it asks you if it should "add the new layer to the TOC", click
   :guilabel:`Yes`. ("TOC" stands for "Table of Contents", by which it means the
   :guilabel:`Layers list`).
+* Close the :guilabel:`Buffer(s)` dialog.
 
 Now you've got this:
 
@@ -227,7 +232,7 @@ road! That's not nice. Remove that layer and let's try again:
 * Note that we're now checking the :guilabel:`Dissolve buffer results` box.
 * Save the output under the same name as before (click :guilabel:`Yes` when it
   asks your permission to overwrite the old one).
-* Click :guilabel:`OK`.
+* Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again.
   
 Once you've added the layer to the :guilabel:`Layers list`, it will look like
 this:
@@ -252,7 +257,7 @@ It needs to be :kbd:`10 km` in radius, and saved under the usual directory as
 |basic| |FA| Overlapping Areas
 -------------------------------------------------------------------------------
 
-Now we have areas where the road in 500 meters away and there's a school within
+Now we have areas where the road is 500 meters away and there's a school within
 10 km (as the crow flies). But obviously, we only want the areas where both of
 these criteria are satisfied at once! To do that, we'll need to use the
 :guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->
@@ -332,17 +337,15 @@ to calculate their areas in hectares.
 .. image:: /static/training_manual/vector_analysis/035.png
    :align: center
 
-* If you can't find :guilabel:`AREA` in the list, try this instead:
-
-.. image:: /static/training_manual/vector_analysis/036.png
-   :align: center
-
+* If you can't find :guilabel:`AREA` in the list, try creating an new field as
+you did in the previous lesson of this module.
 * Click :guilabel:`OK`.
 * Scroll to the right of the attribute table; your :kbd:`AREA` field now has
   areas in hectares for all the farms in your :guilabel:`well_located_farms`
   layer.
-* Click the edit mode button again as above, and save your edits when prompted.
-* Do a query:
+* Click the edit mode button again to finish editing, and save your edits
+when prompted.
+* Do a query as earlier in this lesson:
 
 .. image:: /static/training_manual/vector_analysis/037.png
    :align: center
