@@ -54,14 +54,13 @@ of your choice.
 * To enable "on the fly" projection, click on the :guilabel:`CRS Status` button
   in the :guilabel:`Status Bar` along the bottom of the QGIS window:
 
-.. image:: /static/training_manual/vector_analysis/001.png
+.. image:: /static/training_manual/vector_analysis/crs_status_button.png
    :align: center
 
 * In the dialog that appears, check the box next to :guilabel:`Enable 'on the
   fly' CRS transformation`. 
-* Type the word :kbd:`global` into the :guilabel:`Filter` field. Two CRSsOne CRS
-  (:guilabel:`NSIDC EASE-Grid Global` and :guilabel:`WgS84/NSIDC EASE-Grid Global`)
-  will appear in the list below.
+* Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS
+  (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list below.
 * Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click :kbd:`OK`.
 
 * Notice how the shape of South Africa changes. All projections work by
@@ -73,18 +72,18 @@ of your choice.
 "On the fly" reprojection is also used for combining datasets that are in
 different CRSs.
 
-* Deactivate "on the fly" reprojection again:
+* Deactivate "on the fly" re-projection again:
 
   * Click on the :guilabel:`CRS Status` button again.
-  * Uncheck the :guilabel:`Enable 'on the fly' CRS transformation` box.
+  * Un-check the :guilabel:`Enable 'on the fly' CRS transformation` box.
   * Clicking :guilabel:`OK`.
   
 * In QGIS 2.0, the 'on the fly' reprojection is automatically activated when
-layers whith different CRSs are loaded in the map. To understand what
+layers with different CRSs are loaded in the map. To understand what
 'on the fly' reprojection does, deactivate this automatic setting:
   * Go to :menuselection:`Settings --> Options...`
   * On the left panel of the dialog, select :guilabel:`CRS`.
-  * Uncheck :guilabel:`Automatically enable 'on the fly' reprojection if layers
+  * Un-check :guilabel:`Automatically enable 'on the fly' reprojection if layers
   have different CRS`.
   * Click :guilabel:`OK`.
 * Add another vector layer to your map which has the data for South Africa
@@ -107,7 +106,7 @@ Cape Town in the :guilabel:`RSA` dataset is about :kbd:`4 100 000` meters away
 from the equator. But in the :guilabel:`continents` dataset, that same point is
 about :kbd:`33.9` degrees away from the equator.
 
-This is the same distance - but QGIS doesn't know that! You haven't told it to
+This is the same distance - but QGIS doesn't know that. You haven't told it to
 reproject the data. So as far as it's concerned, the version of South Africa
 that we see in the :guilabel:`RSA` dataset has Cape Town at the correct
 distance of :kbd:`4 100 000` meters from the equator. But in the
@@ -121,14 +120,14 @@ north to south, then that is what QGIS will draw.
 
 To correct this:
 
-* Click on the Click on the :guilabel:`CRS Status` button again and switch
+* Click on the :guilabel:`CRS Status` button again and switch
 :guilabel:`Enable 'on the fly' CRS transformation` on again as before.
 * Zoom to the extents of the :guilabel:`RSA` dataset.
 
 Now, because they're made to project in the same CRS, the two datasets fit
 perfectly:
 
-.. image:: /static/training_manual/vector_analysis/002.png
+.. image:: /static/training_manual/vector_analysis/with_reprojection.png
    :align: center
 
 When combining data from different sources, it's important to remember that
@@ -138,7 +137,8 @@ display them together.
 Before you go on, you probably want to have the 'on the fly' reprojection to be
 automatically activated whenever you open datasets having different CRS:
   * Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
-  * Activate :guilabel:`Automatically enable 'on the fly' reprojection if...`.
+  * Activate :guilabel:`Automatically enable 'on the fly' reprojection if layers
+    have different CRS`.
 
 |moderate| |FA| Saving a Dataset to Another CRS
 -------------------------------------------------------------------------------
@@ -175,33 +175,31 @@ a new file using a new projection.
 * In its :guilabel:`Filter` field, search for :kbd:`33S`.
 * Choose :guilabel:`WGS 84 / UTM zone 33S` from the list.
 * Leave the :guilabel:`Symbology export` unchanged.
-* Click :guilabel:`OK`.
   
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
-.. image:: /static/training_manual/vector_analysis/004.png
+.. image:: /static/training_manual/vector_analysis/save_vector_dialog.png
    :align: center
 
-* Start a new map:
+* Click :guilabel:`OK`.
 
-.. image:: /static/training_manual/vector_analysis/006.png
-   :align: center
+* Start a new map and load the reprojected layer you just created.
 
 Refer back to the lesson on :guilabel:`Classification` to remember how you
 calculated areas.
 
-* Update the :kbd:`AREA` field by running the same expression as before:
+* Add an :kbd:`AREA` field by running the same expression as before:
 
-.. image:: /static/training_manual/vector_analysis/007.png
+.. image:: /static/training_manual/vector_analysis/new_area_field.png
    :align: center
 
-This will update the :kbd:`AREA` field with the areas of the farms in square
-meters.
+This will add an :kbd:`AREA` field with the size of each :kbd:`landuse` layer
+in square meters
 
-* To calculate the area in hectares  use the :kbd:`AREA` field you just
+* To calculate the area in hectares use the :kbd:`AREA` field you just
 calculated, do this:
 
-.. image:: /static/training_manual/vector_analysis/008.png
+.. image:: /static/training_manual/vector_analysis/new_hectare_field.png
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
@@ -221,7 +219,7 @@ You can also create your own projections.
 * Load the :kbd:`world/oceans.shp` dataset.
 * Go to :menuselection:`Settings --> Custom CRS...` and you'll see this dialog:
 
-.. image:: /static/training_manual/vector_analysis/009.png
+.. image:: /static/training_manual/vector_analysis/custom_crs.png
    :align: center
 
 * Click on the :guilabel:`Add new CRS` button to create a new projection.
@@ -238,13 +236,16 @@ rectangular one, as most other projections do.
 :kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m
 +no_defs`
 
+.. image:: /static/training_manual/vector_analysis/new_crs_parameters.png
+   :align: center
+
 * Click :guilabel:`OK`.
 * Enable "on the fly" reprojection.
 * Choose your newly defined projection (search for its name in the
   :guilabel:`Filter` field).
 * On applying this projection, the map will be reprojected thus:
 
-.. image:: /static/training_manual/vector_analysis/011.png
+.. image:: /static/training_manual/vector_analysis/van_grinten_projection.png
    :align: center
 
 |IC|
