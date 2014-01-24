@@ -392,23 +392,64 @@ that they are predefined.
 
 |RF| *Vector Analysis*
 -------------------------------------------------------------------------------
-
 .. _vector-analysis-basic-1:
 
-|basic| *Find Important Roads*
+|moderate| *Extract Your Layers from OSM Data*
 ...............................................................................
 
-Your layer should now have these roads:
+For the purpose of this exercise, the OSM layers which we are interested in are
+:kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
+the data we need in order to produce the :kbd:`houses`, :kbd:`schools`,
+:kbd:`restaurants` and :kbd:`residential` layers. The :kbd:`lines` layer
+contains the roads dataset.
 
-.. image:: /static/training_manual/vector_analysis/017.png
-   :align: center
+The :guilabel:`Query Builder` is found in the layer properties:
 
-* Save this new layer (the same way you did before) under
-  :kbd:`exercise_data/residential_development/`, as :kbd:`important_roads.shp`.
-* Once the new layer has been added to your map, remove the old layer.
-* If for some reason it gives you an error message saying that it can't add the
-  layer to the map (this can happen), remember that you can add the layer
-  yourself by using the :guilabel:`Add Vector Layer` button as you did before.
+  .. image:: /static/training_manual/create_vector_data/query_builder.png
+     :align: center
+
+Using the :guilabel:`Query Builder` against the :kbd:`multipolygon` layer,
+create the following queries for the :kbd:`houses`, :kbd:`schools`,
+:kbd:`restaurants` and :kbd:`residential` layers:
+
+  .. image:: /static/training_manual/create_vector_data/houses_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/schools_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/restaurants_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/residential_query.png
+     :align: center
+
+.. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
+    coverage in your area - as in ours - may not be complete. In our test
+    region, it is therefore more accurate to *exclude* all buildings which are
+    defined as anything other than :kbd:`house`. You may decide to
+    simply include buildings which are defined as :kbd:`house`.
+
+To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
+layer:
+
+  .. image:: /static/training_manual/create_vector_data/roads_query.png
+     :align: center
+
+Once you have entered each query, click :guilabel:`OK`. You'll see that the map
+updates to show only the data you have selected (together with any other rows
+you may have already created). At this point, you can use one of the following
+methods:
+
+* Rename the filtered OSM layer and re-import the layer from
+  :kbd:`osm_data.osm`, OR
+* Duplicate the filtered layer, rename the copy, clear the query and create your
+  new query in the :guilabel:`Query Builder`.
+
+You should end up with a map which looks similar to the following:
+
+  .. image:: /static/training_manual/create_vector_data/osm_queries_result.png
+     :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-1>`
 
@@ -419,30 +460,65 @@ Your layer should now have these roads:
 
 * Your buffer dialog should look like this:
 
-  .. image:: /static/training_manual/vector_analysis/024.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_setup.png
      :align: center
 
-  The :guilabel:`Buffer distance` is :kbd:`10000` meters (i.e., :kbd:`10`
-  kilometers).
+  The :guilabel:`Buffer distance` is :kbd:`1000` meters (i.e., :kbd:`1`
+  kilometer).
 
 * The :guilabel:`Segments to approximate` value is set to :kbd:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
   smoother.  Compare this:
 
-  .. image:: /static/training_manual/vector_analysis/025.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_5.png
      :align: center
 
   To this:
 
-  .. image:: /static/training_manual/vector_analysis/026.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_20.png
      :align: center
 
-  The red circle is the buffer with :guilabel:`Segments to approximate` set to
-  :kbd:`20`; the gray circle on top of it is the buffer with
-  :guilabel:`Segments to approximate` set to :kbd:`5`.
+The first image shows the buffer with the :guilabel:`Segments to approximate`
+value set to :kbd:`5` and the second shows the value set to :kbd:`20`. In our
+example, the difference is subtle, but you can see that the buffer's edges are
+smoother with the higher value.
 
 :ref:`Back to text <backlink-vector-analysis-basic-2>`
 
+.. _vector-analysis-basic-3:
+
+|basic| *Distance from Restaurants*
+...............................................................................
+
+To create the new :kbd:`houses_restaurants_500m` layer, we go through a two step
+process:
+
+* First, create a buffer of 500m around the restaurants and add the layer to
+  the map:
+
+  .. image:: /static/training_manual/vector_analysis/restaurants_buffer.png
+     :align: center
+
+  .. image:: /static/training_manual/vector_analysis/restaurants_buffer_result.png
+     :align: center
+
+* Next, select buildings within that buffer area:
+
+  .. image:: /static/training_manual/vector_analysis/select_within_restaurants.png
+     :align: center
+
+* Now save that selection to our new :kbd:`houses_restaurants_500m` layer:
+
+  .. image:: /static/training_manual/vector_analysis/save_selection_restaurants.png
+     :align: center
+
+Your map should now show only those buildings which are within 50m of a road,
+1km of a school and 500m of a restaurant:
+
+  .. image:: /static/training_manual/vector_analysis/restaurant_buffer_result.png
+     :align: center
+
+:ref:`Back to text <backlink-vector-analysis-basic-3>`
 
 |RF| *Raster Analysis*
 -------------------------------------------------------------------------------
