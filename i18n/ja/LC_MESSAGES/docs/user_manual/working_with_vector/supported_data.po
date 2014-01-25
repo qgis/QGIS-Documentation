@@ -5,14 +5,14 @@
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
 # choro <u.ko.kubot@gmail.com>, 2013
-# yoichi <yoichi.kayama@gmail.com>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2013-2014
 # yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-12-30 11:20+0000\n"
+"PO-Revision-Date: 2014-01-07 00:23+0000\n"
 "Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr "地図にレイヤを追加するとランダムな色が割り当てら
 # 5994c49de91c48c1b47cb273c1163937
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:128
 msgid "**Load layer and project from mounted external drives on OS X**"
-msgstr "** OS Xで外部ドライブからレイヤとプロジェクトをロードする **"
+msgstr "**OS Xで外部ドライブからレイヤとプロジェクトをロードする**"
 
 # c6dbe314983f413ea30fa3c0ad441992
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:130
@@ -408,7 +408,7 @@ msgid ""
 "Optionally use some |checkbox| :guilabel:`Search Options` to define which "
 "features to load from the layer or use the **[Build query]** button to start"
 " the :guilabel:`Query builder` dialog."
-msgstr ""
+msgstr "オプションで |checkbox| :guilabel:`Search Options` 使うとレイヤからどの地物をロードするか定義できます,また **[Build query]** ボタンを使うと  :guilabel:`Query builder` ダイアログを開始します."
 
 # 2208c3a99b3b40ffbe71a5993b8e0ed3
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:302
@@ -423,7 +423,7 @@ msgid ""
 "the :kbd:`Shift` key while clicking. See Section :ref:`vector_query_builder`"
 " for information on using the PostgreSQL Query Builder to further define the"
 " layer."
-msgstr ""
+msgstr "クリックすると選択できます.  :kbd:`Shift` キーを押しながらクリックすると複数のレイヤを選択することができます. PostgreSQLクエリビルダを使ってレイヤを高度に利用する方法についてはセクション :ref:`vector_query_builder` を参照して下さい."
 
 # 0246ecc886414ac2abf97ecb5ca3b3eb
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:307
@@ -444,7 +444,7 @@ msgid ""
 " in the geometry_columns table. This includes both tables and views. "
 "Defining a spatial view provides a powerful means to visualize your data. "
 "Refer to your PostgreSQL manual for information on creating views."
-msgstr ""
+msgstr "通常の PostGIS レイヤは geometry_columns テーブルのエントリで定義されます. バージョン 0.9.0 から, |qg| では geometry_columns テーブルエントリを持たないレイヤをロードすることができます. この機能はテーブルとビュー両方に適用できます. 空間ビューを定義することによってあなたのデータをパワフルに可視化することができます. ビューの作成については PostgreSQL マニュアルを参照して下さい."
 
 # 53a76b2d172744ffb3c23653bfb01b0f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:322
@@ -460,7 +460,7 @@ msgid ""
 "trouble loading a PostgreSQL table into |qg|, the information below may help"
 " you understand any |qg| messages and give you direction on changing the "
 "PostgreSQL table or view definition to allow |qg| to load it."
-msgstr ""
+msgstr "このセクションでは |qg| がどのようにPostgreSQLレイヤにアクセスするかのいくつかの詳細が含まれています. ほとんどの場合 |qg| は単純にロード可能なデータベーステーブルのリストを提供してそれらに対して要求してロードを行います. それにもかかわらず もしPostgreSQL テーブルを |qg| にロード失敗した場合, 以下の情報が |qg| メッセージを理解するための助けになり PostgreSQLテーブルやビューの定義を |qg| にロードできるように変更する方法を見つける手助けになります."
 
 # 141b4b924c8e4ba8b8f18aeae407d626
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:331
@@ -473,7 +473,7 @@ msgid ""
 "the oid column will be used instead. Performance will be improved if the "
 "column is indexed (note that primary keys are automatically indexed in "
 "PostgreSQL)."
-msgstr ""
+msgstr "|qg| では PostgreSQL レイヤにレイヤユニークキーとなるカラムを持つことを必須としています. テーブルの場合通常テーブルはプライマリキーが必要であるかユニーク制約を持つカラムがあるといいです. In |qg|ではこのカラムの型は int4タイプ (4バイト整数)である必要があります. 別の方法として ctid カラムをプライマリキーとして使うことができます. もしテーブルがそれらのアイテムを持っていない場合 oid カラムが代わりに利用されるでしょう. カラムにインデックスが作成されているとパフォーマンスが向上します (注 プライマリキーはPostgreSQLでは自動的にインデックスが作成されます)."
 
 # f490d667eb3d452fa56bad1ac8bcdbd7
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:359
@@ -493,7 +493,7 @@ msgid ""
 "The new layer will have a spatial reference identifier (SRID) of 2964. See "
 "Section :ref:`label_projections` for more information on spatial reference "
 "systems and projections."
-msgstr ""
+msgstr "ここで ``gis_data`` データベースに ``lakes_new`` という名前の新しいレイヤが作成されます. 新しいレイヤは2964という空間参照識別子 (SRID) を持ちます. 空間参照システムと投影についてはセクション :ref:`label_projections` を参照して下さい."
 
 # d5791a44d60443dba66d4250a6104402
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:392
@@ -506,7 +506,7 @@ msgid ""
 "Like the import-tool **shp2pgsql** there is also a tool to export PostGIS-"
 "datasets as shapefiles: **pgsql2shp**. This is shipped within your PostGIS "
 "distribution."
-msgstr ""
+msgstr "インポートツール **shp2pgsql** と同じように PostGIS-データセットをshapefileとしてエキスポートするツールがあります: **pgsql2shp**. これはあなたのPostGISディストリビューションと一緒に出荷されています."
 
 # ab15468bd83b4a56ae25169badf8ce8a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:401
@@ -540,7 +540,7 @@ msgid ""
 "If you like to use PostgreSQL's **COPY** \\ -command instead of the default "
 "**INSERT INTO** method you can export the following environment-variable (at"
 " least available on |nix| and |osx|): ::"
-msgstr ""
+msgstr "もしデフォルトの **INSERT INTO** メソッドの代わりに PostgreSQLの **COPY** \\ -command を使いたい場合は以下の環境変数をエキスポートすることができます(少なくても |nix| と |osx| の場合は可能です): ::"
 
 # 78674e04407d48ea9a8605016cb501f6
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:430
@@ -549,7 +549,7 @@ msgid ""
 " to create them manually using the normal SQL-command **CREATE INDEX** "
 "afterwards as an extra step (as described in the next section "
 ":ref:`vector_improving_performance`)."
-msgstr ""
+msgstr "**ogr2ogr** は **shp2pgsl** のように空間インデックスを作成しません. 空間インデックスを作るためには特別ステップとして手動で通常のSQLコマンド **CREATE INDEX** を発行する必要があります (次のセクション :ref:`vector_improving_performance` で説明しています)."
 
 # dc61093317d6461495a1c33be43495d7
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:438
@@ -566,7 +566,7 @@ msgid ""
 "(Generalized Search Tree) index` to speed up spatial searches of the data "
 "(GiST index information is taken from the PostGIS documentation available at"
 " http://postgis.refractions.net)."
-msgstr ""
+msgstr "PostgreSQLデータベースから地物を取得する場合時間がかかります, とりわけネットワークごしの場合は時間がかかります.PostgreSQLレイヤの描画パフォーマンスを向上させる場合データベースのそれぞれのレイヤに :index:`PostGIS 空間インデックス` を作成することが確実です. PostGIS は :index:`GiST (Generalized Search Tree) インデックス` を作成することでデータの空間検索速度を向上させることをサポートしています (GiST インデックスの情報はPostGIS ドキュメンテーション http://postgis.refractions.net から参照することができます)."
 
 # 6ed6f5c867344d649183a157f47908e3
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:447
@@ -580,7 +580,7 @@ msgid ""
 "the index is created, you should perform a ``VACUUM ANALYZE``. See the "
 "PostGIS documentation (POSTGIS-PROJECT :ref:`literature_and_web`) for more "
 "information."
-msgstr ""
+msgstr "注　巨大テーブルでインデックスを作ると長い時間がかかります.一度インデックスを作成したら ``VACUUM ANALYZE`` を実行する必要があります. 詳しくは PostGIS ドキュメンテーション (POSTGIS-PROJECT :ref:`literature_and_web`) を見て下さい."
 
 # 1d929c7d12694b1aa790f80b86140b2f
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:459
@@ -700,7 +700,7 @@ msgid ""
 "For SpatiaLite data management you can also use several Python plugins: "
 "QSpatiaLite, SpatiaLite Manager or DB Manager (core plugin, recommended). "
 "They can be downloaded and installed with the Plugin Installer."
-msgstr ""
+msgstr "SpatiaLiteのデータ管理には多くのPython plugins: QSpatiaLite, SpatiaLite Manager または DB Manager (コアプラグイン, 推奨)を利用できます. これらはプラグインインストーラでダウンロード、インストールできます."
 
 # 8609238aeda6464dae885ca4211b7a8a
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:581
@@ -796,7 +796,7 @@ msgstr "DB_Manager"
 msgid ""
 "Data can be imported into PostgreSQL/PostGIS using several tools, such as "
 "the SPIT plugin or the command line tools shp2pgsql or ogr2ogr."
-msgstr ""
+msgstr "PostgreSQL/PostGISへのデータインポートはSPITプラグインまたはshp2pgsqlやogr2ogrのようなコマンドラインツールのような様々なツールで実行できます."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:374
 msgid ""
@@ -804,7 +804,7 @@ msgid ""
 "shapefiles into a PostGIS enabled database. For example, to import a "
 "shapefile named :file:`lakes.shp` into a PostgreSQL database named "
 "``gis_data``, use the following command:"
-msgstr ""
+msgstr "PostGISはshapefileをPostGISにインポートする **shp2pgsql** というユーティリティを持っています. 例えば :file:`lakes.shp` というshapefileを ``gis_data`` というPostgreSQLデータベースにインポートする場合以下のコマンドを使って下さい:"
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:592
 msgid "ORACLE Spatial Layers"
@@ -1038,7 +1038,7 @@ msgid ""
 "|qg| comes with a core plugin named |icon_dbmanager| :sup:`DB Manager`. It "
 "can be used to load shapefiles and other data formats and includes support "
 "for schemas. See Section :ref:`dbmanager` for more information."
-msgstr ""
+msgstr "|qg| では |icon_dbmanager| :sup:`DB Manager` という名前のコアプラグインが使えるようになりました. これを使うとshapefileをロードして他のデータ形式やスキーマサポートに利用できます. 詳しい情報はセクション :ref:`dbmanager` を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:195
 msgid "OSM"
@@ -1068,7 +1068,7 @@ msgid ""
 "formats by the OGR library (see OGR-SOFTWARE-SUITE "
 ":ref:`literature_and_web`) is available at "
 "http://www.gdal.org/ogr/ogr_formats.html."
-msgstr ""
+msgstr "|qg| は ESRI Shapefiles, MapInfo, Microstation ファイル形式とその他の多くのが含まれるベクタデータ形式を読み書きするためにOGRライブラリを使っています. GRASS ベクタ, PostGIS, MSSQL Spatial と Oracle Spatial は |qg| のネイティブデータプロバイダでサポートされています. ベクタデータは zip と gzip アーカイブから |qg| に読み込むこともできます. このドキュメントが書かれた時点で, 69 種類のベクタ形式が OGR ライブラリでサポートされています ( OGR-SOFTWARE-SUITE :ref:`literature_and_web` 参照).  OGR ライブラリによるベクタデータサポートの完全なリストは ( OGR-SOFTWARE-SUITE :ref:`literature_and_web` 参照) 　 http://www.gdal.org/ogr/ogr_formats.html  を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:30
 msgid ""
@@ -1077,14 +1077,14 @@ msgid ""
 "Many of the features available in |qg| work the same, regardless of the "
 "vector data source. This is by design and includes the identify, select, "
 "labeling and attributes functions."
-msgstr ""
+msgstr "このセクションでは多くの共通形式でどのように作業を行うかが記述されています.共通形式とはESRI Shapefiles,PostGISレイヤとSpatialiteレイヤ,OpenStreetMapベクタ等です.　|qg|　の多くの機能はベクタデータソースが異なっても同じように動作します.このようにシステムが設計されているので地物情報表示,選択,ラベリングや属性操作等の動作が同じように動きます."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:62
 msgid ""
 "To :index:`load a shapefile`, start |qg| and click on the "
 "|mActionAddOgrLayer| :sup:`Add Vector Layer` toolbar button or simply type "
 ":kbd:`Ctrl+Shift+V`. This will bring up a new window (see figure_vector_1_)."
-msgstr ""
+msgstr " :index:`shapefileをロードする` ためには,  |qg| を起動してツールバーボタンで and click on the |mActionAddOgrLayer| :sup:`ベクタレイヤの追加` をクリックするか単純に :kbd:`Ctrl+Shift+V` とタイプして下さい. これを行うと新しいウィンドウが表示されます ( figure_vector_1_ 参照)."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:119
 msgid ""
@@ -1094,7 +1094,7 @@ msgid ""
 "name in the legend and choosing :menuselection:`Properties` from the popup "
 "menu. See Section :ref:`vector_style_menu` for more information on setting "
 "symbology of vector layers."
-msgstr ""
+msgstr "一度ロードしてしまえば地図ナビゲーションツールを使ってshapefileをズームすることができます. レイヤのスタイルを変えたい場合はレイヤ名をダブルクリックするか凡例でマウス右ボタンで表示されるポップアップメニューから :menuselection:`プロパティ` を選択して表示される :guilabel:`レイヤプロパティ` ダイアログ を開いて下さい. See Section詳しい情報はベクタレイヤのシンボロジ設定の  :ref:`vector_style_menu` を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:137
 msgid "Improving Performance for Shapefiles"
@@ -1109,7 +1109,7 @@ msgid ""
 "**[Specify...]** button. This is due to the fact, that :file:`.prj` files "
 "often do not provide the complete projection parameters, as used in |qg| and"
 " listed in the :guilabel:`CRS` dialog."
-msgstr ""
+msgstr "shapefile を :file:`.prj` ファイルつきでロードする場合 |qg| はそのファイルの空間参照システムを読むことはできません, そこでそのレイヤの :guilabel:`Layer Properties` ダイアログの :guilabel:`General` タブで **[Specify...]** ボタンをクリックして投影法を設定する必要があります. これは :file:`.prj` ファイルはしばしば |qg| で利用され :guilabel:`CRS` ダイアログでリストされている完全な投影法パラメータを提供していないからです."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:262
 msgid ""
@@ -1119,7 +1119,7 @@ msgstr ""
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:278
 msgid ""
 "|nix|, the settings are stored in your home directory in :file:`.qgis2/`."
-msgstr ""
+msgstr "|nix|, 設定 はあなたのホームディレクトリの :file:`.qgis2/` に格納されます."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:340
 msgid ""
@@ -1155,7 +1155,7 @@ msgstr ""
 msgid ""
 "Import data to PostGIS (:ref:`vector_import_data_in_postgis`) using for "
 "example the DB Manager plugin."
-msgstr ""
+msgstr "DBマネージャプラグインを利用したPostGIS (:ref:`vector_import_data_in_postgis`) へのデータインポート例."
 
 #: ../../source/docs/user_manual/working_with_vector/supported_data.rst:559
 msgid "|qg| also supports editable views in SpatiaLite."
