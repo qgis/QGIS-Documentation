@@ -19,15 +19,11 @@ Install PostgreSQL
   Please note that the documentation will assume users are running QGIS under
   Ubuntu.
 
-Under Ubuntu:
-
-::
+Under Ubuntu::
 
   sudo apt-get install postgresql-9.1
 
-You should get a message like this:
-
-::
+You should get a message like this::
 
   [sudo] password for qgis:
   Reading package lists... Done
@@ -59,9 +55,7 @@ Create a database user
 Under Ubuntu:
 
 After the installation is complete, run this command to become the postgres
-user and then create a new database user:
-
-::
+user and then create a new database user::
 
   sudo su - postgres
 
@@ -70,9 +64,7 @@ Type in your normal log in password when prompted (you need to have sudo rights)
 Now, at the postgres user's bash prompt, create the database user. Make sure
 the user name matches your unix login name: it will make your life much easier,
 as postgres will automatically authenticate you when you are logged in as that
-user.
-
-::
+user::
 
   createuser -d -E -i -l -P -r -s qgis
 
@@ -92,9 +84,7 @@ What do those options mean?
   -s, --superuser    role will be superuser
 
 Now you should should leave the postgres user's bash shell environment by
-typing:
-
-::
+typing::
 
   exit
 
@@ -105,18 +95,15 @@ Verify the new account
 
   psql -l
 
-Should return something like this:
+Should return something like this::
 
-::
 
-  $ psql -l
-  List of databases
-  Name      |  Owner   | Encoding | Collation  |   Ctype    |
-  ----------+----------+----------+------------+------------+
-  postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
-  template0 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
-  template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
-  (3 rows)
+    Name      |  Owner   | Encoding | Collation  |   Ctype    |
+    ----------+----------+----------+------------+------------+
+    postgres  | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
+    template0 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
+    template1 | postgres | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
+    (3 rows)
 
 Type :kbd:`q` to exit.
 
@@ -124,23 +111,16 @@ Create a database
 -------------------------------------------------------------------------------
 
 The :kbd:`createdb` command is used to create a new database. It should be run
-from the bash shell prompt.
-
-::
+from the bash shell prompt::
 
   createdb address -O qgis
 
-You can verify the existence of your new database by using this command:
-
-::
+You can verify the existence of your new database by using this command::
 
   psql -l
 
-Which should return something like this:
+Which should return something like this::
 
-::
-
-  List of databases
   Name      |  Owner   | Encoding | Collation  |   Ctype    |   Access privileges
   ----------+----------+----------+------------+------------+-----------------------
   address   | qgis     | UTF8     | en_ZA.utf8 | en_ZA.utf8 |
@@ -154,33 +134,23 @@ Type :kbd:`q` to exit.
 Starting a database shell session
 -------------------------------------------------------------------------------
 
-You can connect to your database easily like this:
-
-::
+You can connect to your database easily like this::
 
   psql address
 
-To exit out of the psql database shell, type:
-
-::
+To exit out of the psql database shell, type::
 
   \q
 
-For help in using the shell, type:
-
-::
+For help in using the shell, type::
 
   \?
 
-For help in using sql commands, type:
-
-::
+For help in using sql commands, type::
 
   \help
 
-To get help on a specific command, type (for example):
-
-::
+To get help on a specific command, type (for example)::
 
   \help create table
 
@@ -247,78 +217,20 @@ Which should show something like this::
    ---+------
    (0 rows)
 
-As you can see, our table is empty!
+As you can see, our table is currently empty.
+
+|TY| |moderate|
+...............................................................................
 
 Use the approach shown above to make a table called people:
+
 Add fields such as phone number, home address, name, etc. (these aren't all
 valid names: change them to make them valid). Make sure you give the table an
 ID column with the same data-types as above.
 
-  Write the SQL you create here:
+:ref:`Check your results <database-concepts-4>`
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-
-Solution::
-
-  create table people (id serial not null primary key,
-                       name varchar(50),
-                       house_no int not null,
-                       street_id int not null,
-                       phone_no varchar null );
-
-The schema for the table (enter :kbd:`\d people`) looks like this::
-
-  Table "public.people"
-  Column     |         Type          |                      Modifiers
-  -----------+-----------------------+-------------------------------------
-  id         | integer               | not null default
-             |                       | nextval('people_id_seq'::regclass)
-  name       | character varying(50) |
-  house_no   | integer               | not null
-  street_id  | integer               | not null
-  phone_no   | character varying     |
-  Indexes:
-    "people_pkey" PRIMARY KEY, btree (id)
-
-.. note::  For illustration purposes, we have purposely omitted the fkey
-   constraint.
+.. _backlink-database-concepts-4:
 
 Create Keys in SQL
 -------------------------------------------------------------------------------
@@ -328,12 +240,13 @@ people and streets have a logical relationship. To express this relationship,
 we have to define a foreign key that points to the primary key of the streets
 table.
 
-.. image:: /static/training_manual/database_concepts/er-beispiel.png
+.. image:: /static/training_manual/database_concepts/er-people-streets.png
    :align: center
 
 There are two ways to do this:
- - adding the key after the table has been created
- - defining the key at time of table creation
+
+* Add the key after the table has been created
+* Define the key at time of table creation
 
 Our table has already been created, so let's do it the first way::
 
@@ -352,10 +265,12 @@ The more usual way to create a constraint is to do it when you create the table:
                        street_id int references streets(id) not null,
                        phone_no varchar null);
 
+    \d people
+
 After adding the constraint, our table schema looks like this now::
 
-  \d people
   Table "public.people"
+
     Column   |         Type          |            Modifiers
   -----------+-----------------------+---------------------------------
    id        | integer               | not null default
@@ -377,10 +292,12 @@ create an index on the name column of our people table::
 
   create index people_name_idx on people(name);
 
+  \d people
+
 Which results in::
 
-  address=# \d people
   Table "public.people"
+
     Column   |         Type          |                      Modifiers
   -----------+-----------------------+-----------------------------------
    id        | integer               | not null default nextval
@@ -402,46 +319,17 @@ If you want to get rid of a table you can use the :kbd:`drop` command::
 
   drop table streets;
 
-In our example, this would not work - why?
 
-  Some deep and inspired thoughts as to why...
+.. note:: In our current example, the above command would not work. Why not?
+    :ref:`See why <database-concepts-5>`
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+.. _backlink-database-concepts-5:
 
 If you used the same :kbd:`drop table` command on the `people` table, it would
 be successful::
 
   drop table people;
 
-Why?
-
-  Some thoughts on why you could drop people:
-
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
 
 .. note::  If you actually did enter that command and dropped the :kbd:`people`
    table, now would be a good time to rebuild it, as you will need it in the

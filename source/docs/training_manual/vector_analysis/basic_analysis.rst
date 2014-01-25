@@ -24,335 +24,362 @@ iv. Present the Results
 |basic| The problem
 -------------------------------------------------------------------------------
 
-Let's start off the process by deciding on a problem to solve. Let's say you're
-a property developer, and you need to buy a farm to build a new residential
-development for people who have had enough of Cape Town and Johannesburg.
-You've done some market research, and you've come up with the following
-requirements that a farm needs to satisfy:
+Let's start off the process by deciding on a problem to solve. For example,
+you are an estate agent and you are looking for a residential property in
+Swellendam for clients who have the following criteria:
 
 #. It needs to be in Swellendam.
-#. You don't want to have to build a long access road (maximum distance 500
-   meters), and it has to be easily accessible from main routes.
-#. The people who make up the target market will probably have children, so it
-   must be within a reasonable distance (by car) from a school.
-#. The farm must be between 100 and 150 hectares in area.
+#. It must be within reasonable driving distance of a school.
+#. It must be more than 100m squared in size.
 
 |basic| The data
 -------------------------------------------------------------------------------
 
 To answer these questions, we're going to need the following data:
 
-#. The farms we're going to be choosing from.
-#. The roads that need to be running through these farms.
-#. The location of schools.
+#. The geographic boundaries of the residential areas.
+#. The roads in and around the town.
+#. The location of schools and restaurants.
+#. The size of buildings
 
-For this exercise the data has been provided already, but in reality you may
-need to find a provider for the datasets in question. In South Africa, the
-Surveyor-General's Office is a good source of the kind of data you'd find on 1:
-50 000 topographic map sheets, which includes all of the data we need for this
-particular problem.
+All of this data is available through OSM and you should find that the dataset
+you have been using throughout this manual can also be used for this lesson.
+However, in order to ensure we have the complete data, we will re-download the
+data from OSM using QGIS' built-in OSM download tool.
+
+.. note:: Although OSM downloads have consistent data fields, the coverage and
+    detail does vary. If you find that your chosen region does contain
+    information on restaurants, for example, you may need to chose a different
+    region.
 
 |basic| |FA| Start a Project
 -------------------------------------------------------------------------------
 
-So now that we know what we want to do, let's start doing it!
-
 * Start a new QGIS project.
-* Start adding new layers. They're all to be found in the
-  :kbd:`exercise_data/projected_data` folder.
-* Add the :kbd:`schools_33S`, :kbd:`roads_33S` and :kbd:`farms_33S` layers.
+* Use the OpenStreetMap data download tool found in the :guilabel:`Vector` ->
+  :guilabel:`OpenStreeMap` menu to download the data for your chosen region.
+* Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder.
 
-They'll probably look very familiar. They're the same data we've been working
-with all along, except that they're now in a Projected Coordinate System. This
-is necessary for analysis, for reasons we've covered in the previous lesson.
-(We want to be able to calculate distances in meters and areas in hectares, not
-in degrees.)
+* Create a new vector layer and browse to the new :kbd:`osm_data.osm` file. You
+  may need to select :guilabel:`Show All Files`.
+* Select :kbd:`osm_data.osm` and click :guilabel:`Open`
+* In the dialog which opens, select all the layers, *except* the
+  :kbd:`other_relations` and :kbd:`multilinestrings` layer:
 
-Once you've got these layers in your :guilabel:`Layers list`:
+.. image:: /static/training_manual/foreword/select_osm_layers.png
+   :align: center
 
-* Rename the layers by right-clicking on them and selecting the
-  :guilabel:`Rename` option.
-* Give them the new, less messy names :kbd:`roads`, :kbd:`schools` and
-  :kbd:`farms`.
+This will import the OSM data into your map.
+
+Because we are going to calculate distances in meters, we need to reproject the
+data:
+
+* Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter
+  the list to find :guilabel:`WGS 84 / UTM zone 33S`.
+* Click :guilabel:`OK`
+
+We now need to extract the information we need from the OSM dataset. We need to
+end up with layers representing all the houses, schools, residential
+areas and roads in the region. We'll start with the :kbd:`schools` layer:
+
+* Right-click on the :guilabel:`multipolygons` layer in the
+  :guilabel:`Layers list` and open the :guilabel:`Layer Properties`.
+* Go to the :guilabel:`General` menu.
+* Under :guilabel:`Feature subset` click on the **[Query Builder]** button to
+  open the :guilabel:`Query builder` dialog.
+* In the :guilabel:`Fields` list on the left of this dialog until
+  you see the field :kbd:`amenity`.
+* Click on it once.
+* Click the :guilabel:`All` button underneath the :guilabel:`Values` list:
+
+Now we need to tell QGIS to only show us the polygons where the value of
+:kbd:`amenity` is equal to :kbd:`school`.
+
+* Double-click the word :kbd:`amenity` in the :guilabel:`Fields` list.
+* Watch what happens in the :guilabel:`Provider specific filter expression`
+field below:
+
+  .. image:: /static/training_manual/create_vector_data/schools_query.png
+     :align: center
+
+The word :kbd:`"amenity"` has appeared. To build the rest of the query:
+
+* Click the :guilabel:`=` button (under :guilabel:`Operators`).
+* Double-click the value :kbd:`school` in the :guilabel:`Values` list.
+* Click :kbd:`OK` twice.
+
+This will filter OSM's :kbd:`multipolygon` layer to only show the schools in
+your region. You can now either:
+
+* Rename the filtered OSM layer and re-import the :kbd:`multipolygons` layer
+  from :kbd:`osm_data.osm`, OR
+* Duplicate the filtered layer, rename the copy, clear the :kbd:`Query Builder`
+  and create your new query in the :guilabel:`Query Builder`.
+
+.. _backlink-vector-analysis-basic-1:
+
+|moderate| |TY| Extract Required Layers from OSM
+--------------------------------------------------------------------------------
+Using the above technique, use the :kbd:`Query Builder`
+tool to extract the remaining data from OSM to create the following layers:
+
+* :kbd:`roads` (from OSM's :kbd:`lines` layer)
+* :kbd:`restaurants` (from OSM's :kbd:`multipolygons` layer)
+* :kbd:`residential` (from OSM's :kbd:`multipolygons` layer)
+* :kbd:`houses` (from OSM's :kbd:`multipolygons` layer)
+
+You may wish to re-use the :kbd:`roads.shp` layer you created in earlier lessons.
+
+:ref:`Check your results <vector-analysis-basic-1>`
+
 * Save your map under :guilabel:`exercise_data`, as :kbd:`analysis.qgs`.
 * In your operating system's file manager, create a new folder under
   :guilabel:`exercise_data` and call it :kbd:`residential_development`. This is
   where you'll save the datasets that will be the results of the analysis
   functions.
 
-Now that we've got the data, let's analyze the problem!
+.. _backlink-vector-analysis-basic-2:
 
-|basic| |FA| Analyzing the Problem: Farms in Swellendam
+|basic| |TY| Find important roads
 -------------------------------------------------------------------------------
 
-The first criterion we're facing is that the farm needs to be in Swellendam.
-So let's tell QGIS to only show us the farms that are, in fact, in Swellendam!
+Some of the roads in OSM's dataset are listed as :kbd:`unclassified`,
+:kbd:`tracks`, :kbd:`path` and :kbd:`footway`. We want to exclude these from
+our roads dataset.
 
-* Right-click on the :guilabel:`farms` layer in the :guilabel:`Layers list`.
-* Select the option :guilabel:`Query...`. This gives you a new :guilabel:`Query
-  Builder` dialog.
-* Scroll down in the :guilabel:`Fields` list on the left of this dialog until
-  you see the field :kbd:`TOWN`.
-* Click on it once.
-* Click the :guilabel:`All` button underneath the :guilabel:`Values` list:
+* Open the :kbd:`Query Builder` for the :kbd:`roads` layer,
+  click :guilabel:`Clear` and build the following query:
 
-.. image:: /static/training_manual/vector_analysis/013.png
-   :align: center
-
-Now we need to tell QGIS to only show us the farms where the value of
-:kbd:`TOWN` is equal to :kbd:`Swellendam`.
-
-* Double-click the word :kbd:`TOWN` in the :guilabel:`Fields` list.
-* Watch what happens in the :guilabel:`SQL where clause` field below:
-
-.. image:: /static/training_manual/vector_analysis/014.png
-   :align: center
-
-The word :kbd:`"TOWN"` has appeared! To build the rest of the query:
-
-* Click the :guilabel:`=` button (under :guilabel:`Operators`).
-* Double-click the value :kbd:`Swellendam` in the :guilabel:`Values` list.
-
-Your query is this:
-
-.. image:: /static/training_manual/vector_analysis/015.png
-   :align: center
-
-And now your :guilabel:`farms` layer looks like this:
-
-.. image:: /static/training_manual/vector_analysis/016.png
-   :align: center
-
-For further analysis, it's better if we've got these farms as a separate layer.
-
-* Right-click on the :guilabel:`farms` layer and click :guilabel:`Save As...`.
-* Next to the :guilabel:`Save as` field in the dialog that appears, click the
-  :guilabel:`Browse` button.
-* Save the layer under :kbd:`exercise_data/residential_development/`, as
-  :kbd:`swellendam_farms.shp`.
-* Check the :guilabel:`Add saved file to map` box in the :guilabel:`Save vector
-  layer as...` dialog.
-* Click :guilabel:`OK`. It will tell you that :kbd:`Export to vector file has
-  been completed`.
-* Click :guilabel:`OK`.
-
-Now we've got the :guilabel:`farms` twice, but we only need the one we just
-created.
-
-* Right-click on the old :guilabel:`farms` layer and remove it.
-
-
-.. _backlink-vector-analysis-basic-1:
-
-|basic| |TY| find important roads
--------------------------------------------------------------------------------
-
-We have a similar problem with the roads; the only roads we're taking into
-account are the main ones.
-
-* Build a query for the :guilabel:`roads` layer, like you did above for the
-  :guilabel:`farms` layer. You want only the types :kbd:`primary`,
-  :kbd:`secondary`, :kbd:`tertiary` and :kbd:`trunk`, so you need to build this
-  query:
-
-  :kbd:`"TYPE" = 'primary' OR "TYPE" = 'secondary' OR "TYPE" = 'tertiary' OR
-  "TYPE" = 'trunk'`
+  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway"
+     != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
 
 You can either use the approach above, where you double-clicked values and
 clicked buttons, or you can copy and paste the command above.
 
-:ref:`Check your results <vector-analysis-basic-1>`
+This should immediately reduce the number of roads on your map:
 
-|basic| |TY| find high schools
+.. image:: /static/training_manual/vector_analysis/correct_roads_filter.png
+   :align: center
+
+|basic| |TY| Convert Layers' CRS
 -------------------------------------------------------------------------------
 
-Your future customers will want to send their children to high schools.
+Because we are going to be measuring distances within our layers, we need to
+change the layers' CRS. To do this, we need to select each layer in turn,
+save the layer to a new shapefile with our new projection, then import that new
+layer into our map.
 
-* Use the same approach as before and build this query for the
-  :guilabel:`schools` layer:
+.. note:: In this example, we are using the
+    :guilabel:`WGS 84 / UTM zone 34S` CRS, but you may use a UTM CRS which is
+    more appropriate for your region.
 
-  :kbd:`"has_high_s" = 'y'`
+* Right click the :kbd:`roads` layer in the :kbd:`Layers` panel.
+* Click :kbd:`Save as...`
+* In the :kbd:`Save Vector As` dialog, choose the following settings and click
+  :guilabel:`Ok` (making sure you select :kbd:`Add saved file to map`):
 
-You should have only 3 out of the 4 original schools left.
+.. image:: /static/training_manual/vector_analysis/save_roads_34S.png
+   :align: center
 
-* Save the resulting layer under :kbd:`exercise_data/residential_development/`
-  as :kbd:`high_schools.shp`.
+The new shapefile will be created and the resulting layer added to your map,
+although it will not yet be visible.
 
+* Remove the old :kbd:`roads` layer.
+
+Repeat this process for each layer, creating a new shapefile and layer with
+"_34S" appended to the original name and removing each of the old layers.
+
+Once you have completed the process for each layer, right click on any layer and
+click :guilabel:`Zoom to layer extent`.
+
+Now that we have converted OSM's data to a UTM projection, we can begin our
+calculations.
 
 |basic| |FA| Analyzing the Problem: Distances From Schools and Roads
 -------------------------------------------------------------------------------
 
 QGIS allows you to calculate distances from any vector object.
 
-* Make sure that only the :guilabel:`important_roads` and
-  :guilabel:`swellendam_farms` layers are visible, to simplify the map while
+* Make sure that only the :guilabel:`roads` and
+  :guilabel:`houses` layers are visible, to simplify the map while
   you're working.
 * Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
   tool:
-
-.. image:: /static/training_manual/vector_analysis/018.png
-   :align: center
 
 This gives you a new dialog.
 
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/020.png
+.. image:: /static/training_manual/vector_analysis/vector_buffer_setup.png
    :align: center
 
 The :guilabel:`Buffer distance` is in meters because our input dataset is in a
-Projected Coordinate System. This is why we needed to use projected data!
+Projected Coordinate System. This is why we needed to use projected data.
 
 * Save the resulting layer under :kbd:`exercise_data/residential_development/`
-  as :kbd:`important_roads_buffer_500m.shp`.
+  as :kbd:`roads_buffer_50m.shp`.
 * Click :guilabel:`OK` and it will create the buffer.
 * When it asks you if it should "add the new layer to the TOC", click
   :guilabel:`Yes`. ("TOC" stands for "Table of Contents", by which it means the
   :guilabel:`Layers list`).
+* Close the :guilabel:`Buffer(s)` dialog.
 
-Now you've got this:
+Now your map will look something like this:
 
-.. image:: /static/training_manual/vector_analysis/021.png
+.. image:: /static/training_manual/vector_analysis/roads_buffer_result.png
    :align: center
 
-OK, that looks interesting! Those are all the areas that are within 500 meters
-of an important road. 
+If your new is at the top of the :kbd:`Layers` list, it will probably obscure
+much of your map, but this gives us all the areas in your region which are
+within 50m of a road.
 
-But look closer: it looks like there are joins between different sections of
-road! That's not nice. Remove that layer and let's try again:
+However, you'll notice that there are distinct areas within our buffer, which
+correspond to all the individual roads. To get rid of this problem, remove the
+layer and re-create the buffer using the settings shown here:
 
-.. image:: /static/training_manual/vector_analysis/022.png
+.. image:: /static/training_manual/vector_analysis/dissolve_buffer_setup.png
    :align: center
 
 * Note that we're now checking the :guilabel:`Dissolve buffer results` box.
 * Save the output under the same name as before (click :guilabel:`Yes` when it
   asks your permission to overwrite the old one).
-* Click :guilabel:`OK`.
+* Click :guilabel:`OK` and close the :guilabel:`Buffer(s)` dialog again.
   
 Once you've added the layer to the :guilabel:`Layers list`, it will look like
 this:
 
-.. image:: /static/training_manual/vector_analysis/023.png
+.. image:: /static/training_manual/vector_analysis/dissolve_buffer_results.png
    :align: center
 
-That's more like it! Now there are no unnecessary subdivisions.
+Now there are no unnecessary subdivisions.
 
 .. _backlink-vector-analysis-basic-2:
 
-|basic| |TY| distance from high schools
+|basic| |TY| Distance from schools
 -------------------------------------------------------------------------------
 
 * Use the same approach as above and create a buffer for your schools.
 
-It needs to be :kbd:`10 km` in radius, and saved under the usual directory as
-:kbd:`high_schools_buffer_10km.shp`.
+It needs to be :kbd:`1 km` in radius, and saved under the usual directory as
+:kbd:`schools_buffer_1km.shp`.
 
 :ref:`Check your results <vector-analysis-basic-2>`
 
 |basic| |FA| Overlapping Areas
 -------------------------------------------------------------------------------
 
-Now we have areas where the road in 500 meters away and there's a school within
-10 km (as the crow flies). But obviously, we only want the areas where both of
-these criteria are satisfied at once! To do that, we'll need to use the
-:guilabel:`Intersect` tool. Find it under :menuselection:`Vector -->
-Geoprocessing Tools --> Intersect`. Set it up like this:
+Now we have areas where the road is 50 meters away and there's a school within
+1 km (direct line, not by road). But obviously, we only want the areas where
+both of these criteria are satisfied. To do that, we'll need to use the
+:guilabel:`Intersect` tool. Find it under
+:menuselection:`Vector --> Geoprocessing Tools --> Intersect`. Set it up like
+this:
 
-.. image:: /static/training_manual/vector_analysis/027.png
+.. image:: /static/training_manual/vector_analysis/school_roads_intersect.png
    :align: center
 
 The two input layers are the two buffers; the save location is as usual; and
 the file name is :kbd:`road_school_buffers_intersect.shp`. Once it's set up
-like this, click :guilabel:`OK` and add the layer to the :guilabel:`Layers
-list` when prompted.
+like this, click :guilabel:`OK` and add the layer to the
+:guilabel:`Layers list` when prompted.
 
 In the image below, the blue areas show us where both distance criteria are
 satisfied at once!
 
-.. image:: /static/training_manual/vector_analysis/028.png
+.. image:: /static/training_manual/vector_analysis/intersect_result.png
    :align: center
 
 You may remove the two buffer layers and only keep the one that shows where
-they overlap, since that's what we really wanted to know in the first place.
+they overlap, since that's what we really wanted to know in the first place:
+
+.. image:: /static/training_manual/vector_analysis/final_intersect_result.png
+   :align: center
 
 .. _select-by-location:
 
-|basic| |FA| Select the Farms
+|basic| |FA| Select the Buildings
 -------------------------------------------------------------------------------
 
-Now you've got the area that the farms must overlap. Next, you want to select
-the farms in that area.
+Now you've got the area that the buildings must overlap. Next, you want to
+select the buildings in that area.
 
 * Click on the menu entry :menuselection:`Vector --> Research Tools --> Select
   by location`. A dialog will appear.
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/030.png
+.. image:: /static/training_manual/vector_analysis/location_select_dialog.png
    :align: center
 
-* Click :guilabel:`OK` and you'll see the results:
+* Click :guilabel:`OK`, then :guilabel:`Close`.
+* You'll probably find that not much seems to have changed. If so, move the
+  :kbd:`school_roads_intersect` layer to the bottom of the layers list, then
+  zoom in:
 
-.. image:: /static/training_manual/vector_analysis/031.png
+.. image:: /static/training_manual/vector_analysis/select_zoom_result.png
    :align: center
 
-The yellow farms are the selected ones. Let's save them as a new layer.
+The buildings highlighted in yellow are those which match our criteria and are
+selected, while the buildings in green are those which do not. We can now save
+the selected buildings as a new layer.
 
-* Right-click on the :guilabel:`swellendam_farms` layer in the
-  :guilabel:`Layers list`.
+* Right-click on the :guilabel:`houses_34S` layer in the :guilabel:`Layers list`.
 * Select :guilabel:`Save Selection As...`.
 * Set the dialog up like this:
 
-.. image:: /static/training_manual/vector_analysis/032.png
+.. image:: /static/training_manual/vector_analysis/save_selection_as.png
    :align: center
 
-* The file name is :kbd:`well_located_farms.shp`.
+* The file name is :kbd:`well_located_houses.shp`.
 * Click :guilabel:`OK`.
   
-Now you have the selection as a separate layer.
+Now you have the selection as a separate layer and can remove the
+:kbd:`houses_34S` layer.
 
-|basic| |FA| Select Farms of the Right Size
+.. _backlink-vector-analysis-basic-3:
+
+|moderate| |TY| Further Filter our Buildings
 -------------------------------------------------------------------------------
 
-To see which farms are the right area (between 100 and 150 ha), we first need
-to calculate their areas in hectares.
+We now have a layer which shows us all the buildings within 1km of a school and
+within 50m of a road. We now need to reduce that selection to only show
+buildings which are within 500m of a restaurant.
 
-* Open the attribute table for the :guilabel:`well_located_farms` layer.
-* Enter edit mode:
+Using the processes described above, create a new layer called
+:kbd:`houses_restaurants_500m` which further filters
+your :kbd:`well_located_houses` layer to show only those which are within 500m
+of a restaurant.
 
-.. image:: /static/training_manual/vector_analysis/033.png
-   :align: center
+:ref:`Check your results <vector-analysis-basic-3>`
 
-* Start the field calculator:
+|basic| |FA| Select Buildings of the Right Size
+-------------------------------------------------------------------------------
 
-.. image:: /static/training_manual/vector_analysis/034.png
-   :align: center
+To see which buildings are the correct size (more than 100 square metres), we
+first need to calculate their size.
 
+* Open the attribute table for the :guilabel:`houses_restaurants_500m` layer.
+* Enter edit mode and open the field calculator.
 * Set it up like this:
 
-.. image:: /static/training_manual/vector_analysis/035.png
+.. image:: /static/training_manual/vector_analysis/buildings_area_calculator.png
    :align: center
 
-* If you can't find :guilabel:`AREA` in the list, try this instead:
-
-.. image:: /static/training_manual/vector_analysis/036.png
-   :align: center
-
+* If you can't find :guilabel:`AREA` in the list, try creating an new field as
+  you did in the previous lesson of this module.
 * Click :guilabel:`OK`.
 * Scroll to the right of the attribute table; your :kbd:`AREA` field now has
-  areas in hectares for all the farms in your :guilabel:`well_located_farms`
-  layer.
-* Click the edit mode button again as above, and save your edits when prompted.
-* Do a query:
+  areas in metres for all the buildings in your
+  :guilabel:`houses_restaurants_500m` layer.
+* Click the edit mode button again to finish editing, and save your edits
+  when prompted.
+* Build a query as earlier in this lesson:
 
-.. image:: /static/training_manual/vector_analysis/037.png
+.. image:: /static/training_manual/vector_analysis/buildings_area_query.png
    :align: center
 
-* Click :guilabel:`OK`. Your results should look like this:
+* Click :guilabel:`OK`. Your map should now only show you those buildings which
+  match our starting criteria and which are more than 100m squared in size.
 
-.. image:: /static/training_manual/vector_analysis/038.png
-   :align: center
-
-That's it! Those red farms are the ones satisfying your criteria. Well done!
 
 |basic| |TY|
 -------------------------------------------------------------------------------

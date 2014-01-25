@@ -12,7 +12,7 @@ WMS.
 -------------------------------------------------------------------------------
 
 * Start a new map. This is for demo purposes and won't be saved.
-* Ensure that "on the fly" reprojection is switched off.
+* Ensure that "on the fly" re-projection is switched off.
 * Click the :guilabel:`Add WFS Layer` button:
 
   |wfs|

@@ -22,13 +22,13 @@ the geometry_columns table.
 |TY| |moderate|
 -------------------------------------------------------------------------------
 
-  * Modify the :kbd:`streets` table so that it has a geometry column of type
-    ST_LineString.
-  * Don't forget to do the accompanying update to the geometry columns
-    table!
-  * Also add a constraint to prevent any geometries being added that are
-    not LINESTRINGS or null.
-  * Create a spatial index on the new geometry column
+* Modify the :kbd:`streets` table so that it has a geometry column of type
+ST_LineString.
+* Don't forget to do the accompanying update to the geometry columns
+table!
+* Also add a constraint to prevent any geometries being added that are
+not LINESTRINGS or null.
+* Create a spatial index on the new geometry column
 
 :ref:`Check your results <geometry-1>`
 
@@ -51,15 +51,17 @@ Creating Polygons
 Creating polygons is just as easy. One thing to remember is that by definition,
 polygons have at least four vertices, with the last and first being co-located::
 
-  insert into cities (name, the_geom)
-  values ('Tokyo', 'SRID=4326;POLYGON((10 -10, 5 -32, 30 -27, 10 -10))');
+    insert into cities (name, the_geom)
+    values ('Tokyo', 'SRID=4326;POLYGON((10 -10, 5 -32, 30 -27, 10 -10))');
 
 .. note::  A polygon requires double brackets around its coordinate list; this
    is to allow you to add complex polygons with multiple unconnected areas. For
-   instance::
+   instance
 
-  insert into cities (name, the_geom)
-  values ('Tokyo Outer Wards', 'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
+::
+
+    insert into cities (name, the_geom)
+    values ('Tokyo Outer Wards', 'SRID=4326;POLYGON((20 10, 20 20, 35 20, 20 10),
           (-10 -30, -5 0, -15 -15, -10 -30))');
 
 If you followed this step, you can check what it did by loading the cities
@@ -73,14 +75,14 @@ Exercise: Linking Cities to People
 
 For this exercise you should do the following:
 
-  Delete all data from your people table.
-  Add a foreign key column to people that references the primary key of
+* Delete all data from your people table.
+* Add a foreign key column to people that references the primary key of
   the cities table.
-  Use QGIS to capture some cities.
-  Use SQL to insert some new people records, ensuring that each has
+* Use QGIS to capture some cities.
+* Use SQL to insert some new people records, ensuring that each has
   an associated street and city.
 
-  Your updated people schema should look something like this::
+Your updated people schema should look something like this::
 
     \d people
 
@@ -135,14 +137,16 @@ way:
 
 * Transform the polygon boundary to a linestring::
 
-  select st_boundary(geometry) from myPolygonTable;
+    select st_boundary(geometry) from myPolygonTable;
+
 
 * Select the first vertex point of the resultant linestring::
 
-  select st_startpoint(myGeometry)
-  from (
-    select st_boundary(geometry) as myGeometry
-    from myPolygonTable) as foo;
+    select st_startpoint(myGeometry)
+    from (
+        select st_boundary(geometry) as myGeometry
+        from myPolygonTable) as foo;
+
 
 Data Processing
 -------------------------------------------------------------------------------

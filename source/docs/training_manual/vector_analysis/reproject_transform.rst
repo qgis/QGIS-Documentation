@@ -54,14 +54,14 @@ of your choice.
 * To enable "on the fly" projection, click on the :guilabel:`CRS Status` button
   in the :guilabel:`Status Bar` along the bottom of the QGIS window:
 
-.. image:: /static/training_manual/vector_analysis/001.png
+.. image:: /static/training_manual/vector_analysis/crs_status_button.png
    :align: center
 
 * In the dialog that appears, check the box next to :guilabel:`Enable 'on the
   fly' CRS transformation`. 
 * Type the word :kbd:`global` into the :guilabel:`Filter` field. One CRS
-  (:guilabel:`NSIDC EASE-Grid Global`) will appear in the list below.
-* Click on it to select it, then click :kbd:`OK`.
+  (:guilabel:`NSIDC EASE-Grid Global`) should appear in the list below.
+* Click on the :guilabel:`NSIDC EASE-Grid Global` to select it, then click :kbd:`OK`.
 
 * Notice how the shape of South Africa changes. All projections work by
   changing the apparent shapes of objects on Earth.
@@ -72,20 +72,28 @@ of your choice.
 "On the fly" reprojection is also used for combining datasets that are in
 different CRSs.
 
-* Deactivate "on the fly" reprojection again:
+* Deactivate "on the fly" re-projection again:
 
   * Click on the :guilabel:`CRS Status` button again.
-  * Uncheck the :guilabel:`Enable 'on the fly' CRS transformation` box.
+  * Un-check the :guilabel:`Enable 'on the fly' CRS transformation` box.
   * Clicking :guilabel:`OK`.
-
+  
+* In QGIS 2.0, the 'on the fly' reprojection is automatically activated when
+layers with different CRSs are loaded in the map. To understand what
+'on the fly' reprojection does, deactivate this automatic setting:
+  * Go to :menuselection:`Settings --> Options...`
+  * On the left panel of the dialog, select :guilabel:`CRS`.
+  * Un-check :guilabel:`Automatically enable 'on the fly' reprojection if layers
+  have different CRS`.
+  * Click :guilabel:`OK`.
 * Add another vector layer to your map which has the data for South Africa
   only.  You'll find it as :kbd:`exercise_data/world/RSA.shp`.
-
+ 
 What do you notice?
 
 The layer isn't visible! But that's easy to fix, right?
 
-* Right-click on the layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`RSA` layer in the :guilabel:`Layers list`.
 * Select :guilabel:`Zoom to Layer Extent`.
 
 OK, so now we see South Africa... but where is the rest of the world?
@@ -98,7 +106,7 @@ Cape Town in the :guilabel:`RSA` dataset is about :kbd:`4 100 000` meters away
 from the equator. But in the :guilabel:`continents` dataset, that same point is
 about :kbd:`33.9` degrees away from the equator.
 
-This is the same distance - but QGIS doesn't know that! You haven't told it to
+This is the same distance - but QGIS doesn't know that. You haven't told it to
 reproject the data. So as far as it's concerned, the version of South Africa
 that we see in the :guilabel:`RSA` dataset has Cape Town at the correct
 distance of :kbd:`4 100 000` meters from the equator. But in the
@@ -112,18 +120,25 @@ north to south, then that is what QGIS will draw.
 
 To correct this:
 
-* Switch :guilabel:`Enable 'on the fly' CRS transformation` on again as before.
+* Click on the :guilabel:`CRS Status` button again and switch
+:guilabel:`Enable 'on the fly' CRS transformation` on again as before.
 * Zoom to the extents of the :guilabel:`RSA` dataset.
 
 Now, because they're made to project in the same CRS, the two datasets fit
 perfectly:
 
-.. image:: /static/training_manual/vector_analysis/002.png
+.. image:: /static/training_manual/vector_analysis/with_reprojection.png
    :align: center
 
 When combining data from different sources, it's important to remember that
 they might not be in the same CRS. "On the fly" reprojection helps you to
 display them together.
+
+Before you go on, you probably want to have the 'on the fly' reprojection to be
+automatically activated whenever you open datasets having different CRS:
+  * Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
+  * Activate :guilabel:`Automatically enable 'on the fly' reprojection if layers
+    have different CRS`.
 
 |moderate| |FA| Saving a Dataset to Another CRS
 -------------------------------------------------------------------------------
@@ -133,7 +148,7 @@ Remember when you calculated areas for the farms in the
 farms according to area.
 
 * Open your usual map again (containing the Swellendam data).
-* Open the attribute table for the :guilabel:`rural` layer.
+* Open the attribute table for the :guilabel:`landuse` layer.
 * Scroll to the right until you see the :kbd:`AREA` field.
 
 Notice how the areas are all very small; basically zero. This is because
@@ -141,17 +156,17 @@ these areas are given in degrees - the data isn't in a Projected Coordinate
 System. In order to calculate the area for the farms in square meters, the data
 has to be in square meters as well. So, we'll need to reproject it.
 
-But it won't help to just use "on the fly" reprojection. "On the fly" does what
+But it won't help to just use 'on the fly' reprojection. 'On the fly' does what
 it says - it doesn't change the data, it just reprojects the layers as they
 appear on the map. To truly reproject the data itself, you need to export it to
 a new file using a new projection.
 
-* Right-click on the :guilabel:`rural` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`landuse` layer in the :guilabel:`Layers list`.
 * Select :guilabel:`Save As...` in the menu that appears. You will be shown the
   :guilabel:`Save vector layer as...` dialog.
 * Click on the :guilabel:`Browse` button next to the :guilabel:`Save as` field.
 * Navigate to :kbd:`exercise_data/` and specify the name of the new layer as
-  :kbd:`rural_reprojected.shp`.
+  :kbd:`landuse_reprojected.shp`.
 * Leave the :guilabel:`Encoding` unchanged.
 * Change the value of the :guilabel:`Layer CRS` dropdown to :guilabel:`Selected
   CRS`.
@@ -159,38 +174,32 @@ a new file using a new projection.
 * The :guilabel:`CRS Selector` dialog will now appear.
 * In its :guilabel:`Filter` field, search for :kbd:`33S`.
 * Choose :guilabel:`WGS 84 / UTM zone 33S` from the list.
-* Click :guilabel:`OK`.
+* Leave the :guilabel:`Symbology export` unchanged.
   
 The :guilabel:`Save vector layer as...` dialog now looks like this:
 
-.. image:: /static/training_manual/vector_analysis/004.png
-   :align: center
-
-* Click :guilabel:`OK` and after an instant, you should be presented with:
-
-.. image:: /static/training_manual/vector_analysis/005.png
+.. image:: /static/training_manual/vector_analysis/save_vector_dialog.png
    :align: center
 
 * Click :guilabel:`OK`.
-* Start a new map:
 
-.. image:: /static/training_manual/vector_analysis/006.png
-   :align: center
+* Start a new map and load the reprojected layer you just created.
 
 Refer back to the lesson on :guilabel:`Classification` to remember how you
 calculated areas.
 
-* Update the :kbd:`AREAS` field by running the same expression as before:
+* Add an :kbd:`AREA` field by running the same expression as before:
 
-.. image:: /static/training_manual/vector_analysis/007.png
+.. image:: /static/training_manual/vector_analysis/new_area_field.png
    :align: center
 
-This will update the :kbd:`AREAS` field with the areas of the farms in square
-meters.
+This will add an :kbd:`AREA` field with the size of each :kbd:`landuse` layer
+in square meters
 
-* To calculate the area in hectares, do this:
+* To calculate the area in hectares use the :kbd:`AREA` field you just
+calculated, do this:
 
-.. image:: /static/training_manual/vector_analysis/008.png
+.. image:: /static/training_manual/vector_analysis/new_hectare_field.png
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
@@ -210,11 +219,10 @@ You can also create your own projections.
 * Load the :kbd:`world/oceans.shp` dataset.
 * Go to :menuselection:`Settings --> Custom CRS...` and you'll see this dialog:
 
-.. image:: /static/training_manual/vector_analysis/009.png
+.. image:: /static/training_manual/vector_analysis/custom_crs.png
    :align: center
 
-* Click on the button with the star icon to create a new projection. You'll
-  notice that the name and parameters are now blank.
+* Click on the :guilabel:`Add new CRS` button to create a new projection.
 
 An interesting projection to use is called :kbd:`Van der Grinten I`.
 
@@ -228,9 +236,7 @@ rectangular one, as most other projections do.
 :kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m
 +no_defs`
 
-* Click the :guilabel:`Save` button:
-
-.. image:: /static/training_manual/vector_analysis/010.png
+.. image:: /static/training_manual/vector_analysis/new_crs_parameters.png
    :align: center
 
 * Click :guilabel:`OK`.
@@ -239,7 +245,7 @@ rectangular one, as most other projections do.
   :guilabel:`Filter` field).
 * On applying this projection, the map will be reprojected thus:
 
-.. image:: /static/training_manual/vector_analysis/011.png
+.. image:: /static/training_manual/vector_analysis/van_grinten_projection.png
    :align: center
 
 |IC|

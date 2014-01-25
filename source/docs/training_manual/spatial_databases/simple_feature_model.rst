@@ -58,41 +58,11 @@ or a null value.
 |TY| |hard|
 -------------------------------------------------------------------------------
 
-  Create a new table called cities and give it some appropriate columns,
-  including a geometry field for storing polygons (the city boundaries). Make
-  sure it has a constraint enforcing geometries to be polygons.
-
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+Create a new table called cities and give it some appropriate columns,
+including a geometry field for storing polygons (the city boundaries). Make
+sure it has a constraint enforcing geometries to be polygons.
 
 :ref:`Check your results <simple-feature-1>`
-
 
 .. _backlink-simple-feature-2:
 
@@ -113,9 +83,9 @@ which tables in the database contain geometry data.
 
      select * from geometry_columns;
 
-   If the column :kbd:`f_table_name` contains the value :kbd:`people`, then
-   this table has already been registered and you don't need to do anything
-   more.
+    If the column :kbd:`f_table_name` contains the value :kbd:`people`, then
+    this table has already been registered and you don't need to do anything
+    more.
 
 The value :kbd:`2` refers to the number of dimensions; in this case, two: **x**
 and **y**.
@@ -124,29 +94,12 @@ The value :kbd:`4326` refers to the projection we are using; in this case, WGS
 84, which is referred to by the number 4326 (refer to the earlier discussion
 about the EPSG).
 
-  Add an appropriate geometry_columns entry for your new cities layer
+|TY| |basic|
+...............................................................................
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+Add an appropriate `geometry_columns` entry for your new cities layer
 
 :ref:`Check your results <simple-feature-2>`
-
 
 .. _backlink-simple-feature-3:
 
@@ -211,26 +164,11 @@ Password`. Then click :guilabel:`OK` to create this connection.
 Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.
 
-  Formulate a query that shows a person's name, street name and position
-  (from the the_geom column) as plain text.
+|TY| |moderate|
+...............................................................................
 
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
-  |
+Formulate a query that shows a person's name, street name and position (from the
+the_geom column) as plain text.
 
 :ref:`Check your results <simple-feature-3>`
 

@@ -74,8 +74,10 @@ color.
 * In the :guilabel:`Symbol Layers` panel, expand the :guilabel:`Fill` dropdown
 (if necessary) and select the :guilabel:`Simple fill` option:
 
+
 .. image:: /static/training_manual/symbology/simple_fill_selected.png
    :align: center
+
 
 * Click on the :guilabel:`Border style` dropdown. At the moment, it should be
   showing a short line and the words :guilabel:`Solid Line`.
@@ -144,6 +146,7 @@ layers.
 
 * Go back to the :guilabel:`landuse` layer's symbol properties panel (by clicking
 :guilabel:`Simple fill` in the :guilabel:`Symbol layers` panel).
+
 
 In this example, the current symbol has no outline (i.e., it uses the
 :guilabel:`No Pen` border style).
@@ -330,14 +333,17 @@ Point Symbol Layer Types
 :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers` panel, then
 click the :guilabel:`Symbol layer type` dropdown:
 
+
 .. image:: /static/training_manual/symbology/marker_type_dropdown.png
    :align: center
+
 
 * Investigate the various options available to you, and choose a symbol with
   styling you think is appropriate.
 * If in doubt, use a round :guilabel:`Simple marker` with a white border and
   pale green fill, with a :guilabel:`size` of :kbd:`3,00` and an
   :guilabel:`Outline width` of :kbd:`0.5`.
+
 
 Line Symbol Layer Types
 ...............................................................................
@@ -350,20 +356,26 @@ To see the various options available for line data:
 .. image:: /static/training_manual/symbology/change_to_marker_line.png
    :align: center
 
+
 * Select the :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers`
 panel. Change the symbol properties to match this dialog:
+
 
 .. image:: /static/training_manual/symbology/simple_marker_line_properties.png
    :align: center
 
+
 * Change the interval to :kbd:`1,00`:
+
 
 .. image:: /static/training_manual/symbology/marker_line_interval.png
    :align: center
 
+
 * Ensure that the symbol levels are correct (via the
 :guilabel:`Advanced -> Symbol levels` dialog we used earlier) before applying
 the style.
+
 
 Once you have applied the style, take a look at its results on the map. As you
 can see, these symbols change direction along with the road but don't always

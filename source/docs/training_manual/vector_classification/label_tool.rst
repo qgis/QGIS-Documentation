@@ -54,8 +54,9 @@ might find that the labels are not appropriately formatted and either overlap or
 are too far away from their point markers.
 
 * Open the :guilabel:`Label tool` again by clicking on its button as before.
-* Make sure :guilable:`Text` is selected in the left-hand options list, then
+* Make sure :guilabel:`Text` is selected in the left-hand options list, then
 update the text formatting options to match those shown here:
+
 
 .. image:: /static/training_manual/labels/label_formatting_options.png
    :align: center
@@ -69,10 +70,12 @@ overlapping the points, but before we do that, let's take a look at the
 * Select the checkbox next to :guilabel:`Draw text buffer`, then choose options
 to match those shown here:
 
+
 .. image:: /static/training_manual/labels/buffer_options.png
    :align: center
 
 * Click :guilabel:`Apply`.
+
 
 You'll see that this adds a colored buffer or border to the place labels, making
 them easier to pick out on the map:
@@ -87,10 +90,12 @@ markers.
 * Change the value of :guilabel:`Distance` to :kbd:`2mm` and make sure that
 :guilabel:`Around point` is selected:
 
-.. image:: /static/training_manual/labels/offset_placement_options.png
+
+.. image:: /static/training_manual/labels/offset_placement_settings.png
    :align: center
 
 * Click :guilabel:`Apply`.
+
 
 You'll see that the labels are no longer overlapping their point markers.
 
@@ -124,7 +129,7 @@ This will reveal the :guilabel:`Quadrant` options which you can use to set the
 position of the label in relation to the point marker. In this case, we want the
 label to be centered on the point, so choose the center quadrant:
 
-.. image:: /static/training_manual/labels/quadrant_placement_settings.png
+.. image:: /static/training_manual/labels/quadrant_offset_options.png
    :align: center
 
 * Hide the point symbols by editing the layer style as usual, and setting the

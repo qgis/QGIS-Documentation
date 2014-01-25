@@ -65,12 +65,7 @@ There should be two layers on your map:
 ...............................................................................
 
 All the vector layers should be loaded into the map. It probably won't look
-nice yet:
-
-.. image:: /static/training_manual/vector/001.png
-   :align: center
-
-(We'll fix the ugly colors later.)
+nice yet though (we'll fix the ugly colors later).
 
 :ref:`Back to text <backlink-vector-load-from-database-1>`
 
@@ -130,7 +125,7 @@ If you are a Beginner-level user, you may stop here.
 
 Here's an example:
 
-.. image:: /static/training_manual/symbology/answer_building_symbology.png
+.. image:: /static/training_manual/symbology/answer_buildings_symbology.png
    :align: center
 
 :ref:`Back to text <backlink-symbology-layers-1>`
@@ -397,23 +392,64 @@ that they are predefined.
 
 |RF| *Vector Analysis*
 -------------------------------------------------------------------------------
-
 .. _vector-analysis-basic-1:
 
-|basic| *Find Important Roads*
+|moderate| *Extract Your Layers from OSM Data*
 ...............................................................................
 
-Your layer should now have these roads:
+For the purpose of this exercise, the OSM layers which we are interested in are
+:kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
+the data we need in order to produce the :kbd:`houses`, :kbd:`schools`,
+:kbd:`restaurants` and :kbd:`residential` layers. The :kbd:`lines` layer
+contains the roads dataset.
 
-.. image:: /static/training_manual/vector_analysis/017.png
-   :align: center
+The :guilabel:`Query Builder` is found in the layer properties:
 
-* Save this new layer (the same way you did before) under
-  :kbd:`exercise_data/residential_development/`, as :kbd:`important_roads.shp`.
-* Once the new layer has been added to your map, remove the old layer.
-* If for some reason it gives you an error message saying that it can't add the
-  layer to the map (this can happen), remember that you can add the layer
-  yourself by using the :guilabel:`Add Vector Layer` button as you did before.
+  .. image:: /static/training_manual/create_vector_data/query_builder.png
+     :align: center
+
+Using the :guilabel:`Query Builder` against the :kbd:`multipolygon` layer,
+create the following queries for the :kbd:`houses`, :kbd:`schools`,
+:kbd:`restaurants` and :kbd:`residential` layers:
+
+  .. image:: /static/training_manual/create_vector_data/houses_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/schools_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/restaurants_query.png
+     :align: center
+
+  .. image:: /static/training_manual/create_vector_data/residential_query.png
+     :align: center
+
+.. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
+    coverage in your area - as in ours - may not be complete. In our test
+    region, it is therefore more accurate to *exclude* all buildings which are
+    defined as anything other than :kbd:`house`. You may decide to
+    simply include buildings which are defined as :kbd:`house`.
+
+To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
+layer:
+
+  .. image:: /static/training_manual/create_vector_data/roads_query.png
+     :align: center
+
+Once you have entered each query, click :guilabel:`OK`. You'll see that the map
+updates to show only the data you have selected (together with any other rows
+you may have already created). At this point, you can use one of the following
+methods:
+
+* Rename the filtered OSM layer and re-import the layer from
+  :kbd:`osm_data.osm`, OR
+* Duplicate the filtered layer, rename the copy, clear the query and create your
+  new query in the :guilabel:`Query Builder`.
+
+You should end up with a map which looks similar to the following:
+
+  .. image:: /static/training_manual/create_vector_data/osm_queries_result.png
+     :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-1>`
 
@@ -424,30 +460,65 @@ Your layer should now have these roads:
 
 * Your buffer dialog should look like this:
 
-  .. image:: /static/training_manual/vector_analysis/024.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_setup.png
      :align: center
 
-  The :guilabel:`Buffer distance` is :kbd:`10000` meters (i.e., :kbd:`10`
-  kilometers).
+  The :guilabel:`Buffer distance` is :kbd:`1000` meters (i.e., :kbd:`1`
+  kilometer).
 
 * The :guilabel:`Segments to approximate` value is set to :kbd:`20`. This is
   optional, but it's recommended, because it makes the output buffers look
   smoother.  Compare this:
 
-  .. image:: /static/training_manual/vector_analysis/025.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_5.png
      :align: center
 
   To this:
 
-  .. image:: /static/training_manual/vector_analysis/026.png
+  .. image:: /static/training_manual/vector_analysis/schools_buffer_20.png
      :align: center
 
-  The red circle is the buffer with :guilabel:`Segments to approximate` set to
-  :kbd:`20`; the gray circle on top of it is the buffer with
-  :guilabel:`Segments to approximate` set to :kbd:`5`.
+The first image shows the buffer with the :guilabel:`Segments to approximate`
+value set to :kbd:`5` and the second shows the value set to :kbd:`20`. In our
+example, the difference is subtle, but you can see that the buffer's edges are
+smoother with the higher value.
 
 :ref:`Back to text <backlink-vector-analysis-basic-2>`
 
+.. _vector-analysis-basic-3:
+
+|basic| *Distance from Restaurants*
+...............................................................................
+
+To create the new :kbd:`houses_restaurants_500m` layer, we go through a two step
+process:
+
+* First, create a buffer of 500m around the restaurants and add the layer to
+  the map:
+
+  .. image:: /static/training_manual/vector_analysis/restaurants_buffer.png
+     :align: center
+
+  .. image:: /static/training_manual/vector_analysis/restaurants_buffer_result.png
+     :align: center
+
+* Next, select buildings within that buffer area:
+
+  .. image:: /static/training_manual/vector_analysis/select_within_restaurants.png
+     :align: center
+
+* Now save that selection to our new :kbd:`houses_restaurants_500m` layer:
+
+  .. image:: /static/training_manual/vector_analysis/save_selection_restaurants.png
+     :align: center
+
+Your map should now show only those buildings which are within 50m of a road,
+1km of a school and 500m of a restaurant:
+
+  .. image:: /static/training_manual/vector_analysis/restaurant_buffer_result.png
+     :align: center
+
+:ref:`Back to text <backlink-vector-analysis-basic-3>`
 
 |RF| *Raster Analysis*
 -------------------------------------------------------------------------------
@@ -459,12 +530,12 @@ Your layer should now have these roads:
 
 * Set your :guilabel:`DEM (Terrain analysis)` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/026.png
+  .. image:: /static/training_manual/rasters/answer_dem_aspect.png
      :align: center
 
 Your result:
 
-.. image:: /static/training_manual/rasters/027.png
+.. image:: /static/training_manual/rasters/answer_aspect_result.png
    :align: center
 
 :ref:`Back to text <backlink-raster-analysis-1>`
@@ -477,7 +548,7 @@ Your result:
 
 * Set your :guilabel:`Raster calculator` dialog up like this:
 
-  .. image:: /static/training_manual/rasters/031.png
+  .. image:: /static/training_manual/rasters/answer_raster_calculator_slope.png
      :align: center
 
 * For the 5 degree version, replace the :kbd:`2` in the expression and file
@@ -487,12 +558,12 @@ Your results:
 
 * 2 degrees:
 
-  .. image:: /static/training_manual/rasters/032.png
+  .. image:: /static/training_manual/rasters/answer_2degree_result.png
      :align: center
 
 * 5 degrees:
 
-  .. image:: /static/training_manual/rasters/033.png
+  .. image:: /static/training_manual/rasters/answer_5degree_result.png
      :align: center
 
 :ref:`Back to text <backlink-raster-analysis-2>`
@@ -672,6 +743,214 @@ satisfy the requirements. Keep in mind, however, that this is merely an
 example. There are many other WMS servers to choose from.
 
 :ref:`Back to text <backlink-wms-3>`
+
+
+|RF| *Database Concepts*
+-------------------------------------------------------------------------------
+
+.. _database-concepts-1:
+
+|basic| *Address Table Properties*
+...............................................................................
+
+For our theoretical address table, we might want to store the following
+properties::
+
+    House Number
+    Street Name
+    Suburb Name
+    City Name
+    Postcode
+    Country
+
+When creating the table to represent an address object, we would create columns
+to represent each of these properties and we would name them with SQL-compliant
+and possibly shortened names::
+
+    house_number
+    street_name
+    suburb
+    city
+    postcode
+    country
+
+:ref:`Back to text <backlink-database-concepts-1>`
+
+.. _database-concepts-2:
+
+|basic| *Normalising the People Table*
+...............................................................................
+
+The major problem with the `people` table is that there is a single address
+field which contains a person's entire address. Thinking about our theoretical
+`address` table earlier in this lesson, we know that an address is made up of
+many different properties. By storing all these properties in one field, we make
+it much harder to update and query our data. We therefore need to split the
+address field into the various properties. This would give us a table which has
+the following structure::
+
+  id |     name      | house_no |  street_name   |    city    |   phone_no
+   --+---------------+----------+----------------+------------+-----------------
+   1 | Tim Sutton    |     3    | Buirski Plein  | Swellendam | 071 123 123
+   2 | Horst Duester |     4    | Avenue du Roix | Geneva     | 072 121 122
+
+
+.. note:: In the next section, you will learn about Foreign Key relationships
+  which could be used in this example to further improve our database's
+  structure.
+
+:ref:`Back to text <backlink-database-concepts-2>`
+
+.. _database-concepts-3:
+
+|moderate| *Further Normalisation of the People Table*
+...............................................................................
+
+Our `people` table currently looks like this::
+
+   id |     name     | house_no | street_id |  phone_no
+   ---+--------------+----------+-----------+-------------
+    1 | Horst Duster |        4 |         1 | 072 121 122
+
+The :kbd:`street_id` column represents a 'one to many' relationship between the
+`people` object and the related `street` object, which is in the `streets`
+table.
+
+One way to further normalise the table is to split the name field into
+*first_name* and *last_name*::
+
+    id | first_name | last_name  | house_no | street_id |  phone_no
+    ---+------------+------------+----------+-----------+------------
+     1 |    Horst   |   Duster   |     4    |     1     | 072 121 122
+
+We can also create separate tables for the town or city name and country,
+linking them to our `people` table via 'one to many' relationships::
+
+    id | first_name | last_name | house_no | street_id | town_id | country_id
+    ---+------------+-----------+----------+-----------+---------+------------
+     1 |    Horst   |   Duster  |     4    |     1     |    2    |     1
+
+
+An ER Diagram to represent this would look like this:
+
+.. image:: /static/training_manual/database_concepts/er-people-normalised-example.png
+   :align: center
+
+:ref:`Back to text <backlink-database-concepts-3>`
+
+.. _database-concepts-4:
+
+|moderate| *Create a People Table*
+...............................................................................
+
+The SQL required to create the correct people table is::
+
+  create table people (id serial not null primary key,
+                       name varchar(50),
+                       house_no int not null,
+                       street_id int not null,
+                       phone_no varchar null );
+
+The schema for the table (enter :kbd:`\d people`) looks like this::
+
+  Table "public.people"
+
+  Column     |         Type          |                      Modifiers
+  -----------+-----------------------+-------------------------------------
+  id         | integer               | not null default
+             |                       | nextval('people_id_seq'::regclass)
+  name       | character varying(50) |
+  house_no   | integer               | not null
+  street_id  | integer               | not null
+  phone_no   | character varying     |
+  Indexes:
+    "people_pkey" PRIMARY KEY, btree (id)
+
+.. note::  For illustration purposes, we have purposely omitted the fkey
+    constraint.
+
+:ref:`Back to text <backlink-database-concepts-4>`
+
+.. _database-concepts-5:
+
+|basic| *The DROP Command*
+...............................................................................
+
+The reason the DROP command would not work in this case is because the `people`
+table has a Foreign Key constraint to the `streets` table. This means that
+dropping (or deleting) the `streets` table would leave the `people` table with
+references to non-existent `streets` data.
+
+.. note:: It is possible to 'force' the `streets` table to be deleted by using
+  the `CASCADE` command, but this would also delete the `people` and any other
+  table which had a relationship to the `streets` table. Use with caution!
+
+:ref:`Back to text <backlink-database-concepts-5>`
+
+.. _database-concepts-6:
+
+|basic| *Insert a New Street*
+...............................................................................
+
+The SQL command you should use looks like this (you can replace the street name
+with a name of your choice)::
+
+    insert into streets (name) values ('Low Road');
+
+:ref:`Back to text <backlink-database-concepts-6>`
+
+.. _database-concepts-7:
+
+|moderate| *Add a New Person With Foreign Key Relationship*
+...............................................................................
+
+Here is the correct SQL statement::
+
+  insert into streets (name) values('Main Road');
+  insert into people (name,house_no, street_id, phone_no)
+    values ('Joe Smith',55,2,'072 882 33 21');
+
+If you look at the streets table again (using a select statement as before),
+you'll see that the :kbd:`id` for the :kbd:`Main Road` entry is :kbd:`2`.
+
+That's why we could merely enter the number :kbd:`2` above. Even though we're
+not seeing :kbd:`Main Road` written out fully in the entry above, the
+database will be able to associate that with the :kbd:`street_id` value of
+:kbd:`2`.
+
+.. note:: If you have already added a new :kbd:`street` object, you might find
+that the new :kbd:`Main Road` has an ID of :kbd:`3` not :kbd:`2`.
+
+:ref:`Back to text <backlink-database-concepts-7>`
+
+.. _database-concepts-8:
+
+
+|moderate| *Return Street Names*
+...............................................................................
+
+Here is the correct SQL statement you should use::
+
+  select count(people.name), streets.name
+  from people, streets
+  where people.street_id=streets.id
+  group by streets.name;
+
+Result::
+
+     count |    name
+     ------+-------------
+         1 | Low Street
+         2 | High street
+         1 | Main Road
+     (3 rows)
+
+.. note::  You will notice that we have prefixed field names with table names
+(e.g. people.name and streets.name). This needs to be done whenever the
+   field name is ambiguous (i.e. not unique across all tables in the database).
+
+:ref:`Back to text <backlink-database-concepts-8>`
+
 
 |RF| *Spatial Queries*
 -------------------------------------------------------------------------------
