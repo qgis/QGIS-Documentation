@@ -172,8 +172,8 @@ a new file using a new projection.
   CRS`.
 * Click the :guilabel:`Browse` button beneath the dropdown.
 * The :guilabel:`CRS Selector` dialog will now appear.
-* In its :guilabel:`Filter` field, search for :kbd:`33S`.
-* Choose :guilabel:`WGS 84 / UTM zone 33S` from the list.
+* In its :guilabel:`Filter` field, search for :kbd:`34S`.
+* Choose :guilabel:`WGS 84 / UTM zone 34S` from the list.
 * Leave the :guilabel:`Symbology export` unchanged.
   
 The :guilabel:`Save vector layer as...` dialog now looks like this:
