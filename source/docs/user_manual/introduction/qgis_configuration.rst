@@ -303,7 +303,7 @@ Map tools Tab
 * Define :guilabel:`Rubberband color` for measure tools
 * Define :guilabel:`Decimal places`
 * |checkbox| :guilabel:`Keep base unit`
-* :guilabel:`Preferred measurements units` |radiobuttonon| ('meters' or 'feet')`
+* :guilabel:`Preferred measurements units` |radiobuttonon| ('meters', 'feet', 'Nautical Miles' or 'Degrees')`
 * :guilabel:`Preferred angle units` |radiobuttonon| ('Angle', 'Radians' or 'Gon')
 
 **Panning and zooming**
