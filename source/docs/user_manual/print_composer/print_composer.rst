@@ -192,7 +192,9 @@ Background, Item ID and Rendering (See figure_composer_2_)
 * the |checkbox| :guilabel:`Background` enables or disables a background color.
   Click on the **[Color...]** button to display a dialog where you pick a color ou choose frome a custom setting.
   Transparency can also be adjusted throught the **alpha** field.
-* Use the :guilabel:`Item ID` to create a relationship to other print composer items.
+* Use the :guilabel:`Item ID` to create a relationship to other print composer items. It is used with QGIS server and any potential web 
+  client. You can set an ID on an item (e.g. a map and a label) and then the web client can send properties to set a property 
+  (e.g. label text) for that specific item. The GetProjectSettings command will lists what items and which IDs are available in a layout.
 * :guilabel:`Rendering` mode can be selected in the option field. See Rendering_Mode_ .
 
 .. _Rendering_Mode:
