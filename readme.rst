@@ -33,6 +33,9 @@ The Website version is the canonical one.
 
 Building is only tested on Linux systems using make.
 
+Build Tools
+-----------
+
 To be able to run localisation targets you will need Sphinx 1.2b3 which comes with pip. 
 Sphinx coming with most distro's is just 1.1.3. You will get an gettext error with those.
 
@@ -52,6 +55,9 @@ And activate this virtualenv
 Now always activate your environment before building. To deactivate, you can do:
 
     deactivate
+
+If your linux is package based and doesn't have current versions of
+the tools, it is best to install them in the virtual env too.
 
 You can install all tools in one go via the REQUIREMENTS.txt here in the root of this repo:
 
