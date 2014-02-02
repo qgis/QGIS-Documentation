@@ -931,6 +931,19 @@ as -->` to define the name of the output file, its format and CRS (see Section
 :ref:`label_legend`). It is also possible to specify OGR creation options
 within the dialog.
 
+Paste into new layer
+....................
+
+Features that are on the clipboard may be pasted into a new
+layer.  Make a layer editible.  Select some features, copy them to the
+clipboard and then paste into new a new layer using
+:menuselection:`Edit --> Paste Features as` and choose
+:menuselection:`New vector layer` or :menuselection:`New memory
+layer`.
+
+This applies to features selected and copied within |qg| and
+also features from another source defined using Well Known Text (WKT).
+
 .. index:: Non_Spatial_Attribute_Tables
 
 Working with non spatial attribute tables
