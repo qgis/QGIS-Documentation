@@ -295,7 +295,7 @@ following functionalities (see figure_composer_4_):
    Map Item properties Tab |nix|
 
 * The **Preview** area allows to define the preview modes 'Rectangle', 'Cache'
-  and 'Render', as described above. If you change the view on the |qg| map canvas by zooming or panning or changing
+  and 'Render', as described above. If you change the view on the |qg| map canvas by changing
   vector or raster properties, you can update the print composer view selecting the
   map element in the print composer and clicking the **[Update preview]** button.
 * The field :guilabel:`Scale` |selectnumber| sets a manual scale.
@@ -328,7 +328,7 @@ functionalities (see Figure figure_composer_5_):
 * The **Map extent** area allow to specify the map extent using Y and X min/max
   values or clicking the **[Set to map canvas extent]** button.
 
-If you change the view on the |qg| map canvas by zooming or panning or changing
+If you change the view on the |qg| map canvas by changing
 vector or raster properties, you can update the print composer view selecting
 the map element in the print composer and clicking the **[Update preview]** button
 in the map :guilabel:`Item Properties` tab (see Figure figure_composer_2_).
