@@ -399,56 +399,53 @@ that they are predefined.
 
 For the purpose of this exercise, the OSM layers which we are interested in are
 :kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
-the data we need in order to produce the :kbd:`houses`, :kbd:`schools`,
-:kbd:`restaurants` and :kbd:`residential` layers. The :kbd:`lines` layer
-contains the roads dataset.
+the data we need in order to produce the :kbd:`houses`, :kbd:`schools` and
+:kbd:`restaurants` layers. The :kbd:`lines` layer contains the roads dataset.
 
 The :guilabel:`Query Builder` is found in the layer properties:
 
-  .. image:: /static/training_manual/create_vector_data/query_builder.png
+  .. image:: /static/training_manual/vector_analysis/query_builder.png
      :align: center
 
 Using the :guilabel:`Query Builder` against the :kbd:`multipolygon` layer,
 create the following queries for the :kbd:`houses`, :kbd:`schools`,
 :kbd:`restaurants` and :kbd:`residential` layers:
 
-  .. image:: /static/training_manual/create_vector_data/houses_query.png
+  .. image:: /static/training_manual/vector_analysis/houses_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/schools_query.png
+  .. image:: /static/training_manual/vector_analysis/schools_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/restaurants_query.png
+  .. image:: /static/training_manual/vector_analysis/restaurants_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/residential_query.png
-     :align: center
+Once you have entered each query, click :guilabel:`OK`. You'll see that the map
+updates to show only the data you have selected. Since you need to use again
+the :kbd:`multipolygon` data from the OSM dataset, at this point, you can use one of
+the following methods:
+
+* Rename the filtered OSM layer and re-import the layer from :kbd:`osm_data.osm`, OR
+* Duplicate the filtered layer, rename the copy, clear the query and create your
+  new query in the :guilabel:`Query Builder`.
 
 .. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
     coverage in your area - as in ours - may not be complete. In our test
     region, it is therefore more accurate to *exclude* all buildings which are
     defined as anything other than :kbd:`house`. You may decide to
-    simply include buildings which are defined as :kbd:`house`.
+    simply include buildings which are defined as :kbd:`house` and all other
+    values that have not a clear meaning like :kbd:`yes`.
 
 To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
 layer:
 
-  .. image:: /static/training_manual/create_vector_data/roads_query.png
+  .. image:: /static/training_manual/vector_analysis/roads_query.png
      :align: center
 
-Once you have entered each query, click :guilabel:`OK`. You'll see that the map
-updates to show only the data you have selected (together with any other rows
-you may have already created). At this point, you can use one of the following
-methods:
-
-* Rename the filtered OSM layer and re-import the layer from
-  :kbd:`osm_data.osm`, OR
-* Duplicate the filtered layer, rename the copy, clear the query and create your
-  new query in the :guilabel:`Query Builder`.
 
 You should end up with a map which looks similar to the following:
 
-  .. image:: /static/training_manual/create_vector_data/osm_queries_result.png
+  .. image:: /static/training_manual/vector_analysis/osm_queries_result.png
      :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-1>`
