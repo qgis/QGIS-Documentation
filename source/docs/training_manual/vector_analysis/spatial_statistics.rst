@@ -14,8 +14,9 @@ tools.
 |basic| |FA| Create a Test Dataset
 -------------------------------------------------------------------------------
 
-In order to get a point dataset to work with, we'll need a point dataset. In
-order to mimic a real dataset, let's create a random set of points.
+For this lesson, we'll need a point dataset.
+Although we could use data provided by OSM, for the purpose of this exercise
+we're going to create a random points dataset.
 
 To do so, you'll need a polygon dataset defining the extents of the area you
 want to create the points in.
@@ -23,34 +24,31 @@ want to create the points in.
 We'll use the area covered by streets.
 
 * Create a new empty map.
-* Add the :kbd:`roads_33S` layer from the :kbd:`exercise_data/projected_data`
-  directory, as well as the :kbd:`srtm_41_19.tif` raster found in
-  :kbd:`exercise_data/raster/SRTM/`.
+* Add your :kbd:`roads_34S` shapefile to the map, as well as the
+  :kbd:`srtm_41_19.tif` raster found in :kbd:`exercise_data/raster/SRTM/`.
 * Use the :guilabel:`Convex hull(s)` tool (available under
   :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
   enclosing all the roads:
 
-.. image:: /static/training_manual/vector_analysis/059.png
+.. image:: /static/training_manual/vector_analysis/roads_hull_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`roads_hull.shp`.
-* Add it to the TOC (:guilabel:`Layers list`) when prompted.
 
 Creating random points
 ...............................................................................
 
-* Create random points in this area using the tool at :menuselection:`Vector
-  --> Research Tools --> Random points`:
+* Create random points within this area using the tool at
+  :menuselection:`Vector --> Research Tools --> Random points`:
 
-.. image:: /static/training_manual/vector_analysis/060.png
+.. image:: /static/training_manual/vector_analysis/random_points_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
-* Add it to the TOC (:guilabel:`Layers list`) when prompted:
 
-.. image:: /static/training_manual/vector_analysis/061.png
+.. image:: /static/training_manual/vector_analysis/random_points_result.png
    :align: center
 
 Sampling the data
@@ -60,14 +58,21 @@ Sampling the data
   :guilabel:`Point sampling tool` plugin.
 * Refer ahead to the module on plugins if necessary.
 * Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin
-  Installer` and you will find the plugin.
-* Note that it is in a third-party repository at time of writing, so you'll
-  need to have third-party repositories enabled.
+  Installer` and you will find the plugin:
+
+.. image:: /static/training_manual/vector_analysis/point_sampling_plugin.png
+   :align: center
+
 * As soon as it has been activated with the :guilabel:`Plugin Manager`, you
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
-  sampling tool`:
+  sampling tool` or via the toolbar button:
 
-.. image:: /static/training_manual/vector_analysis/063.png
+.. image:: /static/training_manual/vector_analysis/point_sampling_button.png
+   :align: center
+
+* Open the plugin's dialog:
+
+.. image:: /static/training_manual/vector_analysis/sampling_plugin_dialog.png
    :align: center
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
@@ -153,7 +158,7 @@ Median
 
 * Create a new point layer in the same projection as the other datasets
   (:kbd:`WGS 84 / UTM 33S`).
-* Enter edit mode and digitize three point somewhere among the other points.
+* Enter edit mode and digitize three points somewhere among the other points.
 * Alternatively, use the same random point generation method as before, but
   specify only three points.
 * Save your new layer as :kbd:`distance_points.shp`.
