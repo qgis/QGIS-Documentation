@@ -19,7 +19,7 @@ activate them first.
 To activate the :guilabel:`Road Graph` plugin:
 
 * Start the :guilabel:`Plugin Manager` by clicking on the QGIS main window's
-  menu item :menuselection:`Plugins --> Manage Plugins`. A dialog appears.
+  menu item :menuselection:`Plugins --> Manage and Install Plugins...`. A dialog appears.
 * Select the plugin like this:
 
 .. image:: /static/training_manual/vector_analysis/select_road_graph_plugin.png
@@ -49,7 +49,7 @@ Since so many different configurations are possible when analyzing networks,
 the plugin doesn't assume anything before you've set it up. This means that it
 won't do anything at all if you don't set it up first.
 
-* Click on the menu item :menuselection:`Vecotr --> Road graph --> settings`. A
+* Click on the menu item :menuselection:`Vector --> Road graph --> settings`. A
   dialog will appear.
 * Make sure it's set up like this (use defaults unless otherwise specified):
 
@@ -100,7 +100,7 @@ reasonable distance:
 
 * Add your :kbd:`restaurants_34S` layer to the map (extract it from your
   :kbd:`analyis` map if necessary).
-* Open the attribute table for the :guilabel:`roads_subset` layer and enter
+* Open the attribute table for the :guilabel:`roads_34S` layer and enter
   edit mode.
 * Add a new column with the name :kbd:`SPEED`, and give it the type
  :guilabel:`Whole number (integer)` with a width of :kbd:`3`.

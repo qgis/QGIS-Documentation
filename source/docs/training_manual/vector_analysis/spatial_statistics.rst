@@ -14,9 +14,8 @@ tools.
 |basic| |FA| Create a Test Dataset
 -------------------------------------------------------------------------------
 
-For this lesson, we'll need a point dataset.
-Although we could use data provided by OSM, for the purpose of this exercise
-we're going to create a random points dataset.
+In order to get a point dataset to work with, we'll need a point dataset. In
+order to mimic a real dataset, let's create a random set of points.
 
 To do so, you'll need a polygon dataset defining the extents of the area you
 want to create the points in.
@@ -24,31 +23,34 @@ want to create the points in.
 We'll use the area covered by streets.
 
 * Create a new empty map.
-* Add your :kbd:`roads_34S` shapefile to the map, as well as the
-  :kbd:`srtm_41_19.tif` raster found in :kbd:`exercise_data/raster/SRTM/`.
+* Add the :kbd:`roads_33S` layer from the :kbd:`exercise_data/projected_data`
+  directory, as well as the :kbd:`srtm_41_19.tif` raster (elevation data) found in
+  :kbd:`exercise_data/raster/SRTM/`.
 * Use the :guilabel:`Convex hull(s)` tool (available under
   :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
   enclosing all the roads:
 
-.. image:: /static/training_manual/vector_analysis/roads_hull_setup.png
+.. image:: /static/training_manual/vector_analysis/059.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`roads_hull.shp`.
+* Add it to the TOC (:guilabel:`Layers list`) when prompted.
 
 Creating random points
 ...............................................................................
 
-* Create random points within this area using the tool at
-  :menuselection:`Vector --> Research Tools --> Random points`:
+* Create random points in this area using the tool at :menuselection:`Vector
+  --> Research Tools --> Random points`:
 
-.. image:: /static/training_manual/vector_analysis/random_points_setup.png
+.. image:: /static/training_manual/vector_analysis/060.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
+* Add it to the TOC (:guilabel:`Layers list`) when prompted:
 
-.. image:: /static/training_manual/vector_analysis/random_points_result.png
+.. image:: /static/training_manual/vector_analysis/061.png
    :align: center
 
 Sampling the data
@@ -57,29 +59,24 @@ Sampling the data
 * To create a sample dataset from the raster, you'll need to use the
   :guilabel:`Point sampling tool` plugin.
 * Refer ahead to the module on plugins if necessary.
-* Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin
-  Installer` and you will find the plugin:
-
-.. image:: /static/training_manual/vector_analysis/point_sampling_plugin.png
-   :align: center
-
+* Search for the phrase :kbd:`point sampling` in the :guilabel:`Plugin --> Manage
+  and Install Plugins...` and you will find the plugin.
 * As soon as it has been activated with the :guilabel:`Plugin Manager`, you
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
-  sampling tool` or via the toolbar button:
+  sampling tool`:
 
-.. image:: /static/training_manual/vector_analysis/point_sampling_button.png
-   :align: center
-
-* Open the plugin's dialog:
-
-.. image:: /static/training_manual/vector_analysis/sampling_plugin_dialog.png
+.. image:: /static/training_manual/vector_analysis/063.png
    :align: center
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
   the SRTM raster as the band to get values from.
+* Make sure that "Add created layer to the TOC" is checked.
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_samples.shp`.
-* Add it to the TOC (:guilabel:`Layers list`) when prompted.
+
+Now you can check the sampled data from the raster file in the attributes
+table of the :guilabel:`random_samples` layer, they will be in a column
+:kbd:`named srtm_41_19`.
 
 A possible sample layer is shown here:
 
@@ -100,6 +97,8 @@ Now get the basic statistics for this layer.
   menu entry.
 * In the dialog that appears, specify the :guilabel:`random_samples` layer as
   the source.
+* Make sure that the :menuselection:`Target field` is set to :guilabel:`srtm_41_19`
+  which is the field you will calculate statistics for.
 * Click :guilabel:`OK`. You'll get results like this:
 
 .. image:: /static/training_manual/vector_analysis/062.png
@@ -111,6 +110,7 @@ Now get the basic statistics for this layer.
 .. image:: /static/training_manual/vector_analysis/065.png
    :align: center
 
+   
 * Close the plugin dialog when done.
 
 To understand the statistics above, refer to this definition list:
@@ -158,23 +158,10 @@ Median
 
 * Create a new point layer in the same projection as the other datasets
   (:kbd:`WGS 84 / UTM 33S`).
-* Enter edit mode and digitize three points somewhere among the other points.
+* Enter edit mode and digitize three point somewhere among the other points.
 * Alternatively, use the same random point generation method as before, but
   specify only three points.
 * Save your new layer as :kbd:`distance_points.shp`.
-
-In order to compare layers using statistical tools, a layer needs to have a
-unique ID field. Let's create one for your :guilabel:`random_samples` layer.
-
-* Open the attribute table for this layer.
-* Enter edit mode.
-* Open the raster calculator.
-* Create a new field called :kbd:`id`, with an integer field type and a width
-  of :kbd:`3`.
-* Look in the :guilabel:`Function list` under the category :guilabel:`Record`,
-  and double-click on the item :guilabel:`$id`, so that it appears in the
-  :guilabel:`Expression` field below.
-* Click :guilabel:`OK` to generate a unique ID for this layer.
 
 To generate a distance matrix using these points:
 
@@ -186,6 +173,8 @@ To generate a distance matrix using these points:
 .. image:: /static/training_manual/spatial_statistics/005.png
    :align: center
 
+   
+* Save the result as :kbd:`distance_matrix.csvs`.
 * Click :guilabel:`OK` to generate the distance matrix.
 * Open it in a spreadsheet program to see the results. Here is an example:
 
@@ -245,15 +234,18 @@ way to demonstrate this in QGIS is via the image histogram, available in the
 :guilabel:`Layer Properties` dialog of any image layer.
 
 * In your :guilabel:`Layers list`, right-click on the SRTM DEM layer.
-* Select :menuselection:`Layer Properties`.
-* Choose the tab :guilabel:`Histogram`. You will see a graph describing the
-  frequency of values in the image.
+* Select :menuselection:`Properties`.
+* Choose the tab :guilabel:`Histogram`. You may need to click on the
+  :guilabel:`Compute Histogram` button to generate the graphic. You will see a
+  graph describing the frequency of values in the image.
 * You can export it as an image:
 
 .. image:: /static/training_manual/spatial_statistics/008.png
    :align: center
 
-* Look at the metadata for this layer (under the :guilabel:`Metadata` tab).
+   
+* Select the :guilabel:`Metadata` tab, you can see more detailed information
+  inside the :guilabel:`Properties` box.
 
 The mean value is :kbd:`332.8`, and the maximum value is :kbd:`1699`! But those
 values don't show up on the histogram. Why not? It's because there are so few
@@ -278,8 +270,7 @@ To start, launch the :guilabel:`Grid (Interpolation)` tool by clicking on the
 :menuselection:`Raster --> Analysis --> Grid (Interpolation)` menu item.
 
 * In the :guilabel:`Input file` field, select :kbd:`random_samples`.
-* Check the :guilabel:`Z Field` box, and select the value field (not the
-  :kbd:`id` field).
+* Check the :guilabel:`Z Field` box, and select the field :kbd:`srtm_41_19`.
 * Set the :guilabel:`Output file` location to
   :kbd:`exercise_data/spatial_statistics/interpolation.tif`.
 * Check the :guilabel:`Algorithm` box and select :guilabel:`Inverse distance to
@@ -337,74 +328,42 @@ Here is an example of what it looks like with :kbd:`10 000` sample points:
    points if you are not working on a fast computer, as the size of the sample
    dataset requires a lot of processing time.
 
-|moderate| |FA| Installing SEXTANTE
+|moderate| |FA| Additional Spatial Analysis Tools
 -------------------------------------------------------------------------------
 
-The SEXTANTE plugin allows you to access various plugin tools from within a
-single interface. It is standard in QGIS starting with version 1.8. If you're
-unsure whether you have SEXTANTE, check if it's marked as installed in your
-:guilabel:`Plugin Installer`.
+Originally a separate project and then accessible as a plugin, the SEXTANTE software
+has been added to QGIS as a core functionality from version 2.0. You can find it as
+a new QGIS menu with its new name menuselection:`Processing` from where you can
+access a rich toolbox of spatial analysis tools allows you to access various plugin
+tools from within a single interface.
 
-Assuming you have it installed (and enabled in the :guilabel:`Plugin Manager`):
-
-* Activate SEXTANTE by enabling the :menuselection:`View --> Panels -->
-  SEXTANTE Toolbox` menu entry. The toolbox looks like this:
+* Activate this set of tools by enabling the :menuselection:`Processing --> Toolbox`
+menu entry. The toolbox looks like this:
 
 .. image:: /static/training_manual/spatial_statistics/001.png
    :align: center
 
 You will probably see it docked in QGIS to the right of the map. Note that the
-tools listed here are links to the actual tools. SEXTANTE doesn't have many
-tools of its own. To have access to spatial statistics tools, you will need to
-install the SAGA GIS program.
+tools listed here are links to the actual tools. Some of them are SEXTANTE's
+own algorithms and other are links to tools that are accessed from external 
+applications such as GRASS, SAGA or Orfeo Toolbox. This external applications 
+should be installed along with QGIS so you are already able to make use of them.
+In case that you need to change the configuration of the Pocessing tools you,
+for example to update to a new version of one of the external aplications, you
+can access its setting from  :menuselection:`Processing --> Toolbox --> Options
+and configurations`.
 
-|moderate| |FA| Installing SAGA
--------------------------------------------------------------------------------
-
-SAGA is a GIS program with many useful analysis functions. To make use of these
-functions in QGIS via SEXTANTE, you need to install SAGA first.
-
-On Windows
-...............................................................................
-
-Included in your course materials you will find the SAGA installer for Windows.
-
-* Start the program and follow its instructions to install SAGA on your Windows
-  system. Take note of the path you are installing it under!
-
-Once you have installed SAGA, you'll need to configure SEXTANTE to find the
-path it was installed under.
-
-* Click on the menu entry :menuselection:`Analysis --> SAGA options and
-  configuration`.
-* In the dialog that appears, expand the :guilabel:`SAGA` item and look for
-  :guilabel:`SAGA folder`. Its value will be blank.
-* In this space, insert the path where you installed SAGA.
-
-On Ubuntu
-...............................................................................
-
-* Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter
-  the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may
-  first need to add a SAGA repository to your sources.)
-* QGIS will find SAGA automatically, although you may need to restart QGIS if
-  it doesn't work straight away.
-
-After installing
-...............................................................................
-
-Now that you have installed and configured SAGA, its functions will become
-accessible to you.
 
 |moderate| |FA| Spatial Point Pattern Analysis
 -------------------------------------------------------------------------------
 
 For a simple indication of the spatial distribution of points in the
 :guilabel:`random_samples` dataset, we can make use of SAGA's
-:guilabel:`Spatial Point Pattern Analysis` tool.
+:guilabel:`Spatial Point Pattern Analysis` tool via the :guilabel:`Processing Toolbox`
+you just opened.
 
-* In the :guilabel:`SEXTANTE Toolbox`, find this tool under
-  :menuselection:`SAGA --> Geostatistics --> Spatial Point Pattern Analysis`.
+* In the :guilabel:`Processing Toolbox`, search for this tool  :guilabel:`Spatial
+Point Pattern Analysis`.
 * Double-click on it to open its dialog.
 * It produces three outputs, and so will require three output paths.
 * Save these three outputs under :kbd:`exercise_data/spatial_statistics/`,
@@ -430,8 +389,8 @@ Often, the output of an algorithm will not be a shapefile, but rather a table
 summarizing the statistical properties of a dataset. One of these is the
 :guilabel:`Minimum Distance Analysis` tool.
 
-* Find this tool in the :guilabel:`SEXTANTE Toolbox` as :menuselection:`SAGA
-  --> Geostatistics --> Minimum Distance Analysis`.
+* Find this tool in the :guilabel:`Processing Toolbox` as :guilabel:`Minimum
+Distance Analysis`.
 
 It does not require any other input besides specifying the vector point dataset
 to be analyzed.
