@@ -60,10 +60,10 @@ available on the Internet. One of these is `terrestris
   .. image:: /static/training_manual/online_resources/new_connection_listed.png
      :align: center
 
-* Click :guilabel:`Connect`.In the list below, you should now see these
+* Click :guilabel:`Connect`. In the list below, you should now see these
   new entries loaded:
 
-  .. image:: /static/training_manual/online_resources/new_wsm_entries.png
+  .. image:: /static/training_manual/online_resources/new_wms_entries.png
      :align: center
 
   These are all the layers hosted by this WMS server.

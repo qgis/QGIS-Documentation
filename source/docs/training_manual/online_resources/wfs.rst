@@ -44,7 +44,7 @@ It may take a while to load the layer. When it has loaded, it will appear in
 the map. Here it is over the outlines of Antarctica (available on the same
 server, and by the name of :guilabel:`antarctica_country_border`):
 
-.. image:: /static/training_manual/online_resources/022.png
+.. image:: /static/training_manual/online_resources/antarctica_border.png
    :align: center
 
 How is this different from having a WMS layer? That will become obvious when
@@ -53,13 +53,13 @@ you see the layers' attributes.
 * Open the :guilabel:`south_poles_wfs` layer's attribute table. You should see
   this:
 
-.. image:: /static/training_manual/online_resources/023.png
+.. image:: /static/training_manual/online_resources/poles_attribute_table.png
    :align: center
 
-Since the points have attributes, doesn't that mean we can label them? Yes we
-can, as well as changing their symbology. Here's an example:
+Since the points have attributes, we are able to label them,
+as well as change their symbology. Here's an example:
 
-.. image:: /static/training_manual/online_resources/024.png
+.. image:: /static/training_manual/online_resources/labelling_example.png
    :align: center
 
 * Add labels to your layer to take advantage of the attribute data in this
@@ -79,7 +79,7 @@ very long time to load because of this.
 |moderate| |FA| Querying a WFS Layer
 -------------------------------------------------------------------------------
 
-Although it is, of course, possible to query a WFS layer after having loaded
+Although it is of possible to query a WFS layer after having loaded
 it, it's often more efficient to query it before you load it. That way, you're
 only requesting the features you want, meaning that you use far less bandwidth.
 
@@ -101,27 +101,27 @@ from the server.
 * In the :guilabel:`Add WFS Layer ...` dialog, connect to the server we used
   before and you should see the list of available layers.
 * Double-click next to the :guilabel:`countries ...` layer in the
-  :guilabel:`Filter` field:
+  :guilabel:`Filter` field, or click :guilabel:`Build query`:
 
-  .. image:: /static/training_manual/online_resources/025.png
+  .. image:: /static/training_manual/online_resources/select_country_filter.png
      :align: center
 
 * In the dialog that appears, build the query :kbd:`"Countryeng" = 'South
   Africa'`:
 
-  .. image:: /static/training_manual/online_resources/026.png
+  .. image:: /static/training_manual/online_resources/country_sa_builder.png
      :align: center
 
 * It will appear as the :guilabel:`Filter` value:
 
-  .. image:: /static/training_manual/online_resources/027.png
+  .. image:: /static/training_manual/online_resources/country_filter_enabled.png
      :align: center
 
-* Click :guilabel:`Apply` with the :guilabel:`countries` layer selected as
+* Click :guilabel:`Add` with the :guilabel:`countries` layer selected as
   above. Only the country with the :kbd:`Countryeng` value of :kbd:`South
   Africa` will load from that layer:
 
-  .. image:: /static/training_manual/online_resources/028.png
+  .. image:: /static/training_manual/online_resources/antarctica_sa.png
      :align: center
 
 You don't have to, but if you tried both methods, you'll notice that this is a
