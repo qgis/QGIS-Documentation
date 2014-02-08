@@ -642,7 +642,7 @@ To demonstrate:
   the Buffer(s) dialog.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/009.png
+  .. image:: /static/training_manual/complete_analysis/suitable_terrain_buffer.png
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
@@ -660,7 +660,7 @@ Your results will look like this:
   Research Tools --> Select by location`).
 * Set up like this:
 
-  .. image:: /static/training_manual/complete_analysis/011.png
+  .. image:: /static/training_manual/complete_analysis/select_by_location.png
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
