@@ -14,8 +14,8 @@ tools.
 |basic| |FA| Create a Test Dataset
 -------------------------------------------------------------------------------
 
-In order to get a point dataset to work with, we'll need a point dataset. In
-order to mimic a real dataset, let's create a random set of points.
+In order to get a point dataset to work with, we'll create a random set of
+points.
 
 To do so, you'll need a polygon dataset defining the extents of the area you
 want to create the points in.
@@ -30,7 +30,7 @@ We'll use the area covered by streets.
   :menuselection:`Vector --> Geoprocessing Tools`) to generate an area
   enclosing all the roads:
 
-.. image:: /static/training_manual/vector_analysis/059.png
+.. image:: /static/training_manual/vector_analysis/roads_hull_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
@@ -43,14 +43,14 @@ Creating random points
 * Create random points in this area using the tool at :menuselection:`Vector
   --> Research Tools --> Random points`:
 
-.. image:: /static/training_manual/vector_analysis/060.png
+.. image:: /static/training_manual/vector_analysis/random_points_setup.png
    :align: center
 
 * Save the output under :kbd:`exercise_data/spatial_statistics/` as
   :kbd:`random_points.shp`.
 * Add it to the TOC (:guilabel:`Layers list`) when prompted:
 
-.. image:: /static/training_manual/vector_analysis/061.png
+.. image:: /static/training_manual/vector_analysis/random_points_result.png
    :align: center
 
 Sampling the data
@@ -65,7 +65,7 @@ Sampling the data
   will find the tool under :menuselection:`Plugins --> Analyses --> Point
   sampling tool`:
 
-.. image:: /static/training_manual/vector_analysis/063.png
+.. image:: /static/training_manual/vector_analysis/sampling_plugin_dialog.png
    :align: center
 
 * Select :guilabel:`random_points` as the layer containing sampling points, and
@@ -80,7 +80,7 @@ table of the :guilabel:`random_samples` layer, they will be in a column
 
 A possible sample layer is shown here:
 
-.. image:: /static/training_manual/vector_analysis/064.png
+.. image:: /static/training_manual/vector_analysis/random_samples_result.png
    :align: center
 
 The sample points are classified by their value such that darker points are at
@@ -101,16 +101,15 @@ Now get the basic statistics for this layer.
   which is the field you will calculate statistics for.
 * Click :guilabel:`OK`. You'll get results like this:
 
-.. image:: /static/training_manual/vector_analysis/062.png
+.. image:: /static/training_manual/vector_analysis/basic_statistics_results.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
    a (colon :kbd:`:`) separator.
 
-.. image:: /static/training_manual/vector_analysis/065.png
+.. image:: /static/training_manual/vector_analysis/paste_to_spreadsheet.png
    :align: center
 
-   
 * Close the plugin dialog when done.
 
 To understand the statistics above, refer to this definition list:
@@ -170,15 +169,14 @@ To generate a distance matrix using these points:
   :guilabel:`random_samples` layer as the target layer.
 * Set it up like this:
 
-.. image:: /static/training_manual/spatial_statistics/005.png
+.. image:: /static/training_manual/vector_analysis/distance_matrix_setup.png
    :align: center
-
    
-* Save the result as :kbd:`distance_matrix.csvs`.
+* Save the result as :kbd:`distance_matrix.csv`.
 * Click :guilabel:`OK` to generate the distance matrix.
 * Open it in a spreadsheet program to see the results. Here is an example:
 
-.. image:: /static/training_manual/spatial_statistics/006.png
+.. image:: /static/training_manual/vector_analysis/distance_matrix_example.png
    :align: center
 
 |basic| |FA| Nearest Neighbor Analysis
@@ -192,7 +190,7 @@ To do a nearest neighbor analysis:
   click :guilabel:`OK`.
 * The results will appear in the dialog's text window, for example:
 
-.. image:: /static/training_manual/spatial_statistics/007.png
+.. image:: /static/training_manual/vector_analysis/nearest_neighbour_example.png
    :align: center
 
 .. note:: You can copy and paste the results into a spreadsheet. The data uses
@@ -223,7 +221,7 @@ create the random sample.
 As you can see from the example below, the mean coordinates and the center of
 the study area (in orange) don't necessarily coincide:
 
-.. image:: /static/training_manual/vector_analysis/067.png
+.. image:: /static/training_manual/vector_analysis/polygon_centroid_mean.png
    :align: center
 
 |basic| |FA| Image Histograms
@@ -240,9 +238,8 @@ way to demonstrate this in QGIS is via the image histogram, available in the
   graph describing the frequency of values in the image.
 * You can export it as an image:
 
-.. image:: /static/training_manual/spatial_statistics/008.png
+.. image:: /static/training_manual/vector_analysis/histogram_export.png
    :align: center
-
    
 * Select the :guilabel:`Metadata` tab, you can see more detailed information
   inside the :guilabel:`Properties` box.
@@ -288,7 +285,7 @@ Here's a comparison of the original dataset (left) to the one constructed from
 our sample points (right). Yours may look different due to the random nature of
 the location of the sample points.
 
-.. image:: /static/training_manual/spatial_statistics/009.png
+.. image:: /static/training_manual/vector_analysis/interpolation_comparison.png
    :align: center
 
 As you can see, 100 sample points aren't really enough to get a detailed
@@ -303,7 +300,7 @@ can see that the sample dataset is not representative of the terrain.
 
 * Use the processes shown above to create a new set of :kbd:`1000` random points.
 * Use these points to sample the original DEM.
-* Use the :guilabel:`Spatial Interpolation` tool on this new dataset as above.
+* Use the :guilabel:`Grid (Interpolation)` tool on this new dataset as above.
 * Set the output filename to :kbd:`interpolation_1000.tif`, with
   :guilabel:`Power` and :guilabel:`Smoothing` set to :kbd:`5.0` and :kbd:`2.0`,
   respectively.
@@ -311,7 +308,7 @@ can see that the sample dataset is not representative of the terrain.
 The results (depending on the positioning of your random points) will look more
 or less like this:
 
-.. image:: /static/training_manual/spatial_statistics/010.png
+.. image:: /static/training_manual/vector_analysis/interpolation_comparison_1000.png
    :align: center
 
 The border shows the :guilabel:`roads_hull` layer (which represents the
@@ -321,7 +318,7 @@ the much greater density of sample points.
 
 Here is an example of what it looks like with :kbd:`10 000` sample points:
 
-.. image:: /static/training_manual/spatial_statistics/011.png
+.. image:: /static/training_manual/vector_analysis/011.png
    :align: center
 
 .. note:: It's not recommended that you try doing this with 10 000 sample
@@ -332,26 +329,26 @@ Here is an example of what it looks like with :kbd:`10 000` sample points:
 -------------------------------------------------------------------------------
 
 Originally a separate project and then accessible as a plugin, the SEXTANTE software
-has been added to QGIS as a core functionality from version 2.0. You can find it as
-a new QGIS menu with its new name menuselection:`Processing` from where you can
+has been added to QGIS as a core function from version 2.0. You can find it as
+a new QGIS menu with its new name :menuselection:`Processing` from where you can
 access a rich toolbox of spatial analysis tools allows you to access various plugin
 tools from within a single interface.
 
 * Activate this set of tools by enabling the :menuselection:`Processing --> Toolbox`
 menu entry. The toolbox looks like this:
 
-.. image:: /static/training_manual/spatial_statistics/001.png
+.. image:: /static/training_manual/vector_analysis/sextante_toolbox.png
    :align: center
 
 You will probably see it docked in QGIS to the right of the map. Note that the
 tools listed here are links to the actual tools. Some of them are SEXTANTE's
-own algorithms and other are links to tools that are accessed from external 
-applications such as GRASS, SAGA or Orfeo Toolbox. This external applications 
-should be installed along with QGIS so you are already able to make use of them.
-In case that you need to change the configuration of the Pocessing tools you,
-for example to update to a new version of one of the external aplications, you
-can access its setting from  :menuselection:`Processing --> Toolbox --> Options
-and configurations`.
+own algorithms and others are links to tools that are accessed from external
+applications such as GRASS, SAGA or the Orfeo Toolbox. This external applications
+are installed with QGIS so you are already able to make use of them.
+In case you need to change the configuration of the Processing tools or,
+for example, you need to update to a new version of one of the external
+applications, you can access its setting from
+:menuselection:`Processing --> Options and configurations`.
 
 
 |moderate| |FA| Spatial Point Pattern Analysis
@@ -359,13 +356,68 @@ and configurations`.
 
 For a simple indication of the spatial distribution of points in the
 :guilabel:`random_samples` dataset, we can make use of SAGA's
-:guilabel:`Spatial Point Pattern Analysis` tool via the :guilabel:`Processing Toolbox`
-you just opened.
+:guilabel:`Spatial Point Pattern Analysis` tool via the
+:guilabel:`Processing Toolbox` you just opened.
 
 * In the :guilabel:`Processing Toolbox`, search for this tool  :guilabel:`Spatial
-Point Pattern Analysis`.
+  Point Pattern Analysis`.
 * Double-click on it to open its dialog.
-* It produces three outputs, and so will require three output paths.
+
+Installing SAGA
+................................................................................
+
+.. note:: If SAGA is not installed on your system, the plugin's dialog will
+  inform you that the dependency is missing. If this is not the case, you can
+  skip these steps.
+
+On Windows
+...............................................................................
+
+Included in your course materials you will find the SAGA installer for Windows.
+
+* Start the program and follow its instructions to install SAGA on your Windows
+  system. Take note of the path you are installing it under!
+
+Once you have installed SAGA, you'll need to configure SEXTANTE to find the
+path it was installed under.
+
+* Click on the menu entry :menuselection:`Analysis --> SAGA options and
+  configuration`.
+* In the dialog that appears, expand the :guilabel:`SAGA` item and look for
+  :guilabel:`SAGA folder`. Its value will be blank.
+* In this space, insert the path where you installed SAGA.
+
+On Ubuntu
+...............................................................................
+
+* Search for :guilabel:`SAGA GIS` in the :guilabel:`Software Center`, or enter
+  the phrase :kbd:`sudo apt-get install saga-gis` in your terminal. (You may
+  first need to add a SAGA repository to your sources.)
+* QGIS will find SAGA automatically, although you may need to restart QGIS if
+  it doesn't work straight away.
+
+On Mac
+................................................................................
+
+Homebrew users can install SAGA with this command:
+
+* brew install saga-core
+
+If you do not use Homebrew, please follow the instructions here:
+
+http://sourceforge.net/apps/trac/saga-gis/wiki/Compiling%20SAGA%20on%20Mac%20OS%20X
+
+After installing
+................................................................................
+
+Now that you have installed and configured SAGA, its functions will become
+accessible to you.
+
+Using SAGA
+................................................................................
+
+* Open the SAGA dialog.
+* SAGA produces three outputs, and so will require three output paths.
 * Save these three outputs under :kbd:`exercise_data/spatial_statistics/`,
   using whatever file names you find appropriate.
 
@@ -401,7 +453,7 @@ to be analyzed.
 * Select it, then open its attribute table. Although the figures may vary, your
   results will be in this format:
 
-.. image:: /static/training_manual/spatial_statistics/004.png
+.. image:: /static/training_manual/vector_analysis/min_distance_results.png
    :align: center
 
 |IC|

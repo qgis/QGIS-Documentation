@@ -26,9 +26,9 @@ iv. Present the Results
 
 Let's start off the process by deciding on a problem to solve. For example,
 you are an estate agent and you are looking for a residential property in
-Swellendam for clients who have the following criteria:
+|majorUrbanName| for clients who have the following criteria:
 
-#. It needs to be in Swellendam.
+#. It needs to be in |majorUrbanName|.
 #. It must be within reasonable driving distance of a school (say 1km).
 #. It must be more than 100m squared in size.
 #. Closer than 50m to a main road.
@@ -79,7 +79,8 @@ The data you just downloaded from OSM is in a geographic coordinate system, WGS8
 which uses latitude and longitude coordinates, as you know from the previous
 lesson. You also learnt that to calculate distances in meters, we need to work with
 a projected coordinate system. Start by setting your project's coordinate system to a
-suitable :guilabel:`CRS` for your data, in the case of Swellendam, :guilabel:`WGS 84 / UTM zone 34S`:
+suitable :guilabel:`CRS` for your data, in the case of |majorUrbanName|,
+:guilabel:`WGS 84 / UTM zone 34S`:
 
 * Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter
   the list to find :guilabel:`WGS 84 / UTM zone 34S`.

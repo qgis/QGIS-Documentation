@@ -70,9 +70,7 @@ Notice that there is one category that's empty:
 This empty category is used to color any objects which do not have a landuse
 value defined or which have a *NULL* value. It is important to keep this empty
 category so that areas with a *NULL* value are still represented on the map. You
-make like to change the color to more obviously represent a blank or *NULL* value.
-
-In our example, we have given the empty category a pale red color.
+may like to change the color to more obviously represent a blank or *NULL* value.
 
 Remember to save your map now so that you don't lose all your hard-earned
 changes!
@@ -127,6 +125,7 @@ have a size field, so we'll have to make one.
 * Enter edit mode by clicking this button:
 
 |edit|
+    :align: center
 
 * Add a new column with this button:
 
@@ -149,6 +148,7 @@ To solve this problem, we'll need to calculate the areas.
 * Open the field calculator:
 
 |mActionCalculateField|
+    :align: center
 
 You'll get this dialog:
 

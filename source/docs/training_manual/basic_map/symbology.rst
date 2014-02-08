@@ -298,7 +298,7 @@ rudimentary pre-classified data.
 * Create a new map and add only the :guilabel:`roads` dataset.
 * Apply the style :kbd:`advanced_levels_demo.qml` provided in
   :kbd:`exercise_data/styles`.
-* Zoom to the Swellendam area (the cluster of roads near the center of the
+* Zoom to the |majorUrbanName| area (the cluster of roads near the center of the
   layer).
 * Using symbol layers, ensure that the outlines of layers flow into one another
   as per the image below:

@@ -45,13 +45,13 @@ guidelines are as follows:
   text or credits from this work.
 * You may not redistribute this work under more restrictive permissions than
   those under which it was provided to you.
-* If you add a substantitive portion to the work and contribute it back to the
+* If you add a substantive portion to the work and contribute it back to the
   project (at least one complete module) you may add your name to the end of
   the authors list for this document (which will appear on the front page)
 * If you contribute minor changes and corrections you may add yourself to the 
   contributors list below.
 * If you translate this document in its entirety, you may add your name to the 
-  authors list in the form "Translated by Joe Blogs".
+  authors list in the form "Translated by Joe Bloggs".
 * If you sponsor a module or lesson, you may request the author to include an
   acknowledgement in the beginning of each lesson contributed, e.g.:
 
@@ -93,7 +93,7 @@ Authors
   sphinx theme used for this manual.
 * Horst Düster (horst.duester@kappasys.ch ) - Horst co-authored the PostgreSQL
   and PostGIS parts
-* Marcelle Sutton (marcelle@linfiniti.com) - Marcelle provided proof reading
+* Marcelle Sutton (marcelle@linfiniti.com) - Marcelle provided proof-reading
   and editorial advice during the creation of this work.
 
 Individual Contributors

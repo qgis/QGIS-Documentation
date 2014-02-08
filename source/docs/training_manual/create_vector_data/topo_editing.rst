@@ -35,7 +35,7 @@ snapping options:
 .. image:: /static/training_manual/create_vector_data/zoom_to.png
    :align: center
 
-* Digitize this new (fictional) are of the Bontebok National Park:
+* Digitize this new (fictional) area of the |largeLandUseArea|:
 
 .. image:: /static/training_manual/create_vector_data/new_park_area.png
    :align: center
@@ -144,8 +144,7 @@ boundaries.
 
 * Disable snapping for the landuse layer via the dialog you used earlier.
 * Now try using the :guilabel:`Add Ring` tool tool to create a gap in the
-  middle of the Bontebok National Park (or a landuse polygon of large area in
-  your dataset).
+  middle of the |largeLandUseArea|.
 * Delete your new feature by using the :guilabel:`Delete Ring` tool:
 
   |mActionDeleteRing|
@@ -175,7 +174,7 @@ this tool to create them.
   |mActionSelect|
 
 * Now try using the :guilabel:`Add Part` tool to add an outlying area to the
-  Bontebok National Park.
+  |largeLandUseArea|.
 * Delete your new feature by using the :guilabel:`Delete Part` tool:
 
   |mActionDeletePart|
@@ -193,7 +192,7 @@ This is the :guilabel:`Reshape Features` tool:
 
 It can add a bump to an existing feature. With this tool selected:
 
-* Left-click inside the Bontebok National Park (or your landuse area) to start
+* Left-click inside the |largeLandUseArea| to start
   drawing a polygon.
 * Draw a polygon with three corners, the last of which should be back inside the
   original polygon, forming an open-sided rectangle.
@@ -233,8 +232,7 @@ them both.
 
 * First, re-enable snapping for the :guilabel:`landuse` layer.
 
-We will use the tool to split a corner from the Bontebok National Park (or a
-landuse polygon of your choice).
+We will use the tool to split a corner from the |largeLandUseArea|.
 
 * Select the :guilabel:`Split Features` tool and click on a vertex to begin
   drawing a line. Click the vertex on the opposite side of the corner you wish

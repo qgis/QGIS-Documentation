@@ -323,7 +323,7 @@ of your feature, like this one:
 |moderate| *Topology: Add Part Tool*
 ...............................................................................
 
-* First select the Bontebok National Park:
+* First select the |largeLandUseArea|:
 
 .. image:: /static/training_manual/create_vector_data/park_selected.png
    :align: center
@@ -714,7 +714,7 @@ Your map should look like this (you may need to re-order the layers):
   .. image:: /static/training_manual/online_resources/add_bluemarble_layer.png
      :align: center
 
-* If you zoom into the Swellendam area, you'll notice that this dataset has a
+* If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
   low resolution:
 
 .. image:: /static/training_manual/online_resources/low_resolution_dataset.png
