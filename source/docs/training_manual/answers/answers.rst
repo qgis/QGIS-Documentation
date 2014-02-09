@@ -51,10 +51,13 @@ remember the names and functions of the screen elements.
 |basic| *Shapefiles*
 ...............................................................................
 
-There should be two layers on your map:
+There should be five layers on your map:
 
-* :guilabel:`places` and
-* :guilabel:`streets`.
+* :guilabel:`places`
+* :guilabel:`water`
+* :guilabel:`buildings`
+* :guilabel:`rivers` and
+* :guilabel:`roads`.
 
 :ref:`Back to text <backlink-vector-load-shapefiles-1>`
 

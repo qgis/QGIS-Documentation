@@ -26,31 +26,29 @@ setup for use in QGIS.
   the last step and open it.
 
 Now that you have configured your new database you will find that the entry in
-Browser tree has nothing underneath of it and the only thing you can do at this
-point is to delete the connection. This is of course because we havent added
-any tables to this database. Lets go ahead and do that.
+Browser tree has nothing underneath it and the only thing you can do at this
+point is to delete the connection. This is of course because we haven't added
+any tables to this database. Let's go ahead and do that.
 
 * Find the button to create a new layer and use the dropdown to create a new 
-  new Spatialite layer, or select :guilabel:`Layer --> New --> New Spatialite
-  Layer`. 
+  new Spatialite layer, or select
+  :guilabel:`Layer --> New --> New Spatialite Layer`.
 
-.. image:: /static/training_manual/databases/003.png
-   :align: center
+  |mActionNewSpatiaLiteLayer|
 
 * Select the database we created in the previous steps in the drop down.
-* Give the table the name :kbd:`places` and leave the geometry column name as
-  is, the geometry type as Point and the CRS as is.
-* Tick the checkbox next to :guilabel:`Create an autoincrementing primary key`.
+* Give the layer the name :kbd:`places`.
+* Tick the checkbox next to :guilabel:`Create an auto-incrementing primary key`.
 * Add 2 attributes as shown in below
 * Click :guilabel:`OK` to create the table.
 
-.. image:: /static/training_manual/databases/004.png
+.. image:: /static/training_manual/databases/new_layer_setup.png
    :align: center
 
 * Click the refresh button at the top of the Browser and you should now see
   your :kbd:`places` table listed.
 
-.. image:: /static/training_manual/databases/005.png
+.. image:: /static/training_manual/databases/new_layer_added.png
    :align: center
 
 You can right click on the table and view its properties as we did in the

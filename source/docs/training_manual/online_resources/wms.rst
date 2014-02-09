@@ -105,7 +105,8 @@ but using the same projection as the :guilabel:`OSM-WMS` layer, which is
 * Choose :guilabel:`WGS 84 / Pseudo Mercator` from the list.
 * Click :guilabel:`OK`.
 * Now right-click on one of your own layers in the :guilabel:`Layers list` and
-  click :guilabel:`Zoom to layer extent`. You should see the Swellendam area:
+  click :guilabel:`Zoom to layer extent`. You should see the |majorUrbanName|
+  area:
 
   .. image:: /static/training_manual/online_resources/wms_result.png
      :align: center
@@ -184,7 +185,7 @@ Part of the difficulty of using WMS is finding a good (free) server.
 
 * Find a new WMS at `spatineo.com <http://www.spatineo.com/>`_ (or
   elsewhere online). It must not have associated fees or restrictions, and must
-  have coverage over the Swellendam study area.
+  have coverage over the |majorUrbanName| study area.
 
   Remember that what you need in order to use a WMS is only its URL (and
   preferably some sort of description).

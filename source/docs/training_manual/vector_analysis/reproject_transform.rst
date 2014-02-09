@@ -137,8 +137,8 @@ display them together.
 Before you go on, you probably want to have the 'on the fly' reprojection to be
 automatically activated whenever you open datasets having different CRS:
   * Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
-  * Activate :guilabel:`Automatically enable 'on the fly' reprojection if layers
-    have different CRS`.
+  * Activate
+  :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`.
 
 |moderate| |FA| Saving a Dataset to Another CRS
 -------------------------------------------------------------------------------
@@ -147,7 +147,7 @@ Remember when you calculated areas for the farms in the
 :guilabel:`Classification` lesson? You did it so that you could classify the
 farms according to area.
 
-* Open your usual map again (containing the Swellendam data).
+* Open your usual map again (containing the |majorUrbanName| data).
 * Open the attribute table for the :guilabel:`landuse` layer.
 * Scroll to the right until you see the :kbd:`AREA` field.
 
@@ -233,8 +233,7 @@ rectangular one, as most other projections do.
 
 * For its parameters, use the following string:
 
-:kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m
-+no_defs`
+:kbd:`+proj=vandg +lon_0=0 +x_0=0 +y_0=0 +R_A +a=6371000 +b=6371000 +units=m +no_defs`
 
 .. image:: /static/training_manual/vector_analysis/new_crs_parameters.png
    :align: center

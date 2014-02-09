@@ -21,9 +21,10 @@ interface.
 * Open the Browser by clicking the :guilabel:`Browser` tab at the bottom of the
   *Layer Panel*
 * Open the PostGIS portion of the tree and you should find your previously
-  configured connection available.
+  configured connection available (you may need to click the Refresh button at
+  the top of the browser window).
 
-.. image:: /static/training_manual/databases/001.png
+.. image:: /static/training_manual/databases/browser_panel.png
    :align: center
 
 * Double clicking on any of the table/layers listed here will add it to the Map
@@ -33,9 +34,8 @@ interface.
   Click on the :guilabel:`Properties` item to look at the properties of the 
   layer.
 
-.. image:: /static/training_manual/databases/002.png
+.. image:: /static/training_manual/databases/postgis_layer_properties.png
    :align: center
-
 
 .. note:: Of course you can also use this interface to connect to PostGIS 
    databases hosted on a server external to your workstation. Right clicking
@@ -54,24 +54,23 @@ by using queries that we learned about in previous sections.
 * Click the :guilabel:`Add PostGIS Layers` button or select :guilabel:`Layer
   --> Add PostGIS Layers` from the menu.
 * In the :guilabel:`Add PostGIS Table(s)` dialog that comes up, connect to the
-  :kbd:`MyPG` connection that we setup previously.
-* Expand the :kbd:`public schema` and you should find the 2 tables we were
+  :kbd:`postgis_demo` connection.
+* Expand the :kbd:`public schema` and you should find the three tables we were
   working with previously.
-* Click the :kbd:`roads` layer to select it, but instead of adding it, click
+* Click the :kbd:`lines` layer to select it, but instead of adding it, click
   the :guilabel:`Set Filter` button to bring up the :guilabel:`Query Builder`
   dialog. 
-* Construct the following expression using the buttons or by entering it directly.
+* Construct the following expression using the buttons or by entering it
+  directly::
 
-::
+  "roadtype" = 'major'
 
-  "highway" = 'primary'
-
-.. image:: /static/training_manual/databases/006.png
+.. image:: /static/training_manual/databases/pg_table_filter.png
    :align: center
 
 * Click :guilabel:`OK` to complete editing the filter and click :guilabel:`Add`
   to add the filtered layer to your map.
-* Rename the :kbd:`roads` layer in the tree to :kbd:`roads_primary`.
+* Rename the :kbd:`lines` layer in the tree to :kbd:`roads_primary`.
 
 You will notice that only the Primary Roads have been added to your map rather
 than the entire layer.

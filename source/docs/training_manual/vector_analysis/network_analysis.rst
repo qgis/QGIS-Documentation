@@ -143,8 +143,8 @@ In context, this means that you're setting the speed limit on those roads to
   :guilabel:`Speed` value set to the :kbd:`SPEED` field you just created.
 * In the :guilabel:`Shortest path` panel, click the :guilabel:`Start point`
   button.
-* Set the starting point on a minor road on one side of Swellendam and the end
-  point on a major road on the other side of town:
+* Set the starting point on a minor road on one side of |majorUrbanName| and the
+  end point on a major road on the other side of town:
 
 .. image:: /static/training_manual/vector_analysis/speed_start_end.png
    :align: center

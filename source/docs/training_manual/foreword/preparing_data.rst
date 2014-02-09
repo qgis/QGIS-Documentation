@@ -142,15 +142,22 @@ use during the course:
 * Select :menuselection:`SpatialLite` as the format and save the file as
   :kbd:`landuse` under the "epsg4326" directory.
 * Click :menuselection:`Ok`.
+* Delete the :kbd:`landuse.shp` and its related files (if created).
 
 
 |hard| |TY| Create SRTM DEM tiff Files
 --------------------------------------------------------------------------------
 
-For Module 6 (Creating Vector Data), you'll also need raster images (SRTM DEM)
-which cover the region you have selected for your course.
+For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need
+raster images (SRTM DEM) which cover the region you have selected for your
+course.
 
 SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/
+
+You'll need images which cover the entire region you have chosen to use.
+
+Once you have downloaded the required files, they should be saved in the
+"exercise_data" directory under "raster".
 
 In Module 6, Lesson 1.2 shows close-up images of three school sports fields
 which students are asked to digitize. You'll therefore need to reproduce these
@@ -163,14 +170,12 @@ For reference, the images in the example data are:
 .. image:: /static/training_manual/create_vector_data/field_outlines.png
    :align: center
 
-.. image:: /static/training_manual/create_vector_data/athletics_field.png
+
+.. image:: /static/training_manual/create_vector_data/school_area_one.png
    :align: center
 
-Once you have downloaded the required files, they should be saved in the
-"exercise_data" directory under "raster".
 
-
-|easy| |TY| Replace Tokens
+|basic| |TY| Replace Tokens
 --------------------------------------------------------------------------------
 
 Having created your localised dataset, the final step is to replace the tokens
