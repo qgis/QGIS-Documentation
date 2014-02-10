@@ -574,8 +574,8 @@ Your results:
 |moderate| *Raster to Vector*
 ...............................................................................
 
-* Open the :guilabel:`Query` dialog by right-clicking on the
-  :guilabel:`all_terrain` layer in the :guilabel:`Layers list`.
+* Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
+  layer in the :guilabel:`Layers list`, select the :guilabel:`General` tab.
 * Then build the query :kbd:`"suitable" = 1`.
 * Click :guilabel:`OK` to filter out all the polygons where this condition
   isn't met.

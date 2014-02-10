@@ -17,6 +17,10 @@ be used to complete the analysis.
 |moderate| |FA| The :guilabel:`Raster to Vector` Tool
 -------------------------------------------------------------------------------
 
+Start with the map from the last module, :kbd:`raster_analysis.qgs`. There you
+should have the :kbd:`all_conditions_simple.qgs` calculated during the previous
+exercises.
+
 * Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to
   Vector)`. The tool dialog will appear.
 * Set it up like this:
@@ -26,12 +30,13 @@ be used to complete the analysis.
 
 * Change the field name (describing the values of the raster) to
   :kbd:`suitable`.
-* Save the shapefile under :kbd:`exercise_data/residential_development` as
-  :kbd:`all_terrain.shp`.
+* Save the shapefile under :kbd:`exercise_data/residential_development`
+  as  :kbd:`all_terrain.shp`.
 
 Now you have a vector file which contains all the values of the raster, but
 the only areas you're interested in are those that are suitable; i.e., those
-polygons where the value of :kbd:`suitable` is :kbd:`1`.
+polygons where the value of :kbd:`suitable` is :kbd:`1`. You can change the
+style of this layer if you want to have a clearer visualization of it.
 
 .. _backlink-complete-analysis-1:
 
@@ -42,8 +47,8 @@ Refer back to the module on vector analysis.
 
 * Create a new vector file that contains only the polygons where
   :kbd:`suitable` has the value of :kbd:`1`.
-* Save the new file under :kbd:`exercise_data/residential_development` as
-  :guilabel:`suitable_terrain.shp`.
+* Save the new file as :kbd:`exercise_data/residential_development/` as
+  :kbd:`suitable_terrain.shp`.
 
 :ref:`Check your results <complete-analysis-1>`
 
@@ -51,7 +56,8 @@ Refer back to the module on vector analysis.
 -------------------------------------------------------------------------------
 
 Although unnecessary for our current problem, it's useful to know about the
-opposite conversion from the one performed above.
+opposite conversion from the one performed above. Convert to raster the
+:kbd:`suitable_terrain.shp` vector file you just created in previous step.
 
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
