@@ -14,13 +14,15 @@ suitable farms.
 * Open the map in which you did the vector analysis earlier
   (:kbd:`analysis.qgs`).
 * In the :guilabel:`Layers list`, enable these layers:
-  - :guilabel:`hillshade`,
-  - :guilabel:`solution`,
-  - :guilabel:`important_roads` and
-  - either :guilabel:`aerial_photos` or :guilabel:`DEM`.
+- :guilabel:`hillshade`,
+- :guilabel:`solution`,
+- :guilabel:`important_roads` and
+- either :guilabel:`aerial_photos` or :guilabel:`DEM`.
 * In addition to these layers, which should already be loaded in the map from
   when you worked on it before, also add the :kbd:`suitable_terrain.shp`
   dataset.
+* If you are missing some layers, you should find them in
+  :kbd:`exercise_data/residential_development/`
 * Select all the farms (in the :guilabel:`solution` layer) that intersect with
   the :kbd:`suitable_terrain` layer. (Use the :guilabel:`select by location`
   tool as before.)
