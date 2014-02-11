@@ -157,7 +157,7 @@ SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/
 You'll need images which cover the entire region you have chosen to use.
 
 Once you have downloaded the required files, they should be saved in the
-"exercise_data" directory under "raster".
+"exercise_data" directory under "raster/SRTM/".
 
 In Module 6, Lesson 1.2 shows close-up images of three school sports fields
 which students are asked to digitize. You'll therefore need to reproduce these

@@ -158,8 +158,7 @@ our roads dataset.
 * Open the :kbd:`Query Builder` for the :kbd:`roads` layer,
   click :guilabel:`Clear` and build the following query:
 
-  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway"
-     != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
+  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway" != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
 
 You can either use the approach above, where you double-clicked values and
 clicked buttons, or you can copy and paste the command above.
@@ -244,7 +243,7 @@ Now your map will look something like this:
 .. image:: /static/training_manual/vector_analysis/roads_buffer_result.png
    :align: center
 
-If your new is at the top of the :kbd:`Layers` list, it will probably obscure
+If your new layer is at the top of the :kbd:`Layers` list, it will probably obscure
 much of your map, but this gives us all the areas in your region which are
 within 50m of a road.
 
@@ -379,7 +378,7 @@ first need to calculate their size.
 .. image:: /static/training_manual/vector_analysis/buildings_area_calculator.png
    :align: center
 
-* If you can't find :guilabel:`AREA` in the list, try creating an new field as
+* If you can't find :guilabel:`AREA` in the list, try creating a new field as
   you did in the previous lesson of this module.
 * Click :guilabel:`OK`.
 * Scroll to the right of the attribute table; your :kbd:`AREA` field now has

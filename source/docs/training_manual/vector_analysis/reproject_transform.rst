@@ -138,20 +138,20 @@ Before you go on, you probably want to have the 'on the fly' reprojection to be
 automatically activated whenever you open datasets having different CRS:
   * Open again :menuselection:`Settings --> Options...` and select :guilabel:`CRS`.
   * Activate
-  :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`.
+    :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`.
 
 |moderate| |FA| Saving a Dataset to Another CRS
 -------------------------------------------------------------------------------
 
-Remember when you calculated areas for the farms in the
+Remember when you calculated areas for the buildings in the
 :guilabel:`Classification` lesson? You did it so that you could classify the
-farms according to area.
+buildings according to area.
 
 * Open your usual map again (containing the |majorUrbanName| data).
-* Open the attribute table for the :guilabel:`landuse` layer.
+* Open the attribute table for the :guilabel:`buildings` layer.
 * Scroll to the right until you see the :kbd:`AREA` field.
 
-Notice how the areas are all very small; basically zero. This is because
+Notice how the areas are all very small; probably zero. This is because
 these areas are given in degrees - the data isn't in a Projected Coordinate
 System. In order to calculate the area for the farms in square meters, the data
 has to be in square meters as well. So, we'll need to reproject it.
@@ -161,12 +161,12 @@ it says - it doesn't change the data, it just reprojects the layers as they
 appear on the map. To truly reproject the data itself, you need to export it to
 a new file using a new projection.
 
-* Right-click on the :guilabel:`landuse` layer in the :guilabel:`Layers list`.
+* Right-click on the :guilabel:`buildings` layer in the :guilabel:`Layers list`.
 * Select :guilabel:`Save As...` in the menu that appears. You will be shown the
   :guilabel:`Save vector layer as...` dialog.
 * Click on the :guilabel:`Browse` button next to the :guilabel:`Save as` field.
 * Navigate to :kbd:`exercise_data/` and specify the name of the new layer as
-  :kbd:`landuse_reprojected.shp`.
+  :kbd:`buildings_reprojected.shp`.
 * Leave the :guilabel:`Encoding` unchanged.
 * Change the value of the :guilabel:`Layer CRS` dropdown to :guilabel:`Selected
   CRS`.
@@ -188,26 +188,25 @@ The :guilabel:`Save vector layer as...` dialog now looks like this:
 Refer back to the lesson on :guilabel:`Classification` to remember how you
 calculated areas.
 
-* Add an :kbd:`AREA` field by running the same expression as before:
+* Update (or add) the :kbd:`AREA` field by running the same expression as before:
 
 .. image:: /static/training_manual/vector_analysis/new_area_field.png
    :align: center
 
-This will add an :kbd:`AREA` field with the size of each :kbd:`landuse` layer
+This will add an :kbd:`AREA` field with the size of each building
 in square meters
 
-* To calculate the area in hectares use the :kbd:`AREA` field you just
-calculated, do this:
+* To calculate the area in another unit of measurement, for example hectares,
+  use the :kbd:`AREA` field to create a second column:
 
 .. image:: /static/training_manual/vector_analysis/new_hectare_field.png
    :align: center
 
 Look at the new values in your attribute table. This is much more useful, as
-people actually quote property areas in hectares, not in degrees. And
-projecting the data in an appropriate projection before calculating the area
-will actually give you the area in hectares. This is why it's a good idea to
-reproject your data, if necessary, before calculating areas, distances, and
-other values that are dependent on the spatial properties of the layer.
+people actually quote building size in metres, not in degrees. This is why it's
+a good idea to reproject your data, if necessary, before calculating areas,
+distances, and other values that are dependent on the spatial properties of the
+layer.
 
 |hard| |FA| Creating Your Own Projection
 -------------------------------------------------------------------------------

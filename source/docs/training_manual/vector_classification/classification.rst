@@ -125,8 +125,8 @@ have a size field, so we'll have to make one.
 
 * Enter edit mode by clicking this button:
 
-|edit|
-    :align: center
+   |edit|
+   :align: center
 
 * Add a new column with this button:
 
