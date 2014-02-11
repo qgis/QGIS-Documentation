@@ -92,12 +92,12 @@ Remember to save your map when you are done.
 |moderate| |FA| Calculating the Slope
 -------------------------------------------------------------------------------
 
-Another useful thing to know about the terrain is how steep it is. If, as in
-our analysis, you want to build houses on the land there, then you need land
+Another useful thing to know about the terrain is how steep it is. If, for
+example, you want to build houses on the land there, then you need land
 that is relatively flat.
 
 To do this, you need to use the :guilabel:`Slope` mode of the :guilabel:`DEM
-(Terain models)` tool.
+(Terrain models)` tool.
 
 * Open the tool as before.
 * Select the :guilabel:`Mode` option :guilabel:`Slope`:
@@ -136,12 +136,12 @@ built on a north-facing slope so that they can remain in the sunlight.
 |moderate| |FA| Using the Raster Calculator
 -------------------------------------------------------------------------------
 
-Think back to the residential property development problem, which we last
-addressed in the *Vector Analysis* lesson. So far, you've identified several
-farms that would be suitable, but without taking the terrain into account.
-Let's say that an ideal farm for development needs to have areas on it that are
-north-facing, and with a slope of less than five degrees. But if the slope is
-less than 2 degrees, then the aspect doesn't matter.
+Think back to the estate agent problem, which we last addressed in the
+*Vector Analysis* lesson. Let's imagine that the buyers now wish to purchase a
+building and build a smaller cottage on the property. In the Southern
+Hemisphere, we know that an ideal plot for development needs to have areas on it
+that are north-facing, and with a slope of less than five degrees. But if the
+slope is less than 2 degrees, then the aspect doesn't matter.
 
 Fortunately, you already have rasters showing you the slope as well as the
 aspect, but you have no way of knowing where both conditions are satisfied at
@@ -301,6 +301,6 @@ the raster calculator to further analyze and combine these results.
 -------------------------------------------------------------------------------
 
 Now you have two analyses: the vector analysis which shows you the potentially
-suitable farms, and the raster analysis that shows you the potentially suitable
+suitable plots, and the raster analysis that shows you the potentially suitable
 terrain. How can these be combined to arrive at a final result for this
 problem? That's the topic for the next lesson, starting in the next module.

@@ -2,10 +2,10 @@
 ===============================================================================
 
 Using the vectorized results of the raster analysis will allow you to select
-only those farms with suitable tarrain.
+only those buildings on suitable terrain.
 
 **The goal for this lesson:** To use the vectorized terrain results to select
-suitable farms.
+suitable plots.
 
 |moderate| |TY|
 -------------------------------------------------------------------------------
@@ -15,23 +15,28 @@ suitable farms.
   (:kbd:`analysis.qgs`).
 * In the :guilabel:`Layers list`, enable these layers:
 - :guilabel:`hillshade`,
-- :guilabel:`solution`,
-- :guilabel:`important_roads` and
-- either :guilabel:`aerial_photos` or :guilabel:`DEM`.
+- :guilabel:`solution` (or :guilabel:`buildings_over_100`)
 * In addition to these layers, which should already be loaded in the map from
   when you worked on it before, also add the :kbd:`suitable_terrain.shp`
   dataset.
 * If you are missing some layers, you should find them in
   :kbd:`exercise_data/residential_development/`
-* Select all the farms (in the :guilabel:`solution` layer) that intersect with
-  the :kbd:`suitable_terrain` layer. (Use the :guilabel:`select by location`
-  tool as before.)
-* Save the selection as :kbd:`new_solution.shp`.
+* Use the :guilabel:`Intersect` tool (:guilabel:`Vector -> Geoprocessing Tools`)
+  to create a new vector layer called :kbd:`new_solution.shp` which contains
+  only those buildings which intersect the :kbd:`suitable_terrain` layer.
 
-You should now have a layer with these farms as your solution:
+You should now have a layer showing certain buildings as your solution, for
+example:
 
-.. image:: /static/training_manual/complete_analysis/004.png
+.. image:: /static/training_manual/complete_analysis/new_solution_example.png
    :align: center
+
+.. note:: If you find that the :guilabel:`Intersect` tool does not produce any
+  results, check the CRS settings of each of your layers. The CRS must be the
+  same for both the layers you are comparing. You may need to reproject one
+  layer by saving the layer as a new shapefile with the required CRS. In our
+  example, the :kbd:`suitable_terrain` layer was reprojected to
+  :kbd:`WGS 84 / UTM 34S` and named :kbd:`suitable_terrain_34S`.
 
 
 .. _backlink-complete-analysis-2:
@@ -39,10 +44,10 @@ You should now have a layer with these farms as your solution:
 |moderate| |TY| Inspecting the Results
 -------------------------------------------------------------------------------
 
-Look at each of the farms in your :guilabel:`new_solution` layer. Compare them
+Look at each of the buildings in your :guilabel:`new_solution` layer. Compare them
 with the :guilabel:`suitable_terrain` layer by changing the symbology for the
 :guilabel:`new_solution` layer so that it has outlines only. What do you notice
-about some of the farms? Are they all suitable just because they intersect with
+about some of the buildings? Are they all suitable just because they intersect with
 the :guilabel:`suitable_terrain` layer? Why or why not? Which ones would you
 deem to be unsuitable?
 
@@ -54,14 +59,13 @@ deem to be unsuitable?
 |moderate| |TY| Refining the Analysis
 -------------------------------------------------------------------------------
 
-Now that you can see from the results that some farms were included that were
-not really suitable, it becomes possible to refine the analysis.
+You can see from the results that some buildings which were included were
+not really suitable, so we can now refine the analysis.
 
-We can see that there are some farms which do have suitable areas in them, but
-these areas are too small to be useful. The decision is made that for a farm to
-be considered, it must have suitable areas on it that are continuous for 350
-meters or more. How would you ensure that the farms meet this requirement? Use
-(a) **vector** analysis tool(s) for this.
+We want to ensure that our analysis returns only those buildings which fall
+entirely within the :kbd:`suitable_terrain` layer. How would you achieve this?
+Use one or more Vector Analysis tools and remember that our buildings are all
+over 100m squared in size.
 
 :ref:`Check your results <complete-analysis-3>`
 

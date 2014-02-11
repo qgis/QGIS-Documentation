@@ -7,7 +7,7 @@ analysis. Include these layers:
 - :guilabel:`places` (with labels),
 - :guilabel:`hillshade`,
 - :guilabel:`solution` (or :guilabel:`new_solution`),
-- :guilabel:`important_roads` and
+- :guilabel:`roads` and
 - either :guilabel:`aerial_photos` or :guilabel:`DEM`.
 
 Write a short explanatory text to accompany it. Include in this text the

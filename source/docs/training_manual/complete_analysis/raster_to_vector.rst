@@ -18,20 +18,20 @@ be used to complete the analysis.
 -------------------------------------------------------------------------------
 
 Start with the map from the last module, :kbd:`raster_analysis.qgs`. There you
-should have the :kbd:`all_conditions_simple.qgs` calculated during the previous
+should have the :kbd:`all_conditions_simple.tif` calculated during the previous
 exercises.
 
 * Click on :menuselection:`Raster --> Conversion --> Polygonize (Raster to
   Vector)`. The tool dialog will appear.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/001.png
+  .. image:: /static/training_manual/complete_analysis/polygonize_raster.png
      :align: center
 
 * Change the field name (describing the values of the raster) to
   :kbd:`suitable`.
 * Save the shapefile under :kbd:`exercise_data/residential_development`
-  as  :kbd:`all_terrain.shp`.
+  as :kbd:`all_terrain.shp`.
 
 Now you have a vector file which contains all the values of the raster, but
 the only areas you're interested in are those that are suitable; i.e., those
@@ -62,7 +62,7 @@ opposite conversion from the one performed above. Convert to raster the
 * Click on :menuselection:`Raster --> Conversion --> Rasterize (Vector to
   Raster)` to start this tool, then set it up as in the screenshot below:
 
-.. image:: /static/training_manual/complete_analysis/003.png
+.. image:: /static/training_manual/complete_analysis/vector_to_raster.png
    :align: center
 
 * :guilabel:`Input file` is :guilabel:`all_terrain`;
@@ -90,5 +90,5 @@ applicability of data, and need not lead to data degradation.
 -------------------------------------------------------------------------------
 
 Now that we have the results of the terrain analysis available in vector
-format, they can be used to solve the problem of which farms we should consider
+format, they can be used to solve the problem of which buildings we should consider
 for the residential development.

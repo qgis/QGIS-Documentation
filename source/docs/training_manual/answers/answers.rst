@@ -600,14 +600,10 @@ When viewed over the original raster, the areas should overlap perfectly:
 |moderate| *Inspecting the Results*
 ...............................................................................
 
-In this map, farms that are definitely not suitable are orange; farms that may
-still be suitable are blue:
-
-.. image:: /static/training_manual/complete_analysis/002.png
-   :align: center
-
-The orange farms have almost no suitable terrain within them, and so can't be
-used for the intended purpose.
+You may notice that some of the buildings in your :kbd:`new_solution` layer have
+been "sliced" by the :guilabel:`Intersect` tool. This shows that only part of the
+building - and therefore only part of the property - lies on suitable terrain.
+We can therefore sensibly eliminate those buildings from our dataset
 
 :ref:`Back to text <backlink-complete-analysis-2>`
 
@@ -617,27 +613,27 @@ used for the intended purpose.
 |moderate| *Refining the Analysis*
 ...............................................................................
 
-At the moment, your analysis should look like this (ignore the symbology):
+At the moment, your analysis should look something like this:
 
-.. image:: /static/training_manual/complete_analysis/006.png
+.. image:: /static/training_manual/complete_analysis/new_solution_example.png
    :align: center
 
-Consider a circular area, continuous for 350 meters in all directions.
+Consider a circular area, continuous for 100 meters in all directions.
 
-.. image:: /static/training_manual/complete_analysis/007.png
+.. image:: /static/training_manual/complete_analysis/circle_100.png
    :align: center
 
-If it is greater than 350 meters in radius, then subtracting 350 meters from
+If it is greater than 100 meters in radius, then subtracting 100 meters from
 its size (from all directions) will result in a part of it being left in the
 middle.
 
-.. image:: /static/training_manual/complete_analysis/008.png
+.. image:: /static/training_manual/complete_analysis/circle_with_remainder.png
    :align: center
 
-Therefore, you can run an *interior buffer* of 350 meters on your existing
+Therefore, you can run an *interior buffer* of 100 meters on your existing
 :guilabel:`suitable_terrain` vector layer. In the output of the buffer
 function, whatever remains of the original layer will represent areas where
-there is suitable terrain for 350 meters beyond.
+there is suitable terrain for 100 meters beyond.
 
 To demonstrate:
 
@@ -649,14 +645,16 @@ To demonstrate:
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
-  buffer distance of :kbd:`-350`. (The distance is automatically in meters
+  buffer distance of :kbd:`-100`. (The distance is automatically in meters
   because your map is using a projected CRS.)
 * Save the output in :kbd:`exercise_data/residential_development/` as
-  :kbd:`suitable_terrain_continuous350m.shp`.
+  :kbd:`suitable_terrain_continuous100m.shp`.
+* If necessary, move the new layer above your original :kbd:`suitable_terrain`
+  layer.
 
-Your results will look like this:
+Your results will look like something like this:
 
-.. image:: /static/training_manual/complete_analysis/010.png
+.. image:: /static/training_manual/complete_analysis/suitable_buffer_results.png
    :align: center
 
 * Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
@@ -667,22 +665,20 @@ Your results will look like this:
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
-  :guilabel:`suitable_terrain_continuous350m.shp`.
+  :guilabel:`suitable_terrain_continuous100m.shp`.
 
 This is the result:
 
-.. image:: /static/training_manual/complete_analysis/012.png
+.. image:: /static/training_manual/complete_analysis/buffer_select_result.png
    :align: center
 
-The yellow farms are selected.
+The yellow buildings are selected. Although some of the buildings fall partly
+outside the new :kbd:`suitable_terrain_continuous100m` layer, they lie well
+within the original :kbd:`suitable_terrain` layer and therefore meet all of our
+requirements.
 
 * Save the selection under :kbd:`exercise_data/residential_development/` as
   :kbd:`final_answer.shp`.
-
-The farms that meet the revised criteria are here:
-
-.. image:: /static/training_manual/complete_analysis/013.png
-   :align: center
 
 
 :ref:`Back to text <backlink-complete-analysis-3>`
