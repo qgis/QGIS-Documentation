@@ -3,13 +3,15 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# terenteml <terenteml@gmail.com>, 2014
+# csorin <scalinica@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 10:01+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-01-31 18:49+0000\n"
+"Last-Translator: csorin <scalinica@gmail.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/qgis-documentation/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,37 +22,37 @@ msgstr ""
 # e87a9da03c1d46008b631432594290a8
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:8
 msgid "Raster Data"
-msgstr ""
+msgstr "Datele raster"
 
 # 116602b76771441384ca7ddbb1ab5e90
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "|gentlelogo|"
-msgstr ""
+msgstr "|gentlelogo|"
 
 # f7548650bdac483f929f8b1d6079e620
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "Objectives:"
-msgstr ""
+msgstr "Obiective:"
 
 # 13e11ec3a3fb49339d6085f857a6254b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:11
 msgid "Understand what raster data is and how it can be used in a GIS."
-msgstr ""
+msgstr "Aflați ce sunt datele raster și cum pot fi acestea utilizate într-un GIS."
 
 # 3ee70e1e29774819986668dc908ee10f
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
 msgid "Keywords:"
-msgstr ""
+msgstr "Cuvinte cheie:"
 
 # 9a47adcb8bdd40d49d8c7a3805252d3b
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:13
 msgid "Raster, Pixel, Remote Sensing, Satellite, Image, Georeference"
-msgstr ""
+msgstr "Raster, Pixel, Teledetecție, Satelit, Imagine, Georeferențiere"
 
 # 5edca81b11e2484fabc0ea1e2f2197ff
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:17
 msgid "Overview"
-msgstr ""
+msgstr "Prezentare generală"
 
 # a69e4a0a1531457eaa50c831d84e1ddf
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:19
@@ -62,7 +64,7 @@ msgid ""
 "represents the conditions for the area covered by that cell (see "
 "figure_raster_). In this topic we are going to take a closer look at raster "
 "data, when it is useful and when it makes more sense to use vector data."
-msgstr ""
+msgstr "În temele anterioare am privit în detaliu datele vectoriale. În timp ce elementele vectoriale folosesc geometrie (puncte, linii și poligoane) pentru a reprezenta lumea reală, datele raster oferă o abordare diferită. Rasterele se constituie dintr-o matrice de pixeli (denumiți și celule), fiecare conținând o valuare ce reprezintă condițiile pentru suprafața acoperită de acea celulă (vezi figure_raster_). În această secțiune vom privi în detaliu datele raster, când sunt acestea utile și când are mai mult sens utilizarea datelor vector."
 
 # bb272f264fea422fbbecc1056a0089cc
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:37
@@ -71,12 +73,12 @@ msgid ""
 "down) of pixels (also know as cells). Each pixel represents a geographical "
 "region, and the value in that pixel represents some characteristic of that "
 "region."
-msgstr ""
+msgstr "Un set de date raster este compus din rânduri (desfășurate pe orizontală) și coloane (desfășurate pe verticală) de pixeli (denumiți și celule). Fiecare pixel reprezintă o regiune geografică și valoarea acelui pixel reprezintă o anumită caracteristică a acelei regiuni."
 
 # c5429dbbba0d4a22ad113c527a2fafb1
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:43
 msgid "Raster data in detail"
-msgstr ""
+msgstr "Datele raster în detaliu"
 
 # cf850d2f08aa4083acb50d6b8c6f01de
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:45
@@ -98,7 +100,7 @@ msgid ""
 "variation of grass colour and cover as a separate polygon. The problem with "
 "that approach is that it will take a huge amount of work in order to create "
 "a good vector dataset."
-msgstr ""
+msgstr "Datele raster se utilizează într-o aplicație GIS atunci cînd dorim afișarea informației care se desfășoară continuu într-o anumită regiune și care nu poate fi divizată cu ușurință în elemente vectoriale. Când v-am introdus în tematica datelor vectoriale v-am prezentat imaginea din figura_landscape_. Elementele de tip punct, linie și poligon se potrivesc foarte bine pentru reprezentarea elementelor din acest peisaj, precum arbori, drumuri și amprentele clădirilor la sol. Alte elemente din peisaj pot fi mai dificil de reprezentat folosind elemente vectoriale. De exemplu, câmpul din imagine are multe variații de culoare și densitate. Ar fi destul de simplu să desenăm câte un poligon în jurul fiecărei regiuni din câmp, dar o mare cantitate de informație s-ar pierde în procesul de simplificare a elementelor în poligoane singulare. Aceasta pentru că atunci cînd se asociază unui element vectorial valori de atribute, acestea se aplică întregului element, așa că datele vector nu sunt foarte potrivite pentru reprezentarea elementelor care nu sunt omogene (identice) în întregime. O altă abordare ar putea fi digitizarea fiecărei mici variații de culoare și densitate a cîmpului ca poligon separat. Problema atunci ar fi durata foarte mare necesară obținerii unui set de date vectoriale adecvat.  "
 
 # ab7de235011b40bba914746ea34b47e2
 #: ../../source/docs/gentle_gis_introduction/raster_data.rst:72

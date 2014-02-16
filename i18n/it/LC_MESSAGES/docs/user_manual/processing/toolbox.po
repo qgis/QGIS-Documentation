@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
-# FabrizioM <fabriziomure@gmail.com>, 2013
+# FabrizioM <fabriziomure@gmail.com>, 2013-2014
+# skampus1967 <skampus@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-28 14:49+0000\n"
+"PO-Revision-Date: 2014-01-21 09:09+0000\n"
 "Last-Translator: FabrizioM <fabriziomure@gmail.com>\n"
 "Language-Team: Italian (http://www.transifex.com/projects/p/qgis-documentation/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -504,7 +505,7 @@ msgstr "Oltre al blocco :guilabel:`General` nella finestra di dialogo, ne trover
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:147
 msgid "Vector iterator button |win|"
-msgstr ""
+msgstr " pulsante per i layer vettoriali |win|  "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:149
 msgid ""
@@ -514,7 +515,7 @@ msgid ""
 "of just once for the whole layer, producing as many outputs as times the "
 "algorithm is executed. This allows for automating the process when all "
 "features in a layer have to be processed separately."
-msgstr ""
+msgstr "Se l'algoritmo contiene molti di loro, si sarà in grado di selezionare solo uno di loro. Se viene commutato il pulsante corrispondente ad un vettore di ingresso , l'algoritmo viene eseguito iterativamente su ciascuna delle sue feature, invece di una sola volta per l'intero layer, producendo tante uscite per quante volte l'algoritmo viene eseguito. Questo permette di automatizzare il processo quando tutte le feature in un layer devono essere elaborate separatamente."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:315
 msgid ""
@@ -528,7 +529,7 @@ msgid ""
 "these are not yet implemented, the processing framework is prepared to "
 "handle them, and we expect to add new kinds of output channels in a near "
 "feature."
-msgstr ""
+msgstr "Essi vengono tutti memorizzati su disco, e la tabella dei parametri conterrà una casella di testo per ciascuno di questi output, in cui è possibile specificare il canale di output da usare per la sua memorizzazione. Un canale di output contiene le informazioni necessarie per memorizzare l'oggetto risultante da qualche parte. Nel caso più comune lo memorizzerete in un file, ma l'architettura tiene conto di ogni altra modalità di memorizzazione. Per esempio, un Vector Layer può essere archiviato in un database, o anche caricato su un server remoto usando un servizio WFS-T. Anche se soluzioni di questo tipo non sono ancora implementate, l'ambiente Processing è predisposto per poterle maneggiare, e ci aspettiamo nuovi tipi di canali di output in un prossimo futuro.  "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:70
 msgid ""
@@ -536,11 +537,11 @@ msgid ""
 "such as LiDAR tools or scripts based on the R statistical computing "
 "software, among others. Independent |qg| plugins that add new algorithms to "
 "the toolbox will only be shown in the advanced view."
-msgstr ""
+msgstr "Inoltre, altri algoritmi sono disponibili solo nella vista avanzata, come ad esempio strumenti LiDAR o script basati sul software di analisi statistica R. Plugin |qg| indipendenti che aggiungono nuovi algoritmi alla finestra degli strumenti saranno visibili solo nella vista avanzata."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:80
 msgid "Native |qg| algorithms"
-msgstr ""
+msgstr "Algoritmi |qg| nativi "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:82
 msgid ""
@@ -549,7 +550,7 @@ msgid ""
 " requiring any additional installation. Also running them requires no prior "
 "knowledge of the external applications they use, making them more accesible "
 "for first-time users."
-msgstr ""
+msgstr "Nel caso particolare di esecuzione di |qg|su Windows, questi algoritmi sono pienamente funzionanti in una nuova installazione di |qg| e possono essere eseguiti senza che sia necessaria nessuna ulteriore installazione. Anche la loro stessa esecuzione non richiede la conoscenza delle applicazioni esterne che impiegano, rendendoli piu' semplici da usare per nuovi utenti."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:125
 msgid ""
@@ -557,7 +558,7 @@ msgid ""
 "opened) in |qg|. The selector contains as well a button on its right-hand "
 "side, to let you select filenames that represent layers currently not loaded"
 " in |qg|."
-msgstr ""
+msgstr "Un layer raster, da selezionare da una lista di tutti quelli disponibili (attualmente aperti) in |qg|. Il selettore contiene anche un pulsante nella parte destra, per permettere di selezionare i nomi di file di layer non caricati attualmente in |qg|. "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:128
 msgid ""
@@ -567,7 +568,7 @@ msgid ""
 "from the attributes table of the layer. In that case, only opened layers can"
 " be selected, since they need to be open so as to retrieve the list of field"
 " names available."
-msgstr ""
+msgstr "Un layer vettore, da selezionare da una lista di tutti quelli disponibili in |qg|. Layer non caricati in |qg| possono  anche essere selezionati, come nel caso di layer raster, ma solo se l'algoritmo non richiede un campo tabella selezionata dalla tabella degli attributi del layer. In tal caso, solo i layer caricati possono  essere selezionati, poichè è necessario che essi siano aperti per poter accedere e recuperare la lista dei campi disponibile.\n "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:151
 msgid ""
@@ -577,7 +578,7 @@ msgid ""
 "that you will see when executing an algorithm that needs one of them is "
 "restricted to tables coming from files in DBase (:file:`.dbf`) or Comma-"
 "Separated Values (:file:`.csv`) formats."
-msgstr ""
+msgstr "Una tabella, da selezionare da una lista di tutti quelle disponibili in |qg|. Tabelle non-spaziali sono caricate in |qg| come layer vettore, e infatti sono trattate come tali dal programma. Attualmente, la lista delle possibili tabelle che sarà possibile  vedere durante l'esecuzione di un algoritmo che richiede una di loro, è ristretta a tabelle provenienti da file in formati DBase (:file:`.dbf`) o Comma-Separated Values (:file:`.csv`)."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:158
 msgid ""
@@ -588,7 +589,7 @@ msgid ""
 "expression, so you can select a value derived from any of this variables "
 "such as the cellsize of a layer or the northern most coordinate of another "
 "one."
-msgstr ""
+msgstr "Un valore numerico , da inserire in una casella di testo. Troverete un pulsante laterale. Cliccando su esso comparirà una finestra di dialogo che vi permetterà di inserire un'espressione matematica, in modo da usarlo come una calcolatrice. Possono essere aggiunte all'espressione alcune utili variabili che si riferiscono ai dati caricati in |qg|, così che si puo' selezionare un valore derivato da qualsiasi di queste variabili come la risoluzione di un layer o la coordinata più a nord di un altro layer. "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:233
 msgid ""
@@ -596,7 +597,7 @@ msgid ""
 " from the list of the ones available in |qg|. To make the selection, click "
 "on the small button on the left side of the corresponding row to see a "
 "dialog like the following one."
-msgstr ""
+msgstr "Una lista di elementi (siano essi raster, vettoriali o tabelle), da selezionare dalla lista tra quelli disponibili in |qg|. Per selezionarli, clicca il bottone piccolo sul lato sinistro della riga corrispondente per vedere una finestra di dialogo come la seguente."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:286
 msgid ""
@@ -607,7 +608,7 @@ msgid ""
 "the resulting files as input to the algorithm. Also note that the "
 "reprojection process can be performed with the algorithms that are available"
 " in the processing framework itself."
-msgstr ""
+msgstr "Si osserva che, grazie  alle capacità di riproiezione al volo di |qg|, anche se due layer possono sembrare di sovrapporsi9 e adattarsi, cio' puo' non essere vero se le loro coordinate originali sono usate senza che siano riportate in un sistema di coordinate comune. Tale riproiezione dovrebbe essere fatta manualmente e  usare successivamente i file risultanti in ingresso all'algoritmo. Da notare che il processo di riproiezione può essere eseguito con gli algoritmi disponibili all'interno dello stesso ambiente di processing."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:339
 msgid ""
@@ -615,7 +616,7 @@ msgid ""
 "file and in the corresponding default file format, and will be deleted once "
 "you exit |qg| (take care with that in case you save your project and it "
 "contains temporary layers)."
-msgstr ""
+msgstr "Se non inserite alcun nome file. il risultato verrà salvato in un file temporaneo e nel corrispondente formato di default e sarà cancellato una volta uscita da |qg| (fate attenzione nel caso in cui memorizzate il vostro progetto ed esso contiene layer temporanei)  ."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:355
 msgid ""
@@ -625,7 +626,7 @@ msgid ""
 " algorithm during the current session, and can be shown at any time by "
 "selecting the :menuselection:`Processing --> Results viewer` from |qg| main "
 "menu."
-msgstr ""
+msgstr "Oltre che layer raster e tabelle, gli algoritmi generano anche grafica e testo come nei file HTML.  I risultati vengono mostrati al termine dell'esecuzione dell'algoritmo in una nuova finestra di dialogo. Tale finestra di dialogo conserverà i risultati prodotti da  ciascun algoritmo durante la sessione corrente, e puo' essere visualizzata in qualsiasi momento selezionando :menuselection:`Processing --> Visualizzatore Risultati` dal menu principale di |qg|."
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:361
 msgid ""
@@ -636,7 +637,7 @@ msgid ""
 "formats or elements not supported by |qg|. This is, for instance, the case "
 "with LAS files used for LiDAR data. The files get created, but you won't see"
 " anything new in your |qg| working session."
-msgstr ""
+msgstr "Alcune applicazioni esterne possono prevedere dei file (senza alcuna restrizione in estensione) come output, che non appartengono ad alcuna delle categorie sopra. Tali file di output non verranno processati da |qg| (aperti o inclusi nel progetto |qg| corrente), poichè la maggiorn parte delle volte corrispondono a formati file o elementi non supportati da |qg|. Questo per esempio è il caso dei LAS file usati per i dati LIDAR. I file vengono creati, ma non vedrete nulla all'interno della vostra sessione di lavoro |qg|.  "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:373
 msgid ""
@@ -645,7 +646,7 @@ msgid ""
 "output, which virtually makes it behave like an optional output (although "
 "the layer is created anyway, but if you leave the text box empty, it will be"
 " saved to a temporary file and deleted once you exit |qg|)"
-msgstr ""
+msgstr "Non sono supportati gli output opzionali, dunque tutti gli output sono creati, ma potete deselezionare la corrispondente casella di controllo se non interessati in un certo output, il che lo rende viortualmente come un output virtuale (anche se il layer è creato in ogni caso, ma la casella di testo è lasciata vuota, esso sarà memorizzato in un file temporaneo e cancellato una volta usciti da |qg|)      "
 
 #: ../../source/docs/user_manual/processing/toolbox.rst:389
 msgid ""
@@ -656,7 +657,7 @@ msgid ""
 "you want using |qg|, save it to a file, and then enter the path to that file"
 " in the settings so the algorithms can use it. Whenever a layer is loaded by"
 " SEXTANTE and added to the |qg| canvas, it will be rendered with that style."
-msgstr ""
+msgstr "Insieme alla già citata voce :guilabel:`Output folder`, il blocco :guilabel:`General` contiene parametri per l'impostazione di default degli stili di rappresentazione dei layer di output (dei layer cioè, che sono generati usando una qualsiasi delle componenti delle GUI dell'ambiente). Non appena si crea lo stile che si desidera usi |qg|, memorizzatelo in un file, e successivamente inserite il percorso di tale file nelle impostazioni, così che l'algoritmo può usarlo. Ogni volta che un layer è caricato da |qg| Processing e aggiunto nell'area grafica di|qg|, sarà rappresentato con tale stile. "
 
 #~ msgid ""
 #~ "Also, some additional algorithms are available only in the advanced view, "

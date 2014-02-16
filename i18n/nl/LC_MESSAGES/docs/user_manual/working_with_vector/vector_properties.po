@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the QGIS Documentation Project package.
 # 
 # Translators:
+# diethard.jansen <diethard.jansen@gmail.com>, 2014
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-12-01 15:13+0000\n"
+"PO-Revision-Date: 2014-01-19 21:19+0000\n"
 "Last-Translator: diethard.jansen <diethard.jansen@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/projects/p/qgis-documentation/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -52,7 +53,7 @@ msgid ""
 "symbolizing your vector data. You can use :menuselection:`Layer rendering "
 "-->` tools that are common to all vector data and special symbolizing tools "
 "that were designed for the different kinds of vector data."
-msgstr ""
+msgstr "Het Stijl menu geeft toegang tot het toevoegen van symbologie van de vector data en hoe deze moet worden gerenderd. U kunt :menuselection:`Laag rendering -->` gereedschap kiezen die voor alle vectorgegevens gebruikt kunnen worden en speciaal symboolgereedschap dat is ontworpen voor verschillende soorten vectorgegevens."
 
 # bc1d14eeb1d34a48982258a15fd0950f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:49
@@ -67,7 +68,7 @@ msgid ""
 "visibility of your vector layer to your needs. You can also make a precise "
 "definition of the percentage of visibility in the the menu beside the "
 "slider."
-msgstr ""
+msgstr ":guilabel:`Laag transparantie` |slider|: men kan hiermee onderliggende lagen zichtbaar maken in het kaartbeeld. Gebruik de schuifschaal om de transparantie van geselecteerde vectorlaag aan te passen. Rechts naast de schuifschaal kunt u een exact gewenst transparantie percentage invullen."
 
 # ae9e30511e894e57898a6fe09cfd6c9d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:57
@@ -76,21 +77,21 @@ msgid ""
 "with these tools that you previously only know from graphics programs. The "
 "pixels of your overlaying and underlaying layers are mixed through the "
 "settings described below."
-msgstr ""
+msgstr ":guilabel:`Laag blending modus`: met dit hulpmiddel kunt u speciale effecten op de kaart toepassen die voorheen alleen bekend waren van grafische programma's. De pixels van de overliggende en onderliggende kaartlagen wordt vermengd volgens de instellingen zoals hieronder beschreven."
 
 # 3bc711c3f57f45029915b3425cc2991f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:61
 msgid ""
 "Normal: This is the standard blend mode which uses the alpha channel of the "
 "top pixel to blend with the Pixel beneath it; the colors aren't mixed"
-msgstr ""
+msgstr "Normaal: Dit is de standaard blend modus die het alpha kanaal van de bovenliggende pixels mengt met de onderliggende pixel; daarbij worden kleuren niet vermengt"
 
 # 9766bfcc1a7e4da0923ff148f2dc85e0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:62
 msgid ""
 "Lighten: It selects the maximum of each component from the foreground and "
 "background pixels. Be aware that the results tend to be jagged and harsh."
-msgstr ""
+msgstr "Lichter maken: Deze selecteert de maximum waarden van de pixels van de voor en achtergrond. Het resultaat is vaak ruw, grof en kartelig."
 
 # decaa29c8a04490bb29ece86cb030f0d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:63
@@ -99,7 +100,7 @@ msgid ""
 " dark pixels are not. This mode is most useful for mixing the texture of one"
 " layer with another layer. E.g. you can use a hillshade to texture another "
 "layer"
-msgstr ""
+msgstr "Screen: Lichte pixels van de bronlaag worden getekend over de doellaag, terwijl dat niet gebeurd met donkere pixels. Deze modus is geschikt voor het mengen van de textuur van de ene laag met die van een andere laag. Je kunt deze bijvoorbeeld gebruiken om schaduwen van heuvels in te brengen in een andere laag."
 
 # 8b24a57e275b46eb81eea65a758988e5
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:64
@@ -108,7 +109,7 @@ msgid ""
 "lightness of the top pixel. So brighter top pixels cause the saturation and "
 "brightness of the underlying pixels to increase. This works best if the top "
 "pixels aren't too bright, otherwise the effect is too extreme."
-msgstr ""
+msgstr "Dodge: Hoe lichter de bovenliggende pixel is des te feller en met meer kleur zullen de onderliggende pixels getoond worden. Dit werkt het beste wanneer de bovenliggende top pixels niet te fel gekleurd zijn anders wordt het resultaat nogal extreem."
 
 # 179d4a14770c4deaad028d9119030c8d
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:65
@@ -116,7 +117,7 @@ msgid ""
 "Addition: This blend mode simply adds pixel values of one layer with the "
 "other. In case of values above 1 (in the case of RGB), white is displayed. "
 "This mode is suitable for highlighting features."
-msgstr ""
+msgstr "Toevoegen: Deze blend modus telt de pixelwaarde op van de ene laag bij de andere. Wanneer de waarden boven de 1 uitkomen (in het geval van RGB), zall die pixel wit worden. Deze modus is geschikt om bepaalde objecten op te laten lichten en zo te markeren."
 
 # 9d06d85d2f064f5e8383066250e98c47
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:66
@@ -124,21 +125,21 @@ msgid ""
 "Darken: Creates a resultant pixel that retains the smallest components of "
 "the foreground and background pixels. Like lighten, the results tend to be "
 "jagged and harsh"
-msgstr ""
+msgstr "Donkerder maken: De resulterende pixel die overblijft is die met de laagste waarde van de voor en achtergrond pixel. Net zoals bij de modus Lichter maken, is het resultaat van ruw, grof en gekarteld"
 
 # f78100b14ca0441299a6f5ca769b4c66
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:67
 msgid ""
 "Multiply: It multiplies the numbers for each pixel of the top layer with the"
 " corresponding pixel for the bottom layer. The results are darker pictures."
-msgstr ""
+msgstr "Vermenigvuldigen: Deze vermenigvuldigd de waarden voor elke pixel van de toplaag met die van de onderliggende laag. Het resultaat is een donkerder kaartbeeld."
 
 # cccd5827e2d4411ba7abead7e34fd125
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:68
 msgid ""
 "Burn: Darker colors in the top layer causes the underlying layers to darken."
 " Can be used to tweak and colorise underlying layers."
-msgstr ""
+msgstr "Branden: Donker kleuren in de toplaag zorgen ervoor dat onderliggende lagen ook donkerder worden. Dit kan worden gebruikt om de kleuren van onderliggende lagen bij te stellen."
 
 # b1b0212287a242dc8c170754ed343823
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:69
@@ -146,7 +147,7 @@ msgid ""
 "Overlay: Combines multiply and screen blending modes. In the resulting "
 "picture light parts of the picture become lighter and dark parts become "
 "darker."
-msgstr ""
+msgstr "Overlay: Combineert de modus vermenigvuldigen en screen. In het resulterend kaartbeeld worden de lichtere delen lichter en donkere delen donkerder."
 
 # 60bd428436e64c98acf39cfbcb2bd753
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:70
@@ -154,14 +155,14 @@ msgid ""
 "Soft light: Very similar to overlay, but instead of using multiply/screen it"
 " uses color burn/dodge. This one is supposed to emulate shining a soft light"
 " onto an image."
-msgstr ""
+msgstr "Zacht licht: Lijkt erg op overlay, maar in plaats van de combinatie vermenigvuldigen/screen wordt de combinatie branden/dodge gebruikt. Het effect waar naar gestreefd wordt is dat van het schijnen van een zacht licht op het kaartbeeld."
 
 # 1a8eb2bd877546c5b343f38fb64b0af0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:71
 msgid ""
 "Hard light: Hard light is very similar to the overlay mode. It's supposed to"
 " emulate projecting a very intense light onto an image."
-msgstr ""
+msgstr "Hard licht: Hard licht lijkt op de modus overlay. Deze moet ervoor zorgen dat het lijkt of er een sterk licht schijnt op het kaartbeeld."
 
 # 113a55512edc4885b4e3074fb34cb16e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:72
@@ -169,7 +170,7 @@ msgid ""
 "Difference: Difference subtracts the top pixel from the bottom pixel or the "
 "other way round, to always get a positive value. Blending with black "
 "produces no change, as values for all colors are 0."
-msgstr ""
+msgstr "Verschil: Verschil haalt de waarde van de top pixel van de onderliggend pixel af of omgekeerd, zodat er altijd een positieve waarde onstaat. Het mixen met zwart levert geen wijziging, omdat waarden voor alle kleuren 0 zijn."
 
 # 062a7f1b345742dc8304b33d55fde807
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:82
@@ -196,7 +197,7 @@ msgstr "**De Enkel Symbool Renderer**"
 # fd408c12039842368e70766046050df9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:135
 msgid "Single symbol line properties |nix|"
-msgstr ""
+msgstr "Eigenschappen van enkele lijnsymbologie |nix|"
 
 # e015f5b3c69a46e1ab04f404389b7c95
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:137
@@ -205,39 +206,39 @@ msgid ""
 ":guilabel:`Symbol layers` dialog. You can define :guilabel:`Symbol layers` "
 "that are combined afterwards. A symbol can consist of several "
 ":guilabel:`Symbol layers`. The following settings are possible:"
-msgstr ""
+msgstr "Meer gedetailleerde instellingen kan men doen door te klikken op een lijn die zich bevind op het tweede niveau van :guilabel:`Symboollagen`. Men kan zo een lijn maken bestaande uit meerdere :guilabel:`Symboollagen` waarbij verschillend lijnsymbologie wordt gecombineerd. De volgende instellingen zijn mogelijk:"
 
 # 646a524b5baf47dda647c0c3e7480abd
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:142
 msgid ""
 ":guilabel:`Symbol layer type`: You have the possibility to use Ellipse "
 "markers, Font markers, Simple markers, SVG markers and Vector Field markers"
-msgstr ""
+msgstr ":guilabel:`Symboollaagtypen`: Men kan een lijn arceren met symbolen zoals met een Ellipse marker, een lettertype symbool, een standaard symbool, een SVG symbool of een vector veld marker"
 
 # 0f5dc837b13242ccb7e3f35882c73ae0
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:144
 msgid ":guilabel:`Size`"
-msgstr ""
+msgstr ":guilabel:`Grootte`"
 
 # 551e1f38b7884e92b83d2c95daff4ef1
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:145
 msgid ":guilabel:`Angle`"
-msgstr ""
+msgstr ":guilabel:`Hoek`"
 
 # d40c3611abb54fbf87d3919801fa4358
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:146
 msgid ":guilabel:`Colors`"
-msgstr ""
+msgstr ":guilabel:`Kleuren`"
 
 # 6f9d56d9e2b84d3aa9eb3f7f938bf741
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:147
 msgid ":guilabel:`Border width`"
-msgstr ""
+msgstr ":guilabel:`Randbreedte`"
 
 # 3f7f666c550941aeafee4ff5cf1ce966
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:148
 msgid ":guilabel:`Offset X,Y`: You can shift the symbol in x- or y-direction"
-msgstr ""
+msgstr ":guilabel:`Verspring X,Y`: Men kan het symbool verschuiven in de X- of Y-richting"
 
 # ed05fc91b5204d5495a5bb6a843848d3
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:176
@@ -289,12 +290,12 @@ msgstr "Het voorbeeld in figure_symbology_2_ toont de categoriën rendering dial
 # e85ea6f528cd47b39feed50b2096802e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:208
 msgid "Categorized Symbolizing options |nix|"
-msgstr ""
+msgstr "Categoriën Symbologie opties |nix|"
 
 # e576e2f5d49d41d9a141fc534b0dcd76
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:228
 msgid "Example of custom gradient color ramp with multiple stops |nix|"
-msgstr ""
+msgstr "Voorbeeld van een zelfgemaakte gradiënten kleurenovergang met meerdere stops |nix|"
 
 # bd4926246c8b43fdb87baa756b4aa83a
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:247
@@ -312,7 +313,7 @@ msgstr "De Graduele Renderer wordt gebruikt om voor een laag aan de hand van een
 # 3d3a4037bfa54a368994862c5afe88f4
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:264
 msgid "Graduated Symbolizing options |nix|"
-msgstr ""
+msgstr "Graduele Symbologie opties |nix|"
 
 # d91c58ec92f344389454d29c048f4d24
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:266
@@ -427,7 +428,7 @@ msgstr "Om een nieuwe regel toe te voegen aan de regelgebaseerde rendering, sele
 # 7f5b799740714e759b7b06eaa044f90f
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:328
 msgid "Rule-based Symbolizing options |nix|"
-msgstr ""
+msgstr "Regelgebasseerde Symbologie opties |nix|"
 
 # 92c1bd5193f24cda884dbb7bebab10f7
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:333
@@ -465,32 +466,32 @@ msgstr ""
 # e68b453964344de1bd5460d1e47de83e
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:373
 msgid "Buffer"
-msgstr ""
+msgstr "Buffer"
 
 # 4d0063a207ce4e168e5164afb258b4a9
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:374
 msgid "Background"
-msgstr ""
+msgstr "Achtergrond"
 
 # 6183c9ec3853433f8e82000625df9816
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:375
 msgid "Shadow"
-msgstr ""
+msgstr "Schaduw"
 
 # 2fa9f181465a4923a85f2e28f68f3b24
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:376
 msgid "Placement"
-msgstr ""
+msgstr "Plaatsing"
 
 # dfb26712fb53480f9ddc3889ffeddac8
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:377
 msgid "Rendering"
-msgstr ""
+msgstr "Rendering"
 
 # 9efcdc11934944dba09062163c3f9001
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:379
 msgid "Let us see how the new menus can be used for various vector layers."
-msgstr ""
+msgstr "Laten we een kijken hoe de nieuwe menu's gebruikt kunnen worden voor verschillende vectorlagen."
 
 # 7443332364b84d11a19b403dc91236cb
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:383
@@ -504,7 +505,7 @@ msgid ""
 "checkbox and select an attribute column to use for labeling. Click "
 "|mActionmIconExpressionEditorOpen| if you want to define labels based on "
 "expressions."
-msgstr ""
+msgstr "De eeste stap is om het aanvinkvak |checkbox| :guilabel:`Label deze laag met` en selecteer een veldattribuut om te gebruiken om te labelen. Selecteer |mActionmIconExpressionEditorOpen| wanneer je expressie gebaseerde labels wilt maken."
 
 # 0ae53c58baec40a7afe1d8f0998ff796
 #: ../../source/docs/user_manual/working_with_vector/vector_properties.rst:392

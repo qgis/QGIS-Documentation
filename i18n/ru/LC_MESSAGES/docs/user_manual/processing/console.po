@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-01-07 14:56+0000\n"
+"PO-Revision-Date: 2014-01-12 15:33+0000\n"
 "Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 # a1362793eebb429f9e3cfa4ffa34a46a
 #: ../../source/docs/user_manual/processing/console.rst:8
 msgid "Using processing algorithms from the console"
-msgstr ""
+msgstr "Изпользование алгоритмов геообработки в консоли"
 
 # da16c68bb07f4b079d3f122eb45bf642
 #: ../../source/docs/user_manual/processing/console.rst:10
@@ -31,7 +31,7 @@ msgid ""
 "algorithms can be defined using the command-line interface, and additional "
 "operations such as loops and conditional sentences can be added to create "
 "more flexible and powerful workflows."
-msgstr ""
+msgstr "Командная строка позволяет опытным пользователям значительно увеличить производительность работы и выполнять сложные операции, которые невозможно выполнить, используя графический интерфейс платформы геообработки. В командной строке можно создавать модели, объединяющие несколько алгоритмов и такие дополнительные операции, как циклы и условные операторы, что позволяет создавать более гибкие и мощные процессы обработки."
 
 # 450a9219215447178b0a02dd9f255a58
 #: ../../source/docs/user_manual/processing/console.rst:21
@@ -41,19 +41,19 @@ msgid ""
 "that you can later call from the toolbox, the graphical modeler or any other"
 " component, just like you do with any other algorithm. In fact, some "
 "algorithms that you can find in the toolbox are simple scripts."
-msgstr ""
+msgstr "Код, выполняемый в консоли Python, даже если он не вызывает ни одного алгоритма платформы геообработки, может быть преобразован в новый алгоритм, который в дальнейшем может вызываться из панели инструментов или использоваться в редакторе моделей, как любой другой алгоритм. Более того, некоторые алгоритмы, которые вы видите в панели инструментов, на самом деле являются обычными скриптами."
 
 # f81eeabbb6424ee0afc7fedf3c6159ae
 #: ../../source/docs/user_manual/processing/console.rst:31
 msgid "Calling algorithms from the Python console"
-msgstr ""
+msgstr "Вызов алгоритмов из консоли Python"
 
 # 8da1efcdb76c44278f885fedaa3fa94f
 #: ../../source/docs/user_manual/processing/console.rst:33
 msgid ""
 "The first thing you have to do is to import the processing functions with "
 "the following line:"
-msgstr ""
+msgstr "ервое, что нужно сделать при использовании платформы геообработки из командной строки --- импортировать модуль processing:"
 
 # c9d257cead3a4bb5ad7c39f9cf5cfbbf
 #: ../../source/docs/user_manual/processing/console.rst:40
@@ -67,7 +67,7 @@ msgid ""
 "see in the toolbox, but rather a unique command–line name. To find the right"
 " name for your algorithm, you can use the ``algslist()`` method. Type the "
 "following line in you console:"
-msgstr ""
+msgstr "Теперь можно использовать платформу геообработки в консоли, а именно запускать алгоритмы на выполнение. Для этого предназначен метод ``runalg()``, которому передаётся имя алгоритма в качестве первого параметра и затем переменный набор дополнительных параметров, зависящий от алгоритма. Таким образом, первое, что необходимо знать --- это имя алгоритма. Обратите внимание, в качестве имени алгоритма используется не тот текст, который отображается в панели инструментов, а уникальное внутренее имя алгоритма. Узнать правильное имя можно при помощи метода ``alglist()``. Просто введите в консоли:"
 
 # 790008553c664701b7957d56e6e6312b
 #: ../../source/docs/user_manual/processing/console.rst:53
@@ -114,7 +114,7 @@ msgid ""
 "algorithms require and the outputs that it will generate. To do it, you can "
 "use the ``alghelp(name_of_the_algorithm)`` method. Use the command-line name"
 " of the algorithm, not the full descriptive name."
-msgstr ""
+msgstr "После того как мы узнали имя алгоритма, необходимо выяснить какие параметры ему нужны для работы, т.е. узнать синтаксис вызова. Для этого предусмотрен метод ``alghelp(имя_алгоритма)``, который выдаёт список входных параметров, а также список результирующих файлов, генерируемых агоритмом. Единственный аргумент метода --- внутренее имя алгоритма, описание которого мы хотим получить."
 
 # 0c7c77fdd2754027b3d8151928bac65a
 #: ../../source/docs/user_manual/processing/console.rst:107
@@ -145,7 +145,7 @@ msgid ""
 "Depending on the type of parameter, values are introduced differently. The "
 "next one is a quick review of how to introduce values for each type of input"
 " parameter:"
-msgstr ""
+msgstr "Значения параметров вводятся в зависимости от их типа. Ниже даётся краткий обзор соглашений, используемых при указании исходных данных разных типов:"
 
 # f4717d4423f84f4ba804e9604caf2cf8
 #: ../../source/docs/user_manual/processing/console.rst:144
@@ -154,7 +154,7 @@ msgid ""
 "parameter should be entered using an integer value. To know the available "
 "options, you can use the ``algoptions()`` command, as shown in the following"
 " example:"
-msgstr ""
+msgstr "выбор из списка предустановленных значений. Значение указывается как целочисленный индекс, соответствующий значению. Получить список доступных значений и соответствующие им индексы можно при помощи метода ``algoptions()``. Например:"
 
 # a65b831d44074ded8ccecf69a2ce134a
 #: ../../source/docs/user_manual/processing/console.rst:161
@@ -169,7 +169,7 @@ msgid ""
 "Multiple input. The value is a string with input descriptors separated by "
 "semicolons (``;``). As in the case of single layers or tables, each input "
 "descriptor can be the data object name, or its filepath."
-msgstr ""
+msgstr "список. Список нескольких элементов, разделенных точкой с запятой (``;``). В качестве элементов могут быть как имена объектов, так и пути к файлам."
 
 # 200eadd944114022960da57e11aafbf2
 #: ../../source/docs/user_manual/processing/console.rst:166
@@ -185,7 +185,7 @@ msgid ""
 "and enclosed between quotes (``\"``). Values start on the upper row and go "
 "from left to right. You can also use a 2D array of values representing the "
 "table."
-msgstr ""
+msgstr "Пользовательская таблица. Задается в виде списка значений, разделенных запятой (``,``) и заключенного в кавычки (``\"``). Значения задаются слева направо и сверху вниз. Также можно передавать двумерный массив соответствующей размерности."
 
 # 57fb7029ca3442f3bf0450a295806058
 #: ../../source/docs/user_manual/processing/console.rst:171
@@ -197,7 +197,7 @@ msgstr "система координат. Указывается код EPSG н
 msgid ""
 "Extent. You must use a string with ``xmin``, ``xmax``, ``ymin`` and ``ymax``"
 " values separated by commas (``,``)."
-msgstr ""
+msgstr "охват. Значения ``xmin``, ``xmax``, ``ymin`` и ``ymax``, разделенные запятыми (``,``)."
 
 # 4c1a0b56041b49bda8834df8666ebc7e
 #: ../../source/docs/user_manual/processing/console.rst:175
@@ -231,12 +231,12 @@ msgid ""
 "shown in the algorithm description) as keys and the filepaths of those "
 "outputs as values. You can load those layers by passing its filepath to the "
 "``load()`` method."
-msgstr ""
+msgstr "Метод ``runalg()`` возвращает словарь, ключами в нем будут названия результатов (такие же, как и в описании алгоритма), а значениями --- пути к соответствующим файлам. Загрузить эти слои можно передав их пути в метод ``load()``."
 
 # 8478edf297ea4a018f558e84a3cfa73a
 #: ../../source/docs/user_manual/processing/console.rst:200
 msgid "Additional functions for handling data"
-msgstr ""
+msgstr "Дополнительные функции для работы с данными"
 
 # 46cd1bd8b9db49f58694ea4fdc90f14b
 #: ../../source/docs/user_manual/processing/console.rst:216
@@ -245,14 +245,14 @@ msgid ""
 "vector layer, for the passed fields. Fields can be passed as field names or "
 "as zero-based field indices. Returns a dict of lists, with the passed field "
 "identifiers as keys. It considers the existing selection"
-msgstr ""
+msgstr "``values(layer, fields)``: Возвращает значения таблицы атрибутов векторного слоя для заданных полей. Поля могут быть заданы именами или индексом (индексация идёт с 0). Результат работы записывается в словарь списков, где ключом является идентификатор поля. Учитывается наличие выбранных объектов."
 
 # b87ba4adfc62488ebe6409cd123b2359
 #: ../../source/docs/user_manual/processing/console.rst:220
 msgid ""
 "``getfeatures(layer)``: Returns an iterator over the features of a vector "
 "layer, considering the existing selection."
-msgstr ""
+msgstr "``getfeatures(layer)``: Возвращает итератор по объектам слоя с учётом наличия выбранных объектов."
 
 # 6193e0c5b387446c99bc39b1d57dc283
 #: ../../source/docs/user_manual/processing/console.rst:222
@@ -260,7 +260,7 @@ msgid ""
 "``uniquelabels(layer, field)``: Returns a list of unique values for a given "
 "attribute.  Attribute can be passed as a field name or a zero-based field "
 "index. It considers the existing selection"
-msgstr ""
+msgstr "``uniquelabels(layer, field)``: Возвращает список уникальных значение указанного атрибута. Атрибут задаётся именем или индексом (индексация с 0). Учитывается наличие выбранных объектов."
 
 # 00443acdb1984e37b1066169a576d1e9
 #: ../../source/docs/user_manual/processing/console.rst:227
@@ -279,7 +279,7 @@ msgid ""
 "from there in the :file:`scripts` folder (the default one when you open the "
 "save file dialog), with :file:`.py` extension, will automatically create the"
 " corresponding algorithm."
-msgstr ""
+msgstr "Пользователь может создавать свои собственные алгоритмы, написав соответствующий код на Python и добавив к нему несколько строк со специальной семантической информацией. Простой редактор скриптов можно вызвать из панели инструментов: в группе :guilabel:`Scripts`, в разделе :guilabel:`Tools` находится пункт :guilabel:`Create new script`. Двойно щелчок по этому пункту откроет окно редактора скриптов. Здесь вводится код скрипта. Сохранение набранного кода в каталог :file:`scripts` (по умолчанию, можно изменить в настройках) папки :file:`processing` в домашнем каталоге пользователя QGIS с расширением :file:`.py`, автоматически создаст соответствующий алгоритм."
 
 # 54448587f51b42eeb0478a1a69ed7ead
 #: ../../source/docs/user_manual/processing/console.rst:238
@@ -303,7 +303,7 @@ msgid ""
 "last one of them calculates the TWI, but it needs a slope layer and a flow "
 "accumulation layer. We do not have these ones, but since we have the DEM, we"
 " can calculate them calling the corresponding SAGA algorithms."
-msgstr ""
+msgstr "Как видно, ничего сложного в нем нет, вызывается три алгоритма SAGA. Последних из них выполняет расчет TWI, но ему требуются слои уклонов и накопления потоков. У нас их нет, но т.к. у мы располагаем DEM, то можем легко получить необходимые данные, вызвав соответствующие алгоритмы SAGA."
 
 # 1cf52f535ad349e49c724b6cb9a5dc41
 #: ../../source/docs/user_manual/processing/console.rst:260
@@ -314,21 +314,21 @@ msgid ""
 "information that is needed to turn your code into an algorithm that can be "
 "run from any of the GUI components, like the toolbox or the graphical "
 "modeler."
-msgstr ""
+msgstr "Если вы внимательно читали предыдущий раздел, разобраться в коде будет достаточно легко. Сейчас наибольший интерес для нас представляют первые три строчки, начинающиеся символами ``##``. Эти строки, необходимы для правильной работы со скриптом, именно они позволяют выполнять скрипт, а также использовать его в моделях, как и любой другой алгоритм."
 
 # 7272ada0779142a5a92baa8fd18febb5
 #: ../../source/docs/user_manual/processing/console.rst:266
 msgid ""
 "These lines start with a double Python comment symbol (``##``) and have the "
 "following structure"
-msgstr ""
+msgstr "Эти строки начинаются с двойного символа комментария Python (``##``) и имеют вид:"
 
 # d1394215af224a3f8b2b23f0ee9ffc5b
 #: ../../source/docs/user_manual/processing/console.rst:273
 msgid ""
 "Here is a list of all the parameter types that are supported in processign "
 "scripts, their syntax and some examples."
-msgstr ""
+msgstr "Список всех параметров, доступных в скриптах геообработки, синтаксис их описания и примеры даются ниже."
 
 # 9bdbfa6b714542e59ac2884f70551e0f
 #: ../../source/docs/user_manual/processing/console.rst:276
@@ -411,7 +411,7 @@ msgid ""
 "it to improve its appearance, replacing low hyphens with spaces. So, for "
 "instance, if you want the user to see a parameter named ``A numerical "
 "value``, you can use the variable name ``A_numerical_value``."
-msgstr ""
+msgstr "При использовании названия параметра в качестве подписи, производится замена подчеркиваний на пробелы. Т.е. если мы назовем параметр ``A_numerical_value``, то при запуске алгоритма пользователь увидит надпись ``A numerical value``."
 
 # b3f5083bc8ae4468adb452562346d4e4
 #: ../../source/docs/user_manual/processing/console.rst:308
@@ -459,7 +459,7 @@ msgid ""
 "The value assigned to the output variables is always a string with a "
 "filepath. It will correspond to a temporary filepath in case the user has "
 "not entered any output filename."
-msgstr ""
+msgstr "В переменные-результаты всегда записывается строка, содержащая полный путь к файлу. Если пользователь не указал путь для сохранения результата, это будет путь к временному файлу."
 
 # 7df23c3be7024a0aa3e897e7dfb4b764
 #: ../../source/docs/user_manual/processing/console.rst:327
@@ -508,7 +508,7 @@ msgid ""
 "how to create algorithms using the processing framework classes. You can "
 "right-click on any script algorithm and select :guilabel:`Edit script` to "
 "edit its code or just to see it."
-msgstr ""
+msgstr "В состав платформы геообработки входит несколько примеров. Пожалуйста, ознакомьтесь с ними, чтобы лучше понять как создавать новые алгоритмы. Также вы можете вызвать контекстное меню и выбрать пункт :guilabel:`Edit script` контекстного меню чтобы просмотреть или использовать код скрипта."
 
 # 2e67e747e09a46868ab6618541e61be3
 #: ../../source/docs/user_manual/processing/console.rst:362
@@ -539,7 +539,7 @@ msgstr "Файлы документации сохраняются в том ж�
 # 6ec4cfaa48444d46bdbc7b8fc70f651b
 #: ../../source/docs/user_manual/processing/console.rst:378
 msgid "Pre- and post-execution script hooks"
-msgstr ""
+msgstr "Хуки пред- и постобработки"
 
 # 73558b845fe7429684f1847c0e96e153
 #: ../../source/docs/user_manual/processing/console.rst:380
@@ -547,7 +547,7 @@ msgid ""
 "Scripts can also be used to set pre- and post-execution hooks that are run "
 "before and after an algorithm is run. This can be used to automate tasks "
 "that should be performed whenever an algorithm is executed."
-msgstr ""
+msgstr "Скрипты также могут использоваться для создания хуков пред- и постобработки, которые будут выполняться перед запуском алгоритма и по окончанию обработки. Эта возможность может пригодиться для автоматизации задач, выполняемых перед обработкой данных."
 
 # 98066e72385e452da6f872aeaabf28f7
 #: ../../source/docs/user_manual/processing/console.rst:384
@@ -555,7 +555,7 @@ msgid ""
 "The syntax is identical to the syntax explained above, but an additional "
 "global variable named ``alg`` is available, representing the algorithm that "
 "has just been (or is about to be) executed."
-msgstr ""
+msgstr "Синтаксис идентичек описанному выше, в дополнение доступна глобальная переменная ``alg``, являющаяся алгоритмом, которы был (или будет) выполнен."
 
 # 0fa69490f3aa4a488797104b5001a2ac
 #: ../../source/docs/user_manual/processing/console.rst:388
@@ -564,7 +564,7 @@ msgid ""
 "find two entries named :guilabel:`Pre-execution script file` and :guilabel"
 ":`Post-execution script file` where the filename of the scripts to be run in"
 " each case can be entered."
-msgstr ""
+msgstr "В разделе :guilabel:`General` диалога настройки платформы находится два поля ввода: :guilabel:`Pre-execution script file` и :guilabel:`Post-execution script file`, где и указываются используемые хуки."
 
 #: ../../source/docs/user_manual/processing/console.rst:16
 msgid ""
@@ -573,13 +573,13 @@ msgid ""
 " can incorporate those command to your console work and connect processing "
 "algorithms to all the other features (including methods from the |qg| API) "
 "available from there."
-msgstr ""
+msgstr "Платформа геообработки в |qg| не предоставляет отдельной консоли, вместо этого все команды платформы доступны из консоли Python |qg|. Это значит, что вы можете использовать эти команды в своих скриптах и комбинировать алгоритмы геообработки с остальным функционалом ( включая API |qg|)."
 
 #: ../../source/docs/user_manual/processing/console.rst:27
 msgid ""
 "In this chapter we will see how to use processing algorithms from the |qg| "
 "Python console, and also how to write your own algorithms using Python."
-msgstr ""
+msgstr "В этом параграфе мы покажем как использовать агоритмы геообработки из консоли Python |qg|, а также как создавать свои собственные алгоритмы."
 
 #: ../../source/docs/user_manual/processing/console.rst:138
 msgid ""
@@ -590,7 +590,7 @@ msgid ""
 "|qg| object representing the layer, you can also pass it as parameter. If "
 "the input is optional and you do not want to use any data object, use "
 "``None``."
-msgstr ""
+msgstr "растровый слой, векторный слой или таблица. Можно указывать имя слоя |qg| (если слой загружен в проект), путь к файлу (если слой не загружен). Также можно передавать переменную --- экземпляр соответствующего класса |qg|. Если параметр является необязательным и не используется --- просто укажите ``None``"
 
 #: ../../source/docs/user_manual/processing/console.rst:188
 msgid ""
@@ -599,7 +599,7 @@ msgid ""
 "Console. If you want to add an output to it, you have to do it yourself "
 "after running the algorithm. To do so, you can use |qg| API commands, or, "
 "even easier, use one of the handy methods provided for such task."
-msgstr ""
+msgstr "В отличие от запуска алгоритма из панели инструментов, по окончанию обработки результаты не загружаются в проект автоматически. Если вы хотите отобразить результаты, необходимо самостоятельно загрузить их в |qg| после окончания обработки. Сделать это можно либо используя QGIS API, либо обратившись к вспомогательным методам платформы."
 
 #: ../../source/docs/user_manual/processing/console.rst:202
 msgid ""
@@ -610,21 +610,21 @@ msgid ""
 "usually with a less complex syntax. These functions should be used when "
 "developing new algorithms, as they make it easier to operate with input "
 "data."
-msgstr ""
+msgstr "Помимо функций, используемых для запуска алгоритмов, модуль processing предоставляет ряд вспомогательных функций, которые облегчают работу с данными, в частности с векторными данными. Все эти функции являются обёртками над функциями |qg| API, и, обычно, имеют более простой синтаксис. Рекомендуется использовать их при создании новых алгоритмов, т.к. они упрощают работу с исходными данными."
 
 #: ../../source/docs/user_manual/processing/console.rst:209
 msgid ""
 "Below is a list of some of this commands. More information can be found in "
 "the classes under the ``processing/tools`` package, and aso in the example "
 "scripts provided with |qg|."
-msgstr ""
+msgstr "Ниже описаны некоторые из этих функций. Подробную информацию можно получить, изучив классы пакета ``processing/tools`` а также примеры скриптов, входящие в состав |qg|."
 
 #: ../../source/docs/user_manual/processing/console.rst:213
 msgid ""
 "``getobject(obj)``: Returns a |qg| object (a layer or table) from the passed"
 " object, which can be a filename or the name of the object in the |qg| Table"
 " of Contents."
-msgstr ""
+msgstr "``getobject(obj)``: Возвращает объект |qg| (слой или таблицу) по переданной строке, которая может содержать путь к файлу или имя слоя в списке слоёв |qg|."
 
 #: ../../source/docs/user_manual/processing/console.rst:303
 msgid ""
@@ -633,7 +633,7 @@ msgid ""
 "``processing.getObjectFromUri()`` function. Multiple inputs also have a "
 "string value, which contains the filepaths to all selected object, separated"
 " by semicolons (``;``)."
-msgstr ""
+msgstr "Растровые и векторные слои, а также таблицы задаются строками, содержащими полный путь к соответствующим файлам на диске. Получить из них объекты |qg| можно при помощи метода ``processing.getObjectFromUri()``. Множественные объекты представляются строкой, содержащей разделенные точкой с запятой (``;``) пути к файлам."
 
 #: ../../source/docs/user_manual/processing/console.rst:322
 msgid ""
@@ -642,7 +642,7 @@ msgid ""
 "not load the layers it produces, the final TWI layer will be loaded, since "
 "it is saved to the file entered by the user, which is the value of the "
 "corresponding output."
-msgstr ""
+msgstr "Алгоритм будет пытаться загрузить в проект все описанные в заголовке скрипта результаты по окончанию обработки. Именно поэтому, не смотря на то, что метод ``runalg()`` не загружает слои, конечный слой TWI будет загружен в |qg|. Ведь  он сохраняется в файл, указанных пользователем как значение соответствующего выходного параметра."
 
 #~ msgid ""
 #~ "There is not a proccesing console in QGIS, but all processing commands are "

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:48+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-01-12 15:33+0000\n"
+"Last-Translator: alexbruy <alexander.bruy@gmail.com>\n"
 "Language-Team: Russian (http://www.transifex.com/projects/p/qgis-documentation/language/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +30,7 @@ msgid ""
 "some other command-line applications that provide spatial data analysis "
 "functionalities. Algorithms relying on an external application are managed "
 "by their own algorithm provider."
-msgstr ""
+msgstr "Возможности платформы геообработки могут расширяться за счет использования дополнительных приложений. В настоящее время поддерживаются SAGA, GRASS, OTB (Orfeo Toolbox) и R, а также некоторые другие приложения, предоставляющие функции анализа пространственных данных. Алгоритмы, зависящие от внешних приложений, управляются своими провайдерами."
 
 # 8fa196113ffb41c9a8e5d84676267bcd
 #: ../../source/docs/user_manual/processing/3rdParty.rst:17
@@ -41,12 +41,12 @@ msgid ""
 "the system, you will be able to execute external algorithms from any "
 "component like the toolbox or the graphical modeler, just like you do with "
 "any other geoalgorithm."
-msgstr ""
+msgstr "Этот раздел рассказывает о настройке платформы геообработки для работы с этими дополнительными приложениями, а также описывает некоторые особенности алгоритмов. После корректной настройки системы вы сможете запускать внешние алгоритмы из любого компонента платформы, например из панели инструментов или редактора моделей, как и любой другой алгоритм."
 
 # c04c7d7f360549f59ab0a18c3ebbb7d1
 #: ../../source/docs/user_manual/processing/3rdParty.rst:38
 msgid "A note for Windows users"
-msgstr ""
+msgstr "Примечание для пользователей Windows"
 
 # 89df421cfd234d09b0e71fa508b56b1a
 #: ../../source/docs/user_manual/processing/3rdParty.rst:47
@@ -54,7 +54,7 @@ msgid ""
 "If you want to know more about how these providers work, or want to use some"
 " algorithms not included in the simplified toolbox (such as R scripts), keep"
 " on reading."
-msgstr ""
+msgstr "Если же вы хотите узнать больше о том, как работают все эти провайдеры, или же хотите использовать алгоритмы, недоступные через упрощённый интерфейс (такие как срипты R) --- читайте дальше."
 
 # 162302bebd274b9baab43e46c069b399
 #: ../../source/docs/user_manual/processing/3rdParty.rst:52
@@ -68,7 +68,7 @@ msgid ""
 " trouble and not be able to complete your work if you call an external "
 "algorithm using such a layer as input. For this reason, these layers will "
 "not appear as available to algorithms."
-msgstr ""
+msgstr "Использование растровых данных GRASS является одним из случаев, когда у вас могут возникнуть проблемы, мешающие завершить анализ, если внешний алгоритм использует такой слой в качестве исходного. Поэтому такие слои не отображаются в качестве доступных для алгоритмов."
 
 # 0459a3b57109488db4bf307d63eb66d5
 #: ../../source/docs/user_manual/processing/3rdParty.rst:89
@@ -80,12 +80,12 @@ msgstr "О выделении в векторных слоях"
 msgid ""
 "In other cases, exporting only selected features is needed, which causes "
 "execution times to be longer."
-msgstr ""
+msgstr "Во всех остальных случаях необходим экспорт выбранных объектов, что увеличивает время обработки."
 
 # b032f3d23b964687b2b8148dc8dc32e7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:102
 msgid "SAGA"
-msgstr ""
+msgstr "SAGA"
 
 # 3551178e988d48d6b10265a6d331e393
 #: ../../source/docs/user_manual/processing/3rdParty.rst:120
@@ -93,7 +93,7 @@ msgid ""
 "In case you are running linux, SAGA binaries are not included with SEXTANTE,"
 " so you have to download and install the software yourself. Please check the"
 " SAGA website for more information. SAGA 2.1 is needed."
-msgstr ""
+msgstr "Если вы используете Linux, необходимо помнить, что исполнимые файлы SAGA не поставляются с |qg|, поэтому необходимо загрузить и установить программу самостоятельно. Подробную информацию об установке можно найти на сайте SAGA. Необходимо использовать SAGA версии 2.1."
 
 # 748125663c214819a8cdb0834a8005b2
 #: ../../source/docs/user_manual/processing/3rdParty.rst:125
@@ -103,7 +103,7 @@ msgid ""
 " folder is added to the PATH environment variable. Just open a console and "
 "type ``saga_cmd`` to check that the system can find where SAGA binaries are "
 "located."
-msgstr ""
+msgstr "В этом случае потребности в дополнительной настройке нет, как нет и соответствующих элементов в диалоге настройки. Вместо этого необходимо убедиться, что SAGA установлена корректно и доступна в PATH. Просто откройте эмулятор терминала и введите ``saga_cmd`` чтобы поверить, что система может найти файлы SAGA."
 
 # fcc4c015a4264fef99aa60ff19f715a6
 #: ../../source/docs/user_manual/processing/3rdParty.rst:132
@@ -128,27 +128,27 @@ msgstr "Задать параметры охвата, установив сле�
 # e00c2838fef94e9d89f2dc9e30cda597
 #: ../../source/docs/user_manual/processing/3rdParty.rst:149
 msgid ":guilabel:`Resampling min X`"
-msgstr ""
+msgstr ":guilabel:`Resampling min X`"
 
 # 595cce41f54741e0921cea90004911a9
 #: ../../source/docs/user_manual/processing/3rdParty.rst:150
 msgid ":guilabel:`Resampling max X`"
-msgstr ""
+msgstr ":guilabel:`Resampling max X`"
 
 # 6f804106a0e24dc6a44648b266a4eba7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:151
 msgid ":guilabel:`Resampling min Y`"
-msgstr ""
+msgstr ":guilabel:`Resampling min Y`"
 
 # 743abc94f34c4ef6b88a0f43cf9a8c0f
 #: ../../source/docs/user_manual/processing/3rdParty.rst:152
 msgid ":guilabel:`Resampling max Y`"
-msgstr ""
+msgstr ":guilabel:`Resampling max Y`"
 
 # 8dbbf7fb813a4370a0fd75def9c8c3c7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:153
 msgid ":guilabel:`Resampling cellsize`"
-msgstr ""
+msgstr ":guilabel:`Resampling cellsize`"
 
 # be353a69c8394b6b834197fc3c4835fc
 #: ../../source/docs/user_manual/processing/3rdParty.rst:157
@@ -186,7 +186,7 @@ msgid ""
 " vertical cellsizes, you might get unexcepted results. In this case, a "
 "warning will be added to the processing log, indicating that an input layer "
 "might not be suitable to be processed by SAGA."
-msgstr ""
+msgstr "SAGA полагает, что растровые слои имеют одинаковый размер ячеек по осям X и Y. Если вы работаете со слоями, имеющими разные размеры ячеек по горизонтали и вертикали, можно получить неожиданные результаты. В таких случаях в отладочных сообщениях SEXTANTE появится соответствующее предупреждение, информирующее о том, что исходный слой не подходит к использованию в SAGA."
 
 # 8c6696f90fa448e8a5de482837c99b71
 #: ../../source/docs/user_manual/processing/3rdParty.rst:186
@@ -199,12 +199,12 @@ msgid ""
 "Most other providers that use an external application and call it through "
 "the command-line have similar options, so you will find them as well in "
 "other places in the processing settings list."
-msgstr ""
+msgstr "Большинство провайдеров, использующих сторонние приложения и взаимодействующие с ними через командную строку, имеют схожие параметры, так что вы можете встретить их и в других местах диалога настройки."
 
 # 08982522f292447f99ce70bf5d9d3ba2
 #: ../../source/docs/user_manual/processing/3rdParty.rst:206
 msgid "R. Creating R scripts"
-msgstr ""
+msgstr "R. Создание скриптов R"
 
 # 10867a1fcf5f4c6ea135d373e88d3e98
 #: ../../source/docs/user_manual/processing/3rdParty.rst:220
@@ -222,7 +222,7 @@ msgid ""
 "should be stored in the R-scripts folder. You can set this folder in the "
 ":guilabel:`R` settings group (available from the processing settings "
 "dialog), just like you do with the folder for regular processing scripts."
-msgstr ""
+msgstr "Файлы скриптов должны иметь расширение :file:`.rsx`, а создавать их при наличии базовых знаний R и синтаксиса R очень просто. Скрипты сохраняются в каталог R-скриптов, путь к этому каталогу можно задать в группе :guilabel:`R` (в диалоге настройки платформы), точно так же как это делалось в случае каталога для обычных скриптов геообработки."
 
 # fb04a7dc3b744690a5d9c179a990139b
 #: ../../source/docs/user_manual/processing/3rdParty.rst:274
@@ -237,14 +237,14 @@ msgstr "Таблицы открываются при помощи команды
 msgid ""
 "Additionally, raster files can be read using the ``readGDAL()`` command "
 "instead of ``brick()``, by using the ``##usereadgdal``."
-msgstr ""
+msgstr "Также растровые файлы можно открывать при помощи команды ``readGDAL()``, а не ``brick()``. Для этого используется директива ``##usereadgdal``."
 
 # eb8e5c1439e8493aae30112e7027d4d7
 #: ../../source/docs/user_manual/processing/3rdParty.rst:285
 msgid ""
 "With the above information, we can now understand the first line of our "
 "first example script (the first line not starting with a Python comment)."
-msgstr ""
+msgstr "Теперь, используя вышеприведённые сведения, мы легко можем разобрать первую строку скрипта (первую строку без символа комментария в начале)."
 
 # 2cefecc674d946fd8cb9441069447938
 #: ../../source/docs/user_manual/processing/3rdParty.rst:292
@@ -273,7 +273,7 @@ msgid ""
 "depend on whether you have used or not the ``#dontuserasterpackage`` option."
 " In you have used it, layers are saved using the ``writeGDAL()`` method. If "
 "not, the ``writeRaster()`` method from the ``raster`` package will be used."
-msgstr ""
+msgstr "Если алгоритм создаёт растровые слои, способ их сохранения будет зависеть от того была ли указана директива ``#dontuserasterpackage``. Если директива указана, слои сохраняются при помощи метода ``writeGDAL()``. В противном случае будет использоваться метод ``writeRaster()`` из пакета ``raster``."
 
 # a1a775f0cc88432bafa327dfeb702f3a
 #: ../../source/docs/user_manual/processing/3rdParty.rst:311
@@ -281,7 +281,7 @@ msgid ""
 "If you have used the ``#passfilename`` option, outputs are generated using "
 "the ``raster`` package (with ``writeRaster()``), even though it is not used "
 "for the inputs."
-msgstr ""
+msgstr "Если указана директива ``#passfilename``, выходные растры будут созданы при помощи пакета ``raster`` (методом ``writeRaster()``), даже если он не использовался для загрузки исходных данных."
 
 # ee21c849980d442a81d2257c277a868f
 #: ../../source/docs/user_manual/processing/3rdParty.rst:315
@@ -293,7 +293,7 @@ msgid ""
 "output of all other lines will not be shown. For instance, here is the "
 "description file of an algorithm that performs a normality test on a given "
 "field (column) of the attributes of a vector layer:"
-msgstr ""
+msgstr "Если алгоритм не создаёт слоёв, а выдаёт результаты на консоль, необходимо указать, что консольный вывод должен быть показан по окончанию работы алгоритма. Для этого перед командой, печатающей результат, необходимо поставить знак «больше» (``>``). Консольный вывод всех остальных команд отображаться не будет. Например, вот скрипт, выполняющий тест нормальности заданного поля (столбца) таблицы атрибутов векторного слоя:"
 
 # 7f6f5cd6567545e7bc0e1922c86d2a64
 #: ../../source/docs/user_manual/processing/3rdParty.rst:334
@@ -307,7 +307,7 @@ msgstr "Если алгоритм создаёт какие-либо графи�
 msgid ""
 "Both graphics and console results will be shown in the processing results "
 "manager."
-msgstr ""
+msgstr "И консольные и графические результаты будут доступны в окне :guilabel:`Просмотр результатов`."
 
 # 03aaefe2a08e437899b48633176776c1
 #: ../../source/docs/user_manual/processing/3rdParty.rst:346
@@ -357,7 +357,7 @@ msgid ""
 "mapset is needed to run GRASS, and the  processing frmaework creates a "
 "temporary one for each execution. You have to specify if the data you are "
 "working with uses geographical (lat/lon) coordinates or projected ones."
-msgstr ""
+msgstr "Последний параметр, нуждающийся в настройке, связан с набором данных GRASS. Набор данных необходим для запуска GRASS, и платформа геообработки автоматически создаёт временный набор при каждом запуске. Необходимо указать какие координаты используются исходными данными --- географические (широта/долгота) или спроецированные."
 
 # 943010e2681d4999a0dfd897f922502f
 #: ../../source/docs/user_manual/processing/3rdParty.rst:395
@@ -376,14 +376,14 @@ msgid ""
 " for Windows, but are not included if you are runing Linux, so you have to "
 "download and install the software yourself. Please check the OTB website for"
 " more information."
-msgstr ""
+msgstr "Как и в случае SAGA, исполнимые файлы и библиотеки OTB включены в состав автономного установщика для Windows, но не входят в состав пакето для Linux. Поэтому вам необходимо загрузить и установить недостающие программы самостоятельно. Подробные инструкции можно найти на сайте OTB."
 
 # 5d07a6c6e0c846859053cb023a298465
 #: ../../source/docs/user_manual/processing/3rdParty.rst:418
 msgid ""
 "Then configure the path to the folder where OTB command--line tools and "
 "libraries are installed:"
-msgstr ""
+msgstr "Затем укажите путь к каталогам инструментов командной строки OTB и библиотекам:"
 
 # 422919cfdc394c35b9e602d1e4f72ef4
 #: ../../source/docs/user_manual/processing/3rdParty.rst:421
@@ -402,7 +402,7 @@ msgid ""
 " tools folder`. This values should be configured by default, but if you have"
 " a different OTB installation, configure them to the correspondig values in "
 "your system."
-msgstr ""
+msgstr "|win| если вы используете установщик OSGeo4W, установите пакет ``otb-bin`` и укажите ``C:\\\\OSGeo4W\\\\apps\\\\orfeotoolbox\\\\applications`` в качестве :guilabel:`OTB applications folder`, а ``C:\\\\OSGeo4W\\\\bin`` в качестве :guilabel:`OTB command line tools folder`. Эти значения используются по умолчанию, так что если OTB установлен в другое место, замените их на свои пути."
 
 # 675fb65e19e74f9ab90928f0a23bfc14
 #: ../../source/docs/user_manual/processing/3rdParty.rst:430
@@ -427,7 +427,7 @@ msgid ""
 "installation instructions and precompiled binaries for 32bit and 64bit "
 "systems. **IMPORTANT**: you need TauDEM 5.0.6 executables, version 5.2 is "
 "currently not supported."
-msgstr ""
+msgstr "Инструкция по установке, а также скомпилированные инструменты для 32-х и 64-х разрядных платформ находятся на `домашней странице TauDEM <http://hydrology.usu.edu/taudem/taudem5.0/downloads.html>`_. **ВАЖНО**: необходимо загружать TauDEM версии 5.0.6, версия 5.2 в настоящее время не поддерживается."
 
 # 94a26bc8dca54cdc85bf7c5c2c5d8795
 #: ../../source/docs/user_manual/processing/3rdParty.rst:443
@@ -501,7 +501,7 @@ msgid ""
 "system. Enabling an algorithm provider without installing the application it"
 " needs will cause the algorithms to appear in the toolbox, but an error will"
 " be thrown when you try to execute them."
-msgstr ""
+msgstr "По умолчанию, все алгоритмы, зависящие от внешних приложений, которые не поставляются с QGIS, деактивированы. Вы можете активировать их в диалоге настройки платформы геообработки. Убедитесь, что соответствующее приложение уже установлено в системе. Активация провайдера алгоритмов без установки приложения, которое ему требуется, приведет к появлению алгоритмов в панели инструментов, но при попытке запуска алгоритма вы получите ошибку."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:30
 msgid ""
@@ -511,7 +511,7 @@ msgid ""
 " of |qg|, so you have them in your installation even if you have not "
 "installed any other software. Running the algorithm, however, needs the "
 "application binaries to be installed in your system."
-msgstr ""
+msgstr "Дело в том, что описания алгоритмов (необходимые для создания диалога параметров и получения информации об алгоритме) поставляются не с приложениями, а входят в состав |qg|. Т.е. они являются частью |qg| и доступны даже если сторонние приложение не установлены. Однако для запуска алгоритма необходимо наличие исполняемых файлов приложения в системе."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:40
 msgid ""
@@ -522,7 +522,7 @@ msgid ""
 " so they can be run from |qg|. All the algorithms in the simplified view of "
 "the toolbox will be ready to be run, without needing any further "
 "configuration."
-msgstr ""
+msgstr "Если вы не являетесь опытным пользователем и используете |qg| в среде Windows, читать эту главу необязательно. Просто убедитесь, что |qg| в вашей системе установлена при помощи автономного установщика или установщика OSGeo4W. В этом случае SAGA, GRASS и OTB автоматически устанавливаются и настраиваются, а значит вы сможете запускать их из |qg|. Все алгоритмы, доступные через упрощённый интерфейс платформы геообработки будут настроены и готовы к использованию."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:54
 msgid ""
@@ -534,7 +534,7 @@ msgid ""
 "try to use well known file formats that you are sure that are understood by "
 "both programs, and check to console output (in the history and log dialog) "
 "for knowing more about what is going wrong."
-msgstr ""
+msgstr "При использовании сторонних приложений возможность открытия файла в |qg| ещё не значит, что этот файл может быть открыт и обработан каким-то другим программным обеспечением. В большинстве случаев сторонние приложения могут читать данные, загруженные в |qg|, но в других случаях это невозможно. При использовании баз данных или малораспространенных форматов, не зависимо от того растровые это данные или векторные, возможно появление проблем. Если при обработке таких данных возникли трудности, попробуйте использовать более распространенные форматы, которые точно поддерживаются обеими программами, а также проверьте консольный вывод (в окне :guilabel:`Журнал`), чтобы узнать что именно пошло не так."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:67
 msgid ""
@@ -544,13 +544,13 @@ msgid ""
 "processing time, which might be significant if the layer has a large size, "
 "so do not be surprised if it takes more to process a layer from a DB "
 "connection that one of a similar size stored in a shapefile."
-msgstr ""
+msgstr "С векторными слоями любых типов таких проблем возникать не должно, так как |qg| автоматически конвертирует их из исходного формата в формат, понимаемый внешним приложением, перед тем как выполнить алгоритм. Это увеличивает время обработки, и может потребовать длительное время в случае больших слоёв. Так что не удивляйтесь, если обработка данных их базы данных будет длиться дольше, чем обработка аналогичных данных в формате shape-файлов."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:74
 msgid ""
 "Providers not using external applications can process any layer that you can"
 " open in |qg|, since they open it for analysis through |qg|."
-msgstr ""
+msgstr "Провайдеры, не использующие внешние приложения, могут обрабатывать любые слои, открытые в |qg|, так как они открыты для анализа самой |qg|."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:77
 msgid ""
@@ -559,7 +559,7 @@ msgid ""
 "certain formats, but all can export to common formats raster layers that can"
 " be later transformed by |qg| automatically. As in the case of input layers,"
 " if this conversion is needed, that might increase the processing time."
-msgstr ""
+msgstr "Что касается выходных форматов, то в качестве выходных могут использоваться все (как растровые, так и векторные) форматы, поддерживаемые |qg|. Некоторые провайдеры могут не поддерживать определённые форматы, но все они могут выполнять экспорт растровых данных в общепринятые форматы, которые затем можно трансформировать в самой |qg|. Как и в случае в исходными данными, при необходимости преобразования форматов соответственно увеличивается время обработки."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:83
 msgid ""
@@ -568,7 +568,7 @@ msgid ""
 "suffix will be added to set a default format. In the case of raster layers, "
 "the :file:`tif` extension is used, while :file:`shp` is used for vector "
 "layer."
-msgstr ""
+msgstr "Если расширение (суффикс) выходного файла не соответствует ни одному из поддерживаемых |qg| форматов, будет добавлен суффикс по умолчанию и использован формат по умолчанию. В случае растров это :file:`.tif`, а для векторных данных --- :file:`.shp`."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:91
 msgid ""
@@ -578,7 +578,7 @@ msgid ""
 "external application. Only when no selection exist, or the *Use only "
 "selected features* option is not enabled in the processing general "
 "configuration, a layer can be directly passed to an external application."
-msgstr ""
+msgstr "Внешние приложения также обрабатывают выделение в исходном слое, если оно существует. Однако, для этого необходим экспорт всех исходных векторных слоёв, как будто все они находятся в формате, неизвестном внешнему приложению. Слой может быть передан во внешнее приложение напрямую только если в нём нет выбранных объектов или настройка :guilabel:`Use only selected features` отключена."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:104
 msgid ""
@@ -586,14 +586,14 @@ msgid ""
 "system and you configure the processing framework properly so it can find "
 "SAGA executables. In particular, the SAGA command-line executable is needed "
 "to run SAGA algorithms."
-msgstr ""
+msgstr "Алгоритмы SAGA могут использоваться из |qg|, если SAGA установлена в системе, а платформа геообработки правильно настроена и может найти исполнимые файлы SAGA. Для запуска алгоритмов SAGA необходимы консольные приложения SAGA."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:109
 msgid ""
 "In case of running Windows, the standalone installer or the OSGeo4W "
 "installer, both install SAGA along with |qg|, and the path is automatically "
 "configured, so there is no need to do anything else."
-msgstr ""
+msgstr "В случае использования Windows и автономного установщика либо установщика OSGeo4W, SAGA будет установлена одновременно с |qg| и настроена автоматически, дополнительная настройка путей не требуется."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:113
 msgid ""
@@ -603,7 +603,7 @@ msgid ""
 "named :guilabel:`SAGA Folder`. Enter the path to the folder where SAGA is "
 "installed. Close the configuration dialog and now you are ready to run SAGA "
 "algorithms from |qg|."
-msgstr ""
+msgstr "Если вы установили SAGA самостоятельно (помните, необходимо использовать версию 2.1), следует настроить пути к исполнимым файлам. Для этого откройте диалог настройки. В разделе :guilabel:`SAGA` найдите параметр :guilabel:`SAGA folder`. Введите путь к каталогу установки SAGA. Закройте диалог настройки, теперь вы можете запускать алгоритмы SAGA из |qg|."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:134
 msgid ""
@@ -615,13 +615,13 @@ msgid ""
 "SAGA algorithm, |qg| resamples them to a common grid system and then passes "
 "them to SAGA (unless the SAGA algorithm can operate with layers from "
 "different grid systems)."
-msgstr ""
+msgstr "Большинство алгоритмов SAGA, оперирующих несколькими растрами, требуют, чтобы эти растры имели одну систему покрытия. Т.е. имели одинаковый географический охват и одинаковый размер ячейки. При вызове алгоритмов SAGA из |qg| можно использовать любые слои, не зависимо от размера их ячеек и охвата. В случаях, когда несколько растров используется в качестве исходных данных алгоритма SAGA, |qg| автоматически пересчитывает их в единую систему и затем передаёт SAGA (кроме случаев, когда соответствующий алгоритм SAGA может использовать слои с разными системами)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:155
 msgid ""
 "Notice that |qg| will resample input layers to that extent, even if they do "
 "not overlap with it."
-msgstr ""
+msgstr "Имейте ввиду, что |qg| выполнит пересчет исходных слоёв к этому охвату даже если они не пересекают его."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:170
 msgid ""
@@ -631,7 +631,7 @@ msgid ""
 "Tools/Split RGB image' algorithm (which creates 3 images from an RGB image) "
 "or the 'SAGA/Grid - Tools/Extract band' algorithm (to extract a single "
 "band)."
-msgstr ""
+msgstr "В отличие от |qg|, SAGA не поддерживает многоканальные растры. Если требуется использовать многоканальное изображение (такое как RGB-растр или мультиспектральное изображение), вначале необходимо разделить его на одноканальные растры. Для этого можно использовать алгоритм «SAGA/Grid - Tools/Split RGB image» (создаёт 3 растра из RGB-композита) или «SAGA/Grid - Tools/Extract band» (извлекает один канал)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:188
 msgid ""
@@ -641,7 +641,7 @@ msgid ""
 "percentage of processing already done, along with additional content. This "
 "output is filtered and used to update the progress bar while the algorithm "
 "is running."
-msgstr ""
+msgstr "Когда |qg| вызывает SAGA, она делает это с использованием интерфейса командной строки, т.е. передаёт набор команд, выполняющих необходимую операцию. SAGA отображает информацию о процессе, выводя на консоль сообщения, которые содержат данные о прогрессе выполнения, а также дополнительные сведения. Эта информация фильтруется и используется для обновления индикатора прогресса в процессе работы алгоритма."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:195
 msgid ""
@@ -651,7 +651,7 @@ msgid ""
 " algorithm. you will find two settings, namely :guilabel:`Log console "
 "output` and :guilabel:`Log execution commands` to activate that logging "
 "mechanism."
-msgstr ""
+msgstr "Команды, посылаемые |qg|, а также информация, возвращаямая SAGA, могут записываться наряду с остальными сообщениями платформы. Эти сведения могут \"быть полезны для изучения того, как |qg| взаимодействует с SAGA. За активацию журналирования отвечают два параметра --- :guilabel:`Log console output` и :guilabel:`Log execution commands`."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:208
 msgid ""
@@ -662,7 +662,7 @@ msgid ""
 "dedicated to processing scripts. This chapter shows you the syntax to use to"
 " call those R commands from |qg| and how to use |qg| objects (layers, "
 "tables) in them."
-msgstr ""
+msgstr "Интеграция R в |qg| отличается от SAGA и большинства остальных провайдеров, так как не существует предустановленного набора алгоритмов, которые можно запускать (кроме нескольких примеров). Вместо этого вы должны писать свои скрипты и вызывать команды R, почти так же как и при использовании«чистого» R и почти так же, как мы вызывали скрипты геообработки в соответствующем разделе. Этот параграф покажет как вызывать команды R из |qg| и как использовать в них объекты |qg| (слои, таблицы)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:215
 msgid ""
@@ -670,7 +670,7 @@ msgid ""
 "|qg| where you R binaries are located. You can do so using the :guilabel:`R "
 "folder` entry in the processing configuration dialog. Once you have set that"
 " parameter, you can start creating your own R scripts and executing them."
-msgstr ""
+msgstr "Прежде всего, как мы уже видели на примере SAGA, необходимо указать |qg| где находятся исполнимые файлы R. Для этого предназначено поле :guilabel:`R folder` в диалоге настройки платформы геообработки. После настройки этого параметра можно начинать создавать свои собственные скрипты R, а затем выполнять их."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:224
 msgid ""
@@ -678,7 +678,7 @@ msgid ""
 "that you have developed and you would like to have available from |qg|), you"
 " have to create a script file that tells the processing framework how to "
 "perform that operation and the corresponding R commands to do so."
-msgstr ""
+msgstr "Чтобы добавить новый алгоритм, вызывающий функицю R (или более сложный скрипт R, который вы написали и хотите сделать доступным из |qg|), необходимо создать файл скрипта, объясняющий платформе геообработки как выполнить операцию и содержащий соответствующие команды R."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:235
 msgid ""
@@ -688,7 +688,7 @@ msgid ""
 "package. Since almost all the algorithms that you might like to incorporate "
 "into |qg| will use or generate spatial data, knowledge of spatial packages "
 "like ``maptools`` and, specially, ``sp``, is mandatory."
-msgstr ""
+msgstr "Рассмотрим очень простой скрипт, который вызывает метод R ``spsample`` для создания случайной сетки внутри границ полигонов заданного полигонального слоя. Этот метод находится в пакете ``maptools``. Так как большинство алгоритмов, которые вы скорее всего захотите реализовать в |qg|, будет использовать или создавать пространственные даные, знание таких пакетов как ``maptools`` и особенно ``sp`` является обязательным."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:251
 msgid ""
@@ -698,7 +698,7 @@ msgid ""
 "SEXTANTE scripts that we have already seen, so they will not be described "
 "here again. Check the :ref:`processing_scripts` section for more "
 "information."
-msgstr ""
+msgstr "Первые строки, начинающиеся с двойного символа комментария Python (``##``), дают |qg| информацию об исходных данных алгоритма и создаваемых им результатах. Они имеют такой же синтаксис, как и в обычных скриптах геообработки, которые мы рассматривали выше, поэтому повторять описание не будем. Обратитесь к разделу :ref:`processing_scripts` за более подробной информацией."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:257
 msgid ""
@@ -706,7 +706,7 @@ msgid ""
 "things: creating the user interface to ask the user for the value of that "
 "parameter and creating a corresponding R variable that can be later used as "
 "input for R commands."
-msgstr ""
+msgstr "Когда вы описываете исходный параметр, |qg| использует эту информацию для двух вещей: создания пользовательского интерфейса и для создания соответствующей переменной R, которая позже может использоваться в командах R."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:262
 msgid ""
@@ -716,7 +716,7 @@ msgid ""
 " name of a parameter is also the name of the variable that we can use in R "
 "for accesing the value of that parameter (thus, you should avoid using "
 "reserved R words as parameter names)."
-msgstr ""
+msgstr "В примере выше мы задали исходный аргумент типа ``vector`` с именем ``polyg``. При выполнении алгоритма |qg| откроет в R слой, выбранный пользователем и запишет его в переменную с именем ``polyg``. Т.е. имя параметра также вляется именем переменной, которую можно использовать в R для доступа к значению этого параметра (поэтому следует избегать использования зарезервированных слов R в качестве названий параметров)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:268
 msgid ""
@@ -725,7 +725,7 @@ msgid ""
 "adding those commands to your description file, |qg| will do it) and stored "
 "as ``Spatial*DataFrame`` objects. Table fields are stored as strings "
 "containing the name of the selected field."
-msgstr ""
+msgstr "Пространственные элементы, такие как векторные и растровые слои, открываются при помощи команд ``readOGR()`` и ``brick()`` (вам не нужно беспокоиться о добавлении этих команд в файл описания, |qg| сделает это автоматически), а и сохраняются как объекты ``Spatial*DataFrame``. Поля таблиц сохраняются как строки, содержащие имя выбранного поля."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:280
 msgid ""
@@ -734,7 +734,7 @@ msgid ""
 "that you prefer a string with the filename instead. In this case, it is up "
 "to you to open the file before performing any operation on the data it "
 "contains."
-msgstr ""
+msgstr "Если вы опытный пользователь и не хотите чтобы |qg| создавала объект, представляющий слой, используйте директиву ``##passfilename``. Эта директива указывает, что необходимо вернуть строку с именем файла. В этом случае, перед выполнением любых операций с файлом, вам необходимо позаботиться о его открытии."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:302
 msgid ""
@@ -742,20 +742,20 @@ msgid ""
 "converted explicitly into a ``SpatialPointsDataFrame`` object, since it is "
 "itself an object of class ``ppp``, which is not a suitable class to be "
 "returned to |qg|."
-msgstr ""
+msgstr "В нашем случае результат полученный от метода ``spsample`` необходимо явно преобразовать в объект ``SpatialPointsDataFrame``, так как изначально это экземпляр класса ``ppp``, который не подходит для возвращения в |qg|."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:331
 msgid ""
 "The output ot the last line is printed, but the output of the first is not "
 "(and neither are the outputs from other command lines added automatically by"
 " |qg|)."
-msgstr ""
+msgstr "Результат работы последней строки будет выведен на консоль, а результат работы первой --- нет (равно как и вывод остальных команд, добавленных |qg| автоматически)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:341
 msgid ""
 "This will cause |qg| to redirect all R graphical outputs to a temporary "
 "file, which will be later opened once R execution has finished."
-msgstr ""
+msgstr "Это заставит |qg| сохранить все графические объекы во временный файл, который позже, после окончания обработки, будет открыт."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:352
 msgid ""
@@ -770,7 +770,7 @@ msgid ""
 " an uninstalled package, the execution will fail, and SEXTANTE will try to "
 "detect which packages are missing. You must install those missing libraries "
 "manually before you can run the algorithm."
-msgstr ""
+msgstr "Библиотеки ``rgdal`` и ``maptools`` загружаются по умолчанию, поэтому добавлять соответствующие команды ``library()`` нет необходимости (однако следует убедиться, что эти два пакета установлены в вашем дистрибутиве R). Тем не менее, все остальные дополнительные библиотеки, которые будут использоваться, должны быть загружены явным образом. Просто добавьте необходимые команды в начало вашего скрипта. Также необходимо убедиться, что соответствующие пакеты установлены в дистрибутиве R, используемом |qg|. Платформа геообработки не занимается установкой пакетов R. Если вы запустите скрипт, требующий, отсутствующий в вашей установке, пакет, выполнение завершится с ошибкой и |qg| попытается сформировать список требуемых пакетов. Перед повторным запуском алгоритма необходимо установить эти пакеты вручную."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:372
 msgid ""
@@ -780,21 +780,21 @@ msgid ""
 "have to do it manually. Also, if you want to use a different GRASS "
 "installation, you can change that setting and point to the folder where that"
 " it is installed. GRASS 6.4 is needed for algorithms to work correctly."
-msgstr ""
+msgstr "По умолчанию, платформа геообработки пытается настроить свой провайдер GRASS на использование версии GRASS, распространяемой вместе с |qg|. В большинстве случаев это должно работать без дополнительных действий со стороны пользователя, но если у вас возникают проблемы --- попробуйте настроить провайдер вручную. Также, если вы хотите использовать другую версию GRASS, следует ихменить эти настройки, указав путь к каталогу с другой версией. Для работы алгоритмов требуется GRASS 6.4."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:397
 msgid ""
 "No additional configuration is needed to run GDAL algorithms, since it is "
 "already incorporated to |qg| and algorithms can infere its configuration "
 "from it."
-msgstr ""
+msgstr "Для запуска алгоритмов GDAL дополнительная настройка не требуется, так как эта библиотека распространяется вместе с |qg| и алгоритмы могут получить всю необходимую для работы информацию самостоятельно."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:403
 msgid ""
 "Orfeo ToolBox (OTB) algorithms can be run from |qg| if you have OTB "
 "installed in your system and you have configured |qg| properly, so it can "
 "find all necessary files (command-line tools and libraries)."
-msgstr ""
+msgstr "Алгоритмы OrfeoToolBox (OTB) можно вызывать из |qg|, если OTB установлен, а |qg| правильно настроена и может найти все необходимые файлы (инструменты командной строки и библиотеки)."
 
 #: ../../source/docs/user_manual/processing/3rdParty.rst:413
 msgid ""
@@ -802,7 +802,7 @@ msgid ""
 "and configure the OTB algorithm provider. In the :guilabel:`Orfeo Toolbox "
 "(image analysis)` block you will find all settings related to OTB. First "
 "ensure that algorithms are enabled."
-msgstr ""
+msgstr "После установки OTB запустите |qg|, откройте диалог настройки и сконфигурируйте провайдер OTB. Настройки находятся в группе :guilabel:`Orfeo Toolbox (image analysis)`. Прежде всего убедитесь, что провайдер активирован."
 
 #~ msgid ""
 #~ "By default, all algorithms that rely on an external appplication not shipped"
