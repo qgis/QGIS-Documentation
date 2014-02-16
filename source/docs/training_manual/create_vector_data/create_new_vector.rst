@@ -161,9 +161,9 @@ you're using the digitizing tool, you can zoom in and out on your map by
 rolling the mouse wheel, and you can pan around by holding down the mouse wheel
 and dragging around in the map.
 
-The first feature you'll be digitizing is the athletics field:
+The first feature you'll be digitizing is the |schoolAreaType1|:
 
-.. image:: /static/training_manual/create_vector_data/athletics_field.png
+.. image:: /static/training_manual/create_vector_data/school_area_one.png
    :align: center
 
 * Start digitizing by clicking on a point somewhere along the edge of the
@@ -174,7 +174,7 @@ The first feature you'll be digitizing is the athletics field:
   This will finalize the feature and show you the :guilabel:`Attributes` dialog.
 * Fill in the values as below:
 
-.. image:: /static/training_manual/create_vector_data/athletics_field_attributes.png
+.. image:: /static/training_manual/create_vector_data/school_area_one_attributes.png
    :align: center
 
 * Click :guilabel:`OK` and you've created a new feature!

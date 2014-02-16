@@ -64,7 +64,7 @@ it creates this effect using only one layer.
 -------------------------------------------------------------------------------
 
 * Start a new map and add the :guilabel:`roads.shp` layer to it.
-* Zoom in over the Swellendam area.
+* Zoom in over the |majorUrbanName| area.
 * Using the :guilabel:`Plugin Manager`, find a new plugin by entering the word
   :kbd:`OpenLayers` in the :guilabel:`Filter` field.
 * Select the OpenLayers Layers plugin from the filtered list:
@@ -131,7 +131,7 @@ layer, with our own vector road layer as overlay:
   .. image:: /static/training_manual/qgis_plugins/geosearch_menu.png
      :align: center
 
-* Search for *Swellendam* in the GeoSearch Dialog to locate it on your map:
+* Search for |majorUrbanName| in the GeoSearch Dialog to locate it on your map:
 
   .. image:: /static/training_manual/qgis_plugins/city_search.png
      :align: center

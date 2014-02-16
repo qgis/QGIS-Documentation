@@ -72,12 +72,12 @@ Microsoft Access. GIS applications can also make use of databases. GIS-specific
 DBMSes (such as PostGIS) have extra functions, because they need to handle
 spatial data.
 
-* Click on this icon: |mActionNewSpatiaLiteLayer|
+* Click on this icon: |mActionAddSpatiaLiteLayer|
 
 (If you're sure you can't see it at all, check that the :guilabel:`Manage
 Layers` toolbar is enabled.)
 
-It will give you a new dialog.  In this dialog:
+It will give you a new dialog. In this dialog:
 
 * Click the :guilabel:`New` button.
 * In the same folder as the other data, you should find the file
@@ -136,6 +136,9 @@ To resolve this problem:
 
 .. image:: /static/training_manual/vector/correct_layer_order.png
    :align: center
+
+You'll see that the map now makes more sense visually, with roads and buildings
+appearing above the land use regions.
 
 |IC|
 -------------------------------------------------------------------------------

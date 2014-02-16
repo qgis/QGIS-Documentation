@@ -1,10 +1,21 @@
 Preparing Exercise Data
 =======================
 
+The sample data provided with the Training Manual refers to the town of
+|majorUrbanName| and its surroundings. |majorUrbanName| is located about 2 hours' east of
+Cape Town in the Western Cape of South Africa. The dataset contains feature
+names in both English and Afrikaans.
+
+Anyone can use this dataset without difficulty, but you may prefer to use data
+from your own country or home town. If you choose to do so, your localised
+data will be used in all lessons from Module 3 to Module 7.2. Later modules use
+more complex data sources which may or may not be available for your region.
+
 .. note:: This process is intended for course conveners, or more experienced
   QGIS users who wish to create localised sample data sets for their course.
   Default data sets are provided with the Training Manual, but you may follow
   these instructions if you wish to replace the default data sets.
+
 
 |hard| |TY|
 --------------------------------------------------------------------------------
@@ -51,7 +62,7 @@ and create corresponding shape files:
 * In the :guilabel:`General` tab, click :guilabel:`Query Builder` to open the
   :guilabel:`Query builder` window.
 
-This layer contains three fields whose we will need to extract for use
+This layer contains three fields whose data we will need to extract for use
 throughout the Training Manual:
 
 * :kbd:`building`
@@ -59,7 +70,7 @@ throughout the Training Manual:
 * :kbd:`landuse`
 
 You can sample the data your region contains in order to see what kind of
-results your region will yield. If you find that "landuse" returns no result,
+results your region will yield. If you find that "landuse" returns no results,
 then feel free to exclude it.
 
 You'll need to write filter expressions for each field to extract the data we
@@ -121,8 +132,8 @@ certainly be very different, but that is fine):
 .. image:: /static/training_manual/foreword/post_osm_import.png
    :align: center
 
-The important thing is that you have 6 layers matching those show above and that
-all those layers have some data.
+The important thing is that you have 6 layers matching those shown above and
+that all those layers have some data.
 
 The last step is to create a spatiallite file from the :kbd:`landuse` layer for
 use during the course:
@@ -131,3 +142,51 @@ use during the course:
 * Select :menuselection:`SpatialLite` as the format and save the file as
   :kbd:`landuse` under the "epsg4326" directory.
 * Click :menuselection:`Ok`.
+* Delete the :kbd:`landuse.shp` and its related files (if created).
+
+
+|hard| |TY| Create SRTM DEM tiff Files
+--------------------------------------------------------------------------------
+
+For Module 6 (Creating Vector Data) and Module 8 (Rasters), you'll also need
+raster images (SRTM DEM) which cover the region you have selected for your
+course.
+
+SRTM DEM can be downloaded from the CGIAR-CGI: http://srtm.csi.cgiar.org/
+
+You'll need images which cover the entire region you have chosen to use.
+
+Once you have downloaded the required files, they should be saved in the
+"exercise_data" directory under "raster/SRTM/".
+
+In Module 6, Lesson 1.2 shows close-up images of three school sports fields
+which students are asked to digitize. You'll therefore need to reproduce these
+images using your new SRTM DEM tiff files. There is no obligation to use school
+sports fields: any three school land-use types can be used (e.g. different
+school buildings, playgrounds or car parks).
+
+For reference, the images in the example data are:
+
+.. image:: /static/training_manual/create_vector_data/field_outlines.png
+   :align: center
+
+
+.. image:: /static/training_manual/create_vector_data/school_area_one.png
+   :align: center
+
+
+|basic| |TY| Replace Tokens
+--------------------------------------------------------------------------------
+
+Having created your localised dataset, the final step is to replace the tokens
+in the :kbd:`conf.py` file so that the appropriate names will appear in your
+localised version of the Training Manual.
+
+The tokens you need to replace are as follows:
+
+* :kbd:`majorUrbanName`: this defaults to "Swellendam". Replace with the name of the
+  major town in your region.
+* :kbd:`schoolAreaType1`: this defaults to "athletics field". Replace with the name of
+  the largest school area type in your region.
+* :kbd:`largeLandUseArea`: this defaults to "Bontebok National Park". Replace with the
+  name of a large landuse polygon in your region.

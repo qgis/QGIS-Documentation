@@ -11,7 +11,7 @@ Downloading Resources
 ===============================================================================
 
 The source of this document is available at `GitHub
-<git@github.com:qgis/QGIS-Training-Manual.git>`_. Consult `GitHub.com
+<https://github.com/qgis/QGIS-Documentation>`_. Consult `GitHub.com
 <https://github.com/>`_ for instructions on how to use the git version control
 system.
 

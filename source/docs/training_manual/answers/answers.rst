@@ -51,10 +51,13 @@ remember the names and functions of the screen elements.
 |basic| *Shapefiles*
 ...............................................................................
 
-There should be two layers on your map:
+There should be five layers on your map:
 
-* :guilabel:`places` and
-* :guilabel:`streets`.
+* :guilabel:`places`
+* :guilabel:`water`
+* :guilabel:`buildings`
+* :guilabel:`rivers` and
+* :guilabel:`roads`.
 
 :ref:`Back to text <backlink-vector-load-shapefiles-1>`
 
@@ -323,7 +326,7 @@ of your feature, like this one:
 |moderate| *Topology: Add Part Tool*
 ...............................................................................
 
-* First select the Bontebok National Park:
+* First select the |largeLandUseArea|:
 
 .. image:: /static/training_manual/create_vector_data/park_selected.png
    :align: center
@@ -399,56 +402,53 @@ that they are predefined.
 
 For the purpose of this exercise, the OSM layers which we are interested in are
 :kbd:`multipolygons` and :kbd:`lines`. The :kbd:`multipolygons` layer contains
-the data we need in order to produce the :kbd:`houses`, :kbd:`schools`,
-:kbd:`restaurants` and :kbd:`residential` layers. The :kbd:`lines` layer
-contains the roads dataset.
+the data we need in order to produce the :kbd:`houses`, :kbd:`schools` and
+:kbd:`restaurants` layers. The :kbd:`lines` layer contains the roads dataset.
 
 The :guilabel:`Query Builder` is found in the layer properties:
 
-  .. image:: /static/training_manual/create_vector_data/query_builder.png
+  .. image:: /static/training_manual/vector_analysis/query_builder.png
      :align: center
 
 Using the :guilabel:`Query Builder` against the :kbd:`multipolygon` layer,
 create the following queries for the :kbd:`houses`, :kbd:`schools`,
 :kbd:`restaurants` and :kbd:`residential` layers:
 
-  .. image:: /static/training_manual/create_vector_data/houses_query.png
+  .. image:: /static/training_manual/vector_analysis/houses_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/schools_query.png
+  .. image:: /static/training_manual/vector_analysis/schools_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/restaurants_query.png
+  .. image:: /static/training_manual/vector_analysis/restaurants_query.png
      :align: center
 
-  .. image:: /static/training_manual/create_vector_data/residential_query.png
-     :align: center
+Once you have entered each query, click :guilabel:`OK`. You'll see that the map
+updates to show only the data you have selected. Since you need to use again
+the :kbd:`multipolygon` data from the OSM dataset, at this point, you can use one of
+the following methods:
+
+* Rename the filtered OSM layer and re-import the layer from :kbd:`osm_data.osm`, OR
+* Duplicate the filtered layer, rename the copy, clear the query and create your
+  new query in the :guilabel:`Query Builder`.
 
 .. note:: Although OSM's :kbd:`building` field has a :kbd:`house` value, the
     coverage in your area - as in ours - may not be complete. In our test
     region, it is therefore more accurate to *exclude* all buildings which are
     defined as anything other than :kbd:`house`. You may decide to
-    simply include buildings which are defined as :kbd:`house`.
+    simply include buildings which are defined as :kbd:`house` and all other
+    values that have not a clear meaning like :kbd:`yes`.
 
 To create the :kbd:`roads` layer, build this query against OSM's :kbd:`lines`
 layer:
 
-  .. image:: /static/training_manual/create_vector_data/roads_query.png
+  .. image:: /static/training_manual/vector_analysis/roads_query.png
      :align: center
 
-Once you have entered each query, click :guilabel:`OK`. You'll see that the map
-updates to show only the data you have selected (together with any other rows
-you may have already created). At this point, you can use one of the following
-methods:
-
-* Rename the filtered OSM layer and re-import the layer from
-  :kbd:`osm_data.osm`, OR
-* Duplicate the filtered layer, rename the copy, clear the query and create your
-  new query in the :guilabel:`Query Builder`.
 
 You should end up with a map which looks similar to the following:
 
-  .. image:: /static/training_manual/create_vector_data/osm_queries_result.png
+  .. image:: /static/training_manual/vector_analysis/osm_queries_result.png
      :align: center
 
 :ref:`Back to text <backlink-vector-analysis-basic-1>`
@@ -577,8 +577,8 @@ Your results:
 |moderate| *Raster to Vector*
 ...............................................................................
 
-* Open the :guilabel:`Query` dialog by right-clicking on the
-  :guilabel:`all_terrain` layer in the :guilabel:`Layers list`.
+* Open the :guilabel:`Query Builder` by right-clicking on the :guilabel:`all_terrain`
+  layer in the :guilabel:`Layers list`, select the :guilabel:`General` tab.
 * Then build the query :kbd:`"suitable" = 1`.
 * Click :guilabel:`OK` to filter out all the polygons where this condition
   isn't met.
@@ -600,14 +600,10 @@ When viewed over the original raster, the areas should overlap perfectly:
 |moderate| *Inspecting the Results*
 ...............................................................................
 
-In this map, farms that are definitely not suitable are orange; farms that may
-still be suitable are blue:
-
-.. image:: /static/training_manual/complete_analysis/002.png
-   :align: center
-
-The orange farms have almost no suitable terrain within them, and so can't be
-used for the intended purpose.
+You may notice that some of the buildings in your :kbd:`new_solution` layer have
+been "sliced" by the :guilabel:`Intersect` tool. This shows that only part of the
+building - and therefore only part of the property - lies on suitable terrain.
+We can therefore sensibly eliminate those buildings from our dataset
 
 :ref:`Back to text <backlink-complete-analysis-2>`
 
@@ -617,27 +613,27 @@ used for the intended purpose.
 |moderate| *Refining the Analysis*
 ...............................................................................
 
-At the moment, your analysis should look like this (ignore the symbology):
+At the moment, your analysis should look something like this:
 
-.. image:: /static/training_manual/complete_analysis/006.png
+.. image:: /static/training_manual/complete_analysis/new_solution_example.png
    :align: center
 
-Consider a circular area, continuous for 350 meters in all directions.
+Consider a circular area, continuous for 100 meters in all directions.
 
-.. image:: /static/training_manual/complete_analysis/007.png
+.. image:: /static/training_manual/complete_analysis/circle_100.png
    :align: center
 
-If it is greater than 350 meters in radius, then subtracting 350 meters from
+If it is greater than 100 meters in radius, then subtracting 100 meters from
 its size (from all directions) will result in a part of it being left in the
 middle.
 
-.. image:: /static/training_manual/complete_analysis/008.png
+.. image:: /static/training_manual/complete_analysis/circle_with_remainder.png
    :align: center
 
-Therefore, you can run an *interior buffer* of 350 meters on your existing
+Therefore, you can run an *interior buffer* of 100 meters on your existing
 :guilabel:`suitable_terrain` vector layer. In the output of the buffer
 function, whatever remains of the original layer will represent areas where
-there is suitable terrain for 350 meters beyond.
+there is suitable terrain for 100 meters beyond.
 
 To demonstrate:
 
@@ -645,44 +641,44 @@ To demonstrate:
   the Buffer(s) dialog.
 * Set it up like this:
 
-  .. image:: /static/training_manual/complete_analysis/009.png
+  .. image:: /static/training_manual/complete_analysis/suitable_terrain_buffer.png
      :align: center
 
 * Use the :guilabel:`suitable_terrain` layer with :kbd:`10` segments and a
-  buffer distance of :kbd:`-350`. (The distance is automatically in meters
+  buffer distance of :kbd:`-100`. (The distance is automatically in meters
   because your map is using a projected CRS.)
 * Save the output in :kbd:`exercise_data/residential_development/` as
-  :kbd:`suitable_terrain_continuous350m.shp`.
+  :kbd:`suitable_terrain_continuous100m.shp`.
+* If necessary, move the new layer above your original :kbd:`suitable_terrain`
+  layer.
 
-Your results will look like this:
+Your results will look like something like this:
 
-.. image:: /static/training_manual/complete_analysis/010.png
+.. image:: /static/training_manual/complete_analysis/suitable_buffer_results.png
    :align: center
 
 * Now use the :guilabel:`Select by Location` tool (:menuselection:`Vector -->
   Research Tools --> Select by location`).
 * Set up like this:
 
-  .. image:: /static/training_manual/complete_analysis/011.png
+  .. image:: /static/training_manual/complete_analysis/select_by_location.png
      :align: center
 
 * Select features in :guilabel:`new_solution` that intersect features in
-  :guilabel:`suitable_terrain_continuous350m.shp`.
+  :guilabel:`suitable_terrain_continuous100m.shp`.
 
 This is the result:
 
-.. image:: /static/training_manual/complete_analysis/012.png
+.. image:: /static/training_manual/complete_analysis/buffer_select_result.png
    :align: center
 
-The yellow farms are selected.
+The yellow buildings are selected. Although some of the buildings fall partly
+outside the new :kbd:`suitable_terrain_continuous100m` layer, they lie well
+within the original :kbd:`suitable_terrain` layer and therefore meet all of our
+requirements.
 
 * Save the selection under :kbd:`exercise_data/residential_development/` as
   :kbd:`final_answer.shp`.
-
-The farms that meet the revised criteria are here:
-
-.. image:: /static/training_manual/complete_analysis/013.png
-   :align: center
 
 
 :ref:`Back to text <backlink-complete-analysis-3>`
@@ -717,7 +713,7 @@ Your map should look like this (you may need to re-order the layers):
   .. image:: /static/training_manual/online_resources/add_bluemarble_layer.png
      :align: center
 
-* If you zoom into the Swellendam area, you'll notice that this dataset has a
+* If you zoom into the |majorUrbanName| area, you'll notice that this dataset has a
   low resolution:
 
 .. image:: /static/training_manual/online_resources/low_resolution_dataset.png

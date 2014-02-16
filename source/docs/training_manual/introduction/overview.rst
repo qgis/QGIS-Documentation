@@ -110,7 +110,7 @@ Try to find each of these tools on your screen. What is their purpose?
 
 5. |mActionMeasure|
 
-.. hint:: If any of these tools is not visible on the screen, try enabling
+.. note:: If any of these tools is not visible on the screen, try enabling
    some toolbars that are currently hidden. Also keep in mind that if there
    isn't enough space on the screen, a toolbar may be shortened by hiding some
    of its tools. You can see the hidden tools by clicking on the double right

@@ -36,7 +36,7 @@ and :guilabel:`Plugin Manager`.
 The list of plugins that you can activate and deactivate draws from the plugins
 that you currently have installed. 
 
-* To install new plugins, select the :guilabel:`Get More` option in the 
+* To install new plugins, select the :guilabel:`Not Installed` option in the
   :guilabel:`Plugin Manager` dialog. The plugins available for you to install
   will be listed here. This list will vary depending on your existing system
   setup.
@@ -90,14 +90,8 @@ you want to configure additional repositories. To do this:
 * You can also select the option to display Experimental Plugins by selecting
   the :guilabel:`Show also experimental plugins` checkbox.
 
-  .. image:: /static/training_manual/qgis_plugins/show_experimental_plugins.png
-     :align: center
-
 * If you now switch back to the :guilabel:`Get More` tab, you will see that
   additional plugins are now available for installation.
-
-  .. image:: /static/training_manual/qgis_plugins/experimental_get_more.png
-     :align: center
 
 * To install a plugin, simply click on it in the list and then click the
   :guilabel:`Install plugin` button.

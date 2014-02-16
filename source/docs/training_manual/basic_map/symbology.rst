@@ -72,7 +72,7 @@ before. This time, however, you're doing more than just quickly changing the
 color.
 
 * In the :guilabel:`Symbol Layers` panel, expand the :guilabel:`Fill` dropdown
-(if necessary) and select the :guilabel:`Simple fill` option:
+  (if necessary) and select the :guilabel:`Simple fill` option:
 
 
 .. image:: /static/training_manual/symbology/simple_fill_selected.png
@@ -126,7 +126,7 @@ To enable scale-based rendering:
 .. image:: /static/training_manual/symbology/scale_dependent_visibility.png
    :align: center
 
-* Change the :guilabel:`Maximum` value to :kbd:`1:10000`.
+* Change the :guilabel:`Maximum` value to :kbd:`1:10,000`.
 * Click :guilabel:`OK`.
 
 Test the effects of this by zooming in and out in your map, noting when the
@@ -298,8 +298,7 @@ rudimentary pre-classified data.
 * Create a new map and add only the :guilabel:`roads` dataset.
 * Apply the style :kbd:`advanced_levels_demo.qml` provided in
   :kbd:`exercise_data/styles`.
-* Zoom to the Swellendam area (the cluster of roads near the center of the
-  layer).
+* Zoom in to the |majorUrbanName| area.
 * Using symbol layers, ensure that the outlines of layers flow into one another
   as per the image below:
 
@@ -358,7 +357,7 @@ To see the various options available for line data:
 
 
 * Select the :guilabel:`Simple marker` layer in the :guilabel:`Symbol layers`
-panel. Change the symbol properties to match this dialog:
+  panel. Change the symbol properties to match this dialog:
 
 
 .. image:: /static/training_manual/symbology/simple_marker_line_properties.png

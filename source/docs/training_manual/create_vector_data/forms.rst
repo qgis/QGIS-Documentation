@@ -52,7 +52,7 @@ If you are in edit mode, you can use this form to edit a feature's attributes.
 
 * Activate edit mode (if it isn't already activated).
 * Using the :guilabel:`Identify` tool, click on the main street running through
-  Swellendam (or a major road in your town):
+  |majorUrbanName|:
 
 .. image:: /static/training_manual/create_vector_data/main_street_selected.png
    :align: center
@@ -63,7 +63,8 @@ If you are in edit mode, you can use this form to edit a feature's attributes.
 * Open the :guilabel:`Attribute Table` and note that the value has been updated
   in the attributes table and therefore in the source data.
 
-.. Note:: There is more than one road on this map called :kbd:`Voortrek Street`.
+.. Note:: If you're using the default dataset, you'll find that there is more
+  than one road on this map called :kbd:`Voortrek Street`.
 
 |moderate| |FA| Setting Form Field Types
 -------------------------------------------------------------------------------

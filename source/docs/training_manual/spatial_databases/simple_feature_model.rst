@@ -158,8 +158,8 @@ Then define a new connection, e.g.::
 
 To see whether QGIS has found the :kbd:`address` database and that your
 username and password are correct, click :guilabel:`Test Connect`. If it works,
-check the boxes next to :guilabel:`Save Username` and :guilabel:`Save
-Password`. Then click :guilabel:`OK` to create this connection.
+check the boxes next to :guilabel:`Save Username` and :guilabel:`Save Password`.
+Then click :guilabel:`OK` to create this connection.
 
 Back in the :guilabel:`Add PostGIS Layers` dialog, click :guilabel:`Connect`
 and add layers to your project as usual.

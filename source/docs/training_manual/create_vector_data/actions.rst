@@ -188,13 +188,13 @@ Usually when you use Google, you enter your search phrase into the Google
 Search bar. But in this case, you want your computer to do this for you. The
 way you tell Google to search for something (if you don't want to use its
 search bar directly) is by giving your Internet browser the address
-:kbd:`http://www.google.co.za/search?q=SEARCH_PHRASE`, where
+:kbd:`http://www.google.com/search?q=SEARCH_PHRASE`, where
 :kbd:`SEARCH_PHRASE` is what you want to search for. Since we don't know what
 phrase to search for yet, we'll just enter the first part (without the search
 phrase).
 
 * In the :guilabel:`Action` field, write
-  :kbd:`http://www.google.co.za/search?q=`. Remember to add a space after your
+  :kbd:`http://www.google.com/search?q=`. Remember to add a space after your
   initial command before writing this in!
 
 Now you want QGIS to tell the browser to tell Google to search for the value of
@@ -212,13 +212,13 @@ This will tell QGIS to add the phrase next:
    :align: center
 
 What this means is that QGIS is going to open the browser and send it to the
-address :kbd:`http://www.google.co.za/search?q=[% "name" %]`. But :kbd:`[%
+address :kbd:`http://www.google.com/search?q=[% "name" %]`. But :kbd:`[%
 "name" %]` tells QGIS to use the contents of the :kbd:`name` field as the
 phrase to search for.
 
 So if, for example, the landuse area you click on is named
 :kbd:`Marloth Nature Reserve`, then QGIS is going to send the browser to
-:kbd:`http://www.google.co.za/search?q=Marloth%20Nature%20Reserve`, which will
+:kbd:`http://www.google.com/search?q=Marloth%20Nature%20Reserve`, which will
 cause your browser to visit Google, which will in turn search for
 "Marloth Nature Reserve".
 

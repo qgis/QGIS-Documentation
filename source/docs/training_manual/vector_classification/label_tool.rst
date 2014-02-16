@@ -145,10 +145,9 @@ label to be centered on the point, so choose the center quadrant:
 
 If you were to zoom out on the map, you would see that some of the labels
 disappear at larger scales to avoid overlapping. Sometimes this is what you
-want when dealing with datasets that have
-many points, but at other times you will lose useful information this way.
-There is another possibility for handling cases like this, which we'll cover in
-a later exercise in this lesson.
+want when dealing with datasets that have many points, but at other times
+you will lose useful information this way. There is another possibility for
+handling cases like this, which we'll cover in a later exercise in this lesson.
 
 
 .. _backlink-label-tool-1:
@@ -185,7 +184,7 @@ understand.
 * Hide the :guilabel:`Places` layer so that it doesn't distract you.
 * Activate labels for the :guilabel:`streets` layer as before.
 * Set the font :guilabel:`Size` to :kbd:`10` so that you can see more labels.
-* Zoom in on the Swellendam town area (or the most built-up area of your dataset).
+* Zoom in on the |majorUrbanName| town area.
 * In the :guilabel:`Label tool` dialog's :guilabel:`Advanced` tab, choose the
   following settings:
 

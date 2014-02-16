@@ -26,12 +26,13 @@ are numerous different landuse areas on the map.
    :align: center
 
 * In the new panel, change the :guilabel:`Column` to :guilabel:`landuse`
-  and the :guilabel:`Color ramp` to :guilabel:`Greens`:
+  and the :guilabel:`Color ramp` to :guilabel:`Greens`.
+* Click the button labeled :guilabel:`Classify`:
 
 .. image:: /static/training_manual/classification/categorised_style_settings.png
    :align: center
 
-* Click the button labeled :guilabel:`Classify` and then click :guilabel:`OK`.
+* Click :guilabel:`OK`.
 
 You'll see something like this:
 
@@ -70,9 +71,7 @@ Notice that there is one category that's empty:
 This empty category is used to color any objects which do not have a landuse
 value defined or which have a *NULL* value. It is important to keep this empty
 category so that areas with a *NULL* value are still represented on the map. You
-make like to change the color to more obviously represent a blank or *NULL* value.
-
-In our example, we have given the empty category a pale red color.
+may like to change the color to more obviously represent a blank or *NULL* value.
 
 Remember to save your map now so that you don't lose all your hard-earned
 changes!
@@ -126,7 +125,8 @@ have a size field, so we'll have to make one.
 
 * Enter edit mode by clicking this button:
 
-|edit|
+   |edit|
+   :align: center
 
 * Add a new column with this button:
 
@@ -149,6 +149,7 @@ To solve this problem, we'll need to calculate the areas.
 * Open the field calculator:
 
 |mActionCalculateField|
+    :align: center
 
 You'll get this dialog:
 
@@ -248,7 +249,7 @@ That's where rule-based classification comes in handy.
 * A new dialog then appears.
 * Click the ellipsis :guilabel:`...` button next to the :guilabel:`Filter` text area.
 * Using the query builder that appears, enter the criterion
-  :kbd:`"landuse" = 'residential' AND "name" != 'Swellendam'` ,
+  :kbd:`"landuse" = 'residential' AND "name" != ' |majorUrbanName| '` ,
   click :guilabel:`Ok` and choose a pale blue-grey for it and
   remove the border:
 
@@ -260,15 +261,14 @@ That's where rule-based classification comes in handy.
 
 * Add a new criterion :kbd:`"landuse" != 'residential' AND AREA >= 0.00005`
   and choose a mid-green color.
-* Add another new criterion :kbd:`"name"  =  'Swellendam'` (or the name of the
-  most important town in your dataset) and assign it a
-  darker grey-blue color in order to indicate the town's importance in the
+* Add another new criterion :kbd:`"name"  =  ' |majorUrbanName| '` and assign it
+  a darker grey-blue color in order to indicate the town's importance in the
   region.
 * Click and drag this criterion to the top of the list.
 
 These filters are exclusive, in that they collectively exclude some areas on the
 map (i.e. those which are smaller that 0.00005, are not residential and are not
-'Swellendam'). This means that the exlucded polygons take the style of the
+'|majorUrbanName|'). This means that the excluded polygons take the style of the
 default :guilabel:`(no filter)` category.
 
 We know that the excluded polygons on our map cannot be residential areas, so
@@ -286,7 +286,7 @@ Your map will look something like this:
 .. image:: /static/training_manual/classification/rule_based_map_result.png
    :align: center
 
-Now you have a map with Swellendam the most prominent residential area and other
+Now you have a map with |majorUrbanName| the most prominent residential area and other
 non-residential areas colored according to their size.
 
 |IC|

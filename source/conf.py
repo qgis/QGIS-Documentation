@@ -1052,6 +1052,10 @@ rst_epilog = """
 .. |WN| replace:: What's Next?
 .. |FR| replace:: Further Reading
 .. |IC| replace:: In Conclusion
+
+.. |majorUrbanName| replace:: Swellendam
+.. |schoolAreaType1| replace:: athletics field
+.. |largeLandUseArea| replace:: Bontebok National Part
 """
 
 # -- Options for LaTeX output --------------------------------------------------

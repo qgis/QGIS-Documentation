@@ -22,7 +22,7 @@ reason, it has a tool called the :guilabel:`Composer Manager`.
 * Click on the :menuselection:`Project --> Composer Manager` menu entry to open
   this tool.  You'll see a blank :guilabel:`Composer manager` dialog appear.
 * Click the :guilabel:`Add` button and give the new composer the name of
-  :kbd:`Swellendam` (or the major town in your dataset).
+  |majorUrbanName|.
 * Click :guilabel:`OK`.
 * Click the :guilabel:`Show` button.
 
@@ -157,7 +157,7 @@ contents of the label:
 * Select the label by clicking on it.
 * Click on the :guilabel:`Item Properties` tab in the side panel of the
   :guilabel:`Composer` window.
-* Change the text of the label to "Swellendam":
+* Change the text of the label to "|majorUrbanName|":
 
 * Use this interface to set the font and alignment options:
 

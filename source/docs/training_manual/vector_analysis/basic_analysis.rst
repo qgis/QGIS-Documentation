@@ -26,21 +26,23 @@ iv. Present the Results
 
 Let's start off the process by deciding on a problem to solve. For example,
 you are an estate agent and you are looking for a residential property in
-Swellendam for clients who have the following criteria:
+|majorUrbanName| for clients who have the following criteria:
 
-#. It needs to be in Swellendam.
-#. It must be within reasonable driving distance of a school.
+#. It needs to be in |majorUrbanName|.
+#. It must be within reasonable driving distance of a school (say 1km).
 #. It must be more than 100m squared in size.
+#. Closer than 50m to a main road.
+#. Closer than 500m to a restaurant.
 
 |basic| The data
 -------------------------------------------------------------------------------
 
 To answer these questions, we're going to need the following data:
 
-#. The geographic boundaries of the residential areas.
+#. The residential properties (buildings) in the area.
 #. The roads in and around the town.
 #. The location of schools and restaurants.
-#. The size of buildings
+#. The size of buildings.
 
 All of this data is available through OSM and you should find that the dataset
 you have been using throughout this manual can also be used for this lesson.
@@ -48,7 +50,7 @@ However, in order to ensure we have the complete data, we will re-download the
 data from OSM using QGIS' built-in OSM download tool.
 
 .. note:: Although OSM downloads have consistent data fields, the coverage and
-    detail does vary. If you find that your chosen region does contain
+    detail does vary. If you find that your chosen region does not contain
     information on restaurants, for example, you may need to chose a different
     region.
 
@@ -60,8 +62,10 @@ data from OSM using QGIS' built-in OSM download tool.
   :guilabel:`OpenStreeMap` menu to download the data for your chosen region.
 * Save the data as :kbd:`osm_data.osm` in your :kbd:`exercise_data` folder.
 
-* Create a new vector layer and browse to the new :kbd:`osm_data.osm` file. You
-  may need to select :guilabel:`Show All Files`.
+* Note that the :guilabel:`osm` format is a type of vector data. Add this data as a vector
+  layer as usually :guilabel:`Layer` -> :guilabel:`Add vector layer...`,
+  browse to the new :kbd:`osm_data.osm` file you just downloaded. You may need to
+ select :guilabel:`Show All Files` as the file format.
 * Select :kbd:`osm_data.osm` and click :guilabel:`Open`
 * In the dialog which opens, select all the layers, *except* the
   :kbd:`other_relations` and :kbd:`multilinestrings` layer:
@@ -69,18 +73,23 @@ data from OSM using QGIS' built-in OSM download tool.
 .. image:: /static/training_manual/foreword/select_osm_layers.png
    :align: center
 
-This will import the OSM data into your map.
+This will import the OSM data as separate layers into your map.
 
-Because we are going to calculate distances in meters, we need to reproject the
-data:
+The data you just downloaded from OSM is in a geographic coordinate system, WGS84,
+which uses latitude and longitude coordinates, as you know from the previous
+lesson. You also learnt that to calculate distances in meters, we need to work with
+a projected coordinate system. Start by setting your project's coordinate system to a
+suitable :guilabel:`CRS` for your data, in the case of |majorUrbanName|,
+:guilabel:`WGS 84 / UTM zone 34S`:
 
 * Open the :kbd:`Project Properties` dialog, select :guilabel:`CRS` and filter
-  the list to find :guilabel:`WGS 84 / UTM zone 33S`.
-* Click :guilabel:`OK`
+  the list to find :guilabel:`WGS 84 / UTM zone 34S`.
+* Click :guilabel:`OK`.
 
 We now need to extract the information we need from the OSM dataset. We need to
-end up with layers representing all the houses, schools, residential
-areas and roads in the region. We'll start with the :kbd:`schools` layer:
+end up with layers representing all the houses, schools, restaurants and roads in the
+region. That information is inside the :guilabel:`multipolygons` layer and can be extracted
+using the information in its :guilabel:`Attribute Table`. We'll start with the :kbd:`schools` layer:
 
 * Right-click on the :guilabel:`multipolygons` layer in the
   :guilabel:`Layers list` and open the :guilabel:`Layer Properties`.
@@ -99,7 +108,7 @@ Now we need to tell QGIS to only show us the polygons where the value of
 * Watch what happens in the :guilabel:`Provider specific filter expression`
 field below:
 
-  .. image:: /static/training_manual/create_vector_data/schools_query.png
+.. image:: /static/training_manual/vector_analysis/schools_query.png
      :align: center
 
 The word :kbd:`"amenity"` has appeared. To build the rest of the query:
@@ -111,8 +120,8 @@ The word :kbd:`"amenity"` has appeared. To build the rest of the query:
 This will filter OSM's :kbd:`multipolygon` layer to only show the schools in
 your region. You can now either:
 
-* Rename the filtered OSM layer and re-import the :kbd:`multipolygons` layer
-  from :kbd:`osm_data.osm`, OR
+* Rename the filtered OSM layer to :kbd:`schools` and re-import the
+  :kbd:`multipolygons` layer from :kbd:`osm_data.osm`, OR
 * Duplicate the filtered layer, rename the copy, clear the :kbd:`Query Builder`
   and create your new query in the :guilabel:`Query Builder`.
 
@@ -125,7 +134,6 @@ tool to extract the remaining data from OSM to create the following layers:
 
 * :kbd:`roads` (from OSM's :kbd:`lines` layer)
 * :kbd:`restaurants` (from OSM's :kbd:`multipolygons` layer)
-* :kbd:`residential` (from OSM's :kbd:`multipolygons` layer)
 * :kbd:`houses` (from OSM's :kbd:`multipolygons` layer)
 
 You may wish to re-use the :kbd:`roads.shp` layer you created in earlier lessons.
@@ -150,8 +158,7 @@ our roads dataset.
 * Open the :kbd:`Query Builder` for the :kbd:`roads` layer,
   click :guilabel:`Clear` and build the following query:
 
-  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway"
-     != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
+  :kbd:`"highway"  != 'NULL' AND "highway" != 'unclassified' AND "highway" != 'track' AND "highway" != 'path' AND "highway" != 'footway'`
 
 You can either use the approach above, where you double-clicked values and
 clicked buttons, or you can copy and paste the command above.
@@ -181,8 +188,14 @@ layer into our map.
 .. image:: /static/training_manual/vector_analysis/save_roads_34S.png
    :align: center
 
-The new shapefile will be created and the resulting layer added to your map,
-although it will not yet be visible.
+The new shapefile will be created and the resulting layer added to your map.
+
+.. note:: If you don't have activated :guilabel:`Enable 'on the fly' CRS transformation`
+    or the :guilabel:`Automatically enable 'on the fly' reprojection if layers have different CRS`
+    settings (see previous lesson), you might no be able to see the new layers you just added
+    to the map. In this case, you can focus the map on any of the layers by right
+    click on any layer and click :guilabel:`Zoom to layer extent`, or just enable
+    any of the mentioned 'on the fly' options.
 
 * Remove the old :kbd:`roads` layer.
 
@@ -190,7 +203,7 @@ Repeat this process for each layer, creating a new shapefile and layer with
 "_34S" appended to the original name and removing each of the old layers.
 
 Once you have completed the process for each layer, right click on any layer and
-click :guilabel:`Zoom to layer extent`.
+click :guilabel:`Zoom to layer extent` to focus the map to the area of interest.
 
 Now that we have converted OSM's data to a UTM projection, we can begin our
 calculations.
@@ -200,8 +213,8 @@ calculations.
 
 QGIS allows you to calculate distances from any vector object.
 
-* Make sure that only the :guilabel:`roads` and
-  :guilabel:`houses` layers are visible, to simplify the map while
+* Make sure that only the :guilabel:`roads_34S` and
+  :guilabel:`houses_34S` layers are visible, to simplify the map while
   you're working.
 * Click on the :menuselection:`Vector --> Geoprocessing Tools --> Buffer(s)`
   tool:
@@ -214,7 +227,8 @@ This gives you a new dialog.
    :align: center
 
 The :guilabel:`Buffer distance` is in meters because our input dataset is in a
-Projected Coordinate System. This is why we needed to use projected data.
+Projected Coordinate System that uses meter as its basic measurement unit.
+This is why we needed to use projected data.
 
 * Save the resulting layer under :kbd:`exercise_data/residential_development/`
   as :kbd:`roads_buffer_50m.shp`.
@@ -229,7 +243,7 @@ Now your map will look something like this:
 .. image:: /static/training_manual/vector_analysis/roads_buffer_result.png
    :align: center
 
-If your new is at the top of the :kbd:`Layers` list, it will probably obscure
+If your new layer is at the top of the :kbd:`Layers` list, it will probably obscure
 much of your map, but this gives us all the areas in your region which are
 within 50m of a road.
 
@@ -364,7 +378,7 @@ first need to calculate their size.
 .. image:: /static/training_manual/vector_analysis/buildings_area_calculator.png
    :align: center
 
-* If you can't find :guilabel:`AREA` in the list, try creating an new field as
+* If you can't find :guilabel:`AREA` in the list, try creating a new field as
   you did in the previous lesson of this module.
 * Click :guilabel:`OK`.
 * Scroll to the right of the attribute table; your :kbd:`AREA` field now has
