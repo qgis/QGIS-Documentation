@@ -205,6 +205,10 @@ code {
   text-align: center;
   padding: 50px 0;
 }
+.navbar-inner {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
 .nav-collapse {
   height: auto;
   background-color: #63676f;
@@ -315,6 +319,9 @@ select#languages option {
 }
 section {
   margin: 0;
+}
+div.related {
+  display: none;
 }
 /*
 our sphinx :refs: become anchors. But linking to an anchor in top of the page
@@ -491,10 +498,11 @@ section.latest-news h3 {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
 }
 section.latest-news .info-box {
-  margin: 0 10px 40px;
+  margin: 0 10px 0px;
   background: #fff;
   text-align: left;
   width: 100%;
+  font-size: 14px;
 }
 section.latest-news .info-box h4 {
   color: #1c2028;
@@ -511,8 +519,12 @@ section.latest-news .info-box img {
 }
 section.latest-news p.intro {
   font-size: 16px;
-  font-style: italic;
   margin: 0 40px 30px;
+}
+#qgisflickrmapsatom .span2 p,
+#qgisflickrmapsatom .span2 h4 {
+  color: white;
+  text-align: center;
 }
 section.sponsors {
   padding: 30px 0;
@@ -784,9 +796,9 @@ section.menu nav.subnav ul li a:hover {
 .nav-list > .active > a,
 .nav-list > .active > a:hover,
 .nav-list > .active > a:focus {
-  background-color: #fff;
-  color: #0088CC;
-  text-shadow: none;
+  background-color: #fff !important;
+  color: #0088CC !important;
+  text-shadow: none !important;
 }
 .toctree-l2.current,
 .toctree-l3.current,
