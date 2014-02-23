@@ -7,348 +7,117 @@ What's new in |qg| |CURRENT|
 ****************************
 
 Please note that this is a release in our 'cutting edge' release series. As such
-it contains new features and extends the programmatic interface over |qg| 1.8.0.
+it contains new features and extends the programmatic interface over |qg| 2.0.
 We recommend that you use this version over previous releases.
 
 This release includes hundreds of bug fixes and many new features and
 enhancements that will be described in this manual. Also compare with the
 visual changelog at http://changelog.linfiniti.com/version/21/
 
-User Interface
+Application and Project Options
+-------------------------------
+
+* **Support for measurement in Nautical Miles**: You can now measure distances using nautical miles. To enable this, use the :menuselection:`Settings` --> :menuselection:`Options` --> :guilabel:`Map Tools` option panel.
+
+Data Providers
 --------------
 
-* **New icon theme**: We have updated our icon theme to use the 'GIS' theme
-  introducing an improved level of consistency and professionalism to the |qg|
-  user interface.
-* **Side tabs, collapsable groups**: We have standardised the layout of tabs
-  and introduced collapsible group boxes into many of our dialogs to make
-  navigating the various options more easy, and to make better use of screen
-  real estate.
-* **Soft notifications**: In many cases we want to tell you something, but we
-  don't want to stop your work or get in your way. With the new notification
-  system |qg| can let you know about important information via a message bar
-  (color depends on the importance of the message) that appears at the top of
-  the map canvas but doesn't force you to deal with it if you are busy doing
-  something else. Programmers can create these notification (e.g. from a
-  plugin) to using our python API.
-* **Application custom font and Qt stylesheet**: The system font used for the
-  application's user interface can now be set. Any C++ or Python plugin that is
-  a child of the |qg| GUI application or has copied/applied the application's
-  GUI stylesheet can inherit its styling, which is useful for GUI fixes across
-  platforms and when using custom |qg| Qt widgets, like
-  **QgsCollapsibleGroupBox**.
-* **Live color chooser dialogs and buttons**: Every color chooser button
-  throughout the interface has been updated to give visual feedback on whether
-  the current color has a transparent, or 'alpha,' component. The color chooser
-  opened by the new color buttons will now always be the default for the
-  operating system. If the user has Use live-updating color chooser dialogs
-  checked under :menuselection:`Options -> General -> Application`, any change
-  in the color chooser will immediately be shown in the color button and for
-  any item currently being edited, where applicable.
-* **SVG Annotations**: With |qg| |CURRENT| you can now add SVG annotations to
-  your map --- either pinned to a specific place or in a relative position over
-  the map canvas.
+* **One to many relations support**: This release sports the ability to define 1:n relations. The relations are defined in the :guilabel:`project properties` dialog. Once relations exist for a layer, a new user interface element in the form view (e.g. when identifying a feature and opening its form) will list the related entities. This provides a powerful way to express e.g. the inspection history on a length of pipeline or road segment.
 
-Data Provider
--------------
+* **DXF Export tool**: A new tool for exporting DXF's has been added to the :menuselection:`Project` menu.
 
-* **Oracle Spatial support**: |qg| |CURRENT| now includes Oracle Spatial
-  support.
-* **Web Coverage Service provider added**: |qg| now provides native support for
-  Web Coverage Service layers --- the process for adding WCS is similar to
-  adding a WMS or WFS layer.
-* **Raster Data Provider overhaul**: The raster data provider system has been
-  completely overhauled. One of the best new features stemming from this work
-  is the ability to save any raster layer as a new layer using
-  :menuselection:`Layer -> Save As...`. In the process you can clip, resample,
-  and reproject the layer to a new Coordinate Reference System. You can also
-  save a raster layer as a rendered image so if you for example have single
-  band raster that you have applied a color palette to, you can save the
-  rendered layer out to a georeferenced RGB layer.
-* **Raster 2% cumulative cut by default**: Many raster imagery products have a
-  large number of outliers which result in images having a washed out
-  appearance. |qg| 2.0 intoduces much more fine grained control over the
-  rendering behaviour of rasters, including using a 2% - 98% percent cumulative
-  cut by default when determining the color space for the image.
-* **WMS identify format**: It is now possible to select the format of the
-  identify tool result for WMS layers if multiple known formats are supported
-  by the server. The supported formats are HTML, feature (GML) and plain text.
-  If the feature (GML) format is selected, the result is in the same form as
-  for vector layers, the geometry may be highlighted and the feature including
-  attributes and geometry may be copied to clipboard and pasted to another
-  layer.
-* **WMTS Support**: The WMS client in |qg| now supports WMTS (Web Mapping Tile
-  Service) including selection of sub-datasets such as time slices. When adding
-  a WMS layer from a compliant server, you will be prompted to select the time
-  slice to display.
+* **Paste as new vector layer**: It is a common activity in a GIS to create a sub-selection and then to create a new layer from the selection. In QGIS you can already do save selection as to save a layer from your selection, and now offers functionality that allows you to create a new file or memory layer from whatever is in your clipboard. Simply select some features, copy them to your clipboard and then do Edit -> Paste features as and choose either New vector layer or New memory layer from the submenu. The best part of this new feature is that if you have some Well Known Text (WKT) features in your clipboard from another app, you can simply paste them into QGIS as a new layer now.
 
-Symbology
----------
+* **WMS legend graphic in table of contents and composer**: Prior to QGIS 2.2 the WMS data provider was not able to display a legend in the table of contents' layer list. Similarly no legend could be displayed in the map composer. QGIS 2.2 addresses both of these issues.
 
-* **Data defined properties**: With the new data defined properties, it is
-  possible to control symbol type, size, color, rotation, and many other
-  properties through feature attributes.
-* **Improved symbol layer management**: The new symbol layer overview uses a
-  clear, tree-structured layout which allows for easy and fast access to all
-  symbol layers.
-* **Support for transparency in color definitions**: In most places where you
-  select colors, |qg| now allows you to specify the alpha channel (which
-  determines how transparent the color should be). This allows you to create
-  great looking maps and to hide data easily that you don't want users to see.
-* **Color Control for Raster Layers**: |qg| 2.0 allows you to precisely control
-  exactly how you'd like raster layers to appear. You now have complete control
-  over the brightness, contrast and saturation of raster layers. There's even
-  options to allow display of rasters in grayscale or by colorising with a
-  specified color.
-* **Copy symbology between layers**: Its now super easy to copy symbology from
-  one layer to another layer. If you are working with several similar layer,
-  you can simply right-click on one layer, choose :guilabel:`Copy Style` from
-  the context menu and then right-click on another layer and choose
-  :guilabel:`Paste Style`.
-* **Save styles in your database**: If you are using a database vector data
-  store, you can now store the layer style definitions directly in the
-  database. This makes it easy to share styled layers in an enterprise or
-  multi-user environment.
-* **Color ramp support**: Color ramps are now available in many places in |qg|
-  symbology settings and |qg| ships with a rich, extensible set of color ramps.
-  You can also design your own and many cpt-city themes are included in |qg|
-  now 'out of the box'. Color ramps even have full support for transparency!
-* **Set custom default styles for all layer types**: Now |qg| lets you control
-  how new layers will be drawn when they do not have an existing :file:`.qml`
-  style defined. You can also set the default transparency level for new layers
-  and whether symbols should have random colors assigned to them.
+Digitising
+----------
 
-Map Composer
-------------
-
-* **HTML Map Items**: You can now place html elements onto your map.
-* **Auto snap lines**: Having nicely align map items is critical to making nice
-  printed maps. Auto snapping lines have been added to allow for easy composer
-  object alignment by simply dragging an object close to another.
-* **Manual Snap Lines**: Sometimes you need to align objects a curtain distance
-  on the composer. With the new manual snapping lines you are able to add manual
-  snap lines which allow for better align objects using a common alignment.
-  Simply drag from the top or side ruler to add new guide line.
-* **Map series generation**: Ever needed to generate a map series? Of course
-  you have. The composer now includes built in map series generation using the
-  atlas feature. Coverage layers can be points, lines, polygons, and the
-  current feature attribute data is available in labels for on the fly value
-  replacement.
-* **Multipage support**: A single composer window can now contain more than one
-  page.
-* **Expressions in composer labels**: The composer label item in 1.8 was quite
-  limited and only allowed a single token $CURRENT_DATE to be used. In |CURRENT|
-  full expression support has been added too greater power and control of the
-  final labels.
-* **Automatic overview support in map frame**: Need to show the current area of
-  the main map frame in a smaller overview window. Now you can. The map frame
-  now contains the ability to show the extents of other and will update when
-  moved. Using this with the atlas generation feature now core in the composer
-  allows for some slick map generation. Overview frame style uses the same
-  styling as a normal map polygon object so your creativity is never restricted.
-* **Layer blending**: Layer blending makes it possible to combine layers in new
-  and exciting ways. While in older versions, all you could do was to make the
-  layer transparent, you can now choose between much more advanced options such
-  as "multiply", "darken only", and many more. Blending can be used in the
-  normal map view as well as in print composer. For a short tutorial on how to
-  use blending in print composer to make the most out of background images, see
-  `Vintage map design using |qg|
-  <http://anitagraser.com/2013/07/29/vintage-map-design-using-qgis/>`_.
-* **HTML Label support**: HTML support has been added map composer label item
-  to give you even more control over your final maps. HTML labels support full
-  CSS, HTML, and even JavaScript if you are that way inclined.
-* **Multicolumn composer legend**: The composer legend now supports multiple
-  columns. Splitting of a single layer with many classes into multiple columns
-  is optional. Single symbol layers are now added by default as single line
-  item. Three different styles may be assigned to layer/group title: Group,
-  Subgroup or Hidden. Title styles allow arbitrary visual grouping of items.
-  For example, a single symbol layer may be displayed as single line item or
-  with layer title (like in 1.8), symbols from multiple following layers may be
-  grouped into a single group (hiding titles) etc. Feature counts may be added
-  to labels.
-* **Updates to map composer management**: The following improvements have been
-  made to map composer management:
-
-  * Composer name can now be defined upon creation, optionally choosing to
-    start from other composer names
-  * Composers can now be duplicated
-  * New from Template and from Specific (in Composer Manager) creates a composer
-    from a template located anywhere on the filesystem
-  * Parent project can now be saved directly from the composer work space
-  * All composer management actions now accessible directly from the composer
-    work space
-
-Labeling
----------
-
-* **New labeling system**: The labeling system has been totally overhauled ---
-  it now includes many new features such as drop shadows, 'highway shields',
-  many more data bound options, and various performance enhancements. We are
-  slowly doing away with the 'old labels' system, although you will still find
-  that functionality available for this release, you should expect that it will
-  disappear in a follow up release.
-* **Expression based label properties**: The full power of normal label and
-  rule expressions can now be used for label properties. Nearly every property
-  can be defined with an expression or field value giving you more control over
-  the label result. Expressions can refer to a field (e.g. set the font size to
-  the value of the field 'font') or can include more complex logic.
-* **Older labeling engine deprecated**: Use of the older labeling engine
-  available in |qg| <= 1.8 is now discouraged (i.e. deprecated), but has not
-  been removed. This is to allow users to migrate existing projects from the
-  old to new labeling engine. The following guidelines for working with the
-  older engine in |qg| |CURRENT| apply:
-
-  * Deprecated labeling tab is removed from vector layer properties dialog for
-    new projects or older opened projects that don't use that labeling engine.
-  * Deprecated tab remains active for older opened projects, if any layer uses
-    them, and does not go away even if saving the project with no layers having
-    the older labeling engine enabled.
-  * Deprecated labeling tab can be enabled/disabled for the current project,
-    via Python console commands. Please note: There is a very high likelihood
-    the deprecated labelling engine will be completely removed prior to the
-    next stable release of |qg|. Please migrate older projects.
-
-Programmability
----------------
-
-* **New Python Console**: The new Python console gives you even more power. Now
-  the with auto complete support, syntax highlighting, adjustable font settings.
-  The side code editor allows for easier entry of larger blocks of code with
-  the ability to open and run any Python file in the |qg| session.
-* **Even more expression functions**: With the expression engine being used
-  more and more though out |qg| to allow for things like expression based
-  labels and symbol, many more functions have been added to the expression
-  builder and are all accessible through the expression builder. All functions
-  include comprehensive help and usage guides for ease of use.
-* **Custom expression functions**: If the expression engine doesn't have the
-  function that you need. Not to worry. New functions can be added via a plugin
-  using a simple Python API.
-* **New cleaner Python API**: The Python API has been revamped to allow for a
-  more cleaner, more pythonic, programming experience. The |qg| |CURRENT| API
-  uses SIP API V2 which removes the messy ``toString()``, ``toInt()`` logic
-  that was needed when working with values. Types are now converted into native
-  Python types making for a much nicer API. Attributes access is now done on
-  the feature itself using a simple key lookup, no more index lookup and
-  attribute maps.
-* **Code compatibility with version 1.x releases**: As this is a major release,
-  it is not completely API compatible with previous 1.x releases. In most cases
-  porting your code should be fairly straightforward --- you can use this guide
-  to get started. Please use the developer mailing list if you need further help.
-* **Python project macros**: A Python module, saved into a project.qgs file,
-  can be loaded and have specific functions run on the following project events:
-  ``openProject()``, ``saveProject()`` and ``closeProject()``. Whether the
-  macros are run can be configured in the application options.
-
-Analysis tools
---------------
-
-* **Processing Commander**: For quick access to geoprocessing functionality,
-  just launch the Processing Commander (by pressing :kbd:`Ctrl + Alt + M`) and
-  start typing the name of the tool you are looking for. Commander will show
-  you the available options and launch them for you. No more searching through
-  menus to find tools. They are now right at your fingertips.
-* **Heatmap Plugin Improvements**: The heatmap plugin has seen numerous
-  improvements and optimisations, resulting in much faster creation of heatmaps.
-  Additionally, you now have the choice of which kernel function is used to
-  create the heatmap.
-* **Processing Support**: The SEXTANTE project has been ported to and
-  incorporated into |qg| as core functionality. SEXTANTE has been renamed to
-  'Processing' and introduces a new menu in |qg| from where you can access a
-  rich toolbox of spatial analysis tools. The processing toolbox has incredibly
-  rich functionality --- with a Python programming API allowing you to easily
-  add new tools, and hooks to provide access to analysis capabilities of many
-  popular open source tools such as GRASS, OTB, SAGA etc.
-* **Processing Modeler**: One of the great features of the new Processing
-  framework is the ability to combine the tools graphically. Using the
-  Processing Modeller, you can build up complex analysis from a series of small
-  single purpose modules. You can save these models and then use them as
-  building blocks in even more complex models. Awesome power integrated right
-  into |qg| and very easy to use!
-
-Plugins
--------
-
-* **Revamped plugin manager**: In |qg| 1.x managing plugins was somewhat
-  confusing with two interfaces --- one for managing already installed plugins
-  and one for fetching python plugins from an only plugin repository. In |qg|
-  |CURRENT| we introduce a new, unified, plugin manager which provides a one
-  stop shop for downloading, enabling/disabling and generally managing you
-  plugins. Oh, and the user interface is gorgeous too with side tabs and easy
-  to recognise icons!
-* **Application and Project Options**: Define default startup project and
-  project templates. With |qg| 2.0 you can specify what |qg| should do when
-  it starts: New Project (legacy behaviour, starts with a blank project), Most
-  recent (when you start |qg| it will load the last project you worked on),
-  Specific (always load a specific project when |qg| starts). You can use the
-  project template directory to specify where your template projects should be
-  stored. Any project that you store in that directory will be available for
-  use as a template when invoking the :menuselection:`Project --> New` from
-  template menu.
-* **System environment variables**: Current system environment variables can
-  now be viewed and many configured within the application Options dialog.
-  Useful for platforms, such as Mac, where a GUI application does not
-  necessarily inherit the user's shell environment. Also useful for
-  setting/viewing environment variables for the external tool sets controlled
-  by the Processing toolbox, e.g. SAGA, GRASS; and, for turning on debugging
-  output for specific sections of the source code.
-* **User-defined zoom scales**: A listing of zoom scales can now be configured
-  for the application and optionally overridden per project. The list will show
-  up in the scale popup combo box in the main window status bar, allowing for
-  quick access to known scales for efficiently viewing and working with the
-  current data sources. Defined scales can be exported to an XML file that can
-  be imported into other projects or another |qg| application.
+* **Fill ring digitizing tool**: This new tool is used to cut holes in polygons and automatically fill them with new features. If you hold down :kbd:`Ctrl` when finalising the feature, the attributes will be taken from parent feature.
 
 General
 -------
 
-* **Quantum GIS is now known only as '|qg|'**: The 'Quantum' in 'Quantum GIS'
-  never had any particular significance and the duality of referring to our
-  project as both Quantum GIS and |qg| caused some confusion. We are
-  streamlining our project and as part of that process we are officially
-  dropping the use of the word Quantum --- henceforth we will be known only as
-  |qg| (spelled with all letters in upper case). We will be updating all our
-  code and publicity material to reflect this.
+* **Recent expressions saved**: The expression builder will now remember the last 20 used expressions. 
 
-Layer Legend
+* **Paste WKT from clipboard**: QGIS can now paste and create a new feature based on WKT that is found in the clipboard. Simply copy some WKT and paste into a editable layer. You can also create a new layer by selecting :menuselection:`Edit` --> :menuselection:`Paste As` --> :guilabel:`New Memory Layer`.
+
+Map Composer
 ------------
 
-* **Legend visual feedback and options**
+* **Zebra map border improvements**: You can now set the colours of the Zebra border on the map element in the map composer.
 
-  * Total count for features in layer, as well as per symbol
-  * Vector layers in edit mode now have a red pencil to indicate uncommitted
-    (unsaved) edits
-  * Active layer is now underlined, to indicate it in multi-layer selections or
-    when there is no selection
-  * Clicking in non-list-item whitespace now clears the selection
-  * Right-clicks are now treated as left-clicks prior to showing the context
-    menu, allowing for one click instead of two
-  * Groups and layers can optionally be in a bold font style
-  * Raster layer generated preview icons can now be turned off, for projects
-    where such rendering may be slow
+* **Element rotation support**: Every type of element in the composer can now be rotated, including scale bars, tables and legends. For example you can rotate a label on the composition so that it fits into your page layout better (as illustrated). Resizing of rotated elements has also been improved.
 
-* **Duplicate existing map layer**: Duplicate selected vector and raster layers
-  in the map layer legend. Similar to importing the same data source again, as
-  a separate layer, then copy/pasting style and symbology attributes.
-* **Multi-layer toggle editing commands**: User can now select multiple layers
-  in legend and, if any of those are vector layers in edit mode, choose to save,
-  rollback, or cancel current uncommitted edits. User can also choose to apply
-  those actions across all layers, regardless of selection.
+* **Composer scale added and ruler improvements**: The appearance of rulers has been improved by adjusting the scale logic and by adding smaller ruler divisions, and by making vertical rulers use rotated text. There is also a new composer action for hiding/showing rulers. You can now quickly zoom to 100% page scale using the new Zoom to 100% tool on the toolbar. The composer window now lets you quickly switch the page scaling via a new scale combobox in the status bar. In addition a new indicator has been added to show you the precise pixel position of your cursor. The **\[Close\]** and **\[Help\]** buttons have been removed from the bottom of the composer window to give you the maximum amount of screen space for working with your compositions.
 
-Browser
--------
+* **World file generation**: In the composer you can now create georefenced maps! Simply ensure that you choose the correct map element in the Composition tab and then export your map as a PNG file. An accompanying world file will be written, allowing you to load your exported composition in QGIS as a raster layer.
 
-* **Improvements to in-app browser panel**:
+* **Working with multiple items**: Support has been added for moving and resizing multiple items simultaneously. You can now hold shift while resizing to maintain an item's ratio while resizing, or hold control to resize from the item's centre. Shortcut key also apply to moving items, so holding shift while moving an item constrains the movement to horizontal or vertical movement, and holding control temporarily disables item snapping. You can also hold shift while pressing a cursor key to shift all selected items by a larger amount.
 
-  * Directories can be filtered by wildcard or regex expressions
-  * New Project home (parent directory of current project)
-  * View Properties of the selected directory in a dialog
-  * Choose which directories to Fast scan
-  * Choose to Add a directory directly to Favourites via filesystem browse dialog
-  * New /Volumes on Mac (hidden directory for access to external drives)
-  * New OWS group (collation of available map server connections)
-  * Open a second browser (:menuselection:`View -> Panels -> Browser (2)`) for
-    drag-n-drop interactions between browser panels
-  * Icons now sorted by item group type (filesystem, databases, map servers)
-  * Layer Properties now have better visual layout
+* **Atlas enhancements**: You can now preview the individual pages of the map atlas that will be generated in composer. While in atlas preview mode you can output the current page without outputting the entire atlas. You can also tweak the map extent or scale for each feature while previewing the atlas page. Atlas map settings have been moved from the atlas panel to the map properties panel, so now more than one map can be controlled by the atlas generation. There's a new option to automatically centre an overview map, which comes in handy when creating atlas based maps. More context information is now available so that you can adjust your symbology based on whether the feature is the current atlas feature or not.
+
+* **Improved item selection**: You can now select more then one item by clicking and dragging a box to select them, and there's shortcuts for adding to a selection (holding shift while dragging), subtracting from a selection (hold control while dragging) and switching to "within" selection mode (hold alt while dragging). Shift clicking an already selected item will remove it from the selection. There's also shortcuts and menu items for selecting all items, clearing a selection, and inverting a selection. It's also possible now to select items which are hidden below other items by control-clicking an item, or by using "Select next item above/below" in the new composer Edit menu.
+
+* **Better navigation of compositions**: QGIS 2.2 includes many improvements to help you navigate your compositions. You can now zoom in or out from a composition by using the mouse scroll wheel. A dedicated pan tool has been added which allows you to drag the composition around, and you can also switch immediately to pan mode by holding the space bar or the by holding the mouse scroll wheel. There's also a new zoom tool which allows you to precisely zoom to a specific area of your composition. You can also switch to zoom mode at any time by pressing and holding control-space and drawing a zoom region on the composition.
+
+* **Improved styling of pages and shapes **: You can now control the style of the composition background using the full range of QGIS' symbology options. It's now possible to export compositions with a transparent (or semi-transparent) background. Shape items (rectangles, triangles and ellipses) can also be styled using the same options as polygon map layers. You can even style the page background or shapes by using data defined settings based on the current atlas feature! There's also a new option for rounding the corners of rectangle shapes.
+
+QGIS Server
+-----------
+
+* **WCS Support added to QGIS Server**: QGIS-Server already supports standards : Web Map Service (WMS version 1.3.0 and 1.1.1) and Web Feature Service (WFS version 1.0.0) and Web Feature Service with Transaction (WFS-T). With this new release of QGIS, you can now serve raster layers using the Web Coverage Service (WCS version 1.0.0)) standard.
+
+Symbology
+---------
+
+* **Gradient fill support**: The new gradient fill feature lets you create even better cartography than ever before. The feature has numerous options providing for great flexibility in how you apply gradients to your features. These include:
+
+* Two colour or ramp based fills
+* Canvas or object based origin for your gradients
+* Gradients originating from the centroid of a feature
+* Conical, linear and radial gradient types
+* Data defined options (to use an expression or a table column) for all gradient properties.
+
+* **Label support for palleted rasters**: Rasters that use a fixed colour pallette (typical for e.g. a land cover map) can now have category labels assigned which will be shown in the map legend and in the composer legend.
+
+* **Colour ramps can be inverted**: A new option has been added to symbology dialogs that deal with colour ramps to allow you to invert the colour ramp when it is created.
+
+* **Copy and Paste in Rule based renderer**: In the rule based renderer, you can now right click on a rule and then copy and paste the rule as a new rule.
+
+* **On the fly feature generalisation**: QGIS 2.2 introduces support for on the fly feature generalisation. This can improve rendering times when drawing many complex features at small scales. This feature can be enabled or disabled in the layer settings. There is also a new global setting that enables generalisation by default for newly added layers. **Note**: Feature generalisation may introduce artefacts into your rendered output in some cases. These may include slivers between polygons and inaccurate rendering when using offset based symbol layers. 
+
+* **Anchor points can be set for marker layers**:  When defining symbology with marker layers (e.g. a point layer symbolized with SVG markers) you can now specify what part of the image should correspond to the 'anchor point'. For example you can indicate that the bottom-left corner of the image should coincide with the position of the feature. You can also use the **data defined properties** to have this property set at render time based on an attribute in the data table for that layer (or an arbitrary expression).
+
+* **Thematic maps based on expressions**: Categorized and Graduated thematic maps can now be created using the result of an expression. In the properties dialog for vector layers the attribute chooser has been augmented with an expression builder. So now you no longer need to write the classification attribute to a new column in your attribute table if you want the classification attribute to be a composite of multiple fields, or a formula of some sort.
+
+* **Expression support in symbol diagrams for size and attributes**: You can now use an expression to define the size and attributes when using the diagramming capabilities of QGIS.
+
+* **Else rule in rule based renderer**: The Rule based renderer now supports a 'ELSE' rule that will be run if none of the other rules on that level match. Else rules can be nested just like any other rules. An example might be:
+
+::
+
+	type = 'water' (style grey)
+	ELSE (style red)
+	
+	
+* **Inner stroke support for polygons**: Support has been added for polygon strokes to be limited to the interior of the polygon (so that it does not overflow into a neighbouring polygon).
+
+User Interface 
+--------------
+
+* **Improved properties dialogs**: All our properties dialogs have had their main property menus updated so they look slicker with a inverse coloured side bar. This is purely cosmetic but should make it easier to know what your current context is in a dialog.
+
+* **Expression dialog improvements**:
+
+We have made some tweaks to the expression dialog - power users can now hide the operator buttons. There are also now splitters between the function list and function help areas, and between the expression and function list area.
+
+* **New keybindings**: We have updated the keyboard shortcuts in QGIS to make it more efficient to carry out repetitive tasks.
+
+* :kbd:`Ctrl-d`: Remove selected layers in table of contents
+* :kbd:`>`: Select next vertex when using the node tool
+* :kbd:`<`: Select previous vertex when using the node tool
+* :kbd:`Delete` or :kbd:`Backspace`: delete the selected features (you can undo these actions), or a node when using the nodetool.
+* :kbd:`F5`: updates the canvas (instead of ctrl-r)
 
 
