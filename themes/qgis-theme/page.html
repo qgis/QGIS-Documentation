@@ -2,18 +2,23 @@
 
 {% set favicon = 'images/favicon.ico?1322140996' %}
 
+{% set css_files = css_files + [ '_static/bootstrap-2.3.2/css/bootstrap.min.css' ] %}
 {% set css_files = css_files + [ '_static/qgis-style.css' ] %}
+{% set css_files = css_files + [ '_static/bootstrap-2.3.2/css/bootstrap-responsive.min.css' ] %}
+{% set css_files = css_files + [ '_static/bootstrap-sphinx.css' ] %}
 {# 'language' as variable comes in via '-A language=xx', a sphinx-build option 
 we then can use this language to build language dependent switches #}
 {% if language in ["fa"] %}
 {% set css_files = css_files + [ '_static/qgis-style-rtl.css' ] %}
 {%- endif %}
 {% set script_files = script_files + ['_static/qgis-site.js']%}
+{% set script_files = script_files + ['_static/bootstrap-2.3.2/js/bootstrap.min.js']%}
 
 
 {# Add some extra stuff before and use exiting with 'super()' call. #}
 {% block footer %}
   <footer class="footer">
+
     <div class="container">
         <div>
           <ul class="unstyled inline" id="social">
@@ -21,6 +26,7 @@ we then can use this language to build language dependent switches #}
             <li id="facebook"><a href="https://www.facebook.com/pages/QGIS-Quantum-GIS-/298112000235096" class="external"><div></div></a></li>
             <li id="gplus"><a href="http://plus.google.com/communities/114776597176808981624" class="external"><div></div></a></li>
             <li id="github"><a href="http://github.com/qgis/" class="external"><div></div></a></li>
+            i<!--<li id="aboutcontact"><a href="{{ pathto('site/getinvolved/about') }}"><div></div></a></li>-->
             <li id="aboutcontact"><a href="http://www.qgis.org/{{language}}/site/getinvolved/about.html"><div></div></a></li>
           </ul>
         </div>
@@ -29,10 +35,12 @@ we then can use this language to build language dependent switches #}
     </div>
     <div class="container">
       <p class="credit">
-        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }} - 
-        {%- if last_updated %}
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
-        {%- endif %}
+        {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }}
+        {# only on the frontpage we show the 'last updated'-message, making it possible to rsync the sites #}
+        {% if pagename == 'site/index' and last_updated %}
+            {% trans last_updated=last_updated|e %} - Last updated on {{ last_updated }}{% endtrans %}
+        {% endif %}
+
       </p>
     </div>
   </footer>
@@ -45,6 +53,17 @@ we then can use this language to build language dependent switches #}
 {%- block content %}
 {# calling our own navbar macro !#}
     {{ qgis_navBar() }}
+
+    <div style="display:none;" class="container" id="nextprev" >
+    {% if prev %}
+    <a accesskey="p" href="{{ prev.link|e }}">&lt;&lt; prev</a>
+    {% endif %}
+    {% if next %}
+    <a accesskey="n" href="{{ next.link|e }}">next &gt;&gt;</a>
+    {% endif %}
+    </div>
+
+
 {# including html files (from template directory) in case of certain pagenames 
         this makes it possible for us to use those templates as translatable
         static html pages #}
@@ -79,11 +98,12 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
     {% endif %}
 
     <!--<a href="https://github.com/qgis/"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 10000;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>-->
+
 {%- endblock %}
 
 {# qgis_navBar macro: adding our menu and language switcher#}
 {% macro qgis_navBar() %}
-  <div id="navbar" class="{{ theme_navbar_class }} {% if theme_navbar_fixed_top == 'true' -%} navbar-fixed-top{%- endif -%}">
+  <div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
       <div class="container">
         <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
@@ -104,7 +124,7 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
             <li><a href="{{ pathto('site/forusers/index') }}">{{_("For Users") }}</a></li>
             <li><a href="{{ pathto('site/getinvolved/index') }}">{{_("Get Involved") }}</a></li>
             <li><a href="{{ pathto('docs/index') }}">{{_("Documentation") }}</a></li>-->
-             <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS ") }}{{ version|e }}</a></li>
+            <li><a href="{{ pathto('docs/index') }}">{{_("Documentation QGIS ") }}{{ version|e }}</a></li>
             <li>{% block sidebarsearch %}
           {% include "searchbox.html" %}
         {% endblock %}</li>
@@ -115,7 +135,7 @@ http://stackoverflow.com/questions/13209597/override-html-page-template-for-a-sp
   </div>
 {% endmacro %}
 
-{# qgis_bsidebar macro: make sidebar span4 and sroll instead of affix #}
+{# qgis_bsidebar macro: make sidebar span4 and scroll instead of affix #}
 {%- macro qgis_bsidebar() %}
       {%- if render_sidebar %}
       <div class="span4">
