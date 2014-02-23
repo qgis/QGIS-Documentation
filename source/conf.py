@@ -187,7 +187,7 @@ htmlhelp_basename = 'QGISWebsitedoc'
 
 rst_prolog = """
 .. role:: disclaimer
-.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.0 docs and translations.`
+.. |updatedisclaimer| replace:: :disclaimer:`Docs for 'QGIS testing'. Visit http://docs.qgis.org for QGIS 2.2 docs and translations.`
 """
 
 rst_epilog = """
@@ -198,7 +198,7 @@ rst_epilog = """
 .. |osx| image:: /static/common/osx.png
    :width: 1em
 .. |QG| replace:: QGIS
-.. |CURRENT| replace:: 2.0
+.. |CURRENT| replace:: 2.2
 .. |degrees| unicode:: 0x00B0
    :ltrim:
 .. |geographic| image:: /static/common/geographic.png
