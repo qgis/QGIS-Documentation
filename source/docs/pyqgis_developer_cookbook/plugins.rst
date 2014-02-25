@@ -17,9 +17,8 @@ They're being searched for in these paths:
     * UNIX/Mac: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/share/qgis/python/plugins`
     * Windows: :file:`~/.qgis/python/plugins` and :file:`(qgis_prefix)/python/plugins`
 
-Home directory (denoted by above :file:`~`) on Windows is usually something
-like :file:`C:\\Documents and Settings\\(user)`. Subdirectories of these
-paths are considered as Python packages that can be imported to QGIS as plugins.
+Home directory (denoted by above :file:`~`) on Windows is usually something like :file:`C:\\Documents and Settings\\(user)` (on Windows XP or earlier) or :file:`C:\\Users\\(user)`. Since Quantum GIS is using Python 2.7, subdirectories of these
+paths have to contain an __init__.py fily to be considered Python packages that can be imported as plugins.
 
 Steps:
 
@@ -31,10 +30,10 @@ Steps:
 2. *Create files*: Create the files described next.
    A starting point (:file:`__init.py__`).
    Fill in the :ref:`plugin_metadata` (:file:`metadata.txt`)
-   A main python plugin body (:file:`plugin.py`).
+   A main python plugin body (:file:`mainplugin.py`).
    A form in QT-Designer (:file:`form.ui`), with its :file:`resources.qrc`.
 
-3. *Write code*: Write the code inside the :file:`plugin.py`
+3. *Write code*: Write the code inside the :file:`mainplugin.py`
 
 4. *Test*: Close and re-open QGIS and import your plugin again. Check if
    everything is OK.
@@ -61,19 +60,19 @@ Plugin files
 Here's the directory structure of our example plugin::
 
   PYTHON_PLUGINS_PATH/
-    testplug/
-      __init__.py
-      plugin.py
-      metadata.txt
-      resources.qrc
-      resources.py
-      form.ui
-      form.py
+    MyPlugin/
+      __init__.py    --> *required*
+      mainPlugin.py  --> *required*
+      metadata.txt   --> *required*
+      resources.qrc  --> *likely useful*
+      resources.py   --> *compiled version, likely useful*
+      form.ui        --> *likely useful*
+      form.py        --> *compiled version, likely useful*
 
 What is the meaning of the files:
 
-* :file:`__init__.py` = The starting point of the plugin. It is normally empty.
-* :file:`plugin.py` = The main working code of the plugin. Contains all the information
+* :file:`__init__.py` = The starting point of the plugin. It has to have the classFactory method and may have any other initialisation code.
+* :file:`mainPlugin.py` = The main working code of the plugin. Contains all the information
   about the actions of the plugin and the main code.
 * :file:`resources.qrc` = The .xml document created by QT-Designer. Contains relative
   paths to resources of the forms.
@@ -82,16 +81,14 @@ What is the meaning of the files:
 * :file:`form.py` = The translation of the form.ui described above to Python.
 * :file:`metadata.txt` = Required for QGIS >= 1.8.0. Containts general info, version,
   name and some other metadata used by plugins website and plugin infrastructure.
-  Metadata in :file:`metadata.txt` is preferred to the methods in :file:`__init__.py`.
-  If the text file is present, it is used to fetch the values. From QGIS 2.0
-  the metadata from :file:`__init__.py` will not be accepted and the :file:`metadata.txt`
-  file will be required.
+  Since QGIS 2.0 the metadata from :file:`__init__.py` is not accepted anymore and the :file:`metadata.txt`
+  is required.
 
-`Here <http://pyqgis.org/builder/plugin_builder.py>`_ and `there <http://www.dimitrisk.gr/qgis/creator/>`_
-are two automated ways of creating the basic files (skeleton) of a typical
+`Here <http://www.dimitrisk.gr/qgis/creator/>`_
+is an online automated way of creating the basic files (skeleton) of a typical
 QGIS Python plugin. 
 
-Also there is a QGIS plugin called `Plugin Builder` that creates plugin template from QGIS and doesn't require internet connection.
+Also there is a QGIS plugin called `Plugin Builder <http://geoapt.net/pluginbuilder/>`_ that creates plugin template from QGIS and doesn't require internet connection.
 This is the recommended option, as it produces 2.0 compatible sources.
 
 .. warning::
@@ -115,7 +112,7 @@ Plugin metadata
 
 First, plugin manager needs to retrieve some basic information about the
 plugin such as its name, description etc. File :file:`metadata.txt` is the
-right place where to put this information.
+right place to put this information.
 
 
 .. important::
@@ -208,15 +205,25 @@ An example for this metadata.txt::
 .. index:: plugins; metadata.txt, metadata, metadata.txt
 
 
+__init__.py
+-----------
+This file is required by Python's import system. Also, Quantum GIS requires that this file contains a ``classFactory()`` function,
+which is called when the plugin gets loaded to QGIS. It receives reference to instance of
+:class:`QgisInterface` and must return instance of your plugin's class from the mainplugin.py - in our
+case it's called ``TestPlugin`` (see below). This is how __init__.py should look like::
 
-plugin.py
+  def classFactory(iface):
+    from mainPlugin import TestPlugin
+    return TestPlugin(iface)
+  
+  ## any other initialisation needed
+
+
+mainPlugin.py
 ---------
 
-One thing worth mentioning is ``classFactory()`` function which is called
-when the plugin gets loaded to QGIS. It receives reference to instance of
-:class:`QgisInterface` and must return instance of your plugin - in our
-case it's called ``TestPlugin``. This is how should this class look like
-(e.g. :file:`testplugin.py`)::
+This is where the magic happens and this is how magic looks like:
+(e.g. :file:`mainPlugin.py`)::
 
   from PyQt4.QtCore import *
   from PyQt4.QtGui import *
@@ -268,10 +275,12 @@ case it's called ``TestPlugin``. This is how should this class look like
 
 
 
-The only plugin functions that must exist are ``initGui()`` and ``unload()``.
-These functions are called when the plugin is loaded and unloaded.
+The only plugin functions that must exist in the main plugin source file (e.g. mainPlugin.py) are::
+- ``__init__``    --> which gives access to Quantum GIS' interface
+- ``initGui()``   --> called when the plugin is loaded
+- ``unload()``    --> called when the plugin is unloaded
 
-You can see that in the above example, the :func:`addPluginMenu` is used. This will add the corresponding menu action to the *Plugins* menu. Alternative methods exist to add the action to a different menu. Here is a list of those methods:
+You can see that in the above example, the ``:func:`addPluginToMenu`<http://qgis.org/api/classQgisInterface.html#ad1af604ed4736be2bf537df58d1399c3>`_ is used. This will add the corresponding menu action to the *Plugins* menu. Alternative methods exist to add the action to a different menu. Here is a list of those methods:
 
 - :func:`addPluginToRasterMenu()`
 - :func:`addPluginToVectorMenu()`
