@@ -1183,6 +1183,9 @@ Remember that in the :guilabel:`Position` tab a |checkbox| :guilabel:`Data defin
 of the diagrams is possible. Here you can use attributes to define the position of the diagram.
 Also, a scale dependent visibility that you can find in the :guilabel:`Appearance` tab is possible.
 
+The size and the attributes can also be an expression use the |mActionmIconExpressionEditorOpen| Button
+To add use an expression.
+
 .. _vectormetadatamenu:
 
 Metadata Menu
