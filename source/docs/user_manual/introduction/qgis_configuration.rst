@@ -48,8 +48,9 @@ and off icon groups in the |qg| toolbar (see figure_panels_toolbars_).
 
    It's possible to track the |qg| messages. You can activate
    |checkbox| :guilabel:`Log Messages` in the menu
-   :menuselection:`Settings --> Panels` and follow the messages that appears in
-   the different tabs during loading and operation.
+   |nix| :menuselection:`Settings --> Panels` or 
+   |win| :menuselection:`View --> Panels` and follow the messages 
+   that appears in the different tabs during loading and operation.
 
 
 Project Properties
