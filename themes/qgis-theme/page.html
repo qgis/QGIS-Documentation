@@ -42,8 +42,8 @@ we then can use this language to build language dependent switches #}
     <div class="container">
       <p class="credit">
         {{ _('Select graphics from <a href="http://thenounproject.com" target="_blank">The Noun Project collection</a>') }}
-        {# only on the frontpage we show the 'last updated'-message, making it possible to rsync the sites #}
-        {% if pagename == 'site/index' and last_updated %}
+        {# only on the frontpage (both of docs and site) we show the 'last updated'-message, making it possible to rsync the sites #}
+        {% if (pagename == 'site/index' or pagename == 'docs/index') and last_updated %}
             {# % trans last_updated=last_updated|e %} - Last updated on {{ last_updated }}{% endtrans % #}
             {{ _(' - Last updated on ') }} {{ last_updated|e }}
         {% endif %}
