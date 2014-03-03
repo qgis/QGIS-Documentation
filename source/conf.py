@@ -1052,6 +1052,7 @@ latex_paper_size = 'a4'
 latex_documents = [
   ('docs/user_manual/index', 'QGISUserGuide.tex', u'QGIS User Guide', u'QGIS Project', 'manual'),
   ('docs/pyqgis_developer_cookbook/index', 'PyQGISDeveloperCookbook.tex', u'PyQGIS developer cookbook', u'QGIS Project', 'manual'),
+  ('docs/training_manual/index', 'QGISTrainingManual.tex', u'QGIS Training Manual', u'QGIS Project', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
