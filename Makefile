@@ -168,6 +168,7 @@ all:
 		mv $(BUILDDIR)/html/$$LANG live/html/; \
 		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-UserGuide.pdf live/html/pdf/QGIS-$(VERSION)-UserGuide-$$LANG.pdf;  \
 		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-PyQGISDeveloperCookbook.pdf live/html/pdf/QGIS-$(VERSION)-PyQGISDeveloperCookbook-$$LANG.pdf;  \
+		cp $(BUILDDIR)/pdf/$$LANG/QGIS-$(VERSION)-QGISTrainingManual.pdf live/html/pdf/QGIS-$(VERSION)-QGISTrainingManual-$$LANG.pdf;  \
 		rm -rf live/html/$$LANG.old; \
 	done
 
