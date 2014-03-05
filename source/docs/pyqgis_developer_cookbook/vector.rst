@@ -25,13 +25,13 @@ Iterating over the features in a vector layer is one of the most common tasks. B
       print "Feature ID %d: " % feature.id()
 
       # show some information about the feature
-      if geom.vectorType() == QGis.Point:
+      if geom.type() == QGis.Point:
         x = geom.asPoint()
         print "Point: " + str(x)
-      elif geom.vectorType() == QGis.Line:
+      elif geom.type() == QGis.Line:
         x = geom.asPolyline()
         print "Line: %d points" % len(x)
-      elif geom.vectorType() == QGis.Polygon:
+      elif geom.type() == QGis.Polygon:
         x = geom.asPolygon()
         numPts = 0
         for ring in x:
@@ -62,16 +62,25 @@ Iterating over selected features
 Convenience methods
 --------------------
 
-For the above cases, and in case you need to consider selection in a vector layer in case it exist, you can use the :func:`getfeatures` method from the buil-in processing plugin, as follows:
+For the above cases, and in case you need to consider selection in a vector layer in case it exist, you can use the :func:`features` method from the buil-in processing plugin, as follows:
 
 ::
 
   import processing
-  features = processing.getfeatures(layer)
+  features = processing.features(layer)
   for feature in features:
     #Do whatever you need with the feature
 
 This will iterate over all the features in the layer, in case there is no selection, or over the selected features otherwise.
+
+if you only need selected features, you can use the :func: `selectedFeatures` method from vector layer:
+
+::
+
+  selection = layer.selectedFeatures()
+  print len(selection)
+  for feature in selection:
+    #Do whatever you need with the feature
 
 Iterating over a subset of features
 -------------------------------------
