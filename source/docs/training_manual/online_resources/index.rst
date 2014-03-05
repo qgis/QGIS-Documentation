@@ -12,7 +12,6 @@ Services (WMS) and Web Feature Services (WFS).
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    wms
    wfs

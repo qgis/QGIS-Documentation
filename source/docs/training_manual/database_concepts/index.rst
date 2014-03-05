@@ -9,7 +9,6 @@ learning about other typical RDBMS functions.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    db_intro
    data_model

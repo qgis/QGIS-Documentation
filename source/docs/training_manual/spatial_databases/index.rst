@@ -26,7 +26,6 @@ See also `PostGIS online <http://postgisonline.org/>`_.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    spatial_functions
    simple_feature_model

@@ -8,7 +8,6 @@ present the final results.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    raster_to_vector
    analysis_combination

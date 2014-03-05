@@ -25,7 +25,6 @@ locate suitable farm properties for this new residential development.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    reproject_transform
    basic_analysis

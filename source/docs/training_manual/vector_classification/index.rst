@@ -9,7 +9,6 @@ features.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    attribute_data
    label_tool

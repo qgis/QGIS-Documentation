@@ -36,7 +36,7 @@ Adding a Module
 
     .. toctree::
        :maxdepth: 2
-       :numbered:
+       
  
        foreword/index
        introduction/index
@@ -63,7 +63,7 @@ have in the document.
 
     .. toctree::
        :maxdepth: 2
-       :numbered:
+       
 
        lesson1
        lesson2
@@ -83,7 +83,7 @@ The module-level index file will look like this:
 
   .. toctree::
      :maxdepth: 2
-     :numbered:
+     
 
      lesson1
      lesson2

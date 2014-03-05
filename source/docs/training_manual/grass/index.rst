@@ -9,7 +9,6 @@ QGIS allows you to make use of GRASS' powerful GIS tools directly.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
    
    grass_setup
    grass_tools

@@ -7,7 +7,6 @@ for further demonstrations of QGIS functionality.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    vector_data
    symbology

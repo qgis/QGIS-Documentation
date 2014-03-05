@@ -10,7 +10,6 @@ spatial database implementations including spatialite.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    db_browser
    db_manager

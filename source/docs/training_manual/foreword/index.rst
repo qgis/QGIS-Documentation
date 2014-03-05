@@ -4,7 +4,6 @@ Course Introduction
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    foreword
    preparing_data

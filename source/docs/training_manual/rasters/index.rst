@@ -7,7 +7,7 @@ directly. In this module, you'll see how it's done in QGIS.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
+
 
    data_manipulation
    changing_symbology

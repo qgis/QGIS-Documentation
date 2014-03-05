@@ -7,7 +7,6 @@ quality maps with all the requisite map components.
 
 .. toctree::
    :maxdepth: 2
-   :numbered:
 
    map_composer
    day_1_assignment
