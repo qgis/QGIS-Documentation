@@ -133,8 +133,12 @@ More detailed settings can be made when clicking on the second level in the
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
-* :guilabel:`Symbol layer type`: You have the possibility to use Ellipse markers, Font markers,
-  Simple markers, SVG markers and Vector Field markers
+* :guilabel:`Symbol layer type`:
+ * Point layers: you have the possibility to use Ellipse markers, Font markers,
+   Simple markers, SVG markers and Vector Field markers
+ * Line layers: here you can use Simple Lines and Marker Lines
+ * Polygon Layers: it's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
+   Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line)
 * :guilabel:`Size`
 * :guilabel:`Angle`
 * :guilabel:`Colors`
