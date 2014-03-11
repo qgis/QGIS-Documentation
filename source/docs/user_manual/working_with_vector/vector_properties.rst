@@ -64,12 +64,9 @@ Layer rendering
   * Soft light: Very similar to overlay, but instead of using multiply/screen it uses color burn/dodge. This one is supposed to emulate shining a soft light onto an image.
   * Hard light: Hard light is very similar to the overlay mode. It's supposed to emulate projecting a very intense light onto an image.
   * Difference: Difference subtracts the top pixel from the bottom pixel or the other way round, to always get a positive value. Blending with black produces no change, as values for all colors are 0.
-  * Subtract: This blend mode simply subtracts pixel values of one layer with tshe other. In case of negative values, black is displayed.
+  * Subtract: This blend mode simply subtracts pixel values of one layer with the other. In case of negative values, black is displayed.
 
 .. index:: Symbology
-
-Since |qg| 2.0 the old symbology is no longer available.
-In this version the new symbology has been redesigned and revised.
 
 
 Renderers
@@ -133,17 +130,39 @@ More detailed settings can be made when clicking on the second level in the
 combined afterwards. A symbol can consist of several :guilabel:`Symbol layers`.
 The following settings are possible:
 
-* :guilabel:`Symbol layer type`:
- * Point layers: you have the possibility to use Ellipse markers, Font markers,
+* Point layers:
+ * :guilabel:`Symbol layer type`:you have the possibility to use Ellipse markers, Font markers,
    Simple markers, SVG markers and Vector Field markers
- * Line layers: here you can use Simple Lines and Marker Lines
- * Polygon Layers: it's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
+ * :guilabel:`Colors`
+ * :guilabel:`Size`
+ * :guilabel:`Outline style`
+ * :guilabel:`Outline width` 
+ * :guilabel:`Angle`
+ * :guilabel:`Offset X,Y`: You can shift the symbol in x- or y-direction
+ * :guilabel:`Anchor point`
+ * [Data defined properties ...]
+
+* Line layers:
+ * :guilabel:`Symbol layer type`: here you can use Simple Lines and Marker Lines
+ * :guilabel:`Color`
+ * :guilabel:`Pen width`
+ * :guilabel:`Offset`
+ * :guilabel:`Pen style`
+ * :guilabel:`Join style`
+ * :guilabel:`Cap style`
+ * |checkbox| :guilabel:`Use custom dash pattern`
+ * :guilabel:`Dash pattern unit`
+ * [Data defined properties ...]
+
+* Polygon Layers:
+ * :guilabel:`Symbol layer type`: it's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
    Point Pattern Fill, SVG Fill, Simple Fill and two Outlines (Marker line and Simple line)
-* :guilabel:`Size`
-* :guilabel:`Angle`
-* :guilabel:`Colors`
-* :guilabel:`Border width`
-* :guilabel:`Offset X,Y`: You can shift the symbol in x- or y-direction
+ * :guilabel:`Colors`
+ * :guilabel:`Fill style`
+ * :guilabel:`Border style`
+ * :guilabel:`Border width`
+ * :guilabel:`Offset X,Y`
+ * [Data defined properties ...]
 
 Note that once you have set the size in the lower levels the size of the whole symbol
 can be changed with the :guilabel:`Size` menu in the first level again. The size of
