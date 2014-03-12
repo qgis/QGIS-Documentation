@@ -48,7 +48,7 @@ Layer rendering
 
 .. _blend_modes:
 
-* :guilabel:`Layer blending mode`: you can achieve special rendering effects with these tools that you
+* :guilabel:`Layer blending mode` and :guilabel:`Feature blending mode`: you can achieve special rendering effects with these tools that you
   previously only know from graphics programs. The pixels of your overlaying and underlaying layers are mixed
   through the settings described below.
 
@@ -140,7 +140,7 @@ The following settings are possible:
  * :guilabel:`Angle`
  * :guilabel:`Offset X,Y`: You can shift the symbol in x- or y-direction
  * :guilabel:`Anchor point`
- * [Data defined properties ...]
+ * :guilabel:`Data defined properties ...`
 
 * Line layers:
  * :guilabel:`Symbol layer type`: here you can use Simple Lines and Marker Lines
@@ -152,7 +152,7 @@ The following settings are possible:
  * :guilabel:`Cap style`
  * |checkbox| :guilabel:`Use custom dash pattern`
  * :guilabel:`Dash pattern unit`
- * [Data defined properties ...]
+ * :guilabel:`Data defined properties ...`
 
 * Polygon Layers:
  * :guilabel:`Symbol layer type`: it's possible to use Centroid Fill, Gradient Fill, Line Pattern Fill,
@@ -162,7 +162,7 @@ The following settings are possible:
  * :guilabel:`Border style`
  * :guilabel:`Border width`
  * :guilabel:`Offset X,Y`
- * [Data defined properties ...]
+ * :guilabel:`Data defined properties ...`
 
 Note that once you have set the size in the lower levels the size of the whole symbol
 can be changed with the :guilabel:`Size` menu in the first level again. The size of
@@ -170,8 +170,7 @@ the lower levels changes accordingly while the size ratio is maintained.
 After having done any needed changes, the symbol can be added to the list of
 current style symbols (using the **[Symbol]** |selectstring| :guilabel:`Save in symbol library`)
 and then easily be used in the future. Furthermore you can use the **[Save Style]** |selectstring| button to
-save the symbol as a |qg| layer style file (.qml) or SLD file(.sld). Currently
-in version 2.0 SLDs can be exported from any type of renderer: single symbol,
+save the symbol as a |qg| layer style file (.qml) or SLD file(.sld). SLDs can be exported from any type of renderer: single symbol,
 categorized, graduated or rule-based, but when importing an SLD, either a
 single symbol or rule-based renderer is created.
 That means that categorized or graduated styles are converted to rule-based.
@@ -229,7 +228,8 @@ for the rivers layer of the |qg| sample dataset.
 You can create a custom color ramp choosing :menuselection:`New color ramp...`
 from the :guilabel:`Color ramp` dropdown menu. A dialog will prompt for the ramp type:
 Gradient, Random, ColorBrewer, and cpt-city. The first three have options for number of steps
-and/or multiple stops in the color ramp. See figure_symbology_3_ for an
+and/or multiple stops in the color ramp. You can use the |checkbox| :guilabel:`Invert` option while classifying
+the data with a color ramp. See figure_symbology_3_ for an
 example of custom color ramp and figure_symbology_3a_ for the cpt-city dialog.
 
 .. _figure_symbology_3:
@@ -324,7 +324,7 @@ for the rivers layer of the |qg| sample dataset.
 To create a rule, activate an existing row by clicking on it or click on '+' and
 click on the new rule. Then press the **[Edit rule]** button. In the :guilabel:`Rule
 properties` dialog you can define a label for the rule. Press the |browsebutton|
-button to open the Expression builder. In the **Function List**, click on
+button to open the Expression string builder. In the **Function List**, click on
 :guilabel:`Fields and Values` to view all attributes of the attribute table to
 be searched. To add an attribute to the Field calculator **Expression** field,
 double click its name in the :guilabel:`Fields and Values` list. Generally you
