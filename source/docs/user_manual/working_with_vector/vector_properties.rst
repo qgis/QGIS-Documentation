@@ -197,7 +197,7 @@ a single user-defined symbol, which color reflects the value of a selected
 feature's attribute. The :guilabel:`Style` menu allows you to select:
 
 
-* The attribute (using the Column listbox)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
 * The symbol (using the Symbol dialog)
 * The colors (using the Color Ramp listbox)
 
@@ -287,7 +287,7 @@ Analogue to the categorized rendered, the :guilabel:`Style` tab allows you to
 select:
 
 
-* The attribute (using the Column listbox)
+* The attribute (using the Column listbox or the |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function)
 * The symbol (using the Symbol Properties button)
 * The colors (using the Color Ramp list)
 
@@ -308,7 +308,16 @@ together with their ranges, labels and symbols that will be rendered.
 The example in figure_symbology_4_ shows the graduated rendering dialog for
 the rivers layer of the |qg| sample dataset.
 
+.. tip:: **Thematic maps using an expression**
+
+   Categorized and Graduated thematic maps can now be created using the result of an expression. 
+   In the properties dialog for vector layers the attribute chooser has been augmented with an 
+   |mActionmIconExpressionEditorOpen| :guilabel:`Set column expression` function. So now you no longer
+   need to write the classification attribute to a new column in your attribute table if you want the
+   classification attribute to be a composite of multiple fields, or a formula of some sort.
+
 .. Index:: Rule-based_Rendering, Rendering_Rule-based
+
 
 **Rule-based rendering**
 
@@ -799,6 +808,16 @@ Feature subset
    :align: center
 
    General menu in vector layers properties dialog |nix|
+
+Rendering Menu
+--------------
+
+QGIS 2.2 introduces support for on the fly feature generalisation. This can improve rendering times
+when drawing many complex features at small scales. This feature can be enabled or disabled in the
+layer settings using the |checkbox| :guilabel:`Simplify geometry` option. There is also a new global
+setting that enables generalisation by default for newly added layers (see section :ref:`gui_options`).
+**Note**: Feature generalisation may introduce artefacts into your rendered output in some cases.
+These may include slivers between polygons and inaccurate rendering when using offset based symbol layers.
 
 Display Menu
 ------------

@@ -354,6 +354,9 @@ Here is a sampling of other ways to produce output files:
   as Image` opens a file dialog where you select the name, path and type of
   image (PNG or JPG format). A world file with extension PNGW or JPGW saved
   in the same folder georeferences the image.
+* Menu option :menuselection:`Project -->` :guilabel:`DXF Export ...` opens
+  a dialog where you can define the 'Symbology mode', the 'Symbology scale' and
+  vector layers you want to export to DXF.
 * Menu option :menuselection:`Project -->` |mActionNewComposer|
   :menuselection:`New Print Composer` opens a dialog where you can layout and
   print the current map canvas (see Section :ref:`label_printcomposer`).

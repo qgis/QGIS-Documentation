@@ -75,6 +75,7 @@ Menu Option                                                     Shortcut        
 |mActionFileSave| :guilabel:`Save`                              :kbd:`Ctrl+S`         see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionFileSaveAs| :guilabel:`Save As...`                      :kbd:`Ctrl+Shift+S`   see :ref:`sec_projects`                     :guilabel:`Project`
 |mActionSaveMapAsImage| :guilabel:`Save as Image...`            \                     see :ref:`sec_output`                       \
+:guilabel:`DXF Export ...`                                      \                     see :ref:`sec_output`                       \
 |mActionNewComposer| :guilabel:`New Print Composer`             :kbd:`Ctrl+P`         see :ref:`label_printcomposer`              :guilabel:`Project`
 |mActionComposerManager| :guilabel:`Composer manager ...`       \                     see :ref:`label_printcomposer`              :guilabel:`Project`
 :menuselection:`Print Composers -->`                            \                     see :ref:`label_printcomposer`              \

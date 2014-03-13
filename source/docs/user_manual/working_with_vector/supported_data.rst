@@ -5,7 +5,7 @@ Supported Data Formats
 
 |qg| uses the OGR library to read and write vector data formats (GRASS vector
 and PostgreSQL support is supplied by native |qg| data provider plugins),
-including ESRI Shapefiles, MapInfo and Microstation file formats; PostGIS,
+including ESRI Shapefiles, MapInfo and Microstation file formats; AutoCAD DXF, PostGIS,
 SpatiaLite, Oracle Spatial and MSSQL Spatial databases and many more. The
 vector data can also be loaded in read mode from zip and gzip archives into
 |qg|. At the date of this document, 69 vector formats are supported by the OGR

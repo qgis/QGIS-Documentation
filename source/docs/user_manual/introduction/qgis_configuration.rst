@@ -61,28 +61,29 @@ In the properties window for the project under |nix|
 :menuselection:`Project --> Project Properties` you set project specific
 options. These include:
 
-* In the :guilabel:`General` tab the project title, selection and background
+* In the :guilabel:`General` menu the project title, selection and background
   color, layer units, precision, and the option to save relative paths to
   layers can be defined. If the CRS transformation is on you can choose an
   ellipsoid for distance calculations. You can define the canvas units (only
   used when CRS transformation is disabled) and the precision of decimal places
   to use. You also can define a project scale list, that overrides the global
   predefined scales.
-* The :guilabel:`CRS` tab enables you to choose the Coordinate Reference
+* The :guilabel:`CRS` menu enables you to choose the Coordinate Reference
   System for this project, and to enable on-the-fly re-projection of raster and
   vector layers when displaying layers from a different CRS.
-* With the third :guilabel:`Identify layers` tab you set (or disable) which
+* With the third :guilabel:`Identify layers` menu you set (or disable) which
   layers will respond to the identify tool (see the "Map tools" paragraph from
   the :ref:`gui_options` section to enable identifying of multiple layers).
-* The :guilabel:`Default Styles` tab lets you control how new layers will be
+* The :guilabel:`Default Styles` menu lets you control how new layers will be
   drawn when they do not have an existing :file:`.qml` style defined. You can
   also set the default transparency level for new layers and whether symbols
   should have random colours assigned to them.
 * The tab :guilabel:`OWS Server` allows to define information about the |qg|
   Server WMS and WFS capabilities, extent and the CRS restrictions.
-* The :guilabel:`Macros` tab used to edit Python macros for project. Currently
-  only three macros available: ``openProject()``, ``saveProject()`` and
+* The :guilabel:`Macros` menu is used to edit Python macros for project. Currently
+  only three macros are available: ``openProject()``, ``saveProject()`` and
   ``closeProject()``.
+* The :guilabel:`Relations` menu ...
 
 .. _figure_macro_menu:
 
@@ -106,7 +107,7 @@ Options
 |mActionOptions| :menuselection:`Options`. The tabs where you can optimize your
 options are:
 
-General Tab
+General Menu
 -----------
 
 **Application**
@@ -148,8 +149,8 @@ General Tab
 
 .. _`env_options`:
 
-System Tab
-----------
+System Menu
+-----------
 
 **Environment**
 
@@ -186,8 +187,8 @@ source code.
 plugin libraries`
 
 
-Data Sources Tab
-----------------
+Data Sources Menu
+-----------------
 
 **Feature attributes and table**
 
@@ -232,8 +233,16 @@ Data Sources Tab
 * |checkbox| :guilabel:`Add Oracle layers with double click and select in
   extended mode`
 
-Rendering Tab
--------------
+Rendering Menu
+--------------
+
+**Rendering behaviour**
+
+* |checkbox| :guilabel:`By default new layers added to the map should be displayed`
+* |checkbox| :guilabel:`Enable back buffer`
+* |checkbox| :guilabel:`Use render caching where possible to speed up redraws`
+ * |checkbox| :guilabel:`Enable feature simplication by default for newly added layers`
+ * |checkbox| :guilabel:`Simplify on provider side if possible`
 
 **Rendering quality**
 
@@ -264,8 +273,8 @@ Rendering Tab
 
 * |checkbox| :guilabel:`Map canvas refresh`
 
-Canvas and Legend Tab
----------------------
+Canvas and Legend Menu
+----------------------
 
 **Default map appearance (overridden by project properties)**
 
@@ -284,8 +293,8 @@ Canvas and Legend Tab
   * |checkbox| :guilabel:`Create raster icons (may be slow)`
   * |checkbox| :guilabel:`Add new layers to selected or current group`
 
-Map tools Tab
--------------
+Map tools Menu
+--------------
 
 **Identify**
 
@@ -318,8 +327,31 @@ Map tools Tab
 Here you find a list of predefined scales. With the **[+]** and **[-]** buttons
 you can add or remove your individual scales.
 
-Digitizing Tab
---------------
+Composer Menu
+-------------
+
+**Composition defaults**
+
+You can define the :guilabel:`Default` font here.
+
+**Grid appearance**
+
+* Define the :guilabel:`Grid style` |selectstring| ('Solid', 'Dots', 'Crosses')
+* Define the :guilabel:`Color...`
+
+**Grid defaults**
+
+* Define the :guilabel:`Spacing` |selectnumber|
+* Define the :guilabel:`Grid offset` |selectnumber| for x and y
+* Define the :guilabel:`Snap tolerance` |selectnumber|
+
+**Guide defaults**
+
+* Define the :guilabel:`Snap tolerance` |selectnumber|
+
+
+Digitizing Menu
+---------------
 
 **Feature creation**
 
@@ -357,26 +389,27 @@ The next 3 options refer to the |mActionOffsetCurve| :sup:`Offset Curve` tool
 in :ref:`sec_advanced_edit`. Through the various settings, it is possible to
 influence the shape of the line offset. These options are possible from GEOS 3.3 .
 
-* :guilabel:`Join style for curve offset`
-* :guilabel:`Quadrant segments for curve offset`
-* :guilabel:`Miter limit for curve offset`
+* :guilabel:`Join style`
+* :guilabel:`Quadrant segments`
+* :guilabel:`Miter limit`
 
-GDAL Tab
---------
+GDAL Menu
+---------
 
 GDAL is a data exchange library for raster files. In this tab you can
 :guilabel:`Edit create options` and :guilabel:`Edit Pyramids Options` of the
 raster formats. Define which GDAL driver to be used for a raster format as in
 some cases more than one GDAL driver is available.
 
-CRS Tab
--------
+CRS Menu
+--------
 
 **Default CRS for new projects**
 
-* |checkbox| :guilabel:`Automatically enable 'on the fly' reprojection if
+* |radiobuttonoff| :guilabel:`Don't enable 'on the fly' reprojection`
+* |radiobuttonon| :guilabel:`Automatically enable 'on the fly' reprojection if
   layers have different CRS`
-* |checkbox| :guilabel:`Enable on the fly re-projection by default`
+* |radiobuttonoff| :guilabel:`Enable 'on the fly' reprojection by default`
 * Select a CRS and :guilabel:`Always start new projects with this CRS`
 
 **CRS for new layers**
@@ -388,14 +421,21 @@ a layer without CRS is loaded.
 * |radiobuttonoff| :guilabel:`Use project CRS`
 * |radiobuttonoff| :guilabel:`Use default CRS displayed below`
 
-Locale Tab
-----------
+**Default datum transformations**
+
+* |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
+* You can use the |mActionSignPlus| and |mActionSignMinus| Icons to add and remove 
+  'Source CRS' and 'Destination CRS' as well as 'Source datum transform' and 'Destination
+  datum transform'. To make a datum transform you have to ...
+
+Locale Menu
+-----------
 
 * |checkbox| :guilabel:`Overwrite system locale` and :guilabel:`Locale to use instead`
 * Information about active system locale
 
-Network Tab
------------
+Network Menu
+------------
 
 **General**
 
@@ -403,6 +443,8 @@ Network Tab
   ``http://geopole.org/wms/search?search=\%1\&type=rss``
 * Define :guilabel:`Timeout for network requests (ms)` - default is 60000
 * Define :guilabel:`Default expiration period for WMSC/WMTS tiles (hours)` - default is 24
+* Define :guilabel:`Max retry in case of tile request errors`
+* Define :guilabel:`User-Agent`
 
 
 .. _figure_network_tab:
