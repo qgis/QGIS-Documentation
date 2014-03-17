@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2014-01-20 05:25+0000\n"
-"Last-Translator: ttamba <tahir.tamba@gmail.com>\n"
+"PO-Revision-Date: 2014-03-16 21:44+0000\n"
+"Last-Translator: DelazJ <delazj@gmail.com>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/qgis-documentation/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -67,7 +67,7 @@ msgid ""
 " these things would be a **feature** when we represent them in a GIS "
 "Application. Vector features have **attributes**, which consist of text or "
 "numerical information that **describe** the features."
-msgstr "Les données **Vecteurs** fournissent un moyen de représenter le monde réel par des **entités** dans l'environnement SIG. Une entité est une chose que vous pouvez voir dans le paysage. Imaginez que vous êtes debout sur le sommet d'une colline. En regardant en bas, vous pouvez voir des maisons, des routes, des arbres, des rivières, et ainsi de suite (voir figure_landscape_). Chacunes de ces choses seraient une **entités** quand nous les représentons dans une application SIG. Les données vecteurs ont des **attributs**, qui se composent d'informations texte ou numériques qui **décrivent** les entités. "
+msgstr "Les données **Vecteurs** fournissent un moyen de représenter le monde réel par des **entités** dans l'environnement SIG. Une entité est une chose que vous pouvez voir dans le paysage. Imaginez que vous êtes debout sur le sommet d'une colline. En regardant en bas, vous pouvez voir des maisons, des routes, des arbres, des rivières, et ainsi de suite (voir figure_landscape_). Chacune de ces choses serait une **entité** quand nous les représentons dans une application SIG. Les données vecteurs ont des **attributs**, qui se composent d'informations texte ou numériques qui **décrivent** les entités. "
 
 # 9e2cd623b27d400eb4a62c28a0f67aef
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:38
@@ -84,21 +84,21 @@ msgid ""
 "position in space using an **X**, **Y** and optionally **z** axis. "
 "Geometries which have vertices with a ``Z`` axis are often referred to as "
 "**2.5D** since they describe height or depth at each vertex, but not both."
-msgstr "Une entités vecteur a sa forme représentée en utilisant la **géométrie**. La géométrie est constituée d'un ou plusieurs **sommets** interconnectés. Un sommet décrit une position dans l'espace en utilisant un **X**, **Y** et éventuellement un axe **Z**. Les géométries qui ont des sommets avec un axe ``Z`` sont souvent désignés comme **2.5D** car ils décrivent la hauteur ou de la profondeur à chaque sommet, mais pas les deux."
+msgstr "Une entité vecteur a sa forme représentée en utilisant la **géométrie**. La géométrie est constituée d'un ou plusieurs **sommets** interconnectés. Un sommet décrit une position dans l'espace en utilisant un **X**, **Y** et éventuellement un axe **Z**. Les géométries qui ont des sommets avec un axe ``Z`` sont souvent désignés comme **2.5D** car ils décrivent la hauteur ou la profondeur de chaque sommet, mais pas les deux."
 
 # cbb4714d11974ae980baf8e0cec86985
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:64
 msgid ""
 "A point feature is described by its X, Y and optionally Z coordinate. The "
 "point attributes describe the point e.g. if it is a tree or a lamp post."
-msgstr "Une entités point est décrite par ses coordonnées X, Y et en option Z. Les attributs du points décrive le point par exemple s'il s'agit d'un arbre ou d'un poteau de lampe."
+msgstr "Une entité point est décrite par ses coordonnées X, Y et éventuellement Z. Les attributs du point décrivent le point, par exemple s'il s'agit d'un arbre ou d'un poteau de lampe."
 
 # 1778f98b39bc473bb37f9ef471573e69
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:77
 msgid ""
 "A polyline is a sequence of joined vertices. Each vertex has an X, Y (and "
 "optionally Z) coordinate. Attributes describe the polyline."
-msgstr "Une polyligne est une séquence de sommets reliés. Chaque sommet a une coordonnées X, Y (et en option Z). Les attributs décrivent la polyligne."
+msgstr "Une polyligne est une séquence de sommets reliés. Chaque sommet a des coordonnées X, Y (et éventuellement Z). Les attributs décrivent la polyligne."
 
 # 871921abc24d4cbaa53f31b5219daecc
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:90
@@ -121,7 +121,7 @@ msgid ""
 "Landscape features as we would present them in a GIS. Rivers (blue) and "
 "roads (green) can be represented as lines, trees as points (red) and houses "
 "as polygons (white)."
-msgstr "Les entités du paysage tel que nous les représenterions dans un SIG. Les rivières (en bleu) et les routes (en vert) peuvent être représenté par des lignes, les arbres par des points (en rouge) et les maisons par des polygones (en blanc)."
+msgstr "Les entités du paysage tel que nous les représenterions dans un SIG. Les rivières (en bleu) et les routes (en vert) peuvent être représentées par des lignes, les arbres par des points (en rouge) et les maisons par des polygones (en blanc)."
 
 # bbb25674e284465e80c7c9cae2293abc
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:112
@@ -172,7 +172,7 @@ msgid ""
 "should be connected at intersections. In some GIS applications you can set "
 "these special rules for a feature type (e.g. roads) and the GIS will ensure "
 "that these polylines always comply to these rules."
-msgstr "Une polyligne est utilisé pour montrer la géométrie des **entités linéaires** tels que les routes, les rivières, les contours, les sentiers, les trajectoires de vol et ainsi de suite. Parfois, nous avons des règles spéciales pour les polylignes en plus de leur géométrie de base. Par exemple les lignes de contour peuvent toucher (par exemple à une falaise), mais ne doivent jamais se croiser. De même, des polylignes utilisés pour stocker un réseau routier doivent être raccordés à des intersections. Dans certaines applications de SIG, vous pouvez définir ces règles spéciales pour un type d'entités (par exemple, les routes) et le SIG veillerez à ce que ces polylignes respectent toujours ces règles."
+msgstr "Une polyligne est utilisée pour montrer la géométrie des **entités linéaires** tels que les routes, les rivières, les contours, les sentiers, les trajectoires de vol et ainsi de suite. Parfois, nous avons des règles spéciales pour les polylignes en plus de leur géométrie de base. Par exemple les lignes de contour peuvent se toucher (par exemple à une falaise), mais ne doivent jamais s'entrecroiser. De même, des polylignes utilisées pour stocker un réseau routier doivent être raccordées à des intersections. Dans certaines applications de SIG, vous pouvez définir ces règles spéciales pour un type d'entités (par exemple, les routes) et le SIG veillera à ce que ces polylignes respectent toujours ces règles."
 
 # e241e63c3bca433891c6de3fa2ddb92f
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:174
@@ -180,7 +180,7 @@ msgid ""
 "Polylines viewed at a smaller scale (1:20 000 to the left) may appear smooth"
 " and curved. When zoomed in to a larger scale (1:500 to the right) polylines"
 " may look very angular."
-msgstr "Des polylignes vus à plus petite échelle (1:20 000 ou plus) peuvent apparaître lisse et incurvée. Lors d'un zoom pour une plus grande échelle (1:500 ou moins) polylignes peuvent sembler très anguleux."
+msgstr "Des polylignes vues à plus petite échelle (1:20 000 ou plus) peuvent apparaître lisses et incurvées. Lors d'un zoom pour une plus grande échelle (1:500 ou moins), les polylignes peuvent sembler très anguleux."
 
 # fe709652c00e4e318dbeaf228f27982f
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:178
@@ -190,7 +190,7 @@ msgid ""
 "surfaced with gravel or tar, how many lanes it has, whether it is a one way "
 "street, and so on. The GIS can use these attributes to symbolise the "
 "polyline feature with a suitable colour or line style."
-msgstr "Les **attributs** d'une polyligne décrivent ses propriétés ou ses caractéristiques. Par exemple, un polyligne de route peut avoir des attributs qui décrivent si elle est recouverte de gravier ou de goudron, combien de voies il a, s'il s'agit d'une rue à sens unique, et ainsi de suite. Le SIG peut utiliser ces attributs pour symboliser l'entité polyligne avec une couleur ou le style de ligne approprié."
+msgstr "Les **attributs** d'une polyligne décrivent ses propriétés ou ses caractéristiques. Par exemple, une polyligne de route peut avoir des attributs qui décrivent si elle est recouverte de gravier ou de goudron, combien de voies il a, s'il s'agit d'une rue à sens unique, et ainsi de suite. Le SIG peut utiliser ces attributs pour symboliser l'entité polyligne avec une couleur ou le style de ligne approprié."
 
 # 8bc301a841ea4382b2a6dff519b44d4a
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:185
@@ -209,7 +209,7 @@ msgid ""
 "Many GIS applications have the capability to ensure that the boundaries of "
 "neighbouring polygons exactly coincide. We will explore this in the "
 ":ref:`gentle_gis_topology` topic later in this tutorial."
-msgstr "Les entités polygones sont des **surfaces closes** comme les barrages, les îles, les frontières des pays et ainsi de suite. Comme les entités polylignes, les polygones sont créés à partir d'une série de sommets qui sont reliés par une ligne continue. Toutefois, parce qu'un polygone décrit toujours un espace clos, les premiers et derniers sommets doivent toujours être au même endroit! Les polygones ont souvent **géométrie partagée** --- des limites qui sont en commun avec un polygone voisin. De nombreuses applications SIG ont la capacité de faire en sorte que les limites de polygones voisins coïncident exactement. Nous allons explorer cela dans le sujet : ref: `gentle_gis_topology` plus loin dans ce tutoriel."
+msgstr "Les entités polygones sont des **surfaces closes** comme les barrages, les îles, les frontières des pays et ainsi de suite. Comme les entités polylignes, les polygones sont créés à partir d'une série de sommets qui sont reliés par une ligne continue. Toutefois, parce qu'un polygone décrit toujours un espace clos, les premiers et derniers sommets doivent toujours être au même endroit! Les polygones ont souvent une **géométrie partagée** --- des limites qui sont en commun avec un polygone voisin. De nombreuses applications SIG ont la capacité de faire en sorte que les limites de polygones voisins coïncident exactement. Nous allons explorer cela dans le sujet :ref:`gentle_gis_topology` plus loin dans ce tutoriel."
 
 # 449e579d6a16496d8aa5936aeb6c3c6b
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:196
@@ -237,7 +237,7 @@ msgid ""
 "disk and shown in the GIS as a single layer. This is convenient because it "
 "allows you to hide or show all of the features for that layer in your GIS "
 "application with a single mouse click."
-msgstr "Maintenant que nous avons décrit ce que sont les données vecteur, regardons comment les données de vecteur sont gérées et utilisées dans un environnement de SIG. La plupart des applications SIG groupe les entités vecteur dans des **couches**. Les entités d'une couche ont le même type de géométrie (par exemple, ils seront tous points) et les mêmes types d'attributs (par exemple, l'information sur les espèces un arbre est une couche arbres). Par exemple, si vous avez enregistré les positions de tous les sentiers dans votre école, ils seront généralement stockés ensemble sur le disque dur de l'ordinateur et affichés dans le SIG en une seule couche. C'est pratique car il vous permet de masquer ou d'afficher toutes les caractéristiques de cette couche dans votre application SIG avec un simple clic de souris."
+msgstr "Maintenant que nous avons décrit ce que sont les données vecteur, regardons comment les données de vecteur sont gérées et utilisées dans un environnement de SIG. La plupart des applications SIG regroupent les entités vecteur dans des **couches**. Les entités d'une couche ont le même type de géométrie (par exemple, ils seront tous points) et les mêmes types d'attributs (par exemple, l'information sur l'espèce d'un arbre au sein d'une couche arbres). Par exemple, si vous avez enregistré les positions de tous les sentiers dans votre école, ils seront généralement stockés ensemble sur le disque dur de l'ordinateur et affichés dans le SIG en une seule couche. C'est pratique car il vous permet de masquer ou d'afficher toutes les caractéristiques de cette couche dans votre application SIG avec un simple clic de souris."
 
 # 3a950e02957f493483b8e7e5f1798d0a
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:214
@@ -256,7 +256,7 @@ msgid ""
 "For example it won't allow you to edit a line in such a way that it has only"
 " one vertex –-- remember in our discussion of lines above that all lines "
 "must have at least two vertices."
-msgstr "L'application SIG vous permettra de créer et de modifier les données de géométrie dans une couche --- un processus appelé **numérisation** --- qui nous verrons de plus près dans un prochain tutoriel. Si une couche contient des polygones (par exemple les barrages agricoles), l'application SIG vous permettra de créer uniquement des nouveaux polygones dans cette couche. De même, si vous souhaitez modifier la forme d'une entité, l'application ne vous permet de le faire que si la forme modifiée est correcte. Par exemple, il ne vous permettra pas d'éditer une ligne de telle manière qu'il ne dispose que d'un sommet --- souvenir dans notre discussion sur les lignes ci-dessus que toutes les lignes doivent avoir au moins deux sommets."
+msgstr "L'application SIG vous permettra de créer et de modifier les données de géométrie dans une couche --- un processus appelé **numérisation** --- que nous verrons de plus près dans un prochain tutoriel. Si une couche contient des polygones (par exemple les barrages agricoles), l'application SIG vous permettra de créer uniquement des nouveaux polygones dans cette couche. De même, si vous souhaitez modifier la forme d'une entité, l'application ne vous permet de le faire que si la forme modifiée est correcte. Par exemple, il ne vous permettra pas d'éditer une ligne de telle manière qu'il ne dispose que d'un sommet --- souvenez-vous dans notre discussion sur les lignes ci-dessus que toutes les lignes doivent avoir au moins deux sommets."
 
 # e358a2672c2b405a98123bd87fec6088
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:225
@@ -269,7 +269,7 @@ msgid ""
 "feature). Finally you could take readings of pH levels along the course of "
 "the river and digitise the places where you made these readings (as a point "
 "layer)."
-msgstr "La création et édition de données de vecteur est une fonction importante d'un SIG, car il est l'un des principaux moyens par lesquels vous pouvez créer des données personnelles pour les choses qui vous intéressent. Par exemple, vous surveillez la pollution dans une rivière. Vous pouvez utiliser le SIG pour numériser tous les exutoires pour les drains d'eaux pluviales (comme des entités ponctuelles). Vous pouvez également numériser le fleuve lui-même (comme une entité polyligne). Enfin, vous pouvez prendre des mesures de niveaux de pH le long du cours de la rivière et de numériser les endroits où vous faites ces mesures (comme une couche de points)."
+msgstr "La création et l'édition de données vecteur est une fonction importante d'un SIG, car il est l'un des principaux moyens par lesquels vous pouvez créer des données personnelles pour les choses qui vous intéressent. Par exemple, vous surveillez la pollution dans une rivière. Vous pouvez utiliser le SIG pour numériser tous les exutoires pour les drains d'eaux pluviales (comme des entités ponctuelles). Vous pouvez également numériser le fleuve lui-même (comme une entité polyligne). Enfin, vous pouvez prendre des mesures de niveaux de pH le long du cours de la rivière et de numériser les endroits où vous faites ces mesures (comme une couche de points)."
 
 # 1ec0ae72457e46ac84c3599aed5fac25
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:233
@@ -289,14 +289,14 @@ msgstr "Echelle et données vecteur"
 msgid ""
 "Vector data (red lines) that was digitised from a small scale (1:1000 000) "
 "map."
-msgstr "Les données vecteures (lignes rouges) ont été numérisées à partir de cartes à petite échelle (1:1000 000)"
+msgstr "Les données vecteur (lignes rouges) ont été numérisées à partir de cartes à petite échelle (1:1000 000)."
 
 # 3eb91b0d45da45fc9d1555d90271ecf7
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:276
 msgid ""
 "Vector data (green lines) that was digitised from a large scale (1:50 000) "
 "map."
-msgstr "Les données vecteures (lignes vertes) ont été numérisées à partir de cartes à petite échelle (1:50 000)"
+msgstr "Les données vecteur (lignes vertes) ont été numérisées à partir de cartes à grande échelle (1:50 000)"
 
 # 0e505eb2e0c149b18807c6c506ddffd5
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:279
@@ -315,14 +315,14 @@ msgstr ""
 msgid ""
 "When a layer (for example the trees layer above) is first loaded, a GIS "
 "application will give it a generic symbol."
-msgstr ""
+msgstr "Lorsqu'une couche (par exemple la couche arbres ci-dessus) est chargée dans une application SIG pour la première fois, celle-ci lui attribuera un symbole par défaut."
 
 # 4bce3b3c112849618a6608263dc33657
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:327
 msgid ""
 "After making our adjustments it is much easier to see that our points "
 "represent trees."
-msgstr ""
+msgstr "Après nos réglages, il est plus facile de voir que nos points représentent des arbres."
 
 # 036ae53bbec44f548ac259941ccadd8f
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:330
@@ -331,12 +331,12 @@ msgid ""
 "your GIS easier to understand. In the topic that follows "
 "(:ref:`gentle_gis_attributes`) we will explore more deeply how symbology can"
 " help the user to understand vector data."
-msgstr ""
+msgstr "La symbologie est une puissante fonctionnalité, donnant vie aux cartes et permettant la compréhension de vos données dans un SIG. Dans le sujet suivant (:ref:`gentle_gis_attributes`) nous découvrirons plus en détail comment la symbologie peut aider l'utilisateur à comprendre la donnée vecteur."
 
 # 2b768c7033264aa39b78b26637ec220f
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:336
 msgid "What can we do with vector data in a GIS?"
-msgstr ""
+msgstr "Que faire avec une donnée vecteur dans un SIG?"
 
 # a84fd684126d4cac90ba2de330520768
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:338
@@ -416,7 +416,7 @@ msgstr ""
 # 5081f93a94d344c3b779624c70b2bc5e
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:403
 msgid "What have we learned?"
-msgstr ""
+msgstr "Qu'avons-nous appris?"
 
 # 11028c4f5663442dbe77653e2d6bc209
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:405
@@ -426,65 +426,65 @@ msgstr ""
 # 7007a8c0096f4775b670ac0cd56de860
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:407
 msgid "**Vector data** is used to represent real world **features** in a GIS."
-msgstr ""
+msgstr "La **donnée vecteur** est utilisée pour représenter les **entités** du monde réel dans un SIG."
 
 # a2944864565e488db9b73f08cf3e534b
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:408
 msgid ""
 "A vector feature can have a **geometry** type of **point**, **line** or a "
 "**polygon**."
-msgstr ""
+msgstr "Une entité vectorielle peut avoir une **géométrie** de type **point**, **polyligne** ou **polygone**."
 
 # cc83dae3830c43d3912b8085c003728d
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:410
 msgid "Each vector feature has **attribute data** that describes it."
-msgstr ""
+msgstr "Chaque entité vecteur a des **données attributaires** qui la décrivent."
 
 # 5c6ab7620c3040d9bae087dbc3bf0c6a
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:411
 msgid "Feature geometry is described in terms of **vertices.**"
-msgstr ""
+msgstr "La géométrie de l'entité est décrite en termes de **sommets**."
 
 # 213c6356a1ab44c7aec7adcaab13a2e8
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:412
 msgid ""
 "Point geometries are made up of a **single vertex** (X,Y and optionally Z)."
-msgstr ""
+msgstr "Les géométries de type Point sont composées de **sommet unique** (coordonnées X,Y et éventuellement Z)."
 
 # 91c39088b8db4c0d92838240724bf2db
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:413
 msgid ""
 "Polyline geometries are made up of **two or more** vertices forming a "
 "connected line."
-msgstr ""
+msgstr "Les géométries de type Polyligne sont composées de **deux ou plusieurs** sommets reliés en ligne."
 
 # f30d19d00a16450687bb9067a9151887
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:415
 msgid ""
 "Polygon geometries are made up of **at least four vertices** forming an "
 "enclosed area. The first and last vertices are always in the same place."
-msgstr ""
+msgstr "Les géométries de type Polygone sont construites avec **au moins quatre sommets** formant une surface close. Les premier et dernier sommets sont toujours au même endroit."
 
 # 187d1a2ef4dd4628a74ac275ae7aeb10
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:417
 msgid ""
 "Choosing which geometry type to use depends on scale, convenience and what "
 "you want to do with the data in the GIS."
-msgstr ""
+msgstr "Le choix du type de géométrie dépend de l'échelle, de sa commodité et de ce que vous voulez faire avec les données dans le SIG."
 
 # 3bf231ae3564486583b022f3671e8cca
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:419
 msgid ""
 "Most GIS applications do not allow you to mix more than one geometry type in"
 " a single layer."
-msgstr ""
+msgstr "La plupart des applications SIG ne vous permettent pas de mélanger plus d'un type de géométrie dans une même couche."
 
 # d3ab5491a9584ca4a108a7a3e5afa53c
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:421
 msgid ""
 "Digitising is the process of creating digital vector data by drawing it in a"
 " GIS application."
-msgstr ""
+msgstr "La numérisation est le processus de création de données vecteur, en les dessinant au sein d'une application SIG."
 
 # c16cc0af871744d9b26e16f095b3603e
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:423
@@ -498,29 +498,29 @@ msgstr ""
 msgid ""
 "Vector data can be used for **spatial analysis** in a GIS application, for "
 "example to find the nearest hospital to a school."
-msgstr ""
+msgstr "Les données vecteur peuvent être utilisées pour des **analyses spatiales dans une application SIG, par exemple pour trouver l'hôpital le plus proche d'une école."
 
 # 22a604694d77437ebf6aafa43d8e1113
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:428
 msgid ""
 "We have summarised the GIS Vector Data concept in Figure "
 "figure_vector_summary_."
-msgstr ""
+msgstr "Nous avons résumé le concept de données vecteur en SIG dans la figure figure_vector_summary_."
 
 # 5838676daa8e4932821d1cdaa01f05eb
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:440
 msgid "This diagram shows how GIS applications deal with vector data."
-msgstr ""
+msgstr "Ce diagramme montre comment les applications SIG gèrent les données vecteur."
 
 # ba8979dae74e454895b7c0cadc8a3c40
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:443
 msgid "Now you try!"
-msgstr ""
+msgstr "Maintenant, essayez !"
 
 # 127f7e6a8adc47d4af5614dc9eecaf01
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:445
 msgid "Here are some ideas for you to try with your learners:"
-msgstr ""
+msgstr "Voici quelques pistes d'actions à essayer avec vos élèves:"
 
 # b723c6caf55646ca800d20f471f78b61
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:447
@@ -528,7 +528,7 @@ msgid ""
 "Using a copy of a toposheet map for your local area (like the one shown in "
 "figure_sample_map_), see if your learners can identify examples of the "
 "different types of vector data by highlighting them on the map."
-msgstr ""
+msgstr "Sur une copie de carte topographique d'un lieu près de chez vous (comme celui sur la figure_sample_map_), demandez à vos élèves de retrouver et surligner des exemples de différents types de données vecteur."
 
 # 1b561d54f7504c1284fb1a3a9215709d
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:450
@@ -538,48 +538,48 @@ msgid ""
 "in and around your school and then task your learners to decide whether they"
 " would be best represented in the GIS as a point, line or polygon. See "
 "table_vector_1_ for an example."
-msgstr ""
+msgstr "Réfléchissez à comment vous créeriez des entités vecteurs dans un SIG pour représenter les objets du monde réel que constitue votre cour d'école. Créez une table des différentes entités dans et autour de l'école et demandez ensuite aux élèves de décider si ces entités seraient mieux représentées dans un SIG par un point, une ligne ou un polygone. La table_vector_1_ constitue un exemple."
 
 # 9dc92982c5a44d0fa0bfa42a0a1a4d50
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:466
 msgid ""
 "Can you identify two point features and one polygon feature on this map?"
-msgstr ""
+msgstr "Pouvez-vous identifier deux entités Point et une entité Polygone sur cette carte?"
 
 # 9d214a02badb4a50b98346e70bee8c5e
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:472
 msgid "Real world feature"
-msgstr ""
+msgstr "Objet du monde réel"
 
 # 6a5dd9a49da14e1b9f9c7445caaff3aa
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:472
 msgid "Suitable Geometry Type"
-msgstr ""
+msgstr "Type de géométrie approprié"
 
 # 90d8937cff334ca688b9b20e23c5138c
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:474
 msgid "The school flagpole"
-msgstr ""
+msgstr "Le mât de drapeau de l'école"
 
 # 78c3e911436f425ebb1f50117bab4a07
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:476
 msgid "The soccer field"
-msgstr ""
+msgstr "Le terrain de foot"
 
 # b840cb2d3f444129aaa66f2d4109cced
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:478
 msgid "The footpaths in and around the school"
-msgstr ""
+msgstr "Les chemins de randonnée dans et autour de l'école"
 
 # 4771b2a0e7b74dc29f39b0314475002b
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:480
 msgid "Places where taps are located"
-msgstr ""
+msgstr "Endroits où se trouvent les robinets"
 
 # fc31bd98664d4aedb2450d73ec723c4a
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:482
 msgid "Etc."
-msgstr ""
+msgstr "Etc."
 
 # ad96731d42134fc6bed3019dad20c4d0
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:485
@@ -603,19 +603,19 @@ msgstr ""
 # 34c0e7a2531e433bb7ea5de13c879c21
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:495
 msgid "Further reading"
-msgstr ""
+msgstr "Pour aller plus loin"
 
 # 17a9551fa82b459cb24e40143fabe54d
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:497
 msgid ""
 "The QGIS User Guide also has more detailed information on working with "
 "vector data in QGIS."
-msgstr ""
+msgstr "Le Guide de l'Utilisateur de QGIS fournit aussi des informations plus détaillées sur l'utilisation de données vecteur dans QGIS."
 
 # c90464f48aec4b83b75e084551506da1
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:501
 msgid "What's next?"
-msgstr ""
+msgstr "La suite ?"
 
 # 1bfe1e63149640f78bc0e3beb511434a
 #: ../../source/docs/gentle_gis_introduction/vector_data.rst:503

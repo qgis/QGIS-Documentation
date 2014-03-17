@@ -5,14 +5,15 @@
 # Translators:
 # choro <u.ko.kubot@gmail.com>, 2013
 # HiroM <mukuo@mri.co.jp>, 2013
+# yoichi <yoichi.kayama@gmail.com>, 2014
 # yoichi <yoichi.kayama@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: QGIS Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-08-26 14:10\n"
-"PO-Revision-Date: 2013-11-04 09:49+0000\n"
-"Last-Translator: rduivenvoorde <richard@duif.net>\n"
+"PO-Revision-Date: 2014-03-17 10:43+0000\n"
+"Last-Translator: yoichi <yoichi.kayama@gmail.com>\n"
 "Language-Team: Japanese (http://www.transifex.com/projects/p/qgis-documentation/language/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,29 +44,29 @@ msgid ""
 ":menuselection:`Plugin Manager...` opens the Plugin Manager Dialog. Activate"
 " the |checkbox| :guilabel:`GPS Tools` checkbox. When this plugin is loaded "
 "two buttons with a small handheld GPS device will show up in the toolbar:"
-msgstr ""
+msgstr "GPXファイルをロードするために最初に必要なことはプラグインのロードです. :menuselection:`Plugins -->` |mActionShowPluginManager| :menuselection:`Plugin Manager...`  でプラグインマネージャダイアログを開けます. |checkbox| :guilabel:`GPS Tools`　チェックボックスを有効にして下さい.このプラグインがロードされると toolbar: に小さなハンドヘルドGPSデバイスが表示されたボタンが表示されます.　"
 
 # 9aa40b0a9832427c8149a2c8fd597fbf
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:43
 msgid "|gps_importer| :sup:`Create new GPX Layer`"
-msgstr ""
+msgstr "|gps_importer| :sup:`新規GPXレイヤの作成`"
 
 # b667814b06dd4fedbbc104c9d891fbcf
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:44
 msgid "|gps_importer| :sup:`GPS Tools`"
-msgstr ""
+msgstr "|gps_importer| :sup:`GPS ツール`"
 
 # 0a69ca6969a74434a6019221ac30c412
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:53
 msgid ""
 "Browse to the folder :file:`qgis_sample_data/gps/`, select the GPX file "
 ":file:`national_monuments.gpx` and click **[Open]**."
-msgstr ""
+msgstr "フォルダ :file:`qgis_sample_data/gps/` を開いてください,  GPX ファイル :file:`national_monuments.gpx` を選択して **[開く]** をクリックして下さい."
 
 # b2c76ad6cc6e48cdb6a257c2eda4d065
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:66
 msgid "The *GPS Tools* dialog window |nix|"
-msgstr ""
+msgstr " *GPS ツール* ダイアログウィンドウ |nix|"
 
 # db82e21916be4f308f0a9d0a3c956610
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:68
@@ -74,7 +75,7 @@ msgid ""
 "checkboxes to select the feature types you want to load from that GPX file. "
 "Each feature type will be loaded in a separate layer when you click "
 "**[OK]**. The file :file:`national_monuments.gpx` only includes waypoints."
-msgstr ""
+msgstr "GPXファイルを選択するために **[Browse...]** ボタンを使って下さい, それからGPXファイルからロードしたい地物タイプをチェックボックスで選択して下さい.  **[OK]** をクリックするとそれぞれの地物タイプは別々のレイヤにロードされます. ファイル :file:`national_monuments.gpx` はウェイポイントのみを含んでいます."
 
 # 9c46c9f7deb541c8af035e4d44b91fc0
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:81
@@ -96,7 +97,7 @@ msgid ""
 "what the name of the new layer should be. Note that not all GPS data formats"
 " will support all three feature types, so for many formats you will only be "
 "able to choose between one or two types."
-msgstr ""
+msgstr "GPXファイルではないファイルからGPSデータをインポートする場合 GPSツールダイアログの  :guilabel:`Import other file`  ツールを使ってください.ここでインポートしたいファイル(とファイルタイプ)を選択できます.ここではインポートしたい地物タイプと変換して格納するGPXファイルと新しいレイヤの名前を指定できます.すべてびGPSデータが3種類すべての型をサポートしているわけではありません,多くの場合1種類か二種類の形式を選択することになるでしょう."
 
 # 04164db26b704982b8d83b3c0a4c6b0f
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:104
@@ -106,7 +107,7 @@ msgstr "GPS装置からGPSデータのダウンロード"
 # 5bc6f9f0ffd244f7b87a7aab2d3bbf28
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:123
 msgid "The download tool"
-msgstr ""
+msgstr "ダウンロードツール"
 
 # 01ff1f4c16874b65acecdd9f042f7d4f
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:125
@@ -129,12 +130,12 @@ msgstr "ポートはファイル名、もしくはオペレーティングシス
 # 0434ba92342f48a2b66e27e27d1d1f92
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:133
 msgid "|nix| On Linux this is something like ``/dev/ttyS0`` or ``/dev/ttyS1``"
-msgstr ""
+msgstr "|nix| Linuxでは ``/dev/ttyS0`` または ``/dev/ttyS1``　のようなものになります"
 
 # 54c6c87c058a4c719ea5b67cc08b2b7e
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:134
 msgid "|win| On Windows it is ``COM1`` or ``COM2``"
-msgstr ""
+msgstr "|win| Windows では ``COM1`` または ``COM2``　となります"
 
 # 7ca86f9b2eb8411e9d5a9f155129accc
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:140
@@ -153,7 +154,7 @@ msgid ""
 "``-r`` if you are downloading routes and ``-t`` if you are downloading "
 "tracks. These are command line options that tell GPSBabel which feature type"
 " to download."
-msgstr "``％typeは、ウェイポイントをダウンロードする場合``-w``で、トラックをダウンロードする場合``-r``で、トラックをダウンロードする場合``-t``に置き換わります。これらはどの地物タイプをダウンロードするかをGPSBabelに伝えるためのコマンドラインオプションです。"
+msgstr "``%type``  は ウェイポイントをダウンロードする場合``-w`` ルートをダウンロードする場合``-r``　、トラックをダウンロードする場合 ``-t`` で置き換えられます.GPSBabelにどのような地物タイプをダウンロードするか指定するためのコマンドラインオプションがあります."
 
 # ccb9b1a8775c40ce8c017a3cd32c74d5
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:187
@@ -183,7 +184,7 @@ msgid ""
 "Select :menuselection:`Vector --> GPS --> GPS Tools` or click the "
 "|gps_importer| :sup:`GPS Tools` icon in the toolbar and open the "
 ":guilabel:`Load GPX file` tab (see figure_GPS_1_)."
-msgstr ""
+msgstr "|gps_importer| :sup:`GPSツール` をクリックし、 :guilabel:`GPX ファイルをロード` タブを開いて下さい (figure_GPS_1_参照)"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:16
 msgid ""
@@ -198,7 +199,7 @@ msgid ""
 "routes and tracks are the three basic feature types in GPS data. |qg| "
 "displays waypoints in point layers while routes and tracks are displayed in "
 "linestring layers."
-msgstr ""
+msgstr "GPS, グローバルポジショニングシステムとは人工衛星を利用して世界中のどこにいてもGPSレシーバを持つ人が正確な位置を調べることができるようにしているシステムです.たとえば飛行機,船舶,ハイカーのナビゲーションの補助に利用されています. GPSレシーバは人工衛星からの信号を緯度,経度(しばしば)高度の計算に利用します. ほとんどのレシーバは位置 ( **waypoints** という名前で), 連続した位置によってつくられた **route** とトラッキングまたは時間とともにレシーバの動きを **track** する機能があります。 Waypoints, routes と tracks はGPSデータの3種類の基本タイプです. |qg| はwaypoints をポイントレイヤとして表示し、一方 routes とtracks はラインストリングレイヤとして表示します."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:31
 msgid ""
@@ -206,7 +207,7 @@ msgid ""
 "that |qg| uses is called GPX (GPS eXchange format), which is a standard "
 "interchange format that can contain any number of waypoints, routes and "
 "tracks in the same file."
-msgstr ""
+msgstr "GPSデータの記録フォーマットには,様々なフォーマットが存在します. |qg| では,GPX(GPS eXchange format)と呼ばれる,ウェイポイントの記録およびデータ交換フォーマットとして一般的なフォーマットに対応しています.GPXフォーマットは,同一ファイルで,複数のウェイポイント,経路,軌跡を扱うことが可能です"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:46
 msgid ""
@@ -214,7 +215,7 @@ msgid ""
 "|qg| sample dataset: :file:`qgis_sample_data/gps/national_monuments.gpx`. "
 "See Section :ref:`label_sampledata` for more information about the sample "
 "data."
-msgstr ""
+msgstr "GPS データで作業をするためにサンプルの GPX ファイルを |qg| サンプルデータセットに用意しました: :file:`qgis_sample_data/gps/national_monuments.gpx`. サンプルデータについての詳しい情報は :ref:`label_sampledata` を参照して下さい."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:74
 msgid ""
@@ -223,7 +224,7 @@ msgid ""
 "it in |qg|, be sure that the data stored in the GPX file uses WGS84 "
 "(latitude/longitude). |qg| expects this and it is the official GPX "
 "specification. See http://www.topografix.com/GPX/1/1/"
-msgstr ""
+msgstr "GPSユニットは異なる座標系でデータを保存することが可能です.GPXファイルを(あなたのGPSユニットかWEBサイトから) ダウンロードして |qg| にロードする時にGPXファイルがWGS84(緯度/経度)で格納されているかどうか注意して下さい. |qg| はこの座標系でデータを取得することを前提としています,これはGPXの公式仕様でもあります. 　http://www.topografix.com/GPX/1/1/　参照"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:83
 msgid ""
@@ -235,7 +236,7 @@ msgid ""
 "you just want to load GPS data from GPX files you will not need it. Version "
 "1.2.3 of GPSBabel is known to work with |qg|, but you should be able to use "
 "later versions without any problems."
-msgstr ""
+msgstr "|qg| が GPXファイルを利用しているので他のGPSファイル形式をGPXに変換する手段が必要になります. http://www.gpsbabel.org　で入手できるフリープログラムGPSBabelを利用すると多くの形式の変換ができます.  このプラグラムはあなたのコンピュータとGPSデバイスの間のデータ転送にも利用できます. |qg| はそれらの作業のために GPSBabelを利用しています, ですからこのプログラムをインストールすることを推奨します. GPXファイルからGPSデータをロードする場合はそれが必要なわけではありません バージョン1.2.3 の GPSBabel は |qg| で動作することが知られています,しかしそれより新しいバージョンでも問題なく利用できます."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:106
 msgid ""
@@ -245,13 +246,13 @@ msgid ""
 "device, the port that it is connected to (or usb if your GPS supports this),"
 " the feature type that you want to download, the GPX file where the data "
 "should be stored, and the name of the new layer."
-msgstr ""
+msgstr "|qg| はGPSデバイスから新しいベクタレイヤとして直接データをダウンロードするために GPSBabelを使用します。これを使用するため、GPSツールダイアログ(Figure_GPS_2_ を参照)の guilabel:`GPSからダウンロード` タブを使用します。ここでは、GPSデバイスの種類、接続ポート(またはGPSをサポートしているUSB)、ダウンロードしたい地物のタイプ、保存されたGPSファイルの場所、そして新しいレイヤの名称を選択します。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:136
 msgid ""
 "When you click **[OK]** the data will be downloaded from the device and "
 "appear as a layer in |qg|."
-msgstr ""
+msgstr "**[OK]** をクリックすると、デバイスからデータがダウンロードされ |qg| レイヤとして現れます。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:142
 msgid ""
@@ -261,14 +262,14 @@ msgid ""
 " GPX layer), your GPS device type, and the port (or usb) that it is "
 "connected to. Just as with the download tool you can specify new device "
 "types if your device isn't in the list."
-msgstr ""
+msgstr "GPSツールダイアログの :guilabel:`GPSにアップロード` タブを使って |qg| のベクタレイヤから直接GPSデバイスにデータをアップロードできます。これを行うには、単にアップロードしたいレイヤ(GPXレイヤでなければ行けません)、GPSデバイスの種類、それが接続されているポート(またはUSB)を選択します。お使いのデバイスがリストにない場合、ダウンロードツールと同じように、新しいデバイスタイプを指定することができます。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:149
 msgid ""
 "This tool is very useful in combination with the vector editing capabilities"
 " of |qg|. It allows you to load a map, create waypoints and routes, and then"
 " upload them and use them on your GPS device."
-msgstr ""
+msgstr "このツールは |qg| の編集機能と組み合わせるのに非常に便利です.それでマップをロードし,ウェイポイントとルートを作成してからそれらをアップロードし,GPSデバイスで使用することを可能とします."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:158
 msgid ""
@@ -278,7 +279,7 @@ msgid ""
 ":guilabel:`Upload to GPS` tools you can define your own device type for it. "
 "You do this by using the GPS device editor, which you start by clicking the "
 "**[Edit devices]** button in the download or the upload tabs."
-msgstr ""
+msgstr "GPSデバイスには多くの異なるタイプがある. |qg| 開発者はすべてのものをテストできないため、もし :guilabel:`GPSからダウンロード`  と  :guilabel:`GPSにアップロード` ツールにリストアップされたデバイスタイプではあなたのものが動作しない場合は、あなた自身のデバイスタイプを定義できます。あなたはGPSデバイスエディタを使用することがそれができ、 ダウンロードまたはアップロードタブの **[デバイスを編集]** ボタンをクリックすることで編集を開始出来ます。"
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:165
 msgid ""
@@ -290,7 +291,7 @@ msgid ""
 "GPX file. This will probably be a GPSBabel command, but you can use any "
 "other command line program that can create a GPX file. |qg| will replace the"
 " keywords ``%type``, ``%in``, and ``%out`` when it runs the command."
-msgstr ""
+msgstr "新しいデバイスを定義したい場合は単純に **[New device]** ボタンをクリックして下さい, 名前と あなたのデバイスのダウンロードコマンドとアップロードコマンドを入力して **[Update device]** ボタンをクリックして下さい. アップロードとダウンロードウィンドウのデバイスメニューに名前が表示され、その名前は任意の文字にすることができます. ダウンロードコマンドはデバイスからGPXファイルにデータをダウンロードする場合利用されます これは通常GPSBabel のコマンドですがGPXファイルを作成できる任意のコマンドラインプログラムを利用できます. |qg| はコマンド実行時に ``%type``, ``%in``, and ``%out`` のキーワードを置き換えます."
 
 #: ../../source/docs/user_manual/working_with_gps/plugins_gps.rst:178
 msgid ""
@@ -302,7 +303,7 @@ msgid ""
 "'Garmin serial') and then use it to download waypoints from port "
 "``/dev/ttyS0`` to the file ``output.gpx``, |qg| will replace the keywords "
 "and run the command ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
-msgstr ""
+msgstr "``%in`` はダウンロードウィンドウで選択したポート名に置き換えられます,そして ``%out`` はあなたが選択したダウンロードデータが格納されるGPXファイル名に置き換えられます.ですからダウンロードコマンドを含んだデバイスタイプを作成する場合コマンドは ``gpsbabel %type -i garmin -o gpx %in %out``  (これは定義済みのデバイスタイプ 'Garmin serial' を利用するダウンロードコマンドです) 　となりポート``/dev/ttyS0`` からファイル ``output.gpx`` にwaypointをダウンロードするために使います, |qg| はキーワード置き換えを行い次のようにコマンドを実行します ``gpsbabel -w -i garmin -o gpx /dev/ttyS0 output.gpx``."
 
 #~ msgid ""
 #~ "There are dozens of different file formats for storing GPS data. The format "
