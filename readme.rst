@@ -59,8 +59,6 @@ Alternatively do it one by one:
 
     pip install sphinx==1.2b3
     
-    pip install sphinx_bootstrap_theme==0.3.2
-    
     pip install sphinx-intl
 
 Then build:
