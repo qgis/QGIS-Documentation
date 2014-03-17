@@ -330,15 +330,15 @@ symbol levels or use only first matched rule.
 The example in figure_symbology_5_ shows the rule-based rendering dialog
 for the rivers layer of the |qg| sample dataset.
 
-To create a rule, activate an existing row by clicking on it or click on '+' and
-click on the new rule. Then press the **[Edit rule]** button. In the :guilabel:`Rule
-properties` dialog you can define a label for the rule. Press the |browsebutton|
-button to open the Expression string builder. In the **Function List**, click on
-:guilabel:`Fields and Values` to view all attributes of the attribute table to
-be searched. To add an attribute to the Field calculator **Expression** field,
+To create a rule, activate an existing row by double-clicking on it or click on '+' and
+click on the new rule. In the :guilabel:`Rule properties` dialog you can define a label
+for the rule. Press the |browsebutton| button to open the Expression string builder. In
+the **Function List**, click on :guilabel:`Fields and Values` to view all attributes of
+the attribute table to be searched. To add an attribute to the Field calculator **Expression** field,
 double click its name in the :guilabel:`Fields and Values` list. Generally you
 can use the various fields, values and functions to construct the calculation
 expression or you can just type it into the box (see :ref:`vector_field_calculator`).
+Since QGIS 2.2. you can create a new rule by copying and pasting an existing rule with the right mouse button. 
 
 
 .. _figure_symbology_5:
@@ -379,7 +379,7 @@ placed on a displacement circle around a center symbol.
    You have the possibility to export vector symbology from |qg| into the Google *.kml, *.dxf
    and MapInfo*.tab files. Just open the right mouse menu of the layer and click on :menuselection:`Save selection
    as -->` to define the name of the output file and its format.
-   Use the :guilabel:`Symbology export` menu to save the symbology either as
+   In the dialog use the :guilabel:`Symbology export` menu to save the symbology either as
    :menuselection:`Feature symbology -->` or as :menuselection:`Symbol layer symbology -->`.
    If you have used symbol layers it is recommended to use the second setting.
 
@@ -418,17 +418,17 @@ want to define labels based on expressions.
 The following steps describe a simple labeling without using the :guilabel:`Data defined override` functions
 that are situated next to the drop-down menus.
 
-You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). A new function is the
+You can define the text style in the :guilabel:`Text` menu (see Figure_labels_1_ ). Use the
 :guilabel:`Type case` option where you can influence the text rendering. You have the possibility to render
-the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Also, a new function in |qg| 2.0
-is the use of blend modes (see blend_modes_).
+the text 'All uppercase', 'All lowercase' or 'Capitalize first letter'. Use the blend modes to create effects
+known from graphics programs (see blend_modes_).
 
 In the :guilabel:`Formatting` menu you can define a character for a line break in the labels with the wrap label on character function.
 Use the |checkbox| :guilabel:`Formatted numbers` option to format the numbers in an attribute table. Here
 decimal places are inserted. If you enable this option three decimal places ist set by default.
 
 To create a buffer just activate |checkbox| :guilabel:`Draw text buffer` checkbox in the :guilabel:`Buffer` menu.
-The buffer color is variable. Also, a new function in |qg| 2.0 is the use of blend modes (see blend_modes_).
+The buffer color is variable. Also, here you can use blend modes (see blend_modes_).
 
 If the |checkbox| :guilabel:`Color buffer's fill` checkbox is activated, it will interact with partially transparent
 text and give mixed color transparency results. Turning off the buffer fill fixes that issue (except where the interior
@@ -478,7 +478,7 @@ Thus, a placement in a certain quadrant with a certain rotation is possible.
 In the :guilabel:`Rendering` menu you can define label and feature options. In the :guilabel:`Label options`
 you find the scale-based visibility setting now. You can prevent |qg| from rendering only selected labels with
 the |checkbox| :guilabel:`Show all labels for this layer (including colliding labels)` checkbox.
-In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. In |qg| 2.0 now it's possible to define
+In the :guilabel:`Feature options` you can define if every part of a multipart feature is to be labeled. It's possible to define
 if the number of features to be labeled is limited and to |checkbox| :guilabel:`Discourage labels from covering features`.
 
 

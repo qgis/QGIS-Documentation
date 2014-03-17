@@ -424,9 +424,9 @@ a layer without CRS is loaded.
 **Default datum transformations**
 
 * |checkbox| :guilabel:`Ask for datum transformation when no default is defined`
-* You can use the |mActionSignPlus| and |mActionSignMinus| Icons to add and remove 
-  'Source CRS' and 'Destination CRS' as well as 'Source datum transform' and 'Destination
-  datum transform'. To make a datum transform you have to ...
+* If you have worked with the 'on-the-fly' CRS transformation you can see the result
+  of the transformation in the window below. You can find information about 'Source CRS'
+  and 'Destination CRS' as well as 'Source datum transform' and 'Destination datum transform'.
 
 Locale Menu
 -----------
