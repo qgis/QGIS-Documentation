@@ -35,8 +35,8 @@ Managing Plugins
 ================
 
 Managing plugins in general means loading or unloading them using the
-:guilabel:`Plugin Manager`. To deactivate and reactivate external plugins,
-the :guilabel:`Plugin Manager` is used again.
+:guilabel:`Plugins` dialog. To deactivate and reactivate external plugins,
+the :guilabel:`Plugins` dialog is used again.
 
 .. _load_core_plugin:
 
@@ -44,7 +44,7 @@ Loading a |qg| Core Plugin
 --------------------------
 
 Loading a |qg| Core Plugin is done from the main menu :menuselection:`Plugins -->`
-|mActionShowPluginManager| :menuselection:`Manage and Install Plugins`.
+|mActionShowPluginManager| :menuselection:`Manage and Install Plugins ...`.
 
 .. index::
    single: plugins; manager
@@ -61,12 +61,12 @@ Loading a |qg| Core Plugin is done from the main menu :menuselection:`Plugins --
 
    Plugin Manager |nix|
 
-The |plugin| :guilabel:`Installed` menu of the :guilabel:`Plugin Manager` lists all the
-available plugins and their status (loaded or unloaded), including all core plugins
+The |plugin_installed| :guilabel:`Installed` menu of the :guilabel:`Plugins` dialog lists all the
+loaded plugins and their status, including all core plugins
 and all external plugins that have been installed and automatically activated using
-the |mActionShowPluginManager| :guilabel:`Get more` menu (see Section :ref:`load_external_plugin`).
+the |mActionShowPluginManager| :guilabel:`All` menu (see Section :ref:`load_external_plugin`).
 Those plugins that are already loaded have a check mark to the left of their name.
-Figure_plugins_1_ shows the |plugin| :guilabel:`Installed` dialog.
+Figure_plugins_1_ shows the |plugin_installed| :guilabel:`Installed` dialog.
 
 To enable a particular core plugin, click on the checkbox to the left of the plugin
 name, and click **[OK]**. When you exit the application, a list of loaded plugins

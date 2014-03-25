@@ -1018,6 +1018,8 @@ rst_epilog = """
    :width: 1.5em
 .. |proc_commander| image:: /static/common/commander.png
    :width: 1.5em
+.. |plugin_installed| image:: /static/common/plugin-installed.png
+   :width: 1.5em
 
 .. |basic| image:: /static/training_manual/global/basic.png
 .. |moderate| image:: /static/training_manual/global/moderate.png
