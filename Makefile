@@ -3,7 +3,7 @@
 
 # You can set these variables from the command line
 #LANGUAGES     = en `ls i18n`
-LANGUAGES     = en ca_ES  da_DK  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
+LANGUAGES     = en ca  da  de  es  fa fi  fr id  it  ja  ko_KR  nl  pt_PT  ro  ru  zh_CN  zh_TW
 # as long as this branch is testing, we only build for english:
 # LANGUAGES     = en
 LANG          = en
