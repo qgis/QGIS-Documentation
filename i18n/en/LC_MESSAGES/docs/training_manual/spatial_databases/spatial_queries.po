@@ -1,0 +1,257 @@
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: QGIS Documentation Project 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-25 16:51+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:6
+msgid "|LS| Spatial Queries"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:8
+msgid ""
+"Spatial queries are no different from other database queries. You can use "
+"the geometry column like any other database column. With the installation of"
+" PostGIS in our database, we have additional functions to query our "
+"database."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:12
+msgid ""
+"**The goal for this lesson:** To see how spatial functions are implemented "
+"similarly to \"normal\" non-spatial functions."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:18
+msgid "Spatial Operators"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:20
+msgid ""
+"When you want to know which points are within a distance of 2 degrees to a "
+"point(X,Y) you can do this with:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:29
+msgid "Result:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:38
+msgid ""
+"the_geom value above was truncated for space on this page. If you want to "
+"see the point in human-readable coordinates, try something similar to what "
+"you did in the section \"View a point as WKT\", above."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:42
+msgid ""
+"How do we know that the query above returns all the points within 2 "
+"*degrees*? Why not 2 *meters*? Or any other unit, for that matter?"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:45
+msgid ":ref:`Check your results <spatial-queries-1>`"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:50
+msgid "Spatial Indexes"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:52
+msgid ""
+"We also can define spatial indexes. A spatial index makes your spatial "
+"queries much faster. To create a spatial index on the geometry column use::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:62
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:139
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:173
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:262
+msgid "Result::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:86
+msgid "|TY| |moderate|"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:87
+msgid "Modify the cities table so its geometry column is spatially indexed."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:89
+msgid ":ref:`Check your results <spatial-queries-2>`"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:93
+msgid "PostGIS Spatial Functions Demo"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:95
+msgid ""
+"In order to demo PostGIS spatial functions, we'll create a new database "
+"containing some (fictional) data."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:98
+msgid "To start, create a new database (exit the psql shell first)::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:102
+msgid "Remember to install the postgis extensions::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:106
+msgid ""
+"Next, import the data provided in the :kbd:`exercise_data/postgis/` "
+"directory. Refer back to the previous lesson for instructions, but remember "
+"that you'll need to create a new PostGIS connection to the new database. You"
+" can import \\ from the terminal or via SPIT. Import the files into the "
+"following database tables:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:112
+msgid ":kbd:`points.shp` into :kbd:`building`"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:113
+msgid ":kbd:`lines.shp` into :kbd:`road`"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:114
+msgid ":kbd:`polygons.shp` into :kbd:`region`"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:116
+msgid ""
+"Load these three database layers into QGIS via the :guilabel:`Add PostGIS "
+"Layers` dialog, as usual. When you open their attribute tables, you'll note "
+"that they have both an :kbd:`id` field and a :kbd:`gid` field created by the"
+" PostGIS import."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:121
+msgid ""
+"Now that the tables are imported, we can use PostGIS to query the data. Go "
+"back to your terminal (command line) and enter the psql prompt by running::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:126
+msgid ""
+"We'll demo some of these select statements by creating views from them, so "
+"that you can open them in QGIS and see the results."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:130
+msgid "Select by location"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:132
+msgid "Get all the buildings in the KwaZulu region::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:150
+msgid "Or, if we create a view from it::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:158
+msgid "Add the view as a layer and view it in QGIS:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:164
+msgid "Select neighbors"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:166
+msgid ""
+"Show a list of all the names of regions adjoining the Hokkaido region::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:182
+msgid "As a view::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:190
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:231
+msgid "In QGIS:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:195
+msgid ""
+"Note the missing region (Queensland). This may be due to a topology error. "
+"Artifacts such as this can alert us to potential problems in the data. To "
+"solve this enigma without getting caught up in the anomalies the data may "
+"have, we could use a buffer intersect instead::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:205
+msgid "This creates a buffer of 100 meters around the region Hokkaido."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:207
+msgid "The darker area is the buffer:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:212
+msgid "Select using the buffer::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:225
+msgid ""
+"In this query, the original buffer view is used as any other table would be."
+" It is given the alias :kbd:`a`, and its geometry field, :kbd:`a.the_geom`, "
+"is used to select any polygon in the :kbd:`region` table (alias :kbd:`b`) "
+"that intersects it. However, Hokkaido itself is excluded from this select "
+"statement, because we don't want it; we only want the regions adjoining it."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:236
+msgid ""
+"It is also possible to select all objects within a given distance, without "
+"the extra step of creating a buffer::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:246
+msgid ""
+"This achieves the same result, without need for the interim buffer step:"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:253
+msgid "Select unique values"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:255
+msgid ""
+"Show a list of unique town names for all buildings in the Queensland "
+"region::"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:273
+msgid "Further examples ..."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:332
+msgid "|IC|"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:334
+msgid ""
+"You have seen how to query spatial objects using the new database functions "
+"from PostGIS."
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:338
+msgid "|WN|"
+msgstr ""
+
+#: ../../source/docs/training_manual/spatial_databases/spatial_queries.rst:340
+msgid ""
+"Next we're going to investigate the structures of more complex geometries "
+"and how to create them using PostGIS."
+msgstr ""
