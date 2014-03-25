@@ -1,0 +1,681 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="2.0.1-Dufour">
+    <title></title>
+    <mapcanvas>
+        <units>meters</units>
+        <extent>
+            <xmin>528287.10252299881540239</xmin>
+            <ymin>180277.6193622785503976</ymin>
+            <xmax>530161.27145506301894784</xmax>
+            <ymax>181823.96336563187651336</ymax>
+        </extent>
+        <projections>1</projections>
+        <destinationsrs>
+            <spatialrefsys>
+                <proj4>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs</proj4>
+                <srsid>100000</srsid>
+                <srid>0</srid>
+                <authid>USER:100000</authid>
+                <description> * Generated CRS (+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs)</description>
+                <projectionacronym>tmerc</projectionacronym>
+                <ellipsoidacronym>airy</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+            </spatialrefsys>
+        </destinationsrs>
+    </mapcanvas>
+    <legend updateDrawingOrder="true" activeLayer="osmgrey20130804123500101">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Pumps" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="Pumps20130804123454093" visible="1"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="Cholera_Deaths" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="Cholera_Deaths20130804123454077" visible="1"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="osmgrey" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="osmgrey20130804123500101" visible="1"/>
+            </filegroup>
+        </legendlayer>
+    </legend>
+    <projectlayers layercount="3">
+        <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>Cholera_Deaths20130804123454077</id>
+            <datasource>./Cholera_Deaths.shp</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>Cholera_Deaths</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs</proj4>
+                    <srsid>100000</srsid>
+                    <srid>0</srid>
+                    <authid>USER:100000</authid>
+                    <description> * Generated CRS (+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs)</description>
+                    <projectionacronym>tmerc</projectionacronym>
+                    <ellipsoidacronym>airy</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="System">ogr</provider>
+            <previewExpression></previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="255,0,0,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                            <prop k="size_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation field=""/>
+                <sizescale field="" scalemethod="area"/>
+            </renderer-v2>
+            <customproperties>
+                <property key="labeling" value="pal"/>
+                <property key="labeling/addDirectionSymbol" value="false"/>
+                <property key="labeling/angleOffset" value="0"/>
+                <property key="labeling/blendMode" value="0"/>
+                <property key="labeling/bufferBlendMode" value="0"/>
+                <property key="labeling/bufferColorA" value="255"/>
+                <property key="labeling/bufferColorB" value="255"/>
+                <property key="labeling/bufferColorG" value="255"/>
+                <property key="labeling/bufferColorR" value="255"/>
+                <property key="labeling/bufferDraw" value="false"/>
+                <property key="labeling/bufferJoinStyle" value="64"/>
+                <property key="labeling/bufferNoFill" value="false"/>
+                <property key="labeling/bufferSize" value="1"/>
+                <property key="labeling/bufferSizeInMapUnits" value="false"/>
+                <property key="labeling/bufferTransp" value="0"/>
+                <property key="labeling/centroidWhole" value="false"/>
+                <property key="labeling/decimals" value="3"/>
+                <property key="labeling/displayAll" value="false"/>
+                <property key="labeling/dist" value="0"/>
+                <property key="labeling/distInMapUnits" value="false"/>
+                <property key="labeling/enabled" value="false"/>
+                <property key="labeling/fieldName" value=""/>
+                <property key="labeling/fontBold" value="false"/>
+                <property key="labeling/fontCapitals" value="0"/>
+                <property key="labeling/fontFamily" value="MS Shell Dlg 2"/>
+                <property key="labeling/fontItalic" value="false"/>
+                <property key="labeling/fontLetterSpacing" value="0"/>
+                <property key="labeling/fontLimitPixelSize" value="false"/>
+                <property key="labeling/fontMaxPixelSize" value="10000"/>
+                <property key="labeling/fontMinPixelSize" value="3"/>
+                <property key="labeling/fontSize" value="8.25"/>
+                <property key="labeling/fontSizeInMapUnits" value="false"/>
+                <property key="labeling/fontStrikeout" value="false"/>
+                <property key="labeling/fontUnderline" value="false"/>
+                <property key="labeling/fontWeight" value="50"/>
+                <property key="labeling/fontWordSpacing" value="0"/>
+                <property key="labeling/formatNumbers" value="false"/>
+                <property key="labeling/isExpression" value="false"/>
+                <property key="labeling/labelOffsetInMapUnits" value="true"/>
+                <property key="labeling/labelPerPart" value="false"/>
+                <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+                <property key="labeling/limitNumLabels" value="false"/>
+                <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+                <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+                <property key="labeling/maxNumLabels" value="2000"/>
+                <property key="labeling/mergeLines" value="false"/>
+                <property key="labeling/minFeatureSize" value="0"/>
+                <property key="labeling/multilineAlign" value="0"/>
+                <property key="labeling/multilineHeight" value="1"/>
+                <property key="labeling/namedStyle" value="Normal"/>
+                <property key="labeling/obstacle" value="true"/>
+                <property key="labeling/placeDirectionSymbol" value="0"/>
+                <property key="labeling/placement" value="0"/>
+                <property key="labeling/placementFlags" value="0"/>
+                <property key="labeling/plussign" value="false"/>
+                <property key="labeling/preserveRotation" value="true"/>
+                <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+                <property key="labeling/priority" value="5"/>
+                <property key="labeling/quadOffset" value="4"/>
+                <property key="labeling/reverseDirectionSymbol" value="false"/>
+                <property key="labeling/rightDirectionSymbol" value=">"/>
+                <property key="labeling/scaleMax" value="10000000"/>
+                <property key="labeling/scaleMin" value="1"/>
+                <property key="labeling/scaleVisibility" value="false"/>
+                <property key="labeling/shadowBlendMode" value="6"/>
+                <property key="labeling/shadowColorB" value="0"/>
+                <property key="labeling/shadowColorG" value="0"/>
+                <property key="labeling/shadowColorR" value="0"/>
+                <property key="labeling/shadowDraw" value="false"/>
+                <property key="labeling/shadowOffsetAngle" value="135"/>
+                <property key="labeling/shadowOffsetDist" value="1"/>
+                <property key="labeling/shadowOffsetGlobal" value="true"/>
+                <property key="labeling/shadowOffsetUnits" value="1"/>
+                <property key="labeling/shadowRadius" value="1.5"/>
+                <property key="labeling/shadowRadiusAlphaOnly" value="false"/>
+                <property key="labeling/shadowRadiusUnits" value="1"/>
+                <property key="labeling/shadowScale" value="100"/>
+                <property key="labeling/shadowTransparency" value="30"/>
+                <property key="labeling/shadowUnder" value="0"/>
+                <property key="labeling/shapeBlendMode" value="0"/>
+                <property key="labeling/shapeBorderColorA" value="255"/>
+                <property key="labeling/shapeBorderColorB" value="128"/>
+                <property key="labeling/shapeBorderColorG" value="128"/>
+                <property key="labeling/shapeBorderColorR" value="128"/>
+                <property key="labeling/shapeBorderWidth" value="0"/>
+                <property key="labeling/shapeBorderWidthUnits" value="1"/>
+                <property key="labeling/shapeDraw" value="false"/>
+                <property key="labeling/shapeFillColorA" value="255"/>
+                <property key="labeling/shapeFillColorB" value="255"/>
+                <property key="labeling/shapeFillColorG" value="255"/>
+                <property key="labeling/shapeFillColorR" value="255"/>
+                <property key="labeling/shapeJoinStyle" value="64"/>
+                <property key="labeling/shapeOffsetUnits" value="1"/>
+                <property key="labeling/shapeOffsetX" value="0"/>
+                <property key="labeling/shapeOffsetY" value="0"/>
+                <property key="labeling/shapeRadiiUnits" value="1"/>
+                <property key="labeling/shapeRadiiX" value="0"/>
+                <property key="labeling/shapeRadiiY" value="0"/>
+                <property key="labeling/shapeRotation" value="0"/>
+                <property key="labeling/shapeRotationType" value="0"/>
+                <property key="labeling/shapeSVGFile" value=""/>
+                <property key="labeling/shapeSizeType" value="0"/>
+                <property key="labeling/shapeSizeUnits" value="1"/>
+                <property key="labeling/shapeSizeX" value="0"/>
+                <property key="labeling/shapeSizeY" value="0"/>
+                <property key="labeling/shapeTransparency" value="0"/>
+                <property key="labeling/shapeType" value="0"/>
+                <property key="labeling/textColorA" value="255"/>
+                <property key="labeling/textColorB" value="0"/>
+                <property key="labeling/textColorG" value="0"/>
+                <property key="labeling/textColorR" value="0"/>
+                <property key="labeling/textTransp" value="0"/>
+                <property key="labeling/upsidedownLabels" value="0"/>
+                <property key="labeling/wrapChar" value=""/>
+                <property key="labeling/xOffset" value="0"/>
+                <property key="labeling/yOffset" value="0"/>
+            </customproperties>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>ID</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="MS Shell Dlg 2"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype labelontop="0" editable="1" type="0" name="COUNT"/>
+                <edittype labelontop="0" editable="1" type="0" name="ID"/>
+            </edittypes>
+            <editform>.</editform>
+            <editforminit></editforminit>
+            <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+            <id>Pumps20130804123454093</id>
+            <datasource>./Pumps.shp</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>Pumps</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs</proj4>
+                    <srsid>100000</srsid>
+                    <srid>0</srid>
+                    <authid>USER:100000</authid>
+                    <description> * Generated CRS (+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs)</description>
+                    <projectionacronym>tmerc</projectionacronym>
+                    <ellipsoidacronym>airy</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <provider encoding="System">ogr</provider>
+            <previewExpression></previewExpression>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol">
+                <symbols>
+                    <symbol alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="color" v="101,44,142,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_width" v="0"/>
+                            <prop k="outline_width_unit" v="MM"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                            <prop k="size_unit" v="MM"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation field=""/>
+                <sizescale field="" scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <blendMode>0</blendMode>
+            <featureBlendMode>0</featureBlendMode>
+            <layerTransparency>0</layerTransparency>
+            <displayfield>Id</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="MS Shell Dlg 2"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <editform>.</editform>
+            <editforminit></editforminit>
+            <annotationform>.</annotationform>
+            <editorlayout>generatedlayout</editorlayout>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+            <id>osmgrey20130804123500101</id>
+            <datasource>./osmgrey.tif</datasource>
+            <title></title>
+            <abstract></abstract>
+            <keywordList>
+                <value></value>
+            </keywordList>
+            <layername>osmgrey</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs</proj4>
+                    <srsid>100000</srsid>
+                    <srid>0</srid>
+                    <authid>USER:100000</authid>
+                    <description> * Generated CRS (+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +units=m +no_defs)</description>
+                    <projectionacronym>tmerc</projectionacronym>
+                    <ellipsoidacronym>airy</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <customproperties>
+                <property key="identify/format" value="Value"/>
+            </customproperties>
+            <provider>gdal</provider>
+            <pipe>
+                <rasterrenderer opacity="1" alphaBand="-1" band="1" type="paletted">
+                    <rasterTransparency/>
+                    <colorPalette>
+                        <paletteEntry value="0" color="#000000"/>
+                        <paletteEntry value="1" color="#020202"/>
+                        <paletteEntry value="2" color="#040404"/>
+                        <paletteEntry value="3" color="#050505"/>
+                        <paletteEntry value="4" color="#070707"/>
+                        <paletteEntry value="5" color="#080808"/>
+                        <paletteEntry value="6" color="#0a0a0a"/>
+                        <paletteEntry value="7" color="#0d0d0d"/>
+                        <paletteEntry value="8" color="#0f0f0f"/>
+                        <paletteEntry value="9" color="#101010"/>
+                        <paletteEntry value="10" color="#181818"/>
+                        <paletteEntry value="11" color="#1e1e1e"/>
+                        <paletteEntry value="12" color="#1f1f1f"/>
+                        <paletteEntry value="13" color="#202020"/>
+                        <paletteEntry value="14" color="#212121"/>
+                        <paletteEntry value="15" color="#292929"/>
+                        <paletteEntry value="16" color="#2a2a2a"/>
+                        <paletteEntry value="17" color="#2c2c2c"/>
+                        <paletteEntry value="18" color="#313131"/>
+                        <paletteEntry value="19" color="#393939"/>
+                        <paletteEntry value="20" color="#404040"/>
+                        <paletteEntry value="21" color="#414141"/>
+                        <paletteEntry value="22" color="#444444"/>
+                        <paletteEntry value="23" color="#4a4a4a"/>
+                        <paletteEntry value="24" color="#4b4b4b"/>
+                        <paletteEntry value="25" color="#515151"/>
+                        <paletteEntry value="26" color="#525252"/>
+                        <paletteEntry value="27" color="#545454"/>
+                        <paletteEntry value="28" color="#555555"/>
+                        <paletteEntry value="29" color="#565656"/>
+                        <paletteEntry value="30" color="#575757"/>
+                        <paletteEntry value="31" color="#595959"/>
+                        <paletteEntry value="32" color="#5a5a5a"/>
+                        <paletteEntry value="33" color="#5c5c5c"/>
+                        <paletteEntry value="34" color="#5f5f5f"/>
+                        <paletteEntry value="35" color="#616161"/>
+                        <paletteEntry value="36" color="#626262"/>
+                        <paletteEntry value="37" color="#646464"/>
+                        <paletteEntry value="38" color="#656565"/>
+                        <paletteEntry value="39" color="#666666"/>
+                        <paletteEntry value="40" color="#676767"/>
+                        <paletteEntry value="41" color="#696969"/>
+                        <paletteEntry value="42" color="#6a6a6a"/>
+                        <paletteEntry value="43" color="#6b6b6b"/>
+                        <paletteEntry value="44" color="#6e6e6e"/>
+                        <paletteEntry value="45" color="#717171"/>
+                        <paletteEntry value="46" color="#767676"/>
+                        <paletteEntry value="47" color="#797979"/>
+                        <paletteEntry value="48" color="#7a7a7a"/>
+                        <paletteEntry value="49" color="#7b7b7b"/>
+                        <paletteEntry value="50" color="#7f7f7f"/>
+                        <paletteEntry value="51" color="#808080"/>
+                        <paletteEntry value="52" color="#838383"/>
+                        <paletteEntry value="53" color="#878787"/>
+                        <paletteEntry value="54" color="#888888"/>
+                        <paletteEntry value="55" color="#898989"/>
+                        <paletteEntry value="56" color="#8b8b8b"/>
+                        <paletteEntry value="57" color="#8c8c8c"/>
+                        <paletteEntry value="58" color="#8e8e8e"/>
+                        <paletteEntry value="59" color="#929292"/>
+                        <paletteEntry value="60" color="#939393"/>
+                        <paletteEntry value="61" color="#979797"/>
+                        <paletteEntry value="62" color="#999999"/>
+                        <paletteEntry value="63" color="#9a9a9a"/>
+                        <paletteEntry value="64" color="#9b9b9b"/>
+                        <paletteEntry value="65" color="#9c9c9c"/>
+                        <paletteEntry value="66" color="#a0a0a0"/>
+                        <paletteEntry value="67" color="#a2a2a2"/>
+                        <paletteEntry value="68" color="#a4a4a4"/>
+                        <paletteEntry value="69" color="#a5a5a5"/>
+                        <paletteEntry value="70" color="#a6a6a6"/>
+                        <paletteEntry value="71" color="#a8a8a8"/>
+                        <paletteEntry value="72" color="#aaaaaa"/>
+                        <paletteEntry value="73" color="#ababab"/>
+                        <paletteEntry value="74" color="#acacac"/>
+                        <paletteEntry value="75" color="#b0b0b0"/>
+                        <paletteEntry value="76" color="#b2b2b2"/>
+                        <paletteEntry value="77" color="#b4b4b4"/>
+                        <paletteEntry value="78" color="#b5b5b5"/>
+                        <paletteEntry value="79" color="#bbbbbb"/>
+                        <paletteEntry value="80" color="#bcbcbc"/>
+                        <paletteEntry value="81" color="#bdbdbd"/>
+                        <paletteEntry value="82" color="#c0c0c0"/>
+                        <paletteEntry value="83" color="#c2c2c2"/>
+                        <paletteEntry value="84" color="#c3c3c3"/>
+                        <paletteEntry value="85" color="#c5c5c5"/>
+                        <paletteEntry value="86" color="#c9c9c9"/>
+                        <paletteEntry value="87" color="#cacaca"/>
+                        <paletteEntry value="88" color="#cdcdcd"/>
+                        <paletteEntry value="89" color="#cecece"/>
+                        <paletteEntry value="90" color="#cfcfcf"/>
+                        <paletteEntry value="91" color="#d0d0d0"/>
+                        <paletteEntry value="92" color="#d3d3d3"/>
+                        <paletteEntry value="93" color="#d4d4d4"/>
+                        <paletteEntry value="94" color="#d5d5d5"/>
+                        <paletteEntry value="95" color="#d6d6d6"/>
+                        <paletteEntry value="96" color="#d8d8d8"/>
+                        <paletteEntry value="97" color="#d9d9d9"/>
+                        <paletteEntry value="98" color="#dadada"/>
+                        <paletteEntry value="99" color="#dbdbdb"/>
+                        <paletteEntry value="100" color="#dcdcdc"/>
+                        <paletteEntry value="101" color="#dddddd"/>
+                        <paletteEntry value="102" color="#dedede"/>
+                        <paletteEntry value="103" color="#e0e0e0"/>
+                        <paletteEntry value="104" color="#e1e1e1"/>
+                        <paletteEntry value="105" color="#e3e3e3"/>
+                        <paletteEntry value="106" color="#e4e4e4"/>
+                        <paletteEntry value="107" color="#e5e5e5"/>
+                        <paletteEntry value="108" color="#e6e6e6"/>
+                        <paletteEntry value="109" color="#e7e7e7"/>
+                        <paletteEntry value="110" color="#e8e8e8"/>
+                        <paletteEntry value="111" color="#e9e9e9"/>
+                        <paletteEntry value="112" color="#eaeaea"/>
+                        <paletteEntry value="113" color="#ebebeb"/>
+                        <paletteEntry value="114" color="#ececec"/>
+                        <paletteEntry value="115" color="#ededed"/>
+                        <paletteEntry value="116" color="#eeeeee"/>
+                        <paletteEntry value="117" color="#efefef"/>
+                        <paletteEntry value="118" color="#f1f1f1"/>
+                        <paletteEntry value="119" color="#f2f2f2"/>
+                        <paletteEntry value="120" color="#f3f3f3"/>
+                        <paletteEntry value="121" color="#f4f4f4"/>
+                        <paletteEntry value="122" color="#f5f5f5"/>
+                        <paletteEntry value="123" color="#f6f6f6"/>
+                        <paletteEntry value="124" color="#f7f7f7"/>
+                        <paletteEntry value="125" color="#f8f8f8"/>
+                        <paletteEntry value="126" color="#f9f9f9"/>
+                        <paletteEntry value="127" color="#fafafa"/>
+                        <paletteEntry value="128" color="#fbfbfb"/>
+                        <paletteEntry value="129" color="#fcfcfc"/>
+                        <paletteEntry value="130" color="#fdfdfd"/>
+                        <paletteEntry value="131" color="#ffffff"/>
+                        <paletteEntry value="132" color="#000000"/>
+                        <paletteEntry value="133" color="#000000"/>
+                        <paletteEntry value="134" color="#000000"/>
+                        <paletteEntry value="135" color="#000000"/>
+                        <paletteEntry value="136" color="#000000"/>
+                        <paletteEntry value="137" color="#000000"/>
+                        <paletteEntry value="138" color="#000000"/>
+                        <paletteEntry value="139" color="#000000"/>
+                        <paletteEntry value="140" color="#000000"/>
+                        <paletteEntry value="141" color="#000000"/>
+                        <paletteEntry value="142" color="#000000"/>
+                        <paletteEntry value="143" color="#000000"/>
+                        <paletteEntry value="144" color="#000000"/>
+                        <paletteEntry value="145" color="#000000"/>
+                        <paletteEntry value="146" color="#000000"/>
+                        <paletteEntry value="147" color="#000000"/>
+                        <paletteEntry value="148" color="#000000"/>
+                        <paletteEntry value="149" color="#000000"/>
+                        <paletteEntry value="150" color="#000000"/>
+                        <paletteEntry value="151" color="#000000"/>
+                        <paletteEntry value="152" color="#000000"/>
+                        <paletteEntry value="153" color="#000000"/>
+                        <paletteEntry value="154" color="#000000"/>
+                        <paletteEntry value="155" color="#000000"/>
+                        <paletteEntry value="156" color="#000000"/>
+                        <paletteEntry value="157" color="#000000"/>
+                        <paletteEntry value="158" color="#000000"/>
+                        <paletteEntry value="159" color="#000000"/>
+                        <paletteEntry value="160" color="#000000"/>
+                        <paletteEntry value="161" color="#000000"/>
+                        <paletteEntry value="162" color="#000000"/>
+                        <paletteEntry value="163" color="#000000"/>
+                        <paletteEntry value="164" color="#000000"/>
+                        <paletteEntry value="165" color="#000000"/>
+                        <paletteEntry value="166" color="#000000"/>
+                        <paletteEntry value="167" color="#000000"/>
+                        <paletteEntry value="168" color="#000000"/>
+                        <paletteEntry value="169" color="#000000"/>
+                        <paletteEntry value="170" color="#000000"/>
+                        <paletteEntry value="171" color="#000000"/>
+                        <paletteEntry value="172" color="#000000"/>
+                        <paletteEntry value="173" color="#000000"/>
+                        <paletteEntry value="174" color="#000000"/>
+                        <paletteEntry value="175" color="#000000"/>
+                        <paletteEntry value="176" color="#000000"/>
+                        <paletteEntry value="177" color="#000000"/>
+                        <paletteEntry value="178" color="#000000"/>
+                        <paletteEntry value="179" color="#000000"/>
+                        <paletteEntry value="180" color="#000000"/>
+                        <paletteEntry value="181" color="#000000"/>
+                        <paletteEntry value="182" color="#000000"/>
+                        <paletteEntry value="183" color="#000000"/>
+                        <paletteEntry value="184" color="#000000"/>
+                        <paletteEntry value="185" color="#000000"/>
+                        <paletteEntry value="186" color="#000000"/>
+                        <paletteEntry value="187" color="#000000"/>
+                        <paletteEntry value="188" color="#000000"/>
+                        <paletteEntry value="189" color="#000000"/>
+                        <paletteEntry value="190" color="#000000"/>
+                        <paletteEntry value="191" color="#000000"/>
+                        <paletteEntry value="192" color="#000000"/>
+                        <paletteEntry value="193" color="#000000"/>
+                        <paletteEntry value="194" color="#000000"/>
+                        <paletteEntry value="195" color="#000000"/>
+                        <paletteEntry value="196" color="#000000"/>
+                        <paletteEntry value="197" color="#000000"/>
+                        <paletteEntry value="198" color="#000000"/>
+                        <paletteEntry value="199" color="#000000"/>
+                        <paletteEntry value="200" color="#000000"/>
+                        <paletteEntry value="201" color="#000000"/>
+                        <paletteEntry value="202" color="#000000"/>
+                        <paletteEntry value="203" color="#000000"/>
+                        <paletteEntry value="204" color="#000000"/>
+                        <paletteEntry value="205" color="#000000"/>
+                        <paletteEntry value="206" color="#000000"/>
+                        <paletteEntry value="207" color="#000000"/>
+                        <paletteEntry value="208" color="#000000"/>
+                        <paletteEntry value="209" color="#000000"/>
+                        <paletteEntry value="210" color="#000000"/>
+                        <paletteEntry value="211" color="#000000"/>
+                        <paletteEntry value="212" color="#000000"/>
+                        <paletteEntry value="213" color="#000000"/>
+                        <paletteEntry value="214" color="#000000"/>
+                        <paletteEntry value="215" color="#000000"/>
+                        <paletteEntry value="216" color="#000000"/>
+                        <paletteEntry value="217" color="#000000"/>
+                        <paletteEntry value="218" color="#000000"/>
+                        <paletteEntry value="219" color="#000000"/>
+                        <paletteEntry value="220" color="#000000"/>
+                        <paletteEntry value="221" color="#000000"/>
+                        <paletteEntry value="222" color="#000000"/>
+                        <paletteEntry value="223" color="#000000"/>
+                        <paletteEntry value="224" color="#000000"/>
+                        <paletteEntry value="225" color="#000000"/>
+                        <paletteEntry value="226" color="#000000"/>
+                        <paletteEntry value="227" color="#000000"/>
+                        <paletteEntry value="228" color="#000000"/>
+                        <paletteEntry value="229" color="#000000"/>
+                        <paletteEntry value="230" color="#000000"/>
+                        <paletteEntry value="231" color="#000000"/>
+                        <paletteEntry value="232" color="#000000"/>
+                        <paletteEntry value="233" color="#000000"/>
+                        <paletteEntry value="234" color="#000000"/>
+                        <paletteEntry value="235" color="#000000"/>
+                        <paletteEntry value="236" color="#000000"/>
+                        <paletteEntry value="237" color="#000000"/>
+                        <paletteEntry value="238" color="#000000"/>
+                        <paletteEntry value="239" color="#000000"/>
+                        <paletteEntry value="240" color="#000000"/>
+                        <paletteEntry value="241" color="#000000"/>
+                        <paletteEntry value="242" color="#000000"/>
+                        <paletteEntry value="243" color="#000000"/>
+                        <paletteEntry value="244" color="#000000"/>
+                        <paletteEntry value="245" color="#000000"/>
+                        <paletteEntry value="246" color="#000000"/>
+                        <paletteEntry value="247" color="#000000"/>
+                        <paletteEntry value="248" color="#000000"/>
+                        <paletteEntry value="249" color="#000000"/>
+                        <paletteEntry value="250" color="#000000"/>
+                        <paletteEntry value="251" color="#000000"/>
+                        <paletteEntry value="252" color="#000000"/>
+                        <paletteEntry value="253" color="#000000"/>
+                        <paletteEntry value="254" color="#000000"/>
+                        <paletteEntry value="255" color="#000000"/>
+                    </colorPalette>
+                </rasterrenderer>
+                <brightnesscontrast brightness="0" contrast="0"/>
+                <huesaturation colorizeGreen="128" colorizeOn="0" colorizeRed="255" colorizeBlue="128" grayscaleMode="0" saturation="0" colorizeStrength="100"/>
+                <rasterresampler maxOversampling="2"/>
+            </pipe>
+            <blendMode>0</blendMode>
+        </maplayer>
+    </projectlayers>
+    <properties>
+        <WMSContactPerson type="QString"></WMSContactPerson>
+        <WMSOnlineResource type="QString"></WMSOnlineResource>
+        <WMSContactOrganization type="QString"></WMSContactOrganization>
+        <WMSKeywordList type="QStringList">
+            <value></value>
+        </WMSKeywordList>
+        <WFSUrl type="QString"></WFSUrl>
+        <Paths>
+            <Absolute type="bool">false</Absolute>
+        </Paths>
+        <WMSServiceTitle type="QString"></WMSServiceTitle>
+        <WFSLayers type="QStringList"/>
+        <WMSContactMail type="QString"></WMSContactMail>
+        <PositionPrecision>
+            <DecimalPlaces type="int">2</DecimalPlaces>
+            <Automatic type="bool">true</Automatic>
+            <DegreeFormat type="QString">D</DegreeFormat>
+        </PositionPrecision>
+        <WMSContactPhone type="QString"></WMSContactPhone>
+        <WMSServiceCapabilities type="bool">false</WMSServiceCapabilities>
+        <WMSServiceAbstract type="QString"></WMSServiceAbstract>
+        <WMSAddWktGeometry type="bool">false</WMSAddWktGeometry>
+        <Measure>
+            <Ellipsoid type="QString">NONE</Ellipsoid>
+        </Measure>
+        <WFSTLayers>
+            <Insert type="QStringList"/>
+            <Update type="QStringList"/>
+            <Delete type="QStringList"/>
+        </WFSTLayers>
+        <Gui>
+            <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+            <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+            <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+            <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+            <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+            <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+            <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+        </Gui>
+        <Identify>
+            <disabledLayers type="QStringList"/>
+        </Identify>
+        <Macros>
+            <pythonCode type="QString"></pythonCode>
+        </Macros>
+        <WMSAccessConstraints type="QString"></WMSAccessConstraints>
+        <SpatialRefSys>
+            <ProjectCRSProj4String type="QString">+proj=utm +zone=30 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs</ProjectCRSProj4String>
+            <ProjectCrs type="QString">EPSG:4326</ProjectCrs>
+            <ProjectCRSID type="int">100000</ProjectCRSID>
+            <ProjectionsEnabled type="int">1</ProjectionsEnabled>
+        </SpatialRefSys>
+        <DefaultStyles>
+            <Fill type="QString"></Fill>
+            <Line type="QString"></Line>
+            <Marker type="QString"></Marker>
+            <RandomColors type="bool">true</RandomColors>
+            <AlphaInt type="int">255</AlphaInt>
+            <ColorRamp type="QString"></ColorRamp>
+        </DefaultStyles>
+        <WMSFees type="QString"></WMSFees>
+        <WMSUrl type="QString"></WMSUrl>
+    </properties>
+</qgis>
