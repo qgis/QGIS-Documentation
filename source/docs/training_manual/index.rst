@@ -25,6 +25,7 @@ QGIS Training Manual
    assessment/index
    database_concepts/index
    spatial_databases/index
+   processing/index
    databases/index
    appendix/contribute
 
