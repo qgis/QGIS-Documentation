@@ -15,7 +15,7 @@ CRS's are a great source of confusion for QGIS Processing users, so here are som
 
 Open the project corresponding to this lesson and you will see two layers named 23030 and 4326. They both contain the same points, but in different CRSs (EPSG:23030 and EPSG:4326). They appear in the same place because QGIS is reprojecting on the fly to the project CRS (EPSG:4326), but they are not actually the same layer.
 
-Open the *Add geometry columns* algorithm.
+Open the *Export/Add geometry columns* algorithm.
 
 .. image:: img/crs/add_geom.png
 

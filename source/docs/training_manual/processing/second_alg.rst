@@ -22,10 +22,9 @@ Now press the *Run* button to get the following layer:
 
 .. image:: img/second_alg/points.png
 
-The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the *Create graticule* algorithm, which has the following parameters dialog.
+The next thing we need is the polygon layer. We are going to create a regular grid of polygons using the *Create grid* algorithm, which has the following parameters dialog.
 
 .. image:: img/second_alg/graticule_dialog.png
-
 
 The inputs required to create the grid are all numbers. When you have to enter a numerical value, you have two options: typing it directly on the corresponding box or clicking the button on the right--hand side to get to a dialog like the one shown next.
 
@@ -53,7 +52,7 @@ The last step is to count the points in each on of the rectangles of that gratic
 
 Now we have the result we were looking for.
 
-Before finishing this lesson, here is a quick tip to make your life easier in case you want to persistently save your data. If you want all your output files to be saved in a given folder, you do not have to type the folder name each time. Instead, go to the processing menu and select the * Options and configuration* item. It will open the configuration dialog.
+Before finishing this lesson, here is a quick tip to make your life easier in case you want to persistently save your data. If you want all your output files to be saved in a given folder, you do not have to type the folder name each time. Instead, go to the processing menu and select the *Options and configuration* item. It will open the configuration dialog.
 
 .. image:: img/second_alg/config.png
 
@@ -61,7 +60,7 @@ In the *Output folder* entry that you will find in the *General* group, type the
 
 .. image:: img/second_alg/output_folder.png
 
-Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuratino shown above, if you enter ``graticule.shp`` as the output path for the algorithm that we have just used, the result will be saved in ``D:\processing_output\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
+Now when you run an algorithm, just use the filename instead of the full path. For instance, with the configuration shown above, if you enter ``graticule.shp`` as the output path for the algorithm that we have just used, the result will be saved in ``D:\processing_output\graticule.shp``. You can still enter a full path in case you want a result to be saved in a different folder.
 
 
 Try yourself the *Create grid* algorithm with different grid sizes, and also with different types of grids. We will use the hexagonal one in a later chapter.
