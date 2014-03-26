@@ -11,32 +11,55 @@
 
 |qg| has been designed with a plugin architecture. This allows many new
 features/functions to be easily added to the application. Many of the features
-in |qg| are actually implemented as either **core** or **external plugins**.
-
-.. index::
-   single:plugins;types
-
-* **Core Plugins** are maintained by the |qg| Development Team and are
-  automatically part of every |qg| distribution. They are written in one of two
-  languages: C++ or Python. More information about core plugins are provided in
-  Section :ref:`core_plugins`
-* **External Plugins** are currently all written in Python. They are stored in
-  external repositories and maintained by the individual authors. They can be
-  added to |qg| in the |mActionShowPluginManager| :guilabel:`Get more` section
-  the of :guilabel:`Plugin Manager`. More information about external plugins is
-  provided in Section :ref:`load_external_plugin`.
+in |qg| are actually implemented as plugins.
 
 .. :index::
     single:plugins;managing
 
 .. _managing_plugins:
 
-Managing Plugins
-================
+The Plugins Menus
+=================
+
+|mActionShowPluginManager| :guilabel:`All`
+------------------------------------------
+
+Here all the plugins available are listed. You can find core and external plugins
+here. Use [Upgrade all] to look for new versions of the plugins . Furthermore can use [Install plugin]
+if a plugin is listet but not installed and [Uninstall plugin] as well as [Reinstall plugin] 
+if the plugin is installed. If a plugin is installed it can be de/activated using the checkbox.
+
+|plugin_installled| :guilabel:`Installed`
+----------------------------------------
+
+In this menu you can find only the installed plugins.
+
+|plugin| :guilabel:`Not installed`
+----------------------------------
+
+This menu lists all plugins available that are not installed.
+
+|plugin_upgrade| :guilabel:`Upgradeable`
+----------------------------------------
+
+If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
+|mActionTransformSettings| :guilabel:`Settings` menu you can use this menu
+to look for more recent plugin versions.
+
+|mActionTransformSettings| :guilabel:`Settings` 
+-----------------------------------------------
+
+In this menu you can use the following options:
+* |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
+  a plugin update is available QGIS will inform you.
+* |checkbox| :guilabel:`Show also experimental plugins` . QGIS will show you 
+  plugins in early state of development which are generally unsuitable for production
+  use.
+* |checkbox| :guilabel:`Show also deprecated plugins` . These plugins are deprecated
+  and generally unsuitable for production use.
 
 Managing plugins in general means loading or unloading them using the
-:guilabel:`Plugins` dialog. To deactivate and reactivate external plugins,
-the :guilabel:`Plugins` dialog is used again.
+:guilabel:`Plugins` dialog.
 
 .. _load_core_plugin:
 
@@ -103,6 +126,15 @@ It is, however, quite straightforward to search through all the available extern
 plugins by providing keywords, choosing a named repository and/or filtering on
 the status of plugins (currently installed or uninstalled in your system).
 Searching and filtering is done from the |qg| Python Plugin Installer
+
+.. tip:: **Core and external plugins**
+   
+   QGIS plugins are implemented either as **Core Plugins** or **External Plugins**.
+   **Core Plugins** are maintained by the |qg| Development Team and are
+   automatically part of every |qg| distribution. They are written in one of two
+   languages: C++ or Python.
+   **External Plugins** are currently all written in Python. They are stored in
+   external repositories and maintained by the individual authors. 
 
 .. tip:: **Add more repositories**
 
