@@ -6,6 +6,8 @@
 The QGIS processing guide
 ==========================================
 
+This module contributed by Victor Olaya.
+
 Contents:
 
 .. toctree::
