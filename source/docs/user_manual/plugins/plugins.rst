@@ -21,56 +21,15 @@ in |qg| are actually implemented as plugins.
 The Plugins Menus
 =================
 
+The menus in the Plugins dialog allow the user to install, uninstall and upgrade plugins in
+different ways.
+
 |mActionShowPluginManager| :guilabel:`All`
-------------------------------------------
 
 Here all the plugins available are listed. You can find core and external plugins
-here. Use [Upgrade all] to look for new versions of the plugins . Furthermore can use [Install plugin]
-if a plugin is listet but not installed and [Uninstall plugin] as well as [Reinstall plugin] 
+here. Use **[Upgrade all]** to look for new versions of the plugins . Furthermore can use **[Install plugin]**
+if a plugin is listet but not installed and **[Uninstall plugin]** as well as **[Reinstall plugin]** 
 if the plugin is installed. If a plugin is installed it can be de/activated using the checkbox.
-
-|plugin_installled| :guilabel:`Installed`
-----------------------------------------
-
-In this menu you can find only the installed plugins.
-
-|plugin| :guilabel:`Not installed`
-----------------------------------
-
-This menu lists all plugins available that are not installed.
-
-|plugin_upgrade| :guilabel:`Upgradeable`
-----------------------------------------
-
-If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
-|mActionTransformSettings| :guilabel:`Settings` menu you can use this menu
-to look for more recent plugin versions.
-
-|mActionTransformSettings| :guilabel:`Settings` 
------------------------------------------------
-
-In this menu you can use the following options:
-* |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
-  a plugin update is available QGIS will inform you.
-* |checkbox| :guilabel:`Show also experimental plugins` . QGIS will show you 
-  plugins in early state of development which are generally unsuitable for production
-  use.
-* |checkbox| :guilabel:`Show also deprecated plugins` . These plugins are deprecated
-  and generally unsuitable for production use.
-
-Managing plugins in general means loading or unloading them using the
-:guilabel:`Plugins` dialog.
-
-.. _load_core_plugin:
-
-Loading a |qg| Core Plugin
---------------------------
-
-Loading a |qg| Core Plugin is done from the main menu :menuselection:`Plugins -->`
-|mActionShowPluginManager| :menuselection:`Manage and Install Plugins ...`.
-
-.. index::
-   single: plugins; manager
 
 .. _figure_plugins_1:
 
@@ -78,54 +37,100 @@ Loading a |qg| Core Plugin is done from the main menu :menuselection:`Plugins --
 
    **Figure Plugins 1:**
 
-.. figure:: /static/user_manual/plugins/pluginmanager.png
+.. figure:: /static/user_manual/plugins/plugins_all.png
    :align: center
    :width: 30em
 
-   Plugin Manager |nix|
+   The |mActionShowPluginManager| :guilabel:`All` menu |nix|
 
-The |plugin_installed| :guilabel:`Installed` menu of the :guilabel:`Plugins` dialog lists all the
-loaded plugins and their status, including all core plugins
-and all external plugins that have been installed and automatically activated using
-the |mActionShowPluginManager| :guilabel:`All` menu (see Section :ref:`load_external_plugin`).
-Those plugins that are already loaded have a check mark to the left of their name.
-Figure_plugins_1_ shows the |plugin_installed| :guilabel:`Installed` dialog.
 
-To enable a particular core plugin, click on the checkbox to the left of the plugin
-name, and click **[OK]**. When you exit the application, a list of loaded plugins
-is retained, and the plugins are automatically loaded.
+|plugin_installed| :guilabel:`Installed`
 
-.. _load_external_plugin:
+In this menu you can find only the installed plugins. The external plugins can be uninstallled and reinstalled
+using the **[Uninstall plugin]** and **[Reinstall plugin]** buttons. You can **[Upgrade all]** here as well.
 
-Loading an external |qg| Plugin
--------------------------------
+.. _figure_plugins_2:
 
-External |qg| plugins are written in Python. They are by default stored in either
-the 'Official' |qg| Repository, or in various other external repositories
-maintained by individual authors. You can find the external plugins in the
-|mActionShowPluginManager| :guilabel:`Get more` menu.
+.. only:: html
 
-In the |plugin| :guilabel:`Installed` menu you can see the path if it is an external plugin.
-External plugins are only installed in your home directory while core plugins
-are stored in ``/usr`` .
+   **Figure Plugins 2:**
 
-Detailed documentation about the usage, minimum |qg| version, homepage, authors,
-and other important information are provided for the 'Official' |qg| Repository
-at http://plugins.qgis.org/plugins/. For other external repositories, they might
-be available with the external plugins themselves. In general it is not included
-in this manual.
+.. figure:: /static/user_manual/plugins/plugins_installed.png
+   :align: center
+   :width: 30em
 
-Currently there are over 150 external plugins available from the 'Official' |qg|
-Repository. Some of these plugins offer functionality that will be required by
-many users (for example: providing the user with the ability to view and edit
-OpenStreetMap data, or to add GoogleMap layers) while others offer very
-specialized functions (for example: Calculate economic pipe diameters for water
-supply networks).
+   The |plugin_installed| :guilabel:`Installed` menu |nix|
 
-It is, however, quite straightforward to search through all the available external
-plugins by providing keywords, choosing a named repository and/or filtering on
-the status of plugins (currently installed or uninstalled in your system).
-Searching and filtering is done from the |qg| Python Plugin Installer
+
+|plugin| :guilabel:`Not installed`
+
+This menu lists all plugins available that are not installed. You can use the **[Install plugin]** button
+to implement a plugin into |qg|.
+
+.. _figure_plugins_3:
+
+.. only:: html
+
+   **Figure Plugins 3:**
+
+.. figure:: /static/user_manual/plugins/plugins_not_installed.png
+   :align: center
+   :width: 30em
+
+   The |plugin| :guilabel:`Not installed` menu |nix|
+
+
+|plugin_upgrade| :guilabel:`Upgradeable`
+
+If you activated |checkbox| :guilabel:`Show also experimental plugins` in the
+|mActionTransformSettings| :guilabel:`Settings` menu you can use this menu
+to look for more recent plugin versions. This can be done with the **[Upgrade plugin]** or 
+**[Upgrade all]** buttons.
+
+.. _figure_plugins_4:
+
+.. only:: html
+
+   **Figure Plugins 4:**
+
+.. figure:: /static/user_manual/plugins/plugins_upgradeable.png
+   :align: center
+   :width: 30em
+
+   The |plugin_upgrade| :guilabel:`Upgradeable` menu |nix|
+
+
+|mActionTransformSettings| :guilabel:`Settings` 
+
+In this menu you can use the following options:
+
+* |checkbox| :guilabel:`Check for updates on startup`. Whenever a new plugin or
+  a plugin update is available QGIS will inform you 'every time QGIS starts', 'once a day',
+  'every 3 days', 'every week', 'every 2 weeks' or 'every month'.
+* |checkbox| :guilabel:`Show also experimental plugins` . QGIS will show you 
+  plugins in early state of development which are generally unsuitable for production
+  use.
+* |checkbox| :guilabel:`Show also deprecated plugins`. These plugins are deprecated
+  and generally unsuitable for production use.
+
+To add external author repositories, click **[Add...]** in the :guilabel:`Plugin repositories` section.
+If you do not want one or more of the added repositories, they can be disabled
+via the **[Edit...]** button, or completely removed with the **[Delete]** button.
+
+.. _figure_plugins_5:
+
+.. only:: html
+
+   **Figure Plugins 5:**
+
+.. figure:: /static/user_manual/plugins/plugins_settings.png
+   :align: center
+   :width: 30em
+
+   The |mActionTransformSettings| :guilabel:`Settings` menu |nix|
+
+The :guilabel:`Search` function is available in nearly every menu (except |mActionTransformSettings| :guilabel:`Settings`).
+Here you can look for specific plugins.
 
 .. tip:: **Core and external plugins**
    
@@ -136,34 +141,8 @@ Searching and filtering is done from the |qg| Python Plugin Installer
    **External Plugins** are currently all written in Python. They are stored in
    external repositories and maintained by the individual authors. 
 
-.. tip:: **Add more repositories**
-
-   To add external author repositories, open the Plugin Installer
-   |mActionShowPluginManager| :menuselection:`Manage and Install Plugins`, go to the menu
-   |mActionTransformSettings| :guilabel:`Settings`, and click **[Add]** (see figure_plugins_2_).
-   If you do not want one or more of the added repositories, they can be disabled
-   via the **[Edit...]** button, or completely removed with the **[Delete]** button.
-
-As such, we cannot take any responsibility for them. You can also manage the
-repository list manually, that is add, remove, and edit the entries. Temporarily
-disabling a particular repository is possible by clicking the **[Edit ...]**
-button.
-
-.. _figure_plugins_2:
-
-.. only:: html
-
-   **Figure Plugins 2:**
-
-.. figure:: /static/user_manual/plugins/pluginsettings.png
-   :align: center
-   :width: 30em
-
-   Plugin Settings |nix|
-
-.. tip:: **Check for updates**
-
-   You can stay informed about plugins. Activate the checkbox |checkbox|
-   :guilabel:`Check for updates on startup` from the |mActionTransformSettings|
-   :guilabel:`Settings` menu. |qg| will inform you whenever a plugin or plugin
-   update is available.
+Detailed documentation about the usage, minimum |qg| version, homepage, authors,
+and other important information are provided for the 'Official' |qg| Repository
+at http://plugins.qgis.org/plugins/. For other external repositories, they might
+be available with the external plugins themselves. In general it is not included
+in this manual.
