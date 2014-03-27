@@ -21,12 +21,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # 9010db584ee74e0f967128bfe44b9d4a
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:12
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:10
 msgid "Interpolation Plugin"
 msgstr "データ補間プラグイン"
 
 # d99bd831fedd4e12b0d241f8376b1845
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:14
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:12
 msgid ""
 "The Interplation plugin can be used to generate a TIN or IDW interpolation "
 "of a point vector layer. It is very simple to handle and provides an "
@@ -36,7 +36,7 @@ msgid ""
 msgstr "この補間プラグインは、ポイントベクタレイヤのTINまたはIDW補間を生成するために使用されます。これは扱いがとてもシンプルで、内挿されたラスタレイヤを作成するための直感的なグラフィカルユーザ・インタフェースを提供します( Figure_interpolation_1_ を参照すること)。プラグインは、実行前に次のパラメータを必要とします。"
 
 # b140962dbfcd477f90878aa484ae593d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:24
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:22
 msgid ""
 "**Interpolation attribute**: Select attribute column to be used for "
 "interpolation or enable the |checkbox| :guilabel:`Use Z-Coordinate` checkbox"
@@ -44,43 +44,43 @@ msgid ""
 msgstr "**補間する属性**:補間に使用する属性カラムを選択するか 、格納されたZ値を使用するには|checkbox| :guilabel:`Z座標を使用する`チェックを有効にします。"
 
 # 314acf5115d84ac1afcb5f1c728126bf
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:25
 msgid ""
 "**Interpolation Method**: Select interpolation method. This can be either "
 "'Triangulated Irregular Network (TIN)' or 'Inverse Distance Weighted (IDW)'."
 msgstr "** 補間方法 **: 補間方法を選択してください. ここでは '三角形分割補間 (TIN)' か '逆距離加重補間(IDW)'　を選択できます."
 
 # 843cba469a8d484c82f48ea0c210df67
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:29
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:27
 msgid ""
 "**Number of columns/rows**: Specify the number row and colums for the output"
 " raster file."
 msgstr "**カラム/行の数**:出力するラスタファイルの 行またはカラムの数を指定します。"
 
 # e212ad9b62bb43fd835892b206e7088d
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:31
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:29
 msgid "**Output file**: Specify a name for the output raster file."
 msgstr "**出力ファイル**: 出力するラスタファイルの名称を指定します。"
 
 # c2e80f0107f74204a5ab206f6a70daaf
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:44
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:42
 msgid "Interpolation Plugin |nix|"
 msgstr "補間プラグイン |nix|"
 
 # 7928a39eeefe4fb7a2bde0e85390ff5c
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:50
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:48
 msgid "Using the plugin"
 msgstr "プラグインの利用"
 
 # 6cf80e8ac17a4e9cbaea6b0d832ccf81
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:57
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:55
 msgid ""
 "Select an input layer (e.g., :guilabel:`elevp` |selectstring|) and column "
 "(e.g., ``ELEV``) for interpolation."
 msgstr "補間のための入力レイヤ (e.g., :guilabel:`elevp` |selectstring|) とカラム (e.g., ``ELEV``)を選択します。"
 
 # a285291bb5884822962a7efa5e8c860c
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:59
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:57
 msgid ""
 "Select an interpolation method (e.g. 'Triangulated Irregular Network "
 "(TIN)'), and specify a cellsize of 5000 as well as the raster output "
@@ -88,11 +88,11 @@ msgid ""
 msgstr "補間法（e.g. 三角形分割補間（TIN））を選択し、出力ラスタのファイル名（e.g., :file:`elevation_tin`）および5000のセルサイズを特定します。"
 
 # 77f17582982e4fabbd5f494190a7a449
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:62
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:60
 msgid "Click **[OK]**."
 msgstr "**[OK]**をクリックします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:19
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:17
 msgid ""
 "Input **Vector layers**: Specify the input point vector layer(s) from a list"
 " of loaded point layers. If several layers are specified, then data from all"
@@ -102,17 +102,17 @@ msgid ""
 "|selectstring| combobox."
 msgstr "**ベクタレイヤ**:ロードしたポイントレイヤのリストから入力ポイントベクタレイヤを特定します。もし複数のレイヤを指定する場合は、すべてのレイヤ由来のデータが補間に使用されます。注意： :guilabel:`タイプ` |selectstring| コンボボックスで\"点\", \"ストラクチャーライン\" または \"ブレークライン\"のいずれかを指定することで三角形分割補間の構成物としてポリゴンやラインを挿入することが可能です。"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:32
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:30
 msgid ""
 "|checkbox| :guilabel:`Add result to project` to load the result into the map"
 " canvas."
 msgstr "|checkbox| :guilabel:`結果をプロジェクトに追加する` マップキャンバスに結果をロードします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:52
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:50
 msgid "Start |qg| and load a point vector layer (e.g., :file:`elevp.csv`)."
 msgstr "QGISを起動し、ポイントベクタレイヤ（e.g., :file:`elevp.csv`）をロードします。"
 
-#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:53
+#: ../../source/docs/user_manual/plugins/plugins_interpolation.rst:51
 msgid ""
 "Load the Interpolation plugin in the Plugin Manager (see Section "
 ":ref:`load_core_plugin`) and click on the |raster-interpolate| "
