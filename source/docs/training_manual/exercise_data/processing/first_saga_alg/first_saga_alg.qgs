@@ -1,12 +1,13 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.0.1-Dufour">
+<qgis projectname="" version="2.2.0-Valmiera">
     <title></title>
+    <relations/>
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-5.69669399999999992</xmin>
+            <xmin>-5.69680395814804452</xmin>
             <ymin>40.24710858415841841</ymin>
-            <xmax>-5.69479500000000005</xmax>
+            <xmax>-5.69468504185195545</xmax>
             <ymax>40.24867541584158204</ymax>
         </extent>
         <projections>1</projections>
@@ -22,6 +23,7 @@
                 <geographicflag>true</geographicflag>
             </spatialrefsys>
         </destinationsrs>
+        <layer_coordinate_transform_info/>
     </mapcanvas>
     <legend updateDrawingOrder="true" activeLayer="points20130825131151345">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="points" showFeatureCount="0">
@@ -31,7 +33,7 @@
         </legendlayer>
     </legend>
     <projectlayers layercount="1">
-        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Point" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>points20130825131151345</id>
             <datasource>./points.shp</datasource>
             <title></title>
@@ -62,19 +64,22 @@
                             <prop k="angle" v="0"/>
                             <prop k="color" v="142,10,34,255"/>
                             <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="horizontal_anchor_point" v="1"/>
                             <prop k="name" v="circle"/>
                             <prop k="offset" v="0,0"/>
                             <prop k="offset_unit" v="MM"/>
+                            <prop k="outline_style" v="solid"/>
                             <prop k="outline_width" v="0"/>
                             <prop k="outline_width_unit" v="MM"/>
                             <prop k="scale_method" v="area"/>
                             <prop k="size" v="2"/>
                             <prop k="size_unit" v="MM"/>
+                            <prop k="vertical_anchor_point" v="1"/>
                         </layer>
                     </symbol>
                 </symbols>
-                <rotation field=""/>
-                <sizescale field="" scalemethod="area"/>
+                <rotation/>
+                <sizescale scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
             <blendMode>0</blendMode>
@@ -104,6 +109,7 @@
             </labelattributes>
             <editform>.</editform>
             <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
             <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>

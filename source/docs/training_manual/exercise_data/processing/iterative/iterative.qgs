@@ -1,12 +1,13 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.0.1-Dufour">
+<qgis projectname="" version="2.2.0-Valmiera">
     <title></title>
+    <relations/>
     <mapcanvas>
         <units>meters</units>
         <extent>
-            <xmin>259439.1301056616648566</xmin>
+            <xmin>258177.31961771947680973</xmin>
             <ymin>4450161.18263090495020151</ymin>
-            <xmax>281230.85867821099236608</xmax>
+            <xmax>282492.66916615318041295</xmax>
             <ymax>4468141.15670066419988871</ymax>
         </extent>
         <projections>1</projections>
@@ -22,6 +23,7 @@
                 <geographicflag>false</geographicflag>
             </spatialrefsys>
         </destinationsrs>
+        <layer_coordinate_transform_info/>
     </mapcanvas>
     <legend updateDrawingOrder="true" activeLayer="dem2520130907150329005">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="watersheds" showFeatureCount="0">
@@ -76,7 +78,7 @@
             </pipe>
             <blendMode>0</blendMode>
         </maplayer>
-        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>watersheds20130907150324828</id>
             <datasource>./watersheds.shp</datasource>
             <title></title>
@@ -115,8 +117,8 @@
                         </layer>
                     </symbol>
                 </symbols>
-                <rotation field=""/>
-                <sizescale field="" scalemethod="area"/>
+                <rotation/>
+                <sizescale scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
             <blendMode>0</blendMode>
@@ -146,6 +148,7 @@
             </labelattributes>
             <editform>.</editform>
             <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
             <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
