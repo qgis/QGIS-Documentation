@@ -13,7 +13,7 @@ The data correspond to crop yield data, as produced by a modern harvester, and w
 
 The first thing to do is to clean--up the layer, since it contains redundant points. These are caused by the movement of the harvester, in places where it has to do a turn or it changes its speed for some reason. The *Point filter* algorithm will be useful for this. We will use it twice, to remove points that can be considered outliers both in the upper and lower part of the distribution.
 
-For the first execution, use the following parameter values.
+For the first execution, use the following parameter values. [**Note**: this does not work, resulting file empty]
 
 .. image:: img/interpolation/filter.png
 
@@ -25,11 +25,11 @@ Notice that we are not using the original layer as input, but the output of the 
 
 The final filter layer, with a reduced set of points, should look similar to the original one, but it contains a smaller number of points. You can check that by comparing their attribute tables.
 
-Now let's rasterize the layer using the *Rasterize vector layer* algorith.
+Now let's rasterize the layer using the *Shapes to grid* algorithm.
 
 .. image:: img/interpolation/rasterize.png
 
-The *Filtered layer* layer refers to the resulting one of the second filter. It has the same name as the one produced by the first filter, since the name is assigned by the algorithm, but you should not use the first one. Since we will not be using it for anything else, you can safely remove it from your project to avoid confusion, and leave just the last filtered layer.
+The *Filtered points* layer refers to the resulting one of the second filter. It has the same name as the one produced by the first filter, since the name is assigned by the algorithm, but you should not use the first one. Since we will not be using it for anything else, you can safely remove it from your project to avoid confusion, and leave just the last filtered layer.
 
 The resulting raster layer looks like this.
 
