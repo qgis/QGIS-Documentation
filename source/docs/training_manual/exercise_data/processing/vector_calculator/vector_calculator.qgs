@@ -1,12 +1,13 @@
 <!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
-<qgis projectname="" version="2.0.1-Dufour">
+<qgis projectname="" version="2.2.0-Valmiera">
     <title></title>
+    <relations/>
     <mapcanvas>
         <units>degrees</units>
         <extent>
-            <xmin>-105.12628854999999817</xmin>
+            <xmin>-105.15774087096774281</xmin>
             <ymin>39.53993499999999983</ymin>
-            <xmax>-104.58310045000000343</xmax>
+            <xmax>-104.55164812903225879</xmax>
             <ymax>39.98810999999999893</ymax>
         </extent>
         <projections>1</projections>
@@ -22,6 +23,9 @@
                 <geographicflag>true</geographicflag>
             </spatialrefsys>
         </destinationsrs>
+        <layer_coordinate_transform_info>
+            <layer_coordinate_transform destAuthId="EPSG:4326" srcAuthId="USER:100004" srcDatumTransform="-1" destDatumTransform="-1" layerid="census_boundaries20130721095304891"/>
+        </layer_coordinate_transform_info>
     </mapcanvas>
     <legend updateDrawingOrder="true" activeLayer="census_boundaries20130721095304891">
         <legendlayer drawingOrder="-1" open="true" checked="Qt::Checked" name="census_boundaries" showFeatureCount="0">
@@ -31,7 +35,7 @@
         </legendlayer>
     </legend>
     <projectlayers layercount="1">
-        <maplayer minimumScale="0" maximumScale="1e+08" minLabelScale="0" maxLabelScale="1e+08" geometry="Polygon" type="vector" hasScaleBasedVisibilityFlag="0" scaleBasedLabelVisibilityFlag="0">
+        <maplayer minimumScale="0" maximumScale="1e+08" simplifyDrawingHints="1" minLabelScale="0" maxLabelScale="1e+08" simplifyDrawingTol="1" geometry="Polygon" simplifyMaxScale="1" type="vector" hasScaleBasedVisibilityFlag="0" simplifyLocal="1" scaleBasedLabelVisibilityFlag="0">
             <id>census_boundaries20130721095304891</id>
             <datasource>./census_boundaries.shp</datasource>
             <title></title>
@@ -43,9 +47,9 @@
             <srs>
                 <spatialrefsys>
                     <proj4>+proj=lcc +lat_1=38.45 +lat_2=39.75 +lat_0=37.83333333333334 +lon_0=-105.5 +x_0=914401.8288999999 +y_0=304800.6096 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs</proj4>
-                    <srsid>100001</srsid>
+                    <srsid>100004</srsid>
                     <srid>0</srid>
-                    <authid>USER:100001</authid>
+                    <authid>USER:100004</authid>
                     <description> * Generated CRS (+proj=lcc +lat_1=38.45 +lat_2=39.75 +lat_0=37.83333333333334 +lon_0=-105.5 +x_0=914401.8288999999 +y_0=304800.6096 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=us-ft +no_defs)</description>
                     <projectionacronym>lcc</projectionacronym>
                     <ellipsoidacronym>GRS80</ellipsoidacronym>
@@ -70,8 +74,8 @@
                         </layer>
                     </symbol>
                 </symbols>
-                <rotation field=""/>
-                <sizescale field="" scalemethod="area"/>
+                <rotation/>
+                <sizescale scalemethod="area"/>
             </renderer-v2>
             <customproperties/>
             <blendMode>0</blendMode>
@@ -101,6 +105,7 @@
             </labelattributes>
             <editform>.</editform>
             <editforminit></editforminit>
+            <featformsuppress>0</featformsuppress>
             <annotationform>.</annotationform>
             <editorlayout>generatedlayout</editorlayout>
             <excludeAttributesWMS/>
